@@ -193,15 +193,15 @@ Use $R = 8.314$ J/(mol·K), $T = 298$ K
             options: ['0.0821 J/(mol·K)', '8.314 J/(mol·K)', '1.987 J/(mol·K)', '8.314 L·atm/(mol·K)']
           },
           {
-            label: 'ΔG° tells you about equilibrium, while ΔG tells you about',
-            options: ['the same thing, at any temperature', 'direction under the actual conditions', 'how fast the reaction will proceed now', 'the activation energy barrier']
+            label: 'ΔG° tells you where equilibrium lies, while comparing Q with K tells you',
+            options: ['the same thing, at any temperature', 'which way a particular mixture will shift', 'how fast the reaction will proceed now', 'the activation energy barrier']
           }
         ],
-        correctAnswers: ['zero', 'large negative', '8.314 J/(mol·K)', 'direction under the actual conditions'],
+        correctAnswers: ['zero', 'large negative', '8.314 J/(mol·K)', 'which way a particular mixture will shift'],
         hint1: '$\\Delta G° = -RT\\ln 1 = -RT(0) = 0$.',
         hint2: 'Large K → products very favored → very negative ΔG°.',
         hint3: 'ΔG° is in J/mol, so R must be in J/(mol·K).',
-        explanation: 'K = 1 → ΔG° = 0. K = $10^{8}$ → large negative ΔG°. R = 8.314 J/(mol·K) for energy calculations. ΔG° is about equilibrium position; ΔG is about the direction of spontaneous change from non-standard conditions.'
+        explanation: 'K = 1 → ΔG° = 0. K = $10^{8}$ → large negative ΔG°. R = 8.314 J/(mol·K) for energy calculations. ΔG° is about equilibrium position; comparing Q with K gives the direction a particular mixture will shift.'
       }
     },
     {

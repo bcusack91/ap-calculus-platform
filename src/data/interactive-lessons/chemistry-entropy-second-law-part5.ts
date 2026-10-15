@@ -193,7 +193,7 @@ $\\Delta S < 0$ ✓ — consistent with our prediction!
         ],
         correctAnswers: ['a positive value you must look up', 'positive', 'joules and kilojoules for entropy', 'neither — need ΔH too'],
         hint1: 'S° ≠ 0 for elements! This is different from ΔH°_f.',
-        hint2: 'More gas = more microstates = more entropy.',
+        hint2: 'More gas = more dispersal of matter = more entropy.',
         hint3: 'ΔH is in kJ, but ΔS is in J/K. Watch the conversion!',
         explanation: 'Elements have positive S° values (unlike ΔH°_f which is zero). More gas moles → positive ΔS°. The J vs kJ mismatch between ΔH and ΔS is a classic trap. Spontaneity requires both ΔH and ΔS (via ΔG = ΔH − TΔS).'
       }

@@ -81,9 +81,7 @@ Three key relationships connect $\\Delta G^\\circ$, $E^\\circ$, and $K$:
 >
 > $$E^\\circ = \\frac{RT}{nF}\\ln K$$
 
-At 25°C (298 K):
-
-$$E^\\circ = \\frac{0.0257}{n}\\ln K = \\frac{0.0592}{n}\\log K$$
+> 📝 Work from the two CED equations, $\\Delta G^\\circ = -nFE^\\circ$ and $\\Delta G^\\circ = -RT\\ln K$. Shortcut forms with 0.0592 are not needed for the AP exam.
 
 ---
 

@@ -30,8 +30,8 @@ This is the core idea of entropy: **there are far more disordered arrangements t
 | Scenario | Ordered States | Disordered States |
 |----------|---------------|------------------|
 | Bedroom | 1 perfectly clean arrangement | Billions of messy ones |
-| 4 gas molecules in a box | 1 arrangement where all are in the left half | 15 arrangements where they're spread out |
-| $10^{23}$ molecules | $1$ "concentrated" state | $\\sim 10^{10^{22}}$ "spread" states |
+| A few gas molecules in a box | Few arrangements with all of them crowded into one half | Many more arrangements with them spread through the box |
+| $10^{23}$ molecules | Essentially no chance of all crowding into one corner | Spread-out arrangements are overwhelmingly likely |
 
 
 ---
@@ -42,38 +42,29 @@ Nature doesn't have a preference for disorder — it just plays the odds. When t
       `
     },
     {
-      id: 'en1v2-boltzmann',
+      id: 'en1v2-dispersal',
       type: 'text' as const,
       content: `
-## 📌 Boltzmann's Big Idea
+## 📌 Two Kinds of Spreading
 
-Ludwig Boltzmann connected probability to thermodynamics with one equation:
-
-$$S = k_B \\ln W$$
-
+The AP exam describes entropy as **dispersal** (CED 9.1.A). Entropy increases when either of two things spreads out:
 
 ---
 
-### Breaking It Down
+### 1. Matter Spreads Out
 
-- $S$ = entropy (measured in J/K)
-- $k_B = 1.38 \\times 10^{-23}$ J/K (the Boltzmann constant — connects microscopic to macroscopic)
-- $W$ = number of microstates (possible arrangements)
-- $\\ln$ = natural logarithm
-
-
----
-
-### Why Logarithm?
-
-When you combine two independent systems, their microstates **multiply**: $W_{\\text{total}} = W_A \\times W_B$. But we want entropy to be **additive**: $S_{\\text{total}} = S_A + S_B$. The logarithm converts multiplication into addition!
-
+- **Phase changes:** solid → liquid → gas lets particles move more freely and (for gases) fill far more volume.
+- **Gas expansion:** at constant temperature, a gas in a larger volume has higher entropy.
+- **Moles of gas:** a reaction that makes more moles of gas than it uses usually increases entropy.
+- **Dissolving:** a solid's ions or molecules spread through the solvent.
 
 ---
 
-### Boltzmann's Tombstone
+### 2. Energy Spreads Out
 
-This equation was so important that it's literally **engraved on Boltzmann's tombstone** in Vienna. It bridges the microscopic world (individual particles) and the macroscopic world (things we can measure like temperature and pressure).
+As temperature rises, the distribution of particle kinetic energies **broadens**. Energy is spread over a wider range of motions, so entropy increases with temperature even when nothing changes phase.
+
+> 💡 **Tip:** The food coloring spreads (matter dispersal). A hot drink cools to room temperature as its energy spreads into the surroundings (energy dispersal). Both are entropy at work.
       `
     },
     {
@@ -84,7 +75,6 @@ This equation was so important that it's literally **engraved on Boltzmann's tom
 
 | Property | What It Means | Why It Matters |
 |----------|---------------|----------------|
-| **State function** | Only depends on current state | Path doesn't matter — only start and end points |
 | **Extensive** | Doubles when amount doubles | 2 mol has twice the entropy of 1 mol |
 | **Always positive** ($T > 0$) | No substance has zero entropy above 0 K | Even crystals have thermal vibrations |
 | **Units: J/K** | Not kJ! | Common AP exam trap — watch your units |
@@ -92,11 +82,11 @@ This equation was so important that it's literally **engraved on Boltzmann's tom
 
 ---
 
-### Entropy vs Energy: What's Different?
+### Entropy Changes Can Be Positive or Negative
 
-Energy is **conserved** — it can neither be created nor destroyed. Entropy is **NOT conserved** — it can be **created** in irreversible processes. In fact, the total entropy of the universe always increases for any spontaneous process.
+Every substance has a positive entropy, but a **change** in entropy, $\\Delta S$, can have either sign. $\\Delta S > 0$ means matter or energy became more dispersed; $\\Delta S < 0$ means it became less dispersed (for example, a gas condensing).
 
-This is the key to understanding why some reactions happen and others don't!
+This sign, together with $\\Delta H$, is the key to understanding why some processes are thermodynamically favored and others aren't!
       `
     },
     {
@@ -116,51 +106,53 @@ This is the key to understanding why some reactions happen and others don't!
               'Bonds between dye molecules break, freeing them to move'
             ],
             correctAnswer: 2,
-            explanation: 'Spreading is driven by probability: the number of microstates where dye molecules are spread throughout the water is astronomically larger than the number where they are concentrated in one spot. No push, density difference or bond breaking is needed.'
+            explanation: 'Spreading is driven by probability: arrangements with the dye molecules spread throughout the water astronomically outnumber arrangements with them concentrated in one spot. No push, density difference or bond breaking is needed.'
           },
           {
-            question: 'Why does Boltzmann use a logarithm in S = k ln W?',
+            question: 'A sealed flask of gas is heated from 25 °C to 75 °C. Why does its entropy increase even though its volume is unchanged?',
             options: [
-              'To keep entropy values small',
-              'So entropy is additive when combining systems',
-              'Because entropy is negative for small W',
-              'To convert temperature into energy'
+              'The gas molecules become larger at higher temperature',
+              'The distribution of molecular kinetic energies broadens',
+              'Heating creates additional moles of gas',
+              'Heating converts the gas into a liquid'
             ],
             correctAnswer: 1,
-            explanation: 'When combining two systems, $W_{\\text{total}} = W_A \\times W_B$, but $\\ln(W_A \\times W_B) = \\ln W_A + \\ln W_B$, so $S_{\\text{total}} = S_A + S_B$.'
+            explanation: 'At a higher temperature the kinetic energies of the molecules spread over a wider range, so energy is more dispersed and entropy increases (CED 9.1.A.2). The molecules do not grow, the amount of gas is unchanged, and heating does not condense a gas.'
           },
           {
-            question: 'Unlike energy, entropy:',
+            question: 'Which process has a NEGATIVE entropy change for the system?',
             options: [
-              'Is conserved in every process',
-              'Can be created in irreversible processes',
-              'Is reported in kJ/mol, like enthalpy',
-              'Decreases in all spontaneous processes'
+              'Dry ice subliming to $CO_{2}$ gas',
+              'Steam condensing to liquid water',
+              'Sugar dissolving in water',
+              'Helium expanding into a larger container'
             ],
             correctAnswer: 1,
-            explanation: 'Energy is conserved (First Law). Entropy can be created (Second Law) — the total entropy of the universe increases for every spontaneous process.'
+            explanation: 'Condensation turns a dispersed gas into a liquid whose particles are confined close together, so ΔS < 0. Sublimation, dissolving, and expansion all disperse matter, so their entropy changes are positive.'
           }
         ]
       }
     },
     {
-      id: 'en1v2-counting-drill',
+      id: 'en1v2-dispersal-drill',
       type: 'input-boxes' as const,
       content: `
-**Microstate Counting Practice** 🧮
+**Dispersal Practice** 🧮
 
-**1)** A system of 5 coins has how many total microstates? ($W = 2^n$)
+For each change, type **increase** or **decrease** for the entropy of the system.
 
-**2)** What is the probability that all 5 coins show heads? (express as a fraction like 1/32)
+**1)** Liquid bromine evaporates: $\\text{Br}_2(l) \\rightarrow \\text{Br}_2(g)$
 
-**3)** If $W$ doubles, does entropy double? (type yes or no)
+**2)** A balloon of helium is cooled from 300 K to 200 K at constant volume.
+
+**3)** $2\\text{NO}_2(g) \\rightarrow \\text{N}_2\\text{O}_4(g)$
       `,
       exercise: {
-        questions: [{ question: '(1)', answer: '32', acceptableAnswers: ['32'] }, { question: '(2)', answer: '1/32', acceptableAnswers: ['1/32', '0.03125', '0.0313', '0.031'] }, { question: '(3)', answer: 'no', acceptableAnswers: ['no'] }],
-        hint1: '$W = 2^5$',
-        hint2: 'Only 1 of the $2^5$ microstates has all heads.',
-        hint3: 'Since $S = k \\ln W$, doubling W gives $S_2 = k \\ln(2W) = k \\ln 2 + k \\ln W$. It increases by $k \\ln 2$, not doubles.',
-        explanation: '1) $W = 2^5 = 32$. 2) Probability = 1/32 (one favored microstate out of 32). 3) No — since $\\ln(2W) = \\ln 2 + \\ln W$, entropy increases by $k\\ln 2$, not by a factor of 2. The logarithm prevents simple doubling.'
+        questions: [{ question: '(1)', answer: 'increase', acceptableAnswers: ['increase', 'increases'] }, { question: '(2)', answer: 'decrease', acceptableAnswers: ['decrease', 'decreases'] }, { question: '(3)', answer: 'decrease', acceptableAnswers: ['decrease', 'decreases'] }],
+        hint1: 'Liquid → gas.',
+        hint2: 'What happens to the spread of kinetic energies when T falls?',
+        hint3: 'Compare moles of gas on each side.',
+        explanation: '1) Increase: the liquid becomes a gas, dispersing matter. 2) Decrease: a lower temperature narrows the energy distribution. 3) Decrease: 2 mol of gas become 1 mol, so matter is less dispersed.'
       }
     },
     {
@@ -172,7 +164,7 @@ This is the key to understanding why some reactions happen and others don't!
       exercise: {
         dropdowns: [
           {
-            label: 'More microstates means',
+            label: 'More dispersal of matter or energy means',
             options: ['lower entropy', 'higher entropy', 'same entropy', 'lower temperature']
           },
           {
@@ -180,19 +172,19 @@ This is the key to understanding why some reactions happen and others don't!
             options: ['kJ/mol', 'J/K', 'atm', 'mol/L']
           },
           {
-            label: 'When combining two systems, microstates',
-            options: ['add', 'multiply', 'subtract', 'stay the same']
+            label: 'Raising the temperature of a substance makes its entropy',
+            options: ['decrease', 'increase', 'stay the same', 'become zero']
           },
           {
             label: 'A solid changing to a liquid is an entropy',
             options: ['decrease', 'increase', 'no change', 'reversal']
           }
         ],
-        correctAnswers: ['higher entropy', 'J/K', 'multiply', 'increase'],
-        hint1: '$S = k \\ln W$ — S increases with W.',
+        correctAnswers: ['higher entropy', 'J/K', 'increase', 'increase'],
+        hint1: 'Entropy measures dispersal.',
         hint2: 'Be careful: J not kJ!',
-        hint3: '$W_{\\text{total}} = W_A \\times W_B$ for independent systems.',
-        explanation: 'More microstates = higher $S$. Entropy uses J/K (not kJ). Microstates multiply for combined systems ($\\ln$ makes entropy additive). Melting increases disorder → higher entropy.'
+        hint3: 'A broader energy distribution means more dispersed energy.',
+        explanation: 'More dispersal = higher $S$. Entropy uses J/K (not kJ). Heating broadens the energy distribution, raising entropy. Melting lets particles move more freely → higher entropy.'
       }
     },
     {
@@ -207,23 +199,23 @@ This is the key to understanding why some reactions happen and others don't!
             question: 'A glass of ice water sits in a warm room. Why does the ice melt?',
             options: [
               'The warm room supplies the activation energy the ice needs',
-              'The liquid has many more accessible microstates',
+              'Above 0 °C, entropy gain outweighs ΔH > 0',
               'Ice is less stable than liquid water at every temperature',
               'Melting lowers the energy of the water molecules'
             ],
             correctAnswer: 1,
-            explanation: 'Above 0°C, liquid water has vastly more accessible microstates than solid ice, and heat flowing in from the warm room makes the liquid the overwhelmingly more probable state (higher entropy). Melting raises the molecules\' energy (it is endothermic), and ice is the stable phase below 0°C.'
+            explanation: 'Melting is endothermic (unfavorable energy change) but disperses the molecules (favorable entropy change). Above 0°C the entropy factor wins, so ice melts. Melting raises rather than lowers the molecules\' energy, activation energy affects only the rate, and ice is the stable phase below 0°C.'
           },
           {
             question: 'Which statement about entropy is FALSE?',
             options: [
-              'Entropy is a state function',
-              'Entropy is conserved in all processes',
+              'Entropy increases when a gas expands at constant T',
+              'Entropy decreases when a liquid boils',
               'Entropy has units of J/K',
               'Entropy is always positive above 0 K'
             ],
             correctAnswer: 1,
-            explanation: 'Entropy is NOT conserved — it can be created in irreversible processes. Energy is the conserved quantity (First Law). Entropy always increases in the universe (Second Law).'
+            explanation: 'Boiling turns a liquid into a far more dispersed gas, so entropy INCREASES. The other statements are true: expansion disperses a gas, entropy is measured in J/K, and every substance has positive entropy above 0 K.'
           }
         ]
       }

@@ -233,15 +233,15 @@ A 0.25 M solution of an unknown weak acid has a pH of 2.72.
             explanation: '$[H^+] = 10^{-3.85} = 1.41 \\times 10^{-4}$ M. Assuming $C - x \\approx C$, $K_a = [H^+]^2/C$, so $C = [H^+]^2/K_a = (1.41 \\times 10^{-4})^2/(2.0 \\times 10^{-6}) = (1.99 \\times 10^{-8})/(2.0 \\times 10^{-6}) = 0.010$ M. (Ionization is only about 1.4%, so the approximation holds.) $1.4 \\times 10^{-4}$ M treats the weak acid as if it ionized completely; 0.10 M comes from an exponent slip when squaring ($1.99 \\times 10^{-7}$); 0.25 M comes from evaluating $10^{-3.85}$ as $7.1 \\times 10^{-4}$.'
           },
           {
-            question: 'The pH of 0.10 M $Na_2CO_3$ is best calculated by:',
+            question: 'The pH of 0.10 M $NaF$ ($K_a$ of $HF = 6.8 \\times 10^{-4}$) is best calculated by:',
             options: [
-              'Using $K_{a1}$ of $H_2CO_3$, the parent acid',
-              'Using $K_b = K_w/K_{a2}$ for $CO_3^{2-}$',
+              'Using $K_a$ of $HF$ directly in an ICE table for $HF$',
+              'Using $K_b = K_w/K_a$ for $F^-$ in an ICE table',
               'Assuming neutral pH, since it is a salt',
-              'Using $K_b = K_w/K_{a1}$ for $CO_3^{2-}$'
+              'Setting $[OH^-]$ equal to 0.10 M'
             ],
             correctAnswer: 1,
-            explanation: '$CO_3^{2-}$ is the conjugate base of $HCO_3^-$, which has $K_a = K_{a2}$. So $K_b(CO_3^{2-}) = K_w/K_{a2}$. Use this with an ICE table to find $[OH^-]$ and then pH. Dividing $K_w$ by $K_{a1}$ instead gives $K_b$ for $HCO_3^-$, not for $CO_3^{2-}$, and a salt of a weak acid is not neutral.'
+            explanation: '$F^-$ is the conjugate base of the weak acid HF, so it reacts with water as a weak base: $F^- + H_2O \\rightleftharpoons HF + OH^-$. Its $K_b = K_w/K_a = 1.5 \\times 10^{-11}$, used with an ICE table to find $[OH^-]$ and then pH. There is no HF to start with, a salt of a weak acid is not neutral, and $F^-$ is far too weak a base to make $[OH^-]$ equal 0.10 M.'
           }
         ]
       }

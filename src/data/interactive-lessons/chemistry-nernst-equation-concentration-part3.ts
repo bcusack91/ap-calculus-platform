@@ -4,7 +4,7 @@ export const chemNernstEquationConcentrationPart3Data = {
     {
       id: 'ne3-intro',
       type: 'text' as const,
-      content: `# 🔄 Concentration Cells
+      content: `# 📉 Cell Potential Under Nonstandard Conditions
 
 **Part 3 of 7 — Same Electrodes, Different Concentrations**
 
@@ -15,19 +15,18 @@ export const chemNernstEquationConcentrationPart3Data = {
 | Section |
 |---------|
 | 🔧 How Concentration Cells Work |
-| The Setup — Same Metal, Different Concentrations |
-| ⚡ E° = 0 — But the Cell Still Works! |
-| 📐 The Nernst Equation for Concentration Cells |
-| 🧭 Why Does Dilute = Anode? |
+| 🧭 Finding the Anode and Cathode |
+| 🧪 Worked Example — Copper Concentration Cell |
+| ⏳ How a Concentration Cell Runs Down |
 
-> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+> 🔑 **Key Concept:** A concentration cell has the **same** half-reaction on both sides, so $E° = 0$. It still produces a voltage because the two concentrations differ, and the CED asks you to find the direction of electron flow "by considering the direction needed to reach equilibrium" (9.10.A.3).
 
 ---
 
 ### What You'll Master in Part 3
-- Understanding the core concepts covered in Part 3
-- Applying these ideas to solve practice problems
-- Building toward AP exam readiness for this topic`
+- Explain why a cell with identical electrodes can have $E > 0$
+- Identify the anode, cathode and electron-flow direction from the concentrations
+- Describe how the concentrations, electrode masses and potential change as the cell runs`
     },
     {
       id: 'ne3-how-they-work',
@@ -35,51 +34,75 @@ export const chemNernstEquationConcentrationPart3Data = {
       content: `
 ## 🔧 How Concentration Cells Work
 
-### The Setup — Same Metal, Different Concentrations
+Consider two copper electrodes, one in 0.010 M $\\text{Cu}^{2+}$ and one in 1.0 M $\\text{Cu}^{2+}$, joined by a wire and a salt bridge.
 
-Both half-cells contain the **same electrode** and the **same ion** — the only difference is concentration:
+- Both half-reactions are $\\text{Cu}^{2+} + 2e^- \\rightleftharpoons \\text{Cu}$, so $E°_{\\text{cell}} = 0$.
+- The two solutions are not at equilibrium with each other: left alone, the concentrations would even out.
+- The only way they can even out is by running the cell: copper dissolves on the dilute side and copper ions plate out on the concentrated side.
 
-| | Dilute Side | Concentrated Side |
-|--|-------------|-------------------|
-| **Concentration** | $[\\text{M}^{n+}]_{\\text{dilute}}$ (low) | $[\\text{M}^{n+}]_{\\text{conc}}$ (high) |
-| **Role** | Anode (oxidation) | Cathode (reduction) |
-| **What happens** | Metal dissolves → ions enter solution | Ions plate out → metal deposits |
-| **Concentration changes** | Increases ⬆️ | Decreases ⬇️ |
+The net change is simply
 
----
+$$\\text{Cu}^{2+}(\\text{concentrated}) \\rightarrow \\text{Cu}^{2+}(\\text{dilute})$$
 
-### ⚡ E° = 0 — But the Cell Still Works!
+$$Q = \\frac{[\\text{Cu}^{2+}]_{\\text{dilute}}}{[\\text{Cu}^{2+}]_{\\text{concentrated}}} = \\frac{0.010}{1.0} = 0.010$$
 
-Since both half-reactions are identical:
-
-$$E°_{\\text{cell}} = E°_{\\text{cathode}} - E°_{\\text{anode}} = E° - E° = 0$$
-
-> 🔑 So where does the voltage come from? **Entirely from the concentration difference!**
+Because $Q < 1$ and $E° = 0$, the qualitative Nernst equation gives $E > 0$: the process is thermodynamically favored until the two concentrations match.
 
 ---
 
-### 📐 The Nernst Equation for Concentration Cells
+## 🧭 Finding the Anode and Cathode
 
-Starting from the Nernst equation with $E° = 0$:
+| Half-cell | What happens | Electrode |
+|-----------|--------------|-----------|
+| **Dilute** side | $\\text{Cu} \\rightarrow \\text{Cu}^{2+} + 2e^-$ raises the low concentration | **Anode** (oxidation) |
+| **Concentrated** side | $\\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$ lowers the high concentration | **Cathode** (reduction) |
 
-$$E = 0 - \\frac{0.0592}{n}\\log Q = -\\frac{0.0592}{n}\\log\\frac{[\\text{dilute}]}{[\\text{conc}]}$$
-
-Flipping the fraction removes the negative sign:
-
-$$\\boxed{E = \\frac{0.0592}{n}\\log\\frac{[\\text{conc}]}{[\\text{dilute}]}}$$
-
-> 💡 The bigger the concentration ratio, the higher the voltage. A 10× ratio gives $0.0592/n$ V per factor of 10.
-
----
-
-### 🧭 Why Does Dilute = Anode?
-
-The system wants to reach **equilibrium** (equal concentrations). It does this by:
-
-1. **Dissolving** metal on the dilute side → increases $[\\text{M}^{n+}]$ there (oxidation = anode)
-2. **Plating out** ions on the concentrated side → decreases $[\\text{M}^{n+}]$ there (reduction = cathode)
-3. **Equilibrium** is reached when both sides are equal → $Q = 1$ → $E = 0$
+> 💡 **Rule of thumb:** each side changes in the direction that makes the two concentrations more alike. Electrons flow through the wire **from the dilute side to the concentrated side**.
       `
+    },
+    {
+      id: 'ne3-concept-quiz',
+      type: 'multiple-choice' as const,
+      content: `
+**Check Your Understanding — Concentration Cells** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Two silver electrodes sit in 0.0010 M AgNO₃ and 0.50 M AgNO₃, connected by a wire and a salt bridge. Which electrode is the anode?',
+            options: [
+              'The electrode in 0.50 M AgNO₃',
+              'The electrode in 0.0010 M AgNO₃',
+              'The electrode with the larger surface area',
+              'Neither, because E° for the cell is zero'
+            ],
+            correctAnswer: 1,
+            explanation: 'Oxidation of silver on the dilute side, $\\text{Ag} \\rightarrow \\text{Ag}^{+} + e^-$, raises the low concentration and moves the system toward equal concentrations, so the dilute electrode is the anode. $E° = 0$ only means the potential comes entirely from the concentration difference.'
+          },
+          {
+            question: 'Why does a concentration cell produce a voltage even though E° = 0?',
+            options: [
+              'Because the larger electrode has a higher reduction potential',
+              'Because the salt bridge supplies the energy for the reaction',
+              'Because Q is not equal to 1, so the cell is not at equilibrium',
+              'Because the dilute solution has a negative reduction potential'
+            ],
+            correctAnswer: 2,
+            explanation: 'With unequal concentrations, $Q$ differs from 1 (and from $K = 1$), so the system is away from equilibrium and $E$ is nonzero. Electrode size does not appear in $Q$, and the salt bridge only maintains charge balance.'
+          },
+          {
+            question: 'In a nickel concentration cell, which way do electrons flow through the external wire?',
+            options: [
+              'From the dilute side to the concentrated side',
+              'From the concentrated side to the dilute side',
+              'From the larger electrode to the smaller one',
+              'No net flow, because both electrodes are nickel'
+            ],
+            correctAnswer: 0,
+            explanation: 'Oxidation happens on the dilute side (the anode) and reduction on the concentrated side (the cathode), so electrons leave the dilute-side electrode and travel to the concentrated-side electrode. The cell runs one way until the concentrations are equal.'
+          }
+        ]
+      }
     },
     {
       id: 'ne3-worked-example',
@@ -87,144 +110,81 @@ The system wants to reach **equilibrium** (equal concentrations). It does this b
       content: `
 ## 🧪 Worked Example — Copper Concentration Cell
 
-> **Problem:** A $Cu/Cu^{2+}$ concentration cell at 25°C has $[\\text{Cu}^{2+}]_{\\text{left}} = 0.010$ M (dilute, anode) and $[\\text{Cu}^{2+}]_{\\text{right}} = 1.0$ M (concentrated, cathode). Given $n = 2$ (from $\\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$) and $E° = 0$, calculate the cell potential.
+> **Problem:** Half-cell A: Cu in 0.050 M $\\text{Cu(NO}_3)_2$. Half-cell B: Cu in 1.5 M $\\text{Cu(NO}_3)_2$. A salt bridge contains $\\text{KNO}_3$. Describe what happens as the cell operates.
 
-> **Solution:**
+### Step 1 — Identify the anode and cathode
 
-### Step 1 — Identify Anode and Cathode
+A is dilute → **anode** (Cu is oxidized). B is concentrated → **cathode** ($\\text{Cu}^{2+}$ is reduced).
 
-> Dilute side = **anode** (metal dissolves to increase concentration)
-> Concentrated side = **cathode** (ions plate out to decrease concentration)
+### Step 2 — Direction of electron flow
 
----
+Through the wire from **A to B**.
 
-### Step 2 — Calculate the Reaction Quotient
+### Step 3 — Changes in each half-cell
 
-$$Q = \\frac{[\\text{Cu}^{2+}]_{\\text{anode}}}{[\\text{Cu}^{2+}]_{\\text{cathode}}} = \\frac{0.010}{1.0} = 0.010$$
+| Observation | Half-cell A (anode) | Half-cell B (cathode) |
+|-------------|--------------------|-----------------------|
+| $[\\text{Cu}^{2+}]$ | increases | decreases |
+| Electrode mass | decreases | increases |
+| Ions arriving from salt bridge | $\\text{NO}_3^-$ (balances new $\\text{Cu}^{2+}$) | $\\text{K}^+$ (replaces lost $\\text{Cu}^{2+}$) |
 
----
+### Step 4 — Long-term behavior
 
-### Step 3 — Apply the Nernst Equation
+The concentrations approach each other, $Q$ rises toward 1 (which is $K$ for this cell), and $E$ falls toward zero.
 
-$$E = 0 - \\frac{0.0592}{2}\\log(0.010)$$
-
-$$E = -0.0296 \\times (-2.00)$$
-
-$$\\boxed{E = +0.0592 \\text{ V} = 59.2 \\text{ mV}}$$
-
-> 📏 Small but measurable! This is exactly the principle behind **pH meters** and **ion-selective electrodes**.
-
----
-
-### ⏱️ What Happens Over Time?
-
-| Time | Dilute Side | Concentrated Side | $E$ |
-|------|-------------|-------------------|-----|
-| Start | 0.010 M | 1.0 M | 59.2 mV |
-| Running | Increases ⬆️ | Decreases ⬇️ | Decreasing |
-| Equilibrium | ~0.505 M | ~0.505 M | **0 mV** |
-
-> The cell **spontaneously equalizes** the concentrations — just like entropy demands!
+> ✅ The cell is "dead" when both solutions reach the same $\\text{Cu}^{2+}$ concentration.
       `
-    },
-    {
-      id: 'ne3-concept-quiz',
-      type: 'multiple-choice' as const,
-      content: `
-**Concentration Cell Quiz** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'In a concentration cell, E° equals:',
-            options: [
-              'A large positive value',
-              'A large negative value',
-              'Zero',
-              'It depends on the metal used'
-            ],
-            correctAnswer: 2,
-            explanation: 'Both half-cells have identical half-reactions, so $E° = E°_{\\text{cathode}} - E°_{\\text{anode}} = 0$. All voltage comes from the concentration difference.'
-          },
-          {
-            question: 'In a concentration cell, which side is the anode?',
-            options: [
-              'The more concentrated side',
-              'The side with lower concentration',
-              'Either side — it doesn\'t matter',
-              'The side with more metal'
-            ],
-            correctAnswer: 1,
-            explanation: 'The dilute side is the anode: the metal dissolves to increase the ion concentration toward equilibrium. The concentrated side is the cathode where ions plate out.'
-          },
-          {
-            question: 'A concentration cell reaches equilibrium when:',
-            options: [
-              'All the metal has dissolved',
-              'The concentrations are equal in both compartments',
-              'The voltage reaches E°',
-              'The salt bridge is saturated'
-            ],
-            correctAnswer: 1,
-            explanation: 'Equilibrium is reached when concentrations are equal ($Q = 1$, $\\log Q = 0$, $E = 0$). The driving force for the cell is the concentration difference.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'ne3-calculation-drill',
-      type: 'input-boxes' as const,
-      content: `
-**Concentration Cell Calculations** 🧮
-
-At 25°C:
-
-**1)** An Ag concentration cell has $[\\text{Ag}^+]_{\\text{dilute}} = 0.0010$ M and $[\\text{Ag}^+]_{\\text{conc}} = 1.0$ M. $n = 1$. Calculate $E$. (in V, to 3 significant figures)
-
-**2)** A Zn concentration cell has $[\\text{Zn}^{2+}] = 0.10$ M and $1.0$ M. $n = 2$. Calculate $E$. (in V, to 3 significant figures)
-
-**3)** If both compartments have the same concentration, $E = ?$ (in V)
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['0.1776', '0.0296', '0'],
-        hint1: '$E = (0.0592/1)\\log(1.0/0.0010) = 0.0592 \\times 3$',
-        hint2: '$E = (0.0592/2)\\log(1.0/0.10) = 0.0296 \\times 1$',
-        hint3: 'Equal concentrations → $Q = 1$ → $\\log(1) = 0$.',
-        explanation: '1) $E = 0.0592 \\times \\log(1000) = 0.0592 \\times 3 = 0.1776$ V. 2) $E = 0.0296 \\times \\log(10) = 0.0296$ V. 3) $Q = 1$ → $E = 0$ V.'
-      }
     },
     {
       id: 'ne3-dropdown-practice',
       type: 'dropdown-select' as const,
       content: `
-**Concentration Cell Concepts** 🔽
+**Track the Cell** 🔽
+
+A zinc concentration cell has 0.020 M $\\text{Zn}^{2+}$ in half-cell X and 2.0 M $\\text{Zn}^{2+}$ in half-cell Y.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The driving force of a concentration cell is',
-            options: ['the difference in E° values', 'the concentration gradient', 'the size of the electrodes', 'the type of salt bridge']
+            label: 'Oxidation occurs in',
+            options: ['half-cell X', 'half-cell Y', 'both half-cells', 'neither half-cell']
           },
           {
-            label: 'As a concentration cell operates, the concentrations become',
-            options: ['more different', 'more equal', 'both increase', 'both decrease']
+            label: 'As the cell runs, the mass of the zinc electrode in Y',
+            options: ['increases', 'decreases', 'stays the same', 'drops to zero']
           },
           {
-            label: 'A concentration cell with a 100× concentration ratio and n = 2 produces',
-            options: ['0.0592 V', '0.0296 V', '0.1184 V', '0.1776 V']
+            label: 'As the cell runs, [Zn²⁺] in X',
+            options: ['increases', 'decreases', 'stays the same', 'equals 2.0 M']
           },
           {
-            label: 'Concentration cells are used in practice as',
-            options: ['high-voltage batteries', 'sensors for ion concentration', 'hydrogen fuel cells', 'electrolytic cells']
+            label: 'When [Zn²⁺] is the same in both half-cells, the cell potential is',
+            options: ['zero', 'equal to E° for Zn²⁺/Zn', 'at its maximum', 'negative']
           }
         ],
-        correctAnswers: ['the concentration gradient', 'more equal', '0.0592 V', 'sensors for ion concentration'],
-        hint1: 'E° = 0, so all voltage comes from ΔC.',
-        hint2: 'The cell equalizes concentrations (approaches equilibrium).',
-        hint3: '$E = (0.0592/2)\\log(100) = 0.0296 \\times 2 = 0.0592$ V.',
-        explanation: 'Concentration cells are driven by the concentration gradient. They equalize concentrations. 100× ratio with n=2: E = 0.0592 V. They are commonly used as ion-selective sensors (like pH meters).'
+        correctAnswers: ['half-cell X', 'increases', 'increases', 'zero'],
+        hint1: 'The dilute side is oxidized so that its concentration rises.',
+        hint2: 'Reduction plates zinc metal onto the cathode.',
+        hint3: 'Equal concentrations mean $Q = 1 = K$.',
+        explanation: 'X is dilute, so zinc is oxidized there and $[\\text{Zn}^{2+}]$ in X rises. Y is the cathode, where $\\text{Zn}^{2+}$ is reduced and zinc plates onto the electrode, increasing its mass. When the concentrations match the cell is at equilibrium and $E = 0$.'
       }
+    },
+    {
+      id: 'ne3-runs-down',
+      type: 'text' as const,
+      content: `
+## ⏳ How a Concentration Cell Runs Down
+
+The potential of a concentration cell depends on **how different** the two concentrations are:
+
+| Concentration ratio (dilute : concentrated) | Distance from equilibrium | Cell potential |
+|---------------------------------------------|---------------------------|----------------|
+| 1 : 1000 | far | largest |
+| 1 : 10 | closer | smaller |
+| 1 : 1 | at equilibrium | zero |
+
+> 🔑 **AP Connection:** Free-response items typically ask you to (1) identify the anode, (2) give the direction of electron flow or of ion flow in the salt bridge, and (3) justify what happens to $E$ over time. Justify with $Q$ and the approach to equilibrium, not with a Nernst calculation.
+      `
     },
     {
       id: 'ne3-exit-quiz',
@@ -235,26 +195,37 @@ At 25°C:
       exercise: {
         questions: [
           {
-            question: 'A Ni concentration cell has [$Ni^{2+}$] = 0.001 M and 1.0 M (n = 2). The voltage at 25°C is:',
+            question: 'Which of these copper concentration cells has the largest initial cell potential?',
             options: [
-              '0.0296 V',
-              '0.0592 V',
-              '0.0888 V',
-              '0.1184 V'
+              '0.10 M Cu²⁺ paired with 1.0 M Cu²⁺',
+              '0.50 M Cu²⁺ paired with 1.0 M Cu²⁺',
+              '0.0010 M Cu²⁺ paired with 1.0 M Cu²⁺',
+              '1.0 M Cu²⁺ paired with 1.0 M Cu²⁺'
             ],
             correctAnswer: 2,
-            explanation: '$E = (0.0592/2)\\log(1.0/0.001) = 0.0296 \\times \\log(1000) = 0.0296 \\times 3 = 0.0888$ V.'
+            explanation: 'The largest concentration difference puts the cell farthest from equilibrium ($Q$ farthest below 1), so it has the largest potential. Equal concentrations give $E = 0$, and the other two pairs are closer to equal.'
           },
           {
-            question: 'In a Ag concentration cell, the anode compartment starts at 0.01 M. After the cell runs for a while, the concentration at the anode is:',
+            question: 'In a silver concentration cell with a KNO₃ salt bridge, which ions move into the dilute (anode) compartment?',
             options: [
-              'Lower than 0.01 M',
-              'Higher than 0.01 M',
-              'Exactly 0.01 M',
-              'Near zero'
+              'K⁺ ions, to replace the Ag⁺ that is consumed',
+              'NO₃⁻ ions, to balance the Ag⁺ being produced',
+              'Ag⁺ ions, which travel through the bridge to the cathode',
+              'No ions, because the dilute side has the fewest ions'
             ],
             correctAnswer: 1,
-            explanation: 'At the anode, Ag dissolves: Ag → $Ag^{+}$ + $e^{-}$. This increases [$Ag^{+}$] in the dilute compartment, so it never falls toward zero. The cell drives both compartments toward equal concentration; $Ag^{+}$ plates out at the cathode (the concentrated side), not at the anode.'
+            explanation: 'Oxidation on the dilute side produces $\\text{Ag}^{+}$, building up positive charge, so nitrate ions flow in from the bridge to keep the solution neutral. $\\text{K}^+$ flows the other way, into the cathode compartment where $\\text{Ag}^{+}$ is removed.'
+          },
+          {
+            question: 'A student says a concentration cell will run forever because its electrodes are identical. What is the best response?',
+            options: [
+              'The electrodes corrode away, so the reaction stops',
+              'Equal molarities make Q = K, so E drops to 0',
+              'The salt bridge fills with ions and blocks the flow',
+              'The solutions cool down until no reaction occurs'
+            ],
+            correctAnswer: 1,
+            explanation: 'Running the cell raises the dilute concentration and lowers the concentrated one. When they are equal, $Q = K = 1$ and the potential is zero, so no further net reaction occurs. Corrosion, a clogged bridge or cooling are not what stops the cell; reaching equilibrium is.'
           }
         ]
       }

@@ -6,7 +6,7 @@ export const chemEnthalpyCalorimetryPart5Data = {
       type: 'text' as const,
       content: `# 🔄 Hess's Law — Adding Enthalpy Changes
 
-**Part 5 of 7 — The Power of State Functions**
+**Part 5 of 7 — Combining Reactions to Find ΔH**
 
 ---
 
@@ -39,7 +39,7 @@ export const chemEnthalpyCalorimetryPart5Data = {
 
 $$\\boxed{\\Delta H_{\\text{overall}} = \\Delta H_1 + \\Delta H_2 + \\Delta H_3 + \\cdots}$$
 
-> 🔑 **Why It Works:** Because enthalpy is a state function, the total $\\Delta H$ depends only on the initial and final states, not the path. Whether a reaction occurs in one step or ten, $\\Delta H$ is the same.
+> 🔑 **Why It Works:** The overall $\\Delta H$ depends only on the starting reactants and the final products (CED 6.9). Adding steps that lead from the same reactants to the same products gives the same total $\\Delta H$, whether the path has one step or ten.
 
 
 ---
@@ -104,20 +104,20 @@ $$\\Delta H = -393.5 + 283.0 = -110.5 \\text{ kJ}$$
       exercise: {
         questions: [
           {
-            question: 'Hess\'s Law works because enthalpy is a:',
+            question: 'A target equation needs 2 mol of $SO_{3}$ as a product, but a given equation has 1 mol of $SO_{3}$ as a reactant. What should you do to the given equation and its ΔH?',
             options: [
-              'Path function',
-              'State function',
-              'Conserved quantity',
-              'Extensive property only'
+              'Multiply it by 2 and keep the sign of ΔH',
+              'Reverse it and multiply it by 2, so ΔH becomes −2 times the original',
+              'Reverse it and keep ΔH unchanged',
+              'Use it as written and add 2 to ΔH'
             ],
             correctAnswer: 1,
-            explanation: 'Hess\'s Law is a direct consequence of enthalpy being a state function. The total ΔH depends only on initial and final states, so it doesn\'t matter how many steps we use to get there.'
+            explanation: 'Reversing moves $SO_{3}$ to the product side and flips the sign of ΔH; multiplying by 2 gives 2 mol and doubles ΔH. Keeping the sign ignores the reversal, reversing without changing ΔH breaks the sign rule, and ΔH is scaled by multiplying, not by adding.'
           },
           {
             question: 'If you reverse a reaction AND multiply it by 2, what happens to ΔH?',
             options: [
-              'It stays the same, since ΔH is a state function',
+              'It stays the same, since the substances are unchanged',
               'It changes sign but keeps its magnitude',
               'It doubles but keeps its original sign',
               'It changes sign AND doubles'

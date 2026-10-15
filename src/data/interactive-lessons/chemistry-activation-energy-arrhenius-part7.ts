@@ -6,61 +6,56 @@ export const chemActivationEnergyArrheniusPart7Data = {
       type: 'text' as const,
       content: `# 🎓 Synthesis & AP Review
 
-**Part 7 of 7 — Comprehensive Arrhenius and Catalyst Problems**
+**Part 7 of 7 — Comprehensive Energy Profile and Catalyst Problems**
 
 ---
 
-### Equations You Must Know
+### Ideas You Must Know
 
-| Equation | When to Use |
-|----------|-------------|
-| $k = Ae^{-E_a/RT}$ | Conceptual — how $k$ depends on T and $E_a$ |
-| $\\ln k = -\\frac{E_a}{R}\\cdot\\frac{1}{T} + \\ln A$ | Graphical — slope of $\\ln k$ vs $1/T$ |
-| $\\ln\\frac{k_2}{k_1} = \\frac{E_a}{R}(\\frac{1}{T_1} - \\frac{1}{T_2})$ | Two data points — find $E_a$, $k$, or $T$ |
-| $E_a(\\text{forward}) = E_a(\\text{reverse}) + \\Delta H$ | Energy diagram relationships |
+| Idea | When to Use |
+|------|-------------|
+| $k = Ae^{-E_a/RT}$ (qualitative) | $k$ rises with $T$ and falls as $E_a$ rises |
+| Maxwell-Boltzmann distribution | Explaining rate changes with temperature or a catalyst |
+| $E_a(\\text{forward}) = E_a(\\text{reverse}) + \\Delta H$ | Energy profile relationships |
+| Multistep profiles | Steps, intermediates, and the slowest step |
 
-> 🔑 **Why this matters:** AP Chemistry free-response questions often combine energy diagrams, Arrhenius calculations, and catalyst effects in a single multi-part problem.
+> 🔑 **Why this matters:** AP Chemistry free-response questions often combine energy profiles, collision-model explanations, and catalyst effects in a single multi-part problem.
 
 ---
 
 ### What You'll Master in Part 7
-- Solving comprehensive problems that combine collision theory, energy diagrams, and Arrhenius
-- Interpreting how catalysts affect energy diagrams and rate constants
-- Working through AP-style free-response questions under timed conditions`
+- Solving comprehensive problems that combine collision theory, energy profiles, and catalysts
+- Interpreting how catalysts affect energy profiles and rate constants
+- Writing AP-style justifications under timed conditions`
     },
     {
-      id: 'ae7-key-equations',
+      id: 'ae7-key-ideas',
       type: 'text' as const,
       content: `
-## 📋 Key Equations Summary
+## 📋 Key Ideas Summary
 
 ---
 
-### 🧪 Arrhenius Equations
+### 🧪 Rate Constant Trends
 
-| Form | Equation | Use Case |
-|------|----------|----------|
-| Standard | $k = Ae^{-E_a/(RT)}$ | Relates rate constant to temperature |
-| Linearized | $\\ln k = -\\frac{E_a}{R} \\cdot \\frac{1}{T} + \\ln A$ | Plot $\\ln k$ vs. $1/T$ for straight line |
-| Two-Point | $\\ln\\frac{k_2}{k_1} = \\frac{E_a}{R}\\left(\\frac{1}{T_1} - \\frac{1}{T_2}\\right)$ | Find $E_a$ from two $(k, T)$ data points |
+| Change | Effect on $k$ | Particle-level reason |
+|--------|---------------|-----------------------|
+| Higher $T$ | Increases | Larger fraction of collisions with energy ≥ $E_a$ |
+| Larger $E_a$ | Decreases | Fewer collisions reach the transition state |
+| Catalyst | Increases | New pathway with lower $E_a$ |
+| Higher concentration | No change | Rate rises through the rate law; $k$ is unchanged |
 
 ---
 
-### 📈 Energy Diagram Relationship
+### 📈 Energy Profile Relationships
 
 $$\\Delta H = E_a(\\text{forward}) - E_a(\\text{reverse})$$
 
----
+- Peaks = transition states (one per elementary step)
+- Valleys between peaks = intermediates
+- The step with the largest barrier is the slowest step
 
-### 📌 Constants & Units
-
-| Constant | Value | Watch Out |
-|----------|-------|-----------|
-| $R$ | 8.314 J/(mol·K) | Use J, not kJ |
-| $E_a$ | J/mol | Convert from kJ/mol if needed (× 1000) |
-| $T$ | Kelvin | Convert from °C: $T = °C + 273.15$ |
-
-> ⚠️ **AP Trap:** Mismatched units between $E_a$ (often given in kJ/mol) and $R$ (in J) is the #1 calculation error.
+> ⚠️ **AP Trap:** Calculations with the Arrhenius equation are not on the AP exam (CED 5.6 exclusion). Expect energy-profile arithmetic and written explanations instead.
       `
     },
     {
@@ -117,53 +112,53 @@ A reaction energy diagram shows:
       id: 'ae7-ap-problem-2',
       type: 'input-boxes' as const,
       content: `
-**AP Problem 2: Arrhenius Calculation** 🧮
+**AP Problem 2: Reverse Reaction Values** 🧮
 
-The rate constant for the decomposition of $N_{2}O_{5}$ is $k = 3.46 \\times 10^{-5}$ $s^{-1}$ at 298 K and $k = 4.87 \\times 10^{-3}$ $s^{-1}$ at 338 K.
+Use the same energy diagram as Problem 1 (reactants 50 kJ, uncatalyzed transition state 150 kJ, catalyzed transition state 100 kJ, products 30 kJ).
 
-**1)** Calculate $E_a$ in kJ/mol. (to 3 significant figures)
+**1)** $E_a$ for the uncatalyzed **reverse** reaction (in kJ)
 
-**2)** Calculate the frequency factor $A$. (order of magnitude: enter the exponent, e.g., for $10^{13}$ enter 13)
+**2)** $E_a$ for the catalyzed **reverse** reaction (in kJ)
 
-**3)** What would $k$ be at 310 K? (in $s^{-1}$, to 1 significant figure in scientific notation, e.g., 2e-4)
+**3)** $\\Delta H$ for the reverse reaction (in kJ, include the sign)
       `,
       exercise: {
-        questions: [{ question: '(1)', answer: '103.6', acceptableAnswers: ['103.6'] }, { question: '(2)', answer: '13', acceptableAnswers: ['13'] }, { question: '(3)', answer: '2e-4', acceptableAnswers: ['2e-4', '1.7e-4', '1.74e-4', '1.75e-4', '2×10^-4', '2x10^-4', '2*10^-4'] }],
-        hint1: 'ln(4.87e-3/3.46e-5) = ln(140.8) = 4.947. 1/298 − 1/338 = 3.356e-3 − 2.959e-3 = 3.971e-4. Ea = 8.314 × 4.947/3.971e-4 = 41.13/3.971e-4 = 103,600 J/mol = 103.6 kJ/mol.',
-        hint2: 'ln A = ln k + Ea/(RT) = ln(3.46e-5) + 103,600/(8.314 × 298) = −10.27 + 41.77 = 31.50. A = $e^{31.5}$ ≈ $4.8 \\times 10^{13}$. Exponent = 13.',
-        hint3: 'ln(k/3.46e-5) = (103,600/8.314)(1/298 − 1/310) = 12,462 × (3.356e-3 − 3.226e-3) = 12,462 × 1.30e-4 = 1.62. k = 3.46e-5 × $e^{1.62}$ = 3.46e-5 × 5.05 = 1.75e-4 ≈ 2e-4.',
-        explanation: '1) Ea = 8.314 × ln(140.8)/3.97e-4 = 103,600 J/mol = 103.6 kJ/mol. 2) ln A = 31.5 → A ≈ $10^{13}$. 3) At 310 K: k = $1.75 \\times 10^{-4}$ ≈ $2 \\times 10^{-4}$ $s^{-1}$.'
+        questions: [{ question: '(1)', answer: '120', acceptableAnswers: ['120'] }, { question: '(2)', answer: '70', acceptableAnswers: ['70'] }, { question: '(3)', answer: '+20', acceptableAnswers: ['+20', '20'] }],
+        hint1: 'The reverse reaction starts at the products: 150 − 30.',
+        hint2: 'Catalyzed peak minus the products: 100 − 30.',
+        hint3: 'The reverse reaction has the opposite sign of the forward ΔH (−20 kJ).',
+        explanation: '1) 150 − 30 = 120 kJ. 2) 100 − 30 = 70 kJ: the catalyst lowers the reverse barrier by the same 50 kJ it lowers the forward barrier. 3) The forward reaction has ΔH = −20 kJ, so the reverse has ΔH = +20 kJ.'
       }
     },
     {
       id: 'ae7-ap-problem-3',
       type: 'multiple-choice' as const,
       content: `
-**AP Problem 3: Catalyst and Arrhenius** 🎯
+**AP Problem 3: Catalysts and Temperature** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'On an Arrhenius plot (ln k vs 1/T), adding a catalyst to a reaction would change the graph by:',
+            question: 'On a Maxwell-Boltzmann diagram for a reaction at constant temperature, how is the effect of adding a catalyst shown?',
             options: [
-              'Shifting the line up with the same slope',
-              'Making the line less steep and shifting it upward',
-              'Making the line steeper and shifting it downward',
-              'Leaving the graph unchanged'
+              'The curve becomes shorter and broader',
+              'The Ea line moves to a lower energy and the curve is unchanged',
+              'The Ea line moves to a higher energy',
+              'The total area under the curve increases'
             ],
             correctAnswer: 1,
-            explanation: 'A catalyst lowers Ea, which makes the slope (−Ea/R) less negative (less steep). It also generally increases k at all temperatures (shifts the line up). The y-intercept (ln A) may also change since the mechanism is different. Keeping the same slope would mean the same Ea, which a catalyst does not leave unchanged.'
+            explanation: 'A catalyst does not change the particles\' energies, so the curve is unchanged; it lowers the barrier, so the Ea line moves left and a larger area lies beyond it. A shorter, broader curve shows a higher temperature, and the total area represents all particles, which does not change.'
           },
           {
-            question: 'A reaction has Ea = 75 kJ/mol. A catalyst lowers Ea to 50 kJ/mol. At 300 K, the ratio k(catalyzed)/k(uncatalyzed) is approximately:',
+            question: 'Raising the temperature and adding a catalyst can both double a reaction rate. Which statement correctly distinguishes them?',
             options: [
-              '1.5',
-              '1.01',
-              '23,000',
-              '$1.1 \\times 10^{10}$'
+              'Both lower the activation energy of the reaction',
+              'Heating changes the energy distribution; a catalyst lowers Ea',
+              'Heating lowers Ea; a catalyst changes the energy distribution',
+              'Both work only by increasing the number of collisions'
             ],
-            correctAnswer: 2,
-            explanation: 'Ratio = e^((75,000 − 50,000)/(8.314 × 300)) = e^(25,000/2494) = $e^{10.02}$ ≈ 22,500 ≈ 23,000. Taking the ratio of the Ea values gives 1.5; leaving Ea in kJ gives $e^{0.010}$ = 1.01; and using $10^{10.02}$ instead of $e^{10.02}$ gives $1.1 \\times 10^{10}$.'
+            correctAnswer: 1,
+            explanation: 'Heating gives the particles a broader energy distribution, so more collisions clear the same barrier. A catalyst leaves the distribution alone and provides a pathway with a lower Ea. Neither works only through collision frequency, and heating does not change Ea.'
           },
           {
             question: 'Why do enzymes stop working at very high temperatures?',
@@ -188,54 +183,49 @@ The rate constant for the decomposition of $N_{2}O_{5}$ is $k = 3.46 \\times 10^
       exercise: {
         dropdowns: [
           {
-            label: 'The Boltzmann factor $e^{-Ea/RT}$ represents the fraction of molecules with',
+            label: 'The area under a Maxwell-Boltzmann curve to the right of Ea represents the fraction of molecules with',
             options: ['any kinetic energy', 'energy ≥ Ea', 'energy = 0', 'energy < Ea']
           },
           {
-            label: 'On an Arrhenius plot, Ea is found from the',
-            options: ['x-intercept', 'y-intercept', 'slope', 'area under the curve']
+            label: 'On an energy profile, the activation energy of a step is the rise from its starting level to',
+            options: ['the products', 'the next valley', 'its peak', 'zero energy']
           },
           {
-            label: 'A reaction with Ea ≈ 0 would have rate constant approximately equal to',
-            options: ['0', 'R', 'T', 'A']
+            label: 'Doubling a reactant concentration at constant temperature changes k by',
+            options: ['doubling it', 'halving it', 'not changing it', 'squaring it']
           },
           {
             label: 'Heterogeneous catalysts work by',
             options: ['raising the temperature at the surface', 'adsorbing reactants and weakening bonds', 'increasing the concentration of reactants', 'absorbing light to excite the reactants']
           }
         ],
-        correctAnswers: ['energy ≥ Ea', 'slope', 'A', 'adsorbing reactants and weakening bonds'],
-        hint1: '$e^{-Ea/RT}$ gives the fraction of molecules with enough energy to react.',
-        hint2: 'slope = −Ea/R → Ea = −R × slope.',
-        hint3: 'If Ea = 0: k = $Ae^{0}$ = A.',
-        explanation: 'Boltzmann factor = fraction with energy ≥ Ea. Slope of ln k vs 1/T gives Ea. Ea = 0 → k = A. Heterogeneous catalysts adsorb molecules onto their surface, weakening bonds.'
+        correctAnswers: ['energy ≥ Ea', 'its peak', 'not changing it', 'adsorbing reactants and weakening bonds'],
+        hint1: 'Only particles beyond the Ea line can react.',
+        hint2: 'A barrier is measured up to the transition state.',
+        hint3: 'Concentration appears in the rate law, not in k.',
+        explanation: 'The area beyond Ea is the fraction with energy ≥ Ea. A step\'s activation energy runs from its starting level up to its peak. Concentration changes the rate, not k. Heterogeneous catalysts adsorb molecules onto their surface, weakening bonds.'
       }
     },
     {
       id: 'ae7-challenge-problem',
       type: 'input-boxes' as const,
       content: `
-**Challenge: Complete Analysis** 🧮
+**Challenge: A Catalyzed Two-Step Profile** 🧮
 
-A catalyzed reaction has the following data:
+An uncatalyzed one-step reaction has reactants at 0 kJ, a transition state at 110 kJ, and products at −40 kJ. The catalyzed pathway has two steps: transition state 1 at 60 kJ, an intermediate (catalyst bound to reactant) at 20 kJ, transition state 2 at 75 kJ, and the same products.
 
-| T (K) | k $(M^{-1}s^{-1})$ |
-|-------|-----------|
-| 300 | 0.050 |
-| 350 | 0.85 |
+**1)** $E_a$ of the uncatalyzed reaction (in kJ)
 
-**1)** Calculate Ea for the catalyzed reaction. (in kJ/mol, to 3 significant figures)
+**2)** $E_a$ of the slower catalyzed step (in kJ)
 
-**2)** The uncatalyzed reaction has Ea = 100 kJ/mol. By how many kJ/mol does the catalyst lower Ea? (to 3 significant figures)
-
-**3)** At 300 K, what is the ratio k(cat)/k(uncat)? (to 1 significant figure, scientific notation: e.g., 3e5)
+**3)** $\\Delta H$ of the catalyzed reaction (in kJ, include the sign)
       `,
       exercise: {
-        questions: [{ question: '(1)', answer: '49.5', acceptableAnswers: ['49.5'] }, { question: '(2)', answer: '50.5', acceptableAnswers: ['50.5'] }, { question: '(3)', answer: '6e8', acceptableAnswers: ['6e8', '6.2e8', '6.3e8', '6×10^8', '6x10^8', '6*10^8'] }],
-        hint1: 'ln(0.85/0.050) = ln(17) = 2.833. 1/300 − 1/350 = 3.333e-3 − 2.857e-3 = 4.762e-4. Ea = 8.314 × 2.833/4.762e-4 = 23.55/4.762e-4 = 49,500 J/mol = 49.5 kJ/mol.',
-        hint2: 'ΔEa = 100 − 49.5 = 50.5 kJ/mol.',
-        hint3: 'k(cat)/k(uncat) = e^((100,000 − 49,500)/(8.314 × 300)) = e^(50,500/2494) = $e^{20.25}$ ≈ $6.2 \\times 10^{8}$ ≈ $6 \\times 10^{8}$.',
-        explanation: '1) Ea = 8.314 × 2.833/4.762e-4 = 49,500 J/mol = 49.5 kJ/mol. 2) 100.0 − 49.5 = 50.5 kJ/mol. 3) $e^{20.25}$ ≈ $6 \\times 10^{8}$.'
+        questions: [{ question: '(1)', answer: '110', acceptableAnswers: ['110'] }, { question: '(2)', answer: '60', acceptableAnswers: ['60'] }, { question: '(3)', answer: '-40', acceptableAnswers: ['-40', '−40'] }],
+        hint1: 'Peak minus reactants: 110 − 0.',
+        hint2: 'Step 1: 60 − 0 = 60. Step 2: 75 − 20 = 55. Which is larger?',
+        hint3: 'A catalyst does not change the start or end levels.',
+        explanation: '1) 110 − 0 = 110 kJ. 2) Step 1 has a 60 kJ barrier and step 2 a 55 kJ barrier (measured from the 20 kJ intermediate), so the slower step has Ea = 60 kJ, far below 110 kJ. 3) ΔH = −40 − 0 = −40 kJ, the same as the uncatalyzed reaction.'
       }
     },
     {
@@ -247,15 +237,15 @@ A catalyzed reaction has the following data:
       exercise: {
         questions: [
           {
-            question: 'A student measures k at 5 temperatures and plots ln k vs 1/T. The best-fit line has slope = −6,000 K and y-intercept = 25.0. What is Ea and A?',
+            question: 'A student explains that a reaction runs faster at 50 °C than at 25 °C because "the molecules move faster." Which revision best completes the explanation?',
             options: [
-              'Ea = 49.9 kJ/mol, A = $7.2 \\times 10^{10}$',
-              'Ea = 6.0 kJ/mol, A = $7.2 \\times 10^{10}$',
-              'Ea = 49.9 kJ/mol, A = 25.0',
-              'Ea = 722 J/mol, A = $7.2 \\times 10^{10}$'
+              'Faster molecules lower the activation energy of the reaction',
+              'More collisions have energy ≥ Ea, so more succeed',
+              'Faster molecules make the reaction more exothermic',
+              'Faster molecules shift the equilibrium toward the products'
             ],
-            correctAnswer: 0,
-            explanation: 'Ea = −R × slope = −8.314 × (−6,000) = 49,884 J/mol = 49.9 kJ/mol. A = $e^{y-intercept}$ = $e^{25}$ ≈ $7.2 \\times 10^{10}$. Forgetting R gives 6.0 kJ/mol, dividing by R gives 722 J/mol, and reading the intercept as A itself (instead of ln A) gives 25.0.'
+            correctAnswer: 1,
+            explanation: 'A complete AP explanation links temperature to the fraction of collisions that have at least the activation energy, which makes more collisions successful per unit time. Ea does not change with temperature, and ΔH and the equilibrium position do not explain a rate increase.'
           },
           {
             question: 'Which combination would make a reaction fastest?',
@@ -266,7 +256,7 @@ A catalyzed reaction has the following data:
               'Low Ea, low T, no catalyst'
             ],
             correctAnswer: 1,
-            explanation: 'Fastest rate requires: low Ea (large Boltzmann factor), high T (more energy), and a catalyst (further lowers Ea). This maximizes k = $Ae^{-Ea/RT}$. A high Ea or a low T shrinks $e^{-Ea/RT}$ and slows the reaction.'
+            explanation: 'The fastest rate needs a low Ea (more collisions clear the barrier), a high T (a larger fraction of collisions have enough energy), and a catalyst (an even lower-barrier pathway). A high Ea or a low T reduces the fraction of successful collisions and slows the reaction.'
           }
         ]
       }

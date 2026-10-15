@@ -15,11 +15,11 @@ export const chemHybridizationSigmaPiBondsPart2Data = {
 
 | Section |
 |---------|
-| Properties of $sp^{2}$ Orbitals |
-| The Unhybridized p Orbital |
+| Features of an $sp^{2}$ Atom |
+| The p Orbital Left for a Pi Bond |
 | Example: $BF_{3}$ (Boron Trifluoride) |
 | Example: Formaldehyde ($H_{2}C$=O) |
-| Properties of sp Orbitals |
+| Features of an sp Atom |
 
 > 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
@@ -36,27 +36,26 @@ export const chemHybridizationSigmaPiBondsPart2Data = {
       title: '$sp^{2}$ Hybridization — Trigonal Planar',
       content: `## $sp^{2}$ Hybridization
 
-When one s orbital mixes with **two** p orbitals, three equivalent **$sp^{2}$ hybrid orbitals** form.
+An atom surrounded by **three** electron domains is described as **$sp^{2}$ hybridized**.
 
-### Properties of $sp^{2}$ Orbitals
+### Features of an $sp^{2}$ Atom
 
-| Property | Value |
-|----------|-------|
-| Number of hybrid orbitals | 3 |
-| Geometry | Trigonal planar |
-| Bond angle | 120° |
-| Unhybridized p orbitals remaining | 1 |
-| Shape of each hybrid | One large lobe + one small lobe |
+| Feature | Value |
+|---------|-------|
+| Electron domains | 3 |
+| Electron-domain geometry | Trigonal planar |
+| Ideal bond angle | 120° |
+| Pi bonds it can form | At most 1 |
 
-### The Unhybridized p Orbital
+### The p Orbital Left for a Pi Bond
 
-> 🔑 **Key Concept:** The one p orbital that is **not** used in hybridization remains perpendicular to the plane of the three $sp^{2}$ orbitals. It is available for pi bonding.
+> 🔑 **Key Concept:** An $sp^{2}$ atom has one p orbital that sticks out above and below the plane of its three bonds. Side-by-side overlap of that p orbital with a p orbital on a neighboring atom forms a **pi bond**, which is why an $sp^{2}$ atom can be part of one double bond.
 
 ### Example: $BF_{3}$ (Boron Trifluoride)
 
 1. Boron has 3 valence electrons and forms 3 bonds to fluorine
 2. 3 electron domains → $sp^{2}$ hybridization
-3. The three $sp^{2}$ orbitals point to the corners of an equilateral triangle
+3. The three B–F bonds point to the corners of an equilateral triangle
 4. All F–B–F angles = 120°
 5. The molecule is perfectly **flat** (planar)
 
@@ -64,8 +63,8 @@ When one s orbital mixes with **two** p orbitals, three equivalent **$sp^{2}$ hy
 
 1. Carbon has 3 electron domains (2 single bonds to H + 1 double bond to O)
 2. Carbon is $sp^{2}$ hybridized
-3. The three $sp^{2}$ orbitals form sigma bonds in a trigonal planar arrangement
-4. The unhybridized p orbital on carbon overlaps with a p orbital on oxygen → pi bond`
+3. The three domains form sigma bonds in a trigonal planar arrangement
+4. The second bond of the C=O double bond is a pi bond, formed by side-by-side p-orbital overlap`
     },
     {
       id: 'hy-2-3',
@@ -75,10 +74,10 @@ When one s orbital mixes with **two** p orbitals, three equivalent **$sp^{2}$ hy
       exercise: {
         questions: [
           {
-            question: 'How many unhybridized p orbitals remain on an $sp^{2}$-hybridized atom?',
-            options: ['0', '1', '2', '3'],
-            correctAnswer: 1,
-            explanation: '$sp^{2}$ uses 1 s + 2 p = 3 orbitals. Since an atom has 3 p orbitals total, 3 − 2 = 1 unhybridized p orbital remains.'
+            question: 'An $sp^{2}$-hybridized carbon with no lone pairs forms how many sigma bonds?',
+            options: ['1', '2', '3', '4'],
+            correctAnswer: 2,
+            explanation: 'Three electron domains with no lone pairs means three bonded atoms, and the first bond to each neighbor is a sigma bond. So the carbon forms 3 sigma bonds (plus one pi bond if one of the bonds is double).'
           },
           {
             question: 'What is the ideal bond angle for $sp^{2}$ hybridization?',
@@ -88,7 +87,7 @@ When one s orbital mixes with **two** p orbitals, three equivalent **$sp^{2}$ hy
           },
           {
             question: 'The carbon atom in ethene $(C_{2}H_{4})$ has 2 C–H bonds and 1 C=C double bond. Its hybridization is:',
-            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'],
             correctAnswer: 1,
             explanation: 'Carbon in ethene has 3 electron domains (2 single bonds + 1 double bond). Three electron domains → $sp^{2}$ hybridization.'
           }
@@ -101,28 +100,27 @@ When one s orbital mixes with **two** p orbitals, three equivalent **$sp^{2}$ hy
       title: 'sp Hybridization — Linear',
       content: `## sp Hybridization
 
-When one s orbital mixes with **one** p orbital, two equivalent **sp hybrid orbitals** form.
+An atom surrounded by **two** electron domains is described as **sp hybridized**.
 
-### Properties of sp Orbitals
+### Features of an sp Atom
 
-| Property | Value |
-|----------|-------|
-| Number of hybrid orbitals | 2 |
-| Geometry | Linear |
-| Bond angle | 180° |
-| Unhybridized p orbitals remaining | 2 |
-| Orientation | Opposite directions (straight line) |
+| Feature | Value |
+|---------|-------|
+| Electron domains | 2 |
+| Electron-domain geometry | Linear |
+| Ideal bond angle | 180° |
+| Pi bonds it can form | Up to 2 |
 
-### Two Unhybridized p Orbitals
+### Room for Two Pi Bonds
 
-> 🔑 **Key Concept:** An sp-hybridized atom has **two** leftover p orbitals, both perpendicular to each other and to the axis of the sp hybrids. These can form **two pi bonds**, enabling triple bonds.
+> 🔑 **Key Concept:** An sp atom has two p orbitals at right angles to its bond axis. Each can overlap side-by-side with a p orbital on a neighbor, so an sp atom can form **two pi bonds**: either two double bonds (as in $CO_{2}$) or one triple bond (as in HCN).
 
 ### Example: $CO_{2}$ (Carbon Dioxide)
 
 1. Carbon has 2 double bonds to oxygen → 2 electron domains
 2. Carbon is sp hybridized
-3. The two sp orbitals point in opposite directions (180°)
-4. Each unhybridized p orbital overlaps with a p orbital on an oxygen atom → 2 pi bonds
+3. The two C=O bonds point in opposite directions (180°)
+4. Each C=O double bond contains one pi bond → 2 pi bonds in total
 5. Result: O=C=O is perfectly linear
 
 ### Example: $C_{2}H_{2}$ (Acetylene)
@@ -155,9 +153,9 @@ When one s orbital mixes with **one** p orbital, two equivalent **sp hybrid orbi
             explanation: '$sp^{2}$ hybridization gives a trigonal planar arrangement with 120° bond angles.'
           },
           {
-            label: 'How many unhybridized p orbitals remain on an sp-hybridized atom?',
+            label: 'How many pi bonds are in one molecule of $CO_{2}$?',
             correctAnswer: '2',
-            explanation: 'sp uses 1 s + 1 p = 2 orbitals. Since there are 3 p orbitals total, 3 − 1 = 2 unhybridized p orbitals remain.'
+            explanation: '$CO_{2}$ has two C=O double bonds, and each double bond is 1 sigma + 1 pi. Total: 2 pi bonds.'
           }
         ]
       }
@@ -170,9 +168,7 @@ When one s orbital mixes with **one** p orbital, two equivalent **sp hybrid orbi
 
 | Feature | sp | $sp^{2}$ | $sp^{3}$ |
 |---------|-----|------|------|
-| Atomic orbitals mixed | 1s + 1p | 1s + 2p | 1s + 3p |
-| Hybrid orbitals formed | 2 | 3 | 4 |
-| Unhybridized p orbitals | 2 | 1 | 0 |
+| Electron domains | 2 | 3 | 4 |
 | Geometry | Linear | Trigonal planar | Tetrahedral |
 | Bond angle | 180° | 120° | 109.5° |
 | Max pi bonds possible | 2 | 1 | 0 |
@@ -199,28 +195,28 @@ $$\\boxed{\\text{Hybridization} = \\text{based on number of electron domains (st
           {
             id: 'hy-2-7-dd1',
             label: 'Hybridization of the carbon atom in HCN',
-            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'],
             correctIndex: 0,
             explanation: 'HCN: carbon has 1 single bond (to H) + 1 triple bond (to N) = 2 electron domains → sp hybridization.'
           },
           {
             id: 'hy-2-7-dd2',
             label: 'Hybridization of the nitrogen atom in $NO_{3}^{-}$',
-            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'],
             correctIndex: 1,
             explanation: '$NO_{3}^{-}$: nitrogen has 3 electron domains (resonance structures show 3 equivalent positions) → $sp^{2}$ hybridization.'
           },
           {
             id: 'hy-2-7-dd3',
             label: 'Hybridization of the carbon atom in $CF_{4}$',
-            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'],
             correctIndex: 2,
             explanation: '$CF_{4}$: carbon has 4 single bonds and 0 lone pairs = 4 electron domains → $sp^{3}$ hybridization.'
           },
           {
             id: 'hy-2-7-dd4',
             label: 'Hybridization of the sulfur atom in $SO_{3}$',
-            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'],
             correctIndex: 1,
             explanation: '$SO_{3}$: sulfur has 3 double bonds (in resonance) = 3 electron domains → $sp^{2}$ hybridization. The molecule is trigonal planar.'
           }
@@ -244,7 +240,7 @@ $$\\boxed{\\text{Hybridization} = \\text{based on number of electron domains (st
             question: 'An $sp^{2}$-hybridized carbon atom can form at most how many pi bonds?',
             options: ['0', '1', '2', '3'],
             correctAnswer: 1,
-            explanation: '$sp^{2}$ hybridization leaves 1 unhybridized p orbital, which can form at most 1 pi bond.'
+            explanation: 'An $sp^{2}$ carbon has three bonded atoms. At most one of those bonds can be a double bond, so the carbon takes part in at most one pi bond. A second pi bond would require only two domains (sp).'
           },
           {
             question: 'In acetylene $(C_{2}H_{2})$, the H–C–C bond angle is:',

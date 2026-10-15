@@ -38,7 +38,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 3. **Calculate** $E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}}$
 4. **Balance** electrons (find $n$)
 5. **Calculate** $\\Delta G^\\circ = -nFE^\\circ$ if needed
-6. **Write** cell notation if asked
+6. **Describe** what you would observe: electron flow, salt-bridge ion flow, electrode mass changes
 
 
 ---
@@ -66,7 +66,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
       exercise: {
         questions: [
           {
-            question: 'What is $E^\\circ_{\\text{cell}}$ for the cell: Zn(s) | $Zn^{2+}(aq)$ || $Ag^{+}(aq)$ | Ag(s)?',
+            question: 'A galvanic cell is built from a zinc electrode in $Zn^{2+}(aq)$ and a silver electrode in $Ag^{+}(aq)$. What is $E^\\circ_{\\text{cell}}$?',
             options: [
               '+0.04 V',
               '+1.56 V',
@@ -74,7 +74,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
               '+0.80 V'
             ],
             correctAnswer: 1,
-            explanation: 'Cathode (right): Ag, $E^\\circ = +0.80$ V. Anode (left): Zn, $E^\\circ = -0.76$ V. $E^\\circ_{\\text{cell}} = 0.80 - (-0.76) = +1.56$ V.'
+            explanation: 'Cathode: Ag, the higher $E^\\circ = +0.80$ V. Anode: Zn, $E^\\circ = -0.76$ V. $E^\\circ_{\\text{cell}} = 0.80 - (-0.76) = +1.56$ V.'
           },
           {
             question: 'For the cell in the previous question, how many electrons are transferred?',
@@ -109,7 +109,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 
 > **Given:** $\\text{Cu}^{2+}/\\text{Cu} = +0.34$ V, $\\text{Fe}^{2+}/\\text{Fe} = -0.44$ V
 
-For the cell: Fe(s) | $Fe^{2+}(aq)$ || $Cu^{2+}(aq)$ | Cu(s)
+For a galvanic cell built from an iron electrode in $Fe^{2+}(aq)$ and a copper electrode in $Cu^{2+}(aq)$:
 
 **1)** $E^\\circ_{\\text{cell}} = ?$ (in V, to 3 significant figures)
 
@@ -131,7 +131,7 @@ For the cell: Fe(s) | $Fe^{2+}(aq)$ || $Cu^{2+}(aq)$ | Cu(s)
       content: `
 **Cell Analysis** 🔽
 
-For the cell: Al(s) | $Al^{3+}(aq)$ || $Ag^{+}(aq)$ | Ag(s)
+For a galvanic cell built from an aluminum electrode in $Al^{3+}(aq)$ and a silver electrode in $Ag^{+}(aq)$:
 
 > **Given:** $Al^{3+}/Al$ = −1.66 V, $Ag^{+}/Ag$ = +0.80 V
       `,
@@ -155,8 +155,8 @@ For the cell: Al(s) | $Al^{3+}(aq)$ || $Ag^{+}(aq)$ | Ag(s)
           }
         ],
         correctAnswers: ['Al', 'Ag', '+2.46 V', '3'],
-        hint1: 'Al is on the left → anode.',
-        hint2: 'Ag is on the right → cathode.',
+        hint1: 'The couple with the lower $E^\\circ$ is oxidized at the anode.',
+        hint2: 'The couple with the higher $E^\\circ$ is reduced at the cathode.',
         hint3: '$E^\\circ = 0.80 - (-1.66) = 2.46$ V.',
         explanation: 'Al is the anode (oxidized: Al → $Al^{3+}$ + $3e^{-}$). Ag is the cathode ($Ag^{+}$ + $e^{-}$ → Ag). $E^\\circ = 0.80 - (-1.66) = 2.46$ V. Al loses $3e^{-}$, so $n = 3$ (we need $3Ag^{+}$ to accept $3e^{-}$).'
       }

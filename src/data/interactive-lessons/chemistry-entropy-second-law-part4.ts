@@ -45,9 +45,9 @@ $$\\boxed{S = 0 \\quad \\text{at } T = 0 \\text{ K (perfect crystal)}}$$
 ### Why Zero?
 
 At absolute zero:
-- All molecular motion ceases (except zero-point energy)
-- A perfect crystal has only **one microstate** ($W = 1$)
-- $S = k \\ln 1 = 0$
+- Molecular motion is at its minimum
+- Every particle in a perfect crystal is locked in a fixed, identical position
+- There is no dispersal of matter or energy left to remove, so the entropy is zero
 
 
 ---
@@ -151,7 +151,7 @@ This formula applies at the **equilibrium** transition temperature, where the pr
               'The substance is an element, as with ΔH°f = 0'
             ],
             correctAnswer: 1,
-            explanation: 'The Third Law states that the entropy of a perfect crystal at absolute zero (0 K = −273.15°C) is zero. This is because there is only one microstate ($W = 1$, $S = k \\ln 1 = 0$).'
+            explanation: 'The Third Law states that the entropy of a perfect crystal at absolute zero (0 K = −273.15°C) is zero. At that point the particles are fixed in a perfectly ordered lattice with no dispersal of matter or energy.'
           },
           {
             question: 'Which has a higher standard molar entropy: $H_{2}O(l)$ or $H_{2}O(g)$?',
@@ -162,7 +162,7 @@ This formula applies at the **equilibrium** transition temperature, where the pr
               '$H_{2}O(l)$ — the denser liquid holds more energy'
             ],
             correctAnswer: 1,
-            explanation: '$S°[\\text{H}_2\\text{O}(g)] = 188.8$ J/(mol·K) vs. $S°[\\text{H}_2\\text{O}(l)] = 69.9$ J/(mol·K). The gas phase has far more microstates due to greater molecular freedom.'
+            explanation: '$S°[\\text{H}_2\\text{O}(g)] = 188.8$ J/(mol·K) vs. $S°[\\text{H}_2\\text{O}(l)] = 69.9$ J/(mol·K). Gas particles are far more dispersed and move much more freely than particles in the liquid.'
           },
           {
             question: 'Unlike ΔH°_f for elements, the standard molar entropy S° for an element is:',
@@ -226,7 +226,7 @@ Which substance has the HIGHER standard molar entropy? Type the chemical formula
           }
         ],
         correctAnswers: ['zero entropy', 'boiling point', 'J/(mol·K)', 'higher S° than a simpler one'],
-        hint1: '$S = k \\ln W$, and $W = 1$ for a perfect crystal at 0 K.',
+        hint1: 'In a perfect crystal at 0 K every particle is fixed in place, with no dispersal left.',
         hint2: 'Liquid → gas involves a much greater increase in freedom than solid → liquid.',
         hint3: 'Entropy uses joules (not kilojoules) and includes temperature.',
         explanation: 'Third Law: S = 0 at 0 K (perfect crystal). The vaporization entropy jump is larger than fusion. S° is in J/(mol·K). Complex molecules have more vibrational modes → higher entropy.'

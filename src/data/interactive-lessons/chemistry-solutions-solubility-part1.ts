@@ -19,6 +19,8 @@ export const chemSolutionsSolubilityPart1Data = {
 | Aqueous Solutions |
 | 🧊 Saturation States |
 | Three Saturation States |
+| 💧 "Like Dissolves Like" |
+| 📏 Which Ionic Compounds Dissolve in Water? |
 
 > 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
@@ -98,7 +100,7 @@ The amount of solute that dissolves depends on the **solubility** of that solute
 
 - **Most solid solutes**: solubility **increases** with temperature
 - **Gases**: solubility **decreases** with temperature (think of a warm soda going flat)
-- Pressure significantly affects gas solubility (Henry\'s Law) but has negligible effect on solids/liquids
+- Raising the pressure of a gas above a liquid increases how much of that gas dissolves (this is why soda is bottled under pressure); pressure has a negligible effect on dissolving solids and liquids
       `
     },
     {
@@ -227,38 +229,40 @@ Use the "like dissolves like" principle to predict whether each solute dissolves
       id: 'ss1-solubility-rules',
       type: 'text' as const,
       content: `
-## 📏 AP Chemistry Solubility Rules (Aqueous Ionic Compounds)
+## 📏 Which Ionic Compounds Dissolve in Water?
 
-For the AP exam, you need to know which ionic compounds are soluble in water:
+For the AP exam, you need to memorize only **one** solubility rule:
 
+> 🔑 **Key Concept:** All salts containing $Na^{+}$, $K^{+}$, $NH_{4}^{+}$, or $NO_{3}^{-}$ are soluble in water.
 
----
-
-### Generally Soluble
-
-| Ion | Soluble? | Exceptions |
-|-----|----------|-----------|
-| $Na^{+}$, $K^{+}$, $NH_{4}^{+}$ | Always soluble | None |
-| $NO_{3}^{-}$ (nitrate) | Always soluble | None |
-| $CH_{3}COO^{-}$ (acetate) | Always soluble | None |
-| $Cl^{-}$, $Br^{-}$, $I^{-}$ | Usually soluble | Except with $Ag^{+}$, $Pb^{2+}$, $Hg_{2}^{2+}$ |
-| $SO_{4}^{2-}$ | Usually soluble | Except with $Ba^{2+}$, $Pb^{2+}$, $Ca^{2+}$, $Sr^{2+}$ |
+For every other ionic compound, an AP question will **give you** the information you need: a statement that the compound is insoluble, a $K_{sp}$ value, or an observation such as "a yellow precipitate forms." Long tables of exceptions (chlorides except silver and lead, sulfates except barium, and so on) are not assessed.
 
 
 ---
 
-### Generally Insoluble
+### Using the One Rule
 
-| Ion | Soluble? | Exceptions |
-|-----|----------|-----------|
-| $OH^{-}$ | Usually insoluble | Except with $Na^{+}$, $K^{+}$, $Ba^{2+}$, $Ca^{2+}$ (slightly) |
-| $S^{2-}$ | Usually insoluble | Except with $Na^{+}$, $K^{+}$, $NH_{4}^{+}$, Group 2 |
-| $CO_{3}^{2-}$, $PO_{4}^{3-}$ | Usually insoluble | Except with $Na^{+}$, $K^{+}$, $NH_{4}^{+}$ |
+| Compound | Contains $Na^{+}$, $K^{+}$, $NH_{4}^{+}$, or $NO_{3}^{-}$? | Conclusion |
+|----------|-----------|-----------|
+| $KBr$ | Yes ($K^{+}$) | Soluble |
+| $Pb(NO_{3})_{2}$ | Yes ($NO_{3}^{-}$) | Soluble |
+| $(NH_{4})_{2}SO_{4}$ | Yes ($NH_{4}^{+}$) | Soluble |
+| $AgCl$ | No | Not decided by the rule; the problem must tell you |
 
 
 ---
 
-> 💡 **Tip:** Remember **"NAG SAG"** — **N**itrates **A**lways dissolve, **G**roup 1 **S**alts **A**lways **G**o into solution.
+### Spotting the Precipitate
+
+When two soluble salts are mixed and a solid forms, swap partners and ask which new pairing could be the solid:
+
+1. Write the two possible new pairings (the "swapped" combinations).
+2. Any pairing that contains $Na^{+}$, $K^{+}$, $NH_{4}^{+}$, or $NO_{3}^{-}$ stays dissolved.
+3. The remaining pairing is the precipitate.
+
+For example, mixing $AgNO_{3}(aq)$ and $NaCl(aq)$ gives the possible pairings $NaNO_{3}$ and $AgCl$. Since $NaNO_{3}$ must be soluble, the observed solid is $AgCl$.
+
+> 💡 **Tip:** The ions that stay dissolved are **spectator ions**. They are left out of the net ionic equation: $Ag^{+}(aq) + Cl^{-}(aq) \\rightarrow AgCl(s)$.
       `
     },
     {
@@ -278,10 +282,10 @@ For the AP exam, you need to know which ionic compounds are soluble in water:
               '$NH_{4}Br$'
             ],
             correctAnswer: 1,
-            explanation: 'Chlorides are generally soluble, EXCEPT with $Ag^{+}$, $Pb^{2+}$, and $Hg_{2}^{2+}$. AgCl is one of the classic insoluble salts and forms a white precipitate.'
+            explanation: 'NaCl contains $Na^{+}$, $KNO_{3}$ contains both $K^{+}$ and $NO_{3}^{-}$, and $NH_{4}Br$ contains $NH_{4}^{+}$, so all three must be soluble. AgCl contains none of those ions, and it is in fact the white solid that forms when silver and chloride ions meet.'
           },
           {
-            question: 'Which compound is SOLUBLE in water?',
+            question: 'Three of these compounds are insoluble in water. Which one is SOLUBLE?',
             options: [
               '$BaSO_{4}$',
               '$Ag_{2}CO_{3}$',
@@ -289,7 +293,7 @@ For the AP exam, you need to know which ionic compounds are soluble in water:
               '$Na_{2}CO_{3}$'
             ],
             correctAnswer: 3,
-            explanation: 'Carbonates are generally insoluble, EXCEPT with $Na^{+}$, $K^{+}$, and $NH_{4}^{+}$. $Na_{2}CO_{3}$ is soluble because sodium salts are always soluble. $Ag_{2}CO_{3}$, $CaCO_{3}$, $BaSO_{4}$ and $PbCl_{2}$ are all classic precipitates.'
+            explanation: 'Every sodium salt is soluble, so $Na_{2}CO_{3}$ dissolves. The other three contain none of $Na^{+}$, $K^{+}$, $NH_{4}^{+}$, or $NO_{3}^{-}$, which is consistent with the stem telling you they are the insoluble ones.'
           },
           {
             question: 'When solutions of $Pb(NO_{3})_{2}$ and KI are mixed, a yellow precipitate forms. The precipitate is:',
@@ -300,7 +304,7 @@ For the AP exam, you need to know which ionic compounds are soluble in water:
               'KI'
             ],
             correctAnswer: 1,
-            explanation: 'Iodides are generally soluble except with $Ag^{+}$, $Pb^{2+}$, and $Hg_{2}^{2+}$. $PbI_{2}$ is insoluble and precipitates as a bright yellow solid. $KNO_{3}$ remains in solution (nitrates are always soluble).'
+            explanation: 'Swapping partners gives two possible new compounds, $KNO_{3}$ and $PbI_{2}$. $KNO_{3}$ contains $K^{+}$ and $NO_{3}^{-}$, so it must stay dissolved; the yellow solid has to be $PbI_{2}$. The two starting reactants are both soluble, which is why they were solutions to begin with.'
           }
         ]
       }

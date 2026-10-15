@@ -4,9 +4,9 @@ export const chemReactionTypesPart1Data = {
     {
       id: 'rt1-intro',
       type: 'text' as const,
-      content: `# ⚗️ Synthesis & Decomposition Reactions
+      content: `# ⚗️ The Three AP Reaction Types
 
-**Part 1 of 7 — Building Up and Breaking Down**
+**Part 1 of 7 — Acid–Base, Redox, and Precipitation**
 
 ---
 
@@ -14,189 +14,141 @@ export const chemReactionTypesPart1Data = {
 
 | Section |
 |---------|
-| 🎯 Synthesis (Combination) Reactions |
-| General Form |
-| Classic Examples |
-| Key Pattern |
-| Real-World Example |
+| 🎯 Classifying by What Is Transferred |
+| Acid–Base Reactions: Proton Transfer |
+| Redox Reactions: Electron Transfer |
+| Precipitation Reactions: Ions Leaving Solution |
+| A Classification Checklist |
 
-> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+> 🔑 **Key Concept:** The AP exam sorts reactions into exactly three categories (CED 4.7.A): **acid–base**, **oxidation–reduction (redox)**, and **precipitation**. Each category is defined by what happens at the particle level.
 
 ---
 
 ### What You'll Master in Part 1
-- Understanding the core concepts covered in Part 1
-- Applying these ideas to solve practice problems
-- Building toward AP exam readiness for this topic`
+- Recognizing proton transfer, electron transfer, and precipitate formation
+- Using oxidation numbers to decide whether a reaction is redox
+- Classifying an unfamiliar reaction with a short checklist`
     },
     {
-      id: 'rt1-synthesis',
+      id: 'rt1-three-types',
       type: 'text' as const,
       content: `
-## 🎯 Synthesis (Combination) Reactions
+## 🎯 Classifying by What Is Transferred
 
-A synthesis reaction occurs when two or more reactants combine to form a **single product**.
+Instead of looking at how many reactants or products there are, AP Chemistry asks a particle-level question: **what moves from one species to another?**
 
+| Type | What happens | How to spot it |
+|------|-------------|----------------|
+| **Acid–base** | One or more **protons** $(\\text{H}^+)$ move from one species to another | An H is lost by one species and gained by another; oxidation numbers do not change |
+| **Redox** | One or more **electrons** move from one species to another | Oxidation numbers change; a free element on either side is a strong clue |
+| **Precipitation** | Dissolved ions combine to form an **insoluble solid** | Aqueous ions on the left, a product marked (s) on the right; oxidation numbers do not change |
 
----
-
-### General Form
-
-$$\\boxed{A + B \\rightarrow AB}$$
-
-
----
-
-### Classic Examples
-
-| Reactants | Product | Balanced Equation |
-|-----------|---------|-------------------|
-| Metal + Nonmetal | Ionic compound | $2\\text{Na} + \\text{Cl}_2 \\rightarrow 2\\text{NaCl}$ |
-| Metal oxide + Water | Metal hydroxide | $\\text{CaO} + \\text{H}_2\\text{O} \\rightarrow \\text{Ca(OH)}_2$ |
-| Nonmetal oxide + Water | Acid | $\\text{SO}_3 + \\text{H}_2\\text{O} \\rightarrow \\text{H}_2\\text{SO}_4$ |
-| Two elements | Compound | $2\\text{H}_2 + \\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}$ |
+> ⚠️ **Note:** You may have learned the labels "synthesis, decomposition, single replacement, double replacement" in an earlier course. The AP exam does not use those labels; it asks whether a reaction is acid–base, redox, or precipitation.
 
 
 ---
 
-### Key Pattern
+## Acid–Base Reactions: Proton Transfer
 
-> 🔑 **Key Concept:** Look for **multiple reactants** forming **one product**. The number of reactants is always greater than the number of products (which is 1).
+In the Brønsted–Lowry picture, an **acid donates a proton** and a **base accepts it** (CED 4.8.A).
 
+| Reaction | Proton donor | Proton acceptor |
+|----------|-------------|-----------------|
+| $\\text{H}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{H}_2\\text{O}(l)$ | $\\text{H}^+$ (from a strong acid) | $\\text{OH}^-$ |
+| $\\text{HC}_2\\text{H}_3\\text{O}_2(aq) + \\text{OH}^-(aq) \\rightarrow \\text{C}_2\\text{H}_3\\text{O}_2^-(aq) + \\text{H}_2\\text{O}(l)$ | $\\text{HC}_2\\text{H}_3\\text{O}_2$ | $\\text{OH}^-$ |
+| $\\text{H}_3\\text{O}^+(aq) + \\text{NH}_3(aq) \\rightarrow \\text{NH}_4^+(aq) + \\text{H}_2\\text{O}(l)$ | $\\text{H}_3\\text{O}^+$ | $\\text{NH}_3$ |
+| $2\\text{H}^+(aq) + \\text{CO}_3^{2-}(aq) \\rightarrow \\text{H}_2\\text{O}(l) + \\text{CO}_2(g)$ | $\\text{H}^+$ | $\\text{CO}_3^{2-}$ |
 
----
-
-### Real-World Example
-
-Rust formation is a synthesis reaction:
-$$\\boxed{4\\text{Fe} + 3\\text{O}_2 \\rightarrow 2\\text{Fe}_2\\text{O}_3}$$
-      `
-    },
-    {
-      id: 'rt1-decomposition',
-      type: 'text' as const,
-      content: `
-## ⚗️ Decomposition Reactions
-
-A decomposition reaction occurs when a **single reactant** breaks down into two or more simpler products.
-
-
----
-
-### General Form
-
-$$\\boxed{AB \\rightarrow A + B}$$
-
-
----
-
-### Classic Examples
-
-| Reactant | Products | Balanced Equation |
-|----------|----------|-------------------|
-| Metal carbonate | Metal oxide + $CO_{2}$ | $\\text{CaCO}_3 \\rightarrow \\text{CaO} + \\text{CO}_2$ |
-| Metal hydroxide | Metal oxide + $H_{2}O$ | $\\text{Ca(OH)}_2 \\rightarrow \\text{CaO} + \\text{H}_2\\text{O}$ |
-| Metal chlorate | Metal chloride + $O_{2}$ | $2\\text{KClO}_3 \\rightarrow 2\\text{KCl} + 3\\text{O}_2$ |
-| Water (electrolysis) | $H_{2}$ + $O_{2}$ | $2\\text{H}_2\\text{O} \\rightarrow 2\\text{H}_2 + \\text{O}_2$ |
-
-
----
-
-### Key Pattern
-
-> 🔑 **Key Concept:** Look for **one reactant** producing **multiple products**. Decomposition often requires energy input (heat, electricity, or light).
-
-
----
-
-### Common Triggers
-
-- **Heating** (symbol: $\\Delta$ above arrow) — thermal decomposition
-- **Electrolysis** — using electrical energy
-- **Photodecomposition** — light-driven breakdown (e.g., AgBr in photography)
-      `
-    },
-    {
-      id: 'rt1-comparison',
-      type: 'text' as const,
-      content: `
-## 🎯 Synthesis vs. Decomposition — A Comparison
-
-| Feature | Synthesis | Decomposition |
-|---------|-----------|---------------|
-| Direction | Simpler → Complex | Complex → Simpler |
-| Reactants | Two or more | One |
-| Products | One | Two or more |
-| Energy | Often releases energy | Often requires energy |
-| General form | $A + B \\rightarrow AB$ | $AB \\rightarrow A + B$ |
-
-
----
-
-### Memory Trick
-
-> 💡 **Tip:** Use word roots to remember:
-
-- **Synthesis** = "put together" (syn- means together)
-- **Decomposition** = "break apart" (de- means undo, compose means put together)
-
-These reactions are essentially **reverses** of each other. If a synthesis reaction forms a compound, the decomposition of that compound yields the original elements or simpler compounds.
+> 💡 **Tip:** Track the hydrogen. If a species loses an H and another species gains one, and no oxidation number changes, you are looking at an acid–base reaction. The carbonate case still counts: carbonate accepts protons to become $\\text{H}_2\\text{CO}_3$, which then breaks apart into water and carbon dioxide gas.
       `
     },
     {
       id: 'rt1-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Synthesis & Decomposition Concept Quiz** 🎯
+**Proton Transfer Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which equation represents a synthesis reaction?',
+            question: 'Which description defines an acid–base reaction in AP Chemistry?',
             options: [
-              '$2\\text{KClO}_3 \\rightarrow 2\\text{KCl} + 3\\text{O}_2$',
-              '$2\\text{Mg} + \\text{O}_2 \\rightarrow 2\\text{MgO}$',
-              '$\\text{Zn} + \\text{CuSO}_4 \\rightarrow \\text{ZnSO}_4 + \\text{Cu}$',
-              '$\\text{CH}_4 + 2\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\text{H}_2\\text{O}$'
+              'Electrons move from one species to another',
+              'A proton moves from one species to another',
+              'Dissolved ions combine to form a solid',
+              'A compound reacts with oxygen gas to form oxides'
             ],
             correctAnswer: 1,
-            explanation: '$2\\text{Mg} + \\text{O}_2 \\rightarrow 2\\text{MgO}$ is a synthesis reaction: two elements combine to form one compound. The $2\\text{KClO}_3$ reaction is decomposition, the $\\text{Zn} + \\text{CuSO}_4$ reaction is single replacement, and the $\\text{CH}_4$ reaction is combustion.'
+            explanation: 'Acid–base reactions are proton $(\\text{H}^+)$ transfers: the acid donates the proton and the base accepts it. Electron transfer defines redox, ions combining into a solid defines precipitation, and reaction with oxygen gas describes combustion, which is a kind of redox.'
           },
           {
-            question: 'When calcium carbonate is heated, it decomposes. Which products form?',
+            question: 'In the reaction $\\text{HF}(aq) + \\text{NH}_3(aq) \\rightarrow \\text{F}^-(aq) + \\text{NH}_4^+(aq)$, which species accepts a proton?',
             options: [
-              'Ca + $CO_{3}$',
-              'CaO + $CO_{2}$',
-              '$Ca(OH)_{2}$ + $CO_{2}$',
-              'CaO + C + $O_{2}$'
-            ],
-            correctAnswer: 1,
-            explanation: '$\\text{CaCO}_3 \\xrightarrow{\\Delta} \\text{CaO} + \\text{CO}_2$. Metal carbonates decompose into the metal oxide and carbon dioxide. This is a classic thermal decomposition reaction.'
-          },
-          {
-            question: 'The electrolysis of water is an example of:',
-            options: [
-              'Synthesis',
-              'Decomposition',
-              'Single replacement',
-              'Combustion'
-            ],
-            correctAnswer: 1,
-            explanation: '$2\\text{H}_2\\text{O} \\xrightarrow{\\text{electricity}} 2\\text{H}_2 + \\text{O}_2$. One reactant (water) breaks into two simpler products (hydrogen and oxygen gases). This is decomposition.'
-          },
-          {
-            question: 'What characterizes a synthesis reaction?',
-            options: [
-              'One reactant breaks into multiple products',
-              'Two compounds exchange partners',
-              'Multiple reactants combine into a single product',
-              'A compound reacts with oxygen'
+              '$\\text{HF}$',
+              '$\\text{F}^-$',
+              '$\\text{NH}_3$',
+              '$\\text{NH}_4^+$'
             ],
             correctAnswer: 2,
-            explanation: 'Synthesis (combination) reactions have the general form $A + B \\rightarrow AB$. Multiple reactants join to form a single, more complex product.'
+            explanation: 'Ammonia gains an H and becomes ammonium, so $\\text{NH}_3$ is the proton acceptor (the base). HF loses its H and becomes fluoride, so HF is the proton donor. Fluoride and ammonium are products, not the species doing the accepting.'
+          },
+          {
+            question: 'Hydrochloric acid is poured onto solid sodium carbonate, and bubbles form. Why is this classified as an acid–base reaction?',
+            options: [
+              'Carbonate gives electrons to the hydrogen ions in the acid',
+              'Sodium ions combine with chloride ions to form a solid',
+              'Carbonate ions accept protons, and the carbonic acid formed breaks into water and $\\text{CO}_2$',
+              'Carbon changes oxidation number as $\\text{CO}_2$ gas is released'
+            ],
+            correctAnswer: 2,
+            explanation: 'Carbonate accepts protons from the acid to form $\\text{H}_2\\text{CO}_3$, which decomposes into $\\text{H}_2\\text{O}$ and $\\text{CO}_2$. Carbon stays at +4 throughout, so no electrons are transferred. Sodium chloride is soluble, so no precipitate forms.'
           }
         ]
       }
+    },
+    {
+      id: 'rt1-redox-precip',
+      type: 'text' as const,
+      content: `
+## Redox Reactions: Electron Transfer
+
+In a redox reaction, electrons move **from the species that is oxidized to the species that is reduced** (CED 4.7.A.3). Assigning oxidation numbers is the most reliable way to find them.
+
+**Example:** $\\text{Mg}(s) + 2\\text{H}^+(aq) \\rightarrow \\text{Mg}^{2+}(aq) + \\text{H}_2(g)$
+
+| Species | Oxidation number before | after | Change |
+|---------|------------------------|-------|--------|
+| Mg | 0 | +2 | lost electrons → **oxidized** |
+| H | +1 | 0 | gained electrons → **reduced** |
+
+> 💡 **Tip:** Whenever an element appears uncombined on one side of an equation and combined on the other, its oxidation number must have changed, so the reaction is redox.
+
+**Combustion is a redox subclass** (CED 4.7.A.2): a substance reacts with $\\text{O}_2$. Complete combustion of a hydrocarbon gives $\\text{CO}_2$ and $\\text{H}_2\\text{O}$.
+
+
+---
+
+## Precipitation Reactions: Ions Leaving Solution
+
+When two ionic solutions are mixed, a cation from one solution and an anion from the other can combine into a compound that is **insoluble**, and a solid (the precipitate) appears.
+
+$$\\text{Ag}^+(aq) + \\text{Cl}^-(aq) \\rightarrow \\text{AgCl}(s)$$
+
+No electrons and no protons are transferred: silver stays +1 and chlorine stays −1.
+
+> 🔑 **The one solubility rule to memorize (CED 4.7.A.5):** All sodium, potassium, ammonium, and nitrate salts are soluble. A precipitate can never be one of these salts. For any other compound, an AP question will tell you whether it is soluble.
+
+
+---
+
+## A Classification Checklist
+
+1. **Did any oxidation number change?** → **Redox**
+2. **Did a proton move from one species to another?** → **Acid–base**
+3. **Did dissolved ions combine to form a solid?** → **Precipitation**
+
+Checking oxidation numbers first avoids the most common mistake: calling a reaction "acid–base" just because an acid is present. Magnesium dissolving in hydrochloric acid involves an acid, but magnesium is oxidized and hydrogen is reduced, so the reaction is redox.
+      `
     },
     {
       id: 'rt1-identify-drill',
@@ -204,83 +156,83 @@ These reactions are essentially **reverses** of each other. If a synthesis react
       content: `
 **Identify the Reaction Type** 🧮
 
-For each reaction, type **synthesis** or **decomposition**.
+Classify each reaction. Type **acid-base**, **redox**, or **precipitation**.
 
-**1)** $2\\text{Al} + 3\\text{Br}_2 \\rightarrow 2\\text{AlBr}_3$
+**1)** $\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$
 
-**2)** $2\\text{HgO} \\xrightarrow{\\Delta} 2\\text{Hg} + \\text{O}_2$
+**2)** $\\text{Ba}^{2+}(aq) + \\text{SO}_4^{2-}(aq) \\rightarrow \\text{BaSO}_4(s)$
 
-**3)** $\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$
+**3)** $\\text{HNO}_2(aq) + \\text{OH}^-(aq) \\rightarrow \\text{NO}_2^-(aq) + \\text{H}_2\\text{O}(l)$
       `,
       exercise: {
-        questions: [{ question: '(1)', answer: 'synthesis', acceptableAnswers: ['synthesis', 'combination'] }, { question: '(2)', answer: 'decomposition', acceptableAnswers: ['decomposition'] }, { question: '(3)', answer: 'synthesis', acceptableAnswers: ['synthesis', 'combination'] }],
-        hint1: 'Two elements combine to form one compound.',
-        hint2: 'One compound heated to form two simpler substances.',
-        hint3: 'Two elements combine to form ammonia — a single product.',
-        explanation: '1) Two elements $(Al + Br_{2})$ → one compound $(AlBr_{3})$ = synthesis. 2) One compound (HgO) heated → two products $(Hg + O_{2})$ = decomposition. 3) Two elements $(N_{2} + H_{2})$ → one compound $(NH_{3})$ = synthesis (the Haber process).'
+        questions: [{ question: '(1)', answer: 'redox', acceptableAnswers: ['redox', 'oxidation-reduction', 'oxidation reduction'] }, { question: '(2)', answer: 'precipitation', acceptableAnswers: ['precipitation', 'precipitate'] }, { question: '(3)', answer: 'acid-base', acceptableAnswers: ['acid-base', 'acid base', 'acid–base', 'neutralization'] }],
+        hint1: 'Zinc goes from 0 to +2 and copper goes from +2 to 0. What does a change in oxidation number tell you?',
+        hint2: 'Two dissolved ions combine into a product marked (s).',
+        hint3: '$\\text{HNO}_2$ loses an H; $\\text{OH}^-$ gains one.',
+        explanation: '1) Zinc is oxidized (0 → +2) and copper is reduced (+2 → 0): redox. 2) Barium and sulfate ions leave solution as solid $\\text{BaSO}_4$ with no change in oxidation numbers: precipitation. 3) Nitrous acid donates a proton to hydroxide: acid–base.'
       }
     },
     {
       id: 'rt1-dropdown-practice',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks — Synthesis & Decomposition** 🔽
+**Fill in the Blanks — The Three Reaction Types** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'In a synthesis reaction, the number of products is always',
-            options: ['one', 'two', 'three', 'variable']
+            label: 'A reaction in which oxidation numbers change is classified as',
+            options: ['acid–base', 'redox', 'precipitation', 'physical']
           },
           {
-            label: 'Decomposition reactions typically require',
-            options: ['a catalyst only', 'energy input', 'a second reactant', 'no energy']
+            label: 'In a Brønsted–Lowry acid–base reaction, the base',
+            options: ['donates a proton', 'accepts a proton', 'donates electrons to a metal', 'forms a precipitate']
           },
           {
-            label: 'The reaction $SO_{3}$ + $H_{2}O$ → $H_{2}SO_{4}$ is an example of',
-            options: ['decomposition', 'synthesis', 'combustion', 'double replacement']
+            label: 'Mixing solutions of $\\text{KNO}_3$ and $\\text{NaCl}$ produces',
+            options: ['a precipitate of KCl', 'a precipitate of $\\text{NaNO}_3$', 'no precipitate', 'hydrogen gas']
           },
           {
-            label: 'The symbol Δ above the arrow in a chemical equation indicates',
-            options: ['a catalyst', 'heat is applied', 'light is needed', 'pressure is increased']
+            label: 'Combustion of a hydrocarbon is a subclass of',
+            options: ['acid–base reactions', 'precipitation reactions', 'redox reactions', 'nuclear reactions']
           }
         ],
-        correctAnswers: ['one', 'energy input', 'synthesis', 'heat is applied'],
-        hint1: 'Synthesis: $A + B \\rightarrow AB$ — how many products?',
-        hint2: 'Breaking bonds requires energy.',
-        hint3: 'Two reactants forming one product.',
-        explanation: 'Synthesis always produces exactly one product. Decomposition typically needs energy (heat, light, or electricity) to break bonds. $SO_{3}$ + $H_{2}O$ → $H_{2}SO_{4}$ is synthesis (two reactants → one product). The Δ symbol means heat is applied.'
+        correctAnswers: ['redox', 'accepts a proton', 'no precipitate', 'redox reactions'],
+        hint1: 'Oxidation numbers change only when electrons are transferred.',
+        hint2: 'Brønsted–Lowry acids donate protons; bases do the opposite.',
+        hint3: 'Every possible product here is a sodium, potassium, or nitrate salt.',
+        explanation: 'Changing oxidation numbers signal electron transfer, so the reaction is redox. A Brønsted–Lowry base accepts a proton. KCl and $\\text{NaNO}_3$ are both soluble (all sodium, potassium, and nitrate salts are), so no precipitate forms. Combustion is redox: carbon is oxidized and oxygen is reduced.'
       }
     },
     {
       id: 'rt1-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Exit Quiz — Synthesis & Decomposition** ✅
+**Exit Quiz — The Three Reaction Types** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following is a decomposition reaction?',
+            question: 'How is the reaction $\\text{Cl}_2(g) + 2\\text{Br}^-(aq) \\rightarrow 2\\text{Cl}^-(aq) + \\text{Br}_2(l)$ classified?',
             options: [
-              '$\\text{Fe} + \\text{S} \\rightarrow \\text{FeS}$',
-              '$2\\text{H}_2\\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O} + \\text{O}_2$',
-              '$\\text{AgNO}_3 + \\text{NaCl} \\rightarrow \\text{AgCl} + \\text{NaNO}_3$',
-              '$\\text{C}_3\\text{H}_8 + 5\\text{O}_2 \\rightarrow 3\\text{CO}_2 + 4\\text{H}_2\\text{O}$'
+              'Acid–base, because a halide ion gains a proton',
+              'Precipitation, because bromide ions leave the solution',
+              'Redox, because chlorine is reduced and bromide is oxidized',
+              'Acid–base, because bromide ions accept protons from chlorine'
             ],
-            correctAnswer: 1,
-            explanation: '$2\\text{H}_2\\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O} + \\text{O}_2$. Hydrogen peroxide (one reactant) breaks down into water and oxygen (two products). This is decomposition.'
+            correctAnswer: 2,
+            explanation: 'Chlorine goes from 0 to −1 (reduced) and bromine goes from −1 to 0 (oxidized), so electrons are transferred: redox. Chlorine has no proton to give and no proton moves, and bromine forms a liquid element rather than an insoluble ionic solid.'
           },
           {
-            question: 'Predict the product of the synthesis reaction: $\\text{Li} + \\text{F}_2 \\rightarrow ?$',
+            question: 'Solutions of $\\text{Pb(NO}_3)_2$ and $\\text{NaI}$ are mixed, and a yellow solid forms. Which formula is the solid?',
             options: [
-              '$Li_{2}F$',
-              'LiF',
-              '$LiF_{2}$',
-              '$Li_{2}F_{2}$'
+              '$\\text{NaNO}_3$',
+              '$\\text{PbI}_2$',
+              '$\\text{PbNa}_2$',
+              '$\\text{Pb(NO}_3)_2$'
             ],
             correctAnswer: 1,
-            explanation: 'Li (charge +1) combines with F (charge −1) to form the ionic compound LiF. The balanced equation is $2\\text{Li} + \\text{F}_2 \\rightarrow 2\\text{LiF}$.'
+            explanation: 'Sodium nitrate is soluble (all sodium and nitrate salts are), so the only new pairing that can precipitate is lead(II) with iodide. $\\text{Pb}^{2+}$ and $\\text{I}^-$ combine 1:2 to give $\\text{PbI}_2(s)$. Lead and sodium are both cations and cannot pair, and lead(II) nitrate is a starting solution.'
           }
         ]
       }

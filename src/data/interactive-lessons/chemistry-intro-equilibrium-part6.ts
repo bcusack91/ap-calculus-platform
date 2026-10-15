@@ -47,7 +47,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 | Formula | When to Use |
 |---------|-------------|
 | $K_c = \\frac{[\\text{products}]}{[\\text{reactants}]}$ | All K calculations |
-| $K_p = K_c(RT)^{\\Delta n}$ | Converting between $K_c$ and $K_p$ |
+| $K_p = \\frac{(P_{\\text{products}})}{(P_{\\text{reactants}})}$ | Gas equilibria given partial pressures |
 | Reverse: $K\' = 1/K$ | Flipping the reaction |
 | Multiply by $n$: $K\' = K^n$ | Scaling coefficients |
 | Add reactions: $K = K_1 \\times K_2$ | Combining reactions |
@@ -84,15 +84,15 @@ At equilibrium: $[\\text{PCl}_5] = 0.20$ M, $[\\text{PCl}_3] = 0.30$ M, $[\\text
 
 **2)** Is the reaction product-favored or reactant-favored? (Enter "product-favored" or "reactant-favored")
 
-**3)** What is $\\Delta n$ for this reaction? (Enter as an integer with sign, e.g. +2)
+**3)** What is $K_c$ for the reverse reaction, $\\text{PCl}_3(g) + \\text{Cl}_2(g) \\rightleftharpoons \\text{PCl}_5(g)$? (to 2 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.45', 'reactant-favored', '+1'],
+        correctAnswers: ['0.45', 'reactant-favored', '2.2'],
         hint1: '$K_c = \\frac{[\\text{PCl}_3][\\text{Cl}_2]}{[\\text{PCl}_5]} = \\frac{(0.30)(0.30)}{0.20}$',
         hint2: '$K_c = 0.45 < 1$, so reactants are favored.',
-        hint3: '$\\Delta n = (1 + 1) - 1 = +1$',
-        explanation: '1) $K_c = \\frac{(0.30)(0.30)}{0.20} = \\frac{0.09}{0.20} = 0.45$. 2) Since $K_c = 0.45 < 1$, the reaction is reactant-favored. 3) $\\Delta n = 2 - 1 = +1$.'
+        hint3: 'Reversing a reaction inverts $K$: $K_{\\text{rev}} = 1/0.45$.',
+        explanation: '1) $K_c = \\frac{(0.30)(0.30)}{0.20} = \\frac{0.09}{0.20} = 0.45$. 2) Since $K_c = 0.45 < 1$, the reaction is reactant-favored. 3) $K_{\\text{rev}} = 1/0.45 = 2.2$.'
       }
     },
     {
@@ -149,23 +149,23 @@ Step 3: Multiply by 2: $K = (K_{\\text{rev}})^2 = (7.7 \\times 10^{-7})^2 = 5.9 
       id: 'ie6-practice3',
       type: 'input-boxes' as const,
       content: `
-**Practice Problem 3 — $K_c$ to $K_p$ Conversion** 🧮
+**Practice Problem 3 — $K_p$ from Partial Pressures** 🧮
 
-For $2\\,\\text{SO}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\,\\text{SO}_3(g)$ at $T = 1000$ K, $K_c = 280$.
+For $2\\,\\text{SO}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\,\\text{SO}_3(g)$ at 1000 K, an equilibrium mixture has a total pressure of 2.00 atm. The mole fractions are $\\chi_{\\text{SO}_2} = 0.25$, $\\chi_{\\text{O}_2} = 0.25$, and $\\chi_{\\text{SO}_3} = 0.50$.
 
-**1)** What is $\\Delta n$? (Enter as an integer with sign)
+**1)** What is the partial pressure of $SO_{3}$ in atm? (Round to 2 significant figures)
 
-**2)** Calculate $RT$ using $R = 0.08206$ L·atm/(mol·K). (Round to 3 significant figures)
+**2)** What is the partial pressure of $SO_{2}$ in atm? (Round to 2 significant figures)
 
-**3)** Calculate $K_p$. (Round to 3 significant figures)
+**3)** Calculate $K_p$. (Round to 2 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-1', '82.1', '3.4'],
-        hint1: '$\\Delta n = 2 - (2 + 1) = -1$',
-        hint2: '$RT = 0.08206 \\times 1000 = 82.06 \\approx 82.1$',
-        hint3: '$K_p = K_c(RT)^{\\Delta n} = 280 \\times (82.1)^{-1} = 280/82.1$',
-        explanation: '1) $\\Delta n = 2 - 3 = -1$. 2) $RT = 0.08206 \\times 1000 = 82.1$. 3) $K_p = 280 \\times (82.1)^{-1} = 280/82.1 = 3.4$.'
+        correctAnswers: ['1.0', '0.50', '8.0'],
+        hint1: '$P_{\\text{SO}_3} = \\chi_{\\text{SO}_3} P_{\\text{total}} = (0.50)(2.00)$',
+        hint2: '$P_{\\text{SO}_2} = (0.25)(2.00)$, and $P_{\\text{O}_2}$ is the same.',
+        hint3: '$K_p = \\frac{(P_{\\text{SO}_3})^2}{(P_{\\text{SO}_2})^2(P_{\\text{O}_2})}$',
+        explanation: '1) $P_{\\text{SO}_3} = (0.50)(2.00) = 1.0$ atm. 2) $P_{\\text{SO}_2} = (0.25)(2.00) = 0.50$ atm, and $P_{\\text{O}_2} = 0.50$ atm as well. 3) $K_p = \\frac{(1.0)^2}{(0.50)^2(0.50)} = \\frac{1.0}{0.125} = 8.0$.'
       }
     },
     {
@@ -188,15 +188,15 @@ For $2\\,\\text{SO}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\,\\text{SO}_3(g
             explanation: '$K_c = \\frac{(0.050)(0.050)}{0.50} = \\frac{0.0025}{0.50} = 5.0 \\times 10^{-3}$. Inverting the expression (reactants over products) gives $2.0 \\times 10^{2}$, using only one product term gives $0.050/0.50 = 1.0 \\times 10^{-1}$, and adding the product concentrations instead of multiplying gives $0.10/0.50 = 2.0 \\times 10^{-1}$.'
           },
           {
-            question: 'For $2\\,\\text{A}(g) \\rightleftharpoons \\text{B}(g)$, $K_c = 100$ at 500 K. What is $K_p$?',
+            question: 'For $2\\,\\text{A}(g) \\rightleftharpoons \\text{B}(g)$, $K_p = 100$ at 500 K. If $P_{\\text{A}} = 0.10$ atm at equilibrium, what is $P_{\\text{B}}$?',
             options: [
-              '$100 \\times (0.08206 \\times 500)^{-1} \\approx 2.4$',
-              '$100 \\times (0.08206 \\times 500)^{+1} \\approx 4103$',
-              '$100$',
-              '$100 \\times (0.08206 \\times 500)^{-2} \\approx 0.059$'
+              '$1.0$ atm',
+              '$10$ atm',
+              '$0.10$ atm',
+              '$1000$ atm'
             ],
             correctAnswer: 0,
-            explanation: '$\\Delta n = 1 - 2 = -1$. $K_p = 100 \\times (41.03)^{-1} = 100/41.03 \\approx 2.4$.'
+            explanation: '$K_p = P_{\\text{B}}/(P_{\\text{A}})^2$, so $P_{\\text{B}} = K_p(P_{\\text{A}})^2 = 100 \\times (0.10)^2 = 1.0$ atm. Forgetting the square gives 10 atm, and dividing by $(P_{\\text{A}})^2$ instead of multiplying gives 1000 atm.'
           }
         ]
       }

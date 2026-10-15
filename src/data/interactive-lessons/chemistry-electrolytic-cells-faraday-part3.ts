@@ -115,14 +115,15 @@ Water's reduction potential is $E° = -0.83$ V. Compare the metal ion to this be
 
 ### ⬆️ At the Anode — Which Gets Oxidized?
 
-Water's oxidation potential is $E° = +1.23$ V.
+Compare reduction potentials again: the couple with the **lower** $E°$ has the reduced form that is **easier to oxidize**. Water's couple is $\\text{O}_2 + 4\\text{H}^+ + 4e^- \\rightarrow 2\\text{H}_2\\text{O}$, $E° = +1.23$ V.
 
-| Anion Type | What Happens | Examples |
-|:----------:|:------------:|----------|
-| Simple halides | **Anion is oxidized** | $Cl^{-}$ → $Cl_{2}$, $Br^{-}$ → $Br_{2}$, $I^{-}$ → $I_{2}$ |
-| Oxyanions or $F^{-}$ | **Water is oxidized → $O_{2}$** | $SO_{4}^{2-}$, $NO_{3}^{-}$, $F^{-}$ |
+| Anion | Couple $E°$ | What Happens |
+|:-----:|:-----------:|:------------:|
+| $I^{-}$ | $I_{2}/I^{-}$ = +0.54 V (below 1.23) | **$I^{-}$ is oxidized → $I_{2}$** |
+| $Br^{-}$ | $Br_{2}/Br^{-}$ = +1.07 V (below 1.23) | **$Br^{-}$ is oxidized → $Br_{2}$** |
+| $SO_{4}^{2-}$, $NO_{3}^{-}$ | S and N already in their highest oxidation states | **Water is oxidized → $O_{2}$** |
 
-> ⚠️ **Why do halides win even though their $E°$ is less favorable?** Overpotential! The kinetic barrier for $O_{2}$ production is high, so in practice, halides get oxidized first.
+> 📝 Aqueous chloride solutions do not follow a simple $E°$ comparison at the anode, because the two values are close and other factors decide the outcome. When an AP question involves one, it tells you which product forms.
 
 ---
 
@@ -132,7 +133,7 @@ Water's oxidation potential is $E° = +1.23$ V.
 |:----:|----------|--------|-------|
 | **1** | Is it a molten salt? | Cation → metal, Anion → nonmetal | Go to step 2 |
 | **2** | Cathode: Is metal $E°$ above $-0.83$ V? | Metal deposits | $H_{2}$ forms |
-| **3** | Anode: Is anion a simple halide? | Halide is oxidized | $O_{2}$ forms |
+| **3** | Anode: Is the anion's couple below +1.23 V ($Br^{-}$, $I^{-}$)? | Anion is oxidized | $O_{2}$ forms |
       `
     },
     {
@@ -152,14 +153,13 @@ Water's oxidation potential is $E° = +1.23$ V.
 > | $Cu^{2+}$ | +0.34 | $Na^{+}$ | −2.71 |
 > | $Ni^{2+}$ | −0.26 | $K^{+}$ | −2.93 |
 >
-> **Oxidation potentials (anode):**
+> **Anode couples (reduction potentials):**
 >
-> | Half-reaction | $E°$ (V) |
+> | Couple | $E°$ (V) |
 > |--------------|:--------:|
-> | $2Cl^{-}$ → $Cl_{2}$ + $2e^{-}$ | +1.36 |
-> | $2Br^{-}$ → $Br_{2}$ + $2e^{-}$ | +1.07 |
-> | $2I^{-}$ → $I_{2}$ + $2e^{-}$ | +0.54 |
-> | $2H_{2}O$ → $O_{2}$ + $4H^{+}$ + $4e^{-}$ | +1.23 |
+> | $Br_{2}/Br^{-}$ | +1.07 |
+> | $I_{2}/I^{-}$ | +0.54 |
+> | $O_{2}/H_{2}O$ | +1.23 |
       `,
       exercise: {
         questions: [
@@ -214,9 +214,9 @@ Water's oxidation potential is $E° = +1.23$ V.
 > | $Cu^{2+}$ | +0.34 | $Na^{+}$ | −2.71 |
 > | $Ni^{2+}$ | −0.26 | $K^{+}$ | −2.93 |
 >
-> **Anode:** $2Cl^{-}$ → $Cl_{2}$ (+1.36 V) | $2Br^{-}$ → $Br_{2}$ (+1.07 V) | $2I^{-}$ → $I_{2}$ (+0.54 V) | $H_{2}O$ → $O_{2}$ (+1.23 V)
+> **Anode couples:** $Br_{2}/Br^{-}$ (+1.07 V) | $I_{2}/I^{-}$ (+0.54 V) | $O_{2}/H_{2}O$ (+1.23 V)
 >
-> **Rules:** Metal $E°$ above −0.83 V → metal deposits. Below → $H_{2}$. Simple halides → oxidized. Oxyanions → $O_{2}$.
+> **Rules:** Metal $E°$ above −0.83 V → metal deposits. Below → $H_{2}$. $Br^{-}$ and $I^{-}$ → oxidized. Oxyanions → $O_{2}$.
       `,
       exercise: {
         dropdowns: [
@@ -241,7 +241,7 @@ Water's oxidation potential is $E° = +1.23$ V.
         hint1: '$Br^{-}$ is a simple halide — it gets oxidized.',
         hint2: '$Na^{+}$ is too reactive to deposit from water → $H_{2}$ forms.',
         hint3: '$Cu^{2+}$ has E° > −0.83 V, so Cu deposits.',
-        explanation: 'NaBr: anode = $Br_{2}$ (halide oxidized), cathode = $H_{2}$ (Na too reactive). $CuCl_{2}$: cathode = Cu (E° = +0.34 V beats water). $Na_{2}SO_{4}$: anode = $O_{2}$ ($SO_{4}^{2-}$ is an oxyanion, water oxidized instead).'
+        explanation: 'NaBr: anode = $Br_{2}$ (its couple, +1.07 V, is below water\'s +1.23 V), cathode = $H_{2}$ (Na too reactive). $CuCl_{2}$: cathode = Cu (E° = +0.34 V beats water). $Na_{2}SO_{4}$: anode = $O_{2}$ ($SO_{4}^{2-}$ is an oxyanion, water oxidized instead).'
       }
     },
     {
@@ -252,7 +252,7 @@ Water's oxidation potential is $E° = +1.23$ V.
 
 > 📋 **Reference:** $Ag^{+}$ $E°$ = +0.80 V | $Cu^{2+}$ = +0.34 V | $Ni^{2+}$ = −0.26 V | $Zn^{2+}$ = −0.76 V | Water cathode = −0.83 V | $Na^{+}$ = −2.71 V | $K^{+}$ = −2.93 V | $Mg^{2+}$ = −2.37 V
 >
-> **Anode:** Halides ($Cl^{-}$, $Br^{-}$, $I^{-}$) → oxidized. Oxyanions ($NO_{3}^{-}$, $SO_{4}^{2-}$) → $O_{2}$ forms.
+> **Anode:** $Br^{-}$ and $I^{-}$ → oxidized (couples below +1.23 V). Oxyanions ($NO_{3}^{-}$, $SO_{4}^{2-}$) → $O_{2}$ forms.
 
 What gas or metal is produced at the cathode during electrolysis of:
 
@@ -267,8 +267,8 @@ What gas or metal is produced at the cathode during electrolysis of:
         correctAnswers: ['Mg', 'Ag', 'I2'],
         hint1: 'Molten: only $Mg^{2+}$ and $Cl^{-}$ present. Cation → cathode.',
         hint2: '$Ag^{+}$ has E° = +0.80 V (more positive than water at −0.83 V).',
-        hint3: '$I^{-}$ is a simple halide — preferentially oxidized over water.',
-        explanation: '1) Mg is deposited (molten: only $Mg^{2+}$ available for reduction). 2) Ag deposits (E° = +0.80 V >> −0.83 V for water). 3) $I_{2}$ forms ($I^{-}$ is a halide, oxidized before water).'
+        hint3: 'The $I_{2}/I^{-}$ couple (+0.54 V) is far below water\'s +1.23 V.',
+        explanation: '1) Mg is deposited (molten: only $Mg^{2+}$ available for reduction). 2) Ag deposits (E° = +0.80 V >> −0.83 V for water). 3) $I_{2}$ forms ($I^{-}$ is easier to oxidize than water).'
       }
     },
     {
@@ -288,18 +288,18 @@ What gas or metal is produced at the cathode during electrolysis of:
               '$Na^{+}$ is too hydrated to reach the cathode'
             ],
             correctAnswer: 1,
-            explanation: '$Na^{+}$ has $E° = -2.71$ V, far below water\'s $E° = -0.83$ V. Water is preferentially reduced in aqueous solution, producing $H_{2}$ gas instead of Na metal. In molten NaCl, there is no water to compete. NaCl dissolves readily, $Na^{+}$ ions do reach the cathode, and $Cl_2$ forms at the anode, not where sodium would deposit.'
+            explanation: '$Na^{+}$ has $E° = -2.71$ V, far below water\'s $E° = -0.83$ V. Water is preferentially reduced in aqueous solution, producing $H_{2}$ gas instead of Na metal. In molten NaCl, there is no water to compete. NaCl dissolves readily, $Na^{+}$ ions do reach the cathode, and the anode product forms at the other electrode, not where sodium would deposit.'
           },
           {
             question: 'In aqueous electrolysis, when does $O_{2}$ form at the anode instead of the anion?',
             options: [
-              'When the anion is a simple halide ($Cl^{-}$, $Br^{-}$, $I^{-}$)',
-              'When the anion is an oxyanion ($SO_{4}^{2-}$, $NO_{3}^{-}$) or $F^{-}$',
+              'When the anion is $Br^{-}$ or $I^{-}$, which oxidize below 1.23 V',
+              'When the anion is $SO_{4}^{2-}$ or $NO_{3}^{-}$, which resist oxidation',
               '$O_{2}$ always forms at the anode in water',
               '$O_{2}$ never forms; the anion is always oxidized'
             ],
             correctAnswer: 1,
-            explanation: 'Oxyanions ($SO_{4}^{2-}$, $NO_{3}^{-}$) and $F^{-}$ are very difficult to oxidize. Water is oxidized instead: $2H_{2}O$ → $O_{2}$ + $4H^{+}$ + $4e^{-}$. Simple halides ($Cl^{-}$, $Br^{-}$, $I^{-}$) are oxidized preferentially.'
+            explanation: 'Sulfate and nitrate already hold S and N in their highest oxidation states, so water is oxidized instead: $2H_{2}O$ → $O_{2}$ + $4H^{+}$ + $4e^{-}$. $Br^{-}$ and $I^{-}$ have couples below +1.23 V, so they are oxidized in preference to water.'
           }
         ]
       }

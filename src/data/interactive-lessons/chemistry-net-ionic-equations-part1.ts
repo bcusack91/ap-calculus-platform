@@ -147,12 +147,12 @@ These remain mostly as intact molecules in solution and are written in **molecul
 **Step 3:** Already balanced:
 $$\\text{AgNO}_3(aq) + \\text{NaCl}(aq) \\rightarrow \\text{AgCl}(s) + \\text{NaNO}_3(aq)$$
 
-**Step 4:** AgCl is insoluble (precipitate → solid), everything else is aqueous.
+**Step 4:** Silver chloride is insoluble (an AP question would give you this), so it is labeled (s); sodium nitrate is a sodium and nitrate salt, so it is (aq).
 
 
 ---
 
-> ⚠️ **Warning:** Always check solubility to assign correct phase labels. A reaction may not occur if no precipitate, gas, or water forms!
+> ⚠️ **Warning:** Always check solubility to assign correct phase labels: all sodium, potassium, ammonium, and nitrate salts are (aq), and any other solubility you need will be stated in the question. A reaction may not occur if no precipitate, gas, or water forms!
       `
     },
     {
@@ -273,7 +273,7 @@ Classify each substance as **strong**, **weak**, or **non** (electrolyte).
       exercise: {
         questions: [
           {
-            question: 'Which balanced molecular equation correctly represents the reaction of lead(II) nitrate with potassium iodide?',
+            question: 'Which balanced molecular equation correctly represents the reaction of lead(II) nitrate with potassium iodide? (Lead(II) iodide is insoluble.)',
             options: [
               '$\\text{PbNO}_3(aq) + \\text{KI}(aq) \\rightarrow \\text{PbI}(s) + \\text{KNO}_3(aq)$',
               '$\\text{Pb(NO}_3)_2(aq) + 2\\text{KI}(aq) \\rightarrow \\text{PbI}_2(s) + 2\\text{KNO}_3(aq)$',
@@ -281,7 +281,7 @@ Classify each substance as **strong**, **weak**, or **non** (electrolyte).
               '$\\text{Pb(NO}_3)_2(aq) + 2\\text{KI}(aq) \\rightarrow \\text{PbI}_2(aq) + 2\\text{KNO}_3(aq)$'
             ],
             correctAnswer: 1,
-            explanation: '$Pb^{2+}$ needs 2 $I^{-}$ ions to form $PbI_{2}$, so we need 2 KI. This gives 2 $KNO_{3}$. $PbI_{2}$ is insoluble so it is labeled (s). The balanced equation is $Pb(NO_{3})_{2}(aq)$ + 2KI(aq) → $PbI_{2}(s)$ + $2KNO_{3}(aq)$.'
+            explanation: '$Pb^{2+}$ needs 2 $I^{-}$ ions to form $PbI_{2}$, so we need 2 KI. This gives 2 $KNO_{3}$, which stays (aq) because all potassium and nitrate salts are soluble. $PbI_{2}$ is insoluble (given), so it is labeled (s). The balanced equation is $Pb(NO_{3})_{2}(aq)$ + 2KI(aq) → $PbI_{2}(s)$ + $2KNO_{3}(aq)$.'
           },
           {
             question: 'Which of the following would be written in molecular form (NOT as ions) in a complete ionic equation?',

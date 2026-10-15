@@ -4,9 +4,9 @@ export const chemAtomicSpectraPart4Data = {
     {
       id: 'as4-intro',
       type: 'text' as const,
-      content: `# 🌈 The Hydrogen Spectrum & Rydberg Formula
+      content: `# 🌈 Energy-Level Diagrams & Spectral Regions
 
-**Part 4 of 7 — Predicting Spectral Lines**
+**Part 4 of 7 — Energy-Level Diagrams and Spectral Regions**
 
 ---
 
@@ -14,59 +14,115 @@ export const chemAtomicSpectraPart4Data = {
 
 | Section |
 |---------|
-| The Spectral Series |
-| 📌 Lyman, Balmer & Paschen |
-| 🔑 The Rydberg Formula |
-| Calculating Wavelengths |
-| Identifying Transitions |
+| 📊 Reading an Energy-Level Diagram |
+| 🔑 Matching Spectral Regions to Transitions |
+| 🧪 Worked Examples |
 
-> 🔑 **Big idea:** Hydrogen's emission lines fall into recognizable *series*, each corresponding to electrons relaxing to a particular final level. The Rydberg formula lets us calculate any line directly from the integers $n_i$ and $n_f$.`
+> 🔑 **Big idea:** An energy-level diagram tells you every photon an atom can emit or absorb. Different regions of the spectrum probe different kinds of motion: microwaves change how molecules rotate, infrared changes how bonds vibrate, and ultraviolet/visible light moves electrons between levels.`
     },
     {
       id: 'as4-series',
       type: 'text' as const,
       content: `
-## 🌈 Hydrogen's Spectral Series
+## 📊 Reading an Energy-Level Diagram
 
-| Series | Final level $n_f$ | Region | Discovered |
-|--------|-------------------|--------|-----------|
-| **Lyman** | 1 | Ultraviolet | 1906 |
-| **Balmer** | 2 | Visible | 1885 |
-| **Paschen** | 3 | Near-infrared | 1908 |
-| **Brackett** | 4 | Mid-infrared | 1922 |
-| **Pfund** | 5 | Far-infrared | 1924 |
+Here are the four lowest energy levels of a hypothetical atom X:
 
-> 💡 **The Balmer series** is the four visible lines you can see with a hand-held spectroscope: H-α (red, 656 nm), H-β (blue-green, 486 nm), H-γ (violet, 434 nm), H-δ (deep violet, 410 nm).
+| Level | Energy (J) |
+|-------|-----------|
+| 4 | $-2.00 \\times 10^{-19}$ |
+| 3 | $-3.00 \\times 10^{-19}$ |
+| 2 | $-5.00 \\times 10^{-19}$ |
+| 1 (ground state) | $-9.00 \\times 10^{-19}$ |
+
+
+---
+
+### Emission Lines
+
+An excited atom can drop from any higher level to any lower one. From level 4, the possible drops are $4 \\to 3$, $4 \\to 2$, $4 \\to 1$, $3 \\to 2$, $3 \\to 1$, and $2 \\to 1$, so **six** emission lines are possible.
+
+| Transition | Photon Energy (J) | Wavelength | Region |
+|------------|-------------------|-----------|--------|
+| $4 \\to 3$ | $1.00 \\times 10^{-19}$ | 1990 nm | Infrared |
+| $3 \\to 2$ | $2.00 \\times 10^{-19}$ | 994 nm | Infrared |
+| $4 \\to 2$ | $3.00 \\times 10^{-19}$ | 663 nm | Visible (red) |
+| $2 \\to 1$ | $4.00 \\times 10^{-19}$ | 497 nm | Visible (blue-green) |
+| $3 \\to 1$ | $6.00 \\times 10^{-19}$ | 331 nm | Ultraviolet |
+| $4 \\to 1$ | $7.00 \\times 10^{-19}$ | 284 nm | Ultraviolet |
+
+
+---
+
+### Absorption Lines
+
+In a cool gas, nearly every atom is in the **ground state**, so absorption lines come from transitions that **start at level 1**: $1 \\to 2$, $1 \\to 3$, and $1 \\to 4$. The atom absorbs only photons whose energy exactly matches one of these gaps.
+
+> 💡 **Key Rule:** Bigger gap → higher photon energy → higher frequency → **shorter** wavelength.
       `
     },
     {
       id: 'as4-rydberg',
       type: 'text' as const,
       content: `
-## 📐 The Rydberg Formula
+## 🔑 Matching Spectral Regions to Transitions
 
-In 1888 Johannes Rydberg derived an empirical formula for hydrogen's lines:
+Molecules have several kinds of quantized energy, and each kind is probed by a different region of the electromagnetic spectrum:
 
-$$\\boxed{\\frac{1}{\\lambda} = R_H \\left( \\frac{1}{n_f^2} - \\frac{1}{n_i^2} \\right)}$$
+| Region | Photon Energy | Transition It Causes | Example |
+|--------|---------------|----------------------|---------|
+| **Microwave** | Lowest | Changes in **rotational** energy levels of molecules | Microwave ovens make water molecules rotate faster |
+| **Infrared** | Middle | Changes in **vibrational** energy levels (bonds stretching and bending) | $CO_{2}$ absorbs infrared radiation from Earth's surface |
+| **Ultraviolet / visible** | Highest | Changes in **electronic** energy levels (electrons moving between levels) | Colored compounds absorb visible light; atoms emit line spectra |
 
-where $R_H$ is the **Rydberg constant**:
-
-$$R_H = 1.097 \\times 10^{7} \\; \\text{m}^{-1}$$
-
-For **emission**, $n_i > n_f$ and $1/\\lambda$ comes out positive.
-
-For **absorption**, swap the levels — or just track $|\\Delta E|$.
 
 ---
 
-### Connection to the Bohr Model
+### Why the Order Makes Sense
 
-Multiplying both sides by $hc$ gives:
+- Rotational levels are very closely spaced, so tiny energy jumps (microwaves) are enough.
+- Vibrational levels are farther apart and need infrared photons.
+- Electronic levels are the most widely spaced, so electron jumps need visible or ultraviolet photons.
 
-$$E_{\\text{photon}} = hcR_H \\left( \\frac{1}{n_f^2} - \\frac{1}{n_i^2} \\right)$$
-
-and indeed $hcR_H = 2.18 \\times 10^{-18}$ J — the Bohr energy constant. The Rydberg formula and the Bohr model agree exactly for hydrogen.
+> ⚠️ **AP Tip:** Infrared light does not move electrons to higher levels, and microwaves do not make bonds vibrate. Always match the region to the correct type of transition.
       `
+    },
+    {
+      id: 'as4-concept-quiz',
+      type: 'multiple-choice' as const,
+      content: `**Regions and Transitions Check** 🎯`,
+      exercise: {
+        questions: [
+          {
+            question: 'A sample of HCl gas absorbs infrared radiation. What happens to the HCl molecules?',
+            options: [
+              'Electrons move to higher electronic energy levels',
+              'The bonds move to higher vibrational levels',
+              'The molecules rotate faster with no other change',
+              'The H–Cl bond breaks to form H and Cl atoms'
+            ],
+            correctAnswer: 1,
+            explanation: 'Infrared photons have the right energy to change the vibrational energy of a bond, making it stretch and bend more. Electronic transitions need visible or UV light, rotational changes are caused by lower-energy microwaves, and breaking the bond takes more energy than one IR photon carries.'
+          },
+          {
+            question: 'For atom X (levels above), which emission line has the LONGEST wavelength?',
+            options: ['$4 \\to 1$', '$2 \\to 1$', '$3 \\to 2$', '$4 \\to 3$'],
+            correctAnswer: 3,
+            explanation: 'The longest wavelength comes from the smallest energy gap. The gap from level 4 to level 3 is only $1.00 \\times 10^{-19}$ J, the smallest of these, giving a 1990 nm infrared photon.'
+          },
+          {
+            question: 'Atom X is in its ground state. Which photon energy can it absorb?',
+            options: [
+              '$2.00 \\times 10^{-19}$ J',
+              '$5.00 \\times 10^{-19}$ J',
+              '$6.00 \\times 10^{-19}$ J',
+              '$9.50 \\times 10^{-19}$ J, but only partly'
+            ],
+            correctAnswer: 2,
+            explanation: 'From level 1, the possible absorption energies are $4.00$, $6.00$, and $7.00 \\times 10^{-19}$ J (to levels 2, 3, and 4). Only $6.00 \\times 10^{-19}$ J matches a gap ($1 \\to 3$). The $2.00 \\times 10^{-19}$ J gap exists only between levels 2 and 3, and an atom cannot absorb part of a photon.'
+          }
+        ]
+      }
     },
     {
       id: 'as4-worked',
@@ -74,120 +130,92 @@ and indeed $hcR_H = 2.18 \\times 10^{-18}$ J — the Bohr energy constant. The R
       content: `
 ## 🧪 Worked Examples
 
-### Example 1 — H-α (Balmer 3 → 2)
+### Example 1 — From Diagram to Wavelength
 
-$$\\frac{1}{\\lambda} = (1.097 \\times 10^{7})\\left( \\frac{1}{4} - \\frac{1}{9} \\right) = (1.097 \\times 10^{7})(0.13889) = 1.524 \\times 10^{6} \\; \\text{m}^{-1}$$
+> **Problem:** For atom X, find the wavelength of the photon emitted in the $4 \\to 2$ transition.
 
-$$\\lambda = \\frac{1}{1.524 \\times 10^{6}} = 6.56 \\times 10^{-7} \\; \\text{m} = \\boxed{656 \\; \\text{nm}}$$
+$$E = E_4 - E_2 = (-2.00 \\times 10^{-19}) - (-5.00 \\times 10^{-19}) = 3.00 \\times 10^{-19} \\; \\text{J}$$
 
-The famous red H-α line.
+$$\\lambda = \\frac{hc}{E} = \\frac{(6.626 \\times 10^{-34})(3.00 \\times 10^{8})}{3.00 \\times 10^{-19}} = 6.63 \\times 10^{-7} \\; \\text{m} = \\boxed{663 \\; \\text{nm}}$$
+
+That is red visible light, so this is an **electronic** transition.
 
 ---
 
-### Example 2 — Lyman 2 → 1
+### Example 2 — Identifying the Type of Transition
 
-$$\\frac{1}{\\lambda} = (1.097 \\times 10^{7})\\left( \\frac{1}{1} - \\frac{1}{4} \\right) = (1.097 \\times 10^{7})(0.75) = 8.228 \\times 10^{6} \\; \\text{m}^{-1}$$
+> **Problem:** A gas absorbs radiation with a wavelength of $4.3 \\times 10^{-6}$ m. What kind of transition is this?
 
-$$\\lambda = 1.215 \\times 10^{-7} \\; \\text{m} = \\boxed{121.5 \\; \\text{nm}}$$
+The wavelength is about 4300 nm, longer than visible light (700 nm) but much shorter than microwaves (about 1 mm and longer). It is **infrared**, so the absorption changes the **vibrational** energy of the molecules.
 
-In the far ultraviolet — invisible to the eye, but the strongest line in the Sun's spectrum.
+$$E = \\frac{hc}{\\lambda} = \\frac{(6.626 \\times 10^{-34})(3.00 \\times 10^{8})}{4.3 \\times 10^{-6}} = 4.6 \\times 10^{-20} \\; \\text{J}$$
+
+This energy is smaller than every electronic gap in atom X, consistent with vibrational levels being more closely spaced than electronic levels.
       `
-    },
-    {
-      id: 'as4-concept-quiz',
-      type: 'multiple-choice' as const,
-      content: `**Spectral Series Check** 🎯`,
-      exercise: {
-        questions: [
-          {
-            question: 'A hydrogen line at 486 nm (blue-green) belongs to which series?',
-            options: ['Lyman', 'Balmer', 'Paschen', 'Brackett'],
-            correctAnswer: 1,
-            explanation: 'Visible lines are part of the Balmer series ($n_f = 2$). 486 nm is the H-β line ($n_i = 4$).'
-          },
-          {
-            question: 'In the Rydberg formula, what determines whether the emitted photon is UV, visible, or IR?',
-            options: [
-              'Mainly $n_i$, the level where the electron starts',
-              'The sum $n_i + n_f$ of the starting and final levels',
-              'Mainly $n_f$, the level where the electron lands',
-              'The temperature of the hot gas that emits the light'
-            ],
-            correctAnswer: 2,
-            explanation: 'The series (the value of $n_f$) sets the wavelength range — Lyman ($n_f=1$) is UV, Balmer ($n_f=2$) is visible, Paschen ($n_f=3$) is IR — while $n_i$ picks the specific line within that series. Temperature changes how many atoms are excited, not the wavelengths.'
-          },
-          {
-            question: 'Which transition produces the LONGEST-wavelength photon?',
-            options: ['n=2 → n=1', 'n=3 → n=2', 'n=4 → n=3', 'n=5 → n=4'],
-            correctAnswer: 3,
-            explanation: 'The smallest energy gap is between adjacent high-$n$ levels. $n=5 \\to n=4$ gives the longest wavelength of these four (mid-IR, Brackett series).'
-          }
-        ]
-      }
     },
     {
       id: 'as4-calculation',
       type: 'input-boxes' as const,
       content: `
-**Rydberg Formula Drill** 🧮
+**Energy-Level Diagram Drill** 🧮
 
-Use $R_H = 1.097 \\times 10^{7}$ $m^{-1}$.
+Use the energy levels of atom X and $h = 6.626 \\times 10^{-34}$ J·s, $c = 3.00 \\times 10^{8}$ m/s.
 
-**1)** Find the wavelength (in nm, nearest whole) of the Balmer line for $n_i = 4 \\to n_f = 2$.
+**1)** Suppose atom X could also be excited to a fifth level. How many different emission lines would then be possible from level 5 and below?
 
-**2)** Find the wavelength (in nm, nearest whole) of the Lyman line for $n_i = 3 \\to n_f = 1$.
+**2)** What is the wavelength (in nm, nearest whole) of the photon emitted in the $2 \\to 1$ transition?
 
-**3)** Find the wavelength (in nm, to nearest whole) of the Paschen line for $n_i = 4 \\to n_f = 3$. (Hint: this falls in the infrared — answer in the thousands of nm range.)
+**3)** What photon energy is needed to excite a ground-state atom of X to level 4? Express as $\\times 10^{-19}$ J (3 sig figs).
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['486', '103', '1875'],
-        hint1: '$1/\\lambda = R_H(1/4 - 1/16) = R_H(0.1875)$. Convert m to nm.',
-        hint2: '$1/\\lambda = R_H(1/1 - 1/9) = R_H(0.8889)$.',
-        hint3: '$1/\\lambda = R_H(1/9 - 1/16) = R_H(0.04861)$.',
-        explanation: '1) $1/\\lambda = (1.097 \\times 10^7)(0.1875) = 2.057 \\times 10^6$ $m^{-1}$ → $\\lambda = 486$ nm (H-β). 2) $1/\\lambda = (1.097 \\times 10^7)(0.8889) = 9.751 \\times 10^6$ $m^{-1}$ → $\\lambda = 103$ nm (UV). 3) $1/\\lambda = (1.097 \\times 10^7)(0.04861) = 5.333 \\times 10^5$ $m^{-1}$ → $\\lambda = 1875$ nm (IR Paschen-α).'
+        correctAnswers: ['10', '497', '7.00'],
+        hint1: 'Count every pair of levels: from 5 levels, pick any two.',
+        hint2: '$E = E_2 - E_1 = 4.00 \\times 10^{-19}$ J, then $\\lambda = hc/E$.',
+        hint3: '$E = E_4 - E_1$.',
+        explanation: '1) Each pair of levels gives one line: $4 + 3 + 2 + 1 = 10$ lines. 2) $\\lambda = (6.626 \\times 10^{-34})(3.00 \\times 10^{8})/(4.00 \\times 10^{-19}) = 4.97 \\times 10^{-7}$ m = 497 nm. 3) $E = (-2.00 \\times 10^{-19}) - (-9.00 \\times 10^{-19}) = 7.00 \\times 10^{-19}$ J.'
       }
     },
     {
       id: 'as4-dropdown',
       type: 'dropdown-select' as const,
-      content: `**Identify the Series** 🔽`,
+      content: `**Match the Region** 🔽`,
       exercise: {
         dropdowns: [
-          { label: 'A line at 122 nm in hydrogen belongs to the', options: ['Lyman series', 'Balmer series', 'Paschen series', 'Brackett series'] },
-          { label: 'A line at 656 nm in hydrogen belongs to the', options: ['Lyman series', 'Balmer series', 'Paschen series', 'Brackett series'] },
-          { label: 'A line at 1875 nm in hydrogen belongs to the', options: ['Lyman series', 'Balmer series', 'Paschen series', 'Brackett series'] },
-          { label: 'The shortest possible Balmer wavelength corresponds to $n_i \\to n_f =$', options: ['$2 \\to 1$', '$\\infty \\to 2$', '$3 \\to 2$', '$\\infty \\to 1$'] }
+          { label: 'Absorbing a microwave photon changes a molecule\'s', options: ['rotational energy', 'vibrational energy', 'electronic energy', 'nuclear energy'] },
+          { label: 'Absorbing an infrared photon changes a molecule\'s', options: ['rotational energy', 'vibrational energy', 'electronic energy', 'nuclear energy'] },
+          { label: 'The emission lines of a hot gas of atoms come from changes in', options: ['rotational energy', 'vibrational energy', 'electronic energy', 'nuclear energy'] },
+          { label: 'Of the three regions, the photons with the greatest energy are', options: ['microwave', 'infrared', 'ultraviolet', 'all equal'] }
         ],
-        correctAnswers: ['Lyman series', 'Balmer series', 'Paschen series', '$\\infty \\to 2$'],
-        hint1: 'Lyman = UV (ends at $n=1$).',
-        hint2: '656 nm is red light.',
-        hint3: '1875 nm is infrared.',
-        explanation: 'Lines below 200 nm → Lyman (UV); 400–700 nm → Balmer (visible); above ~800 nm → Paschen (IR). The Balmer series limit ($n_i \\to \\infty$, $n_f = 2$) is at $\\lambda = 365$ nm — the shortest Balmer wavelength.'
+        correctAnswers: ['rotational energy', 'vibrational energy', 'electronic energy', 'ultraviolet'],
+        hint1: 'Microwaves have the lowest energy of the three regions.',
+        hint2: 'Infrared makes bonds stretch and bend.',
+        hint3: 'Line spectra of atoms come from electrons changing levels.',
+        explanation: 'Microwave → rotational, infrared → vibrational, UV/visible → electronic. Ultraviolet photons have the shortest wavelengths and the highest energies of the three regions.'
       }
     },
     {
       id: 'as4-exit',
       type: 'multiple-choice' as const,
-      content: `**Exit Quiz — Rydberg & Series** ✅`,
+      content: `**Exit Quiz — Diagrams & Regions** ✅`,
       exercise: {
         questions: [
           {
-            question: 'A photon of wavelength 410 nm is emitted by hydrogen. The transition is most likely:',
-            options: ['$n=2 \\to n=1$', '$n=6 \\to n=2$', '$n=4 \\to n=3$', '$n=3 \\to n=1$'],
+            question: 'A photon with wavelength 331 nm is emitted by atom X. Which transition produced it?',
+            options: ['$4 \\to 2$', '$3 \\to 1$', '$2 \\to 1$', '$4 \\to 3$'],
             correctAnswer: 1,
-            explanation: '410 nm is the violet H-δ line in the Balmer series, corresponding to $n=6 \\to n=2$.'
+            explanation: '$E = hc/\\lambda = (6.626 \\times 10^{-34})(3.00 \\times 10^{8})/(3.31 \\times 10^{-7}) = 6.00 \\times 10^{-19}$ J, which matches the gap between levels 3 and 1. The $4 \\to 2$ and $2 \\to 1$ gaps give visible photons, and $4 \\to 3$ gives an infrared photon.'
           },
           {
-            question: 'How does the $He^{+}$ ion compare to hydrogen in its line spectrum?',
+            question: 'Why does water absorb microwaves but a beam of microwaves cannot produce a line in water\'s visible emission spectrum?',
             options: [
-              'Identical lines at hydrogen\'s wavelengths',
-              'Same pattern at wavelengths one-half as long',
-              'Same pattern at wavelengths one-fourth as long',
-              'Same pattern at wavelengths four times longer'
+              'Microwave photons are too energetic for electrons to absorb',
+              'They carry only enough energy to change rotational levels',
+              'Water molecules have no quantized energy levels',
+              'Visible light cannot travel through water vapor'
             ],
-            correctAnswer: 2,
-            explanation: '$He^{+}$ is a "hydrogenic" one-electron ion. Its energies scale as $Z^2 = 4$ (not $Z = 2$), so transitions release 4× the energy and lines appear at 1/4 the wavelength.'
+            correctAnswer: 1,
+            explanation: 'Microwave photons carry very little energy, enough only to change the rotational energy of water molecules. Visible emission requires electrons moving between widely spaced electronic levels, which needs far more energy. Molecular energy levels are quantized for every type of motion.'
           }
         ]
       }

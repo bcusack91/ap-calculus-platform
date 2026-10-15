@@ -253,15 +253,15 @@ export const apChemQuestionPool: APChemQuestion[] = [
     formSet: 'B',
   },
   {
-    question: 'Adding a solute to a solvent will __________ the vapor pressure and __________ the boiling point.',
+    question: 'Which pair of liquids is most likely to be miscible (mix in all proportions)?',
     options: [
-      'increase; increase',
-      'decrease; increase',
-      'increase; decrease',
-      'decrease; decrease',
+      'Hexane, $C_{6}H_{14}$, and water',
+      'Ethanol, $C_{2}H_{5}OH$, and water',
+      'Octane, $C_{8}H_{18}$, and water',
+      'Carbon tetrachloride, $CCl_{4}$, and water',
     ],
     correctAnswer: 1,
-    explanation: 'A nonvolatile solute lowers vapor pressure (Raoult\'s Law) and therefore raises the boiling point (boiling point elevation—a colligative property).',
+    explanation: 'Ethanol and water both form hydrogen bonds, so their intermolecular interactions are similar and they mix in all proportions (CED 3.10). Hexane, octane and carbon tetrachloride are nonpolar and interact with water only through weak dispersion forces, so they separate into layers.',
     difficulty: 'medium',
     domain: 'imf',
     topicSlug: 'solutions-solubility',
@@ -272,10 +272,15 @@ export const apChemQuestionPool: APChemQuestion[] = [
   //  4. CHEMICAL REACTIONS & STOICHIOMETRY
   // ══════════════════════════════════════════════════════════════════
   {
-    question: 'In the reaction $2H_{2}O_{2}$ → $2H_{2}O$ + $O_{2}$, what type of reaction is this?',
-    options: ['Synthesis', 'Decomposition', 'Single replacement', 'Combustion'],
+    question: 'The reaction $2H_{2}O_{2}$ → $2H_{2}O$ + $O_{2}$ is best classified as:',
+    options: [
+      'Acid-base, since a proton moves between molecules',
+      'Redox, since O changes oxidation number',
+      'Precipitation, since an insoluble product forms',
+      'Acid-base, since water is one of the products',
+    ],
     correctAnswer: 1,
-    explanation: 'One reactant $(H_{2}O_{2})$ breaks down into two products $(H_{2}O and O_{2})$ — the definition of a decomposition reaction.',
+    explanation: 'In $H_{2}O_{2}$ oxygen has an oxidation number of −1; it becomes −2 in $H_{2}O$ and 0 in $O_{2}$, so oxygen is both reduced and oxidized and the reaction is redox (CED 4.7.A.2). No proton is transferred and no solid forms.',
     difficulty: 'easy',
     domain: 'reactions',
     topicSlug: 'reaction-types',
@@ -313,15 +318,15 @@ export const apChemQuestionPool: APChemQuestion[] = [
   },
   // Form B variants
   {
-    question: 'Which of the following is a double-displacement (metathesis) reaction?',
+    question: 'Which of the following is a precipitation reaction?',
     options: [
-      'Fe + S → FeS',
-      '$CaCO_{3}$ → CaO + $CO_{2}$',
-      '$AgNO_{3}$ + NaCl → AgCl + $NaNO_{3}$',
-      'C + $O_{2}$ → $CO_{2}$',
+      'Fe(s) + S(s) → FeS(s)',
+      '$CaCO_{3}(s)$ → CaO(s) + $CO_{2}(g)$',
+      '$AgNO_{3}(aq)$ + NaCl(aq) → AgCl(s) + $NaNO_{3}(aq)$',
+      'C(s) + $O_{2}(g)$ → $CO_{2}(g)$',
     ],
     correctAnswer: 2,
-    explanation: 'In a double-displacement reaction two ionic compounds exchange partners: $AgNO_{3}$ + NaCl → AgCl + $NaNO_{3}$. The others are synthesis, decomposition, and combustion.',
+    explanation: 'Mixing two aqueous ionic solutions produces solid AgCl, the defining feature of a precipitation reaction (CED 4.7.A.5). Iron with sulfur and carbon with oxygen are redox reactions, and heating $CaCO_{3}$ releases a gas rather than forming a solid from solution.',
     difficulty: 'easy',
     domain: 'reactions',
     topicSlug: 'reaction-types',
@@ -338,10 +343,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
     formSet: 'B',
   },
   {
-    question: 'Which of the following compounds is soluble in water according to solubility rules?',
+    question: 'Which of the following compounds must be soluble in water?',
     options: ['AgCl', '$BaSO_{4}$', '$Ca(NO_{3})_{2}$', 'PbS'],
     correctAnswer: 2,
-    explanation: 'All nitrates $(NO_{3}^{-})$ are soluble. $Ca(NO_{3})_{2}$ is soluble. AgCl, $BaSO_{4}$, and PbS are insoluble (common exceptions).',
+    explanation: 'All nitrate salts are soluble in water (CED 4.7.A.5), so $Ca(NO_{3})_{2}$ dissolves. AgCl, $BaSO_{4}$ and PbS are only sparingly soluble; the AP exam expects you to know the sodium, potassium, ammonium and nitrate rule, which is enough to pick the nitrate here.',
     difficulty: 'medium',
     domain: 'reactions',
     topicSlug: 'net-ionic-equations',
@@ -384,10 +389,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
   {
     question: 'How does a catalyst affect a chemical reaction?',
     options: [
-      'It shifts the equilibrium to the right',
-      'It lowers the activation energy for both forward and reverse reactions',
-      'It increases the activation energy',
-      'It changes the enthalpy of the reaction',
+      'It shifts the equilibrium toward the products',
+      'It lowers $E_a$ for both directions',
+      'It raises the activation energy of the reverse step',
+      'It makes the overall reaction more exothermic',
     ],
     correctAnswer: 1,
     explanation: 'A catalyst provides an alternative reaction pathway with lower activation energy — for BOTH forward and reverse reactions — speeding up the rate without altering ΔH or the equilibrium position.',
@@ -541,7 +546,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
       'Depends on the type of gas',
     ],
     correctAnswer: 2,
-    explanation: 'Compression at constant temperature reduces the volume available to gas molecules, decreasing the number of microstates → ΔS < 0.',
+    explanation: 'Compression at constant temperature reduces the volume available to gas molecules, so the particles and their energy are less dispersed → ΔS < 0.',
     difficulty: 'easy',
     domain: 'thermodynamics',
     topicSlug: 'entropy-second-law',
@@ -551,7 +556,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
     question: 'Which of the following has the highest molar entropy at 25°C?',
     options: ['$H_{2}O(s)$', '$H_{2}O(l)$', '$H_{2}O(g)$', 'All have equal entropy'],
     correctAnswer: 2,
-    explanation: 'Gases have far more microstates (ways to arrange particles) than liquids or solids. S°: $H_{2}O(g)$ >> $H_{2}O(l)$ > $H_{2}O(s)$.',
+    explanation: 'Gas particles are far more dispersed, and their energy spread over far more motions, than in liquids or solids. S°: $H_{2}O(g)$ >> $H_{2}O(l)$ > $H_{2}O(s)$.',
     difficulty: 'easy',
     domain: 'thermodynamics',
     topicSlug: 'entropy-second-law',
@@ -561,7 +566,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
     question: 'For the reaction 2 $NO_{2}(g)$ → $N_{2}O_{4}(g)$, what is the sign of ΔS?',
     options: ['Positive', 'Negative', 'Zero', 'Cannot be determined'],
     correctAnswer: 1,
-    explanation: 'Two moles of gas combine into one mole of gas. Fewer gas molecules means fewer microstates → ΔS < 0.',
+    explanation: 'Two moles of gas combine into one mole of gas. Fewer gas molecules means less dispersal of matter → ΔS < 0.',
     difficulty: 'medium',
     domain: 'thermodynamics',
     topicSlug: 'entropy-second-law',
@@ -608,15 +613,15 @@ export const apChemQuestionPool: APChemQuestion[] = [
     formSet: 'A',
   },
   {
-    question: 'According to the Second Law, can a process decrease the entropy of a system?',
+    question: 'Which change produces the largest increase in entropy?',
     options: [
-      'No, entropy must always increase',
-      'Yes, as long as the entropy of the surroundings increases by a greater amount',
-      'Yes, but only at absolute zero',
-      'No, unless work is done on the system',
+      '$H_{2}O(l)$ → $H_{2}O(s)$',
+      '$CaCO_{3}(s)$ → CaO(s) + $CO_{2}(g)$',
+      '$N_{2}(g)$ + $3H_{2}(g)$ → $2NH_{3}(g)$',
+      '$Ag^{+}(aq)$ + $Cl^{-}(aq)$ → AgCl(s)',
     ],
     correctAnswer: 1,
-    explanation: 'A system\'s entropy can decrease (e.g., freezing water), but the surroundings must gain even more entropy so that ΔS_universe > 0.',
+    explanation: 'Decomposing a solid into a solid plus a gas creates gas particles, which greatly increases the dispersal of matter and energy, so ΔS > 0 (CED 9.1). Freezing, forming fewer gas molecules, and precipitating a solid from dissolved ions all decrease entropy.',
     difficulty: 'medium',
     domain: 'thermodynamics',
     topicSlug: 'entropy-second-law',
@@ -808,10 +813,15 @@ export const apChemQuestionPool: APChemQuestion[] = [
   },
   // Form B
   {
-    question: 'Which of the following is classified as a Lewis acid?',
-    options: ['$NH_{3}$', '$BF_{3}$', '$OH^{-}$', '$H_{2}O$'],
+    question: 'In the reaction $HCO_{3}^{-}$ + $H_{2}O$ ⇌ $CO_{3}^{2-}$ + $H_{3}O^{+}$, which species acts as the Brønsted-Lowry acid in the forward direction?',
+    options: [
+      '$H_{2}O$',
+      '$HCO_{3}^{-}$',
+      '$CO_{3}^{2-}$',
+      '$OH^{-}$',
+    ],
     correctAnswer: 1,
-    explanation: '$BF_{3}$ has an empty p orbital and accepts electron pairs — it is a Lewis acid. $NH_{3}$ and $OH^{-}$ donate electron pairs (Lewis bases).',
+    explanation: '$HCO_{3}^{-}$ donates a proton to water and becomes $CO_{3}^{2-}$, so it is the acid in the forward direction (CED 4.8.A.1). Water accepts the proton and acts as the base, $CO_{3}^{2-}$ is the conjugate base, and $OH^{-}$ does not appear in the reaction.',
     difficulty: 'medium',
     domain: 'acids-bases',
     topicSlug: 'acid-base-theories-ph',
@@ -842,8 +852,8 @@ export const apChemQuestionPool: APChemQuestion[] = [
     options: [
       'It contains a strong acid that neutralizes added base',
       'It has equal amounts of acid and base by definition',
-      'The weak acid neutralizes added strong base and the conjugate base neutralizes added strong acid',
-      'Buffers only work in neutral pH ranges',
+      'Its acid-base pair consumes added OH⁻ and H⁺',
+      'Buffers only work when the pH is close to neutral',
     ],
     correctAnswer: 2,
     explanation: 'A buffer contains a weak acid (HA) and its conjugate base $(A^{-})$. HA reacts with added $OH^{-}$; $A^{-}$ reacts with added $H^{+}$. This dual reserve keeps pH nearly constant.',
@@ -980,7 +990,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
   },
   {
     question: 'A substance has low viscosity, moderate compressibility, and takes the shape of its container. It is most likely a:',
-    options: ['Solid', 'Liquid', 'Supercritical fluid', 'Gas'],
+    options: ['Solid', 'Liquid', 'Amorphous solid', 'Gas'],
     correctAnswer: 3,
     explanation: 'Gases have low viscosity, are highly compressible (moderate here qualifies as well), and fill their container. The lack of fixed volume points to gas.',
     difficulty: 'medium',
@@ -1064,8 +1074,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
   },
   {
     question: 'Pure solids and pure liquids are excluded from equilibrium expressions because:',
-    options: ['They do not participate in the reaction', 'Their concentrations effectively remain constant', 'They have no effect on K', 'They are always in excess'],
-    correctAnswer: 1,
+    options: ['They do not take part in the reaction at all', 'Their concentrations stay constant', 'They have no effect on the value of K', 'They are always present in large excess'], correctAnswer: 1,
     explanation: 'Pure solids and liquids have constant concentration (activity = 1), so they are incorporated into K and not written in the expression.',
     difficulty: 'medium',
     domain: 'equilibrium',
@@ -1367,10 +1376,15 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // reaction-types
   {
-    question: 'Which reaction type involves one element replacing another in a compound?',
-    options: ['Synthesis', 'Decomposition', 'Single replacement', 'Double replacement'],
+    question: 'The reaction Zn(s) + $Cu^{2+}(aq)$ → $Zn^{2+}(aq)$ + Cu(s) is best classified as:',
+    options: [
+      'Precipitation',
+      'Acid-base',
+      'Redox',
+      'Proton transfer',
+    ],
     correctAnswer: 2,
-    explanation: 'In a single-replacement reaction, a more reactive element displaces a less reactive element from a compound (e.g., Zn + $CuSO_{4}$ → $ZnSO_{4}$ + Cu).',
+    explanation: 'Zinc loses two electrons (0 → +2) and copper(II) ions gain them (+2 → 0), so electrons are transferred and the reaction is redox (CED 4.7.A.2). No solid forms from two solutions and no proton moves, so it is neither precipitation nor acid-base.',
     difficulty: 'easy',
     domain: 'reactions',
     topicSlug: 'reaction-types',
@@ -1392,8 +1406,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
   // net-ionic-equations
   {
     question: 'Spectator ions in a net ionic equation are ions that:',
-    options: ['Form a precipitate', 'Are oxidized or reduced', 'Appear unchanged on both sides and are removed', 'Only exist in the gas phase'],
-    correctAnswer: 2,
+    options: ['Form a precipitate with another ion', 'Are oxidized or reduced in the reaction', 'Appear unchanged on both sides', 'Exist only as dissolved gas molecules'], correctAnswer: 2,
     explanation: 'Spectator ions appear in identical form on both sides of the equation and do not participate in the net reaction.',
     difficulty: 'easy',
     domain: 'reactions',
@@ -1403,10 +1416,15 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // oxidation-reduction-reactions
   {
-    question: 'In a redox reaction, the reducing agent:',
-    options: ['Gains electrons and is reduced', 'Loses electrons and is oxidized', 'Does not change oxidation state', 'Always contains oxygen'],
+    question: 'In a redox reaction, the species that is oxidized:',
+    options: [
+      'Gains electrons, so its oxidation number falls',
+      'Loses electrons, so its oxidation number rises',
+      'Keeps its electrons and its oxidation number',
+      'Gains protons, so its oxidation number rises',
+    ],
     correctAnswer: 1,
-    explanation: 'The reducing agent donates electrons (is oxidized) to reduce another species.',
+    explanation: 'Oxidation is the loss of electrons, which raises the oxidation number of the species oxidized (CED 4.7.A.3). Gaining electrons is reduction, and gaining protons is an acid-base change, not oxidation.',
     difficulty: 'easy',
     domain: 'reactions',
     topicSlug: 'oxidation-reduction-reactions',
@@ -1440,8 +1458,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
   // activation-energy-arrhenius
   {
     question: 'The Arrhenius equation predicts that reaction rate increases with temperature because:',
-    options: ['K increases', 'More molecules exceed the activation energy', 'The equilibrium shifts right', 'Catalysts become more effective'],
-    correctAnswer: 1,
+    options: ['The equilibrium constant increases with T', 'More collisions exceed $E_a$', 'The equilibrium shifts toward the products', 'Catalysts in the mixture become more effective'], correctAnswer: 1,
     explanation: 'Higher temperature gives particles more kinetic energy, increasing the fraction that exceeds Ea and can react.',
     difficulty: 'easy',
     domain: 'kinetics',
@@ -1452,8 +1469,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
   // reaction-mechanisms
   {
     question: 'An intermediate in a reaction mechanism is a species that:',
-    options: ['Appears in the overall balanced equation', 'Is produced in one step and consumed in a later step', 'Speeds up the reaction without being consumed', 'Is the final product'],
-    correctAnswer: 1,
+    options: ['Appears in the overall balanced equation', 'Forms in one step, then is used up', 'Speeds up the reaction without being consumed', 'Is the final product of the last step'], correctAnswer: 1,
     explanation: 'Intermediates are produced in one elementary step and consumed in a subsequent step. They do not appear in the overall equation.',
     difficulty: 'easy',
     domain: 'kinetics',
@@ -1487,10 +1503,15 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // equilibrium-constants-expressions
   {
-    question: 'Kp is related to Kc by the equation Kp = $Kc(RT)^{\\Delta}n$. Δn represents:',
-    options: ['Total moles of gas', 'Moles of products minus moles of reactants (gaseous only)', 'The change in temperature', 'The number of atoms'],
-    correctAnswer: 1,
-    explanation: 'Δn = (moles of gaseous products) − (moles of gaseous reactants) in the balanced equation.',
+    question: 'For $N_{2}O_{4}(g)$ ⇌ $2NO_{2}(g)$, which expression is $K_p$?',
+    options: [
+      '$P_{NO_{2}}^{2}/P_{N_{2}O_{4}}$',
+      '$P_{N_{2}O_{4}}/P_{NO_{2}}^{2}$',
+      '$2P_{NO_{2}}/P_{N_{2}O_{4}}$',
+      '$P_{NO_{2}}/P_{N_{2}O_{4}}$',
+    ],
+    correctAnswer: 0,
+    explanation: '$K_p$ uses the equilibrium partial pressures of the gases, each raised to its coefficient, products over reactants (CED 7.3). The coefficient 2 becomes an exponent, not a multiplier, and the expression is not inverted.',
     difficulty: 'medium',
     domain: 'equilibrium',
     topicSlug: 'equilibrium-constants-expressions',
@@ -1579,7 +1600,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // nernst-equation-concentration
   {
-    question: 'The Nernst equation at 25 °C can be written as E = E° − (0.0592/n) log Q. What does n represent?',
+    question: 'In the Nernst equation, E = E° − (RT/nF) ln Q, what does n represent?',
     options: ['Number of moles of product', 'Number of moles of electrons transferred', 'Number of electrodes', 'Avogadro\'s number'],
     correctAnswer: 1,
     explanation: 'n is the number of moles of electrons transferred in the balanced redox reaction.',
@@ -1603,10 +1624,15 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // galvanic-cells-potentials
   {
-    question: 'In a standard galvanic cell notation (Zn|$Zn^{2+}$||$Cu^{2+}$|Cu), the double vertical line represents:',
-    options: ['The wire', 'The anode', 'The salt bridge', 'The cathode'],
-    correctAnswer: 2,
-    explanation: 'The || in cell notation represents the salt bridge (or porous barrier) separating the two half-cells.',
+    question: 'In a Zn/Cu²⁺ galvanic cell with a $KNO_{3}$ salt bridge, which way do the nitrate ions move?',
+    options: [
+      'Into the zinc (anode) half-cell',
+      'Into the copper (cathode) half-cell',
+      'Into the external wire',
+      'Nowhere; they stay in the bridge',
+    ],
+    correctAnswer: 0,
+    explanation: 'Zinc is oxidized at the anode, adding $Zn^{2+}$ to that compartment, so nitrate ions move toward it to keep the solution neutral. Potassium ions move toward the copper cathode, where $Cu^{2+}$ is removed; ions never travel through the wire.',
     difficulty: 'easy',
     domain: 'electrochemistry',
     topicSlug: 'galvanic-cells-potentials',
@@ -1638,15 +1664,15 @@ export const apChemQuestionPool: APChemQuestion[] = [
   { question: 'Electron affinity becomes more negative (more exothermic) going ___ and ___ on the periodic table.', options: ['Left; down', 'Right; up', 'Left; up', 'Right; down'], correctAnswer: 1, explanation: 'Halogens (right, near top) have the most negative electron affinities.', difficulty: 'medium', domain: 'atomic-structure', topicSlug: 'periodic-trends', formSet: 'both' },
 
   // ── photoelectron-spectroscopy (batch 2 — had 3, adding 5 → 8) ──
-  { question: 'In a PES spectrum, peaks farther to the left (higher binding energy) correspond to:', options: ['Valence electrons', 'Core electrons closer to the nucleus', 'Free electrons', 'Photons'], correctAnswer: 1, explanation: 'Higher BE = more tightly bound = closer to the nucleus.', difficulty: 'easy', domain: 'atomic-structure', topicSlug: 'photoelectron-spectroscopy', formSet: 'A' },
-  { question: 'The height of a PES peak tells you:', options: ['Binding energy', 'Number of electrons in that subshell', 'Atomic mass', 'Wavelength of light'], correctAnswer: 1, explanation: 'Peak height ∝ number of electrons with that binding energy.', difficulty: 'easy', domain: 'atomic-structure', topicSlug: 'photoelectron-spectroscopy', formSet: 'B' },
+  { question: 'In a PES spectrum, peaks farther to the left (higher binding energy) correspond to:', options: ['Valence electrons in the outermost shell', 'Core electrons closer to the nucleus', 'Electrons that are most strongly shielded', 'Electrons in the highest-energy subshell'], correctAnswer: 1, explanation: 'Higher BE = more tightly bound = closer to the nucleus.', difficulty: 'easy', domain: 'atomic-structure', topicSlug: 'photoelectron-spectroscopy', formSet: 'A' },
+  { question: 'The height of a PES peak tells you:', options: ['Binding energy of those electrons', 'Relative number of electrons', 'Average atomic mass of the sample', 'Wavelength of the light that was used'], correctAnswer: 1, explanation: 'Peak height ∝ number of electrons with that binding energy.', difficulty: 'easy', domain: 'atomic-structure', topicSlug: 'photoelectron-spectroscopy', formSet: 'B' },
   { question: 'An element shows PES peaks at very high BE (2 electrons), moderate BE (2), and low BE (3). It is likely:', options: ['Nitrogen', 'Oxygen', 'Carbon', 'Boron'], correctAnswer: 0, explanation: '$1s^{2}$ $2s^{2}$ $2p^{3}$ = 7 electrons → Nitrogen.', difficulty: 'medium', domain: 'atomic-structure', topicSlug: 'photoelectron-spectroscopy', formSet: 'A' },
   { question: 'PES relies on the ___ effect.', options: ['Compton', 'Photoelectric', 'Doppler', 'Zeeman'], correctAnswer: 1, explanation: 'Photons eject electrons; KE measured to deduce binding energy.', difficulty: 'easy', domain: 'atomic-structure', topicSlug: 'photoelectron-spectroscopy', formSet: 'B' },
   { question: 'In photoelectron spectra of neutral carbon and neutral nitrogen atoms, the 1s peak of nitrogen appears at:', options: ['A lower binding energy, because nitrogen atoms are larger', 'The same binding energy, because both peaks correspond to two electrons', 'Zero binding energy, because 1s electrons are core electrons', 'A higher binding energy, because nitrogen has a greater nuclear charge'], correctAnswer: 3, explanation: 'Nitrogen has one more proton than carbon, so its 1s electrons experience a stronger Coulombic attraction to the nucleus and require more energy to remove. The 1s peak shifts to higher binding energy.', difficulty: 'hard', domain: 'atomic-structure', topicSlug: 'photoelectron-spectroscopy', formSet: 'both' },
 
   // ── types-of-chemical-bonds (batch 2 — had 3, adding 5 → 8) ────
   { question: 'An ionic bond forms between:', options: ['Two nonmetals', 'A metal and a nonmetal', 'Two metals', 'Two noble gases'], correctAnswer: 1, explanation: 'Large electronegativity difference → electron transfer → ionic bond.', difficulty: 'easy', domain: 'bonding', topicSlug: 'types-of-chemical-bonds', formSet: 'A' },
-  { question: 'A metallic bond is best described as:', options: ['Shared electron pair between two atoms', 'A sea of delocalized electrons shared among metal cations', 'Transfer of electrons from one atom to another', 'Weak intermolecular force'], correctAnswer: 1, explanation: 'Metal atoms release valence electrons into a delocalized "sea."', difficulty: 'easy', domain: 'bonding', topicSlug: 'types-of-chemical-bonds', formSet: 'B' },
+  { question: 'A metallic bond is best described as:', options: ['A shared electron pair between two atoms', 'Cations in a sea of mobile electrons', 'Electrons transferred from one atom to another', 'A weak attraction between molecular dipoles'], correctAnswer: 1, explanation: 'Metal atoms release valence electrons into a delocalized "sea."', difficulty: 'easy', domain: 'bonding', topicSlug: 'types-of-chemical-bonds', formSet: 'B' },
   { question: 'In a polar covalent bond, electrons are:', options: ['Transferred completely', 'Shared equally', 'Shared unequally', 'Not involved'], correctAnswer: 2, explanation: 'Moderate ΔEN → unequal sharing → partial charges.', difficulty: 'easy', domain: 'bonding', topicSlug: 'types-of-chemical-bonds', formSet: 'A' },
   { question: 'Bond strength generally ___ as bond order increases.', options: ['Decreases', 'Increases', 'Stays the same', 'Becomes zero'], correctAnswer: 1, explanation: 'Triple > double > single bond strength.', difficulty: 'easy', domain: 'bonding', topicSlug: 'types-of-chemical-bonds', formSet: 'B' },
   { question: 'Which compound is most likely ionic?', options: ['$CO_{2}$', '$H_{2}O$', 'NaCl', '$CH_{4}$'], correctAnswer: 2, explanation: 'Na (metal) + Cl (nonmetal) → large ΔEN → ionic.', difficulty: 'easy', domain: 'bonding', topicSlug: 'types-of-chemical-bonds', formSet: 'both' },
@@ -1655,7 +1681,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
   { question: 'Formal charge = valence electrons − (lone pair $e^{-}$ + ½ bonding $e^{-}$). For the N in $NH_{3}$:', options: ['0', '+1', '−1', '+2'], correctAnswer: 0, explanation: 'N has 5 valence $e^{-}$. In $NH_{3}$: 2 lone pair + ½(6 bonding) = 2 + 3 = 5. FC = 5 − 5 = 0.', difficulty: 'medium', domain: 'bonding', topicSlug: 'lewis-structures-formal-charge', formSet: 'A' },
   { question: 'The best Lewis structure minimizes:', options: ['The number of bonds', 'Formal charges on all atoms', 'Lone pairs', 'Electronegativity differences'], correctAnswer: 1, explanation: 'Lower formal charges → more stable → preferred structure.', difficulty: 'easy', domain: 'bonding', topicSlug: 'lewis-structures-formal-charge', formSet: 'B' },
   { question: 'How many lone pairs are on the O in $H_{2}O$?', options: ['0', '1', '2', '3'], correctAnswer: 2, explanation: 'O has 6 valence $e^{-}$; 2 used in bonds → 4 remaining = 2 lone pairs.', difficulty: 'easy', domain: 'bonding', topicSlug: 'lewis-structures-formal-charge', formSet: 'A' },
-  { question: 'A resonance structure is needed when:', options: ['There is only one valid Lewis structure', 'Multiple equivalent structures can be drawn', 'The molecule has no bonds', 'Formal charges are all zero'], correctAnswer: 1, explanation: 'Resonance = multiple structures differing only in electron placement.', difficulty: 'easy', domain: 'bonding', topicSlug: 'lewis-structures-formal-charge', formSet: 'B' },
+  { question: 'A resonance structure is needed when:', options: ['There is only one valid Lewis structure', 'Equivalent structures can be drawn', 'The molecule has only single bonds to hydrogen', 'Every atom already has a zero formal charge'], correctAnswer: 1, explanation: 'Resonance = multiple structures differing only in electron placement.', difficulty: 'easy', domain: 'bonding', topicSlug: 'lewis-structures-formal-charge', formSet: 'B' },
   { question: 'Octet exceptions include molecules with:', options: ['Only single bonds', 'Only noble-gas atoms', 'Expanded octets (elements in period 3+)', 'Only hydrogen'], correctAnswer: 2, explanation: 'Elements in period 3+ can use d orbitals → >8 electrons around central atom.', difficulty: 'medium', domain: 'bonding', topicSlug: 'lewis-structures-formal-charge', formSet: 'both' },
 
   // ── vsepr-molecular-geometry (batch 2 — had 3, adding 5 → 8) ───
@@ -1694,11 +1720,11 @@ export const apChemQuestionPool: APChemQuestion[] = [
   { question: 'Increasing temperature ___ the solubility of most solid solutes.', options: ['Decreases', 'Increases', 'Does not affect', 'Eliminates'], correctAnswer: 1, explanation: 'Most solid dissolution is endothermic → heat favors dissolving (Le Chatelier).', difficulty: 'easy', domain: 'imf', topicSlug: 'solutions-solubility', formSet: 'both' },
 
   // ── reaction-types (batch 2 — had 3, adding 5 → 8) ─────────────
-  { question: 'A synthesis reaction has the form:', options: ['AB → A + B', 'A + B → AB', 'AB + CD → AD + CB', 'A + BC → AC + B'], correctAnswer: 1, explanation: 'Synthesis (combination): two or more reactants → one product.', difficulty: 'easy', domain: 'reactions', topicSlug: 'reaction-types', formSet: 'A' },
+  { question: 'Which observation, by itself, best shows that mixing two clear aqueous solutions caused a precipitation reaction?', options: ['The mixture gets warmer', 'A solid forms and settles', 'Bubbles of gas are released', 'The total volume increases'], correctAnswer: 1, explanation: 'A precipitation reaction produces an insoluble or sparingly soluble ionic solid from ions in solution (CED 4.7.A.5), so a solid settling out is the direct evidence. Temperature changes and gas formation can accompany many reaction types, and volume changes are not evidence of a precipitate.', difficulty: 'easy', domain: 'reactions', topicSlug: 'reaction-types', formSet: 'A' },
   { question: 'Combustion of a hydrocarbon always produces:', options: ['$O_{2}$ and $H_{2}$', '$CO_{2}$ and $H_{2}O$', 'CO and $H_{2}O$', 'C and $H_{2}O$'], correctAnswer: 1, explanation: '$C_xH_y + O_2 \\to CO_2 + H_2O$ (complete combustion).', difficulty: 'easy', domain: 'reactions', topicSlug: 'reaction-types', formSet: 'B' },
-  { question: 'Zn + $CuSO_{4}$ → $ZnSO_{4}$ + Cu is a ___ reaction.', options: ['Decomposition', 'Synthesis', 'Single replacement', 'Double replacement'], correctAnswer: 2, explanation: 'Zn replaces Cu in the compound → single replacement.', difficulty: 'easy', domain: 'reactions', topicSlug: 'reaction-types', formSet: 'A' },
-  { question: '$AgNO_{3}$ + NaCl → AgCl↓ + $NaNO_{3}$ is a ___ reaction.', options: ['Single replacement', 'Double replacement (metathesis)', 'Synthesis', 'Decomposition'], correctAnswer: 1, explanation: 'Cations and anions swap partners → double replacement; AgCl precipitates.', difficulty: 'easy', domain: 'reactions', topicSlug: 'reaction-types', formSet: 'B' },
-  { question: '2 $KClO_{3}$ → 2 KCl + 3 $O_{2}$ is a ___ reaction.', options: ['Synthesis', 'Single replacement', 'Decomposition', 'Combustion'], correctAnswer: 2, explanation: 'One reactant breaks into two or more products → decomposition.', difficulty: 'easy', domain: 'reactions', topicSlug: 'reaction-types', formSet: 'both' },
+  { question: 'Mg(s) + 2HCl(aq) → $MgCl_{2}(aq)$ + $H_{2}(g)$ is best classified as:', options: ['Acid-base, since HCl is an acid', 'Redox, since Mg gives electrons to H⁺', 'Precipitation, since a solid salt forms', 'Acid-base, since a salt and water form'], correctAnswer: 1, explanation: 'Magnesium goes from 0 to +2 and hydrogen from +1 to 0, so electrons move from Mg to $H^{+}$ and the reaction is redox (CED 4.7.A.2). HCl is an acid, but no proton is transferred to a base, no water forms, and $MgCl_{2}$ stays dissolved.', difficulty: 'easy', domain: 'reactions', topicSlug: 'reaction-types', formSet: 'A' },
+  { question: '$AgNO_{3}(aq)$ + NaCl(aq) → AgCl(s) + $NaNO_{3}(aq)$ is best classified as:', options: ['Redox', 'Acid-base', 'Precipitation', 'Gas evolution'], correctAnswer: 2, explanation: 'Two soluble ionic compounds exchange partners and solid AgCl forms, which is a precipitation reaction (CED 4.7.A.5). No oxidation numbers change, so it is not redox, and no proton is transferred or gas produced.', difficulty: 'easy', domain: 'reactions', topicSlug: 'reaction-types', formSet: 'B' },
+  { question: 'Why is 2$KClO_{3}(s)$ → 2KCl(s) + 3$O_{2}(g)$ classified as a redox reaction?', options: ['Cl goes from +5 to −1 while O goes from −2 to 0', 'K goes from +1 to 0 while Cl goes from +5 to −1', 'O goes from −2 to −1 while K goes from 0 to +1', 'A gas forms, and gas formation signals a redox change'], correctAnswer: 0, explanation: 'In $KClO_{3}$, Cl is +5 and O is −2; in the products Cl is −1 (in KCl) and O is 0 (in $O_{2}$). Chlorine is reduced and oxygen is oxidized (CED 4.7.A.4). Potassium stays +1 throughout, and forming a gas does not by itself make a reaction redox.', difficulty: 'easy', domain: 'reactions', topicSlug: 'reaction-types', formSet: 'both' },
 
   // ── stoichiometry-limiting-reactants (batch 2 — had 3, adding 5 → 8)
   { question: 'The limiting reactant determines:', options: ['The color of products', 'The maximum amount of product formed', 'The reaction speed', 'The catalyst needed'], correctAnswer: 1, explanation: 'The limiting reactant runs out first → caps the product yield.', difficulty: 'easy', domain: 'reactions', topicSlug: 'stoichiometry-limiting-reactants', formSet: 'A' },
@@ -1718,12 +1744,12 @@ export const apChemQuestionPool: APChemQuestion[] = [
   { question: 'Oxidation is defined as:', options: ['Gain of electrons', 'Loss of electrons', 'Gain of protons', 'Loss of oxygen'], correctAnswer: 1, explanation: 'OIL RIG: Oxidation Is Loss of electrons.', difficulty: 'easy', domain: 'reactions', topicSlug: 'oxidation-reduction-reactions', formSet: 'A' },
   { question: 'In the reaction 2 Mg + $O_{2}$ → 2 MgO, Mg is:', options: ['Reduced', 'Oxidized', 'A spectator', 'Unchanged'], correctAnswer: 1, explanation: 'Mg goes from 0 to +2 → loses electrons → oxidized.', difficulty: 'easy', domain: 'reactions', topicSlug: 'oxidation-reduction-reactions', formSet: 'B' },
   { question: 'The oxidation state of O in most compounds is:', options: ['+2', '−1', '−2', '0'], correctAnswer: 2, explanation: 'Oxygen is typically −2 (except in peroxides, $OF_{2}$, etc.).', difficulty: 'easy', domain: 'reactions', topicSlug: 'oxidation-reduction-reactions', formSet: 'A' },
-  { question: 'The substance that gets reduced is the:', options: ['Reducing agent', 'Oxidizing agent', 'Catalyst', 'Solvent'], correctAnswer: 1, explanation: 'The oxidizing agent gains electrons (is reduced) and causes oxidation of the other.', difficulty: 'medium', domain: 'reactions', topicSlug: 'oxidation-reduction-reactions', formSet: 'B' },
-  { question: 'A disproportionation reaction is when an element is simultaneously:', options: ['Dissolved and precipitated', 'Oxidized and reduced', 'Heated and cooled', 'Ionized and neutralized'], correctAnswer: 1, explanation: 'Same element acts as both oxidizing and reducing agent.', difficulty: 'hard', domain: 'reactions', topicSlug: 'oxidation-reduction-reactions', formSet: 'both' },
+  { question: 'The species that is reduced in a redox reaction:', options: ['Loses electrons', 'Gains electrons', 'Loses protons', 'Gains protons'], correctAnswer: 1, explanation: 'Reduction is the gain of electrons, which lowers the species\' oxidation number (CED 4.7.A.3). Losing electrons is oxidation, and gaining or losing protons describes acid-base behavior.', difficulty: 'medium', domain: 'reactions', topicSlug: 'oxidation-reduction-reactions', formSet: 'B' },
+  { question: 'In $Cl_{2}$ + 2$OH^{-}$ → $Cl^{-}$ + $OCl^{-}$ + $H_{2}O$, the chlorine atoms are:', options: ['Only oxidized', 'Only reduced', 'Oxidized and reduced', 'Neither oxidized nor reduced'], correctAnswer: 2, explanation: 'Chlorine starts at 0 in $Cl_{2}$. One Cl atom goes to −1 in $Cl^{-}$ (reduced) and the other to +1 in $OCl^{-}$ (oxidized), so chlorine is both oxidized and reduced (CED 4.7.A.4).', difficulty: 'hard', domain: 'reactions', topicSlug: 'oxidation-reduction-reactions', formSet: 'both' },
 
   // ── reaction-rates-and-rate-laws (batch 2 — had 3, adding 5 → 8)
-  { question: 'Increasing temperature speeds up a reaction because:', options: ['It lowers activation energy', 'It increases the fraction of molecules with sufficient energy', 'It changes the products', 'It decreases the rate constant'], correctAnswer: 1, explanation: 'Higher T → more molecules exceed $E_a$ → more effective collisions.', difficulty: 'medium', domain: 'kinetics', topicSlug: 'reaction-rates-and-rate-laws', formSet: 'A' },
-  { question: 'A catalyst speeds up a reaction by:', options: ['Increasing temperature', 'Providing an alternative pathway with lower $E_a$', 'Changing the equilibrium constant', 'Adding more reactant'], correctAnswer: 1, explanation: 'Catalysts lower the activation energy barrier.', difficulty: 'easy', domain: 'kinetics', topicSlug: 'reaction-rates-and-rate-laws', formSet: 'B' },
+  { question: 'Increasing temperature speeds up a reaction because:', options: ['It lowers the activation energy barrier', 'More collisions have enough energy', 'It changes which products are formed', 'It decreases the value of the rate constant'], correctAnswer: 1, explanation: 'Higher T → more molecules exceed $E_a$ → more effective collisions.', difficulty: 'medium', domain: 'kinetics', topicSlug: 'reaction-rates-and-rate-laws', formSet: 'A' },
+  { question: 'A catalyst speeds up a reaction by:', options: ['Increasing the temperature of the mixture', 'Offering a lower-$E_a$ pathway', 'Changing the equilibrium constant', 'Adding more reactant molecules to the flask'], correctAnswer: 1, explanation: 'Catalysts lower the activation energy barrier.', difficulty: 'easy', domain: 'kinetics', topicSlug: 'reaction-rates-and-rate-laws', formSet: 'B' },
   { question: 'For rate = k[A]$ {}^{2}$[B], the overall reaction order is:', options: ['2', '3', '1', '4'], correctAnswer: 1, explanation: 'Sum of exponents: 2 + 1 = 3 (third-order overall).', difficulty: 'easy', domain: 'kinetics', topicSlug: 'reaction-rates-and-rate-laws', formSet: 'A' },
   { question: 'If doubling [A] quadruples the rate, the reaction is ___ order in A.', options: ['Zero', 'First', 'Second', 'Third'], correctAnswer: 2, explanation: '$2^n = 4 \\Rightarrow n = 2$. Second-order in A.', difficulty: 'medium', domain: 'kinetics', topicSlug: 'reaction-rates-and-rate-laws', formSet: 'B' },
   { question: 'Units of a first-order rate constant are:', options: ['M/s', '$s^{-1}$', '$M^{-1}s^{-1}$', '$M^{-2}s^{-1}$'], correctAnswer: 1, explanation: 'rate = k[A]; $k = \\text{rate}/[A] = (M/s)/M = s^{-1}$.', difficulty: 'medium', domain: 'kinetics', topicSlug: 'reaction-rates-and-rate-laws', formSet: 'both' },
@@ -1737,8 +1763,8 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // ── activation-energy-arrhenius (batch 2 — had 3, adding 5 → 8) ─
   { question: 'The Arrhenius equation: $k = Ae^{-E_a/RT}$. Increasing $T$ ___ $k$.', options: ['Decreases', 'Increases', 'Doesn\'t change', 'Doubles exactly'], correctAnswer: 1, explanation: 'Higher $T$ → less negative exponent → larger $k$.', difficulty: 'easy', domain: 'kinetics', topicSlug: 'activation-energy-arrhenius', formSet: 'A' },
-  { question: 'A plot of $\\ln k$ vs. $1/T$ gives a straight line with slope:', options: ['$-E_a/R$', '$E_a/R$', '$-E_a$', '$R/E_a$'], correctAnswer: 0, explanation: '$\\ln k = \\ln A - E_a/(RT)$; slope = $-E_a/R$.', difficulty: 'medium', domain: 'kinetics', topicSlug: 'activation-energy-arrhenius', formSet: 'B' },
-  { question: 'Activation energy $E_a$ is the minimum energy needed to:', options: ['Break all bonds', 'Start a reaction (form the transition state)', 'Reach equilibrium', 'Change temperature'], correctAnswer: 1, explanation: '$E_a$ = energy barrier from reactants to transition state.', difficulty: 'easy', domain: 'kinetics', topicSlug: 'activation-energy-arrhenius', formSet: 'A' },
+  { question: 'On a reaction energy profile, the activation energy of the forward reaction is the energy difference between:', options: ['The products and the reactants', 'The reactants and the transition state', 'The transition state and the products', 'The intermediate and the final products'], correctAnswer: 1, explanation: 'The activation energy is the energy needed to reach the transition state from the reactants (CED 5.6.A.3). The reactant-to-product difference is the overall energy change, and the gap from the transition state down to the products is the activation energy of the reverse reaction.', difficulty: 'medium', domain: 'kinetics', topicSlug: 'activation-energy-arrhenius', formSet: 'B' },
+  { question: 'Activation energy $E_a$ is the minimum energy needed to:', options: ['Break every bond in the reactants', 'Reach the transition state', 'Bring the system to equilibrium', 'Raise the temperature by one degree'], correctAnswer: 1, explanation: '$E_a$ = energy barrier from reactants to transition state.', difficulty: 'easy', domain: 'kinetics', topicSlug: 'activation-energy-arrhenius', formSet: 'A' },
   { question: 'The "A" in the Arrhenius equation is called the:', options: ['Activation energy', 'Rate constant', 'Pre-exponential (frequency) factor', 'Gas constant'], correctAnswer: 2, explanation: '$A$ reflects collision frequency and orientation → pre-exponential factor.', difficulty: 'easy', domain: 'kinetics', topicSlug: 'activation-energy-arrhenius', formSet: 'B' },
   { question: 'A catalyst ___ the activation energy and ___ the equilibrium constant.', options: ['Lowers; increases', 'Lowers; does not change', 'Raises; decreases', 'Raises; increases'], correctAnswer: 1, explanation: 'Catalysts lower $E_a$ but don\'t shift equilibrium (affect forward and reverse equally).', difficulty: 'medium', domain: 'kinetics', topicSlug: 'activation-energy-arrhenius', formSet: 'both' },
 
@@ -1751,7 +1777,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // ── enthalpy-calorimetry (batch 2 — had 3, adding 5 → 8) ───────
   { question: 'An exothermic reaction has $\\Delta H$:', options: ['Positive', 'Zero', 'Negative', 'Undefined'], correctAnswer: 2, explanation: 'Exothermic releases heat → $\\Delta H < 0$.', difficulty: 'easy', domain: 'thermodynamics', topicSlug: 'enthalpy-calorimetry', formSet: 'A' },
-  { question: 'Hess\'s law states that $\\Delta H$ for a reaction is the same regardless of:', options: ['Temperature', 'The pathway taken', 'Pressure', 'The catalyst used'], correctAnswer: 1, explanation: 'Enthalpy is a state function → path-independent.', difficulty: 'easy', domain: 'thermodynamics', topicSlug: 'enthalpy-calorimetry', formSet: 'B' },
+  { question: 'Hess\'s law states that $\\Delta H$ for a reaction is the same regardless of:', options: ['Temperature', 'The pathway taken', 'Pressure', 'The catalyst used'], correctAnswer: 1, explanation: 'ΔH depends only on the initial reactants and final products, so adding the ΔH values of any series of steps that connects them gives the same overall ΔH (CED 6.9).', difficulty: 'easy', domain: 'thermodynamics', topicSlug: 'enthalpy-calorimetry', formSet: 'B' },
   { question: 'In coffee-cup calorimetry, $q = mc\\Delta T$. If 100 g water rises 5°C ($c = 4.18$ J/g°C):', options: ['2090 J', '20.9 J', '209 J', '20900 J'], correctAnswer: 0, explanation: '$q = 100(4.18)(5) = 2090$ J.', difficulty: 'easy', domain: 'thermodynamics', topicSlug: 'enthalpy-calorimetry', formSet: 'A' },
   { question: 'Standard enthalpy of formation ($\\Delta H_f°$) of an element in its standard state is:', options: ['Positive', 'Negative', 'Zero', 'Variable'], correctAnswer: 2, explanation: 'By definition, $\\Delta H_f°$ for elements in standard state = 0.', difficulty: 'easy', domain: 'thermodynamics', topicSlug: 'enthalpy-calorimetry', formSet: 'B' },
   { question: 'Bond breaking is ___ and bond forming is ___.', options: ['Exothermic; endothermic', 'Endothermic; exothermic', 'Both exothermic', 'Both endothermic'], correctAnswer: 1, explanation: 'Breaking bonds requires energy (endo); forming bonds releases energy (exo).', difficulty: 'easy', domain: 'thermodynamics', topicSlug: 'enthalpy-calorimetry', formSet: 'both' },
@@ -1766,7 +1792,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
   // ── equilibrium-constants-expressions (batch 2 — had 4, adding 4 → 8)
   { question: 'Pure solids and liquids ___ in the equilibrium expression.', options: ['Appear as their concentration', 'Are excluded', 'Appear as their mass', 'Appear as 1'], correctAnswer: 1, explanation: 'Activities of pure solids/liquids = 1 → omitted from $K$ expression.', difficulty: 'easy', domain: 'equilibrium', topicSlug: 'equilibrium-constants-expressions', formSet: 'A' },
   { question: 'If $K \\gg 1$, the equilibrium lies:', options: ['Far to the left (reactants)', 'Far to the right (products)', 'Exactly balanced', 'Undefined'], correctAnswer: 1, explanation: 'Large $K$ → products dominate at equilibrium.', difficulty: 'easy', domain: 'equilibrium', topicSlug: 'equilibrium-constants-expressions', formSet: 'B' },
-  { question: '$K_p$ and $K_c$ are related by:', options: ['$K_p = K_c (RT)^{\\Delta n}$', '$K_p = K_c$', '$K_p = K_c + RT$', '$K_p = K_c / RT$'], correctAnswer: 0, explanation: '$\\Delta n$ = moles gaseous products − moles gaseous reactants.', difficulty: 'medium', domain: 'equilibrium', topicSlug: 'equilibrium-constants-expressions', formSet: 'A' },
+  { question: 'For $CaCO_{3}(s)$ ⇌ CaO(s) + $CO_{2}(g)$, the equilibrium expression $K_p$ is:', options: ['$P_{CO_{2}}$', '$P_{CO_{2}}$ × [CaO]/[$CaCO_{3}$]', '1/$P_{CO_{2}}$', '[CaO]$P_{CO_{2}}$'], correctAnswer: 0, explanation: 'Pure solids are left out of equilibrium expressions, so only the partial pressure of $CO_{2}$ remains: $K_p = P_{CO_{2}}$ (CED 7.3.A.2). Including the solids or inverting the expression are common errors.', difficulty: 'medium', domain: 'equilibrium', topicSlug: 'equilibrium-constants-expressions', formSet: 'A' },
   { question: 'Changing temperature ___ the value of $K$.', options: ['Never changes', 'Always increases', 'Can change', 'Has no effect on'], correctAnswer: 2, explanation: '$K$ depends on $T$; endothermic: $K$ increases with $T$; exothermic: $K$ decreases.', difficulty: 'medium', domain: 'equilibrium', topicSlug: 'equilibrium-constants-expressions', formSet: 'both' },
 
   // ── le-chatelier-equilibrium-shifts (batch 2 — had 4, adding 4 → 8)
@@ -1786,7 +1812,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
   { question: 'The common-ion effect ___ the solubility of a salt.', options: ['Increases', 'Decreases', 'Does not affect', 'Doubles'], correctAnswer: 1, explanation: 'Adding a common ion shifts dissolution equilibrium left → less dissolves.', difficulty: 'easy', domain: 'equilibrium', topicSlug: 'solubility-ksp', formSet: 'B' },
   { question: 'If $Q_{sp} > K_{sp}$:', options: ['The solution is unsaturated', 'Precipitation occurs', 'More solid dissolves', 'The reaction shifts right'], correctAnswer: 1, explanation: '$Q > K$ → supersaturated → system shifts left → precipitation.', difficulty: 'medium', domain: 'equilibrium', topicSlug: 'solubility-ksp', formSet: 'A' },
   { question: '$K_{sp}$ of $PbI_2$ is $[Pb^{2+}][I^-]^2$. If solubility = $s$, then $K_{sp} =$', options: ['$s^2$', '$4s^3$', '$s^3$', '$2s^3$'], correctAnswer: 1, explanation: '$[Pb^{2+}] = s$, $[I^-] = 2s$; $K_{sp} = s(2s)^2 = 4s^3$.', difficulty: 'medium', domain: 'equilibrium', topicSlug: 'solubility-ksp', formSet: 'B' },
-  { question: 'Selective precipitation separates ions by:', options: ['Boiling them', 'Adding a reagent that precipitates one ion but not another', 'Filtering all ions at once', 'Electrolysis'], correctAnswer: 1, explanation: 'Different $K_{sp}$ values → one ion precipitates first when reagent is added slowly.', difficulty: 'medium', domain: 'equilibrium', topicSlug: 'solubility-ksp', formSet: 'both' },
+  { question: 'Selective precipitation separates ions by:', options: ['Boiling off the solvent to concentrate the ions', 'Adding a reagent that precipitates one ion', 'Filtering every ion out of the solution at once', 'Running electrolysis to plate out each metal'], correctAnswer: 1, explanation: 'Different $K_{sp}$ values → one ion precipitates first when reagent is added slowly.', difficulty: 'medium', domain: 'equilibrium', topicSlug: 'solubility-ksp', formSet: 'both' },
 
   // ── reaction-quotient-le-chatelier (batch 2 — had 4, adding 4 → 8)
   { question: 'The reaction quotient $Q$ is calculated the same way as $K$ but using:', options: ['Equilibrium concentrations', 'Current (non-equilibrium) concentrations', 'Standard concentrations', 'Initial pressures only'], correctAnswer: 1, explanation: '$Q$ uses current concentrations; $K$ uses equilibrium concentrations.', difficulty: 'easy', domain: 'equilibrium', topicSlug: 'reaction-quotient-le-chatelier', formSet: 'A' },
@@ -1798,7 +1824,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
   { question: 'A Brønsted-Lowry acid is a:', options: ['Proton acceptor', 'Electron pair donor', 'Proton donor', 'Electron acceptor'], correctAnswer: 2, explanation: 'Brønsted-Lowry: acid = proton $(H^{+})$ donor.', difficulty: 'easy', domain: 'acids-bases', topicSlug: 'acid-base-theories-ph', formSet: 'A' },
   { question: 'What is the pH of a 0.001 M HCl solution?', options: ['1', '3', '7', '11'], correctAnswer: 1, explanation: 'HCl strong acid: $[H^+] = 10^{-3}$ M; $pH = -\\log(10^{-3}) = 3$.', difficulty: 'easy', domain: 'acids-bases', topicSlug: 'acid-base-theories-ph', formSet: 'B' },
   { question: 'pH + pOH =', options: ['7', '10', '14', '1'], correctAnswer: 2, explanation: 'At 25°C: $pH + pOH = 14$.', difficulty: 'easy', domain: 'acids-bases', topicSlug: 'acid-base-theories-ph', formSet: 'A' },
-  { question: 'A Lewis acid is:', options: ['A proton donor', 'An electron-pair acceptor', 'An electron-pair donor', 'A proton acceptor'], correctAnswer: 1, explanation: 'Lewis acid = electron-pair acceptor (e.g., $BF_{3}$, $Al^{3+}$).', difficulty: 'easy', domain: 'acids-bases', topicSlug: 'acid-base-theories-ph', formSet: 'both' },
+  { question: 'The conjugate base of $HSO_{4}^{-}$ is:', options: ['$H_{2}SO_{4}$', '$SO_{4}^{2-}$', '$HSO_{3}^{-}$', '$SO_{3}^{2-}$'], correctAnswer: 1, explanation: 'Removing one proton from $HSO_{4}^{-}$ gives $SO_{4}^{2-}$, its conjugate base (CED 4.8.A.3). Adding a proton gives the conjugate acid, $H_{2}SO_{4}$, and the sulfite species differ by an oxygen atom, not a proton.', difficulty: 'easy', domain: 'acids-bases', topicSlug: 'acid-base-theories-ph', formSet: 'both' },
 
   // ── weak-acids-bases-ka-kb (batch 2 — had 3, adding 5 → 8) ─────
   { question: 'For a weak acid HA, $K_a$ expresses:', options: ['$[H^+][A^-]/[HA]$', '$[HA]/[H^+][A^-]$', '$[H^+]/[HA]$', '$[A^-]/[H^+]$'], correctAnswer: 0, explanation: '$K_a = [H^+][A^-]/[HA]$.', difficulty: 'easy', domain: 'acids-bases', topicSlug: 'weak-acids-bases-ka-kb', formSet: 'A' },
@@ -1825,12 +1851,12 @@ export const apChemQuestionPool: APChemQuestion[] = [
   { question: 'In a galvanic cell, the anode is where:', options: ['Reduction occurs', 'Oxidation occurs', 'No reaction occurs', 'Electrons enter from the wire'], correctAnswer: 1, explanation: 'Anode = oxidation; cathode = reduction. "An Ox, Red Cat."', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'galvanic-cells-potentials', formSet: 'A' },
   { question: 'Standard cell potential $E°_{cell} =$', options: ['$E°_{cathode} + E°_{anode}$', '$E°_{cathode} - E°_{anode}$', '$E°_{anode} - E°_{cathode}$', '$E°_{anode} \\times E°_{cathode}$'], correctAnswer: 1, explanation: '$E°_{cell} = E°_{red}(cathode) - E°_{red}(anode)$.', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'galvanic-cells-potentials', formSet: 'B' },
   { question: 'A positive $E°_{cell}$ value indicates the reaction is:', options: ['Non-spontaneous', 'Spontaneous', 'At equilibrium', 'Impossible'], correctAnswer: 1, explanation: '$\\Delta G° = -nFE°_{cell}$; positive $E°$ → negative $\\Delta G°$ → spontaneous.', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'galvanic-cells-potentials', formSet: 'A' },
-  { question: 'The salt bridge in a galvanic cell:', options: ['Generates electricity', 'Maintains electrical neutrality by allowing ion flow', 'Stores electrons', 'Heats the solution'], correctAnswer: 1, explanation: 'Salt bridge allows ion migration to balance accumulated charge.', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'galvanic-cells-potentials', formSet: 'both' },
+  { question: 'The salt bridge in a galvanic cell:', options: ['Generates the electricity that the cell delivers', 'Lets ions flow to keep charge balanced', 'Stores electrons until the circuit is closed', 'Heats the solutions so the ions move faster'], correctAnswer: 1, explanation: 'Salt bridge allows ion migration to balance accumulated charge.', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'galvanic-cells-potentials', formSet: 'both' },
 
   // ── nernst-equation-concentration (batch 2 — had 3, adding 5 → 8)
   { question: 'The Nernst equation: $E = E° - (RT/nF)\\ln Q$. At equilibrium, $E =$', options: ['$E°$', '1', '0', '$-E°$'], correctAnswer: 2, explanation: 'At equilibrium, $Q = K$ and $E = 0$ (no driving force).', difficulty: 'medium', domain: 'electrochemistry', topicSlug: 'nernst-equation-concentration', formSet: 'A' },
   { question: 'In a galvanic cell, the ion concentrations are adjusted so that Q < 1. Compared with the standard cell potential E°, the cell potential E is:', options: ['Greater than E°', 'Equal to E°', 'Less than E°', 'Exactly 0 V'], correctAnswer: 0, explanation: 'When Q < 1 the system is farther from equilibrium than it is under standard conditions (Q = 1), so the thermodynamic driving force is larger and E > E°. E equals E° only when Q = 1, and E = 0 only when Q = K.', difficulty: 'medium', domain: 'electrochemistry', topicSlug: 'nernst-equation-concentration', formSet: 'B' },
-  { question: 'A concentration cell has $E° = 0$ but produces voltage because:', options: ['Different metals are used', 'Concentrations in the two half-cells differ', 'Temperature is different', 'It has no salt bridge'], correctAnswer: 1, explanation: 'Same electrodes but different [ion] → $Q \\neq 1$ → $E \\neq 0$.', difficulty: 'hard', domain: 'electrochemistry', topicSlug: 'nernst-equation-concentration', formSet: 'A' },
+  { question: 'A concentration cell has $E° = 0$ but produces voltage because:', options: ['The two electrodes are made of different metals', 'Concentrations in the two half-cells differ', 'The two half-cells are at different temperatures', 'The cell has no salt bridge between the beakers'], correctAnswer: 1, explanation: 'Same electrodes but different [ion] → $Q \\neq 1$ → $E \\neq 0$.', difficulty: 'hard', domain: 'electrochemistry', topicSlug: 'nernst-equation-concentration', formSet: 'A' },
   { question: 'As a galvanic cell discharges, $Q$ ___ and $E$ ___.', options: ['Increases; decreases', 'Decreases; increases', 'Both increase', 'Both decrease'], correctAnswer: 0, explanation: 'Products build up → $Q$ increases → $E$ decreases toward 0 at equilibrium.', difficulty: 'medium', domain: 'electrochemistry', topicSlug: 'nernst-equation-concentration', formSet: 'B' },
   { question: '$\\Delta G° = -nFE°$. If $E° = 1.10$ V and $n = 2$: ($F = 96485$ C/mol)', options: ['$-212267$ J', '$-96485$ J', '$-1.10$ J', '$212267$ J'], correctAnswer: 0, explanation: '$\\Delta G° = -2(96485)(1.10) = -212267$ J ≈ $-212$ kJ.', difficulty: 'medium', domain: 'electrochemistry', topicSlug: 'nernst-equation-concentration', formSet: 'both' },
 
@@ -1849,27 +1875,27 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // ── mixtures-separations (batch 2 — had 4, adding 4 → 8) ───────
   { question: 'Distillation separates components based on differences in:', options: ['Density', 'Boiling point', 'Color', 'Mass number'], correctAnswer: 1, explanation: 'Different boiling points → different vapor pressures → separation.', difficulty: 'easy', domain: 'imf', topicSlug: 'mixtures-separations', formSet: 'A' },
-  { question: 'Chromatography separates mixtures based on:', options: ['Melting point', 'Differential affinity for mobile vs. stationary phase', 'Mass number', 'Nuclear charge'], correctAnswer: 1, explanation: 'Components travel at different rates → separation.', difficulty: 'easy', domain: 'imf', topicSlug: 'mixtures-separations', formSet: 'B' },
+  { question: 'Chromatography separates mixtures based on:', options: ['Differences in the melting points of the solids', 'Relative attraction to the two phases', 'Differences in the mass numbers of the atoms', 'Differences in the nuclear charge of the ions'], correctAnswer: 1, explanation: 'Components travel at different rates → separation.', difficulty: 'easy', domain: 'imf', topicSlug: 'mixtures-separations', formSet: 'B' },
   { question: 'A homogeneous mixture is also called a:', options: ['Suspension', 'Colloid', 'Solution', 'Compound'], correctAnswer: 2, explanation: 'Uniform composition throughout → solution (homogeneous mixture).', difficulty: 'easy', domain: 'imf', topicSlug: 'mixtures-separations', formSet: 'A' },
   { question: 'Filtration separates:', options: ['Two liquids', 'A solid from a liquid', 'Two gases', 'Isotopes'], correctAnswer: 1, explanation: 'The solid is trapped by the filter; the liquid passes through.', difficulty: 'easy', domain: 'imf', topicSlug: 'mixtures-separations', formSet: 'both' },
 
   // ── intro-equilibrium (batch 2 — had 4, adding 4 → 8) ──────────
   { question: 'At equilibrium, the concentrations of reactants and products are:', options: ['Zero', 'Equal', 'Constant (but not necessarily equal)', 'Continuously increasing'], correctAnswer: 2, explanation: 'Dynamic equilibrium: forward and reverse rates equal → concentrations constant.', difficulty: 'easy', domain: 'equilibrium', topicSlug: 'intro-equilibrium', formSet: 'A' },
-  { question: 'Dynamic equilibrium means:', options: ['All reactions stop', 'Forward and reverse reactions continue at equal rates', 'Only the forward reaction occurs', 'Concentrations keep changing'], correctAnswer: 1, explanation: 'Both reactions proceed; their rates are equal → no net change.', difficulty: 'easy', domain: 'equilibrium', topicSlug: 'intro-equilibrium', formSet: 'B' },
+  { question: 'Dynamic equilibrium means:', options: ['All reactions stop once equilibrium is reached', 'Both reactions continue at equal rates', 'Only the forward reaction continues to occur', 'Concentrations keep changing at a steady rate'], correctAnswer: 1, explanation: 'Both reactions proceed; their rates are equal → no net change.', difficulty: 'easy', domain: 'equilibrium', topicSlug: 'intro-equilibrium', formSet: 'B' },
   { question: 'Equilibrium can be approached from:', options: ['Only the forward direction', 'Only the reverse direction', 'Either direction', 'Neither direction'], correctAnswer: 2, explanation: 'Same equilibrium state is reached whether you start from reactants or products.', difficulty: 'easy', domain: 'equilibrium', topicSlug: 'intro-equilibrium', formSet: 'A' },
   { question: 'For a reaction at equilibrium, the rate of the forward reaction ___ the rate of the reverse reaction.', options: ['Is greater than', 'Is less than', 'Equals', 'Is unrelated to'], correctAnswer: 2, explanation: 'At equilibrium: $r_{fwd} = r_{rev}$.', difficulty: 'easy', domain: 'equilibrium', topicSlug: 'intro-equilibrium', formSet: 'both' },
 
   // ── spontaneity-free-energy-applications (batch 2 — had 4, adding 4 → 8)
-  { question: 'A reaction with $\\Delta G° < 0$ is described as:', options: ['Endergonic', 'Exergonic', 'At equilibrium', 'Impossible'], correctAnswer: 1, explanation: 'Negative $\\Delta G°$ → exergonic → spontaneous under standard conditions.', difficulty: 'easy', domain: 'thermodynamics', topicSlug: 'spontaneity-free-energy-applications', formSet: 'A' },
-  { question: 'Coupling an endergonic reaction with a strongly exergonic one can make the overall process:', options: ['Impossible', 'Spontaneous', 'Endothermic always', 'Reversed'], correctAnswer: 1, explanation: 'If $\\Delta G_{total} < 0$, the coupled process is spontaneous (e.g., ATP hydrolysis driving biosynthesis).', difficulty: 'medium', domain: 'thermodynamics', topicSlug: 'spontaneity-free-energy-applications', formSet: 'B' },
-  { question: '$\\Delta G = \\Delta G° + RT\\ln Q$. If $Q < K$:', options: ['$\\Delta G > 0$', '$\\Delta G < 0$', '$\\Delta G = 0$', 'Cannot determine'], correctAnswer: 1, explanation: '$Q < K \\Rightarrow \\ln(Q/K) < 0 \\Rightarrow \\Delta G < 0$ → forward spontaneous.', difficulty: 'hard', domain: 'thermodynamics', topicSlug: 'spontaneity-free-energy-applications', formSet: 'A' },
+  { question: 'A reaction with $\\Delta G° < 0$ is described as:', options: ['Thermodynamically unfavored', 'Thermodynamically favored', 'At equilibrium', 'Impossible to run'], correctAnswer: 1, explanation: 'A negative $\\Delta G°$ means the process is thermodynamically favored at standard conditions (CED 9.3). A positive value means unfavored, zero means $K = 1$, and an unfavored process can still be driven by an external energy source.', difficulty: 'easy', domain: 'thermodynamics', topicSlug: 'spontaneity-free-energy-applications', formSet: 'A' },
+  { question: 'Coupling a reaction that has $\\Delta G° > 0$ with a reaction that has a large negative $\\Delta G°$ can make the overall process:', options: ['Impossible', 'Thermodynamically favored', 'Endothermic in every case', 'Reversed in direction'], correctAnswer: 1, explanation: 'When reactions share an intermediate, their $\\Delta G°$ values add; if the sum is negative, the overall process is thermodynamically favored (CED 9.7.A.2), as in reactions coupled to ATP hydrolysis.', difficulty: 'medium', domain: 'thermodynamics', topicSlug: 'spontaneity-free-energy-applications', formSet: 'B' },
+  { question: 'A reaction has $\\Delta G°$ = −5.7 kJ/mol at 298 K. Using $\\Delta G° = -RT\\ln K$, K is closest to:', options: ['0.1', '1', '10', '100'], correctAnswer: 2, explanation: '$\\ln K = -\\Delta G°/RT = 5700/(8.314 \\times 298) \\approx 2.3$, so $K = e^{2.3} \\approx 10$ (CED 9.5). A negative $\\Delta G°$ always gives $K > 1$, which rules out 0.1 and 1.', difficulty: 'hard', domain: 'thermodynamics', topicSlug: 'spontaneity-free-energy-applications', formSet: 'A' },
   { question: 'The entropy of the universe always ___ for a spontaneous process.', options: ['Decreases', 'Stays the same', 'Increases', 'Reaches zero'], correctAnswer: 2, explanation: 'Second Law: $\\Delta S_{universe} = \\Delta S_{sys} + \\Delta S_{surr} > 0$ for spontaneous processes.', difficulty: 'easy', domain: 'thermodynamics', topicSlug: 'spontaneity-free-energy-applications', formSet: 'both' },
 
   // ── galvanic-cells-thermo-applications (batch 2 — had 4, adding 4 → 8)
   { question: '$\\Delta G° = -nFE°$. A larger positive $E°$ means:', options: ['Less spontaneous', 'More spontaneous', 'At equilibrium', 'Non-spontaneous'], correctAnswer: 1, explanation: 'Larger $E°$ → more negative $\\Delta G°$ → more spontaneous.', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'galvanic-cells-thermo-applications', formSet: 'A' },
   { question: 'The relationship $\\ln K = nFE°/(RT)$ shows that a positive $E°$ corresponds to:', options: ['$K < 1$', '$K = 1$', '$K > 1$', '$K = 0$'], correctAnswer: 2, explanation: 'Positive $E°$ → positive exponent → $K > 1$.', difficulty: 'medium', domain: 'electrochemistry', topicSlug: 'galvanic-cells-thermo-applications', formSet: 'B' },
   { question: 'A dead battery has $E =$', options: ['$E°$', 'A very large value', '0', '-1'], correctAnswer: 2, explanation: 'Dead battery: $Q = K$, $E = 0$.', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'galvanic-cells-thermo-applications', formSet: 'A' },
-  { question: 'Fuel cells convert chemical energy to electrical energy and are similar to ___ cells.', options: ['Electrolytic', 'Galvanic', 'Concentration only', 'Nuclear'], correctAnswer: 1, explanation: 'Fuel cells are galvanic cells with continuous fuel supply (e.g., $H_{2}/O_{2}$).', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'galvanic-cells-thermo-applications', formSet: 'both' },
+  { question: 'A cell reaction with n = 1 has $E°$ = +0.10 V. What is $\\Delta G°$? (F = 96,485 C/mol $e^{-}$)', options: ['−9.6 kJ', '+9.6 kJ', '−19 kJ', '−0.96 kJ'], correctAnswer: 0, explanation: '$\\Delta G° = -nFE° = -(1)(96{,}485)(0.10) = -9{,}650$ J ≈ −9.6 kJ (CED 9.9). A positive value drops the minus sign, −19 kJ uses n = 2, and −0.96 kJ is a units slip.', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'galvanic-cells-thermo-applications', formSet: 'both' },
 ]
 
 /* ------------------------------------------------------------------ */

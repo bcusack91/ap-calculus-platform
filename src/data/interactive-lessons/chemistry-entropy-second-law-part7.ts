@@ -33,8 +33,8 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 
 | Concept | Key Equation/Idea |
 |---------|------------------|
-| Boltzmann equation | $S = k_B \\ln W$ |
-| More microstates | Higher entropy |
+| Dispersal of matter | Phase change to a freer state, larger gas volume, more moles of gas → higher S |
+| Dispersal of energy | Higher temperature → broader energy distribution → higher S |
 | Phase order | $S_{\\text{solid}} < S_{\\text{liquid}} \\ll S_{\\text{gas}}$ |
 | Third Law | $S = 0$ for perfect crystal at 0 K |
 
@@ -48,7 +48,6 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 | Qualitative | Count $\\Delta n_{\\text{gas}}$; more gas → higher S |
 | Quantitative | $\\Delta S° = \\sum n S°(\\text{prod}) - \\sum m S°(\\text{react})$ |
 | Phase transition | $\\Delta S = \\Delta H_{\\text{trans}}/T_{\\text{trans}}$ |
-| Surroundings | $\\Delta S_{\\text{surr}} = -\\Delta H_{\\text{sys}}/T$ |
 
 
 ---
@@ -122,17 +121,17 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 
 **1)** At what temperature does a reaction with $\\Delta H = -90$ kJ and $\\Delta S = -300$ J/K become nonspontaneous? (in K)
 
-**2)** Calculate $\\Delta S_{\\text{universe}}$ for an exothermic reaction with $\\Delta H = -200$ kJ, $\\Delta S_{\\text{sys}} = -50$ J/K, at $T = 298$ K. (in J/K, round to nearest whole number)
+**2)** Calculate $\\Delta G°$ at 298 K for a reaction with $\\Delta H° = -200$ kJ and $\\Delta S° = -50$ J/K. (in kJ, to 3 significant figures)
 
-**3)** Is the process in (2) spontaneous? (type "yes" or "no")
+**3)** Is the reaction in (2) thermodynamically favored at 298 K? (type "yes" or "no")
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['300', '621', 'yes'],
+        correctAnswers: ['300', '-185', 'yes'],
         hint1: '$T = \\Delta H/\\Delta S = -90{,}000 / -300$. Above this T, $\\Delta G > 0$.',
-        hint2: '$\\Delta S_{\\text{surr}} = -\\Delta H/T = -(-200{,}000)/298$. Then add $\\Delta S_{\\text{sys}}$.',
-        hint3: 'Is $\\Delta S_{\\text{universe}} > 0$?',
-        explanation: '1) $T = \\Delta H/\\Delta S = -90{,}000/-300 = 300$ K. Above 300 K, the reaction is nonspontaneous. 2) $\\Delta S_{\\text{surr}} = 200{,}000/298 = 671$ J/K. $\\Delta S_{\\text{univ}} = -50 + 671 = 621$ J/K. 3) Yes, $\\Delta S_{\\text{univ}} > 0$.'
+        hint2: '$\\Delta G° = \\Delta H° - T\\Delta S° = -200 - (298)(-0.050)$',
+        hint3: 'Is $\\Delta G° < 0$?',
+        explanation: '1) $T = \\Delta H/\\Delta S = -90{,}000/-300 = 300$ K. Above 300 K, the reaction is nonspontaneous. 2) $\\Delta G° = -200 - (298)(-0.050) = -200 + 14.9 = -185$ kJ. 3) Yes, $\\Delta G° < 0$: the large negative ΔH outweighs the small entropy decrease at 298 K.'
       }
     },
     {
@@ -144,27 +143,27 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
       exercise: {
         dropdowns: [
           {
-            label: 'The Boltzmann constant k_B relates entropy to',
-            options: ['the absolute temperature', 'the pressure of the gas', 'the number of microstates', 'the molar mass of the gas']
+            label: 'Heating a gas at constant volume increases its entropy because the',
+            options: ['gas molecules get larger', 'energy distribution broadens', 'number of moles increases', 'volume increases']
           },
           {
             label: 'A reaction with ΔH < 0 and ΔS < 0 is spontaneous at',
             options: ['all temperatures', 'no temperature', 'low temperatures', 'high temperatures']
           },
           {
-            label: 'The entropy of the universe for any real process',
-            options: ['decreases', 'stays constant', 'increases', 'is undefined']
+            label: 'A process with ΔH > 0 and ΔS > 0 becomes favored at',
+            options: ['low temperatures', 'all temperatures', 'high temperatures', 'no temperature']
           },
           {
             label: 'To calculate ΔG from ΔH and ΔS, temperature must be in',
             options: ['°C', 'K', '°F', 'any unit']
           }
         ],
-        correctAnswers: ['the number of microstates', 'low temperatures', 'increases', 'K'],
-        hint1: '$S = k_B \\ln W$ — W is the number of microstates.',
+        correctAnswers: ['energy distribution broadens', 'low temperatures', 'high temperatures', 'K'],
+        hint1: 'Energy is spread over a wider range of motions.',
         hint2: '$\\Delta G = \\Delta H - T\\Delta S$. At low T, ΔH dominates (and it\'s negative → spontaneous).',
-        hint3: 'The Second Law: $\\Delta S_{\\text{univ}} > 0$ for all spontaneous processes.',
-        explanation: '$S = k_B \\ln W$ connects entropy to microstates. ΔH < 0, ΔS < 0: spontaneous when |ΔH| > T|ΔS| (low T). The Second Law guarantees S_univ always increases. Temperature must be in Kelvin for ΔG calculations.'
+        hint3: 'The favorable entropy term −TΔS grows with temperature.',
+        explanation: 'Heating broadens the distribution of kinetic energies, dispersing energy and raising entropy. ΔH < 0, ΔS < 0: favored when |ΔH| > T|ΔS| (low T). ΔH > 0, ΔS > 0: favored when TΔS > ΔH (high T). Temperature must be in Kelvin for ΔG calculations.'
       }
     },
     {
@@ -189,13 +188,13 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
           {
             question: 'Which statement about entropy is FALSE?',
             options: [
-              'Entropy is a state function',
-              'Entropy can be created but not destroyed',
-              'Entropy is always conserved in the universe',
-              'The entropy of a perfect crystal at 0 K is zero'
+              'Entropy increases when a solid melts',
+              'Entropy increases with temperature',
+              'The standard molar entropy of an element is zero',
+              'Entropy increases when a gas expands at constant T'
             ],
             correctAnswer: 2,
-            explanation: 'Entropy is NOT conserved — it is always created in irreversible (real) processes. This is the essence of the Second Law. Energy is conserved (First Law), but entropy is not.'
+            explanation: 'Unlike ΔH°f, the standard molar entropy S° of an element is positive (for example, $O_{2}(g)$ is 205.1 J/(mol·K)), because the particles have some dispersal of matter and energy at 298 K. The other three statements are true: melting, heating, and expansion all increase dispersal.'
           }
         ]
       }

@@ -10,15 +10,14 @@ export const chemAcidBaseTheoriesPhPart1Data = {
 
 ---
 
-### Three Acid-Base Theories — Where We're Headed
+### Two Acid-Base Models — Where We're Headed
 
-| Theory | Acid Is... | Base Is... | This Part |
-|--------|-----------|-----------|-----------|
+| Model | Acid Is... | Base Is... | This Part |
+|-------|-----------|-----------|-----------|
 | **Arrhenius** | Produces $H^+$ in water | Produces $OH^-$ in water | ✅ Part 1 |
 | Brønsted-Lowry | Proton donor | Proton acceptor | Part 2 |
-| Lewis | Electron pair acceptor | Electron pair donor | Part 3 |
 
-> 🔑 **Why this matters:** The Arrhenius model is the foundation — every acid-base theory that follows builds on these ideas.
+> 🔑 **Why this matters:** The Arrhenius model is the starting point; the AP exam uses the Brønsted-Lowry model (CED 4.8.A), which builds on these ideas. Part 3 then connects acid strength to molecular structure.
 
 ---
 
@@ -59,7 +58,7 @@ The Arrhenius model only works in **aqueous solutions** and cannot explain:
 - Acid-base behavior in non-aqueous solvents
 - Reactions between gases that show acid-base character
 
-> ⚠️ These limitations led to the development of the broader Brønsted-Lowry and Lewis definitions (Parts 2–3).
+> ⚠️ These limitations led to the broader Brønsted-Lowry definition (Part 2), the model used on the AP exam.
       `
     },
     {
@@ -197,7 +196,7 @@ $$\\boxed{H^+(aq) + OH^-(aq) \\rightarrow H_2O(l)}$$
 
 ---
 
-### Double Replacement Pattern
+### Neutralization with a Diprotic Acid
 
 $$H_2SO_4(aq) + 2KOH(aq) \\rightarrow K_2SO_4(aq) + 2H_2O(l)$$
 

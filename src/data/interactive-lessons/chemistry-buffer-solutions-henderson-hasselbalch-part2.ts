@@ -6,107 +6,56 @@ export const chemBufferSolutionsHendersonHasselbalchPart2Data = {
       type: 'text' as const,
       content: `# ⚔️ How Buffers Work — Neutralizing Added Acid or Base
 
-**Part 2 of 7 — Quantitative Buffer Calculations**
+**Part 2 of 7 — The Reactions That Stabilize pH**
 
 ---
 
-### The Two-Step Buffer Method
+### What Happens When Acid or Base Is Added
 
-| Step | What You Do | Tool |
-|------|-------------|------|
-| **1. Stoichiometry** | Neutralization: strong acid/base reacts completely with one buffer component | ICE table (in moles) |
-| **2. Equilibrium** | Calculate new pH from adjusted [HA]/[$A^{-}$] ratio | Henderson-Hasselbalch |
+| Added | Buffer component that reacts | Net ionic equation | Effect on ratio $[A^-]/[HA]$ |
+|-------|-----------------------------|--------------------|------------------------------|
+| Strong acid ($H_3O^+$) | Conjugate base $A^-$ | $A^- + H_3O^+ \\rightarrow HA + H_2O$ | Decreases slightly |
+| Strong base ($OH^-$) | Weak acid $HA$ | $HA + OH^- \\rightarrow A^- + H_2O$ | Increases slightly |
 
-> 🔑 **Why this matters:** This two-step method is how every buffer problem on the AP exam is solved — master it and you can handle any buffer calculation.
+> 🔑 **Why this matters:** These two reactions are the reason a buffer resists pH change (CED 8.8.A.1). AP questions ask you to write them, to show them with particle diagrams, and to explain why the pH barely changes.
 
 ---
 
 ### What You'll Master in Part 2
-- Setting up stoichiometry tables for buffer + strong acid/base
-- Calculating new concentrations after neutralization
-- Applying Henderson-Hasselbalch with the updated ratio`
+- Writing the net ionic equation for the reaction of a buffer with added acid or base
+- Explaining with particle counts why the ratio $[A^-]/[HA]$, and so the pH, changes only slightly
+- Recognizing when a buffer has been overwhelmed`
     },
     {
       id: 'bf2-method',
       type: 'text' as const,
       content: `
-## 📋 The Two-Step Method
+## 📋 The Buffer's Two Defenses
 
-### Step 1: Stoichiometry (Neutralization)
+### Defense 1: The Conjugate Base Neutralizes Added Acid
 
-The added strong acid or base reacts **completely** with one buffer component:
+$$CH_3COO^-(aq) + H_3O^+(aq) \\rightarrow CH_3COOH(aq) + H_2O(l)$$
 
-**Adding $H^+$:** $A^- + H^+ \\rightarrow HA$ (base component consumed)
-
-**Adding $OH^-$:** $HA + OH^- \\rightarrow A^- + H_2O$ (acid component consumed)
-
-Calculate new moles of $HA$ and $A^-$ after reaction.
-
+The added hydronium ions are converted into the weak acid, which ionizes only slightly. The free $H_3O^+$ concentration, and so the pH, barely changes.
 
 ---
 
-### Step 2: Equilibrium (Henderson-Hasselbalch)
+### Defense 2: The Weak Acid Neutralizes Added Base
 
-Use the new amounts to find the new pH:
+$$CH_3COOH(aq) + OH^-(aq) \\rightarrow CH_3COO^-(aq) + H_2O(l)$$
 
-$$pH = pK_a + \\log\\frac{[A^-]}{[HA]}$$
-
-Since both species are in the same volume, you can use **moles** instead of concentrations:
-
-$$pH = pK_a + \\log\\frac{\\text{mol } A^-}{\\text{mol } HA}$$
-      `
-    },
-    {
-      id: 'bf2-worked-example-acid',
-      type: 'text' as const,
-      content: `
-## 🧪 Worked Example: Adding Strong Acid
-
-> **Problem:** A buffer contains 0.15 mol $CH_3COOH$ and 0.15 mol $CH_3COO^-$ in 1.0 L. What is the pH after adding 0.020 mol $HCl$?
->
-> $K_a = 1.8 \\times 10^{-5}$, $pK_a = 4.74$
-
-**Solution:**
-
+The added hydroxide ions are converted into water and the conjugate base, which is only a weak base.
 
 ---
 
-### Before Addition
-
-$pH = 4.74 + \\log(0.15/0.15) = 4.74 + 0 = 4.74$
-
-
----
-
-### Step 1: Stoichiometry
-
-$CH_3COO^- + H^+ \\rightarrow CH_3COOH$
-
-|  | $CH_3COO^-$ | $H^+$ | $CH_3COOH$ |
-|--|------------|-------|-----------|
-| Before | 0.15 mol | 0.020 mol | 0.15 mol |
-| Change | -0.020 | -0.020 | +0.020 |
-| After | 0.13 mol | 0 | 0.17 mol |
-
-
----
-
-### Step 2: Henderson-Hasselbalch
-
-$$pH = 4.74 + \\log\\frac{0.13}{0.17} = 4.74 + \\log(0.765) = 4.74 + (-0.12) = 4.62$$
-
-The pH only dropped from **4.74 to 4.62** — a change of just **0.12 units**!
-
-Without the buffer, adding 0.020 mol $HCl$ to 1.0 L water would give pH = $-\\log(0.020) = 1.70$ — a change of 5.3 pH units!
-
-> 🔑 **Key Comparison:** Buffer changed pH by **0.12 units**. Without the buffer, the same acid would change pH by **5.3 units**. This is why buffers matter!
+> 💡 **Tip:** Both reactions go essentially to completion, because each one is a strong acid or strong base reacting with a weak partner. On a free-response question, show them with a single arrow ($\\rightarrow$).
       `
     },
     {
       id: 'bf2-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Buffer Calculation Concepts** 🎯
+**Buffer Reaction Concepts** 🎯
       `,
       exercise: {
         questions: [
@@ -119,7 +68,18 @@ Without the buffer, adding 0.020 mol $HCl$ to 1.0 L water would give pH = $-\\lo
               '$K_a$'
             ],
             correctAnswer: 1,
-            explanation: '$CH_3COOH + OH^- \\rightarrow CH_3COO^- + H_2O$. The weak acid is consumed and converted to conjugate base, so moles of $CH_3COO^-$ increase.'
+            explanation: '$CH_3COOH + OH^- \\rightarrow CH_3COO^- + H_2O$. The weak acid is consumed and converted to conjugate base, so moles of $CH_3COO^-$ increase. The added hydroxide is used up, and $K_a$ depends only on temperature.'
+          },
+          {
+            question: 'Which net ionic equation shows how an $NH_3/NH_4^+$ buffer responds to added HCl?',
+            options: [
+              '$NH_4^+ + OH^- \\rightarrow NH_3 + H_2O$',
+              '$NH_3 + H_3O^+ \\rightarrow NH_4^+ + H_2O$',
+              '$NH_4^+ + H_3O^+ \\rightarrow NH_5^{2+} + H_2O$',
+              '$NH_3 + Cl^- \\rightarrow NH_3Cl^-$'
+            ],
+            correctAnswer: 1,
+            explanation: 'Added acid is neutralized by the base component of the buffer: ammonia accepts a proton from hydronium to form ammonium. The reaction of $NH_4^+$ with $OH^-$ is the response to added base, ammonium cannot accept another proton, and chloride is a spectator.'
           },
           {
             question: 'In the Henderson-Hasselbalch equation, moles can be used instead of concentrations because:',
@@ -136,74 +96,60 @@ Without the buffer, adding 0.020 mol $HCl$ to 1.0 L water would give pH = $-\\lo
       }
     },
     {
-      id: 'bf2-worked-example-base',
+      id: 'bf2-particle-counts',
       type: 'text' as const,
       content: `
-## 🧪 Worked Example: Adding Strong Base
+## 🔬 Seeing It with Particle Counts
 
-> **Problem:** Same buffer: 0.15 mol $CH_3COOH$ and 0.15 mol $CH_3COO^-$ in 1.0 L. What is the pH after adding 0.030 mol $NaOH$?
+Picture a buffer drawn with **10 HA** particles and **10 $A^-$** particles. The ratio $[A^-]/[HA] = 1$, so pH = p$K_a$.
 
-**Solution:**
+| Change | HA | $A^-$ | Ratio $[A^-]/[HA]$ | Effect on pH |
+|--------|----|-------|--------------------|--------------|
+| Start | 10 | 10 | 1.0 | pH = p$K_a$ |
+| Add 2 $H_3O^+$ | 12 | 8 | 0.67 | Decreases slightly |
+| Add 2 $OH^-$ (to the original) | 8 | 12 | 1.5 | Increases slightly |
 
+Because the buffer holds large amounts of **both** components, a small addition changes the ratio only modestly, so the pH changes only a little. The same small amount of acid added to pure water would have nothing to react with, and the pH would drop sharply (CED 8.9.A.1).
 
----
+> 🔑 **Key Comparison:** In a buffer, added $H_3O^+$ or $OH^-$ is consumed by a buffer component. In unbuffered water, it stays free in solution. That is the whole difference.
 
-### Step 1: Stoichiometry
-
-$CH_3COOH + OH^- \\rightarrow CH_3COO^- + H_2O$
-
-|  | $CH_3COOH$ | $OH^-$ | $CH_3COO^-$ |
-|--|-----------|--------|------------|
-| Before | 0.15 mol | 0.030 mol | 0.15 mol |
-| Change | -0.030 | -0.030 | +0.030 |
-| After | 0.12 mol | 0 | 0.18 mol |
-
-
----
-
-### Step 2: Henderson-Hasselbalch
-
-$$pH = 4.74 + \\log\\frac{0.18}{0.12} = 4.74 + \\log(1.50) = 4.74 + 0.18 = 4.92$$
-
-pH increased from 4.74 to 4.92 — only **0.18 units** despite adding a strong base!
+> ⚠️ **Note:** Calculating the exact new pH after acid or base is added to a buffer is not on the AP exam (CED 8.9 exclusion). You are expected to write the reactions and explain the direction and size of the change.
       `
     },
     {
-      id: 'bf2-calculation-drill',
+      id: 'bf2-particle-drill',
       type: 'input-boxes' as const,
       content: `
-**Buffer Calculation Drill** 🧮
+**Particle-Count Drill** 🧮
 
-A buffer has 0.20 mol $HF$ and 0.20 mol $NaF$ in 1.0 L. ($pK_a = 3.17$)
+A particle diagram of an HF/$F^-$ buffer shows **8 HF** and **8 $F^-$**. Then **3 $H_3O^+$** are added.
 
-**1)** What is the initial pH of this buffer? (2 decimal places)
+**1)** How many $F^-$ particles remain after the reaction?
 
-**2)** After adding 0.050 mol $HCl$, how many moles of $F^-$ remain? (2 decimal places)
+**2)** How many HF particles are present after the reaction?
 
-**3)** What is the pH after adding 0.050 mol $HCl$? (2 decimal places)
+**3)** Does the pH increase or decrease slightly? (type **increase** or **decrease**)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['3.17', '0.15', '2.95'],
-        hint1: '$pH = pK_a + \\log(0.20/0.20) = pK_a + 0$.',
-        hint2: '$F^- + H^+ \\rightarrow HF$: 0.20 - 0.050 = 0.15 mol $F^-$.',
-        hint3: '$pH = 3.17 + \\log(0.15/0.25)$.',
-        explanation: '1) $pH = 3.17 + \\log(1.00) = 3.17$. 2) $F^-$: $0.20 - 0.050 = 0.15$ mol. 3) $HF$: $0.20 + 0.050 = 0.25$ mol. $pH = 3.17 + \\log(0.15/0.25) = 3.17 + (-0.22) = 2.95$.'
+        questions: [{ question: '(1)', answer: '5', acceptableAnswers: ['5'] }, { question: '(2)', answer: '11', acceptableAnswers: ['11'] }, { question: '(3)', answer: 'decrease', acceptableAnswers: ['decrease', 'decreases'] }],
+        hint1: 'Each $H_3O^+$ reacts with one $F^-$.',
+        hint2: 'Each $F^-$ that reacts becomes one HF.',
+        hint3: 'The ratio $[F^-]/[HF]$ goes down.',
+        explanation: '1) $F^- + H_3O^+ \\rightarrow HF + H_2O$: 8 − 3 = 5 $F^-$. 2) 8 + 3 = 11 HF. 3) The ratio $[F^-]/[HF]$ falls from 1 to 5/11, so the pH decreases slightly — the added acid is consumed rather than staying free.'
       }
     },
     {
       id: 'bf2-buffer-destroyed',
       type: 'text' as const,
       content: `
-## 🛡️ When Is a Buffer Destroyed?
+## 🛡️ When Is a Buffer Overwhelmed?
 
-A buffer is **destroyed** when all of one component is consumed:
+A buffer stops working when all of one component is consumed:
 
-- Adding enough $H^+$ to consume all the $A^-$ → no more base component
-- Adding enough $OH^-$ to consume all the $HA$ → no more acid component
+- Adding enough $H_3O^+$ to use up all the $A^-$ → no base component left
+- Adding enough $OH^-$ to use up all the $HA$ → no acid component left
 
-> ⚠️ **AP Exam Alert:** After a buffer is destroyed, you must switch to a simple strong acid/base calculation — Henderson-Hasselbalch no longer applies!
-
+> ⚠️ **AP Exam Alert:** Once one component is gone, any further acid or base stays free in solution and the pH changes sharply. The solution is no longer a buffer, and Henderson-Hasselbalch no longer applies.
 
 ---
 
@@ -211,10 +157,9 @@ A buffer is **destroyed** when all of one component is consumed:
 
 Buffer: 0.15 mol $HA$ + 0.15 mol $A^-$
 
-- Adding 0.15 mol $HCl$ → all $A^-$ consumed → buffer destroyed
-- Adding 0.20 mol $HCl$ → $A^-$ gone, excess $H^+$ remains → no longer a buffer
-
-After destruction, treat as a simple strong acid or base problem!
+- Adding 0.05 mol $HCl$ → 0.10 mol $A^-$ remains → still a buffer
+- Adding 0.15 mol $HCl$ → all $A^-$ consumed → buffer used up
+- Adding 0.20 mol $HCl$ → $A^-$ gone, 0.05 mol excess $H_3O^+$ → strongly acidic, not a buffer
       `
     },
     {
@@ -234,7 +179,7 @@ After destruction, treat as a simple strong acid or base problem!
             options: ['less than $pK_{a}$', 'equal to $pK_{a}$', 'greater than $pK_{a}$', 'equal to $pK_{b}$']
           },
           {
-            label: 'A buffer is destroyed when',
+            label: 'A buffer is overwhelmed when',
             options: ['any strong acid is added', 'one component is used up', 'the pH changes at all', 'it is diluted with water']
           }
         ],
@@ -262,18 +207,18 @@ After destruction, treat as a simple strong acid or base problem!
               'A neutral solution — all acid neutralized'
             ],
             correctAnswer: 2,
-            explanation: '$HA + OH^- \\rightarrow A^- + H_2O$. Only 0.10 mol $HA$ is available, so 0.10 mol $OH^-$ reacts and 0.02 mol $OH^-$ is excess. The buffer is destroyed — treat as an excess strong base problem. With excess $OH^-$ present the solution is basic, not neutral.'
+            explanation: '$HA + OH^- \\rightarrow A^- + H_2O$. Only 0.10 mol $HA$ is available, so 0.10 mol $OH^-$ reacts and 0.02 mol $OH^-$ is left over. The buffer is overwhelmed and the solution is strongly basic, not neutral.'
           },
           {
-            question: 'Adding 0.01 mol $NaOH$ to a buffer with 0.50 mol $HA$ and 0.50 mol $A^-$ changes the $[A^-]/[HA]$ ratio from 1.00 to:',
+            question: 'Equal small amounts of HCl are added to 1.0 L of pure water and to 1.0 L of an acetic acid/acetate buffer. Which statement best explains the different pH changes?',
             options: [
-              '0.50/0.50 = 1.00 (no change)',
-              '0.51/0.49 = 1.04',
-              '0.49/0.51 = 0.96',
-              '0.60/0.40 = 1.50'
+              'Its conjugate base consumes the added $H_3O^+$',
+              'In the buffer, acetic acid molecules absorb the added $H_3O^+$ and become $H_2A^+$',
+              'Water reacts with HCl to form a buffer, so both pH changes are equally small',
+              'The buffer has a higher $K_w$, so its pH cannot change'
             ],
-            correctAnswer: 1,
-            explanation: '$HA + OH^- \\rightarrow A^- + H_2O$. $HA$: $0.50 - 0.01 = 0.49$ mol. $A^-$: $0.50 + 0.01 = 0.51$ mol. Ratio = $0.51/0.49 = 1.04$. Very small change!'
+            correctAnswer: 0,
+            explanation: 'The conjugate base in the buffer neutralizes added acid: $CH_3COO^- + H_3O^+ \\rightarrow CH_3COOH + H_2O$. In pure water nothing consumes the added $H_3O^+$, so the pH drops sharply. Acetic acid does not accept protons, water alone is not a buffer, and $K_w$ is the same in both.'
           }
         ]
       }

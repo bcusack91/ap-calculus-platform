@@ -4,37 +4,35 @@ export const chemElectronConfigPart6Data = {
     {
       id: 'ec6-intro',
       type: 'text' as const,
-      content: `# Part 6: Orbital Diagrams and Quantum Numbers
+      content: `# Part 6: Orbital Diagrams and Coulomb's Law
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — Orbital Diagrams, Unpaired Electrons & Coulomb's Law**
 
 ---
 
-### From Configuration to Quantum Address
+### Three Ways to Look at the Same Electrons
 
-| Level of Detail | What It Tells You | Example (for a 2p electron) |
+| Level of Detail | What It Tells You | Example (oxygen) |
 |----------------|-------------------|----------------------------|
-| Configuration | Which subshells are occupied | $2p^{4}$ |
-| Orbital diagram | Spin of each electron | ↑↓ ↑ ↑ |
-| Quantum numbers | Exact "address" of one electron | n=2, l=1, $m_l$=−1, $m_s$=+½ |
+| Configuration | Which subshells are occupied | $1s^{2}$ $2s^{2}$ $2p^{4}$ |
+| Orbital diagram | How electrons are arranged in each orbital | 2p: ↑↓ ↑ ↑ |
+| Coulomb's law | How strongly each electron is held | 1s held far more tightly than 2p |
 
-> 🔑 **Why this matters:** Quantum numbers give every electron a unique identity — like a GPS coordinate inside the atom.
+> 🔑 **Why this matters:** Orbital diagrams show pairing, and Coulomb's law explains why some electrons are much harder to remove than others. Both ideas feed directly into PES and periodic trends.
 
 ---
 
 ### What You'll Master in Part 6
 - Drawing orbital diagrams with correct Hund's rule application
-- Assigning all four quantum numbers (n, l, $m_l$, $m_s$) to any electron
-- Calculating the number of orbitals in a subshell using 2l + 1`
+- Counting unpaired electrons in atoms and ions
+- Using Coulomb's law to compare how strongly different electrons are held`
     },
     {
       id: 'ec6-orbital-diagrams',
       type: 'text' as const,
       content: `## 📝 Orbital Diagrams (Box-Arrow Notation)
 
-An orbital diagram represents each orbital as a **box** (or line) and each electron as an **arrow**:
-- ↑ represents spin-up ($m_s = +\\frac{1}{2}$)
-- ↓ represents spin-down ($m_s = -\\frac{1}{2}$)
+An orbital diagram represents each orbital as a **box** (or line) and each electron as an **arrow**. The two electrons in one orbital are drawn with opposite arrows (↑↓) to show opposite spins.
 
 **Example: Nitrogen (N, Z = 7)**
 
@@ -74,81 +72,81 @@ How many unpaired electrons does nitrogen (N, Z = 7) have?`,
     {
       id: 'ec6-quantum-numbers',
       type: 'text' as const,
-      content: `## 📌 The Four Quantum Numbers
+      content: `## ⚡ Coulomb's Law Inside the Atom
 
-Every electron in an atom is described by a unique set of four quantum numbers — like a full mailing address.
+The attraction between an electron and the nucleus follows **Coulomb's law**:
 
+$$\\boxed{F \\propto \\frac{q_1 q_2}{r^2}}$$
 
----
-
-### 1. Principal Quantum Number (n)
-- **Allowed values:** 1, 2, 3, 4, ...
-- Describes the **main energy level** (shell)
-- Higher n = higher energy, larger orbital
+- Larger charges ($q$) → stronger attraction
+- Greater distance ($r$) → weaker attraction
 
 
 ---
 
-### 2. Angular Momentum (Azimuthal) Quantum Number (l)
-- **Allowed values:** 0 to (n − 1)
-- Describes the **subshell shape**
-- l = 0 → s, l = 1 → p, l = 2 → d, l = 3 → f
+### Comparing Electrons in the Same Atom
+
+In sodium, $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{1}$:
+- The **1s** electrons are closest to the nucleus and feel almost the full +11 charge → held most tightly
+- The **3s** valence electron is farthest away and is shielded by 10 core electrons → held least tightly
+
+So the energy needed to remove an electron is much greater for an inner (core) electron than for a valence electron.
 
 
 ---
 
-### 3. Magnetic Quantum Number ($m_l$)
-- **Allowed values:** −l to +l (including 0)
-- Describes the **orientation** of the orbital in space
-- For p orbitals (l = 1): $m_l$ = −1, 0, +1 → three orientations
+### Comparing the Same Subshell in Different Atoms
 
+| Comparison | Which Electron Is Held More Tightly? | Coulomb's-Law Reason |
+|------------|--------------------------------------|----------------------|
+| 2s of Li vs. 3s of Na | Li 2s | Smaller $r$ (n = 2 vs. n = 3) with similar effective nuclear charge |
+| 3s of Na vs. 3s of Mg | Mg 3s | Same shell, but Mg has one more proton and similar shielding |
+| 2p of O vs. 2p of F | F 2p | Same shell, greater effective nuclear charge in F |
 
----
-
-### 4. Spin Quantum Number ($m_s$)
-- **Allowed values:** $+\\frac{1}{2}$ or $-\\frac{1}{2}$
-- Describes the **spin direction** of the electron
-- Two electrons in the same orbital must have opposite spins (Pauli exclusion)`
+> 🔑 **Key Point:** Effective nuclear charge is the nuclear charge an electron actually "feels" after shielding by inner electrons. Electrons in the same shell shield each other only weakly.`
     },
     {
       id: 'ec6-quantum-table',
       type: 'text' as const,
-      content: `## 📋 Allowed Values Summary
+      content: `## 📋 Counting Unpaired Electrons
 
-| Subshell | n (example) | l | $m_l$ values | # orbitals | Max $e^{-}$ |
-|----------|-------------|---|----------------|------------|--------|
-| 1s | 1 | 0 | 0 | 1 | 2 |
-| 2p | 2 | 1 | −1, 0, +1 | 3 | 6 |
-| 3d | 3 | 2 | −2, −1, 0, +1, +2 | 5 | 10 |
-| 4f | 4 | 3 | −3, −2, −1, 0, +1, +2, +3 | 7 | 14 |
+Draw the orbital diagram for the **partly filled** subshell, then count single arrows.
 
-**Key relationship:** The number of orbitals in a subshell = 2l + 1`
+| Species | Partly Filled Subshell | Orbital Diagram | Unpaired $e^{-}$ |
+|---------|------------------------|-----------------|------------------|
+| C | $2p^{2}$ | ↑ ↑ _ | 2 |
+| O | $2p^{4}$ | ↑↓ ↑ ↑ | 2 |
+| P | $3p^{3}$ | ↑ ↑ ↑ | 3 |
+| $Fe^{2+}$ | $3d^{6}$ | ↑↓ ↑ ↑ ↑ ↑ | 4 |
+| $Zn^{2+}$ | $3d^{10}$ | ↑↓ ↑↓ ↑↓ ↑↓ ↑↓ | 0 |
+
+> ⚠️ **Ion Reminder:** For transition-metal cations, write the ion configuration first (remove 4s electrons before 3d), then draw the d orbitals.`
     },
     {
       id: 'ec6-quiz-quantum',
       type: 'dropdown-select' as const,
-      content: `### Quantum Number Practice
+      content: `### Orbital Diagram and Coulomb's Law Practice
 
-Determine the quantum numbers for specified electrons.`,
+Apply Hund's rule and Coulomb's law.`,
       exercise: {
         dropdowns: [
           {
-            label: 'For a 3p electron, what is the value of l?',
-            options: ['0', '1', '2', '3'],
-            correctIndex: 1,
-            explanation: 'The p subshell corresponds to l = 1. The angular momentum quantum number is determined by the subshell letter: s = 0, p = 1, d = 2, f = 3.'
+            label: 'How many unpaired electrons does sulfur ([Ne] $3s^{2}$ $3p^{4}$) have?',
+            options: ['0', '1', '2', '4'],
+            correctIndex: 2,
+            explanation: 'Four 3p electrons fill the three 3p orbitals as ↑↓ ↑ ↑, leaving 2 unpaired electrons.'
           },
           {
-            label: 'For a 4d electron, how many possible values of ml exist?',
-            options: ['1', '3', '5', '7'],
-            correctIndex: 2,
-            explanation: 'For d orbitals, l = 2. The ml values range from −2 to +2: that is −2, −1, 0, +1, +2 — a total of 5 values (= 2l + 1 = 5).'
+            label: 'Which electron in a potassium atom is held LEAST tightly?',
+            options: ['a 1s electron', 'a 2p electron', 'a 3p electron', 'the 4s electron'],
+            correctIndex: 3,
+            explanation: 'The 4s valence electron is the farthest from the nucleus and is shielded by 18 core electrons, so it feels the weakest attraction.'
           },
           {
-            label: 'What is the maximum value of l for n = 3?',
-            options: ['0', '1', '2', '3'],
-            correctIndex: 2,
-            explanation: 'l ranges from 0 to n − 1. For n = 3: l can be 0, 1, or 2. The maximum is 2 (corresponding to the 3d subshell).'
+            label: 'Which requires more energy to remove: a 2p electron from F or a 2p electron from N?',
+            options: ['the 2p electron from F', 'the 2p electron from N', 'they require the same energy'],
+            correctIndex: 0,
+            explanation: 'Both electrons are in the n = 2 shell, but fluorine has two more protons with similar shielding. Its 2p electrons feel a larger effective nuclear charge and are held more tightly.'
           }
         ]
       }
@@ -156,20 +154,20 @@ Determine the quantum numbers for specified electrons.`,
     {
       id: 'ec6-input-quantum',
       type: 'input-box' as const,
-      content: `### Quantum Number Calculations
+      content: `### Unpaired Electron Count
 
-Use the relationships between quantum numbers to answer.`,
+Write the configuration, draw the partly filled subshell, and count.`,
       exercise: {
         inputs: [
           {
-            label: 'How many orbitals are in the 4f subshell? (Use formula: 2l + 1)',
-            correctAnswer: '7',
-            explanation: 'For f orbitals, l = 3. Number of orbitals = 2l + 1 = 2(3) + 1 = 7.'
+            label: 'Number of unpaired electrons in $Mn^{2+}$ (Mn: Z = 25):',
+            correctAnswer: '5',
+            explanation: '$Mn^{2+}$ is [Ar] $3d^{5}$. Five electrons occupy the five 3d orbitals singly (↑ ↑ ↑ ↑ ↑), so all 5 are unpaired.'
           },
           {
-            label: 'How many total electrons can the n = 2 level hold? (Use formula: $2n^{2}$)',
-            correctAnswer: '8',
-            explanation: '$2n^{2}$ = $2(2^{2})$ = 2(4) = 8. The n = 2 level has 2s (2 electrons) + 2p (6 electrons) = 8 total.'
+            label: 'Number of unpaired electrons in $Fe^{3+}$ (Fe: Z = 26):',
+            correctAnswer: '5',
+            explanation: '$Fe^{3+}$ is [Ar] $3d^{5}$ (both 4s electrons and one 3d electron removed). Each of the five 3d orbitals holds one electron, so there are 5 unpaired electrons.'
           }
         ]
       }
@@ -177,27 +175,27 @@ Use the relationships between quantum numbers to answer.`,
     {
       id: 'ec6-summary',
       type: 'text' as const,
-      content: `## � Part 6 Summary: Orbital Diagrams & Quantum Numbers
+      content: `## 📋 Part 6 Summary: Orbital Diagrams & Coulomb's Law
 
 ---
 
-### 🧰 The Four Quantum Numbers
+### 🧰 Orbital Diagram Rules
 
-| Quantum Number | Symbol | Determines | Allowed Values |
-|----------------|--------|------------|----------------|
-| Principal | n | Energy level / shell | 1, 2, 3, ... |
-| Angular momentum | l | Subshell shape | 0 to n − 1 |
-| Magnetic | $m_l$ | Orbital orientation | −l to +l |
-| Spin | $m_s$ | Electron spin | +½ or −½ |
+| Rule | Meaning |
+|------|---------|
+| Aufbau | Fill the lowest-energy subshell first |
+| Pauli | At most 2 electrons per orbital, with opposite spins |
+| Hund | Fill equal-energy orbitals singly before pairing |
 
 ---
 
-### 📌 Quick Formulas
+### 📌 Coulomb's Law Summary
 
-| Formula | Meaning | Example (l = 2, d subshell) |
-|---------|---------|-----------------------------|
-| # orbitals = 2l + 1 | Orbitals in a subshell | 2(2) + 1 = 5 orbitals |
-| max $e^{-}$ = 2(2l + 1) | Electrons in a subshell | 2(5) = 10 electrons |
+| Factor | Effect on Attraction to the Nucleus |
+|--------|-------------------------------------|
+| More protons (same shell) | Stronger |
+| Larger n (farther away) | Weaker |
+| More inner-shell shielding | Weaker |
 
 ---
 
@@ -205,8 +203,8 @@ Use the relationships between quantum numbers to answer.`,
 
 - ☐ I can draw orbital diagrams using boxes and arrows (↑↓)
 - ☐ I apply Hund's rule: fill all orbitals singly before pairing
-- ☐ I know all four quantum numbers and their allowed values
-- ☐ I can determine the quantum numbers for any electron in an atom
+- ☐ I can count unpaired electrons in atoms and ions
+- ☐ I can use Coulomb's law to explain which electron is held more tightly
 
 ---
 

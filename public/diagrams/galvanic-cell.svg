@@ -94,18 +94,12 @@
   <!-- ===== HALF-REACTION LABELS ===== -->
   <!-- Anode box -->
   <rect x="60" y="440" width="260" height="60" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
-  <text x="190" y="462" text-anchor="middle" font-size="14" font-weight="700" fill="#1e40af">ANODE (−) Oxidation</text>
+  <text x="190" y="462" text-anchor="middle" font-size="14" font-weight="700" fill="#1e40af">ANODE: Oxidation</text>
   <text x="190" y="484" text-anchor="middle" font-size="13" fill="#1e3a5f">Zn(s) → Zn²⁺(aq) + 2e⁻</text>
 
   <!-- Cathode box -->
   <rect x="480" y="440" width="260" height="60" rx="10" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
-  <text x="610" y="462" text-anchor="middle" font-size="14" font-weight="700" fill="#065f46">CATHODE (+) Reduction</text>
+  <text x="610" y="462" text-anchor="middle" font-size="14" font-weight="700" fill="#065f46">CATHODE: Reduction</text>
   <text x="610" y="484" text-anchor="middle" font-size="13" fill="#064e3b">Cu²⁺(aq) + 2e⁻ → Cu(s)</text>
 
-  <!-- ===== SIGN LABELS ON ELECTRODES ===== -->
-  <circle cx="182" cy="385" r="12" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
-  <text x="182" y="390" text-anchor="middle" font-size="16" font-weight="800" fill="#1e40af">−</text>
-
-  <circle cx="602" cy="385" r="12" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
-  <text x="602" y="390" text-anchor="middle" font-size="16" font-weight="800" fill="#065f46">+</text>
 </svg>

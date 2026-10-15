@@ -36,7 +36,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 | $K_c$ expression | $\\frac{[\\text{products}]^{\\text{coeff}}}{[\\text{reactants}]^{\\text{coeff}}}$ |
 | Exclude from $K$ | Pure solids $(s)$ and pure liquids $(l)$ |
 | $K_p$ expression | Same form but with partial pressures |
-| $K_p$ ↔ $K_c$ | $K_p = K_c(RT)^{\\Delta n}$ |
+| Which constant? | Partial pressures given → $K_p$; molarities given → $K_c$ |
 | Reverse reaction | $K_{\\text{rev}} = 1/K$ |
 | Multiply by $n$ | $K_{\\text{new}} = K^n$ |
 | Add reactions | $K_{\\text{overall}} = K_1 \\times K_2$ |
@@ -50,8 +50,8 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 > ⚠️ **Common AP Mistakes to Avoid:**
 > 1. **Forgetting to exclude solids/liquids** from the $K$ expression
 > 2. **Confusing coefficients as multipliers** instead of exponents
-> 3. **Using Celsius instead of Kelvin** in $K_p = K_c(RT)^{\\Delta n}$
-> 4. **Counting all moles for $\\Delta n$** instead of only gaseous moles
+> 3. **Plugging initial values** into $K$ instead of equilibrium values
+> 4. **Mixing units**: partial pressures belong in $K_p$, molarities in $K_c$
 > 5. **Thinking $K$ tells us about rate** — it only describes the equilibrium position
       `
     },
@@ -86,15 +86,15 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             explanation: 'First, $\\text{A} \\rightleftharpoons \\text{C}$: $K = K_1 \\times K_2 = 0.50 \\times 8.0 = 4.0$. Then reverse: $\\text{C} \\rightleftharpoons \\text{A}$: $K = 1/4.0 = 0.25$. Then double coefficients: $2\\,\\text{C} \\rightleftharpoons 2\\,\\text{A}$: $K = 0.25^2 = 0.0625$.'
           },
           {
-            question: 'At 500 K, $K_c = 6.0$ for a reaction with $\\Delta n = -2$. Given $R = 0.08206$, which is closest to $K_p$?',
+            question: 'For $\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$, the equilibrium partial pressures are $P_{\\text{N}_2\\text{O}_4} = 0.50$ atm and $P_{\\text{NO}_2} = 0.30$ atm. What is $K_p$?',
             options: [
-              '$K_p = 1.5 \\times 10^{-1}$',
-              '$K_p = 3.6 \\times 10^{-3}$',
-              '$K_p = 1.0 \\times 10^4$',
-              '$K_p = 3.5 \\times 10^{-7}$'
+              '$K_p = 0.18$',
+              '$K_p = 0.60$',
+              '$K_p = 5.6$',
+              '$K_p = 1.7$'
             ],
-            correctAnswer: 1,
-            explanation: '$K_p = K_c(RT)^{\\Delta n} = 6.0 \\times (0.08206 \\times 500)^{-2} = 6.0 \\times (41.03)^{-2} = 6.0 \\times (1/1683.5) = 6.0 \\times 5.94 \\times 10^{-4} \\approx 3.6 \\times 10^{-3}$. Using $\\Delta n = +2$ gives $1.0 \\times 10^4$, using $\\Delta n = -1$ gives $0.15$, and using $R = 8.314$ (the J-based value) instead of 0.08206 gives $3.5 \\times 10^{-7}$.'
+            correctAnswer: 0,
+            explanation: '$K_p = (P_{\\text{NO}_2})^2/P_{\\text{N}_2\\text{O}_4} = (0.30)^2/0.50 = 0.090/0.50 = 0.18$. Forgetting the square gives 0.60, inverting the squared ratio gives 5.6, and inverting without squaring gives 1.7.'
           },
           {
             question: 'For $\\text{SO}_2\\text{Cl}_2(g) \\rightleftharpoons \\text{SO}_2(g) + \\text{Cl}_2(g)$, $K_c = 2.99 \\times 10^{-7}$ at 227°C. This reaction at equilibrium contains mostly:',
@@ -119,7 +119,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
       exercise: {
         dropdowns: [
           {
-            label: 'In the expression $K_p = K_c(RT)^{\\Delta n}$, $\\Delta n$ counts moles of',
+            label: 'A $K_p$ expression includes the partial pressures of',
             options: ['all species', 'only gaseous species', 'only aqueous species', 'only solid species']
           },
           {
@@ -136,10 +136,10 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
           }
         ],
         correctAnswers: ['only gaseous species', '$K^3$', 'temperature', 'increase'],
-        hint1: 'Only species with variable concentrations/pressures are counted in $\\Delta n$.',
+        hint1: 'Only gases have partial pressures.',
         hint2: 'Coefficients become exponents on $K$.',
         hint3: '$K$ is a thermodynamic constant that depends on energy, which depends on temperature.',
-        explanation: '$\\Delta n$ counts only gaseous moles. Tripling coefficients cubes $K$. Only temperature changes $K$. When $Q < K$, making products increases $Q$ toward $K$.'
+        explanation: 'A $K_p$ expression includes only gases. Tripling coefficients cubes $K$. Only temperature changes $K$. When $Q < K$, making products increases $Q$ toward $K$.'
       }
     },
     {
@@ -154,17 +154,17 @@ At equilibrium at 700 K: $[\\text{SO}_2] = 0.10\\;\\text{M}$, $[\\text{O}_2] = 0
 
 **1)** Calculate $K_c$ (enter an integer)
 
-**2)** What is $\\Delta n$ for this reaction? (enter an integer)
+**2)** What is $K_c$ for the reverse reaction, $\\text{2 SO}_3(g) \\rightleftharpoons \\text{2 SO}_2(g) + \\text{O}_2(g)$? (to 2 significant figures)
 
-**3)** Is $K_p$ larger or smaller than $K_c$ for this reaction? (Enter "larger" or "smaller")
+**3)** What is $K_c$ for $\\text{SO}_2(g) + \\frac{1}{2}\\text{O}_2(g) \\rightleftharpoons \\text{SO}_3(g)$? (to 2 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['180', '-1', 'smaller'],
+        correctAnswers: ['180', '0.0056', '13'],
         hint1: '$K_c = \\frac{[\\text{SO}_3]^2}{[\\text{SO}_2]^2[\\text{O}_2]}$.',
-        hint2: '$\\Delta n$ = gaseous product moles − gaseous reactant moles.',
-        hint3: 'When $\\Delta n < 0$, $(RT)^{\\Delta n} < 1$, so $K_p = K_c \\times (\\text{something} < 1)$.',
-        explanation: '1) $K_c = \\frac{(0.60)^2}{(0.10)^2(0.20)} = \\frac{0.36}{0.002} = 180$. 2) $\\Delta n = 2 - 3 = -1$. 3) Since $\\Delta n = -1$, $K_p = K_c(RT)^{-1} = K_c/(RT)$. Since $RT > 1$, $K_p < K_c$, so smaller.'
+        hint2: 'Reversing a reaction inverts $K$.',
+        hint3: 'Halving every coefficient takes the square root of $K$.',
+        explanation: '1) $K_c = \\frac{(0.60)^2}{(0.10)^2(0.20)} = \\frac{0.36}{0.002} = 180$. 2) $K_{\\text{rev}} = 1/180 = 0.0056$. 3) Halving the coefficients gives $K = 180^{1/2} = 13$.'
       }
     },
     {

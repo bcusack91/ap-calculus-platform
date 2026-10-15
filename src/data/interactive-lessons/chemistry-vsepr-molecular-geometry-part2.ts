@@ -174,9 +174,9 @@ As the steric number increases:
 > 💡 **Tip:** Each base geometry maps to a specific hybridization — sp (linear), $sp^{2}$ (trigonal planar), $sp^{3}$ (tetrahedral). Knowing one tells you the other.
 
 Each geometry corresponds to a specific hybridization of the central atom:
-- **sp** → linear (2 hybrid orbitals)
-- **$sp^{2}$** → trigonal planar (3 hybrid orbitals)
-- **$sp^{3}$** → tetrahedral (4 hybrid orbitals)
+- **sp** → linear (2 electron domains)
+- **$sp^{2}$** → trigonal planar (3 electron domains)
+- **$sp^{3}$** → tetrahedral (4 electron domains)
 
 This connection between VSEPR geometry and orbital hybridization is fundamental to understanding bonding in organic and inorganic chemistry.`
     },
@@ -211,7 +211,7 @@ This connection between VSEPR geometry and orbital hybridization is fundamental 
           {
             id: 'vg-2-7-dd4',
             label: 'A linear molecule with steric number 2 has _______ hybridization',
-            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'],
             correctIndex: 0,
             explanation: 'A linear molecule with steric number 2 has sp hybridization.'
           }

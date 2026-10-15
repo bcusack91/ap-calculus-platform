@@ -15,11 +15,10 @@ export const chemHybridizationSigmaPiBondsPart1Data = {
 
 | Section |
 |---------|
-| Why Do We Need Hybridization? |
-| Key Principles |
-| Energy Perspective |
-| Properties of $sp^{3}$ Orbitals |
-| How $sp^{3}$ Works in Methane $(CH_{4})$ |
+| What a Hybridization Label Means |
+| Counting Electron Domains |
+| $sp^{3}$ Hybridization — Tetrahedral |
+| Lone Pairs and Bond Angles in $sp^{3}$ Atoms |
 
 > 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
@@ -34,30 +33,25 @@ export const chemHybridizationSigmaPiBondsPart1Data = {
       id: 'hy-1-2',
       type: 'text',
       title: 'What Is Hybridization?',
-      content: `## The Hybridization Process
+      content: `## What a Hybridization Label Means
 
-Hybridization is the mathematical combination of atomic orbitals on the **same atom** to form new hybrid orbitals.
+The terms **hybridization** and **hybrid orbital** describe the arrangement of electron domains around an atom. Each label goes with one electron-domain arrangement and one ideal bond angle:
 
-### Key Principles
+| Electron Domains | Hybridization | Electron-Domain Geometry | Ideal Bond Angle |
+|-----------------|---------------|--------------------------|------------------|
+| 4 | $sp^{3}$ | Tetrahedral | 109.5° |
+| 3 | $sp^{2}$ | Trigonal planar | 120° |
+| 2 | sp | Linear | 180° |
 
-1. **Number of hybrid orbitals = number of atomic orbitals mixed**
-   - Mix 1 s + 3 p → get 4 $sp^{3}$ hybrid orbitals
-   - Mix 1 s + 2 p → get 3 $sp^{2}$ hybrid orbitals
-   - Mix 1 s + 1 p → get 2 sp hybrid orbitals
+> 💡 **Note:** On the AP exam you use these labels as names that match the geometry. You will not be asked to derive hybrid orbitals or draw their shapes.
 
-2. **Hybrid orbitals are equivalent** — they have the same shape and energy
+### Counting Electron Domains
 
-3. **Hybrid orbitals are oriented to minimize repulsion** — just like VSEPR predicts
+An **electron domain** is any region of electron density around the atom:
+- Each **single, double, or triple bond** counts as **one** domain
+- Each **lone pair** counts as **one** domain
 
-4. **Unhybridized orbitals remain unchanged** — they can form pi bonds (more on this later)
-
-### Energy Perspective
-
-The energy of hybrid orbitals is an **average** of the contributing atomic orbitals:
-
-$$E_{\\text{sp}^3} = \\frac{E_s + 3E_p}{4}$$
-
-This costs some energy (promoting an electron from s to p), but the energy is more than recovered by forming stronger bonds.`
+So in formaldehyde $(H_{2}C=O)$, carbon has two single bonds and one double bond: **3 domains**, so carbon is $sp^{2}$.`
     },
     {
       id: 'hy-1-3',
@@ -65,25 +59,23 @@ This costs some energy (promoting an electron from s to p), but the energy is mo
       title: '$sp^{3}$ Hybridization',
       content: `## $sp^{3}$ Hybridization — Tetrahedral
 
-When one s orbital mixes with **three** p orbitals, four equivalent **$sp^{3}$ hybrid orbitals** form.
+An atom surrounded by **four** electron domains is described as **$sp^{3}$ hybridized**.
 
-### Properties of $sp^{3}$ Orbitals
+### Features of an $sp^{3}$ Atom
 
-| Property | Value |
-|----------|-------|
-| Number of hybrid orbitals | 4 |
-| Geometry | Tetrahedral |
-| Bond angle | 109.5° |
-| Unhybridized p orbitals remaining | 0 |
-| Each orbital can hold | Up to 2 electrons |
+| Feature | Value |
+|---------|-------|
+| Electron domains | 4 |
+| Electron-domain geometry | Tetrahedral |
+| Ideal bond angle | 109.5° |
+| Pi bonds it can form | 0 (all four domains are single bonds or lone pairs) |
 
-### How $sp^{3}$ Works in Methane $(CH_{4})$
+### Reading $sp^{3}$ from Methane $(CH_{4})$
 
-1. Carbon starts: $1s^2\\,2s^2\\,2p^2$ (only 2 unpaired electrons)
-2. One $2s$ electron is promoted to the empty $2p$ orbital
-3. The one $2s$ and three $2p$ orbitals hybridize → four $sp^3$ orbitals
-4. Each $sp^3$ orbital overlaps with a hydrogen $1s$ orbital → 4 equivalent C–H bonds
-5. The four $sp^3$ orbitals point toward the corners of a tetrahedron (109.5° apart)
+1. Draw the Lewis structure: carbon forms four C–H single bonds and has no lone pairs
+2. Count domains: 4 bonds + 0 lone pairs = **4 electron domains**
+3. Four domains → **$sp^{3}$**, tetrahedral arrangement
+4. The four C–H bonds point toward the corners of a tetrahedron, 109.5° apart, and all four are equivalent
 
 ### Other Examples of $sp^{3}$ Hybridization
 
@@ -101,10 +93,10 @@ When one s orbital mixes with **three** p orbitals, four equivalent **$sp^{3}$ h
       exercise: {
         questions: [
           {
-            question: 'How many atomic orbitals mix together to form $sp^{3}$ hybrid orbitals?',
-            options: ['2', '3', '4', '5'],
-            correctAnswer: 2,
-            explanation: '$sp^{3}$ = one s orbital + three p orbitals = 4 atomic orbitals mixing to produce 4 hybrid orbitals.'
+            question: 'Which molecule has an $sp^{3}$-hybridized central atom?',
+            options: ['$CO_{2}$', '$BF_{3}$', '$CH_{2}O$', '$NH_{3}$'],
+            correctAnswer: 3,
+            explanation: 'Nitrogen in $NH_{3}$ has 3 bonds and 1 lone pair, which is 4 electron domains, so it is $sp^{3}$. Carbon in $CO_{2}$ has 2 domains (sp), and the central atoms of $BF_{3}$ and $CH_{2}O$ each have 3 domains ($sp^{2}$).'
           },
           {
             question: 'What is the bond angle in a perfect $sp^{3}$ (tetrahedral) arrangement?',
@@ -114,20 +106,15 @@ When one s orbital mixes with **three** p orbitals, four equivalent **$sp^{3}$ h
           },
           {
             question: 'The oxygen atom in $H_{2}O$ has 2 bonds and 2 lone pairs. What is its hybridization?',
-            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'],
             correctAnswer: 2,
-            explanation: 'Oxygen in $H_{2}O$ has 4 electron domains (2 bonds + 2 lone pairs), so it is $sp^{3}$ hybridized. The lone pairs occupy $sp^{3}$ orbitals just like the bonding pairs.'
+            explanation: 'Oxygen in $H_{2}O$ has 4 electron domains (2 bonds + 2 lone pairs), so it is $sp^{3}$ hybridized. Lone pairs count as domains just like bonding pairs.'
           },
           {
-            question: 'Why does carbon need to hybridize in $CH_{4}$?',
-            options: [
-              'To gain the extra electrons needed for four bonds',
-              'To make all four C–H bonds equivalent',
-              'To let a lone pair spread over four orbitals',
-              'To give its C–H bonds partial ionic character'
-            ],
-            correctAnswer: 1,
-            explanation: 'Without hybridization, carbon\'s s and p orbitals have different energies and shapes, which would produce non-equivalent bonds. Hybridization creates four identical $sp^{3}$ orbitals that form four equivalent C–H bonds. Carbon already has 4 valence electrons and no lone pair in $CH_{4}$, and the C–H bonds are essentially nonpolar covalent.'
+            question: 'When counting electron domains, how many domains does one C=O double bond count as?',
+            options: ['One', 'Two', 'Three', 'Zero'],
+            correctAnswer: 0,
+            explanation: 'Every bond to a neighboring atom counts as one domain, whether it is single, double, or triple. Only the number of bonded atoms and lone pairs matters, not the bond order.'
           }
         ]
       }
@@ -135,29 +122,22 @@ When one s orbital mixes with **three** p orbitals, four equivalent **$sp^{3}$ h
     {
       id: 'hy-1-5',
       type: 'text',
-      title: 'Visualizing $sp^{3}$ Orbitals',
-      content: `## Shape of Hybrid Orbitals
+      title: 'Lone Pairs and Bond Angles in $sp^{3}$ Atoms',
+      content: `## Lone Pairs and Bond Angles in $sp^{3}$ Atoms
 
-Each hybrid orbital has a distinctive shape: **one large lobe** pointing in the bonding direction and **one small lobe** on the opposite side.
+All three molecules below have an $sp^{3}$ central atom with four electron domains, but their bond angles differ:
 
-### $sp^{3}$ vs. Unhybridized Orbitals
+| Molecule | Bonds | Lone Pairs | Molecular Shape | Bond Angle |
+|----------|-------|-----------|-----------------|-----------|
+| $CH_{4}$ | 4 | 0 | Tetrahedral | 109.5° |
+| $NH_{3}$ | 3 | 1 | Trigonal pyramidal | about 107° |
+| $H_{2}O$ | 2 | 2 | Bent | about 104.5° |
 
-| Feature | s orbital | p orbital | $sp^{3}$ hybrid |
-|---------|-----------|-----------|------------|
-| Shape | Spherical | Dumbbell (two equal lobes) | One large + one small lobe |
-| Directional? | No | Yes | Yes — more directional than p |
-| Bonding ability | Weak overlap | Moderate overlap | **Strong overlap** |
+### Why the Angles Shrink
 
-### Why Hybrids Bond Better
+A lone pair is held by only one nucleus, so its electron density spreads out closer to the central atom and **repels more strongly** than a bonding pair. Each lone pair pushes the bonding pairs slightly closer together.
 
-The large lobe of an $sp^{3}$ orbital extends **further from the nucleus** than either an s or p orbital alone. This produces:
-- Greater overlap with the bonding partner
-- **Stronger bonds**
-- More directed electron density
-
-### Key Takeaway
-
-> 🔑 **Key Concept:** Hybridization is the atom\'s way of optimizing orbital geometry for bonding. The "cost" of promoting an electron is more than repaid by the **stronger, more directional bonds** that hybrid orbitals form.`
+> 🔑 **Key Concept:** Hybridization tells you the **electron-domain** arrangement (and the ideal angle). The actual molecular shape and bond angles also depend on how many of those domains are **lone pairs**.`
     },
     {
       id: 'hy-1-6',
@@ -177,14 +157,14 @@ The large lobe of an $sp^{3}$ orbital extends **further from the nucleus** than 
             explanation: 'Carbon in $CHCl_{3}$ has 4 single bonds (1 to H, 3 to Cl) and 0 lone pairs = 4 electron domains → $sp^{3}$.'
           },
           {
-            label: 'How many $sp^{3}$ hybrid orbitals does a carbon atom form in ethane $(C_{2}H_{6})$?',
+            label: 'How many electron domains surround each carbon atom in ethane $(C_{2}H_{6})$?',
             correctAnswer: '4',
-            explanation: 'Each carbon in ethane has 4 electron domains (3 C–H bonds + 1 C–C bond), so each carbon forms 4 $sp^{3}$ hybrid orbitals.'
+            explanation: 'Each carbon in ethane has 4 electron domains (3 C–H bonds + 1 C–C bond), so each carbon is $sp^{3}$.'
           },
           {
-            label: 'How many unhybridized p orbitals remain on an $sp^{3}$-hybridized atom?',
-            correctAnswer: '0',
-            explanation: 'In $sp^{3}$ hybridization, all three p orbitals (plus the s orbital) are used in hybridization. Zero unhybridized p orbitals remain.'
+            label: 'How many $sp^{3}$-hybridized atoms (not counting H) are in methanol, $CH_{3}OH$?',
+            correctAnswer: '2',
+            explanation: 'Carbon has 4 single bonds (4 domains) and oxygen has 2 bonds plus 2 lone pairs (4 domains), so both C and O are $sp^{3}$.'
           }
         ]
       }
@@ -199,7 +179,7 @@ The large lobe of an $sp^{3}$ orbital extends **further from the nucleus** than 
           {
             id: 'hy-1-7-dd1',
             label: 'An atom with 4 electron domains has _______ hybridization',
-            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'],
             correctIndex: 2,
             explanation: 'An atom with 4 electron domains has $sp^{3}$ hybridization. This applies to $CH_{4}$, $NH_{3}$, $H_{2}O$, etc.'
           },
@@ -212,10 +192,10 @@ The large lobe of an $sp^{3}$ orbital extends **further from the nucleus** than 
           },
           {
             id: 'hy-1-7-dd3',
-            label: 'Mixing 1 s + 3 p orbitals gives exactly _______ $sp^{3}$ hybrid orbitals',
-            options: ['1', '2', '3', '4'],
-            correctIndex: 3,
-            explanation: 'Mixing 1 s + 3 p orbitals gives exactly 4 $sp^{3}$ hybrid orbitals — the number of hybrids always equals the number of atomic orbitals combined.'
+            label: 'A carbon atom with two single bonds and one double bond is',
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'],
+            correctIndex: 1,
+            explanation: 'Two single bonds plus one double bond is three bonded atoms and no lone pairs: 3 electron domains, so the carbon is $sp^{2}$.'
           }
         ]
       }
@@ -230,11 +210,11 @@ The large lobe of an $sp^{3}$ orbital extends **further from the nucleus** than 
 
 ### Key Ideas
 
-1. **Hybridization** = mixing atomic orbitals on the same atom to create new, equivalent hybrid orbitals
-2. The number of hybrid orbitals formed equals the number of atomic orbitals mixed
-3. **$sp^{3}$ hybridization**: 1 s + 3 p → 4 equivalent orbitals, tetrahedral geometry, 109.5° angles
-4. Lone pairs also occupy hybrid orbitals
-5. Hybrid orbitals form stronger, more directional bonds than unhybridized orbitals
+1. **Hybridization labels** (sp, $sp^{2}$, $sp^{3}$) describe the electron-domain arrangement around an atom
+2. Count domains: every bond (single, double, or triple) is one domain, and every lone pair is one domain
+3. **$sp^{3}$**: 4 domains, tetrahedral arrangement, ideal angle 109.5°
+4. Lone pairs count as domains and squeeze bond angles below the ideal value
+5. You use the labels to name geometries; deriving or drawing hybrid orbitals is not assessed
 
 ### The Pattern
 
@@ -244,7 +224,7 @@ The large lobe of an $sp^{3}$ orbital extends **further from the nucleus** than 
 | 3 | $sp^{2}$ | Trigonal planar |
 | 2 | sp | Linear |
 
-Coming up in **Part 2**: $sp^{2}$ and sp hybridization — what happens when not all p orbitals are used.`
+Coming up in **Part 2**: $sp^{2}$ and sp hybridization — atoms with three and two electron domains.`
     }
   ]
 };

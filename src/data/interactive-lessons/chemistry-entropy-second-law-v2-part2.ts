@@ -5,166 +5,153 @@ export const chemEntropySecondLawV2Part2Data = {
       id: 'en2v2-intro',
       type: 'text' as const,
       content: `
-# 🔬 Microstates in Action
+# 🔬 Comparing Entropies
 
-**Part 2 of 7 — Counting, Probability & Real Systems**
+**Part 2 of 7 — Phase, Volume, and Temperature at the Particle Level**
 
-In Part 1 you learned that entropy measures the number of microstates. Now we'll explore how to count microstates for molecular systems and connect probability to the Second Law.
+In Part 1 you learned that entropy measures the dispersal of matter and energy. Now you'll use particle-level reasoning to decide **which of two samples has more entropy** and **how large an entropy change is**, the skill CED 9.1.A asks for.
       `
     },
     {
-      id: 'en2v2-counting',
+      id: 'en2v2-same-substance',
       type: 'text' as const,
       content: `
-## ⚖️ Counting Microstates for Molecules
+## ⚖️ Comparing Two Samples of the Same Substance
 
-### Positional Microstates
+| Compare | Higher entropy | Particle-level reason |
+|---------|----------------|-----------------------|
+| Same gas, same T, 1 L vs. 10 L | The 10 L sample | Molecules move within a larger space |
+| Same gas, same V, 300 K vs. 400 K | The 400 K sample | Kinetic energies are spread over a broader range |
+| $\\text{H}_2\\text{O}(s)$ vs. $\\text{H}_2\\text{O}(l)$ at 0 °C | The liquid | Molecules move past one another instead of vibrating in place |
+| $\\text{H}_2\\text{O}(l)$ vs. $\\text{H}_2\\text{O}(g)$ at 100 °C | The gas | Molecules are far apart and move freely through a large volume |
+| 1 mol vs. 2 mol of the same gas at the same T and P | 2 mol | Entropy is extensive: twice the matter, twice the entropy |
 
-Consider 2 gas molecules (A and B) in a container divided into 2 equal halves:
-
-| Microstate | Left Half | Right Half |
-|-----------|-----------|------------|
-| 1 | A, B | — |
-| 2 | A | B |
-| 3 | B | A |
-| 4 | — | A, B |
-
-- **1** microstate has both molecules on the left
-- **2** microstates have them spread out
-- **1** microstate has both on the right
-
-The "spread out" state is **twice as likely** as either concentrated state.
+> 🔑 **Key Concept:** Always connect your claim to a particle-level reason: freedom of motion, volume available, or the spread of kinetic energies.
 
 
 ---
 
-### For N molecules in 2 halves
+### How Big Is the Change?
 
-$$W_{\\text{total}} = 2^N$$
+Phase changes do not all change entropy by the same amount.
 
-$$W_{\\text{all left}} = 1$$
+| Phase change | Typical size of $\\Delta S$ | Why |
+|--------------|----------------------------|-----|
+| Melting (solid → liquid) | Moderate increase | Particles gain mobility but stay close together |
+| Vaporization (liquid → gas) | **Large** increase | Particles spread through a vastly larger volume |
+| Sublimation (solid → gas) | Largest increase | Combines both changes |
 
-$$P_{\\text{all left}} = \\frac{1}{2^N}$$
-
-For $N = 100$: $P = \\frac{1}{2^{100}} \\approx 10^{-30}$ — essentially impossible!
-      `
-    },
-    {
-      id: 'en2v2-energy-microstates',
-      type: 'text' as const,
-      content: `
-## 📌 Energy Microstates
-
-Molecules don't just have positions — they also have **energy**. The ways to distribute energy quanta among molecules are additional microstates.
-
-
----
-
-### Example: 3 Quanta Among 3 Molecules
-
-| Distribution | Microstates | Description |
-|-------------|-------------|-------------|
-| (3, 0, 0) | 3 | One molecule has all energy |
-| (2, 1, 0) | 6 | Partially shared |
-| (1, 1, 1) | 1 | Evenly distributed |
-
-**Total: 10 microstates.** The partially shared distribution (2,1,0) is the most probable.
-
-
----
-
-### Temperature Connection
-
-Higher temperature → more energy quanta → more ways to distribute them → more microstates → higher entropy.
-
-This is why entropy **always increases with temperature**.
+For water, $\\Delta S_{\\text{vap}}$ (about 109 J/(mol·K)) is roughly five times $\\Delta S_{\\text{fus}}$ (about 22 J/(mol·K)).
       `
     },
     {
       id: 'en2v2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Microstate Check** 🎯
+**Comparison Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'For 4 molecules in a box divided into 2 halves, how many total positional microstates exist?',
-            options: ['4', '8', '16', '24'],
-            correctAnswer: 2,
-            explanation: '$W = 2^4 = 16$ microstates. Each molecule can independently be in either half. Counting 2 × 4 = 8 adds the choices instead of multiplying them, and 24 = 4! counts orderings of the molecules, not positions.'
-          },
-          {
-            question: 'Why does higher temperature increase entropy?',
+            question: 'Two flasks each hold 1.0 mol of Ar(g) at 298 K. Flask X has a volume of 2.0 L and flask Y has a volume of 20.0 L. Which statement is correct?',
             options: [
-              'Faster molecules collide more often, which creates disorder',
-              'More energy quanta mean more ways to spread the energy',
-              'Chemical bonds break at higher T, producing more particles',
-              'The sample always expands to a larger volume when heated'
+              'X has more entropy because its molecules collide more often',
+              'Y has more entropy because its molecules have more space',
+              'They have equal entropy because the amount and temperature are equal',
+              'X has more entropy because its pressure is higher'
             ],
             correctAnswer: 1,
-            explanation: 'Higher T means more energy quanta, and more quanta can be distributed among molecules in more ways, increasing microstates and entropy.'
+            explanation: 'At the same temperature, a gas spread through a larger volume is more dispersed, so Y has more entropy (CED 9.1.A.1). Collision frequency and pressure do not raise entropy, and volume matters even when the amount and temperature are the same.'
           },
           {
-            question: 'The probability of all molecules spontaneously gathering in one corner of a room is:',
+            question: 'Why does a sample of solid copper have more entropy at 100 °C than at 25 °C?',
             options: [
-              'Impossible — it would violate the Second Law',
-              'Essentially zero — it is vanishingly improbable',
-              'About 50% — each molecule moves randomly',
-              'High — the molecules attract each other'
+              'The copper atoms move to a larger volume when heated',
+              'The kinetic energies of the atoms are spread over a broader range',
+              'Some copper melts at 100 °C, forming a liquid',
+              'The copper reacts with air to form more moles of particles'
             ],
             correctAnswer: 1,
-            explanation: 'It is not forbidden by any law, but the probability is so tiny ($\\sim 1/2^{N_A}$) that it would never be observed in the lifetime of the universe.'
+            explanation: 'Heating broadens the distribution of vibrational energies of the atoms, so energy is more dispersed and entropy increases (CED 9.1.A.2). The expansion of a solid is tiny, copper melts at over 1000 °C, and no reaction is needed.'
+          },
+          {
+            question: 'Which phase change has the largest entropy increase per mole for a given substance?',
+            options: [
+              'Melting',
+              'Vaporization',
+              'Freezing',
+              'Condensation'
+            ],
+            correctAnswer: 1,
+            explanation: 'Vaporization takes particles from a close-packed liquid to a gas that fills a vastly larger volume, a much larger gain in dispersal than melting. Freezing and condensation decrease entropy.'
           }
         ]
       }
     },
     {
-      id: 'en2v2-calculation',
+      id: 'en2v2-different-substances',
+      type: 'text' as const,
+      content: `
+## 📌 Comparing Different Substances
+
+When two substances are in the **same phase at the same temperature**, these features usually mean higher standard molar entropy:
+
+| Feature | Example | Reason |
+|---------|---------|--------|
+| More atoms per molecule | $\\text{C}_3\\text{H}_8(g)$ > $\\text{CH}_4(g)$ | More ways for the molecule to move and vibrate, so energy is more dispersed |
+| Less rigid solid | Graphite > diamond | Layers that slide allow more motion than a rigid 3D network |
+
+> ⚠️ **Warning:** Phase usually outweighs everything else. Even a small gas molecule (for example $\\text{H}_2(g)$, 131 J/(mol·K)) has more entropy than a large liquid or solid such as $\\text{H}_2\\text{O}(l)$ (70 J/(mol·K)).
+      `
+    },
+    {
+      id: 'en2v2-compare-drill',
       type: 'input-boxes' as const,
       content: `
-**Microstate Calculations** 🧮
+**Which Has More Entropy?** 🧮
 
-**1)** For 6 molecules in 2 halves of a container, the total microstates $W = 2^6$ = ?
+Type the formula (or description) of the sample with the HIGHER entropy.
 
-**2)** How many of those microstates have all 6 molecules on the left side?
+**1)** 1 mol $\\text{O}_2(g)$ at 300 K or 1 mol $\\text{O}_2(g)$ at 500 K, same volume (type **300** or **500**)
 
-**3)** What percentage of microstates have the molecules evenly split (3 left, 3 right)? The number of such microstates is $\\binom{6}{3} = 20$. Round to the nearest whole percent.
+**2)** 1 mol $\\text{CH}_4(g)$ or 1 mol $\\text{C}_2\\text{H}_6(g)$ at 298 K and 1 atm (type the formula)
+
+**3)** 1 mol $\\text{Br}_2(l)$ or 1 mol $\\text{Br}_2(g)$ at 59 °C (type **l** or **g**)
       `,
       exercise: {
-        questions: [{ question: '(1)', answer: '64', acceptableAnswers: ['64'] }, { question: '(2)', answer: '1', acceptableAnswers: ['1'] }, { question: '(3)', answer: '31', acceptableAnswers: ['31', '31.25', '31.3'] }],
-        hint1: '$2^6 = 64$',
-        hint2: 'There is exactly 1 way to place all 6 on the left.',
-        hint3: '$20/64 \\times 100 = 31.25\\%$',
-        explanation: '1) $2^6 = 64$ total microstates. 2) Only 1 microstate has all molecules on the left. 3) $\\binom{6}{3} = 20$ microstates out of 64 total = $20/64 = 31.25\\% \\approx 31\\%$.'
+        questions: [{ question: '(1)', answer: '500', acceptableAnswers: ['500', '500 K'] }, { question: '(2)', answer: 'C2H6', acceptableAnswers: ['C2H6', 'ethane'] }, { question: '(3)', answer: 'g', acceptableAnswers: ['g', 'gas', 'Br2(g)'] }],
+        hint1: 'Higher temperature means a broader spread of kinetic energies.',
+        hint2: 'Which molecule has more atoms that can move and vibrate?',
+        hint3: 'Compare the freedom of motion in a liquid and a gas.',
+        explanation: '1) 500 K: energy is more dispersed at the higher temperature. 2) $\\text{C}_2\\text{H}_6$: more atoms per molecule, more ways to disperse energy. 3) The gas: its molecules move freely through a far larger volume.'
       }
     },
     {
       id: 'en2v2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Microstate Concepts** 🔽
+**Comparison Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'As the number of molecules increases, the probability of all being in one half',
-            options: ['increases steadily', 'decreases dramatically', 'stays the same', 'decreases only slightly']
+            label: 'At constant temperature, compressing a gas into a smaller volume makes its entropy',
+            options: ['increase', 'decrease', 'stay the same', 'become zero']
           },
           {
-            label: 'Energy microstates depend on',
-            options: ['only the positions of the molecules', 'only the total mass of the sample', 'how energy quanta are distributed', "the container's shape and volume"]
+            label: 'Compared with $\\Delta S_{\\text{fus}}$, the value of $\\Delta S_{\\text{vap}}$ for the same substance is usually',
+            options: ['much smaller', 'about the same', 'much larger', 'negative']
           },
           {
-            label: 'The most probable energy distribution is usually',
-            options: ['all quanta concentrated in one molecule', 'exactly equal shares for every molecule', 'partially shared among molecules', 'no energy in most of the molecules']
+            label: 'In the same phase and at the same temperature, a molecule with more atoms usually has',
+            options: ['lower entropy', 'higher entropy', 'zero entropy', 'the same entropy']
           }
         ],
-        correctAnswers: ['decreases dramatically', 'how energy quanta are distributed', 'partially shared among molecules'],
-        hint1: 'Probability = $1/2^N$ — shrinks exponentially.',
-        hint2: 'Energy microstates count the ways to distribute energy quanta.',
-        hint3: 'The distribution with the most microstates is the most probable.',
-        explanation: 'The probability of concentration drops exponentially with N. Energy microstate counting depends on quantum distribution. The "partially shared" distribution typically has the most microstates.'
+        correctAnswers: ['decrease', 'much larger', 'higher entropy'],
+        hint1: 'The molecules have less space to move in.',
+        hint2: 'Liquid → gas is a much bigger change in dispersal than solid → liquid.',
+        hint3: 'More atoms means more ways for energy to be dispersed in the molecule.',
+        explanation: 'Compression confines the gas, lowering entropy. Vaporization increases dispersal far more than melting. Larger molecules have more ways to store and disperse energy, so higher entropy.'
       }
     },
     {
@@ -176,26 +163,26 @@ This is why entropy **always increases with temperature**.
       exercise: {
         questions: [
           {
-            question: 'Which has the largest number of microstates?',
+            question: 'Which sample has the greatest entropy?',
             options: [
-              'A crystal at 0 K',
-              'Liquid water at 25°C',
-              'Water vapor at 100°C',
-              'A supercooled liquid'
+              '1 mol of $H_{2}O(s)$ at 0°C',
+              '1 mol of $H_{2}O(l)$ at 25°C',
+              '1 mol of $H_{2}O(g)$ at 100°C',
+              '1 mol of $H_{2}O(l)$ at 100°C'
             ],
             correctAnswer: 2,
-            explanation: 'Water vapor has the most positional AND energy microstates due to freely moving gas molecules at high temperature.'
+            explanation: 'The gas is the most dispersed: its molecules move freely through a far larger volume and at the highest temperature. Both liquid samples and the ice have less entropy.'
           },
           {
-            question: 'For 10 molecules, the probability they all collect in the left half is:',
+            question: 'A student claims that 1 mol of He(g) in a 5 L flask at 300 K has the same entropy as 1 mol of He(g) in a 5 L flask at 600 K, because the volume is unchanged. Which is the best response?',
             options: [
-              '50%',
-              '10%',
-              '0.1%',
-              '5%'
+              'Correct, because entropy depends only on volume',
+              'The 600 K sample has more entropy, since its energy is more dispersed',
+              'The 300 K sample has more entropy, since its particles move more slowly',
+              'Correct, because helium is a monatomic gas'
             ],
-            correctAnswer: 2,
-            explanation: '$P = 1/2^{10} = 1/1024 \\approx 0.098\\% \\approx 0.1\\%$. Already very unlikely with just 10 molecules! 50% is the chance for one molecule, 10% treats the probability as $1/n$, and 5% uses $1/(2n)$ instead of $1/2^n$.'
+            correctAnswer: 1,
+            explanation: 'Entropy depends on the dispersal of energy as well as matter. At 600 K the kinetic energies are spread over a broader range, so entropy is higher (CED 9.1.A.2). Slower particles mean less dispersed energy, and being monatomic does not make entropy temperature-independent.'
           }
         ]
       }

@@ -113,7 +113,7 @@ A reaction occurs (and a net ionic equation exists) when at least one of these f
 
 **Step 1 — Predict products:** Swapping ions gives $NaNO_{3}$ and KCl.
 
-**Step 2 — Check solubility:** $NaNO_{3}$ is soluble. KCl is soluble. No precipitate forms!
+**Step 2 — Check solubility:** $NaNO_{3}$ is a sodium (and nitrate) salt and KCl is a potassium salt, so both are soluble. No precipitate forms!
 
 **Step 3 — Complete ionic equation:**
 
@@ -126,7 +126,7 @@ $$\\text{Na}^+(aq) + \\text{Cl}^-(aq) + \\text{K}^+(aq) + \\text{NO}_3^-(aq) \\r
 
 ---
 
-> ⚠️ **Warning:** Just because you can write a double-replacement equation doesn\'t mean a reaction occurs. You must have a **driving force** (precipitate, water, or gas).
+> ⚠️ **Warning:** Just because you can write an equation that swaps the ions doesn\'t mean a reaction occurs. You must have a **driving force** (precipitate, water, or gas).
       `
     },
     {
@@ -173,7 +173,7 @@ $$\\text{Na}^+(aq) + \\text{Cl}^-(aq) + \\text{K}^+(aq) + \\text{NO}_3^-(aq) \\r
           {
             question: 'If mixing two aqueous solutions produces no precipitate, no gas, and no water, then:',
             options: [
-              'A synthesis reaction occurs',
+              'A new soluble salt forms',
               'An acid-base reaction occurs',
               'No reaction occurs',
               'A redox reaction always occurs instead'

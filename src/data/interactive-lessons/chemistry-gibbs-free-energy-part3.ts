@@ -249,15 +249,15 @@ Both methods give the same answer at 25°C.
             explanation: '$\\Delta G° = [97.9] - [2(51.3)] = 97.9 - 102.6 = -4.7$ kJ. The dimerization of $NO_{2}$ is slightly spontaneous under standard conditions. Subtracting in the wrong order gives +4.7 kJ, ignoring the coefficient 2 gives +46.6 kJ, and adding the values gives +149.2 kJ.'
           },
           {
-            question: 'Why might ΔG°_rxn calculated from ΔG°_f values differ from ΔG at non-standard conditions?',
+            question: 'A ΔG°_rxn calculated from a table of ΔG°_f values (at 298 K) is negative. What can you conclude?',
             options: [
-              'ΔG°f values are rough, so the two never agree',
-              'ΔG° assumes standard conditions, not the actual ones',
-              'Temperature changes ΔG but never ΔG°',
-              'ΔG is measured per gram but ΔG° per mole'
+              'ΔG°f values are rough, so no conclusion is possible',
+              'Under standard conditions at 298 K, products are favored',
+              'The reaction is favored at every temperature',
+              'The reaction will be fast at 298 K'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta G°$ applies at standard conditions only. At non-standard conditions, we need: $\\Delta G = \\Delta G° + RT\\ln Q$ (covered in Part 5). ΔG° itself also changes with temperature, through $\\Delta G° = \\Delta H° - T\\Delta S°$.'
+            explanation: '$\\Delta G° < 0$ means the reaction is thermodynamically favored under standard conditions at that temperature, so K > 1. ΔG° itself changes with temperature through $\\Delta G° = \\Delta H° - T\\Delta S°$, so a value at 298 K says nothing about all temperatures, and favorability says nothing about rate.'
           }
         ]
       }

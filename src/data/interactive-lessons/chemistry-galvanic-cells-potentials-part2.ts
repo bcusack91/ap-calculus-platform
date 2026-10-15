@@ -48,8 +48,8 @@ A galvanic cell consists of two **half-cells**, each containing:
 
 | Component | Function |
 |-----------|----------|
-| **Anode** | Electrode where oxidation occurs (negative terminal) |
-| **Cathode** | Electrode where reduction occurs (positive terminal) |
+| **Anode** | Electrode where oxidation occurs |
+| **Cathode** | Electrode where reduction occurs |
 | **Salt bridge** | Allows ion flow to maintain electrical neutrality |
 | **External wire** | Carries electrons from anode to cathode |
 
@@ -105,14 +105,11 @@ The salt bridge maintains **electrical neutrality** by allowing ion migration be
 
 ---
 
-### ± Anode Sign Convention
+### 🏷️ Naming the Electrodes
 
-> In a **galvanic** cell:
+> In **every** electrochemical cell, galvanic or electrolytic, the **anode** is where oxidation occurs and the **cathode** is where reduction occurs (CED 9.8.A.3). Identify each electrode from its half-reaction.
 >
-> - Anode = **negative** terminal **(−)**
-> - Cathode = **positive** terminal **(+)**
->
-> ⚠️ This is **opposite** to electrolytic cells!
+> 📝 Labeling an electrode as positive or negative is not assessed on the AP exam, so this course does not use those labels.
       `
     },
     {
@@ -146,15 +143,15 @@ The salt bridge maintains **electrical neutrality** by allowing ion migration be
             explanation: 'The salt bridge allows ions to migrate between half-cells to maintain electrical neutrality. Without it, charge buildup would halt the cell. Electrons travel through the external wire, not the bridge, and the bridge does not change $E^\\circ_{\\text{cell}}$.'
           },
           {
-            question: 'In a Daniell cell, the Zn electrode is the:',
+            question: 'In a Daniell cell, what happens at the Zn electrode?',
             options: [
-              'Cathode (positive terminal)',
-              'Anode (negative terminal)',
-              'Anode (positive terminal)',
-              'Cathode (negative terminal)'
+              'Zinc ions are reduced, so it is the cathode',
+              'Zinc atoms are oxidized, so it is the anode',
+              'Copper ions are reduced, so it is the cathode',
+              'Copper atoms are oxidized, so it is the anode'
             ],
             correctAnswer: 1,
-            explanation: 'Zinc is oxidized ($\\text{Zn} \\rightarrow \\text{Zn}^{2+} + 2e^-$), so it is the anode. In a galvanic cell, the anode is the negative terminal because it releases electrons into the wire; the positive terminal is the anode only in an electrolytic cell.'
+            explanation: 'Zinc is oxidized ($\\text{Zn} \\rightarrow \\text{Zn}^{2+} + 2e^-$), and oxidation always occurs at the anode. Reduction happens at the cathode, where $\\text{Cu}^{2+}$ gains electrons; zinc ions are produced, not reduced, in this cell.'
           }
         ]
       }
@@ -172,8 +169,8 @@ The salt bridge maintains **electrical neutrality** by allowing ion migration be
             options: ['cathode', 'anode', 'salt bridge', 'external wire']
           },
           {
-            label: 'In a galvanic cell, the anode has a charge of',
-            options: ['positive (+)', 'negative (−)', 'neutral', 'depends on the reaction']
+            label: 'Electrons in the external wire travel toward the',
+            options: ['anode', 'cathode', 'salt bridge', 'more dilute solution']
           },
           {
             label: 'Cations in the salt bridge migrate toward the',
@@ -188,11 +185,11 @@ The salt bridge maintains **electrical neutrality** by allowing ion migration be
             options: ['increases', 'decreases', 'stays the same', 'depends on the salt bridge']
           }
         ],
-        correctAnswers: ['anode', 'negative (−)', 'cathode', 'decreases', 'increases'],
+        correctAnswers: ['anode', 'cathode', 'cathode', 'decreases', 'increases'],
         hint1: 'AN OX, RED CAT.',
-        hint2: 'The anode produces electrons, giving it a negative charge in galvanic cells.',
+        hint2: 'Electrons are released at the anode and consumed at the cathode.',
         hint3: 'Cations move toward the region becoming more negative (where $Cu^{2+}$ is consumed).',
-        explanation: 'Oxidation at the anode (negative in galvanic). Cations migrate toward the cathode to replace consumed ions. The anode dissolves (mass decreases, e.g., Zn → $Zn^{2+}$) and metal deposits on the cathode (mass increases, e.g., $Cu^{2+}$ → Cu).'
+        explanation: 'Oxidation occurs at the anode, and the electrons it releases travel through the wire to the cathode. Cations migrate toward the cathode to replace consumed ions. The anode dissolves (mass decreases, e.g., Zn → $Zn^{2+}$) and metal deposits on the cathode (mass increases, e.g., $Cu^{2+}$ → Cu).'
       }
     },
     {

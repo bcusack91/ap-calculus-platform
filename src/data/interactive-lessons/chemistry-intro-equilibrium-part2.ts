@@ -18,7 +18,7 @@ export const chemIntroEquilibriumPart2Data = {
 | Rules for Writing $K_c$ |
 | Example |
 | ⚖️ The Equilibrium Constant $K_p$ |
-| Relationship Between $K_c$ and $K_p$ |
+| 🧪 Worked Example: Calculating $K_p$ |
 
 > 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
@@ -78,34 +78,28 @@ $$\\boxed{K_p = \\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b}}$$
 
 ---
 
-### Relationship Between $K_c$ and $K_p$
-
-$$\\boxed{K_p = K_c(RT)^{\\Delta n}}$$
-
-Where:
-- $R = 0.08206$ L·atm/(mol·K)
-- $T$ = temperature in Kelvin
-- $\\Delta n = \\text{(moles of gaseous products)} - \\text{(moles of gaseous reactants)}$
+Only gases appear, and each partial pressure (in atm) is raised to its coefficient.
 
 
 ---
 
 ### Example
 
-> **Problem:** For $\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)$:
+$$\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)$$
 
-**Solution:**
-
-$$\\Delta n = 2 - (1 + 3) = -2$$
-
-$$K_p = K_c(RT)^{-2}$$
+$$K_p = \\frac{(P_{\\text{NH}_3})^2}{(P_{\\text{N}_2})(P_{\\text{H}_2})^3}$$
 
 
 ---
 
-### Special Case: $\\Delta n = 0$
+### Which Constant Should You Use?
 
-> 💡 **Tip:** When $\\Delta n = 0$, then $K_p = K_c$ because $(RT)^0 = 1$. This is a useful shortcut on the AP exam!
+| The Problem Gives You | Write |
+|-----------------------|-------|
+| Molar concentrations, [X] | $K_c$ |
+| Partial pressures, $P_X$ | $K_p$ |
+
+> 💡 **Tip:** The AP exam always makes clear which constant it wants. You will not be asked to convert a $K_c$ value into a $K_p$ value.
       `
     },
     {
@@ -128,26 +122,26 @@ $$K_p = K_c(RT)^{-2}$$
             explanation: 'Products over reactants, each raised to their stoichiometric coefficient: $K_c = \\frac{[\\text{SO}_3]^2}{[\\text{SO}_2]^2[\\text{O}_2]}$. The coefficients become exponents, NOT multipliers.'
           },
           {
-            question: 'For the reaction $\\text{PCl}_5(g) \\rightleftharpoons \\text{PCl}_3(g) + \\text{Cl}_2(g)$, what is $\\Delta n$?',
+            question: 'What is the $K_p$ expression for $\\text{PCl}_5(g) \\rightleftharpoons \\text{PCl}_3(g) + \\text{Cl}_2(g)$?',
             options: [
-              '$-1$',
-              '$0$',
-              '$+1$',
-              '$+2$'
-            ],
-            correctAnswer: 2,
-            explanation: '$\\Delta n = (1 + 1) - 1 = +1$. There are 2 moles of gaseous products and 1 mole of gaseous reactant.'
-          },
-          {
-            question: 'For which reaction is $K_p = K_c$?',
-            options: [
-              '$\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)$',
-              '$\\text{H}_2(g) + \\text{I}_2(g) \\rightleftharpoons 2\\,\\text{HI}(g)$',
-              '$\\text{PCl}_5(g) \\rightleftharpoons \\text{PCl}_3(g) + \\text{Cl}_2(g)$',
-              '$2\\,\\text{NO}_2(g) \\rightleftharpoons \\text{N}_2\\text{O}_4(g)$'
+              '$K_p = \\frac{P_{\\text{PCl}_5}}{(P_{\\text{PCl}_3})(P_{\\text{Cl}_2})}$',
+              '$K_p = \\frac{(P_{\\text{PCl}_3})(P_{\\text{Cl}_2})}{P_{\\text{PCl}_5}}$',
+              '$K_p = \\frac{P_{\\text{PCl}_3} + P_{\\text{Cl}_2}}{P_{\\text{PCl}_5}}$',
+              '$K_p = (P_{\\text{PCl}_3})(P_{\\text{Cl}_2})(P_{\\text{PCl}_5})$'
             ],
             correctAnswer: 1,
-            explanation: '$K_p = K_c$ when $\\Delta n = 0$. For $H_{2}$ + $I_{2}$ ⇌ 2 HI: $\\Delta n = 2 - (1 + 1) = 0$. All other options have $\\Delta n \\neq 0$.'
+            explanation: 'Product partial pressures are multiplied together in the numerator and the reactant partial pressure goes in the denominator. Pressures are never added in an equilibrium expression, and the flipped fraction is the expression for the reverse reaction.'
+          },
+          {
+            question: 'For $\\text{PCl}_5(g) \\rightleftharpoons \\text{PCl}_3(g) + \\text{Cl}_2(g)$ at equilibrium, $P_{\\text{PCl}_5} = 0.40$ atm and $P_{\\text{PCl}_3} = P_{\\text{Cl}_2} = 0.20$ atm. What is $K_p$?',
+            options: [
+              '$0.10$',
+              '$0.50$',
+              '$1.0$',
+              '$10$'
+            ],
+            correctAnswer: 0,
+            explanation: '$K_p = (0.20)(0.20)/0.40 = 0.040/0.40 = 0.10$. Adding the product pressures gives $0.40/0.40 = 1.0$, using only one product gives 0.50, and inverting gives 10.'
           }
         ]
       }
@@ -164,40 +158,42 @@ At equilibrium: $[\\text{H}_2] = 0.10$ M, $[\\text{I}_2] = 0.20$ M, $[\\text{HI}
 
 **1)** Calculate $K_c$. (Enter as a whole number)
 
-**2)** What is $\\Delta n$ for this reaction?
+**2)** What is $K_c$ for the reverse reaction, $2\\,\\text{HI}(g) \\rightleftharpoons \\text{H}_2(g) + \\text{I}_2(g)$? (to 3 significant figures)
 
-**3)** If $K_c = 8.0$ at this temperature, what is $K_p$? (Enter as a number)
+**3)** In a different experiment, the equilibrium partial pressures are $P_{\\text{H}_2} = 0.50$ atm, $P_{\\text{I}_2} = 0.50$ atm, and $P_{\\text{HI}} = 2.0$ atm. What is $K_p$? (Enter as a whole number)
 
 *Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8', '0', '8.0'],
+        correctAnswers: ['8', '0.125', '16'],
         hint1: '$K_c = \\frac{[\\text{HI}]^2}{[\\text{H}_2][\\text{I}_2]} = \\frac{(0.40)^2}{(0.10)(0.20)}$',
-        hint2: '$\\Delta n = 2 - (1 + 1) = 0$',
-        hint3: 'When $\\Delta n = 0$, $K_p = K_c(RT)^0 = K_c$.',
-        explanation: '1) $K_c = \\frac{(0.40)^2}{(0.10)(0.20)} = \\frac{0.16}{0.02} = 8$. 2) $\\Delta n = 2 - 2 = 0$. 3) Since $\\Delta n = 0$, $K_p = K_c = 8.0$.'
+        hint2: 'Reversing a reaction inverts $K$.',
+        hint3: '$K_p = \\frac{(P_{\\text{HI}})^2}{(P_{\\text{H}_2})(P_{\\text{I}_2})}$',
+        explanation: '1) $K_c = \\frac{(0.40)^2}{(0.10)(0.20)} = \\frac{0.16}{0.02} = 8$. 2) $K_{\\text{rev}} = 1/8 = 0.125$. 3) $K_p = \\frac{(2.0)^2}{(0.50)(0.50)} = \\frac{4.0}{0.25} = 16$.'
       }
     },
     {
       id: 'ie2-kp-conversion',
       type: 'text' as const,
       content: `
-## 🧪 Worked Example: Converting $K_c$ to $K_p$
+## 🧪 Worked Example: Calculating $K_p$
 
-> **Problem:** For $\\text{N}_2(g) + 3\,\\text{H}_2(g) \\rightleftharpoons 2\,\\text{NH}_3(g)$, $K_c = 0.500$ at $T = 400$ K. Find $K_p$.
+> **Problem:** For $\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)$ at 400 K, an equilibrium mixture has $P_{\\text{N}_2} = 2.0$ atm, $P_{\\text{H}_2} = 1.0$ atm, and $P_{\\text{NH}_3} = 0.40$ atm. Find $K_p$.
 
 > **Solution:**
 
-$$\\Delta n = 2 - (1 + 3) = -2$$
+**Step 1:** Write the expression with exponents from the coefficients.
 
-$$K_p = K_c(RT)^{\\Delta n} = 0.500 \\times (0.08206 \\times 400)^{-2}$$
+$$K_p = \\frac{(P_{\\text{NH}_3})^2}{(P_{\\text{N}_2})(P_{\\text{H}_2})^3}$$
 
-$$K_p = 0.500 \\times (32.82)^{-2} = 0.500 \\times \\frac{1}{1077.4}$$
+**Step 2:** Substitute equilibrium partial pressures.
 
-$$K_p = 0.500 \\times 9.28 \\times 10^{-4} = 4.64 \\times 10^{-4}$$
+$$K_p = \\frac{(0.40)^2}{(2.0)(1.0)^3} = \\frac{0.16}{2.0} = 0.080$$
 
-> ⚠️ **Warning:** Notice that $K_p < K_c$ when $\\Delta n < 0$ (fewer moles of gas on the product side). Always check the sign of $\\Delta n$ before converting!
+**Step 3:** Interpret. $K_p < 1$, so at 400 K the equilibrium mixture favors the reactants.
+
+> ⚠️ **Warning:** Use partial pressures for $K_p$ and molar concentrations for $K_c$. Never mix the two in one expression.
       `
     },
     {
@@ -217,8 +213,8 @@ $$K_p = 0.500 \\times 9.28 \\times 10^{-4} = 4.64 \\times 10^{-4}$$
             options: ['only aqueous species', 'only gases', 'only solids', 'only liquids']
           },
           {
-            label: 'When $\\Delta n > 0$, $K_p$ is',
-            options: ['greater than $K_c$', 'less than $K_c$', 'equal to $K_c$', 'undefined']
+            label: 'In a $K_p$ expression, partial pressures are measured in',
+            options: ['atm', 'mol/L', 'grams', 'kelvins']
           },
           {
             label: 'Stoichiometric coefficients appear in the $K$ expression as',
@@ -228,13 +224,13 @@ $$K_p = 0.500 \\times 9.28 \\times 10^{-4} = 4.64 \\times 10^{-4}$$
         correctAnswers: [
           'mol/L',
           'only gases',
-          'greater than $K_c$',
+          'atm',
           'exponents'
         ],
         hint1: '$K_c$ stands for K-concentration — uses molarity.',
         hint2: 'Partial pressures are meaningful for gases.',
-        hint3: '$K_p = K_c(RT)^{\\Delta n}$. If $\\Delta n > 0$ and $RT > 1$, then $K_p > K_c$.',
-        explanation: '$K_c$ uses molarity (mol/L). $K_p$ uses partial pressures and applies to gaseous reactions. When $\\Delta n > 0$, the $(RT)^{\\Delta n}$ factor is greater than 1, so $K_p > K_c$. Coefficients become exponents in the equilibrium expression.'
+        hint3: 'On the AP exam, partial pressures in $K_p$ are expressed in atmospheres.',
+        explanation: '$K_c$ uses molarity (mol/L). $K_p$ uses partial pressures, in atm, and applies to gaseous reactions. Coefficients become exponents in the equilibrium expression.'
       }
     },
     {
@@ -257,15 +253,15 @@ $$K_p = 0.500 \\times 9.28 \\times 10^{-4} = 4.64 \\times 10^{-4}$$
             explanation: 'Products over reactants with coefficients as exponents: $K_c = \\frac{[\\text{NO}_2]^2}{[\\text{NO}]^2[\\text{O}_2]}$.'
           },
           {
-            question: 'If $K_c = 6.0 \\times 10^5$ for a reaction at 500 K and $\\Delta n = +2$, then $K_p$ is approximately:',
+            question: 'For $2\\,\\text{NO}(g) + \\text{O}_2(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$ at equilibrium, $P_{\\text{NO}} = 0.20$ atm, $P_{\\text{O}_2} = 0.50$ atm, and $P_{\\text{NO}_2} = 0.40$ atm. What is $K_p$?',
             options: [
-              '$1.0 \\times 10^9$',
-              '$6.0 \\times 10^5$',
-              '$3.6 \\times 10^2$',
-              '$2.5 \\times 10^{7}$'
+              '$4.0$',
+              '$8.0$',
+              '$0.13$',
+              '$1.6$'
             ],
-            correctAnswer: 0,
-            explanation: '$K_p = K_c(RT)^{\\Delta n} = 6.0 \\times 10^5 \\times (0.08206 \\times 500)^2 = 6.0 \\times 10^5 \\times (41.03)^2 = 6.0 \\times 10^5 \\times 1684 \\approx 1.0 \\times 10^9$. Ignoring the $(RT)^{\\Delta n}$ factor leaves $6.0 \\times 10^5$, dividing instead of multiplying gives $3.6 \\times 10^2$, and forgetting to square $RT$ gives $2.5 \\times 10^7$.'
+            correctAnswer: 1,
+            explanation: '$K_p = (0.40)^2/[(0.20)^2(0.50)] = 0.16/0.020 = 8.0$. Leaving out both squares gives 4.0, squaring only the product pressure gives 1.6, and inverting the expression gives 0.13.'
           }
         ]
       }

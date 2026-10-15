@@ -4,10 +4,10 @@ export const chemPropertiesStatesMatterPart5Data = {
     {
       id: 'sm5-intro',
       type: 'text' as const,
-      title: 'Phase Diagrams — Introduction',
-      content: `# 📊 Phase Diagrams
+      title: 'Particle Models of the Phases — Introduction',
+      content: `# 🔬 Comparing the Phases
 
-**Part 5 of 7 — Triple Points, Critical Points, and Reading Phase Diagrams**
+**Part 5 of 7 — Particle-Level Models of Solids, Liquids, and Gases**
 
 ---
 
@@ -15,97 +15,92 @@ export const chemPropertiesStatesMatterPart5Data = {
 
 | Section |
 |---------|
-| Anatomy of a Phase Diagram |
-| The Three Regions |
-| The Three Boundary Lines |
-| Two Special Points |
-| How to Read a Phase Diagram |
+| Spacing and Motion in Each Phase |
+| Drawing Correct Particle Diagrams |
+| Why Ice Floats |
+| Gases: Spacing, Speed, and Collisions |
 
-> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+> 🔑 **Key Concept:** The AP exam asks you to represent solids, liquids, and gases with particle drawings and to explain macroscopic behavior (density, compressibility, shape) from those drawings.
 
 ---
 
 ### What You'll Master in Part 5
-- Understanding the core concepts covered in Part 5
-- Applying these ideas to solve practice problems
-- Building toward AP exam readiness for this topic`
+- Explaining why solids and liquids have similar molar volumes while gases do not
+- Drawing and judging particle diagrams of phases and phase changes
+- Predicting how temperature, pressure, and volume change a gas's particle spacing and collision frequency`
     },
     {
       id: 'sm5-features',
       type: 'text' as const,
-      title: 'Key Features of Phase Diagrams',
+      title: 'Spacing and Motion in Each Phase',
       content: `
-## Anatomy of a Phase Diagram
+## Spacing and Motion in Each Phase
 
-A typical phase diagram has three **regions** (areas) and three **lines** (boundaries):
+### Solids and Liquids Are Both "Condensed" Phases
 
-### The Three Regions
+In both solids and liquids, the particles are **in contact with each other at all times**. The difference is motion, not spacing:
 
-- **Solid region** — upper left (high pressure, low temperature)
-- **Liquid region** — middle area
-- **Gas region** — lower right (low pressure, high temperature)
+- **Solid:** particles vibrate in place and do not move past one another. In a **crystalline** solid the particles form a regular, repeating pattern; in an **amorphous** solid (like glass) they are disordered but still locked in place.
+- **Liquid:** particles stay in contact but continually move, collide, and slide past each other.
 
-### The Three Boundary Lines
+Because the spacing is nearly the same, a solid and its liquid have **similar molar volumes**.
 
-Each line represents conditions where **two phases coexist** in equilibrium:
+### Gases Are Mostly Empty Space
 
-1. **Solid-Liquid line** (fusion curve) — separates solid and liquid regions
-   - Follows the equation related to the Clausius-Clapeyron relation
-   - Slope is usually **positive** (slants right) — increased pressure favors the denser solid phase
+In a gas, particles are far apart compared with their own size and move independently between collisions.
 
-2. **Liquid-Gas line** (vaporization curve) — separates liquid and gas regions
-   - Ends at the **critical point**
-   - Corresponds to the vapor pressure vs. temperature relationship
+| Water Sample (1 mol) | Approximate Volume |
+|----------------------|--------------------|
+| Ice at 0°C | 19.6 mL |
+| Liquid water at 25°C | 18.0 mL |
+| Water vapor at 100°C and 1 atm | about 30,600 mL |
 
-3. **Solid-Gas line** (sublimation curve) — separates solid and gas regions
-   - Below the triple point
+The liquid and solid differ by about 10%, while the gas occupies well over a thousand times more space.
 
-### Two Special Points
+---
 
-> 🔑 **Key Concept — Triple Point:** The **unique** temperature and pressure where **solid, liquid, and gas coexist** simultaneously. For water: $T = 0.01°C$, $P = 611.7$ Pa (0.00604 atm).
-
-> 🔑 **Key Concept — Critical Point:** Above this temperature and pressure, liquid and gas become **indistinguishable** → a **supercritical fluid**. For water: $T_c = 374°C$, $P_c = 218$ atm. For $CO_{2}$: $T_c = 31.1°C$, $P_c = 73$ atm.
+> 🔑 **Key Concept:** Liquids and solids are nearly incompressible because their particles already touch. Gases compress easily because there is so much empty space between particles.
       `
     },
     {
       id: 'sm5-features-q',
       type: 'multiple-choice' as const,
-      title: 'Phase Diagram Features Quiz',
-      content: 'Test your understanding of phase diagram features.',
+      title: 'Spacing and Motion Check',
+      content: 'Test your particle-level picture of the three phases.',
       exercise: {
         questions: [
           {
-            question: 'At the triple point of a substance:',
+            question: 'Why do the solid and liquid forms of most substances have similar molar volumes?',
             options: [
-              'Only the solid phase can exist at equilibrium',
-              'All three phases coexist in equilibrium',
-              'Liquid and gas merge into a supercritical fluid',
-              'The liquid boils at exactly 1 atm of pressure'
+              'Both phases have exactly the same intermolecular forces',
+              'In both phases the particles are in close contact',
+              'Liquids are made of smaller molecules than solids',
+              'Both phases contain the same amount of empty space as gases'
             ],
             correctAnswer: 1,
-            explanation: 'The triple point is the unique temperature and pressure at which all three phases — solid, liquid, and gas — coexist in equilibrium. Every pure substance has exactly one triple point.'
+            explanation: 'In solids and liquids the particles touch their neighbors at all times, so the average spacing, and therefore the volume per mole, is similar. The phases differ in particle motion, not in particle size or composition, and both have far less empty space than a gas.'
           },
           {
-            question: 'What happens above the critical temperature and critical pressure?',
+            question: 'Which statement best distinguishes a liquid from a solid at the particle level?',
             options: [
-              'The substance can exist only as a solid',
-              'The substance can exist only as a gas',
-              'Liquid and gas become one supercritical fluid',
-              'The substance breaks down into its elements'
+              'Liquid particles are far apart; solid particles touch',
+              'Liquid particles slide past each other; solid ones stay put',
+              'Liquid particles are broken molecules; solid particles are whole',
+              'Liquid particles do not attract; solid particles do'
             ],
-            correctAnswer: 2,
-            explanation: 'Above the critical point, the distinction between liquid and gas disappears. The substance forms a supercritical fluid that has properties of both phases — it fills a container like a gas but can dissolve substances like a liquid.'
+            correctAnswer: 1,
+            explanation: 'Both phases have particles in contact, and the molecules stay intact in both. The key difference is that liquid particles translate and slide past one another, while solid particles only vibrate about fixed positions. Attractions exist in both phases.'
           },
           {
-            question: 'On a phase diagram, the vaporization curve (liquid-gas line) represents conditions where:',
+            question: 'A syringe of air can be compressed easily, but a syringe of water barely compresses. The best explanation is that',
             options: [
-              'Only liquid exists',
-              'Only gas exists',
-              'Liquid and gas coexist in equilibrium',
-              'The substance becomes supercritical'
+              'water molecules are much larger than air molecules',
+              'air molecules have no mass',
+              'the air contains a lot of empty space between particles',
+              'water molecules repel each other strongly'
             ],
             correctAnswer: 2,
-            explanation: 'Each boundary line on a phase diagram represents conditions where two phases coexist in equilibrium. The vaporization curve is the set of (T, P) points where liquid and gas are in equilibrium.'
+            explanation: 'Gas particles are far apart, so pushing them closer takes up the empty space. Water molecules are already in contact, so there is almost no space to remove. Molecular size is not the reason: $N_{2}$ and $O_{2}$ are similar in size to $H_{2}O$.'
           }
         ]
       }
@@ -113,67 +108,64 @@ Each line represents conditions where **two phases coexist** in equilibrium:
     {
       id: 'sm5-reading-diagrams',
       type: 'text' as const,
-      title: 'Reading Phase Diagrams',
+      title: 'Drawing Correct Particle Diagrams',
       content: `
-## How to Read a Phase Diagram
+## Drawing Correct Particle Diagrams
 
-### Determining the Phase
+A good particle diagram of a pure substance shows:
 
-To find the phase at a specific temperature and pressure:
-1. Locate the point $(T, P)$ on the diagram.
-2. Determine which **region** the point falls in → that\'s the stable phase.
+| Phase | What to Draw |
+|-------|--------------|
+| Solid (crystalline) | Particles touching in a regular, repeating arrangement |
+| Liquid | Particles touching but randomly arranged, with occasional gaps |
+| Gas | A few particles far apart, randomly placed, filling the container |
 
-### Tracing a Path
+### Phase Changes Keep Molecules Intact
 
-**Heating at constant pressure** (horizontal line from left to right):
-- Cross the solid-liquid line → **melting**
-- Cross the liquid-gas line → **boiling**
+During melting, boiling, or sublimation, only the **intermolecular** attractions are overcome. The molecules themselves do not break apart.
 
-**Increasing pressure at constant temperature** (vertical line going up):
-- Cross the gas-liquid line → **condensation**
-- Cross the liquid-solid line → **freezing**
+- **Correct** drawing of boiling water: intact $H_{2}O$ molecules spread far apart in the gas.
+- **Incorrect** drawing: separate $H_{2}$ and $O_{2}$ molecules, or loose H and O atoms. That would be a chemical change (decomposition), not a phase change.
 
-### Example: What happens when you heat $CO_{2}$ at 1 atm?
+### Example: Liquid Bromine and Its Vapor
 
-At 1 atm pressure, trace a horizontal line across the $CO_{2}$ phase diagram:
-- You start in the **solid** region.
-- You cross the **solid-gas** line (sublimation curve) — but **not** the solid-liquid or liquid-gas lines!
-- $CO_{2}$ goes directly from solid → gas (**sublimation**).
+A sealed flask contains liquid $Br_{2}$ with bromine vapor above it. A correct drawing shows:
+- $Br_{2}$ molecules (two atoms joined) packed closely in the liquid at the bottom
+- Fewer $Br_{2}$ molecules, far apart, in the space above
+- **No** single Br atoms anywhere
 
 ---
 
-> 💡 **Tip:** At 1 atm, $CO_{2}$ goes directly from solid → gas (**sublimation**) because 1 atm is **below** the triple point pressure of $CO_{2}$ (5.11 atm). At pressures below the triple point, the liquid phase does not exist!
-
-This is why dry ice sublimes at atmospheric pressure instead of melting!
+> ⚠️ **Warning:** On free-response questions, drawing a diatomic molecule as separate atoms after a phase change is one of the most common ways to lose a point.
       `
     },
     {
       id: 'sm5-reading-dropdown',
       type: 'dropdown-select' as const,
-      title: 'Reading Phase Diagrams Practice',
-      content: 'Complete each statement about interpreting phase diagrams.',
+      title: 'Particle Diagram Practice',
+      content: 'Complete each statement about particle diagrams.',
       exercise: {
         dropdowns: [
           {
             id: 'sm5-dd1',
-            label: 'At pressures below the triple point',
-            options: ['melts (solid → liquid)', 'sublimes (solid → gas)', 'freezes (liquid → solid)'],
-            correctIndex: 1,
-            explanation: 'At pressures below the triple point, the liquid phase does not exist on the phase diagram. Heating a solid at such low pressure causes sublimation — direct conversion from solid to gas.'
+            label: 'A correct diagram of steam shows',
+            options: ['intact $H_{2}O$ molecules far apart', 'separate $H_{2}$ and $O_{2}$ molecules', 'single H and O atoms far apart'],
+            correctIndex: 0,
+            explanation: 'Boiling overcomes only the attractions between water molecules. Each $H_{2}O$ molecule stays intact; the molecules are simply much farther apart in the gas.'
           },
           {
             id: 'sm5-dd2',
-            label: 'The liquid phase only exists at pressures at or _______ the triple point',
-            options: ['below', 'at', 'above'],
-            correctIndex: 2,
-            explanation: 'The liquid phase only exists at pressures at or above the triple point pressure. Above the triple point, you can observe solid → liquid → gas transitions.'
+            label: 'Particles in a liquid are best drawn as',
+            options: ['far apart and randomly placed', 'touching but randomly arranged', 'touching in a repeating pattern'],
+            correctIndex: 1,
+            explanation: 'Liquid particles are in contact like a solid but lack the regular repeating pattern of a crystal, because they constantly move past one another.'
           },
           {
             id: 'sm5-dd3',
-            label: 'Above _______, the liquid-gas boundary line ends',
-            options: ['the triple point', 'the critical point', 'the normal boiling point'],
+            label: 'When iodine sublimes, the attractions overcome are',
+            options: ['covalent bonds inside $I_{2}$', 'dispersion forces between $I_{2}$ molecules', 'ionic bonds between iodine atoms'],
             correctIndex: 1,
-            explanation: 'Above the critical point, the liquid-gas boundary line ends. There is no phase transition — the substance exists as a supercritical fluid with properties of both liquid and gas.'
+            explanation: 'Iodine is a nonpolar molecular solid. Sublimation separates whole $I_{2}$ molecules from each other by overcoming London dispersion forces; the I–I covalent bond stays intact.'
           }
         ]
       }
@@ -181,116 +173,111 @@ This is why dry ice sublimes at atmospheric pressure instead of melting!
     {
       id: 'sm5-water-anomaly',
       type: 'text' as const,
-      title: 'Water\'s Anomalous Phase Diagram',
+      title: 'Why Ice Floats',
       content: `
-## Water vs. $CO_{2}$: The Anomaly
+## Why Ice Floats
 
-### Typical Substances (e.g., $CO_{2}$)
+For most substances, the solid is slightly **denser** than the liquid because the particles pack more tightly when locked in place. Water is a famous exception.
 
-For most substances, the **solid-liquid line slopes to the right** (positive slope). This means:
-- Increasing pressure at constant temperature **favors the solid** phase.
-- The solid is **denser** than the liquid (which is the norm).
+### The Particle Explanation
 
-### Water — The Exception
+- In ice, each water molecule hydrogen bonds to four neighbors in a fixed, **open hexagonal lattice**. The rigid geometry of these hydrogen bonds holds the molecules slightly apart, leaving empty space inside the crystal.
+- When ice melts, some hydrogen bonds break and the lattice collapses. Molecules can then pack **more closely**, so liquid water is **denser** than ice.
 
-Water\'s solid-liquid line slopes **to the left** (negative slope)! This means:
-- Increasing pressure at constant temperature can **melt ice** → favors the liquid.
-- **Ice is less dense than liquid water** — an anomaly among substances.
+> 🔑 **Key Concept:** The structure of a solid depends on both the interactions between particles and how well they can pack (3.3.A.1). In ice, the directional hydrogen bonds win out over tight packing.
 
----
+### Consequences
 
-> 🔑 **Key Concept:** In ice, water molecules form a **hexagonal crystal lattice** stabilized by hydrogen bonds. This open structure has empty space, making ice **less dense** than liquid water (where the H-bond network is partially disrupted and molecules pack more closely).
+1. **Ice floats** on liquid water.
+2. **Lakes freeze from the top down**, and the floating ice insulates the water below, so aquatic life survives the winter.
+3. **Water expands when it freezes**, which is why pipes can burst and rocks can crack in freezing weather.
 
-### Consequences of Water\'s Anomaly
-
-1. **Ice floats** — lakes freeze from the top down, insulating aquatic life below.
-2. **Ice skating** — high pressure under the blade can melt ice (though friction is the main factor).
-3. **Glacial movement** — high pressure at the base of glaciers can cause localized melting.
-
-### Comparison Table
-
-| Feature | Water $(H_{2}O)$ | Carbon Dioxide $(CO_{2})$ |
-|---------|-------------|---------------------|
-| Solid-liquid line slope | Negative (slopes left) | Positive (slopes right) |
-| Solid density vs. liquid | Solid < Liquid (ice floats) | Solid > Liquid (normal) |
-| Triple point | 0.01°C, 0.006 atm | −56.6°C, 5.11 atm |
-| Behavior at 1 atm | Solid → Liquid → Gas | Solid → Gas (sublimation) |
-| Critical point | 374°C, 218 atm | 31.1°C, 73 atm |
+| Substance | Denser Phase | Particle Reason |
+|-----------|--------------|-----------------|
+| Most substances (e.g., $CO_{2}$, paraffin) | Solid | Particles pack more tightly when locked in place |
+| Water | Liquid | Hydrogen-bonded lattice of ice is open |
       `
     },
     {
       id: 'sm5-water-anomaly-q',
       type: 'multiple-choice' as const,
-      title: 'Water\'s Anomaly Quiz',
-      content: 'Test your understanding of water\'s unusual phase diagram.',
+      title: 'Why Ice Floats Quiz',
+      content: 'Test your understanding of water\'s unusual solid.',
       exercise: {
         questions: [
           {
-            question: 'Why does the solid-liquid line in water\'s phase diagram slope to the LEFT?',
+            question: 'Why is ice less dense than liquid water?',
             options: [
-              'Water\'s strong hydrogen bonds tilt the line',
-              'Ice is denser than liquid, so pressure favors ice',
-              'Ice is less dense, so added pressure favors the liquid',
-              'Water\'s very high critical temperature bends the line'
-            ],
-            correctAnswer: 2,
-            explanation: 'The negative slope means increasing pressure at constant temperature converts solid to liquid — pressure favors the denser phase. Since liquid water is denser than ice, increasing pressure favors the liquid.'
-          },
-          {
-            question: 'Why does $CO_{2}$ sublime at 1 atm instead of melting?',
-            options: [
-              'Solid $CO_{2}$ is held by unusually strong intermolecular forces',
-              '1 atm is below the triple-point pressure of $CO_{2}$',
-              'Solid $CO_{2}$ is a network covalent solid like $SiO_{2}$',
-              '$CO_{2}$ has a negative solid-liquid slope like water'
+              'Ice molecules are larger than liquid water molecules',
+              'Hydrogen bonds hold ice in an open lattice with empty space',
+              'Ice contains trapped air bubbles in every crystal',
+              'Covalent O–H bonds lengthen when water freezes'
             ],
             correctAnswer: 1,
-            explanation: '$CO_{2}$\'s triple point is at 5.11 atm. Since normal atmospheric pressure (1 atm) is below this, the liquid phase cannot exist at 1 atm. Heating solid $CO_{2}$ at 1 atm causes it to go directly from solid to gas (sublimation).'
+            explanation: 'In ice, each molecule hydrogen bonds to four neighbors in an open hexagonal lattice that holds the molecules apart. Melting breaks some of these hydrogen bonds so the molecules pack more closely. The molecules themselves do not change size or bond length.'
+          },
+          {
+            question: 'A solid sample of paraffin wax sinks in its own melted liquid. What does this tell you?',
+            options: [
+              'Paraffin molecules hydrogen bond to each other like water',
+              'Solid paraffin is less dense than liquid paraffin',
+              'Its molecules pack more tightly in the solid',
+              'Paraffin decomposes into smaller molecules when it melts'
+            ],
+            correctAnswer: 2,
+            explanation: 'A solid that sinks in its own liquid is denser, meaning its molecules are packed more tightly. This is the normal behavior for most substances. Paraffin is a nonpolar hydrocarbon, so it cannot hydrogen bond, and melting is a physical change.'
           }
         ]
       }
     },
     {
-      id: 'sm5-supercritical',
+      id: 'sm5-gas-spacing',
       type: 'text' as const,
-      title: 'Supercritical Fluids',
+      title: 'Gases: Spacing, Speed, and Collisions',
       content: `
-## Supercritical Fluids
+## Gases: Spacing, Speed, and Collisions
 
-Above the **critical temperature** ($T_c$) and **critical pressure** ($P_c$), a substance enters the **supercritical fluid** region. In this state:
+Unlike solids and liquids, the spacing between gas particles is **not fixed**. It depends on temperature, pressure, and volume, and so does how often the particles collide.
 
-- The boundary between liquid and gas **disappears** — there is no distinct phase transition.
-- The substance has properties of **both** a liquid (dissolving power, density) and a gas (fills container, low viscosity).
+| Change (other variables fixed) | Average Spacing | Average Speed | Collision Frequency |
+|--------------------------------|-----------------|---------------|---------------------|
+| Decrease the volume | Smaller | Same | Higher |
+| Increase the pressure (by compressing) | Smaller | Same | Higher |
+| Raise the temperature (rigid container) | Same | Higher | Higher |
+| Add more gas (rigid container) | Smaller | Same | Higher |
 
-### Supercritical $CO_{2}$ — An Important Application
+### Reading the Table
 
-Because $CO_{2}$\'s critical point is relatively accessible ($T_c = 31.1°C$, $P_c = 73$ atm):
-- **Supercritical $CO_{2}$** is widely used as a "green" solvent in industrial processes.
-- It is used to **decaffeinate coffee** — it dissolves caffeine selectively, then the $CO_{2}$ is depressurized and the caffeine is recovered.
-- It leaves no toxic residue ($CO_{2}$ simply evaporates when pressure is released).
+- Only **temperature** changes the average speed, because Kelvin temperature is proportional to average kinetic energy.
+- Squeezing the same particles into less space makes them collide more often even though they move no faster.
+- Heating makes particles move faster, so they hit each other and the walls more often **and** harder.
+
+---
+
+> 💡 **Tip:** When you draw a gas before and after compression, keep the **same number** of particles and draw them closer together. When you draw it before and after heating in a rigid container, keep the spacing the same and show longer motion arrows.
       `
     },
     {
       id: 'sm5-exit-input',
       type: 'input-boxes' as const,
       title: 'Part 5 Exit Check',
-      content: 'Complete these key statements about phase diagrams.',
+      content: 'Complete these key statements about particle models of the phases.',
       exercise: {
         inputs: [
           {
-            label: 'The point where all three phases coexist is called the _____ point (one word before "point")',
-            correctAnswer: 'triple',
-            explanation: 'The triple point is the unique temperature and pressure where solid, liquid, and gas all coexist in equilibrium.'
+            label: 'Solids and liquids are both nearly _____ because their particles are already in contact (one word)',
+            correctAnswer: 'incompressible',
+            explanation: 'With particles already touching, there is almost no empty space to remove, so solids and liquids barely compress.'
           },
           {
-            label: 'Above the critical point, a substance exists as a _____ fluid (one word)',
-            correctAnswer: 'supercritical',
-            explanation: 'Above both the critical temperature and critical pressure, the substance is a supercritical fluid — the liquid-gas distinction vanishes.'
-          },
-          {
-            label: 'Water\'s solid-liquid line has a negative slope because ice is _____ dense than liquid water (more/less)',
+            label: 'Ice floats because it is _____ dense than liquid water (more/less)',
             correctAnswer: 'less',
-            explanation: 'Ice is less dense than liquid water due to its open hexagonal crystal structure. Since the liquid is denser, increasing pressure favors the liquid, giving a negative slope.'
+            explanation: 'The hydrogen-bonded lattice of ice holds the molecules in an open arrangement, so ice is less dense than the liquid.'
+          },
+          {
+            label: 'Of temperature, volume, and amount of gas, the only change that raises the average speed of gas particles is _____ (one word)',
+            correctAnswer: 'temperature',
+            explanation: 'Average kinetic energy, and therefore average speed for a given gas, depends only on Kelvin temperature. Volume and amount change the spacing and collision frequency but not the speed.'
           }
         ]
       }
@@ -298,31 +285,31 @@ Because $CO_{2}$\'s critical point is relatively accessible ($T_c = 31.1°C$, $P
     {
       id: 'sm5-exit-quiz',
       type: 'multiple-choice' as const,
-      title: 'Phase Diagrams Exit Quiz',
-      content: 'Final check on phase diagram concepts.',
+      title: 'Particle Models Exit Quiz',
+      content: 'Final check on particle-level models.',
       exercise: {
         questions: [
           {
-            question: 'A substance has a triple point at 50°C and 0.5 atm. At 1 atm and 30°C, the substance is most likely a:',
+            question: 'A sample of $N_{2}$ gas in a sealed, rigid container is heated. Which statement about the gas particles is correct?',
             options: [
-              'Gas',
-              'Liquid',
-              'Solid',
-              'Supercritical fluid'
-            ],
-            correctAnswer: 2,
-            explanation: 'At 30°C (below the triple point temperature of 50°C) and 1 atm (above the triple point pressure of 0.5 atm), we are in the upper-left region of the phase diagram. This is typically the solid region (high pressure, low temperature).'
-          },
-          {
-            question: 'If you want to observe the liquid phase of $CO_{2}$, you need a minimum pressure of approximately:',
-            options: [
-              '1.00 atm',
-              '5.11 atm',
-              '73 atm',
-              '218 atm'
+              'Their spacing shrinks, so they collide more often',
+              'They move faster and collide more often',
+              'They grow larger and fill more of the container',
+              'They break into N atoms and collide more often'
             ],
             correctAnswer: 1,
-            explanation: 'The triple point of $CO_{2}$ is at 5.11 atm. The liquid phase only exists at or above the triple point pressure. Below 5.11 atm, $CO_{2}$ transitions directly between solid and gas (sublimation/deposition). About 73 atm is the critical pressure, the top end of the liquid region, not the minimum.'
+            explanation: 'In a rigid container the volume and number of particles are fixed, so the average spacing does not change. Higher temperature means greater average kinetic energy and speed, so collisions are more frequent. Particles do not grow, and $N_{2}$ does not split into atoms on heating.'
+          },
+          {
+            question: 'Which particle diagram best represents liquid ethanol, $C_{2}H_{5}OH$, changing to ethanol vapor?',
+            options: [
+              'Intact ethanol molecules moving from close contact to far apart',
+              'Ethanol molecules splitting into C, H, and O atoms as they leave',
+              'Ethanol molecules reacting to form $CO_{2}$ and $H_{2}O$ in the vapor',
+              'Ethanol molecules staying touching in a repeating pattern'
+            ],
+            correctAnswer: 0,
+            explanation: 'Vaporization is a physical change: only the attractions between ethanol molecules are overcome. The vapor contains the same intact $C_{2}H_{5}OH$ molecules, now far apart. Forming $CO_{2}$ and $H_{2}O$ would be combustion, a chemical change.'
           }
         ]
       }

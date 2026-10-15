@@ -6,7 +6,7 @@ export const chemEnthalpyCalorimetryPart2Data = {
       type: 'text' as const,
       content: `# 🌡️ Enthalpy (ΔH) — The Heat of Reaction
 
-**Part 2 of 7 — State Functions and Standard Enthalpy**
+**Part 2 of 7 — Heat of Reaction, Amounts, and Standard Enthalpy**
 
 ---
 
@@ -17,8 +17,8 @@ export const chemEnthalpyCalorimetryPart2Data = {
 | 📖 What Is Enthalpy? |
 | At Constant Pressure |
 | Key Signs |
-| 🌡️ Enthalpy Is a State Function |
-| What This Means |
+| ⚖️ Heat Depends on How Much Reacts |
+| 🌡️ Standard Enthalpy |
 
 > 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
@@ -35,13 +35,7 @@ export const chemEnthalpyCalorimetryPart2Data = {
       content: `
 ## 📖 What Is Enthalpy?
 
-Enthalpy ($H$) is defined as:
-
-$$H = E + PV$$
-
-where $E$ is internal energy, $P$ is pressure, and $V$ is volume.
-
-We can never measure absolute enthalpy — only the **change** in enthalpy:
+Enthalpy ($H$) is the heat content of a system. We can never measure absolute enthalpy — only the **change** in enthalpy:
 
 $$\\Delta H = H_{\\text{products}} - H_{\\text{reactants}}$$
 
@@ -54,7 +48,7 @@ At constant pressure (open beaker, atmospheric conditions):
 
 $$\\boxed{\\Delta H = q_p}$$
 
-The enthalpy change equals the heat transferred at constant pressure. This is why chemists love enthalpy — it directly corresponds to the heat you can measure!
+The enthalpy change equals the heat transferred at constant pressure. This is why chemists use enthalpy — it directly corresponds to the heat you can measure (CED 6.6.A.1).
 
 > 🔑 **Key Insight:** At constant pressure (like an open beaker), the enthalpy change IS the heat. This makes $\\Delta H$ the most practically useful thermodynamic quantity.
 
@@ -70,39 +64,43 @@ The enthalpy change equals the heat transferred at constant pressure. This is wh
       `
     },
     {
-      id: 'eh2-state-function',
+      id: 'eh2-heat-amount',
       type: 'text' as const,
       content: `
-## 🌡️ Enthalpy Is a State Function
+## ⚖️ Heat Depends on How Much Reacts
 
-A **state function** depends only on the current state of the system, not on how it got there.
+A thermochemical equation's $\\Delta H$ is the heat for the reaction **exactly as written**, in moles. The heat for any other amount is proportional (CED 6.6.A):
 
+$$\\boxed{q = n_{\\text{rxn}} \\times \\Delta H}$$
 
----
-
-### What This Means
-
-- The enthalpy change $\\Delta H$ depends only on the **initial and final states**
-- It does **not** depend on the pathway or mechanism
-- The same reaction will have the same $\\Delta H$ regardless of how many steps it takes
-
-> 💡 **Analogy:** Think of altitude — your change in altitude depends only on start and end, not the trail you took. Enthalpy works the same way.
+where $n_{\\text{rxn}}$ is the number of "moles of reaction" — the moles of a substance divided by its coefficient.
 
 
 ---
 
-### Analogy
+### Example
 
-Think of altitude: if you climb a mountain, your change in altitude depends only on your starting and ending positions — not whether you took the steep trail or the winding road. Enthalpy works the same way.
+$$\\text{CH}_4(g) + 2\\text{O}_2(g) \\rightarrow \\text{CO}_2(g) + 2\\text{H}_2\\text{O}(l) \\quad \\Delta H = -890 \\text{ kJ}$$
+
+| Amount burned | Moles of reaction | Heat |
+|---------------|-------------------|------|
+| 1.00 mol $\\text{CH}_4$ | 1.00 | 890 kJ released |
+| 0.250 mol $\\text{CH}_4$ | 0.250 | 222 kJ released |
+| 4.00 mol $\\text{O}_2$ | 4.00 ÷ 2 = 2.00 | 1780 kJ released |
+
+> ⚠️ **Warning:** Divide by the coefficient of the substance you are given. 4.00 mol of $\\text{O}_2$ is only 2.00 moles of reaction, because the equation uses 2 mol $\\text{O}_2$ each time it runs.
 
 
 ---
 
-### Consequences
+### Physical State Matters
 
-1. If a reaction can occur in one step or multiple steps, $\\Delta H$ is the same
-2. This is the foundation of **Hess\'s Law** (Part 5)
-3. We can calculate $\\Delta H$ for reactions we cannot directly measure
+The states in the equation are part of $\\Delta H$. Forming liquid water releases more heat than forming water vapor, because condensing the vapor releases additional energy:
+
+| Reaction | $\\Delta H$ |
+|----------|------------|
+| $2\\text{H}_2(g) + \\text{O}_2(g) \\rightarrow 2\\text{H}_2\\text{O}(g)$ | −484 kJ |
+| $2\\text{H}_2(g) + \\text{O}_2(g) \\rightarrow 2\\text{H}_2\\text{O}(l)$ | −572 kJ |
       `
     },
     {
@@ -162,18 +160,18 @@ $$\\Delta H_{\\text{reverse}} = -\\Delta H_{\\text{forward}}$$
       exercise: {
         questions: [
           {
-            question: 'Enthalpy is a state function. This means:',
+            question: 'For $CH_{4}(g)$ + $2O_{2}(g)$ → $CO_{2}(g)$ + $2H_{2}O(l)$, ΔH = −890 kJ. How much heat is released when 0.500 mol of $CH_{4}$ burns?',
             options: [
-              'It depends on the pathway of the reaction',
-              'It can only be measured at standard conditions',
-              'ΔH depends only on the initial and final states',
-              'It is positive for every reaction'
+              '890 kJ',
+              '1780 kJ',
+              '445 kJ',
+              '223 kJ'
             ],
             correctAnswer: 2,
-            explanation: 'A state function depends only on the initial and final states, not on the path taken. This is why Hess\'s Law works — you can add up steps and get the same total ΔH.'
+            explanation: 'The heat is proportional to the amount reacted: q = 0.500 mol × 890 kJ/mol = 445 kJ released. 890 kJ is the heat for one mole of reaction, 1780 kJ doubles instead of halving, and 223 kJ halves twice.'
           },
           {
-            question: 'If ΔH for $2H_{2}(g)$ + $O_{2}(g)$ → $2H_{2}O(l)$ is −484 kJ, what is ΔH for $H_{2}(g)$ + $\\tfrac{1}{2} O_{2}(g)$ → $H_{2}O(l)$?',
+            question: 'If ΔH for $2H_{2}(g)$ + $O_{2}(g)$ → $2H_{2}O(g)$ is −484 kJ, what is ΔH for $H_{2}(g)$ + $\\tfrac{1}{2} O_{2}(g)$ → $H_{2}O(g)$?',
             options: [
               '−484 kJ',
               '−242 kJ',
@@ -230,7 +228,7 @@ Given: $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightarrow 2\\text{NH}_3(g) \\quad \\
         dropdowns: [
           {
             label: 'At constant pressure, ΔH equals',
-            options: ['work done', 'heat transferred', 'internal energy', 'free energy']
+            options: ['work done', 'heat transferred', 'activation energy', 'free energy']
           },
           {
             label: 'The standard state of bromine at 25°C is',
@@ -241,15 +239,15 @@ Given: $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightarrow 2\\text{NH}_3(g) \\quad \\
             options: ['1/3', '1', '3', '9']
           },
           {
-            label: 'Enthalpy change does NOT depend on',
-            options: ['initial state', 'final state', 'the reaction pathway', 'temperature']
+            label: 'The heat released by an exothermic reaction is proportional to',
+            options: ['the amount of reactant consumed', 'the volume of the container', 'the speed of the reaction', 'the activation energy']
           }
         ],
-        correctAnswers: ['heat transferred', '$Br_{2}(l)$', '3', 'the reaction pathway'],
+        correctAnswers: ['heat transferred', '$Br_{2}(l)$', '3', 'the amount of reactant consumed'],
         hint1: '$\\Delta H = q_p$ — enthalpy change equals heat at constant pressure.',
         hint2: 'Bromine is a liquid at room temperature and 1 atm.',
         hint3: 'ΔH scales linearly with the stoichiometric coefficients.',
-        explanation: 'At constant pressure, ΔH = $q_{p}$. Bromine is liquid at standard conditions. Scaling a reaction by factor n scales ΔH by n. As a state function, ΔH is path-independent.'
+        explanation: 'At constant pressure, ΔH = $q_{p}$. Bromine is liquid at standard conditions. Scaling a reaction by factor n scales ΔH by n. The heat released or absorbed is proportional to the moles that react (q = n × ΔH).'
       }
     },
     {
@@ -264,12 +262,12 @@ Given: $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightarrow 2\\text{NH}_3(g) \\quad \\
             question: 'Which statement about enthalpy is FALSE?',
             options: [
               'ΔH is positive for endothermic reactions',
-              'ΔH is a state function',
-              'ΔH depends on the mechanism of the reaction',
-              'Reversing a reaction changes the sign of ΔH'
+              'The heat released is proportional to the amount that reacts',
+              'ΔH for a reaction equals ΔH for its reverse reaction',
+              'Tripling the coefficients triples ΔH'
             ],
             correctAnswer: 2,
-            explanation: 'ΔH is a state function and does NOT depend on the mechanism or pathway. It depends only on the identity and states of reactants and products. All other statements are true.'
+            explanation: 'Reversing a reaction changes the sign of ΔH, so ΔH(reverse) = −ΔH(forward), not the same value. The other statements are true: endothermic means ΔH > 0, heat scales with the amount reacted, and tripling the coefficients triples ΔH.'
           },
           {
             question: 'Given: C(s) + $O_{2}(g)$ → $CO_{2}(g)$, ΔH = −393.5 kJ. What is ΔH for 3C(s) + $3O_{2}(g)$ → $3CO_{2}(g)$?',

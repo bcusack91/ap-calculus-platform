@@ -17,8 +17,8 @@ export const chemMixturesSeparationsPart3Data = {
 | 🔧 How Chromatography Works |
 | The Separation Principle |
 | 📌 Paper Chromatography |
-| Rf Values |
-| Example |
+| 📌 Thin-Layer and Column Chromatography |
+| 🔍 Reading a Chromatogram: Inferring Polarity |
 
 > 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
@@ -97,40 +97,40 @@ $$R_f = \\frac{4.2}{7.0} = 0.60$$
       id: 'mx3-column-gc',
       type: 'text' as const,
       content: `
-## 📌 Column Chromatography
+## 📌 Thin-Layer and Column Chromatography
+
+### Thin-Layer Chromatography (TLC)
+
+- Stationary phase: a thin layer of **silica gel** or alumina coated on a plate
+- Mobile phase: a liquid solvent that rises up the plate by capillary action
+- Works just like paper chromatography and is read with $R_f$ values, but runs faster and gives sharper spots
+
+### Column Chromatography
 
 - Stationary phase: silica gel or alumina packed in a glass column
 - Mobile phase: liquid solvent poured through the top
-- Components separate as they travel down the column at different rates
-- Fractions are collected from the bottom as they elute
+- Components travel down the column at different rates and are collected as separate fractions from the bottom
 
-**Use**: Purifying larger quantities of material in organic chemistry labs.
-
-## 💨 Gas Chromatography (GC)
-
-- Stationary phase: liquid coating on the inside of a long, thin tube (capillary column)
-- Mobile phase: inert carrier gas (He or $N_{2}$)
-- Sample is **vaporized** and carried through the column
-- Components separate based on boiling point and polarity
+**Use**: Purifying larger quantities of material, since each component can be collected and kept.
 
 
 ---
 
-### The Chromatogram
+## 🔍 Reading a Chromatogram: Inferring Polarity
 
-GC produces a graph of **detector signal vs. time**:
-- Each **peak** represents a different component
-- **Retention time** (time to reach detector) identifies the substance
-- **Peak area** is proportional to the **amount** of that component
+Paper (cellulose, with many –OH groups) and silica gel are **polar** stationary phases. Use intermolecular forces to interpret the results:
 
+| Observation | Interpretation |
+|-------------|----------------|
+| Spot stays near the starting line (low $R_f$) | Strong attractions to the polar stationary phase, so the component is relatively **polar** |
+| Spot travels near the solvent front (high $R_f$) | Weaker attraction to the stationary phase and stronger attraction to the solvent |
 
----
+### The Solvent Matters
 
-### Applications
+- With a **nonpolar** solvent (like hexane), nonpolar components travel far and polar components stay near the start.
+- Switching to a **more polar** solvent raises the $R_f$ of polar components, because the solvent now competes with the stationary phase for them.
 
-- Drug testing, environmental analysis, forensics
-- Analyzing mixtures of volatile compounds
-- Quality control in food and pharmaceutical industries
+> 🔑 **Key Concept:** Chromatography separates components because of **differences in the strength of intermolecular interactions** with the stationary and mobile phases. Always explain results in terms of those interactions.
       `
     },
     {
@@ -153,26 +153,26 @@ GC produces a graph of **detector signal vs. time**:
             explanation: 'A higher $R_f$ means the substance traveled farther with the solvent (mobile phase), indicating a stronger affinity for the mobile phase and weaker interaction with the paper (stationary phase). The amount spotted does not change $R_f$.'
           },
           {
-            question: 'In gas chromatography, the component with the longest retention time is:',
+            question: 'A TLC plate with a polar silica stationary phase is developed in hexane. Spot X has $R_f$ = 0.85 and spot Y has $R_f$ = 0.10. Which conclusion is best supported?',
             options: [
-              'The most volatile, lowest-boiling component',
-              'The one held most strongly by the stationary phase',
-              'The component present in the largest amount',
-              'The lightest molecule in the sample'
+              'X is more polar than Y',
+              'Y is more polar than X',
+              'X and Y have the same polarity',
+              'Y has the lower molar mass'
             ],
             correctAnswer: 1,
-            explanation: 'Longer retention time means the component spends more time interacting with the stationary phase coating. It elutes last because it is more strongly attracted to the stationary phase. The most volatile, lowest-boiling components usually elute first, and the amount present changes peak area, not retention time.'
+            explanation: 'Y barely moved, so it is held strongly by the polar silica: Y is the more polar component. X traveled with the nonpolar hexane, so it is relatively nonpolar. $R_f$ reflects intermolecular interactions, not molar mass alone.'
           },
           {
-            question: 'What information does the area under a peak in a GC chromatogram provide?',
+            question: 'A polar dye stays near the starting line when the paper is developed in hexane. What change would most likely make the dye travel farther?',
             options: [
-              'The identity of that component',
-              'The boiling point of that component',
-              'The amount of that component',
-              'The molar mass of that component'
+              'Using a longer strip of paper',
+              'Using a more polar solvent such as ethanol',
+              'Spotting a larger amount of the polar dye',
+              'Letting the spot dry more completely before developing'
             ],
-            correctAnswer: 2,
-            explanation: 'Peak area is proportional to the amount (relative concentration) of the component. Larger peaks indicate more of that substance. Retention time (not area) is used for identification.'
+            correctAnswer: 1,
+            explanation: 'A more polar solvent attracts the polar dye more strongly, competing with the polar paper and carrying the dye farther up. A longer strip, a bigger spot, or a drier spot does not change the balance of intermolecular attractions.'
           }
         ]
       }
@@ -219,31 +219,31 @@ GC produces a graph of **detector signal vs. time**:
         dropdowns: [
           {
             id: 'mx3-dd1',
-            label: 'Analyzing a mixture of volatile organic compounds requires _______',
-            options: ['paper chromatography', 'column chromatography', 'gas chromatography'],
-            correctIndex: 2,
-            explanation: 'Analyzing a mixture of volatile organic compounds requires GC. The sample is vaporized and carried through the column by a carrier gas.'
+            label: 'A quick check of how many components are in a reaction mixture, using a silica-coated plate, is _______',
+            options: ['paper chromatography', 'thin-layer chromatography', 'column chromatography'],
+            correctIndex: 1,
+            explanation: 'Thin-layer chromatography uses a plate coated with silica gel and gives a fast picture of how many components a mixture contains.'
           },
           {
             id: 'mx3-dd2',
             label: 'Identifying the dyes in a food coloring mixture is a classic _______ application',
-            options: ['paper chromatography', 'column chromatography', 'gas chromatography'],
+            options: ['paper chromatography', 'thin-layer chromatography', 'column chromatography'],
             correctIndex: 0,
             explanation: 'Identifying the dyes in a food coloring mixture is a classic paper chromatography application. Each dye will travel a different distance and show as a separate colored spot.'
           },
           {
             id: 'mx3-dd3',
             label: 'To purify a large quantity of a product from a reaction mixture, use _______',
-            options: ['paper chromatography', 'column chromatography', 'gas chromatography'],
-            correctIndex: 1,
+            options: ['paper chromatography', 'thin-layer chromatography', 'column chromatography'],
+            correctIndex: 2,
             explanation: 'When you need to purify a large quantity of a product from a reaction mixture, column chromatography allows collection of individual fractions.'
           },
           {
             id: 'mx3-dd4',
-            label: 'In GC, each compound has a characteristic _______ under given conditions',
-            options: ['retention time', 'peak area', 'peak height'],
+            label: 'On a polar stationary phase, the component with the lowest $R_f$ is the most _______',
+            options: ['polar', 'nonpolar', 'volatile'],
             correctIndex: 0,
-            explanation: 'In GC, each compound has a characteristic retention time under given conditions. Comparing retention times to known standards identifies the compound.'
+            explanation: 'A low $R_f$ means the component is held strongly by the polar stationary phase, so it is the most polar component.'
           }
         ]
       }

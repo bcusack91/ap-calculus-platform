@@ -47,14 +47,14 @@ Dissolving a solid in water usually → **positive** $\\Delta S$ (ions/molecules
 
 ### Rule 4: Temperature Increase
 
-Heating anything → **positive** $\\Delta S$ (more energy microstates)
+Heating anything → **positive** $\\Delta S$ (energy is more dispersed)
 
 
 ---
 
 ### Rule 5: Mixing
 
-Mixing different substances → **positive** $\\Delta S$ (more positional microstates)
+Mixing different substances → **positive** $\\Delta S$ (matter is more dispersed)
       `
     },
     {
@@ -142,7 +142,7 @@ When multiple rules conflict, the **gas molecule count** usually dominates becau
         hint1: 'Aqueous ions (dissolved, spread out) → solid (ordered, compact).',
         hint2: 'Liquid → liquid + gas. A gas is produced!',
         hint3: '2 mol gas → 0 mol gas (solid product).',
-        explanation: 'AgCl precipitation: dissolved ions → ordered solid → negative. $H_{2}O_{2}$ decomposition: produces gas → positive. $NH_{3}$ + HCl: 2 gases → solid → very negative. Heating: more thermal energy = more microstates → positive.'
+        explanation: 'AgCl precipitation: dissolved ions → ordered solid → negative. $H_{2}O_{2}$ decomposition: produces gas → positive. $NH_{3}$ + HCl: 2 gases → solid → very negative. Heating: a broader distribution of kinetic energies → positive.'
       }
     },
     {

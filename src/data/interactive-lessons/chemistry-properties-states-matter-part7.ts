@@ -123,15 +123,15 @@ $$\\boxed{\\text{Molecular Structure} \\xrightarrow{\\text{determines}} \\text{I
             explanation: 'All four observations — high surface tension, high viscosity, low vapor pressure, and high boiling point — are consistent with strong IMFs. Strong attractions between molecules keep them together tightly, resist flow, resist escaping to the gas phase, and require more energy to boil.'
           },
           {
-            question: 'The phase diagram of a substance shows that at 1 atm, heating the solid leads directly to the gas phase without passing through the liquid phase. Which statement must be true?',
+            question: 'At 25°C, liquid A has a higher equilibrium vapor pressure than liquid B. Which statement must be true?',
             options: [
-              'The substance has no triple point',
-              'The triple point pressure is above 1 atm',
-              'The critical temperature is below room temperature',
-              'The substance is water'
+              'A has weaker IMFs and a lower normal boiling point than B',
+              'A has stronger IMFs and a higher normal boiling point than B',
+              'A has a larger molar mass than B',
+              'A has a larger enthalpy of vaporization than B'
             ],
-            correctAnswer: 1,
-            explanation: 'If a substance sublimes at 1 atm (goes solid → gas without a liquid phase), then 1 atm must be below the triple point pressure. The liquid phase only exists at pressures ≥ the triple point pressure. This is the case for $CO_{2}$ (triple point at 5.11 atm).'
+            correctAnswer: 0,
+            explanation: 'A higher vapor pressure at the same temperature means molecules of A escape the liquid more easily, so A has weaker intermolecular forces. Weaker IMFs also mean A reaches a vapor pressure of 1 atm at a lower temperature, giving it the lower normal boiling point and the smaller $\\Delta H_{\\text{vap}}$. Molar mass alone does not decide this.'
           }
         ]
       }
@@ -183,9 +183,9 @@ But the actual order is: $CH_{4}$ (−161) < $H_{2}S$ (−60) < HF (19.5) < $H_{
             explanation: '$H_{2}O$ has O–H bonds where oxygen is one of the three hydrogen-bonding atoms (F, O, N). $H_{2}S$ has S–H bonds, but sulfur is not F, O, or N, so $H_{2}S$ cannot form hydrogen bonds. The strong H-bonding in water gives it a much higher boiling point.'
           },
           {
-            label: 'In a phase diagram, the pressure at the triple point of $CO_{2}$ is 5.11 atm. Can liquid $CO_{2}$ exist at 1 atm? (yes/no)',
-            correctAnswer: 'no',
-            explanation: 'The liquid phase only exists at pressures at or above the triple point pressure. Since 1 atm < 5.11 atm, liquid $CO_{2}$ cannot exist at 1 atm. At atmospheric pressure, $CO_{2}$ sublimes directly from solid to gas.'
+            label: 'Liquid X has a normal boiling point of 35°C and liquid Y has a normal boiling point of 78°C. Which liquid has the higher vapor pressure at 25°C? (X/Y)',
+            correctAnswer: 'X',
+            explanation: 'The liquid with the lower normal boiling point has weaker IMFs, so more of its molecules escape at any given temperature. Liquid X therefore has the higher vapor pressure at 25°C.'
           },
           {
             label: 'On a heating curve, the flat (horizontal) regions represent _____ (phase changes/temperature increases)',
@@ -263,15 +263,15 @@ But the actual order is: $CH_{4}$ (−161) < $H_{2}S$ (−60) < HF (19.5) < $H_{
             explanation: 'Conducts when dissolved (ions free to move) but not as a solid (ions locked in lattice) → ionic. High melting point → strong ionic bonds. Brittle → displacement brings like charges together → fracture. All characteristics of an ionic solid.'
           },
           {
-            question: 'According to the Clausius-Clapeyron equation, a plot of $\\ln P$ vs. $1/T$ for a liquid gives a straight line with a slope equal to:',
+            question: 'A sample of argon is heated from 300 K to 600 K in a rigid container. How does the average kinetic energy of the argon atoms change?',
             options: [
-              '$+\\Delta H_{\\text{vap}} / R$',
-              '$-\\Delta H_{\\text{vap}} / R$',
-              '$R / \\Delta H_{\\text{vap}}$',
-              '$\\Delta H_{\\text{fus}} / R$'
+              'It stays the same',
+              'It doubles',
+              'It increases by a factor of four',
+              'It is halved'
             ],
             correctAnswer: 1,
-            explanation: 'The Clausius-Clapeyron equation is $\\ln P = -\\frac{\\Delta H_{\\text{vap}}}{R} \\cdot \\frac{1}{T} + C$. This is in the form $y = mx + b$, where $y = \\ln P$, $x = 1/T$, and the slope $m = -\\Delta H_{\\text{vap}}/R$.'
+            explanation: 'Average kinetic energy is directly proportional to Kelvin temperature. Doubling the temperature from 300 K to 600 K doubles the average kinetic energy. A factor of four would come from squaring the temperature ratio, which does not apply to kinetic energy.'
           },
           {
             question: 'Ice floats in liquid water because:',

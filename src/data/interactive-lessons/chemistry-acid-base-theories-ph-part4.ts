@@ -239,15 +239,15 @@ An important AP Chemistry rule:
             options: ['2', '12', '14', '26']
           },
           {
-            label: 'The pH of $1.0 \\times 10^{-7}$ M HCl is closest to',
-            options: ['exactly 7.0', 'slightly less than 7', 'much less than 7', 'more than 7']
+            label: 'At 50°C, $K_w$ is larger than $1.0 \\times 10^{-14}$, so the pH of pure, neutral water is',
+            options: ['exactly 7.0', 'below 7.0', 'above 7.0', 'equal to 14.0']
           }
         ],
-        correctAnswers: ['acidic', '100', '2', 'slightly less than 7'],
+        correctAnswers: ['acidic', '100', '2', 'below 7.0'],
         hint1: '$pH < 7$ is acidic.',
         hint2: 'Each pH unit is a factor of 10; two units = $10^2 = 100$.',
         hint3: '$pOH = 14 - pH$.',
-        explanation: 'pH 3 is acidic. 2 pH units = $10^2 = 100\\times$ change in $[H^+]$. $pOH = 14 - 12 = 2$. The $1.0 \\times 10^{-7}$ M HCl adds to the autoionization of water, making $[H^+]$ slightly above $10^{-7}$, so pH is slightly below 7.'
+        explanation: 'pH 3 is acidic. 2 pH units = $10^2 = 100\\times$ change in $[H^+]$. $pOH = 14 - 12 = 2$. $K_w$ increases with temperature (CED 8.1.A.4), so at 50°C pure water has $[H_3O^+] = [OH^-]$ greater than $10^{-7}$ M and a pH below 7, even though it is still neutral.'
       }
     },
     {

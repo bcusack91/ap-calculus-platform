@@ -65,9 +65,9 @@ Even with enough energy, the molecules must collide with the correct **geometric
 
 ---
 
-### The Steric Factor
+### Orientation Matters More for Larger Molecules
 
-The fraction of collisions with correct orientation is called the **steric factor** ($p$), typically $0 < p < 1$. For simple atoms, $p \\approx 1$; for complex molecules, $p$ can be very small.
+Two single atoms can react no matter how they meet. For larger molecules, only collisions that bring the reacting atoms into contact can break and form the right bonds, so a much smaller fraction of collisions has a suitable orientation.
       `
     },
     {
@@ -90,15 +90,15 @@ The fraction of collisions with correct orientation is called the **steric facto
             explanation: 'An effective collision requires (1) kinetic energy ≥ Ea and (2) proper geometric orientation of the colliding molecules.'
           },
           {
-            question: 'The steric factor p represents:',
+            question: 'In NO + $NO_{3}$ → $2NO_{2}$, a collision in which the N atom of NO strikes the N atom of $NO_{3}$ does not react, even when the energy is high. Why?',
             options: [
-              'The fraction of molecules with energy at or above Ea',
-              'The fraction of collisions with correct orientation',
-              'The ratio of activation energy to thermal energy, Ea/RT',
-              'The number of collisions per second in each liter of gas'
+              'The collision has less energy than the activation energy',
+              'The orientation does not bring the reacting atoms together',
+              'Nitrogen atoms repel each other at any collision energy',
+              'The product $NO_{2}$ is less stable than the reactants'
             ],
             correctAnswer: 1,
-            explanation: 'The steric factor is the fraction of collisions where molecules are correctly oriented for reaction. For complex molecules, this can be very small. The fraction with enough energy is the Boltzmann factor $e^{-Ea/RT}$, and the number of collisions per second is the collision frequency, both separate terms.'
+            explanation: 'The new N–O bond can form only when an O atom of $NO_{3}$ meets the N of NO. An N-to-N collision has the wrong orientation, so the bonds cannot rearrange, regardless of energy. The stem rules out low energy, and product stability does not decide whether a single collision succeeds.'
           },
           {
             question: 'If every collision had sufficient energy and correct orientation, the rate would equal:',
@@ -139,13 +139,11 @@ When temperature increases:
 
 ---
 
-### The Boltzmann Factor
+### Reading the Shaded Area
 
-The fraction of molecules with energy $\\geq E_a$ is approximately:
+On a Maxwell-Boltzmann graph, draw a vertical line at $E_a$. The area under the curve to the **right** of that line is the fraction of particles energetic enough to react. Because $E_a$ usually sits far out in the tail of the curve, a modest temperature increase can make that small area much larger.
 
-$$\\boxed{f = e^{-E_a/(RT)}}$$
-
-> 💡 This exponential dependence explains why even small temperature changes can produce large rate changes.
+> 💡 This is why even small temperature changes can produce large rate changes. The AP exam asks you to reason with this graph qualitatively, not to calculate the fraction.
       `
     },
     {
@@ -161,8 +159,8 @@ $$\\boxed{f = e^{-E_a/(RT)}}$$
             options: ['taller and narrower', 'shorter and broader', 'unchanged', 'symmetric']
           },
           {
-            label: 'The fraction of molecules with energy ≥ Ea is given by',
-            options: ['Ea/RT', '$e^{-Ea/RT}$', 'RT/Ea', 'ln(Ea/RT)']
+            label: 'On the graph, the fraction of molecules with energy ≥ Ea is shown by',
+            options: ['the height of the peak', 'the area to the right of Ea', 'the area to the left of Ea', 'the position of the peak']
           },
           {
             label: 'Increasing temperature increases the fraction beyond Ea because',
@@ -173,60 +171,59 @@ $$\\boxed{f = e^{-E_a/(RT)}}$$
             options: ['increases with temperature', 'decreases with temperature', 'stays constant (equals 1)', 'depends on Ea']
           }
         ],
-        correctAnswers: ['shorter and broader', '$e^{-Ea/RT}$', 'the distribution broadens to higher energies', 'stays constant (equals 1)'],
+        correctAnswers: ['shorter and broader', 'the area to the right of Ea', 'the distribution broadens to higher energies', 'stays constant (equals 1)'],
         hint1: 'Total number of molecules is constant, so the curve flattens as it broadens.',
-        hint2: 'The Boltzmann factor is $e^{-Ea/RT}$.',
+        hint2: 'Which particles have at least $E_a$ of energy?',
         hint3: 'The distribution shifts and broadens — more molecules have high energies.',
-        explanation: 'Higher T: curve is shorter and broader (total area = 1, always). Fraction ≥ Ea = $e^{-Ea/RT}$. The broadening puts more area beyond Ea. Total area is always 1 (normalized probability).'
+        explanation: 'Higher T: curve is shorter and broader (total area = 1, always). The fraction with energy ≥ Ea is the area to the right of the Ea line. The broadening puts more area beyond Ea. Total area is always 1 (normalized probability).'
       }
     },
     {
-      id: 'ae1-rate-equation',
+      id: 'ae1-temperature-effect',
       type: 'text' as const,
       content: `
-## ⏱️ Collision Theory Rate Equation
+## ⏱️ Why Temperature Has Such a Large Effect
 
-Putting it all together, collision theory predicts:
+Raising the temperature changes two things, but not equally:
 
-$$\\boxed{\\text{Rate} = Z \\cdot p \\cdot e^{-E_a/(RT)}}$$
+| Effect of higher T | Size of the effect |
+|--------------------|--------------------|
+| Particles move faster, so they collide **more often** | Small — a 10 °C rise increases collision frequency by only a few percent |
+| A larger **fraction** of collisions has energy ≥ $E_a$ | Large — often enough to double the rate or more |
 
-where:
-- $Z$ = collision frequency (depends on concentration and temperature)
-- $p$ = steric factor (orientation)
-- $e^{-E_a/(RT)}$ = fraction with sufficient energy
+> 🔑 **Key Connection:** When you explain why a reaction speeds up on heating, the fraction of collisions with energy at or above $E_a$ is the main reason. Mention both frequency and energy, but emphasize the energy.
 
 
 ---
 
-### Connection to the Arrhenius Equation
+### What Does NOT Change with Temperature
 
-This leads directly to the Arrhenius equation:
+- The **activation energy** $E_a$ is a property of the reaction pathway. Heating does not lower it; only a catalyst (a new pathway) does.
+- The **orientation requirement** is the same at every temperature.
 
-$$\\boxed{k = A \\cdot e^{-E_a/(RT)}}$$
-
-where $A = Z \\cdot p$ is the **frequency factor** (also called the pre-exponential factor). We will derive this in detail in Part 3.
-
-> 🔑 **Key Connection:** Collision theory → Arrhenius equation. The frequency factor $A$ captures collision frequency and orientation; the exponential captures the energy requirement.
+> 💡 **Tip:** The Arrhenius equation, $k = Ae^{-E_a/(RT)}$, summarizes these ideas: $k$ grows as $T$ rises and shrinks as $E_a$ grows. Calculations with it are not assessed on the AP exam (CED 5.6 exclusion).
       `
     },
     {
-      id: 'ae1-calculation-drill',
+      id: 'ae1-reasoning-drill',
       type: 'input-boxes' as const,
       content: `
-**Collision Theory Calculations** 🧮
+**Collision Theory Reasoning** 🧮
 
-**1)** At 300 K, the Boltzmann factor for a reaction with $E_a = 50$ kJ/mol is $e^{-E_a/(RT)}$. Calculate $E_a/(RT)$. ($R = 8.314$ J/(mol·K); round to 3 significant figures)
+A reaction mixture is heated from 300 K to 320 K. For each quantity, type **increases**, **decreases**, or **unchanged**.
 
-**2)** Calculate $e^{-20.0}$ to 2 significant figures. (Use scientific notation: e.g., 2.1e-9)
+**1)** The fraction of collisions with energy ≥ $E_a$
 
-**3)** If temperature increases from 300 K to 310 K ($E_a = 50$ kJ/mol), calculate $E_a/(RT)$ at 310 K. (to 3 significant figures)
+**2)** The activation energy $E_a$
+
+**3)** The total area under the Maxwell-Boltzmann curve
       `,
       exercise: {
-        questions: [{ question: '(1)', answer: '20.0', acceptableAnswers: ['20.0'] }, { question: '(2)', answer: '2.1e-9', acceptableAnswers: ['2.1e-9', '2.06e-9', '2.1×10^-9', '2.1x10^-9', '2.1*10^-9'] }, { question: '(3)', answer: '19.4', acceptableAnswers: ['19.4'] }],
-        hint1: 'Ea/(RT) = 50,000/(8.314 × 300) = 50,000/2494.2 = 20.05 ≈ 20.0.',
-        hint2: '$e^{-20.0}$ = $2.06 \\times 10^{-9}$ ≈ $2.1 \\times 10^{-9}$.',
-        hint3: 'Ea/(RT) = 50,000/(8.314 × 310) = 50,000/2577.3 = 19.40 ≈ 19.4.',
-        explanation: '1) 50,000/(8.314 × 300) = 20.0. 2) $e^{-20.0}$ ≈ $2.1 \\times 10^{-9}$. 3) 50,000/(8.314 × 310) = 19.4. The decrease from 20.0 to 19.4 may seem small, but $e^{-19.4}/e^{-20.0}$ = $e^{0.6}$ ≈ 1.8, so the rate nearly doubles!'
+        questions: [{ question: '(1)', answer: 'increases', acceptableAnswers: ['increases', 'increase'] }, { question: '(2)', answer: 'unchanged', acceptableAnswers: ['unchanged', 'no change', 'same'] }, { question: '(3)', answer: 'unchanged', acceptableAnswers: ['unchanged', 'no change', 'same'] }],
+        hint1: 'The curve flattens and stretches toward higher energies.',
+        hint2: 'Is $E_a$ a property of the pathway or of the temperature?',
+        hint3: 'The area represents all of the particles. Did the number of particles change?',
+        explanation: '1) Increases: the distribution broadens, putting more area to the right of $E_a$. 2) Unchanged: $E_a$ depends on the reaction pathway, not on temperature. 3) Unchanged: the area represents the whole sample, so it stays the same while the shape changes.'
       }
     },
     {
@@ -241,12 +238,12 @@ where $A = Z \\cdot p$ is the **frequency factor** (also called the pre-exponent
             question: 'Which factor most dramatically affects the fraction of effective collisions when temperature increases by 10°C?',
             options: [
               'Collision frequency (molecules move faster)',
-              'The Boltzmann factor $e^{-Ea/RT}$',
-              'The steric factor',
-              'The number of molecules'
+              'How many collisions have energy ≥ Ea',
+              'How often collisions are well oriented',
+              'The number of molecules in the container'
             ],
             correctAnswer: 1,
-            explanation: 'While collision frequency increases modestly with temperature (proportional to $\\sqrt{T}$), the exponential Boltzmann factor $e^{-Ea/RT}$ changes much more dramatically. This exponential dependence is the dominant effect.'
+            explanation: 'Collision frequency rises only slightly with temperature, but the fraction of collisions energetic enough to reach the transition state (the area beyond Ea on the Maxwell-Boltzmann curve) grows much more. Orientation requirements and the number of molecules do not change on heating.'
           },
           {
             question: 'A reaction with a very large Ea will:',
@@ -257,7 +254,7 @@ where $A = Z \\cdot p$ is the **frequency factor** (also called the pre-exponent
               'Be fast, releasing more energy'
             ],
             correctAnswer: 1,
-            explanation: 'Large Ea means $e^{-Ea/RT}$ is very small, so only a tiny fraction of collisions have enough energy. The reaction is slow unless temperature is very high. A large Ea actually makes the rate MORE sensitive to temperature, and Ea says nothing about how much energy the reaction releases (that is ΔH).'
+            explanation: 'A large Ea sits far out in the tail of the Maxwell-Boltzmann curve, so only a tiny fraction of collisions have enough energy. The reaction is slow unless temperature is very high. A large Ea actually makes the rate MORE sensitive to temperature, and Ea says nothing about how much energy the reaction releases (that is ΔH).'
           }
         ]
       }

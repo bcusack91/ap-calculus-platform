@@ -204,10 +204,10 @@ $$\\boxed{c_{\\text{original}} = c_{\\text{measured}} \\times \\frac{V_{\\text{t
           },
           {
             id: 'mx6-dd4',
-            label: 'Collecting a precipitate after a double replacement reaction uses _______',
+            label: 'Collecting the solid formed in a precipitation reaction uses _______',
             options: ['filtration', 'chromatography', 'distillation', 'spectroscopy'],
             correctIndex: 0,
-            explanation: 'Collecting a precipitate after a double replacement reaction uses filtration.'
+            explanation: 'The solid formed in a precipitation reaction is collected by filtration; the dissolved spectator ions pass through in the filtrate.'
           }
         ]
       }

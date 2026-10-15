@@ -22,11 +22,10 @@ This section reviews all entropy concepts and presents AP-style questions that c
 
 | Concept | Key Equation | When to Use |
 |---------|-------------|-------------|
-| Boltzmann equation | $S = k_B \\ln W$ | Connecting microstates to entropy |
+| Dispersal | More dispersed matter or energy → higher $S$ | Predicting the sign of $\\Delta S$ |
 | Third Law | $S(0\\ \\text{K}) = 0$ | Absolute entropy values |
 | Standard entropy change | $\\Delta S° = \\sum nS°_p - \\sum nS°_r$ | Quantitative $\\Delta S$ calculations |
-| Surroundings entropy | $\\Delta S_{\\text{surr}} = -\\Delta H/T$ | Connecting enthalpy to spontaneity |
-| Second Law | $\\Delta S_{\\text{univ}} > 0$ | Determining spontaneity |
+| Gibbs free energy | $\\Delta G° = \\Delta H° - T\\Delta S°$ | Deciding favorability at a given T |
 | Crossover temperature | $T = \\Delta H/\\Delta S$ | When spontaneity changes |
 
 
@@ -55,10 +54,10 @@ This section reviews all entropy concepts and presents AP-style questions that c
               'The decrease in enthalpy as the ions form drives the process',
               'Its large entropy gain outweighs the unfavorable ΔH',
               'Endothermic processes are always spontaneous at room temperature',
-              'The surroundings gain entropy because heat flows out to them'
+              'Dissolving releases heat, which drives the process forward'
             ],
             correctAnswer: 1,
-            explanation: 'The solid dissolving into freely moving ions significantly increases entropy ($\\Delta S_{\\text{sys}} > 0$). At room temperature, $T\\Delta S$ exceeds $\\Delta H$, so $\\Delta G < 0$ (or equivalently, $\\Delta S_{\\text{univ}} > 0$). Because the process is endothermic, heat flows in from the surroundings, so their entropy actually falls.'
+            explanation: 'The solid dissolving into freely moving ions significantly increases entropy ($\\Delta S_{\\text{sys}} > 0$). At room temperature, $T\\Delta S$ exceeds $\\Delta H$, so $\\Delta G < 0$. The process is endothermic, so it absorbs heat rather than releasing it, and endothermic processes are not always favored.'
           },
           {
             question: 'At what temperature would the dissolution of $NH_{4}NO_{3}$ become nonspontaneous if $\\Delta H = +25.7$ kJ and $\\Delta S = +108.7$ J/K?',
@@ -146,15 +145,15 @@ Given: $\\Delta H° = -198$ kJ, $\\Delta S° = -187$ J/K
             explanation: '$T = \\Delta H/\\Delta S = (-50{,}000)/(-200) = 250$ K. Above 250 K, the $-T\\Delta S$ term (positive, since $\\Delta S < 0$) outweighs $\\Delta H$ and makes $\\Delta G > 0$. Leaving ΔH in kJ gives 0.25 K, dividing ΔS by ΔH gives 4.0 K, and an exothermic reaction with $\\Delta S < 0$ is not spontaneous at every temperature.'
           },
           {
-            question: 'Which is the BEST single-sentence summary of the Second Law?',
+            question: 'Which quantities together determine whether a process is thermodynamically favored at a given temperature?',
             options: [
-              'Energy can be neither created nor destroyed',
-              'Spontaneous processes increase the universe\'s entropy',
-              'A perfect crystal has zero entropy at 0 K',
-              'Exothermic reactions are always spontaneous'
+              'ΔH alone',
+              'ΔH and ΔS, with ΔS weighted by temperature',
+              'ΔS alone',
+              'The activation energy and the temperature'
             ],
             correctAnswer: 1,
-            explanation: 'The Second Law: $\\Delta S_{\\text{univ}} > 0$ for all spontaneous processes. The First Law conserves energy, the Third Law sets entropy to zero at 0 K.'
+            explanation: 'Favorability depends on both factors through ΔG° = ΔH° − TΔS°. Neither ΔH nor ΔS alone decides it when they compete, and activation energy affects only the rate.'
           }
         ]
       }

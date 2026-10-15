@@ -151,9 +151,9 @@ A common AP question: *"Explain why $CO_{2}$ is nonpolar but $SO_{2}$ is polar."
             explanation: 'The central carbon has 3 electron domains (2 C–C single bonds + 1 C=O double bond) → $sp^{2}$ hybridization.'
           },
           {
-            label: 'In $C_{2}H_{2}$ (acetylene), how many unhybridized p orbitals does EACH carbon atom have?',
+            label: 'In $C_{2}H_{2}$ (acetylene), how many pi bonds are in the molecule?',
             correctAnswer: '2',
-            explanation: 'Each carbon is sp hybridized (2 electron domains). sp uses 1s + 1p, leaving 3 − 1 = 2 unhybridized p orbitals per carbon, which form the 2 pi bonds.'
+            explanation: 'Each carbon is sp hybridized (2 electron domains). The C≡C triple bond is 1 sigma + 2 pi, and the C–H bonds are sigma only, so the molecule has 2 pi bonds.'
           }
         ]
       }
@@ -205,7 +205,7 @@ A common AP question: *"Explain why $CO_{2}$ is nonpolar but $SO_{2}$ is polar."
         questions: [
           {
             question: 'A molecule $XY_{3}$ has a trigonal pyramidal molecular geometry. What is the hybridization of atom X?',
-            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'],
             correctAnswer: 2,
             explanation: 'Trigonal pyramidal = 3 bonds + 1 lone pair = 4 electron domains → $sp^{3}$ hybridization. The lone pair converts tetrahedral electron geometry to trigonal pyramidal molecular geometry.'
           },
@@ -254,7 +254,7 @@ You now understand the orbital-level explanation for molecular bonding:
 
 | Concept | Key Takeaway |
 |---------|-------------|
-| **Hybridization** | Atomic orbitals mix to form equivalent hybrid orbitals for bonding |
+| **Hybridization** | A label for the electron-domain arrangement around an atom |
 | **$sp^{3}$** | 4 domains → tetrahedral → 109.5° → 0 pi bonds possible |
 | **$sp^{2}$** | 3 domains → trigonal planar → 120° → 1 pi bond possible |
 | **sp** | 2 domains → linear → 180° → 2 pi bonds possible |

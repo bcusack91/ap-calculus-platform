@@ -29,7 +29,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
       content: `
 ## ⚗️ Gas-Forming Reactions
 
-Some double-replacement reactions produce an **unstable compound** that decomposes into a gas and water. These are important driving forces.
+Some acid–base reactions produce an **unstable compound** that decomposes into a gas and water. These are important driving forces.
 
 
 ---
@@ -66,7 +66,7 @@ $$\\boxed{2\\text{H}^+(aq) + \\text{CO}_3^{2-}(aq) \\rightarrow \\text{H}_2\\tex
 
 | Step | Action | Example |
 |------|--------|---------|
-| 1 | **Identify** reaction type | Double replacement |
+| 1 | **Identify** reaction type | Precipitation or acid–base |
 | 2 | **Write** balanced molecular equation | Include phase labels |
 | 3 | **Split** aqueous strong electrolytes | Ions for soluble salts, strong acids/bases |
 | 4 | **Cancel** spectator ions | Same ion on both sides |
@@ -110,7 +110,7 @@ $$\\boxed{2\\text{H}^+(aq) + \\text{CO}_3^{2-}(aq) \\rightarrow \\text{H}_2\\tex
             explanation: '$Na^{+}$ and $Cl^{-}$ are spectators. The net ionic equation shows $H^{+}$ reacting with $CO_{3}^{2-}$ to form $H_{2}O$ and $CO_{2}$ ($H_{2}CO_{3}$ is unstable and decomposes). Charge: 2(+1) + (−2) = 0 on both sides ✓.'
           },
           {
-            question: 'When solutions of $(NH_{4})_{2}SO_{4}$ and $Ba(OH)_{2}$ are mixed, what are the driving forces?',
+            question: 'When solutions of $(NH_{4})_{2}SO_{4}$ and $Ba(OH)_{2}$ are mixed, what are the driving forces? (Barium sulfate is insoluble.)',
             options: [
               'Only a $BaSO_{4}$ precipitate forms',
               'Only $NH_{3}$ gas and water form',
@@ -157,15 +157,15 @@ Identify the precipitate or gas formed. Type the chemical formula (no phase labe
 
 **2)** What gas is produced when HCl(aq) reacts with $NaHCO_{3}(aq)$?
 
-**3)** What precipitate forms when $CuSO_{4}(aq)$ is mixed with NaOH(aq)?
+**3)** What precipitate forms when $CuSO_{4}(aq)$ is mixed with NaOH(aq)? (Sodium sulfate is one of the possible products.)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['PbI2', 'CO2', 'Cu(OH)2'],
-        hint1: '$Pb^{2+}$ + $I^{-}$ → $PbI_{2}$. Is it soluble? $I^{-}$ with $Pb^{2+}$ is an exception.',
+        hint1: 'The new pairings are $PbI_{2}$ and $KNO_{3}$. Which one can never be a solid?',
         hint2: '$H^{+}$ + $HCO_{3}^{-}$ → $H_{2}CO_{3}$, which decomposes into...',
-        hint3: '$Cu^{2+}$ + $OH^{-}$ → $Cu(OH)_{2}$. Hydroxides with transition metals are...',
-        explanation: '1) $PbI_{2}$ — lead(II) iodide, a bright yellow precipitate. $I^{-}$ with $Pb^{2+}$ is an exception to halide solubility. 2) $CO_{2}$ — $H^{+}$ + $HCO_{3}^{-}$ → $H_{2}CO_{3}$ → $H_{2}O$ + $CO_{2}$↑. 3) $Cu(OH)_{2}$ — copper(II) hydroxide, a blue precipitate. Hydroxides of transition metals are insoluble.'
+        hint3: 'The new pairings are $Cu(OH)_{2}$ and $Na_{2}SO_{4}$. A sodium salt cannot be the solid.',
+        explanation: '1) $PbI_{2}$ — potassium nitrate is always soluble, so the precipitate is lead(II) iodide. 2) $CO_{2}$ — $H^{+}$ + $HCO_{3}^{-}$ → $H_{2}CO_{3}$ → $H_{2}O$ + $CO_{2}$↑. 3) $Cu(OH)_{2}$ — sodium sulfate is always soluble, so the solid is copper(II) hydroxide; $Cu^{2+}$ needs two $OH^{-}$.'
       }
     },
     {

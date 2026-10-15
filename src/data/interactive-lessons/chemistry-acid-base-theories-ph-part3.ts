@@ -4,263 +4,242 @@ export const chemAcidBaseTheoriesPhPart3Data = {
     {
       id: 'ab3-intro',
       type: 'text' as const,
-      content: `# 🔬 Lewis Acids and Bases
+      content: `# 🧬 Molecular Structure and Acid Strength
 
-**Part 3 of 7 — Electron Pair Donors and Acceptors**
+**Part 3 of 7 — Why Some Acids Are Stronger Than Others**
 
 ---
 
-### How the Three Theories Compare
+### Topics in This Part
 
-| Theory | Key Question | Broadest? |
-|--------|-------------|-----------|
-| Arrhenius | Does it produce $H^+$ or $OH^-$? | Narrowest |
-| Brønsted-Lowry | Does it donate or accept $H^+$? | Middle |
-| **Lewis** | **Does it donate or accept electron pairs?** | **Broadest** |
+| Section |
+|---------|
+| 📖 Strength Depends on the Conjugate Base |
+| 🧪 Oxyacids: Electronegativity and Number of Oxygens |
+| Carboxylic Acids and Resonance |
+| ✏️ Strong Bases and Common Weak Bases |
 
-The Lewis model captures reactions that have nothing to do with protons!
-
-> 🔑 **Why this matters:** Lewis acid-base theory explains coordination chemistry, organic reactions, and metal complex formation — all tested on the AP exam.
+> 🔑 **Why this matters:** The AP exam asks you to explain acid and base strength from molecular structure (CED 8.6.A): which proton is acidic, and why one acid gives up its proton more readily than another.
 
 ---
 
 ### What You'll Master in Part 3
-- Defining Lewis acids (electron pair acceptors) and bases (electron pair donors)
-- Identifying Lewis acids: metal cations, incomplete octets, $H^+$
-- Comparing all three acid-base theories on the AP exam`
+- Linking acid strength to the stability of the conjugate base
+- Comparing oxyacids and carboxylic acids using electronegativity, inductive effects, and resonance
+- Recognizing the common strong bases and weak bases`
     },
     {
-      id: 'ab3-lewis-definition',
+      id: 'ab3-conjugate-stability',
       type: 'text' as const,
       content: `
-## 📖 The Lewis Definition
+## 📖 Strength Depends on the Conjugate Base
 
-| Type | Definition | Key Feature |
-|------|-----------|------------|
-| **Lewis Acid** | Electron pair **acceptor** | Has an empty orbital or can make room for electrons |
-| **Lewis Base** | Electron pair **donor** | Has a lone pair of electrons to share |
+When an acid HA donates a proton, it leaves behind its conjugate base $A^-$. The **more stable** $A^-$ is with its extra negative charge, the more readily HA gives up the proton, and the **stronger** the acid.
 
+$$\\text{HA} + \\text{H}_2\\text{O} \\rightleftharpoons \\text{H}_3\\text{O}^+ + \\text{A}^-$$
 
----
+| Strong acid | Conjugate base | Why the conjugate base is so stable (and so weak) |
+|-------------|----------------|-----------------------------------------------|
+| HCl, HBr, HI | $\\text{Cl}^-$, $\\text{Br}^-$, $\\text{I}^-$ | Charge held by an electronegative or large atom |
+| $\\text{HNO}_3$ | $\\text{NO}_3^-$ | Charge spread over three O atoms by resonance |
+| $\\text{H}_2\\text{SO}_4$, $\\text{HClO}_4$ | $\\text{HSO}_4^-$, $\\text{ClO}_4^-$ | Charge spread over several electronegative O atoms |
 
-### Comparison of All Three Theories
-
-| Theory | Acid | Base |
-|--------|------|------|
-| **Arrhenius** | Produces $H^+$ in water | Produces $OH^-$ in water |
-| **Brønsted-Lowry** | Proton donor | Proton acceptor |
-| **Lewis** | Electron pair acceptor | Electron pair donor |
+> 🔑 **Key Concept:** Strong acids have very weak conjugate bases, stabilized by **electronegativity**, **inductive effects**, **resonance**, or a combination (CED 8.6.A.1).
 
 
 ---
 
-### Key Insight
+### Three Stabilizing Effects
 
-Every Arrhenius acid is a Brønsted-Lowry acid, and every Brønsted-Lowry acid involves a Lewis acid interaction. The Lewis definition is the **most inclusive**.
+| Effect | What it means |
+|--------|---------------|
+| **Electronegativity** | An electronegative atom holds negative charge well |
+| **Inductive effect** | Electronegative atoms nearby pull electron density away from the O–H bond and help hold the negative charge |
+| **Resonance** | The negative charge is shared over two or more atoms instead of sitting on one |
 
-$$\\boxed{\\text{Arrhenius} \\subset \\text{Br\\o nsted-Lowry} \\subset \\text{Lewis}}$$
-
-> 🔑 If you can’t explain a reaction with Arrhenius or Brønsted-Lowry, try Lewis — it covers everything.
-      `
-    },
-    {
-      id: 'ab3-lewis-examples',
-      type: 'text' as const,
-      content: `
-## 🧪 Common Lewis Acids
-
-### 1. Metal Cations
-
-Metal ions have empty orbitals and accept electron pairs from ligands:
-
-$$Cu^{2+} + 4NH_3 \\rightarrow [Cu(NH_3)_4]^{2+}$$
-
-- $Cu^{2+}$: Lewis acid (accepts electron pairs)
-- $NH_3$: Lewis base (donates lone pair)
-
-
----
-
-### 2. Molecules with Incomplete Octets
-
-$$BF_3 + NH_3 \\rightarrow F_3B\\text{-}NH_3$$
-
-- $BF_3$: Lewis acid (boron has only 6 electrons, empty p orbital)
-- $NH_3$: Lewis base (nitrogen has a lone pair)
-
-> 💡 Molecules with **incomplete octets** (like $BF_3$ and $AlCl_3$) are classic Lewis acids.
-
-
----
-
-### 3. Protons ($H^+$)
-
-The proton itself is a Lewis acid — it accepts an electron pair:
-
-$$H^+ + OH^- \\rightarrow H_2O$$
-
-This shows how the Lewis definition encompasses the Brønsted-Lowry definition.
-
-## ✏️ Common Lewis Bases
-
-> 🔑 Any species with a **lone pair** can be a Lewis base:
-- $NH_3$, $H_2O$, $OH^-$, $F^-$, $CN^-$
-- Molecules with lone pairs on N, O, S, or halide ions
+> 💡 **Tip:** The acidic proton is almost always an H bonded to a highly electronegative atom (usually O). The H atoms bonded to carbon in acetic acid, $\\text{CH}_3\\text{COOH}$, are not acidic; only the O–H proton is.
       `
     },
     {
       id: 'ab3-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Lewis Acid-Base Concept Check** 🎯
+**Structure and Strength Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which species acts as a Lewis acid in the reaction $AlCl_3 + Cl^- \\rightarrow AlCl_4^-$?',
-            options: ['$Cl^-$', '$AlCl_3$', '$AlCl_4^-$', 'No species here accepts an electron pair'],
-            correctAnswer: 1,
-            explanation: '$AlCl_3$ has an incomplete octet on Al (only 6 electrons). It accepts an electron pair from $Cl^-$, making it the Lewis acid. $Cl^-$ donates its lone pair, making it the Lewis base.'
-          },
-          {
-            question: 'A Lewis base must have:',
+            question: 'Which statement best explains why $HNO_{3}$ is a strong acid?',
             options: [
-              'A positive charge',
-              'A lone pair of electrons',
-              'A proton to donate',
-              'An incomplete octet'
+              'It contains three oxygen atoms that each donate a proton',
+              '$NO_{3}^{-}$ is stabilized by resonance',
+              'Its N–O bonds are weaker than its O–H bond',
+              'Nitrogen is a metal that forms stable cations'
             ],
             correctAnswer: 1,
-            explanation: 'A Lewis base donates an electron pair. It must have a lone pair available. It does not need to have hydrogen or a negative charge (though many Lewis bases are anions).'
+            explanation: 'Nitric acid has one acidic proton. When it is lost, the negative charge of nitrate is shared over three electronegative O atoms by resonance, so $NO_{3}^{-}$ is a very weak base and the acid ionizes completely. Nitrogen is a nonmetal, and the number of O atoms does not equal the number of acidic protons.'
           },
           {
-            question: 'Which of these is a Lewis acid but NOT a Brønsted-Lowry acid?',
+            question: 'In acetic acid, $CH_{3}COOH$, which hydrogen is acidic?',
             options: [
-              '$HClO_4$',
-              '$H_2SO_4$',
-              '$BF_3$',
-              '$HNO_3$'
+              'Any of the three H atoms bonded to carbon',
+              'The H atom bonded to oxygen',
+              'All four H atoms equally',
+              'None; acetic acid has no acidic hydrogen'
             ],
-            correctAnswer: 2,
-            explanation: '$BF_3$ accepts electron pairs (Lewis acid) but has no $H^+$ to donate, so it\'s not a Brønsted-Lowry acid. All the other options donate protons and are both Brønsted-Lowry and Lewis acids.'
+            correctAnswer: 1,
+            explanation: 'The O–H hydrogen is acidic because removing it leaves a carboxylate ion stabilized by resonance between two O atoms. C–H bonds are not polar enough to ionize in water, so acetic acid is monoprotic.'
+          },
+          {
+            question: 'Comparing a strong acid HA with a weak acid HB, which statement is true?',
+            options: [
+              '$A^{-}$ is a stronger base than $B^{-}$',
+              '$A^{-}$ is a weaker base than $B^{-}$',
+              '$A^{-}$ and $B^{-}$ have equal base strength',
+              'Neither $A^{-}$ nor $B^{-}$ can accept a proton at all'
+            ],
+            correctAnswer: 1,
+            explanation: 'The stronger the acid, the weaker (more stable) its conjugate base. The conjugate base of a strong acid has negligible tendency to accept a proton, while the conjugate base of a weak acid is a weak base that does accept protons to some extent.'
           }
         ]
       }
     },
     {
-      id: 'ab3-coordinate-bonds',
+      id: 'ab3-oxyacids',
       type: 'text' as const,
       content: `
-## 🔗 Coordinate Covalent Bonds
+## 🧪 Oxyacids: Electronegativity and Number of Oxygens
 
-When a Lewis base donates an electron pair to a Lewis acid, the resulting bond is called a **coordinate covalent bond** (or **dative bond**).
+In an oxyacid, the acidic H is bonded to an O atom, which is bonded to a central atom (H–O–X).
 
-$$F_3B + :NH_3 \\rightarrow F_3B\\text{←}NH_3$$
+### Same central atom, more oxygens → stronger acid
 
-The arrow ← shows that **both** electrons in the bond came from the nitrogen of $NH_3$.
+| Acid | Formula | Strength |
+|------|---------|----------|
+| Hypochlorous | HClO | Weak |
+| Chlorous | $\\text{HClO}_2$ | Weak (stronger) |
+| Chloric | $\\text{HClO}_3$ | Strong |
+| Perchloric | $\\text{HClO}_4$ | Strongest |
 
-> 💡 A **coordinate covalent bond** (dative bond) is formed whenever a Lewis base donates a lone pair to a Lewis acid.
+Each extra O atom pulls electron density away from the O–H bond (inductive effect) and gives the conjugate base more atoms over which to spread its charge (resonance).
 
 
 ---
 
-### In Coordination Chemistry
+### Same number of oxygens, more electronegative central atom → stronger acid
 
-Metal ions form **coordination compounds** with Lewis bases (called **ligands**):
+$$\\text{HOCl} > \\text{HOBr} > \\text{HOI}$$
 
-$$Fe^{3+} + 6CN^- \\rightarrow [Fe(CN)_6]^{3-}$$
+Chlorine is the most electronegative, so it pulls the most electron density from the O–H bond and best stabilizes the conjugate base.
 
-| Lewis Acid | Lewis Base (Ligand) | Product |
-|-----------|-------------------|---------|
-| $Fe^{3+}$ | $CN^-$ | $[Fe(CN)_6]^{3-}$ |
-| $Ag^+$ | $NH_3$ | $[Ag(NH_3)_2]^+$ |
-| $Cu^{2+}$ | $H_2O$ | $[Cu(H_2O)_6]^{2+}$ |
+
+---
+
+### Carboxylic Acids and Resonance
+
+Carboxylic acids (–COOH) are a common class of weak acid (CED 8.6.A.1.ii). Their conjugate bases, carboxylate ions, are stabilized by resonance between two O atoms. Electronegative atoms near the –COOH group make the acid stronger through the inductive effect:
+
+$$\\text{CH}_3\\text{COOH} < \\text{CH}_2\\text{ClCOOH} < \\text{CCl}_3\\text{COOH} \\quad \\text{(increasing acid strength)}$$
+      `
+    },
+    {
+      id: 'ab3-comparison-input',
+      type: 'input-boxes' as const,
+      content: `
+**Which Acid Is Stronger?** 🧮
+
+Type the formula of the **stronger** acid in each pair.
+
+**1)** $\\text{HClO}_3$ or $\\text{HClO}_4$
+
+**2)** HOCl or HOBr
+
+**3)** $\\text{CH}_3\\text{COOH}$ or $\\text{CCl}_3\\text{COOH}$
+      `,
+      exercise: {
+        questions: [{ question: '(1)', answer: 'HClO4', acceptableAnswers: ['HClO4', 'perchloric acid'] }, { question: '(2)', answer: 'HOCl', acceptableAnswers: ['HOCl', 'HClO', 'hypochlorous acid'] }, { question: '(3)', answer: 'CCl3COOH', acceptableAnswers: ['CCl3COOH', 'trichloroacetic acid'] }],
+        hint1: 'Same central atom: which has more oxygen atoms?',
+        hint2: 'Same number of oxygens: which central atom is more electronegative?',
+        hint3: 'Electronegative Cl atoms near the –COOH group pull electron density.',
+        explanation: '1) $\\text{HClO}_4$: the extra O atom strengthens the inductive effect and spreads the conjugate base\'s charge over more atoms. 2) HOCl: Cl is more electronegative than Br. 3) $\\text{CCl}_3\\text{COOH}$: three electronegative Cl atoms stabilize the carboxylate ion by the inductive effect.'
+      }
+    },
+    {
+      id: 'ab3-bases',
+      type: 'text' as const,
+      content: `
+## ✏️ Strong Bases and Common Weak Bases
+
+| Type | Examples | Notes |
+|------|----------|-------|
+| **Strong bases** | Group 1 and Group 2 hydroxides: NaOH, KOH, $\\text{Ca(OH)}_2$, $\\text{Ba(OH)}_2$ | Dissociate completely; their conjugate acids (such as $\\text{H}_2\\text{O}$ formed from $\\text{OH}^-$) are very weak |
+| **Weak nitrogen bases** | $\\text{NH}_3$, amines such as $\\text{CH}_3\\text{NH}_2$ | The lone pair on N accepts a proton to form $\\text{NH}_4^+$ or $\\text{CH}_3\\text{NH}_3^+$ |
+| **Carboxylate ions** | $\\text{CH}_3\\text{COO}^-$ | The conjugate bases of carboxylic acids are weak bases |
+
+> 🔑 **Key Concept:** Weak bases accept protons only partially in water. Ammonia and amines are the most common examples on the AP exam (CED 8.6.A.1.iv).
       `
     },
     {
       id: 'ab3-dropdown-check',
       type: 'dropdown-select' as const,
       content: `
-**Lewis Acid-Base Classification** 🔍
+**Structure and Strength Review** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'In the reaction $Ag^+ + 2NH_3 \\rightarrow [Ag(NH_3)_2]^+$, $Ag^+$ is the Lewis',
-            options: ['acid', 'base', 'salt', 'spectator']
+            label: 'A more stable conjugate base means the acid is',
+            options: ['weaker', 'stronger', 'unchanged in strength', 'not an acid']
           },
           {
-            label: 'The most inclusive acid-base theory is',
-            options: ['Arrhenius', 'Brønsted-Lowry', 'Lewis', 'All are equally inclusive']
+            label: 'Among HClO, $HClO_{2}$, $HClO_{3}$, and $HClO_{4}$, the strongest acid is',
+            options: ['HClO', '$HClO_{2}$', '$HClO_{3}$', '$HClO_{4}$']
           },
           {
-            label: '$BF_3$ acts as a Lewis acid because boron has',
-            options: ['extra lone-pair electrons', 'an incomplete octet', 'a full octet of electrons', 'high electronegativity']
+            label: 'The negative charge of a carboxylate ion is stabilized mainly by',
+            options: ['resonance between two O atoms', 'a metal cation', 'hydrogen bonding to carbon', 'a full octet on carbon']
           },
           {
-            label: 'A coordinate covalent bond forms when',
-            options: ['each atom donates one electron', 'one atom donates both electrons', 'electrons are transferred', 'no electrons are shared']
+            label: 'Methylamine, $CH_{3}NH_{2}$, behaves in water as a',
+            options: ['strong acid', 'weak acid', 'strong base', 'weak base']
           }
         ],
-        correctAnswers: ['acid', 'Lewis', 'an incomplete octet', 'one atom donates both electrons'],
-        hint1: '$Ag^+$ accepts electron pairs from $NH_3$.',
-        hint2: 'Lewis includes all Brønsted-Lowry and Arrhenius cases plus more.',
-        hint3: 'Boron in $BF_3$ has only 6 valence electrons.',
-        explanation: '$Ag^+$ is a Lewis acid (electron pair acceptor). Lewis theory is most inclusive. $BF_3$ has an incomplete octet, making boron electron-deficient. In a coordinate bond, one atom (the Lewis base) donates both electrons.'
-      }
-    },
-    {
-      id: 'ab3-comparison-input',
-      type: 'input-boxes' as const,
-      content: `
-**Theory Comparison** 🧮
-
-For each species, identify which acid-base theory can explain its behavior as an acid or base:
-
-**1)** $NaOH$ acting as a base — which is the simplest theory that explains this? (Enter: Arrhenius, Bronsted-Lowry, or Lewis)
-
-**2)** $NH_3$ acting as a base (no $OH^-$ in its formula) — simplest theory? (Enter: Arrhenius, Bronsted-Lowry, or Lewis)
-
-**3)** $BF_3$ acting as an acid (no $H^+$ to donate) — simplest theory? (Enter: Arrhenius, Bronsted-Lowry, or Lewis)
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Arrhenius', 'Bronsted-Lowry', 'Lewis'],
-        hint1: '$NaOH$ produces $OH^-$ in water — the Arrhenius definition covers this.',
-        hint2: '$NH_3$ accepts a proton — this requires the Brønsted-Lowry definition.',
-        hint3: '$BF_3$ accepts an electron pair but has no $H^+$ involvement.',
-        explanation: '1) Arrhenius: $NaOH$ produces $OH^-$ in water. 2) Brønsted-Lowry: $NH_3$ accepts a proton. 3) Lewis: $BF_3$ accepts an electron pair — only Lewis theory can explain this as acid behavior since there\'s no proton transfer.'
+        correctAnswers: ['stronger', '$HClO_{4}$', 'resonance between two O atoms', 'weak base'],
+        hint1: 'A stable conjugate base has little tendency to take the proton back.',
+        hint2: 'More oxygens on the same central atom.',
+        hint3: 'The charge is shared between the two oxygens.',
+        explanation: 'A stable conjugate base means a stronger acid. $HClO_{4}$ has the most O atoms. Carboxylate charge is shared between two O atoms by resonance. Amines, like ammonia, are weak nitrogen bases.'
       }
     },
     {
       id: 'ab3-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Exit Quiz — Lewis Acids & Bases** ✅
+**Exit Quiz — Structure and Acid Strength** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'In the formation of the complex ion $[Zn(OH)_4]^{2-}$, which species is the Lewis base?',
+            question: 'Which statement best explains why HOCl is a stronger acid than HOI?',
             options: [
-              '$Zn^{2+}$',
-              '$OH^-$',
-              '$[Zn(OH)_4]^{2-}$',
-              '$Zn(OH)_2$'
+              'Cl is more electronegative than I',
+              'HOCl has more oxygen atoms than HOI',
+              'The O–H bond in HOCl is stronger than the O–H bond in HOI',
+              'I is more electronegative than Cl, so HOI holds its proton more tightly'
             ],
-            correctAnswer: 1,
-            explanation: '$OH^-$ donates lone pairs to $Zn^{2+}$, making $OH^-$ the Lewis base and $Zn^{2+}$ the Lewis acid. The complex ion is the product of that bonding, and $Zn(OH)_2$ is a neutral hydroxide, not the electron-pair donor here.'
+            correctAnswer: 0,
+            explanation: 'Both acids have one O atom, so the difference is the central atom. Chlorine is more electronegative than iodine, pulling more electron density away from the O–H bond and stabilizing $OCl^{-}$. A stronger O–H bond would make an acid weaker, not stronger, and iodine is less electronegative than chlorine.'
           },
           {
-            question: 'Which acid-base definition is required to explain why $CO_2$ reacts with $OH^-$?',
+            question: 'Trichloroacetic acid, $CCl_{3}COOH$, is a much stronger acid than acetic acid, $CH_{3}COOH$. Which explanation is best?',
             options: [
-              'Arrhenius only',
-              'Brønsted-Lowry only',
-              'Lewis',
-              'None — this is not an acid-base reaction'
+              'The Cl atoms donate additional protons to water',
+              'The Cl atoms withdraw electron density',
+              'The C–Cl bonds break to release $H^{+}$',
+              'Trichloroacetic acid has more O–H groups'
             ],
-            correctAnswer: 2,
-            explanation: '$CO_2$ accepts an electron pair from $OH^-$: $CO_2 + OH^- \\rightarrow HCO_3^-$. Since $CO_2$ has no $H^+$ to donate, only the Lewis definition identifies it as an acid.'
+            correctAnswer: 1,
+            explanation: 'The inductive effect of three electronegative Cl atoms draws electron density toward them, weakening the O–H bond and stabilizing the negative charge on the carboxylate. Cl atoms carry no protons, no C–Cl bonds break, and both acids have a single O–H group.'
           }
         ]
       }

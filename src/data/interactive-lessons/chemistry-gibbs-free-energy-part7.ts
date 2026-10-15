@@ -30,13 +30,13 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 ## 🌡️ The Web of Thermodynamic Equations
 
 ### Core Equations
-> 🔑 **Key Concept:** These five equations form the complete Gibbs free energy toolkit for AP Chemistry.
+> 🔑 **Key Concept:** These equations, plus the Q vs. K comparison, form the complete Gibbs free energy toolkit for AP Chemistry.
 | Equation | When to Use |
 |----------|-------------|
 | $\\Delta G = \\Delta H - T\\Delta S$ | Calculate ΔG from enthalpy and entropy |
 | $\\Delta G° = \\sum \\Delta G°_f(\\text{prod}) - \\sum \\Delta G°_f(\\text{react})$ | Calculate from tables |
 | $\\Delta G° = -RT\\ln K$ | Connect free energy to equilibrium |
-| $\\Delta G = \\Delta G° + RT\\ln Q$ | Non-standard conditions |
+| $\\Delta G°_{\\text{overall}} = \\Delta G°_1 + \\Delta G°_2$ | Coupled reactions |
 | $\\Delta G° = -nFE°$ | Connect to electrochemistry (Topic 4) |
 
 
@@ -55,13 +55,13 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 ---
 
 ### Critical Relationships
-> ⚠️ **Warning:** Notice the distinction — $\\Delta G°$ (with °) predicts equilibrium position, while $\\Delta G$ (without °) predicts reaction direction.
+> ⚠️ **Warning:** Keep the two questions separate — $\\Delta G°$ (or $K$) tells you where equilibrium lies, while comparing $Q$ with $K$ tells you which way a particular mixture will shift.
 - $\\Delta G° < 0 \\Leftrightarrow K > 1$ (products favored)
 - $\\Delta G° = 0 \\Leftrightarrow K = 1$
 - $\\Delta G° > 0 \\Leftrightarrow K < 1$ (reactants favored)
-- $\\Delta G < 0$: forward reaction proceeds
-- $\\Delta G = 0$: at equilibrium
-- $\\Delta G > 0$: reverse reaction proceeds
+- $Q < K$: net reaction proceeds forward
+- $Q = K$: at equilibrium
+- $Q > K$: net reaction proceeds in reverse
       `
     },
     {
@@ -95,15 +95,15 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             explanation: '$\\Delta G° = -RT\\ln K = 0 \\Rightarrow \\ln K = 0 \\Rightarrow K = 1$.'
           },
           {
-            question: 'Which statement correctly describes the difference between ΔG° and ΔG?',
+            question: 'Which statement about ΔG° is correct?',
             options: [
-              'ΔG° applies at any conditions; ΔG only at standard',
-              'ΔG° applies at standard conditions; ΔG at any conditions',
-              'ΔG is per gram of reactant; ΔG° is per mole',
-              'ΔG includes only enthalpy; ΔG° includes entropy too'
+              'ΔG° < 0 means the reaction is fast at that temperature',
+              'ΔG° < 0 means K > 1 under standard conditions',
+              'ΔG° depends on the starting amounts of reactants',
+              'ΔG° has the same value at every temperature'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta G°$ is the free energy change when all species are at standard conditions (1 atm, 1 M). $\\Delta G$ is the free energy change at the actual (non-standard) conditions, calculated using $\\Delta G = \\Delta G° + RT\\ln Q$.'
+            explanation: 'A negative ΔG° means products are favored at equilibrium, K > 1 (CED 9.5.A.1). ΔG° says nothing about rate, it refers to standard conditions rather than the starting amounts, and it changes with temperature through ΔG° = ΔH° − TΔS°.'
           }
         ]
       }
@@ -118,13 +118,13 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 
 **2)** At 298 K, $\\Delta G° = -57.1$ kJ/mol. What is $K$? (use $e^{23.0} \\approx 10^{10}$; express as a power of 10)
 
-**3)** A reaction has $\\Delta G° = +5.0$ kJ/mol. At what value of $Q$ does $\\Delta G = 0$ at 298 K? (i.e., what is $K$? Round to 2 significant figures.)
+**3)** A reaction has $\\Delta G° = +5.0$ kJ/mol at 298 K. What is $K$? (Round to 2 significant figures.)
       `,
       exercise: {
         questions: [{ question: '1)', answer: '720', acceptableAnswers: ['720'] }, { question: '2)', answer: '10^10', acceptableAnswers: ['10^10', '1e10', '1.0e10', '1x10^10', '1×10^10'] }, { question: '3)', answer: '0.13', acceptableAnswers: ['0.13', '0.133'] }],
         hint1: '$T = \\Delta H/\\Delta S = -180{,}000/(-250)$',
         hint2: '$K = e^{57100/(8.314 \\times 298)} = e^{23.0}$',
-        hint3: 'At $\\Delta G = 0$: $Q = K = e^{-\\Delta G°/(RT)} = e^{-5000/2478}$',
+        hint3: '$K = e^{-\\Delta G°/(RT)} = e^{-5000/2478}$',
         explanation: '1) $T = 180{,}000/250 = 720$ K. 2) $K = e^{23.0} \\approx 10^{10}$. 3) $K = e^{-5000/2478} = e^{-2.02} \\approx 0.13$.'
       }
     },
@@ -137,8 +137,8 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
       exercise: {
         dropdowns: [
           {
-            label: 'ΔG represents the maximum',
-            options: ['heat the system can release', 'useful work the system can do', 'entropy the system can create', 'kinetic energy of the products']
+            label: 'Coupling a reaction with ΔG° = +30 kJ to one with ΔG° = −50 kJ gives an overall ΔG° of',
+            options: ['+80 kJ', '−20 kJ', '−80 kJ', '+20 kJ']
           },
           {
             label: 'A negative ΔG° means K is',
@@ -153,11 +153,11 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             options: ['have opposite signs', 'have the same sign', 'are both zero', 'are equal']
           }
         ],
-        correctAnswers: ['useful work the system can do', 'greater than 1', 'in reverse', 'have the same sign'],
-        hint1: 'Free energy = energy available for non-PV work.',
+        correctAnswers: ['−20 kJ', 'greater than 1', 'in reverse', 'have the same sign'],
+        hint1: 'ΔG° values add when reactions add.',
         hint2: '$\\Delta G° < 0 \\Rightarrow -RT\\ln K < 0 \\Rightarrow \\ln K > 0 \\Rightarrow K > 1$.',
         hint3: 'Q > K: too many products → system shifts backward.',
-        explanation: 'ΔG = maximum useful work. Negative ΔG° → K > 1. Q > K → reverse direction. Crossover T = ΔH/ΔS requires same-sign values for a positive temperature.'
+        explanation: 'Coupled ΔG° values add: +30 + (−50) = −20 kJ. Negative ΔG° → K > 1. Q > K → reverse direction. Crossover T = ΔH/ΔS requires same-sign values for a positive temperature.'
       }
     },
     {
@@ -172,23 +172,23 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             question: 'A reaction has ΔG° = +10 kJ/mol at 298 K. A student starts with pure reactants (Q ≈ 0). Will the reaction proceed forward initially?',
             options: [
               'No — ΔG° > 0 means the reaction never proceeds forward',
-              'Yes — with Q ≈ 0, RT ln Q is very negative, making ΔG < 0',
+              'Yes — Q ≈ 0 is less than K, so the net reaction proceeds forward',
               'No — it must be heated until ΔG° turns negative',
               'Only if a catalyst first lowers ΔG° below zero'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta G = \\Delta G° + RT\\ln Q$. When $Q \\approx 0$, $\\ln Q \\rightarrow -\\infty$, so $\\Delta G \\ll 0$. The reaction proceeds forward until $Q = K$ (equilibrium). Even reactions with positive ΔG° proceed forward from pure reactants!'
+            explanation: 'A positive ΔG° means K < 1 (here K ≈ 0.018), but K is not zero. Starting from pure reactants, Q ≈ 0 < K, so some product forms until Q = K. Heating or a catalyst is not required for this; a catalyst never changes ΔG°.'
           },
           {
             question: 'Which relationship is CORRECT?',
             options: [
               'ΔG° < 0 means the reaction goes to completion',
-              'ΔG < 0 means Q < K',
+              'Q < K means the net reaction proceeds forward',
               'ΔG° = 0 means the reaction never occurs',
-              'ΔG > 0 means Q < K'
+              'Q > K means the net reaction proceeds forward'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta G < 0$ means $Q < K$ — the system is below equilibrium, so the forward reaction is spontaneous. ΔG° < 0 means K > 1, not completion. ΔG° = 0 means K = 1. ΔG > 0 means Q > K.'
+            explanation: 'When Q < K the mixture has too little product, so the net reaction proceeds forward toward equilibrium. ΔG° < 0 means K > 1, not completion; ΔG° = 0 means K = 1; and Q > K means the net reaction runs in reverse.'
           }
         ]
       }

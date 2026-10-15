@@ -76,7 +76,7 @@ Using: $S°$(graphite) = 5.7, $S°$(O₂) = 205.0, $S°$(CO₂) = 213.7
           { label: 'The unit for $S°$ is', options: ['kJ/mol', 'J/(mol·K)', '(J·K)/mol', 'J/mol'] },
           { label: '$S°$ for a substance is always', options: ['zero for elements', 'negative for solids', 'positive above 0 K', 'equal to $\\Delta H_f°$'] }
         ], correctAnswers: ['much larger', 'J/(mol·K)', 'positive above 0 K'],
-        hint1: 'Gas vs liquid — enormous difference in microstates.',
+        hint1: 'Gas vs liquid — an enormous difference in dispersal.',
         hint2: 'Watch: J not kJ!',
         hint3: 'Third Law: only a perfect crystal at 0 K has S = 0.',
         explanation: 'Gas has much higher S° than liquid (188.7 vs 69.9 for water). Units are J/(mol·K). S° is always positive above 0 K.' } },

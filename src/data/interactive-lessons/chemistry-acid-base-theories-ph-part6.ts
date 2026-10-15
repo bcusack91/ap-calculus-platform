@@ -14,9 +14,9 @@ export const chemAcidBaseTheoriesPhPart6Data = {
 
 | Problem Type | Skills Combined |
 |-------------|-----------------|
-| Theory identification | Arrhenius vs. Brønsted-Lowry vs. Lewis |
+| Model identification | Arrhenius vs. Brønsted-Lowry |
 | Multi-step pH | Dilution → dissociation → $-\\log$ |
-| Conceptual reasoning | Very dilute acid pH limits |
+| Conceptual reasoning | $K_w$ and neutral water at other temperatures |
 | Conjugate pair analysis | Identifying donors/acceptors |
 
 > 🔑 **Why this matters:** AP Chemistry free-response questions often combine acid-base theory with pH calculations — exactly the type of multi-step problems in this workshop.
@@ -25,8 +25,8 @@ export const chemAcidBaseTheoriesPhPart6Data = {
 
 ### What You'll Master in Part 6
 - Solving multi-step pH problems with dilution
-- Identifying acid-base behavior across all three theories
-- Reasoning about edge cases like very dilute strong acids`
+- Identifying acid-base behavior with the Arrhenius and Brønsted-Lowry models
+- Reasoning about how temperature changes $K_w$ and the pH of neutral water`
     },
     {
       id: 'ab6-problem1',
@@ -38,16 +38,16 @@ Consider these reactions:
 
 **Reaction A:** $HF(aq) + H_2O(l) \\rightleftharpoons F^-(aq) + H_3O^+(aq)$
 
-**Reaction B:** $BF_3 + F^- \\rightarrow BF_4^-$
+**Reaction B:** $NH_3(aq) + H_2O(l) \\rightleftharpoons NH_4^+(aq) + OH^-(aq)$
 
 **Reaction C:** $NaOH(aq) \\rightarrow Na^+(aq) + OH^-(aq)$
 
-For each reaction, the acid-base theory required is:
+For each reaction, the model that describes it:
 - Reaction A: **Brønsted-Lowry** (proton transfer from $HF$ to $H_2O$)
-- Reaction B: **Lewis** ($BF_3$ accepts electron pair from $F^-$)
-- Reaction C: **Arrhenius** ($NaOH$ produces $OH^-$ in water)
+- Reaction B: **Brønsted-Lowry** ($NH_3$ accepts a proton from $H_2O$; ammonia contains no $OH^-$, so the Arrhenius model does not describe it well)
+- Reaction C: **Arrhenius** ($NaOH$ produces $OH^-$ in water) — also Brønsted-Lowry, since $OH^-$ is a proton acceptor
 
-> 🔑 When classifying, always use the **simplest** theory that explains the observation.
+> 🔑 The Brønsted-Lowry model covers every reaction here; it is the model the AP exam uses.
       `
     },
     {
@@ -58,7 +58,7 @@ For each reaction, the acid-base theory required is:
 
 **Reaction A:** $HF(aq) + H_2O(l) \\rightleftharpoons F^-(aq) + H_3O^+(aq)$
 
-**Reaction B:** $BF_3 + F^- \\rightarrow BF_4^-$
+**Reaction B:** $NH_3(aq) + H_2O(l) \\rightleftharpoons NH_4^+(aq) + OH^-(aq)$
       `,
       exercise: {
         questions: [
@@ -74,15 +74,15 @@ For each reaction, the acid-base theory required is:
             explanation: '$HF$ donates a proton to become $F^-$. The conjugate base is the species that remains after the acid loses $H^+$.'
           },
           {
-            question: 'In Reaction B, $F^-$ acts as a:',
+            question: 'In Reaction B, $H_2O$ acts as a:',
             options: [
-              'Brønsted-Lowry acid',
+              'Brønsted-Lowry base',
               'Arrhenius base',
-              'Lewis base',
-              'Lewis acid'
+              'Brønsted-Lowry acid',
+              'Spectator molecule'
             ],
             correctAnswer: 2,
-            explanation: '$F^-$ donates an electron pair to $BF_3$, which has an empty orbital on boron. This makes $F^-$ a Lewis base and $BF_3$ a Lewis acid.'
+            explanation: 'Water donates a proton to $NH_3$ and becomes $OH^-$, so here water is a Brønsted-Lowry acid. It does not accept a proton in this reaction, it does not produce $OH^-$ by dissociating a hydroxide, and it is not a spectator.'
           }
         ]
       }
@@ -158,21 +158,21 @@ A student mixes 25.0 mL of 0.080 M $HNO_3$ with 15.0 mL of 0.080 M $KOH$.
       content: `
 ## 📌 Problem 3: Conceptual Reasoning
 
-### The pH of Very Dilute Strong Acids
+### Neutral Water at Other Temperatures
 
-When a strong acid is extremely dilute (e.g., $10^{-8}$ M $HCl$), you **cannot** simply say $pH = 8$.
+The value of $K_w$ depends on temperature (CED 8.1.A.4). Autoionization of water is endothermic, so $K_w$ **increases** as temperature rises.
 
-> ⚠️ **An acid solution can never have $pH > 7$!**
+| Temperature | $K_w$ | $[H_3O^+] = [OH^-]$ in pure water | pH of pure water |
+|-------------|-------|----------------------------------|------------------|
+| 0°C | $1.1 \\times 10^{-15}$ | $3.3 \\times 10^{-8}$ M | 7.47 |
+| 25°C | $1.0 \\times 10^{-14}$ | $1.0 \\times 10^{-7}$ M | 7.00 |
+| 50°C | $5.5 \\times 10^{-14}$ | $2.3 \\times 10^{-7}$ M | 6.63 |
 
-The autoionization of water contributes $[H^+] = 10^{-7}$ M, which is much larger than the acid\'s contribution.
+> 🔑 **Key Concept:** Pure water is **always neutral**, because $[H_3O^+] = [OH^-]$. A pH of 6.63 at 50°C does not mean the water is acidic; "neutral = pH 7" is true only at 25°C.
 
-**Correct approach:**
+**How to calculate:** In pure water, $[H_3O^+] = [OH^-] = \\sqrt{K_w}$, then $pH = -\\log[H_3O^+]$.
 
-$$\\boxed{[H^+]_{\\text{total}} = [H^+]_{\\text{acid}} + [H^+]_{\\text{water}} \\approx 10^{-8} + 10^{-7} = 1.1 \\times 10^{-7} \\text{ M}}$$
-
-$$pH = -\\log(1.1 \\times 10^{-7}) = 6.96$$
-
-> 💡 This is slightly below 7, as expected for an acidic solution.
+> 💡 A strong acid, however dilute, never makes a solution basic. Finding the exact pH of an extremely dilute strong acid (below about $10^{-6}$ M) requires including water's own ionization and is not on the AP exam.
       `
     },
     {
@@ -184,26 +184,26 @@ $$pH = -\\log(1.1 \\times 10^{-7}) = 6.96$$
       exercise: {
         questions: [
           {
-            question: 'The pH of $1.0 \\times 10^{-9}$ M $HCl$ is closest to:',
+            question: 'At 50°C, $K_w = 5.5 \\times 10^{-14}$. What is the pH of pure water at 50°C?',
             options: [
-              '9.000',
-              '7.000',
-              '6.998',
-              '5.000'
+              '7.00',
+              '7.37',
+              '6.63',
+              '13.26'
             ],
             correctAnswer: 2,
-            explanation: 'Water\'s autoionization supplies about $1.0 \\times 10^{-7}$ M $H^+$, a hundred times more than the acid. Solving exactly gives $[H^+] \\approx 1.005 \\times 10^{-7}$ M, so $pH = -\\log(1.005 \\times 10^{-7}) \\approx 6.998$ — just below 7. Reporting 9.000 ignores water (a basic pH for an acid), 5.000 treats 9 as the pOH, and 7.000 ignores the acid\'s small contribution. The acid barely shifts pH below 7 because the autoionization of water dominates.'
+            explanation: 'In pure water $[H_3O^+] = \\sqrt{K_w} = \\sqrt{5.5 \\times 10^{-14}} = 2.3 \\times 10^{-7}$ M, so $pH = -\\log(2.3 \\times 10^{-7}) = 6.63$. 7.00 is the neutral pH only at 25°C, 7.37 is 14 − 6.63 (using pKw = 14 at the wrong temperature), and 13.26 is $pK_w$ rather than the pH.'
           },
           {
-            question: 'Why can\'t a strong acid solution have a pH greater than 7?',
+            question: 'Pure water at 50°C has a pH of 6.63. How should it be classified?',
             options: [
-              'Strong acids are always present at high concentrations',
-              'Any added $H^+$ raises $[H^+]$ above $10^{-7}$ M',
-              'The pH scale for acids is defined only from 0 to 7',
-              'Strong acids stop dissociating at very low concentrations'
+              'Acidic, because its pH is below 7',
+              'Neutral, because $[H_3O^+] = [OH^-]$',
+              'Basic, because heating produces extra $OH^-$',
+              'Acidic, because heating breaks water into $H^+$ only'
             ],
             correctAnswer: 1,
-            explanation: 'Adding any amount of $H^+$ (even a tiny amount) to water increases $[H^+]$ above the neutral value of $10^{-7}$ M, keeping $pH < 7$.'
+            explanation: 'Neutral means $[H_3O^+] = [OH^-]$, and autoionization always produces the two ions in equal amounts. At 50°C both concentrations are larger than $10^{-7}$ M, so the neutral pH is below 7. The pH 7 benchmark applies only at 25°C.'
           }
         ]
       }

@@ -6,7 +6,7 @@ export const chemSolutionsSolubilityPart7Data = {
       type: 'text' as const,
       content: `# 🎓 Synthesis & AP Review
 
-**Part 7 of 7 — Connecting Solubility Rules, Concentration, and Colligative Properties**
+**Part 7 of 7 — Connecting Solubility, Concentration, and Particle Representations**
 
 ---
 
@@ -31,7 +31,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 
 ### How It All Connects
 
-$$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \\text{How much? (Concentration)} \\rightarrow \\text{What effect? (Colligative Properties)}$$
+$$\\text{Does it dissolve? (IMFs)} \\rightarrow \\text{How much? (Molarity)} \\rightarrow \\text{What particles? (Ions vs. molecules)} \\rightarrow \\text{What reacts? (Precipitation)}$$
 
 
 ---
@@ -40,22 +40,21 @@ $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \
 
 | Topic | Key Ideas |
 |-------|-----------|
-| **Solubility** | Like dissolves like; solubility rules for ionic compounds |
-| **Concentration** | Molarity ($M$), molality ($m$), mass %, mole fraction ($\\chi$), ppm |
+| **Solubility** | Like dissolves like; all $Na^{+}$, $K^{+}$, $NH_{4}^{+}$, and $NO_{3}^{-}$ salts are soluble |
+| **Concentration** | Molarity $M = n/V$; mole fraction $\\chi$ |
+| **Ions in solution** | $[\\text{ion}] = \\text{subscript} \\times M_{\\text{salt}}$; strong, weak, and nonelectrolytes |
 | **Dilution** | $M_1V_1 = M_2V_2$; moles of solute remain constant |
-| **Colligative Properties** | Depend on number of particles, not identity |
-| **BPE / FPD** | $\\Delta T_b = iK_bm$, $\\Delta T_f = iK_fm$ |
-| **Osmotic Pressure** | $\\Pi = iMRT$; used for molar mass of large molecules |
-| **van\'t Hoff Factor** | $i$ = number of particles per formula unit |
+| **Particle diagrams** | Correct ion ratio, charge balance, concentration as particles per volume, correct water orientation |
+| **Mixing and precipitation** | Work in moles, find the limiting ion, divide by the combined volume |
 
 
 ---
 
 ### AP Exam Tips
 
-- Always check whether the solute is an **electrolyte** or **nonelectrolyte** → determines $i$
-- Watch units: molarity (mol/L of solution) vs. molality (mol/kg of solvent)
-- Colligative properties: more particles = greater effect
+- Always check whether the solute is an **electrolyte** or **nonelectrolyte**; this decides how many particles it makes
+- Molarity uses liters of **solution**, not liters of solvent
+- After mixing, divide by the **total** volume
 - For free-response: show all work, label formulas, include units
       `
     },
@@ -68,15 +67,15 @@ $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \
       exercise: {
         questions: [
           {
-            question: 'Equal masses of NaCl ($M = 58.44$, $i = 2$) and $CaCl_{2}$ ($M = 110.98$, $i = 3$) are each dissolved in 1.00 kg of water. Which solution has the lower freezing point?',
+            question: 'Equal masses of NaCl ($\\mathcal{M} = 58.44$ g/mol) and $CaCl_{2}$ ($\\mathcal{M} = 110.98$ g/mol) are each dissolved to make 1.00 L of solution. Which solution has the greater chloride ion concentration?',
             options: [
               'The NaCl solution',
               'The $CaCl_{2}$ solution',
               'They are the same',
               'Cannot be determined without knowing the exact mass'
             ],
-            correctAnswer: 0,
-            explanation: 'Let the equal mass be $m$ grams. NaCl: $im = 2 \\times m/58.44 = 0.0342m$. $CaCl_{2}$: $im = 3 \\times m/110.98 = 0.0270m$. NaCl produces a larger $im$ product, giving a greater $\\Delta T_f$ and a lower freezing point.'
+            correctAnswer: 1,
+            explanation: 'Let the mass be $x$ grams. NaCl gives $x/58.44 = 0.0171x$ mol of $Cl^{-}$. $CaCl_{2}$ gives fewer formula units ($x/110.98$) but two chlorides each, $2x/110.98 = 0.0180x$ mol of $Cl^{-}$. Since $0.0180x > 0.0171x$ for any mass, the $CaCl_{2}$ solution has the greater chloride concentration.'
           },
           {
             question: 'A student dissolves a solid in water and the resulting solution does not conduct electricity. Which of the following could be the solute?',
@@ -90,7 +89,7 @@ $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \
             explanation: 'A solution that does not conduct electricity contains no ions — the solute is a nonelectrolyte. Glucose $(C_{6}H_{12}O_{6})$ dissolves as intact molecules and does not ionize. NaCl, $Al_{2}(SO_{4})_{3}$, and HCl all produce ions in water.'
           },
           {
-            question: 'When $Ba(NO_{3})_{2}(aq)$ is mixed with $Na_{2}SO_{4}(aq)$, a precipitate forms. The precipitate is:',
+            question: 'When $Ba(NO_{3})_{2}(aq)$ is mixed with $Na_{2}SO_{4}(aq)$, a white precipitate forms. The precipitate is:',
             options: [
               '$NaNO_{3}$',
               '$BaSO_{4}$',
@@ -98,7 +97,7 @@ $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \
               '$Na_{2}SO_{4}$'
             ],
             correctAnswer: 1,
-            explanation: 'By solubility rules, sulfates are generally soluble EXCEPT with $Ba^{2+}$, $Pb^{2+}$, $Ca^{2+}$, and $Sr^{2+}$. $BaSO_{4}$ is insoluble and precipitates. $NaNO_{3}$ is soluble (all nitrates and all sodium salts are soluble).'
+            explanation: 'The two possible new pairings are $NaNO_{3}$ and $BaSO_{4}$. $NaNO_{3}$ contains $Na^{+}$ and $NO_{3}^{-}$, so it must stay dissolved, leaving $BaSO_{4}$ as the solid. The original reactants were already dissolved, so neither can be the new solid.'
           }
         ]
       }
@@ -112,15 +111,15 @@ $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \
       exercise: {
         questions: [
           {
-            question: 'Rank the following 0.10 m aqueous solutions from lowest to highest freezing point: I. $C_{6}H_{12}O_{6}$ ($i = 1$), II. NaCl ($i = 2$), III. $CaCl_{2}$ ($i = 3$)',
+            question: 'Rank these 0.10 M aqueous solutions from lowest to highest total concentration of dissolved particles: I. $C_{6}H_{12}O_{6}$, II. NaCl, III. $CaCl_{2}$',
             options: [
               'I < II < III',
               'III < II < I',
               'I = II = III',
               'II < III < I'
             ],
-            correctAnswer: 1,
-            explanation: '$\\Delta T_f = iK_fm$. Larger $i$ → larger $\\Delta T_f$ → lower freezing point. $CaCl_{2}$ ($i = 3$) has the lowest freezing point, then NaCl ($i = 2$), then glucose ($i = 1$) has the highest. Order from lowest to highest: III < II < I.'
+            correctAnswer: 0,
+            explanation: 'Glucose stays as molecules (0.10 M of particles), NaCl gives 2 ions per formula unit (0.20 M), and $CaCl_{2}$ gives 3 (0.30 M). From lowest to highest: I < II < III.'
           },
           {
             question: '250.0 mL of 0.400 M HCl is diluted to 1.000 L. What is the pH of the resulting solution?',
@@ -153,21 +152,19 @@ $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \
       content: `
 **Comprehensive Calculations** 🧮
 
-> **Given:** $K_f = 1.86$ °C/m, $K_b = 0.512$ °C/m, $R = 0.08206$ L·atm/(mol·K)
-
-**1)** An aqueous solution of $MgCl_{2}$ ($i = 3$, $M = 95.21$ g/mol) is made by dissolving 9.52 g in 200.0 g of water. What is the freezing point of the solution? (in °C, to 3 significant figures)
+**1)** 9.52 g of $MgCl_{2}$ ($\\mathcal{M} = 95.21$ g/mol) is dissolved in enough water to make 200.0 mL of solution. What is $[Cl^{-}]$? (in M, to 3 significant figures)
 
 **2)** How many mL of 12.0 M HCl must be diluted to prepare 500.0 mL of 0.600 M HCl? (to 3 significant figures)
 
-**3)** A 0.0250 M solution of an unknown electrolyte at 25°C has an osmotic pressure of 1.83 atm. What is the van\'t Hoff factor? (to 3 significant figures)
+**3)** 30.0 mL of 0.500 M $AgNO_{3}$ is mixed with 20.0 mL of 0.600 M NaCl, and AgCl precipitates. What is the concentration of $Ag^{+}$ left in solution? (in M, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-2.79', '25.0', '2.99'],
-        hint1: '$n = 9.52/95.21 = 0.1000$ mol. $m = 0.1000/0.200 = 0.500$ m. $\\Delta T_f = 3(1.86)(0.500)$.',
+        correctAnswers: ['1.00', '25.0', '0.0600'],
+        hint1: '$n = 9.52/95.21 = 0.1000$ mol $MgCl_{2}$; two $Cl^{-}$ per formula unit; divide by 0.2000 L.',
         hint2: '$V_1 = M_2V_2/M_1 = (0.600)(500.0)/(12.0)$.',
-        hint3: '$i = \\Pi/(MRT) = 1.83/((0.0250)(0.08206)(298))$.',
-        explanation: '1) $n = 0.1000$ mol. $m = 0.500$ m. $\\Delta T_f = 3(1.86)(0.500) = 2.79$ °C. $T_f = 0.00 - 2.79 = -2.79$ °C. 2) $V_1 = (0.600)(500.0)/(12.0) = 25.0$ mL. 3) $i = 1.83/((0.0250)(0.08206)(298)) = 1.83/(0.6114) = 2.99$, so $i \\approx 3$ (three ions per formula unit).'
+        hint3: 'Moles $Ag^{+}$ $= 0.0150$; moles $Cl^{-}$ $= 0.0120$. Excess $Ag^{+}$ in a total of 0.0500 L.',
+        explanation: '1) $n = 0.1000$ mol, so $Cl^{-}$ $= 0.2000$ mol; $0.2000/0.2000 = 1.00$ M. 2) $V_1 = (0.600)(500.0)/(12.0) = 25.0$ mL. 3) $Ag^{+}$: $(0.500)(0.0300) = 0.0150$ mol; $Cl^{-}$: $(0.600)(0.0200) = 0.0120$ mol. Chloride limits, leaving $0.0030$ mol $Ag^{+}$ in 0.0500 L, so $[Ag^{+}] = 0.0600$ M.'
       }
     },
     {
@@ -183,27 +180,27 @@ $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \
             options: ['Always soluble', 'Soluble only with halides', 'Generally insoluble', 'Soluble only in organic solvents']
           },
           {
-            label: 'The colligative property most useful for determining the molar mass of a protein is',
-            options: ['Boiling point elevation', 'Freezing point depression', 'Vapor pressure lowering', 'Osmotic pressure']
+            label: 'In a particle diagram of $Na_{2}CO_{3}$(aq), the ratio of $Na^{+}$ to $CO_{3}^{2-}$ is',
+            options: ['1 : 1', '2 : 1', '1 : 2', '2 : 3']
           },
           {
-            label: 'If you double both the molality and the van\'t Hoff factor, the freezing point depression',
-            options: ['Doubles', 'Quadruples', 'Stays the same', 'Is halved']
+            label: 'If a solution is diluted to twice its volume, the number of solute particles',
+            options: ['Doubles', 'Is halved', 'Stays the same', 'Quadruples']
           },
           {
             label: 'When mixing $Pb(NO_{3})_{2}(aq)$ and KI(aq), the spectator ions are',
             options: ['$Pb^{2+}$ and $I^{-}$', '$K^{+}$ and $NO_{3}^{-}$', '$Pb^{2+}$ and $K^{+}$', '$NO_{3}^{-}$ and $I^{-}$']
           },
           {
-            label: 'For a 1.0 m NaCl solution, the measured freezing point depression is slightly less than 3.72°C because',
-            options: ['NaCl does not fully dissolve at 1.0 m', 'Ion pairing reduces the effective i', 'K_f changes with concentration', 'NaCl is a weak electrolyte in water']
+            label: 'Water molecules around a dissolved $Cl^{-}$ ion orient with their',
+            options: ['Hydrogen atoms toward the ion', 'Oxygen atoms toward the ion', 'Lone pairs toward the ion', 'No preferred orientation']
           }
         ],
-        correctAnswers: ['Always soluble', 'Osmotic pressure', 'Quadruples', '$K^{+}$ and $NO_{3}^{-}$', 'Ion pairing reduces the effective i'],
-        hint1: '$Na^{+}$, $K^{+}$, and $NH_{4}^{+}$ salts have no exceptions in the solubility rules.',
-        hint2: 'Large molecules at low concentrations produce tiny $\\Delta T_f$ but measurable $\\Pi$.',
-        hint3: '$\\Delta T_f = iK_fm$. If both $i$ and $m$ double: $\\Delta T_f$ = $(2i)(K_f)(2m) = 4iK_fm$.',
-        explanation: 'Sodium salts are always soluble. Osmotic pressure is the most sensitive colligative property. $\\Delta T_f \\propto i \\times m$, so doubling both gives 4× the effect. $PbI_{2}$ is the precipitate, so $K^{+}$ and $NO_{3}^{-}$ are spectators. In real solutions, ion pairing reduces the effective $i$ below the theoretical value.'
+        correctAnswers: ['Always soluble', '2 : 1', 'Stays the same', '$K^{+}$ and $NO_{3}^{-}$', 'Hydrogen atoms toward the ion'],
+        hint1: '$Na^{+}$, $K^{+}$, $NH_{4}^{+}$, and $NO_{3}^{-}$ salts are always soluble.',
+        hint2: 'Dilution adds solvent, not solute.',
+        hint3: 'The $\\delta^+$ end of water is attracted to an anion.',
+        explanation: 'Sodium salts are always soluble. $Na_{2}CO_{3}$ releases two $Na^{+}$ per $CO_{3}^{2-}$. Dilution keeps the number of solute particles the same while the volume grows. $PbI_{2}$ is the precipitate, so $K^{+}$ and $NO_{3}^{-}$ are spectators. The partially positive hydrogens of water point toward an anion.'
       }
     },
     {
@@ -212,29 +209,27 @@ $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \
       content: `
 ## ✏️ AP Free-Response Practice Problem
 
-> **Problem:** A student performs a freezing point depression experiment. She dissolves 2.56 g of an unknown compound in 50.0 g of water. The solution freezes at $-0.744$ °C.
+> **Problem:** A student wants to find the concentration of $Cl^{-}$ in a 25.00 mL water sample. She adds excess $AgNO_{3}$(aq), filters, dries, and weighs the solid AgCl ($\\mathcal{M} = 143.32$ g/mol). The dry precipitate has a mass of 0.2150 g.
 
 > **Solution:**
 
-**(a)** Calculate the molality of the solution.
+**(a)** Write the net ionic equation for the precipitation.
 
-$$m = \\frac{\\Delta T_f}{iK_f} = \\frac{0.744}{(1)(1.86)} = 0.400 \\; m$$
+$$\\text{Ag}^+(aq) + \\text{Cl}^-(aq) \\rightarrow \\text{AgCl}(s)$$
 
-(Assuming $i = 1$ initially)
+**(b)** Calculate the moles of AgCl collected.
 
-**(b)** Calculate the moles of solute.
+$$n = \\frac{0.2150}{143.32} = 1.500 \\times 10^{-3} \\text{ mol}$$
 
-$$n = m \\times \\text{kg solvent} = 0.400 \\times 0.0500 = 0.0200 \\text{ mol}$$
+**(c)** Calculate $[Cl^{-}]$ in the original sample.
 
-**(c)** Calculate the apparent molar mass.
+Moles $Cl^{-}$ = moles AgCl (1 : 1), so
 
-$$M = \\frac{2.56}{0.0200} = 128 \\text{ g/mol}$$
+$$[\\text{Cl}^-] = \\frac{1.500 \\times 10^{-3}}{0.02500} = 0.06000 \\text{ M}$$
 
-**(d)** The compound is known to be naphthalene ($C_{10}H_{8}$, actual $M = 128.17$ g/mol). Is this consistent? **Yes** — the experimental value matches the actual molar mass, confirming $i = 1$ (naphthalene is a nonelectrolyte).
+**(d)** The student forgets to dry the precipitate completely before weighing. Is the calculated $[Cl^{-}]$ too high, too low, or unaffected? **Too high.** Leftover water adds mass, which is counted as extra AgCl and therefore extra chloride.
 
-**(e)** If the compound were actually an electrolyte with $i = 2$, what would the molar mass be?
-
-$$m = \\frac{0.744}{(2)(1.86)} = 0.200 \\; m, \\quad n = 0.200 \\times 0.0500 = 0.0100, \\quad M = \\frac{2.56}{0.0100} = 256 \\text{ g/mol}$$
+**(e)** Why is $AgNO_{3}$ added in excess? So that every chloride ion is precipitated. If $Ag^{+}$ were limiting, some $Cl^{-}$ would stay in solution and the result would be too low.
       `
     },
     {
@@ -246,15 +241,15 @@ $$m = \\frac{0.744}{(2)(1.86)} = 0.200 \\; m, \\quad n = 0.200 \\times 0.0500 = 
       exercise: {
         questions: [
           {
-            question: 'A chemist prepares two solutions: Solution A is 0.20 m NaCl ($i = 2$) and Solution B is 0.30 m glucose ($i = 1$). If both are aqueous, which has the lower freezing point?',
+            question: 'Solution A is 0.20 M NaCl and Solution B is 0.30 M glucose. Which has the greater total concentration of dissolved particles?',
             options: [
               'Solution A',
               'Solution B',
               'They are the same',
-              'Cannot determine without $K_f$'
+              'Cannot be determined without the volumes'
             ],
             correctAnswer: 0,
-            explanation: '$\\Delta T_f = iK_fm$. A: $2(K_f)(0.20) = 0.40K_f$. B: $1(K_f)(0.30) = 0.30K_f$. Solution A has the larger $\\Delta T_f$ (0.40 vs. 0.30), so it has the lower freezing point.'
+            explanation: 'NaCl gives two ions per formula unit, so Solution A has $2 \\times 0.20 = 0.40$ M of particles. Glucose stays as molecules, so Solution B has 0.30 M. Concentration does not depend on how much solution is present.'
           },
           {
             question: 'When preparing a standard solution using a volumetric flask, the meniscus of the solution should be:',
@@ -268,15 +263,15 @@ $$m = \\frac{0.744}{(2)(1.86)} = 0.200 \\; m, \\quad n = 0.200 \\times 0.0500 = 
             explanation: 'For accurate solution preparation, the bottom of the meniscus must be aligned with the calibration mark on the volumetric flask. Lining up the top edge, or stopping above or below the mark, introduces a systematic error in concentration.'
           },
           {
-            question: 'A 0.100 M $Al(NO_{3})_{3}$ solution ($i = 4$) at 25°C has an osmotic pressure closest to:',
+            question: 'Which statement best explains why NaCl dissolves in water but not in hexane?',
             options: [
-              '2.4 atm',
-              '4.9 atm',
-              '7.3 atm',
-              '9.8 atm'
+              'Only water can form ion–dipole attractions with the ions',
+              'Hexane molecules are too small to pull the ions out of the crystal',
+              'NaCl reacts chemically with water to form new soluble compounds',
+              'Hexane is denser than water, so the ions sink out of it'
             ],
-            correctAnswer: 3,
-            explanation: '$\\Pi = iMRT = (4)(0.100)(0.08206)(298) = 9.78 \\approx 9.8$ atm. $Al(NO_{3})_{3}$ produces 4 ions: $Al^{3+}$ + $3NO_{3}^{-}$.'
+            correctAnswer: 0,
+            explanation: 'Polar water molecules orient around each ion, and these ion–dipole attractions offset the energy needed to separate the ions from the lattice. Nonpolar hexane offers only weak dispersion forces, so the ions stay in the solid. NaCl dissolves without forming new compounds.'
           }
         ]
       }

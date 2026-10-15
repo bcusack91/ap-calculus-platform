@@ -48,7 +48,7 @@ export const chemPropertiesStatesMatterPart4Data = {
 
 ### Key Relationships
 
-Since enthalpy is a state function, sublimation can be thought of as melting + vaporization:
+By Hess\'s law, going straight from solid to gas takes the same total energy as melting followed by vaporization:
 
 $$\\boxed{\\Delta H_{\\text{sub}} = \\Delta H_{\\text{fus}} + \\Delta H_{\\text{vap}}}$$
 

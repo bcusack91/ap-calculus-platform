@@ -40,7 +40,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 ### Equilibrium Expressions
 - $K_c = \\frac{[\\text{products}]^{\\text{coefficients}}}{[\\text{reactants}]^{\\text{coefficients}}}$
 - $K_p = \\frac{(P_{\\text{products}})^{\\text{coeff}}}{(P_{\\text{reactants}})^{\\text{coeff}}}$
-- $K_p = K_c(RT)^{\\Delta n}$
+- Use $K_p$ when partial pressures are given and $K_c$ when molarities are given
 
 
 ---

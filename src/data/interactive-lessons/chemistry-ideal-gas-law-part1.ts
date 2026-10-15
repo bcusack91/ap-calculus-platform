@@ -94,26 +94,22 @@ The kinetic molecular theory describes an **ideal gas** with the following assum
 2. **Collisions are perfectly elastic** — no kinetic energy is lost during collisions.
 3. **Gas particles have negligible volume** — the volume of individual molecules is tiny compared to the container.
 4. **No intermolecular forces** — gas particles don't attract or repel each other.
-5. **Average kinetic energy is proportional to temperature** (in Kelvin):
-
-$$\\boxed{KE_{\\text{avg}} = \\frac{3}{2}k_BT}$$
-
-where $k_B = 1.38 \\times 10^{-23}$ J/K is the Boltzmann constant.
+5. **Average kinetic energy is proportional to temperature** (in Kelvin): doubling the Kelvin temperature doubles the average kinetic energy.
 
 > 🔑 **Key Concept:** Average kinetic energy depends *only* on temperature — not on the identity or mass of the gas.
 
 
 ---
 
-### Root Mean Square Speed
+### Speed and Mass
 
-The average speed of gas molecules depends on temperature and molar mass:
+Each particle\'s kinetic energy is
 
-$$\\boxed{v_{\\text{rms}} = \\sqrt{\\frac{3RT}{M}}}$$
+$$\\boxed{KE = \\frac{1}{2}mv^2}$$
 
-where $R = 8.314$ J/(mol·K) and $M$ is the molar mass in kg/mol.
+At the same temperature, all gases have the same average KE, so a particle with a **smaller mass** must have a **greater average speed**.
 
-**Key insight**: Lighter molecules move faster at the same temperature.
+**Key insight**: Lighter molecules move faster at the same temperature. Helium atoms at room temperature move, on average, much faster than $CO_{2}$ molecules, even though both samples have the same average kinetic energy.
       `
     },
     {
@@ -155,7 +151,7 @@ where $R = 8.314$ J/(mol·K) and $M$ is the molar mass in kg/mol.
               '$CO_{2}$ (M = 44 g/mol)'
             ],
             correctAnswer: 2,
-            explanation: '$v_{\\text{rms}} = \\sqrt{3RT/M}$. At the same temperature, speed is inversely related to the square root of molar mass. Helium has the smallest molar mass (4 g/mol), so it moves the fastest.'
+            explanation: 'At the same temperature, all four gases have the same average kinetic energy. Since $KE = \\frac{1}{2}mv^2$, the particle with the smallest mass must move fastest. Helium has the smallest molar mass (4 g/mol), so it has the highest average speed.'
           }
         ]
       }
@@ -221,7 +217,7 @@ Convert the following gas measurements:
             label: 'At the same temperature, He atoms move ___ $O_{2}$ molecules',
             options: ['faster than', 'slower than', 'the same speed as'],
             correctIndex: 0,
-            explanation: '$v_{\\text{rms}} = \\sqrt{3RT/M}$. Lighter molecules (smaller M) have higher speeds at the same temperature.'
+            explanation: 'At the same temperature He and $O_{2}$ have the same average kinetic energy. Since $KE = \\frac{1}{2}mv^2$, the lighter He atoms must move faster.'
           },
           {
             id: 'gl1-dd4',
@@ -300,7 +296,7 @@ Convert the following gas measurements:
               'Number of moles'
             ],
             correctAnswer: 2,
-            explanation: '$KE_{\\text{avg}} = \\frac{3}{2}k_BT$. Average kinetic energy depends only on the absolute temperature (Kelvin).'
+            explanation: 'Average kinetic energy is directly proportional to the absolute (Kelvin) temperature. It does not depend on pressure, volume, or the number of moles.'
           },
           {
             question: 'At the same temperature, which gas molecule has the greatest average speed?',
@@ -311,7 +307,7 @@ Convert the following gas measurements:
               'Ar (M = 40 g/mol)'
             ],
             correctAnswer: 2,
-            explanation: '$v_{\\text{rms}} = \\sqrt{3RT/M}$. The lightest molecule ($H_{2}$, M = 2 g/mol) has the greatest average speed at any given temperature.'
+            explanation: 'All four gases have the same average kinetic energy at the same temperature. Because $KE = \\frac{1}{2}mv^2$, the lightest molecule ($H_{2}$, M = 2 g/mol) must have the greatest average speed.'
           },
           {
             question: 'Which assumption of KMT breaks down at very high pressures?',

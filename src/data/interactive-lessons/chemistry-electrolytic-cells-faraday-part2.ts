@@ -18,16 +18,15 @@ export const chemElectrolyticCellsFaradayPart2Data = {
 | What STAYS THE SAME |
 | What CHANGES |
 | 🔋 Recharging: Galvanic → Electrolytic |
-| ⬇️ Discharging (Galvanic Mode) |
 
-> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+> 🔑 **Key Concept:** Galvanic and electrolytic cells use the same parts and the same rules for naming electrodes. What differs is whether the reaction is thermodynamically favored and which way energy flows (CED 9.8.A.2).
 
 ---
 
 ### What You'll Master in Part 2
-- Understanding the core concepts covered in Part 2
-- Applying these ideas to solve practice problems
-- Building toward AP exam readiness for this topic`
+- Compare galvanic and electrolytic cells feature by feature
+- Explain why AN OX / RED CAT holds in every cell
+- Describe how recharging turns a galvanic cell into an electrolytic cell`
     },
     {
       id: 'ef2-comparison-table',
@@ -37,15 +36,15 @@ export const chemElectrolyticCellsFaradayPart2Data = {
 
 | Feature | Galvanic Cell | Electrolytic Cell |
 |---------|:------------:|:-----------------:|
-| **Spontaneous?** | Yes ($\\Delta G < 0$) | No ($\\Delta G > 0$) |
-| **$E_{\\text{cell}}$** | Positive | Negative |
+| **Thermodynamically favored?** | Yes ($\\Delta G° < 0$) | No ($\\Delta G° > 0$) |
+| **$E°_{\\text{cell}}$** | Positive | Negative |
 | **Energy conversion** | Chemical → Electrical | Electrical → Chemical |
 | **External power?** | No (produces power) | Yes (requires power) |
-| **Anode** | Oxidation (−) | Oxidation (+) |
-| **Cathode** | Reduction (+) | Reduction (−) |
-| **Electron flow** | Anode → Cathode | Anode → Cathode |
-| **Salt bridge** | Usually present | Often not needed |
-| **Example** | Battery, fuel cell | Electroplating, electrolysis |
+| **Anode** | Oxidation | Oxidation |
+| **Cathode** | Reduction | Reduction |
+| **Electron flow in the wire** | Anode → Cathode | Anode → Cathode |
+| **Salt bridge** | Needed when the half-cells are separate | Often a single container |
+| **Example** | Daniell cell (Zn/Cu²⁺) | Electroplating, electrolysis of molten NaCl |
 
 
 ---
@@ -54,67 +53,19 @@ export const chemElectrolyticCellsFaradayPart2Data = {
 
 - **Oxidation at the anode** (AN OX)
 - **Reduction at the cathode** (RED CAT)
-- **Electrons flow from anode to cathode**
-- **Cations migrate toward cathode, anions toward anode**
+- **Electrons flow from anode to cathode** through the external circuit
+- **Cations migrate toward the cathode, anions toward the anode**
 
-> 🔑 **AP Must-Know:** AN OX / RED CAT applies to ALL electrochemical cells. This never changes.
+> 🔑 **AP Must-Know:** AN OX / RED CAT applies to ALL electrochemical cells (CED 9.8.A.3). This never changes.
 
 
 ---
 
 ### What CHANGES
 
-- **Sign of anode/cathode** (reversed!)
+- **Thermodynamic favorability** (favored vs. driven by an external source)
 - **Direction of energy flow** (chemical ↔ electrical)
-- **Spontaneity** (spontaneous vs. forced)
-
-> 💡 **Memory Aid:** In galvanic cells the anode is (−) and cathode is (+). In electrolytic cells, it flips: anode is (+) and cathode is (−).
-      `
-    },
-    {
-      id: 'ef2-charging-battery',
-      type: 'text' as const,
-      content: `
-## 🔋 Recharging: Galvanic → Electrolytic
-
-> Every rechargeable battery lives a **double life** — it's a galvanic cell when discharging and an electrolytic cell when charging. The chemistry literally runs in reverse!
-
----
-
-### ⬇️ Discharging (Galvanic Mode)
-
-$$\\text{Pb}(s) + \\text{PbO}_2(s) + 2\\text{H}_2\\text{SO}_4(aq) \\rightarrow 2\\text{PbSO}_4(s) + 2\\text{H}_2\\text{O}(l)$$
-
-| Property | Value |
-|----------|-------|
-| **Spontaneous?** | ✅ Yes |
-| **$E$** | Positive ($> 0$) |
-| **Energy** | Chemical → Electrical (powers your car) |
-
----
-
-### ⬆️ Charging (Electrolytic Mode)
-
-$$2\\text{PbSO}_4(s) + 2\\text{H}_2\\text{O}(l) \\rightarrow \\text{Pb}(s) + \\text{PbO}_2(s) + 2\\text{H}_2\\text{SO}_4(aq)$$
-
-| Property | Value |
-|----------|-------|
-| **Spontaneous?** | ❌ No |
-| **$E$** | Negative ($< 0$) |
-| **Energy** | Electrical → Chemical (from the charger) |
-
----
-
-### 🔀 What Swaps During Charging?
-
-| | Discharging | Charging |
-|--|:-----------:|:--------:|
-| **Anode** | Electrode A | Electrode B |
-| **Cathode** | Electrode B | Electrode A |
-| **Electron flow** | A → B | B → A |
-| **Reaction direction** | Forward | Reverse |
-
-> ⚠️ **AP Trap:** The electrodes that were anode/cathode during discharge **swap roles** during charging. The chemistry reverses, and so do the labels!
+- **What pushes the electrons** (the reaction itself vs. the power source)
       `
     },
     {
@@ -128,74 +79,84 @@ $$2\\text{PbSO}_4(s) + 2\\text{H}_2\\text{O}(l) \\rightarrow \\text{Pb}(s) + \\t
           {
             question: 'Which statement is true for BOTH galvanic and electrolytic cells?',
             options: [
-              'The anode is positive',
-              'The cell makes electricity',
+              'The cell reaction is thermodynamically favored',
+              'The cell converts chemical energy into electrical energy',
               'Oxidation occurs at the anode',
-              'The reaction is spontaneous'
+              'The cell needs an external power source'
             ],
             correctAnswer: 2,
-            explanation: 'Oxidation at the anode (AN OX) is true for ALL electrochemical cells. The sign, spontaneity, and energy direction differ between the two types.'
+            explanation: 'Oxidation at the anode (AN OX) is true for ALL electrochemical cells. Favorability, the direction of energy conversion, and the need for a power source all differ between the two types.'
           },
           {
-            question: 'In an electrolytic cell, the cathode is connected to:',
+            question: 'In an electrolytic cell, the power source pushes electrons into the:',
             options: [
-              'The positive terminal of the power source',
-              'The negative terminal of the power source',
-              'Nothing — it is free-floating',
-              'The salt bridge'
+              'Anode, where oxidation occurs',
+              'Cathode, where reduction occurs',
+              'Salt bridge, which carries them across',
+              'Electrolyte, where they move with the ions'
             ],
             correctAnswer: 1,
-            explanation: 'In an electrolytic cell, the cathode is connected to the negative (−) terminal of the power source. This supplies electrons to the cathode for reduction.'
+            explanation: 'The source pulls electrons out of the anode (where oxidation releases them) and pushes them into the cathode, where a species gains them and is reduced. Electrons travel through wires and electrodes, never through the salt bridge or solution.'
           },
           {
-            question: 'When a rechargeable battery is being charged:',
+            question: 'Which description fits an electrolytic cell?',
             options: [
-              'It operates as a galvanic cell, releasing energy',
-              'It operates as an electrolytic cell',
-              'It stores charge physically, with no redox reaction',
-              'It runs as a concentration cell until both sides match'
+              'E°cell > 0 and electrical energy is produced',
+              'E°cell < 0 and electrical energy is consumed',
+              'E°cell > 0 and electrical energy is consumed',
+              'E°cell < 0 and electrical energy is produced'
             ],
             correctAnswer: 1,
-            explanation: 'Charging forces the non-spontaneous reverse reaction to occur — this is electrolysis. The charger provides the external voltage needed, and energy is stored chemically in the regenerated reactants, not as static charge.'
+            explanation: 'An electrolytic cell runs a reaction with a negative $E°_{\\text{cell}}$ (positive $\\Delta G°$), so it must consume electrical energy from an external source. A positive $E°_{\\text{cell}}$ describes a galvanic cell, which produces electrical energy.'
           }
         ]
       }
     },
     {
-      id: 'ef2-dropdown-practice',
-      type: 'dropdown-select' as const,
+      id: 'ef2-charging-battery',
+      type: 'text' as const,
       content: `
-**Cell Comparison** 🔽
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'In a galvanic cell, the anode is the',
-            options: ['positive terminal', 'negative terminal', 'neutral (no charge)', 'set by the salt bridge']
-          },
-          {
-            label: 'In an electrolytic cell, the anode is the',
-            options: ['positive terminal', 'negative terminal', 'neutral (no charge)', 'set by the salt bridge']
-          },
-          {
-            label: 'In BOTH cell types, electrons flow from',
-            options: ['cathode to anode', 'anode to cathode', 'power source to cell', 'cell to power source']
-          },
-          {
-            label: 'A galvanic cell converts',
-            options: ['electrical → chemical energy', 'chemical → electrical energy', 'chemical → thermal energy', 'thermal → electrical energy']
-          },
-          {
-            label: 'An electrolytic cell converts',
-            options: ['electrical → chemical energy', 'chemical → electrical energy', 'chemical → thermal energy', 'thermal → electrical energy']
-          }
-        ],
-        correctAnswers: ['negative terminal', 'positive terminal', 'anode to cathode', 'chemical → electrical energy', 'electrical → chemical energy'],
-        hint1: 'Galvanic anode produces electrons → negative.',
-        hint2: 'Electrolytic anode connected to + terminal of power source.',
-        hint3: 'Electrons always flow from where they are produced (anode) to where they are consumed (cathode).',
-        explanation: 'Galvanic: anode (−), cathode (+). Electrolytic: anode (+), cathode (−). Electrons always: anode → cathode. Galvanic: chem → elec. Electrolytic: elec → chem.'
-      }
+## 🔋 Recharging: Galvanic → Electrolytic
+
+The CED's example of an external energy source driving an unfavorable process is using electrical energy "to drive an electrolytic cell or charge a battery" (9.7.A.1). Any galvanic cell can be recharged in principle by forcing its reaction backward. Take the Daniell cell:
+
+---
+
+### ⬇️ Discharging (Galvanic Mode)
+
+$$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s) \\qquad E° = +1.10 \\text{ V}$$
+
+| Property | Value |
+|----------|-------|
+| **Thermodynamically favored?** | ✅ Yes |
+| **Zinc electrode** | Anode (Zn oxidized, loses mass) |
+| **Copper electrode** | Cathode ($\\text{Cu}^{2+}$ reduced, gains mass) |
+
+---
+
+### ⬆️ Charging (Electrolytic Mode)
+
+$$\\text{Zn}^{2+}(aq) + \\text{Cu}(s) \\rightarrow \\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\qquad E° = -1.10 \\text{ V}$$
+
+| Property | Value |
+|----------|-------|
+| **Thermodynamically favored?** | ❌ No — needs more than 1.10 V from outside |
+| **Zinc electrode** | Cathode ($\\text{Zn}^{2+}$ reduced, gains mass) |
+| **Copper electrode** | Anode (Cu oxidized, loses mass) |
+
+---
+
+### 🔀 What Swaps During Charging?
+
+| | Discharging | Charging |
+|--|:-----------:|:--------:|
+| **Anode** | Zinc | Copper |
+| **Cathode** | Copper | Zinc |
+| **Electron flow in wire** | Zn → Cu | Cu → Zn |
+| **Reaction direction** | Forward | Reverse |
+
+> ⚠️ **AP Trap:** The electrodes **swap names** during charging because the half-reactions reverse. Name each electrode by what happens there, every time.
+      `
     },
     {
       id: 'ef2-input-practice',
@@ -205,19 +166,19 @@ $$2\\text{PbSO}_4(s) + 2\\text{H}_2\\text{O}(l) \\rightarrow \\text{Pb}(s) + \\t
 
 Answer with "galvanic" or "electrolytic":
 
-**1)** ΔG < 0 and E > 0 describes a _____ cell.
+**1)** $\\Delta G° < 0$ and $E° > 0$ describes a _____ cell.
 
 **2)** Requires an external power source: _____ cell.
 
-**3)** The anode is positive in a _____ cell.
+**3)** Electrical energy is converted into chemical energy in a _____ cell.
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['galvanic', 'electrolytic', 'electrolytic'],
-        hint1: 'Spontaneous reaction: ΔG < 0.',
-        hint2: 'Non-spontaneous reactions need energy input.',
-        hint3: 'Connected to the + terminal of the battery.',
-        explanation: '1) Galvanic — spontaneous, ΔG < 0, E > 0. 2) Electrolytic — non-spontaneous, needs external voltage. 3) Electrolytic — anode connected to + terminal.'
+        hint1: 'A thermodynamically favored reaction has $\\Delta G° < 0$.',
+        hint2: 'Unfavored reactions need energy input.',
+        hint3: 'Which cell stores energy in chemical form?',
+        explanation: '1) Galvanic: thermodynamically favored, $\\Delta G° < 0$, $E° > 0$. 2) Electrolytic: needs an external voltage. 3) Electrolytic: the source supplies electrical energy that ends up stored in the products.'
       }
     },
     {
@@ -237,18 +198,18 @@ Answer with "galvanic" or "electrolytic":
               'No — electrolytic cells involve no redox at all'
             ],
             correctAnswer: 1,
-            explanation: 'Reduction at the cathode (RED CAT) is a universal rule. It applies to galvanic cells, electrolytic cells, and all other electrochemical cells. Only the sign of the electrodes changes.'
+            explanation: 'Reduction at the cathode (RED CAT) is a universal rule. It applies to galvanic cells, electrolytic cells, and all other electrochemical cells; the electrodes are named by the half-reaction that occurs at each.'
           },
           {
-            question: 'During discharge of a lead-acid battery (galvanic), Pb is the anode. During charging (electrolytic), Pb is the:',
+            question: 'A dead Daniell cell is recharged with an external source. During charging, the zinc electrode is the:',
             options: [
-              'Still the anode',
-              'The cathode',
-              'Neither — it is inert during charging',
-              'The positive electrode'
+              'The anode, since zinc atoms lose electrons there',
+              'The cathode, since Zn²⁺ gains electrons there',
+              'The anode, since the zinc electrode loses mass',
+              'Neither, since zinc only conducts electrons'
             ],
             correctAnswer: 1,
-            explanation: 'During charging, the reaction reverses: $PbSO_{4}$ is reduced back to Pb. Since reduction occurs at the cathode, the Pb electrode becomes the cathode during charging, and in an electrolytic cell the cathode is the negative electrode.'
+            explanation: 'Charging reverses the cell reaction, so $\\text{Zn}^{2+}$ gains electrons and plates out as zinc. Reduction occurs at the cathode, so the zinc electrode is now the cathode and gains mass; copper is oxidized at the other electrode, the anode.'
           }
         ]
       }

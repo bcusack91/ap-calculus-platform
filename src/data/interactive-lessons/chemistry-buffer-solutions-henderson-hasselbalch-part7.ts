@@ -16,7 +16,8 @@ export const chemBufferSolutionsHendersonHasselbalchPart7Data = {
 |---------|-------------------|
 | Buffer composition | Weak acid + conjugate base (or weak base + conjugate acid) |
 | pH calculation | $pH = pK_a + \\log([A^-]/[HA])$ |
-| Adding acid/base | Step 1: Stoichiometry → Step 2: Henderson-Hasselbalch |
+| Making a buffer by partial neutralization | Step 1: Stoichiometry → Step 2: Henderson-Hasselbalch |
+| Adding acid/base to a buffer | Ratio changes slightly, so pH changes slightly (explain qualitatively) |
 | Effective range | p$K_a$ ± 1 |
 | Max capacity | When $[HA] = [A^-]$ (pH = p$K_a$) |
 | Choosing an acid | p$K_a$ ≈ target pH |
@@ -57,11 +58,13 @@ export const chemBufferSolutionsHendersonHasselbalchPart7Data = {
 
 > 🔑 **5-Step Buffer Method for the AP Exam:**
 
-1. **Identify** if a buffer exists (weak acid + conjugate base?)
-2. **Stoichiometry** first — react any added strong acid/base completely
-3. **Check** if buffer survives (both components still present?)
-4. **Henderson-Hasselbalch** to find new pH using remaining moles
-5. **If destroyed** — treat as simple acid, base, or salt problem
+1. **Identify** what was mixed (a weak acid or base, its conjugate, any strong acid or base)
+2. **Stoichiometry** first — react any strong acid or base completely
+3. **Check** that a buffer results (both members of the conjugate pair present?)
+4. **Henderson-Hasselbalch** to find the pH from the amounts of the pair
+5. **If not a buffer** — treat as a simple acid, base, or salt problem
+
+> 💡 For acid or base added to an existing buffer, explain qualitatively: the ratio changes only slightly, so the pH changes only slightly. Computing the exact new pH is not on the AP exam (CED 8.9 exclusion).
       `
     },
     {
@@ -84,15 +87,15 @@ export const chemBufferSolutionsHendersonHasselbalchPart7Data = {
             explanation: '$pH = 4.74 + \\log(0.30/0.20) = 4.74 + \\log(1.50) = 4.74 + 0.18 = 4.92$.'
           },
           {
-            question: 'Adding 0.001 mol $HCl$ to 1.0 L of pure water changes pH from 7.0 to 3.0 (Δ = 4.0). Adding the same amount to the buffer above changes pH by approximately:',
+            question: 'Adding 0.001 mol $HCl$ to 1.0 L of pure water changes the pH from 7.0 to 3.0. How does the pH of the buffer above respond to the same addition?',
             options: [
-              '4.0 units',
-              '0.004 units',
-              '0.040 units',
-              '0.17 units'
+              'It drops by about 4 units, the same as in water',
+              'It drops only slightly, because acetate consumes the added $H_3O^+$',
+              'It drops by more than 4 units, because the buffer is already acidic',
+              'It rises, because the acid reacts with acetic acid'
             ],
             correctAnswer: 1,
-            explanation: 'In the buffer: $A^- + H^+ \\rightarrow HA$. New: $A^- = 0.299$ mol, $HA = 0.201$ mol. $pH = 4.74 + \\log(0.299/0.201) = 4.74 + 0.1725 = 4.9125$, compared with $4.74 + \\log(1.50) = 4.9161$ before. Change $\\approx 0.004$ units, about a thousandth of the 4.0-unit change in pure water. 0.17 is $\\log(1.50)$ itself, not a change in pH.'
+            explanation: 'In the buffer, $CH_3COO^- + H_3O^+ \\rightarrow CH_3COOH + H_2O$ removes the added acid. With 0.30 mol acetate and 0.20 mol acetic acid, 0.001 mol barely changes the ratio $[A^-]/[HA]$, so the pH falls only slightly (CED 8.9.A.1). Added acid cannot raise the pH, and the buffer is far better at resisting change than water.'
           },
           {
             question: 'The blood buffer ($H_2CO_3/HCO_3^-$, $pK_a = 6.10$ at body temperature) maintains pH 7.40. The $[HCO_3^-]/[H_2CO_3]$ ratio is closest to:',
@@ -116,17 +119,17 @@ export const chemBufferSolutionsHendersonHasselbalchPart7Data = {
 
 **1)** A formate buffer ($pK_a = 3.75$) has pH = 4.05. What is the $[HCOO^-]/[HCOOH]$ ratio? (1 decimal place)
 
-**2)** 0.020 mol $NaOH$ is added to 500 mL of a buffer with 0.15 M $CH_3COOH$ and 0.15 M $CH_3COO^-$ ($pK_a = 4.74$). What is the new pH? (2 decimal places)
+**2)** 0.095 mol $CH_3COOH$ is mixed with 0.040 mol $NaOH$ in 500 mL of solution ($pK_a = 4.74$). What is the pH of the resulting buffer? (2 decimal places)
 
 **3)** What is the effective buffer range for ammonium/ammonia ($pK_a = 9.25$)? Enter the lower limit of the range. (2 decimal places)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.0', '4.98', '8.25'],
+        correctAnswers: ['2.0', '4.60', '8.25'],
         hint1: '$\\log(r) = 4.05 - 3.75 = 0.30$; $r = 10^{0.30}$.',
-        hint2: 'Moles: $HA = 0.075 - 0.020 = 0.055$; $A^- = 0.075 + 0.020 = 0.095$.',
+        hint2: 'After reaction: $HA = 0.095 - 0.040 = 0.055$ mol; $A^- = 0.040$ mol.',
         hint3: 'Lower limit = $pK_a - 1$.',
-        explanation: '1) $r = 10^{0.30} = 2.0$. 2) $pH = 4.74 + \\log(0.095/0.055) = 4.74 + 0.24 = 4.98$. 3) Lower limit = $9.25 - 1 = 8.25$.'
+        explanation: '1) $r = 10^{0.30} = 2.0$. 2) $pH = 4.74 + \\log(0.040/0.055) = 4.74 - 0.14 = 4.60$. 3) Lower limit = $9.25 - 1 = 8.25$.'
       }
     },
     {
@@ -171,7 +174,7 @@ export const chemBufferSolutionsHendersonHasselbalchPart7Data = {
       exercise: {
         dropdowns: [
           {
-            label: 'The Henderson-Hasselbalch equation is derived from',
+            label: 'The Henderson-Hasselbalch equation is a rearranged form of',
             options: ['the K_w expression', 'the $K_{a}$ expression', 'the K_b expression only', 'the $K_{sp}$ expression']
           },
           {
@@ -188,10 +191,10 @@ export const chemBufferSolutionsHendersonHasselbalchPart7Data = {
           }
         ],
         correctAnswers: ['the $K_{a}$ expression', '$pK_{a}$ + 1', 'exactly equal to the target pH', 'capacity'],
-        hint1: 'Start from $K_a = [H^+][A^-]/[HA]$ and take $-\\log$.',
+        hint1: 'It comes from the weak acid\'s equilibrium expression.',
         hint2: '$\\log(10) = 1$.',
         hint3: 'At $pH = pK_a$, the ratio is 1:1 — maximum capacity.',
-        explanation: 'H-H is derived from $K_a$. When $[A^-] = 10[HA]$: $pH = pK_a + \\log(10) = pK_a + 1$. Best buffer has $pK_a =$ target pH. Dilution changes capacity (fewer moles) but not pH (ratio unchanged).'
+        explanation: 'H-H is the $K_a$ expression in logarithmic form. When $[A^-] = 10[HA]$: $pH = pK_a + \\log(10) = pK_a + 1$. Best buffer has $pK_a =$ target pH. Dilution changes capacity (fewer moles) but not pH (ratio unchanged).'
       }
     },
     {
@@ -203,18 +206,18 @@ export const chemBufferSolutionsHendersonHasselbalchPart7Data = {
       exercise: {
         questions: [
           {
-            question: 'A buffer with 0.50 mol $HA$ ($pK_a = 5.00$) and 0.50 mol $A^-$ in 1.0 L has 0.25 mol $NaOH$ added. The new pH is:',
+            question: '0.75 mol of a weak acid HA ($pK_a = 5.00$) is mixed with 0.25 mol $NaOH$ in a total volume of 1.0 L. The pH of the resulting buffer is:',
             options: [
+              '4.70',
+              '5.30',
               '5.00',
-              '5.48',
-              '5.18',
-              '4.52'
+              '7.00'
             ],
-            correctAnswer: 1,
-            explanation: '$HA + OH^- \\rightarrow A^- + H_2O$. After: $HA = 0.25$ mol, $A^- = 0.75$ mol. $pH = 5.00 + \\log(0.75/0.25) = 5.00 + \\log(3.0) = 5.00 + 0.48 = 5.48$.'
+            correctAnswer: 0,
+            explanation: '$HA + OH^- \\rightarrow A^- + H_2O$. After reaction: $HA = 0.50$ mol, $A^- = 0.25$ mol. $pH = 5.00 + \\log(0.25/0.50) = 5.00 - 0.30 = 4.70$. Inverting the ratio gives 5.30, 5.00 would require equal amounts, and 7.00 ignores the leftover weak acid.'
           },
           {
-            question: 'On the AP exam, which is the MOST common buffer calculation error?',
+            question: 'When a buffer is made by mixing a weak acid with a strong base, which calculation error is the MOST common?',
             options: [
               'Forgetting to do the stoichiometry step first',
               'Using $pK_b$ in place of $pK_a$ for a base buffer',
@@ -222,7 +225,7 @@ export const chemBufferSolutionsHendersonHasselbalchPart7Data = {
               'Inverting the ratio to $[HA]/[A^-]$ inside the log'
             ],
             correctAnswer: 0,
-            explanation: 'The most common error is jumping directly to Henderson-Hasselbalch without first doing the stoichiometry step (reacting the added strong acid/base). Always do stoichiometry FIRST, then use the new amounts in H-H. Using $pK_b$ or inverting the ratio are real slips too, and concentrations work as well as moles because the volume cancels.'
+            explanation: 'The most common error is jumping directly to Henderson-Hasselbalch without first doing the stoichiometry step (reacting the strong base with the weak acid). Always do stoichiometry FIRST, then use the new amounts in H-H. Using $pK_b$ or inverting the ratio are real slips too, and concentrations work as well as moles because the volume cancels.'
           }
         ]
       }

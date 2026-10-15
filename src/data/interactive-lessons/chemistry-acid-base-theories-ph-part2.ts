@@ -250,7 +250,7 @@ Identify the conjugate partners:
             options: [
               'Brønsted-Lowry acid',
               'Brønsted-Lowry base',
-              'Lewis acid',
+              'Arrhenius acid',
               'Spectator ion'
             ],
             correctAnswer: 1,

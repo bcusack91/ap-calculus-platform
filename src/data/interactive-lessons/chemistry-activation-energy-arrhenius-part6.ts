@@ -131,15 +131,15 @@ The catalyzed pathway shows a **lower peak** (transition state) while the reacta
             explanation: 'Catalysts provide an alternative mechanism with lower Ea. They do not change ΔH, temperature (the average kinetic energy), or equilibrium position.'
           },
           {
-            question: 'If a catalyst lowers Ea from 100 kJ/mol to 60 kJ/mol at 300 K, by what factor does k increase? (Use $k_{2}/k_{1}$ = $e^{(Ea1-Ea2)/(RT)}$)',
+            question: 'A catalyst lowers Ea from 100 kJ/mol to 60 kJ/mol at a constant 300 K. Which statement best describes the effect on the rate constant?',
             options: [
-              '1.7',
-              '1.02',
-              '$9.2 \\times 10^{6}$',
-              '$1.1 \\times 10^{16}$'
+              'k is unchanged, because the temperature did not change',
+              'k increases by a factor of exactly 100/60',
+              'k rises, as far more collisions clear Ea',
+              'k decreases, because the new pathway has more steps'
             ],
             correctAnswer: 2,
-            explanation: '$k_{2}/k_{1}$ = e^((100,000 − 60,000)/(8.314 × 300)) = e^(40,000/2494) = $e^{16.04}$ = $9.2 \\times 10^{6}$ (roughly $10^{7}$). Taking the ratio of the two Ea values gives 1.7; leaving Ea in kJ while R is in J gives $e^{0.016}$ = 1.02; and using $10^{16.04}$ instead of $e^{16.04}$ gives $1.1 \\times 10^{16}$.'
+            explanation: 'Lowering the barrier means a much larger fraction of collisions at the same temperature can reach the transition state, so k rises sharply. The increase is not a simple ratio of the two Ea values, temperature alone does not set k when the pathway changes, and a catalyzed pathway is faster even when it has more steps.'
           },
           {
             question: 'Which statement about enzymes is correct?',
@@ -231,26 +231,25 @@ If a substance binds strongly to active sites and cannot be removed, the catalys
       }
     },
     {
-      id: 'ae6-calculation-practice',
+      id: 'ae6-effects-drill',
       type: 'input-boxes' as const,
       content: `
-**Catalyst Effect on Rate** 🧮
+**Catalyst Effects** 🧮
 
-An uncatalyzed reaction has $E_a = 120$ kJ/mol and $k = 1.0 \\times 10^{-10}$ $s^{-1}$ at 300 K.
+A catalyst is added to a reaction at constant temperature. For each quantity, type **increases**, **decreases**, or **unchanged**.
 
-**1)** A catalyst lowers $E_a$ to 80 kJ/mol. What is the ratio $k_{\\text{cat}}/k_{\\text{uncat}}$ at 300 K? Use $\\ln(k_{\\text{cat}}/k_{\\text{uncat}}) = (E_{a,\\text{uncat}} - E_{a,\\text{cat}})/(RT)$. Calculate this exponent first. (to 3 significant figures)
+**1)** The rate constant $k$ of the forward reaction
 
-**2)** The catalyzed $k$ is approximately how many times larger? Express as a power of 10. (integer)
+**2)** The enthalpy change $\\Delta H$ of the reaction
 
-**3)** If the catalyzed half-life is $t_{1/2} = 0.693/k_{\\text{cat}}$, and $k_{\\text{cat}} \\approx 1.0 \\times 10^{-3}$ $s^{-1}$, what is the half-life? (in seconds, whole number)
+**3)** The equilibrium constant $K$
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['16.0', '7', '693'],
-        hint1: '(120,000 − 80,000)/(8.314 × 300) = 40,000/2494 = 16.04 ≈ 16.0.',
-        hint2: '$e^{16.0}$ ≈ $9.2 \\times 10^{6}$ ≈ $10^{7}$. Power of 10 = 7.',
-        hint3: '$t_{1}/_{2}$ = $0.693/(1.0 \\times 10^{-3})$ = 693 s.',
-        explanation: '1) ΔEa/(RT) = 40,000/2494 = 16.0. 2) $e^{16.0}$ ≈ $9.2 \\times 10^{6}$ ≈ $10^{7}$ → 7 orders of magnitude. 3) $t_{1}/_{2}$ = 0.693/0.001 = 693 s (about 11.5 minutes).'
+        questions: [{ question: '(1)', answer: 'increases', acceptableAnswers: ['increases', 'increase'] }, { question: '(2)', answer: 'unchanged', acceptableAnswers: ['unchanged', 'no change', 'same'] }, { question: '(3)', answer: 'unchanged', acceptableAnswers: ['unchanged', 'no change', 'same'] }],
+        hint1: 'The new pathway has a lower activation energy.',
+        hint2: 'Do the starting and ending energy levels move?',
+        hint3: 'A catalyst speeds the forward and reverse reactions equally.',
+        explanation: '1) Increases: a lower Ea lets a larger fraction of collisions react. 2) Unchanged: reactants and products are at the same energies, so ΔH is the same. 3) Unchanged: the forward and reverse rates both increase, so equilibrium is reached faster but its position does not change.'
       }
     },
     {

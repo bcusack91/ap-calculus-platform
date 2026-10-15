@@ -4,9 +4,9 @@ export const chemOxidationReductionReactionsPart5Data = {
     {
       id: 'or5-intro',
       type: 'text' as const,
-      content: `# ⚡ Activity Series and Predicting Redox
+      content: `# ⚡ Redox Stoichiometry and Titrations
 
-**Part 5 of 7 — Metals Activity Series and Spontaneous Reactions**
+**Part 5 of 7 — Using Balanced Redox Equations to Find Amounts**
 
 ---
 
@@ -14,260 +14,239 @@ export const chemOxidationReductionReactionsPart5Data = {
 
 | Section |
 |---------|
-| 📌 The Activity Series of Metals |
-| Ranked from Most Active to Least Active |
-| 📌 Using the Activity Series |
-| The Golden Rule |
-| Examples |
+| 📌 Mole Ratios from a Balanced Redox Equation |
+| Electrons as a Bookkeeping Tool |
+| 📌 Redox Titrations |
+| The Permanganate Endpoint |
+| 🧪 Worked Titration Example |
 
-> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+> 🔑 **Key Concept:** A balanced redox equation works like any other balanced equation: its coefficients give the mole ratios you need for stoichiometry and titrations (CED 4.5, 4.6, 4.9).
 
 ---
 
 ### What You'll Master in Part 5
-- Understanding the core concepts covered in Part 5
-- Applying these ideas to solve practice problems
-- Building toward AP exam readiness for this topic`
+- Reading mole ratios from a balanced redox equation
+- Recognizing the endpoint of a permanganate titration
+- Calculating the amount or concentration of an analyte from redox titration data`
     },
     {
-      id: 'or5-activity-series',
+      id: 'or5-redox-ratios',
       type: 'text' as const,
       content: `
-## 📌 The Activity Series of Metals
+## 📌 Mole Ratios from a Balanced Redox Equation
 
-### Ranked from Most Active to Least Active
+Once a redox equation is balanced with half-reactions, its coefficients are mole ratios.
 
-| Rank | Metal | Oxidation | Notes |
-|------|-------|-----------|-------|
-| 1 | Li | Li → $Li^{+}$ + $e^{-}$ | Most active — reacts with cold water |
-| 2 | K | K → $K^{+}$ + $e^{-}$ | Reacts violently with water |
-| 3 | Ba | Ba → $Ba^{2+}$ + $2e^{-}$ | Reacts with water |
-| 4 | Ca | Ca → $Ca^{2+}$ + $2e^{-}$ | Reacts with water |
-| 5 | Na | Na → $Na^{+}$ + $e^{-}$ | Reacts with cold water |
-| 6 | Mg | Mg → $Mg^{2+}$ + $2e^{-}$ | Reacts with steam |
-| 7 | Al | Al → $Al^{3+}$ + $3e^{-}$ | Reacts with steam |
-| 8 | Zn | Zn → $Zn^{2+}$ + $2e^{-}$ | Reacts with acids |
-| 9 | Fe | Fe → $Fe^{2+}$ + $2e^{-}$ | Reacts with acids |
-| 10 | Ni | Ni → $Ni^{2+}$ + $2e^{-}$ | Reacts with acids |
-| — | **$H_{2}$** | **$H_{2}$ → $2H^{+}$ + $2e^{-}$** | **Reference point** |
-| 11 | Cu | Cu → $Cu^{2+}$ + $2e^{-}$ | Does NOT react with most acids |
-| 12 | Ag | Ag → $Ag^{+}$ + $e^{-}$ | Very unreactive |
-| 13 | Pt | Pt → $Pt^{2+}$ + $2e^{-}$ | Noble metal |
-| 14 | Au | Au → $Au^{3+}$ + $3e^{-}$ | Least active — noble metal |
-      `
-    },
-    {
-      id: 'or5-rules',
-      type: 'text' as const,
-      content: `
-## 📌 Using the Activity Series
+$$\\text{MnO}_4^-(aq) + 5\\text{Fe}^{2+}(aq) + 8\\text{H}^+(aq) \\rightarrow \\text{Mn}^{2+}(aq) + 5\\text{Fe}^{3+}(aq) + 4\\text{H}_2\\text{O}(l)$$
 
-### The Golden Rule
-
-> 🔑 **Key Concept:** A metal can **displace** (replace) any metal **below it** in the activity series from a solution of that metal\'s ions.
-
-$$\\boxed{\\text{More active metal} + \\text{Less active metal ion} \\rightarrow \\text{Reaction occurs!}}$$
-
-$$\\boxed{\\text{Less active metal} + \\text{More active metal ion} \\rightarrow \\text{No reaction (NR)}}$$
+| Ratio | Meaning |
+|-------|---------|
+| 1 mol $\\text{MnO}_4^-$ : 5 mol $\\text{Fe}^{2+}$ | One permanganate ion oxidizes five iron(II) ions |
+| 1 mol $\\text{MnO}_4^-$ : 8 mol $\\text{H}^+$ | The reaction consumes acid |
+| 5 mol $\\text{Fe}^{2+}$ : 5 mol $\\text{Fe}^{3+}$ | Every iron(II) ion becomes iron(III) |
 
 
 ---
 
-### Examples
+### Electrons as a Bookkeeping Tool
 
-**Zn(s) + $CuSO_{4}(aq)$ → ?**
-- Zn is ABOVE Cu in the series → **reaction occurs**
-$$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$$
+The 1 : 5 ratio comes straight from electron counting:
 
-**Cu(s) + $ZnSO_{4}(aq)$ → ?**
-- Cu is BELOW Zn in the series → **no reaction (NR)**
+- Mn goes from +7 to +2: each $\\text{MnO}_4^-$ **gains 5 electrons**
+- Fe goes from +2 to +3: each $\\text{Fe}^{2+}$ **loses 1 electron**
 
+So one permanganate ion needs five iron(II) ions to supply its five electrons. Checking this ratio is a fast way to catch a balancing mistake.
 
----
-
-### Metals and Acids
-
-Metals **above hydrogen** in the activity series react with dilute acids (HCl, $H_{2}SO_{4}$) to produce $H_{2}$ gas:
-
-$$\\text{Zn}(s) + 2\\text{HCl}(aq) \\rightarrow \\text{ZnCl}_2(aq) + \\text{H}_2(g)$$
-
-> ⚠️ **Warning:** Metals **below hydrogen** (Cu, Ag, Pt, Au) do **NOT** react with dilute HCl or $H_{2}SO_{4}$.
-      `
-    },
-    {
-      id: 'or5-practical',
-      type: 'text' as const,
-      content: `
-## 🔧 Practical Applications
-
-### Why Gold Doesn\'t Corrode
-
-> 💡 **Tip:** Gold (Au) is at the **bottom** of the activity series — it cannot be oxidized by water, air, or common acids. This is why gold jewelry stays shiny for thousands of years.
-
-
----
-
-### Galvanized Steel
-
-Steel (mostly Fe) is coated with zinc (Zn). Since Zn is more active than Fe, the zinc corrodes preferentially, **protecting** the iron underneath. This is called **sacrificial protection**.
-
-
----
-
-### Copper Pennies in Silver Nitrate
-
-When a copper penny is placed in $AgNO_{3}$ solution:
-$$\\text{Cu}(s) + 2\\text{Ag}^+(aq) \\rightarrow \\text{Cu}^{2+}(aq) + 2\\text{Ag}(s)$$
-
-Cu is above Ag → reaction occurs. Silver crystals grow on the penny while the solution turns blue $(Cu^{2+})$.
-
-
----
-
-### Dissolving Gold
-
-Gold requires **aqua regia** (a mixture of $HNO_{3}$ and HCl) — ordinary acids cannot oxidize it.
+> ⚠️ **Warning:** The most common error is using a 1 : 1 ratio because both formulas look "single." Always take the ratio from the balanced equation.
       `
     },
     {
       id: 'or5-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Activity Series Quiz** 🎯
+**Redox Mole Ratios Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A strip of zinc metal is placed in a solution of $CuSO_{4}$. What happens?',
+            question: 'Using $\\text{MnO}_4^- + 5\\text{Fe}^{2+} + 8\\text{H}^+ \\rightarrow \\text{Mn}^{2+} + 5\\text{Fe}^{3+} + 4\\text{H}_2\\text{O}$, how many moles of $\\text{Fe}^{2+}$ react with 0.020 mol $\\text{MnO}_4^-$?',
             options: [
-              'No reaction occurs, because Cu is more active than Zn',
-              'Zn dissolves and Cu metal deposits on the strip',
-              'Cu dissolves into solution and Zn metal plates out',
-              'Both metals dissolve and the blue color grows deeper'
+              '0.0040 mol',
+              '0.020 mol',
+              '0.10 mol',
+              '0.16 mol'
             ],
-            correctAnswer: 1,
-            explanation: 'Zn is above Cu in the activity series (Zn is more active), so Zn can displace $Cu^{2+}$ from solution. Zn → $Zn^{2+}$ (dissolves) and $Cu^{2+}$ → Cu (deposits as solid copper). Reversing the activity order predicts either no reaction or Zn plating out, and the blue $Cu^{2+}$ color fades rather than deepens.'
+            correctAnswer: 2,
+            explanation: '0.020 mol $\\text{MnO}_4^-$ × (5 mol $\\text{Fe}^{2+}$ / 1 mol $\\text{MnO}_4^-$) = 0.10 mol. Dividing by 5 instead of multiplying gives 0.0040 mol, a 1 : 1 ratio gives 0.020 mol, and 0.16 mol uses the $\\text{H}^+$ coefficient.'
           },
           {
-            question: 'Which metal will NOT react with dilute HCl?',
+            question: 'In $\\text{Cr}_2\\text{O}_7^{2-} + 6\\text{Fe}^{2+} + 14\\text{H}^+ \\rightarrow 2\\text{Cr}^{3+} + 6\\text{Fe}^{3+} + 7\\text{H}_2\\text{O}$, why does one dichromate ion react with six iron(II) ions?',
             options: [
-              'Zinc',
-              'Iron',
-              'Magnesium',
-              'Copper'
-            ],
-            correctAnswer: 3,
-            explanation: 'Copper (Cu) is below hydrogen in the activity series. It cannot reduce $H^{+}$ to $H_{2}$, so it does not react with dilute HCl. Zn, Fe, and Mg are all above H and will react.'
-          },
-          {
-            question: 'If you place an iron nail into a solution of aluminum sulfate, what occurs?',
-            options: [
-              'Fe displaces Al — iron is more active',
-              'No reaction — iron is less active than aluminum',
-              'Sulfate ions oxidize the nail to $Fe^{3+}$',
-              'A precipitate of $FeSO_{4}$ forms on the nail'
+              'Each dichromate ion contains six oxygen atoms that bond to iron',
+              'Two Cr atoms each gain 3 electrons, and each $\\text{Fe}^{2+}$ loses 1',
+              'Fourteen $\\text{H}^+$ ions must be split evenly between the iron ions',
+              'Each Cr atom gains 6 electrons, and each $\\text{Fe}^{2+}$ loses 2'
             ],
             correctAnswer: 1,
-            explanation: 'Aluminum (Al) is above iron (Fe) in the activity series. Fe cannot displace $Al^{3+}$ from solution: a less active metal cannot displace a more active metal\'s ions. Sulfate is a spectator here, and $FeSO_{4}$ is soluble, so no precipitate forms either.'
+            explanation: 'Cr goes from +6 to +3, so each Cr gains 3 electrons and the two Cr atoms in one dichromate gain 6. Each $\\text{Fe}^{2+}$ loses 1 electron, so six are needed. Dichromate has seven oxygen atoms, not six, and the $\\text{H}^+$ count is set by balancing O and H, not by the electron ratio.'
           },
           {
-            question: 'Galvanized steel uses zinc coating to protect iron because:',
+            question: 'When 0.30 mol of zinc reacts completely by $\\text{Zn} + 2\\text{H}^+ \\rightarrow \\text{Zn}^{2+} + \\text{H}_2$, how many moles of electrons are transferred?',
             options: [
-              'Zinc is less active and acts as an inert barrier',
-              'Zinc is more active and corrodes preferentially',
-              'Zinc alloys with the iron to form stainless steel',
-              'Zinc gains electrons from iron, keeping iron reduced'
+              '0.15 mol',
+              '0.30 mol',
+              '0.60 mol',
+              '1.2 mol'
             ],
-            correctAnswer: 1,
-            explanation: 'Zinc is more active (higher in the activity series) than iron. It oxidizes preferentially, sacrificing itself to protect the iron underneath. This is sacrificial (cathodic) protection. Zinc loses electrons (it is oxidized); it does not take electrons from iron, and galvanizing is a surface coating, not stainless steel (an Fe–Cr alloy).'
+            correctAnswer: 2,
+            explanation: 'Each Zn atom loses 2 electrons, so 0.30 mol Zn transfers 0.30 × 2 = 0.60 mol of electrons (and produces 0.30 mol $\\text{H}_2$). Halving instead of doubling gives 0.15 mol, and 1.2 mol double-counts the electrons gained.'
           }
         ]
       }
     },
     {
-      id: 'or5-predict-drill',
+      id: 'or5-titrations',
+      type: 'text' as const,
+      content: `
+## 📌 Redox Titrations
+
+A titration finds the amount of an **analyte** by reacting it completely with a **titrant** of known concentration (CED 4.6.A.1). In a redox titration, the titrant is an oxidizing or reducing species, such as acidified potassium permanganate.
+
+### The Permanganate Endpoint
+
+- $\\text{MnO}_4^-$ is deep purple; $\\text{Mn}^{2+}$ is nearly colorless.
+- Before the equivalence point, every drop of purple titrant is reduced by the analyte and the color disappears.
+- At the **endpoint**, the analyte is used up, the next drop of $\\text{MnO}_4^-$ has nothing to react with, and a **faint pink color persists**.
+
+> 💡 **Tip:** Permanganate acts as its own indicator. No separate indicator is needed.
+
+
+---
+
+### The Calculation Path
+
+$$\\text{volume of titrant} \\xrightarrow{\\times M} \\text{mol titrant} \\xrightarrow{\\text{mole ratio}} \\text{mol analyte} \\xrightarrow{\\div V \\text{ or } \\times \\text{molar mass}} \\text{concentration or mass}$$
+
+Remember to convert mL to L before multiplying by molarity.
+      `
+    },
+    {
+      id: 'or5-worked-titration',
+      type: 'text' as const,
+      content: `
+## 🧪 Worked Titration Example
+
+> **Problem:** A 25.00 mL sample of an $\\text{Fe}^{2+}$ solution is titrated with 0.0200 M $\\text{KMnO}_4$ in acid. The faint pink endpoint appears after 18.50 mL of titrant. What is $[\\text{Fe}^{2+}]$?
+
+> **Solution:**
+
+**Step 1 — Moles of titrant:**
+$$n_{\\text{MnO}_4^-} = (0.0200 \\text{ M})(0.01850 \\text{ L}) = 3.70 \\times 10^{-4} \\text{ mol}$$
+
+**Step 2 — Mole ratio (1 $\\text{MnO}_4^-$ : 5 $\\text{Fe}^{2+}$):**
+$$n_{\\text{Fe}^{2+}} = 5 \\times (3.70 \\times 10^{-4}) = 1.85 \\times 10^{-3} \\text{ mol}$$
+
+**Step 3 — Concentration:**
+$$[\\text{Fe}^{2+}] = \\frac{1.85 \\times 10^{-3} \\text{ mol}}{0.02500 \\text{ L}} = \\boxed{0.0740 \\text{ M}}$$
+
+
+---
+
+### Error Analysis
+
+| Mistake | Effect on calculated $[\\text{Fe}^{2+}]$ |
+|---------|----------------------------------------|
+| Titrating past the endpoint (dark purple) | Volume too large → result **too high** |
+| Using a 1 : 1 ratio | Result **5 times too low** |
+| Forgetting to convert mL to L | Result off by a factor of 1000 |
+      `
+    },
+    {
+      id: 'or5-titration-drill',
       type: 'input-boxes' as const,
       content: `
-**Predict the Reaction** 🧮
+**Redox Titration Practice** 🧮
 
-Will a reaction occur? Type **yes** or **no**.
+Use $\\text{MnO}_4^- + 5\\text{Fe}^{2+} + 8\\text{H}^+ \\rightarrow \\text{Mn}^{2+} + 5\\text{Fe}^{3+} + 4\\text{H}_2\\text{O}$.
 
-**1)** Ag(s) + $CuSO_{4}(aq)$ → ?
+A 20.00 mL sample of $\\text{Fe}^{2+}$ solution requires 12.00 mL of 0.0100 M $\\text{KMnO}_4$ to reach the endpoint.
 
-**2)** Mg(s) + $FeCl_{2}(aq)$ → ?
+**1)** Moles of $\\text{MnO}_4^-$ used (in units of $10^{-4}$ mol; e.g., type 3.5 for $3.5 \\times 10^{-4}$)
 
-**3)** Fe(s) + HCl(aq) → ?
+**2)** Moles of $\\text{Fe}^{2+}$ in the sample (in units of $10^{-4}$ mol)
+
+**3)** $[\\text{Fe}^{2+}]$ in mol/L (3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['no', 'yes', 'yes'],
-        hint1: 'Is Ag above or below Cu in the activity series?',
-        hint2: 'Is Mg above or below Fe in the activity series?',
-        hint3: 'Is Fe above or below H in the activity series?',
-        explanation: '1) No — Ag is below Cu in the series; it cannot displace $Cu^{2+}$. 2) Yes — Mg is above Fe; Mg(s) + $FeCl_{2}(aq)$ → $MgCl_{2}(aq)$ + Fe(s). 3) Yes — Fe is above H; Fe(s) + 2HCl(aq) → $FeCl_{2}(aq)$ + $H_{2}(g)$.'
+        correctAnswers: ['1.2', '6.0', '0.0300'],
+        hint1: '$(0.0100)(0.01200)$ = ?',
+        hint2: 'Multiply the moles of permanganate by 5.',
+        hint3: 'Divide the moles of $\\text{Fe}^{2+}$ by 0.02000 L.',
+        explanation: '1) $(0.0100 \\text{ M})(0.01200 \\text{ L}) = 1.2 \\times 10^{-4}$ mol. 2) $5 \\times 1.2 \\times 10^{-4} = 6.0 \\times 10^{-4}$ mol. 3) $6.0 \\times 10^{-4} / 0.02000 = 0.0300$ M.'
       }
     },
     {
       id: 'or5-dropdown-practice',
       type: 'dropdown-select' as const,
       content: `
-**Activity Series Concepts** 🔽
+**Redox Titration Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'A more active metal is one that',
-            options: ['gains electrons easily', 'loses electrons easily', 'is unreactive', 'is always a noble metal']
+            label: 'In a permanganate titration, the endpoint is signaled by',
+            options: ['a precipitate forming', 'a faint pink color that persists', 'bubbles of gas', 'the solution turning colorless']
           },
           {
-            label: 'Metals below hydrogen in the activity series',
-            options: ['react with all acids', 'react only with strong acids', 'do not react with dilute acids', 'always form precipitates']
+            label: 'During the titration of $\\text{Fe}^{2+}$ with $\\text{MnO}_4^-$, the iron(II) ions are',
+            options: ['oxidized', 'reduced', 'spectators', 'precipitated']
           },
           {
-            label: 'In single replacement, the free metal must be _____ the ion it replaces',
-            options: ['below', 'above', 'equal to', 'adjacent to']
+            label: 'The mole ratio used in a redox titration calculation comes from',
+            options: ['the molar masses', 'the balanced redox equation', 'the volume of the sample', 'the color of the titrant']
           },
           {
-            label: 'Gold is at the bottom of the activity series, meaning it is',
-            options: ['the most reactive metal', 'the least reactive metal', 'a strong reducing agent', 'the most easily oxidized metal']
+            label: 'If a student overshoots the endpoint, the calculated analyte concentration will be',
+            options: ['too low', 'too high', 'unchanged', 'zero']
           }
         ],
-        correctAnswers: ['loses electrons easily', 'do not react with dilute acids', 'above', 'the least reactive metal'],
-        hint1: 'Active metals are strong reducing agents — they give up electrons.',
-        hint2: 'Cu, Ag, Pt, Au cannot reduce $H^{+}$ to $H_{2}$.',
-        hint3: 'More active = higher in the series = can displace lower ones.',
-        explanation: 'Active metals lose electrons easily (strong reducing agents). Metals below H don\'t react with dilute acids. The displacing metal must be above the ion\'s metal in the series. Gold is the least reactive metal — it\'s nearly impossible to oxidize.'
+        correctAnswers: ['a faint pink color that persists', 'oxidized', 'the balanced redox equation', 'too high'],
+        hint1: 'Purple permanganate stays colored only once the analyte is gone.',
+        hint2: 'Fe goes from +2 to +3.',
+        hint3: 'Coefficients give mole ratios.',
+        explanation: 'Excess $\\text{MnO}_4^-$ gives a lasting pink color at the endpoint. $\\text{Fe}^{2+}$ loses an electron, so it is oxidized. Mole ratios come from the balanced equation. Extra titrant volume makes the calculated moles of analyte, and therefore its concentration, too high.'
       }
     },
     {
       id: 'or5-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Exit Quiz — Activity Series** ✅
+**Exit Quiz — Redox Stoichiometry** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'Which reaction will occur spontaneously?',
+            question: 'Oxalate is titrated by $2\\text{MnO}_4^- + 5\\text{C}_2\\text{O}_4^{2-} + 16\\text{H}^+ \\rightarrow 2\\text{Mn}^{2+} + 10\\text{CO}_2 + 8\\text{H}_2\\text{O}$. If $4.0 \\times 10^{-4}$ mol of $\\text{MnO}_4^-$ is used, how many moles of oxalate were present?',
             options: [
-              '$\\text{Au}(s) + \\text{HCl}(aq) \\rightarrow$',
-              '$\\text{Ag}(s) + \\text{Cu(NO}_3)_2(aq) \\rightarrow$',
-              '$\\text{Zn}(s) + \\text{Pb(NO}_3)_2(aq) \\rightarrow$',
-              '$\\text{Cu}(s) + \\text{NaCl}(aq) \\rightarrow$'
+              '$1.6 \\times 10^{-4}$ mol',
+              '$4.0 \\times 10^{-4}$ mol',
+              '$1.0 \\times 10^{-3}$ mol',
+              '$2.0 \\times 10^{-3}$ mol'
             ],
             correctAnswer: 2,
-            explanation: 'Zn is above Pb in the activity series. Zn(s) + $Pb(NO_{3})_{2}(aq)$ → $Zn(NO_{3})_{2}(aq)$ + Pb(s). Au and Ag cannot displace Cu or react with dilute acids. Cu cannot displace Na.'
+            explanation: '$4.0 \\times 10^{-4}$ mol $\\text{MnO}_4^-$ × (5 mol oxalate / 2 mol $\\text{MnO}_4^-$) = $1.0 \\times 10^{-3}$ mol. Inverting the ratio gives $1.6 \\times 10^{-4}$, a 1 : 1 ratio gives $4.0 \\times 10^{-4}$, and multiplying by 5 without dividing by 2 gives $2.0 \\times 10^{-3}$.'
           },
           {
-            question: 'A student places metal X into a solution of $YCl_{2}$ and observes metal Y depositing on X. This means:',
+            question: 'A student titrating $\\text{Fe}^{2+}$ with $\\text{KMnO}_4$ records the volume when the solution first turns dark purple instead of faint pink. How does this affect the calculated $[\\text{Fe}^{2+}]$?',
             options: [
-              'Y is more active than X',
-              'X is more active than Y',
-              'X and Y have equal activity',
-              'No redox reaction occurred'
+              'Too low, because less permanganate was recorded',
+              'Too high, because too much permanganate was counted',
+              'Unchanged, because the mole ratio is fixed',
+              'Too low, because the iron was reduced'
             ],
             correctAnswer: 1,
-            explanation: 'Metal X displaced $Y^{2+}$ from solution, meaning X is more active (higher in the activity series) than Y. X was oxidized and $Y^{2+}$ was reduced to solid Y.'
+            explanation: 'Dark purple means excess titrant was added past the endpoint. The recorded volume, and therefore the calculated moles of $\\text{MnO}_4^-$ and $\\text{Fe}^{2+}$, are too large, so the concentration comes out too high. Iron(II) is oxidized, not reduced, in this titration.'
           }
         ]
       }

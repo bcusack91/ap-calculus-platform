@@ -17,17 +17,17 @@ export const chemElectrolyticCellsFaradayPart1Data = {
 | 🔧 How Electrolysis Works |
 | The Key Idea |
 | Requirements |
-| Electrode Conventions in Electrolytic Cells |
+| Anode and Cathode in Electrolytic Cells |
 | ⚡ Energy Considerations |
 
-> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+> 🔑 **Key Concept:** An electrolytic cell uses an external source of electrical energy to make a thermodynamically unfavored redox reaction occur (CED 9.7, 9.8).
 
 ---
 
 ### What You'll Master in Part 1
-- Understanding the core concepts covered in Part 1
-- Applying these ideas to solve practice problems
-- Building toward AP exam readiness for this topic`
+- Explain what the external power source does in an electrolytic cell
+- Identify the anode and cathode from the half-reactions
+- Relate the minimum applied voltage and $\\Delta G°$ to $E°_{\\text{cell}}$`
     },
     {
       id: 'ef1-how-it-works',
@@ -51,17 +51,16 @@ An external voltage source (battery or power supply) pushes electrons in the **o
 
 ---
 
-### Electrode Conventions in Electrolytic Cells
+### Anode and Cathode in Electrolytic Cells
 
 | Property | Galvanic Cell | Electrolytic Cell |
 |----------|:------------:|:-----------------:|
 | Anode | Oxidation ✓ | Oxidation ✓ |
 | Cathode | Reduction ✓ | Reduction ✓ |
-| Anode sign | − (negative) | + (positive) |
-| Cathode sign | + (positive) | − (negative) |
-| Spontaneous? | Yes | No |
+| Electron flow in the wire | Anode → cathode | Anode → cathode (pushed by the source) |
+| Thermodynamically favored? | Yes | No |
 
-**AN OX and RED CAT still apply!** Oxidation is always at the anode, reduction at the cathode — regardless of cell type.
+**AN OX and RED CAT still apply!** Oxidation is always at the anode, reduction at the cathode — regardless of cell type. Identify each electrode by the half-reaction that happens there (CED 9.8.A.3).
       `
     },
     {
@@ -84,13 +83,9 @@ For any electrolysis reaction, the numbers tell the story:
 
 ---
 
-### ⚠️ Overpotential — The Hidden Cost
+### 🔗 Linking the Voltage to ΔG°
 
-In practice, the actual voltage needed is **higher** than the thermodynamic minimum. This extra voltage is called **overpotential** — it overcomes kinetic barriers at the electrode surfaces.
-
-$$\\boxed{V_{\\text{applied}} = |E_{\\text{cell}}| + \\eta_{\\text{overpotential}}}$$
-
-> 💡 Overpotential depends on the electrode material, current density, and which gases are being produced. It's why real electrolysis always costs more energy than theory predicts.
+The same equation used for galvanic cells applies: $\\Delta G° = -nFE°$ (CED 9.9). A negative $E°_{\\text{cell}}$ gives a positive $\\Delta G°$, which is the energy the power source must supply per mole of reaction.
 
 ---
 
@@ -101,11 +96,11 @@ $$2\\text{H}_2\\text{O}(l) \\rightarrow 2\\text{H}_2(g) + \\text{O}_2(g)$$
 | Parameter | Value |
 |-----------|:-----:|
 | $E°$ | $-1.23$ V (non-spontaneous) |
+| Electrons transferred, $n$ | 4 (per $\\text{O}_2$ formed) |
 | Minimum applied voltage | $1.23$ V |
-| Typical actual voltage | $\\sim 1.8 - 2.0$ V |
-| Overpotential | $\\sim 0.6 - 0.8$ V |
+| $\\Delta G°$ | $-(4)(96{,}485)(-1.23) \\approx +475$ kJ/mol$_{rxn}$ |
 
-> 📏 This reaction is how we produce hydrogen gas for fuel cells — electrolysis and fuel cells are **reverse processes** of each other!
+> 📏 The reverse reaction, $2\\text{H}_2 + \\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}$, is thermodynamically favored: electrolysis simply runs a favored reaction backward by supplying energy.
       `
     },
     {
@@ -128,15 +123,15 @@ $$2\\text{H}_2\\text{O}(l) \\rightarrow 2\\text{H}_2(g) + \\text{O}_2(g)$$
             explanation: 'The power source forces a non-spontaneous reaction by pulling electrons from the anode and pushing them to the cathode, the direction they would not naturally flow. It drives the reaction "uphill" energetically; without it, nothing happens, and its role is electrical, not heating.'
           },
           {
-            question: 'In an electrolytic cell, the anode is:',
+            question: 'In an electrolytic cell, the anode is the electrode where:',
             options: [
-              'Negative, just as the anode is in a galvanic cell',
-              'Positive (wired to the + terminal of the source)',
-              'Negative (wired to the − terminal of the battery)',
-              'Neutral, since only the cathode is connected to power'
+              'Reduction occurs, the reverse of a galvanic cell',
+              'Oxidation occurs, just as in a galvanic cell',
+              'Electrons enter the cell from the power source',
+              'No reaction occurs, because the source supplies the energy'
             ],
             correctAnswer: 1,
-            explanation: 'In an electrolytic cell, the anode is connected to the positive terminal of the power source, making it positive. This is OPPOSITE to a galvanic cell where the anode is negative.'
+            explanation: 'Oxidation always occurs at the anode, in both galvanic and electrolytic cells. Electrons are pulled out of the anode by the power source and pushed into the cathode, where reduction occurs.'
           },
           {
             question: 'Electrolysis is used for:',
@@ -173,15 +168,15 @@ $$2\\text{H}_2\\text{O}(l) \\rightarrow 2\\text{H}_2(g) + \\text{O}_2(g)$$
             options: ['E°_cell (a negative number)', '|E°_cell| (its absolute value)', 'twice |E°_cell|', 'any small voltage']
           },
           {
-            label: 'Overpotential is',
-            options: ['extra voltage beyond the minimum', 'the voltage of the galvanic cell', 'the minimum voltage itself', 'the voltage of the salt bridge']
+            label: 'Electrons from the power source are pushed into the',
+            options: ['cathode', 'anode', 'salt bridge', 'electrolyte']
           }
         ],
-        correctAnswers: ['anode', 'positive', '|E°_cell| (its absolute value)', 'extra voltage beyond the minimum'],
+        correctAnswers: ['anode', 'positive', '|E°_cell| (its absolute value)', 'cathode'],
         hint1: 'AN OX applies to all electrochemical cells.',
         hint2: 'Non-spontaneous reaction = ΔG > 0.',
         hint3: 'The applied voltage must overcome the unfavorable cell potential.',
-        explanation: 'Oxidation at the anode always (AN OX). ΔG > 0 for electrolysis (non-spontaneous). Minimum voltage = |E°|. Overpotential = extra kinetic barrier voltage needed in practice.'
+        explanation: 'Oxidation at the anode always (AN OX). ΔG > 0 for electrolysis (non-spontaneous). Minimum voltage = |E°|. The source pushes electrons into the cathode, where reduction occurs.'
       }
     },
     {
@@ -192,7 +187,7 @@ $$2\\text{H}_2\\text{O}(l) \\rightarrow 2\\text{H}_2(g) + \\text{O}_2(g)$$
 
 **1)** The electrolysis of water has $E° = -1.23$ V. What minimum voltage must be applied? (in V, positive value)
 
-**2)** If the overpotential is 0.5 V, what is the actual applied voltage needed? (in V)
+**2)** The reaction transfers $n = 4$ electrons. What is $\\Delta G°$ in kJ/mol$_{rxn}$? (3 significant figures)
 
 **3)** Is the ΔG for electrolysis positive or negative? (type "positive" or "negative")
 
@@ -200,11 +195,11 @@ $$2\\text{H}_2\\text{O}(l) \\rightarrow 2\\text{H}_2(g) + \\text{O}_2(g)$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.23', '1.73', 'positive'],
+        correctAnswers: ['1.23', '475', 'positive'],
         hint1: 'Take the absolute value of E°.',
-        hint2: '$V_{\\text{applied}} = |E°| + \\text{overpotential}$',
+        hint2: '$\\Delta G° = -nFE° = -(4)(96{,}485)(-1.23)$; divide by 1000.',
         hint3: 'Electrolysis is non-spontaneous.',
-        explanation: '1) Minimum voltage = |−1.23| = 1.23 V. 2) 1.23 + 0.50 = 1.73 V. 3) ΔG > 0 (positive) because the reaction is non-spontaneous.'
+        explanation: '1) Minimum voltage = |−1.23| = 1.23 V. 2) $\\Delta G° = -(4)(96{,}485)(-1.23) = +474{,}700$ J ≈ 475 kJ. 3) ΔG > 0 (positive) because the reaction is non-spontaneous.'
       }
     },
     {
@@ -216,15 +211,15 @@ $$2\\text{H}_2\\text{O}(l) \\rightarrow 2\\text{H}_2(g) + \\text{O}_2(g)$$
       exercise: {
         questions: [
           {
-            question: 'The anode sign is different in galvanic vs electrolytic cells because:',
+            question: 'A reaction has E°cell = −0.62 V. Which statement about running it in an electrolytic cell is correct?',
             options: [
-              'Oxidation and reduction switch places',
-              'The external power source reverses the electrode polarity',
-              'The anode sign is always the same in both cells',
-              'Different metals are used'
+              'It occurs on its own once the electrodes touch the solution',
+              'It needs an applied voltage of at least 0.62 V because ΔG° > 0',
+              'It needs exactly 0.62 V, and any larger voltage stops it',
+              'It cannot be made to occur, because E° is negative'
             ],
             correctAnswer: 1,
-            explanation: 'In a galvanic cell, the anode naturally produces electrons (−). In an electrolytic cell, the power source connects the + terminal to the anode, making it +. The chemistry (oxidation at anode) is the same; only the polarity labeling changes.'
+            explanation: 'A negative $E°$ means a positive $\\Delta G°$, so the reaction is not thermodynamically favored and needs an external source of at least $|E°| = 0.62$ V. A larger voltage still drives it, and a negative $E°$ means "needs energy," not "impossible."'
           },
           {
             question: 'Which is a real-world example of electrolysis?',
@@ -232,7 +227,7 @@ $$2\\text{H}_2\\text{O}(l) \\rightarrow 2\\text{H}_2(g) + \\text{O}_2(g)$$
               'A car battery producing electricity',
               'Splitting water into $H_{2}$ and $O_{2}$ using a power supply',
               'A lemon battery lighting an LED',
-              'A fuel cell generating power'
+              'A Daniell cell lighting a bulb'
             ],
             correctAnswer: 1,
             explanation: 'Splitting water ($2\\text{H}_2\\text{O} \\rightarrow 2\\text{H}_2 + \\text{O}_2$) is a non-spontaneous process that requires an external power supply — a classic example of electrolysis.'

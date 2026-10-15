@@ -6,22 +6,22 @@ export const chemSolutionsSolubilityPart6Data = {
       type: 'text' as const,
       content: `# 🧮 Problem-Solving Workshop
 
-**Part 6 of 7 — Mixed Concentration and Colligative Property Calculations**
+**Part 6 of 7 — Multi-Step Molarity, Mixing, and Precipitation Problems**
 
 ---
 
 ### Practice Makes Perfect
 
-This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem combines molarity, dilution, ion counting, and reaction stoichiometry from earlier parts.
 
-> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+> 🔑 **Why this matters:** AP free-response questions often chain three or four solution calculations together. A reliable method keeps each step clean.
 
 ---
 
 ### What You'll Master in Part 6
-- Working through complete multi-step problems from start to finish
-- Building problem-solving strategies you can apply on the AP exam
-- Identifying which concepts to apply and in what order`
+- Finding ion concentrations after two solutions are mixed
+- Using molarity and volume to find a limiting reactant in a precipitation
+- Calculating the mass of precipitate and the ions left over in solution`
     },
     {
       id: 'ss6-strategy',
@@ -31,12 +31,12 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 
 ### Step-by-Step Approach
 
-1. **Read** the problem — identify what is given and what is asked
-2. **List** the relevant formula(s)
-3. **Convert** units if needed (g → mol, mL → L, °C → K)
-4. **Determine** the van\'t Hoff factor $i$ (does the solute dissociate?)
-5. **Plug in** and solve
-6. **Check** — does the answer make physical sense?
+1. **Read** the problem: identify what is given and what is asked
+2. **Convert** every solution to **moles** with $n = M \\times V$ (volume in liters)
+3. **Split** ionic compounds into ions and count moles of each ion
+4. **React** (if a precipitate or neutralization occurs) and find the limiting reactant
+5. **Divide** by the **total** volume to get final concentrations
+6. **Check:** does the answer make physical sense?
 
 
 ---
@@ -46,98 +46,79 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 | Formula | Used For |
 |---------|----------|
 | $M = n/V$ | Molarity |
-| $m = n/\\text{kg solvent}$ | Molality |
-| $M_1V_1 = M_2V_2$ | Dilution |
-| $\\Delta T_b = iK_bm$ | Boiling point elevation |
-| $\\Delta T_f = iK_fm$ | Freezing point depression |
-| $\\Pi = iMRT$ | Osmotic pressure |
+| $n = M \\times V$ | Moles from a solution |
+| $M_1V_1 = M_2V_2$ | Dilution of one solution |
+| $[\\text{ion}] = \\text{subscript} \\times M_{\\text{salt}}$ | Ion concentration |
+| $m = n \\times \\mathcal{M}$ | Mass from moles (molar mass $\\mathcal{M}$) |
 
-
----
-
-### Constants for Water
-
-- $K_b = 0.512$ °C/m
-- $K_f = 1.86$ °C/m
-- $T_b = 100.0$ °C, $T_f = 0.0$ °C
-- $R = 0.08206$ L·atm/(mol·K)
+> ⚠️ **Warning:** When two solutions are mixed, volumes add. Forgetting to use the **combined** volume is the most common error in mixing problems.
       `
     },
     {
       id: 'ss6-worked-example-1',
       type: 'text' as const,
       content: `
-## 🧪 Worked Example 1: Concentration Conversion
+## 🧪 Worked Example 1: Mixing Solutions with a Common Ion
 
-> **Problem:** A solution is prepared by dissolving 34.2 g of sucrose ($C_{12}H_{22}O_{11}$, $M = 342.30$ g/mol) in 200.0 g of water. The density of the resulting solution is 1.024 g/mL. Calculate molality, molarity, mass percent, and mole fraction.
-
-### Given
-
-| Quantity | Value |
-|----------|-------|
-| Mass of sucrose | 34.2 g |
-| $M_{\\text{sucrose}}$ | 342.30 g/mol |
-| Mass of water | 200.0 g |
-| $d_{\\text{solution}}$ | 1.024 g/mL |
-
----
+> **Problem:** 100.0 mL of 0.200 M NaCl is mixed with 50.0 mL of 0.300 M $CaCl_{2}$. No precipitate forms. Find the concentration of each ion in the mixture.
 
 ### Step-by-Step Solution
 
 | Step | Find | Calculation | Result |
 |------|------|-------------|--------|
-| 1 | Moles of sucrose | $34.2 / 342.30$ | 0.0999 mol |
-| 2 | **(a) Molality** | $0.0999 / 0.2000$ kg | $m = 0.500$ m |
-| 3 | Total mass of solution | $34.2 + 200.0$ | 234.2 g |
-| 4 | Volume of solution | $234.2 / 1.024$ | 228.7 mL = 0.2287 L |
-| 5 | **(b) Molarity** | $0.0999 / 0.2287$ | $M = 0.437$ M |
-| 6 | **(c) Mass percent** | $(34.2 / 234.2) \\times 100$ | 14.6% |
-| 7 | Moles of water | $200.0 / 18.02$ | 11.10 mol |
-| 8 | **(d) Mole fraction** | $0.0999 / (0.0999 + 11.10)$ | $\\chi = 0.00893$ |
+| 1 | Moles NaCl | $(0.200)(0.1000)$ | 0.0200 mol |
+| 2 | Moles $CaCl_{2}$ | $(0.300)(0.0500)$ | 0.0150 mol |
+| 3 | Moles $Na^{+}$ | $1 \\times 0.0200$ | 0.0200 mol |
+| 4 | Moles $Ca^{2+}$ | $1 \\times 0.0150$ | 0.0150 mol |
+| 5 | Moles $Cl^{-}$ | $0.0200 + 2(0.0150)$ | 0.0500 mol |
+| 6 | Total volume | $100.0 + 50.0$ | 150.0 mL = 0.1500 L |
+| 7 | **Concentrations** | divide each by 0.1500 L | $[Na^{+}] = 0.133$ M, $[Ca^{2+}] = 0.100$ M, $[Cl^{-}] = 0.333$ M |
 
-> 🔑 **Tip:** Notice how each concentration unit uses different denominators: molality uses kg of **solvent**, molarity uses L of **solution**, mass percent uses g of **solution**, and mole fraction uses total moles.
+**Check:** Charge balance. Positive: $0.133 + 2(0.100) = 0.333$ M. Negative: $0.333$ M. ✓
+
+> 🔑 **Tip:** Chloride comes from **both** salts, so add its moles before dividing by the total volume.
       `
     },
     {
       id: 'ss6-conversion-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Concentration Conversion Quiz** 🎯
+**Mixing Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A solution has a molality of 2.00 m and the solvent is water. To convert to molarity, you also need to know:',
+            question: 'Equal volumes of 0.40 M KCl and water are mixed. What is the potassium ion concentration in the mixture?',
             options: [
-              'Only the molar mass of the solute',
-              'The density of the solution',
-              'The vapor pressure of the solution',
-              'The temperature of the solution only'
+              '0.10 M',
+              '0.20 M',
+              '0.40 M',
+              '0.80 M'
             ],
             correctAnswer: 1,
-            explanation: 'Molality uses mass of solvent, while molarity uses volume of solution. To convert between them, you need the density of the solution to relate mass to volume.'
+            explanation: 'Mixing with an equal volume of water doubles the volume while the moles of $K^{+}$ stay the same, so the concentration halves to 0.20 M.'
           },
           {
-            question: 'Which of the following pairs are equivalent? (For a dilute aqueous solution where density ≈ 1.00 g/mL)',
+            question: '50.0 mL of 0.100 M $Na_{2}SO_{4}$ is mixed with 50.0 mL of 0.100 M NaCl. What is $[Na^{+}]$ in the mixture?',
             options: [
-              'Molarity and mole fraction',
-              'Molality and mass percent',
-              'Molarity and molality',
-              'Mass percent and ppm'
-            ],
-            correctAnswer: 2,
-            explanation: 'For very dilute aqueous solutions, the mass of solvent ≈ mass of solution ≈ volume of solution (since density ≈ 1). So mol/L ≈ mol/kg, meaning molarity ≈ molality.'
-          },
-          {
-            question: 'A 5.00% by mass NaCl solution has a density of 1.034 g/mL. What is its molarity? ($M_{\\text{NaCl}} = 58.44$ g/mol)',
-            options: [
-              '0.856 M',
-              '0.885 M',
-              '1.034 M',
-              '0.500 M'
+              '0.100 M',
+              '0.150 M',
+              '0.200 M',
+              '0.300 M'
             ],
             correctAnswer: 1,
-            explanation: 'In 1.000 L of solution: mass = $1034$ g. Mass NaCl = $0.0500 \\times 1034 = 51.7$ g. Moles = $51.7/58.44 = 0.885$ mol. $M = 0.885$ M. Ignoring the density (assuming 1000 g per liter) gives 0.856 M.'
+            explanation: 'Moles $Na^{+}$: $2(0.100)(0.0500) + (0.100)(0.0500) = 0.0100 + 0.00500 = 0.0150$ mol. Total volume is 0.1000 L, so $[Na^{+}] = 0.150$ M. Using 0.300 M forgets to combine volumes, and 0.200 M counts only the sulfate salt before dilution.'
+          },
+          {
+            question: 'Two solutions of the same salt, 0.10 M and 0.30 M, are mixed in equal volumes. The concentration of the mixture is',
+            options: [
+              '0.40 M, because the concentrations add',
+              '0.20 M, because the moles add over double the space',
+              '0.30 M, because the stronger solution sets the value',
+              '0.10 M, because the weaker solution sets the value'
+            ],
+            correctAnswer: 1,
+            explanation: 'With volume $V$ of each, the moles are $0.10V + 0.30V = 0.40V$ in a total volume of $2V$, giving 0.20 M. Concentrations never simply add, and neither solution alone sets the result.'
           }
         ]
       }
@@ -148,52 +129,44 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
       content: `
 **Mixed Calculations — Set 1** 🧮
 
-> **Given:** $K_f = 1.86$ °C/m, $K_b = 0.512$ °C/m, $R = 0.08206$ L·atm/(mol·K)
+**1)** 200.0 mL of 0.150 M $MgCl_{2}$ is mixed with 300.0 mL of 0.100 M KCl. What is $[Cl^{-}]$ in the mixture? (in M, to 3 significant figures)
 
-**1)** A solution of 9.00 g of glucose ($M = 180.16$ g/mol, $i = 1$) in 250.0 g of water has what freezing point? (in °C, to 3 significant figures)
+**2)** In the same mixture, what is $[Mg^{2+}]$? (in M, to 3 significant figures)
 
-**2)** What is the boiling point (°C) of a solution made by dissolving 14.6 g of NaCl ($M = 58.44$ g/mol, $i = 2$) in 500.0 g of water? (to 3 significant figures)
-
-**3)** What is the osmotic pressure (atm) of a 0.0500 M KBr ($i = 2$) solution at 25°C? (to 3 significant figures)
+**3)** What volume (in mL) of 2.00 M $HNO_{3}$ must be diluted with water to make 250.0 mL of 0.0800 M $HNO_{3}$? (to 3 significant figures)
       `,
       exercise: {
-        questions: [{ question: '1)', answer: '-0.372', acceptableAnswers: ['-0.372', '-0.37'] }, { question: '2)', answer: '100.51', acceptableAnswers: ['100.51', '100.5', '101'] }, { question: '3)', answer: '2.45', acceptableAnswers: ['2.45'] }],
-        hint1: '$n = 9.00/180.16 = 0.04996$ mol. $m = 0.04996/0.250 = 0.200$ m. $\\Delta T_f = (1)(1.86)(0.200)$.',
-        hint2: '$n = 14.6/58.44 = 0.2498$ mol. $m = 0.2498/0.500 = 0.500$ m. $\\Delta T_b = (2)(0.512)(0.500)$.',
-        hint3: '$\\Pi = iMRT = (2)(0.0500)(0.08206)(298)$.',
-        explanation: '1) $m = 0.04996/0.250 = 0.200$ m. $\\Delta T_f = (1)(1.86)(0.200) = 0.372$ °C. $T_f = 0.00 - 0.372 = -0.372$ °C. 2) $m = 0.2498/0.500 = 0.500$ m. $\\Delta T_b = 2(0.512)(0.500) = 0.512$ °C. $T_b = 100.00 + 0.512 = 100.51$ °C. 3) $\\Pi = (2)(0.0500)(0.08206)(298) = 2.45$ atm.'
+        boxes: 3,
+        correctAnswers: ['0.180', '0.0600', '10.0'],
+        hint1: 'Moles $Cl^{-}$ $= 2(0.150)(0.2000) + (0.100)(0.3000)$. Total volume = 0.5000 L.',
+        hint2: 'Moles $Mg^{2+}$ $= (0.150)(0.2000)$. Divide by 0.5000 L.',
+        hint3: '$V_1 = M_2V_2/M_1 = (0.0800)(250.0)/2.00$.',
+        explanation: '1) Moles $Cl^{-}$ $= 0.0600 + 0.0300 = 0.0900$ mol; $0.0900/0.5000 = 0.180$ M. 2) Moles $Mg^{2+}$ $= 0.0300$ mol; $0.0300/0.5000 = 0.0600$ M. 3) $V_1 = (0.0800)(250.0)/2.00 = 10.0$ mL.'
       }
     },
     {
       id: 'ss6-worked-example-2',
       type: 'text' as const,
       content: `
-## 🧪 Worked Example 2: Finding Molar Mass from Colligative Data
+## 🧪 Worked Example 2: Precipitation with a Limiting Reactant
 
-> **Problem:** A solution of 5.00 g of an unknown nonelectrolyte in 100.0 g of water freezes at $-0.930$ °C. Find the molar mass of the unknown.
+> **Problem:** 50.0 mL of 0.100 M $AgNO_{3}$ is mixed with 30.0 mL of 0.200 M NaCl. Solid AgCl ($\\mathcal{M} = 143.32$ g/mol) forms. Find the mass of AgCl and the concentration of the excess ion left in solution.
 
-### Given
-
-| Quantity | Value |
-|----------|-------|
-| Mass of unknown | 5.00 g |
-| Mass of water | 100.0 g = 0.1000 kg |
-| Freezing point | $-0.930$ °C |
-| $i$ (nonelectrolyte) | 1 |
-| $K_f$ (water) | 1.86 °C/m |
-
----
+Net ionic equation: $Ag^{+}(aq) + Cl^{-}(aq) \\rightarrow AgCl(s)$
 
 ### Step-by-Step Solution
 
 | Step | Action | Calculation | Result |
 |------|--------|-------------|--------|
-| 1 | Find $\\Delta T_f$ | $0.0 - (-0.930)$ | 0.930 °C |
-| 2 | Find molality | $\\Delta T_f / (iK_f) = 0.930 / (1)(1.86)$ | $m = 0.500$ m |
-| 3 | Find moles | $m \\times \\text{kg solvent} = 0.500 \\times 0.1000$ | 0.0500 mol |
-| 4 | Find molar mass | $\\text{mass} / \\text{moles} = 5.00 / 0.0500$ | **100.0 g/mol** |
+| 1 | Moles $Ag^{+}$ | $(0.100)(0.0500)$ | 0.00500 mol |
+| 2 | Moles $Cl^{-}$ | $(0.200)(0.0300)$ | 0.00600 mol |
+| 3 | Limiting reactant (1 : 1) | 0.00500 < 0.00600 | $Ag^{+}$ limits |
+| 4 | Mass of AgCl | $0.00500 \\times 143.32$ | **0.717 g** |
+| 5 | Excess $Cl^{-}$ | $0.00600 - 0.00500$ | 0.00100 mol |
+| 6 | Total volume | $50.0 + 30.0$ | 0.0800 L |
+| 7 | $[Cl^{-}]$ remaining | $0.00100/0.0800$ | **0.0125 M** |
 
-> 🔑 **AP Application:** This technique is used in the lab to identify unknown compounds — a classic AP free-response question topic.
+> 🔑 **AP Application:** Gravimetric analysis runs this logic in reverse: weigh the precipitate, convert to moles, and work back to the concentration of the original solution.
       `
     },
     {
@@ -202,19 +175,21 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
       content: `
 **Mixed Calculations — Set 2** 🧮
 
-**1)** An unknown nonelectrolyte ($i = 1$) dissolves: 3.50 g in 50.0 g of water, and the solution freezes at $-1.86$ °C. What is the molar mass (g/mol) of the unknown? (to 3 significant figures)
+> $\\mathcal{M}(BaSO_{4}) = 233.39$ g/mol. $BaSO_{4}$ is insoluble.
 
-**2)** What mass (in grams) of ethylene glycol ($M = 62.07$ g/mol, $i = 1$) must be added to 4.00 kg of water to lower the freezing point to $-10.0$ °C? (to nearest whole number)
+**1)** 40.0 mL of 0.250 M $BaCl_{2}$ is mixed with 60.0 mL of 0.200 M $Na_{2}SO_{4}$. How many moles of $BaSO_{4}$ form? (to 3 significant figures)
 
-**3)** A 0.200 M solution of an electrolyte at 25°C has an osmotic pressure of 14.6 atm. What is the van\'t Hoff factor $i$? (to 3 significant figures)
+**2)** What mass (in grams) of $BaSO_{4}$ forms? (to 3 significant figures)
+
+**3)** What is the concentration (in M) of the excess sulfate ion left in solution? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['70.0', '1335', '2.99'],
-        hint1: '$\\Delta T_f = 1.86$ °C. $m = \\Delta T_f/(iK_f) = 1.86/(1 \\times 1.86) = 1.00$ m. Then $n = m \\times \\text{kg solvent}$.',
-        hint2: '$\\Delta T_f = 10.0$ °C. $m = 10.0/(1 \\times 1.86) = 5.376$ m. Moles = $m \\times 4.00$. Mass = moles $\\times 62.07$.',
-        hint3: '$i = \\Pi/(MRT) = 14.6/((0.200)(0.08206)(298))$.',
-        explanation: '1) $m = 1.86/(1 \\times 1.86) = 1.00$ m. $n = 1.00 \\times 0.0500 = 0.0500$ mol. $M = 3.50/0.0500 = 70.0$ g/mol. 2) $m = 10.0/1.86 = 5.376$ m. Moles = $5.376 \\times 4.00 = 21.51$ mol. Mass = $21.51 \\times 62.07 = 1335$ g. 3) $i = 14.6/((0.200)(0.08206)(298)) = 14.6/4.889 = 2.99$, so $i \\approx 3$ (three ions per formula unit).'
+        correctAnswers: ['0.0100', '2.33', '0.0200'],
+        hint1: 'Moles $Ba^{2+}$ $= (0.250)(0.0400) = 0.0100$; moles $SO_{4}^{2-}$ $= (0.200)(0.0600) = 0.0120$. They react 1 : 1.',
+        hint2: 'Mass = moles of $BaSO_{4}$ × 233.39.',
+        hint3: 'Excess sulfate = 0.0120 − 0.0100 mol, in a total volume of 0.1000 L.',
+        explanation: '1) $Ba^{2+}$ (0.0100 mol) is limiting against $SO_{4}^{2-}$ (0.0120 mol), so 0.0100 mol $BaSO_{4}$ forms. 2) $0.0100 \\times 233.39 = 2.33$ g. 3) Excess $SO_{4}^{2-}$ $= 0.00200$ mol in 0.1000 L, so $[SO_{4}^{2-}] = 0.0200$ M.'
       }
     },
     {
@@ -226,27 +201,27 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
       exercise: {
         dropdowns: [
           {
-            label: 'To determine the molar mass of an unknown using freezing point depression, you need to know',
-            options: ['$\\Delta T_f$ and the solute mass only', '$\\Delta T_f$, solute mass, and solvent mass', 'The solution\'s molarity and volume', '$\\Delta T_f$ and the solution\'s vapor pressure']
+            label: 'Before combining amounts from two solutions, convert each to',
+            options: ['moles', 'grams', 'milliliters', 'molarity']
           },
           {
-            label: 'If a solution has a larger $\\Delta T_f$ than predicted for a nonelectrolyte, the solute is likely',
-            options: ['A nonelectrolyte with a high molar mass', 'An electrolyte that dissociates', 'A solute that only partly dissolves', 'A volatile solute that evaporates']
+            label: 'After mixing, each ion concentration is found by dividing its moles by',
+            options: ['the volume of its original solution', 'the combined volume of both solutions', 'the volume of the larger solution', 'one liter, regardless of volume']
           },
           {
-            label: 'The formula $\\Pi = iMRT$ uses molarity instead of molality because',
-            options: ['Molarity is more accurate than molality', 'Osmotic pressure is measured at constant temperature', 'It is derived from the ideal gas law, $PV = nRT$', 'Molality cannot be used for aqueous solutions']
+            label: 'In a precipitation problem, the mass of solid formed is set by the',
+            options: ['ion present in excess', 'limiting ion', 'spectator ions', 'total volume']
           },
           {
-            label: 'For a dilute aqueous solution, molarity and molality are approximately equal because',
-            options: ['Both units divide moles by the solvent mass', 'Dilute solutions are ~1 g/mL, so 1 L ≈ 1 kg', 'The moles of solute cancel out in both', 'Temperature does not affect either unit']
+            label: 'In the AgCl worked example, the ions that stay dissolved after the reaction are',
+            options: ['$Na^{+}$, $NO_{3}^{-}$, and leftover $Cl^{-}$', '$Ag^{+}$ and $Cl^{-}$ only', '$Na^{+}$ and $Cl^{-}$ only', 'no ions at all']
           }
         ],
-        correctAnswers: ['$\\Delta T_f$, solute mass, and solvent mass', 'An electrolyte that dissociates', 'It is derived from the ideal gas law, $PV = nRT$', 'Dilute solutions are ~1 g/mL, so 1 L ≈ 1 kg'],
-        hint1: 'You need $\\Delta T_f$ to find molality, mass of solvent to find moles, and mass of solute to find molar mass.',
-        hint2: 'A larger $\\Delta T_f$ means more particles ($i > 1$), which implies dissociation.',
-        hint3: 'The osmotic pressure equation is derived from the ideal gas law, which uses volume.',
-        explanation: 'Finding molar mass requires $\\Delta T_f$, mass of solute, and mass of solvent. Larger-than-expected $\\Delta T_f$ indicates $i > 1$ (electrolyte). $\\Pi = iMRT$ parallels $PV = nRT$, using concentration in mol/L. In dilute aqueous solutions, density ≈ 1 g/mL makes L solution ≈ kg solvent.'
+        correctAnswers: ['moles', 'the combined volume of both solutions', 'limiting ion', '$Na^{+}$, $NO_{3}^{-}$, and leftover $Cl^{-}$'],
+        hint1: 'Moles are what react and what add up when solutions combine.',
+        hint2: 'Mixing makes one solution whose volume is the sum of the two.',
+        hint3: 'Once the limiting ion runs out, no more solid can form.',
+        explanation: 'Work in moles, then divide by the combined volume. The limiting ion fixes how much precipitate forms. In the AgCl example, $Na^{+}$ and $NO_{3}^{-}$ are spectators, and the excess $Cl^{-}$ also stays in solution.'
       }
     },
     {
@@ -258,26 +233,26 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
       exercise: {
         questions: [
           {
-            question: 'A 0.10 m aqueous solution of a compound freezes at $-0.56$ °C. The van\'t Hoff factor for this compound is approximately:',
+            question: '25.0 mL of 0.200 M $Pb(NO_{3})_{2}$ is mixed with 25.0 mL of 0.200 M KI, and yellow $PbI_{2}$ precipitates. Which ion is the limiting reactant?',
             options: [
-              '1',
-              '2',
-              '3',
-              '4'
+              '$Pb^{2+}$',
+              '$I^{-}$',
+              '$K^{+}$',
+              '$NO_{3}^{-}$'
             ],
-            correctAnswer: 2,
-            explanation: '$\\Delta T_f = 0.56$ °C. $i = \\Delta T_f/(K_fm) = 0.56/((1.86)(0.10)) = 0.56/0.186 = 3.0$. The compound dissociates into 3 ions (e.g., $CaCl_{2}$ → $Ca^{2+}$ + $2Cl^{-}$).'
+            correctAnswer: 1,
+            explanation: 'Each ion starts at 0.00500 mol, but the reaction $Pb^{2+} + 2I^{-} \\rightarrow PbI_{2}$ uses two iodide ions per lead ion. Using all 0.00250 mol of $Pb^{2+}$ would need 0.0100 mol $I^{-}$, more than is present, so iodide runs out first. $K^{+}$ and $NO_{3}^{-}$ are spectators.'
           },
           {
-            question: 'Which technique would give the most accurate molar mass determination for a protein with $M \\approx 50{,}000$ g/mol?',
+            question: 'A 2.00 g sample of $BaSO_{4}$ ($\\mathcal{M} = 233.39$ g/mol) is collected after adding excess $Na_{2}SO_{4}$ to 50.0 mL of a $BaCl_{2}$ solution. What was the original $BaCl_{2}$ concentration?',
             options: [
-              'Boiling point elevation',
-              'Freezing point depression',
-              'Osmotic pressure',
-              'Mass percent analysis'
+              '0.0857 M',
+              '0.171 M',
+              '0.343 M',
+              '0.00857 M'
             ],
-            correctAnswer: 2,
-            explanation: 'Large molecules have very low molalities even at measurable masses, making $\\Delta T_b$ and $\\Delta T_f$ immeasurably small. Osmotic pressure is much more sensitive — even 0.001 M solutions produce measurable pressures (several mmHg).'
+            correctAnswer: 1,
+            explanation: 'Moles $BaSO_{4}$ $= 2.00/233.39 = 0.00857$ mol, equal to the moles of $Ba^{2+}$ (1 : 1). Dividing by 0.0500 L gives 0.171 M. Leaving the answer as 0.00857 skips the volume step, and the other values come from using the wrong volume.'
           }
         ]
       }

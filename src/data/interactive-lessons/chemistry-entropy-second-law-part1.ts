@@ -6,7 +6,7 @@ export const chemEntropySecondLawPart1Data = {
       type: 'text' as const,
       content: `# 🎲 What Is Entropy?
 
-**Part 1 of 7 — Disorder, Microstates, and S = k ln W**
+**Part 1 of 7 — Entropy as the Dispersal of Matter and Energy**
 
 ---
 
@@ -14,28 +14,27 @@ export const chemEntropySecondLawPart1Data = {
 
 | Section |
 |---------|
-| 🌡️ Entropy and "Disorder" |
-| Everyday Examples of Increasing Entropy |
-| 📌 Microstates and the Boltzmann Equation |
-| What Is a Microstate? |
-| Boltzmann's Equation |
+| 🌡️ Entropy and Dispersal |
+| 📌 Dispersal of Matter |
+| 📌 Dispersal of Energy |
+| 🔬 Units and Properties of Entropy |
 
-> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+> 🔑 **Key Concept:** Entropy ($S$) increases when **matter** becomes more dispersed and when **energy** becomes more dispersed (CED 9.1.A). The AP exam asks you to predict the sign and relative size of entropy changes from these two ideas.
 
 ---
 
 ### What You'll Master in Part 1
-- Understanding the core concepts covered in Part 1
-- Applying these ideas to solve practice problems
-- Building toward AP exam readiness for this topic`
+- Explaining entropy in terms of the dispersal of matter and energy
+- Comparing the entropy of solids, liquids, gases, and solutions
+- Explaining why entropy increases with temperature`
     },
     {
       id: 'en1-disorder',
       type: 'text' as const,
       content: `
-## 🌡️ Entropy and "Disorder"
+## 🌡️ Entropy and Dispersal
 
-Entropy ($S$) is often described as a measure of **disorder** or **randomness**. While this is a helpful starting point, the more precise definition involves **microstates**.
+Entropy is often described as "disorder." A more precise description, and the one the AP exam uses, is **dispersal**: entropy increases when particles spread out into more space or gain more freedom to move, and when energy spreads out over more possible motions.
 
 
 ---
@@ -44,62 +43,84 @@ Entropy ($S$) is often described as a measure of **disorder** or **randomness**.
 
 | Process | Lower Entropy | Higher Entropy |
 |---------|--------------|----------------|
-| Ice melting | Solid (ordered) | Liquid (disordered) |
-| Gas expanding | Compressed gas | Expanded gas |
-| Dissolving salt | Crystalline solid | Ions in solution |
-| Shuffling cards | Ordered deck | Random arrangement |
-
+| Ice melting | Solid (fixed positions) | Liquid (particles move past each other) |
+| Gas expanding | Compressed gas | Gas spread through a larger volume |
+| Dissolving salt | Crystalline solid | Ions dispersed through the solution |
+| Heating a gas | Narrow range of particle speeds | Broader range of particle speeds |
 
 ---
 
-> 🔑 **Key Concept:** Systems naturally tend toward states of **higher entropy** — not because nature "prefers disorder," but because there are vastly more disordered arrangements than ordered ones.
+> 🔑 **Key Concept:** Matter and energy tend to spread out because there are vastly more ways to be spread out than to be concentrated. A gas never gathers in one corner of its container on its own.
       `
     },
     {
-      id: 'en1-microstates',
+      id: 'en1-dispersal',
       type: 'text' as const,
       content: `
-## 📌 Microstates and the Boltzmann Equation
+## 📌 Dispersal of Matter
 
-### What Is a Microstate?
+Entropy increases when particles become freer to move or occupy a larger volume (CED 9.1.A.1):
 
-A **microstate** ($W$) is a specific arrangement of particles and energy in a system. The more microstates available, the higher the entropy.
-
-
----
-
-### Boltzmann's Equation
-
-$$\\boxed{S = k_B \\ln W}$$
-
-| Symbol | Meaning | Value |
-|--------|---------|-------|
-| $S$ | Entropy | J/K |
-| $k_B$ | Boltzmann constant | $1.38 \\times 10^{-23}$ J/K |
-| $W$ | Number of microstates | dimensionless |
-| $\\ln$ | Natural logarithm | — |
+| Change | Effect on $S$ | Why |
+|--------|---------------|-----|
+| Solid → liquid → gas | Increases | Particles move more freely and (for gases) occupy far more volume |
+| Gas expands at constant $T$ | Increases | Molecules move within a larger space |
+| More moles of gas produced than consumed | Increases | More gas particles dispersed through the volume |
+| A solid dissolves | Usually increases | Ions or molecules spread through the solvent |
 
 
 ---
 
-### Example: Two Coins
+## 📌 Dispersal of Energy
 
-- 2 coins have $2^2 = 4$ microstates: HH, HT, TH, TT
-- The "disordered" state (one H, one T) has 2 microstates → most probable
-- The "ordered" states (both H or both T) have 1 microstate each
+As temperature rises, the distribution of kinetic energies among the particles **broadens** (CED 9.1.A.2). Energy is spread over a wider range of motions, so the entropy of a substance **increases with temperature**, even without a phase change.
 
-
----
-
-### Scaling Up
-
-For $10^{23}$ particles (a mole), the number of microstates is astronomically large. The probability of all gas molecules spontaneously gathering in one corner is essentially **zero** — not because it violates any law, but because the number of "spread out" microstates vastly outnumbers "concentrated" ones.
-
-
----
-
-> 💡 **Tip:** Entropy is **extensive** — double the amount of substance, double the entropy.
+> 💡 **Tip:** Connect this to the Maxwell-Boltzmann distribution from kinetics: the higher-temperature curve is broader, and a broader distribution of energy means higher entropy.
       `
+    },
+    {
+      id: 'en1-concept-quiz',
+      type: 'multiple-choice' as const,
+      content: `
+**Entropy Concept Quiz** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'At constant temperature, which change increases the entropy of a gas sample?',
+            options: [
+              'Compressing the gas into a smaller volume',
+              'Allowing the gas to expand into a larger volume',
+              'Condensing part of the gas to a liquid',
+              'Cooling the gas container by 10 °C'
+            ],
+            correctAnswer: 1,
+            explanation: 'Expanding into a larger volume lets the molecules disperse through more space, so entropy increases. Compression and condensation confine the particles, and cooling narrows the distribution of energies, all of which lower entropy.'
+          },
+          {
+            question: 'Which has the highest entropy?',
+            options: [
+              '1 mol $H_{2}O(s)$ at 0°C',
+              '1 mol $H_{2}O(l)$ at 100°C',
+              '1 mol $H_{2}O(g)$ at 100°C',
+              '1 mol $H_{2}O(l)$ at 0°C'
+            ],
+            correctAnswer: 2,
+            explanation: 'Gas particles are the most dispersed: they move freely through a large volume. Even at the same temperature, 1 mol of water vapor at 100°C has much more entropy than 1 mol of liquid water at 100°C, and both exceed the colder liquid and the ice.'
+          },
+          {
+            question: 'Entropy is measured in:',
+            options: [
+              'kJ/mol or J/mol',
+              'J/K or J/(mol·K)',
+              'J·K or J·K/mol',
+              'atm·L or (atm·L)/mol'
+            ],
+            correctAnswer: 1,
+            explanation: 'Entropy is energy per kelvin: J/K, or J/(mol·K) for molar entropy. kJ/mol is the unit of ΔH, atm·L is a unit of energy, and J·K multiplies by temperature where it should divide. Note: tabulated entropies use joules, not kilojoules! This is a common AP exam unit trap.'
+          }
+        ]
+      }
     },
     {
       id: 'en1-entropy-units',
@@ -120,79 +141,36 @@ Entropy is measured in **J/K** (joules per kelvin) or **J/(mol·K)** for molar e
 
 | Property | Description |
 |----------|-------------|
-| State function | Depends only on current state, not path |
-| Extensive | Proportional to amount of substance |
-| Always positive | $S > 0$ for any real substance (at $T > 0$ K) |
-| Increases with T | Higher temperature = more microstates |
-
+| Extensive | Proportional to amount of substance: twice the sample, twice the entropy |
+| Always positive | $S > 0$ for any real substance above 0 K |
+| Increases with T | Energy is spread over a broader range of motions |
+| Increases solid → liquid → gas | Matter becomes more dispersed |
 
 ---
 
-> ⚠️ **Warning:** Unlike energy, entropy is **NOT conserved** — it can be created in irreversible processes. The total entropy of the universe always increases for spontaneous processes.
+> 💡 **Tip:** A reaction's entropy change can be positive or negative even though every substance's absolute entropy is positive. The sign of $\\Delta S$ tells you whether the products are more dispersed (+) or less dispersed (−) than the reactants.
       `
     },
     {
-      id: 'en1-concept-quiz',
-      type: 'multiple-choice' as const,
-      content: `
-**Entropy Concept Quiz** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'In the Boltzmann equation S = k ln W, a larger W means:',
-            options: [
-              'Lower entropy, since S varies inversely with W',
-              'Higher entropy',
-              'A lower temperature for the same system',
-              'Fewer particles in the system'
-            ],
-            correctAnswer: 1,
-            explanation: 'Since $S = k_B \\ln W$ and $\\ln W$ grows as $W$ grows, a larger $W$ (more microstates) gives a larger $S$ (higher entropy). $S$ depends on $\\ln W$, not on $1/W$, and a larger $W$ for a given system does not mean it is colder or has fewer particles. More ways to arrange = more entropy.'
-          },
-          {
-            question: 'Which has the highest entropy?',
-            options: [
-              '1 mol $H_{2}O(s)$ at 0°C',
-              '1 mol $H_{2}O(l)$ at 100°C',
-              '1 mol $H_{2}O(g)$ at 100°C',
-              '1 mol $H_{2}O(l)$ at 0°C'
-            ],
-            correctAnswer: 2,
-            explanation: 'Gases have far more microstates than liquids or solids. Even at the same temperature, 1 mol of water vapor at 100°C has much more entropy than 1 mol of liquid water at 100°C, and both exceed the colder liquid and the ice.'
-          },
-          {
-            question: 'Entropy is measured in:',
-            options: [
-              'kJ/mol or J/mol',
-              'J/K or J/(mol·K)',
-              'J·K or J·K/mol',
-              'atm·L or (atm·L)/mol'
-            ],
-            correctAnswer: 1,
-            explanation: 'Entropy is energy per kelvin: J/K, or J/(mol·K) for molar entropy. kJ/mol is the unit of ΔH, atm·L is a unit of work (energy), and J·K multiplies by temperature where it should divide. Note: tabulated entropies use joules, not kilojoules! This is a common AP exam unit trap.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'en1-microstate-drill',
+      id: 'en1-dispersal-drill',
       type: 'input-boxes' as const,
       content: `
-**Microstate Counting** 🧮
+**Dispersal Drill** 🧮
 
-**1)** How many microstates does a system of 3 coins have? ($W = 2^n$)
+For each process, type **increase** or **decrease** for the entropy of the system.
 
-**2)** For 4 coins, what fraction of microstates have ALL heads? (express as a simplified fraction like 1/16)
+**1)** A sample of $\\text{N}_2(g)$ is heated from 300 K to 400 K at constant volume.
 
-**3)** If system A has $W = 100$ microstates and system B has $W = 200$ microstates, which has higher entropy? (type A or B)
+**2)** $\\text{CO}_2(g)$ is compressed to half its volume at constant temperature.
+
+**3)** Solid iodine sublimes: $\\text{I}_2(s) \\rightarrow \\text{I}_2(g)$.
       `,
       exercise: {
-        questions: [{ question: '(1)', answer: '8', acceptableAnswers: ['8'] }, { question: '(2)', answer: '1/16', acceptableAnswers: ['1/16', '0.0625', '0.063'] }, { question: '(3)', answer: 'B', acceptableAnswers: ['B'] }],
-        hint1: '$W = 2^3$',
-        hint2: '$W_{\\text{total}} = 2^4 = 16$. Only 1 microstate has all heads (HHHH).',
-        hint3: '$S = k \\ln W$. Larger W means larger S.',
-        explanation: '1) $W = 2^3 = 8$ microstates. 2) $2^4 = 16$ total microstates, only 1 is all heads: probability = 1/16. 3) Since $S = k \\ln W$ and $\\ln 200 > \\ln 100$, system B has higher entropy.'
+        questions: [{ question: '(1)', answer: 'increase', acceptableAnswers: ['increase', 'increases'] }, { question: '(2)', answer: 'decrease', acceptableAnswers: ['decrease', 'decreases'] }, { question: '(3)', answer: 'increase', acceptableAnswers: ['increase', 'increases'] }],
+        hint1: 'What happens to the spread of kinetic energies as T rises?',
+        hint2: 'The molecules are confined to less space.',
+        hint3: 'A solid becomes a gas.',
+        explanation: '1) Increase: heating broadens the distribution of kinetic energies, dispersing energy. 2) Decrease: the gas molecules occupy a smaller volume. 3) Increase: particles go from fixed positions in a solid to free motion in a gas.'
       }
     },
     {
@@ -204,8 +182,8 @@ Entropy is measured in **J/K** (joules per kelvin) or **J/(mol·K)** for molar e
       exercise: {
         dropdowns: [
           {
-            label: 'Entropy is a',
-            options: ['path function', 'state function', 'conserved quantity', 'vector']
+            label: 'Entropy increases when matter or energy becomes more',
+            options: ['concentrated', 'dispersed', 'ordered', 'compressed']
           },
           {
             label: 'As temperature increases, entropy',
@@ -216,15 +194,15 @@ Entropy is measured in **J/K** (joules per kelvin) or **J/(mol·K)** for molar e
             options: ['decrease', 'increase', 'no change', 'reversal']
           },
           {
-            label: 'The Boltzmann constant k_B has units of',
-            options: ['J/mol', 'J/K', 'kJ/mol', 'K/J']
+            label: 'Standard molar entropies are reported in units of',
+            options: ['kJ/mol', 'J/(mol·K)', 'J/mol', 'K/J']
           }
         ],
-        correctAnswers: ['state function', 'increases', 'increase', 'J/K'],
-        hint1: 'Like enthalpy, entropy depends only on the current state.',
-        hint2: 'Higher T means more kinetic energy and more accessible microstates.',
-        hint3: 'Expanding into more volume = more positions available = more microstates.',
-        explanation: 'Entropy is a state function. Higher T increases molecular motion and microstates. Gas expansion increases volume and accessible positions. k_B has units J/K to give S in J/K.'
+        correctAnswers: ['dispersed', 'increases', 'increase', 'J/(mol·K)'],
+        hint1: 'Think about spreading out.',
+        hint2: 'A broader distribution of kinetic energies means more dispersed energy.',
+        hint3: 'Expanding into more volume lets the molecules spread out.',
+        explanation: 'Entropy increases with the dispersal of matter and energy. Higher T broadens the energy distribution. Gas expansion lets the molecules spread through more space. Molar entropies are in J/(mol·K).'
       }
     },
     {
@@ -239,12 +217,12 @@ Entropy is measured in **J/K** (joules per kelvin) or **J/(mol·K)** for molar e
             question: 'Why do gas molecules spread out to fill their container?',
             options: [
               'Gas molecules repel one another and push apart until evenly spaced',
-              'Spread-out microstates vastly outnumber clustered ones',
+              'Spread-out arrangements vastly outnumber clustered ones',
               'Pressure from the container walls pushes the molecules apart',
               'Gas molecules seek the lowest-energy arrangement, which is spread out'
             ],
             correctAnswer: 1,
-            explanation: 'Spreading is a matter of probability, not force. The number of microstates with molecules spread throughout the container vastly exceeds the number with them clustered in one spot, so the spread-out state is overwhelmingly more probable. Ideal-gas molecules barely interact, the walls do not push them apart, and an ideal gas\'s energy does not change when it spreads at constant temperature.'
+            explanation: 'Spreading is a matter of probability, not force. Arrangements with the molecules dispersed through the container vastly outnumber arrangements with them clustered in one spot, so the dispersed state is overwhelmingly more likely. Ideal-gas molecules barely interact, the walls do not push them apart, and the energy of an ideal gas does not change when it spreads at constant temperature.'
           },
           {
             question: 'Which process involves a DECREASE in entropy?',
@@ -255,7 +233,7 @@ Entropy is measured in **J/K** (joules per kelvin) or **J/(mol·K)** for molar e
               'A gas expanding into a vacuum'
             ],
             correctAnswer: 2,
-            explanation: 'Freezing converts liquid (more disordered) to solid (more ordered), decreasing the number of microstates and thus entropy. All other options increase entropy.'
+            explanation: 'Freezing locks mobile liquid particles into fixed positions in a solid, so matter becomes less dispersed and entropy decreases. All other options increase entropy.'
           }
         ]
       }

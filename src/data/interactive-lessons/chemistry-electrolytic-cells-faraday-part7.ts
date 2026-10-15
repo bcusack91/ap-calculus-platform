@@ -36,10 +36,10 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 | $\\Delta G$ | $< 0$ | $> 0$ |
 | $E_{\\text{cell}}$ | $> 0$ | $< 0$ |
 | Energy | Chemical → Electrical | Electrical → Chemical |
-| Anode | − | + |
-| Cathode | + | − |
+| Anode | Oxidation | Oxidation |
+| Cathode | Reduction | Reduction |
 
-> 💡 **Memory Trick:** In both cell types, the anode is where oxidation occurs (AN OX) and the cathode is where reduction occurs (RED CAT). Only the signs flip!
+> 💡 **Memory Trick:** In both cell types, the anode is where oxidation occurs (AN OX) and the cathode is where reduction occurs (RED CAT). Name the electrodes by their half-reactions.
 
 
 ---
@@ -48,9 +48,9 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 
 **Cathode:** Metal deposits if $E°_{\\text{metal}} > -0.83$ V; otherwise $H_{2}$
 
-**Anode:** Halide → halogen; $oxyanion/F^{-}$ → $O_{2}$
+**Anode:** $Br^{-}$ or $I^{-}$ → halogen (couples below +1.23 V); oxyanions ($SO_{4}^{2-}$, $NO_{3}^{-}$) → $O_{2}$
 
-> 🔑 **AP Quick Check:** If the metal is above $H_{2}$ in the activity series (active metals like Na, K, Al), then $H_{2}$ forms at the cathode instead of the metal.
+> 🔑 **AP Quick Check:** Ions of very reactive metals such as $Na^{+}$, $K^{+}$ and $Al^{3+}$ have reduction potentials far below −0.83 V, so $H_{2}$ forms at the cathode instead of the metal.
 
 
 ---
@@ -64,14 +64,12 @@ $$q = It \\quad \\text{mol } e^- = \\frac{q}{F} \\quad \\text{mol substance} = \
 
 ---
 
-### Industrial Applications
+### Electroplating
 
-| Process | Input | Product |
-|---------|-------|---------|
-| Hall-Héroult | $Al_{2}O_{3}$ in cryolite | Al metal |
-| Chlor-alkali | NaCl(aq) | $Cl_{2}$, $H_{2}$, NaOH |
-| Electrorefining | Impure Cu | 99.99% pure Cu |
-| Electroplating | Metal ion solution | Metal-coated object |
+| Electrode | Made of | Process |
+|-----------|---------|---------|
+| Cathode | Object to be coated | Metal ions reduced; mass increases |
+| Anode | Plating metal | Metal oxidized; mass decreases |
       `
     },
     {
@@ -102,7 +100,7 @@ $$q = It \\quad \\text{mol } e^- = \\frac{q}{F} \\quad \\text{mol substance} = \
               'External circuit'
             ],
             correctAnswer: 1,
-            explanation: 'RED CAT — reduction at the cathode. This is a universal rule for all electrochemical cells (galvanic, electrolytic, concentration, fuel cells).'
+            explanation: 'RED CAT — reduction at the cathode. This is a universal rule for all electrochemical cells, galvanic and electrolytic alike.'
           },
           {
             question: 'A current of 1.50 A deposits 1.00 g of a metal (M = 63.55 g/mol, n = 2). How long did it take?',
@@ -158,7 +156,7 @@ $$q = It \\quad \\text{mol } e^- = \\frac{q}{F} \\quad \\text{mol substance} = \
             options: ['one electron', 'one proton', 'one mole of electrons', 'one coulomb']
           },
           {
-            label: 'In a lead-acid battery being recharged, the process is',
+            label: 'A rechargeable cell being recharged operates as a cell that is',
             options: ['galvanic', 'electrolytic', 'neither', 'both simultaneously']
           },
           {

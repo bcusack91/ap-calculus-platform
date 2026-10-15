@@ -4,9 +4,9 @@ export const chemSolutionsSolubilityPart4Data = {
     {
       id: 'ss4-intro',
       type: 'text' as const,
-      content: `# 🌡️ Colligative Properties
+      content: `# 🔬 Picturing Solutions
 
-**Part 4 of 7 — Boiling Point Elevation and Freezing Point Depression**
+**Part 4 of 7 — Particulate Representations of Solutions**
 
 ---
 
@@ -14,317 +14,290 @@ export const chemSolutionsSolubilityPart4Data = {
 
 | Section |
 |---------|
-| 🔬 What Are Colligative Properties? |
-| The Four Colligative Properties |
-| Why Do They Occur? |
-| Key Distinction |
-| 📌 Boiling Point Elevation |
+| 🔬 What a Particle Diagram Must Show |
+| 📊 Reading Concentration from a Diagram |
+| 💧 Drawing Solute–Solvent Interactions |
+| 🧪 Before-and-After Diagrams |
 
-> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+> 🔑 **Key Concept:** The AP exam regularly asks you to draw or judge particle-level pictures of solutions. A correct picture gets the **ratio** of particles, the **concentration**, and the **orientation** of solvent molecules right.
 
 ---
 
 ### What You'll Master in Part 4
-- Understanding the core concepts covered in Part 4
-- Applying these ideas to solve practice problems
-- Building toward AP exam readiness for this topic`
+- Checking whether a particle diagram matches a solution's formula and concentration
+- Comparing concentrations by counting particles per volume
+- Showing ion–dipole and hydrogen-bonding interactions with correct orientation`
     },
     {
-      id: 'ss4-colligative-overview',
+      id: 'ss4-what-diagram-shows',
       type: 'text' as const,
       content: `
-## 🔬 What Are Colligative Properties?
+## 🔬 What a Particle Diagram Must Show
 
-The word "colligative" comes from Latin *colligare* meaning "to bind together." These properties depend on the **collective number** of dissolved particles, regardless of what those particles are.
-
-> 🔑 **Key Concept:** Colligative properties depend only on the **number** of dissolved particles — not their chemical identity. More particles → greater effect.
+A particulate representation is a "zoomed-in" sketch of a tiny volume of solution. To be correct, it has to agree with the chemistry in three ways.
 
 
 ---
 
-### The Four Colligative Properties
+### 1. Ionic Solutes Appear as Separated Ions
 
-| Property | Effect of Adding Solute |
-|----------|----------------------|
-| **Boiling point elevation** | Boiling point increases |
-| **Freezing point depression** | Freezing point decreases |
-| **Vapor pressure lowering** | Vapor pressure decreases |
-| **Osmotic pressure** | Creates pressure across a membrane |
+A soluble ionic compound is drawn as **separate, individually hydrated ions**, never as intact formula units.
 
-
----
-
-### Why Do They Occur?
-
-When solute particles are added to a solvent:
-- They **disrupt** the orderly arrangement needed for freezing → lower freezing point
-- They **lower** the vapor pressure → solvent must be heated to a higher temperature to boil
-- More particles = greater effect
+| Solute | What the Diagram Shows |
+|--------|------------------------|
+| NaCl(aq) | Equal numbers of $Na^{+}$ and $Cl^{-}$, scattered apart |
+| $CaCl_{2}$(aq) | Twice as many $Cl^{-}$ as $Ca^{2+}$ |
+| $Na_{2}SO_{4}$(aq) | Twice as many $Na^{+}$ as $SO_{4}^{2-}$, with each sulfate kept as one unit |
 
 
 ---
 
-### Key Distinction
+### 2. Molecular Solutes Stay Intact
 
-- **Nonelectrolytes** (glucose, sucrose): dissolve as intact molecules → 1 particle per formula unit
-- **Electrolytes** (NaCl, $CaCl_{2}$): dissociate into ions → multiple particles per formula unit
+Glucose, ethanol, and other molecular solutes are drawn as **whole molecules** spread through the solvent. They do not split into ions.
+
+
+---
+
+### 3. Charge Must Balance
+
+Count the charges in the diagram. For $CaCl_{2}$, three $Ca^{2+}$ ions (total $+6$) require six $Cl^{-}$ ions (total $-6$). A picture with unequal total positive and negative charge cannot be right.
+
+> 💡 **Tip:** If a diagram shows a cation and an anion touching with no water between them, it is showing the undissolved solid or an ion pair, not a fully dissolved strong electrolyte.
       `
     },
     {
-      id: 'ss4-boiling-point',
-      type: 'text' as const,
-      content: `
-## 📌 Boiling Point Elevation
-
-$$\\boxed{\\Delta T_b = iK_bm}$$
-
-where:
-- $\\Delta T_b$ = change in boiling point (°C)
-- $i$ = **van\'t Hoff factor** (number of particles per formula unit)
-- $K_b$ = **ebullioscopic constant** of the solvent (°C/m)
-- $m$ = **molality** of the solution (mol solute / kg solvent)
-
-
----
-
-### The New Boiling Point
-
-$$T_{b,\\text{solution}} = T_{b,\\text{pure}} + \\Delta T_b$$
-
-The boiling point **increases** (we add $\\Delta T_b$).
-
-
----
-
-### For Water
-
-$K_b = 0.512$ °C/m and $T_{b,\\text{pure}} = 100.0$ °C
-
-
----
-
-### Worked Example
-
-> **Problem:** What is the boiling point of a solution of 1.00 mol of glucose (nonelectrolyte, $i = 1$) in 1.00 kg of water?
-
-> **Solution:**
-
-$$\\Delta T_b = (1)(0.512)(1.00) = 0.512 \\text{ °C}$$
-
-$$T_b = 100.0 + 0.512 = 100.5 \\text{ °C}$$
-      `
-    },
-    {
-      id: 'ss4-freezing-point',
-      type: 'text' as const,
-      content: `
-## 📌 Freezing Point Depression
-
-$$\\boxed{\\Delta T_f = iK_fm}$$
-
-where:
-- $\\Delta T_f$ = change in freezing point (°C)
-- $i$ = van\'t Hoff factor
-- $K_f$ = **cryoscopic constant** of the solvent (°C/m)
-- $m$ = molality
-
-
----
-
-### The New Freezing Point
-
-$$T_{f,\\text{solution}} = T_{f,\\text{pure}} - \\Delta T_f$$
-
-The freezing point **decreases** (we subtract $\\Delta T_f$).
-
-
----
-
-### For Water
-
-$K_f = 1.86$ °C/m and $T_{f,\\text{pure}} = 0.0$ °C
-
-
----
-
-### Worked Example
-
-> **Problem:** What is the freezing point of a solution of 0.500 mol of NaCl ($i = 2$) in 1.00 kg of water?
-
-> **Solution:**
-
-$$\\Delta T_f = (2)(1.86)(0.500) = 1.86 \\text{ °C}$$
-
-$$T_f = 0.0 - 1.86 = -1.86 \\text{ °C}$$
-
-
----
-
-### Why Does NaCl Have $i = 2$?
-
-NaCl dissociates into **2 ions**: $Na^{+}$ + $Cl^{-}$. Each formula unit produces 2 particles:
-
-$$\\text{NaCl} \\rightarrow \\text{Na}^+ + \\text{Cl}^-$$
-      `
-    },
-    {
-      id: 'ss4-vant-hoff',
-      type: 'text' as const,
-      content: `
-## 📊 The van\'t Hoff Factor ($i$)
-
-The van\'t Hoff factor tells you how many particles one formula unit produces in solution.
-
-| Solute | Dissociation | Theoretical $i$ |
-|--------|-------------|-----------------|
-| Glucose $(C_{6}H_{12}O_{6})$ | Does not dissociate | 1 |
-| NaCl | $Na^{+}$ + $Cl^{-}$ | 2 |
-| $CaCl_{2}$ | $Ca^{2+}$ + $2Cl^{-}$ | 3 |
-| $Al_{2}(SO_{4})_{3}$ | $2Al^{3+}$ + $3SO_{4}^{2-}$ | 5 |
-| $K_{3}PO_{4}$ | $3K^{+}$ + $PO_{4}^{3-}$ | 4 |
-
-
----
-
-### Ideal vs. Actual $i$
-
-In real solutions, ion pairing can reduce the effective $i$:
-- NaCl: theoretical $i = 2$, actual $i \\approx 1.9$ in moderate concentrations
-- $CaCl_{2}$: theoretical $i = 3$, actual $i \\approx 2.7$
-
-For AP calculations, use the **theoretical** (ideal) $i$ unless told otherwise.
-
-> ⚠️ **Warning:** For electrolytes, always multiply by the van\'t Hoff factor $i$. Forgetting $i$ is the most common mistake on colligative property problems — NaCl gives $i = 2$, $CaCl_{2}$ gives $i = 3$, etc.
-      `
-    },
-    {
-      id: 'ss4-concept-quiz',
+      id: 'ss4-diagram-check-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Colligative Properties Quiz** 🎯
+**Does the Diagram Match?** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which aqueous solution has the highest boiling point?',
+            question: 'A particle diagram of $MgBr_{2}$(aq) shows 4 magnesium ions. How many bromide ions must it show?',
             options: [
-              '0.10 m glucose ($i = 1$)',
-              '0.10 m $NH_{4}NO_{3}$ ($i = 2$)',
-              '0.10 m $CaCl_{2}$ ($i = 3$)',
-              '0.10 m $K_{3}PO_{4}$ ($i = 4$)'
-            ],
-            correctAnswer: 3,
-            explanation: '$\\Delta T_b = iK_bm$. All have the same $m = 0.10$. $K_{3}PO_{4}$ has the largest $i = 4$, producing the most particles and the greatest boiling point elevation.'
-          },
-          {
-            question: 'Which solution has the lowest freezing point?',
-            options: [
-              '0.20 m glucose',
-              '0.10 m NaCl',
-              '0.10 m $CaCl_{2}$',
-              '0.05 m $Al_{2}(SO_{4})_{3}$'
+              '2',
+              '4',
+              '8',
+              '12'
             ],
             correctAnswer: 2,
-            explanation: 'Calculate $im$ for each: glucose: $1 \\times 0.20 = 0.20$. NaCl: $2 \\times 0.10 = 0.20$. $CaCl_{2}$: $3 \\times 0.10 = 0.30$. $Al_{2}(SO_{4})_{3}$: $5 \\times 0.05 = 0.25$. $CaCl_{2}$ has the largest $im = 0.30$, giving the greatest $\\Delta T_f$ and the lowest freezing point.'
+            explanation: 'Each $MgBr_{2}$ releases one $Mg^{2+}$ and two $Br^{-}$, so 4 magnesium ions come with 8 bromide ions. The charges also balance: $4(+2) = +8$ and $8(-1) = -8$.'
           },
           {
-            question: 'Road salt (NaCl) works to melt ice because:',
+            question: 'Which description is the most accurate particle diagram of glucose dissolved in water?',
             options: [
-              'It raises the freezing point of water above 0°C',
-              'It lowers the freezing point below the air temperature',
-              'It reacts exothermically with ice, releasing heat',
-              'It absorbs water vapor from the air, drying the ice'
+              'Whole glucose molecules spread evenly through the solvent',
+              'Glucose split into separate C, H, and O atoms',
+              'Glucose split into positive and negative ions',
+              'Glucose molecules clumped together at the bottom'
+            ],
+            correctAnswer: 0,
+            explanation: 'Glucose is a molecular compound and a nonelectrolyte. It dissolves as whole molecules surrounded by water and does not break into ions or atoms. A clump at the bottom would be undissolved solid, not a solution.'
+          },
+          {
+            question: 'A student draws $K_{3}PO_{4}$(aq) as 6 $K^{+}$ ions and 2 $PO_{4}^{3-}$ ions. What is wrong with the drawing?',
+            options: [
+              'Phosphate should be drawn as P and O atoms',
+              'There is no error in the ion ratio or the charges',
+              'There should be 6 phosphate ions',
+              'There should be 3 potassium ions'
             ],
             correctAnswer: 1,
-            explanation: 'NaCl dissolves in the thin water layer on ice and depresses the freezing point. If the new freezing point is below the current temperature, the ice melts.'
+            explanation: 'Each $K_{3}PO_{4}$ gives three $K^{+}$ and one $PO_{4}^{3-}$, so 6 potassium ions pair with 2 phosphate ions. The charges balance ($+6$ and $-6$), and phosphate correctly stays together as a polyatomic ion.'
           }
         ]
       }
     },
     {
-      id: 'ss4-calculation-drill',
+      id: 'ss4-reading-concentration',
+      type: 'text' as const,
+      content: `
+## 📊 Reading Concentration from a Diagram
+
+Molarity is moles per liter, so in a diagram concentration means **solute particles per unit volume**.
+
+
+---
+
+### Comparing Two Beakers
+
+| Diagram | Solute Particles | Volume Shown | Relative Concentration |
+|---------|------------------|--------------|------------------------|
+| Beaker X | 6 | 1 box | 6 per box |
+| Beaker Y | 6 | 2 boxes | 3 per box |
+| Beaker Z | 12 | 2 boxes | 6 per box |
+
+Beakers X and Z have the **same concentration** even though Z contains twice as many particles. Beaker Y is half as concentrated as X.
+
+
+---
+
+### What Changes and What Doesn't
+
+| Process | Number of Solute Particles | Volume | Concentration |
+|---------|----------------------------|--------|---------------|
+| Adding water (dilution) | Same | Larger | Lower |
+| Evaporating water | Same | Smaller | Higher |
+| Pouring out half the solution | Halved | Halved | Same |
+
+> 🔑 **Key Concept:** Pouring out part of a solution never changes its concentration. Only changing the ratio of solute to volume does.
+      `
+    },
+    {
+      id: 'ss4-counting-drill',
       type: 'input-boxes' as const,
       content: `
-**Colligative Property Calculations** 🧮
+**Counting from Diagrams** 🧮
 
-> **Given:** $K_b = 0.512$ °C/m, $K_f = 1.86$ °C/m for water.
+Each diagram box represents the same small volume of solution.
 
-**1)** Calculate the boiling point (in °C) of a solution containing 0.300 mol of KBr ($i = 2$) in 500.0 g of water. (to 3 significant figures)
+**1)** A diagram of $Al(NO_{3})_{3}$(aq) shows 5 aluminum ions. How many nitrate ions does it show?
 
-**2)** Calculate the freezing point (in °C) of a solution of 58.44 g of NaCl ($M = 58.44$ g/mol, $i = 2$) in 2.00 kg of water. (to 3 significant figures)
+**2)** Box A shows 8 dissolved sugar molecules in 1 volume unit. Box B is made by adding water to Box A until the volume is 4 volume units. How many sugar molecules per volume unit does Box B have?
 
-**3)** An antifreeze solution is 2.50 m ethylene glycol ($i = 1$). What is its freezing point in °C? (to 3 significant figures)
+**3)** Beaker 1 shows 10 $Cl^{-}$ ions in 2 volume units. Beaker 2 shows 9 $Cl^{-}$ ions in 1 volume unit. What is the ratio of the chloride concentration in Beaker 2 to that in Beaker 1? (to 2 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['100.61', '-1.86', '-4.65'],
-        hint1: '$m = 0.300/0.500 = 0.600$ m. $\\Delta T_b = iK_bm = 2(0.512)(0.600)$. Add to 100.00.',
-        hint2: '$n = 58.44/58.44 = 1.00$ mol. $m = 1.00/2.00 = 0.500$ m. $\\Delta T_f = 2(1.86)(0.500)$. Subtract from 0.00.',
-        hint3: '$\\Delta T_f = 1(1.86)(2.50) = 4.65$ °C. $T_f = 0.00 - 4.65$.',
-        explanation: '1) $m = 0.300/0.500 = 0.600$ m. $\\Delta T_b = 2(0.512)(0.600) = 0.614$ °C. $T_b = 100.00 + 0.614 = 100.61$ °C. 2) $n = 1.00$ mol, $m = 0.500$ m. $\\Delta T_f = 2(1.86)(0.500) = 1.86$ °C. $T_f = 0.00 - 1.86 = -1.86$ °C. 3) $\\Delta T_f = 1(1.86)(2.50) = 4.65$. $T_f = 0.00 - 4.65 = -4.65$ °C.'
+        correctAnswers: ['15', '2', '1.8'],
+        hint1: 'Each $Al(NO_{3})_{3}$ releases three nitrate ions.',
+        hint2: 'Adding water keeps the 8 molecules but spreads them over 4 volume units.',
+        hint3: 'Beaker 1: 10/2 = 5 per unit. Beaker 2: 9/1 = 9 per unit.',
+        explanation: '1) $5 \\times 3 = 15$ nitrate ions. 2) $8 \\div 4 = 2$ molecules per volume unit. 3) Beaker 1 has 5 per unit and Beaker 2 has 9 per unit, so the ratio is $9/5 = 1.8$.'
       }
     },
     {
-      id: 'ss4-dropdown-practice',
+      id: 'ss4-interactions',
+      type: 'text' as const,
+      content: `
+## 💧 Drawing Solute–Solvent Interactions
+
+Particle diagrams also show **how** the solvent surrounds each solute particle. Orientation is graded.
+
+
+---
+
+### Ion–Dipole Interactions
+
+Water is polar: the oxygen end carries a partial negative charge ($\\delta^-$) and the hydrogen ends carry partial positive charges ($\\delta^+$).
+
+| Ion | Which End of Water Points Toward It | Reason |
+|-----|-------------------------------------|--------|
+| Cation ($Na^{+}$, $Ca^{2+}$) | **Oxygen** end | $\\delta^-$ oxygen is attracted to the positive ion |
+| Anion ($Cl^{-}$, $SO_{4}^{2-}$) | **Hydrogen** end | $\\delta^+$ hydrogens are attracted to the negative ion |
+
+
+---
+
+### Strength of the Attraction
+
+Coulomb's law applies: ion–dipole attraction is stronger for **higher ion charge** and **smaller ion size**. A $Mg^{2+}$ ion holds its surrounding water molecules more tightly than a $Na^{+}$ ion does.
+
+
+---
+
+### Molecular Solutes
+
+- **Ethanol in water:** draw hydrogen bonds between the O–H of ethanol and water molecules (an H on one molecule lined up with a lone pair on the O of the other)
+- **Nonpolar solutes (like $I_{2}$ in hexane):** only London dispersion forces; no special orientation is needed
+
+> ⚠️ **Warning:** A diagram that shows water's hydrogen atoms pointing toward a cation is a classic wrong answer. Like charges would repel.
+      `
+    },
+    {
+      id: 'ss4-interaction-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Colligative Properties — Conceptual** 🔽
+**Orientation and Interactions** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Colligative properties depend on the',
-            options: ['identity of solute particles', 'number of solute particles', 'mass of solute', 'molar mass of solute']
+            label: 'Around a dissolved $K^{+}$ ion, water molecules point their',
+            options: ['oxygen atoms toward the ion', 'hydrogen atoms toward the ion', 'molecular planes toward the ion', 'random sides toward the ion']
           },
           {
-            label: 'Adding a solute to a pure solvent causes the boiling point to',
-            options: ['Increase', 'Decrease', 'Stay the same', 'Increase only for ionic solutes']
+            label: 'Around a dissolved $Br^{-}$ ion, water molecules point their',
+            options: ['oxygen atoms toward the ion', 'hydrogen atoms toward the ion', 'molecular planes toward the ion', 'random sides toward the ion']
           },
           {
-            label: '$CaCl_{2}$ ($i = 3$) is more effective than NaCl ($i = 2$) as a road deicer because',
-            options: ['$CaCl_{2}$ is cheaper per kilogram than NaCl', '$CaCl_{2}$ gives more particles per formula unit', '$CaCl_{2}$ has the higher molar mass of the two', '$CaCl_{2}$ raises the freezing point of the water']
+            label: 'The strongest ion–dipole attraction to water is expected for',
+            options: ['$K^{+}$', '$Na^{+}$', '$Mg^{2+}$', '$Cs^{+}$']
           },
           {
-            label: 'The colligative property formulas use molality instead of molarity because molality',
-            options: ['Is easier to measure in the lab', 'Does not change with temperature', 'Is always larger than molarity', 'Counts solute in grams, not moles']
+            label: 'Between dissolved methanol and water, the main interaction to draw is',
+            options: ['ion–dipole attraction', 'hydrogen bonding', 'covalent bonding', 'ionic bonding']
           }
         ],
-        correctAnswers: ['number of solute particles', 'Increase', '$CaCl_{2}$ gives more particles per formula unit', 'Does not change with temperature'],
-        hint1: 'The word "colligative" relates to the collective effect of particles.',
-        hint2: 'Solute particles disrupt the solvent structure, requiring more energy to boil.',
-        hint3: 'More particles per formula unit → greater freezing point depression.',
-        explanation: 'Colligative properties depend on the number (not identity) of particles. Solute raises the boiling point and lowers the freezing point. $CaCl_{2}$ produces 3 particles vs. 2 for NaCl. Molality is temperature-independent since it uses mass, not volume.'
+        correctAnswers: ['oxygen atoms toward the ion', 'hydrogen atoms toward the ion', '$Mg^{2+}$', 'hydrogen bonding'],
+        hint1: 'Opposite partial and full charges attract.',
+        hint2: 'Coulombic attraction grows with charge and shrinks with distance.',
+        hint3: 'Methanol has an O–H group, just like water.',
+        explanation: 'The $\\delta^-$ oxygen faces cations and the $\\delta^+$ hydrogens face anions. $Mg^{2+}$ has the highest charge and a small radius, so it attracts water most strongly. Methanol and water both have O–H groups, so they hydrogen bond with each other.'
       }
+    },
+    {
+      id: 'ss4-before-after',
+      type: 'text' as const,
+      content: `
+## 🧪 Before-and-After Diagrams
+
+AP questions often show a solution **before** and **after** a change and ask which picture is consistent.
+
+
+---
+
+### Example: Mixing Two Solutions
+
+Equal volumes of 0.20 M NaCl and 0.20 M $KNO_{3}$ are mixed. No precipitate forms (every salt here contains $Na^{+}$, $K^{+}$, or $NO_{3}^{-}$).
+
+- The total volume doubles, so **each ion's concentration is halved** to 0.10 M.
+- The "after" diagram shows four kinds of separated ions, $Na^{+}$, $Cl^{-}$, $K^{+}$, and $NO_{3}^{-}$, in equal numbers.
+- No new compound is drawn, because nothing reacted.
+
+
+---
+
+### Example: A Precipitate Forms
+
+Equal volumes of $AgNO_{3}$(aq) and NaCl(aq) with the same molarity are mixed.
+
+- The "after" diagram shows **solid AgCl** as a cluster of alternating $Ag^{+}$ and $Cl^{-}$ ions, usually at the bottom.
+- $Na^{+}$ and $NO_{3}^{-}$ remain separated in solution as spectator ions.
+- If the amounts were equal, essentially no free $Ag^{+}$ or $Cl^{-}$ remains dissolved.
+      `
     },
     {
       id: 'ss4-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Exit Quiz — Colligative Properties** ✅
+**Exit Quiz — Particulate Representations** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A 0.40 m solution of a nonelectrolyte in water has a freezing point of $-0.74$ °C. What is $K_f$ for water based on this data?',
+            question: 'Diagram P shows 12 solute particles in 3 volume units. Diagram Q shows 8 solute particles in 1 volume unit. Which statement is correct?',
             options: [
-              '0.512 °C/m',
-              '0.54 °C/m',
-              '1.85 °C/m',
-              '0.74 °C/m'
+              'P is more concentrated because it has more particles',
+              'Q is twice as concentrated as P',
+              'P and Q have the same concentration',
+              'Q is three times as concentrated as P'
             ],
-            correctAnswer: 2,
-            explanation: '$\\Delta T_f = 0.74$ °C (the magnitude of the depression). $K_f = \\Delta T_f / (im) = 0.74 / (1 \\times 0.40) = 1.85$ °C/m, which agrees with the accepted $K_f$ for water within the precision of the data. Dividing the other way ($0.40/0.74 = 0.54$) inverts the ratio, and 0.512 °C/m is $K_b$, not $K_f$.'
+            correctAnswer: 1,
+            explanation: 'P has $12/3 = 4$ particles per volume unit and Q has $8/1 = 8$, so Q is twice as concentrated. The total number of particles alone does not determine concentration; the volume matters too.'
           },
           {
-            question: 'Which of the following 0.10 m aqueous solutions would have the highest boiling point?',
+            question: 'Half of a 0.30 M $Na_{2}SO_{4}$ solution is poured into a second beaker. Compared with a diagram of the original solution, a diagram of the poured-out portion shows',
             options: [
-              '$C_{6}H_{12}O_{6}$ (glucose)',
-              'NaCl',
-              '$MgCl_{2}$',
-              'All have the same boiling point'
+              'the same number of ions per unit volume',
+              'half as many ions per unit volume',
+              'twice as many ions per unit volume',
+              'only sodium ions, since sulfate stays behind'
             ],
-            correctAnswer: 2,
-            explanation: '$MgCl_{2}$ dissociates into $Mg^{2+}$ + $2Cl^{-}$ ($i = 3$), producing the most particles. $\\Delta T_b = iK_bm$: glucose gives $1(0.512)(0.10) = 0.051$, NaCl gives $2(0.512)(0.10) = 0.10$, $MgCl_{2}$ gives $3(0.512)(0.10) = 0.15$. $MgCl_{2}$ has the highest boiling point.'
+            correctAnswer: 0,
+            explanation: 'A solution is homogeneous, so every portion has the same concentration. Pouring out half reduces the number of ions and the volume together, leaving the ions per unit volume unchanged. Both kinds of ions are spread evenly through the whole solution.'
           }
         ]
       }

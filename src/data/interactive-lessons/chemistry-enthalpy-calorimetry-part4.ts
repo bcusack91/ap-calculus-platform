@@ -4,9 +4,9 @@ export const chemEnthalpyCalorimetryPart4Data = {
     {
       id: 'eh4-intro',
       type: 'text' as const,
-      content: `# 💣 Bomb Calorimetry
+      content: `# 🔗 Bond Enthalpies
 
-**Part 4 of 7 — Constant-Volume Calorimetry**
+**Part 4 of 7 — Estimating ΔH from Bonds Broken and Formed**
 
 ---
 
@@ -14,262 +14,230 @@ export const chemEnthalpyCalorimetryPart4Data = {
 
 | Section |
 |---------|
-| 🏗️ Bomb Calorimeter Structure |
-| Key Feature: Constant Volume |
-| Relationship Between $\\Delta H$ and $\\Delta E$ |
-| 📌 Heat Capacity of the Calorimeter |
-| Important Distinction |
+| 🔗 Bonds and Potential Energy |
+| Average Bond Enthalpies |
+| 📏 The Bond Enthalpy Method |
+| 🧪 Worked Example — Combustion of Methane |
+| Why the Estimate Is Approximate |
 
-> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+> 🔑 **Key Concept:** Breaking a bond always **requires** energy; forming a bond always **releases** energy. Comparing the two totals tells you whether a reaction is exothermic or endothermic and lets you estimate $\\Delta H$ (CED 6.7.A).
 
 ---
 
 ### What You'll Master in Part 4
-- Understanding the core concepts covered in Part 4
-- Applying these ideas to solve practice problems
-- Building toward AP exam readiness for this topic`
+- Explaining the sign of $\\Delta H$ in terms of bonds broken and formed
+- Counting bonds from Lewis structures
+- Calculating $\\Delta H$ from average bond enthalpies`
     },
     {
-      id: 'eh4-bomb-structure',
+      id: 'eh4-bonds-energy',
       type: 'text' as const,
       content: `
-## 🏗️ Bomb Calorimeter Structure
+## 🔗 Bonds and Potential Energy
 
-A bomb calorimeter consists of:
+During a reaction, bonds in the reactants break and new bonds in the products form, changing the potential energy of the system (CED 6.7.A.1).
 
-1. **The "bomb"** — a rigid, sealed steel container where the reaction occurs
-2. **Water bath** — surrounds the bomb, absorbs the released heat
-3. **Ignition wire** — initiates combustion with an electric spark
-4. **Thermometer** — measures the temperature change of the water
-5. **Stirrer** — ensures uniform temperature in the water bath
-6. **Insulated jacket** — minimizes heat loss to the environment
+| Process | Energy | Sign |
+|---------|--------|------|
+| Breaking a bond | Must be **absorbed** | Endothermic (+) |
+| Forming a bond | Is **released** | Exothermic (−) |
 
-
----
-
-### Key Feature: Constant Volume
-
-The bomb is **sealed and rigid** — the volume cannot change. This means:
-
-- No $PV$ work is done ($w = 0$ since $\\Delta V = 0$)
-- At constant volume: $q_v = \\Delta E$ (internal energy change)
-- This is different from coffee-cup calorimetry where $q_p = \\Delta H$
-
-> 🔑 **Key Distinction:** Coffee-cup = constant pressure → measures $\\Delta H$. Bomb = constant volume → measures $\\Delta E$.
+> ⚠️ **Warning:** A common misconception is that breaking bonds releases energy (as in "energy stored in bonds"). Breaking any bond **costs** energy; the energy a reaction releases comes from forming stronger bonds in the products.
 
 
 ---
 
-### Relationship Between $\\Delta H$ and $\\Delta E$
+### Average Bond Enthalpies
 
-$$\\Delta H = \\Delta E + \\Delta(PV)$$
+A **bond enthalpy** is the energy needed to break one mole of a given bond in the gas phase. Because the same bond (for example C–H) has slightly different strengths in different molecules, tables list **average** values.
 
-For reactions involving only solids and liquids, $\\Delta H \\approx \\Delta E$.
+| Bond | Average bond enthalpy (kJ/mol) | Bond | Average bond enthalpy (kJ/mol) |
+|------|-------------------------------|------|-------------------------------|
+| H–H | 436 | C–C | 348 |
+| C–H | 413 | C=C | 614 |
+| O–H | 463 | C=O (in $\\text{CO}_2$) | 799 |
+| O=O | 498 | N≡N | 941 |
+| N–H | 391 | Cl–Cl | 242 |
+| H–Cl | 431 | C–Cl | 328 |
 
-For reactions involving gases:
-
-$$\\boxed{\\Delta H = \\Delta E + \\Delta n_{\\text{gas}} RT}$$
-
-where $\\Delta n_{\\text{gas}}$ = moles of gaseous products − moles of gaseous reactants.
-      `
-    },
-    {
-      id: 'eh4-heat-capacity',
-      type: 'text' as const,
-      content: `
-## 📌 Heat Capacity of the Calorimeter
-
-For a bomb calorimeter, we use the **heat capacity of the entire calorimeter** ($C_{\\text{cal}}$):
-
-$$\\boxed{q_{\\text{cal}} = C_{\\text{cal}} \\Delta T}$$
-
-| Symbol | Meaning | Units |
-|--------|---------|-------|
-| $q_{\\text{cal}}$ | Heat absorbed by calorimeter | kJ |
-| $C_{\\text{cal}}$ | Heat capacity of calorimeter | kJ/°C |
-| $\\Delta T$ | Temperature change | °C |
-
-
----
-
-### Important Distinction
-
-| Quantity | Symbol | Units | Usage |
-|----------|--------|-------|-------|
-| Specific heat | $c$ | J/(g·°C) | Per gram |
-| Heat capacity | $C$ | J/°C or kJ/°C | For the whole calorimeter |
-
-The heat capacity $C_{\\text{cal}}$ is determined by **calibration** — burning a substance with a known heat of combustion.
-
-
----
-
-### Finding $q_{\\text{rxn}}$
-
-$$q_{\\text{rxn}} = -q_{\\text{cal}} = -C_{\\text{cal}} \\Delta T$$
-
-The negative sign reflects that heat released by the reaction is absorbed by the calorimeter.
-      `
-    },
-    {
-      id: 'eh4-example',
-      type: 'text' as const,
-      content: `
-## 🧪 Worked Example — Bomb Calorimetry
-
-> **Problem:** A 1.50 g sample of benzoic acid ($\\text{C}_7\\text{H}_6\\text{O}_2$, molar mass = 122.12 g/mol) is burned in a bomb calorimeter with $C_{\\text{cal}} = 10.34$ kJ/°C. The temperature rises from 22.45°C to 25.71°C. Calculate the molar heat of combustion.
-
-### Given
-
-| Quantity | Value |
-|----------|-------|
-| Mass of sample | 1.50 g |
-| Molar mass ($\\text{C}_7\\text{H}_6\\text{O}_2$) | 122.12 g/mol |
-| $C_{\\text{cal}}$ | 10.34 kJ/°C |
-| $T_i$ | 22.45°C |
-| $T_f$ | 25.71°C |
-
----
-
-### Step-by-Step Solution
-
-| Step | Action | Calculation | Result |
-|------|--------|-------------|--------|
-| 1 | Temperature change | $25.71 - 22.45$ | $\\Delta T = 3.26°\\text{C}$ |
-| 2 | Heat absorbed by calorimeter | $(10.34)(3.26)$ | $q_{\\text{cal}} = 33.71 \\text{ kJ}$ |
-| 3 | Heat of reaction | $-q_{\\text{cal}}$ | $q_{\\text{rxn}} = -33.71 \\text{ kJ}$ |
-| 4 | Moles of benzoic acid | $1.50 / 122.12$ | $0.01228 \\text{ mol}$ |
-| 5 | Molar heat of combustion | $-33.71 / 0.01228$ | $\\Delta E = -2745 \\text{ kJ/mol}$ |
-
-> ⚠️ **Note:** This gives $\\Delta E$ (internal energy), not $\\Delta H$, because the bomb calorimeter operates at constant volume. For this reaction, $\\Delta H \\approx \\Delta E$ because $\\Delta n_{\\text{gas}}$ is small.
+> 💡 **Tip:** Between the same two atoms, a triple bond is stronger than a double bond, which is stronger than a single bond. Compare C–C (348), C=C (614).
       `
     },
     {
       id: 'eh4-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Bomb Calorimetry Concept Quiz** 🎯
+**Bond Energy Concepts** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A bomb calorimeter measures:',
+            question: 'Which statement about bond breaking and bond formation is correct?',
             options: [
-              'ΔH directly because it operates at constant pressure',
-              'ΔE directly because it operates at constant volume',
-              'ΔG directly because it is sealed',
-              'ΔS directly because it is insulated'
+              'Bond breaking releases energy and bond forming absorbs it',
+              'Breaking bonds absorbs energy and forming bonds releases energy',
+              'Both breaking and forming bonds release energy',
+              'Only forming bonds involves an energy change'
             ],
             correctAnswer: 1,
-            explanation: 'The bomb is a rigid sealed container (constant volume). At constant volume, $q_v = \\Delta E$. A coffee-cup calorimeter (constant pressure) measures ΔH directly.'
+            explanation: 'Energy must be supplied to pull bonded atoms apart, so bond breaking is endothermic. When atoms bond, the system drops to lower potential energy and releases energy, so bond formation is exothermic. Both processes involve energy changes.'
           },
           {
-            question: 'The heat capacity of a bomb calorimeter is determined by:',
+            question: 'A reaction absorbs 1,850 kJ to break the bonds in its reactants and releases 2,100 kJ when the product bonds form. Which is true?',
             options: [
-              'Weighing the calorimeter and its water',
-              'Measuring the volume of the steel bomb',
-              'Calibrating it with a substance of known heat of combustion',
-              'Calculating it from the mass of water alone'
-            ],
-            correctAnswer: 2,
-            explanation: 'The calorimeter is calibrated by burning a known mass of a standard substance (like benzoic acid) with a known heat of combustion. From the measured ΔT, we can calculate $C_{\\text{cal}}$.'
-          },
-          {
-            question: 'In the equation q_cal = C_cal × ΔT, what are the units of C_cal?',
-            options: [
-              'J/(g·°C)',
-              'kJ/°C',
-              'kJ/mol',
-              'kJ/(mol·°C)'
+              'The reaction is endothermic with ΔH ≈ +250 kJ',
+              'The reaction is exothermic with ΔH ≈ −250 kJ',
+              'The reaction is exothermic with ΔH ≈ −3,950 kJ',
+              'The reaction is endothermic with ΔH ≈ +3,950 kJ'
             ],
             correctAnswer: 1,
-            explanation: '$C_{\\text{cal}}$ is the heat capacity of the entire calorimeter apparatus. Its units are energy per degree: kJ/°C (or J/°C). This is different from specific heat, which is per gram.'
+            explanation: 'ΔH ≈ (energy to break) − (energy released) = 1,850 − 2,100 = −250 kJ. More energy is released than absorbed, so the reaction is exothermic. Adding the two values instead of subtracting gives 3,950 kJ, and subtracting in the other order flips the sign.'
+          },
+          {
+            question: 'Why are bond enthalpy tables described as "average" values?',
+            options: [
+              'Each bond is measured at several different temperatures',
+              'The strength of a given bond varies slightly from one molecule to another',
+              'Bond enthalpies change as a reaction proceeds',
+              'Bond enthalpies are averaged over forward and reverse reactions'
+            ],
+            correctAnswer: 1,
+            explanation: 'A C–H bond in methane is not exactly as strong as a C–H bond in ethanol, because the rest of the molecule affects it. Tables report an average over many compounds, which is why bond-enthalpy results are estimates.'
           }
         ]
       }
     },
     {
+      id: 'eh4-method',
+      type: 'text' as const,
+      content: `
+## 📏 The Bond Enthalpy Method
+
+$$\\boxed{\\Delta H \\approx \\sum (\\text{bond enthalpies of bonds broken}) - \\sum (\\text{bond enthalpies of bonds formed})}$$
+
+### Steps
+
+1. **Draw Lewis structures** for every reactant and product so you can see each bond, including double and triple bonds.
+2. **Count the bonds broken** in the reactants (multiply by coefficients).
+3. **Count the bonds formed** in the products.
+4. **Subtract:** energy in (broken) minus energy out (formed).
+
+> ⚠️ **Warning:** This is "reactants minus products," the **opposite** order from the $\\Delta H^\\circ_f$ formula. Bond enthalpies measure energy put in to break bonds, so the bonds broken come first.
+
+
+---
+
+## 🧪 Worked Example — Combustion of Methane
+
+> **Problem:** Estimate $\\Delta H$ for $\\text{CH}_4(g) + 2\\text{O}_2(g) \\rightarrow \\text{CO}_2(g) + 2\\text{H}_2\\text{O}(g)$.
+
+| | Bonds | Energy (kJ) |
+|-|-------|-------------|
+| Broken | 4 C–H | 4(413) = 1652 |
+| Broken | 2 O=O | 2(498) = 996 |
+| **Total broken** | | **2648** |
+| Formed | 2 C=O | 2(799) = 1598 |
+| Formed | 4 O–H (2 per $\\text{H}_2\\text{O}$) | 4(463) = 1852 |
+| **Total formed** | | **3450** |
+
+$$\\Delta H \\approx 2648 - 3450 = \\boxed{-802 \\text{ kJ}}$$
+
+The product bonds (C=O and O–H) are stronger overall than the reactant bonds, so energy is released: the reaction is exothermic.
+
+
+---
+
+### Why the Estimate Is Approximate
+
+- Average bond enthalpies are not exact for any particular molecule.
+- The method applies to **gases**; it ignores the energy of intermolecular attractions in liquids and solids.
+
+When a question gives $\\Delta H^\\circ_f$ values, those give a more accurate answer. When it gives bond enthalpies, use this method.
+      `
+    },
+    {
       id: 'eh4-calculation-drill',
       type: 'input-boxes' as const,
       content: `
-**Bomb Calorimetry Calculations** 🧮
+**Bond Enthalpy Practice** 🧮
 
-**1)** A bomb calorimeter has $C_{\\text{cal}} = 8.50$ kJ/°C. If the temperature rises by 4.20°C, what is $q_{\\text{rxn}}$? (in kJ, include sign)
+Estimate $\\Delta H$ for $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightarrow 2\\text{NH}_3(g)$ using N≡N = 941, H–H = 436, and N–H = 391 kJ/mol.
 
-**2)** When 0.500 g of sugar ($\\text{C}_{12}\\text{H}_{22}\\text{O}_{11}$, molar mass = 342.3 g/mol) is burned in a bomb calorimeter ($C_{\\text{cal}} = 9.20$ kJ/°C), the temperature rises by 1.23°C. What is the energy released per mole? (in kJ/mol, round to nearest whole number, report as positive)
+**1)** Total energy to break the bonds in the reactants (kJ)
 
-**3)** A calibration experiment burns 1.000 g of benzoic acid (heat of combustion = 26.38 kJ/g) and the temperature rises by 2.55°C. What is $C_{\\text{cal}}$? (in kJ/°C, to 3 significant figures)
+**2)** Total energy released forming the bonds in the products (kJ)
+
+**3)** Estimated $\\Delta H$ (kJ, include the sign)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['-35.70', '7747', '10.3'],
-        hint1: '$q_{\\text{rxn}} = -C_{\\text{cal}} \\Delta T = -(8.50)(4.20)$.',
-        hint2: '$q_{\\text{rxn}} = -C_{\\text{cal}} \\Delta T$, then divide by moles. Moles = 0.500/342.3.',
-        hint3: '$C_{\\text{cal}} = q/\\Delta T = (1.000 \\times 26.38)/2.55$.',
-        explanation: '1) $q_{\\text{rxn}} = -(8.50)(4.20) = -35.70$ kJ. 2) $q = (9.20)(1.23) = 11.316$ kJ, moles = 0.500/342.3 = 0.001461, per mole = 11.316/0.0014607 = 7747 kJ/mol. 3) $C_{\\text{cal}} = (1.000)(26.38)/2.55 = 10.345 \\approx 10.3$ kJ/°C.'
+        questions: [{ question: '(1)', answer: '2249', acceptableAnswers: ['2249', '2,249'] }, { question: '(2)', answer: '2346', acceptableAnswers: ['2346', '2,346'] }, { question: '(3)', answer: '-97', acceptableAnswers: ['-97', '−97'] }],
+        hint1: 'One N≡N bond and three H–H bonds: 941 + 3(436).',
+        hint2: 'Each $\\text{NH}_3$ has three N–H bonds, and there are two $\\text{NH}_3$: six N–H bonds.',
+        hint3: 'Bonds broken minus bonds formed.',
+        explanation: '1) 941 + 3(436) = 941 + 1308 = 2249 kJ. 2) 6(391) = 2346 kJ. 3) ΔH ≈ 2249 − 2346 = −97 kJ, close to the measured −92 kJ; the difference comes from using average bond enthalpies.'
       }
     },
     {
       id: 'eh4-dropdown-practice',
       type: 'dropdown-select' as const,
       content: `
-**Bomb vs. Coffee-Cup Calorimetry** 🔽
+**Bond Enthalpy Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'A coffee-cup calorimeter operates at constant',
-            options: ['volume', 'pressure', 'temperature', 'entropy']
+            label: 'If the energy released forming bonds is greater than the energy needed to break bonds, the reaction is',
+            options: ['exothermic', 'endothermic', 'at equilibrium', 'nonspontaneous']
           },
           {
-            label: 'A bomb calorimeter operates at constant',
-            options: ['volume', 'pressure', 'temperature', 'entropy']
+            label: 'The number of C–H bonds broken when one $\\text{CH}_4$ molecule burns completely is',
+            options: ['1', '2', '4', '8']
           },
           {
-            label: 'For reactions involving only liquids and solids, ΔH and ΔE are',
-            options: ['very different', 'approximately equal', 'always identical', 'opposites']
+            label: 'Bond enthalpy values in a table are always',
+            options: ['positive', 'negative', 'zero for single bonds', 'positive only for double bonds']
           },
           {
-            label: 'Bomb calorimeters are commonly used to measure',
-            options: ['heats of solution', 'heats of combustion', 'heats of vaporization', 'heats of fusion']
+            label: 'Compared with a C–C single bond, a C=C double bond is',
+            options: ['stronger', 'weaker', 'equally strong', 'not a covalent bond']
           }
         ],
-        correctAnswers: ['pressure', 'volume', 'approximately equal', 'heats of combustion'],
-        hint1: 'Coffee cup is open to the atmosphere.',
-        hint2: 'The bomb is a sealed, rigid container.',
-        hint3: '$\\Delta H = \\Delta E + \\Delta n_{\\text{gas}}RT$. If no gases, $\\Delta n_{\\text{gas}} = 0$.',
-        explanation: 'Coffee-cup: constant pressure (open). Bomb: constant volume (sealed). When Δn_gas ≈ 0, ΔH ≈ ΔE. Bomb calorimeters are designed for combustion reactions that produce lots of gas and heat.'
+        correctAnswers: ['exothermic', '4', 'positive', 'stronger'],
+        hint1: 'More energy out than in.',
+        hint2: 'Draw the Lewis structure of methane.',
+        hint3: 'A bond enthalpy is the energy needed to break a bond.',
+        explanation: 'More energy released than absorbed means ΔH < 0 (exothermic). Methane has four C–H bonds, and all of them break. Bond enthalpies are energies required to break bonds, so they are always positive. Double bonds are stronger than single bonds between the same atoms.'
       }
     },
     {
       id: 'eh4-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Exit Quiz — Bomb Calorimetry** ✅
+**Exit Quiz — Bond Enthalpies** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A 2.00 g sample of food is burned in a bomb calorimeter (C_cal = 10.00 kJ/°C), and the temperature rises by 3.50°C. The energy content per gram of food is:',
+            question: 'Using C=C = 614, H–H = 436, C–C = 348, and C–H = 413 kJ/mol, estimate ΔH for $\\text{C}_2\\text{H}_4(g) + \\text{H}_2(g) \\rightarrow \\text{C}_2\\text{H}_6(g)$.',
             options: [
-              '1.43 kJ/g',
-              '17.5 kJ/g',
-              '35.0 kJ/g',
-              '70.0 kJ/g'
+              '−124 kJ',
+              '+124 kJ',
+              '−1174 kJ',
+              '+289 kJ'
             ],
-            correctAnswer: 1,
-            explanation: '$q = C_{\\text{cal}} \\Delta T = (10.00)(3.50) = 35.0$ kJ total. Per gram: $35.0/2.00 = 17.5$ kJ/g. Forgetting to divide by the mass leaves 35.0 kJ/g, multiplying by the mass gives 70.0 kJ/g, and dividing $C_{\\text{cal}}$ by ΔT instead of multiplying gives 1.43 kJ/g.'
+            correctAnswer: 0,
+            explanation: 'Only the bonds that change need to be counted. Broken: C=C (614) + H–H (436) = 1050 kJ. Formed: C–C (348) + 2 C–H (826) = 1174 kJ. ΔH ≈ 1050 − 1174 = −124 kJ. Subtracting in the other order gives +124 kJ, −1174 kJ counts only bonds formed, and +289 kJ counts only one of the two new C–H bonds.'
           },
           {
-            question: 'The key difference between a bomb calorimeter and a coffee-cup calorimeter is:',
+            question: 'The reaction $\\text{H}_2(g) + \\text{Cl}_2(g) \\rightarrow 2\\text{HCl}(g)$ is exothermic. Which explanation is consistent with bond enthalpies?',
             options: [
-              'The bomb uses water; the coffee cup does not',
-              'The bomb is at constant volume; the cup is at constant pressure',
-              'The bomb is more accurate because it uses more water',
-              'The coffee cup can measure combustion; the bomb cannot'
+              'Breaking the H–H and Cl–Cl bonds releases energy',
+              'Forming 2 H–Cl releases more than breaking costs',
+              'The H–Cl bond is weaker than both the H–H and the Cl–Cl bond',
+              'No bonds are broken because the reactants are elements'
             ],
             correctAnswer: 1,
-            explanation: 'The fundamental difference is the thermodynamic constraint: bomb = constant volume ($q_v = \\Delta E$), coffee-cup = constant pressure ($q_p = \\Delta H$).'
+            explanation: 'Breaking costs 436 + 242 = 678 kJ, and forming two H–Cl bonds releases 2(431) = 862 kJ, so the net change is about −184 kJ. Bond breaking never releases energy, H–Cl (431) is stronger than Cl–Cl (242), and the H–H and Cl–Cl bonds in the elements must break.'
           }
         ]
       }

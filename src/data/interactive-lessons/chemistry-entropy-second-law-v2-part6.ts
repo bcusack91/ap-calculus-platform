@@ -9,7 +9,7 @@ export const chemEntropySecondLawV2Part6Data = {
 
 **Part 6 of 7 — Integrating Entropy Concepts for AP-Level Problems**
 
-Let's put everything together with multi-step problems that combine qualitative predictions, calculations, and Second Law reasoning.
+Let's put everything together with multi-step problems that combine qualitative predictions, $\\Delta S°$ calculations, and reasoning about thermodynamic favorability.
       `
     },
     {
@@ -20,7 +20,7 @@ Let's put everything together with multi-step problems that combine qualitative 
 
 ### Step-by-Step Approach
 
-1. **Identify** what the problem is asking: $\\Delta S_{\\text{sys}}$? $\\Delta S_{\\text{surr}}$? $\\Delta S_{\\text{univ}}$? Spontaneity?
+1. **Identify** what the problem is asking: the sign of $\\Delta S$? A value of $\\Delta S°$? Whether the process is favored, and at which temperatures?
 2. **Predict** the sign qualitatively (phase/gas rules)
 3. **Calculate** using the appropriate formula
 4. **Check** — does the sign match your prediction?
@@ -33,8 +33,8 @@ Let's put everything together with multi-step problems that combine qualitative 
 | Formula | When to Use |
 |---------|-------------|
 | $\\Delta S°_{\\text{rxn}} = \\sum nS°_{\\text{prod}} - \\sum nS°_{\\text{react}}$ | Standard entropy change from tables |
-| $\\Delta S_{\\text{surr}} = -\\Delta H_{\\text{sys}} / T$ | Surroundings entropy from enthalpy |
-| $\\Delta S_{\\text{univ}} = \\Delta S_{\\text{sys}} + \\Delta S_{\\text{surr}}$ | Spontaneity check |
+| $\\Delta G° = \\Delta H° - T\\Delta S°$ | Favorability at a given temperature ($\\Delta G° < 0$ → favored) |
+| $T = \\Delta H° / \\Delta S°$ | Temperature where favorability switches ($\\Delta G° = 0$) |
 
 
 ---
@@ -58,17 +58,17 @@ $S°$ values (J/(mol·K)): $CH_{4}$ = 186.3, $O_{2}$ = 205.0, $CO_{2}$ = 213.7, 
 
 **1)** Calculate $\\Delta S°_{\\text{sys}}$ in J/(mol·K). Round to 1 decimal.
 
-**2)** Calculate $\\Delta S_{\\text{surr}}$ in J/K. Round to 1 decimal.
+**2)** Calculate $\\Delta G°$ at 298 K in kJ/mol. Round to the nearest whole number.
 
-**3)** Is the reaction spontaneous at 298 K? (type yes or no)
+**3)** Is the reaction thermodynamically favored at 298 K? (type yes or no)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-5.2', '2691.3', 'yes'],
+        correctAnswers: ['-5.2', '-800', 'yes'],
         hint1: '$\\Delta S° = [213.7 + 2(188.7)] - [186.3 + 2(205.0)]$',
-        hint2: '$\\Delta S_{\\text{surr}} = -(-802{,}000)/298$',
-        hint3: 'Is $\\Delta S_{\\text{univ}} = \\Delta S_{\\text{sys}} + \\Delta S_{\\text{surr}} > 0$?',
-        explanation: '1) $\\Delta S° = [213.7 + 377.4] - [186.3 + 410.0] = 591.1 - 596.3 = -5.2$ J/(mol·K). 2) $\\Delta S_{\\text{surr}} = 802{,}000/298 = 2691.3$ J/K. 3) $\\Delta S_{\\text{univ}} = -5.2 + 2691.3 > 0$, so yes — highly spontaneous!'
+        hint2: '$\\Delta G° = -802 - (298)(-0.0052)$ — convert ΔS° to kJ first.',
+        hint3: 'Is $\\Delta G° < 0$?',
+        explanation: '1) $\\Delta S° = [213.7 + 377.4] - [186.3 + 410.0] = 591.1 - 596.3 = -5.2$ J/(mol·K). 2) $\\Delta G° = -802 - (298)(-0.0052) = -802 + 1.5 \\approx -800$ kJ/mol. 3) Yes — $\\Delta G° < 0$, and strongly so.'
       }
     },
     {
@@ -83,23 +83,23 @@ $S°$ values (J/(mol·K)): $CH_{4}$ = 186.3, $O_{2}$ = 205.0, $CO_{2}$ = 213.7, 
             question: "Methane combustion has a slightly negative $\\Delta S_{\\text{sys}}$ (3 mol gas → 3 mol gas, but products are heavier). Yet it's highly spontaneous. Why?",
             options: [
               'Combustion always has a positive $\\Delta S_{\\text{sys}}$, despite the gas count',
-              'The large heat release makes $\\Delta S_{\\text{surr}}$ hugely positive',
+              'The large heat release outweighs the tiny entropy decrease',
               'Reactions in the gas phase are always spontaneous because gases mix freely',
-              'Its $\\Delta S_{\\text{univ}}$ is negative, but $\\Delta H$ alone decides spontaneity'
+              'ΔH plays no role, because only entropy decides favorability'
             ],
             correctAnswer: 1,
-            explanation: 'The massive heat release ($-802$ kJ) creates a huge $\\Delta S_{\\text{surr}} = +2691$ J/K, which vastly overwhelms the small negative $\\Delta S_{\\text{sys}}$.'
+            explanation: 'With ΔH° = −802 kJ and ΔS° = −5.2 J/K, the −TΔS° term is only about +1.5 kJ at 298 K, so ΔG° is strongly negative. Favorability depends on both ΔH and ΔS; here the energy factor dominates.'
           },
           {
             question: 'If you ran this reaction at 1000 K instead of 298 K, what would change?',
             options: [
               'Nothing — the reaction would be equally spontaneous',
-              '$\\Delta S_{\\text{surr}}$ would be smaller, making it less spontaneous',
-              '$\\Delta S_{\\text{sys}}$ would turn positive, which makes it even more spontaneous',
-              '$\\Delta S_{\\text{surr}}$ would turn negative, making it nonspontaneous'
+              'The −TΔS° term grows, so ΔG° is slightly less negative but still favored',
+              'ΔS° would turn positive, which makes it even more favored',
+              'ΔG° would turn positive, making it unfavored'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta S_{\\text{surr}} = -\\Delta H/T$. Higher T → smaller $\\Delta S_{\\text{surr}}$. The reaction is still spontaneous (combustion works at all reasonable T) but the driving force is reduced.'
+            explanation: 'Because ΔS° < 0, the −TΔS° term is positive and grows with T: at 1000 K it is about +5 kJ. ΔG° ≈ −797 kJ, still strongly negative. The sign of ΔS° does not change with temperature, and ΔG° stays far below zero.'
           }
         ]
       }
@@ -110,21 +110,21 @@ $S°$ values (J/(mol·K)): $CH_{4}$ = 186.3, $O_{2}$ = 205.0, $CO_{2}$ = 213.7, 
       content: `
 **Problem 3: Is This Reaction Spontaneous?** 🧮
 
-A reaction has $\\Delta H = +150$ kJ and $\\Delta S_{\\text{sys}} = +400$ J/K.
+A reaction has $\\Delta H° = +150$ kJ and $\\Delta S° = +400$ J/K.
 
-**1)** At $T = 300$ K, calculate $\\Delta S_{\\text{surr}}$ in J/K.
+**1)** At $T = 300$ K, calculate the $T\\Delta S°$ term in kJ.
 
-**2)** At $T = 300$ K, calculate $\\Delta S_{\\text{univ}}$ in J/K.
+**2)** At $T = 300$ K, calculate $\\Delta G°$ in kJ.
 
-**3)** At what temperature (in K) does this reaction switch from nonspontaneous to spontaneous? ($T = \\Delta H / \\Delta S$)
+**3)** At what temperature (in K) does this reaction switch from unfavored to favored? ($T = \\Delta H° / \\Delta S°$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-500', '-100', '375'],
-        hint1: '$\\Delta S_{\\text{surr}} = -\\Delta H / T = -(+150{,}000)/300$',
-        hint2: '$\\Delta S_{\\text{univ}} = +400 + (-500)$',
-        hint3: 'Crossover when $\\Delta S_{\\text{univ}} = 0$: $T = \\Delta H / \\Delta S = 150{,}000/400$',
-        explanation: '1) $\\Delta S_{\\text{surr}} = -150{,}000/300 = -500$ J/K. 2) $\\Delta S_{\\text{univ}} = 400 + (-500) = -100$ J/K (nonspontaneous). 3) $T = 150{,}000/400 = 375$ K. Above 375 K, the reaction becomes spontaneous.'
+        correctAnswers: ['120', '30', '375'],
+        hint1: '$T\\Delta S° = (300)(0.400)$ kJ',
+        hint2: '$\\Delta G° = 150 - 120$',
+        hint3: 'Crossover when $\\Delta G° = 0$: $T = 150{,}000/400$',
+        explanation: '1) $T\\Delta S° = (300 \\text{ K})(0.400 \\text{ kJ/K}) = 120$ kJ. 2) $\\Delta G° = 150 - 120 = +30$ kJ, so the reaction is not favored at 300 K. 3) $T = 150{,}000/400 = 375$ K. Above 375 K, $T\\Delta S°$ exceeds $\\Delta H°$ and the reaction becomes favored.'
       }
     },
     {
@@ -144,7 +144,7 @@ A reaction has $\\Delta H = +150$ kJ and $\\Delta S_{\\text{sys}} = +400$ J/K.
               'Spontaneous — endothermic reactions favor low T'
             ],
             correctAnswer: 1,
-            explanation: 'At low T, $\\Delta S_{\\text{surr}} = -\\Delta H/T$ is a large negative number (endothermic + low T). This overwhelms the positive $\\Delta S_{\\text{sys}}$, making $\\Delta S_{\\text{univ}} < 0$. Nonspontaneous.'
+            explanation: 'At low T, the favorable −TΔS term is small, so the unfavorable positive ΔH dominates and ΔG > 0. The process becomes favored only at high temperature, where TΔS outweighs ΔH.'
           }
         ]
       }

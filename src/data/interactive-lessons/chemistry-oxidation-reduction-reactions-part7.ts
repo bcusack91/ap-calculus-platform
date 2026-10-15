@@ -35,8 +35,8 @@ A galvanic cell converts **chemical energy → electrical energy** using a spont
 
 | Component | Role |
 |-----------|------|
-| **Anode** | Where **oxidation** occurs (negative terminal) |
-| **Cathode** | Where **reduction** occurs (positive terminal) |
+| **Anode** | Where **oxidation** occurs |
+| **Cathode** | Where **reduction** occurs |
 | **Salt bridge** | Allows ion flow to maintain charge balance |
 | **Wire** | Carries electrons from anode to cathode |
 
@@ -127,7 +127,7 @@ Where $n$ = moles of electrons transferred, $F$ = Faraday\'s constant (96,485 C/
               'It depends on concentration'
             ],
             correctAnswer: 1,
-            explanation: 'Zn is more active than Cu (more negative E°). Zn is oxidized (Zn → $Zn^{2+}$ + $2e^{-}$) at the anode. $Cu^{2+}$ is reduced ($Cu^{2+}$ + $2e^{-}$ → Cu) at the cathode. The salt bridge is a separate component, and for standard Zn/Cu half-cells the zinc electrode is always the anode.'
+            explanation: 'Zn has the more negative reduction potential (−0.76 V vs +0.34 V for Cu), so Zn is oxidized (Zn → $Zn^{2+}$ + $2e^{-}$) at the anode. $Cu^{2+}$ is reduced ($Cu^{2+}$ + $2e^{-}$ → Cu) at the cathode. The salt bridge is a separate component, and for standard Zn/Cu half-cells the zinc electrode is always the anode.'
           },
           {
             question: 'Calculate $E^\\circ_{\\text{cell}}$ for a galvanic cell: Zn | $Zn^{2+}$ || $Cu^{2+}$ | Cu. Given: $E^\\circ_{\\text{Cu}} = +0.34$ V, $E^\\circ_{\\text{Zn}} = -0.76$ V.',
@@ -240,15 +240,15 @@ Use the reduction potentials: $Ag^{+}/Ag$ = +0.80 V, $Fe^{2+}/Fe$ = −0.45 V, $
             explanation: 'Reduction: $MnO_{4}^{-}$ → $Mn^{2+}$ gains $5e^{-}$ (Mn: +7 → +2). Oxidation: $Sn^{2+}$ → $Sn^{4+}$ loses $2e^{-}$. LCM(5,2) = 10. Multiply reduction by 2: $2MnO_{4}^{-}$. Multiply oxidation by 5: $5Sn^{2+}$. Balanced: $2MnO_{4}^{-}$ + $5Sn^{2+}$ + $16H^{+}$ → $2Mn^{2+}$ + $5Sn^{4+}$ + $8H_{2}O$. Coefficient of $Sn^{2+}$ = 5.'
           },
           {
-            question: 'A strip of copper is placed in a solution of $AgNO_{3}$. Which statement is true?',
+            question: 'A strip of copper is placed in a solution of $AgNO_{3}$. Using the reduction potentials above, which statement is true?',
             options: [
-              'No reaction, because copper is less active than silver',
+              'No reaction, because $E^\\circ$ for the reaction is negative',
               'Silver deposits on the copper and the solution turns blue',
               'Copper crystals form and the solution turns colorless',
               'Both metals dissolve and the solution stays colorless'
             ],
             correctAnswer: 1,
-            explanation: 'Cu is above Ag in the activity series. Cu(s) + $2Ag^{+}(aq)$ → $Cu^{2+}(aq)$ + 2Ag(s). Silver deposits on the copper strip (shiny crystals), and $Cu^{2+}$ ions make the solution turn blue. Silver ions are reduced, not dissolved, and the new $Cu^{2+}$ means the solution cannot stay colorless.'
+            explanation: '$Ag^{+}$ has the higher reduction potential (+0.80 V vs +0.34 V for $Cu^{2+}$), so $Ag^{+}$ is reduced and Cu is oxidized, with $E^\\circ_{\\text{cell}} = 0.80 - 0.34 = +0.46$ V > 0. Cu(s) + $2Ag^{+}(aq)$ → $Cu^{2+}(aq)$ + 2Ag(s). Silver deposits on the copper strip (shiny crystals), and $Cu^{2+}$ ions make the solution turn blue. Silver ions are reduced, not dissolved, and the new $Cu^{2+}$ means the solution cannot stay colorless.'
           }
         ]
       }
@@ -281,7 +281,7 @@ Use the reduction potentials: $Ag^{+}/Ag$ = +0.80 V, $Fe^{2+}/Fe$ = −0.45 V, $
               'Electrochemistry relies on proton transfer, which redox provides'
             ],
             correctAnswer: 1,
-            explanation: 'Redox reactions involve electron transfer. By separating the oxidation and reduction half-reactions into different compartments (half-cells), the electron flow through a wire generates electrical current. This is the basis of all batteries and fuel cells. Many redox reactions produce no gas, redox happens everywhere (rusting, respiration, combustion), and proton transfer is acid-base chemistry, not redox.'
+            explanation: 'Redox reactions involve electron transfer. By separating the oxidation and reduction half-reactions into different compartments (half-cells), the electron flow through a wire generates electrical current. This is the basis of every galvanic cell. Many redox reactions produce no gas, redox happens everywhere (rusting, respiration, combustion), and proton transfer is acid-base chemistry, not redox.'
           }
         ]
       }

@@ -15,10 +15,9 @@ export const chemAtomicSpectraPart3Data = {
 | Section |
 |---------|
 | Bohr's Big Idea |
-| 📌 Energy Levels of Hydrogen |
-| 🔑 Allowed Transitions |
-| Excitation vs Ionization |
-| Limitations of the Bohr Model |
+| ⚡ Hydrogen's Energy Levels |
+| Energy of a Photon Emitted in a Transition |
+| 🔑 Excitation vs Ionization |
 
 > 🔑 **Big picture:** In 1913, Niels Bohr proposed that electrons orbit the nucleus in only certain *allowed* energy levels — quantized states. This explains why hydrogen's emission spectrum has a few sharp lines instead of a continuous rainbow.`
     },
@@ -45,29 +44,31 @@ $$\\boxed{\\Delta E = E_{\\text{higher}} - E_{\\text{lower}} = h\\nu}$$
       content: `
 ## ⚡ Hydrogen's Energy Levels
 
-For a hydrogen atom (one electron, one proton), the allowed energies are:
+Experiments on hydrogen give the following allowed energies. On the AP exam, energy-level values like these are always **given** to you; you use them, you do not derive them.
 
-$$\\boxed{E_n = -\\frac{2.18 \\times 10^{-18} \\; \\text{J}}{n^2}}$$
+| $n$ | $E_n$ (J) |
+|-----|-----------|
+| 1 | $-2.18 \\times 10^{-18}$ |
+| 2 | $-5.45 \\times 10^{-19}$ |
+| 3 | $-2.42 \\times 10^{-19}$ |
+| 4 | $-1.36 \\times 10^{-19}$ |
+| 5 | $-8.72 \\times 10^{-20}$ |
+| 6 | $-6.06 \\times 10^{-20}$ |
+| ∞ | 0 (ionized) |
 
-(Note the negative sign — bound states have lower energy than a free electron, which has $E = 0$.)
+(Note the negative signs — a bound electron has lower energy than a free electron, which has $E = 0$.)
 
-| $n$ | $E_n$ (J) | $E_n$ (eV) |
-|-----|-----------|-----------|
-| 1 | $-2.18 \\times 10^{-18}$ | −13.6 |
-| 2 | $-5.45 \\times 10^{-19}$ | −3.40 |
-| 3 | $-2.42 \\times 10^{-19}$ | −1.51 |
-| 4 | $-1.36 \\times 10^{-19}$ | −0.85 |
-| ∞ | 0 | 0 (ionized) |
-
-> ⚠️ **Watch the signs:** Higher $n$ ⇒ less-negative (more positive) energy. The electron is *more loosely bound* in higher levels.
+> ⚠️ **Watch the signs:** Higher $n$ ⇒ less-negative (more positive) energy. The electron is *more loosely bound* in higher levels. Notice also that the gaps between levels shrink as $n$ increases.
 
 ---
 
 ### Energy of a Photon Emitted in a Transition
 
-When an electron drops from $n_i$ → $n_f$ (with $n_f < n_i$), the energy released is:
+When an electron drops from a higher level to a lower level, the photon carries away exactly the energy difference:
 
-$$\\Delta E = E_{n_f} - E_{n_i} = -2.18 \\times 10^{-18} \\left( \\frac{1}{n_f^2} - \\frac{1}{n_i^2} \\right) \\; \\text{J}$$
+$$\\boxed{E_{\\text{photon}} = E_{\\text{upper}} - E_{\\text{lower}}}$$
+
+**Example:** $n = 3 \\to n = 2$: $E_{\\text{photon}} = (-2.42 \\times 10^{-19}) - (-5.45 \\times 10^{-19}) = 3.03 \\times 10^{-19}$ J, which corresponds to $\\lambda = hc/E = 656$ nm (red light).
 
 The magnitude $|\\Delta E|$ equals the **energy of the photon emitted**.
       `
@@ -96,7 +97,7 @@ $$\\Delta E = E_\\infty - E_1 = 0 - (-2.18 \\times 10^{-18}) = 2.18 \\times 10^{
 
 Per mole: $\\;(2.18 \\times 10^{-18})(6.022 \\times 10^{23}) = 1.31 \\times 10^{6}$ J/mol = **1310 kJ/mol**.
 
-This matches the experimentally measured **first ionization energy of hydrogen** — a striking success of the Bohr model.
+This matches the measured **first ionization energy of hydrogen**, about 1312 kJ/mol.
       `
     },
     {
@@ -109,13 +110,13 @@ This matches the experimentally measured **first ionization energy of hydrogen**
             question: 'In the Bohr model, which transition emits the highest-energy photon?',
             options: ['n=2 → n=1', 'n=3 → n=2', 'n=4 → n=3', 'n=5 → n=4'],
             correctAnswer: 0,
-            explanation: 'The largest energy gap in hydrogen is between $n=2$ and $n=1$ (the Lyman-α transition, 121.6 nm in the UV).'
+            explanation: 'The largest energy gap of these four is between $n=2$ and $n=1$: $(-5.45 \\times 10^{-19}) - (-2.18 \\times 10^{-18}) = 1.64 \\times 10^{-18}$ J, a 122 nm ultraviolet photon. The gaps between higher levels are much smaller.'
           },
           {
-            question: 'A hydrogen atom in $n = 3$ relaxes to $n = 2$. What region of the EM spectrum is the emitted photon in?',
-            options: ['Infrared (Paschen)', 'Ultraviolet (Lyman)', 'Visible (Balmer)', 'Far infrared (Brackett)'],
+            question: 'A hydrogen atom in $n = 3$ relaxes to $n = 2$, emitting a photon of energy $3.03 \\times 10^{-19}$ J. What region of the EM spectrum is the emitted photon in?',
+            options: ['Infrared', 'Ultraviolet', 'Visible', 'Microwave'],
             correctAnswer: 2,
-            explanation: 'This is the H-alpha line of the Balmer series ($n_f = 2$) at 656 nm — the bright red line in hydrogen\'s visible spectrum. Lyman lines end at $n = 1$ (UV); Paschen and Brackett lines end at $n = 3$ and $n = 4$ (IR).'
+            explanation: '$\\lambda = hc/E = (6.626 \\times 10^{-34})(3.00 \\times 10^{8})/(3.03 \\times 10^{-19}) = 6.56 \\times 10^{-7}$ m = 656 nm, which is red visible light. UV photons are shorter than about 400 nm, and infrared and microwave photons are longer than about 700 nm.'
           },
           {
             question: 'Energy levels closer to ionization (large $n$) are:',
@@ -126,7 +127,7 @@ This matches the experimentally measured **first ionization energy of hydrogen**
               'only present in heavier atoms'
             ],
             correctAnswer: 1,
-            explanation: 'Because $E_n \\propto -1/n^2$, the gap shrinks as $n$ grows; levels bunch up near the ionization limit.'
+            explanation: 'In the table of hydrogen energies, the gap from $n = 1$ to $n = 2$ is $1.64 \\times 10^{-18}$ J, but the gap from $n = 5$ to $n = 6$ is only $2.66 \\times 10^{-20}$ J. The levels bunch up near the ionization limit.'
           }
         ]
       }
@@ -135,9 +136,9 @@ This matches the experimentally measured **first ionization energy of hydrogen**
       id: 'as3-calculation',
       type: 'input-boxes' as const,
       content: `
-**Bohr Model Calculations** 🧮
+**Energy-Level Calculations** 🧮
 
-Use $E_n = -2.18 \\times 10^{-18}/n^2 \\; \\text{J}$.
+Use the hydrogen energy levels given in the table above.
 
 **1)** Calculate the photon energy emitted when an H electron falls from $n=4$ to $n=2$. Express as $\\times 10^{-19}$ J — enter just the magnitude (3 sig figs).
 
@@ -148,10 +149,10 @@ Use $E_n = -2.18 \\times 10^{-18}/n^2 \\; \\text{J}$.
       exercise: {
         boxes: 3,
         correctAnswers: ['4.09', '486', '5.45'],
-        hint1: '$\\Delta E = -2.18 \\times 10^{-18}(1/4 - 1/16) = -2.18 \\times 10^{-18}(0.1875)$.',
+        hint1: '$E_{\\text{photon}} = E_4 - E_2 = (-1.36 \\times 10^{-19}) - (-5.45 \\times 10^{-19})$.',
         hint2: '$\\lambda = hc/|\\Delta E|$.',
-        hint3: 'From $n=2$, the binding energy is $|E_2| = 2.18 \\times 10^{-18}/4$.',
-        explanation: '1) $\\Delta E = -2.18 \\times 10^{-18}(1/4 - 1/16) = -4.0875 \\times 10^{-19}$ J. Magnitude ≈ $4.09 \\times 10^{-19}$ J. 2) $\\lambda = (6.626 \\times 10^{-34})(3 \\times 10^8)/(4.09 \\times 10^{-19}) = 4.86 \\times 10^{-7}$ m = 486 nm (the blue-green H-β line!). 3) $|E_2| = 2.18 \\times 10^{-18}/4 = 5.45 \\times 10^{-19}$ J.'
+        hint3: 'Ionizing from $n=2$ means going to $E_\\infty = 0$: energy needed $= 0 - E_2$.',
+        explanation: '1) $E_{\\text{photon}} = (-1.36 \\times 10^{-19}) - (-5.45 \\times 10^{-19}) = 4.09 \\times 10^{-19}$ J. 2) $\\lambda = (6.626 \\times 10^{-34})(3 \\times 10^8)/(4.09 \\times 10^{-19}) = 4.86 \\times 10^{-7}$ m = 486 nm (blue-green visible light). 3) $0 - (-5.45 \\times 10^{-19}) = 5.45 \\times 10^{-19}$ J.'
       }
     },
     {
@@ -163,13 +164,13 @@ Use $E_n = -2.18 \\times 10^{-18}/n^2 \\; \\text{J}$.
           { label: 'A hydrogen atom in its ground state has $n =$', options: ['0', '1', '∞', '−13.6'] },
           { label: 'The energy of an electron at $n = \\infty$ is', options: ['$-2.18 \\times 10^{-18}$ J', '$+2.18 \\times 10^{-18}$ J', '$0$', '$-13.6$ J'] },
           { label: 'A photon is **absorbed** when an electron moves from', options: ['$n=1$ to $n=3$', '$n=3$ to $n=1$', '$n=4$ to $n=2$', '$n=2$ to $n=1$'] },
-          { label: 'In hydrogen, transitions ending at $n=1$ produce', options: ['IR photons (Paschen series)', 'visible photons (Balmer series)', 'UV photons (Lyman series)', 'IR photons (Brackett series)'] }
+          { label: 'In hydrogen, transitions ending at $n=1$ release the largest energies and produce', options: ['infrared photons', 'visible photons', 'ultraviolet photons', 'microwave photons'] }
         ],
-        correctAnswers: ['1', '$0$', '$n=1$ to $n=3$', 'UV photons (Lyman series)'],
+        correctAnswers: ['1', '$0$', '$n=1$ to $n=3$', 'ultraviolet photons'],
         hint1: 'The lowest, most stable level is the ground state.',
         hint2: 'A free electron has zero binding energy.',
         hint3: 'Absorption raises the electron; emission lowers it.',
-        explanation: 'Ground state = $n=1$. $E_\\infty = 0$ (free electron). Absorption: low → high (so $1 \\to 3$). Lyman series ends at $n=1$ and lies in the UV; Balmer (ending at $n=2$) is visible; Paschen (ending at $n=3$) is IR.'
+        explanation: 'Ground state = $n=1$. $E_\\infty = 0$ (free electron). Absorption: low → high (so $1 \\to 3$). Every drop to $n = 1$ releases at least $1.64 \\times 10^{-18}$ J, which corresponds to wavelengths of about 122 nm or shorter, in the ultraviolet.'
       }
     },
     {
@@ -179,21 +180,21 @@ Use $E_n = -2.18 \\times 10^{-18}/n^2 \\; \\text{J}$.
       exercise: {
         questions: [
           {
-            question: 'Which is the most important success of the Bohr model?',
+            question: 'What does the existence of sharp lines in an atom\'s emission spectrum tell us?',
             options: [
-              'It correctly predicts the spectra of all elements',
-              'It predicts hydrogen\'s spectral line wavelengths',
-              'It explains why atoms form covalent and ionic bonds',
-              'It accounts for the shapes of s, p, d, and f orbitals'
+              'Any electron energy is allowed inside an atom',
+              'Electrons can occupy only certain energy levels',
+              'The atom gives off light only when it is cold',
+              'Every element emits the same set of wavelengths'
             ],
             correctAnswer: 1,
-            explanation: 'The Bohr model accurately predicts hydrogen\'s spectral lines but fails for multi-electron atoms — those required the quantum mechanical model.'
+            explanation: 'Each line corresponds to one specific energy gap. If any energy were allowed, the atom would emit a continuous rainbow instead. Each element has its own set of levels, so each has its own line pattern.'
           },
           {
-            question: 'If a hydrogen atom in $n = 5$ emits a photon and ends up in $n = 2$, the emitted wavelength is in which series?',
-            options: ['Lyman (UV)', 'Balmer (visible)', 'Paschen (IR)', 'Brackett (infrared)'],
-            correctAnswer: 1,
-            explanation: 'Transitions ending at $n = 2$ form the Balmer series — visible light.'
+            question: 'A hydrogen atom in $n = 5$ emits a photon and ends up in $n = 2$. Using the table, what is the photon energy?',
+            options: ['$4.58 \\times 10^{-19}$ J', '$6.32 \\times 10^{-19}$ J', '$2.09 \\times 10^{-18}$ J', '$8.72 \\times 10^{-20}$ J'],
+            correctAnswer: 0,
+            explanation: '$E_{\\text{photon}} = E_5 - E_2 = (-8.72 \\times 10^{-20}) - (-5.45 \\times 10^{-19}) = 4.58 \\times 10^{-19}$ J (434 nm, violet light). Adding the magnitudes gives $6.32 \\times 10^{-19}$ J, using $n = 1$ instead of $n = 2$ gives $2.09 \\times 10^{-18}$ J, and $8.72 \\times 10^{-20}$ J is just $|E_5|$.'
           }
         ]
       }

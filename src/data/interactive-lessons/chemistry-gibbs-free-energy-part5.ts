@@ -4,9 +4,9 @@ export const chemGibbsFreeEnergyPart5Data = {
     {
       id: 'gf5-intro',
       type: 'text' as const,
-      content: `# 📊 Non-Standard Conditions — ΔG = ΔG° + RT ln Q
+      content: `# 📊 Free Energy, K, and Coupled Reactions
 
-**Part 5 of 7 — Real-World Free Energy**
+**Part 5 of 7 — Estimating K, Predicting Direction, and Coupling Reactions**
 
 ---
 
@@ -14,244 +14,224 @@ export const chemGibbsFreeEnergyPart5Data = {
 
 | Section |
 |---------|
-| ⚡ The Non-Standard Free Energy Equation |
-| Recall: Q vs K |
-| 📌 Interpreting ΔG, Q, and K |
-| Key Insight |
-| The Big Picture |
+| ⚡ Estimating K from ΔG° |
+| 📌 Which Way Will a Reaction Go? Q vs. K |
+| 🔗 Coupled Reactions |
+| External Energy Sources |
 
-> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+> 🔑 **Key Concept:** $\\Delta G°$ tells you where equilibrium lies (the size of $K$). Comparing $Q$ with $K$ tells you which way a particular mixture will shift. Coupling lets a favorable reaction drive an unfavorable one (CED 9.5, 9.7).
 
 ---
 
 ### What You'll Master in Part 5
-- Understanding the core concepts covered in Part 5
-- Applying these ideas to solve practice problems
-- Building toward AP exam readiness for this topic`
+- Estimating whether $K$ is near 1 or far from 1 from the size of $\\Delta G°$
+- Predicting the direction of net reaction by comparing $Q$ and $K$
+- Explaining how coupled reactions and external energy drive unfavorable processes`
     },
     {
-      id: 'gf5-equation',
+      id: 'gf5-estimating-k',
       type: 'text' as const,
       content: `
-## ⚡ The Non-Standard Free Energy Equation
+## ⚡ Estimating K from ΔG°
 
-$$\\boxed{\\Delta G = \\Delta G° + RT\\ln Q}$$
+From Part 4, $K = e^{-\\Delta G°/RT}$. You can often reason about $K$ without a calculator (CED 9.5.A.3):
 
-| Symbol | Meaning |
-|--------|---------|
-| $\\Delta G$ | Free energy change at current conditions |
-| $\\Delta G°$ | Free energy change at standard conditions |
-| $R$ | 8.314 J/(mol·K) |
-| $T$ | Temperature in K |
-| $Q$ | Reaction quotient (current concentrations) |
+- When $\\Delta G°$ is **near zero**, $K$ is **close to 1**.
+- When $\\Delta G°$ is **much larger or smaller than $RT$**, $K$ is **far from 1**.
 
+At 298 K, $RT \\approx 2.5$ kJ/mol. Every change of about **5.7 kJ/mol** in $\\Delta G°$ changes $K$ by a **factor of 10**.
 
----
+| $\\Delta G°$ at 298 K (kJ/mol) | Approximate $K$ | Position of equilibrium |
+|------------------------------|-----------------|------------------------|
+| −40 | $10^{7}$ | Products strongly favored |
+| −11 | $10^{2}$ | Products favored |
+| 0 | 1 | Neither favored |
+| +11 | $10^{-2}$ | Reactants favored |
+| +40 | $10^{-7}$ | Reactants strongly favored |
 
-### Recall: Q vs K
-
-- $Q$ = reaction quotient (calculated from **current** concentrations)
-- $K$ = equilibrium constant (concentrations **at equilibrium**)
-
-$$Q = \\frac{[\\text{products}]^n}{[\\text{reactants}]^m}$$ (same form as K, but not at equilibrium)
-      `
-    },
-    {
-      id: 'gf5-interpretation',
-      type: 'text' as const,
-      content: `
-## 📌 Interpreting ΔG, Q, and K
-
-| Condition | $Q$ vs $K$ | $\\Delta G$ | Direction |
-|-----------|-----------|-----------|-----------|
-| $Q < K$ | Below equilibrium | $\\Delta G < 0$ | Forward reaction spontaneous |
-| $Q = K$ | At equilibrium | $\\Delta G = 0$ | No net change |
-| $Q > K$ | Above equilibrium | $\\Delta G > 0$ | Reverse reaction spontaneous |
-> 🔑 **Key Concept:** The relationship between $Q$ and $K$ determines the direction of spontaneous change — always toward equilibrium.
----
-
-### Key Insight
-
-At equilibrium, $Q = K$ and $\\Delta G = 0$:
-
-$$0 = \\Delta G° + RT\\ln K$$
-$$\\Delta G° = -RT\\ln K$$
-
-This is how we derived the $\\Delta G°$–$K$ relationship!
-
-
----
-
-### The Big Picture
-> ⚠️ **Warning:** Don't confuse $\\Delta G°$ and $\\Delta G$ — they answer different questions:
-- $\\Delta G°$ tells you WHERE equilibrium lies (the value of $K$)
-- $\\Delta G$ tells you WHICH DIRECTION the reaction will go from current conditions
-- A reaction with $\\Delta G° > 0$ can still proceed forward if $Q$ is small enough
-      `
-    },
-    {
-      id: 'gf5-worked-example',
-      type: 'text' as const,
-      content: `
-## 🧪 Worked Example — Non-Standard ΔG
-
-> **Problem:** For the reaction $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightleftharpoons 2\\text{NH}_3(g)$, with $\\Delta G° = -33.0$ kJ/mol at 298 K, calculate $\\Delta G$ when $P_{\\text{N}_2} = 1.0$ atm, $P_{\\text{H}_2} = 3.0$ atm, $P_{\\text{NH}_3} = 0.50$ atm.
-
-### Given
-
-| Quantity | Value |
-|----------|-------|
-| $\\Delta G°$ | $-33.0$ kJ/mol = $-33{,}000$ J/mol |
-| $T$ | 298 K |
-| $R$ | 8.314 J/(mol·K) |
-| $P_{\\text{N}_2}$ | 1.0 atm |
-| $P_{\\text{H}_2}$ | 3.0 atm |
-| $P_{\\text{NH}_3}$ | 0.50 atm |
-
----
-
-### Step-by-Step Solution
-
-| Step | Action | Calculation | Result |
-|------|--------|-------------|--------|
-| 1 | Calculate $Q$ | $\\frac{(0.50)^2}{(1.0)(3.0)^3} = \\frac{0.25}{27}$ | $Q = 0.00926$ |
-| 2 | Calculate $RT$ | $(8.314)(298)$ | $2478 \\text{ J/mol}$ |
-| 3 | Calculate $RT\\ln Q$ | $(2478)(\\ln 0.00926) = (2478)(-4.682)$ | $-11{,}602 \\text{ J}$ |
-| 4 | Calculate $\\Delta G$ | $-33{,}000 + (-11{,}602)$ | $\\Delta G = -44.6 \\text{ kJ}$ |
-
-> 🔑 **Interpretation:** Since $\\Delta G < 0$ and $Q < K$, the forward reaction is spontaneous — more $\\text{NH}_3$ will form until the system reaches equilibrium.
+> 💡 **Tip:** A few kJ/mol either side of zero gives a $K$ within a factor of about 10 of 1, so both reactants and products are present in significant amounts at equilibrium.
       `
     },
     {
       id: 'gf5-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Non-Standard ΔG Quiz** 🎯
+**Estimating K** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'If Q < K for a reaction, then ΔG is:',
+            question: 'At 298 K, a reaction has ΔG° = +1.5 kJ/mol. Which best describes its equilibrium constant?',
             options: [
-              'Positive (reverse is spontaneous)',
-              'Negative (forward is spontaneous)',
-              'Zero (at equilibrium)',
-              'Cannot be determined'
+              'K is much greater than 1',
+              'K is slightly less than 1',
+              'K is exactly zero',
+              'K is much less than 1'
             ],
             correctAnswer: 1,
-            explanation: 'When $Q < K$, the system has not yet reached equilibrium. The forward reaction is spontaneous ($\\Delta G < 0$) to produce more products and increase $Q$ toward $K$.'
+            explanation: 'ΔG° is positive but smaller than RT (about 2.5 kJ/mol), so K is a little below 1: K = e^(−1500/2478) ≈ 0.55. A K far from 1 would require a ΔG° many times larger than RT, and K is never zero.'
           },
           {
-            question: 'A reaction has ΔG° = +20 kJ/mol. Under what conditions can it still proceed forward?',
+            question: 'Which value of ΔG° at 298 K corresponds to the LARGEST equilibrium constant?',
             options: [
-              'Never — positive ΔG° means it is always nonspontaneous',
-              'When Q is much smaller than K',
-              'Only at very high temperatures',
-              'When a catalyst is added'
+              '+25 kJ/mol',
+              '0 kJ/mol',
+              '−5 kJ/mol',
+              '−30 kJ/mol'
             ],
-            correctAnswer: 1,
-            explanation: 'Even with $\\Delta G° > 0$, if $Q$ is sufficiently small, the $RT\\ln Q$ term can be negative enough to make $\\Delta G < 0$. The reaction can proceed forward when $Q < K$.'
+            correctAnswer: 3,
+            explanation: 'The more negative ΔG° is, the larger K is. −30 kJ/mol gives K ≈ 10^5, while −5 kJ/mol gives K ≈ 7, 0 gives K = 1, and +25 kJ/mol gives K far below 1.'
           },
           {
-            question: 'At equilibrium:',
+            question: 'A reaction has ΔG° = −57 kJ/mol at 298 K. Roughly how large is K?',
             options: [
-              'ΔG = ΔG° and Q = 1',
-              'ΔG = 0 and Q = K',
-              'ΔG° = 0 and Q = K',
-              'ΔG = 0 and Q = 1'
+              'About 10',
+              'About $10^{3}$',
+              'About $10^{10}$',
+              'About $10^{57}$'
             ],
-            correctAnswer: 1,
-            explanation: 'At equilibrium, $Q = K$ and $\\Delta G = 0$. Substituting into $\\Delta G = \\Delta G° + RT\\ln Q$: $0 = \\Delta G° + RT\\ln K$, which gives $\\Delta G° = -RT\\ln K$.'
+            correctAnswer: 2,
+            explanation: 'Each 5.7 kJ/mol of ΔG° changes K by a factor of 10 at 298 K, so −57 kJ/mol corresponds to K ≈ 10^10. Treating each kJ/mol as a power of ten gives 10^57, and the smaller values badly underestimate the effect of a large negative ΔG°.'
           }
         ]
       }
     },
     {
+      id: 'gf5-q-vs-k',
+      type: 'text' as const,
+      content: `
+## 📌 Which Way Will a Reaction Go? Q vs. K
+
+$\\Delta G°$ and $K$ describe the equilibrium position under standard conditions. To predict what a **particular mixture** will do, compare the reaction quotient $Q$ (same expression as $K$, using the current amounts) with $K$:
+
+| Comparison | What happens |
+|------------|--------------|
+| $Q < K$ | Net reaction proceeds **forward** (toward products) |
+| $Q = K$ | The system is at equilibrium; no net change |
+| $Q > K$ | Net reaction proceeds in **reverse** (toward reactants) |
+
+> 🔑 **Key Concept:** A reaction with $\\Delta G° > 0$ (so $K < 1$) still makes **some** product when you start with only reactants, because then $Q = 0 < K$. It simply stops at an equilibrium that favors the reactants.
+
+> ⚠️ **Note:** Some textbooks also use the equation $\\Delta G = \\Delta G° + RT\\ln Q$. It is not used on the AP exam; comparing $Q$ with $K$ answers the same direction question.
+      `
+    },
+    {
       id: 'gf5-calculation-drill',
       type: 'input-boxes' as const,
       content: `
-**Non-Standard ΔG Calculations** 🧮
+**K and Direction** 🧮
 
-For a reaction with $\\Delta G° = -10.0$ kJ/mol at $T = 298$ K:
+A reaction has $\\Delta G° = -11.4$ kJ/mol at 298 K. ($R = 8.314$ J/(mol·K))
 
-**1)** What is $\\Delta G$ when $Q = 1$? (in kJ/mol)
+**1)** Calculate $K$ using $K = e^{-\\Delta G°/RT}$. (3 significant figures)
 
-**2)** What is $\\Delta G$ when $Q = K$ (at equilibrium)? (in kJ/mol)
+**2)** A mixture has $Q = 50$. Which way does the net reaction go? (type **forward** or **reverse**)
 
-**3)** If $Q > K$, is $\\Delta G$ positive or negative? (type "positive" or "negative")
-
-*Round all answers to 3 significant figures.*
+**3)** Another mixture has $Q = 500$. Which way does the net reaction go? (type **forward** or **reverse**)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-10.0', '0', 'positive'],
-        hint1: '$\\Delta G = \\Delta G° + RT\\ln(1) = \\Delta G° + 0$.',
-        hint2: 'At equilibrium, $\\Delta G = 0$ always.',
-        hint3: 'If $Q > K$, the reaction has "overshot" equilibrium.',
-        explanation: '1) $\\ln(1) = 0$, so $\\Delta G = \\Delta G° = -10.0$ kJ/mol. 2) At equilibrium, $\\Delta G = 0$ by definition. 3) When $Q > K$, $\\ln(Q/K) > 0$, and the system shifts backward: $\\Delta G > 0$.'
+        correctAnswers: ['99.6', 'forward', 'reverse'],
+        hint1: '$\\Delta G°/RT = -11{,}400/(8.314 \\times 298) = -4.60$; $K = e^{4.60}$.',
+        hint2: 'Compare 50 with K.',
+        hint3: 'Compare 500 with K.',
+        explanation: '1) $K = e^{4.60} \\approx 99.6$ (about $10^2$, as the 5.7 kJ/mol rule predicts). 2) $Q = 50 < K$, so the reaction proceeds forward. 3) $Q = 500 > K$, so the reaction proceeds in reverse.'
       }
+    },
+    {
+      id: 'gf5-coupled',
+      type: 'text' as const,
+      content: `
+## 🔗 Coupled Reactions
+
+A thermodynamically unfavorable reaction ($\\Delta G° > 0$) can be made to occur by **coupling** it to a favorable reaction. The two reactions share a **common intermediate**, and their sum has $\\Delta G° < 0$ (CED 9.7.A.2).
+
+### Example: Extracting Copper
+
+| Reaction | $\\Delta G°$ (kJ) |
+|----------|-----------------|
+| $\\text{Cu}_2\\text{S}(s) \\rightarrow 2\\text{Cu}(s) + \\text{S}(s)$ | +86.2 (unfavorable) |
+| $\\text{S}(s) + \\text{O}_2(g) \\rightarrow \\text{SO}_2(g)$ | −300.1 (favorable) |
+| **Sum:** $\\text{Cu}_2\\text{S}(s) + \\text{O}_2(g) \\rightarrow 2\\text{Cu}(s) + \\text{SO}_2(g)$ | **−213.9** (favorable) |
+
+Sulfur is the common intermediate: produced in the first reaction and consumed in the second. Because $\\Delta G°$ values add when equations add, the overall process is favored.
+
+### Example: ATP in Living Cells
+
+The hydrolysis of ATP to ADP ($\\Delta G° \\approx -30.5$ kJ/mol) is coupled to unfavorable biological reactions such as adding a phosphate group to glucose ($\\Delta G° \\approx +13.8$ kJ/mol). The overall coupled process has $\\Delta G° \\approx -16.7$ kJ/mol.
+
+
+---
+
+### External Energy Sources
+
+An unfavorable process can also be driven by energy from outside the system (CED 9.7.A.1):
+
+- **Electrical energy** drives an electrolytic cell or charges a battery.
+- **Light** drives photosynthesis, converting $\\text{CO}_2$ and $\\text{H}_2\\text{O}$ into glucose.
+      `
     },
     {
       id: 'gf5-dropdown-practice',
       type: 'dropdown-select' as const,
       content: `
-**Q, K, and ΔG** 🔽
+**Free Energy and Equilibrium Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
             label: 'When Q = K, the system is',
-            options: ['far from equilibrium', 'at equilibrium', 'at standard conditions', 'at its fastest rate']
+            options: ['shifting forward', 'at equilibrium', 'shifting in reverse', 'unable to react']
           },
           {
-            label: 'When Q = 1, ΔG equals',
-            options: ['0', 'ΔG°', 'RT', '−RT ln K']
+            label: 'When Q < K, the net reaction proceeds',
+            options: ['forward', 'in reverse', 'not at all', 'both ways equally']
           },
           {
-            label: 'If ΔG° > 0 but Q < K, the forward reaction is',
-            options: ['nonspontaneous', 'spontaneous', 'at equilibrium', 'impossible']
+            label: 'When two reactions are added, the ΔG° of the overall reaction is',
+            options: ['the product of the two ΔG° values', 'the sum of the two ΔG° values', 'the larger of the two values', 'always zero']
           },
           {
-            label: 'Increasing product concentration causes Q to',
-            options: ['decrease', 'increase', 'stay the same', 'equal K']
+            label: 'Photosynthesis is an unfavorable process driven by',
+            options: ['heat from the surroundings', 'light energy', 'a catalyst alone', 'a negative ΔH']
           }
         ],
-        correctAnswers: ['at equilibrium', 'ΔG°', 'spontaneous', 'increase'],
-        hint1: 'Q = K is the definition of equilibrium.',
-        hint2: '$\\Delta G = \\Delta G° + RT\\ln(1) = \\Delta G° + 0$.',
-        hint3: 'Forward is spontaneous whenever Q < K, regardless of the sign of ΔG°.',
-        explanation: 'Q = K → equilibrium (ΔG = 0). Q = 1 → ΔG = ΔG°. Even if ΔG° > 0, Q < K → ΔG < 0 (forward spontaneous). Adding products increases Q.'
+        correctAnswers: ['at equilibrium', 'forward', 'the sum of the two ΔG° values', 'light energy'],
+        hint1: 'Q equals K only at equilibrium.',
+        hint2: 'Too little product compared with equilibrium.',
+        hint3: 'Like ΔH in Hess\'s law.',
+        explanation: 'Q = K means equilibrium. Q < K means there is too little product, so the reaction runs forward. ΔG° values add when equations add, which is why coupling works. Photosynthesis is driven by light (CED 9.7.A.1).'
       }
     },
     {
       id: 'gf5-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Exit Quiz — Non-Standard ΔG** ✅
+**Exit Quiz — Free Energy and Equilibrium** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'For a reaction with ΔG° = −30 kJ/mol at 298 K, if Q = $10^{6}$, then ΔG is approximately:',
+            question: 'Reaction 1 has ΔG° = +25 kJ and reaction 2 has ΔG° = −40 kJ. They share a common intermediate and add to give an overall reaction. What is true of the overall reaction?',
             options: [
-              '−30 kJ/mol',
-              '+4.2 kJ/mol',
-              '−64.2 kJ/mol',
-              '−15.1 kJ/mol'
+              'ΔG° = +65 kJ, so it is not favored',
+              'ΔG° = −15 kJ, so it is thermodynamically favored',
+              'ΔG° = −1000 kJ, so it is strongly favored',
+              'ΔG° = +25 kJ, because the unfavorable step controls it'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta G = -30{,}000 + (8.314)(298)\\ln(10^6) = -30{,}000 + (2478)(13.82) = -30{,}000 + 34{,}246 = +4{,}246$ J $\\approx +4.2$ kJ/mol. Even though ΔG° < 0, Q is so large (past equilibrium) that ΔG > 0. Using $\\log Q$ instead of $\\ln Q$ gives −15.1 kJ/mol, subtracting the $RT\\ln Q$ term gives −64.2 kJ/mol, and ignoring Q leaves −30 kJ/mol.'
+            explanation: 'ΔG° values add: +25 + (−40) = −15 kJ, so the coupled reaction is favored. Subtracting gives +65 kJ, multiplying gives −1000 kJ, and the unfavorable step does not set the overall ΔG°.'
           },
           {
-            question: 'The equation ΔG = ΔG° + RT ln Q reduces to ΔG° = −RT ln K when:',
+            question: 'A reaction has ΔG° = +20 kJ/mol at 298 K. A flask initially contains only reactants. What happens?',
             options: [
-              'T = 298 K',
-              'Q = 1 (all at standard state)',
-              'Q = K',
-              'ΔG° = 0'
+              'Nothing, because ΔG° is positive',
+              'Some product forms until Q = K, and reactants remain favored',
+              'The reaction goes to completion, because Q = 0',
+              'The reverse reaction occurs, because K < 1'
             ],
-            correctAnswer: 2,
-            explanation: 'At equilibrium: $\\Delta G = 0$ and $Q = K$. Substituting: $0 = \\Delta G° + RT\\ln K$, giving $\\Delta G° = -RT\\ln K$. When $Q = 1$ the equation gives $\\Delta G = \\Delta G°$, which is a different statement.'
+            correctAnswer: 1,
+            explanation: 'K = e^(−20,000/2478) ≈ 3 × 10^−4, which is small but not zero. With only reactants, Q = 0 < K, so a small amount of product forms until Q = K. A positive ΔG° means reactants are favored at equilibrium, not that no reaction occurs; Q = 0 does not force completion, and there is no product to react in reverse.'
           }
         ]
       }

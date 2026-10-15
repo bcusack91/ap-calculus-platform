@@ -238,7 +238,7 @@ Match each element with its correct shorthand electron configuration.`,
 
 ### 🔮 What's Next
 
-In **Part 5**, we tackle the important **exceptions** to the Aufbau filling order (Chromium and Copper) and learn how to write electron configurations for **ions** — including the critical rule that 4s electrons are removed before 3d when forming cations.`
+In **Part 5**, we learn how to write electron configurations for **ions** — predicting typical charges, applying the critical rule that 4s electrons are removed before 3d when forming cations, and ranking isoelectronic species by size.`
     }
   ]
 }

@@ -41,11 +41,11 @@ The KMT was originally developed for ideal gases, but its principles extend to a
 
 1. **All matter is composed of tiny particles** (atoms, molecules, or ions) that are in **constant, random motion**.
 
-2. **Temperature** is a measure of the **average kinetic energy** of the particles:
+2. **Temperature** is a measure of the **average kinetic energy** of the particles: the Kelvin temperature is **directly proportional** to the average kinetic energy. Each individual particle\'s kinetic energy is
 
-$$\\boxed{KE_{\\text{avg}} = \\frac{3}{2} k_B T}$$
+$$\\boxed{KE = \\frac{1}{2}mv^2}$$
 
-where $k_B = 1.38 \\times 10^{-23}$ J/K is Boltzmann\'s constant and $T$ is the absolute temperature in kelvin.
+so at the same average KE, a particle with smaller mass $m$ must have a larger speed $v$.
 
 3. **Collisions** between gas particles and with container walls are **perfectly elastic** — no kinetic energy is lost.
 
@@ -74,7 +74,7 @@ where $k_B = 1.38 \\times 10^{-23}$ J/K is Boltzmann\'s constant and $T$ is the 
               'The speed of the fastest particle'
             ],
             correctAnswer: 1,
-            explanation: 'Temperature is directly proportional to the average kinetic energy of the particles: $KE_{\\text{avg}} = \\frac{3}{2}k_BT$. It does not measure total energy (which depends on the amount of substance) or potential energy.'
+            explanation: 'Kelvin temperature is directly proportional to the average kinetic energy of the particles. It does not measure total energy (which depends on the amount of substance) or potential energy.'
           },
           {
             question: 'At the same temperature, which gas has the fastest average molecular speed?',
@@ -162,47 +162,45 @@ where $k_B = 1.38 \\times 10^{-23}$ J/K is Boltzmann\'s constant and $T$ is the 
       content: `
 ## The Relationship Between KE and Temperature
 
-The average kinetic energy of particles depends **only** on temperature:
+The average kinetic energy of gas particles depends **only** on the Kelvin temperature:
 
-$$KE_{\\text{avg}} = \\frac{3}{2} k_B T$$
+$$\\boxed{KE_{\\text{avg}} \\propto T \\text{ (in K)}}$$
 
-For a mole of particles, we can write:
+- Doubling the Kelvin temperature **doubles** the average kinetic energy.
+- At the same temperature, **every** gas has the same average kinetic energy, no matter its molar mass.
 
-$$\\boxed{KE_{\\text{avg per mole}} = \\frac{3}{2} RT}$$
+### Connecting to Speed
 
-where $R = 8.314$ J/(mol·K) is the ideal gas constant.
-
-### Root-Mean-Square Speed
-
-The **rms speed** ($v_{\\text{rms}}$) relates KE to the molar mass $M$:
-
-$$\\boxed{v_{\\text{rms}} = \\sqrt{\\frac{3RT}{M}}}$$
-
-where $M$ is the molar mass in **kg/mol** (not g/mol!).
+Because $KE = \\frac{1}{2}mv^2$:
+- At the **same temperature**, lighter particles move **faster** on average than heavier particles.
+- For **one gas**, raising the temperature raises the average speed, though not in direct proportion: speed grows more slowly than kinetic energy.
 
 ---
 
-> 💡 **Tip:** Doubling the temperature (in kelvin) doubles the average KE but only increases $v_{\\text{rms}}$ by a factor of $\\sqrt{2}$ — not 2!
-
-> ⚠️ **Warning:** At the same temperature, a gas with **4× the molar mass** has **half** the rms speed. Don\'t confuse molar mass with speed — they are inversely related through $v_{\\text{rms}} = \\sqrt{3RT/M}$.
+> ⚠️ **Warning:** Always convert to kelvin before comparing temperatures. Heating a gas from 10°C to 20°C does **not** double its average KE; the Kelvin temperature only rises from 283 K to 293 K, an increase of about 3.5%.
       `
     },
     {
       id: 'sm1-rms-calculation',
       type: 'input-boxes' as const,
-      title: 'RMS Speed Calculations',
-      content: 'Use the equation $v_{\\text{rms}} = \\sqrt{3RT/M}$ to answer these questions. Use $R = 8.314$ J/(mol·K).',
+      title: 'Kinetic Energy and Temperature Practice',
+      content: 'Use the fact that average kinetic energy is proportional to Kelvin temperature.',
       exercise: {
         inputs: [
           {
-            label: 'Calculate the rms speed of $N_{2}$ (M = 0.028 kg/mol) at 300 K, in m/s (round to the nearest whole number)',
-            correctAnswer: '517',
-            explanation: '$v_{\\text{rms}} = \\sqrt{\\frac{3(8.314)(300)}{0.028}} = \\sqrt{\\frac{7482.6}{0.028}} = \\sqrt{267{,}236} \\approx 517$ m/s.'
+            label: 'A gas is heated from 200 K to 600 K. By what factor does its average kinetic energy increase? (whole number)',
+            correctAnswer: '3',
+            explanation: 'Average KE is proportional to Kelvin temperature: $600/200 = 3$, so the average KE triples.'
           },
           {
-            label: 'If the temperature is doubled from 300 K to 600 K, what is the new rms speed of $N_{2}$ in m/s? (round to the nearest whole number)',
-            correctAnswer: '731',
-            explanation: 'Doubling the temperature multiplies $v_{\\text{rms}}$ by $\\sqrt{2}$: $517 \\times \\sqrt{2} \\approx 517 \\times 1.414 \\approx 731$ m/s.'
+            label: 'A gas is heated from 27°C to 327°C. By what factor does its average kinetic energy increase? (whole number)',
+            correctAnswer: '2',
+            explanation: 'Convert to kelvin first: 27°C = 300 K and 327°C = 600 K. The ratio $600/300 = 2$, so the average KE doubles. Using Celsius values directly would wrongly suggest a factor of about 12.'
+          },
+          {
+            label: 'Samples of He and $CO_{2}$ are both at 300 K. What is the ratio of the average kinetic energy of He to that of $CO_{2}$? (whole number)',
+            correctAnswer: '1',
+            explanation: 'At the same temperature, all gases have the same average kinetic energy, so the ratio is 1. Helium atoms move faster on average only because they have much less mass.'
           }
         ]
       }
@@ -218,9 +216,8 @@ Not all particles in a gas move at the same speed. The **Maxwell-Boltzmann distr
 
 Key features of the distribution curve:
 - The curve is **not symmetric** — it is skewed to the right.
-- **Most probable speed** ($v_p$): the peak of the curve (most common speed).
-- **Average speed** ($v_{\\text{avg}}$): slightly higher than $v_p$.
-- **Root-mean-square speed** ($v_{\\text{rms}}$): highest of the three, $v_{\\text{rms}} > v_{\\text{avg}} > v_p$.
+- **Most probable speed**: the peak of the curve (the most common speed).
+- The long tail on the right means a small fraction of particles move much faster than average. This fraction matters for reaction rates, because only fast-moving particles collide with enough energy to react.
 
 ### Effect of Temperature
 
@@ -253,15 +250,15 @@ Key features of the distribution curve:
             explanation: 'Higher temperature means higher average KE and speed, so the curve shifts right. The total area must remain constant (same number of molecules), so as it broadens, it must also become flatter.'
           },
           {
-            question: 'For three speed measures of a Maxwell-Boltzmann distribution, which order is correct?',
+            question: 'When a gas is heated, what happens to the fraction of particles moving faster than a given high speed?',
             options: [
-              '$v_{\\text{rms}} > v_{\\text{avg}} > v_p$',
-              '$v_p > v_{\\text{avg}} > v_{\\text{rms}}$',
-              '$v_{\\text{avg}} > v_{\\text{rms}} > v_p$',
-              'All three are equal'
+              'It decreases because the curve gets flatter',
+              'It increases because the curve shifts to higher speeds',
+              'It stays the same because the area under the curve is fixed',
+              'It drops to zero because all particles reach the same speed'
             ],
-            correctAnswer: 0,
-            explanation: 'Because the distribution is right-skewed, the rms speed is always greatest, followed by the average speed, then the most probable speed: $v_{\\text{rms}} > v_{\\text{avg}} > v_p$.'
+            correctAnswer: 1,
+            explanation: 'Heating shifts the distribution to the right and spreads it out, so more of the area under the curve lies above any given high speed. The total area stays the same (same number of particles), but more of it moves into the high-speed tail.'
           },
           {
             question: 'At the same temperature, how do the Maxwell-Boltzmann distributions of He and Xe compare?',
@@ -297,7 +294,7 @@ Key features of the distribution curve:
           {
             label: 'According to KMT, temperature is proportional to the average _____ energy of the particles (one word)',
             correctAnswer: 'kinetic',
-            explanation: 'Temperature is a direct measure of average kinetic energy: $KE_{\\text{avg}} = \\frac{3}{2}k_BT$.'
+            explanation: 'Kelvin temperature is directly proportional to the average kinetic energy of the particles.'
           }
         ]
       }

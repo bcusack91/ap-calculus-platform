@@ -88,7 +88,7 @@ $$\\boxed{\\text{Rate} = k\\frac{[\\text{O}_3]^2}{[\\text{O}_2]}}$$
       id: 'rm6-problem-2',
       type: 'input-boxes' as const,
       content: `
-**Problem 2: Enzyme Kinetics Mechanism** 🧮
+**Problem 2: An Enzyme-Catalyzed Mechanism** 🧮
 
 > **Problem:** Derive the rate law for the simplified enzyme-catalyzed reaction and identify all species.
 
@@ -110,7 +110,7 @@ where E = enzyme, S = substrate, ES = enzyme-substrate complex, P = product.
         hint1: 'ES is produced in Step 1 and consumed in Step 2 → intermediate.',
         hint2: 'E is consumed in Step 1 and regenerated in Step 2 → catalyst (enzyme).',
         hint3: 'Rate = $k_{2}$[ES]. From equilibrium: [ES] = Keq[E][S]. So Rate = $k_{2}Keq$[E][S] = k_obs[E][S].',
-        explanation: '1) ES is the intermediate. 2) E (enzyme) is the catalyst. 3) Rate = k_obs[E][S]. This is the simplified Michaelis-Menten model.'
+        explanation: '1) ES is the intermediate. 2) E (enzyme) is the catalyst. 3) Rate = k_obs[E][S]. The enzyme–substrate complex is an example of an intermediate in which the catalyst is bound to the reactant (CED 5.11.A.3).'
       }
     },
     {

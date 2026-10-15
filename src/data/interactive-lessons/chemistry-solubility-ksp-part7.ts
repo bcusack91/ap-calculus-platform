@@ -123,15 +123,15 @@ $\\text{Mg(OH)}_2(s) \\rightleftharpoons \\text{Mg}^{2+}(aq) + 2\\,\\text{OH}^-(
 
 **1)** Calculate the molar solubility of $\\text{Mg(OH)}_2$ in pure water. ($K_{sp} = 4s^3$) (Enter in scientific notation, e.g. 3.0e-5)
 
-**2)** Calculate the molar solubility in a solution buffered at pH = 12.0 ($[\\text{OH}^-] = 0.010$ M). (Enter in scientific notation, e.g. 2.5e-9)
+**2)** Calculate the molar solubility in 0.010 M NaOH, where $[\\text{OH}^-] = 0.010$ M comes from the fully dissociated NaOH. (Enter in scientific notation, e.g. 2.5e-9)
 
-**3)** At pH = 12.0, what fraction of the pure-water solubility remains? (Enter as a percentage, e.g. 0.005)
+**3)** In the 0.010 M NaOH, what percentage of the pure-water solubility remains? (Enter as a percentage, e.g. 0.005)
       `,
       exercise: {
         questions: [{ question: '1)', answer: '1.12e-4', acceptableAnswers: ['1.12e-4', '1.1e-4'] }, { question: '2)', answer: '5.6e-8', acceptableAnswers: ['5.6e-8'] }, { question: '3)', answer: '0.050', acceptableAnswers: ['0.050', '0.051'] }],
         hint1: '$s = \\sqrt[3]{K_{sp}/4} = \\sqrt[3]{5.6 \\times 10^{-12}/4}$',
         hint2: '$K_{sp} = (s)(0.010)^2 \\implies s = 5.6 \\times 10^{-12}/(1.0 \\times 10^{-4})$',
-        hint3: 'Fraction = $s_{\\text{pH 12}}/s_{\\text{pure}} \\times 100\\%$',
+        hint3: 'Percentage = $s_{\\text{NaOH}}/s_{\\text{pure}} \\times 100\\%$',
         explanation: '1) $s = \\sqrt[3]{1.4 \\times 10^{-12}} = 1.12 \\times 10^{-4}$ M. 2) $s = 5.6 \\times 10^{-12}/(0.010)^2 = 5.6 \\times 10^{-12}/10^{-4} = 5.6 \\times 10^{-8}$ M. 3) $(5.6 \\times 10^{-8})/(1.12 \\times 10^{-4}) \\times 100\\% = 0.050\\%$.'
       }
     },

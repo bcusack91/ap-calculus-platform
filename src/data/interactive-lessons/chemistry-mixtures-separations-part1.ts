@@ -17,8 +17,8 @@ export const chemMixturesSeparationsPart1Data = {
 | 🧪 Pure Substances vs. Mixtures |
 | Key Differences |
 | 🧪 Homogeneous Mixtures (Solutions) |
-| Solutions |
-| Properties of Solutions |
+| 🧪 Heterogeneous Mixtures |
+| Telling Them Apart |
 
 > 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
@@ -85,10 +85,9 @@ Solutions can be:
 
 ### Properties of Solutions
 - Transparent (may be colored)
-- Do not scatter light (no Tyndall effect)
+- The macroscopic properties (color, density, concentration) are the **same in every part** of the sample
 - Will not separate on standing
-- Pass through filter paper
-- Particle size: < 1 nm
+- Pass through filter paper: dissolved particles are individual ions or molecules
       `
     },
     {
@@ -97,43 +96,32 @@ Solutions can be:
       content: `
 ## 🧪 Heterogeneous Mixtures
 
-A **heterogeneous mixture** has a **non-uniform composition** — you can see or detect different regions.
+A **heterogeneous mixture** has a **non-uniform composition**: its macroscopic properties depend on **where** in the sample you look.
 
 
 ---
 
-### Suspensions
+### Examples
 
-- Particles > 1000 nm (visible to naked eye or microscope)
-- Will **settle out** over time
-- Can be separated by **filtration**
-- Example: muddy water, flour in water, blood cells in plasma
-
-
----
-
-### Colloids
-
-- Particles between 1–1000 nm
-- Do **NOT** settle out
-- Scatter light (**Tyndall effect** — beam of light becomes visible)
-- Cannot pass through semipermeable membranes
-- Examples: milk, fog, gelatin, smoke, mayonnaise
+| Mixture | Why It Is Heterogeneous |
+|---------|-------------------------|
+| Sand in water | Sand grains sit in some places and not others |
+| Oil and vinegar | Two separate liquid layers |
+| Granite | Visible grains of different minerals |
+| Ice cubes in water | Two phases of the same substance in different regions |
 
 
 ---
 
-### Comparing the Three Types
+### Telling Them Apart
 
-| Property | Solution | Colloid | Suspension |
-|----------|----------|---------|------------|
-| Particle size | < 1 nm | 1–1000 nm | > 1000 nm |
-| Settles? | No | No | Yes |
-| Filter? | No | No | Yes |
-| Tyndall effect? | No | Yes | Yes (if not settled) |
-| Appearance | Clear | Cloudy/translucent | Opaque |
+| Test | Solution (Homogeneous) | Heterogeneous Mixture |
+|------|------------------------|-----------------------|
+| Sample taken from top vs. bottom | Identical composition | Can differ |
+| Stand undisturbed | Stays uniform | Layers or solids may separate |
+| Filter through paper | All of it passes through | Undissolved solid is caught |
 
-> 💡 **Tip:** The **Tyndall effect** (shining a light beam through the mixture) is the quickest way to distinguish a colloid from a true solution — colloids scatter light, solutions do not.
+> 💡 **Tip:** Filtration can separate an undissolved solid from a liquid, but it can never separate the components of a solution. Separating a solution requires a method that takes advantage of differences in intermolecular interactions, such as distillation or chromatography.
       `
     },
     {
@@ -156,26 +144,26 @@ A **heterogeneous mixture** has a **non-uniform composition** — you can see or
             explanation: 'Saltwater is a homogeneous mixture (solution) — NaCl is uniformly dissolved in water. Oil/vinegar and granite are heterogeneous. Sand and iron filings are also heterogeneous.'
           },
           {
-            question: 'A beam of light passes through a liquid and becomes clearly visible. This liquid is most likely a:',
+            question: 'Samples taken from the top and bottom of a beaker of liquid have different densities. The liquid is best described as',
             options: [
-              'True solution',
-              'Colloid',
-              'Pure substance',
-              'Saturated solution'
+              'A pure substance',
+              'A heterogeneous mixture',
+              'A solution',
+              'A compound'
             ],
             correctAnswer: 1,
-            explanation: 'The Tyndall effect — visible scattering of a light beam — is characteristic of colloids. True solutions, including saturated ones, are transparent and do not scatter light, and neither does a pure substance.'
+            explanation: 'If a property such as density depends on where the sample is taken, the composition is not uniform, so the mixture is heterogeneous. A solution, like a pure substance or compound, has the same properties throughout.'
           },
           {
             question: 'Which of these mixtures would separate on standing?',
             options: [
               'Sugar dissolved in water',
-              'Homogenized milk',
-              'Muddy water',
+              'Ethanol mixed with water',
+              'Sand stirred into water',
               'Food coloring in water'
             ],
             correctAnswer: 2,
-            explanation: 'Muddy water is a suspension. The solid particles are large enough (>1000 nm) that gravity will cause them to settle out over time. Solutions (sugar water, food coloring in water) and colloids (homogenized milk) do not settle.'
+            explanation: 'Sand does not dissolve in water, so the sand grains settle to the bottom over time. Sugar, ethanol, and food coloring all form solutions with water, which stay uniform indefinitely.'
           }
         ]
       }
@@ -184,44 +172,44 @@ A **heterogeneous mixture** has a **non-uniform composition** — you can see or
       id: 'mx1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Classify Each Mixture** 🔍
+**Classify Each Sample** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             id: 'mx1-dd1',
             label: 'Air (a uniform mixture of $N_{2}$, $O_{2}$, Ar, etc.) is classified as a',
-            options: ['solution', 'colloid', 'suspension'],
+            options: ['homogeneous mixture', 'heterogeneous mixture', 'pure substance'],
             correctIndex: 0,
-            explanation: 'Air is a homogeneous mixture of gases ($N_{2}$, $O_{2}$, Ar, etc.) — a true solution.'
+            explanation: 'Air is a uniform mixture of gases ($N_{2}$, $O_{2}$, Ar, etc.) — a gaseous solution.'
           },
           {
             id: 'mx1-dd2',
-            label: 'Milk (containing dispersed fat and protein particles) is classified as a',
-            options: ['solution', 'colloid', 'suspension'],
+            label: 'Granite (visible grains of different minerals) is classified as a',
+            options: ['homogeneous mixture', 'heterogeneous mixture', 'pure substance'],
             correctIndex: 1,
-            explanation: 'Milk is a colloid — fat and protein particles (1–1000 nm) are dispersed in water. Milk shows the Tyndall effect.'
+            explanation: 'Granite contains visibly different grains, so its composition depends on location — a heterogeneous mixture.'
           },
           {
             id: 'mx1-dd3',
-            label: 'Flour mixed into water is classified as a',
-            options: ['solution', 'colloid', 'suspension'],
-            correctIndex: 2,
-            explanation: 'Flour in water is a suspension — the flour particles are large and will settle to the bottom over time.'
+            label: 'Flour stirred into water (it settles to the bottom) is classified as a',
+            options: ['homogeneous mixture', 'heterogeneous mixture', 'pure substance'],
+            correctIndex: 1,
+            explanation: 'Flour does not dissolve; the particles settle out, so the composition is not uniform. This is a heterogeneous mixture.'
           },
           {
             id: 'mx1-dd4',
             label: 'Brass (an alloy of copper and zinc) is classified as a',
-            options: ['solution', 'colloid', 'suspension'],
+            options: ['homogeneous mixture', 'heterogeneous mixture', 'pure substance'],
             correctIndex: 0,
             explanation: 'Brass is a solid solution (alloy) of copper and zinc. The metals are uniformly mixed at the atomic level.'
           },
           {
             id: 'mx1-dd5',
-            label: 'Fog (tiny water droplets dispersed in air) is classified as a',
-            options: ['solution', 'colloid', 'suspension'],
-            correctIndex: 1,
-            explanation: 'Fog is a colloid — tiny water droplets (1–1000 nm) are dispersed in air. Fog scatters headlight beams (Tyndall effect).'
+            label: 'Distilled water is classified as a',
+            options: ['homogeneous mixture', 'heterogeneous mixture', 'pure substance'],
+            correctIndex: 2,
+            explanation: 'Distilled water is a single compound, $H_{2}O$, with a fixed composition — a pure substance, not a mixture.'
           }
         ]
       }
@@ -232,28 +220,30 @@ A **heterogeneous mixture** has a **non-uniform composition** — you can see or
       content: `
 **Quick Knowledge Check** 🧮
 
-**1)** What is the minimum particle size (in nm) for a suspension?
+A mixture of 5.0 g of sand and 20.0 g of table salt is stirred into 100 g of water until all the salt dissolves. The mixture is filtered.
 
-**2)** What is the maximum particle size (in nm) for a solution?
+**1)** After drying, what mass of solid (in g) is left on the filter paper?
 
-**3)** In a solution of sugar dissolved in water, the solvent is ______ (enter the substance name).
+**2)** The filtrate is boiled until all the water is gone. What mass of solid (in g) remains?
+
+**3)** In the filtrate, the solvent is ______ (enter the substance name).
       `,
       exercise: {
         inputs: [
           {
-            label: 'Minimum suspension particle size (nm)',
-            correctAnswer: '1000',
-            explanation: 'Suspensions have particles > 1000 nm, which are large enough to settle out and be filtered.'
+            label: 'Solid on filter paper (g)',
+            correctAnswer: '5.0',
+            explanation: 'Sand does not dissolve, so all 5.0 g is caught by the filter paper. The dissolved salt passes through with the water.'
           },
           {
-            label: 'Maximum solution particle size (nm)',
-            correctAnswer: '1',
-            explanation: 'True solutions have particles smaller than 1 nm — these are individual ions or molecules dissolved at the molecular level.'
+            label: 'Solid after evaporating filtrate (g)',
+            correctAnswer: '20.0',
+            explanation: 'The salt passed through the filter as part of the solution. Evaporating the water leaves all 20.0 g of salt behind.'
           },
           {
-            label: 'Solvent in sugar water',
+            label: 'Solvent in the filtrate',
             correctAnswer: 'water',
-            explanation: 'The solvent is the substance present in the greatest amount. In sugar water, water is the solvent and sugar is the solute.'
+            explanation: 'The solvent is the substance present in the greatest amount. In salt water, water is the solvent and salt is the solute.'
           }
         ]
       }
@@ -267,15 +257,15 @@ A **heterogeneous mixture** has a **non-uniform composition** — you can see or
       exercise: {
         questions: [
           {
-            question: 'Which property BEST distinguishes a colloid from a true solution?',
+            question: 'Which observation BEST shows that a liquid sample is a solution rather than a heterogeneous mixture?',
             options: [
-              'Whether it passes filter paper',
-              'Whether it conducts electricity',
-              'Whether it scatters a beam of light',
-              'Whether it settles out on standing'
+              'It is a liquid at room temperature',
+              'It contains more than one substance',
+              'Its composition is the same in every part',
+              'It changes color when heated'
             ],
             correctAnswer: 2,
-            explanation: 'The Tyndall effect (light scattering) is the defining test for colloids. Colloid particles are large enough to scatter light, while solution particles are not, so a visible beam appears only in the colloid. Both colloids and solutions pass through filter paper and neither settles on standing, so those tests cannot tell them apart.'
+            explanation: 'A solution is a homogeneous mixture: its composition and properties are the same everywhere in the sample. Containing more than one substance is true of every mixture, and being liquid or changing color on heating says nothing about uniformity.'
           },
           {
             question: 'A sample has variable composition, its components retain their chemical identities, and it can be separated by physical means. This describes:',

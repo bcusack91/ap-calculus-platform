@@ -6,7 +6,7 @@ export const chemElectronConfigPart1Data = {
       type: 'text' as const,
       content: `# Part 1: Atomic Structure Review
 
-**Part 1 of 7 — Quantum Numbers & Orbitals**
+**Part 1 of 7 — Protons, Neutrons, Electrons & Ions**
 
 ---
 

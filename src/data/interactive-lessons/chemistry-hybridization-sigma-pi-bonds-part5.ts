@@ -107,9 +107,9 @@ Every triple bond consists of **one sigma bond** and **two pi bonds**.
         questions: [
           {
             question: 'In $C_{2}H_{4}$ (ethene), each carbon is:',
-            options: ['sp hybridized with 2 unhybridized p orbitals', '$sp^{2}$ hybridized with 1 unhybridized p orbital', '$sp^{3}$ hybridized, no unhybridized p orbitals', '$sp^{2}$ hybridized with 2 leftover p orbitals'],
+            options: ['sp hybridized, in 3 sigma bonds and 1 pi bond', '$sp^{2}$ hybridized, in 3 sigma bonds and 1 pi bond', '$sp^{3}$ hybridized, in 4 sigma bonds and no pi bond', '$sp^{2}$ hybridized, in 2 sigma bonds and 2 pi bonds'],
             correctAnswer: 1,
-            explanation: 'Each carbon in ethene has 3 electron domains → $sp^{2}$ hybridized. $sp^{2}$ uses 1s + 2p, leaving 1 unhybridized p orbital for the pi bond.'
+            explanation: 'Each carbon in ethene has 3 electron domains (two C–H bonds and the C=C bond), so it is $sp^{2}$. It forms 3 sigma bonds (two to H, one to C) and shares the one pi bond of the double bond.'
           },
           {
             question: 'How many pi bonds are in a molecule of $N_{2}$ (N≡N)?',
@@ -204,14 +204,14 @@ $$E_{\\pi} \\approx E_{\\text{double}} - E_{\\text{single}} = 614 - 348 = 266 \\
           {
             id: 'hy-5-7-dd1',
             label: 'Carbon in $C_{2}H_{4}$ has 3 electron domains (2 C–H + 1 C=C) → _______ hybridization',
-            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'],
             correctIndex: 1,
             explanation: 'Carbon in $C_{2}H_{4}$ has 3 electron domains (2 C–H + 1 C=C) → $sp^{2}$ hybridization.'
           },
           {
             id: 'hy-5-7-dd2',
             label: 'Carbon in $C_{2}H_{2}$ has 2 electron domains (1 C–H + 1 C≡C) → _______ hybridization',
-            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'],
             correctIndex: 0,
             explanation: 'Carbon in $C_{2}H_{2}$ has 2 electron domains (1 C–H + 1 C≡C) → sp hybridization.'
           },

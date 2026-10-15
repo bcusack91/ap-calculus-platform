@@ -35,7 +35,6 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 |---------|-------------|-------|
 | Heat transfer | $q = mc\\Delta T$ | Specific heat version |
 | Coffee-cup calorimeter | $q_p = \\Delta H$ | Constant pressure |
-| Bomb calorimeter | $q_v = \\Delta E$ | Constant volume |
 | Calorimeter heat | $q_{\\text{cal}} = C_{\\text{cal}}\\Delta T$ | Total heat capacity |
 
 
@@ -59,6 +58,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 |--------|----------|
 | Hess\'s Law | $\\Delta H_{\\text{total}} = \\sum \\Delta H_{\\text{steps}}$ |
 | Formation enthalpies | $\\Delta H°_{\\text{rxn}} = \\sum n \\cdot \\Delta H°_f(\\text{products}) - \\sum m \\cdot \\Delta H°_f(\\text{reactants})$ |
+| Bond enthalpies | $\\Delta H \\approx \\sum \\text{(bonds broken)} - \\sum \\text{(bonds formed)}$ |
       `
     },
     {
@@ -72,7 +72,8 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 1. **Calorimetry calculation** — given mass, specific heat, ΔT → find q → find ΔH per mole
 2. **Hess\'s Law** — manipulate 2-3 reactions to find ΔH for a target reaction
 3. **Formation enthalpy** — use the master equation with a table of $\\Delta H°_f$ values
-4. **Conceptual** — identify exo/endothermic, explain sign conventions, predict temperature changes
+4. **Bond enthalpy** — estimate ΔH from average bond enthalpies (broken minus formed)
+5. **Conceptual** — identify exo/endothermic, explain sign conventions, predict temperature changes
 
 
 ---
@@ -97,15 +98,15 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
       exercise: {
         questions: [
           {
-            question: 'A 5.00 g sample of propane ($C_{3}H_{8}$, molar mass = 44.1 g/mol) is burned in a bomb calorimeter (C_cal = 12.0 kJ/°C), causing a 7.30°C temperature rise. The molar energy of combustion is approximately:',
+            question: 'A 0.500 g piece of Mg (molar mass 24.31 g/mol) reacts with excess HCl in a coffee-cup calorimeter. The 100.0 g of solution (c = 4.18 J/g·°C) warms by 22.0°C. What is ΔH per mole of Mg?',
             options: [
-              '−773 kJ/mol',
-              '−9.93 kJ/mol',
-              '−87.6 kJ/mol',
-              '+773 kJ/mol'
+              '−447 kJ/mol',
+              '−0.189 kJ/mol',
+              '−9.20 kJ/mol',
+              '+447 kJ/mol'
             ],
             correctAnswer: 0,
-            explanation: '$q_{\\text{cal}} = (12.0)(7.30) = 87.6$ kJ. $q_{\\text{rxn}} = -87.6$ kJ. Moles = $5.00/44.1 = 0.1134$ mol. $\\Delta E = -87.6/0.1134 = -773$ kJ/mol. Stopping at −87.6 kJ forgets to divide by moles, multiplying by moles instead gives −9.93 kJ/mol, and +773 kJ/mol drops the sign of an exothermic combustion.'
+            explanation: '$q_{\\text{sol}} = (100.0)(4.18)(22.0) = 9196$ J = 9.20 kJ, so $q_{\\text{rxn}} = -9.20$ kJ. Moles Mg = 0.500/24.31 = 0.0206 mol. ΔH = −9.20/0.0206 = −447 kJ/mol. Stopping at −9.20 kJ forgets to divide by moles, multiplying by moles gives −0.189, and +447 kJ/mol drops the sign of an exothermic reaction.'
           },
           {
             question: 'Given: (1) 2Fe(s) + 3/2 $O_{2}(g)$ → $Fe_{2}O_{3}(s)$, ΔH = −824 kJ and (2) 2Al(s) + 3/2 $O_{2}(g)$ → $Al_{2}O_{3}(s)$, ΔH = −1676 kJ. What is ΔH for $Fe_{2}O_{3}(s)$ + 2Al(s) → $Al_{2}O_{3}(s)$ + 2Fe(s)?',
@@ -165,27 +166,27 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
       exercise: {
         dropdowns: [
           {
-            label: 'A coffee-cup calorimeter directly measures',
-            options: ['ΔE', 'ΔH', 'ΔG', 'ΔS']
+            label: 'A coffee-cup calorimeter (constant pressure) directly measures',
+            options: ['Ea', 'ΔH', 'ΔG', 'ΔS']
           },
           {
             label: 'The $\\Delta H°_f$ for $O_{3}(g)$ is',
             options: ['zero', 'positive', 'negative', 'undefined']
           },
           {
-            label: 'Hess\'s Law is a consequence of enthalpy being a',
-            options: ['path function', 'state function', 'vector quantity', 'constant']
+            label: 'Using bond enthalpies, ΔH ≈ (bonds broken) minus',
+            options: ['bonds formed', 'bonds broken', 'ΔH°f of products', 'the activation energy']
           },
           {
             label: 'Dissolving $NH_{4}NO_{3}$ in water cools the solution. This process is',
             options: ['exothermic', 'endothermic', 'isothermal', 'adiabatic']
           }
         ],
-        correctAnswers: ['ΔH', 'positive', 'state function', 'endothermic'],
+        correctAnswers: ['ΔH', 'positive', 'bonds formed', 'endothermic'],
         hint1: 'Coffee-cup operates at constant pressure.',
         hint2: '$O_{3}$ is NOT the standard state of oxygen — forming it requires energy.',
-        hint3: 'State functions depend only on initial and final states.',
-        explanation: 'Coffee-cup at constant pressure measures ΔH. $O_{3}$ has positive ΔH°_f (ozone is less stable than $O_{2}$). Hess\'s Law works because ΔH is path-independent. Cooling the solution means the system absorbed heat (endothermic).'
+        hint3: 'Energy in to break bonds, minus energy out from forming bonds.',
+        explanation: 'Coffee-cup at constant pressure measures ΔH. $O_{3}$ has positive ΔH°_f (ozone is less stable than $O_{2}$). Bond-enthalpy estimates use bonds broken minus bonds formed. Cooling the solution means the system absorbed heat (endothermic).'
       }
     },
     {

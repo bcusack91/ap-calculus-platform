@@ -15,14 +15,15 @@ export const chemAtomicSpectraPart6Data = {
 | Skill |
 |-------|
 | Convert between $\\lambda$, $\\nu$, and $E$ fluently |
-| Compute Bohr energy gaps and identify spectral series |
-| Apply the Rydberg formula in both directions |
+| Find photon energies from given energy levels and identify transitions |
+| Convert photon energies to energy per mole |
 | Use $BE = h\\nu - KE$ for PES problems |
+
+> 📋 **Hydrogen energy levels (J):** $E_1 = -2.18 \\times 10^{-18}$, $E_2 = -5.45 \\times 10^{-19}$, $E_3 = -2.42 \\times 10^{-19}$, $E_4 = -1.36 \\times 10^{-19}$, $E_5 = -8.72 \\times 10^{-20}$, $E_6 = -6.06 \\times 10^{-20}$
 
 > 🛠️ **Reference equations:**  
 > $c = \\lambda \\nu, \\quad E = h\\nu = hc/\\lambda$  
-> $E_n = -2.18 \\times 10^{-18}/n^2$ J (hydrogen)  
-> $1/\\lambda = R_H (1/n_f^2 - 1/n_i^2), \\quad R_H = 1.097 \\times 10^{7}$ $m^{-1}$  
+> $E_{\\text{photon}} = E_{\\text{upper}} - E_{\\text{lower}}$ (levels given)  
 > $BE = h\\nu - KE$  
 > Constants: $h = 6.626 \\times 10^{-34}$ J·s, $c = 3.00 \\times 10^{8}$ m/s, $N_A = 6.022 \\times 10^{23}$`
     },
@@ -32,19 +33,19 @@ export const chemAtomicSpectraPart6Data = {
       content: `
 ## 🧪 Worked Walkthrough 1 — Identifying a Transition
 
-> **Problem:** A spectral line at 434 nm is observed in hydrogen's emission spectrum. Identify the transition.
+> **Problem:** A spectral line at 434 nm is observed in hydrogen\'s emission spectrum. Using the given energy levels, identify the transition.
 
-**Step 1.** Convert wavelength to wavenumber:
+**Step 1.** Find the photon energy:
 
-$$\\frac{1}{\\lambda} = \\frac{1}{4.34 \\times 10^{-7}} = 2.304 \\times 10^{6} \\; \\text{m}^{-1}$$
+$$E = \\frac{hc}{\\lambda} = \\frac{(6.626 \\times 10^{-34})(3.00 \\times 10^{8})}{4.34 \\times 10^{-7}} = 4.58 \\times 10^{-19} \; \\text{J}$$
 
-**Step 2.** Visible → Balmer series, so $n_f = 2$. Solve for $n_i$:
+**Step 2.** Look for the pair of levels whose difference matches. Visible photons in hydrogen come from drops to $n = 2$, so try $E_{\\text{upper}} = E_2 + 4.58 \\times 10^{-19}$:
 
-$$2.304 \\times 10^{6} = (1.097 \\times 10^{7}) \\left( \\frac{1}{4} - \\frac{1}{n_i^2} \\right)$$
+$$E_{\\text{upper}} = (-5.45 \\times 10^{-19}) + (4.58 \\times 10^{-19}) = -8.7 \\times 10^{-20} \; \\text{J}$$
 
-$$\\frac{1}{4} - \\frac{1}{n_i^2} = 0.2100 \\implies \\frac{1}{n_i^2} = 0.040 \\implies n_i^2 = 25 \\implies n_i = 5$$
+**Step 3.** That matches $E_5 = -8.72 \\times 10^{-20}$ J.
 
-**Answer:** The transition is $n=5 \\to n=2$ (the H-γ Balmer line). ✅
+**Answer:** The transition is $n=5 \\to n=2$. ✅
       `
     },
     {
@@ -78,7 +79,7 @@ $$E_{\\text{mole}} = (5.68 \\times 10^{-19})(6.022 \\times 10^{23}) = 3.42 \\tim
 
 $$BE = 21.2 \\; \\text{eV} - 7.6 \\; \\text{eV} = 13.6 \\; \\text{eV} \\;\\;\\checkmark$$
 
-This matches $|E_1| = 2.18 \\times 10^{-18}$ J $= 13.6$ eV exactly — H's ground-state binding energy.
+This matches the binding energy of hydrogen\'s 1s electron, 13.6 eV (that is, $2.18 \\times 10^{-18}$ J).
       `
     },
     {
@@ -88,10 +89,10 @@ This matches $|E_1| = 2.18 \\times 10^{-18}$ J $= 13.6$ eV exactly — H's groun
       exercise: {
         questions: [
           {
-            question: 'A spectral line at 1094 nm in hydrogen belongs to the Paschen series. What is $n_i$?',
+            question: 'A hydrogen atom emits a photon of energy $1.81 \\times 10^{-19}$ J as its electron drops to $n = 3$. Using the given levels, from which level did it start?',
             options: ['5', '6', '4', '7'],
             correctAnswer: 1,
-            explanation: '$1/\\lambda = R_H(1/9 - 1/n_i^2)$. With $\\lambda = 1.094 \\times 10^{-6}$ m: $1/\\lambda = 9.14 \\times 10^5$ m$^{-1}$, and $9.14 \\times 10^5 / 1.097 \\times 10^7 = 0.0833$. So $1/n_i^2 = 1/9 - 0.0833 = 0.0278$, giving $n_i^2 = 36$ and $n_i = 6$ (Pa-γ). $n_i = 5$ gives 1282 nm and $n_i = 4$ gives 1875 nm.'
+            explanation: '$E_{\\text{upper}} = E_3 + 1.81 \\times 10^{-19} = (-2.42 \\times 10^{-19}) + (1.81 \\times 10^{-19}) = -6.1 \\times 10^{-20}$ J, which matches $E_6 = -6.06 \\times 10^{-20}$ J. Starting at $n = 5$ would give $1.55 \\times 10^{-19}$ J and $n = 4$ would give $1.06 \\times 10^{-19}$ J.'
           },
           {
             question: 'A photon has frequency $7.50 \\times 10^{14}$ Hz. What is its energy?',
@@ -113,7 +114,7 @@ This matches $|E_1| = 2.18 \\times 10^{-18}$ J $= 13.6$ eV exactly — H's groun
               'Only if several photons strike at once'
             ],
             correctAnswer: 1,
-            explanation: '$E_{200\\;\\text{nm}} = 9.94 \\times 10^{-19}$ J. From $n=1$, allowed jumps require specific energies (e.g., $n=1\\to 2$ needs $1.63 \\times 10^{-18}$ J). 200 nm is too low to ionize and doesn\'t match $n=1\\to n$ for any integer $n$, so it is not absorbed.'
+            explanation: '$E_{200\;\\text{nm}} = 9.94 \\times 10^{-19}$ J. From the given levels, the smallest jump from $n=1$ (to $n=2$) needs $1.64 \\times 10^{-18}$ J. A 200 nm photon has too little energy for any allowed jump or for ionization, so it is not absorbed.'
           }
         ]
       }
@@ -128,18 +129,18 @@ This matches $|E_1| = 2.18 \\times 10^{-18}$ J $= 13.6$ eV exactly — H's groun
 
 **2)** What was the photon's wavelength in nm? (Nearest whole.)
 
-**3)** A line in the Lyman series of H has wavelength 95.0 nm. Identify $n_i$.
+**3)** A ground-state hydrogen atom absorbs a photon of energy $2.09 \\times 10^{-18}$ J. Using the given levels, which level does the electron reach?
 
-**4)** An emission line of $\\text{He}^+$ ($Z=2$) corresponds to $n=4 \\to n=2$. Energy scales as $Z^2 = 4$, so the photon has 4× the energy of H's H-β. What is the wavelength in nm? (Nearest whole. H-β is 486 nm.)
+**4)** How much energy, in kJ/mol, is needed to move one mole of hydrogen atoms from $n = 1$ to $n = 2$? (Nearest whole number.)
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['2.72', '73', '5', '122'],
+        correctAnswers: ['2.72', '73', '5', '985'],
         hint1: '$E_{\\text{photon}} = BE + KE$ where $BE = 2.18 \\times 10^{-18}$ J.',
         hint2: '$\\lambda = hc/E$.',
-        hint3: '$1/\\lambda = R_H(1 - 1/n_i^2)$ with $\\lambda = 9.5 \\times 10^{-8}$ m.',
-        hint4: 'Higher energy by factor 4 → wavelength shorter by factor 4: $486/4 = 121.5$ nm.',
-        explanation: '1) $E_{\\text{ph}} = 2.18 \\times 10^{-18} + 5.45 \\times 10^{-19} = 2.725 \\times 10^{-18}$ J ≈ $2.72 \\times 10^{-18}$ J. 2) $\\lambda = (6.626 \\times 10^{-34})(3 \\times 10^8)/(2.725 \\times 10^{-18}) = 7.30 \\times 10^{-8}$ m = 73 nm. 3) $1/(9.5\\times 10^{-8}) = 1.053 \\times 10^7$ $m^{-1}$. $1/n_i^2 = 1 - 1.053\\times 10^7/1.097\\times 10^7 = 0.04$ → $n_i = 5$. 4) $\\lambda = 486/4 = 121.5 ≈ 122$ nm.'
+        hint3: '$E_{\\text{final}} = E_1 + 2.09 \\times 10^{-18}$ J. Compare with the table.',
+        hint4: '$E_2 - E_1$ per atom, times $6.022 \\times 10^{23}$, divided by 1000.',
+        explanation: '1) $E_{\\text{ph}} = 2.18 \\times 10^{-18} + 5.45 \\times 10^{-19} = 2.725 \\times 10^{-18}$ J ≈ $2.72 \\times 10^{-18}$ J. 2) $\\lambda = (6.626 \\times 10^{-34})(3 \\times 10^8)/(2.725 \\times 10^{-18}) = 7.30 \\times 10^{-8}$ m = 73 nm. 3) $E_{\\text{final}} = (-2.18 \\times 10^{-18}) + (2.09 \\times 10^{-18}) = -9 \\times 10^{-20}$ J, which matches $E_5 = -8.72 \\times 10^{-20}$ J, so $n = 5$. 4) $E_2 - E_1 = 1.635 \\times 10^{-18}$ J per atom; $(1.635 \\times 10^{-18})(6.022 \\times 10^{23}) = 9.85 \\times 10^{5}$ J/mol ≈ 985 kJ/mol.'
       }
     },
     {
@@ -149,10 +150,10 @@ This matches $|E_1| = 2.18 \\times 10^{-18}$ J $= 13.6$ eV exactly — H's groun
       exercise: {
         questions: [
           {
-            question: 'An emission line at 102.6 nm in hydrogen belongs to which series and transition?',
-            options: ['Lyman, n=3 → n=1', 'Balmer, n=3 → n=2', 'Paschen, n=4 → n=3', 'Lyman, n=2 → n=1'],
+            question: 'Using the given hydrogen levels, which transition emits a photon of about 103 nm?',
+            options: ['n=3 → n=1', 'n=3 → n=2', 'n=4 → n=3', 'n=2 → n=1'],
             correctAnswer: 0,
-            explanation: '102.6 nm is in the UV (Lyman series, $n_f = 1$). Solving the Rydberg formula gives $n_i = 3$.'
+            explanation: '$E = hc/\\lambda = (6.626 \\times 10^{-34})(3.00 \\times 10^{8})/(1.03 \\times 10^{-7}) = 1.93 \\times 10^{-18}$ J. $E_3 - E_1 = (-2.42 \\times 10^{-19}) - (-2.18 \\times 10^{-18}) = 1.94 \\times 10^{-18}$ J, a match. The $n=2 \\to n=1$ gap ($1.64 \\times 10^{-18}$ J) gives 122 nm, and the other two gaps are far smaller.'
           },
           {
             question: 'Doubling a photon\'s wavelength halves its energy. If a 300-nm UV photon has energy $E_0$, what wavelength has energy $E_0/4$?',

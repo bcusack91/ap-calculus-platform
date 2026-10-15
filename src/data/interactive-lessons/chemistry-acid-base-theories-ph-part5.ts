@@ -285,15 +285,15 @@ $$pH = -\\log(0.025) = 1.60$$
             explanation: 'Equal moles of strong acid and strong base completely neutralize each other. The resulting solution contains only $NaCl$ and water, so $pH = 7.0$.'
           },
           {
-            question: 'The pH of $2.0 \\times 10^{-8}$ M $HCl$ is approximately:',
+            question: 'A 0.050 M HCl solution is diluted by a factor of 10. What is the new pH?',
             options: [
-              '8.0',
-              '7.7',
-              '6.9',
-              '7.0'
+              '1.30',
+              '0.30',
+              '2.30',
+              '3.30'
             ],
             correctAnswer: 2,
-            explanation: 'Ignoring water gives $pH = -\\log(2.0 \\times 10^{-8}) = 7.7$ — a basic pH for an acid, which is impossible (8.0 also drops the 2.0 coefficient). At this very low concentration, water\'s own $[H^+]$ ($1.0 \\times 10^{-7}$ M) dominates. Adding the two contributions gives $[H^+] \\approx 1.2 \\times 10^{-7}$ M, so $pH \\approx 6.9$ (an exact treatment gives 6.96). Answering 7.0 ignores the acid\'s contribution entirely. The pH of an acid solution cannot be above 7.'
+            explanation: 'After a tenfold dilution, $[H_3O^+] = 0.0050$ M, so $pH = -\\log(0.0050) = 2.30$. A tenfold dilution of a strong acid raises the pH by exactly 1 unit. 1.30 is the pH before dilution, 0.30 moves the pH the wrong way, and 3.30 treats the dilution as a factor of 100.'
           }
         ]
       }

@@ -4,9 +4,9 @@ export const chemSolutionsSolubilityPart5Data = {
     {
       id: 'ss5-intro',
       type: 'text' as const,
-      content: `# 🔬 Osmotic Pressure and the van\'t Hoff Factor
+      content: `# 🔋 Electrolytes and Why Things Dissolve
 
-**Part 5 of 7 — $\\Pi = iMRT$, Electrolytes vs. Nonelectrolytes**
+**Part 5 of 7 — Electrolytes, Conductivity, and Solubility from Intermolecular Forces**
 
 ---
 
@@ -14,105 +14,18 @@ export const chemSolutionsSolubilityPart5Data = {
 
 | Section |
 |---------|
-| 📌 Osmosis |
-| Semipermeable Membrane |
-| Driving Force |
-| Direction Rules |
-| Biological Importance |
+| 🔋 Electrolytes vs. Nonelectrolytes |
+| ⚖️ The Three Interactions in Dissolving |
+| 📈 Solubility Trends Explained by IMFs |
 
-> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+> 🔑 **Key Concept:** Whether a substance dissolves, and whether its solution conducts, both come down to what happens to its particles in the solvent.
 
 ---
 
 ### What You'll Master in Part 5
-- Understanding the core concepts covered in Part 5
-- Applying these ideas to solve practice problems
-- Building toward AP exam readiness for this topic`
-    },
-    {
-      id: 'ss5-osmosis',
-      type: 'text' as const,
-      content: `
-## 📌 Osmosis
-
-**Osmosis** is the net movement of solvent (usually water) through a **semipermeable membrane** from a region of **lower** solute concentration to **higher** solute concentration.
-
-
----
-
-### Semipermeable Membrane
-
-A membrane that allows solvent molecules to pass through but blocks solute particles (ions or large molecules).
-
-
----
-
-### Driving Force
-
-The solvent naturally moves to dilute the more concentrated side — this is an entropy-driven process.
-
-
----
-
-### Direction Rules
-
-| Term | Meaning | Water Flow Direction |
-|------|---------|---------------------|
-| **Hypertonic** | Higher solute concentration | Water flows **out** of the cell |
-| **Hypotonic** | Lower solute concentration | Water flows **into** the cell |
-| **Isotonic** | Equal solute concentration | No net water flow |
-
-
----
-
-### Biological Importance
-
-- Red blood cells placed in a hypotonic solution swell and may burst (lysis)
-- In a hypertonic solution, they shrink (crenation)
-- IV fluids must be isotonic (typically 0.9% NaCl — "normal saline")
-      `
-    },
-    {
-      id: 'ss5-osmotic-pressure',
-      type: 'text' as const,
-      content: `
-## 💨 Osmotic Pressure ($\\Pi$)
-
-**Osmotic pressure** is the minimum pressure that must be applied to the solution side to **prevent** osmosis.
-
-$$\\boxed{\\Pi = iMRT}$$
-
-where:
-- $\\Pi$ = osmotic pressure (atm)
-- $i$ = van\'t Hoff factor
-- $M$ = molarity of the solution (mol/L)
-- $R$ = gas constant = $0.08206$ L·atm/(mol·K)
-- $T$ = temperature in Kelvin
-
-
----
-
-### This looks like the ideal gas law!
-
-$$\\Pi V = nRT \\quad \\Rightarrow \\quad \\Pi = \\frac{n}{V}RT = MRT$$
-
-With the van\'t Hoff factor for electrolytes: $\\Pi = iMRT$
-
-
----
-
-### Worked Example
-
-> **Problem:** Calculate the osmotic pressure at 25°C of a 0.100 M NaCl ($i = 2$) solution.
-
-> **Solution:**
-
-$$T = 25 + 273 = 298 \\text{ K}$$
-
-$$\\Pi = (2)(0.100)(0.08206)(298) = 4.89 \\text{ atm}$$
-
-That is a surprisingly large pressure — about 72 psi — from a relatively dilute solution!
-      `
+- Classifying solutes as strong, weak, or nonelectrolytes and predicting conductivity
+- Explaining solubility by comparing solute–solute, solvent–solvent, and solute–solvent attractions
+- Predicting miscibility and solubility trends from molecular structure`
     },
     {
       id: 'ss5-electrolyte-comparison',
@@ -120,201 +33,217 @@ That is a surprisingly large pressure — about 72 psi — from a relatively dil
       content: `
 ## 🔋 Electrolytes vs. Nonelectrolytes
 
+A solution conducts electricity only if it contains **mobile ions**. How many ions a solute produces decides how well its solution conducts.
+
+
+---
+
 ### Strong Electrolytes
 - **Completely** dissociate into ions in solution
-- Examples: NaCl, KBr, HCl, NaOH, $CaCl_{2}$
+- Examples: soluble ionic compounds (NaCl, KBr, $CaCl_{2}$), strong acids (HCl, $HNO_{3}$), strong bases (NaOH)
 - Conduct electricity strongly
-- $i$ equals the total number of ions produced
 
 
 ---
 
 ### Weak Electrolytes
-- **Partially** dissociate in solution
+- **Partially** ionize in solution; most particles stay as neutral molecules
 - Examples: $CH_{3}COOH$ (acetic acid), $NH_{3}$, HF
 - Conduct electricity weakly
-- $i$ is between 1 and the theoretical maximum (closer to 1 for weak electrolytes)
 
 
 ---
 
 ### Nonelectrolytes
-- Do **not** dissociate — dissolve as whole molecules
+- Do **not** produce ions; they dissolve as whole molecules
 - Examples: glucose $(C_{6}H_{12}O_{6})$, sucrose, ethanol, urea
 - Do not conduct electricity
-- $i = 1$ always
 
 
 ---
 
-### Impact on Colligative Properties
+### Comparing Equal Concentrations
 
-For 0.10 m solutions in water ($K_f = 1.86$ °C/m):
+For 0.10 M solutions at the same temperature:
 
-| Solute | $i$ | $\\Delta T_f = iK_fm$ | Freezing Point |
-|--------|-----|------|----------------|
-| Glucose | 1 | $1(1.86)(0.10) = 0.186$ °C | $-0.19$ °C |
-| NaCl | 2 | $2(1.86)(0.10) = 0.372$ °C | $-0.37$ °C |
-| $CaCl_{2}$ | 3 | $3(1.86)(0.10) = 0.558$ °C | $-0.56$ °C |
+| Solute | Type | Approximate Ion Concentration | Conductivity |
+|--------|------|-------------------------------|--------------|
+| $CaCl_{2}$ | Strong | 0.30 M | Highest |
+| NaCl | Strong | 0.20 M | High |
+| $CH_{3}COOH$ | Weak | about 0.003 M | Low |
+| Glucose | Non | 0 | None |
+
+> 💡 **Tip:** Pure water and solid NaCl are both very poor conductors. Ions must be present **and** free to move, which happens when NaCl dissolves or melts.
       `
     },
     {
-      id: 'ss5-concept-quiz',
+      id: 'ss5-electrolyte-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Osmotic Pressure Concepts** 🎯
+**Electrolyte Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Osmosis is the movement of:',
+            question: 'Which 0.10 M aqueous solution is the best conductor of electricity?',
             options: [
-              'Solute across a membrane toward the more dilute side',
-              'Solvent across a membrane toward the more dilute side',
-              'Solute across a membrane to the more concentrated side',
-              'Solvent across a membrane into the more concentrated side'
+              '$CH_{3}COOH$',
+              '$C_{2}H_{5}OH$',
+              '$K_{2}SO_{4}$',
+              'NaCl'
             ],
-            correctAnswer: 3,
-            explanation: 'Osmosis is specifically the movement of solvent (not solute) through a semipermeable membrane from the side with lower solute concentration (more solvent) to the side with higher solute concentration (less solvent).'
+            correctAnswer: 2,
+            explanation: '$K_{2}SO_{4}$ is a strong electrolyte that releases three ions per formula unit (0.30 M of ions). NaCl releases two (0.20 M). Acetic acid only partly ionizes, and ethanol produces no ions at all.'
           },
           {
-            question: 'A red blood cell is placed in a 2.0% NaCl solution (normal saline is 0.9%). The cell will:',
+            question: 'A 0.10 M solution of HF conducts electricity, but much more weakly than 0.10 M HCl. The best explanation is that',
             options: [
-              'Swell and possibly burst',
-              'Shrink (crenate)',
-              'Remain unchanged',
-              'Dissolve completely'
+              'HF is a nonelectrolyte that does not produce ions',
+              'Only a small fraction of HF molecules ionize in water',
+              'HF produces more ions per molecule than HCl',
+              'Fluoride ions cannot move through water'
             ],
             correctAnswer: 1,
-            explanation: 'The 2.0% NaCl solution is hypertonic relative to the cell interior (~0.9%). Water moves out of the cell by osmosis, causing it to shrink (crenate).'
+            explanation: 'HF is a weak acid and weak electrolyte: most HF stays as neutral molecules, so the solution contains far fewer ions than 0.10 M HCl, which ionizes completely. It does produce some ions, which is why it conducts at all.'
           },
           {
-            question: 'Which solution has the greatest osmotic pressure at 25°C?',
+            question: 'Solid sucrose and solid KCl are each dissolved in water. Which observation correctly distinguishes them?',
             options: [
-              '0.10 M glucose ($i = 1$)',
-              '0.10 M NaCl ($i = 2$)',
-              '0.050 M $CaCl_{2}$ ($i = 3$)',
-              '0.060 M $K_{2}SO_{4}$ ($i = 3$)'
+              'Only the KCl solution conducts electricity',
+              'The sucrose solution conducts better than the KCl',
+              'Both solutions conduct electricity equally',
+              'Neither solution conducts electricity'
             ],
-            correctAnswer: 1,
-            explanation: '$\\Pi = iMRT$, so compare $iM$ at the same temperature: glucose: $1(0.10) = 0.10$. NaCl: $2(0.10) = 0.20$. $CaCl_{2}$: $3(0.050) = 0.15$. $K_{2}SO_{4}$: $3(0.060) = 0.18$. NaCl has the largest $iM$, so it has the greatest osmotic pressure.'
+            correctAnswer: 0,
+            explanation: 'KCl dissociates into mobile $K^{+}$ and $Cl^{-}$ ions, so its solution conducts. Sucrose is molecular and dissolves without forming ions, so its solution does not conduct.'
           }
         ]
       }
     },
     {
-      id: 'ss5-osmotic-calc',
-      type: 'input-boxes' as const,
-      content: `
-**Osmotic Pressure Calculations** 🧮
-
-> **Given:** $R = 0.08206$ L·atm/(mol·K)
-
-**1)** Calculate the osmotic pressure (in atm) of a 0.200 M glucose ($i = 1$) solution at 37°C (body temperature). (to 3 significant figures)
-
-**2)** A 0.150 M $CaCl_{2}$ ($i = 3$) solution at 25°C has what osmotic pressure? (in atm, to 3 significant figures)
-
-**3)** A protein solution has an osmotic pressure of 0.0821 atm at 25°C. What is the molarity of the protein? ($i = 1$; answer in M to 3 significant figures)
-      `,
-      exercise: {
-        questions: [{ question: '1)', answer: '5.09', acceptableAnswers: ['5.09', '5.1'] }, { question: '2)', answer: '11.0', acceptableAnswers: ['11.0'] }, { question: '3)', answer: '0.00336', acceptableAnswers: ['0.00336', '0.0034', '3.36e-3'] }],
-        hint1: '$T = 37 + 273 = 310$ K. $\\Pi = (1)(0.200)(0.08206)(310)$.',
-        hint2: '$T = 298$ K. $\\Pi = (3)(0.150)(0.08206)(298)$.',
-        hint3: '$M = \\Pi/(iRT) = 0.0821/((1)(0.08206)(298))$.',
-        explanation: '1) $\\Pi = (1)(0.200)(0.08206)(310) = 5.09$ atm. 2) $\\Pi = (3)(0.150)(0.08206)(298) = 11.0$ atm. 3) $M = 0.0821/((1)(0.08206)(298)) = 0.0821/24.45 = 0.00336$ M (that is, $3.36 \\times 10^{-3}$ M).'
-      }
-    },
-    {
-      id: 'ss5-reverse-osmosis',
+      id: 'ss5-dissolving-energetics',
       type: 'text' as const,
       content: `
-## 📌 Reverse Osmosis
+## ⚖️ The Three Interactions in Dissolving
 
-If you apply pressure **greater** than the osmotic pressure to the concentrated side, you can force solvent to flow **backward** — from high concentration to low concentration.
+Dissolving trades one set of attractions for another. Picture it in three steps:
 
-
----
-
-### Applications
-
-- **Water desalination** — removing salt from seawater (seawater $\\Pi \\approx 27$ atm, so applied pressure must exceed this)
-- **Water purification** — removing contaminants
-- **Maple syrup production** — concentrating sap
+| Step | What Happens | Energy |
+|------|--------------|--------|
+| 1 | Solute particles are pulled apart (solute–solute attractions overcome) | Absorbed |
+| 2 | Solvent particles move apart to make room (solvent–solvent attractions overcome) | Absorbed |
+| 3 | Solute and solvent particles attract each other (solute–solvent attractions form) | Released |
 
 
 ---
 
-### Reverse Osmosis vs. Osmosis
+### Reading the Balance
 
-| Feature | Osmosis | Reverse Osmosis |
-|---------|---------|----------------|
-| Direction | Low → high solute conc. | High → low solute conc. |
-| Pressure required? | Spontaneous | Requires applied pressure > $\\Pi$ |
-| Energy input? | None | Significant |
-| Result | Dilutes concentrated side | Concentrates the solution |
+- If the new solute–solvent attractions are **comparable to or stronger than** the attractions broken, the solute tends to dissolve.
+- If the solute–solvent attractions are **much weaker** than what must be broken, little dissolves.
+- Dissolving also spreads matter out (greater dispersal), which favors mixing. That is why some salts, such as $NH_{4}NO_{3}$ in a cold pack, dissolve even though the process absorbs heat.
+
+
+---
+
+### Applying It: Oil and Water
+
+Water molecules hold each other by strong hydrogen bonds. Oil molecules can offer water only weak London dispersion forces. Separating water molecules costs more than the oil–water attractions return, so oil and water stay separate.
+
+> 🔑 **Key Concept:** "Like dissolves like" is shorthand for this balance: substances with **similar** intermolecular forces can replace each other's attractions without a large energy cost.
       `
     },
     {
-      id: 'ss5-dropdown-practice',
+      id: 'ss5-solubility-trends',
+      type: 'text' as const,
+      content: `
+## 📈 Solubility Trends Explained by IMFs
+
+### Alcohols in Water
+
+| Alcohol | Formula | Solubility in Water |
+|---------|---------|---------------------|
+| Methanol | $CH_{3}OH$ | Miscible (mixes in all proportions) |
+| 1-Propanol | $C_{3}H_{7}OH$ | Miscible |
+| 1-Butanol | $C_{4}H_{9}OH$ | Moderately soluble |
+| 1-Hexanol | $C_{6}H_{13}OH$ | Only slightly soluble |
+
+Each alcohol has one O–H group that hydrogen bonds with water. As the nonpolar hydrocarbon chain grows, a larger part of the molecule can interact with water only through dispersion forces, so solubility in water drops. Solubility in a nonpolar solvent such as hexane rises along the same series.
+
+
+---
+
+### Other Pairings
+
+| Solute | Solvent | Result | Reason |
+|--------|---------|--------|--------|
+| $I_{2}$ (nonpolar) | $CCl_{4}$ (nonpolar) | Dissolves | Dispersion forces on both sides |
+| $I_{2}$ | Water | Barely dissolves | Cannot replace water's hydrogen bonds |
+| KBr (ionic) | Hexane | Does not dissolve | No ion–dipole attractions to offset the lattice |
+| Acetone (polar) | Water | Miscible | Dipole–dipole forces and hydrogen bonds to water's O–H |
+      `
+    },
+    {
+      id: 'ss5-trends-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Electrolytes and Osmosis — Key Concepts** 🔽
+**Predict and Explain** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Acetic acid $(CH_{3}COOH)$ is a weak electrolyte, so its van\'t Hoff factor is',
-            options: ['Exactly 1', 'Between 1 and 2', 'Exactly 2', 'Greater than 2']
+            label: 'The alcohol most soluble in water is',
+            options: ['$CH_{3}OH$', '$C_{4}H_{9}OH$', '$C_{6}H_{13}OH$', '$C_{8}H_{17}OH$']
           },
           {
-            label: 'To prevent osmosis, pressure applied to the solution side must equal',
-            options: ['Zero', 'The vapor pressure', 'The osmotic pressure', 'The atmospheric pressure']
+            label: 'The alcohol most soluble in hexane is',
+            options: ['$CH_{3}OH$', '$C_{2}H_{5}OH$', '$C_{4}H_{9}OH$', '$C_{8}H_{17}OH$']
           },
           {
-            label: 'Reverse osmosis requires pressure that is',
-            options: ['Less than osmotic pressure', 'Equal to osmotic pressure', 'Greater than osmotic pressure', 'Equal to atmospheric pressure']
+            label: 'Dissolving a solute requires energy to overcome',
+            options: ['solute–solvent attractions only', 'solute–solute and solvent–solvent attractions', 'covalent bonds within the solvent', 'nuclear attractions inside atoms']
           },
           {
-            label: '0.30 M glucose ($i = 1$) and 0.15 M NaCl ($i = 2$) are',
-            options: ['Not related', 'Isotonic to each other', 'The glucose solution is hypertonic', 'The NaCl solution is hypertonic']
+            label: 'Octane does not dissolve in water mainly because',
+            options: ['octane is denser than water and sinks below it', 'octane cannot replace the hydrogen bonds water would lose', 'octane reacts with water to form an insoluble product', 'octane molecules are too large to fit between water molecules']
           }
         ],
-        correctAnswers: ['Between 1 and 2', 'The osmotic pressure', 'Greater than osmotic pressure', 'Isotonic to each other'],
-        hint1: 'Weak electrolytes partially dissociate, so $i$ is between 1 and the theoretical max.',
-        hint2: 'Osmotic pressure is defined as the pressure needed to stop osmosis.',
-        hint3: 'Compare $iM$ products: glucose: $1(0.30) = 0.30$; NaCl: $2(0.15) = 0.30$.',
-        explanation: '$CH_{3}COOH$ partially dissociates, so $1 < i < 2$. Osmotic pressure exactly stops osmosis; reverse osmosis needs more. Both solutions have $iM = 0.30$, so they are isotonic.'
+        correctAnswers: ['$CH_{3}OH$', '$C_{8}H_{17}OH$', 'solute–solute and solvent–solvent attractions', 'octane cannot replace the hydrogen bonds water would lose'],
+        hint1: 'A shorter hydrocarbon chain means the O–H group dominates.',
+        hint2: 'In a nonpolar solvent, the longer nonpolar chain helps.',
+        hint3: 'Steps 1 and 2 of dissolving absorb energy; step 3 releases it.',
+        explanation: 'Methanol has the smallest nonpolar part, so it mixes best with water; octanol has the largest, so it mixes best with hexane. Dissolving costs energy to separate solute particles and solvent particles. Octane offers water only dispersion forces, which cannot make up for the hydrogen bonds water would lose.'
       }
     },
     {
       id: 'ss5-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Exit Quiz — Osmotic Pressure** ✅
+**Exit Quiz — Electrolytes and Solubility** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A solution containing 6.00 g of urea ($CH_{4}N_{2}O$, $M = 60.06$ g/mol, $i = 1$) in 1.00 L of solution at 27°C has an osmotic pressure of approximately:',
+            question: 'Pentane, $C_{5}H_{12}$, dissolves readily in hexane but not in water. Which explanation is best?',
             options: [
-              '1.22 atm',
-              '2.46 atm',
-              '4.92 atm',
-              '0.246 atm'
+              'Pentane forms hydrogen bonds with the C–H bonds of hexane',
+              'Pentane and hexane share the same kind of dispersion forces',
+              'Pentane is an ionic solid that dissolves only in nonpolar liquids',
+              'Water molecules are too large to surround pentane molecules'
             ],
             correctAnswer: 1,
-            explanation: '$n = 6.00/60.06 = 0.0999$ mol. $M = 0.0999/1.00 = 0.0999$ M. $T = 300$ K. $\\Pi = (1)(0.0999)(0.08206)(300) = 2.46$ atm.'
+            explanation: 'Pentane and hexane are both nonpolar, so the dispersion attractions between them are similar to those within each pure liquid and they mix easily. In water, pentane cannot offer attractions strong enough to replace water’s hydrogen bonds. Pentane has no O–H or N–H, so it cannot hydrogen bond, and it is molecular, not ionic.'
           },
           {
-            question: 'Osmotic pressure measurements are often used to determine the molar mass of large molecules (like proteins) because:',
+            question: 'Which change would most likely increase the solubility of a long-chain alcohol in water?',
             options: [
-              'Proteins dissolve only in nonpolar organic solvents',
-              'Even very dilute solutions give a measurable pressure',
-              'Proteins are strong electrolytes with large i values',
-              'Osmotic pressure does not depend on temperature'
+              'Lengthening its hydrocarbon chain',
+              'Replacing its O–H group with a C–H',
+              'Adding a second O–H group to the chain',
+              'Switching the solvent from water to hexane'
             ],
-            correctAnswer: 1,
-            explanation: 'Osmotic pressure is very sensitive — even very dilute solutions produce measurable pressures. For a 0.001 M solution at 25°C: $\\Pi = (1)(0.001)(0.08206)(298) = 0.024$ atm = 18 mmHg, which is easily measurable. Other colligative properties ($\\Delta T_f$, $\\Delta T_b$) would be too small to detect at such low concentrations.'
+            correctAnswer: 2,
+            explanation: 'A second O–H group gives the molecule another site for hydrogen bonding with water, increasing solute–water attractions. Lengthening the chain or removing the O–H makes the molecule more nonpolar and less water-soluble, and changing the solvent does not raise solubility in water.'
           }
         ]
       }

@@ -97,7 +97,7 @@ $$\\boxed{\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}}$$
         questions: [
           {
             question: 'What is the hybridization of carbon in $CO_{2}$?',
-            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'],
             correctAnswer: 0,
             explanation: 'Carbon in $CO_{2}$ has 2 double bonds = 2 electron domains. Steric number 2 → sp hybridization.'
           },
@@ -162,21 +162,21 @@ $$\\boxed{\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}}$$
           {
             id: 'hy-6-6-dd1',
             label: 'Hybridization of the sulfur atom in $SO_{2}$',
-            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'],
             correctIndex: 1,
             explanation: '$SO_{2}$: sulfur has 2 bonded atoms + 1 lone pair = 3 electron domains → $sp^{2}$.'
           },
           {
             id: 'hy-6-6-dd2',
             label: 'Hybridization of the carbon atom in $CS_{2}$',
-            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'],
             correctIndex: 0,
             explanation: '$CS_{2}$: carbon has 2 double bonds = 2 electron domains → sp hybridization. Similar structure to $CO_{2}$.'
           },
           {
             id: 'hy-6-6-dd3',
             label: 'Hybridization of the nitrogen atom in $NF_{3}$',
-            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'],
             correctIndex: 2,
             explanation: '$NF_{3}$: nitrogen has 3 bonds + 1 lone pair = 4 electron domains → $sp^{3}$.'
           },

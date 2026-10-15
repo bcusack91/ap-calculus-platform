@@ -12,7 +12,7 @@ export const chemReactionTypesPart6Data = {
 
 ### Practice Makes Perfect
 
-This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem asks you to classify a reaction as acid–base, redox, or precipitation, predict what forms, and write a balanced equation.
 
 > 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
 
@@ -20,7 +20,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 
 ### What You'll Master in Part 6
 - Working through complete multi-step problems from start to finish
-- Building problem-solving strategies you can apply on the AP exam
+- Justifying a classification with oxidation numbers or proton transfer
 - Identifying which concepts to apply and in what order`
     },
     {
@@ -31,27 +31,23 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 
 ### Step 1: Identify the Reaction Type
 
-> 💡 **Tip:** On the AP exam, quickly classify reactions by counting reactants/products and looking for $O_{2}$, free elements, or ionic compounds exchanging partners.
+> 💡 **Tip:** Check oxidation numbers first. If any change, the reaction is redox, even when an acid or an ionic solution is involved.
 
 | Clue | Reaction Type |
 |------|--------------|
-| Multiple reactants → one product | Synthesis |
-| One reactant → multiple products | Decomposition |
-| Element + compound → element + compound | Single replacement |
-| Two compounds → two new compounds | Double replacement |
-| Fuel + $O_{2}$ → $CO_{2}$ + $H_{2}O$ | Combustion |
+| Oxidation numbers change (often a free element on one side) | Redox |
+| A proton moves from one species to another | Acid–base |
+| Dissolved ions combine into an insoluble solid | Precipitation |
+| Fuel + $\\text{O}_2$ → $\\text{CO}_2$ + $\\text{H}_2\\text{O}$ | Redox (combustion) |
 
 
 ---
 
 ### Step 2: Predict Products
 
-Apply the rules for that reaction type:
-- Synthesis: combine to form one compound
-- Decomposition: break into simpler substances
-- Single replacement: check activity series, swap element
-- Double replacement: swap cations, check for driving force
-- Combustion: products are $CO_{2}$ + $H_{2}O$
+- **Redox:** the oxidized species becomes a cation (or higher oxidation state); the reduced species becomes an anion, a free metal, or $\\text{H}_2$
+- **Acid–base:** the acid becomes its conjugate base; the base becomes its conjugate acid
+- **Precipitation:** the insoluble new pairing forms the solid (all $\\text{Na}^+$, $\\text{K}^+$, $\\text{NH}_4^+$, and $\\text{NO}_3^-$ salts stay dissolved)
 
 
 ---
@@ -65,8 +61,63 @@ Use ion charges for ionic compounds. Don\'t forget subscripts!
 
 ### Step 4: Balance the Equation
 
-Use coefficients. Check every atom. Simplify to smallest whole numbers.
+Use coefficients. Check every atom, and for ionic equations check that the total charge is the same on both sides.
       `
+    },
+    {
+      id: 'rt6-classify-quiz',
+      type: 'multiple-choice' as const,
+      content: `
+**Classify and Analyze** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Classify: $2\\text{KI}(aq) + \\text{Pb(NO}_3)_2(aq) \\rightarrow \\text{PbI}_2(s) + 2\\text{KNO}_3(aq)$',
+            options: [
+              'Acid–base',
+              'Redox',
+              'Precipitation',
+              'Combustion'
+            ],
+            correctAnswer: 2,
+            explanation: 'Lead(II) and iodide ions leave solution as solid $\\text{PbI}_2$. Lead stays +2 and iodine stays −1, and no proton moves, so this is precipitation. Combustion would need $\\text{O}_2$ as a reactant.'
+          },
+          {
+            question: 'Classify: $2\\text{Li}(s) + 2\\text{H}_2\\text{O}(l) \\rightarrow 2\\text{LiOH}(aq) + \\text{H}_2(g)$',
+            options: [
+              'Acid–base, because water donates a proton',
+              'Redox, because lithium is oxidized and hydrogen is reduced',
+              'Precipitation, because lithium hydroxide forms',
+              'Acid–base, because hydroxide ions are produced'
+            ],
+            correctAnswer: 1,
+            explanation: 'Lithium goes from 0 to +1 and hydrogen goes from +1 to 0 in $\\text{H}_2$, so electrons are transferred: redox. The hydroxide product does not make it acid–base, and LiOH is dissolved, not a precipitate.'
+          },
+          {
+            question: 'Classify: $\\text{HC}_2\\text{H}_3\\text{O}_2(aq) + \\text{NH}_3(aq) \\rightarrow \\text{C}_2\\text{H}_3\\text{O}_2^-(aq) + \\text{NH}_4^+(aq)$',
+            options: [
+              'Acid–base',
+              'Redox',
+              'Precipitation',
+              'No reaction'
+            ],
+            correctAnswer: 0,
+            explanation: 'Acetic acid donates a proton to ammonia, which becomes ammonium. No oxidation number changes and no solid forms, so this is an acid–base reaction.'
+          },
+          {
+            question: 'Classify: $\\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2 \\rightarrow 6\\text{CO}_2 + 6\\text{H}_2\\text{O}$',
+            options: [
+              'Acid–base',
+              'Precipitation',
+              'Redox',
+              'No reaction'
+            ],
+            correctAnswer: 2,
+            explanation: 'Glucose reacts with oxygen gas to form $\\text{CO}_2$ and water: a combustion, which is a subclass of redox. Carbon is oxidized (average 0 → +4) and oxygen is reduced (0 → −2).'
+          }
+        ]
+      }
     },
     {
       id: 'rt6-worked-examples',
@@ -80,8 +131,8 @@ Use coefficients. Check every atom. Simplify to smallest whole numbers.
 
 > **Solution:**
 
-1. **Type:** Two elements combining → **Synthesis**
-2. **Product:** $Mg^{2+}$ + $N^{3-}$ → $Mg_{3}N_{2}$ (cross charges: 3 Mg, 2 N)
+1. **Type:** Mg goes from 0 to +2 and N from 0 to −3 → **Redox**
+2. **Product:** $\\text{Mg}^{2+}$ + $\\text{N}^{3-}$ → $\\text{Mg}_3\\text{N}_2$ (three +2 charges balance two −3 charges)
 3. **Balance:**
 
 $$\\boxed{3\\text{Mg} + \\text{N}_2 \\rightarrow \\text{Mg}_3\\text{N}_2}$$
@@ -91,14 +142,13 @@ $$\\boxed{3\\text{Mg} + \\text{N}_2 \\rightarrow \\text{Mg}_3\\text{N}_2}$$
 
 ### Example 2
 
-> **Problem:** $\\text{Fe} + \\text{AgNO}_3 \\rightarrow$ ?
+> **Problem:** An iron nail is placed in $\\text{AgNO}_3$ solution. Silver crystals form on the nail, and the iron dissolves as $\\text{Fe}^{2+}$.
 
 > **Solution:**
 
-1. **Type:** Element + compound → **Single replacement**
-2. **Activity series:** Fe is above Ag → reaction proceeds
-3. **Product:** Fe replaces Ag. Fe has charge +2 → $Fe(NO_{3})_{2}$ + Ag
-4. **Balance:**
+1. **Type:** Fe 0 → +2 (oxidized), Ag +1 → 0 (reduced) → **Redox**
+2. **Products:** $\\text{Fe(NO}_3)_2$ + Ag
+3. **Balance:** each Fe loses 2 electrons and each $\\text{Ag}^+$ gains 1, so two silver ions per iron atom:
 
 $$\\boxed{\\text{Fe} + 2\\text{AgNO}_3 \\rightarrow \\text{Fe(NO}_3)_2 + 2\\text{Ag}}$$
 
@@ -107,72 +157,16 @@ $$\\boxed{\\text{Fe} + 2\\text{AgNO}_3 \\rightarrow \\text{Fe(NO}_3)_2 + 2\\text
 
 ### Example 3
 
-> **Problem:** $\\text{Na}_2\\text{CO}_3 + \\text{CaCl}_2 \\rightarrow$ ?
+> **Problem:** $\\text{Na}_2\\text{CO}_3(aq) + \\text{CaCl}_2(aq) \\rightarrow$ ? (Calcium carbonate is insoluble.)
 
 > **Solution:**
 
-1. **Type:** Two ionic compounds → **Double replacement**
-2. **Swap:** $Na^{+}$ with $Cl^{-}$ → NaCl; $Ca^{2+}$ with $CO_{3}^{2-}$ → $CaCO_{3}$
-3. **Driving force:** $CaCO_{3}$ is insoluble → precipitate forms ✓
-4. **Balance:**
+1. **Type:** two ionic solutions; a new pairing is insoluble → **Precipitation**
+2. **Pairings:** $\\text{Na}^+$ with $\\text{Cl}^-$ → NaCl (soluble, a sodium salt); $\\text{Ca}^{2+}$ with $\\text{CO}_3^{2-}$ → $\\text{CaCO}_3$ (insoluble, given)
+3. **Balance:**
 
-$$\\boxed{\\text{Na}_2\\text{CO}_3 + \\text{CaCl}_2 \\rightarrow \\text{CaCO}_3\\downarrow + 2\\text{NaCl}}$$
+$$\\boxed{\\text{Na}_2\\text{CO}_3 + \\text{CaCl}_2 \\rightarrow \\text{CaCO}_3(s) + 2\\text{NaCl}}$$
       `
-    },
-    {
-      id: 'rt6-classify-quiz',
-      type: 'multiple-choice' as const,
-      content: `
-**Classify and Analyze** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Classify: $2\\text{KI} + \\text{Pb(NO}_3)_2 \\rightarrow \\text{PbI}_2 + 2\\text{KNO}_3$',
-            options: [
-              'Synthesis',
-              'Decomposition',
-              'Single replacement',
-              'Double replacement'
-            ],
-            correctAnswer: 3,
-            explanation: 'Two ionic compounds exchange ions: $K^{+}$ pairs with $NO_{3}^{-}$, and $Pb^{2+}$ pairs with $I^{-}$. The precipitate $PbI_{2}$ (yellow) drives the reaction. This is double replacement.'
-          },
-          {
-            question: 'Classify: $2\\text{Li} + 2\\text{H}_2\\text{O} \\rightarrow 2\\text{LiOH} + \\text{H}_2$',
-            options: [
-              'Synthesis',
-              'Decomposition',
-              'Single replacement',
-              'Double replacement'
-            ],
-            correctAnswer: 2,
-            explanation: 'An element (Li) reacts with a compound $(H_{2}O)$. Li replaces one of the hydrogen atoms in water. Element + compound → new compound + new element = single replacement.'
-          },
-          {
-            question: 'Classify: $\\text{CaO} + \\text{H}_2\\text{O} \\rightarrow \\text{Ca(OH)}_2$',
-            options: [
-              'Synthesis',
-              'Decomposition',
-              'Single replacement',
-              'Combustion'
-            ],
-            correctAnswer: 0,
-            explanation: 'Two reactants combine to form a single product. This is synthesis (combination). Metal oxide + water → metal hydroxide is a classic synthesis pattern.'
-          },
-          {
-            question: 'Classify: $\\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2 \\rightarrow 6\\text{CO}_2 + 6\\text{H}_2\\text{O}$',
-            options: [
-              'Synthesis',
-              'Double replacement',
-              'Decomposition',
-              'Combustion'
-            ],
-            correctAnswer: 3,
-            explanation: 'An organic compound reacts with $O_{2}$ to produce $CO_{2}$ and $H_{2}O$. This is the hallmark of combustion (specifically, the combustion of glucose).'
-          }
-        ]
-      }
     },
     {
       id: 'rt6-full-workflow-drill',
@@ -180,20 +174,20 @@ $$\\boxed{\\text{Na}_2\\text{CO}_3 + \\text{CaCl}_2 \\rightarrow \\text{CaCO}_3\
       content: `
 **Full Workflow Practice** 🧮
 
-Identify each reaction type. Type: **synthesis**, **decomposition**, **single**, **double**, or **combustion**.
+Identify each reaction type. Type **acid-base**, **redox**, or **precipitation**.
 
 **1)** $4\\text{Fe} + 3\\text{O}_2 \\rightarrow 2\\text{Fe}_2\\text{O}_3$
 
-**2)** $\\text{AgNO}_3 + \\text{NaCl} \\rightarrow \\text{AgCl} + \\text{NaNO}_3$
+**2)** $\\text{AgNO}_3(aq) + \\text{NaCl}(aq) \\rightarrow \\text{AgCl}(s) + \\text{NaNO}_3(aq)$
 
-**3)** $\\text{C}_2\\text{H}_6 + \\frac{7}{2}\\text{O}_2 \\rightarrow 2\\text{CO}_2 + 3\\text{H}_2\\text{O}$
+**3)** $\\text{HNO}_3(aq) + \\text{KOH}(aq) \\rightarrow \\text{KNO}_3(aq) + \\text{H}_2\\text{O}(l)$
       `,
       exercise: {
-        questions: [{ question: '(1)', answer: 'synthesis', acceptableAnswers: ['synthesis', 'combination'] }, { question: '(2)', answer: 'double', acceptableAnswers: ['double', 'double replacement', 'double displacement'] }, { question: '(3)', answer: 'combustion', acceptableAnswers: ['combustion'] }],
-        hint1: 'Two elements combine into one compound.',
-        hint2: 'Two ionic compounds swap their ions.',
-        hint3: 'A hydrocarbon reacting with $O_{2}$ to produce $CO_{2}$ + $H_{2}O$.',
-        explanation: '1) Synthesis: $4\\text{Fe} + 3\\text{O}_2 \\rightarrow 2\\text{Fe}_2\\text{O}_3$ — two elements combine into one product. 2) Double replacement: $AgNO_{3}$ + NaCl → AgCl↓ + $NaNO_{3}$ — ions swap partners. 3) Combustion: $C_{2}H_{6}$ + $O_{2}$ → $CO_{2}$ + $H_{2}O$ — hydrocarbon burns in oxygen.'
+        questions: [{ question: '(1)', answer: 'redox', acceptableAnswers: ['redox', 'oxidation-reduction', 'oxidation reduction'] }, { question: '(2)', answer: 'precipitation', acceptableAnswers: ['precipitation', 'precipitate'] }, { question: '(3)', answer: 'acid-base', acceptableAnswers: ['acid-base', 'acid base', 'acid–base', 'neutralization'] }],
+        hint1: 'Iron starts as a free element and ends as $\\text{Fe}^{3+}$.',
+        hint2: 'Silver and chloride ions leave solution as a solid.',
+        hint3: '$\\text{H}^+$ from the acid combines with $\\text{OH}^-$.',
+        explanation: '1) Redox: iron is oxidized (0 → +3) and oxygen is reduced (0 → −2). 2) Precipitation: $\\text{Ag}^+$ and $\\text{Cl}^-$ form solid AgCl; sodium and nitrate stay dissolved. 3) Acid–base: a proton transfers from the acid to hydroxide, forming water.'
       }
     },
     {
@@ -205,7 +199,7 @@ Identify each reaction type. Type: **synthesis**, **decomposition**, **single**,
       exercise: {
         questions: [
           {
-            question: 'Predict and balance: $\\text{Zn} + \\text{HCl} \\rightarrow$ ? (Zn is above H in activity series)',
+            question: 'Zinc metal dissolves in hydrochloric acid, releasing a gas. Which balanced equation is correct?',
             options: [
               '$\\text{Zn} + \\text{HCl} \\rightarrow \\text{ZnCl} + \\text{H}_2$',
               '$\\text{Zn} + 2\\text{HCl} \\rightarrow \\text{ZnCl}_2 + \\text{H}_2$',
@@ -213,18 +207,18 @@ Identify each reaction type. Type: **synthesis**, **decomposition**, **single**,
               '$\\text{Zn} + \\text{HCl} \\rightarrow \\text{ZnCl}_2 + \\text{H}$'
             ],
             correctAnswer: 1,
-            explanation: 'Single replacement: Zn (charge +2) replaces H. Products: $ZnCl_{2}$ + $H_{2}$. Balanced: $\\text{Zn} + 2\\text{HCl} \\rightarrow \\text{ZnCl}_2 + \\text{H}_2$. Zn: 1=1 ✓, H: 2=2 ✓, Cl: 2=2 ✓.'
+            explanation: 'Zinc is oxidized to $\\text{Zn}^{2+}$, which pairs with two chloride ions, and $\\text{H}^+$ is reduced to $\\text{H}_2$. Balanced: $\\text{Zn} + 2\\text{HCl} \\rightarrow \\text{ZnCl}_2 + \\text{H}_2$. Zn: 1=1 ✓, H: 2=2 ✓, Cl: 2=2 ✓.'
           },
           {
-            question: 'Predict and balance: $\\text{Li}_2\\text{O} + \\text{H}_2\\text{O} \\rightarrow$ ?',
+            question: 'Which net ionic equation represents the reaction of aqueous ammonia with hydrochloric acid?',
             options: [
-              '$\\text{Li}_2\\text{O} + \\text{H}_2\\text{O} \\rightarrow \\text{LiOH}$',
-              '$\\text{Li}_2\\text{O} + \\text{H}_2\\text{O} \\rightarrow 2\\text{LiOH}$',
-              '$\\text{Li}_2\\text{O} + \\text{H}_2\\text{O} \\rightarrow \\text{LiOH}_2$',
-              '$\\text{Li}_2\\text{O} + 2\\text{H}_2\\text{O} \\rightarrow 2\\text{LiOH}$'
+              '$\\text{NH}_3(aq) + \\text{H}^+(aq) \\rightarrow \\text{NH}_4^+(aq)$',
+              '$\\text{NH}_4^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{NH}_3(aq) + \\text{H}_2\\text{O}(l)$',
+              '$\\text{H}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{H}_2\\text{O}(l)$',
+              '$\\text{NH}_3(aq) + \\text{Cl}^-(aq) \\rightarrow \\text{NH}_3\\text{Cl}^-(aq)$'
             ],
-            correctAnswer: 1,
-            explanation: 'Synthesis: Metal oxide + water → metal hydroxide. $Li_{2}O$ + $H_{2}O$ → 2LiOH. Li: 2=2 ✓, O: 1+1=2 and 2(1)=2 ✓, H: 2=2 ✓. Writing just LiOH leaves Li, O and H unbalanced.'
+            correctAnswer: 0,
+            explanation: 'Ammonia is a weak base, written intact, and it accepts a proton from the strong acid to become ammonium; chloride is a spectator. There is no hydroxide in the reaction mixture to start with, so the $\\text{H}^+ + \\text{OH}^-$ equation does not apply.'
           }
         ]
       }
@@ -238,27 +232,27 @@ Identify each reaction type. Type: **synthesis**, **decomposition**, **single**,
       exercise: {
         dropdowns: [
           {
-            label: 'The first step in predicting products is to',
-            options: ['balance the equation', 'identify the reaction type', 'calculate molar mass', 'determine the state of matter']
+            label: 'The most reliable first check when classifying a reaction is',
+            options: ['counting the reactants', 'looking for oxidation-number changes', 'calculating molar masses', 'checking the state of matter']
           },
           {
-            label: 'If an element and a compound are the reactants, the reaction is likely',
-            options: ['synthesis', 'decomposition', 'single replacement', 'combustion']
+            label: 'A reaction between a metal and a nonmetal element is classified as',
+            options: ['acid–base', 'precipitation', 'redox', 'no reaction']
           },
           {
-            label: 'The reaction $Na_{2}O$ + $H_{2}O$ → 2NaOH is classified as',
-            options: ['decomposition', 'double replacement', 'synthesis', 'neutralization']
+            label: 'In an acid–base reaction, the species that accepts the proton is the',
+            options: ['acid', 'base', 'spectator', 'precipitate']
           },
           {
             label: 'After predicting products, the final step is to',
             options: ['identify the reaction type again', 'balance the equation', 'add a catalyst', 'determine the color']
           }
         ],
-        correctAnswers: ['identify the reaction type', 'single replacement', 'synthesis', 'balance the equation'],
-        hint1: 'You need to know the pattern before applying it.',
-        hint2: 'Element + compound → new compound + new element.',
-        hint3: 'Two reactants forming one product.',
-        explanation: 'First identify the type, then predict products using the pattern, then balance. Element + compound = single replacement. Two reactants → one product = synthesis. The final step is always to balance the equation.'
+        correctAnswers: ['looking for oxidation-number changes', 'redox', 'base', 'balance the equation'],
+        hint1: 'An acid can be present in a redox reaction, so check for electron transfer first.',
+        hint2: 'The metal loses electrons to the nonmetal.',
+        hint3: 'Brønsted–Lowry: donor = acid, acceptor = ?',
+        explanation: 'Checking oxidation numbers first catches redox reactions that happen to involve acids or ions. Metal + nonmetal is electron transfer, so it is redox. The proton acceptor is the base. The final step is always to balance the equation.'
       }
     },
     {
@@ -270,26 +264,26 @@ Identify each reaction type. Type: **synthesis**, **decomposition**, **single**,
       exercise: {
         questions: [
           {
-            question: 'A student adds a piece of copper wire to a solution of silver nitrate. Blue crystals of $Cu(NO_{3})_{2}$ form and silver metal deposits. This reaction is:',
+            question: 'A student adds a piece of copper wire to a solution of silver nitrate. The solution turns blue as $\\text{Cu}^{2+}$ forms, and silver metal deposits. Which statement is correct?',
             options: [
-              'Synthesis',
-              'Double replacement',
-              'Single replacement',
-              'Decomposition'
-            ],
-            correctAnswer: 2,
-            explanation: '$\\text{Cu} + 2\\text{AgNO}_3 \\rightarrow \\text{Cu(NO}_3)_2 + 2\\text{Ag}$. A free element (Cu) replaces another element (Ag) in a compound. This is single replacement. Cu is above Ag in the activity series.'
-          },
-          {
-            question: 'When potassium chlorate $(KClO_{3})$ is heated, it decomposes. The products are:',
-            options: [
-              'K + $Cl_{2}$ + $O_{2}$',
-              'KCl + $O_{2}$',
-              '$K_{2}O$ + $ClO_{2}$',
-              'KClO + $O_{2}$'
+              'Copper is reduced and silver ions are oxidized',
+              'Copper is oxidized and silver ions are reduced',
+              'Silver nitrate precipitates as the copper dissolves',
+              'Nitrate ions donate protons to the copper metal'
             ],
             correctAnswer: 1,
-            explanation: 'Metal chlorates decompose into metal chloride + oxygen gas: $2\\text{KClO}_3 \\xrightarrow{\\Delta} 2\\text{KCl} + 3\\text{O}_2$. This is a standard decomposition pattern.'
+            explanation: '$\\text{Cu} + 2\\text{Ag}^+ \\rightarrow \\text{Cu}^{2+} + 2\\text{Ag}$. Copper goes from 0 to +2 (loses electrons, oxidized) and silver goes from +1 to 0 (gains electrons, reduced). Silver nitrate is soluble, and nitrate has no proton to donate.'
+          },
+          {
+            question: 'Aqueous sodium hydroxide is added to aqueous magnesium chloride, and a white solid forms. What is the solid, and what type of reaction is this?',
+            options: [
+              'NaCl; precipitation',
+              '$\\text{Mg(OH)}_2$; precipitation',
+              '$\\text{Mg(OH)}_2$; redox',
+              'MgOH; acid–base'
+            ],
+            correctAnswer: 1,
+            explanation: 'Sodium chloride is soluble (a sodium salt), so the solid must be magnesium hydroxide. $\\text{Mg}^{2+}$ needs two $\\text{OH}^-$, giving $\\text{Mg(OH)}_2$. No oxidation number changes and no proton moves, so this is precipitation.'
           }
         ]
       }

@@ -63,33 +63,45 @@ The ideal gas law works well under many conditions, but **real gases** deviate f
       id: 'gl7-van-der-waals',
       type: 'text' as const,
       content: `
-## 📌 The van der Waals Equation
+## 📌 Explaining Deviations at the Particle Level
 
-To correct for real gas behavior:
-
-$$\\boxed{\\left(P + \\frac{an^2}{V^2}\\right)(V - nb) = nRT}$$
-
-| Correction | Term | What It Fixes |
-|-----------|------|---------------|
-| Pressure correction | $+an^2/V^2$ | Accounts for intermolecular attractions reducing observed pressure |
-| Volume correction | $-nb$ | Accounts for the finite volume occupied by gas molecules |
-
-- $a$ = attraction parameter (larger for polar molecules with strong IMFs)
-- $b$ = size parameter (larger for bigger molecules)
+The AP exam asks you to explain **why** a real gas departs from $PV = nRT$ and in **which direction**. Two effects matter.
 
 
 ---
 
-### Example Values
+### Effect 1: Attractions Lower the Pressure
 
-| Gas | $a$ $(L^{2}\\cdot atm/mol^{2})$ | $b$ (L/mol) |
-|-----|-------------------|-------------|
-| He | 0.034 | 0.024 |
-| $N_{2}$ | 1.39 | 0.039 |
-| $CO_{2}$ | 3.59 | 0.043 |
-| $H_{2}O$ | 5.46 | 0.031 |
+When particles attract each other, a particle about to strike the wall is pulled back slightly by its neighbors. Collisions with the wall are softer and a little less frequent, so:
 
-Notice: $H_{2}O$ has a large $a$ (strong H-bonds) but small $b$ (small molecule). He has tiny values for both (noble gas, very small).
+$$P_{\\text{real}} < P_{\\text{ideal}}$$
+
+This effect is largest at **low temperature** (slow particles are affected more by attractions) and for gases with **strong IMFs** (polar molecules, hydrogen bonding, or large, polarizable molecules).
+
+
+---
+
+### Effect 2: Particle Volume Raises the Volume
+
+The ideal gas law treats particles as points. Real particles take up space, so the space actually available for motion is smaller than the container. At **very high pressure**, where particles are crowded together, this means:
+
+$$V_{\\text{real}} > V_{\\text{ideal}}$$
+
+for the same $n$, $P$, and $T$. The gas cannot be squeezed as small as an ideal gas would be.
+
+
+---
+
+### Comparing Gases
+
+| Gas | IMFs | Particle Size | Expected Deviation |
+|-----|------|---------------|-------------------|
+| He | Very weak dispersion | Very small | Smallest |
+| $N_{2}$ | Weak dispersion | Small | Small |
+| $CO_{2}$ | Stronger dispersion (more electrons) | Larger | Larger |
+| $H_{2}O$ vapor, $NH_{3}$ | Hydrogen bonding | Small | Large, especially near condensation |
+
+> 💡 **Tip:** On a free-response question, name the specific assumption that fails ("the particles attract one another" or "the particles' own volume is not negligible") and connect it to the direction of the deviation.
       `
     },
     {
@@ -112,15 +124,15 @@ Notice: $H_{2}O$ has a large $a$ (strong H-bonds) but small $b$ (small molecule)
             explanation: '$NH_{3}$ is a polar molecule that can form hydrogen bonds, giving it strong intermolecular forces. Noble gases (He, Ne) and $H_{2}$ have very weak London forces, so they behave more ideally.'
           },
           {
-            question: 'In the van der Waals equation, the "$a$" parameter corrects for:',
+            question: 'At low temperature, the measured pressure of $NH_{3}$ gas is lower than the ideal gas law predicts. Which factor best explains this?',
             options: [
-              'The finite volume of gas molecules',
-              'Intermolecular attractive forces',
-              'Energy lost in non-elastic collisions',
+              'The finite volume of the $NH_{3}$ molecules',
+              'Attractions between $NH_{3}$ molecules',
+              'Energy lost in non-elastic wall collisions',
               'The spread of molecular speeds in the gas'
             ],
             correctAnswer: 1,
-            explanation: 'The $a$ parameter corrects for intermolecular attractions. These attractions pull molecules toward each other, reducing the observed pressure below what the ideal gas law predicts. The term $an^2/V^2$ is added back to the measured pressure.'
+            explanation: 'Hydrogen bonding between $NH_{3}$ molecules pulls particles back as they approach the wall, so wall collisions are softer and less frequent and the measured pressure falls below the ideal value. Particle volume would push the deviation the other way, and collisions in a gas are treated as elastic.'
           },
           {
             question: 'At very high pressures, the measured volume of a real gas is typically:',
@@ -131,7 +143,7 @@ Notice: $H_{2}O$ has a large $a$ (strong H-bonds) but small $b$ (small molecule)
               'Close to zero, because the gas compresses completely'
             ],
             correctAnswer: 1,
-            explanation: 'At very high pressures, the finite volume of molecules becomes significant ($nb$ term). This means the real gas cannot be compressed as much as an ideal gas would, so the actual volume is greater than predicted.'
+            explanation: 'At very high pressures, the finite volume of the molecules themselves becomes significant. This means the real gas cannot be compressed as much as an ideal gas would, so the actual volume is greater than predicted.'
           }
         ]
       }
@@ -144,9 +156,9 @@ Notice: $H_{2}O$ has a large $a$ (strong H-bonds) but small $b$ (small molecule)
 
 **1)** 0.500 mol of an ideal gas at 1.00 atm and 273 K occupies what volume? (in L, to 3 significant figures)
 
-**2)** A real gas has $a = 3.59$ $L^{2}\\cdot atm/mol^{2}$ and $b = 0.043$ L/mol. For 1.00 mol in a 0.500 L container at 500 K, calculate the ideal gas pressure first: $P_{\\text{ideal}} = nRT/V$. (in atm, to 3 significant figures)
+**2)** For 1.00 mol of gas in a 0.500 L container at 500 K, what pressure does the ideal gas law predict? (in atm, to 3 significant figures)
 
-**3)** What is the corrected van der Waals pressure for the same gas? Use $P = nRT/(V-nb) - an^2/V^2$. (in atm, to 3 significant figures)
+**3)** A gas has a density of 1.25 g/L at 273 K and 1.00 atm. What is its molar mass? (in g/mol, to 3 significant figures)
       `,
       exercise: {
         inputs: [
@@ -158,12 +170,12 @@ Notice: $H_{2}O$ has a large $a$ (strong H-bonds) but small $b$ (small molecule)
           {
             label: 'Ideal pressure (atm)',
             correctAnswer: '82.1',
-            explanation: '$P_{\\text{ideal}} = nRT/V = (1.00)(0.0821)(500)/(0.500) = 82.1$ atm.'
+            explanation: '$P_{\\text{ideal}} = nRT/V = (1.00)(0.0821)(500)/(0.500) = 82.1$ atm. A real gas this compressed would deviate noticeably from this value.'
           },
           {
-            label: 'van der Waals pressure (atm)',
-            correctAnswer: '75.5',
-            explanation: '$P = nRT/(V-nb) - an^2/V^2 = (1.00)(0.0821)(500)/(0.500-0.043) - (3.59)(1.00)^2/(0.500)^2 = 41.05/0.457 - 14.36 = 89.8 - 14.4 = 75.5$ atm. The real pressure is lower due to intermolecular attractions.'
+            label: 'Molar mass (g/mol)',
+            correctAnswer: '28.0',
+            explanation: '$M = dRT/P = (1.25)(0.0821)(273)/1.00 = 28.0$ g/mol, consistent with $N_{2}$ or CO.'
           }
         ]
       }
@@ -192,17 +204,17 @@ Notice: $H_{2}O$ has a large $a$ (strong H-bonds) but small $b$ (small molecule)
           },
           {
             id: 'gl7-dd3',
-            label: 'A gas with strong intermolecular forces has a ___',
-            options: ['large a value', 'small a value', 'a = 0'],
+            label: 'Attractions between gas particles make the measured pressure ___ the ideal prediction',
+            options: ['lower than', 'higher than', 'equal to'],
             correctIndex: 0,
-            explanation: 'Strong intermolecular forces (like hydrogen bonding in $H_{2}O$ or $NH_{3}$) correspond to a large $a$ value in the van der Waals equation.'
+            explanation: 'Attractions pull particles back as they approach the wall, so collisions are softer and less frequent. The measured pressure is lower than the ideal value.'
           },
           {
             id: 'gl7-dd4',
-            label: 'A gas with larger molecules has a ___',
-            options: ['large b value', 'small b value', 'b = 0'],
+            label: 'At very high pressure, the volume of the particles themselves makes the measured volume ___ the ideal prediction',
+            options: ['larger than', 'smaller than', 'equal to'],
             correctIndex: 0,
-            explanation: 'Larger molecules occupy more physical volume, corresponding to a larger $b$ value in the van der Waals equation.'
+            explanation: 'Real particles occupy space, so a crowded gas cannot be compressed as far as an ideal gas. The measured volume is larger than the ideal value.'
           }
         ]
       }
@@ -249,26 +261,15 @@ Notice: $H_{2}O$ has a large $a$ (strong H-bonds) but small $b$ (small molecule)
             explanation: '$NH_{3}$ has strong hydrogen bonding (large intermolecular forces), and at low T and high P, molecules are close together and slow-moving. This maximizes deviation from ideal behavior.'
           },
           {
-            question: 'In the van der Waals equation $(P + a(n/V)^2)(V - nb) = nRT$, the "a" term corrects for:',
+            question: 'Which gas would show the LARGEST deviation from ideal behavior at 1 atm and 300 K?',
             options: [
-              'Molecular volume',
-              'Intermolecular attractive forces',
-              'Non-elastic collisions',
-              'Temperature-dependent behavior'
+              'He',
+              '$N_{2}$',
+              '$CH_{4}$',
+              '$SO_{2}$'
             ],
-            correctAnswer: 1,
-            explanation: 'The "a" correction accounts for intermolecular attractions that reduce the observed pressure compared to ideal behavior.'
-          },
-          {
-            question: 'In the van der Waals equation, the "b" term corrects for:',
-            options: [
-              'Attractions between neighboring molecules',
-              'Kinetic energy lost in inelastic collisions',
-              'The physical volume of gas molecules',
-              'The way pressure changes with temperature'
-            ],
-            correctAnswer: 2,
-            explanation: 'The "b" term subtracts the volume occupied by the gas molecules themselves, correcting for the fact that real molecules have nonzero volume.'
+            correctAnswer: 3,
+            explanation: '$SO_{2}$ is a polar molecule with many electrons, so it has the strongest intermolecular attractions of the four and the largest particle size. He, $N_{2}$, and $CH_{4}$ are nonpolar with weaker dispersion forces.'
           },
           {
             question: 'A 5.00 L flask contains 0.200 mol of gas at 300 K. The gas is heated to 600 K in the sealed flask. The final pressure is:',
@@ -301,18 +302,7 @@ Notice: $H_{2}O$ has a large $a$ (strong H-bonds) but small $b$ (small molecule)
               'Sometimes greater, sometimes less'
             ],
             correctAnswer: 0,
-            explanation: 'At very high pressures, the finite volume of the gas molecules themselves becomes significant. The "b" correction in the van der Waals equation means the actual volume exceeds the ideal prediction.'
-          },
-          {
-            question: 'The compressibility factor $Z = PV/(nRT)$ is exactly 1.0 for:',
-            options: [
-              'All real gases at any conditions',
-              'An ideal gas only',
-              'Any gas measured at STP',
-              'Any gas at high pressure'
-            ],
-            correctAnswer: 1,
-            explanation: 'For an ideal gas, $PV = nRT$ exactly, so $Z = 1.0$. Real gases have $Z \\neq 1$ due to intermolecular forces and molecular volume.'
+            explanation: 'At very high pressures, the finite volume of the gas molecules themselves becomes significant. Because the particles take up space that the ideal gas law ignores, the actual volume exceeds the ideal prediction.'
           },
           {
             question: 'On the AP Chemistry exam, a student is given P in kPa, V in L, T in K, and is asked to find n. Which value of R should they use?',

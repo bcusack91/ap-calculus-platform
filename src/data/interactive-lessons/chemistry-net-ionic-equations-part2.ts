@@ -18,7 +18,7 @@ export const chemNetIonicEquationsPart2Data = {
 | What Gets Split into Ions? |
 | The Six Strong Acids (memorize these!) |
 | Strong Bases |
-| 📏 Solubility Rules |
+| 📏 Solubility on the AP Exam |
 
 > 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
@@ -73,34 +73,32 @@ $$\\boxed{\\text{LiOH, NaOH, KOH, Ca(OH)}_2\\text{, Sr(OH)}_2\\text{, Ba(OH)}_2}
       id: 'ni2-solubility-rules',
       type: 'text' as const,
       content: `
-## 📏 Solubility Rules
+## 📏 Solubility on the AP Exam
 
-To determine if an ionic compound is $(aq)$ or $(s)$, use the solubility rules:
-
-
----
-
-### Generally Soluble (aqueous)
-
-| Ion | Exception |
-|-----|-----------|
-| $Na^{+}$, $K^{+}$, $NH_{4}^{+}$ | No exceptions — always soluble |
-| $NO_{3}^{-}$ (nitrate) | No exceptions |
-| $CH_{3}COO^{-}$ (acetate) | No exceptions |
-| $Cl^{-}$, $Br^{-}$, $I^{-}$ | Except with $Ag^{+}$, $Pb^{2+}$, $Hg_{2}^{2+}$ |
-| $SO_{4}^{2-}$ | Except with $Ba^{2+}$, $Pb^{2+}$, $Ca^{2+}$, $Sr^{2+}$ |
+To decide whether an ionic compound is written $(aq)$ and split into ions, or $(s)$ and kept whole, you need to know whether it dissolves.
 
 
 ---
 
-### Generally Insoluble (solid precipitate)
+### The One Rule to Memorize
 
-| Ion | Exception |
-|-----|-----------|
-| $OH^{-}$ | Except with Group 1 metals, $Ba^{2+}$, $Sr^{2+}$, $Ca^{2+}$ (slightly) |
-| $S^{2-}$ | Except with Group 1 metals, $NH_{4}^{+}$ |
-| $CO_{3}^{2-}$ | Except with Group 1 metals, $NH_{4}^{+}$ |
-| $PO_{4}^{3-}$ | Except with Group 1 metals, $NH_{4}^{+}$ |
+> 🔑 **Key Concept:** All **sodium** $(\\text{Na}^+)$, **potassium** $(\\text{K}^+)$, **ammonium** $(\\text{NH}_4^+)$, and **nitrate** $(\\text{NO}_3^-)$ salts are soluble in water (CED 4.7.A.5).
+
+| Compound | Contains | Soluble? |
+|----------|----------|----------|
+| $\\text{Na}_2\\text{CO}_3$ | $\\text{Na}^+$ | Yes, always |
+| $\\text{NH}_4\\text{Cl}$ | $\\text{NH}_4^+$ | Yes, always |
+| $\\text{Pb(NO}_3)_2$ | $\\text{NO}_3^-$ | Yes, always |
+| $\\text{AgCl}$, $\\text{BaSO}_4$, $\\text{Fe(OH)}_3$ | none of the four | Not covered by the rule; the question will say |
+
+
+---
+
+### Everything Else Is Given
+
+For any compound outside those four groups, an AP question supplies the information: a statement such as "lead(II) iodide is insoluble," a $K_{sp}$ value, a description of a solid forming, or a particulate diagram showing ions bound in a lattice. Use what the question gives you rather than a memorized list.
+
+> 💡 **Tip:** The rule is most powerful for **elimination**. A sodium, potassium, ammonium, or nitrate salt can never be the precipitate, so in many mixtures only one pairing is left as the possible solid.
 
 
 ---
@@ -168,7 +166,7 @@ $$\\boxed{\\text{Ag}^+(aq) + \\text{NO}_3^-(aq) + \\text{Na}^+(aq) + \\text{Cl}^
             explanation: 'NaOH(aq) is a strong base dissolved in water — a strong electrolyte that fully dissociates into $Na^{+}(aq)$ and $OH^{-}(aq)$. AgCl(s) is a solid, $H_{2}O(l)$ is a liquid, and $CH_{3}COOH$ is a weak acid — none of these are split.'
           },
           {
-            question: 'According to solubility rules, which compound is INSOLUBLE?',
+            question: 'One of these compounds is insoluble in water. Using the AP solubility rule, which one must it be?',
             options: [
               'NaCl',
               '$KNO_{3}$',
@@ -176,7 +174,7 @@ $$\\boxed{\\text{Ag}^+(aq) + \\text{NO}_3^-(aq) + \\text{Na}^+(aq) + \\text{Cl}^
               '$NH_{4}Br$'
             ],
             correctAnswer: 2,
-            explanation: '$BaSO_{4}$ is insoluble — sulfate is generally soluble EXCEPT with $Ba^{2+}$, $Pb^{2+}$, $Ca^{2+}$, and $Sr^{2+}$. NaCl, $KNO_{3}$, and $NH_{4}Br$ are all soluble.'
+            explanation: 'NaCl is a sodium salt, $KNO_{3}$ is a potassium (and nitrate) salt, and $NH_{4}Br$ is an ammonium salt, so all three are guaranteed soluble. Only $BaSO_{4}$ falls outside the rule, so it must be the insoluble one.'
           },
           {
             question: 'When writing $Ca(OH)_{2}(aq)$ in a complete ionic equation, it becomes:',
@@ -193,26 +191,26 @@ $$\\boxed{\\text{Ag}^+(aq) + \\text{NO}_3^-(aq) + \\text{Na}^+(aq) + \\text{Cl}^
       }
     },
     {
-      id: 'ni2-solubility-drill',
+      id: 'ni2-ion-count-drill',
       type: 'input-boxes' as const,
       content: `
-**Solubility Predictions** 🧮
+**Counting Ions in Solution** 🧮
 
-For each ionic compound, type **soluble** or **insoluble**.
+Each compound below is soluble. Enter the **total number of ions** that one formula unit produces when it dissolves (the number you would write in a complete ionic equation).
 
-**1)** $PbCl_{2}$
+**1)** $\\text{Na}_2\\text{CO}_3$
 
-**2)** $Na_{2}CO_{3}$
+**2)** $\\text{Al(NO}_3)_3$
 
-**3)** $Fe(OH)_{3}$
+**3)** $(\\text{NH}_4)_2\\text{SO}_4$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['insoluble', 'soluble', 'insoluble'],
-        hint1: 'Chlorides are generally soluble, but $Pb^{2+}$ is one of the exceptions.',
-        hint2: 'Carbonates are generally insoluble, but $Na^{+}$ is an exception.',
-        hint3: 'Hydroxides are generally insoluble. Is Fe a Group 1 metal or Ba/Sr/Ca?',
-        explanation: '1) $PbCl_{2}$ — $Cl^{-}$ is soluble EXCEPT with $Ag^{+}$, $Pb^{2+}$, $Hg_{2}^{2+}$ → insoluble. 2) $Na_{2}CO_{3}$ — $CO_{3}^{2-}$ is insoluble EXCEPT with Group 1 and $NH_{4}^{+}$. $Na^{+}$ is Group 1 → soluble. 3) $Fe(OH)_{3}$ — $OH^{-}$ is insoluble except with Group 1 and Ba/Sr/Ca. Fe is not in those exceptions → insoluble.'
+        correctAnswers: ['3', '4', '3'],
+        hint1: 'Two sodium ions and one carbonate ion.',
+        hint2: 'One aluminum ion and three nitrate ions; the nitrate ion stays together as one ion.',
+        hint3: 'Two ammonium ions and one sulfate ion.',
+        explanation: '1) $\\text{Na}_2\\text{CO}_3 \\rightarrow 2\\text{Na}^+ + \\text{CO}_3^{2-}$: 3 ions. 2) $\\text{Al(NO}_3)_3 \\rightarrow \\text{Al}^{3+} + 3\\text{NO}_3^-$: 4 ions. 3) $(\\text{NH}_4)_2\\text{SO}_4 \\rightarrow 2\\text{NH}_4^+ + \\text{SO}_4^{2-}$: 3 ions. Polyatomic ions stay intact; they are never split into their atoms.'
       }
     },
     {

@@ -18,7 +18,7 @@ export const chemAtomicSpectraPart5Data = {
 | 📌 Effective Nuclear Charge |
 | Subshell Splitting |
 | 🔑 Connection to PES |
-| What the Bohr Model Misses |
+| What a One-Electron Picture Misses |
 
 > 🔑 **Big idea:** The Bohr model handles hydrogen perfectly but breaks down for atoms with more than one electron. The energies depend not only on $n$ but also on the subshell ($s, p, d, f$). **Photoelectron spectroscopy (PES)** measures these energies directly.`
     },
@@ -38,7 +38,7 @@ The result: within a given shell $n$, the subshells split:
 
 $$E_{ns} < E_{np} < E_{nd} < E_{nf}$$
 
-That is why the emission spectrum of, say, sodium has many more lines than hydrogen — and why those lines do **not** match the Rydberg formula exactly.
+That is why the emission spectrum of, say, sodium has many more lines than hydrogen, and why hydrogen\'s energy-level values cannot be reused for any other element.
       `
     },
     {
@@ -89,19 +89,17 @@ Together, emission spectra and PES give a complete picture of the electronic str
       id: 'as5-bohr-limits',
       type: 'text' as const,
       content: `
-## ⚠️ What the Bohr Model Doesn't Explain
+## ⚠️ What a One-Electron Picture Can't Explain
 
-The Bohr model is a brilliant first step, but it cannot account for:
+A model built for hydrogen (one electron, one proton) works well for hydrogen but cannot account for:
 
-| Phenomenon | Why Bohr fails |
-|------------|---------------|
-| Spectra of multi-electron atoms | Ignores electron–electron interactions |
-| Splitting of lines into close pairs (e.g., Na D-doublet) | No spin-orbit coupling |
-| Different intensities of different lines | No probability/wavefunction concept |
-| Bonding & molecular spectra | Treats electrons as planets, not waves |
-| The Heisenberg uncertainty principle | Defines exact orbits |
+| Phenomenon | Why a one-electron picture fails |
+|------------|----------------------------------|
+| Spectra of multi-electron atoms | Ignores electron–electron repulsion and shielding |
+| Different energies for s, p, d subshells in the same shell | Treats every level in a shell as one energy |
+| PES spectra with several peaks per shell | Predicts one energy per shell instead of one per subshell |
 
-The full **quantum-mechanical model** (Schrödinger, 1926) replaces orbits with **orbitals** (probability clouds), introduces four quantum numbers ($n, \\ell, m_\\ell, m_s$), and explains all of the above.
+The modern model replaces fixed orbits with **orbitals** (regions where an electron is likely to be found) and explains subshell energies, which PES confirms experimentally.
       `
     },
     {
@@ -133,15 +131,15 @@ The full **quantum-mechanical model** (Schrödinger, 1926) replaces orbits with 
             explanation: '1s electrons are closest to the nucleus and are barely shielded, so they experience nearly the full nuclear charge — the largest binding energy. In carbon ($1s^{2}$ $2s^{2}$ $2p^{2}$) the 1s and 2s subshells each hold 2 electrons.'
           },
           {
-            question: 'Which is a major limitation of the Bohr model?',
+            question: 'What is a major limitation of a model built only for hydrogen\'s single electron?',
             options: [
               'It treats the electron only as a spread-out standing wave',
-              'It cannot predict the wavelengths of hydrogen\'s spectrum',
+              'It cannot account for hydrogen\'s spectral lines',
               'It cannot accurately describe multi-electron atoms',
               'It violates conservation of energy during transitions'
             ],
             correctAnswer: 2,
-            explanation: 'The Bohr model only works well for hydrogen and other one-electron systems ($He^{+}$, $Li^{2+}$, etc.).'
+            explanation: 'A one-electron picture ignores electron–electron repulsion and shielding, so it fails for atoms with two or more electrons, even though it reproduces hydrogen\'s line spectrum.'
           }
         ]
       }
@@ -156,15 +154,15 @@ The full **quantum-mechanical model** (Schrödinger, 1926) replaces orbits with 
 
 **2)** In hydrogen, the binding energy of the 1s electron is $2.18 \\times 10^{-18}$ J. What minimum photon wavelength (in nm, nearest whole) is needed to ionize hydrogen from the ground state?
 
-**3)** For a one-electron ion, energies scale as $Z^2$. The ionization energy of $\\text{Li}^{2+}$ ($Z = 3$) is how many times larger than that of H ($Z = 1$)?
+**3)** Convert the 1s binding energy of hydrogen, $2.18 \\times 10^{-18}$ J per atom, to kJ/mol. (Nearest whole number.)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.50', '91', '9'],
+        correctAnswers: ['2.50', '91', '1313'],
         hint1: '$BE = h\\nu - KE = 1.00 \\times 10^{-15} - 7.50 \\times 10^{-16}$.',
         hint2: '$\\lambda = hc/E$ where $E$ = ionization energy.',
-        hint3: 'Energy scales with $Z^2$, so $3^2$.',
-        explanation: '1) $BE = 10.0 \\times 10^{-16} - 7.50 \\times 10^{-16} = 2.50 \\times 10^{-16}$ J. 2) $\\lambda = (6.626 \\times 10^{-34})(3 \\times 10^8)/(2.18 \\times 10^{-18}) = 9.12 \\times 10^{-8}$ m ≈ 91 nm (extreme UV). 3) IE scales as $Z^2$, so $\\text{Li}^{2+}$ requires $9 \\times$ the energy of H.'
+        hint3: 'Multiply by $6.022 \\times 10^{23}$ atoms/mol, then divide by 1000.',
+        explanation: '1) $BE = 10.0 \\times 10^{-16} - 7.50 \\times 10^{-16} = 2.50 \\times 10^{-16}$ J. 2) $\\lambda = (6.626 \\times 10^{-34})(3 \\times 10^8)/(2.18 \\times 10^{-18}) = 9.12 \\times 10^{-8}$ m ≈ 91 nm (extreme UV). 3) $(2.18 \\times 10^{-18})(6.022 \\times 10^{23}) = 1.313 \\times 10^{6}$ J/mol = 1313 kJ/mol, the first ionization energy of hydrogen.'
       }
     },
     {
@@ -198,15 +196,15 @@ The full **quantum-mechanical model** (Schrödinger, 1926) replaces orbits with 
             explanation: 'N has electron configuration $1s^{2}$ $2s^{2}$ $2p^{3}$ — three occupied subshells, three PES peaks. Heights: 2 : 2 : 3.'
           },
           {
-            question: 'Why doesn\'t the Rydberg formula predict the wavelengths of sodium\'s emission lines?',
+            question: 'Why can\'t hydrogen\'s energy levels be used to predict the wavelengths of sodium\'s emission lines?',
             options: [
               'It works only for gases, and sodium is a solid metal',
-              'It assumes one electron; sodium\'s 11 electrons shield each other',
+              'Sodium\'s many electrons repel and shield each other',
               'Sodium vapor emits a continuous spectrum, not lines',
               'Sodium\'s lines come from its nucleus, not its electrons'
             ],
             correctAnswer: 1,
-            explanation: 'The Rydberg formula is exact only for one-electron systems. Real multi-electron atoms like sodium have shielding, penetration, and subshell splitting that change the energies. Sodium vapor (as in a sodium lamp) does give a line spectrum.'
+            explanation: 'Hydrogen\'s levels come from a single electron attracted to a single proton. In sodium, 11 protons and 11 electrons interact, with shielding and subshell splitting, so its levels are entirely different. Sodium vapor (as in a sodium lamp) does give a line spectrum.'
           }
         ]
       }

@@ -6,7 +6,7 @@ export const chemActivationEnergyArrheniusPart3Data = {
       type: 'text' as const,
       content: `# 📐 The Arrhenius Equation
 
-**Part 3 of 7 — Connecting Rate Constants to Temperature**
+**Part 3 of 7 — How Temperature and Activation Energy Control k**
 
 ---
 
@@ -14,52 +14,55 @@ export const chemActivationEnergyArrheniusPart3Data = {
 
 $$k = Ae^{-E_a/RT}$$
 
-| Symbol | Meaning | Units |
-|--------|---------|-------|
-| $k$ | Rate constant | Depends on order |
-| $A$ | Frequency factor | Same as $k$ |
-| $E_a$ | Activation energy | J/mol |
-| $R$ | Gas constant | 8.314 J/(mol·K) |
-| $T$ | Temperature | K (Kelvin!) |
+| Symbol | Meaning |
+|--------|---------|
+| $k$ | Rate constant |
+| $A$ | Frequency factor (how often collisions occur with a suitable orientation) |
+| $E_a$ | Activation energy |
+| $T$ | Absolute temperature |
 
-> 🔑 **Why this matters:** The Arrhenius equation is one of the most important in kinetics — it quantitatively connects rate constants to temperature and activation energy.
+> 🔑 **Why this matters:** The Arrhenius equation summarizes collision theory: the rate constant rises with temperature and falls as the activation energy rises. On the AP exam you reason with these trends; calculations with the equation are not assessed (CED 5.6 exclusion).
 
 ---
 
 ### What You'll Master in Part 3
-- Understanding each variable in $k = Ae^{-E_a/RT}$
-- Explaining how $k$ changes with temperature and $E_a$
-- Calculating rate constants at different temperatures`
+- Explaining what each part of $k = Ae^{-E_a/RT}$ represents
+- Predicting how $k$ changes with temperature and with $E_a$
+- Explaining why reactions with large $E_a$ are especially sensitive to temperature`
     },
     {
       id: 'ae3-equation',
       type: 'text' as const,
       content: `
-## 📌 The Arrhenius Equation
+## 📌 Reading the Arrhenius Equation
 
 $$\\boxed{k = Ae^{-E_a/(RT)}}$$
 
-| Symbol | Name | Units |
-|--------|------|-------|
-| $k$ | Rate constant | Depends on order |
-| $A$ | Frequency factor (pre-exponential factor) | Same as $k$ |
-| $E_a$ | Activation energy | J/mol (or kJ/mol) |
-| $R$ | Gas constant | 8.314 J/(mol·K) |
-| $T$ | Temperature | Kelvin (always!) |
-
+The equation is a compact statement of the collision model (CED 5.6.A.4).
 
 ---
 
 ### What Each Part Means
 
-**$A$ (frequency factor):** Related to how often molecules collide with correct orientation
-- $A = Z \\cdot p$ (collision frequency × steric factor)
-- Large $A$ → favorable collision geometry
-- $A$ is approximately temperature-independent
+**$A$ (frequency factor):** reflects how often molecules collide with an orientation that allows bonds to rearrange.
+- Reactions between simple particles have a larger $A$.
+- Reactions that need a very specific orientation have a smaller $A$.
 
-**$e^{-E_a/(RT)}$ (Boltzmann factor):** Fraction of collisions with sufficient energy
-- As $T \\uparrow$: $E_a/(RT) \\downarrow$, so $e^{-E_a/(RT)} \\uparrow$, so $k \\uparrow$
-- As $E_a \\uparrow$: $E_a/(RT) \\uparrow$, so $e^{-E_a/(RT)} \\downarrow$, so $k \\downarrow$
+**$e^{-E_a/(RT)}$:** reflects the fraction of collisions with enough energy to reach the transition state.
+- As $T$ increases, this fraction grows, so $k$ grows.
+- As $E_a$ increases, this fraction shrinks, so $k$ shrinks.
+
+
+---
+
+### Trend Summary
+
+| Change | Effect on $k$ | Reason |
+|--------|---------------|--------|
+| Raise $T$ | Increases | More collisions have energy ≥ $E_a$ |
+| Larger $E_a$ (same $T$) | Smaller | Fewer collisions reach the transition state |
+| Add a catalyst | Increases | New pathway with a lower $E_a$ |
+| Raise concentration | **No change** to $k$ | Rate rises through the rate law, but $k$ itself does not change |
       `
     },
     {
@@ -79,29 +82,29 @@ $$\\boxed{k = Ae^{-E_a/(RT)}}$$
               'Changes Ea'
             ],
             correctAnswer: 1,
-            explanation: 'As T increases, Ea/(RT) decreases, so $e^{-Ea/RT}$ increases, making k larger. Higher temperature → larger rate constant → faster reaction.'
+            explanation: 'A higher temperature means a larger fraction of collisions have energy at or above Ea, so the rate constant k increases. Ea is a property of the pathway and does not change with temperature.'
           },
           {
-            question: 'If Ea = 0 (no activation barrier), then k equals:',
+            question: 'Which statement best explains why the rate constant of a reaction increases when the temperature increases?',
             options: [
-              '1, because $e^{0} = 1$',
-              'A, the frequency factor',
-              'RT, the thermal energy',
-              'Infinity, no barrier'
+              'The activation energy of the reaction decreases',
+              'More collisions have energy ≥ Ea',
+              'The reaction becomes more exothermic at higher temperature',
+              'Each collision lasts longer, giving bonds more time to break'
             ],
             correctAnswer: 1,
-            explanation: 'If Ea = 0: k = $Ae^{0}$ = A × 1 = A. Every collision with correct orientation leads to reaction. Forgetting the A in front gives 1, and k stays finite because collisions still happen at a finite rate.'
+            explanation: 'Heating spreads the Maxwell-Boltzmann distribution toward higher energies, so more collisions can reach the transition state. Ea is unchanged by temperature, ΔH does not control rate, and faster particles collide more briefly, not longer.'
           },
           {
             question: 'Two reactions have the same A value. Reaction 1 has Ea = 40 kJ/mol, Reaction 2 has Ea = 80 kJ/mol. At the same temperature:',
             options: [
-              'Reaction 1 is faster',
-              'Reaction 2 is faster',
-              'Both have the same rate',
+              'The lower-Ea reaction has the larger k',
+              'The higher-Ea reaction has the larger k',
+              'Both have the same rate constant',
               'Cannot determine without knowing T'
             ],
             correctAnswer: 0,
-            explanation: 'Lower Ea means a larger Boltzmann factor $(e^{-Ea/RT})$, which gives a larger k, and therefore a faster reaction.'
+            explanation: 'With the same A and T, the lower activation energy means a larger fraction of collisions are energetic enough to react, so Reaction 1 has the larger k. The temperature is the same for both, so its value is not needed to compare them.'
           }
         ]
       }
@@ -112,54 +115,53 @@ $$\\boxed{k = Ae^{-E_a/(RT)}}$$
       content: `
 ## 🌡️ Temperature Sensitivity and Ea
 
-### How Much Does k Change with Temperature?
+### Which Reactions Speed Up Most When Heated?
 
 The sensitivity of $k$ to temperature depends on $E_a$:
 
-- **Large $E_a$**: $k$ is very sensitive to temperature changes (reaction speeds up dramatically)
-- **Small $E_a$**: $k$ is less sensitive to temperature changes
+- **Large $E_a$**: the threshold sits far out in the tail of the Maxwell-Boltzmann curve, where heating makes the area beyond $E_a$ grow by a large **factor**. The rate constant rises steeply.
+- **Small $E_a$**: most collisions already clear the barrier, so heating changes the fraction by a smaller factor. The rate constant rises gently.
 
 
 ---
 
-### Example Calculation
+### A Useful Rule of Thumb
 
-> **Problem:** For $E_a = 100$ kJ/mol, comparing $k$ at 300 K and 310 K:
+For many reactions near room temperature, a **10 °C increase roughly doubles** the rate. Reactions with larger activation energies speed up by more than that; reactions with smaller activation energies by less.
 
-**Solution:**
 
-$$\\frac{k_{310}}{k_{300}} = \\frac{e^{-E_a/(R \\cdot 310)}}{e^{-E_a/(R \\cdot 300)}} = e^{(E_a/R)(1/300 - 1/310)}$$
+---
 
-$$= e^{(100{,}000/8.314)(1/300 - 1/310)}$$
+### Graph Shapes to Recognize
 
-$$= e^{(12{,}027)(1.075 \\times 10^{-4})} = e^{1.293} = 3.64$$
+| Graph | Shape |
+|-------|-------|
+| $k$ vs. $T$ | Curves **upward** (increases faster and faster) |
+| Maxwell-Boltzmann at higher $T$ | Lower, broader peak shifted to higher energy |
 
-A 10°C increase nearly **quadruples** the rate for this high-$E_a$ reaction!
-
-For $E_a = 20$ kJ/mol:
-$$\\frac{k_{310}}{k_{300}} = e^{(20{,}000/8.314)(1.075 \\times 10^{-4})} = e^{0.259} = 1.30$$
-
-Only a 30% increase — much less sensitive.
+> ⚠️ **Warning:** Temperature changes $k$; concentration does not. If an AP question says "the concentration is doubled," the rate may change through the rate law, but the rate constant stays the same.
       `
     },
     {
-      id: 'ae3-calculation-drill',
+      id: 'ae3-trend-drill',
       type: 'input-boxes' as const,
       content: `
-**Arrhenius Calculations** 🧮
+**Predict the Trend** 🧮
 
-**1)** Calculate $E_a/(RT)$ for $E_a = 75.0$ kJ/mol at $T = 500$ K. ($R = 8.314$ J/(mol·K); to 3 significant figures)
+For each change, type **increases**, **decreases**, or **unchanged** to describe the effect on the **rate constant k**.
 
-**2)** A reaction has $A = 1.0 \\times 10^{13}$ $s^{-1}$ and $E_a = 100$ kJ/mol. Calculate $k$ at 300 K. (in $s^{-1}$, to 1 significant figure in scientific notation: e.g., 3e-5)
+**1)** The temperature of the reaction mixture is raised from 25 °C to 45 °C.
 
-**3)** If $k = 0.010$ $s^{-1}$ at 300 K and $k = 0.040$ $s^{-1}$ at 310 K, by what factor does k increase? (to 3 significant figures)
+**2)** The concentration of a reactant is doubled at constant temperature.
+
+**3)** A catalyst that provides a pathway with a lower $E_a$ is added at constant temperature.
       `,
       exercise: {
-        questions: [{ question: '(1)', answer: '18.0', acceptableAnswers: ['18.0'] }, { question: '(2)', answer: '4e-5', acceptableAnswers: ['4e-5', '3.9e-5', '3.87e-5', '4×10^-5', '4x10^-5', '4*10^-5'] }, { question: '(3)', answer: '4.0', acceptableAnswers: ['4.0'] }],
-        hint1: 'Ea/(RT) = 75,000/(8.314 × 500) = 75,000/4157 = 18.04 ≈ 18.0.',
-        hint2: 'k = $Ae^{-E_a/(RT)}$. First Ea/(RT) = 100,000/(8.314 × 300) = 100,000/2494 = 40.1. Then $e^{-40.1}$ ≈ $3.9 \\times 10^{-18}$, so k = $1.0 \\times 10^{13}$ × $3.9 \\times 10^{-18}$ ≈ $3.9 \\times 10^{-5}$.',
-        hint3: '0.040/0.010 = 4.0.',
-        explanation: '1) 75,000/(8.314 × 500) = 18.0. 2) Ea/(RT) = 100,000/2494 = 40.1; $e^{-40.1}$ = $3.9 \\times 10^{-18}$; k = $1.0 \\times 10^{13}$ × $3.9 \\times 10^{-18}$ = $3.9 \\times 10^{-5}$ ≈ $4 \\times 10^{-5}$ $s^{-1}$. 3) $k_{2}/k_{1}$ = 0.040/0.010 = 4.0.'
+        questions: [{ question: '(1)', answer: 'increases', acceptableAnswers: ['increases', 'increase'] }, { question: '(2)', answer: 'unchanged', acceptableAnswers: ['unchanged', 'no change', 'same'] }, { question: '(3)', answer: 'increases', acceptableAnswers: ['increases', 'increase'] }],
+        hint1: 'What happens to the fraction of collisions with energy ≥ $E_a$?',
+        hint2: 'Concentration appears in the rate law, not in the Arrhenius equation.',
+        hint3: 'A lower barrier means more collisions can clear it at the same temperature.',
+        explanation: '1) Increases: more collisions have enough energy. 2) Unchanged: the rate increases (if the reactant appears in the rate law), but k depends only on temperature and the pathway. 3) Increases: the catalyzed pathway has a lower $E_a$, so a larger fraction of collisions succeed.'
       }
     },
     {
@@ -168,25 +170,19 @@ Only a 30% increase — much less sensitive.
       content: `
 ## 📊 The Frequency Factor A
 
-The frequency factor $A$ represents the maximum possible rate constant — the value $k$ would have if every collision were effective ($E_a = 0$).
+The frequency factor $A$ captures the parts of the collision model that are **not** about energy: how often particles collide, and how often those collisions have a suitable orientation.
 
 
 ---
 
-### Typical Values
+### Comparing Reactions with Different A Values
 
-| Reaction Type | Typical $A$ | Why |
-|--------------|------------|-----|
-| Gas-phase, simple molecules | $10^{10}$–$10^{14}$ $s^{-1}$ | High collision frequency |
-| Solution-phase | $10^{8}$–$10^{12}$ $s^{-1}$ | Solvent cage effects |
-| Reactions needing precise orientation | Lower $A$ | Small steric factor $p$ |
+| Reaction feature | Effect on $A$ | Why |
+|-----------------|---------------|-----|
+| Small, simple particles (e.g., atoms) | Larger | Nearly every orientation works |
+| Large molecules that must meet at one specific site | Smaller | Most orientations fail |
 
-
----
-
-### Key Point for AP
-
-> 🔑 $A$ is approximately **independent of temperature** — all the temperature dependence of $k$ comes from the $e^{-E_a/(RT)}$ term.
+> 🔑 **Key Point for AP:** Nearly all of the temperature dependence of $k$ comes from the energy term, not from $A$. When you explain a rate increase on heating, focus on the larger fraction of collisions with energy ≥ $E_a$.
       `
     },
     {
@@ -198,27 +194,27 @@ The frequency factor $A$ represents the maximum possible rate constant — the v
       exercise: {
         dropdowns: [
           {
-            label: 'As T → ∞, the rate constant k approaches',
-            options: ['0', 'A', 'infinity', 'Ea']
+            label: 'Raising the temperature makes the rate constant k',
+            options: ['larger', 'smaller', 'unchanged', 'negative']
           },
           {
             label: 'A reaction with high Ea will be',
             options: ['fast at all temperatures', 'slow at low T, faster at high T', 'independent of temperature', 'always slow']
           },
           {
-            label: 'The frequency factor A has the same units as',
-            options: ['Ea', 'R', 'k', 'T']
+            label: 'At the same temperature and A, the reaction with the larger Ea has',
+            options: ['the larger k', 'the smaller k', 'the same k', 'no k']
           },
           {
-            label: 'In the Arrhenius equation, temperature must be in',
-            options: ['Celsius', 'Fahrenheit', 'Kelvin', 'any unit']
+            label: 'When the temperature is raised, the activation energy',
+            options: ['increases', 'decreases', 'stays the same', 'becomes zero']
           }
         ],
-        correctAnswers: ['A', 'slow at low T, faster at high T', 'k', 'Kelvin'],
-        hint1: 'As T → ∞: Ea/(RT) → 0, $e^{0}$ = 1, k → A.',
-        hint2: 'High Ea means $e^{-Ea/RT}$ is small at low T but increases at high T.',
-        hint3: 'k = A × (dimensionless), so A has units of k.',
-        explanation: 'As T → ∞, k → A. High Ea reactions are very temperature-sensitive. A has same units as k. Temperature must be in Kelvin (absolute scale).'
+        correctAnswers: ['larger', 'slow at low T, faster at high T', 'the smaller k', 'stays the same'],
+        hint1: 'More collisions clear the energy barrier at higher T.',
+        hint2: 'A high barrier is cleared by few collisions until the temperature is raised.',
+        hint3: 'A higher barrier means fewer successful collisions.',
+        explanation: 'Raising T increases k. High-Ea reactions are slow at low T and speed up markedly when heated. With everything else equal, a larger Ea gives a smaller k. Ea is a property of the pathway, so heating does not change it.'
       }
     },
     {
@@ -234,22 +230,22 @@ The frequency factor $A$ represents the maximum possible rate constant — the v
             options: [
               'A straight line through (0, 0)',
               'A decreasing exponential curve',
-              'An increasing exponential curve',
+              'An increasing curve that gets steeper',
               'A parabola'
             ],
             correctAnswer: 2,
-            explanation: 'k = $Ae^{-Ea/RT}$. As T increases, k increases exponentially. The k vs T graph curves upward — it is NOT linear.'
+            explanation: 'As T increases, k increases, and it increases faster and faster, so the k vs T graph curves upward. It is not linear, and k never decreases on heating.'
           },
           {
-            question: 'At very low temperatures (T → 0), the Arrhenius equation predicts k →',
+            question: 'Reaction X has Ea = 30 kJ/mol and reaction Y has Ea = 90 kJ/mol. Both are heated from 300 K to 320 K. Which statement is correct?',
             options: [
-              '0',
-              'A',
-              'Infinity',
-              'Ea/R'
+              'The rate constant of X increases by a larger factor than that of Y',
+              'The rate constant of Y increases by a larger factor than that of X',
+              'Both rate constants increase by the same factor',
+              'The rate constant of Y decreases because its barrier is higher'
             ],
-            correctAnswer: 0,
-            explanation: 'As T → 0: Ea/(RT) → ∞, $e^{-\\infty}$ = 0, so k → 0. At absolute zero, no molecules have enough energy to overcome the activation barrier.'
+            correctAnswer: 1,
+            explanation: 'The larger the activation energy, the farther out in the tail of the Maxwell-Boltzmann curve the threshold lies, and the larger the factor by which heating increases the fraction of successful collisions. So Y is more temperature-sensitive. Both rate constants increase on heating.'
           }
         ]
       }

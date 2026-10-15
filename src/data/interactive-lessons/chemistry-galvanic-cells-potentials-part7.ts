@@ -35,7 +35,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 |----------|---------|
 | $E^{\\circ}_{\\text{cell}} = E^{\\circ}_{\\text{cathode}} - E^{\\circ}_{\\text{anode}}$ | Calculate cell voltage |
 | $\\Delta G^{\\circ} = -nFE^{\\circ}$ | Connect free energy to voltage |
-| $E^{\\circ} = \\frac{0.0592}{n}\\log K$ | Connect voltage to equilibrium (at 25°C) |
+| $\\Delta G^{\\circ} = -RT\\ln K$ | Connect free energy to equilibrium |
 
 > 🔑 **Key Equations — Memorize These:**
 
@@ -43,7 +43,7 @@ $$\\boxed{E^{\\circ}_{\\text{cell}} = E^{\\circ}_{\\text{cathode}} - E^{\\circ}_
 
 $$\\boxed{\\Delta G^{\\circ} = -nFE^{\\circ}}$$
 
-$$\\boxed{E^{\\circ} = \\frac{0.0592}{n}\\log K \\quad (\\text{at } 25°\\text{C})}$$
+$$\\boxed{\\Delta G^{\\circ} = -RT\\ln K}$$
 
 ---
 
@@ -51,8 +51,8 @@ $$\\boxed{E^{\\circ} = \\frac{0.0592}{n}\\log K \\quad (\\text{at } 25°\\text{C
 
 | Component | Role | Memory Aid |
 |-----------|------|-----------|
-| Anode | Oxidation | AN OX (left in notation) |
-| Cathode | Reduction | RED CAT (right in notation) |
+| Anode | Oxidation | AN OX |
+| Cathode | Reduction | RED CAT |
 | Salt bridge | Maintains neutrality | Ions flow, not electrons |
 | Wire | Carries electrons | Anode → Cathode |
 
@@ -103,7 +103,7 @@ $$\\boxed{E^{\\circ} = \\frac{0.0592}{n}\\log K \\quad (\\text{at } 25°\\text{C
             explanation: '$\\Delta G^\\circ = -nFE^\\circ = -(2)(96{,}485)(1.10) = -212{,}267$ J $\\approx -212$ kJ.'
           },
           {
-            question: 'In the cell notation Pt | $H_{2}(g)$ | $H^{+}(aq)$ || $Cu^{2+}(aq)$ | Cu(s), the Pt electrode is:',
+            question: 'A cell pairs a Pt electrode with $H_{2}(g)$ bubbling into 1 M $H^{+}(aq)$ against a Cu electrode in 1 M $Cu^{2+}(aq)$ ($E^\\circ$: $Cu^{2+}/Cu = +0.34$ V). The Pt electrode is:',
             options: [
               'The cathode, where $Cu^{2+}$ is reduced',
               'The anode, an inert surface for $H_2$ oxidation',
@@ -111,7 +111,7 @@ $$\\boxed{E^{\\circ} = \\frac{0.0592}{n}\\log K \\quad (\\text{at } 25°\\text{C
               'The anode, which is itself oxidized'
             ],
             correctAnswer: 1,
-            explanation: 'Pt is on the left (anode). It provides an inert surface for the oxidation of $H_{2}$: $\\text{H}_2 \\rightarrow 2\\text{H}^+ + 2e^-$. Pt itself is not oxidized, and $Cu^{2+}$ is reduced at the Cu cathode on the right.'
+            explanation: 'The hydrogen couple (0.00 V) has the lower $E^\\circ$, so the Pt electrode is the anode. It provides an inert surface for the oxidation of $H_{2}$: $\\text{H}_2 \\rightarrow 2\\text{H}^+ + 2e^-$. Pt itself is not oxidized, and $Cu^{2+}$ is reduced at the Cu cathode.'
           }
         ]
       }
@@ -146,7 +146,7 @@ $$\\boxed{E^{\\circ} = \\frac{0.0592}{n}\\log K \\quad (\\text{at } 25°\\text{C
       exercise: {
         dropdowns: [
           {
-            label: 'The strongest reducing agent in a table has the',
+            label: 'The metal most easily oxidized in a table has the',
             options: ['most positive E\u00b0', 'most negative E\u00b0', 'E\u00b0 = 0', 'highest atomic number']
           },
           {
@@ -154,19 +154,19 @@ $$\\boxed{E^{\\circ} = \\frac{0.0592}{n}\\log K \\quad (\\text{at } 25°\\text{C
             options: ['cathode to anode', 'anode to cathode', 'salt bridge to wire', 'solution to electrode']
           },
           {
-            label: 'In galvanic cell notation, the cathode is on the',
-            options: ['left', 'right', 'middle', 'either side']
+            label: 'In a galvanic cell, the cathode is the electrode where',
+            options: ['oxidation occurs', 'reduction occurs', 'electrons are released', 'the salt bridge ends']
           },
           {
             label: 'F = 96,485 C/mol represents the charge of',
             options: ['one electron', 'one proton', 'one mole of electrons', 'one mole of protons']
           }
         ],
-        correctAnswers: ['most negative E\u00b0', 'anode to cathode', 'right', 'one mole of electrons'],
+        correctAnswers: ['most negative E\u00b0', 'anode to cathode', 'reduction occurs', 'one mole of electrons'],
         hint1: 'Most negative $E^\\circ$ = greatest tendency to lose electrons.',
         hint2: 'Electrons are produced at the anode and consumed at the cathode.',
-        hint3: 'Convention: anode | anode ion || cathode ion | cathode.',
-        explanation: 'Most negative $E^\\circ$ → strongest reducing agent. Electrons: anode → cathode. Cathode on the right in cell notation. $F$ = charge of one mole of electrons.'
+        hint3: 'RED CAT: reduction at the cathode.',
+        explanation: 'Most negative $E^\\circ$ → most easily oxidized. Electrons: anode → cathode. Reduction occurs at the cathode. $F$ = charge of one mole of electrons.'
       }
     },
     {
@@ -191,7 +191,7 @@ $$\\boxed{E^{\\circ} = \\frac{0.0592}{n}\\log K \\quad (\\text{at } 25°\\text{C
           {
             question: 'Which statement about galvanic cells is FALSE?',
             options: [
-              'The anode is the negative terminal',
+              'Oxidation occurs at the anode',
               'The salt bridge allows electron flow between half-cells',
               '$E^\\circ$ is an intensive property',
               '$\\Delta G^\\circ = -nFE^\\circ$'

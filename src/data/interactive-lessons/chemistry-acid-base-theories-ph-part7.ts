@@ -14,7 +14,8 @@ export const chemAcidBaseTheoriesPhPart7Data = {
 
 | Topic | Key Equation or Concept |
 |-------|------------------------|
-| Three theories | Arrhenius ⊂ Brønsted-Lowry ⊂ Lewis |
+| Acid-base models | Arrhenius ⊂ Brønsted-Lowry (the AP model) |
+| Acid strength | A more stable conjugate base means a stronger acid |
 | pH/pOH | $pH + pOH = 14$ |
 | Strong acids | $[H^+]$ = concentration (complete dissociation) |
 | Conjugate pairs | Acid → conjugate base + $H^+$ |
@@ -35,13 +36,17 @@ export const chemAcidBaseTheoriesPhPart7Data = {
       content: `
 ## 📋 Complete Summary
 
-### Three Acid-Base Theories
+### Acid-Base Models
 
-| Theory | Acid | Base | Scope |
-|--------|------|------|-------|
+| Model | Acid | Base | Scope |
+|-------|------|------|-------|
 | Arrhenius | Produces $H^+$ | Produces $OH^-$ | Aqueous only |
-| Brønsted-Lowry | Proton donor | Proton acceptor | Any solvent |
-| Lewis | $e^{-}$ pair acceptor | $e^{-}$ pair donor | Broadest |
+| Brønsted-Lowry | Proton donor | Proton acceptor | The model used on the AP exam |
+
+### Structure and Strength
+
+- Strong acids have very weak conjugate bases, stabilized by electronegativity, inductive effects, or resonance.
+- Oxyacids: more O atoms or a more electronegative central atom → stronger acid.
 
 
 ---
@@ -87,15 +92,15 @@ $$[H^+] = 10^{-pH} \\qquad [OH^-] = 10^{-pOH}$$
             explanation: '$Ba(OH)_2 \\rightarrow Ba^{2+} + 2OH^-$. $[OH^-] = 2(0.0050) = 0.010$ M. $pOH = -\\log(0.010) = 2.00$. $pH = 14 - 2.00 = 12.00$.'
           },
           {
-            question: 'Which reaction can ONLY be explained by the Lewis acid-base theory?',
+            question: 'Which reaction can be described by the Brønsted-Lowry model but NOT by the Arrhenius model?',
             options: [
-              '$HCl + NaOH \\rightarrow NaCl + H_2O$',
-              '$NH_3 + HCl \\rightarrow NH_4Cl$',
-              '$BF_3 + NH_3 \\rightarrow F_3B\\text{-}NH_3$',
-              '$CH_3COOH + H_2O \\rightleftharpoons CH_3COO^- + H_3O^+$'
+              '$HCl(aq) + NaOH(aq) \\rightarrow NaCl(aq) + H_2O(l)$',
+              '$KOH(aq) \\rightarrow K^+(aq) + OH^-(aq)$',
+              '$NH_3(g) + HCl(g) \\rightarrow NH_4Cl(s)$',
+              '$HNO_3(aq) \\rightarrow H^+(aq) + NO_3^-(aq)$'
             ],
             correctAnswer: 2,
-            explanation: '$BF_3 + NH_3$ involves no proton transfer. $BF_3$ accepts an electron pair (Lewis acid) from $NH_3$ (Lewis base). The other reactions all involve proton transfer.'
+            explanation: 'In the gas-phase reaction of $NH_3$ with HCl, a proton moves from HCl to $NH_3$, but no water is present and no $OH^-$ forms, so only the Brønsted-Lowry model describes it. The other three involve $H^+$ or $OH^-$ in water, which the Arrhenius model also covers.'
           },
           {
             question: 'The conjugate acid of $HPO_4^{2-}$ is:',
@@ -151,15 +156,15 @@ $$[H^+] = 10^{-pH} \\qquad [OH^-] = 10^{-pOH}$$
             explanation: 'Amphoteric means water can act as a Brønsted-Lowry acid (donate $H^+$) or base (accept $H^+$). With $HCl$, water accepts $H^+$; with $NH_3$, water donates $H^+$.'
           },
           {
-            question: 'A student claims the pH of $10^{-15}$ M $HCl$ is 15. This is incorrect because:',
+            question: 'Which acid is the strongest?',
             options: [
-              '$HCl$ doesn\'t dissociate at that concentration',
-              'The pH scale only goes to 14',
-              'The autoionization of water dominates at this concentration',
-              'You need $K_a$ for this calculation'
+              'HOI',
+              'HOBr',
+              '$HClO_4$',
+              'HOCl'
             ],
             correctAnswer: 2,
-            explanation: 'At $10^{-15}$ M, the $H^+$ from water autoionization ($10^{-7}$ M) overwhelmingly exceeds the acid contribution. The pH would be essentially 7.00 (very slightly below). The pH scale CAN go above 14, but that\'s not the issue here.'
+            explanation: 'Perchloric acid has four O atoms on Cl, so its conjugate base spreads the negative charge over four electronegative O atoms; it is a strong acid. HOCl, HOBr, and HOI each have a single O atom and are weak acids.'
           }
         ]
       }
@@ -216,15 +221,15 @@ $$[H^+] = 10^{-pH} \\qquad [OH^-] = 10^{-pOH}$$
             explanation: 'Doubling volume halves concentration: $[H^+] = 0.020$ M. $pH = -\\log(0.020) = 1.70$.'
           },
           {
-            question: 'In the reaction $Fe^{3+}(aq) + 6H_2O(l) \\rightarrow [Fe(H_2O)_6]^{3+}$, $Fe^{3+}$ is classified as a:',
+            question: 'At 0°C, $K_w = 1.1 \\times 10^{-15}$. Pure water at 0°C has a pH of 7.47. Which statement is correct?',
             options: [
-              'Brønsted-Lowry acid',
-              'Arrhenius acid',
-              'Lewis acid',
-              'Lewis base'
+              'The water is basic, because its pH is above 7',
+              'The water is acidic, because $K_w$ is small',
+              'The water is neutral, because $[H_3O^+] = [OH^-]$',
+              'The water contains no ions at 0°C'
             ],
             correctAnswer: 2,
-            explanation: '$Fe^{3+}$ accepts electron pairs from the lone pairs on water molecules. No proton transfer occurs, so only the Lewis definition applies. $Fe^{3+}$ is a Lewis acid.'
+            explanation: 'Autoionization always produces $H_3O^+$ and $OH^-$ in equal amounts, so pure water is neutral at every temperature. At 0°C, $K_w$ is smaller, so both concentrations are below $10^{-7}$ M and the neutral pH is above 7 (CED 8.1.A.4).'
           }
         ]
       }

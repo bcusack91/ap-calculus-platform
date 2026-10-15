@@ -38,7 +38,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 | Predict sign of ΔS | Count $\\Delta n_{\\text{gas}}$ (products − reactants) | If $\\Delta n = 0$, consider phase & complexity |
 | Calculate ΔS° | $\\Delta S° = \\sum n \\cdot S°(\\text{prod}) - \\sum m \\cdot S°(\\text{react})$ | $S°$ for elements is **NOT** zero! |
 | Unit conversion | Convert ΔS from J/K to kJ/K (÷ 1000) | Must match ΔH units before computing ΔG |
-| Entropy of surroundings | $\\Delta S_{\\text{surr}} = -\\frac{\\Delta H_{\\text{sys}}}{T}$ | Exothermic → positive $\\Delta S_{s}$ᵤᵣᵣ |
+| Crossover temperature | $T = \\Delta H / \\Delta S$ (where $\\Delta G = 0$) | Convert ΔS to kJ/K first |
 
 ---
 
@@ -103,19 +103,19 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
       content: `
 **Entropy Calculation Workshop** 🧮
 
-**1)** A reaction has $\\Delta H = -150$ kJ and occurs at $T = 300$ K. What is $\\Delta S_{\\text{surroundings}}$? (in J/K)
+**1)** For $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightarrow 2\\text{NH}_3(g)$, use $S°$: $\\text{N}_2$ = 191.6, $\\text{H}_2$ = 130.7, $\\text{NH}_3$ = 192.5 J/(mol·K) to find $\\Delta S°$. (in J/K, to 4 significant figures)
 
 **2)** The melting of ice at 0°C (273 K) has $\\Delta H_{\\text{fus}} = 6.01$ kJ/mol. What is $\\Delta S_{\\text{fus}}$? (in J/(mol·K), to 3 significant figures)
 
-**3)** A reaction has $\\Delta S_{\\text{sys}} = -100$ J/K and $\\Delta S_{\\text{surr}} = +350$ J/K. What is $\\Delta S_{\\text{universe}}$? (in J/K)
+**3)** A reaction has $\\Delta H° = -92$ kJ and $\\Delta S° = -199$ J/K. Below what temperature is it thermodynamically favored? (in K, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['500', '22.0', '250'],
-        hint1: '$\\Delta S_{\\text{surr}} = -\\Delta H/T = -(-150{,}000)/300$',
+        correctAnswers: ['-198.7', '22.0', '462'],
+        hint1: '$\\Delta S° = 2(192.5) - [191.6 + 3(130.7)]$',
         hint2: '$\\Delta S = \\Delta H/T = 6010/273$',
-        hint3: '$\\Delta S_{\\text{univ}} = \\Delta S_{\\text{sys}} + \\Delta S_{\\text{surr}}$',
-        explanation: '1) $\\Delta S_{\\text{surr}} = -(-150{,}000)/300 = +500$ J/K. 2) $\\Delta S_{\\text{fus}} = 6010/273 = 22.0$ J/(mol·K). 3) $\\Delta S_{\\text{univ}} = -100 + 350 = +250$ J/K > 0, so the process is spontaneous.'
+        hint3: 'Set $\\Delta G = 0$: $T = \\Delta H/\\Delta S = -92{,}000/-199$.',
+        explanation: '1) $\\Delta S° = 385.0 - (191.6 + 392.1) = 385.0 - 583.7 = -198.7$ J/K (fewer moles of gas, so negative). 2) At the melting point ΔG = 0, so $\\Delta S_{\\text{fus}} = \\Delta H/T = 6010/273 = 22.0$ J/(mol·K). 3) $T = -92{,}000/-199 = 462$ K; below this temperature the favorable ΔH outweighs the unfavorable $-T\\Delta S$ term.'
       }
     },
     {

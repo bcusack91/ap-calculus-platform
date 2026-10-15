@@ -61,8 +61,11 @@ Oxidation numbers (states) help track electron transfer:
 
 ### Identifying Redox
 
-- The species that is **oxidized** is the **reducing agent** (it reduces something else)
-- The species that is **reduced** is the **oxidizing agent** (it oxidizes something else)
+- Find the element whose oxidation number **increases**: that species is **oxidized** (it loses electrons).
+- Find the element whose oxidation number **decreases**: that species is **reduced** (it gains electrons).
+- Electrons move **from** the species oxidized **to** the species reduced (CED 4.7.A.3).
+
+> 📝 The AP exam describes species as "oxidized" or "reduced"; the older labels "oxidizing agent" and "reducing agent" are not assessed.
       `
     },
     {
@@ -123,7 +126,7 @@ Copper gains 2 electrons — oxidation number changes from $+2$ to $0$.
               '$Sn^{2+}$'
             ],
             correctAnswer: 1,
-            explanation: 'Sn goes from oxidation state 0 to +2, meaning it loses electrons. Sn is oxidized (and is the reducing agent). $Fe^{2+}$ is reduced (gains electrons).'
+            explanation: 'Sn goes from oxidation state 0 to +2, meaning it loses electrons. Sn is oxidized. $Fe^{2+}$ is reduced (gains electrons), going from +2 to 0.'
           },
           {
             question: 'At which electrode does oxidation occur?',
@@ -182,8 +185,8 @@ Determine the oxidation state of the underlined element:
       exercise: {
         dropdowns: [
           {
-            label: 'The species that is oxidized acts as the',
-            options: ['oxidizing agent', 'reducing agent', 'catalyst', 'spectator ion']
+            label: 'Electrons are transferred from the species that is',
+            options: ['oxidized', 'reduced', 'a spectator ion', 'a catalyst']
           },
           {
             label: 'Electrons flow from the',
@@ -198,11 +201,11 @@ Determine the oxidation state of the underlined element:
             options: ['be greater than electrons gained', 'be less than electrons gained', 'equal the electrons gained', 'be twice the electrons gained']
           }
         ],
-        correctAnswers: ['reducing agent', 'anode to cathode', 'anode = oxidation', 'equal the electrons gained'],
-        hint1: 'The oxidized species gives electrons to the other — it reduces the other.',
+        correctAnswers: ['oxidized', 'anode to cathode', 'anode = oxidation', 'equal the electrons gained'],
+        hint1: 'Oxidation is loss of electrons; those electrons go to the species being reduced.',
         hint2: 'Electrons are produced at the anode (oxidation) and consumed at the cathode (reduction).',
         hint3: 'AN OX: Anode is where Oxidation happens.',
-        explanation: 'The oxidized species is the reducing agent (it reduces something else by giving it electrons). Electrons flow from anode (where they are produced) to cathode. AN OX = Anode = Oxidation. Electrons must balance: lost = gained.'
+        explanation: 'Electrons move from the species oxidized to the species reduced. Electrons flow from anode (where they are produced) to cathode. AN OX = Anode = Oxidation. Electrons must balance: lost = gained.'
       }
     },
     {
@@ -214,7 +217,7 @@ Determine the oxidation state of the underlined element:
       exercise: {
         questions: [
           {
-            question: 'For the reaction $2Fe^{3+}$ + $Sn^{2+}$ → $2Fe^{2+}$ + $Sn^{4+}$, identify the oxidizing agent.',
+            question: 'For the reaction $2Fe^{3+}$ + $Sn^{2+}$ → $2Fe^{2+}$ + $Sn^{4+}$, which species is reduced?',
             options: [
               '$Fe^{3+}$',
               '$Sn^{2+}$',
@@ -222,7 +225,7 @@ Determine the oxidation state of the underlined element:
               '$Sn^{4+}$'
             ],
             correctAnswer: 0,
-            explanation: '$Fe^{3+}$ is reduced ($Fe^{3+}$ → $Fe^{2+}$, gains electrons). The species that is reduced is the **oxidizing agent**. $Sn^{2+}$ is oxidized ($Sn^{2+}$ → $Sn^{4+}$) and is the reducing agent.'
+            explanation: '$Fe^{3+}$ is reduced: its oxidation number falls from +3 to +2 as it gains an electron. $Sn^{2+}$ is oxidized ($Sn^{2+}$ → $Sn^{4+}$), and the two products are the species formed, not the species that react.'
           },
           {
             question: 'How many electrons are transferred in the balanced reaction: 2Al + $3Cu^{2+}$ → $2Al^{3+}$ + 3Cu?',

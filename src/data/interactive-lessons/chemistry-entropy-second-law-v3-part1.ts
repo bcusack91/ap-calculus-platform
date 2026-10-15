@@ -9,53 +9,41 @@ export const chemEntropySecondLawV3Part1Data = {
 
 **Part 1 of 7 — Guided Discovery**
 
-Why does perfume spread across a room? Why does metal feel cold? Why can't you unscramble an egg? Let's discover the answers through hands-on problems.
+Why does perfume spread across a room? Why does a puddle evaporate? Why can't you unscramble an egg? Let's discover the answers through hands-on problems.
       `
     },
     {
       id: 'en1v3-discovery',
       type: 'text' as const,
       content: `
-## 📌 Guided Discovery: The Coin Experiment
+## 📌 Guided Discovery: Perfume in a Room
 
-Imagine flipping coins. Each coin can be H (heads) or T (tails).
-
-
----
-
-### 1 Coin: 2 outcomes → H or T
-
+Spray perfume in one corner of a closed room. A few minutes later you can smell it everywhere.
 
 ---
 
-### 2 Coins: $2^2 = 4$ outcomes
+### Step 1: What happened to the molecules?
 
-| Outcome | State |
-|---------|-------|
-| HH | Both heads |
-| HT | Mixed |
-| TH | Mixed |
-| TT | Both tails |
-
-The "mixed" state appears **twice** — it's the most probable.
-
+They moved from a small region into the whole room. Nothing pushed them; they simply moved randomly, and there are vastly more ways for them to be spread out than bunched in a corner.
 
 ---
 
-### The Pattern
+### Step 2: Will they ever gather back in the corner?
 
-Molecules behave like trillions of coins. The "mixed" (spread out, disordered) state has so many more arrangements that it is essentially the **only** state you'll ever observe.
-
+Practically never. With trillions of molecules, a spread-out arrangement is overwhelmingly more likely.
 
 ---
 
-### Boltzmann's Equation
+### Step 3: Name the idea
 
-$$S = k_B \\ln W$$
+**Entropy** ($S$) increases when **matter becomes more dispersed** or when **energy becomes more dispersed** (CED 9.1.A). The perfume spreading is matter dispersal. A hot pan cooling as its energy spreads into the kitchen is energy dispersal.
 
-$k_B = 1.38 \\times 10^{-23}$ J/K, $W$ = number of microstates
-
-This equation connects the microscopic (molecular arrangements) to the macroscopic (measurable entropy in J/K).
+| Change | Matter or energy dispersal? | Entropy |
+|--------|----------------------------|---------|
+| Perfume spreads through a room | Matter | Increases |
+| A puddle evaporates | Matter | Increases |
+| A gas is heated | Energy (broader spread of kinetic energies) | Increases |
+| Steam condenses on a cold window | Matter becomes less dispersed | Decreases |
       `
     },
     {
@@ -64,18 +52,20 @@ This equation connects the microscopic (molecular arrangements) to the macroscop
       content: `
 **Discovery Questions** 🧮
 
-**1)** For 4 coins, total microstates $W = 2^4$ = ?
+Type **increase** or **decrease** for the entropy of the system.
 
-**2)** How many of those microstates have exactly 2 heads and 2 tails? (Hint: list them — HHTT, HTHT, HTTH, THHT, THTH, TTHH)
+**1)** A drop of ink spreads through a glass of water.
 
-**3)** What fraction of all microstates is the "all heads" state? Write as a fraction.
+**2)** Water vapor freezes directly into frost on a cold window.
+
+**3)** A sealed tank of oxygen is warmed in the sun.
       `,
       exercise: {
-        questions: [{ question: '(1)', answer: '16', acceptableAnswers: ['16'] }, { question: '(2)', answer: '6', acceptableAnswers: ['6'] }, { question: '(3)', answer: '1/16', acceptableAnswers: ['1/16', '0.0625', '0.063'] }],
-        hint1: '$2^4 = ?$',
-        hint2: 'Count: HHTT, HTHT, HTTH, THHT, THTH, TTHH.',
-        hint3: 'Only 1 out of 16 microstates is HHHH.',
-        explanation: '1) $W = 16$. 2) There are $\\binom{4}{2} = 6$ arrangements with 2H and 2T. 3) Only 1 of 16 microstates is all heads = 1/16.'
+        questions: [{ question: '(1)', answer: 'increase', acceptableAnswers: ['increase', 'increases'] }, { question: '(2)', answer: 'decrease', acceptableAnswers: ['decrease', 'decreases'] }, { question: '(3)', answer: 'increase', acceptableAnswers: ['increase', 'increases'] }],
+        hint1: 'The ink particles spread out.',
+        hint2: 'A gas becomes a solid.',
+        hint3: 'Warming broadens the spread of kinetic energies.',
+        explanation: '1) Increase: the ink particles disperse through the water. 2) Decrease: free-moving gas molecules become locked in a solid. 3) Increase: energy becomes more dispersed as the temperature rises, even though the volume is fixed.'
       }
     },
     {
@@ -86,14 +76,13 @@ This equation connects the microscopic (molecular arrangements) to the macroscop
 
 | Fact | Detail |
 |------|--------|
-| $S$ units | **J/K** (not kJ!) |
-| $S$ is a | **state function** (path-independent) |
+| $S$ units | **J/K** (not kJ!), or J/(mol·K) per mole |
 | $S$ is | **extensive** (doubles with amount) |
-| $S > 0$ always | for any substance at $T > 0$ K |
-| $S$ is NOT conserved | Unlike energy, entropy can be **created** |
-| More microstates | → higher entropy |
-| Higher temperature | → more microstates → higher $S$ |
+| $S > 0$ always | for any substance above 0 K |
+| More dispersal of matter | → higher entropy |
+| Higher temperature | → energy more dispersed → higher $S$ |
 | Gas > Liquid > Solid | in terms of entropy |
+| $\\Delta S$ can be + or − | + when products are more dispersed than reactants |
       `
     },
     {
@@ -105,21 +94,26 @@ This equation connects the microscopic (molecular arrangements) to the macroscop
       exercise: {
         questions: [
           {
-            question: 'A container has 20 gas molecules. The probability they ALL spontaneously move to the left half is $1/2^{20}$. This equals approximately:',
-            options: ['1 in 40', '1 in 400', '1 in a million', '1 in $10^{20}$'],
-            correctAnswer: 2,
-            explanation: '$2^{20} = 1{,}048{,}576 \\approx 10^6$. So the probability is about 1 in a million — with only 20 molecules. With a mole of molecules ($6 \\times 10^{23}$), it becomes about $10^{-1.8 \\times 10^{23}}$ — effectively impossible. Using $2 \\times 20$ gives 1 in 40, using $20^2$ gives 1 in 400, and confusing $2^{20}$ with $10^{20}$ gives 1 in $10^{20}$.'
-          },
-          {
-            question: 'Which is NOT a property of entropy?',
+            question: 'Why is it practically impossible for all the air molecules in a room to gather in one corner on their own?',
             options: [
-              'A state function, independent of path',
-              'Conserved in all processes',
-              'An extensive property that scales with amount',
-              'Measured in J/K, or J/(mol·K) per mole'
+              'A law of physics forbids the molecules from moving into a corner',
+              'Spread-out arrangements vastly outnumber gathered ones',
+              'The molecules repel one another too strongly to gather',
+              'The walls of the room push the molecules back toward the center'
             ],
             correctAnswer: 1,
-            explanation: 'Entropy is NOT conserved — it can be created in irreversible processes. Energy is the conserved quantity (First Law).'
+            explanation: 'No law forbids it; it is simply overwhelmingly unlikely, because there are vastly more ways for the molecules to be spread out than gathered. Air molecules barely interact, and the walls do not push molecules inward.'
+          },
+          {
+            question: 'Which is NOT true of entropy?',
+            options: [
+              'It increases when a solid melts',
+              'It always decreases when a substance is heated',
+              'It is an extensive property that scales with amount',
+              'It is measured in J/K, or J/(mol·K) per mole'
+            ],
+            correctAnswer: 1,
+            explanation: 'Heating broadens the distribution of kinetic energies, so entropy INCREASES with temperature. The other statements are true.'
           },
           {
             question: 'Rank from lowest to highest entropy: $H_{2}O(g)$, $H_{2}O(s)$, $H_{2}O(l)$',
@@ -130,7 +124,7 @@ This equation connects the microscopic (molecular arrangements) to the macroscop
               'All have equal entropy'
             ],
             correctAnswer: 0,
-            explanation: 'Solids have the most ordered arrangement (fewest microstates), liquids intermediate, and gases the most disordered (most microstates).'
+            explanation: 'In a solid the molecules vibrate in fixed positions (least dispersed), in a liquid they move past one another, and in a gas they move freely through a large volume (most dispersed).'
           }
         ]
       }
@@ -144,23 +138,23 @@ This equation connects the microscopic (molecular arrangements) to the macroscop
       exercise: {
         dropdowns: [
           {
-            label: '$S = k_B \\ln W$ — when $W = 1$, $S$ equals',
-            options: ['infinity', 'zero', '$k_B$', 'undefined']
+            label: 'Perfume spreading through a room is an example of the dispersal of',
+            options: ['energy', 'matter', 'charge', 'mass number']
           },
           {
             label: 'If you double the number of molecules, entropy',
             options: ['halves', 'doubles', 'stays the same', 'quadruples']
           },
           {
-            label: 'The reason ice melts at room temperature is fundamentally about',
-            options: ['chemical bonds breaking', 'probability and microstates', 'density differences in the water', 'electromagnetic forces']
+            label: 'Heating a gas in a rigid container increases its entropy because the',
+            options: ['volume increases', 'kinetic energies spread over a broader range', 'molecules get larger', 'number of moles increases']
           }
         ],
-        correctAnswers: ['zero', 'doubles', 'probability and microstates'],
-        hint1: '$\\ln 1 = 0$.',
+        correctAnswers: ['matter', 'doubles', 'kinetic energies spread over a broader range'],
+        hint1: 'The perfume molecules themselves move outward.',
         hint2: 'Entropy is extensive.',
-        hint3: 'The liquid state is overwhelmingly more probable than the solid at room T.',
-        explanation: '$\\ln 1 = 0$ so $S = 0$ when there is only 1 microstate. Entropy is extensive (proportional to amount). Ice melting is driven by the vastly greater number of microstates in liquid water at room temperature.'
+        hint3: 'The container is rigid, so the volume is fixed.',
+        explanation: 'Perfume spreading is matter dispersal. Entropy is extensive (proportional to amount). In a rigid container heating does not change the volume, but it broadens the distribution of kinetic energies, dispersing energy.'
       }
     },
     {
@@ -175,12 +169,12 @@ This equation connects the microscopic (molecular arrangements) to the macroscop
             question: 'A student says "entropy measures how much energy a system has." Is this correct?',
             options: [
               'Yes — entropy is the total energy stored in a system',
-              'No — it counts the ways matter and energy can be arranged',
+              'No — entropy describes how dispersed the matter and energy are',
               'No — entropy is a measure of the system\'s temperature',
               'Partly — entropy is the energy a system loses as heat'
             ],
             correctAnswer: 1,
-            explanation: 'Entropy measures microstates — the number of ways to arrange energy and matter — not how much energy a system contains. Two systems with the same energy can have very different entropies, and heat lost by a system is energy, not entropy.'
+            explanation: 'Entropy describes how spread out matter and energy are, not how much energy a system contains. Two systems with the same energy can have very different entropies, and heat lost by a system is energy, not entropy.'
           }
         ]
       }

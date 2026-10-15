@@ -4,9 +4,9 @@ export const chemElectrolyticCellsFaradayPart5Data = {
     {
       id: 'ef5-intro',
       type: 'text' as const,
-      content: `# 🏭 Electroplating and Industrial Applications
+      content: `# 🏭 Electroplating and Faraday Problems
 
-**Part 5 of 7 — Real-World Electrolysis**
+**Part 5 of 7 — Electroplating and Working Backward**
 
 ---
 
@@ -18,16 +18,16 @@ export const chemElectrolyticCellsFaradayPart5Data = {
 | Setup |
 | How It Works |
 | Controlling Thickness |
-| Common Plating Metals |
+| 🔁 Working Backward: Time, Current and Ion Charge |
 
-> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+> 🔑 **Key Concept:** The CED lists five quantities Faraday's law links: electrons transferred, mass deposited or removed (as in electroplating), current, time, and the charge of the ion (9.11.A.1). Any one can be the unknown.
 
 ---
 
 ### What You'll Master in Part 5
-- Understanding the core concepts covered in Part 5
-- Applying these ideas to solve practice problems
-- Building toward AP exam readiness for this topic`
+- Describe what happens at each electrode during electroplating
+- Solve for time or current needed to plate a given mass
+- Use plating data to find the charge on a metal ion`
     },
     {
       id: 'ef5-electroplating',
@@ -69,59 +69,7 @@ The thickness of the coating depends on:
 - **Time** ($t$): longer time → thicker coating
 - **Faraday\'s law**: $m = ItM/(nF)$
 
-
----
-
-### Common Plating Metals
-
-| Metal | Application |
-|-------|------------|
-| Chrome | Car bumpers, faucets |
-| Silver | Jewelry, silverware |
-| Gold | Electronics, jewelry |
-| Nickel | Corrosion protection |
-| Zinc | Galvanization of steel |
-      `
-    },
-    {
-      id: 'ef5-industrial',
-      type: 'text' as const,
-      content: `
-## 📌 Major Industrial Processes
-
-### 1. Hall-Héroult Process (Aluminum Production)
-
-$$2\\text{Al}_2\\text{O}_3(l) \\rightarrow 4\\text{Al}(l) + 3\\text{O}_2(g)$$
-
-- $Al_{2}O_{3}$ is dissolved in molten cryolite ($\\text{Na}_3\\text{AlF}_6$) to lower the melting point
-- Enormous current (100,000+ A!)
-- Carbon anodes are consumed: $\\text{C} + \\text{O}^{2-} \\rightarrow \\text{CO}_2 + e^-$
-- Produces ~65 million tonnes of Al per year worldwide
-
-> 💡 **Why Electrolysis?** Aluminum is too reactive to reduce with carbon alone. The Hall-Héroult process was a breakthrough that made aluminum affordable.
-
-
----
-
-### 2. Chlor-Alkali Process
-
-$$2\\text{NaCl}(aq) + 2\\text{H}_2\\text{O}(l) \\rightarrow \\text{Cl}_2(g) + \\text{H}_2(g) + 2\\text{NaOH}(aq)$$
-
-- Produces three valuable products: chlorine, hydrogen, and sodium hydroxide
-- Membrane cell separates products
-- Uses aqueous NaCl (brine)
-
-
----
-
-### 3. Electrorefining of Copper
-
-- Impure Cu = anode; pure Cu = cathode
-- $Cu^{2+}$ from impure anode deposits as pure Cu on cathode
-- Impurities fall to the bottom ("anode mud") — contains Ag, Au, Pt!
-- Produces 99.99% pure copper for electrical wiring
-
-> ⚠️ **Don’t Confuse:** In electrorefining, both electrodes are copper! The impure Cu dissolves at the anode, and pure Cu deposits at the cathode. Impurities that don’t dissolve collect as valuable "anode mud."
+> 💡 The mass the cathode gains equals the mass the plating-metal anode loses, because the same number of electrons passes through each electrode.
       `
     },
     {
@@ -144,29 +92,62 @@ $$2\\text{NaCl}(aq) + 2\\text{H}_2\\text{O}(l) \\rightarrow \\text{Cl}_2(g) + \\
             explanation: 'The object to be plated is the cathode — metal ions from solution are reduced and deposited onto its surface. At the anode, metal is oxidized and dissolves, which would remove metal from the object instead of coating it.'
           },
           {
-            question: 'In electrorefining of copper, impure Cu is the:',
+            question: 'While a spoon is silver-plated with a silver-bar anode in AgNO₃(aq), what happens to the mass of the silver bar?',
             options: [
-              'Cathode — impure Cu is purified by reduction',
-              'Anode — impure Cu dissolves and pure Cu deposits at cathode',
-              'Anode — impure Cu is reduced and plates out there',
-              'Cathode — impurities dissolve and pure Cu stays behind'
+              'It increases, because Ag⁺ is reduced onto it',
+              'It decreases, because Ag is oxidized to Ag⁺',
+              'It stays the same, because the bar only conducts',
+              'It increases, because nitrate deposits on it'
             ],
             correctAnswer: 1,
-            explanation: 'Impure Cu is the anode: it dissolves (oxidizes) into solution. $Cu^{2+}$ ions then deposit as pure Cu on the cathode. Noble metal impurities fall as "anode mud." Reduction never happens at the anode, and placing impure Cu at the cathode would only add more copper onto it.'
+            explanation: 'The silver bar is the anode, so silver atoms are oxidized to $\\text{Ag}^{+}$ and dissolve, lowering its mass. Reduction, and the gain in mass, happens at the spoon (the cathode). Nitrate is a spectator ion.'
           },
           {
-            question: 'The Hall-Héroult process produces aluminum from:',
+            question: 'The same current runs for the same time through two cells in series, one plating Ag from Ag⁺ and one plating Cu from Cu²⁺. How do the moles of metal deposited compare?',
             options: [
-              'Aqueous $AlCl_{3}$',
-              'Molten $Al_{2}O_{3}$ dissolved in cryolite',
-              'Solid aluminum ore directly',
-              'Aqueous $Al_{2}(SO_{4})_{3}$'
+              'Equal moles of Ag and Cu are deposited',
+              'Twice as many moles of Ag as Cu are deposited',
+              'Twice as many moles of Cu as Ag are deposited',
+              'The ratio depends on the molar masses of the metals'
             ],
             correctAnswer: 1,
-            explanation: '$Al_{2}O_{3}$ cannot be electrolyzed from aqueous solution (water would be reduced instead). It is dissolved in molten cryolite $(Na_{3}AlF_{6})$ to lower the melting point from 2072°C to ~960°C.'
+            explanation: 'Both cells receive the same moles of electrons. Each $\\text{Ag}^{+}$ needs one electron and each $\\text{Cu}^{2+}$ needs two, so twice as many moles of silver are deposited. Molar mass matters for the masses, not the moles.'
           }
         ]
       }
+    },
+    {
+      id: 'ef5-working-backward',
+      type: 'text' as const,
+      content: `
+## 🔁 Working Backward: Time, Current and Ion Charge
+
+The chain $q = It \\;\\rightarrow\\; \\text{mol } e^- = q/F \\;\\rightarrow\\; \\text{mol metal} = \\text{mol } e^-/n \\;\\rightarrow\\; \\text{mass}$ runs in either direction.
+
+### Example 1 — How long?
+
+> **Problem:** How many minutes does a 3.00 A current need to plate 1.00 g of silver ($\\text{Ag}^+ + e^- \\rightarrow \\text{Ag}$, 107.87 g/mol)?
+
+| Step | Calculation | Result |
+|------|-------------|--------|
+| mol Ag | $1.00/107.87$ | 0.00927 mol |
+| mol $e^-$ ($n = 1$) | $0.00927 \\times 1$ | 0.00927 mol |
+| charge | $0.00927 \\times 96{,}485$ | 894 C |
+| time | $t = q/I = 894/3.00$ | 298 s ≈ **4.97 min** |
+
+### Example 2 — What is the ion's charge?
+
+> **Problem:** Passing 0.800 A for 965 s through a solution of a chromium salt deposits 0.1387 g of Cr (52.00 g/mol). Find the charge on the chromium ion.
+
+| Step | Calculation | Result |
+|------|-------------|--------|
+| charge | $(0.800)(965)$ | 772 C |
+| mol $e^-$ | $772/96{,}485$ | 0.00800 mol |
+| mol Cr | $0.1387/52.00$ | 0.00267 mol |
+| electrons per Cr | $0.00800/0.00267$ | 3.00 → **$\\text{Cr}^{3+}$** |
+
+> 🔑 **AP Connection:** Free-response items often give mass, current and time and ask for the identity or charge of the metal ion, or ask how the mass would change if the current or time changed.
+      `
     },
     {
       id: 'ef5-calculation-drill',
@@ -193,38 +174,6 @@ $\\text{Ag}^+ + e^- \\rightarrow \\text{Ag}$, $n = 1$, $M_{\\text{Ag}} = 107.87$
       }
     },
     {
-      id: 'ef5-dropdown-practice',
-      type: 'dropdown-select' as const,
-      content: `
-**Industrial Electrolysis** 🔽
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'In electroplating, the anode is made of',
-            options: ['the object to be plated', 'the plating metal', 'platinum', 'graphite']
-          },
-          {
-            label: 'The chlor-alkali process electrolyzes',
-            options: ['molten NaCl', 'aqueous NaCl (brine)', 'solid NaCl', 'NaOH solution']
-          },
-          {
-            label: 'Aluminum cannot be produced from aqueous solution because',
-            options: ['Al is too expensive', 'water would be reduced instead of $Al^{3+}$', '$Al_{2}O_{3}$ does not dissolve in water', 'the voltage is too low']
-          },
-          {
-            label: 'In copper electrorefining, the anode mud contains',
-            options: ['copper oxide', 'aluminum', 'precious metals (Ag, Au, Pt)', 'unreacted $CuSO_{4}$']
-          }
-        ],
-        correctAnswers: ['the plating metal', 'aqueous NaCl (brine)', 'water would be reduced instead of $Al^{3+}$', 'precious metals (Ag, Au, Pt)'],
-        hint1: 'The anode dissolves to provide metal ions for plating.',
-        hint2: 'The chlor-alkali process uses dissolved salt.',
-        hint3: '$Al^{3+}$ has E° = −1.66 V, far below water (−0.83 V).',
-        explanation: 'Anode = plating metal (dissolves). Chlor-alkali uses brine. $Al^{3+}$ cannot be reduced from water (E° too negative). Anode mud contains noble metals that do not dissolve.'
-      }
-    },
-    {
       id: 'ef5-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
@@ -244,15 +193,15 @@ $\\text{Ag}^+ + e^- \\rightarrow \\text{Ag}$, $n = 1$, $M_{\\text{Ag}} = 107.87$
             explanation: 'By Faraday\'s law ($m = ItM/nF$), the mass deposited depends on current ($I$) and time ($t$). Increasing either deposits more metal and creates a thicker coating. Electrolyte concentration and the cathode\'s own metal do not appear in Faraday\'s law, and lowering the voltage reduces the current.'
           },
           {
-            question: 'Why does the Hall-Héroult process use carbon anodes?',
+            question: 'A current of 1.50 A for 1.00 h deposits 1.64 g of nickel (58.69 g/mol) from a solution of a nickel salt. What is the charge on the nickel ion?',
             options: [
-              'Carbon is inert and is never consumed in the process',
-              'Carbon reacts with $O^{2-}$ ions, reducing the required voltage',
-              'Carbon reduces $Al^{3+}$ to Al directly at the anode',
-              'Carbon raises the melting point of the cryolite bath'
+              '+1',
+              '+2',
+              '+3',
+              '+4'
             ],
             correctAnswer: 1,
-            explanation: 'Carbon anodes react with $O^{2-}$ to form $CO_{2}$, which is less energy-intensive than producing pure $O_{2}$. This reduces the overall voltage needed, saving energy. The carbon anodes are consumed and must be replaced. $Al^{3+}$ is reduced at the cathode, and cryolite is added to lower the melting point, not raise it.'
+            explanation: '$q = It = (1.50)(3600) = 5400$ C, or $5400/96{,}485 = 0.0560$ mol $e^-$. Moles of Ni = $1.64/58.69 = 0.0279$ mol. The ratio $0.0560/0.0279 \\approx 2$ electrons per Ni atom, so the ion is $\\text{Ni}^{2+}$.'
           }
         ]
       }

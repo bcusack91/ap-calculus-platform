@@ -158,15 +158,15 @@ A buffer contains 0.40 mol $CH_3COOH$ and 0.60 mol $CH_3COO^-$ in 2.0 L. ($pK_a 
 
 **2)** What is the maximum moles of $NaOH$ this buffer can absorb? (2 decimal places)
 
-**3)** What is the pH after adding 0.30 mol $NaOH$? (2 decimal places)
+**3)** Does this buffer have greater capacity for added **acid** or added **base**? (type acid or base)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.60', '0.40', '5.69'],
+        correctAnswers: ['0.60', '0.40', 'acid'],
         hint1: 'Max acid = moles of $A^-$ available.',
         hint2: 'Max base = moles of $HA$ available.',
-        hint3: 'After adding 0.30 mol $NaOH$: $HA = 0.40 - 0.30 = 0.10$; $A^- = 0.60 + 0.30 = 0.90$.',
-        explanation: '1) Max $HCl$ = 0.60 mol (all $A^-$). 2) Max $NaOH$ = 0.40 mol (all $HA$). 3) After: $HA = 0.10$, $A^- = 0.90$. $pH = 4.74 + \\log(0.90/0.10) = 4.74 + 0.95 = 5.69$.'
+        hint3: 'Which component is present in the larger amount, and which addition does it neutralize?',
+        explanation: '1) Max $HCl$ = 0.60 mol (all $A^-$). 2) Max $NaOH$ = 0.40 mol (all $HA$). 3) Acid: the buffer has more $A^-$ (0.60 mol) than $HA$ (0.40 mol), and $A^-$ is the component that neutralizes added acid (CED 8.10.A.2).'
       }
     },
     {
@@ -239,15 +239,15 @@ But now there\'s half the buffering capacity.
       exercise: {
         questions: [
           {
-            question: 'A buffer at pH 4.74 ($pK_a = 4.74$) with 0.10 mol each of $HA$ and $A^-$. After adding 0.05 mol $HCl$, the $[A^-]/[HA]$ ratio is:',
+            question: 'A buffer contains 0.30 mol $HA$ and 0.10 mol $A^-$. Which statement about its capacity is correct?',
             options: [
-              '1.00',
-              '0.333',
-              '3.00',
-              '0.500'
+              'It can neutralize more added base than added acid',
+              'It can neutralize more added acid than added base',
+              'Its capacity is the same for added acid and added base',
+              'It cannot neutralize any added acid'
             ],
-            correctAnswer: 1,
-            explanation: '$A^- + H^+ \\rightarrow HA$. $A^-$: $0.10 - 0.05 = 0.05$ mol. $HA$: $0.10 + 0.05 = 0.15$ mol. Ratio = $0.05/0.15 = 0.333$. Forgetting to add the 0.05 mol to $HA$ gives $0.05/0.10 = 0.500$, and inverting the ratio gives 3.00.'
+            correctAnswer: 0,
+            explanation: 'Added base is neutralized by $HA$ (0.30 mol available) and added acid by $A^-$ (0.10 mol available). With more conjugate acid than base, the buffer has greater capacity for added base (CED 8.10.A.2). It can still neutralize up to 0.10 mol of acid.'
           },
           {
             question: 'Which would be the best buffer for maintaining pH near 7?',

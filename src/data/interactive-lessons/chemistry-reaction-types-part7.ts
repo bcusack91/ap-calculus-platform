@@ -29,18 +29,17 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
       content: `
 ## 📋 Complete Reaction Type Summary
 
-| Type | General Form | Key Signal |
-|------|-------------|------------|
-| Synthesis | $A + B \\rightarrow AB$ | Many → one |
-| Decomposition | $AB \\rightarrow A + B$ | One → many (often with $\\Delta$) |
-| Single Replacement | $A + BC \\rightarrow AC + B$ | Free element + compound |
-| Double Replacement | $AB + CD \\rightarrow AD + CB$ | Two ionic compounds swap ions |
-| Combustion | $\\text{Fuel} + \\text{O}_2 \\rightarrow \\text{CO}_2 + \\text{H}_2\\text{O}$ | Organic + $O_{2}$ |
+| Type | What is transferred or formed | Key evidence | Example |
+|------|------------------------------|--------------|---------|
+| Acid–base | A proton $(\\text{H}^+)$ | One species loses an H, another gains it; no oxidation-number change | $\\text{HF} + \\text{OH}^- \\rightarrow \\text{F}^- + \\text{H}_2\\text{O}$ |
+| Redox | One or more electrons | Oxidation numbers change | $\\text{Zn} + \\text{Cu}^{2+} \\rightarrow \\text{Zn}^{2+} + \\text{Cu}$ |
+| Redox: combustion | Electrons from a fuel to $\\text{O}_2$ | Fuel + $\\text{O}_2$ → $\\text{CO}_2$ + $\\text{H}_2\\text{O}$ | $\\text{CH}_4 + 2\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\text{H}_2\\text{O}$ |
+| Precipitation | An insoluble ionic solid forms | Aqueous ions → product (s); no oxidation-number change | $\\text{Ag}^+ + \\text{Cl}^- \\rightarrow \\text{AgCl}(s)$ |
 
 
 ---
 
-> 🔑 **Key Concept:** To classify any reaction, follow this decision tree: (1) Only one reactant? → **Decomposition**. (2) Only one product? → **Synthesis**. (3) $O_{2}$ + fuel → $CO_{2}$ + $H_{2}O$? → **Combustion**. (4) Free element + compound? → **Single replacement**. (5) Two ionic compounds? → **Double replacement**.
+> 🔑 **Key Concept:** To classify any reaction: (1) Do oxidation numbers change? → **Redox**. (2) Does a proton move? → **Acid–base**. (3) Do dissolved ions form a solid? → **Precipitation**.
 
 
 ---
@@ -48,18 +47,18 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 ## 📌 AP Exam Tips
 
 1. **Read carefully** — the AP exam often describes reactions in words rather than symbols
-2. **Know the activity series** — required for predicting single replacement
-3. **Know solubility rules** — required for identifying precipitates in double replacement
+2. **Justify with evidence** — name the species whose oxidation number changes, or the species that donates and accepts the proton
+3. **Know the one solubility rule** — all sodium, potassium, ammonium, and nitrate salts are soluble; other solubilities are given
 4. **Balancing must be correct** — even if the products are right, unbalanced equations lose points
 5. **State symbols matter** — (s), (l), (g), (aq) are often tested
-6. **Net ionic equations** — AP frequently asks for these in double replacement reactions
+6. **Net ionic equations** — AP frequently asks for these for precipitation and acid–base reactions
 
 
 ---
 
-> 💡 **Tip:** On the AP exam, quickly scan for visual cues: a **lone reactant** (decomposition), **$O_{2}$ on the left with $CO_{2}$ + $H_{2}O$ on the right** (combustion), a **free element** mixed with a compound (single replacement), or **two aqueous ionic compounds** (double replacement).
+> 💡 **Tip:** Say "the species that is oxidized" and "the species that is reduced" in explanations. Identify each by its change in oxidation number.
 
-> ⚠️ **Warning:** Common errors when predicting products: (1) writing incorrect ionic formulas by not cross-checking charges, (2) forgetting to consult the activity series for single replacement, (3) predicting a double replacement when no driving force exists (no precipitate, gas, or water), and (4) submitting unbalanced equations.
+> ⚠️ **Warning:** Common errors: (1) writing incorrect ionic formulas by not cross-checking charges, (2) calling a metal-plus-acid reaction "acid–base" when the metal is actually oxidized, (3) predicting a precipitate that is a sodium, potassium, ammonium, or nitrate salt, and (4) submitting unbalanced equations.
       `
     },
     {
@@ -68,7 +67,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
       content: `
 ## 🔄 Net Ionic Equations — Quick Review
 
-For double replacement reactions in solution, the AP exam often asks for net ionic equations.
+For precipitation and acid–base reactions in solution, the AP exam often asks for net ionic equations.
 
 ---
 
@@ -103,15 +102,15 @@ For double replacement reactions in solution, the AP exam often asks for net ion
       exercise: {
         questions: [
           {
-            question: 'A strip of zinc metal is placed in a solution of copper(II) sulfate. Which statement is correct?',
+            question: 'A strip of zinc metal is placed in a blue solution of copper(II) sulfate. The blue color fades and a reddish-brown solid forms on the strip. Which statement is correct?',
             options: [
-              'No reaction occurs because copper is more reactive than zinc',
-              'Zinc dissolves and copper metal deposits because zinc is more reactive',
-              'Both metals dissolve and the solution turns colorless',
-              'Copper sulfate decomposes into copper and sulfur trioxide'
+              'Copper(II) sulfate precipitates because zinc ions remove water from the solution',
+              'Zinc is oxidized to $\\text{Zn}^{2+}$ and $\\text{Cu}^{2+}$ is reduced to copper metal',
+              'Zinc is reduced to $\\text{Zn}^{2+}$ and $\\text{Cu}^{2+}$ is oxidized to copper metal',
+              'Sulfate ions transfer protons to zinc, forming hydrogen gas'
             ],
             correctAnswer: 1,
-            explanation: 'Zinc is above copper in the activity series. $\\text{Zn}(s) + \\text{CuSO}_4(aq) \\rightarrow \\text{ZnSO}_4(aq) + \\text{Cu}(s)$. The zinc dissolves (oxidized) and copper metal plates out (reduced).'
+            explanation: '$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$. Zinc loses electrons (0 → +2, oxidized) and copper(II) gains them (+2 → 0, reduced); the fading blue color shows $\\text{Cu}^{2+}$ being used up. Losing electrons is oxidation, not reduction, and sulfate is a spectator with no protons.'
           },
           {
             question: 'When solutions of sodium hydroxide and hydrochloric acid are mixed, the net ionic equation is:',
@@ -125,26 +124,26 @@ For double replacement reactions in solution, the AP exam often asks for net ion
             explanation: 'The molecular equation is NaOH + HCl → NaCl + $H_{2}O$. $Na^{+}$ and $Cl^{-}$ are spectator ions. The net ionic equation shows only what actually reacts: $\\text{H}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{H}_2\\text{O}(l)$.'
           },
           {
-            question: 'Heating copper(II) carbonate produces a black solid and a gas. This is best classified as:',
+            question: 'Which reaction is NOT a redox reaction?',
             options: [
-              'Synthesis',
-              'Combustion',
-              'Decomposition',
-              'Single replacement'
-            ],
-            correctAnswer: 2,
-            explanation: '$\\text{CuCO}_3 \\xrightarrow{\\Delta} \\text{CuO}(\\text{black solid}) + \\text{CO}_2(\\text{gas})$. One reactant breaks into two simpler products — this is decomposition.'
-          },
-          {
-            question: 'Gold does not dissolve in hydrochloric acid. This is because:',
-            options: [
-              'Gold is above hydrogen in the activity series',
-              'Gold is below hydrogen in the activity series',
-              'HCl is too weak an acid to attack metals',
-              'Gold forms a protective oxide layer'
+              '$2\\text{Na}(s) + \\text{Cl}_2(g) \\rightarrow 2\\text{NaCl}(s)$',
+              '$\\text{H}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{H}_2\\text{O}(l)$',
+              '$\\text{Fe}(s) + 2\\text{H}^+(aq) \\rightarrow \\text{Fe}^{2+}(aq) + \\text{H}_2(g)$',
+              '$2\\text{C}_2\\text{H}_6(g) + 7\\text{O}_2(g) \\rightarrow 4\\text{CO}_2(g) + 6\\text{H}_2\\text{O}(g)$'
             ],
             correctAnswer: 1,
-            explanation: 'Gold is far below hydrogen in the activity series (it is one of the least reactive metals). Only metals above hydrogen can displace $H_{2}$ from acids, and HCl readily dissolves metals such as Zn and Mg. Gold requires aqua regia $(HCl + HNO_{3})$ to dissolve.'
+            explanation: 'In the neutralization, a proton moves from $\\text{H}^+$ to $\\text{OH}^-$ and hydrogen stays +1 and oxygen stays −2: an acid–base reaction. The sodium–chlorine reaction, iron dissolving in acid, and ethane combustion all involve oxidation-number changes.'
+          },
+          {
+            question: 'A student says that the reaction of magnesium with hydrochloric acid is an acid–base reaction because an acid is a reactant. Which statement best evaluates the claim?',
+            options: [
+              'Correct, because HCl donates a proton to magnesium',
+              'It is redox, since Mg is oxidized',
+              'Correct, because magnesium chloride is a salt',
+              'Incorrect, because magnesium chloride precipitates'
+            ],
+            correctAnswer: 1,
+            explanation: 'Magnesium goes from 0 to +2 and hydrogen from +1 to 0 in $\\text{H}_2$, so electrons are transferred: redox. Forming a salt does not make a reaction acid–base, and magnesium chloride is soluble, so nothing precipitates.'
           }
         ]
       }
@@ -155,20 +154,20 @@ For double replacement reactions in solution, the AP exam often asks for net ion
       content: `
 **AP-Style Identification** 🧮
 
-Classify each reaction. Type: **synthesis**, **decomposition**, **single**, **double**, or **combustion**.
+Classify each reaction. Type **acid-base**, **redox**, or **precipitation**.
 
 **1)** $2\\text{Na} + \\text{Cl}_2 \\rightarrow 2\\text{NaCl}$
 
 **2)** $\\text{Pb(NO}_3)_2(\\text{aq}) + 2\\text{KI}(\\text{aq}) \\rightarrow \\text{PbI}_2(\\text{s}) + 2\\text{KNO}_3(\\text{aq})$
 
-**3)** $2\\text{C}_8\\text{H}_{18} + 25\\text{O}_2 \\rightarrow 16\\text{CO}_2 + 18\\text{H}_2\\text{O}$
+**3)** $\\text{NH}_3(\\text{aq}) + \\text{HC}_2\\text{H}_3\\text{O}_2(\\text{aq}) \\rightarrow \\text{NH}_4^+(\\text{aq}) + \\text{C}_2\\text{H}_3\\text{O}_2^-(\\text{aq})$
       `,
       exercise: {
-        questions: [{ question: '(1)', answer: 'synthesis', acceptableAnswers: ['synthesis', 'combination'] }, { question: '(2)', answer: 'double', acceptableAnswers: ['double', 'double replacement', 'double displacement'] }, { question: '(3)', answer: 'combustion', acceptableAnswers: ['combustion'] }],
-        hint1: 'Two elements combine to form one ionic compound.',
-        hint2: 'Two aqueous ionic compounds exchange ions; a precipitate forms.',
-        hint3: 'A hydrocarbon reacts with oxygen to form $CO_{2}$ and $H_{2}O$.',
-        explanation: '1) Synthesis: 2Na + $Cl_{2}$ → 2NaCl (two elements → one compound). 2) Double replacement: $Pb(NO_{3})_{2}$ + 2KI → $PbI_{2}$↓ + $2KNO_{3}$ (ions exchange; precipitate forms). 3) Combustion: octane + $O_{2}$ → $CO_{2}$ + $H_{2}O$ (hydrocarbon + oxygen).'
+        questions: [{ question: '(1)', answer: 'redox', acceptableAnswers: ['redox', 'oxidation-reduction', 'oxidation reduction'] }, { question: '(2)', answer: 'precipitation', acceptableAnswers: ['precipitation', 'precipitate'] }, { question: '(3)', answer: 'acid-base', acceptableAnswers: ['acid-base', 'acid base', 'acid–base'] }],
+        hint1: 'Sodium and chlorine both start as free elements.',
+        hint2: 'Two aqueous ionic compounds; a solid appears.',
+        hint3: 'Which species gains an H?',
+        explanation: '1) Redox: Na 0 → +1 (oxidized), Cl 0 → −1 (reduced). 2) Precipitation: $\\text{Pb}^{2+}$ and $\\text{I}^-$ form solid $\\text{PbI}_2$; potassium and nitrate stay dissolved. 3) Acid–base: acetic acid donates a proton to ammonia.'
       }
     },
     {
@@ -180,7 +179,7 @@ Classify each reaction. Type: **synthesis**, **decomposition**, **single**, **do
       exercise: {
         questions: [
           {
-            question: 'A student mixes aqueous solutions of barium chloride and sodium sulfate. A white precipitate forms. The formula of the precipitate is:',
+            question: 'A student mixes aqueous solutions of barium chloride and sodium sulfate, and a white precipitate forms. Which formula is the precipitate?',
             options: [
               'NaCl',
               '$BaSO_{4}$',
@@ -188,18 +187,18 @@ Classify each reaction. Type: **synthesis**, **decomposition**, **single**, **do
               '$Na_{2}Cl_{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$\\text{BaCl}_2(aq) + \\text{Na}_2\\text{SO}_4(aq) \\rightarrow \\text{BaSO}_4(s) + 2\\text{NaCl}(aq)$. $BaSO_{4}$ is the insoluble precipitate (white). NaCl is soluble and remains in solution.'
+            explanation: '$\\text{BaCl}_2(aq) + \\text{Na}_2\\text{SO}_4(aq) \\rightarrow \\text{BaSO}_4(s) + 2\\text{NaCl}(aq)$. NaCl cannot be the solid because every sodium salt is soluble, so the precipitate must be barium sulfate.'
           },
           {
-            question: 'Which reaction represents the thermal decomposition of limestone?',
+            question: 'In the reaction $2\\text{Al}(s) + 3\\text{Cu}^{2+}(aq) \\rightarrow 2\\text{Al}^{3+}(aq) + 3\\text{Cu}(s)$, how many electrons are transferred in total as written?',
             options: [
-              '$\\text{CaCO}_3 \\rightarrow \\text{CaO} + \\text{CO}_2$',
-              '$\\text{CaO} + \\text{CO}_2 \\rightarrow \\text{CaCO}_3$',
-              '$\\text{Ca} + \\text{CO}_3 \\rightarrow \\text{CaCO}_3$',
-              '$\\text{CaCO}_3 + \\text{HCl} \\rightarrow \\text{CaCl}_2 + \\text{H}_2\\text{O} + \\text{CO}_2$'
+              '2',
+              '3',
+              '5',
+              '6'
             ],
-            correctAnswer: 0,
-            explanation: 'Limestone is $CaCO_{3}$. Thermal decomposition (heating) breaks it into CaO (quicklime) + $CO_{2}$. This is used industrially in cement production. Forming $\\text{CaCO}_3$ from CaO + $CO_{2}$ is the reverse (synthesis), and the HCl reaction is a double replacement with an acid.'
+            correctAnswer: 3,
+            explanation: 'Each Al atom loses 3 electrons (2 atoms → 6 electrons), and each $\\text{Cu}^{2+}$ gains 2 (3 ions → 6 electrons). Electrons lost equal electrons gained: 6. The values 2 and 3 are the per-particle changes, and 5 adds them.'
           }
         ]
       }
@@ -213,27 +212,27 @@ Classify each reaction. Type: **synthesis**, **decomposition**, **single**, **do
       exercise: {
         dropdowns: [
           {
-            label: 'The formation of rust $(Fe_{2}O_{3})$ from iron and oxygen is a type of',
-            options: ['decomposition', 'synthesis', 'single replacement', 'combustion']
+            label: 'The formation of rust $(Fe_{2}O_{3})$ from iron and oxygen is classified as',
+            options: ['acid–base', 'redox', 'precipitation', 'no reaction']
           },
           {
             label: 'In a net ionic equation, spectator ions are',
             options: ['the main reactants', 'removed because they don\'t change', 'always precipitates', 'gases that escape']
           },
           {
-            label: 'Fluorine gas can displace chloride ions from NaCl because',
-            options: ['$F_{2}$ is less reactive than $Cl_{2}$', '$F_{2}$ is more reactive than $Cl_{2}$', 'NaCl is insoluble', 'fluorine is a metal']
+            label: 'In a redox reaction, electrons are transferred from',
+            options: ['the reduced species to the oxidized species', 'the oxidized species to the reduced species', 'the acid to the base', 'the solid to the solution']
           },
           {
-            label: 'An acid reacting with a base to form salt and water is called',
-            options: ['combustion', 'synthesis', 'neutralization', 'decomposition']
+            label: 'An acid reacting with a hydroxide base to form salt and water is called',
+            options: ['combustion', 'precipitation', 'neutralization', 'oxidation']
           }
         ],
-        correctAnswers: ['synthesis', 'removed because they don\'t change', '$F_{2}$ is more reactive than $Cl_{2}$', 'neutralization'],
-        hint1: 'Two elements forming one compound.',
+        correctAnswers: ['redox', 'removed because they don\'t change', 'the oxidized species to the reduced species', 'neutralization'],
+        hint1: 'Iron goes from 0 to +3.',
         hint2: 'Spectator ions appear identically on both sides.',
-        hint3: 'Reactivity decreases down Group 17: F > Cl > Br > I.',
-        explanation: 'Rust formation is synthesis (4Fe + $3O_{2}$ → $2Fe_{2}O_{3}$). Spectator ions don\'t participate and are removed from net ionic equations. $F_{2}$ > $Cl_{2}$ in reactivity (higher in Group 17). Acid + base → salt + water is neutralization (a type of double replacement).'
+        hint3: 'The species that loses electrons is the one that is oxidized.',
+        explanation: 'Rust formation is redox: iron is oxidized and oxygen is reduced. Spectator ions don\'t participate and are removed from net ionic equations. Electrons move from the species that is oxidized to the species that is reduced (CED 4.7.A.3). Acid + hydroxide → salt + water is neutralization, an acid–base reaction.'
       }
     },
     {
@@ -253,18 +252,18 @@ Classify each reaction. Type: **synthesis**, **decomposition**, **single**, **do
               '$\\text{FeCl}_3 + 3\\text{NaOH} \\rightarrow \\text{FeO}_3 + 3\\text{NaCl} + 3\\text{H}_2$'
             ],
             correctAnswer: 1,
-            explanation: 'Double replacement: $Fe^{3+}$ pairs with $OH^{-}$ → $Fe(OH)_{3}$ (brown precipitate). $Na^{+}$ pairs with $Cl^{-}$ → NaCl. Balanced: $FeCl_{3}$ + 3NaOH → $Fe(OH)_{3}$↓ + 3NaCl. Fe: 1=1 ✓, Cl: 3=3 ✓, Na: 3=3 ✓, O: 3=3 ✓, H: 3=3 ✓.'
+            explanation: 'Precipitation: $Fe^{3+}$ pairs with $OH^{-}$ → $Fe(OH)_{3}$ (brown precipitate). $Na^{+}$ pairs with $Cl^{-}$ → NaCl, which stays dissolved. Balanced: $FeCl_{3}$ + 3NaOH → $Fe(OH)_{3}$↓ + 3NaCl. Fe: 1=1 ✓, Cl: 3=3 ✓, Na: 3=3 ✓, O: 3=3 ✓, H: 3=3 ✓.'
           },
           {
-            question: 'On the AP exam, which piece of information is MOST important for predicting whether a single replacement reaction occurs?',
+            question: 'Which evidence would best show that a reaction is a redox reaction?',
             options: [
-              'The solubility rules',
-              'The activity series',
-              'The molar masses of reactants',
-              'The color of the solution'
+              'A solid forms when two solutions are mixed',
+              'The oxidation number of at least one element changes',
+              'Water is one of the products',
+              'The reaction releases heat to the surroundings'
             ],
             correctAnswer: 1,
-            explanation: 'The activity series determines whether a free element can displace another element from a compound. Without it, you cannot predict if a single replacement reaction will proceed or result in "no reaction."'
+            explanation: 'Redox reactions transfer electrons, which shows up as a change in oxidation numbers (CED 4.7.A.4). A solid forming points to precipitation, water forms in acid–base reactions too, and both acid–base and precipitation reactions can release heat.'
           }
         ]
       }

@@ -4,9 +4,9 @@ export const chemEntropySecondLawPart3Data = {
     {
       id: 'en3-intro',
       type: 'text' as const,
-      content: `# 🌍 The Second Law of Thermodynamics
+      content: `# ⚖️ Entropy and Thermodynamic Favorability
 
-**Part 3 of 7 — ΔS_universe > 0 for Spontaneous Processes**
+**Part 3 of 7 — When Energy and Dispersal Compete**
 
 ---
 
@@ -14,257 +14,221 @@ export const chemEntropySecondLawPart3Data = {
 
 | Section |
 |---------|
-| 📏 The Second Law |
-| Three Cases |
-| What Does "Spontaneous" Mean? |
-| 🌡️ Entropy of the Surroundings |
-| Why the Negative Sign? |
+| 📏 Thermodynamically Favored Processes |
+| What "Favored" Does and Does Not Mean |
+| ⚖️ Two Factors: Energy and Dispersal |
+| 🔧 When Enthalpy and Entropy Compete |
 
-> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+> 🔑 **Key Concept:** Whether a process is thermodynamically favored depends on **two** factors: the energy change ($\\Delta H$) and the entropy change ($\\Delta S$). Sometimes both point the same way; sometimes they compete, and temperature decides (CED 9.3.A.4, 9.3.A.6).
 
 ---
 
 ### What You'll Master in Part 3
-- Understanding the core concepts covered in Part 3
-- Applying these ideas to solve practice problems
-- Building toward AP exam readiness for this topic`
+- Using the phrase "thermodynamically favored" correctly
+- Predicting favorability from the signs of $\\Delta H$ and $\\Delta S$
+- Explaining why a favored process can still be too slow to observe`
     },
     {
       id: 'en3-second-law',
       type: 'text' as const,
       content: `
-## 📏 The Second Law
+## 📏 Thermodynamically Favored Processes
 
-**The entropy of the universe increases for every spontaneous process.**
+The second law of thermodynamics says that, overall, matter and energy tend to become more dispersed. In AP Chemistry you apply that idea through $\\Delta H$, $\\Delta S$, and (in the next topic) $\\Delta G$.
 
-$$\\boxed{\\Delta S_{\\text{universe}} = \\Delta S_{\\text{system}} + \\Delta S_{\\text{surroundings}} > 0}$$
-
-
----
-
-### Three Cases
-
-| Condition | Process Type |
-|-----------|-------------|
-| $\\Delta S_{\\text{universe}} > 0$ | Spontaneous (irreversible) |
-| $\\Delta S_{\\text{universe}} = 0$ | At equilibrium (reversible) |
-| $\\Delta S_{\\text{universe}} < 0$ | Nonspontaneous (reverse is spontaneous) |
+A process that proceeds toward products without continuous outside help is called **thermodynamically favored**. The CED prefers this phrase to "spontaneous," because "spontaneous" is easily misread as "sudden" (CED 9.3.A.2).
 
 
 ---
 
-### What Does "Spontaneous" Mean?
+### What "Favored" Does and Does Not Mean
 
-A **spontaneous** process occurs without continuous outside intervention. It does NOT mean:
-- Fast (diamond → graphite is spontaneous but infinitely slow)
-- Without any initial input (a match needs a spark, but then burning is spontaneous)
+It does NOT mean:
+- **Fast** — diamond → graphite is favored but immeasurably slow
+- **No start-up needed** — a match needs a spark, but then burning continues on its own
 
 It DOES mean:
-- The process is thermodynamically favorable
-- The reverse process will not happen on its own
+- Products are favored under the stated conditions
+- The reverse process will not happen on its own under those conditions
+
+> 💡 **Tip:** A favored reaction that does not occur at a measurable rate is under **kinetic control**, usually because of a high activation energy (CED 9.4.A.2).
       `
     },
     {
-      id: 'en3-entropy-surroundings',
+      id: 'en3-two-factors',
       type: 'text' as const,
       content: `
-## 🌡️ Entropy of the Surroundings
+## ⚖️ Two Factors: Energy and Dispersal
 
-The entropy change of the surroundings depends on the heat flow and temperature:
+Two tendencies favor a process:
 
-$$\\boxed{\\Delta S_{\\text{surroundings}} = -\\frac{q_{\\text{system}}}{T} = -\\frac{\\Delta H_{\\text{system}}}{T}}$$
+1. **Releasing energy** to the surroundings: $\\Delta H < 0$ (exothermic)
+2. **Increasing dispersal** of matter and energy in the system: $\\Delta S > 0$
 
-(at constant pressure and temperature)
+| $\\Delta H$ | $\\Delta S$ | Do the factors agree? | Favored at |
+|------------|------------|----------------------|-----------|
+| − | + | Both favor products | **All temperatures** |
+| + | − | Both oppose products | **No temperature** |
+| − | − | Compete: energy favors, dispersal opposes | **Low temperature** |
+| + | + | Compete: dispersal favors, energy opposes | **High temperature** |
 
-
----
-
-### Why the Negative Sign?
-
-Heat released by the system ($-q$) is absorbed by the surroundings ($+q$), and vice versa.
-
-
----
-
-### Why Divide by Temperature?
-
-The same amount of heat has a **greater impact** on entropy at **lower temperature**:
-
-- Adding 100 J of heat to a cold system (200 K) creates a larger entropy change than adding 100 J to a hot system (1000 K)
-- This is like adding \\$10 to someone with \\$100 vs. someone with \\$10,000
-
-
----
-
-### Combining System and Surroundings
-
-$$\\Delta S_{\\text{universe}} = \\Delta S_{\\text{system}} + \\left(-\\frac{\\Delta H_{\\text{system}}}{T}\\right)$$
-
-> 🔑 **Key Concept:** This equation connects entropy, enthalpy, and spontaneity — rearranging gives $\\Delta G = \\Delta H - T\\Delta S$, the Gibbs Free Energy equation.
-      `
-    },
-    {
-      id: 'en3-spontaneity-examples',
-      type: 'text' as const,
-      content: `
-## 🔧 How Spontaneous Processes Work
-
-### Exothermic Reactions at Room Temperature
-
-For combustion of methane: $\\Delta H_{\\text{sys}} < 0$
-
-- $\\Delta S_{\\text{surr}} = -\\Delta H/T > 0$ (large positive)
-- Even if $\\Delta S_{\\text{sys}} < 0$, $\\Delta S_{\\text{univ}}$ can still be positive
-- The large heat release drives spontaneity
-
-
----
-
-### Endothermic Spontaneous Processes
-
-Ice melting above 0°C: $\\Delta H_{\\text{sys}} > 0$
-
-- $\\Delta S_{\\text{surr}} = -\\Delta H/T < 0$ (negative)
-- But $\\Delta S_{\\text{sys}} > 0$ (solid → liquid, large increase)
-- If $\\Delta S_{\\text{sys}}$ outweighs $|\\Delta S_{\\text{surr}}|$, the process is spontaneous
-
-
----
-
-### Temperature Dependence
-
-At the melting point (0°C for water):
-$$\\Delta S_{\\text{universe}} = 0 \\quad \\text{(equilibrium)}$$
-
-Above 0°C: melting is spontaneous. Below 0°C: freezing is spontaneous.
+> 🔑 **Key Concept:** Temperature acts as a weighting factor for entropy. At high temperature the entropy factor dominates; at low temperature the enthalpy factor dominates. When both factors agree, no calculation is needed to decide (CED 9.3.A.6).
       `
     },
     {
       id: 'en3-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Second Law Concept Quiz** 🎯
+**Favorability Concept Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'For a spontaneous process, which must be true?',
+            question: 'A process has ΔH < 0 and ΔS > 0. Under which conditions is it thermodynamically favored?',
             options: [
-              'ΔS_system > 0',
-              'ΔS_surroundings > 0',
-              'ΔS_universe > 0',
-              'ΔH < 0'
+              'Only at high temperature',
+              'Only at low temperature',
+              'At all temperatures',
+              'At no temperature'
             ],
             correctAnswer: 2,
-            explanation: 'The Second Law requires $\\Delta S_{\\text{universe}} > 0$ for spontaneity. Neither $\\Delta S_{\\text{sys}}$ nor $\\Delta S_{\\text{surr}}$ alone must be positive — only their sum.'
+            explanation: 'Releasing energy and increasing dispersal both favor the products, so the process is favored at every temperature. Temperature only decides the outcome when the two factors compete.'
           },
           {
-            question: 'An exothermic reaction releases 50 kJ of heat at 300 K. ΔS_surroundings is:',
+            question: 'A reaction is endothermic and has a positive ΔS. How does raising the temperature affect its favorability?',
             options: [
-              '−167 J/K',
-              '+167 J/K',
-              '+0.167 J/K',
-              '+6.00 J/K'
+              'It becomes less favored, because heat must be absorbed',
+              'More favored, as entropy gains weight',
+              'It is unaffected, because ΔH and ΔS do not depend on T',
+              'It becomes favored only if a catalyst is added'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta S_{\\text{surr}} = -\\Delta H/T = -(-50{,}000 \\text{ J})/300 \\text{ K} = +167$ J/K. The surroundings absorb heat, so their entropy increases. Dropping the minus sign gives −167 J/K, leaving ΔH in kJ gives 0.167, and dividing T by ΔH (300/50) gives 6.00.'
+            explanation: 'When ΔH > 0 and ΔS > 0, dispersal favors the products while energy opposes them. Higher temperature gives the entropy factor more weight, so the process becomes favored at high T. A catalyst changes the rate, not favorability.'
           },
           {
-            question: '"Spontaneous" in thermodynamics means:',
+            question: '"Thermodynamically favored" means:',
             options: [
               'The reaction happens quickly once started',
               'No energy input is needed to start it',
-              'The process is favorable in the direction written',
+              'Equilibrium lies toward the products',
               'The reaction must be exothermic, releasing heat'
             ],
             correctAnswer: 2,
-            explanation: 'Spontaneous means thermodynamically favorable — the reaction will proceed in the forward direction given enough time. It says nothing about speed (kinetics) and does not require exothermicity.'
+            explanation: 'Thermodynamically favored means the process proceeds toward products under the stated conditions, given enough time. It says nothing about speed (kinetics), a reaction may still need a spark to start, and endothermic processes can be favored when ΔS is large enough.'
           }
         ]
       }
     },
     {
-      id: 'en3-calculation-drill',
+      id: 'en3-competing-factors',
+      type: 'text' as const,
+      content: `
+## 🔧 When Enthalpy and Entropy Compete
+
+The CED names two classic examples in which both factors must be considered (CED 9.3.A.4).
+
+### Freezing of Water ($\\Delta H < 0$, $\\Delta S < 0$)
+
+- Freezing releases energy (favorable) but locks molecules into a solid (unfavorable dispersal).
+- Below 0 °C the energy factor wins, so water freezes.
+- Above 0 °C the entropy factor wins, so ice melts.
+- At 0 °C the two factors balance: ice and water coexist at equilibrium.
+
+
+---
+
+### Dissolving Sodium Nitrate ($\\Delta H > 0$, $\\Delta S > 0$)
+
+- Dissolving $\\text{NaNO}_3$ absorbs energy, so the solution gets cold (unfavorable energy change).
+- The ions disperse throughout the water (favorable entropy change).
+- At room temperature the entropy factor wins, so the salt dissolves even though the process is endothermic.
+
+> 💡 **Tip:** On the AP exam, justify favorability by naming **both** factors: "Although the process is endothermic, the increase in entropy as the solid ions disperse into solution makes it thermodynamically favored at this temperature."
+      `
+    },
+    {
+      id: 'en3-sign-drill',
       type: 'input-boxes' as const,
       content: `
-**Second Law Calculations** 🧮
+**Predict Favorability from the Signs** 🧮
 
-**1)** A reaction has $\\Delta H = -100$ kJ and $\\Delta S_{\\text{sys}} = -50$ J/K at $T = 400$ K. What is $\\Delta S_{\\text{surr}}$? (in J/K)
+For each process, type **all**, **high**, **low**, or **none** to show at which temperatures it is thermodynamically favored.
 
-**2)** Using your answer from (1), what is $\\Delta S_{\\text{universe}}$? (in J/K)
+**1)** $\\Delta H < 0$, $\\Delta S > 0$
 
-**3)** Is the reaction spontaneous? (type "yes" or "no")
+**2)** $\\Delta H > 0$, $\\Delta S > 0$
+
+**3)** $\\Delta H < 0$, $\\Delta S < 0$
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['250', '200', 'yes'],
-        hint1: '$\\Delta S_{\\text{surr}} = -\\Delta H/T = -(-100{,}000)/400$',
-        hint2: '$\\Delta S_{\\text{univ}} = \\Delta S_{\\text{sys}} + \\Delta S_{\\text{surr}}$',
-        hint3: 'Is $\\Delta S_{\\text{universe}} > 0$?',
-        explanation: '1) $\\Delta S_{\\text{surr}} = -(-100{,}000)/400 = +250$ J/K. 2) $\\Delta S_{\\text{univ}} = -50 + 250 = +200$ J/K. 3) Yes — $\\Delta S_{\\text{univ}} > 0$, so the process is spontaneous.'
+        questions: [{ question: '(1)', answer: 'all', acceptableAnswers: ['all', 'all temperatures', 'all T'] }, { question: '(2)', answer: 'high', acceptableAnswers: ['high', 'high T', 'high temperature'] }, { question: '(3)', answer: 'low', acceptableAnswers: ['low', 'low T', 'low temperature'] }],
+        hint1: 'Both factors favor the products.',
+        hint2: 'Dispersal favors, energy opposes. Which factor grows with temperature?',
+        hint3: 'Energy favors, dispersal opposes.',
+        explanation: '1) All temperatures: both factors favor products. 2) High temperatures: the favorable entropy factor dominates when T is large. 3) Low temperatures: the favorable enthalpy factor dominates when the entropy factor is weighted lightly.'
       }
     },
     {
       id: 'en3-dropdown-practice',
       type: 'dropdown-select' as const,
       content: `
-**Second Law Concepts** 🔽
+**Favorability Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'At equilibrium, ΔS_universe equals',
-            options: ['a positive number', 'a negative number', 'zero', 'infinity']
+            label: 'A process with ΔH > 0 and ΔS < 0 is thermodynamically favored at',
+            options: ['all temperatures', 'high temperatures', 'low temperatures', 'no temperature']
           },
           {
-            label: 'An endothermic process can be spontaneous if',
-            options: ['ΔS_system is sufficiently positive', 'ΔS_system is sufficiently negative', 'the temperature is kept very low', 'the activation energy is very small']
+            label: 'Dissolving $NH_{4}NO_{3}$ in water is endothermic yet favored at 25 °C, so its ΔS must be',
+            options: ['positive', 'negative', 'zero', 'impossible to determine']
           },
           {
-            label: 'Adding heat to a cold object changes its entropy MORE than adding the same heat to a hot object because',
-            options: ['cold objects already have more microstates', 'ΔS = q/T, and smaller T gives larger ΔS', 'cold objects have no entropy', 'the Second Law requires it']
+            label: 'Water freezes below 0 °C because at low temperature the',
+            options: ['entropy factor dominates', 'enthalpy factor dominates', 'activation energy is zero', 'reaction becomes endothermic']
           },
           {
-            label: 'The entropy of the universe',
-            options: ['is constant', 'always increases', 'always decreases', 'oscillates']
+            label: 'A thermodynamically favored reaction that does not occur at a measurable rate is under',
+            options: ['thermodynamic control', 'kinetic control', 'equilibrium control', 'entropy control']
           }
         ],
-        correctAnswers: ['zero', 'ΔS_system is sufficiently positive', 'ΔS = q/T, and smaller T gives larger ΔS', 'always increases'],
-        hint1: 'Equilibrium = reversible process.',
-        hint2: 'The positive ΔS_sys must overcome the negative ΔS_surr.',
-        hint3: 'The temperature is in the denominator.',
-        explanation: 'At equilibrium, ΔS_univ = 0. Endothermic reactions can be spontaneous if ΔS_sys is large enough. ΔS = q/T means the same q at lower T gives larger ΔS. The universe\'s entropy always increases for all spontaneous (real) processes.'
+        correctAnswers: ['no temperature', 'positive', 'enthalpy factor dominates', 'kinetic control'],
+        hint1: 'Both factors oppose the products.',
+        hint2: 'Something must favor the process if energy does not.',
+        hint3: 'Freezing releases energy but decreases dispersal.',
+        explanation: 'With ΔH > 0 and ΔS < 0, both factors oppose the process at every T. An endothermic process that is favored must have ΔS > 0. Freezing is favored at low T because the energy released outweighs the entropy decrease. A favored but very slow reaction is under kinetic control.'
       }
     },
     {
       id: 'en3-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Exit Quiz — Second Law** ✅
+**Exit Quiz — Favorability** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'Water freezing at −10°C is spontaneous. This means:',
+            question: 'Water freezes on its own at −10°C, even though the entropy of the water decreases. Which explanation is correct?',
             options: [
-              'ΔS_system > 0',
-              'ΔS_surroundings < 0',
-              'ΔS_universe > 0',
-              'ΔH > 0'
+              'Freezing increases the entropy of the water at −10°C',
+              'At low T, the energy released outweighs ΔS < 0',
+              'Freezing is endothermic, and endothermic processes are favored at low temperature',
+              'The activation energy for freezing is zero at −10°C'
             ],
-            correctAnswer: 2,
-            explanation: 'Any spontaneous process must have $\\Delta S_{\\text{universe}} > 0$. Freezing actually decreases $\\Delta S_{\\text{sys}}$ (liquid → solid), but the exothermic heat release increases $\\Delta S_{\\text{surr}}$ enough to make $\\Delta S_{\\text{univ}} > 0$.'
+            correctAnswer: 1,
+            explanation: 'Freezing has ΔH < 0 and ΔS < 0, so the factors compete. At low temperature the enthalpy factor dominates and freezing is favored. Freezing decreases the entropy of the water, it is exothermic rather than endothermic, and activation energy affects rate, not favorability.'
           },
           {
-            question: 'The conversion of diamond to graphite is thermodynamically spontaneous but does not occur at room temperature. Why?',
+            question: 'The conversion of diamond to graphite is thermodynamically favored but does not occur at room temperature. Why?',
             options: [
-              'The Second Law does not apply to solid-solid changes',
+              'Thermodynamic favorability does not apply to solid-solid changes',
               'Its activation energy is too high for a measurable rate',
-              'ΔS_universe for the conversion is actually negative',
+              'The conversion is actually unfavored at room temperature',
               'Diamond has higher entropy than graphite at 298 K'
             ],
             correctAnswer: 1,
-            explanation: 'Thermodynamics tells us IF a process is favorable, not HOW FAST it occurs. The diamond → graphite conversion is favorable ($\\Delta G < 0$, so $\\Delta S_{\\text{universe}} > 0$) but has an enormous activation energy (a kinetic barrier), making it immeasurably slow at room temperature. Diamond actually has lower entropy than graphite (2.4 vs 5.7 J/(mol·K)).'
+            explanation: 'Thermodynamics tells us IF a process is favored, not HOW FAST it occurs. The diamond → graphite conversion is favored ($\\Delta G° < 0$) but has an enormous activation energy, so it is under kinetic control and immeasurably slow at room temperature. Diamond actually has lower entropy than graphite (2.4 vs 5.7 J/(mol·K)).'
           }
         ]
       }

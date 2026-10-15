@@ -4,9 +4,9 @@ export const chemNernstEquationConcentrationPart5Data = {
     {
       id: 'ne5-intro',
       type: 'text' as const,
-      content: `# 🔋 Batteries — Primary, Secondary, and Fuel Cells
+      content: `# 📉 Cell Potential Under Nonstandard Conditions
 
-**Part 5 of 7 — Real-World Applications**
+**Part 5 of 7 — A Galvanic Cell Over Its Lifetime**
 
 ---
 
@@ -14,255 +14,194 @@ export const chemNernstEquationConcentrationPart5Data = {
 
 | Section |
 |---------|
-| � Primary Batteries (Non-Rechargeable) |
-| ⚡ Alkaline Battery — The Household Workhorse |
-| 🌬️ Zinc-Air Battery — Breathing Electricity |
-| � Secondary Batteries (Rechargeable) |
-| 🚗 Lead-Acid Battery — Under Every Hood |
+| ⏳ Following a Daniell Cell From Start to Finish |
+| 📈 Reading a Potential-vs-Time Graph |
+| 🔌 Recharging: Driving the Reaction Backward |
+| 🧪 Worked Example — Explaining the Data |
 
-> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+> 🔑 **Key Concept:** Everything a "battery running down" shows you, from falling voltage to changing electrode masses, follows from one idea: the cell reaction moves toward equilibrium, so $Q$ rises toward $K$ and $E$ falls toward zero.
+
+> 📝 The chemistry of specific commercial batteries and fuel cells is not assessed on the AP exam. The general principles below are.
 
 ---
 
 ### What You'll Master in Part 5
-- Understanding the core concepts covered in Part 5
-- Applying these ideas to solve practice problems
-- Building toward AP exam readiness for this topic`
+- Describe macroscopic and particle-level changes in each half-cell as a cell runs (CED 9.8)
+- Explain the shape of a cell-potential-vs-time graph with $Q$ and $K$ (CED 9.10)
+- Explain how an external source can reverse a thermodynamically favored cell reaction (CED 9.7)`
     },
     {
-      id: 'ne5-primary',
+      id: 'ne5-lifetime',
       type: 'text' as const,
       content: `
-## � Primary Batteries (Non-Rechargeable)
+## ⏳ Following a Daniell Cell From Start to Finish
 
-> **One-way trip!** Primary batteries involve **irreversible** reactions — once the reactants are consumed, the battery is dead. You use it, then recycle it.
+$$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s) \\qquad E° = +1.10 \\text{ V}$$
 
----
+| Stage | $[\\text{Cu}^{2+}]$ | $[\\text{Zn}^{2+}]$ | $Q$ | $E$ |
+|-------|------------------|------------------|-----|-----|
+| Assembled at 1 M / 1 M | 1 M | 1 M | 1 | 1.10 V |
+| Running | falling | rising | rising | just under 1.10 V |
+| Nearly exhausted | very small | near 2 M | very large | dropping quickly |
+| Equilibrium | tiny | about 2 M | $K$ | 0 |
 
-### ⚡ Alkaline Battery — The Household Workhorse
+### What you could observe
 
-| | Detail |
-|--|--------|
-| **Anode** | $\\text{Zn}(s) + 2\\text{OH}^-(aq) \\rightarrow \\text{ZnO}(s) + \\text{H}_2\\text{O}(l) + 2e^-$ |
-| **Cathode** | $2\\text{MnO}_2(s) + \\text{H}_2\\text{O}(l) + 2e^- \\rightarrow \\text{Mn}_2\\text{O}_3(s) + 2\\text{OH}^-(aq)$ |
-| **Voltage** | $E \\approx 1.5$ V per cell |
-| **Electrolyte** | KOH (alkaline) |
-| **Sizes** | AA, AAA, C, D, 9V |
+| Observation | Zinc half-cell (anode) | Copper half-cell (cathode) |
+|-------------|------------------------|----------------------------|
+| Electrode mass | decreases (Zn dissolves) | increases (Cu plates out) |
+| Solution | $[\\text{Zn}^{2+}]$ rises | blue color fades as $\\text{Cu}^{2+}$ is used |
+| Salt-bridge ions arriving | anions | cations |
 
-> 💡 **Why can't you recharge it?** The solid products ($\\text{ZnO}$, $\\text{Mn}_2\\text{O}_3$) undergo structural changes that can't be cleanly reversed.
-
----
-
-### 🌬️ Zinc-Air Battery — Breathing Electricity
-
-| Feature | Detail |
-|---------|--------|
-| **Secret weapon** | Uses $\\text{O}_2$ from the air as the cathode reactant |
-| **Voltage** | $E \\approx 1.4$ V |
-| **Energy density** | Extremely high (less weight = no stored oxidant) |
-| **Common use** | Hearing aids, medical devices |
-
-> 🔑 **AP Tip:** Zinc-air is a favorite exam topic because it blurs the line between a battery and a fuel cell — the oxidant ($\\text{O}_2$) comes from outside!
-      `
-    },
-    {
-      id: 'ne5-secondary',
-      type: 'text' as const,
-      content: `
-## � Secondary Batteries (Rechargeable)
-
-> **Round trip!** Secondary batteries involve **reversible** reactions — applying external voltage reverses the cell chemistry, restoring the original reactants.
-
----
-
-### 🚗 Lead-Acid Battery — Under Every Hood
-
-| | Detail |
-|--|--------|
-| **Anode** | $\\text{Pb}(s) + \\text{SO}_4^{2-}(aq) \\rightarrow \\text{PbSO}_4(s) + 2e^-$ |
-| **Cathode** | $\\text{PbO}_2(s) + 4\\text{H}^+(aq) + \\text{SO}_4^{2-}(aq) + 2e^- \\rightarrow \\text{PbSO}_4(s) + 2\\text{H}_2\\text{O}(l)$ |
-| **Voltage** | $E \\approx 2.0$ V per cell |
-| **Car battery** | 6 cells in series → **12 V** |
-
-> 💡 **Exam alert:** Both electrodes produce $\\text{PbSO}_4$ — so as the battery discharges, $[\\text{H}_2\\text{SO}_4]$ decreases. That's why mechanics test battery health with a hydrometer!
-
----
-
-### 📱 Lithium-Ion Battery — The Modern Standard
-
-| Feature | Detail |
-|---------|--------|
-| **Voltage** | $E \\approx 3.7$ V per cell (highest of common rechargeables!) |
-| **Uses** | Phones, laptops, electric vehicles, power tools |
-| **Mechanism** | $Li^{+}$ shuttles between graphite anode and metal oxide cathode |
-| **Energy density** | Very high — lightweight yet powerful |
-
-> 🔑 **Key term — Intercalation:** $Li^{+}$ ions slip *between* layers of the electrode material without breaking the crystal structure. This is what makes Li-ion reversible and long-lasting.
-
----
-
-### 🔋 Nickel-Metal Hydride (NiMH)
-
-| Feature | Detail |
-|---------|--------|
-| **Voltage** | $E \\approx 1.2$ V per cell |
-| **Uses** | Hybrid cars (Toyota Prius), rechargeable AA/AAA |
-| **Advantage** | More eco-friendly than older Ni-Cd batteries |
-
----
-
-### ⚖️ Quick Comparison
-
-| Battery | Type | $E$ per cell | Rechargeable? | Key Use |
-|---------|------|:------------:|:-------------:|---------|
-| Alkaline | Primary | 1.5 V | ❌ | Household |
-| Zinc-Air | Primary | 1.4 V | ❌ | Hearing aids |
-| Lead-Acid | Secondary | 2.0 V | ✅ | Cars |
-| Li-ion | Secondary | 3.7 V | ✅ | Electronics |
-| NiMH | Secondary | 1.2 V | ✅ | Hybrids |
-
-> ⚠️ **Warning:** Don't confuse primary and secondary! **Primary** = irreversible = non-rechargeable. **Secondary** = reversible = rechargeable. A fuel cell is neither — reactants are continuously supplied from outside.
-      `
-    },
-    {
-      id: 'ne5-fuel-cells',
-      type: 'text' as const,
-      content: `
-## 📌 Fuel Cells
-
-A fuel cell is a galvanic cell where the reactants are **continuously supplied** from outside. Unlike batteries, fuel cells don\'t run down — they operate as long as fuel and oxidant are fed in.
-
-
----
-
-### Hydrogen Fuel Cell
-
-**Anode:** $2\\text{H}_2(g) \\rightarrow 4\\text{H}^+(aq) + 4e^-$
-
-**Cathode:** $\\text{O}_2(g) + 4\\text{H}^+(aq) + 4e^- \\rightarrow 2\\text{H}_2\\text{O}(l)$
-
-**Overall:** $2\\text{H}_2(g) + \\text{O}_2(g) \\rightarrow 2\\text{H}_2\\text{O}(l)$
-
-**$E \\approx 1.23$ V**
-
-
----
-
-### Why Fuel Cells Are Important
-
-| Feature | Battery | Fuel Cell |
-|---------|---------|-----------|
-| Reactants | Sealed inside | Continuously supplied |
-| Lifetime | Limited by reactant amount | As long as fuel flows |
-| Product | Various solids/solutions | Water (clean!) |
-| Efficiency | ~40-60% | ~60-80% |
+> 💡 Because $K$ for this cell is enormous, $Q$ must become very large before $E$ drops much. The potential stays close to 1.10 V for most of the cell's life and then falls steeply once $\\text{Cu}^{2+}$ is nearly used up.
       `
     },
     {
       id: 'ne5-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Battery Chemistry Quiz** 🎯
+**Check Your Understanding — A Cell Running Down** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What distinguishes a primary battery from a secondary battery?',
+            question: 'As a Zn/Cu²⁺ galvanic cell operates, which pair of changes occurs?',
             options: [
-              'Primary batteries use metals; secondary use nonmetals',
-              'Primary batteries cannot be recharged; secondary can',
-              'Primary batteries always deliver a higher voltage than secondary ones',
-              'Primary batteries are fuel cells fed by an outside supply'
+              'The zinc electrode gains mass and [Cu²⁺] increases',
+              'The zinc electrode loses mass and [Cu²⁺] decreases',
+              'The zinc electrode keeps its mass and [Zn²⁺] decreases',
+              'Both electrodes keep constant mass and only E changes'
             ],
             correctAnswer: 1,
-            explanation: 'Primary batteries involve irreversible reactions (non-rechargeable). Secondary batteries have reversible reactions that can be driven backward by applying external voltage. Both types use metals and nonmetals, voltages overlap, and a fuel cell is a separate category with externally supplied reactants.'
+            explanation: 'Zinc is oxidized at the anode, so the zinc electrode loses mass as $\\text{Zn}^{2+}$ enters solution. $\\text{Cu}^{2+}$ is reduced at the cathode, so its concentration falls and copper plates onto the cathode. The other pairs reverse at least one of these changes.'
           },
           {
-            question: 'A fuel cell differs from a battery because:',
+            question: 'Why does the potential of a working galvanic cell fall over time?',
             options: [
-              'It produces electricity from chemical reactions',
-              'Its reactants are continuously supplied from outside',
-              'It delivers a higher voltage than any battery',
-              'It works without electrodes or an electrolyte'
+              'E° gradually decreases as the electrodes are used up',
+              'Product ions build up and reactant ions run low, so Q nears K',
+              'The salt bridge runs out of ions, so charge stops moving',
+              'The electrodes become coated, so fewer electrons can leave'
             ],
             correctAnswer: 1,
-            explanation: 'A fuel cell\'s reactants (e.g., $H_{2}$ and $O_{2}$) are continuously fed in from external tanks, unlike a battery where reactants are sealed inside. Both produce electricity from redox reactions, both need electrodes and an electrolyte, and a single $H_2/O_2$ fuel cell gives only about 1.2 V.'
+            explanation: 'As the reaction proceeds, $Q$ increases toward $K$ and the driving force shrinks, so $E$ falls toward zero. $E°$ is fixed for the reaction, and the salt bridge and electrode surfaces affect how much current flows, not the equilibrium-driven potential.'
           },
           {
-            question: 'A 12 V car battery contains how many lead-acid cells in series?',
+            question: 'A cell with a very large K is run until its potential has fallen to 0.50 V from an initial 1.10 V. Which statement is correct?',
             options: [
-              '3 cells (4 V each)',
-              '6 cells (2 V each)',
-              '12 cells (1 V each)',
-              '1 cell (12 V)'
+              'Q has risen all the way to K',
+              'Q has dropped to a value below 1',
+              'Q lies between 1 and K',
+              'Q has risen past the value of K'
             ],
-            correctAnswer: 1,
-            explanation: 'Each lead-acid cell produces about 2 V. Six cells connected in series give $6 \\times 2 = 12$ V.'
+            correctAnswer: 2,
+            explanation: 'The potential is below $E°$, so $Q > 1$, but it is still positive, so the cell has not reached equilibrium and $Q < K$. $Q = K$ would give zero, and $Q > K$ would give a negative potential.'
           }
         ]
       }
     },
     {
-      id: 'ne5-dropdown-practice',
-      type: 'dropdown-select' as const,
+      id: 'ne5-graph',
+      type: 'text' as const,
       content: `
-**Battery Types** 🔽
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'An alkaline battery is a type of',
-            options: ['primary (non-rechargeable) battery', 'secondary (rechargeable) battery', 'fuel cell', 'concentration cell']
-          },
-          {
-            label: 'The product of a hydrogen fuel cell is',
-            options: ['$CO_{2}$', '$H_{2}O$', '$H_{2}SO_{4}$', 'NaOH']
-          },
-          {
-            label: 'In a lithium-ion battery, $Li^{+}$ ions move by',
-            options: ['electroplating', 'intercalation', 'precipitation', 'dissolving']
-          },
-          {
-            label: 'Recharging a secondary battery involves',
-            options: ['replacing the electrodes', 'applying external voltage to reverse the reaction', 'adding more electrolyte', 'connecting to a primary battery']
-          }
-        ],
-        correctAnswers: ['primary (non-rechargeable) battery', '$H_{2}O$', 'intercalation', 'applying external voltage to reverse the reaction'],
-        hint1: 'Alkaline batteries (AA, AAA) are not rechargeable.',
-        hint2: '$2H_{2}$ + $O_{2}$ → $2H_{2}O$',
-        hint3: '$Li^{+}$ inserts into layered structures in both electrodes.',
-        explanation: 'Alkaline = primary. Fuel cell product = $H_{2}O$ (clean!). Li-ion uses intercalation. Recharging = external voltage reverses the cell reaction (electrolysis).'
-      }
+## 📈 Reading a Potential-vs-Time Graph
+
+A typical graph of $E$ versus time for a galvanic cell delivering a steady current looks like this in words:
+
+1. **Start:** $E$ near $E°$ (or above it if the cell was built with excess reactant ion).
+2. **Long plateau:** $E$ falls slowly while $Q$ is still far below $K$.
+3. **Steep drop:** the limiting reactant ion runs low, $Q$ climbs rapidly, and $E$ plunges.
+4. **End:** $E = 0$ at equilibrium.
+
+> 🔑 **AP Connection:** When asked to justify a feature of such a graph, name the species whose concentration changed, say how that changes $Q$, and connect $Q$'s approach to $K$ to the falling potential.
+
+---
+
+## 🔌 Recharging: Driving the Reaction Backward
+
+A thermodynamically favored reaction can be reversed only by supplying energy from outside (CED 9.7.A.1). Connecting an external power source with a voltage **greater than** the cell's own potential, in the opposite direction:
+
+- forces electrons back into the zinc electrode, so $\\text{Zn}^{2+}$ is **reduced** to Zn;
+- pulls electrons out of the copper electrode, so Cu is **oxidized** to $\\text{Cu}^{2+}$;
+- turns the cell into an **electrolytic** cell, with the anode and cathode labels swapped;
+- moves $Q$ back down, away from $K$, restoring the cell's ability to do work.
+      `
+    },
+    {
+      id: 'ne5-worked-example',
+      type: 'text' as const,
+      content: `
+## 🧪 Worked Example — Explaining the Data
+
+> **Problem:** A student builds a Ni/Ag⁺ cell, $\\text{Ni}(s) + 2\\text{Ag}^{+}(aq) \\rightarrow \\text{Ni}^{2+}(aq) + 2\\text{Ag}(s)$, with $E° = +1.05$ V, and records:
+
+| Time (h) | Measured E (V) |
+|----------|----------------|
+| 0 | 1.05 |
+| 2 | 1.03 |
+| 4 | 1.00 |
+| 6 | 0.62 |
+| 7 | 0.00 |
+
+Explain the data.
+
+### Step 1 — Start
+
+At $t = 0$ both ions are 1 M, so $Q = 1$ and $E = E°$.
+
+### Step 2 — Plateau (0–4 h)
+
+$\\text{Ag}^{+}$ is consumed and $\\text{Ni}^{2+}$ forms, so $Q = [\\text{Ni}^{2+}]/[\\text{Ag}^{+}]^2$ rises. $Q$ is still far below the very large $K$, so $E$ falls only slightly.
+
+### Step 3 — Steep drop (4–7 h)
+
+$\\text{Ag}^{+}$ is nearly gone. Because it is squared in the denominator, $Q$ rises sharply and $E$ falls quickly.
+
+### Step 4 — End
+
+At 7 h, $Q = K$: the reaction is at equilibrium and $E = 0$.
+      `
     },
     {
       id: 'ne5-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Exit Quiz — Batteries** ✅
+**Exit Quiz — A Cell Over Its Lifetime** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'As a lead-acid car battery discharges, what happens to the sulfuric acid concentration?',
+            question: 'In the Ni/Ag⁺ data above, which species\' concentration change best explains the steep drop in potential after 4 hours?',
             options: [
-              'It increases, as $PbSO_{4}$ dissolves',
-              'It decreases, as both electrodes consume $SO_{4}^{2-}$',
-              'It stays the same, as no acid reacts',
-              'It increases at the anode, decreases at the cathode'
+              'Ag⁺, because it is nearly used up and is squared in Q',
+              'Ni²⁺, because it reaches its solubility limit',
+              'NO₃⁻, because it leaves the salt bridge',
+              'Ni(s), because the nickel electrode becomes too small'
             ],
-            correctAnswer: 1,
-            explanation: 'Both the anode and cathode reactions consume $\\text{SO}_4^{2-}$ to form $\\text{PbSO}_4$. The acid concentration decreases as the battery discharges (which is why a dead car battery has low specific gravity).'
+            correctAnswer: 0,
+            explanation: 'As $[\\text{Ag}^{+}]$ approaches zero, the squared term in the denominator of $Q$ shrinks rapidly, $Q$ climbs toward $K$, and $E$ falls steeply. Nitrate is a spectator ion and solid nickel does not appear in $Q$.'
           },
           {
-            question: 'Why are fuel cells considered more environmentally friendly than combustion engines?',
+            question: 'A dead Zn/Cu²⁺ cell is connected to a power supply that drives Zn²⁺ back to Zn. During recharging, the zinc electrode is the',
             options: [
-              'They produce more energy per gram of fuel',
-              'Their only product at the point of use is water',
-              'They operate at higher temperatures',
-              'They use cheaper materials'
+              'The anode, since zinc atoms lose electrons there',
+              'The cathode, since Zn²⁺ gains electrons there',
+              'Neither, since zinc is a spectator during charging',
+              'Both, since zinc changes roles partway through'
             ],
             correctAnswer: 1,
-            explanation: 'Hydrogen fuel cells produce only water: $2\\text{H}_2 + \\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}$. No carbon dioxide or other combustion pollutants are released where the cell runs (although making the $H_2$ can release $CO_2$ elsewhere).'
+            explanation: 'Reducing $\\text{Zn}^{2+}$ to Zn is a reduction, and reduction always occurs at the cathode. The zinc electrode gains mass during recharging. Anode and cathode are defined by the half-reaction, not by a sign.'
+          },
+          {
+            question: 'Which statement explains why a power supply is needed to recharge the cell?',
+            options: [
+              'Running backward has a positive E° and occurs on its own',
+              'The reverse reaction has ΔG° > 0, so it needs external energy',
+              'The salt bridge must be refilled by the power supply',
+              'The power supply raises E° for the forward reaction'
+            ],
+            correctAnswer: 1,
+            explanation: 'The forward reaction is thermodynamically favored, so the reverse has a negative $E°$ and a positive $\\Delta G°$. It occurs only when an external source supplies energy (CED 9.7). The power supply does not change $E°$, which is fixed for the reaction.'
           }
         ]
       }

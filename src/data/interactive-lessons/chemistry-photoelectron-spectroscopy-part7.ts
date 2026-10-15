@@ -240,7 +240,7 @@ There is a large jump between $IE_{2}$ and $IE_{3}$.`,
             options: [
               'Zinc (Zn) — it has a completely filled 3d subshell',
               'Iron (Fe) — the most common transition metal',
-              'Copper (Cu) — it has an anomalous configuration',
+              'Gallium (Ga) — it has a single electron in 4p',
               'Nickel (Ni) — it has a partly filled 3d subshell'
             ],
             correctAnswer: 0,

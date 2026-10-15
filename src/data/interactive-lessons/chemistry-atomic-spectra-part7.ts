@@ -35,9 +35,9 @@ export const chemAtomicSpectraPart7Data = {
 | Concept | Key idea |
 |---------|---------|
 | Light is quantized | $E = h\\nu = hc/\\lambda$ |
-| Atomic energy levels are quantized | $E_n = -2.18 \\times 10^{-18}/n^2$ J for H |
-| Emission line ↔ transition $n_i \\to n_f$ | $\\Delta E = E_{n_i} - E_{n_f}$ |
-| Rydberg formula predicts H lines exactly | $1/\\lambda = R_H(1/n_f^2 - 1/n_i^2)$ |
+| Atomic energy levels are quantized | Line spectra, not continuous ones |
+| Emission line ↔ transition between given levels | $E_{\\text{photon}} = E_{\\text{upper}} - E_{\\text{lower}}$ |
+| Spectral region ↔ type of transition | Microwave: rotation; IR: vibration; UV/vis: electronic |
 | Multi-electron atoms have subshell splitting | Bohr fails; need quantum mechanics |
 | PES measures binding energies directly | $BE = h\\nu - KE$ |
 
@@ -47,7 +47,8 @@ export const chemAtomicSpectraPart7Data = {
 
 - **Electron configuration (Topic 1.5):** Order of subshell filling reflects the same energy ordering seen in PES peaks.
 - **Periodic trends (Topic 1.7):** $Z_{\\text{eff}}$ explains both trends and PES binding-energy shifts.
-- **Photoelectric effect (AP Chemistry Topic 3.12):** Same photon-energy framework underlies the photoelectric effect.
+- **Properties of photons (Topic 3.12):** $E = h\\nu$ and $c = \\lambda\\nu$ connect every line to a photon energy.
+- **Spectroscopy regions (Topic 3.11):** Molecules absorb microwave, infrared, and UV/visible light for different reasons.
       `
     },
     {
@@ -59,7 +60,7 @@ export const chemAtomicSpectraPart7Data = {
 1. **Sign errors in $\\Delta E$.** $E_n$ is *negative*. The energy of the **emitted photon** is the *positive* magnitude $|E_{n_f} - E_{n_i}|$.
 2. **Forgetting unit conversions.** Always convert nm → m before plugging into $E = hc/\\lambda$.
 3. **Mixing up "shorter wavelength" with "less energy."** Shorter $\\lambda$ ⇒ HIGHER energy.
-4. **Applying the Rydberg formula to non-hydrogen atoms.** It only works for one-electron systems (H, $He^{+}$, $Li^{2+}$, …).
+4. **Mismatching region and transition.** Microwaves change rotation, infrared changes vibration, and only UV/visible light moves electrons between levels.
 5. **Confusing emission and absorption.** They occur at the *same* wavelengths, but the direction of the transition is opposite.
 6. **Reading PES wrong.** Higher binding energy = closer to nucleus = lower $n$ orbital.
       `
@@ -88,15 +89,15 @@ export const chemAtomicSpectraPart7Data = {
             explanation: 'Heights 2 : 2 : 5 give 9 electrons in three subshells: $1s^{2}$ $2s^{2}$ $2p^{5}$, which is fluorine (Z = 9). The very large 1s binding energy marks the core peak. Neon would show $2p^{6}$ (height 6) and oxygen $2p^{4}$ (height 4); chlorine ends in $3s^{2}$ $3p^{5}$ but would show five peaks, including $2p^{6}$.'
           },
           {
-            question: 'The Bohr model correctly predicts the Lyman series wavelengths of hydrogen but FAILS to predict the spectrum of helium. The most fundamental reason is:',
+            question: 'A model that works perfectly for hydrogen\'s line spectrum FAILS to predict the spectrum of helium. The most fundamental reason is:',
             options: [
               'Helium\'s nucleus has two protons instead of one',
               'Helium\'s two electrons repel and shield each other',
-              'The Rydberg constant is different for helium',
+              'Helium atoms are too heavy to emit visible light',
               'Helium is a noble gas, so it emits no light'
             ],
             correctAnswer: 1,
-            explanation: 'The Bohr model assumes a single electron orbiting a nucleus, and it handles a larger nuclear charge fine (it works for $He^{+}$). Once a second electron is present, electron–electron repulsion (and shielding) breaks the simple $1/n^2$ pattern.'
+            explanation: 'A one-electron model handles a larger nuclear charge fine (it works for the one-electron ion $He^{+}$). Once a second electron is present, electron–electron repulsion and shielding change every energy level. Helium does emit visible light; its lines are simply different from hydrogen\'s.'
           }
         ]
       }
@@ -107,9 +108,11 @@ export const chemAtomicSpectraPart7Data = {
       content: `
 **Final Mastery Drill** 🧮
 
+Hydrogen levels (J): $E_1 = -2.18 \\times 10^{-18}$, $E_2 = -5.45 \\times 10^{-19}$, $E_3 = -2.42 \\times 10^{-19}$, $E_4 = -1.36 \\times 10^{-19}$.
+
 **1)** What energy (in J, $\\times 10^{-19}$, 3 sig figs) does it take to ionize an H atom that is in $n = 3$?
 
-**2)** A photon at $\\lambda = 121.6$ nm is absorbed by a ground-state H atom. What level does the electron end up in?
+**2)** A photon of energy $2.04 \\times 10^{-18}$ J is absorbed by a ground-state H atom. What level does the electron end up in?
 
 **3)** A PES experiment uses photons with $h\\nu = 200$ eV. An ejected electron has KE = 50 eV. Express the binding energy in eV.
 
@@ -117,12 +120,12 @@ export const chemAtomicSpectraPart7Data = {
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['2.42', '2', '150', '2.18'],
-        hint1: '$|E_3| = 2.18 \\times 10^{-18}/9$.',
-        hint2: '121.6 nm is the Lyman-α transition: $n=1 \\to n=?$',
+        correctAnswers: ['2.42', '4', '150', '2.18'],
+        hint1: 'Ionizing means going from $E_3$ to $E_\\infty = 0$.',
+        hint2: '$E_{\\text{final}} = E_1 + 2.04 \\times 10^{-18}$ J. Which level matches?',
         hint3: '$BE = h\\nu - KE = 200 - 50$.',
         hint4: '$E = hc/\\lambda$.',
-        explanation: '1) $|E_3| = 2.18 \\times 10^{-18}/9 = 2.42 \\times 10^{-19}$ J. 2) Lyman-α (121.6 nm) corresponds to $n=1 \\to n=2$. 3) $BE = 200 - 50 = 150$ eV. 4) $E = (6.626\\times 10^{-34})(3\\times 10^8)/(9.1\\times 10^{-8}) = 2.18 \\times 10^{-18}$ J — the ground-state ionization energy of hydrogen!'
+        explanation: '1) $0 - E_3 = 2.42 \\times 10^{-19}$ J. 2) $E_{\\text{final}} = (-2.18 \\times 10^{-18}) + (2.04 \\times 10^{-18}) = -1.4 \\times 10^{-19}$ J, which matches $E_4$, so the electron reaches $n = 4$. 3) $BE = 200 - 50 = 150$ eV. 4) $E = (6.626\\times 10^{-34})(3\\times 10^8)/(9.1\\times 10^{-8}) = 2.18 \\times 10^{-18}$ J — the ground-state ionization energy of hydrogen!'
       }
     },
     {
@@ -132,16 +135,16 @@ export const chemAtomicSpectraPart7Data = {
       exercise: {
         dropdowns: [
           { label: 'Within the same shell, the orbital with the highest $Z_{\\text{eff}}$ is', options: ['$f$', '$d$', '$p$', '$s$'] },
-          { label: 'A line at 656 nm and a line at 486 nm in hydrogen both belong to the', options: ['Lyman series', 'Balmer series', 'Paschen series', 'Brackett series'] },
+          { label: 'A molecule that absorbs microwave radiation is undergoing a change in its', options: ['electronic energy', 'vibrational energy', 'rotational energy', 'nuclear energy'] },
           { label: 'Doubling the photon frequency ______ the photon energy', options: ['halves', 'doubles', 'quadruples', 'leaves unchanged'] },
           { label: 'In a PES spectrum, peaks at higher binding energy correspond to electrons that are', options: ['farther from the nucleus', 'closer to the nucleus', 'in higher $n$ shells', 'less stable'] }
         ],
-        correctAnswers: ['$s$', 'Balmer series', 'doubles', 'closer to the nucleus'],
+        correctAnswers: ['$s$', 'rotational energy', 'doubles', 'closer to the nucleus'],
         hint1: '$s$ orbitals penetrate to the nucleus most.',
-        hint2: 'Visible H lines = Balmer.',
+        hint2: 'Microwaves carry the least energy of the three spectroscopy regions.',
         hint3: '$E = h\\nu$.',
         hint4: 'Closer to nucleus → larger $Z_{\\text{eff}}$ → larger $|E|$.',
-        explanation: '$s$ has highest $Z_{\\text{eff}}$ in any shell. 656 nm and 486 nm are both Balmer (visible). $E \\propto \\nu$. Higher binding energy = electron more tightly bound = closer to nucleus.'
+        explanation: '$s$ has highest $Z_{\\text{eff}}$ in any shell. Microwave photons change rotational energy levels. $E \\propto \\nu$. Higher binding energy = electron more tightly bound = closer to nucleus.'
       }
     },
     {
@@ -162,15 +165,15 @@ export const chemAtomicSpectraPart7Data = {
             explanation: 'Each atom has its own unique set of allowed energy levels — set by the nuclear charge and (for ≥2 electrons) electron–electron interactions. Hence each element has a unique spectral fingerprint. Neutrons have almost no effect on the levels, and all photons travel at $c$.'
           },
           {
-            question: 'Which combination correctly describes the Balmer-α (H-α) transition in hydrogen?',
+            question: 'Hydrogen has $E_2 = -5.45 \\times 10^{-19}$ J and $E_3 = -2.42 \\times 10^{-19}$ J. Which combination correctly describes the photon EMITTED when an electron moves between these levels?',
             options: [
-              '$n=2 \\to n=1$, UV, ~122 nm',
-              '$n=3 \\to n=2$, visible red, ~656 nm',
-              '$n=4 \\to n=3$, IR, ~1875 nm',
-              '$n=2 \\to n=3$, visible red, ~656 nm'
+              '$n=2 \\to n=3$, $3.03 \\times 10^{-19}$ J, ~656 nm',
+              '$n=3 \\to n=2$, $3.03 \\times 10^{-19}$ J, ~656 nm',
+              '$n=3 \\to n=2$, $7.87 \\times 10^{-19}$ J, ~253 nm',
+              '$n=3 \\to n=2$, $3.03 \\times 10^{-19}$ J, ~1875 nm'
             ],
             correctAnswer: 1,
-            explanation: 'H-α: $n=3 \\to n=2$ (Balmer series). Wavelength = 656 nm, in the red part of the visible spectrum. (The $n=2 \\to n=3$ option incorrectly reverses the transition direction.)'
+            explanation: 'Emission means the electron drops, so the transition is $n=3 \\to n=2$. $E = (-2.42 \\times 10^{-19}) - (-5.45 \\times 10^{-19}) = 3.03 \\times 10^{-19}$ J, and $\\lambda = hc/E = 656$ nm (red). The $n=2 \\to n=3$ direction is absorption, and $7.87 \\times 10^{-19}$ J comes from adding the magnitudes.'
           }
         ]
       }

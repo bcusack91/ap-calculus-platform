@@ -9,151 +9,154 @@ export const chemEntropySecondLawV2Part3Data = {
 
 **Part 3 of 7 — Why Processes Have a Preferred Direction**
 
-Drop a ball — it falls. Mix hot and cold water — they equalize. A broken egg doesn't reassemble. All of these are examples of the **Second Law of Thermodynamics** in action.
+Mix hot and cold water — they reach the same temperature. Drop a sugar cube in tea — it dissolves. A broken egg doesn't reassemble. Each of these runs in one direction because matter and energy tend to spread out. In AP Chemistry, you decide a process's direction by weighing **two** factors: the energy change ($\\Delta H$) and the entropy change ($\\Delta S$).
       `
     },
     {
       id: 'en3v2-statement',
       type: 'text' as const,
       content: `
-## 📏 The Second Law — Three Formulations
+## 📏 Two Tendencies That Drive Change
 
-| Formulation | Statement |
-|-------------|-----------|
-| **Entropy** | The total entropy of the universe increases for every spontaneous process: $\\Delta S_{\\text{univ}} > 0$ |
-| **Clausius** | Heat cannot spontaneously flow from cold to hot |
-| **Kelvin–Planck** | No heat engine can convert heat entirely into work |
+| Tendency | Sign that favors the process | Example |
+|----------|-----------------------------|---------|
+| Release energy to the surroundings | $\\Delta H < 0$ (exothermic) | A fuel burning |
+| Increase dispersal of matter and energy | $\\Delta S > 0$ | A gas expanding, a solid dissolving |
 
-All three say the same thing in different ways: **nature has a preferred direction**.
-
+A process that proceeds toward products on its own is called **thermodynamically favored**. The CED prefers this phrase to "spontaneous," which is easily confused with "fast" or "sudden" (CED 9.3.A.2).
 
 ---
 
-### The Universe as a Whole
+### When the Two Tendencies Agree or Compete
 
-$$\\Delta S_{\\text{univ}} = \\Delta S_{\\text{sys}} + \\Delta S_{\\text{surr}}$$
+| $\\Delta H$ | $\\Delta S$ | Result |
+|------------|------------|--------|
+| − (favorable) | + (favorable) | Favored at **all** temperatures |
+| + (unfavorable) | − (unfavorable) | Favored at **no** temperature |
+| − (favorable) | − (unfavorable) | Favored at **low** temperature |
+| + (unfavorable) | + (favorable) | Favored at **high** temperature |
 
-- Spontaneous: $\\Delta S_{\\text{univ}} > 0$
-- Equilibrium: $\\Delta S_{\\text{univ}} = 0$
-- Nonspontaneous: $\\Delta S_{\\text{univ}} < 0$ (would require external work)
-
-**Key Insight:** A system's entropy CAN decrease — as long as the surroundings' entropy increases by a greater amount.
+**Key Insight:** A process can be favored even when the system's entropy **decreases**, as long as the energy factor is favorable enough (for example, water freezing below 0 °C).
       `
     },
     {
-      id: 'en3v2-surroundings',
-      type: 'text' as const,
-      content: `
-## 🌡️ Entropy of the Surroundings
-
-The surroundings gain or lose entropy through heat transfer:
-
-$$\\Delta S_{\\text{surr}} = -\\frac{\\Delta H_{\\text{sys}}}{T}$$
-
-| Reaction Type | $\\Delta H_{\\text{sys}}$ | Heat to Surroundings | $\\Delta S_{\\text{surr}}$ |
-|--------------|----------------------|---------------------|------------------------|
-| Exothermic | Negative (−) | Releases heat | **Positive** (+) |
-| Endothermic | Positive (+) | Absorbs heat | **Negative** (−) |
-
-
----
-
-### Why Does Temperature Matter?
-
-Adding heat to cold surroundings makes more of a difference than adding the same heat to hot surroundings — like the difference between giving \\$100 to a student versus a billionaire.
-      `
-    },
-    {
-      id: 'en3v2-quiz',
+      id: 'en3v2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Second Law Check** 🎯
+**Direction Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'For a process to be spontaneous, which must be true?',
+            question: 'A process has ΔH > 0 and ΔS < 0. Under what conditions is it thermodynamically favored?',
             options: [
-              '$\\Delta S_{\\text{sys}} > 0$',
-              '$\\Delta S_{\\text{surr}} > 0$',
-              '$\\Delta S_{\\text{univ}} > 0$',
-              '$\\Delta H < 0$'
+              'At all temperatures',
+              'Only at high temperatures',
+              'Only at low temperatures',
+              'At no temperature'
             ],
-            correctAnswer: 2,
-            explanation: 'The Second Law requires $\\Delta S_{\\text{univ}} = \\Delta S_{\\text{sys}} + \\Delta S_{\\text{surr}} > 0$ for spontaneity. The system alone can have negative entropy change.'
+            correctAnswer: 3,
+            explanation: 'Absorbing energy and decreasing dispersal both oppose the process, so it is not favored at any temperature. Temperature only changes the outcome when the two factors compete.'
           },
           {
-            question: 'An exothermic reaction releases 50 kJ at 250 K. What is $\\Delta S_{\\text{surr}}$?',
+            question: 'Can a process be thermodynamically favored if the entropy of the system decreases?',
             options: [
-              '−200 J/K',
-              '+200 J/K',
-              '+0.200 J/K',
-              '+5.00 J/K'
+              'No, entropy of the system must always increase',
+              'Yes, if enough energy is released at a low enough temperature',
+              'Yes, but only if the process is endothermic',
+              'No, unless a catalyst is added'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta S_{\\text{surr}} = -\\Delta H/T = -(-50{,}000)/250 = +200$ J/K. Exothermic reactions increase the entropy of the surroundings. Dropping the minus sign gives −200, leaving ΔH in kJ gives 0.200, and dividing T by ΔH (250/50) gives 5.00.'
+            explanation: 'When ΔS < 0, a favorable (negative) ΔH can still make the process favored, as long as the temperature is low enough that the energy factor dominates. Water freezing below 0 °C is the classic example. A catalyst changes rate, not favorability.'
           },
           {
-            question: "Can a system's entropy decrease in a spontaneous process?",
+            question: 'Which statement about a thermodynamically favored reaction is correct?',
             options: [
-              'No, a spontaneous process always raises the system\'s entropy',
-              "Yes, if the surroundings gain more entropy",
-              'Only if the process is endothermic, absorbing heat',
-              'Only for gases, since condensed phases cannot lose entropy'
+              'It must occur quickly once the reactants are mixed',
+              'It proceeds toward products, but its rate depends on kinetics',
+              'It must be exothermic',
+              'It needs no activation energy'
             ],
             correctAnswer: 1,
-            explanation: "A system can lose entropy (e.g., water freezing) as long as the surroundings gain even more entropy, so $\\Delta S_{\\text{univ}} > 0$. That usually takes an exothermic process, which releases heat into the surroundings — not an endothermic one."
+            explanation: 'Favorability tells you the direction, not the speed. A favored reaction with a high activation energy can be immeasurably slow (kinetic control, CED 9.4). Endothermic reactions can be favored when ΔS is large enough.'
           }
         ]
       }
     },
     {
-      id: 'en3v2-calculations',
+      id: 'en3v2-temperature',
+      type: 'text' as const,
+      content: `
+## 🌡️ Temperature Decides When the Factors Compete
+
+Temperature acts as a weighting factor for entropy: the higher the temperature, the more the entropy factor counts.
+
+### Freezing and Melting of Water
+
+| Process | $\\Delta H$ | $\\Delta S$ | Favored when |
+|---------|------------|------------|--------------|
+| Freezing | − | − | Below 0 °C (energy factor wins) |
+| Melting | + | + | Above 0 °C (entropy factor wins) |
+
+At exactly 0 °C the two factors balance, and ice and water coexist at equilibrium.
+
+---
+
+### Dissolving a Salt That Cools the Water
+
+Sodium nitrate and ammonium nitrate dissolve endothermically: the solution gets cold. They still dissolve at room temperature because the ions disperse throughout the water, a large entropy increase that outweighs the unfavorable energy change (CED 9.3.A.4).
+
+> 💡 **Tip:** On the AP exam, name both factors and say which one wins: "Although the process is endothermic, the increase in entropy as the ions disperse makes it thermodynamically favored at 25 °C."
+      `
+    },
+    {
+      id: 'en3v2-sign-drill',
       type: 'input-boxes' as const,
       content: `
-**Second Law Calculations** 🧮
+**Favored at Which Temperatures?** 🧮
 
-**1)** A reaction has $\\Delta H = -80$ kJ at $T = 400$ K. Calculate $\\Delta S_{\\text{surr}}$ in J/K.
+Type **all**, **high**, **low**, or **none**.
 
-**2)** If $\\Delta S_{\\text{sys}} = -100$ J/K and $\\Delta S_{\\text{surr}} = +200$ J/K, what is $\\Delta S_{\\text{univ}}$ in J/K?
+**1)** Steam condensing to liquid water: $\\Delta H < 0$, $\\Delta S < 0$
 
-**3)** Is the process in question 2 spontaneous? (type yes or no)
+**2)** Calcium carbonate decomposing to CaO and $\\text{CO}_2$: $\\Delta H > 0$, $\\Delta S > 0$
+
+**3)** A hypothetical reaction with $\\Delta H > 0$, $\\Delta S < 0$
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['200', '100', 'yes'],
-        hint1: '$\\Delta S_{\\text{surr}} = -\\Delta H/T = -(-80{,}000)/400$',
-        hint2: '$\\Delta S_{\\text{univ}} = \\Delta S_{\\text{sys}} + \\Delta S_{\\text{surr}}$',
-        hint3: 'Spontaneous when $\\Delta S_{\\text{univ}} > 0$.',
-        explanation: '1) $\\Delta S_{\\text{surr}} = 80{,}000/400 = 200$ J/K. 2) $\\Delta S_{\\text{univ}} = -100 + 200 = 100$ J/K. 3) Yes — $\\Delta S_{\\text{univ}} > 0$.'
+        questions: [{ question: '(1)', answer: 'low', acceptableAnswers: ['low', 'low T', 'low temperature'] }, { question: '(2)', answer: 'high', acceptableAnswers: ['high', 'high T', 'high temperature'] }, { question: '(3)', answer: 'none', acceptableAnswers: ['none', 'no', 'never', 'no temperature'] }],
+        hint1: 'Energy favors, dispersal opposes.',
+        hint2: 'Dispersal favors, energy opposes.',
+        hint3: 'Both factors oppose the process.',
+        explanation: '1) Low: the favorable energy change dominates at low temperature, which is why steam condenses below 100 °C. 2) High: the favorable entropy change (a gas is produced) dominates at high temperature. 3) None: both factors are unfavorable.'
       }
     },
     {
       id: 'en3v2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Complete the Statements** 🔽
+**Second Law Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Exothermic reactions make $\\Delta S_{\\text{surr}}$',
-            options: ['positive', 'negative', 'zero', 'undefined']
+            label: 'Exothermic reactions have an energy factor that is',
+            options: ['favorable', 'unfavorable', 'zero', 'irrelevant']
           },
           {
-            label: 'At higher temperatures, the same $\\Delta H$ produces a',
-            options: ['larger $\\Delta S_{\\text{surr}}$', 'smaller $\\Delta S_{\\text{surr}}$', 'same $\\Delta S_{\\text{surr}}$', 'negative $\\Delta S_{\\text{surr}}$']
+            label: 'Raising the temperature gives the entropy factor',
+            options: ['more weight', 'less weight', 'no weight', 'a negative sign']
           },
           {
-            label: 'At equilibrium, $\\Delta S_{\\text{univ}}$ equals',
-            options: ['a large positive number', 'a large negative number', 'zero', 'infinity']
+            label: 'At the normal melting point, solid and liquid',
+            options: ['cannot coexist', 'coexist at equilibrium', 'both decompose', 'have equal entropy']
           }
         ],
-        correctAnswers: ['positive', 'smaller $\\Delta S_{\\text{surr}}$', 'zero'],
-        hint1: 'Exothermic = heat released to surroundings.',
-        hint2: '$\\Delta S_{\\text{surr}} = -\\Delta H/T$. Larger T in denominator means smaller magnitude.',
-        hint3: 'No net driving force at equilibrium.',
-        explanation: 'Exothermic → positive $\\Delta S_{\\text{surr}}$. Higher T reduces the magnitude of $\\Delta S_{\\text{surr}}$. At equilibrium, $\\Delta S_{\\text{univ}} = 0$ — no net change.'
+        correctAnswers: ['favorable', 'more weight', 'coexist at equilibrium'],
+        hint1: 'Releasing energy favors a process.',
+        hint2: 'Entropy matters more at high temperature.',
+        hint3: 'The two factors balance at the melting point.',
+        explanation: 'Releasing energy (ΔH < 0) favors a process. Temperature weights the entropy factor, so it matters more at high T. At the melting point the factors balance and the phases coexist at equilibrium; the liquid still has more entropy than the solid.'
       }
     },
     {
@@ -165,15 +168,15 @@ Adding heat to cold surroundings makes more of a difference than adding the same
       exercise: {
         questions: [
           {
-            question: 'Water freezing at −10°C is spontaneous even though the system loses entropy. How?',
+            question: 'Water freezing at −10°C is thermodynamically favored even though the water loses entropy. How?',
             options: [
-              "The Second Law applies only to chemical reactions, not to phase changes",
-              'Released heat raises the surroundings\' entropy more than the system\'s falls',
-              "The system's entropy actually rises as the ordered crystal lattice forms",
-              'Freezing absorbs heat from the surroundings, which raises their entropy'
+              'The entropy of the water actually increases when it freezes',
+              'Energy released outweighs the ΔS decrease',
+              'Freezing is endothermic, and endothermic processes are favored when cold',
+              'Freezing has no activation energy at −10°C'
             ],
             correctAnswer: 1,
-            explanation: "Freezing is exothermic — the released heat increases $\\Delta S_{\\text{surr}}$ by more than $\\Delta S_{\\text{sys}}$ decreases, so $\\Delta S_{\\text{univ}} > 0$. The system's own entropy does fall as the lattice forms, and the Second Law applies to every process."
+            explanation: 'Freezing has ΔH < 0 (favorable) and ΔS < 0 (unfavorable). At low temperature the energy factor dominates, so freezing is favored. Freezing lowers the water\'s entropy, it is exothermic, and activation energy affects only the rate.'
           }
         ]
       }

@@ -4,241 +4,213 @@ export const chemNernstEquationConcentrationPart4Data = {
     {
       id: 'ne4-intro',
       type: 'text' as const,
-      content: `
-# 🔗 Relationship Between E° and K
+      content: `# 🔗 Relationship Between E°, ΔG° and K
 
-**Part 4 of 7**
-
-At equilibrium, the cell potential drops to zero ($E = 0$) and the reaction quotient equals the equilibrium constant ($Q = K$). Substituting into the Nernst equation gives one of the most powerful connections in electrochemistry:
-
-$$\\boxed{E° = \\frac{0.0592}{n}\\log K \\quad \\text{(at 25°C)}}$$
-
-> 🔑 **Know any one of $\\Delta G°$, $E°$, or $K$ — and you can calculate the other two.** This is the "Thermodynamic Triangle" and it's one of the most frequently tested relationships on the AP exam.
+**Part 4 of 7 — Linking E°, ΔG° and K**
 
 ---
 
-### 🗺️ What You'll Learn in This Section
+### Topics in This Part
 
-| Concept | Key Idea |
-|---------|----------|
-| **Derivation** | Start from Nernst → set $E = 0$, $Q = K$ |
-| **Sign of E° → Size of K** | Even small positive $E°$ gives enormous $K$ |
-| **Worked Examples** | Calculate $K$ from $E°$ and vice versa |
-| **Thermo Triangle** | $\\Delta G° \\leftrightarrow E° \\leftrightarrow K$ |
-      `
+| Section |
+|---------|
+| 🔗 Two Equations From the CED |
+| 🧭 The Sign Logic |
+| 🧪 Worked Example — From E° to ΔG° to K |
+| ⚖️ What E = 0 Means and What E° = 0 Means |
+
+> 🔑 **Key Concept:** $E°$, $\\Delta G°$ and $K$ are three ways of describing how strongly a redox reaction favors products. Know the two equations that connect them, and know their signs cold.
+
+---
+
+### What You'll Master in Part 4
+- Calculate $\\Delta G°$ from $E°$ with $\\Delta G° = -nFE°$
+- Relate $\\Delta G°$ to $K$ with $\\Delta G° = -RT\\ln K$
+- Distinguish $E = 0$ (equilibrium) from $E° = 0$ ($K = 1$)`
     },
     {
-      id: 'ne4-derivation',
+      id: 'ne4-equations',
       type: 'text' as const,
       content: `
-## 🔗 Deriving the E°-K Relationship
+## 🔗 Two Equations From the CED
 
-Starting from the Nernst equation at equilibrium ($E = 0$, $Q = K$):
+| Equation | CED topic | Connects |
+|----------|-----------|----------|
+| $\\Delta G° = -nFE°$ | 9.9 | standard cell potential and standard free energy change |
+| $\\Delta G° = -RT\\ln K$ (equivalently $K = e^{-\\Delta G°/RT}$) | 9.5 | standard free energy change and the equilibrium constant |
 
-$$0 = E° - \\frac{0.0592}{n}\\log K$$
+| Symbol | Meaning | Value / units |
+|--------|---------|---------------|
+| $n$ | moles of electrons transferred in the balanced equation | mol $e^-$ |
+| $F$ | Faraday constant | 96,485 C/mol $e^-$ |
+| $R$ | gas constant (energy units) | 8.314 J/(mol·K) |
+| $T$ | temperature | K |
 
-Rearranging:
-
-$$\\boxed{E° = \\frac{0.0592}{n}\\log K} \\quad \\text{(at 25°C)}$$
-
-Or equivalently:
-
-$$\\log K = \\frac{nE°}{0.0592}$$
-
-$$K = 10^{nE°/0.0592}$$
-
-
----
-
-### What This Tells Us
-
-| $E°$ | $\\log K$ | $K$ | Meaning |
-|------|---------|-----|---------|
-| $> 0$ | Positive | $> 1$ | Products favored |
-| $= 0$ | Zero | $= 1$ | Neither favored |
-| $< 0$ | Negative | $< 1$ | Reactants favored |
-
+> ⚠️ **Units trap:** $nFE°$ comes out in **joules** (1 C × 1 V = 1 J). Convert to kJ only after multiplying, and use $R$ in J/(mol·K) so the units match.
 
 ---
 
-### How Sensitive Is K to E°?
+## 🧭 The Sign Logic
 
-For a 2-electron process:
-- $E° = +0.10$ V → $K = 10^{2(0.10)/0.0592} = 10^{3.38} \\approx 2400$
-- $E° = +0.50$ V → $K = 10^{16.9} \\approx 10^{17}$
-- $E° = +1.00$ V → $K = 10^{33.8}$
+| $E°$ | $\\Delta G°$ | $K$ | At standard conditions |
+|------|-------------|-----|-------------------------|
+| positive | negative | greater than 1 | thermodynamically favored (galvanic) |
+| zero | zero | equal to 1 | neither direction favored |
+| negative | positive | less than 1 | not favored; needs an external source (electrolytic) |
 
-Even small $E°$ values correspond to **enormous** equilibrium constants!
-      `
-    },
-    {
-      id: 'ne4-worked-example',
-      type: 'text' as const,
-      content: `
-## 🧪 Worked Examples
-
-### Example 1: Find K from E°
-
-> **Problem:** For the Daniell cell: $E° = 1.10$ V, $n = 2$
-
-> **Solution:**
-
-$$\\log K = \\frac{nE°}{0.0592} = \\frac{(2)(1.10)}{0.0592} = 37.2$$
-
-$$K = 10^{37.2} = 1.6 \\times 10^{37}$$
-
-This enormous $K$ means the reaction goes essentially to completion.
-
-
----
-
-### Example 2: Find E° from K
-
-> **Problem:** A reaction has $K = 1.0 \\times 10^{10}$ and $n = 2$.
-
-> **Solution:**
-
-$$E° = \\frac{0.0592}{2}\\log(10^{10}) = 0.0296 \\times 10 = 0.296 \\text{ V}$$
-
-
----
-
-### Example 3: The Complete Thermodynamic Triangle
-
-$$\\boxed{\\Delta G° = -nFE° = -RT\\ln K}$$
-
-All three quantities are interconnected:
-- Know any one → calculate the other two
+Because $K$ depends **exponentially** on $\\Delta G°$, a cell with an $E°$ of only a few tenths of a volt already has a very large $K$.
       `
     },
     {
       id: 'ne4-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-**E° and K Quiz** 🎯
+**Check Your Understanding — Signs and Magnitudes** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'If E° = 0.30 V for a 2-electron process, K is approximately:',
+            question: 'A redox reaction has E° = −0.25 V. Which description of its ΔG° and K is correct?',
             options: [
-              '$10^{10}$',
-              '$10^{5}$',
-              '$10^{2}$',
-              '$10^{20}$'
+              'ΔG° > 0 and K < 1',
+              'ΔG° < 0 and K > 1',
+              'ΔG° > 0 and K > 1',
+              'ΔG° < 0 and K < 1'
             ],
             correctAnswer: 0,
-            explanation: '$\\log K = (2)(0.30)/0.0592 = 0.60/0.0592 = 10.1$. So $K = 10^{10.1} \\approx 10^{10}$. Leaving out $n$ gives $10^{5}$, and multiplying by $n$ twice gives $10^{20}$.'
+            explanation: 'From $\\Delta G° = -nFE°$, a negative $E°$ gives a positive $\\Delta G°$. From $\\Delta G° = -RT\\ln K$, a positive $\\Delta G°$ means $\\ln K < 0$, so $K < 1$. The reaction is not thermodynamically favored at standard conditions.'
           },
           {
-            question: 'A reaction with K = 1 has E° equal to:',
+            question: 'Two cells have the same E° = +0.40 V, but cell P transfers 1 mol of electrons per mole of reaction and cell Q transfers 2. How do their ΔG° values compare?',
             options: [
-              '+1.00 V',
-              '−1.00 V',
-              '0 V',
-              'Undefined'
-            ],
-            correctAnswer: 2,
-            explanation: '$E° = (0.0592/n)\\log(1) = (0.0592/n)(0) = 0$ V. When K = 1, neither direction is favored, and E° = 0.'
-          },
-          {
-            question: 'Even a small positive E° (like 0.10 V) gives a large K because:',
-            options: [
-              'K is linear with E°',
-              'K depends exponentially on E°',
-              'K does not depend on E°',
-              'The Faraday constant is very large'
+              'They are equal, because E° is the same',
+              'ΔG° for Q is twice as negative as ΔG° for P',
+              'ΔG° for Q is half as negative as ΔG° for P',
+              'ΔG° for Q is positive, because more electrons move'
             ],
             correctAnswer: 1,
-            explanation: '$K = 10^{nE°/0.0592}$ is an exponential relationship. The exponent $nE°/0.0592$ grows rapidly even for moderate $E°$ values: 0.10 V with $n = 2$ already gives $K \\approx 10^{3.4}$. The size of $F$ is already folded into the 0.0592 term.'
+            explanation: '$\\Delta G° = -nFE°$ is proportional to $n$. With the same $E°$, doubling $n$ doubles the magnitude of $\\Delta G°$, so cell Q has a $\\Delta G°$ twice as negative. $E°$ is an intensive property, but $\\Delta G°$ depends on the amount of electrons transferred.'
+          },
+          {
+            question: 'Which statement about a cell reaction with K = 1.0 × 10²⁰ at 298 K is correct?',
+            options: [
+              'Its E° is negative, so it must be run as an electrolytic cell',
+              'Its E° is zero, because K is a ratio of concentrations',
+              'Its E° is positive, because a large K means a negative ΔG°',
+              'Its E° cannot be determined without the concentrations used'
+            ],
+            correctAnswer: 2,
+            explanation: 'A $K$ far greater than 1 gives a negative $\\Delta G°$ ($\\Delta G° = -RT\\ln K$), and a negative $\\Delta G°$ means a positive $E°$ ($\\Delta G° = -nFE°$). $E°$ is a standard-state quantity, so no concentrations are needed.'
           }
         ]
       }
     },
     {
-      id: 'ne4-calculation-drill',
+      id: 'ne4-worked-example',
+      type: 'text' as const,
+      content: `
+## 🧪 Worked Example — From E° to ΔG° to K
+
+> **Problem:** For $\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$, $E° = +1.10$ V. Find $\\Delta G°$ at 298 K and decide whether $K$ is greater or less than 1.
+
+### Step 1 — Find n
+
+Each Zn atom gives up 2 electrons and each $\\text{Cu}^{2+}$ gains 2, so $n = 2$.
+
+### Step 2 — Apply ΔG° = −nFE°
+
+$$\\Delta G° = -(2)(96{,}485)(1.10) = -212{,}000 \\text{ J/mol}_{rxn} = -212 \\text{ kJ/mol}_{rxn}$$
+
+### Step 3 — Relate to K
+
+$$\\ln K = -\\frac{\\Delta G°}{RT} = \\frac{212{,}000}{(8.314)(298)} \\approx 85.6$$
+
+$\\ln K$ is large and positive, so $K$ is enormous (about $10^{37}$).
+
+### Step 4 — Interpret
+
+$K \\gg 1$: at equilibrium almost all of the $\\text{Cu}^{2+}$ has been reduced. This is why a Daniell cell keeps a positive potential for most of its useful life.
+      `
+    },
+    {
+      id: 'ne4-input-practice',
       type: 'input-boxes' as const,
       content: `
-**E° and K Calculations** 🧮
+**Calculate ΔG°** 🧮
 
-At 25°C:
+A cell runs $\\text{Mg}(s) + 2\\text{Ag}^{+}(aq) \\rightarrow \\text{Mg}^{2+}(aq) + 2\\text{Ag}(s)$ with $E° = +3.17$ V. Use $F = 96{,}485$ C/mol $e^-$.
 
-**1)** $E° = 0.46$ V, $n = 2$. Calculate $\\log K$. (to 3 significant figures)
+**1)** How many moles of electrons are transferred per mole of reaction?
 
-**2)** $K = 10^{20}$, $n = 4$. Calculate $E°$. (in V, to 3 significant figures)
+**2)** What is $\\Delta G°$ in kJ/mol$_{rxn}$? (3 significant figures, include the sign)
 
-**3)** $E° = -0.10$ V, $n = 1$. Is $K$ greater or less than 1? (type "greater" or "less")
+**3)** Is $K$ greater than 1 or less than 1? (type "greater" or "less")
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['15.5', '0.296', 'less'],
-        hint1: '$\\log K = (2)(0.46)/0.0592$',
-        hint2: '$E° = (0.0592/4)(20)$',
-        hint3: 'Negative $E°$ → negative $\\log K$ → $K < 1$.',
-        explanation: '1) $\\log K = 0.92/0.0592 = 15.5$. 2) $E° = (0.0592/4)(20) = (0.0148)(20) = 0.296$ V. 3) $E° < 0$ → $\\log K < 0$ → $K < 1$.'
+        correctAnswers: ['2', '-612', 'greater'],
+        hint1: 'Mg goes from 0 to +2; each $\\text{Ag}^{+}$ gains one electron and there are two of them.',
+        hint2: '$\\Delta G° = -nFE°$ gives joules; divide by 1000.',
+        hint3: 'A negative $\\Delta G°$ means $\\ln K > 0$.',
+        explanation: '1) Two electrons move from Mg to the two $\\text{Ag}^{+}$ ions, so $n = 2$. 2) $\\Delta G° = -(2)(96{,}485)(3.17) = -611{,}700$ J ≈ $-612$ kJ/mol$_{rxn}$. 3) A negative $\\Delta G°$ gives $\\ln K > 0$, so $K$ is greater than 1.'
       }
     },
     {
-      id: 'ne4-dropdown-practice',
-      type: 'dropdown-select' as const,
+      id: 'ne4-zero-vs-standard',
+      type: 'text' as const,
       content: `
-**E° and K Connections** 🔽
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'E° > 0 corresponds to K',
-            options: ['< 1', '= 1', '> 1', '= 0']
-          },
-          {
-            label: 'The E°-K relationship is derived by setting E = 0 because',
-            options: ['the cell is fully charged', 'E° is always zero', 'the cell is at equilibrium', 'Q = 0 at equilibrium']
-          },
-          {
-            label: 'Doubling n in E° = (0.0592/n) log K means',
-            options: ['the same E° corresponds to 2K', 'the same E° corresponds to K/2', 'the same E° corresponds to $K^{2}$', 'the same E° corresponds to $\\sqrt{K}$']
-          },
-          {
-            label: 'The three interconnected quantities are ΔG°, E°, and',
-            options: ['ΔH°', 'Q', 'K', 'T']
-          }
-        ],
-        correctAnswers: ['> 1', 'the cell is at equilibrium', 'the same E° corresponds to $K^{2}$', 'K'],
-        hint1: 'Positive E° → spontaneous → products favored → K > 1.',
-        hint2: 'At equilibrium: E = 0 and Q = K.',
-        hint3: 'If n doubles, log K doubles too (to keep E° the same), so K becomes $K^{2}$.',
-        explanation: 'E° > 0 → K > 1. The derivation uses equilibrium conditions (E = 0, Q = K). If n doubles: log K = nE°/0.0592 doubles, meaning K squares. The triangle: ΔG° ↔ E° ↔ K.'
-      }
+## ⚖️ What E = 0 Means and What E° = 0 Means
+
+These two statements look alike but describe different things:
+
+| Statement | Meaning | Example |
+|-----------|---------|---------|
+| $E = 0$ | the cell, at its **current** concentrations, is at equilibrium ($Q = K$) | a fully discharged Daniell cell |
+| $E° = 0$ | the reaction has $\\Delta G° = 0$ and $K = 1$ | any concentration cell |
+
+> 💡 A Daniell cell always has $E° = +1.10$ V, even when it is dead. A concentration cell always has $E° = 0$, even when it is producing a voltage.
+      `
     },
     {
       id: 'ne4-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Exit Quiz — E° and K** ✅
+**Exit Quiz — E°, ΔG° and K** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A 3-electron cell has E° = 0.40 V. K is approximately:',
+            question: 'For a reaction with n = 2, E° is +0.20 V. What is ΔG° at 298 K?',
             options: [
-              '$10^{7}$',
-              '$10^{10}$',
-              '$10^{20}$',
-              '$10^{30}$'
-            ],
-            correctAnswer: 2,
-            explanation: '$\\log K = (3)(0.40)/0.0592 = 1.20/0.0592 = 20.3$. So $K \\approx 10^{20}$.'
-          },
-          {
-            question: 'Two cells have E° = 0.50 V but different n values ($n_{1}$ = 1, $n_{2}$ = 2). Which has the larger K?',
-            options: [
-              'Cell 1 (n = 1) — fewer electrons, larger K',
-              'Cell 2 (n = 2) — more electrons means larger K',
-              'They have the same K because E° is the same',
-              'Cannot be determined without ΔG°'
+              '−19 kJ/mol',
+              '−39 kJ/mol',
+              '+39 kJ/mol',
+              '−0.39 kJ/mol'
             ],
             correctAnswer: 1,
-            explanation: '$\\log K_1 = (1)(0.50)/0.0592 = 8.45$, $K_1 = 10^{8.45}$. $\\log K_2 = (2)(0.50)/0.0592 = 16.9$, $K_2 = 10^{16.9}$. Cell 2 has the much larger K.'
+            explanation: '$\\Delta G° = -nFE° = -(2)(96{,}485)(0.20) = -38{,}600$ J ≈ $-39$ kJ/mol. Using $n = 1$ gives $-19$ kJ, a positive value comes from dropping the minus sign, and $-0.39$ kJ comes from a units slip.'
+          },
+          {
+            question: 'A discharged Daniell cell reads 0.00 V. Which pair of values describes it?',
+            options: [
+              'E = 0 and E° = 0',
+              'E = 0 and E° = +1.10 V',
+              'E = +1.10 V and E° = 0',
+              'E = E° = +1.10 V'
+            ],
+            correctAnswer: 1,
+            explanation: 'The reading is the actual potential $E$, which is zero because the cell has reached equilibrium. $E°$ is a fixed property of the reaction at standard conditions and stays at +1.10 V.'
+          },
+          {
+            question: 'Which observation would show that a redox reaction has K less than 1 at standard conditions?',
+            options: [
+              'Its standard cell potential is a large positive value',
+              'Its standard free energy change is negative',
+              'Its standard cell potential is negative',
+              'Its cell potential falls as the reaction proceeds'
+            ],
+            correctAnswer: 2,
+            explanation: 'A negative $E°$ gives a positive $\\Delta G°$ and therefore $K < 1$. A positive $E°$ or a negative $\\Delta G°$ means $K > 1$, and every working galvanic cell loses potential as it runs, whatever its $K$.'
           }
         ]
       }

@@ -14,7 +14,7 @@ export const chemBufferSolutionsHendersonHasselbalchPart6Data = {
 
 | Type | What's Tested |
 |------|---------------|
-| Buffer after multiple additions | Repeated stoichiometry + H-H |
+| Buffer by partial neutralization | Stoichiometry + H-H |
 | Buffer vs. non-buffer ID | Composition requirements |
 | Buffer capacity limits | When does the buffer break? |
 | Design a buffer | Choose acid + calculate amounts |
@@ -24,7 +24,7 @@ export const chemBufferSolutionsHendersonHasselbalchPart6Data = {
 ---
 
 ### What You'll Master in Part 6
-- Solving multi-addition buffer problems step by step
+- Finding the pH of a buffer made by partially neutralizing a weak acid
 - Distinguishing buffer solutions from non-buffer mixtures
 - Calculating buffer capacity and identifying when a buffer is overwhelmed`
     },
@@ -32,53 +32,51 @@ export const chemBufferSolutionsHendersonHasselbalchPart6Data = {
       id: 'bf6-problem1',
       type: 'text' as const,
       content: `
-## 🛡️ Problem 1: Buffer After Multiple Additions
+## 🛡️ Problem 1: Making a Buffer by Partial Neutralization
 
-> **Problem:** A 1.0 L buffer contains 0.30 mol $HCOOH$ (formic acid, $pK_a = 3.75$) and 0.30 mol $HCOONa$ (sodium formate). Find the pH after adding 0.10 mol $NaOH$, then 0.05 mol $HCl$.
+> **Problem:** 0.30 mol of formic acid, $HCOOH$ ($pK_a = 3.75$), is dissolved in water, and 0.10 mol of $NaOH$ is added. The final volume is 1.0 L. Find the pH.
 
 **Solution:**
 
-**Initial pH:** $pH = 3.75 + \\log(0.30/0.30) = 3.75$
-
-**Add 0.10 mol $NaOH$:**
+**Step 1 — Stoichiometry (the reaction goes to completion):**
 
 $HCOOH + OH^- \\rightarrow HCOO^- + H_2O$
 
-After: $HCOOH = 0.20$ mol, $HCOO^- = 0.40$ mol
+| | $HCOOH$ | $OH^-$ | $HCOO^-$ |
+|-|---------|--------|----------|
+| Before | 0.30 mol | 0.10 mol | 0 |
+| Change | −0.10 | −0.10 | +0.10 |
+| After | 0.20 mol | 0 | 0.10 mol |
 
-$pH = 3.75 + \\log(0.40/0.20) = 3.75 + 0.30 = 4.05$
+Both members of the conjugate pair are now present, so the solution is a buffer.
 
-**Then add 0.05 mol $HCl$:**
+**Step 2 — Henderson-Hasselbalch:**
 
-$HCOO^- + H^+ \\rightarrow HCOOH$
+$$pH = 3.75 + \\log\\frac{0.10}{0.20} = 3.75 + (-0.30) = 3.45$$
 
-After: $HCOO^- = 0.35$ mol, $HCOOH = 0.25$ mol
-
-$pH = 3.75 + \\log(0.35/0.25) = 3.75 + 0.15 = 3.90$
+> 💡 **Tip:** This is the same calculation as a point in the buffer region of a weak acid–strong base titration (CED 8.4, 8.9). It finds the pH of a buffer from the identity and amounts of the conjugate pair that make it up.
       `
     },
     {
       id: 'bf6-problem1-practice',
       type: 'input-boxes' as const,
       content: `
-**Your Turn: Sequential Additions** 🧮
+**Your Turn: Partial Neutralization** 🧮
 
-A 1.0 L buffer has 0.25 mol $CH_3COOH$ and 0.25 mol $CH_3COO^-$ ($pK_a = 4.74$).
+0.25 mol $CH_3COOH$ ($pK_a = 4.74$) is mixed with 0.08 mol $NaOH$ in a total volume of 1.0 L.
 
-First, 0.08 mol $NaOH$ is added. Then, 0.05 mol $HCl$ is added.
+**1)** How many moles of $CH_3COO^-$ are formed? (2 decimal places)
 
-**1)** After adding $NaOH$, how many moles of $CH_3COO^-$ are present? (2 decimal places)
+**2)** How many moles of $CH_3COOH$ remain? (2 decimal places)
 
-**2)** After adding $NaOH$, what is the pH? (2 decimal places)
-
-**3)** After then adding $HCl$, what is the final pH? (2 decimal places)
+**3)** What is the pH of the resulting buffer? (2 decimal places)
       `,
       exercise: {
-        questions: [{ question: '(1)', answer: '0.33', acceptableAnswers: ['0.33'] }, { question: '(2)', answer: '5.03', acceptableAnswers: ['5.03'] }, { question: '(3)', answer: '4.84', acceptableAnswers: ['4.84', '4.85'] }],
-        hint1: '$CH_3COOH + OH^- \\rightarrow CH_3COO^-$. New $CH_3COO^- = 0.25 + 0.08$.',
-        hint2: '$pH = 4.74 + \\log(0.33/0.17)$.',
-        hint3: '$CH_3COO^- + H^+ \\rightarrow CH_3COOH$. New values: $A^- = 0.33 - 0.05$, $HA = 0.17 + 0.05$.',
-        explanation: '1) $CH_3COO^- = 0.25 + 0.08 = 0.33$ mol; $CH_3COOH = 0.25 - 0.08 = 0.17$ mol. 2) $pH = 4.74 + \\log(0.33/0.17) = 4.74 + 0.29 = 5.03$. 3) After HCl: $A^- = 0.28$, $HA = 0.22$. $pH = 4.74 + \\log(0.28/0.22) = 4.74 + 0.10 = 4.84$.'
+        questions: [{ question: '(1)', answer: '0.08', acceptableAnswers: ['0.08', '0.080'] }, { question: '(2)', answer: '0.17', acceptableAnswers: ['0.17'] }, { question: '(3)', answer: '4.41', acceptableAnswers: ['4.41', '4.42'] }],
+        hint1: 'Each mole of $OH^-$ converts one mole of $CH_3COOH$ to $CH_3COO^-$.',
+        hint2: '0.25 − 0.08.',
+        hint3: '$pH = 4.74 + \\log(0.08/0.17)$.',
+        explanation: '1) 0.08 mol $CH_3COO^-$ forms (NaOH is the limiting reactant). 2) $0.25 - 0.08 = 0.17$ mol $CH_3COOH$ remains. 3) $pH = 4.74 + \\log(0.08/0.17) = 4.74 - 0.33 = 4.41$. The pH is below p$K_a$ because there is more acid than conjugate base.'
       }
     },
     {
@@ -202,15 +200,15 @@ Design a 500 mL phosphate buffer at pH 7.40 ($pK_a = 7.21$, total phosphate = 0.
       exercise: {
         questions: [
           {
-            question: 'A buffer contains 0.40 mol $HA$ and 0.40 mol $A^-$ in 1.0 L ($pK_a = 5.00$). After adding 0.40 mol $NaOH$, the pH is:',
+            question: 'A solution of 0.40 mol of a weak acid HA ($pK_a = 5.00$) is mixed with 0.40 mol $NaOH$; the final volume is 1.0 L. What is the pH?',
             options: [
               '5.00',
               '7.00',
-              '9.45',
-              '13.90'
+              '9.30',
+              '13.60'
             ],
             correctAnswer: 2,
-            explanation: '0.40 mol $NaOH$ consumes ALL 0.40 mol $HA$, so the buffer is destroyed and 0.80 mol $A^-$ (0.80 M, a weak base) remains with no excess $OH^-$. $K_b = K_w/K_a = 1.0 \\times 10^{-14}/1.0 \\times 10^{-5} = 1.0 \\times 10^{-9}$. $[OH^-] = \\sqrt{(1.0 \\times 10^{-9})(0.80)} = 2.8 \\times 10^{-5}$ M, $pOH = 4.55$, $pH = 9.45$. Treating 0.80 M $A^-$ as if it were 0.80 M $OH^-$ gives 13.90; assuming the neutralized solution is neutral gives 7.00; skipping the reaction step gives 5.00.'
+            explanation: 'Equal moles react completely, leaving 0.40 M $A^-$ (a weak base) and no buffer: this is an equivalence point. $K_b = K_w/K_a = 1.0 \\times 10^{-9}$, so $[OH^-] = \\sqrt{(1.0 \\times 10^{-9})(0.40)} = 2.0 \\times 10^{-5}$ M, $pOH = 4.70$, $pH = 9.30$. Treating 0.40 M $A^-$ as 0.40 M $OH^-$ gives 13.60, assuming a neutral solution gives 7.00, and 5.00 is the half-equivalence pH.'
           },
           {
             question: '100 mL of 0.50 M $CH_3COOH$ is mixed with 100 mL of 0.25 M $NaOH$. The resulting solution is:',

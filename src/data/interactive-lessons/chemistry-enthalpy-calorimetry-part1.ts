@@ -50,7 +50,7 @@ In thermochemistry, we divide the universe into two parts:
 
 Energy flows between the system and surroundings. The **First Law of Thermodynamics** states:
 
-$$\\Delta E_{\\text{universe}} = \\Delta E_{\\text{system}} + \\Delta E_{\\text{surroundings}} = 0$$
+$$\\text{energy lost by the system} = \\text{energy gained by the surroundings}$$
 
 Energy is **conserved** — it is neither created nor destroyed, only transferred.
 
@@ -258,7 +258,7 @@ Type "exothermic" or "endothermic" for each process:
             explanation: '$NH_{4}NO_{3}$ dissolving in water is endothermic. The system absorbs heat from your hand (the surroundings), making your hand feel cold. Energy is not created or destroyed — it flows from surroundings to system.'
           },
           {
-            question: 'If ΔH = −484 kJ for the reaction $2H_{2}(g)$ + $O_{2}(g)$ → $2H_{2}O(l)$, what is ΔH for $2H_{2}O(l)$ → $2H_{2}(g)$ + $O_{2}(g)$?',
+            question: 'If ΔH = −484 kJ for the reaction $2H_{2}(g)$ + $O_{2}(g)$ → $2H_{2}O(g)$, what is ΔH for $2H_{2}O(g)$ → $2H_{2}(g)$ + $O_{2}(g)$?',
             options: [
               '−484 kJ',
               '+484 kJ',

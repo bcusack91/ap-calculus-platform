@@ -15,10 +15,10 @@ export const chemGibbsFreeEnergyPart1Data = {
 | Section |
 |---------|
 | ⚡ Defining Gibbs Free Energy |
-| Where Does This Come From? |
+| Reading the Equation |
 | ⚡ The Spontaneity Criterion |
 | Why Gibbs Free Energy Is So Useful |
-| What "Free" Means |
+| 🌡️ Temperature and Spontaneity |
 
 > 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
@@ -45,21 +45,18 @@ $$\\boxed{\\Delta G = \\Delta H - T\\Delta S}$$
 
 ---
 
-### Where Does This Come From?
+### Reading the Equation
 
-Recall: $\\Delta S_{\\text{universe}} = \\Delta S_{\\text{system}} + \\Delta S_{\\text{surroundings}}$
+The equation combines the two factors from the entropy topic into one number:
 
-And: $\\Delta S_{\\text{surroundings}} = -\\Delta H_{\\text{system}}/T$
+| Term | What it represents | Favorable when |
+|------|--------------------|----------------|
+| $\\Delta H$ | The energy factor | $\\Delta H < 0$ (energy released) |
+| $-T\\Delta S$ | The dispersal factor, weighted by temperature | $\\Delta S > 0$ (more dispersal) |
 
-So: $\\Delta S_{\\text{universe}} = \\Delta S_{\\text{sys}} - \\Delta H_{\\text{sys}}/T$
+A process is thermodynamically favored when the sum is negative (CED 9.3.A.5):
 
-Multiply by $-T$:
-
-$$-T\\Delta S_{\\text{universe}} = \\Delta H_{\\text{sys}} - T\\Delta S_{\\text{sys}} = \\Delta G$$
-
-Since $\\Delta S_{\\text{universe}} > 0$ for spontaneous processes:
-
-$$\\boxed{\\Delta G < 0 \\quad \\text{(spontaneous)}}$$
+$$\\boxed{\\Delta G° < 0 \\quad \\text{(thermodynamically favored)}}$$
       `
     },
     {
@@ -79,19 +76,11 @@ $$\\boxed{\\Delta G < 0 \\quad \\text{(spontaneous)}}$$
 ### Why Gibbs Free Energy Is So Useful
 
 - It accounts for **both** enthalpy and entropy
-- It is a property of the **system only** — no need to calculate $\\Delta S_{\\text{surroundings}}$
+- It is calculated entirely from properties of the **system** ($\\Delta H$, $\\Delta S$, and $T$)
 - It connects directly to **equilibrium** and **electrochemistry**
 
 
----
-
-### What "Free" Means
-
-"Free energy" is the maximum amount of energy **available to do useful work** (non-$PV$ work) in a reaction.
-
-$$\\boxed{w_{\\text{max}} = \\Delta G}$$
-
-If $\\Delta G = -100$ kJ, the reaction can do at most 100 kJ of useful work.
+> 💡 **Tip:** The CED prefers the phrase **thermodynamically favored** to "spontaneous," because "spontaneous" is often misread as "fast." A favored reaction can still be immeasurably slow if its activation energy is high (CED 9.4).
       `
     },
     {
@@ -203,8 +192,8 @@ Above 273 K: melting is spontaneous ($\\Delta G < 0$). Below 273 K: freezing is 
       exercise: {
         dropdowns: [
           {
-            label: 'ΔG represents the maximum amount of',
-            options: ['heat released', 'useful work available', 'entropy created', 'pressure-volume work']
+            label: 'A process with ΔG° < 0 is described as',
+            options: ['thermodynamically favored', 'at equilibrium', 'kinetically fast', 'endothermic']
           },
           {
             label: 'At high temperatures, the dominant term in ΔG = ΔH − TΔS is',
@@ -219,11 +208,11 @@ Above 273 K: melting is spontaneous ($\\Delta G < 0$). Below 273 K: freezing is 
             options: ['°C', 'K', '°F', 'any unit']
           }
         ],
-        correctAnswers: ['useful work available', 'TΔS', 'never spontaneous', 'K'],
-        hint1: 'ΔG = maximum non-PV work.',
+        correctAnswers: ['thermodynamically favored', 'TΔS', 'never spontaneous', 'K'],
+        hint1: 'A negative ΔG° means products are favored.',
         hint2: 'As T increases, T×ΔS grows and dominates.',
         hint3: 'Both terms make ΔG positive: ΔH > 0 and −TΔS > 0.',
-        explanation: 'ΔG = maximum useful (non-PV) work. At high T, TΔS dominates. ΔH > 0 and ΔS < 0 means ΔG > 0 at ALL temperatures — never spontaneous. Temperature must be in Kelvin.'
+        explanation: 'ΔG° < 0 means the process is thermodynamically favored; it says nothing about speed. At high T, TΔS dominates. ΔH > 0 and ΔS < 0 means ΔG > 0 at ALL temperatures — never spontaneous. Temperature must be in Kelvin.'
       }
     },
     {

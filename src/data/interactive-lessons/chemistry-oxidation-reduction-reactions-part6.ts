@@ -47,7 +47,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 
 ### Common Patterns to Recognize
 
-> 🔑 **Key Concept:** Memorize these common species and their typical products — they appear frequently on the AP exam.
+> 🔑 **Key Concept:** Recognizing these common species and their typical products speeds up balancing. On the AP exam the products of a redox reaction are normally given in the question.
 
 | Species | Typical Behavior | Product |
 |---------|-----------------|---------|
@@ -182,7 +182,7 @@ Determine the oxidation state change for the underlined element in each half-rea
             options: ['$MnO_{2}$', '$Mn^{2+}$', 'Mn', '$MnO_{3}^{-}$']
           },
           {
-            label: '$H_{2}O_{2}$ acting as a reducing agent is oxidized to',
+            label: 'When $H_{2}O_{2}$ is oxidized, it forms',
             options: ['$H_{2}O$', '$O_{2}$', '$OH^{-}$', '$H_{2}$']
           },
           {

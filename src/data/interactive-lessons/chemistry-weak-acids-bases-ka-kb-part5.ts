@@ -80,11 +80,11 @@ Polyprotic acids can donate **more than one proton**. Each dissociation has its 
 
 ---
 
-### Diprotic Acid Example: $H_2SO_3$
+### Diprotic Acid Example: $H_2CO_3$
 
-$$H_2SO_3 \\rightleftharpoons H^+ + HSO_3^- \\qquad K_{a1} = 1.5 \\times 10^{-2}$$
+$$H_2CO_3 \\rightleftharpoons H^+ + HCO_3^- \\qquad K_{a1} = 4.3 \\times 10^{-7}$$
 
-$$HSO_3^- \\rightleftharpoons H^+ + SO_3^{2-} \\qquad K_{a2} = 6.3 \\times 10^{-8}$$
+$$HCO_3^- \\rightleftharpoons H^+ + CO_3^{2-} \\qquad K_{a2} = 4.7 \\times 10^{-11}$$
 
 
 ---
@@ -109,9 +109,17 @@ Each successive dissociation is **much weaker** because it\'s harder to remove $
 
 ---
 
-### Practical Consequence
+### Which Species Dominate?
 
-> 💡 **Tip:** For pH calculations, **only the first dissociation matters** (in most cases). The second and third contribute negligible additional $[H^+]$.
+Because each step is so much weaker than the one before, a solution of a weak diprotic acid such as $H_2CO_3$ contains:
+
+| Species | Relative amount |
+|---------|-----------------|
+| $H_2CO_3$ | Largest (mostly un-ionized) |
+| $H_3O^+$ and $HCO_3^-$ | Small, roughly equal |
+| $CO_3^{2-}$ | Very small |
+
+> 💡 **Tip:** Nearly all the $H_3O^+$ comes from the first ionization. Reason qualitatively about which species are present in large or small amounts; calculating the concentration of every species in a polyprotic solution is not on the AP exam (CED 8.5 exclusion).
       `
     },
     {
@@ -142,7 +150,7 @@ Each successive dissociation is **much weaker** because it\'s harder to remove $
               'The product $K_{a1} \\times K_{a2} \\times K_{a3}$'
             ],
             correctAnswer: 1,
-            explanation: '$K_{a1} \\gg K_{a2} \\gg K_{a3}$, so virtually all the $H^+$ comes from the first dissociation. Use only $K_{a1}$ for pH calculations.'
+            explanation: '$K_{a1} \\gg K_{a2} \\gg K_{a3}$, so virtually all the $H^+$ comes from the first dissociation. The later steps add a negligible amount of $H^+$, so neither the smallest constant, an average, nor a product describes the pH.'
           },
           {
             question: 'For $H_2CO_3$, why is $K_{a2} \\ll K_{a1}$?',
@@ -162,20 +170,20 @@ Each successive dissociation is **much weaker** because it\'s harder to remove $
       id: 'wk5-calculation-drill',
       type: 'input-boxes' as const,
       content: `
-**Percent Ionization & Polyprotic Calculations** 🧮
+**Percent Ionization Calculations** 🧮
 
 **1)** What is the percent ionization of 0.050 M $HF$ ($K_a = 6.8 \\times 10^{-4}$)? (1 decimal place)
 
-**2)** Find the pH of 0.10 M $H_3PO_4$ ($K_{a1} = 7.5 \\times 10^{-3}$). Use only the first dissociation. (2 decimal places)
+**2)** A 0.20 M $HNO_2$ solution has $[H_3O^+] = 9.4 \\times 10^{-3}$ M at equilibrium. What is the percent ionization? (1 decimal place)
 
-**3)** For $H_2CO_3$ ($K_{a1} = 4.3 \\times 10^{-7}$, $K_{a2} = 4.7 \\times 10^{-11}$), what is $[CO_3^{2-}]$ in a 0.10 M solution? (Enter in scientific notation, e.g. 2.0e-9)
+**3)** If the HF solution in (1) is diluted to 0.0050 M, does its percent ionization **increase** or **decrease**?
       `,
       exercise: {
-        questions: [{ question: '1)', answer: '11.0', acceptableAnswers: ['11.0'] }, { question: '2)', answer: '1.62', acceptableAnswers: ['1.62'] }, { question: '3)', answer: '4.7e-11', acceptableAnswers: ['4.7e-11'] }],
+        questions: [{ question: '1)', answer: '11.0', acceptableAnswers: ['11.0'] }, { question: '2)', answer: '4.7', acceptableAnswers: ['4.7', '4.70'] }, { question: '3)', answer: 'increase', acceptableAnswers: ['increase', 'increases'] }],
         hint1: '$[H^+] = \\sqrt{K_a \\cdot C}$, then divide by $C$ and multiply by 100.',
-        hint2: '$[H^+] = \\sqrt{(7.5 \\times 10^{-3})(0.10)}$. Check 5% rule — may need quadratic.',
-        hint3: 'For diprotic acids, $[\\text{second anion}] \\approx K_{a2}$ regardless of initial concentration!',
-        explanation: '1) $[H^+] = \\sqrt{(6.8 \\times 10^{-4})(0.050)} = 5.83 \\times 10^{-3}$; $\\% = (5.83 \\times 10^{-3}/0.050) \\times 100 = 11.7\\%$. Since >5%, use the quadratic $x^2 + (6.8 \\times 10^{-4})x - 3.4 \\times 10^{-5} = 0$: $x = 5.50 \\times 10^{-3}$; $\\% = 11.0\\%$. 2) $x = \\sqrt{7.5 \\times 10^{-4}} = 0.0274$. Check: $27.4\\%$ > 5%, use quadratic: $x = 0.024$; $pH = 1.62$. 3) For any diprotic acid, $[\\text{second anion}] = K_{a2} = 4.7 \\times 10^{-11}$ M.'
+        hint2: 'Percent ionization = (equilibrium $[H_3O^+]$ / initial concentration) × 100.',
+        hint3: 'Dilution shifts the ionization equilibrium toward more ions.',
+        explanation: '1) $[H^+] = \\sqrt{(6.8 \\times 10^{-4})(0.050)} = 5.83 \\times 10^{-3}$; $\\% = (5.83 \\times 10^{-3}/0.050) \\times 100 = 11.7\\%$. Since >5%, use the quadratic $x^2 + (6.8 \\times 10^{-4})x - 3.4 \\times 10^{-5} = 0$: $x = 5.50 \\times 10^{-3}$; $\\% = 11.0\\%$. 2) $(9.4 \\times 10^{-3}/0.20) \\times 100 = 4.7\\%$ (CED 8.3.A.5). 3) Increase: percent ionization rises as a weak acid is diluted (roughly in proportion to $1/\\sqrt{C}$).'
       }
     },
     {
@@ -191,19 +199,19 @@ Each successive dissociation is **much weaker** because it\'s harder to remove $
             options: ['increases', 'decreases', 'stays constant', 'first increases then decreases']
           },
           {
-            label: 'For a diprotic acid, $[\\text{second anion}]$ approximately equals',
-            options: ['$K_{a1}$', '$K_{a2}$', '$K_{a1}$ \× $K_{a2}$', 'zero']
+            label: 'Compared with $K_{a1}$, the value of $K_{a2}$ for a diprotic acid is',
+            options: ['much larger', 'much smaller', 'exactly equal', 'always zero']
           },
           {
             label: 'The $K_a$ of $HSO_4^-$ is the same as',
             options: ['$K_{a1}$ of $H_{2}SO_{4}$', '$K_{a2}$ of $H_{2}SO_{4}$', '$K_{b}$ of $SO_{4}^{2-}$', '$K_{a1}$ × $K_{a2}$ of $H_{2}SO_{4}$']
           }
         ],
-        correctAnswers: ['increases', '$K_{a2}$', '$K_{a2}$ of $H_{2}SO_{4}$'],
+        correctAnswers: ['increases', 'much smaller', '$K_{a2}$ of $H_{2}SO_{4}$'],
         hint1: 'Le Chatelier: dilution favors more ions.',
-        hint2: 'This is a remarkable simplification for diprotic acids.',
+        hint2: 'Is it easier or harder to remove $H^+$ from a negative ion?',
         hint3: '$HSO_4^-$ is the intermediate species in the dissociation of $H_2SO_4$.',
-        explanation: 'Dilution increases percent ionization. For diprotic acids, $[\\text{second anion}] \\approx K_{a2}$ (a useful shortcut). $HSO_4^-$ dissociation corresponds to $K_{a2}$ of $H_2SO_4$.'
+        explanation: 'Dilution increases percent ionization. $K_{a2} \\ll K_{a1}$ because the second proton must leave a negative ion. $HSO_4^-$ dissociation corresponds to $K_{a2}$ of $H_2SO_4$.'
       }
     },
     {
@@ -226,15 +234,15 @@ Each successive dissociation is **much weaker** because it\'s harder to remove $
             explanation: 'The approximation fails when $C/K_a < 400$: $C < 400 \\times 1.8 \\times 10^{-5} = 0.0072$ M. Below this concentration, use the quadratic formula. "Above" reverses the direction (more concentrated solutions ionize less, so the approximation improves), and 0.00036 M comes from using $C/K_a > 20$ — forgetting to square 0.05.'
           },
           {
-            question: 'For a 0.10 M solution of $H_2SO_3$ ($K_{a1} = 1.5 \\times 10^{-2}$), the pH should be calculated using:',
+            question: 'In a 0.10 M solution of the weak diprotic acid $H_2CO_3$, which species is present in the LOWEST concentration?',
             options: [
-              'Both $K_{a1}$ and $K_{a2}$, added together',
-              'Only $K_{a1}$, maybe via the quadratic',
-              'Only $K_{a2}$, with the 5% approximation',
-              'The average of $K_{a1}$ and $K_{a2}$ values'
+              '$H_2CO_3$',
+              '$HCO_3^-$',
+              '$H_3O^+$',
+              '$CO_3^{2-}$'
             ],
-            correctAnswer: 1,
-            explanation: 'pH depends primarily on $K_{a1}$. Since $K_{a1} = 1.5 \\times 10^{-2}$ is relatively large and $C/K_{a1} = 6.7 < 400$, you\'ll need the quadratic formula, but only $K_{a1}$ matters for pH.'
+            correctAnswer: 3,
+            explanation: 'Most $H_2CO_3$ stays un-ionized, a small amount ionizes to $H_3O^+$ and $HCO_3^-$, and because $K_{a2} \\ll K_{a1}$ only a tiny fraction of $HCO_3^-$ ionizes further to $CO_3^{2-}$. So carbonate is the least abundant species.'
           }
         ]
       }

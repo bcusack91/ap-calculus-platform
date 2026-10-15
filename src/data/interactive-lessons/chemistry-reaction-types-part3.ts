@@ -18,7 +18,9 @@ export const chemReactionTypesPart3Data = {
 | General Form |
 | Common Examples |
 | Key Recognition |
+| Combustion Is a Redox Reaction |
 | 📌 Combustion of Oxygenated Compounds |
+| 📌 Complete vs. Incomplete Combustion |
 
 > 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
@@ -62,6 +64,21 @@ $$\\boxed{\\text{C}_x\\text{H}_y + \\left(x + \\frac{y}{4}\\right)\\text{O}_2 \\
 ### Key Recognition
 
 > 💡 **Tip:** If you see a hydrocarbon + $O_{2}$ → it\'s combustion. The products are **always $CO_{2}$ + $H_{2}O$** for complete combustion.
+
+
+---
+
+### Combustion Is a Redox Reaction
+
+AP Chemistry does not treat combustion as a separate reaction category: it is an important **subclass of oxidation–reduction** (CED 4.7.A.2). Assign oxidation numbers in the combustion of methane:
+
+| Element | In reactants | In products | Change |
+|---------|-------------|-------------|--------|
+| C | −4 in $\\text{CH}_4$ | +4 in $\\text{CO}_2$ | loses electrons → **oxidized** |
+| O | 0 in $\\text{O}_2$ | −2 in $\\text{CO}_2$ and $\\text{H}_2\\text{O}$ | gains electrons → **reduced** |
+| H | +1 | +1 | no change |
+
+Electrons move from the fuel's carbon atoms to oxygen, which is why every combustion is a redox reaction.
       `
     },
     {
@@ -161,6 +178,17 @@ $$\\text{CH}_4 + \\text{O}_2 \\rightarrow \\text{C} + 2\\text{H}_2\\text{O}$$
             explanation: 'Complete combustion of a hydrocarbon (C and H only) in excess oxygen always produces carbon dioxide $(CO_{2})$ and water $(H_{2}O)$.'
           },
           {
+            question: 'In the combustion $\\text{CH}_4 + 2\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\text{H}_2\\text{O}$, which statement about electron transfer is correct?',
+            options: [
+              'Carbon is oxidized from −4 to +4, and oxygen is reduced from 0 to −2',
+              'Oxygen is oxidized from 0 to −2, and carbon is reduced from −4 to +4',
+              'Hydrogen is oxidized from +1 to +2, and oxygen is reduced from 0 to −1',
+              'No electrons are transferred, because combustion is not a redox reaction'
+            ],
+            correctAnswer: 0,
+            explanation: 'Carbon\'s oxidation number rises from −4 in methane to +4 in carbon dioxide, so carbon loses electrons (oxidized). Oxygen falls from 0 to −2, so it gains them (reduced). Hydrogen stays +1, and combustion is a subclass of redox.'
+          },
+          {
             question: 'What are the products of the complete combustion of $C_{2}H_{6}$ (ethane)?',
             options: [
               '$2\\text{CO}_2 + 2\\text{H}_2\\text{O}$',
@@ -187,8 +215,8 @@ $$\\text{CH}_4 + \\text{O}_2 \\rightarrow \\text{C} + 2\\text{H}_2\\text{O}$$
             options: [
               'Complete combustion with excess oxygen',
               'Incomplete combustion with limited oxygen',
-              'A synthesis reaction',
-              'The presence of a catalyst'
+              'Complete combustion at a lower temperature',
+              'The presence of a catalyst in the fuel'
             ],
             correctAnswer: 1,
             explanation: 'A yellow or orange flame with soot (carbon particles) is a sign of incomplete combustion. Limited oxygen means not all carbon is fully oxidized to $CO_{2}$ — some remains as solid carbon (soot) or CO.'
@@ -209,8 +237,6 @@ Find the coefficient of $O_{2}$ needed for complete combustion. Enter just the n
 **2)** $2\\text{C}_4\\text{H}_{10} + \\underline{\\hspace{1em}}\\,\\text{O}_2 \\rightarrow 8\\text{CO}_2 + 10\\text{H}_2\\text{O}$ → coefficient of $O_{2}$ = ?
 
 **3)** $\\text{C}_2\\text{H}_5\\text{OH} + \\underline{\\hspace{1em}}\\,\\text{O}_2 \\rightarrow 2\\text{CO}_2 + 3\\text{H}_2\\text{O}$ → coefficient of $O_{2}$ = ?
-
-*Round all answers to 3 significant figures.*
       `,
       exercise: {
         questions: [{ question: '(1)', answer: '2.5', acceptableAnswers: ['2.5', '5/2'] }, { question: '(2)', answer: '13', acceptableAnswers: ['13'] }, { question: '(3)', answer: '3', acceptableAnswers: ['3'] }],

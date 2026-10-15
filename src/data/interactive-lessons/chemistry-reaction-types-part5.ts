@@ -6,7 +6,7 @@ export const chemReactionTypesPart5Data = {
       type: 'text' as const,
       content: `# 🔮 Predicting Products
 
-**Part 5 of 7 — Using Reaction Types to Predict What Forms**
+**Part 5 of 7 — Predicting Products for Acid–Base, Redox, and Precipitation Reactions**
 
 ---
 
@@ -15,19 +15,19 @@ export const chemReactionTypesPart5Data = {
 | Section |
 |---------|
 | 🎯 Product Prediction Strategy |
-| Step 1: Classify the Reactants |
-| Step 2: Apply the Pattern |
-| Step 3: Balance the Equation |
-| 🎯 Predicting Synthesis Products |
+| Reading the Reactants |
+| 🎯 Predicting Redox Products |
+| Element + Element, Metal + Acid, Metal + Metal Ion |
+| ⚖️ Writing Formulas and Balancing |
 
-> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+> 🔑 **Key Concept:** Decide first which kind of transfer can happen (protons, electrons, or ions leaving solution as a solid). The reaction type tells you what the products must look like.
 
 ---
 
 ### What You'll Master in Part 5
-- Understanding the core concepts covered in Part 5
-- Applying these ideas to solve practice problems
-- Building toward AP exam readiness for this topic`
+- Choosing the right reaction type from the reactants and the information given
+- Predicting products of acid–base, redox, and precipitation reactions
+- Writing correct formulas from ion charges and balancing the result`
     },
     {
       id: 'rt5-strategy',
@@ -35,138 +35,62 @@ export const chemReactionTypesPart5Data = {
       content: `
 ## 🎯 Product Prediction Strategy
 
-> 🔑 **Key Concept:** The key to predicting products is to first **identify the reaction type**, then apply the pattern for that type.
+### Reading the Reactants
 
-### Step 1: Classify the Reactants
+| Reactant clue | Reaction type | Product pattern |
+|---------------|--------------|-----------------|
+| An acid with a hydroxide, ammonia, or a carbonate | Acid–base | Conjugate base + conjugate acid (water, $\\text{NH}_4^+$, or $\\text{H}_2\\text{O} + \\text{CO}_2$) |
+| Two ionic solutions | Precipitation, if a new pairing is insoluble | The insoluble solid; other ions stay dissolved |
+| A fuel with $\\text{O}_2$ | Redox (combustion) | $\\text{CO}_2$ and $\\text{H}_2\\text{O}$ for a C/H/O fuel |
+| A metal with a nonmetal element | Redox | An ionic compound built from the ion charges |
+| A metal with an acid, when the metal dissolves | Redox | Metal cation + $\\text{H}_2(g)$ |
+| A metal with another metal's ions, when a metal deposits | Redox | The first metal's cation + the second metal |
 
-| Reactant Pattern | Likely Reaction Type |
-|-----------------|---------------------|
-| Two or more elements/compounds combining | Synthesis |
-| One compound alone (+ heat/energy) | Decomposition |
-| Element + compound | Single replacement |
-| Two ionic compounds in solution | Double replacement |
-| Organic compound + $O_{2}$ | Combustion |
+### Three Steps
 
-
----
-
-### Step 2: Apply the Pattern
-
-| Reaction Type | Product Pattern |
-|--------------|----------------|
-| Synthesis | One compound |
-| Decomposition | Simpler substances |
-| Single replacement | New element + new compound |
-| Double replacement | Two new compounds (swap ions) |
-| Combustion | $CO_{2}$ + $H_{2}O$ |
-
-
----
-
-### Step 3: Balance the Equation
-
-After predicting the products, balance the equation using the coefficient method.
+1. **Classify** using the table above.
+2. **Write the products** using ion charges for every ionic formula.
+3. **Balance** atoms (and, for ionic equations, charge).
       `
     },
     {
-      id: 'rt5-synthesis-predictions',
+      id: 'rt5-redox-predictions',
       type: 'text' as const,
       content: `
-## 🎯 Predicting Synthesis Products
+## 🎯 Predicting Redox Products
 
-### Metal + Nonmetal → Ionic Compound
+### Element + Element
 
-Use charges to determine the formula:
+A metal transfers electrons to a nonmetal. Use the charges of the resulting ions to write the formula.
 
-| Reactants | Charges | Product |
-|-----------|---------|---------|
-| Na + $Cl_{2}$ | $Na^{+}$, $Cl^{-}$ | NaCl |
-| Mg + $O_{2}$ | $Mg^{2+}$, $O^{2-}$ | MgO |
-| Al + $Br_{2}$ | $Al^{3+}$, $Br^{-}$ | $AlBr_{3}$ |
-| Ca + $N_{2}$ | $Ca^{2+}$, $N^{3-}$ | $Ca_{3}N_{2}$ |
-
-
----
-
-### Nonmetal Oxide + Water → Acid
-
-| Oxide | + $H_{2}O$ | Acid |
-|-------|--------|------|
-| $CO_{2}$ | $H_{2}O$ | $H_{2}CO_{3}$ |
-| $SO_{3}$ | $H_{2}O$ | $H_{2}SO_{4}$ |
-| $N_{2}O_{5}$ | $H_{2}O$ | $2HNO_{3}$ |
+| Reactants | Ion charges | Product |
+|-----------|-------------|---------|
+| Na + $\\text{Cl}_2$ | $\\text{Na}^+$, $\\text{Cl}^-$ | NaCl |
+| Mg + $\\text{O}_2$ | $\\text{Mg}^{2+}$, $\\text{O}^{2-}$ | MgO |
+| Al + $\\text{Br}_2$ | $\\text{Al}^{3+}$, $\\text{Br}^-$ | $\\text{AlBr}_3$ |
+| Ca + $\\text{N}_2$ | $\\text{Ca}^{2+}$, $\\text{N}^{3-}$ | $\\text{Ca}_3\\text{N}_2$ |
 
 
 ---
 
-### Metal Oxide + Water → Base (Metal Hydroxide)
+### Metal + Acid
 
-| Oxide | + $H_{2}O$ | Base |
-|-------|--------|------|
-| $Na_{2}O$ | $H_{2}O$ | 2NaOH |
-| CaO | $H_{2}O$ | $Ca(OH)_{2}$ |
-| $K_{2}O$ | $H_{2}O$ | 2KOH |
-      `
-    },
-    {
-      id: 'rt5-decomposition-predictions',
-      type: 'text' as const,
-      content: `
-## 🔮 Predicting Decomposition Products
+When a metal dissolves in an acid, the metal is oxidized to its cation and $\\text{H}^+$ is reduced to hydrogen gas:
 
-### Common Decomposition Patterns
-
-| Compound Type | Products | Example |
-|--------------|----------|---------|
-| Metal carbonate | Metal oxide + $CO_{2}$ | $\\text{CaCO}_3 \\rightarrow \\text{CaO} + \\text{CO}_2$ |
-| Metal hydroxide | Metal oxide + $H_{2}O$ | $\\text{Mg(OH)}_2 \\rightarrow \\text{MgO} + \\text{H}_2\\text{O}$ |
-| Metal chlorate | Metal chloride + $O_{2}$ | $2\\text{KClO}_3 \\rightarrow 2\\text{KCl} + 3\\text{O}_2$ |
-| Metal oxide | Metal + $O_{2}$ | $2\\text{HgO} \\rightarrow 2\\text{Hg} + \\text{O}_2$ |
-| Acid | Nonmetal oxide + $H_{2}O$ | $\\text{H}_2\\text{CO}_3 \\rightarrow \\text{CO}_2 + \\text{H}_2\\text{O}$ |
+$$\\text{Mg}(s) + 2\\text{H}^+(aq) \\rightarrow \\text{Mg}^{2+}(aq) + \\text{H}_2(g)$$
 
 
 ---
 
-### Key Memory Tool
+### Metal + Another Metal's Ions
 
-> 💡 **Tip:** Think of decomposition as "un-synthesizing" — the reverse of combining:
+When a metal strip placed in a solution becomes coated with a different metal, the strip's metal is oxidized and the dissolved metal ion is reduced:
 
-- Carbonates → oxide + $CO_{2}$
-- Hydroxides → oxide + $H_{2}O$  
-- Chlorates → chloride + $O_{2}$
-      `
-    },
-    {
-      id: 'rt5-replacement-predictions',
-      type: 'text' as const,
-      content: `
-## 🔮 Predicting Replacement Products
+$$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$$
 
-### Single Replacement
+> 💡 **Tip:** An AP question will tell you (or describe an observation showing) whether such a reaction happens. You do not need a memorized ranking of metals; your job is to identify what is oxidized and reduced and to write balanced products.
 
-1. Check the activity series — will the reaction occur?
-2. The free element replaces the corresponding element in the compound
-
-$$\\text{Zn} + \\text{CuSO}_4 \\rightarrow \\text{ZnSO}_4 + \\text{Cu}$$
-
-Zn replaces Cu because Zn is higher in the activity series.
-
-> ⚠️ **Warning:** A common error is forgetting to check the activity series. If the free element is **below** the element in the compound, write **NR** (no reaction).
-
-
----
-
-### Double Replacement
-
-1. Identify the cations and anions
-2. Swap partners: $cation_{1}$ + $anion_{2}$ and $cation_{2}$ + $anion_{1}$
-3. Write correct formulas using ion charges
-4. Check for a driving force (precipitate, gas, or water)
-
-$$\\text{Pb(NO}_3)_2 + 2\\text{KI} \\rightarrow \\text{PbI}_2\\downarrow + 2\\text{KNO}_3$$
-
-- $Pb^{2+}$ pairs with $I^{-}$ → $PbI_{2}$ (insoluble precipitate — driving force!)
-- $K^{+}$ pairs with $NO_{3}^{-}$ → $KNO_{3}$ (soluble)
+> ⚠️ **Warning:** Electrons lost must equal electrons gained. For aluminum (3 electrons lost per atom) and nickel(II) (2 electrons gained per ion), the balanced equation is $2\\text{Al} + 3\\text{Ni}^{2+} \\rightarrow 2\\text{Al}^{3+} + 3\\text{Ni}$: six electrons each way.
       `
     },
     {
@@ -178,51 +102,96 @@ $$\\text{Pb(NO}_3)_2 + 2\\text{KI} \\rightarrow \\text{PbI}_2\\downarrow + 2\\te
       exercise: {
         questions: [
           {
-            question: 'Predict the product(s) of: $\\text{Ba} + \\text{O}_2 \\rightarrow$ ?',
+            question: 'Predict the product of the redox reaction $\\text{Ba}(s) + \\text{O}_2(g) \\rightarrow$ ?',
             options: [
-              '$BaO_{2}$',
+              '$\\text{BaO}_2$',
               'BaO',
-              '$Ba_{2}O$',
-              '$Ba_{2}O_{3}$'
+              '$\\text{Ba}_2\\text{O}$',
+              '$\\text{Ba}_2\\text{O}_3$'
             ],
             correctAnswer: 1,
-            explanation: 'Ba is in Group 2 (charge +2), O has charge −2. The formula is BaO (1:1 ratio). Balanced: $2\\text{Ba} + \\text{O}_2 \\rightarrow 2\\text{BaO}$. This is a synthesis reaction.'
+            explanation: 'Barium forms $\\text{Ba}^{2+}$ and oxygen forms $\\text{O}^{2-}$, so they combine 1:1 as BaO. Balanced: $2\\text{Ba} + \\text{O}_2 \\rightarrow 2\\text{BaO}$. Barium is oxidized (0 → +2) and oxygen is reduced (0 → −2).'
           },
           {
-            question: 'What are the products when sodium carbonate $(Na_{2}CO_{3})$ is heated?',
+            question: 'A strip of aluminum is placed in a $\\text{NiCl}_2$ solution, and nickel metal deposits on the strip. Which products form?',
             options: [
-              'Na + $CO_{3}$',
-              '$Na_{2}O$ + $CO_{2}$',
-              'NaO + $CO_{2}$',
-              '$Na_{2}O$ + C + $O_{2}$'
+              '$\\text{AlCl}_2$ and Ni',
+              '$\\text{AlCl}_3$ and Ni',
+              'No products; the ions only exchange partners',
+              '$\\text{AlNi}$ and $\\text{Cl}_2$'
             ],
             correctAnswer: 1,
-            explanation: 'Metal carbonates decompose into metal oxide + $CO_{2}$. $Na_{2}CO_{3}$ → $Na_{2}O$ + $CO_{2}$. The metal oxide retains the metal\'s original charge relationship.'
+            explanation: 'Aluminum is oxidized to $\\text{Al}^{3+}$, which pairs with three chloride ions as $\\text{AlCl}_3$, and $\\text{Ni}^{2+}$ is reduced to nickel metal. Balanced: $2\\text{Al} + 3\\text{NiCl}_2 \\rightarrow 2\\text{AlCl}_3 + 3\\text{Ni}$. $\\text{AlCl}_2$ ignores aluminum\'s +3 charge.'
           },
           {
-            question: 'Predict: $\\text{Al} + \\text{NiCl}_2 \\rightarrow$ ? (Al is above Ni in activity series)',
+            question: 'What are the products of $\\text{H}_2\\text{SO}_4(aq) + 2\\text{NaOH}(aq)$?',
             options: [
-              '$AlCl_{2}$ + Ni',
-              '$AlCl_{3}$ + Ni',
-              'No reaction',
-              'AlNi + $Cl_{2}$'
+              '$\\text{NaSO}_4$ + $\\text{H}_2\\text{O}$',
+              '$\\text{Na}_2\\text{SO}_4$ + $2\\text{H}_2\\text{O}$',
+              '$\\text{Na}_2\\text{SO}_4$ + $\\text{H}_2$',
+              '$\\text{NaHSO}_4$ + NaOH'
             ],
             correctAnswer: 1,
-            explanation: 'Al (charge +3) replaces Ni (charge +2) in $NiCl_{2}$. Product: $AlCl_{3}$ + Ni. Balanced: $2\\text{Al} + 3\\text{NiCl}_2 \\rightarrow 2\\text{AlCl}_3 + 3\\text{Ni}$.'
+            explanation: 'This is an acid–base (neutralization) reaction: each $\\text{H}^+$ combines with an $\\text{OH}^-$ to form water, and the sodium and sulfate ions remain as dissolved $\\text{Na}_2\\text{SO}_4$. $\\text{H}_2$ would require a redox reaction, and $\\text{NaSO}_4$ does not balance the ion charges.'
           },
           {
-            question: 'Predict the products of: $\\text{Na}_2\\text{SO}_4 + \\text{BaCl}_2 \\rightarrow$ ?',
+            question: 'Solutions of $\\text{Na}_2\\text{SO}_4$ and $\\text{BaCl}_2$ are mixed. Barium sulfate is insoluble. What are the products?',
             options: [
-              'NaCl + $BaSO_{4}$',
-              '$NaSO_{4}$ + $BaCl$',
-              '$Na_{2}Cl_{2}$ + $BaSO_{4}$',
+              'NaCl + $\\text{BaSO}_4$',
+              '$\\text{NaSO}_4$ + BaCl',
+              '$\\text{Na}_2\\text{Cl}_2$ + $\\text{BaSO}_4$',
               'No reaction; all ions stay dissolved'
             ],
             correctAnswer: 0,
-            explanation: 'Double replacement: swap the cations. $Na^{+}$ pairs with $Cl^{-}$ → NaCl. $Ba^{2+}$ pairs with $SO_{4}^{2-}$ → $BaSO_{4}$ (insoluble precipitate — driving force!). Balanced: $\\text{Na}_2\\text{SO}_4 + \\text{BaCl}_2 \\rightarrow 2\\text{NaCl} + \\text{BaSO}_4\\downarrow$. Writing $NaSO_{4}$ or BaCl ignores the ion charges.'
+            explanation: 'The new pairings are sodium with chloride (soluble, a sodium salt) and barium with sulfate (insoluble, given). Balanced: $\\text{Na}_2\\text{SO}_4 + \\text{BaCl}_2 \\rightarrow 2\\text{NaCl} + \\text{BaSO}_4(s)$. $\\text{NaSO}_4$ and BaCl ignore the ion charges, and $\\text{Na}_2\\text{Cl}_2$ is not reduced to the simplest ratio.'
           }
         ]
       }
+    },
+    {
+      id: 'rt5-formulas-balancing',
+      type: 'text' as const,
+      content: `
+## ⚖️ Writing Formulas and Balancing
+
+Most wrong predictions come from formulas, not from the reaction type. Build every ionic formula from the charges, then balance.
+
+### Worked Example 1 — Acid–Base
+
+> **Problem:** $\\text{Ca(OH)}_2(aq) + \\text{HNO}_3(aq) \\rightarrow$ ?
+
+1. **Type:** acid + hydroxide → acid–base
+2. **Products:** water, plus $\\text{Ca}^{2+}$ with $\\text{NO}_3^-$ → $\\text{Ca(NO}_3)_2$
+3. **Balance:** two $\\text{OH}^-$ need two $\\text{H}^+$
+
+$$\\boxed{\\text{Ca(OH)}_2 + 2\\text{HNO}_3 \\rightarrow \\text{Ca(NO}_3)_2 + 2\\text{H}_2\\text{O}}$$
+
+
+---
+
+### Worked Example 2 — Acid + Carbonate
+
+> **Problem:** $\\text{Na}_2\\text{CO}_3(s) + \\text{HCl}(aq) \\rightarrow$ ?
+
+1. **Type:** carbonate accepts protons → acid–base
+2. **Products:** $\\text{H}_2\\text{O} + \\text{CO}_2$, plus dissolved NaCl
+3. **Balance:** carbonate accepts two protons
+
+$$\\boxed{\\text{Na}_2\\text{CO}_3 + 2\\text{HCl} \\rightarrow 2\\text{NaCl} + \\text{H}_2\\text{O} + \\text{CO}_2}$$
+
+
+---
+
+### Worked Example 3 — Combustion
+
+> **Problem:** $\\text{C}_3\\text{H}_8 + \\text{O}_2 \\rightarrow$ ?
+
+1. **Type:** fuel + $\\text{O}_2$ → redox (combustion)
+2. **Products:** $\\text{CO}_2 + \\text{H}_2\\text{O}$
+3. **Balance:** 3 C → 3 $\\text{CO}_2$; 8 H → 4 $\\text{H}_2\\text{O}$; 10 O → 5 $\\text{O}_2$
+
+$$\\boxed{\\text{C}_3\\text{H}_8 + 5\\text{O}_2 \\rightarrow 3\\text{CO}_2 + 4\\text{H}_2\\text{O}}$$
+      `
     },
     {
       id: 'rt5-predict-drill',
@@ -230,21 +199,21 @@ $$\\text{Pb(NO}_3)_2 + 2\\text{KI} \\rightarrow \\text{PbI}_2\\downarrow + 2\\te
       content: `
 **Predict the Products** 🧮
 
-Write the chemical formula of the main product. Use standard notation (no spaces, no charges).
+Write the chemical formula of the requested product. Use standard notation (no spaces, no charges).
 
-**1)** Synthesis: $\\text{K} + \\text{Cl}_2 \\rightarrow$ ? (K has charge +1, Cl has charge −1)
+**1)** Redox: $\\text{K} + \\text{Cl}_2 \\rightarrow$ ? (K forms a +1 ion, Cl forms a −1 ion)
 
-**2)** Decomposition: $\\text{MgCO}_3 \\xrightarrow{\\Delta}$ ? + $CO_{2}$ — what is the other product?
+**2)** Acid–base: $\\text{Ca(OH)}_2 + 2\\text{HNO}_3 \\rightarrow$ ? + $2\\text{H}_2\\text{O}$ — what is the salt?
 
-**3)** Combustion: $\\text{CH}_4 + 2\\text{O}_2 \\rightarrow$ ? + $2H_{2}O$ — what is the other product?
+**3)** Combustion: $\\text{CH}_4 + 2\\text{O}_2 \\rightarrow$ ? + $2\\text{H}_2\\text{O}$ — what is the other product?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['KCl', 'MgO', 'CO2'],
-        hint1: '$K^{+}$ and $Cl^{-}$ combine 1:1.',
-        hint2: 'Metal carbonates decompose into metal oxide + $CO_{2}$.',
-        hint3: 'Complete combustion of hydrocarbons produces $CO_{2}$ + $H_{2}O$.',
-        explanation: '1) K (charge +1) + Cl (charge −1) → KCl. Balanced: $2\\text{K} + \\text{Cl}_2 \\rightarrow 2\\text{KCl}$. 2) $MgCO_{3}$ → MgO + $CO_{2}$ (metal carbonate decomposition pattern). 3) $CH_{4}$ + $2O_{2}$ → $CO_{2}$ + $2H_{2}O$ (complete combustion produces $CO_{2}$).'
+        correctAnswers: ['KCl', 'Ca(NO3)2', 'CO2'],
+        hint1: '$\\text{K}^+$ and $\\text{Cl}^-$ combine 1:1.',
+        hint2: '$\\text{Ca}^{2+}$ needs two $\\text{NO}_3^-$ ions.',
+        hint3: 'Complete combustion of a hydrocarbon produces $\\text{CO}_2$ and $\\text{H}_2\\text{O}$.',
+        explanation: '1) $2\\text{K} + \\text{Cl}_2 \\rightarrow 2\\text{KCl}$: potassium is oxidized, chlorine reduced. 2) The calcium and nitrate ions form $\\text{Ca(NO}_3)_2$ while $\\text{H}^+$ and $\\text{OH}^-$ form water. 3) $\\text{CH}_4 + 2\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\text{H}_2\\text{O}$.'
       }
     },
     {
@@ -256,27 +225,27 @@ Write the chemical formula of the main product. Use standard notation (no spaces
       exercise: {
         dropdowns: [
           {
-            label: 'When a metal and nonmetal react, you can predict the product by using their',
-            options: ['atomic masses', 'ion charges', 'electron configurations', 'melting points']
+            label: 'When a metal and a nonmetal element react, you predict the product formula from their',
+            options: ['atomic masses', 'ion charges', 'melting points', 'densities']
           },
           {
-            label: 'To predict if a single replacement reaction occurs, you consult the',
-            options: ['periodic table period', 'solubility rules', 'activity series', 'electronegativity chart']
+            label: 'When a metal dissolves in hydrochloric acid, the gas produced is',
+            options: ['$\\text{O}_2$', '$\\text{Cl}_2$', '$\\text{H}_2$', '$\\text{CO}_2$']
           },
           {
-            label: 'Metal hydroxides decompose into metal oxide and',
-            options: ['$H_{2}$', '$H_{2}O$', '$O_{2}$', '$CO_{2}$']
+            label: 'If every new cation–anion pairing is soluble after two solutions are mixed,',
+            options: ['a precipitate still forms', 'no reaction occurs', 'a redox reaction occurs', 'hydrogen gas forms']
           },
           {
-            label: 'In double replacement, if no precipitate, gas, or water forms, then',
-            options: ['the reaction is endothermic', 'no reaction occurs', 'synthesis happens instead', 'the reaction is very fast']
+            label: 'In the reaction of a metal with another metal\'s dissolved ions, the metal ions are',
+            options: ['oxidized', 'reduced', 'precipitated as salts', 'unchanged spectators']
           }
         ],
-        correctAnswers: ['ion charges', 'activity series', '$H_{2}O$', 'no reaction occurs'],
-        hint1: 'The formula of an ionic compound is determined by balancing ion charges.',
-        hint2: 'The activity series tells you which element can displace another.',
-        hint3: 'Hydroxide = $OH^{-}$. When two $OH^{-}$ combine with a metal oxide...',
-        explanation: 'Ion charges determine ionic compound formulas. The activity series predicts single replacement feasibility. Metal hydroxides → metal oxide + $H_{2}O$. Double replacement needs a driving force (precipitate, gas, or water), otherwise NR.'
+        correctAnswers: ['ion charges', '$\\text{H}_2$', 'no reaction occurs', 'reduced'],
+        hint1: 'Ionic formulas are neutral combinations of ions.',
+        hint2: 'The metal is oxidized; what is reduced?',
+        hint3: 'A precipitate needs an insoluble pairing.',
+        explanation: 'Ion charges determine ionic formulas. In metal + acid, $\\text{H}^+$ is reduced to $\\text{H}_2$. With no insoluble pairing, the ions stay dissolved and nothing happens. Dissolved metal ions that plate out as metal gain electrons, so they are reduced.'
       }
     },
     {
@@ -288,26 +257,26 @@ Write the chemical formula of the main product. Use standard notation (no spaces
       exercise: {
         questions: [
           {
-            question: 'What are the products of: $\\text{H}_2\\text{SO}_4 + 2\\text{NaOH} \\rightarrow$ ?',
+            question: 'Solid sodium hydrogen carbonate, $\\text{NaHCO}_3$, is added to hydrochloric acid. What are the products?',
             options: [
-              '$NaSO_{4}$ + $H_{2}O$',
-              '$Na_{2}SO_{4}$ + $2H_{2}O$',
-              '$Na_{2}SO_{4}$ + $H_{2}$',
-              '$NaHSO_{4}$ + NaOH'
+              'NaCl, $\\text{H}_2\\text{O}$, and $\\text{CO}_2$',
+              'NaCl and $\\text{H}_2\\text{CO}_3$ as a precipitate',
+              'NaH, $\\text{Cl}_2$, and $\\text{CO}_2$',
+              '$\\text{Na}_2\\text{CO}_3$ and $\\text{H}_2$'
             ],
-            correctAnswer: 1,
-            explanation: 'This is a neutralization (double replacement): acid + base → salt + water. $Na^{+}$ (×2) pairs with $SO_{4}^{2-}$ → $Na_{2}SO_{4}$. $H^{+}$ pairs with $OH^{-}$ → $H_{2}O$. Balanced: $\\text{H}_2\\text{SO}_4 + 2\\text{NaOH} \\rightarrow \\text{Na}_2\\text{SO}_4 + 2\\text{H}_2\\text{O}$.'
+            correctAnswer: 0,
+            explanation: 'Hydrogen carbonate accepts a proton from the acid (acid–base) to form $\\text{H}_2\\text{CO}_3$, which breaks into water and carbon dioxide gas; sodium and chloride ions remain as dissolved NaCl. $\\text{H}_2\\text{CO}_3$ is not a precipitate, and $\\text{Cl}_2$ or $\\text{H}_2$ would require electron transfer.'
           },
           {
-            question: 'An unknown compound contains only carbon and hydrogen. When burned in excess $O_{2}$, the products will be:',
+            question: 'An unknown compound contains only carbon and hydrogen. When burned in excess $\\text{O}_2$, the products will be:',
             options: [
-              'CO + $H_{2}$',
-              'C + $H_{2}O$',
-              '$CO_{2}$ + $H_{2}O$',
-              '$CO_{2}$ + $H_{2}$'
+              'CO + $\\text{H}_2$',
+              'C + $\\text{H}_2\\text{O}$',
+              '$\\text{CO}_2$ + $\\text{H}_2\\text{O}$',
+              '$\\text{CO}_2$ + $\\text{H}_2$'
             ],
             correctAnswer: 2,
-            explanation: 'A compound containing only C and H is a hydrocarbon. Complete combustion of any hydrocarbon in excess $O_{2}$ always produces $CO_{2}$ + $H_{2}O$.'
+            explanation: 'A compound containing only C and H is a hydrocarbon. Complete combustion of any hydrocarbon in excess $\\text{O}_2$ produces $\\text{CO}_2$ + $\\text{H}_2\\text{O}$; carbon is oxidized to +4 and oxygen is reduced to −2.'
           }
         ]
       }

@@ -277,7 +277,7 @@ export const MCQS: MCQItem[] = [
     question: 'In the reaction $\\text{Zn}(s) + 2\\text{HCl}(aq) \\to \\text{ZnCl}_2(aq) + \\text{H}_2(g)$, the species oxidized is',
     options: ['$\\text{Zn}(s)$', '$\\text{H}^+(aq)$', '$\\text{Cl}^-(aq)$', '$\\text{H}_2(g)$'],
     correctAnswer: 0,
-    explanation: 'Zn goes from oxidation state 0 to +2, losing two electrons, so it is oxidized. $\\text{H}^+$ goes from +1 to 0, gaining electrons, so it is reduced; it is the oxidizing agent, not the species oxidized.',
+    explanation: 'Zn goes from oxidation state 0 to +2, losing two electrons, so it is oxidized. $\\text{H}^+$ goes from +1 to 0, gaining electrons, so it is the species reduced, not the species oxidized.',
   },
   {
     type: 'mcq',
@@ -411,7 +411,7 @@ export const MCQS: MCQItem[] = [
       'is the same for every reaction at standard conditions',
     ],
     correctAnswer: 0,
-    explanation: 'Enthalpy is a state function, so $\\Delta H$ depends only on the initial and final states, and any sequence of steps connecting them gives the same total. If $\\Delta H$ depended on the intermediate steps, adding the steps of a different path could not give the overall value.',
+    explanation: '$\\Delta H$ depends only on the initial reactants and final products, and any sequence of steps connecting them gives the same total. If $\\Delta H$ depended on the intermediate steps, adding the steps of a different path could not give the overall value.',
   },
   {
     type: 'mcq',

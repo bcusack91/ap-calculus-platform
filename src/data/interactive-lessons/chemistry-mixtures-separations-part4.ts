@@ -17,8 +17,8 @@ export const chemMixturesSeparationsPart4Data = {
 | 🔧 How Solutions Absorb Light |
 | Color Wheel |
 | Key Concept: Absorbance |
-| Relationship: $A$ and $T$ |
 | 📏 Beer\'s Law (Beer-Lambert Law) |
+| ⚠️ Sources of Error in Beer\'s Law Experiments |
 
 > 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
@@ -59,23 +59,11 @@ When white light passes through a colored solution:
 
 ### Key Concept: Absorbance
 
-**Absorbance** ($A$) measures how much light a solution absorbs at a particular wavelength:
+**Absorbance** ($A$) is the quantity a spectrophotometer reports: a unitless measure of how much light of one wavelength the sample absorbs.
 
-$$\\boxed{A = -\\log\\left(\\frac{I}{I_0}\\right) = -\\log(T)}$$
-
-where:
-- $I_0$ = intensity of incident light
-- $I$ = intensity of transmitted light
-- $T = I/I_0$ = transmittance (fraction of light passing through)
-
-
----
-
-### Relationship: $A$ and $T$
-
-- If $T = 1.0$ (100% transmitted) → $A = 0$ (no absorption)
-- If $T = 0.10$ (10% transmitted) → $A = 1.0$
-- If $T = 0.01$ (1% transmitted) → $A = 2.0$
+- A sample that absorbs no light at that wavelength has $A = 0$.
+- The more absorbing particles the light passes through, the larger $A$ becomes.
+- The instrument is first "zeroed" with a **blank** (a cuvette of pure solvent) so that only the solute\'s absorbance is measured.
       `
     },
     {
@@ -178,7 +166,7 @@ Always measure at the wavelength of **maximum absorbance** ($\\lambda_{\\text{ma
       content: `
 **Beer\'s Law Calculations** 🧮
 
-**1)** A solution has transmittance $T = 0.25$. What is the absorbance? (to 3 significant figures)
+**1)** A 0.0100 M solution has an absorbance of 0.300 in a 1.00 cm cuvette. What absorbance would a 0.0250 M solution of the same species have under the same conditions? (to 3 significant figures)
 
 **2)** A solution with concentration 0.0200 M has absorbance 0.440 in a 1.00 cm cuvette. What is $\\varepsilon$? (in L/(mol·cm), to the nearest whole number)
 
@@ -187,9 +175,9 @@ Always measure at the wavelength of **maximum absorbance** ($\\lambda_{\\text{ma
       exercise: {
         inputs: [
           {
-            label: 'Absorbance from T = 0.25',
-            correctAnswer: '0.60',
-            explanation: '$A = -\\log(T) = -\\log(0.25) = -(-0.602) = 0.602 \\approx 0.60$.'
+            label: 'Absorbance of the 0.0250 M solution',
+            correctAnswer: '0.750',
+            explanation: 'With the same $\\varepsilon$ and $b$, absorbance is proportional to concentration: $A = 0.300 \\times (0.0250/0.0100) = 0.750$.'
           },
           {
             label: 'Molar absorptivity ε',
@@ -203,6 +191,25 @@ Always measure at the wavelength of **maximum absorbance** ($\\lambda_{\\text{ma
           }
         ]
       }
+    },
+    {
+      id: 'mx4-error-analysis',
+      type: 'text' as const,
+      content: `
+## ⚠️ Sources of Error in Beer\'s Law Experiments
+
+AP questions often describe a lab mistake and ask whether the calculated concentration is too high, too low, or unaffected. Trace the error through $A = \\varepsilon bc$: anything that raises the measured $A$ makes the calculated $c$ too high.
+
+| Lab Error | Effect on Measured $A$ | Calculated Concentration |
+|-----------|------------------------|--------------------------|
+| Fingerprints or scratches on the cuvette | Higher | Too high |
+| Cuvette rinsed with water and left wet before adding sample | Lower (sample diluted) | Too low |
+| Instrument zeroed with a dirty or tinted blank | Lower | Too low |
+| Wavelength set away from $\\lambda_{\\text{max}}$ | Lower and less sensitive | Less precise; too low if the standards were measured at $\\lambda_{\\text{max}}$ |
+| Air bubble in the light path | Higher (light scattered) | Too high |
+
+> 💡 **Tip:** Always state the chain of reasoning: error → change in measured absorbance → change in calculated concentration.
+      `
     },
     {
       id: 'mx4-dropdown',
@@ -221,10 +228,10 @@ Always measure at the wavelength of **maximum absorbance** ($\\lambda_{\\text{ma
           },
           {
             id: 'mx4-dd2',
-            label: 'Transmittance $T = 10^{-A}$. As absorbance increases, transmittance',
-            options: ['increases', 'decreases', 'stays the same'],
-            correctIndex: 1,
-            explanation: 'Transmittance $T = 10^{-A}$. As absorbance increases, transmittance decreases. More light is absorbed, less is transmitted.'
+            label: 'If fingerprints on the cuvette absorb some light, the calculated concentration of the sample is',
+            options: ['too high', 'too low', 'unaffected'],
+            correctIndex: 0,
+            explanation: 'Fingerprints scatter or absorb extra light, so the measured absorbance is higher than it should be. A higher $A$ is read as a higher concentration.'
           },
           {
             id: 'mx4-dd3',
@@ -263,15 +270,15 @@ Always measure at the wavelength of **maximum absorbance** ($\\lambda_{\\text{ma
             explanation: 'Slope $= \\varepsilon b = 15.0$. $c = A/(\\varepsilon b) = 0.750/15.0 = 0.0500$ M. Inverting the division gives 20.0 M, a decimal-place slip gives 0.00500 M, and using A itself as the concentration gives 0.750 M.'
           },
           {
-            question: 'A solution has an absorbance of 1.0. What percentage of the incident light is transmitted?',
+            question: 'A student leaves a few drops of distilled water in the cuvette before adding the sample. How does this affect the calculated concentration of the sample?',
             options: [
-              '37%',
-              '10%',
-              '0%',
-              '90%'
+              'It is too low, because the sample is diluted and absorbs less',
+              'It is too high, because water absorbs visible light strongly',
+              'It is unaffected, because the path length does not change',
+              'It is too high, because the diluted sample absorbs more'
             ],
-            correctAnswer: 1,
-            explanation: '$T = 10^{-A} = 10^{-1.0} = 0.10 = 10\\%$. An absorbance of 1.0 means 90% of the light is absorbed and only 10% passes through. Using $e^{-A}$ instead of $10^{-A}$ gives 37%, and treating T as $1 - A$ gives 0%.'
+            correctAnswer: 0,
+            explanation: 'The leftover water dilutes the sample, so fewer absorbing particles are in the light path and the measured absorbance drops. A lower absorbance gives a calculated concentration that is too low. Water does not absorb visible light significantly, and the path length staying the same does not cancel the dilution.'
           }
         ]
       }

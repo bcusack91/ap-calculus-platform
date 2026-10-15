@@ -255,7 +255,7 @@ For each buffer, identify the missing component:
               'Stay exactly the same as before'
             ],
             correctAnswer: 2,
-            explanation: 'The $CH_3COO^-$ reacts with $H^+$: 0.10 mol becomes 0.099 mol, while $CH_3COOH$ goes from 0.10 to 0.101 mol. The ratio changes very little, so the pH drops slightly (by about 0.009 units). A 4-unit drop is what the same $HCl$ would do in pure water; the pH cannot rise when an acid is added, and it cannot stay exactly the same because the ratio does change a little.'
+            explanation: 'The $CH_3COO^-$ reacts with $H^+$: 0.10 mol becomes 0.099 mol, while $CH_3COOH$ goes from 0.10 to 0.101 mol. The ratio changes very little, so the pH drops only slightly. A 4-unit drop is what the same $HCl$ would do in pure water; the pH cannot rise when an acid is added, and it cannot stay exactly the same because the ratio does change a little.'
           }
         ]
       }

@@ -4,221 +4,243 @@ export const chemActivationEnergyArrheniusPart5Data = {
     {
       id: 'ae5-intro',
       type: 'text' as const,
-      content: `# 🔄 Two-Point Arrhenius Equation
+      content: `# 🏔️ Multistep Energy Profiles
 
-**Part 5 of 7 — Finding Ea from Two Temperatures**
+**Part 5 of 7 — Energy Profiles for Reactions with More Than One Step**
 
 ---
 
-### When You Have Just Two Data Points
+### Topics in This Part
 
-$$\\ln\\frac{k_2}{k_1} = \\frac{E_a}{R}\\left(\\frac{1}{T_1} - \\frac{1}{T_2}\\right)$$
+| Section |
+|---------|
+| 📌 Building a Multistep Energy Profile |
+| Peaks, Valleys, and the Overall ΔH |
+| 📌 Finding the Slowest Step |
+| 🧪 Worked Example: A Two-Step Profile |
 
-| Given | Can Solve For |
-|-------|--------------|
-| $k_1$, $k_2$, $T_1$, $T_2$ | $E_a$ |
-| $k_1$, $E_a$, $T_1$, $T_2$ | $k_2$ |
-| $k_1$, $k_2$, $E_a$, $T_1$ | $T_2$ |
-
-> 🔑 **Why this matters:** This is the most commonly tested Arrhenius equation form on the AP exam — many free-response problems give exactly two (T, k) data points.
+> 🔑 **Why this matters:** Many reactions occur in several elementary steps. Knowing the energetics of each step lets you build and read an energy profile for the whole reaction (CED 5.10.A.1).
 
 ---
 
 ### What You'll Master in Part 5
-- Using the two-point Arrhenius equation to find $E_a$, $k$, or $T$
-- Correctly converting temperatures to Kelvin before substituting
-- Recognizing which form to use based on given data`
+- Counting steps, transition states, and intermediates on a profile
+- Finding each step's activation energy and the overall ΔH
+- Identifying the slowest (rate-limiting) step from the profile`
     },
     {
-      id: 'ae5-derivation',
+      id: 'ae5-building-profile',
       type: 'text' as const,
       content: `
-## 📌 Deriving the Two-Point Form
+## 📌 Building a Multistep Energy Profile
 
-Write the Arrhenius equation at two temperatures:
+Each elementary step has its own transition state, so a mechanism with $n$ steps produces a profile with $n$ peaks.
 
-$$\\ln k_1 = -\\frac{E_a}{R} \\cdot \\frac{1}{T_1} + \\ln A$$
+### Peaks, Valleys, and the Overall ΔH
 
-$$\\ln k_2 = -\\frac{E_a}{R} \\cdot \\frac{1}{T_2} + \\ln A$$
+| Feature on the profile | Meaning |
+|------------------------|---------|
+| Each **peak** | The transition state of one elementary step |
+| Each **valley** between peaks | A reaction **intermediate** (formed in one step, used up in the next) |
+| Rise from a valley to the next peak | The activation energy of that step |
+| Starting level → final level | The overall $\\Delta H$ of the reaction |
 
-Subtract equation 1 from equation 2:
-
-$$\\ln k_2 - \\ln k_1 = -\\frac{E_a}{R}\\left(\\frac{1}{T_2} - \\frac{1}{T_1}\\right)$$
-
-$$\\boxed{\\ln\\frac{k_2}{k_1} = \\frac{E_a}{R}\\left(\\frac{1}{T_1} - \\frac{1}{T_2}\\right)}$$
+> 🔑 **Key Concept:** The number of peaks equals the number of elementary steps. The number of valleys **between** peaks equals the number of intermediates.
 
 
 ---
 
-### Using This Equation
+### Steps Can Differ in Sign
 
-**To find $E_a$:**
-$$E_a = \\frac{R \\cdot \\ln(k_2/k_1)}{1/T_1 - 1/T_2}$$
-
-**To find $k$ at a new temperature:**
-If you know $E_a$, $k_1$, and $T_1$, find $k_2$ at $T_2$:
-$$\\ln k_2 = \\ln k_1 + \\frac{E_a}{R}\\left(\\frac{1}{T_1} - \\frac{1}{T_2}\\right)$$
+Each step has its own energy change. A two-step reaction can have an endothermic first step (its valley sits above the reactants) and an exothermic second step, while the overall reaction is exothermic. Only the overall start and finish levels give the overall $\\Delta H$.
       `
-    },
-    {
-      id: 'ae5-worked-example',
-      type: 'text' as const,
-      content: `
-## 🧪 Worked Example
-
-A reaction has $k_1 = 0.0120$ $s^{-1}$ at $T_1 = 400$ K and $k_2 = 0.150$ $s^{-1}$ at $T_2 = 500$ K.
-
-**Find $E_a$:**
-
-$$\\ln\\frac{k_2}{k_1} = \\ln\\frac{0.150}{0.0120} = \\ln(12.5) = 2.526$$
-
-$$\\frac{1}{T_1} - \\frac{1}{T_2} = \\frac{1}{400} - \\frac{1}{500} = 0.002500 - 0.002000 = 0.000500 \\; \\text{K}^{-1}$$
-
-$$E_a = \\frac{R \\cdot \\ln(k_2/k_1)}{1/T_1 - 1/T_2} = \\frac{8.314 \\times 2.526}{0.000500}$$
-
-$$E_a = \\frac{21.0}{0.000500} = 42{,}000 \\; \\text{J/mol} = 42.0 \\; \\text{kJ/mol}$$
-      `
-    },
-    {
-      id: 'ae5-practice-1',
-      type: 'input-boxes' as const,
-      content: `
-**Practice: Finding Ea** 🧮
-
-A reaction has $k = 2.0 \\times 10^{-3}$ $s^{-1}$ at 300 K and $k = 6.0 \\times 10^{-2}$ $s^{-1}$ at 400 K.
-
-**1)** Calculate $\\ln(k_2/k_1)$. (to 3 significant figures)
-
-**2)** Calculate $1/T_1 - 1/T_2$. (in $K^{-1}$, give as decimal: e.g., 0.000833)
-
-**3)** Calculate $E_a$ in kJ/mol. (to 3 significant figures)
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['3.40', '0.000833', '33.9'],
-        hint1: 'ln(6.0e-2 / 2.0e-3) = ln(30) = 3.401 ≈ 3.40.',
-        hint2: '1/300 − 1/400 = 0.003333 − 0.002500 = 0.000833 $K^{-1}$.',
-        hint3: 'Ea = (8.314 × 3.40)/0.000833 = 28.27/0.000833 = 33,935 J/mol = 33.9 kJ/mol.',
-        explanation: '1) ln(30) = 3.40. 2) 1/300 − 1/400 = $8.33 \\times 10^{-4}$. 3) Ea = 8.314 × 3.40 / $8.33 \\times 10^{-4}$ = 33,900 J/mol = 33.9 kJ/mol.'
-      }
-    },
-    {
-      id: 'ae5-practice-2',
-      type: 'input-boxes' as const,
-      content: `
-**Practice: Predicting k at a New Temperature** 🧮
-
-A reaction has $E_a = 50.0$ kJ/mol and $k = 0.010$ $s^{-1}$ at 350 K.
-
-**1)** Calculate $k$ at 400 K. First find $\\ln(k_2/k_1)$. (to 3 significant figures)
-
-**2)** Now find $k_2$. (in $s^{-1}$, to 3 significant figures)
-
-**3)** By what factor did k increase from 350 K to 400 K? (to 3 significant figures)
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['2.15', '0.0857', '8.57'],
-        hint1: '$\\ln (k_{2}/k_{1})$ = $(Ea/R)(1/T_{1} - 1/T_{2})$ = (50,000/8.314)(1/350 − 1/400) = 6,014 × (2.857e-3 − 2.500e-3) = 6,014 × 3.571e-4 = 2.15.',
-        hint2: '$k_{2}/k_{1}$ = $e^{2.15}$ = 8.57. $k_{2}$ = 0.010 × 8.57 = 0.0857 $s^{-1}$.',
-        hint3: 'Factor = $k_{2}/k_{1}$ = 0.0857/0.010 = 8.57.',
-        explanation: '1) $\\ln (k_{2}/k_{1})$ = (50,000/8.314)(1/350 − 1/400) = 6,014 × $3.571 \\times 10^{-4}$ = 2.15. 2) $k_{2}$ = 0.010 × $e^{2.15}$ = 0.010 × 8.57 = 0.0857 $s^{-1}$. 3) Factor = 8.57.'
-      }
     },
     {
       id: 'ae5-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Two-Point Arrhenius Concepts** 🎯
+**Reading Multistep Profiles** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In the two-point Arrhenius equation, which variable cancels out?',
+            question: 'An energy profile has three peaks. How many elementary steps and intermediates does the mechanism have?',
             options: [
-              'Ea, the energy barrier',
-              'R, the gas constant',
-              'A, the frequency factor',
-              'k, the rate constant'
-            ],
-            correctAnswer: 2,
-            explanation: 'When we subtract ln $k_{1}$ from ln $k_{2}$, the ln A terms cancel: ln A − ln A = 0. This is why we can find Ea without knowing A. Ea and R remain in the factor $E_{a}/R$, and the two k values remain as the ratio $k_{2}/k_{1}$.'
-          },
-          {
-            question: 'If k doubles when T increases from 300 K to 310 K, what is Ea approximately?',
-            options: [
-              '23 kJ/mol',
-              '54 kJ/mol',
-              '6.4 kJ/mol',
-              '0.58 kJ/mol'
+              'Three steps and three intermediates',
+              'Three steps and two intermediates',
+              'Two steps and three intermediates',
+              'Three steps and one intermediate'
             ],
             correctAnswer: 1,
-            explanation: 'ln(2) = 0.693. 1/300 − 1/310 = $1.075 \\times 10^{-4}$. Ea = 8.314 × $0.693/(1.075 \\times 10^{-4})$ = $5.763/(1.075 \\times 10^{-4})$ = 53,600 J/mol ≈ 54 kJ/mol. Using log instead of ln gives 23 kJ/mol, leaving out R gives 6.4 kJ/mol, and using °C (27 and 37) instead of kelvins gives 0.58 kJ/mol.'
+            explanation: 'Each peak is one transition state, so there are three elementary steps. The two valleys between the peaks are the intermediates. The reactants and products at the ends are not intermediates.'
+          },
+          {
+            question: 'In a two-step energy profile, the valley between the two peaks sits higher than the reactants. What does this show?',
+            options: [
+              'The overall reaction is endothermic',
+              'The first step is endothermic',
+              'The second step is endothermic',
+              'The intermediate is a catalyst'
+            ],
+            correctAnswer: 1,
+            explanation: 'The first step goes from the reactants to the intermediate in the valley. If that valley is higher, the first step absorbs energy (endothermic). The overall ΔH depends on where the products end up, and an intermediate is formed and then consumed, unlike a catalyst.'
+          },
+          {
+            question: 'What does the vertical distance between the reactants and the products on a multistep profile represent?',
+            options: [
+              'The activation energy of the slowest step',
+              'The sum of all the activation energies',
+              'The overall ΔH of the process',
+              'The energy of the intermediate'
+            ],
+            correctAnswer: 2,
+            explanation: 'The overall ΔH depends only on where the reaction starts and ends. Activation energies are measured from a starting level up to a peak, and the intermediate sits in a valley between peaks.'
           }
         ]
       }
     },
     {
+      id: 'ae5-slowest-step',
+      type: 'text' as const,
+      content: `
+## 📌 Finding the Slowest Step
+
+Each step's rate depends on its own activation energy: the **taller the barrier for a step**, the slower that step. The slowest step limits the rate of the whole reaction.
+
+| What to compare | How |
+|-----------------|-----|
+| Barrier of step 1 | Height of peak 1 above the reactants |
+| Barrier of step 2 | Height of peak 2 above the intermediate valley |
+| Slowest step | The step with the larger barrier |
+
+> ⚠️ **Warning:** Measure each step's barrier from the level it **starts** at, not from the bottom of the graph. A tall second peak can still be a small barrier if the intermediate valley is also high.
+
+
+---
+
+## 🧪 Worked Example: A Two-Step Profile
+
+> **Problem:** A two-step profile has these energies: reactants 40 kJ, transition state 1 at 120 kJ, intermediate at 70 kJ, transition state 2 at 95 kJ, products 10 kJ. Find each step's activation energy, the slowest step, and the overall ΔH.
+
+> **Solution:**
+
+| Quantity | Calculation | Value |
+|----------|-------------|-------|
+| $E_a$, step 1 | 120 − 40 | 80 kJ |
+| $E_a$, step 2 | 95 − 70 | 25 kJ |
+| Slowest step | larger barrier | **Step 1** |
+| $\\Delta H$, step 1 | 70 − 40 | +30 kJ (endothermic) |
+| $\\Delta H$, step 2 | 10 − 70 | −60 kJ (exothermic) |
+| Overall $\\Delta H$ | 10 − 40 | **−30 kJ** |
+
+Check: the step enthalpies add to the overall value, $+30 + (-60) = -30$ kJ.
+      `
+    },
+    {
+      id: 'ae5-profile-drill',
+      type: 'input-boxes' as const,
+      content: `
+**Two-Step Profile Practice** 🧮
+
+A two-step energy profile shows: reactants at 20 kJ, first transition state at 60 kJ, intermediate at 45 kJ, second transition state at 130 kJ, products at 0 kJ.
+
+**1)** Activation energy of step 1 (in kJ)
+
+**2)** Activation energy of step 2 (in kJ)
+
+**3)** Which step is slower? (type **1** or **2**)
+      `,
+      exercise: {
+        questions: [{ question: '(1)', answer: '40', acceptableAnswers: ['40'] }, { question: '(2)', answer: '85', acceptableAnswers: ['85'] }, { question: '(3)', answer: '2', acceptableAnswers: ['2', 'step 2'] }],
+        hint1: 'Peak 1 minus the reactant level.',
+        hint2: 'Peak 2 minus the intermediate level, not minus the reactants.',
+        hint3: 'The step with the larger barrier is slower.',
+        explanation: '1) 60 − 20 = 40 kJ. 2) 130 − 45 = 85 kJ. 3) Step 2 has the larger barrier, so it is the slower, rate-limiting step.'
+      }
+    },
+    {
+      id: 'ae5-catalyst-profile',
+      type: 'text' as const,
+      content: `
+## ⚙️ Catalysts Change the Profile's Shape
+
+A catalyst does not lower the original peak; it replaces the original pathway with a **new mechanism**. On a profile this often means:
+
+- More peaks than the uncatalyzed reaction (more steps), but
+- Every peak along the new path is **lower** than the uncatalyzed peak, and
+- A new valley appears for the **intermediate in which the catalyst is bound to a reactant** (CED 5.11.A.3)
+
+| Feature | Uncatalyzed | Catalyzed |
+|---------|-------------|-----------|
+| Number of steps | Often one | Often two or more |
+| Highest barrier | Larger | Smaller |
+| Starting and ending levels | Same | Same |
+| Overall $\\Delta H$ | Same | Same |
+
+> 💡 **Tip:** If an AP question shows two profiles with the same start and end but different humps, the one with the lower highest barrier is the catalyzed pathway.
+      `
+    },
+    {
       id: 'ae5-dropdown-review',
       type: 'dropdown-select' as const,
       content: `
-**Two-Point Arrhenius Review** 🔍
+**Multistep Profile Review** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The two-point Arrhenius equation relates k values at two different',
-            options: ['concentrations', 'pressures', 'temperatures', 'volumes']
+            label: 'Each valley between two peaks on an energy profile represents',
+            options: ['a transition state', 'an intermediate', 'a catalyst', 'the products']
           },
           {
-            label: 'A larger Ea means k is more sensitive to changes in',
-            options: ['concentration', 'pressure', 'temperature', 'surface area']
+            label: 'The activation energy of the second step is measured from',
+            options: ['the reactants', 'the intermediate', 'the products', 'zero energy']
           },
           {
-            label: 'If $T_{1}$ < $T_{2}$ and Ea > 0, then $k_{2}$ is',
-            options: ['less than $k_{1}$', 'equal to $k_{1}$', 'greater than $k_{1}$', 'unrelated to $k_{1}$']
+            label: 'Compared with the uncatalyzed profile, a catalyzed profile has',
+            options: ['a different overall ΔH', 'a lower highest barrier', 'higher-energy products', 'fewer intermediates always']
           },
           {
-            label: 'The two-point equation can be derived by subtracting two',
-            options: ['rate laws at two concentrations', 'equilibrium expressions', 'Arrhenius equations in ln form', 'integrated rate laws']
+            label: 'The slowest step of a mechanism is the step with',
+            options: ['the most negative ΔH', 'the largest activation energy', 'the most reactants', 'the highest-energy products']
           }
         ],
-        correctAnswers: ['temperatures', 'temperature', 'greater than $k_{1}$', 'Arrhenius equations in ln form'],
-        hint1: 'The two-point form involves $k_{1}$, $T_{1}$, $k_{2}$, $T_{2}$.',
-        hint2: 'Larger Ea → steeper Arrhenius plot → more temperature sensitivity.',
-        hint3: 'Higher temperature always gives larger k (assuming Ea > 0).',
-        explanation: 'Two-point relates k at different T. Larger Ea = more T-sensitive. Higher T → larger k. Derived by subtracting two linearized Arrhenius equations.'
+        correctAnswers: ['an intermediate', 'the intermediate', 'a lower highest barrier', 'the largest activation energy'],
+        hint1: 'Valleys are species that exist briefly between steps.',
+        hint2: 'A step starts from the species it consumes.',
+        hint3: 'A catalyst lowers the barrier without changing the start or end.',
+        explanation: 'Valleys are intermediates. Step 2 starts from the intermediate, so its barrier is measured from there. A catalyzed pathway has a lower highest barrier and the same overall ΔH. The step with the largest activation energy is the slowest.'
       }
     },
     {
       id: 'ae5-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Exit Quiz — Two-Point Arrhenius** ✅
+**Exit Quiz — Multistep Energy Profiles** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A reaction has k = $1.0 \\times 10^{-5}$ $s^{-1}$ at 500 K and Ea = 80 kJ/mol. At what temperature will k = $1.0 \\times 10^{-3}$ $s^{-1}$?',
+            question: 'A two-step profile has reactants at 50 kJ, transition state 1 at 90 kJ, an intermediate at 30 kJ, transition state 2 at 110 kJ, and products at 0 kJ. Which step is slower?',
             options: [
-              '558 K',
-              '657 K',
-              '403 K',
-              '2,090 K'
+              'Step 1, because its peak comes first',
+              'Step 2, because its barrier is larger than step 1\'s',
+              'Step 1, because it is exothermic overall',
+              'Neither; both steps have a 40 kJ barrier'
             ],
             correctAnswer: 1,
-            explanation: '$\\ln (k_{2}/k_{1})$ = ln(100) = 4.605 and $E_{a}/R$ = 80,000/8.314 = 9,622 K. So 4.605 = 9,622$(1/500 - 1/T_{2})$, giving $1/500 - 1/T_{2}$ = $4.786 \\times 10^{-4}$ and $1/T_{2}$ = 0.002000 − 0.000479 = 0.001521, so $T_{2}$ = 657 K. Using log instead of ln gives 558 K, adding instead of subtracting (a sign slip, the same as inverting the k ratio) gives 403 K, and taking 1/(4.786 × 10⁻⁴) without subtracting from 1/500 gives 2,090 K.'
+            explanation: 'Step 1 barrier = 90 − 50 = 40 kJ; step 2 barrier = 110 − 30 = 80 kJ. The larger barrier belongs to step 2, so it is slower. Order of the peaks does not decide speed, and the step-2 barrier must be measured from the intermediate.'
           },
           {
-            question: 'If k triples when temperature increases from 300 K to 320 K, what is Ea?',
+            question: 'Two energy profiles for the same reaction start and end at the same levels. Profile A has one peak at 150 kJ above the reactants; profile B has two peaks at 70 kJ and 60 kJ above the reactants. Which statement is correct?',
             options: [
-              '19 kJ/mol',
-              '44 kJ/mol',
-              '5.3 kJ/mol',
-              '−44 kJ/mol'
+              'Profile B is the catalyzed reaction and has the same ΔH as A',
+              'Profile A is the catalyzed reaction because it has fewer steps',
+              'Profile B has a more negative ΔH because it has more steps',
+              'Profile A is faster because a single step has no intermediate'
             ],
-            correctAnswer: 1,
-            explanation: 'ln(3) = 1.099. 1/300 − 1/320 = 3.333e-3 − 3.125e-3 = 2.083e-4. Ea = 8.314 × 1.099/2.083e-4 = 9.14/2.083e-4 = 43,900 J/mol ≈ 44 kJ/mol. Using log instead of ln gives 19 kJ/mol, leaving out R gives 5.3 kJ/mol, and inverting the k ratio gives −44 kJ/mol, which is impossible because Ea is always positive.'
+            correctAnswer: 0,
+            explanation: 'Profile B reaches a much lower maximum, the signature of a catalyzed pathway with a new mechanism. Because both profiles start and end at the same levels, ΔH is the same. More steps do not change ΔH, and fewer steps do not make a reaction faster when the single barrier is higher.'
           }
         ]
       }

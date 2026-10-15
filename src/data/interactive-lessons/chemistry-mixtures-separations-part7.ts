@@ -37,7 +37,7 @@ The AP Chemistry exam frequently tests your ability to **design an experimental 
 ### Identification Workflow
 
 1. **Is it a pure substance or mixture?** → Check melting/boiling point range
-2. **If mixture, what type?** → Tyndall effect test (colloid vs solution)
+2. **If mixture, what type?** → Is the composition uniform (solution) or does it vary by location (heterogeneous)?
 3. **What components are present?** → Chromatography, spectroscopy
 4. **How much of each component?** → Beer\'s Law, titration, gravimetric analysis
 
@@ -124,15 +124,15 @@ AP free-response questions often ask how errors affect results:
             explanation: '$A = \\varepsilon bc$. With $b = 2.00$ cm, the measured absorbance is doubled for the same concentration. Using a calibration curve made with $b = 1.00$ cm cuvettes, this doubled absorbance corresponds to a concentration that is 2× the actual value. The reported concentration is too high by a factor of 2.'
           },
           {
-            question: 'A GC chromatogram of a sample shows 4 peaks with areas in the ratio 1:2:3:4. The percent composition of the component with the largest peak is approximately:',
+            question: 'A mixture of hexane (bp 69°C) and heptane (bp 98°C) is distilled. The first liquid collected is richer in which component, and why?',
             options: [
-              '10%',
-              '25%',
-              '40%',
-              '67%'
+              'Hexane, because weaker dispersion forces give it a higher vapor pressure',
+              'Heptane, because stronger dispersion forces give it a higher vapor pressure',
+              'Heptane, because it has the larger molar mass of the two',
+              'Neither, because hexane and heptane are both nonpolar liquids'
             ],
-            correctAnswer: 2,
-            explanation: 'Total area ratio = 1+2+3+4 = 10 parts. Largest peak = 4 parts. Percent = $(4/10) \\times 100 = 40\\%$. Comparing 4 to only the other peaks (4/6) gives 67%, and assuming equal shares gives 25%.'
+            correctAnswer: 0,
+            explanation: 'Hexane has fewer electrons and a smaller surface area than heptane, so its London dispersion forces are weaker. Weaker attractions mean a higher vapor pressure at any temperature, so the vapor, and therefore the first distillate, is richer in hexane. Distillation works for any liquids whose IMFs, and so vapor pressures, differ.'
           }
         ]
       }

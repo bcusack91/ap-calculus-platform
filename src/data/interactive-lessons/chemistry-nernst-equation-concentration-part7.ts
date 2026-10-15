@@ -4,190 +4,158 @@ export const chemNernstEquationConcentrationPart7Data = {
     {
       id: 'ne7-intro',
       type: 'text' as const,
-      content: `# 🎯 Synthesis & AP Review — Nernst Equation
+      content: `# 📉 Cell Potential Under Nonstandard Conditions
 
 **Part 7 of 7 — Complete Mastery**
 
 ---
 
-### Bringing It All Together
+### Topics in This Part
 
-This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+| Section |
+|---------|
+| 📋 Master Summary |
+| 🎯 Comprehensive Review |
+| 🏁 Final Check |
 
-> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
-
----
-
-### What You'll Master in Part 7
-- Solving AP-style questions that integrate multiple concepts from this unit
-- Writing clear, concise explanations using proper chemistry terminology
-- Identifying and avoiding common AP exam traps and mistakes`
+> 🔑 **Key Concept:** This part pulls together standard conditions, the qualitative Nernst equation, concentration cells, the $E°$–$\\Delta G°$–$K$ links, and a cell's behavior over time.`
     },
     {
       id: 'ne7-master-summary',
       type: 'text' as const,
       content: `
-## 📋 Master Equation Summary
+## 📋 Master Summary
 
-### The Core Equations
+### Equations you use
 
-| Equation | When to Use |
-|----------|-------------|
-| $E = E° - \\frac{0.0592}{n}\\log Q$ | Cell potential at non-standard conditions (25°C) |
-| $E = E° - \\frac{RT}{nF}\\ln Q$ | Cell potential at any temperature |
-| $E° = \\frac{0.0592}{n}\\log K$ | Relate standard potential to equilibrium constant |
-| $\\Delta G° = -nFE°$ | Relate free energy to cell potential |
+| Equation | How the AP exam uses it |
+|----------|-------------------------|
+| $E = E° - \\frac{RT}{nF}\\ln Q$ | **Qualitatively**: the sign of $\\ln Q$ tells you whether $E$ is above or below $E°$ (9.10) |
+| $\\Delta G° = -nFE°$ | Calculate $\\Delta G°$ from $E°$; link the signs (9.9) |
+| $\\Delta G° = -RT\\ln K$ | Link $\\Delta G°$ to $K$ (9.5) |
 
+### Decision table
 
----
+| Situation | $Q$ | $E$ |
+|-----------|-----|-----|
+| Standard conditions | $= 1$ | $= E°$ |
+| More reactant or less product than standard | $< 1$ | $> E°$ |
+| More product or less reactant than standard | $> 1$ | $< E°$ |
+| Equilibrium | $= K$ | $= 0$ |
 
-### The Thermodynamic Triangle (at 25°C)
+### Concentration cells
 
-$$\\Delta G° \\xleftrightarrow{-nF} E° \\xleftrightarrow{0.0592/n} \\log K \\xleftrightarrow{-RT\\ln} \\Delta G°$$
+- $E° = 0$; $E > 0$ while the concentrations differ.
+- Dilute side = **anode**; concentrated side = **cathode**.
+- Electrons flow from the dilute side to the concentrated side.
+- The cell stops when the concentrations are equal.
 
+### Cell over time
 
----
-
-### Battery Classification
-
-| Type | Rechargeable? | Example | Key Feature |
-|------|:------------:|---------|-------------|
-| Primary | No | Alkaline | One-time use |
-| Secondary | Yes | Li-ion, lead-acid | Reversible reaction |
-| Fuel cell | Continuous | $H_{2}/O_{2}$ | Reactants fed in |
-| Concentration | Until equal | Same-metal | E° = 0 |
-
-> 🔑 **Key Concept:** Know any one of $\\Delta G°$, $E°$, or $K$ — and you can calculate the other two. This "thermodynamic triangle" unifies equilibrium, electrochemistry, and thermodynamics.
+- Reactant ions are consumed, product ions build up, so $Q$ rises toward $K$.
+- $E$ falls slowly at first, then steeply as the limiting ion runs out, reaching 0 at equilibrium.
+- Recharging requires an external source (the reverse reaction has $\\Delta G° > 0$).
       `
     },
     {
       id: 'ne7-comprehensive-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Comprehensive AP Review** 🎯
+**Comprehensive Review** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'The Nernst equation shows that cell voltage depends on:',
+            question: 'For Sn(s) + 2Ag⁺(aq) → Sn²⁺(aq) + 2Ag(s), E° = +0.94 V. A student sets up the cell with [Sn²⁺] = 1.0 M and [Ag⁺] = 0.050 M. The measured E is',
             options: [
-              'Temperature and E° only',
-              'Concentration (Q) only',
-              'Temperature, concentration (Q), and E°',
-              'E° and n only'
+              'greater than 0.94 V, because Q < 1',
+              'less than 0.94 V, because Q > 1',
+              'equal to 0.94 V, because the electrodes are standard',
+              'zero, because [Ag⁺] is below 1 M'
             ],
-            correctAnswer: 2,
-            explanation: '$E = E° - (RT/nF)\\ln Q$ depends on all three: the standard potential ($E°$), the temperature ($T$), and the reaction quotient ($Q$, which reflects concentrations). Leaving out $Q$ or $T$ misses one of the variables in the equation.'
+            correctAnswer: 1,
+            explanation: '$Q = [\\text{Sn}^{2+}]/[\\text{Ag}^{+}]^2 = 1.0/(0.050)^2 = 400$, which is greater than 1, so $E$ is below $E°$. A low reactant concentration moves the cell closer to equilibrium but does not put it at equilibrium.'
           },
           {
-            question: 'A galvanic cell has E° = 0.50 V and n = 2. What is ΔG°?',
+            question: 'Which change makes the measured potential of a Cu²⁺/Cu concentration cell larger?',
             options: [
-              '−96.5 kJ',
-              '+96.5 kJ',
-              '−48.2 kJ',
-              '+48.2 kJ'
+              'Adding water to the more concentrated solution',
+              'Diluting the less concentrated solution',
+              'Making both solutions 1.0 M',
+              'Using larger copper electrodes'
+            ],
+            correctAnswer: 1,
+            explanation: 'Diluting the dilute side widens the concentration difference, moving the cell farther from equilibrium and raising $E$. Diluting the concentrated side narrows the difference, equal concentrations give zero, and electrode size does not affect $Q$.'
+          },
+          {
+            question: 'A cell reaction has E° = +0.15 V and n = 2. Which statement is correct at 298 K?',
+            options: [
+              'ΔG° ≈ −29 kJ/mol and K > 1',
+              'ΔG° ≈ +29 kJ/mol and K < 1',
+              'ΔG° ≈ −14 kJ/mol and K > 1',
+              'ΔG° ≈ −29 kJ/mol and K < 1'
             ],
             correctAnswer: 0,
-            explanation: '$\\Delta G° = -nFE° = -(2)(96{,}485)(0.50) = -96{,}485$ J $= -96.5$ kJ.'
-          },
-          {
-            question: 'In a hydrogen fuel cell, the only product at the cathode is:',
-            options: [
-              '$CO_{2}$',
-              '$H_{2}$',
-              '$H_{2}O$',
-              '$O_{2}$'
-            ],
-            correctAnswer: 2,
-            explanation: 'Cathode: $\\text{O}_2 + 4\\text{H}^+ + 4e^- \\rightarrow 2\\text{H}_2\\text{O}$. The product is water — making hydrogen fuel cells environmentally clean.'
+            explanation: '$\\Delta G° = -nFE° = -(2)(96{,}485)(0.15) \\approx -28{,}900$ J ≈ $-29$ kJ/mol. A negative $\\Delta G°$ means $\\ln K > 0$, so $K > 1$. Using $n = 1$ gives $-14$ kJ, and a negative $\\Delta G°$ can never pair with $K < 1$.'
           }
         ]
       }
     },
     {
-      id: 'ne7-integration-drill',
-      type: 'input-boxes' as const,
+      id: 'ne7-frq-walkthrough',
+      type: 'text' as const,
       content: `
-**Integration Problems** 🧮
+## 🎯 Comprehensive Review — FRQ Walkthrough
 
-**1)** E° = 0.80 V, n = 2, T = 298 K. What is $\\Delta G°$ in kJ? (to 1 decimal)
+> **Prompt:** A Zn/Cu²⁺ cell ($E° = +1.10$ V) is assembled with 1.0 M solutions and run for several hours. (a) Identify the half-cell whose electrode gains mass. (b) Predict how $E$ after several hours compares with 1.10 V and justify. (c) The cell is then connected to an external source that restores the original concentrations. Is this process thermodynamically favored? Justify.
 
-**2)** E° = 0.40 V, n = 2. What is $\\log K$? (to 1 decimal)
+**(a)** The copper electrode (cathode) gains mass, because $\\text{Cu}^{2+}$ is reduced to Cu there.
 
-**3)** A dead battery has E = ___ V and Q = ___ (type "0" and "K" separated by a comma)
+**(b)** Less than 1.10 V. $\\text{Cu}^{2+}$ has been consumed and $\\text{Zn}^{2+}$ produced, so $Q = [\\text{Zn}^{2+}]/[\\text{Cu}^{2+}] > 1$; the cell is closer to equilibrium, so $E < E°$.
 
-*Round all answers to 3 significant figures.*
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['-154.4', '13.5', '0, K'],
-        hint1: '$\\Delta G° = -(2)(96485)(0.80)$. Convert to kJ.',
-        hint2: '$\\log K = (2)(0.40)/0.0592$',
-        hint3: 'At equilibrium: E = 0 and Q = K.',
-        explanation: '1) $\\Delta G° = -154{,}376$ J $= -154.4$ kJ. 2) $\\log K = 0.80/0.0592 = 13.5$. 3) Dead battery = equilibrium: E = 0 V, Q = K.'
-      }
-    },
-    {
-      id: 'ne7-dropdown-review',
-      type: 'dropdown-select' as const,
-      content: `
-**Final Concept Review** 🔽
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'As a battery discharges, E',
-            options: ['increases', 'decreases toward 0', 'stays constant', 'becomes negative']
-          },
-          {
-            label: 'A concentration cell produces voltage because of',
-            options: ['different metals', 'different concentrations', 'different temperatures', 'different E° values']
-          },
-          {
-            label: '0.0592 V in the simplified Nernst equation applies only at',
-            options: ['0°C', '25°C', '100°C', 'any temperature']
-          },
-          {
-            label: 'The largest K comes from the cell with the',
-            options: ['smallest E° and largest n', 'largest E° and largest n', 'E° = 0 and largest n', 'largest E° and smallest n']
-          }
-        ],
-        correctAnswers: ['decreases toward 0', 'different concentrations', '25°C', 'largest E° and largest n'],
-        hint1: 'Q increases → E decreases → E = 0 at equilibrium.',
-        hint2: 'Both electrodes are the same; E° = 0.',
-        hint3: '$0.0592 = RT \\times 2.303/F$ at T = 298 K.',
-        explanation: 'Battery discharges: E → 0 as Q → K. Concentration cells: driven by [C] difference. 0.0592 V at 25°C only. K = 10^{nE°/0.0592}: larger nE° → larger K.'
-      }
+**(c)** Not favored. Restoring the concentrations runs the reaction in reverse, which has $E° = -1.10$ V and $\\Delta G° > 0$, so it occurs only because the external source supplies energy.
+      `
     },
     {
       id: 'ne7-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Final Exit Quiz — Nernst Equation Mastery** ✅
+**Final Check** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student measures a cell potential of 0.00 V for a Zn-Cu cell (E° = 1.10 V, n = 2). The student can conclude:',
+            question: 'Which statement about cell potential under nonstandard conditions matches the AP Chemistry framework?',
             options: [
-              '$E°$ itself has dropped to zero as the cell aged',
-              'The cell is at equilibrium, with Q = K',
-              'There is an error — Zn-Cu always produces voltage',
-              'The reverse reaction is now favored, since Q > K'
+              'E shrinks to zero as the cell approaches Q = K',
+              'Cell potential equals E° whenever the electrodes are pure metals',
+              'Cell potential grows as the cell runs, because products accumulate',
+              'Cell potential can only be found by a full Nernst calculation'
             ],
-            correctAnswer: 1,
-            explanation: '$E = 0$ means $Q = K$ — the cell has reached equilibrium, so there is no net driving force in either direction. $E°$ is a fixed 1.10 V for this reaction, and $Q > K$ would give a negative $E$, not zero.'
+            correctAnswer: 0,
+            explanation: 'The CED describes cell potential as a driving force toward equilibrium that shrinks to zero at $Q = K$, and it expects qualitative reasoning with the Nernst equation rather than algorithmic calculation. Accumulating products lower $E$, and pure-metal electrodes do not make the cell standard.'
           },
           {
-            question: 'Which change would make a concentration cell produce MORE voltage?',
+            question: 'In a working galvanic cell, Q = 1 × 10⁻³ and K = 1 × 10¹⁵. Which statement is correct?',
             options: [
-              'Make the two concentrations more similar',
-              'Make the two concentrations more different',
-              'Use a longer salt bridge',
-              'Use larger electrodes'
+              'E is exactly zero',
+              'E is below zero',
+              'E is below E°',
+              'E exceeds E°'
+            ],
+            correctAnswer: 3,
+            explanation: '$Q < 1$ makes $\\ln Q$ negative, so $E$ exceeds $E°$. The cell is far from equilibrium ($Q \\ll K$), so the potential is large and positive, not zero or negative.'
+          },
+          {
+            question: 'A nickel concentration cell starts with 0.0010 M and 1.0 M Ni²⁺. Which describes the cell after it has run for a long time but before it stops?',
+            options: [
+              'E has increased, because more Ni²⁺ has formed',
+              'E has decreased, because the two molarities are now closer',
+              'E is unchanged, because E° is still zero',
+              'E has become negative, because the anode and cathode swap'
             ],
             correctAnswer: 1,
-            explanation: '$E = (0.0592/n)\\log([\\text{conc}]/[\\text{dilute}])$. A larger ratio of concentrations → larger $\\log$ → higher $E$. More different concentrations produce more voltage.'
+            explanation: 'As the cell runs, the dilute side becomes more concentrated and the concentrated side more dilute. The smaller difference puts the cell closer to equilibrium, so $E$ decreases toward zero. $E° = 0$ throughout, and the electrode roles do not swap.'
           }
         ]
       }

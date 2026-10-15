@@ -140,7 +140,7 @@ The curve goes from **high pH to low pH** — a mirror image of the weak acid cu
       content: `
 ## 🧪 Polyprotic Acid Titrations
 
-Polyprotic acids (like $H_2SO_3$, $H_3PO_4$) show **multiple equivalence points**:
+Polyprotic acids (like $H_2CO_3$, $H_3PO_4$) show **multiple equivalence points**:
 
 
 ---
@@ -164,6 +164,8 @@ The curve shows **two S-shaped jumps**!
 - Each steep region corresponds to one deprotonation
 
 > ⚠️ **Watch Out:** For polyprotic acids, the volume to the second equivalence is always 2× the first. Each proton requires an equal amount of base.
+
+> 💡 **Tip:** On the AP exam, reason qualitatively about which species dominate in each region of a polyprotic curve ($H_2A$ before the first equivalence point, $HA^-$ at it, $A^{2-}$ after the second). Calculating the concentration of every species along the curve is not assessed (CED 8.5 exclusion).
 
 
 ---
@@ -253,7 +255,7 @@ Three equivalence points (three protons):
               '16.68'
             ],
             correctAnswer: 2,
-            explanation: 'Halfway between the first and second equivalence points, half of the $HCO_3^-$ has been converted to $CO_3^{2-}$, so $[HCO_3^-] = [CO_3^{2-}]$ and $pH = pK_{a2} = 10.33$ — this is the second half-equivalence point. 6.35 is the pH at the first half-equivalence point, 8.34 is the average of the two $pK_a$ values (the pH at the first equivalence point, where $HCO_3^-$ dominates), and 16.68 is their sum without halving.'
+            explanation: 'Halfway between the first and second equivalence points, half of the $HCO_3^-$ has been converted to $CO_3^{2-}$, so $[HCO_3^-] = [CO_3^{2-}]$ and $pH = pK_{a2} = 10.33$ — this is the second half-equivalence point. 6.35 is the pH at the first half-equivalence point, 8.34 is the average of the two $pK_a$ values, which is not a half-equivalence point, and 16.68 is their sum without halving.'
           }
         ]
       }

@@ -175,7 +175,7 @@ Sometimes the analyte reacts slowly or doesn\'t have a clear endpoint. In a **ba
             explanation: 'The equivalence point is the theoretical point where the stoichiometric amount of titrant has been added to completely react with all the analyte. The indicator changes color near (but not exactly at) this point.'
           },
           {
-            question: 'Which reagent would you add to determine the amount of sulfate $(SO_{4}^{2-})$ by gravimetric analysis?',
+            question: 'Barium sulfate is insoluble in water, while the other possible products here are soluble. Which reagent would you add to determine the amount of sulfate $(SO_{4}^{2-})$ by gravimetric analysis?',
             options: [
               'NaOH',
               'HCl',

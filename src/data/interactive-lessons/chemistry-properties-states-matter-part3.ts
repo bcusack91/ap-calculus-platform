@@ -16,10 +16,9 @@ export const chemPropertiesStatesMatterPart3Data = {
 | Section |
 |---------|
 | Surface Tension |
-| What Is It? |
-| Why Does It Happen? |
-| Factors Affecting Surface Tension |
-| Examples |
+| Viscosity |
+| Capillary Action |
+| Vapor Pressure |
 
 > 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
@@ -257,13 +256,10 @@ Vapor pressure is the **pressure exerted by a vapor in equilibrium with its liqu
 
 **2. Temperature**
 - **Higher temperature → higher vapor pressure** (more molecules have enough KE to escape)
-- The relationship is exponential, described by the **Clausius-Clapeyron equation**:
+- The increase is steep rather than linear: a small rise in temperature greatly increases the fraction of molecules with enough energy to escape. On the AP exam, you reason about this relationship qualitatively.
 
-$$\\boxed{\\ln P = -\\frac{\\Delta H_{\\text{vap}}}{RT} + C}$$
-
-or in its two-point form:
-
-$$\\boxed{\\ln\\frac{P_2}{P_1} = -\\frac{\\Delta H_{\\text{vap}}}{R}\\left(\\frac{1}{T_2} - \\frac{1}{T_1}\\right)}$$
+**3. Comparing liquids at one temperature**
+- At any given temperature, the liquid with the **weaker** IMFs has the **higher** vapor pressure and the **lower** normal boiling point.
 
 ---
 
@@ -300,21 +296,6 @@ $$\\boxed{\\ln\\frac{P_2}{P_1} = -\\frac{\\Delta H_{\\text{vap}}}{R}\\left(\\fra
             ],
             correctAnswer: 2,
             explanation: 'Boiling occurs when vapor pressure equals external pressure. At high altitude, atmospheric pressure is lower, so the vapor pressure needed to boil is lower, which is reached at a lower temperature.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sm3-clausius-calc',
-      type: 'input-boxes' as const,
-      title: 'Clausius-Clapeyron Calculation',
-      content: 'Use the Clausius-Clapeyron equation: $\\ln\\frac{P_2}{P_1} = -\\frac{\\Delta H_{\\text{vap}}}{R}\\left(\\frac{1}{T_2} - \\frac{1}{T_1}\\right)$ with $R = 8.314$ J/(mol·K).',
-      exercise: {
-        inputs: [
-          {
-            label: 'Water has a vapor pressure of 23.8 torr at 25°C (298 K) and 760 torr at 100°C (373 K). Calculate ΔH_vap in kJ/mol (round to 1 decimal place)',
-            correctAnswer: '42.7',
-            explanation: '$\\ln(760/23.8) = -(\\Delta H_{\\text{vap}}/8.314)(1/373 - 1/298)$. $\\ln(31.93) = 3.4636$. $(1/373 - 1/298) = (0.0026810 - 0.0033557) = -6.747 \\times 10^{-4}$ K$^{-1}$. $3.4636 = -(\\Delta H_{\\text{vap}}/8.314)(-6.747 \\times 10^{-4})$. $\\Delta H_{\\text{vap}} = 3.4636 \\times 8.314 / (6.747 \\times 10^{-4}) = 42{,}680$ J/mol $\\approx 42.7$ kJ/mol. (The value at the normal boiling point is 40.7 kJ/mol; the two-point method gives an average over 25–100°C, which is a little higher.)'
           }
         ]
       }

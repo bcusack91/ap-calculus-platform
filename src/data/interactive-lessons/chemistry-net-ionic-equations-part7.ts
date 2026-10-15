@@ -81,11 +81,10 @@ On the AP Chemistry exam, you may be asked to:
 
 ---
 
-> 🔑 **Quick Solubility Rules:**
-> - **Always soluble:** $Na^{+}$, $K^{+}$, $NH_{4}^{+}$, $NO_{3}^{-}$
-> - **Usually soluble:** $Cl^{-}$, $Br^{-}$, $I^{-}$ (except $Ag^{+}$, $Pb^{2+}$, $Hg_{2}^{2+}$)
-> - **Usually soluble:** $SO_{4}^{2-}$ (except $Ba^{2+}$, $Pb^{2+}$, $Ca^{2+}$, $Sr^{2+}$)
-> - **Usually insoluble:** $OH^{-}$, $S^{2-}$, $CO_{3}^{2-}$, $PO_{4}^{3-}$ (except Group 1, $NH_{4}^{+}$)
+> 🔑 **Solubility on the AP Exam:**
+> - **Always soluble:** salts of $Na^{+}$, $K^{+}$, $NH_{4}^{+}$, and $NO_{3}^{-}$ (the only rule to memorize)
+> - **Everything else:** the question tells you, through a statement, a $K_{sp}$ value, an observation of a solid forming, or a particle diagram
+> - **Use the rule to eliminate:** a sodium, potassium, ammonium, or nitrate salt is never the precipitate
       `
     },
     {
@@ -105,10 +104,10 @@ On the AP Chemistry exam, you may be asked to:
               '$\\text{Ag}^+(aq) + \\text{NO}_3^-(aq) \\rightarrow \\text{AgNO}_3(s)$'
             ],
             correctAnswer: 1,
-            explanation: '$Ag_{2}CrO_{4}$ is insoluble (a dark red precipitate). The formula requires 2 $Ag^{+}$ per $CrO_{4}^{2-}$ because Ag is +1 and $CrO_{4}$ is −2. Net ionic: $2Ag^{+}(aq)$ + $CrO_{4}^{2-}(aq)$ → $Ag_{2}CrO_{4}(s)$. Charge: 2(+1) + (−2) = 0 ✓.'
+            explanation: 'Sodium nitrate and silver nitrate are always soluble, so the precipitate must be silver chromate. The formula requires 2 $Ag^{+}$ per $CrO_{4}^{2-}$ because Ag is +1 and $CrO_{4}$ is −2. Net ionic: $2Ag^{+}(aq)$ + $CrO_{4}^{2-}(aq)$ → $Ag_{2}CrO_{4}(s)$. Charge: 2(+1) + (−2) = 0 ✓.'
           },
           {
-            question: 'A solution of sulfuric acid is added to a solution of barium hydroxide. The net ionic equation is:',
+            question: 'A solution of sulfuric acid is added to a solution of barium hydroxide. Barium sulfate is insoluble. The net ionic equation is:',
             options: [
               '$\\text{H}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{H}_2\\text{O}(l)$',
               '$\\text{Ba}^{2+}(aq) + \\text{SO}_4^{2-}(aq) \\rightarrow \\text{BaSO}_4(s)$',
@@ -140,19 +139,19 @@ On the AP Chemistry exam, you may be asked to:
 
 For each scenario, identify the precipitate formed (write formula) or type **NR** if no reaction occurs.
 
-**1)** Solutions of iron(III) nitrate and sodium hydroxide are mixed.
+**1)** Solutions of iron(III) nitrate and sodium hydroxide are mixed. (Iron(III) hydroxide is insoluble.)
 
 **2)** Solutions of ammonium chloride and potassium nitrate are mixed.
 
-**3)** Solutions of lead(II) nitrate and sodium sulfate are mixed.
+**3)** Solutions of lead(II) nitrate and sodium sulfate are mixed. (Lead(II) sulfate is insoluble.)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['Fe(OH)3', 'NR', 'PbSO4'],
-        hint1: '$Fe^{3+}$ + $OH^{-}$ → $Fe(OH)_{3}$. Is $Fe(OH)_{3}$ soluble?',
-        hint2: 'Products would be $NH_{4}NO_{3}$ and KCl. Are either insoluble?',
-        hint3: '$Pb^{2+}$ + $SO_{4}^{2-}$ → $PbSO_{4}$. Is $SO_{4}^{2-}$ soluble with $Pb^{2+}$?',
-        explanation: '1) $Fe(OH)_{3}$ — iron(III) hydroxide is insoluble (rust-brown precipitate). 2) NR — both $NH_{4}NO_{3}$ and KCl are soluble. No driving force. 3) $PbSO_{4}$ — sulfate is generally soluble, but $Pb^{2+}$ is one of the exceptions → white precipitate.'
+        hint1: '$Fe^{3+}$ + $OH^{-}$ → $Fe(OH)_{3}$, given as insoluble. Which subscript balances the +3 charge?',
+        hint2: 'Products would be $NH_{4}NO_{3}$ and KCl. Are they ammonium, potassium, or nitrate salts?',
+        hint3: '$Pb^{2+}$ + $SO_{4}^{2-}$ → $PbSO_{4}$, given as insoluble.',
+        explanation: '1) $Fe(OH)_{3}$ — given as insoluble; sodium nitrate stays dissolved. 2) NR — $NH_{4}NO_{3}$ and KCl are covered by the always-soluble rule, so no solid forms. 3) $PbSO_{4}$ — given as insoluble; sodium nitrate stays dissolved.'
       }
     },
     {
@@ -176,15 +175,15 @@ For each scenario, identify the precipitate formed (write formula) or type **NR*
             options: ['NaCl', '$H_{2}CO_{3}$', '$CO_{2}$', '$HClCO_{3}$']
           },
           {
-            label: 'A student observes a rust-brown precipitate when mixing two solutions. The precipitate is most likely',
-            options: ['$CuSO_{4}$', 'AgCl', '$Fe(OH)_{3}$', '$BaSO_{4}$']
+            label: 'Mixing $AgNO_{3}(aq)$ with KCl(aq) gives a white solid. The solid must be',
+            options: ['$KNO_{3}$', 'AgCl', '$AgNO_{3}$', 'KCl']
           }
         ],
-        correctAnswers: ['0', '$H^{+}$ + $OH^{-}$ → $H_{2}O$', '$H_{2}CO_{3}$', '$Fe(OH)_{3}$'],
+        correctAnswers: ['0', '$H^{+}$ + $OH^{-}$ → $H_{2}O$', '$H_{2}CO_{3}$', 'AgCl'],
         hint1: 'Both $BaSO_{4}$ and $H_{2}O$ form — does anything remain as a spectator?',
         hint2: 'The salt ions are always spectators in strong-strong reactions.',
         hint3: '$H^{+}$ + $CO_{3}^{2-}$ first forms $H_{2}CO_{3}$, which then decomposes.',
-        explanation: '$H_{2}SO_{4}$ + $Ba(OH)_{2}$: $BaSO_{4}$ precipitates and $H_{2}O$ forms — zero spectators! Strong-strong: always $H^{+}$ + $OH^{-}$ → $H_{2}O$. Acid + carbonate → $H_{2}CO_{3}$ (unstable) → $H_{2}O$ + $CO_{2}$. Rust-brown precipitate = $Fe(OH)_{3}$.'
+        explanation: '$H_{2}SO_{4}$ + $Ba(OH)_{2}$: $BaSO_{4}$ precipitates and $H_{2}O$ forms — zero spectators! Strong-strong: always $H^{+}$ + $OH^{-}$ → $H_{2}O$. Acid + carbonate → $H_{2}CO_{3}$ (unstable) → $H_{2}O$ + $CO_{2}$. $KNO_{3}$, $AgNO_{3}$, and KCl are potassium or nitrate salts and always soluble, so the solid is AgCl.'
       }
     },
     {
@@ -229,7 +228,7 @@ For each scenario, identify the precipitate formed (write formula) or type **NR*
       exercise: {
         questions: [
           {
-            question: 'Solutions of calcium chloride and sodium phosphate are mixed. The net ionic equation is:',
+            question: 'Solutions of calcium chloride and sodium phosphate are mixed. Calcium phosphate is insoluble. The net ionic equation is:',
             options: [
               '$\\text{Ca}^{2+}(aq) + \\text{PO}_4^{3-}(aq) \\rightarrow \\text{CaPO}_4(s)$',
               '$3\\text{Ca}^{2+}(aq) + 2\\text{PO}_4^{3-}(aq) \\rightarrow \\text{Ca}_3(\\text{PO}_4)_2(s)$',
@@ -237,7 +236,7 @@ For each scenario, identify the precipitate formed (write formula) or type **NR*
               'No reaction occurs'
             ],
             correctAnswer: 1,
-            explanation: '$Ca_{3}(PO_{4})_{2}$ is insoluble (phosphates are generally insoluble except with Group $1/NH_{4}^{+}$). The formula needs 3 $Ca^{2+}$ and 2 $PO_{4}^{3-}$ for charge balance: 3(+2) + 2(−3) = 0. $Na^{+}$ and $Cl^{-}$ are spectators.'
+            explanation: '$Ca_{3}(PO_{4})_{2}$ is insoluble (given), while NaCl is a sodium salt and stays dissolved. The formula needs 3 $Ca^{2+}$ and 2 $PO_{4}^{3-}$ for charge balance: 3(+2) + 2(−3) = 0. $Na^{+}$ and $Cl^{-}$ are spectators.'
           },
           {
             question: 'Which statement best explains why net ionic equations are useful?',

@@ -38,7 +38,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 | $\\Delta H$ and $\\Delta S$ (or $S°$) | $\\Delta G = \\Delta H - T\\Delta S$ |
 | $\\Delta G°_f$ values | $\\Delta G° = \\sum \\Delta G°_f(\\text{prod}) - \\sum \\Delta G°_f(\\text{react})$ |
 | $K$ (equilibrium constant) | $\\Delta G° = -RT\\ln K$ |
-| $\\Delta G°$ and $Q$ | $\\Delta G = \\Delta G° + RT\\ln Q$ |
+| $\\Delta G°$ (or $K$) and a current mixture | Find $K$, then compare $Q$ with $K$ |
 
 
 ---
@@ -86,15 +86,15 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
             explanation: '$\\Delta G° = -RT\\ln K = -(8.314)(298)\\ln(2.5 \\times 10^{-4}) = -(2478)(-8.294) = +20{,}553$ J $= +20.5$ kJ. Dropping the minus sign gives −20.5 kJ, using $\\log$ instead of $\\ln$ gives +8.9 kJ, and reporting the joule value as kilojoules gives +20,553 kJ.'
           },
           {
-            question: 'A reaction has ΔG° = −15 kJ at 300 K. Q = 100. Is the forward reaction spontaneous?',
+            question: 'A reaction has ΔG° = −15 kJ at 300 K, so K ≈ 410. A mixture has Q = 100. Which way does the net reaction proceed?',
             options: [
-              'Yes — ΔG = −10.0 kJ',
-              'Yes — ΔG = −3.5 kJ',
-              'No — ΔG = +11,471 kJ',
-              'Yes — ΔG = −26.5 kJ'
+              'Forward, because Q < K',
+              'Reverse, because Q < K',
+              'Neither, because ΔG° is negative',
+              'Reverse, because Q is greater than 1'
             ],
-            correctAnswer: 1,
-            explanation: '$\\Delta G = -15{,}000 + (8.314)(300)\\ln(100) = -15{,}000 + (2494)(4.605) = -15{,}000 + 11{,}483 = -3{,}517$ J $= -3.5$ kJ. Still spontaneous, but less so. Using $\\log$ instead of $\\ln$ gives −10.0 kJ, subtracting the $RT\\ln Q$ term gives −26.5 kJ, and adding 11,483 J to −15 kJ without converting units gives +11,471 kJ.'
+            correctAnswer: 0,
+            explanation: '$K = e^{15{,}000/(8.314 \\times 300)} = e^{6.01} \\approx 410$. Because $Q = 100 < K$, the mixture has too little product and the net reaction proceeds forward until $Q = K$. Q < K never means reverse, a negative ΔG° does not stop a mixture from shifting, and comparing Q with 1 instead of K is a common mistake.'
           }
         ]
       }
@@ -129,26 +129,26 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
         dropdowns: [
           {
             label: 'To find ΔG° from a table of ΔG°_f values, use',
-            options: ['ΔG = ΔH − TΔS', 'Σ products − Σ reactants', 'ΔG° = −RT ln K', 'ΔG = ΔG° + RT ln Q']
+            options: ['ΔG = ΔH − TΔS', 'Σ products − Σ reactants', 'ΔG° = −RT ln K', 'a comparison of Q with K']
           },
           {
             label: 'To find K from ΔG°, use',
-            options: ['ΔG = ΔH − TΔS', 'Σ products − Σ reactants', 'K = e^{−ΔG°/(RT)}', 'ΔG = ΔG° + RT ln Q']
+            options: ['ΔG = ΔH − TΔS', 'Σ products − Σ reactants', 'K = e^{−ΔG°/(RT)}', 'T = ΔH/ΔS']
           },
           {
-            label: 'To determine if a reaction proceeds forward at non-standard conditions, use',
-            options: ['ΔG = ΔH − TΔS', 'Σ products − Σ reactants', 'ΔG° = −RT ln K', 'ΔG = ΔG° + RT ln Q']
+            label: 'To determine which way a particular mixture will shift, use',
+            options: ['ΔG = ΔH − TΔS', 'Σ products − Σ reactants', 'a comparison of Q with K', 'T = ΔH/ΔS']
           },
           {
             label: 'To find the crossover temperature between spontaneous and nonspontaneous, use',
-            options: ['T = ΔH/ΔS', 'T = ΔG/ΔS', 'T = −RT ln K', 'T = ΔG° + RT ln Q']
+            options: ['T = ΔH/ΔS', 'T = ΔG/ΔS', 'T = −RT ln K', 'T = ΔS/ΔH']
           }
         ],
-        correctAnswers: ['Σ products − Σ reactants', 'K = e^{−ΔG°/(RT)}', 'ΔG = ΔG° + RT ln Q', 'T = ΔH/ΔS'],
+        correctAnswers: ['Σ products − Σ reactants', 'K = e^{−ΔG°/(RT)}', 'a comparison of Q with K', 'T = ΔH/ΔS'],
         hint1: 'Same pattern as ΔH° and ΔS° calculations.',
         hint2: 'Rearrange ΔG° = −RT ln K.',
-        hint3: 'This is the equation that accounts for current conditions via Q.',
-        explanation: 'Formation values: products − reactants. K from ΔG°: K = e^{−ΔG°/(RT)}. Non-standard: ΔG = ΔG° + RT ln Q. Crossover: set ΔG = 0, T = ΔH/ΔS.'
+        hint3: 'Q describes the current mixture; K describes equilibrium.',
+        explanation: 'Formation values: products − reactants. K from ΔG°: K = e^{−ΔG°/(RT)}. Direction of shift: compare Q with K. Crossover: set ΔG = 0, T = ΔH/ΔS.'
       }
     },
     {
@@ -162,13 +162,13 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
           {
             question: 'A student calculates ΔG° = −20 kJ/mol at 298 K but finds Q = $10^{8}$. The forward reaction is:',
             options: [
-              'Spontaneous, because ΔG° < 0 sets the direction',
-              'Nonspontaneous, because Q is far greater than K',
+              'Favored, because ΔG° < 0 sets the direction',
+              'Reverse, because Q is far greater than K',
               'At equilibrium, since both Q and K are very large',
-              'Spontaneous, because a large Q pushes it forward'
+              'Favored, because a large Q pushes it forward'
             ],
             correctAnswer: 1,
-            explanation: '$K = e^{20000/2478} = e^{8.07} \\approx 3200$. Since $Q = 10^8 \\gg K \\approx 3200$, the system is past equilibrium. $\\Delta G > 0$, so the reverse reaction is spontaneous.'
+            explanation: '$K = e^{20000/2478} = e^{8.07} \\approx 3200$. Since $Q = 10^8 \\gg K \\approx 3200$, the mixture has far more product than at equilibrium, so the net reaction proceeds in reverse until Q = K.'
           },
           {
             question: 'Which of these will NOT change the value of ΔG° for a reaction?',

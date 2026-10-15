@@ -35,7 +35,7 @@ The filling order **does not** follow simple numerical order — 4s fills before
       type: 'text' as const,
       content: `## 📌 Principal Energy Levels
 
-The **principal quantum number (n)** describes the main energy level of an electron:
+The **shell number (n)** describes the main energy level (shell) of an electron:
 
 | n | Name | Max Electrons $(2n^{2})$ |
 |---|------|---------------------|
@@ -86,7 +86,7 @@ How many electrons can the 3d subshell hold at maximum?`,
             question: 'Maximum electrons in 3d:',
             options: ['2', '6', '10', '14'],
             correctAnswer: 2,
-            explanation: 'The d subshell has 5 orbitals, and each orbital holds 2 electrons: 5 × 2 = 10. The principal quantum number (3) does not change the capacity of a d subshell.'
+            explanation: 'The d subshell has 5 orbitals, and each orbital holds 2 electrons: 5 × 2 = 10. The shell number (3) does not change the capacity of a d subshell.'
           }
         ]
       }
@@ -96,7 +96,7 @@ How many electrons can the 3d subshell hold at maximum?`,
       type: 'text' as const,
       content: `## 📌 The Aufbau Filling Order
 
-Electrons fill subshells in order of **increasing energy**, not simply by principal quantum number. The filling order is:
+Electrons fill subshells in order of **increasing energy**, not simply by shell number. The filling order is:
 
 **1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → 5s → 4d → 5p → 6s → 4f → 5d → 6p → 7s → 5f → 6d → 7p**
 
@@ -177,12 +177,12 @@ Use the formula $2n^2$ to determine the maximum number of electrons in a princip
 
 ### 🧰 Quick Reference
 
-| Subshell | l value | # Orbitals | Max Electrons |
-|----------|---------|------------|---------------|
-| s | 0 | 1 | 2 |
-| p | 1 | 3 | 6 |
-| d | 2 | 5 | 10 |
-| f | 3 | 7 | 14 |
+| Subshell | # Orbitals | Max Electrons |
+|----------|------------|---------------|
+| s | 1 | 2 |
+| p | 3 | 6 |
+| d | 5 | 10 |
+| f | 7 | 14 |
 
 ---
 

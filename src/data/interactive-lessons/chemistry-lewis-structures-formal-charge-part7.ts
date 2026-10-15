@@ -85,7 +85,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
       id: 'ls-7-5',
       type: 'text',
       title: '🎓 AP Exam: Choosing the Best Structure',
-      content: `On the AP exam, you may be given multiple Lewis structures and asked which is "best" or "most reasonable." Here\'s a decision framework:\n\n**Priority order for evaluating structures:**\n\n1. **All atoms have octets** (or appropriate exceptions)\n2. **Formal charges are minimized** (as close to 0 as possible)\n3. **Negative FC on more electronegative atoms**\n4. **No adjacent atoms with same-sign formal charges**\n\n**Common AP question types:**\n- "Draw the Lewis structure for X" — use the full algorithm\n- "Which structure is most stable?" — compare formal charges\n- "How many resonance structures?" — count equivalent placements\n- "Predict bond order" — total bonds ÷ number of positions\n- "Why is this bond length between single and double?" — resonance\n- "Explain why $BF_{3}$ acts as a Lewis acid" — incomplete octet`
+      content: `On the AP exam, you may be given multiple Lewis structures and asked which is "best" or "most reasonable." Here\'s a decision framework:\n\n**Priority order for evaluating structures:**\n\n1. **All atoms have octets** (or appropriate exceptions)\n2. **Formal charges are minimized** (as close to 0 as possible)\n3. **Negative FC on more electronegative atoms**\n4. **No adjacent atoms with same-sign formal charges**\n\n**Common AP question types:**\n- "Draw the Lewis structure for X" — use the full algorithm\n- "Which structure is most stable?" — compare formal charges\n- "How many resonance structures?" — count equivalent placements\n- "Predict bond order" — total bonds ÷ number of positions\n- "Why is this bond length between single and double?" — resonance\n- "Which atom has fewer than eight electrons?" — incomplete octets such as B in $BF_{3}$`
     },
     {
       id: 'ls-7-6',
@@ -120,7 +120,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             label: 'Carbon (Period 2) — can it exceed the octet?',
             options: ['Can exceed the octet', 'Cannot exceed the octet'],
             correctIndex: 1,
-            explanation: 'Carbon is in Period 2 and does not have accessible d orbitals. It can NEVER have more than 8 electrons around it.'
+            explanation: 'Carbon is in Period 2, and Period 2 atoms can NEVER have more than 8 electrons around them.'
           },
           {
             id: 'ls-7-7-dd2',
@@ -131,10 +131,10 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
           },
           {
             id: 'ls-7-7-dd3',
-            label: '$BF_{3}$ acts as a Lewis _______ because boron has fewer than 8 electrons',
-            options: ['Lewis acid (electron acceptor)', 'Lewis base (electron-pair donor)'],
+            label: 'In the best Lewis structure of $BF_{3}$, boron is surrounded by',
+            options: ['6 electrons (an incomplete octet)', '8 electrons (a complete octet)'],
             correctIndex: 0,
-            explanation: '$BF_{3}$ has an incomplete octet (only 6 electrons on B). It readily accepts an electron pair from a Lewis base, making it a Lewis acid.'
+            explanation: 'Three B—F single bonds give boron only 6 electrons. A B=F double bond would complete the octet but would put a +1 formal charge on fluorine, so the single-bonded structure with an incomplete octet is preferred.'
           }
         ]
       }

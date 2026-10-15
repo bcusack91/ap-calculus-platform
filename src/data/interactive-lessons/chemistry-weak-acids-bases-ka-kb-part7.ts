@@ -92,7 +92,7 @@ $$\\boxed{[H^+] = \\sqrt{K_a \\cdot C}} \\qquad \\boxed{K_a \\times K_b = K_w} \
             options: [
               '$K_{a1} > K_{a2} > K_{a3}$',
               'pH is determined primarily by $K_{a1}$',
-              '$[\\text{second anion}] \\approx K_{a2}$',
+              'Each successive proton is harder to remove',
               'All dissociations contribute equally to $[H^+]$'
             ],
             correctAnswer: 3,

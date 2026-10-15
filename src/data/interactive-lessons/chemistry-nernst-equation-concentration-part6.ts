@@ -4,24 +4,21 @@ export const chemNernstEquationConcentrationPart6Data = {
     {
       id: 'ne6-intro',
       type: 'text' as const,
-      content: `# 🛠️ Problem-Solving Workshop — Nernst Equation
+      content: `# 📉 Cell Potential Under Nonstandard Conditions
 
 **Part 6 of 7 — Practice and Integration**
 
 ---
 
-### Practice Makes Perfect
+### Topics in This Part
 
-This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+| Section |
+|---------|
+| 🛠️ Problem-Solving Toolkit |
+| ✍️ Writing a Full Justification |
+| 🎯 Mixed Practice |
 
-> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
-
----
-
-### What You'll Master in Part 6
-- Working through complete multi-step problems from start to finish
-- Building problem-solving strategies you can apply on the AP exam
-- Identifying which concepts to apply and in what order`
+> 🔑 **Key Concept:** AP questions on nonstandard cells reward a clear chain of reasoning: change → $Q$ → distance from equilibrium → $E$. This part practices writing that chain.`
     },
     {
       id: 'ne6-strategy',
@@ -29,152 +26,162 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
       content: `
 ## 🛠️ Problem-Solving Toolkit
 
-### Which Equation to Use?
+| Question type | First move | Key idea |
+|---------------|-----------|----------|
+| "How does E change when…?" | Write $Q$ from the balanced reaction | Smaller $Q$ → larger $E$; larger $Q$ → smaller $E$ |
+| Dilution of both half-cells | Check the exponents in $Q$ | Equal coefficients → no change; unequal → $Q$ shifts |
+| Concentration cell | Find the dilute side | Dilute side is the anode; $E \\to 0$ as concentrations match |
+| Cell over time | Track which ion is consumed | $Q$ rises toward $K$; $E$ falls toward 0 |
+| $E°$, $\\Delta G°$, $K$ | Check signs first | $E° > 0 \\Leftrightarrow \\Delta G° < 0 \\Leftrightarrow K > 1$ |
 
-| Given | Want | Equation |
-|-------|------|----------|
-| $E°$, concentrations | $E$ | $E = E° - (0.0592/n)\\log Q$ |
-| $E°$ | $K$ | $\\log K = nE°/0.0592$ |
-| $K$ | $E°$ | $E° = (0.0592/n)\\log K$ |
-| Same electrodes, different conc. | $E$ | $E = (0.0592/n)\\log([\\text{conc}]/[\\text{dilute}])$ |
-| $E°$ | $\\Delta G°$ | $\\Delta G° = -nFE°$ |
-
-
----
-
-> ⚠️ **Common Pitfalls:**
-> 1. **Forgetting to exclude solids/liquids from Q**
-> 2. **Using 0.0592 at temperatures other than 25°C**
-> 3. **Confusing log and ln** ($\\ln K = 2.303\\log K$)
-> 4. **Getting Q upside down** (products over reactants!)
+> ⚠️ **Common errors**
+> - Putting solids into $Q$.
+> - Forgetting that the exponent in $Q$ comes from the **balanced overall** equation.
+> - Saying $E°$ changes when concentrations change. Only $E$ changes.
+> - Using Le Châtelier's principle as the justification. The CED wants reasoning about $Q$ and the approach to equilibrium.
       `
     },
     {
       id: 'ne6-mixed-problems',
       type: 'multiple-choice' as const,
       content: `
-**Mixed Nernst Problems** 🎯
+**Mixed Practice — Set 1** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'For the cell Zn | $Zn^{2+}(0.10 M)$ || $Cu^{2+}(1.5 M)$ | Cu, E° = 1.10 V, n = 2. E at 25°C is approximately:',
+            question: 'A cell runs Fe(s) + 2Fe³⁺(aq) → 3Fe²⁺(aq). Which change increases its cell potential?',
             options: [
-              '1.07 V',
-              '1.13 V',
-              '1.10 V',
-              '0.97 V'
+              'Adding Fe²⁺ to the cell',
+              'Adding Fe³⁺ to the cell',
+              'Using a larger iron electrode',
+              'Diluting the Fe³⁺ solution'
             ],
             correctAnswer: 1,
-            explanation: '$Q = [\\text{Zn}^{2+}]/[\\text{Cu}^{2+}] = 0.10/1.5 = 0.0667$. $E = 1.10 - (0.0296)\\log(0.0667) = 1.10 - (0.0296)(-1.18) = 1.10 + 0.035 = 1.13$ V.'
+            explanation: '$Q = [\\text{Fe}^{2+}]^3/[\\text{Fe}^{3+}]^2$. Adding $\\text{Fe}^{3+}$ enlarges the denominator, lowering $Q$ and raising $E$. Adding $\\text{Fe}^{2+}$ or diluting $\\text{Fe}^{3+}$ raises $Q$, and solid iron is not in $Q$.'
           },
           {
-            question: 'A concentration cell has [$Ag^{+}$] = 0.0001 M and 1.0 M. n = 1. E is:',
+            question: 'For the cell in the previous question, a student claims "adding Fe²⁺ lowers E because Le Châtelier\'s principle shifts the reaction left." What is the best correction?',
             options: [
-              '0.0592 V',
-              '0.1184 V',
-              '0.2368 V',
-              '0.1776 V'
+              'The conclusion fails, since added ions make the cell conduct better',
+              'The conclusion holds, but the reason is that Q rises toward K',
+              'The conclusion fails, since Fe²⁺ is left out of Q',
+              'The conclusion holds, since E° falls whenever ions are added'
             ],
-            correctAnswer: 2,
-            explanation: '$E = (0.0592/1)\\log(1.0/0.0001) = 0.0592 \\times \\log(10^4) = 0.0592 \\times 4 = 0.2368$ V.'
+            correctAnswer: 1,
+            explanation: 'The potential does fall, but the CED notes that equilibrium arguments such as Le Châtelier do not apply to a working cell, which is not at equilibrium. The correct justification is that a larger $Q$ brings the cell closer to equilibrium, which lowers the driving force.'
           },
           {
-            question: 'A cell has E° = 0.20 V and n = 1. K at 25°C is approximately:',
+            question: 'A copper concentration cell has 0.20 M Cu²⁺ on the left and 0.020 M Cu²⁺ on the right. Where does reduction occur?',
             options: [
-              '$10^{3.4} \\approx 2400$',
-              '$10^{6.8} \\approx 6 \\times 10^{6}$',
-              '$10^{1.7} \\approx 50$',
-              '$10^{0.2} \\approx 1.6$'
+              'In the right half-cell, with 0.020 M Cu²⁺',
+              'In the left half-cell, with 0.20 M Cu²⁺',
+              'In the salt bridge, where ions from both sides meet',
+              'In neither half-cell, because E° is zero'
             ],
-            correctAnswer: 0,
-            explanation: '$\\log K = (1)(0.20)/0.0592 = 3.38$. $K = 10^{3.38} \\approx 2400$. Using $n = 2$ doubles the exponent to 6.8, dividing by $2 \\times 0.0592$ halves it to 1.7, and skipping the division by 0.0592 leaves $10^{0.2}$.'
+            correctAnswer: 1,
+            explanation: 'Reduction removes $\\text{Cu}^{2+}$ from solution, so it occurs where the concentration is higher, bringing the two sides toward equal concentration. The dilute right side is the anode.'
           }
         ]
       }
     },
     {
-      id: 'ne6-calculation-workshop',
-      type: 'input-boxes' as const,
+      id: 'ne6-justification',
+      type: 'text' as const,
       content: `
-**Calculation Workshop** 🧮
+## ✍️ Writing a Full Justification
 
-**1)** $E° = 0.80$ V, $n = 1$, $Q = 0.001$ at 25°C. Calculate $E$. (to 3 significant figures)
+> **Prompt (FRQ style):** A galvanic cell is based on $\\text{Cu}(s) + 2\\text{Ag}^{+}(aq) \\rightarrow \\text{Cu}^{2+}(aq) + 2\\text{Ag}(s)$, $E° = +0.46$ V. The student replaces the 1.0 M $\\text{AgNO}_3$ with 0.10 M $\\text{AgNO}_3$. Will the measured potential be greater than, less than, or equal to 0.46 V? Justify your answer.
 
-**2)** A concentration cell: $[\\text{Cu}^{2+}] = 0.01$ M and $1.0$ M, $n = 2$. Calculate $E$. (to 3 significant figures)
+### A full-credit answer has three links
 
-**3)** $E° = 1.50$ V, $n = 3$. Calculate $\\log K$. (to 3 significant figures)
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['0.978', '0.0592', '76.0'],
-        hint1: '$E = 0.80 - (0.0592)\\log(0.001) = 0.80 - (0.0592)(-3)$',
-        hint2: '$E = (0.0592/2)\\log(1.0/0.01) = (0.0296)(2)$',
-        hint3: '$\\log K = (3)(1.50)/0.0592$',
-        explanation: '1) $E = 0.80 + 0.178 = 0.978$ V. 2) $E = 0.0296 \\times 2 = 0.0592$ V. 3) $\\log K = 4.50/0.0592 = 76.0$.'
-      }
+1. **Q expression:** $Q = [\\text{Cu}^{2+}]/[\\text{Ag}^{+}]^2$.
+2. **Effect of the change:** lowering $[\\text{Ag}^{+}]$ makes $Q = 1.0/(0.10)^2 = 100$, which is greater than 1.
+3. **Conclusion with reason:** with $Q > 1$ the cell is closer to equilibrium than at standard conditions, so the potential is **less than** 0.46 V.
+
+> 💡 A bare "less than" with no reasoning earns no credit. A memorized Nernst number with no explanation of why $Q$ changed is also weak.
+
+---
+
+### Sentence frame
+
+"Decreasing/increasing [species] makes $Q$ larger/smaller than 1, so the cell is closer to/farther from equilibrium than under standard conditions, and $E$ is less than/greater than $E°$."
+      `
     },
     {
       id: 'ne6-dropdown-practice',
       type: 'dropdown-select' as const,
       content: `
-**Problem Strategy** 🔽
+**Build the Justification** 🔽
+
+Cell: $\\text{Pb}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Pb}^{2+}(aq) + \\text{Cu}(s)$. The $\\text{Pb}^{2+}$ solution is changed from 1.0 M to 0.0010 M.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'To find cell voltage at non-standard conditions, use',
-            options: ['E° = (0.0592/n) log K', 'E = E° − (0.0592/n) log Q', 'ΔG° = −nFE°', 'E°(cell) = E°(cathode) − E°(anode)']
+            label: 'The reaction quotient for the cell is',
+            options: ['[Pb²⁺]/[Cu²⁺]', '[Cu²⁺]/[Pb²⁺]', '[Pb²⁺][Cu²⁺]', '[Cu]/[Pb]']
           },
           {
-            label: 'For a concentration cell with a 1000× ratio and n = 1, E equals',
-            options: ['0.0592 V', '0.1184 V', '0.1776 V', '0.2368 V']
+            label: 'After the change, Q is',
+            options: ['less than 1', 'equal to 1', 'greater than 1', 'equal to K']
           },
           {
-            label: 'If a cell has E° = 0, it is a',
-            options: ['dead battery', 'concentration cell', 'fuel cell', 'primary battery']
+            label: 'Compared with standard conditions, the cell is',
+            options: ['farther from equilibrium', 'closer to equilibrium', 'at equilibrium', 'past equilibrium']
           },
           {
-            label: 'The complete thermodynamic triangle connects ΔG°, E°, and K. Knowing any one gives',
-            options: ['only ΔG°', 'only K', 'the other two', 'nothing useful']
+            label: 'So the measured potential is',
+            options: ['greater than E°', 'less than E°', 'equal to E°', 'zero']
           }
         ],
-        correctAnswers: ['E = E° − (0.0592/n) log Q', '0.1776 V', 'concentration cell', 'the other two'],
-        hint1: 'The Nernst equation with Q for non-standard conditions.',
-        hint2: '$E = 0.0592 \\times \\log(1000) = 0.0592 \\times 3$',
-        hint3: 'E° = 0 when both half-reactions are identical.',
-        explanation: 'Nernst equation for non-standard E. Concentration cell with 1000×: E = 0.0592 × 3 = 0.1776 V. E° = 0 for concentration cells. The triangle: any one quantity gives the other two.'
+        correctAnswers: ['[Pb²⁺]/[Cu²⁺]', 'less than 1', 'farther from equilibrium', 'greater than E°'],
+        hint1: 'Products over reactants; leave out the solids.',
+        hint2: '0.0010 / 1.0 is much smaller than 1.',
+        hint3: 'A smaller $Q$ means the reaction has further to go to reach $K$.',
+        explanation: '$Q = [\\text{Pb}^{2+}]/[\\text{Cu}^{2+}] = 0.0010/1.0 = 0.0010$, which is less than 1. The cell is farther from equilibrium than a standard cell, so its potential is greater than $E°$.'
       }
     },
     {
       id: 'ne6-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Exit Quiz — Problem-Solving Workshop** ✅
+**Exit Quiz — Practice and Integration** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student measures E = 1.05 V for a cell with E° = 1.10 V and n = 2 at 25°C. Q is approximately:',
+            question: 'A cell runs 2Al(s) + 3Cu²⁺(aq) → 2Al³⁺(aq) + 3Cu(s). Both solutions are diluted from 1.0 M to 0.10 M. How does E change?',
             options: [
-              '0.02',
-              '2',
-              '50',
-              '500'
+              'It decreases, because Q rises above 1',
+              'It increases, because Q falls below 1',
+              'It stays the same, because both were diluted equally',
+              'It becomes zero, because the cell reaches equilibrium'
             ],
-            correctAnswer: 2,
-            explanation: '$1.05 = 1.10 - (0.0296)\\log Q$. $0.05 = (0.0296)\\log Q$. $\\log Q = 1.69$. $Q = 10^{1.69} \\approx 49 \\approx 50$.'
+            correctAnswer: 0,
+            explanation: '$Q = [\\text{Al}^{3+}]^2/[\\text{Cu}^{2+}]^3 = (0.10)^2/(0.10)^3 = 0.010/0.0010 = 10$. The reactant ion carries the larger exponent, so dilution shrinks the denominator more than the numerator. $Q > 1$ means the cell is closer to equilibrium and $E$ decreases; equal dilution leaves $E$ unchanged only when the exponents match.'
           },
           {
-            question: 'Which change would INCREASE the cell voltage of a Zn-Cu cell?',
+            question: 'Which quantity changes as a galvanic cell discharges?',
             options: [
-              'Increase [$Zn^{2+}$] (product)',
-              'Decrease [$Cu^{2+}$] (reactant)',
-              'Increase [$Cu^{2+}$] (reactant)',
-              'Add more Zn solid'
+              'E°',
+              'ΔG°',
+              'K',
+              'E'
             ],
-            correctAnswer: 2,
-            explanation: 'Increasing [$Cu^{2+}$] (a reactant in the cathode) decreases Q, which increases E. Adding solid Zn does not affect Q (solids are not in Q). Increasing products or decreasing reactants would increase Q and decrease E.'
+            correctAnswer: 3,
+            explanation: '$E°$, $\\Delta G°$ and $K$ are fixed properties of the reaction at a given temperature. Only the actual potential $E$, which depends on the current concentrations through $Q$, changes as the cell runs.'
+          },
+          {
+            question: 'A silver concentration cell has 0.010 M Ag⁺ in beaker A and 1.0 M Ag⁺ in beaker B. Which observation is expected as it runs?',
+            options: [
+              'The silver electrode in A gains mass',
+              'The silver electrode in B gains mass',
+              'The silver electrode in A keeps its mass',
+              '[Ag⁺] in B increases'
+            ],
+            correctAnswer: 1,
+            explanation: 'B is the concentrated side, so $\\text{Ag}^{+}$ is reduced there and silver plates onto B\'s electrode. In A, silver is oxidized, so A\'s electrode loses mass and its $[\\text{Ag}^{+}]$ rises, while B\'s $[\\text{Ag}^{+}]$ falls.'
           }
         ]
       }

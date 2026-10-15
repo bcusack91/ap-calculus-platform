@@ -117,13 +117,13 @@ $$\\boxed{\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}}$$
           },
           {
             question: 'What is the hybridization of the central carbon in $CO_{3}^{2-}$? (3 resonance positions, 0 lone pairs)',
-            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'],
             correctAnswer: 1,
             explanation: 'Carbon in $CO_{3}^{2-}$ has 3 electron domains (bonded to 3 oxygen atoms, regardless of resonance) → $sp^{2}$ hybridization.'
           },
           {
             question: 'What is the hybridization of nitrogen in $NO_{2}^{-}$? (1 single bond + 1 double bond + 1 lone pair)',
-            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'],
             correctAnswer: 1,
             explanation: 'Nitrogen in $NO_{2}^{-}$ has 3 electron domains (1 single bond + 1 double bond + 1 lone pair) → $sp^{2}$ hybridization.'
           },
@@ -186,7 +186,7 @@ $$\\boxed{\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}}$$
 
 ---
 
-> ⚠️ **Warning:** Always check for lone pairs on the atom of interest. They occupy hybrid orbitals just like bonding pairs — lone pairs count in hybridization!
+> ⚠️ **Warning:** Always check for lone pairs on the atom of interest. They count as electron domains just like bonding pairs — lone pairs count in hybridization!
 
 ---
 
@@ -209,7 +209,7 @@ $$\\boxed{\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}}$$
           {
             id: 'hy-4-7-dd2',
             label: 'An atom with 3 bonds and 1 lone pair has steric number 4 → _______ hybridization',
-            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'],
             correctIndex: 2,
             explanation: 'An atom with 3 bonds and 1 lone pair has steric number 4 → $sp^{3}$ hybridization. The lone pair counts!'
           },
@@ -239,7 +239,7 @@ $$\\boxed{\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}}$$
         questions: [
           {
             question: 'In the molecule $H_{2}C$=CH–$CH_{3}$ (propene), what is the hybridization of the middle carbon?',
-            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'],
             correctAnswer: 1,
             explanation: 'The middle carbon has 3 electron domains: 1 C=C double bond + 1 C–C single bond + 1 C–H bond. Steric number = 3 → $sp^{2}$.'
           },

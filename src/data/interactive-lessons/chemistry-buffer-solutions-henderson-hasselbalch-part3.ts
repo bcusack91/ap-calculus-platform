@@ -25,31 +25,21 @@ $$pH = pK_a + \\log\\frac{[A^-]}{[HA]}$$
 ---
 
 ### What You'll Master in Part 3
-- Deriving Henderson-Hasselbalch from the $K_a$ expression
+- Connecting Henderson-Hasselbalch to the $K_a$ expression
 - Using the equation to find pH, p$K_a$, or concentration ratios
 - Applying the basic buffer version: pOH = p$K_b$ + log([$BH^{+}$]/[B])`
     },
     {
-      id: 'bf3-derivation',
+      id: 'bf3-origin',
       type: 'text' as const,
       content: `
-## 📌 Derivation
+## 📌 Where the Equation Comes From
 
-Starting from the $K_a$ expression:
+The Henderson-Hasselbalch equation is the $K_a$ expression for the buffer's weak acid, written in logarithmic form (CED 8.9.A.1):
 
-$$K_a = \\frac{[H^+][A^-]}{[HA]}$$
+$$K_a = \\frac{[H_3O^+][A^-]}{[HA]} \\quad \\Longleftrightarrow \\quad \\boxed{pH = pK_a + \\log\\frac{[A^-]}{[HA]}}$$
 
-Solve for $[H^+]$:
-
-$$[H^+] = K_a \\cdot \\frac{[HA]}{[A^-]}$$
-
-Take $-\\log$ of both sides:
-
-$$-\\log[H^+] = -\\log K_a - \\log\\frac{[HA]}{[A^-]}$$
-
-$$pH = pK_a + \\log\\frac{[A^-]}{[HA]}$$
-
-$$\\boxed{pH = pK_a + \\log\\frac{[A^-]}{[HA]}}$$
+You do not need to derive it on the AP exam (CED 8.9 exclusion); you need to use it and to reason with it.
 
 
 ---
@@ -222,8 +212,8 @@ Both methods give the same answer. Method 1 is usually preferred for consistency
         correctAnswers: ['1', 'increase pH', 'equilibrium has been reached'],
         hint1: '$\\log(0.1) = -1$.',
         hint2: 'Larger ratio means larger log term, higher pH.',
-        hint3: 'The equation is derived from the $K_a$ equilibrium expression.',
-        explanation: '$\\log(0.1) = -1$, so pH = $pK_a - 1$. More $A^-$ increases the ratio, increasing pH. The equation is derived from the equilibrium expression, so equilibrium must be established.'
+        hint3: 'The equation is a form of the $K_a$ equilibrium expression.',
+        explanation: '$\\log(0.1) = -1$, so pH = $pK_a - 1$. More $A^-$ increases the ratio, increasing pH. The equation is a form of the equilibrium expression, so equilibrium must be established.'
       }
     },
     {

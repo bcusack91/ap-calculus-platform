@@ -6,7 +6,7 @@ export const chemOxidationReductionReactionsPart2Data = {
       type: 'text' as const,
       content: `# ⚡ Identifying Redox Reactions
 
-**Part 2 of 7 — OIL RIG and Oxidizing/Reducing Agents**
+**Part 2 of 7 — OIL RIG and Following the Electrons**
 
 ---
 
@@ -17,8 +17,8 @@ export const chemOxidationReductionReactionsPart2Data = {
 | 📌 OIL RIG — The Key Mnemonic |
 | How to Spot a Redox Reaction |
 | Example |
-| ⚡ Oxidizing and Reducing Agents |
-| Definitions |
+| ⚡ Following the Electrons |
+| ⚗️ Redox vs. Non-Redox Reactions |
 
 > 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
@@ -51,7 +51,7 @@ $$\\boxed{\\text{OIL RIG}}$$
 
 1. Assign oxidation states to **every atom** in reactants and products
 2. If any oxidation state **changes**, it\'s a redox reaction
-3. If NO oxidation states change, it\'s NOT redox (e.g., double replacement)
+3. If NO oxidation states change, it\'s NOT redox (e.g., a precipitation or acid–base reaction)
 
 
 ---
@@ -67,61 +67,48 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
       `
     },
     {
-      id: 'or2-agents',
+      id: 'or2-electron-flow',
       type: 'text' as const,
       content: `
-## ⚡ Oxidizing and Reducing Agents
+## ⚡ Following the Electrons
 
-### Definitions
+In every redox reaction, electrons are transferred **from the species that is oxidized to the species that is reduced** (CED 4.7.A.3). Describe each species by what happens to it.
 
-| Agent | What It Does | What Happens to It |
-|-------|-------------|-------------------|
-| **Oxidizing agent** | Causes oxidation in another species | Gets **reduced** itself |
-| **Reducing agent** | Causes reduction in another species | Gets **oxidized** itself |
-
-
----
-
-### The Tricky Part
-
-> ⚠️ **Warning:** The names seem backwards! The agent is named for what it does to the *other* species, not what happens to itself.
-
-- The **oxidizing agent** is the one that **takes** electrons (gets reduced)
-- The **reducing agent** is the one that **gives** electrons (gets oxidized)
+| Species | Electrons | Oxidation number |
+|---------|-----------|------------------|
+| **Oxidized** | Loses them (gives them away) | Increases |
+| **Reduced** | Gains them (receives them) | Decreases |
 
 
 ---
 
-### Example (continued)
+### Electrons Lost = Electrons Gained
 
-$$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$$
+Electrons are not created or destroyed, so the total lost by the oxidized species must equal the total gained by the reduced species.
 
-- **Zn** is the **reducing agent** — it gives up electrons (gets oxidized: 0 → +2)
-- **$Cu^{2+}$** is the **oxidizing agent** — it takes electrons (gets reduced: +2 → 0)
+$$2\\text{Al}(s) + 3\\text{Cu}^{2+}(aq) \\rightarrow 2\\text{Al}^{3+}(aq) + 3\\text{Cu}(s)$$
 
+- Each Al loses 3 electrons → 2 Al lose **6**
+- Each $\\text{Cu}^{2+}$ gains 2 electrons → 3 $\\text{Cu}^{2+}$ gain **6**
 
----
-
-### Common Oxidizing Agents
-
-| Agent | Why |
-|-------|-----|
-| $KMnO_{4}$ (Mn = +7) | Mn is easily reduced |
-| $K_{2}Cr_{2}O_{7}$ (Cr = +6) | Cr is easily reduced |
-| $HNO_{3}$ (concentrated) | $NO_{3}^{-}$ is a strong oxidizer |
-| $O_{2}$ | Oxygen readily gains electrons |
-| Halogens ($F_{2}$, $Cl_{2}$) | Very electronegative |
+The coefficients 2 and 3 are exactly what makes the electron count match.
 
 
 ---
 
-### Common Reducing Agents
+### Naming the Species Correctly
 
-| Agent | Why |
-|-------|-----|
-| Active metals (Na, Mg, Zn) | Easily lose electrons |
-| $H_{2}$ | Can donate electrons |
-| C (carbon/coke) | Commonly reduces metal ores |
+When the element that changes is inside a compound or polyatomic ion, name the **whole species** that contains it.
+
+$$\\text{Fe}_2\\text{O}_3(s) + 3\\text{CO}(g) \\rightarrow 2\\text{Fe}(s) + 3\\text{CO}_2(g)$$
+
+| Element | Change | Species |
+|---------|--------|---------|
+| Fe | +3 → 0 | $\\text{Fe}_2\\text{O}_3$ is reduced |
+| C | +2 → +4 | CO is oxidized |
+| O | −2 → −2 | no change |
+
+> 💡 **Tip:** In free-response answers, write "the species that is oxidized" and "the species that is reduced," and support each claim with the oxidation numbers before and after.
       `
     },
     {
@@ -132,13 +119,14 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
 
 ### Not All Reactions Are Redox!
 
-| Reaction Type | Redox? | Why |
-|--------------|--------|-----|
-| Combustion | ✅ Yes | Carbon/hydrogen oxidized, oxygen reduced |
-| Synthesis (metal + nonmetal) | ✅ Yes | Metal loses $e^{-}$, nonmetal gains $e^{-}$ |
-| Single replacement | ✅ Yes | One element displaces another |
-| Double replacement | ❌ No | Ions just swap partners — no electron transfer |
-| Acid-base (neutralization) | ❌ No | Proton transfer, not electron transfer |
+The AP exam classifies reactions as acid–base, redox, or precipitation (CED 4.7.A). Only one of the three involves electron transfer.
+
+| Reaction | Redox? | Why |
+|----------|--------|-----|
+| Combustion (a redox subclass) | ✅ Yes | Carbon/hydrogen oxidized, oxygen reduced |
+| Metal + nonmetal element | ✅ Yes | Metal loses $e^{-}$, nonmetal gains $e^{-}$ |
+| Metal + another metal's ions | ✅ Yes | One metal is oxidized, the other metal ion is reduced |
+| Acid–base (neutralization) | ❌ No | Proton transfer, not electron transfer |
 | Precipitation | ❌ No | Ions combine to form solid — no $e^{-}$ transfer |
 
 
@@ -169,15 +157,15 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
             explanation: 'Na goes from 0 to +1 — its oxidation state increases, meaning it lost an electron. Oxidation Is Loss (OIL). Na is oxidized.'
           },
           {
-            question: 'In the same reaction, Na is acting as the:',
+            question: 'In the same reaction, how many electrons are transferred in total as written?',
             options: [
-              'Oxidizing agent',
-              'Reducing agent',
-              'Catalyst',
-              'Spectator'
+              '1',
+              '2',
+              '4',
+              '0'
             ],
             correctAnswer: 1,
-            explanation: 'Na is oxidized (loses electrons), which means it CAUSES $Cl_{2}$ to be reduced. The species that gets oxidized is the reducing agent.'
+            explanation: 'Each Na loses 1 electron and there are 2 Na, so 2 electrons are lost; each of the 2 Cl atoms in $Cl_{2}$ gains 1, so 2 are gained. One electron is the per-atom change, and 4 double-counts by adding lost and gained.'
           },
           {
             question: 'Which of these reactions is NOT a redox reaction?',
@@ -188,10 +176,10 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
               '$\\text{CH}_4(g) + 2\\text{O}_2(g) \\rightarrow \\text{CO}_2(g) + 2\\text{H}_2\\text{O}(g)$'
             ],
             correctAnswer: 2,
-            explanation: 'NaCl + $AgNO_{3}$ → AgCl + $NaNO_{3}$ is a double-replacement (precipitation) reaction. No oxidation states change: Na stays +1, Cl stays −1, Ag stays +1, N stays +5, O stays −2. It is NOT redox.'
+            explanation: 'NaCl + $AgNO_{3}$ → AgCl + $NaNO_{3}$ is a precipitation reaction. No oxidation states change: Na stays +1, Cl stays −1, Ag stays +1, N stays +5, O stays −2. It is NOT redox.'
           },
           {
-            question: 'In the reaction $Fe_{2}O_{3}$ + 3CO → 2Fe + $3CO_{2}$, the oxidizing agent is:',
+            question: 'In the reaction $Fe_{2}O_{3}$ + 3CO → 2Fe + $3CO_{2}$, which reactant species is reduced?',
             options: [
               '$Fe_{2}O_{3}$',
               'CO',
@@ -199,7 +187,7 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
               '$CO_{2}$'
             ],
             correctAnswer: 0,
-            explanation: 'Fe in $Fe_{2}O_{3}$ goes from +3 → 0 (reduced). C in CO goes from +2 → +4 (oxidized). $Fe_{2}O_{3}$ gets reduced, so it is the oxidizing agent (it causes CO to be oxidized).'
+            explanation: 'Fe in $Fe_{2}O_{3}$ goes from +3 → 0, so $Fe_{2}O_{3}$ is the species reduced. C in CO goes from +2 → +4, so CO is oxidized. Fe and $CO_{2}$ are products, not reactant species.'
           }
         ]
       }
@@ -240,23 +228,23 @@ For the reaction: $\\text{2Al}(s) + 3\\text{Cl}_2(g) \\rightarrow 2\\text{AlCl}_
             options: ['decrease', 'increase', 'stay the same', 'become zero']
           },
           {
-            label: 'The oxidizing agent in a reaction is the species that',
+            label: 'The species that is reduced in a reaction is the one that',
             options: ['loses electrons', 'gains electrons', 'is unchanged', 'acts as a catalyst']
           },
           {
-            label: 'Double replacement reactions are typically',
-            options: ['redox reactions', 'not redox reactions', 'always redox', 'combustion reactions']
+            label: 'Precipitation reactions are',
+            options: ['redox reactions', 'not redox reactions', 'combustion reactions', 'electron-transfer reactions']
           },
           {
-            label: 'In combustion, the fuel is the',
-            options: ['oxidizing agent', 'reducing agent', 'catalyst', 'spectator']
+            label: 'In combustion, the fuel is the species that is',
+            options: ['oxidized', 'reduced', 'a catalyst', 'a spectator']
           }
         ],
-        correctAnswers: ['increase', 'gains electrons', 'not redox reactions', 'reducing agent'],
+        correctAnswers: ['increase', 'gains electrons', 'not redox reactions', 'oxidized'],
         hint1: 'OIL — Oxidation Is Loss of electrons, oxidation state goes up.',
-        hint2: 'The oxidizing agent takes electrons from the other species.',
-        hint3: 'In double replacement, ions swap — no electrons transfer.',
-        explanation: 'Oxidation = increase in oxidation state. The oxidizing agent gains electrons (gets reduced itself). Double replacement involves ion swapping, not electron transfer. The fuel in combustion is oxidized (gives up electrons) → reducing agent.'
+        hint2: 'RIG — Reduction Is Gain.',
+        hint3: 'In precipitation, ions combine — no electrons transfer.',
+        explanation: 'Oxidation = increase in oxidation state. The species reduced gains electrons. Precipitation involves ions combining into a solid, not electron transfer. The fuel in combustion is oxidized (its carbon gives up electrons to oxygen).'
       }
     },
     {
@@ -268,15 +256,15 @@ For the reaction: $\\text{2Al}(s) + 3\\text{Cl}_2(g) \\rightarrow 2\\text{AlCl}_
       exercise: {
         questions: [
           {
-            question: 'In the reaction $2H_{2}(g)$ + $O_{2}(g)$ → $2H_{2}O(l)$, the reducing agent is:',
+            question: 'In the reaction $2H_{2}(g)$ + $O_{2}(g)$ → $2H_{2}O(l)$, which reactant is oxidized?',
             options: [
               '$O_{2}$',
               '$H_{2}$',
               '$H_{2}O$',
-              'There is no reducing agent'
+              'Neither; no electrons transfer'
             ],
             correctAnswer: 1,
-            explanation: 'H goes from 0 to +1 (oxidized — loses electrons). O goes from 0 to −2 (reduced — gains electrons). $H_{2}$ is oxidized, so it is the reducing agent. $O_{2}$ is the oxidizing agent.'
+            explanation: 'H goes from 0 to +1 (oxidized — loses electrons). O goes from 0 to −2 (reduced — gains electrons). Electrons flow from $H_{2}$ to $O_{2}$; water is the product, not a reactant.'
           },
           {
             question: 'Which observation would suggest a redox reaction is occurring?',

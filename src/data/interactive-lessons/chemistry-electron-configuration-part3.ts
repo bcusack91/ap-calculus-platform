@@ -43,7 +43,7 @@ Filling order: 1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → ...
 ### 2. Pauli Exclusion Principle
 Each orbital can hold a maximum of **2 electrons**, and those 2 electrons must have **opposite spins** (↑↓).
 
-No two electrons in the same atom can have the same set of four quantum numbers.
+That is why an orbital diagram never shows more than two arrows in one box, and why two arrows in the same box always point in opposite directions.
 
 
 ---

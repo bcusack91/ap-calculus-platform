@@ -54,9 +54,9 @@ All half-reactions are written as **reductions** (gaining electrons):
 
 > 🔑 **Key Concept — Reading the Table:**
 >
-> - **More positive** $E°$: stronger tendency to be reduced (stronger oxidizing agent)
-> - **More negative** $E°$: stronger tendency to be oxidized (stronger reducing agent)
-> - The **Standard Hydrogen Electrode (SHE)** is the reference: $E° = 0.00$ V
+> - **More positive** $E°$: the species on the left (for example $\\text{Ag}^+$) is more easily **reduced**
+> - **More negative** $E°$: the metal on the right (for example Li) is more easily **oxidized**
+> - Values are measured relative to the hydrogen half-reaction, which is assigned $E° = 0.00$ V
       `
     },
     {
@@ -107,7 +107,7 @@ $$\\boxed{E^\\circ_{\\text{cell}} = (+0.34) - (-0.76) = +1.10 \\text{ V}}$$
       exercise: {
         questions: [
           {
-            question: 'Which metal is the strongest reducing agent?',
+            question: 'Which metal is most easily oxidized?',
             options: [
               'Au (E° = +1.50 V)',
               'Cu (E° = +0.34 V)',
@@ -115,7 +115,7 @@ $$\\boxed{E^\\circ_{\\text{cell}} = (+0.34) - (-0.76) = +1.10 \\text{ V}}$$
               'Li (E° = −3.04 V)'
             ],
             correctAnswer: 3,
-            explanation: 'The strongest reducing agent has the most negative $E°$ (greatest tendency to be oxidized). Li at $E° = -3.04$ V is the strongest reducing agent on this list.'
+            explanation: 'The metal whose half-reaction has the most negative $E°$ has the greatest tendency to run in reverse, as an oxidation. Li at $E° = -3.04$ V is the most easily oxidized on this list, and Au, with the most positive value, is the hardest to oxidize.'
           },
           {
             question: 'When calculating $E^\\circ_{\\text{cell}}$, you should:',
@@ -181,12 +181,12 @@ $$\\boxed{E^\\circ_{\\text{cell}} = (+0.34) - (-0.76) = +1.10 \\text{ V}}$$
       exercise: {
         dropdowns: [
           {
-            label: 'The reference electrode for standard reduction potentials is',
-            options: ['silver-silver chloride', 'standard hydrogen electrode (SHE)', 'copper electrode', 'saturated calomel electrode']
+            label: 'A metal whose ion has a very negative E° is most easily',
+            options: ['oxidized', 'reduced', 'precipitated', 'neutralized']
           },
           {
-            label: 'A more positive E° means the species is a stronger',
-            options: ['reducing agent', 'oxidizing agent', 'Brønsted acid', 'electron donor']
+            label: 'A more positive E° means the ion on the left of the half-reaction is more easily',
+            options: ['oxidized', 'reduced', 'precipitated', 'neutralized']
           },
           {
             label: 'E° values are NOT multiplied by coefficients because E° is',
@@ -197,11 +197,11 @@ $$\\boxed{E^\\circ_{\\text{cell}} = (+0.34) - (-0.76) = +1.10 \\text{ V}}$$
             options: ['anode', 'cathode', 'salt bridge', 'external circuit']
           }
         ],
-        correctAnswers: ['standard hydrogen electrode (SHE)', 'oxidizing agent', 'an intensive property', 'cathode'],
-        hint1: 'The SHE is defined as E° = 0.00 V.',
-        hint2: 'More positive E° = greater tendency to be reduced = better at oxidizing others.',
+        correctAnswers: ['oxidized', 'reduced', 'an intensive property', 'cathode'],
+        hint1: 'A very negative reduction potential means the reverse half-reaction, oxidation of the metal, is favored.',
+        hint2: 'More positive E° = greater tendency to be reduced.',
         hint3: 'Voltage does not depend on the amount of substance — it is per-electron.',
-        explanation: 'SHE is the reference (E° = 0.00 V). More positive E° → stronger oxidizing agent. E° is intensive (not scaled by coefficients). The higher E° half-reaction is reduced (cathode).'
+        explanation: 'A very negative E° means the metal is easily oxidized; a very positive E° means the ion is easily reduced. E° is intensive (not scaled by coefficients). The higher E° half-reaction is reduced (cathode).'
       }
     },
     {
@@ -232,7 +232,7 @@ $$\\boxed{E^\\circ_{\\text{cell}} = (+0.34) - (-0.76) = +1.10 \\text{ V}}$$
               'Li cathode, Au anode: $E^\\circ_{\\text{cell}} = 4.54$ V'
             ],
             correctAnswer: 1,
-            explanation: '$E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}} = 1.50 - (-3.04) = 4.54$ V. This is the largest possible cell voltage from these three — pairing the strongest oxidizing agent $(Au^{3+})$ with the strongest reducing agent (Li). Making Li the cathode reverses the roles: $-3.04 - 1.50 = -4.54$ V, which is not spontaneous.'
+            explanation: '$E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}} = 1.50 - (-3.04) = 4.54$ V. This is the largest possible cell voltage from these three — pairing the most easily reduced ion $(Au^{3+})$ with the most easily oxidized metal (Li). Making Li the cathode reverses the roles: $-3.04 - 1.50 = -4.54$ V, which is not spontaneous.'
           }
         ]
       }

@@ -103,7 +103,7 @@ A reaction that produces more total molecules than it consumes generally has $\\
 
 ### Rule 4: Temperature Increases Entropy
 
-Higher temperature means more kinetic energy and more accessible microstates.
+Higher temperature broadens the distribution of kinetic energies, so energy is more dispersed (CED 9.1.A.2).
 
 
 ---
@@ -149,7 +149,7 @@ More complex molecules (more atoms, more bonds, more ways to vibrate) have highe
               'Cannot be determined'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta n_{\\text{gas}} = 2 - 3 = -1$. Fewer moles of gas in products means fewer microstates, so $\\Delta S < 0$.'
+            explanation: '$\\Delta n_{\\text{gas}} = 2 - 3 = -1$. Fewer moles of gas in products means less dispersal of matter, so $\\Delta S < 0$.'
           },
           {
             question: 'Which phase transition has the largest positive ΔS?',
@@ -160,7 +160,7 @@ More complex molecules (more atoms, more bonds, more ways to vibrate) have highe
               'Condensation'
             ],
             correctAnswer: 2,
-            explanation: 'Sublimation (solid → gas) skips the liquid phase entirely and has the largest increase in molecular freedom and microstates.'
+            explanation: 'Sublimation (solid → gas) skips the liquid phase entirely and has the largest increase in molecular freedom and dispersal.'
           },
           {
             question: 'Dissolving NaCl in water generally:',
@@ -226,9 +226,9 @@ Type "+" or "−" for the sign of $\\Delta S$:
         ],
         correctAnswers: ['change in moles of gas', 'decrease', '$O_{3}$', 'negative'],
         hint1: 'Gases dominate the entropy calculation.',
-        hint2: 'Smaller volume = fewer positions available = fewer microstates.',
+        hint2: 'Smaller volume = the molecules are less dispersed.',
         hint3: '$O_{3}$ has more atoms and more vibrational modes.',
-        explanation: 'Moles of gas is the strongest predictor. Compression reduces volume and microstates. $O_{3}$ has more complexity (more atoms, more vibrations) than $O_{2}$. Condensation (gas → liquid) always decreases entropy.'
+        explanation: 'Moles of gas is the strongest predictor. Compression confines the gas to a smaller volume. $O_{3}$ has more complexity (more atoms, more vibrations) than $O_{2}$. Condensation (gas → liquid) always decreases entropy.'
       }
     },
     {

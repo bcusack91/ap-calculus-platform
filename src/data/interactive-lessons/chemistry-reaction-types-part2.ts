@@ -4,9 +4,9 @@ export const chemReactionTypesPart2Data = {
     {
       id: 'rt2-intro',
       type: 'text' as const,
-      content: `# 🔄 Single & Double Replacement Reactions
+      content: `# 🔄 Precipitation & Acid–Base Reactions
 
-**Part 2 of 7 — Trading Partners**
+**Part 2 of 7 — Mixing Solutions: Precipitates and Proton Transfer**
 
 ---
 
@@ -14,283 +14,222 @@ export const chemReactionTypesPart2Data = {
 
 | Section |
 |---------|
-| 📌 Single Replacement (Single Displacement) |
-| General Form |
-| Examples |
-| No Reaction Example |
-| 📌 The Activity Series |
+| 📌 Predicting a Precipitate When Two Solutions Mix |
+| The Solubility Information You Need |
+| When Nothing Precipitates |
+| 📌 Acid–Base Reactions in Solution |
+| Four Patterns to Recognize |
 
-> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+> 🔑 **Key Concept:** Precipitation and acid–base reactions are the two reaction types in which **no oxidation number changes**. In one, ions leave solution as a solid; in the other, a proton moves from an acid to a base.
 
 ---
 
 ### What You'll Master in Part 2
-- Understanding the core concepts covered in Part 2
-- Applying these ideas to solve practice problems
-- Building toward AP exam readiness for this topic`
+- Finding the precipitate (if any) when two ionic solutions are mixed
+- Using the sodium/potassium/ammonium/nitrate rule plus solubility data given in a question
+- Writing the products of strong and weak acid–base reactions`
     },
     {
-      id: 'rt2-single-replacement',
+      id: 'rt2-precipitation',
       type: 'text' as const,
       content: `
-## 📌 Single Replacement (Single Displacement)
+## 📌 Predicting a Precipitate When Two Solutions Mix
 
-A more reactive element displaces a less reactive element from a compound.
+Each ionic solution contains separate, hydrated ions. When two solutions are mixed, every cation is now near every anion. A precipitate forms if a **new** cation–anion pairing is insoluble.
 
+### Step-by-Step
 
----
-
-### General Form
-
-$$\\boxed{A + BC \\rightarrow AC + B}$$
-
-Element A replaces element B in compound BC, but **only if A is more reactive than B**.
+1. **List the ions** in each solution.
+2. **Pair each cation with the anion from the other solution** (the "new" pairings).
+3. **Check each new pairing** for solubility.
+4. **Write the solid** (with a correct formula from the ion charges); everything else stays dissolved.
 
 
 ---
 
-### Examples
+### The Solubility Information You Need
 
-| Reaction | Equation |
-|----------|----------|
-| Metal replaces metal | $\\text{Zn} + \\text{CuSO}_4 \\rightarrow \\text{ZnSO}_4 + \\text{Cu}$ |
-| Metal replaces hydrogen | $\\text{Mg} + 2\\text{HCl} \\rightarrow \\text{MgCl}_2 + \\text{H}_2$ |
-| Halogen replaces halogen | $\\text{Cl}_2 + 2\\text{NaBr} \\rightarrow 2\\text{NaCl} + \\text{Br}_2$ |
+> 🔑 **Key Concept:** All **sodium, potassium, ammonium, and nitrate** salts are soluble (CED 4.7.A.5). That is the only rule you must memorize. When a question needs any other compound's solubility, it gives it to you.
 
+**Example:** Solutions of $\\text{Pb(NO}_3)_2$ and $\\text{KI}$ are mixed. (Lead(II) iodide is insoluble.)
 
----
+| Step | Result |
+|------|--------|
+| Ions present | $\\text{Pb}^{2+}$, $\\text{NO}_3^-$, $\\text{K}^+$, $\\text{I}^-$ |
+| New pairings | $\\text{Pb}^{2+}$ with $\\text{I}^-$; $\\text{K}^+$ with $\\text{NO}_3^-$ |
+| Solubility | $\\text{KNO}_3$ is soluble (potassium and nitrate); $\\text{PbI}_2$ is insoluble (given) |
+| Precipitate | $\\text{PbI}_2(s)$, a yellow solid |
 
-### No Reaction Example
-
-$$\\text{Cu} + \\text{ZnSO}_4 \\rightarrow \\text{No Reaction}$$
-
-> ⚠️ **Warning:** Copper is **less reactive** than zinc, so it cannot displace zinc from solution. Always check the activity series before predicting products — if the free element is below the element in the compound, **no reaction** occurs.
-      `
-    },
-    {
-      id: 'rt2-activity-series',
-      type: 'text' as const,
-      content: `
-## 📌 The Activity Series
-
-The activity series ranks metals (and hydrogen) by their ability to lose electrons and form cations. A higher metal can replace a lower one.
+$$\\text{Pb}^{2+}(aq) + 2\\text{I}^-(aq) \\rightarrow \\text{PbI}_2(s)$$
 
 
 ---
 
-### Metal Activity Series (Most → Least Reactive)
+### When Nothing Precipitates
 
-| Most Reactive | | | Least Reactive |
-|:---:|:---:|:---:|:---:|
-| Li, K, Ba, Ca, Na | Mg, Al, Zn, Fe | Ni, Sn, Pb, **$H_{2}$** | Cu, Hg, Ag, Pt, Au |
+If every new pairing is soluble, the ions simply stay dissolved and **no reaction occurs**. Mixing $\\text{NaCl}(aq)$ with $\\text{KNO}_3(aq)$ gives a solution of four kinds of ions, because $\\text{NaNO}_3$ and $\\text{KCl}$ are both sodium, potassium, or nitrate salts.
 
-
----
-
-### Key Rules
-
-> 🔑 **Key Concept:** The activity series determines which replacement reactions will occur:
-
-1. **A metal above $H_{2}$** can react with acids to produce $H_{2}$ gas
-2. **A metal below $H_{2}$** (Cu, Ag, Au) cannot dissolve in common acids
-3. **A metal can replace any metal below it** in solution
-4. **A halogen can replace any halogen below it**: $F_{2}$ > $Cl_{2}$ > $Br_{2}$ > $I_{2}$
-
-
----
-
-### Memory Aid
-
-**Li**ttle **K**ids **Ba**ke **Ca**kes **Na**turally → **M**akes **Al**l **Z**ealous **Fe**llows... → **Ni**ce **Sn**acks **Pb**ring **H**appiness → **Cu**rious **H**umming **Ag**ent **Pt**ays **Au**to
-      `
-    },
-    {
-      id: 'rt2-double-replacement',
-      type: 'text' as const,
-      content: `
-## 📌 Double Replacement (Double Displacement / Metathesis)
-
-Two ionic compounds in solution **exchange ions** to form two new compounds.
-
-
----
-
-### General Form
-
-$$\\boxed{AB + CD \\rightarrow AD + CB}$$
-
-The cations and anions switch partners.
-
-
----
-
-### Driving Forces
-
-A double replacement reaction occurs when one of the products is:
-
-1. **A precipitate** (insoluble solid, denoted ↓)
-2. **Water** (a molecular compound)
-3. **A gas** (escapes the solution, denoted ↑)
-
-
----
-
-### Examples
-
-| Driving Force | Reaction |
-|--------------|----------|
-| Precipitate | $\\text{AgNO}_3 + \\text{NaCl} \\rightarrow \\text{AgCl}\\downarrow + \\text{NaNO}_3$ |
-| Water | $\\text{HCl} + \\text{NaOH} \\rightarrow \\text{NaCl} + \\text{H}_2\\text{O}$ |
-| Gas | $\\text{Na}_2\\text{CO}_3 + 2\\text{HCl} \\rightarrow 2\\text{NaCl} + \\text{H}_2\\text{O} + \\text{CO}_2\\uparrow$ |
-
-
----
-
-### Neutralization
-
-The reaction of an acid with a base to form salt and water is a special case of double replacement:
-
-$$\\boxed{\\text{Acid} + \\text{Base} \\rightarrow \\text{Salt} + \\text{Water}}$$
+> ⚠️ **Warning:** A precipitate is always a **neutral** ionic compound. Balance the charges ($\\text{Pb}^{2+}$ needs two $\\text{I}^-$), and never pair two cations or two anions.
       `
     },
     {
       id: 'rt2-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Replacement Reactions Quiz** 🎯
+**Precipitation Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which reaction will occur based on the activity series?',
+            question: 'Solutions of $\\text{BaCl}_2$ and $\\text{Na}_2\\text{SO}_4$ are mixed. Barium sulfate is insoluble. Which ions remain dissolved after the precipitate forms?',
             options: [
-              '$\\text{Cu} + \\text{FeSO}_4 \\rightarrow \\text{CuSO}_4 + \\text{Fe}$',
-              '$\\text{Au} + \\text{HCl} \\rightarrow \\text{AuCl}_3 + \\text{H}_2$',
-              '$\\text{Zn} + \\text{CuSO}_4 \\rightarrow \\text{ZnSO}_4 + \\text{Cu}$',
-              '$\\text{Ag} + \\text{NaCl} \\rightarrow \\text{AgCl} + \\text{Na}$'
-            ],
-            correctAnswer: 2,
-            explanation: 'Zinc is above copper in the activity series, so Zn can displace Cu from $CuSO_{4}$. Copper cannot displace iron, gold cannot displace hydrogen from acids, and silver cannot displace sodium.'
-          },
-          {
-            question: 'What type of reaction is: $\\text{BaCl}_2 + \\text{Na}_2\\text{SO}_4 \\rightarrow \\text{BaSO}_4\\downarrow + 2\\text{NaCl}$?',
-            options: [
-              'Synthesis',
-              'Single replacement',
-              'Double replacement',
-              'Decomposition'
-            ],
-            correctAnswer: 2,
-            explanation: 'Two ionic compounds exchange ions: $Ba^{2+}$ pairs with $SO_{4}^{2-}$ and $Na^{+}$ pairs with $Cl^{-}$. The precipitate $BaSO_{4}$ drives the reaction forward. This is double replacement.'
-          },
-          {
-            question: 'In the reaction $\\text{Mg} + 2\\text{HCl} \\rightarrow \\text{MgCl}_2 + \\text{H}_2$, what drives the reaction?',
-            options: [
-              'Mg is below H in the activity series',
-              'Mg is above H in the activity series',
-              'A precipitate forms',
-              'The reaction is endothermic'
+              '$\\text{Ba}^{2+}$ and $\\text{SO}_4^{2-}$',
+              '$\\text{Na}^+$ and $\\text{Cl}^-$',
+              '$\\text{Ba}^{2+}$ and $\\text{Cl}^-$',
+              '$\\text{Na}^+$ and $\\text{SO}_4^{2-}$'
             ],
             correctAnswer: 1,
-            explanation: 'Magnesium is above hydrogen in the activity series, meaning Mg is more reactive. It can displace H from HCl, producing $H_{2}$ gas. Metals above H react with acids.'
+            explanation: 'Barium and sulfate ions combine into solid $\\text{BaSO}_4$ and leave solution. Sodium and chloride ions never combine into a solid (all sodium salts are soluble), so they remain dissolved as spectator ions.'
           },
           {
-            question: 'Which is a driving force for a double replacement reaction?',
+            question: 'Which pair of solutions, when mixed, can NOT produce a precipitate?',
             options: [
-              'Heat, light, or sound is released',
-              'All products remain dissolved as ions',
-              'A precipitate, gas, or water forms',
-              'A more reactive metal is present'
+              '$\\text{AgNO}_3$ and $\\text{NaCl}$',
+              '$\\text{CaCl}_2$ and $\\text{Na}_2\\text{CO}_3$',
+              '$\\text{NH}_4\\text{Cl}$ and $\\text{KNO}_3$',
+              '$\\text{Pb(NO}_3)_2$ and $\\text{K}_2\\text{CrO}_4$'
             ],
             correctAnswer: 2,
-            explanation: 'Double replacement reactions are driven by the formation of a precipitate (insoluble solid), a gas that escapes, or water (a stable molecular compound). Without one of these driving forces, no reaction occurs. Releasing heat is not required, and if every product stays dissolved as ions, nothing has actually changed.'
+            explanation: 'The new pairings for ammonium chloride and potassium nitrate are $\\text{NH}_4\\text{NO}_3$ and $\\text{KCl}$, and every ammonium, potassium, and nitrate salt is soluble. Each of the other mixtures has a possible new pairing (silver chloride, calcium carbonate, lead(II) chromate) that is not covered by that rule.'
+          },
+          {
+            question: 'Solutions of $\\text{FeCl}_3$ and $\\text{NaOH}$ are mixed, and iron(III) hydroxide precipitates. What is the formula of the precipitate?',
+            options: [
+              '$\\text{FeOH}$',
+              '$\\text{Fe(OH)}_3$',
+              '$\\text{Fe}_3\\text{OH}$',
+              '$\\text{Fe(OH)}_2$'
+            ],
+            correctAnswer: 1,
+            explanation: 'Iron(III) carries a +3 charge and hydroxide carries −1, so three hydroxide ions balance one iron ion: $\\text{Fe(OH)}_3$. The other formulas do not balance a +3 cation with −1 anions.'
           }
         ]
       }
     },
     {
+      id: 'rt2-acid-base',
+      type: 'text' as const,
+      content: `
+## 📌 Acid–Base Reactions in Solution
+
+An acid–base reaction transfers a proton from the acid to the base. The products are the **conjugate base** of the acid and the **conjugate acid** of the base.
+
+### Four Patterns to Recognize
+
+| Mixture | What actually reacts | Products |
+|---------|---------------------|----------|
+| Strong acid + strong base (e.g., $\\text{HCl} + \\text{NaOH}$) | $\\text{H}^+$ and $\\text{OH}^-$ | $\\text{H}_2\\text{O}$; the other ions stay dissolved |
+| Weak acid + strong base (e.g., $\\text{HF} + \\text{KOH}$) | intact HF and $\\text{OH}^-$ | $\\text{F}^-$ and $\\text{H}_2\\text{O}$ |
+| Strong acid + weak base (e.g., $\\text{HNO}_3 + \\text{NH}_3$) | $\\text{H}^+$ (as $\\text{H}_3\\text{O}^+$) and intact $\\text{NH}_3$ | $\\text{NH}_4^+$ |
+| Acid + carbonate or hydrogen carbonate | $\\text{H}^+$ and $\\text{CO}_3^{2-}$ or $\\text{HCO}_3^-$ | $\\text{H}_2\\text{O}$ and $\\text{CO}_2(g)$ |
+
+> 💡 **Tip:** Weak acids and weak bases are mostly un-ionized in water, so they react as **intact molecules**. Strong acids and strong bases are fully ionized, so their $\\text{H}^+$ or $\\text{OH}^-$ ions do the reacting.
+
+
+---
+
+### Neutralization
+
+When an acid reacts with a hydroxide base, the result is water plus a salt left in solution. This **neutralization** is an acid–base reaction, not a separate category:
+
+$$\\text{H}_2\\text{SO}_4(aq) + 2\\text{NaOH}(aq) \\rightarrow \\text{Na}_2\\text{SO}_4(aq) + 2\\text{H}_2\\text{O}(l)$$
+
+The sodium and sulfate ions end up as dissolved $\\text{Na}_2\\text{SO}_4$; the reaction that matters is $\\text{H}^+ + \\text{OH}^- \\rightarrow \\text{H}_2\\text{O}$.
+      `
+    },
+    {
       id: 'rt2-predict-products',
       type: 'input-boxes' as const,
       content: `
-**Predict the Reaction** 🧮
+**Predict the Key Product** 🧮
 
-For each scenario, indicate if a reaction occurs. Type the **chemical formula of the solid metal produced**, or type **NR** if no reaction occurs.
+Type the formula of the requested product (no charges needed for neutral compounds; write charges as + or − after the formula, e.g. NH4+).
 
-**1)** $\\text{Fe} + \\text{CuSO}_4 \\rightarrow$ ? (Iron is above copper in the activity series)
+**1)** $\\text{AgNO}_3(aq)$ is mixed with $\\text{NaBr}(aq)$. Silver bromide is insoluble. What is the precipitate?
 
-**2)** $\\text{Cu} + \\text{AgNO}_3 \\rightarrow$ ? (Copper is above silver in the activity series)
+**2)** $\\text{HCl}(aq)$ is mixed with $\\text{KOH}(aq)$. What molecular product forms?
 
-**3)** $\\text{Ag} + \\text{HCl} \\rightarrow$ ? (Silver is below hydrogen in the activity series)
+**3)** $\\text{HCl}(aq)$ is added to $\\text{NH}_3(aq)$. What ion does the ammonia become?
       `,
       exercise: {
-        questions: [{ question: '(1)', answer: 'Cu', acceptableAnswers: ['Cu', 'copper'] }, { question: '(2)', answer: 'Ag', acceptableAnswers: ['Ag', 'silver'] }, { question: '(3)', answer: 'NR', acceptableAnswers: ['NR', 'no reaction'] }],
-        hint1: 'Fe is more reactive than Cu, so Fe replaces Cu. What solid metal is released?',
-        hint2: 'Cu is more reactive than Ag, so Cu replaces Ag. What solid metal is released?',
-        hint3: 'Silver is below hydrogen — can it displace H from an acid?',
-        explanation: '1) $\\text{Fe} + \\text{CuSO}_4 \\rightarrow \\text{FeSO}_4 + \\text{Cu}$. Copper metal is produced. 2) $\\text{Cu} + 2\\text{AgNO}_3 \\rightarrow \\text{Cu(NO}_3)_2 + 2\\text{Ag}$. Silver metal is produced. 3) Silver is below hydrogen in the activity series, so it cannot react with HCl. No reaction (NR).'
+        questions: [{ question: '(1)', answer: 'AgBr', acceptableAnswers: ['AgBr'] }, { question: '(2)', answer: 'H2O', acceptableAnswers: ['H2O', 'water'] }, { question: '(3)', answer: 'NH4+', acceptableAnswers: ['NH4+', 'NH4', 'ammonium'] }],
+        hint1: 'The new pairings are silver with bromide and sodium with nitrate. Which one is not a sodium or nitrate salt?',
+        hint2: 'A strong acid and a strong base: what do $\\text{H}^+$ and $\\text{OH}^-$ form?',
+        hint3: 'Ammonia is a base: it accepts a proton.',
+        explanation: '1) Sodium nitrate is soluble, so the precipitate is $\\text{AgBr}(s)$. 2) $\\text{H}^+ + \\text{OH}^- \\rightarrow \\text{H}_2\\text{O}$; potassium and chloride ions stay dissolved. 3) $\\text{NH}_3$ accepts a proton from $\\text{H}_3\\text{O}^+$ to become the ammonium ion, $\\text{NH}_4^+$.'
       }
     },
     {
       id: 'rt2-dropdown-practice',
       type: 'dropdown-select' as const,
       content: `
-**Replacement Reactions — Fill in the Blanks** 🔽
+**Precipitates and Proton Transfer — Fill in the Blanks** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'In a single replacement reaction, the number of elements among the reactants is',
-            options: ['zero', 'one', 'two', 'three']
+            label: 'A salt that is guaranteed to be soluble in water is',
+            options: ['$\\text{AgCl}$', '$\\text{NH}_4\\text{Br}$', '$\\text{BaSO}_4$', '$\\text{CaCO}_3$']
           },
           {
-            label: 'The halogen activity order (most to least reactive) is',
-            options: ['$I_{2}$ > $Br_{2}$ > $Cl_{2}$ > $F_{2}$', '$F_{2}$ > $Cl_{2}$ > $Br_{2}$ > $I_{2}$', '$Cl_{2}$ > $F_{2}$ > $Br_{2}$ > $I_{2}$', '$F_{2}$ > $I_{2}$ > $Br_{2}$ > $Cl_{2}$']
+            label: 'When a weak acid reacts with hydroxide, the weak acid is written',
+            options: ['as separate ions', 'as an intact molecule', 'as a precipitate', 'as a gas']
           },
           {
-            label: 'A neutralization reaction (acid + base → salt + water) is a type of',
-            options: ['synthesis', 'decomposition', 'single replacement', 'double replacement']
+            label: 'An acid reacting with a carbonate produces water and',
+            options: ['hydrogen gas', 'oxygen gas', 'carbon dioxide gas', 'a carbonate precipitate']
           },
           {
-            label: 'If mixing two ionic solutions produces no precipitate, gas, or water, then',
-            options: ['a synthesis occurs', 'a single replacement occurs', 'no reaction occurs', 'decomposition occurs']
+            label: 'Ions that stay dissolved and unchanged when a precipitate forms are called',
+            options: ['conjugate ions', 'spectator ions', 'common ions', 'polyatomic ions']
           }
         ],
-        correctAnswers: ['one', '$F_{2}$ > $Cl_{2}$ > $Br_{2}$ > $I_{2}$', 'double replacement', 'no reaction occurs'],
-        hint1: 'Single replacement: element + compound → compound + element. How many uncombined elements are among the reactants?',
-        hint2: 'Reactivity decreases going down Group 17.',
-        hint3: 'Acid–base neutralization: two compounds exchange ions.',
-        explanation: 'In single replacement, there is exactly one free element as a reactant. Halogen reactivity: $F_{2}$ > $Cl_{2}$ > $Br_{2}$ > $I_{2}$ (decreases down the group). Neutralization is double replacement (ion exchange). Without a driving force (precipitate, gas, or water), no double replacement occurs.'
+        correctAnswers: ['$\\text{NH}_4\\text{Br}$', 'as an intact molecule', 'carbon dioxide gas', 'spectator ions'],
+        hint1: 'Which salt contains sodium, potassium, ammonium, or nitrate?',
+        hint2: 'Weak acids are mostly un-ionized in water.',
+        hint3: 'Carbonate accepts protons to form $\\text{H}_2\\text{CO}_3$, which breaks apart.',
+        explanation: 'Ammonium bromide is an ammonium salt, so it is soluble; the other three are common precipitates. Weak acids react as intact molecules. Acid + carbonate gives water and $\\text{CO}_2$. Ions that remain unchanged in solution are spectator ions.'
       }
     },
     {
       id: 'rt2-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Exit Quiz — Single & Double Replacement** ✅
+**Exit Quiz — Precipitation & Acid–Base** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'When chlorine gas is bubbled through a solution of potassium iodide, the products are:',
+            question: 'Aqueous acetic acid, $\\text{HC}_2\\text{H}_3\\text{O}_2$, is mixed with aqueous sodium hydroxide. Which equation shows the species that actually react?',
             options: [
-              'KCl + $I_{2}$',
-              'No reaction occurs',
-              'KCl + I',
-              '$KCl_{2}$ + $I_{2}$'
+              '$\\text{H}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{H}_2\\text{O}(l)$',
+              '$\\text{HC}_2\\text{H}_3\\text{O}_2(aq) + \\text{OH}^-(aq) \\rightarrow \\text{C}_2\\text{H}_3\\text{O}_2^-(aq) + \\text{H}_2\\text{O}(l)$',
+              '$\\text{Na}^+(aq) + \\text{C}_2\\text{H}_3\\text{O}_2^-(aq) \\rightarrow \\text{NaC}_2\\text{H}_3\\text{O}_2(s)$',
+              '$\\text{HC}_2\\text{H}_3\\text{O}_2(aq) + \\text{Na}^+(aq) \\rightarrow \\text{NaC}_2\\text{H}_3\\text{O}_2(aq) + \\text{H}^+(aq)$'
             ],
-            correctAnswer: 0,
-            explanation: '$\\text{Cl}_2 + 2\\text{KI} \\rightarrow 2\\text{KCl} + \\text{I}_2$. Chlorine is above iodine in the halogen activity series, so $Cl_{2}$ displaces $I^{-}$ from KI. This is single replacement. Free iodine is diatomic ($I_{2}$, not I), and potassium chloride is KCl because $K^{+}$ and $Cl^{-}$ combine 1:1.'
+            correctAnswer: 1,
+            explanation: 'Acetic acid is weak, so it is mostly un-ionized and reacts as an intact molecule, giving its proton to hydroxide. Writing only $\\text{H}^+ + \\text{OH}^-$ treats it as a strong acid. Sodium acetate is soluble (a sodium salt), so it does not precipitate, and sodium ions do not take part.'
           },
           {
-            question: 'Mixing solutions of lead(II) nitrate and potassium iodide produces a yellow precipitate. This reaction is:',
+            question: 'Solutions of $\\text{CuSO}_4$ and $\\text{K}_2\\text{S}$ are mixed. Copper(II) sulfide is insoluble. What happens?',
             options: [
-              'Synthesis',
-              'Decomposition',
-              'Single replacement',
-              'Double replacement'
+              'Potassium sulfate precipitates and copper ions stay dissolved',
+              'CuS precipitates, leaving potassium and sulfate ions dissolved',
+              'No reaction occurs because every product is soluble',
+              'Copper metal forms because sulfide transfers electrons'
             ],
-            correctAnswer: 3,
-            explanation: '$\\text{Pb(NO}_3)_2 + 2\\text{KI} \\rightarrow \\text{PbI}_2\\downarrow + 2\\text{KNO}_3$. Two ionic compounds exchange ions, and the insoluble precipitate $PbI_{2}$ (yellow) drives the reaction. This is double replacement.'
+            correctAnswer: 1,
+            explanation: 'The new pairings are $\\text{Cu}^{2+}$ with $\\text{S}^{2-}$ and $\\text{K}^+$ with $\\text{SO}_4^{2-}$. Potassium sulfate is soluble (a potassium salt), and copper(II) sulfide is given as insoluble, so CuS(s) forms while potassium and sulfate ions remain as spectators.'
           }
         ]
       }

@@ -207,15 +207,15 @@ Convert to basic solution:
             options: ['$H^{+}$ on the left', '$H^{+}$ on the right', 'no $H^{+}$ anywhere', 'equal $H^{+}$ and $OH^{-}$']
           },
           {
-            label: 'Batteries in alkaline solution involve redox reactions balanced in',
-            options: ['acidic solution', 'basic solution', 'neutral solution', 'no solution needed']
+            label: 'Each $H^{+}$ neutralized by an added $OH^{-}$ becomes one',
+            options: ['$H_{2}O$', '$O_{2}$', '$H_{2}$', '$H_{3}O^{+}$']
           }
         ],
-        correctAnswers: ['identical to the acidic method', '$H_{2}O$ and $OH^{-}$', 'no $H^{+}$ anywhere', 'basic solution'],
+        correctAnswers: ['identical to the acidic method', '$H_{2}O$ and $OH^{-}$', 'no $H^{+}$ anywhere', '$H_{2}O$'],
         hint1: 'We balance in acid first, then convert.',
         hint2: '$H_{2}O$ balances O, then $OH^{-}$ replaces $H^{+}$.',
         hint3: 'All $H^{+}$ must be neutralized by $OH^{-}$.',
-        explanation: 'Steps 1–7 are identical to acidic. In basic solution, O is balanced by $H_{2}O$ and $OH^{-}$ (after conversion). No $H^{+}$ remains. Alkaline batteries operate in basic solution.'
+        explanation: 'Steps 1–7 are identical to acidic. In basic solution, O is balanced by $H_{2}O$ and $OH^{-}$ (after conversion). No $H^{+}$ remains, because each $H^{+}$ + $OH^{-}$ pair becomes one $H_{2}O$.'
       }
     },
     {

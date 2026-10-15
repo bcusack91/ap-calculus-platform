@@ -18,8 +18,8 @@ export const chemElectronConfigPart7Data = {
 | Aufbau filling order | Part 2 | Write any configuration correctly |
 | Three rules | Part 3 | Avoid common errors |
 | Noble gas shorthand | Part 4 | Simplify and focus on valence electrons |
-| Exceptions & ions | Part 5 | Handle Cr, Cu, and transition metal ions |
-| Quantum numbers | Part 6 | Full electron "addresses" |
+| Ion configurations | Part 5 | Typical charges, transition-metal ions, isoelectronic sizes |
+| Orbital diagrams & Coulomb's law | Part 6 | Unpaired electrons and how tightly each electron is held |
 
 > 🔑 **Why this matters:** The AP exam tests electron configuration in multiple-choice, free-response, AND as background knowledge for bonding, periodicity, and spectroscopy questions.
 
@@ -132,12 +132,12 @@ The ion $Ti^{2+}$ is used in some catalytic processes. What is the ground-state 
 
 ---
 
-### Mistake 2: Forgetting Exceptions
-❌ Cr: [Ar] $4s^{2}$ $3d^{4}$  
-✅ Cr: [Ar] $3d^{5}$ $4s^{1}$ (half-filled d subshell)
+### Mistake 2: Forgetting to Adjust the Electron Count for an Ion
+❌ $S^{2-}$: [Ne] $3s^{2}$ $3p^{4}$ (that is neutral S, with 16 electrons)  
+✅ $S^{2-}$: [Ne] $3s^{2}$ $3p^{6}$ = [Ar] (16 + 2 = 18 electrons)
 
-❌ Cu: [Ar] $4s^{2}$ $3d^{9}$  
-✅ Cu: [Ar] $3d^{10}$ $4s^{1}$ (fully filled d subshell)
+❌ $Al^{3+}$: [Ne] $3s^{2}$ $3p^{1}$  
+✅ $Al^{3+}$: [Ne] (13 − 3 = 10 electrons)
 
 
 ---
@@ -167,9 +167,9 @@ Write the electron configuration in noble gas shorthand (e.g., [Ar] 3d5 4s1). A 
             explanation: 'Neutral Co: [Ar] $4s^{2}$ $3d^{7}$. Remove 3 electrons: first both 4s electrons (2), then 1 from 3d → [Ar] $3d^{6}$. $Co^{3+}$ has 24 electrons total (27 − 3).'
           },
           {
-            label: '$Ag^{+}$ (Silver ion, Z = 47)',
+            label: '$Cd^{2+}$ (Cadmium ion, Z = 48)',
             correctAnswer: '[Kr] 4d10',
-            explanation: 'Neutral Ag is an exception (like Cu): [Kr] $4d^{10}$ $5s^{1}$. Remove 1 electron from 5s → [Kr] $4d^{10}$. Silver ion has a completely filled d subshell, making it very stable.'
+            explanation: 'Neutral Cd: [Kr] $5s^{2}$ $4d^{10}$. Remove the 2 electrons with the highest n, both from 5s → [Kr] $4d^{10}$. The ion has a completely filled d subshell.'
           }
         ]
       }
@@ -219,9 +219,9 @@ Congratulations on completing all 7 parts! Here is everything you need to know:
 | Subshells | s, p, d, f hold 2, 6, 10, 14 $e^{-}$ | Know max electrons per subshell |
 | Three Rules | Aufbau → Pauli → Hund's | Apply in this order |
 | Noble Gas Shorthand | Replace core with [noble gas] | Focus on valence electrons |
-| Exceptions | Cr: [Ar] $3d^{5}$ $4s^{1}$, Cu: [Ar] $3d^{10}$ $4s^{1}$ | Half-filled/full d = extra stability |
 | Ion Configs | Remove from highest n first | 4s before 3d for TM cations |
-| Quantum Numbers | n, l, $m_l$, $m_s$ | Uniquely identify every electron |
+| Orbital Diagrams | Boxes and arrows; Hund's rule | Count unpaired electrons |
+| Coulomb's Law | $F \\propto q_1q_2/r^2$ | Core electrons held more tightly than valence |
 | Periodic Trends | Radius, IE, EN from $e^{-}$ config | Know the exceptions (Be→B, N→O) |
 
 ---
@@ -229,9 +229,9 @@ Congratulations on completing all 7 parts! Here is everything you need to know:
 ### ✅ Final Checklist
 
 - ☐ I can write the full and shorthand configuration for any element
-- ☐ I know the Cr and Cu exceptions and can explain why
 - ☐ I can write ion configurations (removing 4s before 3d)
-- ☐ I can assign all four quantum numbers to any electron
+- ☐ I can draw orbital diagrams and count unpaired electrons
+- ☐ I can use Coulomb's law to compare how tightly electrons are held
 - ☐ I can explain periodic trends using electron configuration
 - ☐ I can identify IE exceptions and explain them
 

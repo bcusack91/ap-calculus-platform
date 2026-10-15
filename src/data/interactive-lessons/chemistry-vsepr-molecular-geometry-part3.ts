@@ -182,8 +182,10 @@ $SF_{6}$ is a classic example: sulfur forms 6 equivalent bonds to fluorine with 
 | 2 | Linear | 180° | sp | $CO_{2}$ |
 | 3 | Trigonal planar | 120° | $sp^{2}$ | $BF_{3}$ |
 | 4 | Tetrahedral | 109.5° | $sp^{3}$ | $CH_{4}$ |
-| 5 | Trigonal bipyramidal | 90°, 120° | $sp^{3}d$ | $PCl_{5}$ |
-| 6 | Octahedral | 90° | $sp^{3}d^{2}$ | $SF_{6}$ |
+| 5 | Trigonal bipyramidal | 90°, 120° | — | $PCl_{5}$ |
+| 6 | Octahedral | 90° | — | $SF_{6}$ |
+
+For steric numbers 5 and 6 you are responsible only for the **shape**; hybridization labels for these atoms are not assessed on the AP exam.
 
 ### Pattern: Bond Angles Decrease as Steric Number Increases
 
@@ -220,17 +222,17 @@ $$\\boxed{180° \\to 120° \\to 109.5° \\to 90°}$$
           },
           {
             id: 'vg-3-7-dd3',
-            label: 'Trigonal bipyramidal geometry (steric number 5) corresponds to _______',
-            options: ['$sp^{2}$', '$sp^{3}$', '$sp^{3}d$', '$sp^{3}d^{2}$'],
-            correctIndex: 2,
-            explanation: 'Trigonal bipyramidal geometry (steric number 5) corresponds to $sp^{3}d$ hybridization.'
+            label: 'A central atom with 4 bonded atoms and 1 lone pair (such as S in $SF_{4}$) has the molecular shape',
+            options: ['Seesaw', 'Square pyramidal', 'Trigonal pyramidal'],
+            correctIndex: 0,
+            explanation: 'Five electron domains give a trigonal bipyramidal arrangement. The lone pair takes an equatorial position, leaving four atoms in a seesaw shape.'
           },
           {
             id: 'vg-3-7-dd4',
-            label: 'Octahedral geometry (steric number 6) corresponds to _______ hybridization',
-            options: ['$sp^{2}$', '$sp^{3}$', '$sp^{3}d$', '$sp^{3}d^{2}$'],
-            correctIndex: 3,
-            explanation: 'Octahedral geometry (steric number 6) corresponds to $sp^{3}d^{2}$ hybridization.'
+            label: 'A central atom with 4 bonded atoms and 2 lone pairs (such as Xe in $XeF_{4}$) has the molecular shape',
+            options: ['Tetrahedral', 'Square planar', 'Seesaw'],
+            correctIndex: 1,
+            explanation: 'Six electron domains give an octahedral arrangement. The two lone pairs sit opposite each other (180° apart), leaving four atoms in a square planar shape.'
           }
         ]
       }

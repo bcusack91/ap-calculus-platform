@@ -29,22 +29,14 @@ This gives us a **starting point** for measuring entropy — unlike enthalpy, wh
 
 ### Why Perfect Crystal?
 
-At 0 K, a perfect crystal has exactly **one microstate**: every atom is in its fixed position with zero thermal motion. Since $S = k \\ln 1 = 0$.
+At 0 K, every particle in a perfect crystal sits in a fixed position with minimal motion, so there is no dispersal of matter or energy left to remove.
 
 
 ---
 
 ### Building Up from Zero
 
-We measure entropy by carefully adding heat from 0 K and tracking $\\Delta S = q_{\\text{rev}}/T$:
-
-| Phase | Method |
-|-------|--------|
-| 0 K → solid | Heat solid, measure $C_p$ |
-| Melting point | Add $\\Delta H_{\\text{fus}} / T_{\\text{fus}}$ |
-| Liquid phase | Heat liquid, measure $C_p$ |
-| Boiling point | Add $\\Delta H_{\\text{vap}} / T_{\\text{vap}}$ |
-| Gas phase | Heat gas, measure $C_p$ |
+Starting from zero at 0 K, a substance's entropy rises as it is warmed (energy disperses), with large jumps when it melts and especially when it boils (matter disperses). The tabulated value $S°$ is the total at 298 K and 1 atm. You never need to calculate an absolute entropy on the AP exam; you use tabulated $S°$ values (CED 9.2).
       `
     },
     {
@@ -115,15 +107,15 @@ Given: $S°$(CaCO₃) = 92.9, $S°$(CaO) = 39.7, $S°$(CO₂) = 213.7 J/(mol·K)
 
 **2)** Is $\\Delta S°$ positive or negative? (type positive or negative)
 
-**3)** Does this make physical sense? A solid breaks into a solid + gas — more or fewer microstates? (type more or fewer)
+**3)** Does this make physical sense? A solid breaks into a solid + gas — is matter more or less dispersed? (type more or less)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['160.5', 'positive', 'more'],
         hint1: '$\\Delta S° = [S°(\\text{CaO}) + S°(\\text{CO}_2)] - S°(\\text{CaCO}_3)$',
         hint2: 'Check the sign of your answer.',
-        hint3: 'A solid producing a gas dramatically increases the number of microstates.',
-        explanation: '$\\Delta S° = (39.7 + 213.7) - 92.9 = 253.4 - 92.9 = 160.5$ J/(mol·K). Positive, as expected: producing a gas from a solid creates many more microstates.'
+        hint3: 'A solid producing a gas dramatically increases dispersal.',
+        explanation: '$\\Delta S° = (39.7 + 213.7) - 92.9 = 253.4 - 92.9 = 160.5$ J/(mol·K). Positive, as expected: producing a gas from a solid makes matter much more dispersed.'
       }
     },
     {
@@ -136,7 +128,7 @@ Given: $S°$(CaCO₃) = 92.9, $S°$(CaO) = 39.7, $S°$(CO₂) = 213.7 J/(mol·K)
         dropdowns: [
           {
             label: 'At 0 K, a perfect crystal has entropy of',
-            options: ['infinity', 'zero', 'k_B', 'negative']
+            options: ['infinity', 'zero', 'one', 'negative']
           },
           {
             label: 'Between $H_{2}O(l)$ and $H_{2}O(g)$, which has higher $S°$?',
@@ -152,9 +144,9 @@ Given: $S°$(CaCO₃) = 92.9, $S°$(CaO) = 39.7, $S°$(CO₂) = 213.7 J/(mol·K)
           }
         ],
         correctAnswers: ['zero', '$H_{2}O(g)$', 'positive', 'always positive'],
-        hint1: 'Third Law: $S = k \\ln 1 = 0$.',
-        hint2: 'Gases have vastly more microstates.',
-        hint3: 'More gas molecules = more microstates.',
+        hint1: 'A perfect crystal at 0 K has no dispersal left.',
+        hint2: 'Gas molecules are far more dispersed.',
+        hint3: 'More gas molecules = more dispersal of matter.',
         explanation: 'Third Law gives S = 0 at 0 K. Gas has higher S° than liquid. More gas → positive ΔS°. Unlike $\\Delta H_f°$ (zero for elements), $S°$ is measured from absolute zero and is always positive above 0 K.'
       }
     },
@@ -169,13 +161,13 @@ Given: $S°$(CaCO₃) = 92.9, $S°$(CaO) = 39.7, $S°$(CO₂) = 213.7 J/(mol·K)
           {
             question: 'Why can we assign absolute entropy values but not absolute enthalpy values?',
             options: [
-              'Entropy is a state function, while enthalpy depends on path',
+              'Enthalpy is always negative, so it has no zero point',
               'The Third Law fixes S = 0 for a perfect crystal at 0 K',
               'Enthalpy cannot be measured, only estimated from bond energies',
               'Entropy is always positive, so it needs no reference state'
             ],
             correctAnswer: 1,
-            explanation: 'The Third Law provides an absolute reference: S = 0 for a perfect crystal at 0 K. No such zero point exists for enthalpy (which, like entropy, is a state function), so we use formation values (ΔH°f) measured relative to the elements instead.'
+            explanation: 'The Third Law provides an absolute reference: S = 0 for a perfect crystal at 0 K. No such zero point exists for enthalpy, so we use formation values (ΔH°f) measured relative to the elements instead.'
           }
         ]
       }
