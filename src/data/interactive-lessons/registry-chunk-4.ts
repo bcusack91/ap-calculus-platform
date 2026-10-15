@@ -571,7 +571,7 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englit-poetry-2-part1').then(m => m.englitPoetry2Part1Data) },
-      { title: 'Key Processes', loader: () => import('./englit-poetry-2-part2').then(m => m.englitPoetry2Part2Data) },
+      { title: 'The Speaker as Character: Dramatic Monologue and Persona', loader: () => import('./englit-poetry-2-part2').then(m => m.englitPoetry2Part2Data) },
       { title: 'Patterns & Examples', loader: () => import('./englit-poetry-2-part3').then(m => m.englitPoetry2Part3Data) },
       { title: 'Connections & Interactions', loader: () => import('./englit-poetry-2-part4').then(m => m.englitPoetry2Part4Data) },
       { title: 'Change Over Time', loader: () => import('./englit-poetry-2-part5').then(m => m.englitPoetry2Part5Data) },
@@ -862,9 +862,9 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Diction in Depth: Roosevelt\'s Revisions to the War Message, December 1941', loader: () => import('./englang-diction-syntax-part2').then(m => m.englangDictionSyntaxPart2Data) },
       { title: 'Syntax in Depth: Clauses, Balance, and Johnson\'s Letter to Lord Chesterfield, 1755', loader: () => import('./englang-diction-syntax-part3').then(m => m.englangDictionSyntaxPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./englang-diction-syntax-part4').then(m => m.englangDictionSyntaxPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englang-diction-syntax-part5').then(m => m.englangDictionSyntaxPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englang-diction-syntax-part6').then(m => m.englangDictionSyntaxPart6Data) },
-      { title: 'AP Review', loader: () => import('./englang-diction-syntax-part7').then(m => m.englangDictionSyntaxPart7Data) }
+      { title: 'Diction and Syntax Together: Older Meanings, Combined Effects, and Common Misreadings', loader: () => import('./englang-diction-syntax-part5').then(m => m.englangDictionSyntaxPart5Data) },
+      { title: 'Exam Practice: Wilson\'s War Message, April 2, 1917', loader: () => import('./englang-diction-syntax-part6').then(m => m.englangDictionSyntaxPart6Data) },
+      { title: 'Review: The Toolkit, the Method, and Mixed Practice', loader: () => import('./englang-diction-syntax-part7').then(m => m.englangDictionSyntaxPart7Data) }
     ],
   },
   'englang-style-reading': {
@@ -887,8 +887,8 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Building Clear Sentences: Coordination and Subordination', loader: () => import('./englang-style-writing-part3').then(m => m.englangStyleWritingPart3Data) },
       { title: 'Concision, Emphasis, and Variety', loader: () => import('./englang-style-writing-part4').then(m => m.englangStyleWritingPart4Data) },
       { title: 'Conventions as Rhetoric, and Common Misconceptions', loader: () => import('./englang-style-writing-part5').then(m => m.englangStyleWritingPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englang-style-writing-part6').then(m => m.englangStyleWritingPart6Data) },
-      { title: 'AP Review', loader: () => import('./englang-style-writing-part7').then(m => m.englangStyleWritingPart7Data) }
+      { title: 'Exam Practice: Revising Drafts and Earning Row C', loader: () => import('./englang-style-writing-part6').then(m => m.englangStyleWritingPart6Data) },
+      { title: 'Review: A Revision Toolkit for Your Own Prose', loader: () => import('./englang-style-writing-part7').then(m => m.englangStyleWritingPart7Data) }
     ],
   },
   'englang-tone-voice-analysis': {

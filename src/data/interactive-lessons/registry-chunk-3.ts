@@ -1308,10 +1308,10 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
       { title: 'Core Concepts', loader: () => import('./wh-east-asian-empires-part1').then(m => m.whEastAsianEmpiresPart1Data) },
       { title: 'Ming China (1368–1644): Autocracy, Silver and Collapse', loader: () => import('./wh-east-asian-empires-part2').then(m => m.whEastAsianEmpiresPart2Data) },
       { title: 'Qing China (1644–c. 1750): A Conquest Dynasty Rules', loader: () => import('./wh-east-asian-empires-part3').then(m => m.whEastAsianEmpiresPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./wh-east-asian-empires-part4').then(m => m.whEastAsianEmpiresPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./wh-east-asian-empires-part5').then(m => m.whEastAsianEmpiresPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./wh-east-asian-empires-part6').then(m => m.whEastAsianEmpiresPart6Data) },
-      { title: 'AP Review', loader: () => import('./wh-east-asian-empires-part7').then(m => m.whEastAsianEmpiresPart7Data) }
+      { title: 'Tokugawa Japan (1600–c. 1750): Order, Status and Controlled Contact', loader: () => import('./wh-east-asian-empires-part4').then(m => m.whEastAsianEmpiresPart4Data) },
+      { title: 'Russia (1450–1750) and a Comparison with the Qing', loader: () => import('./wh-east-asian-empires-part5').then(m => m.whEastAsianEmpiresPart5Data) },
+      { title: 'AP Exam Workshop: Sources, SAQs and the LEQ', loader: () => import('./wh-east-asian-empires-part6').then(m => m.whEastAsianEmpiresPart6Data) },
+      { title: 'Synthesis Review: Periodization, Comparison and Causation', loader: () => import('./wh-east-asian-empires-part7').then(m => m.whEastAsianEmpiresPart7Data) }
     ],
   },
   'wh-exploration-columbian-exchange': {
@@ -1511,9 +1511,9 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'Core Concepts', loader: () => import('./apush-colonial-america-part1').then(m => m.apushColonialAmericaPart1Data) },
       { title: 'Why the Regions Diverged: Land, Motives and Labor', loader: () => import('./apush-colonial-america-part2').then(m => m.apushColonialAmericaPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./apush-colonial-america-part3').then(m => m.apushColonialAmericaPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./apush-colonial-america-part4').then(m => m.apushColonialAmericaPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./apush-colonial-america-part5').then(m => m.apushColonialAmericaPart5Data) },
+      { title: 'Reading Colonial Voices: Leaders, Servants and Lawmakers', loader: () => import('./apush-colonial-america-part3').then(m => m.apushColonialAmericaPart3Data) },
+      { title: 'Transatlantic Trade and Mercantilism: Causation with Data', loader: () => import('./apush-colonial-america-part4').then(m => m.apushColonialAmericaPart4Data) },
+      { title: 'Empire and Autonomy: Change Over Time and Common Misconceptions', loader: () => import('./apush-colonial-america-part5').then(m => m.apushColonialAmericaPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./apush-colonial-america-part6').then(m => m.apushColonialAmericaPart6Data) },
       { title: 'AP Review', loader: () => import('./apush-colonial-america-part7').then(m => m.apushColonialAmericaPart7Data) }
     ],
@@ -1534,9 +1534,9 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./apush-revolution-independence-part1').then(m => m.apushRevolutionIndependencePart1Data) },
-      { title: 'Key Processes', loader: () => import('./apush-revolution-independence-part2').then(m => m.apushRevolutionIndependencePart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./apush-revolution-independence-part3').then(m => m.apushRevolutionIndependencePart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./apush-revolution-independence-part4').then(m => m.apushRevolutionIndependencePart4Data) },
+      { title: 'From Imperial Victory to Imperial Crisis, 1754–1766', loader: () => import('./apush-revolution-independence-part2').then(m => m.apushRevolutionIndependencePart2Data) },
+      { title: 'The Case for Resistance, Read Closely (1767–1776)', loader: () => import('./apush-revolution-independence-part3').then(m => m.apushRevolutionIndependencePart3Data) },
+      { title: 'The War for Independence: Comparison and Causation', loader: () => import('./apush-revolution-independence-part4').then(m => m.apushRevolutionIndependencePart4Data) },
       { title: 'Change Over Time', loader: () => import('./apush-revolution-independence-part5').then(m => m.apushRevolutionIndependencePart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./apush-revolution-independence-part6').then(m => m.apushRevolutionIndependencePart6Data) },
       { title: 'AP Review', loader: () => import('./apush-revolution-independence-part7').then(m => m.apushRevolutionIndependencePart7Data) }
@@ -1546,10 +1546,10 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./apush-constitution-early-republic-part1').then(m => m.apushConstitutionEarlyRepublicPart1Data) },
-      { title: 'Key Processes', loader: () => import('./apush-constitution-early-republic-part2').then(m => m.apushConstitutionEarlyRepublicPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./apush-constitution-early-republic-part3').then(m => m.apushConstitutionEarlyRepublicPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./apush-constitution-early-republic-part4').then(m => m.apushConstitutionEarlyRepublicPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./apush-constitution-early-republic-part5').then(m => m.apushConstitutionEarlyRepublicPart5Data) },
+      { title: 'Launching the Federal Government: Hamilton\'s Program and the First Parties', loader: () => import('./apush-constitution-early-republic-part2').then(m => m.apushConstitutionEarlyRepublicPart2Data) },
+      { title: 'Two Visions in Their Own Words: Hamilton and Jefferson', loader: () => import('./apush-constitution-early-republic-part3').then(m => m.apushConstitutionEarlyRepublicPart3Data) },
+      { title: 'A Republic in a World at War: Causation and the Crisis of 1798–1800', loader: () => import('./apush-constitution-early-republic-part4').then(m => m.apushConstitutionEarlyRepublicPart4Data) },
+      { title: 'The West, Slavery, and the Limits of the Founding', loader: () => import('./apush-constitution-early-republic-part5').then(m => m.apushConstitutionEarlyRepublicPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./apush-constitution-early-republic-part6').then(m => m.apushConstitutionEarlyRepublicPart6Data) },
       { title: 'AP Review', loader: () => import('./apush-constitution-early-republic-part7').then(m => m.apushConstitutionEarlyRepublicPart7Data) }
     ],
