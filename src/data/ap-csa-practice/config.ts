@@ -5,7 +5,7 @@ import { FRQS } from './frqs'
 export const config: FullLengthExamConfig = {
   subject: 'AP Computer Science A',
   description:
-    'Full-length practice exam modeled on the official College Board AP Computer Science A exam. 40 Java multiple-choice questions covering primitives, objects, control flow, classes, arrays, ArrayList, 2D arrays, inheritance, and recursion, plus 4 free-response questions: Methods & Control Structures, Class Design, ArrayList, and 2D Array. All Java code follows the AP CSA Reference (Java subset).',
+    'Full-length practice exam modeled on the official College Board AP Computer Science A exam (2025–26 course). 42 Java multiple-choice questions covering objects and methods, selection and iteration, class creation, and data collections (arrays, ArrayList, 2D arrays, text files, wrapper classes, searching, sorting, and recursion), plus 4 free-response questions: Methods & Control Structures, Class Design, Data Analysis with ArrayList, and 2D Array. All Java code follows the AP CSA Java Quick Reference.',
   backLink: { href: '/ap-computer-science-a', label: 'AP Computer Science A' },
   ctaLinks: [
     { href: '/ap-csa-diagnostic', label: 'Diagnostic Test' },
@@ -20,7 +20,7 @@ export const config: FullLengthExamConfig = {
       name: 'Section I',
       shortName: 'Multiple Choice',
       description:
-        '40 Java MCQs covering all 10 units. No calculator. AP CSA Reference Sheet provided.',
+        '42 Java MCQs covering all 4 units (55% of the score). No calculator. AP CSA Java Quick Reference provided.',
       timeLimitMinutes: 90,
       items: MCQS,
     },
@@ -29,7 +29,7 @@ export const config: FullLengthExamConfig = {
       name: 'Section II',
       shortName: 'Free Response',
       description:
-        '4 FRQs (9 points each, 36 total): Q1 Methods & Control Structures, Q2 Class Design, Q3 Array/ArrayList, Q4 2D Array. Self-graded rubric checklist.',
+        '4 FRQs (9 points each, 36 total; 45% of the score): Q1 Methods & Control Structures, Q2 Class Design, Q3 Data Analysis with ArrayList, Q4 2D Array. Self-graded rubric checklist.',
       timeLimitMinutes: 90,
       items: FRQS,
     },
@@ -40,11 +40,11 @@ export const config: FullLengthExamConfig = {
       {
         heading: 'Exam Structure',
         items: [
-          'Section I: 40 MCQs (90 min, 50%)',
-          'Section II: 4 FRQs (90 min, 50%)',
+          'Section I: 42 MCQs (90 min, 55%)',
+          'Section II: 4 FRQs (90 min, 45%)',
           '   • Q1 Methods & Control Structures (9 pts)',
           '   • Q2 Class Design (9 pts)',
-          '   • Q3 Array/ArrayList (9 pts)',
+          '   • Q3 Data Analysis with ArrayList (9 pts)',
           '   • Q4 2D Array (9 pts)',
           'Total: 3 hours · Java',
         ],
@@ -52,11 +52,10 @@ export const config: FullLengthExamConfig = {
       {
         heading: 'Topic Weighting',
         items: [
-          'Primitive Types & Using Objects (~10–17%)',
-          'Boolean Expressions & Iteration (~22–35%)',
-          'Writing Classes (~15–22%)',
-          'Array & ArrayList & 2D Array (~17–32%)',
-          'Inheritance & Recursion (~10–17%)',
+          'Unit 1: Using Objects and Methods (15–25%)',
+          'Unit 2: Selection and Iteration (25–35%)',
+          'Unit 3: Class Creation (10–18%)',
+          'Unit 4: Data Collections (30–40%)',
         ],
       },
     ],

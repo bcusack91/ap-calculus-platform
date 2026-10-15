@@ -5,7 +5,7 @@ import { FRQS } from './frqs'
 export const config: FullLengthExamConfig = {
   subject: 'AP Chemistry',
   description:
-    'Full-length practice exam modeled on the official College Board AP Chemistry exam. 45 multiple-choice questions across all 9 units, plus 7 free-response questions (3 long, 4 short) covering equilibrium, thermodynamics, kinetics, stoichiometry, bonding, electrochemistry, and intermolecular forces. Calculator and equations sheet allowed.',
+    'Full-length practice exam modeled on the official College Board AP Chemistry exam. 60 multiple-choice questions across all 9 units, plus 7 free-response questions (3 long, 4 short) covering equilibrium, thermodynamics, kinetics, stoichiometry, bonding, electrochemistry, and intermolecular forces. Calculator and equations sheet allowed.',
   backLink: { href: '/ap-chemistry', label: 'AP Chemistry' },
   ctaLinks: [
     { href: '/ap-chem-frq', label: 'FRQ Practice' },
@@ -20,7 +20,7 @@ export const config: FullLengthExamConfig = {
       name: 'Section I',
       shortName: 'Multiple Choice',
       description:
-        '45 multiple-choice questions across all 9 units (Atomic Structure, Bonding, IMFs, Reactions, Kinetics, Thermodynamics, Equilibrium, Acids/Bases, Applications of Thermodynamics). Calculator allowed.',
+        '60 multiple-choice questions across all 9 units (Atomic Structure, Bonding, IMFs, Reactions, Kinetics, Thermodynamics, Equilibrium, Acids/Bases, Applications of Thermodynamics). Calculator allowed.',
       timeLimitMinutes: 90,
       items: MCQS,
     },
@@ -40,7 +40,7 @@ export const config: FullLengthExamConfig = {
       {
         heading: 'Exam Structure',
         items: [
-          'Section I: 60 MCQs (90 min, 50%) — this practice has 45',
+          'Section I: 60 MCQs (90 min, 50%)',
           'Section II: 7 FRQs (105 min, 50%)',
           '   • 3 Long FRQs (10 points each)',
           '   • 4 Short FRQs (4 points each)',

@@ -4,7 +4,7 @@ import { MCQS } from './mcqs'
 export const config: FullLengthExamConfig = {
   subject: 'AP Computer Science Principles',
   description:
-    'Full-length practice exam modeled on the in-school portion of the AP Computer Science Principles exam (revised 2024–25 format): 70 multiple-choice questions in 120 minutes covering all five Big Ideas — Creative Development, Data, Algorithms & Programming (the largest weight), Computing Systems & Networks, and Impact of Computing. Code questions use the official AP CSP pseudocode reference.',
+    'Full-length practice exam modeled on the multiple-choice section of the AP Computer Science Principles end-of-course exam: 70 multiple-choice questions in 120 minutes covering all five Big Ideas in their CED proportions — Creative Development, Data, Algorithms & Programming (the largest weight), Computer Systems & Networks, and Impact of Computing. Code questions use the official AP CSP exam reference sheet pseudocode.',
   backLink: { href: '/ap-cs-principles', label: 'AP Computer Science Principles' },
   ctaLinks: [
     { href: '/ap-csp-diagnostic', label: 'Diagnostic Test' },
@@ -20,7 +20,7 @@ export const config: FullLengthExamConfig = {
       name: 'Section I',
       shortName: 'Multiple Choice',
       description:
-        '70 multiple-choice questions covering all five Big Ideas. The official AP CSP Reference Sheet (pseudocode) is provided. (Section II — the Create Performance Task — is submitted separately to the College Board portal before the exam window.)',
+        '70 multiple-choice questions in 120 minutes covering all five Big Ideas. Code questions use the AP CSP exam reference sheet pseudocode (lists are 1-indexed). The real exam ends with a few select-two-answers questions; every question here has one answer. The Create performance task and its exam-day written response are not part of this practice section.',
       timeLimitMinutes: 120,
       items: MCQS,
     },
@@ -29,11 +29,11 @@ export const config: FullLengthExamConfig = {
     title: 'About the AP Computer Science Principles Exam',
     columns: [
       {
-        heading: 'Exam Structure (revised 2024–25)',
+        heading: 'Exam Structure',
         items: [
-          'In-school exam: 70 MCQs in 120 minutes (100% of exam-day score)',
-          'Create Performance Task: written + program submitted via College Board portal before exam (no longer included in score for current administration)',
-          'Reference: AP CSP pseudocode reference sheet provided',
+          'Multiple choice: 70 questions in 120 minutes (70% of the AP score)',
+          'Create performance task (30%): program code, video, and Personalized Project Reference submitted through the AP Digital Portal, plus a 60-minute written response on exam day',
+          'An exam reference sheet with the AP CSP pseudocode is provided',
         ],
       },
       {
@@ -42,7 +42,7 @@ export const config: FullLengthExamConfig = {
           'BI 1 — Creative Development (10–13%)',
           'BI 2 — Data (17–22%)',
           'BI 3 — Algorithms & Programming (30–35%)',
-          'BI 4 — Computing Systems & Networks (11–15%)',
+          'BI 4 — Computer Systems & Networks (11–15%)',
           'BI 5 — Impact of Computing (21–26%)',
         ],
       },

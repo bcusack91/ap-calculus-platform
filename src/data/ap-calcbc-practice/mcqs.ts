@@ -1,50 +1,50 @@
 import type { MCQItem } from '@/components/FullLengthPracticeExam'
 
 /**
- * AP Calculus BC — 45 MCQs across all 10 units.
- * Distribution mirrors CB exam weighting (BC adds Units 9 & 10 + extra integration techniques in U6):
+ * AP Calculus BC — 45 MCQs across all 10 units, matching the real exam's Section I.
+ * Distribution mirrors the CED unit weighting (BC adds Units 9 & 10 + extra integration techniques in U6):
  *   U1 Limits & Continuity                         (3)
  *   U2 Differentiation: Definition & Properties    (3)
- *   U3 Differentiation: Composite/Implicit/Inverse (4)
+ *   U3 Differentiation: Composite/Implicit/Inverse (3)
  *   U4 Contextual Apps of Differentiation          (4)
- *   U5 Analytical Apps of Differentiation          (5)
- *   U6 Integration & Accumulation                  (7)  [BC adds parts, partial fractions, improper]
+ *   U5 Analytical Apps of Differentiation          (4)
+ *   U6 Integration & Accumulation                  (8)  [BC adds parts, partial fractions, improper]
  *   U7 Differential Equations                      (4)  [BC adds logistic + Euler]
- *   U8 Applications of Integration                 (4)  [BC adds arc length]
+ *   U8 Applications of Integration                 (3)  [BC adds arc length]
  *   U9 Parametric, Polar, Vector-Valued            (5)
- *   U10 Infinite Series & Sequences                (6)
+ *   U10 Infinite Sequences & Series                (8)
  *
- * Section I Part A (Q1–Q30): NO calculator.
- * Section I Part B (Q31–Q45): graphing calculator allowed/required.
+ * Section I Part A (Q1–Q30): 30 questions, NO calculator, 60 minutes.
+ * Section I Part B (Q31–Q45): 15 questions, graphing calculator allowed (some REQUIRE one), 45 minutes.
  */
 
 export const MCQS: MCQItem[] = [
-  /* ============== PART A — NO CALCULATOR (30) ============== */
+  /* ============== PART A — NO CALCULATOR (Q1–Q30, 30 questions) ============== */
 
   /* ---- U1 (3) ---- */
   {
     type: 'mcq',
     topic: 'unit-1-limits-continuity',
     question: '$\\lim_{x \\to 0} \\dfrac{1 - \\cos(2x)}{x^2} =$',
-    options: ['$0$', '$1$', '$2$', 'Does not exist'],
+    options: ['$0$', '$\\dfrac{1}{2}$', '$2$', '$4$'],
     correctAnswer: 2,
-    explanation: 'L\'Hôpital twice: $\\frac{2\\sin 2x}{2x} \\to \\frac{4\\cos 2x}{2} = 2$. Or use $1-\\cos(2x)=2\\sin^2 x$: $\\frac{2\\sin^2 x}{x^2}\\to 2$.',
+    explanation: 'Since $1-\\cos(2x)=2\\sin^2 x$, the expression is $2\\left(\\frac{\\sin x}{x}\\right)^2\\to 2$; two applications of L\'Hôpital\'s rule give the same result. The value $\\frac{1}{2}$ uses $\\lim\\frac{1-\\cos u}{u^2}=\\frac{1}{2}$ without accounting for $u=2x$, which multiplies the limit by $4$.',
   },
   {
     type: 'mcq',
     topic: 'unit-1-limits-continuity',
     question: '$\\lim_{x \\to \\infty} \\dfrac{\\ln x}{\\sqrt x} =$',
-    options: ['$0$', '$1$', '$\\infty$', 'Does not exist'],
+    options: ['$0$', '$\\dfrac{1}{2}$', '$2$', '$\\infty$'],
     correctAnswer: 0,
-    explanation: 'L\'Hôpital: $\\frac{1/x}{1/(2\\sqrt x)} = \\frac{2}{\\sqrt x} \\to 0$. Polynomial growth dominates logarithmic.',
+    explanation: 'L\'Hôpital\'s rule gives $\\frac{1/x}{1/(2\\sqrt x)}=\\frac{2}{\\sqrt x}\\to 0$, so $\\sqrt x$ grows faster than $\\ln x$. Answering $\\infty$ assumes that because both numerator and denominator grow without bound, the quotient must too.',
   },
   {
     type: 'mcq',
     topic: 'unit-1-limits-continuity',
     question: 'For what value of $k$ is $f(x)=\\begin{cases} kx + 1 & x \\le 2 \\\\ x^2 - 1 & x > 2 \\end{cases}$ continuous everywhere?',
-    options: ['$k = 1$', '$k = 1.5$', '$k = 2$', '$k = 3$'],
+    options: ['$k = 1$', '$k = \\dfrac{3}{2}$', '$k = 2$', '$k = 3$'],
     correctAnswer: 0,
-    explanation: 'Continuity at $x=2$: $2k + 1 = 4 - 1 = 3 \\Rightarrow 2k = 2 \\Rightarrow k = 1$.',
+    explanation: 'Both pieces are polynomials, so only $x=2$ matters: $2k+1=2^2-1=3$ gives $k=1$. Setting $2k=3$ and getting $k=\\frac{3}{2}$ drops the $+1$ from the left-hand piece.',
   },
 
   /* ---- U2 (3) ---- */
@@ -52,9 +52,9 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-2-differentiation-definition',
     question: 'If $f(x) = \\tan x$, then $f\'(\\pi/4) =$',
-    options: ['$0$', '$1$', '$2$', '$\\sqrt 2$'],
-    correctAnswer: 2,
-    explanation: '$f\'(x) = \\sec^2 x$. $\\sec^2(\\pi/4) = (\\sqrt 2)^2 = 2$.',
+    options: ['$1$', '$2$', '$\\sqrt 2$', '$\\dfrac{1}{2}$'],
+    correctAnswer: 1,
+    explanation: '$f\'(x)=\\sec^2 x$, and $\\sec(\\pi/4)=\\sqrt 2$, so $f\'(\\pi/4)=2$. The value $1$ is $\\tan(\\pi/4)$, the function value rather than the derivative.',
   },
   {
     type: 'mcq',
@@ -67,18 +67,18 @@ export const MCQS: MCQItem[] = [
       '$\\dfrac{x}{2\\sqrt{x^2+5}}$',
     ],
     correctAnswer: 0,
-    explanation: 'Chain: $\\frac{1}{2\\sqrt{x^2+5}} \\cdot 2x = \\frac{x}{\\sqrt{x^2+5}}$.',
+    explanation: 'By the chain rule, $\\frac{1}{2\\sqrt{x^2+5}}\\cdot 2x=\\frac{x}{\\sqrt{x^2+5}}$. Keeping the $2x$ without the $\\frac{1}{2}$ from the power rule gives the expression with $2x$ on top, which is twice the derivative.',
   },
   {
     type: 'mcq',
     topic: 'unit-2-differentiation-definition',
     question: 'If $f(x) = x \\ln x$ and $g(x) = e^x$, then $\\dfrac{d}{dx}[f(g(x))]$ at $x = 0$ equals',
-    options: ['$0$', '$1$', '$e$', 'Undefined'],
+    options: ['$0$', '$1$', '$e$', '$2$'],
     correctAnswer: 1,
-    explanation: '$f\'(u) = \\ln u + 1$, $g(0) = 1$, $g\'(0) = 1$. By chain: $f\'(g(0)) \\cdot g\'(0) = (\\ln 1 + 1)(1) = 1$.',
+    explanation: 'Here $f\'(u)=\\ln u+1$, $g(0)=1$, and $g\'(0)=1$, so the chain rule gives $f\'(g(0))\\,g\'(0)=(\\ln 1+1)(1)=1$. The value $2$ comes from evaluating $f\'$ at $e$ instead of at $g(0)=1$.',
   },
 
-  /* ---- U3 (4) ---- */
+  /* ---- U3 (3) ---- */
   {
     type: 'mcq',
     topic: 'unit-3-composite-implicit-inverse',
@@ -90,7 +90,7 @@ export const MCQS: MCQItem[] = [
       '$\\dfrac{y\\cos(xy) - 1}{x\\cos(xy)}$',
     ],
     correctAnswer: 0,
-    explanation: 'Implicit: $\\cos(xy)(y + xy\') = 1 \\Rightarrow xy\'\\cos(xy) = 1 - y\\cos(xy) \\Rightarrow y\' = (1 - y\\cos(xy))/(x\\cos(xy))$.',
+    explanation: 'Differentiating implicitly, $\\cos(xy)(y+xy\')=1$, so $xy\'\\cos(xy)=1-y\\cos(xy)$ and $y\'=\\frac{1-y\\cos(xy)}{x\\cos(xy)}$. The version with $y\\cos(xy)-1$ on top has the sign reversed from moving the term to the wrong side.',
   },
   {
     type: 'mcq',
@@ -98,72 +98,43 @@ export const MCQS: MCQItem[] = [
     question: 'If $y = \\arcsin(2x)$, then $\\dfrac{dy}{dx} =$',
     options: ['$\\dfrac{2}{\\sqrt{1-4x^2}}$', '$\\dfrac{1}{\\sqrt{1-4x^2}}$', '$\\dfrac{2}{\\sqrt{1-x^2}}$', '$\\dfrac{1}{\\sqrt{1-2x^2}}$'],
     correctAnswer: 0,
-    explanation: '$\\frac{d}{dx}\\arcsin u = \\frac{u\'}{\\sqrt{1-u^2}}$ with $u = 2x$, $u\' = 2$: $\\frac{2}{\\sqrt{1-4x^2}}$.',
+    explanation: 'With $u=2x$, $\\frac{d}{dx}\\arcsin u=\\frac{u\'}{\\sqrt{1-u^2}}=\\frac{2}{\\sqrt{1-4x^2}}$. Dropping the chain factor $u\'=2$ leaves $\\frac{1}{\\sqrt{1-4x^2}}$, which is only half the derivative.',
   },
   {
     type: 'mcq',
     topic: 'unit-3-composite-implicit-inverse',
     question: 'Suppose $f$ and $g$ are differentiable with $f(2) = 3$, $f\'(2) = 4$, $g(2) = 1$, $g\'(2) = 5$. If $h(x) = f(x)/g(x)$, then $h\'(2) =$',
-    options: ['$-11$', '$11$', '$-7$', '$7$'],
+    options: ['$-11$', '$11$', '$19$', '$3$'],
     correctAnswer: 0,
-    explanation: '$h\'(x) = (f\'g - fg\')/g^2$. At $x=2$: $(4 \\cdot 1 - 3 \\cdot 5)/1 = (4-15) = -11$.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-3-composite-implicit-inverse',
-    question: '$\\dfrac{d}{dx}\\left[(\\sin x)^x\\right] =$',
-    options: [
-      '$x(\\sin x)^{x-1}\\cos x$',
-      '$(\\sin x)^x[\\ln(\\sin x) + x\\cot x]$',
-      '$(\\sin x)^x\\ln(\\sin x)$',
-      '$x(\\sin x)^{x-1}$',
-    ],
-    correctAnswer: 1,
-    explanation: 'Logarithmic differentiation: $\\ln y = x\\ln(\\sin x)$, $y\'/y = \\ln(\\sin x) + x \\cdot \\cos x/\\sin x$. So $y\' = (\\sin x)^x[\\ln(\\sin x) + x\\cot x]$.',
+    explanation: 'The quotient rule gives $h\'(2)=\\frac{f\'(2)g(2)-f(2)g\'(2)}{g(2)^2}=\\frac{4-15}{1}=-11$. Reversing the order of subtraction in the numerator gives $11$, and adding the terms (as in the product rule) gives $19$.',
   },
 
-  /* ---- U4 (4) ---- */
+  /* ---- U4 (2) ---- */
   {
     type: 'mcq',
     topic: 'unit-4-contextual-applications-differentiation',
-    question: 'A particle has position $x(t) = t^3 - 9t^2 + 24t$. The particle changes direction at',
+    question: 'A particle has position $x(t) = t^3 - 9t^2 + 24t$ for $t \\ge 0$. The particle changes direction at',
     options: ['$t = 2$ only', '$t = 4$ only', '$t = 2$ and $t = 4$', '$t = 3$ only'],
     correctAnswer: 2,
-    explanation: '$v(t)=3t^2-18t+24=3(t-2)(t-4)$. Sign changes at $t=2$ and $t=4$ ⇒ direction changes both times.',
+    explanation: '$v(t)=3t^2-18t+24=3(t-2)(t-4)$ changes sign at both $t=2$ and $t=4$, so the particle reverses direction at each. The time $t=3$ is where the acceleration $a(t)=6t-18$ is zero, which does not mark a change in direction.',
   },
   {
     type: 'mcq',
     topic: 'unit-4-contextual-applications-differentiation',
     question: '$\\lim_{x \\to 0^+} x \\ln x =$',
-    options: ['$-\\infty$', '$0$', '$1$', '$\\infty$'],
+    options: ['$-\\infty$', '$0$', '$-\\dfrac{1}{e}$', '$\\infty$'],
     correctAnswer: 1,
-    explanation: 'Indeterminate $0 \\cdot (-\\infty)$. Rewrite as $\\frac{\\ln x}{1/x}$. L\'Hôpital: $\\frac{1/x}{-1/x^2} = -x \\to 0$.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-4-contextual-applications-differentiation',
-    question: 'Given $f(x) = \\sqrt{1+x}$, the linear approximation to $f$ near $x=0$ gives $\\sqrt{1.06} \\approx$',
-    options: ['$1.03$', '$1.06$', '$0.97$', '$1.005$'],
-    correctAnswer: 0,
-    explanation: '$L(x) = 1 + x/2$. $L(0.06) = 1.03$. (True value $\\approx 1.0296$.)',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-4-contextual-applications-differentiation',
-    question: 'A spherical snowball melts at a rate of 12 $cm^{3}/min$. When the radius is 5 cm, the rate at which the radius is changing is',
-    options: ['$-\\dfrac{9}{25\\pi}$ cm/min', '$-\\dfrac{3}{25\\pi}$ cm/min', '$-\\dfrac{1}{25\\pi}$ cm/min', '$-12$ cm/min'],
-    correctAnswer: 1,
-    explanation: '$V=\\frac{4}{3}\\pi r^3 \\Rightarrow dV/dt = 4\\pi r^2 dr/dt$. $-12 = 4\\pi(25)(dr/dt) \\Rightarrow dr/dt = -12/(100\\pi) = -3/(25\\pi)$.',
+    explanation: 'Rewrite the $0\\cdot(-\\infty)$ form as $\\frac{\\ln x}{1/x}$; L\'Hôpital\'s rule gives $\\frac{1/x}{-1/x^2}=-x\\to 0$. The value $-\\frac{1}{e}$ is the minimum of $x\\ln x$ (at $x=\\frac{1}{e}$), not its limit as $x\\to 0^+$.',
   },
 
-  /* ---- U5 (5) ---- */
+  /* ---- U5 (2) ---- */
   {
     type: 'mcq',
     topic: 'unit-5-analytical-applications-differentiation',
     question: 'On $[0, 2\\pi]$, $f(x) = x + 2\\cos x$ has critical points at',
-    options: ['$x = \\pi/6, 5\\pi/6$', '$x = \\pi/3, 5\\pi/3$', '$x = \\pi/2, 3\\pi/2$', '$x = \\pi/2$ only'],
+    options: ['$x = \\pi/6, 5\\pi/6$', '$x = \\pi/3, 5\\pi/3$', '$x = \\pi/2, 3\\pi/2$', '$x = 7\\pi/6, 11\\pi/6$'],
     correctAnswer: 0,
-    explanation: '$f\'(x) = 1 - 2\\sin x = 0 \\Rightarrow \\sin x = 1/2 \\Rightarrow x = \\pi/6, 5\\pi/6$.',
+    explanation: '$f\'(x)=1-2\\sin x=0$ gives $\\sin x=\\frac{1}{2}$, so $x=\\pi/6$ and $5\\pi/6$. The angles $7\\pi/6$ and $11\\pi/6$ solve $\\sin x=-\\frac{1}{2}$, which results from a sign error in differentiating $\\cos x$.',
   },
   {
     type: 'mcq',
@@ -171,36 +142,7 @@ export const MCQS: MCQItem[] = [
     question: 'Let $f(x) = e^{-x^2}$. The graph of $f$ has points of inflection at',
     options: ['$x = 0$', '$x = \\pm 1$', '$x = \\pm 1/\\sqrt 2$', '$x = \\pm \\sqrt 2$'],
     correctAnswer: 2,
-    explanation: '$f\'(x) = -2x e^{-x^2}$, $f\'\'(x) = (-2 + 4x^2)e^{-x^2} = 0 \\Rightarrow 4x^2 = 2 \\Rightarrow x = \\pm 1/\\sqrt 2$.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-5-analytical-applications-differentiation',
-    question: 'A box with a square base and open top has volume 32 $ft^{3}$. The dimensions that minimize surface area are (base side, height) =',
-    options: ['$(2, 8)$', '$(4, 2)$', '$(8, 0.5)$', '$(2\\sqrt 2, 4)$'],
-    correctAnswer: 1,
-    explanation: '$V = x^2 h = 32 \\Rightarrow h = 32/x^2$. $S = x^2 + 4xh = x^2 + 128/x$. $S\' = 2x - 128/x^2 = 0 \\Rightarrow x^3 = 64 \\Rightarrow x = 4$, $h = 2$.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-5-analytical-applications-differentiation',
-    question: 'If $f(1) = 2$, $f(5) = 10$, and $f$ is continuous on $[1, 5]$ and differentiable on $(1, 5)$, then by MVT there exists $c \\in (1, 5)$ with $f\'(c) =$',
-    options: ['$2$', '$8$', '$10$', '$12$'],
-    correctAnswer: 0,
-    explanation: 'MVT: $f\'(c) = (f(5) - f(1))/(5-1) = 8/4 = 2$.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-5-analytical-applications-differentiation',
-    question: 'The graph of $f$ has $f\'(x) > 0$ and $f\'\'(x) > 0$ for all $x$. Then $f$ is',
-    options: [
-      'increasing and concave up',
-      'increasing and concave down',
-      'decreasing and concave up',
-      'decreasing and concave down',
-    ],
-    correctAnswer: 0,
-    explanation: '$f\'>0$ ⇒ increasing. $f\'\'>0$ ⇒ concave up.',
+    explanation: '$f\'(x)=-2xe^{-x^2}$ and $f\'\'(x)=(4x^2-2)e^{-x^2}$, which changes sign where $4x^2=2$, so $x=\\pm\\frac{1}{\\sqrt 2}$. The point $x=0$ is where $f\'=0$, a maximum rather than an inflection point.',
   },
 
   /* ---- U6 (7) - includes BC techniques ---- */
@@ -208,38 +150,38 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-6-integration-accumulation',
     question: '$\\displaystyle\\int x e^x\\,dx =$',
-    options: ['$xe^x + C$', '$xe^x - e^x + C$', '$x^2 e^x/2 + C$', '$e^x(x+1) + C$'],
+    options: ['$e^x - xe^x + C$', '$xe^x - e^x + C$', '$\\dfrac{x^2 e^x}{2} + C$', '$e^x(x+1) + C$'],
     correctAnswer: 1,
-    explanation: 'Integration by parts: $u=x$, $dv=e^x dx$. $\\int x e^x dx = xe^x - \\int e^x dx = xe^x - e^x + C$.',
+    explanation: 'Integration by parts with $u=x$ and $dv=e^x\\,dx$ gives $xe^x-\\int e^x\\,dx=xe^x-e^x+C$. The form $e^x(x+1)+C$ adds the second term instead of subtracting it; differentiating it gives $xe^x+2e^x$, not $xe^x$, and $e^x-xe^x$ reverses the parts formula.',
   },
   {
     type: 'mcq',
     topic: 'unit-6-integration-accumulation',
     question: '$\\displaystyle\\int \\dfrac{2x+3}{x^2+x}\\,dx =$',
     options: [
-      '$\\ln|x| + 2\\ln|x+1| + C$',
-      '$\\ln(x^2+x) + C$',
+      '$3\\ln|x| - 2\\ln|x+1| + C$',
+      '$\\ln|x^2+x| + C$',
       '$3\\ln|x| - \\ln|x+1| + C$',
       '$3\\ln|x| + 2\\ln|x+1| + C$',
     ],
     correctAnswer: 2,
-    explanation: 'Partial fractions: $\\frac{2x+3}{x(x+1)} = \\frac{A}{x}+\\frac{B}{x+1}$. $2x+3 = A(x+1)+Bx$. $x=0$: $A=3$; $x=-1$: $1=-B \\Rightarrow B=-1$. Check: $3(x+1)-x=2x+3$ ✓. So integral $= 3\\ln|x| - \\ln|x+1|+C$.',
+    explanation: 'Write $\\frac{2x+3}{x(x+1)}=\\frac{A}{x}+\\frac{B}{x+1}$; then $2x+3=A(x+1)+Bx$ gives $A=3$ and $B=-1$, so the integral is $3\\ln|x|-\\ln|x+1|+C$. The answer $\\ln|x^2+x|$ would require the numerator to be $2x+1$, the derivative of the denominator.',
   },
   {
     type: 'mcq',
     topic: 'unit-6-integration-accumulation',
     question: '$\\displaystyle\\int_1^{\\infty} \\dfrac{1}{x^2}\\,dx =$',
-    options: ['$0$', '$1$', '$\\infty$ (diverges)', '$-1$'],
-    correctAnswer: 1,
-    explanation: '$\\lim_{b\\to\\infty}[-1/x]_1^b = \\lim(-1/b + 1) = 1$. Converges.',
+    options: ['$1$', '$\\dfrac{1}{2}$', '$\\dfrac{1}{3}$', 'The integral diverges'],
+    correctAnswer: 0,
+    explanation: '$\\lim_{b\\to\\infty}\\left[-\\frac{1}{x}\\right]_1^b=\\lim_{b\\to\\infty}\\left(1-\\frac{1}{b}\\right)=1$, so the integral converges. The value $\\frac{1}{3}$ comes from raising the power to $x^{-3}$ instead of $x^{-1}$, and the integral does not diverge, because $\\frac{1}{x^2}$ shrinks fast enough as $x\\to\\infty$.',
   },
   {
     type: 'mcq',
     topic: 'unit-6-integration-accumulation',
     question: '$\\displaystyle\\int_0^1 \\dfrac{1}{\\sqrt x}\\,dx =$',
-    options: ['$0$', '$1$', '$2$', 'Diverges'],
+    options: ['$\\dfrac{1}{2}$', '$\\dfrac{2}{3}$', '$2$', 'The integral diverges'],
     correctAnswer: 2,
-    explanation: 'Improper at 0. $\\lim_{a\\to 0^+}[2\\sqrt x]_a^1 = 2 - 0 = 2$. Converges to 2.',
+    explanation: 'The integral is improper at $0$: $\\lim_{a\\to0^+}[2\\sqrt x]_a^1=2-0=2$, so it converges. The integrand is unbounded near $0$, but that alone does not make the integral diverge, since $x^{-1/2}$ has power less than $1$.',
   },
   {
     type: 'mcq',
@@ -247,176 +189,97 @@ export const MCQS: MCQItem[] = [
     question: '$\\displaystyle\\int x^2 \\ln x\\,dx =$',
     options: [
       '$\\dfrac{x^3 \\ln x}{3} - \\dfrac{x^3}{9} + C$',
-      '$\\dfrac{x^3\\ln x}{3} + \\dfrac{x^3}{9} + C$',
-      '$\\dfrac{x^3 \\ln x}{3} + C$',
-      '$\\dfrac{x^3}{3\\ln x} + C$',
+      '$\\dfrac{x^3 \\ln x}{3} + \\dfrac{x^3}{9} + C$',
+      '$\\dfrac{x^3 \\ln x}{3} - \\dfrac{x^3}{3} + C$',
+      '$\\dfrac{x^3}{3 \\ln x} + C$',
     ],
     correctAnswer: 0,
-    explanation: 'Parts: $u=\\ln x$, $dv=x^2 dx$. $\\int = \\frac{x^3}{3}\\ln x - \\int \\frac{x^3}{3}\\cdot\\frac{1}{x}dx = \\frac{x^3 \\ln x}{3} - \\frac{x^3}{9} + C$.',
+    explanation: 'With $u=\\ln x$ and $dv=x^2\\,dx$, parts gives $\\frac{x^3}{3}\\ln x-\\int\\frac{x^3}{3}\\cdot\\frac{1}{x}\\,dx=\\frac{x^3\\ln x}{3}-\\frac{x^3}{9}+C$. The $-\\frac{x^3}{3}$ version forgets to integrate $\\frac{x^2}{3}$, which divides by another $3$.',
   },
   {
     type: 'mcq',
     topic: 'unit-6-integration-accumulation',
     question: 'If $g(x) = \\displaystyle\\int_1^{x^2}\\sin(t)\\,dt$, then $g\'(x) =$',
-    options: ['$\\sin(x^2)$', '$2x\\sin(x^2)$', '$\\sin(x^2) - \\sin(1)$', '$2x\\sin(x^2) - \\sin(1)$'],
-    correctAnswer: 1,
-    explanation: 'FTC + chain rule: $g\'(x) = \\sin(x^2) \\cdot 2x$.',
+    options: ['$2x\\sin(x^2)$', '$\\sin(x^2)$', '$\\sin(x^2) - \\sin(1)$', '$2x\\sin(x^2) - \\sin(1)$'],
+    correctAnswer: 0,
+    explanation: 'By the Fundamental Theorem with the chain rule, $g\'(x)=\\sin(x^2)\\cdot\\frac{d}{dx}(x^2)=2x\\sin(x^2)$; the constant lower limit contributes nothing. The answer $\\sin(x^2)$ forgets to multiply by the derivative of the upper limit $x^2$.',
   },
   {
     type: 'mcq',
     topic: 'unit-6-integration-accumulation',
     question: '$\\displaystyle\\int_0^{\\pi/4} \\sec^2 x\\,dx =$',
-    options: ['$0$', '$1$', '$\\sqrt 2$', '$2$'],
-    correctAnswer: 1,
-    explanation: '$\\tan x|_0^{\\pi/4} = 1 - 0 = 1$.',
+    options: ['$1$', '$\\sqrt 2$', '$\\sqrt 2 - 1$', '$\\dfrac{2\\sqrt 2 - 1}{3}$'],
+    correctAnswer: 0,
+    explanation: 'Since $\\frac{d}{dx}\\tan x=\\sec^2 x$, the integral is $\\tan(\\pi/4)-\\tan 0=1$. The value $\\frac{2\\sqrt2-1}{3}$ applies the power rule to $\\sec^2 x$ as if it were $u^2$ with $du=dx$.',
   },
 
-  /* ---- U7 (4) ---- */
+  /* ---- U7 (2) ---- */
   {
     type: 'mcq',
     topic: 'unit-7-differential-equations',
     question: 'The general solution to $\\dfrac{dy}{dx} = 2xy^2$ is',
-    options: ['$y = -1/(x^2 + C)$', '$y = x^2 + C$', '$y = e^{x^2} + C$', '$y = Cx^2$'],
+    options: ['$y = -\\dfrac{1}{x^2 + C}$', '$y = \\dfrac{1}{x^2 + C}$', '$y = C - \\dfrac{1}{x^2}$', '$y = Ce^{x^2}$'],
     correctAnswer: 0,
-    explanation: 'Separate: $dy/y^2 = 2x\\,dx \\Rightarrow -1/y = x^2 + C \\Rightarrow y = -1/(x^2+C)$.',
+    explanation: 'Separating gives $\\frac{dy}{y^2}=2x\\,dx$, so $-\\frac{1}{y}=x^2+C$ and $y=-\\frac{1}{x^2+C}$. Dropping the negative sign from $\\int y^{-2}\\,dy=-y^{-1}$ gives the positive version, which does not satisfy the equation.',
   },
   {
     type: 'mcq',
     topic: 'unit-7-differential-equations',
-    question: 'A population $P$ satisfies the logistic equation $\\dfrac{dP}{dt} = 0.05P(1 - P/200)$. The carrying capacity is',
-    options: ['$0.05$', '$50$', '$100$', '$200$'],
-    correctAnswer: 3,
-    explanation: 'In logistic form $dP/dt = kP(1 - P/L)$, $L$ is the carrying capacity. Here $L = 200$.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-7-differential-equations',
-    question: 'For the logistic model $\\dfrac{dP}{dt} = 0.05P(1 - P/200)$, the population is growing fastest when $P =$',
-    options: ['$50$', '$100$', '$150$', '$200$'],
+    question: 'Which differential equation has a slope field with horizontal segments exactly along the line $y = x$ and positive slopes at every point below that line?',
+    options: ['$\\dfrac{dy}{dx} = y - x$', '$\\dfrac{dy}{dx} = x - y$', '$\\dfrac{dy}{dx} = y + x$', '$\\dfrac{dy}{dx} = xy$'],
     correctAnswer: 1,
-    explanation: 'Maximum growth in logistic occurs at $P = L/2 = 100$.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-7-differential-equations',
-    question: 'Which differential equation has slope field with horizontal tangent only along the line $y = x$?',
-    options: ['$dy/dx = y - x$', '$dy/dx = x - y$', '$dy/dx = y + x$', '$dy/dx = xy$'],
-    correctAnswer: 1,
-    explanation: '$dy/dx = 0$ when $x - y = 0$, i.e., $y = x$. That matches the line of horizontal tangents.',
+    explanation: 'For $\\frac{dy}{dx}=x-y$, slopes are $0$ where $y=x$ and positive where $y<x$, which is below the line. The equation $\\frac{dy}{dx}=y-x$ also has horizontal segments along $y=x$, but its slopes are negative below the line.',
   },
 
-  /* ---- U8 (4) — includes arc length ---- */
+  /* ---- U8 (1) — arc length ---- */
   {
     type: 'mcq',
     topic: 'unit-8-applications-integration',
-    question: 'The arc length of $y = (2/3)x^{3/2}$ from $x = 0$ to $x = 3$ is',
-    options: ['$3$', '$14/3$', '$7$', '$\\dfrac{14\\sqrt 2}{3}$'],
-    correctAnswer: 1,
-    explanation: '$y\' = x^{1/2}$. $L = \\int_0^3 \\sqrt{1 + x}\\,dx = \\frac{2}{3}(1+x)^{3/2}|_0^3 = \\frac{2}{3}(8 - 1) = 14/3$.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-8-applications-integration',
-    question: 'The volume of the solid generated when the region bounded by $y = 1/x$, $y = 0$, $x = 1$, $x = 4$ is rotated about the $x$-axis is',
-    options: ['$\\pi/4$', '$\\dfrac{3\\pi}{4}$', '$\\pi \\ln 4$', '$3\\pi$'],
-    correctAnswer: 1,
-    explanation: 'Disks: $V = \\pi\\int_1^4 (1/x)^2\\,dx = \\pi[-1/x]_1^4 = \\pi(-1/4 + 1) = 3\\pi/4$.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-8-applications-integration',
-    question: 'A particle moves along the $x$-axis with velocity $v(t) = 4 - t^2$. The total distance traveled from $t = 0$ to $t = 3$ is',
-    options: ['$23/3$', '$3$', '$5$', '$23$'],
+    question: 'The arc length of $y = \\frac{2}{3}x^{3/2}$ from $x = 0$ to $x = 3$ is',
+    options: ['$\\dfrac{14}{3}$', '$7$', '$\\sqrt{21}$', '$2\\sqrt 3$'],
     correctAnswer: 0,
-    explanation: '$v > 0$ on $[0, 2]$, $v < 0$ on $[2, 3]$. Distance $= \\int_0^2 (4-t^2)dt + \\int_2^3 (t^2-4)dt = (8-8/3) + (9-12-(8/3 - 8)) = 16/3 + 7/3 = 23/3$.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-8-applications-integration',
-    question: 'The average value of $f(x) = e^x$ on $[0, \\ln 4]$ is',
-    options: ['$\\dfrac{3}{\\ln 4}$', '$\\dfrac{4}{\\ln 4}$', '$\\dfrac{e^4 - 1}{\\ln 4}$', '$\\ln 4$'],
-    correctAnswer: 0,
-    explanation: '$\\bar f = \\frac{1}{\\ln 4}\\int_0^{\\ln 4} e^x\\,dx = \\frac{1}{\\ln 4}(4 - 1) = \\frac{3}{\\ln 4}$.',
+    explanation: 'Since $y\'=x^{1/2}$, $L=\\int_0^3\\sqrt{1+x}\\,dx=\\frac{2}{3}(1+x)^{3/2}\\Big|_0^3=\\frac{2}{3}(8-1)=\\frac{14}{3}$. The value $\\sqrt{21}$ is the straight-line distance between the endpoints, which is always shorter than the curve.',
   },
 
-  /* ============== PART B — CALCULATOR (15) ============== */
-
-  /* ---- U9: Parametric/Polar/Vector (5) ---- */
+  /* ---- U9 (2) ---- */
   {
     type: 'mcq',
     topic: 'unit-9-parametric-polar-vector',
     question: 'For the parametric curve $x = t^2, y = t^3 - 3t$, $\\dfrac{dy}{dx}$ at $t = 2$ is',
-    options: ['$9/4$', '$3/4$', '$3$', '$12$'],
+    options: ['$\\dfrac{9}{4}$', '$9$', '$12$', '$4$'],
     correctAnswer: 0,
-    explanation: '$dy/dx = (dy/dt)/(dx/dt) = (3t^2 - 3)/(2t)$. At $t=2$: $(12-3)/4 = 9/4$.',
+    explanation: '$\\frac{dy}{dx}=\\frac{dy/dt}{dx/dt}=\\frac{3t^2-3}{2t}$, which is $\\frac{9}{4}$ at $t=2$. The value $9$ is $\\frac{dy}{dt}$ alone, without dividing by $\\frac{dx}{dt}=4$.',
   },
   {
     type: 'mcq',
     topic: 'unit-9-parametric-polar-vector',
     question: 'The speed of a particle with position $\\vec r(t) = \\langle \\cos t, \\sin t \\rangle$ at $t = \\pi/3$ is',
-    options: ['$0$', '$1$', '$\\sqrt 2$', '$\\pi/3$'],
-    correctAnswer: 1,
-    explanation: '$\\vec r\'(t) = \\langle -\\sin t, \\cos t\\rangle$. Speed $= \\sqrt{\\sin^2 t + \\cos^2 t} = 1$ for all $t$.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-9-parametric-polar-vector',
-    question: 'The arc length of the parametric curve $x = t, y = t^{3/2}$ for $0 \\le t \\le 4$ is',
-    options: [
-      '$\\int_0^4 \\sqrt{1 + (3/2)t^{1/2}}\\,dt$',
-      '$\\int_0^4 \\sqrt{1 + (9/4)t}\\,dt$',
-      '$\\int_0^4 (1 + (9/4)t)\\,dt$',
-      '$\\int_0^4 \\sqrt{(3/2)^2 t}\\,dt$',
-    ],
-    correctAnswer: 1,
-    explanation: '$L = \\int \\sqrt{(dx/dt)^2 + (dy/dt)^2}\\,dt = \\int_0^4 \\sqrt{1 + ((3/2)t^{1/2})^2}\\,dt = \\int_0^4 \\sqrt{1 + (9/4)t}\\,dt$.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-9-parametric-polar-vector',
-    question: 'The area enclosed by one petal of the rose $r = 2\\sin(3\\theta)$ is',
-    options: ['$\\pi/3$', '$\\pi/6$', '$2\\pi/3$', '$\\pi$'],
+    options: ['$1$', '$\\dfrac{\\sqrt 3}{2}$', '$\\dfrac{1 + \\sqrt 3}{2}$', '$\\sqrt 2$'],
     correctAnswer: 0,
-    explanation: 'One petal traced for $\\theta \\in [0, \\pi/3]$. $A = \\frac{1}{2}\\int_0^{\\pi/3} 4\\sin^2(3\\theta)\\,d\\theta = 2 \\cdot \\frac{1}{2}\\int_0^{\\pi/3}(1-\\cos 6\\theta)d\\theta = [\\theta - \\sin(6\\theta)/6]_0^{\\pi/3} = \\pi/3 - 0 = \\pi/3$.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-9-parametric-polar-vector',
-    question: 'Convert the polar point $(r, \\theta) = (2, 5\\pi/6)$ to rectangular coordinates.',
-    options: ['$(\\sqrt 3, 1)$', '$(-\\sqrt 3, 1)$', '$(-1, \\sqrt 3)$', '$(1, -\\sqrt 3)$'],
-    correctAnswer: 1,
-    explanation: '$x = 2\\cos(5\\pi/6) = 2(-\\sqrt 3/2) = -\\sqrt 3$. $y = 2\\sin(5\\pi/6) = 2(1/2) = 1$.',
+    explanation: 'The velocity is $\\langle -\\sin t,\\cos t\\rangle$, so the speed is $\\sqrt{\\sin^2 t+\\cos^2 t}=1$ at every $t$. Adding the absolute values of the components, $\\frac{\\sqrt3}{2}+\\frac{1}{2}$, is not how the magnitude of a vector is computed.',
   },
 
-  /* ---- U10: Series (6) ---- */
+  /* ---- U10 (5) ---- */
   {
     type: 'mcq',
     topic: 'unit-10-infinite-series',
-    question: 'The series $\\sum_{n=1}^{\\infty} \\dfrac{1}{n^2}$',
+    question: 'Which statement about the series $\\sum_{n=1}^{\\infty} \\dfrac{1}{n^2}$ is true?',
     options: [
-      'converges by the $p$-series test ($p = 2 > 1$).',
-      'diverges by the $p$-series test ($p = 2$).',
-      'converges by the alternating series test.',
-      'diverges by the divergence test.',
+      'It converges, because it is a $p$-series with $p = 2 > 1$.',
+      'It converges, because its terms $\\dfrac{1}{n^2}$ approach $0$ as $n \\to \\infty$.',
+      'It diverges, because it behaves like the harmonic series $\\sum \\dfrac{1}{n}$.',
+      'It diverges, because each partial sum is larger than the one before it.',
     ],
     correctAnswer: 0,
-    explanation: '$p$-series with $p = 2 > 1$ converges (sum is $\\pi^2/6$, but BC just needs convergence).',
+    explanation: 'A $p$-series $\\sum\\frac{1}{n^p}$ converges exactly when $p>1$, and here $p=2$. Terms approaching $0$ is necessary but not sufficient for convergence (the harmonic series is the counterexample), so that reasoning is invalid even though its conclusion happens to be right.',
   },
   {
     type: 'mcq',
     topic: 'unit-10-infinite-series',
-    question: 'The geometric series $\\sum_{n=0}^{\\infty} (2/3)^n$ converges to',
-    options: ['$2/3$', '$3/2$', '$3$', '$\\infty$'],
-    correctAnswer: 2,
-    explanation: '$|r| = 2/3 < 1$. Sum $= 1/(1-r) = 1/(1/3) = 3$.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-10-infinite-series',
-    question: 'For what values of $x$ does $\\sum_{n=0}^{\\infty} \\dfrac{x^n}{n!}$ converge?',
-    options: ['$|x| < 1$', '$|x| \\le 1$', '$x = 0$ only', 'All real $x$'],
-    correctAnswer: 3,
-    explanation: 'Ratio test: $\\lim |a_{n+1}/a_n| = \\lim |x|/(n+1) = 0 < 1$ for all $x$. Converges everywhere. (This is the Maclaurin series for $e^x$.)',
+    question: 'The geometric series $\\sum_{n=0}^{\\infty} \\left(\\dfrac{2}{3}\\right)^n$ converges to',
+    options: ['$3$', '$\\dfrac{3}{2}$', '$\\dfrac{2}{3}$', '$\\dfrac{1}{3}$'],
+    correctAnswer: 0,
+    explanation: 'With first term $1$ and ratio $r=\\frac{2}{3}$, the sum is $\\frac{1}{1-r}=\\frac{1}{1/3}=3$. The value $\\frac{1}{3}$ is $1-r$, the denominator, rather than the sum.',
   },
   {
     type: 'mcq',
@@ -429,7 +292,7 @@ export const MCQS: MCQItem[] = [
       '$1 + x + x^2/2 + \\cdots$',
     ],
     correctAnswer: 1,
-    explanation: 'Standard Maclaurin: $\\sin x = x - x^3/3! + x^5/5! - \\cdots = x - x^3/6 + x^5/120 - \\cdots$.',
+    explanation: 'The series is $\\sin x=x-\\frac{x^3}{3!}+\\frac{x^5}{5!}-\\cdots=x-\\frac{x^3}{6}+\\frac{x^5}{120}-\\cdots$, odd powers with alternating signs. The series starting with $1$ and even powers is the one for $\\cos x$.',
   },
   {
     type: 'mcq',
@@ -437,48 +300,142 @@ export const MCQS: MCQItem[] = [
     question: 'The interval of convergence of $\\sum_{n=1}^{\\infty} \\dfrac{(x-2)^n}{n}$ is',
     options: ['$(1, 3)$', '$[1, 3)$', '$(1, 3]$', '$[1, 3]$'],
     correctAnswer: 1,
-    explanation: 'Ratio: $|x-2| < 1 \\Rightarrow 1 < x < 3$. Endpoints: $x=1$ → $\\sum (-1)^n/n$ converges (alternating); $x=3$ → $\\sum 1/n$ diverges (harmonic). Interval is $[1, 3)$.',
+    explanation: 'The ratio test gives $|x-2|<1$, so $1<x<3$. At $x=1$ the series is $\\sum\\frac{(-1)^n}{n}$, which converges by the alternating series test, while at $x=3$ it is the divergent harmonic series, so the interval is $[1,3)$.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-10-infinite-series',
+    question: 'Which of the following series converges conditionally?',
+    options: [
+      '$\\sum_{n=1}^{\\infty} \\dfrac{(-1)^n}{n}$',
+      '$\\sum_{n=1}^{\\infty} \\dfrac{(-1)^n}{n^2}$',
+      '$\\sum_{n=1}^{\\infty} \\dfrac{(-1)^n}{2^n}$',
+      '$\\sum_{n=1}^{\\infty} \\dfrac{(-1)^n n}{n+1}$',
+    ],
+    correctAnswer: 0,
+    explanation: 'The alternating harmonic series converges by the alternating series test, but its absolute values form the divergent harmonic series, so the convergence is conditional. The series with $n^2$ in the denominator converges absolutely, since $\\sum\\frac{1}{n^2}$ converges.',
+  },
+
+  /* ============== PART B — CALCULATOR ALLOWED (Q31–Q45, 15 questions) ============== */
+
+  {
+    type: 'mcq',
+    topic: 'unit-4-contextual-applications-differentiation',
+    question: 'A spherical snowball melts so that its volume decreases at 12 cubic centimeters per minute. When the radius is 5 cm, the rate at which the radius is changing, in cm/min, is',
+    options: ['$-\\dfrac{3}{25\\pi}$', '$\\dfrac{3}{25\\pi}$', '$-\\dfrac{3}{5\\pi}$', '$-\\dfrac{3}{125\\pi}$'],
+    correctAnswer: 0,
+    explanation: 'From $V=\\frac{4}{3}\\pi r^3$, $\\frac{dV}{dt}=4\\pi r^2\\frac{dr}{dt}$, so $-12=4\\pi(25)\\frac{dr}{dt}$ and $\\frac{dr}{dt}=-\\frac{3}{25\\pi}$. The positive value ignores that a melting snowball has a decreasing volume, so $\\frac{dV}{dt}$ must be negative.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-4-contextual-applications-differentiation',
+    question: 'Using the tangent line approximation to $f(x) = \\sqrt{1+x}$ at $x=0$, the estimate of $\\sqrt{1.06}$ is',
+    options: ['$1.03$', '$1.06$', '$1.12$', '$0.97$'],
+    correctAnswer: 0,
+    explanation: 'Since $f(0)=1$ and $f\'(0)=\\frac{1}{2}$, $L(x)=1+\\frac{x}{2}$ and $L(0.06)=1.03$ (the true value is about $1.0296$). The estimate $1.06$ uses a slope of $1$, forgetting the $\\frac{1}{2}$ from the derivative of the square root.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-5-analytical-applications-differentiation',
+    question: 'A box with a square base and open top has volume 32 cubic feet. The dimensions that minimize its surface area are (base side, height) =',
+    options: ['$(\\sqrt[3]{32}, \\sqrt[3]{32})$', '$(4, 2)$', '$(8, 0.5)$', '$(2\\sqrt 2, 4)$'],
+    correctAnswer: 1,
+    explanation: 'With $h=\\frac{32}{x^2}$, the surface area is $S=x^2+4xh=x^2+\\frac{128}{x}$, and $S\'=2x-\\frac{128}{x^2}=0$ gives $x=4$, $h=2$. The dimensions $(2\\sqrt2,4)$ also hold $32$ cubic feet but have surface area about $53.3$ square feet, more than the $48$ at $(4,2)$; a cube is optimal only for a closed box.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-5-analytical-applications-differentiation',
+    question: 'If $f(1) = 2$, $f(5) = 10$, and $f$ is continuous on $[1, 5]$ and differentiable on $(1, 5)$, then by the Mean Value Theorem there exists $c \\in (1, 5)$ with $f\'(c) =$',
+    options: ['$2$', '$\\dfrac{5}{2}$', '$\\dfrac{8}{5}$', '$\\dfrac{12}{5}$'],
+    correctAnswer: 0,
+    explanation: 'The theorem guarantees $f\'(c)=\\frac{f(5)-f(1)}{5-1}=\\frac{8}{4}=2$. Dividing by $5$ instead of the interval length $4$ gives $\\frac{8}{5}$.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-6-integration-accumulation',
+    question: 'Using a calculator, $\\displaystyle\\int_0^2 \\dfrac{\\sin x}{1 + x}\\,dx \\approx$',
+    options: ['$0.28$', '$0.47$', '$0.67$', '$1.42$'],
+    correctAnswer: 2,
+    explanation: 'Numerical integration gives $\\int_0^2\\frac{\\sin x}{1+x}\\,dx\\approx 0.671$. The value $0.28$ is the integral over $[0,1]$ only, and $1.42$ is $\\int_0^2\\sin x\\,dx$ without the denominator.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-7-differential-equations',
+    question: 'Use Euler\'s method with two steps of size $\\Delta x = 0.5$ to approximate $y(2)$ for $y\' = x + y$, $y(1) = 1$.',
+    options: ['$2$', '$3$', '$3.25$', '$3.75$'],
+    correctAnswer: 3,
+    explanation: 'First step: $y(1.5)\\approx 1+0.5(1+1)=2$. Second step: $y(2)\\approx 2+0.5(1.5+2)=3.75$; reusing the starting slope $2$ for the second step gives $3$ instead.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-7-differential-equations',
+    question: 'For the logistic model $\\dfrac{dP}{dt} = 0.05P\\left(1 - \\dfrac{P}{200}\\right)$, the population is growing fastest when $P =$',
+    options: ['$50$', '$100$', '$150$', '$200$'],
+    correctAnswer: 1,
+    explanation: 'A logistic population grows fastest at half the carrying capacity, $\\frac{200}{2}=100$, where $\\frac{dP}{dt}$ reaches its maximum. At $P=200$ the population has reached carrying capacity and $\\frac{dP}{dt}=0$.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-8-applications-integration',
+    question: 'The volume of the solid generated when the region bounded by $y = 1/x$, $y = 0$, $x = 1$, $x = 4$ is rotated about the $x$-axis is',
+    options: ['$\\dfrac{3\\pi}{4}$', '$\\pi \\ln 4$', '$\\dfrac{3}{4}$', '$2\\pi \\ln 4$'],
+    correctAnswer: 0,
+    explanation: 'Using disks, $V=\\pi\\int_1^4\\frac{1}{x^2}\\,dx=\\pi\\left[-\\frac{1}{x}\\right]_1^4=\\frac{3\\pi}{4}$. The value $\\pi\\ln 4$ integrates the radius $\\frac{1}{x}$ without squaring it.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-8-applications-integration',
+    question: 'A particle moves along the $x$-axis with velocity $v(t) = 4 - t^2$. The total distance traveled from $t = 0$ to $t = 3$ is',
+    options: ['$\\dfrac{23}{3}$', '$3$', '$\\dfrac{16}{3}$', '$\\dfrac{7}{3}$'],
+    correctAnswer: 0,
+    explanation: 'Velocity is positive on $[0,2)$ and negative on $(2,3]$, so the distance is $\\int_0^2(4-t^2)\\,dt+\\int_2^3(t^2-4)\\,dt=\\frac{16}{3}+\\frac{7}{3}=\\frac{23}{3}$. The value $3$ is the displacement $\\int_0^3 v(t)\\,dt$, where the backward motion cancels part of the forward motion.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-9-parametric-polar-vector',
+    question: 'Using a calculator, the arc length of the parametric curve $x = t$, $y = t^{3/2}$ for $0 \\le t \\le 4$ is approximately',
+    options: ['$6.87$', '$8.94$', '$9.07$', '$22.00$'],
+    correctAnswer: 2,
+    explanation: '$L=\\int_0^4\\sqrt{1+\\left(\\frac{3}{2}t^{1/2}\\right)^2}\\,dt=\\int_0^4\\sqrt{1+\\frac{9}{4}t}\\,dt\\approx 9.07$. The value $8.94$ is the straight-line distance from $(0,0)$ to $(4,8)$, which must be shorter than the curve.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-9-parametric-polar-vector',
+    question: 'The area enclosed by one petal of the rose $r = 2\\sin(3\\theta)$ is',
+    options: ['$\\dfrac{\\pi}{3}$', '$\\dfrac{2\\pi}{3}$', '$\\dfrac{2}{3}$', '$\\pi$'],
+    correctAnswer: 0,
+    explanation: 'One petal is traced for $0\\le\\theta\\le\\frac{\\pi}{3}$, so $A=\\frac{1}{2}\\int_0^{\\pi/3}4\\sin^2(3\\theta)\\,d\\theta=\\int_0^{\\pi/3}(1-\\cos 6\\theta)\\,d\\theta=\\frac{\\pi}{3}$. Omitting the $\\frac{1}{2}$ in the polar area formula doubles this to $\\frac{2\\pi}{3}$.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-9-parametric-polar-vector',
+    question: 'A particle has position $x(t) = \\cos(t^2)$, $y(t) = \\sin(t^2)$. Its speed at $t = 1$ is',
+    options: ['$1$', '$2$', '$\\sqrt 2$', '$4$'],
+    correctAnswer: 1,
+    explanation: '$x\'(t)=-2t\\sin(t^2)$ and $y\'(t)=2t\\cos(t^2)$, so the speed is $\\sqrt{4t^2}=2|t|$, which is $2$ at $t=1$. The value $1$ forgets the chain-rule factor $2t$, and $4$ is the squared speed.',
   },
   {
     type: 'mcq',
     topic: 'unit-10-infinite-series',
     question: 'Using the Maclaurin polynomial of degree 2 for $f(x) = e^x$, $e^{0.1} \\approx$',
-    options: ['$1.0$', '$1.1$', '$1.105$', '$1.11$'],
-    correctAnswer: 2,
-    explanation: '$P_2(x) = 1 + x + x^2/2$. $P_2(0.1) = 1 + 0.1 + 0.005 = 1.105$.',
-  },
-
-  /* ---- mixed calculator-allowed (4) ---- */
-  {
-    type: 'mcq',
-    topic: 'unit-6-integration-accumulation',
-    question: 'Using a calculator, $\\displaystyle\\int_0^2 \\dfrac{\\sin x}{1 + x}\\,dx \\approx$',
-    options: ['$0.40$', '$0.61$', '$0.84$', '$1.20$'],
-    correctAnswer: 1,
-    explanation: 'Numerical integration: $\\approx 0.610$.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-7-differential-equations',
-    question: 'Use Euler\'s method with $\\Delta x = 0.5$ to approximate $y(2)$ for $y\' = x + y$, $y(1) = 1$.',
-    options: ['$2.5$', '$3.5$', '$3.75$', '$4.5$'],
-    correctAnswer: 2,
-    explanation: 'Step 1: $y_1 = 1 + 0.5(1 + 1) = 2$ at $x = 1.5$. Step 2: $y_2 = 2 + 0.5(1.5 + 2) = 2 + 1.75 = 3.75$ at $x = 2$.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-9-parametric-polar-vector',
-    question: 'A particle has position $x(t) = \\cos(t^2)$, $y(t) = \\sin(t^2)$. Speed at $t = 1$ equals',
-    options: ['$1$', '$2$', '$\\sqrt 2$', '$\\pi$'],
-    correctAnswer: 1,
-    explanation: '$x\'(t) = -2t\\sin(t^2)$, $y\'(t) = 2t\\cos(t^2)$. Speed $= \\sqrt{4t^2(\\sin^2 + \\cos^2)} = 2|t|$. At $t=1$: $2$.',
+    options: ['$1.105$', '$1.1$', '$1.11$', '$1.01$'],
+    correctAnswer: 0,
+    explanation: '$P_2(x)=1+x+\\frac{x^2}{2}$, so $P_2(0.1)=1+0.1+0.005=1.105$. The value $1.11$ omits the $2!$ in the denominator of the quadratic term.',
   },
   {
     type: 'mcq',
     topic: 'unit-10-infinite-series',
-    question: 'The Lagrange error bound when approximating $\\sin(0.2)$ by the third-degree Maclaurin polynomial $P_3(x) = x - x^3/6$ satisfies $|R_3(0.2)| \\le$',
-    options: ['$\\dfrac{(0.2)^4}{24}$', '$\\dfrac{(0.2)^4}{4!}$', '$\\dfrac{(0.2)^5}{120}$', 'Both A/B (equivalent)'],
+    question: 'The third-degree Maclaurin polynomial $P_3(x) = x - \\dfrac{x^3}{6}$ is used to approximate $\\sin(0.2)$. Treating $P_3$ as a degree-3 polynomial and using $1$ as the bound on $|f^{(4)}(x)|$, the Lagrange error bound for this approximation is',
+    options: ['$\\dfrac{(0.2)^4}{4!}$', '$\\dfrac{(0.2)^3}{3!}$', '$(0.2)^4$', '$\\dfrac{(0.2)^4}{3!}$'],
+    correctAnswer: 0,
+    explanation: 'For a degree-$n$ polynomial the Lagrange bound is $\\frac{M|x|^{n+1}}{(n+1)!}$, so with $n=3$ and $M=1$ it is $\\frac{(0.2)^4}{4!}$. The expression $\\frac{(0.2)^3}{3!}$ uses the degree of the polynomial instead of the next power, and $(0.2)^4$ leaves out the factorial.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-10-infinite-series',
+    question: 'For what values of $x$ does $\\sum_{n=0}^{\\infty} \\dfrac{x^n}{n!}$ converge?',
+    options: ['$|x| < 1$', '$|x| \\le 1$', '$x = 0$ only', '$-\\infty < x < \\infty$'],
     correctAnswer: 3,
-    explanation: 'Lagrange: $|R_3(x)| \\le \\frac{M|x|^4}{4!}$ where $M = \\max|f^{(4)}|$. For $\\sin x$, $|f^{(4)}|=|\\sin x|\\le 1$. So bound $= (0.2)^4/24 = (0.2)^4/4!$. A and B are the same.',
+    explanation: 'The ratio test gives $\\lim_{n\\to\\infty}\\frac{|x|}{n+1}=0<1$ for every $x$, so the series (the Maclaurin series for $e^x$) converges everywhere. The interval $|x|<1$ is the answer for the geometric series $\\sum x^n$, which lacks the factorial.',
   },
 ]
