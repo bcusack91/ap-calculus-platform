@@ -11,6 +11,7 @@ import rehypeKatex from 'rehype-katex'
 import {
   getApPsychFRQs,
   generateFullExamFRQs,
+  PSYCH_FRQ_TYPE_LABELS,
   type PsychFRQ,
   type FRQRubricItem,
 } from '@/data/ap-psych-frq/questions'
@@ -40,7 +41,15 @@ function formatTime(seconds: number): string {
 }
 
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
-type Filter = 'all' | 'concept-application' | 'research-design'
+type Filter = 'all' | 'aaq' | 'ebq'
+
+const FILTER_LABELS: Record<Filter, string> = { all: 'All FRQs', ...PSYCH_FRQ_TYPE_LABELS }
+
+/** Only current-format items (AAQ/EBQ); an older content-store copy falls back to the static pool. */
+function currentFormat(frqs: unknown): PsychFRQ[] {
+  if (!Array.isArray(frqs)) return []
+  return frqs.filter((q): q is PsychFRQ => q?.type === 'aaq' || q?.type === 'ebq')
+}
 
 function APPsychFRQPageInner() {
   const { status } = useSession()
@@ -69,7 +78,10 @@ function APPsychFRQPageInner() {
     let active = true
     fetch('/api/frq/ap-psych')
       .then((r) => (r.ok ? r.json() : null))
-      .then((data) => { if (active && Array.isArray(data?.frqs) && data.frqs.length > 0) setAllFrqs(data.frqs) })
+      .then((data) => {
+        const fresh = currentFormat(data?.frqs)
+        if (active && fresh.length > 0) setAllFrqs(fresh)
+      })
       .catch(() => {})
     return () => { active = false }
   }, [])
@@ -92,12 +104,7 @@ function APPsychFRQPageInner() {
 
   const startPractice = useCallback((f: Filter) => {
     setFilter(f)
-    const pool =
-      f === 'concept-application'
-        ? allFrqs.filter(q => q.type === 'concept-application')
-        : f === 'research-design'
-          ? allFrqs.filter(q => q.type === 'research-design')
-          : allFrqs
+    const pool = f === 'all' ? allFrqs : allFrqs.filter(q => q.type === f)
     setFrqs(pool)
     setCurrentIdx(0)
     setResponses({})
@@ -108,14 +115,14 @@ function APPsychFRQPageInner() {
   }, [allFrqs])
 
   const startTimedExam = useCallback(() => {
-    const { conceptApplication, researchDesign } = generateFullExamFRQs()
-    setFrqs([conceptApplication, researchDesign])
+    const { aaq, ebq } = generateFullExamFRQs()
+    setFrqs([aaq, ebq])
     setCurrentIdx(0)
     setResponses({})
     setResults({})
     setShowSample({})
     setShowRubric({})
-    setTimeRemaining(50 * 60)
+    setTimeRemaining(70 * 60)
     setMode('timed')
   }, [])
 
@@ -188,8 +195,9 @@ function APPsychFRQPageInner() {
               </span>
             </h1>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Practice with AP Psychology free-response questions. Each question includes a scoring
-              rubric and sample response — the FRQ section is 33% of your AP exam score.
+              Practice the two free-response formats on the current AP Psychology exam: the Article
+              Analysis Question and the Evidence-Based Question. Each includes a point-by-point rubric
+              and a sample response. The FRQ section is about 33% of your AP exam score.
             </p>
           </div>
 
@@ -203,9 +211,9 @@ function APPsychFRQPageInner() {
                   Section II Structure
                 </h4>
                 <ul className="space-y-1">
-                  <li>• 1 Concept Application FRQ (7 pts)</li>
-                  <li>• 1 Research Design FRQ (7 pts)</li>
-                  <li>• Total: 14 points in 50 minutes</li>
+                  <li>• 1 Article Analysis Question, AAQ (7 pts, ~25 min)</li>
+                  <li>• 1 Evidence-Based Question, EBQ (7 pts, ~45 min)</li>
+                  <li>• Total: 14 points in 70 minutes</li>
                   <li>• No calculator allowed</li>
                 </ul>
               </div>
@@ -214,10 +222,10 @@ function APPsychFRQPageInner() {
                   What&apos;s Tested
                 </h4>
                 <ul className="space-y-1">
-                  <li>• Applying psychological concepts to scenarios</li>
-                  <li>• Designing & evaluating research studies</li>
-                  <li>• Identifying variables, methods & ethics</li>
-                  <li>• Using key terminology accurately</li>
+                  <li>• AAQ: research method, operational definitions, statistics</li>
+                  <li>• AAQ: ethics, generalizability, and support for a hypothesis</li>
+                  <li>• EBQ: a defensible claim backed by cited evidence</li>
+                  <li>• EBQ: explaining evidence with psychological concepts</li>
                 </ul>
               </div>
             </div>
@@ -225,7 +233,7 @@ function APPsychFRQPageInner() {
 
           <div className="grid sm:grid-cols-2 gap-4 mb-8">
             <button
-              onClick={() => startPractice('concept-application')}
+              onClick={() => startPractice('aaq')}
               className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition"
             >
               <div className="flex items-center gap-3 mb-3">
@@ -234,19 +242,19 @@ function APPsychFRQPageInner() {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-pink-600 dark:group-hover:text-pink-400">
-                    Concept Application
+                    Article Analysis (AAQ)
                   </h3>
                   <p className="text-xs text-gray-500">7 points · ~25 min each</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Apply psychological concepts to real-world scenarios involving behavior, cognition,
-                and mental health.
+                Read a study summary and analyze its method, variables, statistics, ethics,
+                generalizability, and whether its findings support a hypothesis.
               </p>
             </button>
 
             <button
-              onClick={() => startPractice('research-design')}
+              onClick={() => startPractice('ebq')}
               className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition"
             >
               <div className="flex items-center gap-3 mb-3">
@@ -255,14 +263,14 @@ function APPsychFRQPageInner() {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400">
-                    Research Design
+                    Evidence-Based (EBQ)
                   </h3>
-                  <p className="text-xs text-gray-500">7 points · ~25 min each</p>
+                  <p className="text-xs text-gray-500">7 points · ~45 min each</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Design experiments, identify variables, evaluate methodology, and address ethical
-                considerations.
+                Make a claim, support it with evidence from two of three sources, and explain each
+                piece of evidence with a psychological concept.
               </p>
             </button>
 
@@ -300,7 +308,7 @@ function APPsychFRQPageInner() {
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400">
                     Timed Exam Simulation
                   </h3>
-                  <p className="text-xs text-gray-500">1 CA + 1 RD · 50 min</p>
+                  <p className="text-xs text-gray-500">1 AAQ + 1 EBQ · 70 min</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -325,7 +333,7 @@ function APPsychFRQPageInner() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-pink-500 mt-0.5">✓</span>
-                For research design, identify IV, DV, controls, and ethics
+                AAQ: support every answer with details from the study itself
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-pink-500 mt-0.5">✓</span>
@@ -333,11 +341,11 @@ function APPsychFRQPageInner() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-pink-500 mt-0.5">✓</span>
-                Reference specific psychologists when relevant (e.g., Bandura, Piaget)
+                EBQ: cite the source for each piece of evidence, e.g., (Source 2)
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-pink-500 mt-0.5">✓</span>
-                Budget time: ~25 min per FRQ, answer every part
+                Budget time: ~25 min for the AAQ, ~45 min for the EBQ
               </li>
             </ul>
           </div>
@@ -392,11 +400,9 @@ function APPsychFRQPageInner() {
                   <div className="flex items-center justify-between">
                     <div>
                       <span
-                        className={`text-xs font-bold px-2 py-0.5 rounded ${frq.type === 'concept-application' ? 'bg-pink-100 dark:bg-pink-900/30 text-pink-600' : 'bg-purple-100 dark:bg-purple-900/30 text-purple-600'}`}
+                        className={`text-xs font-bold px-2 py-0.5 rounded ${frq.type === 'aaq' ? 'bg-pink-100 dark:bg-pink-900/30 text-pink-600' : 'bg-purple-100 dark:bg-purple-900/30 text-purple-600'}`}
                       >
-                        {frq.type === 'concept-application'
-                          ? 'Concept Application'
-                          : 'Research Design'}
+                        {PSYCH_FRQ_TYPE_LABELS[frq.type]}
                       </span>
                       <span className="ml-2 text-sm font-medium text-gray-900 dark:text-white">
                         {frq.title}
@@ -452,7 +458,7 @@ function APPsychFRQPageInner() {
               ← Back to Menu
             </button>
             <h1 className="text-xl font-bold text-gray-900 dark:text-white">
-              {mode === 'timed' ? 'Timed FRQ Exam' : `FRQ Practice (${filter})`}
+              {mode === 'timed' ? 'Timed FRQ Exam' : `FRQ Practice: ${FILTER_LABELS[filter]}`}
             </h1>
           </div>
           <div className="flex items-center gap-4">
@@ -481,11 +487,9 @@ function APPsychFRQPageInner() {
             <div className="flex items-center justify-between flex-wrap gap-2">
               <div>
                 <span
-                  className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${currentFRQ.type === 'concept-application' ? 'bg-pink-800' : 'bg-purple-700'}`}
+                  className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${currentFRQ.type === 'aaq' ? 'bg-pink-800' : 'bg-purple-700'}`}
                 >
-                  {currentFRQ.type === 'concept-application'
-                    ? 'Concept Application'
-                    : 'Research Design'}
+                  {PSYCH_FRQ_TYPE_LABELS[currentFRQ.type]}
                 </span>
                 <h2 className="text-lg font-bold mt-1">{currentFRQ.title}</h2>
               </div>
@@ -548,7 +552,7 @@ function APPsychFRQPageInner() {
                       onChange={(e) =>
                         setResponses((prev) => ({ ...prev, [key]: e.target.value }))
                       }
-                      placeholder="Write your response here... Define the concept and explain how it applies to the scenario."
+                      placeholder={currentFRQ.type === 'aaq' ? 'Write your response here. Use specific details from the study.' : 'Write your response here. Cite each source you use, e.g., (Source 1).'}
                       className="w-full h-36 p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-y text-sm focus:ring-2 focus:ring-pink-500 focus:border-pink-500"
                       disabled={!!result}
                       maxLength={2000}

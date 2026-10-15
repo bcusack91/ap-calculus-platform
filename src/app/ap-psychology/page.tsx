@@ -93,7 +93,7 @@ const features = [
   },
   {
     title: 'FRQ Practice',
-    description: 'Practice AP Psychology free-response questions with concept application and research design prompts, rubrics, and sample answers.',
+    description: 'Practice AP Psychology free-response questions in the current exam format (Article Analysis and Evidence-Based questions), with rubrics and sample answers.',
     href: '/ap-psych-frq',
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">

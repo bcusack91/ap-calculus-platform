@@ -21,7 +21,7 @@ export const config: FullLengthExamConfig = {
       name: 'Section I',
       shortName: 'Multiple Choice',
       description:
-        '75 MCQs covering all five redesigned units (15 each): Biological Bases of Behavior, Cognition, Development & Learning, Social Psychology & Personality, and Mental & Physical Health. Research-methods items are integrated within each unit per the official CED.',
+        '75 MCQs in 90 minutes covering all five units (15 each): Biological Bases of Behavior, Cognition, Development and Learning, Social Psychology and Personality, and Mental and Physical Health. About a third are science-practice items (research design, ethics, and data interpretation) set within those units.',
       timeLimitMinutes: 90,
       items: MCQS,
     },
@@ -30,7 +30,7 @@ export const config: FullLengthExamConfig = {
       name: 'Section II',
       shortName: 'Free Response',
       description:
-        '2 FRQs (14 points total): Q1 Article Analysis Question (AAQ, 7 pts, ~25 min) — analyze a research study summary; Q2 Evidence-Based Question (EBQ, 7 pts, ~45 min) — defend a claim using provided sources. Self-graded rubric.',
+        '2 FRQs in 70 minutes (14 points total): Q1 Article Analysis Question (AAQ, 7 pts, ~25 min) — analyze a study summary: method, operational definition, a statistic, an ethical guideline, generalizability, and whether the results support a hypothesis; Q2 Evidence-Based Question (EBQ, 7 pts, ~45 min) — make a claim and support it with evidence from two of three sources, each explained with a psychological concept. Self-graded against the rubric.',
       timeLimitMinutes: 70,
       items: FRQS,
     },
@@ -51,12 +51,12 @@ export const config: FullLengthExamConfig = {
       {
         heading: 'Unit Weighting (Revised CED)',
         items: [
-          'Unit 1 — Biological Bases of Behavior (15–19%)',
-          'Unit 2 — Cognition (13–17%)',
-          'Unit 3 — Development & Learning (15–19%)',
-          'Unit 4 — Social Psychology & Personality (12–16%)',
-          'Unit 5 — Mental & Physical Health (15–19%)',
-          'Research methods integrated throughout (~10%)',
+          'Unit 1 — Biological Bases of Behavior (15–25%)',
+          'Unit 2 — Cognition (15–25%)',
+          'Unit 3 — Development and Learning (15–25%)',
+          'Unit 4 — Social Psychology and Personality (15–25%)',
+          'Unit 5 — Mental and Physical Health (15–25%)',
+          'Research methods and data analysis are tested within every unit',
         ],
       },
     ],
