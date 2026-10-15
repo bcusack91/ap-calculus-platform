@@ -59,15 +59,15 @@ $t = \\frac{\\ln(3/13)}{k} = \\frac{\\ln(3/13)}{\\frac{1}{10}\\ln(8/13)} \\appro
         questions: [
           {
             question: 'A $98\u00b0F$ body is found in a $65\u00b0F$ room. After 1 hour it\u2019s $90\u00b0F$. The cooling constant $k$ is:',
-            options: ['$\\ln(25/33)$', '$\\ln(33/25)$', '$\\frac{\\ln(25/33)}{65}$', '$-\\frac{8}{33}$'],
+            options: ['$\\ln(25/33)$', '$-\\ln(25/33)$', '$\\frac{\\ln(25/33)}{65}$', '$-\\frac{8}{33}$'],
             correctAnswer: 0,
-            explanation: '$90 = 65 + 33e^{k}$. $25 = 33e^k$. $e^k = 25/33$. $k = \\ln(25/33) \\approx -0.278$.'
+            explanation: '$90 = 65 + 33e^{k}$. $25 = 33e^k$. $e^k = 25/33$. $k = \\ln(25/33) \\approx -0.278$. Flipping the ratio gives $-\\ln(25/33) = \\ln(33/25) > 0$, which would mean the body warms up. Dividing by $65$ mixes in the room temperature, and $-\\frac{8}{33}$ treats the cooling as linear.'
           },
           {
             question: 'In Newton\u2019s cooling, as $t \\to \\infty$, the temperature approaches:',
-            options: ['$0$', '$T_0$', '$T_s$ (ambient temperature)', '$(T_0 + T_s)/2$'],
+            options: ['$0°$, the temperature fades away', '$T_0$, the starting temperature', '$T_s$, the surrounding temperature', '$\\frac{T_0 + T_s}{2}$, halfway'],
             correctAnswer: 2,
-            explanation: '$\\lim_{t\\to\\infty} [T_s + (T_0-T_s)e^{kt}] = T_s$ since $e^{kt} \\to 0$ for $k<0$.'
+            explanation: '$\\lim_{t\\to\\infty} [T_s + (T_0-T_s)e^{kt}] = T_s$ since $e^{kt} \\to 0$ for $k<0$. Only the temperature DIFFERENCE decays to $0$; the object settles at the surrounding temperature, not at $0°$, its starting value, or halfway between.'
           },
           {
             question: 'A $40\u00b0F$ item is placed in a $72\u00b0F$ room. The model is:',
@@ -93,15 +93,15 @@ $t = \\frac{\\ln(3/13)}{k} = \\frac{\\ln(3/13)}{\\frac{1}{10}\\ln(8/13)} \\appro
           },
           {
             label: 'The rate of cooling is fastest when:',
-            options: ['The object is at ambient temperature', 'The temperature difference is greatest (at $t=0$)', 'The object has cooled halfway', 'After one half-life'],
-            correctAnswers: ['The temperature difference is greatest (at $t=0$)'],
+            options: ['The object is closest to room temperature', 'The temperature gap is largest, at $t = 0$', 'The object has cooled halfway to the room', 'After one half-life of the temperature gap'],
+            correctAnswers: ['The temperature gap is largest, at $t = 0$'],
             hints: ['$dT/dt = k(T-T_s)$. Larger $|T-T_s|$ means faster rate.'],
-            explanation: 'The rate is proportional to the temperature difference, which is largest initially.'
+            explanation: 'The rate is proportional to the temperature difference $T - T_s$, which is largest at $t = 0$ and shrinks afterward.'
           },
           {
             label: 'Newton\u2019s Law is similar to exponential decay because:',
-            options: ['Both involve $e^{kt}$ with $k>0$', 'The temperature difference $(T-T_s)$ decays exponentially', 'The temperature itself decays to zero', 'Both have constant rates'],
-            correctAnswers: ['The temperature difference $(T-T_s)$ decays exponentially'],
+            options: ['The temperature grows like $e^{kt}$ with $k>0$', 'The gap $T - T_s$ decays exponentially', 'The temperature itself decays to zero', 'The temperature drops by the same amount each minute'],
+            correctAnswers: ['The gap $T - T_s$ decays exponentially'],
             hints: ['Let $u = T - T_s$. Then $du/dt = ku$.'],
             explanation: 'The substitution $u = T - T_s$ reduces Newton\u2019s Law to $du/dt = ku$, standard exponential decay.'
           }
@@ -121,7 +121,7 @@ $t = \\frac{\\ln(3/13)}{k} = \\frac{\\ln(3/13)}{\\frac{1}{10}\\ln(8/13)} \\appro
           '$56 = 112e^{20k}$, so $e^{20k} = 1/2$.',
           'At $t=40$: $T = 68 + 112e^{40k} = 68 + 112(1/2)^2 = 68 + 28$.'
         ],
-        explanation: '$e^{20k} = 1/2$. At $t=40$: $T = 68 + 112 \\cdot (1/4) = 68 + 28 = 96$. Wait: $112/4 = 28$. $68+28 = 96$.'
+        explanation: '$e^{20k} = 1/2$. At $t=40$: $T = 68 + 112 \\cdot (1/4) = 68 + 28 = 96$.'
       }
     },
     {

@@ -53,21 +53,21 @@ $$= 10 + 13.5 + 16.5 + 13 = 53 \\text{ gal}$$
         questions: [
           {
             question: 'Estimate $\\int_0^{10} f(x)\\,dx$ using the trapezoidal rule.',
-            options: ['$51.5$', '$55$', '$42$', '$60$'],
+            options: ['$51.5$', '$53$', '$50$', '$103$'],
             correctAnswer: 0,
-            explanation: '$T = \\frac{3}{2}(5+8) + \\frac{4}{2}(8+2) + \\frac{3}{2}(2+6) = 19.5 + 20 + 12 = 51.5$.'
+            explanation: '$T = \\frac{3}{2}(5+8) + \\frac{4}{2}(8+2) + \\frac{3}{2}(2+6) = 19.5 + 20 + 12 = 51.5$. The left sum is $53$ and the right sum is $50$ (their average is $51.5$); leaving out the $\\frac{1}{2}$ doubles the answer to $103$.'
           },
           {
             question: 'If $f$ is concave up on $[0,10]$, the trapezoidal estimate is:',
-            options: ['An overestimate', 'An underestimate', 'Exact', 'Cannot tell'],
+            options: ['An overestimate', 'An underestimate', 'Exact, since it averages $L$ and $R$', 'Cannot tell without more data'],
             correctAnswer: 0,
-            explanation: 'For concave up functions, trapezoids lie above the curve, giving an overestimate.'
+            explanation: 'For concave up functions, the trapezoids\' straight top edges lie above the curve, giving an overestimate. Averaging the left and right sums does not make the estimate exact, and the concavity alone is enough to decide.'
           },
           {
             question: 'The trapezoidal sum is equal to:',
-            options: ['$\\frac{\\text{Left} + \\text{Right}}{2}$', '$\\text{Left} + \\text{Right}$', 'Midpoint sum', 'Left sum only'],
+            options: ['$\\frac{\\text{Left} + \\text{Right}}{2}$', '$\\text{Left} + \\text{Right}$', '$\\frac{\\text{Right} - \\text{Left}}{2}$', 'The midpoint sum'],
             correctAnswer: 0,
-            explanation: '$T = \\frac{L + R}{2}$. This is always true.'
+            explanation: '$T = \\frac{L + R}{2}$ for the same partition. Adding without halving double-counts; half the difference measures how far apart the two sums are, not the area; the midpoint sum is a different estimate.'
           }
         ]
       }
@@ -94,10 +94,10 @@ $$= 10 + 13.5 + 16.5 + 13 = 53 \\text{ gal}$$
           },
           {
             label: 'Total trapezoidal estimate $=$',
-            options: ['$20 + 36 + 35 = 91$', '$20 + 36 = 56$', '$91.5$', '$85$'],
+            options: ['$20 + 36 + 35 = 91$', '$20 + 36 + 70 = 126$', '$20 + 36 + 14 = 70$', '$20 + 36 = 56$'],
             correctAnswers: ['$20 + 36 + 35 = 91$'],
             hints: ['Third: $\\frac{5}{2}(5+9) = \\frac{5}{2}(14) = 35$.'],
-            explanation: 'Third: $\\frac{5}{2}(5+9) = 35$. Total: $20 + 36 + 35 = 91$ m.'
+            explanation: 'Third: $\\frac{5}{2}(5+9) = 35$. Total: $20 + 36 + 35 = 91$ m. Using $5(14) = 70$ forgets the $\\frac{1}{2}$; using $14$ forgets the width; stopping at $56$ leaves out the third trapezoid.'
           }
         ]
       }

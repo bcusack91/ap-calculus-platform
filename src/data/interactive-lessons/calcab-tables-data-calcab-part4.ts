@@ -61,21 +61,21 @@ This is MVT applied to $f'$ (guarantees $f''(c)$ exists).`
         questions: [
           {
             question: 'By MVT on $[2,5]$, there exists $c$ where $f\'(c) =$',
-            options: ['$3$', '$9$', '$\\frac{10}{5}$', '$5$'],
+            options: ['$3$', '$\\frac{9}{5}$', '$\\frac{10}{5}$', '$\\frac{10}{3}$'],
             correctAnswer: 0,
-            explanation: '$f\'(c) = \\frac{f(5)-f(2)}{5-2} = \\frac{10-1}{3} = 3$.'
+            explanation: '$f\'(c) = \\frac{f(5)-f(2)}{5-2} = \\frac{10-1}{3} = 3$. Dividing by $5$ instead of $5 - 2$ gives $\\frac{9}{5}$; leaving out $f(2)$ gives $\\frac{10}{3}$ or $\\frac{10}{5}$.'
           },
           {
             question: 'By IVT, can we guarantee $f(c) = 7$ for some $c \\in (2,5)$?',
-            options: ['Yes \u2014 $7$ is between $f(2)=1$ and $f(5)=10$', 'No \u2014 $7$ is not in the range', 'Only by MVT', 'Cannot tell'],
+            options: ['Yes \u2014 $7$ is between $f(2)=1$ and $f(5)=10$', 'No — $7$ is not a value listed in the table', 'No — IVT also needs $f$ to be increasing', 'Cannot tell — $f(3)$ and $f(4)$ are not given'],
             correctAnswer: 0,
-            explanation: '$f(2)=1 < 7 < 10 = f(5)$. By IVT (continuous), $\\exists\\, c \\in (2,5)$ with $f(c)=7$.'
+            explanation: '$f(2)=1 < 7 < 10 = f(5)$. By IVT (continuous), $\\exists\\, c \\in (2,5)$ with $f(c)=7$. IVT needs only continuity on $[2,5]$ and a value between $f(2)$ and $f(5)$; it does not need the value in the table, monotonic behavior, or more data points.'
           },
           {
             question: 'By MVT on $[2,11]$, $f\'(c) =$',
-            options: ['$\\frac{4}{3}$', '$3$', '$4$', '$\\frac{12}{9}$'],
+            options: ['$\\frac{4}{3}$', '$3$', '$12$', '$4$'],
             correctAnswer: 0,
-            explanation: '$f\'(c) = \\frac{13-1}{11-2} = \\frac{12}{9} = \\frac{4}{3}$.'
+            explanation: '$f\'(c) = \\frac{13-1}{11-2} = \\frac{12}{9} = \\frac{4}{3}$. Forgetting to divide gives $12$; dividing by the number of subintervals ($3$) instead of the width $9$ gives $4$; $3$ is the slope on $[8,11]$ only.'
           }
         ]
       }
@@ -88,7 +88,7 @@ This is MVT applied to $f'$ (guarantees $f''(c)$ exists).`
         dropdowns: [
           {
             label: 'Can IVT guarantee $g(c) = 0$ for some $c \\in (0,4)$?',
-            options: ['Yes \u2014 $0$ is between $-3$ and $5$', 'No \u2014 $g$ might skip $0$', 'Only if $g$ is differentiable', 'Need more data'],
+            options: ['Yes \u2014 $0$ is between $-3$ and $5$', 'No \u2014 $g$ might skip $0$', 'Only if $g$ is differentiable', 'Need more data — $g(2)$ is not given'],
             correctAnswers: ['Yes \u2014 $0$ is between $-3$ and $5$'],
             hints: ['$g(0) = -3 < 0 < 5 = g(4)$.'],
             explanation: '$-3 < 0 < 5$. By IVT, $g(c) = 0$ for some $c \\in (0,4)$.'

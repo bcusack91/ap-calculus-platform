@@ -66,9 +66,9 @@ $$\\boxed{\\int e^{kx}\\,dx = \\frac{1}{k}e^{kx} + C \\qquad \\int a^x\\,dx = \\
           },
           {
             question: '$\\frac{d}{dx}[x \\cdot e^x] =$',
-            options: ['$xe^x$', '$e^x + xe^x$', '$e^x$', '$xe^x + e^x \\cdot 1 = (x+1)e^x$'],
+            options: ['$xe^x$', '$(x-1)e^x$', '$e^x$', '$(x+1)e^x$'],
             correctAnswer: 3,
-            explanation: 'Product rule: $1 \\cdot e^x + x \\cdot e^x = (x+1)e^x$.'
+            explanation: 'Product rule: $1 \\cdot e^x + x \\cdot e^x = (x+1)e^x$. Differentiating only $e^x$ gives $xe^x$; multiplying the two derivatives gives $1 \\cdot e^x = e^x$; a minus sign comes from mixing in the quotient rule.'
           },
           {
             question: '$\\int 2^x\\,dx =$',

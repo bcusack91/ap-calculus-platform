@@ -50,21 +50,21 @@ $$f''(a) \\approx \\frac{f'(b) - f'(c)}{b - c}$$
         questions: [
           {
             question: 'The first differences are $8, 6, 4, 2$. What does this tell us about concavity?',
-            options: ['$f$ is concave down ($f\'\' < 0$)', '$f$ is concave up ($f\'\' > 0$)', '$f$ has an inflection point', 'Cannot determine'],
+            options: ['Concave down, since $f\'$ is decreasing', 'Concave up, since $f$ is increasing', 'Concave down, since $f$ is decreasing', 'Cannot tell, since every difference is positive'],
             correctAnswer: 0,
-            explanation: 'Differences $8, 6, 4, 2$ are decreasing, so $f\'$ is decreasing, meaning $f\'\' < 0$ (concave down).'
+            explanation: 'Differences $8, 6, 4, 2$ are decreasing, so $f\'$ is decreasing, meaning $f\'\' < 0$ (concave down). $f$ itself is increasing (all differences are positive), but that describes $f\'$, not $f\'\'$.'
           },
           {
             question: 'Estimate $f\'(4)$ using symmetric differences.',
-            options: ['$\\frac{28 - 18}{6 - 2} = 2.5$', '$\\frac{24 - 18}{4 - 2} = 3$', '$\\frac{30 - 10}{8} = 2.5$', '$\\frac{24}{4} = 6$'],
+            options: ['$\\frac{28 - 18}{6 - 2} = 2.5$', '$\\frac{24 - 18}{4 - 2} = 3$', '$\\frac{30 - 18}{8 - 2} = 2$', '$\\frac{28 - 18}{2} = 5$'],
             correctAnswer: 0,
-            explanation: '$f\'(4) \\approx \\frac{f(6) - f(2)}{6 - 2} = \\frac{28 - 18}{4} = \\frac{10}{4} = 2.5$.'
+            explanation: '$f\'(4) \\approx \\frac{f(6) - f(2)}{6 - 2} = \\frac{28 - 18}{4} = \\frac{10}{4} = 2.5$. $\\frac{24 - 18}{4 - 2}$ is a one-sided (backward) estimate; $\\frac{30 - 18}{8 - 2}$ skips the nearest neighbors $x = 2$ and $x = 6$ for wider ones; dividing by $2$ instead of $6 - 2 = 4$ gives $5$.'
           },
           {
             question: 'Is $f$ increasing or decreasing on $[0,8]$?',
-            options: ['Increasing \u2014 all first differences are positive', 'Decreasing \u2014 differences are getting smaller', 'Neither', 'Cannot determine'],
+            options: ['Increasing \u2014 all first differences are positive', 'Decreasing \u2014 differences are getting smaller', 'Decreasing — the table shows that $f\'\' < 0$', 'Neither — $f$ peaks and levels off near $x = 8$'],
             correctAnswer: 0,
-            explanation: 'All differences ($8,6,4,2$) are positive, so $f\' > 0$ everywhere. $f$ is increasing (but slowing down because it is concave down).'
+            explanation: 'All differences ($8,6,4,2$) are positive, so $f\' > 0$ everywhere. $f$ is increasing (but slowing down because it is concave down). Shrinking differences and $f\'\' < 0$ describe concavity, not direction.'
           }
         ]
       }

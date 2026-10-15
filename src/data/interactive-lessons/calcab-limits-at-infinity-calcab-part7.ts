@@ -49,9 +49,9 @@ $$\\lim_{u \\to 0}\\frac{1-\\cos u}{u}=0 \\qquad \\lim_{u \\to 0}\\frac{e^u-1}{u
         questions: [
           {
             question: 'Evaluate $\\lim_{x \\to \\infty} \\frac{5x^4 - 3x^2}{2x^4 + x^3 - 1}$.',
-            options: ['$0$', '$\\frac{5}{2}$', '$\\frac{5}{3}$', '$\\infty$'],
+            options: ['$0$', '$\\frac{5}{2}$', '$5$', '$\\infty$'],
             correctAnswer: 1,
-            explanation: 'Equal degrees (both 4). Ratio of leading coefficients: $\\frac{5}{2}$.'
+            explanation: 'Equal degrees (both 4). Ratio of leading coefficients: $\\frac{5}{2}$. Using only the numerator\'s coefficient gives $5$.'
           },
           {
             question: 'Evaluate $\\lim_{x \\to -\\infty} \\frac{x}{\\sqrt{x^2+x+1}}$.',
@@ -61,9 +61,9 @@ $$\\lim_{u \\to 0}\\frac{1-\\cos u}{u}=0 \\qquad \\lim_{u \\to 0}\\frac{e^u-1}{u
           },
           {
             question: 'The function $f(x) = \\frac{3x^2 + 2}{x - 5}$ has:',
-            options: ['A horizontal asymptote at $y = 3$', 'An oblique asymptote', 'No asymptote', 'A horizontal asymptote at $y = 0$'],
+            options: ['A horizontal asymptote at $y = 3$', 'An oblique asymptote', 'Only a vertical asymptote at $x = 5$', 'A horizontal asymptote at $y = 0$'],
             correctAnswer: 1,
-            explanation: 'Degree 2 over degree 1: difference is exactly 1, so $f$ has an oblique asymptote. (Long division gives $y = 3x + 15$.)'
+            explanation: 'Degree 2 over degree 1: difference is exactly 1, so $f$ has an oblique asymptote. (Long division gives $y = 3x + 15$.) It also has a vertical asymptote at $x = 5$, but that is not the only one, and with the numerator\'s degree higher there is no horizontal asymptote.'
           }
         ]
       }
@@ -76,9 +76,9 @@ $$\\lim_{u \\to 0}\\frac{1-\\cos u}{u}=0 \\qquad \\lim_{u \\to 0}\\frac{e^u-1}{u
         questions: [
           {
             question: 'Evaluate $\\lim_{x \\to \\infty} \\frac{e^x + 2x^{10}}{3e^x - x^5}$.',
-            options: ['$\\frac{1}{3}$', '$2$', '$\\frac{2}{-1}$', '$\\infty$'],
+            options: ['$\\frac{1}{3}$', '$2$', '$-2$', '$\\infty$'],
             correctAnswer: 0,
-            explanation: 'Divide by $e^x$: $\\frac{1 + 2x^{10}/e^x}{3 - x^5/e^x} \\to \\frac{1+0}{3-0} = \\frac{1}{3}$.'
+            explanation: 'Divide by $e^x$: $\\frac{1 + 2x^{10}/e^x}{3 - x^5/e^x} \\to \\frac{1+0}{3-0} = \\frac{1}{3}$. Taking the ratio of the polynomial coefficients, $\\frac{2}{-1} = -2$, ignores that the exponentials dominate every power of $x$.'
           },
           {
             question: 'Evaluate $\\lim_{x \\to \\infty} \\left(\\sqrt{x^2+8x} - x\\right)$.',
@@ -91,11 +91,11 @@ $$\\lim_{u \\to 0}\\frac{1-\\cos u}{u}=0 \\qquad \\lim_{u \\to 0}\\frac{e^u-1}{u
             options: [
               'A function can have at most two horizontal asymptotes',
               'A function can cross its horizontal asymptote',
-              'A function must approach its HA as $x \\to \\infty$',
+              'A function can have an HA on only one side',
               'A polynomial of degree $\\geq 1$ has a horizontal asymptote'
             ],
             correctAnswer: 3,
-            explanation: 'Polynomials of degree $\\geq 1$ have no horizontal asymptotes — they go to $\\pm\\infty$. All other statements are true.'
+            explanation: 'Polynomials of degree $\\geq 1$ have no horizontal asymptotes — they go to $\\pm\\infty$. All other statements are true: a function can have one HA on each side, can cross an HA, and can have an HA on just one side (for example, $e^x$ approaches $y = 0$ only as $x \\to -\\infty$).'
           }
         ]
       }

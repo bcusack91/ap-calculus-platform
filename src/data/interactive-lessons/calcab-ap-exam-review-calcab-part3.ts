@@ -68,9 +68,9 @@ $V = \\frac{4}{3}\\pi r^3 \\implies \\frac{dV}{dt} = 4\\pi r^2 \\frac{dr}{dt} = 
           },
           {
             question: 'To find the absolute maximum of $f$ on $[a,b]$, you must check:',
-            options: ['Critical points and endpoints', 'Only critical points', 'Only endpoints', 'Inflection points'],
+            options: ['Critical points and endpoints', 'Critical points and inflection points', 'Endpoints and inflection points', 'Only the points where $f\' = 0$'],
             correctAnswer: 0,
-            explanation: 'EVT guarantees max/min exist on a closed interval. Check critical points AND endpoints.'
+            explanation: 'EVT guarantees max/min exist on a closed interval. Check critical points AND endpoints. Inflection points are where concavity changes, not candidates for extrema, and skipping the endpoints misses maxima that occur there.'
           }
         ]
       }

@@ -55,9 +55,9 @@ $$A = \\int_0^1 (x - x^2)\\,dx = \\left[\\frac{x^2}{2} - \\frac{x^3}{3}\\right]_
           },
           {
             question: 'If $\\int_0^6 f(x)\\,dx = 18$, the average value of $f$ on $[0,6]$ is:',
-            options: ['$3$', '$18$', '$6$', '$108$'],
+            options: ['$3$', '$18$', '$1/3$', '$108$'],
             correctAnswer: 0,
-            explanation: '$f_{\\text{avg}} = \\frac{1}{6-0}\\cdot 18 = 3$.'
+            explanation: '$f_{\\text{avg}} = \\frac{1}{6-0}\\cdot 18 = 3$. $18$ is the integral itself; multiplying by $6$ gives $108$; dividing $6$ by $18$ gives $\\frac{1}{3}$.'
           }
         ]
       }

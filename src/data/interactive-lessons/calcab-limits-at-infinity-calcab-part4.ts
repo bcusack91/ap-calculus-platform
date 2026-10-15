@@ -71,15 +71,15 @@ $$\\lim_{x \\to \\infty} f(g(x)) = f\\left(\\lim_{x \\to \\infty} g(x)\\right) \
         questions: [
           {
             question: 'Which grows fastest as $x \\to \\infty$?',
-            options: ['$x^{100}$', '$e^x$', '$x!$', '$2^x$'],
+            options: ['$x^{100}$', '$e^x$', '$3^x$', '$2^x$'],
             correctAnswer: 2,
-            explanation: 'The growth hierarchy: polynomials < exponentials < factorials. Since $x!$ grows faster than any exponential, it dominates. (Note: $x!$ is not typically tested on AP Calculus AB, but is good to know.)'
+            explanation: 'Every exponential with base greater than $1$ eventually beats every power, so $x^{100}$ loses. Among exponentials, the larger base wins: $\\frac{3^x}{e^x} = \\left(\\frac{3}{e}\\right)^x \\to \\infty$ since $3 > e \\approx 2.718 > 2$.'
           },
           {
             question: 'Evaluate $\\lim_{x \\to \\infty} \\frac{5^x}{e^{2x}}$.',
-            options: ['$0$', '$1$', '$\\infty$', 'Does not exist'],
+            options: ['$0$', '$\\frac{5}{e^2}$', '$\\infty$', 'Does not exist'],
             correctAnswer: 0,
-            explanation: '$\\frac{5^x}{e^{2x}} = \\left(\\frac{5}{e^2}\\right)^x$. Since $e^2 \\approx 7.39 > 5$, the base $5/e^2 < 1$, so this $\\to 0$.'
+            explanation: '$\\frac{5^x}{e^{2x}} = \\left(\\frac{5}{e^2}\\right)^x$. Since $e^2 \\approx 7.39 > 5$, the base $5/e^2 < 1$, so this $\\to 0$. The base $\\frac{5}{e^2}$ is not the limit; raising it to larger and larger powers drives the value to $0$.'
           },
           {
             question: 'Evaluate $\\lim_{x \\to \\infty} \\cos\\left(\\frac{2}{x}\\right)$.',
@@ -126,8 +126,7 @@ Evaluate each limit.
 **3)** $\\lim_{x \\to \\infty} \\frac{\\ln(x^3)}{\\sqrt{x}}$
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['7/3', '1/2', '0'],
+        questions: [{ question: '(1)', answer: '7/3', acceptableAnswers: ['7/3', '2.333'] }, { question: '(2)', answer: '1/2', acceptableAnswers: ['1/2', '0.5'] }, { question: '(3)', answer: '0', acceptableAnswers: ['0'] }],
         hint1: 'Equal degrees (both 3): ratio of leading coefficients $= 7/3$.',
         hint2: 'Divide by $e^x$: $\\frac{1 + 100x^4/e^x}{2 - x/e^x} \\to \\frac{1+0}{2-0} = 1/2$.',
         hint3: '$\\ln(x^3) = 3\\ln x$, and $\\ln x$ grows much slower than $\\sqrt{x}$.',

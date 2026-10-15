@@ -62,21 +62,21 @@ As $n \\to \\infty$: $P(1 + r/n)^{nt} \\to Pe^{rt}$
         questions: [
           {
             question: '\\$1000 invested at 5% compounded continuously. Time to double:',
-            options: ['$\\frac{\\ln 2}{0.05} \\approx 13.86$ years', '$20$ years', '$10$ years', '$40$ years'],
+            options: ['$\\frac{\\ln 2}{0.05} \\approx 13.86$ years', '$\\frac{0.05}{\\ln 2} \\approx 0.0721$ years', '$\\frac{\\ln 2}{5} \\approx 0.1386$ years', '$\\frac{1}{0.05} = 20$ years'],
             correctAnswer: 0,
-            explanation: '$2000 = 1000e^{0.05t}$. $t = \\frac{\\ln 2}{0.05} \\approx 13.86$ years.'
+            explanation: '$2000 = 1000e^{0.05t}$. $t = \\frac{\\ln 2}{0.05} \\approx 13.86$ years. Writing the fraction upside down gives $0.0721$; the rate must be $0.05$, not $5$; and $\\frac{1}{0.05} = 20$ years is simple-interest thinking (5% of the original each year).'
           },
           {
             question: 'An investment grows continuously at 8%. The effective annual rate is:',
-            options: ['$8\\%$', '$e^{0.08}-1 \\approx 8.33\\%$', '$8.16\\%$', '$7.69\\%$'],
+            options: ['$8\\%$, the nominal rate itself', '$e^{0.08}-1 \\approx 8.33\\%$', '$(1 + \\frac{0.08}{2})^2 - 1 \\approx 8.16\\%$', '$1 - e^{-0.08} \\approx 7.69\\%$'],
             correctAnswer: 1,
-            explanation: 'Effective rate $= e^r - 1 = e^{0.08}-1 \\approx 0.0833 = 8.33\\%$.'
+            explanation: 'Effective rate $= e^r - 1 = e^{0.08}-1 \\approx 0.0833 = 8.33\\%$. Continuous compounding beats the nominal $8\\%$; $8.16\\%$ is semiannual compounding; $1 - e^{-0.08}$ uses the wrong sign in the exponent.'
           },
           {
             question: 'How long for \\$5000 to grow to \\$20000 at 4% continuous compounding?',
-            options: ['$\\frac{\\ln 4}{0.04} \\approx 34.66$ years', '$25$ years', '$\\frac{\\ln 2}{0.04}$ years', '$100$ years'],
+            options: ['$\\frac{\\ln 4}{0.04} \\approx 34.66$ years', '$\\frac{\\ln 2}{0.04} \\approx 17.3$ years', '$\\frac{3}{0.04} = 75$ years', '$\\frac{\\ln 4}{4} \\approx 0.3466$ years'],
             correctAnswer: 0,
-            explanation: '$20000 = 5000e^{0.04t}$. $4 = e^{0.04t}$. $t = \\frac{\\ln 4}{0.04} \\approx 34.66$ years.'
+            explanation: '$20000 = 5000e^{0.04t}$. $4 = e^{0.04t}$. $t = \\frac{\\ln 4}{0.04} \\approx 34.66$ years. $\\frac{\\ln 2}{0.04}$ is only one doubling (to \\$10000); $\\frac{3}{0.04} = 75$ years is simple interest on a 300% gain; using $4$ instead of $0.04$ for the rate gives a fraction of a year.'
           }
         ]
       }

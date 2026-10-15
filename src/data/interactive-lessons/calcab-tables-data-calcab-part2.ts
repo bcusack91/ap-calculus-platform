@@ -62,9 +62,9 @@ $$R(2) \\cdot 2 + R(5) \\cdot 3 + R(8) \\cdot 3 + R(10) \\cdot 2 = 12 + 9 + 24 +
           },
           {
             question: 'If $v(t) \\ge 0$ on $[0,12]$, the integral $\\int_0^{12} v(t)\\,dt$ represents:',
-            options: ['Total distance traveled', 'Average velocity', 'Displacement only', 'Acceleration'],
+            options: ['Total distance traveled', 'Average velocity over $[0, 12]$', 'Change in velocity on $[0, 12]$', 'Position of the object at $t = 12$'],
             correctAnswer: 0,
-            explanation: 'When $v(t) \\ge 0$, displacement equals total distance: $\\int_0^{12} v(t)\\,dt$ = total distance traveled.'
+            explanation: 'When $v(t) \\ge 0$, displacement equals total distance: $\\int_0^{12} v(t)\\,dt$ = total distance traveled. Average velocity would divide by $12$; the change in velocity is $v(12) - v(0)$; the position at $t = 12$ also needs a starting position.'
           }
         ]
       }

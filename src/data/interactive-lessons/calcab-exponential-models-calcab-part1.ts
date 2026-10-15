@@ -70,15 +70,15 @@ $$\\boxed{t_{\\text{double}} = \\frac{\\ln 2}{k}} \\qquad \\boxed{t_{\\text{half
         questions: [
           {
             question: 'A population of 200 grows to 800 in 6 hours. The growth constant $k$ is:',
-            options: ['$\\frac{\\ln 4}{6}$', '$\\frac{\\ln 2}{6}$', '$\\frac{4}{6}$', '$\\frac{\\ln 800}{6}$'],
+            options: ['$\\frac{\\ln 4}{6}$', '$\\frac{\\ln 0.25}{6}$', '$\\frac{\\ln 600}{6}$', '$\\frac{\\ln 800}{6}$'],
             correctAnswer: 0,
-            explanation: '$800 = 200e^{6k}$. $4 = e^{6k}$. $k = \\frac{\\ln 4}{6}$.'
+            explanation: '$800 = 200e^{6k}$. $4 = e^{6k}$. $k = \\frac{\\ln 4}{6}$. Writing the ratio upside down gives $\\frac{\\ln 0.25}{6} < 0$, a decay constant. The constant depends on the growth factor $4$, not on the amount gained ($600$) or the final size ($800$).'
           },
           {
             question: 'A radioactive substance decays from 100 g to 75 g in 10 years. Its half-life is:',
-            options: ['$\\frac{10\\ln 2}{\\ln(4/3)}$', '$\\frac{10}{\\ln 2}$', '$20$ years', '$5\\ln 2$ years'],
+            options: ['$\\frac{10\\ln 2}{\\ln(4/3)}$', '$\\frac{\\ln 2}{\\ln(4/3)}$', '$\\frac{10\\ln 2}{\\ln 0.75}$', '$20$ years'],
             correctAnswer: 0,
-            explanation: '$75 = 100e^{10k}$. $k = \\frac{\\ln(3/4)}{10}$. Half-life $= \\frac{\\ln 2}{|k|} = \\frac{10\\ln 2}{\\ln(4/3)}$.'
+            explanation: '$75 = 100e^{10k}$. $k = \\frac{\\ln(3/4)}{10}$. Half-life $= \\frac{\\ln 2}{|k|} = \\frac{10\\ln 2}{\\ln(4/3)}$. Leaving out the $10$ years gives $\\frac{\\ln 2}{\\ln(4/3)}$; using $\\ln 0.75$ (a negative number) in the denominator makes the half-life negative. Losing a steady $25$ g every $10$ years (linear decay) would give $20$ years, but exponential decay slows as the amount shrinks.'
           },
           {
             question: 'A bacteria population doubles every 3 hours. Starting with 1000, the population after 12 hours is:',
@@ -97,17 +97,17 @@ $$\\boxed{t_{\\text{double}} = \\frac{\\ln 2}{k}} \\qquad \\boxed{t_{\\text{half
         dropdowns: [
           {
             label: 'A substance loses 20% of its mass each year. This is:',
-            options: ['Exponential growth', 'Exponential decay with $k = \\ln(0.8)$', 'Linear decay', 'Logistic growth'],
+            options: ['Exponential growth with $k = \\ln(1.2)$', 'Exponential decay with $k = \\ln(0.8)$', 'Linear decay of 20 units a year', 'Exponential decay with $k = -0.2$'],
             correctAnswers: ['Exponential decay with $k = \\ln(0.8)$'],
             hints: ['After 1 year: $y_0 \\cdot 0.8 = y_0 e^k$, so $e^k = 0.8$.'],
-            explanation: '$k = \\ln(0.8) < 0$, confirming exponential decay.'
+            explanation: 'Each year keeps $80\\%$, so $y = y_0(0.8)^t = y_0e^{t\\ln 0.8}$ and $k = \\ln(0.8) \\approx -0.223 < 0$: exponential decay. The constant is not $-0.2$ itself, because a $20\\%$ yearly loss is not the same as a continuous rate of $20\\%$.'
           },
           {
             label: 'Doubling time of a population with $k = 0.1$ per year:',
-            options: ['$7$ years', '$\\frac{\\ln 2}{0.1} \\approx 6.93$ years', '$10$ years', '$\\frac{0.1}{\\ln 2}$ years'],
+            options: ['$\\frac{1}{0.1} = 10$ years', '$\\frac{\\ln 2}{0.1} \\approx 6.93$ years', '$\\frac{\\ln 0.5}{0.1} \\approx -6.93$ years', '$\\frac{0.1}{\\ln 2}$ years'],
             correctAnswers: ['$\\frac{\\ln 2}{0.1} \\approx 6.93$ years'],
             hints: ['$t_{double} = \\frac{\\ln 2}{k}$.'],
-            explanation: '$\\frac{\\ln 2}{0.1} = 10 \\ln 2 \\approx 6.93$ years.'
+            explanation: '$\\frac{\\ln 2}{0.1} = 10 \\ln 2 \\approx 6.93$ years. $\\frac{1}{0.1}$ leaves out the $\\ln 2$; $\\ln 0.5$ is the halving equation and gives a negative time; $\\frac{0.1}{\\ln 2}$ is upside down.'
           },
           {
             label: 'After 3 half-lives, what fraction of the original amount remains?',

@@ -60,21 +60,21 @@ $$\\frac{1}{6}\\int_0^6 (6t-t^2)\\,dt = \\frac{36}{6} = 6 \\text{ L/min}$$`
         questions: [
           {
             question: 'If $r(t) > 0$ for all $t$ in $[0, 5]$, then the total amount is:',
-            options: ['Increasing on $[0, 5]$', 'Decreasing on $[0, 5]$', 'Constant', 'Cannot be determined'],
+            options: ['Increasing on $[0, 5]$', 'Decreasing whenever $r$ decreases', 'Constant, equal to $r(0)$', 'Cannot be determined without $r(0)$'],
             correctAnswer: 0,
-            explanation: 'Positive rate means the quantity is accumulating \u2014 total amount increases.'
+            explanation: 'Positive rate means the quantity is accumulating — total amount increases. Even while $r$ itself is decreasing, a positive $r$ still adds to the total, and the starting value is not needed to know the direction.'
           },
           {
             question: '$\\int_0^4 v(t)\\,dt = 20$ means the particle\u2019s:',
-            options: ['Net displacement is 20 units', 'Total distance is 20 units', 'Final position is 20', 'Speed is 20'],
+            options: ['Net displacement is 20 units', 'Total distance traveled is 20 units', 'Final position is at $s = 20$ units', 'Average velocity is 20 units per time'],
             correctAnswer: 0,
-            explanation: 'The integral of velocity gives net displacement, not distance (which requires $|v|$).'
+            explanation: 'The integral of velocity gives net displacement, not distance (which requires $|v|$). The final position also needs the starting position, and the average velocity divides by $4$ to get $5$.'
           },
           {
             question: 'The amount $A(t) = 100 + \\int_0^t r(s)\\,ds$. If $r(3) = -5$, then at $t = 3$:',
-            options: ['$A$ is decreasing at 5 units/time', '$A$ is increasing', '$A = -5$', '$A$ has a maximum'],
+            options: ['$A$ is decreasing at 5 units/time', '$A$ is increasing, because $A(0) = 100 > 0$', '$A(3) = 95$ units, found as $100 - 5$', '$A$ has a local maximum at $t = 3$'],
             correctAnswer: 0,
-            explanation: '$A\'(t) = r(t)$. Since $r(3) = -5 < 0$, the amount is decreasing at $t=3$.'
+            explanation: '$A\'(t) = r(t)$. Since $r(3) = -5 < 0$, the amount is decreasing at 5 units per unit time at $t=3$. The rate $r(3)$ is not a change in the amount, a positive amount says nothing about direction, and a maximum would need $r$ to change from positive to negative.'
           }
         ]
       }
@@ -87,10 +87,10 @@ $$\\frac{1}{6}\\int_0^6 (6t-t^2)\\,dt = \\frac{36}{6} = 6 \\text{ L/min}$$`
         dropdowns: [
           {
             label: '$\\int_2^7 r(t)\\,dt = 30$ where $r$ = gallons/hour:',
-            options: ['30 gallons flowed in from $t=2$ to $t=7$', '$r(t) = 30$ at some point', 'The average rate is 30', 'The tank has 30 gallons'],
+            options: ['30 gallons flowed in from $t=2$ to $t=7$', 'The flow rate reaches 30 gallons per hour', 'The average rate is 30 gallons per hour', 'The tank holds 30 gallons at $t = 7$'],
             correctAnswers: ['30 gallons flowed in from $t=2$ to $t=7$'],
             hints: ['Integral of rate = total change in quantity.'],
-            explanation: 'Net change: 30 gallons entered the tank over the 5-hour period.'
+            explanation: 'Net change: 30 gallons entered the tank over the 5-hour period. The average rate is $\\frac{30}{5} = 6$ gal/hr, and the amount in the tank also depends on what was there at $t = 2$.'
           },
           {
             label: '$r(t)$ changes from positive to negative at $t = 4$:',

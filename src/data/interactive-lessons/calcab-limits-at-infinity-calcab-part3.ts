@@ -153,8 +153,7 @@ Find the oblique asymptote $y = mx + b$. Enter your answer as "mx + b" (e.g., "2
 **3)** $h(x) = \\frac{-x^2 + 6x}{x - 1}$. Oblique asymptote:
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['3x - 4', 'x - 3', '-x + 5'],
+        questions: [{ question: '(1)', answer: '3x - 4', acceptableAnswers: ['3x - 4', 'y = 3x - 4', '-4 + 3x'] }, { question: '(2)', answer: 'x - 3', acceptableAnswers: ['x - 3', 'y = x - 3', '-3 + x'] }, { question: '(3)', answer: '-x + 5', acceptableAnswers: ['-x + 5', 'y = -x + 5', '5 - x', 'y = 5 - x'] }],
         hint1: '$3x^2 + 2x - 1 \\div (x+2)$: first term $3x$, then $3x(x+2)=3x^2+6x$, remainder starts with $-4x-1$. Continue division.',
         hint2: '$x^2 - 5x + 4 \\div (x-2)$: first term $x$, then $x(x-2) = x^2-2x$, subtract to get $-3x+4$. Next term $-3$.',
         hint3: '$-x^2+6x \\div (x-1)$: first term $-x$, then $-x(x-1) = -x^2+x$, subtract to get $5x$. Next term $5$.',

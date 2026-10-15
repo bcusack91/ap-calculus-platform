@@ -56,15 +56,15 @@ $$\\frac{1}{2}\\int \\cos u\\,du = \\frac{1}{2}\\sin u + C = \\frac{1}{2}\\sin(x
         questions: [
           {
             question: '$\\int_0^2 (3x^2 - 4x + 1)\\,dx =$',
-            options: ['$2$', '$3$', '$0$', '$4$'],
+            options: ['$2$', '$-6$', '$18$', '$-2$'],
             correctAnswer: 0,
-            explanation: '$[x^3-2x^2+x]_0^2 = (8-8+2) - 0 = 2$.'
+            explanation: '$[x^3-2x^2+x]_0^2 = (8-8+2) - 0 = 2$. Not halving the $-4x$ term ($x^3 - 4x^2 + x$) gives $-6$; a sign slip ($x^3 + 2x^2 + x$) gives $18$; integrating $1$ as $-x$ gives $-2$.'
           },
           {
             question: '$\\int \\frac{2x}{x^2+1}\\,dx =$',
-            options: ['$\\ln(x^2+1) + C$', '$\\frac{1}{x^2+1} + C$', '$\\ln|2x| + C$', '$\\arctan x + C$'],
+            options: ['$\\ln(x^2+1) + C$', '$\\frac{1}{x^2+1} + C$', '$\\ln(2x) + C$', '$\\arctan x + C$'],
             correctAnswer: 0,
-            explanation: '$u = x^2+1$, $du = 2x\\,dx$. $\\int \\frac{du}{u} = \\ln|u| + C = \\ln(x^2+1) + C$.'
+            explanation: '$u = x^2+1$, $du = 2x\\,dx$. $\\int \\frac{du}{u} = \\ln|u| + C = \\ln(x^2+1) + C$. Taking the log of the numerator gives $\\ln(2x)$; $\\arctan x$ is the antiderivative of $\\frac{1}{x^2+1}$, without the $2x$.'
           },
           {
             question: 'If $F(x) = \\int_1^x \\sqrt{t^3+1}\\,dt$, then $F\'(3) =$',

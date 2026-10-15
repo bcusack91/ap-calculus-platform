@@ -68,21 +68,21 @@ $f'$ has a local min at $x = 5$ \u2192 $f''$ changes sign \u2192 inflection poin
         questions: [
           {
             question: 'If the graph of $f\'$ is above the $x$-axis on $(1, 4)$, then $f$ is:',
-            options: ['Increasing on $(1, 4)$', 'Concave up on $(1, 4)$', 'Positive on $(1, 4)$', 'Has a max at some point in $(1, 4)$'],
+            options: ['Increasing on $(1, 4)$', 'Concave up throughout $(1, 4)$', 'Positive everywhere on $(1, 4)$', 'Has a max at some point in $(1, 4)$'],
             correctAnswer: 0,
             explanation: '$f\'>0$ means $f$ is increasing. We cannot determine $f$\u2019s sign or concavity from $f\'>0$ alone.'
           },
           {
             question: 'The graph of $f\'$ has a local maximum at $x = 3$. For $f$, $x = 3$ is:',
-            options: ['An inflection point', 'A local maximum', 'A local minimum', 'A zero'],
+            options: ['An inflection point', 'A local maximum', 'A critical point', 'A point where $f\'\' > 0$'],
             correctAnswer: 0,
-            explanation: '$f\'$ has a local max at $x=3$ means $f\'\' = 0$ and $f\'\'$ changes sign \u2192 inflection point of $f$.'
+            explanation: '$f\'$ has a local max at $x=3$ means $f\'\' = 0$ and $f\'\'$ changes sign (positive to negative) → inflection point of $f$. A local max of $f\'$ is not a local max of $f$, and a critical point of $f$ would need $f\'(3) = 0$.'
           },
           {
             question: 'Given graph of $f\'$, to find $f(5) - f(1)$ you compute:',
-            options: ['The area under $f\'$ from $1$ to $5$', '$f\'(5) - f\'(1)$', 'The slope of $f\'$ at $x = 3$', '$f\'(3) \\cdot 4$'],
+            options: ['The net signed area under $f\'$ on $[1, 5]$', 'The difference $f\'(5) - f\'(1)$', 'The slope of the graph of $f\'$ at $x = 3$', 'The total area between $f\'$ and the axis'],
             correctAnswer: 0,
-            explanation: 'FTC: $\\int_1^5 f\'(x)\\,dx = f(5)-f(1)$. Use geometric areas from the graph.'
+            explanation: 'FTC: $\\int_1^5 f\'(x)\\,dx = f(5)-f(1)$. Use geometric areas from the graph, counting regions below the axis as negative (total area would count them as positive). $f\'(5) - f\'(1)$ is the change in $f\'$, and the slope of $f\'$ gives $f\'\'$.'
           }
         ]
       }

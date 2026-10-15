@@ -57,21 +57,21 @@ First differences: $-30, -30, -20, -20$. The differences are nondecreasing (gett
         questions: [
           {
             question: 'Estimate $f\'(6)$.',
-            options: ['$2$', '$\\frac{9}{6}$', '$3$', '$\\frac{16}{8}$'],
+            options: ['$2$', '$\\frac{3}{2}$', '$3$', '$4$'],
             correctAnswer: 0,
-            explanation: '$f\'(6) \\approx \\frac{f(10)-f(2)}{10-2} = \\frac{21-5}{8} = 2$.'
+            explanation: '$f\'(6) \\approx \\frac{f(10)-f(2)}{10-2} = \\frac{21-5}{8} = 2$. $\\frac{3}{2}$ divides $f(6)$ by $6$; $3$ is the one-sided slope $\\frac{21-9}{4}$; dividing $16$ by $4$ instead of $8$ gives $4$.'
           },
           {
             question: 'Use MVT on $[0,10]$. $f\'(c) =$',
-            options: ['$2$', '$\\frac{21}{10}$', '$\\frac{20}{10}$', '$1$'],
+            options: ['$2$', '$\\frac{21}{10}$', '$\\frac{20}{3}$', '$\\frac{8}{5}$'],
             correctAnswer: 0,
-            explanation: '$f\'(c) = \\frac{21-1}{10-0} = \\frac{20}{10} = 2$.'
+            explanation: '$f\'(c) = \\frac{21-1}{10-0} = \\frac{20}{10} = 2$. Leaving out $f(0)$ gives $\\frac{21}{10}$; dividing by the number of subintervals ($3$) gives $\\frac{20}{3}$; subtracting $f(2)$ instead of $f(0)$ gives $\\frac{16}{10} = \\frac{8}{5}$.'
           },
           {
-            question: 'First differences: $4, 4, 12$. What does this suggest about concavity?',
-            options: ['Concave up \u2014 differences are increasing', 'Concave down \u2014 differences are decreasing', 'Linear \u2014 differences are constant', 'Cannot determine'],
+            question: 'Secant slopes on $[2,6]$ and $[6,10]$ are $1$ and $3$. What does this suggest about concavity on $[2,10]$?',
+            options: ['Concave up — the secant slopes increase', 'Concave down — the secant slopes decrease', 'Concave down — $f\'$ is positive throughout', 'Cannot tell without a formula for $f$'],
             correctAnswer: 0,
-            explanation: 'Differences $4, 4, 12$ increase (eventually). This suggests $f\'\' > 0$ (concave up), at least on the later interval.'
+            explanation: 'On $[2,6]$ the secant slope is $\\frac{9-5}{4} = 1$; on $[6,10]$ it is $\\frac{21-9}{4} = 3$. Increasing slopes suggest $f\'$ is increasing, so $f\'\' > 0$ (concave up) on $[2,10]$. A positive $f\'$ tells direction, not concavity. Raw differences ($4, 4, 12$) mislead here because the widths are unequal ($2, 4, 4$).'
           }
         ]
       }
@@ -84,10 +84,10 @@ First differences: $-30, -30, -20, -20$. The differences are nondecreasing (gett
         dropdowns: [
           {
             label: 'Trapezoidal estimate of $\\int_0^{15} R(t)\\,dt$:',
-            options: ['$28 + 40 + 42 = 110$ L', '$120$ L', '$100$ L', '$95$ L'],
+            options: ['$28 + 40 + 42 = 110$ L', '$32 + 30 + 60 = 122$ L', '$24 + 50 + 24 = 98$ L', '$14 + 16 + 14 = 44$ L'],
             correctAnswers: ['$28 + 40 + 42 = 110$ L'],
             hints: ['$\\frac{4}{2}(8+6) + \\frac{5}{2}(6+10) + \\frac{6}{2}(10+4)$.'],
-            explanation: '$2(14) + 2.5(16) + 3(14) = 28 + 40 + 42 = 110$ liters.'
+            explanation: '$2(14) + 2.5(16) + 3(14) = 28 + 40 + 42 = 110$ liters. $122$ is the left sum and $98$ is the right sum (their average is $110$); $44$ forgets the widths.'
           },
           {
             label: 'This integral represents:',

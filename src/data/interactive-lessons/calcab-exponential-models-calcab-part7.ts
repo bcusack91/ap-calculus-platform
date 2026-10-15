@@ -43,15 +43,15 @@ export const calcabExpModelsPart7Data = {
           },
           {
             question: 'A bacteria culture has $k = 0.02$ per minute. How long to increase by a factor of 5?',
-            options: ['$\\frac{\\ln 5}{0.02} \\approx 80.5$ min', '$\\frac{5}{0.02} = 250$ min', '$50\\ln 5$ min', '$\\frac{\\ln 2}{0.02}$ min'],
+            options: ['$\\frac{\\ln 5}{0.02} \\approx 80.47$ min', '$\\frac{5}{0.02} = 250$ min', '$\\frac{\\ln 2}{0.02} \\approx 34.7$ min', '$\\frac{\\ln 5}{2} \\approx 0.805$ min'],
             correctAnswer: 0,
-            explanation: '$5 = e^{0.02t}$. $t = \\frac{\\ln 5}{0.02} \\approx 80.5$ min.'
+            explanation: '$5 = e^{0.02t}$. $t = \\frac{\\ln 5}{0.02} \\approx 80.47$ min. $\\frac{5}{0.02}$ forgets the logarithm; $\\frac{\\ln 2}{0.02}$ is the doubling time, not the time to grow fivefold; using $2$ instead of $0.02$ for the rate gives under a minute.'
           },
           {
             question: 'With continuous compounding at 6%, the effective annual rate is:',
-            options: ['$6\\%$', '$e^{0.06}-1 \\approx 6.18\\%$', '$6.09\\%$', '$5.83\\%$'],
+            options: ['$6\\%$', '$e^{0.06}-1 \\approx 6.18\\%$', '$(1.03)^2 - 1 \\approx 6.09\\%$', '$1 - e^{-0.06} \\approx 5.82\\%$'],
             correctAnswer: 1,
-            explanation: 'Effective rate $= e^r - 1 = e^{0.06} - 1 \\approx 6.18\\%$.'
+            explanation: 'Effective rate $= e^r - 1 = e^{0.06} - 1 \\approx 6.18\\%$. The nominal $6\\%$ ignores compounding; $(1.03)^2 - 1$ is semiannual compounding; $1 - e^{-0.06}$ uses the wrong sign in the exponent.'
           }
         ]
       }
@@ -82,9 +82,9 @@ export const calcabExpModelsPart7Data = {
           },
           {
             question: 'A substance with $k = -0.1$ per hour. After how many hours is 10% remaining?',
-            options: ['$\\frac{\\ln 10}{0.1} \\approx 23.03$ hr', '$10$ hr', '$\\frac{\\ln 2}{0.1}$ hr', '$100$ hr'],
+            options: ['$\\frac{\\ln 10}{0.1} \\approx 23.03$ hr', '$\\frac{0.9}{0.1} = 9$ hr', '$\\frac{\\ln 2}{0.1} \\approx 6.931$ hr', '$-10\\ln 0.9 \\approx 1.054$ hr'],
             correctAnswer: 0,
-            explanation: '$0.1 = e^{-0.1t}$. $-0.1t = \\ln(0.1) = -\\ln 10$. $t = \\frac{\\ln 10}{0.1} \\approx 23.03$ hr.'
+            explanation: '$0.1 = e^{-0.1t}$. $-0.1t = \\ln(0.1) = -\\ln 10$. $t = \\frac{\\ln 10}{0.1} \\approx 23.03$ hr. Losing a fixed 10% of the original each hour (linear thinking) gives $9$ hr; $\\frac{\\ln 2}{0.1}$ is the half-life (50% left, not 10%); $-10\\ln 0.9$ finds when 90% remains.'
           }
         ]
       }
@@ -104,10 +104,10 @@ export const calcabExpModelsPart7Data = {
           },
           {
             label: 'If $y = 5e^{3t}$, then $\\frac{dy}{dt} =$',
-            options: ['$3y$', '$5y$', '$15e^{3t}$', 'Both $3y$ and $15e^{3t}$'],
+            options: ['Both $y$ and $5e^{3t}$', 'Both $15y$ and $75e^{3t}$', 'Both $3ty$ and $15te^{3t}$', 'Both $3y$ and $15e^{3t}$'],
             correctAnswers: ['Both $3y$ and $15e^{3t}$'],
             hints: ['$dy/dt = 15e^{3t} = 3(5e^{3t}) = 3y$.'],
-            explanation: '$15e^{3t} = 3y$. Both expressions are equivalent.'
+            explanation: '$\\frac{dy}{dt} = 5e^{3t} \\cdot 3 = 15e^{3t} = 3y$. Forgetting the chain factor $3$ gives $5e^{3t} = y$; $15y$ multiplies by the coefficient $5$ a second time; bringing down the whole exponent $3t$ treats $e^{3t}$ like a power.'
           },
           {
             label: 'Newton\u2019s Law applied to warming ($T_0 < T_s$): the object\u2019s temperature is:',

@@ -37,27 +37,27 @@ export const calcabTablesDataPart7Data = {
         questions: [
           {
             question: 'Estimate $f\'(4)$ using symmetric differences.',
-            options: ['$\\frac{5}{4}$', '$\\frac{6}{4}$', '$2$', '$3$'],
+            options: ['$\\frac{5}{4}$', '$\\frac{5}{2}$', '$-\\frac{1}{2}$', '$3$'],
             correctAnswer: 0,
-            explanation: '$f\'(4) \\approx \\frac{f(6)-f(2)}{6-2} = \\frac{10-5}{4} = \\frac{5}{4}$.'
+            explanation: '$f\'(4) \\approx \\frac{f(6)-f(2)}{6-2} = \\frac{10-5}{4} = \\frac{5}{4}$. Dividing by $2$ instead of $4$ gives $\\frac{5}{2}$; the backward slope $\\frac{4-5}{2}$ gives $-\\frac{1}{2}$; the forward slope $\\frac{10-4}{2}$ gives $3$.'
           },
           {
             question: 'Left Riemann sum for $\\int_0^{10} f(x)\\,dx$:',
-            options: ['$60$', '$62$', '$48$', '$70$'],
+            options: ['$60$', '$126$', '$93$', '$40$'],
             correctAnswer: 0,
-            explanation: '$f(0)\\cdot2 + f(2)\\cdot2 + f(4)\\cdot2 + f(6)\\cdot4 = 1(2)+5(2)+4(2)+10(4) = 2+10+8+40 = 60$.'
+            explanation: '$f(0)\\cdot2 + f(2)\\cdot2 + f(4)\\cdot2 + f(6)\\cdot4 = 1(2)+5(2)+4(2)+10(4) = 2+10+8+40 = 60$. Right endpoints give $126$; the trapezoid average is $93$; using width $2$ for the last subinterval too gives $40$.'
           },
           {
             question: 'By MVT on $[0, 6]$, $f\'(c) =$',
-            options: ['$3/2$', '$9/6$', '$2$', '$10/6$'],
+            options: ['$3/2$', '$5/3$', '$3$', '$11/6$'],
             correctAnswer: 0,
-            explanation: '$f\'(c) = \\frac{f(6)-f(0)}{6-0} = \\frac{10-1}{6} = \\frac{9}{6} = \\frac{3}{2}$.'
+            explanation: '$f\'(c) = \\frac{f(6)-f(0)}{6-0} = \\frac{10-1}{6} = \\frac{9}{6} = \\frac{3}{2}$. Leaving out $f(0)$ gives $\\frac{10}{6} = \\frac{5}{3}$; adding $f(0)$ instead of subtracting gives $\\frac{11}{6}$; $3$ is the slope on $[4,6]$ only.'
           },
           {
             question: 'Can IVT guarantee $f(c) = 3$ for some $c \\in (0, 2)$?',
-            options: ['Yes \u2014 $3$ is between $f(0)=1$ and $f(2)=5$', 'No', 'Only by MVT', 'Need more data'],
+            options: ['Yes \u2014 $3$ is between $f(0)=1$ and $f(2)=5$', 'No — $f$ is not increasing on all of $[0,10]$', 'No — IVT requires $f$ to be differentiable', 'Need more data — $f(1)$ is not in the table'],
             correctAnswer: 0,
-            explanation: '$f(0) = 1 < 3 < 5 = f(2)$. By IVT, $\\exists\\, c \\in (0,2)$ with $f(c) = 3$.'
+            explanation: '$f(0) = 1 < 3 < 5 = f(2)$. By IVT, $\\exists\\, c \\in (0,2)$ with $f(c) = 3$. IVT needs only continuity on $[0,2]$; it does not need $f$ to be increasing, differentiable, or tabulated at more points.'
           }
         ]
       }
@@ -70,21 +70,21 @@ export const calcabTablesDataPart7Data = {
         questions: [
           {
             question: 'Trapezoidal estimate of $\\int_0^{10} R(t)\\,dt$:',
-            options: ['$44.5$ gal', '$50$ gal', '$42$ gal', '$55$ gal'],
+            options: ['$44.5$ gal', '$56$ gal', '$33$ gal', '$89$ gal'],
             correctAnswer: 0,
-            explanation: '$\\frac{1}{2}(10+8) + \\frac{3}{2}(8+5) + \\frac{2}{2}(5+3) + \\frac{4}{2}(3+1) = 9 + 19.5 + 8 + 8 = 44.5$ gal.'
+            explanation: '$\\frac{1}{2}(10+8) + \\frac{3}{2}(8+5) + \\frac{2}{2}(5+3) + \\frac{4}{2}(3+1) = 9 + 19.5 + 8 + 8 = 44.5$ gal. The left sum is $56$ and the right sum is $33$ (their average is $44.5$); leaving out the $\\frac{1}{2}$ doubles the answer to $89$.'
           },
           {
             question: 'Since $R(t)$ is continuously decreasing, the left Riemann sum is:',
-            options: ['An overestimate', 'An underestimate', 'Exact', 'Cannot tell'],
+            options: ['An overestimate', 'An underestimate', 'Exact, since $R$ is continuous', 'Cannot tell without a formula'],
             correctAnswer: 0,
-            explanation: 'For a decreasing function, the left endpoint value is always larger than the function on each subinterval, so left sum overestimates.'
+            explanation: 'For a decreasing function, the left endpoint value is always larger than the function on each subinterval, so left sum overestimates. Continuity does not make a Riemann sum exact, and the direction of change is enough to decide without a formula.'
           },
           {
             question: 'The integral $\\int_0^{10} R(t)\\,dt$ represents:',
-            options: ['Total gallons leaked in 10 hours', 'Average leak rate', 'Gallons remaining', 'Rate of change of gallons'],
+            options: ['Total gallons over the 10 hours', 'Average rate over the 10 hours', 'Gallons present at $t = 10$ hours', 'Change in the rate over 10 hours'],
             correctAnswer: 0,
-            explanation: '$\\int_0^{10} R(t)\\,dt$ = total quantity (gallons) accumulated over the time interval.'
+            explanation: '$\\int_0^{10} R(t)\\,dt$ = total quantity (gallons) accumulated over the time interval. The average rate would divide by $10$; the amount present at $t = 10$ also needs a starting amount; the change in rate is $R(10) - R(0)$.'
           }
         ]
       }
@@ -104,17 +104,17 @@ export const calcabTablesDataPart7Data = {
           },
           {
             label: 'Can IVT guarantee $g(c) = 8$ for some $c \\in (5,9)$?',
-            options: ['Yes \u2014 $8$ is between $11$ and $7$', 'No', 'Only by MVT', 'Need more data'],
+            options: ['Yes \u2014 $8$ is between $11$ and $7$', 'No — IVT needs $g(5) < 8 < g(9)$', 'Only by MVT', 'Need more data'],
             correctAnswers: ['Yes \u2014 $8$ is between $11$ and $7$'],
             hints: ['$g(5) = 11 > 8 > 7 = g(9)$.'],
             explanation: '$7 < 8 < 11$. By IVT, $\\exists\\, c \\in (5,9)$ with $g(c)=8$.'
           },
           {
             label: 'By MVT on $[1,9]$, $g\'(c) =$',
-            options: ['$1/2$', '$4/8$', '$1$', '$7/9$'],
+            options: ['$1/2$', '$-1/2$', '$1$', '$7/9$'],
             correctAnswers: ['$1/2$'],
             hints: ['$\\frac{7-3}{9-1}$.'],
-            explanation: '$g\'(c) = \\frac{7-3}{8} = \\frac{4}{8} = \\frac{1}{2}$.'
+            explanation: '$g\'(c) = \\frac{7-3}{8} = \\frac{4}{8} = \\frac{1}{2}$. Subtracting in the wrong order gives $-\\frac{1}{2}$.'
           }
         ]
       }

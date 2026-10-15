@@ -62,9 +62,9 @@ $$\\boxed{\\left(\\frac{dP}{dt}\\right)_{\\max} = \\frac{kL}{4} \\quad \\text{at
         questions: [
           {
             question: 'The carrying capacity is:',
-            options: ['$1000$', '$500$', '$0.5$', '$2000$'],
+            options: ['$1000$', '$500$', '$0.5$', '$0$'],
             correctAnswer: 0,
-            explanation: '$L = 1000$ from the factor $(1 - P/L)$.'
+            explanation: '$L = 1000$ from the factor $(1 - P/L)$. $P = 0$ is also an equilibrium, but it is not the carrying capacity; $500 = L/2$ is where growth is fastest, and $0.5$ is the growth constant $k$.'
           },
           {
             question: 'The population is growing fastest when $P =$',
@@ -74,9 +74,9 @@ $$\\boxed{\\left(\\frac{dP}{dt}\\right)_{\\max} = \\frac{kL}{4} \\quad \\text{at
           },
           {
             question: 'When $P = 1200$, the population is:',
-            options: ['Growing', 'Decreasing toward 1000', 'At equilibrium', 'Decreasing toward 0'],
+            options: ['Increasing, moving away from 1000', 'Decreasing toward 1000', 'At equilibrium, since $P > L$', 'Decreasing toward 0 and dying out'],
             correctAnswer: 1,
-            explanation: '$P > L$: $(1-1200/1000) = -0.2 < 0$, so $dP/dt < 0$. Population decreases toward $L = 1000$.'
+            explanation: '$P > L$: $(1-1200/1000) = -0.2 < 0$, so $dP/dt < 0$. The population decreases toward $L = 1000$ and levels off there; it does not die out, and $P = 1200$ is not an equilibrium because $dP/dt \\ne 0$.'
           }
         ]
       }
@@ -89,10 +89,10 @@ $$\\boxed{\\left(\\frac{dP}{dt}\\right)_{\\max} = \\frac{kL}{4} \\quad \\text{at
         dropdowns: [
           {
             label: '$\\frac{dP}{dt} = 3P(1-P/600)$. The maximum growth rate is:',
-            options: ['$3 \\cdot 600 = 1800$', '$\\frac{3 \\cdot 600}{4} = 450$', '$3 \\cdot 300 = 900$', '$600/4 = 150$'],
+            options: ['$3 \\cdot 600 = 1800$', '$\\frac{3 \\cdot 600}{4} = 450$', '$\\frac{3 \\cdot 600}{2} = 900$', '$600/4 = 150$'],
             correctAnswers: ['$\\frac{3 \\cdot 600}{4} = 450$'],
             hints: ['Max rate $= kL/4$.'],
-            explanation: '$kL/4 = 3(600)/4 = 450$ at $P = 300$.'
+            explanation: '$kL/4 = 3(600)/4 = 450$ at $P = 300$. Dividing by $2$ instead of $4$ forgets the factor $(1 - \\frac{1}{2})$; $3 \\cdot 600$ ignores the logistic factor entirely.'
           },
           {
             label: 'For $P < L/2$, the logistic curve is:',
@@ -103,10 +103,10 @@ $$\\boxed{\\left(\\frac{dP}{dt}\\right)_{\\max} = \\frac{kL}{4} \\quad \\text{at
           },
           {
             label: 'As $t \\to \\infty$, the logistic solution approaches:',
-            options: ['$0$', '$\\infty$', '$L$ (carrying capacity)', '$L/2$'],
-            correctAnswers: ['$L$ (carrying capacity)'],
+            options: ['$0$, after the population crashes', '$\\infty$, with no upper bound', '$L$, the carrying capacity', '$L/2$, the inflection value'],
+            correctAnswers: ['$L$, the carrying capacity'],
             hints: ['The carrying capacity is the long-term limit.'],
-            explanation: '$\\lim_{t \\to \\infty} P(t) = L$.'
+            explanation: '$\\lim_{t \\to \\infty} P(t) = L$. $L/2$ is where growth is fastest, not where it ends.'
           }
         ]
       }

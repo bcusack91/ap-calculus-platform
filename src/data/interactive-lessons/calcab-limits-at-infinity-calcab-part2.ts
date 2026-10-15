@@ -133,9 +133,9 @@ $$\\lim_{x \\to \\infty} x^3 e^{-x} = 0 \\qquad \\text{(rewrite: } \\frac{x^3}{e
           },
           {
             question: 'Evaluate $\\lim_{x \\to -\\infty} \\frac{3x}{\\sqrt{4x^2+1}}$.',
-            options: ['$\\frac{3}{2}$', '$-\\frac{3}{2}$', '$\\frac{3}{4}$', '$-\\frac{3}{4}$'],
+            options: ['$\\frac{3}{2}$', '$-\\frac{3}{2}$', '$\\frac{3}{4}$', '$-3$'],
             correctAnswer: 1,
-            explanation: 'For $x < 0$, $\\sqrt{4x^2} = -2x$. So $\\frac{3x}{-2x\\sqrt{1+1/(4x^2)}} = \\frac{-3}{2\\sqrt{1+0}} = -\\frac{3}{2}$.'
+            explanation: 'For $x < 0$, $\\sqrt{4x^2} = -2x$. So $\\frac{3x}{-2x\\sqrt{1+1/(4x^2)}} = \\frac{-3}{2\\sqrt{1+0}} = -\\frac{3}{2}$. Using $\\sqrt{4x^2} = 2x$ loses the sign ($\\frac{3}{2}$); forgetting both the sign and the square root of $4$ gives $\\frac{3}{4}$; dropping the $4$ entirely gives $-3$.'
           },
           {
             question: 'Evaluate $\\lim_{x \\to \\infty} (\\sqrt{x^2+4x} - x)$.',
@@ -199,8 +199,7 @@ Evaluate each limit. Enter a number or fraction. Enter "0" or "infinity" as appr
 **3)** $\\lim_{x \\to \\infty} \\frac{(\\ln x)^2}{x}$
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['3/7', '1', '0'],
+        questions: [{ question: '(1)', answer: '3/7', acceptableAnswers: ['3/7', '0.4286'] }, { question: '(2)', answer: '1', acceptableAnswers: ['1'] }, { question: '(3)', answer: '0', acceptableAnswers: ['0'] }],
         hint1: 'Divide numerator and denominator by $e^x$: $\\frac{3 - 2e^{-x}}{7 + 4e^{-x}} \\to \\frac{3}{7}$.',
         hint2: 'Factor $25x^2$ from the radical: $\\frac{5x}{5x\\sqrt{1+9/(25x^2)}} = \\frac{1}{\\sqrt{1+0}} = 1$.',
         hint3: 'Logarithms always lose to polynomials: $(\\ln x)^2$ grows slower than $x$, so the limit is $0$.',

@@ -136,9 +136,9 @@ $$\\lim_{x \\to \\infty} \\frac{4x^2 - 3x + 1}{2x^2 + 5} = \\lim_{x \\to \\infty
         questions: [
           {
             question: 'Evaluate $\\lim_{x \\to \\infty} \\frac{5x^2 + 3}{2x^2 - 7}$.',
-            options: ['$0$', '$\\frac{5}{2}$', '$\\frac{3}{-7}$', 'Does not exist'],
+            options: ['$0$', '$\\frac{5}{2}$', '$1$', '$\\infty$'],
             correctAnswer: 1,
-            explanation: 'Degrees are equal (both 2). The limit is the ratio of leading coefficients: $\\frac{5}{2}$.'
+            explanation: 'Degrees are equal (both 2). The limit is the ratio of leading coefficients: $\\frac{5}{2}$. Equal degrees do not make the limit $1$, and the limit is $0$ or $\\infty$ only when the degrees differ.'
           },
           {
             question: 'Which function has NO horizontal asymptote?',
@@ -247,10 +247,10 @@ Evaluate each limit. Enter your answer as a number or fraction (e.g., 3/5). If t
               'The degree of $p$ equals the degree of $q$',
               'The degree of $p$ is less than the degree of $q$',
               'The leading coefficient of $p$ is 0',
-              '$f(0) = 0$'
+              'The graph of $f$ passes through the origin'
             ],
             correctAnswer: 1,
-            explanation: 'A horizontal asymptote at $y = 0$ occurs when the degree of the numerator is strictly less than the degree of the denominator.'
+            explanation: 'A horizontal asymptote at $y = 0$ occurs when the degree of the numerator is strictly less than the degree of the denominator. It describes end behavior, so it says nothing about $f(0)$.'
           },
           {
             question: 'Evaluate $\\lim_{x \\to -\\infty} \\frac{2x^2 - x}{3x^2 + 4}$.',

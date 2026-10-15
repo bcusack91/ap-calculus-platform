@@ -65,9 +65,9 @@ $R'(c) = \\frac{R(10)-R(0)}{10-0} = \\frac{3-4}{10} = -0.1$ gal/hr\u00b2 for som
         questions: [
           {
             question: 'For a table with unequal subintervals, which is TRUE?',
-            options: ['Each term uses its own $\\Delta x_i$', 'Use the average $\\Delta x$', 'Only midpoint sums work', 'All subintervals are equal'],
+            options: ['Each term uses its own $\\Delta x_i$', 'Use the average $\\Delta x$ for every term', 'Only midpoint sums can be used with it', 'Treat all the subintervals as equal width'],
             correctAnswer: 0,
-            explanation: 'Unequal subintervals mean each rectangle has a different width. Multiply each $f(x_i)$ by its own $\\Delta x_i$.'
+            explanation: 'Unequal subintervals mean each rectangle has a different width. Multiply each $f(x_i)$ by its own $\\Delta x_i$. Averaging the widths or pretending they are equal misweights the long intervals, and left, right and trapezoidal sums all still work.'
           },
           {
             question: 'A left Riemann sum overestimates when $f$ is:',
@@ -77,9 +77,9 @@ $R'(c) = \\frac{R(10)-R(0)}{10-0} = \\frac{3-4}{10} = -0.1$ gal/hr\u00b2 for som
           },
           {
             question: 'The trapezoidal approximation underestimates when $f$ is:',
-            options: ['Concave down', 'Concave up', 'Increasing', 'Decreasing'],
+            options: ['Concave down', 'Concave up', 'Increasing everywhere', 'Decreasing everywhere'],
             correctAnswer: 0,
-            explanation: 'Concave down: the curve bows above the trapezoid\u2019s straight top edge.'
+            explanation: 'Concave down: the curve bows above the trapezoid’s straight top edge. Whether $f$ increases or decreases decides how left and right sums behave, not trapezoids.'
           }
         ]
       }
@@ -106,10 +106,10 @@ $R'(c) = \\frac{R(10)-R(0)}{10-0} = \\frac{3-4}{10} = -0.1$ gal/hr\u00b2 for som
         dropdowns: [
           {
             label: 'Estimating $f\'(3)$ from a table with $f(2)=5$ and $f(4)=11$:',
-            options: ['$\\frac{11-5}{4-2} = 3$', '$\\frac{5+11}{2} = 8$', '$11 - 5 = 6$', '$f\'(3) = 3$'],
+            options: ['$\\frac{11-5}{4-2} = 3$', '$\\frac{5+11}{2} = 8$', '$11 - 5 = 6$', '$\\frac{11-5}{4} = 1.5$'],
             correctAnswers: ['$\\frac{11-5}{4-2} = 3$'],
             hints: ['Difference quotient using nearest values.'],
-            explanation: '$f\'(3) \\approx \\frac{f(4)-f(2)}{4-2} = \\frac{6}{2} = 3$.'
+            explanation: '$f\'(3) \\approx \\frac{f(4)-f(2)}{4-2} = \\frac{6}{2} = 3$. Dividing by $4$ (the $x$-value) instead of the width $2$ gives $1.5$; $6$ forgets to divide; $8$ averages the function values.'
           },
           {
             label: '$f$ is continuous, $f(1) = -2$, $f(4) = 5$. By IVT, $f(c) = 0$ for some $c$ in:',

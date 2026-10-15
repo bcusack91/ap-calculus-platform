@@ -102,10 +102,10 @@ $f$ is continuous at $x = a$ if ALL THREE hold:
           },
           {
             label: '$\\lim_{x\\to\\infty}\\frac{6x^2+1}{3x^2-7} =$',
-            options: ['$2$', '$0$', '$\\infty$', '$6/3 = 2$'],
+            options: ['$2$', '$0$', '$\\infty$', '$-1/7$'],
             correctAnswers: ['$2$'],
             hints: ['Same degree \u2014 ratio of leading coefficients.'],
-            explanation: '$\\frac{6}{3} = 2$. Equal degrees: limit is ratio of leading coefficients.'
+            explanation: '$\\frac{6}{3} = 2$. Equal degrees: limit is ratio of leading coefficients. The constants $1$ and $-7$ do not matter as $x \\to \\infty$.'
           }
         ]
       }

@@ -63,9 +63,9 @@ $$\\boxed{\\text{Show work} \\to \\text{Label with units} \\to \\text{Answer in 
         questions: [
           {
             question: 'On an FRQ, \u201cExplain the meaning of $\\int_2^8 r(t)\\,dt = 50$\u201d requires you to:',
-            options: ['State what the integral represents in the problem\u2019s context with units', 'Just write \u201c50\u201d', 'Show the antiderivative computation', 'Graph $r(t)$'],
+            options: ['Say what the 50 means in context, with units', 'Show the antiderivative steps for 50', 'Call it the area under $r(t)$ on $[2, 8]$', 'Give the rate of $r$ at $t = 8$, with units'],
             correctAnswer: 0,
-            explanation: 'Interpretation: \u201cThe total amount of [quantity] from $t=2$ to $t=8$ is 50 [units].\u201d Context and units are required.'
+            explanation: 'Interpretation: “The total amount of [quantity] from $t=2$ to $t=8$ is 50 [units].” Context and units are required. Computation alone earns no interpretation point, “area under the curve” without context is not an interpretation, and the integral is a total over the interval, not a rate at one time.'
           },
           {
             question: 'Which theorem justifies: \u201cThere exists a $c$ in $(1,5)$ such that $f\'(c) = \\frac{f(5)-f(1)}{5-1}$\u201d?',
@@ -75,9 +75,9 @@ $$\\boxed{\\text{Show work} \\to \\text{Label with units} \\to \\text{Answer in 
           },
           {
             question: 'If the FRQ says \u201cJustify your answer,\u201d you must:',
-            options: ['Name the theorem and verify its conditions', 'Write \u201cbecause the answer is obvious\u201d', 'Show a graph', 'Only state the conclusion'],
+            options: ['Name the theorem and verify its conditions', 'Show the arithmetic and the conclusion', 'Point to a graph that shows the result', 'Check the result with a numerical example'],
             correctAnswer: 0,
-            explanation: 'Justification = name the theorem + verify hypotheses + state the conclusion.'
+            explanation: 'Justification = name the theorem (or the reason, such as a sign change of $f\'$) + verify its hypotheses + state the conclusion. Arithmetic, a picture or an example does not explain why the result must hold.'
           }
         ]
       }

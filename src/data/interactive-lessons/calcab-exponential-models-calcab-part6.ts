@@ -65,9 +65,9 @@ export const calcabExpModelsPart6Data = {
           },
           {
             question: 'The temperature of a cooling object is $T(t) = 25 + 75e^{-0.1t}$. The initial temperature is:',
-            options: ['$100\u00b0$', '$25\u00b0$', '$75\u00b0$', '$125\u00b0$'],
+            options: ['$100\u00b0$', '$25\u00b0$', '$75\u00b0$', '$50°$'],
             correctAnswer: 0,
-            explanation: '$T(0) = 25 + 75e^0 = 25 + 75 = 100\u00b0$.'
+            explanation: '$T(0) = 25 + 75e^0 = 25 + 75 = 100°$. $25°$ is the room temperature (the limit as $t \\to \\infty$), $75°$ is the initial temperature DIFFERENCE, and subtracting gives $50°$.'
           }
         ]
       }
@@ -80,8 +80,8 @@ export const calcabExpModelsPart6Data = {
         dropdowns: [
           {
             label: '"A drug is eliminated at a rate proportional to the amount in the bloodstream." Model:',
-            options: ['Exponential decay: $dy/dt = ky$, $k<0$', 'Logistic growth', 'Newton\u2019s cooling', 'Linear decay'],
-            correctAnswers: ['Exponential decay: $dy/dt = ky$, $k<0$'],
+            options: ['Exponential decay', 'Logistic growth', 'Newton’s Law of Cooling', 'Linear decay'],
+            correctAnswers: ['Exponential decay'],
             hints: ['"Rate proportional to amount" = exponential.'],
             explanation: 'Rate proportional to amount with elimination = exponential decay.'
           },

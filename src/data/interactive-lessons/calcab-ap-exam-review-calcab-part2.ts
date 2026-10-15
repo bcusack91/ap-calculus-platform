@@ -61,9 +61,9 @@ $$= \\frac{x\\,e^{3x}[(2+3x)\\cos x + x\\sin x]}{\\cos^2 x}$$`
         questions: [
           {
             question: '$\\frac{d}{dx}[x^3 \\ln x] =$',
-            options: ['$x^2(3\\ln x + 1)$', '$3x^2 \\ln x$', '$\\frac{x^2}{x}$', '$3x^2 + \\frac{1}{x}$'],
+            options: ['$3x^2 \\ln x + x^2$', '$3x^2 \\ln x$', '$3x$', '$3x^2 \\ln x + 1$'],
             correctAnswer: 0,
-            explanation: 'Product rule: $3x^2 \\ln x + x^3 \\cdot \\frac{1}{x} = 3x^2 \\ln x + x^2 = x^2(3\\ln x+1)$.'
+            explanation: 'Product rule: $3x^2 \\ln x + x^3 \\cdot \\frac{1}{x} = 3x^2 \\ln x + x^2 = x^2(3\\ln x+1)$. Multiplying the two derivatives gives $3x^2 \\cdot \\frac{1}{x} = 3x$; stopping after the first term gives $3x^2 \\ln x$; $x^3 \\cdot \\frac{1}{x}$ is $x^2$, not $1$.'
           },
           {
             question: '$\\frac{d}{dx}[\\sin(x^2)] =$',
@@ -110,9 +110,9 @@ $2x + 2y\\frac{dy}{dx} = 0 \\implies \\frac{dy}{dx} = -\\frac{x}{y}$
         questions: [
           {
             question: 'If $x^2y + y^3 = 10$, find $\\frac{dy}{dx}$ at $(1, 2)$.',
-            options: ['$-\\frac{2}{7}$', '$-\\frac{4}{13}$', '$\\frac{2}{7}$', '$-\\frac{1}{6}$'],
+            options: ['$\\frac{4}{13}$', '$-\\frac{4}{13}$', '$-\\frac{1}{3}$', '$-16$'],
             correctAnswer: 1,
-            explanation: '$2xy + x^2\\frac{dy}{dx} + 3y^2\\frac{dy}{dx} = 0$. $\\frac{dy}{dx}(x^2+3y^2) = -2xy$. At $(1,2): \\frac{dy}{dx} = \\frac{-4}{1+12} = -\\frac{4}{13}$.'
+            explanation: '$2xy + x^2\\frac{dy}{dx} + 3y^2\\frac{dy}{dx} = 0$. $\\frac{dy}{dx}(x^2+3y^2) = -2xy$. At $(1,2): \\frac{dy}{dx} = \\frac{-4}{1+12} = -\\frac{4}{13}$. Dropping the minus sign gives $\\frac{4}{13}$; differentiating $x^2y$ as just $2xy$ (no product rule) gives $-\\frac{4}{12} = -\\frac{1}{3}$; forgetting $\\frac{dy}{dx}$ on $y^3$ gives $-16$.'
           },
           {
             question: '$\\frac{d}{dx}[\\ln(\\cos x)] =$',

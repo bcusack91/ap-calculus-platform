@@ -59,9 +59,9 @@ export const calcabExamReviewPart7Data = {
           },
           {
             question: 'If $f(x) = x^4 - 4x^3$, then $f$ has an inflection point at:',
-            options: ['$x = 0$ and $x = 2$', '$x = 3$ only', '$x = 0$ only', '$x = 2$ only'],
+            options: ['$x = 0$ and $x = 2$', '$x = 0$ and $x = 3$', '$x = 0$ only', '$x = 2$ only'],
             correctAnswer: 0,
-            explanation: '$f\'\'(x) = 12x^2 - 24x = 12x(x-2) = 0$ at $x=0,2$. Sign changes at both \u2192 both are inflection points.'
+            explanation: '$f\'\'(x) = 12x^2 - 24x = 12x(x-2) = 0$ at $x=0,2$. Sign changes at both → both are inflection points. $x = 0$ and $x = 3$ are where $f\' = 4x^3 - 12x^2 = 0$ (critical points), and dividing by $x$ loses $x = 0$.'
           }
         ]
       }
@@ -86,9 +86,9 @@ export const calcabExamReviewPart7Data = {
           },
           {
             question: 'If $\\int_0^5 f(x)\\,dx = 12$ and $\\int_0^3 f(x)\\,dx = 7$, then $\\int_3^5 f(x)\\,dx =$',
-            options: ['$5$', '$19$', '$-5$', '$7$'],
+            options: ['$5$', '$19$', '$-5$', '$12$'],
             correctAnswer: 0,
-            explanation: '$\\int_0^5 = \\int_0^3 + \\int_3^5 \\implies 12 = 7 + \\int_3^5 \\implies \\int_3^5 = 5$.'
+            explanation: '$\\int_0^5 = \\int_0^3 + \\int_3^5 \\implies 12 = 7 + \\int_3^5 \\implies \\int_3^5 = 5$. Adding gives $19$, subtracting in the wrong order gives $-5$, and $12$ is the integral over all of $[0,5]$.'
           }
         ]
       }

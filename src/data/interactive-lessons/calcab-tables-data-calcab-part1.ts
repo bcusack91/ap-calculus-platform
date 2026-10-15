@@ -66,21 +66,21 @@ Backward: $f'(8) \\approx \\frac{f(8) - f(5)}{8 - 5} = \\frac{20 - 10}{3} = \\fr
         questions: [
           {
             question: 'Estimate $f\'(5)$ using the symmetric difference quotient.',
-            options: ['$2$', '$\\frac{4}{3}$', '$3$', '$\\frac{7}{3}$'],
+            options: ['$2$', '$10$', '$\\frac{11}{5}$', '$\\frac{14}{5}$'],
             correctAnswer: 0,
-            explanation: '$f\'(5) \\approx \\frac{f(7) - f(2)}{7 - 2} = \\frac{18 - 8}{5} = 2$.'
+            explanation: '$f\'(5) \\approx \\frac{f(7) - f(2)}{7 - 2} = \\frac{18 - 8}{5} = 2$. Stopping at $18 - 8 = 10$ forgets to divide by the width; $\\frac{25 - 3}{10} = \\frac{11}{5}$ uses the endpoints instead of the closest neighbors; $\\frac{14}{5}$ divides $f(5)$ by $5$.'
           },
           {
             question: 'Estimate $f\'(0)$ using the best available method.',
-            options: ['$\\frac{5}{2}$', '$3$', '$8$', '$5$'],
+            options: ['$\\frac{5}{2}$', '$4$', '$8$', '$5$'],
             correctAnswer: 0,
-            explanation: 'At the left endpoint, use forward difference: $f\'(0) \\approx \\frac{f(2) - f(0)}{2 - 0} = \\frac{8 - 3}{2} = \\frac{5}{2}$.'
+            explanation: 'At the left endpoint, use forward difference: $f\'(0) \\approx \\frac{f(2) - f(0)}{2 - 0} = \\frac{8 - 3}{2} = \\frac{5}{2}$. $4$ is $f(2)$ divided by $2$ without subtracting $f(0)$; $5$ forgets to divide by the width; $3$ is $f(0)$, not a slope.'
           },
           {
             question: 'Estimate $f\'(10)$ using the best available method.',
-            options: ['$\\frac{7}{3}$', '$\\frac{25}{10}$', '$7$', '$\\frac{11}{5}$'],
+            options: ['$\\frac{7}{3}$', '$\\frac{25}{10}$', '$\\frac{7}{10}$', '$\\frac{11}{5}$'],
             correctAnswer: 0,
-            explanation: 'At the right endpoint, use backward: $f\'(10) \\approx \\frac{f(10) - f(7)}{10 - 7} = \\frac{25 - 18}{3} = \\frac{7}{3}$.'
+            explanation: 'At the right endpoint, use backward: $f\'(10) \\approx \\frac{f(10) - f(7)}{10 - 7} = \\frac{25 - 18}{3} = \\frac{7}{3}$. Dividing by $10$ uses the $x$-value instead of the width $3$; $\\frac{25}{10}$ is $f(10)/10$; $\\frac{11}{5}$ uses $x = 5$ instead of the nearest point $x = 7$.'
           }
         ]
       }
@@ -93,10 +93,10 @@ Backward: $f'(8) \\approx \\frac{f(8) - f(5)}{8 - 5} = \\frac{20 - 10}{3} = \\fr
         dropdowns: [
           {
             label: 'The best estimate for $s\'(4)$ uses which method?',
-            options: ['Symmetric: $\\frac{s(10)-s(0)}{10-0}$', 'Forward: $\\frac{s(10)-s(4)}{6}$', 'Backward: $\\frac{s(4)-s(0)}{4}$', 'Cannot estimate'],
+            options: ['Symmetric: $\\frac{s(10)-s(0)}{10-0}$', 'Forward: $\\frac{s(10)-s(4)}{6}$', 'Backward: $\\frac{s(4)-s(0)}{4}$', 'Symmetric: $\\frac{s(15)-s(0)}{15-0}$'],
             correctAnswers: ['Symmetric: $\\frac{s(10)-s(0)}{10-0}$'],
             hints: ['$t = 4$ is an interior point with neighbors $t = 0$ and $t = 10$.'],
-            explanation: 'Symmetric difference is best for interior points: $\\frac{30 - 0}{10} = 3$ m/s.'
+            explanation: 'Symmetric difference is best for interior points: $\\frac{30 - 0}{10} = 3$ m/s. It uses the closest neighbors $t = 0$ and $t = 10$, not $t = 15$.'
           },
           {
             label: '$s\'(4) \\approx$',

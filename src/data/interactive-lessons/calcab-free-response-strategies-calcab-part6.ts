@@ -62,9 +62,9 @@ $$V = \\int_0^2 (2x - x^2)^2\\,dx$$`
         questions: [
           {
             question: 'To revolve region $R$ about the line $y = -1$ instead of the $x$-axis, you must:',
-            options: ['Add 1 to each radius: $R = f(x)+1$, $r = g(x)+1$', 'Subtract 1 from each function', 'Shift the integral limits', 'Use shells instead of washers'],
+            options: ['Use radii $R = f(x)+1$ and $r = g(x)+1$', 'Use radii $R = f(x)-1$ and $r = g(x)-1$', 'Keep $R = f(x)$ and $r = g(x)$; shift the limits', 'Use radii $R = f(x)+1$ and $r = g(x)$'],
             correctAnswer: 0,
-            explanation: 'Revolving about $y=-1$: distance from curve to axis of rotation = $f(x)-(-1) = f(x)+1$.'
+            explanation: 'Revolving about $y=-1$: distance from curve to axis of rotation = $f(x)-(-1) = f(x)+1$, and likewise $g(x)+1$. Subtracting 1 measures to $y = 1$ instead; both radii must shift; the $x$-limits do not change.'
           },
           {
             question: 'Cross-sections perpendicular to the $x$-axis are squares with side $s = f(x)-g(x)$. The volume is:',
@@ -74,9 +74,9 @@ $$V = \\int_0^2 (2x - x^2)^2\\,dx$$`
           },
           {
             question: 'When integrating with respect to $y$ for area, the integrand is:',
-            options: ['$(\\text{right function}) - (\\text{left function})$', '$(\\text{top}) - (\\text{bottom})$', '$(\\text{outer}) - (\\text{inner})$', '$\\pi[(\\text{right})^2 - (\\text{left})^2]$'],
+            options: ['$(\\text{right function}) - (\\text{left function})$', '$(\\text{top function}) - (\\text{bottom function})$', '$(\\text{outer function}) - (\\text{inner function})$', '$\\pi[(\\text{right})^2 - (\\text{left})^2]$'],
             correctAnswer: 0,
-            explanation: 'Horizontal slices: $\\int_c^d [x_{\\text{right}}(y) - x_{\\text{left}}(y)]\\,dy$.'
+            explanation: 'Horizontal slices: $\\int_c^d [x_{\\text{right}}(y) - x_{\\text{left}}(y)]\\,dy$. Top minus bottom is for $dx$ slices, outer minus inner describes washer radii, and a $\\pi$ appears only for volumes.'
           }
         ]
       }

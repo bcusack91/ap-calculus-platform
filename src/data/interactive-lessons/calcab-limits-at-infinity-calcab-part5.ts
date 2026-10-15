@@ -104,15 +104,15 @@ Let $u = 1/x$: $\\lim_{u \\to 0^+} \\frac{e^u - 1}{u} = 1$`
         questions: [
           {
             question: 'Evaluate $\\lim_{x \\to \\infty} \\left(1 + \\frac{5}{x}\\right)^x$.',
-            options: ['$1$', '$5$', '$e^5$', '$\\infty$'],
+            options: ['$1$', '$5$', '$e^5$', '$e$'],
             correctAnswer: 2,
-            explanation: 'Using the general form $\\lim\\left(1 + k/x\\right)^x = e^k$ with $k = 5$, we get $e^5$.'
+            explanation: 'Using the general form $\\lim\\left(1 + k/x\\right)^x = e^k$ with $k = 5$, we get $e^5$. Answering $e$ uses the $k = 1$ case; $1$ treats $1^\\infty$ as $1$, but this is an indeterminate form.'
           },
           {
             question: 'Evaluate $\\lim_{x \\to \\infty} x\\left(1 - \\cos\\frac{1}{x}\\right)$.',
-            options: ['$0$', '$1$', '$1/2$', 'Does not exist'],
+            options: ['$0$', '$\\infty$', '$1/2$', 'Does not exist'],
             correctAnswer: 0,
-            explanation: 'Let $u = 1/x$: $\\frac{1-\\cos u}{u} \\to 0$ as $u \\to 0$ (a known special limit).'
+            explanation: 'Let $u = 1/x$: $\\frac{1-\\cos u}{u} \\to 0$ as $u \\to 0$ (a known special limit). The product has the form $\\infty \\cdot 0$, which is indeterminate, not automatically $\\infty$; $\\frac{1}{2}$ is the limit of $\\frac{1-\\cos u}{u^2}$, a different expression.'
           }
         ]
       }

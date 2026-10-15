@@ -45,15 +45,15 @@ This section simulates exam conditions with mixed-topic questions covering all m
         questions: [
           {
             question: 'If $g(x) = \\int_0^x f(t)\\,dt$ and $f$ is continuous, then $g\'(3) =$',
-            options: ['$f(3)$', '$\\int_0^3 f(t)\\,dt$', '$f\'(3)$', '$g(3)$'],
+            options: ['$f(3)$', '$\\int_0^3 f(t)\\,dt$', '$f\'(3)$', '$f(3) - f(0)$'],
             correctAnswer: 0,
-            explanation: 'FTC Part 1: $g\'(x) = f(x)$, so $g\'(3) = f(3)$.'
+            explanation: 'FTC Part 1: $g\'(x) = f(x)$, so $g\'(3) = f(3)$. $\\int_0^3 f(t)\\,dt$ is $g(3)$ itself, and $f(3) - f(0)$ would be $\\int_0^3 f\'(t)\\,dt$.'
           },
           {
             question: 'A particle\u2019s position is $s(t) = t^3 - 6t^2$. The particle is at rest when:',
-            options: ['$t = 0$ and $t = 4$', '$t = 2$ only', '$t = 0$ only', '$t = 4$ only'],
+            options: ['$t = 0$ and $t = 4$', '$t = 2$ only', '$t = 0$ and $t = 6$', '$t = 4$ only'],
             correctAnswer: 0,
-            explanation: '$v(t) = 3t^2 - 12t = 3t(t-4) = 0$ at $t=0$ and $t=4$.'
+            explanation: '$v(t) = 3t^2 - 12t = 3t(t-4) = 0$ at $t=0$ and $t=4$. Solving $s(t) = 0$ instead gives $t = 0$ and $t = 6$ (times at the origin); $t = 2$ is where $a(t) = 0$; dividing by $t$ loses $t = 0$.'
           },
           {
             question: 'The MVT guarantees that for $f(x)=\\sqrt{x}$ on $[1,9]$, there exists $c$ such that $f\'(c) =$',
@@ -72,9 +72,9 @@ This section simulates exam conditions with mixed-topic questions covering all m
         questions: [
           {
             question: '$\\int_1^4 \\frac{1}{\\sqrt{x}}\\,dx =$',
-            options: ['$2$', '$4$', '$1$', '$3$'],
+            options: ['$2$', '$\\frac{14}{3}$', '$-\\frac{1}{2}$', '$\\frac{7}{16}$'],
             correctAnswer: 0,
-            explanation: '$\\int x^{-1/2}\\,dx = 2\\sqrt{x}$. $[2\\sqrt{x}]_1^4 = 4-2 = 2$.'
+            explanation: '$\\int x^{-1/2}\\,dx = 2\\sqrt{x}$. $[2\\sqrt{x}]_1^4 = 4-2 = 2$. Integrating $\\sqrt{x}$ instead gives $\\frac{14}{3}$; subtracting integrand values gives $\\frac{1}{2} - 1 = -\\frac{1}{2}$; using the derivative $-\\frac{1}{2}x^{-3/2}$ gives $\\frac{7}{16}$.'
           },
           {
             question: 'If $\\frac{dy}{dx} = 2y$ and $y(0)=5$, then $y(t) =$',
@@ -113,7 +113,7 @@ This section simulates exam conditions with mixed-topic questions covering all m
           },
           {
             label: '\u201cSet up but do not evaluate an integral for the volume\u201d means:',
-            options: ['Write the integral with limits and integrand, then stop', 'Evaluate and box the answer', 'Use a Riemann sum', 'Graph the region only'],
+            options: ['Write the integral with limits and integrand, then stop', 'Evaluate the integral and box the final answer', 'Approximate the volume with a Riemann sum', 'Sketch the region and label the axis of rotation'],
             correctAnswers: ['Write the integral with limits and integrand, then stop'],
             hints: ['AP says \u201cset up\u201d = write it out. \u201cDo not evaluate\u201d = don\u2019t compute.'],
             explanation: 'Full points for a correct integral expression. DO NOT waste time computing.'

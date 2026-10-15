@@ -75,15 +75,15 @@ $y^2 = 2x^2 + 16 \\implies y = \\sqrt{2x^2 + 16}$ (positive since $y(0)=4>0$)
           },
           {
             question: 'To solve $\\frac{dy}{dx} = e^x \\cos y$, the first step is:',
-            options: ['$\\frac{dy}{\\cos y} = e^x\\,dx$', 'Integrate both sides directly', 'Use an integrating factor', 'Apply FTC'],
+            options: ['$\\frac{dy}{\\cos y} = e^x\\,dx$', 'Integrate both sides now', 'Use an integrating factor', 'Apply FTC'],
             correctAnswer: 0,
             explanation: 'Separate: put $y$ terms with $dy$, $x$ terms with $dx$. $\\sec y\\,dy = e^x\\,dx$.'
           },
           {
             question: 'After solving a DE, the +$C$ is determined by:',
-            options: ['The initial condition', 'Setting $C = 0$', 'The slope field', 'The domain of $y$'],
+            options: ['The initial condition', 'Setting $C = 0$ by default', 'The segments of the slope field', 'The domain of the solution $y$'],
             correctAnswer: 0,
-            explanation: 'The initial condition $y(x_0) = y_0$ provides the specific value of $C$.'
+            explanation: 'The initial condition $y(x_0) = y_0$ provides the specific value of $C$. A slope field shows the shape of every solution but does not pick one, and $C = 0$ is right only when the initial condition makes it so.'
           }
         ]
       }

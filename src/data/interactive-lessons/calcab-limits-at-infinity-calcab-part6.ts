@@ -110,9 +110,9 @@ $$= \\lim_{x \\to \\infty} \\frac{\\ln 3 + \\ln x}{\\ln 5 + \\ln x} = \\lim_{x \
         questions: [
           {
             question: 'Evaluate $\\lim_{x \\to \\infty} x\\left(e^{3/x} - 1\\right)$.',
-            options: ['$0$', '$1$', '$3$', '$e^3$'],
+            options: ['$\\infty$', '$\\frac{1}{3}$', '$3$', '$e^3$'],
             correctAnswer: 2,
-            explanation: 'Let $u = 3/x$: $\\frac{3}{u}(e^u - 1) = 3 \\cdot \\frac{e^u-1}{u} \\to 3 \\cdot 1 = 3$.'
+            explanation: 'Let $u = 3/x$: $\\frac{3}{u}(e^u - 1) = 3 \\cdot \\frac{e^u-1}{u} \\to 3 \\cdot 1 = 3$. The form $\\infty \\cdot 0$ is indeterminate, not automatically $\\infty$; writing $x = \\frac{u}{3}$ instead of $\\frac{3}{u}$ gives $\\frac{1}{3}$.'
           },
           {
             question: 'Evaluate $\\lim_{x \\to \\infty} \\frac{\\ln x^5}{5\\ln x + 2}$.',
@@ -136,8 +136,7 @@ $$= \\lim_{x \\to \\infty} \\frac{\\ln 3 + \\ln x}{\\ln 5 + \\ln x} = \\lim_{x \
 **3)** $\\lim_{x \\to \\infty} \\frac{\\sin(x) + x^2}{x^2 + 1} = $
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['1', '3/4', '1'],
+        questions: [{ question: '(1)', answer: '1', acceptableAnswers: ['1'] }, { question: '(2)', answer: '3/4', acceptableAnswers: ['3/4', '0.75'] }, { question: '(3)', answer: '1', acceptableAnswers: ['1'] }],
         hint1: 'Expand: $\\frac{6x^2+5x-4}{6x^2+7x-10}$. Equal degrees, ratio = $6/6 = 1$.',
         hint2: 'Conjugate: $\\frac{4x^2+3x-4x^2}{\\sqrt{4x^2+3x}+2x} = \\frac{3x}{\\sqrt{4x^2+3x}+2x}$. Divide by $x$: $\\frac{3}{2+2} = 3/4$.',
         hint3: '$\\frac{\\sin x + x^2}{x^2+1} = \\frac{\\sin x/x^2 + 1}{1 + 1/x^2} \\to \\frac{0+1}{1+0} = 1$.',
@@ -178,7 +177,7 @@ $$= \\lim_{x \\to \\infty} \\frac{\\ln 3 + \\ln x}{\\ln 5 + \\ln x} = \\lim_{x \
             question: 'Evaluate $\\lim_{x \\to \\infty} \\frac{e^x - e^{-x}}{e^x + e^{-x}}$.',
             options: ['$0$', '$1$', '$-1$', 'Does not exist'],
             correctAnswer: 1,
-            explanation: 'Divide by $e^x$: $\\frac{1 - e^{-2x}}{1 + e^{-2x}} \\to \\frac{1-0}{1+0} = 1$. (This is actually $\\tanh x \\to 1$.)'
+            explanation: 'Divide by $e^x$: $\\frac{1 - e^{-2x}}{1 + e^{-2x}} \\to \\frac{1-0}{1+0} = 1$. (This function is $\\tanh x$.)'
           }
         ]
       }
