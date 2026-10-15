@@ -30,7 +30,6 @@ export const hgAgriculturalPracticesPart1Data = {
 | **Pastoral nomadism** | Herding livestock; moving with grazing | Arid/semi-arid regions (Sahel, Central Asia) |
 | **Intensive subsistence (wet rice)** | Paddy rice on small plots; high labor | East and South Asia (China, India, Bangladesh) |
 | **Intensive subsistence (non-rice)** | Wheat, barley on small plots; high labor | Drier parts of Asia |
-| **Plantation** | Large-scale tropical crops for export | Tropical developing countries (coffee, rubber, palm oil) |
       `
     },
     {
@@ -94,6 +93,7 @@ Johann von Thunen proposed that agricultural land use forms concentric rings aro
 | **Grain farming** | Large-scale wheat, corn, rice | US Great Plains, Canadian Prairies, Ukraine |
 | **Livestock ranching** | Extensive grazing on large areas | US West, Argentina, Australia |
 | **Mediterranean agriculture** | Olives, grapes, fruits, vegetables | Southern Europe, California, Chile |
+| **Plantation** | Large-scale tropical cash crops for export, often foreign-owned | Tropical developing countries (coffee, rubber, palm oil) |
       `
     },
     {

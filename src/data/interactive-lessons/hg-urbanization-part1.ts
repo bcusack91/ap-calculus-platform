@@ -31,7 +31,7 @@ export const hgUrbanizationPart1Data = {
 | **Concentric Zone** | Burgess (1925) | City grows outward in rings from CBD |
 | **Sector Model** | Hoyt (1939) | Zones extend as wedges along transportation routes |
 | **Multiple Nuclei** | Harris & Ullman (1945) | City has several centers of activity, not just one CBD |
-| **Galactic City** | Harris (1990s) | Edge cities and suburbs surround a declining CBD |
+| **Galactic City** | Peirce Lewis (1983) | Edge cities and suburbs surround a declining CBD |
 | **Latin American City** | Griffin-Ford | CBD + spine of wealth; disamenity zones on outskirts |
 | **African City** | De Blij | Three CBDs: colonial, traditional market, periodic market |
 | **Southeast Asian City** | McGee | Port zone + CBD; no single dominant center |

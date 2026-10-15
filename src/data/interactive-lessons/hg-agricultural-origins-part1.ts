@@ -25,18 +25,18 @@ export const hgAgriculturalOriginsPart1Data = {
 
 ## Agricultural Hearths
 
-Agriculture was independently invented in multiple locations:
+Agriculture was independently invented in several locations. The CED names the **Fertile Crescent**, the **Indus River Valley**, **Southeast Asia** and **Central America**; East Asia and the Andes are other well-documented hearths:
 
 | Hearth | Region | Key Crops/Animals |
 |--------|--------|------------------|
-| **Fertile Crescent** | SW Asia (Iraq/Syria) | Wheat, barley, sheep, goats |
-| **Nile Valley** | Egypt | Wheat, flax |
-| **Indus Valley** | South Asia | Cotton, zebu cattle |
-| **Yellow River** | East Asia | Rice, millet, pigs |
-| **Mesoamerica** | Central America | Maize (corn), squash, beans |
-| **Andes** | South America | Potatoes, llamas, alpacas |
+| **Fertile Crescent** | SW Asia (Iraq, Syria, Turkey, the Levant) | Wheat, barley, lentils, sheep, goats |
+| **Indus River Valley** | South Asia (Pakistan, NW India) | Cotton, zebu cattle |
+| **Southeast Asia** | Mainland and islands, including New Guinea | Taro, yams, bananas, chickens |
+| **Central America (Mesoamerica)** | Southern Mexico | Maize (corn), squash, beans |
+| **East Asia** | Yellow River (north China) and Yangtze River (south China) | Millet and pigs (Yellow River); rice (Yangtze) |
+| **Andes** | Western South America | Potatoes, llamas, alpacas |
 
-> These hearths are examples of **independent invention** — agriculture was NOT spread from a single origin.
+> These hearths are examples of **independent invention** — agriculture was NOT spread from a single origin. Not every early farming region was a hearth: Egypt's Nile Valley farmed wheat and barley that **diffused** from the Fertile Crescent.
       `
     },
     {
@@ -150,7 +150,7 @@ From each hearth, agricultural practices spread through **diffusion**:
       content: `
 ## AP Exam Strategy: Agricultural Geography
 
-- **Know all 6 major hearths** and their key domesticates — this is frequently tested
+- **Know the hearths and their key domesticates**, especially the four the CED names (Fertile Crescent, Indus River Valley, Southeast Asia, Central America)
 - Connect agricultural revolutions to population changes (DTM stages)
 - The Second Agricultural Revolution enabled the Industrial Revolution (fewer farmers needed = urban labor supply)
 - The Green Revolution (Third) saved millions from famine but also caused environmental issues

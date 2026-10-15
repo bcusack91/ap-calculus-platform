@@ -5,20 +5,43 @@ export const hgPoliticalPowerPart2Data = {
       id: 'hgpoliti2-intro',
       type: 'text' as const,
       content: `
-# 🌍 Political Power & Governance
+# 🌍 Political Power & Territoriality
 
-**Part 2 of 7 — Key Processes**
+**Part 2 of 7 — How States Divide Power: Four Cases on the Spectrum**
 
-Understanding the processes related to Political Power & Governance helps explain how and why patterns develop. This part explores the mechanisms driving key phenomena.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Who Controls What? |
+| Four Cases: France, China, Germany, Russia |
+| Measuring Decentralization |
+| Why States Choose a Form |
 
-| Concept | Description |
-|---------|-------------|
-| **Process 1** | The primary mechanism that drives patterns in Political Power & Governance |
-| **Process 2** | A secondary process that shapes outcomes in Political Power & Governance |
-| **Cause and effect** | The relationship between actions and outcomes in Political Power & Governance |
-      `
+> 🔑 **Key Concept:** Part 1 defined **unitary** and **federal** states. The CED's point is that each form **distributes power differently across territory** (CED Topic 4.7). This part asks the practical question: **which decisions are made at which scale**, and how do real states mix the two forms?
+`
+    },
+    {
+      id: 'hgpoliti2-levels',
+      type: 'text' as const,
+      content: `
+## 📖 Who Controls What?
+
+A useful way to compare states is to list **who decides** on common public services.
+
+| Decision | United States (federal) | France (unitary) |
+|---|---|---|
+| **School curriculum** | Set mostly by the 50 states and local school districts | Set nationally by the Ministry of Education in Paris |
+| **Police** | Mostly city, county and state forces | Mainly two national forces, the National Police and the Gendarmerie |
+| **Criminal law** | Each state writes its own criminal code | One national criminal code |
+| **Regional leaders** | Governors elected by each state's voters | Each département also has a **prefect**, appointed by the national government |
+| **Changing regional powers** | Needs a constitutional amendment or court ruling | Parliament can change them by ordinary law |
+
+### The Key Test
+In a **federal** state, regional powers are **protected by the constitution**: the center cannot simply take them away. In a **unitary** state, regional governments exist because the center created them, and the center can reshape or abolish them.
+
+> 🔑 **AP Connection:** When a question asks you to compare forms of governance, name a **specific power** (schools, police, taxes) and the **level** that controls it. That is more convincing than "federal means shared power."
+`
     },
     {
       id: 'hgpoliti2-quiz1',
@@ -29,147 +52,160 @@ Understanding the processes related to Political Power & Governance helps explai
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key process in Political Power & Governance?',
+            question: 'Which fact is the clearest evidence that a state is federal rather than unitary?',
             options: [
-              'A random event',
-              'A systematic mechanism that produces predictable patterns',
-              'An unexplainable phenomenon',
-              'A one-time occurrence'
+              'It holds regular elections for its regional councils',
+              'Its constitution protects the powers of its regions',
+              'It has a large land area and population',
+              'Its regions collect some local taxes'
             ],
             correctAnswer: 1,
-            explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.'
+            explanation: 'Constitutional protection of regional powers is the defining test of federalism. Unitary states such as France also hold regional elections and let local governments collect some taxes, and size alone does not set the form.'
           },
           {
-            question: 'Understanding cause and effect in Political Power & Governance helps students:',
+            question: 'In France, a national official called a prefect represents the central government in each département. What does this show?',
             options: [
-              'Memorize dates',
-              'Explain why patterns exist rather than just describing them',
-              'Avoid analysis',
-              'Skip exam questions'
+              'The center keeps a direct presence in every region',
+              'Regions elect their own leaders without national input',
+              'France shares power through a federal constitution',
+              'Each département writes its own criminal code'
             ],
-            correctAnswer: 1,
-            explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.'
+            correctAnswer: 0,
+            explanation: 'Appointed prefects carry national authority into each département, a hallmark of a centralized unitary state. France has one criminal code and no federal constitution.'
           }
         ]
       }
     },
     {
-      id: 'hgpoliti2-content',
+      id: 'hgpoliti2-cases',
       type: 'text' as const,
       content: `
-## Key Processes — Deeper Dive
+## Four Cases: France, China, Germany, Russia
 
-### Process 1
-The primary mechanism that drives patterns in Political Power & Governance. Understanding this concept is essential for mastering Political Power & Governance in AP Human Geography.
+**Case 1: France, a centralized unitary state**
+- The **départements** were created in **1790**, after the Revolution, partly to break the power of the old provinces. There are 101 today, including 5 overseas.
+- In **2016**, Paris merged the 22 metropolitan regions into **13**. The regions had no say, which shows that in a unitary state the center can redraw the internal map by law.
+- **Corsica** has had a special single regional government since 2018, an example of limited devolution inside a unitary state.
 
-### Process 2
-A secondary process that shapes outcomes in Political Power & Governance. This builds on the previous concept and connects to broader themes in the course.
+**Case 2: China, a unitary state with special zones**
+- Provinces carry out national policy, and their top leaders are chosen through the Communist Party.
+- **Five autonomous regions**, including Tibet and Xinjiang, were created for large ethnic minorities, but key decisions remain with Beijing.
+- **Two special administrative regions**: Hong Kong (returned by Britain in **1997**) and Macau (returned by Portugal in **1999**) under "one country, two systems." Beijing's **2020** National Security Law for Hong Kong showed that the center can narrow that autonomy.
 
-### Cause and effect
-The relationship between actions and outcomes in Political Power & Governance. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
+**Case 3: Germany, federal by design**
+- The **Basic Law of 1949**, written after the Nazi dictatorship, deliberately spread power among the states, or **Länder**, so no central government could again control everything.
+- **16 Länder** since reunification in **1990**. They run schools, universities and most policing, and their governments sit in the **Bundesrat**, the chamber that votes on laws affecting the states.
+
+**Case 4: Russia, federal on paper, centralized in practice**
+- The 1993 constitution created a federation of more than 80 regions, including ethnic republics such as Tatarstan and Chechnya.
+- In **2004** the president ended the direct election of regional governors. Elections returned in 2012, but with filters that keep candidates loyal to the center.
+
+### Scale Check
+- **National scale:** all four states have regional governments.
+- **Regional scale:** what those governments can actually decide differs sharply, from Bavaria's control of its schools to a Chinese autonomous region that cannot set its own language policy.
+`
     },
     {
-      id: 'hgpoliti2-input',
-      type: 'input-boxes' as const,
+      id: 'hgpoliti2-quiz2',
+      type: 'multiple-choice' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to the primary mechanism that drives patterns in Political Power & Governance?
-
-2) What concept describes a secondary process that shapes outcomes in Political Power & Governance?
-
-3) Name the term for the relationship between actions and outcomes in Political Power & Governance.
-
-Use the exact term from this part.
+**Check Your Understanding** 🎯
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: P',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Process 1 (The primary mechanism that drives patterns in Political Power & Governance), Process 2 (A secondary process that shapes outcomes in Political Power & Governance), and Cause and effect (The relationship between actions and outcomes in Political Power & Governance).'
+        questions: [
+          {
+            question: 'In 2016, France merged its 22 metropolitan regions into 13 without the regions\' consent. Which feature of governance does this illustrate?',
+            options: [
+              'Federalism',
+              'Unitary control',
+              'Supranationalism',
+              'Devolution'
+            ],
+            correctAnswer: 1,
+            explanation: 'Redrawing regions by national law, without their agreement, shows that power rests with the center in a unitary state. Devolution would move power toward the regions, not let the center reshape them.'
+          },
+          {
+            question: 'Why is Russia often described as federal in form but centralized in practice?',
+            options: [
+              'Its regions have legal status, yet Moscow controls who leads them',
+              'Each region writes its own constitution and conducts its own foreign policy',
+              'It belongs to supranational bodies that limit the powers of its central state',
+              'It was split into separate sovereign states when the Soviet Union dissolved'
+            ],
+            correctAnswer: 0,
+            explanation: 'Russia\'s constitution creates a federation, but ending, then filtering, direct elections of governors keeps regional leaders loyal to Moscow. Regions do not run foreign policy, and the Soviet breakup is a separate event.'
+          },
+          {
+            question: 'Germany\'s 1949 Basic Law spread power among the Länder mainly to ___',
+            options: [
+              'prevent another central dictatorship',
+              'reward regions that had resisted occupation',
+              'prepare for joining the European Union',
+              'separate the major language groups'
+            ],
+            correctAnswer: 0,
+            explanation: 'After the Nazi era, Germany\'s founders divided power so that no central government could again control everything. The EU did not yet exist, and Germany is not divided into separate language regions.'
+          }
+        ]
       }
+    },
+    {
+      id: 'hgpoliti2-measure',
+      type: 'text' as const,
+      content: `
+## Measuring Decentralization
+
+The legal label does not always match how much regional and local governments actually do. One measure is the **share of all government spending** made by regional and local governments.
+
+| State | Form | Regional and local share of public spending (OECD, late 2010s, rounded) |
+|---|---|---|
+| **Denmark** | Unitary | about **60 percent** |
+| **France** | Unitary | about **20 percent** |
+
+**Reading it:** Denmark is unitary, yet its municipalities and regions run hospitals, schools and elder care, so they spend most public money. France, also unitary, spends mostly through the center. The **form** is the same; the **degree of decentralization** is very different.
+
+### Limits of the Measure
+- Spending is not the same as **decision-making**: Danish municipalities spend money under national rules.
+- One national figure hides differences **between regions**, such as Corsica's special status in France.
+
+## Why States Choose a Form
+
+| Factor | Tends toward federal | Tends toward unitary |
+|---|---|---|
+| **Size** | Large territory (US, Brazil, Australia) | Small territory (Denmark, Netherlands) |
+| **Diversity** | Strong regional identities (Switzerland, India) | One dominant national identity (Japan) |
+| **History** | Separate colonies or states joined together (US, Australia) | A strong monarchy or revolution built a central state (France) |
+
+These are tendencies, not rules: China is huge and diverse but unitary; Belgium is small but became federal in 1993.
+`
     },
     {
       id: 'hgpoliti2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Governance** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The primary mechanism that drives patterns in Political Power & Governance is called ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'None of these']
+            label: 'Hong Kong, governed under "one country, two systems" since 1997, is a ___ of China',
+            options: ['special administrative region', 'federal state', 'sovereign state', 'autonomous republic']
           },
           {
-            label: 'A secondary process that shapes outcomes in Political Power & Governance describes ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'All of these']
+            label: 'Bavaria, which runs its own schools under Germany\'s constitution, is one of Germany\'s 16 ___',
+            options: ['Länder', 'départements', 'prefectures', 'cantons']
           },
           {
-            label: 'The relationship between actions and outcomes in Political Power & Governance is known as ___',
-            options: ['Cause and effect', 'Process 1', 'Process 2', 'None of these']
+            label: 'Denmark spends most public money through local governments yet remains a ___ state',
+            options: ['unitary', 'federal', 'confederal', 'failed']
           }
         ],
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Process 1 — The primary mechanism that drives patterns in Political Power & Governance. Process 2 — A secondary process that shapes outcomes in Political Power & Governance. Cause and effect — The relationship between actions and outcomes in Political Power & Governance.'
-      }
-    },
-    {
-      id: 'hgpoliti2-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'t confuse **Process 1** with **Process 2** — while related, they address different aspects of Political Power & Governance.
-- **Cause and effect** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about key processes, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect key processes to broader themes in AP Human Geography for higher scores.
-      `
-    },
-    {
-      id: 'hgpoliti2-applied',
-      type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student observes a pattern and needs to explain the underlying process. They should:',
-            options: [
-              'Just describe what they see',
-              'Identify the mechanism causing the pattern and explain how it operates',
-              'Say the pattern is random',
-              'Ignore the pattern'
-            ],
-            correctAnswer: 1,
-            explanation: 'Explaining processes requires identifying the underlying mechanism, not just describing the observable pattern.'
-          },
-          {
-            question: 'On the AP exam, process questions typically require students to:',
-            options: [
-              'List facts',
-              'Explain how a mechanism works and connect it to outcomes',
-              'Draw a picture',
-              'Write a poem'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP process questions test whether students understand HOW things work, not just WHAT happens.'
-          }
-        ]
+        correctAnswers: ['special administrative region', 'Länder', 'unitary'],
+        hint1: 'Macau has the same status.',
+        hint2: 'The German word for the federal states.',
+        hint3: 'Its local powers come from national law, not a federal constitution.',
+        explanation: 'Hong Kong and Macau are special administrative regions. Germany\'s states are the Länder. Denmark is decentralized in spending but unitary in form, because its local powers rest on national law.'
       }
     }
   ]
-}
+};
