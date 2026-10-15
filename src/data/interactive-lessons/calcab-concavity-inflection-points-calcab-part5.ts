@@ -27,33 +27,33 @@ export const calcabConcavityPart5Data = {
             "options": [
               "$v$ and $a$ have opposite signs",
               "$v$ and $a$ have the same sign",
-              "$a = 0$",
-              "$v = 0$"
+              "$a$ is negative",
+              "$v$ is decreasing"
             ],
             "correctAnswer": 0,
-            "explanation": "Opposite signs: $v$ positive but $a$ negative, or vice versa."
+            "explanation": "Opposite signs: $v$ positive but $a$ negative, or vice versa. Negative acceleration (equivalently, decreasing velocity) speeds the particle up when $v$ is also negative, so the sign of $a$ alone does not decide it."
           },
           {
             "question": "If $s''(t_0) = 0$ and changes sign, then at $t_0$:",
             "options": [
               "Velocity has a local extremum",
-              "Position has a local extremum",
+              "Position has an extremum",
               "The particle stops",
               "The particle reverses"
             ],
             "correctAnswer": 0,
-            "explanation": "$s'' = v'$. Sign change of $v'$ means $v$ has local max or min."
+            "explanation": "$s'' = v'$. A sign change of $v'$ means $v$ has a local max or min. Position has an extremum where $v = s'$ changes sign, and the particle stops or reverses where $v = 0$."
           },
           {
             "question": "Maximum speed occurs when:",
             "options": [
-              "$|v(t)|$ is maximized (check where $a = 0$ or endpoints)",
-              "$v = 0$",
-              "$a$ is maximized",
-              "$s = 0$"
+              "$|v(t)|$ is at its largest",
+              "$v(t)$ reaches its largest value",
+              "$a(t)$ reaches its largest value",
+              "$v(t) = 0$ and the particle turns around"
             ],
             "correctAnswer": 0,
-            "explanation": "Speed = $|v|$. Check critical points of $|v|$ and endpoints."
+            "explanation": "Speed $= |v|$, so check where $a = 0$ (or $v$ is undefined) and the endpoints, comparing $|v|$. The largest $v$ ignores large negative velocities, the largest $a$ is about acceleration, and $v = 0$ gives the minimum speed."
           }
         ]
       }
@@ -70,10 +70,10 @@ export const calcabConcavityPart5Data = {
       "exercise": {
         "boxes": 2,
         "correctAnswers": [
-          "1",
+          "0",
           "-3"
         ],
-        "hint1": "$a(t) = 6t = 0$ at $t = 0$... Wait: $s' = 3t^2 - 3$, $s'' = 6t = 0$ at $t = 0$. But for $t \\geq 0$... Actually $a = 6t$, so $a = 0$ at $t = 0$. Hmm, but usually we consider $t > 0$. The answer might be $t = 0$ or if the question means the inflection of position. Let me re-check: $s = t^3 - 3t$, $v = 3t^2 - 3$, $a = 6t$. $a = 0$ at $t = 0$.",
+        "hint1": "$v(t) = s'(t) = 3t^2 - 3$ and $a(t) = s''(t) = 6t$, so $a = 0$ at $t = 0$.",
         "hint2": "$v(0) = -3$.",
         "explanation": "1) $t = 0$. 2) $v(0) = -3$."
       }
@@ -89,7 +89,7 @@ export const calcabConcavityPart5Data = {
             "options": [
               "Acceleration is positive",
               "Velocity is positive",
-              "Speed is increasing",
+              "Speed is always increasing",
               "Position is increasing"
             ]
           },
@@ -97,9 +97,9 @@ export const calcabConcavityPart5Data = {
             "label": "A ball thrown up has position graph that is:",
             "options": [
               "Always concave down (parabola opening down)",
-              "Always concave up",
-              "Concave up then down",
-              "Linear"
+              "Always concave up (parabola opening up)",
+              "Concave down going up, then concave up coming down",
+              "Linear, since gravity is constant"
             ]
           },
           {
@@ -145,11 +145,11 @@ export const calcabConcavityPart5Data = {
             "options": [
               "A parabola",
               "A straight line",
-              "A cubic",
+              "A cubic curve",
               "An exponential"
             ],
             "correctAnswer": 0,
-            "explanation": "$s = \\frac{1}{2}at^2 + v_0 t + s_0$ is quadratic."
+            "explanation": "$s = \\frac{1}{2}at^2 + v_0 t + s_0$ is quadratic. A straight line would need zero acceleration, and a cubic would need acceleration that changes linearly."
           }
         ]
       }

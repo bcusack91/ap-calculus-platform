@@ -37,7 +37,7 @@ export const calcabTheoremsPart7Data = {
         questions: [
           {
             question: 'A car\u2019s odometer reads 100 mi at 1:00 PM and 280 mi at 4:00 PM. Which is guaranteed?',
-            options: ['The speedometer read exactly 60 mph at some moment', 'The car went exactly 60 mph the whole time', 'The car stopped at some point', 'The car\u2019s speed was always increasing'],
+            options: ['The speed was exactly 60 mph at some moment', 'The car went exactly 60 mph the whole three hours', 'The car stopped at some point during the trip', 'The car’s speed was increasing the whole time'],
             correctAnswer: 0,
             explanation: 'Average speed $= 180/3 = 60$ mph. By MVT, the speedometer read exactly 60 mph at some moment.'
           },
@@ -49,7 +49,7 @@ export const calcabTheoremsPart7Data = {
           },
           {
             question: 'If $f$ is continuous on $[1, 6]$, which is guaranteed by EVT?',
-            options: ['$f$ has an absolute maximum on $[1,6]$', '$f\'(c) = 0$ for some $c$', '$f$ is differentiable', '$f$ is bounded above by $f(6)$'],
+            options: ['$f$ has an absolute maximum on $[1,6]$', '$f\'(c) = 0$ for some $c$', '$f$ is differentiable on $(1,6)$', '$f$ is bounded above by $f(6)$'],
             correctAnswer: 0,
             explanation: 'EVT: continuous on closed interval $\\Rightarrow$ absolute max and min exist.'
           },
@@ -70,21 +70,21 @@ export const calcabTheoremsPart7Data = {
         questions: [
           {
             question: '$f$ is twice-differentiable. $f\'(2) = 3$, $f\'(8) = -1$. Must there exist $c$ where $f\'(c) = 0$?',
-            options: ['Yes \u2014 by IVT applied to $f\'$', 'Yes \u2014 by MVT', 'No', 'Only by Rolle\u2019s'],
+            options: ['Yes \u2014 by IVT applied to $f\'$', 'Yes — by MVT applied to $f$ on $[2,8]$', 'No — $f\'$ could skip over $0$', 'Only if $f(2) = f(8)$, by Rolle’s'],
             correctAnswer: 0,
-            explanation: '$f\'$ is continuous (since $f$ is twice-differentiable). $f\'(2) = 3 > 0 > -1 = f\'(8)$. By IVT applied to $f\'$, $\\exists\\, c$ with $f\'(c) = 0$.'
+            explanation: '$f\'$ is continuous (since $f$ is twice-differentiable). $f\'(2) = 3 > 0 > -1 = f\'(8)$. By IVT applied to $f\'$, $\\exists\\, c$ with $f\'(c) = 0$. MVT on $f$ would need $f(2)$ and $f(8)$, which are not given.'
           },
           {
             question: '$f(x) = x^{2/3}$ on $[-1, 1]$. Can MVT be applied?',
-            options: ['No \u2014 $f\'(x)$ DNE at $x=0$', 'Yes \u2014 $f$ is continuous', 'Yes \u2014 $f(-1) = f(1)$', 'No \u2014 $f$ is not continuous'],
+            options: ['No \u2014 $f\'(x)$ DNE at $x=0$', 'Yes — $f$ is continuous on $[-1, 1]$', 'Yes — $f(-1) = f(1) = 1$, so it applies', 'No — $f$ is not continuous at $x = 0$'],
             correctAnswer: 0,
-            explanation: '$f\'(x) = \\frac{2}{3}x^{-1/3}$ is undefined at $x = 0$. Not differentiable on $(-1,1)$, so MVT fails.'
+            explanation: '$f$ is continuous, but $f\'(x) = \\frac{2}{3}x^{-1/3}$ is undefined at $x = 0$. Not differentiable on $(-1,1)$, so MVT fails.'
           },
           {
             question: 'If $\\int_0^4 f(x)\\,dx = 12$, the average value of $f$ on $[0,4]$ is:',
-            options: ['$3$', '$12$', '$48$', '$4$'],
+            options: ['$3$', '$12$', '$48$', '$\\frac{1}{3}$'],
             correctAnswer: 0,
-            explanation: 'Average value $= \\frac{1}{b-a}\\int_a^b f\\,dx = \\frac{12}{4} = 3$.'
+            explanation: 'Average value $= \\frac{1}{b-a}\\int_a^b f\\,dx = \\frac{12}{4} = 3$. Forgetting to divide gives $12$, multiplying gives $48$, and dividing the wrong way gives $\\frac{4}{12} = \\frac{1}{3}$.'
           }
         ]
       }
@@ -96,7 +96,7 @@ export const calcabTheoremsPart7Data = {
       exercise: {
         dropdowns: [
           {
-            label: '"$f$ continuous on $[2,7]$, $f(2())=1$, $f(7)=9$. $\\exists\\,c: f(c)=\\pi$."',
+            label: '"$f$ continuous on $[2,7]$, $f(2)=1$, $f(7)=9$. $\\exists\\,c: f(c)=\\pi$."',
             options: ['IVT', 'MVT', 'EVT', 'FTC'],
             correctAnswers: ['IVT'],
             hints: ['$1 < \\pi < 9$. Finding a function value.'],

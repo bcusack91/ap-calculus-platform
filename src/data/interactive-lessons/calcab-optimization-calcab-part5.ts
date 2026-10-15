@@ -51,21 +51,21 @@ $$x = \\frac{20\\pi}{\\pi + 4} \\approx 8.80$$
         questions: [
           {
             question: 'Find the point on $y = x^2$ closest to $(0, 1)$.',
-            options: ['$(\\frac{1}{\\sqrt{2}},\\frac{1}{2})$', '$(0, 0)$', '$(1, 1)$', '$(2, 4)$'],
+            options: ['$(\\frac{1}{\\sqrt{2}},\\frac{1}{2})$', '$(0, 0)$', '$(\\sqrt{2}, 2)$', '$(\\frac{1}{2}, \\frac{1}{4})$'],
             correctAnswer: 0,
-            explanation: '$D^2 = x^2 + (x^2-1)^2 = x^4 - x^2 + 1$. $\\frac{d}{dx}D^2 = 4x^3 - 2x = 2x(2x^2-1) = 0$. $x = 0$ or $x = \\pm 1/\\sqrt{2}$. $D^2(0)=1$, $D^2(1/\\sqrt{2}) = 3/4 < 1$. So $(1/\\sqrt{2}, 1/2)$ is closest.'
+            explanation: '$D^2 = x^2 + (x^2-1)^2 = x^4 - x^2 + 1$. $\\frac{d}{dx}D^2 = 4x^3 - 2x = 2x(2x^2-1) = 0$. $x = 0$ or $x = \\pm 1/\\sqrt{2}$. $D^2(0)=1$, $D^2(1/\\sqrt{2}) = 3/4 < 1$. So $(1/\\sqrt{2}, 1/2)$ is closest (as is its mirror image). The point $(0,0)$ is the other critical point, solving $2x^2 = 1$ as $x^2 = 2$ gives $(\\sqrt{2}, 2)$, and taking $x = \\frac{1}{2}$ instead of $x^2 = \\frac{1}{2}$ gives $(\\frac{1}{2}, \\frac{1}{4})$.'
           },
           {
             question: 'A wire of length $L$ is cut. One piece forms a circle, the other a square. To minimize total area, the circle gets length:',
-            options: ['$\\frac{L\\pi}{\\pi + 4}$', '$L/2$', '$0$', '$L$'],
+            options: ['$\\frac{L\\pi}{\\pi + 4}$', '$\\frac{4L}{\\pi + 4}$', '$0$', '$L$'],
             correctAnswer: 0,
-            explanation: 'Minimizing $A(x) = \\frac{x^2}{4\\pi} + \\frac{(L-x)^2}{16}$ gives $x = \\frac{L\\pi}{\\pi+4}$.'
+            explanation: 'Minimizing $A(x) = \\frac{x^2}{4\\pi} + \\frac{(L-x)^2}{16}$ gives $x = \\frac{L\\pi}{\\pi+4}$. The length $\\frac{4L}{\\pi + 4}$ is what the square gets, and the endpoints $0$ and $L$ (all square or all circle) do not minimize the area.'
           },
           {
             question: 'On a closed interval $[a,b]$, the absolute maximum of $f$ occurs at:',
-            options: ['A critical point or an endpoint', 'Only at critical points', 'Only at endpoints', 'Where $f\'\' < 0$'],
+            options: ['A critical point or an endpoint', 'Only at critical points inside $(a,b)$', 'Only at the endpoints $x = a$ or $x = b$', 'Wherever $f\'\'(x) < 0$ on the interval'],
             correctAnswer: 0,
-            explanation: 'The Extreme Value Theorem says continuous functions on $[a,b]$ achieve max/min. Check all critical points AND endpoints.'
+            explanation: 'The Extreme Value Theorem says continuous functions on $[a,b]$ achieve a max and a min. Check all critical points AND endpoints; either kind of point can be the answer.'
           }
         ]
       }
@@ -85,17 +85,17 @@ $$x = \\frac{20\\pi}{\\pi + 4} \\approx 8.80$$
           },
           {
             label: 'On a closed interval, after finding critical points you must also:',
-            options: ['Evaluate $f$ at the endpoints', 'Check the second derivative', 'Find inflection points', 'Nothing else'],
+            options: ['Evaluate $f$ at the endpoints', 'Check the second derivative', 'Find inflection points', 'Nothing else is needed'],
             correctAnswers: ['Evaluate $f$ at the endpoints'],
             hints: ['Absolute extrema on $[a,b]$: compare all candidates.'],
             explanation: 'On a closed interval, absolute max/min can occur at endpoints or critical points. Evaluate $f$ at all of them.'
           },
           {
             label: 'The wire-cutting problem has how many endpoints to check?',
-            options: ['Two: $x = 0$ and $x = 20$', 'None', 'One: $x = 0$', 'Three'],
+            options: ['Two: $x = 0$ and $x = 20$', 'None, since the interval is open', 'One: $x = 0$ only', 'Three: $0$, $10$, and $20$'],
             correctAnswers: ['Two: $x = 0$ and $x = 20$'],
             hints: ['$x$ ranges from $0$ (all for square) to $20$ (all for circle).'],
-            explanation: 'Domain is $[0, 20]$. The critical point minimizes area; endpoints give all-square or all-circle.'
+            explanation: 'The domain is the closed interval $[0, 20]$, so its two endpoints are checked along with the critical point. The critical point minimizes area; the endpoints give all-square or all-circle.'
           }
         ]
       }

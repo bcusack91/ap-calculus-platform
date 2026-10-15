@@ -102,17 +102,17 @@ export const calcabDerivExpLogPart2Data = {
           {
             "label": "Logarithmic differentiation is most useful for:",
             "options": [
-              "Products/quotients of many factors or variable exponents",
-              "Simple polynomials",
-              "Constants",
-              "Linear functions"
+              "Many factors or variable exponents",
+              "Simple polynomials like $x^2 + 1$",
+              "Constants multiplied by a function",
+              "Linear functions such as $3x - 2$"
             ]
           }
         ],
         "correctAnswers": [
           "$1$",
           "$1$",
-          "Products/quotients of many factors or variable exponents"
+          "Many factors or variable exponents"
         ],
         "hint1": "$\\ln(e^x) = x$, derivative is $1$.",
         "hint2": "$e^{\\ln x} = x$, derivative is $1$.",
@@ -141,12 +141,12 @@ export const calcabDerivExpLogPart2Data = {
             "question": "$\\frac{d}{dx}[\\ln|\\sec x + \\tan x|] = $",
             "options": [
               "$\\sec x$",
-              "$\\tan x$",
+              "$\\sec x\\tan x + \\sec^2 x$",
               "$\\sec x \\tan x$",
               "$1/(\\sec x + \\tan x)$"
             ],
             "correctAnswer": 0,
-            "explanation": "This is a classic result. $\\frac{\\sec x \\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\frac{\\sec x(\\tan x + \\sec x)}{\\sec x + \\tan x} = \\sec x$."
+            "explanation": "This is a classic result. $\\frac{\\sec x \\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\frac{\\sec x(\\tan x + \\sec x)}{\\sec x + \\tan x} = \\sec x$. Stopping at the numerator forgets to divide by the inside function."
           }
         ]
       }

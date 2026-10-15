@@ -56,19 +56,19 @@ Since $f$ is continuous (polynomial), $f(0) = 1 > 0$ and $f(1) = -2 < 0$. By IVT
         questions: [
           {
             question: '$f$ is continuous on $[0, 4]$, $f(0) = -3$, $f(4) = 5$. Which must be true?',
-            options: ['$f(c) = 0$ for some $c \\in (0, 4)$', '$f(c) = 0$ for exactly one $c$', '$f$ has a max of $5$', '$f\'(c) = 0$ for some $c$'],
+            options: ['$f(c) = 0$ for some $c \\in (0, 4)$', '$f(c) = 0$ for exactly one $c \\in (0, 4)$', '$f$ has an absolute maximum value of $5$', '$f\'(c) = 0$ for some $c \\in (0, 4)$'],
             correctAnswer: 0,
-            explanation: '$-3 < 0 < 5$. Since $f$ is continuous, IVT guarantees $f(c) = 0$ for some $c \\in (0,4)$.'
+            explanation: '$-3 < 0 < 5$. Since $f$ is continuous, IVT guarantees $f(c) = 0$ for some $c \\in (0,4)$. It does not say how many zeros there are, what the maximum is, or anything about $f\'$.'
           },
           {
             question: 'Which hypothesis is needed for IVT?',
-            options: ['Continuity on $[a,b]$', 'Differentiability on $(a,b)$', '$f$ is increasing', '$f\' > 0$'],
+            options: ['Continuity on $[a,b]$', 'Differentiability on $(a,b)$', '$f$ is increasing on $[a,b]$', '$f\'(x) > 0$ on all of $(a,b)$'],
             correctAnswer: 0,
             explanation: 'IVT requires only continuity on the closed interval.'
           },
           {
             question: '$g$ is continuous with $g(1) = 7$ and $g(5) = 7$. Can IVT guarantee $g(c) = 10$ for some $c \\in (1,5)$?',
-            options: ['No \u2014 $10$ is not between $7$ and $7$', 'Yes \u2014 $g$ is continuous', 'Only if $g$ is differentiable', 'Yes \u2014 by MVT'],
+            options: ['No \u2014 $10$ is not between $7$ and $7$', 'Yes — continuity on $[1,5]$ is enough', 'Only if $g$ is also differentiable on $(1,5)$', 'Yes — by the Mean Value Theorem on $[1,5]$'],
             correctAnswer: 0,
             explanation: '$10$ is not between $g(1) = 7$ and $g(5) = 7$, so IVT does not apply. ($g$ might never reach $10$.)'
           }
@@ -83,7 +83,7 @@ Since $f$ is continuous (polynomial), $f(0) = 1 > 0$ and $f(1) = -2 < 0$. By IVT
         dropdowns: [
           {
             label: 'Can IVT guarantee $f(c) = 3$ for some $c \\in (2,6)$?',
-            options: ['Yes \u2014 $3$ is between $-1$ and $5$', 'No \u2014 $f$ might not pass through $3$', 'Only by MVT', 'Need differentiability'],
+            options: ['Yes \u2014 $3$ is between $-1$ and $5$', 'No \u2014 $f$ might not pass through $3$', 'Only if $f$ is also differentiable', 'Yes — by the Mean Value Theorem'],
             correctAnswers: ['Yes \u2014 $3$ is between $-1$ and $5$'],
             hints: ['$f(2) = -1 < 3 < 5 = f(6)$.'],
             explanation: '$-1 < 3 < 5$. IVT applies since $f$ is continuous.'
@@ -97,7 +97,7 @@ Since $f$ is continuous (polynomial), $f(0) = 1 > 0$ and $f(1) = -2 < 0$. By IVT
           },
           {
             label: 'Can IVT guarantee $f(c) = -5$ for some $c \\in (2,6)$?',
-            options: ['No \u2014 $-5$ is not between $-1$ and $5$', 'Yes', 'Only on a larger interval', 'Need more data'],
+            options: ['No \u2014 $-5$ is not between $-1$ and $5$', 'Yes — $f$ is continuous on $[2,6]$', 'Only if $f$ is differentiable on $(2,6)$', 'Yes — by the Extreme Value Theorem'],
             correctAnswers: ['No \u2014 $-5$ is not between $-1$ and $5$'],
             hints: ['$-5 < -1 = f(2)$, so $-5$ is below both values.'],
             explanation: '$-5 < -1$. The target value is not between $f(2)$ and $f(6)$, so IVT cannot be applied.'

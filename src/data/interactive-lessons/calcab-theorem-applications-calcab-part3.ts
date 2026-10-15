@@ -57,15 +57,15 @@ Absolute max $= 3$ (at $x = -1$ and $x = 2$). Absolute min $= -1$ (at $x = -2$ a
           },
           {
             question: 'If $f$ is continuous on $[1, 6]$, EVT guarantees:',
-            options: ['$f$ attains both an absolute max and min', '$f\'(c) = 0$ at some $c$', '$f$ is differentiable', '$f$ is increasing'],
+            options: ['$f$ attains an absolute max and min', '$f\'(c) = 0$ at some point $c$ in $(1, 6)$', '$f$ is differentiable on all of $(1, 6)$', '$f$ is increasing or decreasing on $[1, 6]$'],
             correctAnswer: 0,
             explanation: 'EVT: continuous on closed interval $\\Rightarrow$ absolute extrema exist.'
           },
           {
             question: '$g(x) = \\frac{1}{x}$ on $(0, 2)$. Does EVT apply?',
-            options: ['No \u2014 the interval is open', 'Yes \u2014 $g$ is continuous there', 'No \u2014 $g$ is not continuous at $0$', 'Yes \u2014 by IVT'],
+            options: ['No \u2014 the interval is open', 'Yes \u2014 $g$ is continuous there', 'No — $g$ is not continuous on $(0, 2)$', 'Yes — by the Intermediate Value Theorem'],
             correctAnswer: 0,
-            explanation: 'EVT requires a CLOSED interval $[a,b]$. The open interval $(0,2)$ does not satisfy this.'
+            explanation: 'EVT requires a CLOSED interval $[a,b]$. $g$ is continuous on $(0,2)$, but the interval is open, and in fact $g$ has no maximum there.'
           }
         ]
       }
@@ -92,10 +92,10 @@ Absolute max $= 3$ (at $x = -1$ and $x = 2$). Absolute min $= -1$ (at $x = -2$ a
           },
           {
             label: 'Absolute max and min:',
-            options: ['Max $= 4$ at $x=2$, Min $= -5$ at $x=-1$', 'Max $= 0$, Min $= -5$', 'Max $= 4$, Min $= -1$', 'Max $= 4$, Min $= 0$'],
+            options: ['Max $= 4$ at $x=2$, Min $= -5$ at $x=-1$', 'Max $= 0$ at $x=0$, Min $= -5$ at $x=-1$', 'Max $= 4$ at $x=2$, Min $= -1$ at $x=1$', 'Max $= 0$ at $x=0$, Min $= -1$ at $x=1$'],
             correctAnswers: ['Max $= 4$ at $x=2$, Min $= -5$ at $x=-1$'],
             hints: ['Largest of $\\{-5, 0, -1, 4\\}$ and smallest.'],
-            explanation: 'Absolute max $= 4$ at $x = 2$. Absolute min $= -5$ at $x = -1$.'
+            explanation: 'Compare all candidates, endpoints included: absolute max $= 4$ at $x = 2$, absolute min $= -5$ at $x = -1$. Checking only the critical points gives max $0$ and min $-1$.'
           }
         ]
       }

@@ -50,15 +50,15 @@ $$y - 3 = \\frac{1}{4}(x - 7) \\quad \\Rightarrow \\quad y = \\frac{1}{4}x + \\f
           },
           {
             question: 'Let $f(x) = x^3 + x$. Why must $f$ have an inverse on all of $\\mathbb{R}$?',
-            options: ['$f\'(x) = 3x^2 + 1 > 0$ for all $x$', '$f(0) = 0$', '$f$ is a polynomial', '$f$ is continuous'],
+            options: ['$f\'(x) = 3x^2 + 1 > 0$ for all $x$', '$f(0) = 0$ and $f(1) = 2$', '$f$ is a polynomial', '$f$ is continuous on $\\mathbb{R}$'],
             correctAnswer: 0,
-            explanation: '$f\'(x) = 3x^2 + 1 \\geq 1 > 0$ everywhere, so $f$ is strictly increasing and one-to-one.'
+            explanation: '$f\'(x) = 3x^2 + 1 \\geq 1 > 0$ everywhere, so $f$ is strictly increasing and one-to-one. Continuity, being a polynomial, or a few sample values do not rule out a function turning back (e.g., $x^3 - x$).'
           },
           {
             question: 'If $g(x) = f^{-1}(x)$ and $f(4) = 6$, $f\'(4) = -1$, then the tangent to $y = g(x)$ at $x = 6$ is:',
-            options: ['$y - 4 = -1(x - 6)$', '$y - 6 = -1(x - 4)$', '$y - 4 = \\frac{1}{-1}(x - 6)$', '$y - 6 = \\frac{1}{-1}(x - 4)$'],
+            options: ['$y - 4 = -1(x - 6)$', '$y - 6 = -1(x - 4)$', '$y - 4 = 1(x - 6)$', '$y - 6 = 1(x - 4)$'],
             correctAnswer: 0,
-            explanation: 'Point: $(6, g(6)) = (6, 4)$. Slope: $g\'(6) = 1/f\'(4) = 1/(-1) = -1$. Line: $y - 4 = -1(x-6)$.'
+            explanation: 'Point: $(6, g(6)) = (6, 4)$. Slope: $g\'(6) = 1/f\'(4) = 1/(-1) = -1$. Line: $y - 4 = -1(x-6)$. Using the negative reciprocal (a normal-line slope) gives slope $1$; using $(4, 6)$ takes the point on $f$, not on $g$.'
           }
         ]
       }
@@ -78,15 +78,15 @@ $$y - 3 = \\frac{1}{4}(x - 7) \\quad \\Rightarrow \\quad y = \\frac{1}{4}x + \\f
           },
           {
             label: '$\\frac{d}{dx}[\\arcsin(x^2)]$ at $x = 1/\\sqrt{2}$ equals:',
-            options: ['$\\frac{2}{\\sqrt{2}}$', '$\\frac{\\sqrt{2}}{\\sqrt{2}}$', '$\\frac{2\\cdot\\frac{1}{\\sqrt{2}}}{\\sqrt{1/2}}$', '$2$'],
-            correctAnswers: ['$\\frac{2\\cdot\\frac{1}{\\sqrt{2}}}{\\sqrt{1/2}}$'],
+            options: ['$\\frac{2\\sqrt{3}}{3}$', '$\\frac{\\sqrt{6}}{3}$', '$\\frac{2\\sqrt{6}}{3}$', '$2$'],
+            correctAnswers: ['$\\frac{2\\sqrt{6}}{3}$'],
             hints: ['$\\frac{2x}{\\sqrt{1-x^4}}$. At $x=1/\\sqrt{2}$: $x^4 = 1/4$, so denominator $= \\sqrt{3/4}$.'],
-            explanation: '$\\frac{2/\\sqrt{2}}{\\sqrt{3/4}} = \\frac{\\sqrt{2}}{\\sqrt{3}/2} = \\frac{2\\sqrt{2}}{\\sqrt{3}} = \\frac{2\\sqrt{6}}{3}$.'
+            explanation: '$\\frac{d}{dx}[\\arcsin(x^2)] = \\frac{2x}{\\sqrt{1-x^4}}$. At $x = 1/\\sqrt{2}$: $2x = \\sqrt{2}$ and $x^4 = 1/4$, so the value is $\\frac{\\sqrt{2}}{\\sqrt{3}/2} = \\frac{2\\sqrt{2}}{\\sqrt{3}} = \\frac{2\\sqrt{6}}{3}$. Using $\\sqrt{1-x^2}$ instead of $\\sqrt{1-x^4}$ gives $2$; dropping the chain factor $2x$ gives $\\frac{2\\sqrt{3}}{3}$.'
           },
           {
             label: 'To justify a function has an inverse, you should show:',
-            options: ['$f\'(x)$ does not change sign on the interval', '$f$ is continuous', '$f$ is differentiable', '$f(a) \\neq f(b)$'],
-            correctAnswers: ['$f\'(x)$ does not change sign on the interval'],
+            options: ['$f\'$ keeps one sign on the interval', '$f$ is continuous on the whole interval', '$f$ is differentiable on the interval', '$f(a) \\neq f(b)$ at the two endpoints'],
+            correctAnswers: ['$f\'$ keeps one sign on the interval'],
             hints: ['You need one-to-one (injective).'],
             explanation: 'If $f\'(x) > 0$ (or $< 0$) on an interval, $f$ is strictly monotonic and therefore one-to-one.'
           }

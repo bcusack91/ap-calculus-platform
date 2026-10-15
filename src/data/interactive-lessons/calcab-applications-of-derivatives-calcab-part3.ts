@@ -73,9 +73,9 @@ $$\\boxed{\\text{Absolute min} = -1 \\text{ at } x = -2 \\text{ and } x = 1}$$
           },
           {
             question: 'Which function does NOT satisfy EVT on $[0, 2]$?',
-            options: ['$f(x) = x^2$', '$f(x) = \\sin(x)$', '$f(x) = \\frac{1}{x-1}$', '$f(x) = |x-1|$'],
+            options: ['$f(x) = \\sqrt{x}$', '$f(x) = \\sin(x)$', '$f(x) = \\frac{1}{x-1}$', '$f(x) = |x-1|$'],
             correctAnswer: 2,
-            explanation: '$f(x) = \\frac{1}{x-1}$ is discontinuous at $x = 1 \\in [0,2]$, so EVT does not apply.'
+            explanation: '$f(x) = \\frac{1}{x-1}$ is discontinuous at $x = 1 \\in [0,2]$, so EVT does not apply. EVT needs only continuity on the closed interval: $\\sqrt{x}$ (vertical tangent at $0$) and $|x-1|$ (corner at $1$) are not differentiable everywhere, but they are continuous on $[0, 2]$, as is $\\sin(x)$.'
           }
         ]
       }

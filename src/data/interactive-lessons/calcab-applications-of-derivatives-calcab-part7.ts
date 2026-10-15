@@ -57,9 +57,9 @@ $$\\boxed{f' > 0: \\uparrow \\quad f' < 0: \\downarrow \\quad f'' > 0: \\cup \\q
         questions: [
           {
             question: 'Find the absolute maximum of $f(x) = x^3 - 12x$ on $[-3, 4]$.',
-            options: ['$16$', '$9$', '$36$', '$-16$'],
+            options: ['$16$', '$9$', '$4$', '$2$'],
             correctAnswer: 0,
-            explanation: '$f\'(x) = 3x^2 - 12 = 0$ at $x = \\pm 2$. $f(-3) = 9$, $f(-2) = 16$, $f(2) = -16$, $f(4) = 16$. Absolute max = $16$ (at both $x = -2$ and $x = 4$).'
+            explanation: '$f\'(x) = 3x^2 - 12 = 0$ at $x = \\pm 2$. $f(-3) = 9$, $f(-2) = 16$, $f(2) = -16$, $f(4) = 16$. Absolute max = $16$ (at both $x = -2$ and $x = 4$). $9$ is only the left-endpoint value, and $4$ and $2$ are $x$-values (a location of the max and a critical point), not values of $f$.'
           },
           {
             question: 'How many inflection points does $g(x) = x^5 - 5x^3$ have?',
@@ -75,9 +75,9 @@ $$\\boxed{f' > 0: \\uparrow \\quad f' < 0: \\downarrow \\quad f'' > 0: \\cup \\q
           },
           {
             question: 'Which theorem guarantees $f\'(c) = 0$ for some $c \\in (a,b)$ when $f(a) = f(b)$?',
-            options: ['EVT', 'IVT', 'MVT', 'Rolle\'s Theorem'],
+            options: ['Extreme Value Theorem', 'Intermediate Value Theorem', 'Fundamental Theorem of Calculus', 'Rolle\'s Theorem'],
             correctAnswer: 3,
-            explanation: 'Rolle\'s Theorem: if $f$ is continuous on $[a,b]$, differentiable on $(a,b)$, and $f(a) = f(b)$, then $f\'(c) = 0$ for some $c \\in (a,b)$.'
+            explanation: 'Rolle\'s Theorem: if $f$ is continuous on $[a,b]$, differentiable on $(a,b)$, and $f(a) = f(b)$, then $f\'(c) = 0$ for some $c \\in (a,b)$. The EVT guarantees extreme values, not a zero derivative; the IVT is about function values between $f(a)$ and $f(b)$; and the Fundamental Theorem links derivatives and integrals.'
           }
         ]
       }
@@ -102,9 +102,9 @@ $$\\boxed{f' > 0: \\uparrow \\quad f' < 0: \\downarrow \\quad f'' > 0: \\cup \\q
           },
           {
             question: 'If the graph of $f\'$ is a DOWNWARD parabola with vertex at $(3, 5)$, which is true?',
-            options: ['$f$ has a local max at $x = 3$', '$f$ has a local min at $x = 3$', '$f$ has an inflection point at $x = 3$', '$f$ is constant at $x = 3$'],
+            options: ['$f$ has a local max at $x = 3$', '$f$ has a local min at $x = 3$', '$f$ has an inflection point at $x = 3$', '$f$ has a corner at $x = 3$'],
             correctAnswer: 2,
-            explanation: 'A local max of $f\'$ = $f\'$ changes from increasing to decreasing = $f$ changes from concave up to concave down = inflection point.'
+            explanation: 'A local max of $f\'$ = $f\'$ changes from increasing to decreasing = $f$ changes from concave up to concave down = inflection point. $f\'(3) = 5 \\neq 0$, so $x = 3$ is not a local max or min of $f$, and a smooth $f\'$ means $f$ has no corner.'
           }
         ]
       }

@@ -45,21 +45,21 @@ export const calcabLinearizationPart7Data = {
         questions: [
           {
             question: 'Approximate $\\sqrt{16.2}$ using linearization at $a = 16$.',
-            options: ['$4.025$', '$4.05$', '$4.1$', '$4.01$'],
+            options: ['$4.025$', '$4.05$', '$4.1$', '$4.2$'],
             correctAnswer: 0,
-            explanation: '$f\'(x) = 1/(2\\sqrt{x})$, $f\'(16) = 1/8$. $L(16.2) = 4 + \\frac{1}{8}(0.2) = 4.025$.'
+            explanation: '$f\'(x) = 1/(2\\sqrt{x})$, $f\'(16) = 1/8$. $L(16.2) = 4 + \\frac{1}{8}(0.2) = 4.025$. Dropping the $\\frac{1}{2}$ gives $4.05$, using $f\' = \\frac{1}{2}$ gives $4.1$, and adding $dx$ without $f\'$ gives $4.2$.'
           },
           {
             question: '$y = e^x$, $x = 0$, $dx = 0.05$. $dy =$',
-            options: ['$0.05$', '$1.05$', '$e^{0.05}$', '$0.5$'],
+            options: ['$0.05$', '$1.05$', '$e^{0.05}$', '$e^{0.05} - 1$'],
             correctAnswer: 0,
-            explanation: '$dy = e^0 \\cdot 0.05 = 0.05$.'
+            explanation: '$dy = f\'(0)\\,dx = e^0 \\cdot 0.05 = 0.05$. The value $e^{0.05} - 1$ is $\\Delta y$, not $dy$; $e^{0.05}$ is the new $y$-value, and $1.05$ is the tangent-line estimate of it.'
           },
           {
             question: 'Using $\\sin x \\approx x$ near $0$, $\\sin(0.1) \\approx$',
-            options: ['$0.1$', '$1$', '$0.01$', '$0.0998$'],
+            options: ['$0.1$', '$1$', '$0.01$', '$1.1$'],
             correctAnswer: 0,
-            explanation: '$\\sin x \\approx x$ for small $x$. $\\sin(0.1) \\approx 0.1$.'
+            explanation: '$\\sin x \\approx x$ for small $x$, so $\\sin(0.1) \\approx 0.1$. Using $1 + x$ (the $e^x$ linearization) gives $1.1$, squaring gives $0.01$, and $1$ is $\\cos 0$, the slope rather than the value.'
           },
           {
             question: 'Given $f(2) = 5$, $f\'(2) = -3$, $f\'\'(2) = 4 > 0$. The tangent-line approximation at $x = 2.1$ is a(n):',
@@ -84,9 +84,9 @@ export const calcabLinearizationPart7Data = {
           },
           {
             question: 'The linearization of $\\ln x$ at $a = e$ is:',
-            options: ['$L(x) = 1 + \\frac{1}{e}(x-e)$', '$L(x) = x/e$', '$L(x) = 1 + (x-e)$', '$L(x) = \\frac{1}{e}(x-e)$'],
+            options: ['$L(x) = 1 + \\frac{1}{e}(x-e)$', '$L(x) = 1 + e(x-e)$', '$L(x) = 1 + (x-e)$', '$L(x) = \\frac{1}{e}(x-e)$'],
             correctAnswer: 0,
-            explanation: '$f(e) = 1$, $f\'(e) = 1/e$. $L(x) = 1 + \\frac{1}{e}(x-e)$.'
+            explanation: '$f(e) = 1$, $f\'(e) = 1/e$. $L(x) = 1 + \\frac{1}{e}(x-e)$ (which simplifies to $x/e$). Using $e$ as the slope gives $1 + e(x-e)$, using slope $1$ gives $1 + (x-e)$, and dropping $f(e)$ gives $\\frac{1}{e}(x-e)$.'
           },
           {
             question: 'If error $\\propto (x-a)^2$, doubling the distance from $a$ makes the error approximately:',
@@ -112,7 +112,7 @@ export const calcabLinearizationPart7Data = {
           },
           {
             label: 'The differential $dy$ is the change along the:',
-            options: ['Tangent line', 'Curve', 'Secant line', 'Normal line'],
+            options: ['Tangent line', 'Curve itself', 'Secant line', 'Normal line'],
             correctAnswers: ['Tangent line'],
             hints: ['$dy = f\'(x)dx$ uses the slope of the tangent.'],
             explanation: '$dy$ represents the linear change along the tangent line.'

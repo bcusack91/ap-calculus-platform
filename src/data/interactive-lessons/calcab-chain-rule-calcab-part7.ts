@@ -71,9 +71,9 @@ $$\\boxed{\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)}$$
           },
           {
             question: 'Find $\\frac{dy}{dx}$ for $y^2 + \\sin(xy) = 5$.',
-            options: ['$\\frac{-y\\cos(xy)}{2y + x\\cos(xy)}$', '$\\frac{y\\cos(xy)}{2y - x\\cos(xy)}$', '$\\frac{-\\cos(xy)}{2y}$', '$\\frac{-2y}{\\cos(xy)}$'],
+            options: ['$\\frac{-y\\cos(xy)}{2y + x\\cos(xy)}$', '$\\frac{y\\cos(xy)}{2y - x\\cos(xy)}$', '$\\frac{-\\cos(xy)}{2y}$', '$\\frac{-y\\cos(xy)}{2y + \\cos(xy)}$'],
             correctAnswer: 0,
-            explanation: '$2y\\frac{dy}{dx} + \\cos(xy)(y + x\\frac{dy}{dx}) = 0$. Expand: $(2y + x\\cos(xy))\\frac{dy}{dx} = -y\\cos(xy)$. Solve: $\\frac{dy}{dx} = \\frac{-y\\cos(xy)}{2y + x\\cos(xy)}$.'
+            explanation: '$2y\\frac{dy}{dx} + \\cos(xy)(y + x\\frac{dy}{dx}) = 0$. Expand: $(2y + x\\cos(xy))\\frac{dy}{dx} = -y\\cos(xy)$. Solve: $\\frac{dy}{dx} = \\frac{-y\\cos(xy)}{2y + x\\cos(xy)}$. Writing $\\frac{d}{dx}[xy]$ as $y + \\frac{dy}{dx}$ (dropping the factor $x$) loses the $x$ in the denominator.'
           },
           {
             question: 'If $f(x) = \\ln(x^2 + e^x)$, find $f\'(0)$.',
@@ -92,15 +92,15 @@ $$\\boxed{\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)}$$
         questions: [
           {
             question: 'If $h(x) = f(g(x))$, $g(2) = 5$, $g\'(2) = 3$, $f\'(5) = -4$, find $h\'(2)$.',
-            options: ['$-12$', '$-20$', '$15$', '$-7$'],
+            options: ['$-12$', '$-4$', '$15$', '$-1$'],
             correctAnswer: 0,
-            explanation: '$h\'(2) = f\'(g(2)) \\cdot g\'(2) = f\'(5) \\cdot 3 = (-4)(3) = -12$.'
+            explanation: '$h\'(2) = f\'(g(2)) \\cdot g\'(2) = f\'(5) \\cdot 3 = (-4)(3) = -12$. Forgetting the inner factor $g\'(2)$ leaves $-4$; multiplying $g(2) \\cdot g\'(2)$ gives $15$; adding $f\'(5) + g\'(2)$ gives $-1$.'
           },
           {
             question: 'Find $\\frac{d}{dx}[\\cos^2(x) - \\sin^2(x)]$.',
-            options: ['$-2\\sin(2x)$', '$2\\sin(2x)$', '$2\\cos(2x)$', '$-\\sin(2x)$'],
+            options: ['$-2\\sin(2x)$', '$2\\sin(2x)$', '$-4\\sin(2x)$', '$-\\sin(2x)$'],
             correctAnswer: 0,
-            explanation: '$-2\\cos x \\sin x - 2\\sin x \\cos x = -4\\sin x\\cos x = -2\\sin(2x)$. Missing the chain factor $2$ gives $-\\sin(2x)$.'
+            explanation: '$-2\\cos x \\sin x - 2\\sin x \\cos x = -4\\sin x\\cos x = -2\\sin(2x)$. Missing the chain factor $2$ gives $-\\sin(2x)$; writing $-4\\sin x\\cos x$ as $-4\\sin(2x)$ forgets that $\\sin(2x) = 2\\sin x\\cos x$.'
           },
           {
             question: "A sphere's volume increases at $100$ cm$^3$/s. How fast is the radius increasing when $r = 5$?",

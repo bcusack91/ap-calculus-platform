@@ -50,10 +50,10 @@ export const calcabDerivExpLogPart3Data = {
               "$x = 0$ and $x = 2$",
               "$x = 0$ only",
               "$x = 2$ only",
-              "$x = 1$"
+              "$x = -2$ and $x = 0$"
             ],
             "correctAnswer": 0,
-            "explanation": "$f' = xe^{-x}(2-x) = 0$: $x = 0$ or $x = 2$. ($e^{-x} \\neq 0$)."
+            "explanation": "$f' = 2xe^{-x} - x^2e^{-x} = xe^{-x}(2-x) = 0$: $x = 0$ or $x = 2$ ($e^{-x} \\neq 0$). Forgetting the negative from the chain rule on $e^{-x}$ gives $x(2+x) = 0$, i.e. $x = -2$ and $x = 0$."
           }
         ]
       }
@@ -87,10 +87,10 @@ export const calcabDerivExpLogPart3Data = {
           {
             "label": "$f(x) = e^x \\sin x$ needs:",
             "options": [
-              "Product rule + chain rule",
+              "Product rule only",
               "Chain rule only",
-              "Quotient rule",
-              "Power rule"
+              "Product rule + chain rule",
+              "Quotient rule only"
             ]
           },
           {
@@ -113,11 +113,11 @@ export const calcabDerivExpLogPart3Data = {
           }
         ],
         "correctAnswers": [
-          "Product rule + chain rule",
+          "Product rule only",
           "$f(x) = x$, so $f'(x) = 1$",
           "$3$"
         ],
-        "hint1": "Two functions multiplied: product rule. Each involves transcendental functions.",
+        "hint1": "Two functions multiplied: product rule. Neither factor has an inner function, so no chain rule is needed.",
         "hint2": "$e^{\\ln x} = x$ by inverse properties.",
         "hint3": "$\\ln(e^{3x}) = 3x$, derivative is $3$.",
         "explanation": "Recognize inverse pairs to simplify before differentiating."
@@ -133,12 +133,12 @@ export const calcabDerivExpLogPart3Data = {
             "question": "The function $f(x) = e^{-x^2}$ (Gaussian bell curve) has:",
             "options": [
               "One maximum at $x = 0$",
-              "No critical points",
+              "No critical points, since $e^{-x^2} > 0$",
               "Minimum at $x = 0$",
-              "Critical points at $x = \\pm 1$"
+              "Critical points at $x = \\pm\\frac{1}{\\sqrt{2}}$"
             ],
             "correctAnswer": 0,
-            "explanation": "$f' = -2xe^{-x^2} = 0$ at $x = 0$. $f''(0) = -2 < 0$, so maximum."
+            "explanation": "$f' = -2xe^{-x^2} = 0$ at $x = 0$ (the factor $-2x$ can be zero even though $e^{-x^2}$ cannot). $f''(0) = -2 < 0$, so maximum. The points $x = \\pm\\frac{1}{\\sqrt{2}}$ are inflection points, not critical points."
           },
           {
             "question": "$\\frac{d}{dx}[e^x + \\ln x]$ at $x = 1$:",

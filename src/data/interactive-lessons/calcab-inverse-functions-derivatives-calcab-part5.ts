@@ -81,17 +81,17 @@ $$\\int\\frac{dx}{\\sqrt{1-x^2}} = \\arcsin x + C \\qquad \\int\\frac{dx}{1+x^2}
           },
           {
             label: '$\\frac{d}{dx}[e^{\\arctan x}]$ uses:',
-            options: ['Chain rule + $\\arctan$ derivative', 'Product rule', 'Quotient rule', 'Implicit differentiation'],
+            options: ['Chain rule + $\\arctan$ derivative', 'Product rule + $\\arctan$ derivative', 'Quotient rule + $e^x$ derivative', 'Implicit differentiation only'],
             correctAnswers: ['Chain rule + $\\arctan$ derivative'],
             hints: ['Outer: $e^u$. Inner: $\\arctan x$.'],
             explanation: '$e^{\\arctan x} \\cdot \\frac{1}{1+x^2}$.'
           },
           {
             label: 'The connection between $\\ln$ and $e^x$ is:',
-            options: ['They are inverses: $\\ln(e^x)=x$', 'They have the same derivative', 'They are equal', 'No connection'],
-            correctAnswers: ['They are inverses: $\\ln(e^x)=x$'],
+            options: ['They are inverse functions', 'They have the same derivative', 'They are reciprocals: $\\ln x = 1/e^x$', 'They are reflections over the $x$-axis'],
+            correctAnswers: ['They are inverse functions'],
             hints: ['$e^{\\ln x} = x$ and $\\ln(e^x) = x$.'],
-            explanation: '$\\ln$ and $e^x$ are inverse functions. This is why $\\frac{d}{dx}[\\ln x] = 1/x$ via the inverse derivative formula.'
+            explanation: '$\\ln$ and $e^x$ are inverse functions: $\\ln(e^x) = x$, so their graphs are reflections over $y = x$. This is why $\\frac{d}{dx}[\\ln x] = 1/x$ via the inverse derivative formula.'
           }
         ]
       }

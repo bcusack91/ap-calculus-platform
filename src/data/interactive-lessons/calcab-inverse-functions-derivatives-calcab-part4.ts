@@ -59,9 +59,9 @@ $$= \\frac{\\cos x}{\\sin x} = \\cot x$$`
           },
           {
             question: '$\\frac{d}{dx}[x\\ln x] = $',
-            options: ['$\\ln x + 1$', '$\\frac{1}{x}$', '$\\ln x$', '$x + \\ln x$'],
+            options: ['$\\ln x + 1$', '$\\frac{1}{x}$', '$\\ln x + \\frac{1}{x}$', '$1 + \\frac{1}{x}$'],
             correctAnswer: 0,
-            explanation: 'Product rule: $1 \\cdot \\ln x + x \\cdot \\frac{1}{x} = \\ln x + 1$.'
+            explanation: 'Product rule: $1 \\cdot \\ln x + x \\cdot \\frac{1}{x} = \\ln x + 1$. Leaving off the factor $x$ in the second term gives $\\ln x + \\frac{1}{x}$; differentiating each factor and adding gives $1 + \\frac{1}{x}$.'
           }
         ]
       }
@@ -74,7 +74,7 @@ $$= \\frac{\\cos x}{\\sin x} = \\cot x$$`
         dropdowns: [
           {
             label: '$\\int\\frac{1}{x}\\,dx$ equals:',
-            options: ['$\\ln|x|+C$', '$\\ln x + C$', '$\\frac{x^0}{0}$ (undefined)', '$-\\frac{1}{x^2}+C$'],
+            options: ['$\\ln|x|+C$', '$\\ln x + C$', '$\\frac{x^0}{0} + C$', '$-\\frac{1}{x^2}+C$'],
             correctAnswers: ['$\\ln|x|+C$'],
             hints: ['$\\frac{d}{dx}[\\ln|x|] = 1/x$ for all $x \\neq 0$.'],
             explanation: 'The absolute value is needed because $\\ln$ requires positive input.'
@@ -88,8 +88,8 @@ $$= \\frac{\\cos x}{\\sin x} = \\cot x$$`
           },
           {
             label: 'Logarithmic differentiation is most useful for:',
-            options: ['Products and quotients of many factors', 'Simple polynomials', 'Constant functions', 'Trigonometric functions'],
-            correctAnswers: ['Products and quotients of many factors'],
+            options: ['Many-factor products and quotients', 'Sums of simple polynomial terms', 'Constant multiples of a function', 'Single trig functions like $\\sin x$'],
+            correctAnswers: ['Many-factor products and quotients'],
             hints: ['$\\ln$ turns products into sums, quotients into differences.'],
             explanation: 'Taking $\\ln$ simplifies complex products/quotients into sums of simpler terms.'
           }

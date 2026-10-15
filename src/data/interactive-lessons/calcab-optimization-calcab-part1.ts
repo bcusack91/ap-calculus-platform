@@ -58,21 +58,21 @@ $y = 200-100 = 100$. $\\boxed{A_{\\max} = 50 \\times 100 = 5000 \\text{ m}^2}$
         questions: [
           {
             question: 'A farmer has 120 m of fencing for all 4 sides of a rectangle. What dimensions maximize the area?',
-            options: ['$30 \\times 30$', '$20 \\times 40$', '$10 \\times 50$', '$25 \\times 35$'],
+            options: ['$30 \\times 30$', '$30 \\times 60$', '$60 \\times 60$', '$15 \\times 45$'],
             correctAnswer: 0,
-            explanation: '$2x+2y=120$, $y=60-x$. $A=x(60-x)$, $A\'=60-2x=0$ at $x=30$. A square maximizes area for a fixed perimeter.'
+            explanation: '$2x+2y=120$, $y=60-x$. $A=x(60-x)$, $A\'=60-2x=0$ at $x=30$, so the pen is $30 \\times 30$: a square maximizes area for a fixed perimeter. Using the river setup $2x+y=120$ gives $30 \\times 60$, using $x+y=120$ gives $60 \\times 60$, and a derivative slip $A\'=60-4x$ gives $15 \\times 45$.'
           },
           {
             question: 'The sum of two positive numbers is 50. What is their maximum product?',
-            options: ['$625$', '$600$', '$500$', '$650$'],
+            options: ['$625$', '$1250$', '$2500$', '$x = 25$'],
             correctAnswer: 0,
-            explanation: '$P=x(50-x)=50x-x^2$. $P\'=50-2x=0$ at $x=25$. $P=25 \\times 25=625$.'
+            explanation: '$P=x(50-x)=50x-x^2$. $P\'=50-2x=0$ at $x=25$. $P=25 \\times 25=625$. Multiplying the sum by $25$ gives $1250$, squaring the sum gives $2500$, and $x = 25$ is where the maximum occurs, not the maximum product.'
           },
           {
             question: 'In the rancher fencing problem, why do we only need $2x+y=200$ (not $2x+2y$)?',
-            options: ['One side is along the river (no fence needed)', 'Two sides share a wall', 'We use half the fencing', 'The shape is a triangle'],
+            options: ['The river forms one side, so it needs no fence', 'Two of the sides share a wall with the barn', 'Only half of the fencing goes on the lengths', 'The pen is a triangle with three sides'],
             correctAnswer: 0,
-            explanation: 'The river provides one side, so only 3 sides need fencing: two widths $x$ and one length $y$.'
+            explanation: 'The river provides one side, so only 3 sides need fencing: two widths $x$ and one length $y$, giving $2x + y = 200$.'
           }
         ]
       }
@@ -85,10 +85,10 @@ $y = 200-100 = 100$. $\\boxed{A_{\\max} = 50 \\times 100 = 5000 \\text{ m}^2}$
         dropdowns: [
           {
             label: 'In "minimize surface area of a box with volume 500," the objective function is:',
-            options: ['Surface area', 'Volume', 'Perimeter', 'Cost'],
+            options: ['Surface area', 'Volume, $V = 500$', 'Perimeter', 'Side length'],
             correctAnswers: ['Surface area'],
             hints: ['"Minimize surface area" tells you the objective.'],
-            explanation: 'The objective is what you optimize. The constraint is volume = 500.'
+            explanation: 'The objective is what you optimize (surface area). The volume $V = 500$ is the constraint, and the side length is a variable, not the quantity being optimized.'
           },
           {
             label: 'After substituting the constraint, the objective should be a function of:',

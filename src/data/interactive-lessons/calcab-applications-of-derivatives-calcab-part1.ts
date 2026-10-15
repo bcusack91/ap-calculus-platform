@@ -63,9 +63,9 @@ Critical points: $x = -1$ and $x = 1$.
         questions: [
           {
             question: 'Find the critical points of $f(x) = x^4 - 4x^3$.',
-            options: ['$x = 0$ only', '$x = 3$ only', '$x = 0$ and $x = 3$', '$x = 0, 1, 3$'],
+            options: ['$x = 0$ and $x = 2$', '$x = 3$ only', '$x = 0$ and $x = 3$', '$x = 0$ and $x = 4$'],
             correctAnswer: 2,
-            explanation: '$f\'(x) = 4x^3 - 12x^2 = 4x^2(x - 3) = 0$. Solutions: $x = 0$ and $x = 3$.'
+            explanation: '$f\'(x) = 4x^3 - 12x^2 = 4x^2(x - 3) = 0$. Solutions: $x = 0$ and $x = 3$. Dividing both sides by $x^2$ loses $x = 0$ (leaving $x = 3$ only), $x = 0$ and $x = 4$ are the zeros of $f$ itself, and $x = 0$ and $x = 2$ are the zeros of $f\'\'(x) = 12x(x - 2)$.'
           },
           {
             question: 'On what intervals is $g(x) = xe^{-x}$ increasing?',

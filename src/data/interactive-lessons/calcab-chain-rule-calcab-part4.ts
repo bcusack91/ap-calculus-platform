@@ -83,9 +83,9 @@ Similar triangles: $\\frac{r}{h} = \\frac{3}{6} = \\frac{1}{2}$, so $r = \\frac{
         questions: [
           {
             question: 'A balloon is being inflated. Its radius increases at $3$ cm/s. How fast is the volume increasing when $r = 10$ cm? (Use $V = \\frac{4}{3}\\pi r^3$)',
-            options: ['$400\\pi$ cm$^3$/s', '$1200\\pi$ cm$^3$/s', '$120\\pi$ cm$^3$/s', '$4000\\pi$ cm$^3$/s'],
+            options: ['$400\\pi$ cm$^3$/s', '$1200\\pi$ cm$^3$/s', '$120\\pi$ cm$^3$/s', '$36\\pi$ cm$^3$/s'],
             correctAnswer: 1,
-            explanation: '$\\frac{dV}{dt} = 4\\pi r^2 \\cdot \\frac{dr}{dt} = 4\\pi(10)^2(3) = 1200\\pi$ cm$^3$/s.'
+            explanation: '$\\frac{dV}{dt} = 4\\pi r^2 \\cdot \\frac{dr}{dt} = 4\\pi(10)^2(3) = 1200\\pi$ cm$^3$/s. Forgetting $\\frac{dr}{dt}$ gives $400\\pi$; using $r$ instead of $r^2$ gives $120\\pi$; substituting the rate $3$ for $r$ in $\\frac{4}{3}\\pi r^3$ gives $36\\pi$.'
           },
           {
             question: 'A 10-ft ladder: base moves out at 1 ft/s. When $x = 6$, how fast is the top sliding down?',
@@ -176,7 +176,7 @@ Similar triangles: $\\frac{r}{h} = \\frac{3}{6} = \\frac{1}{2}$, so $r = \\frac{
           },
           {
             label: 'Water draining from a cone:',
-            options: ['$A = \\pi r^2$', '$x^2 + y^2 = L^2$', '$V = \\frac{4}{3}\\pi r^3$', '$V = \\frac{1}{3}\\pi r^2 h$'],
+            options: ['$V = \\pi r^2 h$', '$S = \\pi r\\sqrt{r^2 + h^2}$', '$V = \\frac{4}{3}\\pi r^3$', '$V = \\frac{1}{3}\\pi r^2 h$'],
             correctAnswers: ['$V = \\frac{1}{3}\\pi r^2 h$'],
             hints: ['A cone has volume $\\frac{1}{3}$ base area times height.'],
             explanation: 'Cone volume: $V = \\frac{1}{3}\\pi r^2 h$. Usually use similar triangles to eliminate $r$.'

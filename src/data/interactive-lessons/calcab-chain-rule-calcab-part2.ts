@@ -95,9 +95,9 @@ $$\\boxed{\\frac{d}{dx}[f(g(h(x)))] = f'(g(h(x))) \\cdot g'(h(x)) \\cdot h'(x)}$
           },
           {
             question: 'Find $\\frac{d}{dx}\\ln(\\sin x)$.',
-            options: ['$\\frac{1}{\\sin x}$', '$\\frac{\\cos x}{\\sin x} = \\cot x$', '$\\frac{1}{\\cos x}$', '$\\cos x \\cdot \\ln(\\sin x)$'],
+            options: ['$\\frac{1}{\\sin x}$', '$\\cot x$', '$\\frac{1}{\\cos x}$', '$\\cos x \\cdot \\ln(\\sin x)$'],
             correctAnswer: 1,
-            explanation: 'Outer: $\\ln(u) \\to \\frac{1}{\\sin x}$. Inner: $\\sin x \\to \\cos x$. Multiply: $\\frac{\\cos x}{\\sin x} = \\cot x$.'
+            explanation: 'Outer: $\\ln(u) \\to \\frac{1}{\\sin x}$. Inner: $\\sin x \\to \\cos x$. Multiply: $\\frac{\\cos x}{\\sin x} = \\cot x$. Stopping at $\\frac{1}{\\sin x}$ forgets the inner derivative.'
           }
         ]
       }
@@ -143,15 +143,15 @@ $$\\boxed{\\text{Step 1: Identify outermost operation. Step 2: Differentiate it.
           },
           {
             question: 'Find $\\frac{d}{dx}e^{\\sin(4x)}$.',
-            options: ['$e^{\\sin(4x)} \\cdot \\cos(4x)$', '$4\\cos(4x)\\,e^{\\sin(4x)}$', '$e^{\\cos(4x)} \\cdot 4$', '$\\sin(4x)\\,e^{\\sin(4x)-1}$'],
+            options: ['$\\cos(4x)\\,e^{\\sin(4x)}$', '$4\\cos(4x)\\,e^{\\sin(4x)}$', '$e^{\\cos(4x)} \\cdot 4$', '$\\sin(4x)e^{\\sin(4x)-1}$'],
             correctAnswer: 1,
-            explanation: 'Three layers: $e^u \\to e^{\\sin(4x)}$; $\\sin(v) \\to \\cos(4x)$; $4x \\to 4$. Result: $4\\cos(4x)\\,e^{\\sin(4x)}$.'
+            explanation: 'Three layers: $e^u \\to e^{\\sin(4x)}$; $\\sin(v) \\to \\cos(4x)$; $4x \\to 4$. Result: $4\\cos(4x)\\,e^{\\sin(4x)}$. Leaving out the innermost factor $4$ gives $\\cos(4x)\\,e^{\\sin(4x)}$; treating $e^u$ like a power gives the $e^{\\sin(4x)-1}$ form.'
           },
           {
             question: 'Find $\\frac{d}{dx}\\ln(\\cos(3x))$.',
-            options: ['$\\frac{1}{\\cos(3x)}$', '$-3\\tan(3x)$', '$\\frac{-\\sin(3x)}{\\cos(3x)}$', '$3\\cot(3x)$'],
+            options: ['$\\frac{1}{\\cos(3x)}$', '$-3\\tan(3x)$', '$\\frac{-\\sin(3x)}{\\cos(3x)}$', '$\\frac{3\\sin(3x)}{\\cos(3x)}$'],
             correctAnswer: 1,
-            explanation: 'Outer: $\\frac{1}{\\cos(3x)}$. Middle: $-\\sin(3x)$. Inner: $3$. Product: $\\frac{-3\\sin(3x)}{\\cos(3x)} = -3\\tan(3x)$.'
+            explanation: 'Outer: $\\frac{1}{\\cos(3x)}$. Middle: $-\\sin(3x)$. Inner: $3$. Product: $\\frac{-3\\sin(3x)}{\\cos(3x)} = -3\\tan(3x)$. Taking the derivative of cosine as $+\\sin$ gives $\\frac{3\\sin(3x)}{\\cos(3x)}$, the wrong sign.'
           }
         ]
       }
@@ -164,28 +164,28 @@ $$\\boxed{\\text{Step 1: Identify outermost operation. Step 2: Differentiate it.
         dropdowns: [
           {
             label: '$\\cos(5x)$',
-            options: ['0 (no chain rule)', '1 time', '2 times', '3 times'],
+            options: ['0 times', '1 time', '2 times', '3 times'],
             correctAnswers: ['1 time'],
             hints: ['Two layers: cos and 5x. One chain rule application.'],
             explanation: 'Layers: $\\cos(u)$ and $u=5x$. One application: $-5\\sin(5x)$.'
           },
           {
             label: '$e^{\\sin(x^2)}$',
-            options: ['0 (no chain rule)', '1 time', '2 times', '3 times'],
+            options: ['0 times', '1 time', '2 times', '3 times'],
             correctAnswers: ['2 times'],
             hints: ['Three layers: $e^u$, $\\sin(v)$, $x^2$. Two chain rule applications.'],
             explanation: 'Three layers means two chain rule applications: $2x\\cos(x^2)\\,e^{\\sin(x^2)}$.'
           },
           {
             label: '$\\ln(x)$',
-            options: ['0 (no chain rule)', '1 time', '2 times', '3 times'],
-            correctAnswers: ['0 (no chain rule)'],
+            options: ['0 times', '1 time', '2 times', '3 times'],
+            correctAnswers: ['0 times'],
             hints: ['There is no composition here — just a basic function of $x$.'],
             explanation: 'No composition, so zero chain rule applications. Just $\\frac{1}{x}$.'
           },
           {
             label: '$[\\cos(3x)]^4$',
-            options: ['0 (no chain rule)', '1 time', '2 times', '3 times'],
+            options: ['0 times', '1 time', '2 times', '3 times'],
             correctAnswers: ['2 times'],
             hints: ['Three layers: power, cos, and $3x$.'],
             explanation: 'Layers: $u^4$, $\\cos(v)$, $3x$. Two applications: $-12\\cos^3(3x)\\sin(3x)$.'

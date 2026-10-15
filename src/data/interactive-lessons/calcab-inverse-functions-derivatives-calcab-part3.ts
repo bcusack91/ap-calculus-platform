@@ -56,9 +56,9 @@ $$= \\frac{3}{1+(3x)^2} = \\frac{3}{1+9x^2}$$`
           },
           {
             question: '$\\frac{d}{dx}[\\arccos x]$ compared to $\\frac{d}{dx}[\\arcsin x]$:',
-            options: ['Opposite sign, same denominator', 'Same', 'Different denominator', 'Reciprocal'],
+            options: ['Opposite sign, same denominator', 'Same sign and the same denominator', 'Opposite sign, denominator $1+x^2$', 'Same sign, but denominator $1+x^2$'],
             correctAnswer: 0,
-            explanation: '$\\frac{d}{dx}[\\arccos x] = -\\frac{1}{\\sqrt{1-x^2}}$. Same denominator, negative sign.'
+            explanation: '$\\frac{d}{dx}[\\arcsin x] = \\frac{1}{\\sqrt{1-x^2}}$ and $\\frac{d}{dx}[\\arccos x] = -\\frac{1}{\\sqrt{1-x^2}}$: same denominator, negative sign. The $1+x^2$ denominator belongs to arctangent.'
           }
         ]
       }
@@ -78,10 +78,10 @@ $$= \\frac{3}{1+(3x)^2} = \\frac{3}{1+9x^2}$$`
           },
           {
             label: '$\\arcsin$ and $\\arctan$ derivatives share:',
-            options: ['Nothing in their denominators', '$\\sqrt{1-x^2}$', '$1+x^2$', 'The same formula'],
-            correctAnswers: ['Nothing in their denominators'],
+            options: ['No common denominator', 'The factor $\\sqrt{1-x^2}$', 'The factor $1+x^2$', 'The same formula, up to sign'],
+            correctAnswers: ['No common denominator'],
             hints: ['$\\arcsin$: $\\sqrt{1-x^2}$. $\\arctan$: $1+x^2$.'],
-            explanation: 'Completely different denominators. Memorize each separately.'
+            explanation: 'Arcsine has $\\sqrt{1-x^2}$ and arctangent has $1+x^2$: completely different denominators. Only arcsine and arccosine share a formula up to sign.'
           },
           {
             label: 'The integral $\\int\\frac{dx}{1+x^2}$ equals:',

@@ -74,15 +74,15 @@ $$\\boxed{S_{\\min} = 16 + 32 = 48 \\text{ cm}^2}$$`
         questions: [
           {
             question: 'Find two positive numbers that sum to 20 and have maximum product.',
-            options: ['$10$ and $10$', '$5$ and $15$', '$1$ and $19$', '$8$ and $12$'],
+            options: ['$10$ and $10$', '$5$ and $15$', '$20$ and $0$', '$-10$ and $30$'],
             correctAnswer: 0,
-            explanation: 'Let $x + y = 20$, maximize $P = xy = x(20-x) = 20x - x^2$. $P\' = 20 - 2x = 0$ at $x = 10$. Max product = $100$.'
+            explanation: 'Let $x + y = 20$, maximize $P = xy = x(20-x) = 20x - x^2$. $P\' = 20 - 2x = 0$ at $x = 10$. Max product = $100$. Expanding $x(20 - x)$ as $20x - 2x^2$ leads to $5$ and $15$, dropping the $2$ in $P\'$ leads to $20$ and $0$, and a sign slip ($20 + 2x = 0$) leads to $-10$ and $30$.'
           },
           {
             question: 'A rectangle has perimeter 40. Find the maximum area.',
-            options: ['$100$', '$80$', '$96$', '$64$'],
+            options: ['$100$', '$10$', '$400$', '$0$'],
             correctAnswer: 0,
-            explanation: '$2l + 2w = 40$, $l = 20-w$. $A = w(20-w) = 20w - w^2$. $A\' = 20 - 2w = 0$ at $w = 10$, $l = 10$. $A = 100$. (Square!)'
+            explanation: '$2l + 2w = 40$, $l = 20-w$. $A = w(20-w) = 20w - w^2$. $A\' = 20 - 2w = 0$ at $w = 10$, $l = 10$. $A = 100$ (a square). $10$ is the side length, not the area; using $l + w = 40$ gives $400$; dropping the $2$ in $A\'$ gives $w = 20$, $l = 0$, and area $0$.'
           },
           {
             question: 'Which step is MOST commonly forgotten in optimization problems?',
@@ -141,9 +141,9 @@ $$\\boxed{\\text{Closest points: } \\left(\\pm\\frac{1}{\\sqrt{2}},\\, \\frac{1}
           },
           {
             question: 'Why do we minimize $d^2$ instead of $d$ in distance problems?',
-            options: ['$d^2$ has the same critical points and avoids square roots', '$d^2$ is always smaller', '$d$ is not differentiable', 'There is no advantage'],
+            options: ['Same critical points, no square root', '$d^2$ is always smaller than $d$, so it is easier to use', '$d$ is not differentiable anywhere, so $d^2$ must replace it', 'The minimum value of $d^2$ equals the minimum value of $d$'],
             correctAnswer: 0,
-            explanation: 'Since $d \\geq 0$, minimizing $d$ and $d^2$ give the same critical points. But $d^2$ has no square root, making differentiation cleaner.'
+            explanation: 'Since $d \\geq 0$, minimizing $d$ and $d^2$ give the same critical points. But $d^2$ has no square root, making differentiation cleaner. $d^2 < d$ only when $d < 1$, $d$ is differentiable wherever $d > 0$, and the minimum of $d^2$ is the square of the minimum of $d$, not the same value.'
           }
         ]
       }
@@ -156,17 +156,17 @@ $$\\boxed{\\text{Closest points: } \\left(\\pm\\frac{1}{\\sqrt{2}},\\, \\frac{1}
         dropdowns: [
           {
             label: 'The domain of $x$ is:',
-            options: ['$0 < x < 6$', '$0 < x < 12$', '$0 < x < 3$', '$x > 0$'],
+            options: ['$0 < x < 6$', '$0 < x < 12$', '$0 \\le x \\le 6$', '$x > 0$, $x \\neq 6$'],
             correctAnswers: ['$0 < x < 6$'],
             hints: ['The side length $12 - 2x$ must be positive.'],
-            explanation: '$12 - 2x > 0$ requires $x < 6$. Also $x > 0$. Domain: $(0, 6)$.'
+            explanation: '$12 - 2x > 0$ requires $x < 6$. Also $x > 0$. Domain: $(0, 6)$. Using $12 - x > 0$ gives $x < 12$, including the endpoints allows boxes with zero volume, and only excluding $x = 6$ forgets that $12 - 2x$ must be positive.'
           },
           {
             label: '$V\'(x) = 12(x-2)(x-6)$. Critical point in domain:',
-            options: ['$x = 2$', '$x = 6$', '$x = 2$ and $x = 6$', 'No critical point'],
+            options: ['$x = 2$', '$x = 0$ and $x = 6$', '$x = 2$ and $x = 6$', 'No critical point'],
             correctAnswers: ['$x = 2$'],
             hints: ['$x = 6$ is an endpoint (not in the open interval).'],
-            explanation: '$V\'(x) = 0$ at $x = 2$ and $x = 6$. Only $x = 2$ is in $(0,6)$.'
+            explanation: '$V\'(x) = 0$ at $x = 2$ and $x = 6$. Only $x = 2$ is in $(0,6)$. $x = 0$ and $x = 6$ are the zeros of $V$, not of $V\'$.'
           },
           {
             label: 'The maximum volume is:',

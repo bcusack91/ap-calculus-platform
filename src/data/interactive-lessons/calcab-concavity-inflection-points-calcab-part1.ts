@@ -88,7 +88,7 @@ export const calcabConcavityPart1Data = {
             "label": "$f''(x) = 0$ is:",
             "options": [
               "Necessary but not sufficient for inflection",
-              "Sufficient for inflection",
+              "Sufficient but not necessary for inflection",
               "Neither",
               "Both necessary and sufficient"
             ]
@@ -99,7 +99,7 @@ export const calcabConcavityPart1Data = {
               "Neither concave up nor down",
               "Concave up",
               "Concave down",
-              "Both"
+              "Concave up if its slope is positive"
             ]
           },
           {
@@ -132,24 +132,24 @@ export const calcabConcavityPart1Data = {
           {
             "question": "How many inflection points does $f(x) = x^5$ have?",
             "options": [
-              "$1$ (at $x = 0$)",
+              "$1$",
               "$0$",
-              "$2$",
+              "$3$",
               "$5$"
             ],
             "correctAnswer": 0,
-            "explanation": "$f''(x) = 20x^3 = 0$ at $x = 0$. Sign change: negative for $x < 0$, positive for $x > 0$."
+            "explanation": "$f''(x) = 20x^3 = 0$ at $x = 0$, with a sign change: negative for $x < 0$, positive for $x > 0$. So there is exactly $1$ inflection point, at $x = 0$. Answering $0$ uses $f'(x) = 5x^4$ (no sign change) instead of $f''$, $3$ counts the multiplicity of the root of $20x^3$, and $5$ is the degree."
           },
           {
             "question": "On a velocity-time graph, an inflection point on the position graph corresponds to:",
             "options": [
-              "Maximum or minimum velocity",
-              "Zero velocity",
-              "Constant velocity",
-              "Zero position"
+              "A local max or min of velocity",
+              "A point where velocity equals zero",
+              "An interval of constant velocity",
+              "A point where position equals zero"
             ],
             "correctAnswer": 0,
-            "explanation": "Inflection on position → $f''= 0$ → $a(t) = 0$. Velocity has local extreme."
+            "explanation": "Inflection on position → $s''= 0$ with a sign change → $a(t) = v'(t)$ changes sign, so velocity has a local max or min. Zero velocity is where position has a horizontal tangent, and zero position is just an intercept."
           }
         ]
       }

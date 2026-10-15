@@ -27,33 +27,33 @@ export const calcabConcavityPart7Data = {
             "options": [
               "$f'$ changes from + to − at $x = 2$",
               "$f'(2) = 0$",
-              "$f(2)$ is the largest value nearby",
+              "$f$ changes from + to − at $x = 2$",
               "$f''(2)$ exists"
             ],
             "correctAnswer": 0,
-            "explanation": "Sign change of $f'$ is the standard justification."
+            "explanation": "A sign change of $f'$ from + to − is the standard justification. $f'(2) = 0$ alone does not show a sign change, the sign of $f$ itself says nothing about extrema, and $f''(2)$ existing is not a test."
           },
           {
             "question": "Which is NOT a valid justification for inflection at $x = 4$?",
             "options": [
-              "$f''(4) = 0$ (without mentioning sign change)",
+              "$f''(4) = 0$ alone",
               "$f''$ changes from + to − at $x = 4$",
-              "$f'' changes sign at $x = 4$",
+              "$f''$ changes sign at $x = 4$",
               "$f'$ has a local max at $x = 4$"
             ],
             "correctAnswer": 0,
-            "explanation": "Just $f'' = 0$ is insufficient. Must show sign change."
+            "explanation": "Just $f''(4) = 0$ is insufficient; you must show a sign change. A sign change of $f''$, in either direction, and a local max of $f'$ (where $f'$ switches from increasing to decreasing) are both valid."
           },
           {
             "question": "If $f'(c) = 0$ and $f$ is twice differentiable, you should first try:",
             "options": [
               "Second derivative test, then first if inconclusive",
-              "First derivative test always",
-              "L'Hôpital's Rule",
-              "Evaluating $f(c)$"
+              "First derivative test only; the second test is unreliable",
+              "Candidates Test, comparing $f$ at the interval endpoints",
+              "Evaluating $f(c)$ to see if it is positive or negative"
             ],
             "correctAnswer": 0,
-            "explanation": "Second DT is faster. Fall back to first DT if $f''(c) = 0$."
+            "explanation": "The Second Derivative Test is faster; fall back to the First Derivative Test if $f''(c) = 0$. The second test is reliable whenever $f''(c) \\neq 0$, the Candidates Test is for absolute extrema on a closed interval, and the sign of $f(c)$ says nothing about max vs. min."
           }
         ]
       }
@@ -88,8 +88,8 @@ export const calcabConcavityPart7Data = {
             "label": "The word \"justify\" on the AP exam means:",
             "options": [
               "Provide mathematical reasoning with specific theorem/test",
-              "Write a paragraph",
-              "Show your arithmetic",
+              "Restate the question and give the final answer in a full sentence",
+              "Show the arithmetic for every computed value",
               "Graph the function"
             ]
           },
@@ -105,17 +105,17 @@ export const calcabConcavityPart7Data = {
           {
             "label": "If $f''(x) > 0$ for all $x$ in $(a, b)$, then on that interval:",
             "options": [
-              "$f$ is concave up and f'is increasing",
-              "f is increasing",
-              "f is concave down",
-              "f has no critical points"
+              "$f$ is concave up and $f'$ is increasing",
+              "$f$ is increasing and $f'$ is positive",
+              "$f$ is concave down and $f'$ is decreasing",
+              "$f$ has no critical points"
             ]
           }
         ],
         "correctAnswers": [
           "Provide mathematical reasoning with specific theorem/test",
           "3 inflection points",
-          "$f$ is concave up and f'is increasing"
+          "$f$ is concave up and $f'$ is increasing"
         ],
         "hint1": "Justify = cite theorem + verify conditions.",
         "hint2": "$f''$ has degree 3, at most 3 real roots.",
@@ -132,24 +132,24 @@ export const calcabConcavityPart7Data = {
           {
             "question": "On the AP exam, the most common error in concavity problems is:",
             "options": [
-              "Claiming inflection at $f''= 0$ without checking sign change",
-              "Arithmetic errors",
-              "Not finding $f'$",
-              "Graphing incorrectly"
+              "Calling every zero of $f''$ an inflection point",
+              "Forgetting to compute $f'$ before $f''$",
+              "Rounding inflection $x$-values too early",
+              "Sketching the graph without a sign chart"
             ],
             "correctAnswer": 0,
-            "explanation": "Students lose points for not verifying the sign change in $f''$."
+            "explanation": "Students lose points for not verifying the sign change in $f''$: a zero of $f''$ is only a candidate."
           },
           {
             "question": "If $f'$ is always positive and $f''$ is always negative, the graph of $f$ is:",
             "options": [
               "Always increasing, always concave down",
               "Always increasing, always concave up",
-              "Always decreasing",
-              "S-shaped"
+              "Always decreasing, always concave up",
+              "Increasing, then decreasing"
             ],
             "correctAnswer": 0,
-            "explanation": "$f' > 0$: increasing. $f'' < 0$: concave down."
+            "explanation": "$f' > 0$: always increasing. $f'' < 0$: always concave down. The graph never turns around because $f'$ never changes sign."
           }
         ]
       }

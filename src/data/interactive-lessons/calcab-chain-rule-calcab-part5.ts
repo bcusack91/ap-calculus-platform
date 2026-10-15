@@ -115,7 +115,7 @@ The inverse trig derivatives all require the Chain Rule when the argument is a c
             question: 'Find $\\frac{d}{dx}\\arcsin(e^x)$.',
             options: ['$\\frac{1}{\\sqrt{1-e^{2x}}}$', '$\\frac{e^x}{\\sqrt{1-e^{2x}}}$', '$\\frac{e^x}{1+e^{2x}}$', '$\\frac{1}{1-e^{2x}}$'],
             correctAnswer: 1,
-            explanation: '$\\frac{d}{dx}\\arcsin(e^x) = \\frac{e^x}{\\sqrt{1-(e^x)^2}} = \\frac{e^x}{\\sqrt{1-e^{2x}}}$.'
+            explanation: '$\\frac{d}{dx}\\arcsin(e^x) = \\frac{e^x}{\\sqrt{1-(e^x)^2}} = \\frac{e^x}{\\sqrt{1-e^{2x}}}$. The $1 + u^2$ denominator with no square root belongs to arctangent.'
           },
           {
             question: 'Find $\\frac{d}{dx}\\arccos(2x)$.',
@@ -134,28 +134,28 @@ The inverse trig derivatives all require the Chain Rule when the argument is a c
         dropdowns: [
           {
             label: '$y = x^{\\sin x}$',
-            options: ['Power Rule', 'Exponential Rule ($a^x$)', 'Logarithmic Differentiation', 'Inverse Trig Formula'],
+            options: ['Power Rule + Chain Rule', 'Exponential Rule + Chain Rule', 'Logarithmic Differentiation', 'Inverse Trig + Chain Rule'],
             correctAnswers: ['Logarithmic Differentiation'],
             hints: ['Both base ($x$) and exponent ($\\sin x$) are functions of $x$.'],
             explanation: 'Variable base AND variable exponent requires logarithmic differentiation.'
           },
           {
             label: '$y = \\arctan(x^3)$',
-            options: ['Power Rule', 'Exponential Rule ($a^x$)', 'Logarithmic Differentiation', 'Inverse Trig Formula'],
-            correctAnswers: ['Inverse Trig Formula'],
+            options: ['Power Rule + Chain Rule', 'Exponential Rule + Chain Rule', 'Logarithmic Differentiation', 'Inverse Trig + Chain Rule'],
+            correctAnswers: ['Inverse Trig + Chain Rule'],
             hints: ['This is an inverse trig function with chain rule.'],
             explanation: '$\\frac{dy}{dx} = \\frac{3x^2}{1+x^6}$.'
           },
           {
             label: '$y = 3^{5x}$',
-            options: ['Power Rule', 'Exponential Rule ($a^x$)', 'Logarithmic Differentiation', 'Inverse Trig Formula'],
-            correctAnswers: ['Exponential Rule ($a^x$)'],
+            options: ['Power Rule + Chain Rule', 'Exponential Rule + Chain Rule', 'Logarithmic Differentiation', 'Inverse Trig + Chain Rule'],
+            correctAnswers: ['Exponential Rule + Chain Rule'],
             hints: ['Constant base $3$, variable exponent $5x$.'],
             explanation: '$\\frac{dy}{dx} = 3^{5x} \\cdot \\ln 3 \\cdot 5 = 5\\ln(3) \\cdot 3^{5x}$.'
           },
           {
             label: '$y = (\\cos x)^7$',
-            options: ['Power Rule + Chain Rule', 'Exponential Rule ($a^x$)', 'Logarithmic Differentiation', 'Inverse Trig Formula'],
+            options: ['Power Rule + Chain Rule', 'Exponential Rule + Chain Rule', 'Logarithmic Differentiation', 'Inverse Trig + Chain Rule'],
             correctAnswers: ['Power Rule + Chain Rule'],
             hints: ['Constant exponent 7 with a function as the base.'],
             explanation: '$\\frac{dy}{dx} = 7(\\cos x)^6 \\cdot (-\\sin x) = -7\\cos^6(x)\\sin(x)$.'

@@ -36,13 +36,13 @@ export const calcabDerivExpLogPart5Data = {
           {
             "question": "If $f'(a) = 0$, then $(f^{-1})$ at $f(a)$:",
             "options": [
-              "Has a vertical tangent (derivative undefined)",
-              "Has derivative 0",
-              "Has derivative 1",
-              "Does not exist"
+              "Has a vertical tangent",
+              "Has a horizontal tangent",
+              "Has derivative $1/f(a)$",
+              "Has derivative equal to $0$"
             ],
             "correctAnswer": 0,
-            "explanation": "$(f^{-1})' = 1/f' = 1/0$: undefined (vertical tangent on inverse)."
+            "explanation": "$(f^{-1})' = 1/f'(a) = 1/0$: undefined, so the inverse has a vertical tangent at $f(a)$. The horizontal tangent belongs to $f$ itself at $a$."
           },
           {
             "question": "If $f(x) = 2x + 3$, then $(f^{-1})'(x) = $",
@@ -68,11 +68,7 @@ export const calcabDerivExpLogPart5Data = {
       "type": "input-boxes" as const,
       "content": "**Inverse Derivative Practice** 🧮\n\n**1)** $f(x) = x^3$, $(f^{-1})'(8) = $ (enter as fraction)\n\n**2)** $f(x) = e^x$, $(f^{-1})'(1) = $ (integer)",
       "exercise": {
-        "boxes": 2,
-        "correctAnswers": [
-          "1/12",
-          "1"
-        ],
+        "questions": [{ "question": "(1)", "answer": "1/12", "acceptableAnswers": ["1/12", "0.08333"] }, { "question": "(2)", "answer": "1", "acceptableAnswers": ["1"] }],
         "hint1": "$f(2) = 8$. $f'(x) = 3x^2$. $(f^{-1})'(8) = 1/f'(2) = 1/12$.",
         "hint2": "$f(0) = 1$. $f'(0) = 1$. $(f^{-1})'(1) = 1/1 = 1$. ($f^{-1} = \\ln x$, and $(\\ln x)' = 1/x = 1$ at $x = 1$.)",
         "explanation": "1) $1/12$. 2) $1$."
@@ -124,10 +120,10 @@ export const calcabDerivExpLogPart5Data = {
               "$(f^{-1})'(x) = 1/f'(f^{-1}(x))$",
               "$(f^{-1})'(x) = 1/f(x)$",
               "$(f^{-1})'(x) = f'(1/x)$",
-              "$(f^{-1})'(x) = -f'(x)$"
+              "$(f^{-1})'(x) = 1/f'(x)$"
             ],
             "correctAnswer": 0,
-            "explanation": "The correct formula uses $f'$ evaluated at $f^{-1}(x)$."
+            "explanation": "The correct formula uses $f'$ evaluated at $f^{-1}(x)$, not at $x$."
           },
           {
             "question": "For a table problem: to find $(f^{-1})'(a)$, first find $x$ where:",

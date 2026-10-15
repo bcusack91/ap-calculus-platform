@@ -55,9 +55,9 @@ Actual: $e^{0.1} \\approx 1.10517$. Indeed $1.1 < 1.10517$.`
           },
           {
             question: 'The linearization of $\\cos x$ at $a = \\pi/2$ is:',
-            options: ['$L(x) = -(x-\\pi/2)$', '$L(x) = 1$', '$L(x) = x$', '$L(x) = x - \\pi/2$'],
+            options: ['$L(x) = \\pi/2 - x$', '$L(x) = 1 - (x - \\pi/2)$', '$L(x) = -x$', '$L(x) = x - \\pi/2$'],
             correctAnswer: 0,
-            explanation: '$f(\\pi/2)=0$, $f\'(x)=-\\sin x$, $f\'(\\pi/2)=-1$. $L(x) = 0 + (-1)(x-\\pi/2) = -(x-\\pi/2)$.'
+            explanation: '$f(\\pi/2)=0$, $f\'(x)=-\\sin x$, $f\'(\\pi/2)=-1$. $L(x) = 0 + (-1)(x-\\pi/2) = \\pi/2 - x$. Taking $f(\\pi/2)$ as $1$ gives $1 - (x - \\pi/2)$, forgetting to shift by $a$ gives $-x$, and dropping the minus sign from $-\\sin x$ gives $x - \\pi/2$.'
           },
           {
             question: 'If $f\'\'(a) > 0$, the tangent line at $a$ gives a(n):',
@@ -90,10 +90,10 @@ Actual: $e^{0.1} \\approx 1.10517$. Indeed $1.1 < 1.10517$.`
           },
           {
             label: '$(1+x)^n \\approx 1 + nx$ for small $x$ is called:',
-            options: ['The binomial approximation', 'Taylor series', 'L\'H\\u00f4pital\'s rule', 'MVT'],
+            options: ['The binomial approximation', 'The Mean Value Theorem', 'L\'H\\u00f4pital\'s rule', 'The Taylor remainder bound'],
             correctAnswers: ['The binomial approximation'],
             hints: ['This is the first-order binomial expansion.'],
-            explanation: 'This is the linearization of $(1+x)^n$ at $x=0$, known as the binomial (or linear) approximation.'
+            explanation: 'This is the linearization of $(1+x)^n$ at $x=0$, known as the binomial (or linear) approximation. It is an approximation formula, not a theorem about slopes, a limit rule, or an error bound.'
           }
         ]
       }

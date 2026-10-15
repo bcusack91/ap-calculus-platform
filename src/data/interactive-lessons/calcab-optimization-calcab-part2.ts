@@ -54,15 +54,15 @@ Point: $\\left(\\frac{5}{2},\\, \\sqrt{\\frac{5}{2}}\\right)$
         questions: [
           {
             question: 'A rectangle inscribed under $y = 12 - x^2$ (base on x-axis) has area $A = 2x(12-x^2)$. Find the $x$ that maximizes area.',
-            options: ['$x = 2$', '$x = \\sqrt{3}$', '$x = 1$', '$x = 3$'],
+            options: ['$x = 2$', '$x = 2\\sqrt{2}$', '$x = 4$', '$x = 2\\sqrt{3}$'],
             correctAnswer: 0,
-            explanation: '$A = 24x - 2x^3$. $A\' = 24 - 6x^2 = 0$ at $x^2 = 4$, so $x = 2$.'
+            explanation: '$A = 24x - 2x^3$. $A\' = 24 - 6x^2 = 0$ at $x^2 = 4$, so $x = 2$. Differentiating $2x^3$ as $3x^2$ gives $x = 2\\sqrt{2}$, solving $x^2 = 4$ as $x = 4$ skips the square root, and $x = 2\\sqrt{3}$ is the $x$-intercept, where the height (and area) is zero.'
           },
           {
             question: 'When minimizing the distance from a point to a curve, we minimize $D^2$ instead of $D$ because:',
-            options: ['It avoids square roots and gives the same critical points', 'It changes the answer', '$D$ is always negative', '$D^2$ is easier to integrate'],
+            options: ['It avoids square roots and gives the same critical points', 'It gives a smaller minimum distance than $D$ does', '$D$ can be negative, but $D^2$ is never negative', '$D^2$ is easier to integrate than $D$'],
             correctAnswer: 0,
-            explanation: '$D$ and $D^2$ have the same critical points since $D \\geq 0$. Using $D^2$ avoids the square root in the derivative.'
+            explanation: '$D$ and $D^2$ have the same critical points since $D \\geq 0$, so the minimizing point (and distance) is unchanged. Using $D^2$ simply avoids the square root in the derivative; nothing is integrated.'
           },
           {
             question: 'An open-top box is made from a $20 \\times 20$ square by cutting squares of side $x$. The volume is:',
@@ -84,7 +84,7 @@ Point: $\\left(\\frac{5}{2},\\, \\sqrt{\\frac{5}{2}}\\right)$
             options: ['$0 < x < 10$', '$0 < x < 20$', '$0 < x < 5$', '$x > 0$'],
             correctAnswers: ['$0 < x < 10$'],
             hints: ['The cut cannot exceed half the side length.'],
-            explanation: '$20-)2x > 0$ requires $x < 10$. Also $x > 0$.'
+            explanation: '$20-2x > 0$ requires $x < 10$. Also $x > 0$.'
           },
           {
             label: 'To inscribe a rectangle in a semicircle of radius $r$, the constraint is:',

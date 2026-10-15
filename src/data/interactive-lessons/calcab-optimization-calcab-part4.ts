@@ -42,21 +42,21 @@ $$\\boxed{\\text{Optimal closed cylinder: } h = 2r}$$
         questions: [
           {
             question: 'An open-top cylinder has volume $V = 27\\pi$. What radius minimizes the surface area?',
-            options: ['$r = 3$', '$r = 2$', '$r = \\sqrt[3]{27}$', '$r = 9$'],
+            options: ['$r = 3$', '$r = 3\\sqrt{3}$', '$r = \\sqrt[3]{54}$', '$r = \\sqrt[3]{13.5}$'],
             correctAnswer: 0,
-            explanation: '$h = 27/r^2$. $S = \\pi r^2 + 2\\pi r(27/r^2) = \\pi r^2 + 54\\pi/r$. $S\' = 2\\pi r - 54\\pi/r^2 = 0$. $r^3 = 27$, $r = 3$.'
+            explanation: '$h = 27/r^2$. $S = \\pi r^2 + 2\\pi r(27/r^2) = \\pi r^2 + 54\\pi/r$. $S\' = 2\\pi r - 54\\pi/r^2 = 0$. $r^3 = 27$, $r = 3$. Differentiating $54\\pi/r$ as $-54\\pi/r$ gives $r = 3\\sqrt{3}$, differentiating $\\pi r^2$ as $\\pi r$ gives $r = \\sqrt[3]{54}$, and using the closed-cylinder area $2\\pi r^2$ gives $r = \\sqrt[3]{13.5}$.'
           },
           {
             question: 'For a closed cylinder with fixed volume, the optimal $h/r$ ratio is:',
-            options: ['$h = 2r$', '$h = r$', '$h = 3r$', '$h = \\pi r$'],
+            options: ['$h = 2r$', '$h = r$', '$h = r/2$', '$h = 2d$'],
             correctAnswer: 0,
-            explanation: 'The optimal closed cylinder has $h = 2r$ (height = diameter). This minimizes surface area for a given volume.'
+            explanation: 'The optimal closed cylinder has $h = 2r$ (height = diameter). This minimizes surface area for a given volume. $h = r$ is the open-top result, $h = r/2$ inverts the ratio, and $h = 2d$ mixes up radius and diameter.'
           },
           {
             question: 'An open-top box with square base has volume 32. $S = x^2 + 4xh$. Using $h = 32/x^2$, find $x$ that minimizes $S$.',
-            options: ['$x = 4$', '$x = 2$', '$x = 8$', '$x = \\sqrt[3]{32}$'],
+            options: ['$x = 4$', '$x = \\sqrt[3]{128}$', '$x = 8$', '$x = \\sqrt[3]{32}$'],
             correctAnswer: 0,
-            explanation: '$S = x^2 + 128/x$. $S\' = 2x - 128/x^2 = 0$. $2x^3 = 128$. $x^3 = 64$, so $x = 4$.'
+            explanation: '$S = x^2 + 128/x$. $S\' = 2x - 128/x^2 = 0$. $2x^3 = 128$. $x^3 = 64$, so $x = 4$. Forgetting to divide by $2$ gives $\\sqrt[3]{128}$, differentiating $128/x$ as $-128/x$ gives $x = 8$, and treating the box as a cube ($x^3 = 32$) gives $\\sqrt[3]{32}$.'
           }
         ]
       }
@@ -83,10 +83,10 @@ $$\\boxed{\\text{Optimal closed cylinder: } h = 2r}$$
           },
           {
             label: 'The open-top cylinder has optimal ratio $h = r$ because:',
-            options: ['Removing one circular face changes the derivative balance', 'The formula is different', 'The volume is less', 'The shape is a cone'],
-            correctAnswers: ['Removing one circular face changes the derivative balance'],
+            options: ['Only one circular base is in the surface area', 'The volume formula changes when the top is open', 'An open cylinder must hold a smaller volume', 'The side area no longer depends on the radius'],
+            correctAnswers: ['Only one circular base is in the surface area'],
             hints: ['$S = \\pi r^2 + 2\\pi rh$ (only one base).'],
-            explanation: 'With only one base ($\\pi r^2$ instead of $2\\pi r^2$), the optimization yields $h = r$ instead of $h = 2r$.'
+            explanation: 'With only one base ($\\pi r^2$ instead of $2\\pi r^2$), the optimization yields $h = r$ instead of $h = 2r$. The volume formula and the side area $2\\pi rh$ are unchanged, and the volume is fixed in both problems.'
           }
         ]
       }

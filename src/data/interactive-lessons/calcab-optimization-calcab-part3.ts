@@ -42,15 +42,15 @@ $\\boxed{P_{\\max} = 928 \\text{ at } x = 24 \\text{ widgets}}$, i.e. \\$928
         questions: [
           {
             question: '$C(x) = 0.01x^2 + 5x + 100$. What production level minimizes average cost $\\bar{C} = C(x)/x$?',
-            options: ['$x = 100$', '$x = 50$', '$x = 200$', '$x = 250$'],
+            options: ['$x = 100$', '$x = 50\\sqrt{2}$', '$x = 10000$', '$x = 10$'],
             correctAnswer: 0,
-            explanation: '$\\bar{C} = 0.01x + 5 + 100/x$. $\\bar{C}\' = 0.01 - 100/x^2 = 0$. $x^2 = 10000$, $x = 100$.'
+            explanation: '$\\bar{C} = 0.01x + 5 + 100/x$. $\\bar{C}\' = 0.01 - 100/x^2 = 0$. $x^2 = 10000$, $x = 100$. Differentiating $0.01x$ as $0.02x$ gives $x = 50\\sqrt{2}$, differentiating $100/x$ as $-100/x$ gives $x = 10000$, and dropping the $100$ gives $x = 10$.'
           },
           {
             question: 'Max profit occurs when:',
-            options: ['Marginal revenue equals marginal cost', 'Revenue is maximum', 'Cost is minimum', 'Price is highest'],
+            options: ['Marginal revenue = marginal cost', 'Revenue reaches its maximum value', 'Average cost per unit reaches its minimum', 'Total revenue equals total cost, the break-even point'],
             correctAnswer: 0,
-            explanation: '$P\'(x) = R\'(x) - C\'(x) = 0$ requires $R\'(x) = C\'(x)$.'
+            explanation: '$P\'(x) = R\'(x) - C\'(x) = 0$ requires $R\'(x) = C\'(x)$. Maximum revenue ignores cost, minimum average cost ignores revenue, and $R = C$ is break-even (zero profit).'
           },
           {
             question: 'A hotel has 100 rooms at \\$80/night (all booked). For each \\$5 increase, 2 fewer rooms are booked. Revenue is:',
@@ -76,17 +76,17 @@ $\\boxed{P_{\\max} = 928 \\text{ at } x = 24 \\text{ widgets}}$, i.e. \\$928
           },
           {
             label: 'The marginal cost $C\'(x)$ represents:',
-            options: ['The cost of producing one additional unit', 'Total cost', 'Average cost', 'Fixed cost'],
-            correctAnswers: ['The cost of producing one additional unit'],
+            options: ['Cost of one more unit', 'Total cost of $x$ units', 'Average cost per unit', 'Cost before production starts'],
+            correctAnswers: ['Cost of one more unit'],
             hints: ['It is the derivative of the cost function.'],
-            explanation: '$C\'(x)$ approximates the cost of the $(x+1)$th unit.'
+            explanation: '$C\'(x)$ approximates the cost of the $(x+1)$th unit. Total cost is $C(x)$, average cost is $C(x)/x$, and the cost before production is the fixed cost $C(0)$.'
           },
           {
             label: 'If $P\'\'(x) < 0$ for all $x$, the profit function is:',
-            options: ['Concave down (has a maximum)', 'Concave up (has a minimum)', 'Linear', 'Has no extremum'],
-            correctAnswers: ['Concave down (has a maximum)'],
+            options: ['Concave down', 'Concave up', 'Always decreasing', 'Linear'],
+            correctAnswers: ['Concave down'],
             hints: ['$P\'\' < 0$ everywhere means concave down.'],
-            explanation: 'A concave-down function on an interval has a maximum at its critical point.'
+            explanation: '$P\'\' < 0$ means $P$ is concave down, so any critical point is a maximum. It says $P\'$ is decreasing, not $P$ itself, and a linear $P$ would have $P\'\' = 0$.'
           }
         ]
       }

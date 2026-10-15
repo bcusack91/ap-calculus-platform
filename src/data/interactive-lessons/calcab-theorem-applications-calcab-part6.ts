@@ -53,9 +53,9 @@ Yes. By EVT, since $f$ is continuous on the closed interval $[-2,6]$, $f$ attain
         questions: [
           {
             question: 'Must there exist $c \\in (0,4)$ where $g\'(c) = 2$?',
-            options: ['Yes \u2014 by MVT on $[0,4]$', 'No', 'Only by IVT', 'Only if $g\'\' = 0$'],
+            options: ['Yes \u2014 by MVT on $[0,4]$', 'No — that needs $g(0) = g(4)$', 'Yes — by IVT applied to $g$ on $[0,4]$', 'No — the average rate on $[0,8]$ is $\\frac{1}{2}$'],
             correctAnswer: 0,
-            explanation: '$\\frac{g(4)-g(0)}{4-0} = \\frac{10-2}{4} = 2$. By MVT, $\\exists\\, c \\in (0,4)$ with $g\'(c) = 2$.'
+            explanation: '$\\frac{g(4)-g(0)}{4-0} = \\frac{10-2}{4} = 2$. By MVT, $\\exists\\, c \\in (0,4)$ with $g\'(c) = 2$. Equal endpoint values are Rolle’s condition, and the rate on $[0,8]$ does not matter for $(0,4)$.'
           },
           {
             question: 'Must there exist $c \\in (0,8)$ where $g(c) = 5$?',
@@ -80,15 +80,15 @@ Yes. By EVT, since $f$ is continuous on the closed interval $[-2,6]$, $f$ attain
         dropdowns: [
           {
             label: '"Must $h\'(c) = 0$ for some $c \\in (1,5)$?"',
-            options: ['Yes \u2014 Rolle\u2019s ($h(1) = h(5) = 3$)', 'No', 'Only by MVT', 'Only by IVT'],
-            correctAnswers: ['Yes \u2014 Rolle\u2019s ($h(1) = h(5) = 3$)'],
+            options: ['Yes — by Rolle’s, since $h(1) = h(5)$', 'No — $h$ need not turn around on $(1,5)$', 'Yes — by IVT, since $h(1) = h(5)$', 'Only if $h$ has its maximum at $x = 3$'],
+            correctAnswers: ['Yes — by Rolle’s, since $h(1) = h(5)$'],
             hints: ['$h(1) = h(5)$, continuous, differentiable.'],
             explanation: '$h(1) = h(5) = 3$. By Rolle\u2019s, $\\exists\\, c \\in (1,5)$ with $h\'(c) = 0$.'
           },
           {
             label: '"Must $h(c) = 5$ for some $c \\in (1,3)$?"',
-            options: ['Yes \u2014 IVT ($3 < 5 < 8$)', 'No', 'Only by MVT', 'Cannot tell'],
-            correctAnswers: ['Yes \u2014 IVT ($3 < 5 < 8$)'],
+            options: ['Yes — by IVT, since $3 < 5 < 8$', 'No — $5$ is not a value in the table', 'Yes — by MVT, since $3 < 5 < 8$', 'Only if $h$ is increasing on $[1,3]$'],
+            correctAnswers: ['Yes — by IVT, since $3 < 5 < 8$'],
             hints: ['$h(1) = 3 < 5 < 8 = h(3)$.'],
             explanation: '$h(1) = 3 < 5 < 8 = h(3)$. By IVT, $\\exists\\, c \\in (1,3)$ with $h(c) = 5$.'
           },

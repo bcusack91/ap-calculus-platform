@@ -50,9 +50,9 @@ If a ball is thrown up and returns to its starting height, at some moment the ve
         questions: [
           {
             question: '$f(0) = 3$ and $f(4) = 3$. $f$ is continuous on $[0,4]$ and differentiable on $(0,4)$. What can we conclude?',
-            options: ['$f\'(c) = 0$ for some $c \\in (0,4)$', '$f$ is constant', '$f$ has a max at $c$', '$f\'(c) = 3$'],
+            options: ['$f\'(c) = 0$ for some $c \\in (0,4)$', '$f$ is constant on $[0,4]$', '$f\'\'(c) = 0$ for some $c \\in (0,4)$', '$f\'(c) = 3$ for some $c \\in (0,4)$'],
             correctAnswer: 0,
-            explanation: 'By Rolle\u2019s: $f(0) = f(4) = 3$, continuous, differentiable $\\Rightarrow f\'(c) = 0$ for some $c \\in (0,4)$.'
+            explanation: 'By Rolle’s: $f(0) = f(4) = 3$, continuous, differentiable $\\Rightarrow f\'(c) = 0$ for some $c \\in (0,4)$. The value $3$ is $f$\'s output, not a slope, and nothing is known about $f\'\'$.'
           },
           {
             question: 'Can Rolle\u2019s Theorem be applied to $f(x) = |x - 1|$ on $[0, 2]$?',
@@ -62,7 +62,7 @@ If a ball is thrown up and returns to its starting height, at some moment the ve
           },
           {
             question: 'Rolle\u2019s Theorem is a special case of:',
-            options: ['MVT', 'IVT', 'EVT', 'FTC'],
+            options: ['Mean Value Theorem', 'Intermediate Value Theorem', 'Extreme Value Theorem', 'Fundamental Theorem of Calculus'],
             correctAnswer: 0,
             explanation: 'When $f(a) = f(b)$, MVT gives $f\'(c) = 0$, which is exactly Rolle\u2019s.'
           }
@@ -84,7 +84,7 @@ If a ball is thrown up and returns to its starting height, at some moment the ve
           },
           {
             label: 'Is $f$ continuous and differentiable?',
-            options: ['Yes \u2014 $\\sin x$ is smooth everywhere', 'No \u2014 not differentiable at $\\pi$', 'Only continuous', 'Cannot determine'],
+            options: ['Yes \u2014 $\\sin x$ is smooth everywhere', 'No — not differentiable at $x = \\pi$', 'Continuous, but not differentiable at $0$', 'No — $\\sin x$ is not continuous on $[0,\\pi]$'],
             correctAnswers: ['Yes \u2014 $\\sin x$ is smooth everywhere'],
             hints: ['$\\sin x$ is infinitely differentiable.'],
             explanation: '$\\sin x$ is continuous and differentiable on all of $\\mathbb{R}$.'

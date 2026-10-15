@@ -54,9 +54,9 @@ $$\\frac{d}{dx}\\left[\\frac{\\sin x}{e^x}\\right] = \\frac{d}{dx}[\\sin x \\cdo
         questions: [
           {
             question: 'Find $\\frac{d}{dx}[x^2 \\sin(3x)]$.',
-            options: ['$2x\\sin(3x) + 3x^2\\cos(3x)$', '$2x\\cos(3x)$', '$6x^2\\cos(3x)$', '$2x\\sin(3x) + x^2\\cos(3x)$'],
+            options: ['$2x\\sin(3x) + 3x^2\\cos(3x)$', '$2x\\cos(3x)$', '$6x\\cos(3x)$', '$2x\\sin(3x) + x^2\\cos(3x)$'],
             correctAnswer: 0,
-            explanation: 'Product Rule + Chain Rule: $2x\\sin(3x) + x^2 \\cdot \\cos(3x) \\cdot 3 = 2x\\sin(3x) + 3x^2\\cos(3x)$.'
+            explanation: 'Product Rule + Chain Rule: $2x\\sin(3x) + x^2 \\cdot \\cos(3x) \\cdot 3 = 2x\\sin(3x) + 3x^2\\cos(3x)$. Multiplying the two derivatives, $(2x)(3\\cos(3x))$, gives $6x\\cos(3x)$, which is not the Product Rule.'
           },
           {
             question: 'Find $\\frac{d}{dx}\\ln(\\cos x)$.',
@@ -108,9 +108,9 @@ But $g'(5)$ is not in the table — **insufficient information!**
         questions: [
           {
             question: 'Using the table above, if $h(x) = f(g(x))$, find $h\'(2)$.',
-            options: ['$-6$', '$6$', '$-2$', '$3$'],
+            options: ['$-6$', '$6$', '$-2$', '$-3$'],
             correctAnswer: 1,
-            explanation: '$h\'(2) = f\'(g(2)) \\cdot g\'(2) = f\'(1) \\cdot (-3) = (-2)(-3) = 6$.'
+            explanation: '$h\'(2) = f\'(g(2)) \\cdot g\'(2) = f\'(1) \\cdot (-3) = (-2)(-3) = 6$. Using $f\'(2)$ instead of $f\'(g(2))$ gives $(1)(-3) = -3$.'
           },
           {
             question: 'Using the table, if $p(x) = [f(x)]^2$, find $p\'(1)$.',
@@ -172,7 +172,7 @@ $$\\boxed{\\frac{d}{dx}\\int_a^{g(x)} f(t)\\,dt = f(g(x)) \\cdot g'(x)}$$
           },
           {
             label: '$y = 5^x$',
-            options: ['$375x^2$', '$15x^2$', '$5x^4$', '$5^x \\ln 5$'],
+            options: ['$375x^2$', '$15x^2$', '$x \\cdot 5^{x-1}$', '$5^x \\ln 5$'],
             correctAnswers: ['$5^x \\ln 5$'],
             hints: ['Exponential with constant base 5.'],
             explanation: '$\\frac{d}{dx}5^x = 5^x \\ln 5$.'

@@ -43,21 +43,21 @@ $$\\frac{d}{dx}\\int_a^{g(x)} f(t)\\,dt = f(g(x)) \\cdot g'(x)$$
         questions: [
           {
             question: '"$f$ is continuous, $f(2) = -1$, $f(5) = 4$. Show $f(c) = 2$ for some $c$." Which theorem?',
-            options: ['IVT', 'MVT', 'EVT', 'Rolle\u2019s'],
+            options: ['Intermediate Value Theorem', 'Mean Value Theorem', 'Extreme Value Theorem', 'Rolle’s Theorem'],
             correctAnswer: 0,
             explanation: 'We need $f(c) = N$. That\u2019s IVT. ($-1 < 2 < 4$, and $f$ is continuous.)'
           },
           {
             question: '"$f$ is differentiable, $f(1) = 3$, $f(5) = 11$. Show $f\'(c) = 2$." Which theorem?',
-            options: ['MVT', 'IVT', 'EVT', 'FTC'],
+            options: ['Mean Value Theorem', 'Intermediate Value Theorem', 'Extreme Value Theorem', 'Fundamental Theorem of Calculus'],
             correctAnswer: 0,
             explanation: '$\\frac{11-3}{5-1} = 2$. MVT guarantees $f\'(c) = 2$ for some $c \\in (1,5)$.'
           },
           {
             question: 'If $G(x) = \\int_1^x e^{-t^2}\\,dt$, then $G\'(3) =$',
-            options: ['$e^{-9}$', '$e^{-1}$', '$\\int_1^3 e^{-t^2}\\,dt$', '$0$'],
+            options: ['$e^{-9}$', '$-6e^{-9}$', '$\\int_1^3 e^{-t^2}\\,dt$', '$e^{-9} - e^{-1}$'],
             correctAnswer: 0,
-            explanation: 'By FTC Part 1: $G\'(x) = e^{-x^2}$. So $G\'(3) = e^{-9}$.'
+            explanation: 'By FTC Part 1: $G\'(x) = e^{-x^2}$. So $G\'(3) = e^{-9}$. Differentiating the integrand gives $-2te^{-t^2}$, or $-6e^{-9}$ at $t = 3$; subtracting the integrand at the lower limit treats $G\'$ like a definite integral.'
           }
         ]
       }
@@ -77,14 +77,14 @@ $$\\frac{d}{dx}\\int_a^{g(x)} f(t)\\,dt = f(g(x)) \\cdot g'(x)$$
           },
           {
             label: '"$f(2) = f(6) = 0$, $f$ smooth. Show $f\'(c) = 0$."',
-            options: ['Rolle\u2019s Theorem', 'IVT', 'MVT', 'EVT'],
+            options: ['Rolle\u2019s Theorem', 'Intermediate Value Theorem', 'Fundamental Theorem of Calculus', 'Extreme Value Theorem'],
             correctAnswers: ['Rolle\u2019s Theorem'],
             hints: ['$f(a) = f(b)$ and want $f\'(c) = 0$.'],
             explanation: '$f(2) = f(6)$, continuous, differentiable $\\Rightarrow$ Rolle\u2019s gives $f\'(c) = 0$.'
           },
           {
             label: '"Find $\\frac{d}{dx}\\int_2^{x^2} \\sin t\\,dt$."',
-            options: ['FTC Part 1 with chain rule', 'MVT', 'IVT', 'FTC Part 2'],
+            options: ['FTC Part 1 with chain rule', 'Mean Value Theorem', 'Intermediate Value Theorem', 'Extreme Value Theorem'],
             correctAnswers: ['FTC Part 1 with chain rule'],
             hints: ['Variable upper limit with $g(x) = x^2$.'],
             explanation: '$\\frac{d}{dx}\\int_2^{x^2}\\sin t\\,dt = \\sin(x^2)\\cdot 2x$.'

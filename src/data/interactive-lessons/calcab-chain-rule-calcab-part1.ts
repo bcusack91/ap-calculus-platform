@@ -101,15 +101,15 @@ Rewrite: $\\sqrt{x^2+1} = (x^2+1)^{1/2}$
         questions: [
           {
             question: 'Find $\\frac{d}{dx}(2x - 7)^4$.',
-            options: ['$4(2x-7)^3$', '$8(2x-7)^3$', '$4(2)^3$', '$2(2x-7)^4$'],
+            options: ['$4(2x-7)^3$', '$8(2x-7)^3$', '$16(2x-7)^3$', '$2(2x-7)^4$'],
             correctAnswer: 1,
-            explanation: 'Outer: $u^4 \\Rightarrow 4u^3 = 4(2x-7)^3$. Inner: $2x-7 \\Rightarrow 2$. Multiply: $4(2x-7)^3 \\cdot 2 = 8(2x-7)^3$.'
+            explanation: 'Outer: $u^4 \\Rightarrow 4u^3 = 4(2x-7)^3$. Inner: $2x-7 \\Rightarrow 2$. Multiply: $4(2x-7)^3 \\cdot 2 = 8(2x-7)^3$. Forgetting the inner factor gives $4(2x-7)^3$; multiplying by $2$ twice gives $16(2x-7)^3$.'
           },
           {
             question: 'Find $\\frac{d}{dx}\\cos(5x)$.',
-            options: ['$-\\sin(5x)$', '$-5\\sin(5x)$', '$5\\cos(5x)$', '$-5\\cos(5x)$'],
+            options: ['$-\\sin(5x)$', '$-5\\sin(5x)$', '$5\\cos(5x)$', '$5\\sin(5x)$'],
             correctAnswer: 1,
-            explanation: 'Outer: $\\cos(u) \\Rightarrow -\\sin(u)$. Inner: $5x \\Rightarrow 5$. Multiply: $-\\sin(5x) \\cdot 5 = -5\\sin(5x)$.'
+            explanation: 'Outer: $\\cos(u) \\Rightarrow -\\sin(u)$. Inner: $5x \\Rightarrow 5$. Multiply: $-\\sin(5x) \\cdot 5 = -5\\sin(5x)$. Dropping the negative sign of the cosine derivative gives $5\\sin(5x)$.'
           },
           {
             question: 'Find $\\frac{d}{dx}e^{4x}$.',

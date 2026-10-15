@@ -102,10 +102,10 @@ Given a GRAPH of $f'(x)$, determine features of $f(x)$:
             explanation: '$f\'(x) = x^3 - 6x^2 + 9x - 4$, so $f\'\'(x) = 3x^2 - 12x + 9 = 3(x-1)(x-3)$. $f\'\'$ changes sign at $x = 1$ and $x = 3$: two inflection points.'
           },
           {
-            question: 'If $f\'(x) > 0$ for $x < 1$ and $1 < x < 4$, what is true at $x = 1$?',
-            options: ['Local max', 'Local min', 'Inflection point', 'Neither extremum nor inflection'],
+            question: 'Since $f\'(x) < 0$ for $x < 1$ and for $1 < x < 4$, what is true at $x = 1$?',
+            options: ['A local maximum and an inflection point', 'A local minimum and an inflection point', 'Neither an extremum nor an inflection point', 'An inflection point but no extremum'],
             correctAnswer: 3,
-            explanation: 'Wait — $f\'(x) = (x-1)^2(x-4)$. For $x < 1$, $(x-1)^2 > 0$ and $(x-4) < 0$: $f\' < 0$. For $1 < x < 4$, $(x-1)^2 > 0$ and $(x-4) < 0$: $f\' < 0$. No sign change at $x = 1$, so no extremum. But $f\'\'(1) = 0$ with sign change, so inflection point.'
+            explanation: '$f\'(x) = (x-1)^2(x-4)$. For $x < 1$ and for $1 < x < 4$, $(x-1)^2 > 0$ and $(x-4) < 0$, so $f\' < 0$ on both sides. No sign change at $x = 1$, so no extremum. But $f\'\'(x) = 3(x-1)(x-3)$ changes sign at $x = 1$, so it is an inflection point. Assuming "no sign change in $f\'$" means nothing happens misses the inflection point.'
           }
         ]
       }
@@ -137,9 +137,9 @@ Given a GRAPH of $f'(x)$, determine features of $f(x)$:
         questions: [
           {
             question: 'If $f\'$ has a local maximum at $x = 3$, what is true about $f$ at $x = 3$?',
-            options: ['$f$ has a local max', '$f$ has a local min', '$f$ has an inflection point', '$f$ is undefined'],
+            options: ['$f$ has a local max', '$f$ has a local min', '$f$ has an inflection point', '$f$ has a corner'],
             correctAnswer: 2,
-            explanation: 'A local max of $f\'$ means $f\'$ changes from increasing to decreasing. That means $f\'\'$ changes from positive to negative: inflection point of $f$.'
+            explanation: 'A local max of $f\'$ means $f\'$ changes from increasing to decreasing. That means $f\'\'$ changes from positive to negative: inflection point of $f$. The max/min choices confuse $f\'$ with $f$ (they need $f\'$ to change sign), and a smooth peak in $f\'$ does not create a corner in $f$.'
           },
           {
             question: 'If $f\'(x) < 0$ and $f\'\'(x) > 0$ at $x = a$, then $f$ is:',

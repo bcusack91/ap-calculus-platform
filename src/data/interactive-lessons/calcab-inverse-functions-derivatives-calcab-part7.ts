@@ -78,15 +78,15 @@ export const calcabInverseFunctionsPart7Data = {
           },
           {
             question: '$\\frac{d}{dx}[x\\arcsin x + \\sqrt{1-x^2}]=$',
-            options: ['$\\arcsin x$', '$\\frac{x}{\\sqrt{1-x^2}}$', '$1$', '$0$'],
+            options: ['$\\arcsin x$', '$\\frac{x}{\\sqrt{1-x^2}}$', '$\\frac{1-x}{\\sqrt{1-x^2}}$', '$\\arcsin x + \\frac{2x}{\\sqrt{1-x^2}}$'],
             correctAnswer: 0,
-            explanation: 'Product rule on $x\\arcsin x$: $\\arcsin x + \\frac{x}{\\sqrt{1-x^2}}$. Derivative of $\\sqrt{1-x^2}$: $\\frac{-x}{\\sqrt{1-x^2}}$. Sum: $\\arcsin x$.'
+            explanation: 'Product rule on $x\\arcsin x$: $\\arcsin x + \\frac{x}{\\sqrt{1-x^2}}$. Derivative of $\\sqrt{1-x^2}$: $\\frac{-x}{\\sqrt{1-x^2}}$. Sum: $\\arcsin x$. Skipping the product rule (differentiating $x\\arcsin x$ as $\\frac{1}{\\sqrt{1-x^2}}$) gives $\\frac{1-x}{\\sqrt{1-x^2}}$; dropping the negative sign from the square-root term gives $\\arcsin x + \\frac{2x}{\\sqrt{1-x^2}}$.'
           },
           {
             question: 'Which justifies that $f(x) = x + e^x$ has an inverse?',
-            options: ['$f\'(x) = 1+e^x > 0$ for all $x$', '$f(0) = 1$', '$f$ is continuous', '$\\lim_{x\\to\\infty} f(x) = \\infty$'],
+            options: ['$f\'(x) = 1+e^x > 0$ for all $x$', '$f(0) = 1$', '$f$ is continuous', '$f(x) > 0$ for all $x > 0$'],
             correctAnswer: 0,
-            explanation: '$f\'(x) = 1 + e^x > 0$ everywhere, so $f$ is strictly increasing and one-to-one.'
+            explanation: '$f\'(x) = 1 + e^x > 0$ everywhere, so $f$ is strictly increasing and one-to-one. Continuity, a single value, or positivity of $f$ does not prevent $f$ from turning back.'
           }
         ]
       }

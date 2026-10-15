@@ -25,13 +25,13 @@ export const calcabConcavityPart6Data = {
           {
             "question": "If $A'' < 0$ everywhere and $A'(c) = 0$, then $c$ gives:",
             "options": [
-              "The absolute maximum of $A$",
+              "The absolute maximum",
               "A local maximum only",
               "The absolute minimum",
-              "A saddle point"
+              "An inflection point"
             ],
             "correctAnswer": 0,
-            "explanation": "Always concave down + single critical point = absolute max."
+            "explanation": "Always concave down + single critical point = absolute max, not just a local one. A minimum needs $A'' > 0$, and an inflection point needs $A''$ to change sign."
           },
           {
             "question": "Profit is maximized when:",
@@ -39,21 +39,21 @@ export const calcabConcavityPart6Data = {
               "Marginal revenue = marginal cost",
               "Revenue is maximized",
               "Cost is minimized",
-              "Units sold is maximized"
+              "Revenue equals cost"
             ],
             "correctAnswer": 0,
-            "explanation": "$P' = R' - C' = 0$ → $R' = C'$."
+            "explanation": "$P' = R' - C' = 0$ → $R' = C'$. Revenue equal to cost is the break-even point (zero profit), and maximizing revenue or minimizing cost alone ignores the other side."
           },
           {
             "question": "The \"point of diminishing returns\" is:",
             "options": [
-              "An inflection point of the revenue function",
-              "Where revenue = 0",
-              "Where profit = 0",
-              "Where cost = revenue"
+              "An inflection point of the revenue curve",
+              "The maximum point of the total revenue function",
+              "The break-even point, where profit equals zero",
+              "The point where revenue first exceeds total cost"
             ],
             "correctAnswer": 0,
-            "explanation": "It's where $R'' = 0$ — growth rate starts declining."
+            "explanation": "It's where $R'' = 0$ with a sign change: revenue keeps growing, but its growth rate starts declining. The maximum of revenue is where $R' = 0$, and break-even is where revenue and cost are equal."
           }
         ]
       }
@@ -89,7 +89,7 @@ export const calcabConcavityPart6Data = {
             "options": [
               "Critical points or endpoints",
               "Only critical points",
-              "Only endpoints",
+              "Only endpoints of the interval",
               "Inflection points"
             ]
           },
@@ -97,7 +97,7 @@ export const calcabConcavityPart6Data = {
             "label": "A continuous function on a closed interval:",
             "options": [
               "Must have absolute max and min (EVT)",
-              "May not have a max",
+              "May lack a max unless it is differentiable",
               "May not have a min",
               "Has only relative extrema"
             ]
@@ -106,7 +106,7 @@ export const calcabConcavityPart6Data = {
             "label": "If f has exactly one critical point on ℝ and f'' > 0 there:",
             "options": [
               "It's the absolute minimum",
-              "It's a local min only",
+              "It's a local min, not absolute",
               "It could be a max",
               "Need more info"
             ]
@@ -132,24 +132,24 @@ export const calcabConcavityPart6Data = {
           {
             "question": "In optimization, the second derivative test is useful because:",
             "options": [
-              "It quickly confirms max vs. min without a sign chart",
-              "It always works",
-              "It finds the critical points",
-              "It gives the optimal value"
+              "It classifies a critical point in one step",
+              "It works even when $f''(c) = 0$ at the critical point",
+              "It locates the critical points without solving $f' = 0$",
+              "It gives the optimal value without evaluating $f$"
             ],
             "correctAnswer": 0,
-            "explanation": "One computation ($f''(c)$) instead of testing multiple intervals."
+            "explanation": "One computation ($f''(c)$) replaces testing multiple intervals. It is inconclusive when $f''(c) = 0$, it does not find the critical points, and you still evaluate $f$ to get the optimal value."
           },
           {
             "question": "The Extreme Value Theorem requires:",
             "options": [
               "$f$ continuous on a closed interval $[a,b]$",
-              "$f$ differentiable everywhere",
-              "$f'(c) = 0$ for some $c$",
-              "$f$ is a polynomial"
+              "$f$ continuous on an open interval $(a,b)$",
+              "$f$ differentiable on $(a,b)$",
+              "$f'(c) = 0$ for some $c$ in $(a,b)$"
             ],
             "correctAnswer": 0,
-            "explanation": "Continuity on a closed interval guarantees absolute extrema."
+            "explanation": "Continuity on a closed interval guarantees absolute extrema. An open interval is not enough ($\\frac{1}{x}$ on $(0,1)$ has no max), differentiability is a hypothesis of the MVT, not the EVT, and $f'(c) = 0$ is a conclusion of Rolle's Theorem."
           }
         ]
       }

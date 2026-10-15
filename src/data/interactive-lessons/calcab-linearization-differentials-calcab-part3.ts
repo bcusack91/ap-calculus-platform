@@ -50,9 +50,9 @@ $dy = 0.12$ vs $\\Delta y \\approx 0.1206$ \u2014 very close!
           },
           {
             question: 'The differential $dy$ represents the change along the:',
-            options: ['Tangent line', 'Curve itself', 'Secant line', 'Normal line'],
+            options: ['Tangent line', 'Curve $y = f(x)$', 'Secant line from $x$ to $x + dx$', 'Normal line to the curve'],
             correctAnswer: 0,
-            explanation: '$dy = f\'(x)dx$ uses the tangent line slope, so $dy$ is the tangent-line change.'
+            explanation: '$dy = f\'(x)dx$ uses the tangent line slope, so $dy$ is the tangent-line change. The change along the curve is $\\Delta y$, and the secant and normal lines have different slopes.'
           },
           {
             question: 'If $y = \\sin x$, then $dy =$',

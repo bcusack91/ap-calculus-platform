@@ -180,28 +180,28 @@ $$\\boxed{\\frac{d^2y}{dx^2} = -\\frac{25}{y^3}}$$
         dropdowns: [
           {
             label: '$y^3$',
-            options: ['Power Rule only', 'Chain Rule (implicit)', 'Product Rule', 'Quotient Rule'],
-            correctAnswers: ['Chain Rule (implicit)'],
+            options: ['Power Rule only', 'Power + Chain Rule', 'Product Rule', 'Quotient Rule'],
+            correctAnswers: ['Power + Chain Rule'],
             hints: ['$y$ is a function of $x$, so differentiating $y^n$ requires the chain rule.'],
             explanation: '$\\frac{d}{dx}[y^3] = 3y^2 \\cdot \\frac{dy}{dx}$. The $\\frac{dy}{dx}$ factor comes from the chain rule.'
           },
           {
             label: '$xy^2$',
-            options: ['Power Rule only', 'Chain Rule only', 'Product Rule + Chain Rule', 'Product Rule only'],
-            correctAnswers: ['Product Rule + Chain Rule'],
+            options: ['Power + Chain Rule', 'Product Rule only', 'Product + Chain Rule', 'Quotient + Chain Rule'],
+            correctAnswers: ['Product + Chain Rule'],
             hints: ['$x$ and $y^2$ are multiplied — thats a product. $y^2$ also needs chain rule.'],
             explanation: '$\\frac{d}{dx}[xy^2] = y^2 + x \\cdot 2y\\frac{dy}{dx}$. Product rule for the product, chain rule for the $y^2$.'
           },
           {
             label: '$\\sin(y)$',
-            options: ['Power Rule only', 'Chain Rule (implicit)', 'Product Rule', 'No rule needed'],
-            correctAnswers: ['Chain Rule (implicit)'],
+            options: ['Power Rule only', 'Chain Rule', 'Product Rule', 'No rule needed'],
+            correctAnswers: ['Chain Rule'],
             hints: ['$\\sin(y)$ where $y$ is a function of $x$ — chain rule!'],
             explanation: '$\\frac{d}{dx}[\\sin(y)] = \\cos(y) \\cdot \\frac{dy}{dx}$.'
           },
           {
             label: '$x^3$',
-            options: ['Power Rule only', 'Chain Rule (implicit)', 'Product Rule + Chain Rule', 'Quotient Rule'],
+            options: ['Power Rule only', 'Chain Rule only', 'Product + Chain Rule', 'Quotient Rule'],
             correctAnswers: ['Power Rule only'],
             hints: ['No $y$ here — just a regular power of $x$.'],
             explanation: '$\\frac{d}{dx}[x^3] = 3x^2$. No chain rule needed because $x$ is the variable of differentiation.'

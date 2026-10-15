@@ -48,21 +48,21 @@ $f'(c) = 2c = 4 \\Rightarrow c = 2 \\in (1,3)$. \u2713
         questions: [
           {
             question: '$f(x) = x^3 - 3x$ on $[0, 2]$. Find the average rate of change.',
-            options: ['$1$', '$2$', '$3$', '$4$'],
+            options: ['$1$', '$2$', '$-1$', '$3$'],
             correctAnswer: 0,
-            explanation: '$f(0) = 0$, $f(2) = 8 - 6 = 2$. Average rate $= \\frac{2 - 0}{2 - 0} = 1$.'
+            explanation: '$f(0) = 0$, $f(2) = 8 - 6 = 2$. Average rate $= \\frac{2 - 0}{2 - 0} = 1$. Forgetting to divide by $2 - 0$ gives $2$; subtracting in the wrong order on top gives $-1$; averaging the endpoint slopes $f\'(0) = -3$ and $f\'(2) = 9$ gives $3$.'
           },
           {
             question: 'Continuing: $f\'(x) = 3x^2 - 3$. Solve $f\'(c) = 1$ for $c \\in (0,2)$.',
-            options: ['$c = \\frac{2}{\\sqrt{3}}$', '$c = 1$', '$c = \\sqrt{2}$', '$c = \\frac{2}{3}$'],
+            options: ['$c = \\frac{2}{\\sqrt{3}}$', '$c = 1$', '$c = \\frac{\\sqrt{3}}{2}$', '$c = \\frac{4}{3}$'],
             correctAnswer: 0,
-            explanation: '$3c^2 - 3 = 1 \\Rightarrow c^2 = 4/3 \\Rightarrow c = 2/\\sqrt{3} \\approx 1.15 \\in (0,2)$.'
+            explanation: '$3c^2 - 3 = 1 \\Rightarrow c^2 = 4/3 \\Rightarrow c = 2/\\sqrt{3} \\approx 1.15 \\in (0,2)$. Stopping at $c^2 = \\frac{4}{3}$ gives $\\frac{4}{3}$; inverting the fraction gives $\\frac{\\sqrt{3}}{2}$; $c = 1$ solves $f\'(c) = 0$ instead.'
           },
           {
             question: 'MVT cannot be applied to $f(x) = |x|$ on $[-1, 1]$ because:',
-            options: ['$f$ is not differentiable at $x = 0$', '$f$ is not continuous', '$f(-1) \\ne f(1)$', 'MVT always applies'],
+            options: ['$f$ is not differentiable at $x = 0$', '$f$ is not continuous at the corner $x = 0$', '$f(-1) = f(1)$, so Rolle’s applies instead of MVT', 'The secant slope from $-1$ to $1$ is undefined'],
             correctAnswer: 0,
-            explanation: '$|x|$ has a corner at $x = 0$, so it is not differentiable on $(-1,1)$. MVT requires differentiability.'
+            explanation: '$|x|$ is continuous but has a corner at $x = 0$, so it is not differentiable on $(-1,1)$. MVT requires differentiability. (Rolle’s needs the same hypothesis, and the secant slope here is $0$.)'
           }
         ]
       }
@@ -75,10 +75,10 @@ $f'(c) = 2c = 4 \\Rightarrow c = 2 \\in (1,3)$. \u2713
         dropdowns: [
           {
             label: 'Average rate of change:',
-            options: ['$1/4$', '$1/2$', '$1/3$', '$2/8$'],
+            options: ['$1/4$', '$1/2$', '$1/3$', '$2/9$'],
             correctAnswers: ['$1/4$'],
             hints: ['$\\frac{f(9)-f(1)}{9-1} = \\frac{3-1}{8}$.'],
-            explanation: '$\\frac{3 - 1}{8} = \\frac{2}{8} = \\frac{1}{4}$.'
+            explanation: '$\\frac{3 - 1}{9 - 1} = \\frac{2}{8} = \\frac{1}{4}$. Dividing by $9$ instead of $9 - 1$ gives $2/9$.'
           },
           {
             label: '$f\'(x) = \\frac{1}{2\\sqrt{x}}$. Solve $f\'(c) = 1/4$:',
@@ -89,8 +89,8 @@ $f'(c) = 2c = 4 \\Rightarrow c = 2 \\in (1,3)$. \u2713
           },
           {
             label: 'Is the tangent at $c = 4$ parallel to the secant?',
-            options: ['Yes \u2014 that is exactly what MVT states', 'No \u2014 MVT is about existence only', 'Only for polynomials', 'Cannot determine'],
-            correctAnswers: ['Yes \u2014 that is exactly what MVT states'],
+            options: ['Yes — $f\'(4)$ equals the secant slope', 'No — MVT only proves existence', 'Only if $f$ is a polynomial', 'Cannot tell without graphing $f$'],
+            correctAnswers: ['Yes — $f\'(4)$ equals the secant slope'],
             hints: ['MVT: $f\'(c) =$ slope of secant.'],
             explanation: '$f\'(4) = 1/4$ = average rate = slope of secant. The tangent is parallel to the secant.'
           }

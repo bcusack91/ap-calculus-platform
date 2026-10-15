@@ -60,9 +60,9 @@ export const calcabLinearizationPart6Data = {
           },
           {
             question: 'The linearization of $f(x) = e^x$ at $a = 1$ is:',
-            options: ['$L(x) = e + e(x-1)$', '$L(x) = 1 + x$', '$L(x) = e^x$', '$L(x) = e(x-1)$'],
+            options: ['$L(x) = ex$', '$L(x) = 1 + x$', '$L(x) = e + (x-1)$', '$L(x) = e(x-1)$'],
             correctAnswer: 0,
-            explanation: '$f(1) = e$, $f\'(1) = e$. $L(x) = e + e(x-1)$.'
+            explanation: '$f(1) = e$, $f\'(1) = e$. $L(x) = e + e(x-1) = ex$. Linearizing at $0$ instead gives $1 + x$, using a slope of $1$ gives $e + (x-1)$, and dropping $f(1)$ gives $e(x-1)$.'
           }
         ]
       }
@@ -89,8 +89,8 @@ export const calcabLinearizationPart6Data = {
           },
           {
             label: 'An AP justification for over/underestimate must include:',
-            options: ['Sign of $f\'\'$, concavity conclusion, and over/under statement', 'Just the word "overestimate"', 'Only $f\'\'$ value', 'A graph'],
-            correctAnswers: ['Sign of $f\'\'$, concavity conclusion, and over/under statement'],
+            options: ['Sign of $f\'\'$, concavity, and over/under', 'The word "overestimate" with no reasoning', 'The value of $f\'\'$ with no conclusion', 'A sketch of the tangent line and curve'],
+            correctAnswers: ['Sign of $f\'\'$, concavity, and over/under'],
             hints: ['All three pieces are needed for full credit.'],
             explanation: 'State $f\'\' > 0$ (or $< 0$), conclude concave up (or down), then state under/overestimate.'
           }

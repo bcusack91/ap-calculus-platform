@@ -75,22 +75,22 @@ $$(f^{-1})'(8) = \\frac{1}{f'(2)} = \\boxed{\\frac{1}{6}}$$
         dropdowns: [
           {
             label: 'For $(f^{-1})\'(a)$, look in the table for:',
-            options: ['Row where $f(x) = a$', 'Row where $x = a$', 'Row where $f\'(x) = a$', 'The last row'],
+            options: ['Row where $f(x) = a$', 'Row where $x = a$', 'Row where $f\'(x) = a$', 'Row where $x = 1/a$'],
             correctAnswers: ['Row where $f(x) = a$'],
             hints: ['$f(b)=a$ tells you $b = f^{-1}(a)$.'],
             explanation: 'Look for $a$ in the $f(x)$ column, not the $x$ column.'
           },
           {
             label: 'Table has $f(3)=5, f\'(3)=0$. $(f^{-1})\'(5)$ is:',
-            options: ['Undefined', '$0$', '$\\frac{1}{5}$', 'Infinite'],
+            options: ['Undefined', '$0$', '$\\frac{1}{5}$', '$\\frac{1}{3}$'],
             correctAnswers: ['Undefined'],
             hints: ['$1/f\'(3) = 1/0$.'],
             explanation: '$f\'(3)=0$ means the inverse has a vertical tangent at $x=5$.'
           },
           {
             label: 'You need $(f^{-1})\'(6)$ but no row has $f(x)=6$. Then:',
-            options: ['Cannot find exact answer from the table', 'Use $x=6$ row instead', '$\\frac{1}{6}$', 'Answer is 0'],
-            correctAnswers: ['Cannot find exact answer from the table'],
+            options: ['Not determined by the table', '$1/f\'(6)$, from the $x = 6$ row', '$\\frac{1}{6}$, the reciprocal of $6$', '$0$, since no row matches'],
+            correctAnswers: ['Not determined by the table'],
             hints: ['You need $f(b) = 6$ to apply the formula.'],
             explanation: 'Without a row where $f(x)=6$, you cannot apply the formula directly.'
           }

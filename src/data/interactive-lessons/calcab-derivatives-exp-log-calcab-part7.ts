@@ -38,22 +38,22 @@ export const calcabDerivExpLogPart7Data = {
             "options": [
               "$2^{\\sin x} \\cdot \\cos x \\cdot \\ln 2$",
               "$2^{\\sin x} \\cdot \\cos x$",
-              "$2^{\\cos x}$",
+              "$2^{\\sin x} \\cdot \\frac{\\cos x}{\\ln 2}$",
               "$\\sin x \\cdot 2^{\\sin x - 1}$"
             ],
             "correctAnswer": 0,
-            "explanation": "$a^{g(x)} \\cdot g'(x) \\cdot \\ln a$ with $a = 2$, $g(x) = \\sin x$."
+            "explanation": "$a^{g(x)} \\cdot g'(x) \\cdot \\ln a$ with $a = 2$, $g(x) = \\sin x$. The factor $\\ln 2$ multiplies; it does not divide, and it cannot be dropped."
           },
           {
             "question": "$\\frac{d}{dx}[x^x] = $",
             "options": [
               "$x^x(\\ln x + 1)$",
-              "$x \\cdot x^{x-1}$",
+              "$x^x$",
               "$x^x \\ln x$",
               "$x^x / x$"
             ],
             "correctAnswer": 0,
-            "explanation": "Log diff: $\\ln y = x\\ln x$, $y'/y = \\ln x + 1$, $y' = x^x(\\ln x + 1)$."
+            "explanation": "Log diff: $\\ln y = x\\ln x$, $y'/y = \\ln x + 1$, $y' = x^x(\\ln x + 1)$. The power rule ($x \\cdot x^{x-1} = x^x$) and the exponential rule ($x^x \\ln x$) each capture only half, because both the base and the exponent vary."
           }
         ]
       }
@@ -66,13 +66,9 @@ export const calcabDerivExpLogPart7Data = {
     {
       "id": "del7-input",
       "type": "input-boxes" as const,
-      "content": "**Final Challenge** 🧮\n\n**1)** $\\frac{d}{dx}[e^x \\cdot \\ln x]$ at $x = 1$: (enter as e+1... wait, it's just e)\n\n**2)** $\\frac{d}{dx}[3^x]$ at $x = 0$: (enter as ln3)",
+      "content": "**Final Challenge** 🧮\n\n**1)** $\\frac{d}{dx}[e^x \\cdot \\ln x]$ at $x = 1$: (enter as e)\n\n**2)** $\\frac{d}{dx}[3^x]$ at $x = 0$: (enter as ln3)",
       "exercise": {
-        "boxes": 2,
-        "correctAnswers": [
-          "e",
-          "ln3"
-        ],
+        "questions": [{ "question": "(1)", "answer": "e", "acceptableAnswers": ["e", "2.718"] }, { "question": "(2)", "answer": "ln3", "acceptableAnswers": ["ln3", "ln(3)", "ln 3", "1.099"] }],
         "hint1": "Product rule: $e^x \\ln x + e^x/x$. At $x = 1$: $e(0) + e(1) = e$.",
         "hint2": "$3^0 \\ln 3 = \\ln 3$.",
         "explanation": "1) $e$. 2) $\\ln 3$."
@@ -88,24 +84,24 @@ export const calcabDerivExpLogPart7Data = {
             "label": "$\\frac{d}{dx}[e^x]$ appears on the AP formula sheet:",
             "options": [
               "No — memorize it",
-              "Yes",
-              "Only for BC",
-              "Sometimes"
+              "Yes — on the reference page",
+              "Only on the BC exam",
+              "Only in calculator sections"
             ]
           },
           {
             "label": "The most common AP question on exp/log derivatives involves:",
             "options": [
-              "Chain rule applications like $e^{g(x)}$",
-              "Simple $e^x$",
-              "Base-10 logarithms",
-              "Complex numbers"
+              "Chain rule with $e^{g(x)}$",
+              "Derivatives of plain $e^x$ only",
+              "Base-10 logarithm identities",
+              "Euler's formula with complex numbers"
             ]
           }
         ],
         "correctAnswers": [
           "No — memorize it",
-          "Chain rule applications like $e^{g(x)}$"
+          "Chain rule with $e^{g(x)}$"
         ],
         "hint1": "The AP formula sheet has very few derivative formulas.",
         "hint2": "AP loves testing chain rule with exponential and log compositions.",
@@ -124,21 +120,21 @@ export const calcabDerivExpLogPart7Data = {
               "$e^x$",
               "$x^{100}$",
               "$\\ln(x^{100})$",
-              "$100^x$... wait, $100^x$ grows faster than $e^x$!"
+              "$2^x$"
             ],
             "correctAnswer": 0,
-            "explanation": "Among the first three options, $e^x$ grows fastest. $100^x$ would be faster but isn't listed correctly as an option."
+            "explanation": "Exponentials beat powers and logarithms, and between exponentials the larger base wins: $e \\approx 2.718 > 2$, so $e^x$ outgrows $2^x$. $\\ln(x^{100}) = 100\\ln x$ grows slowest of all."
           },
           {
             "question": "The function $f(x) = e^x - x$ has minimum value:",
             "options": [
               "$1$ at $x = 0$",
               "$0$ at $x = 0$",
-              "$e$ at $x = 1$",
-              "$-1$ at $x = -1$"
+              "$e - 1$ at $x = 1$",
+              "No minimum value"
             ],
             "correctAnswer": 0,
-            "explanation": "$f' = e^x - 1 = 0$ at $x = 0$. $f(0) = 1 - 0 = 1$."
+            "explanation": "$f' = e^x - 1 = 0$ at $x = 0$, and $f'$ changes from negative to positive there. $f(0) = 1 - 0 = 1$. Treating $e^0$ as $0$ gives $0$; solving $e^x = e$ instead gives $x = 1$."
           }
         ]
       }

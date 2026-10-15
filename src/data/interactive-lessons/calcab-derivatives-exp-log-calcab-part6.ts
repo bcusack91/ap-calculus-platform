@@ -27,11 +27,11 @@ export const calcabDerivExpLogPart6Data = {
             "options": [
               "$x = 2 \\pm \\sqrt{2}$",
               "$x = 0$ and $x = 2$",
-              "$x = 1$",
+              "$x = 4 \\pm 2\\sqrt{2}$",
               "$x = 2$"
             ],
             "correctAnswer": 0,
-            "explanation": "$f'' = e^{-x}(x^2 - 4x + 2) = 0$ when $x = 2 \\pm \\sqrt{2}$."
+            "explanation": "$f'' = e^{-x}(x^2 - 4x + 2) = 0$ when $x = \\frac{4 \\pm \\sqrt{8}}{2} = 2 \\pm \\sqrt{2}$. Forgetting to divide by $2$ gives $4 \\pm 2\\sqrt{2}$; $x = 0$ and $x = 2$ are the critical points."
           },
           {
             "question": "As $x \\to \\infty$, $e^x/x^{100}$:",
@@ -39,21 +39,21 @@ export const calcabDerivExpLogPart6Data = {
               "$\\to \\infty$",
               "$\\to 0$",
               "$\\to 1$",
-              "Oscillates"
+              "Does not exist"
             ],
             "correctAnswer": 0,
-            "explanation": "Exponential growth dominates any polynomial."
+            "explanation": "Exponential growth dominates any polynomial, so the ratio grows without bound. Applying L'Hôpital's Rule $100$ times leaves $\\frac{e^x}{100!} \\to \\infty$."
           },
           {
             "question": "$\\ln x$ grows _____ than $\\sqrt{x}$:",
             "options": [
               "Slower",
-              "Faster",
+              "Faster for large $x$",
               "At the same rate",
-              "It depends"
+              "It depends on $x$"
             ],
             "correctAnswer": 0,
-            "explanation": "$\\ln x / \\sqrt{x} \\to 0$ as $x \\to \\infty$."
+            "explanation": "$\\ln x / \\sqrt{x} \\to 0$ as $x \\to \\infty$, and $\\ln x < \\sqrt{x}$ for every $x > 0$."
           }
         ]
       }
@@ -68,11 +68,7 @@ export const calcabDerivExpLogPart6Data = {
       "type": "input-boxes" as const,
       "content": "**Graphing Practice** 🧮\n\n**1)** $f(x) = xe^{-x}$ max value: (enter as 1/e)\n\n**2)** $f(x) = \\ln x / x$ max value: (enter as 1/e)",
       "exercise": {
-        "boxes": 2,
-        "correctAnswers": [
-          "1/e",
-          "1/e"
-        ],
+        "questions": [{ "question": "(1)", "answer": "1/e", "acceptableAnswers": ["1/e", "e^-1", "e^(-1)", "0.3679"] }, { "question": "(2)", "answer": "1/e", "acceptableAnswers": ["1/e", "e^-1", "e^(-1)", "0.3679"] }],
         "hint1": "Max at $x = 1$: $f(1) = 1 \\cdot e^{-1} = 1/e$.",
         "hint2": "Max at $x = e$: $f(e) = \\ln e / e = 1/e$.",
         "explanation": "Both functions have maximum value $1/e$, an interesting coincidence."
@@ -105,17 +101,17 @@ export const calcabDerivExpLogPart6Data = {
           {
             "label": "$e^x$ passes $x^{100}$ at approximately:",
             "options": [
-              "$x \\approx 700$",
+              "$x \\approx 650$",
               "$x \\approx 100$",
               "$x \\approx 10$",
-              "$x \\approx 1$"
+              "It never does"
             ]
           }
         ],
         "correctAnswers": [
           "$0$",
           "$0$",
-          "$x \\approx 700$"
+          "$x \\approx 650$"
         ],
         "hint1": "Exponential always wins.",
         "hint2": "$x \\to 0^+$: $x \\to 0$ beats $\\ln x \\to -\\infty$.",
@@ -145,11 +141,11 @@ export const calcabDerivExpLogPart6Data = {
             "options": [
               "$1$",
               "$0$",
-              "$e$",
+              "$e - 1$",
               "$-1$"
             ],
             "correctAnswer": 0,
-            "explanation": "$f' = e^x - 1 = 0$ at $x = 0$. $f(0) = 1 - 0 = 1$."
+            "explanation": "$f' = e^x - 1 = 0$ at $x = 0$. $f(0) = 1 - 0 = 1$. Treating $e^0$ as $0$ gives $0$; evaluating at $x = 1$ gives $e - 1$."
           }
         ]
       }

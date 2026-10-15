@@ -121,9 +121,9 @@ $f(x) = x^3 - 6x^2 + 9x + 1$
           },
           {
             question: 'At an inflection point of $f$, which is true?',
-            options: ['$f\'$ must equal zero', '$f\'\'$ must equal zero', '$f\'\'$ must change sign', '$f$ must have a local extremum'],
+            options: ['$f\'$ must equal zero', '$f\'\'$ must equal zero', '$f\'\'$ must change sign', '$f\'$ must change sign'],
             correctAnswer: 2,
-            explanation: 'An inflection point requires a sign change in $f\'\'$. $f\'\'$ is usually zero but could also be undefined.'
+            explanation: 'An inflection point requires a sign change in $f\'\'$. $f\'\'$ is usually zero there but could instead be undefined, and a sign change in $f\'$ marks a local extremum, not an inflection point. $f\'$ need not be zero at an inflection point either.'
           }
         ]
       }

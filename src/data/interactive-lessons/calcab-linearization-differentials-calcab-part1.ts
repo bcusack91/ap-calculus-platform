@@ -60,15 +60,15 @@ Actual: $\\sqrt{4.1} \\approx 2.02485$. Error $\\approx 0.00015$!
           },
           {
             question: 'The linearization of $f(x) = \\sin x$ at $a = 0$ is:',
-            options: ['$L(x) = x$', '$L(x) = 1$', '$L(x) = x + 1$', '$L(x) = 0$'],
+            options: ['$L(x) = x$', '$L(x) = \\cos x$', '$L(x) = x + 1$', '$L(x) = -x$'],
             correctAnswer: 0,
-            explanation: '$f(0) = 0$, $f\'(0) = \\cos 0 = 1$. $L(x) = 0 + 1(x-0) = x$.'
+            explanation: '$f(0) = 0$, $f\'(0) = \\cos 0 = 1$. $L(x) = 0 + 1(x-0) = x$. Writing $f\'(x)$ in place of $L(x)$ gives $\\cos x$, taking $f(0)$ as $\\cos 0 = 1$ gives $x + 1$, and a sign slip on the derivative gives $-x$.'
           },
           {
             question: 'When choosing $a$ for linearization, the best choice is:',
-            options: ['A nearby value where $f(a)$ is easy to compute', 'The value of $x$ itself', 'Always $a = 0$', 'The largest integer less than $x$'],
+            options: ['A nearby $a$ where $f(a)$ and $f\'(a)$ are easy to find', 'The input $x$ itself, so there is no error', 'Always $a = 0$, since $f(0)$ is simplest', 'The integer just below $x$, whatever $f$ is'],
             correctAnswer: 0,
-            explanation: 'Pick $a$ close to $x$ where both $f(a)$ and $f\'(a)$ are known exactly. For $\\sqrt{4.1}$, use $a = 4$.'
+            explanation: 'Pick $a$ close to $x$ where both $f(a)$ and $f\'(a)$ are known exactly. For $\\sqrt{4.1}$, use $a = 4$. Using $x$ itself requires the very value you are trying to approximate, and $a = 0$ or the integer below $x$ may be far away or give values you cannot compute exactly.'
           }
         ]
       }

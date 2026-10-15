@@ -101,15 +101,15 @@ $$f'(g(x)) \\cdot g'(x) = 1 \\quad \\Longrightarrow \\quad g'(x) = \\frac{1}{f'(
           },
           {
             label: 'If $f\'(b) = 0$, then $(f^{-1})\'(a)$ is:',
-            options: ['Undefined (division by zero)', '$0$', '$1$', 'Infinite'],
-            correctAnswers: ['Undefined (division by zero)'],
+            options: ['Undefined', '$0$', '$1$', '$\\frac{1}{a}$'],
+            correctAnswers: ['Undefined'],
             hints: ['$(f^{-1})\'(a) = 1/f\'(b)$. What happens when $f\'(b) = 0$?'],
             explanation: '$f\'(b) = 0$ means $f$ has a horizontal tangent at $b$, so $f^{-1}$ has a vertical tangent at $a$.'
           },
           {
             label: 'The inverse derivative formula requires $f$ to be:',
-            options: ['One-to-one (invertible) near the point', 'Polynomial', 'Defined everywhere', 'Even'],
-            correctAnswers: ['One-to-one (invertible) near the point'],
+            options: ['One-to-one near the point', 'A polynomial function', 'Defined for all real numbers', 'Continuous on all of $\\mathbb{R}$'],
+            correctAnswers: ['One-to-one near the point'],
             hints: ['$f^{-1}$ exists only if $f$ is one-to-one.'],
             explanation: 'The function must pass the horizontal line test (be one-to-one) to have an inverse.'
           }

@@ -59,9 +59,9 @@ Approximate $f(3.9)$: $L(3.9) = f(4) + f'(4)(-0.1) = 11 + (-1)(-0.1) = 11.1$`
           },
           {
             question: 'For a sphere, the relative error in volume is how many times the relative error in radius?',
-            options: ['$3$', '$2$', '$4$', '$\\pi$'],
+            options: ['$3$', '$2$', '$4$', '$\\frac{4}{3}$'],
             correctAnswer: 0,
-            explanation: '$V = \\frac{4}{3}\\pi r^3$. $dV/V = 3\\,dr/r$. The multiplier is 3.'
+            explanation: '$V = \\frac{4}{3}\\pi r^3$. $dV/V = 3\\,dr/r$. The multiplier is the exponent $3$, not the coefficient $\\frac{4}{3}$; the exponent $2$ belongs to area, and $4$ comes from $4\\pi r^2$.'
           }
         ]
       }

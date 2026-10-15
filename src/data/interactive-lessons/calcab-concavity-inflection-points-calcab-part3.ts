@@ -25,13 +25,13 @@ export const calcabConcavityPart3Data = {
           {
             "question": "If $f' > 0$ and $f'' < 0$, the graph looks like:",
             "options": [
-              "Increasing and bending down (like top of a hill approach)",
+              "Increasing and bending down",
               "Increasing and bending up",
               "Decreasing and bending down",
               "Decreasing and bending up"
             ],
             "correctAnswer": 0,
-            "explanation": "$f' > 0$: increasing. $f'' < 0$: concave down."
+            "explanation": "$f' > 0$: increasing. $f'' < 0$: concave down, like the climb approaching the top of a hill."
           },
           {
             "question": "The number of shape combinations is:",

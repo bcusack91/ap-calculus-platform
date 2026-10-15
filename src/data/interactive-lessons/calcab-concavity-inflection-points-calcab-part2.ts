@@ -36,13 +36,13 @@ export const calcabConcavityPart2Data = {
           {
             "question": "If $f'(5) = 0$ and $f''(5) = 3$:",
             "options": [
-              "Local minimum at $x = 5$",
+              "Local minimum",
               "Local maximum",
               "Inflection point",
               "Neither"
             ],
             "correctAnswer": 0,
-            "explanation": "$f' = 0$ and $f'' > 0$ → concave up → local minimum."
+            "explanation": "$f'(5) = 0$ and $f''(5) > 0$ → concave up → local minimum at $x = 5$."
           },
           {
             "question": "The second derivative test fails when:",
@@ -88,7 +88,7 @@ export const calcabConcavityPart2Data = {
             "label": "For $f(x) = x^6$ at $x = 0$:",
             "options": [
               "2nd DT fails, use 1st DT",
-              "2nd DT shows minimum",
+              "2nd DT shows a local minimum",
               "2nd DT shows maximum",
               "Not a critical point"
             ]
@@ -97,18 +97,18 @@ export const calcabConcavityPart2Data = {
             "label": "Advantage of 2nd DT over 1st DT:",
             "options": [
               "Faster — just plug into f''",
-              "Always works",
-              "Gives more information",
-              "Easier to compute"
+              "Works even when f''(c) = 0",
+              "Also finds inflection points",
+              "Needs no critical points first"
             ]
           },
           {
             "label": "If $f'(c) = 0$ and $f''(c) = -10$:",
             "options": [
               "Local maximum at c",
-              "Local minimum",
-              "Inflection point",
-              "Saddle point"
+              "Local minimum at c",
+              "Inflection point at c",
+              "Neither max nor min"
             ]
           }
         ],
@@ -132,24 +132,24 @@ export const calcabConcavityPart2Data = {
           {
             "question": "On the AP exam, when asked to \"justify\" a max/min, you should:",
             "options": [
-              "State the test used and show the sign of f''(or sign change of f')",
-              "Just state \"it's a maximum\"",
-              "Show the graph",
-              "Use both tests"
+              "Name the test and show the sign of $f'$ or $f''$",
+              "Show that $f'(c) = 0$ and give the value of $f(c)$",
+              "Cite a calculator graph showing the turning point",
+              "Sketch the graph and point out where it turns around"
             ],
             "correctAnswer": 0,
-            "explanation": "AP rubric requires naming and applying the specific test."
+            "explanation": "The AP rubric requires naming and applying the specific test: the sign change of $f'$ (First Derivative Test) or the sign of $f''$ at a critical point (Second Derivative Test). $f'(c) = 0$ with a function value, a calculator graph, or a sketch does not earn the justification point."
           },
           {
             "question": "$f'(a) = 0$, $f''(a) = 0$, $f'''(a) \\neq 0$. Then $x = a$ is:",
             "options": [
-              "An inflection point (not a max/min)",
+              "An inflection point",
               "A local max",
               "A local min",
               "Cannot determine"
             ],
             "correctAnswer": 0,
-            "explanation": "If 2nd derivative is 0 and 3rd is nonzero, it's an inflection point."
+            "explanation": "If $f''(a) = 0$ and $f'''(a) \\neq 0$, then $f''$ changes sign at $a$, so $x = a$ is an inflection point, not a max or min. The Second Derivative Test alone is inconclusive here, but the third derivative settles it."
           }
         ]
       }

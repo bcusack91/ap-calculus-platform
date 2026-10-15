@@ -44,15 +44,15 @@ So $\\sqrt{26} \\approx 5.1 - 0.001 = 5.099$. Actual: $5.0990\\ldots$ \u2014 ext
         questions: [
           {
             question: 'Using $L(x)$ at $a = 0$ for $e^x$, approximate $e^{0.5}$. This is:',
-            options: ['An underestimate (since $f\'\' > 0$)', 'An overestimate', 'Exact', 'Cannot determine'],
+            options: ['An underestimate, since $e^x$ is concave up', 'An overestimate, since $e^x$ is increasing', 'Exact, since $(e^x)\' = e^x$', 'An overestimate, since $0.5$ is not small'],
             correctAnswer: 0,
-            explanation: '$f\'\'(x) = e^x > 0$, so $f$ is concave up. The tangent line lies below the curve: underestimate.'
+            explanation: '$f\'\'(x) = e^x > 0$, so $f$ is concave up and the tangent line lies below the curve: underestimate. Being increasing ($f\' > 0$) does not decide over or under, and the size of $0.5$ affects how large the error is, not its direction.'
           },
           {
             question: 'As $dx \\to 0$, the ratio $\\Delta y / dy$:',
-            options: ['Approaches $1$', 'Approaches $0$', 'Approaches $\\infty$', 'Stays constant'],
+            options: ['Approaches $1$', 'Approaches $0$, like $dx$', 'Approaches $\\infty$', 'Approaches $f\'(x)$'],
             correctAnswer: 0,
-            explanation: '$dy \\approx \\Delta y$ for small $dx$, so $\\Delta y/dy \\to 1$.'
+            explanation: '$dy \\approx \\Delta y$ for small $dx$, so $\\Delta y/dy \\to 1$. Both quantities shrink to $0$, but their ratio does not; $f\'(x)$ is the limit of $\\Delta y/dx$, a different ratio.'
           },
           {
             question: 'The error in linear approximation is proportional to:',
@@ -85,10 +85,10 @@ So $\\sqrt{26} \\approx 5.1 - 0.001 = 5.099$. Actual: $5.0990\\ldots$ \u2014 ext
           },
           {
             label: 'If we used $a = 4$ to approximate $\\sqrt{10}$, the error would be:',
-            options: ['Much larger (far from $a$)', 'About the same', 'Smaller', 'Zero'],
-            correctAnswers: ['Much larger (far from $a$)'],
+            options: ['Much larger', 'About the same', 'Slightly smaller', 'Slightly larger'],
+            correctAnswers: ['Much larger'],
             hints: ['$x - a = 6$, much larger than $0.5$.'],
-            explanation: 'Error $\\propto (x-a)^2$. With $(x-a) = 6$, the error is $(6/0.5)^2 = 144$ times larger!'
+            explanation: 'Error $\\propto (x-a)^2$. With $(x-a) = 6$ instead of $0.5$, the error is about $(6/0.5)^2 = 144$ times larger, because $10$ is far from $a = 4$.'
           }
         ]
       }

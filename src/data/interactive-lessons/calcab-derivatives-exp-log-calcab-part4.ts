@@ -28,10 +28,10 @@ export const calcabDerivExpLogPart4Data = {
               "$\\ln 2 / 5$",
               "$2/5$",
               "$5/\\ln 2$",
-              "$\\ln 5 / 2$"
+              "$5\\ln 2$"
             ],
             "correctAnswer": 0,
-            "explanation": "$t_d = \\ln 2 / k \\implies k = \\ln 2 / 5$."
+            "explanation": "$t_d = \\ln 2 / k \\implies k = \\ln 2 / 5$. Solving $5 = \\ln 2 / k$ as $k = 5\\ln 2$ multiplies instead of divides."
           },
           {
             "question": "$\\frac{dy}{dt} = -3y$ has solution:",
@@ -39,10 +39,10 @@ export const calcabDerivExpLogPart4Data = {
               "$y = Ce^{-3t}$",
               "$y = -3t + C$",
               "$y = Ce^{3t}$",
-              "$y = C/3$"
+              "$y = e^{-3t}$"
             ],
             "correctAnswer": 0,
-            "explanation": "$k = -3$, so $y = Ce^{-3t}$."
+            "explanation": "$k = -3$, so $y = Ce^{-3t}$. Without the constant $C$ you get only the one solution with $y(0) = 1$."
           },
           {
             "question": "Carbon-14 has half-life 5730 years. $k \\approx $",
@@ -87,10 +87,10 @@ export const calcabDerivExpLogPart4Data = {
           {
             "label": "$T(t) = 70 + 130e^{-0.05t}$ models:",
             "options": [
-              "Newton's Law of Cooling (room temp 70°)",
-              "Exponential growth",
-              "Logistic growth",
-              "Linear cooling"
+              "Newton's Law of Cooling",
+              "Unlimited exponential growth",
+              "Logistic growth toward 200°",
+              "Linear cooling from 200°"
             ]
           },
           {
@@ -108,12 +108,12 @@ export const calcabDerivExpLogPart4Data = {
               "Decreases over time",
               "Increases over time",
               "Stays constant",
-              "Oscillates"
+              "Increases, then decreases"
             ]
           }
         ],
         "correctAnswers": [
-          "Newton's Law of Cooling (room temp 70°)",
+          "Newton's Law of Cooling",
           "$y = 5e^{2t}$",
           "Decreases over time"
         ],
@@ -144,12 +144,12 @@ export const calcabDerivExpLogPart4Data = {
             "question": "For $y = Ce^{kt}$, the percentage growth rate is:",
             "options": [
               "$100k\\%$ per unit time",
-              "$k$ per unit time",
+              "$k\\%$ per unit time",
               "$Ck$ per unit time",
-              "$e^k \\%$ per unit time"
+              "$e^k\\%$ per unit time"
             ],
             "correctAnswer": 0,
-            "explanation": "$\\frac{y'}{y} = k$, so the relative rate is $k$ = $100k\\%$."
+            "explanation": "$\\frac{y'}{y} = k$, so the relative rate is $k$, which is $100k\\%$. Writing $k\\%$ forgets to convert the decimal rate to a percent."
           }
         ]
       }

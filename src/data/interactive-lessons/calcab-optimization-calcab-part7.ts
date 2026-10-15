@@ -37,9 +37,9 @@ export const calcabOptimizationPart7Data = {
         questions: [
           {
             question: 'A farmer with 400 m of fencing encloses a rectangle along a river (3 sides fenced). Maximum area is:',
-            options: ['$20000$ m$^2$', '$10000$ m$^2$', '$40000$ m$^2$', '$16000$ m$^2$'],
+            options: ['$20000$ m$^2$', '$10000$ m$^2$', '$40000$ m$^2$', '$x = 100$ m'],
             correctAnswer: 0,
-            explanation: '$2x+y=400$, $y=400-2x$. $A=x(400-2x)$. $A\'=400-4x=0$ at $x=100$. $A=100 \\times 200 = 20000$.'
+            explanation: '$2x+y=400$, $y=400-2x$. $A=x(400-2x)$. $A\'=400-4x=0$ at $x=100$. $A=100 \\times 200 = 20000$ m$^2$. Fencing all four sides gives $10000$, fencing only one width gives $40000$, and $x = 100$ m is the width, not the area.'
           },
           {
             question: 'An open-top box from a $10 \\times 10$ square has volume $V = x(10-2x)^2$. The domain is:',
@@ -49,15 +49,15 @@ export const calcabOptimizationPart7Data = {
           },
           {
             question: 'Max profit occurs where:',
-            options: ['$R\'(x) = C\'(x)$', '$R(x) = C(x)$', '$R\'(x) = 0$', '$C\'(x) = 0$'],
+            options: ['$R\'(x) = C\'(x)$', '$R(x) = C(x)$', '$R\'(x) = 0$', '$C\'(x) = C(x)/x$'],
             correctAnswer: 0,
-            explanation: '$P\'(x) = R\'(x) - C\'(x) = 0$ when marginal revenue = marginal cost.'
+            explanation: '$P\'(x) = R\'(x) - C\'(x) = 0$ when marginal revenue = marginal cost. $R(x) = C(x)$ is break-even, $R\'(x) = 0$ maximizes revenue only, and $C\'(x) = C(x)/x$ minimizes average cost.'
           },
           {
             question: 'For a closed cylinder with fixed volume, the optimal height-to-radius ratio is:',
-            options: ['$h = 2r$', '$h = r$', '$h = \\pi r$', '$h = r/2$'],
+            options: ['$h = 2r$', '$h = r$', '$h = 2d$', '$h = r/2$'],
             correctAnswer: 0,
-            explanation: 'The optimal closed cylinder has $h = 2r$ (height = diameter).'
+            explanation: 'The optimal closed cylinder has $h = 2r$ (height = diameter). $h = r$ is the open-top result, $h = r/2$ inverts the ratio, and $h = 2d$ mixes up radius and diameter.'
           }
         ]
       }
@@ -70,21 +70,21 @@ export const calcabOptimizationPart7Data = {
         questions: [
           {
             question: 'Two positive numbers sum to 100. Maximum product is:',
-            options: ['$2500$', '$2400$', '$5000$', '$10000$'],
+            options: ['$2500$', '$x = 50$', '$5000$', '$10000$'],
             correctAnswer: 0,
-            explanation: '$P = x(100-x)$. $P\'=100-2x=0$ at $x=50$. $P = 50 \\times 50 = 2500$.'
+            explanation: '$P = x(100-x)$. $P\'=100-2x=0$ at $x=50$. $P = 50 \\times 50 = 2500$. Multiplying the sum by $50$ gives $5000$, squaring the sum gives $10000$, and $x = 50$ is where the maximum occurs, not the product.'
           },
           {
             question: '$f(x) = x^3 - 12x$ on $[-3, 3]$. The absolute max is:',
-            options: ['$16$', '$12$', '$-16$', '$0$'],
+            options: ['$16$', '$x = -2$', '$-16$', '$x = 2$'],
             correctAnswer: 0,
-            explanation: '$f\'=3x^2-12=0$ at $x=\\pm 2$. $f(-2)=16$, $f(2)=-16$, $f(-3)=9$, $f(3)=-9$. Max $= 16$.'
+            explanation: '$f\'=3x^2-12=0$ at $x=\\pm 2$. $f(-2)=16$, $f(2)=-16$, $f(-3)=9$, $f(3)=-9$. Max $= 16$. The value $-16$ is the absolute minimum, and $x = -2$ and $x = 2$ are locations, not values of $f$.'
           },
           {
             question: 'To minimize the distance from a point to a curve, you should minimize:',
-            options: ['$D^2$ (distance squared)', '$D$ (distance)', '$|D|$', '$1/D$'],
+            options: ['$D^2$', '$\\sqrt{D}$', '$dD/dx$', '$1/D^2$'],
             correctAnswer: 0,
-            explanation: 'Minimizing $D^2$ avoids square roots and yields the same critical points since $D \\geq 0$.'
+            explanation: 'Minimizing $D^2$ avoids square roots and yields the same critical points since $D \\geq 0$. $\\sqrt{D}$ adds another root, minimizing $dD/dx$ is not the same as setting it to zero, and minimizing $1/D^2$ finds the farthest point.'
           }
         ]
       }
@@ -104,8 +104,8 @@ export const calcabOptimizationPart7Data = {
           },
           {
             label: 'For "set up but do not solve," you earn full credit by showing:',
-            options: ['Objective, constraint, derivative set to 0, domain', 'Only the answer', 'A graph', 'The constraint only'],
-            correctAnswers: ['Objective, constraint, derivative set to 0, domain'],
+            options: ['Objective, constraint, $f\'(x) = 0$, domain', 'The final numerical answer, with its units', 'A labeled graph of the objective', 'The objective and constraint only'],
+            correctAnswers: ['Objective, constraint, $f\'(x) = 0$, domain'],
             hints: ['Show all the calculus setup.'],
             explanation: 'Full credit requires the objective function, constraint applied, $f\'(x) = 0$ written, and domain stated.'
           },

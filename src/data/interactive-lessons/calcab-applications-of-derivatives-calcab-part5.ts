@@ -130,10 +130,10 @@ MVT guarantees $f'(c) = \\frac{3}{2}$ for some $c \\in (0, 12)$.
         dropdowns: [
           {
             label: 'Is $f$ continuous on $[1,5]$?',
-            options: ['Yes — polynomial', 'No — has a discontinuity', 'Cannot determine'],
+            options: ['Yes — polynomial', 'No — has a discontinuity', 'Cannot tell without a graph'],
             correctAnswers: ['Yes — polynomial'],
             hints: ['Polynomials are continuous everywhere.'],
-            explanation: 'All polynomials are continuous on any interval.'
+            explanation: 'All polynomials are continuous on any interval, so no graph is needed.'
           },
           {
             label: 'Average rate of change:',
@@ -159,7 +159,7 @@ MVT guarantees $f'(c) = \\frac{3}{2}$ for some $c \\in (0, 12)$.
       exercise: {
         question: 'For $f(x) = \\ln(x)$ on $[1, e^2]$, MVT guarantees $f\'(c) = \\frac{f(e^2)-f(1)}{e^2-1}$.\n\nFind $c$ (express as a fraction: numerator is $e^2 - 1$, denominator is $2$).\n\nHint: $f\'(c) = \\frac{1}{c}$ and $f(e^2) = 2$.',
         correctAnswer: '(e^2-1)/2',
-        acceptableAnswers: ['(e^2-1)/2', '(e^2 - 1)/2', '(e²-1)/2'],
+        acceptableAnswers: ['(e^2-1)/2', '(e^2 - 1)/2', '(e²-1)/2', '3.195'],
         hints: [
           'Average rate: $\\frac{2-0}{e^2-1} = \\frac{2}{e^2-1}$.',
           'Set $\\frac{1}{c} = \\frac{2}{e^2-1}$.',

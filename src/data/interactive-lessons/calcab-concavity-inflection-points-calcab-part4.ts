@@ -48,12 +48,12 @@ export const calcabConcavityPart4Data = {
             "question": "The number of inflection points of $f$ equals:",
             "options": [
               "The number of local extrema of $f'$",
-              "The number of zeros of $f'$",
-              "The number of zeros of $f$",
-              "Cannot be determined from $f'$"
+              "The number of times $f'$ equals zero",
+              "The number of times $f$ crosses the $x$-axis",
+              "The number of zeros of $f''$, sign change or not"
             ],
             "correctAnswer": 0,
-            "explanation": "Each local extremum of $f'$ corresponds to a sign change in $f''$."
+            "explanation": "Each local extremum of $f'$ corresponds to a sign change in $f''$. Zeros of $f'$ locate critical points of $f$, crossings of the $x$-axis are zeros of $f$, and a zero of $f''$ without a sign change is not an inflection point."
           }
         ]
       }
@@ -97,9 +97,9 @@ export const calcabConcavityPart4Data = {
             "label": "$f'$ has a horizontal tangent means:",
             "options": [
               "$f''= 0$ (potential inflection of $f$)",
-              "$f' = 0$",
-              "$f = 0$",
-              "$f$ has a max"
+              "$f' = 0$ (a possible extremum of $f$)",
+              "$f = 0$ (an $x$-intercept of $f$)",
+              "$f$ has a local max (a peak of $f$ there)"
             ]
           },
           {
@@ -132,13 +132,13 @@ export const calcabConcavityPart4Data = {
           {
             "question": "If $f'$ is a straight line with positive slope, $f$ is:",
             "options": [
-              "A parabola opening up (concave up)",
-              "A straight line",
-              "Concave down",
-              "A cubic"
+              "A parabola opening up",
+              "A straight line with positive slope",
+              "A parabola opening down",
+              "A cubic with one inflection point"
             ],
             "correctAnswer": 0,
-            "explanation": "$f'$ linear with positive slope → $f'' = $ constant $> 0$ → $f$ concave up, quadratic."
+            "explanation": "$f'$ linear with positive slope → $f'' = $ constant $> 0$ → $f$ is a quadratic that is concave up. A line with positive slope describes $f'$, not $f$; opening down would need negative slope; and a cubic would need a quadratic $f'$."
           },
           {
             "question": "On the AP exam, which is more commonly given — graph of $f$ or graph of $f'$?",

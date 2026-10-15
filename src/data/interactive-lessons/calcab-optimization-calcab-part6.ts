@@ -48,21 +48,21 @@ $$A_{\\max} = 2 \\cdot \\frac{2\\sqrt{3}}{3}\\left(4 - \\frac{4}{3}\\right) = \\
         questions: [
           {
             question: 'Two positive numbers have product 100. Their sum is minimized when they are:',
-            options: ['$10$ and $10$', '$5$ and $20$', '$1$ and $100$', '$25$ and $4$'],
+            options: ['$10$ and $10$', '$100$ and $1$', '$50$ and $2$', '$50$ and $50$'],
             correctAnswer: 0,
-            explanation: '$xy=100$, minimize $S=x+100/x$. $S\'=1-100/x^2=0$ at $x=10$. $y=10$.'
+            explanation: '$xy=100$, minimize $S=x+100/x$. $S\'=1-100/x^2=0$ at $x=10$. $y=10$. Differentiating $100/x$ as $-100/x$ gives $100$ and $1$, solving $x^2 = 100$ as $x = 50$ gives $50$ and $2$, and $50$ and $50$ answers the fixed-sum problem instead.'
           },
           {
             question: 'A page has 1-inch margins on all sides. Print area is 24 sq in. The page width that minimizes paper area is:',
-            options: ['$2+2\\sqrt{6}$ inches', '$6$ inches', '$4+2$ inches', '$8$ inches'],
+            options: ['$2+2\\sqrt{6}$ inches', '$2\\sqrt{6}$ inches', '$1+2\\sqrt{6}$ inches', '$4+2\\sqrt{6}$ inches'],
             correctAnswer: 0,
-            explanation: 'Print: $(w-2)(h-2)=24$, $h=24/(w-2)+2$. $A=wh$. Calculus gives $w=2+2\\sqrt{6}$.'
+            explanation: 'Print: $(w-2)(h-2)=24$, $h=24/(w-2)+2$. $A=wh$. Calculus gives $w - 2 = \\sqrt{24} = 2\\sqrt{6}$, so $w=2+2\\sqrt{6}$. Stopping at $2\\sqrt{6}$ gives the print width, adding only one margin gives $1+2\\sqrt{6}$, and adding the margins twice gives $4+2\\sqrt{6}$.'
           },
           {
             question: 'Which justification is sufficient for "the critical point is a maximum"?',
-            options: ['$f\'\'(c) < 0$ at the critical point $c$', '$f\'(c) = 0$', '$f$ is continuous', '$f(c)$ is positive'],
+            options: ['$f\'\'(c) < 0$ at the critical point $c$', '$f\'(c) = 0$ at the critical point $c$', '$f\'\'(c) > 0$ at the critical point $c$', '$f(c) > 0$ at the critical point $c$'],
             correctAnswer: 0,
-            explanation: 'Second Derivative Test: $f\'(c)=0$ and $f\'\'(c)<0$ implies local maximum at $c$.'
+            explanation: 'Second Derivative Test: $f\'(c)=0$ and $f\'\'(c)<0$ implies a local maximum at $c$. $f\'(c)=0$ alone only locates a candidate, $f\'\'(c) > 0$ indicates a minimum, and the sign of $f(c)$ says nothing about extrema.'
           }
         ]
       }
@@ -75,22 +75,22 @@ $$A_{\\max} = 2 \\cdot \\frac{2\\sqrt{3}}{3}\\left(4 - \\frac{4}{3}\\right) = \\
         dropdowns: [
           {
             label: 'In "write but do not solve," you should still include:',
-            options: ['The equation $f\'(x) = 0$ and the domain', 'The numerical answer', 'A graph', 'The second derivative'],
+            options: ['The equation $f\'(x) = 0$ and the domain', 'A decimal value for the optimal $x$', 'A sketch of the graph of $f$', 'The second derivative'],
             correctAnswers: ['The equation $f\'(x) = 0$ and the domain'],
             hints: ['Show the setup completely.'],
-            explanation: 'Write the objective, apply the constraint, take the derivative, write $f\'(x)=0$, and state the domain.'
+            explanation: 'Write the objective, apply the constraint, take the derivative, write $f\'(x)=0$, and state the domain. No solving, decimal answer or graph is required.'
           },
           {
             label: 'For "justify your answer is a maximum," the strongest approach is:',
-            options: ['Second Derivative Test: $f\'\'(c) < 0$', 'Plugging in nearby values', 'Saying "it looks like a maximum"', 'Checking the graph'],
+            options: ['Second Derivative Test: $f\'\'(c) < 0$', 'Comparing $f$ at two nearby points', 'A calculator graph of $f$ near $c$', 'Showing that $f\'(c) = 0$'],
             correctAnswers: ['Second Derivative Test: $f\'\'(c) < 0$'],
             hints: ['AP graders look for a rigorous test.'],
-            explanation: 'The Second Derivative Test or the first derivative sign-change test (candidates test on closed interval) are accepted justifications.'
+            explanation: 'The Second Derivative Test or the first derivative sign-change test (candidates test on a closed interval) are accepted justifications. Sample values, a graph, or $f\'(c) = 0$ alone do not justify a maximum.'
           },
           {
             label: 'If the domain is a closed interval $[a,b]$, you should:',
-            options: ['Compare $f$ at critical points AND endpoints', 'Only check critical points', 'Only check endpoints', 'Use the Second Derivative Test'],
-            correctAnswers: ['Compare $f$ at critical points AND endpoints'],
+            options: ['Compare $f$ at critical points and endpoints', 'Check only the critical points inside', 'Check only the endpoints $a$ and $b$', 'Use the Second Derivative Test at each critical point'],
+            correctAnswers: ['Compare $f$ at critical points and endpoints'],
             hints: ['Extreme Value Theorem.'],
             explanation: 'On a closed interval, absolute max/min could be at critical points or endpoints. Evaluate $f$ at all candidates.'
           }
