@@ -23,10 +23,10 @@ export const whImperialismPart4Data = {
           {
             question: 'The Macaulay Minute on Education (1835) created which AP-recognized "colonial contradiction"?',
             options: [
-              'British education designed to create a class of culturally Westernized Indians who would serve colonial administration instead produced Indians who used Western political concepts (natural rights, representative government, liberalism) to argue against British colonial rule — the colonizer\'s tool of ideological assimilation produced anti-colonial nationalists, demonstrating that colonial systems often generate the ideological resources of their own opposition',
-              'Western education successfully created a class of loyal Indians who supported British rule throughout the colonial period',
-              'Macaulay\'s education policy was rejected by Indian elites who preferred traditional education',
-              'Western education had no political consequences — it only served British administrative needs',
+              'Schooling meant to produce Westernized Indian clerks for the Raj instead turned out nationalists who used liberal ideas of rights and representation against British rule',
+              'English-language schooling was rejected by Indian elites, who kept sending their sons to Sanskrit and Persian schools and so blocked the policy\'s spread',
+              'Western education stayed politically neutral, since it trained Indians only in accounting and engineering and avoided British history and political theory',
+              'The policy united Hindus and Muslims behind British rule, since a shared English curriculum erased the religious divisions that had fueled the 1857 revolt',
             ],
             correctAnswer: 0,
             explanation: 'The education contradiction is AP\'s most important mechanism connecting colonialism to nationalism: Macaulay explicitly wanted Indians who were "English in taste, opinions, morals, and intellect" — he succeeded in educating Indians in English political thought; he failed to predict that Indians would apply English political thought to their own situation. Indian National Congress founders (lawyers, doctors, academics) used British liberal political theory to argue that British rule in India was illegitimate by British principles. This is the same mechanism as Indian nationalists using English courts to challenge British policy.'
@@ -34,10 +34,10 @@ export const whImperialismPart4Data = {
           {
             question: 'Dadabhai Naoroji\'s "drain of wealth" theory demonstrates:',
             options: [
-              'That colonialism involved systematic economic extraction — not just political control — through mechanisms like "Home Charges" (India paying for British administration costs), diversion of Indian revenues to Britain, destruction of Indian industries, and forced export agriculture that transferred Indian wealth to Britain, creating economic underdevelopment as a consequence of colonial policy rather than pre-colonial poverty',
-              'Naoroji argued that British colonialism benefited India economically through development investment',
-              'The drain of wealth theory was disproven by subsequent economic historians',
-              'Naoroji\'s analysis applied only to the East India Company period, not British Crown rule',
+              'Colonialism involved systematic economic extraction, as Home Charges and other payments to Britain transferred Indian revenue abroad and deepened poverty at home',
+              'British rule had made India poorer only temporarily, since the railroads and canals financed by British investors were expected to repay the drain within a generation',
+              'India\'s poverty came from its precolonial past, since Mughal taxation had already exhausted the economy before the East India Company arrived',
+              'The drain applied only to the East India Company era, since the shift to Crown rule in 1858 ended all transfers of Indian revenue to Britain',
             ],
             correctAnswer: 0,
             explanation: 'The drain of wealth is AP\'s economic analysis framework for colonialism: Naoroji calculated (with British government statistics) that a significant portion of India\'s national income was transferred annually to Britain through Home Charges, pensions for British administrators, interest on loans, and trade policies that disadvantaged Indian industry. This is not simply trade (which produces mutual benefits) but systematic extraction — using political power to structure economic relationships advantageously. The theory connects political colonialism to economic underdevelopment.'
@@ -99,10 +99,10 @@ Dadabhai Naoroji (1901) calculated that Britain systematically transferred India
           {
             question: 'The 1857 Sepoy Mutiny\'s complex causes (cartridge controversy, land annexation, missionary activity) demonstrate:',
             options: [
-              'Colonial systems generate multiple simultaneous grievances that can suddenly combine into explosive resistance — no single cause (religious insult from greased cartridges, economic disruption from land annexation, cultural threat from missionary activity) was individually sufficient to produce major revolt; their simultaneous presence in 1857 created a crisis of colonial legitimacy across multiple Indian communities',
-              'The Sepoy Mutiny had a single clear cause — the greased cartridge controversy',
-              'The Mutiny was spontaneous with no accumulated grievances',
-              'Only Indian soldiers (sepoys) participated; no civilian participation occurred',
+              'Colonial rule built up grievances across many communities until the cartridge dispute sparked a revolt that combined religious, economic and cultural anger',
+              'A single grievance can trigger mass revolt, since the greased cartridges alone explain why both soldiers and civilians rose against the East India Company in 1857',
+              'Spontaneous revolts lack deeper causes, since the uprising began without any accumulated resentment and faded once the British withdrew the new Enfield cartridges',
+              'Military mutinies stay confined to the army, since only sepoys took part while peasants, landholders and princes remained loyal to the East India Company throughout',
             ],
             correctAnswer: 0,
             explanation: 'Multiple simultaneous grievances is AP\'s analysis of the Mutiny: the cartridge controversy (new Enfield rifles\' cartridges allegedly greased with beef and pork fat — offensive to both Hindus and Muslims) was the immediate trigger, but accumulated grievances (Doctrine of Lapse land annexation; missionary activity threatening traditional religion; economic disruption) created the kindling. Singular cause analysis misses how colonial systems accumulate grievances across different communities until a triggering event produces combined resistance. AP rewards multi-causal analysis.'
@@ -110,24 +110,24 @@ Dadabhai Naoroji (1901) calculated that Britain systematically transferred India
           {
             question: 'The shift from East India Company rule to British Crown rule (1858) paradoxically increased the intensity of colonial control because:',
             options: [
-              'The East India Company\'s commercial orientation limited colonial administration to what was economically profitable; Crown rule introduced systematic political administration, professional civil service, legal codes, railroads, and census systems that penetrated Indian society far more thoroughly than commercial governance had, even while replacing Company exploitation with state-organized extraction',
-              'Crown rule reduced colonial extraction and gave Indians more political rights',
-              'The transition was purely symbolic with no change in actual governance',
-              'East India Company rule was more administratively thorough than Crown rule',
+              'Crown rule replaced a trading company with a bureaucratic state whose civil service, law codes and census reached deeper into Indian society than Company rule had',
+              'The Crown reduced extraction and gave Indians elected majorities in the provincial councils, which loosened British control over the countryside',
+              'The transfer was purely symbolic, since the same Company officials kept governing under the same laws and no new institutions were created after 1858',
+              'Company rule had been the more thorough system, since the Company\'s private army and tax farms reached every village while the Crown governed only the major cities',
             ],
             correctAnswer: 0,
-            explanation: 'Transition to more thorough colonialism is AP\'s paradox of the Mutiny\'s consequence: the Company was a commercial enterprise that governed India as a side effect of trade; the Crown created a systematic colonial state with the Indian Civil Service, legal codes, census systems, educational institutions, and railroads. The Raj was a more thoroughly organized colonialism — more invasive culturally (missionary activity continued; English education expanded), more systematically extractive (railroad networks built to export resources), and more professionally administered. More organized colonial state → more thorough penetration of Indian society.'
+            explanation: 'Transition to more thorough colonialism is AP\'s paradox of the Mutiny\'s consequence: the Company was a commercial enterprise that governed India as an extension of trade; the Crown built a systematic colonial state. The Indian Civil Service was reorganized under a Secretary of State and Viceroy, the Indian Penal Code (1860) codified law, and all-India censuses began in the 1870s. Railroad building, begun under the Company in 1853, expanded rapidly to move troops and export raw materials. The Raj was more invasive culturally (English education expanded), more systematically extractive, and more professionally administered. Indians did not gain elected majorities in provincial councils until the 1919 and 1935 reforms.'
           },
           {
             question: 'The Indian National Congress\'s (1885-1900s) strategy of using British political language demonstrates which AP principle?',
             options: [
-              'Colonized elites could turn the colonizer\'s proclaimed values against colonial practice — by demanding that British constitutional principles be applied to India, Congress nationalists placed British officials in the position of either granting Indian demands (honoring British values) or refusing them (admitting that British values were for British people only, not universal)',
-              'Using British political language demonstrated complete acceptance of British colonial legitimacy',
-              'The strategy was ineffective because British officials simply ignored constitutional arguments',
-              'Indian National Congress rejected all British political concepts and relied purely on indigenous political traditions',
+              'Colonized elites could turn the colonizer\'s stated values against colonial rule, forcing officials either to extend British rights to India or to admit those rights were not universal',
+              'Using British political language showed that Congress had abandoned any goal of self-government and sought only admission for Indians to the British Parliament',
+              'Constitutional arguments failed entirely, since British officials ignored Congress petitions and never expanded Indian representation before independence',
+              'Congress rejected British political concepts and relied on indigenous institutions such as caste councils to argue for an independent Hindu state',
             ],
             correctAnswer: 0,
-            explanation: 'The legitimacy trap created by constitutional arguments is AP\'s framework: British constitutional tradition emphasized that subjects had rights before law, that representative government was legitimate government, that taxation without representation was tyranny. Indian nationalists said: "You claim these principles — apply them to India." British officials who refused faced the charge of hypocrisy (their own constitutional principles condemned their rule); those who partially conceded expanded Indian rights. Either way, the constitutional strategy advanced Indian nationalism while forcing British officials into defensive positions.'
+            explanation: 'The legitimacy trap created by constitutional arguments is AP\'s framework: British constitutional tradition emphasized that subjects had rights before law, that representative government was legitimate government, that taxation without representation was tyranny. Indian nationalists said: "You claim these principles; apply them to India." British officials who refused faced the charge of hypocrisy; those who partially conceded expanded Indian rights, as in the Morley-Minto reforms (1909) and the Government of India Acts of 1919 and 1935. Either way, the constitutional strategy advanced Indian nationalism while forcing British officials into defensive positions.'
           }
         ]
       }
@@ -186,21 +186,21 @@ Dadabhai Naoroji (1901) calculated that Britain systematically transferred India
           {
             question: 'Comparing British colonial policy in India to French policy in Algeria reveals:',
             options: [
-              'Both colonized territories for economic extraction but used different administrative philosophies — Britain governed India through indirect rule structures (Indian princes, adapted legal systems) and claimed governance was training for eventual self-rule; France in Algeria pursued settler colonialism with large French settler population and intended Algeria to become part of France — different colonial philosophies with different long-term decolonization outcomes',
-              'Both Britain in India and France in Algeria used identical colonial policies',
-              'Britain in India used more direct rule while France in Algeria used more indirect rule',
-              'Neither Britain nor France had any settler population in their respective colonies',
+              'Both were extractive but differed in form, as Britain ruled India through officials and allied princes while France made Algeria a settler colony annexed to France',
+              'Both relied mainly on European settlers, since Britain encouraged mass British settlement in India just as France promoted the migration of French farmers into Algeria',
+              'Neither had a significant settler population, since both Britain and France governed through small corps of officials and discouraged European migration to the colony',
+              'France ruled Algeria more indirectly than Britain ruled India, since Algerian tribal leaders kept their authority while Britain abolished the princely states after 1858',
             ],
             correctAnswer: 0,
-            explanation: 'Colonial policy comparison reveals different decolonization paths: India\'s gradual transition to independence (1947) through political negotiation reflected the indirect rule tradition and British claims to be preparing India for self-governance; Algeria\'s brutal independence war (1954-1962) reflected France\'s claim that Algeria was part of France and its large European settler population\'s resistance to independence. Different colonial theories (indirect rule vs. settler colonialism) produced different independence paths. AP rewards this kind of policy-to-outcome analysis.'
+            explanation: 'Colonial policy comparison reveals different decolonization paths. Britain ruled most of India directly through the Indian Civil Service but governed about a third of it indirectly through more than 500 allied princely states, and it claimed to be preparing India for eventual self-government; India\'s independence (1947) came through political negotiation. France declared Algeria part of France and encouraged large-scale European settlement; Algeria\'s brutal independence war (1954-1962) reflected that claim and the settler population\'s resistance to independence. Different colonial theories produced different independence paths. AP rewards this kind of policy-to-outcome analysis.'
           },
           {
             question: 'For AP, British India\'s most significant contribution to world history was:',
             options: [
-              'The contradiction between British liberal political ideology and British colonial practice generated the ideological resources and organizational forms for 20th-century anti-colonial nationalism globally — the Indian National Congress model (legal advocacy using colonizer\'s concepts) became a template for other colonial independence movements, while Gandhi\'s later adaptation (mass civil disobedience) became a global model for nonviolent resistance',
-              'British India\'s most significant contribution was the economic development British investment brought to India',
-              'The railroad system built in India was the primary historical legacy of British colonialism there',
-              'India\'s independence movement had no influence on other anti-colonial movements globally',
+              'The gap between British liberal ideals and colonial practice fueled a nationalism whose Gandhian mass civil disobedience became a model for anticolonial movements elsewhere',
+              'British investment brought India broad economic development, and the industrial base inherited at independence was colonial rule\'s most important legacy',
+              'The railroad network was British India\'s main legacy, since it united the subcontinent physically and made later political movements unnecessary',
+              'Indian independence had little influence abroad, since African and Asian nationalists modeled their movements on the Russian Revolution rather than on India\'s long nonviolent struggle',
             ],
             correctAnswer: 0,
             explanation: 'The global template function of Indian nationalism is AP\'s synthesis: the Indian National Congress\'s methods (legal advocacy, constitutional argument, political party organization) and later Gandhian methods (mass civil disobedience, noncooperation) were studied and adapted by anti-colonial movements globally — African National Congress in South Africa, independence movements in West Africa, civil rights movements in the United States. The Indian experience demonstrated that colonial authority could be challenged through organized mass politics, providing a model that shaped 20th-century liberation globally.'

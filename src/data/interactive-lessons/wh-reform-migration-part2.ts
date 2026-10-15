@@ -23,24 +23,24 @@ export const whReformMigrationPart2Data = {
           {
             question: 'The Homestead Act (USA, 1862) functioned as a pull factor for European emigrants by:',
             options: [
-              'Offering 160 acres of government land free to any adult who lived on and improved the land for 5 years — this promise of land ownership (impossible for landless peasants in Europe without capital) was a powerful pull for Irish, German, and Scandinavian emigrants who could not afford European land prices, transforming migration from economic desperation to an opportunity for property ownership',
-              'The Homestead Act paid European emigrants a wage to move to the United States',
-              'The Act restricted land ownership to emigrants from specific European countries',
-              'The Homestead Act had no connection to European emigration because it applied only to existing citizens',
+              'Offering 160 acres of public land to settlers who lived on and improved it for five years, so landless peasants could own farms without capital',
+              'Paying a cash bounty to each European family that agreed to settle in a western territory and farm there for at least ten years',
+              'Reserving western land for emigrants from Britain and Germany, the two nations Congress judged best suited to farming',
+              'Selling 80-acre plots on cheap credit to emigrants who had first worked three years in eastern factories or mines',
             ],
             correctAnswer: 0,
-            explanation: 'Land ownership as pull factor is AP\'s economic migration analysis: European peasants faced two land barriers — land was scarce in densely populated Europe; and land was too expensive for those without capital. The Homestead Act offered a path to land ownership through labor (5 years of improvement) rather than capital — perfectly suited to landless emigrants who had labor to invest. Norwegian farmers on the Minnesota prairie, German settlers in Wisconsin, Irish farmers in Iowa all responded to this pull. The Act was not purely humanitarian — it served to populate western territories, displace Native Americans, and integrate the frontier into the national economy.'
+            explanation: 'Land ownership as pull factor is AP\'s economic migration analysis: European peasants faced two land barriers — land was scarce in densely populated Europe; and land was too expensive for those without capital. The Homestead Act offered a path to land ownership through labor (5 years of residence and improvement) rather than capital — perfectly suited to landless emigrants who had labor to invest, and it turned migration from economic desperation into an opportunity for property ownership. Norwegian farmers on the Minnesota prairie, German settlers in Wisconsin, Irish farmers in Iowa all responded to this pull. The Act paid no bounties and did not favor particular nationalities. It was not purely humanitarian — it served to populate western territories, displace Native Americans, and integrate the frontier into the national economy.'
           },
           {
             question: 'The shift from "old immigration" (pre-1880, northern and western Europe) to "new immigration" (post-1880, southern and eastern Europe) to the USA demonstrates:',
             options: [
-              'Push factors shifted geographically as industrialization spread unevenly — Britain and Germany industrialized early (1760s-1850s), absorbing rural workers domestically and reducing emigration pressure; southern Italy, Poland, and Russia industrialized later or not at all, maintaining the rural poverty and population pressure that drove emigration from new sources, with the USA remaining a consistent pull destination across both periods',
-              'The shift occurred because US laws specifically encouraged southern European immigration after 1880',
-              'Pull factors in the USA changed after 1880 — new industries wanted different kinds of workers',
-              'The shift reflected cultural preferences of Americans for different immigrant groups over time',
+              'Industrialization spread unevenly, so emigration moved to regions like southern Italy and Poland where rural poverty persisted',
+              'US laws after 1880 actively recruited southern and eastern Europeans, giving them preferred entry over British and German arrivals',
+              'American industry after 1880 sought mainly skilled craftsmen, a demand southern and eastern Europeans were uniquely placed to meet',
+              'Northern European emigration halted after 1880 because British and German governments barred their citizens from leaving for America',
             ],
             correctAnswer: 0,
-            explanation: 'Uneven industrialization producing shifting emigration geography is AP\'s analytical framework: Britain\'s industrial revolution absorbed agricultural labor into urban industry — by 1880, Britain was heavily urbanized and agricultural emigration pressure had declined. Germany similarly industrialized and absorbed rural workers. But in southern Italy, the agricultural south (mezzogiorno) remained underdeveloped even as northern Italy industrialized — so Italian emigration was primarily southern Italian. Poland and Russia\'s Jewish populations faced pogroms (1880s-1900s) — persecution rather than purely economic push. The "new immigration" reflects industrialization\'s uneven geographic spread.'
+            explanation: 'Uneven industrialization producing shifting emigration geography is AP\'s analytical framework: Britain and Germany industrialized early, absorbing rural workers into urban industry — by 1880, Britain was heavily urbanized and agricultural emigration pressure had declined. But in southern Italy, the agricultural south (mezzogiorno) remained underdeveloped even as northern Italy industrialized — so Italian emigration was primarily southern Italian. Poland and Russia\'s Jewish populations also faced pogroms (1880s-1900s) — persecution rather than purely economic push. The USA remained a consistent pull destination across both periods, wanting mostly unskilled industrial labor; US law moved toward restriction, not recruitment, and Britain and Germany never banned emigration. The "new immigration" reflects industrialization\'s uneven geographic spread.'
           }
         ]
       }
@@ -103,35 +103,35 @@ export const whReformMigrationPart2Data = {
           {
             question: 'The role of steamship companies in actively recruiting European emigrants demonstrates:',
             options: [
-              'Migration was not simply a spontaneous individual response to push and pull factors but was actively facilitated by commercial interests — steamship companies deployed agents in European villages to advertise American opportunities, sold pre-paid tickets, and created institutional infrastructure that reduced the information costs and logistical complexity of migration, demonstrating that commercial actors can transform migration from exceptional to routine',
-              'Migration was entirely spontaneous with no commercial facilitation',
-              'Steamship companies tried to discourage emigration to maximize freight revenue',
-              'Only governments organized emigration — private companies had no role',
+              'Commercial interests deliberately built migration by sending agents into villages and selling prepaid tickets that made emigration routine',
+              'Migration was a spontaneous individual choice, since emigrants arranged passage on their own after reading letters from relatives',
+              'Steamship lines tried to limit emigrant traffic, because cargo such as grain and cotton earned far higher profits than steerage passengers',
+              'Governments rather than private firms organized emigration, since European states paid for most steerage passage across the Atlantic',
             ],
             correctAnswer: 0,
-            explanation: 'Commercial facilitation of migration is AP\'s institutional analysis: White Star Line, Hamburg-Amerika Line, and other shipping companies were not passive carriers — they actively created demand for migration. Their agents toured Polish villages with photographs of American prosperity; they negotiated deals with railroad companies to deliver migrants from ships to midwestern cities; they established payment systems that allowed emigrants already in America to purchase tickets for relatives still in Europe. This commercialization of migration is why emigration from specific Italian villages consistently went to specific American cities — shipping company regional monopolies created migration corridors.'
+            explanation: 'Commercial facilitation of migration is AP\'s institutional analysis: White Star Line, Hamburg-Amerika Line, and other shipping companies were not passive carriers — they actively created demand for migration, and steerage passengers were highly profitable. Their agents toured Polish villages with photographs of American prosperity; they negotiated deals with railroad companies to deliver migrants from ships to midwestern cities; they established payment systems that allowed emigrants already in America to purchase prepaid tickets for relatives still in Europe. This lowered the information costs and logistical complexity of migration and is why emigration from specific Italian villages consistently went to specific American cities — shipping company regional monopolies created migration corridors. Letters from relatives mattered, but they worked alongside this commercial machinery rather than replacing it.'
           },
           {
             question: 'Remittances (money sent by emigrants back to home countries) demonstrate which consequence of migration?',
             options: [
-              'Migration created persistent economic connections between sending and receiving regions — Italian emigrants in New York or Argentina sent money home to Italian families, who used it to pay debts, purchase land, or fund subsequent family migration; this financial flow integrated rural Italian, Polish, and Greek economies into global capital flows created by emigration, demonstrating that migration\'s economic effects extended beyond the migrants themselves to their communities of origin',
-              'Remittances were insignificant — emigrants rarely sent money home after migration',
-              'Remittances only benefited wealthy sending-country families, not poor peasant families',
-              'Remittances caused economic harm in sending countries by removing money from circulation',
+              'Emigration kept sending regions tied to those abroad, whose money sent home paid debts and funded relatives\' passage',
+              'Remittances were insignificant because most emigrants spent nearly all of their wages on rent and food in crowded American cities',
+              'Remittances mainly enriched large landowners in sending regions, since peasant families had no way to receive money from abroad',
+              'Remittances drained sending economies, because the money emigrants sent home was quickly spent on imported American manufactured goods',
             ],
             correctAnswer: 0,
-            explanation: 'Remittances as economic integration is AP\'s migration consequence analysis: Italy received substantial remittances throughout the emigration era — by 1913, Italy was receiving over 500 million lire annually in emigrant remittances, an amount exceeding Italy\'s entire trade surplus. For individual families, remittances could pay off debt to landowners, purchase small plots of land, or fund siblings\' emigration. Remittances are evidence that migration was not simply individual departure but a household economic strategy — families sent their strongest members abroad as an investment in the household\'s overall income stream, expecting regular financial returns.'
+            explanation: 'Remittances as economic integration is AP\'s migration consequence analysis: Italy received substantial remittances throughout the emigration era — by 1913, Italy was receiving over 500 million lire annually in emigrant remittances, an amount exceeding Italy\'s entire trade surplus. For individual peasant families, remittances could pay off debt to landowners, purchase small plots of land, or fund siblings\' emigration, integrating rural Italian, Polish, and Greek economies into global capital flows. Remittances are evidence that migration was not simply individual departure but a household economic strategy — families sent their strongest members abroad as an investment in the household\'s overall income stream, expecting regular financial returns.'
           },
           {
             question: '"Birds of passage" — European emigrants (especially Italian men) who came to the Americas seasonally and returned home — challenge which assumption about migration?',
             options: [
-              'The assumption that emigration was a permanent, one-way movement from sending to receiving country — seasonal migration demonstrates that some emigrants remained economically integrated into home communities while working abroad, maintaining property and family relationships in Italy while earning American wages, blurring the distinction between "emigrant" (permanent departure) and "migrant worker" (temporary labor abroad)',
-              'Birds of passage confirm that all emigration was permanent and one-directional',
-              'Seasonal migration was only possible for wealthy emigrants with multiple homes',
-              'Return migration was extremely rare — once emigrants left, they never returned',
+              'That emigration was a permanent and one-way move, since many migrants worked abroad seasonally while keeping property and family at home',
+              'That most emigrants traveled alone, since seasonal migrants usually brought their spouses and children with them on every crossing',
+              'That emigrants came mostly from rural areas, since seasonal migrants were chiefly urban factory hands from Milan and Turin',
+              'That transatlantic travel was costly, since seasonal migrants crossed for free because American employers covered all of their fares both ways',
             ],
             correctAnswer: 0,
-            explanation: 'Migration as spectrum not binary is AP\'s analytical refinement: the dominant image of emigration (Ellis Island arrival; permanent settlement; American identity) fits many emigrants but not all. Italian agricultural workers crossed the Atlantic in autumn (when European agricultural work ended), worked in American construction or harvest (autumn-spring), and returned to Italy for the summer. This required cheap, regular steamship service (which developed after 1880). The "birds of passage" phenomenon reveals that international migration existed on a spectrum from permanent relocation to seasonal labor circulation, with implications for national identity, cultural preservation, and economic integration.'
+            explanation: 'Migration as spectrum not binary is AP\'s analytical refinement: the dominant image of emigration (Ellis Island arrival; permanent settlement; American identity) fits many emigrants but not all. Italian agricultural workers — mostly men traveling without families, from the rural south — crossed the Atlantic in autumn (when European agricultural work ended), worked in American construction or harvest (autumn-spring), and returned to Italy for the summer, paying their own fares on cheap, regular steamship service (which developed after 1880). The "birds of passage" phenomenon blurs the line between "emigrant" (permanent departure) and "migrant worker" (temporary labor abroad), revealing that international migration existed on a spectrum from permanent relocation to seasonal labor circulation, with implications for national identity, cultural preservation, and economic integration.'
           }
         ]
       }
@@ -190,21 +190,21 @@ export const whReformMigrationPart2Data = {
           {
             question: 'Nativist reactions (anti-immigrant political movements) to European mass immigration in the USA demonstrated:',
             options: [
-              'Economic competition and cultural anxiety about rapid demographic change could produce discriminatory political responses even against white European immigrants — the Know-Nothing movement (1850s, anti-Catholic Irish), the Immigration Restriction League (1890s, anti-"new immigrant"), and ultimately the Immigration Acts of 1921 and 1924 (establishing national-origin quotas) show that racialized classification of immigrants (as Anglo-Saxon vs. "inferior" Mediterranean and Slavic "races") applied Social Darwinist frameworks to migration policy',
-              'Nativist movements welcomed all European immigrants without distinction',
-              'Anti-immigrant politics only targeted non-European immigrants — European immigrants were universally welcomed',
-              'Nativism had no practical policy consequences — the USA maintained completely open immigration throughout',
+              'Economic and cultural anxiety could produce discriminatory policy even against white Europeans, culminating in the national-origin quotas of 1924',
+              'Nativists targeted only Asian immigrants, so European arrivals faced no organized opposition after the Chinese Exclusion Act of 1882',
+              'Nativism stayed largely rhetorical, as Congress kept immigration fully open to all Europeans until the Second World War ended in 1945',
+              'Nativism was led mainly by labor unions, which won quotas in 1890 that favored southern and eastern Europeans over northern ones',
             ],
             correctAnswer: 0,
-            explanation: 'Racialized nativism even among European immigrants is AP\'s analytical extension of Social Darwinism: the 1924 Immigration Act\'s national-origin quotas were explicitly designed by eugenicists (Madison Grant, Henry Laughlin) to preserve Anglo-Saxon racial dominance by limiting "inferior" southern and eastern European immigration. Quota allocations were based on the 1890 census (before "new immigration" peaked) to mathematically favor British, German, and Scandinavian immigrants over Italian, Polish, and Jewish immigrants. The Act demonstrates that Social Darwinist racial hierarchies applied not just to non-Europeans but to intra-European racial distinctions as well.'
+            explanation: 'Racialized nativism even among European immigrants is AP\'s analytical extension of Social Darwinism: the Know-Nothing movement (1850s) targeted Catholic Irish immigrants, the Immigration Restriction League (1890s) targeted the "new immigrants," and the 1924 Immigration Act\'s national-origin quotas were explicitly designed by eugenicists (Madison Grant, Henry Laughlin) to preserve Anglo-Saxon racial dominance by limiting "inferior" southern and eastern European immigration. Quota allocations were based on the 1890 census (before "new immigration" peaked) to mathematically favor British, German, and Scandinavian immigrants over Italian, Polish, and Jewish immigrants. The Act demonstrates that Social Darwinist racial hierarchies applied not just to non-Europeans but to intra-European racial distinctions as well.'
           },
           {
             question: 'For AP, the 1850-1914 European mass emigration era\'s most significant consequence was:',
             options: [
-              'The creation of a global network of European diaspora communities that transformed demographic, cultural, and economic landscapes across multiple continents simultaneously — the Americas received demographic growth, cheap labor, and diverse cultural traditions that shaped their development; European economies were relieved of population pressure and received remittances; and the resulting diaspora communities created persistent transnational connections that continued to influence politics and economics for generations',
-              'European emigration had only demographic consequences with no cultural or economic dimensions',
-              'The emigration era had no lasting consequences — all emigrants eventually returned to Europe',
-              'Migration\'s consequences were confined to receiving countries with no impact on sending regions',
+              'A web of European diaspora communities that reshaped the demography and economy of several continents and linked them for generations',
+              'A purely demographic shift, since emigrants assimilated so fast that they left no lasting cultural or economic imprint abroad',
+              'A temporary population movement, since nearly all emigrants returned to Europe within a decade after the First World War began',
+              'A change confined to receiving countries, since European sending regions lost people but gained no money or lasting connections in return',
             ],
             correctAnswer: 0,
             explanation: 'Multi-continental transformation is AP\'s synthesis: European mass emigration simultaneously shaped multiple world regions. Argentina\'s population became overwhelmingly European-descended — transforming a largely indigenous society within two generations. The USA\'s industrial workforce was built on immigrant labor. Brazil\'s coffee economy replaced slave labor with Italian and Japanese immigrants. Italy\'s rural overpopulation was relieved while Italian culture spread globally. The European diaspora created a network of cultural, economic, and political connections that define the modern Atlantic world — one of the most significant demographic events of the 19th century.'

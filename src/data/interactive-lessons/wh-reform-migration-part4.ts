@@ -23,24 +23,24 @@ export const whReformMigrationPart4Data = {
           {
             question: 'The Haitian Revolution (1791-1804) had what impact on the abolition movement?',
             options: [
-              'It simultaneously accelerated abolition (by demonstrating that enslaved people would revolt and that slave-based colonial systems were ultimately unsustainable) and complicated abolition politics (by terrifying slaveholders who feared similar revolts in their own colonies and therefore resisted emancipation, fearing that free Black populations would follow the Haitian example) — its dual impact reflects the revolution\'s status as both proof of slavery\'s instability and warning of revolutionary consequences',
-              'The Haitian Revolution only accelerated abolition with no negative political consequences',
-              'The Haitian Revolution had no impact on abolition debates elsewhere',
-              'The Haitian Revolution convinced slaveholders to voluntarily emancipate their enslaved workers',
+              'It hastened abolition by exposing slavery\'s instability yet hardened slaveholders who feared emancipation invited revolt',
+              'It mainly hastened abolition, since slaveholders everywhere took Haiti as proof that freeing the enslaved would ensure social order',
+              'It had little effect beyond the Caribbean, since news of the revolt was suppressed in Europe and the United States for decades',
+              'It persuaded most slaveholders to free their workers voluntarily, beginning with the planters of Cuba and the American South',
             ],
             correctAnswer: 0,
-            explanation: 'Dual causation of revolutionary impact is AP\'s analytical standard: British abolitionists used the Haitian Revolution as evidence that slavery was unstable — if slaves in Saint-Domingue could overthrow French colonial rule, British Caribbean colonies faced similar risks. Better to voluntarily emancipate than face violent revolution. But American slaveholders drew the opposite lesson: Haitian-style revolution made emancipation dangerous — free Black populations were a revolutionary threat. Brazil\'s Dom Pedro II cited the Haitian example as an argument for gradual (not immediate) abolition to prevent social disruption. The same historical event produced opposite political conclusions in different contexts.'
+            explanation: 'Dual causation of revolutionary impact is AP\'s analytical standard: British abolitionists used the Haitian Revolution as evidence that slavery was unstable — if slaves in Saint-Domingue could overthrow French colonial rule, British Caribbean colonies faced similar risks. Better to emancipate than face violent revolution. But American slaveholders drew the opposite lesson: Haitian-style revolution made emancipation dangerous — free Black populations were a revolutionary threat. In Brazil and Cuba, fear of "another Haiti" (Brazilians called it haitianismo) was used to argue for tighter control and, later, for only gradual abolition. News of the revolution spread widely, and the same historical event produced opposite political conclusions in different contexts — it was both proof of slavery\'s instability and a warning of revolutionary consequences.'
           },
           {
             question: 'William Wilberforce\'s religious argument for abolition (slavery is sinful; all humans equal before God) was effective in Britain because:',
             options: [
-              'The religious argument operated within Britain\'s specific cultural context — the Evangelical revival (Methodism, Quakerism) had created large communities of religiously motivated middle-class Britons who responded to moral arguments and were politically mobilized through churches; the argument also spoke to British national identity as a Protestant Christian nation with a moral mission, making opposition to slavery a patriotic as well as religious duty',
-              'Religious arguments were effective everywhere equally regardless of cultural context',
-              'The religious argument was secondary — economic arguments drove British abolition',
-              'Wilberforce\'s argument worked without religious mobilization or institutional church support',
+              'Evangelical revival had built church-based middle-class communities, and abolition fit the country\'s self-image as a Protestant moral nation',
+              'Religious arguments persuaded audiences equally everywhere, so the same appeal also won over Brazilian and Cuban elites in the 1830s',
+              'The Church of England\'s bishops led the campaign and ordered every parish to petition Parliament, making abolition official church policy',
+              'The argument worked without organized support, as Wilberforce won over Parliament through speeches alone and never relied on petitions',
             ],
             correctAnswer: 0,
-            explanation: 'Cultural context shapes argument effectiveness is AP\'s rhetorical analysis: the same religious anti-slavery argument that was effective in Britain (where Evangelical Protestantism was a mass political force) was less effective in Catholic Brazil or Cuba (where the Church was more integrated with colonial elites) or in the American South (where evangelical Christianity was used to defend slavery through Biblical citations). The effectiveness of abolition arguments depended on the specific religious, cultural, and political context in which they were deployed — there was no universally effective argument.'
+            explanation: 'Cultural context shapes argument effectiveness is AP\'s rhetorical analysis: the Evangelical revival (Methodists and Evangelical Anglicans such as Wilberforce\'s Clapham Sect), together with long-standing Quaker activism, had created large communities of religiously motivated middle-class Britons who responded to moral arguments and were mobilized through chapels and mass petition drives; abolition also spoke to British identity as a Protestant nation with a moral mission, making it a patriotic as well as religious duty. The Church of England hierarchy did not lead the movement. The same religious anti-slavery argument was less effective in Catholic Brazil or Cuba (where the Church was more integrated with colonial elites) or in the American South (where evangelical Christianity was used to defend slavery through Biblical citations). The effectiveness of abolition arguments depended on the specific religious, cultural, and political context in which they were deployed — there was no universally effective argument.'
           }
         ]
       }
@@ -99,35 +99,35 @@ After legal abolition, formerly enslaved people faced:
           {
             question: 'The British Slavery Abolition Act (1833) included a £20 million compensation payment to slaveholders (not to enslaved people) because:',
             options: [
-              'British political and legal culture treated enslaved people as property of slaveholders — abolishing slavery without compensation would have violated property rights and been constitutionally equivalent to government confiscation, which British law protected; the compensation reflects how deeply embedded the concept of human beings as legal property was in British colonial law, even as moral arguments against slavery were succeeding',
-              'Compensation was paid to enslaved people as reparations for their suffering',
-              'The compensation requirement demonstrated that abolitionists controlled Parliament completely',
-              'The £20 million reflected the market value of goods produced by enslaved people',
+              'English law treated those held in bondage as their owners\' property, so uncompensated abolition looked like confiscation Parliament would reject',
+              'Parliament meant the money for the freed people, but colonial governors diverted most of it to planters before it could be paid out',
+              'Abolitionists controlled Parliament so fully that they could set any terms, and they chose compensation to reward planter cooperation',
+              'The sum was set at the value of a single year\'s sugar crop, meant to cover planters\' lost income during the move to wage labor',
             ],
             correctAnswer: 0,
-            explanation: 'Property law framework constraining abolition is AP\'s legal analysis: enslaved people were legally the property of their owners — registered, insured, mortgaged, inherited, and sold as property. When Parliament abolished slavery, it was legally required to compensate owners for the loss of their property (just as government would compensate any property owner for compulsory purchase). The £20 million (equivalent to about £16 billion today) was paid to approximately 46,000 slaveholders. Enslaved people received nothing except the "benefit" of freedom (and were required to continue as "apprentices" for 6 years). The legal framework that defined them as property left them with no claim to compensation.'
+            explanation: 'Property law framework constraining abolition is AP\'s legal analysis: enslaved people were legally the property of their owners — registered, insured, mortgaged, inherited, and sold as property. Abolishing slavery without compensation would have been treated as confiscation, which British law protected against, so Parliament compensated owners for the loss of their "property" (just as government would compensate any property owner for compulsory purchase). Abolitionists did not control Parliament; compensation was the price of passing the Act over planter opposition. The £20 million (equivalent to roughly £16–17 billion today) was paid to approximately 46,000 slaveholders. Enslaved people received nothing except the "benefit" of freedom (and most were required to continue as unpaid "apprentices," a system ended early in 1838). The legal framework that defined them as property left them with no claim to compensation.'
           },
           {
             question: 'Sharecropping and debt peonage systems that emerged after the US Civil War demonstrate:',
             options: [
-              'Legal emancipation did not automatically produce economic freedom when formerly enslaved people had no land, capital, or alternative employment — without land redistribution ("40 acres and a mule"), freed people were economically dependent on former masters who controlled land, agricultural credit, and marketing, enabling the re-establishment of coercive labor relationships through debt and legal enforcement rather than legal ownership',
-              'Economic freedom automatically followed from legal emancipation',
-              'Former slaveholders voluntarily provided fair wages and land to their former workers',
-              'Sharecropping systems were equally beneficial to both landlords and tenant farmers',
+              'Legal emancipation did not bring economic freedom when freed people lacked land and credit, leaving them dependent on former masters',
+              'Emancipation brought economic freedom quickly, as most freed families were able to buy farms of their own within a decade of the war',
+              'Former slaveholders willingly paid fair wages and leased land on equal terms in order to keep skilled workers on their plantations',
+              'Sharecropping benefited landlords and tenants equally, since both sides shared the risk of a poor harvest and the gains of a good one',
             ],
             correctAnswer: 0,
-            explanation: 'Economic power perpetuating coercion after legal liberation is AP\'s post-abolition analysis: legal freedom without economic independence is incomplete freedom. In the American South: freed Black men and women needed land to farm, seed to plant, and tools to work. Former masters had all three. The sharecrop arrangement (farm the land, split the harvest with the landlord) seemed equitable but embedded debt: landlords provided inputs at inflated prices, charged interest, and controlled the weighing and pricing of cotton. Tenants were perpetually in debt. Debt peonage laws then criminalized debt — allowing re-enslavement of debtors under criminal justice. Legal freedom was real but insufficient without economic independence.'
+            explanation: 'Economic power perpetuating coercion after legal liberation is AP\'s post-abolition analysis: legal freedom without economic independence is incomplete freedom. Without land redistribution (the promised "40 acres and a mule" was revoked), freed Black men and women needed land to farm, seed to plant, and tools to work — and former masters controlled all three, along with agricultural credit and marketing. The sharecrop arrangement (farm the land, split the harvest with the landlord) seemed equitable but embedded debt: landlords provided inputs at inflated prices, charged interest, and controlled the weighing and pricing of cotton. Tenants were perpetually in debt. Debt peonage laws then criminalized debt — allowing re-enslavement of debtors under criminal justice. Legal freedom was real but insufficient without economic independence.'
           },
           {
             question: 'Comparing the abolition of slavery in Brazil (1888) and the USA (1865) reveals:',
             options: [
-              'Both achieved legal abolition under pressure from multiple forces (enslaved people\'s resistance, international moral pressure, economic arguments) but through different paths — the USA required a devastating civil war that killed 620,000 people before destroying slavery as a political institution; Brazil achieved gradual legal abolition over decades (1850 slave trade ban → 1871 free womb law → 1885 sexagenarian law → 1888 Golden Law) under political pressure from enslaved people\'s resistance and international criticism, without equivalent civil war',
-              'Both countries used identical abolition processes with no significant differences',
-              'Brazil abolished slavery before the USA because Brazil had stronger abolitionist movements',
-              'The USA abolished slavery peacefully through legislative compromise while Brazil required revolution',
+              'Similar pressures drove both, but the USA needed a civil war while Brazil ended slavery by gradual laws that closed with the 1888 Golden Law',
+              'Both followed the same legislative path, ending slavery through gradual laws that began with free-womb statutes passed in the 1860s',
+              'Brazil acted first, abolishing slavery in 1850 after a mass abolitionist movement far stronger than the one in the United States',
+              'The USA ended slavery peacefully through the Compromise of 1850, while Brazil needed a republican revolution to free the enslaved',
             ],
             correctAnswer: 0,
-            explanation: 'Comparative abolition pathways is AP\'s process analysis: both countries ultimately abolished slavery under comparable pressures (enslaved resistance; economic modernization arguments; international pressure after British abolition), but the political path differed significantly. The USA\'s slaveholder class was politically entrenched in a federal system that gave it veto power over federal legislation — only the Civil War broke that veto. Brazil\'s monarchical system allowed gradual reform from above; the 1888 Golden Law was signed by Princess Isabel in the Emperor\'s absence, without the mobilization that a federal democratic system would have required. Political structure shaped abolition pathway.'
+            explanation: 'Comparative abolition pathways is AP\'s process analysis: both countries ultimately abolished slavery under comparable pressures (enslaved resistance; economic modernization arguments; international pressure after British abolition), but the political path differed significantly. The USA\'s slaveholder class was politically entrenched in a federal system that gave it veto power over federal legislation — only the Civil War (roughly 620,000 or more dead) broke that veto. Brazil\'s monarchical system allowed gradual reform from above over decades: the 1850 slave trade ban, the 1871 Free Womb Law, the 1885 Sexagenarian Law, and finally the 1888 Golden Law, signed by Princess Isabel in the Emperor\'s absence. The republic came in 1889, after abolition, not before it. Political structure shaped abolition pathway.'
           }
         ]
       }
@@ -162,7 +162,7 @@ After legal abolition, formerly enslaved people faced:
             'Black codes',
             'Jim Crow laws',
             'Reconstruction amendments',
-            'Vagrancy statutes',
+            'Fugitive slave laws',
             ]
           }
         ],
@@ -186,21 +186,21 @@ After legal abolition, formerly enslaved people faced:
           {
             question: 'The Black codes enacted in Southern states after the Civil War demonstrate:',
             options: [
-              'Former slaveholders used legislative power to recreate conditions of coercive labor as close to slavery as possible within the constraints of the 13th Amendment — by restricting Black people\'s ability to leave their employers (vagrancy laws), limiting occupational choices (laborer registration requirements), controlling movement (pass systems), and criminalizing minor contract violations (allowing arrest and convict leasing), Black codes converted legal freedom into practical semi-slavery',
-              'Black codes were enacted to expand Black political rights after emancipation',
-              'Southern states fully accepted the 13th Amendment and made no attempt to restrict freed people\'s rights',
-              'Black codes were temporary measures that were quickly repealed without lasting effect',
+              'Former slaveholders used state law to rebuild coerced labor within the limits of the 13th Amendment\'s ban on slavery',
+              'Southern legislatures expanded Black political rights to win readmission to the Union, granting the vote to freedmen in 1866',
+              'Southern states fully accepted the 13th Amendment and left freed people\'s movement and choice of employer unrestricted',
+              'Black codes had little lasting effect, since they were repealed within months and left no trace in later Southern labor law',
             ],
             correctAnswer: 0,
-            explanation: 'Legal workarounds for re-enslavement is AP\'s Reconstruction analysis: the 13th Amendment abolished slavery "except as punishment for crime" — immediately recognized as a loophole by Southern legislatures. Black codes criminalized vagrancy (being unemployed or without labor contracts), petty theft, and contract violations. Arrested Black men and women were leased to planters, railroads, and mines as convict laborers — paid nothing, physically punished, unable to leave. This convict lease system persisted into the 20th century in some Southern states. Black codes demonstrate that legal abolition was a necessary but insufficient condition for freedom without political power, economic independence, and equal enforcement of law.'
+            explanation: 'Legal workarounds for re-enslavement is AP\'s Reconstruction analysis: the 13th Amendment abolished slavery "except as punishment for crime" — immediately recognized as a loophole by Southern legislatures. Black codes restricted freed people\'s ability to leave employers, limited their occupational choices, and criminalized vagrancy (being unemployed or without labor contracts), petty theft, and contract violations. Arrested Black men and women were leased to planters, railroads, and mines as convict laborers — paid nothing, physically punished, unable to leave. Although Congressional Reconstruction overturned the codes themselves, this convict lease system persisted into the 20th century in some Southern states. Black codes demonstrate that legal abolition was a necessary but insufficient condition for freedom without political power, economic independence, and equal enforcement of law.'
           },
           {
             question: 'For AP, the global abolition movement\'s most significant historical legacy was:',
             options: [
-              'Establishing the moral and political precedent that universal human rights transcend economic property interests and national sovereignty — the abolitionist argument that human beings cannot be legally owned regardless of economic consequences or legal tradition created a framework that subsequent human rights movements (women\'s suffrage, decolonization, civil rights) used as their moral foundation, making abolition the first successful global human rights campaign',
-              'Abolition had no lasting moral or political legacy beyond the immediate end of chattel slavery',
-              'The abolition movement was primarily economic — it had no human rights dimension',
-              'Abolition\'s legacy was only significant in the Americas with no global influence',
+              'It set the precedent that universal rights outweigh property and sovereignty, a model that later suffrage and civil rights campaigns built on',
+              'It ended coerced labor worldwide, since indenture, convict leasing, and debt peonage all disappeared along with chattel slavery',
+              'It mattered mainly as an economic shift, since wage labor replaced slavery without any lasting change in ideas about human rights',
+              'Its influence stayed within the Americas, since Africa and Asia saw no comparable campaigns against slavery or forced labor',
             ],
             correctAnswer: 0,
             explanation: 'First human rights campaign is AP\'s synthesis: the abolition movement established several political precedents that subsequent movements built on: that moral arguments can overcome economic interests; that international pressure on national governments is legitimate; that individuals have standing to advocate for the rights of people they have never met; that universal human dignity limits what legal systems can authorize. The 20th-century Universal Declaration of Human Rights (1948) drew on abolitionist moral framework. Gandhi drew on both Indian philosophy and abolitionist moral precedent. The civil rights movement explicitly connected to abolitionist history. Abolition created the template for global human rights activism.'

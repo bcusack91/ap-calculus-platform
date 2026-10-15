@@ -23,24 +23,24 @@ export const whReformMigrationPart6Data = {
           {
             question: 'W.E.B. Du Bois\'s concept of "double consciousness" in "The Souls of Black Folk" (1903) means:',
             options: [
-              'African Americans (and by extension other colonized peoples) experience their identity through "two-ness" — simultaneously as individuals with their own self-understanding AND through the eyes of a white society that sees them primarily as racial objects, producing a divided consciousness that must navigate between authentic self-perception and the distorted racial perception imposed by dominant society',
-              'Double consciousness means having two completely separate and non-interacting identities',
-              'The concept applies only to middle-class African Americans with no broader applicability',
-              'Double consciousness was Du Bois\'s description of white Americans\' inability to understand Black experience',
+              'Seeing oneself both through one\'s own eyes and through the contemptuous gaze of white society, producing a divided identity',
+              'Holding two wholly separate identities, one African and one American, that never interact with or shape each other in daily life',
+              'A split within Black America between a middle-class elite and the rural poor, which Du Bois believed blocked collective progress',
+              'White Americans\' inability to understand Black experience, which Du Bois blamed for the collapse of Reconstruction-era reforms',
             ],
             correctAnswer: 0,
-            explanation: 'Double consciousness as colonial identity analysis is AP\'s theoretical framework: Du Bois described the African American experience of being "always looking at one\'s self through the eyes of others, of measuring one\'s soul by the tape of a world that looks on in amused contempt and pity." This psychological division — between self-perception (I am a full human being) and social perception (the world sees me as a racial inferior) — creates a "peculiar sensation, this double-consciousness, this sense of always measuring one\'s self by the tape of a world that looks on in amused contempt." AP uses this to analyze the psychological dimension of colonial experience beyond economic exploitation.'
+            explanation: 'Double consciousness as colonial identity analysis is AP\'s theoretical framework: Du Bois described the African American experience of "two-ness" — being "always looking at one\'s self through the eyes of others, of measuring one\'s soul by the tape of a world that looks on in amused contempt and pity." This psychological division — between self-perception (I am a full human being) and social perception (the world sees me as a racial inferior) — is a single divided consciousness that must constantly navigate between the two, not two separate identities. AP extends this to analyze the psychological dimension of colonial experience beyond economic exploitation.'
           },
           {
             question: 'Japan\'s defeat of Russia in the Russo-Japanese War (1904-05) had what impact on colonized peoples globally?',
             options: [
-              'It demonstrated that a non-European nation could defeat a European great power using modern military technology and industrial capacity — this shattered the ideological claim that European dominance was natural or permanent, inspiring anti-colonial movements from India to Egypt to Africa with the evidence that "white" military superiority was contingent rather than inherent',
-              'Japan\'s victory had no impact outside East Asia',
-              'The victory inspired colonized peoples to seek Japanese protection rather than independence',
-              'Colonized peoples interpreted the Japanese victory as confirming European racial superiority',
+              'It showed a non-European power could beat a European one, undermining claims of natural white dominance and inspiring nationalists from Egypt to India',
+              'Its impact stayed within East Asia, since news of the war reached colonized peoples in Africa and South Asia only years afterward',
+              'It led most colonized peoples to seek Japanese protection rather than independence, trading European rulers for an Asian one',
+              'Colonized peoples saw it as confirming European superiority, since they credited Japan\'s success to British-built warships alone',
             ],
             correctAnswer: 0,
-            explanation: 'Non-European military victory as anti-colonial inspiration is AP\'s ideological impact analysis: Social Darwinism and racist ideology had naturalized European dominance as evidence of racial superiority. Japanese military modernization (Meiji reforms) + industrial capacity (armaments, logistics) + tactical skill + Russian military disorganization = Japanese victory at Tsushima (naval) and Mukden (land). This was not interpreted only as military news — nationalists in India (Bal Gangadhar Tilak celebrated it enthusiastically), Egypt, Persia, Vietnam, and Africa recognized its ideological significance: if Japan could beat Russia, the racial hierarchy was a lie. European dominance was not natural — it was the product of specific historical conditions that could be changed.'
+            explanation: 'Non-European military victory as anti-colonial inspiration is AP\'s ideological impact analysis: Social Darwinism and racist ideology had naturalized European dominance as evidence of racial superiority. Japanese military modernization (Meiji reforms) + industrial capacity (armaments, logistics) + tactical skill + Russian military disorganization = Japanese victory at Tsushima (naval) and Mukden (land). The news spread quickly and was not interpreted only as military news — nationalists in India (Bal Gangadhar Tilak celebrated it enthusiastically), Egypt, Persia, Vietnam, and Africa recognized its ideological significance: if Japan could beat Russia, white military superiority was contingent rather than inherent. European dominance was not natural — it was the product of specific historical conditions that could be changed.'
           }
         ]
       }
@@ -63,14 +63,14 @@ Pan-Africanism emerged from multiple sources:
 
 | Figure | Background | Contribution |
 |--------|-----------|-------------|
-| **W.E.B. Du Bois** | African American; Harvard PhD | First Pan-African Congress (1900); "double consciousness"; NAACP |
+| **W.E.B. Du Bois** | African American; Harvard PhD | Drafted the 1900 conference's "Address to the Nations of the World"; organized the Pan-African Congresses from 1919; "double consciousness"; NAACP |
 | **Marcus Garvey** | Jamaican; worked in USA | Universal Negro Improvement Association (UNIA); "Back to Africa"; Black nationalism |
-| **Sylvester Williams** | Trinidadian lawyer | Coined "Pan-African"; organized 1900 conference in London |
+| **Henry Sylvester Williams** | Trinidadian lawyer | Coined "Pan-African"; organized 1900 conference in London |
 | **Edward Blyden** | Liberian diplomat | African cultural pride; Christianity, Islam and the Negro Race (1887) |
 
 > **The Pan-African Congresses**
 
-- **1900 (London):** First meeting; address to colonial powers on treatment of African peoples
+- **1900 (London):** First meeting (the Pan-African Conference, organized by Henry Sylvester Williams); Du Bois drafted its address to colonial powers on treatment of African peoples
 - **1919 (Paris):** W.E.B. Du Bois organized during Paris Peace Conference; advocated international supervision of African colonies
 - **1921, 1923, 1927:** Continued advocacy; growing membership; connections to African independence movements
 - **1945 (Manchester):** Attended by future independence leaders (Kwame Nkrumah of Ghana; Jomo Kenyatta of Kenya) — turning point from diaspora to African-led movement
@@ -101,35 +101,35 @@ Colonial powers educated colonial subjects in Western languages and political ph
           {
             question: 'The 1945 Pan-African Congress in Manchester being attended by future African independence leaders (Nkrumah, Kenyatta) demonstrates:',
             options: [
-              'Pan-Africanism transitioned from a diaspora intellectual movement (led by African Americans and Caribbean activists addressing colonialism from outside Africa) to an African-led independence movement (led by Africans who would personally lead their nations to independence) — the Manchester Congress marks the generational and geographic shift that positioned Pan-Africanism to drive actual decolonization rather than simply advocate for it',
-              'Pan-Africanism had no connection to actual African independence movements',
-              'The 1945 Congress was the first Pan-African Congress — all previous ones had been led by Africans',
-              'Diaspora Pan-Africanism and African nationalist movements were entirely separate with no organizational connection',
+              'Pan-Africanism was shifting from a diaspora intellectual movement to one led by Africans who would soon head independent states',
+              'The movement remained only a diaspora debating society, with no real link to the independence movements then emerging inside Africa',
+              'The 1945 meeting was the movement\'s founding congress, as no Pan-African gathering had been held before the Second World War',
+              'African nationalism replaced Pan-Africanism, since Nkrumah and Kenyatta rejected diaspora ideas once they returned home',
             ],
             correctAnswer: 0,
-            explanation: 'Intellectual movement → political movement transition is AP\'s causal analysis: Du Bois\'s early Pan-African Congresses (1900-1927) were largely attended by diaspora Africans (African Americans, Caribbean activists) who had no direct political power in Africa. By 1945, a new generation of Africans had received Western university education (Kwame Nkrumah studied in USA and Britain; Jomo Kenyatta studied in London) — they attended the Manchester Congress, internalized Pan-African ideology, and returned to Africa to lead independence movements. Ghana (1957, Nkrumah) and Kenya (1963, Kenyatta) were direct products of this transition from diaspora advocacy to African-led independence politics.'
+            explanation: 'Intellectual movement → political movement transition is AP\'s causal analysis: the 1900 London Pan-African Conference (organized by Henry Sylvester Williams) and Du Bois\'s Pan-African Congresses (1919-1927) were largely attended by diaspora Africans (African Americans, Caribbean activists) who had no direct political power in Africa. By 1945, a new generation of Africans had received Western university education (Kwame Nkrumah studied in the USA and Britain; Jomo Kenyatta studied in London) — they attended the Manchester Congress, internalized Pan-African ideology, and returned to Africa to lead independence movements. Ghana (1957, Nkrumah) and Kenya (1963, Kenyatta) were direct products of this transition from diaspora advocacy to African-led independence politics, and Nkrumah remained a leading Pan-Africanist in power.'
           },
           {
             question: 'The Indian National Congress Party (founded 1885) shifted from moderate (petition and reform) to more radical nationalism because:',
             options: [
-              'British imperial policy repeatedly frustrated moderate nationalist demands — the 1905 Partition of Bengal (dividing the Muslim-majority east from the Hindu-majority west to weaken nationalist unity) and the general dismissal of Indian petitions for greater self-government demonstrated to moderates like Tilak that the colonial government would not grant meaningful reform voluntarily, requiring more assertive political mobilization',
-              'The Congress Party was always radical from its founding with no moderate phase',
-              'British reform concessions satisfied moderate nationalists and only extremists demanded independence',
-              'The shift to radicalism was caused by economic depression with no connection to British political decisions',
+              'British policy kept rebuffing moderate demands, and the 1905 Partition of Bengal convinced many that only mass action would work',
+              'Congress had been radical from its 1885 founding, demanding full independence and mass boycotts from its very first session onward',
+              'British reforms satisfied the moderates, so radicalism came only from a small fringe with no real influence on Congress policy',
+              'An economic depression in 1905 drove the shift, as falling cotton prices turned peasants against the Congress\'s moderate leaders',
             ],
             correctAnswer: 0,
-            explanation: 'Colonial policy producing radicalization is AP\'s causal analysis: the Indian National Congress (1885) was founded by moderates like Dadabhai Naoroji who believed in constitutional petitions, demonstrating Indian fitness for self-governance within the empire. Years of petitions produced no meaningful political reform. The 1905 Partition of Bengal was explicitly designed to weaken nationalism by dividing Hindu and Muslim communities — it instead produced the Swadeshi movement (boycott of British goods; promotion of Indian industries) and galvanized the radical wing led by Bal Gangadhar Tilak. The radicals argued that liberty had never been given voluntarily by any ruling power and must be taken. British policy radicalized the Congress by demonstrating that moderation would not be rewarded.'
+            explanation: 'Colonial policy producing radicalization is AP\'s causal analysis: the Indian National Congress (1885) was founded by moderates like Dadabhai Naoroji who believed in constitutional petitions, demonstrating Indian fitness for self-governance within the empire. Years of petitions produced no meaningful political reform. The 1905 Partition of Bengal (dividing the Muslim-majority east from the Hindu-majority west) was widely seen as designed to weaken nationalism by dividing Hindu and Muslim communities — it instead produced the Swadeshi movement (boycott of British goods; promotion of Indian industries) and galvanized the radical wing led by Bal Gangadhar Tilak, an "Extremist" rather than a moderate. The radicals argued that liberty had never been given voluntarily by any ruling power and must be taken. British policy radicalized the Congress by demonstrating that moderation would not be rewarded.'
           },
           {
             question: 'The Boxer Rebellion (China, 1900) represents which type of anti-colonial response?',
             options: [
-              'Popular nativist resistance to foreign economic penetration and cultural imperialism — the Boxers (Society of Righteous and Harmonious Fists) attacked foreign-built railroads, telegraph lines, churches, and Chinese Christian converts, representing a grassroots reaction to the loss of Chinese sovereignty and traditional cultural practices to Western commercial and missionary penetration, differing from elite nationalist movements (Sun Yat-sen) that accepted Western modernization while opposing foreign political control',
-              'The Boxers were a conservative movement that supported the Qing Dynasty against reformers',
-              'The Boxer Rebellion was a reformist movement seeking to modernize China through Western methods',
-              'The Boxers had no anti-foreign dimension — they fought only against the Qing Dynasty',
+              'Popular nativist resistance to foreign economic and missionary penetration, unlike elite nationalists such as Sun Yat-sen who embraced Western ideas',
+              'Elite reformist nationalism, led by scholar-officials such as Kang Youwei who sought to modernize China by adopting Western methods',
+              'Anti-dynastic revolution aimed solely at overthrowing the Qing, with no hostility toward foreigners or toward Chinese Christians',
+              'Organized military resistance by the New Army, whose Western-trained officers rose against the foreign concessions in Shanghai',
             ],
             correctAnswer: 0,
-            explanation: 'Grassroots nativist vs. elite modernizing nationalism is AP\'s typology: the Boxer Rebellion represents one pattern of anti-colonial response (populist rejection of all foreign influence, including railways and Christianity) while Sun Yat-sen\'s revolutionary nationalism represents another (acceptance of Western technology and political ideas while rejecting Western political control). Both opposed foreign domination but through opposite cultural strategies: Boxers sought to expel all Western influence; Sun Yat-sen sought to use Western ideas (democracy, nationalism) to build a modern Chinese state capable of resisting Western power. AP requires distinguishing these different types of anti-colonial responses.'
+            explanation: 'Grassroots nativist vs. elite modernizing nationalism is AP\'s typology: the Boxers (Society of Righteous and Harmonious Fists) attacked foreign-built railroads, telegraph lines, churches, missionaries, and Chinese Christian converts — a populist rejection of foreign influence. Their slogan "Support the Qing, destroy the foreign" won them backing from the Empress Dowager Cixi, so they were not anti-dynastic. Sun Yat-sen\'s revolutionary nationalism represents another pattern (acceptance of Western technology and political ideas while rejecting Western political control), and Kang Youwei\'s 1898 Hundred Days\' Reform a third (modernization from within the Qing court). Boxers sought to expel Western influence; Sun Yat-sen sought to use Western ideas (democracy, nationalism) to build a modern Chinese state capable of resisting Western power. AP requires distinguishing these different types of anti-colonial responses.'
           }
         ]
       }
@@ -150,12 +150,12 @@ Colonial powers educated colonial subjects in Western languages and political ph
             ]
           },
           {
-            label: 'The 1900 Japanese war victory that demonstrated a non-European nation could defeat a European great power, inspiring anti-colonial movements globally, was the ___',
+            label: 'The 1904–05 Japanese war victory that demonstrated a non-European nation could defeat a European great power, inspiring anti-colonial movements globally, was the ___',
             options: [
             'Russo-Japanese War',
             'Sino-Japanese War',
             'Boxer Rebellion',
-            'Battle of Tsushima',
+            'Boshin War',
             ]
           },
           {
@@ -188,21 +188,21 @@ Colonial powers educated colonial subjects in Western languages and political ph
           {
             question: 'Marcus Garvey\'s Universal Negro Improvement Association (UNIA) and "Back to Africa" movement differed from W.E.B. Du Bois\'s NAACP approach by:',
             options: [
-              'Garvey pursued Black nationalist separatism (creating an autonomous Black nation-state in Africa as the ultimate goal) rather than integration and civil rights within existing American society (Du Bois\'s NAACP goal) — this reflected a different assessment of whether racial equality within American society was achievable; Garvey concluded it was not and sought to build Black political, economic, and cultural institutions independent of white society',
-              'Garvey and Du Bois had identical political strategies with only rhetorical differences',
-              'Du Bois advocated for Black separatism while Garvey sought integration',
-              'The UNIA and NAACP cooperated fully with no strategic disagreement',
+              'Pursuing Black nationalist separatism and an African homeland instead of integration and civil rights within the USA',
+              'Sharing the NAACP\'s strategy of court challenges and lobbying, so that the two men differed only in tone and in personal style',
+              'Seeking integration through elite education, while Du Bois called for a separate Black nation-state to be built in Liberia',
+              'Cooperating closely with the NAACP, as Garvey and Du Bois jointly ran the Black Star Line and the 1919 Pan-African Congress',
             ],
             correctAnswer: 0,
-            explanation: 'Separatism vs. integration debate is AP\'s African American politics framework: Du Bois (Harvard PhD, middle-class professional) believed that talented Black Americans ("the Talented Tenth") could earn full citizenship through demonstrated intellectual and cultural equality — NAACP strategy: legal challenges to discrimination; political lobbying; cultural achievement. Garvey (Jamaican immigrant, working-class appeal) concluded that white racism was too deep to be overcome by Black achievement — the solution was to build Black economic power (Black Star Line shipping company) and ultimately create an African homeland. Their disagreement reflected different analyses of American racism\'s permanence, not simply different temperaments.'
+            explanation: 'Separatism vs. integration debate is AP\'s African American politics framework: Du Bois (Harvard PhD, middle-class professional) believed that talented Black Americans ("the Talented Tenth") could earn full citizenship through demonstrated intellectual and cultural equality — NAACP strategy: legal challenges to discrimination; political lobbying; cultural achievement. Garvey (Jamaican immigrant, working-class appeal) concluded that white racism was too deep to be overcome by Black achievement — the solution was to build Black economic power (the UNIA\'s Black Star Line shipping company) and ultimately create an African homeland. The two men were bitter rivals. Their disagreement reflected different analyses of American racism\'s permanence, not simply different temperaments.'
           },
           {
             question: 'For AP, the most significant common feature of Pan-Africanism, Indian nationalism, and Chinese nationalism as anti-colonial movements was:',
             options: [
-              'All three movements used Western political concepts (nationalism, self-determination, democracy) as tools against Western colonial power — colonized peoples adopted the nationalist frameworks that European powers had used to justify their own states and applied them to colonized nations, forcing colonial powers to either accept that their own political principles applied to colonized peoples or reveal that their universalist claims were ideologically selective',
-              'All three movements rejected Western political concepts entirely in favor of traditional pre-colonial political frameworks',
-              'The three movements had no ideological connection — they developed independently with no common frameworks',
-              'Anti-colonial movements succeeded only through military force with no ideological dimension',
+              'Each adopted Western ideas of nationalism and self-determination and turned them into weapons against Western colonial rule',
+              'Each rejected Western nationalism entirely, seeking instead to restore the pre-colonial monarchies their peoples had lost',
+              'Each developed in isolation, with no shared ideas, contacts, or common frameworks linking African, Indian, and Chinese leaders',
+              'Each relied on armed force alone, winning independence through war without any ideological appeal to colonial publics',
             ],
             correctAnswer: 0,
             explanation: 'Western ideas against Western power is AP\'s anti-colonial synthesis: this is the intellectual paradox at the heart of anti-colonial nationalism. European colonialism brought nationalism as an ideology (nations have the right to self-determination; a people with shared culture and history should govern themselves). Colonized peoples observed European nationalism, absorbed it in colonial schools, and turned it against colonial rule: if nations have the right to self-determination, then India, China, and Africa are nations with the right to self-determination. Colonial powers found it difficult to reject this argument without explicitly abandoning the principles they claimed to be spreading. This is why Woodrow Wilson\'s 1918 "Fourteen Points" (promising self-determination) inspired Ho Chi Minh, Indian nationalists, and Korean independence activists — they took Wilson\'s words seriously even when he intended them only for European nations.'

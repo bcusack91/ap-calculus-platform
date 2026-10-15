@@ -61,7 +61,7 @@ export const whConsequencesIndustrializationPart1Data = {
           {
             question: 'Which of the following BEST describes the Luddite movement in early 19th-century Britain?',
             options: [
-              'A philosophical society promoting scientific research and technological advancement for social progress',
+              'A philosophical society promoting scientific research and technological advancement as the path to social progress',
               'Workers who destroyed factory machines to protest the loss of skilled artisan jobs to mechanized production',
               'Factory owners who lobbied Parliament for fewer regulations on child labor and working hours',
               'A religious revival movement that rejected all forms of modern technology on moral grounds'
@@ -72,10 +72,10 @@ export const whConsequencesIndustrializationPart1Data = {
           {
             question: 'What was the significance of the British Factory Act of 1833?',
             options: [
-              'It completely abolished child labor in all industries across the British Empire',
-              'It marked the beginning of government regulation of working conditions by banning factory work for children under 9 and limiting hours for older children',
-              'It nationalized all factories and placed them under direct government ownership and management',
-              'It guaranteed all factory workers a minimum wage equal to the national average income'
+              'It abolished child labor completely in every industry across the British Empire and made schooling compulsory for all children under fourteen',
+              'It began state regulation of working conditions, banning textile-mill work for children under 9 and capping hours for older children',
+              'It nationalized the major textile mills and coal mines, placing them under the direct ownership and management of a new government ministry',
+              'It guaranteed every factory worker a minimum wage equal to the national average income and created arbitration boards to settle wage disputes'
             ],
             correctAnswer: 1,
             explanation: 'The 1833 Factory Act was the first effective government intervention in working conditions. While limited (only applying to textile factories, with weak enforcement initially), it established the precedent that the government could regulate private industry to protect workers — opening the door to further reforms.'
@@ -127,10 +127,10 @@ Industrialization generated new ways of thinking about society, economics, and g
           {
             question: 'According to Karl Marx, what was the fundamental driving force of historical change?',
             options: [
-              'Technological innovation and the gradual accumulation of scientific knowledge across generations',
-              'Class struggle — the ongoing conflict between those who own the means of production and those who labor',
-              'The decisions of individual political leaders and monarchs who shaped events through personal will',
-              'Religious and cultural evolution as societies moved from polytheism to monotheism to secularism'
+              'Technological innovation and the gradual accumulation of scientific knowledge passed down across generations',
+              'Class struggle, the ongoing conflict between those who own the means of production and those who labor',
+              'The decisions of individual political leaders and monarchs who shaped events through their own personal will',
+              'Religious and cultural evolution as societies moved from polytheism to monotheism and finally to secularism'
             ],
             correctAnswer: 1,
             explanation: 'Marx argued in The Communist Manifesto (1848) that "the history of all hitherto existing society is the history of class struggles." He saw every era defined by conflict between an owning class and a working class — feudal lords vs. serfs, then bourgeoisie vs. proletariat — and predicted that capitalism would ultimately be overthrown by proletarian revolution.'
@@ -138,10 +138,10 @@ Industrialization generated new ways of thinking about society, economics, and g
           {
             question: 'How did Robert Owen\'s approach to improving workers\' lives differ from Marx\'s approach?',
             options: [
-              'Owen believed violent revolution was necessary, while Marx favored gradual peaceful reform through Parliament',
-              'Owen created model factory communities with better conditions as an example, while Marx argued that only structural revolution could change the system',
-              'Owen opposed all forms of industrialization, while Marx believed capitalism was a necessary stage of progress',
-              'Both Owen and Marx agreed on identical strategies for achieving a classless society'
+              'Owen believed violent revolution was necessary, while Marx favored gradual peaceful reform through Parliament and trade unions',
+              'Owen built model factory communities to show that better conditions could work, while Marx argued only revolution could change the system',
+              'Owen opposed industrialization and urged a return to small farms and crafts, while Marx saw capitalism as a necessary stage of historical progress',
+              'Both men agreed on one strategy: workers would win a classless society by electing socialist majorities to Parliament'
             ],
             correctAnswer: 1,
             explanation: 'Owen was a "utopian socialist" who tried to prove that humane working conditions could be profitable — his New Lanark factory offered shorter hours, education, and fair wages. Marx dismissed this as naive, arguing that individual model communities couldn\'t change the structural exploitation built into capitalism — only a proletarian revolution could.'

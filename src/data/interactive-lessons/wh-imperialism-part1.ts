@@ -38,7 +38,7 @@ export const whImperialismPart1Data = {
 | **Nationalism** | Colonial empires became symbols of national prestige — competition among European powers |
 
 ### Social Darwinism & Racial Ideology
-- Applied Darwin's "survival of the fittest" to **human societies** — claimed European dominance proved racial superiority
+- Applied evolutionary ideas to **human societies** (Herbert Spencer coined "survival of the fittest" in 1864, after Darwin's *Origin of Species*, 1859) — claimed European dominance proved racial superiority
 - Used to **justify** exploitation, forced labor, and cultural destruction
 - This was **pseudoscience** — no biological basis for racial hierarchy
 
@@ -47,7 +47,7 @@ export const whImperialismPart1Data = {
 | Type | Description | Example |
 |---|---|---|
 | **Colony** | Direct rule by the imperial power | French Algeria, British India |
-| **Protectorate** | Local rulers remain but under imperial "guidance" | British Egypt (after 1882) |
+| **Protectorate** | Local rulers remain but under imperial "guidance" | British Egypt (occupied 1882; formal protectorate 1914) |
 | **Sphere of influence** | Exclusive economic access without formal rule | European spheres in China |
 | **Economic imperialism** | Control through economic dominance without formal political rule | British-owned railroads in Argentina |
 
@@ -63,24 +63,24 @@ export const whImperialismPart1Data = {
           {
             question: 'Which of the following BEST explains why the "new imperialism" of the late 1800s differed from earlier European colonialism?',
             options: [
-              'Earlier colonialism focused on the Americas, while new imperialism focused on Europe itself',
-              'New imperialism involved direct territorial conquest and administration of vast regions in Africa and Asia, driven by industrial demand for raw materials and enabled by superior military technology',
-              'Earlier colonialism was more brutal, while new imperialism was characterized by peaceful trade partnerships',
-              'New imperialism was led by Asian and African powers conquering European territories'
+              'Earlier colonialism sought land for settlers, while new imperialism avoided territorial control and relied on informal trade concessions in Asian ports',
+              'New imperialism meant conquering and governing vast inland regions of Africa and Asia, driven by industrial demand for raw materials and enabled by new technology',
+              'New imperialism was driven mainly by Catholic missionary orders seeking converts, while earlier colonialism was run by profit-seeking chartered companies',
+              'New imperialism was led by Spain and Portugal reviving their old empires, while Britain and France largely withdrew from overseas expansion after 1850'
             ],
             correctAnswer: 1,
-            explanation: 'The "new imperialism" of the 1800s was driven by industrial needs (raw materials, markets) and enabled by technology (Maxim gun, steamship, quinine). Unlike earlier mercantile colonialism (trading posts), new imperialism involved conquering and directly administering entire territories — exemplified by the Scramble for Africa.'
+            explanation: 'The "new imperialism" of the late 1800s was driven by industrial needs (raw materials, markets) and enabled by technology (Maxim gun, steamship, quinine). Unlike earlier mercantile colonialism, which in Africa and Asia mostly meant coastal trading posts, new imperialism involved conquering and directly administering entire territories, as in the Scramble for Africa. Britain and France were its leading powers, not Spain and Portugal, and missionaries accompanied it but did not drive it.'
           },
           {
             question: 'How was Social Darwinism used to justify European imperialism?',
             options: [
-              'It argued that all races were equal, making colonialism unjustifiable on moral grounds',
-              'It misapplied evolutionary theory to claim European civilizations were naturally superior, making their domination of "lesser" peoples inevitable and beneficial',
-              'It promoted democratic values and encouraged colonized peoples to develop self-governance immediately',
-              'It was a religious doctrine that required Christian nations to avoid all contact with non-Christian peoples'
+              'It held that all peoples would evolve toward European civilization on their own, so colonial rule was unnecessary and should be ended gradually by negotiation',
+              'It misapplied evolutionary ideas to rank human societies, claiming European dominance proved natural superiority and was therefore inevitable and beneficial',
+              'It was a Christian missionary doctrine claiming that conversion, not conquest, was the only legitimate way for Europeans to influence African and Asian societies',
+              'It argued that tropical climates rather than race determined development, so Europeans should rule only temperate lands and leave the tropics to local rulers'
             ],
             correctAnswer: 1,
-            explanation: 'Social Darwinism took Darwin\'s biological theory of natural selection and misapplied it to human societies, arguing that European global dominance proved their racial and cultural superiority. This pseudoscientific ideology was used to justify exploitation, forced labor, and cultural destruction as "natural" and even beneficial.'
+            explanation: 'Social Darwinism applied ideas of natural selection to human societies. Herbert Spencer, its best-known theorist, coined the phrase "survival of the fittest" in 1864, five years after Darwin\'s Origin of Species. Its advocates argued that European global dominance proved racial and cultural superiority. This pseudoscientific ideology was used to justify exploitation, forced labor, and cultural destruction as "natural" and even beneficial.'
           }
         ]
       }
@@ -128,24 +128,24 @@ export const whImperialismPart1Data = {
           {
             question: 'What was the most significant long-term consequence of the Berlin Conference (1884–85)?',
             options: [
-              'It established lasting peace between European colonial powers by clearly dividing their spheres of influence',
-              'It drew arbitrary borders across Africa that ignored ethnic and cultural boundaries, creating the basis for ethnic conflicts that continue today',
-              'It gave African leaders a voice in determining their own borders and governance structures',
-              'It ended the slave trade across the African continent within five years of the conference'
+              'It established lasting peace among the colonial powers, since dividing Africa on paper removed every source of European rivalry there until decolonization',
+              'It drew borders across Africa that ignored ethnic and political boundaries, leaving later independent states with divided peoples and internal tensions',
+              'It gave African rulers formal seats in negotiating their borders, which is why colonial boundaries were widely accepted by African states after independence',
+              'It created a single customs union for all of Africa, tying the continent\'s trade to one tariff system that Europeans kept until 1914'
             ],
             correctAnswer: 1,
-            explanation: 'The Berlin Conference\'s arbitrary borders — drawn without any African participation — divided ethnic groups between multiple colonies and forced rival groups into single territories. When African nations gained independence in the 20th century, they inherited these artificial borders, contributing to ethnic conflicts, civil wars, and political instability that persist today.'
+            explanation: 'The Berlin Conference\'s borders, drawn without any African participation, divided ethnic groups between multiple colonies and forced rival groups into single territories. When African nations gained independence in the 20th century, they inherited these artificial borders, contributing to ethnic conflicts, civil wars, and political instability. European rivalry in Africa continued after Berlin (the Fashoda crisis of 1898, the Moroccan crises), and the conference\'s free-trade rules covered only the Congo basin.'
           },
           {
             question: 'Why is King Leopold II\'s Congo Free State considered one of the most extreme examples of imperial exploitation?',
             options: [
-              'Leopold established a model democratic government that other colonial powers later adopted throughout Africa',
-              'Leopold treated the Congo as his personal property, imposing forced labor for rubber extraction that resulted in an estimated 10 million deaths from brutality, starvation, and disease',
-              'Leopold peacefully negotiated with Congolese leaders and established fair trade agreements for mineral rights',
-              'Leopold\'s rule was brief and had minimal lasting impact on the Congo\'s population or economy'
+              'Leopold governed the Congo through an elected colonial assembly, though Belgian settlers dominated it and kept Congolese representation extremely limited',
+              'Leopold ran the Congo as his personal property, enforcing rubber quotas through terror that contributed to millions of deaths from violence and famine',
+              'Leopold\'s agents focused on diamond mining rather than rubber, so most deaths came from mine accidents rather than from deliberate colonial violence',
+              'Leopold\'s rule was brief and thinly staffed, so its effects on the Congo\'s people were small compared with the later Belgian state colony'
             ],
             correctAnswer: 1,
-            explanation: 'Leopold\'s Congo Free State (1885–1908) was run as a private commercial enterprise for his personal profit. The forced rubber collection system was enforced through terror — including the infamous practice of cutting off hands as punishment for failing to meet quotas. The resulting death toll of approximately 10 million made it one of the greatest atrocities of the imperial era.'
+            explanation: 'Leopold\'s Congo Free State (1885–1908) was run as a private commercial enterprise for his personal profit. The forced rubber collection system was enforced through terror, including the infamous practice of cutting off hands as punishment for failing to meet quotas. Violence, famine, and disease caused a population collapse often estimated at around 10 million, making it one of the greatest atrocities of the imperial era. International outrage forced Belgium to take the colony from Leopold in 1908.'
           }
         ]
       }

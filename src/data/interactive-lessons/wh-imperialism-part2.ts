@@ -23,10 +23,10 @@ export const whImperialismPart2Data = {
           {
             question: 'John Hobson\'s analysis of imperialism (1902) differed from Social Darwinist justifications in that:',
             options: [
-              'Hobson argued imperialism was a specific economic dysfunction (insufficient domestic purchasing power forcing capital to seek overseas returns) with a specific domestic remedy (higher wages = internal markets sufficient), whereas Social Darwinism claimed imperialism was a natural law of racial competition with no remedy — Hobson\'s analysis was reformist; Social Darwinism was deterministic',
-              'Hobson supported imperialism while Social Darwinism opposed it',
-              'Both Hobson and Social Darwinism provided justifications for colonial expansion',
-              'Hobson argued imperialism was inevitable while Social Darwinism claimed it was avoidable',
+              'Hobson treated imperialism as a fixable flaw of capitalism caused by underconsumption at home, while Social Darwinism called it a natural law of racial struggle',
+              'Hobson defended imperialism as a necessary outlet for surplus capital, while Social Darwinists opposed expansion as a costly drain on the strongest European nations',
+              'Hobson and the Social Darwinists agreed that expansion was natural, but Hobson argued it should be regulated by international treaty rather than left to competing states',
+              'Hobson blamed imperialism mainly on racial ideology spread by the popular press, while Social Darwinists explained it as a search for profitable overseas investment',
             ],
             correctAnswer: 0,
             explanation: 'Hobson\'s materialist critique vs. Social Darwinist naturalization is AP\'s analytical contrast: Hobson said imperialism was not natural or inevitable — it was a consequence of capitalism\'s distribution problem. Fix income inequality; workers have money; domestic markets absorb industrial output; no need for colonial markets. Social Darwinism said the strong dominate the weak by natural law — no reform is possible or desirable. The contrast reveals that colonial ideology was not simply the application of economic interest but a distinct intellectual system that naturalized what Hobson identified as a historically specific economic problem.'
@@ -34,13 +34,13 @@ export const whImperialismPart2Data = {
           {
             question: 'The "scramble for Africa" among European powers after 1870 demonstrates which AP principle?',
             options: [
-              'Competitive nationalism created self-reinforcing imperial expansion — once one European power moved to acquire African territory, others felt compelled to respond to prevent being excluded, creating a race dynamic where nationalist competition drove colonial expansion beyond what pure economic calculation would have produced',
-              'The scramble for Africa was purely economically motivated with no nationalist dimension',
-              'African colonization proceeded slowly and cooperatively among European powers',
-              'Nationalism played no role in the scramble for Africa — only economic motives mattered',
+              'Competitive nationalism made expansion self-reinforcing as each power\'s claims pushed rivals to grab territory before being shut out, beyond what profit alone justified',
+              'Free-trade economics drove a steady expansion in which European powers cooperated to open African markets, so territorial claims simply followed trade agreements',
+              'Humanitarian anti-slavery campaigns drove expansion, since European publics demanded intervention and governments annexed territory chiefly to end slave raiding in the interior',
+              'African military weakness alone set the pace, so European powers advanced only where local resistance had already collapsed from internal wars',
             ],
             correctAnswer: 0,
-            explanation: 'The competitive dynamic of the scramble is AP\'s evidence that nationalism amplified imperialism beyond economic logic: once Britain colonized Egypt (1882), France felt threatened in North Africa; once France moved into West Africa, Germany demanded compensation; once Germany acquired Togoland and Cameroon, Belgium rushed to claim the Congo. Each colonial acquisition by one power triggered reactions from others. Pure economic analysis could not predict this cascading dynamic — only competitive nationalist politics explains the speed and scope of Africa\'s partition.'
+            explanation: 'The competitive dynamic of the scramble is AP\'s evidence that nationalism amplified imperialism beyond economic logic. Britain\'s occupation of Egypt in 1882 alarmed France, which pressed harder in West Africa; Germany then claimed Togoland, Cameroon, and South West Africa in 1884; Leopold II of Belgium won recognition of his Congo claim at Berlin in 1885. Each acquisition by one power triggered reactions from others. Anti-slavery rhetoric was used as a justification, but it did not set the pace. Pure economic analysis could not predict this cascading dynamic; competitive nationalist politics explains the speed and scope of Africa\'s partition.'
           }
         ]
       }
@@ -97,21 +97,21 @@ All three causes interacted — economic, nationalist, and ideological motives r
           {
             question: 'The Rudyard Kipling poem "White Man\'s Burden" (1899) is AP evidence for:',
             options: [
-              'The ideological dimension of imperialism — that European colonial expansion was justified through racial paternalism (Europeans as beneficent civilizers of inferior peoples) and portrayed as self-sacrifice rather than exploitation, revealing the gap between colonial rhetoric (civilizing mission) and colonial practice (forced labor, land seizure, cultural destruction)',
-              'Kipling\'s poem demonstrates that imperialism was purely economically motivated',
-              'The poem was written to oppose imperialism by exposing its costs',
-              'Kipling\'s work provides an accurate description of colonial administration',
+              'Colonial ideology, since the poem cast conquest as a selfless duty to civilize supposedly inferior peoples while masking the forced labor and extraction that colonial rule involved',
+              'Anti-imperialist satire, since Kipling wrote it to mock American leaders for taking the Philippines and to warn readers about the human costs of overseas empire',
+              'Economic motives for empire, since the poem openly urged Americans to seize the Philippines for its sugar plantations and its harbors for the trade with China',
+              'Colonial administration in practice, since Kipling drew on years as a British district official in India to describe accurately how colonial officers governed',
             ],
             correctAnswer: 0,
-            explanation: '"White Man\'s Burden" is AP\'s primary source for colonial ideology: the poem\'s language ("your new-caught, sullen peoples / Half-devil and half-child") reveals the racial assumptions embedded in "civilizing mission" justifications. That Kipling portrays the colonizer as bearing burdens (not extracting profits) inverts the actual economic relationship: colonial powers extracted raw materials and profits while portraying this extraction as charitable improvement. AP\'s lesson: ideology (civilizing mission) served economic and political interests but was presented as altruistic obligation.'
+            explanation: '"The White Man\'s Burden" is AP\'s primary source for colonial ideology. Written to urge the United States to take up rule over the Philippines, the poem\'s language ("your new-caught, sullen peoples / Half-devil and half-child") reveals the racial assumptions embedded in "civilizing mission" justifications. It never mentions profit. Portraying the colonizer as bearing burdens rather than extracting wealth inverts the actual economic relationship. Kipling worked in India as a journalist, not as an administrator. AP\'s lesson: ideology (civilizing mission) served economic and political interests but was presented as altruistic obligation.'
           },
           {
             question: 'Comparing British imperialism in India to Belgian imperialism in the Congo reveals:',
             options: [
-              'Both were economically motivated colonial systems but with different administrative methods — British India maintained formal administrative structures, courts, and railroads (while extracting agricultural products and undermining Indian industry); the Belgian Congo under King Leopold II was essentially a private extraction zone where rubber quotas were enforced through mutilation and murder, demonstrating that colonial brutality existed on a spectrum with some systems more violently extractive than others',
-              'Both British India and the Belgian Congo were governed with identical methods and outcomes',
-              'The Belgian Congo was a model of the civilizing mission while British India was purely extractive',
-              'Neither colony had significant economic motives — both were governed for the welfare of colonial subjects',
+              'Both were extractive, but British India operated through a bureaucratic state and legal system while Leopold\'s Congo was a private rubber zone run by terror',
+              'Both were governed in nearly identical ways, because Belgium copied British Indian law and its civil service model when the Belgian state took the Congo from Leopold',
+              'British India was the more violent of the two, because missionaries in Leopold\'s Congo held enough authority to check the worst abuses of rubber collection',
+              'Both were held mainly for strategy rather than profit, with India guarding the sea routes to Asia and the Congo blocking French expansion',
             ],
             correctAnswer: 0,
             explanation: 'Spectrum of colonial violence is AP\'s analytical nuance: both were exploitative, but the Congo Free State (King Leopold II\'s personal colony) was uniquely brutal — the rubber quota system enforced by severing hands, mass killing estimated at 10 million deaths, systematic terror. British India\'s colonialism included famines caused by British policy (1876-79: 5-10 million deaths), destruction of Indian textile industry, but also railroads, civil service, and legal structures that were eventually used by Indian nationalists. The difference in degree matters for understanding colonial systems.'
@@ -119,10 +119,10 @@ All three causes interacted — economic, nationalist, and ideological motives r
           {
             question: 'The economic competition for colonies after 1870 was connected to the First Industrial Revolution\'s completion in Britain because:',
             options: [
-              'As Britain\'s first-mover industrial advantage declined and Germany, France, and the United States industrialized, European industrial powers competed for colonial raw materials and markets as a way to maintain economic advantages — creating an imperial version of the same competitive dynamics that drove European nationalism',
-              'Industrial competition reduced the desire for colonies since industrial goods could be traded freely',
-              'Colonialism preceded industrialization and was unrelated to it',
-              'Only Britain sought colonies for industrial reasons while other European powers had no economic motives',
+              'As rival nations industrialized and Britain\'s early lead faded, industrial powers competed for colonial raw materials and markets to protect their position',
+              'As Britain\'s industries matured, free trade made formal colonies unnecessary, so industrial competition actually slowed imperial expansion until well after the year 1900',
+              'Industrialization came after the main colonial conquests, so new imperialism was a leftover of mercantilism rather than a product of competing industrial economies',
+              'Only Britain sought colonies for industrial reasons, while Germany and France pursued overseas territory purely for prestige and had no economic motive for expanding',
             ],
             correctAnswer: 0,
             explanation: 'Second Industrial Revolution → imperial competition is AP\'s economic causation chain: Britain\'s first-mover advantage in cotton textiles, iron, and steam engines was eroding by the 1870s as Germany led in chemicals and electrical industries. Competition for raw materials (German steel needs iron ore), markets (German industries need to sell beyond saturated European markets), and investment outlets (German banks need higher returns) drove German colonial demands at the Berlin Conference. Industrial competition and colonial competition were the same competition expressed in different arenas.'
@@ -146,7 +146,7 @@ All three causes interacted — economic, nationalist, and ideological motives r
             ]
           },
           {
-            label: 'Herbert Spencer\'s application of Darwin\'s evolutionary theory to human societies and races was ___',
+            label: 'The ideology, associated with Herbert Spencer, that applied evolutionary "survival of the fittest" ideas to human societies and races was ___',
             options: [
             'Social Darwinism',
             'Liberal nationalism',
@@ -184,21 +184,21 @@ All three causes interacted — economic, nationalist, and ideological motives r
           {
             question: 'Social Darwinism\'s application to imperial expansion reveals which AP principle?',
             options: [
-              'Scientific language can be used ideologically to legitimize power relationships — Darwin\'s biological evolution (a scientific theory about natural selection in species) was applied to human societies and racial groups to naturalize European dominance as the inevitable outcome of racial competition rather than the product of specific historical conditions (industrialization, military technology, state organization)',
-              'Social Darwinism accurately described the relationship between European and non-European societies',
-              'Darwin endorsed the application of his biological theories to human racial competition',
-              'Social Darwinism was only used to oppose imperialism, not support it',
+              'Scientific language could be used ideologically, as a theory about species was stretched to human races to make European dominance look natural rather than historically produced',
+              'Science could correct imperial prejudice, as evolutionary research showed all human populations shared a common ancestry and so undermined racial hierarchy',
+              'Darwin himself designed the theory to justify empire, as Origin of Species argued that European nations were destined to replace the peoples they colonized',
+              'Ideas had little effect on policy, as Social Darwinism circulated only among academics and was never cited by politicians or officials to justify expansion',
             ],
             correctAnswer: 0,
-            explanation: 'Ideology naturalizing historical conditions is AP\'s critical analysis of Social Darwinism: European military and economic dominance in the 19th century was the result of specific historical processes (industrial revolution, particular state institutions, geographic advantages) — not inherent racial superiority. Social Darwinism transformed contingent historical dominance into natural law, making it seem permanent and inevitable. This ideological function — converting historical outcomes into natural law — is how Social Darwinism served colonial interests regardless of whether its practitioners believed it sincerely.'
+            explanation: 'Ideology naturalizing historical conditions is AP\'s critical analysis of Social Darwinism: European military and economic dominance in the 19th century was the result of specific historical processes (industrialization, military technology, state organization) rather than inherent racial superiority. Social Darwinism, popularized by Herbert Spencer and others, transformed contingent historical dominance into natural law, making it seem permanent and inevitable. Darwin\'s Origin of Species dealt with plants and animals, not empires, and Social Darwinist arguments were widely used by politicians and colonial publicists.'
           },
           {
             question: 'For AP, evaluating New Imperialism\'s causes requires recognizing that:',
             options: [
-              'Economic, nationalist, and ideological causes were mutually reinforcing rather than competing alternatives — economic interests motivated colonial expansion; nationalist competition amplified it; ideological justifications legitimized it; all three operated simultaneously and could not be cleanly separated, so AP analysis should acknowledge multiple interacting causes while evaluating which were primary drivers in specific contexts',
-              'Only one cause (economic) drove New Imperialism — other explanations are incorrect',
-              'Ideological causes were the only genuine cause — economics and nationalism were pretexts',
-              'All three causes were equally important in all contexts with no variation',
+              'Economic interest and national rivalry reinforced ideological justification, so strong analysis weighs which motive mattered most in each case instead of treating them as rivals',
+              'Economic motives alone drove expansion, so nationalist and ideological explanations should be treated as later inventions by historians rather than as real causes of empire',
+              'Ideology was the only genuine cause, since economic and nationalist arguments were pretexts invented to win parliamentary votes for colonial spending',
+              'All three motives carried exactly equal weight in every region, so analysis should avoid ranking causes or comparing their relative importance across the colonies of each empire',
             ],
             correctAnswer: 0,
             explanation: 'Multiple interacting causes is AP\'s analytical standard: Hobson was partly right that economics mattered; Arendt and others were right that nationalism mattered; Said was right that ideology mattered. But no single-cause explanation explains all cases: why did European powers colonize territories that had no economic value (Sahara desert) if only economics mattered? Why did private businessmen lobby governments for colonial protection if nationalism was irrelevant? Why did ideological justifications change over time if they were just post-hoc rationalization? All three causes operated together.'

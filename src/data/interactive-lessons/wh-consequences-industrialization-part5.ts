@@ -23,10 +23,10 @@ export const whConsequencesIndustrializationPart5Data = {
           {
             question: 'The "separate spheres" ideology (men in public; women in domestic) served what economic function in industrial capitalism?',
             options: [
-              'It provided unpaid domestic labor (child-rearing, household management, maintenance of the male worker\'s capacity to work) that was economically necessary to industrial capitalism but externalized from wages — by defining domestic work as women\'s natural expression rather than economic labor, it maintained a system where half the population performed economically necessary work without being counted as workers or receiving wages',
-              'Separate spheres was a purely cultural ideology with no economic function',
-              'Separate spheres increased women\'s economic power by giving them control over domestic resources',
-              'The ideology was implemented only among the aristocracy with no impact on middle-class economics',
+              'It supplied unpaid household and child-rearing labor that sustained factory workers, while defining that work as women\'s nature rather than as labor deserving wages',
+              'It had no real economic function, being a purely cultural and religious ideal that factory owners and wage-earning families largely ignored',
+              'It increased women\'s economic power by giving wives legal control over household income, property, and spending decisions in industrial families',
+              'It applied only to aristocratic households, which could afford servants, so it had little effect on how middle-class or working-class families organized their daily labor',
             ],
             correctAnswer: 0,
             explanation: 'Unpaid domestic labor as economic subsidy is AP\'s feminist economic analysis: industrial capitalism required male workers to be at the factory; male workers required food, clean clothing, children raised to become future workers. Someone had to perform this reproductive labor — domestic management, child-rearing, household maintenance. By defining this as women\'s natural "calling" rather than work, the system obtained this labor without wages. The separate spheres ideology thus served an economic function: it naturalized the extraction of domestic reproductive labor from women under the guise of gender roles, reducing employers\' wage costs by shifting reproductive labor costs to families.'
@@ -34,10 +34,10 @@ export const whConsequencesIndustrializationPart5Data = {
           {
             question: 'Samuel Smiles\' "Self-Help" (1859) and its enormous popularity demonstrates:',
             options: [
-              'Middle-class ideology in industrial capitalism attributed success and failure entirely to individual effort and character rather than structural conditions — by arguing that diligent individuals always succeed and that poverty reflects personal failure (insufficient effort, thrift, or respectability), Self-Help legitimized industrial inequality as the natural outcome of individual merit, making structural critique of capitalism seem irrelevant',
-              'Self-Help argued for government programs to address industrial poverty',
-              'The book explicitly acknowledged that structural conditions limited individual opportunity',
-              'Self-Help\'s popularity indicated that most people rejected the self-help ideology',
+              'Middle-class ideology credited success and failure to individual character, recasting poverty as a personal failing rather than a structural condition',
+              'Smiles called for government programs such as public housing and old-age pensions, arguing that individual effort alone could not overcome industrial poverty',
+              'The book openly acknowledged that low wages and lack of schooling limited most workers\' chances, and it urged employers to share profits with their staff',
+              'Its sales came mostly from critics who bought it to attack its message, showing that most Victorian readers rejected the ideal of individual self-improvement',
             ],
             correctAnswer: 0,
             explanation: 'Individualist ideology naturalizing structural inequality is AP\'s analysis: "Self-Help" sold 250,000 copies in Britain by Smiles\' death; was translated into 12 languages. Its core argument — that individual character (thrift, diligence, perseverance) determines outcomes — provided a middle-class moral framework that simultaneously celebrated successful middle-class people (their success reflects their character) and condemned poor working-class people (their poverty reflects their character). The structural conditions of industrial capitalism — who owns capital, how wages are set, what educational access exists — are irrelevant in this framework. This is exactly what made it ideologically useful to the capitalist order.'
@@ -101,10 +101,10 @@ Middle-class culture both reflected and reinforced industrial capitalism:
           {
             question: 'The development of department stores (Bon Marché, Macy\'s) represents:',
             options: [
-              'A new commercial infrastructure connecting industrial mass production to consumer demand — department stores assembled manufactured goods from many industries under one roof, used advertising and display to stimulate demand for products people didn\'t know they wanted, extended credit to enable purchases beyond immediate income, and created shopping as a respectable middle-class leisure activity rather than a necessary transaction',
-              'Department stores were simply larger versions of existing retail shops with no new business model',
-              'Department stores served only upper-class consumers with no middle-class market',
-              'Department stores replaced all previous retail forms immediately upon their creation',
+              'A new link between mass production and consumers, gathering many industries\' goods under one roof and using fixed prices, advertising, display, and credit to stimulate demand',
+              'A simple enlargement of existing shops, keeping traditional haggling over prices and offering no new methods of selling to customers',
+              'A luxury trade serving only aristocratic customers, since middle-class families continued to buy from markets and small specialty shops',
+              'An immediate replacement for all earlier retail forms, as small shops, street markets, and peddlers disappeared within a decade of the first stores opening',
             ],
             correctAnswer: 0,
             explanation: 'Department store as industrial capitalism\'s consumer infrastructure is AP\'s analysis: the department store was a new type of commercial institution designed to match industrial mass production with consumer purchasing. Fixed prices (replacing haggling), clear product display, return policies, advertising campaigns, credit systems — all innovations of the department store — were designed to make purchasing smooth and desirable. The creation of "shopping" as an activity (not just buying necessary things) is an industrial-era invention; department stores were its institutional expression.'
@@ -112,10 +112,10 @@ Middle-class culture both reflected and reinforced industrial capitalism:
           {
             question: 'The 19th-century middle class\'s investment in children\'s education as social mobility strategy demonstrates:',
             options: [
-              'Industrial capitalism shifted the primary mechanism of status reproduction from land inheritance (aristocratic) to credential accumulation (middle-class) — when industrial success required technical knowledge, professional training, and administrative skill, education became the means by which families transmitted class status to the next generation, creating a new relationship between family investment and social reproduction',
-              'Education had no connection to social mobility — birth determined status regardless of education',
-              'Aristocratic families were the first to invest heavily in children\'s education',
-              'Middle-class educational investment was primarily humanitarian rather than social mobility-motivated',
+              'Status reproduction shifted from inherited land toward credentials, as families passed on class position by paying for the schooling that professional careers required',
+              'Education had little to do with mobility, since birth alone fixed a person\'s status in industrial Britain whatever schooling they received',
+              'Aristocratic families led the shift toward investing in schooling, and the middle class copied them only after the universities opened to all',
+              'Middle-class families paid for schooling chiefly out of religious and humanitarian duty, expecting no improvement in their children\'s later careers, incomes, or social standing',
             ],
             correctAnswer: 0,
             explanation: 'Credential replacement of inheritance is AP\'s analysis of middle-class status reproduction: aristocratic families reproduced status through land inheritance (estates passed to eldest son). But industrial capitalism\'s demand for engineers, lawyers, doctors, managers, and accountants created a pathway where educated individuals without land could achieve comfortable incomes. Middle-class families who could not pass land to children invested instead in education — private schools, university, professional training — that qualified children for well-paid professional positions. Education as investment in social reproduction replaced land as investment in status reproduction.'
@@ -123,10 +123,10 @@ Middle-class culture both reflected and reinforced industrial capitalism:
           {
             question: 'Women\'s increasing participation in paid employment (clerical work, teaching) despite "separate spheres" ideology demonstrates:',
             options: [
-              'Ideological prescriptions and material reality diverged as industrial economy created jobs (teaching, clerical work, nursing) considered compatible with femininity while industrial families increasingly needed second incomes — demonstrating that "separate spheres" was a cultural ideal that specific economic pressures eroded in practice, while the ideal remained normative (respectable women shouldn\'t work)',
-              'Women\'s paid employment was consistent with separate spheres ideology from the beginning',
-              'No middle-class women worked in paid employment throughout the 19th century',
-              'Women\'s employment expansion was completely accepted with no ideological conflict',
+              'Ideal and reality diverged, as new clerical and teaching jobs and family need drew women into paid work even while the ideal stayed respectable',
+              'Paid employment fit separate spheres from the start, since the ideology always encouraged middle-class women to pursue respectable careers outside the home',
+              'Paid work stayed confined to working-class women, since no middle-class woman took a salaried teaching or office job anywhere in Britain during the nineteenth century',
+              'Society accepted women\'s new jobs without debate, and the separate spheres ideal disappeared as soon as the typewriter created new clerical positions',
             ],
             correctAnswer: 0,
             explanation: 'Ideology vs. material reality is AP\'s analytical framework: the invention of the typewriter (1870s) and expansion of clerical work created demand for cheap literate labor — and educated middle-class women were available and cheaper than men. School teaching was similarly feminized — women could be paid less than men for the same work. These material realities pushed women into paid employment despite cultural prescription against it. The ideological response was to define these jobs as appropriate extensions of feminine domesticity (teachers as surrogate mothers; nurses as caring women) — adapting the ideology to accommodate material necessity rather than abandoning it.'
@@ -154,8 +154,8 @@ Middle-class culture both reflected and reinforced industrial capitalism:
             options: [
             'Separate spheres',
             'Social Darwinism',
-            'Domesticity ideology',
-            'Victorian values',
+            'Utilitarianism',
+            'Romanticism',
             ]
           },
           {
@@ -188,10 +188,10 @@ Middle-class culture both reflected and reinforced industrial capitalism:
           {
             question: 'Comparing middle-class culture in industrial Britain to aristocratic culture reveals:',
             options: [
-              'Both social groups developed cultural codes that served to distinguish their class — aristocrats used birth, land, and inherited cultural capital as markers of status; middle class used education, professional achievement, domestic respectability, and consumer goods as markers of status — demonstrating that cultural codes are not random but systematically connected to the material basis of each class\'s position',
-              'Middle-class and aristocratic cultures were identical because Britain had no class differences',
-              'Middle-class culture explicitly rejected all cultural distinction as anti-democratic',
-              'Aristocratic culture had no economic function — it was purely aesthetic',
+              'Each class used cultural markers tied to its material base, aristocrats relying on birth and land and the middle class on education, respectability, and goods',
+              'The two cultures were essentially identical, because Britain\'s industrial wealth had erased meaningful class differences by the mid-nineteenth century',
+              'Middle-class culture rejected every form of social distinction as undemocratic, while aristocrats embraced equality as a way to preserve their remaining political influence',
+              'Aristocratic culture was purely aesthetic, with no link to land or wealth, while middle-class culture was purely economic, with no link to status',
             ],
             correctAnswer: 0,
             explanation: 'Class culture as economic position reflection is AP\'s sociological analysis: Pierre Bourdieu\'s concept of "cultural capital" (though anachronistic for AP) captures the AP point: aristocratic cultural codes (appropriate behavior at hunt, correct wine knowledge, aristocratic accent) were not random but reflected and reinforced the aristocratic position based on inherited land wealth. Middle-class cultural codes (Sunday church, educational investment, domestic respectability) reflected and reinforced the middle-class position based on professional credentials and commercial success. Cultural codes are not arbitrary but systematically connected to the material basis of class power.'
@@ -199,10 +199,10 @@ Middle-class culture both reflected and reinforced industrial capitalism:
           {
             question: 'For AP, the middle class\'s emergence as the culturally dominant class in 19th-century industrial societies was significant because:',
             options: [
-              'Middle-class values (individual merit, thrift, self-improvement, domesticity) became hegemonic — presented as universal human values rather than class-specific cultural preferences — making them the standard against which other classes\' cultures were measured and found deficient, naturalizing industrial capitalism\'s class structure by making middle-class culture seem like universal human aspiration rather than the culture of a specific class at a specific historical moment',
-              'Middle-class culture was recognized as class-specific by all social groups with no hegemonic claims',
-              'The working class uniformly adopted middle-class values without resistance',
-              'Middle-class values had no connection to industrial capitalism\'s economic structures',
+              'Middle-class values such as thrift, merit, and domesticity were presented as universal virtues, so other classes\' cultures were judged deficient and industrial inequality seemed natural',
+              'All social groups openly recognized middle-class culture as one class\'s preferences, so it never claimed to set standards for anyone else',
+              'The working class adopted middle-class values uniformly and without resistance, abandoning its own traditions, unions, and forms of leisure',
+              'Industrial capitalism had no connection to middle-class values, which came entirely from older religious traditions that predated the factory',
             ],
             correctAnswer: 0,
             explanation: 'Hegemony of middle-class values is AP\'s Gramscian synthesis: cultural hegemony doesn\'t require force — it works by making one class\'s values seem like everyone\'s values. When "self-help," "respectability," and "individual merit" are presented as universal human virtues (not middle-class ideological preferences), working-class people who internalize these values will blame themselves for poverty (insufficient self-help) rather than blaming capitalism\'s structure. This is the ideological function of middle-class culture — it made industrial capitalism\'s inequality seem natural by making the middle-class cultural framework seem like universal moral truth.'

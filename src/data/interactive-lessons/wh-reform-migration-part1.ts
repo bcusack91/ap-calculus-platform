@@ -64,20 +64,20 @@ Abolition did not end exploitation. New labor systems replaced slavery:
           {
             question: 'Which of the following BEST illustrates the concept of "continuity and change" in labor systems after the abolition of slavery?',
             options: [
-              'Formerly enslaved people immediately gained full economic equality and political rights after abolition in every country',
-              'New coercive labor systems like sharecropping, indentured servitude, and convict leasing replaced slavery but maintained many exploitative features',
-              'All forms of forced labor completely disappeared worldwide within a decade of Britain\'s 1833 Emancipation Act',
-              'Abolition was universally opposed and slavery was quickly reinstated in every nation that attempted to end it'
+              'Most freedpeople received land confiscated from former slaveholders, giving them economic independence soon after emancipation',
+              'Coercive regimes such as sharecropping and convict leasing replaced slavery yet kept much of its exploitation of Black labor',
+              'Plantation economies across the Americas collapsed because planters could find no new workforce willing to labor on their estates',
+              'Wage labor with full freedom of movement became the norm for freedpeople, ending planter control over Black workers'
             ],
             correctAnswer: 1,
-            explanation: 'While the formal institution of slavery was abolished, exploitative labor systems persisted. Sharecropping in the U.S. South trapped former slaves in debt cycles; indentured servants from India and China replaced enslaved workers on Caribbean plantations; convict leasing (predominantly targeting Black Americans) was forced labor under another name.'
+            explanation: 'While the formal institution of slavery was abolished, exploitative labor systems persisted. Sharecropping in the U.S. South trapped former slaves in debt cycles; convict leasing (predominantly targeting Black Americans) was forced labor under another name; and indentured servants from India and China replaced enslaved workers on Caribbean plantations. Land redistribution largely failed (the promise of "40 acres" was revoked), and plantations did not collapse — planters found new coerced or semi-coerced workers.'
           },
           {
             question: 'Which factor was LEAST significant in the abolition of the Atlantic slave trade?',
             options: [
               'Enlightenment philosophy asserting natural rights and human equality undermined slavery\'s moral legitimacy',
               'Economic arguments that free wage labor was more productive than enslaved labor for industrial capitalism',
-              'Voluntary decisions by West African kingdoms to stop participating in the slave trade for moral reasons',
+              'Voluntary decisions by West African kingdoms to stop selling captives to Europeans for moral reasons',
               'The success of the Haitian Revolution proving that enslaved people could overthrow their enslavers by force'
             ],
             correctAnswer: 2,
@@ -121,21 +121,21 @@ Industrialization drove the **largest mass migration in human history** up to th
           {
             question: 'What was the most significant "push factor" driving Irish migration to the United States in the 1840s–1850s?',
             options: [
-              'The Irish government offered financial incentives for citizens to emigrate to the United States',
-              'The Great Famine (1845–1852), caused by a potato blight that destroyed the primary food source for the Irish poor',
+              'The Irish Parliament offered emigrants free passage to relieve overcrowding in Dublin and other growing industrial towns',
+              'The Great Famine, when a potato blight destroyed the crop that most of the Irish rural poor relied on for food',
               'British colonial authorities forcibly deported Irish citizens to the Americas as punishment for political activity',
-              'The discovery of gold in California attracted Irish miners who sought rapid wealth'
+              'The California gold rush, which drew most Irish emigrants westward in hope of quick wealth from mining claims'
             ],
             correctAnswer: 1,
-            explanation: 'The Great Famine (An Gorta Mór) killed approximately 1 million Irish people and drove another 1 million+ to emigrate — primarily to the United States. The potato blight destroyed the crop that the Irish poor depended on, while British land policies and grain exports exacerbated the crisis.'
+            explanation: 'The Great Famine (An Gorta Mór, 1845–1852) killed approximately 1 million Irish people and drove another 1 million+ to emigrate — primarily to the United States. The potato blight destroyed the crop that the Irish poor depended on, while British land policies and grain exports exacerbated the crisis. There was no Irish Parliament after the 1800 Act of Union, and the gold rush (1848 onward) drew only a small share of Irish emigrants, most of whom settled in eastern cities.'
           },
           {
             question: 'How did the system of indentured labor that emerged after abolition connect to global migration patterns?',
             options: [
-              'Indentured labor had no connection to migration — all workers stayed in their home countries',
-              'Millions of Indian, Chinese, and Japanese workers were contracted to work on plantations in the Caribbean, Africa, and Pacific islands, replacing formerly enslaved laborers',
-              'Indentured labor exclusively moved workers from Africa to Europe for factory employment',
-              'Indentured labor was identical to chattel slavery in every legal and practical aspect'
+              'Contracts mainly moved Irish, German, and Scandinavian workers to Caribbean sugar estates to replace the formerly enslaved',
+              'Contracts moved large numbers of Indian, Chinese, and Japanese workers to plantations in the Caribbean, Africa, and the Pacific',
+              'Contracts mostly moved workers within India and China, from inland districts to coastal ports, with little overseas movement',
+              'Contracts mainly moved African workers to European factories, filling industrial jobs that European emigrants had left behind'
             ],
             correctAnswer: 1,
             explanation: 'After abolition, plantation owners recruited indentured workers — primarily from India and China — on multi-year contracts. Over 1.5 million Indians alone were sent to British colonies in the Caribbean (Trinidad, Guyana), East Africa, and the Pacific. While technically voluntary and temporary, conditions were often exploitative and workers had limited freedom.'

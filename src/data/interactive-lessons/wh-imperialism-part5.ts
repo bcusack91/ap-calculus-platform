@@ -23,10 +23,10 @@ export const whImperialismPart5Data = {
           {
             question: 'Edward Said\'s concept of "Orientalism" is AP-useful because:',
             options: [
-              'It demonstrates that European knowledge production about non-Western peoples was not objective scholarship but a form of cultural power that portrayed "Eastern" peoples as exotic, static, irrational, and inferior in ways that justified colonial governance — making "Orientalist" texts in AP document sources unreliable representations of colonized peoples\' actual cultures and requiring critical reading that considers the author\'s colonial context and interests',
-              'Orientalism was a neutral scholarly movement that accurately documented Eastern cultures',
-              'Said\'s critique of Orientalism has no relevance for AP document analysis',
-              'Orientalist knowledge was produced entirely separately from colonial political interests',
+              'It shows that European scholarship on Asia and the Middle East cast its subjects as static and irrational, so such sources must be read for colonial bias',
+              'It shows that Orientalist scholars were neutral experts whose translations and surveys remain the most reliable evidence of how Asian societies actually functioned',
+              'It shows that colonial knowledge mattered only to universities, since officials in India and Egypt ignored scholarly writing when making decisions about governance',
+              'It shows that bias in sources ran mainly the other way, since Asian writers exaggerated European cruelty while Western scholars described Asian cultures with sympathy',
             ],
             correctAnswer: 0,
             explanation: 'Sourcing skills using Said\'s framework: an AP document written by a British colonial officer, missionary, or "Oriental studies" scholar describing Indian, African, or Middle Eastern culture carries Orientalist assumptions — portrayals of "traditional," "unchanging," "irrational" peoples served colonial interests by implying these peoples needed European governance to modernize. AP sourcing: "point of view" analysis should identify these assumptions and question whether the source represents colonized peoples accurately or through the ideological lens of colonial superiority.'
@@ -34,10 +34,10 @@ export const whImperialismPart5Data = {
           {
             question: 'The "civilizing mission" rhetoric\'s most significant function for colonial powers was:',
             options: [
-              'It provided domestic political legitimacy for colonial expansion — European publics could support colonial wars and taxation for imperial administration if they believed colonialism was morally beneficial (spreading civilization) rather than purely economically exploitative, making the ideology functionally necessary for maintaining democratic political support for empire even if colonial officials privately acknowledged the economic motives',
-              'The civilizing mission was always sincerely believed and accurately described colonial practice',
-              'Domestic legitimation was unimportant — colonial governments didn\'t need public support for imperial projects',
-              'The civilizing mission was rejected by European publics who opposed colonialism',
+              'It gave empire domestic legitimacy, since voters who funded colonial wars and administration could see expansion as moral improvement rather than profit-seeking',
+              'It accurately described colonial practice, since officials in most colonies devoted the bulk of their budgets to schools, hospitals and famine relief for colonized peoples',
+              'It mattered only to missionaries, since European governments needed no public support for imperial projects and never had to justify colonial spending to voters',
+              'It was widely rejected by European publics, who saw through the rhetoric and forced most governments to cut colonial budgets sharply after the 1880s',
             ],
             correctAnswer: 0,
             explanation: 'Domestic legitimation is the political function of colonial ideology: maintaining colonies required government expenditure, military commitment, and occasional public sacrifice — all of which needed political justification in increasingly democratic European states. "We are improving barbarous peoples" was more politically effective than "we are extracting raw materials and profits." The ideological function does not require that colonial officials personally believed the ideology (though many did); it requires that the ideology performed necessary political work within European domestic politics.'
@@ -55,7 +55,7 @@ export const whImperialismPart5Data = {
 
 | Ideology | Key Text | Argument | Who Benefited |
 |---------|---------|---------|--------------|
-| **Social Darwinism** | Spencer's "Social Statics" (1851) | Racial hierarchy natural; strong civilizations dominate weak | European powers |
+| **Social Darwinism** | Spencer's *Principles of Biology* (1864), which coined "survival of the fittest" | Racial hierarchy natural; strong civilizations dominate weak | European powers |
 | **"White Man's Burden"** | Kipling (1899) | Europeans obligated to civilize "inferior" peoples | European powers (legitimacy) |
 | **Mission civilisatrice** | French colonial policy | French civilization universal; duty to spread it | French empire |
 | **Trusteeship** | British colonial theory | Europeans holding colonial territories "in trust" until self-governance possible | British empire |
@@ -100,35 +100,35 @@ The most powerful contradiction:
           {
             question: 'The creation of Western-educated colonial elites through missionary schools demonstrates which AP principle?',
             options: [
-              'Colonial systems produced their own opposition — missionary education created African and Asian elites fluent in European languages and political thought who used that education to demand implementation of the principles (equality, rights, self-determination) that Western education had taught them, generating the cultural resources for anti-colonial nationalism',
-              'Missionary education successfully created permanently loyal colonial subjects with no anti-colonial consciousness',
-              'Western-educated elites rejected all Western ideas and turned to traditional indigenous resources for anti-colonial ideology',
-              'Missionary schools had no political consequences — they only provided literacy skills',
+              'Colonial rule produced its own opposition, as mission-educated Africans and Asians used the European ideas of equality and self-determination they had learned to demand independence',
+              'Mission schools produced permanently loyal subjects, since graduates depended on colonial jobs and avoided politics until independence was granted from above',
+              'Educated elites rejected all Western ideas, turning instead to precolonial religious traditions as the sole basis for their arguments against colonial rule',
+              'Mission schools had little political effect, since they taught only basic literacy and Bible reading and rarely produced students who went on to higher education',
             ],
             correctAnswer: 0,
-            explanation: 'Education as anti-colonial tool is AP\'s recurring pattern: West Africa\'s educated elite (Gold Coast lawyers who founded the African National Congress precedents); India\'s Congress leaders (trained at Oxford and the Inns of Court); Kenya\'s Jomo Kenyatta (anthropology student at London School of Economics who wrote Facing Mount Kenya to counter Orientalist anthropology). All used Western education to make anti-colonial arguments in terms that Western audiences could not dismiss as simply incomprehensible — because they were made in the colonizer\'s own language and political tradition.'
+            explanation: 'Education as anti-colonial tool is AP\'s recurring pattern: West Africa\'s educated elite (Gold Coast lawyers such as J. E. Casely Hayford, who founded the National Congress of British West Africa in 1920); India\'s Congress leaders (many trained at Oxford, Cambridge, and the Inns of Court); Kenya\'s Jomo Kenyatta (who studied anthropology at the London School of Economics and wrote Facing Mount Kenya to counter colonial portrayals of Gikuyu society). All used Western education to make anti-colonial arguments that Western audiences could not dismiss as incomprehensible, because they were made in the colonizer\'s own language and political tradition.'
           },
           {
             question: 'Cultural syncretism (blending European and indigenous religious/cultural practices) in colonial Africa demonstrates:',
             options: [
-              'That colonized peoples were active agents who adapted external cultural forces to their own purposes rather than simply accepting or rejecting colonial culture wholesale — creating new syncretic religious forms (African Christianity combining Christian theology with African spiritual practices) that served both accommodation and resistance by accepting Christian forms while preserving African content',
-              'Syncretism represented complete acceptance of European cultural dominance',
-              'African peoples either completely accepted or completely rejected European cultural influences with no middle ground',
-              'Syncretic religions were created by missionaries who deliberately combined traditions',
+              'Colonized peoples acted as agents, adapting Christianity and other outside influences to their own needs rather than simply accepting or rejecting them',
+              'Syncretism signaled full acceptance of European culture, since converts who blended traditions were abandoning their own beliefs in favor of missionary teaching',
+              'Africans faced a strict choice between full conversion and complete rejection, so blended religious forms appeared only after independence in the 1960s and 1970s',
+              'Syncretic churches were designed by missionaries, who deliberately mixed Christian and African rituals to make conversion easier and spread colonial authority',
             ],
             correctAnswer: 0,
-            explanation: 'Agency in cultural change is AP\'s analytical standard against passive victimhood narratives: when Africans created African Independent Churches combining Christianity with ancestral veneration, healing rituals, and African musical forms, they were not simply imitating European missionaries — they were creating new cultural forms that met community needs while adapting to colonial power. This agency is historically significant: colonized peoples shaped the cultural encounter, not just received it. Syncretism is evidence of creative adaptation, not passive cultural submission.'
+            explanation: 'Agency in cultural change is AP\'s analytical standard against passive victimhood narratives: when Africans created African Independent Churches (many founded in the late 1800s and early 1900s) combining Christianity with ancestral veneration, healing rituals, and African musical forms, they were not simply imitating European missionaries, who often opposed these churches. They were creating new cultural forms that met community needs while adapting to colonial power. Colonized peoples shaped the cultural encounter, not just received it. Syncretism is evidence of creative adaptation, not passive cultural submission.'
           },
           {
             question: 'The ban on indigenous languages in colonial schools and its enforcement shows:',
             options: [
-              'Language suppression was central to colonial cultural projects because language is the medium of cultural transmission — by requiring European languages in schools and official contexts, colonial authorities attempted to sever the transmission of indigenous knowledge, law, history, and values across generations, making colonial language-in-education a form of cultural violence alongside physical colonial violence',
-              'Language policies were adopted purely for administrative convenience with no cultural suppression intent',
-              'Indigenous languages were never successfully suppressed — colonial language policies were uniformly ignored',
-              'Language suppression had no long-term cultural consequences in colonial societies',
+              'Colonial authorities treated language as a channel of cultural transmission, so punishing indigenous speech in schools aimed to weaken the passing on of local knowledge and identity',
+              'Language rules were chosen purely for administrative convenience, since colonial officials had no interest in what cultures or identities their students kept at home',
+              'Colonial language rules failed completely, since students everywhere ignored them and European languages never took root among colonized elites',
+              'Language policy had no lasting effects, since newly independent states promptly restored indigenous languages in all schools and government offices and dropped French and English entirely',
             ],
             correctAnswer: 0,
-            explanation: 'Language as cultural genocide is AP\'s analysis of educational language policy: indigenous languages carry legal traditions, historical knowledge, cosmological frameworks, and social relationships that cannot be fully translated. When French colonial policy punished children for speaking Wolof, Bambara, or Hausa at school; when British schools required English with punishment for indigenous language use; when Belgian Congo schools taught only in Flemish and French — they were targeting the transmission mechanism of indigenous culture, not merely selecting a convenient administrative medium.'
+            explanation: 'Language as a target of cultural suppression is AP\'s analysis of educational language policy: indigenous languages carry legal traditions, historical knowledge, cosmological frameworks, and social relationships that cannot be fully translated. When French colonial schools in West Africa punished children for speaking Wolof, Bambara, or other African languages, or when schools in British Kenya required English and punished pupils for speaking Gikuyu, authorities were targeting the transmission of indigenous culture, not merely selecting a convenient administrative medium. Policies varied: many British and Belgian mission schools taught early grades in African languages. Yet French and English remain official languages in many former colonies, a lasting effect of colonial schooling.'
           }
         ]
       }
@@ -143,9 +143,9 @@ The most powerful contradiction:
             label: 'Rudyard Kipling\'s 1899 poem arguing that Europeans had an obligation to civilize "inferior" peoples was ___',
             options: [
             'White Man\'s Burden',
+            'Recessional',
             'The Social Contract',
-            'Imperialism',
-            'Social Darwinism',
+            'The Man Who Would Be King',
             ]
           },
           {
@@ -163,7 +163,7 @@ The most powerful contradiction:
             'Mission civilisatrice',
             'Trusteeship',
             'Direct rule',
-            'Assimilation',
+            'Manifest Destiny',
             ]
           }
         ],
@@ -187,10 +187,10 @@ The most powerful contradiction:
           {
             question: 'Comparing the "civilizing mission" to earlier Spanish colonial justifications (Christianizing indigenous peoples) reveals:',
             options: [
-              'Both provided ideological justification for conquest and extraction while promising benefits (salvation; civilization) to conquered peoples — the ideological function (providing moral legitimacy for colonial violence and extraction) was consistent across different eras even as the specific content evolved from religious salvation to secular civilization, demonstrating that colonial ideologies are historically specific forms of a consistent pattern',
-              'The civilizing mission was entirely different from religious colonial justifications with no comparable function',
-              'Earlier Spanish colonial justifications were purely religious with no secular dimensions',
-              'Both justifications accurately described the benefits colonial peoples received from conquest',
+              'Both promised benefits to the conquered to give moral cover to conquest and extraction, so the justifying function stayed constant while its content shifted from religious to secular',
+              'The two justifications had nothing in common, since the civilizing mission rejected religion entirely while Spanish conquest was justified only by economic need',
+              'Spanish justifications were purely religious, since the Crown never cited trade, mining, or labor needs when defending its conquests in the Americas',
+              'Both justifications were accurate, since conquered peoples in Spanish America and in nineteenth-century Africa gained more from colonial schooling, medicine and new roads than they lost',
             ],
             correctAnswer: 0,
             explanation: 'Continuity of colonial ideology across eras is AP\'s pattern recognition: Spanish "just war" theory (colonization justified to bring salvation to pagans) → 19th-century "civilizing mission" (colonization justified to bring progress to savages) are different content but identical function. Both promised benefits to justify violence and extraction; both produced systems primarily serving colonizer interests. Recognizing this pattern allows AP students to analyze colonial ideology across different eras and contexts with consistent analytical tools.'
@@ -198,10 +198,10 @@ The most powerful contradiction:
           {
             question: 'For AP, the most significant cultural consequence of 19th-century imperialism was:',
             options: [
-              'The creation of cultural complexity in colonized societies — Western education, religion, and political thought were adopted and adapted by colonized peoples in ways that served both accommodation (working within colonial systems) and resistance (using colonial tools against colonial authority) — creating hybrid cultural identities that became the foundation of 20th-century postcolonial cultures globally',
-              'Colonialism completely destroyed indigenous cultures with no survival or adaptation',
-              'Colonialism had no significant cultural impact — indigenous cultures were unaffected',
-              'The primary cultural consequence was the replacement of all indigenous religions with Christianity or Islam',
+              'Hybrid cultures formed as colonized peoples adopted and adapted Western education, religion and political ideas for both accommodation and resistance and so shaped postcolonial identities',
+              'Colonialism erased indigenous cultures entirely, leaving postcolonial societies with only European languages, religions and customs to build national identities on',
+              'Indigenous cultures went largely untouched, since colonial rule was too brief and too thinly staffed to change religion, language or family life in most colonies',
+              'Christianity and Islam replaced every indigenous religion in Africa and Asia, which became the main cultural change brought by nineteenth-century empire',
             ],
             correctAnswer: 0,
             explanation: 'Hybrid cultural formations is AP\'s synthesis: colonialism did not simply destroy indigenous cultures (though it damaged them) or leave them untouched (it transformed them) — it created new hybrid forms combining indigenous and European elements. African Christianity, Indo-English literature, Latin American mestizo cultures, Southeast Asian nationalism using European political concepts — all demonstrate creative synthesis under colonial conditions. These hybrid cultures became the foundation of postcolonial national identities and continue to shape global culture today.'
