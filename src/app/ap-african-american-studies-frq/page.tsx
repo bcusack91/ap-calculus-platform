@@ -29,7 +29,10 @@ function keywordMatches(text: string, keyword: string): boolean {
   const kw = keyword.toLowerCase()
   if (!/^[a-z0-9]/.test(kw)) return text.includes(kw)
   const escaped = kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-  return new RegExp('(^|[^a-z0-9])' + escaped).test(text)
+  // A letter-initial keyword may follow a digit ("8mg/l" matches "mg/l"), but
+  // never another letter, so "tea" does not score inside "instead".
+  const before = /^[a-z]/.test(kw) ? '[^a-z]' : '[^a-z0-9]'
+  return new RegExp('(^|' + before + ')' + escaped).test(text)
 }
 
 function gradeResponse(
