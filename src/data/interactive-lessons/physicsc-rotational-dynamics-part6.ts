@@ -85,8 +85,8 @@ $\\alpha = \\tau / I = 10 / 0.5 = 20$ $rad/s^{2}$ ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"To find $\\\\alpha$ for a rotating object, you need","options":["$\\\\tau$ and $I$","$v$ and $r$","$m$ and $g$","$F$ and $t$"]},{"label":"Rotational kinetic energy is","options":["$\\\\frac{1}{2}I\\\\omega^2$","$\\\\frac{1}{2}mv^2$","$I\\\\alpha$","$\\\\tau\\\\omega$"]}],
-        correctAnswers: ["$\\\\tau$ and $I$","$\\\\frac{1}{2}I\\\\omega^2$"],
+        dropdowns: [{"label":"To find $\\alpha$ for a rotating object, you need","options":["$\\\\tau$ and $I$","$v$ and $r$","$m$ and $g$","$F$ and $t$"]},{"label":"Rotational kinetic energy is","options":["$\\frac{1}{2}I\\omega^2$","$\\frac{1}{2}mv^2$","$I\\alpha$","$\\\\tau\\omega$"]}],
+        correctAnswers: ["$\\\\tau$ and $I$","$\\frac{1}{2}I\\omega^2$"],
         hint1: "$\\alpha = \\tau / I$.",
         hint2: "Rotational KE formula.",
         explanation: "$\\alpha = \\tau/I$ requires both. Rotational KE = $\\frac{1}{2}I\\omega^2$."

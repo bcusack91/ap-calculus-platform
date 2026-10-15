@@ -35,12 +35,12 @@ $\\frac{3}{4} \\div \\frac{2}{5} = \\frac{3}{4} \\times \\frac{5}{2} = \\frac{15
       exercise: {
         questions: [
           {
-                    "question": "The reciprocal of $\\\\frac{3}{7}$ is:",
+                    "question": "The reciprocal of $\\frac{3}{7}$ is:",
                     "options": [
-                              "$\\\\frac{7}{3}$",
-                              "$\\\\frac{3}{7}$",
-                              "$\\\\frac{1}{3}$",
-                              "$-\\\\frac{3}{7}$"
+                              "$\\frac{7}{3}$",
+                              "$\\frac{3}{7}$",
+                              "$\\frac{1}{3}$",
+                              "$-\\frac{3}{7}$"
                     ],
                     "correctAnswer": 0,
                     "explanation": "Flip numerator and denominator: 7/3."
@@ -77,7 +77,7 @@ $\\frac{3}{4} \\div \\frac{2}{5} = \\frac{3}{4} \\times \\frac{5}{2} = \\frac{15
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"When dividing fractions, you \"Keep, Change, Flip.\" \"Flip\" means","options":["Take the reciprocal of the second fraction","Flip the first fraction","Change the sign","Swap numerators"]},{"label":"$6 \\\\div \\\\frac{1}{2} =$","options":["12","3","$\\\\frac{1}{12}$","$\\\\frac{6}{2}$"]}],
+        dropdowns: [{"label":"When dividing fractions, you \"Keep, Change, Flip.\" \"Flip\" means","options":["Take the reciprocal of the second fraction","Flip the first fraction","Change the sign","Swap numerators"]},{"label":"$6 \\div \\frac{1}{2} =$","options":["12","3","$\\frac{1}{12}$","$\\frac{6}{2}$"]}],
         correctAnswers: ["Take the reciprocal of the second fraction","12"],
         hint1: "Reciprocal = flip.",
         hint2: "6 × 2/1 = ?",
@@ -107,12 +107,12 @@ $\\frac{3}{4} \\div \\frac{2}{5} = \\frac{3}{4} \\times \\frac{5}{2} = \\frac{15
       exercise: {
         questions: [
           {
-                    "question": "$\\\\frac{1}{2} \\\\div \\\\frac{1}{4} = ?$",
+                    "question": "$\\frac{1}{2} \\div \\frac{1}{4} = ?$",
                     "options": [
                               "2",
-                              "$\\\\frac{1}{8}$",
+                              "$\\frac{1}{8}$",
                               "4",
-                              "$\\\\frac{1}{2}$"
+                              "$\\frac{1}{2}$"
                     ],
                     "correctAnswer": 0,
                     "explanation": "1/2 × 4/1 = 4/2 = 2."

@@ -32,7 +32,7 @@ A graph that plots each data value against its expected z-score if the data were
 
 ### When Can We Assume Normality?
 
-- **Large samples** ($n \\\\geq 30$): CLT applies regardless
+- **Large samples** ($n \\geq 30$): CLT applies regardless
 - **Small samples**: Need to check Normal probability plot
 - **Known Normal populations**: Always OK`
     },    {
@@ -81,7 +81,7 @@ A graph that plots each data value against its expected z-score if the data were
         hint1: 'S-shape = departure from Normality',
         hint2: 'Central Limit Theorem with large $n$',
         hint3: 'The Empirical Rule has three numbers',
-        explanation: '1) No — an S-shape indicates non-Normality. 2) Yes — CLT applies for $n \\\\geq 30$. 3) The 68-95-99.7 (Empirical) Rule.'
+        explanation: '1) No — an S-shape indicates non-Normality. 2) Yes — CLT applies for $n \\geq 30$. 3) The 68-95-99.7 (Empirical) Rule.'
       }
     }
   ]

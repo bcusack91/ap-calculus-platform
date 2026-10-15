@@ -40,12 +40,12 @@ $36 \\times 24$:
       exercise: {
         questions: [
           {
-                    "question": "What is the first partial product of $43 \\\\times 26$ (tens first)?",
+                    "question": "What is the first partial product of $43 \\times 26$ (tens first)?",
                     "options": [
-                              "$43 \\\\times 20 = 860$",
-                              "$43 \\\\times 6 = 258$",
-                              "$40 \\\\times 26 = 1040$",
-                              "$3 \\\\times 6 = 18$"
+                              "$43 \\times 20 = 860$",
+                              "$43 \\times 6 = 258$",
+                              "$40 \\times 26 = 1040$",
+                              "$3 \\times 6 = 18$"
                     ],
                     "correctAnswer": 0,
                     "explanation": "Multiply by the tens digit first: 43 × 20 = 860."
@@ -82,7 +82,7 @@ $36 \\times 24$:
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Partial products means you multiply by each place value and then","options":["Add the results","Multiply the results","Subtract","Take the average"]},{"label":"$15 \\\\times 8 = 10(8) + 5(8) =$","options":["120","80","40","160"]}],
+        dropdowns: [{"label":"Partial products means you multiply by each place value and then","options":["Add the results","Multiply the results","Subtract","Take the average"]},{"label":"$15 \\times 8 = 10(8) + 5(8) =$","options":["120","80","40","160"]}],
         correctAnswers: ["Add the results","120"],
         hint1: "After getting partial products...",
         hint2: "80 + 40 = ?",
@@ -112,7 +112,7 @@ $36 \\times 24$:
       exercise: {
         questions: [
           {
-                    "question": "$52 \\\\times 14$: partial products are $52 \\\\times 10 = 520$ and $52 \\\\times 4 = 208$. Final answer?",
+                    "question": "$52 \\times 14$: partial products are $52 \\times 10 = 520$ and $52 \\times 4 = 208$. Final answer?",
                     "options": [
                               "728",
                               "520",

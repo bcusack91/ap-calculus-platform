@@ -41,11 +41,11 @@ $\\frac{2}{3} = \\frac{4}{6}$ and $\\frac{1}{2} = \\frac{3}{6}$ → $\\frac{2}{3
       exercise: {
         questions: [
           {
-                    "question": "Simplified $\\\\frac{8}{12}$ is:",
+                    "question": "Simplified $\\frac{8}{12}$ is:",
                     "options": [
-                              "$\\\\frac{2}{3}$",
-                              "$\\\\frac{4}{6}$",
-                              "$\\\\frac{3}{4}$",
+                              "$\\frac{2}{3}$",
+                              "$\\frac{4}{6}$",
+                              "$\\frac{3}{4}$",
                               "Already simplified"
                     ],
                     "correctAnswer": 0,
@@ -83,8 +83,8 @@ $\\frac{2}{3} = \\frac{4}{6}$ and $\\frac{1}{2} = \\frac{3}{6}$ → $\\frac{2}{3
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"$2\\\\frac{1}{4}$ improper is","options":["$\\\\frac{9}{4}$","$\\\\frac{8}{4}$","$\\\\frac{21}{4}$","$\\\\frac{3}{4}$"]},{"label":"To add unlike denominators, first find the","options":["Least Common Denominator","Greatest Common Factor","Sum","Product"]}],
-        correctAnswers: ["$\\\\frac{9}{4}$","Least Common Denominator"],
+        dropdowns: [{"label":"$2\\frac{1}{4}$ improper is","options":["$\\frac{9}{4}$","$\\frac{8}{4}$","$\\frac{21}{4}$","$\\frac{3}{4}$"]},{"label":"To add unlike denominators, first find the","options":["Least Common Denominator","Greatest Common Factor","Sum","Product"]}],
+        correctAnswers: ["$\\frac{9}{4}$","Least Common Denominator"],
         hint1: "2 × 4 + 1 = ?",
         hint2: "Denominators must match.",
         explanation: "2(4)+1=9. Need LCD to add fractions."
@@ -113,9 +113,9 @@ $\\frac{2}{3} = \\frac{4}{6}$ and $\\frac{1}{2} = \\frac{3}{6}$ → $\\frac{2}{3
       exercise: {
         questions: [
           {
-                    "question": "A student says $\\\\frac{3}{5} > \\\\frac{7}{10}$. Correct?",
+                    "question": "A student says $\\frac{3}{5} > \\frac{7}{10}$. Correct?",
                     "options": [
-                              "No — $\\\\frac{3}{5} = \\\\frac{6}{10} < \\\\frac{7}{10}$",
+                              "No — $\\frac{3}{5} = \\frac{6}{10} < \\frac{7}{10}$",
                               "Yes — 3 and 5 are closer",
                               "Cannot compare",
                               "Yes — fifths are bigger"

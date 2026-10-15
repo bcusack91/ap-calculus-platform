@@ -43,10 +43,10 @@ $\omega_f = \\frac{500(2)}{700} = \\frac{1000}{700} \\approx 1.43$ rad/s ✅
           {
                     "question": "Rotational equilibrium requires:",
                     "options": [
-                              "$\\\\sum \\\\tau = 0$",
-                              "$\\\\sum F = 0$",
-                              "$\\\\omega = 0$",
-                              "$\\\\alpha > 0$"
+                              "$\\sum \\\\tau = 0$",
+                              "$\\sum F = 0$",
+                              "$\\omega = 0$",
+                              "$\\alpha > 0$"
                     ],
                     "correctAnswer": 0,
                     "explanation": "Rotational equilibrium means zero net torque."
@@ -121,7 +121,7 @@ $\omega_f = \\frac{500(2)}{700} = \\frac{1000}{700} \\approx 1.43$ rad/s ✅
                               "Stops"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "As $r$ decreases, $\\\\omega$ increases to conserve $L = I\\\\omega$."
+                    "explanation": "As $r$ decreases, $\\omega$ increases to conserve $L = I\\omega$."
           }
 ]
       }

@@ -25,19 +25,19 @@ A random variable $X$ is binomial if:
 
 ### Binomial Distribution: $X \\\\sim B(n, p)$
 
-$$P(X = k) = \\\\binom{n}{k} p^k (1-p)^{n-k}$$
+$$P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k}$$
 
-where $\\\\binom{n}{k} = \\\\frac{n!}{k!(n-k)!}$
+where $\\binom{n}{k} = \\frac{n!}{k!(n-k)!}$
 
 ---
 
 ### Mean and Standard Deviation
 
-$$\\\\mu = np \\\\qquad \\\\sigma = \\\\sqrt{np(1-p)}$$
+$$\\mu = np \\\\qquad \\sigma = \\sqrt{np(1-p)}$$
 
 **Example:** 20 free throws, $p = 0.8$
-- $\\\\mu = 20(0.8) = 16$
-- $\\\\sigma = \\\\sqrt{20(0.8)(0.2)} = \\\\sqrt{3.2} \\\\approx 1.789$`
+- $\\mu = 20(0.8) = 16$
+- $\\sigma = \\sqrt{20(0.8)(0.2)} = \\sqrt{3.2} \\approx 1.789$`
     },    {
       id: 'binomialgeometric-p1-mcq',
       type: 'multiple-choice' as const,
@@ -84,9 +84,9 @@ A basketball player makes 75% of free throws. She shoots 12.
         boxes: 3,
         correctAnswers: ['9', '1.50', '0.0317'],
         hint1: '$np = 12(0.75)$',
-        hint2: '$\\\\sqrt{np(1-p)}$',
+        hint2: '$\\sqrt{np(1-p)}$',
         hint3: '$0.75^{12}$',
-        explanation: '1) $12(0.75) = 9$. 2) $\\\\sqrt{12(0.75)(0.25)} = \\\\sqrt{2.25} = 1.50$. 3) $\\\\binom{12}{12}(0.75)^{12}(0.25)^0 = 0.75^{12} \\\\approx 0.0317$.'
+        explanation: '1) $12(0.75) = 9$. 2) $\\sqrt{12(0.75)(0.25)} = \\sqrt{2.25} = 1.50$. 3) $\\binom{12}{12}(0.75)^{12}(0.25)^0 = 0.75^{12} \\approx 0.0317$.'
       }
     }
   ]

@@ -112,10 +112,10 @@ $3.5 - 2.1 = 1.4$. Negative is larger: $-1.4$ ✅
       exercise: {
         questions: [
           {
-                    "question": "$-\\\\frac{3}{4} + \\\\frac{1}{4} = ?$",
+                    "question": "$-\\frac{3}{4} + \\frac{1}{4} = ?$",
                     "options": [
-                              "$-\\\\frac{1}{2}$",
-                              "$\\\\frac{1}{2}$",
+                              "$-\\frac{1}{2}$",
+                              "$\\frac{1}{2}$",
                               "$-1$",
                               "$1$"
                     ],

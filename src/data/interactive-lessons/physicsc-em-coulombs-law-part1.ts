@@ -39,13 +39,13 @@ $n = \\frac{q}{e} = \\frac{3.2 \\times 10^{-19}}{1.6 \\times 10^{-19}} = 2$ elec
           {
                     "question": "The smallest unit of free charge is:",
                     "options": [
-                              "$1.6 \\\\times 10^{-19}$ C",
+                              "$1.6 \\times 10^{-19}$ C",
                               "$1$ C",
-                              "$1.6 \\\\times 10^{-9}$ C",
-                              "$9.1 \\\\times 10^{-31}$ C"
+                              "$1.6 \\times 10^{-9}$ C",
+                              "$9.1 \\times 10^{-31}$ C"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "The elementary charge $e = 1.6 \\\\times 10^{-19}$ C."
+                    "explanation": "The elementary charge $e = 1.6 \\times 10^{-19}$ C."
           }
 ]
       }

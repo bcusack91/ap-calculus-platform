@@ -17,9 +17,9 @@ export const apStatsBinomGeomPart5Data = {
 | **Counts** | Successes in $n$ trials | Trials until 1st success |
 | **Fixed** | Number of trials $n$ | Probability $p$ |
 | **$n$** | Specified | Not fixed |
-| **Values** | $0, 1, 2, \\\\ldots, n$ | $1, 2, 3, \\\\ldots$ |
+| **Values** | $0, 1, 2, \\ldots, n$ | $1, 2, 3, \\ldots$ |
 | **Mean** | $np$ | $1/p$ |
-| **Formula** | $\\\\binom{n}{k}p^k(1-p)^{n-k}$ | $(1-p)^{k-1}p$ |
+| **Formula** | $\\binom{n}{k}p^k(1-p)^{n-k}$ | $(1-p)^{k-1}p$ |
 
 ---
 

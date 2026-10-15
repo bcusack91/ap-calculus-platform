@@ -14,15 +14,15 @@ export const apStatsErrorsPart5Data = {
 
 Before collecting data, researchers should:
 1. **Specify** the smallest effect worth detecting
-2. **Choose** $\\\\alpha$ and desired power (often 0.80)
+2. **Choose** $\\alpha$ and desired power (often 0.80)
 3. **Calculate** the required sample size
 
 ### Example
 
-Want to detect a 5-point difference in test scores ($\\\\sigma = 20$).
-With $\\\\alpha = 0.05$ and power = 0.80:
+Want to detect a 5-point difference in test scores ($\\sigma = 20$).
+With $\\alpha = 0.05$ and power = 0.80:
 
-$$n \\\\approx \\\\left(\\\\frac{z_{\\\\alpha/2} + z_{\\\\beta}}{d}\\\\right)^2 = \\\\left(\\\\frac{1.96 + 0.84}{0.25}\\\\right)^2 \\\\approx 126 \\\\text{ per group}$$
+$$n \\approx \\left(\\frac{z_{\\alpha/2} + z_{\\beta}}{d}\\right)^2 = \\left(\\frac{1.96 + 0.84}{0.25}\\right)^2 \\approx 126 \\text{ per group}$$
 
 ---
 
@@ -49,13 +49,13 @@ $$n \\\\approx \\\\left(\\\\frac{z_{\\\\alpha/2} + z_{\\\\beta}}{d}\\\\right)^2 
           },
           {
             question: 'A study with power = 0.30 that fails to reject $H_0$:',
-            options: ['Proves $H_0$ is true', 'Provides weak evidence because the test had poor power', 'Means the effect definitely doesn’t exist', 'Should use a smaller $\\\\alpha$'],
+            options: ['Proves $H_0$ is true', 'Provides weak evidence because the test had poor power', 'Means the effect definitely doesn’t exist', 'Should use a smaller $\\alpha$'],
             correctAnswer: 1,
             explanation: 'Low power means the study probably couldn’t detect the effect even if it existed.'
           },
           {
             question: 'To detect a smaller effect size, you need:',
-            options: ['A smaller sample', 'A larger sample', 'A smaller $\\\\alpha$', 'Fewer measurements'],
+            options: ['A smaller sample', 'A larger sample', 'A smaller $\\alpha$', 'Fewer measurements'],
             correctAnswer: 1,
             explanation: 'Smaller effects require more data to distinguish from random variation.'
           }
@@ -71,7 +71,7 @@ A researcher has power = 0.60 and doesn’t reject $H_0$.
 
 **1)** How likely was the test to detect a real effect?
 
-**2)** What is $\\\\beta$?
+**2)** What is $\\beta$?
 
 **3)** Should the researcher conclude the effect doesn’t exist? (yes/no)
       `,
@@ -79,9 +79,9 @@ A researcher has power = 0.60 and doesn’t reject $H_0$.
         boxes: 3,
         correctAnswers: ['60%', '0.40', 'no'],
         hint1: 'Power = probability of detecting truth',
-        hint2: '$\\\\beta = 1 - \\\\text{Power}$',
+        hint2: '$\\beta = 1 - \\text{Power}$',
         hint3: 'Absence of evidence is not...',
-        explanation: '1) Only 60% likely. 2) $\\\\beta = 1 - 0.60 = 0.40$. 3) No — the test lacked adequate power to draw that conclusion.'
+        explanation: '1) Only 60% likely. 2) $\\beta = 1 - 0.60 = 0.40$. 3) No — the test lacked adequate power to draw that conclusion.'
       }
     }
   ]

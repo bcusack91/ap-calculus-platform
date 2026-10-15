@@ -30,8 +30,8 @@ A **random variable** assigns a numerical value to each outcome of a random proc
 | $P(X)$ | 0.1 | 0.3 | 0.4 | 0.2 |
 
 **Requirements:**
-- Every probability is between 0 and 1: $0 \\\\leq P(X = x) \\\\leq 1$
-- All probabilities sum to 1: $\\\\sum P(X = x) = 1$
+- Every probability is between 0 and 1: $0 \\leq P(X = x) \\leq 1$
+- All probabilities sum to 1: $\\sum P(X = x) = 1$
 
 ---
 
@@ -39,7 +39,7 @@ A **random variable** assigns a numerical value to each outcome of a random proc
 
 From the table above:
 - $P(X = 2) = 0.4$
-- $P(X \\\\geq 2) = P(X=2) + P(X=3) = 0.4 + 0.2 = 0.6$
+- $P(X \\geq 2) = P(X=2) + P(X=3) = 0.4 + 0.2 = 0.6$
 - $P(X < 2) = P(X=0) + P(X=1) = 0.1 + 0.3 = 0.4$`
     },    {
       id: 'discreterandomvariables-p1-mcq',
@@ -77,7 +77,7 @@ From the table above:
 
 Given: $P(X=1) = 0.25$, $P(X=2) = 0.35$, $P(X=3) = 0.30$, $P(X=4) = 0.10$
 
-**1)** $P(X \\\\leq 2)$?
+**1)** $P(X \\leq 2)$?
 
 **2)** $P(X > 2)$?
 

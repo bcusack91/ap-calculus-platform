@@ -12,7 +12,7 @@ export const apStatsProbDistPart2Data = {
 
 ### The Z-Score Formula
 
-$$z = \\\\frac{x - \\\\mu}{\\\\sigma}$$
+$$z = \\frac{x - \\mu}{\\sigma}$$
 
 A z-score tells you **how many standard deviations** a value is from the mean.
 
@@ -30,9 +30,9 @@ When we standardize, we convert to $Z \\\\sim N(0, 1)$.
 
 ### Example
 
-Test scores: $\\\\mu = 75$, $\\\\sigma = 8$. A student scores 91.
+Test scores: $\\mu = 75$, $\\sigma = 8$. A student scores 91.
 
-$$z = \\\\frac{91 - 75}{8} = \\\\frac{16}{8} = 2.0$$
+$$z = \\frac{91 - 75}{8} = \\frac{16}{8} = 2.0$$
 
 The student scored **2 standard deviations above the mean**.`
     },    {
@@ -50,14 +50,14 @@ The student scored **2 standard deviations above the mean**.`
             explanation: 'A negative z-score means below the mean; the magnitude tells how many SDs.'
           },
           {
-            question: 'If $\\\\mu = 50$ and $\\\\sigma = 10$, the z-score for $x = 65$ is:',
+            question: 'If $\\mu = 50$ and $\\sigma = 10$, the z-score for $x = 65$ is:',
             options: ['0.5', '1.0', '1.5', '6.5'],
             correctAnswer: 2,
             explanation: '$z = (65-50)/10 = 15/10 = 1.5$.'
           },
           {
             question: 'The standard Normal distribution has:',
-            options: ['$\\\\mu = 1, \\\\sigma = 0$', '$\\\\mu = 0, \\\\sigma = 1$', '$\\\\mu = 0, \\\\sigma = 0$', '$\\\\mu = 100, \\\\sigma = 15$'],
+            options: ['$\\mu = 1, \\sigma = 0$', '$\\mu = 0, \\sigma = 1$', '$\\mu = 0, \\sigma = 0$', '$\\mu = 100, \\sigma = 15$'],
             correctAnswer: 1,
             explanation: 'The standard Normal is $N(0, 1)$ — mean 0, standard deviation 1.'
           }
@@ -69,7 +69,7 @@ The student scored **2 standard deviations above the mean**.`
       content: `
 **Z-Score Calculations** 🧮
 
-Heights: $\\\\mu = 170$ cm, $\\\\sigma = 6$ cm.
+Heights: $\\mu = 170$ cm, $\\sigma = 6$ cm.
 
 **1)** Z-score for a height of 182 cm?
 
@@ -83,7 +83,7 @@ Heights: $\\\\mu = 170$ cm, $\\\\sigma = 6$ cm.
         hint1: '$(182-170)/6$',
         hint2: '$(158-170)/6$',
         hint3: '$z = 0$ means at the mean',
-        explanation: '1) $(182-170)/6 = 2.0$. 2) $(158-170)/6 = -2.0$. 3) $z = 0$ corresponds to $\\\\mu = 170$ cm.'
+        explanation: '1) $(182-170)/6 = 2.0$. 2) $(158-170)/6 = -2.0$. 3) $z = 0$ corresponds to $\\mu = 170$ cm.'
       }
     }
   ]

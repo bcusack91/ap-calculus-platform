@@ -48,7 +48,7 @@ $C = \epsilon_0 A/d = 8.85 \\times 10^{-12} \\times 0.01 / 0.001 = 88.5$ pF ✅
                               "Stays the same"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$C = \\\\epsilon_0 A/d$. If $d \\\\to 2d$, then $C \\\\to C/2$."
+                    "explanation": "$C = \\\\epsilon_0 A/d$. If $d \\to 2d$, then $C \\to C/2$."
           }
 ]
       }

@@ -112,7 +112,7 @@ $V = 8 \\times 5 \\times 3 = 120$ $cm^{3}$ ✅
       exercise: {
         questions: [
           {
-                    "question": "$V = B \\\\times h$. If B = 20 $cm^{2}$ and h = 6 cm, V = ?",
+                    "question": "$V = B \\times h$. If B = 20 $cm^{2}$ and h = 6 cm, V = ?",
                     "options": [
                               "120 $cm^{3}$",
                               "26 $cm^{3}$",

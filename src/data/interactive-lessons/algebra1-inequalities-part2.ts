@@ -58,7 +58,7 @@ $-5x \\leq 20 \\implies x \\geq -4$. Flip because we divided by $-5$.
         hint1: "Subtract 7.",
         hint2: "Divide by $-2$, flip.",
         hint3: "Multiply by 3.",
-        explanation: "1) $x > 3$. 2) $x \\\\leq -4$. 3) $x < -12$."
+        explanation: "1) $x > 3$. 2) $x \\leq -4$. 3) $x < -12$."
       }
     },
     {

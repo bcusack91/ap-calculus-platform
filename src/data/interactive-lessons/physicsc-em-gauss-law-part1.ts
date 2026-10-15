@@ -48,7 +48,7 @@ $\\Phi = EA\\cos 0° = 500(0.2)(1) = 100$ $N\\cdot m^{2}/C$ ✅
                               "Infinite"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$\\\\theta = 90°$, so $\\\\cos 90° = 0$ and $\\\\Phi = 0$."
+                    "explanation": "$\\theta = 90°$, so $\\cos 90° = 0$ and $\\\\Phi = 0$."
           }
 ]
       }
@@ -82,8 +82,8 @@ $\\Phi = EA\\cos 0° = 500(0.2)(1) = 100$ $N\\cdot m^{2}/C$ ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"The SI unit of electric flux is","options":["$N\\cdot m^{2}/C$","N/C","$C/m^{2}$","$V/m^{2}$"]},{"label":"Electric flux depends on the angle between $\\\\vec{E}$ and","options":["The outward area normal $\\\\hat{n}$","The surface edge","The charge","The wire"]}],
-        correctAnswers: ["$N\\cdot m^{2}/C$","The outward area normal $\\\\hat{n}$"],
+        dropdowns: [{"label":"The SI unit of electric flux is","options":["$N\\cdot m^{2}/C$","N/C","$C/m^{2}$","$V/m^{2}$"]},{"label":"Electric flux depends on the angle between $\\\\vec{E}$ and","options":["The outward area normal $\\hat{n}$","The surface edge","The charge","The wire"]}],
+        correctAnswers: ["$N\\cdot m^{2}/C$","The outward area normal $\\hat{n}$"],
         hint1: "$\\Phi = EA$ has units $(N/C)(m^{2})$.",
         hint2: "$\\Phi = \\vec{E} \\cdot d\\vec{A}$, where $d\\vec{A} = \\hat{n}\\,dA$.",
         explanation: "Flux units: $N\\cdot m^{2}/C$. It depends on the angle between $\\vec{E}$ and the surface normal $\\hat{n}$."

@@ -84,7 +84,7 @@ Graph: Open circle at 6, arrow to the right. ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"An open circle on a number line means","options":["The endpoint is NOT included","The endpoint IS included","There is no solution","The answer is zero"]},{"label":"$x \\\\leq 3$ means x could be","options":["3 or any number less than 3","Only numbers less than 3","Only 3","Numbers greater than 3"]}],
+        dropdowns: [{"label":"An open circle on a number line means","options":["The endpoint is NOT included","The endpoint IS included","There is no solution","The answer is zero"]},{"label":"$x \\leq 3$ means x could be","options":["3 or any number less than 3","Only numbers less than 3","Only 3","Numbers greater than 3"]}],
         correctAnswers: ["The endpoint is NOT included","3 or any number less than 3"],
         hint1: "Open = strict inequality (< or >).",
         hint2: "$\\leq$ means less than OR equal.",
@@ -114,7 +114,7 @@ Graph: Open circle at 6, arrow to the right. ✅
       exercise: {
         questions: [
           {
-                    "question": "What kind of circle for $x \\\\geq 4$?",
+                    "question": "What kind of circle for $x \\geq 4$?",
                     "options": [
                               "Closed (filled)",
                               "Open (empty)",
@@ -122,7 +122,7 @@ Graph: Open circle at 6, arrow to the right. ✅
                               "Square"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$\\\\geq$ includes the endpoint → closed circle."
+                    "explanation": "$\\geq$ includes the endpoint → closed circle."
           }
 ]
       }

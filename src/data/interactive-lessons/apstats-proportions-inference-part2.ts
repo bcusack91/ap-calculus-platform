@@ -12,7 +12,7 @@ export const apStatsPropInfPart2Data = {
 
 ### Formula
 
-$$\\\\hat{p} \\\\pm z^* \\\\sqrt{\\\\frac{\\\\hat{p}(1-\\\\hat{p})}{n}}$$
+$$\\hat{p} \\pm z^* \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}$$
 
 ### Common Critical Values
 
@@ -30,9 +30,9 @@ $$\\\\hat{p} \\\\pm z^* \\\\sqrt{\\\\frac{\\\\hat{p}(1-\\\\hat{p})}{n}}$$
 
 ### Example
 
-$n = 400$, $\\\\hat{p} = 0.35$, 95% CI:
+$n = 400$, $\\hat{p} = 0.35$, 95% CI:
 
-$$0.35 \\\\pm 1.96\\\\sqrt{\\\\frac{0.35 \\\\times 0.65}{400}} = 0.35 \\\\pm 0.0467$$
+$$0.35 \\pm 1.96\\sqrt{\\frac{0.35 \\times 0.65}{400}} = 0.35 \\pm 0.0467$$
 
 CI: $(0.303, 0.397)$`
     },    {
@@ -57,9 +57,9 @@ CI: $(0.303, 0.397)$`
           },
           {
             question: 'The margin of error for a proportion is:',
-            options: ['$z^* \\\\cdot \\\\hat{p}$', '$z^* \\\\sqrt{\\\\hat{p}(1-\\\\hat{p})/n}$', '$\\\\hat{p} - p$', '$1.96/\\\\sqrt{n}$'],
+            options: ['$z^* \\cdot \\hat{p}$', '$z^* \\sqrt{\\hat{p}(1-\\hat{p})/n}$', '$\\hat{p} - p$', '$1.96/\\sqrt{n}$'],
             correctAnswer: 1,
-            explanation: 'The margin of error = $z^* \\\\times SE(\\\\hat{p})$.'
+            explanation: 'The margin of error = $z^* \\times SE(\\hat{p})$.'
           }
         ]
       }
@@ -69,21 +69,21 @@ CI: $(0.303, 0.397)$`
       content: `
 **Confidence Interval** 🧮
 
-$n = 500$, $\\\\hat{p} = 0.40$, 95% CI.
+$n = 500$, $\\hat{p} = 0.40$, 95% CI.
 
-**1)** $SE = \\\\sqrt{0.40 \\\\times 0.60 / 500}$ = ? (round to 4 decimal places)
+**1)** $SE = \\sqrt{0.40 \\times 0.60 / 500}$ = ? (round to 4 decimal places)
 
-**2)** Margin of error = $1.96 \\\\times SE$ = ? (round to 4 places)
+**2)** Margin of error = $1.96 \\times SE$ = ? (round to 4 places)
 
 **3)** Lower bound of CI? (round to 3 places)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['0.0219', '0.0429', '0.357'],
-        hint1: '$\\\\sqrt{0.24/500} = \\\\sqrt{0.00048}$',
-        hint2: '$1.96 \\\\times 0.0219$',
+        hint1: '$\\sqrt{0.24/500} = \\sqrt{0.00048}$',
+        hint2: '$1.96 \\times 0.0219$',
         hint3: '$0.40 - 0.0429$',
-        explanation: '1) $\\\\sqrt{0.00048} \\\\approx 0.0219$. 2) $1.96 \\\\times 0.0219 \\\\approx 0.0429$. 3) $0.40 - 0.043 \\\\approx 0.357$.'
+        explanation: '1) $\\sqrt{0.00048} \\approx 0.0219$. 2) $1.96 \\times 0.0219 \\approx 0.0429$. 3) $0.40 - 0.043 \\approx 0.357$.'
       }
     }
   ]

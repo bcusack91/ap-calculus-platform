@@ -48,7 +48,7 @@ $E = 2k\\lambda/r = 2(9 \\times 10^9)(5 \\times 10^{-9})/0.1 = 900$ N/C ✅
                               "Constant"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$E = 2k\\\\lambda/r \\\\propto 1/r$, not $1/r^2$."
+                    "explanation": "$E = 2k\\lambda/r \\\\propto 1/r$, not $1/r^2$."
           }
 ]
       }
@@ -82,8 +82,8 @@ $E = 2k\\lambda/r = 2(9 \\times 10^9)(5 \\times 10^{-9})/0.1 = 900$ N/C ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"A cylindrical Gaussian surface is used for","options":["Charges with cylindrical symmetry","Point charges","Planar charges","Any charge distribution"]},{"label":"For an infinite line charge, the field is directed","options":["Radially outward (if $\\\\lambda > 0$)","Along the wire","Both radially and along the wire","In circles around the wire"]}],
-        correctAnswers: ["Charges with cylindrical symmetry","Radially outward (if $\\\\lambda > 0$)"],
+        dropdowns: [{"label":"A cylindrical Gaussian surface is used for","options":["Charges with cylindrical symmetry","Point charges","Planar charges","Any charge distribution"]},{"label":"For an infinite line charge, the field is directed","options":["Radially outward (if $\\lambda > 0$)","Along the wire","Both radially and along the wire","In circles around the wire"]}],
+        correctAnswers: ["Charges with cylindrical symmetry","Radially outward (if $\\lambda > 0$)"],
         hint1: "Match the Gaussian surface to the symmetry.",
         hint2: "The field points away from a positive line charge.",
         explanation: "Cylindrical surfaces match cylindrical symmetry. Field is radially outward for positive $\\lambda$."

@@ -16,8 +16,8 @@ If $X$ and $Y$ are **independent**:
 
 | Combination | Mean | Variance |
 |------------|------|----------|
-| $X + Y$ | $\\\\mu_X + \\\\mu_Y$ | $\\\\sigma_X^2 + \\\\sigma_Y^2$ |
-| $X - Y$ | $\\\\mu_X - \\\\mu_Y$ | $\\\\sigma_X^2 + \\\\sigma_Y^2$ |
+| $X + Y$ | $\\mu_X + \\mu_Y$ | $\\sigma_X^2 + \\sigma_Y^2$ |
+| $X - Y$ | $\\mu_X - \\mu_Y$ | $\\sigma_X^2 + \\sigma_Y^2$ |
 
 > ⚠️ **Critical:** Variances always **ADD**, even for differences! Standard deviations do NOT simply add or subtract.
 
@@ -31,11 +31,11 @@ Think of it this way: whether you add or subtract, the **uncertainty** (variabil
 
 ### Example
 
-$X$: exam score, $\\\\mu_X = 75$, $\\\\sigma_X = 8$
-$Y$: quiz score, $\\\\mu_Y = 85$, $\\\\sigma_Y = 6$
+$X$: exam score, $\\mu_X = 75$, $\\sigma_X = 8$
+$Y$: quiz score, $\\mu_Y = 85$, $\\sigma_Y = 6$
 
-$X + Y$: $\\\\mu = 160$, $\\\\sigma^2 = 64 + 36 = 100$, $\\\\sigma = 10$
-$X - Y$: $\\\\mu = -10$, $\\\\sigma^2 = 64 + 36 = 100$, $\\\\sigma = 10$`
+$X + Y$: $\\mu = 160$, $\\sigma^2 = 64 + 36 = 100$, $\\sigma = 10$
+$X - Y$: $\\mu = -10$, $\\sigma^2 = 64 + 36 = 100$, $\\sigma = 10$`
     },    {
       id: 'discreterandomvariables-p5-mcq',
       type: 'multiple-choice' as const,
@@ -51,10 +51,10 @@ $X - Y$: $\\\\mu = -10$, $\\\\sigma^2 = 64 + 36 = 100$, $\\\\sigma = 10$`
             explanation: 'Variances always ADD for independent variables, regardless of + or -.'
           },
           {
-            question: 'If $\\\\sigma_X = 3$ and $\\\\sigma_Y = 4$ (independent), then $\\\\sigma_{X+Y}$ equals:',
+            question: 'If $\\sigma_X = 3$ and $\\sigma_Y = 4$ (independent), then $\\sigma_{X+Y}$ equals:',
             options: ['5', '7', '1', '25'],
             correctAnswer: 0,
-            explanation: '$\\\\sigma_{X+Y} = \\\\sqrt{9 + 16} = \\\\sqrt{25} = 5$.'
+            explanation: '$\\sigma_{X+Y} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.'
           },
           {
             question: '$E(X + Y) = E(X) + E(Y)$ is true:',
@@ -70,21 +70,21 @@ $X - Y$: $\\\\mu = -10$, $\\\\sigma^2 = 64 + 36 = 100$, $\\\\sigma = 10$`
       content: `
 **Combining Variables** 🧮
 
-$X$: $\\\\mu_X = 100$, $\\\\sigma_X = 12$. $Y$: $\\\\mu_Y = 80$, $\\\\sigma_Y = 5$. Independent.
+$X$: $\\mu_X = 100$, $\\sigma_X = 12$. $Y$: $\\mu_Y = 80$, $\\sigma_Y = 5$. Independent.
 
 **1)** $E(X + Y) = ?$
 
-**2)** $\\\\text{Var}(X - Y) = ?$
+**2)** $\\text{Var}(X - Y) = ?$
 
-**3)** $\\\\sigma_{X+Y} = ?$ (round to 1 decimal)
+**3)** $\\sigma_{X+Y} = ?$ (round to 1 decimal)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['180', '169', '13.0'],
         hint1: '$100 + 80$',
         hint2: '$12^2 + 5^2 = 144 + 25$',
-        hint3: '$\\\\sqrt{169}$',
-        explanation: '1) $100 + 80 = 180$. 2) $144 + 25 = 169$. 3) $\\\\sqrt{169} = 13.0$.'
+        hint3: '$\\sqrt{169}$',
+        explanation: '1) $100 + 80 = 180$. 2) $144 + 25 = 169$. 3) $\\sqrt{169} = 13.0$.'
       }
     }
   ]

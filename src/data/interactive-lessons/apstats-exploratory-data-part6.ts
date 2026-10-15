@@ -74,7 +74,7 @@ Test scores: Min=45, $Q_1=65$, Med=75, $Q_3=85$, Max=98. Roughly symmetric, no o
         correctAnswers: ['75', '20', '35'],
         hint1: 'Symmetric → either works; median is given',
         hint2: '$Q_3 - Q_1$',
-        hint3: '$Q_1 - 1.5 \\\\times IQR = 65 - 30$',
+        hint3: '$Q_1 - 1.5 \\times IQR = 65 - 30$',
         explanation: '1) Median = 75 (or mean ≈ 75 for symmetric data). 2) $IQR = 85 - 65 = 20$. 3) Lower fence = $65 - 30 = 35$. Min = 45 > 35, so no outliers.'
       }
     }

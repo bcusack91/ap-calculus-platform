@@ -14,7 +14,7 @@ export const apStatsMeansInfPart6Data = {
 
 | Scenario | Procedure |
 |----------|-----------|
-| One mean, $\\\\sigma$ unknown | One-sample t |
+| One mean, $\\sigma$ unknown | One-sample t |
 | Two independent means | Two-sample t |
 | Paired data | Matched pairs t |
 | One proportion | One-sample z |
@@ -27,7 +27,7 @@ export const apStatsMeansInfPart6Data = {
 - Name the procedure explicitly (“one-sample t-test”, not just “t-test”)
 - Always identify the parameter in context
 - State ALL conditions, not just assume them
-- Use proper notation ($\\\\bar{x}$, $s$, $t$, etc.)`
+- Use proper notation ($\\bar{x}$, $s$, $t$, etc.)`
     },    {
       id: 'meansinference-p6-mcq',
       type: 'multiple-choice' as const,
@@ -73,7 +73,7 @@ Name the correct procedure for each:
       exercise: {
         boxes: 3,
         correctAnswers: ['one-sample t interval', 'two-sample t test', 'matched pairs t test'],
-        hint1: 'One group, estimating $\\\\mu$',
+        hint1: 'One group, estimating $\\mu$',
         hint2: 'Two independent groups',
         hint3: 'Same people, before and after',
         explanation: '1) One-sample t interval. 2) Two-sample t test. 3) Matched pairs t test.'

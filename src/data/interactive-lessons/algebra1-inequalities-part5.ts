@@ -34,7 +34,7 @@ $|2x - 1| \\leq 5: -5 \\leq 2x - 1 \\leq 5 \\implies -2 \\leq x \\leq 3$
         questions: [
           {
             question: "$|x| > 7$ means:",
-            options: ["$-7 < x < 7$","$x > 7$","$x < -7$ or $x > 7$","$x = \\\\pm 7$"],
+            options: ["$-7 < x < 7$","$x > 7$","$x < -7$ or $x > 7$","$x = \\pm 7$"],
             correctAnswer: 2,
             explanation: "Greater than splits into two pieces outside the interval."
           }
@@ -56,10 +56,10 @@ $|2x - 1| \\leq 5: -5 \\leq 2x - 1 \\leq 5 \\implies -2 \\leq x \\leq 3$
       exercise: {
         boxes: 3,
         correctAnswers: ["3","6","4"],
-        hint1: "$-3 \\\\leq x \\\\leq 3$.",
-        hint2: "$x+1 = \\\\pm 5$.",
+        hint1: "$-3 \\leq x \\leq 3$.",
+        hint2: "$x+1 = \\pm 5$.",
         hint3: "$-12 < 3x < 12$.",
-        explanation: "1) $x \\\\leq 3$. 2) $x < -6$ or $x > 4$ (critical = 6). 3) $-4 < x < 4$."
+        explanation: "1) $x \\leq 3$. 2) $x < -6$ or $x > 4$ (critical = 6). 3) $-4 < x < 4$."
       }
     },
     {

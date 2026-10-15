@@ -12,24 +12,24 @@ export const apStatsMeansInfPart1Data = {
 
 ### Why Not Z?
 
-For means, we rarely know the population standard deviation $\\\\sigma$. We estimate it with the sample standard deviation $s$, introducing extra uncertainty.
+For means, we rarely know the population standard deviation $\\sigma$. We estimate it with the sample standard deviation $s$, introducing extra uncertainty.
 
 ### The t-Distribution
 
-$$t = \\\\frac{\\\\bar{x} - \\\\mu}{s/\\\\sqrt{n}}$$
+$$t = \\frac{\\bar{x} - \\mu}{s/\\sqrt{n}}$$
 
 **Properties:**
 - Bell-shaped and symmetric around 0
 - Wider tails than Normal (more spread)
 - Depends on **degrees of freedom** $df = n - 1$
-- As $df \\\\to \\\\infty$, $t \\\\to N(0,1)$
+- As $df \\to \\infty$, $t \\to N(0,1)$
 
 ---
 
 ### Conditions for t-Procedures
 
 1. **Random:** Data from random sample or experiment
-2. **Normal/Large Sample:** Population is Normal OR $n \\\\geq 30$ (CLT)
+2. **Normal/Large Sample:** Population is Normal OR $n \\geq 30$ (CLT)
 3. **Independent:** $n < 10\\\\%$ of population`
     },    {
       id: 'meansinference-p1-mcq',
@@ -41,9 +41,9 @@ $$t = \\\\frac{\\\\bar{x} - \\\\mu}{s/\\\\sqrt{n}}$$
         questions: [
           {
             question: 'We use the t-distribution instead of z when:',
-            options: ['$n$ is large', '$\\\\sigma$ is unknown', 'The data is Normal', 'We want a wider interval'],
+            options: ['$n$ is large', '$\\sigma$ is unknown', 'The data is Normal', 'We want a wider interval'],
             correctAnswer: 1,
-            explanation: 'When $\\\\sigma$ is unknown and estimated by $s$, we use the t-distribution.'
+            explanation: 'When $\\sigma$ is unknown and estimated by $s$, we use the t-distribution.'
           },
           {
             question: 'Degrees of freedom for a one-sample t-test is:',
@@ -65,19 +65,19 @@ $$t = \\\\frac{\\\\bar{x} - \\\\mu}{s/\\\\sqrt{n}}$$
       content: `
 **t-Distribution Basics** 🧮
 
-$n = 25$, $\\\\bar{x} = 82$, $s = 10$.
+$n = 25$, $\\bar{x} = 82$, $s = 10$.
 
 **1)** Degrees of freedom?
 
-**2)** Standard error $= s/\\\\sqrt{n} = ?$
+**2)** Standard error $= s/\\sqrt{n} = ?$
 
-**3)** t-statistic for testing $\\\\mu = 80$: $t = (82 - 80)/SE = ?$
+**3)** t-statistic for testing $\\mu = 80$: $t = (82 - 80)/SE = ?$
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['24', '2', '1'],
         hint1: '$n - 1$',
-        hint2: '$10/\\\\sqrt{25} = 10/5$',
+        hint2: '$10/\\sqrt{25} = 10/5$',
         hint3: '$(82-80)/2$',
         explanation: '1) $df = 25 - 1 = 24$. 2) $SE = 10/5 = 2$. 3) $t = 2/2 = 1.0$.'
       }

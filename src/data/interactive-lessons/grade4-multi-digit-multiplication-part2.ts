@@ -43,12 +43,12 @@ $300 + 60 + 40 + 8 = 408$ ✅
       exercise: {
         questions: [
           {
-                    "question": "In the area model for $26 \\\\times 13$, which is NOT a partial product?",
+                    "question": "In the area model for $26 \\times 13$, which is NOT a partial product?",
                     "options": [
-                              "$26 \\\\times 13 = 338$",
-                              "$20 \\\\times 10 = 200$",
-                              "$6 \\\\times 3 = 18$",
-                              "$20 \\\\times 3 = 60$"
+                              "$26 \\times 13 = 338$",
+                              "$20 \\times 10 = 200$",
+                              "$6 \\times 3 = 18$",
+                              "$20 \\times 3 = 60$"
                     ],
                     "correctAnswer": 0,
                     "explanation": "That is the final answer, not a partial product. Partial products: 200, 60, 60, 18."

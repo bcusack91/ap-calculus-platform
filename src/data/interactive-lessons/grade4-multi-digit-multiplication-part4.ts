@@ -39,10 +39,10 @@ $47 \\times 23$:
       exercise: {
         questions: [
           {
-                    "question": "In $56 \\\\times 34$, first multiply $56 \\\\times 4 = 224$. Next step?",
+                    "question": "In $56 \\times 34$, first multiply $56 \\times 4 = 224$. Next step?",
                     "options": [
-                              "Multiply $56 \\\\times 30 = 1680$",
-                              "Multiply $56 \\\\times 3 = 168$",
+                              "Multiply $56 \\times 30 = 1680$",
+                              "Multiply $56 \\times 3 = 168$",
                               "Add 224 + 34",
                               "Multiply 224 × 3"
                     ],
@@ -81,7 +81,7 @@ $47 \\times 23$:
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"In the standard algorithm, you multiply by each digit starting from the","options":["Ones place","Tens place","Hundreds place","Largest digit"]},{"label":"$25 \\\\times 12 = 25(2) + 25(10) =$","options":["300","50","250","275"]}],
+        dropdowns: [{"label":"In the standard algorithm, you multiply by each digit starting from the","options":["Ones place","Tens place","Hundreds place","Largest digit"]},{"label":"$25 \\times 12 = 25(2) + 25(10) =$","options":["300","50","250","275"]}],
         correctAnswers: ["Ones place","300"],
         hint1: "Start with the rightmost digit.",
         hint2: "50 + 250 = ?",

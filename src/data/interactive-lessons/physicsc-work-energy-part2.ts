@@ -44,7 +44,7 @@ $W = \\frac{1}{2}(3)(36) - \\frac{1}{2}(3)(4) = 54 - 6 = 48$ J ✅
                               "Stays the same"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$KE = \\\\frac{1}{2}mv^2$. If $v \\\\to 2v$, $KE \\\\to 4 \\\\times \\\\frac{1}{2}mv^2$."
+                    "explanation": "$KE = \\frac{1}{2}mv^2$. If $v \\to 2v$, $KE \\to 4 \\times \\frac{1}{2}mv^2$."
           }
 ]
       }
@@ -117,7 +117,7 @@ $W = \\frac{1}{2}(3)(36) - \\frac{1}{2}(3)(4) = 54 - 6 = 48$ J ✅
                               "Cannot determine"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$W = \\\\Delta KE = 0 - \\\\frac{1}{2}mv^2 < 0$. Negative work slows objects."
+                    "explanation": "$W = \\Delta KE = 0 - \\frac{1}{2}mv^2 < 0$. Negative work slows objects."
           }
 ]
       }

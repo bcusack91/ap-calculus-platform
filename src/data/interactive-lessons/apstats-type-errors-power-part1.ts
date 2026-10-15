@@ -14,17 +14,17 @@ export const apStatsErrorsPart1Data = {
 
 |  | $H_0$ True | $H_0$ False |
 |--|-----------|------------|
-| **Reject $H_0$** | Type I Error ($\\\\alpha$) | Correct! (Power) |
-| **Fail to reject** | Correct! | Type II Error ($\\\\beta$) |
+| **Reject $H_0$** | Type I Error ($\\alpha$) | Correct! (Power) |
+| **Fail to reject** | Correct! | Type II Error ($\\beta$) |
 
 ---
 
 ### Definitions
 
 - **Type I Error:** Rejecting $H_0$ when it’s actually true (false positive)
-  - Probability = $\\\\alpha$ (significance level)
+  - Probability = $\\alpha$ (significance level)
 - **Type II Error:** Failing to reject $H_0$ when it’s actually false (false negative)
-  - Probability = $\\\\beta$
+  - Probability = $\\beta$
 
 ### Analogy
 
@@ -33,7 +33,7 @@ export const apStatsErrorsPart1Data = {
 | Type I | Convicting an innocent person | False positive (healthy diagnosed sick) |
 | Type II | Acquitting a guilty person | False negative (sick diagnosed healthy) |
 
-> 🔑 The significance level $\\\\alpha$ is the probability of a Type I error. YOU choose $\\\\alpha$ before the test.`
+> 🔑 The significance level $\\alpha$ is the probability of a Type I error. YOU choose $\\alpha$ before the test.`
     },    {
       id: 'typeerrorspower-p1-mcq',
       type: 'multiple-choice' as const,
@@ -50,9 +50,9 @@ export const apStatsErrorsPart1Data = {
           },
           {
             question: 'The probability of a Type I error equals:',
-            options: ['$\\\\beta$', 'The p-value', '$\\\\alpha$', '$1 - \\\\alpha$'],
+            options: ['$\\beta$', 'The p-value', '$\\alpha$', '$1 - \\alpha$'],
             correctAnswer: 2,
-            explanation: '$P(\\\\text{Type I}) = \\\\alpha$, the significance level chosen before the test.'
+            explanation: '$P(\\text{Type I}) = \\alpha$, the significance level chosen before the test.'
           },
           {
             question: 'In a medical test, a Type II error means:',
@@ -74,15 +74,15 @@ $H_0$: The defendant is innocent. $H_a$: The defendant is guilty.
 
 **2)** A Type II error means: acquitting a _______ person. (innocent/guilty)
 
-**3)** If $\\\\alpha = 0.01$, the probability of wrongly convicting an innocent person is ___.
+**3)** If $\\alpha = 0.01$, the probability of wrongly convicting an innocent person is ___.
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['innocent', 'guilty', '0.01'],
         hint1: 'Rejecting $H_0$ when true',
         hint2: 'Failing to reject $H_0$ when false',
-        hint3: '$\\\\alpha$ = P(Type I)',
-        explanation: '1) Innocent (Type I = rejecting truth). 2) Guilty (Type II = missing reality). 3) 0.01 = $\\\\alpha$.'
+        hint3: '$\\alpha$ = P(Type I)',
+        explanation: '1) Innocent (Type I = rejecting truth). 2) Guilty (Type II = missing reality). 3) 0.01 = $\\alpha$.'
       }
     }
   ]

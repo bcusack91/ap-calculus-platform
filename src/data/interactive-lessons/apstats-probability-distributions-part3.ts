@@ -62,7 +62,7 @@ To find the z-score for a given percentile:
             question: 'The z-score for the 75th percentile is approximately:',
             options: ['0.25', '0.67', '0.75', '1.28'],
             correctAnswer: 1,
-            explanation: 'The 75th percentile corresponds to $z \\\\approx 0.67$.'
+            explanation: 'The 75th percentile corresponds to $z \\approx 0.67$.'
           }
         ]
       }

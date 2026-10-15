@@ -44,13 +44,13 @@ $\\omega = \omega_0 + \\alpha t = 0 + 4(3) = 12$ rad/s ✅
           {
                     "question": "The angular analog of linear acceleration is:",
                     "options": [
-                              "Angular acceleration $\\\\alpha$",
-                              "Angular velocity $\\\\omega$",
+                              "Angular acceleration $\\alpha$",
+                              "Angular velocity $\\omega$",
                               "Torque $\\\\tau$",
                               "Moment of inertia $I$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$\\\\alpha = d\\\\omega/dt$ is the angular analog of $a = dv/dt$."
+                    "explanation": "$\\alpha = d\\omega/dt$ is the angular analog of $a = dv/dt$."
           }
 ]
       }
@@ -84,8 +84,8 @@ $\\omega = \omega_0 + \\alpha t = 0 + 4(3) = 12$ rad/s ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"The tangential velocity of a point at distance $r$ from the axis is","options":["$v = r\\\\omega$","$v = r\\\\alpha$","$v = r/\\\\omega$","$v = \\\\omega/r$"]},{"label":"Angular velocity is measured in","options":["rad/s","m/s","rev/s","degrees/s"]}],
-        correctAnswers: ["$v = r\\\\omega$","rad/s"],
+        dropdowns: [{"label":"The tangential velocity of a point at distance $r$ from the axis is","options":["$v = r\\omega$","$v = r\\alpha$","$v = r/\\omega$","$v = \\omega/r$"]},{"label":"Angular velocity is measured in","options":["rad/s","m/s","rev/s","degrees/s"]}],
+        correctAnswers: ["$v = r\\omega$","rad/s"],
         hint1: "Tangential velocity is radius times angular velocity.",
         hint2: "The SI unit for angular velocity.",
         explanation: "$v = r\\omega$. Angular velocity is measured in rad/s (SI)."
@@ -116,13 +116,13 @@ $\\omega = \omega_0 + \\alpha t = 0 + 4(3) = 12$ rad/s ✅
           {
                     "question": "A wheel completes one revolution. The angular displacement is:",
                     "options": [
-                              "$2\\\\pi$ rad",
-                              "$\\\\pi$ rad",
+                              "$2\\pi$ rad",
+                              "$\\pi$ rad",
                               "$360$ rad",
                               "$1$ rad"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "One full revolution = $2\\\\pi$ radians = 360°."
+                    "explanation": "One full revolution = $2\\pi$ radians = 360°."
           }
 ]
       }

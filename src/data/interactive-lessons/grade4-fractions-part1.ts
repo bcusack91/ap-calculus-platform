@@ -45,15 +45,15 @@ Create equivalent fractions by **multiplying or dividing** both the numerator an
       exercise: {
         questions: [
           {
-                    "question": "Which fraction is equivalent to $\\\\frac{2}{3}$?",
+                    "question": "Which fraction is equivalent to $\\frac{2}{3}$?",
                     "options": [
-                              "$\\\\frac{4}{6}$",
-                              "$\\\\frac{3}{4}$",
-                              "$\\\\frac{4}{9}$",
-                              "$\\\\frac{2}{6}$"
+                              "$\\frac{4}{6}$",
+                              "$\\frac{3}{4}$",
+                              "$\\frac{4}{9}$",
+                              "$\\frac{2}{6}$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$\\\\frac{2}{3} = \\\\frac{2 \\\\times 2}{3 \\\\times 2} = \\\\frac{4}{6}$."
+                    "explanation": "$\\frac{2}{3} = \\frac{2 \\times 2}{3 \\times 2} = \\frac{4}{6}$."
           }
 ]
       }
@@ -87,8 +87,8 @@ Create equivalent fractions by **multiplying or dividing** both the numerator an
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"$\\\\frac{3}{4}$ is equivalent to","options":["$\\\\frac{6}{8}$","$\\\\frac{6}{12}$","$\\\\frac{9}{16}$","$\\\\frac{4}{5}$"]},{"label":"To simplify a fraction, you divide by the","options":["Greatest Common Factor","Least Common Multiple","Denominator","Numerator"]}],
-        correctAnswers: ["$\\\\frac{6}{8}$","Greatest Common Factor"],
+        dropdowns: [{"label":"$\\frac{3}{4}$ is equivalent to","options":["$\\frac{6}{8}$","$\\frac{6}{12}$","$\\frac{9}{16}$","$\\frac{4}{5}$"]},{"label":"To simplify a fraction, you divide by the","options":["Greatest Common Factor","Least Common Multiple","Denominator","Numerator"]}],
+        correctAnswers: ["$\\frac{6}{8}$","Greatest Common Factor"],
         hint1: "Multiply both parts of 3/4 by the same number.",
         hint2: "Simplifying means making the numbers smaller.",
         explanation: "3/4 = 6/8 (multiply by 2). Simplify by dividing by the GCF."
@@ -125,7 +125,7 @@ Create equivalent fractions by **multiplying or dividing** both the numerator an
                               "Multiply the numerators only"
                     ],
                     "correctAnswer": 1,
-                    "explanation": "Cross-multiplication: $\\\\frac{a}{b} = \\\\frac{c}{d}$ if and only if $a \\\\times d = b \\\\times c$."
+                    "explanation": "Cross-multiplication: $\\frac{a}{b} = \\frac{c}{d}$ if and only if $a \\times d = b \\times c$."
           }
 ]
       }

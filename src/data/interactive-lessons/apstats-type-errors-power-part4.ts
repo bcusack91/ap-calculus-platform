@@ -12,7 +12,7 @@ export const apStatsErrorsPart4Data = {
 
 ### Sample Size and Power
 
-$$\\\\text{Power} \\\\propto \\\\sqrt{n}$$
+$$\\text{Power} \\\\propto \\sqrt{n}$$
 
 Doubling the sample size increases power, but the relationship is not linear.
 
@@ -20,7 +20,7 @@ Doubling the sample size increases power, but the relationship is not linear.
 
 The **effect size** measures the magnitude of the true difference:
 
-$$d = \\\\frac{|\\\\mu_{\\\\text{true}} - \\\\mu_0|}{\\\\sigma}$$
+$$d = \\frac{|\\mu_{\\text{true}} - \\mu_0|}{\\sigma}$$
 
 | Effect Size | Cohen’s $d$ |
 |-------------|-------------|
@@ -34,9 +34,9 @@ Larger effects are easier to detect → higher power.
 
 ### One-Tailed vs. Two-Tailed
 
-A one-tailed test has more power than a two-tailed test at the same $\\\\alpha$, because all $\\\\alpha$ is concentrated in one tail.
+A one-tailed test has more power than a two-tailed test at the same $\\alpha$, because all $\\alpha$ is concentrated in one tail.
 
-$$\\\\text{Power}_{\\\\text{one-tail}} > \\\\text{Power}_{\\\\text{two-tail}}$$`
+$$\\text{Power}_{\\text{one-tail}} > \\text{Power}_{\\text{two-tail}}$$`
     },    {
       id: 'typeerrorspower-p4-mcq',
       type: 'multiple-choice' as const,
@@ -49,7 +49,7 @@ $$\\\\text{Power}_{\\\\text{one-tail}} > \\\\text{Power}_{\\\\text{two-tail}}$$`
             question: 'Quadrupling the sample size roughly:',
             options: ['Quadruples power', 'Doubles the ability to detect effects', 'Has no effect on power', 'Halves the Type I error rate'],
             correctAnswer: 1,
-            explanation: 'Power depends on $\\\\sqrt{n}$. Quadrupling $n$ doubles $\\\\sqrt{n}$, roughly doubling detection ability.'
+            explanation: 'Power depends on $\\sqrt{n}$. Quadrupling $n$ doubles $\\sqrt{n}$, roughly doubling detection ability.'
           },
           {
             question: 'A Cohen’s $d$ of 0.8 indicates:',
@@ -61,7 +61,7 @@ $$\\\\text{Power}_{\\\\text{one-tail}} > \\\\text{Power}_{\\\\text{two-tail}}$$`
             question: 'Switching from a two-tailed to one-tailed test:',
             options: ['Decreases power', 'Increases power', 'Has no effect on power', 'Changes the sample size needed'],
             correctAnswer: 1,
-            explanation: 'One-tailed concentrates $\\\\alpha$ in one direction, increasing power for that direction.'
+            explanation: 'One-tailed concentrates $\\alpha$ in one direction, increasing power for that direction.'
           }
         ]
       }
@@ -71,7 +71,7 @@ $$\\\\text{Power}_{\\\\text{one-tail}} > \\\\text{Power}_{\\\\text{two-tail}}$$`
       content: `
 **Power Analysis** 🧮
 
-$H_0: \\\\mu = 100$. True $\\\\mu = 106$, $\\\\sigma = 15$.
+$H_0: \\mu = 100$. True $\\mu = 106$, $\\sigma = 15$.
 
 **1)** Effect size $d = |106 - 100|/15 = ?$ (simplified)
 

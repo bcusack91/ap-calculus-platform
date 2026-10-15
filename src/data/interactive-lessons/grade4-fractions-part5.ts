@@ -38,13 +38,13 @@ Divide 0–1 into 4 equal parts. The 3rd mark is $\\frac{3}{4}$. ✅
           {
                     "question": "On a 0–1 line divided into 6 parts, the 4th mark is:",
                     "options": [
-                              "$\\\\frac{4}{6}$",
-                              "$\\\\frac{6}{4}$",
-                              "$\\\\frac{4}{1}$",
-                              "$\\\\frac{1}{4}$"
+                              "$\\frac{4}{6}$",
+                              "$\\frac{6}{4}$",
+                              "$\\frac{4}{1}$",
+                              "$\\frac{1}{4}$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "4th mark out of 6 parts = $\\\\frac{4}{6}$."
+                    "explanation": "4th mark out of 6 parts = $\\frac{4}{6}$."
           }
 ]
       }
@@ -78,8 +78,8 @@ Divide 0–1 into 4 equal parts. The 3rd mark is $\\frac{3}{4}$. ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"$\\\\frac{7}{4}$ is between which whole numbers?","options":["1 and 2","0 and 1","2 and 3","3 and 4"]},{"label":"On a line divided into fifths, the 2nd mark is","options":["$\\\\frac{2}{5}$","$\\\\frac{5}{2}$","$\\\\frac{1}{5}$","$\\\\frac{2}{1}$"]}],
-        correctAnswers: ["1 and 2","$\\\\frac{2}{5}$"],
+        dropdowns: [{"label":"$\\frac{7}{4}$ is between which whole numbers?","options":["1 and 2","0 and 1","2 and 3","3 and 4"]},{"label":"On a line divided into fifths, the 2nd mark is","options":["$\\frac{2}{5}$","$\\frac{5}{2}$","$\\frac{1}{5}$","$\\frac{2}{1}$"]}],
+        correctAnswers: ["1 and 2","$\\frac{2}{5}$"],
         hint1: "Convert 7/4 to a mixed number.",
         hint2: "Each mark = one-fifth.",
         explanation: "7/4 = 1 3/4 → between 1 and 2. 2nd mark = 2/5."
@@ -108,7 +108,7 @@ Divide 0–1 into 4 equal parts. The 3rd mark is $\\frac{3}{4}$. ✅
       exercise: {
         questions: [
           {
-                    "question": "Where is $\\\\frac{5}{3}$ on a number line?",
+                    "question": "Where is $\\frac{5}{3}$ on a number line?",
                     "options": [
                               "Between 1 and 2",
                               "Between 0 and 1",
@@ -116,7 +116,7 @@ Divide 0–1 into 4 equal parts. The 3rd mark is $\\frac{3}{4}$. ✅
                               "Between 2 and 3"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$\\\\frac{5}{3} = 1\\\\frac{2}{3}$, between 1 and 2."
+                    "explanation": "$\\frac{5}{3} = 1\\frac{2}{3}$, between 1 and 2."
           }
 ]
       }

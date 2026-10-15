@@ -84,7 +84,7 @@ $(-15) \\div 3 = -5$ (different signs) ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Two negative numbers multiplied give a","options":["Positive result","Negative result","Zero","Cannot determine"]},{"label":"$(-1) \\\\times (-1) \\\\times (-1) =$","options":["−1","1","0","−3"]}],
+        dropdowns: [{"label":"Two negative numbers multiplied give a","options":["Positive result","Negative result","Zero","Cannot determine"]},{"label":"$(-1) \\times (-1) \\times (-1) =$","options":["−1","1","0","−3"]}],
         correctAnswers: ["Positive result","−1"],
         hint1: "Same signs → positive.",
         hint2: "(−1)(−1)=1, then 1(−1)=−1.",
@@ -114,7 +114,7 @@ $(-15) \\div 3 = -5$ (different signs) ✅
       exercise: {
         questions: [
           {
-                    "question": "$(-36) \\\\div (-4) = ?$",
+                    "question": "$(-36) \\div (-4) = ?$",
                     "options": [
                               "$9$",
                               "$-9$",

@@ -54,7 +54,7 @@ $$y - 50 = 2.5(x - 10) \\implies y = 2.5x + 25$$
           },
           {
             question: "A line passes through $(0, -4)$ and $(6, 8)$. Its equation is:",
-            options: ["$y = 2x - 4$","$y = -2x + 4$","$y = 2x + 4$","$y = \\\\frac{1}{2}x - 4$"],
+            options: ["$y = 2x - 4$","$y = -2x + 4$","$y = 2x + 4$","$y = \\frac{1}{2}x - 4$"],
             correctAnswer: 0,
             explanation: "$m = (8-(-4))/(6-0) = 2$, $b = -4$."
           }
@@ -133,7 +133,7 @@ $$y - 50 = 2.5(x - 10) \\implies y = 2.5x + 25$$
         questions: [
           {
             question: "A line has $x$-intercept $(5, 0)$ and $y$-intercept $(0, -10)$. Its slope is:",
-            options: ["$-2$","$2$","$\\\\frac{1}{2}$","$-\\\\frac{1}{2}$"],
+            options: ["$-2$","$2$","$\\frac{1}{2}$","$-\\frac{1}{2}$"],
             correctAnswer: 1,
             explanation: "$m = (-10-0)/(0-5) = -10/-5 = 2$."
           },

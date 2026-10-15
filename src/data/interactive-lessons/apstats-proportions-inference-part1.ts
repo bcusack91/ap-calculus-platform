@@ -12,26 +12,26 @@ export const apStatsPropInfPart1Data = {
 
 ### The Setting
 
-We have a sample proportion $\\\\hat{p}$ and want to make inferences about the population proportion $p$.
+We have a sample proportion $\\hat{p}$ and want to make inferences about the population proportion $p$.
 
 ### Conditions for Inference
 
 1. **Random:** Data from a random sample or experiment
-2. **Normal:** $np \\\\geq 10$ and $n(1-p) \\\\geq 10$ (use $\\\\hat{p}$ for CIs)
+2. **Normal:** $np \\geq 10$ and $n(1-p) \\geq 10$ (use $\\hat{p}$ for CIs)
 3. **Independent:** Sample $< 10\\\\%$ of population (10% condition)
 
 ---
 
 ### Standard Error
 
-$$SE(\\\\hat{p}) = \\\\sqrt{\\\\frac{\\\\hat{p}(1-\\\\hat{p})}{n}}$$
+$$SE(\\hat{p}) = \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}$$
 
 ### Key Distinction
 
 | Purpose | Formula for SD |
 |---------|---------------|
-| **Confidence interval** | $SE = \\\\sqrt{\\\\hat{p}(1-\\\\hat{p})/n}$ |
-| **Hypothesis test** | $SE = \\\\sqrt{p_0(1-p_0)/n}$ (use $H_0$ value) |`
+| **Confidence interval** | $SE = \\sqrt{\\hat{p}(1-\\hat{p})/n}$ |
+| **Hypothesis test** | $SE = \\sqrt{p_0(1-p_0)/n}$ (use $H_0$ value) |`
     },    {
       id: 'propinference-p1-mcq',
       type: 'multiple-choice' as const,
@@ -48,13 +48,13 @@ $$SE(\\\\hat{p}) = \\\\sqrt{\\\\frac{\\\\hat{p}(1-\\\\hat{p})}{n}}$$
           },
           {
             question: 'For a confidence interval, the standard error uses:',
-            options: ['The hypothesized $p_0$', 'The sample proportion $\\\\hat{p}$', 'The population proportion $p$', '$0.5$'],
+            options: ['The hypothesized $p_0$', 'The sample proportion $\\hat{p}$', 'The population proportion $p$', '$0.5$'],
             correctAnswer: 1,
-            explanation: 'CIs use $\\\\hat{p}$ because we don’t know $p$ — that’s what we’re estimating.'
+            explanation: 'CIs use $\\hat{p}$ because we don’t know $p$ — that’s what we’re estimating.'
           },
           {
             question: 'The Normal condition for proportions requires:',
-            options: ['$n \\\\geq 30$', '$np \\\\geq 10$ and $n(1-p) \\\\geq 10$', '$\\\\hat{p} = 0.5$', '$\\\\sigma$ is known'],
+            options: ['$n \\geq 30$', '$np \\geq 10$ and $n(1-p) \\geq 10$', '$\\hat{p} = 0.5$', '$\\sigma$ is known'],
             correctAnswer: 1,
             explanation: 'We need at least 10 successes and 10 failures expected.'
           }
@@ -66,21 +66,21 @@ $$SE(\\\\hat{p}) = \\\\sqrt{\\\\frac{\\\\hat{p}(1-\\\\hat{p})}{n}}$$
       content: `
 **Conditions Check** 🧮
 
-In a random sample of 200 voters, 120 support a candidate. $\\\\hat{p} = 0.60$.
+In a random sample of 200 voters, 120 support a candidate. $\\hat{p} = 0.60$.
 
-**1)** $n\\\\hat{p} = ?$
+**1)** $n\\hat{p} = ?$
 
-**2)** $n(1-\\\\hat{p}) = ?$
+**2)** $n(1-\\hat{p}) = ?$
 
 **3)** Is the Normal condition met? (yes/no)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['120', '80', 'yes'],
-        hint1: '$200 \\\\times 0.60$',
-        hint2: '$200 \\\\times 0.40$',
-        hint3: 'Both $\\\\geq 10$?',
-        explanation: '1) $200 \\\\times 0.60 = 120$. 2) $200 \\\\times 0.40 = 80$. 3) Yes — both $120 \\\\geq 10$ and $80 \\\\geq 10$.'
+        hint1: '$200 \\times 0.60$',
+        hint2: '$200 \\times 0.40$',
+        hint3: 'Both $\\geq 10$?',
+        explanation: '1) $200 \\times 0.60 = 120$. 2) $200 \\times 0.40 = 80$. 3) Yes — both $120 \\geq 10$ and $80 \\geq 10$.'
       }
     }
   ]

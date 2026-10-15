@@ -85,8 +85,8 @@ Inside the conductor: $E = 0$.
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"For a Gaussian sphere inside a conducting shell, the enclosed charge is","options":["Zero (charge resides on surface)","$Q$","$Q/2$","$Q/r$"]},{"label":"The electric field just outside a conducting sphere is","options":["$\\\\sigma / \\\\epsilon_0$","Zero","$\\\\sigma \\\\epsilon_0$","$kQ^2/r^2$"]}],
-        correctAnswers: ["Zero (charge resides on surface)","$\\\\sigma / \\\\epsilon_0$"],
+        dropdowns: [{"label":"For a Gaussian sphere inside a conducting shell, the enclosed charge is","options":["Zero (charge resides on surface)","$Q$","$Q/2$","$Q/r$"]},{"label":"The electric field just outside a conducting sphere is","options":["$\\sigma / \\\\epsilon_0$","Zero","$\\sigma \\\\epsilon_0$","$kQ^2/r^2$"]}],
+        correctAnswers: ["Zero (charge resides on surface)","$\\sigma / \\\\epsilon_0$"],
         hint1: "Charge in a conductor is on the surface.",
         hint2: "Apply Gauss's law to a thin pillbox at the surface.",
         explanation: "No charge inside conductor → $Q_{enc} = 0$. At the surface: $E = \\sigma/\\epsilon_0$."

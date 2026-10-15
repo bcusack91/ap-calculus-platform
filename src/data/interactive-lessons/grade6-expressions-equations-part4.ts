@@ -81,7 +81,7 @@ Multiply both sides by 4: $x = 36$ ✅ Check: $36/4 = 9$ ✓
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"The inverse of addition is","options":["Subtraction","Multiplication","Division","Addition"]},{"label":"Solve $\\\\frac{x}{3} = 6$: $x =$","options":["18","2","9","3"]}],
+        dropdowns: [{"label":"The inverse of addition is","options":["Subtraction","Multiplication","Division","Addition"]},{"label":"Solve $\\frac{x}{3} = 6$: $x =$","options":["18","2","9","3"]}],
         correctAnswers: ["Subtraction","18"],
         hint1: "Undo addition.",
         hint2: "Multiply both sides by 3.",

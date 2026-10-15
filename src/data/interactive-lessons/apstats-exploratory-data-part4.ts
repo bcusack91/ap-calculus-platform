@@ -12,7 +12,7 @@ export const apStatsEDAPart4Data = {
 
 ### Range
 
-$$\\\\text{Range} = \\\\max - \\\\min$$
+$$\\text{Range} = \\\\max - \\\\min$$
 
 Simple but not resistant to outliers.
 
@@ -26,7 +26,7 @@ $$IQR = Q_3 - Q_1$$
 
 ### Standard Deviation ($s$)
 
-$$s = \\\\sqrt{\\\\frac{\\\\sum(x_i - \\\\bar{x})^2}{n-1}}$$
+$$s = \\sqrt{\\frac{\\sum(x_i - \\bar{x})^2}{n-1}}$$
 
 - Measures average distance from the mean
 - NOT resistant to outliers
@@ -38,8 +38,8 @@ $$s = \\\\sqrt{\\\\frac{\\\\sum(x_i - \\\\bar{x})^2}{n-1}}$$
 ### Outlier Rule (1.5 × IQR)
 
 A value is an outlier if it falls:
-- Below $Q_1 - 1.5 \\\\times IQR$
-- Above $Q_3 + 1.5 \\\\times IQR$`
+- Below $Q_1 - 1.5 \\times IQR$
+- Above $Q_3 + 1.5 \\times IQR$`
     },    {
       id: 'exploratorydata-p4-mcq',
       type: 'multiple-choice' as const,
@@ -78,7 +78,7 @@ Five-number summary: Min = 5, $Q_1 = 12$, Median = 18, $Q_3 = 24$, Max = 50.
 
 **1)** $IQR = ?$
 
-**2)** Upper outlier fence = $Q_3 + 1.5 \\\\times IQR = ?$
+**2)** Upper outlier fence = $Q_3 + 1.5 \\times IQR = ?$
 
 **3)** Is the maximum value (50) an outlier? (yes/no)
       `,

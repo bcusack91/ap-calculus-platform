@@ -32,10 +32,10 @@ $4(x-1) + 6 < 18 \\implies 4x - 4 + 6 < 18 \\implies 4x < 16 \\implies x < 4$
       exercise: {
         questions: [
           {
-            question: "Solve: $2(x+3) - 1 \\\\geq 11$",
-            options: ["$x \\\\geq 3$","$x \\\\leq 3$","$x \\\\geq 6$","$x \\\\leq 6$"],
+            question: "Solve: $2(x+3) - 1 \\geq 11$",
+            options: ["$x \\geq 3$","$x \\leq 3$","$x \\geq 6$","$x \\leq 6$"],
             correctAnswer: 0,
-            explanation: "$2x + 6 - 1 \\\\geq 11 \\\\implies 2x \\\\geq 6 \\\\implies x \\\\geq 3$."
+            explanation: "$2x + 6 - 1 \\geq 11 \\\\implies 2x \\geq 6 \\\\implies x \\geq 3$."
           }
         ]
       }
@@ -56,9 +56,9 @@ $4(x-1) + 6 < 18 \\implies 4x - 4 + 6 < 18 \\implies 4x < 16 \\implies x < 4$
         boxes: 3,
         correctAnswers: ["4","3","3"],
         hint1: "$5x > 20$.",
-        hint2: "$-3x \\\\leq -9$.",
+        hint2: "$-3x \\leq -9$.",
         hint3: "$2x + 8 < 14$.",
-        explanation: "1) $x > 4$. 2) $x \\\\geq 3$. 3) $x < 3$."
+        explanation: "1) $x > 4$. 2) $x \\geq 3$. 3) $x < 3$."
       }
     },
     {

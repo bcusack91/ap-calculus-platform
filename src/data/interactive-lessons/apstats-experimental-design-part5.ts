@@ -14,7 +14,7 @@ export const apStatsExpDesignPart5Data = {
 
 A **confounding variable** is associated with both the explanatory and response variables, making it impossible to determine which causes the effect.
 
-$$\\\\text{Explanatory} \\\\leftarrow \\\\text{Confounder} \\\\rightarrow \\\\text{Response}$$
+$$\\text{Explanatory} \\leftarrow \\text{Confounder} \\rightarrow \\text{Response}$$
 
 ---
 

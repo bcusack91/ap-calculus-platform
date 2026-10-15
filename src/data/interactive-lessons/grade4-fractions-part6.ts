@@ -42,10 +42,10 @@ $\\frac{3}{4} \\times \\frac{1}{2} = \\frac{3}{8}$ cup ✅
           {
                     "question": "A pizza has 8 slices. You eat 3 slices. Fraction left?",
                     "options": [
-                              "$\\\\frac{5}{8}$",
-                              "$\\\\frac{3}{8}$",
-                              "$\\\\frac{8}{5}$",
-                              "$\\\\frac{5}{3}$"
+                              "$\\frac{5}{8}$",
+                              "$\\frac{3}{8}$",
+                              "$\\frac{8}{5}$",
+                              "$\\frac{5}{3}$"
                     ],
                     "correctAnswer": 0,
                     "explanation": "(8−3)/8 = 5/8 remains."
@@ -112,12 +112,12 @@ $\\frac{3}{4} \\times \\frac{1}{2} = \\frac{3}{8}$ cup ✅
       exercise: {
         questions: [
           {
-                    "question": "Sara has $\\\\frac{3}{4}$ yd fabric, uses $\\\\frac{1}{4}$ yd, buys $\\\\frac{2}{4}$ yd. Total?",
+                    "question": "Sara has $\\frac{3}{4}$ yd fabric, uses $\\frac{1}{4}$ yd, buys $\\frac{2}{4}$ yd. Total?",
                     "options": [
                               "1 yard",
-                              "$\\\\frac{3}{4}$ yard",
-                              "$\\\\frac{1}{2}$ yard",
-                              "$\\\\frac{5}{4}$ yards"
+                              "$\\frac{3}{4}$ yard",
+                              "$\\frac{1}{2}$ yard",
+                              "$\\frac{5}{4}$ yards"
                     ],
                     "correctAnswer": 0,
                     "explanation": "3/4 − 1/4 + 2/4 = 4/4 = 1 yard."

@@ -15,7 +15,7 @@ export const apStatsErrorsPart6Data = {
 1. **Describe** Type I and Type II errors in context
 2. **Explain** the consequences of each error type
 3. **State** which error is more serious and why
-4. **Relationship** between $\\\\alpha$, $\\\\beta$, power, and sample size
+4. **Relationship** between $\\alpha$, $\\beta$, power, and sample size
 
 ---
 
@@ -53,9 +53,9 @@ $H_0$: The new drug is not effective. $H_a$: The new drug IS effective.
           },
           {
             question: 'If Type II error is more serious, you should:',
-            options: ['Use a smaller $\\\\alpha$', 'Use a larger $\\\\alpha$ to increase power', 'Not do the test', 'Use a larger sample only'],
+            options: ['Use a smaller $\\alpha$', 'Use a larger $\\alpha$ to increase power', 'Not do the test', 'Use a larger sample only'],
             correctAnswer: 1,
-            explanation: 'Larger $\\\\alpha$ increases power, reducing $\\\\beta$ (the chance of the more dangerous Type II error).'
+            explanation: 'Larger $\\alpha$ increases power, reducing $\\beta$ (the chance of the more dangerous Type II error).'
           }
         ]
       }

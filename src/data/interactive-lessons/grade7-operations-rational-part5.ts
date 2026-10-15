@@ -38,7 +38,7 @@ $(-2)^2 = 4$. Then $4(4) = 16$. Then $-3 + 16 = 13$ ✅
       exercise: {
         questions: [
           {
-                    "question": "$2+ 3 \\\\times 4 = ?$",
+                    "question": "$2+ 3 \\times 4 = ?$",
                     "options": [
                               "14",
                               "20",

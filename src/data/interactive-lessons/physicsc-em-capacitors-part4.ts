@@ -46,7 +46,7 @@ $U = \\frac{1}{2}CV^2 = \\frac{1}{2}(10 \\times 10^{-6})(10000) = 0.05$ J ✅
                               "Stays the same"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$U = \\\\frac{1}{2}CV^2$. If $V \\\\to 2V$, $U \\\\to 4U$."
+                    "explanation": "$U = \\frac{1}{2}CV^2$. If $V \\to 2V$, $U \\to 4U$."
           }
 ]
       }
@@ -80,8 +80,8 @@ $U = \\frac{1}{2}CV^2 = \\frac{1}{2}(10 \\times 10^{-6})(10000) = 0.05$ J ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Energy density of the electric field is","options":["$\\\\frac{1}{2}\\\\epsilon_0 E^2$","$\\\\epsilon_0 E$","$\\\\frac{1}{2}\\\\epsilon_0 E$","$\\\\epsilon_0 E^2$"]},{"label":"Three equivalent formulas for capacitor energy use","options":["$C$ and $V$; $Q$ and $C$; $Q$ and $V$","Only $C$ and $V$","Only $Q$ and $V$","Only $Q$ and $C$"]}],
-        correctAnswers: ["$\\\\frac{1}{2}\\\\epsilon_0 E^2$","$C$ and $V$; $Q$ and $C$; $Q$ and $V$"],
+        dropdowns: [{"label":"Energy density of the electric field is","options":["$\\frac{1}{2}\\\\epsilon_0 E^2$","$\\\\epsilon_0 E$","$\\frac{1}{2}\\\\epsilon_0 E$","$\\\\epsilon_0 E^2$"]},{"label":"Three equivalent formulas for capacitor energy use","options":["$C$ and $V$; $Q$ and $C$; $Q$ and $V$","Only $C$ and $V$","Only $Q$ and $V$","Only $Q$ and $C$"]}],
+        correctAnswers: ["$\\frac{1}{2}\\\\epsilon_0 E^2$","$C$ and $V$; $Q$ and $C$; $Q$ and $V$"],
         hint1: "Energy per unit volume in an E field.",
         hint2: "$U = \\frac{1}{2}CV^2 = Q^2/(2C) = \\frac{1}{2}QV$.",
         explanation: "Energy density: $u = \\frac{1}{2}\\epsilon_0 E^2$. Three forms: $\\frac{1}{2}CV^2$, $Q^2/(2C)$, $\\frac{1}{2}QV$."
@@ -118,7 +118,7 @@ $U = \\frac{1}{2}CV^2 = \\frac{1}{2}(10 \\times 10^{-6})(10000) = 0.05$ J ✅
                               "The battery"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Energy is stored in the electric field: $u = \\\\frac{1}{2}\\\\epsilon_0 E^2$ per unit volume."
+                    "explanation": "Energy is stored in the electric field: $u = \\frac{1}{2}\\\\epsilon_0 E^2$ per unit volume."
           }
 ]
       }

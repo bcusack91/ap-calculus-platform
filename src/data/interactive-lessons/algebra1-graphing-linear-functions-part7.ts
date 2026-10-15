@@ -44,7 +44,7 @@ Let's review everything from this topic:
         questions: [
           {
             question: "Slope of line through $(0, 5)$ and $(10, 0)$:",
-            options: ["$\\\\frac{1}{2}$","$-\\\\frac{1}{2}$","$2$","$-2$"],
+            options: ["$\\frac{1}{2}$","$-\\frac{1}{2}$","$2$","$-2$"],
             correctAnswer: 1,
             explanation: "$m = (0-5)/(10-0) = -1/2$."
           },
@@ -129,13 +129,13 @@ Let's review everything from this topic:
         questions: [
           {
             question: "Which lines are parallel?",
-            options: ["$y = 2x+1$ and $y = -2x+1$","$y = 3x$ and $y = 3x+5$","$y = x$ and $y = -x$","$y = 4x$ and $y = \\\\frac{1}{4}x$"],
+            options: ["$y = 2x+1$ and $y = -2x+1$","$y = 3x$ and $y = 3x+5$","$y = x$ and $y = -x$","$y = 4x$ and $y = \\frac{1}{4}x$"],
             correctAnswer: 1,
             explanation: "Same slope $m = 3$."
           },
           {
             question: "Line through $(0, 0)$ and $(1, -3)$ is:",
-            options: ["$y = 3x$","$y = -3x$","$y = -\\\\frac{1}{3}x$","$y = x - 3$"],
+            options: ["$y = 3x$","$y = -3x$","$y = -\\frac{1}{3}x$","$y = x - 3$"],
             correctAnswer: 1,
             explanation: "$m = -3/1 = -3$, $b = 0$: $y = -3x$."
           }

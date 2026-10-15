@@ -83,8 +83,8 @@ $4\\frac{4}{3} - 2\\frac{2}{3} = 2\\frac{2}{3}$ ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Borrowing in mixed numbers means","options":["Taking 1 from the whole and adding it to the fraction","Changing the denominator","Adding 1 to the whole number","Subtracting the fraction"]},{"label":"$5 - 1\\\\frac{2}{3} = ?$","options":["$3\\\\frac{1}{3}$","$4\\\\frac{2}{3}$","$4\\\\frac{1}{3}$","$3\\\\frac{2}{3}$"]}],
-        correctAnswers: ["Taking 1 from the whole and adding it to the fraction","$3\\\\frac{1}{3}$"],
+        dropdowns: [{"label":"Borrowing in mixed numbers means","options":["Taking 1 from the whole and adding it to the fraction","Changing the denominator","Adding 1 to the whole number","Subtracting the fraction"]},{"label":"$5 - 1\\frac{2}{3} = ?$","options":["$3\\frac{1}{3}$","$4\\frac{2}{3}$","$4\\frac{1}{3}$","$3\\frac{2}{3}$"]}],
+        correctAnswers: ["Taking 1 from the whole and adding it to the fraction","$3\\frac{1}{3}$"],
         hint1: "You convert 1 whole into fraction form.",
         hint2: "5 = 4 3/3. Then 4 3/3 − 1 2/3.",
         explanation: "Borrow: convert 1 whole to b/b. 4 3/3 − 1 2/3 = 3 1/3."
@@ -113,15 +113,15 @@ $4\\frac{4}{3} - 2\\frac{2}{3} = 2\\frac{2}{3}$ ✅
       exercise: {
         questions: [
           {
-                    "question": "$7\\\\frac{1}{6} - 4\\\\frac{5}{6} = ?$",
+                    "question": "$7\\frac{1}{6} - 4\\frac{5}{6} = ?$",
                     "options": [
-                              "$2\\\\frac{2}{6}$",
-                              "$3\\\\frac{4}{6}$",
-                              "$2\\\\frac{4}{6}$",
-                              "$3\\\\frac{2}{6}$"
+                              "$2\\frac{2}{6}$",
+                              "$3\\frac{4}{6}$",
+                              "$2\\frac{4}{6}$",
+                              "$3\\frac{2}{6}$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Borrow: $6\\\\frac{7}{6} - 4\\\\frac{5}{6} = 2\\\\frac{2}{6}$."
+                    "explanation": "Borrow: $6\\frac{7}{6} - 4\\frac{5}{6} = 2\\frac{2}{6}$."
           }
 ]
       }

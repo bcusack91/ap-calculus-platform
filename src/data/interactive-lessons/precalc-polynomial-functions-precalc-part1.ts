@@ -188,14 +188,14 @@ $$\\boxed{\\text{As } x \\to -\\infty, \\; f(x) \\to -\\infty \\quad \\text{and}
           },
           {
             label: 'If the degree is odd and the leading coefficient is positive, the right end',
-            options: ['goes to $-\\\\infty$', 'goes to $+\\\\infty$', 'approaches zero', 'oscillates']
+            options: ['goes to $-\\infty$', 'goes to $+\\infty$', 'approaches zero', 'oscillates']
           },
           {
             label: 'A polynomial of degree $n$ can have at most ______ real zeros',
             options: ['$n - 1$', '$n$', '$n + 1$', '$2n$']
           }
         ],
-        correctAnswers: ['leading term', '3', 'goes to $+\\\\infty$', '$n$'],
+        correctAnswers: ['leading term', '3', 'goes to $+\\infty$', '$n$'],
         hint1: 'Which single term controls what happens for very large $|x|$?',
         hint2: 'The maximum number of turning points is always one less than the degree.',
         hint3: 'Odd degree + positive leading coefficient means the graph rises to the right.',

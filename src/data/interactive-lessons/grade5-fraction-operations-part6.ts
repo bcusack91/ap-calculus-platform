@@ -38,12 +38,12 @@ $2\\frac{1}{2} \\div \\frac{3}{4} = \\frac{5}{2} \\times \\frac{4}{3} = \\frac{2
       exercise: {
         questions: [
           {
-                    "question": "$\\\\frac{1}{2} + \\\\frac{1}{3} + \\\\frac{1}{6} = ?$",
+                    "question": "$\\frac{1}{2} + \\frac{1}{3} + \\frac{1}{6} = ?$",
                     "options": [
                               "1",
-                              "$\\\\frac{3}{6}$",
-                              "$\\\\frac{1}{6}$",
-                              "$\\\\frac{5}{6}$"
+                              "$\\frac{3}{6}$",
+                              "$\\frac{1}{6}$",
+                              "$\\frac{5}{6}$"
                     ],
                     "correctAnswer": 0,
                     "explanation": "LCD=6: 3/6 + 2/6 + 1/6 = 6/6 = 1."
@@ -110,15 +110,15 @@ $2\\frac{1}{2} \\div \\frac{3}{4} = \\frac{5}{2} \\times \\frac{4}{3} = \\frac{2
       exercise: {
         questions: [
           {
-                    "question": "After multiplying and dividing fractions: $\\\\frac{2}{3} \\\\times \\\\frac{3}{4} = \\\\frac{1}{2}$. Then $\\\\frac{1}{2} \\\\div \\\\frac{1}{2} = ?$",
+                    "question": "After multiplying and dividing fractions: $\\frac{2}{3} \\times \\frac{3}{4} = \\frac{1}{2}$. Then $\\frac{1}{2} \\div \\frac{1}{2} = ?$",
                     "options": [
                               "1",
-                              "$\\\\frac{1}{4}$",
+                              "$\\frac{1}{4}$",
                               "2",
-                              "$\\\\frac{1}{2}$"
+                              "$\\frac{1}{2}$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$\\\\frac{1}{2} \\\\div \\\\frac{1}{2} = \\\\frac{1}{2} \\\\times \\\\frac{2}{1} = 1$."
+                    "explanation": "$\\frac{1}{2} \\div \\frac{1}{2} = \\frac{1}{2} \\times \\frac{2}{1} = 1$."
           }
 ]
       }

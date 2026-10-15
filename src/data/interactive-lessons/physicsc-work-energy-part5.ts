@@ -82,8 +82,8 @@ $P = \\frac{W}{t} = \\frac{mgh}{t} = \\frac{100(10)(10)}{5} = 2000$ W ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Instantaneous power is calculated as","options":["$P = F \\\\cdot v$","$P = F \\\\cdot a$","$P = m \\\\cdot v$","$P = F / t$"]},{"label":"If the same work is done in half the time, the power is","options":["Doubled","Halved","The same","Quadrupled"]}],
-        correctAnswers: ["$P = F \\\\cdot v$","Doubled"],
+        dropdowns: [{"label":"Instantaneous power is calculated as","options":["$P = F \\cdot v$","$P = F \\cdot a$","$P = m \\cdot v$","$P = F / t$"]},{"label":"If the same work is done in half the time, the power is","options":["Doubled","Halved","The same","Quadrupled"]}],
+        correctAnswers: ["$P = F \\cdot v$","Doubled"],
         hint1: "Power is force times velocity.",
         hint2: "$P = W/t$. If $t$ halves...",
         explanation: "$P = F \\cdot v$ for instantaneous power. Halving time doubles power since $P = W/t$."

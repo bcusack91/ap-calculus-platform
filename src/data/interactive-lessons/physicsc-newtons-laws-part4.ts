@@ -117,13 +117,13 @@ $f_k = \mu_k N = 0.3 \\times 100 = 30$ N ✅
           {
                     "question": "On an incline, the normal force equals:",
                     "options": [
-                              "$mg\\\\cos\\\\theta$",
-                              "$mg\\\\sin\\\\theta$",
+                              "$mg\\cos\\theta$",
+                              "$mg\\sin\\theta$",
                               "$mg$",
-                              "$\\\\mu mg$"
+                              "$\\mu mg$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "The normal force on an incline is the component perpendicular to the surface: $N = mg\\\\cos\\\\theta$."
+                    "explanation": "The normal force on an incline is the component perpendicular to the surface: $N = mg\\cos\\theta$."
           }
 ]
       }

@@ -12,24 +12,24 @@ export const apStatsMeansInfPart3Data = {
 
 ### Test Statistic
 
-$$t = \\\\frac{\\\\bar{x} - \\\\mu_0}{s/\\\\sqrt{n}}$$
+$$t = \\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}}$$
 
 ### Steps (4-Step Process)
 
-1. **State:** $H_0: \\\\mu = \\\\mu_0$ vs. $H_a: \\\\mu \\\\neq \\\\mu_0$ (or $<$ or $>$)
+1. **State:** $H_0: \\mu = \\mu_0$ vs. $H_a: \\mu \\neq \\mu_0$ (or $<$ or $>$)
 2. **Plan:** Check Random, Normal, Independent conditions
 3. **Do:** Calculate $t$ and find p-value using $t$-table with $df = n-1$
-4. **Conclude:** Compare p-value to $\\\\alpha$, interpret in context
+4. **Conclude:** Compare p-value to $\\alpha$, interpret in context
 
 ---
 
 ### Example
 
-$H_0: \\\\mu = 100$, $H_a: \\\\mu > 100$. $n = 16$, $\\\\bar{x} = 106$, $s = 12$.
+$H_0: \\mu = 100$, $H_a: \\mu > 100$. $n = 16$, $\\bar{x} = 106$, $s = 12$.
 
-$$t = \\\\frac{106 - 100}{12/\\\\sqrt{16}} = \\\\frac{6}{3} = 2.0$$
+$$t = \\frac{106 - 100}{12/\\sqrt{16}} = \\frac{6}{3} = 2.0$$
 
-$df = 15$. From the t-table, $P(t > 2.0) \\\\approx 0.032$.
+$df = 15$. From the t-table, $P(t > 2.0) \\approx 0.032$.
 
 Since $0.032 < 0.05$, reject $H_0$.`
     },    {
@@ -42,9 +42,9 @@ Since $0.032 < 0.05$, reject $H_0$.`
         questions: [
           {
             question: 'In a one-sample t-test, the test statistic uses:',
-            options: ['$\\\\sigma$ (population SD)', '$s$ (sample SD)', '$\\\\mu$ (population mean)', '$\\\\bar{x}$ (sample mean) only'],
+            options: ['$\\sigma$ (population SD)', '$s$ (sample SD)', '$\\mu$ (population mean)', '$\\bar{x}$ (sample mean) only'],
             correctAnswer: 1,
-            explanation: 'The t-test uses $s$ because $\\\\sigma$ is unknown.'
+            explanation: 'The t-test uses $s$ because $\\sigma$ is unknown.'
           },
           {
             question: '$t = -2.5$ with $df = 20$ in a two-tailed test. The p-value is:',
@@ -66,7 +66,7 @@ Since $0.032 < 0.05$, reject $H_0$.`
       content: `
 **t-Test** 🧮
 
-$H_0: \\\\mu = 50$, $H_a: \\\\mu \\\\neq 50$. $n = 25$, $\\\\bar{x} = 53$, $s = 5$.
+$H_0: \\mu = 50$, $H_a: \\mu \\neq 50$. $n = 25$, $\\bar{x} = 53$, $s = 5$.
 
 **1)** $SE = ?$
 
@@ -77,7 +77,7 @@ $H_0: \\\\mu = 50$, $H_a: \\\\mu \\\\neq 50$. $n = 25$, $\\\\bar{x} = 53$, $s = 
       exercise: {
         boxes: 3,
         correctAnswers: ['1', '3', '24'],
-        hint1: '$5/\\\\sqrt{25}$',
+        hint1: '$5/\\sqrt{25}$',
         hint2: '$(53-50)/1$',
         hint3: '$n - 1$',
         explanation: '1) $SE = 5/5 = 1$. 2) $t = 3/1 = 3.0$. 3) $df = 24$.'

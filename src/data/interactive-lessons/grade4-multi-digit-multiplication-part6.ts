@@ -40,7 +40,7 @@ Strategy: Break apart 22 = 20 + 2.
       exercise: {
         questions: [
           {
-                    "question": "Best strategy for $50 \\\\times 60$?",
+                    "question": "Best strategy for $50 \\times 60$?",
                     "options": [
                               "Mental math: 5×6=30, add two zeros",
                               "Standard algorithm",
@@ -82,7 +82,7 @@ Strategy: Break apart 22 = 20 + 2.
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"For multiplying by 10, 20, 30, etc., use","options":["Mental math","Long division","A calculator","Guess and check"]},{"label":"$99 \\\\times 4 = 100(4) - 1(4) =$","options":["396","400","404","300"]}],
+        dropdowns: [{"label":"For multiplying by 10, 20, 30, etc., use","options":["Mental math","Long division","A calculator","Guess and check"]},{"label":"$99 \\times 4 = 100(4) - 1(4) =$","options":["396","400","404","300"]}],
         correctAnswers: ["Mental math","396"],
         hint1: "Multiples of 10 are easy mental math.",
         hint2: "400 − 4 = ?",
@@ -112,7 +112,7 @@ Strategy: Break apart 22 = 20 + 2.
       exercise: {
         questions: [
           {
-                    "question": "For $99 \\\\times 7$, a clever trick is:",
+                    "question": "For $99 \\times 7$, a clever trick is:",
                     "options": [
                               "$100(7) - 1(7) = 693$",
                               "$99 + 7 = 106$",

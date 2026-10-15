@@ -84,7 +84,7 @@ $7.5 \\div 3 = 2.5$ ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"To make a decimal divisor a whole number, multiply by","options":["A power of 10","The numerator","A fraction","Zero"]},{"label":"$1.44 \\\\div 1.2 =$","options":["1.2","12","0.12","14.4"]}],
+        dropdowns: [{"label":"To make a decimal divisor a whole number, multiply by","options":["A power of 10","The numerator","A fraction","Zero"]},{"label":"$1.44 \\div 1.2 =$","options":["1.2","12","0.12","14.4"]}],
         correctAnswers: ["A power of 10","1.2"],
         hint1: "Powers of 10 = 10, 100, 1000…",
         hint2: "14.4 ÷ 12 = ?",
@@ -114,7 +114,7 @@ $7.5 \\div 3 = 2.5$ ✅
       exercise: {
         questions: [
           {
-                    "question": "$6.3 \\\\div 0.9 = ?$",
+                    "question": "$6.3 \\div 0.9 = ?$",
                     "options": [
                               "7",
                               "0.7",

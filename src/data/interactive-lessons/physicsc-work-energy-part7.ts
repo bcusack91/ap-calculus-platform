@@ -49,7 +49,7 @@ $v = x\\sqrt{k/m} = 2\\sqrt{50/2} = 2(5) = 10$ m/s ✅
                               "Cannot determine"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$KE_1 = \\\\frac{1}{2}(2)(9) = 9$ J. $KE_2 = \\\\frac{1}{2}(1)(16) = 8$ J. The 2 kg object has more."
+                    "explanation": "$KE_1 = \\frac{1}{2}(2)(9) = 9$ J. $KE_2 = \\frac{1}{2}(1)(16) = 8$ J. The 2 kg object has more."
           }
 ]
       }

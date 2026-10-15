@@ -48,7 +48,7 @@ $\\tau = rF\\sin 90° = 0.5(10)(1) = 5$ N·m ✅
                               "At 45°"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$\\\\tau = rF\\\\sin\\\\theta$. Maximum when $\\\\theta = 90°$, i.e., perpendicular."
+                    "explanation": "$\\\\tau = rF\\sin\\theta$. Maximum when $\\theta = 90°$, i.e., perpendicular."
           }
 ]
       }
@@ -114,13 +114,13 @@ $\\tau = rF\\sin 90° = 0.5(10)(1) = 5$ N·m ✅
           {
                     "question": "The rotational analog of $F = ma$ is:",
                     "options": [
-                              "$\\\\tau = I\\\\alpha$",
+                              "$\\\\tau = I\\alpha$",
                               "$\\\\tau = mr^2$",
-                              "$L = I\\\\omega$",
-                              "$\\\\omega = \\\\alpha t$"
+                              "$L = I\\omega$",
+                              "$\\omega = \\alpha t$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Newton's second law for rotation: $\\\\tau = I\\\\alpha$."
+                    "explanation": "Newton's second law for rotation: $\\\\tau = I\\alpha$."
           }
 ]
       }

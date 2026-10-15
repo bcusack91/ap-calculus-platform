@@ -42,15 +42,15 @@ Perpendicular slope $m = -\\frac{1}{2}$: $y = -\\frac{1}{2}x + 3$
         questions: [
           {
             question: "A line parallel to $y = -4x + 7$ has slope:",
-            options: ["$4$","$-4$","$\\\\frac{1}{4}$","$-\\\\frac{1}{4}$"],
+            options: ["$4$","$-4$","$\\frac{1}{4}$","$-\\frac{1}{4}$"],
             correctAnswer: 1,
             explanation: "Parallel lines have the same slope: $m = -4$."
           },
           {
-            question: "A line perpendicular to $y = \\\\frac{2}{3}x$ has slope:",
-            options: ["$\\\\frac{2}{3}$","$-\\\\frac{2}{3}$","$\\\\frac{3}{2}$","$-\\\\frac{3}{2}$"],
+            question: "A line perpendicular to $y = \\frac{2}{3}x$ has slope:",
+            options: ["$\\frac{2}{3}$","$-\\frac{2}{3}$","$\\frac{3}{2}$","$-\\frac{3}{2}$"],
             correctAnswer: 3,
-            explanation: "Negative reciprocal of $\\\\frac{2}{3}$ is $-\\\\frac{3}{2}$."
+            explanation: "Negative reciprocal of $\\frac{2}{3}$ is $-\\frac{3}{2}$."
           }
         ]
       }
@@ -126,14 +126,14 @@ Perpendicular slope $m = -\\frac{1}{2}$: $y = -\\frac{1}{2}x + 3$
       exercise: {
         questions: [
           {
-            question: "Which line is perpendicular to $y = \\\\frac{1}{2}x + 3$?",
-            options: ["$y = \\\\frac{1}{2}x - 1$","$y = -2x + 5$","$y = 2x + 3$","$y = -\\\\frac{1}{2}x$"],
+            question: "Which line is perpendicular to $y = \\frac{1}{2}x + 3$?",
+            options: ["$y = \\frac{1}{2}x - 1$","$y = -2x + 5$","$y = 2x + 3$","$y = -\\frac{1}{2}x$"],
             correctAnswer: 1,
             explanation: "Perpendicular slope is $-2$, so $y = -2x + 5$."
           },
           {
             question: "Parallel lines $y = ax + 1$ and $y = 3x - 5$. Find $a$.",
-            options: ["$-3$","$\\\\frac{1}{3}$","$3$","$5$"],
+            options: ["$-3$","$\\frac{1}{3}$","$3$","$5$"],
             correctAnswer: 2,
             explanation: "Parallel means same slope: $a = 3$."
           }

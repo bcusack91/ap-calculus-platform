@@ -82,7 +82,7 @@ $v(3) = \int_0^3 3t\,dt = \\frac{3t^2}{2}\\Big|_0^3 = \\frac{27}{2} = 13.5$ m/s 
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Newton's second law in differential form is","options":["$F = dp/dt$","$F = mv$","$F = ma^2$","$F = m/a$"]},{"label":"To find velocity from a time-varying force, you","options":["Integrate $a(t)$","Differentiate $a(t)$","Square $F(t)$","Multiply $F \\\\times t$"]}],
+        dropdowns: [{"label":"Newton's second law in differential form is","options":["$F = dp/dt$","$F = mv$","$F = ma^2$","$F = m/a$"]},{"label":"To find velocity from a time-varying force, you","options":["Integrate $a(t)$","Differentiate $a(t)$","Square $F(t)$","Multiply $F \\times t$"]}],
         correctAnswers: ["$F = dp/dt$","Integrate $a(t)$"],
         hint1: "Think about the most general form of the second law.",
         hint2: "Velocity is the integral of acceleration.",
@@ -114,13 +114,13 @@ $v(3) = \int_0^3 3t\,dt = \\frac{3t^2}{2}\\Big|_0^3 = \\frac{27}{2} = 13.5$ m/s 
           {
                     "question": "The impulse delivered by a variable force from $t = 0$ to $t = T$ is:",
                     "options": [
-                              "$\\\\int_0^T F(t)\\\\,dt$",
-                              "$F \\\\cdot T$",
+                              "$\\int_0^T F(t)\\\\,dt$",
+                              "$F \\cdot T$",
                               "$ma$",
-                              "$\\\\frac{dF}{dt}$"
+                              "$\\frac{dF}{dt}$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Impulse is the integral of force over time: $J = \\\\int F\\\\,dt$."
+                    "explanation": "Impulse is the integral of force over time: $J = \\int F\\\\,dt$."
           }
 ]
       }

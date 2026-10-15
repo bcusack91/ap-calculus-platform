@@ -12,7 +12,7 @@ export const apStatsDiscreteRVPart2Data = {
 
 ### The Mean of a Discrete Random Variable
 
-$$\\\\mu_X = E(X) = \\\\sum x_i \\\\cdot P(x_i)$$
+$$\\mu_X = E(X) = \\sum x_i \\cdot P(x_i)$$
 
 The expected value is the **long-run average** — if you repeated the random process many times, the average outcome would approach $E(X)$.
 
@@ -71,7 +71,7 @@ A game costs \\$5 to play. You win \\$20 with probability 0.2, win \\$5 with pro
 
 Let $X$ = net gain (winnings minus cost).
 
-**1)** $X$ values: \\$15, \\$0, and $\\\\underline{\\\\quad}$ (third net gain value)
+**1)** $X$ values: \\$15, \\$0, and $\\\\underline{\\quad}$ (third net gain value)
 
 **2)** $E(X) = ?$ (expected net gain)
 

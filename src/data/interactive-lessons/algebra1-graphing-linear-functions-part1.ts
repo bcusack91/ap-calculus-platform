@@ -50,9 +50,9 @@ $$m = \\frac{7 - (-1)}{2 - 2} = \\frac{8}{0} \\text{ (undefined — vertical)}$$
         questions: [
           {
             question: "What is the slope of the line through $(1, 2)$ and $(4, 11)$?",
-            options: ["$3$","$2$","$\\\\frac{1}{3}$","$9$"],
+            options: ["$3$","$2$","$\\frac{1}{3}$","$9$"],
             correctAnswer: 0,
-            explanation: "$m = \\\\frac{11-2}{4-1} = \\\\frac{9}{3} = 3$."
+            explanation: "$m = \\frac{11-2}{4-1} = \\frac{9}{3} = 3$."
           },
           {
             question: "A horizontal line has slope:",
@@ -109,7 +109,7 @@ $$m = \\frac{7 - (-1)}{2 - 2} = \\frac{8}{0} \\text{ (undefined — vertical)}$$
         hint1: "Rise = slope × run.",
         hint2: "Vertical = division by zero.",
         hint3: "Decreasing means negative slope.",
-        explanation: "Rise = $2/3 \\\\times 3 = 2$. Vertical lines have undefined slope (run = 0). Decreasing functions have negative slope."
+        explanation: "Rise = $2/3 \\times 3 = 2$. Vertical lines have undefined slope (run = 0). Decreasing functions have negative slope."
       }
     },
     {
@@ -140,7 +140,7 @@ $$m = \\frac{7 - (-1)}{2 - 2} = \\frac{8}{0} \\text{ (undefined — vertical)}$$
             explanation: "$m = (3-6)/(5-2) = -1$, which is negative."
           },
           {
-            question: "The slope between $(a, b)$ and $(a, c)$ where $b \\\\neq c$ is:",
+            question: "The slope between $(a, b)$ and $(a, c)$ where $b \\neq c$ is:",
             options: ["$0$","$1$","Undefined","$(c-b)$"],
             correctAnswer: 2,
             explanation: "Same $x$-coordinate means vertical line — undefined slope."

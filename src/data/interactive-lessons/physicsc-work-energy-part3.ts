@@ -85,7 +85,7 @@ This is a restoring force (like a spring with $k = 10$ N/m).
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"The relationship between force and potential energy is","options":["$F = -dU/dx$","$F = dU/dx$","$F = U/x$","$F = U \\\\cdot x$"]},{"label":"At a stable equilibrium point, $U(x)$ has a","options":["Local minimum","Local maximum","Inflection point","Discontinuity"]}],
+        dropdowns: [{"label":"The relationship between force and potential energy is","options":["$F = -dU/dx$","$F = dU/dx$","$F = U/x$","$F = U \\cdot x$"]},{"label":"At a stable equilibrium point, $U(x)$ has a","options":["Local minimum","Local maximum","Inflection point","Discontinuity"]}],
         correctAnswers: ["$F = -dU/dx$","Local minimum"],
         hint1: "Note the negative sign.",
         hint2: "A ball at the bottom of a valley is in stable equilibrium.",

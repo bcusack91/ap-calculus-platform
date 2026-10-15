@@ -122,7 +122,7 @@ $F_c = \\frac{mv^2}{r} = \\frac{2(16)}{0.5} = 64$ N ✅
                               "Stays the same"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$F_c = mv^2/r$. If $v \\\\to 2v$, then $F_c \\\\to m(2v)^2/r = 4mv^2/r$."
+                    "explanation": "$F_c = mv^2/r$. If $v \\to 2v$, then $F_c \\to m(2v)^2/r = 4mv^2/r$."
           }
 ]
       }

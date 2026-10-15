@@ -132,10 +132,10 @@ $$y - (-2) = 3(x - 1) \\implies y = 3x - 5$$
       exercise: {
         questions: [
           {
-            question: "A line through $(5, -1)$ with slope $\\\\frac{2}{5}$ has equation:",
-            options: ["$y + 1 = \\\\frac{2}{5}(x - 5)$","$y - 1 = \\\\frac{2}{5}(x + 5)$","$y + 1 = \\\\frac{5}{2}(x - 5)$","$y = \\\\frac{2}{5}x - 1$"],
+            question: "A line through $(5, -1)$ with slope $\\frac{2}{5}$ has equation:",
+            options: ["$y + 1 = \\frac{2}{5}(x - 5)$","$y - 1 = \\frac{2}{5}(x + 5)$","$y + 1 = \\frac{5}{2}(x - 5)$","$y = \\frac{2}{5}x - 1$"],
             correctAnswer: 0,
-            explanation: "$y - (-1) = \\\\frac{2}{5}(x - 5) \\\\implies y + 1 = \\\\frac{2}{5}(x - 5)$."
+            explanation: "$y - (-1) = \\frac{2}{5}(x - 5) \\\\implies y + 1 = \\frac{2}{5}(x - 5)$."
           },
           {
             question: "Converted to slope-intercept: $y - 6 = -3(x - 2)$",

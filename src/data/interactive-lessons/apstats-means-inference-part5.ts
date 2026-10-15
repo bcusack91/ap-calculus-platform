@@ -21,18 +21,18 @@ export const apStatsMeansInfPart5Data = {
 1. Compute **differences** $d = x_1 - x_2$ for each pair
 2. Perform a **one-sample t-test** on the differences
 
-$$t = \\\\frac{\\\\bar{d} - 0}{s_d/\\\\sqrt{n}}$$
+$$t = \\frac{\\bar{d} - 0}{s_d/\\sqrt{n}}$$
 
-where $n$ = number of pairs, $\\\\bar{d}$ = mean of differences, $s_d$ = SD of differences.
+where $n$ = number of pairs, $\\bar{d}$ = mean of differences, $s_d$ = SD of differences.
 
 ---
 
 ### Example
 
 10 patients’ blood pressure before and after a drug:
-$\\\\bar{d} = -8.5$ (mean decrease), $s_d = 6.2$
+$\\bar{d} = -8.5$ (mean decrease), $s_d = 6.2$
 
-$$t = \\\\frac{-8.5 - 0}{6.2/\\\\sqrt{10}} = \\\\frac{-8.5}{1.96} = -4.34$$
+$$t = \\frac{-8.5 - 0}{6.2/\\sqrt{10}} = \\frac{-8.5}{1.96} = -4.34$$
 
 $df = 9$. Strong evidence that the drug reduces blood pressure.`
     },    {
@@ -45,7 +45,7 @@ $df = 9$. Strong evidence that the drug reduces blood pressure.`
         questions: [
           {
             question: 'Matched pairs t-test is used when:',
-            options: ['Two independent groups are compared', 'The same subjects are measured twice', 'The sample size is small', 'We know $\\\\sigma$'],
+            options: ['Two independent groups are compared', 'The same subjects are measured twice', 'The sample size is small', 'We know $\\sigma$'],
             correctAnswer: 1,
             explanation: 'Matched pairs involves paired measurements — usually before/after on the same subjects.'
           },
@@ -69,21 +69,21 @@ $df = 9$. Strong evidence that the drug reduces blood pressure.`
       content: `
 **Matched Pairs** 🧮
 
-12 students take a test before and after tutoring. Mean difference $\\\\bar{d} = 5.0$ (improvement), $s_d = 3.6$.
+12 students take a test before and after tutoring. Mean difference $\\bar{d} = 5.0$ (improvement), $s_d = 3.6$.
 
-**1)** $SE = s_d/\\\\sqrt{n} = ?$ (round to 2 places)
+**1)** $SE = s_d/\\sqrt{n} = ?$ (round to 2 places)
 
-**2)** $t = \\\\bar{d}/SE = ?$ (round to 2 places)
+**2)** $t = \\bar{d}/SE = ?$ (round to 2 places)
 
 **3)** $df = ?$
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['1.04', '4.81', '11'],
-        hint1: '$3.6/\\\\sqrt{12}$',
+        hint1: '$3.6/\\sqrt{12}$',
         hint2: '$5.0/1.04$',
         hint3: '$n - 1 = 12 - 1$',
-        explanation: '1) $3.6/3.464 \\\\approx 1.04$. 2) $5.0/1.04 \\\\approx 4.81$. 3) $df = 11$.'
+        explanation: '1) $3.6/3.464 \\approx 1.04$. 2) $5.0/1.04 \\approx 4.81$. 3) $df = 11$.'
       }
     }
   ]

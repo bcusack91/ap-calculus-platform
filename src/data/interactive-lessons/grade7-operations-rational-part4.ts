@@ -37,7 +37,7 @@ $(-8.4) \\div (-2.1) = 4$ (same signs → positive) ✅
       exercise: {
         questions: [
           {
-                    "question": "$(-24) \\\\div 6 = ?$",
+                    "question": "$(-24) \\div 6 = ?$",
                     "options": [
                               "−4",
                               "4",
@@ -79,7 +79,7 @@ $(-8.4) \\div (-2.1) = 4$ (same signs → positive) ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Division by zero is","options":["Undefined","Zero","One","Infinity"]},{"label":"$(-1) \\\\div (-1) =$","options":["1","−1","0","−2"]}],
+        dropdowns: [{"label":"Division by zero is","options":["Undefined","Zero","One","Infinity"]},{"label":"$(-1) \\div (-1) =$","options":["1","−1","0","−2"]}],
         correctAnswers: ["Undefined","1"],
         hint1: "You cannot divide by zero.",
         hint2: "Same signs.",
@@ -109,7 +109,7 @@ $(-8.4) \\div (-2.1) = 4$ (same signs → positive) ✅
       exercise: {
         questions: [
           {
-                    "question": "$(-36) \\\\div (-9) = ?$",
+                    "question": "$(-36) \\div (-9) = ?$",
                     "options": [
                               "4",
                               "−4",

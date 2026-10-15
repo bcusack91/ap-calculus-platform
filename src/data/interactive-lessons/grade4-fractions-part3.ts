@@ -38,15 +38,15 @@ $\\frac{5}{6} + \\frac{1}{6} = \\frac{6}{6} = 1$ ✅
       exercise: {
         questions: [
           {
-                    "question": "What is $\\\\frac{2}{7} + \\\\frac{3}{7}$?",
+                    "question": "What is $\\frac{2}{7} + \\frac{3}{7}$?",
                     "options": [
-                              "$\\\\frac{5}{7}$",
-                              "$\\\\frac{5}{14}$",
-                              "$\\\\frac{6}{7}$",
-                              "$\\\\frac{2}{3}$"
+                              "$\\frac{5}{7}$",
+                              "$\\frac{5}{14}$",
+                              "$\\frac{6}{7}$",
+                              "$\\frac{2}{3}$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Same denominator: $\\\\frac{2+3}{7} = \\\\frac{5}{7}$."
+                    "explanation": "Same denominator: $\\frac{2+3}{7} = \\frac{5}{7}$."
           }
 ]
       }
@@ -80,8 +80,8 @@ $\\frac{5}{6} + \\frac{1}{6} = \\frac{6}{6} = 1$ ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"$\\\\frac{4}{9} + \\\\frac{2}{9}$ equals","options":["$\\\\frac{6}{9}$","$\\\\frac{6}{18}$","$\\\\frac{8}{9}$","$\\\\frac{4}{18}$"]},{"label":"$\\\\frac{6}{9}$ simplifies to","options":["$\\\\frac{2}{3}$","$\\\\frac{3}{4}$","$\\\\frac{1}{3}$","Cannot simplify"]}],
-        correctAnswers: ["$\\\\frac{6}{9}$","$\\\\frac{2}{3}$"],
+        dropdowns: [{"label":"$\\frac{4}{9} + \\frac{2}{9}$ equals","options":["$\\frac{6}{9}$","$\\frac{6}{18}$","$\\frac{8}{9}$","$\\frac{4}{18}$"]},{"label":"$\\frac{6}{9}$ simplifies to","options":["$\\frac{2}{3}$","$\\frac{3}{4}$","$\\frac{1}{3}$","Cannot simplify"]}],
+        correctAnswers: ["$\\frac{6}{9}$","$\\frac{2}{3}$"],
         hint1: "Add numerators, keep denominator.",
         hint2: "GCF of 6 and 9 is 3. Divide both.",
         explanation: "(4+2)/9 = 6/9. GCF = 3: 6/9 = 2/3."

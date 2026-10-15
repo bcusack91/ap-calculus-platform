@@ -14,19 +14,19 @@ export const apStatsPropInfPart5Data = {
 
 For a desired margin of error $ME$ at confidence level $z^*$:
 
-$$n = \\\\left(\\\\frac{z^*}{ME}\\\\right)^2 \\\\hat{p}(1-\\\\hat{p})$$
+$$n = \\left(\\frac{z^*}{ME}\\right)^2 \\hat{p}(1-\\hat{p})$$
 
-If no prior estimate of $p$ exists, use $\\\\hat{p} = 0.5$ (maximizes $n$, conservative).
+If no prior estimate of $p$ exists, use $\\hat{p} = 0.5$ (maximizes $n$, conservative).
 
-$$n = \\\\left(\\\\frac{z^*}{ME}\\\\right)^2 (0.25)$$
+$$n = \\left(\\frac{z^*}{ME}\\right)^2 (0.25)$$
 
 ---
 
 ### Example
 
-Want a 95% CI with margin of error $\\\\leq 0.03$:
+Want a 95% CI with margin of error $\\leq 0.03$:
 
-$$n = \\\\left(\\\\frac{1.96}{0.03}\\\\right)^2 (0.25) = (65.33)^2(0.25) = 4268.4(0.25) = 1067.1$$
+$$n = \\left(\\frac{1.96}{0.03}\\right)^2 (0.25) = (65.33)^2(0.25) = 4268.4(0.25) = 1067.1$$
 
 **Round up:** $n = 1068$
 
@@ -40,7 +40,7 @@ $$n = \\\\left(\\\\frac{1.96}{0.03}\\\\right)^2 (0.25) = (65.33)^2(0.25) = 4268.
       exercise: {
         questions: [
           {
-            question: 'Using $\\\\hat{p} = 0.5$ when computing sample size:',
+            question: 'Using $\\hat{p} = 0.5$ when computing sample size:',
             options: ['Gives the smallest possible $n$', 'Gives the largest possible $n$ (most conservative)', 'Is never appropriate', 'Only works for 95% confidence'],
             correctAnswer: 1,
             explanation: '$p(1-p)$ is maximized at $p = 0.5$, which gives the largest (most conservative) sample size.'
@@ -49,7 +49,7 @@ $$n = \\\\left(\\\\frac{1.96}{0.03}\\\\right)^2 (0.25) = (65.33)^2(0.25) = 4268.
             question: 'To cut the margin of error in half, you need to:',
             options: ['Double the sample size', 'Quadruple the sample size', 'Halve the sample size', 'Use a lower confidence level'],
             correctAnswer: 1,
-            explanation: 'ME is proportional to $1/\\\\sqrt{n}$. Halving ME requires $4\\\\times$ the sample size.'
+            explanation: 'ME is proportional to $1/\\sqrt{n}$. Halving ME requires $4\\times$ the sample size.'
           },
           {
             question: 'When computing sample size, always round:',
@@ -65,11 +65,11 @@ $$n = \\\\left(\\\\frac{1.96}{0.03}\\\\right)^2 (0.25) = (65.33)^2(0.25) = 4268.
       content: `
 **Sample Size Calculation** 🧮
 
-Desired: 95% CI, margin of error $\\\\leq 0.04$, no prior estimate of $p$.
+Desired: 95% CI, margin of error $\\leq 0.04$, no prior estimate of $p$.
 
-**1)** What value of $\\\\hat{p}$ should you use?
+**1)** What value of $\\hat{p}$ should you use?
 
-**2)** $n = (1.96/0.04)^2 \\\\times 0.25 = ?$ (round to nearest integer)
+**2)** $n = (1.96/0.04)^2 \\times 0.25 = ?$ (round to nearest integer)
 
 **3)** What $n$ do you report? (remember rounding rule)
       `,
@@ -77,9 +77,9 @@ Desired: 95% CI, margin of error $\\\\leq 0.04$, no prior estimate of $p$.
         boxes: 3,
         correctAnswers: ['0.5', '600', '601'],
         hint1: 'Conservative estimate when $p$ is unknown',
-        hint2: '$(49)^2 \\\\times 0.25 = 2401 \\\\times 0.25$',
+        hint2: '$(49)^2 \\times 0.25 = 2401 \\times 0.25$',
         hint3: 'Always round UP',
-        explanation: '1) Use $\\\\hat{p} = 0.5$. 2) $(49)^2 \\\\times 0.25 = 600.25$. 3) Round up: $n = 601$.'
+        explanation: '1) Use $\\hat{p} = 0.5$. 2) $(49)^2 \\times 0.25 = 600.25$. 3) Round up: $n = 601$.'
       }
     }
   ]

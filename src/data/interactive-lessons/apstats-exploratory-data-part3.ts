@@ -10,9 +10,9 @@ export const apStatsEDAPart3Data = {
 
 ---
 
-### Mean ($\\\\bar{x}$)
+### Mean ($\\bar{x}$)
 
-$$\\\\bar{x} = \\\\frac{\\\\sum x_i}{n}$$
+$$\\bar{x} = \\frac{\\sum x_i}{n}$$
 
 - Arithmetic average of ALL values
 - **Sensitive** to outliers and skewness
@@ -28,7 +28,7 @@ $$\\\\bar{x} = \\\\frac{\\\\sum x_i}{n}$$
 
 | Shape | Relationship |
 |-------|-------------|
-| Symmetric | Mean $\\\\approx$ Median |
+| Symmetric | Mean $\\approx$ Median |
 | Skewed right | Mean > Median |
 | Skewed left | Mean < Median |
 
@@ -61,7 +61,7 @@ Outliers and long tails pull the mean toward the tail, while the median stays pu
             question: 'Data: 2, 3, 5, 7, 100. The mean is:',
             options: ['5', '7', '23.4', '100'],
             correctAnswer: 2,
-            explanation: '$\\\\bar{x} = (2+3+5+7+100)/5 = 117/5 = 23.4$. The outlier (100) pulls the mean way up.'
+            explanation: '$\\bar{x} = (2+3+5+7+100)/5 = 117/5 = 23.4$. The outlier (100) pulls the mean way up.'
           }
         ]
       }
@@ -73,7 +73,7 @@ Outliers and long tails pull the mean toward the tail, while the median stays pu
 
 Data: 10, 12, 14, 15, 19
 
-**1)** Mean $\\\\bar{x} = ?$
+**1)** Mean $\\bar{x} = ?$
 
 **2)** Median = ?
 

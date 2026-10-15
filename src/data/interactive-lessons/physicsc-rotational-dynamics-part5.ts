@@ -45,13 +45,13 @@ $v = \\sqrt{\\frac{10gh}{7}} = \\sqrt{\\frac{10(10)(5)}{7}} \\approx 8.45$ m/s â
           {
                     "question": "For rolling without slipping, $v_{cm}$ equals:",
                     "options": [
-                              "$R\\\\omega$",
-                              "$R\\\\alpha$",
-                              "$R/\\\\omega$",
-                              "$\\\\omega/R$"
+                              "$R\\omega$",
+                              "$R\\alpha$",
+                              "$R/\\omega$",
+                              "$\\omega/R$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "The no-slip condition connects translational and rotational: $v = R\\\\omega$."
+                    "explanation": "The no-slip condition connects translational and rotational: $v = R\\omega$."
           }
 ]
       }

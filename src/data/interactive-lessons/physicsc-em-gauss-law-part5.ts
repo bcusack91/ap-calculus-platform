@@ -48,7 +48,7 @@ $E = \\sigma/(2\epsilon_0) = 4 \\times 10^{-9}/(2 \\times 8.85 \\times 10^{-12})
                               "Zero"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$E = \\\\sigma/(2\\\\epsilon_0)$ — independent of distance from the sheet."
+                    "explanation": "$E = \\sigma/(2\\\\epsilon_0)$ — independent of distance from the sheet."
           }
 ]
       }
@@ -112,11 +112,11 @@ $E = \\sigma/(2\epsilon_0) = 4 \\times 10^{-9}/(2 \\times 8.85 \\times 10^{-12})
       exercise: {
         questions: [
           {
-                    "question": "Between two parallel plates with equal and opposite charge densities $\\\\pm\\\\sigma$:",
+                    "question": "Between two parallel plates with equal and opposite charge densities $\\pm\\sigma$:",
                     "options": [
-                              "$E = \\\\sigma/\\\\epsilon_0$ between, $0$ outside",
+                              "$E = \\sigma/\\\\epsilon_0$ between, $0$ outside",
                               "$E = 0$ everywhere",
-                              "$E = \\\\sigma/(2\\\\epsilon_0)$ everywhere",
+                              "$E = \\sigma/(2\\\\epsilon_0)$ everywhere",
                               "$E$ varies with distance"
                     ],
                     "correctAnswer": 0,

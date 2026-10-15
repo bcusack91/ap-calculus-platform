@@ -29,7 +29,7 @@ Mixed: $3x + 1 > 7$ → $x > 2$. $|x - 4| \\leq 3$ → $1 \\leq x \\leq 7$. Inte
         questions: [
           {
             question: "Which inequality flips when solving?",
-            options: ["$x + 3 > 7$","$2x < 10$","$-x \\\\geq 4$","$x - 1 \\\\leq 5$"],
+            options: ["$x + 3 > 7$","$2x < 10$","$-x \\geq 4$","$x - 1 \\leq 5$"],
             correctAnswer: 2,
             explanation: "Multiplying/dividing by negative flips the sign."
           }
@@ -52,9 +52,9 @@ Mixed: $3x + 1 > 7$ → $x > 2$. $|x - 4| \\leq 3$ → $1 \\leq x \\leq 7$. Inte
         boxes: 3,
         correctAnswers: ["3","7","4"],
         hint1: "$4x > 12$.",
-        hint2: "$x - 2 \\\\leq 5$.",
+        hint2: "$x - 2 \\leq 5$.",
         hint3: "$2x < 8$.",
-        explanation: "1) $x > 3$. 2) $x \\\\leq 7$. 3) $x < 4$."
+        explanation: "1) $x > 3$. 2) $x \\leq 7$. 3) $x < 4$."
       }
     },
     {

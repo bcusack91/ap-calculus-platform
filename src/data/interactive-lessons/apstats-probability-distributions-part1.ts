@@ -17,8 +17,8 @@ The most important continuous probability distribution in statistics.
 **Key Properties:**
 - Bell-shaped and symmetric
 - Mean = median = mode (at center)
-- Described completely by $\\\\mu$ (mean) and $\\\\sigma$ (standard deviation)
-- Notation: $X \\\\sim N(\\\\mu, \\\\sigma)$
+- Described completely by $\\mu$ (mean) and $\\sigma$ (standard deviation)
+- Notation: $X \\\\sim N(\\mu, \\sigma)$
 
 ---
 
@@ -26,9 +26,9 @@ The most important continuous probability distribution in statistics.
 
 | Range | Percent of Data |
 |-------|----------------|
-| $\\\\mu \\\\pm 1\\\\sigma$ | ≈68% |
-| $\\\\mu \\\\pm 2\\\\sigma$ | ≈95% |
-| $\\\\mu \\\\pm 3\\\\sigma$ | ≈99.7% |
+| $\\mu \\pm 1\\sigma$ | ≈68% |
+| $\\mu \\pm 2\\sigma$ | ≈95% |
+| $\\mu \\pm 3\\sigma$ | ≈99.7% |
 
 ### Example
 
@@ -48,19 +48,19 @@ Heights of adult women: $N(64, 2.5)$ inches
             question: 'The Normal distribution is characterized by:',
             options: ['Mean and range', 'Mean and standard deviation', 'Median and IQR', 'Mode and variance'],
             correctAnswer: 1,
-            explanation: 'A Normal distribution is completely described by its mean $\\\\mu$ and standard deviation $\\\\sigma$.'
+            explanation: 'A Normal distribution is completely described by its mean $\\mu$ and standard deviation $\\sigma$.'
           },
           {
             question: 'Using the 68-95-99.7 rule, about what percent of data falls within 2 standard deviations of the mean?',
             options: ['68%', '95%', '99.7%', '50%'],
             correctAnswer: 1,
-            explanation: 'Approximately 95% of data falls within $\\\\mu \\\\pm 2\\\\sigma$.'
+            explanation: 'Approximately 95% of data falls within $\\mu \\pm 2\\sigma$.'
           },
           {
             question: 'If $X \\\\sim N(100, 15)$, about 68% of values fall between:',
             options: ['70 and 130', '85 and 115', '55 and 145', '100 and 115'],
             correctAnswer: 1,
-            explanation: '$100 \\\\pm 15 = [85, 115]$. The 68% range is one standard deviation from the mean.'
+            explanation: '$100 \\pm 15 = [85, 115]$. The 68% range is one standard deviation from the mean.'
           }
         ]
       }

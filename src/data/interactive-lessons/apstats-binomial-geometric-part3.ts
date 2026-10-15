@@ -21,16 +21,16 @@ export const apStatsBinomGeomPart3Data = {
 
 $$P(X = k) = (1-p)^{k-1} p$$
 
-where $k = 1, 2, 3, \\\\ldots$ (first success on trial $k$)
+where $k = 1, 2, 3, \\ldots$ (first success on trial $k$)
 
 ---
 
 ### Mean and Standard Deviation
 
-$$\\\\mu = \\\\frac{1}{p} \\\\qquad \\\\sigma = \\\\frac{\\\\sqrt{1-p}}{p}$$
+$$\\mu = \\frac{1}{p} \\\\qquad \\sigma = \\frac{\\sqrt{1-p}}{p}$$
 
 **Example:** Rolling a die until getting a 6 ($p = 1/6$):
-- Expected number of rolls: $\\\\mu = 6$
+- Expected number of rolls: $\\mu = 6$
 - This means on average you’ll need 6 rolls`
     },    {
       id: 'binomialgeometric-p3-mcq',
@@ -54,7 +54,7 @@ $$\\\\mu = \\\\frac{1}{p} \\\\qquad \\\\sigma = \\\\frac{\\\\sqrt{1-p}}{p}$$
           },
           {
             question: '$P(X = 3)$ for $G(0.2)$:',
-            options: ['$(0.8)^2(0.2)$', '$(0.8)^3(0.2)$', '$(0.2)^3$', '$\\\\binom{3}{1}(0.2)(0.8)^2$'],
+            options: ['$(0.8)^2(0.2)$', '$(0.8)^3(0.2)$', '$(0.2)^3$', '$\\binom{3}{1}(0.2)(0.8)^2$'],
             correctAnswer: 0,
             explanation: '$P(X = 3) = (1-p)^{3-1} p = (0.8)^2(0.2) = 0.128$.'
           }
@@ -70,9 +70,9 @@ A quality inspector finds defective items with probability $p = 0.1$.
 
 **1)** Expected inspections until first defect?
 
-**2)** $P(\\\\text{first defect on 3rd item})$? (as a decimal)
+**2)** $P(\\text{first defect on 3rd item})$? (as a decimal)
 
-**3)** $P(X \\\\leq 3)$? (probability within first 3, as a decimal)
+**3)** $P(X \\leq 3)$? (probability within first 3, as a decimal)
       `,
       exercise: {
         boxes: 3,

@@ -86,8 +86,8 @@ The line charge field is stronger at this distance because it falls off as $1/r$
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Gauss's law in differential form is","options":["$\\\\nabla \\\\cdot \\\\vec{E} = \\\\rho/\\\\epsilon_0$","$\\\\nabla \\\\times \\\\vec{E} = 0$","$\\\\nabla \\\\cdot \\\\vec{B} = 0$","$F = qE$"]},{"label":"The total flux through a closed surface surrounding no charge is","options":["Zero","$\\\\epsilon_0$","$Q_{enc}$","Infinite"]}],
-        correctAnswers: ["$\\\\nabla \\\\cdot \\\\vec{E} = \\\\rho/\\\\epsilon_0$","Zero"],
+        dropdowns: [{"label":"Gauss's law in differential form is","options":["$\\\\nabla \\cdot \\\\vec{E} = \\rho/\\\\epsilon_0$","$\\\\nabla \\times \\\\vec{E} = 0$","$\\\\nabla \\cdot \\\\vec{B} = 0$","$F = qE$"]},{"label":"The total flux through a closed surface surrounding no charge is","options":["Zero","$\\\\epsilon_0$","$Q_{enc}$","Infinite"]}],
+        correctAnswers: ["$\\\\nabla \\cdot \\\\vec{E} = \\rho/\\\\epsilon_0$","Zero"],
         hint1: "This is the first of Maxwell's equations.",
         hint2: "$Q_{enc} = 0 \\implies \\Phi = 0$.",
         explanation: "Gauss's law in differential form: $\\nabla \\cdot \\vec{E} = \\rho/\\epsilon_0$. No enclosed charge means zero net flux."
@@ -124,7 +124,7 @@ The line charge field is stronger at this distance because it falls off as $1/r$
                               "Ohm's law"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Gauss's law is the integral form of $\\\\nabla \\\\cdot \\\\vec{E} = \\\\rho/\\\\epsilon_0$, which generalizes Coulomb's law."
+                    "explanation": "Gauss's law is the integral form of $\\\\nabla \\cdot \\\\vec{E} = \\rho/\\\\epsilon_0$, which generalizes Coulomb's law."
           }
 ]
       }

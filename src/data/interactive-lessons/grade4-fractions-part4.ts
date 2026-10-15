@@ -40,15 +40,15 @@ $\\frac{11}{4} = 2\\frac{3}{4}$ (11 ÷ 4 = 2 R 3)
       exercise: {
         questions: [
           {
-                    "question": "What is $1\\\\frac{3}{5}$ as an improper fraction?",
+                    "question": "What is $1\\frac{3}{5}$ as an improper fraction?",
                     "options": [
-                              "$\\\\frac{8}{5}$",
-                              "$\\\\frac{13}{5}$",
-                              "$\\\\frac{5}{3}$",
-                              "$\\\\frac{3}{5}$"
+                              "$\\frac{8}{5}$",
+                              "$\\frac{13}{5}$",
+                              "$\\frac{5}{3}$",
+                              "$\\frac{3}{5}$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$1 \\\\times 5 + 3 = 8$, so $\\\\frac{8}{5}$."
+                    "explanation": "$1 \\times 5 + 3 = 8$, so $\\frac{8}{5}$."
           }
 ]
       }
@@ -82,8 +82,8 @@ $\\frac{11}{4} = 2\\frac{3}{4}$ (11 ÷ 4 = 2 R 3)
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"$4\\\\frac{1}{3}$ as an improper fraction is","options":["$\\\\frac{13}{3}$","$\\\\frac{12}{3}$","$\\\\frac{4}{3}$","$\\\\frac{41}{3}$"]},{"label":"$\\\\frac{11}{5}$ as a mixed number is","options":["$2\\\\frac{1}{5}$","$1\\\\frac{6}{5}$","$2\\\\frac{2}{5}$","$3\\\\frac{1}{5}$"]}],
-        correctAnswers: ["$\\\\frac{13}{3}$","$2\\\\frac{1}{5}$"],
+        dropdowns: [{"label":"$4\\frac{1}{3}$ as an improper fraction is","options":["$\\frac{13}{3}$","$\\frac{12}{3}$","$\\frac{4}{3}$","$\\frac{41}{3}$"]},{"label":"$\\frac{11}{5}$ as a mixed number is","options":["$2\\frac{1}{5}$","$1\\frac{6}{5}$","$2\\frac{2}{5}$","$3\\frac{1}{5}$"]}],
+        correctAnswers: ["$\\frac{13}{3}$","$2\\frac{1}{5}$"],
         hint1: "4 × 3 + 1 = ?",
         hint2: "11 ÷ 5 = ? remainder ?",
         explanation: "4(3)+1=13. 11÷5=2 R 1."
@@ -112,12 +112,12 @@ $\\frac{11}{4} = 2\\frac{3}{4}$ (11 ÷ 4 = 2 R 3)
       exercise: {
         questions: [
           {
-                    "question": "Which mixed number equals $\\\\frac{17}{3}$?",
+                    "question": "Which mixed number equals $\\frac{17}{3}$?",
                     "options": [
-                              "$5\\\\frac{2}{3}$",
-                              "$4\\\\frac{2}{3}$",
-                              "$5\\\\frac{1}{3}$",
-                              "$6\\\\frac{2}{3}$"
+                              "$5\\frac{2}{3}$",
+                              "$4\\frac{2}{3}$",
+                              "$5\\frac{1}{3}$",
+                              "$6\\frac{2}{3}$"
                     ],
                     "correctAnswer": 0,
                     "explanation": "$17 ÷ 3 = 5$ R $2$."

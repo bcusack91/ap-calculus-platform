@@ -42,15 +42,15 @@ Since $9 < 10$: $\\frac{3}{5} < \\frac{2}{3}$ ✅
       exercise: {
         questions: [
           {
-                    "question": "Which is greater: $\\\\frac{5}{8}$ or $\\\\frac{3}{4}$?",
+                    "question": "Which is greater: $\\frac{5}{8}$ or $\\frac{3}{4}$?",
                     "options": [
-                              "$\\\\frac{3}{4}$",
-                              "$\\\\frac{5}{8}$",
+                              "$\\frac{3}{4}$",
+                              "$\\frac{5}{8}$",
                               "They are equal",
                               "Cannot determine"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$\\\\frac{3}{4} = \\\\frac{6}{8}$, and $\\\\frac{6}{8} > \\\\frac{5}{8}$."
+                    "explanation": "$\\frac{3}{4} = \\frac{6}{8}$, and $\\frac{6}{8} > \\frac{5}{8}$."
           }
 ]
       }
@@ -86,8 +86,8 @@ Write >, <, or = :
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"The larger of $\\\\frac{7}{10}$ and $\\\\frac{3}{5}$ is","options":["$\\\\frac{7}{10}$","$\\\\frac{3}{5}$","They are equal","Cannot tell"]},{"label":"To compare fractions with unlike denominators, first find the","options":["Least Common Denominator","Greatest Common Factor","Sum of numerators","Product"]}],
-        correctAnswers: ["$\\\\frac{7}{10}$","Least Common Denominator"],
+        dropdowns: [{"label":"The larger of $\\frac{7}{10}$ and $\\frac{3}{5}$ is","options":["$\\frac{7}{10}$","$\\frac{3}{5}$","They are equal","Cannot tell"]},{"label":"To compare fractions with unlike denominators, first find the","options":["Least Common Denominator","Greatest Common Factor","Sum of numerators","Product"]}],
+        correctAnswers: ["$\\frac{7}{10}$","Least Common Denominator"],
         hint1: "Convert 3/5 to tenths.",
         hint2: "What must the denominators share?",
         explanation: "3/5 = 6/10, and 7/10 > 6/10. Use the LCD to compare."
@@ -116,15 +116,15 @@ Write >, <, or = :
       exercise: {
         questions: [
           {
-                    "question": "Using cross-multiplication, $\\\\frac{a}{b} > \\\\frac{c}{d}$ when:",
+                    "question": "Using cross-multiplication, $\\frac{a}{b} > \\frac{c}{d}$ when:",
                     "options": [
-                              "$a \\\\times d > b \\\\times c$",
-                              "$a \\\\times b > c \\\\times d$",
+                              "$a \\times d > b \\times c$",
+                              "$a \\times b > c \\times d$",
                               "$a + d > b + c$",
                               "$a > c$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Cross-multiply: if $ad > bc$, then $\\\\frac{a}{b} > \\\\frac{c}{d}$."
+                    "explanation": "Cross-multiply: if $ad > bc$, then $\\frac{a}{b} > \\frac{c}{d}$."
           }
 ]
       }

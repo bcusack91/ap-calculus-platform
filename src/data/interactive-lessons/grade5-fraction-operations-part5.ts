@@ -39,10 +39,10 @@ $3 \\times \\frac{3}{4} = \\frac{9}{4} = 2\\frac{1}{4}$ cups ✅
           {
                     "question": "\"1/4 of 20\" means:",
                     "options": [
-                              "$\\\\frac{1}{4} \\\\times 20 = 5$",
-                              "$\\\\frac{1}{4} + 20$",
-                              "$20 - \\\\frac{1}{4}$",
-                              "$20 \\\\div \\\\frac{1}{4}$"
+                              "$\\frac{1}{4} \\times 20 = 5$",
+                              "$\\frac{1}{4} + 20$",
+                              "$20 - \\frac{1}{4}$",
+                              "$20 \\div \\frac{1}{4}$"
                     ],
                     "correctAnswer": 0,
                     "explanation": "\"Of\" means multiply: 1/4 × 20 = 5."
@@ -109,12 +109,12 @@ $3 \\times \\frac{3}{4} = \\frac{9}{4} = 2\\frac{1}{4}$ cups ✅
       exercise: {
         questions: [
           {
-                    "question": "Share $\\\\frac{3}{4}$ lb among 3 people. Each gets:",
+                    "question": "Share $\\frac{3}{4}$ lb among 3 people. Each gets:",
                     "options": [
-                              "$\\\\frac{1}{4}$ lb",
-                              "$\\\\frac{3}{12}$ lb",
-                              "$\\\\frac{9}{4}$ lb",
-                              "$2\\\\frac{1}{4}$ lb"
+                              "$\\frac{1}{4}$ lb",
+                              "$\\frac{3}{12}$ lb",
+                              "$\\frac{9}{4}$ lb",
+                              "$2\\frac{1}{4}$ lb"
                     ],
                     "correctAnswer": 0,
                     "explanation": "3/4 ÷ 3 = 3/4 × 1/3 = 3/12 = 1/4 lb."

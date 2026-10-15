@@ -36,7 +36,7 @@ Cross-multiply: $3 \\times 20 = 5 \\times x$ → $60 = 5x$ → $x = 12$ ✅
       exercise: {
         questions: [
           {
-                    "question": "Solve $\\\\frac{2}{3} = \\\\frac{x}{12}$:",
+                    "question": "Solve $\\frac{2}{3} = \\frac{x}{12}$:",
                     "options": [
                               "$x = 8$",
                               "$x = 6$",
@@ -78,7 +78,7 @@ Cross-multiply: $3 \\times 20 = 5 \\times x$ → $60 = 5x$ → $x = 12$ ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"To solve a proportion, you can","options":["Cross-multiply","Add the fractions","Subtract the fractions","Multiply numerators only"]},{"label":"$\\\\frac{5}{8} = \\\\frac{15}{x}$. $x =$","options":["24","3","40","8"]}],
+        dropdowns: [{"label":"To solve a proportion, you can","options":["Cross-multiply","Add the fractions","Subtract the fractions","Multiply numerators only"]},{"label":"$\\frac{5}{8} = \\frac{15}{x}$. $x =$","options":["24","3","40","8"]}],
         correctAnswers: ["Cross-multiply","24"],
         hint1: "Standard method for proportions.",
         hint2: "5x = 8(15) = 120. x = ?",
@@ -108,7 +108,7 @@ Cross-multiply: $3 \\times 20 = 5 \\times x$ → $60 = 5x$ → $x = 12$ ✅
       exercise: {
         questions: [
           {
-                    "question": "Cross-multiplication: $\\\\frac{a}{b} = \\\\frac{c}{d}$ gives:",
+                    "question": "Cross-multiplication: $\\frac{a}{b} = \\frac{c}{d}$ gives:",
                     "options": [
                               "$ad = bc$",
                               "$ab = cd$",
@@ -116,7 +116,7 @@ Cross-multiply: $3 \\times 20 = 5 \\times x$ → $60 = 5x$ → $x = 12$ ✅
                               "$ac = bd$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$\\\\frac{a}{b} = \\\\frac{c}{d}$ → $ad = bc$."
+                    "explanation": "$\\frac{a}{b} = \\frac{c}{d}$ → $ad = bc$."
           }
 ]
       }

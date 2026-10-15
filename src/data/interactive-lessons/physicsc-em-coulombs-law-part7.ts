@@ -115,13 +115,13 @@ $a = F/m = 1.6 \\times 10^{-17} / 9.1 \\times 10^{-31} \\approx 1.76 \\times 10^
           {
                     "question": "Coulomb's constant $k$ equals:",
                     "options": [
-                              "$1/(4\\\\pi\\\\epsilon_0)$",
-                              "$4\\\\pi\\\\epsilon_0$",
+                              "$1/(4\\pi\\\\epsilon_0)$",
+                              "$4\\pi\\\\epsilon_0$",
                               "$\\\\epsilon_0$",
                               "$1/\\\\epsilon_0$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$k = 1/(4\\\\pi\\\\epsilon_0) \\\\approx 9 \\\\times 10^9$ $N\\cdot m^{2}/C^{2}$."
+                    "explanation": "$k = 1/(4\\pi\\\\epsilon_0) \\approx 9 \\times 10^9$ $N\\cdot m^{2}/C^{2}$."
           }
 ]
       }

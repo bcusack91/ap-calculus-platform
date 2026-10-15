@@ -118,7 +118,7 @@ $E = kq/r^2 = (9 \\times 10^9)(4 \\times 10^{-6}) / (0.25) = 144{,}000$ N/C ✅
                               "Increases by 9"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$E \\\\propto 1/r^2$. If $r \\\\to 3r$, $E \\\\to E/9$."
+                    "explanation": "$E \\\\propto 1/r^2$. If $r \\to 3r$, $E \\to E/9$."
           }
 ]
       }

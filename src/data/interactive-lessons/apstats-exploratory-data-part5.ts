@@ -36,7 +36,7 @@ Outliers do NOT significantly affect:
 ### Boxplots
 
 The five-number summary is displayed visually:
-$$\\\\text{Min}, Q_1, \\\\text{Median}, Q_3, \\\\text{Max}$$
+$$\\text{Min}, Q_1, \\text{Median}, Q_3, \\text{Max}$$
 
 Modified boxplots show outliers as individual dots beyond the fences.`
     },    {

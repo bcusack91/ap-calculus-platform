@@ -50,10 +50,10 @@ export const apStatsEDAPart7Data = {
             explanation: 'Five-number summary: Min, $Q_1$, Median, $Q_3$, Max.'
           },
           {
-            question: 'Data: 1, 2, 3, 4, 5. $s \\\\approx$:',
+            question: 'Data: 1, 2, 3, 4, 5. $s \\approx$:',
             options: ['0', '1', '1.58', '2.5'],
             correctAnswer: 2,
-            explanation: '$\\\\bar{x} = 3$. $s = \\\\sqrt{\\\\frac{(1-3)^2+(2-3)^2+(3-3)^2+(4-3)^2+(5-3)^2}{4}} = \\\\sqrt{10/4} = \\\\sqrt{2.5} \\\\approx 1.58$.'
+            explanation: '$\\bar{x} = 3$. $s = \\sqrt{\\frac{(1-3)^2+(2-3)^2+(3-3)^2+(4-3)^2+(5-3)^2}{4}} = \\sqrt{10/4} = \\sqrt{2.5} \\approx 1.58$.'
           }
         ]
       }
@@ -65,7 +65,7 @@ export const apStatsEDAPart7Data = {
 
 Data: 3, 5, 7, 8, 9, 10, 12, 14, 50
 
-**1)** $\\\\bar{x} = ?$ (round to 1 place)
+**1)** $\\bar{x} = ?$ (round to 1 place)
 
 **2)** Median = ?
 
@@ -77,7 +77,7 @@ Data: 3, 5, 7, 8, 9, 10, 12, 14, 50
         hint1: 'Sum = 118, $n = 9$',
         hint2: 'Middle of 9 ordered values',
         hint3: '$IQR = 7$, fence = $13 + 10.5 = 23.5$, and $50 > 23.5$',
-        explanation: '1) $118/9 \\\\approx 13.1$. 2) Median = 9 (5th value). 3) Yes — $IQR = 7$, upper fence = $23.5$, and $50 > 23.5$.'
+        explanation: '1) $118/9 \\approx 13.1$. 2) Median = 9 (5th value). 3) Yes — $IQR = 7$, upper fence = $23.5$, and $50 > 23.5$.'
       }
     }
   ]

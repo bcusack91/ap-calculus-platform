@@ -114,12 +114,12 @@ $\\frac{6}{15} + \\frac{5}{15} = \\frac{11}{15}$ ✅
       exercise: {
         questions: [
           {
-                    "question": "$\\\\frac{1}{2} + \\\\frac{1}{3} = ?$",
+                    "question": "$\\frac{1}{2} + \\frac{1}{3} = ?$",
                     "options": [
-                              "$\\\\frac{5}{6}$",
-                              "$\\\\frac{2}{5}$",
-                              "$\\\\frac{1}{6}$",
-                              "$\\\\frac{2}{6}$"
+                              "$\\frac{5}{6}$",
+                              "$\\frac{2}{5}$",
+                              "$\\frac{1}{6}$",
+                              "$\\frac{2}{6}$"
                     ],
                     "correctAnswer": 0,
                     "explanation": "LCD=6: 3/6 + 2/6 = 5/6."

@@ -41,7 +41,7 @@ Decimal places: 1 + 1 = 2 → $0.75$ ✅
       exercise: {
         questions: [
           {
-                    "question": "How many decimal places in $0.25 \\\\times 0.4$?",
+                    "question": "How many decimal places in $0.25 \\times 0.4$?",
                     "options": [
                               "3",
                               "2",
@@ -83,7 +83,7 @@ Decimal places: 1 + 1 = 2 → $0.75$ ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"After multiplying, count decimal places in","options":["Both factors combined","Only the larger factor","Only the product","Neither factor"]},{"label":"$0.5 \\\\times 0.5 =$","options":["0.25","2.5","0.025","25"]}],
+        dropdowns: [{"label":"After multiplying, count decimal places in","options":["Both factors combined","Only the larger factor","Only the product","Neither factor"]},{"label":"$0.5 \\times 0.5 =$","options":["0.25","2.5","0.025","25"]}],
         correctAnswers: ["Both factors combined","0.25"],
         hint1: "Total places from BOTH numbers.",
         hint2: "5×5=25, 2 decimal places.",
@@ -113,7 +113,7 @@ Decimal places: 1 + 1 = 2 → $0.75$ ✅
       exercise: {
         questions: [
           {
-                    "question": "$0.1 \\\\times 0.1 = ?$",
+                    "question": "$0.1 \\times 0.1 = ?$",
                     "options": [
                               "0.01",
                               "0.1",

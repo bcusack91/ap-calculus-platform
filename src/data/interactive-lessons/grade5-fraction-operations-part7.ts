@@ -38,12 +38,12 @@ LCD = 12: $\\frac{10}{12} - \\frac{3}{12} = \\frac{7}{12}$ ✅
       exercise: {
         questions: [
           {
-                    "question": "$\\\\frac{3}{8} + \\\\frac{1}{4} = ?$",
+                    "question": "$\\frac{3}{8} + \\frac{1}{4} = ?$",
                     "options": [
-                              "$\\\\frac{5}{8}$",
-                              "$\\\\frac{4}{12}$",
-                              "$\\\\frac{4}{8}$",
-                              "$\\\\frac{1}{2}$"
+                              "$\\frac{5}{8}$",
+                              "$\\frac{4}{12}$",
+                              "$\\frac{4}{8}$",
+                              "$\\frac{1}{2}$"
                     ],
                     "correctAnswer": 0,
                     "explanation": "1/4 = 2/8. 3/8 + 2/8 = 5/8."
@@ -80,8 +80,8 @@ LCD = 12: $\\frac{10}{12} - \\frac{3}{12} = \\frac{7}{12}$ ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"When multiplying fractions, you do NOT need","options":["A common denominator","Numerators","Denominators","To simplify"]},{"label":"The reciprocal of 5 is","options":["$\\\\frac{1}{5}$","5","$-5$","$\\\\frac{5}{1}$"]}],
-        correctAnswers: ["A common denominator","$\\\\frac{1}{5}$"],
+        dropdowns: [{"label":"When multiplying fractions, you do NOT need","options":["A common denominator","Numerators","Denominators","To simplify"]},{"label":"The reciprocal of 5 is","options":["$\\frac{1}{5}$","5","$-5$","$\\frac{5}{1}$"]}],
+        correctAnswers: ["A common denominator","$\\frac{1}{5}$"],
         hint1: "Multiplication works differently from addition.",
         hint2: "5 = 5/1. Flip it.",
         explanation: "No common denominator needed for multiplication. Reciprocal of 5 = 1/5."
@@ -110,12 +110,12 @@ LCD = 12: $\\frac{10}{12} - \\frac{3}{12} = \\frac{7}{12}$ ✅
       exercise: {
         questions: [
           {
-                    "question": "$\\\\frac{2}{3} \\\\div \\\\frac{4}{9} = ?$",
+                    "question": "$\\frac{2}{3} \\div \\frac{4}{9} = ?$",
                     "options": [
-                              "$\\\\frac{3}{2}$",
-                              "$\\\\frac{8}{27}$",
-                              "$\\\\frac{6}{12}$",
-                              "$\\\\frac{2}{4}$"
+                              "$\\frac{3}{2}$",
+                              "$\\frac{8}{27}$",
+                              "$\\frac{6}{12}$",
+                              "$\\frac{2}{4}$"
                     ],
                     "correctAnswer": 0,
                     "explanation": "2/3 × 9/4 = 18/12 = 3/2."

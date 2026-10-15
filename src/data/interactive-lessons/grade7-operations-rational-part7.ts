@@ -109,7 +109,7 @@ $(-3)(4) + 8 \\div (-2) = -12 + (-4) = -16$ ✅
       exercise: {
         questions: [
           {
-                    "question": "$12 \\\\div (-4) - 1 = ?$",
+                    "question": "$12 \\div (-4) - 1 = ?$",
                     "options": [
                               "−4",
                               "−2",

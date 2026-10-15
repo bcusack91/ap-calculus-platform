@@ -35,10 +35,10 @@ $-2x + 5 > 11 \\implies x < -3$. $|x + 1| > 4 \\implies x < -5$ or $x > 3$.
       exercise: {
         questions: [
           {
-            question: "$|2x-6| \\\\leq 4$ gives:",
-            options: ["$1 \\\\leq x \\\\leq 5$","$x \\\\leq 1$ or $x \\\\geq 5$","$2 \\\\leq x \\\\leq 4$","$-5 \\\\leq x \\\\leq 5$"],
+            question: "$|2x-6| \\leq 4$ gives:",
+            options: ["$1 \\leq x \\leq 5$","$x \\leq 1$ or $x \\geq 5$","$2 \\leq x \\leq 4$","$-5 \\leq x \\leq 5$"],
             correctAnswer: 0,
-            explanation: "$-4 \\\\leq 2x - 6 \\\\leq 4 \\\\implies 2 \\\\leq 2x \\\\leq 10 \\\\implies 1 \\\\leq x \\\\leq 5$."
+            explanation: "$-4 \\leq 2x - 6 \\leq 4 \\\\implies 2 \\leq 2x \\leq 10 \\\\implies 1 \\leq x \\leq 5$."
           }
         ]
       }
@@ -59,9 +59,9 @@ $-2x + 5 > 11 \\implies x < -3$. $|x + 1| > 4 \\implies x < -5$ or $x > 3$.
         boxes: 3,
         correctAnswers: ["2","-6","1"],
         hint1: "$-5x > -10$.",
-        hint2: "$x = \\\\pm 6$.",
-        hint3: "$3 \\\\leq 3x \\\\leq 9$.",
-        explanation: "1) $x < 2$. 2) $x \\\\leq -6$ or $x \\\\geq 6$. 3) $1 \\\\leq x \\\\leq 3$."
+        hint2: "$x = \\pm 6$.",
+        hint3: "$3 \\leq 3x \\leq 9$.",
+        explanation: "1) $x < 2$. 2) $x \\leq -6$ or $x \\geq 6$. 3) $1 \\leq x \\leq 3$."
       }
     },
     {

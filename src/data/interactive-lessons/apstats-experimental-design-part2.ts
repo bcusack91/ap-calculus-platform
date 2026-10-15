@@ -38,7 +38,7 @@ To assign 30 students to two groups:
 
 All experimental units are randomly assigned to treatments with no grouping.
 
-$$\\\\text{Random Assignment} \\\\to \\\\begin{cases} \\\\text{Treatment 1} \\\\\\\\ \\\\text{Treatment 2} \\\\end{cases} \\\\to \\\\text{Compare Results}$$`
+$$\\text{Random Assignment} \\to \\\\begin{cases} \\text{Treatment 1} \\\\\\\\ \\text{Treatment 2} \\\\end{cases} \\to \\text{Compare Results}$$`
     },    {
       id: 'experimentaldesign-p2-mcq',
       type: 'multiple-choice' as const,

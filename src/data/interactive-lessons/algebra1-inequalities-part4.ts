@@ -31,7 +31,7 @@ $-1 < 2x + 3 \\leq 9 \\implies -4 < 2x \\leq 6 \\implies -2 < x \\leq 3$
       exercise: {
         questions: [
           {
-            question: "$-3 < x \\\\leq 5$ in interval notation:",
+            question: "$-3 < x \\leq 5$ in interval notation:",
             options: ["$[-3, 5]$","$(-3, 5]$","$(-3, 5)$","$[-3, 5)$"],
             correctAnswer: 1,
             explanation: "Open at $-3$ (strict), closed at $5$ (inclusive)."
@@ -57,7 +57,7 @@ $-1 < 2x + 3 \\leq 9 \\implies -4 < 2x \\leq 6 \\implies -2 < x \\leq 3$
         hint1: "Subtract 2.",
         hint2: "Divide by 2.",
         hint3: "$0$ is between $-3$ and $3$.",
-        explanation: "1) $-1 < x < 4$. 2) $-2 \\\\leq x \\\\leq 5$. 3) No."
+        explanation: "1) $-1 < x < 4$. 2) $-2 \\leq x \\leq 5$. 3) No."
       }
     },
     {

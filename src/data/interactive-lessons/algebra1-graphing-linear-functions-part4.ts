@@ -102,7 +102,7 @@ $x$-int: $(4, 0)$, $y$-int: $(0, 3)$
           }
         ],
         correctAnswers: ["Non-negative","$x$","Both intercepts"],
-        hint1: "Convention requires $A \\\\geq 0$.",
+        hint1: "Convention requires $A \\geq 0$.",
         hint2: "Eliminate $x$ to isolate $y$.",
         hint3: "Setting each variable to 0 gives an intercept.",
         explanation: "$A$ is non-negative by convention. Set $x = 0$ for $y$-intercept and $y = 0$ for $x$-intercept."
@@ -133,10 +133,10 @@ $x$-int: $(4, 0)$, $y$-int: $(0, 3)$
             question: "Which is in standard form?",
             options: ["$y = 2x + 3$","$2x - y = -3$","$x = 3y + 1$","$2x + y = 3$"],
             correctAnswer: 3,
-            explanation: "$2x + y = 3$ has $A = 2 \\\\geq 0$ and integer coefficients."
+            explanation: "$2x + y = 3$ has $A = 2 \\geq 0$ and integer coefficients."
           },
           {
-            question: "Convert $\\\\frac{x}{2} + \\\\frac{y}{3} = 1$ to standard form.",
+            question: "Convert $\\frac{x}{2} + \\frac{y}{3} = 1$ to standard form.",
             options: ["$3x + 2y = 6$","$x + y = 5$","$2x + 3y = 6$","$6x + 6y = 1$"],
             correctAnswer: 0,
             explanation: "Multiply by 6: $3x + 2y = 6$."

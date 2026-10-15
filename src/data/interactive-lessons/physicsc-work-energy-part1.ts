@@ -49,7 +49,7 @@ $W = \int_0^2 3x^2\,dx = x^3\\Big|_0^2 = 8$ J ✅
                               "$Fd$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$W = Fd\\\\cos 90° = 0$. A perpendicular force does no work."
+                    "explanation": "$W = Fd\\cos 90° = 0$. A perpendicular force does no work."
           }
 ]
       }
@@ -83,8 +83,8 @@ $W = \int_0^2 3x^2\,dx = x^3\\Big|_0^2 = 8$ J ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Work done by a spring force $F = -kx$ stretching from 0 to $x_0$ is","options":["$-\\\\frac{1}{2}kx_0^2$","$\\\\frac{1}{2}kx_0^2$","$kx_0$","$kx_0^2$"]},{"label":"When force and displacement are in opposite directions, work is","options":["Negative","Positive","Zero","Undefined"]}],
-        correctAnswers: ["$-\\\\frac{1}{2}kx_0^2$","Negative"],
+        dropdowns: [{"label":"Work done by a spring force $F = -kx$ stretching from 0 to $x_0$ is","options":["$-\\frac{1}{2}kx_0^2$","$\\frac{1}{2}kx_0^2$","$kx_0$","$kx_0^2$"]},{"label":"When force and displacement are in opposite directions, work is","options":["Negative","Positive","Zero","Undefined"]}],
+        correctAnswers: ["$-\\frac{1}{2}kx_0^2$","Negative"],
         hint1: "$W = \\int_0^{x_0} (-kx)\\,dx$.",
         hint2: "$\\cos 180° = -1$.",
         explanation: "Spring work: $\\int_0^{x_0} (-kx)dx = -kx_0^2/2$. Opposite directions give $\\cos 180° = -1$, so work is negative."

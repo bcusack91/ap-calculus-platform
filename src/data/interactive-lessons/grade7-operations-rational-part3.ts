@@ -109,12 +109,12 @@ $(-2.5)(4) = -10$ (different signs → negative) ✅
       exercise: {
         questions: [
           {
-                    "question": "$(-\\\\frac{1}{2})(\\\\frac{4}{5}) = ?$",
+                    "question": "$(-\\frac{1}{2})(\\frac{4}{5}) = ?$",
                     "options": [
-                              "$-\\\\frac{2}{5}$",
-                              "$\\\\frac{2}{5}$",
-                              "$-\\\\frac{5}{2}$",
-                              "$\\\\frac{4}{10}$"
+                              "$-\\frac{2}{5}$",
+                              "$\\frac{2}{5}$",
+                              "$-\\frac{5}{2}$",
+                              "$\\frac{4}{10}$"
                     ],
                     "correctAnswer": 0,
                     "explanation": "Different signs: −(1×4)/(2×5) = −2/5."

@@ -51,7 +51,7 @@ $I = mr^2 = 3(4) = 12$ $kg\\cdot m^{2}$ ✅
                               "Angular velocity"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$I = \\\\sum mr^2$. It depends on both mass and how far it is from the axis."
+                    "explanation": "$I = \\sum mr^2$. It depends on both mass and how far it is from the axis."
           }
 ]
       }
@@ -85,7 +85,7 @@ $I = mr^2 = 3(4) = 12$ $kg\\cdot m^{2}$ ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"A hoop has moment of inertia","options":["$mr^2$","$\\\\frac{1}{2}mr^2$","$\\\\frac{2}{5}mr^2$","$\\\\frac{1}{12}mL^2$"]},{"label":"Moving mass further from the axis","options":["Increases $I$","Decreases $I$","No effect on $I$","Decreases $\\\\omega$"]}],
+        dropdowns: [{"label":"A hoop has moment of inertia","options":["$mr^2$","$\\frac{1}{2}mr^2$","$\\frac{2}{5}mr^2$","$\\frac{1}{12}mL^2$"]},{"label":"Moving mass further from the axis","options":["Increases $I$","Decreases $I$","No effect on $I$","Decreases $\\omega$"]}],
         correctAnswers: ["$mr^2$","Increases $I$"],
         hint1: "A hoop has all mass at radius $r$.",
         hint2: "$I \\propto r^2$.",
@@ -118,7 +118,7 @@ $I = mr^2 = 3(4) = 12$ $kg\\cdot m^{2}$ ✅
                     "question": "The parallel axis theorem adds the term:",
                     "options": [
                               "$md^2$",
-                              "$\\\\frac{1}{2}md^2$",
+                              "$\\frac{1}{2}md^2$",
                               "$md$",
                               "$m^2d$"
                     ],

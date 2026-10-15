@@ -49,7 +49,7 @@ $= (9 \\times 10^9)\\frac{4 \\times 10^{-12}}{0.09} = 0.4$ N (repulsive) ✅
                               "Quadruples"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$F \\\\propto 1/r^2$. If $r \\\\to 2r$, $F \\\\to F/4$."
+                    "explanation": "$F \\\\propto 1/r^2$. If $r \\to 2r$, $F \\to F/4$."
           }
 ]
       }

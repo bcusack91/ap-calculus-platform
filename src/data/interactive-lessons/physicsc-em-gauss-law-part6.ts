@@ -85,8 +85,8 @@ $E = \\rho r/(3\epsilon_0) = (2 \\times 10^{-6})(0.05)/(3 \\times 8.85 \\times 1
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"To apply Gauss's law, the flux integral simplifies when","options":["$E$ is constant on the Gaussian surface","$E$ varies with position","The surface is irregular","Multiple symmetries are combined"]},{"label":"$Q_{enc}$ for a volume charge density $\\\\rho$ is found by","options":["$\\\\int \\\\rho\\\\,dV$","$\\\\rho \\\\cdot A$","$\\\\rho / V$","$\\\\sigma \\\\cdot L$"]}],
-        correctAnswers: ["$E$ is constant on the Gaussian surface","$\\\\int \\\\rho\\\\,dV$"],
+        dropdowns: [{"label":"To apply Gauss's law, the flux integral simplifies when","options":["$E$ is constant on the Gaussian surface","$E$ varies with position","The surface is irregular","Multiple symmetries are combined"]},{"label":"$Q_{enc}$ for a volume charge density $\\rho$ is found by","options":["$\\int \\rho\\\\,dV$","$\\rho \\cdot A$","$\\rho / V$","$\\sigma \\cdot L$"]}],
+        correctAnswers: ["$E$ is constant on the Gaussian surface","$\\int \\rho\\\\,dV$"],
         hint1: "Symmetry ensures $E$ is uniform on the surface.",
         hint2: "Volume integral of charge density.",
         explanation: "When $E$ is constant on the surface, $\\oint E\\,dA = EA$. $Q_{enc} = \\int \\rho\\,dV$."

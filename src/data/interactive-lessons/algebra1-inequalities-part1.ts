@@ -37,10 +37,10 @@ $x + 3 > 7 \\implies x > 4$. Graph with open circle at 4, arrow right.
       exercise: {
         questions: [
           {
-            question: "Graph $x \\\\geq 3$ uses:",
+            question: "Graph $x \\geq 3$ uses:",
             options: ["Open circle at 3","Closed circle at 3","Open circle at -3","Closed circle at -3"],
             correctAnswer: 1,
-            explanation: "$\\\\geq$ means include 3, so closed circle."
+            explanation: "$\\geq$ means include 3, so closed circle."
           }
         ]
       }
@@ -62,7 +62,7 @@ $x + 3 > 7 \\implies x > 4$. Graph with open circle at 4, arrow right.
         correctAnswers: ["open","left","0"],
         hint1: "Strict inequality.",
         hint2: "Less than goes left.",
-        hint3: "$\\\\geq 0$.",
+        hint3: "$\\geq 0$.",
         explanation: "1) Open. 2) Left. 3) At 0."
       }
     },

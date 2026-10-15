@@ -14,11 +14,11 @@ export const apStatsDiscreteRVPart7Data = {
 
 | Concept | Formula |
 |---------|---------|
-| Expected Value | $E(X) = \\\\sum x_i P(x_i)$ |
-| Variance | $\\\\text{Var}(X) = \\\\sum(x_i - \\\\mu)^2 P(x_i)$ |
+| Expected Value | $E(X) = \\sum x_i P(x_i)$ |
+| Variance | $\\text{Var}(X) = \\sum(x_i - \\mu)^2 P(x_i)$ |
 | Linear Transform Mean | $E(aX + b) = aE(X) + b$ |
-| Linear Transform Var | $\\\\text{Var}(aX + b) = a^2 \\\\text{Var}(X)$ |
-| Sum of Independent | $\\\\text{Var}(X \\\\pm Y) = \\\\text{Var}(X) + \\\\text{Var}(Y)$ |
+| Linear Transform Var | $\\text{Var}(aX + b) = a^2 \\text{Var}(X)$ |
+| Sum of Independent | $\\text{Var}(X \\pm Y) = \\text{Var}(X) + \\text{Var}(Y)$ |
 
 ### Common Mistakes on the AP Exam
 - Adding standard deviations instead of variances
@@ -34,13 +34,13 @@ export const apStatsDiscreteRVPart7Data = {
       exercise: {
         questions: [
           {
-            question: '$\\\\text{Var}(3X) = ?$ if $\\\\text{Var}(X) = 10$',
+            question: '$\\text{Var}(3X) = ?$ if $\\text{Var}(X) = 10$',
             options: ['30', '90', '100', '3'],
             correctAnswer: 1,
-            explanation: '$\\\\text{Var}(3X) = 9 \\\\cdot 10 = 90$.'
+            explanation: '$\\text{Var}(3X) = 9 \\cdot 10 = 90$.'
           },
           {
-            question: 'For independent $X, Y$: $\\\\text{Var}(X - Y) = \\\\text{Var}(X) + \\\\text{Var}(Y)$ because:',
+            question: 'For independent $X, Y$: $\\text{Var}(X - Y) = \\text{Var}(X) + \\text{Var}(Y)$ because:',
             options: ['Subtraction reduces uncertainty', 'Variability compounds regardless of direction', 'It’s a special case', 'Standard deviations cancel'],
             correctAnswer: 1,
             explanation: 'Whether adding or subtracting, both sources of variability contribute to total uncertainty.'
@@ -59,21 +59,21 @@ export const apStatsDiscreteRVPart7Data = {
       content: `
 **Final Challenge** 🧮
 
-$X$: $\\\\mu = 20$, $\\\\sigma = 3$. $Y$: $\\\\mu = 15$, $\\\\sigma = 4$. Independent.
+$X$: $\\mu = 20$, $\\sigma = 3$. $Y$: $\\mu = 15$, $\\sigma = 4$. Independent.
 
 **1)** $E(2X + Y) = ?$
 
-**2)** $\\\\text{Var}(2X + Y) = ?$
+**2)** $\\text{Var}(2X + Y) = ?$
 
-**3)** $\\\\sigma_{2X+Y} = ?$ (round to 2 decimals)
+**3)** $\\sigma_{2X+Y} = ?$ (round to 2 decimals)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['55', '52', '7.21'],
         hint1: '$2(20) + 15$',
         hint2: '$4(9) + 16 = 36 + 16$',
-        hint3: '$\\\\sqrt{52}$',
-        explanation: '1) $40 + 15 = 55$. 2) $4 \\\\cdot 9 + 16 = 52$. 3) $\\\\sqrt{52} \\\\approx 7.21$.'
+        hint3: '$\\sqrt{52}$',
+        explanation: '1) $40 + 15 = 55$. 2) $4 \\cdot 9 + 16 = 52$. 3) $\\sqrt{52} \\approx 7.21$.'
       }
     }
   ]

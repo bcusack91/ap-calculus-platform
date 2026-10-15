@@ -39,7 +39,7 @@ $24 \\times 28 = 24(20) + 24(8) = 480 + 192 = 672$ ✅
           {
                     "question": "A bookshelf has 6 shelves with 14 books each. Which expression finds the total?",
                     "options": [
-                              "$6 \\\\times 14$",
+                              "$6 \\times 14$",
                               "$6 + 14$",
                               "$14 - 6$",
                               "$14 ÷ 6$"
@@ -111,7 +111,7 @@ $24 \\times 28 = 24(20) + 24(8) = 480 + 192 = 672$ ✅
           {
                     "question": "A box has 15 candies. You have 12 boxes. Is \"15 + 12\" or \"15 × 12\" correct?",
                     "options": [
-                              "$15 \\\\times 12$",
+                              "$15 \\times 12$",
                               "$15 + 12$",
                               "It depends",
                               "Neither"
