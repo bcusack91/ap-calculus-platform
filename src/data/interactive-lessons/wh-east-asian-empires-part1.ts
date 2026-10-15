@@ -144,7 +144,7 @@ export const whEastAsianEmpiresPart1Data = {
               'Marco Polo'
             ],
             correctAnswer: 0,
-            explanation: 'Zheng He\'s voyages (1405–1433) demonstrated China\'s unmatched naval power before the Ming court chose to end exploration. His fleet included ships up to 400 feet long — dwarfing European vessels.'
+            explanation: 'Zheng He\'s voyages (1405–1433) demonstrated China\'s unmatched naval power before the Ming court chose to end exploration. Ming records describe treasure ships far larger than any European vessel of the time, though historians debate their exact size.'
           },
           {
             question: 'What Japanese warrior code emphasized loyalty, honor, martial skill, and ritual suicide (seppuku)?',

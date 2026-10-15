@@ -5,170 +5,221 @@ export const whIslamicEmpiresPart5Data = {
       id: 'whislami5-intro',
       type: 'text' as const,
       content: `
-# 🌏 Islamic Empires (1450–1750)
+# 🕌 Islamic Empires (1450–1750)
 
-**Part 5 of 7 — Change Over Time**
+**Part 5 of 7 — Challenges and Change, c. 1600–1750**
 
-Islamic Empires (1450–1750) has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Internal and External Challenges |
+| The Ottomans: Crisis and Adaptation |
+| Safavid Collapse and Mughal Fragmentation |
+| Six Misconceptions to Avoid |
 
-| Concept | Description |
-|---------|-------------|
-| **Continuity** | Aspects of Islamic Empires (1450–1750) that have remained stable over time |
-| **Change** | How Islamic Empires (1450–1750) has transformed due to new forces and conditions |
-| **Trend** | The direction of change in Islamic Empires (1450–1750) over time |
-      `
+> 🔑 **Key Concept:** CED Topic 4.6 says that **state expansion and centralization provoked resistance** from local social, political and economic groups. By 1750 all three empires faced such resistance, along with rival states. They did not all respond the same way: one adapted and survived into the 1900s, one fell, and one broke into regional states.
+`
+    },
+    {
+      id: 'whislami5-ottoman',
+      type: 'text' as const,
+      content: `
+## 📖 The Ottomans: Crisis and Adaptation
+
+### Internal Pressures
+- **Janissary power:** by the 1600s Janissaries could marry, enroll their sons and run businesses. The corps grew larger, more hereditary and more political. In **1622** Janissaries killed the young sultan **Osman II**, who was rumored to be planning a new army to replace them.
+- **Celali revolts (c. 1590s–1610):** bands of unemployed soldiers and rural rebels ravaged Anatolia.
+- **Money troubles:** costly wars, a sharp **coinage debasement in 1585–1586**, and rising prices across the Mediterranean squeezed state finances.
+
+### External Pressures
+- Failure at **Vienna (1683)** and the losses confirmed at **Karlowitz (1699)**.
+- Rising **Russian** power around the Black Sea.
+
+### Adaptation, Not Just Decline
+- Revenue shifted to **tax farming**, including lifetime tax farms from 1695, which tied provincial elites to the state's survival.
+- Provincial notables, the **ayan**, gained local power but mostly stayed loyal.
+- In the **Tulip Era (1718–1730)** the court took up some European fashions, and **İbrahim Müteferrika** opened the first Ottoman Turkish-language printing press in the late 1720s.
+
+> 🔑 **AP Connection:** Many historians now reject the old story that the Ottoman Empire went into steady decline after Suleiman I. Baki Tezcan's book *The Second Ottoman Empire* (2010), for example, argues that power was **redistributed** rather than lost. Writing "the empire changed and adapted" is more accurate than "the empire declined," and it shows complexity.
+`
     },
     {
       id: 'whislami5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Interpreting a Historian's Argument** 🎯
+
+*Read the summary, then answer.*
+
+> A historian argues that the Ottoman state after 1600 did not simply weaken. Instead, power spread from the sultan's household to Janissaries, tax farmers and provincial notables, who all now had a stake in the empire's survival.
       `,
       exercise: {
         questions: [
           {
-            question: 'Studying change over time in Islamic Empires (1450–1750) helps:',
+            question: "Which evidence would best support the historian's argument?",
             options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
+              "Lifetime tax farms gave provincial elites a share of state revenue",
+              "The Ottoman fleet was destroyed by the Holy League at Lepanto in 1571",
+              "Mehmed II captured Constantinople with very large siege cannon",
+              "Suleiman I's armies defeated the Hungarians at Mohács in 1526"
             ],
-            correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
+            correctAnswer: 0,
+            explanation: "Lifetime tax farms show revenue and power being shared with provincial elites who then benefited from the state's survival. The other events are military episodes from the expansion era and say nothing about how power was redistributed after 1600."
           },
           {
-            question: 'Continuity in Islamic Empires (1450–1750) means:',
+            question: "Which event would a supporter of the older \"decline\" view most likely cite against the historian?",
             options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
+              "The killing of Osman II by Janissaries in 1622",
+              "The opening of a Turkish printing press in the 1720s",
+              "The building of the Süleymaniye Mosque in the 1550s",
+              "The capture of Cairo from the Mamluks in 1517"
             ],
-            correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
+            correctAnswer: 0,
+            explanation: "A regicide by the sultan's own soldiers looks like collapsing central authority, so it is the strongest evidence for the decline view. The historian could answer that the Janissaries were defending their new stake in the state."
           }
         ]
       }
     },
     {
-      id: 'whislami5-content',
+      id: 'whislami5-safavid-mughal',
       type: 'text' as const,
       content: `
-## Change Over Time — Deeper Dive
+## Safavid Collapse and Mughal Fragmentation
 
-### Continuity
-Aspects of Islamic Empires (1450–1750) that have remained stable over time. Understanding this concept is essential for mastering Islamic Empires (1450–1750) in AP World History.
+### The Safavids: Sudden Fall
+- After Abbas I, shahs were raised inside the palace with little military experience, and the ghulam army weakened.
+- **1722:** Afghan forces under **Mahmud Hotaki** besieged **Isfahan** for months; the capital starved and Shah Sultan Husayn surrendered his throne.
+- **1736:** the general **Nader**, who had driven out the Afghans, deposed the last Safavid and crowned himself **Nader Shah**.
 
-### Change
-How Islamic Empires (1450–1750) has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+### The Mughals: Overreach and Regional Breakaway
+| Cause | Evidence |
+|---|---|
+| **Military overreach** | Aurangzeb campaigned in the Deccan from 1681 until his death in 1707 |
+| **Regional resistance** | The **Marathas** under **Shivaji** (crowned 1674) fought a long guerrilla war; Sikh, Jat and Rajput risings followed |
+| **Revenue crisis** | Conquest created more mansabdars than there were good jagirs to pay them |
+| **Religious policy** | Reimposing the jizya (1679) alienated some Hindu elites, though historians debate how much |
+| **External shock** | **Nader Shah** defeated the Mughals at **Karnal** and sacked **Delhi in 1739**, carrying off the Peacock Throne |
 
-### Trend
-The direction of change in Islamic Empires (1450–1750) over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
+After 1707, governors in **Hyderabad, Bengal and Awadh** became rulers in all but name, while still honoring the emperor. These regional states, and the European trading companies that dealt with them, set the stage for British expansion after 1750 (Unit 6).
+
+### Comparing the Outcomes
+| Empire | By 1750 | Main reason |
+|---|---|---|
+| **Ottoman** | Survived, reorganized | Flexible revenue system; elites invested in the state |
+| **Safavid** | Gone (1736) | Weak central army; capital fell to a small invading force |
+| **Mughal** | Emperor still reigned but power was regional | Overreach in the Deccan; resistance; Nader Shah's raid |
+`
     },
     {
-      id: 'whislami5-input',
-      type: 'input-boxes' as const,
+      id: 'whislami5-quiz2',
+      type: 'multiple-choice' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to aspects of Islamic Empires (1450–1750) that have remained stable over time?
-
-2) What concept describes how Islamic Empires (1450–1750) has transformed due to new forces and conditions?
-
-3) Name the term for the direction of change in Islamic Empires (1450–1750) over time.
-
-Use the exact term from this part.
+**Check Your Understanding** 🎯
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of Islamic Empires (1450–1750) that have remained stable over time), Change (How Islamic Empires (1450–1750) has transformed due to new forces and conditions), and Trend (The direction of change in Islamic Empires (1450–1750) over time).'
+        questions: [
+          {
+            question: "Maratha resistance under Shivaji is best used as evidence for which CED claim?",
+            options: [
+              "Centralization provoked local opposition",
+              "Gunpowder made imperial armies unbeatable",
+              "Shi'a Islam spread rapidly into South Asia",
+              "European traders ruled India before 1700"
+            ],
+            correctAnswer: 0,
+            explanation: "The Marathas, a regional Hindu power in the Deccan, resisted Mughal expansion and taxation, which is the kind of local resistance CED Topic 4.6 describes. The Mughals had gunpowder, and the Marathas still wore them down."
+          },
+          {
+            question: "Which factor most directly explains the fall of Isfahan in 1722?",
+            options: [
+              "A weakened Safavid army that could not lift an Afghan siege",
+              "An Ottoman invasion launched to avenge the defeat at Chaldiran",
+              "A Portuguese fleet that cut Iran off from the Persian Gulf",
+              "A Mughal army sent by Aurangzeb to seize the Safavid throne"
+            ],
+            correctAnswer: 0,
+            explanation: "Weak shahs and a run-down army let a relatively small Afghan force starve the capital into surrender. Aurangzeb had died in 1707, and Abbas I had expelled the Portuguese from Hormuz a century earlier."
+          },
+          {
+            question: "Nader Shah's sack of Delhi in 1739 most clearly shows that by then the Mughal Empire:",
+            options: [
+              "could no longer defend its own capital",
+              "had converted its ruling family to Shi'a Islam",
+              "had become a protectorate of the Ottoman sultan",
+              "had ended its trade with European companies"
+            ],
+            correctAnswer: 0,
+            explanation: "A raid from Iran that took the capital and the Peacock Throne revealed how weak central Mughal power had become. The emperor kept his throne, but real power had passed to regional rulers."
+          }
+        ]
       }
+    },
+    {
+      id: 'whislami5-misconceptions',
+      type: 'text' as const,
+      content: `
+## Six Misconceptions to Avoid
+
+| Misconception | More accurate |
+|---|---|
+| "Tolerance meant equality." | Non-Muslims were **protected but unequal**. They paid the jizya (except under Akbar and his immediate successors) and faced legal limits. |
+| "The millet system was a fixed, empire-wide institution from 1453." | Communities did run their own religious and family affairs, but historians note that the formal term **millet system** mostly dates from the 1800s. |
+| "Gunpowder alone built these empires." | Alliances, administration and revenue systems mattered as much (Parts 2–3). |
+| "The Ottomans declined after 1566." | They adapted and survived until 1922. |
+| "These were Arab empires." | The ruling dynasties were **Turkic** in origin. The Ottomans ruled in Ottoman Turkish, and the Safavid and Mughal courts used **Persian** as the language of government. |
+| "Islamic empires were cut off from Europe." | They traded, fought, signed treaties and allied with European states. France and the Ottomans cooperated against the Habsburgs from the 1530s. |
+
+> 🔑 **AP Connection:** Multiple-choice distractors are often built from these misconceptions. If an option says "equal rights," "fixed," "alone" or "cut off," check it carefully.
+`
     },
     {
       id: 'whislami5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Accurate or Misconception?** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Aspects of Islamic Empires (1450–1750) that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'None of these']
+            label: 'Non-Muslims under Ottoman rule had the same legal status as Muslims. This statement is ___',
+            options: ['A misconception', 'Accurate', 'Accurate for the Safavids only', 'Accurate after 1453 only']
           },
           {
-            label: 'How Islamic Empires (1450–1750) has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'All of these']
+            label: 'Mughal governors in Hyderabad, Bengal and Awadh became rulers in all but name after 1707. This statement is ___',
+            options: ['Accurate', 'A misconception', 'Accurate for the Safavids only', 'Accurate after 1453 only']
           },
           {
-            label: 'The direction of change in Islamic Empires (1450–1750) over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'None of these']
+            label: 'The Safavid dynasty survived into the nineteenth century. This statement is ___',
+            options: ['A misconception', 'Accurate', 'Accurate for the Mughals only', 'Accurate after 1453 only']
           }
         ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of Islamic Empires (1450–1750) that have remained stable over time. Change — How Islamic Empires (1450–1750) has transformed due to new forces and conditions. Trend — The direction of change in Islamic Empires (1450–1750) over time.'
+        correctAnswers: ['A misconception', 'Accurate', 'A misconception'],
+        hint1: 'Who paid the jizya?',
+        hint2: 'What happened after Aurangzeb died?',
+        hint3: 'Who crowned himself shah in 1736?',
+        explanation: 'Non-Muslims were protected but unequal. Regional governors did become rulers in all but name after 1707. The Safavid dynasty ended in 1736 when Nader Shah took the throne.'
       }
     },
     {
-      id: 'whislami5-strategy',
-      type: 'text' as const,
+      id: 'whislami5-input',
+      type: 'input-boxes' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+**Quick Recall** ✍️
 
-### Misconceptions to Avoid
-- Don\'t confuse **Continuity** with **Change** — while related, they address different aspects of Islamic Empires (1450–1750).
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+**1)** In what year did Afghan forces take Isfahan?
 
-### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP World History for higher scores.
-      `
-    },
-    {
-      id: 'whislami5-applied',
-      type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
+**2)** Which Maratha leader was crowned in 1674?
+
+**3)** At which 1739 battle did Nader Shah defeat the Mughal army before sacking Delhi?
       `,
       exercise: {
-        questions: [
-          {
-            question: 'An AP question asks how Islamic Empires (1450–1750) has changed in the last 50 years. A strong answer would:',
-            options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
-            ],
-            correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
-          },
-          {
-            question: 'A trend in Islamic Empires (1450–1750) shows acceleration in recent decades. The most likely explanation is:',
-            options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
-            ],
-            correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['1722', 'Shivaji', 'Karnal'],
+        hint1: 'Fourteen years before the last Safavid was deposed in 1736.',
+        hint2: 'His name begins with "Sh."',
+        hint3: 'A town north of Delhi; it begins with "K."',
+        explanation: '1) Isfahan fell in 1722. 2) Shivaji was crowned in 1674. 3) Nader Shah won at Karnal and then sacked Delhi in 1739.'
       }
     }
   ]

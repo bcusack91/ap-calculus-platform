@@ -5,20 +5,46 @@ export const whIslamicEmpiresPart4Data = {
       id: 'whislami4-intro',
       type: 'text' as const,
       content: `
-# 🌏 Islamic Empires (1450–1750)
+# 🕌 Islamic Empires (1450–1750)
 
-**Part 4 of 7 — Connections & Interactions**
+**Part 4 of 7 — Religion, Rivalry and New Faiths**
 
-Islamic Empires (1450–1750) connects to other topics in AP World History. Understanding these connections reveals how different processes interact.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Sunni vs. Shi'a Becomes Geopolitics |
+| Akbar's Experiment and Aurangzeb's Reversal |
+| The Rise of Sikhism |
+| A Parallel: Reformation Europe |
 
-| Concept | Description |
-|---------|-------------|
-| **Interconnection** | How Islamic Empires (1450–1750) links to other course topics |
-| **Scale interaction** | How Islamic Empires (1450–1750) operates differently at local, national, and global scales |
-| **Feedback loop** | How outcomes of Islamic Empires (1450–1750) can reinforce or modify the original process |
-      `
+> 🔑 **Key Concept:** CED Topic 3.3 asks you to explain how belief systems **affected** land-based empires and **were affected by** them. Three developments matter most: the Ottoman–Safavid rivalry deepened the **Sunni–Shi'a split**; **Sikhism** emerged in South Asia from interaction between Hinduism and Islam; and in Europe the **Protestant Reformation** broke Christian unity. In each case religion and state power shaped each other.
+`
+    },
+    {
+      id: 'whislami4-sunni-shia',
+      type: 'text' as const,
+      content: `
+## 📖 Sunni vs. Shi'a Becomes Geopolitics
+
+### Background
+The split dates to a dispute over who should lead the Muslim community after the Prophet Muhammad's death in 632. **Shi'a** Muslims hold that leadership belonged to his cousin and son-in-law **Ali** and Ali's descendants, the Imams. **Twelver** Shi'a recognize twelve Imams. Most Muslims, then and now, are **Sunni**.
+
+### How the Empires Turned a Theological Split into a Border
+| Date | Event | Significance |
+|---|---|---|
+| **1501** | Ismail I declares **Twelver Shi'ism** the state religion of Iran | Most of Iran's population was Sunni; conversion took generations |
+| **1511–1514** | Pro-Safavid Qizilbash risings in **Anatolia**; Selim I persecutes suspected supporters | The Ottomans saw Shi'a loyalty as treason inside their own lands |
+| **1514** | Ottoman victory at **Chaldiran** | Stops Safavid expansion into Anatolia |
+| **1555** | **Peace of Amasya** | Ottomans keep Baghdad and most of Iraq |
+| **1639** | **Treaty of Zuhab** | Fixes a frontier close to today's border between Iran and Iraq |
+
+### Why It Mattered
+- Each empire used religion to **mark its subjects as different** from the enemy's. Ottoman sultans posed as defenders of Sunni orthodoxy; the Safavids built a Shi'a clergy (Part 3).
+- The long frontier war **hardened** sectarian identity. Iran is still majority Shi'a, while its neighbor Turkey is majority Sunni.
+
+> 🔑 **AP Connection:** The CED's wording is that political rivalry **intensified** the split. It did not create it. On an essay, say the split was centuries old and that **state policy** made it sharper.
+`
     },
     {
       id: 'whislami4-quiz1',
@@ -29,146 +55,160 @@ Islamic Empires (1450–1750) connects to other topics in AP World History. Unde
       exercise: {
         questions: [
           {
-            question: 'Islamic Empires (1450–1750) connects to other course topics through:',
+            question: "Which statement best describes the relationship between the Ottoman–Safavid rivalry and the Sunni–Shi'a split?",
             options: [
-              'No connections exist',
-              'Shared processes, causes, and outcomes',
-              'Random coincidence',
-              'Administrative categories only'
+              "The rivalry intensified an existing religious divide",
+              "The rivalry created the divide for political reasons",
+              "The rivalry ended the divide through the Treaty of Zuhab",
+              "The rivalry was unrelated to any religious difference"
             ],
-            correctAnswer: 1,
-            explanation: 'Topics in AP World History are interconnected through shared processes, causes, and outcomes.'
+            correctAnswer: 0,
+            explanation: "The split dated to the 600s, but state-sponsored Shi'ism in Iran and Ottoman Sunni policy turned it into a frontier between two empires. The treaties fixed borders; they did not end the divide."
           },
           {
-            question: 'A feedback loop in Islamic Empires (1450–1750) means:',
+            question: "Selim I's persecution of Qizilbash supporters in Anatolia (1511–1514) is best explained by which concern?",
             options: [
-              'The process stops',
-              'Outcomes reinforce or modify the original process',
-              'Nothing changes',
-              'The exam skips this topic'
+              "That Ottoman subjects loyal to the shah were a threat from within",
+              "That Qizilbash merchants were taking over the trade with Venice",
+              "That Shi'a scholars were translating the Quran into Turkish",
+              "That the Mughal emperor had promised to invade from the east"
             ],
-            correctAnswer: 1,
-            explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.'
+            correctAnswer: 0,
+            explanation: "Many Turkmen in Anatolia followed Shah Ismail, so religious loyalty became a question of political loyalty. Selim treated them as an internal threat before marching on Chaldiran."
           }
         ]
       }
     },
     {
-      id: 'whislami4-content',
+      id: 'whislami4-mughal',
       type: 'text' as const,
       content: `
-## Connections & Interactions — Deeper Dive
+## Akbar's Experiment and Aurangzeb's Reversal
 
-### Interconnection
-How Islamic Empires (1450–1750) links to other course topics. Understanding this concept is essential for mastering Islamic Empires (1450–1750) in AP World History.
+The Mughals were a **Muslim dynasty ruling a Hindu-majority** population, so religious policy was a question of survival.
 
-### Scale interaction
-How Islamic Empires (1450–1750) operates differently at local, national, and global scales. This builds on the previous concept and connects to broader themes in the course.
+### Akbar (r. 1556–1605)
+- **1575:** built the **Ibadat Khana** ("House of Worship") at Fatehpur Sikri for debates. Sunni and Shi'a scholars took part, and over time so did Hindus, Jains, Zoroastrians and, from 1580, Jesuit priests from Portuguese Goa.
+- Sponsored Persian translations of Sanskrit epics, including the *Mahabharata* (the *Razmnama*).
+- **Din-i Ilahi (c. 1582):** a small circle of court disciples devoted to the emperor. It drew on several faiths but was **never a mass religion**; it is better seen as a tool to bind elites personally to Akbar.
 
-### Feedback loop
-How outcomes of Islamic Empires (1450–1750) can reinforce or modify the original process. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
+### Aurangzeb (r. 1658–1707)
+- Ruled as a strict Sunni; sponsored a great compilation of Islamic legal rulings, the *Fatawa-i Alamgiri*.
+- **1679:** reimposed the **jizya** on non-Muslims.
+- Ordered the destruction of some major temples, including the Kashi Vishwanath temple at Varanasi (1669).
+- Executed the ninth Sikh Guru, **Tegh Bahadur**, in 1675.
+
+### Interpreting the Contrast
+Historians caution against a simple "tolerant vs. bigoted" story. Aurangzeb still employed **many Hindu officers**, and Akbar's policy was also **practical politics**: he needed Rajput armies. The clearer AP point is that the two rulers made **different choices about legitimacy**, with different results (Part 5).
+`
+    },
+    {
+      id: 'whislami4-sikh',
+      type: 'text' as const,
+      content: `
+## 📖 The Rise of Sikhism
+
+| Date | Event |
+|---|---|
+| **1469–1539** | Life of **Guru Nanak** in the Punjab |
+| **1604** | The fifth Guru, **Arjan**, compiles the **Adi Granth**, the scripture |
+| **1606** | Guru Arjan is executed on the orders of Emperor **Jahangir** |
+| **1675** | Guru **Tegh Bahadur** is executed in Delhi on Aurangzeb's orders |
+| **1699** | Guru **Gobind Singh** founds the **Khalsa**, a community of initiated Sikhs |
+
+### Core Teachings
+- **One God** ("Ik Onkar"), approached through devotion and remembering God's name.
+- **Equality:** rejection of caste distinctions in worship. The **langar**, a free communal kitchen where all sit together, put this into practice.
+- **Rejection of empty ritual**, of both Hindu and Muslim kinds.
+
+### Why Sikhism Fits CED 3.3
+Nanak's teachings drew on the **bhakti** (devotional) movement in Hinduism and on **Sufi** mysticism in Islam. A saying attributed to Nanak in later biographies, *"There is no Hindu, there is no Muslim,"* expresses this. The faith was **born from interaction** between the two religions in a Mughal-ruled region. Persecution under Jahangir and Aurangzeb then pushed it to **militarize**, which shows a state shaping a faith.
+
+> 🔑 **AP Connection:** Sikhism is an example of **syncretism** that became a distinct religion, not a blend of two. Explain both its roots and its new identity.
+`
+    },
+    {
+      id: 'whislami4-quiz2',
+      type: 'multiple-choice' as const,
+      content: `
+**Check Your Understanding** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: "Which of the following best explains the emergence of Sikhism?",
+            options: [
+              "Interaction between Hinduism and Islam in the Punjab",
+              "Portuguese missionary work in western India",
+              "A Safavid effort to spread Shi'ism into India",
+              "A schism within Buddhism in the Himalayas"
+            ],
+            correctAnswer: 0,
+            explanation: "Guru Nanak drew on Hindu bhakti devotion and Sufi mysticism in a Punjab shaped by both faiths. This is the CED's own explanation of Sikhism's origins."
+          },
+          {
+            question: "Which development most directly led Sikhs to become a militarized community by 1699?",
+            options: [
+              "Mughal executions of the Gurus",
+              "Akbar's abolition of the jizya in 1564",
+              "The arrival of Jesuits at Akbar's court",
+              "Shah Abbas I's capture of Hormuz in 1622"
+            ],
+            correctAnswer: 0,
+            explanation: "Guru Arjan was executed under Jahangir and Guru Tegh Bahadur under Aurangzeb; Guru Gobind Singh founded the Khalsa in 1699 in this context. Akbar's tolerant policies came earlier and eased tensions rather than causing them."
+          },
+          {
+            question: "Akbar's Din-i Ilahi is best described as:",
+            options: [
+              "a circle of court disciples personally devoted to the emperor",
+              "a new state religion imposed on the empire's Hindu majority",
+              "a Shi'a reform movement imported from the Safavid court",
+              "a Hindu revival movement that Akbar tried to suppress"
+            ],
+            correctAnswer: 0,
+            explanation: "Din-i Ilahi had only a small number of elite followers and was never imposed on subjects. It worked mainly to tie leading nobles to Akbar personally."
+          }
+        ]
+      }
+    },
+    {
+      id: 'whislami4-europe',
+      type: 'text' as const,
+      content: `
+## A Parallel: Reformation Europe
+
+CED 3.3 pairs the Islamic world with Europe, where **Martin Luther's** challenge (1517) split Western Christianity into Catholic and Protestant churches.
+
+| Pattern | Islamic empires | Europe |
+|---|---|---|
+| **Religious split used by states** | Sunni Ottomans vs. Shi'a Safavids | Catholic Habsburgs vs. Protestant princes |
+| **Ruler chooses the subjects' faith** | Ismail I imposes Shi'ism on Iran (1501) | Peace of Augsburg (1555): each German prince chooses Lutheran or Catholic for his lands |
+| **Long religious wars** | Ottoman–Safavid wars, 1514–1639 | Wars of religion, ending in Germany with the Peace of Westphalia (1648) |
+
+**A connection, not just a parallel:** Ottoman pressure on the Habsburgs, from Mohács (1526) to the siege of Vienna (1529), kept Emperor Charles V from concentrating his forces against the Lutheran princes. Many historians argue this helped Protestantism survive its early decades.
+
+> 🔑 **AP Connection:** Comparison essays reward a **similarity and a difference**. A good difference here: Safavid Iran converted a whole population **from the top down**, while European Protestantism began as a movement **from below** that some rulers then adopted.
+`
     },
     {
       id: 'whislami4-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Quick Recall** ✍️
 
-1) What term refers to how Islamic Empires (1450–1750) links to other course topics?
+**1)** In what year did Guru Gobind Singh found the Khalsa?
 
-2) What concept describes how Islamic Empires (1450–1750) operates differently at local, national, and global scales?
+**2)** What was the name of the hall at Fatehpur Sikri where Akbar held religious debates? (two words)
 
-3) Name the term for how outcomes of Islamic Empires (1450–1750) can reinforce or modify the original process.
-
-Use the exact term from this part.
+**3)** Which 1555 peace between the Ottomans and Safavids left Baghdad in Ottoman hands?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'Starts with: I',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: F',
-        explanation: 'Expected answers: Interconnection (How Islamic Empires (1450–1750) links to other course topics), Scale interaction (How Islamic Empires (1450–1750) operates differently at local, national, and global scales), and Feedback loop (How outcomes of Islamic Empires (1450–1750) can reinforce or modify the original process).'
-      }
-    },
-    {
-      id: 'whislami4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'How Islamic Empires (1450–1750) links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
-          },
-          {
-            label: 'How Islamic Empires (1450–1750) operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
-          },
-          {
-            label: 'How outcomes of Islamic Empires (1450–1750) can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
-          }
-        ],
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Interconnection — How Islamic Empires (1450–1750) links to other course topics. Scale interaction — How Islamic Empires (1450–1750) operates differently at local, national, and global scales. Feedback loop — How outcomes of Islamic Empires (1450–1750) can reinforce or modify the original process.'
-      }
-    },
-    {
-      id: 'whislami4-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of Islamic Empires (1450–1750).
-- **Feedback loop** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about connections & interactions, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect connections & interactions to broader themes in AP World History for higher scores.
-      `
-    },
-    {
-      id: 'whislami4-applied',
-      type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'On the AP exam, demonstrating connections between Islamic Empires (1450–1750) and other units earns higher scores because:',
-            options: [
-              'The exam is random',
-              'It shows deeper understanding and analytical thinking',
-              'It wastes time',
-              'Connections are never tested'
-            ],
-            correctAnswer: 1,
-            explanation: 'The AP exam rewards students who can connect concepts across units — demonstrating synthesis and analytical depth.'
-          },
-          {
-            question: 'If Islamic Empires (1450–1750) produces outcomes that further intensify the original process, this is:',
-            options: [
-              'A negative feedback loop',
-              'A positive feedback loop — outcomes reinforce the process',
-              'An unrelated event',
-              'A one-time occurrence'
-            ],
-            correctAnswer: 1,
-            explanation: 'A positive feedback loop intensifies: the outcome amplifies the original process, creating a cycle.'
-          }
-        ]
+        correctAnswers: ['1699', 'Ibadat Khana', 'Amasya'],
+        hint1: 'One year before 1700.',
+        hint2: 'It means "House of Worship."',
+        hint3: 'It shares its name with a town in northern Anatolia; enter just the town.',
+        explanation: '1) The Khalsa was founded in 1699. 2) Akbar built the Ibadat Khana in 1575. 3) The Peace of Amasya (1555) confirmed Ottoman control of Baghdad and most of Iraq.'
       }
     }
   ]

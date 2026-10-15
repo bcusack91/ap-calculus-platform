@@ -5,170 +5,229 @@ export const whIslamicEmpiresPart6Data = {
       id: 'whislami6-intro',
       type: 'text' as const,
       content: `
-# 🌏 Islamic Empires (1450–1750)
+# 🕌 Islamic Empires (1450–1750)
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — Exam Workshop: Sources, SAQs and the LEQ**
 
-Apply Islamic Empires (1450–1750) concepts to data interpretation and analytical scenarios. Practice the types of questions seen on the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 How This Topic Appears on the Exam |
+| Stimulus Set 1: A Mughal Painting |
+| SAQ Walkthrough |
+| Stimulus Set 2: A French Traveler in Iran |
+| Building an LEQ Argument |
 
-| Concept | Description |
-|---------|-------------|
-| **Data interpretation** | Analyzing maps, graphs, and tables related to Islamic Empires (1450–1750) |
-| **Argumentation** | Making evidence-based claims about Islamic Empires (1450–1750) |
-| **Spatial reasoning** | Using geographic thinking to analyze Islamic Empires (1450–1750) |
-      `
+> 🔑 **Key Concept:** The May 2027 exam has **55 multiple-choice questions** (55 minutes, 40%), **3 short-answer questions** (40 minutes, 20%), a **DBQ** (60 minutes including 15 for reading, 25%) and a **long essay** (40 minutes, 15%). From 2027 all three SAQs are **required and each is tied to a source**, and the LEQ is **one broad prompt**. This part practices each format on Unit 3 content.
+`
+    },
+    {
+      id: 'whislami6-painting',
+      type: 'text' as const,
+      content: `
+## 📖 Stimulus Set 1: A Mughal Painting
+
+**Source:** *Jahangir Preferring a Sufi Shaikh to Kings*, a Mughal miniature by the court painter **Bichitr**, c. 1615–1618 (now in the Freer Gallery of Art, Washington, D.C.).
+
+**What the painting shows (described):**
+- Emperor **Jahangir** sits on an hourglass-shaped throne, his head framed by a glowing sun and crescent moon.
+- He hands a book to an elderly **Sufi shaikh**.
+- Waiting below, and ignored, are an **Ottoman sultan**, **King James I of England** (copied from a European portrait), and a Hindu figure, a self-portrait of the painter holding a painting.
+- An inscription says, in substance, that although kings stand before him, the emperor looks toward holy men.
+
+### Reading a Visual Source with HIPP
+| Element | Analysis |
+|---|---|
+| **Historical situation** | The Mughal court was wealthy and in contact with Europe; England's ambassador Sir Thomas Roe served on an embassy to Jahangir from 1615 to 1619 |
+| **Intended audience** | The emperor and his court, who viewed albums of paintings privately |
+| **Purpose** | To present Jahangir as a spiritual ruler above worldly kings |
+| **Point of view** | A court artist who depended on imperial patronage |
+
+**Key inference:** the painting is a **claim to legitimacy**. It places Jahangir above both an Islamic rival (the Ottoman sultan) and a Christian king, and links his rule to Sufi holiness, not to conquest alone.
+`
     },
     {
       id: 'whislami6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Stimulus Set 1** 🎯
+
+*Use the painting described above.*
       `,
       exercise: {
         questions: [
           {
-            question: 'When interpreting data about Islamic Empires (1450–1750), the first step is:',
+            question: "The painting is best understood as evidence of which method of legitimizing power?",
             options: [
-              'Jump to conclusions',
-              'Identify what the data shows and note any patterns or trends',
-              'Ignore the data',
-              'Only look at the title'
+              "Art presenting the ruler as spiritually exalted",
+              "Tax farming that tied local elites to the throne",
+              "A slave-soldier corps loyal only to the emperor",
+              "A treaty that recognized Mughal borders"
             ],
-            correctAnswer: 1,
-            explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.'
+            correctAnswer: 0,
+            explanation: "The sun-and-moon halo and the ruler's attention to a Sufi holy man present Jahangir as a spiritual sovereign. Court art of this kind is one of the main legitimizing tools named in CED Topic 3.2."
           },
           {
-            question: 'An evidence-based argument about Islamic Empires (1450–1750) requires:',
+            question: "The inclusion of King James I in the painting most directly reflects which historical context?",
             options: [
-              'Just opinions',
-              'A clear claim supported by specific evidence and reasoning',
-              'No evidence',
-              'Only emotional appeals'
+              "Growing diplomatic and trade contact between the Mughals and England",
+              "An English military victory over the Mughals in Bengal",
+              "The conversion of the English royal family to Islam",
+              "A Mughal alliance with England against the Safavids"
             ],
-            correctAnswer: 1,
-            explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).'
+            correctAnswer: 0,
+            explanation: "Sir Thomas Roe's embassy and the English East India Company's trade brought English portraits and goods to Jahangir's court. There was no English victory over the Mughals in this period, and England was a minor player beside the empire."
+          },
+          {
+            question: "A historian would most likely use this painting to support which argument?",
+            options: [
+              "Mughal rulers joined Islamic piety to claims of rule above all kings",
+              "Mughal rulers saw European monarchs as their equals",
+              "Mughal rulers rejected Sufi Islam in favor of strict Sunni law",
+              "Mughal rulers had stopped using art to shape their public image"
+            ],
+            correctAnswer: 0,
+            explanation: "The painting joins Sufi devotion to an image of Jahangir as superior to the sultan and the English king. It portrays European monarchs as lesser petitioners and celebrates a Sufi figure, so the other claims contradict it."
           }
         ]
       }
     },
     {
-      id: 'whislami6-content',
+      id: 'whislami6-saq',
       type: 'text' as const,
       content: `
-## Problem-Solving Workshop — Deeper Dive
+## SAQ Walkthrough
 
-### Data interpretation
-Analyzing maps, graphs, and tables related to Islamic Empires (1450–1750). Understanding this concept is essential for mastering Islamic Empires (1450–1750) in AP World History.
+**Prompt (modeled on the 2027 format, using the painting above):**
 
-### Argumentation
-Making evidence-based claims about Islamic Empires (1450–1750). This builds on the previous concept and connects to broader themes in the course.
+**(a)** Identify ONE way the painting presents Emperor Jahangir.
+**(b)** Explain ONE way the painting reflects methods Mughal rulers used to legitimize their power from 1450 to 1750.
+**(c)** Explain ONE way methods of legitimizing power in the Ottoman Empire **differed** from those shown in the painting.
 
-### Spatial reasoning
-Using geographic thinking to analyze Islamic Empires (1450–1750). This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
+Each part is worth one point. Answer in full sentences, and make every sentence earn its place.
+
+### Model Responses
+**(a)** *The painting presents Jahangir as a spiritual ruler: he sits under a sun-and-moon halo and gives his attention to a Sufi shaikh instead of the kings waiting below him.*
+
+**(b)** *Mughal rulers used court art and monumental architecture to show that their power was blessed and magnificent. Just as Shah Jahan later built the Taj Mahal to display wealth and piety, Jahangir's painters placed him above the Ottoman sultan and the English king to make his supremacy visible.*
+
+**(c)** *The Ottomans relied more on religious law and a protector role in Sunni Islam. After 1517 the sultan guarded Mecca and Medina and enforced sharia through Sunni judges, whereas Jahangir's image stressed personal holiness linked to Sufi saints.*
+
+### Why These Earn the Points
+- **(a)** *identifies* with a detail from the source; no explanation needed.
+- **(b)** links the source to a **named method** and adds a second example.
+- **(c)** names the **difference** and supports it with specific Ottoman evidence.
+`
     },
     {
-      id: 'whislami6-input',
-      type: 'input-boxes' as const,
+      id: 'whislami6-chardin',
+      type: 'text' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+## 📖 Stimulus Set 2: A French Traveler in Iran
 
-1) What term refers to analyzing maps, graphs, and tables related to Islamic Empires (1450–1750)?
+> "When this great prince ceased to live, Persia ceased to prosper."
+> — Jean Chardin, French jeweler and traveler, on Shah Abbas I, in his *Travels in Persia* (published 1686 and 1711). Chardin lived in Isfahan in the 1660s and 1670s, decades after Abbas died in 1629.
 
-2) What concept describes making evidence-based claims about Islamic Empires (1450–1750)?
+### What to Notice
+- **Point of view:** Chardin was a merchant who sold jewels to the Safavid court. He knew the court well but saw it as a foreign visitor.
+- **Claim type:** this is a **causal claim** about one ruler's importance, made long after the fact.
+- **Corroboration:** later events support part of it: weaker shahs, a weaker army, and the fall of Isfahan in 1722.
+- **Limitation:** it credits one man and ignores structural causes, such as dependence on the shah's personal control of the army and the silk trade.
+`
+    },
+    {
+      id: 'whislami6-quiz2',
+      type: 'multiple-choice' as const,
+      content: `
+**Stimulus Set 2** 🎯
 
-3) Name the term for using geographic thinking to analyze Islamic Empires (1450–1750).
-
-Use the exact term from this part.
+*Use the Chardin excerpt above.*
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'Starts with: D',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: Data interpretation (Analyzing maps, graphs, and tables related to Islamic Empires (1450–1750)), Argumentation (Making evidence-based claims about Islamic Empires (1450–1750)), and Spatial reasoning (Using geographic thinking to analyze Islamic Empires (1450–1750)).'
+        questions: [
+          {
+            question: "Which later development most directly supports Chardin's claim?",
+            options: [
+              "The Afghan capture of Isfahan in 1722",
+              "The Ottoman victory at Chaldiran in 1514",
+              "Ismail I's conversion of Iran to Shi'ism",
+              "Shah Abbas I's resettlement of Armenians"
+            ],
+            correctAnswer: 0,
+            explanation: "The collapse of the Safavid capital in 1722 fits Chardin's view that the state weakened after Abbas I. Chaldiran and Ismail's conversion came before Abbas, and the Armenian resettlement happened during his reign."
+          },
+          {
+            question: "Which of the following is the most important limitation of Chardin's excerpt as evidence of why the Safavid state weakened?",
+            options: [
+              "It attributes a long decline to the loss of a single ruler",
+              "It was written by someone who never visited Iran",
+              "It was written by a Safavid official praising his own shah",
+              "It was written before Shah Abbas I came to the throne"
+            ],
+            correctAnswer: 0,
+            explanation: "Chardin explains Safavid weakness through one man's death, leaving out structural causes such as the army and the dependence on royal control. He lived in Isfahan for years, was not a Safavid official, and wrote decades after Abbas I died."
+          }
+        ]
       }
+    },
+    {
+      id: 'whislami6-leq',
+      type: 'text' as const,
+      content: `
+## Building an LEQ Argument
+
+**Prompt (modeled on the 2027 single-prompt format):** *From 1450 to 1750, rulers of land-based empires used a variety of methods to legitimize and consolidate their power. Develop an argument that evaluates the extent to which religion was the most important of these methods in the Ottoman, Safavid and Mughal empires.*
+
+### Rubric (6 points)
+| Point | What earns it |
+|---|---|
+| **Thesis (1)** | A defensible claim with a line of reasoning |
+| **Contextualization (1)** | Broader developments before or during the period, explained in several sentences |
+| **Evidence (2)** | Specific examples (1), used to support the argument (2) |
+| **Analysis and reasoning (2)** | Uses comparison, causation or CCOT (1); shows complexity (2) |
+
+### Thesis: Weak vs. Strong
+- ❌ *"Religion was used by all three empires in many ways."* Not an evaluation, and no line of reasoning.
+- ✅ *"Religion was central to legitimacy in the Safavid state, which built a Shi'a identity from above. In the Ottoman and Mughal empires, however, loyal military elites and revenue systems mattered more, because these rulers governed subjects of many faiths."*
+
+### Contextualization Starter
+*Before 1450, the Mongol and Timurid empires had shown that steppe dynasties could conquer vast areas but often failed to hold them. Their successors combined Turkic military traditions with Islamic law, Persian court culture and new gunpowder weapons to build longer-lasting states...*
+
+### Complexity Moves for This Prompt
+- Show that religion and administration **worked together**: the devshirme converted recruits to Islam.
+- Show **change over time**: Akbar's inclusive policy vs. Aurangzeb's reversal.
+- Show **comparison**: top-down Safavid conversion vs. Ottoman management of non-Muslim communities.
+`
     },
     {
       id: 'whislami6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Score the Thesis** 🔍
+
+*For each thesis written for the LEQ prompt above, choose the best description.*
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Analyzing maps, graphs, and tables related to Islamic Empires (1450–1750) is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
+            label: '"Religion was used in the Ottoman, Safavid and Mughal empires." This thesis ___',
+            options: ['Only restates the prompt', 'Earns the thesis point', 'Is not historically defensible', 'Shows complexity on its own']
           },
           {
-            label: 'Making evidence-based claims about Islamic Empires (1450–1750) describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
+            label: '"Religion mattered most for the Safavids, who imposed Shi\'ism, but the Ottomans and Mughals relied more on loyal military elites to rule diverse subjects." This thesis ___',
+            options: ['Earns the thesis point', 'Only restates the prompt', 'Is not historically defensible', 'Lacks any claim']
           },
           {
-            label: 'Using geographic thinking to analyze Islamic Empires (1450–1750) is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
+            label: '"Religion played no role in any of the three empires." This thesis ___',
+            options: ['Is not historically defensible', 'Earns the thesis point', 'Only restates the prompt', 'Shows complexity on its own']
           }
         ],
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Data interpretation — Analyzing maps, graphs, and tables related to Islamic Empires (1450–1750). Argumentation — Making evidence-based claims about Islamic Empires (1450–1750). Spatial reasoning — Using geographic thinking to analyze Islamic Empires (1450–1750).'
-      }
-    },
-    {
-      id: 'whislami6-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of Islamic Empires (1450–1750).
-- **Spatial reasoning** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about problem-solving workshop, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect problem-solving workshop to broader themes in AP World History for higher scores.
-      `
-    },
-    {
-      id: 'whislami6-applied',
-      type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'You are given a data table about Islamic Empires (1450–1750) and asked to identify a trend. You should:',
-            options: [
-              'Pick random numbers',
-              'Look for consistent increases, decreases, or patterns across the data',
-              'Ignore the table',
-              'Only read the first row'
-            ],
-            correctAnswer: 1,
-            explanation: 'Trend identification requires examining the entire dataset for consistent patterns of change.'
-          },
-          {
-            question: 'A free-response question asks you to use evidence to support an argument about Islamic Empires (1450–1750). The best approach is:',
-            options: [
-              'State your opinion without evidence',
-              'Make a clear claim, cite specific data or examples, and explain how they support your argument',
-              'Copy the question',
-              'Write about a different topic'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP free-response answers require a clear thesis, specific supporting evidence, and explanation of how evidence supports the argument.'
-          }
-        ]
+        correctAnswers: ['Only restates the prompt', 'Earns the thesis point', 'Is not historically defensible'],
+        hint1: 'Does it make a claim the prompt did not already make?',
+        hint2: 'Look for a claim plus a reason.',
+        hint3: 'Could evidence support it at all?',
+        explanation: 'The first only repeats the prompt. The second makes a defensible claim with a line of reasoning. The third contradicts the evidence, since all three dynasties used religion to legitimize rule.'
       }
     }
   ]

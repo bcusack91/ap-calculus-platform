@@ -45,11 +45,11 @@ The Ottomans built one of the most powerful and long-lasting empires in world hi
 | **1299** | Osman I founds the Ottoman dynasty in Anatolia |
 | **1453** | Mehmed II conquers Constantinople → renamed Istanbul; ends the Byzantine Empire |
 | **1520–1566** | **Suleiman the Magnificent** — empire reaches greatest extent |
-| **1529** | Siege of Vienna — Ottoman expansion into Europe halted |
+| **1529** | First siege of Vienna fails, but Ottoman expansion in Europe continues until the failed second siege (1683) and the Treaty of Karlowitz (1699) |
 
 ### Government & Administration
 
-- **Sultan** held absolute political and religious authority (title: *Caliph* after 1517 conquest of Egypt)
+- **Sultan** held supreme political authority. After conquering the Mamluks (1516–1517) he became protector of Mecca and Medina, which added religious prestige. Sultans used the title *caliph* only occasionally until the late 1700s, and religious law was run by the ulama under the chief mufti (*şeyhülislam*)
 - **Devshirme system** — Christian boys from the Balkans were recruited, converted to Islam, and trained as elite soldiers (**Janissaries**) or administrators
 - **Millet system** — religious minorities (Christians, Jews) governed their own communities in exchange for taxes and loyalty
 - **Provincial governors (pashas)** administered distant regions with significant autonomy
@@ -123,7 +123,7 @@ The Safavids ruled Persia (modern-day Iran) and established **Twelver Shi'a Isla
 - **Shah** held absolute authority, claiming descent from Shi'a Imams
 - **Qizilbash** — Turkic tribal warriors who provided military power (later replaced by slave soldiers similar to Janissaries)
 - **Isfahan** became one of the world's most beautiful cities — "Isfahan is half the world" was a common saying
-- Women in elite households had **more legal protections** than in Ottoman or Mughal society (property rights, divorce rights)
+- Women's legal position was broadly similar across all three empires: Islamic law let women own and inherit property and go to court, and royal women funded mosques and other buildings
 
 ### Conflict with Ottomans
 - The Safavid-Ottoman rivalry was both **territorial and religious** — Shi'a vs. Sunni
@@ -151,11 +151,11 @@ The Mughals ruled the Indian subcontinent, governing a vast and religiously dive
 | **Aurangzeb** | 1658–1707 | **Reversed** Akbar's tolerance; reinstated jizya; expanded territory but destabilized the empire |
 
 ### Religious Diversity as a Governance Challenge
-- Akbar's approach: **inclusion** — appointed Hindu generals (Rajputs), created the syncretic religion *Din-i-Ilahi*, held interfaith debates (Ibadat Khana)
+- Akbar's approach: **inclusion** — appointed Hindu generals (Rajputs), formed the *Din-i Ilahi*, a small circle of court disciples devoted to the emperor that drew on several faiths (not a mass religion), held interfaith debates (Ibadat Khana)
 - Aurangzeb's approach: **exclusion** — destroyed Hindu temples, imposed strict Islamic law, triggered rebellions (Marathas, Sikhs)
 
 ### Economy & Culture
-- Controlled Indian Ocean trade in textiles, spices, and gems
+- Exported cotton textiles and indigo through Indian Ocean ports such as **Surat**, but the Mughal state was land-based with little navy; Indian, Arab and later European merchants carried the sea trade
 - **Mughal miniature painting** blended Persian and Indian artistic traditions
 - Architecture: Taj Mahal, Red Fort, Jama Masjid
 
