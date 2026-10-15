@@ -161,21 +161,21 @@ A **heterogeneous mixture** has a **non-uniform composition** — you can see or
               'True solution',
               'Colloid',
               'Pure substance',
-              'Element'
+              'Saturated solution'
             ],
             correctAnswer: 1,
-            explanation: 'The Tyndall effect — visible scattering of a light beam — is characteristic of colloids. True solutions are transparent and do not scatter light.'
+            explanation: 'The Tyndall effect — visible scattering of a light beam — is characteristic of colloids. True solutions, including saturated ones, are transparent and do not scatter light, and neither does a pure substance.'
           },
           {
             question: 'Which of these mixtures would separate on standing?',
             options: [
               'Sugar dissolved in water',
-              'Fog',
+              'Homogenized milk',
               'Muddy water',
-              'Air'
+              'Food coloring in water'
             ],
             correctAnswer: 2,
-            explanation: 'Muddy water is a suspension. The solid particles are large enough (>1000 nm) that gravity will cause them to settle out over time. Solutions and colloids do not settle.'
+            explanation: 'Muddy water is a suspension. The solid particles are large enough (>1000 nm) that gravity will cause them to settle out over time. Solutions (sugar water, food coloring in water) and colloids (homogenized milk) do not settle.'
           }
         ]
       }
@@ -269,16 +269,16 @@ A **heterogeneous mixture** has a **non-uniform composition** — you can see or
           {
             question: 'Which property BEST distinguishes a colloid from a true solution?',
             options: [
-              'Color of the mixture',
+              'Whether it passes filter paper',
               'Whether it conducts electricity',
-              'The Tyndall effect (light scattering)',
-              'Whether it can be stirred'
+              'Whether it scatters a beam of light',
+              'Whether it settles out on standing'
             ],
             correctAnswer: 2,
-            explanation: 'The Tyndall effect is the defining test for colloids. Colloid particles are large enough to scatter light, while solution particles are not. This creates a visible beam when light passes through a colloid.'
+            explanation: 'The Tyndall effect (light scattering) is the defining test for colloids. Colloid particles are large enough to scatter light, while solution particles are not, so a visible beam appears only in the colloid. Both colloids and solutions pass through filter paper and neither settles on standing, so those tests cannot tell them apart.'
           },
           {
-            question: 'A mixture has variable composition, its components retain their chemical identities, and it can be separated by physical means. This describes:',
+            question: 'A sample has variable composition, its components retain their chemical identities, and it can be separated by physical means. This describes:',
             options: [
               'A compound',
               'An element',

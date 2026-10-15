@@ -197,13 +197,13 @@ $$\\boxed{\\text{Acid} + \\text{Base} \\rightarrow \\text{Salt} + \\text{Water}}
           {
             question: 'Which is a driving force for a double replacement reaction?',
             options: [
-              'The reaction releases heat',
-              'Both products are soluble',
+              'Heat, light, or sound is released',
+              'All products remain dissolved as ions',
               'A precipitate, gas, or water forms',
               'A more reactive metal is present'
             ],
             correctAnswer: 2,
-            explanation: 'Double replacement reactions are driven by the formation of a precipitate (insoluble solid), a gas that escapes, or water (a stable molecular compound). Without one of these driving forces, no reaction occurs.'
+            explanation: 'Double replacement reactions are driven by the formation of a precipitate (insoluble solid), a gas that escapes, or water (a stable molecular compound). Without one of these driving forces, no reaction occurs. Releasing heat is not required, and if every product stays dissolved as ions, nothing has actually changed.'
           }
         ]
       }
@@ -223,8 +223,7 @@ For each scenario, indicate if a reaction occurs. Type the **chemical formula of
 **3)** $\\text{Ag} + \\text{HCl} \\rightarrow$ ? (Silver is below hydrogen in the activity series)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Cu', 'Ag', 'NR'],
+        questions: [{ question: '(1)', answer: 'Cu', acceptableAnswers: ['Cu', 'copper'] }, { question: '(2)', answer: 'Ag', acceptableAnswers: ['Ag', 'silver'] }, { question: '(3)', answer: 'NR', acceptableAnswers: ['NR', 'no reaction'] }],
         hint1: 'Fe is more reactive than Cu, so Fe replaces Cu. What solid metal is released?',
         hint2: 'Cu is more reactive than Ag, so Cu replaces Ag. What solid metal is released?',
         hint3: 'Silver is below hydrogen — can it displace H from an acid?',
@@ -275,12 +274,12 @@ For each scenario, indicate if a reaction occurs. Type the **chemical formula of
             question: 'When chlorine gas is bubbled through a solution of potassium iodide, the products are:',
             options: [
               'KCl + $I_{2}$',
-              'KI + $Cl_{2}$ (no reaction)',
-              'KClI + $O_{2}$',
-              'HCl + KOH'
+              'No reaction occurs',
+              'KCl + I',
+              '$KCl_{2}$ + $I_{2}$'
             ],
             correctAnswer: 0,
-            explanation: '$\\text{Cl}_2 + 2\\text{KI} \\rightarrow 2\\text{KCl} + \\text{I}_2$. Chlorine is above iodine in the halogen activity series, so $Cl_{2}$ displaces $I^{-}$ from KI. This is single replacement.'
+            explanation: '$\\text{Cl}_2 + 2\\text{KI} \\rightarrow 2\\text{KCl} + \\text{I}_2$. Chlorine is above iodine in the halogen activity series, so $Cl_{2}$ displaces $I^{-}$ from KI. This is single replacement. Free iodine is diatomic ($I_{2}$, not I), and potassium chloride is KCl because $K^{+}$ and $Cl^{-}$ combine 1:1.'
           },
           {
             question: 'Mixing solutions of lead(II) nitrate and potassium iodide produces a yellow precipitate. This reaction is:',

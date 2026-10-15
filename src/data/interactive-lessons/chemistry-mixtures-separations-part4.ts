@@ -163,7 +163,7 @@ Always measure at the wavelength of **maximum absorbance** ($\\lambda_{\\text{ma
             options: [
               'It gives the lowest absorbance reading',
               'It provides the greatest sensitivity and best linearity',
-              'It is the only wavelength the spectrophotometer can use',
+              'It is the only wavelength the instrument can use',
               'It eliminates the need for a calibration curve'
             ],
             correctAnswer: 1,
@@ -254,24 +254,24 @@ Always measure at the wavelength of **maximum absorbance** ($\\lambda_{\\text{ma
           {
             question: 'A calibration curve has a slope of 15.0 L/(mol·cm) using 1.00 cm cuvettes. An unknown solution gives A = 0.750. Its concentration is:',
             options: [
-              '0.0200 M',
+              '20.0 M',
               '0.0500 M',
-              '0.100 M',
+              '0.00500 M',
               '0.750 M'
             ],
             correctAnswer: 1,
-            explanation: 'Slope $= \\varepsilon b = 15.0$. $c = A/(\\varepsilon b) = 0.750/15.0 = 0.0500$ M.'
+            explanation: 'Slope $= \\varepsilon b = 15.0$. $c = A/(\\varepsilon b) = 0.750/15.0 = 0.0500$ M. Inverting the division gives 20.0 M, a decimal-place slip gives 0.00500 M, and using A itself as the concentration gives 0.750 M.'
           },
           {
             question: 'A solution has an absorbance of 1.0. What percentage of the incident light is transmitted?',
             options: [
-              '1%',
+              '37%',
               '10%',
-              '50%',
+              '0%',
               '90%'
             ],
             correctAnswer: 1,
-            explanation: '$T = 10^{-A} = 10^{-1.0} = 0.10 = 10\\%$. An absorbance of 1.0 means 90% of the light is absorbed and only 10% passes through.'
+            explanation: '$T = 10^{-A} = 10^{-1.0} = 0.10 = 10\\%$. An absorbance of 1.0 means 90% of the light is absorbed and only 10% passes through. Using $e^{-A}$ instead of $10^{-A}$ gives 37%, and treating T as $1 - A$ gives 0%.'
           }
         ]
       }

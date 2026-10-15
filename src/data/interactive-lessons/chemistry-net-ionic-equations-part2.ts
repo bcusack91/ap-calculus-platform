@@ -184,10 +184,10 @@ $$\\boxed{\\text{Ag}^+(aq) + \\text{NO}_3^-(aq) + \\text{Na}^+(aq) + \\text{Cl}^
               '$Ca^{2+}(aq)$ + $OH^{-}(aq)$',
               '$Ca^{2+}(aq)$ + $2OH^{-}(aq)$',
               'Ca(aq) + 2OH(aq)',
-              '$Ca^{2+}(aq)$ + $O^{2-}(aq)$ + $H^{+}(aq)$'
+              '$CaO(s)$ + $H_{2}O(l)$'
             ],
             correctAnswer: 1,
-            explanation: '$Ca(OH)_{2}$ dissociates into one $Ca^{2+}$ ion and TWO $OH^{-}$ ions. The formula unit contains 2 hydroxide groups, so you must write $2OH^{-}(aq)$.'
+            explanation: '$Ca(OH)_{2}$ dissociates into one $Ca^{2+}$ ion and TWO $OH^{-}$ ions. The formula unit contains 2 hydroxide groups, so you must write $2OH^{-}(aq)$. It does not break apart into CaO and water.'
           }
         ]
       }
@@ -261,10 +261,10 @@ For each ionic compound, type **soluble** or **insoluble**.
               '4',
               '5',
               '6',
-              '8'
+              '2'
             ],
             correctAnswer: 2,
-            explanation: '$Na_{2}SO_{4}(aq)$ → $2Na^{+}$ + $SO_{4}^{2-}$ (3 ions). $BaCl_{2}(aq)$ → $Ba^{2+}$ + $2Cl^{-}$ (3 ions). Total = 6 ions on the reactant side. Note: $BaSO_{4}(s)$ stays molecular on the product side.'
+            explanation: '$Na_{2}SO_{4}(aq)$ → $2Na^{+}$ + $SO_{4}^{2-}$ (3 ions). $BaCl_{2}(aq)$ → $Ba^{2+}$ + $2Cl^{-}$ (3 ions). Total = 6 ions on the reactant side. Ignoring the subscripts on Na and Cl gives 4, and 2 counts formula units rather than ions. Note: $BaSO_{4}(s)$ stays molecular on the product side.'
           },
           {
             question: 'Which complete ionic equation is correct for HCl(aq) + NaOH(aq) → NaCl(aq) + $H_{2}O(l)$?',

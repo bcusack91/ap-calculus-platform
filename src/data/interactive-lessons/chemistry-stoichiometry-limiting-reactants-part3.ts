@@ -134,11 +134,11 @@ $$\\boxed{\\text{excess O}_2 = 2.0 - 1.5 = 0.5 \\text{ mol O}_2}$$
             options: [
               '$N_{2}$',
               '$H_{2}$',
-              '$NH_{3}$',
+              'No reactant is limiting',
               'Both are limiting'
             ],
             correctAnswer: 1,
-            explanation: 'From $N_{2}$: 1 mol × 2/1 = 2 mol $NH_{3}$. From $H_{2}$: 2 mol × 2/3 = 1.33 mol $NH_{3}$. $H_{2}$ produces less product, so $H_{2}$ is the limiting reactant.'
+            explanation: 'From $N_{2}$: 1 mol × 2/1 = 2 mol $NH_{3}$. From $H_{2}$: 2 mol × 2/3 = 1.33 mol $NH_{3}$. $H_{2}$ produces less product, so $H_{2}$ is the limiting reactant. Having fewer moles does not make $N_{2}$ limiting, because the reaction needs 3 mol $H_{2}$ for every 1 mol $N_{2}$.'
           },
           {
             question: 'The limiting reactant is the one that:',
@@ -182,8 +182,7 @@ You start with **2.0 mol $N_{2}$** and **5.0 mol $H_{2}$**.
 **3)** Which is limiting? Type **N2** or **H2**.
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['4.0', '3.3', 'H2'],
+        questions: [{ question: '(1)', answer: '4.0', acceptableAnswers: ['4.0'] }, { question: '(2)', answer: '3.3', acceptableAnswers: ['3.3', '3.33', '10/3'] }, { question: '(3)', answer: 'H2', acceptableAnswers: ['H2', 'H₂', 'hydrogen'] }],
         hint1: '2.0 mol $N_{2}$ × (2 mol $NH_{3}$ / 1 mol $N_{2}$).',
         hint2: '5.0 mol $H_{2}$ × (2 mol $NH_{3}$ / 3 mol $H_{2}$).',
         hint3: 'Which reactant produces less $NH_{3}$?',
@@ -244,13 +243,13 @@ You start with **2.0 mol $N_{2}$** and **5.0 mol $H_{2}$**.
           {
             question: 'Given $\\text{CH}_4 + 2\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\text{H}_2\\text{O}$, if 16.04 g of $CH_{4}$ ($M = 16.04$) reacts with 48.00 g of $O_{2}$ ($M = 32.00$), what mass of $CO_{2}$ ($M = 44.01$) is produced?',
             options: [
-              '22.0 g',
+              '132 g',
               '33.0 g',
               '44.0 g',
               '66.0 g'
             ],
             correctAnswer: 1,
-            explanation: 'Moles $CH_{4}$: 16.04/16.04 = 1.000 mol. Moles $O_{2}$: 48.00/32.00 = 1.500 mol. From $CH_{4}$: 1.000 × 1 = 1.000 mol $CO_{2}$. From $O_{2}$: 1.500 × 1/2 = 0.750 mol $CO_{2}$. $O_{2}$ produces less → $O_{2}$ is limiting. $CO_{2}$ produced: 0.750 × 44.01 = 33.0 g.'
+            explanation: 'Moles $CH_{4}$: 16.04/16.04 = 1.000 mol. Moles $O_{2}$: 48.00/32.00 = 1.500 mol. From $CH_{4}$: 1.000 × 1 = 1.000 mol $CO_{2}$. From $O_{2}$: 1.500 × 1/2 = 0.750 mol $CO_{2}$. $O_{2}$ produces less → $O_{2}$ is limiting. $CO_{2}$ produced: 0.750 × 44.01 = 33.0 g. Treating $CH_{4}$ as limiting gives 44.0 g, skipping the 1:2 ratio gives 66.0 g, and inverting it gives 132 g.'
           }
         ]
       }

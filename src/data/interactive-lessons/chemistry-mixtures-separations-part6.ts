@@ -111,10 +111,10 @@ $$\\boxed{c_{\\text{original}} = c_{\\text{measured}} \\times \\frac{V_{\\text{t
               'Filtration',
               'Simple distillation',
               'Fractional crystallization',
-              'Magnetism'
+              'Paper chromatography'
             ],
             correctAnswer: 2,
-            explanation: 'Both salts are dissolved (filtration won\'t work) and both are non-volatile (distillation gives only water). Fractional crystallization exploits differences in solubility at different temperatures to crystallize one salt at a time.'
+            explanation: 'Both salts are dissolved (filtration won\'t work) and both are non-volatile (distillation gives only water). Paper chromatography separates tiny amounts for identification, not bulk salts. Fractional crystallization exploits differences in solubility at different temperatures to crystallize one salt at a time.'
           },
           {
             question: 'A student needs to determine the concentration of $Cu^{2+}$ ions in a blue solution. The best method is:',
@@ -130,13 +130,13 @@ $$\\boxed{c_{\\text{original}} = c_{\\text{measured}} \\times \\frac{V_{\\text{t
           {
             question: 'To determine the percentage of $CaCO_{3}$ in an antacid tablet, a back titration is preferred because:',
             options: [
-              '$CaCO_{3}$ is colored',
-              '$CaCO_{3}$ is a strong acid',
+              '$CaCO_{3}$ is colored and would mask the indicator',
+              '$CaCO_{3}$ is a strong base that reacts violently',
               '$CaCO_{3}$ is insoluble and reacts slowly with acid',
-              '$CaCO_{3}$ is volatile'
+              '$CaCO_{3}$ dissolves too quickly to titrate directly'
             ],
             correctAnswer: 2,
-            explanation: '$CaCO_{3}$ is insoluble and dissolves slowly in acid, making direct titration impractical. In a back titration, excess acid is added first, then the unreacted acid is titrated with a base.'
+            explanation: '$CaCO_{3}$ is insoluble and dissolves slowly in acid, making direct titration impractical. In a back titration, excess acid is added first, then the unreacted acid is titrated with a base. $CaCO_{3}$ is white, is only a weak base, and dissolves slowly, not quickly.'
           }
         ]
       }
@@ -183,7 +183,7 @@ $$\\boxed{c_{\\text{original}} = c_{\\text{measured}} \\times \\frac{V_{\\text{t
         dropdowns: [
           {
             id: 'mx6-dd1',
-            label: 'Separating plant pigments (chlorophyll a, chlorophyll b, carotenoids) is a',
+            label: 'Separating plant pigments (chlorophyll a, chlorophyll b, carotenoids) is a classic use of _______',
             options: ['filtration', 'chromatography', 'distillation', 'spectroscopy'],
             correctIndex: 1,
             explanation: 'Separating plant pigments (chlorophyll a, chlorophyll b, carotenoids) is a classic chromatography application.'
@@ -197,7 +197,7 @@ $$\\boxed{c_{\\text{original}} = c_{\\text{measured}} \\times \\frac{V_{\\text{t
           },
           {
             id: 'mx6-dd3',
-            label: 'Determining the concentration of food dye in a drink uses Beer\'s Law and a sp...',
+            label: 'Finding the concentration of a food dye in a drink from how much light it absorbs uses _______',
             options: ['filtration', 'chromatography', 'distillation', 'spectroscopy'],
             correctIndex: 3,
             explanation: 'Determining the concentration of food dye in a drink uses Beer\'s Law and a spectrophotometer.'
@@ -226,10 +226,10 @@ $$\\boxed{c_{\\text{original}} = c_{\\text{measured}} \\times \\frac{V_{\\text{t
               '0.0030 M',
               '0.030 M',
               '0.30 M',
-              '3.0 M'
+              '33 M'
             ],
             correctAnswer: 2,
-            explanation: '$c_{\\text{diluted}} = 0.360/12.0 = 0.030$ M. Original $= 0.030 \\times 10 = 0.30$ M.'
+            explanation: '$c_{\\text{diluted}} = 0.360/12.0 = 0.030$ M. Original $= 0.030 \\times 10 = 0.30$ M. Forgetting the dilution gives 0.030 M, dividing by 10 instead of multiplying gives 0.0030 M, and inverting $0.360/12.0$ gives about 33 M.'
           },
           {
             question: 'Which sequence correctly separates a mixture of sand, salt, and iron filings?',

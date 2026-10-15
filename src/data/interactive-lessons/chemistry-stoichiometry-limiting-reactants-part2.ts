@@ -159,7 +159,7 @@ $$51.0 \\; \\cancel{\\text{g Al}_2\\text{O}_3} \\times \\frac{1 \\; \\cancel{\\t
             options: [
               'grams A → grams B directly',
               'grams A → moles A → moles B → grams B',
-              'moles A → grams A → grams B → moles B',
+              'moles A → grams A → grams B',
               'grams A → moles B → grams B'
             ],
             correctAnswer: 1,
@@ -170,18 +170,18 @@ $$51.0 \\; \\cancel{\\text{g Al}_2\\text{O}_3} \\times \\frac{1 \\; \\cancel{\\t
             options: [
               '58.4 g',
               '116.9 g',
-              '29.2 g',
-              '175.3 g'
+              '46.0 g',
+              '233.8 g'
             ],
             correctAnswer: 1,
-            explanation: 'Moles Na: 46.0/23.0 = 2.00 mol. Mole ratio: 2 mol NaCl / 2 mol Na = 1. Moles NaCl = 2.00 mol. Grams NaCl = 2.00 × 58.44 = 116.9 g.'
+            explanation: 'Moles Na: 46.0/23.0 = 2.00 mol. Mole ratio: 2 mol NaCl / 2 mol Na = 1. Moles NaCl = 2.00 mol. Grams NaCl = 2.00 × 58.44 = 116.9 g. Using a 2:1 ratio gives 58.4 g, multiplying by the coefficient 2 again gives 233.8 g, and 46.0 g assumes the mass of Na carries straight over.'
           },
           {
             question: 'In the conversion grams A → moles A, you divide by:',
             options: [
               'Avogadro\'s number',
               'The molar mass of A',
-              'The coefficient of A',
+              'A\'s coefficient',
               'The mole ratio'
             ],
             correctAnswer: 1,
@@ -260,11 +260,11 @@ Molar masses: $Fe_{2}O_{3}$ = 159.7 g/mol, CO = 28.01 g/mol, Fe = 55.85 g/mol, $
             options: [
               '56.1 g',
               '87.9 g',
-              '100.1 g',
+              '357.0 g',
               '112.1 g'
             ],
             correctAnswer: 3,
-            explanation: 'Moles $CaCO_{3}$: 200.0/100.09 = 1.998 mol. Mole ratio: 1:1 → 1.998 mol CaO. Grams CaO: 1.998 × 56.08 = 112.1 g.'
+            explanation: 'Moles $CaCO_{3}$: 200.0/100.09 = 1.998 mol. Mole ratio: 1:1 → 1.998 mol CaO. Grams CaO: 1.998 × 56.08 = 112.1 g. Stopping at 1 mol gives 56.1 g, 87.9 g is the mass of $CO_{2}$ released, and flipping the molar masses ($200.0 \\times 100.09/56.08$) gives 357.0 g.'
           },
           {
             question: 'In the reaction $2\\text{H}_2 + \\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}$, if 4.04 g of $H_{2}$ reacts completely, how many grams of $O_{2}$ are consumed? ($M_{\\text{H}_2}$ = 2.016, $M_{\\text{O}_2}$ = 32.00)',
@@ -272,10 +272,10 @@ Molar masses: $Fe_{2}O_{3}$ = 159.7 g/mol, CO = 28.01 g/mol, Fe = 55.85 g/mol, $
               '16.0 g',
               '32.0 g',
               '64.0 g',
-              '8.0 g'
+              '128 g'
             ],
             correctAnswer: 1,
-            explanation: 'Moles $H_{2}$: 4.04/2.016 = 2.00 mol. Ratio: 1 mol $O_{2}$ / 2 mol $H_{2}$ → 1.00 mol $O_{2}$. Grams: 1.00 × 32.00 = 32.0 g $O_{2}$.'
+            explanation: 'Moles $H_{2}$: 4.04/2.016 = 2.00 mol. Ratio: 1 mol $O_{2}$ / 2 mol $H_{2}$ → 1.00 mol $O_{2}$. Grams: 1.00 × 32.00 = 32.0 g $O_{2}$. Skipping the ratio gives 64.0 g, inverting it gives 128 g, and using 16.00 g/mol (atomic O) gives 16.0 g.'
           }
         ]
       }

@@ -154,13 +154,13 @@ $$n = \\frac{PV}{RT} = \\frac{(2.50)(5.00)}{(0.0821)(350)} = 0.435 \\text{ mol}$
           {
             question: 'A student calculates the volume of a gas and gets a negative number. What is the most likely error?',
             options: [
-              'Used the wrong value of R',
-              'Forgot to convert temperature to Kelvin',
-              'Made an arithmetic error in multiplication',
-              'Used the wrong molar mass'
+              'Used R = 8.314 instead of 0.0821',
+              'Left the temperature in Celsius',
+              'Divided by pressure instead of multiplying',
+              'Used grams instead of moles for n'
             ],
             correctAnswer: 1,
-            explanation: 'Negative volume is physically impossible. The most common cause is using Celsius instead of Kelvin. For example, $-10°C$ as the temperature would give a negative answer if not converted to $263$ K.'
+            explanation: 'Negative volume is physically impossible, and only a negative temperature can make $nRT/P$ negative. The most common cause is using Celsius instead of Kelvin: $-10°C$ entered as $-10$ instead of $263$ K gives a negative answer. The wrong R, a grams-for-moles slip, or dividing instead of multiplying gives a wrong size, but still a positive number.'
           }
         ]
       }
@@ -218,8 +218,8 @@ Use $R = 0.0821$ L·atm/(mol·K). Round to appropriate significant figures.
             id: 'gl3-dd2',
             label: 'If you add more gas at constant P and T, volume will ___',
             options: ['increase', 'decrease', 'stay the same'],
-            correctIndex: 1,
-            explanation: 'Adding gas (increasing n) at constant P and T means V must increase, so density ($m/V$) depends on the specifics — but at constant V and T, adding gas increases P, not decreases it. At constant P and T, V increases, so $n/V$ stays the same.'
+            correctIndex: 0,
+            explanation: 'At constant P and T, volume is directly proportional to moles (Avogadro\'s Law), so adding gas makes the volume increase. The ratio $n/V$ stays the same.'
           },
           {
             id: 'gl3-dd3',
@@ -267,21 +267,21 @@ Use $R = 0.0821$ L·atm/(mol·K). Round to appropriate significant figures.
               '3.08 L',
               '6.16 L',
               '12.3 L',
-              '1.54 L'
+              '312 L'
             ],
             correctAnswer: 0,
-            explanation: '$V = nRT/P = (0.250)(0.0821)(300)/2.00 = 6.1575/2.00 = 3.08$ L.'
+            explanation: '$V = nRT/P = (0.250)(0.0821)(300)/2.00 = 6.1575/2.00 = 3.08$ L. Forgetting to divide by P gives 6.16 L, multiplying by P gives 12.3 L, and using R = 8.314 with pressure in atm gives 312 L.'
           },
           {
             question: 'A 10.0 L container at 400 K has a pressure of 3.00 atm. How many moles of gas are present?',
             options: [
-              '0.456 mol',
+              '1.09 mol',
               '0.913 mol',
-              '1.22 mol',
-              '2.44 mol'
+              '0.00902 mol',
+              '0.0750 mol'
             ],
             correctAnswer: 1,
-            explanation: '$n = PV/(RT) = (3.00)(10.0)/((0.0821)(400)) = 30.0/32.84 = 0.913$ mol.'
+            explanation: '$n = PV/(RT) = (3.00)(10.0)/((0.0821)(400)) = 30.0/32.84 = 0.913$ mol. Inverting the fraction gives 1.09 mol, using R = 8.314 with atm gives 0.00902 mol, and leaving out R gives 0.0750 mol.'
           },
           {
             question: 'If you double both the temperature and the volume of an ideal gas (constant n), the pressure will:',
@@ -308,35 +308,35 @@ Use $R = 0.0821$ L·atm/(mol·K). Round to appropriate significant figures.
           {
             question: 'A student solves for temperature and gets T = -50 K. What went wrong?',
             options: [
-              'They forgot to convert volume to liters',
-              'They used the wrong value of R',
-              'Negative Kelvin is impossible — there must be a calculation error',
-              'They forgot to include moles in the equation'
+              'Nothing, the gas is simply colder than absolute zero',
+              'The gas behaved non-ideally at such a low temperature',
+              'Some step is wrong; Kelvin cannot be negative',
+              'They only need to report the absolute value, 50 K'
             ],
             correctAnswer: 2,
-            explanation: 'Kelvin temperature can never be negative. A negative K value indicates a mathematical error somewhere in the calculation (wrong units, sign error, etc.).'
+            explanation: 'Kelvin temperature can never be negative, because 0 K is absolute zero. A negative K value means a mistake somewhere in the calculation (wrong units, sign error, etc.); taking the absolute value or blaming non-ideal behavior does not fix it.'
           },
           {
             question: 'What is the pressure exerted by 1.50 mol of gas in a 5.00 L container at 25°C?',
             options: [
               '7.34 atm',
-              '3.67 atm',
-              '14.7 atm',
-              '0.367 atm'
+              '0.616 atm',
+              '184 atm',
+              '36.7 atm'
             ],
             correctAnswer: 0,
-            explanation: '$T = 25 + 273.15 = 298.15$ K. $P = nRT/V = (1.50)(0.0821)(298.15)/5.00 = 36.7/5.00 = 7.34$ atm.'
+            explanation: '$T = 25 + 273.15 = 298.15$ K. $P = nRT/V = (1.50)(0.0821)(298.15)/5.00 = 36.7/5.00 = 7.34$ atm. Using 25 instead of 298.15 K gives 0.616 atm, forgetting to divide by V gives 36.7 atm, and multiplying by V gives 184 atm.'
           },
           {
             question: 'At STP, what volume does 0.500 mol of any ideal gas occupy?',
             options: [
-              '5.60 L',
+              '12.2 L',
               '11.2 L',
               '22.4 L',
               '44.8 L'
             ],
             correctAnswer: 1,
-            explanation: 'At STP, 1 mol = 22.4 L. So 0.500 mol = $0.500 \\times 22.4 = 11.2$ L.'
+            explanation: 'At STP, 1 mol = 22.4 L. So 0.500 mol = $0.500 \\times 22.4 = 11.2$ L. Using 24.5 L/mol (25°C) gives 12.2 L, forgetting the 0.500 gives 22.4 L, and dividing by 0.500 gives 44.8 L.'
           },
           {
             question: 'A gas at 1.00 atm and 273 K occupies 22.4 L. If heated to 546 K at constant pressure, the new volume is:',
@@ -347,7 +347,7 @@ Use $R = 0.0821$ L·atm/(mol·K). Round to appropriate significant figures.
               '44.8 L'
             ],
             correctAnswer: 3,
-            explanation: '$V_2 = V_1 \\times T_2/T_1 = 22.4 \\times (546/273) = 22.4 \\times 2 = 44.8$ L. Doubling temperature doubles volume at constant P.'
+            explanation: '$V_2 = V_1 \\times T_2/T_1 = 22.4 \\times (546/273) = 22.4 \\times 2 = 44.8$ L. Doubling temperature doubles volume at constant P. Adding 273 to temperatures that are already in kelvins gives $22.4 \\times (819/546) = 33.6$ L, and inverting the ratio gives 11.2 L.'
           }
         ]
       }

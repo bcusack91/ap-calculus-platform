@@ -141,10 +141,10 @@ $$\\boxed{\\text{mol of B} = \\text{mol of A} \\times \\frac{\\text{coefficient 
               '1.5 mol',
               '3.0 mol',
               '6.0 mol',
-              '9.0 mol'
+              '2.0 mol'
             ],
             correctAnswer: 2,
-            explanation: '$\\text{mol O}_2 = 3.0 \\text{ mol CH}_4 \\times \\frac{2 \\text{ mol O}_2}{1 \\text{ mol CH}_4} = 6.0 \\text{ mol O}_2$'
+            explanation: '$\\text{mol O}_2 = 3.0 \\text{ mol CH}_4 \\times \\frac{2 \\text{ mol O}_2}{1 \\text{ mol CH}_4} = 6.0 \\text{ mol O}_2$. Inverting the ratio gives 1.5 mol, assuming 1:1 gives 3.0 mol, and 2.0 mol is just the coefficient copied from the equation.'
           },
           {
             question: 'The mole ratio used in stoichiometry comes from:',
@@ -251,10 +251,10 @@ Use the equation: $2\\text{C}_2\\text{H}_6 + 7\\text{O}_2 \\rightarrow 4\\text{C
               '4.0 mol',
               '8.0 mol',
               '12.0 mol',
-              '16.0 mol'
+              '5.3 mol'
             ],
             correctAnswer: 2,
-            explanation: '$\\text{mol H}_2 = 8.0 \\text{ mol NH}_3 \\times \\frac{3 \\text{ mol H}_2}{2 \\text{ mol NH}_3} = 12.0$ mol $H_{2}$.'
+            explanation: '$\\text{mol H}_2 = 8.0 \\text{ mol NH}_3 \\times \\frac{3 \\text{ mol H}_2}{2 \\text{ mol NH}_3} = 12.0$ mol $H_{2}$. Inverting the ratio gives $8.0 \\times 2/3 = 5.3$ mol, 4.0 mol is the $N_{2}$ needed, and 8.0 mol assumes a 1:1 ratio.'
           }
         ]
       }

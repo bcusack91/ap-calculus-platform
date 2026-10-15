@@ -112,13 +112,13 @@ $$\\boxed{2\\text{H}^+(aq) + \\text{CO}_3^{2-}(aq) \\rightarrow \\text{H}_2\\tex
           {
             question: 'When solutions of $(NH_{4})_{2}SO_{4}$ and $Ba(OH)_{2}$ are mixed, what are the driving forces?',
             options: [
-              'Only a precipitate forms',
-              'Only a gas forms',
-              'Both a precipitate $(BaSO_{4})$ and a gas $(NH_{3})$ form',
+              'Only a $BaSO_{4}$ precipitate forms',
+              'Only $NH_{3}$ gas and water form',
+              '$BaSO_{4}$ precipitate and $NH_{3}$ gas',
               'No reaction occurs'
             ],
             correctAnswer: 2,
-            explanation: '$(NH_{4})_{2}SO_{4}$ + $Ba(OH)_{2}$ produces $BaSO_{4}(s)$ — an insoluble precipitate — AND $NH_{4}OH$, which decomposes to $NH_{3}(g)$ + $H_{2}O$. Two driving forces make this reaction highly favorable!'
+            explanation: '$(NH_{4})_{2}SO_{4}$ + $Ba(OH)_{2}$ produces $BaSO_{4}(s)$ — an insoluble precipitate — AND $NH_{4}OH$, which decomposes to $NH_{3}(g)$ + $H_{2}O$. Two driving forces make this reaction highly favorable, so naming only one of them is incomplete.'
           },
           {
             question: 'What is the net ionic equation for: $AgNO_{3}(aq)$ + NaBr(aq) → AgBr(s) + $NaNO_{3}(aq)$?',

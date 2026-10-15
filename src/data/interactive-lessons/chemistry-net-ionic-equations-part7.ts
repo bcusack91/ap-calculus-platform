@@ -112,17 +112,17 @@ On the AP Chemistry exam, you may be asked to:
             options: [
               '$\\text{H}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{H}_2\\text{O}(l)$',
               '$\\text{Ba}^{2+}(aq) + \\text{SO}_4^{2-}(aq) \\rightarrow \\text{BaSO}_4(s)$',
-              '$\\text{Ba}^{2+}(aq) + \\text{SO}_4^{2-}(aq) + \\text{H}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{BaSO}_4(s) + \\text{H}_2\\text{O}(l)$',
+              '$\\text{Ba}^{2+}(aq) + \\text{SO}_4^{2-}(aq) + 2\\text{H}^+(aq) + 2\\text{OH}^-(aq) \\rightarrow \\text{BaSO}_4(s) + 2\\text{H}_2\\text{O}(l)$',
               '$\\text{H}_2\\text{SO}_4(aq) + \\text{Ba(OH)}_2(aq) \\rightarrow \\text{BaSO}_4(s) + 2\\text{H}_2\\text{O}(l)$'
             ],
             correctAnswer: 2,
-            explanation: 'This reaction has TWO driving forces: $BaSO_{4}(s)$ precipitate AND $H_{2}O$ formation. There are NO spectator ions! Every ion participates. The net ionic equation includes all species.'
+            explanation: 'This reaction has TWO driving forces: $BaSO_{4}(s)$ precipitate AND $H_{2}O$ formation. There are NO spectator ions! Every ion participates. Each $H_{2}SO_{4}$ supplies 2 $H^{+}$ and each $Ba(OH)_{2}$ supplies 2 $OH^{-}$, so the balanced net ionic equation has $2H^{+}$ + $2OH^{-}$ → $2H_{2}O$.'
           },
           {
             question: 'Excess hydrochloric acid is added to a solution of potassium carbonate. What is observed?',
             options: [
               'A white precipitate forms',
-              'The solution turns blue',
+              'The solution changes color',
               'Bubbles of gas are produced',
               'No visible change occurs'
             ],
@@ -244,7 +244,7 @@ For each scenario, identify the precipitate formed (write formula) or type **NR*
             options: [
               'They show the spectator ions clearly',
               'They show only the species that undergo a chemical change',
-              'They make equations harder to balance',
+              'They show the full formula of every reactant',
               'They always involve precipitates'
             ],
             correctAnswer: 1,

@@ -203,7 +203,7 @@ $$\\text{Pb(NO}_3)_2 + 2\\text{KI} \\rightarrow \\text{PbI}_2\\downarrow + 2\\te
             question: 'Predict: $\\text{Al} + \\text{NiCl}_2 \\rightarrow$ ? (Al is above Ni in activity series)',
             options: [
               '$AlCl_{2}$ + Ni',
-              '$AlCl_{3}$ + Ni (after balancing)',
+              '$AlCl_{3}$ + Ni',
               'No reaction',
               'AlNi + $Cl_{2}$'
             ],
@@ -214,12 +214,12 @@ $$\\text{Pb(NO}_3)_2 + 2\\text{KI} \\rightarrow \\text{PbI}_2\\downarrow + 2\\te
             question: 'Predict the products of: $\\text{Na}_2\\text{SO}_4 + \\text{BaCl}_2 \\rightarrow$ ?',
             options: [
               'NaCl + $BaSO_{4}$',
-              'NaBa + $SO_{4}Cl_{2}$',
+              '$NaSO_{4}$ + $BaCl$',
               '$Na_{2}Cl_{2}$ + $BaSO_{4}$',
-              'No reaction'
+              'No reaction; all ions stay dissolved'
             ],
             correctAnswer: 0,
-            explanation: 'Double replacement: swap the cations. $Na^{+}$ pairs with $Cl^{-}$ → NaCl. $Ba^{2+}$ pairs with $SO_{4}^{2-}$ → $BaSO_{4}$ (insoluble precipitate — driving force!). Balanced: $\\text{Na}_2\\text{SO}_4 + \\text{BaCl}_2 \\rightarrow 2\\text{NaCl} + \\text{BaSO}_4\\downarrow$.'
+            explanation: 'Double replacement: swap the cations. $Na^{+}$ pairs with $Cl^{-}$ → NaCl. $Ba^{2+}$ pairs with $SO_{4}^{2-}$ → $BaSO_{4}$ (insoluble precipitate — driving force!). Balanced: $\\text{Na}_2\\text{SO}_4 + \\text{BaCl}_2 \\rightarrow 2\\text{NaCl} + \\text{BaSO}_4\\downarrow$. Writing $NaSO_{4}$ or BaCl ignores the ion charges.'
           }
         ]
       }

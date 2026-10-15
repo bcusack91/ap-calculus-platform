@@ -116,8 +116,8 @@ Notice: $H_{2}O$ has a large $a$ (strong H-bonds) but small $b$ (small molecule)
             options: [
               'The finite volume of gas molecules',
               'Intermolecular attractive forces',
-              'Non-elastic collisions',
-              'Molecular speed distribution'
+              'Energy lost in non-elastic collisions',
+              'The spread of molecular speeds in the gas'
             ],
             correctAnswer: 1,
             explanation: 'The $a$ parameter corrects for intermolecular attractions. These attractions pull molecules toward each other, reducing the observed pressure below what the ideal gas law predicts. The term $an^2/V^2$ is added back to the measured pressure.'
@@ -128,7 +128,7 @@ Notice: $H_{2}O$ has a large $a$ (strong H-bonds) but small $b$ (small molecule)
               'Less than predicted by ideal gas law',
               'Greater than predicted by ideal gas law',
               'Equal to ideal gas prediction',
-              'Zero'
+              'Close to zero, because the gas compresses completely'
             ],
             correctAnswer: 1,
             explanation: 'At very high pressures, the finite volume of molecules becomes significant ($nb$ term). This means the real gas cannot be compressed as much as an ideal gas would, so the actual volume is greater than predicted.'
@@ -218,13 +218,13 @@ Notice: $H_{2}O$ has a large $a$ (strong H-bonds) but small $b$ (small molecule)
           {
             question: 'A student collects 250 mL of $O_{2}$ over water at 22°C and 748 mmHg (vapor pressure of water at 22°C = 19.8 mmHg). Using the ideal gas law, the moles of dry $O_{2}$ collected is closest to:',
             options: [
-              '0.0078 mol',
-              '0.0098 mol',
+              '0.133 mol',
+              '0.0099 mol',
               '0.0102 mol',
-              '0.0125 mol'
+              '7.51 mol'
             ],
             correctAnswer: 1,
-            explanation: '$P_{O_2} = 748 - 19.8 = 728.2$ mmHg $= 728.2/760 = 0.9582$ atm. $V = 0.250$ L, $T = 295.15$ K. $n = PV/(RT) = (0.9582)(0.250)/((0.0821)(295.15)) = 0.2396/24.23 = 0.00989 \\approx 0.0098$ mol.'
+            explanation: '$P_{O_2} = 748 - 19.8 = 728.2$ mmHg $= 728.2/760 = 0.9582$ atm. $V = 0.250$ L, $T = 295.15$ K. $n = PV/(RT) = (0.9582)(0.250)/((0.0821)(295.15)) = 0.2396/24.23 = 0.00989 \\approx 0.0099$ mol. Skipping the vapor-pressure correction gives 0.0102 mol, using 22 instead of 295 K gives 0.133 mol, and leaving P in mmHg gives 7.51 mol.'
           },
           {
             question: 'Consider the reaction: $2\\text{H}_2(g) + \\text{O}_2(g) \\rightarrow 2\\text{H}_2\\text{O}(g)$. If 4.0 L of $H_{2}$ reacts with excess $O_{2}$ at constant T and P, the volume of $H_{2}O$ produced is:',
@@ -262,10 +262,10 @@ Notice: $H_{2}O$ has a large $a$ (strong H-bonds) but small $b$ (small molecule)
           {
             question: 'In the van der Waals equation, the "b" term corrects for:',
             options: [
-              'Intermolecular forces',
-              'Non-elastic collisions',
+              'Attractions between neighboring molecules',
+              'Kinetic energy lost in inelastic collisions',
               'The physical volume of gas molecules',
-              'Temperature dependence'
+              'The way pressure changes with temperature'
             ],
             correctAnswer: 2,
             explanation: 'The "b" term subtracts the volume occupied by the gas molecules themselves, correcting for the fact that real molecules have nonzero volume.'
@@ -273,7 +273,7 @@ Notice: $H_{2}O$ has a large $a$ (strong H-bonds) but small $b$ (small molecule)
           {
             question: 'A 5.00 L flask contains 0.200 mol of gas at 300 K. The gas is heated to 600 K in the sealed flask. The final pressure is:',
             options: [
-              'Half the initial pressure',
+              'Half of the initial pressure',
               'Equal to the initial pressure',
               'Twice the initial pressure',
               'Four times the initial pressure'
@@ -306,9 +306,9 @@ Notice: $H_{2}O$ has a large $a$ (strong H-bonds) but small $b$ (small molecule)
           {
             question: 'The compressibility factor $Z = PV/(nRT)$ is exactly 1.0 for:',
             options: [
-              'All real gases',
+              'All real gases at any conditions',
               'An ideal gas only',
-              'Any gas at STP',
+              'Any gas measured at STP',
               'Any gas at high pressure'
             ],
             correctAnswer: 1,

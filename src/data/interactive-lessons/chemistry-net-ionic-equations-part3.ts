@@ -162,8 +162,8 @@ $$\\text{Na}^+(aq) + \\text{Cl}^-(aq) + \\text{K}^+(aq) + \\text{NO}_3^-(aq) \\r
           {
             question: 'Which of the following is a driving force for a reaction to occur?',
             options: [
-              'Formation of a soluble salt',
-              'Both reactants being aqueous',
+              'A soluble salt forming',
+              'Both reactants dissolving',
               'Formation of a precipitate',
               'All ions being spectators'
             ],
@@ -175,7 +175,7 @@ $$\\text{Na}^+(aq) + \\text{Cl}^-(aq) + \\text{K}^+(aq) + \\text{NO}_3^-(aq) \\r
             options: [
               'A synthesis reaction occurs',
               'An acid-base reaction occurs',
-              'No reaction occurs (NR)',
+              'No reaction occurs',
               'A redox reaction always occurs instead'
             ],
             correctAnswer: 2,
@@ -203,8 +203,7 @@ For the net ionic equation $\\text{Ca}^{2+}(aq) + \\text{CO}_3^{2-}(aq) \\righta
 **3)** The sum of charges on the product side is:
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Cl, Na', '0', '0'],
+        questions: [{ question: '(1)', answer: 'Cl, Na', acceptableAnswers: ['Cl, Na', 'Na, Cl', 'Cl-, Na+', 'Na+, Cl-'] }, { question: '(2)', answer: '0', acceptableAnswers: ['0'] }, { question: '(3)', answer: '0', acceptableAnswers: ['0'] }],
         hint1: 'Which ions appear in the same form on both sides? $Na^{+}$ and $Cl^{-}$ don\'t change.',
         hint2: '$Ca^{2+}$ has +2 charge, $CO_{3}^{2-}$ has −2 charge. What is (+2) + (−2)?',
         hint3: '$CaCO_{3}(s)$ is a neutral solid compound. What is its charge?',
@@ -265,8 +264,8 @@ For the net ionic equation $\\text{Ca}^{2+}(aq) + \\text{CO}_3^{2-}(aq) \\righta
           {
             question: 'How many spectator ions are in the complete ionic equation for: $2AgNO_{3}(aq)$ + $Na_{2}CrO_{4}(aq)$ → $Ag_{2}CrO_{4}(s)$ + $2NaNO_{3}(aq)$?',
             options: [
-              '1 $(only Na^{+})$',
-              '2 $(Na^{+} and NO_{3}^{-})$',
+              '1 (only $Na^{+}$)',
+              '2 ($Na^{+}$ and $NO_{3}^{-}$)',
               '3 ($Na^{+}$, $NO_{3}^{-}$, and $CrO_{4}^{2-}$)',
               '4 ($Na^{+}$, $NO_{3}^{-}$, $Ag^{+}$, and $CrO_{4}^{2-}$)'
             ],

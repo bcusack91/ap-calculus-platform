@@ -174,13 +174,13 @@ $$\\text{CH}_4 + \\text{O}_2 \\rightarrow \\text{C} + 2\\text{H}_2\\text{O}$$
           {
             question: 'Incomplete combustion is dangerous primarily because:',
             options: [
-              'It produces too much $CO_{2}$',
-              'It produces carbon monoxide (CO), which is toxic',
-              'It creates too much heat',
-              'It consumes too much oxygen'
+              'It produces more $CO_{2}$ per gram of fuel',
+              'It produces toxic carbon monoxide',
+              'It releases more heat per gram of fuel',
+              'It uses more oxygen per gram of fuel'
             ],
             correctAnswer: 1,
-            explanation: 'Incomplete combustion produces carbon monoxide (CO), a colorless and odorless gas that is highly toxic. CO binds to hemoglobin more strongly than $O_{2}$, preventing oxygen transport in the blood.'
+            explanation: 'Incomplete combustion produces carbon monoxide (CO), a colorless and odorless gas that is highly toxic. CO binds to hemoglobin more strongly than $O_{2}$, preventing oxygen transport in the blood. Compared with complete combustion, it actually makes less $CO_{2}$, releases less heat, and uses less oxygen per gram of fuel.'
           },
           {
             question: 'A yellow, sooty flame indicates:',
@@ -213,8 +213,7 @@ Find the coefficient of $O_{2}$ needed for complete combustion. Enter just the n
 *Round all answers to 3 significant figures.*
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['2.5', '13', '3'],
+        questions: [{ question: '(1)', answer: '2.5', acceptableAnswers: ['2.5', '5/2'] }, { question: '(2)', answer: '13', acceptableAnswers: ['13'] }, { question: '(3)', answer: '3', acceptableAnswers: ['3'] }],
         hint1: 'Count O atoms on the right: 2(2) + 1 = 5 oxygen atoms. Each $O_{2}$ provides 2, so 5/2 = 2.5.',
         hint2: 'Right side: 8(2) + 10(1) = 26 oxygen atoms. Divide by 2: 26/2 = 13.',
         hint3: 'Right side: 2(2) + 3(1) = 7 oxygen atoms. The OH in ethanol provides 1, so need 6 more from $O_{2}$: 6/2 = 3.',
@@ -275,9 +274,9 @@ Find the coefficient of $O_{2}$ needed for complete combustion. Enter just the n
           {
             question: 'Which observation suggests incomplete combustion is occurring?',
             options: [
-              'A blue flame with no visible smoke',
+              'A steady blue flame with no visible smoke',
               'A yellow flame with black soot deposits',
-              'Clear, odorless exhaust',
+              'Clear, odorless exhaust gases leave the burner',
               'The reaction produces only $CO_{2}$ and $H_{2}O$'
             ],
             correctAnswer: 1,

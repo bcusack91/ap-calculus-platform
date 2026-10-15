@@ -105,12 +105,12 @@ AP free-response questions often ask how errors affect results:
             question: 'A student determines the mass of $BaSO_{4}$ precipitate but does not dry it completely before weighing. The reported mass percent of $SO_{4}^{2-}$ will be:',
             options: [
               'Too high, because the wet precipitate has extra mass',
-              'Too low, because water reduces the mass',
+              'Too low, because water dilutes the sulfate in the solid',
               'Unchanged, because water does not affect the calculation',
-              'Zero, because the experiment failed'
+              'Too low, because some sulfate stays dissolved in the water'
             ],
             correctAnswer: 0,
-            explanation: 'Wet precipitate weighs more than dry → student calculates more moles of $SO_{4}^{2-}$ than actually present → mass percent is reported as too high.'
+            explanation: 'Wet precipitate weighs more than dry → student calculates more moles of $SO_{4}^{2-}$ than actually present → mass percent is reported as too high. The water adds mass; it does not remove any $BaSO_{4}$ already collected.'
           },
           {
             question: 'In a Beer\'s Law experiment, a student uses a cuvette with a 2.00 cm path length instead of the standard 1.00 cm. If they use a calibration curve made with 1.00 cm cuvettes, the reported concentration will be:',
@@ -129,10 +129,10 @@ AP free-response questions often ask how errors affect results:
               '10%',
               '25%',
               '40%',
-              '50%'
+              '67%'
             ],
             correctAnswer: 2,
-            explanation: 'Total area ratio = 1+2+3+4 = 10 parts. Largest peak = 4 parts. Percent = $(4/10) \\times 100 = 40\\%$.'
+            explanation: 'Total area ratio = 1+2+3+4 = 10 parts. Largest peak = 4 parts. Percent = $(4/10) \\times 100 = 40\\%$. Comparing 4 to only the other peaks (4/6) gives 67%, and assuming equal shares gives 25%.'
           }
         ]
       }
@@ -179,21 +179,21 @@ AP free-response questions often ask how errors affect results:
         dropdowns: [
           {
             id: 'mx7-dd1',
-            label: 'Fingerprints on the cuvette absorb/scatter additional light',
+            label: 'Fingerprints left on the cuvette make the reported concentration _______',
             options: ['too high', 'too low', 'unaffected'],
             correctIndex: 0,
             explanation: 'Fingerprints on the cuvette absorb/scatter additional light, increasing the measured absorbance. Using this inflated absorbance with a calibration curve yields a concentration that is too high.'
           },
           {
             id: 'mx7-dd2',
-            label: 'If some precipitate is lost during filtration, the measured mass is less than',
+            label: 'Losing some precipitate during filtration makes the reported percent of that ion _______',
             options: ['too high', 'too low', 'unaffected'],
             correctIndex: 1,
             explanation: 'If some precipitate is lost during filtration, the measured mass is less than the true mass, so the calculated percentage of that ion will be too low.'
           },
           {
             id: 'mx7-dd3',
-            label: 'Overshooting the endpoint means you recorded a titrant volume that is too lar...',
+            label: 'Overshooting the titration endpoint makes the reported analyte concentration _______',
             options: ['too high', 'too low', 'unaffected'],
             correctIndex: 0,
             explanation: 'Overshooting the endpoint means you recorded a titrant volume that is too large. Since concentration calculation is proportional to titrant volume, the reported concentration of the analyte is too high.'
@@ -220,23 +220,23 @@ AP free-response questions often ask how errors affect results:
             question: 'A student wants to determine the amount of iron in a water sample. She adds a reagent that forms a colored complex with $Fe^{3+}$, measures the absorbance, and uses a calibration curve. Which analytical technique is she using?',
             options: [
               'Gravimetric analysis',
-              'Titration',
-              'Colorimetric spectroscopy (Beer\'s Law)',
-              'Chromatography'
+              'Acid-base titration',
+              'Spectrophotometry',
+              'Column chromatography'
             ],
             correctAnswer: 2,
-            explanation: 'The student is using spectroscopy (specifically colorimetry) with Beer\'s Law. The colored complex absorbs light, and the absorbance is used with a calibration curve to find the concentration of $Fe^{3+}$.'
+            explanation: 'The student is using spectrophotometry (colorimetry) with Beer\'s Law. The colored complex absorbs light, and the absorbance is used with a calibration curve to find the concentration of $Fe^{3+}$. No precipitate is weighed, no titrant is added, and nothing is separated.'
           },
           {
             question: 'Which of the following is the correct order of steps for a complete gravimetric analysis of chloride content?',
             options: [
-              'Dissolve sample → Add excess $AgNO_{3}$ → Filter → Dry → Weigh precipitate',
-              'Filter → Add $AgNO_{3}$ → Dissolve → Dry → Weigh',
-              'Weigh precipitate → Filter → Add $AgNO_{3}$ → Dissolve',
-              'Add $AgNO_{3}$ → Weigh → Filter → Dry → Dissolve'
+              'Dissolve sample → Add excess $AgNO_{3}$ → Filter → Dry → Weigh',
+              'Dissolve sample → Filter → Add $AgNO_{3}$ → Weigh → Dry',
+              'Add $AgNO_{3}$ → Dry → Filter → Dissolve sample → Weigh',
+              'Dissolve sample → Add $AgNO_{3}$ → Dry → Weigh → Filter'
             ],
             correctAnswer: 0,
-            explanation: 'The correct sequence: dissolve the sample, add excess precipitating agent $(AgNO_{3} for Cl^{-})$, filter to collect AgCl precipitate, dry it thoroughly, then weigh it. The mass of AgCl is used to calculate the amount of $Cl^{-}$.'
+            explanation: 'The correct sequence: dissolve the sample, add excess precipitating agent ($AgNO_{3}$ for $Cl^{-}$), filter to collect the AgCl precipitate, dry it thoroughly, then weigh it. The mass of AgCl is used to calculate the amount of $Cl^{-}$. Filtering before adding $AgNO_{3}$, weighing before drying, or drying before filtering all give a wrong mass.'
           }
         ]
       }

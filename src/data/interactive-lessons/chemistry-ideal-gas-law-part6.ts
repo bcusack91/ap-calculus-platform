@@ -135,35 +135,35 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
           {
             question: 'A gas at 1.50 atm and 200 K occupies 8.00 L. What volume does it occupy at STP? Which law should you use?',
             options: [
-              'Ideal gas law only',
+              'Boyle\'s law',
               'Combined gas law',
               `Dalton's law`,
               `Avogadro's law`
             ],
             correctAnswer: 1,
-            explanation: 'Same gas, same amount, but P and T both change → use the combined gas law: $P_1V_1/T_1 = P_2V_2/T_2$.'
+            explanation: 'Same gas, same amount, but P and T both change → use the combined gas law: $P_1V_1/T_1 = P_2V_2/T_2$. Boyle\'s law alone handles only a pressure change at constant temperature.'
           },
           {
             question: 'Using the combined gas law for the problem above, the volume at STP is:',
             options: [
-              '8.19 L',
+              '8.79 L',
               '10.9 L',
               '16.4 L',
-              '21.8 L'
+              '7.28 L'
             ],
             correctAnswer: 2,
-            explanation: '$V_2 = P_1V_1T_2/(T_1P_2) = (1.50)(8.00)(273.15)/((200)(1.00)) = 3277.8/200 = 16.4$ L.'
+            explanation: '$V_2 = P_1V_1T_2/(T_1P_2) = (1.50)(8.00)(273.15)/((200)(1.00)) = 3277.8/200 = 16.4$ L. Inverting the temperature ratio gives 8.79 L, ignoring the pressure change gives 10.9 L, and inverting the pressure ratio gives 7.28 L.'
           },
           {
             question: 'How many liters of $H_{2}$ at STP are produced when 6.54 g of Zn reacts with excess HCl? ($\\text{Zn} + 2\\text{HCl} \\rightarrow \\text{ZnCl}_2 + \\text{H}_2$; Zn = 65.38 g/mol)',
             options: [
               '1.12 L',
               '2.24 L',
-              '11.2 L',
+              '4.48 L',
               '22.4 L'
             ],
             correctAnswer: 1,
-            explanation: 'Moles Zn $= 6.54/65.38 = 0.100$ mol. 1:1 ratio → 0.100 mol $H_{2}$. At STP: $V = 0.100 \\times 22.4 = 2.24$ L.'
+            explanation: 'Moles Zn $= 6.54/65.38 = 0.100$ mol. 1:1 ratio → 0.100 mol $H_{2}$. At STP: $V = 0.100 \\times 22.4 = 2.24$ L. Applying the 2 from HCl gives 1.12 L or 4.48 L, and skipping the mole conversion gives 22.4 L.'
           }
         ]
       }
@@ -243,13 +243,13 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
           {
             question: 'A balloon at 25°C and 1.00 atm has a volume of 3.00 L. If taken to an altitude where T = -25°C and P = 0.500 atm, the new volume is approximately:',
             options: [
-              '3.00 L',
-              '4.00 L',
+              '7.21 L',
+              '1.25 L',
               '5.00 L',
               '6.00 L'
             ],
             correctAnswer: 2,
-            explanation: '$T_1 = 298$ K, $T_2 = 248$ K. $V_2 = (P_1V_1T_2)/(T_1P_2) = (1.00)(3.00)(248)/((298)(0.500)) = 744/149 = 4.99 \\approx 5.00$ L.'
+            explanation: '$T_1 = 298$ K, $T_2 = 248$ K. $V_2 = (P_1V_1T_2)/(T_1P_2) = (1.00)(3.00)(248)/((298)(0.500)) = 744/149 = 4.99 \\approx 5.00$ L. Inverting the temperature ratio gives 7.21 L, inverting the pressure ratio gives 1.25 L, and ignoring the temperature change gives 6.00 L.'
           },
           {
             question: 'At STP, which of the following samples contains the most molecules?',
@@ -265,13 +265,13 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
           {
             question: 'A gas changes from 2.00 atm and 5.00 L to 4.00 atm. If temperature stays constant, the new volume is:',
             options: [
-              '1.25 L',
+              '40.0 L',
               '2.50 L',
               '5.00 L',
               '10.0 L'
             ],
             correctAnswer: 1,
-            explanation: 'Combined gas law at constant T: $P_1V_1 = P_2V_2$. $V_2 = (2.00)(5.00)/4.00 = 2.50$ L.'
+            explanation: 'Combined gas law at constant T: $P_1V_1 = P_2V_2$. $V_2 = (2.00)(5.00)/4.00 = 2.50$ L. Inverting the pressure ratio gives 10.0 L, and multiplying by $P_2$ instead of dividing gives 40.0 L.'
           },
           {
             question: 'An unknown gas has a mass of 2.86 g and occupies 1.00 L at STP. The molar mass is most likely:',
@@ -287,24 +287,24 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
           {
             question: 'A mixture of $N_{2}$ and $O_{2}$ exerts a total pressure of 1.00 atm. If $P_{N_2} = 0.78$ atm, what is $P_{O_2}$?',
             options: [
-              '0.12 atm',
+              '1.78 atm',
               '0.22 atm',
               '0.78 atm',
               '1.00 atm'
             ],
             correctAnswer: 1,
-            explanation: `Dalton's Law: $P_{O_2} = P_{\\text{total}} - P_{N_2} = 1.00 - 0.78 = 0.22$ atm.`
+            explanation: `Dalton's Law: $P_{O_2} = P_{\\text{total}} - P_{N_2} = 1.00 - 0.78 = 0.22$ atm. Adding instead of subtracting gives 1.78 atm.`
           },
           {
             question: 'How many liters of $O_{2}$ at STP are needed to completely react with 4.00 mol of $CH_{4}$? ($\\text{CH}_4 + 2\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\text{H}_2\\text{O}$)',
             options: [
               '44.8 L',
               '89.6 L',
-              '179.2 L',
-              '22.4 L'
+              '179 L',
+              '0.357 L'
             ],
             correctAnswer: 2,
-            explanation: '4.00 mol $CH_{4}$ × 2 mol $O_{2}/1$ mol $CH_{4}$ = 8.00 mol $O_{2}$. At STP: $8.00 \\times 22.4 = 179.2$ L.'
+            explanation: '4.00 mol $CH_{4}$ × 2 mol $O_{2}/1$ mol $CH_{4}$ = 8.00 mol $O_{2}$. At STP: $8.00 \\times 22.4 = 179$ L (3 significant figures). Inverting the mole ratio gives 44.8 L, skipping it gives 89.6 L, and dividing 8.00 by 22.4 gives 0.357 L.'
           },
           {
             question: 'A tire is inflated to 2.20 atm at 20°C. After driving, the temperature rises to 50°C. Assuming constant volume, the new pressure is:',
@@ -320,13 +320,13 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
           {
             question: 'A student needs to identify which equation to use. They know initial and final P, V, and T. Which equation?',
             options: [
-              'PV = nRT',
-              'Combined gas law: $P_1V_1/T_1 = P_2V_2/T_2$',
-              '$M = dRT/P$',
-              `Dalton's Law`
+              'Ideal gas law, PV = nRT',
+              'Combined gas law',
+              'Density form, $M = dRT/P$',
+              `Dalton's law of partial pressures`
             ],
             correctAnswer: 1,
-            explanation: `When the same gas changes conditions (before/after), use the combined gas law. You don't need n if it cancels.`
+            explanation: `When the same gas changes conditions (before/after), use the combined gas law, $P_1V_1/T_1 = P_2V_2/T_2$. You don't need n because it cancels.`
           },
           {
             question: 'At constant T and P, 2.0 L of $N_{2}$ reacts with 6.0 L of $H_{2}$. Using $\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$, the volume of $NH_{3}$ produced is:',

@@ -160,10 +160,10 @@ $$V_2 = V_1 \\times \\frac{n_2}{n_1} = 6.00 \\times \\frac{5.00}{3.00} = 10.0 \\
               '22.4 L',
               '44.8 L',
               '67.2 L',
-              '89.6 L'
+              '29.9 L'
             ],
             correctAnswer: 2,
-            explanation: `Avogadro's Law: $V_2 = V_1 \\times n_2/n_1 = 44.8 \\times (3.0/2.0) = 67.2$ L.`
+            explanation: `Avogadro's Law: $V_2 = V_1 \\times n_2/n_1 = 44.8 \\times (3.0/2.0) = 67.2$ L. Using only the added 1.0 mol gives 22.4 L, and inverting the ratio gives $44.8 \\times (2.0/3.0) = 29.9$ L.`
           }
         ]
       }
@@ -243,24 +243,24 @@ $$V_2 = V_1 \\times \\frac{n_2}{n_1} = 6.00 \\times \\frac{5.00}{3.00} = 10.0 \\
           {
             question: `A student uses Charles's Law with Celsius instead of Kelvin. Their result will be:`,
             options: [
-              'Correct, since the units cancel',
-              'Slightly off due to rounding',
-              'Incorrect, because the proportionality requires an absolute temperature scale',
-              'Correct for temperatures above 100°C only'
+              'Correct, because the degree units cancel in the V/T ratio',
+              'Slightly off, because a Celsius degree is the same size as a kelvin',
+              'Wrong, since V ∝ T only on the Kelvin scale',
+              'Correct whenever both temperatures are above 0°C'
             ],
             correctAnswer: 2,
-            explanation: `Charles's Law requires Kelvin. Using Celsius gives the wrong ratio. For example, 0°C would imply zero volume, which is nonsensical. The direct proportionality only works with an absolute (Kelvin) scale.`
+            explanation: `Charles's Law requires Kelvin. Using Celsius gives the wrong ratio. For example, 0°C would imply zero volume, which is nonsensical. A Celsius degree is the same size as a kelvin, but the ratio $T_2/T_1$ changes completely when the zero point moves, so the direct proportionality only works on an absolute (Kelvin) scale.`
           },
           {
             question: 'At STP (0°C, 1 atm), how many liters does 2.00 mol of an ideal gas occupy?',
             options: [
               '11.2 L',
               '22.4 L',
-              '33.6 L',
+              '49.0 L',
               '44.8 L'
             ],
             correctAnswer: 3,
-            explanation: 'At STP, 1 mol of an ideal gas occupies 22.4 L. So 2.00 mol occupies $2.00 \\times 22.4 = 44.8$ L.'
+            explanation: 'At STP, 1 mol of an ideal gas occupies 22.4 L. So 2.00 mol occupies $2.00 \\times 22.4 = 44.8$ L. Using 24.5 L/mol (the molar volume at 25°C) gives 49.0 L; 11.2 L divides by 2 instead of multiplying.'
           },
           {
             question: 'A gas at 2.0 atm occupies 10.0 L. If the pressure is increased to 5.0 atm at constant temperature, what is the new volume?',
@@ -301,10 +301,10 @@ $$V_2 = V_1 \\times \\frac{n_2}{n_1} = 6.00 \\times \\frac{5.00}{3.00} = 10.0 \\
               'Triple',
               'Decrease to one-third',
               'Stay the same',
-              'Increase by a factor of 9'
+              'Drop to one-ninth'
             ],
             correctAnswer: 1,
-            explanation: `Boyle's Law: P and V are inversely proportional. Tripling V means $P_2 = P_1/3$.`
+            explanation: `Boyle's Law: P and V are inversely proportional. Tripling V means $P_2 = P_1/3$. Pressure falls by the same factor of 3, not by $3^2 = 9$.`
           },
           {
             question: 'A sealed syringe of gas is cooled from 400 K to 200 K at constant pressure. What happens to the volume?',
@@ -323,10 +323,10 @@ $$V_2 = V_1 \\times \\frac{n_2}{n_1} = 6.00 \\times \\frac{5.00}{3.00} = 10.0 \\
               '5.6 L',
               '11.2 L',
               '22.4 L',
-              '44.8 L'
+              '224 L'
             ],
             correctAnswer: 2,
-            explanation: `Avogadro's Law: $V_2 = V_1 \\times n_2/n_1 = 11.2 \\times (10.0/5.0) = 22.4$ L.`
+            explanation: `Avogadro's Law: $V_2 = V_1 \\times n_2/n_1 = 11.2 \\times (10.0/5.0) = 22.4$ L. Inverting the ratio gives 5.6 L, and multiplying 10.0 mol by 22.4 L/mol assumes STP, which the problem never states, giving 224 L.`
           },
           {
             question: 'A gas occupies 8.0 L at 760 mmHg. What is the volume at 380 mmHg (constant T)?',
@@ -334,10 +334,10 @@ $$V_2 = V_1 \\times \\frac{n_2}{n_1} = 6.00 \\times \\frac{5.00}{3.00} = 10.0 \\
               '4.0 L',
               '8.0 L',
               '16.0 L',
-              '32.0 L'
+              '6080 L'
             ],
             correctAnswer: 2,
-            explanation: `Boyle's Law: $V_2 = P_1V_1/P_2 = (760)(8.0)/380 = 16.0$ L. Halving the pressure doubles the volume.`
+            explanation: `Boyle's Law: $V_2 = P_1V_1/P_2 = (760)(8.0)/380 = 16.0$ L. Halving the pressure doubles the volume. Inverting the pressure ratio gives 4.0 L, and stopping at $P_1V_1 = 6080$ forgets to divide by $P_2$.`
           },
           {
             question: 'Which of the following correctly pairs a gas law with its mathematical relationship?',
@@ -345,10 +345,10 @@ $$V_2 = V_1 \\times \\frac{n_2}{n_1} = 6.00 \\times \\frac{5.00}{3.00} = 10.0 \\
               `Boyle's Law: $V/T = \\text{constant}$`,
               `Charles's Law: $PV = \\text{constant}$`,
               `Avogadro's Law: $V/n = \\text{constant}$`,
-              `Gay-Lussac's Law: $V/n = \\text{constant}$`
+              `Gay-Lussac's Law: $PT = \\text{constant}$`
             ],
             correctAnswer: 2,
-            explanation: `Avogadro's Law: $V/n = \\text{constant}$ at constant T and P. Boyle's Law is PV = constant, and Charles's Law is V/T = constant.`
+            explanation: `Avogadro's Law: $V/n = \\text{constant}$ at constant T and P. Boyle's Law is PV = constant, Charles's Law is V/T = constant, and Gay-Lussac's Law is a direct proportion between pressure and temperature ($P/T = \\text{constant}$), not an inverse one.`
           }
         ]
       }

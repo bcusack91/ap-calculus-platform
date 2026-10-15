@@ -144,21 +144,21 @@ This means 75% of the theoretical product was actually recovered. The remaining 
               'Measuring the actual mass of product in the lab',
               'Stoichiometric calculations using the limiting reactant',
               'Averaging the results of multiple trials',
-              'Dividing actual yield by percent yield'
+              'Adding the masses of all the reactants'
             ],
             correctAnswer: 1,
-            explanation: 'The theoretical yield is calculated using stoichiometry (grams → moles → mole ratio → moles → grams) based on the limiting reactant. It represents the maximum possible product.'
+            explanation: 'The theoretical yield is calculated using stoichiometry (grams → moles → mole ratio → moles → grams) based on the limiting reactant. It represents the maximum possible product. Adding reactant masses ignores the limiting reactant and any other products.'
           },
           {
             question: 'A reaction has a theoretical yield of 50.0 g and an actual yield of 42.5 g. The percent yield is:',
             options: [
               '42.5%',
-              '50.0%',
+              '0.850%',
               '85.0%',
               '117.6%'
             ],
             correctAnswer: 2,
-            explanation: '$\\% \\text{ yield} = \\frac{42.5}{50.0} \\times 100 = 85.0\\%$'
+            explanation: '$\\% \\text{ yield} = \\frac{42.5}{50.0} \\times 100 = 85.0\\%$. Forgetting to multiply by 100 gives 0.850%, inverting the fraction gives 117.6%, and 42.5% just relabels the actual mass as a percent.'
           },
           {
             question: 'A percent yield greater than 100% might indicate:',
@@ -166,10 +166,10 @@ This means 75% of the theoretical product was actually recovered. The remaining 
               'The reaction was very efficient',
               'The product is contaminated with impurities or water',
               'The limiting reactant was completely consumed',
-              'Extra product was synthesized from nothing'
+              'Some product formed from the excess reactant'
             ],
             correctAnswer: 1,
-            explanation: 'A yield > 100% is physically impossible if the product is pure. It typically means the product contains impurities (like water or unreacted starting material) that add to the measured mass.'
+            explanation: 'A yield > 100% is physically impossible if the product is pure. It typically means the product contains impurities (like water or unreacted starting material) that add to the measured mass. The excess reactant cannot make extra product, because the limiting reactant runs out first.'
           },
           {
             question: 'In a two-step synthesis where each step has 90% yield, the overall yield is:',
@@ -177,10 +177,10 @@ This means 75% of the theoretical product was actually recovered. The remaining 
               '90%',
               '81%',
               '180%',
-              '45%'
+              '80%'
             ],
             correctAnswer: 1,
-            explanation: 'Overall yield = $0.90 \\times 0.90 = 0.81 = 81\\%$. Each step compounds the losses, so multi-step syntheses have progressively lower overall yields.'
+            explanation: 'Overall yield = $0.90 \\times 0.90 = 0.81 = 81\\%$. Each step compounds the losses, so multi-step syntheses have progressively lower overall yields. Subtracting 10% twice gives 80%, and adding the two yields gives 180%.'
           }
         ]
       }
@@ -249,13 +249,13 @@ This means 75% of the theoretical product was actually recovered. The remaining 
           {
             question: 'A student reacts 10.0 g of Mg ($M = 24.31$) with excess HCl. The theoretical yield of $MgCl_{2}$ ($M = 95.21$) is 39.2 g, but only 33.3 g are collected. The percent yield is:',
             options: [
-              '75.0%',
-              '80.0%',
+              '117.7%',
+              '333%',
               '85.0%',
-              '90.0%'
+              '0.850%'
             ],
             correctAnswer: 2,
-            explanation: '$\\% \\text{ yield} = \\frac{33.3}{39.2} \\times 100 = 85.0\\%$. Verification: $10.0/24.31 = 0.4114$ mol Mg → $0.4114$ mol $MgCl_{2}$ → $0.4114 \\times 95.21 = 39.2$ g (theoretical). $33.3/39.2 \\times 100 = 85.0\\%$.'
+            explanation: '$\\% \\text{ yield} = \\frac{33.3}{39.2} \\times 100 = 85.0\\%$. Verification: $10.0/24.31 = 0.4114$ mol Mg → $0.4114$ mol $MgCl_{2}$ → $0.4114 \\times 95.21 = 39.2$ g (theoretical). Inverting the fraction gives 117.7%, dividing by the 10.0 g of Mg gives 333%, and forgetting the factor of 100 gives 0.850%.'
           },
           {
             question: 'If a reaction has a percent yield of 60% and you need 100 g of product, how many grams of theoretical yield must you aim for?',

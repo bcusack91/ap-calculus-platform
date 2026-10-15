@@ -125,13 +125,13 @@ $$\\frac{d_1}{d_2} = \\frac{M_1}{M_2}$$
           {
             question: 'An unknown gas has a density of 1.96 g/L at STP. What is its molar mass?',
             options: [
-              '22.4 g/mol',
-              '32.0 g/mol',
+              '11.4 g/mol',
+              '0.0875 g/mol',
               '43.9 g/mol',
-              '58.1 g/mol'
+              '48.0 g/mol'
             ],
             correctAnswer: 2,
-            explanation: 'At STP, $M = d \\times V_m = 1.96 \\times 22.4 = 43.9$ g/mol. Alternatively: $M = dRT/P = (1.96)(0.0821)(273.15)/1.00 = 43.9$ g/mol. This could be $CO_{2}$ (44.01 g/mol).'
+            explanation: 'At STP, $M = d \\times V_m = 1.96 \\times 22.4 = 43.9$ g/mol. Alternatively: $M = dRT/P = (1.96)(0.0821)(273.15)/1.00 = 43.9$ g/mol. This could be $CO_{2}$ (44.01 g/mol). Dividing 22.4 by 1.96 gives 11.4, dividing 1.96 by 22.4 gives 0.0875, and using 24.5 L/mol (25°C) gives 48.0.'
           },
           {
             question: 'Which gas is denser at the same temperature and pressure?',
@@ -266,27 +266,27 @@ Use $R = 0.0821$ L·atm/(mol·K).
             options: [
               '0.714 g/L',
               '1.43 g/L',
-              '2.86 g/L',
+              '0.700 g/L',
               '32.0 g/L'
             ],
             correctAnswer: 1,
-            explanation: '$d = PM/(RT) = (1.00)(32.0)/((0.0821)(273.15)) = 32.0/22.4 = 1.43$ g/L. Or simply: M/22.4 at STP.'
+            explanation: '$d = PM/(RT) = (1.00)(32.0)/((0.0821)(273.15)) = 32.0/22.4 = 1.43$ g/L. Or simply: M/22.4 at STP. Using the atomic mass of O (16.0) gives 0.714 g/L, inverting the division gives 0.700 g/L, and forgetting to divide gives 32.0 g/L.'
           },
           {
             question: 'The density of an unknown gas at 1.00 atm and 300 K is 1.96 g/L. What is the molar mass?',
             options: [
-              '24.0 g/mol',
-              '32.0 g/mol',
+              '0.0207 g/mol',
+              '4890 g/mol',
               '44.0 g/mol',
               '48.3 g/mol'
             ],
             correctAnswer: 3,
-            explanation: '$M = dRT/P = (1.96)(0.0821)(300)/1.00 = 48.3$ g/mol.'
+            explanation: '$M = dRT/P = (1.96)(0.0821)(300)/1.00 = 48.3$ g/mol. Using the STP shortcut $1.96 \\times 22.4$ at 300 K gives 44.0, using R = 8.314 with atm gives 4890, and inverting the expression gives 0.0207.'
           },
           {
             question: 'Which gas has the greatest density at STP?',
             options: [
-              'He (M = 4 g/mol)',
+              '$NH_{3}$ (M = 17 g/mol)',
               '$N_{2}$ (M = 28 g/mol)',
               '$O_{2}$ (M = 32 g/mol)',
               '$CO_{2}$ (M = 44 g/mol)'
@@ -297,13 +297,13 @@ Use $R = 0.0821$ L·atm/(mol·K).
           {
             question: 'A vapor has a mass of 0.800 g and occupies 400 mL at 100°C and 1.00 atm. The molar mass is closest to:',
             options: [
-              '31 g/mol',
-              '49 g/mol',
+              '16 g/mol',
+              '0.061 g/mol',
               '61 g/mol',
-              '122 g/mol'
+              '45 g/mol'
             ],
             correctAnswer: 2,
-            explanation: '$T = 373$ K, $V = 0.400$ L. $M = mRT/(PV) = (0.800)(0.0821)(373)/((1.00)(0.400)) = 24.5/0.400 = 61.2$ g/mol.'
+            explanation: '$T = 373$ K, $V = 0.400$ L. $M = mRT/(PV) = (0.800)(0.0821)(373)/((1.00)(0.400)) = 24.5/0.400 = 61.2$ g/mol. Using 100 instead of 373 K gives 16, leaving V as 400 mL gives 0.061, and using 273 K gives 45.'
           },
           {
             question: 'If the temperature of a gas is doubled at constant pressure, what happens to its density?',
@@ -319,24 +319,24 @@ Use $R = 0.0821$ L·atm/(mol·K).
           {
             question: 'A gas has a density of 2.50 g/L at 2.00 atm and 350 K. What is the molar mass?',
             options: [
-              '18.0 g/mol',
-              '28.7 g/mol',
+              '56.0 g/mol',
+              '144 g/mol',
               '35.9 g/mol',
               '71.8 g/mol'
             ],
             correctAnswer: 2,
-            explanation: '$M = dRT/P = (2.50)(0.0821)(350)/2.00 = 71.8/2.00 = 35.9$ g/mol.'
+            explanation: '$M = dRT/P = (2.50)(0.0821)(350)/2.00 = 71.8/2.00 = 35.9$ g/mol. Forgetting to divide by P gives 71.8, multiplying by P gives 144, and the STP shortcut $2.50 \\times 22.4$ gives 56.0, which does not apply at 2.00 atm and 350 K.'
           },
           {
             question: 'Why does a helium balloon float in air?',
             options: [
-              'Helium molecules move faster than air molecules',
-              'Helium has a lower molar mass and therefore lower density than air',
-              'Helium is lighter because it has fewer protons',
-              'Helium experiences less gravity than air molecules'
+              'Helium atoms move faster than air molecules and push the balloon up',
+              'Helium\'s lower molar mass gives it a lower density than air',
+              'Helium forms no intermolecular attractions with air molecules',
+              'Gravity pulls less strongly on noble gas atoms than on molecules'
             ],
             correctAnswer: 1,
-            explanation: 'At the same T and P, $d \\propto M$. He (M = 4) has much lower density than air (M ≈ 29), so a helium-filled balloon experiences a net upward buoyant force.'
+            explanation: 'At the same T and P, $d \\propto M$. He (M = 4) has much lower density than air (M ≈ 29), so a helium-filled balloon experiences a net upward buoyant force. Faster atoms or weaker attractions do not lower the density, and gravity acts on every gram of matter equally.'
           },
           {
             question: 'The molar mass of a gas can be determined from its density, temperature, and pressure using which rearranged form of the ideal gas law?',

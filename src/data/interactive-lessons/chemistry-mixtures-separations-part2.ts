@@ -176,13 +176,13 @@ Used when boiling points are **close together** (< 25°C difference):
           {
             question: 'Evaporation is NOT suitable for:',
             options: [
-              'Recovering NaCl from saltwater',
-              'Recovering sugar from sugar water',
-              'Separating two liquids with different boiling points',
-              'Recovering a solid dye from solution'
+              'Recovering NaCl from a saltwater solution',
+              'Recovering sugar from a sugar-water solution',
+              'Separating a mixture of two liquids',
+              'Recovering a solid dye from its solution'
             ],
             correctAnswer: 2,
-            explanation: 'Evaporation only recovers the solid from a solution — the liquid is lost. To separate two liquids, you need distillation, which collects both components.'
+            explanation: 'Evaporation only recovers the solid from a solution — the liquid is lost. To separate two liquids with different boiling points, you need distillation, which collects both components.'
           }
         ]
       }
@@ -204,14 +204,14 @@ Used when boiling points are **close together** (< 25°C difference):
           },
           {
             id: 'mx2-dd2',
-            label: 'To recover a dissolved solid when you don\'t need the solvent',
+            label: 'To recover a dissolved solid when you don\'t need the solvent, use _______',
             options: ['filtration', 'evaporation', 'simple distillation', 'fractional distillation'],
             correctIndex: 1,
             explanation: 'To recover a dissolved solid when you don\'t need the solvent, simply evaporate the liquid away.'
           },
           {
             id: 'mx2-dd3',
-            label: 'Ethanol (bp 78°C) and water (bp 100°C) have boiling points only 22°C apart —',
+            label: 'To separate ethanol (bp 78°C) from water (bp 100°C), use _______',
             options: ['filtration', 'evaporation', 'simple distillation', 'fractional distillation'],
             correctIndex: 3,
             explanation: 'Ethanol (bp 78°C) and water (bp 100°C) have boiling points only 22°C apart — use fractional distillation for better separation.'
@@ -270,23 +270,23 @@ Used when boiling points are **close together** (< 25°C difference):
             question: 'A mixture contains salt, sand, and water. Which sequence of steps correctly separates all three?',
             options: [
               'Evaporate → Filter → Distill',
-              'Filter → Evaporate',
+              'Filter → Distill the filtrate',
               'Distill → Filter → Evaporate',
-              'Filter → Distill'
+              'Filter → Evaporate the filtrate'
             ],
             correctAnswer: 1,
-            explanation: 'First filter to remove sand (insoluble solid). Then evaporate the filtrate (saltwater) to recover the solid salt. If you also need the pure water, use distillation instead of evaporation.'
+            explanation: 'First filter to remove the sand (insoluble solid). Then distill the filtrate (saltwater): the water is collected as the distillate and the salt stays behind, so all three components are recovered. Evaporating the filtrate would recover the salt but lose the water.'
           },
           {
             question: 'Fractional distillation is preferred over simple distillation when:',
             options: [
-              'The mixture contains a solid and a liquid',
-              'The boiling points of the liquids differ by more than 50°C',
-              'The boiling points of the liquids are within about 25°C of each other',
-              'One of the substances is a gas'
+              'A dissolved solid must be recovered from a liquid',
+              'One liquid boils above 100°C and the other below',
+              'The boiling points are within about 25°C',
+              'One of the components is a gas at room temperature'
             ],
             correctAnswer: 2,
-            explanation: 'Fractional distillation uses a fractionating column for repeated evaporation-condensation cycles, providing better separation when boiling points are close together (< 25°C apart).'
+            explanation: 'Fractional distillation uses a fractionating column for repeated evaporation-condensation cycles, providing better separation when boiling points are close together (< 25°C apart). Which side of 100°C the boiling points fall on does not matter; only how far apart they are.'
           }
         ]
       }

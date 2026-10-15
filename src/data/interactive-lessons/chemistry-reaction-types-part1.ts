@@ -213,8 +213,7 @@ For each reaction, type **synthesis** or **decomposition**.
 **3)** $\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['synthesis', 'decomposition', 'synthesis'],
+        questions: [{ question: '(1)', answer: 'synthesis', acceptableAnswers: ['synthesis', 'combination'] }, { question: '(2)', answer: 'decomposition', acceptableAnswers: ['decomposition'] }, { question: '(3)', answer: 'synthesis', acceptableAnswers: ['synthesis', 'combination'] }],
         hint1: 'Two elements combine to form one compound.',
         hint2: 'One compound heated to form two simpler substances.',
         hint3: 'Two elements combine to form ammonia — a single product.',

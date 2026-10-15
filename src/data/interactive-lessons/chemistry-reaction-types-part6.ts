@@ -189,8 +189,7 @@ Identify each reaction type. Type: **synthesis**, **decomposition**, **single**,
 **3)** $\\text{C}_2\\text{H}_6 + \\frac{7}{2}\\text{O}_2 \\rightarrow 2\\text{CO}_2 + 3\\text{H}_2\\text{O}$
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['synthesis', 'double', 'combustion'],
+        questions: [{ question: '(1)', answer: 'synthesis', acceptableAnswers: ['synthesis', 'combination'] }, { question: '(2)', answer: 'double', acceptableAnswers: ['double', 'double replacement', 'double displacement'] }, { question: '(3)', answer: 'combustion', acceptableAnswers: ['combustion'] }],
         hint1: 'Two elements combine into one compound.',
         hint2: 'Two ionic compounds swap their ions.',
         hint3: 'A hydrocarbon reacting with $O_{2}$ to produce $CO_{2}$ + $H_{2}O$.',
@@ -219,13 +218,13 @@ Identify each reaction type. Type: **synthesis**, **decomposition**, **single**,
           {
             question: 'Predict and balance: $\\text{Li}_2\\text{O} + \\text{H}_2\\text{O} \\rightarrow$ ?',
             options: [
-              '$\\text{Li}_2\\text{O} + \\text{H}_2\\text{O} \\rightarrow \\text{Li}_2\\text{O} + \\text{H}_2$',
+              '$\\text{Li}_2\\text{O} + \\text{H}_2\\text{O} \\rightarrow \\text{LiOH}$',
               '$\\text{Li}_2\\text{O} + \\text{H}_2\\text{O} \\rightarrow 2\\text{LiOH}$',
               '$\\text{Li}_2\\text{O} + \\text{H}_2\\text{O} \\rightarrow \\text{LiOH}_2$',
               '$\\text{Li}_2\\text{O} + 2\\text{H}_2\\text{O} \\rightarrow 2\\text{LiOH}$'
             ],
             correctAnswer: 1,
-            explanation: 'Synthesis: Metal oxide + water → metal hydroxide. $Li_{2}O$ + $H_{2}O$ → 2LiOH. Li: 2=2 ✓, O: 1+1=2 and 2(1)=2 ✓, H: 2=2 ✓.'
+            explanation: 'Synthesis: Metal oxide + water → metal hydroxide. $Li_{2}O$ + $H_{2}O$ → 2LiOH. Li: 2=2 ✓, O: 1+1=2 and 2(1)=2 ✓, H: 2=2 ✓. Writing just LiOH leaves Li, O and H unbalanced.'
           }
         ]
       }
@@ -287,7 +286,7 @@ Identify each reaction type. Type: **synthesis**, **decomposition**, **single**,
               'K + $Cl_{2}$ + $O_{2}$',
               'KCl + $O_{2}$',
               '$K_{2}O$ + $ClO_{2}$',
-              'KOH + $Cl_{2}$'
+              'KClO + $O_{2}$'
             ],
             correctAnswer: 1,
             explanation: 'Metal chlorates decompose into metal chloride + oxygen gas: $2\\text{KClO}_3 \\xrightarrow{\\Delta} 2\\text{KCl} + 3\\text{O}_2$. This is a standard decomposition pattern.'

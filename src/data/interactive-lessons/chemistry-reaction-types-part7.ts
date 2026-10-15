@@ -107,7 +107,7 @@ For double replacement reactions in solution, the AP exam often asks for net ion
             options: [
               'No reaction occurs because copper is more reactive than zinc',
               'Zinc dissolves and copper metal deposits because zinc is more reactive',
-              'Both metals dissolve in solution',
+              'Both metals dissolve and the solution turns colorless',
               'Copper sulfate decomposes into copper and sulfur trioxide'
             ],
             correctAnswer: 1,
@@ -140,11 +140,11 @@ For double replacement reactions in solution, the AP exam often asks for net ion
             options: [
               'Gold is above hydrogen in the activity series',
               'Gold is below hydrogen in the activity series',
-              'HCl is not an acid',
+              'HCl is too weak an acid to attack metals',
               'Gold forms a protective oxide layer'
             ],
             correctAnswer: 1,
-            explanation: 'Gold is far below hydrogen in the activity series (it is the least reactive metal). Only metals above hydrogen can displace $H_{2}$ from acids. Gold requires aqua regia $(HCl + HNO_{3})$ to dissolve.'
+            explanation: 'Gold is far below hydrogen in the activity series (it is one of the least reactive metals). Only metals above hydrogen can displace $H_{2}$ from acids, and HCl readily dissolves metals such as Zn and Mg. Gold requires aqua regia $(HCl + HNO_{3})$ to dissolve.'
           }
         ]
       }
@@ -164,8 +164,7 @@ Classify each reaction. Type: **synthesis**, **decomposition**, **single**, **do
 **3)** $2\\text{C}_8\\text{H}_{18} + 25\\text{O}_2 \\rightarrow 16\\text{CO}_2 + 18\\text{H}_2\\text{O}$
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['synthesis', 'double', 'combustion'],
+        questions: [{ question: '(1)', answer: 'synthesis', acceptableAnswers: ['synthesis', 'combination'] }, { question: '(2)', answer: 'double', acceptableAnswers: ['double', 'double replacement', 'double displacement'] }, { question: '(3)', answer: 'combustion', acceptableAnswers: ['combustion'] }],
         hint1: 'Two elements combine to form one ionic compound.',
         hint2: 'Two aqueous ionic compounds exchange ions; a precipitate forms.',
         hint3: 'A hydrocarbon reacts with oxygen to form $CO_{2}$ and $H_{2}O$.',
@@ -185,7 +184,7 @@ Classify each reaction. Type: **synthesis**, **decomposition**, **single**, **do
             options: [
               'NaCl',
               '$BaSO_{4}$',
-              '$BaNa_{2}$',
+              '$Na_{2}SO_{4}$',
               '$Na_{2}Cl_{2}$'
             ],
             correctAnswer: 1,

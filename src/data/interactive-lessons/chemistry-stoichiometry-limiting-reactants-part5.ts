@@ -153,11 +153,11 @@ Here: $M_A \\times V_A \\times 1 = M_B \\times V_B \\times \\frac{1}{2}$, or sim
             options: [
               '0.0050 mol',
               '0.050 mol',
-              '0.50 mol',
+              '50 mol',
               '5.0 mol'
             ],
             correctAnswer: 1,
-            explanation: '$n = M \\times V = 0.500 \\times 0.100 = 0.050$ mol. Remember to convert 100 mL to 0.100 L first!'
+            explanation: '$n = M \\times V = 0.500 \\times 0.100 = 0.050$ mol. Remember to convert 100 mL to 0.100 L first! Leaving V in mL gives 50 mol, dividing M by V gives 5.0 mol, and a decimal slip gives 0.0050 mol.'
           },
           {
             question: 'In a titration, 20.0 mL of 0.100 M NaOH neutralizes 10.0 mL of $H_{2}SO_{4}$. The molarity of $H_{2}SO_{4}$ is:',
@@ -174,12 +174,12 @@ Here: $M_A \\times V_A \\times 1 = M_B \\times V_B \\times \\frac{1}{2}$, or sim
             question: 'The key formula for solution stoichiometry is:',
             options: [
               '$PV = nRT$',
-              '$n = M \\\\times V$ (moles = molarity × volume in L)',
-              '$E = mc^2$',
-              '$M = n \\\\times V$'
+              '$n = M \\times V$',
+              '$n = V / M$',
+              '$M = n \\times V$'
             ],
             correctAnswer: 1,
-            explanation: '$n = M \\times V$ where M is molarity (mol/L) and V is volume in liters. This gives moles, which you then use with mole ratios for stoichiometry.'
+            explanation: '$n = M \\times V$ where M is molarity (mol/L) and V is volume in liters. This gives moles, which you then use with mole ratios for stoichiometry. Dividing V by M or multiplying n by V gives the wrong units.'
           }
         ]
       }
@@ -248,24 +248,24 @@ Here: $M_A \\times V_A \\times 1 = M_B \\times V_B \\times \\frac{1}{2}$, or sim
           {
             question: 'How many grams of NaCl ($M_{\\text{NaCl}} = 58.44$) are produced when 50.0 mL of 0.300 M NaOH reacts with excess HCl?',
             options: [
-              '0.439 g',
-              '0.878 g',
+              '0.438 g',
+              '0.877 g',
               '1.75 g',
               '8.77 g'
             ],
             correctAnswer: 1,
-            explanation: '$\\text{HCl} + \\text{NaOH} \\rightarrow \\text{NaCl} + \\text{H}_2\\text{O}$ (1:1). Moles NaOH: $0.300 \\times 0.0500 = 0.01500$ mol = moles NaCl. Mass: $0.01500 \\times 58.44 = 0.877$ g ≈ 0.878 g.'
+            explanation: '$\\text{HCl} + \\text{NaOH} \\rightarrow \\text{NaCl} + \\text{H}_2\\text{O}$ (1:1). Moles NaOH: $0.300 \\times 0.0500 = 0.01500$ mol = moles NaCl. Mass: $0.01500 \\times 58.44 = 0.877$ g. Halving or doubling the 1:1 ratio gives 0.438 g or 1.75 g, and converting 50.0 mL to 0.500 L gives 8.77 g.'
           },
           {
             question: 'A student needs 0.0500 mol of $AgNO_{3}$ from a 0.250 M solution. What volume should be measured?',
             options: [
-              '50.0 mL',
-              '100 mL',
+              '12.5 mL',
+              '0.200 mL',
               '200 mL',
-              '500 mL'
+              '5.00 mL'
             ],
             correctAnswer: 2,
-            explanation: '$V = n/M = 0.0500/0.250 = 0.200$ L $= 200$ mL.'
+            explanation: '$V = n/M = 0.0500/0.250 = 0.200$ L $= 200$ mL. Multiplying n by M gives 12.5 mL, forgetting to convert 0.200 L to mL gives 0.200 mL, and dividing M by n gives 5.00.'
           }
         ]
       }

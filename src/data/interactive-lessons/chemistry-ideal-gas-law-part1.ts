@@ -127,10 +127,10 @@ where $R = 8.314$ J/(mol·K) and $M$ is the molar mass in kg/mol.
           {
             question: 'Which of the following is NOT an assumption of the kinetic molecular theory for an ideal gas?',
             options: [
-              'Gas particles are in constant, random motion',
-              'Collisions between gas particles are perfectly elastic',
-              'Gas particles exert attractive forces on each other',
-              'The volume of individual gas particles is negligible'
+              'Particles move in constant, random, straight-line motion',
+              'Collisions between particles are perfectly elastic',
+              'Particles exert attractive forces on each other',
+              'The volume of the particles themselves is negligible'
             ],
             correctAnswer: 2,
             explanation: 'KMT assumes there are NO intermolecular forces between gas particles. If attractive forces existed, the gas would behave non-ideally. This is one of the key assumptions that distinguishes an ideal gas from a real gas.'
@@ -141,10 +141,10 @@ where $R = 8.314$ J/(mol·K) and $M$ is the molar mass in kg/mol.
               '248.15 K',
               '273.15 K',
               '298.15 K',
-              '325.15 K'
+              '−248.15 K'
             ],
             correctAnswer: 2,
-            explanation: '$T(K) = T(°C) + 273.15 = 25 + 273.15 = 298.15$ K. Always convert to Kelvin before using gas law equations.'
+            explanation: '$T(K) = T(°C) + 273.15 = 25 + 273.15 = 298.15$ K. Subtracting in either order gives 248.15 K or −248.15 K, and 273.15 K is just the conversion constant. Always convert to Kelvin before using gas law equations.'
           },
           {
             question: 'At the same temperature, which gas has the highest average molecular speed?',
@@ -226,9 +226,9 @@ Convert the following gas measurements:
           {
             id: 'gl1-dd4',
             label: 'According to KMT, the volume of individual gas particles is ___',
-            options: ['zero', 'very large', 'negligible compared to container volume'],
+            options: ['equal to the container volume', 'a large fraction of the container volume', 'negligible compared to container volume'],
             correctIndex: 2,
-            explanation: 'KMT assumes that the volume of individual gas particles is negligible compared to the total volume of the container.'
+            explanation: 'KMT assumes that the volume of individual gas particles is negligible compared to the total volume of the container. The particles\' volume only becomes a large fraction of the container volume at very high pressure, which is when real gases deviate from ideal behavior.'
           }
         ]
       }
@@ -250,35 +250,35 @@ Convert the following gas measurements:
           {
             question: 'According to KMT, what happens when gas molecules collide with each other?',
             options: [
-              'They lose kinetic energy as heat',
-              'They stick together briefly',
-              'Kinetic energy is conserved (elastic collision)',
-              'They slow down permanently'
+              'Some kinetic energy is converted to heat',
+              'They stick together briefly, then separate',
+              'Total kinetic energy is conserved',
+              'Both molecules slow down after each collision'
             ],
             correctAnswer: 2,
-            explanation: 'KMT assumes perfectly elastic collisions, meaning the total kinetic energy is conserved. No energy is lost to heat or other forms during collisions.'
+            explanation: 'KMT assumes perfectly elastic collisions, meaning the total kinetic energy of the colliding molecules is conserved. Energy can pass from one molecule to the other, but none is lost to heat, and the molecules do not stick together.'
           },
           {
             question: 'Convert 3.50 atm to mmHg.',
             options: [
-              '1330 mmHg',
+              '355 mmHg',
               '2660 mmHg',
-              '3500 mmHg',
+              '0.00461 mmHg',
               '266 mmHg'
             ],
             correctAnswer: 1,
-            explanation: '$3.50 \\text{ atm} \\times 760 \\text{ mmHg/atm} = 2660 \\text{ mmHg}$.'
+            explanation: '$3.50 \\text{ atm} \\times 760 \\text{ mmHg/atm} = 2660 \\text{ mmHg}$. Using 101.3 (the kPa factor) gives 355, dividing by 760 gives 0.00461, and using 76 instead of 760 gives 266.'
           },
           {
             question: 'What temperature in Kelvin corresponds to -40°C?',
             options: [
               '233.15 K',
               '313.15 K',
-              '240 K',
-              '313 K'
+              '−313.15 K',
+              '−40 K'
             ],
             correctAnswer: 0,
-            explanation: '$T(K) = -40 + 273.15 = 233.15$ K. Always add 273.15 to convert Celsius to Kelvin.'
+            explanation: '$T(K) = -40 + 273.15 = 233.15$ K. Dropping the minus sign on −40 gives 313.15 K, subtracting 273.15 gives −313.15 K, and −40 K is impossible because Kelvin temperatures are never negative.'
           },
           {
             question: 'Which of the following is NOT a measurable property of a gas?',
@@ -316,32 +316,32 @@ Convert the following gas measurements:
           {
             question: 'Which assumption of KMT breaks down at very high pressures?',
             options: [
-              'Gas particles are in constant random motion',
+              'Particles are in constant random motion',
               'Collisions are perfectly elastic',
-              'Gas particles have negligible volume',
+              'Particle volume is negligible',
               'Average KE is proportional to temperature'
             ],
             correctAnswer: 2,
-            explanation: 'At very high pressures, gas molecules are forced close together and their individual volumes become significant relative to the container volume, violating the "negligible volume" assumption.'
+            explanation: 'At very high pressures, gas molecules are forced close together and their individual volumes become significant relative to the container volume, violating the negligible-volume assumption.'
           },
           {
             question: 'What is 500 kPa expressed in atm? (1 atm = 101.325 kPa)',
             options: [
               '4.93 atm',
               '5.00 atm',
-              '50.7 atm',
+              '$5.07 \\times 10^{4}$ atm',
               '0.203 atm'
             ],
             correctAnswer: 0,
-            explanation: '$500 \\div 101.325 = 4.93$ atm. Divide by 101.325 kPa/atm to convert.'
+            explanation: '$500 \\div 101.325 = 4.93$ atm. Rounding 1 atm to 100 kPa gives 5.00 atm, multiplying instead of dividing gives $5.07 \\times 10^{4}$ atm, and dividing 101.325 by 500 gives 0.203 atm.'
           },
           {
             question: 'Why does a bicycle tire feel warm after being pumped up quickly?',
             options: [
-              'Friction between the pump and the tire',
-              'Compressing the gas increases the average kinetic energy of the molecules',
-              'The rubber absorbs heat from the sun',
-              'Chemical reactions inside the tire'
+              'Friction between the pump piston and its cylinder heats the air',
+              'Compressing the gas raises the average kinetic energy of its molecules',
+              'Air molecules rub against the rubber and release heat',
+              'Squeezed molecules release energy stored in their bonds'
             ],
             correctAnswer: 1,
             explanation: 'When gas is compressed rapidly, work is done on the gas molecules, increasing their kinetic energy and thus the temperature. This is consistent with KMT — faster molecules mean higher temperature.'

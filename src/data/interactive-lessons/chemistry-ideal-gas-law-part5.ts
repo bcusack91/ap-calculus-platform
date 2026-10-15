@@ -162,10 +162,10 @@ This corrected pressure is then used in $PV = nRT$ to find the moles of dry gas 
               '0.21 atm',
               '0.79 atm',
               '1.00 atm',
-              '0.042 atm'
+              '4.76 atm'
             ],
             correctAnswer: 0,
-            explanation: '$P_{O_2} = \\chi_{O_2} \\times P_{\\text{total}} = 0.21 \\times 1.00 = 0.21$ atm.'
+            explanation: '$P_{O_2} = \\chi_{O_2} \\times P_{\\text{total}} = 0.21 \\times 1.00 = 0.21$ atm. 0.79 atm is the $N_{2}$ fraction, and dividing 1.00 by 0.21 gives 4.76 atm.'
           }
         ]
       }
@@ -227,9 +227,9 @@ This corrected pressure is then used in $PV = nRT$ to find the moles of dry gas 
           {
             id: 'gl5-dd3',
             label: 'Partial pressure of a gas depends on the ___',
-            options: ['moles of that gas', 'mass of that gas', 'volume of that gas'],
+            options: ['moles of that gas', 'mass of that gas', 'its own volume'],
             correctIndex: 0,
-            explanation: 'Partial pressure depends on the number of moles (not mass) of each gas: $P_i = n_iRT/V$.'
+            explanation: 'Partial pressure depends on the number of moles (not mass) of each gas: $P_i = n_iRT/V$. Every gas in the mixture fills the whole container, so each one has the same volume.'
           }
         ]
       }
@@ -245,21 +245,21 @@ This corrected pressure is then used in $PV = nRT$ to find the moles of dry gas 
           {
             question: 'A tank contains 4.0 mol $O_{2}$ and 6.0 mol $N_{2}$ at 800 kPa total. The partial pressure of $O_{2}$ is:',
             options: [
-              '200 kPa',
+              '533 kPa',
               '320 kPa',
               '480 kPa',
               '800 kPa'
             ],
             correctAnswer: 1,
-            explanation: '$\\chi_{O_2} = 4.0/(4.0+6.0) = 0.40$. $P_{O_2} = 0.40 \\times 800 = 320$ kPa.'
+            explanation: '$\\chi_{O_2} = 4.0/(4.0+6.0) = 0.40$. $P_{O_2} = 0.40 \\times 800 = 320$ kPa. Using the ratio 4.0/6.0 instead of 4.0/10.0 gives 533 kPa, and 480 kPa is the partial pressure of $N_{2}$.'
           },
           {
             question: 'Why must you correct for water vapor pressure when collecting gas over water?',
             options: [
-              'Water reacts with the gas',
-              'Water vapor contributes to the total measured pressure',
-              'The water cools the gas',
-              'Water changes the molar mass of the gas'
+              'Water reacts with the collected gas and changes its amount',
+              'Water vapor adds to the measured pressure',
+              'The water cools the gas, lowering its measured pressure',
+              'Water raises the molar mass of the collected gas sample'
             ],
             correctAnswer: 1,
             explanation: 'The gas you collect is mixed with water vapor, which contributes its own partial pressure. To find the pressure of the dry gas, you subtract the vapor pressure of water from the total measured pressure.'
@@ -302,33 +302,33 @@ This corrected pressure is then used in $PV = nRT$ to find the moles of dry gas 
             options: [
               '200 kPa',
               '300 kPa',
-              '400 kPa',
+              '833 kPa',
               '500 kPa'
             ],
             correctAnswer: 1,
-            explanation: '$P_X = \\chi_X \\times P_{\\text{total}} = 0.60 \\times 500 = 300$ kPa.'
+            explanation: '$P_X = \\chi_X \\times P_{\\text{total}} = 0.60 \\times 500 = 300$ kPa. 200 kPa belongs to the other gases (0.40 × 500), and dividing 500 by 0.60 gives 833 kPa.'
           },
           {
             question: 'The mole fractions in a gas mixture must always sum to:',
             options: [
-              '0',
+              '100',
               '0.5',
               '1.0',
               'It depends on the pressure'
             ],
             correctAnswer: 2,
-            explanation: 'By definition, mole fractions always sum to exactly 1.0 (representing 100% of the mixture).'
+            explanation: 'By definition, mole fractions always sum to exactly 1.0 (representing 100% of the mixture). Percentages sum to 100, but mole fractions are written as decimals.'
           },
           {
             question: `A diver's tank contains 80% $N_{2}$ and 20% $O_{2}$ at 200 atm total. The partial pressure of $O_{2}$ is:`,
             options: [
-              '20 atm',
+              '1000 atm',
               '40 atm',
               '100 atm',
               '160 atm'
             ],
             correctAnswer: 1,
-            explanation: '$P_{O_2} = 0.20 \\times 200 = 40$ atm. Each gas contributes its mole fraction times the total pressure.'
+            explanation: '$P_{O_2} = 0.20 \\times 200 = 40$ atm. Each gas contributes its mole fraction times the total pressure. Dividing by 0.20 gives 1000 atm, and 160 atm is the $N_{2}$ partial pressure.'
           },
           {
             question: 'If 3 gases in a container have partial pressures of 150, 250, and 300 mmHg, the total pressure is:',

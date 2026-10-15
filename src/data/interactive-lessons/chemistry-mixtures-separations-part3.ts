@@ -146,33 +146,33 @@ GC produces a graph of **detector signal vs. time**:
             options: [
               'Has stronger attraction to the stationary phase',
               'Has stronger attraction to the mobile phase',
-              'Did not dissolve in the solvent',
-              'Is always colorless'
+              'Was spotted in a larger amount than the others',
+              'Has a larger molar mass than the other spots'
             ],
             correctAnswer: 1,
-            explanation: 'A higher $R_f$ means the substance traveled farther with the solvent (mobile phase), indicating a stronger affinity for the mobile phase and weaker interaction with the paper (stationary phase).'
+            explanation: 'A higher $R_f$ means the substance traveled farther with the solvent (mobile phase), indicating a stronger affinity for the mobile phase and weaker interaction with the paper (stationary phase). The amount spotted does not change $R_f$.'
           },
           {
             question: 'In gas chromatography, the component with the longest retention time is:',
             options: [
-              'The most volatile component',
-              'The component with strongest interaction with the stationary phase',
-              'The carrier gas',
-              'The lightest molecule'
+              'The most volatile, lowest-boiling component',
+              'The one held most strongly by the stationary phase',
+              'The component present in the largest amount',
+              'The lightest molecule in the sample'
             ],
             correctAnswer: 1,
-            explanation: 'Longer retention time means the component spends more time interacting with the stationary phase coating. It elutes last because it is more strongly attracted to the stationary phase.'
+            explanation: 'Longer retention time means the component spends more time interacting with the stationary phase coating. It elutes last because it is more strongly attracted to the stationary phase. The most volatile, lowest-boiling components usually elute first, and the amount present changes peak area, not retention time.'
           },
           {
             question: 'What information does the area under a peak in a GC chromatogram provide?',
             options: [
-              'The identity of the component',
-              'The boiling point of the component',
-              'The relative amount (concentration) of the component',
-              'The molar mass of the component'
+              'The identity of that component',
+              'The boiling point of that component',
+              'The amount of that component',
+              'The molar mass of that component'
             ],
             correctAnswer: 2,
-            explanation: 'Peak area is proportional to the amount of the component. Larger peaks indicate more of that substance. Retention time (not area) is used for identification.'
+            explanation: 'Peak area is proportional to the amount (relative concentration) of the component. Larger peaks indicate more of that substance. Retention time (not area) is used for identification.'
           }
         ]
       }
@@ -219,7 +219,7 @@ GC produces a graph of **detector signal vs. time**:
         dropdowns: [
           {
             id: 'mx3-dd1',
-            label: 'Analyzing a mixture of volatile organic compounds requires GC',
+            label: 'Analyzing a mixture of volatile organic compounds requires _______',
             options: ['paper chromatography', 'column chromatography', 'gas chromatography'],
             correctIndex: 2,
             explanation: 'Analyzing a mixture of volatile organic compounds requires GC. The sample is vaporized and carried through the column by a carrier gas.'
@@ -233,7 +233,7 @@ GC produces a graph of **detector signal vs. time**:
           },
           {
             id: 'mx3-dd3',
-            label: 'When you need to purify a large quantity of a product from a reaction mixture',
+            label: 'To purify a large quantity of a product from a reaction mixture, use _______',
             options: ['paper chromatography', 'column chromatography', 'gas chromatography'],
             correctIndex: 1,
             explanation: 'When you need to purify a large quantity of a product from a reaction mixture, column chromatography allows collection of individual fractions.'
@@ -270,10 +270,10 @@ GC produces a graph of **detector signal vs. time**:
           {
             question: 'Which factor does NOT affect Rf values in paper chromatography?',
             options: [
-              'The solvent used',
-              'The type of paper',
+              'The solvent used as the mobile phase',
+              'The type of paper used as stationary phase',
               'The amount of sample spotted',
-              'The temperature'
+              'The temperature of the developing chamber'
             ],
             correctAnswer: 2,
             explanation: 'The $R_f$ value depends on the solvent, paper type, and temperature — but NOT on the amount of sample applied. Applying too much sample may cause streaking, but the $R_f$ remains the same.'

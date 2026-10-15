@@ -117,22 +117,22 @@ Even though we had fewer moles of $Pb(NO_{3})_{2}$ initially (0.0100 vs 0.0105),
             options: [
               '1.12 L',
               '2.24 L',
-              '11.2 L',
+              '224 L',
               '22.4 L'
             ],
             correctAnswer: 1,
-            explanation: 'Moles $CaCO_{3}$: 10.0/100.1 = 0.0999 mol. Mole ratio 1:1 → 0.0999 mol $CO_{2}$. Volume at STP: 0.0999 × 22.4 = 2.24 L.'
+            explanation: 'Moles $CaCO_{3}$: 10.0/100.1 = 0.0999 mol. Mole ratio 1:1 → 0.0999 mol $CO_{2}$. Volume at STP: 0.0999 × 22.4 = 2.24 L. Applying the 2 from HCl gives 1.12 L, skipping the molar mass (10.0 "mol") gives 224 L, and 22.4 L assumes 1 mol.'
           },
           {
             question: 'A student obtains 3.50 g of a product with a theoretical yield of 5.00 g. The percent yield is:',
             options: [
-              '35.0%',
-              '50.0%',
+              '0.700%',
+              '30.0%',
               '70.0%',
               '142.9%'
             ],
             correctAnswer: 2,
-            explanation: '$\\% \\text{ yield} = (3.50/5.00) \\times 100 = 70.0\\%$.'
+            explanation: '$\\% \\text{ yield} = (3.50/5.00) \\times 100 = 70.0\\%$. Forgetting the factor of 100 gives 0.700%, inverting gives 142.9%, and 30.0% is the fraction lost, not the yield.'
           },
           {
             question: 'In a titration, 15.0 mL of 0.100 M $Ba(OH)_{2}$ neutralizes 30.0 mL of HCl. The molarity of HCl is:',
@@ -140,10 +140,10 @@ Even though we had fewer moles of $Pb(NO_{3})_{2}$ initially (0.0100 vs 0.0105),
               '0.050 M',
               '0.100 M',
               '0.200 M',
-              '0.300 M'
+              '0.025 M'
             ],
             correctAnswer: 1,
-            explanation: '$\\text{Ba(OH)}_2 + 2\\text{HCl} \\rightarrow \\text{BaCl}_2 + 2\\text{H}_2\\text{O}$. Mol $Ba(OH)_{2}$ = 0.100 × 0.0150 = 0.00150 mol. Mol HCl = 0.00150 × 2 = 0.00300 mol. M(HCl) = 0.00300/0.0300 = 0.100 M.'
+            explanation: '$\\text{Ba(OH)}_2 + 2\\text{HCl} \\rightarrow \\text{BaCl}_2 + 2\\text{H}_2\\text{O}$. Mol $Ba(OH)_{2}$ = 0.100 × 0.0150 = 0.00150 mol. Mol HCl = 0.00150 × 2 = 0.00300 mol. M(HCl) = 0.00300/0.0300 = 0.100 M. Ignoring the 2:1 ratio gives 0.050 M, dividing by 2 instead of multiplying gives 0.025 M, and swapping the two volumes gives 0.200 M.'
           },
           {
             question: 'Which of the following is NOT needed to solve a limiting reactant problem?',
@@ -178,8 +178,7 @@ A student reacts 13.49 g of Al with 109.4 g of HCl. Percent yield = 90%.
 **3)** What is the actual yield of $AlCl_{3}$ in grams? (to 3 significant figures)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Al', '66.7', '60.0'],
+        questions: [{ question: '(1)', answer: 'Al', acceptableAnswers: ['Al', 'aluminum', 'aluminium'] }, { question: '(2)', answer: '66.7', acceptableAnswers: ['66.7'] }, { question: '(3)', answer: '60.0', acceptableAnswers: ['60.0'] }],
         hint1: 'Mol Al = 13.49/26.98 = 0.500. Mol HCl = 109.4/36.46 = 3.000. From Al: 0.500 × 2/2 = 0.500 mol $AlCl_{3}$. From HCl: 3.000 × 2/6 = 1.000 mol $AlCl_{3}$. Which produces less?',
         hint2: 'Theoretical = 0.500 × 133.34.',
         hint3: 'Actual = theoretical × 0.90.',
@@ -262,13 +261,13 @@ A student reacts 13.49 g of Al with 109.4 g of HCl. Percent yield = 90%.
           {
             question: 'A student reacts 40.0 mL of 0.500 M $Na_{2}CO_{3}$ with 60.0 mL of 0.400 M $CaCl_{2}$. How many grams of $CaCO_{3}$ ($M = 100.1$) precipitate form? ($\\text{Na}_2\\text{CO}_3 + \\text{CaCl}_2 \\rightarrow \\text{CaCO}_3 + 2\\text{NaCl}$)',
             options: [
-              '1.00 g',
+              '4.40 g',
               '2.00 g',
               '2.40 g',
-              '4.00 g'
+              '2000 g'
             ],
             correctAnswer: 1,
-            explanation: 'Mol $Na_{2}CO_{3}$ = 0.500 × 0.0400 = 0.0200 mol → 0.0200 mol $CaCO_{3}$. Mol $CaCl_{2}$ = 0.400 × 0.0600 = 0.0240 mol → 0.0240 mol $CaCO_{3}$. $Na_{2}CO_{3}$ produces less → limiting. $CaCO_{3}$ = 0.0200 × 100.1 = 2.00 g.'
+            explanation: 'Mol $Na_{2}CO_{3}$ = 0.500 × 0.0400 = 0.0200 mol → 0.0200 mol $CaCO_{3}$. Mol $CaCl_{2}$ = 0.400 × 0.0600 = 0.0240 mol → 0.0240 mol $CaCO_{3}$. $Na_{2}CO_{3}$ produces less → limiting. $CaCO_{3}$ = 0.0200 × 100.1 = 2.00 g. Using $CaCl_{2}$ gives 2.40 g, adding both reactants\' moles gives 4.40 g, and leaving 40.0 mL unconverted gives 2000 g.'
           },
           {
             question: 'A pharmaceutical company needs to produce 500 g of aspirin with a process that has 82% yield. The theoretical yield they must target is approximately:',
@@ -276,10 +275,10 @@ A student reacts 13.49 g of Al with 109.4 g of HCl. Percent yield = 90%.
               '410 g',
               '500 g',
               '610 g',
-              '750 g'
+              '590 g'
             ],
             correctAnswer: 2,
-            explanation: 'Theoretical = actual needed / (% yield / 100) = 500 / 0.82 = 609.8 ≈ 610 g. They must start with enough reactant to theoretically produce 610 g.'
+            explanation: 'Theoretical = actual needed / (% yield / 100) = 500 / 0.82 = 609.8 ≈ 610 g. They must start with enough reactant to theoretically produce 610 g. Multiplying by 0.82 gives 410 g, and adding 18% of 500 g gives 590 g, which still falls short after an 82% yield.'
           }
         ]
       }

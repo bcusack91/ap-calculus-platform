@@ -137,7 +137,7 @@ Check: Fe: 4 = 4 ✓, O: 6 = 6 ✓
 
 - Balance Cl: $\\text{Al} + 3\\text{HCl} \\rightarrow \\text{AlCl}_3 + \\text{H}_2$
 - Balance H: 3H on left, 2H on right → LCM = 6
-- $\\text{Al} + 6\\text{HCl} \\rightarrow 2\\text{AlCl}_3 + 3\\text{H}_2$ → wait, now Cl: 6 vs 6 ✓
+- $\\text{Al} + 6\\text{HCl} \\rightarrow 2\\text{AlCl}_3 + 3\\text{H}_2$ → H: 6 = 6 ✓, and Cl is still balanced: 6 = 6 ✓
 - Balance Al: need 2 on left:
 $$\\boxed{2\\text{Al} + 6\\text{HCl} \\rightarrow 2\\text{AlCl}_3 + 3\\text{H}_2}$$
 
@@ -155,13 +155,13 @@ Check: Al: 2 = 2 ✓, H: 6 = 6 ✓, Cl: 6 = 6 ✓
           {
             question: 'When balancing a chemical equation, you may change:',
             options: [
-              'Subscripts only',
+              'Subscripts in the product formulas only',
               'Coefficients only',
               'Both subscripts and coefficients',
               'The chemical formulas of the products'
             ],
             correctAnswer: 1,
-            explanation: 'Only coefficients (numbers in front of formulas) may be changed. Changing subscripts would change the identity of the substance, which is not allowed.'
+            explanation: 'Only coefficients (numbers in front of formulas) may be changed. Changing subscripts would change the identity of the substance, which is not allowed, whether the formula is a reactant or a product.'
           },
           {
             question: 'What is the coefficient of $O_{2}$ when the equation $\\text{C}_3\\text{H}_8 + \\text{O}_2 \\rightarrow \\text{CO}_2 + \\text{H}_2\\text{O}$ is balanced?',
@@ -169,10 +169,10 @@ Check: Al: 2 = 2 ✓, H: 6 = 6 ✓, Cl: 6 = 6 ✓
               '3',
               '4',
               '5',
-              '7'
+              '10'
             ],
             correctAnswer: 2,
-            explanation: '$\\text{C}_3\\text{H}_8 + 5\\text{O}_2 \\rightarrow 3\\text{CO}_2 + 4\\text{H}_2\\text{O}$. Products have 3(2) + 4(1) = 10 oxygen atoms → 10/2 = 5 $O_{2}$.'
+            explanation: '$\\text{C}_3\\text{H}_8 + 5\\text{O}_2 \\rightarrow 3\\text{CO}_2 + 4\\text{H}_2\\text{O}$. Products have 3(2) + 4(1) = 10 oxygen atoms → 10/2 = 5 $O_{2}$. Answering 10 counts O atoms without dividing by 2; 3 and 4 are the $CO_{2}$ and $H_{2}O$ coefficients.'
           },
           {
             question: 'The polyatomic ion shortcut is most useful when:',
@@ -265,24 +265,24 @@ Balance each equation. Enter the coefficient of the indicated substance.
           {
             question: 'Balance: $\\text{KMnO}_4 + \\text{HCl} \\rightarrow \\text{KCl} + \\text{MnCl}_2 + \\text{Cl}_2 + \\text{H}_2\\text{O}$. What is the coefficient of HCl?',
             options: [
+              '6',
               '8',
-              '12',
               '16',
-              '20'
+              '10'
             ],
             correctAnswer: 2,
-            explanation: '$2\\text{KMnO}_4 + 16\\text{HCl} \\rightarrow 2\\text{KCl} + 2\\text{MnCl}_2 + 5\\text{Cl}_2 + 8\\text{H}_2\\text{O}$. K: 2=2 ✓, Mn: 2=2 ✓, Cl: 16 = 2+4+10 = 16 ✓, H: 16=16 ✓, O: 8=8 ✓.'
+            explanation: '$2\\text{KMnO}_4 + 16\\text{HCl} \\rightarrow 2\\text{KCl} + 2\\text{MnCl}_2 + 5\\text{Cl}_2 + 8\\text{H}_2\\text{O}$. K: 2=2 ✓, Mn: 2=2 ✓, Cl: 16 = 2+4+10 = 16 ✓, H: 16=16 ✓, O: 8=8 ✓. Counting only the Cl in KCl and $MnCl_{2}$ gives 6, counting only the Cl in $5Cl_{2}$ gives 10, and 8 is the coefficient of $H_{2}O$.'
           },
           {
             question: 'The sum of all coefficients in the balanced equation $\\text{Al} + \\text{Fe}_2\\text{O}_3 \\rightarrow \\text{Al}_2\\text{O}_3 + \\text{Fe}$ is:',
             options: [
               '5',
               '6',
-              '7',
-              '8'
+              '4',
+              '12'
             ],
             correctAnswer: 1,
-            explanation: '$2\\text{Al} + \\text{Fe}_2\\text{O}_3 \\rightarrow \\text{Al}_2\\text{O}_3 + 2\\text{Fe}$. Coefficients: 2 + 1 + 1 + 2 = 6. Al: 2=2 ✓, Fe: 2=2 ✓, O: 3=3 ✓.'
+            explanation: '$2\\text{Al} + \\text{Fe}_2\\text{O}_3 \\rightarrow \\text{Al}_2\\text{O}_3 + 2\\text{Fe}$. Coefficients: 2 + 1 + 1 + 2 = 6. Al: 2=2 ✓, Fe: 2=2 ✓, O: 3=3 ✓. The unbalanced equation sums to 4, forgetting the 2 on Fe gives 5, and the unreduced $4\\text{Al} + 2\\text{Fe}_2\\text{O}_3 \\rightarrow 2\\text{Al}_2\\text{O}_3 + 4\\text{Fe}$ sums to 12.'
           }
         ]
       }

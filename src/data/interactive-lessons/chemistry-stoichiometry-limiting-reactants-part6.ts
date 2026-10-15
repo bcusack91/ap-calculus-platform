@@ -132,10 +132,10 @@ Al remaining: $(1.112 - 0.6262) \\; \\cancel{\\text{mol Al}} \\times \\frac{26.9
               '20.0 g',
               '25.0 g',
               '31.3 g',
-              '80.0 g'
+              '2000 g'
             ],
             correctAnswer: 0,
-            explanation: 'Actual yield = theoretical yield × (% yield / 100) = 25.0 × 0.800 = 20.0 g.'
+            explanation: 'Actual yield = theoretical yield × (% yield / 100) = 25.0 × 0.800 = 20.0 g. Dividing by 0.800 gives 31.3 g, and forgetting to divide 80.0 by 100 gives 2000 g.'
           },
           {
             question: 'After a limiting reactant problem, you can find the excess remaining by:',
@@ -143,7 +143,7 @@ Al remaining: $(1.112 - 0.6262) \\; \\cancel{\\text{mol Al}} \\times \\frac{26.9
               'Subtracting the limiting reactant moles from the excess moles directly',
               'Calculating moles of excess consumed using the mole ratio, then subtracting from initial moles',
               'Dividing the product mass by the excess molar mass',
-              'Multiplying the excess moles by 100'
+              'Subtracting the product moles from the excess moles'
             ],
             correctAnswer: 1,
             explanation: 'Use the limiting reactant moles and the mole ratio to find how much excess was consumed. Then subtract from the initial amount: excess remaining = initial − consumed.'
@@ -170,8 +170,7 @@ A reaction starts with 28.02 g of $N_{2}$ and 8.064 g of $H_{2}$. Percent yield 
 **3)** What is the actual yield of $NH_{3}$ in grams? (to 3 significant figures)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['N2', '34.1', '29.0'],
+        questions: [{ question: '(1)', answer: 'N2', acceptableAnswers: ['N2', 'N₂', 'nitrogen'] }, { question: '(2)', answer: '34.1', acceptableAnswers: ['34.1'] }, { question: '(3)', answer: '29.0', acceptableAnswers: ['29.0'] }],
         hint1: 'Mol $N_{2}$ = 28.02/28.02 = 1.000. Mol $H_{2}$ = 8.064/2.016 = 4.000. From $N_{2}$: 1.000 × 2 = 2.000 mol $NH_{3}$. From $H_{2}$: 4.000 × 2/3 = 2.667 mol $NH_{3}$. Which is less?',
         hint2: 'Theoretical yield = mol $NH_{3}$ (from limiting) × $M_{\\text{NH}_3}$ = 2.000 × 17.03.',
         hint3: 'Actual = theoretical × 0.85.',
@@ -233,12 +232,12 @@ A reaction starts with 28.02 g of $N_{2}$ and 8.064 g of $H_{2}$. Percent yield 
             question: 'Using the previous problem, the theoretical yield of Fe ($M = 55.85$) is approximately:',
             options: [
               '35.0 g',
-              '55.9 g',
+              '207 g',
               '69.9 g',
-              '111.7 g'
+              '1.25 g'
             ],
             correctAnswer: 2,
-            explanation: '$Fe_{2}O_{3}$ is limiting: 0.626 mol → 0.626 × 2 = 1.252 mol Fe → 1.252 × 55.85 = 69.9 g Fe.'
+            explanation: '$Fe_{2}O_{3}$ is limiting: 0.626 mol → 0.626 × 2 = 1.252 mol Fe → 1.252 × 55.85 = 69.9 g Fe. Forgetting the 2:1 ratio gives 35.0 g, using Al as the limiting reactant gives 207 g, and 1.25 is the moles of Fe, not grams.'
           }
         ]
       }

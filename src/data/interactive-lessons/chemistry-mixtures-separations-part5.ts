@@ -156,12 +156,12 @@ Sometimes the analyte reacts slowly or doesn\'t have a clear endpoint. In a **ba
             question: 'In gravimetric analysis, which step is essential for determining the mass of the target substance?',
             options: [
               'Measuring the volume of the solution',
-              'Filtering, drying, and weighing the precipitate',
-              'Using an indicator to detect color change',
+              'Weighing the dried precipitate',
+              'Using an indicator to detect a color change',
               'Measuring the temperature change'
             ],
             correctAnswer: 1,
-            explanation: 'Gravimetric analysis depends on converting the target to a precipitate, then filtering, drying, and accurately weighing it. Mass measurement is the core of the technique.'
+            explanation: 'Gravimetric analysis depends on converting the target to a precipitate, then filtering, drying, and accurately weighing it. Mass measurement is the core of the technique; volumes and indicators belong to titration.'
           },
           {
             question: 'In a titration, the equivalence point is reached when:',
@@ -230,21 +230,21 @@ Sometimes the analyte reacts slowly or doesn\'t have a clear endpoint. In a **ba
         dropdowns: [
           {
             id: 'mx5-dd1',
-            label: 'Finding the amount of $Cl^{-}$ by precipitating AgCl and weighing it is a classic',
+            label: 'Finding the amount of $Cl^{-}$ by precipitating AgCl and weighing it is a classic example of _______',
             options: ['gravimetric analysis', 'titration', 'spectroscopy'],
             correctIndex: 0,
             explanation: 'Finding the amount of $Cl^{-}$ by precipitating AgCl and weighing it is a classic gravimetric analysis.'
           },
           {
             id: 'mx5-dd2',
-            label: 'Determining the concentration of an acid by adding a base of known',
+            label: 'Finding the concentration of an acid by adding a base of known concentration from a buret is _______',
             options: ['gravimetric analysis', 'titration', 'spectroscopy'],
             correctIndex: 1,
             explanation: 'Determining the concentration of an acid by adding a base of known concentration from a buret is titration (volumetric analysis).'
           },
           {
             id: 'mx5-dd3',
-            label: 'Measuring the absorbance of a colored solution to determine concentration using',
+            label: 'Measuring the absorbance of a colored solution to find its concentration is _______',
             options: ['gravimetric analysis', 'titration', 'spectroscopy'],
             correctIndex: 2,
             explanation: 'Measuring the absorbance of a colored solution to determine concentration using Beer\'s Law is spectroscopy.'
@@ -281,13 +281,13 @@ Sometimes the analyte reacts slowly or doesn\'t have a clear endpoint. In a **ba
           {
             question: 'In gravimetric analysis, why is excess precipitating reagent added?',
             options: [
-              'To make the precipitate dissolve faster',
-              'To ensure ALL of the target ion is precipitated',
-              'To change the color of the solution',
-              'To reduce the mass of the precipitate'
+              'To make the precipitate form more quickly',
+              'To precipitate all of the target ion',
+              'To increase the precipitate mass for easier weighing',
+              'To dissolve any impurities in the precipitate'
             ],
             correctAnswer: 1,
-            explanation: 'Excess reagent ensures that the precipitation reaction goes to completion, so that ALL of the target ion is converted to the precipitate. This is essential for accurate results.'
+            explanation: 'Excess reagent ensures that the precipitation reaction goes to completion, so that all of the target ion is converted to the precipitate. The extra reagent stays in solution; it does not add to the mass of the precipitate or dissolve impurities.'
           }
         ]
       }

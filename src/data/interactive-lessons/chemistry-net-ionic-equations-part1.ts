@@ -188,13 +188,13 @@ $$\\text{AgNO}_3(aq) + \\text{NaCl}(aq) \\rightarrow \\text{AgCl}(s) + \\text{Na
           {
             question: 'The phase label (aq) means the substance is:',
             options: [
-              'A pure liquid',
-              'A gas dissolved in water',
+              'A pure liquid such as water',
+              'A gas released from water',
               'Dissolved in water',
               'A solid precipitate'
             ],
             correctAnswer: 2,
-            explanation: '(aq) stands for "aqueous" — dissolved in water. It applies to soluble ionic compounds, strong acids/bases, and other solutes in aqueous solution.'
+            explanation: '(aq) stands for "aqueous" — dissolved in water. It applies to soluble ionic compounds, strong acids/bases, and other solutes in aqueous solution. A pure liquid such as water is labeled (l), and a gas leaving the solution is labeled (g).'
           },
           {
             question: 'Which substance would NOT be written as separated ions in an ionic equation?',
@@ -225,8 +225,7 @@ Classify each substance as **strong**, **weak**, or **non** (electrolyte).
 **3)** $C_{2}H_{5}OH$ (ethanol) in water
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['strong', 'weak', 'non'],
+        questions: [{ question: '(1)', answer: 'strong', acceptableAnswers: ['strong', 'strong electrolyte'] }, { question: '(2)', answer: 'weak', acceptableAnswers: ['weak', 'weak electrolyte'] }, { question: '(3)', answer: 'non', acceptableAnswers: ['non', 'nonelectrolyte', 'non electrolyte'] }],
         hint1: 'KBr is a soluble ionic compound. Does it fully dissociate?',
         hint2: 'Acetic acid is an organic acid. Is it on the strong acid list?',
         hint3: 'Ethanol is a molecular (covalent) compound.',
