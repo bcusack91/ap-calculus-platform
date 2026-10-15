@@ -5,7 +5,7 @@ export const aasAfricanKingdomsPart1Data = {
     {
       id: "aasak1-intro",
       type: 'text' as const,
-      content: "# 👑 African Kingdoms & Civilizations (c. 700–1600 CE)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nBefore the transatlantic slave trade, sub-Saharan Africa hosted a series of large, literate, and commercially sophisticated states — Ghana, Mali, Songhai, Kongo, the Swahili coast, Great Zimbabwe, and Aksum/Ethiopia — connected by trans-Saharan and Indian Ocean trade networks.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Trans-Saharan trade** | Camel caravans linked West Africa with North Africa, exchanging gold, salt, copper, kola nuts, and enslaved people. |\n| **Islamic scholarship** | Cities like Timbuktu and Djenné became centers of Quranic learning and law (Maliki school). |\n| **Centralized empires** | Mali and Songhai built tax systems, standing armies, and provincial governors over millions of subjects. |\n\n> 🔑 **Key Concept:** AP African American History rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
+      content: "# 👑 African Kingdoms & Civilizations (c. 700–1600 CE)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nBefore the transatlantic slave trade, sub-Saharan Africa hosted a series of large, literate, and commercially sophisticated states — Ghana, Mali, Songhai, Kongo, the Swahili coast, Great Zimbabwe, and Aksum/Ethiopia — connected by trans-Saharan and Indian Ocean trade networks.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Trans-Saharan trade** | Camel caravans linked West Africa with North Africa, exchanging gold, salt, copper, kola nuts, and enslaved people. |\n| **Islamic scholarship** | Cities like Timbuktu and Djenné became centers of Quranic learning and law (Maliki school). |\n| **Centralized empires** | Mali and Songhai built tax systems, standing armies, and provincial governors over millions of subjects. |\n\n> 🔑 **Key Concept:** AP African American Studies rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
     },
     {
       id: "aasak1-figures",
@@ -19,7 +19,7 @@ export const aasAfricanKingdomsPart1Data = {
       exercise: {
         "questions": [
           {
-            "question": "Which statement BEST captures why African Kingdoms is foundational to AP African American History?",
+            "question": "Which statement BEST captures why African Kingdoms is foundational to AP African American Studies?",
             "options": [
               "Long before the slave trade, Africa hosted large, literate trading states such as Mali, Songhai, Kongo, and Great Zimbabwe.",
               "It shows that African societies before 1500 were small, isolated villages with no states, writing, or long-distance trade.",

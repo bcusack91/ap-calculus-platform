@@ -5,7 +5,7 @@ export const aasResistanceAbolitionPart1Data = {
     {
       id: "aasra1-intro",
       type: 'text' as const,
-      content: "# ✊ Resistance & Abolition (c. 1700–1865)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nEnslaved African Americans resisted bondage daily — through work slowdowns, sabotage, flight, cultural retention, and outright revolt — while a transatlantic abolition movement of formerly enslaved leaders, Black ministers, and white allies dismantled the trade and, ultimately, slavery itself.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Everyday resistance** | Tool-breaking, feigned illness, slowed work, theft of food, preservation of African names. |\n| **Armed revolt** | Stono (1739), Gabriel's (1800), Vesey (1822), Nat Turner (1831), Haiti (1791). |\n| **Moral suasion vs political action** | Garrisonian immediatism vs. Liberty/Free Soil/Republican electoral strategies. |\n\n> 🔑 **Key Concept:** AP African American History rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
+      content: "# ✊ Resistance & Abolition (c. 1700–1865)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nEnslaved African Americans resisted bondage daily — through work slowdowns, sabotage, flight, cultural retention, and outright revolt — while a transatlantic abolition movement of formerly enslaved leaders, Black ministers, and white allies dismantled the trade and, ultimately, slavery itself.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Everyday resistance** | Tool-breaking, feigned illness, slowed work, theft of food, preservation of African names. |\n| **Armed revolt** | Stono (1739), Gabriel's (1800), Vesey (1822), Nat Turner (1831), Haiti (1791). |\n| **Moral suasion vs political action** | Garrisonian immediatism vs. Liberty/Free Soil/Republican electoral strategies. |\n\n> 🔑 **Key Concept:** AP African American Studies rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
     },
     {
       id: "aasra1-figures",
@@ -19,7 +19,7 @@ export const aasResistanceAbolitionPart1Data = {
       exercise: {
         "questions": [
           {
-            "question": "Which statement BEST captures why Resistance & Abolition is foundational to AP African American History?",
+            "question": "Which statement BEST captures why Resistance & Abolition is foundational to AP African American Studies?",
             "options": [
               "Enslaved people resisted daily, from slowdowns to revolt, as a Black-led Atlantic movement fought to end slavery.",
               "Few enslaved people ever resisted, so slavery ended mainly through the work of white reformers, courts, and legislatures.",

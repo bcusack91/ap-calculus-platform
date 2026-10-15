@@ -5,7 +5,7 @@ export const aasCivilRightsMovementPart1Data = {
     {
       id: "aascrm1-intro",
       type: 'text' as const,
-      content: "# 🗽 The Civil Rights Movement (1954–1968)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nFrom *Brown v. Board* (1954) through the Civil Rights Act (1964) and Voting Rights Act (1965), a generation of organizers, lawyers, students, and ordinary people dismantled de jure segregation through litigation, mass nonviolent direct action, voter registration, and federal legislation.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Legal strategy** | NAACP LDF litigation campaign building toward *Brown v. Board* (1954). |\n| **Nonviolent direct action** | Boycotts, sit-ins, freedom rides, marches under Gandhian/Christian discipline. |\n| **Federal enforcement** | 1957 and 1964 Civil Rights Acts; 1965 Voting Rights Act with Section 5 preclearance. |\n\n> 🔑 **Key Concept:** AP African American History rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
+      content: "# 🗽 The Civil Rights Movement (1954–1968)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nFrom *Brown v. Board* (1954) through the Civil Rights Act (1964) and Voting Rights Act (1965), a generation of organizers, lawyers, students, and ordinary people dismantled de jure segregation through litigation, mass nonviolent direct action, voter registration, and federal legislation.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Legal strategy** | NAACP LDF litigation campaign building toward *Brown v. Board* (1954). |\n| **Nonviolent direct action** | Boycotts, sit-ins, freedom rides, marches under Gandhian/Christian discipline. |\n| **Federal enforcement** | 1957 and 1964 Civil Rights Acts; 1965 Voting Rights Act with Section 5 preclearance. |\n\n> 🔑 **Key Concept:** AP African American Studies rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
     },
     {
       id: "aascrm1-figures",
@@ -19,7 +19,7 @@ export const aasCivilRightsMovementPart1Data = {
       exercise: {
         "questions": [
           {
-            "question": "Which statement BEST captures why Civil Rights Movement is foundational to AP African American History?",
+            "question": "Which statement BEST captures why Civil Rights Movement is foundational to AP African American Studies?",
             "options": [
               "From *Brown* (1954) to the Voting Rights Act (1965), litigation, direct action, and federal law dismantled de jure segregation.",
               "From *Plessy* (1896) to the Civil Rights Act (1964), federal courts alone ended segregation, with little role for local organizers or mass protest.",

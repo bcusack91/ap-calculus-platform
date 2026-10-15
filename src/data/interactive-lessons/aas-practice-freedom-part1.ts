@@ -5,7 +5,7 @@ export const aasPracticeFreedomPart1Data = {
     {
       id: "aaspf1-intro",
       type: 'text' as const,
-      content: "# 🤝 The Practice of Freedom (c. 1830–1950)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nBlack Americans built an entire counter-public — churches, HBCUs, fraternal orders, newspapers, sororities, banks, baseball leagues, and women's clubs — that sustained community life and trained generations of activists, intellectuals, and leaders.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Black church** | AME (1816), AMEZ (1821), National Baptist (1895) — institutional bedrock of Black civic life. |\n| **HBCUs** | Howard (1867), Fisk (1866), Spelman (1881), Morehouse (1867), Tuskegee (1881). |\n| **Black press** | *Freedom's Journal* (1827), *Chicago Defender* (1905), *Pittsburgh Courier* (1907). |\n\n> 🔑 **Key Concept:** AP African American History rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
+      content: "# 🤝 The Practice of Freedom (c. 1830–1950)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nBlack Americans built an entire counter-public — churches, HBCUs, fraternal orders, newspapers, sororities, banks, baseball leagues, and women's clubs — that sustained community life and trained generations of activists, intellectuals, and leaders.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Black church** | AME (1816), AMEZ (1821), National Baptist (1895) — institutional bedrock of Black civic life. |\n| **HBCUs** | Howard (1867), Fisk (1866), Spelman (1881), Morehouse (1867), Tuskegee (1881). |\n| **Black press** | *Freedom's Journal* (1827), *Chicago Defender* (1905), *Pittsburgh Courier* (1907). |\n\n> 🔑 **Key Concept:** AP African American Studies rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
     },
     {
       id: "aaspf1-figures",
@@ -19,7 +19,7 @@ export const aasPracticeFreedomPart1Data = {
       exercise: {
         "questions": [
           {
-            "question": "Which statement BEST captures why Practice of Freedom is foundational to AP African American History?",
+            "question": "Which statement BEST captures why Practice of Freedom is foundational to AP African American Studies?",
             "options": [
               "Black communities built churches, colleges, newspapers, and clubs that sustained daily life and trained generations of activists.",
               "Black institutions were founded mainly by white philanthropists, who chose their leaders, teachers, curricula, and editorial lines.",

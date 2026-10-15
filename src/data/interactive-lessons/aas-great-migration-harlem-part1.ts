@@ -5,7 +5,7 @@ export const aasGreatMigrationHarlemPart1Data = {
     {
       id: "aasgmh1-intro",
       type: 'text' as const,
-      content: "# 🚆 The Great Migration & Harlem Renaissance (1910–1940)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nBetween 1910 and 1970, ~6 million African Americans moved from the rural South to northern, midwestern, and western cities — fleeing Jim Crow and pulled by industrial labor demand. In neighborhoods like Harlem, this demographic shift produced an unprecedented flowering of Black literature, music, theater, and political thought.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Push factors** | Lynching, sharecropping debt, boll weevil, disfranchisement. |\n| **Pull factors** | WWI labor demand (immigration cut off 1917), higher wages, voting rights, urban Black institutions. |\n| **New Negro** | Alain Locke's 1925 anthology framing self-confident, modern Black identity. |\n\n> 🔑 **Key Concept:** AP African American History rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
+      content: "# 🚆 The Great Migration & Harlem Renaissance (1910–1940)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nBetween 1910 and 1970, ~6 million African Americans moved from the rural South to northern, midwestern, and western cities — fleeing Jim Crow and pulled by industrial labor demand. In neighborhoods like Harlem, this demographic shift produced an unprecedented flowering of Black literature, music, theater, and political thought.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Push factors** | Lynching, sharecropping debt, boll weevil, disfranchisement. |\n| **Pull factors** | WWI labor demand (immigration cut off 1917), higher wages, voting rights, urban Black institutions. |\n| **New Negro** | Alain Locke's 1925 anthology framing self-confident, modern Black identity. |\n\n> 🔑 **Key Concept:** AP African American Studies rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
     },
     {
       id: "aasgmh1-figures",
@@ -19,7 +19,7 @@ export const aasGreatMigrationHarlemPart1Data = {
       exercise: {
         "questions": [
           {
-            "question": "Which statement BEST captures why Great Migration & Harlem Renaissance is foundational to AP African American History?",
+            "question": "Which statement BEST captures why Great Migration & Harlem Renaissance is foundational to AP African American Studies?",
             "options": [
               "About 6 million Black Southerners moved to Northern and Western cities by 1970, and Harlem's new community sparked a cultural renaissance.",
               "Most Black Southerners moved only to Southern cities like Atlanta, so the Harlem Renaissance drew mainly on rural Southern writers.",

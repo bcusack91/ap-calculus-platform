@@ -5,7 +5,7 @@ export const aasOriginsDiasporaPart1Data = {
     {
       id: "aasod1-intro",
       type: 'text' as const,
-      content: "# 🌍 Origins of the African Diaspora (c. 1450–1800)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nThe African diaspora refers to the global dispersal of African-descended peoples — primarily through the transatlantic slave trade — and the cultural, linguistic, and religious continuities they preserved across the Americas, Caribbean, and Atlantic Europe.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Diaspora** | Dispersed populations linked by shared African origin and ongoing cultural connections. |\n| **Cultural retention** | Survival of African religious, musical, linguistic, and culinary practices in the Americas. |\n| **Creolization** | Blending of African, European, and Indigenous American forms into new languages and cultures. |\n\n> 🔑 **Key Concept:** AP African American History rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
+      content: "# 🌍 Origins of the African Diaspora (c. 1450–1800)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nThe African diaspora refers to the global dispersal of African-descended peoples — primarily through the transatlantic slave trade — and the cultural, linguistic, and religious continuities they preserved across the Americas, Caribbean, and Atlantic Europe.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Diaspora** | Dispersed populations linked by shared African origin and ongoing cultural connections. |\n| **Cultural retention** | Survival of African religious, musical, linguistic, and culinary practices in the Americas. |\n| **Creolization** | Blending of African, European, and Indigenous American forms into new languages and cultures. |\n\n> 🔑 **Key Concept:** AP African American Studies rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
     },
     {
       id: "aasod1-figures",
@@ -19,7 +19,7 @@ export const aasOriginsDiasporaPart1Data = {
       exercise: {
         "questions": [
           {
-            "question": "Which statement BEST captures why Origins of the Diaspora is foundational to AP African American History?",
+            "question": "Which statement BEST captures why Origins of the Diaspora is foundational to AP African American Studies?",
             "options": [
               "It traces how the slave trade scattered Africans across the Atlantic and how they kept faiths, music, and languages alive.",
               "It shows that most captives landed in mainland North America, where African languages, religions, and music were quickly erased.",

@@ -5,7 +5,7 @@ export const aasReconstructionJimCrowPart1Data = {
     {
       id: "aasrjc1-intro",
       type: 'text' as const,
-      content: "# ⚖️ Reconstruction & Jim Crow (1865–1900)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nAfter emancipation, the Reconstruction Amendments (13th, 14th, 15th) and Freedmen's Bureau promised citizenship, education, and political participation. The withdrawal of federal troops in 1877 enabled white-supremacist violence and a regime of legal segregation, disfranchisement, and convict-lease labor sustained by *Plessy v. Ferguson* (1896).\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Reconstruction Amendments** | 13th (1865) abolition; 14th (1868) citizenship/equal protection; 15th (1870) Black male suffrage. |\n| **Freedmen's Bureau** | 1865–1872 federal agency providing schools, contracts, and legal aid. |\n| **Disfranchisement** | Poll taxes, literacy tests, grandfather clauses, white primaries strip Black voting rights. |\n\n> 🔑 **Key Concept:** AP African American History rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
+      content: "# ⚖️ Reconstruction & Jim Crow (1865–1900)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nAfter emancipation, the Reconstruction Amendments (13th, 14th, 15th) and Freedmen's Bureau promised citizenship, education, and political participation. The withdrawal of federal troops in 1877 enabled white-supremacist violence and a regime of legal segregation, disfranchisement, and convict-lease labor sustained by *Plessy v. Ferguson* (1896).\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Reconstruction Amendments** | 13th (1865) abolition; 14th (1868) citizenship/equal protection; 15th (1870) Black male suffrage. |\n| **Freedmen's Bureau** | 1865–1872 federal agency providing schools, contracts, and legal aid. |\n| **Disfranchisement** | Poll taxes, literacy tests, grandfather clauses, white primaries strip Black voting rights. |\n\n> 🔑 **Key Concept:** AP African American Studies rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
     },
     {
       id: "aasrjc1-figures",
@@ -19,7 +19,7 @@ export const aasReconstructionJimCrowPart1Data = {
       exercise: {
         "questions": [
           {
-            "question": "Which statement BEST captures why Reconstruction & Jim Crow is foundational to AP African American History?",
+            "question": "Which statement BEST captures why Reconstruction & Jim Crow is foundational to AP African American Studies?",
             "options": [
               "The Reconstruction Amendments and Freedmen's Bureau promised citizenship, but after 1877 violence and *Plessy* entrenched Jim Crow.",
               "Federal troops stayed in the South until 1900, enforcing Reconstruction's 14th and 15th Amendments against white-supremacist violence.",

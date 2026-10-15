@@ -5,7 +5,7 @@ export const aasTransatlanticSlaveTradePart1Data = {
     {
       id: "aasts1-intro",
       type: 'text' as const,
-      content: "# ⛓️ The Transatlantic Slave Trade (c. 1500–1888)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nBetween 1501 and 1866, an estimated 12.5 million Africans were forcibly embarked on European ships across the Atlantic. About 10.7 million survived the Middle Passage; only ~388,000 (~3.6%) disembarked in mainland North America. The trade integrated four continents into a coercive economic system.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Triangular trade** | European manufactures → African captives → American plantation goods → Europe. |\n| **Middle Passage** | The Atlantic crossing; mortality averaged ~15%, sometimes much higher. |\n| **Asiento** | Spanish license granting European powers the monopoly to supply enslaved Africans to Spanish colonies. |\n\n> 🔑 **Key Concept:** AP African American History rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
+      content: "# ⛓️ The Transatlantic Slave Trade (c. 1500–1888)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nBetween 1501 and 1866, an estimated 12.5 million Africans were forcibly embarked on European ships across the Atlantic. About 10.7 million survived the Middle Passage; only ~388,000 (~3.6%) disembarked in mainland North America. The trade integrated four continents into a coercive economic system.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Triangular trade** | European manufactures → African captives → American plantation goods → Europe. |\n| **Middle Passage** | The Atlantic crossing; mortality averaged ~15%, sometimes much higher. |\n| **Asiento** | Spanish license granting European powers the monopoly to supply enslaved Africans to Spanish colonies. |\n\n> 🔑 **Key Concept:** AP African American Studies rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
     },
     {
       id: "aasts1-figures",
@@ -19,7 +19,7 @@ export const aasTransatlanticSlaveTradePart1Data = {
       exercise: {
         "questions": [
           {
-            "question": "Which statement BEST captures why Transatlantic Slave Trade is foundational to AP African American History?",
+            "question": "Which statement BEST captures why Transatlantic Slave Trade is foundational to AP African American Studies?",
             "options": [
               "About 12.5 million Africans were forced onto ships from 1501 to 1866; only ~3.6% of survivors landed in mainland North America.",
               "Most of the 12.5 million Africans forced across the Atlantic landed in mainland North America, by far the trade's main destination.",

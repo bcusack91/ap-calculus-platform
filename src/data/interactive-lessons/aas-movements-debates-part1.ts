@@ -5,7 +5,7 @@ export const aasMovementsDebatesPart1Data = {
     {
       id: "aasmd1-intro",
       type: 'text' as const,
-      content: "# 💬 Movements & Debates (1850–present)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nAcross more than 150 years, African American thought has grappled with enduring questions: integration vs. separatism, gradualism vs. immediatism, civil rights vs. human rights, race alone vs. intersectional analysis. These debates have shaped strategy, art, and political alignments from Frederick Douglass through bell hooks and the Movement for Black Lives.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Integration vs. separatism** | Douglass vs. Delany; King vs. Malcolm X; NAACP vs. Nation of Islam. |\n| **Intersectionality** | Crenshaw (1989) — overlapping race, gender, and class generate distinct experiences of inequality. |\n| **Pan-Africanism** | Du Bois congresses (1900–1945); Garvey UNIA; Kwame Nkrumah; Black Power's African turn. |\n\n> 🔑 **Key Concept:** AP African American History rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
+      content: "# 💬 Movements & Debates (1850–present)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nAcross more than 150 years, African American thought has grappled with enduring questions: integration vs. separatism, gradualism vs. immediatism, civil rights vs. human rights, race alone vs. intersectional analysis. These debates have shaped strategy, art, and political alignments from Frederick Douglass through bell hooks and the Movement for Black Lives.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Integration vs. separatism** | Douglass vs. Delany; King vs. Malcolm X; NAACP vs. Nation of Islam. |\n| **Intersectionality** | Crenshaw (1989) — overlapping race, gender, and class generate distinct experiences of inequality. |\n| **Pan-Africanism** | Du Bois congresses (1900–1945); Garvey UNIA; Kwame Nkrumah; Black Power's African turn. |\n\n> 🔑 **Key Concept:** AP African American Studies rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
     },
     {
       id: "aasmd1-figures",
@@ -19,7 +19,7 @@ export const aasMovementsDebatesPart1Data = {
       exercise: {
         "questions": [
           {
-            "question": "Which statement BEST captures why Movements & Debates is foundational to AP African American History?",
+            "question": "Which statement BEST captures why Movements & Debates is foundational to AP African American Studies?",
             "options": [
               "Black thinkers have long debated strategy, such as integration vs. separatism and race vs. intersectional analysis.",
               "African American leaders have largely agreed on one strategy, integration through the courts, ever since Douglass's day.",

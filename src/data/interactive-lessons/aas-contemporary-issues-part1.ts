@@ -5,7 +5,7 @@ export const aasContemporaryIssuesPart1Data = {
     {
       id: "aasci1-intro",
       type: 'text' as const,
-      content: "# ⚡ Contemporary Issues & Debates (1980–present)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nFrom the War on Drugs and mass incarceration through Obama's election, Black Lives Matter, and the 1619 Project, contemporary African American history has been shaped by the persistence of structural inequality alongside unprecedented political and cultural visibility.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Mass incarceration** | U.S. prison population rose from ~300,000 (1972) to ~2.3 million (2008); Black men incarcerated at 5–6× white rate. |\n| **Color-blind racism** | Post-Civil Rights ideology that ignores structural inequality (Eduardo Bonilla-Silva). |\n| **Movement for Black Lives** | Decentralized network founded 2013; broadens civil-rights agenda to police violence, abolition, intersectionality. |\n\n> 🔑 **Key Concept:** AP African American History rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
+      content: "# ⚡ Contemporary Issues & Debates (1980–present)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nFrom the War on Drugs and mass incarceration through Obama's election, Black Lives Matter, and the 1619 Project, contemporary African American history has been shaped by the persistence of structural inequality alongside unprecedented political and cultural visibility.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Mass incarceration** | U.S. prison population rose from ~300,000 (1972) to ~2.3 million (2008); Black men incarcerated at 5–6× white rate. |\n| **Color-blind racism** | Post-Civil Rights ideology that ignores structural inequality (Eduardo Bonilla-Silva). |\n| **Movement for Black Lives** | Decentralized network founded 2013; broadens civil-rights agenda to police violence, abolition, intersectionality. |\n\n> 🔑 **Key Concept:** AP African American Studies rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
     },
     {
       id: "aasci1-figures",
@@ -19,7 +19,7 @@ export const aasContemporaryIssuesPart1Data = {
       exercise: {
         "questions": [
           {
-            "question": "Which statement BEST captures why Contemporary Issues is foundational to AP African American History?",
+            "question": "Which statement BEST captures why Contemporary Issues is foundational to AP African American Studies?",
             "options": [
               "Since 1980, structural inequality has persisted alongside unprecedented Black political and cultural visibility.",
               "Since 1980, the civil rights laws of the 1960s have fully closed racial gaps in wealth, health, schooling, and incarceration.",

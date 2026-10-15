@@ -5,7 +5,7 @@ export const aasSlaveryInAmericaPart1Data = {
     {
       id: "aassia1-intro",
       type: 'text' as const,
-      content: "# 🏚️ Slavery in America (c. 1619–1865)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nSlavery in British North America hardened from a fluid 17th-century labor system into race-based, hereditary chattel slavery. By 1860, ~4 million enslaved African Americans produced two-thirds of the world's cotton supply, financing southern wealth and northern industry.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Chattel slavery** | Legal status defining humans as inheritable property — distinct from indenture or serfdom. |\n| **Partus sequitur ventrem** | Virginia 1662 law: a child's status follows the mother's, making slavery hereditary. |\n| **Domestic slave trade** | After 1808 ban on imports, ~1 million people forcibly relocated from Upper to Lower South. |\n\n> 🔑 **Key Concept:** AP African American History rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
+      content: "# 🏚️ Slavery in America (c. 1619–1865)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nSlavery in British North America hardened from a fluid 17th-century labor system into race-based, hereditary chattel slavery. By 1860, ~4 million enslaved African Americans produced two-thirds of the world's cotton supply, financing southern wealth and northern industry.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Chattel slavery** | Legal status defining humans as inheritable property — distinct from indenture or serfdom. |\n| **Partus sequitur ventrem** | Virginia 1662 law: a child's status follows the mother's, making slavery hereditary. |\n| **Domestic slave trade** | After 1808 ban on imports, ~1 million people forcibly relocated from Upper to Lower South. |\n\n> 🔑 **Key Concept:** AP African American Studies rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
     },
     {
       id: "aassia1-figures",
@@ -19,7 +19,7 @@ export const aasSlaveryInAmericaPart1Data = {
       exercise: {
         "questions": [
           {
-            "question": "Which statement BEST captures why Slavery in America is foundational to AP African American History?",
+            "question": "Which statement BEST captures why Slavery in America is foundational to AP African American Studies?",
             "options": [
               "Slavery hardened from a fluid 1600s labor system into hereditary, race-based bondage holding ~4 million by 1860.",
               "Slavery began as hereditary, race-based bondage in 1619, and it stayed unchanged in law and in practice until 1865.",

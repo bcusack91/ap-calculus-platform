@@ -5,7 +5,7 @@ export const aasWwiWwiiEraPart1Data = {
     {
       id: "aasww1-intro",
       type: 'text' as const,
-      content: "# 🪖 African Americans in the World Wars (1914–1945)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nAfrican Americans served in segregated units in both world wars while facing Jim Crow at home. The contradiction between fighting fascism abroad and racism at home — captured by the *Pittsburgh Courier*'s 'Double V' campaign — accelerated postwar civil-rights mobilization.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Segregated military service** | U.S. armed forces remained legally segregated until Truman's Executive Order 9981 (1948). |\n| **Double V** | Victory abroad over fascism, victory at home over racism. |\n| **Federal employment opening** | EO 8802 (1941) banned defense-industry discrimination — the first such order since Reconstruction. |\n\n> 🔑 **Key Concept:** AP African American History rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
+      content: "# 🪖 African Americans in the World Wars (1914–1945)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nAfrican Americans served in segregated units in both world wars while facing Jim Crow at home. The contradiction between fighting fascism abroad and racism at home — captured by the *Pittsburgh Courier*'s 'Double V' campaign — accelerated postwar civil-rights mobilization.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Segregated military service** | U.S. armed forces remained legally segregated until Truman's Executive Order 9981 (1948). |\n| **Double V** | Victory abroad over fascism, victory at home over racism. |\n| **Federal employment opening** | EO 8802 (1941) banned defense-industry discrimination — the first such order since Reconstruction. |\n\n> 🔑 **Key Concept:** AP African American Studies rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
     },
     {
       id: "aasww1-figures",
@@ -19,7 +19,7 @@ export const aasWwiWwiiEraPart1Data = {
       exercise: {
         "questions": [
           {
-            "question": "Which statement BEST captures why WWI & WWII Era is foundational to AP African American History?",
+            "question": "Which statement BEST captures why WWI & WWII Era is foundational to AP African American Studies?",
             "options": [
               "Black troops fought fascism abroad in segregated units, and the Double V campaign turned that contradiction into postwar protest.",
               "Both world wars integrated the armed forces from the start, so the military became a model for desegregating the South.",

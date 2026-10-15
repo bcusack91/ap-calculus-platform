@@ -5,7 +5,7 @@ export const aasBlackPowerBeyondPart1Data = {
     {
       id: "aasbpb1-intro",
       type: 'text' as const,
-      content: "# ✊🏿 Black Power & Beyond (1965–1980)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nAfter 1965, frustration with the pace of change and persistent northern racism produced Black Power: a constellation of nationalist, socialist, cultural, and pan-African movements that emphasized self-determination, community control, and Black aesthetic and intellectual autonomy.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Black Power** | Stokely Carmichael's June 1966 Greenwood, MS rally — slogan reframes the movement. |\n| **Community survival programs** | Black Panther Free Breakfast, free clinics, sickle-cell screening. |\n| **Black Arts Movement** | Cultural arm of Black Power — Amiri Baraka, Sonia Sanchez, Larry Neal. |\n\n> 🔑 **Key Concept:** AP African American History rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
+      content: "# ✊🏿 Black Power & Beyond (1965–1980)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nAfter 1965, frustration with the pace of change and persistent northern racism produced Black Power: a constellation of nationalist, socialist, cultural, and pan-African movements that emphasized self-determination, community control, and Black aesthetic and intellectual autonomy.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Black Power** | Stokely Carmichael's June 1966 Greenwood, MS rally — slogan reframes the movement. |\n| **Community survival programs** | Black Panther Free Breakfast, free clinics, sickle-cell screening. |\n| **Black Arts Movement** | Cultural arm of Black Power — Amiri Baraka, Sonia Sanchez, Larry Neal. |\n\n> 🔑 **Key Concept:** AP African American Studies rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
     },
     {
       id: "aasbpb1-figures",
@@ -19,7 +19,7 @@ export const aasBlackPowerBeyondPart1Data = {
       exercise: {
         "questions": [
           {
-            "question": "Which statement BEST captures why Black Power & Beyond is foundational to AP African American History?",
+            "question": "Which statement BEST captures why Black Power & Beyond is foundational to AP African American Studies?",
             "options": [
               "After 1965, Black Power turned activists toward self-determination, community control, and Black cultural pride.",
               "After 1965, Black Power replaced all political organizing with cultural work, so activists abandoned elections, schools, and programs.",

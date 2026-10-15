@@ -5,7 +5,7 @@ export const aasFreedomEnslavementPart1Data = {
     {
       id: "aasfe1-intro",
       type: 'text' as const,
-      content: "# 🕊️ Freedom & Enslavement (c. 1780–1865)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nAcross the early Republic, free Black communities built churches, schools, mutual-aid societies, and a self-conscious press, even as federal law (Fugitive Slave Acts, *Dred Scott*) expanded slavery's reach. The line between 'free' and 'enslaved' was always contingent and racialized.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Gradual emancipation in the North** | Pennsylvania (1780), New York (1799), New Jersey (1804) freed enslaved people only by birthdates. |\n| **Manumission** | Owner-granted freedom; often restricted by southern states after 1820s. |\n| **Citizenship contested** | *Dred Scott* (1857) declared people of African descent could never be U.S. citizens. |\n\n> 🔑 **Key Concept:** AP African American History rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
+      content: "# 🕊️ Freedom & Enslavement (c. 1780–1865)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nAcross the early Republic, free Black communities built churches, schools, mutual-aid societies, and a self-conscious press, even as federal law (Fugitive Slave Acts, *Dred Scott*) expanded slavery's reach. The line between 'free' and 'enslaved' was always contingent and racialized.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Gradual emancipation in the North** | Pennsylvania (1780), New York (1799), New Jersey (1804) freed enslaved people only by birthdates. |\n| **Manumission** | Owner-granted freedom; often restricted by southern states after 1820s. |\n| **Citizenship contested** | *Dred Scott* (1857) declared people of African descent could never be U.S. citizens. |\n\n> 🔑 **Key Concept:** AP African American Studies rewards arguments that combine specific evidence (named figures, dates, primary sources) with claims about causation, continuity, and change.\n"
     },
     {
       id: "aasfe1-figures",
@@ -19,7 +19,7 @@ export const aasFreedomEnslavementPart1Data = {
       exercise: {
         "questions": [
           {
-            "question": "Which statement BEST captures why Freedom & Enslavement is foundational to AP African American History?",
+            "question": "Which statement BEST captures why Freedom & Enslavement is foundational to AP African American Studies?",
             "options": [
               "Free Black communities built churches, schools, and a press, even as federal law such as *Dred Scott* extended slavery's reach.",
               "Northern gradual emancipation acts freed all enslaved people at once, granting them voting rights, jury service, and full citizenship.",
