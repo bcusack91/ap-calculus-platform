@@ -572,46 +572,46 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'Core Concepts', loader: () => import('./englit-poetry-2-part1').then(m => m.englitPoetry2Part1Data) },
       { title: 'The Speaker as Character: Dramatic Monologue and Persona', loader: () => import('./englit-poetry-2-part2').then(m => m.englitPoetry2Part2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englit-poetry-2-part3').then(m => m.englitPoetry2Part3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englit-poetry-2-part4').then(m => m.englitPoetry2Part4Data) },
-      { title: 'Change Over Time', loader: () => import('./englit-poetry-2-part5').then(m => m.englitPoetry2Part5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englit-poetry-2-part6').then(m => m.englitPoetry2Part6Data) },
-      { title: 'AP Review', loader: () => import('./englit-poetry-2-part7').then(m => m.englitPoetry2Part7Data) }
+      { title: 'Syntax and the Speaker\'s Mind', loader: () => import('./englit-poetry-2-part3').then(m => m.englitPoetry2Part3Data) },
+      { title: 'Extended Metaphor, Conceit, Personification and Synecdoche', loader: () => import('./englit-poetry-2-part4').then(m => m.englitPoetry2Part4Data) },
+      { title: 'Symbol, Allegory, Allusion and Irony', loader: () => import('./englit-poetry-2-part5').then(m => m.englitPoetry2Part5Data) },
+      { title: 'Q1 Workshop: Complexity and the Sophistication Point', loader: () => import('./englit-poetry-2-part6').then(m => m.englitPoetry2Part6Data) },
+      { title: 'Unit 5 Synthesis: Reading a Hard Poem Whole', loader: () => import('./englit-poetry-2-part7').then(m => m.englitPoetry2Part7Data) }
     ],
   },
   'englit-poetic-structure-form': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englit-poetic-structure-form-part1').then(m => m.englitPoeticStructureFormPart1Data) },
-      { title: 'Key Processes', loader: () => import('./englit-poetic-structure-form-part2').then(m => m.englitPoeticStructureFormPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englit-poetic-structure-form-part3').then(m => m.englitPoeticStructureFormPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englit-poetic-structure-form-part4').then(m => m.englitPoeticStructureFormPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englit-poetic-structure-form-part5').then(m => m.englitPoeticStructureFormPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englit-poetic-structure-form-part6').then(m => m.englitPoeticStructureFormPart6Data) },
-      { title: 'AP Review', loader: () => import('./englit-poetic-structure-form-part7').then(m => m.englitPoeticStructureFormPart7Data) }
+      { title: 'Meter: Feet, Line Length and Scansion', loader: () => import('./englit-poetic-structure-form-part2').then(m => m.englitPoeticStructureFormPart2Data) },
+      { title: 'Rhyme and Stanza Patterns', loader: () => import('./englit-poetic-structure-form-part3').then(m => m.englitPoeticStructureFormPart3Data) },
+      { title: 'Fixed Forms: Two Sonnets and the Villanelle', loader: () => import('./englit-poetic-structure-form-part4').then(m => m.englitPoeticStructureFormPart4Data) },
+      { title: 'Blank Verse, Free Verse and Broken Patterns', loader: () => import('./englit-poetic-structure-form-part5').then(m => m.englitPoeticStructureFormPart5Data) },
+      { title: 'Writing About Form on the Exam', loader: () => import('./englit-poetic-structure-form-part6').then(m => m.englitPoeticStructureFormPart6Data) },
+      { title: 'Structure Synthesis: Rossetti\'s "Remember"', loader: () => import('./englit-poetic-structure-form-part7').then(m => m.englitPoeticStructureFormPart7Data) }
     ],
   },
   'englit-sound-devices': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englit-sound-devices-part1').then(m => m.englitSoundDevicesPart1Data) },
-      { title: 'Key Processes', loader: () => import('./englit-sound-devices-part2').then(m => m.englitSoundDevicesPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englit-sound-devices-part3').then(m => m.englitSoundDevicesPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englit-sound-devices-part4').then(m => m.englitSoundDevicesPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englit-sound-devices-part5').then(m => m.englitSoundDevicesPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englit-sound-devices-part6').then(m => m.englitSoundDevicesPart6Data) },
-      { title: 'AP Review', loader: () => import('./englit-sound-devices-part7').then(m => m.englitSoundDevicesPart7Data) }
+      { title: 'The Sound Toolkit: Consonance, Onomatopoeia, Internal Rhyme, Euphony and Cacophony', loader: () => import('./englit-sound-devices-part2').then(m => m.englitSoundDevicesPart2Data) },
+      { title: 'Close Readings: Sound Working with Sense', loader: () => import('./englit-sound-devices-part3').then(m => m.englitSoundDevicesPart3Data) },
+      { title: 'Pace and Weight: How Sound Speeds Up and Slows Down a Line', loader: () => import('./englit-sound-devices-part4').then(m => m.englitSoundDevicesPart4Data) },
+      { title: 'Repetition and Syntax as Sound', loader: () => import('./englit-sound-devices-part5').then(m => m.englitSoundDevicesPart5Data) },
+      { title: 'Writing About Sound on the Exam', loader: () => import('./englit-sound-devices-part6').then(m => m.englitSoundDevicesPart6Data) },
+      { title: 'Sound Synthesis: Reading "Break, Break, Break"', loader: () => import('./englit-sound-devices-part7').then(m => m.englitSoundDevicesPart7Data) }
     ],
   },
   'englit-longer-fiction': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englit-longer-fiction-part1').then(m => m.englitLongerFictionPart1Data) },
-      { title: 'Key Processes', loader: () => import('./englit-longer-fiction-part2').then(m => m.englitLongerFictionPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englit-longer-fiction-part3').then(m => m.englitLongerFictionPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englit-longer-fiction-part4').then(m => m.englitLongerFictionPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englit-longer-fiction-part5').then(m => m.englitLongerFictionPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englit-longer-fiction-part6').then(m => m.englitLongerFictionPart6Data) },
+      { title: 'Character Across a Whole Novel', loader: () => import('./englit-longer-fiction-part2').then(m => m.englitLongerFictionPart2Data) },
+      { title: 'How Novels Are Built', loader: () => import('./englit-longer-fiction-part3').then(m => m.englitLongerFictionPart3Data) },
+      { title: 'Reading a Novel Opening', loader: () => import('./englit-longer-fiction-part4').then(m => m.englitLongerFictionPart4Data) },
+      { title: 'Symbol, Motif and Theme Across a Novel', loader: () => import('./englit-longer-fiction-part5').then(m => m.englitLongerFictionPart5Data) },
+      { title: 'Q3 With a Novel: Preparing and Using a Long Work', loader: () => import('./englit-longer-fiction-part6').then(m => m.englitLongerFictionPart6Data) },
       { title: 'AP Review', loader: () => import('./englit-longer-fiction-part7').then(m => m.englitLongerFictionPart7Data) }
     ],
   },
@@ -895,11 +895,11 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englang-tone-voice-analysis-part1').then(m => m.englangToneVoiceAnalysisPart1Data) },
-      { title: 'Key Processes', loader: () => import('./englang-tone-voice-analysis-part2').then(m => m.englangToneVoiceAnalysisPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englang-tone-voice-analysis-part3').then(m => m.englangToneVoiceAnalysisPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englang-tone-voice-analysis-part4').then(m => m.englangToneVoiceAnalysisPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englang-tone-voice-analysis-part5').then(m => m.englangToneVoiceAnalysisPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englang-tone-voice-analysis-part6').then(m => m.englangToneVoiceAnalysisPart6Data) },
+      { title: 'Voice in Depth: Persona, Register, and Stevenson\'s "An Apology for Idlers"', loader: () => import('./englang-tone-voice-analysis-part2').then(m => m.englangToneVoiceAnalysisPart2Data) },
+      { title: 'Two Targets of Tone: Lincoln\'s Letter to Fanny McCullough and Douglass\'s Letter to Ida B. Wells', loader: () => import('./englang-tone-voice-analysis-part3').then(m => m.englangToneVoiceAnalysisPart3Data) },
+      { title: 'Tracking Tone Shifts: Douglass\'s Letter to His Former Enslaver, 1848', loader: () => import('./englang-tone-voice-analysis-part4').then(m => m.englangToneVoiceAnalysisPart4Data) },
+      { title: 'Double Tones and Common Misreadings: Chesterton\'s "On Running After One\'s Hat"', loader: () => import('./englang-tone-voice-analysis-part5').then(m => m.englangToneVoiceAnalysisPart5Data) },
+      { title: 'Exam Practice: Dickens on the Eastern Penitentiary, 1842', loader: () => import('./englang-tone-voice-analysis-part6').then(m => m.englangToneVoiceAnalysisPart6Data) },
       { title: 'AP Review', loader: () => import('./englang-tone-voice-analysis-part7').then(m => m.englangToneVoiceAnalysisPart7Data) }
     ],
   },
@@ -919,8 +919,8 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englang-logical-fallacies-part1').then(m => m.englangLogicalFallaciesPart1Data) },
-      { title: 'Key Processes', loader: () => import('./englang-logical-fallacies-part2').then(m => m.englangLogicalFallaciesPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englang-logical-fallacies-part3').then(m => m.englangLogicalFallaciesPart3Data) },
+      { title: 'Three Ways Reasoning Breaks, and the Legitimate Moves Fallacies Imitate', loader: () => import('./englang-logical-fallacies-part2').then(m => m.englangLogicalFallaciesPart2Data) },
+      { title: 'Reasoning Exposed in Real Texts: Lincoln\'s Fragment on Slavery and Plato\'s Euthyphro', loader: () => import('./englang-logical-fallacies-part3').then(m => m.englangLogicalFallaciesPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./englang-logical-fallacies-part4').then(m => m.englangLogicalFallaciesPart4Data) },
       { title: 'Change Over Time', loader: () => import('./englang-logical-fallacies-part5').then(m => m.englangLogicalFallaciesPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./englang-logical-fallacies-part6').then(m => m.englangLogicalFallaciesPart6Data) },
@@ -931,9 +931,9 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englang-synthesis-part1').then(m => m.englangSynthesisPart1Data) },
-      { title: 'Key Processes', loader: () => import('./englang-synthesis-part2').then(m => m.englangSynthesisPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englang-synthesis-part3').then(m => m.englangSynthesisPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englang-synthesis-part4').then(m => m.englangSynthesisPart4Data) },
+      { title: 'Reading a Source Set: What to Annotate', loader: () => import('./englang-synthesis-part2').then(m => m.englangSynthesisPart2Data) },
+      { title: 'A Worked Source Set: Parks and the Crowded City', loader: () => import('./englang-synthesis-part3').then(m => m.englangSynthesisPart3Data) },
+      { title: 'Visual and Quantitative Sources: Reading Data Without Overclaiming', loader: () => import('./englang-synthesis-part4').then(m => m.englangSynthesisPart4Data) },
       { title: 'Change Over Time', loader: () => import('./englang-synthesis-part5').then(m => m.englangSynthesisPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./englang-synthesis-part6').then(m => m.englangSynthesisPart6Data) },
       { title: 'AP Review', loader: () => import('./englang-synthesis-part7').then(m => m.englangSynthesisPart7Data) }

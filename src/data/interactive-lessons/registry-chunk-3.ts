@@ -1522,10 +1522,10 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./apush-colonial-society-conflicts-part1').then(m => m.apushColonialSocietyConflictsPart1Data) },
-      { title: 'Key Processes', loader: () => import('./apush-colonial-society-conflicts-part2').then(m => m.apushColonialSocietyConflictsPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./apush-colonial-society-conflicts-part3').then(m => m.apushColonialSocietyConflictsPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./apush-colonial-society-conflicts-part4').then(m => m.apushColonialSocietyConflictsPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./apush-colonial-society-conflicts-part5').then(m => m.apushColonialSocietyConflictsPart5Data) },
+      { title: 'Native Nations and Colonial Expansion: Causes of Conflict', loader: () => import('./apush-colonial-society-conflicts-part2').then(m => m.apushColonialSocietyConflictsPart2Data) },
+      { title: 'Building Slavery in Law: Reading the Sources', loader: () => import('./apush-colonial-society-conflicts-part3').then(m => m.apushColonialSocietyConflictsPart3Data) },
+      { title: 'Comparing Slavery Across Regions: Data and Comparison', loader: () => import('./apush-colonial-society-conflicts-part4').then(m => m.apushColonialSocietyConflictsPart4Data) },
+      { title: 'Colonial Culture: Awakening, Enlightenment and a Changing Society', loader: () => import('./apush-colonial-society-conflicts-part5').then(m => m.apushColonialSocietyConflictsPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./apush-colonial-society-conflicts-part6').then(m => m.apushColonialSocietyConflictsPart6Data) },
       { title: 'AP Review', loader: () => import('./apush-colonial-society-conflicts-part7').then(m => m.apushColonialSocietyConflictsPart7Data) }
     ],
@@ -1537,7 +1537,7 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
       { title: 'From Imperial Victory to Imperial Crisis, 1754–1766', loader: () => import('./apush-revolution-independence-part2').then(m => m.apushRevolutionIndependencePart2Data) },
       { title: 'The Case for Resistance, Read Closely (1767–1776)', loader: () => import('./apush-revolution-independence-part3').then(m => m.apushRevolutionIndependencePart3Data) },
       { title: 'The War for Independence: Comparison and Causation', loader: () => import('./apush-revolution-independence-part4').then(m => m.apushRevolutionIndependencePart4Data) },
-      { title: 'Change Over Time', loader: () => import('./apush-revolution-independence-part5').then(m => m.apushRevolutionIndependencePart5Data) },
+      { title: 'Revolutionary Ideals and Their Limits', loader: () => import('./apush-revolution-independence-part5').then(m => m.apushRevolutionIndependencePart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./apush-revolution-independence-part6').then(m => m.apushRevolutionIndependencePart6Data) },
       { title: 'AP Review', loader: () => import('./apush-revolution-independence-part7').then(m => m.apushRevolutionIndependencePart7Data) }
     ],
@@ -1546,7 +1546,7 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./apush-constitution-early-republic-part1').then(m => m.apushConstitutionEarlyRepublicPart1Data) },
-      { title: 'Launching the Federal Government: Hamilton\'s Program and the First Parties', loader: () => import('./apush-constitution-early-republic-part2').then(m => m.apushConstitutionEarlyRepublicPart2Data) },
+      { title: 'Launching the Federal Government: The Hamilton Program and the First Parties', loader: () => import('./apush-constitution-early-republic-part2').then(m => m.apushConstitutionEarlyRepublicPart2Data) },
       { title: 'Two Visions in Their Own Words: Hamilton and Jefferson', loader: () => import('./apush-constitution-early-republic-part3').then(m => m.apushConstitutionEarlyRepublicPart3Data) },
       { title: 'A Republic in a World at War: Causation and the Crisis of 1798–1800', loader: () => import('./apush-constitution-early-republic-part4').then(m => m.apushConstitutionEarlyRepublicPart4Data) },
       { title: 'The West, Slavery, and the Limits of the Founding', loader: () => import('./apush-constitution-early-republic-part5').then(m => m.apushConstitutionEarlyRepublicPart5Data) },
@@ -1558,10 +1558,10 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./apush-democracy-expansion-part1').then(m => m.apushDemocracyExpansionPart1Data) },
-      { title: 'Key Processes', loader: () => import('./apush-democracy-expansion-part2').then(m => m.apushDemocracyExpansionPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./apush-democracy-expansion-part3').then(m => m.apushDemocracyExpansionPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./apush-democracy-expansion-part4').then(m => m.apushDemocracyExpansionPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./apush-democracy-expansion-part5').then(m => m.apushDemocracyExpansionPart5Data) },
+      { title: 'The Jeffersonian Republic and the Rise of Nationalism, 1800–1824', loader: () => import('./apush-democracy-expansion-part2').then(m => m.apushDemocracyExpansionPart2Data) },
+      { title: 'Jackson and Federal Power: Removal and Nullification in Their Own Words', loader: () => import('./apush-democracy-expansion-part3').then(m => m.apushDemocracyExpansionPart3Data) },
+      { title: 'The Market Revolution and the Second Party System: Data and Causation', loader: () => import('./apush-democracy-expansion-part4').then(m => m.apushDemocracyExpansionPart4Data) },
+      { title: 'Manifest Destiny and the Mexican-American War: Connections and Misconceptions', loader: () => import('./apush-democracy-expansion-part5').then(m => m.apushDemocracyExpansionPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./apush-democracy-expansion-part6').then(m => m.apushDemocracyExpansionPart6Data) },
       { title: 'AP Review', loader: () => import('./apush-democracy-expansion-part7').then(m => m.apushDemocracyExpansionPart7Data) }
     ],
