@@ -5,181 +5,242 @@ export const psychPrenatalPart2Data = {
       id: 'prenatal-childhood-development-p2-s1-intro',
       type: 'text' as const,
       content: `
-      # 🧠 Prenatal and Childhood Development
+# 🧠 Prenatal and Childhood Development
 
-      **Part 2 of 7 — Brain and Motor Development**
+**Part 2 of 7 — Infancy and Childhood: Reflexes, Depth Perception, and Motor Skills**
 
-      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
+Newborns can look helpless, but they arrive equipped with automatic responses, sensory preferences and a brain primed to learn. Over the next few years, physical growth unlocks the skills that make a child more independent.
 
-      ### Core Definitions
-      - **fetus**: prenatal stage from roughly nine weeks to birth
-      - **teratogen**: environmental agent that can harm prenatal development
-      - **critical period**: time window when specific experiences strongly shape development
+> 🔑 **Key Concept:** Physical development in infancy and childhood happens in **generally the same order** for all children, but the **timing varies**. Reflexes, motor milestones and early perceptual abilities are signs that development is on track.
 
-      ### Concrete Real-World Example
-      A team is studying early intervention planning for delayed milestones. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
+### Newborn Reflexes
 
-      ### Why This Matters
-      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
+A **reflex** is an unlearned, automatic response to a specific stimulus. Several newborn reflexes help survival, and doctors check them because their presence, and their later fading, indicates a healthy nervous system.
+
+| Reflex | Stimulus | Response | Why it matters |
+|---|---|---|---|
+| **Rooting** | Touch on the cheek or corner of the mouth | Baby turns its head toward the touch and opens its mouth | Helps the baby find the nipple to feed |
+| **Sucking** | Object placed in the mouth | Rhythmic sucking | Allows feeding |
+| **Grasping** | Object pressed into the palm | Fingers close tightly around it | Fades as voluntary grasping develops |
+| **Moro (startle)** | Sudden loss of support or loud noise | Arms fling outward, then pull back in | Fades in the first months of life |
+
+Most of these reflexes fade during the first months as the cortex matures and voluntary control takes over. A reflex that is **missing at birth** or that **persists far longer than expected** can be an early sign of a neurological problem. That is why the AP framework describes reflexes as indicators of on-track physical and psychological milestones.
+
+### Early Perceptual Preferences
+
+Newborns are not blank slates for perception either. Within days they:
+- look longer at face-like patterns than at scrambled patterns,
+- turn toward their mother's voice and the smell of her milk,
+- see best at about 20 to 30 centimeters, roughly the distance to a caregiver's face during feeding.
+
+Researchers learned these facts with methods that use behaviors infants can already control, such as **looking time** and sucking rate. A baby who looks longer at one image than another is showing that it can tell them apart.
       `
     },
     {
       id: 'prenatal-childhood-development-p2-s2-check',
       type: 'multiple-choice' as const,
       content: `
-      **Concept Check** 🎯
+**Concept Check — Reflexes and Early Perception** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In a study about early intervention planning for delayed milestones, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
+            question: 'A nurse gently strokes a newborn\'s cheek, and the baby turns toward her finger with its mouth open. What does this response show?',
             options: [
-              'critical period',
-              'object permanence',
-              'teratogen',
-              'fetus'
-            ],
-            correctAnswer: 3,
-            explanation: 'fetus is correct because it directly matches this mechanism: prenatal stage from roughly nine weeks to birth. The distractors describe related but different processes.'
-          },
-          {
-            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
-            options: [
-              'secure attachment',
-              'critical period',
-              'teratogen',
-              'authoritative parenting'
+              'The rooting reflex, an unlearned response that aids feeding',
+              'Operant conditioning from being rewarded with milk at birth',
+              'Object permanence, the knowledge that hidden objects exist',
+              'The grasping reflex, a response to pressure on the palm'
             ],
             correctAnswer: 0,
-            explanation: 'secure attachment is the strongest match here (caregiver bond marked by trust and comfort in reunion). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
+            explanation: 'Turning toward a touch on the cheek with the mouth open is the rooting reflex, which is present at birth without learning. Grasping is triggered by pressure on the palm, and object permanence is a later cognitive milestone.'
+          },
+          {
+            question: 'A pediatrician notices that a 1-year-old still shows a strong grasping reflex that should have faded months earlier. Why might this concern her?',
+            options: [
+              'Reflexes are learned habits that the parents failed to discourage',
+              'Persisting reflexes can signal a delay in nervous system development',
+              'Strong reflexes mean the child will walk much earlier than peers',
+              'All reflexes should remain strong for the whole of early childhood'
+            ],
+            correctAnswer: 1,
+            explanation: 'Newborn reflexes normally fade as the cortex matures and voluntary control develops, so a reflex that persists can indicate a neurological delay. Reflexes are unlearned, and they do not predict early walking.'
           }
         ]
       }
     },
     {
-      id: 'prenatal-childhood-development-p2-s3-deep',
+      id: 'prenatal-childhood-development-p2-s3-cliff',
       type: 'text' as const,
       content: `
-      ## Deep Dive: Comparing Explanations with Evidence
+## The Visual Cliff: Testing Depth Perception in Infants
 
-      When analyzing early intervention planning for delayed milestones, the best interpretation ties a clear psychological mechanism to measurable evidence.
+How can you ask a baby who cannot talk whether it sees depth? In 1960, Eleanor Gibson and Richard Walk built an ingenious apparatus.
 
-      | Theory / Concept | Core claim | Typical evidence | Common limitation |
-      |---|---|---|---|
-      | fetus | prenatal stage from roughly nine weeks to birth | experimental manipulation with random assignment | possible demand characteristics |
-      | teratogen | environmental agent that can harm prenatal development | longitudinal trend with repeated measurement | third-variable risk in natural settings |
-      | critical period | time window when specific experiences strongly shape development | cross-sectional comparison with matched groups | limited generalizability across cultures |
-      | object permanence | understanding that objects continue to exist when out of sight | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+### The Apparatus
 
-      ### Interpretation Strategy
-      1. Name the mechanism before describing outcomes.
-      2. Match the claim to the strongest available evidence type.
-      3. Acknowledge one limitation and explain whether it changes the conclusion.
+A table is covered with a sheet of sturdy glass. Under one half, a checkerboard pattern sits directly beneath the glass (the **shallow side**). Under the other half, the same pattern sits several feet below the glass, creating the look of a drop-off (the **deep side**). A plank runs down the middle.
 
-      This structure helps you earn reasoning points on free-response and avoid vague claims.
+### The Procedure and Results
+
+1. Infants 6 to 14 months old, all able to crawl, were placed on the center plank.
+2. Their mothers called to them from the shallow side, then from the deep side.
+3. Most infants crawled to their mothers across the shallow side. Of the 27 infants who moved off the plank, only 3 crept onto the deep side. Many cried or peered down at the "cliff" and refused to cross, even though they could feel the solid glass.
+4. Newborn animals that walk soon after birth, such as chicks and baby goats, avoided the deep side from their first exposure.
+
+### What It Shows, and What It Cannot Show
+
+| Conclusion | Strength |
+|---|---|
+| By the time they crawl, most infants perceive depth | Strongly supported |
+| The visual cliff is an innovative way to measure infant perception without words | Strongly supported |
+| Depth perception is entirely inborn in humans | **Not** shown. The infants were at least 6 months old, so they had months of visual and crawling experience |
+
+Later studies found that babies who have more crawling experience show more wariness of the drop-off. The best reading is that the ability to see depth appears early and experience with moving through the world adds the fear of falling. This is a classic **nature and nurture** interaction.
+
+> 🔑 **AP Connection:** The visual cliff is named in the CED. Be ready to describe the apparatus, state what the infants' behavior shows, and explain why the study cannot settle whether depth perception is innate in humans.
       `
     },
     {
-      id: 'prenatal-childhood-development-p2-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Applied Recall (exact term answers)** ✍️
-
-      1) Write the concept that matches: prenatal stage from roughly nine weeks to birth
-
-      2) Write the concept that matches: environmental agent that can harm prenatal development
-
-      3) Write the concept that matches: time window when specific experiences strongly shape development
-
-      Use the exact vocabulary term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['fetus', 'teratogen', 'critical period'],
-        hint1: 'Starts with: F',
-        hint2: 'Starts with: T',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: fetus, teratogen, and critical period. Each response should use the precise term connected to the definition cue.'
-      }
-    },
-    {
-      id: 'prenatal-childhood-development-p2-s5-dropdown',
+      id: 'prenatal-childhood-development-p2-s4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Model Matching** 🔎
+**Visual Cliff Reasoning** 🔎
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Select the concept that best matches: prenatal stage from roughly nine weeks to birth',
-            options: ['fetus', 'secure attachment', 'object permanence', 'authoritative parenting']
+            label: 'In the visual cliff study, the behavior used to measure depth perception was the infant\'s _____',
+            options: ['refusal to crawl onto the deep side', 'heart rate during feeding', 'grasping of the plank', 'crying when the mother left']
           },
           {
-            label: 'Select the concept that best matches: environmental agent that can harm prenatal development',
-            options: ['teratogen', 'secure attachment', 'authoritative parenting', 'critical period']
+            label: 'The study cannot show that human depth perception is entirely inborn because the infants _____',
+            options: ['were tested only on the shallow side', 'could not see the checkerboard', 'already had months of experience', 'were younger than one week old']
           },
           {
-            label: 'Select the concept that best matches: time window when specific experiences strongly shape development',
-            options: ['critical period', 'object permanence', 'secure attachment', 'teratogen']
+            label: 'Chicks avoiding the deep side on first exposure is evidence that, in some species, depth perception is _____',
+            options: ['learned from mothers', 'present without experience', 'absent until adulthood', 'caused by conditioning']
           }
         ],
-        correctAnswers: ['fetus', 'teratogen', 'critical period'],
-        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
-        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
-        hint3: 'Use the definition language from this part to avoid near-miss terms.',
-        explanation: 'Correct matches are fetus, teratogen, and critical period. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+        correctAnswers: ['refusal to crawl onto the deep side', 'already had months of experience', 'present without experience'],
+        hint1: 'What did the infants do, or refuse to do, when called from the far side?',
+        hint2: 'The infants had to be able to crawl. How old does that make them?',
+        hint3: 'The chicks had no time to learn about drop-offs.',
+        explanation: 'Depth perception was inferred from refusal to cross the deep side. Because crawling infants are at least 6 months old, experience could have contributed, while chicks and goats tested at first exposure show depth perception without prior experience.'
       }
     },
     {
-      id: 'prenatal-childhood-development-p2-s6-strategy',
+      id: 'prenatal-childhood-development-p2-s5-motor',
       type: 'text' as const,
       content: `
-      ## Common Misconceptions and Exam Strategy
+## Motor Development: Same Order, Different Timing
 
-      ### Misconceptions to Avoid
-      - Development is not strictly linear; domains can progress at different rates.
-      - Attachment quality reflects patterns over time, not one isolated event.
-      - Cognitive stages describe trends, but individual variation is expected.
-      - Early adversity raises risk but does not guarantee poor outcomes.
+**Motor development** is the growth of the ability to move and control the body. Psychologists split it into two kinds of skills.
 
-      ### AP Strategy Moves
-      - Define the target concept in one precise sentence before giving examples.
-      - In scenario questions about early intervention planning for delayed milestones, identify the manipulated variable and measured outcome.
-      - Use one competing explanation and explain why it is weaker.
-      - If data are provided, mention trend direction and at least one design limitation.
+| Type | Muscles involved | Examples in infancy and childhood |
+|---|---|---|
+| **Gross motor skills** | Large muscles of the trunk, arms and legs | Holding the head up, rolling over, sitting, crawling, standing, walking, running, jumping |
+| **Fine motor skills** | Small muscles of the hands and fingers, coordinated with the eyes | Reaching, picking up a raisin with thumb and finger, stacking blocks, drawing, buttoning, writing |
 
-      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+### A Typical Sequence
+
+| Approximate age | Common milestone |
+|---|---|
+| 2–4 months | Holds head up; rolls over |
+| 6–8 months | Sits without support; begins crawling |
+| 9–12 months | Pulls to stand; picks up small objects with thumb and forefinger |
+| About 12 months | Takes first independent steps (normal range roughly 9 to 17 months) |
+| 2–3 years | Runs; stacks several blocks; scribbles |
+| 5–6 years | Hops, skips; draws simple shapes; begins to print letters |
+
+The **order** of these milestones is nearly universal: children sit before they stand and stand before they walk. The **age** at which each appears varies a great deal. A child who walks at 15 months is not "behind" a child who walks at 10 months.
+
+### Maturation Sets the Pace
+
+**Maturation** is the biologically driven growth that unfolds on a genetic timetable and makes new behaviors possible. Experience cannot push a skill much earlier than the body and nervous system allow. Two pieces of evidence:
+- **Brain readiness.** Walking requires myelination of motor pathways and growth of the cerebellum. Before these mature, practice has little effect.
+- **Restriction studies.** Infants raised on cradleboards that limited their movement in the first months of life walked at about the same age as unrestricted infants.
+
+Experience still matters at the margins. In cultures where caregivers exercise babies' legs and practice upright stepping, infants tend to walk somewhat earlier. Severe deprivation, such as an institution where infants are rarely held or allowed to move, can delay milestones.
+
+### Brain Growth Behind the Milestones
+
+After birth the brain's weight roughly triples by age 3. Neurons form rapid, dense connections, and then **synaptic pruning** removes connections that are rarely used while frequently used pathways are strengthened and myelinated. This "use it or lose it" process is one reason early experience matters so much, and it sets up the idea of sensitive periods in Part 3.
+
+> 🔑 **AP Connection:** Physical skills let children explore without help: a crawling baby can reach a toy, and a walking toddler can follow a parent. Link motor milestones to independence and to cognitive growth. Crawling, for example, coincides with new wariness on the visual cliff.
       `
+    },
+    {
+      id: 'prenatal-childhood-development-p2-s6-input',
+      type: 'input-boxes' as const,
+      content: `
+**Recall Practice — Motor Development** ✍️
+
+Type one term for each blank.
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Skills such as stacking blocks and holding a crayon use small hand muscles. These are ______ motor skills.',
+            answer: 'fine',
+            explanation: 'Fine motor skills use the small muscles of the hands and fingers.'
+          },
+          {
+            question: 'Biological growth on a genetic timetable that makes new behaviors possible is called ______.',
+            answer: 'maturation',
+            explanation: 'Maturation sets the order and approximate timing of milestones; experience adjusts them only at the margins.'
+          },
+          {
+            question: 'The process that removes rarely used synapses in the developing brain is synaptic ______.',
+            answer: 'pruning',
+            explanation: 'Pruning removes unused connections while used pathways are strengthened.'
+          }
+        ],
+        hint1: 'The opposite of gross motor skills.',
+        hint2: 'It shares a root with "mature".',
+        hint3: 'Think of a gardener trimming branches.'
+      }
     },
     {
       id: 'prenatal-childhood-development-p2-s7-applied',
       type: 'multiple-choice' as const,
       content: `
-      **Applied Scenarios** 🎯
+**Applied Scenarios — Physical Milestones** 🔬
       `,
       exercise: {
         questions: [
           {
-            question: 'A team investigating early intervention planning for delayed milestones finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            question: 'Parents worry because their 14-month-old is not yet walking, though she crawls, pulls to stand and cruises along furniture. What is the best response from a developmental psychologist?',
             options: [
-              'critical period',
-              'fetus',
-              'teratogen',
-              'object permanence'
+              'Timing varies, and she is following the usual order',
+              'She has missed the critical period for learning to walk',
+              'Daily walking drills will let her skip the crawling stage',
+              'Late walking proves she will have a learning disability'
             ],
-            correctAnswer: 3,
-            explanation: 'object permanence is best because it reflects this mechanism (understanding that objects continue to exist when out of sight). The other options describe different levels of explanation or related constructs.'
+            correctAnswer: 0,
+            explanation: 'Children reach motor milestones in the same order but at different ages, and many typical children walk after 14 months. Practice cannot reorder the sequence, and late walking within the normal range does not predict a disability.'
           },
           {
-            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            question: 'Which example describes a gross motor skill rather than a fine motor skill?',
             options: [
-              'critical period',
-              'authoritative parenting',
-              'secure attachment',
-              'teratogen'
+              'Picking up a cereal piece',
+              'Climbing up a short staircase',
+              'Turning the pages of a book',
+              'Drawing a circle with a crayon'
             ],
-            correctAnswer: 2,
-            explanation: 'secure attachment is the strongest interpretation because it maps to the measured pattern and proposed mechanism: caregiver bond marked by trust and comfort in reunion. Good AP reasoning also notes alternative explanations and design limits.'
+            correctAnswer: 1,
+            explanation: 'Climbing stairs uses the large muscles of the legs and trunk, so it is a gross motor skill. The other three rely on precise movements of the hands and fingers.'
+          },
+          {
+            question: 'Babies in one culture who were carried on cradleboards that limited movement began walking at about the same age as other babies. What does this finding best support?',
+            options: [
+              'Walking depends more on maturation than practice',
+              'Restricting movement in infancy speeds up walking',
+              'Walking is learned mainly by imitating older siblings',
+              'Cradleboards caused a delay in fine motor development'
+            ],
+            correctAnswer: 0,
+            explanation: 'If babies with little chance to practice walk on schedule, the timing is driven mainly by biological maturation. The finding shows no speed-up, says nothing about imitation, and did not measure fine motor skills.'
           }
         ]
       }

@@ -5,181 +5,192 @@ export const psychPersonalityPart7Data = {
       id: 'personality-theories-p7-s1-intro',
       type: 'text' as const,
       content: `
-      # 🧠 Personality Theories
+# 🧠 Personality Theories
 
-      **Part 7 of 7 — AP Exam Synthesis**
+**Part 7 of 7 — Synthesis Review: Four Perspectives Compared**
 
-      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
+> 🔑 **Key Concept:** Each perspective on personality gives its own answer to two questions: **how is personality defined, and how is it assessed?** Exam questions often describe one behavior and ask which perspective an explanation or a method belongs to.
 
-      ### Core Definitions
-      - **psychodynamic**: approach emphasizing unconscious processes and early relationships
-      - **self-actualization**: humanistic concept of fulfilling one's potential
-      - **reciprocal determinism**: behavior, cognition, and environment mutually influence each other
+### The Big Comparison Table
 
-      ### Concrete Real-World Example
-      A team is studying AP-style synthesis about personality stability and change. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
+| | Psychodynamic | Humanistic | Social-cognitive | Trait |
+|--|---------------|------------|------------------|-------|
+| **Personality is driven by…** | Unconscious processes | Unconditional regard and the self-actualizing tendency | Reciprocal determinism among behavior, personal factors, and environment | Enduring characteristics that lead to typical responses |
+| **Key concepts** | Levels of awareness, ego, the eight defense mechanisms | Self-concept, congruence, conditions of worth, genuineness, acceptance, empathy | Self-concept, self-efficacy, self-esteem, observational learning | Big Five (openness, conscientiousness, extraversion, agreeableness, emotional stability), factor analysis |
+| **View of human nature** | Shaped by hidden conflict | Basically good and growth-seeking | Active learners shaped by and shaping their settings | Described along dimensions, without a view of "good" or "bad" |
+| **Assessment** | Projective tests (Rorschach, TAT) | Self-reports comparing actual and ideal self, interviews | Past behavior in similar situations, simulations, task-specific self-efficacy scales | Objectively scored personality inventories |
+| **Main critique** | Hard to falsify; weak test reliability and validity | Concepts vague and hard to measure | May underplay emotion, unconscious motives, and stable traits | Describes more than it explains; self-report bias |
+| **Parts** | 1, 2 | 3 | 4 | 5 |
 
-      ### Why This Matters
-      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
+### Worked Case: One Behavior, Four Explanations
+
+**Scenario:** Keisha, a senior, keeps putting off her college application essays until two days before each deadline.
+
+| Perspective | How it would explain Keisha's procrastination |
+|-------------|----------------------------------------------|
+| **Psychodynamic** | Fear of leaving home is kept out of awareness. Her ego protects itself with **rationalization**: "I write better under pressure." |
+| **Humanistic** | She learned **conditions of worth** ("I'm only worthwhile if I get into a top school"). Writing an essay that might be judged threatens her self-concept, so she avoids it. |
+| **Social-cognitive** | She has low **self-efficacy** for personal writing. Avoiding the essays means she never gets mastery experiences, and her friends, who also procrastinate, model the same behavior: **reciprocal determinism**. |
+| **Trait** | She scores low in **conscientiousness** and low in **emotional stability**, a combination that predicts last-minute work across many tasks, not just essays. |
+
+**What each would recommend:** psychodynamic, exploring the hidden fear; humanistic, an accepting relationship that removes conditions of worth; social-cognitive, small writing successes and a better-organized study group; trait, accepting the tendency and building structure, such as early deadlines, around it.
       `
     },
     {
       id: 'personality-theories-p7-s2-check',
       type: 'multiple-choice' as const,
       content: `
-      **Concept Check** 🎯
+**Concept Check — Which Perspective?** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In a study about AP-style synthesis about personality stability and change, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
+            question: 'A counselor claims that a man\'s rudeness toward coworkers comes from envy he cannot admit to himself and therefore sees in them instead. This explanation comes from which perspective?',
             options: [
-              'reciprocal determinism',
-              'self-actualization',
-              'self-efficacy',
-              'psychodynamic'
-            ],
-            correctAnswer: 3,
-            explanation: 'psychodynamic is correct because it directly matches this mechanism: approach emphasizing unconscious processes and early relationships. The distractors describe related but different processes.'
-          },
-          {
-            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
-            options: [
-              'self-report inventory',
-              'projective test',
-              'reciprocal determinism',
-              'self-actualization'
+              'The trait perspective',
+              'The psychodynamic perspective',
+              'The humanistic perspective',
+              'The social-cognitive perspective'
             ],
             correctAnswer: 1,
-            explanation: 'projective test is the strongest match here (ambiguous stimulus task intended to reveal underlying motives). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
+            explanation: 'Unadmitted envy seen in others is projection, a defense mechanism, which belongs to the psychodynamic perspective. Trait theory would describe a low agreeableness score, and the other two perspectives do not rely on unconscious defenses.'
+          },
+          {
+            question: 'A researcher predicts how well applicants will handle angry customers by watching them deal with a staged complaint, reasoning that behavior in a similar situation is the best predictor. This assessment reflects which perspective?',
+            options: [
+              'Social-cognitive theory, which looks at how people act in realistic settings',
+              'Humanistic theory, which asks people to describe how they see themselves',
+              'Psychodynamic theory, which uses ambiguous material to reveal hidden needs',
+              'Trait theory, which uses inventories built from correlated item responses'
+            ],
+            correctAnswer: 0,
+            explanation: 'Assessing behavior in a realistic simulation of the target situation is the social-cognitive approach. Humanistic assessment relies on self-descriptions, psychodynamic assessment on projective tests, and trait assessment on inventories.'
+          },
+          {
+            question: 'Which pair shows a correct match between a perspective and the motivating force it emphasizes?',
+            options: [
+              'Trait theory and the drive to resolve unconscious conflict between competing impulses',
+              'Psychodynamic theory and the self-actualizing tendency that pushes people toward growth',
+              'Humanistic theory and acceptance that does not hinge on meeting standards',
+              'Social-cognitive theory and five broad dimensions found through factor analysis'
+            ],
+            correctAnswer: 2,
+            explanation: 'The CED names unconditional regard and the self-actualizing tendency as the primary motivating factors in humanistic theory. Unconscious conflict belongs to psychodynamic theory, the self-actualizing tendency to humanistic theory, and factor-analyzed dimensions to trait theory.'
           }
         ]
       }
     },
     {
-      id: 'personality-theories-p7-s3-deep',
+      id: 'personality-theories-p7-s3-connections',
       type: 'text' as const,
       content: `
-      ## Deep Dive: Comparing Explanations with Evidence
+## 🔗 Connections and Distinctions Across the Topic
 
-      When analyzing AP-style synthesis about personality stability and change, the best interpretation ties a clear psychological mechanism to measurable evidence.
+### Terms That Students Mix Up
 
-      | Theory / Concept | Core claim | Typical evidence | Common limitation |
-      |---|---|---|---|
-      | psychodynamic | approach emphasizing unconscious processes and early relationships | experimental manipulation with random assignment | possible demand characteristics |
-      | self-actualization | humanistic concept of fulfilling one's potential | longitudinal trend with repeated measurement | third-variable risk in natural settings |
-      | reciprocal determinism | behavior, cognition, and environment mutually influence each other | cross-sectional comparison with matched groups | limited generalizability across cultures |
-      | self-efficacy | belief in one's ability to execute actions for specific outcomes | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+| These two… | …differ this way |
+|------------|------------------|
+| **Self-esteem (Part 4) vs. self-efficacy (Part 4)** | Overall sense of worth versus belief in capability at a specific task |
+| **Congruence (Part 3) vs. self-esteem (Part 4)** | Match between self-concept and experience versus overall evaluation of worth |
+| **Conscientiousness (Part 5) vs. self-efficacy (Part 4)** | An enduring trait measured by an inventory versus a task-specific belief that can change with mastery experiences |
+| **Projection (Part 2) vs. projective test (Part 1)** | A defense mechanism versus an assessment method that relies on people projecting onto ambiguous stimuli |
+| **Emotional stability (Part 5) vs. denial (Part 2)** | A trait dimension (calm versus anxious) versus a defense that refuses to accept a painful reality |
+| **Reliability vs. validity (Parts 1 and 5)** | Consistency of a measure versus whether it measures what it claims |
 
-      ### Interpretation Strategy
-      1. Name the mechanism before describing outcomes.
-      2. Match the claim to the strongest available evidence type.
-      3. Acknowledge one limitation and explain whether it changes the conclusion.
+### Topic-Wide Misconceptions
 
-      This structure helps you earn reasoning points on free-response and avoid vague claims.
+| Misconception | Reality |
+|--------------|---------|
+| Defense mechanisms are deliberate strategies people choose | They operate unconsciously; a chosen strategy is coping, and a planned excuse is a lie |
+| Unconditional positive regard means approving of everything a person does | It means valuing the person while still being free to object to a behavior |
+| Reciprocal determinism means the environment controls behavior | All three factors influence one another in every direction |
+| The fifth Big Five trait should be called neuroticism on the exam | The CED's term is emotional stability; neuroticism names its low end |
+| A trait score predicts what someone will do in any single moment | Traits predict behavior averaged across many situations |
+| Personality inventories are free of bias because they are objectively scored | Scoring is objective, but self-report answers can still be distorted by social desirability |
+
+### Science Practice Summary
+
+| Design or measurement idea | Where it appears in personality research |
+|----------------------------|------------------------------------------|
+| **Case study** | Freud's conclusions about his patients |
+| **Correlational study** | Trait scores and outcomes (GPA, on-time work, job performance) |
+| **Experiment** | Training that raises self-efficacy, with random assignment to conditions |
+| **Interrater reliability** | Agreement between clinicians scoring projective tests |
+| **Test-retest reliability** | Inventory scores for the same people at two times |
+| **Factor analysis** | Grouping correlated inventory items into Big Five traits |
       `
     },
     {
       id: 'personality-theories-p7-s4-input',
       type: 'input-boxes' as const,
       content: `
-      **Applied Recall (exact term answers)** ✍️
+**Integrated Recall** ✍️
 
-      1) Write the concept that matches: approach emphasizing unconscious processes and early relationships
-
-      2) Write the concept that matches: humanistic concept of fulfilling one's potential
-
-      3) Write the concept that matches: behavior, cognition, and environment mutually influence each other
-
-      Use the exact vocabulary term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['psychodynamic', 'self-actualization', 'reciprocal determinism'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: R',
-        explanation: 'Expected answers: psychodynamic, self-actualization, and reciprocal determinism. Each response should use the precise term connected to the definition cue.'
-      }
-    },
-    {
-      id: 'personality-theories-p7-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Model Matching** 🔎
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Select the concept that best matches: approach emphasizing unconscious processes and early relationships',
-            options: ['self-report inventory', 'self-actualization', 'projective test', 'psychodynamic']
-          },
-          {
-            label: 'Select the concept that best matches: humanistic concept of fulfilling one\'s potential',
-            options: ['projective test', 'psychodynamic', 'self-actualization', 'self-report inventory']
-          },
-          {
-            label: 'Select the concept that best matches: behavior, cognition, and environment mutually influence each other',
-            options: ['projective test', 'reciprocal determinism', 'self-report inventory', 'self-efficacy']
-          }
-        ],
-        correctAnswers: ['psychodynamic', 'self-actualization', 'reciprocal determinism'],
-        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
-        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
-        hint3: 'Use the definition language from this part to avoid near-miss terms.',
-        explanation: 'Correct matches are psychodynamic, self-actualization, and reciprocal determinism. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
-      }
-    },
-    {
-      id: 'personality-theories-p7-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ## Common Misconceptions and Exam Strategy
-
-      ### Misconceptions to Avoid
-      - Traits summarize tendencies, not fixed behaviors in every context.
-      - Projective methods can be clinically useful but generally have weaker psychometrics than many inventories.
-      - Personality can show both stability and development across lifespan stages.
-      - No single theory fully explains personality; each emphasizes different mechanisms.
-
-      ### AP Strategy Moves
-      - Define the target concept in one precise sentence before giving examples.
-      - In scenario questions about AP-style synthesis about personality stability and change, identify the manipulated variable and measured outcome.
-      - Use one competing explanation and explain why it is weaker.
-      - If data are provided, mention trend direction and at least one design limitation.
-
-      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
-      `
-    },
-    {
-      id: 'personality-theories-p7-s7-applied',
-      type: 'multiple-choice' as const,
-      content: `
-      **Applied Scenarios** 🎯
+Type the single term that fits each description.
       `,
       exercise: {
         questions: [
           {
-            question: 'A team investigating AP-style synthesis about personality stability and change finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
-            options: [
-              'self-efficacy',
-              'reciprocal determinism',
-              'self-actualization',
-              'psychodynamic'
-            ],
-            correctAnswer: 0,
-            explanation: 'self-efficacy is best because it reflects this mechanism (belief in one\'s ability to execute actions for specific outcomes). The other options describe different levels of explanation or related constructs.'
+            question: 'A woman who feels intense rivalry with her sister channels it into building a successful business that employs half her town. Psychodynamic theory calls this defense _____.',
+            answer: 'sublimation',
+            acceptableAnswers: ['sublimating', 'sublimate'],
+            explanation: 'Turning an unacceptable impulse into a socially valued achievement is sublimation. Aiming it at a safer target would be displacement.'
           },
           {
-            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            question: 'The CED\'s name for the Big Five trait on which calm, secure people score high and anxious, moody people score low is emotional _____.',
+            answer: 'stability',
+            acceptableAnswers: ['emotional stability'],
+            explanation: 'Emotional stability is the CED\'s term. Many sources call the same dimension neuroticism, which names the low end.'
+          },
+          {
+            question: 'In Bandura\'s theory, the belief that "I can successfully give this speech" is an example of self-_____.',
+            answer: 'efficacy',
+            acceptableAnswers: ['self-efficacy', 'efficacy belief'],
+            explanation: 'A belief about capability at a specific task is self-efficacy, which, together with self-esteem, contributes to self-concept.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'personality-theories-p7-s5-integrated',
+      type: 'multiple-choice' as const,
+      content: `
+**Integrated Practice — Across the Perspectives** 🔬
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Two psychologists study the same shy teenager. One finds that he scores low in extraversion on an inventory; the other notices that he speaks up confidently in the robotics club, where he feels capable. Which conclusion best combines the two findings?',
             options: [
-              'projective test',
-              'reciprocal determinism',
-              'self-actualization',
-              'self-report inventory'
+              'The inventory is invalid, since a true introvert would never speak in a group',
+              'His shyness is a defense mechanism that disappears once he has repressed it',
+              'His trait is real, and the setting and his self-efficacy shape how it shows',
+              'His behavior in the club proves that personality has no stable component'
+            ],
+            correctAnswer: 2,
+            explanation: 'A trait describes a typical tendency across situations, while social-cognitive theory explains why a setting where he feels capable brings out different behavior, so both findings fit. Traits predict averages rather than every act, so one setting neither invalidates the inventory nor disproves stability.'
+          },
+          {
+            question: 'Which research finding would most weaken the claim that projective tests are useful for assessing personality?',
+            options: [
+              'Trained scorers often disagree about what the same responses reveal',
+              'Clients say that the inkblots and pictures seem unusual and vague to them',
+              'Clinicians who use the tests report that they find the results interesting',
+              'The tests take longer to give and score than most personality inventories'
             ],
             correctAnswer: 0,
-            explanation: 'projective test is the strongest interpretation because it maps to the measured pattern and proposed mechanism: ambiguous stimulus task intended to reveal underlying motives. Good AP reasoning also notes alternative explanations and design limits.'
+            explanation: 'Disagreement between trained scorers shows low interrater reliability, and an unreliable measure cannot be valid, which directly undercuts usefulness. Ambiguity is intended by design, clinicians\' interest is not evidence, and testing time says nothing about accuracy.'
+          },
+          {
+            question: 'A teacher praises every student\'s effort, lets students redo work after mistakes, and makes clear that her respect for them does not depend on grades. Her approach most closely applies which concept?',
+            options: [
+              'Reciprocal determinism, as each student\'s grades fully determine the classroom setting',
+              'Sublimation, as students redirect frustration about grades into socially valued work',
+              'Unconditional positive regard, as she values students whatever their marks',
+              'Factor analysis, as she sorts students into groups based on how their scores cluster'
+            ],
+            correctAnswer: 2,
+            explanation: 'Respect that does not depend on performance is unconditional positive regard, the humanistic condition Rogers said allows growth. The teacher is not describing an unconscious defense, a statistical procedure, or a one-way effect of grades on the setting.'
           }
         ]
       }

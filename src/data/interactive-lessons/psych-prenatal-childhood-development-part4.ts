@@ -5,181 +5,200 @@ export const psychPrenatalPart4Data = {
       id: 'prenatal-childhood-development-p4-s1-intro',
       type: 'text' as const,
       content: `
-      # 🧠 Prenatal and Childhood Development
+# 🧠 Prenatal and Childhood Development
 
-      **Part 4 of 7 — Attachment and Socioemotional Development**
+**Part 4 of 7 — Piaget's Theory of Cognitive Development**
 
-      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
+Jean Piaget noticed that children of the same age tended to make the *same wrong answers* on reasoning tasks. He concluded that children are not simply less informed than adults; they think in qualitatively different ways.
 
-      ### Core Definitions
-      - **secure attachment**: caregiver bond marked by trust and comfort in reunion
-      - **authoritative parenting**: high warmth with firm, consistent expectations
-      - **scaffolding**: supporting a child just beyond current independent ability
+> 🔑 **Key Concept:** According to Piaget, children actively build **schemas** (mental frameworks) through **assimilation** and **accommodation**, and their thinking passes through four stages: sensorimotor, preoperational, concrete operational and formal operational.
 
-      ### Concrete Real-World Example
-      A team is studying daycare transition and attachment behavior. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
+### The Building Blocks
 
-      ### Why This Matters
-      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
+| Term | Meaning | Example |
+|---|---|---|
+| **Schema** | A mental framework that organizes knowledge about something | A toddler's schema for "dog": four legs, fur, barks |
+| **Assimilation** | Fitting new experience into an existing schema | The toddler sees a cat and calls it "doggy" |
+| **Accommodation** | Changing a schema, or creating a new one, when new experience does not fit | After being corrected, the toddler forms a separate "kitty" schema |
+
+Assimilation and accommodation work together throughout life. Piaget saw them as **continuous** processes that, over time, produce **discontinuous** stages. That is why the CED says schemas develop through "continuous and discontinuous processes".
       `
     },
     {
       id: 'prenatal-childhood-development-p4-s2-check',
       type: 'multiple-choice' as const,
       content: `
-      **Concept Check** 🎯
+**Concept Check — Schemas** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In a study about daycare transition and attachment behavior, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
+            question: 'A 3-year-old who knows only round balls sees an American football and says, "That ball is broken." What process is the child using?',
             options: [
-              'secure attachment',
-              'scaffolding',
-              'authoritative parenting',
-              'theory of mind'
-            ],
-            correctAnswer: 0,
-            explanation: 'secure attachment is correct because it directly matches this mechanism: caregiver bond marked by trust and comfort in reunion. The distractors describe related but different processes.'
-          },
-          {
-            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
-            options: [
-              'scaffolding',
-              'zygote',
-              'embryo',
-              'authoritative parenting'
+              'Accommodation, because the child revises the schema',
+              'Assimilation, because the child fits it to a schema',
+              'Conservation, because the child tracks the quantity',
+              'Object permanence, because the child tracks the toy'
             ],
             correctAnswer: 1,
-            explanation: 'zygote is the strongest match here (fertilized egg in the earliest stage of development). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
+            explanation: 'The child forces the football into the existing round-ball schema and treats the difference as damage, which is assimilation. Accommodation would require changing the schema to include oval balls.'
+          },
+          {
+            question: 'Which situation best shows accommodation?',
+            options: [
+              'A child calls every man with a beard "Grandpa"',
+              'A child learns that whales are mammals and not a kind of fish',
+              'A child calls a zebra a "stripy horse" on a trip',
+              'A child shakes a new rattle the same way as the old one'
+            ],
+            correctAnswer: 1,
+            explanation: 'Learning that whales are mammals requires changing the child\'s fish schema, which is accommodation. The other three fit new things into existing schemas without changing them.'
           }
         ]
       }
     },
     {
-      id: 'prenatal-childhood-development-p4-s3-deep',
+      id: 'prenatal-childhood-development-p4-s3-stages',
       type: 'text' as const,
       content: `
-      ## Deep Dive: Comparing Explanations with Evidence
+## The Four Stages
 
-      When analyzing daycare transition and attachment behavior, the best interpretation ties a clear psychological mechanism to measurable evidence.
+Ages are approximate; Piaget cared more about the **order** of stages than the exact ages.
 
-      | Theory / Concept | Core claim | Typical evidence | Common limitation |
-      |---|---|---|---|
-      | secure attachment | caregiver bond marked by trust and comfort in reunion | experimental manipulation with random assignment | possible demand characteristics |
-      | authoritative parenting | high warmth with firm, consistent expectations | longitudinal trend with repeated measurement | third-variable risk in natural settings |
-      | scaffolding | supporting a child just beyond current independent ability | cross-sectional comparison with matched groups | limited generalizability across cultures |
-      | theory of mind | understanding that others have distinct beliefs and perspectives | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+| Stage | Approximate age | How the child thinks | Hallmarks |
+|---|---|---|---|
+| **Sensorimotor** | Birth to about 2 years | Knows the world through senses and actions | **Object permanence** develops: understanding that objects exist when out of sight |
+| **Preoperational** | About 2 to 7 years | Uses mental symbols, words and images, but not logical operations | Pretend play; **egocentrism**; **animism**; cannot yet do **conservation** or **reversibility**; theory of mind begins |
+| **Concrete operational** | About 7 to 11 years | Logical thinking about concrete, real events | Conservation and reversibility; simple math transformations; struggles to reason systematically about hypotheticals |
+| **Formal operational** | About 12 years through adulthood | Abstract and hypothetical reasoning | Can reason about "what if" and test ideas systematically; Piaget proposed that **not everyone reaches** this stage |
 
-      ### Interpretation Strategy
-      1. Name the mechanism before describing outcomes.
-      2. Match the claim to the strongest available evidence type.
-      3. Acknowledge one limitation and explain whether it changes the conclusion.
+### Sensorimotor Stage in Action
 
-      This structure helps you earn reasoning points on free-response and avoid vague claims.
+Hide a toy under a blanket while a 5-month-old watches. The baby looks away as if the toy has vanished: "out of sight, out of mind". By around 8 months, many infants lift the blanket to search. Searching for a hidden object is the classic behavioral sign of **object permanence**.
+
+### Preoperational Stage in Action
+
+| Concept | What it looks like |
+|---|---|
+| **Mental symbols and pretend play** | A banana becomes a telephone; a box becomes a car |
+| **Egocentrism** | Difficulty taking another person's perspective. A 4-year-old holds up a drawing to show Grandma over the phone. In Piaget's three-mountains task, children described their own view when asked what a doll across the table would see |
+| **Animism** | Giving lifelike feelings to objects: "The moon is following me." "The chair is sad because I kicked it." |
+| **Lack of conservation** | Not understanding that quantity stays the same when appearance changes |
+| **Lack of reversibility** | Not mentally reversing an action, such as pouring water back into the first glass |
+
+### The Conservation Task: A Worked Example
+
+1. A child sees two identical short, wide glasses with equal water and agrees they hold "the same".
+2. The researcher pours one glass into a tall, thin glass while the child watches.
+3. **Preoperational response (age 4):** "The tall one has more." The child focuses on one dimension, height, and cannot mentally reverse the pour.
+4. **Concrete operational response (age 8):** "They're the same. You just poured it. If you pour it back, it will look the same." The child uses **reversibility** and coordinates height with width.
+
+Conservation shows up for number (spreading out a row of coins), mass (rolling clay into a snake) and volume (the water glasses).
+
+### Formal Operational Thinking
+
+Ask, "If all snorks are blue and this is a snork, what color is it?" A formal operational thinker reasons from the hypothetical premise ("blue"). A concrete thinker may object that snorks are not real. Formal operations allow scientific reasoning: holding variables constant and testing one at a time.
       `
     },
     {
-      id: 'prenatal-childhood-development-p4-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Applied Recall (exact term answers)** ✍️
-
-      1) Write the concept that matches: caregiver bond marked by trust and comfort in reunion
-
-      2) Write the concept that matches: high warmth with firm, consistent expectations
-
-      3) Write the concept that matches: supporting a child just beyond current independent ability
-
-      Use the exact vocabulary term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['secure attachment', 'authoritative parenting', 'scaffolding'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: secure attachment, authoritative parenting, and scaffolding. Each response should use the precise term connected to the definition cue.'
-      }
-    },
-    {
-      id: 'prenatal-childhood-development-p4-s5-dropdown',
+      id: 'prenatal-childhood-development-p4-s4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Model Matching** 🔎
+**Match the Stage** 🔎
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Select the concept that best matches: caregiver bond marked by trust and comfort in reunion',
-            options: ['theory of mind', 'zygote', 'secure attachment', 'scaffolding']
+            label: 'A 9-month-old pulls a cloth off a toy that was hidden while she watched. This shows _____.',
+            options: ['egocentrism', 'object permanence', 'conservation', 'abstract reasoning']
           },
           {
-            label: 'Select the concept that best matches: high warmth with firm, consistent expectations',
-            options: ['theory of mind', 'scaffolding', 'authoritative parenting', 'zygote']
+            label: 'A 4-year-old says the sun went to bed because it was tired. This is _____.',
+            options: ['animism', 'reversibility', 'conservation', 'object permanence']
           },
           {
-            label: 'Select the concept that best matches: supporting a child just beyond current independent ability',
-            options: ['secure attachment', 'authoritative parenting', 'zygote', 'scaffolding']
+            label: 'An 8-year-old says a clay ball and the same clay rolled into a snake have equal clay. He is in the _____ stage.',
+            options: ['sensorimotor', 'preoperational', 'concrete operational', 'formal operational']
+          },
+          {
+            label: 'A 15-year-old debates what society would be like if no one could lie. This shows _____ thinking.',
+            options: ['preoperational', 'concrete operational', 'sensorimotor', 'formal operational']
           }
         ],
-        correctAnswers: ['secure attachment', 'authoritative parenting', 'scaffolding'],
-        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
-        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
-        hint3: 'Use the definition language from this part to avoid near-miss terms.',
-        explanation: 'Correct matches are secure attachment, authoritative parenting, and scaffolding. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+        correctAnswers: ['object permanence', 'animism', 'concrete operational', 'formal operational'],
+        hint1: 'Searching for a hidden object means she knows it still exists.',
+        hint2: 'The sun is being given human feelings.',
+        hint3: 'Recognizing that amount stays the same despite a change in shape is conservation.',
+        explanation: 'Searching for a hidden toy shows object permanence; a tired sun is animism; conserving mass marks the concrete operational stage; reasoning about a hypothetical world marks formal operational thinking.'
       }
     },
     {
-      id: 'prenatal-childhood-development-p4-s6-strategy',
+      id: 'prenatal-childhood-development-p4-s5-critique',
       type: 'text' as const,
       content: `
-      ## Common Misconceptions and Exam Strategy
+## Evaluating Piaget
 
-      ### Misconceptions to Avoid
-      - Development is not strictly linear; domains can progress at different rates.
-      - Attachment quality reflects patterns over time, not one isolated event.
-      - Cognitive stages describe trends, but individual variation is expected.
-      - Early adversity raises risk but does not guarantee poor outcomes.
+Piaget's stage order has held up well across many cultures, and his core idea that children actively construct knowledge shaped modern education. Later research has refined his claims.
 
-      ### AP Strategy Moves
-      - Define the target concept in one precise sentence before giving examples.
-      - In scenario questions about daycare transition and attachment behavior, identify the manipulated variable and measured outcome.
-      - Use one competing explanation and explain why it is weaker.
-      - If data are provided, mention trend direction and at least one design limitation.
+| Piaget's claim | What later research found |
+|---|---|
+| Object permanence appears around 8 months | Using **looking-time** methods, infants as young as 3 to 4 months look longer when an object seems to pass through a hidden barrier, which suggests earlier expectations about objects. Piaget's search tasks required motor skills young babies lack |
+| Preoperational children are deeply egocentric | With simpler, familiar tasks, preschoolers often take others' perspectives. By about age 4 most pass theory-of-mind tasks (Part 5) |
+| Development moves in broad, sudden stages | Many abilities develop more gradually and unevenly. A child may conserve number before volume |
+| Stages are universal and driven mainly by the child's own exploration | Culture and schooling affect timing. Formal reasoning depends heavily on education, and Vygotsky emphasized social input (Part 5) |
 
-      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+### Misconceptions to Avoid
+
+| Misconception | Reality |
+|---|---|
+| Egocentrism means selfishness | It is a **cognitive** limit in taking another perspective, not a moral flaw |
+| Children in a stage cannot do anything from the next stage | Abilities appear gradually and depend on the task |
+| Everyone reaches formal operations by adolescence | Piaget himself proposed that not everyone does |
+| Assimilation is "wrong" and accommodation is "right" | Both are normal, ongoing ways of adapting schemas |
+
+> 🔑 **AP Connection:** In multiple-choice items, name the stage from what the child **can't** do as well as what the child can do. The CED identifies the preoperational stage more by the tasks children cannot perform, such as conservation and reversibility, and by errors they show, such as animism and egocentrism.
       `
     },
     {
-      id: 'prenatal-childhood-development-p4-s7-applied',
+      id: 'prenatal-childhood-development-p4-s6-applied',
       type: 'multiple-choice' as const,
       content: `
-      **Applied Scenarios** 🎯
+**Applied Scenarios — Piaget's Stages** 🔬
       `,
       exercise: {
         questions: [
           {
-            question: 'A team investigating daycare transition and attachment behavior finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            question: 'A father cuts his 4-year-old\'s sandwich into four pieces, and she cheers, "Now I have more sandwich!" Which limitation does her reaction show?',
             options: [
-              'scaffolding',
-              'authoritative parenting',
-              'secure attachment',
-              'theory of mind'
+              'A lack of object permanence',
+              'A failure to conserve quantity',
+              'An inability to use pretend play',
+              'A deficit in fine motor skills'
             ],
-            correctAnswer: 3,
-            explanation: 'theory of mind is best because it reflects this mechanism (understanding that others have distinct beliefs and perspectives). The other options describe different levels of explanation or related constructs.'
+            correctAnswer: 1,
+            explanation: 'She believes the amount changed because its appearance changed, which is a failure of conservation typical of the preoperational stage. She clearly knows the sandwich still exists, and pretend play and motor skills are not involved.'
           },
           {
-            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            question: 'A 10-year-old solves arithmetic word problems easily but struggles when asked to list every possible way to test which of three factors makes a pendulum swing faster. Which stage best describes him?',
             options: [
-              'zygote',
-              'scaffolding',
-              'embryo',
-              'authoritative parenting'
+              'Concrete operational, logical but not yet systematic',
+              'Preoperational, unable to use mental symbols at all',
+              'Formal operational, fully able to reason abstractly',
+              'Sensorimotor, limited to senses and motor actions'
             ],
             correctAnswer: 0,
-            explanation: 'zygote is the strongest interpretation because it maps to the measured pattern and proposed mechanism: fertilized egg in the earliest stage of development. Good AP reasoning also notes alternative explanations and design limits.'
+            explanation: 'Concrete operational children reason logically about concrete problems but struggle to think systematically about hypothetical combinations of variables. Systematic testing of variables is a formal operational skill.'
+          },
+          {
+            question: 'Researchers using looking-time measures find that 4-month-olds seem surprised when a hidden toy appears to pass through a solid wall. How does this finding challenge Piaget?',
+            options: [
+              'It suggests that babies have no schemas until age 2',
+              'It implies that object knowledge emerges earlier',
+              'It proves that conservation develops in infancy',
+              'It confirms that object permanence starts at 8 months'
+            ],
+            correctAnswer: 1,
+            explanation: 'Longer looking at an impossible event suggests that young infants already expect hidden objects to keep existing, earlier than Piaget\'s search tasks indicated. It says nothing about conservation and contradicts an 8-month start.'
           }
         ]
       }

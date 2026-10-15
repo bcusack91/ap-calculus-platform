@@ -5,181 +5,230 @@ export const psychAttitudesPart1Data = {
       id: 'attitudes-persuasion-p1-s1-intro',
       type: 'text' as const,
       content: `
-      # 🧠 Attitudes and Persuasion
+# 🧠 Attitudes and Persuasion
 
-      **Part 1 of 7 — Attitude Components and Formation**
+**Part 1 of 7 — What Attitudes Are and How They Form**
 
-      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
+> 🔑 **Key Concept:** An **attitude** is a learned evaluation, favorable or unfavorable, of a person, object, group, or idea. Attitudes bundle feelings, beliefs, and readiness to act, and they are built by the same learning processes you studied in Unit 3.
 
-      ### Core Definitions
-      - **attitude**: a learned evaluation of a person, object, or idea
-      - **ABC model**: the affective, behavioral, and cognitive components of an attitude
-      - **mere exposure effect**: increased liking after repeated exposure
+### What an attitude includes
 
-      ### Concrete Real-World Example
-      A team is studying a school district campaign to increase student seatbelt use. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
+| Component | Question it answers | Example: a student's attitude toward a later school start time |
+|-----------|--------------------|-----------------------------------------------------------------|
+| **Affect** (feeling) | How do I feel about it? | "I'd be so relieved. Mornings are miserable." |
+| **Behavior** (action tendency) | What am I inclined to do about it? | Signing the petition that supports the change |
+| **Cognition** (belief) | What do I think is true about it? | "Teens get more sleep when school starts later." |
 
-      ### Why This Matters
-      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
+Some textbooks call this the ABC framing. The CED does not require the label, but it shows why an attitude can be changed through feelings, through thinking, or through behavior. Those are the three doors this whole topic keeps opening.
+
+### Explicit and implicit attitudes
+
+- An **explicit attitude** is one you know you hold and can report: "I like electric cars."
+- An **implicit attitude** is one a person holds but may be unaware of or may not acknowledge. It shows up in fast, automatic reactions rather than in what the person says.
+
+Implicit attitudes, the speeded tasks used to measure them, and their role in stereotypes and prejudice are taught in the **Group Behavior and Prejudice** topic. This topic focuses on how attitudes form, persist and change.
+
+### Where this topic sits in the CED
+
+| CED topic | What this lesson covers | Part |
+|-----------|-------------------------|------|
+| 4.1 Attribution | Explanatory style, locus of control | 2 |
+| 4.1 Person perception | Mere exposure, self-fulfilling prophecy, social comparison, relative deprivation | 3 |
+| 4.2 Attitude formation and change | Belief perseverance, confirmation bias, cognitive dissonance in depth | 4 |
+| 4.3 Persuasion | What decides the persuasion route, the halo effect, sequential requests | 5 |
+| Science practices | AAQ and EBQ practice on attitude research | 6 |
+| All of the above | Synthesis review | 7 |
+
+> 📌 The Social Influence & Conformity topic already defines the attribution biases, the two routes of the elaboration likelihood model, and the basic cognitive dissonance study. This lesson builds on those definitions instead of repeating them.
       `
     },
     {
-      id: 'attitudes-persuasion-p1-s2-check',
+      id: 'attitudes-persuasion-p1-s2-formation',
+      type: 'text' as const,
+      content: `
+### 📚 How attitudes form: five learning routes
+
+Nobody is born liking a sports team or distrusting a brand. Attitudes are learned, and Unit 3 gives you the mechanisms.
+
+| Route | How it builds an attitude | Example |
+|-------|---------------------------|---------|
+| **Classical conditioning** | A neutral object is repeatedly paired with something that already produces a feeling, until the object alone produces that feeling | A sports drink keeps appearing in ads next to roaring crowds and game-winning shots, and the drink itself starts to feel exciting |
+| **Operant conditioning** | Expressing or acting on an attitude is followed by reinforcement or punishment, so that attitude is voiced more or less often | A student who praises the debate club gets approving nods from friends and starts saying it more |
+| **Observational learning** | People adopt attitudes they see modeled, especially by admired or similar models | A child copies an older sibling's excitement about trips to the library |
+| **Direct experience** | Personal encounters produce evaluations, and these attitudes tend to be strong | After one great lab partner, a student decides group projects are worth it |
+| **Repeated exposure** | Encountering a stimulus again and again tends to increase liking, even with no reward (the mere exposure effect, Part 3) | A song you shrugged at the first time grows on you after hearing it on the bus every morning |
+
+### Worked example: tracing one attitude
+
+**Situation:** Dev, a high school junior, is a devoted fan of his town's minor-league soccer club. Where did that attitude come from?
+
+**Step 1 — Look for pairings (classical conditioning).** As a child, Dev went to games with his grandfather. The club's colors and chants were paired with warm family time, so the club itself now produces a good feeling.
+
+**Step 2 — Look for models (observational learning).** He watched his grandfather cheer, wear the scarf, and talk about players with affection.
+
+**Step 3 — Look for consequences (operant conditioning).** At school, friends reward Dev's loyalty with inside jokes and invitations to watch parties.
+
+**Step 4 — Look for repetition (mere exposure).** The club's logo is on billboards, buses, and the local diner's walls.
+
+**Step 5 — Predict.** Dev's attitude was formed through direct experience, is personally important, and is expressed often. Those features make it a **strong attitude**, so it should predict his behavior well (buying tickets, defending the club online).
+
+> 🔑 **AP Connection:** When a free-response question asks how an attitude formed, name the learning process and point to the specific detail that shows it: the pairing, the reinforcement, or the model. "He learned it" earns nothing; "the club was repeatedly paired with time with his grandfather, an example of classical conditioning" does.
+      `
+    },
+    {
+      id: 'attitudes-persuasion-p1-s3-check',
       type: 'multiple-choice' as const,
       content: `
-      **Concept Check** 🎯
+**Concept Check — Where did the attitude come from?** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In a study about a school district campaign to increase student seatbelt use, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
+            question: 'Each time a streaming service shows its logo, a few seconds of a song most viewers already love plays with it. After months of this, many viewers feel a small lift in mood when they see the logo by itself. Which learning process best explains the new attitude?',
             options: [
-              'mere exposure effect',
-              'attitude',
-              'ABC model',
-              'central route'
-            ],
-            correctAnswer: 1,
-            explanation: 'attitude is correct because it directly matches this mechanism: a learned evaluation of a person, object, or idea. The distractors describe related but different processes.'
-          },
-          {
-            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
-            options: [
-              'mere exposure effect',
-              'ABC model',
-              'peripheral route',
-              'cognitive dissonance'
+              'Operant conditioning, with the logo as a reinforcer for watching',
+              'Observational learning, with viewers copying how other fans react',
+              'Classical conditioning, with the logo as a conditioned stimulus',
+              'Cognitive dissonance, with viewers justifying their monthly fees'
             ],
             correctAnswer: 2,
-            explanation: 'peripheral route is the strongest match here (persuasion through cues such as attractiveness or authority). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
+            explanation: 'The logo was neutral until it was repeatedly paired with a song that already produced a good feeling, so it now produces that feeling on its own. That is a conditioned stimulus in classical conditioning. Nothing in the scenario reinforces a behavior, shows a model, or involves an inconsistency between actions and attitudes.'
+          },
+          {
+            question: 'When Priya says at dinner that recycling is pointless, her parents frown and change the subject. When she mentions that she started sorting her trash at school, they praise her warmly. Over the next year, Priya voices support for recycling more and more often. Which process best accounts for this change?',
+            options: [
+              'Mere exposure to recycling messages at home',
+              'Operant conditioning of her spoken opinions',
+              'Classical conditioning of trash to praise',
+              'A self-fulfilling prophecy by her parents'
+            ],
+            correctAnswer: 1,
+            explanation: 'Priya\'s statements are followed by consequences: disapproval for one view and praise for the other. Reinforcement makes the praised view more frequent, which is operant conditioning. Mere exposure involves repetition without consequences, and the praise follows her statements rather than being paired with an object.'
+          },
+          {
+            question: 'A seventh grader starts saying he "can\'t stand" a certain fast-food chain after watching his favorite online creator mock it in several videos. He has never eaten there. Which source of attitude formation is most clearly at work?',
+            options: [
+              'Direct experience with the restaurant chain',
+              'Repeated exposure that increased his liking',
+              'Reinforcement from the restaurant\'s owners',
+              'Observational learning from an admired model'
+            ],
+            correctAnswer: 3,
+            explanation: 'He adopted the attitude by watching someone he admires express it, which is observational learning. He has no direct experience with the chain, and repeated exposure would be expected to increase liking, not produce dislike.'
           }
         ]
       }
     },
     {
-      id: 'attitudes-persuasion-p1-s3-deep',
+      id: 'attitudes-persuasion-p1-s4-predict',
       type: 'text' as const,
       content: `
-      ## Deep Dive: Comparing Explanations with Evidence
+### 🔍 When do attitudes predict behavior?
 
-      When analyzing a school district campaign to increase student seatbelt use, the best interpretation ties a clear psychological mechanism to measurable evidence.
+You might expect people to act on their attitudes all the time. They often don't. A student can believe that cheating is wrong and still copy homework when the whole group chat is sharing answers. Research points to a few conditions that make the attitude-behavior link stronger.
 
-      | Theory / Concept | Core claim | Typical evidence | Common limitation |
-      |---|---|---|---|
-      | attitude | a learned evaluation of a person, object, or idea | experimental manipulation with random assignment | possible demand characteristics |
-      | ABC model | the affective, behavioral, and cognitive components of an attitude | longitudinal trend with repeated measurement | third-variable risk in natural settings |
-      | mere exposure effect | increased liking after repeated exposure | cross-sectional comparison with matched groups | limited generalizability across cultures |
-      | central route | persuasion through careful analysis of message quality | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+| The link is STRONGER when... | Why | Example |
+|------------------------------|-----|---------|
+| **The attitude is strong**: formed through direct experience, personally important, and expressed often | Strong attitudes come to mind quickly and are ready to guide choices | A student who has volunteered at an animal shelter for years reliably signs pet-adoption petitions |
+| **The attitude is specific to the behavior** | A general attitude predicts general patterns; a specific attitude predicts the specific act | "I care about my health" predicts little about tomorrow's breakfast; "I like eating oatmeal before practice" predicts a lot |
+| **Outside pressures are weak** | Norms and situational pressure can override private attitudes (connects to conformity) | A student who dislikes vaping may still try it at a party where everyone is doing it |
+| **The person is reminded of the attitude** | Thinking about or stating an attitude makes it more accessible right before acting | Saying "I think the ban is unfair" out loud just before deciding whether to sign a petition against it |
 
-      ### Interpretation Strategy
-      1. Name the mechanism before describing outcomes.
-      2. Match the claim to the strongest available evidence type.
-      3. Acknowledge one limitation and explain whether it changes the conclusion.
+### Behavior shapes attitudes too
 
-      This structure helps you earn reasoning points on free-response and avoid vague claims.
+The arrow also points the other way. When people act first, their attitudes often shift to match the action:
+
+- After agreeing to a small request, people see themselves as supporters and agree to larger ones (foot-in-the-door, Part 5).
+- After acting against their attitudes with little outside justification, people feel **cognitive dissonance** and often adjust the attitude (Part 4).
+- After repeatedly playing a role, such as team captain, people often come to hold the attitudes that go with it.
+
+> 🔑 **AP Connection:** If an exam item asks why someone acted against a stated attitude, check the four conditions in the table. The answer is usually a weak or general attitude, or a strong situational pressure, not "the person was lying about the attitude."
       `
-    },
-    {
-      id: 'attitudes-persuasion-p1-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Applied Recall (exact term answers)** ✍️
-
-      1) Write the concept that matches: a learned evaluation of a person, object, or idea
-
-      2) Write the concept that matches: the affective, behavioral, and cognitive components of an attitude
-
-      3) Write the concept that matches: increased liking after repeated exposure
-
-      Use the exact vocabulary term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['attitude', 'ABC model', 'mere exposure effect'],
-        hint1: 'Starts with: A',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: M',
-        explanation: 'Expected answers: attitude, ABC model, and mere exposure effect. Each response should use the precise term connected to the definition cue.'
-      }
     },
     {
       id: 'attitudes-persuasion-p1-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Model Matching** 🔎
+**Will the attitude predict the behavior?** 🔍
+
+For each person, choose what the attitude is most likely to do.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Select the concept that best matches: a learned evaluation of a person, object, or idea',
-            options: ['central route', 'attitude', 'mere exposure effect', 'cognitive dissonance']
+            label: 'Lena has volunteered at a food bank every month for three years and says hunger relief matters deeply to her. When her school runs a canned-food drive, her attitude is most likely to _____.',
+            options: ['predict the behavior well', 'lose out to social pressure', 'be too general to guide the act', 'be held only implicitly']
           },
           {
-            label: 'Select the concept that best matches: the affective, behavioral, and cognitive components of an attitude',
-            options: ['ABC model', 'attitude', 'mere exposure effect', 'peripheral route']
+            label: 'Omar says he "supports the environment." Whether he bikes to school instead of getting a ride on Tuesday is hard to forecast from that attitude, because it is likely to _____.',
+            options: ['predict the behavior well', 'lose out to social pressure', 'be too general to guide the act', 'be held only implicitly']
           },
           {
-            label: 'Select the concept that best matches: increased liking after repeated exposure',
-            options: ['central route', 'mere exposure effect', 'cognitive dissonance', 'ABC model']
+            label: 'Jada privately thinks a team prank is cruel, but every teammate is cheering it on during practice. In that moment her attitude is most likely to _____.',
+            options: ['predict the behavior well', 'lose out to social pressure', 'be too general to guide the act', 'be held only implicitly']
           }
         ],
-        correctAnswers: ['attitude', 'ABC model', 'mere exposure effect'],
-        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
-        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
-        hint3: 'Use the definition language from this part to avoid near-miss terms.',
-        explanation: 'Correct matches are attitude, ABC model, and mere exposure effect. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+        correctAnswers: ['predict the behavior well', 'be too general to guide the act', 'lose out to social pressure'],
+        hint1: 'Lena\'s attitude came from years of direct experience and is personally important.',
+        hint2: 'Omar\'s attitude is about "the environment" in general, while the behavior is one specific act on one day.',
+        hint3: 'Jada is surrounded by people who all approve of the prank.',
+        explanation: 'Lena holds a strong attitude formed through direct experience, so it should predict her behavior. Omar\'s attitude is general, so it predicts general patterns better than one specific act. Jada faces strong situational pressure, which can override even a sincere private attitude.'
       }
     },
     {
-      id: 'attitudes-persuasion-p1-s6-strategy',
+      id: 'attitudes-persuasion-p1-s6-misconceptions',
       type: 'text' as const,
       content: `
-      ## Common Misconceptions and Exam Strategy
+### ⚠️ Common misconceptions about attitudes
 
-      ### Misconceptions to Avoid
-      - Strong emotions can persuade, but lasting change usually requires attitude-consistent reasoning.
-      - Peripheral cues can shift choices quickly, yet effects may fade without central processing.
-      - Dissonance reduction is not always conscious; people often rationalize automatically.
-      - Resistance does not mean no influence; it can mean delayed or context-dependent influence.
+| Misconception | Correction |
+|---------------|------------|
+| An attitude is just an opinion you state. | Attitudes include feelings and action tendencies, and implicit attitudes may never be stated at all. |
+| Attitudes always come first, and behavior follows. | Behavior also shapes attitudes, as cognitive dissonance and foot-in-the-door show. |
+| Seeing something more always makes people like it more. | Mere exposure works best for neutral or mildly positive stimuli, and too much repetition can wear liking out (Part 3). |
+| A general attitude predicts any specific act. | Attitudes predict best when they match the behavior's level of specificity. |
+| Attitudes are only learned through direct experience. | Conditioning, observation, and repetition can all build attitudes toward things a person has never encountered. |
 
-      ### AP Strategy Moves
-      - Define the target concept in one precise sentence before giving examples.
-      - In scenario questions about a school district campaign to increase student seatbelt use, identify the manipulated variable and measured outcome.
-      - Use one competing explanation and explain why it is weaker.
-      - If data are provided, mention trend direction and at least one design limitation.
+### Studying attitudes scientifically
 
-      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+Because attitudes are internal, researchers must **operationally define** them. Common choices:
+
+- A rating scale ("How favorable are you toward the new policy, from 1 to 9?")
+- A behavior that reflects the attitude (signing a petition, donating money)
+- Reaction times in a speeded task (for implicit attitudes; see Group Behavior and Prejudice)
+
+Most real-world attitude data are **correlational**: researchers measure an attitude and a behavior and see whether they move together. A correlation shows that the two are related, not which one causes the other.
       `
     },
     {
       id: 'attitudes-persuasion-p1-s7-applied',
       type: 'multiple-choice' as const,
       content: `
-      **Applied Scenarios** 🎯
+**Applied Scenarios — Attitude Research** 🔬
       `,
       exercise: {
         questions: [
           {
-            question: 'A team investigating a school district campaign to increase student seatbelt use finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            question: 'A researcher surveys 200 students about how much they like the school cafeteria and then records how many times each student buys lunch there over a month. She finds a moderate positive correlation. Which conclusion is best supported by her data?',
             options: [
-              'mere exposure effect',
-              'central route',
-              'attitude',
-              'ABC model'
-            ],
-            correctAnswer: 1,
-            explanation: 'central route is best because it reflects this mechanism (persuasion through careful analysis of message quality). The other options describe different levels of explanation or related constructs.'
-          },
-          {
-            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
-            options: [
-              'peripheral route',
-              'ABC model',
-              'cognitive dissonance',
-              'mere exposure effect'
+              'Students who like the cafeteria more tend to buy lunch there more often.',
+              'Liking the cafeteria causes students to buy lunch there more often.',
+              'Buying lunch more often causes students to like the cafeteria more.',
+              'Liking the cafeteria and buying lunch there are unrelated.'
             ],
             correctAnswer: 0,
-            explanation: 'peripheral route is the strongest interpretation because it maps to the measured pattern and proposed mechanism: persuasion through cues such as attractiveness or authority. Good AP reasoning also notes alternative explanations and design limits.'
+            explanation: 'A positive correlation means higher liking goes with more purchases, so the safe conclusion describes that relationship. The two causal statements go beyond correlational data, since either direction is possible and a third variable could explain both. A moderate positive correlation is not the absence of a relationship.'
+          },
+          {
+            question: 'For years, a 10-year-old has watched her older brother read science fiction novels and get praised by their parents for it. She has now read just one such book, yet she says she loves the genre. Which process best explains how her attitude formed?',
+            options: [
+              'Cognitive dissonance reduction',
+              'Observational learning',
+              'Belief perseverance effect',
+              'Upward social comparison'
+            ],
+            correctAnswer: 1,
+            explanation: 'She watched a model being reinforced for an activity and adopted a favorable attitude toward it with almost no direct experience, which is observational learning. No inconsistency between her actions and beliefs, discredited belief, or self-evaluation against someone better off is described.'
           }
         ]
       }

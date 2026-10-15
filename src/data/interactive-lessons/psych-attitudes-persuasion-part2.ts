@@ -5,181 +5,240 @@ export const psychAttitudesPart2Data = {
       id: 'attitudes-persuasion-p2-s1-intro',
       type: 'text' as const,
       content: `
-      # 🧠 Attitudes and Persuasion
+# 🧠 Attitudes and Persuasion
 
-      **Part 2 of 7 — Routes to Persuasion**
+**Part 2 of 7 — Explaining Behavior: Explanatory Style and Locus of Control**
 
-      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
+> 🔑 **Key Concept:** Attribution theory asks how people explain behavior. Beyond one-time biases, people show stable *patterns* in how they explain good and bad events (**explanatory style**) and stable *expectations* about who controls their outcomes (**locus of control**). Both shape motivation, persistence, and mood.
 
-      ### Core Definitions
-      - **mere exposure effect**: increased liking after repeated exposure
-      - **central route**: persuasion through careful analysis of message quality
-      - **peripheral route**: persuasion through cues such as attractiveness or authority
+### Quick recap (taught in Social Influence & Conformity, Part 1)
 
-      ### Concrete Real-World Example
-      A team is studying a skincare advertisement using expert endorsements. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
+| Term | One-line meaning |
+|------|------------------|
+| Dispositional attribution | The cause is inside the person: traits, ability, effort |
+| Situational attribution | The cause is outside the person: circumstances, luck, other people |
+| Fundamental attribution error, self-serving bias, actor-observer bias | Predictable distortions in those explanations |
 
-      ### Why This Matters
-      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
+This part goes further, into how explanations become habits.
+
+### Explanatory style: three questions about every event
+
+The CED describes **explanatory style** as a predictable pattern in how people explain good and bad events in their own lives and in the lives of others. Martin Seligman and his colleagues described that pattern along three dimensions.
+
+| Dimension | The question it answers | One pole | Other pole |
+|-----------|-------------------------|----------|------------|
+| **Internal vs. external** | Was it me, or something outside me? | "I wasn't prepared." | "The quiz covered material we never got." |
+| **Stable vs. unstable** | Will this cause keep operating over time? | "I'm always bad at this." | "I had an off day." |
+| **Global vs. specific** | Does this cause affect everything, or just this situation? | "I mess up everything." | "Balancing equations trips me up." |
+
+### Optimistic and pessimistic styles
+
+| Event | **Pessimistic** explanatory style | **Optimistic** explanatory style |
+|-------|-----------------------------------|----------------------------------|
+| **Bad event** | Internal, stable, global: "It's me, it will last, and it ruins everything." | External or changeable, unstable, specific: "This time, this subject, for a fixable reason." |
+| **Good event** | External, unstable, specific: "I got lucky on that one test." | Internal, stable, global: "I'm good at working through hard problems." |
+
+Notice that the pattern **flips** for good events. A pessimist explains away successes and takes ownership of failures; an optimist does the reverse.
+
+> ⚠️ An optimistic style does not mean blaming everyone else. "I didn't study enough for this test" is internal, but it is unstable and specific, and it is one of the most useful explanations a student can give, because it points to a cause the student can change.
       `
     },
     {
-      id: 'attitudes-persuasion-p2-s2-check',
+      id: 'attitudes-persuasion-p2-s2-worked',
+      type: 'text' as const,
+      content: `
+### 📝 Worked example: two students, one failed quiz
+
+Ana and Marcus both fail the first chemistry quiz of the year.
+
+**Ana:** "I'm just not a science person. I'm never going to get this, and honestly I'm bad at school in general."
+
+**Marcus:** "I crammed the night before, and stoichiometry was brand new. Next time I'll start practice problems earlier."
+
+**Step 1 — Internal or external?** Both name something about themselves, so both explanations are internal.
+
+**Step 2 — Stable or unstable?** Ana's cause ("not a science person," "never") is permanent. Marcus's cause (cramming, a new skill) can change. Ana: stable. Marcus: unstable.
+
+**Step 3 — Global or specific?** Ana extends the failure to "school in general." Marcus limits it to one unit. Ana: global. Marcus: specific.
+
+**Step 4 — Classify.** Ana shows the pessimistic pattern for a bad event (internal, stable, global). Marcus shows an optimistic pattern (internal but unstable and specific).
+
+**Step 5 — Predict behavior.** Marcus is more likely to seek help and change his study habits, because his explanation names a cause he can fix. Ana is more likely to stop trying, because her explanation says effort won't matter.
+
+### Why explanatory style matters
+
+- **Learned helplessness (Unit 3 and Unit 5 link):** In Seligman's early research, dogs exposed to shocks they could not escape later failed to escape shocks they could have avoided. Seligman and colleagues later proposed that people who explain bad events in an internal, stable, global way are more likely to show this kind of helplessness.
+- **Depression (Unit 5):** A pessimistic explanatory style is a well-documented risk factor associated with depression. The link is correlational, but it is a reason cognitive therapies teach people to dispute pessimistic explanations.
+- **Persistence:** In a correlational study of insurance sales agents, Seligman and Schulman found that agents with a more optimistic explanatory style sold more and were more likely to stay on the job.
+
+> 🔑 **AP Connection:** Explanatory style is a *pattern* across many events. One sentence after one bad grade is an attribution; a habit of explaining many setbacks the same way is an explanatory style. If a stem says "usually," "every time," or "across situations," think explanatory style.
+      `
+    },
+    {
+      id: 'attitudes-persuasion-p2-s3-check',
       type: 'multiple-choice' as const,
       content: `
-      **Concept Check** 🎯
+**Concept Check — Classify the explanation** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In a study about a skincare advertisement using expert endorsements, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
+            question: 'After dropping an easy pass in the final minute of a game, a player says, "I always choke when it matters, and I ruin things for everyone." Her explanation for this bad event is best classified as',
             options: [
-              'cognitive dissonance',
-              'central route',
-              'peripheral route',
-              'mere exposure effect'
+              'external, unstable, and specific, an optimistic style',
+              'internal, unstable, and specific, an optimistic style',
+              'external, stable, and global, a pessimistic style',
+              'internal, stable, and global, a pessimistic style'
             ],
             correctAnswer: 3,
-            explanation: 'mere exposure effect is correct because it directly matches this mechanism: increased liking after repeated exposure. The distractors describe related but different processes.'
+            explanation: '"I always choke" places the cause in herself (internal) and makes it permanent (stable), and "I ruin things for everyone" spreads it beyond this game (global). Internal, stable, and global explanations for a bad event form the pessimistic style.'
           },
           {
-            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
+            question: 'Theo wins the regional spelling bee and tells his friends, "The judges just picked easy words today. I\'ll probably never place again." His explanation is best described as',
             options: [
-              'foot-in-the-door',
-              'social judgment theory',
-              'peripheral route',
-              'central route'
+              'An optimistic style applied to a good event',
+              'The self-serving bias protecting his ego',
+              'A pessimistic style applied to a good event',
+              'An internal locus of control over success'
+            ],
+            correctAnswer: 2,
+            explanation: 'Theo explains a success with an external cause (easy words), an unstable cause (just today), and a specific one (this bee). For good events, that is the pessimistic pattern. A self-serving bias would have him take credit for the win, not give it away.'
+          },
+          {
+            question: 'Which response to being turned down for a summer job best reflects an optimistic explanatory style?',
+            options: [
+              '"My answers were rushed, and I can practice them before the next interview."',
+              '"Managers here are all unfair, so applying anywhere else is a waste of time."',
+              '"I am just not the kind of person that employers would ever want to hire."',
+              '"I always say the wrong thing, in job interviews and everywhere else too."'
             ],
             correctAnswer: 0,
-            explanation: 'foot-in-the-door is the strongest match here (gaining compliance with a small request before a larger one). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
+            explanation: 'Rushed answers are a cause that is unstable (they can be practiced) and specific (one interview skill), which is the optimistic pattern for a bad event. Blaming unfair managers everywhere is external but stable and global, so it still predicts giving up, and the other two responses are internal, stable, and global.'
           }
         ]
       }
     },
     {
-      id: 'attitudes-persuasion-p2-s3-deep',
+      id: 'attitudes-persuasion-p2-s4-locus',
       type: 'text' as const,
       content: `
-      ## Deep Dive: Comparing Explanations with Evidence
+### 🎛️ Locus of control
 
-      When analyzing a skincare advertisement using expert endorsements, the best interpretation ties a clear psychological mechanism to measurable evidence.
+**Locus of control**, a concept developed by Julian Rotter, is a person's general expectation about what controls the outcomes in his or her life.
 
-      | Theory / Concept | Core claim | Typical evidence | Common limitation |
-      |---|---|---|---|
-      | mere exposure effect | increased liking after repeated exposure | experimental manipulation with random assignment | possible demand characteristics |
-      | central route | persuasion through careful analysis of message quality | longitudinal trend with repeated measurement | third-variable risk in natural settings |
-      | peripheral route | persuasion through cues such as attractiveness or authority | cross-sectional comparison with matched groups | limited generalizability across cultures |
-      | cognitive dissonance | discomfort from inconsistent beliefs and behaviors | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+| | **Internal locus of control** | **External locus of control** |
+|--|-------------------------------|-------------------------------|
+| Core belief | "What happens to me depends mainly on my own actions." | "What happens to me depends mainly on luck, fate, or powerful others." |
+| Typical statement | "If I put in the work, my grade will go up." | "Grades depend on which teacher you get." |
+| Associated with (correlational findings) | More active coping, more health-protective behavior, higher achievement | More stress and helplessness when facing setbacks |
 
-      ### Interpretation Strategy
-      1. Name the mechanism before describing outcomes.
-      2. Match the claim to the strongest available evidence type.
-      3. Acknowledge one limitation and explain whether it changes the conclusion.
+Rotter measured locus of control with a questionnaire of paired statements in which people pick the one they agree with more. Because locus of control is measured rather than assigned, most findings about it are **correlational**: an internal locus is linked with good outcomes, but those outcomes could also feed back into how much control people feel.
 
-      This structure helps you earn reasoning points on free-response and avoid vague claims.
+**A classic study of perceived control.** Ellen Langer and Judith Rodin (1976) worked with residents of a nursing home. Residents on one floor were encouraged to make their own choices, such as arranging their rooms and caring for a plant themselves. Residents on a comparison floor were told the staff would take care of these things for them. The residents given responsibility became more active and reported feeling happier, and a later follow-up suggested better health. Increasing people's sense of control over everyday outcomes changed their behavior and well-being.
+
+### Keep these four ideas separate
+
+| Concept | When it happens | Core question | Example |
+|---------|-----------------|---------------|---------|
+| **Attribution** | After one event | Why did that happen? | "She won because she practiced." |
+| **Explanatory style** | A habit across many events | How do I usually explain good and bad events? | "Bad things are always my fault and ruin everything." |
+| **Locus of control** | A general expectation, before outcomes | Do my actions control what happens to me? | "If I study, my grades go up." |
+| **Self-efficacy** (Topic 4.5) | A belief about one task, before trying | Can I do this specific thing? | "I can solve these calculus problems." |
+
+**Worked distinction:** Jordan agrees that grades depend on effort (internal locus of control) but doubts he can write a strong essay (low self-efficacy for essay writing). Both can be true at once. Locus of control is about whether actions matter; self-efficacy is about whether you can perform the action.
       `
     },
     {
-      id: 'attitudes-persuasion-p2-s4-input',
+      id: 'attitudes-persuasion-p2-s5-input',
       type: 'input-boxes' as const,
       content: `
-      **Applied Recall (exact term answers)** ✍️
+**Recall Practice** ✍️
 
-      1) Write the concept that matches: increased liking after repeated exposure
-
-      2) Write the concept that matches: persuasion through careful analysis of message quality
-
-      3) Write the concept that matches: persuasion through cues such as attractiveness or authority
-
-      Use the exact vocabulary term from this part.
+Type one word for each blank.
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['mere exposure effect', 'central route', 'peripheral route'],
-        hint1: 'Starts with: M',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: P',
-        explanation: 'Expected answers: mere exposure effect, central route, and peripheral route. Each response should use the precise term connected to the definition cue.'
-      }
-    },
-    {
-      id: 'attitudes-persuasion-p2-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Model Matching** 🔎
-      `,
-      exercise: {
-        dropdowns: [
+        questions: [
           {
-            label: 'Select the concept that best matches: increased liking after repeated exposure',
-            options: ['social judgment theory', 'mere exposure effect', 'central route', 'peripheral route']
+            question: 'A student says, "Whether I get the scholarship depends on luck and the committee\'s mood, not on anything I do." This student shows a(n) _____ locus of control.',
+            answer: 'external',
+            acceptableAnswers: ['external locus', 'external locus of control', 'externally'],
+            explanation: 'Expecting outcomes to be controlled by luck or powerful others is an external locus of control.'
           },
           {
-            label: 'Select the concept that best matches: persuasion through careful analysis of message quality',
-            options: ['central route', 'peripheral route', 'foot-in-the-door', 'social judgment theory']
+            question: 'In explanatory style, the dimension that asks whether a cause will keep operating over time runs from stable to _____.',
+            answer: 'unstable',
+            acceptableAnswers: ['temporary', 'not stable'],
+            explanation: 'The stable versus unstable dimension asks whether the cause is permanent ("I\'m always bad at this") or temporary ("I had an off day").'
           },
           {
-            label: 'Select the concept that best matches: persuasion through cues such as attractiveness or authority',
-            options: ['foot-in-the-door', 'peripheral route', 'cognitive dissonance', 'mere exposure effect']
+            question: 'Believing you can successfully carry out one specific task, such as giving a speech, is called self-_____.',
+            answer: 'efficacy',
+            acceptableAnswers: ['self-efficacy', 'self efficacy', 'efficacy belief'],
+            explanation: 'Self-efficacy is a task-specific belief in one\'s own capability, which is different from a general expectation that actions control outcomes.'
           }
-        ],
-        correctAnswers: ['mere exposure effect', 'central route', 'peripheral route'],
-        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
-        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
-        hint3: 'Use the definition language from this part to avoid near-miss terms.',
-        explanation: 'Correct matches are mere exposure effect, central route, and peripheral route. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+        ]
       }
     },
     {
-      id: 'attitudes-persuasion-p2-s6-strategy',
+      id: 'attitudes-persuasion-p2-s6-data',
       type: 'text' as const,
       content: `
-      ## Common Misconceptions and Exam Strategy
+### 📊 Applying attribution biases to new data
 
-      ### Misconceptions to Avoid
-      - Strong emotions can persuade, but lasting change usually requires attitude-consistent reasoning.
-      - Peripheral cues can shift choices quickly, yet effects may fade without central processing.
-      - Dissonance reduction is not always conscious; people often rationalize automatically.
-      - Resistance does not mean no influence; it can mean delayed or context-dependent influence.
+On the exam you are less likely to be asked "define self-serving bias" than to be shown data and asked what pattern it reveals.
 
-      ### AP Strategy Moves
-      - Define the target concept in one precise sentence before giving examples.
-      - In scenario questions about a skincare advertisement using expert endorsements, identify the manipulated variable and measured outcome.
-      - Use one competing explanation and explain why it is weaker.
-      - If data are provided, mention trend direction and at least one design limitation.
+**Practice data set (hypothetical):** Forty high school coaches were asked to explain their team's last win and last loss. Each explanation was coded as internal (the team's effort, skill, or preparation) or external (referees, weather, injuries, luck).
 
-      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+| Explanation coded as... | After a win | After a loss |
+|-------------------------|-------------|--------------|
+| Internal | 78% | 31% |
+| External | 22% | 69% |
+
+**Reading the table:**
+1. Compare the columns, not the rows. Internal explanations drop from 78% after wins to 31% after losses.
+2. Name the pattern. Coaches credit their own team for wins and outside forces for losses, which is the **self-serving bias** operating at the level of a group.
+3. State a limit. These are coded verbal explanations from one sample of coaches, so the data show what coaches *say*, not what actually caused the results.
+
+### ⚠️ Misconceptions about explanation and control
+
+| Misconception | Correction |
+|---------------|------------|
+| Any external explanation is optimistic. | "The whole system is rigged against me" is external but stable and global, and it predicts giving up. Optimism for bad events is about unstable and specific causes. |
+| Locus of control is an explanation of one event. | It is a general expectation that a person carries into many situations. |
+| Internal locus of control and high self-efficacy are the same thing. | A person can believe effort matters while doubting his or her skill at a particular task. |
+| Explanatory style is a fixed trait. | It can change. Cognitive therapies (Unit 5) train people to notice and dispute pessimistic explanations. |
+| Pessimistic style means negative attitudes toward others. | It describes how a person explains events, especially his or her own setbacks and successes. |
       `
     },
     {
       id: 'attitudes-persuasion-p2-s7-applied',
       type: 'multiple-choice' as const,
       content: `
-      **Applied Scenarios** 🎯
+**Applied Scenarios — Data and Distinctions** 🔬
       `,
       exercise: {
         questions: [
           {
-            question: 'A team investigating a skincare advertisement using expert endorsements finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            question: 'Look again at the practice coach data. Which result, if it had been found instead, would most weaken the claim that the coaches showed a self-serving bias?',
             options: [
-              'central route',
-              'cognitive dissonance',
-              'peripheral route',
-              'mere exposure effect'
+              'The same pattern appeared for coaches across every sport in the sample',
+              'Coaches gave internal explanations for most wins and for most ties too',
+              'Coaches of winning teams gave longer explanations than losing coaches',
+              'Internal explanations made up about the same share after wins and losses'
             ],
-            correctAnswer: 1,
-            explanation: 'cognitive dissonance is best because it reflects this mechanism (discomfort from inconsistent beliefs and behaviors). The other options describe different levels of explanation or related constructs.'
+            correctAnswer: 3,
+            explanation: 'The self-serving bias is an asymmetry: credit for success, outside blame for failure. If internal explanations were equally common after wins and losses, the asymmetry would disappear. A pattern repeated across sports would strengthen the claim, and the other two results do not compare wins with losses.'
           },
           {
-            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            question: 'Kiara strongly agrees that "how well I do in school depends on my own effort," but she says she is terrible at public speaking and dreads her history presentation. Which pairing best describes Kiara?',
             options: [
-              'foot-in-the-door',
-              'peripheral route',
-              'central route',
-              'social judgment theory'
+              'External locus of control with low self-efficacy for speaking',
+              'Internal locus of control with a pessimistic explanatory style',
+              'Internal locus of control with low self-efficacy for speaking',
+              'Internal locus of control with high self-efficacy for speaking'
             ],
-            correctAnswer: 0,
-            explanation: 'foot-in-the-door is the strongest interpretation because it maps to the measured pattern and proposed mechanism: gaining compliance with a small request before a larger one. Good AP reasoning also notes alternative explanations and design limits.'
+            correctAnswer: 2,
+            explanation: 'Believing that outcomes depend on her effort is an internal locus of control, and doubting her ability to give a speech is low self-efficacy for that task. Nothing describes a habit of explaining bad events as permanent and pervasive, so there is no evidence of a pessimistic explanatory style.'
           }
         ]
       }

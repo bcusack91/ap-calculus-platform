@@ -5,181 +5,218 @@ export const psychPrenatalPart3Data = {
       id: 'prenatal-childhood-development-p3-s1-intro',
       type: 'text' as const,
       content: `
-      # 🧠 Prenatal and Childhood Development
+# 🧠 Prenatal and Childhood Development
 
-      **Part 3 of 7 — Cognitive Development Models**
+**Part 3 of 7 — Critical Periods, Imprinting, and How Development Is Studied**
 
-      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
+Some experiences matter far more at one age than at another. This part covers windows of heightened sensitivity, then steps back to the big themes and research designs that developmental psychologists use for every question in this unit.
 
-      ### Core Definitions
-      - **critical period**: time window when specific experiences strongly shape development
-      - **object permanence**: understanding that objects continue to exist when out of sight
-      - **secure attachment**: caregiver bond marked by trust and comfort in reunion
+> 🔑 **Key Concept:** A **critical period** is a limited window when a specific experience is *required* for normal development. A **sensitive period** is a window when an experience has its *strongest* effect, though some learning is still possible later.
 
-      ### Concrete Real-World Example
-      A team is studying Piaget-style conservation tasks in elementary school. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
+### Critical vs. Sensitive Periods
 
-      ### Why This Matters
-      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
+| Feature | Critical period | Sensitive period |
+|---|---|---|
+| Window | Sharp start and end | Gradual opening and closing |
+| If the experience is missed | Lasting or permanent deficit | Later learning is possible but harder and often less complete |
+| Classic example | Imprinting in ducks and geese; binocular vision in kittens | Human language, especially grammar and native-like pronunciation |
+
+### Evidence From Vision
+
+In classic studies, kittens that had one eye kept closed during the first months of life were left functionally blind in that eye, even though the eye itself was healthy. The visual cortex had wired itself to the open eye. The same closure in an adult cat had no lasting effect. In humans, this is why doctors remove infant cataracts early: the visual system needs clear input during its sensitive period.
+
+### Evidence From Language
+
+Children exposed to a language early typically master its grammar and accent. People who learn a second language after childhood usually keep an accent and make more grammar errors, even after many years. Rare cases of children isolated from language until late childhood show severe, lasting grammar deficits. (The Language and Intelligence topic covers language milestones and these cases in detail.) Because late learners still gain a great deal, psychologists usually describe language as having a **sensitive** period rather than a strict critical period.
       `
     },
     {
-      id: 'prenatal-childhood-development-p3-s2-check',
+      id: 'prenatal-childhood-development-p3-s2-imprinting',
+      type: 'text' as const,
+      content: `
+## Imprinting: Lorenz and the Goslings
+
+Konrad Lorenz, an Austrian zoologist, studied greylag geese. He divided a clutch of eggs: some hatched with their mother, and some hatched in an incubator where the first moving object the goslings saw was Lorenz.
+
+| Group | First moving object seen | Behavior afterward |
+|---|---|---|
+| Hatched with mother | Mother goose | Followed the mother |
+| Hatched in incubator | Lorenz | Followed Lorenz everywhere, even when later placed near their mother |
+
+**Imprinting** is the process by which certain animals form a strong attachment to the first moving object they encounter during a brief period after birth or hatching. Key features:
+- It happens only within a short window shortly after hatching, a true **critical period**.
+- It is very hard to reverse once formed.
+- It works on unusual objects: researchers have imprinted birds on boxes and balls.
+- It aids **survival**: following the mother keeps young birds close to food and protection.
+
+**Humans do not imprint.** Human infants form attachments gradually over many months through caregiving and comfort (Part 6). Avoid writing that a baby "imprinted" on a parent.
+
+> 🔑 **AP Connection:** The CED states that some non-human animals imprint on the first object they encounter as a means of survival. Expect scenario questions where a duckling follows a farmer, a dog or a toy.
+      `
+    },
+    {
+      id: 'prenatal-childhood-development-p3-s3-check',
       type: 'multiple-choice' as const,
       content: `
-      **Concept Check** 🎯
+**Concept Check — Critical Periods and Imprinting** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In a study about Piaget-style conservation tasks in elementary school, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
+            question: 'Ducklings hatched in a barn spend their first hours near a farmer\'s boots and afterward follow the farmer around the yard. What process does this show?',
             options: [
-              'secure attachment',
-              'authoritative parenting',
-              'object permanence',
-              'critical period'
+              'Imprinting during a critical period',
+              'Secure attachment built over months',
+              'Operant shaping with food rewards',
+              'Habituation to a repeated stimulus'
             ],
-            correctAnswer: 3,
-            explanation: 'critical period is correct because it directly matches this mechanism: time window when specific experiences strongly shape development. The distractors describe related but different processes.'
+            correctAnswer: 0,
+            explanation: 'The ducklings formed a fast, lasting bond with the first moving object they encountered shortly after hatching, which is imprinting. Attachment in humans forms gradually, and no rewards or repeated-stimulus decline are described.'
           },
           {
-            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
+            question: 'An adult who moved to a new country at age 25 speaks the new language fluently but with a strong accent and occasional grammar errors. Which conclusion fits best?',
             options: [
-              'theory of mind',
-              'secure attachment',
-              'scaffolding',
-              'object permanence'
+              'Language has no sensitive period, so the errors reflect low effort',
+              'Language has a sensitive period, so later learning is harder but possible',
+              'Language has a strict critical period, so adults cannot learn a new one',
+              'Language is learned by imprinting, so the first language blocks others'
             ],
-            correctAnswer: 2,
-            explanation: 'scaffolding is the strongest match here (supporting a child just beyond current independent ability). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
+            correctAnswer: 1,
+            explanation: 'Late learners can become fluent, which rules out a strict critical period, but they rarely reach native-like accent and grammar, which fits a sensitive period. Humans do not imprint on languages.'
+          },
+          {
+            question: 'Why do eye doctors recommend removing a dense cataract from an infant\'s eye as early as possible?',
+            options: [
+              'Cataracts in infants spread quickly to the other eye',
+              'Vision needs clear input during a key window',
+              'Infants recover from surgery faster than adults do',
+              'Clear vision is necessary for newborn reflexes to fade'
+            ],
+            correctAnswer: 1,
+            explanation: 'The visual cortex wires itself during an early window, so an eye that receives no clear input may never develop normal vision even after later surgery. The other options do not explain the urgency.'
           }
         ]
       }
     },
     {
-      id: 'prenatal-childhood-development-p3-s3-deep',
+      id: 'prenatal-childhood-development-p3-s4-themes',
       type: 'text' as const,
       content: `
-      ## Deep Dive: Comparing Explanations with Evidence
+## Three Enduring Themes in Developmental Psychology
 
-      When analyzing Piaget-style conservation tasks in elementary school, the best interpretation ties a clear psychological mechanism to measurable evidence.
+Developmental psychology studies both the **chronological order** of development and **thematic issues** that cut across the lifespan. The CED names three themes.
 
-      | Theory / Concept | Core claim | Typical evidence | Common limitation |
-      |---|---|---|---|
-      | critical period | time window when specific experiences strongly shape development | experimental manipulation with random assignment | possible demand characteristics |
-      | object permanence | understanding that objects continue to exist when out of sight | longitudinal trend with repeated measurement | third-variable risk in natural settings |
-      | secure attachment | caregiver bond marked by trust and comfort in reunion | cross-sectional comparison with matched groups | limited generalizability across cultures |
-      | authoritative parenting | high warmth with firm, consistent expectations | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+| Theme | The question | Evidence on one side | Evidence on the other |
+|---|---|---|---|
+| **Nature and nurture** | How much do genes vs. experience shape development? | Motor milestones follow maturation; imprinting windows are biological | PKU outcomes depend on diet; language depends on exposure |
+| **Continuity and discontinuity** | Is development gradual and continuous, or a series of distinct stages? | Vocabulary and height grow steadily (continuous) | Piaget and Erikson describe qualitatively different stages (discontinuous) |
+| **Stability and change** | Do early traits persist, or do people change? | Temperament shows some stability from infancy | Many shy toddlers become outgoing adults; adolescence brings big changes |
 
-      ### Interpretation Strategy
-      1. Name the mechanism before describing outcomes.
-      2. Match the claim to the strongest available evidence type.
-      3. Acknowledge one limitation and explain whether it changes the conclusion.
+Most modern answers are "both". The useful skill is to identify **which side a piece of evidence supports** and explain why.
 
-      This structure helps you earn reasoning points on free-response and avoid vague claims.
+## Cross-Sectional vs. Longitudinal Designs
+
+To study change with age, researchers choose between two designs.
+
+| Feature | Cross-sectional design | Longitudinal design |
+|---|---|---|
+| Who is studied | Different people of different ages | The same people |
+| When | All at one point in time | Repeatedly over months or years |
+| Speed and cost | Fast and relatively cheap | Slow and expensive |
+| Main weakness | **Cohort effects**: age groups grew up in different times, so differences may reflect generation rather than age | **Attrition**: participants drop out, and those who stay may differ from those who leave; practice effects from repeated testing |
+| Best for | A quick snapshot of age differences | Tracking how individuals change, and whether early traits predict later ones |
+
+### Worked Example: Choosing and Critiquing a Design
+
+**Question:** Does early reading to children predict vocabulary at age 10?
+
+**Step 1 — Pick a design.** Because the question links an early experience to a later outcome *in the same children*, a **longitudinal** design fits. Researchers record how often parents read to each 2-year-old, then test the same children's vocabulary at age 10.
+
+**Step 2 — Identify a weakness.** Families who move or lose interest may drop out. If the families who stay read more and have more resources, the final sample is biased (**attrition**).
+
+**Step 3 — Identify the method type.** Reading was measured, not assigned, so even a strong relationship is **correlational**. Parents who read more may differ in income or education.
+
+**Step 4 — Contrast with a cross-sectional version.** Testing 2-, 6- and 10-year-olds at one time would be faster, but different children cannot show whether *early* reading predicts *later* vocabulary for the same child.
       `
-    },
-    {
-      id: 'prenatal-childhood-development-p3-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Applied Recall (exact term answers)** ✍️
-
-      1) Write the concept that matches: time window when specific experiences strongly shape development
-
-      2) Write the concept that matches: understanding that objects continue to exist when out of sight
-
-      3) Write the concept that matches: caregiver bond marked by trust and comfort in reunion
-
-      Use the exact vocabulary term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['critical period', 'object permanence', 'secure attachment'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: O',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: critical period, object permanence, and secure attachment. Each response should use the precise term connected to the definition cue.'
-      }
     },
     {
       id: 'prenatal-childhood-development-p3-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Model Matching** 🔎
+**Name the Design or Theme** 🔎
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Select the concept that best matches: time window when specific experiences strongly shape development',
-            options: ['theory of mind', 'critical period', 'authoritative parenting', 'secure attachment']
+            label: 'Researchers test the memory of 5-, 8- and 11-year-olds in the same week. This is a _____ design.',
+            options: ['longitudinal', 'case study', 'cross-sectional', 'naturalistic']
           },
           {
-            label: 'Select the concept that best matches: understanding that objects continue to exist when out of sight',
-            options: ['object permanence', 'theory of mind', 'secure attachment', 'critical period']
+            label: 'The same 200 children are assessed at ages 3, 7 and 12. The biggest threat is _____.',
+            options: ['cohort effects', 'attrition', 'imprinting', 'placebo effects']
           },
           {
-            label: 'Select the concept that best matches: caregiver bond marked by trust and comfort in reunion',
-            options: ['theory of mind', 'secure attachment', 'scaffolding', 'object permanence']
+            label: 'A theorist argues that children think in qualitatively different ways at each age. This takes the _____ side of a developmental theme.',
+            options: ['continuity', 'stability', 'nurture', 'discontinuity']
           }
         ],
-        correctAnswers: ['critical period', 'object permanence', 'secure attachment'],
-        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
-        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
-        hint3: 'Use the definition language from this part to avoid near-miss terms.',
-        explanation: 'Correct matches are critical period, object permanence, and secure attachment. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+        correctAnswers: ['cross-sectional', 'attrition', 'discontinuity'],
+        hint1: 'Different children, one point in time.',
+        hint2: 'In a long study, what happens to some participants over the years?',
+        hint3: 'Stages are steps, not a smooth ramp.',
+        explanation: 'Testing different age groups at once is cross-sectional. Following the same children for years risks attrition. Qualitatively different stages reflect the discontinuity side of the continuity-discontinuity theme.'
       }
     },
     {
-      id: 'prenatal-childhood-development-p3-s6-strategy',
+      id: 'prenatal-childhood-development-p3-s6-data',
       type: 'text' as const,
       content: `
-      ## Common Misconceptions and Exam Strategy
+## Reading Developmental Data: Spotting a Cohort Effect
 
-      ### Misconceptions to Avoid
-      - Development is not strictly linear; domains can progress at different rates.
-      - Attachment quality reflects patterns over time, not one isolated event.
-      - Cognitive stages describe trends, but individual variation is expected.
-      - Early adversity raises risk but does not guarantee poor outcomes.
+A practice cross-sectional study in 2024 gave the same computer-skills test to three age groups.
 
-      ### AP Strategy Moves
-      - Define the target concept in one precise sentence before giving examples.
-      - In scenario questions about Piaget-style conservation tasks in elementary school, identify the manipulated variable and measured outcome.
-      - Use one competing explanation and explain why it is weaker.
-      - If data are provided, mention trend direction and at least one design limitation.
+| Age group | Mean score (out of 50) |
+|---|---|
+| 10-year-olds | 41 |
+| 40-year-olds | 33 |
+| 70-year-olds | 22 |
 
-      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+**Tempting conclusion:** "Computer skill declines steadily with age."
+
+**Better reasoning:** The 70-year-olds grew up before personal computers were common, while the 10-year-olds have used devices since infancy. The gap may reflect **when each group was born**, a cohort effect, rather than aging. A longitudinal study following the same people as they age would separate the two explanations.
+
+> 🔑 **AP Connection:** When an AAQ or multiple-choice item shows age differences from a single testing session, ask whether generational experience could explain them. Name the design, then name the cohort effect as its limitation.
       `
     },
     {
       id: 'prenatal-childhood-development-p3-s7-applied',
       type: 'multiple-choice' as const,
       content: `
-      **Applied Scenarios** 🎯
+**Applied Scenarios — Methods and Themes** 🔬
       `,
       exercise: {
         questions: [
           {
-            question: 'A team investigating Piaget-style conservation tasks in elementary school finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            question: 'A researcher wants to know whether children rated as very shy at age 2 are still shy at age 12. Which design fits this question best?',
             options: [
-              'object permanence',
-              'secure attachment',
-              'critical period',
-              'authoritative parenting'
+              'Cross-sectional, because it compares several ages at once',
+              'Longitudinal, because it tracks the same people over time',
+              'Experimental, because shyness levels can be randomly assigned',
+              'Case study, because only a few toddlers are extremely shy'
             ],
-            correctAnswer: 3,
-            explanation: 'authoritative parenting is best because it reflects this mechanism (high warmth with firm, consistent expectations). The other options describe different levels of explanation or related constructs.'
+            correctAnswer: 1,
+            explanation: 'Only following the same children over time can show whether an individual\'s early shyness persists, so the design is longitudinal; the question addresses the stability and change theme. Shyness cannot be randomly assigned, and comparing different children at one time cannot track individuals.'
           },
           {
-            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            question: 'A 20-year longitudinal study ends with 45% of its original participants, and those who remained had higher incomes. What is the main problem?',
             options: [
-              'scaffolding',
-              'secure attachment',
-              'theory of mind',
-              'object permanence'
+              'Cohort effects make the age groups different',
+              'The sample may be biased by attrition',
+              'Random assignment was not used correctly',
+              'Results reflect a critical period effect'
             ],
-            correctAnswer: 0,
-            explanation: 'scaffolding is the strongest interpretation because it maps to the measured pattern and proposed mechanism: supporting a child just beyond current independent ability. Good AP reasoning also notes alternative explanations and design limits.'
+            correctAnswer: 1,
+            explanation: 'When participants who leave differ systematically from those who stay, the remaining sample no longer represents the original group, which is attrition bias. A longitudinal study follows one cohort, so cohort effects between groups are not the issue.'
           }
         ]
       }
