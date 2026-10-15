@@ -145,7 +145,7 @@ export const MCQS: MCQItem[] = [
       '8000 J',
     ],
     correctAnswer: 1,
-    explanation: 'The work done by the gas is $P\\Delta V = (2.0 \\times 10^5)(0.020) = 4000$ J, the area under the process on a PV diagram. Multiplying the pressure by the final volume instead of the change in volume gives 6000 J.',
+    explanation: 'The work done by the gas is $P\\Delta V = (2.0 \\times 10^5)(0.020) = 4000$ J, the area under the process on a PV diagram, so the work done ON the gas is $W = -P\\Delta V = -4000$ J. Multiplying the pressure by the final volume instead of the change in volume gives 6000 J.',
   },
   {
     type: 'mcq',
@@ -185,7 +185,7 @@ export const MCQS: MCQItem[] = [
       'Net work by the gas is zero, and $\\Delta U = 0$.',
     ],
     correctAnswer: 0,
-    explanation: 'The net work over a cycle is the enclosed area, $(2.0 \\times 10^5\\,\\text{Pa})(0.030\\,\\text{m}^3) = 6.0 \\times 10^3$ J, and it is done by the gas because the cycle runs clockwise. The gas returns to its starting state, so $\\Delta U = 0$. The value $9.0 \\times 10^3$ J counts only the high-pressure expansion and ignores the work done on the gas during the low-pressure compression.',
+    explanation: 'The net work over a cycle is the enclosed area, $(2.0 \\times 10^5\\,\\text{Pa})(0.030\\,\\text{m}^3) = 6.0 \\times 10^3$ J, and it is done by the gas because the cycle runs clockwise (the net work done ON the gas is $W = -6.0 \\times 10^3$ J). The gas returns to its starting state, so $\\Delta U = 0$. The value $9.0 \\times 10^3$ J counts only the high-pressure expansion and ignores the work done on the gas during the low-pressure compression.',
   },
 
   /* ---- Electric Force, Field, and Potential (7) ---- */

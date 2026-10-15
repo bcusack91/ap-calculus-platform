@@ -22,22 +22,24 @@ On a PV diagram: a **hyperbola** ($P = nRT/V$)
 
 ### Work in Isothermal Process
 
-$$\\boxed{W = nRT\\ln\\frac{V_f}{V_i} = nRT\\ln\\frac{P_i}{P_f}}$$
+$$\\boxed{W = -nRT\\ln\\frac{V_f}{V_i} = -nRT\\ln\\frac{P_i}{P_f}}$$
+
+Here $W$ is the work done ON the gas (the AP convention), so $W < 0$ for an isothermal expansion. The work done BY the gas is $nRT\\ln(V_f/V_i)$.
 
 ---
 
 ### First Law for Isothermal Process
 
-Since $T$ is constant for an ideal gas: $\\Delta U = 0$
+Since $T$ is constant for an ideal gas: $\\Delta U = 0$, so $\\Delta U = Q + W$ gives
 
-$$Q = W$$
+$$Q = -W$$
 
-**All heat absorbed goes directly to work, and vice versa.** No energy is stored — the gas is merely a conduit for converting heat to work.
+**All heat absorbed leaves as work done by the gas, and vice versa.** No energy is stored — the gas is merely a conduit for converting heat to work.
 
-| Direction | $W$ | $Q$ |
+| Direction | $W$ (on gas) | $Q$ |
 |-----------|-----|-----|
-| Isothermal expansion | $+$ (gas does work) | $+$ (heat flows IN from reservoir) |
-| Isothermal compression | $-$ (work done on gas) | $-$ (heat flows OUT to reservoir) |
+| Isothermal expansion | $-$ (gas does work) | $+$ (heat flows IN from reservoir) |
+| Isothermal compression | $+$ (work done on gas) | $-$ (heat flows OUT to reservoir) |
 
 > 🔑 **Key Insight:** An isothermal process requires a heat reservoir (infinite heat capacity) and must proceed slowly enough for the gas to stay at the reservoir's temperature.
 
@@ -64,14 +66,14 @@ where $\\gamma = C_p/C_v$ is the **heat capacity ratio** (also called adiabatic 
       type: 'text' as const,
       content: `### First Law for Adiabatic Process
 
-Since $Q = 0$:
+Since $Q = 0$, $\\Delta U = Q + W$ becomes:
 
-$$\\Delta U = -W$$
+$$\\Delta U = W$$
 
-| Direction | $W$ | $\\Delta U$ | $T$ |
+| Direction | $W$ (on gas) | $\\Delta U$ | $T$ |
 |-----------|-----|-----------|-----|
-| Adiabatic expansion | $+$ | $-$ | Decreases (gas cools!) |
-| Adiabatic compression | $-$ | $+$ | Increases (gas heats!) |
+| Adiabatic expansion | $-$ | $-$ | Decreases (gas cools!) |
+| Adiabatic compression | $+$ | $+$ | Increases (gas heats!) |
 
 ---
 
@@ -104,7 +106,7 @@ The adiabatic curve is **always steeper** than the isothermal curve because the 
 
 Expanding to the same final volume $V_f$ from $(P_i, V_i)$:
 
-| Process | Final $P$ | Final $T$ | Work (area) | $Q$ |
+| Process | Final $P$ | Final $T$ | Work done BY gas (area) | $Q$ |
 |---------|----------|----------|-------------|-----|
 | Isobaric | $P_i$ (unchanged) | Highest | Most | Most |
 | Isothermal | $P_i V_i/V_f$ | Same as initial | Medium | Medium |
@@ -136,7 +138,7 @@ Expanding to the same final volume $V_f$ from $(P_i, V_i)$:
             question: 'In adiabatic compression, the gas temperature:',
             options: ['Decreases', 'Stays constant', 'Increases', 'Depends on the gas'],
             correctAnswer: 2,
-            explanation: '$Q = 0$, $W < 0$ (work done ON gas) → $\\Delta U = -W > 0$ → temperature rises. This is how diesel engines ignite fuel!'
+            explanation: '$Q = 0$, $W > 0$ (work done ON gas) → $\\Delta U = W > 0$ → temperature rises. This is how diesel engines ignite fuel!'
           },
           {
             question: 'An ideal gas expands slowly while in contact with a heat reservoir. This is:',
@@ -159,7 +161,7 @@ An ideal gas expands isothermally at $T = 300$ K from $V_i = 1$ L to $V_f = 3$ L
 
 **2)** $\\Delta U$ for this process? (in J)
 
-**3)** Work done by the gas: $W = nRT\\ln(V_f/V_i)$? (in J, round to nearest integer)
+**3)** Work done BY the gas, $nRT\\ln(V_f/V_i)$? (in J, round to nearest integer)
 
 **4)** Heat absorbed by the gas? (in J, round to nearest integer)
       `,
@@ -168,9 +170,9 @@ An ideal gas expands isothermally at $T = 300$ K from $V_i = 1$ L to $V_f = 3$ L
         correctAnswers: ['isothermal', '0', '2740', '2740'],
         hint1: 'Heat reservoir maintains constant $T$',
         hint2: 'For an ideal gas, $\\Delta U$ depends only on $T$',
-        hint3: '$W = (1)(8.314)(300)\\ln(3) = 2494.2 \\times 1.099$',
-        hint4: '$Q = \\Delta U + W$',
-        explanation: '1) Isothermal. 2) $\\Delta U = 0$ (constant $T$). 3) $W = 8.314 \\times 300 \\times \\ln(3) ≈ 2740$ J. 4) $Q = 0 + 2740 = 2740$ J — all heat goes to work.'
+        hint3: 'Work by the gas $= (1)(8.314)(300)\\ln(3) = 2494.2 \\times 1.099$',
+        hint4: '$Q = \\Delta U - W$, where the work done ON the gas is $W = -2740$ J',
+        explanation: '1) Isothermal. 2) $\\Delta U = 0$ (constant $T$). 3) Work by the gas $= 8.314 \\times 300 \\times \\ln(3) ≈ 2740$ J, so the work done on the gas is $W = -2740$ J. 4) $Q = \\Delta U - W = 0 - (-2740) = 2740$ J — all the heat leaves as work done by the gas.'
       }
     }
   ]

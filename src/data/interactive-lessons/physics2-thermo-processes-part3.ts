@@ -23,7 +23,7 @@ $$\\boxed{Q_H = W_{net} + Q_C}$$
 | Symbol | Meaning |
 |--------|---------|
 | $Q_H$ | Heat absorbed from hot reservoir |
-| $W_{net}$ | Net work output per cycle |
+| $W_{net}$ | Net work output per cycle (work done BY the engine, as a magnitude) |
 | $Q_C$ | Heat exhausted to cold reservoir |
 
 ---
@@ -91,13 +91,15 @@ Note: $COP_{hp} = COP_{ref} + 1$
 
 ### The Carnot Cycle: Four Steps
 
-| Step | Process | $Q$ | $W$ | $\\Delta U$ |
+$W$ below is the work done ON the gas (AP convention, $\\Delta U = Q + W$).
+
+| Step | Process | $Q$ | $W$ (on gas) | $\\Delta U$ |
 |------|---------|-----|-----|-----------|
-| 1 → 2 | Isothermal expansion at $T_H$ | $Q_H$ (in) | $+$ | 0 |
-| 2 → 3 | Adiabatic expansion | 0 | $+$ | $-$ |
-| 3 → 4 | Isothermal compression at $T_C$ | $Q_C$ (out) | $-$ | 0 |
-| 4 → 1 | Adiabatic compression | 0 | $-$ | $+$ |
-| **Cycle** | | $Q_H - Q_C$ | $W_{net}$ | **0** |
+| 1 → 2 | Isothermal expansion at $T_H$ | $Q_H$ (in) | $-$ | 0 |
+| 2 → 3 | Adiabatic expansion | 0 | $-$ | $-$ |
+| 3 → 4 | Isothermal compression at $T_C$ | $Q_C$ (out) | $+$ | 0 |
+| 4 → 1 | Adiabatic compression | 0 | $+$ | $+$ |
+| **Cycle** | | $Q_H - Q_C$ | $-(Q_H - Q_C)$ | **0** |
 
 ---
 
@@ -109,7 +111,7 @@ Note: $COP_{hp} = COP_{ref} + 1$
 | **Diesel** | Diesel engines | Adiabatic + isobaric + adiabatic + isochoric |
 | **Rankine** | Power plants | Uses phase changes (steam) |
 
-> 🔑 **AP Connection:** The enclosed area on a PV diagram represents the net work per cycle. Clockwise = engine ($W > 0$), counterclockwise = refrigerator ($W < 0$).`
+> 🔑 **AP Connection:** The enclosed area on a PV diagram represents the net work done BY the gas per cycle. Clockwise = engine (net work on the gas $W < 0$), counterclockwise = refrigerator (net work on the gas $W > 0$).`
     },
     {
       id: 'thermodynamicprocesses-p3-mcq',
@@ -156,7 +158,7 @@ A Carnot engine operates between $T_H = 500$ K and $T_C = 300$ K, absorbing $Q_H
 
 **1)** Carnot efficiency? (as decimal, round to 2 places)
 
-**2)** Net work per cycle? (in J)
+**2)** Net work output per cycle (work done by the engine)? (in J)
 
 **3)** Heat rejected per cycle? (in J)
 
@@ -166,10 +168,10 @@ A Carnot engine operates between $T_H = 500$ K and $T_C = 300$ K, absorbing $Q_H
         boxes: 4,
         correctAnswers: ['0.40', '800', '1200', '0.60'],
         hint1: '$e = 1 - T_C/T_H = 1 - 300/500$',
-        hint2: '$W = eQ_H$',
-        hint3: '$Q_C = Q_H - W$',
+        hint2: '$W_{net} = eQ_H$',
+        hint3: '$Q_C = Q_H - W_{net}$',
         hint4: '$e = 1 - 200/500$',
-        explanation: '1) $e = 1 - 300/500 = 0.40$. 2) $W = 0.40 \\times 2000 = 800$ J. 3) $Q_C = 2000 - 800 = 1200$ J. 4) $e = 1 - 200/500 = 0.60$ — lowering $T_C$ significantly improves efficiency.'
+        explanation: '1) $e = 1 - 300/500 = 0.40$. 2) $W_{net} = 0.40 \\times 2000 = 800$ J. 3) $Q_C = 2000 - 800 = 1200$ J. 4) $e = 1 - 200/500 = 0.60$ — lowering $T_C$ significantly improves efficiency.'
       }
     }
   ]

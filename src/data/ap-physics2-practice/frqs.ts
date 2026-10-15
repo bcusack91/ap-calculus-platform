@@ -74,15 +74,15 @@ An ideal monatomic gas is taken through the cycle A → B → C → A:
       {
         prompt: '**(b)** Calculate the work done BY the gas during the A → B isobaric expansion.',
         rubric: [
-          { id: 'b1', label: '1 pt — Work expression', description: '$W = P\\Delta V$ (the area under the horizontal A → B line).' },
-          { id: 'b2', label: '1 pt — Answer with units', description: '$(2 \\times 10^5)(2 \\times 10^{-3}) = 400$ J.' },
+          { id: 'b1', label: '1 pt — Work expression', description: 'Work by the gas $= P\\Delta V$ (the area under the horizontal A → B line); equivalently, the work done ON the gas is $W = -P\\Delta V$.' },
+          { id: 'b2', label: '1 pt — Answer with units', description: '$(2 \\times 10^5)(2 \\times 10^{-3}) = 400$ J by the gas (so $W = -400$ J on the gas).' },
         ],
       },
       {
         prompt: '**(c)** Calculate the heat absorbed by the gas during the A → B step. (Hint: for isobaric, $Q = nC_P\\Delta T$ and $C_P = \\tfrac{5}{2}R$ for monatomic.)',
         rubric: [
           { id: 'c1', label: '1 pt — Relates $nR\\Delta T$ to $P\\Delta V$', description: 'At constant pressure the ideal gas law gives $nR\\Delta T = P\\Delta V = 400$ J.' },
-          { id: 'c2', label: '1 pt — Heat expression', description: '$Q = \\tfrac{5}{2}nR\\Delta T = \\tfrac{5}{2}P\\Delta V$ (or first law: $\\Delta U = \\tfrac{3}{2}P\\Delta V = 600$ J, plus $W = 400$ J).' },
+          { id: 'c2', label: '1 pt — Heat expression', description: '$Q = \\tfrac{5}{2}nR\\Delta T = \\tfrac{5}{2}P\\Delta V$ (or first law: $\\Delta U = \\tfrac{3}{2}P\\Delta V = 600$ J and $Q = \\Delta U - W$ with $W = -400$ J on the gas).' },
           { id: 'c3', label: '1 pt — Answer with units', description: '$Q_{A \\to B} = 1000$ J.' },
         ],
       },
@@ -90,7 +90,7 @@ An ideal monatomic gas is taken through the cycle A → B → C → A:
         prompt: '**(d)** Determine whether the work done BY the gas during the C → A isothermal compression is positive or negative, and explain.',
         rubric: [
           { id: 'd1', label: '1 pt — Negative', description: 'The work done by the gas during C → A is negative.' },
-          { id: 'd2', label: '1 pt — Volume reasoning', description: 'The gas is compressed ($\\Delta V < 0$), so work is done on the gas rather than by it.' },
+          { id: 'd2', label: '1 pt — Volume reasoning', description: 'The gas is compressed ($\\Delta V < 0$), so work is done on the gas rather than by it ($W$ on the gas is positive).' },
           { id: 'd3', label: '1 pt — Connects to the P-V diagram', description: 'The C → A path runs right to left, so the area under it counts as negative work by the gas.' },
         ],
       },

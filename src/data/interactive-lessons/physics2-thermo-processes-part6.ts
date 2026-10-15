@@ -15,9 +15,9 @@ export const physics2ThermoProcPart6Data = {
 | Equation | When to Use |
 |----------|------------|
 | $PV = nRT$ | Any ideal gas state |
-| $\\Delta U = Q - W$ | First law — always valid |
-| $W = P\\Delta V$ | Work at constant pressure |
-| $W = nRT\\ln(V_f/V_i)$ | Isothermal work |
+| $\\Delta U = Q + W$ | First law — always valid ($W$ = work done ON the gas) |
+| $W = -P\\Delta V$ | Work on the gas at constant pressure |
+| $W = -nRT\\ln(V_f/V_i)$ | Isothermal work on the gas |
 | $\\Delta U = nC_v\\Delta T$ | Internal energy change (any process!) |
 | $Q = nC_p\\Delta T$ | Heat at constant pressure |
 | $Q = nC_v\\Delta T$ | Heat at constant volume |
@@ -28,6 +28,8 @@ export const physics2ThermoProcPart6Data = {
 | $v_{rms} = \\sqrt{3RT/M}$ | Molecular speed |
 | $KE_{avg} = \\frac{3}{2}k_BT$ | Molecular kinetic energy |
 
+> 📝 **Convention note:** Many chemistry and engineering texts use $\\Delta U = Q - W$ with $W$ done BY the gas. The physics is the same; the AP Physics 2 equation sheet uses $W$ done ON the gas.
+
 ---
 
 ### Strategy for Thermo Problems
@@ -37,7 +39,7 @@ export const physics2ThermoProcPart6Data = {
 | 1 | **Identify the process** — isobaric, isochoric, isothermal, adiabatic, or cycle |
 | 2 | **List known quantities** — $P$, $V$, $T$, $n$, $Q$, $W$, $\\Delta U$ |
 | 3 | **Apply the constraint** — what is constant? What is zero? |
-| 4 | **Write the first law** — $\\Delta U = Q - W$ and substitute the constraint |
+| 4 | **Write the first law** — $\\Delta U = Q + W$ and substitute the constraint |
 | 5 | **Check units** — Kelvin for $T$, Pa for $P$, $m^{3}$ for $V$, J for energy |
 | 6 | **Verify with sanity checks** — Does the sign make sense? |
 
@@ -52,10 +54,10 @@ export const physics2ThermoProcPart6Data = {
 | Step | Calculation |
 |------|-------------|
 | Process | Isothermal → $\\Delta T = 0$ → $\\Delta U = 0$ |
-| Work | $W = nRT\\ln(V_f/V_i) = 2(8.314)(400)\\ln(40/10)$ |
-| | $W = 6651 \\times 1.386 = 9220$ J |
-| First law | $Q = \\Delta U + W = 0 + 9220 = 9220$ J |
-| Check | $Q = W > 0$: gas absorbs heat and does positive work ✅ |`
+| Work | $W = -nRT\\ln(V_f/V_i) = -2(8.314)(400)\\ln(40/10)$ |
+| | $W = -6651 \\times 1.386 = -9220$ J (the gas does 9220 J of work) |
+| First law | $Q = \\Delta U - W = 0 - (-9220) = 9220$ J |
+| Check | $Q = -W > 0$: gas absorbs heat and does positive work on its surroundings ✅ |`
     },
     {
       id: 'thermodynamicprocesses-p6-worked',
@@ -71,17 +73,17 @@ export const physics2ThermoProcPart6Data = {
 
 Find the work done, heat absorbed, and efficiency.
 
-| Step | $W$ | $Q$ | $\\Delta U$ |
+| Step | $W$ (on gas) | $Q$ | $\\Delta U$ |
 |------|-----|-----|-----------|
-| A → B | $P\\Delta V = 3 \\times 10^5 \\times 0.02 = 6000$ J | $nC_p\\Delta T > 0$ (calculate $T$'s) | $nC_v\\Delta T > 0$ |
+| A → B | $-P\\Delta V = -3 \\times 10^5 \\times 0.02 = -6000$ J | $nC_p\\Delta T > 0$ (calculate $T$'s) | $nC_v\\Delta T > 0$ |
 | B → C | $0$ (constant $V$) | $nC_v\\Delta T < 0$ (cooling) | $nC_v\\Delta T < 0$ |
-| C → D | $P\\Delta V = 1 \\times 10^5 \\times (-0.02) = -2000$ J | $nC_p\\Delta T < 0$ | $nC_v\\Delta T < 0$ |
+| C → D | $-P\\Delta V = -1 \\times 10^5 \\times (-0.02) = +2000$ J | $nC_p\\Delta T < 0$ | $nC_v\\Delta T < 0$ |
 | D → A | $0$ (constant $V$) | $nC_v\\Delta T > 0$ (heating) | $nC_v\\Delta T > 0$ |
-| **Cycle** | $6000 + 0 - 2000 + 0 = 4000$ J | $Q_{net} = 4000$ J | **0** ✅ |
+| **Cycle** | $-6000 + 0 + 2000 + 0 = -4000$ J | $Q_{net} = -W_{net} = 4000$ J | **0** ✅ |
 
-**Key result:** $W_{net}$ = enclosed area = $(P_H - P_L)(V_R - V_L) = (3-1) \\times 10^5 \\times 0.02 = 4000$ J
+**Key result:** net work done BY the gas = enclosed area = $(P_H - P_L)(V_R - V_L) = (3-1) \\times 10^5 \\times 0.02 = 4000$ J, so the net work done ON the gas is $W_{net} = -4000$ J.
 
-**Efficiency:** $Q_{in}$ = heat absorbed only during A→B and D→A (positive $Q$ steps). Calculate temperatures using $PV = nRT$, then $Q_{AB} = nC_p(T_B - T_A) = 15000$ J. So $e = W/Q_{in} \\approx 4000/15000 = 26.7\\%$.
+**Efficiency:** $Q_{in}$ = heat absorbed only during A→B and D→A (positive $Q$ steps). Calculate temperatures using $PV = nRT$, then $Q_{AB} = nC_p(T_B - T_A) = 15000$ J and $Q_{DA} = nC_v(T_A - T_D) = 3000$ J, so $Q_{in} = 18000$ J. So $e = |W_{net}|/Q_{in} = 4000/18000 \\approx 22.2\\%$.
 
 ---
 
@@ -95,8 +97,8 @@ Find the work done, heat absorbed, and efficiency.
 | | $300 \\times V^{0.4} = T_2 \\times (V/2)^{0.4}$ |
 | | $T_2 = 300 \\times 2^{0.4} = 300 \\times 1.320 = 396$ K |
 | Use $PV^\\gamma = \\text{const}$ | $P_2 = P_1(V_1/V_2)^\\gamma = 1 \\times 2^{1.4} = 2.639$ atm |
-| Work done on gas | $W = -\\Delta U = -nC_v\\Delta T = -1 \\times \\frac{5}{2}R \\times 96 = -1997$ J |
-| | Negative $W$ means work done ON the gas (compression) ✅ |`
+| Work done on gas | $W = \\Delta U = nC_v\\Delta T = 1 \\times \\frac{5}{2}R \\times 96 = 1997$ J |
+| | Positive $W$ means work done ON the gas (compression) ✅ |`
     },
     {
       id: 'thermodynamicprocesses-p6-mcq',
@@ -113,16 +115,16 @@ Find the work done, heat absorbed, and efficiency.
             explanation: 'In adiabatic compression, $V$ decreases and $P$ increases (steeper than isothermal). Isothermal: $P$ increases as $V$ decreases, but we\'re told $P$ increases AND $V$ decreases, which is compression. Adiabatic compression satisfies both conditions.'
           },
           {
-            question: 'An ideal gas completes a clockwise cycle on a PV diagram. Which is true?',
-            options: ['$W_{net} > 0$, $\\Delta U_{cycle} = 0$, $Q_{net} > 0$', '$W_{net} = 0$ for any cycle', '$Q_{net} < 0$ because heat is expelled', '$\\Delta U_{cycle} > 0$'],
+            question: 'An ideal gas completes a clockwise cycle on a PV diagram. Taking $W$ as the work done on the gas, which is true?',
+            options: ['$W_{net} < 0$, $\\Delta U_{cycle} = 0$, $Q_{net} > 0$', '$W_{net} = 0$ for any cycle', '$Q_{net} < 0$ because heat is expelled', '$\\Delta U_{cycle} > 0$'],
             correctAnswer: 0,
-            explanation: 'Clockwise = engine = positive net work. Over a complete cycle, $\\Delta U = 0$ (returns to initial state). First law: $Q_{net} = \\Delta U + W_{net} = W_{net} > 0$.'
+            explanation: 'Clockwise = engine: the gas does positive net work, so the net work done on the gas is negative. Over a complete cycle, $\\Delta U = 0$ (returns to initial state). First law: $Q_{net} = \\Delta U - W_{net} = -W_{net} > 0$.'
           },
           {
             question: 'During which process does the temperature of an ideal gas definitely change?',
             options: ['Adiabatic expansion', 'Isothermal compression', 'Any cyclic process', 'Free expansion'],
             correctAnswer: 0,
-            explanation: 'Adiabatic: $Q = 0$, so $\\Delta U = -W$. During expansion, $W > 0$, so $\\Delta U < 0$ and temperature drops. Isothermal: $\\Delta T = 0$ by definition. Free expansion: $\\Delta T = 0$ for ideal gas.'
+            explanation: 'Adiabatic: $Q = 0$, so $\\Delta U = W$. During expansion, $W < 0$ (the gas does work), so $\\Delta U < 0$ and temperature drops. Isothermal: $\\Delta T = 0$ by definition. Free expansion: $\\Delta T = 0$ for ideal gas.'
           },
           {
             question: 'A monatomic gas is heated from 300 K to 600 K at constant pressure. The ratio $Q/\\Delta U$ is:',
@@ -143,15 +145,15 @@ Find the work done, heat absorbed, and efficiency.
 
 **2)** The same gas (3 mol monatomic) is heated at constant pressure over the same $\\Delta T$. What is $Q$ now? (in J, round to nearest whole number)
 
-**3)** In an isothermal compression, a gas does $-5000$ J of work. How much heat does it release? (in J, positive number)
+**3)** In an isothermal compression, $W = +5000$ J of work is done ON the gas. How much heat does the gas release? (in J, positive number)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['11213', '18688', '5000'],
         hint1: '$Q = nC_v\\Delta T = 3 \\times \\frac{3}{2}(8.314) \\times 300$',
         hint2: '$Q = nC_p\\Delta T = 3 \\times \\frac{5}{2}(8.314) \\times 300$',
-        hint3: 'Isothermal: $\\Delta U = 0$, so $Q = W$',
-        explanation: '1) $Q = 3 \\times 1.5 \\times 8.314 \\times 300 = 11213$ J. 2) $Q = 3 \\times 2.5 \\times 8.314 \\times 300 = 18688$ J. Note the ratio is $5/3 = \\gamma$. 3) Isothermal: $\\Delta U = 0$, so $Q = W = -5000$ J. The gas releases 5000 J of heat.'
+        hint3: 'Isothermal: $\\Delta U = 0$, so $Q = -W$',
+        explanation: '1) $Q = 3 \\times 1.5 \\times 8.314 \\times 300 = 11213$ J. 2) $Q = 3 \\times 2.5 \\times 8.314 \\times 300 = 18688$ J. Note the ratio is $5/3 = \\gamma$. 3) Isothermal: $\\Delta U = 0$, so $Q = -W = -5000$ J. The gas releases 5000 J of heat.'
       }
     }
   ]

@@ -143,7 +143,7 @@ As $T \\to 0$ K, the entropy of a perfect crystal approaches zero ($\\Omega \\to
             question: 'In a free expansion of an ideal gas into a vacuum:',
             options: ['$\\Delta S_{gas} > 0$, $\\Delta S_{surr} = 0$, $\\Delta S_{univ} > 0$', '$\\Delta S_{gas} = 0$ because $Q = 0$', '$\\Delta S_{univ} = 0$ because no heat flows', '$\\Delta S_{gas} < 0$ because work is done'],
             correctAnswer: 0,
-            explanation: 'Free expansion is irreversible. $Q = W = 0$, but $\\Delta S \\neq Q/T$ because the process is irreversible. Using the reversible isothermal path: $\\Delta S = nR\\ln(V_f/V_i) > 0$.'
+            explanation: 'Free expansion is irreversible. $Q = 0$ and $W = 0$, but $\\Delta S \\neq Q/T$ because the process is irreversible. Using the reversible isothermal path: $\\Delta S = nR\\ln(V_f/V_i) > 0$.'
           },
           {
             question: 'The Boltzmann equation $S = k_B \\ln \\Omega$ shows that entropy is fundamentally a measure of:',

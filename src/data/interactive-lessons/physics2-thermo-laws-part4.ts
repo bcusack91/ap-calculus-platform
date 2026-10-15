@@ -22,11 +22,13 @@ Every heat engine operates between two thermal reservoirs:
 
 1. **Hot reservoir** (temperature $T_H$): supplies heat $Q_H$ to the engine
 2. **Cold reservoir** (temperature $T_C$): receives waste heat $Q_C$ from the engine
-3. **Net work output**: $W_{\\text{net}} = Q_H - Q_C$
+3. **Net work output** (work done BY the engine): $W_{\\text{net}} = Q_H - Q_C$
+
+In engine problems, $Q_H$, $Q_C$, and $W_{\\text{net}}$ are all treated as **magnitudes** (positive numbers).
 
 ### Energy Conservation (First Law for a Cycle)
 
-Since $\\Delta U = 0$ for a complete cycle:
+Since $\\Delta U = 0$ for a complete cycle, the first law $\\Delta U = Q + W$ gives $Q_{\\text{net}} = -W$, where $W$ is the net work done ON the gas. For an engine $W$ is negative, and the work the engine delivers is $|W| = W_{\\text{net}}$:
 
 $$Q_H = W_{\\text{net}} + Q_C$$
 
@@ -34,7 +36,7 @@ $$Q_H = W_{\\text{net}} + Q_C$$
 
 The **thermal efficiency** measures what fraction of input heat becomes useful work:
 
-$$e = \\frac{W_{\\text{net}}}{Q_H} = \\frac{Q_H - Q_C}{Q_H} = 1 - \\frac{Q_C}{Q_H}$$
+$$e = \\frac{|W|}{|Q_H|} = \\frac{W_{\\text{net}}}{Q_H} = \\frac{Q_H - Q_C}{Q_H} = 1 - \\frac{Q_C}{Q_H}$$
 
 Efficiency is always between 0 and 1 (or 0% and 100%).
 

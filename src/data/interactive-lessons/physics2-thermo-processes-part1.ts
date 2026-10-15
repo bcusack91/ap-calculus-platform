@@ -14,13 +14,15 @@ export const physics2ThermoProcPart1Data = {
 
 The first law is simply **conservation of energy** applied to thermal systems:
 
-$$\\boxed{\\Delta U = Q - W}$$
+$$\\boxed{\\Delta U = Q + W}$$
 
 | Symbol | Meaning | Positive When |
 |--------|---------|--------------|
 | $\\Delta U$ | Change in internal energy | Temperature rises |
 | $Q$ | Heat transferred | Heat flows INTO system |
-| $W$ | Work done | Gas EXPANDS ($V$ increases) |
+| $W$ | Work done ON the gas ($W = -P\\Delta V$) | Gas is COMPRESSED ($V$ decreases) |
+
+> 📝 **Convention note:** Many chemistry and engineering texts use $\\Delta U = Q - W$ with $W$ done BY the gas. The physics is the same; the AP Physics 2 equation sheet uses $W$ done ON the gas.
 
 ---
 
@@ -28,25 +30,25 @@ $$\\boxed{\\Delta U = Q - W}$$
 
 | Process | What's Constant | PV Diagram Shape | Work | First Law Simplification |
 |---------|----------------|-----------------|------|-------------------------|
-| **Isobaric** | Pressure ($P$) | Horizontal line | $W = P\\Delta V$ | $\\Delta U = Q - P\\Delta V$ |
+| **Isobaric** | Pressure ($P$) | Horizontal line | $W = -P\\Delta V$ | $\\Delta U = Q + W$ |
 | **Isochoric** | Volume ($V$) | Vertical line | $W = 0$ | $\\Delta U = Q$ |
-| **Isothermal** | Temperature ($T$) | Hyperbola ($PV = const$) | $W = nRT\\ln(V_f/V_i)$ | $Q = W$ (since $\\Delta U = 0$) |
-| **Adiabatic** | No heat ($Q = 0$) | Steeper than isothermal | $W = -\\Delta U$ | $\\Delta U = -W$ |
+| **Isothermal** | Temperature ($T$) | Hyperbola ($PV = const$) | $W = -nRT\\ln(V_f/V_i)$ | $Q = -W$ (since $\\Delta U = 0$) |
+| **Adiabatic** | No heat ($Q = 0$) | Steeper than isothermal | $W = \\Delta U$ | $\\Delta U = W$ |
 
 ---
 
 ### Work on PV Diagrams
 
-$$\\boxed{W = \\text{area under the curve on a PV diagram}}$$
+$$\\boxed{|W| = \\text{area under the curve on a PV diagram}}$$
 
-| Direction | Sign of $W$ | Area |
+| Direction | Sign of $W$ (on gas) | Meaning |
 |-----------|------------|------|
-| Expansion (right →) | $W > 0$ | Positive area |
-| Compression (← left) | $W < 0$ | Negative area |
-| Clockwise cycle | Net $W > 0$ | Engine — outputs work |
-| Counterclockwise cycle | Net $W < 0$ | Refrigerator — requires work input |
+| Expansion (right →) | $W < 0$ | Gas does positive work |
+| Compression (← left) | $W > 0$ | Surroundings do work on gas |
+| Clockwise cycle | Net $W < 0$ | Engine — outputs work |
+| Counterclockwise cycle | Net $W > 0$ | Refrigerator — requires work input |
 
-> 🔑 **Key Insight:** For a complete cycle, $\\Delta U = 0$ (returns to same state), so $W_{net} = Q_{net}$. The net work equals the area ENCLOSED by the cycle on the PV diagram.
+> 🔑 **Key Insight:** For a complete cycle, $\\Delta U = 0$ (returns to same state), so $Q_{net} = -W_{net}$: the net heat absorbed equals the net work done BY the gas, which is the area ENCLOSED by the cycle on the PV diagram.
 
 ---
 
@@ -56,18 +58,20 @@ $$\\boxed{W = \\text{area under the curve on a PV diagram}}$$
 |----------|-----|-----|------------|
 | Gas heated at constant volume | $+$ | $0$ | $+$ |
 | Gas expands in vacuum (free expansion) | $0$ | $0$ | $0$ |
-| Adiabatic expansion | $0$ | $+$ | $-$ (cools!) |
-| Adiabatic compression | $0$ | $-$ | $+$ (heats!) |
-| Isothermal expansion | $+$ | $+$ | $0$ |
+| Adiabatic expansion | $0$ | $-$ | $-$ (cools!) |
+| Adiabatic compression | $0$ | $+$ | $+$ (heats!) |
+| Isothermal expansion | $+$ | $-$ | $0$ |
 
-> ⚠️ **AP Trap:** Many students confuse the sign of work. Remember: $W$ is work done BY the gas. Expansion = positive work. Some textbooks define $W$ as work done ON the gas, flipping the sign. AP Physics 2 uses $\\Delta U = Q - W$ (work BY).`
+> ⚠️ **AP Trap:** Many students confuse the sign of work. Remember: on the AP equation sheet $W$ is work done ON the gas. Expansion = negative $W$ (the gas does positive work on its surroundings). If a question asks for the work done BY the gas, that is $-W$.`
     },
     {
       id: 'thermodynamicprocesses-p1-isobaric',
       type: 'text' as const,
       content: `### Isobaric Process in Detail ($P = $ constant)
 
-$$W = P\\Delta V = P(V_f - V_i)$$
+$$W = -P\\Delta V = -P(V_f - V_i)$$
+
+The work done BY the gas is $P\\Delta V$ (positive when it expands).
 
 Since $PV = nRT$: at constant $P$, $V \\propto T$
 
@@ -95,8 +99,8 @@ $$\\frac{P_f}{P_i} = \\frac{T_f}{T_i}$$
 | Vertical line | Isochoric (constant $V$) |
 | Curved line going right | Gas expanding — check if isothermal or adiabatic |
 | Higher isotherm | Higher temperature |
-| Area under curve | Work done in that process |
-| Enclosed area in cycle | Net work output |
+| Area under curve | Magnitude of the work in that process |
+| Enclosed area in cycle | Net work output (work done BY the gas) |
 
 ---
 
@@ -104,7 +108,7 @@ $$\\frac{P_f}{P_i} = \\frac{T_f}{T_i}$$
 
 If a gas expands from the same initial state:
 
-| Process | Final $T$ relative to initial | Work (area) |
+| Process | Final $T$ relative to initial | Work done BY gas (area) |
 |---------|------------------------------|-------------|
 | Isobaric expansion | $T$ increases | Largest work |
 | Isothermal expansion | $T$ unchanged | Medium work |
@@ -124,19 +128,19 @@ If a gas expands from the same initial state:
             question: 'In an isochoric process, the work done by the gas is:',
             options: ['$P\\Delta V$', 'Zero', '$nRT\\ln(V_f/V_i)$', 'Negative'],
             correctAnswer: 1,
-            explanation: 'Isochoric = constant volume. $W = P\\Delta V = 0$ since $\\Delta V = 0$. No expansion means no work.'
+            explanation: 'Isochoric = constant volume. The work done by the gas, $P\\Delta V$, is zero since $\\Delta V = 0$ (and so is $W = -P\\Delta V$). No expansion means no work.'
           },
           {
             question: 'On a PV diagram, a clockwise cycle represents:',
             options: ['A refrigerator', 'A heat engine (net work output)', 'An impossible process', 'Constant temperature'],
             correctAnswer: 1,
-            explanation: 'Clockwise cycle: net positive work ($W_{net} > 0$). The system does more work expanding than is done on it compressing → heat engine.'
+            explanation: 'Clockwise cycle: the gas does net positive work, so the net work done ON the gas is negative ($W_{net} < 0$). The system does more work expanding than is done on it compressing → heat engine.'
           },
           {
             question: 'In an adiabatic expansion, the gas temperature:',
             options: ['Increases', 'Stays the same', 'Decreases', 'Cannot be determined'],
             correctAnswer: 2,
-            explanation: 'Adiabatic: $Q = 0$. Expansion: $W > 0$. First Law: $\\Delta U = 0 - W < 0$ → temperature drops.'
+            explanation: 'Adiabatic: $Q = 0$. Expansion: the work done on the gas is negative, $W < 0$. First Law: $\\Delta U = 0 + W < 0$ → temperature drops.'
           },
           {
             question: 'For a gas expanding from the same initial state, which process produces the MOST work?',
@@ -155,7 +159,7 @@ If a gas expands from the same initial state:
 
 A gas undergoes an isobaric expansion at $P = 2 \\times 10^5$ Pa from $V_i = 0.01$ $m^{3}$ to $V_f = 0.03$ $m^{3}$. $Q = 10000$ J is added.
 
-**1)** Work done by the gas? (in J)
+**1)** Work done ON the gas, $W$? (in J, with sign)
 
 **2)** $\\Delta U$? (in J)
 
@@ -165,12 +169,12 @@ A gas undergoes an isobaric expansion at $P = 2 \\times 10^5$ Pa from $V_i = 0.0
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['4000', '6000', 'increase', '3'],
-        hint1: '$W = P\\Delta V = 2 \\times 10^5 \\times 0.02$',
-        hint2: '$\\Delta U = Q - W = 10000 - 4000$',
+        correctAnswers: ['-4000', '6000', 'increase', '3'],
+        hint1: '$W = -P\\Delta V = -(2 \\times 10^5 \\times 0.02)$; negative because the gas expands',
+        hint2: '$\\Delta U = Q + W = 10000 + (-4000)$',
         hint3: 'Positive $\\Delta U$ means internal energy increased',
         hint4: 'At constant $P$: $T_f/T_i = V_f/V_i = 0.03/0.01$',
-        explanation: '1) $W = 2 \\times 10^5 \\times 0.02 = 4000$ J. 2) $\\Delta U = 10000 - 4000 = 6000$ J. 3) Increase ($\\Delta U > 0$). 4) $T_f/T_i = V_f/V_i = 3$ (temperature triples at constant pressure when volume triples).'
+        explanation: '1) $W = -P\\Delta V = -(2 \\times 10^5 \\times 0.02) = -4000$ J (the gas does 4000 J of work). 2) $\\Delta U = Q + W = 10000 + (-4000) = 6000$ J. 3) Increase ($\\Delta U > 0$). 4) $T_f/T_i = V_f/V_i = 3$ (temperature triples at constant pressure when volume triples).'
       }
     }
   ]

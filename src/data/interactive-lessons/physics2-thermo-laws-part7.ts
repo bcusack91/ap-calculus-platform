@@ -18,23 +18,25 @@ Let's compare all four thermodynamic processes, review PV diagram analysis, and 
       content: `
 ## The Four Processes — Complete Comparison
 
-| Process | Constant | $W$ | $\\Delta U$ | $Q$ | PV Shape |
+All entries use the AP form $\\Delta U = Q + W$, where $W$ is the work done **on** the gas.
+
+| Process | Constant | $W$ (on gas) | $\\Delta U$ | $Q$ | PV Shape |
 |---------|----------|-----|------------|-----|----------|
-| **Isobaric** | $P$ | $P\\Delta V$ | $Q - P\\Delta V$ | $\\Delta U + P\\Delta V$ | Horizontal line |
+| **Isobaric** | $P$ | $-P\\Delta V$ | $Q + W$ | $\\Delta U - W$ | Horizontal line |
 | **Isochoric** | $V$ | $0$ | $Q$ | $\\Delta U$ | Vertical line |
-| **Isothermal** | $T$ | $Q$ | $0$ | $W$ | Hyperbola ($PV = \\text{const}$) |
-| **Adiabatic** | $Q = 0$ | $-\\Delta U$ | $-W$ | $0$ | Steep curve ($PV^\\gamma = \\text{const}$) |
+| **Isothermal** | $T$ | $-Q$ | $0$ | $-W$ | Hyperbola ($PV = \\text{const}$) |
+| **Adiabatic** | $Q = 0$ | $\\Delta U$ | $W$ | $0$ | Steep curve ($PV^\\gamma = \\text{const}$) |
 
 ### Quick Decision Guide
 
 - Temperature doesn't change? → **Isothermal** → $\\Delta U = 0$
 - No heat exchange? → **Adiabatic** → $Q = 0$
 - Volume doesn't change? → **Isochoric** → $W = 0$
-- Pressure doesn't change? → **Isobaric** → $W = P\\Delta V$
+- Pressure doesn't change? → **Isobaric** → $W = -P\\Delta V$
 
 ### Complete Cycle
 
-For any complete cycle: $\\Delta U = 0$, so $Q_{\\text{net}} = W_{\\text{net}} = \\text{enclosed area on PV diagram}$.
+For any complete cycle: $\\Delta U = 0$, so $Q_{\\text{net}} = -W_{\\text{net}}$. The net work done BY the gas (equal to $Q_{\\text{net}}$) is the enclosed area on the PV diagram, positive for a clockwise cycle.
       `
     },
     {
@@ -47,7 +49,7 @@ For any complete cycle: $\\Delta U = 0$, so $Q_{\\text{net}} = W_{\\text{net}} =
 Carnot efficiency requires **Kelvin**: $e = 1 - T_C/T_H$. Always convert: $T(K) = T(°C) + 273$.
 
 ### ❌ Mistake 2: Confusing $W$ sign conventions
-Some textbooks define $W$ as work done BY the gas ($\\Delta U = Q - W$). The AP Physics 2 equation sheet uses $W$ = work done ON the gas ($\\Delta U = Q + W$, with $W = -P\\Delta V$). Check which convention the problem uses!
+Many chemistry and engineering texts use $\\Delta U = Q - W$ with $W$ done BY the gas. The physics is the same; the AP Physics 2 equation sheet uses $W$ done ON the gas ($\\Delta U = Q + W$, with $W = -P\\Delta V$). If a question asks for the work done BY the gas, that quantity is $-W$.
 
 ### ❌ Mistake 3: Thinking $\\Delta U = 0$ means $T$ is constant
 For an **ideal gas**, $\\Delta U = 0 \\Leftrightarrow \\Delta T = 0$ (true). But this is specific to ideal gases.
@@ -59,7 +61,7 @@ Adiabatic ($Q = 0$) means no heat exchange. Isothermal ($\\Delta T = 0$) means c
 Unlike efficiency (always < 1), COP of a refrigerator or heat pump can exceed 1. A COP of 5 does not violate any law.
 
 ### ❌ Mistake 6: Confusing engine efficiency with refrigerator COP
-Engine: $e = W/Q_H < 1$. Fridge: $\\text{COP} = Q_C/W$ (can be > 1). They measure different things.
+Engine: $e = |W|/Q_H < 1$. Fridge: $\\text{COP} = Q_C/|W|$ (can be > 1). They measure different things.
       `
     },
     {
@@ -90,7 +92,7 @@ Engine: $e = W/Q_H < 1$. Fridge: $\\text{COP} = Q_C/W$ (can be > 1). They measur
               'Adiabatic'
             ],
             correctAnswer: 3,
-            explanation: 'Perfectly insulated = no heat exchange = adiabatic ($Q = 0$). The gas does work using its own internal energy, so it cools: $\\Delta U = -W < 0$.'
+            explanation: 'Perfectly insulated = no heat exchange = adiabatic ($Q = 0$). The gas does work using its own internal energy, so the work done on it is negative and it cools: $\\Delta U = W < 0$.'
           }
         ]
       }
@@ -104,7 +106,7 @@ Engine: $e = W/Q_H < 1$. Fridge: $\\text{COP} = Q_C/W$ (can be > 1). They measur
       exercise: {
         questions: [
           {
-            question: 'An ideal gas undergoes a cycle: isobaric expansion (A→B), isochoric cooling (B→C), isobaric compression (C→D), isochoric heating (D→A). The PV diagram forms a rectangle traced clockwise. Which statement is correct?',
+            question: 'An ideal gas undergoes a cycle: isobaric expansion (A→B), isochoric cooling (B→C), isobaric compression (C→D), isochoric heating (D→A). The PV diagram forms a rectangle traced clockwise. Which statement about the net work done BY the gas is correct?',
             options: [
               'Net work is zero because expansion and compression cancel',
               'Net work equals the area of the rectangle and is positive (engine)',
@@ -112,7 +114,7 @@ Engine: $e = W/Q_H < 1$. Fridge: $\\text{COP} = Q_C/W$ (can be > 1). They measur
               'Net work cannot be determined without knowing temperatures'
             ],
             correctAnswer: 1,
-            explanation: 'A clockwise rectangular cycle has net work = enclosed area = $\\Delta P \\times \\Delta V > 0$. This is a heat engine. The expansion occurs at higher pressure than the compression, so expansion work exceeds compression work.'
+            explanation: 'In a clockwise rectangular cycle the net work done by the gas = enclosed area = $\\Delta P \\times \\Delta V > 0$ (so the net work done ON the gas, $W_{\\text{net}}$, is negative). This is a heat engine. The expansion occurs at higher pressure than the compression, so expansion work exceeds compression work.'
           },
           {
             question: 'A Carnot engine operates between a hot reservoir at 127°C and a cold reservoir at 27°C. It absorbs 2000 J per cycle. The work output per cycle is:',
@@ -157,8 +159,8 @@ For each scenario, identify the correct result.
         ],
         correctAnswers: ['Zero', 'Increases', 'Zero', 'Zero'],
         hint1: 'Isothermal means $T$ constant, and for an ideal gas $U$ depends only on $T$.',
-        hint2: 'Adiabatic compression: $Q = 0$, $W < 0$ (by gas), so $\\Delta U = -W > 0$ → temperature rises.',
-        hint3: 'Isochoric = constant volume → $W = P\\Delta V = 0$. Any complete cycle returns to the same state → $\\Delta U = 0$.',
+        hint2: 'Adiabatic compression: $Q = 0$ and $W > 0$ (work is done on the gas), so $\\Delta U = W > 0$ → temperature rises.',
+        hint3: 'Isochoric = constant volume → $W = -P\\Delta V = 0$. Any complete cycle returns to the same state → $\\Delta U = 0$.',
         explanation: 'Isothermal: $\\Delta U = 0$. Adiabatic compression raises $T$. Isochoric: $W = 0$. Any complete cycle: $\\Delta U = 0$ (state variable returns to start).'
       }
     },
@@ -168,7 +170,7 @@ For each scenario, identify the correct result.
       content: `
 **Final Mastery Drill** 🏆
 
-1) A Carnot engine operates between 600 K and 300 K with $Q_H = 1200$ J. Find the work output $W$ (in J).
+1) A Carnot engine operates between 600 K and 300 K with $Q_H = 1200$ J. Find the work output, the work done BY the engine (in J).
 
 2) A refrigerator has COP = 4 and does 150 J of work per cycle. How much heat is removed from the cold reservoir $Q_C$ (in J)?
 

@@ -15,22 +15,24 @@ export const physics2ThermoProcPart7Data = {
 | Equation | Name / Use |
 |----------|-----------|
 | $PV = nRT$ | Ideal gas law |
-| $\\Delta U = Q - W$ | First law of thermodynamics |
-| $W = \\int P\\,dV$ | General work formula |
-| $W = P\\Delta V$ | Isobaric work |
-| $W = nRT\\ln(V_f/V_i)$ | Isothermal work |
+| $\\Delta U = Q + W$ | First law of thermodynamics ($W$ = work done ON the gas) |
+| $W = -\\int P\\,dV$ | General work formula (work on the gas) |
+| $W = -P\\Delta V$ | Isobaric work on the gas |
+| $W = -nRT\\ln(V_f/V_i)$ | Isothermal work on the gas |
 | $\\Delta U = nC_v\\Delta T$ | Internal energy change (**any** process) |
 | $Q = nC_v\\Delta T$ | Heat at constant volume |
 | $Q = nC_p\\Delta T$ | Heat at constant pressure |
 | $C_p = C_v + R$ | Mayer's relation |
 | $PV^\\gamma = \\text{const}$ | Adiabatic constraint |
 | $TV^{\\gamma-1} = \\text{const}$ | Adiabatic $T$-$V$ relation |
-| $e = W/Q_H = 1 - Q_C/Q_H$ | Engine efficiency |
+| $e = |W|/Q_H = 1 - Q_C/Q_H$ | Engine efficiency |
 | $e_{Carnot} = 1 - T_C/T_H$ | Maximum efficiency |
 | $\\Delta S = Q_{rev}/T$ | Entropy change |
 | $KE_{avg} = \\frac{3}{2}k_BT$ | Molecular KE |
 | $v_{rms} = \\sqrt{3RT/M}$ | Root-mean-square speed |
 | $U = \\frac{f}{2}nRT$ | Internal energy ($f$ = degrees of freedom) |
+
+> 📝 **Convention note:** Many chemistry and engineering texts use $\\Delta U = Q - W$ with $W$ done BY the gas. The physics is the same; the AP Physics 2 equation sheet uses $W$ done ON the gas.
 
 ---
 
@@ -39,9 +41,9 @@ export const physics2ThermoProcPart7Data = {
 | Property | Isobaric | Isochoric | Isothermal | Adiabatic |
 |----------|----------|-----------|-----------|-----------|
 | **Constant** | $P$ | $V$ | $T$ | $Q = 0$ |
-| **$W$** | $P\\Delta V$ | $0$ | $nRT\\ln(V_f/V_i)$ | $-\\Delta U$ |
-| **$Q$** | $nC_p\\Delta T$ | $nC_v\\Delta T$ | $W$ | $0$ |
-| **$\\Delta U$** | $Q - W$ | $Q$ | $0$ | $-W$ |
+| **$W$ (on gas)** | $-P\\Delta V$ | $0$ | $-nRT\\ln(V_f/V_i)$ | $\\Delta U$ |
+| **$Q$** | $nC_p\\Delta T$ | $nC_v\\Delta T$ | $-W$ | $0$ |
+| **$\\Delta U$** | $Q + W$ | $Q$ | $0$ | $W$ |
 | **PV curve** | Horizontal line | Vertical line | Hyperbola ($PV = \\text{const}$) | Steep hyperbola ($PV^\\gamma = \\text{const}$) |
 | **$\\Delta T$** | Tracks $V$: $V \\uparrow \\Rightarrow T \\uparrow$ | Tracks $P$: $P \\uparrow \\Rightarrow T \\uparrow$ | $0$ | Expansion → cools; Compression → heats |`
     },
@@ -54,10 +56,10 @@ export const physics2ThermoProcPart7Data = {
 |---------|-----------|
 | Using °C in gas law or Carnot | Always convert to Kelvin |
 | Saying $\\Delta U = 0$ for adiabatic | $\\Delta U = 0$ is for **isothermal**. Adiabatic: $Q = 0$ |
-| Saying $Q = 0$ for isothermal | $Q = 0$ is for **adiabatic**. Isothermal: $\\Delta U = 0$, so $Q = W$ |
+| Saying $Q = 0$ for isothermal | $Q = 0$ is for **adiabatic**. Isothermal: $\\Delta U = 0$, so $Q = -W$ |
 | Using $C_p$ when volume is constant | Constant $V$: use $C_v$. Constant $P$: use $C_p$ |
 | Thinking $\\Delta U = nC_v\\Delta T$ only works at constant $V$ | It works for ANY process of an ideal gas |
-| Forgetting the sign of $W$ | $W > 0$ = gas expands (does work). $W < 0$ = gas compressed (work done on gas) |
+| Forgetting the sign of $W$ | $W$ is work done ON the gas: $W < 0$ = gas expands (does work). $W > 0$ = gas compressed (work done on gas) |
 | Saying real engine efficiency can equal Carnot | Real engines ALWAYS have $e < e_{Carnot}$ |
 | Thinking system entropy can't decrease | System entropy CAN decrease; **universe** entropy never decreases |
 
@@ -88,12 +90,12 @@ export const physics2ThermoProcPart7Data = {
 
 ### Signs At a Glance
 
-| Scenario | $Q$ | $W$ | $\\Delta U$ |
+| Scenario | $Q$ | $W$ (on gas) | $\\Delta U$ |
 |----------|-----|-----|-----------|
-| Gas expands, absorbs heat | $+$ | $+$ | Depends on magnitudes |
-| Gas compressed adiabatically | $0$ | $-$ | $+$ (heats up) |
+| Gas expands, absorbs heat | $+$ | $-$ | Depends on magnitudes |
+| Gas compressed adiabatically | $0$ | $+$ | $+$ (heats up) |
 | Gas cooled at constant volume | $-$ | $0$ | $-$ |
-| Isothermal expansion | $+$ | $+$ | $0$ |
+| Isothermal expansion | $+$ | $-$ | $0$ |
 | Free expansion (into vacuum) | $0$ | $0$ | $0$ |`
     },
     {
@@ -139,17 +141,17 @@ export const physics2ThermoProcPart7Data = {
 
 **1)** A Carnot engine operates between 800 K and 200 K. What is its efficiency? (as percent, no % sign)
 
-**2)** 1 mol of monatomic gas at 300 K expands isothermally to triple its volume. What is $W$? (in J, round to nearest whole number)
+**2)** 1 mol of monatomic gas at 300 K expands isothermally to triple its volume. What is $W$, the work done ON the gas? (in J, with sign, round to nearest whole number)
 
 **3)** If 2 mol of diatomic gas is heated at constant pressure from 300 K to 500 K, what is $\\Delta U$? (in J, round to nearest whole number)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['75', '2741', '8314'],
+        correctAnswers: ['75', '-2741', '8314'],
         hint1: '$e = 1 - T_C/T_H = 1 - 200/800$',
-        hint2: '$W = nRT\\ln(V_f/V_i) = 1 \\times 8.314 \\times 300 \\times \\ln(3)$',
+        hint2: '$W = -nRT\\ln(V_f/V_i) = -(1 \\times 8.314 \\times 300 \\times \\ln(3))$; negative because the gas expands',
         hint3: '$\\Delta U = nC_v\\Delta T = 2 \\times \\frac{5}{2}(8.314) \\times 200$ (use $C_v$ even though constant $P$!)',
-        explanation: '1) $e = 1 - 200/800 = 0.75 = 75\\%$. 2) $W = 8.314 \\times 300 \\times 1.0986 = 2741$ J. 3) $\\Delta U = nC_v\\Delta T = 2 \\times 2.5 \\times 8.314 \\times 200 = 8314$ J. Remember: $\\Delta U = nC_v\\Delta T$ for ANY process!'
+        explanation: '1) $e = 1 - 200/800 = 0.75 = 75\\%$. 2) $W = -(8.314 \\times 300 \\times 1.0986) = -2741$ J (the gas does 2741 J of work). 3) $\\Delta U = nC_v\\Delta T = 2 \\times 2.5 \\times 8.314 \\times 200 = 8314$ J. Remember: $\\Delta U = nC_v\\Delta T$ for ANY process!'
       }
     }
   ]

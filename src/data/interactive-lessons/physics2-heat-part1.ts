@@ -59,7 +59,7 @@ In physics, we define:
 - $Q > 0$: energy flows **into** the system (system gains energy)
 - $Q < 0$: energy flows **out of** the system (system loses energy)
 
-This sign convention is consistent with the first law of thermodynamics: $\\Delta U = Q - W$.
+This sign convention is consistent with the first law of thermodynamics as written on the AP Physics 2 equation sheet: $\\Delta U = Q + W$, where $W$ is the work done **on** the system. (Many chemistry and engineering texts use $\\Delta U = Q - W$ with $W$ done BY the gas. The physics is the same; the AP Physics 2 equation sheet uses $W$ done ON the gas.)
       `
     },
     {
