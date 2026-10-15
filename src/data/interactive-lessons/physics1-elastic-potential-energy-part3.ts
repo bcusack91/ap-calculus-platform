@@ -111,10 +111,10 @@ This is the area of the trapezoid between $x_1$ and $x_2$ on the $F$-$x$ graph.
               '$\\frac{1}{2}k(0.2)^2$',
               '$\\frac{1}{2}k(0.1)^2$',
               '$\\frac{1}{2}k[(0.2)^2 - (0.1)^2]$',
-              '$k(0.2 - 0.1)$'
+              '$k[(0.2)^2 - (0.1)^2]$'
             ],
             correctAnswer: 2,
-            explanation: '$W = \\Delta PE_s = \\frac{1}{2}kx_f^2 - \\frac{1}{2}kx_i^2 = \\frac{1}{2}k[(0.2)^2 - (0.1)^2]$. You must account for the initial PE!'
+            explanation: '$W = \\Delta PE_s = \\frac{1}{2}kx_f^2 - \\frac{1}{2}kx_i^2 = \\frac{1}{2}k[(0.2)^2 - (0.1)^2]$. You must account for the initial PE, and keep the $\\frac{1}{2}$.'
           },
           {
             question: 'Over a complete cycle (stretch and release back to equilibrium), the total work done by the spring is:',
@@ -171,13 +171,13 @@ Spring constant $k = 400$ N/m for all problems.
           },
           {
             label: 'A spring is compressed and launches a ball. The spring\'s PE becomes the ball\'s:',
-            options: ['PE', 'KE', 'Thermal energy', 'Momentum'],
+            options: ['Gravitational PE', 'KE', 'Thermal energy', 'Momentum'],
             correctIndex: 1,
             explanation: 'Spring PE converts to kinetic energy of the ball: $\\frac{1}{2}kx^2 = \\frac{1}{2}mv^2$.'
           },
           {
             label: 'The spring force is conservative, which means:',
-            options: ['It always does positive work', 'Its work is path-independent', 'It has no PE', 'It never loses energy'],
+            options: ['It always does positive work on objects', 'Its work is path-independent', 'It cannot store potential energy', 'It never loses any of its energy'],
             correctIndex: 1,
             explanation: 'Conservative means work depends only on initial and final positions. This allows us to define elastic PE.'
           },
@@ -207,18 +207,18 @@ Spring constant $k = 400$ N/m for all problems.
               '6.75 J'
             ],
             correctAnswer: 2,
-            explanation: '$W = \\frac{1}{2}k(x_f^2 - x_i^2) = \\frac{1}{2}(600)(0.0225 - 0.0025) = 300(0.02) = 6.0$ J.'
+            explanation: '$W = \\frac{1}{2}k(x_f^2 - x_i^2) = \\frac{1}{2}(600)(0.0225 - 0.0025) = 300(0.02) = 6.0$ J. Using only $x_i$ gives 0.75 J, squaring the change $(0.10)^2$ gives 3.0 J, and ignoring the initial stretch gives 6.75 J.'
           },
           {
             question: 'A compressed spring ($k = 800$ N/m, $x = 0.1$ m) launches a 0.2 kg block on a frictionless surface. The block\'s speed is:',
             options: [
-              '2 m/s',
-              '$\\sqrt{20}$ ≈ 4.5 m/s',
-              '$\\sqrt{40}$ ≈ 6.3 m/s',
-              '10 m/s'
+              '2.0 m/s',
+              '4.5 m/s',
+              '6.3 m/s',
+              '8.9 m/s'
             ],
             correctAnswer: 2,
-            explanation: '$\\frac{1}{2}kx^2 = \\frac{1}{2}mv^2$. $\\frac{1}{2}(800)(0.01) = \\frac{1}{2}(0.2)v^2$. $4 = 0.1v^2$. $v^2 = 40$. $v = \\sqrt{40} \\approx 6.3$ m/s.'
+            explanation: '$\\frac{1}{2}kx^2 = \\frac{1}{2}mv^2$. $\\frac{1}{2}(800)(0.01) = \\frac{1}{2}(0.2)v^2$. $4 = 0.1v^2$. $v^2 = 40$. $v = \\sqrt{40} \\approx 6.3$ m/s. Dropping the $\\frac{1}{2}$ on the KE side gives $\\sqrt{20} \\approx 4.5$ m/s, dropping it on the spring side gives $\\sqrt{80} \\approx 8.9$ m/s, and setting the 4 J equal to $v^2$ gives 2.0 m/s.'
           }
         ]
       }

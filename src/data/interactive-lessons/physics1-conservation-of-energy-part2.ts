@@ -63,7 +63,7 @@ $$E_{\\text{thermal}} = f_k d = \\mu_k mg d$$
               'The same speed',
               'Greater speed',
               'Less speed',
-              'Zero speed'
+              'Zero speed, since friction stops it'
             ],
             correctAnswer: 2,
             explanation: 'Friction removes mechanical energy, so less KE is available at the bottom → lower speed.'
@@ -72,9 +72,9 @@ $$E_{\\text{thermal}} = f_k d = \\mu_k mg d$$
             question: 'A student pushes a box at constant speed across a rough floor. The work done by the student:',
             options: [
               'Increases the KE of the box',
-              'Is stored as PE',
-              'All becomes thermal energy',
-              'Disappears'
+              'Is stored as gravitational PE',
+              'Is converted entirely to thermal energy',
+              'Is cancelled by the normal force'
             ],
             correctAnswer: 2,
             explanation: 'At constant speed, $\\Delta KE = 0$ and $\\Delta PE = 0$. The applied work exactly equals the friction work: $W_{\\text{app}} = f_k d$. All the energy goes to heat.'
@@ -140,8 +140,7 @@ Use $g = 10$ $m/s^{2}$.
 3) A 2 kg ball is thrown upward at 10 m/s. If air resistance does $-8$ J of work, what maximum height does it reach (in m)?
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['8.9', '4.5', '4.6'],
+        questions: [{ question: '1)', answer: '8.9', acceptableAnswers: ['8.9', '8.94'] }, { question: '2)', answer: '4.5', acceptableAnswers: ['4.5', '4.47'] }, { question: '3)', answer: '4.6', acceptableAnswers: ['4.6'] }],
         hint1: '$mgh = \\frac{1}{2}mv^2 + \\mu_k mgd$. Solve for $v$.',
         hint2: '$W_{\\text{app}} - f_k d = \\frac{1}{2}mv^2$. Find $f_k = \\mu_k mg$.',
         hint3: '$\\frac{1}{2}mv^2 + W_{\\text{air}} = mgh$. Solve for $h$.',
@@ -196,17 +195,17 @@ Use $g = 10$ $m/s^{2}$.
             options: [
               '$\\sqrt{60}$ m/s',
               '$\\sqrt{100}$ m/s',
-              '$6\\sqrt{2}$ m/s',
+              '$\\sqrt{140}$ m/s',
               '$\\sqrt{20}$ m/s'
             ],
             correctAnswer: 0,
-            explanation: '$mgh = \\frac{1}{2}mv^2 + \\mu_k mgd$. $v^2 = 2g(h - \\mu_k d) = 2(10)(5 - 2) = 60$. $v = \\sqrt{60}$ m/s.'
+            explanation: '$mgh = \\frac{1}{2}mv^2 + \\mu_k mgd$. $v^2 = 2g(h - \\mu_k d) = 2(10)(5 - 2) = 60$. $v = \\sqrt{60}$ m/s. Ignoring the rough floor gives $\\sqrt{100}$, adding the friction term instead of subtracting it gives $\\sqrt{140}$, and subtracting $d$ instead of $\\mu_k d$ gives $\\sqrt{20}$.'
           },
           {
             question: 'The total mechanical energy of an isolated system always:',
             options: [
-              'Increases over time',
-              'Decreases over time',
+              'Decreases over time due to friction',
+              'Increases as gravity does work on it',
               'Stays constant if only conservative forces do work',
               'Stays constant regardless of forces'
             ],

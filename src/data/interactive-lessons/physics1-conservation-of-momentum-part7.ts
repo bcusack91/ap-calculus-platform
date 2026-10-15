@@ -47,8 +47,8 @@ Let\'s synthesize everything about conservation of momentum: isolated systems, 1
           {
             question: 'Two ice skaters of different masses push off each other from rest. Which quantity is the same for both skaters?',
             options: [
-              'Speed',
-              'Kinetic energy',
+              'Speed just after the push',
+              'Kinetic energy after the push',
               'Magnitude of momentum',
               'Acceleration during the push'
             ],
@@ -69,7 +69,7 @@ Let\'s synthesize everything about conservation of momentum: isolated systems, 1
           {
             question: 'In a perfectly inelastic collision, what is maximized?',
             options: [
-              'Final kinetic energy',
+              'Final energy',
               'Kinetic energy loss',
               'Final momentum',
               'Final speed'
@@ -91,13 +91,13 @@ Let\'s synthesize everything about conservation of momentum: isolated systems, 1
           {
             question: 'A 4 kg object moving at 6 m/s overtakes and collides with a 2 kg object moving at 2 m/s in the same direction. They stick together. What fraction of the kinetic energy is lost?',
             options: [
-              '1/9',
-              '2/9',
               '1/3',
-              '4/9'
+              '8/57',
+              '16/57',
+              '49/57'
             ],
             correctAnswer: 1,
-            explanation: '$p_i = (4)(6) + (2)(2) = 28$ kg·m/s. $v_f = 28/6 \\approx 4.67$ m/s. $KE_i = \\frac{1}{2}(4)(36) + \\frac{1}{2}(2)(4) = 76$ J. $KE_f = \\frac{1}{2}(6)(4.67)^2 \\approx 65.3$ J. Lost = $76 - 65.3 = 10.7$ J. Fraction = $10.7/76$. Exact: $v_f = 14/3$. $KE_f = \\frac{1}{2}(6)(14/3)^2 = 3(196/9) = 196/3 \\approx 65.3$. Lost = $76 - 196/3 = (228-196)/3 = 32/3$. Fraction = $(32/3)/76 = 32/228 = 8/57$. Hmm, let me recalculate: $(4)(6)+(2)(2)=28$, $v_f = 28/6 = 14/3$. $KE_i = 72+4=76$. $KE_f = (1/2)(6)(14/3)^2 = 3 \\times 196/9 = 196/3$. Lost = $76 - 196/3 = (228-196)/3 = 32/3$. Fraction = $(32/3)/76 = 32/228 = 8/57$. This is approximately $2/9 \\approx 0.222$ vs $8/57 \\approx 0.140$. Let me recheck: the fraction lost is $2/9$ using the reduced mass formula: $\\Delta KE = \\frac{1}{2}\\frac{m_1 m_2}{m_1+m_2}(v_1 - v_2)^2 = \\frac{1}{2}\\frac{(4)(2)}{6}(4)^2 = \\frac{1}{2}(4/3)(16) = 32/3$. $32/3 \\div 76 = 32/228 \\approx 0.14$. Closest answer is $1/9 \\approx 0.11$. Actually this problem should be reconsidered.'
+            explanation: 'Momentum: $p_i = (4)(6) + (2)(2) = 28$ kg·m/s, so $v_f = 28/6 = 14/3 \\approx 4.67$ m/s. $KE_i = \\frac{1}{2}(4)(36) + \\frac{1}{2}(2)(4) = 72 + 4 = 76$ J. $KE_f = \\frac{1}{2}(6)(14/3)^2 = 196/3 \\approx 65.3$ J. Lost $= 76 - 196/3 = 32/3 \\approx 10.7$ J, so the fraction lost is $(32/3)/76 = 8/57 \\approx 0.14$. The fraction kept is $49/57$; forgetting the $\\frac{1}{2}$ in the loss gives $16/57$; and $1/3$ is the rule $m_2/(m_1+m_2)$, which only applies when the second object starts at rest.'
           },
           {
             question: 'A 10 g bullet passes through a 2 kg block at rest, emerging at 100 m/s. The block moves at 5 m/s after. What was the bullet\'s initial speed?',
@@ -146,7 +146,7 @@ Let\'s synthesize everything about conservation of momentum: isolated systems, 1
         dropdowns: [
           {
             label: 'Momentum is conserved:',
-            options: ['always', 'only in elastic collisions', 'only when no net external force acts', 'never'],
+            options: ['always, even when outside forces act on it', 'only in elastic collisions, where no KE is lost', 'only when no net external force acts', 'never, since some momentum turns into heat'],
             correctIndex: 2,
             explanation: 'Momentum is conserved when there is no net external force on the system. This applies to both elastic and inelastic collisions.'
           },
@@ -158,7 +158,7 @@ Let\'s synthesize everything about conservation of momentum: isolated systems, 1
           },
           {
             label: 'Maximum kinetic energy loss occurs in a:',
-            options: ['elastic collision', 'perfectly inelastic collision', 'recoil', 'any collision'],
+            options: ['elastic collision', 'perfectly inelastic collision', 'inelastic collision', 'superelastic collision'],
             correctIndex: 1,
             explanation: 'Maximum kinetic energy loss occurs in a perfectly inelastic collision (objects stick together). An elastic collision loses NO kinetic energy.'
           }

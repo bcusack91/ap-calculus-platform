@@ -107,7 +107,7 @@ When an object falls ($\\Delta PE_g < 0$), gravity does positive work. When an o
           {
             question: 'A ball is held 5 m above the ground. If we change the reference level from the ground to a point 2 m above the ground, the ball\'s PE:',
             options: [
-              'Increases',
+              'Becomes larger',
               'Decreases',
               'Stays the same',
               'Becomes negative'
@@ -179,13 +179,13 @@ Use $g = 10$ $m/s^{2}$.
           },
           {
             label: 'Changing the reference level changes:',
-            options: ['The value of PE at each point', 'The change in PE between two points', 'Both', 'Neither'],
+            options: ['The value of PE at each point', 'The change in PE between two points', 'Both the PE values and the PE change', 'Neither the PE values nor the PE change'],
             correctIndex: 0,
             explanation: 'Changing the reference level changes the PE value at each point, but the CHANGE in PE ($\\Delta PE$) between two points stays the same.'
           },
           {
             label: 'For a problem involving a ball thrown upward and caught at the same height, the best reference level is:',
-            options: ['The top of the throw', 'The launch/catch height', 'The ground', 'It doesn\'t matter'],
+            options: ['The top of the throw', 'The launch/catch height', 'The ground below the thrower', 'It doesn\'t matter'],
             correctIndex: 3,
             explanation: 'Any reference level works! The launch/catch height is convenient ($h_i = h_f = 0$), but all give the same physical results.'
           },

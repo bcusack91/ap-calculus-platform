@@ -106,7 +106,7 @@ Ball A (2 kg) moves at 4 m/s in the $+x$ direction. Ball B (3 kg) moves at 3 m/s
               'Only in the direction of initial motion',
               'Only in the x-direction',
               'Independently in both x and y directions',
-              'Only if kinetic energy is also conserved'
+              'Only if kinetic energy is conserved'
             ],
             correctAnswer: 2,
             explanation: 'Momentum conservation is a vector equation. It applies independently in each direction: $p_{ix} = p_{fx}$ AND $p_{iy} = p_{fy}$.'
@@ -125,13 +125,13 @@ Ball A (2 kg) moves at 4 m/s in the $+x$ direction. Ball B (3 kg) moves at 3 m/s
           {
             question: 'Object A (4 kg) at 3 m/s in +x collides with Object B (4 kg) at 3 m/s in +y. They stick together. The final speed is:',
             options: [
-              '3 m/s',
-              '1.5 m/s',
+              '3.00 m/s',
+              '1.50 m/s',
               '2.12 m/s',
-              '6 m/s'
+              '4.24 m/s'
             ],
             correctAnswer: 2,
-            explanation: 'x: $(4)(3) = 8v_{fx}$, $v_{fx} = 1.5$ m/s. y: $(4)(3) = 8v_{fy}$, $v_{fy} = 1.5$ m/s. Speed = $\\sqrt{1.5^2 + 1.5^2} = 1.5\\sqrt{2} \\approx 2.12$ m/s.'
+            explanation: 'x: $(4)(3) = 8v_{fx}$, $v_{fx} = 1.5$ m/s. y: $(4)(3) = 8v_{fy}$, $v_{fy} = 1.5$ m/s. Speed = $\\sqrt{1.5^2 + 1.5^2} = 1.5\\sqrt{2} \\approx 2.12$ m/s. Using 4 kg instead of the combined 8 kg gives 4.24 m/s, and reporting only one component gives 1.50 m/s.'
           }
         ]
       }
@@ -149,12 +149,11 @@ Ball A (2 kg) moves at 4 m/s in the $+x$ direction. Ball B (3 kg) moves at 3 m/s
 3) A 3 kg object at 4 m/s ($+x$) and a 1 kg object at 8 m/s ($+y$) collide and stick. What is the final speed? (in m/s, to 3 significant figures)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['3', '3', '3.6'],
+        questions: [{ question: '1) x-component of final velocity (m/s)', answer: '3', acceptableAnswers: ['3', '3.0'] }, { question: '2) Final speed (m/s)', answer: '3', acceptableAnswers: ['3', '3.0'] }, { question: '3) Final speed (m/s)', answer: '3.61', acceptableAnswers: ['3.61', '3.6', '3.606'] }],
         hint1: '$(5)(6) = (10)v_{fx}$',
         hint2: 'Since there is no y-momentum, $v_{fy} = 0$. Speed = $v_{fx}$.',
         hint3: 'x: $(3)(4) = 4v_{fx}$, $v_{fx} = 3$. y: $(1)(8) = 4v_{fy}$, $v_{fy} = 2$. Speed = $\\sqrt{9 + 4}$.',
-        explanation: '1) $v_{fx} = 30/10 = 3$ m/s. 2) No initial $y$-momentum, so $v_{fy} = 0$. Speed = 3 m/s. 3) $v_{fx} = 12/4 = 3$ m/s, $v_{fy} = 8/4 = 2$ m/s. Speed $= \\sqrt{9+4} = \\sqrt{13} \\approx 3.6$ m/s.'
+        explanation: '1) $v_{fx} = 30/10 = 3$ m/s. 2) No initial $y$-momentum, so $v_{fy} = 0$. Speed = 3 m/s. 3) $v_{fx} = 12/4 = 3$ m/s, $v_{fy} = 8/4 = 2$ m/s. Speed $= \\sqrt{9+4} = \\sqrt{13} \\approx 3.61$ m/s.'
       }
     },
     {
@@ -167,21 +166,21 @@ Ball A (2 kg) moves at 4 m/s in the $+x$ direction. Ball B (3 kg) moves at 3 m/s
         dropdowns: [
           {
             label: 'In 2D, momentum conservation provides:',
-            options: ['one equation', 'two independent equations', 'three equations', 'no equations'],
+            options: ['one equation', 'two independent equations', 'three equations', 'four equations'],
             correctIndex: 1,
             explanation: 'In 2D, momentum conservation gives two independent equations: one for the x-component and one for the y-component.'
           },
           {
             label: 'To handle momentum in 2D, you should:',
-            options: ['add the speeds', 'add the velocity vectors', 'multiply by total mass', 'use components'],
+            options: ['add the speeds of the objects', 'add the velocity vectors, ignoring mass', 'multiply total mass by total speed', 'use x and y components'],
             correctIndex: 3,
             explanation: 'To handle 2D momentum, break velocities into x and y components, then apply conservation in each direction independently.'
           },
           {
             label: 'If the initial total y-momentum is zero, the final total y-momentum is:',
-            options: ['zero', 'conserved', 'not conserved', 'doubled'],
+            options: ['equal to the final x-momentum', 'still zero', 'nonzero, since the pieces move apart vertically', 'the sum of the pieces\' y-speeds'],
             correctIndex: 1,
-            explanation: 'Total y-momentum is conserved. If it starts at zero, the y-momenta of the pieces after collision must sum to zero.'
+            explanation: 'Total y-momentum is conserved. If it starts at zero, it is still zero afterward: the y-momenta of the pieces after the collision must cancel, even though the pieces themselves move up and down.'
           }
         ]
       }
@@ -195,15 +194,15 @@ Ball A (2 kg) moves at 4 m/s in the $+x$ direction. Ball B (3 kg) moves at 3 m/s
       exercise: {
         questions: [
           {
-            question: 'Two objects of equal mass collide. Object 1 was moving in the +x direction; Object 2 was at rest. After collision, Object 1 moves at 45° above the x-axis. At what angle does Object 2 move?',
+            question: 'Two objects of equal mass collide elastically. Object 1 was moving in the +x direction; Object 2 was at rest. After collision, Object 1 moves at 45° above the x-axis. At what angle does Object 2 move?',
             options: [
-              '45° above the x-axis',
-              '90° from Object 1 (for elastic collision only)',
+              '45° above the x-axis, alongside Object 1',
+              '90° below the x-axis (straight down)',
               '45° below the x-axis',
-              'Straight along the x-axis'
+              'Straight along the +x direction'
             ],
             correctAnswer: 2,
-            explanation: 'The total $y$-momentum was zero. If Object 1 gains positive $y$-momentum, Object 2 must gain equal negative $y$-momentum. Object 2 moves below the x-axis at some angle. (For an elastic collision of equal masses, the angle between them is exactly 90°.)'
+            explanation: 'The total $y$-momentum was zero, so if Object 1 gains positive $y$-momentum, Object 2 must gain equal negative $y$-momentum and move below the x-axis. For an elastic collision of equal masses with the target at rest, the two outgoing velocities are 90° apart, so Object 2 moves at $90° - 45° = 45°$ below the x-axis.'
           },
           {
             question: 'A firework at rest explodes into 3 equal pieces. Two pieces fly off at 90° to each other at equal speeds $v$. The third piece moves at speed:',
@@ -211,7 +210,7 @@ Ball A (2 kg) moves at 4 m/s in the $+x$ direction. Ball B (3 kg) moves at 3 m/s
               '$v$',
               '$v\\sqrt{2}$',
               '$2v$',
-              '$v/2$'
+              '$v/\\sqrt{2}$'
             ],
             correctAnswer: 1,
             explanation: 'Let the two pieces move in +x and +y with momentum $mv$ each. The third piece must have $p_x = -mv$ and $p_y = -mv$. Its speed = $\\sqrt{v^2 + v^2} = v\\sqrt{2}$.'

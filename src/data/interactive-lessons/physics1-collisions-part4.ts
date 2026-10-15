@@ -105,7 +105,7 @@ $$v_{2f} = \\frac{2(6)}{6 + 2}(4) = \\frac{12}{8}(4) = 6 \\text{ m/s}$$
               'The relative speed of separation',
               'Twice the relative speed of separation',
               'Half the relative speed of separation',
-              'Zero'
+              'The final speed of the faster object'
             ],
             correctAnswer: 0,
             explanation: 'For elastic collisions: $|v_{1i} - v_{2i}| = |v_{1f} - v_{2f}|$. The relative speed of approach equals the relative speed of separation. This is equivalent to $e = 1$.'
@@ -168,13 +168,13 @@ Use the elastic collision formulas with $v_{2i} = 0$:
         dropdowns: [
           {
             label: 'When two equal masses collide elastically, they:',
-            options: ['swap velocities', 'both stop', 'both continue at half speed', 'the heavier one stops'],
+            options: ['swap velocities', 'both stop at the point of contact', 'both continue at half speed', 'share the momentum equally'],
             correctIndex: 0,
             explanation: 'When equal masses collide elastically, they swap velocities. This follows directly from the formulas with $m_1 = m_2$.'
           },
           {
             label: 'When a light object hits a much heavier stationary object elastically, the light object:',
-            options: ['speeds up', 'slows down slightly', 'stops', 'bounces back'],
+            options: ['continues forward at a reduced speed', 'slows down slightly but keeps going', 'stops dead, giving all its KE away', 'bounces back with nearly the same speed'],
             correctIndex: 3,
             explanation: 'When a light object hits a heavy stationary one elastically, $v_{1f} = \\frac{m_1-m_2}{m_1+m_2}v_{1i} < 0$ (since $m_1 < m_2$). The light object bounces back.'
           },

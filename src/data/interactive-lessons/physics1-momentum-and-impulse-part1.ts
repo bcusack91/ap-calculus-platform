@@ -111,10 +111,10 @@ This means doubling velocity:
           {
             question: 'A truck has 100 times the mass of a bicycle. If both have the same momentum, how do their speeds compare?',
             options: [
-              'The truck moves 100 times faster',
+              'The truck moves 100 times faster than the bicycle',
               'The bicycle moves 100 times faster',
-              'They move at the same speed',
-              'The truck moves 10 times faster'
+              'They move at the same speed, since momentum is equal',
+              'The bicycle moves 10 times faster (square root of 100)'
             ],
             correctAnswer: 1,
             explanation: 'If $m_{\\text{truck}} v_{\\text{truck}} = m_{\\text{bike}} v_{\\text{bike}}$ and $m_{\\text{truck}} = 100 m_{\\text{bike}}$, then $v_{\\text{bike}} = 100 v_{\\text{truck}}$. The bicycle must move 100 times faster to have the same momentum.'
@@ -122,13 +122,13 @@ This means doubling velocity:
           {
             question: 'Two objects have the same kinetic energy. Object A has twice the mass of Object B. What is the ratio $p_A / p_B$?',
             options: [
-              '1',
+              '$1$',
               '$\\sqrt{2}$',
-              '2',
-              '4'
+              '$2$',
+              '$1/\\sqrt{2}$'
             ],
             correctAnswer: 1,
-            explanation: 'From $KE = p^2/(2m)$: if $KE_A = KE_B$, then $p_A^2/(2m_A) = p_B^2/(2m_B)$. With $m_A = 2m_B$: $p_A^2 = 2p_B^2 \\cdot 2 = 4p_B^2 \\cdot (m_A/m_B)$... Actually, $p_A^2/(2 \\cdot 2m_B) = p_B^2/(2m_B)$, so $p_A^2 = 2p_B^2$, giving $p_A/p_B = \\sqrt{2}$.'
+            explanation: 'Since $KE = p^2/(2m)$, momentum is $p = \\sqrt{2m \\cdot KE}$. With equal kinetic energies, $p \\propto \\sqrt{m}$, so $p_A/p_B = \\sqrt{m_A/m_B} = \\sqrt{2}$. A ratio of 2 would require equal speeds, but the heavier object moves slower when the kinetic energies are equal.'
           },
           {
             question: 'Object A (3 kg) moves at +4 m/s and Object B (2 kg) moves at −6 m/s. What is the total momentum of the system?',

@@ -82,12 +82,11 @@ Use $g = 10$ $m/s^{2}$.
 3) A spring ($k = 1200$ N/m) compressed $0.20$ m launches a 0.5 kg block along a rough horizontal surface ($\\mu_k = 0.3$). How far does the block slide before stopping (in m)?
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['1.79', '2.25', '16'],
+        questions: [{ question: '1)', answer: '1.86', acceptableAnswers: ['1.86', '1.857'] }, { question: '2)', answer: '2.25', acceptableAnswers: ['2.25'] }, { question: '3)', answer: '16', acceptableAnswers: ['16'] }],
         hint1: '$\\frac{1}{2}kx^2 = mgd\\sin\\theta + \\mu_k mg\\cos\\theta \\cdot d$. Factor out $d$ and solve.',
         hint2: '$\\frac{1}{2}kx^2 = mgh \\Rightarrow h = kx^2/(2mg)$.',
         hint3: '$\\frac{1}{2}kx^2 = \\mu_k mg d \\Rightarrow d = kx^2/(2\\mu_k mg)$.',
-        explanation: '1) $50 = d(2)(10)(0.5) + d(0.2)(2)(10)(0.866) = 10d + 3.46d \\cdot 2 = 10d + 6.93d \\cdot ... $ Actually: $50 = d[mg\\sin30° + \\mu_k mg\\cos30°] = d[20(0.5) + 0.2(20)(0.866)] = d[10 + 3.46] = 13.46d \\Rightarrow d \\approx 3.71$ — wait, let me recalculate. $\\frac{1}{2}(800)(0.0625) = 25$. $d = 25/[2(10)(0.5) + 0.2(2)(10)(0.866)] = 25/[10 + 3.46] = 25/13.46 \\approx 1.86$ m. Correcting: $25/(10+3.464) = 25/13.464 = 1.86$ m. 2) $h = 500(0.09)/(2 \\times 1 \\times 10) = 45/20 = 2.25$ m. 3) $d = 1200(0.04)/(2 \\times 0.3 \\times 0.5 \\times 10) = 48/3 = 16$ m.'
+        explanation: '1) Spring energy: $\\frac{1}{2}(800)(0.25)^2 = 25$ J. On the way up the ramp it becomes gravitational PE plus friction work: $25 = d[mg\\sin30° + \\mu_k mg\\cos30°] = d[20(0.5) + 0.2(20)(0.866)] = d[10 + 3.464] = 13.464d$, so $d = 25/13.464 \\approx 1.86$ m. 2) $h = 500(0.09)/(2 \\times 1 \\times 10) = 45/20 = 2.25$ m. 3) $d = 1200(0.04)/(2 \\times 0.3 \\times 0.5 \\times 10) = 48/3 = 16$ m.'
       }
     },
     {
@@ -137,13 +136,13 @@ Note: friction acts over 3 m **plus** the compression distance $x$! This gives a
           {
             question: 'A 2 kg block at rest on a horizontal surface is pushed against a spring ($k = 500$ N/m, compressed 0.4 m). When released, what is the block\'s speed when it leaves the spring? (No friction)',
             options: [
-              '2 m/s',
-              '4 m/s',
+              '4.5 m/s',
+              '8.9 m/s',
               '6.3 m/s',
-              '8 m/s'
+              '10.0 m/s'
             ],
             correctAnswer: 2,
-            explanation: '$\\frac{1}{2}kx^2 = \\frac{1}{2}mv^2 \\Rightarrow v = x\\sqrt{k/m} = 0.4\\sqrt{500/2} = 0.4\\sqrt{250} = 0.4(15.81) \\approx 6.3$ m/s.'
+            explanation: '$\\frac{1}{2}kx^2 = \\frac{1}{2}mv^2 \\Rightarrow v = x\\sqrt{k/m} = 0.4\\sqrt{500/2} = 0.4\\sqrt{250} = 0.4(15.81) \\approx 6.3$ m/s. Dropping the $\\frac{1}{2}$ on only the spring side gives 8.9 m/s, dropping it on only the KE side gives 4.5 m/s, and using $x$ instead of $x^2$ gives 10.0 m/s.'
           },
           {
             question: 'In the problem above, if friction ($\\mu_k = 0.2$) acts over the 0.4 m compression distance, the exit speed would be:',
@@ -167,19 +166,18 @@ Note: friction acts over 3 m **plus** the compression distance $x$! This gives a
 
 Use $g = 10$ $m/s^{2}$.
 
-1) A 3 kg block starts at rest at height 8 m, slides down a frictionless ramp, across 2 m of rough floor ($\\mu_k = 0.4$), and compresses a spring ($k = 600$ N/m). What is the maximum spring compression (in m, to 3 significant figures)?
+1) A 3 kg block starts at rest at height 8 m, slides down a frictionless ramp, across 2 m of rough floor ($\\mu_k = 0.4$), and then compresses a spring ($k = 600$ N/m) that sits on the same rough floor, so friction also acts while the spring compresses. What is the maximum spring compression (in m, to 3 significant figures)?
 
 2) A spring ($k = 1000$ N/m) compressed 0.50 m launches a 2 kg block up a rough ramp ($\\mu_k = 0.15$, angle $45°$). How far along the ramp does it travel (in m, to 3 significant figures)?
 
 3) A 5 kg block moving at 12 m/s on a rough surface ($\\mu_k = 0.3$) hits a spring ($k = 2000$ N/m). Find the maximum compression (in m, to 3 significant figures). Hint: friction acts during compression too.
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['0.82', '1.55', '0.39'],
+        questions: [{ question: '1)', answer: '0.829', acceptableAnswers: ['0.829', '0.83'] }, { question: '2)', answer: '7.69', acceptableAnswers: ['7.69', '7.7'] }, { question: '3)', answer: '0.593', acceptableAnswers: ['0.593', '0.59'] }],
         hint1: '$mgh = \\frac{1}{2}kx^2 + \\mu_k mg(2 + x)$. Rearrange as a quadratic in $x$.',
         hint2: '$\\frac{1}{2}kx^2 = mgd\\sin45° + \\mu_k mgd\\cos45°$. Solve for $d$.',
         hint3: '$\\frac{1}{2}mv^2 = \\frac{1}{2}kx^2 + \\mu_k mg \\cdot x$. Quadratic in $x$.',
-        explanation: '1) $3(10)(8) = \\frac{1}{2}(600)x^2 + 0.4(30)(2+x)$. $240 = 300x^2 + 24 + 12x$. $300x^2 + 12x - 216 = 0$. $x = [-12 + \\sqrt{144 + 259200}]/600 = [-12 + 509]/600 \\approx 0.83$ m. 2) $\\frac{1}{2}(1000)(0.25) = 125$. $125 = 2(10)d(0.707) + 0.15(2)(10)d(0.707) = 14.14d + 2.12d = 16.26d$. $d \\approx 7.69$ — hmm, let me recalculate. $125 = d[mg(\\sin45° + \\mu_k\\cos45°)] = d[20(0.707 + 0.106)] = d[20(0.813)] = 16.26d$. $d = 7.69$ m. 3) $\\frac{1}{2}(5)(144) = \\frac{1}{2}(2000)x^2 + 0.3(50)x$. $360 = 1000x^2 + 15x$. $1000x^2 + 15x - 360 = 0$. $x = [-15 + \\sqrt{225 + 1440000}]/2000 = [-15 + 1200.1]/2000 \\approx 0.59$ m.'
+        explanation: '1) $3(10)(8) = \\frac{1}{2}(600)x^2 + 0.4(30)(2+x)$. $240 = 300x^2 + 24 + 12x$, so $300x^2 + 12x - 216 = 0$. $x = [-12 + \\sqrt{144 + 259200}]/600 = [-12 + 509.26]/600 \\approx 0.829$ m. 2) Spring energy: $\\frac{1}{2}(1000)(0.50)^2 = 125$ J. $125 = d[mg(\\sin45° + \\mu_k\\cos45°)] = d[20(0.707 + 0.106)] = 16.26d$, so $d \\approx 7.69$ m. 3) $\\frac{1}{2}(5)(12)^2 = \\frac{1}{2}(2000)x^2 + 0.3(50)x$. $360 = 1000x^2 + 15x$, so $1000x^2 + 15x - 360 = 0$. $x = [-15 + \\sqrt{225 + 1440000}]/2000 = [-15 + 1200.09]/2000 \\approx 0.593$ m.'
       }
     },
     {
@@ -198,7 +196,7 @@ Use $g = 10$ $m/s^{2}$.
           },
           {
             label: 'When a block compresses a spring on a rough surface, friction acts over a distance equal to:',
-            options: ['The original distance only', 'The compression distance only', 'The original distance plus compression', 'Half the compression'],
+            options: ['The original distance only', 'The compression distance only', 'The original distance plus compression', 'The original distance plus half the compression'],
             correctIndex: 2,
             explanation: 'Friction acts the entire time the block is moving, which includes sliding across the floor AND pushing the spring in. Total friction distance = floor distance + compression distance.'
           },
@@ -210,7 +208,7 @@ Use $g = 10$ $m/s^{2}$.
           },
           {
             label: 'In a spring-gravity problem with no friction, the total mechanical energy is:',
-            options: ['KE only', 'KE + gravitational PE only', 'KE + gravitational PE + spring PE', 'Not conserved'],
+            options: ['KE only', 'KE + gravitational PE only', 'KE + gravitational PE + spring PE', 'Not conserved, since the spring force varies'],
             correctIndex: 2,
             explanation: 'Total mechanical energy includes all forms: $E = \\frac{1}{2}mv^2 + mgh + \\frac{1}{2}kx^2$. Without friction, this total is constant.'
           }
@@ -241,11 +239,11 @@ Use $g = 10$ $m/s^{2}$.
             options: [
               '5 m',
               '10 m',
-              '15 m',
+              '5.8 m',
               '20 m'
             ],
             correctAnswer: 1,
-            explanation: '$\\frac{1}{2}kx^2 = mgd\\sin\\theta$. $\\frac{1}{2}(400)(0.25) = 1(10)d(0.5)$. $50 = 5d$. $d = 10$ m.'
+            explanation: '$\\frac{1}{2}kx^2 = mgd\\sin\\theta$. $\\frac{1}{2}(400)(0.25) = 1(10)d(0.5)$. $50 = 5d$. $d = 10$ m. Leaving out $\\sin\\theta$ gives 5 m, using $\\cos 30°$ gives 5.8 m, and dropping the $\\frac{1}{2}$ on the spring energy gives 20 m.'
           }
         ]
       }

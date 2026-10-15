@@ -129,10 +129,10 @@ Always verify that:
           {
             question: 'A collision is found where $KE_f > KE_i$. This collision is:',
             options: [
-              'Superelastic (possible with internal energy release)',
-              'Impossible under any circumstances',
-              'Perfectly elastic',
-              'Perfectly inelastic'
+              'Superelastic, possible if stored energy is released',
+              'Impossible, since total energy can never increase',
+              'Perfectly elastic, since KE is not lost',
+              'Perfectly inelastic, since the objects deform'
             ],
             correctAnswer: 0,
             explanation: 'A collision where $KE_f > KE_i$ is called **superelastic**. It is possible if internal stored energy (chemical, nuclear) is released during the collision. However, these are not standard in AP Physics 1.'
@@ -173,19 +173,19 @@ A 4 kg ball at +5 m/s hits a 2 kg ball at rest. After collision, the 4 kg ball m
         dropdowns: [
           {
             label: 'When KE is lost but the objects separate, the collision is:',
-            options: ['elastic', 'inelastic', 'perfectly inelastic', 'impossible'],
+            options: ['elastic, since they separate', 'inelastic', 'perfectly inelastic', 'impossible, since KE must be kept'],
             correctIndex: 1,
             explanation: 'When $KE_f < KE_i$ but the objects separate (don\'t stick together), the collision is inelastic — between elastic and perfectly inelastic.'
           },
           {
             label: 'The "missing" kinetic energy in an inelastic collision is:',
-            options: ['created from nothing', 'converted from KE to thermal/sound/deformation', 'transferred to another dimension', 'stored as momentum'],
+            options: ['destroyed, as collisions don\'t keep energy', 'converted into thermal energy and sound waves', 'stored as extra momentum of the objects', 'transferred to the ground as work'],
             correctIndex: 1,
             explanation: 'The "lost" kinetic energy is converted to thermal energy, sound, and permanent deformation. Total energy is always conserved.'
           },
           {
             label: 'The coefficient of restitution for a general inelastic collision is:',
-            options: ['0', 'between 0 and 1', '1', 'greater than 1'],
+            options: ['exactly 0', 'between 0 and 1', 'exactly 1', 'greater than 1'],
             correctIndex: 1,
             explanation: 'A general inelastic collision has $0 < e < 1$. The value $e = 0$ is perfectly inelastic, and $e = 1$ is perfectly elastic.'
           }

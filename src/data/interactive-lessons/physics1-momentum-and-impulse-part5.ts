@@ -82,10 +82,10 @@ The elastic cord stretches over several seconds, converting the jumper\'s moment
           {
             question: 'An airbag reduces injury primarily by:',
             options: [
-              'Reducing the impulse delivered to the occupant',
-              'Reducing the change in momentum',
-              'Increasing the stopping time to reduce the average force',
-              'Absorbing kinetic energy through friction'
+              'Reducing the impulse delivered to the occupant during the crash',
+              'Reducing the occupant\'s total change in momentum during the stop',
+              'Increasing stopping time to lower the average force',
+              'Absorbing all of the occupant\'s kinetic energy so no force is needed'
             ],
             correctAnswer: 2,
             explanation: 'The change in momentum (and impulse) is fixed — the occupant must stop regardless. The airbag increases the time over which this happens, which reduces the average force: $F = \\Delta p / \\Delta t$.'
@@ -104,10 +104,10 @@ The elastic cord stretches over several seconds, converting the jumper\'s moment
           {
             question: 'When catching a ball, a catcher moves their hand backward. This:',
             options: [
-              'Increases the impulse delivered to the hand',
-              'Decreases the ball\'s change in momentum',
+              'Increases the impulse delivered to the hand, softening the catch',
+              'Decreases the ball\'s change in momentum because the hand moves with it',
               'Reduces the average force by increasing contact time',
-              'Makes the ball lighter'
+              'Slows the ball before it reaches the glove, so less momentum must be removed'
             ],
             correctAnswer: 2,
             explanation: 'Moving the hand back increases the time over which the ball decelerates. Since $J = \\Delta p$ is fixed, a longer $\\Delta t$ means a smaller average force on the hand.'
@@ -146,19 +146,19 @@ The elastic cord stretches over several seconds, converting the jumper\'s moment
         dropdowns: [
           {
             label: 'Safety devices like airbags and crumple zones work by:',
-            options: ['decrease stopping time', 'increase stopping time', 'increase momentum', 'decrease mass'],
+            options: ['decreasing the stopping time so the crash ends sooner', 'increasing the stopping time', 'reducing the total impulse the passenger receives', 'reducing the passenger\'s change in momentum'],
             correctIndex: 1,
             explanation: 'Crumple zones, airbags, and seatbelts all work by increasing the stopping time, which reduces the average force for the same impulse.'
           },
           {
             label: 'Whether you stop suddenly or gradually, your body receives:',
-            options: ['the same impulse', 'less impulse', 'more impulse', 'no impulse'],
+            options: ['the same impulse', 'less impulse when stopping gradually', 'more impulse when stopping suddenly', 'an impulse that depends only on the stopping time'],
             correctIndex: 0,
             explanation: 'The impulse ($\\Delta p$) is determined by the change in velocity and mass — it is the same regardless of how fast or slow you stop. Safety devices change the force, not the impulse.'
           },
           {
             label: 'The primary goal of all collision safety devices is to reduce the:',
-            options: ['momentum', 'velocity', 'average force', 'kinetic energy'],
+            options: ['momentum of the car', 'speed of the crash', 'average force on the person', 'kinetic energy lost'],
             correctIndex: 2,
             explanation: 'All safety devices aim to reduce the average force on the person. This is achieved by extending the stopping time while keeping the impulse constant.'
           }
@@ -177,9 +177,9 @@ The elastic cord stretches over several seconds, converting the jumper\'s moment
             question: 'A gymnast bends their knees upon landing from a jump. Compared to landing stiff-legged, the gymnast experiences:',
             options: [
               'Greater impulse and greater force',
-              'Same impulse but less force',
-              'Less impulse and less force',
-              'Same impulse and same force'
+              'Same impulse but a smaller average force',
+              'Less impulse and less average force',
+              'Same impulse and the same force'
             ],
             correctAnswer: 1,
             explanation: 'The impulse is the same (same $\\Delta p$ — the gymnast must stop either way). Bending the knees increases the stopping time, which reduces the average force: $F = \\Delta p / \\Delta t$.'
@@ -187,10 +187,10 @@ The elastic cord stretches over several seconds, converting the jumper\'s moment
           {
             question: 'Modern cars are designed to crumple in a crash rather than remain rigid because:',
             options: [
-              'Crumpling absorbs all kinetic energy as heat',
-              'Crumpling reduces the car\'s momentum',
-              'Crumpling increases the collision time, reducing peak force on passengers',
-              'Rigid cars would bounce and cause a second collision'
+              'It absorbs all of the car\'s kinetic energy so none reaches the passengers',
+              'It reduces the car\'s change in momentum, so passengers stop more gently',
+              'It lengthens the collision time, lowering the force on passengers',
+              'It spreads the force over a larger area, so the total force is smaller'
             ],
             correctAnswer: 2,
             explanation: 'The primary purpose of crumple zones is to increase the time over which the car decelerates. Since $F = \\Delta p / \\Delta t$, a longer $\\Delta t$ means a smaller force on the occupants.'

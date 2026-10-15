@@ -126,10 +126,10 @@ Piece 3 moves at $(-2, -2)$ m/s, with speed $|v_3| = \\sqrt{4 + 4} = 2\\sqrt{2} 
           {
             question: 'In a recoil problem (starting from rest), the total kinetic energy after the explosion is:',
             options: [
-              'Zero (momentum is zero)',
-              'Negative',
-              'Positive (energy came from an internal source)',
-              'Equal to the total momentum'
+              'Zero, because the total momentum is still zero',
+              'Negative, because the pieces move in opposite directions',
+              'Positive, supplied by stored internal energy',
+              'Equal in size to the total momentum of the pieces'
             ],
             correctAnswer: 2,
             explanation: 'Zero total momentum does NOT mean zero kinetic energy. KE is $\\frac{1}{2}mv^2$ (always positive for each piece). The energy came from internal stored energy (chemical, elastic, etc.).'
@@ -181,9 +181,9 @@ Piece 3 moves at $(-2, -2)$ m/s, with speed $|v_3| = \\sqrt{4 + 4} = 2\\sqrt{2} 
         dropdowns: [
           {
             label: 'In a recoil from rest, the lighter object moves at:',
-            options: ['the same speed', 'a higher speed', 'a lower speed', 'cannot be determined'],
+            options: ['the same speed as the heavier one', 'a higher speed', 'a lower speed than the heavier one', 'a speed set by which one pushes harder'],
             correctIndex: 1,
-            explanation: 'In recoil from rest, $m_1 v_1 = m_2 v_2$ (magnitudes). The lighter object ($m_1 < m_2$) must have the larger speed to compensate.'
+            explanation: 'In recoil from rest, $m_1 v_1 = m_2 v_2$ (magnitudes). The lighter object ($m_1 < m_2$) must have the larger speed to compensate. Both objects feel equal and opposite forces, so neither pushes harder.'
           },
           {
             label: 'After an explosion from rest, the total kinetic energy:',

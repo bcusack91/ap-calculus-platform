@@ -114,10 +114,10 @@ Because friction is non-conservative, **we cannot define a "friction potential e
           {
             question: 'Which property defines a conservative force?',
             options: [
-              'It always does positive work',
+              'It always does positive work on objects',
               'Its work is path-independent',
               'It never changes the speed of an object',
-              'It acts at a distance'
+              'It acts at a distance without contact'
             ],
             correctAnswer: 1,
             explanation: 'A conservative force\'s work depends only on initial and final positions, not the path. This is the defining property.'
@@ -125,10 +125,10 @@ Because friction is non-conservative, **we cannot define a "friction potential e
           {
             question: 'Why can we define gravitational PE but not "friction PE"?',
             options: [
-              'Friction is too small to matter',
+              'Friction is usually too small to matter',
               'Friction depends on the normal force',
-              'Friction is non-conservative — its work depends on the path',
-              'Friction doesn\'t store energy'
+              'Friction\'s work depends on the path taken',
+              'Friction does not store any energy'
             ],
             correctAnswer: 2,
             explanation: 'Potential energy can only be defined for conservative forces. Friction is non-conservative because its work depends on the path length, not just the endpoints.'
@@ -208,7 +208,7 @@ Use $g = 10$ $m/s^{2}$.
               'Greater in magnitude (longer path)',
               'Less in magnitude (more gradual)',
               'The same (same height change)',
-              'Cannot be determined'
+              'Cannot be determined (slope unknown)'
             ],
             correctAnswer: 2,
             explanation: 'Gravity is conservative. Only the vertical height change matters, not the path length. Both trails have the same $\\Delta h$, so gravity does the same work on both.'

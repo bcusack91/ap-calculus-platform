@@ -72,11 +72,11 @@ $$d = \\frac{KE_i}{f_k} = \\frac{\\frac{1}{2}mv^2}{\\mu_k mg} = \\frac{v^2}{2\\m
             options: [
               '5 m',
               '10 m',
-              '15 m',
+              '1 m',
               '20 m'
             ],
             correctAnswer: 1,
-            explanation: '$d = v^2/(2\\mu_k g) = 100/(2 \\times 0.5 \\times 10) = 100/10 = 10$ m.'
+            explanation: '$d = v^2/(2\\mu_k g) = 100/(2 \\times 0.5 \\times 10) = 100/10 = 10$ m. Dropping the 2 gives 20 m, leaving out $\\mu_k$ gives 5 m, and using $v$ instead of $v^2$ gives 1 m.'
           },
           {
             question: 'If the same block (10 m/s, $\\mu_k = 0.5$) had twice the mass, the stopping distance would be:',
@@ -92,13 +92,13 @@ $$d = \\frac{KE_i}{f_k} = \\frac{\\frac{1}{2}mv^2}{\\mu_k mg} = \\frac{v^2}{2\\m
           {
             question: 'A 2 kg block slides down a rough ramp (height 3 m, ramp length 5 m, $\\mu_k = 0.3$). The energy dissipated by friction is ($g = 10$ $m/s^{2}$):',
             options: [
-              '12 J',
+              '18 J',
               '24 J',
-              '48 J',
+              '30 J',
               '60 J'
             ],
             correctAnswer: 1,
-            explanation: '$\\cos\\theta = 4/5 = 0.8$ (3-4-5 triangle). $E_{\\text{thermal}} = \\mu_k mg\\cos\\theta \\cdot d = 0.3(2)(10)(0.8)(5) = 24$ J.'
+            explanation: '$\\cos\\theta = 4/5 = 0.8$ (3-4-5 triangle). $E_{\\text{thermal}} = \\mu_k mg\\cos\\theta \\cdot d = 0.3(2)(10)(0.8)(5) = 24$ J. Leaving out $\\cos\\theta$ gives 30 J, using $\\sin\\theta = 0.6$ gives 18 J, and 60 J is the block\'s entire initial PE.'
           }
         ]
       }
@@ -136,7 +136,7 @@ Use $g = 10$ $m/s^{2}$.
         dropdowns: [
           {
             label: 'A block slides across a rough surface. The total energy of the system (block + surface):',
-            options: ['Decreases', 'Increases', 'Stays the same', 'Depends on speed'],
+            options: ['Decreases as friction acts', 'Increases as heat is produced', 'Stays the same', 'Depends on the block\'s speed'],
             correctIndex: 2,
             explanation: 'Total energy (mechanical + thermal) is always conserved. Mechanical energy decreases, but thermal energy increases by the same amount.'
           },
@@ -147,8 +147,8 @@ Use $g = 10$ $m/s^{2}$.
             explanation: '$d = v^2/(2\\mu_k g)$. Doubling $v$ quadruples $v^2$ and therefore quadruples $d$.'
           },
           {
-            label: 'A block slides down a rough ramp and across a rough floor. The total thermal energy produced equals:',
-            options: ['The initial KE', 'The initial PE minus final KE', 'The friction force times time', 'The normal force times distance'],
+            label: 'A block starts from rest, slides down a rough ramp, and continues across a rough floor. The total thermal energy produced equals:',
+            options: ['The final KE at the end of the floor', 'The initial PE minus final KE', 'The friction force times the elapsed time', 'The normal force times the total distance'],
             correctIndex: 1,
             explanation: '$E_{\\text{thermal}} = E_{\\text{mech},i} - E_{\\text{mech},f} = (KE_i + PE_i) - (KE_f + PE_f)$. If it starts from rest at height $h$: $E_{\\text{thermal}} = mgh - \\frac{1}{2}mv_f^2$.'
           }
@@ -209,12 +209,12 @@ $$h_f = (60 - 52)/20 = 0.4 \\text{ m}$$
             question: 'A 4 kg block slides down from 5 m on a rough ramp ($\\mu_k = 0.3$, ramp length 10 m, $\\cos\\theta = 0.866$). Its KE at the bottom is ($g = 10$ $m/s^{2}$):',
             options: [
               '200 J',
-              '104 J',
-              '96.2 J',
-              '0 J'
+              '103.9 J',
+              '96.1 J',
+              '140 J'
             ],
             correctAnswer: 2,
-            explanation: '$KE = mgh - \\mu_k mg\\cos\\theta \\cdot d = 4(10)(5) - 0.3(4)(10)(0.866)(10) = 200 - 103.9 \\approx 96.1$ J, closest to 96.2 J.'
+            explanation: '$KE = mgh - \\mu_k mg\\cos\\theta \\cdot d = 4(10)(5) - 0.3(4)(10)(0.866)(10) = 200 - 103.9 = 96.1$ J. 200 J ignores friction, 103.9 J is the energy dissipated rather than the KE left, and 140 J comes from using $\\sin\\theta = 0.5$ instead of $\\cos\\theta$ in the friction term.'
           }
         ]
       }

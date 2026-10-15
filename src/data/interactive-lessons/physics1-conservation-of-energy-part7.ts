@@ -60,10 +60,10 @@ The sum of all initial bars must equal the sum of all final bars (including ther
           {
             question: 'A ball is thrown upward. At the maximum height, the energy bar chart shows:',
             options: [
-              'All KE, no PE',
-              'All PE_g, no KE',
-              'Equal KE and PE_g',
-              'It depends on whether it was thrown straight up or at an angle'
+              'All KE and no PE_g, for any launch angle',
+              'All PE_g and no KE, for any launch angle',
+              'Equal KE and PE_g, for any launch angle',
+              'It depends on the launch angle'
             ],
             correctAnswer: 3,
             explanation: 'If thrown straight up, all KE → PE_g (v = 0 at top). If thrown at an angle, there\'s still horizontal KE at the top. The answer depends on the direction of the throw!'
@@ -71,10 +71,10 @@ The sum of all initial bars must equal the sum of all final bars (including ther
           {
             question: 'An energy bar chart shows: Initial state has tall KE bar. Final state has medium PE_g bar and small $\\Delta E_{th}$ bar, but no KE bar. This describes:',
             options: [
-              'A ball thrown upward reaching max height with air resistance',
+              'A ball rising to its peak against air drag',
               'A block sliding to a stop on a flat surface',
-              'A spring being compressed',
-              'A ball in free fall'
+              'A spring being compressed by a moving block',
+              'A ball falling freely from rest to the ground'
             ],
             correctAnswer: 0,
             explanation: 'Initial KE converts to PE_g (height gained) and $\\Delta E_{th}$ (air resistance). No final KE means the object stops — consistent with reaching maximum height with drag.'
@@ -129,13 +129,13 @@ The sum of all initial bars must equal the sum of all final bars (including ther
         dropdowns: [
           {
             label: 'A student says: "Doubling mass doubles KE, and doubling speed doubles KE." The error is:',
-            options: ['The mass part is wrong', 'The speed part is wrong', 'Both are wrong', 'Neither is wrong'],
+            options: ['The mass part is wrong', 'The speed part is wrong', 'Both parts are wrong', 'Neither part is wrong'],
             correctIndex: 1,
             explanation: 'Doubling mass does double KE ($KE = \\frac{1}{2}mv^2$). But doubling speed quadruples KE since $KE \\propto v^2$.'
           },
           {
             label: 'A student writes $mgh = \\frac{1}{2}mv^2$ for a block sliding down a rough ramp. The missing term is:',
-            options: ['Spring PE', 'Friction term $f_k d$', 'Normal force work', 'Centripetal force'],
+            options: ['Spring PE term', 'Friction term $f_k d$', 'Normal force work', 'Centripetal force'],
             correctIndex: 1,
             explanation: 'On a rough ramp, energy is lost to friction: $mgh = \\frac{1}{2}mv^2 + f_k d$. Forgetting this gives a speed that\'s too high.'
           },
@@ -205,7 +205,7 @@ The sum of all initial bars must equal the sum of all final bars (including ther
               'Block A (lighter one)',
               'Block B (heavier one)',
               'They have the same speed',
-              'Not enough information'
+              'Not enough information given'
             ],
             correctAnswer: 2,
             explanation: '$mgh = \\frac{1}{2}mv^2 \\Rightarrow v = \\sqrt{2gh}$. Mass cancels! Both blocks reach the same speed.'
@@ -213,13 +213,13 @@ The sum of all initial bars must equal the sum of all final bars (including ther
           {
             question: 'A 1 kg ball swings on a string from height $h = 0.8$ m. At the bottom of the swing, the speed is measured to be 3 m/s (use $g = 10$ $m/s^{2}$). This means:',
             options: [
-              'Energy was conserved perfectly',
+              'Mechanical energy was conserved exactly',
               'The ball gained energy from the string',
-              'Some energy was lost to non-conservative forces',
-              'The measurement must be wrong'
+              'Some mechanical energy was dissipated',
+              'The speed measurement must be in error'
             ],
             correctAnswer: 2,
-            explanation: 'Expected: $v = \\sqrt{2gh} = \\sqrt{16} = 4$ m/s. Measured: 3 m/s. Since $3 < 4$, some energy was lost (likely to air resistance). $E_{lost} = mgh - \\frac{1}{2}mv^2 = 8 - 4.5 = 3.5$ J.'
+            explanation: 'Expected: $v = \\sqrt{2gh} = \\sqrt{16} = 4$ m/s. Measured: 3 m/s. Since $3 < 4$, some mechanical energy was dissipated, most likely by air resistance. $E_{lost} = mgh - \\frac{1}{2}mv^2 = 8 - 4.5 = 3.5$ J.'
           }
         ]
       }
@@ -239,12 +239,11 @@ Use $g = 10$ $m/s^{2}$.
 3) In an AP FRQ, a 2 kg block is pushed against a spring ($k = 800$ N/m), compressing it 0.3 m. The block is released and slides across a rough surface ($\\mu_k = 0.4$) for 5 m before reaching a frictionless ramp. What maximum height does it reach (in m)?
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['0.66', '1.8', '0'],
+        questions: [{ question: '1)', answer: '0.643', acceptableAnswers: ['0.643', '0.64'] }, { question: '2)', answer: '2.01', acceptableAnswers: ['2.01', '2', '2.0', '2.00'] }, { question: '3)', answer: '0', acceptableAnswers: ['0', '0.0', '0 m'] }],
         hint1: 'Set $mg(20 + x) = \\frac{1}{2}kx^2$ where $x$ is the compression. You\'ll get a quadratic equation.',
         hint2: 'Use energy conservation with friction: $mgh_1 - W_{\\text{friction}} = mgh_2$. Find $h_1$ from the ramp geometry.',
         hint3: 'Compare the spring\'s stored energy $\\frac{1}{2}kx^2$ to the energy lost to friction $\\mu_k mg d$. Does the block have enough energy to reach the ramp?',
-        explanation: '1) $mg(20+x) = \\frac{1}{2}kx^2$. $5(20+x) = 250x^2$. $250x^2 - 5x - 100 = 0$. Using the quadratic formula: $x \\approx 0.66$ m. 2) $h_1 = 5\\sin37° = 3.0$ m. Friction work on ramp: $\\mu_k mg\\cos37°(5) = 0.25(40)(0.8)(5) = 40$ J. $mgh_2 = mgh_1 - 40 = 120 - 40 = 80$ J. $h_2 = 80/40 = 2.0$ m. Wait — but $h_2$ should account for all the energy. Recalculating with exact values: $h_2 \\approx 1.8$ m. 3) Spring energy $= \\frac{1}{2}(800)(0.09) = 36$ J. Friction over 5 m $= \\mu_k mg \\cdot d = 0.4(20)(5) = 40$ J. Since friction (40 J) exceeds the spring energy (36 J), the block stops before reaching the ramp. $h = 0$.'
+        explanation: '1) $mg(20+x) = \\frac{1}{2}kx^2$. $5(20+x) = 250x^2$, so $250x^2 - 5x - 100 = 0$. $x = [5 + \\sqrt{25 + 100000}]/500 = [5 + 316.27]/500 \\approx 0.643$ m. 2) $h_1 = 5\\sin37° = 3.01$ m, so $mgh_1 = 40(3.01) = 120.4$ J. Friction on the first ramp: $\\mu_k mg\\cos37°(5) = 0.25(40)(0.799)(5) = 39.9$ J. The floor and the second ramp are frictionless, so $mgh_2 = 120.4 - 39.9 = 80.4$ J and $h_2 = 80.4/40 \\approx 2.01$ m (exactly 2.00 m with $\\sin37° = 0.6$, $\\cos37° = 0.8$). The angle of the second ramp does not matter. 3) Spring energy $= \\frac{1}{2}(800)(0.09) = 36$ J. Friction over 5 m $= \\mu_k mg \\cdot d = 0.4(20)(5) = 40$ J. Since friction (40 J) exceeds the spring energy (36 J), the block stops before reaching the ramp. $h = 0$.'
       }
     },
     {
@@ -258,10 +257,10 @@ Use $g = 10$ $m/s^{2}$.
           {
             question: 'Which of the following is TRUE about conservation of energy?',
             options: [
-              'Mechanical energy is always conserved',
-              'Total energy is always conserved, but mechanical energy is only conserved when no non-conservative forces do work',
-              'Energy can be created by springs',
-              'Friction creates energy in the form of heat'
+              'Mechanical energy is always conserved, even when kinetic friction acts',
+              'Total energy is always conserved, but mechanical energy only if $W_{nc} = 0$',
+              'A compressed spring creates new energy, so total energy rises when it is released',
+              'Friction creates new energy as heat, so the total energy of the system rises'
             ],
             correctAnswer: 1,
             explanation: 'Total energy (mechanical + thermal + other) is always conserved. Mechanical energy alone is only conserved when non-conservative forces (friction, air resistance) do no work.'
@@ -269,13 +268,13 @@ Use $g = 10$ $m/s^{2}$.
           {
             question: 'On the AP exam, the most important step in an energy conservation problem is:',
             options: [
-              'Drawing a free body diagram',
-              'Choosing initial and final states and identifying all energy types',
-              'Calculating forces at every point',
-              'Using $F = ma$ to find acceleration'
+              'Drawing a free-body diagram of every force',
+              'Choosing two states and listing every energy type',
+              'Calculating the net force at each point',
+              'Using $F = ma$ to find the acceleration'
             ],
             correctAnswer: 1,
-            explanation: 'The key step is identifying your two states and listing all forms of energy present at each. Then write the conservation equation with all relevant terms.'
+            explanation: 'The key step is identifying your two states and listing all forms of energy present at each. Then write the conservation equation with all relevant terms. Force diagrams and $F = ma$ are tools for force problems, not the starting point of an energy problem.'
           }
         ]
       }

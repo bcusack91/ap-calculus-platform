@@ -76,9 +76,9 @@ $$F_c = \\frac{mv^2}{r} = m\\omega^2 r = \\frac{4\\pi^2 mr}{T^2}$$
             question: 'On a free body diagram of an object in circular motion, you should:',
             options: [
               'Draw a centripetal force arrow pointing toward the center',
-              'Draw a centrifugal force arrow pointing outward',
-              'Draw only the real forces (tension, gravity, normal, friction, etc.)',
-              'Draw both centripetal and centrifugal forces'
+              'Draw a centrifugal force arrow pointing away from the center',
+              'Draw only the real forces, such as tension and gravity',
+              'Draw both centripetal and centrifugal arrows, plus real forces'
             ],
             correctAnswer: 2,
             explanation: 'Never draw "centripetal force" as a separate force. Only draw real forces. Then, the net radial component of these forces equals $mv^2/r$.'
@@ -86,9 +86,9 @@ $$F_c = \\frac{mv^2}{r} = m\\omega^2 r = \\frac{4\\pi^2 mr}{T^2}$$
           {
             question: 'If the net centripetal force on an object moving in a circle suddenly becomes zero, the object will:',
             options: [
-              'Stop immediately',
-              'Continue in a circle',
-              'Fly outward radially',
+              'Stop moving as soon as the force vanishes',
+              'Keep moving in the same circle by inertia',
+              'Fly radially outward, away from the center',
               'Move in a straight line tangent to the circle'
             ],
             correctAnswer: 3,
@@ -130,7 +130,7 @@ Use $g = 10$ $m/s^{2}$.
         dropdowns: [
           {
             label: 'A car turns on a flat road. The centripetal force is provided by:',
-            options: ['The engine', 'Friction between tires and road', 'The normal force', 'Gravity'],
+            options: ['The engine\'s driving force', 'Friction between tires and road', 'The normal force from the road', 'Gravity on the car'],
             correctIndex: 1,
             explanation: 'On a flat road, static friction between the tires and road surface provides the inward (centripetal) force needed to turn.'
           },
@@ -166,13 +166,13 @@ Use $g = 10$ $m/s^{2}$.
           {
             question: 'A 2 kg ball on a string moves in a horizontal circle. If the tension is 50 N and the radius is 0.8 m, the speed of the ball is:',
             options: [
-              '2.5 m/s',
+              '5.6 m/s',
               '4.5 m/s',
-              '5.0 m/s',
-              '25 m/s'
+              '6.3 m/s',
+              '20 m/s'
             ],
             correctAnswer: 1,
-            explanation: '$F_c = mv^2/r \\Rightarrow v = \\sqrt{F_c r/m} = \\sqrt{50(0.8)/2} = \\sqrt{20} \\approx 4.47 \\approx 4.5$ m/s.'
+            explanation: '$F_c = mv^2/r \\Rightarrow v = \\sqrt{F_c r/m} = \\sqrt{50(0.8)/2} = \\sqrt{20} \\approx 4.47 \\approx 4.5$ m/s. Forgetting the square root gives 20 m/s, leaving out the mass gives $\\sqrt{40} \\approx 6.3$ m/s, and dividing by $r$ instead of multiplying gives $\\sqrt{31.25} \\approx 5.6$ m/s.'
           },
           {
             question: 'A satellite orbits Earth. If the orbit radius doubles (same mass), the gravitational force (which provides centripetal force) changes. For the satellite to maintain a circular orbit, its speed must:',

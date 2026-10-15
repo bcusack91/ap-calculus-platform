@@ -77,21 +77,21 @@ $$\\theta = \\tan^{-1}\\left(\\frac{v^2}{rg}\\right)$$
           {
             question: 'If the design speed is doubled (same radius), the banking angle must:',
             options: [
-              'Double',
-              'Quadruple',
-              'Increase (but not simply double)',
-              'Stay the same'
+              'Double, because $\\theta$ is proportional to $v$',
+              'Quadruple, because $\\theta$ grows as $v^2$',
+              'Increase, but not simply double',
+              'Stay the same, since only $r$ sets it'
             ],
             correctAnswer: 2,
-            explanation: '$\\tan\\theta = v^2/(rg)$. Doubling $v$ quadruples $v^2$, so $\\tan\\theta$ quadruples. But $\\theta$ doesn\'t simply quadruple — it increases via the arctangent function.'
+            explanation: '$\\tan\\theta = v^2/(rg)$. Doubling $v$ quadruples $v^2$, so $\\tan\\theta$ quadruples. The angle itself does not quadruple (or double) — it increases by whatever the arctangent gives, and it can never reach $90°$.'
           },
           {
             question: 'A NASCAR track is banked at $24°$. On a rainy day (no friction), a car can safely turn at the design speed because:',
             options: [
               'Rain reduces the need for centripetal force',
-              'The normal force component provides all centripetal force needed',
-              'The car weighs less in rain',
-              'The driver goes slower'
+              'The normal force alone supplies the centripetal force',
+              'The car weighs less on a wet track',
+              'The driver instinctively slows down'
             ],
             correctAnswer: 1,
             explanation: 'That\'s the beauty of banking! At the design speed, the component $N\\sin\\theta$ provides exactly the right centripetal force, no friction needed.'
@@ -109,13 +109,7 @@ $$\\theta = \\tan^{-1}\\left(\\frac{v^2}{rg}\\right)$$
 
 If $v > v_{design}$, the car tends to slide **up** the bank. Friction acts **down the bank** (and inward).
 
-Both $N\\sin\\theta$ and $f\\cos\\theta$ point toward the center:
-
-$$N\\sin\\theta + f\\cos\\theta = \\frac{mv^2}{r}$$
-
-$$N\\cos\\theta + f\\sin\\theta = mg + \\text{...wait}$$
-
-Actually, let's be careful:
+Both $N\\sin\\theta$ and $f\\cos\\theta$ point toward the center, while the vertical part of friction points down and adds to gravity:
 
 **Radial**: $N\\sin\\theta + f_s\\cos\\theta = mv^2/r$
 
@@ -157,8 +151,7 @@ Use $g = 10$ $m/s^{2}$.
 3) A curve is banked at $20°$ with radius 150 m. What is the maximum speed if $\\mu_s = 0.3$ (in m/s, round to nearest whole number)? Use $v_{max} = \\sqrt{rg(\\tan\\theta + \\mu_s)/(1 - \\mu_s\\tan\\theta)}$.
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['24.2', '24.0', '33'],
+        questions: [{ question: '1)', answer: '24.2', acceptableAnswers: ['24.2'] }, { question: '2)', answer: '24.0', acceptableAnswers: ['24.0', '24'] }, { question: '3)', answer: '33', acceptableAnswers: ['33', '33.4'] }],
         hint1: '$\\theta = \\tan^{-1}(v^2/(rg))$.',
         hint2: '$v = \\sqrt{rg\\tan\\theta}$.',
         hint3: 'Plug in: $\\theta = 20°$, $r = 150$, $\\mu_s = 0.3$, $g = 10$.',
@@ -187,7 +180,7 @@ Use $g = 10$ $m/s^{2}$.
           },
           {
             label: 'Indianapolis Motor Speedway\'s turns are banked at $9.2°$. This relatively small angle means:',
-            options: ['The design speed is low', 'Cars must rely heavily on friction at race speeds', 'The radius must be very small', 'No friction is needed at any speed'],
+            options: ['The design speed is higher than race speeds', 'Cars need tire friction at race speeds', 'The turn radius must be extremely small', 'The cars stay on the track with no friction'],
             correctIndex: 1,
             explanation: 'Race cars go much faster than the design speed of a $9.2°$ bank. They rely on high-friction tires and aerodynamic downforce to provide the extra centripetal force.'
           }
@@ -205,19 +198,19 @@ Use $g = 10$ $m/s^{2}$.
           {
             question: 'A frictionless banked curve has $\\theta = 45°$ and $r = 50$ m. The design speed is ($g = 10$ $m/s^{2}$):',
             options: [
-              '$\\sqrt{250} \\approx 15.8$ m/s',
+              '$\\sqrt{354} \\approx 18.8$ m/s',
               '$\\sqrt{500} \\approx 22.4$ m/s',
               '$\\sqrt{1000} \\approx 31.6$ m/s',
-              '$50$ m/s'
+              '$\\sqrt{50} \\approx 7.1$ m/s'
             ],
             correctAnswer: 1,
-            explanation: '$v = \\sqrt{rg\\tan\\theta} = \\sqrt{50 \\times 10 \\times \\tan45°} = \\sqrt{50 \\times 10 \\times 1} = \\sqrt{500} \\approx 22.4$ m/s.'
+            explanation: '$v = \\sqrt{rg\\tan\\theta} = \\sqrt{50 \\times 10 \\times \\tan45°} = \\sqrt{50 \\times 10 \\times 1} = \\sqrt{500} \\approx 22.4$ m/s. Using $\\sin45°$ instead of $\\tan45°$ gives $\\sqrt{354}$, leaving out $g$ gives $\\sqrt{50}$, and using the diameter (100 m) as $r$ gives $\\sqrt{1000}$.'
           },
           {
             question: 'Compared to a flat curve of the same radius, a banked curve allows a higher maximum speed because:',
             options: [
-              'The normal force is larger on a banked curve',
-              'The normal force has a horizontal component that adds to friction in providing centripetal force',
+              'The curve\'s effective radius is larger when banked',
+              'Part of the normal force also points toward the center',
               'Gravity is stronger on a banked curve',
               'The car weighs less on a banked curve'
             ],

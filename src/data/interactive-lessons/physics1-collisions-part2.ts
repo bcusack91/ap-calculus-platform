@@ -177,19 +177,19 @@ $$\\text{Lost} = 330{,}000 - 36{,}000 = 294{,}000 \\text{ J} \\approx 89\\% \\te
         dropdowns: [
           {
             label: 'In a perfectly inelastic collision, kinetic energy is:',
-            options: ['conserved', 'maximally lost', 'doubled', 'zero'],
+            options: ['conserved', 'maximally lost', 'partly lost', 'always zero'],
             correctIndex: 1,
             explanation: 'In a perfectly inelastic collision, kinetic energy loss is maximized (for a given set of initial conditions). Objects sticking together is the "worst case" for energy loss.'
           },
           {
             label: 'The lost kinetic energy is converted to:',
-            options: ['heat and sound', 'more momentum', 'potential energy only', 'it disappears'],
+            options: ['heat, sound, and deformation', 'extra momentum', 'potential energy only', 'nothing; it disappears'],
             correctIndex: 0,
             explanation: 'The lost kinetic energy is converted to thermal energy (heat), sound, and permanent deformation of the objects. Energy is conserved overall — it just changes form.'
           },
           {
             label: 'A perfectly inelastic collision problem has:',
-            options: ['one unknown (v_f)', 'two unknowns', 'three unknowns', 'no unknowns'],
+            options: ['one unknown, the shared $v_f$', 'two unknowns, one per object', 'three unknowns', 'no unknowns'],
             correctIndex: 0,
             explanation: 'Since both objects move together with the same final velocity $v_f$, there is only one unknown, making these the simplest collision problems to solve.'
           }

@@ -98,10 +98,10 @@ The impulse from gravity: $J_y = mg\\Delta t = (2)(10)(3) = 60$ kg·m/s — exac
           {
             question: 'Two hockey pucks collide on a frictionless ice surface. Is momentum conserved?',
             options: [
-              'No, because kinetic energy changes',
-              'Yes, because there is no net external force on the system',
-              'Only if the collision is elastic',
-              'Only in the vertical direction'
+              'No, because kinetic energy changes during the impact',
+              'Yes, because the net external force on the pucks is zero',
+              'Only if the collision is perfectly elastic',
+              'Only in the vertical direction, where forces balance'
             ],
             correctAnswer: 1,
             explanation: 'On frictionless ice, the only forces are internal (between the pucks). Gravity and normal forces cancel vertically. The net external horizontal force is zero, so momentum is conserved.'
@@ -109,10 +109,10 @@ The impulse from gravity: $J_y = mg\\Delta t = (2)(10)(3) = 60$ kg·m/s — exac
           {
             question: 'A block sliding on a rough surface collides with a stationary block. Is the total momentum of the two blocks conserved DURING the collision?',
             options: [
-              'No, friction prevents conservation',
-              'Yes, approximately — the collision is so brief that friction impulse is negligible',
-              'Only if the blocks have equal mass',
-              'Only if kinetic energy is conserved'
+              'No, friction is external, so momentum is never conserved',
+              'Approximately, since friction\'s impulse is tiny over the brief contact',
+              'Only if the blocks have equal mass, so their friction forces cancel',
+              'Only if kinetic energy is also conserved during the collision'
             ],
             correctAnswer: 1,
             explanation: 'During the very brief collision instant ($\\Delta t \\approx$ ms), the friction force has negligible impulse: $J_{\\text{friction}} = f \\cdot \\Delta t \\approx 0$. So momentum is approximately conserved during the collision, even with friction.'
@@ -122,8 +122,8 @@ The impulse from gravity: $J_y = mg\\Delta t = (2)(10)(3) = 60$ kg·m/s — exac
             options: [
               'Is conserved',
               'Increases at a constant rate',
-              'Decreases at a constant rate',
-              'Remains constant then suddenly changes'
+              'Decreases at a steady rate',
+              'Stays constant, then jumps'
             ],
             correctAnswer: 1,
             explanation: '$dp/dt = F_{\\text{ext}} = mg$ (constant downward). The ball gains downward momentum at a constant rate of $mg$ per second. This is just another way of saying it accelerates at $g$.'
@@ -164,19 +164,19 @@ The impulse from gravity: $J_y = mg\\Delta t = (2)(10)(3) = 60$ kg·m/s — exac
         dropdowns: [
           {
             label: 'Momentum is conserved when there is:',
-            options: ['no forces at all', 'no internal forces', 'no net external force', 'no kinetic energy change'],
+            options: ['no friction at all', 'no internal forces', 'no net external force', 'no kinetic energy change'],
             correctIndex: 2,
             explanation: 'Momentum is conserved when there is no net external force on the system. Internal forces (no matter how large) cancel by Newton\'s Third Law.'
           },
           {
             label: 'Even when friction is present, momentum is approximately:',
-            options: ['conserved during the collision', 'never conserved', 'conserved only after the collision', 'conserved only if there is no energy loss'],
+            options: ['conserved during the collision', 'never conserved, since friction is external', 'conserved only after the collision', 'conserved only if there is no energy loss'],
             correctIndex: 0,
             explanation: 'During a brief collision, external forces like friction have negligible impulse ($J = F\\Delta t \\approx 0$). So momentum is approximately conserved during the collision instant.'
           },
           {
             label: 'When a net external force acts in one direction, momentum is still conserved:',
-            options: ['in all directions', 'only vertically', 'only horizontally', 'in the direction perpendicular to the external force'],
+            options: ['in every direction, if the force is constant', 'only in the direction of the external force', 'in no direction once any external force acts', 'in the direction perpendicular to the external force'],
             correctIndex: 3,
             explanation: 'If a net external force acts in one direction, momentum is not conserved in that direction. But it IS conserved in the perpendicular direction (where the force has no component).'
           }
@@ -194,10 +194,10 @@ The impulse from gravity: $J_y = mg\\Delta t = (2)(10)(3) = 60$ kg·m/s — exac
           {
             question: 'A bullet is fired horizontally from a rifle. Considering the bullet alone as the system, is its momentum conserved?',
             options: [
-              'Yes, always',
-              'No — gravity is an external force that changes vertical momentum',
-              'Only during the time in the barrel',
-              'Only if air resistance is negligible'
+              'Yes, because no horizontal force acts on it',
+              'No, gravity changes its vertical momentum',
+              'Only while it is still inside the barrel',
+              'Yes, as long as air resistance is negligible'
             ],
             correctAnswer: 1,
             explanation: 'With only the bullet as the system, the force from gravity is external and changes the bullet\'s vertical momentum. Its horizontal momentum is conserved (ignoring air resistance), but vertical momentum is not.'

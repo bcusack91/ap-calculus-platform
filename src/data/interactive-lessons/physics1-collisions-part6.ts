@@ -59,7 +59,7 @@ Is this collision elastic?
               'Yes, $KE_i = KE_f = 64$ J (elastic)',
               'No, $KE_i = 64$ J but $KE_f \\approx 52.3$ J (inelastic)',
               'No, $KE_i = 64$ J but $KE_f = 68$ J (impossible)',
-              'Cannot determine without more info'
+              'Cannot determine without the collision time'
             ],
             correctAnswer: 1,
             explanation: '$KE_i = \\frac{1}{2}(2)(64) = 64$ J. $KE_f = \\frac{1}{2}(2)(0.64) + \\frac{1}{2}(3)(34.46) = 0.64 + 51.69 \\approx 52.3$ J. Since $KE_f < KE_i$, this is an inelastic collision. (For an elastic collision, we would need $v_{1f} = -1.6$ m/s and $v_{2f} = 6.4$ m/s.)'
@@ -82,12 +82,11 @@ A 0.015 kg bullet at 600 m/s embeds in a 3.0 kg block at rest.
 3) If the block+bullet slides on a surface with $\\mu_k = 0.30$, how far does it slide? (in m, to 3 significant figures, use $g = 10$ $m/s^{2}$)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['3.0', '99.5', '1.50'],
+        questions: [{ question: '1) Velocity right after impact (m/s)', answer: '2.99', acceptableAnswers: ['2.99', '2.985', '3.0', '3'] }, { question: '2) Percentage of kinetic energy lost (%)', answer: '99.5', acceptableAnswers: ['99.5', '99.50', '99.5%'] }, { question: '3) Sliding distance (m)', answer: '1.49', acceptableAnswers: ['1.49', '1.485', '1.5', '1.50'] }],
         hint1: '$v_f = (0.015)(600)/(3.015) \\approx 9/3.015$',
-        hint2: '$KE_i = \\frac{1}{2}(0.015)(360000) = 2700$ J. $KE_f = \\frac{1}{2}(3.015)(9)$. Fraction lost = $(KE_i - KE_f)/KE_i$.',
+        hint2: '$KE_i = \\frac{1}{2}(0.015)(360000) = 2700$ J. $KE_f = \\frac{1}{2}(3.015)(2.985)^2$. Fraction lost = $(KE_i - KE_f)/KE_i$.',
         hint3: 'Use $v^2 = 2\\mu g d$. $d = v^2/(2 \\times 0.30 \\times 10)$.',
-        explanation: '1) $v_f = 9/3.015 \\approx 3.0$ m/s. 2) $KE_i = 2700$ J. $KE_f = \\frac{1}{2}(3.015)(9) = 13.6$ J. Lost = $(2700-13.6)/2700 \\approx 99.5\\%$. 3) $d = (3.0)^2/(2 \\times 0.30 \\times 10) = 9/6 = 1.50$ m.'
+        explanation: '1) $v_f = 9/3.015 \\approx 2.99$ m/s. 2) $KE_i = 2700$ J. $KE_f = \\frac{1}{2}(3.015)(2.985)^2 \\approx 13.4$ J. Lost = $(2700-13.4)/2700 \\approx 99.5\\%$ (equivalently, the fraction kept is $m/(m+M) = 0.015/3.015 \\approx 0.5\\%$). 3) $d = (2.985)^2/(2 \\times 0.30 \\times 10) = 8.91/6 \\approx 1.49$ m. Rounding $v_f$ to 3.0 m/s first gives 1.50 m, which is also accepted.'
       }
     },
     {
@@ -151,8 +150,7 @@ A 5 kg ball at +4 m/s and a 3 kg ball at −6 m/s collide. The 5 kg ball moves a
 3) Is this collision elastic, inelastic, or perfectly inelastic? (type "elastic", "inelastic", or "perfectly inelastic")
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['-1', '90', 'inelastic'],
+        questions: [{ question: '1) Velocity of the 3 kg ball (m/s)', answer: '-1', acceptableAnswers: ['-1', '-1.0'] }, { question: '2) Kinetic energy lost (J)', answer: '90', acceptableAnswers: ['90', '90.0'] }, { question: '3) Collision type', answer: 'inelastic', acceptableAnswers: ['inelastic', 'inelastic collision', 'partially inelastic', 'it is inelastic'] }],
         hint1: '$(5)(4) + (3)(-6) = (5)(1) + (3)(v_2)$. $20 - 18 = 5 + 3v_2$. $3v_2 = -3$.',
         hint2: '$KE_i = \\frac{1}{2}(5)(16) + \\frac{1}{2}(3)(36) = 40 + 54 = 94$ J. $KE_f = \\frac{1}{2}(5)(1) + \\frac{1}{2}(3)(1) = 2.5 + 1.5 = 4$ J.',
         hint3: 'Objects separate (not stuck together), and $KE_f < KE_i$.',
@@ -169,13 +167,13 @@ A 5 kg ball at +4 m/s and a 3 kg ball at −6 m/s collide. The 5 kg ball moves a
         dropdowns: [
           {
             label: 'To solve a perfectly inelastic collision, you should use:',
-            options: ['momentum conservation', 'kinetic energy conservation', 'both momentum and KE', 'Newton\'s Second Law'],
+            options: ['momentum conservation', 'kinetic energy conservation', 'both momentum and KE conservation', 'Newton\'s Second Law with the collision force'],
             correctIndex: 0,
             explanation: 'For a perfectly inelastic collision, use momentum conservation only. KE is not conserved (it is maximally lost).'
           },
           {
             label: 'To solve an elastic collision with two unknowns, you need:',
-            options: ['momentum conservation only', 'kinetic energy conservation only', 'momentum + KE conservation', 'Newton\'s Third Law'],
+            options: ['momentum conservation only', 'kinetic energy conservation only', 'momentum and KE conservation together', 'Newton\'s Third Law alone'],
             correctIndex: 2,
             explanation: 'For elastic collisions with two unknowns, you need both momentum and KE conservation (or the equivalent relative velocity condition).'
           },
@@ -210,13 +208,13 @@ A 5 kg ball at +4 m/s and a 3 kg ball at −6 m/s collide. The 5 kg ball moves a
           {
             question: 'A 3 kg block at 5 m/s hits a 1 kg block at rest. They stick together and slide on a surface ($\\mu_k = 0.25$). How far do they slide? (Use $g = 10$ $m/s^{2}$)',
             options: [
-              '0.56 m',
-              '1.13 m',
+              '1.41 m',
+              '28.1 m',
               '2.81 m',
               '5.00 m'
             ],
             correctAnswer: 2,
-            explanation: '$v_f = (3)(5)/(4) = 3.75$ m/s. $d = v_f^2/(2\\mu g) = 14.0625/(2 \\times 0.25 \\times 10) = 14.0625/5 = 2.81$ m.'
+            explanation: '$v_f = (3)(5)/(4) = 3.75$ m/s. $d = v_f^2/(2\\mu g) = 14.0625/(2 \\times 0.25 \\times 10) = 14.0625/5 = 2.81$ m. Dropping the 2 in the denominator gives 1.41 m, leaving out $g$ gives 28.1 m, and using the 5 m/s speed from before the collision gives 5.00 m.'
           }
         ]
       }

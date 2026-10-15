@@ -72,15 +72,14 @@ Car A (1500 kg) travels east at 20 m/s. Car B (2000 kg) travels west at 15 m/s. 
 
 2) What is the final velocity of the wreckage? (in m/s, to 3 significant figures, include sign)
 
-3) In which direction does the wreckage move? (type "east" or "west")
+3) In which direction does the wreckage move? (type "east", "west", or "neither")
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['0', '0.00', 'east'],
+        questions: [{ question: '1) Total initial momentum (kg·m/s)', answer: '0', acceptableAnswers: ['0', '0.0'] }, { question: '2) Final velocity of the wreckage (m/s)', answer: '0.00', acceptableAnswers: ['0.00', '0', '0.0'] }, { question: '3) Direction of the wreckage', answer: 'neither', acceptableAnswers: ['neither', 'none', 'no direction', 'at rest', 'rest', 'stationary', 'it does not move', 'not moving'] }],
         hint1: '$p_i = (1500)(20) + (2000)(-15) = 30000 - 30000$',
         hint2: '$v_f = p_i / (m_1 + m_2) = 0/3500$',
         hint3: 'If $v_f = 0$, the wreckage doesn\'t move in either direction.',
-        explanation: '1) $p_i = 30{,}000 - 30{,}000 = 0$ kg·m/s. 2) $v_f = 0/3500 = 0.00$ m/s. 3) The wreckage doesn\'t move! The momenta are exactly equal and opposite. (Both "east" and "west" are acceptable since velocity is zero.)'
+        explanation: '1) $p_i = 30{,}000 - 30{,}000 = 0$ kg·m/s. 2) $v_f = 0/3500 = 0.00$ m/s. 3) Neither: the wreckage doesn\'t move, because the two momenta are exactly equal and opposite.'
       }
     },
     {
@@ -96,24 +95,24 @@ An astronaut (80 kg) floating at rest in space fires a thruster that ejects 0.50
           {
             question: 'What is the astronaut\'s speed after the gas is ejected?',
             options: [
-              '10.0 m/s',
-              '12.5 m/s',
+              '159 m/s',
               '12.6 m/s',
-              '25.0 m/s'
+              '12.5 m/s',
+              '1.25 m/s'
             ],
             correctAnswer: 2,
-            explanation: 'After ejection, astronaut mass = $80 - 0.50 = 79.5$ kg. $0 = (79.5)(v_a) + (0.50)(v_g)$. The gas velocity relative to ground: if astronaut moves at $v_a$, gas moves at $v_a - 2000$. $0 = 79.5 v_a + 0.50(v_a - 2000)$. $0 = 80v_a - 1000$. $v_a = 12.5$ m/s. More precisely: $v_a = 1000/79.5 \\approx 12.6$ m/s.'
+            explanation: 'Initial momentum is zero. After ejection the astronaut has mass $80 - 0.50 = 79.5$ kg and velocity $v_a$; the gas leaves at 2000 m/s backward relative to the astronaut, so its ground velocity is $v_a - 2000$. Then $0 = 79.5 v_a + 0.50(v_a - 2000)$, so $80 v_a = 1000$ and $v_a = 12.5$ m/s. Treating 2000 m/s as the gas\'s ground speed gives $1000/79.5 \\approx 12.6$ m/s, and setting the kinetic energies equal (energy is not conserved here) gives about 159 m/s.'
           },
           {
             question: 'If the astronaut performs 3 such burns (each ejecting 0.50 kg), the speed after the third burn is:',
             options: [
-              'Exactly $3 \\times 12.6$ m/s',
-              'Less than $3 \\times 12.6$ m/s',
-              'Greater than $3 \\times 12.6$ m/s',
-              'Exactly 37.8 m/s'
+              'Exactly $3 \\times 12.5$ m/s',
+              'Less than $3 \\times 12.5$ m/s',
+              'Greater than $3 \\times 12.5$ m/s',
+              'Exactly $\\sqrt{3} \\times 12.5$ m/s (energies add)'
             ],
             correctAnswer: 2,
-            explanation: 'Each subsequent burn ejects gas from a lighter astronaut, so each burn gives a slightly larger $\\Delta v$. The total is slightly more than $3 \\times 12.6$ m/s. This is the basis of the rocket equation!'
+            explanation: 'Each burn ejects 0.50 kg at 2000 m/s relative to the astronaut, but from a lighter astronaut, so each $\\Delta v$ is slightly larger: $1000/80 = 12.5$, $1000/79.5 \\approx 12.58$ and $1000/79 \\approx 12.66$ m/s. The total, about 37.7 m/s, is slightly more than $3 \\times 12.5$ m/s. This is the idea behind the rocket equation.'
           }
         ]
       }
@@ -161,7 +160,7 @@ An astronaut (80 kg) floating at rest in space fires a thruster that ejects 0.50
           },
           {
             label: 'During the collision in a ballistic pendulum:',
-            options: ['momentum is conserved for the block alone', 'momentum is conserved for bullet + block', 'kinetic energy is conserved', 'the bullet has more momentum than the block'],
+            options: ['the block alone conserves momentum', 'momentum is conserved for bullet + block', 'kinetic energy is conserved', 'the bullet keeps all its momentum'],
             correctIndex: 1,
             explanation: 'During the collision, the bullet + block system is approximately isolated (gravity impulse is negligible during the brief collision). Momentum is conserved for the system, not for individual objects.'
           }
@@ -179,10 +178,10 @@ An astronaut (80 kg) floating at rest in space fires a thruster that ejects 0.50
           {
             question: 'In the ballistic pendulum, why can\'t we use conservation of kinetic energy during the collision?',
             options: [
-              'The collision is too fast',
-              'Gravity does work',
-              'The collision is perfectly inelastic — KE is lost to deformation and heat',
-              'Momentum is not conserved'
+              'The collision is too brief for its energy to be tracked',
+              'Gravity does negative work on the block during the impact',
+              'The bullet embeds, so KE becomes heat and deformation',
+              'Momentum is not conserved, so energy cannot be conserved either'
             ],
             correctAnswer: 2,
             explanation: 'The bullet embeds in the block (perfectly inelastic collision). Kinetic energy is NOT conserved — it is converted to heat, sound, and deformation. We use momentum conservation for the collision and energy conservation for the subsequent swing.'

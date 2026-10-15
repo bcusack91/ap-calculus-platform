@@ -75,7 +75,7 @@ $$F_c = \\frac{mv^2}{r} = m\\omega^2 r = \\frac{4\\pi^2 mr}{T^2}$$
               '1/4'
             ],
             correctAnswer: 1,
-            explanation: '$f = mv^2/r$. Same $m$ and $v$, but $r_A = 2r_B$. $f_A/f_B = r_B/r_A = 1/2$. The tighter curve (B) needs twice the friction.'
+            explanation: '$f = mv^2/r$. Same $m$ and $v$, but $r_A = 2r_B$. $f_A/f_B = r_B/r_A = 1/2$. Curve B, the tighter curve, needs twice the friction.'
           },
           {
             question: 'A car drives at constant speed over a series of hills. The driver feels lightest at the:',
@@ -157,7 +157,7 @@ Use $g = 10$ $m/s^{2}$.
         dropdowns: [
           {
             label: 'On an FBD for circular motion, centripetal force should be drawn as:',
-            options: ['A separate arrow toward the center', 'A separate arrow away from center', 'It should NOT be drawn — only real forces appear', 'A dashed arrow toward center'],
+            options: ['A separate arrow toward the center', 'A separate arrow away from center', 'It should not be drawn at all', 'A dashed arrow toward center'],
             correctIndex: 2,
             explanation: 'Centripetal force is not a real force — it\'s the net effect of real forces. Only draw tension, gravity, normal, friction, etc.'
           },
@@ -169,7 +169,7 @@ Use $g = 10$ $m/s^{2}$.
           },
           {
             label: 'A ball on a string moves in a vertical circle. The net force at the top is:',
-            options: ['Just tension', 'Just gravity', 'Tension + gravity (both toward center)', 'Tension minus gravity'],
+            options: ['Tension alone, pointing toward the center', 'Gravity alone, since tension is zero', 'Tension plus gravity, both toward the center', 'Tension minus gravity, since they oppose'],
             correctIndex: 2,
             explanation: 'At the top, both tension (along string, toward center) and gravity (downward, toward center) point the same direction. $F_{net} = T + mg = mv^2/r$.'
           }
@@ -188,9 +188,9 @@ Use $g = 10$ $m/s^{2}$.
             question: 'Which of the following situations does NOT involve centripetal force?',
             options: [
               'A car driving in a straight line at constant speed',
-              'A satellite in circular orbit',
+              'A satellite moving in a circular orbit',
               'A ball on a string moving in a circle',
-              'A car rounding a highway curve'
+              'A car rounding a curve on the highway'
             ],
             correctAnswer: 0,
             explanation: 'A car in a straight line at constant speed has zero acceleration — no centripetal force needed. All other options involve circular motion requiring centripetal force.'

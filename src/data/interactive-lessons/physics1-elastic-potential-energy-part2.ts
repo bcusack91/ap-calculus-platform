@@ -99,13 +99,13 @@ This is a **triangle** — the PE formula comes from the area of a triangle!
           {
             question: 'A spring with $k = 200$ N/m is compressed by 0.1 m. The elastic PE stored is:',
             options: [
-              '0.1 J',
+              '2 J',
               '1 J',
               '10 J',
               '20 J'
             ],
             correctAnswer: 1,
-            explanation: '$PE_s = \\frac{1}{2}kx^2 = \\frac{1}{2}(200)(0.1)^2 = \\frac{1}{2}(200)(0.01) = 1$ J.'
+            explanation: '$PE_s = \\frac{1}{2}kx^2 = \\frac{1}{2}(200)(0.1)^2 = \\frac{1}{2}(200)(0.01) = 1$ J. Forgetting the $\\frac{1}{2}$ gives 2 J, forgetting to square $x$ gives 10 J, and $kx = 20$ is the force in newtons, not the energy.'
           },
           {
             question: 'If you triple the compression of a spring, the elastic PE becomes:',
@@ -121,10 +121,10 @@ This is a **triangle** — the PE formula comes from the area of a triangle!
           {
             question: 'A spring is stretched 4 cm. The same spring is compressed 4 cm. Which configuration stores more PE?',
             options: [
-              'Stretched stores more',
-              'Compressed stores more',
-              'Both store the same PE',
-              'Cannot be determined'
+              'Stretched stores more PE',
+              'Compressed stores more PE',
+              'They store equal PE',
+              'Cannot be determined without k'
             ],
             correctAnswer: 2,
             explanation: '$PE_s = \\frac{1}{2}kx^2$. Since $x^2 = (-x)^2$, stretching and compressing by the same amount store identical PE.'
@@ -165,9 +165,9 @@ This is a **triangle** — the PE formula comes from the area of a triangle!
         dropdowns: [
           {
             label: 'Elastic PE is always non-negative because:',
-            options: ['Springs always push', '$k$ is always positive', '$x^2$ is always non-negative', 'Energy is conserved'],
+            options: ['Springs always push', '$x$ is always positive', '$x^2$ is always non-negative', 'Energy is conserved'],
             correctIndex: 2,
-            explanation: '$PE_s = \\frac{1}{2}kx^2$. Both $k > 0$ and $x^2 \\geq 0$, so $PE_s \\geq 0$. The $x^2$ term ensures this.'
+            explanation: '$PE_s = \\frac{1}{2}kx^2$. Since $k > 0$ and $x^2 \\geq 0$, $PE_s \\geq 0$. The $x^2$ term is what matters: $x$ itself can be negative (compression), but its square cannot.'
           },
           {
             label: 'The PE of a spring compressed 5 cm vs. stretched 10 cm (same spring). The stretched one stores:',
@@ -201,24 +201,24 @@ This is a **triangle** — the PE formula comes from the area of a triangle!
           {
             question: 'A spring ($k = 1000$ N/m) is compressed by 0.05 m and then released, launching a 0.1 kg ball. If all PE converts to KE, the ball\'s speed is:',
             options: [
-              '2.5 m/s',
-              '5 m/s',
-              '10 m/s',
+              '3.5 m/s',
+              '5.0 m/s',
+              '7.1 m/s',
               '25 m/s'
             ],
             correctAnswer: 1,
-            explanation: '$PE_s = \\frac{1}{2}(1000)(0.05)^2 = \\frac{1}{2}(1000)(0.0025) = 1.25$ J. $1.25 = \\frac{1}{2}(0.1)v^2 \\Rightarrow v^2 = 25 \\Rightarrow v = 5$ m/s.'
+            explanation: '$PE_s = \\frac{1}{2}(1000)(0.05)^2 = \\frac{1}{2}(1000)(0.0025) = 1.25$ J. $1.25 = \\frac{1}{2}(0.1)v^2 \\Rightarrow v^2 = 25 \\Rightarrow v = 5.0$ m/s. Dropping the $\\frac{1}{2}$ on only the KE side gives 3.5 m/s, dropping it on only the spring side gives 7.1 m/s, and 25 is $v^2$, not $v$.'
           },
           {
             question: 'A spring stores 8 J at $x = 0.2$ m. How much energy does it store at $x = 0.6$ m?',
             options: [
               '24 J',
-              '48 J',
+              '32 J',
               '72 J',
               '216 J'
             ],
             correctAnswer: 2,
-            explanation: '$PE \\propto x^2$. Ratio: $(0.6/0.2)^2 = 9$. $PE = 9 \\times 8 = 72$ J.'
+            explanation: '$PE \\propto x^2$. Ratio: $(0.6/0.2)^2 = 9$. $PE = 9 \\times 8 = 72$ J. Scaling linearly gives 24 J, using the change in stretch (0.4 m) gives 32 J, and cubing the ratio gives 216 J.'
           }
         ]
       }

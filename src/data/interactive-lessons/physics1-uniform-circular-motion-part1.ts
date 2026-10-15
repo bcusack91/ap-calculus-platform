@@ -73,12 +73,12 @@ In uniform circular motion, **speed is constant** but **velocity is not** (becau
             question: 'A wheel spins at 5 revolutions per second. Its period is:',
             options: [
               '5 s',
-              '0.5 s',
+              '1.26 s',
               '0.2 s',
               '2 s'
             ],
             correctAnswer: 2,
-            explanation: '$T = 1/f = 1/5 = 0.2$ s. Each revolution takes 0.2 seconds.'
+            explanation: '$T = 1/f = 1/5 = 0.2$ s. Each revolution takes 0.2 seconds. Writing $T = f$ gives 5 s, and using $2\\pi/f$ (the formula that links $\\omega$ and $T$) gives 1.26 s.'
           },
           {
             question: 'If the radius of a circular path doubles and the period stays the same, the speed:',
@@ -108,11 +108,11 @@ In uniform circular motion, **speed is constant** but **velocity is not** (becau
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.1', '5400', '37.7'],
+        correctAnswers: ['3.14', '5400', '37.7'],
         hint1: '$v = 2\\pi r/T = 2\\pi(4)/8$.',
         hint2: '$T = 2\\pi r/v = 2\\pi(6.7 \\times 10^6)/7800$.',
         hint3: '$v = 2\\pi rf = 2\\pi(0.3)(20)$.',
-        explanation: '1) $v = 2(3.14)(4)/8 = 25.12/8 = 3.14 \\approx 3.1$ m/s. 2) $T = 2(3.14)(6.7 \\times 10^6)/7800 = 42.1 \\times 10^6/7800 = 5397 \\approx 5400$ s ($\\approx 90$ min). 3) $v = 2(3.14)(0.3)(20) = 37.68 \\approx 37.7$ m/s.'
+        explanation: '1) $v = 2(3.14)(4)/8 = 25.12/8 = 3.14$ m/s. 2) $T = 2(3.14)(6.7 \\times 10^6)/7800 = 42.1 \\times 10^6/7800 = 5397 \\approx 5400$ s ($\\approx 90$ min). 3) $v = 2(3.14)(0.3)(20) = 37.68 \\approx 37.7$ m/s.'
       }
     },
     {
@@ -131,7 +131,7 @@ In uniform circular motion, **speed is constant** but **velocity is not** (becau
           },
           {
             label: 'A point near the edge of a spinning disc compared to a point near the center has:',
-            options: ['The same speed', 'Greater speed', 'Less speed', 'Greater period'],
+            options: ['The same speed', 'Greater linear speed', 'Less speed', 'Greater period'],
             correctIndex: 1,
             explanation: 'Both points have the same period (they\'re on the same disc), but $v = 2\\pi r/T$. Larger $r$ → greater speed.'
           },
@@ -161,24 +161,24 @@ In uniform circular motion, **speed is constant** but **velocity is not** (becau
           {
             question: 'The International Space Station orbits Earth every 92 minutes at a radius of $6.78 \\times 10^6$ m. Its orbital speed is approximately:',
             options: [
-              '3,800 m/s',
+              '3,900 m/s',
               '7,700 m/s',
-              '11,200 m/s',
-              '15,000 m/s'
+              '1,230 m/s',
+              '463,000 m/s'
             ],
             correctAnswer: 1,
-            explanation: '$T = 92 \\times 60 = 5520$ s. $v = 2\\pi r/T = 2\\pi(6.78 \\times 10^6)/5520 \\approx 42.6 \\times 10^6/5520 \\approx 7717$ m/s $\\approx 7700$ m/s.'
+            explanation: '$T = 92 \\times 60 = 5520$ s. $v = 2\\pi r/T = 2\\pi(6.78 \\times 10^6)/5520 \\approx 42.6 \\times 10^6/5520 \\approx 7717$ m/s $\\approx 7700$ m/s. Leaving out the 2 gives about 3,900 m/s, leaving out $2\\pi$ gives about 1,230 m/s, and leaving $T$ in minutes gives about 463,000 m/s.'
           },
           {
             question: 'A record player spins at 33.3 RPM. The period of rotation is approximately:',
             options: [
               '0.56 s',
-              '1.8 s',
-              '3.3 s',
+              '1.80 s',
+              '0.03 s',
               '33.3 s'
             ],
             correctAnswer: 1,
-            explanation: '$f = 33.3/60 = 0.555$ Hz. $T = 1/f = 1/0.555 = 1.80$ s.'
+            explanation: '$f = 33.3/60 = 0.555$ Hz. $T = 1/f = 1/0.555 = 1.80$ s. 0.56 s is the frequency in Hz rather than the period, and 0.03 s comes from taking $1/33.3$ without converting minutes to seconds.'
           }
         ]
       }

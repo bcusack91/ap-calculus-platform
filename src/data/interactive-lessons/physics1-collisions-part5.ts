@@ -189,7 +189,7 @@ A 5 kg ball at 6 m/s ($+x$) and a 3 kg ball at 4 m/s ($+y$) collide and stick to
           },
           {
             label: 'Momentum conservation applies in 2D:',
-            options: ['only if the collision is head-on', 'only for elastic collisions', 'always, regardless of collision type', 'never in 2D'],
+            options: ['only if the collision is head-on', 'only for elastic collisions', 'always, regardless of collision type', 'only along the x-axis'],
             correctIndex: 2,
             explanation: 'Momentum conservation applies to all collisions (elastic, inelastic, perfectly inelastic) in all dimensions, as long as the net external force is zero.'
           }
@@ -208,8 +208,8 @@ A 5 kg ball at 6 m/s ($+x$) and a 3 kg ball at 4 m/s ($+y$) collide and stick to
             question: 'Two billiard balls (equal mass) undergo an elastic glancing collision. Ball 1 deflects at 25° above the x-axis. Ball 2 deflects at:',
             options: [
               '25° below the x-axis',
+              '90° below the x-axis',
               '65° below the x-axis',
-              '90° from Ball 1, which is 65° below the x-axis',
               '45° below the x-axis'
             ],
             correctAnswer: 2,

@@ -79,10 +79,10 @@ Sometimes **two or more forces** combine to provide centripetal force:
           {
             question: 'A coin sits on a spinning turntable. As the turntable speeds up, the coin eventually flies off because:',
             options: [
-              'Centrifugal force overcomes friction',
-              'The required centripetal force exceeds the maximum static friction',
+              'Centrifugal force grows larger than friction',
+              'The required centripetal force exceeds $\\mu_s mg$',
               'The coin gains too much kinetic energy',
-              'Normal force decreases'
+              'The normal force on the coin decreases'
             ],
             correctAnswer: 1,
             explanation: 'The required centripetal force $mv^2/r$ increases with speed. When it exceeds $\\mu_s mg$ (maximum static friction), friction can no longer provide enough centripetal force.'
@@ -90,10 +90,10 @@ Sometimes **two or more forces** combine to provide centripetal force:
           {
             question: 'In a conical pendulum (ball on a string making a cone), the centripetal force is provided by:',
             options: [
-              'The full tension in the string',
+              'The full tension, along the whole string',
               'The horizontal component of tension',
-              'Gravity',
-              'The vertical component of tension'
+              'Gravity, pulling the ball toward the center',
+              'The vertical component of the tension'
             ],
             correctAnswer: 1,
             explanation: 'The ball moves in a horizontal circle. The horizontal component of tension ($T\\sin\\theta$) points toward the center of the circle, providing centripetal force. The vertical component ($T\\cos\\theta$) balances gravity.'
@@ -134,7 +134,7 @@ Use $g = 10$ $m/s^{2}$.
         dropdowns: [
           {
             label: 'A bucket of water swung in a vertical circle at the TOP: the water stays in because:',
-            options: ['Centrifugal force pushes it in', 'The bucket accelerates inward faster than free-fall', 'Surface tension', 'Atmospheric pressure'],
+            options: ['Centrifugal force pushes it in', 'The bucket accelerates inward faster than free-fall', 'Surface tension holds it in', 'Air pressure pushes it in'],
             correctIndex: 1,
             explanation: 'If $v^2/r \\geq g$, the bucket "falls" toward the center faster than the water falls due to gravity. The bucket stays under the water, keeping it in.'
           },
@@ -146,7 +146,7 @@ Use $g = 10$ $m/s^{2}$.
           },
           {
             label: 'The maximum speed for a car on a flat curve depends on:',
-            options: ['Mass and radius only', 'Friction coefficient and radius only', 'Mass, friction, and radius', 'Friction, radius, and gravity'],
+            options: ['Mass and radius only', 'Friction and mass only', 'Mass, friction, and radius', 'Friction, radius, and gravity'],
             correctIndex: 3,
             explanation: '$v_{max} = \\sqrt{\\mu_s g r}$. It depends on $\\mu_s$, $g$, and $r$ — but NOT mass! Mass cancels out.'
           }
@@ -176,12 +176,12 @@ Use $g = 10$ $m/s^{2}$.
             question: 'A 1000 kg car travels at 20 m/s over a circular hill of radius 50 m. The normal force at the top is ($g = 10$ $m/s^{2}$):',
             options: [
               '2000 N',
-              '4000 N',
+              '18000 N',
               '8000 N',
               '10000 N'
             ],
             correctAnswer: 0,
-            explanation: '$mg - N = mv^2/r$. $N = mg - mv^2/r = 1000(10) - 1000(400)/50 = 10000 - 8000 = 2000$ N.'
+            explanation: '$mg - N = mv^2/r$. $N = mg - mv^2/r = 1000(10) - 1000(400)/50 = 10000 - 8000 = 2000$ N. 8000 N is $mv^2/r$ alone, 10000 N is the weight, and 18000 N comes from adding $mv^2/r$ as if the car were at the bottom of a dip.'
           }
         ]
       }

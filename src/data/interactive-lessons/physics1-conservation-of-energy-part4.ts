@@ -62,13 +62,13 @@ $$h_{\\text{min}} = \\frac{5}{2}R = 2.5R$$
           {
             question: 'A roller coaster starts from rest at 40 m. Its speed at 15 m is ($g = 10$ $m/s^{2}$):',
             options: [
-              '10 m/s',
-              '15 m/s',
+              '$\\sqrt{250}$ m/s',
+              '$\\sqrt{800}$ m/s',
               '$\\sqrt{500}$ m/s',
-              '25 m/s'
+              '$\\sqrt{300}$ m/s'
             ],
             correctAnswer: 2,
-            explanation: '$v = \\sqrt{2g(h_0 - h)} = \\sqrt{2(10)(40-15)} = \\sqrt{500} \\approx 22.4$ m/s.'
+            explanation: '$v = \\sqrt{2g(h_0 - h)} = \\sqrt{2(10)(40-15)} = \\sqrt{500} \\approx 22.4$ m/s. Dropping the 2 gives $\\sqrt{250}$; using the full 40 m drop gives $\\sqrt{800}$; using the 15 m height as the drop gives $\\sqrt{300}$.'
           },
           {
             question: 'A loop has radius 10 m. The minimum starting height for a car to complete the loop is:',
@@ -76,10 +76,10 @@ $$h_{\\text{min}} = \\frac{5}{2}R = 2.5R$$
               '20 m',
               '25 m',
               '30 m',
-              '40 m'
+              '10 m'
             ],
             correctAnswer: 1,
-            explanation: '$h_{\\text{min}} = 2.5R = 2.5(10) = 25$ m.'
+            explanation: '$h_{\\text{min}} = 2.5R = 2.5(10) = 25$ m. Assuming the car can be at rest at the top gives $2R = 20$ m, and forgetting the $\\frac{1}{2}$ in $\\frac{1}{2}mv_{top}^2$ with $v_{top}^2 = gR$ gives $3R = 30$ m.'
           },
           {
             question: 'A roller coaster car passes point A at 20 m/s (height 30 m). At point B (height 10 m), its speed is ($g = 10$ $m/s^{2}$):',
@@ -138,8 +138,7 @@ Use $g = 10$ $m/s^{2}$.
 3) A pendulum ($L = 2$ m) is released from $60°$. What is the speed at the bottom (in m/s)? Use $\\cos 60° = 0.5$. (Round to nearest tenth.)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['32', '9', '4.5'],
+        questions: [{ question: '1)', answer: '32', acceptableAnswers: ['32', '31.6'] }, { question: '2)', answer: '9', acceptableAnswers: ['9', '8.94'] }, { question: '3)', answer: '4.5', acceptableAnswers: ['4.5', '4.47'] }],
         hint1: '$v = \\sqrt{2gh} = \\sqrt{2(10)(50)}$.',
         hint2: '$v_{\\min} = \\sqrt{gR} = \\sqrt{10 \\times 8}$.',
         hint3: '$v = \\sqrt{2gL(1 - \\cos\\theta)} = \\sqrt{2(10)(2)(1 - 0.5)}$.',
@@ -156,13 +155,13 @@ Use $g = 10$ $m/s^{2}$.
         dropdowns: [
           {
             label: 'At the bottom of a roller coaster loop, the normal force is:',
-            options: ['Equal to $mg$', 'Greater than $mg$', 'Less than $mg$', 'Zero'],
+            options: ['Equal to $mg$, as on level track', 'Greater than $mg$', 'Less than $mg$, as at the top', 'Zero, since riders feel weightless'],
             correctIndex: 1,
             explanation: 'At the bottom: $N - mg = mv^2/R$, so $N = mg + mv^2/R > mg$. You feel heavier!'
           },
           {
             label: 'A pendulum with twice the length released from the same angle will have a bottom speed that is:',
-            options: ['Twice as fast', '$\\sqrt{2}$ times as fast', 'The same', 'Half as fast'],
+            options: ['Twice as fast, since $v \\propto L$', '$\\sqrt{2}$ times as fast', 'The same, since the angle is unchanged', 'Half as fast, since it swings farther'],
             correctIndex: 1,
             explanation: '$v = \\sqrt{2gL(1-\\cos\\theta)}$. Doubling $L$ multiplies $v$ by $\\sqrt{2}$.'
           },
@@ -192,24 +191,24 @@ Use $g = 10$ $m/s^{2}$.
           {
             question: 'A roller coaster starts from rest at 45 m and encounters a loop of radius 10 m. Its speed at the top of the loop is ($g = 10$ $m/s^{2}$):',
             options: [
-              '$\\sqrt{100}$ m/s',
+              '$\\sqrt{900}$ m/s',
               '$\\sqrt{500}$ m/s',
-              '$\\sqrt{200}$ m/s',
+              '$\\sqrt{250}$ m/s',
               '$\\sqrt{700}$ m/s'
             ],
             correctAnswer: 1,
-            explanation: 'Top of loop is at $h = 2R = 20$ m. $v^2 = 2g(h_0 - 2R) = 2(10)(45 - 20) = 500$. $v = \\sqrt{500} \\approx 22.4$ m/s.'
+            explanation: 'Top of loop is at $h = 2R = 20$ m. $v^2 = 2g(h_0 - 2R) = 2(10)(45 - 20) = 500$. $v = \\sqrt{500} \\approx 22.4$ m/s. Using the full 45 m drop gives $\\sqrt{900}$, using $R$ instead of $2R$ for the height of the top gives $\\sqrt{700}$, and dropping the 2 gives $\\sqrt{250}$.'
           },
           {
             question: 'A 1 m pendulum released from $90°$ ($\\cos 90° = 0$) has what speed at the bottom ($g = 10$ $m/s^{2}$)?',
             options: [
               '$\\sqrt{10}$ m/s',
               '$\\sqrt{20}$ m/s',
-              '$\\sqrt{30}$ m/s',
+              '$20$ m/s',
               '$\\sqrt{40}$ m/s'
             ],
             correctAnswer: 1,
-            explanation: '$v = \\sqrt{2gL(1 - \\cos 90°)} = \\sqrt{2(10)(1)(1-0)} = \\sqrt{20}$ m/s.'
+            explanation: '$v = \\sqrt{2gL(1 - \\cos 90°)} = \\sqrt{2(10)(1)(1-0)} = \\sqrt{20}$ m/s. Forgetting the square root gives 20 m/s, dropping the 2 gives $\\sqrt{10}$, and using the diameter $2L$ as the drop gives $\\sqrt{40}$.'
           }
         ]
       }

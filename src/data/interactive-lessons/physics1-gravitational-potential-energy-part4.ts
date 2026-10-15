@@ -114,8 +114,8 @@ All three have the **same speed** when they reach the ground (assuming no air re
           {
             question: 'Ball A is thrown upward and Ball B is thrown horizontally, both at 15 m/s from the same height. Ignoring air resistance, which hits the ground faster?',
             options: [
-              'Ball A (thrown up)',
-              'Ball B (thrown horizontal)',
+              'Ball A, since it rises higher first',
+              'Ball B, since it starts moving sideways',
               'They hit at the same speed',
               'Cannot be determined without more info'
             ],
@@ -171,7 +171,7 @@ Use $g = 10$ $m/s^{2}$.
         dropdowns: [
           {
             label: 'A ball is at the top of its trajectory (thrown straight up). At this point:',
-            options: ['KE = max, PE = min', 'KE = 0, PE = max', 'KE = PE', 'KE = max, PE = 0'],
+            options: ['KE = max, PE = min', 'KE = 0, PE = max', 'KE = PE, each half of E', 'KE = max, PE = zero'],
             correctIndex: 1,
             explanation: 'At the top, $v = 0$ so KE = 0. Height is maximum, so PE is maximum. All energy is potential.'
           },
@@ -183,9 +183,9 @@ Use $g = 10$ $m/s^{2}$.
           },
           {
             label: 'Doubling the height from which an object is dropped changes the impact speed by a factor of:',
-            options: ['2', '$\\sqrt{2}$', '4', '$\\sqrt{3}$'],
+            options: ['2', '$\\sqrt{2}$', '4', '$1/\\sqrt{2}$'],
             correctIndex: 1,
-            explanation: '$v = \\sqrt{2gh}$. Doubling $h$: $v_{\\text{new}} = \\sqrt{2g(2h)} = \\sqrt{2} \\cdot \\sqrt{2gh} = \\sqrt{2} \\cdot v$.'
+            explanation: '$v = \\sqrt{2gh}$. Doubling $h$: $v_{\\text{new}} = \\sqrt{2g(2h)} = \\sqrt{2} \\cdot \\sqrt{2gh} = \\sqrt{2} \\cdot v$. Speed grows with the square root of height, so it does not double (that would need $4h$), and it increases rather than shrinking by $1/\\sqrt{2}$.'
           },
           {
             label: 'A ball thrown downward at 5 m/s from 10 m hits the ground faster than one dropped from 10 m because:',
@@ -207,24 +207,24 @@ Use $g = 10$ $m/s^{2}$.
           {
             question: 'A 3 kg ball is thrown downward at 5 m/s from a 20 m ledge. Its speed at the ground is ($g = 10$ $m/s^{2}$):',
             options: [
-              '15 m/s',
-              '20 m/s',
-              '$\\sqrt{425}$ ≈ 20.6 m/s',
-              '25 m/s'
+              '15.0 m/s',
+              '20.0 m/s',
+              '20.6 m/s',
+              '25.0 m/s'
             ],
             correctAnswer: 2,
-            explanation: '$\\frac{1}{2}(3)(25) + 3(10)(20) = \\frac{1}{2}(3)v_f^2$. $37.5 + 600 = 1.5v_f^2$. $v_f^2 = 637.5/1.5 = 425$. $v_f = \\sqrt{425} \\approx 20.6$ m/s.'
+            explanation: '$\\frac{1}{2}(3)(25) + 3(10)(20) = \\frac{1}{2}(3)v_f^2$. $37.5 + 600 = 1.5v_f^2$. $v_f^2 = 637.5/1.5 = 425$. $v_f = \\sqrt{425} \\approx 20.6$ m/s. Ignoring the initial 5 m/s gives 20.0 m/s; simply adding or subtracting the speeds (20 ± 5) is wrong because energies, not speeds, add.'
           },
           {
             question: 'A pendulum is released from a height of 0.8 m above its lowest point. Its speed at the lowest point is ($g = 10$ $m/s^{2}$):',
             options: [
-              '2 m/s',
-              '4 m/s',
-              '8 m/s',
+              '2.8 m/s',
+              '4.0 m/s',
+              '8.0 m/s',
               '16 m/s'
             ],
             correctAnswer: 1,
-            explanation: '$mgh = \\frac{1}{2}mv^2 \\Rightarrow v = \\sqrt{2gh} = \\sqrt{2(10)(0.8)} = \\sqrt{16} = 4$ m/s.'
+            explanation: '$mgh = \\frac{1}{2}mv^2 \\Rightarrow v = \\sqrt{2gh} = \\sqrt{2(10)(0.8)} = \\sqrt{16} = 4.0$ m/s. Dropping the 2 gives $\\sqrt{gh} \\approx 2.8$ m/s, and forgetting the square root gives 16 (that is $v^2$).'
           }
         ]
       }

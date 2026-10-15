@@ -63,11 +63,11 @@ Time to put it all together! In this workshop, we'll tackle a variety of circula
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['6.3', '7700', '0.006'],
+        correctAnswers: ['6.28', '7700', '0.006'],
         hint1: 'Convert 120 RPM to Hz ($f = 2$ Hz), then $v = 2\\pi rf$.',
         hint2: 'Convert 90 min to seconds. $v = 2\\pi r/T$.',
         hint3: '$a_c = v^2/r$.',
-        explanation: '1) $f = 120/60 = 2$ Hz. $v = 2\\pi(0.5)(2) = 2\\pi = 6.28 \\approx 6.3$ m/s. 2) $T = 90 \\times 60 = 5400$ s. $v = 2\\pi(6.6 \\times 10^6)/5400 = 41.5 \\times 10^6/5400 = 7685 \\approx 7700$ m/s. 3) $a_c = (3 \\times 10^4)^2/(1.5 \\times 10^{11}) = 9 \\times 10^8/1.5 \\times 10^{11} = 6 \\times 10^{-3} = 0.006$ $m/s^{2}$.'
+        explanation: '1) $f = 120/60 = 2$ Hz. $v = 2\\pi(0.5)(2) = 2\\pi \\approx 6.28$ m/s. 2) $T = 90 \\times 60 = 5400$ s. $v = 2\\pi(6.6 \\times 10^6)/5400 = 41.5 \\times 10^6/5400 = 7685 \\approx 7700$ m/s. 3) $a_c = (3 \\times 10^4)^2/(1.5 \\times 10^{11}) = 9 \\times 10^8/1.5 \\times 10^{11} = 6 \\times 10^{-3} = 0.006$ $m/s^{2}$.'
       }
     },
     {
@@ -83,33 +83,33 @@ Time to put it all together! In this workshop, we'll tackle a variety of circula
             options: [
               '16 Hz',
               '50 Hz',
-              '160 Hz',
-              '500 Hz'
+              '316 Hz',
+              '5 Hz'
             ],
             correctAnswer: 1,
-            explanation: '$a_c = 4\\pi^2 rf^2$. $10{,}000 = 4\\pi^2(0.1)f^2 = 3.95f^2$. $f^2 = 2532$. $f = 50.3 \\approx 50$ Hz.'
+            explanation: '$a_c = 4\\pi^2 rf^2$. $10{,}000 = 4\\pi^2(0.1)f^2 = 3.95f^2$. $f^2 = 2532$. $f = 50.3 \\approx 50$ Hz. Using $a = 1000$ (forgetting to multiply by $g$) gives 16 Hz, 316 is $\\omega$ in rad/s rather than $f$, and dividing $v = \\sqrt{a_c r}$ by $2\\pi$ without $r$ gives 5 Hz.'
           },
           {
             question: 'Two runners race on a circular track. Runner A is on the inside lane (radius 30 m) and Runner B is on the outside lane (radius 33 m). If both complete a lap in 60 s, the speed difference between them is:',
             options: [
               '0.31 m/s',
-              '0.52 m/s',
-              '1.05 m/s',
-              '3.14 m/s'
+              '0.63 m/s',
+              '3.46 m/s',
+              '0.05 m/s'
             ],
             correctAnswer: 0,
-            explanation: '$v_A = 2\\pi(30)/60 = \\pi \\approx 3.14$ m/s. $v_B = 2\\pi(33)/60 = 1.1\\pi \\approx 3.46$ m/s. Difference: $0.31$ m/s.'
+            explanation: '$v_A = 2\\pi(30)/60 = \\pi \\approx 3.14$ m/s. $v_B = 2\\pi(33)/60 = 1.1\\pi \\approx 3.46$ m/s. Difference: $0.31$ m/s. 3.46 m/s is runner B\'s speed, not the difference; doubling the 3 m lane gap gives 0.63 m/s; leaving out $2\\pi$ gives 0.05 m/s.'
           },
           {
             question: 'A hamster runs in a wheel of diameter 20 cm at a speed of 1 m/s. The wheel\'s rotation frequency is:',
             options: [
-              '0.5 Hz',
+              '0.8 Hz',
               '1.6 Hz',
               '3.2 Hz',
               '10 Hz'
             ],
             correctAnswer: 1,
-            explanation: '$r = 0.10$ m. $v = 2\\pi rf \\Rightarrow f = v/(2\\pi r) = 1/(2\\pi \\times 0.10) = 1/0.628 \\approx 1.59 \\approx 1.6$ Hz.'
+            explanation: '$r = 0.10$ m. $v = 2\\pi rf \\Rightarrow f = v/(2\\pi r) = 1/(2\\pi \\times 0.10) = 1/0.628 \\approx 1.59 \\approx 1.6$ Hz. Using the diameter as the radius gives 0.8 Hz, using $\\pi r$ instead of $2\\pi r$ gives 3.2 Hz, and $v/r = 10$ is $\\omega$ in rad/s, not $f$.'
           }
         ]
       }
@@ -145,7 +145,7 @@ Time to put it all together! In this workshop, we'll tackle a variety of circula
         dropdowns: [
           {
             label: 'If you double both the radius and the period, the speed:',
-            options: ['Doubles', 'Halves', 'Stays the same', 'Quadruples'],
+            options: ['Doubles, since $r$ doubles', 'Halves, since $T$ doubles', 'Stays the same', 'Quadruples, since both double'],
             correctIndex: 2,
             explanation: '$v = 2\\pi r/T$. Doubling both $r$ and $T$: $v = 2\\pi(2r)/(2T) = 2\\pi r/T$. Speed is unchanged!'
           },

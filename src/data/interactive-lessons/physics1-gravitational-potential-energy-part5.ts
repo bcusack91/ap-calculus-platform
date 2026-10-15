@@ -185,21 +185,21 @@ A ball is dropped from a height and bounces back to a lower height.
           },
           {
             label: 'Just after the bounce, compared to just before:',
-            options: ['KE is the same', 'KE is less', 'KE is more', 'PE is more'],
+            options: ['KE is the same', 'KE is less', 'KE is greater', 'PE is greater'],
             correctIndex: 1,
             explanation: 'Some energy is lost in the bounce (to thermal/sound). The ball leaves with less KE than it arrived with.'
           },
           {
             label: 'The ball reaches a lower max height because:',
-            options: ['Gravity increased', 'Mass changed', 'Energy was lost to thermal/sound in bounce', 'PE changed'],
+            options: ['Gravity is stronger near the ground', 'Momentum was lost but not energy', 'Energy was lost to thermal/sound in bounce', 'PE was converted to KE at the top'],
             correctIndex: 2,
             explanation: 'Energy is lost during the inelastic collision with the ground. Less total energy → lower maximum height.'
           },
           {
             label: 'The thermal energy bar in the final state is:',
-            options: ['Zero', 'Equal to the lost PE', 'Equal to the height difference times mg', 'Negative'],
+            options: ['Zero, since energy is conserved', 'Equal to the initial PE', 'Equal to the height difference times mg', 'Equal to the final PE'],
             correctIndex: 2,
-            explanation: '$E_{\\text{thermal}} = mg(h_i - h_f)$, which is the difference between initial PE and final PE (the "missing" energy).'
+            explanation: '$E_{\\text{thermal}} = mg(h_i - h_f)$: the initial PE minus the final PE (the "missing" energy). It is not the whole initial PE, because $mgh_f$ is still stored at the final height.'
           }
         ]
       }
@@ -215,24 +215,24 @@ A ball is dropped from a height and bounces back to a lower height.
           {
             question: 'A 5 kg ball is dropped from 10 m. It hits the ground and bounces back to 6 m. How much energy was lost to thermal energy ($g = 10$ $m/s^{2}$)?',
             options: [
-              '100 J',
+              '20 J',
               '200 J',
               '300 J',
               '500 J'
             ],
             correctAnswer: 1,
-            explanation: 'Initial $E = mgh_i = 5(10)(10) = 500$ J. Final $E = mgh_f = 5(10)(6) = 300$ J. $E_{\\text{thermal}} = 500 - 300 = 200$ J.'
+            explanation: 'Initial $E = mgh_i = 5(10)(10) = 500$ J. Final $E = mgh_f = 5(10)(6) = 300$ J. $E_{\\text{thermal}} = 500 - 300 = 200$ J. Leaving out $g$ gives 20 J; 300 J and 500 J are the final and initial energies, not the loss.'
           },
           {
             question: 'A bar chart shows KE = 80 J and PE = 120 J at one instant. Later, PE = 50 J and thermal energy = 30 J. The final KE is:',
             options: [
               '80 J',
-              '100 J',
+              '180 J',
               '120 J',
               '150 J'
             ],
             correctAnswer: 2,
-            explanation: 'Total initial = $80 + 120 = 200$ J. Total final = $KE_f + 50 + 30 = 200$ J. $KE_f = 120$ J.'
+            explanation: 'Total initial = $80 + 120 = 200$ J. Total final = $KE_f + 50 + 30 = 200$ J. $KE_f = 120$ J. Adding the thermal energy instead of subtracting it gives 180 J; ignoring it gives 150 J.'
           }
         ]
       }

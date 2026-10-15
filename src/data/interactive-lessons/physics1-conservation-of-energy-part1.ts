@@ -64,10 +64,10 @@ $$KE_i + PE_i = KE_f + PE_f$$
           {
             question: 'A ball is thrown upward. At the top of its path (ignoring air resistance), the ball\'s KE has been converted to:',
             options: [
-              'Thermal energy',
+              'Thermal energy in the ball and the air',
               'Gravitational PE',
-              'Elastic PE',
-              'It disappears'
+              'Elastic PE stored in the ball',
+              'Nothing; the energy is destroyed'
             ],
             correctAnswer: 1,
             explanation: 'Without air resistance, the ball\'s KE transforms entirely into gravitational PE at the peak ($v = 0$, maximum $h$).'
@@ -153,13 +153,13 @@ Use $g = 10$ $m/s^{2}$.
         dropdowns: [
           {
             label: 'A ball dropped from height $h$: at the halfway point, KE equals:',
-            options: ['0', 'Half the total energy', 'All the total energy', 'Cannot determine'],
+            options: ['One fourth of it', 'Half the total energy', 'All the total energy', 'Cannot determine'],
             correctIndex: 1,
-            explanation: 'At half the height, half the PE has converted to KE. So KE = $\\frac{1}{2}mgh/2 = $ half the total energy.'
+            explanation: 'At half the height the ball has fallen $h/2$, so the PE it has lost is $mg(h/2) = \\frac{1}{2}mgh$. That lost PE is now KE, so KE equals half of the total energy $mgh$.'
           },
           {
             label: 'Two identical balls are released from the same height — one dropped, one on a frictionless slide. At the bottom:',
-            options: ['The dropped ball is faster', 'The sliding ball is faster', 'Both have the same speed', 'Depends on the slide angle'],
+            options: ['The dropped ball is faster', 'The sliding ball is faster', 'They arrive with the same speed', 'Depends on the slide angle'],
             correctIndex: 2,
             explanation: 'Conservation of energy depends only on height change, not the path. Both arrive at the same speed: $v = \\sqrt{2gh}$.'
           },
@@ -185,11 +185,11 @@ Use $g = 10$ $m/s^{2}$.
             options: [
               '10 m',
               '20 m',
-              '30 m',
+              '2 m',
               '40 m'
             ],
             correctAnswer: 1,
-            explanation: '$\\frac{1}{2}mv^2 = mgh \\Rightarrow h = v^2/(2g) = 400/20 = 20$ m.'
+            explanation: '$\\frac{1}{2}mv^2 = mgh \\Rightarrow h = v^2/(2g) = 400/20 = 20$ m. Dropping the $\\frac{1}{2}$ gives 40 m, and using $v$ instead of $v^2$ gives 2 m.'
           },
           {
             question: 'A 2 kg ball at rest slides down a frictionless ramp from 10 m. Its KE at the bottom is:',

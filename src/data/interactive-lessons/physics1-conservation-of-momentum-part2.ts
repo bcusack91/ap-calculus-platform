@@ -141,12 +141,11 @@ In a perfectly inelastic collision, kinetic energy is **always** lost (converted
 3) A 8 kg ball at +3 m/s hits a 2 kg ball at +1 m/s. The 8 kg ball slows to +2 m/s. What is the final velocity of the 2 kg ball? (in m/s)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['0.8', '2.0', '5'],
+        questions: [{ question: '1) Final velocity (m/s)', answer: '0.8', acceptableAnswers: ['0.8', '0.80', '+0.8'] }, { question: '2) Final speed of block+bullet (m/s)', answer: '1.99', acceptableAnswers: ['1.99', '1.990', '2.0', '2'] }, { question: '3) Final velocity of the 2 kg ball (m/s)', answer: '5', acceptableAnswers: ['5', '5.0', '+5'] }],
         hint1: '$(4)(5) + (6)(-2) = (10)v_f$. $20 - 12 = 10v_f$.',
         hint2: '$(0.010)(400) + (2.0)(0) = (2.010)v_f$.',
         hint3: '$(8)(3) + (2)(1) = (8)(2) + (2)(v_2)$. $26 = 16 + 2v_2$.',
-        explanation: '1) $8 = 10v_f$. $v_f = 0.8$ m/s. 2) $4 = 2.010 v_f$. $v_f = 4/2.010 \\approx 2.0$ m/s. 3) $26 = 16 + 2v_2$. $v_2 = 10/2 = 5$ m/s.'
+        explanation: '1) $8 = 10v_f$. $v_f = 0.8$ m/s. 2) $4 = 2.010 v_f$. $v_f = 4/2.010 \\approx 1.99$ m/s. 3) $26 = 16 + 2v_2$. $v_2 = 10/2 = 5$ m/s.'
       }
     },
     {
@@ -159,19 +158,19 @@ In a perfectly inelastic collision, kinetic energy is **always** lost (converted
         dropdowns: [
           {
             label: 'When two objects stick together after colliding, it is a:',
-            options: ['elastic collision', 'perfectly inelastic collision', 'explosion', 'superelastic collision'],
+            options: ['elastic collision', 'perfectly inelastic collision', 'recoil (explosion)', 'superelastic collision'],
             correctIndex: 1,
             explanation: 'When objects stick together after colliding, it is a perfectly inelastic collision — the maximum kinetic energy is lost.'
           },
           {
             label: 'In collisions, momentum is:',
-            options: ['always conserved', 'never conserved', 'conserved only in elastic collisions', 'conserved only if no external forces act'],
+            options: ['always conserved, even with large external forces', 'never conserved, because some is lost to heat', 'conserved only in elastic, not inelastic, collisions', 'conserved if no net external force acts'],
             correctIndex: 3,
             explanation: 'Momentum is conserved in ALL collisions (elastic or inelastic) as long as no net external force acts on the system.'
           },
           {
             label: 'In collisions, kinetic energy:',
-            options: ['is always conserved', 'is never conserved', 'may or may not be conserved', 'increases'],
+            options: ['is always conserved', 'is never conserved', 'may or may not be conserved', 'always drops to zero'],
             correctIndex: 2,
             explanation: 'Kinetic energy is conserved only in elastic collisions. In inelastic collisions, some KE is converted to heat, sound, and deformation.'
           }

@@ -153,7 +153,7 @@ NOT $|20 - 15| = 5$ m/s! Always use signed velocities.
 
 2) A 0.15 kg ball moving at +20 m/s is caught (brought to rest). What is the magnitude of the impulse? (in N·s)
 
-3) A 60 kg person jumps and is in the air for 0.5 s. If the average force from the ground during the jump was 1800 N, what impulse did the ground deliver? (in N·s)
+3) A 60 kg person pushes off the ground to jump. The push lasts 0.5 s, and the average force from the ground during the push is 1800 N. What impulse did the ground deliver? (in N·s)
       `,
       exercise: {
         boxes: 3,
@@ -174,7 +174,7 @@ NOT $|20 - 15| = 5$ m/s! Always use signed velocities.
         dropdowns: [
           {
             label: 'Impulse is classified as a:',
-            options: ['scalar', 'vector', 'dimensionless', 'unit'],
+            options: ['scalar', 'vector', 'dimensionless', 'force'],
             correctIndex: 1,
             explanation: 'Impulse is a vector — it has the same direction as the net force that causes it.'
           },
@@ -186,9 +186,9 @@ NOT $|20 - 15| = 5$ m/s! Always use signed velocities.
           },
           {
             label: 'The magnitude of an impulse depends on:',
-            options: ['the force only', 'the time only', 'both force and time', 'neither'],
+            options: ['the force only, not the duration', 'the duration only, not the force', 'both force and time', 'both the force and the mass'],
             correctIndex: 2,
-            explanation: 'Impulse $J = F\\Delta t$ depends on both the force magnitude and the duration. The same impulse can result from a large force for a short time or a small force for a long time.'
+            explanation: 'Impulse $J = F\\Delta t$ depends on both the force magnitude and the duration. The same impulse can result from a large force for a short time or a small force for a long time. It equals $m\\Delta v$, so the change in velocity alone is not enough; the mass matters too.'
           }
         ]
       }
@@ -215,10 +215,10 @@ NOT $|20 - 15| = 5$ m/s! Always use signed velocities.
           {
             question: 'Which requires the greater impulse: stopping a 2 kg ball at 10 m/s, or reversing a 1 kg ball from +10 m/s to −10 m/s?',
             options: [
-              'Stopping the 2 kg ball',
-              'Reversing the 1 kg ball',
+              'Stopping the 2 kg ball, since it has more mass',
+              'Reversing the 1 kg ball, since its velocity changes sign',
               'They require equal impulse',
-              'Cannot be determined'
+              'Cannot be determined without the contact times'
             ],
             correctAnswer: 2,
             explanation: 'Stopping: $|\\Delta p| = |2(0-10)| = 20$ kg·m/s. Reversing: $|\\Delta p| = |1(-10-10)| = 20$ kg·m/s. Both require the same magnitude of impulse.'

@@ -95,10 +95,10 @@ For a rotating solid object (like a wheel):
           {
             question: 'The fact that $\\vec{a} = -\\omega^2 \\vec{r}$ tells us that acceleration:',
             options: [
-              'Points in the same direction as the position vector',
-              'Is perpendicular to the position vector',
+              'Points along the position vector (away from center)',
+              'Is perpendicular to the position vector (tangent)',
               'Points opposite to the position vector (toward center)',
-              'Has zero magnitude'
+              'Has zero magnitude (speed is constant)'
             ],
             correctAnswer: 2,
             explanation: 'The negative sign means $\\vec{a}$ is anti-parallel to $\\vec{r}$. Since $\\vec{r}$ points from center to object, $\\vec{a}$ points from object to center — centripetal!'
@@ -159,7 +159,7 @@ For a rotating solid object (like a wheel):
         dropdowns: [
           {
             label: 'On a spinning disc, all points have the same:',
-            options: ['Linear speed', 'Angular velocity', 'Centripetal acceleration', 'Linear displacement per revolution'],
+            options: ['Linear speed at every radius', 'Angular velocity', 'Centripetal acceleration', 'Linear displacement per revolution'],
             correctIndex: 1,
             explanation: 'A rigid body rotates as one piece — all points sweep the same angle in the same time, so $\\omega$ is the same everywhere.'
           },

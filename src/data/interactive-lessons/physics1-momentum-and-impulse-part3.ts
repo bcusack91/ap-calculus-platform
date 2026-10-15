@@ -152,12 +152,11 @@ This is exact for constant forces and a useful approximation for variable forces
 3) A 2000 kg car traveling at 25 m/s brakes to a stop in 5 s. What is the average braking force? (magnitude, in N)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['600', '8.1', '10000'],
+        questions: [{ question: '1) Average force (N)', answer: '600', acceptableAnswers: ['600', '600.0'] }, { question: '2) Time to slow to 5 m/s (s)', answer: '8.06', acceptableAnswers: ['8.06', '8.065', '8.1'] }, { question: '3) Braking force magnitude (N)', answer: '10000', acceptableAnswers: ['10000', '10,000'] }],
         hint1: '$F = \\Delta p / \\Delta t = m(v_f - v_i)/\\Delta t = (0.060)(50)/0.005$',
         hint2: 'Net upward force = $1200 - 735 = 465$ N. $\\Delta t = m|\\Delta v| / F_{\\text{net}} = 75(50)/465$',
         hint3: '$F = m|\\Delta v|/\\Delta t = (2000)(25)/5$',
-        explanation: '1) $F = m\\Delta v / \\Delta t = (0.060)(50)/(0.005) = 600$ N. 2) $F_{\\text{net}} = 1200 - 735 = 465$ N upward. $\\Delta t = m|\\Delta v|/F = 75(50)/465 \\approx 8.1$ s. 3) $F = m|\\Delta v|/\\Delta t = 2000(25)/5 = 10{,}000$ N.'
+        explanation: '1) $F = m\\Delta v / \\Delta t = (0.060)(50)/(0.005) = 600$ N. 2) $F_{\\text{net}} = 1200 - 735 = 465$ N upward. $\\Delta t = m|\\Delta v|/F = 75(50)/465 \\approx 8.06$ s. 3) $F = m|\\Delta v|/\\Delta t = 2000(25)/5 = 10{,}000$ N.'
       }
     },
     {
@@ -182,7 +181,7 @@ This is exact for constant forces and a useful approximation for variable forces
           },
           {
             label: 'For a fixed impulse, the average force is:',
-            options: ['directly proportional to time', 'inversely proportional to time', 'independent of time', 'proportional to time squared'],
+            options: ['directly proportional to the time interval', 'inversely proportional to time', 'independent of how long the force acts', 'inversely proportional to time squared'],
             correctIndex: 1,
             explanation: 'For a given impulse ($F\\Delta t = $ constant), larger $\\Delta t$ means smaller $F$. Force and time are inversely proportional when impulse is fixed.'
           }
@@ -200,10 +199,10 @@ This is exact for constant forces and a useful approximation for variable forces
           {
             question: 'Two identical balls are dropped from the same height. Ball A bounces back up; Ball B sticks to the ground. Which receives a greater impulse from the ground?',
             options: [
-              'Ball A (it bounces)',
-              'Ball B (it stops)',
-              'They receive equal impulse',
-              'Cannot be determined'
+              'Ball A, because it bounces',
+              'Ball B, because it stops completely',
+              'They receive equal impulse from the ground',
+              'Cannot be determined without contact time'
             ],
             correctAnswer: 0,
             explanation: 'Ball A reverses direction, so $|\\Delta v|$ is greater than for Ball B (which only stops). Greater $|\\Delta v|$ means greater $|\\Delta p|$, so Ball A receives a greater impulse.'

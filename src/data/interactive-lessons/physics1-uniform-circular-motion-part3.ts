@@ -92,7 +92,7 @@ This is the hallmark of uniform circular motion!
               'Still move in a perfect circle at constant speed',
               'Speed up or slow down',
               'Move in a straight line',
-              'Stop moving'
+              'Slow to a stop at the center'
             ],
             correctAnswer: 1,
             explanation: 'Any component of acceleration parallel to velocity changes speed. Only when $\\vec{a} \\perp \\vec{v}$ does the speed remain constant while the direction changes.'
@@ -138,19 +138,19 @@ When a car turns left:
         dropdowns: [
           {
             label: 'A ball on a string moves in a circle. If the string breaks, the ball will:',
-            options: ['Fly outward (radially)', 'Continue in a straight line tangent to the circle', 'Spiral outward', 'Stop immediately'],
+            options: ['Fly radially outward, away from the center', 'Move straight along the tangent', 'Spiral outward along a widening curve', 'Keep circling briefly, then fall'],
             correctIndex: 1,
             explanation: 'Without the centripetal force (tension), the ball follows Newton\'s 1st Law — continuing with its current velocity, which is tangent to the circle.'
           },
           {
             label: '"Centrifugal force" in an inertial reference frame is:',
-            options: ['A real force pointing outward', 'A fictitious force — not real', 'Equal to centripetal force', 'A component of gravity'],
+            options: ['A real force pointing outward', 'A fictitious force, not a real one', 'Equal to centripetal force', 'A component of gravity'],
             correctIndex: 1,
             explanation: 'In an inertial (non-accelerating) frame, centrifugal force does not exist. It\'s a fictitious force that only appears in a rotating reference frame.'
           },
           {
             label: 'Water stays in a bucket swung in a vertical circle because:',
-            options: ['Centrifugal force pushes it in', 'The bucket accelerates toward the center faster than gravity pulls the water down', 'Surface tension holds it', 'The water has no weight at the top'],
+            options: ['Centrifugal force pushes the water into it', 'The bucket\'s inward acceleration is at least $g$', 'Surface tension holds the water in place', 'The water has no weight at the top'],
             correctIndex: 1,
             explanation: 'At the top, both the bucket and water need centripetal acceleration ($v^2/r$) toward the center. If $v^2/r > g$, the bucket "falls" toward the center faster than the water would under gravity alone, so the water stays in.'
           }
@@ -168,21 +168,21 @@ When a car turns left:
           {
             question: 'A car moves clockwise around a circular track. When the car is at the southernmost point, its acceleration points:',
             options: [
-              'South',
+              'South (away from center)',
               'North (toward center)',
-              'East',
-              'West'
+              'East (opposite the velocity)',
+              'West (along the velocity)'
             ],
             correctAnswer: 1,
-            explanation: 'Centripetal acceleration always points toward the center. If the car is at the southernmost point, the center is to the north. So $\\vec{a}_c$ points north.'
+            explanation: 'Centripetal acceleration always points toward the center. At the southernmost point the center is to the north, so $\\vec{a}_c$ points north. Moving clockwise (seen from above), the car\'s velocity there points west, perpendicular to the acceleration.'
           },
           {
             question: 'An astronaut in the International Space Station feels "weightless" because:',
             options: [
-              'There is no gravity in space',
-              'The station and astronaut are both in free fall (both accelerating toward Earth at the same rate)',
-              'Centrifugal force cancels gravity',
-              'The station shields the astronaut from gravity'
+              'There is no gravity at the station\'s altitude',
+              'Station and astronaut are in free fall together',
+              'Centrifugal force cancels gravity in orbit',
+              'The hull shields the astronaut from gravity'
             ],
             correctAnswer: 1,
             explanation: 'The ISS and everything inside it are in free fall — constantly accelerating toward Earth (centripetal acceleration). Since everything falls together, there\'s no normal force, creating the sensation of weightlessness.'

@@ -109,11 +109,11 @@ Hooke\'s Law is valid only for **small displacements**. Beyond the **elastic lim
             options: [
               '10 N',
               '20 N',
-              '50 N',
+              '0.4 N',
               '200 N'
             ],
             correctAnswer: 1,
-            explanation: '$|F| = kx = 500 \\times 0.04 = 20$ N. The force pushes outward (away from compression).'
+            explanation: '$|F| = kx = 500 \\times 0.04 = 20$ N. The force pushes outward (away from compression). An extra $\\frac{1}{2}$ gives 10 N, computing $\\frac{1}{2}kx^2$ (an energy) gives 0.4, and a misplaced decimal ($x = 0.4$) gives 200 N.'
           },
           {
             question: 'Spring A has $k = 100$ N/m and Spring B has $k = 400$ N/m. Both are stretched by the same amount. Spring B\'s force is:',
@@ -129,7 +129,7 @@ Hooke\'s Law is valid only for **small displacements**. Beyond the **elastic lim
           {
             question: 'The negative sign in $F = -kx$ indicates that the spring force:',
             options: [
-              'Is always negative',
+              'Is always a negative number',
               'Always opposes the displacement',
               'Decreases with stretch',
               'Is less than the applied force'
@@ -175,19 +175,19 @@ Use $g = 10$ $m/s^{2}$.
         dropdowns: [
           {
             label: 'A spring is stretched to the right. The spring force points:',
-            options: ['Right (same as stretch)', 'Left (opposite to stretch)', 'Upward', 'The force is zero'],
+            options: ['Right (same as stretch)', 'Left (opposite to stretch)', 'Downward toward the floor', 'The force is zero'],
             correctIndex: 1,
             explanation: 'The spring force is a restoring force — it points opposite to displacement, pulling back toward equilibrium.'
           },
           {
             label: 'If you double the stretch of a spring, the force:',
-            options: ['Stays the same', 'Doubles', 'Quadruples', 'Halves'],
+            options: ['Stays the same', 'Doubles', 'Quadruples', 'Is halved'],
             correctIndex: 1,
             explanation: '$F = kx$. Force is proportional to displacement. Double $x$ → double $F$.'
           },
           {
             label: 'Two springs with the same $k$ are stretched different amounts. The one stretched more:',
-            options: ['Exerts less force', 'Exerts the same force', 'Exerts more force', 'Has a larger $k$'],
+            options: ['Exerts a smaller force', 'Exerts the same force', 'Exerts more force', 'Has a larger spring constant'],
             correctIndex: 2,
             explanation: 'Same $k$, larger $x$ → larger $F = kx$.'
           },
@@ -217,18 +217,18 @@ Use $g = 10$ $m/s^{2}$.
               '500 N/m'
             ],
             correctAnswer: 2,
-            explanation: '$k = mg/x = 0.3(10)/0.06 = 3/0.06 = 50$ N/m.'
+            explanation: '$k = mg/x = 0.3(10)/0.06 = 3/0.06 = 50$ N/m. Using 0.6 m for 6 cm gives 5 N/m, multiplying $mg$ by 6 instead of dividing by 0.06 m gives 18, and using 0.006 m gives 500 N/m.'
           },
           {
             question: 'A spring can safely support a maximum force of 100 N before exceeding its elastic limit. If $k = 2000$ N/m, the maximum safe stretch is:',
             options: [
-              '0.02 m',
+              '0.10 m',
               '0.05 m',
-              '0.5 m',
-              '2 m'
+              '0.32 m',
+              '0.50 m'
             ],
             correctAnswer: 1,
-            explanation: '$x_{\\max} = F_{\\max}/k = 100/2000 = 0.05$ m = 5 cm.'
+            explanation: '$x_{\\max} = F_{\\max}/k = 100/2000 = 0.05$ m = 5 cm. Using $x = 2F/k$ gives 0.10 m, treating 100 N as an energy ($\\frac{1}{2}kx^2 = 100$) gives 0.32 m, and a decimal slip gives 0.50 m.'
           }
         ]
       }

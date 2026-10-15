@@ -113,7 +113,7 @@ The lighter skater moves **faster** in the opposite direction — but the total 
             options: [
               'Greater than before',
               'Less than before',
-              'Equal to zero (same as before)',
+              'Zero, the same as before',
               'Depends on who pushes harder'
             ],
             correctAnswer: 2,
@@ -124,7 +124,7 @@ The lighter skater moves **faster** in the opposite direction — but the total 
             options: [
               'No forces act at all',
               'No net external force on the system',
-              'All objects must have the same mass',
+              'All objects must have equal mass',
               'No energy is lost'
             ],
             correctAnswer: 1,
@@ -175,15 +175,15 @@ The lighter skater moves **faster** in the opposite direction — but the total 
         dropdowns: [
           {
             label: 'Momentum is conserved when:',
-            options: ['no forces act', 'no net external force acts', 'no friction exists', 'objects have equal mass'],
+            options: ['internal forces are zero', 'no net external force acts', 'no friction exists', 'objects have equal mass'],
             correctIndex: 1,
-            explanation: 'Momentum is conserved when the net external force on the system is zero. Internal forces cancel by Newton\'s Third Law.'
+            explanation: 'Momentum is conserved when the net external force on the system is zero. Internal forces can be very large; they cancel in pairs by Newton\'s Third Law, so they never need to be zero.'
           },
           {
             label: 'In collisions, momentum is:',
-            options: ['created', 'destroyed', 'transferred between objects', 'converted to energy'],
+            options: ['created by the collision force', 'partly lost as heat and sound', 'transferred between objects', 'converted into kinetic energy'],
             correctIndex: 2,
-            explanation: 'In collisions, momentum is transferred from one object to another. It is never created or destroyed — only redistributed.'
+            explanation: 'In collisions, momentum is transferred from one object to another. It is never created or destroyed, only redistributed. Heat and sound carry away kinetic energy, not momentum.'
           },
           {
             label: 'Conservation of momentum follows directly from:',
@@ -217,9 +217,9 @@ The lighter skater moves **faster** in the opposite direction — but the total 
             question: 'Momentum conservation is a consequence of which fundamental principle?',
             options: [
               'Conservation of energy',
-              'Newton\'s Third Law (action-reaction)',
+              'Newton\'s third law of motion',
               'The work-energy theorem',
-              'The equivalence of mass and energy'
+              'Mass-energy equivalence'
             ],
             correctAnswer: 1,
             explanation: 'Newton\'s Third Law guarantees that internal forces produce equal and opposite impulses, so the total momentum of an isolated system cannot change.'

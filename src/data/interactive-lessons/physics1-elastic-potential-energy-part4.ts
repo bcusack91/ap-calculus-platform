@@ -112,10 +112,10 @@ Force/acceleration and speed are **out of phase** — when one is max, the other
           {
             question: 'A mass on a spring is at maximum compression. The acceleration:',
             options: [
-              'Points toward equilibrium and is at maximum magnitude',
+              'Has its largest magnitude, toward equilibrium',
               'Points away from equilibrium',
-              'Is zero',
-              'Points toward equilibrium but is small'
+              'Is zero, since the block is at rest',
+              'Is small but toward equilibrium'
             ],
             correctAnswer: 0,
             explanation: 'At maximum compression, $|x|$ is maximum, so $|F| = k|x|$ is maximum, and the force (and acceleration) point toward equilibrium (restoring force).'
@@ -125,7 +125,7 @@ Force/acceleration and speed are **out of phase** — when one is max, the other
             options: [
               'The vertical system oscillates faster',
               'The vertical system oscillates slower',
-              'They oscillate identically (same period)',
+              'They oscillate identically, with the same period',
               'The vertical system doesn\'t oscillate'
             ],
             correctAnswer: 2,
@@ -187,7 +187,7 @@ Use $g = 10$ $m/s^{2}$.
           },
           {
             label: 'The acceleration of a spring-mass system is proportional to:',
-            options: ['Velocity', 'Displacement from equilibrium', 'Time', 'Mass'],
+            options: ['Velocity of the block', 'Displacement from equilibrium', 'Time since release', 'Mass of the block'],
             correctIndex: 1,
             explanation: '$a = -kx/m$. Acceleration is proportional to displacement and points opposite to it.'
           }
@@ -205,13 +205,13 @@ Use $g = 10$ $m/s^{2}$.
           {
             question: 'A 0.4 kg block on a frictionless surface oscillates with $k = 160$ N/m and amplitude 0.05 m. The maximum speed is:',
             options: [
-              '0.5 m/s',
-              '1 m/s',
-              '2 m/s',
-              '4 m/s'
+              '1.4 m/s',
+              '1.0 m/s',
+              '2.0 m/s',
+              '20 m/s'
             ],
             correctAnswer: 1,
-            explanation: '$v_{\\max} = A\\sqrt{k/m} = 0.05\\sqrt{160/0.4} = 0.05\\sqrt{400} = 0.05(20) = 1$ m/s.'
+            explanation: '$v_{\\max} = A\\sqrt{k/m} = 0.05\\sqrt{160/0.4} = 0.05\\sqrt{400} = 0.05(20) = 1.0$ m/s. Dropping the $\\frac{1}{2}$ on one side of $\\frac{1}{2}kA^2 = \\frac{1}{2}mv^2$ gives 1.4 m/s, using $2A$ gives 2.0 m/s, and 20 is $\\sqrt{k/m}$ in rad/s, not a speed.'
           },
           {
             question: 'A block oscillates on a spring. At the moment the block is at half its maximum displacement ($x = A/2$), the speed is:',

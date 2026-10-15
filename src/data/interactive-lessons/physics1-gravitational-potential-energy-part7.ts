@@ -59,7 +59,7 @@ This final lesson integrates all gravitational PE concepts: reference levels, co
             question: 'A ball is launched at angle $\\theta$ above horizontal. At the top of its trajectory:',
             options: [
               'KE = 0 and PE is maximum',
-              'KE > 0 (horizontal component) and PE is maximum',
+              'KE is nonzero and PE is at its maximum',
               'Both KE and PE are maximum',
               'KE is maximum and PE is minimum'
             ],
@@ -127,9 +127,9 @@ Use $g = 10$ $m/s^{2}$.
           },
           {
             label: 'A ball launched at 45° from a cliff has both initial KE and PE. At ground level:',
-            options: ['KE = initial KE', 'KE = initial KE + initial PE', 'KE < initial KE', 'PE = KE'],
+            options: ['KE = initial KE', 'KE = initial KE + initial PE', 'KE < initial KE', 'KE = initial PE only'],
             correctIndex: 1,
-            explanation: 'At ground level, PE = 0 (reference). All energy is kinetic: $KE_f = KE_i + PE_i$ (no friction).'
+            explanation: 'At ground level, PE = 0 (reference). All energy is kinetic: $KE_f = KE_i + PE_i$ (no friction). The launch KE is not lost, so the final KE is more than the initial PE alone.'
           },
           {
             label: 'For a freely falling object, the speed at height $h/3$ compared to speed at the ground is:',
@@ -154,21 +154,21 @@ Use $g = 10$ $m/s^{2}$.
               '1 J',
               '5 J',
               '10 J',
-              '20 J'
+              '50 J'
             ],
             correctAnswer: 2,
-            explanation: 'All PE converts to KE: $KE = mgh = 0.2(10)(5) = 10$ J.'
+            explanation: 'All PE converts to KE: $KE = mgh = 0.2(10)(5) = 10$ J. Leaving out $g$ gives 1 J, an extra $\\frac{1}{2}$ gives 5 J, and leaving out the mass gives 50 J.'
           },
           {
             question: 'A block slides down a 45° incline of length 4 m with friction ($\\mu_k = 0.3$). Its speed at the bottom, starting from rest, is closest to ($g = 10$ $m/s^{2}$):',
             options: [
-              '5.3 m/s',
-              '6.0 m/s',
-              '6.6 m/s',
-              '7.5 m/s'
+              '5.7 m/s',
+              '7.5 m/s',
+              '6.3 m/s',
+              '8.6 m/s'
             ],
             correctAnswer: 2,
-            explanation: '$h = 4\\sin(45°) = 2\\sqrt{2} \\approx 2.83$ m. $N = mg\\cos(45°)$. $W_g = mgh = m(10)(2.83)$. $W_f = -\\mu_k mg\\cos(45°)(4)$. Per unit mass: $v^2 = 2(10)(2.83) - 2(0.3)(10)(0.707)(4) = 56.6 - 17.0 = 39.6$. $v ≈ 6.3$ m/s, closest to 6.6 m/s. More precisely: $v^2 = 2g \\cdot 4(\\sin45° - \\mu_k\\cos45°) = 80(0.707 - 0.212) = 80(0.495) = 39.6$. $v = 6.29$ m/s.'
+            explanation: '$h = 4\\sin(45°) \\approx 2.83$ m and $N = mg\\cos(45°)$. Per unit mass: $v^2 = 2g \\cdot 4(\\sin45° - \\mu_k\\cos45°) = 80(0.707 - 0.212) = 80(0.495) = 39.6$, so $v \\approx 6.3$ m/s. Ignoring friction gives 7.5 m/s, using $N = mg$ instead of $mg\\cos45°$ gives 5.7 m/s, and adding the friction work instead of subtracting it gives 8.6 m/s.'
           }
         ]
       }

@@ -117,10 +117,10 @@ This is why peak forces in collisions can be enormous even though the average fo
           {
             question: 'On a force-time graph, the impulse delivered between $t = 0$ and $t = 4$ s represents the:',
             options: [
-              'Slope of the F-t curve',
-              'Maximum value of F',
+              'Slope of the F-t curve over that interval',
+              'Maximum value of F during the interval',
               'Area under the F-t curve',
-              'Average value of F'
+              'Change in F between $t = 0$ and $t = 4$ s'
             ],
             correctAnswer: 2,
             explanation: 'Impulse is always the area under the force-time graph. This is because $J = \\int F \\, dt$, and integrals represent areas.'
@@ -170,19 +170,19 @@ This is why peak forces in collisions can be enormous even though the average fo
         dropdowns: [
           {
             label: 'On a force-time graph, the impulse is represented by the:',
-            options: ['slope', 'area under the curve', 'maximum height', 'x-intercept'],
+            options: ['slope of the curve', 'area under the curve', 'maximum height of the curve', 'x-intercept of the curve'],
             correctIndex: 1,
             explanation: 'The impulse is the area under the F-t curve. This comes from $J = \\int F \\, dt$.'
           },
           {
             label: 'The average force during a collision is:',
-            options: ['equal to the peak force', 'half the peak force', 'double the peak force', 'depends on the shape'],
+            options: ['always equal to the peak force', 'always half the peak force', 'double the peak force', 'set by the shape of the force profile'],
             correctIndex: 3,
             explanation: 'The average force depends on the shape of the force profile. For a triangle, $F_{\\text{avg}} = F_{\\text{peak}}/2$. For a rectangle, $F_{\\text{avg}} = F_{\\text{peak}}$.'
           },
           {
             label: 'On an F-t graph, area below the time axis represents:',
-            options: ['positive impulse', 'negative impulse', 'zero impulse', 'infinite impulse'],
+            options: ['positive impulse', 'negative impulse', 'zero impulse', 'a decrease in force'],
             correctIndex: 1,
             explanation: 'Areas below the time axis represent forces in the negative direction, contributing negative impulse.'
           }

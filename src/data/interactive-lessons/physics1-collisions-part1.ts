@@ -115,8 +115,8 @@ If you can calculate $KE_i$ and $KE_f$ and they\'re equal → elastic. If $KE_f 
             options: [
               'Kinetic energy',
               'Total mechanical energy',
-              'Momentum',
-              'Speed'
+              'Total momentum of the system',
+              'Each object\'s speed'
             ],
             correctAnswer: 2,
             explanation: 'Momentum is conserved in all collisions (as long as no net external force acts). Kinetic energy is conserved only in elastic collisions.'
@@ -125,9 +125,9 @@ If you can calculate $KE_i$ and $KE_f$ and they\'re equal → elastic. If $KE_f 
             question: 'A ball bounces off a wall elastically. The ball\'s kinetic energy:',
             options: [
               'Doubles',
-              'Stays the same',
+              'Stays the same as before the bounce',
               'Drops to zero',
-              'Is transferred to the wall'
+              'Is mostly transferred to the wall'
             ],
             correctAnswer: 1,
             explanation: 'In an elastic collision, kinetic energy is conserved. The ball bounces back with the same speed (assuming the wall has infinite mass), so its KE is unchanged.'
@@ -150,8 +150,7 @@ A 2 kg ball at +6 m/s hits a 2 kg ball at rest. After collision: Ball 1 stops, B
 3) Is this collision elastic? (type "yes" or "no")
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['36', '36', 'yes'],
+        questions: [{ question: '1) Initial kinetic energy (J)', answer: '36', acceptableAnswers: ['36', '36.0'] }, { question: '2) Final kinetic energy (J)', answer: '36', acceptableAnswers: ['36', '36.0'] }, { question: '3) Is this collision elastic?', answer: 'yes', acceptableAnswers: ['yes', 'y', 'yes, elastic', 'elastic', 'yes it is elastic'] }],
         hint1: '$KE_i = \\frac{1}{2}(2)(6)^2 + \\frac{1}{2}(2)(0)^2$',
         hint2: '$KE_f = \\frac{1}{2}(2)(0)^2 + \\frac{1}{2}(2)(6)^2$',
         hint3: 'Compare $KE_i$ and $KE_f$. If equal, it is elastic.',
@@ -168,13 +167,13 @@ A 2 kg ball at +6 m/s hits a 2 kg ball at rest. After collision: Ball 1 stops, B
         dropdowns: [
           {
             label: 'In an elastic collision, the conserved quantities are:',
-            options: ['momentum only', 'kinetic energy only', 'both momentum and kinetic energy', 'neither'],
+            options: ['momentum only', 'kinetic energy only', 'both momentum and kinetic energy', 'both, but only for equal masses'],
             correctIndex: 2,
             explanation: 'Elastic collisions conserve BOTH momentum and kinetic energy. This double conservation is what distinguishes them from inelastic collisions.'
           },
           {
             label: 'In a head-on elastic collision between equal masses (one at rest), the moving object:',
-            options: ['continues at the same speed', 'stops completely', 'bounces back', 'moves at half speed'],
+            options: ['continues at the same speed', 'stops completely', 'bounces back at its original speed', 'moves at half speed'],
             correctIndex: 1,
             explanation: 'In an elastic collision between equal masses with one at rest, the moving object stops and the stationary one takes all the velocity.'
           },
@@ -212,10 +211,10 @@ A 2 kg ball at +6 m/s hits a 2 kg ball at rest. After collision: Ball 1 stops, B
               'Momentum only',
               'Energy only',
               'Both momentum and kinetic energy',
-              'Neither — it\'s just how the device works'
+              'Neither, because sound is made'
             ],
             correctAnswer: 2,
-            explanation: 'Both conservation laws must be satisfied simultaneously. Conservation of momentum alone would allow 2 balls at half speed, but conservation of KE requires one ball at the original speed. Only the elastic solution satisfies both.'
+            explanation: 'Both conservation laws must be satisfied simultaneously. Conservation of momentum alone would allow 2 balls at half speed, but conservation of KE requires one ball at the original speed. Only the elastic solution satisfies both. The faint click shows the collisions are only nearly elastic; the small energy lost to sound does not change the pattern.'
           }
         ]
       }

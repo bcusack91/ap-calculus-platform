@@ -96,11 +96,11 @@ Use $g = 10$ $m/s^{2}$.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8.9', '60', '14.1'],
+        correctAnswers: ['8.94', '60', '17.9'],
         hint1: 'Energy: $mgh = \\frac{1}{2}mv_{top}^2 + mg(2r)$. Solve for $v_{top}$.',
         hint2: 'At the top: $mg + N = mv_{top}^2/r$. Solve for $N$.',
         hint3: 'Energy: $\\frac{1}{2}kx^2 = \\frac{1}{2}mv_{top}^2 + mg(2r)$. Solve for $v_{top}$.',
-        explanation: '1) $v_{top}^2 = 2g(h - 2r) = 2(10)(8 - 4) = 80$. $v_{top} = \\sqrt{80} = 8.94 \\approx 8.9$ m/s. 2) $N = mv_{top}^2/r - mg = 2(80)/2 - 2(10) = 80 - 20 = 60$ N. 3) $\\frac{1}{2}(500)(0.36) = \\frac{1}{2}(0.5)v^2 + 0.5(10)(2)$. $90 = 0.25v^2 + 10$. $v^2 = 320$. $v = \\sqrt{320} \\approx 17.9$ m/s. Hmm wait, let me recalculate: $90 - 10 = 80$. $v^2 = 80/0.25 = 320$. $v = 17.9$ m/s. That seems high, but the spring is very stiff.'
+        explanation: '1) $v_{top}^2 = 2g(h - 2r) = 2(10)(8 - 4) = 80$. $v_{top} = \\sqrt{80} \\approx 8.94$ m/s. 2) $N = mv_{top}^2/r - mg = 2(80)/2 - 2(10) = 80 - 20 = 60$ N. 3) The top of the loop is $2r = 2$ m above the spring. $\\frac{1}{2}(500)(0.6)^2 = \\frac{1}{2}(0.5)v^2 + 0.5(10)(2)$, so $90 = 0.25v^2 + 10$, $v^2 = 320$, and $v \\approx 17.9$ m/s.'
       }
     },
     {
@@ -112,15 +112,15 @@ Use $g = 10$ $m/s^{2}$.
       exercise: {
         questions: [
           {
-            question: 'A car goes over a circular hill (radius 50 m) at 25 m/s. A 1 kg package sits on the car roof. The normal force on the package at the top of the hill is ($g = 10$ $m/s^{2}$):',
+            question: 'A car goes over a circular hill (radius 50 m) at 20 m/s. A 1 kg package sits on the car roof. The normal force on the package at the top of the hill is ($g = 10$ $m/s^{2}$):',
             options: [
-              '2.5 N',
-              '5 N',
-              '7.5 N',
-              '22.5 N'
+              '2 N',
+              '8 N',
+              '10 N',
+              '18 N'
             ],
             correctAnswer: 0,
-            explanation: 'At top of hill: $mg - N = mv^2/r$. $N = mg - mv^2/r = 1(10) - 1(625)/50 = 10 - 12.5 = -2.5$ N. Negative! The package lifts off. But if the question assumes contact: $N = mg - mv^2/r$. At exactly v where N = 0: $v = \\sqrt{gr} = \\sqrt{500} \\approx 22.4$ m/s. Since 25 > 22.4, the package leaves the surface. The closest answer assuming the question expects the magnitude: 2.5 N of lift-off force.'
+            explanation: 'At the top: $mg - N = mv^2/r$, so $N = mg - mv^2/r = 1(10) - 1(400)/50 = 10 - 8 = 2$ N. 8 N is $mv^2/r$ alone, 10 N is the weight, and 18 N comes from adding instead of subtracting. Above $v = \\sqrt{gr} \\approx 22.4$ m/s the package would lose contact with the roof.'
           },
           {
             question: 'A ball on a string swings in a vertical circle. At what position is the string tension the greatest?',
@@ -163,11 +163,11 @@ Use $g = 10$ $m/s^{2}$.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['22500', '1.24', '16.4'],
+        correctAnswers: ['22500', '1.47', '16.4'],
         hint1: 'At bottom of dip: $N - mg = mv^2/r$.',
         hint2: '$T\\sin\\theta = mv^2/r$ and $T\\cos\\theta = mg$. Also $r = L\\sin\\theta$. Combine these.',
         hint3: '$v = \\sqrt{rg\\tan\\theta}$.',
-        explanation: '1) $N = mg + mv^2/r = 1500(10) + 1500(400)/80 = 15000 + 7500 = 22500$ N. 2) $\\tan\\theta = v^2/(rg)$. $r = L\\sin\\theta$. From $\\tan\\theta = v^2/(rg)$ and $r = L\\sin\\theta$: $v^2 = rg\\tan\\theta = Lg\\sin\\theta\\tan\\theta$. Also $v^2/(rg) = \\sin\\theta/\\cos\\theta \\cdot 1$... Let me use: $T\\sin\\theta = mv^2/r$ and $T\\cos\\theta = mg$, so $\\tan\\theta = v^2/(rg)$. With $r = L\\sin\\theta$: $\\tan\\theta = v^2/(Lg\\sin\\theta)$, $\\sin\\theta/\\cos\\theta = 16/(20\\sin\\theta)$, $\\sin^2\\theta = 0.8\\cos\\theta$. Using $\\sin^2\\theta = 1 - \\cos^2\\theta$: $1 - \\cos^2\\theta = 0.8\\cos\\theta$. $\\cos^2\\theta + 0.8\\cos\\theta - 1 = 0$. $\\cos\\theta = (-0.8 + \\sqrt{0.64 + 4})/2 = (-0.8 + 2.154)/2 = 0.677$. $\\theta = 47.4°$. $r = 2\\sin47.4° = 2(0.736) = 1.47$ m. Hmm let me recheck. Actually $r = L\\sin\\theta = 2(0.736) = 1.47$. But checking: $v^2/(rg) = 16/(1.47 \\times 10) = 1.088 = \\tan47.4°$. Close. Let me just recalculate more carefully. 3) $v = \\sqrt{100(10)\\tan15°} = \\sqrt{1000 \\times 0.268} = \\sqrt{268} = 16.37 \\approx 16.4$ m/s.'
+        explanation: '1) $N = mg + mv^2/r = 1500(10) + 1500(400)/80 = 15000 + 7500 = 22500$ N. 2) $T\\sin\\theta = mv^2/r$ and $T\\cos\\theta = mg$ give $\\tan\\theta = v^2/(rg)$. With $r = L\\sin\\theta$: $\\sin^2\\theta/\\cos\\theta = v^2/(Lg) = 16/20 = 0.8$. Using $\\sin^2\\theta = 1 - \\cos^2\\theta$: $\\cos^2\\theta + 0.8\\cos\\theta - 1 = 0$, so $\\cos\\theta = (-0.8 + \\sqrt{4.64})/2 = 0.677$ and $\\theta \\approx 47.4°$. $r = 2\\sin47.4° = 2(0.736) \\approx 1.47$ m. Check: $v^2/(rg) = 16/14.7 = 1.09 = \\tan47.4°$. 3) $v = \\sqrt{100(10)\\tan15°} = \\sqrt{1000 \\times 0.268} = \\sqrt{268} \\approx 16.4$ m/s.'
       }
     },
     {
@@ -184,18 +184,18 @@ Use $g = 10$ $m/s^{2}$.
               '$mg$',
               '$2mg$',
               '$3mg$',
-              '$4mg$'
+              '$5mg$'
             ],
-            correctAnswer: 1,
-            explanation: 'Energy: $mg(3r) = \\frac{1}{2}mv_{top}^2 + mg(2r)$. $v_{top}^2 = 2gr$. At top: $N + mg = mv_{top}^2/r$. Wait — $mg + N = mv_{top}^2/r$. $N = m(2gr)/r - mg = 2mg - mg = mg$. Actually let me recheck: $N = mv_{top}^2/r - mg = m(2g) - mg = mg$. So $N = mg$.'
+            correctAnswer: 0,
+            explanation: 'Energy: $mg(3r) = \\frac{1}{2}mv_{top}^2 + mg(2r)$, so $v_{top}^2 = 2gr$. At the top both $N$ and $mg$ point toward the center: $N + mg = mv_{top}^2/r = 2mg$, so $N = mg$. Forgetting to subtract $mg$ gives $2mg$, adding $mg$ instead gives $3mg$, and using the full $3r$ drop for $v_{top}$ gives $5mg$.'
           },
           {
             question: 'On an AP exam, you see "centripetal force" in the answer choices for "what force acts on the object." You should:',
             options: [
-              'Select it — centripetal force is a real force',
-              'Not select it — identify the actual force (tension, friction, gravity, etc.)',
-              'Select it only if the object is in a circle',
-              'Select it alongside the real force'
+              'Select it, since it is a real force',
+              'Not select it, and name the real force instead',
+              'Select it only if the path is circular',
+              'Select it along with the real force'
             ],
             correctAnswer: 1,
             explanation: 'Centripetal force is NOT a separate force — it\'s a label for the net radial force. Always identify the real force providing the centripetal acceleration.'

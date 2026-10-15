@@ -75,13 +75,13 @@ $$v_{max} = \\sqrt{\\mu_s g r}$$
           {
             question: 'Why is it "static" friction (not kinetic) that provides centripetal force for a car on a curve?',
             options: [
-              'The tires are not spinning',
-              'The tires are not sliding sideways — they roll without slipping',
+              'The wheels are not spinning as the car turns',
+              'The tires roll without slipping',
               'Kinetic friction doesn\'t exist on roads',
-              'Static friction is always stronger'
+              'Static friction is always the larger force'
             ],
             correctAnswer: 1,
-            explanation: 'The tires don\'t slide sideways across the road — the contact point is stationary. This is static friction. If you skid (tires sliding), kinetic friction takes over and provides less force.'
+            explanation: 'A rolling tire\'s contact patch is momentarily at rest on the road and does not slide sideways, so the friction is static. If you skid (tires sliding), kinetic friction takes over and provides less force.'
           },
           {
             question: 'A heavier truck ($2000$ kg) and a lighter car ($1000$ kg) both have the same tires ($\\mu_s$). On the same curve, the truck\'s maximum speed is:',
@@ -149,11 +149,11 @@ Use $g = 10$ $m/s^{2}$.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['14.1', '1.66', '4.2'],
+        correctAnswers: ['14.1', '1.65', '4.24'],
         hint1: '$v_{max} = \\sqrt{\\mu_s gr}$.',
         hint2: '$T_{period} = 2\\pi\\sqrt{L\\cos\\theta/g}$.',
         hint3: '$T = mg/\\cos\\theta$.',
-        explanation: '1) $v_{max} = \\sqrt{0.5 \\times 10 \\times 40} = \\sqrt{200} = 14.14 \\approx 14.1$ m/s. 2) $T_{period} = 2\\pi\\sqrt{0.8 \\times \\cos30°/10} = 2\\pi\\sqrt{0.8 \\times 0.866/10} = 2\\pi\\sqrt{0.0693} = 2\\pi(0.263) = 1.653 \\approx 1.66$ s. 3) $T = mg/\\cos45° = 0.3(10)/0.707 = 3/0.707 = 4.24 \\approx 4.2$ N.'
+        explanation: '1) $v_{max} = \\sqrt{0.5 \\times 10 \\times 40} = \\sqrt{200} = 14.14 \\approx 14.1$ m/s. 2) $T_{period} = 2\\pi\\sqrt{0.8 \\times \\cos30°/10} = 2\\pi\\sqrt{0.8 \\times 0.866/10} = 2\\pi\\sqrt{0.0693} = 2\\pi(0.2632) \\approx 1.65$ s. 3) $T = mg/\\cos45° = 0.3(10)/0.707 = 3/0.707 \\approx 4.24$ N.'
       }
     },
     {
@@ -166,19 +166,19 @@ Use $g = 10$ $m/s^{2}$.
         dropdowns: [
           {
             label: 'On a flat curve, if you drive faster than $v_{max}$, the car will:',
-            options: ['Roll over', 'Slide toward the outside of the curve', 'Slide toward the inside', 'Stop suddenly'],
+            options: ['Tip over toward the inside', 'Slide toward the outside of the curve', 'Drift toward the inside', 'Spin out in place'],
             correctIndex: 1,
             explanation: 'When $mv^2/r > \\mu_s mg$, friction can\'t provide enough centripetal force. The car continues in a straighter path — sliding toward the outside of the curve.'
           },
           {
             label: 'In a conical pendulum, as the ball speeds up, the string angle $\\theta$:',
-            options: ['Decreases (closer to vertical)', 'Increases (closer to horizontal)', 'Stays the same', 'Oscillates'],
+            options: ['Decreases (closer to vertical)', 'Increases (closer to horizontal)', 'Stays the same', 'Oscillates up and down'],
             correctIndex: 1,
             explanation: 'Faster speed requires more centripetal force, which requires a larger horizontal component of tension. The string swings out to a larger angle.'
           },
           {
             label: 'Why can\'t a conical pendulum have $\\theta = 90°$ (perfectly horizontal)?',
-            options: ['The string would break', 'There would be no vertical component of tension to balance gravity', 'The ball would stop', 'It would require infinite string length'],
+            options: ['The string would break under the load', 'No vertical tension component would balance gravity', 'The ball would stop moving in its circle', 'It would require infinite string length'],
             correctIndex: 1,
             explanation: 'At $\\theta = 90°$, $T\\cos90° = 0$, so there\'s no vertical force to balance $mg$. The ball would fall. $\\theta = 90°$ requires infinite speed.'
           }
@@ -207,13 +207,13 @@ Use $g = 10$ $m/s^{2}$.
           {
             question: 'A conical pendulum with $L = 1$ m has period $T = 1.5$ s. The angle $\\theta$ the string makes with the vertical is closest to:',
             options: [
-              '$25°$',
+              '$35°$',
               '$45°$',
               '$56°$',
-              '$70°$'
+              '$68°$'
             ],
             correctAnswer: 2,
-            explanation: '$T = 2\\pi\\sqrt{L\\cos\\theta/g}$. $\\cos\\theta = gT^2/(4\\pi^2 L) = 10(2.25)/(4 \\times 9.87 \\times 1) = 22.5/39.48 = 0.570$. $\\theta = \\cos^{-1}(0.570) \\approx 55.2° \\approx 56°$.'
+            explanation: '$T = 2\\pi\\sqrt{L\\cos\\theta/g}$, so $\\cos\\theta = gT^2/(4\\pi^2 L) = 9.8(2.25)/(39.48 \\times 1) = 0.559$ and $\\theta = \\cos^{-1}(0.559) \\approx 56°$ (with $g = 10$ the result is about $55°$, still closest to $56°$). Using $\\sin\\theta$ in place of $\\cos\\theta$ gives about $35°$, and forgetting to square $T$ gives about $68°$.'
           }
         ]
       }

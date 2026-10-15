@@ -49,12 +49,12 @@ A 0.145 kg baseball traveling at $+38$ m/s toward a batter is hit and travels at
             question: 'What is the average force exerted by the bat on the ball?',
             options: [
               '1,690 N',
-              '6,300 N',
+              '6,280 N',
               '10,875 N',
-              '14,500 N'
+              '21,750 N'
             ],
             correctAnswer: 2,
-            explanation: '$\\Delta p = m(v_f - v_i) = 0.145(-52 - 38) = 0.145(-90) = -13.05$ kg·m/s. $F = |\\Delta p|/\\Delta t = 13.05/0.0012 = 10{,}875$ N. The magnitude of the average force is about 10,875 N.'
+            explanation: '$\\Delta p = m(v_f - v_i) = 0.145(-52 - 38) = 0.145(-90) = -13.05$ kg·m/s. $F = |\\Delta p|/\\Delta t = 13.05/0.0012 = 10{,}875$ N. Using only one speed (52 m/s) gives about 6,280 N, and subtracting the speeds instead of using signed velocities gives about 1,690 N. Doubling the result would give the peak of a triangular pulse, not the average force.'
           }
         ]
       }
@@ -161,7 +161,7 @@ A 0.60 kg ball is dropped from a height and hits the floor at 8.0 m/s (downward)
         dropdowns: [
           {
             label: 'When calculating change in velocity for impulse problems, you should:',
-            options: ['add the speeds', 'subtract the speeds', 'use signed velocities: $v_f - v_i$', 'ignore direction'],
+            options: ['add the speeds, $|v_i| + |v_f|$, every time', 'subtract the magnitudes: $|v_f| - |v_i|$', 'use signed velocities: $v_f - v_i$', 'ignore direction and use magnitudes only'],
             correctIndex: 2,
             explanation: 'Always use signed velocities. $\\Delta v = v_f - v_i$ with proper signs accounts for direction changes automatically.'
           },
@@ -192,23 +192,23 @@ A 0.60 kg ball is dropped from a height and hits the floor at 8.0 m/s (downward)
             question: 'A 0.50 kg ball moving at +10 m/s hits a wall and bounces back at −8 m/s. A second identical ball moving at +10 m/s hits the wall and sticks (stops). Which ball exerts a greater impulse on the wall?',
             options: [
               'The ball that bounces',
-              'The ball that sticks',
+              'The ball that sticks, since it stays in contact',
               'They exert equal impulse on the wall',
               'Cannot determine without knowing contact time'
             ],
             correctAnswer: 0,
-            explanation: 'Bouncing ball: $|\\Delta p| = |0.5(-8-10)| = 9$ N·s. Sticking ball: $|\\Delta p| = |0.5(0-10)| = 5$ N·s. The bouncing ball delivers greater impulse because it reverses direction.'
+            explanation: 'Bouncing ball: $|\\Delta p| = |0.5(-8-10)| = 9$ N·s. Sticking ball: $|\\Delta p| = |0.5(0-10)| = 5$ N·s. The bouncing ball delivers greater impulse because it reverses direction. Contact time affects the average force, not the impulse, so it is not needed here.'
           },
           {
-            question: 'A rocket in deep space fires its engines, ejecting 10 kg of fuel at 3000 m/s (relative to the rocket). If the rocket has mass 990 kg after the burn, what is its change in speed?',
+            question: 'A rocket in deep space fires its engines, ejecting 10 kg of fuel backward at 3000 m/s (as measured by an observer at rest). If the rocket has mass 990 kg after the burn, what is its change in speed?',
             options: [
-              '3.0 m/s',
+              '30.0 m/s',
               '30.3 m/s',
               '300 m/s',
               '3000 m/s'
             ],
             correctAnswer: 1,
-            explanation: 'By momentum conservation (initial momentum = 0): $0 = (990)(v) + (10)(-3000)$. So $v = 30{,}000/990 \\approx 30.3$ m/s.'
+            explanation: 'By momentum conservation (initial momentum = 0): $0 = (990)(v) + (10)(-3000)$. So $v = 30{,}000/990 \\approx 30.3$ m/s. Dividing by 1000 kg (the mass before the burn) gives 30.0 m/s, which is the most common slip.'
           }
         ]
       }

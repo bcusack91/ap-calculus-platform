@@ -83,7 +83,7 @@ At the top, tension plays the role of $N$:
 
 $$T + mg = \\frac{mv^2}{r}$$
 
-Wait — note the sign! At the top of a vertical circle with a string, both tension and gravity point toward the center (down):
+Note the sign: at the top of a vertical circle with a string, both tension and gravity point toward the center (down), so solving for the tension gives:
 
 $$T = \\frac{mv^2}{r} - mg$$
 
@@ -101,13 +101,13 @@ Minimum speed (when $T = 0$): $v_{min} = \\sqrt{gr}$ — same result!
           {
             question: 'A roller coaster has a loop of radius 10 m. The minimum speed at the top of the loop is ($g = 10$ $m/s^{2}$):',
             options: [
-              '5 m/s',
+              '14.1 m/s',
               '10 m/s',
-              '20 m/s',
+              '22.4 m/s',
               '100 m/s'
             ],
             correctAnswer: 1,
-            explanation: '$v_{min} = \\sqrt{gr} = \\sqrt{10 \\times 10} = \\sqrt{100} = 10$ m/s.'
+            explanation: '$v_{min} = \\sqrt{gr} = \\sqrt{10 \\times 10} = \\sqrt{100} = 10$ m/s. Forgetting the square root gives 100 m/s; $\\sqrt{2gr} \\approx 14.1$ m/s and $\\sqrt{5gr} \\approx 22.4$ m/s mix up the top condition with energy results ($\\sqrt{5gr}$ is the minimum speed at the bottom).'
           },
           {
             question: 'A 50 kg person is on a roller coaster at the bottom of a loop ($r = 20$ m, $v = 15$ m/s). The normal force on the person is ($g = 10$ $m/s^{2}$):',
@@ -115,10 +115,10 @@ Minimum speed (when $T = 0$): $v_{min} = \\sqrt{gr}$ — same result!
               '62.5 N',
               '500 N',
               '1063 N',
-              '1500 N'
+              '563 N'
             ],
             correctAnswer: 2,
-            explanation: '$N = mg + mv^2/r = 50(10) + 50(225)/20 = 500 + 562.5 = 1062.5 \\approx 1063$ N. This is about 2.1 times their weight!'
+            explanation: '$N = mg + mv^2/r = 50(10) + 50(225)/20 = 500 + 562.5 = 1062.5 \\approx 1063$ N, about 2.1 times their weight. 563 N is $mv^2/r$ alone, 500 N is the weight alone, and 62.5 N comes from subtracting the weight as if the rider were at the top.'
           },
           {
             question: 'At the top of a vertical loop, a rider feels "weightless." This means:',
@@ -144,7 +144,7 @@ Use $g = 10$ $m/s^{2}$.
 
 1) A 0.5 kg ball on a 1 m string is swung in a vertical circle at 5 m/s at the bottom. What is the string tension at the bottom (in N)?
 
-2) What is the tension in the same string at the top, if the speed at the top is 3 m/s (in N)?
+2) On a faster swing, the same ball moves at 4 m/s at the top of the circle. What is the string tension at the top (in N)?
 
 3) A roller coaster loop has radius 15 m. What minimum height must the car start from (released from rest) to safely complete the loop? Assume frictionless. Hint: use energy conservation. (in m)
 
@@ -152,11 +152,11 @@ Use $g = 10$ $m/s^{2}$.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['17.5', '0.5', '37.5'],
+        correctAnswers: ['17.5', '3', '37.5'],
         hint1: '$T = mg + mv^2/r$ at the bottom.',
         hint2: '$T = mv^2/r - mg$ at the top.',
         hint3: 'At top of loop: $v_{min} = \\sqrt{gr}$. Height of top of loop = $2r$. Energy: $mgh = \\frac{1}{2}mv_{top}^2 + mg(2r)$.',
-        explanation: '1) $T = 0.5(10) + 0.5(25)/1 = 5 + 12.5 = 17.5$ N. 2) $T = 0.5(9)/1 - 0.5(10) = 4.5 - 5 = -0.5$ N. Since tension can\'t be negative, the ball doesn\'t make it around! Actually at 3 m/s: $T = mv^2/r - mg = 0.5(9)/1 - 5 = 4.5 - 5 = -0.5$. The speed is too low. But accepting the math: $|T| = 0.5$ N (with the understanding the ball falls). 3) $mgh = \\frac{1}{2}m(gr) + mg(2r)$. $h = r/2 + 2r = 5r/2 = 5(15)/2 = 37.5$ m.'
+        explanation: '1) At the bottom: $T = mg + mv^2/r = 0.5(10) + 0.5(25)/1 = 5 + 12.5 = 17.5$ N. 2) At the top, tension and gravity both point toward the center: $T = mv^2/r - mg = 0.5(16)/1 - 0.5(10) = 8 - 5 = 3$ N. (Any top speed below $\\sqrt{gr} \\approx 3.16$ m/s would give a negative result, meaning the string goes slack.) 3) $mgh = \\frac{1}{2}m(gr) + mg(2r)$. $h = r/2 + 2r = 5r/2 = 5(15)/2 = 37.5$ m.'
       }
     },
     {
@@ -181,13 +181,13 @@ Use $g = 10$ $m/s^{2}$.
           },
           {
             label: 'Doubling the loop radius while keeping the same speed at the top:',
-            options: ['Increases the normal force at the top', 'Decreases the minimum speed', 'Has no effect', 'Makes the loop impossible to complete'],
+            options: ['Decreases the normal force at the top', 'Lowers the minimum speed needed at the top', 'Has no effect on the normal force', 'Increases the normal force at the top'],
             correctIndex: 0,
-            explanation: 'At the top: $N = mv^2/r - mg$. Larger $r$ means $mv^2/r$ is smaller, but $v_{min} = \\sqrt{gr}$ is also larger. At the same speed, $N = mv^2/r - mg$ decreases. Wait — actually $N$ depends on $v$ and $r$. At the same $v$, larger $r$ → smaller $mv^2/r$ → smaller $N$. So N decreases. Hmm, let me reconsider: yes, $N = mv^2/r - mg$ gets smaller with larger $r$.'
+            explanation: 'At the top: $mg + N = mv^2/r$, so $N = mv^2/r - mg$. At the same speed, a larger $r$ makes $mv^2/r$ smaller, so $N$ decreases. The minimum speed $v_{min} = \\sqrt{gr}$ also rises with $r$, so a bigger loop is harder, not easier, to complete at a given speed.'
           },
           {
             label: 'The speed at the bottom of a vertical loop is typically greater than at the top because:',
-            options: ['The normal force is greater at the bottom', 'Energy conservation: bottom has less PE, more KE', 'Centripetal force is greater at the bottom', 'The radius is larger at the bottom'],
+            options: ['The normal force is greater at the bottom', 'Lower height means less PE and more KE', 'Centripetal force is greater at the bottom', 'The loop\'s radius is larger at the bottom'],
             correctIndex: 1,
             explanation: 'By conservation of energy, the ball trades PE for KE. At the bottom (lower height), PE is less and KE is more, so speed is greater.'
           }
@@ -207,22 +207,22 @@ Use $g = 10$ $m/s^{2}$.
             options: [
               '$\\sqrt{5} \\approx 2.24$ m/s',
               '$\\sqrt{10} \\approx 3.16$ m/s',
-              '$5$ m/s',
-              '$10$ m/s'
+              '$\\sqrt{20} \\approx 4.47$ m/s',
+              '$\\sqrt{25} = 5$ m/s'
             ],
             correctAnswer: 0,
-            explanation: '$v_{min} = \\sqrt{gr} = \\sqrt{10 \\times 0.5} = \\sqrt{5} \\approx 2.24$ m/s.'
+            explanation: '$v_{min} = \\sqrt{gr} = \\sqrt{10 \\times 0.5} = \\sqrt{5} \\approx 2.24$ m/s. Using the diameter gives $\\sqrt{10}$; $\\sqrt{4gr} = \\sqrt{20}$ and $\\sqrt{5gr} = 5$ m/s are energy results for the bottom of the circle, not the condition at the top.'
           },
           {
-            question: 'A 60 kg pilot pulls out of a dive along a circular arc of radius 200 m at 50 m/s. The apparent weight (normal force) at the bottom is:',
+            question: 'A 60 kg pilot pulls out of a dive along a circular arc of radius 200 m at 50 m/s. The apparent weight (normal force) at the bottom is ($g = 10$ $m/s^{2}$):',
             options: [
               '600 N',
               '750 N',
-              '1050 N',
+              '150 N',
               '1350 N'
             ],
             correctAnswer: 3,
-            explanation: '$N = mg + mv^2/r = 60(10) + 60(2500)/200 = 600 + 750 = 1350$ N. That\'s $2.25g$ — the pilot feels 2.25 times their weight!'
+            explanation: '$N = mg + mv^2/r = 60(10) + 60(2500)/200 = 600 + 750 = 1350$ N. That\'s $2.25g$, so the pilot feels 2.25 times their weight. 750 N is $mv^2/r$ alone, 600 N is the weight alone, and 150 N comes from subtracting the weight as if the pilot were at the top of a loop.'
           }
         ]
       }

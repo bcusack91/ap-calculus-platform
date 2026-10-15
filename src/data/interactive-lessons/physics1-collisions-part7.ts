@@ -68,10 +68,10 @@ $$v_{1f} = \\frac{m_1 - m_2}{m_1 + m_2}v_{1i}, \\quad v_{2f} = \\frac{2m_1}{m_1 
           {
             question: 'Ball A bounces off Ball B. Ball C sticks to Ball D. All balls are identical and have the same initial speeds. Which collision has MORE change in momentum for the striking ball?',
             options: [
-              'A-B collision (bouncing)',
-              'C-D collision (sticking)',
-              'They have equal $\\Delta p$',
-              'Cannot determine'
+              'The bouncing A-B collision',
+              'C-D collision, since the ball stops',
+              'They have equal $\\Delta p$, since speeds match',
+              'Cannot determine without contact time'
             ],
             correctAnswer: 0,
             explanation: 'Ball A reverses direction (larger $|\\Delta v|$), so it experiences a greater change in momentum than Ball C (which just stops relative to D). Bouncing always involves a greater impulse than sticking for the same initial conditions.'
@@ -154,7 +154,7 @@ $$v_{1f} = \\frac{m_1 - m_2}{m_1 + m_2}v_{1i}, \\quad v_{2f} = \\frac{2m_1}{m_1 
         dropdowns: [
           {
             label: 'Momentum is conserved in:',
-            options: ['elastic only', 'inelastic only', 'perfectly inelastic only', 'all collision types'],
+            options: ['elastic only', 'inelastic only', 'all types, but only in 1D', 'all collision types'],
             correctIndex: 3,
             explanation: 'Momentum is conserved in ALL collision types (elastic, inelastic, and perfectly inelastic) as long as no net external force acts.'
           },
@@ -166,7 +166,7 @@ $$v_{1f} = \\frac{m_1 - m_2}{m_1 + m_2}v_{1i}, \\quad v_{2f} = \\frac{2m_1}{m_1 
           },
           {
             label: 'When a light ball hits a much heavier stationary wall elastically, the ball:',
-            options: ['stops completely', 'bounces back at nearly the same speed', 'passes through the wall', 'slows to half speed'],
+            options: ['stops completely', 'bounces back at nearly the same speed', 'sticks to the wall', 'slows to half speed'],
             correctIndex: 1,
             explanation: 'When a light object hits a much heavier stationary object elastically, it bounces back at nearly the same speed ($v_{1f} \\approx -v_{1i}$). The heavy object barely moves.'
           }
@@ -184,10 +184,10 @@ $$v_{1f} = \\frac{m_1 - m_2}{m_1 + m_2}v_{1i}, \\quad v_{2f} = \\frac{2m_1}{m_1 
           {
             question: 'In which scenario is the MOST kinetic energy converted to other forms?',
             options: [
-              'Two equal balls, elastic collision',
-              'A ball bouncing off a much heavier wall',
-              'Two equal balls, perfectly inelastic collision',
-              'A ball at +10 m/s and another at −10 m/s, equal mass, perfectly inelastic'
+              'Two equal balls in an elastic head-on collision',
+              'A ball bouncing elastically off a much heavier wall',
+              'Two equal balls, one at rest, that stick together',
+              'Equal masses at +10 m/s and −10 m/s that stick together'
             ],
             correctAnswer: 3,
             explanation: 'Equal masses at equal but opposite speeds in a perfectly inelastic collision: $v_f = 0$, so ALL kinetic energy is lost. $KE_f = 0$. This is the absolute maximum KE loss scenario.'

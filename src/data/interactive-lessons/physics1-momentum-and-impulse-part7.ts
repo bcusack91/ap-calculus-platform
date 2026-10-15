@@ -46,9 +46,9 @@ Let\'s bring together all the key ideas from this topic and practice AP-style qu
           {
             question: 'A rubber ball and a clay ball of equal mass are thrown at a wall with equal speeds. The rubber ball bounces; the clay ball sticks. Which exerts a greater force on the wall?',
             options: [
-              'The clay ball',
-              'The rubber ball',
-              'They exert equal force',
+              'The clay ball, because it stays in contact with the wall',
+              'The rubber ball, because its momentum reverses direction',
+              'They exert equal force, since their initial momenta are equal',
               'Cannot be determined without contact time'
             ],
             correctAnswer: 3,
@@ -57,10 +57,10 @@ Let\'s bring together all the key ideas from this topic and practice AP-style qu
           {
             question: 'An object of mass $m$ has momentum $p$. Its kinetic energy is:',
             options: [
-              '$mp$',
+              '$p^2/m$',
               '$p/(2m)$',
               '$p^2/(2m)$',
-              '$2mp^2$'
+              '$p^2/(2m^2)$'
             ],
             correctAnswer: 2,
             explanation: 'From $p = mv$: $v = p/m$. Then $KE = \\frac{1}{2}mv^2 = \\frac{1}{2}m(p/m)^2 = \\frac{p^2}{2m}$.'
@@ -101,13 +101,13 @@ Let\'s bring together all the key ideas from this topic and practice AP-style qu
           {
             question: 'Two identical balls are thrown at a surface at the same speed. One bounces elastically; the other stops on impact. If both have the same contact time, which experiences a greater average force?',
             options: [
-              'The ball that stops',
+              'The ball that stops, since it loses all its speed',
               'The ball that bounces',
-              'Equal forces',
-              'Not enough information'
+              'Equal forces, since both start at the same speed',
+              'Not enough information without the masses'
             ],
             correctAnswer: 1,
-            explanation: 'The ball that bounces has $|\\Delta v| = 2v$ (reverses completely), while the one that stops has $|\\Delta v| = v$. With the same mass and contact time, the bouncing ball experiences twice the impulse and therefore twice the average force.'
+            explanation: 'The balls are identical, so their masses are equal. The ball that bounces has $|\\Delta v| = 2v$ (reverses completely), while the one that stops has $|\\Delta v| = v$. With the same mass and contact time, the bouncing ball experiences twice the impulse and therefore twice the average force.'
           }
         ]
       }
@@ -151,7 +151,7 @@ Let\'s bring together all the key ideas from this topic and practice AP-style qu
           },
           {
             label: 'Graphically, impulse is determined by:',
-            options: ['the slope of the F-t curve', 'the area under the F-t curve', 'the maximum force', 'the force at the midpoint'],
+            options: ['the slope of the F-t curve', 'the area under the F-t curve', 'the maximum force reached on the F-t curve', 'the force at the midpoint'],
             correctIndex: 1,
             explanation: 'Impulse is always the area under the force-time curve: $J = \\int F \\, dt$.'
           },
@@ -175,13 +175,13 @@ Let\'s bring together all the key ideas from this topic and practice AP-style qu
           {
             question: 'A 0.25 kg ball is dropped from 5 m above a hard floor. It rebounds to a height of 3.2 m. Taking $g = 10$ $m/s^{2}$, what is the impulse from the floor? (Hint: find speeds using $v = \\sqrt{2gh}$)',
             options: [
-              '2.5 N·s',
-              '4.5 N·s',
-              '4.5 kg·m/s (upward)',
-              '6.5 kg·m/s (upward)'
+              '0.50 N·s upward',
+              '2.5 N·s upward',
+              '4.5 N·s upward',
+              '4.5 N·s downward'
             ],
             correctAnswer: 2,
-            explanation: 'Speed down: $v_1 = \\sqrt{2(10)(5)} = 10$ m/s. Speed up: $v_2 = \\sqrt{2(10)(3.2)} = 8$ m/s. Taking up as positive: $J = m(v_f - v_i) = 0.25(+8 - (-10)) = 0.25(18) = 4.5$ kg·m/s upward.'
+            explanation: 'Speed down: $v_1 = \\sqrt{2(10)(5)} = 10$ m/s. Speed up: $v_2 = \\sqrt{2(10)(3.2)} = 8$ m/s. Taking up as positive: $J = m(v_f - v_i) = 0.25(+8 - (-10)) = 0.25(18) = 4.5$ N·s upward. Subtracting the speeds gives only 0.50 N·s, using just the impact speed gives 2.5 N·s, and the floor pushes up, so the impulse cannot be downward.'
           },
           {
             question: 'The impulse-momentum theorem is most closely related to which of Newton\'s laws?',

@@ -66,35 +66,35 @@ $$d = 4 \\text{ m up the ramp}$$
           {
             question: 'A 2 kg block slides at 3 m/s into a spring ($k = 200$ N/m) on a frictionless surface. The maximum compression of the spring is:',
             options: [
-              '0.1 m',
-              '0.15 m',
-              '0.2 m',
-              '0.3 m'
+              '0.09 m',
+              '0.21 m',
+              '0.42 m',
+              '0.30 m'
             ],
             correctAnswer: 3,
-            explanation: '$\\frac{1}{2}mv^2 = \\frac{1}{2}kx^2$. $\\frac{1}{2}(2)(9) = \\frac{1}{2}(200)x^2$. $9 = 100x^2$. $x^2 = 0.09$. $x = 0.3$ m.'
+            explanation: '$\\frac{1}{2}mv^2 = \\frac{1}{2}kx^2$. $\\frac{1}{2}(2)(9) = \\frac{1}{2}(200)x^2$. $9 = 100x^2$. $x^2 = 0.09$. $x = 0.30$ m. Stopping at $x^2 = 0.09$ forgets the square root; dropping the $\\frac{1}{2}$ on only one side gives 0.21 m or 0.42 m.'
           },
           {
             question: 'A spring ($k = 800$ N/m) compressed by 0.1 m launches a 0.4 kg ball vertically. The ball rises to a maximum height of ($g = 10$ $m/s^{2}$):',
             options: [
-              '0.5 m',
+              '10 m',
               '1.0 m',
               '2.0 m',
-              '4.0 m'
+              '20 m'
             ],
             correctAnswer: 1,
-            explanation: '$\\frac{1}{2}kx^2 = mgh$. $\\frac{1}{2}(800)(0.01) = 0.4(10)h$. $4 = 4h$. $h = 1.0$ m.'
+            explanation: '$\\frac{1}{2}kx^2 = mgh$. $\\frac{1}{2}(800)(0.01) = 0.4(10)h$. $4 = 4h$. $h = 1.0$ m. Dropping the $\\frac{1}{2}$ gives 2.0 m, leaving out $g$ gives 10 m, and using the force $kx$ instead of the energy gives 20 m.'
           },
           {
             question: 'A 1 kg block is dropped from 2 m above a vertical spring ($k = 1000$ N/m). The maximum compression of the spring is closest to:',
             options: [
-              '0.1 m',
               '0.15 m',
-              '0.2 m',
-              '0.25 m'
+              '0.20 m',
+              '0.21 m',
+              '0.06 m'
             ],
             correctAnswer: 2,
-            explanation: '$mg(h + x) = \\frac{1}{2}kx^2$. $10(2 + x) = 500x^2$. $500x^2 - 10x - 20 = 0$. $x = [10 + \\sqrt{100 + 40000}]/1000 = [10 + \\sqrt{40100}]/1000 \\approx [10 + 200.2]/1000 \\approx 0.21$ m. Closest to 0.2 m.'
+            explanation: '$mg(h + x) = \\frac{1}{2}kx^2$. $10(2 + x) = 500x^2$. $500x^2 - 10x - 20 = 0$. $x = [10 + \\sqrt{100 + 40000}]/1000 = [10 + 200.2]/1000 \\approx 0.21$ m. Ignoring the extra drop $x$ while the spring compresses gives 0.20 m, dropping the $\\frac{1}{2}$ gives 0.15 m, and leaving out $g$ gives 0.06 m.'
           }
         ]
       }
@@ -121,7 +121,7 @@ Use $g = 10$ $m/s^{2}$.
         hint1: '$\\frac{1}{2}kx^2 = \\frac{1}{2}mv^2$. $v = x\\sqrt{k/m}$.',
         hint2: '$\\frac{1}{2}mv^2 = \\frac{1}{2}kx^2$. $x = v\\sqrt{m/k}$.',
         hint3: '$\\frac{1}{2}kx^2 = \\mu_k mg d$. Solve for $d$.',
-        explanation: '1) $PE_s = \\frac{1}{2}(1200)(0.0025) = 1.5$ J. $1.5 = \\frac{1}{2}(0.3)v^2 \\Rightarrow v^2 = 10 \\Rightarrow v \\approx 3.16$ m/s. (Rounding: accept $\\approx 3.2$.) Actually, adjusting the problem: with $k = 480$ N/m: $PE_s = \\frac{1}{2}(480)(0.0025) = 0.6$ J. $0.6 = \\frac{1}{2}(0.3)v^2 \\Rightarrow v^2 = 4 \\Rightarrow v = 2$ m/s. 2) $x = 5\\sqrt{4/2500} = 5(0.04) = 0.2$ m. 3) $d = 500(0.04)/(2 \\times 0.25 \\times 1 \\times 10) = 20/5 = 4$ m.'
+        explanation: '1) $PE_s = \\frac{1}{2}(480)(0.05)^2 = \\frac{1}{2}(480)(0.0025) = 0.6$ J. $0.6 = \\frac{1}{2}(0.3)v^2 \\Rightarrow v^2 = 4 \\Rightarrow v = 2.00$ m/s. 2) $x = v\\sqrt{m/k} = 5\\sqrt{4/2500} = 5(0.04) = 0.200$ m. 3) $\\frac{1}{2}(500)(0.2)^2 = 10$ J and $\\mu_k mg = 0.25(1)(10) = 2.5$ N, so $d = 10/2.5 = 4.00$ m.'
       }
     },
     {
@@ -172,11 +172,11 @@ Use $g = 10$ $m/s^{2}$.
             options: [
               '0.8 m',
               '1.6 m',
-              '2.4 m',
+              '0.9 m',
               '3.2 m'
             ],
             correctAnswer: 1,
-            explanation: '$\\frac{1}{2}kx^2 = mgd\\sin(30°)$. $\\frac{1}{2}(200)(0.04) = 0.5(10)(d)(0.5)$. $4 = 2.5d$. $d = 1.6$ m.'
+            explanation: '$\\frac{1}{2}kx^2 = mgd\\sin(30°)$. $\\frac{1}{2}(200)(0.04) = 0.5(10)(d)(0.5)$. $4 = 2.5d$. $d = 1.6$ m. Leaving out $\\sin 30°$ gives 0.8 m, using $\\cos 30°$ gives 0.9 m, and dropping the $\\frac{1}{2}$ gives 3.2 m.'
           },
           {
             question: 'Two springs: Spring A ($k = 100$ N/m, compressed 0.2 m) and Spring B ($k = 400$ N/m, compressed 0.1 m) each launch identical 0.5 kg balls. Which ball goes faster?',

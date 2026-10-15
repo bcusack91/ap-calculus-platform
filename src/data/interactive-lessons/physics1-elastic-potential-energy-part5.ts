@@ -116,7 +116,7 @@ Don\'t mix up:
             options: [
               'At $x = A$ (maximum stretch)',
               'At $x = 0$ (equilibrium)',
-              'At $x = A/2$',
+              'At $x = A/2$ (halfway out)',
               'KE is constant throughout'
             ],
             correctAnswer: 1,
@@ -194,13 +194,13 @@ A spring-mass system oscillates with amplitude $A$.
           },
           {
             label: 'The PE vs. x graph is:',
-            options: ['A straight line', 'An upward parabola', 'A downward parabola', 'A constant'],
+            options: ['A straight line through the origin', 'An upward parabola', 'A downward parabola', 'A constant horizontal line'],
             correctIndex: 1,
             explanation: '$PE = \\frac{1}{2}kx^2$ is a parabola opening upward with vertex at the origin.'
           },
           {
             label: 'If the spring constant is doubled (same amplitude):',
-            options: ['Total energy doubles', 'Total energy halves', 'Total energy quadruples', 'Total energy stays the same'],
+            options: ['Total energy doubles', 'Total energy is halved', 'Total energy quadruples', 'Total energy stays the same'],
             correctIndex: 0,
             explanation: '$E = \\frac{1}{2}kA^2$. Doubling $k$ doubles the total energy (same amplitude).'
           }
@@ -219,12 +219,12 @@ A spring-mass system oscillates with amplitude $A$.
             question: 'A 1 kg block oscillates on a spring ($k = 400$ N/m) with amplitude 0.05 m. The maximum speed is:',
             options: [
               '0.5 m/s',
-              '1 m/s',
-              '2 m/s',
-              '4 m/s'
+              '1.0 m/s',
+              '2.0 m/s',
+              '1.4 m/s'
             ],
             correctAnswer: 1,
-            explanation: '$E = \\frac{1}{2}(400)(0.0025) = 0.5$ J. $\\frac{1}{2}(1)v_{\\max}^2 = 0.5 \\Rightarrow v_{\\max} = 1$ m/s.'
+            explanation: '$E = \\frac{1}{2}(400)(0.0025) = 0.5$ J. $\\frac{1}{2}(1)v_{\\max}^2 = 0.5 \\Rightarrow v_{\\max} = 1.0$ m/s. Stopping at 0.5 (the energy) is not a speed, using $2A$ gives 2.0 m/s, and dropping the $\\frac{1}{2}$ on the spring side gives 1.4 m/s.'
           },
           {
             question: 'A block oscillates with 10 J of total energy. At what fraction of the amplitude does $KE = 3PE$?',
@@ -235,7 +235,7 @@ A spring-mass system oscillates with amplitude $A$.
               '$3A/4$'
             ],
             correctAnswer: 1,
-            explanation: '$KE = 3PE$ and $KE + PE = E$. So $3PE + PE = E \\Rightarrow PE = E/4$. $\\frac{1}{2}kx^2 = \\frac{1}{4} \\cdot \\frac{1}{2}kA^2 \\Rightarrow x^2 = A^2/4 \\Rightarrow x = A/2$.'
+            explanation: '$KE = 3PE$ and $KE + PE = E$. So $3PE + PE = E \\Rightarrow PE = E/4$. $\\frac{1}{2}kx^2 = \\frac{1}{4} \\cdot \\frac{1}{2}kA^2 \\Rightarrow x^2 = A^2/4 \\Rightarrow x = A/2$. Forgetting the square root gives $A/4$, and $A/\\sqrt{2}$ is where $KE = PE$.'
           }
         ]
       }

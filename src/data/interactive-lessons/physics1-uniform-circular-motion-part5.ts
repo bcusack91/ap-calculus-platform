@@ -116,10 +116,10 @@ On the AP exam, most circular motion problems assume **uniform** circular motion
           {
             question: 'At what point in a vertical circular loop (ball on a string) does gravity provide ONLY tangential acceleration?',
             options: [
-              'At the top',
-              'At the bottom',
-              'At the side (3 o\'clock or 9 o\'clock position)',
-              'Gravity always has a centripetal component'
+              'At the top of the circle (12 o\'clock)',
+              'At the bottom of the circle (6 o\'clock)',
+              'At either side (3 or 9 o\'clock)',
+              'Nowhere; gravity always has a radial part'
             ],
             correctAnswer: 2,
             explanation: 'At the sides, gravity is perpendicular to the radius (tangent to the circle), so it acts entirely as tangential acceleration — only changing speed, not direction.'
@@ -141,11 +141,11 @@ On the AP exam, most circular motion problems assume **uniform** circular motion
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4.5', '4.9', '16.0'],
+        correctAnswers: ['4.5', '4.92', '16.0'],
         hint1: '$a_c = v^2/r = 15^2/50$.',
         hint2: '$a_{total} = \\sqrt{a_c^2 + a_t^2}$.',
         hint3: 'Find $a_c = v^2/r$ first, then $a_{total} = \\sqrt{a_c^2 + g^2}$.',
-        explanation: '1) $a_c = 225/50 = 4.5$ $m/s^{2}$. 2) $a_{total} = \\sqrt{4.5^2 + 2^2} = \\sqrt{20.25 + 4} = \\sqrt{24.25} \\approx 4.9$ $m/s^{2}$. 3) $a_c = 25/2 = 12.5$ $m/s^{2}$. $a_{total} = \\sqrt{12.5^2 + 10^2} = \\sqrt{156.25 + 100} = \\sqrt{256.25} \\approx 16.0$ $m/s^{2}$.'
+        explanation: '1) $a_c = 225/50 = 4.5$ $m/s^{2}$. 2) $a_{total} = \\sqrt{4.5^2 + 2^2} = \\sqrt{20.25 + 4} = \\sqrt{24.25} \\approx 4.92$ $m/s^{2}$. 3) $a_c = 25/2 = 12.5$ $m/s^{2}$. $a_{total} = \\sqrt{12.5^2 + 10^2} = \\sqrt{156.25 + 100} = \\sqrt{256.25} \\approx 16.0$ $m/s^{2}$.'
       }
     },
     {

@@ -95,21 +95,21 @@ $$x = \\frac{1 \\pm \\sqrt{1 + 400}}{100} = \\frac{1 + 20.02}{100} \\approx 0.21
           {
             question: 'A block slides down a frictionless ramp (height 0.5 m) and compresses a spring at the bottom. If the spring constant doubles, the compression:',
             options: [
-              'Is halved',
+              'Is halved, to $x/2$',
               'Is divided by $\\sqrt{2}$',
               'Stays the same',
-              'Doubles'
+              'Is quartered, to $x/4$'
             ],
             correctAnswer: 1,
-            explanation: '$mgh = \\frac{1}{2}kx^2 \\Rightarrow x = \\sqrt{2mgh/k}$. If $k \\to 2k$: $x_{\\text{new}} = \\sqrt{2mgh/(2k)} = x/\\sqrt{2}$.'
+            explanation: '$mgh = \\frac{1}{2}kx^2 \\Rightarrow x = \\sqrt{2mgh/k}$. If $k \\to 2k$: $x_{\\text{new}} = \\sqrt{2mgh/(2k)} = x/\\sqrt{2}$. Halving assumes $x \\propto 1/k$, and quartering assumes $x \\propto 1/k^2$; the square root makes the change smaller.'
           },
           {
             question: 'A ball is dropped from height $h$ onto a spring. The maximum compression depends on:',
             options: [
-              'The mass and height only',
+              'The mass and the height it drops from',
               'The spring constant and height only',
               'Mass, height, and spring constant',
-              'Mass only'
+              'The spring constant only, not mass'
             ],
             correctAnswer: 2,
             explanation: '$mg(h + x) = \\frac{1}{2}kx^2$. The compression $x$ depends on all three: $m$, $g$ (implicit), $h$, and $k$.'
@@ -132,8 +132,7 @@ Use $g = 10$ $m/s^{2}$.
 3) A spring ($k = 800$ N/m) compressed 0.1 m launches a 0.4 kg ball up a frictionless $30°$ incline. How far along the incline does it travel (in m)?
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['1.8', '0.28', '2'],
+        questions: [{ question: '1)', answer: '1.8', acceptableAnswers: ['1.8'] }, { question: '2)', answer: '0.28', acceptableAnswers: ['0.28', '0.283'] }, { question: '3)', answer: '2', acceptableAnswers: ['2'] }],
         hint1: '$\\frac{1}{2}kx^2 = mgh \\Rightarrow h = kx^2/(2mg)$.',
         hint2: '$mgh = \\frac{1}{2}kx^2 \\Rightarrow x = \\sqrt{2mgh/k}$.',
         hint3: '$\\frac{1}{2}kx^2 = mgd\\sin(30°) \\Rightarrow d = kx^2/(2mg\\sin 30°)$.',
@@ -149,10 +148,10 @@ Use $g = 10$ $m/s^{2}$.
       exercise: {
         dropdowns: [
           {
-            label: 'A block at rest at the top of a ramp slides down and compresses a spring. At maximum compression, the energy that is zero:',
+            label: 'A block at rest at the top of a ramp slides down and compresses a spring. At maximum compression, which energy must be zero no matter where the reference level is placed?',
             options: ['KE and PE_g', 'KE and PE_s', 'PE_g and PE_s', 'Only KE'],
             correctIndex: 3,
-            explanation: 'At maximum compression, the block is momentarily at rest ($KE = 0$). Both $PE_g$ and $PE_s$ may be nonzero (the block is at the bottom of the ramp and the spring is compressed). Actually, if the bottom is the reference level, $PE_g = 0$ too, and only $PE_s$ is nonzero. But in general, $KE = 0$ is guaranteed.'
+            explanation: 'At maximum compression the block is momentarily at rest, so $KE = 0$ is guaranteed. The spring is compressed, so $PE_s$ is not zero. $PE_g$ is zero only if you happen to put the reference level at the spring\'s height, so it is not guaranteed. The only energy that must be zero is KE.'
           },
           {
             label: 'A spring launches a ball vertically. At the highest point, the nonzero energy is:',
@@ -193,11 +192,11 @@ Use $g = 10$ $m/s^{2}$.
             options: [
               '0.10 m',
               '0.15 m',
-              '0.20 m',
-              '0.25 m'
+              '0.14 m',
+              '0.05 m'
             ],
             correctAnswer: 1,
-            explanation: '$mg(h+x) = \\frac{1}{2}kx^2$. $20(1+x) = 1000x^2$. $1000x^2 - 20x - 20 = 0$. $50x^2 - x - 1 = 0$. $x = [1 + \\sqrt{1+200}]/100 = [1+\\sqrt{201}]/100 \\approx [1+14.18]/100 \\approx 0.152$ m. Closest to 0.15 m.'
+            explanation: '$mg(h+x) = \\frac{1}{2}kx^2$. $20(1+x) = 1000x^2$. $1000x^2 - 20x - 20 = 0$, so $50x^2 - x - 1 = 0$. $x = [1 + \\sqrt{1+200}]/100 = [1+14.18]/100 \\approx 0.152$ m, closest to 0.15 m. Ignoring the extra fall $x$ ($mgh = \\frac{1}{2}kx^2$) gives 0.14 m, dropping the $\\frac{1}{2}$ on the spring energy gives about 0.10 m, and using $m$ instead of $mg$ gives about 0.05 m.'
           }
         ]
       }
