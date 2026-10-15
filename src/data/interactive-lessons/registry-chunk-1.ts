@@ -902,13 +902,13 @@ export const registryChunk1: Record<string, InteractiveTopicConfig> = {
   'psychological-disorders-overview': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Defining Abnormality', loader: () => import('./psych-psychological-disorders-overview-part1').then(m => m.psychDisordersPart1Data) },
-      { title: 'DSM-5 Classification', loader: () => import('./psych-psychological-disorders-overview-part2').then(m => m.psychDisordersPart2Data) },
-      { title: 'Anxiety Disorders', loader: () => import('./psych-psychological-disorders-overview-part3').then(m => m.psychDisordersPart3Data) },
-      { title: 'OCD & PTSD', loader: () => import('./psych-psychological-disorders-overview-part4').then(m => m.psychDisordersPart4Data) },
-      { title: 'Somatic Disorders', loader: () => import('./psych-psychological-disorders-overview-part5').then(m => m.psychDisordersPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./psych-psychological-disorders-overview-part6').then(m => m.psychDisordersPart6Data) },
-      { title: 'AP Review', loader: () => import('./psych-psychological-disorders-overview-part7').then(m => m.psychDisordersPart7Data) },
+      { title: 'What Counts as a Disorder?', loader: () => import('./psych-psychological-disorders-overview-part1').then(m => m.psychDisordersPart1Data) },
+      { title: 'Classifying Disorders: DSM and ICD', loader: () => import('./psych-psychological-disorders-overview-part2').then(m => m.psychDisordersPart2Data) },
+      { title: 'Perspectives on Disorders and the Eclectic Approach', loader: () => import('./psych-psychological-disorders-overview-part3').then(m => m.psychDisordersPart3Data) },
+      { title: 'Interaction Models and Data', loader: () => import('./psych-psychological-disorders-overview-part4').then(m => m.psychDisordersPart4Data) },
+      { title: 'Labels, Stigma, and Bias in Diagnosis', loader: () => import('./psych-psychological-disorders-overview-part5').then(m => m.psychDisordersPart5Data) },
+      { title: 'AP Exam Practice: AAQ and EBQ', loader: () => import('./psych-psychological-disorders-overview-part6').then(m => m.psychDisordersPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./psych-psychological-disorders-overview-part7').then(m => m.psychDisordersPart7Data) },
     ],
   },
   'mood-psychotic-disorders': {
@@ -962,13 +962,13 @@ export const registryChunk1: Record<string, InteractiveTopicConfig> = {
   'group-behavior-prejudice': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Prejudice & Discrimination', loader: () => import('./psych-group-behavior-prejudice-part1').then(m => m.psychGroupPart1Data) },
-      { title: 'Stereotypes', loader: () => import('./psych-group-behavior-prejudice-part2').then(m => m.psychGroupPart2Data) },
-      { title: 'In-Group/Out-Group', loader: () => import('./psych-group-behavior-prejudice-part3').then(m => m.psychGroupPart3Data) },
-      { title: 'Aggression', loader: () => import('./psych-group-behavior-prejudice-part4').then(m => m.psychGroupPart4Data) },
-      { title: 'Prosocial Behavior', loader: () => import('./psych-group-behavior-prejudice-part5').then(m => m.psychGroupPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./psych-group-behavior-prejudice-part6').then(m => m.psychGroupPart6Data) },
-      { title: 'AP Review', loader: () => import('./psych-group-behavior-prejudice-part7').then(m => m.psychGroupPart7Data) },
+      { title: 'Groups, Culture, and Social Norms', loader: () => import('./psych-group-behavior-prejudice-part1').then(m => m.psychGroupPart1Data) },
+      { title: 'Group Influence at Work: Conditions and Applications', loader: () => import('./psych-group-behavior-prejudice-part2').then(m => m.psychGroupPart2Data) },
+      { title: 'Stereotypes, Prejudice, and Discrimination', loader: () => import('./psych-group-behavior-prejudice-part3').then(m => m.psychGroupPart3Data) },
+      { title: 'Biases Behind Prejudice and Reading the Data', loader: () => import('./psych-group-behavior-prejudice-part4').then(m => m.psychGroupPart4Data) },
+      { title: 'Conflict and Cooperation: Social Traps and Superordinate Goals', loader: () => import('./psych-group-behavior-prejudice-part5').then(m => m.psychGroupPart5Data) },
+      { title: 'Prosocial Behavior and the Bystander Effect', loader: () => import('./psych-group-behavior-prejudice-part6').then(m => m.psychGroupPart6Data) },
+      { title: 'Synthesis and EBQ Practice', loader: () => import('./psych-group-behavior-prejudice-part7').then(m => m.psychGroupPart7Data) },
     ],
   },
 
