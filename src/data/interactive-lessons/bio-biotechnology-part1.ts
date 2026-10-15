@@ -23,7 +23,7 @@ export const bioBiotechPart1Data = {
 
 ## What Biotechnology Does
 
-The AP Biology framework asks you to **explain the use of genetic engineering techniques in analyzing or manipulating DNA** (learning objective IST-1.P). Four techniques are named in the essential knowledge, and each gets its own part of this lesson:
+The AP Biology framework asks you to **explain the use of genetic engineering techniques in analyzing or manipulating DNA** (learning objective 6.8.A). Four techniques are named in the essential knowledge, and each gets its own part of this lesson:
 
 | Technique | What it does | Where it is taught |
 |---|---|---|
@@ -32,7 +32,7 @@ The AP Biology framework asks you to **explain the use of genetic engineering te
 | Bacterial transformation | Introduces DNA into bacterial cells | Part 4 |
 | DNA sequencing | Determines the order of nucleotides | Part 5 |
 
-Before any of these can be used to build or analyze a specific gene, scientists need a way to cut DNA in predictable places and join pieces from different sources. That is the job of this part's two enzymes.`
+Before any of these can be used to build or analyze a specific gene, scientists need a way to cut DNA in predictable places and join pieces from different sources. That is the job of this part's two enzymes. As with every technique in this topic, the AP exam tests what the technique does and how to interpret its results, not the step-by-step laboratory details.`
     },
     {
       id: 'bio-biotechnology-p1-s2-restriction',
@@ -40,38 +40,23 @@ Before any of these can be used to build or analyze a specific gene, scientists 
       content: `## Restriction Enzymes: Cutting at Specific Sequences
 
 ### Where they come from
-Restriction enzymes (restriction endonucleases) evolved in bacteria as a **defense against bacteriophages**. When a phage injects its DNA, the bacterium's restriction enzymes cut the foreign DNA into pieces, "restricting" the infection.
-
-A bacterium protects its own chromosome by **methylating** (adding methyl groups to) bases inside its own recognition sites. The enzyme does not cut methylated sites, so only unmarked foreign DNA is destroyed.
+Restriction enzymes evolved in bacteria as a **defense against bacteriophages**. When a phage injects its DNA, the bacterium's restriction enzymes cut the foreign DNA into pieces, "restricting" the infection. The bacterium marks its own DNA chemically so that its own chromosome is not cut.
 
 ### Recognition sites
-Each restriction enzyme cuts only at one specific **recognition sequence**, usually **4–8 base pairs** long. Most sites are **palindromic**: read 5′→3′, the top strand and the bottom strand have the same sequence.
+Each restriction enzyme cuts only at one specific short **recognition sequence**. Because the enzyme recognizes a base sequence, not a source, it cuts DNA from **any** organism wherever that sequence appears. Two DNA samples that differ in sequence can therefore be cut into different numbers or sizes of fragments, which is the basis of comparing DNA samples on a gel (Part 2).
 
-| Top strand (5′→3′) | Bottom strand (3′→5′) | Read bottom strand 5′→3′ |
-|---|---|---|
-| G A A T T C | C T T A A G | G A A T T C |
+### Sticky ends
+Many restriction enzymes cut the two strands at slightly offset positions. This leaves each fragment with a short **single-stranded overhang**, called a **sticky end**.
 
-Because both strands read the same, one enzyme binds the site symmetrically and cuts **both strands**.
+| Feature of a sticky end | Why it matters |
+|---|---|
+| Its bases are unpaired | They can base-pair with a complementary overhang |
+| Every end made by the same enzyme has a complementary overhang | Any two fragments cut by that enzyme can pair, whatever organism they came from |
+| Pairing is held only by hydrogen bonds | The pieces separate easily until **ligase** seals the backbone |
 
-### Sticky ends and blunt ends
+Some enzymes instead cut both strands at the same point, leaving **blunt ends** with no overhang; these can still be joined, but less efficiently.
 
-| Cut type | What the enzyme does | Result | Why it matters |
-|---|---|---|---|
-| **Staggered cut** | Cuts the two strands at offset positions | **Sticky ends**: short single-stranded overhangs | Overhangs can base-pair with any end made by the same enzyme |
-| **Straight cut** | Cuts both strands at the same position | **Blunt ends**: no overhang | Any two blunt ends can be joined, but joining is less efficient |
-
-For the site above, the enzyme cuts between G and A on each strand, leaving each fragment with a 4-nucleotide overhang, **5′-AATT-3′**. Any two fragments cut by this enzyme have complementary overhangs, whatever organism the DNA came from.
-
-### How often does a site appear?
-In DNA with a random sequence, each position has 4 possible bases, so a specific sequence of length $n$ appears on average once every $4^n$ base pairs.
-
-| Site length | Expected spacing | Consequence |
-|---|---|---|
-| 4 bp | $4^4 = 256$ bp | Many small fragments ("frequent cutter") |
-| 6 bp | $4^6 = 4{,}096$ bp | Fragments of a few thousand bp |
-| 8 bp | $4^8 = 65{,}536$ bp | Few, large fragments ("rare cutter") |
-
-Real genomes are not random, so actual spacing varies, but the trend holds: **longer recognition sites cut less often.**`
+(The names of particular restriction enzymes and the details of their recognition sites are beyond the scope of the AP exam.)`
     },
     {
       id: 'bio-biotechnology-p1-s3-mcq-enzymes',
@@ -80,15 +65,15 @@ Real genomes are not random, so actual spacing varies, but the trend holds: **lo
       exercise: {
         questions: [
           {
-            question: 'A bacterium makes a restriction enzyme whose recognition site appears many times in its own chromosome. Why is its chromosome not destroyed?',
+            question: 'Why does a given restriction enzyme cut DNA from a human, a plant and a bacterium at the same sequence?',
             options: [
-              'Its own DNA carries methyl groups at those same sequences',
-              'Its chromosome is circular, so the enzyme finds no free ends',
-              'The enzyme is made only after a phage has injected its DNA',
-              'Its chromosome is wrapped in histones that block the enzyme'
+              'It cuts only at genes that code for proteins in every organism',
+              'It recognizes one specific order of bases, wherever that order appears',
+              'It cuts every DNA molecule at the same distance from its end',
+              'It recognizes the methyl groups that all organisms add to DNA'
             ],
-            correctAnswer: 0,
-            explanation: 'Bacteria methylate bases within their own recognition sites, and the enzyme does not cut methylated sites. Bacteria do not package DNA with histones, restriction enzymes cut within a molecule so circularity gives no protection, and the enzymes are present before infection.'
+            correctAnswer: 1,
+            explanation: 'A restriction enzyme binds and cuts one particular short base sequence, and DNA from every organism is built from the same four bases, so the site is cut wherever it occurs. The enzyme does not look for protein-coding genes or measure from the ends, and chemical marking actually protects a bacterium\'s own sites from being cut.'
           },
           {
             question: 'Why are sticky ends more useful than blunt ends when inserting a gene into a plasmid?',
@@ -102,15 +87,15 @@ Real genomes are not random, so actual spacing varies, but the trend holds: **lo
             explanation: 'Complementary single-stranded overhangs hydrogen-bond to each other, holding the insert and vector in place so ligase can join them. The pairing is temporary, so ligase is still required, and joining "regardless of sequence" describes blunt ends.'
           },
           {
-            question: 'Enzyme X recognizes a 4-bp site and enzyme Y recognizes an 8-bp site. Each digests the same 100,000-bp DNA molecule. Which prediction is best supported?',
+            question: 'DNA samples from two people are cut with the same restriction enzyme. The sample from person 2 gives one fewer fragment than the sample from person 1. What best explains this?',
             options: [
-              'Enzyme Y will produce many more fragments than X',
-              'Both enzymes will produce about the same number of fragments',
-              'Enzyme X will produce many more, smaller fragments than Y',
-              'Enzyme X will cut only where Y also cuts the molecule'
+              'Person 2\'s DNA was cut by a different restriction enzyme',
+              'A sequence difference removed one cut site in person 2',
+              'Person 2 has fewer chromosomes than person 1 does',
+              'The enzyme cut person 2\'s DNA at random positions'
             ],
-            correctAnswer: 2,
-            explanation: 'A 4-bp site is expected about once every 256 bp, while an 8-bp site is expected about once every 65,536 bp, so the shorter site gives far more, smaller fragments. The two sites are different sequences, so their positions are unrelated.'
+            correctAnswer: 1,
+            explanation: 'The enzyme cuts only where its recognition sequence occurs, so a difference in DNA sequence that destroys one site leaves one fewer cut and one fewer fragment. The same enzyme was used on both samples, both people have the same chromosome number, and restriction enzymes do not cut at random.'
           }
         ]
       }
@@ -144,14 +129,6 @@ A 5,000-bp plasmid has sites at positions 1,000 and 3,500.
 
 Two sites, two fragments. Because both fragments are the same size, they will appear as **one band** on a gel (Part 2). A single band does not always mean a single cut.
 
-### Worked Example 3: a double digest
-The same 5,000-bp plasmid is cut with two enzymes at once. Enzyme A cuts at 1,000 and enzyme B cuts at 4,000.
-
-- From 1,000 to 4,000 → **3,000 bp**
-- From 4,000 around to 1,000 → $1{,}000 + 1{,}000 =$ **2,000 bp**
-
-Comparing single digests with a double digest is how scientists build a **restriction map**, a diagram of where the sites lie.
-
 > 🔑 **AP Connection:** Fragment-counting questions are really sum-and-difference problems. Always check that your fragment sizes add up to the total length.`
     },
     {
@@ -173,9 +150,10 @@ Enter a number for each.`,
             explanation: 'Circular DNA: the first cut only opens the circle, so n sites give n = 3 fragments.'
           },
           {
-            question: 'In random DNA sequence, about how many base pairs apart (on average) is a specific 4-bp recognition site?',
-            answer: '256',
-            explanation: '4 possible bases at each of 4 positions: 4^4 = 256 bp.'
+            question: 'A 6,000-bp linear DNA molecule is cut at positions 1,500 and 4,000. What is the size, in bp, of the largest fragment?',
+            answer: '2500',
+            acceptableAnswers: ['2,500'],
+            explanation: 'The fragments are 1,500 bp (0 to 1,500), 2,500 bp (1,500 to 4,000) and 2,000 bp (4,000 to 6,000), which add to 6,000. The largest is 2,500 bp.'
           }
         ]
       }
@@ -186,12 +164,12 @@ Enter a number for each.`,
       content: `## DNA Ligase and Recombinant DNA
 
 ### What ligase does
-When two sticky ends pair, only **hydrogen bonds** between bases hold them together, and these break easily. **DNA ligase** forms a **phosphodiester bond** between the 3′ end of one nucleotide and the 5′ phosphate of the next, sealing the **sugar-phosphate backbone** on each strand.
+When two sticky ends pair, only **hydrogen bonds** between bases hold them together, and these break easily. **DNA ligase** forms a covalent bond between neighboring nucleotides, sealing the **sugar-phosphate backbone** on each strand.
 
 You have met ligase before: during DNA replication it joins **Okazaki fragments** on the lagging strand. Biotechnology borrows the same activity.
 
 ### Building recombinant DNA
-**Recombinant DNA** is DNA that combines sequences from different sources, for example a human gene inside a bacterial plasmid.
+**Recombinant DNA** is DNA that combines sequences from different sources, for example a human gene inside a bacterial plasmid. Copying a gene this way so that it can be propagated in cells is called **gene cloning**.
 
 | Step | What happens | Why |
 |---|---|---|
@@ -199,10 +177,6 @@ You have met ligase before: during DNA replication it joins **Okazaki fragments*
 | 2 | Mix the pieces | Overhangs base-pair; the gene can slip into the opened plasmid |
 | 3 | Add DNA ligase | Backbones are sealed into one continuous molecule |
 | 4 | Introduce the plasmid into bacteria (Part 4) | Bacteria copy the recombinant plasmid as they divide |
-
-### Two practical problems
-- **Orientation:** with a single enzyme, both ends of the insert are identical, so the gene can enter the plasmid in either direction, and only one direction places it correctly after the promoter. Cutting with **two different enzymes** gives the insert two different ends, so it can enter only one way.
-- **Self-closing:** a plasmid cut with one enzyme can simply re-ligate its own ends without an insert. Screening steps (Part 4) separate plasmids with an insert from empty ones.
 
 ### Why this works across species
 DNA from every organism has the same chemical structure: the same four bases, the same sugar-phosphate backbone and the same base-pairing rules. A sticky end from a human gene pairs with a sticky end from a bacterial plasmid as easily as with one from another human gene. This shared chemistry is itself evidence of the common ancestry of life.

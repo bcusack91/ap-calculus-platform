@@ -36,15 +36,15 @@ Hydrophobic molecules are excluded from the aqueous environment, which is critic
       exercise: {
         questions: [
           {
-            question: 'A solution with pH 4 has how many more $H^{+}$ ions than a solution with pH 7?',
+            question: 'Phospholipids are classified as:',
             options: [
-              '3 times more',
-              '300 times more',
-              '10,000 times more',
-              '1,000 times more'
+              'Hydrophilic',
+              'Hydrophobic',
+              'Amphipathic',
+              'Nonpolar'
             ],
-            correctAnswer: 3,
-            explanation: 'Each pH unit = 10× difference. pH 4 to pH 7 = 3 units = $10^3$ = 1,000 times more $H^+$ ions.'
+            correctAnswer: 2,
+            explanation: 'Phospholipids have a hydrophilic (polar) head and hydrophobic (nonpolar) tails, making them amphipathic — essential for forming cell membranes.'
           }
         ]
       }
@@ -86,15 +86,15 @@ Buffers resist changes in pH by accepting or donating $H^+$ ions.
       exercise: {
         questions: [
           {
-            question: 'Phospholipids are classified as:',
+            question: 'A solution with pH 4 has how many more $H^{+}$ ions than a solution with pH 7?',
             options: [
-              'Hydrophilic',
-              'Hydrophobic',
-              'Amphipathic',
-              'Nonpolar'
+              '3 times more',
+              '300 times more',
+              '10,000 times more',
+              '1,000 times more'
             ],
-            correctAnswer: 2,
-            explanation: 'Phospholipids have a hydrophilic (polar) head and hydrophobic (nonpolar) tails, making them amphipathic — essential for forming cell membranes.'
+            correctAnswer: 3,
+            explanation: 'Each pH unit = 10× difference. pH 4 to pH 7 = 3 units = $10^3$ = 1,000 times more $H^+$ ions.'
           }
         ]
       }

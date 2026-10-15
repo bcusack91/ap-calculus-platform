@@ -6,7 +6,7 @@ export const bioChromosomalInheritancePatternsPart5Data = {
       type: 'text' as const,
       content: `# Structural Chromosomal Changes
 
-Structural chromosomal abnormalities involve **rearrangements** of chromosome segments rather than changes in chromosome number. These can arise from errors in DNA repair, recombination, or breakage.
+Structural chromosomal abnormalities involve **rearrangements** of chromosome segments rather than changes in chromosome number. They can arise from chromosome breakage, from errors in DNA repair, or from mistakes in crossing over. The CED states that **alterations in chromosome structure lead to genetic disorders**.
 
 ## Four Major Types
 
@@ -15,9 +15,9 @@ Structural chromosomal abnormalities involve **rearrangements** of chromosome se
 | **Deletion** | A segment is lost | ABCDEFG → ABEFG (CD deleted) |
 | **Duplication** | A segment is copied | ABCDEFG → ABCBCDEFG (BC duplicated) |
 | **Inversion** | A segment is reversed | ABCDEFG → ABEDCFG (CDE inverted) |
-| **Translocation** | A segment moves to a non-homologous chromosome | Part of chr. 9 moves to chr. 22 |
+| **Translocation** | A segment moves to a non-homologous chromosome | ABCDEFG + MNOPQR → ABCPQR + MNODEFG |
 
-> 💡 These changes affect **gene dosage**, **gene regulation**, and can **disrupt genes** at breakpoints.`
+> 💡 These changes affect **gene dosage** (how many copies of a gene are present), **gene regulation** (which regulatory sequences sit next to a gene), and can **disrupt genes** at the points where the chromosome broke.`
     },
     {
       id: 'chr5-deldup',
@@ -27,32 +27,28 @@ Structural chromosomal abnormalities involve **rearrangements** of chromosome se
 A **deletion** occurs when a chromosomal segment is lost.
 
 ### Effects
-- **Loss of genes** → usually detrimental
-- **Pseudodominance**: A recessive allele on the normal homolog is expressed because the dominant allele is deleted
-- Large deletions are often **lethal**
-
-### Human Example: Cri-du-chat Syndrome
-- **Deletion of part of chromosome 5p** (short arm)
-- Characteristic high-pitched cry (like a cat) in infants
-- Intellectual disability, microcephaly, distinctive facial features
-- Karyotype notation: 46, XX/XY, del(5p)
+- Every gene in the deleted segment is left with only **one copy**, on the other homolog, so its product is made at about half the normal amount.
+- Because many genes are lost at once, deletions are **usually harmful**, and large deletions are often **lethal**.
 
 ## Duplications
 
 A **duplication** occurs when a chromosomal segment is copied, resulting in extra genetic material.
 
 ### Effects
-- Generally **less harmful** than deletions (extra genes vs. missing genes)
-- Can lead to **gene redundancy** → evolutionary raw material for new gene functions
-- May cause problems through **gene dosage effects**
+- Generally **less harmful** than deletions (extra genes vs. missing genes), but extra copies can still upset **gene dosage**.
+- Duplications are an important source of **new genes** in evolution. While one copy keeps the original function, the other copy is free to accumulate mutations, and some of those changes give the copy a new function.
+- The **globin gene family**, which includes the genes for the different chains of hemoglobin, evolved through repeated duplications followed by divergence of the copies.
 
-### Evolutionary Importance
-- The **globin gene family** (α-globin, β-globin, myoglobin) evolved through ancient gene duplications
-- Duplicated genes can diverge over time through mutation:
-  - One copy maintains the original function
-  - The other copy can evolve a **new function** (neofunctionalization)
-  - Or both copies may **specialize** (subfunctionalization)
-  - Or the extra copy may accumulate mutations and become a **pseudogene**`
+## How a Mistake in Crossing Over Makes Both
+
+Crossing over normally exchanges **matching** segments, so no genes are gained or lost. If two homologs pair slightly **out of register**, a crossover between them is **unequal**:
+
+| Chromatid | Before (misaligned) | After unequal crossing over |
+|-----------|---------------------|-----------------------------|
+| From homolog 1 | A B C D E | A B C **C** D E (duplication of C) |
+| From homolog 2 | A B C D E | A B D E (deletion of C) |
+
+One crossover event produces a duplication on one chromatid and the matching deletion on the other. Gametes that receive these chromatids pass the structural change to the next generation.`
     },
     {
       id: 'chr5-quiz1',
@@ -61,15 +57,15 @@ A **duplication** occurs when a chromosomal segment is copied, resulting in extr
       exercise: {
         questions: [
           {
-            question: 'Pseudodominance occurs when:',
+            question: 'A chromosome with the gene order ABCDEFGH is found to have the order ABCFEDGH. Which structural change has occurred?',
             options: [
-              'A deletion on one homolog unmasks a recessive allele on the other homolog',
-              'A duplicated dominant allele masks a recessive allele on the other homolog',
-              'Two recessive alleles are present, so the recessive trait is expressed normally',
-              'A translocation creates a new dominant allele that masks the normal homolog'
+              'A deletion of segment DEF',
+              'A duplication of segment DEF',
+              'An inversion of segment DEF',
+              'A translocation of segment DEF'
             ],
-            correctAnswer: 0,
-            explanation: 'Pseudodominance happens when a deletion removes the dominant allele from one homolog, allowing the recessive allele on the other homolog to be expressed. The individual appears to have a dominant trait but actually has only one (recessive) allele.'
+            correctAnswer: 2,
+            explanation: 'All of the genes are still present, but the segment DEF now reads FED, so it was reversed: an inversion. A deletion would remove D, E and F, a duplication would add a second copy, and a translocation would move the segment to a non-homologous chromosome.'
           },
           {
             question: 'Gene duplications are evolutionarily important because:',
@@ -80,7 +76,7 @@ A **duplication** occurs when a chromosomal segment is copied, resulting in extr
               'They prevent crossing over and keep favorable alleles together'
             ],
             correctAnswer: 0,
-            explanation: 'Gene duplication creates redundant copies. One copy can maintain the original function while the other is free to accumulate mutations and potentially develop new functions (neofunctionalization) — a major source of evolutionary novelty.'
+            explanation: 'Gene duplication creates redundant copies. One copy can maintain the original function while the other is free to accumulate mutations and potentially take on a new function, a major source of evolutionary novelty, as in the globin gene family.'
           }
         ]
       }
@@ -92,66 +88,55 @@ A **duplication** occurs when a chromosomal segment is copied, resulting in extr
 
 An **inversion** occurs when a chromosome segment breaks at two points, flips 180°, and reinserts.
 
-### Types
-- **Paracentric inversion**: Does NOT include the centromere
-- **Pericentric inversion**: INCLUDES the centromere
-
 ### Effects
-- The organism may be **phenotypically normal** (all genes are present, just rearranged)
-- Problems arise during **meiosis**: crossing over within an inversion loop produces abnormal gametes
-  - Paracentric: produces acentric fragments and dicentric chromosomes
-  - Pericentric: produces unbalanced gametes (deletions/duplications)
-- Inversions can act as **crossover suppressors**, keeping linked allele combinations intact
+- All genes are still present, so the organism is often **phenotypically normal**.
+- An inversion causes a problem when a **break point falls inside a gene**, cutting it in two, or when it separates a gene from the regulatory sequences that control its transcription.
 
 ## Translocations
 
 A **translocation** is the transfer of a chromosomal segment to a non-homologous chromosome.
 
-### Types
-- **Reciprocal translocation**: Segments are exchanged between two non-homologous chromosomes
-- **Robertsonian translocation**: Two acrocentric chromosomes fuse at their centromeres, reducing chromosome number
+### Effects
+- If no genes are lost or broken, the carrier is usually healthy, but some of the gametes the carrier makes receive a chromosome with a **missing or extra segment**. Offspring from those gametes have unbalanced gene dosage.
+- A translocation can **break a gene** at the junction, or move a gene next to **different regulatory sequences**. A gene that promotes cell division, placed under the control of a strongly active regulatory region, may be expressed far more than normal, and that overexpression can contribute to **cancer**.
 
-### Human Example: Philadelphia Chromosome
-- **Reciprocal translocation t(9;22)**
-- The ABL proto-oncogene (chromosome 9) fuses with the BCR gene (chromosome 22)
-- Creates the **BCR-ABL fusion gene** → constitutively active tyrosine kinase
-- Causes **chronic myelogenous leukemia (CML)**
-- Targeted by the drug **imatinib (Gleevec)**
+### Worked Reasoning: Predicting the Effect of a Rearrangement
 
-### Robertsonian Translocation & Down Syndrome
-- ~4% of Down syndrome cases result from a **Robertsonian translocation** involving chromosome 21
-- Most commonly **t(14;21)**: chromosome 21 fuses to chromosome 14
-- The individual has 45 chromosomes but effectively three copies of chromosome 21 genes
-- Unlike trisomy 21, translocation Down syndrome is **not related to maternal age** and may recur in families`
+| Question to ask | If the answer is yes… |
+|-----------------|-----------------------|
+| Were genes lost or gained? | Gene dosage changes: deletions are usually more harmful than duplications |
+| Did a break point fall inside a gene? | That gene's product is likely nonfunctional |
+| Was a gene moved next to new regulatory sequences? | That gene may be expressed at the wrong time, place or amount |
+| Is the rearrangement in a germ cell? | It can be passed to offspring; in a body cell it affects only that cell's descendants |`
     },
     {
       id: 'chr5-dropdown1',
       type: 'dropdown-select' as const,
-      content: `**Fill in the Blanks** 🔍`,
+      content: `**Name the Change** 🔍`,
       exercise: {
         dropdowns: [
           {
-            label: 'The Philadelphia chromosome results from a reciprocal translocation between chromosomes ___ and ___',
-            options: ['9 and 22', '14 and 21', '8 and 14', '11 and 22']
-          },
-          {
-            label: 'An inversion that includes the centromere is called a ___ inversion',
-            options: ['pericentric', 'paracentric', 'reciprocal', 'Robertsonian']
-          },
-          {
-            label: 'Cri-du-chat syndrome is caused by a ___ on chromosome 5',
+            label: 'ABCDEFG becomes ABEFG',
             options: ['deletion', 'duplication', 'inversion', 'translocation']
           },
           {
-            label: 'The evolution of the globin gene family is best explained by ___',
-            options: ['gene duplication and divergence', 'chromosomal deletion', 'polyploidy', 'nondisjunction']
+            label: 'ABCDEFG becomes ABCDCDEFG',
+            options: ['deletion', 'duplication', 'inversion', 'translocation']
+          },
+          {
+            label: 'ABCDEFG becomes AFEDCBG',
+            options: ['deletion', 'duplication', 'inversion', 'translocation']
+          },
+          {
+            label: 'Segment EFG of one chromosome is now attached to a non-homologous chromosome',
+            options: ['deletion', 'duplication', 'inversion', 'translocation']
           }
         ],
-        correctAnswers: ['9 and 22', 'pericentric', 'deletion', 'gene duplication and divergence'],
-        hint1: 'The BCR-ABL fusion gene causes CML.',
-        hint2: '"Peri-" means around, "para-" means beside.',
-        hint3: 'This syndrome involves loss of genetic material from the short arm.',
-        explanation: 'Philadelphia chromosome = t(9;22) creating BCR-ABL. Pericentric inversions include the centromere. Cri-du-chat = del(5p). The globin gene family evolved through duplication followed by divergence of duplicated copies.'
+        correctAnswers: ['deletion', 'duplication', 'inversion', 'translocation'],
+        hint1: 'Compare the genes present before and after: is anything missing or repeated?',
+        hint2: 'If every gene is present once but a stretch reads backward, the segment was flipped.',
+        hint3: 'Movement to a different, non-homologous chromosome has its own name.',
+        explanation: 'Losing CD is a deletion; repeating CD is a duplication; BCDEF reading backward is an inversion; and moving EFG to a non-homologous chromosome is a translocation.'
       }
     },
     {
@@ -161,26 +146,26 @@ A **translocation** is the transfer of a chromosomal segment to a non-homologous
       exercise: {
         questions: [
           {
-            question: 'A carrier of a Robertsonian translocation t(14;21) has ___ chromosomes but is phenotypically normal.',
+            question: 'Why is an inversion often less harmful to the organism than a deletion of a segment of the same length?',
             options: [
-              '45',
-              '46',
-              '47',
-              '44'
+              'An inversion is always repaired by the cell, but a deletion never is',
+              'An inversion keeps all of its genes, but a deletion loses some of them',
+              'An inversion occurs only in noncoding regions of a chromosome',
+              'An inversion doubles the dosage of the genes in the flipped segment'
             ],
-            correctAnswer: 0,
-            explanation: 'In a Robertsonian translocation, two acrocentric chromosomes (14 and 21) fuse into one. The carrier has the normal amount of genetic material but packaged in 45 chromosomes instead of 46. They are phenotypically normal but at risk of producing offspring with translocation Down syndrome.'
+            correctAnswer: 1,
+            explanation: 'In an inversion every gene is still present, so dosage is unchanged unless a break point disrupts a gene. A deletion removes genes, halving the dosage of everything in the segment. Inversions are not always repaired, they can occur anywhere, and they do not change the number of gene copies.'
           },
           {
-            question: 'Why might inversions be considered "crossover suppressors"?',
+            question: 'Two homologs pair slightly out of register, and an unequal crossover gives one chromatid two copies of gene X. What is expected for the other chromatid involved in that crossover?',
             options: [
-              'Recombinants from crossovers in the inversion are unbalanced and rarely viable, so allele combinations persist',
-              'Inversions physically block homologs from pairing, so no crossing over can occur along the inverted segment',
-              'Inversions eliminate the synaptonemal complex, so chiasmata can never form within the inverted region',
-              'Inversions convert each crossover into gene conversion, so alleles are copied but never actually exchanged'
+              'It also carries two copies of gene X',
+              'It carries an inverted copy of gene X',
+              'It is missing gene X entirely',
+              'It is unchanged by the crossover'
             ],
-            correctAnswer: 0,
-            explanation: 'Crossing over CAN occur within inversions (homologs pair by forming an inversion loop), but the resulting recombinant chromosomes are usually unbalanced (containing deletions and duplications) and produce inviable gametes. This effectively suppresses recombination among surviving offspring, keeping allele combinations together.'
+            correctAnswer: 2,
+            explanation: 'An unequal crossover exchanges segments of different lengths, so the segment one chromatid gains is the segment the other loses: a duplication on one chromatid and the matching deletion on the other. Both chromatids took part in the exchange, so neither is unchanged, and no segment is flipped.'
           }
         ]
       }

@@ -91,14 +91,14 @@ So nucleotides do far more than store information — they are also the cell's *
       exercise: {
         dropdowns: [
           { label: 'The two strands of DNA run ___ to each other', options: ['parallel', 'antiparallel', 'perpendicular', 'tangled'] },
-          { label: 'A–T pairs are held by ___ hydrogen bonds', options: ['1', '2', '3', '4'] },
+          { label: 'In RNA, adenine pairs with ___', options: ['thymine', 'uracil', 'guanine', 'cytosine'] },
           { label: 'The cell\'s primary energy currency is ___', options: ['glucose', 'ATP', 'NADH', 'cAMP'] }
         ],
-        correctAnswers: ['antiparallel', '2', 'ATP'],
+        correctAnswers: ['antiparallel', 'uracil', 'ATP'],
         hint1: '5′→3′ opposite 3′→5′.',
-        hint2: 'Fewer than G–C.',
+        hint2: 'RNA has no thymine.',
         hint3: 'Releases energy when phosphate is cleaved.',
-        explanation: 'DNA strands are antiparallel. A–T = 2 H-bonds (G–C = 3, more stable). ATP is the universal cellular energy currency.'
+        explanation: 'DNA strands are antiparallel. In RNA, adenine pairs with uracil (RNA has no thymine). ATP is the universal cellular energy currency.'
       }
     }
   ]

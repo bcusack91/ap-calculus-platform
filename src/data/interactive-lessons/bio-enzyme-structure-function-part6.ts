@@ -11,13 +11,13 @@ export const bioEnzymesPart6Data = {
 
 1. **Identify the enzyme property** being tested
 2. **Draw or visualize** the energy diagram if relevant
-3. **Distinguish inhibition types** by their effects on $K_m$ and $V_{max}$
+3. **Distinguish inhibition types** by where the inhibitor binds and whether extra substrate overcomes it
 4. **Connect to biological context** (what pathway? what regulation?)
 
 ### Common Mistakes to Avoid
 
 - Enzymes do NOT provide energy for reactions
-- Competitive inhibition does NOT change $V_{max}$
+- Competitive inhibition CAN be overcome by adding more substrate; noncompetitive inhibition cannot
 - Denaturation ≠ competitive inhibition
 - Enzymes are NOT consumed in reactions
       `
@@ -31,26 +31,26 @@ export const bioEnzymesPart6Data = {
       exercise: {
         questions: [
           {
-            question: 'An enzyme has $K_m$ = 5 mM. What does this tell you?',
+            question: 'Enzyme activity is measured at 20°C, 30°C, 40°C, and 50°C. The rate rises from 20°C to 40°C and then drops sharply at 50°C. What best explains the drop?',
             options: [
-              'The enzyme denatures at 5 mM substrate',
-              'Half of $V_{max}$ is reached at 5 mM substrate',
-              'The enzyme has 5 active sites',
-              'The reaction rate is 5 mM/s'
+              'Substrate molecules stop moving at high temperature',
+              'Heat disrupts the protein\'s shape, so the active site no longer fits',
+              'A second active site forms at high temperature',
+              'The reaction reaches equilibrium faster at 50°C'
             ],
             correctAnswer: 1,
-            explanation: '$K_m$ is the substrate concentration at which the reaction rate is half of $V_{max}$. A $K_m$ of 5 mM means half-maximal velocity occurs at 5 mM substrate.'
+            explanation: 'Up to the optimum, higher temperature means faster molecules and more collisions. Above it, the hydrogen bonds holding the enzyme\'s shape break, the active site changes, and the rate falls. Molecules move faster, not slower, as temperature rises.'
           },
           {
-            question: 'Adding a noncompetitive inhibitor to an enzyme:',
+            question: 'A noncompetitive inhibitor is added to an enzyme reaction. The researcher then adds a large excess of substrate. What is the most likely result?',
             options: [
-              'Increases $V_{max}$',
-              'Decreases $V_{max}$ without changing $K_m$',
-              'Increases $K_m$ without changing $V_{max}$',
-              'Has no effect on kinetics'
+              'The rate stays low, because substrate cannot displace the inhibitor',
+              'The rate returns to normal, because substrate outcompetes the inhibitor',
+              'The rate rises above normal, because the inhibitor now activates the enzyme',
+              'The rate falls to zero, because extra substrate denatures the enzyme'
             ],
-            correctAnswer: 1,
-            explanation: 'Noncompetitive inhibitors bind allosterically and reduce $V_{max}$ (fewer functional enzyme molecules) without affecting $K_m$ (substrate binding affinity is unchanged).'
+            correctAnswer: 0,
+            explanation: 'A noncompetitive inhibitor binds an allosteric site, not the active site, so adding substrate does not push it off. The enzyme stays altered and the rate stays below the uninhibited rate. Only a competitive inhibitor can be outcompeted by extra substrate.'
           }
         ]
       }
@@ -69,7 +69,7 @@ A pharmaceutical company designs a drug that has a similar shape to the substrat
 ### Scenario 2
 A student adds increasing amounts of substrate to an enzyme-catalyzed reaction. The rate increases and then plateaus. Explain.
 
-**Answer:** At low [S], increasing substrate increases the rate because more enzyme-substrate complexes form. At high [S], all active sites are occupied (saturation), so the rate plateaus at $V_{max}$.
+**Answer:** At low [S], increasing substrate increases the rate because more enzyme-substrate complexes form. At high [S], all active sites are occupied (saturation), so the rate plateaus.
       `
     },
     {
@@ -104,7 +104,7 @@ A student adds increasing amounts of substrate to an enzyme-catalyzed reaction. 
         dropdowns: [
           {
             label: 'A drug shaped like the substrate is likely a ___ inhibitor',
-            options: ['competitive', 'noncompetitive', 'uncompetitive', 'allosteric activator']
+            options: ['competitive', 'noncompetitive', 'irreversible', 'allosteric activator']
           },
           {
             label: 'At saturation, adding more substrate ___ the rate',

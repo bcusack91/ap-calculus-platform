@@ -26,7 +26,7 @@ A researcher treats E. coli with radioactive thymidine ($^3$H-thymidine) for a b
 
 **If the pulse is very short** (seconds), only the most recently synthesized DNA is labeled.  The leading strand shows label near the fork, while the lagging strand shows label in the most recently completed Okazaki fragment.
 
-**If the chase is long enough**, DNA Pol I replaces primers with DNA and ligase joins fragments, so the lagging strand eventually looks continuous.
+**If the chase is long enough**, the RNA primers are replaced with DNA and ligase joins the fragments, so the lagging strand eventually looks continuous.
       `
     },
     {
@@ -40,7 +40,7 @@ A researcher treats E. coli with radioactive thymidine ($^3$H-thymidine) for a b
           {
             question: 'If DNA ligase is mutated (non-functional), what would autoradiography of the replicated DNA reveal?',
             options: [
-              'Both strands continuous, because DNA polymerase I seals every nick',
+              'Both strands continuous, because DNA polymerase seals every gap',
               'Leading strand intact, lagging strand left as unjoined fragments',
               'Both strands left in short pieces, since each is built from Okazaki fragments',
               'No new DNA at all, because replication cannot begin without ligase'

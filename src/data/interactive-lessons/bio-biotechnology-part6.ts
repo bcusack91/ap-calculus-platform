@@ -50,7 +50,7 @@ AP Biology free-response questions include **interpreting and evaluating experim
       type: 'text' as const,
       content: `## Scenario 1: Optimizing Transformation
 
-A student tests how the length of heat shock at 42°C affects transformation. Every tube gets the same cells and the same amount of a plasmid carrying an ampicillin-resistance gene. Each plate receives 0.05 µg of plasmid and contains ampicillin.
+A student tests how the length of the heat-shock step (a brief temperature jump used to help cells take up DNA) affects transformation. Every tube gets the same cells and the same amount of a plasmid carrying an ampicillin-resistance gene. Each plate receives 0.05 µg of plasmid and contains ampicillin.
 
 | Heat shock (s) | Colonies on ampicillin |
 |---|---|

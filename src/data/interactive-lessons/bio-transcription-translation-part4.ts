@@ -14,10 +14,8 @@ export const bioTranscriptionPart4Data = {
 | Component | Role |
 |-----------|------|
 | **mRNA** | Supplies the codons, read 5′ → 3′ in non-overlapping triplets |
-| **tRNA** | Adapter: an **anticodon** at one end pairs with a codon; the matching amino acid is attached at the other end |
+| **tRNA** | Adapter: an **anticodon** at one end pairs with a codon; each distinct tRNA carries its own specific amino acid at the other end |
 | **Ribosome** (rRNA + proteins) | Holds mRNA and tRNAs in position; its rRNA catalyzes peptide bonds |
-| **Enzymes that load tRNAs** | Attach each amino acid to the correct tRNA, using ATP |
-| **GTP** | Supplies energy for initiation, tRNA delivery and ribosome movement |
 
 The ribosome has a small and a large subunit, and three tRNA-binding sites:
 
@@ -46,8 +44,10 @@ The ribosome has a small and a large subunit, and three tRNA-binding sites:
 
 **3. Termination**
 
-- A **stop codon** (UAA, UAG or UGA) enters the A site. No tRNA matches it; instead a **release factor** protein binds.
+- A **stop codon** enters the A site. No tRNA matches it, so no amino acid is added.
 - The finished polypeptide is released, and the ribosome comes apart.
+
+(The names and details of the other proteins and factors that assist each stage of translation are beyond the scope of the AP exam.)
 
 The polypeptide grows from its amino end to its carboxyl end, matching the mRNA read 5′ → 3′. Several ribosomes can translate one mRNA at the same time, forming a **polyribosome**, so one mRNA can yield many protein copies quickly.
       `
@@ -72,15 +72,15 @@ The polypeptide grows from its amino end to its carboxyl end, matching the mRNA 
             explanation: 'Only a tRNA whose anticodon pairs with the codon in the A site stays bound, so the mRNA codon dictates which amino acid comes next.'
           },
           {
-            question: 'When a ribosome reaches a UAG codon in the A site, what happens next?',
+            question: 'A ribosome reaches a codon that a codon chart lists as a stop codon. What happens next?',
             options: [
               'A tRNA carrying a final amino acid enters the A site',
-              'A release factor binds, and the polypeptide is freed',
+              'No tRNA pairs with it, and the polypeptide is freed',
               'The ribosome skips the codon and keeps on translating',
               'The ribosome returns to AUG to start a second copy'
             ],
             correctAnswer: 1,
-            explanation: 'UAG is a stop codon. No tRNA pairs with it; a release factor binds instead and the completed polypeptide is released.'
+            explanation: 'A stop codon has no matching tRNA, so no amino acid is added; translation ends and the completed polypeptide is released. The ribosome does not skip the codon, and a new round of translation begins at a start codon, not by the same ribosome backing up.'
           }
         ]
       }
@@ -154,7 +154,7 @@ In bacteria, ribosomes attach to an mRNA while RNA polymerase is still making it
 
 ### Translation is a target for antibiotics
 
-Bacterial ribosomes differ in structure from the ribosomes in a eukaryote's cytoplasm. Several antibiotics, including streptomycin and tetracycline, bind bacterial ribosomes and block translation, while leaving the host's cytoplasmic ribosomes largely unaffected.
+Bacterial ribosomes differ in structure from the ribosomes in a eukaryote's cytoplasm. Several antibiotics bind bacterial ribosomes and block translation, while leaving the host's cytoplasmic ribosomes largely unaffected.
 
 > 📝 **AP Connection:** Because nearly all organisms share the same genetic code and the same basic translation steps, these processes are evidence of **common ancestry**. The structural differences in ribosomes are what make selective antibiotics possible.
       `

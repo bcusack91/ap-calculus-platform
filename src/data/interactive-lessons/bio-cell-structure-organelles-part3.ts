@@ -55,9 +55,8 @@ The nucleus is the largest organelle in most eukaryotic cells (typically 5–10 
 
 Nuclear pores are not simple holes — they are **selective gates**:
 - Small molecules (water, ions) pass freely
-- Large molecules require **nuclear localization signals** (NLS) for import
-- mRNA is exported with the help of export proteins
-- Each nucleus has ~3,000–4,000 pores
+- Large molecules such as mRNA and ribosomal subunits are moved through selectively
+- This control lets the nucleus regulate which messages reach the ribosomes
       `
     },
     {
@@ -131,10 +130,10 @@ The ER is the largest membrane system in the cell — a network of interconnecte
 | Feature | Detail |
 |---------|--------|
 | **Appearance** | No ribosomes attached; tubular network |
-| **Functions** | Lipid synthesis, steroid hormone production, detoxification, calcium storage |
-| **Rich in** | Liver cells (detox), ovary/testes cells (steroids), muscle cells ($Ca^{2+}$ as sarcoplasmic reticulum) |
+| **Functions** | Lipid synthesis and detoxification of the cell |
+| **Also** | Like all ER, gives mechanical support and moves materials within the cell |
 
-> 🔑 **Key connection:** Rough ER → makes proteins. Smooth ER → makes lipids and detoxifies. Both contribute to building new cell membranes.
+> 🔑 **Key connection:** Rough ER → makes proteins. Smooth ER → makes lipids and detoxifies. Both contribute to building new cell membranes. The extra smooth ER jobs found in particular specialized cell types are not tested on the AP exam.
       `
     },
     {
@@ -157,7 +156,7 @@ The ER is the largest membrane system in the cell — a network of interconnecte
             explanation: 'Secreted proteins are synthesized on bound ribosomes at the rough ER. Cells that secrete large amounts of protein (like pancreatic beta cells secreting insulin) have extensive rough ER.'
           },
           {
-            question: 'A liver cell exposed to high levels of alcohol increases its smooth ER surface area. This adaptation is most directly related to the role of smooth ER in:',
+            question: 'Cells exposed to a toxic compound respond by expanding their smooth ER. This response is most directly related to the role of smooth ER in:',
             options: [
               'Protein synthesis',
               'DNA replication',
@@ -165,7 +164,7 @@ The ER is the largest membrane system in the cell — a network of interconnecte
               'Ribosome assembly'
             ],
             correctAnswer: 2,
-            explanation: 'The smooth ER contains enzymes that detoxify drugs and alcohol. Chronic alcohol exposure triggers proliferation of smooth ER in liver cells, increasing detoxification capacity. This is why chronic drinkers develop alcohol tolerance.'
+            explanation: 'Detoxification is a core smooth ER function. More smooth ER means more capacity to break down the toxic compound. Protein synthesis happens on ribosomes (many on the rough ER), DNA replication in the nucleus, and ribosome assembly in the nucleolus.'
           }
         ]
       }
@@ -179,11 +178,11 @@ The ER is the largest membrane system in the cell — a network of interconnecte
       exercise: {
         dropdowns: [
           {
-            label: 'A protein with a signal peptide is directed to the',
-            options: ['Free ribosomes', 'Rough ER', 'Smooth ER', 'Nucleolus']
+            label: 'Proteins made for secretion are synthesized on ribosomes attached to the',
+            options: ['Nucleolus', 'Rough ER', 'Smooth ER', 'Golgi apparatus']
           },
           {
-            label: 'Steroid hormones like estrogen are synthesized in the',
+            label: 'Phospholipids for new membranes are synthesized in the',
             options: ['Rough ER', 'Smooth ER', 'Golgi apparatus', 'Nucleus']
           },
           {
@@ -196,10 +195,10 @@ The ER is the largest membrane system in the cell — a network of interconnecte
           }
         ],
         correctAnswers: ['Rough ER', 'Smooth ER', 'Endoplasmic reticulum', 'Nucleolus'],
-        hint1: 'Signal peptides direct nascent proteins to the ER membrane.',
-        hint2: 'Steroids are lipids — lipid synthesis occurs in the smooth ER.',
+        hint1: 'This ER region is studded with ribosomes.',
+        hint2: 'Phospholipids are lipids — lipid synthesis occurs in the smooth ER.',
         hint3: 'The outer membrane of the nuclear envelope is physically continuous with the rough ER.',
-        explanation: 'Signal peptides target proteins to the rough ER for secretory pathway processing. Smooth ER synthesizes lipids including steroid hormones. The nuclear envelope and ER form a continuous membrane system. The nucleolus is where rRNA is made and ribosomal subunits are partially assembled.'
+        explanation: 'Secretory proteins are made by ribosomes bound to the rough ER. Smooth ER synthesizes lipids, including membrane phospholipids. The nuclear envelope and ER form a continuous membrane system. The nucleolus is where rRNA is made and ribosomal subunits are partially assembled.'
       }
     },
     {
@@ -212,11 +211,11 @@ Enter the correct term for each description.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['signal peptide', 'nucleolus', 'rough ER'],
-        hint1: 'A short amino acid sequence at the start of a protein that directs it to the ER.',
+        correctAnswers: ['smooth ER', 'nucleolus', 'rough ER'],
+        hint1: 'The ER region without ribosomes that synthesizes lipids and detoxifies the cell.',
         hint2: 'The dense structure within the nucleus where ribosomal RNA is produced.',
         hint3: 'The organelle studded with ribosomes that synthesizes secretory proteins.',
-        explanation: 'A signal peptide is a short N-terminal sequence that targets a protein to the rough ER membrane. The nucleolus produces rRNA and assembles ribosomal subunits. The rough ER is named for its ribosome-studded appearance and is the primary site for synthesizing proteins destined for secretion or membrane insertion.'
+        explanation: 'The smooth ER lacks ribosomes and carries out lipid synthesis and detoxification. The nucleolus produces rRNA and assembles ribosomal subunits. The rough ER is named for its ribosome-studded appearance and is the primary site for synthesizing proteins destined for secretion or membrane insertion.'
       }
     },
     {
@@ -228,15 +227,15 @@ Enter the correct term for each description.
       exercise: {
         questions: [
           {
-            question: 'A mutation removes the signal peptide from a secretory protein. What is the most likely consequence?',
+            question: 'A short signal sequence at the start of a secretory protein directs the ribosome making it to the rough ER. A mutation deletes this signal sequence. What is the most likely consequence?',
             options: [
               'It will be synthesized inside the nucleus and stay there',
-              'It will be made on free ribosomes and stay in the cytosol',
+              'It will be translated entirely in the cytosol and remain there',
               'It will bypass the rough ER and be sent straight to the Golgi',
               'It will not be made at all, since translation requires the peptide'
             ],
             correctAnswer: 1,
-            explanation: 'Without a signal peptide, the ribosome has no signal to dock at the rough ER. Translation will complete on a free ribosome, and the protein will remain in the cytoplasm instead of entering the secretory pathway.'
+            explanation: 'Without the signal sequence, the ribosome has no signal to dock at the rough ER. Translation will complete on a free ribosome, and the protein will remain in the cytoplasm instead of entering the secretory pathway.'
           },
           {
             question: 'Which observation would provide evidence that a cell is specialized for secretion?',

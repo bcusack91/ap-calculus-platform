@@ -34,7 +34,7 @@ G$_1$ is typically the longest and most variable phase of interphase:
 - If the cell passes this checkpoint, it is committed to S phase and division
 - If conditions are unfavorable, the cell enters **G$_0$**
 
-> **Growth Factors:** External signals (like PDGF, EGF, and insulin-like growth factor) bind to receptors and activate signaling cascades that promote passage through the G$_1$/S checkpoint.  Cancer cells often have mutations that make them independent of growth factor signaling.
+> **Growth Factors:** External protein signals called growth factors bind to receptors and activate signaling cascades that promote passage through the G$_1$/S checkpoint. (The names of specific growth factors are not tested on the AP exam.)  Cancer cells often have mutations that make them independent of growth factor signaling.
       `
     },
     {
@@ -47,16 +47,10 @@ During S phase, the entire genome is copied:
 
 **Key events:**
 - Each chromosome is replicated by **DNA polymerase** using semi-conservative replication
-- Replication begins at many **origins of replication** simultaneously (humans have ~30,000-50,000 origins)
+- Replication begins at many **origins of replication** at once along each chromosome, so the whole genome can be copied in a few hours
 - New histone proteins are synthesized and assembled onto the replicated DNA
-- After replication, each chromosome consists of two **sister chromatids** joined at the **centromere** by **cohesin** proteins
-- The centrosome (containing two centrioles in animal cells) is also duplicated
-
-**Replication timing:**
-- Not all chromosomes replicate simultaneously
-- Euchromatin (active genes) replicates early in S phase
-- Heterochromatin (condensed, inactive regions) replicates late in S phase
-- Each origin of replication fires only ONCE per S phase (licensing system prevents re-replication)
+- After replication, each chromosome consists of two **sister chromatids** joined at the **centromere**
+- Each stretch of DNA is copied exactly **once** per S phase, so the daughter cells receive one complete copy each
 
 > **DNA Content Notation:** A cell in G$_1$ has **2n** chromosomes and **2C** DNA content.  After S phase (in G$_2$), it has **2n** chromosomes but **4C** DNA content (each chromosome has doubled its DNA).
       `
@@ -79,7 +73,7 @@ G$_2$ is the final preparation period before mitosis:
   - The cell is large enough to divide
   - Critical mitotic proteins are present
 
-> **If DNA damage is detected:** The checkpoint kinase **ATM/ATR** activates **p53**, which can halt the cell cycle (allowing time for repair) or trigger **apoptosis** (programmed cell death) if the damage is too severe to repair.
+> **If DNA damage is detected:** checkpoint proteins (such as the tumor suppressor **p53**) halt the cell cycle, allowing time for repair, or trigger **apoptosis** (programmed cell death) if the damage is too severe to repair.
       `
     },
     {
@@ -95,7 +89,7 @@ G$_2$ is the final preparation period before mitosis:
             options: [
               'It sets the rate at which DNA polymerase copies the genome in each cycle',
               'Passing it commits the cell to completing the cycle and dividing',
-              'It controls when cohesin is cleaved so sister chromatids can separate',
+              'It controls when sister chromatids are released to separate at anaphase',
               'It regulates the contractile ring that pinches the cell in two at cytokinesis'
             ],
             correctAnswer: 1,
@@ -113,7 +107,7 @@ G$_2$ is the final preparation period before mitosis:
             explanation: 'Chromosome number counts centromeres. After replication, each chromosome has two copies (sister chromatids) linked at one centromere. So the number of chromosomes remains 2n = 46 in humans, but the DNA content doubles from 2C to 4C.'
           },
           {
-            question: 'A mutation in ATM kinase prevents the cell from detecting DNA damage at the G2/M checkpoint. What is the likely consequence?',
+            question: 'A mutation disables the protein that detects DNA damage at the G2/M checkpoint. What is the likely consequence?',
             options: [
               'The cell will be unable to begin replicating its DNA during S phase',
               'Cells with damaged DNA will enter mitosis and pass mutations to daughter cells',
@@ -121,7 +115,7 @@ G$_2$ is the final preparation period before mitosis:
               'DNA damage will be repaired more efficiently, lowering the mutation rate'
             ],
             correctAnswer: 1,
-            explanation: 'ATM kinase is a key sensor for DNA double-strand breaks. Without it, the G2/M checkpoint cannot detect damage, and cells with broken or improperly replicated DNA enter mitosis. This leads to genomic instability — a hallmark of cancer.'
+            explanation: 'The checkpoint depends on proteins that sense DNA damage. Without that sensor, the G2/M checkpoint cannot detect damage, and cells with broken or improperly replicated DNA enter mitosis. This leads to genomic instability — a hallmark of cancer.'
           }
         ]
       }
@@ -135,13 +129,13 @@ G$_2$ is the final preparation period before mitosis:
       exercise: {
         questions: [
           {
-            question: 'The proteins that hold sister chromatids together at the centromere after replication:',
-            answer: 'cohesin',
-            acceptableAnswers: ['cohesin', 'Cohesin', 'cohesins'],
-            placeholder: 'e.g. condensin'
+            question: 'Programmed cell death, triggered when DNA damage is too severe to repair:',
+            answer: 'apoptosis',
+            acceptableAnswers: ['apoptosis', 'Apoptosis', 'programmed cell death'],
+            placeholder: 'e.g. necrosis'
           },
           {
-            question: 'The tumor suppressor protein activated by ATM/ATR when DNA damage is detected:',
+            question: 'The tumor suppressor protein that halts the cycle when DNA damage is detected:',
             answer: 'p53',
             acceptableAnswers: ['p53', 'P53', 'TP53', 'tp53'],
             placeholder: 'e.g. Rb'

@@ -9,64 +9,55 @@ export const bioCellRespirationPart4Data = {
 
 **Part 4 of 7**
 
-The citric acid cycle — also called the **Krebs cycle** (after Hans Krebs, who elucidated it in 1937) or the **tricarboxylic acid (TCA) cycle** — is the central metabolic hub of the cell.  It completes the oxidation of the carbon atoms originally present in glucose, producing CO$_2$, and generates most of the NADH and FADH$_2$ that will drive ATP production in the electron transport chain.
+The citric acid cycle — also called the **Krebs cycle** — completes the oxidation of the carbon atoms that were originally in glucose, releasing them as CO$_2$.  Along the way it captures energy, mostly by reducing the electron carriers **NAD$^+$** and **FAD** to **NADH** and **FADH$_2$**, which will drive ATP production in the electron transport chain.
 
 **Location:** Mitochondrial matrix
 
-**Overall function:** Oxidize the acetyl group from acetyl-CoA, releasing 2 CO$_2$ and capturing energy as NADH, FADH$_2$, and GTP (equivalent to ATP).
+**Overall function:** Oxidize the 2-carbon acetyl group from acetyl-CoA, releasing CO$_2$ and capturing energy as NADH, FADH$_2$, and a small amount of ATP.
       `
     },
     {
       id: 'cr4-steps',
       type: 'text' as const,
       content: `
-### The Eight Steps of the Citric Acid Cycle
+### What Goes In, What Comes Out
 
-The cycle begins when **acetyl-CoA** donates its 2-carbon acetyl group to the 4-carbon molecule **oxaloacetate**, forming the 6-carbon molecule **citrate**:
+The cycle is a series of enzyme-catalyzed reactions.  The AP framework excludes memorizing its steps, its intermediate molecules, and its enzyme names, so focus on the inputs, the outputs, and why it is a *cycle*:
 
-| Step | Enzyme | Reaction | Products |
-|------|--------|----------|----------|
-| 1 | Citrate synthase | Acetyl-CoA + Oxaloacetate $\\rightarrow$ Citrate | Citrate (6C), free CoA |
-| 2 | Aconitase | Citrate $\\rightarrow$ Isocitrate | Isocitrate (6C) |
-| 3 | **Isocitrate dehydrogenase** | Isocitrate $\\rightarrow$ $\\alpha$-ketoglutarate | **NADH**, CO$_2$ (5C) |
-| 4 | **$\\alpha$-ketoglutarate dehydrogenase** | $\\alpha$-KG $\\rightarrow$ Succinyl-CoA | **NADH**, CO$_2$ (4C) |
-| 5 | Succinyl-CoA synthetase | Succinyl-CoA $\\rightarrow$ Succinate | **GTP** (=ATP), free CoA |
-| 6 | **Succinate dehydrogenase** | Succinate $\\rightarrow$ Fumarate | **FADH$_2$** |
-| 7 | Fumarase | Fumarate $\\rightarrow$ Malate | Malate (4C) |
-| 8 | Malate dehydrogenase | Malate $\\rightarrow$ Oxaloacetate | **NADH** |
-
-The regenerated **oxaloacetate** is ready to combine with another acetyl-CoA, continuing the cycle.
+- Each turn, a 2-carbon acetyl group joins a 4-carbon acceptor molecule that is already in the matrix.
+- Over the rest of the turn, **2 carbons leave as CO$_2$**, electrons are transferred to NAD$^+$ and FAD, and one ATP is made by substrate-level phosphorylation.
+- The turn ends by **regenerating the 4-carbon acceptor**, ready for the next acetyl group.  Because the acceptor is remade every turn, a small amount of it can process a large amount of fuel.
 
 **Per acetyl-CoA (one turn):**
 - 2 CO$_2$ released
 - 3 NADH produced
 - 1 FADH$_2$ produced
-- 1 GTP (= ATP) produced
+- 1 ATP produced
 
 **Per glucose (two turns):**
 - 4 CO$_2$, 6 NADH, 2 FADH$_2$, 2 ATP
 
-> **Note:** The 4 CO$_2$ from the citric acid cycle plus the 2 CO$_2$ from pyruvate oxidation = 6 CO$_2$ total, matching the 6 carbons in the original glucose.
+> **Carbon check:** The 4 CO$_2$ from the citric acid cycle plus the 2 CO$_2$ from pyruvate oxidation = 6 CO$_2$ total, matching the 6 carbons in the original glucose.
       `
     },
     {
       id: 'cr4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-### Checkpoint — Citric Acid Cycle Steps
+### Checkpoint — Citric Acid Cycle Outputs
       `,
       exercise: {
         questions: [
           {
-            question: 'What is the 4-carbon molecule that combines with acetyl-CoA to begin the citric acid cycle?',
+            question: 'Why is the citric acid cycle described as a "cycle"?',
             options: [
-              'Citrate',
-              'Succinate',
-              'Oxaloacetate',
-              'Alpha-ketoglutarate'
+              'Its reactions run forward and then in reverse each turn',
+              'The molecule that accepts each acetyl group is regenerated',
+              'Its CO2 is recycled back into glucose within the matrix',
+              'It runs only once per glucose molecule'
             ],
-            correctAnswer: 2,
-            explanation: 'Oxaloacetate (4C) combines with the acetyl group from acetyl-CoA (2C) to form citrate (6C) in the first step of the cycle, catalyzed by citrate synthase.'
+            correctAnswer: 1,
+            explanation: 'Each turn begins when an acetyl group joins a 4-carbon acceptor and ends when that 4-carbon acceptor is regenerated. Because the starting molecule is remade, the sequence repeats as long as acetyl-CoA is supplied.'
           },
           {
             question: 'How many CO2 molecules are released per turn of the citric acid cycle?',
@@ -77,7 +68,7 @@ The regenerated **oxaloacetate** is ready to combine with another acetyl-CoA, co
               '6'
             ],
             correctAnswer: 1,
-            explanation: 'Two CO2 molecules are released per turn — one at step 3 (isocitrate to alpha-ketoglutarate) and one at step 4 (alpha-ketoglutarate to succinyl-CoA). These represent the two carbons that entered as the acetyl group.'
+            explanation: 'Two CO2 molecules are released per turn. They account for the two carbons that entered as the acetyl group. Two turns per glucose release 4 CO2.'
           },
           {
             question: 'Besides NADH, which reduced electron carrier does the citric acid cycle produce?',
@@ -85,10 +76,10 @@ The regenerated **oxaloacetate** is ready to combine with another acetyl-CoA, co
               'FADH2',
               'NADPH',
               'Acetyl-CoA',
-              'Oxaloacetate'
+              'Pyruvate'
             ],
             correctAnswer: 0,
-            explanation: 'Each turn of the citric acid cycle produces FADH2 as well as NADH, and both carry electrons to the electron transport chain. NADPH is made in the light reactions of photosynthesis, while acetyl-CoA and oxaloacetate are carbon compounds that enter the cycle, not electron carriers.'
+            explanation: 'Each turn of the citric acid cycle produces FADH2 as well as NADH, and both carry electrons to the electron transport chain. NADPH is made in the light reactions of photosynthesis, while acetyl-CoA and pyruvate are carbon compounds, not electron carriers.'
           }
         ]
       }
@@ -97,31 +88,25 @@ The regenerated **oxaloacetate** is ready to combine with another acetyl-CoA, co
       id: 'cr4-regulation',
       type: 'text' as const,
       content: `
-### Regulation and Metabolic Hub
+### Where the Energy Goes, and Other Fuels
 
-The citric acid cycle is regulated at three key enzymes:
+By the end of the citric acid cycle, all six carbons of glucose have been released as CO$_2$, yet only **4 ATP** have been made so far (2 in glycolysis, 2 in the cycle).  Where is the rest of the energy?  It is held in the high-energy electrons carried by **NADH and FADH$_2$**.  The electron transport chain (Part 5) converts that energy into most of the cell's ATP.
 
-1. **Citrate synthase** — inhibited by ATP, NADH, and citrate
-2. **Isocitrate dehydrogenase** — stimulated by ADP; inhibited by ATP and NADH
-3. **$\\alpha$-ketoglutarate dehydrogenase** — inhibited by succinyl-CoA and NADH; activated by Ca$^{2+}$
+**The cycle is controlled by the cell's energy status.**  When ATP and NADH are plentiful, the cycle slows; when they are being used up, it speeds up.  This is the same feedback logic as glycolysis.
 
-**The Citric Acid Cycle as a Metabolic Hub:**
+**Other macromolecules feed the same pathway.**  Cellular respiration uses energy from biological macromolecules, not only glucose:
+- **Fats** are broken into 2-carbon units that enter as acetyl-CoA, which is why fats store so much energy per gram
+- **Proteins** are broken into amino acids; after the nitrogen is removed, their carbon skeletons can enter glycolysis or the cycle
+- **Carbohydrates** other than glucose are converted into molecules that enter glycolysis
 
-The cycle is not just for glucose catabolism.  It intersects with many other metabolic pathways:
-
-- **Amino acid metabolism:** Several amino acids can be converted to citric acid cycle intermediates (e.g., glutamate $\\rightarrow$ $\\alpha$-ketoglutarate)
-- **Fat metabolism:** Fatty acids are broken down to acetyl-CoA via $\\beta$-oxidation
-- **Gluconeogenesis:** Oxaloacetate can be used to make new glucose
-- **Biosynthesis:** Cycle intermediates serve as precursors for amino acids, fatty acids, and porphyrins
-
-When intermediates are pulled out for biosynthesis, they must be replenished through **anaplerotic reactions** (e.g., pyruvate carboxylase converts pyruvate to oxaloacetate).
+Because so many fuels converge here, the cycle is often called a **metabolic hub**.
       `
     },
     {
       id: 'cr4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-### Checkpoint — Regulation and Integration
+### Checkpoint — Energy and Integration
       `,
       exercise: {
         questions: [
@@ -130,22 +115,22 @@ When intermediates are pulled out for biosynthesis, they must be replenished thr
             options: [
               'It processes only glucose, never fats, proteins, or amino acids',
               'It produces more ATP than glycolysis, fermentation, and oxidative phosphorylation',
-              'Its intermediates connect to amino acid, fat, and carbohydrate metabolism',
+              'Carbon from carbohydrates, fats, and proteins can all enter it',
               'It runs in every metabolic compartment of the cell at once'
             ],
             correctAnswer: 2,
-            explanation: 'The citric acid cycle sits at the crossroads of metabolism. Amino acids, fatty acids, and carbohydrates can all feed into the cycle, and its intermediates can be withdrawn for biosynthetic pathways.'
+            explanation: 'Fats, proteins, and carbohydrates can all be broken down into molecules that enter glycolysis or the citric acid cycle, so carbon from many fuels converges on this pathway.'
           },
           {
-            question: 'What are anaplerotic reactions?',
+            question: 'After the citric acid cycle, only 4 ATP have been made from one glucose. Where is most of the remaining energy from glucose stored at this point?',
             options: [
-              'Reactions that break down cycle intermediates for energy',
-              'Reactions that refill cycle intermediates withdrawn for biosynthesis',
-              'Reactions that make ATP directly from cycle intermediates',
-              'Reactions that convert CO2 back into organic molecules'
+              'In the CO2 molecules released by the cycle',
+              'In the electrons carried by NADH and FADH2',
+              'In the oxygen that will accept electrons',
+              'In the regenerated 4-carbon acceptor'
             ],
             correctAnswer: 1,
-            explanation: 'Anaplerotic (from Greek "to fill up") reactions replenish cycle intermediates. The most important is the conversion of pyruvate to oxaloacetate by pyruvate carboxylase, ensuring the cycle can continue even when intermediates are diverted.'
+            explanation: 'The glucose carbons leave as CO2, a low-energy molecule. The energy extracted along the way is held in the high-energy electrons of NADH and FADH2, which the electron transport chain uses to build the proton gradient that powers most ATP synthesis.'
           }
         ]
       }
@@ -159,22 +144,22 @@ When intermediates are pulled out for biosynthesis, they must be replenished thr
       exercise: {
         questions: [
           {
-            question: 'The 6-carbon molecule formed when acetyl-CoA combines with oxaloacetate:',
-            answer: 'citrate',
-            acceptableAnswers: ['citrate', 'Citrate', 'citric acid', 'Citric acid'],
-            placeholder: 'e.g. succinate'
+            question: 'The compartment of the mitochondrion where the citric acid cycle takes place:',
+            answer: 'matrix',
+            acceptableAnswers: ['matrix', 'Matrix', 'mitochondrial matrix', 'Mitochondrial matrix'],
+            placeholder: 'e.g. cristae'
           },
           {
-            question: 'The process by which fatty acids are broken down to acetyl-CoA (use Greek letter or English name):',
-            answer: 'beta-oxidation',
-            acceptableAnswers: ['beta-oxidation', 'Beta-oxidation', 'beta oxidation', 'Beta oxidation', 'b-oxidation'],
-            placeholder: 'e.g. glycolysis'
+            question: 'The waste gas released as the carbons of glucose are fully oxidized:',
+            answer: 'CO2',
+            acceptableAnswers: ['CO2', 'co2', 'carbon dioxide', 'Carbon dioxide'],
+            placeholder: 'e.g. O2'
           },
           {
-            question: 'The scientist who elucidated the citric acid cycle (last name):',
-            answer: 'Krebs',
-            acceptableAnswers: ['Krebs', 'krebs', 'Hans Krebs'],
-            placeholder: 'e.g. Calvin'
+            question: 'The 2-carbon molecule that delivers the acetyl group into the cycle:',
+            answer: 'acetyl-CoA',
+            acceptableAnswers: ['acetyl-CoA', 'Acetyl-CoA', 'acetyl CoA', 'Acetyl CoA', 'acetyl coA'],
+            placeholder: 'e.g. pyruvate'
           }
         ]
       }
@@ -189,18 +174,18 @@ When intermediates are pulled out for biosynthesis, they must be replenished thr
         questions: [
           {
             question: 'The electron carrier that the cycle reduces along with NAD+:',
-            options: ['ATP', 'NADP+', 'FAD', 'Coenzyme A'],
+            options: ['ATP', 'NADP+', 'FAD', 'O2'],
             correctAnswer: 'FAD'
           },
           {
-            question: 'The 4-carbon molecule regenerated at the end of each cycle to restart the process:',
-            options: ['Citrate', 'Succinate', 'Fumarate', 'Oxaloacetate'],
-            correctAnswer: 'Oxaloacetate'
+            question: 'The number of turns of the cycle per glucose molecule:',
+            options: ['1', '2', '3', '6'],
+            correctAnswer: '2'
           },
           {
-            question: 'The ATP-equivalent nucleotide made directly by each turn of the cycle:',
-            options: ['GMP', 'GDP', 'GTP', 'cAMP'],
-            correctAnswer: 'GTP'
+            question: 'How ATP is made directly within the cycle:',
+            options: ['Chemiosmosis', 'Substrate-level phosphorylation', 'Photophosphorylation', 'Fermentation'],
+            correctAnswer: 'Substrate-level phosphorylation'
           }
         ]
       }
@@ -233,7 +218,7 @@ When intermediates are pulled out for biosynthesis, they must be replenished thr
               'CO2 and H2O'
             ],
             correctAnswer: 1,
-            explanation: 'Without the ETC, NADH and FADH2 cannot be reoxidized. They accumulate, and without NAD+ and FAD to accept electrons, the dehydrogenase reactions of the citric acid cycle slow and eventually stop.'
+            explanation: 'Without the ETC, NADH and FADH2 cannot be reoxidized. They accumulate, and without NAD+ and FAD to accept electrons, the citric acid cycle slows and eventually stops.'
           }
         ]
       }

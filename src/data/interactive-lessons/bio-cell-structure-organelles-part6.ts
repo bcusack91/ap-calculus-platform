@@ -86,7 +86,7 @@ A researcher examines an unknown eukaryotic cell under an electron microscope an
       content: `
 ## 🧪 Scenario 2: Drug Experiment
 
-A biologist treats cells with **Brefeldin A**, a drug that causes the Golgi apparatus to collapse back into the ER.
+A biologist treats cells with a drug that causes the Golgi apparatus to collapse back into the ER.
 
 **Predict the effects on cellular function.**`
     },
@@ -110,7 +110,7 @@ A biologist treats cells with **Brefeldin A**, a drug that causes the Golgi appa
             explanation: 'The Golgi is responsible for modifying proteins (glycosylation), sorting them to correct destinations, and packaging them into vesicles. Without a functional Golgi, proteins made in the ER cannot be properly processed or delivered.'
           },
           {
-            question: 'Would Brefeldin A affect a prokaryotic cell?',
+            question: 'Would this drug have the same effect on a prokaryotic cell?',
             options: [
               'Yes — prokaryotes also depend on the Golgi for protein secretion',
               'No — prokaryotes lack a Golgi apparatus and endomembrane system',
@@ -118,7 +118,7 @@ A biologist treats cells with **Brefeldin A**, a drug that causes the Golgi appa
               'No — but only because their cell wall blocks the drug'
             ],
             correctAnswer: 1,
-            explanation: 'Prokaryotes lack all membrane-bound organelles, including the Golgi apparatus. They secrete proteins directly through the plasma membrane or via type III/IV secretion systems. Brefeldin A specifically targets the eukaryotic endomembrane system.'
+            explanation: 'Prokaryotes lack membrane-bound organelles, including the Golgi apparatus, so a drug that acts by collapsing the Golgi has nothing to act on. Their cell walls are not the reason, and they never depended on a Golgi for secretion.'
           }
         ]
       }
@@ -166,15 +166,15 @@ A biologist treats cells with **Brefeldin A**, a drug that causes the Golgi appa
             options: ['Gap junctions', 'Tight junctions', 'Plasmodesmata', 'Desmosomes']
           },
           {
-            label: 'A cell type that would have the MOST smooth ER is a',
-            options: ['Neuron', 'Liver cell', 'Red blood cell', 'Bacterial cell']
+            label: 'An organelle found in BOTH plant and animal cells is the',
+            options: ['Cell wall', 'Mitochondrion', 'Chloroplast', 'Large central vacuole']
           }
         ],
-        correctAnswers: ['Plant cell', 'Cell plate', 'Plasmodesmata', 'Liver cell'],
+        correctAnswers: ['Plant cell', 'Cell plate', 'Plasmodesmata', 'Mitochondrion'],
         hint1: 'Chloroplasts + cell wall + central vacuole = plant cell features.',
         hint2: 'Plant cells cannot form a cleavage furrow because the rigid cell wall prevents pinching.',
         hint3: 'Plasmodesmata are channels through the cell wall connecting adjacent plant cells.',
-        explanation: 'Plant cells have chloroplasts, cell walls, and large central vacuoles. Plant cytokinesis uses a cell plate (vesicles fuse to build a new wall). Plasmodesmata allow direct cytoplasmic connections between plant cells. Liver cells (hepatocytes) have extensive smooth ER for detoxification of drugs and alcohol.'
+        explanation: 'Plant cells have chloroplasts, cell walls, and large central vacuoles. Plant cytokinesis uses a cell plate (vesicles fuse to build a new wall). Plasmodesmata allow direct cytoplasmic connections between plant cells. Both plant and animal cells have mitochondria for cellular respiration; cell walls, chloroplasts, and large central vacuoles are plant features.'
       }
     },
     {
@@ -203,26 +203,26 @@ Identify the organelle described.
       exercise: {
         questions: [
           {
-            question: 'A genetic mutation prevents a cell from producing mannose-6-phosphate tags. Which organelle would be MOST directly affected?',
+            question: 'A mutation blocks transport vesicles from budding off the Golgi apparatus. Which outcome is most likely?',
             options: [
-              'Mitochondria — they would not receive enough ATP from the Golgi',
-              'Lysosomes — hydrolytic enzymes would not be targeted correctly',
-              'Chloroplasts — photosynthetic enzymes would not reach the stroma',
-              'Nucleus — DNA replication enzymes could not enter through the pores'
+              'Mitochondria would no longer receive the ATP that the Golgi supplies',
+              'Secretory proteins would build up inside the cell rather than leave it',
+              'Free ribosomes would stop translating mRNA throughout the cytosol',
+              'The nucleus would be unable to replicate its DNA before division'
             ],
             correctAnswer: 1,
-            explanation: 'Mannose-6-phosphate (M6P) is the molecular "address label" that directs enzymes from the Golgi to lysosomes. Without M6P tags, hydrolytic enzymes would be secreted outside the cell instead of being delivered to lysosomes. This leads to I-cell disease (inclusion cell disease).'
+            explanation: 'The Golgi packages proteins into vesicles for trafficking. If vesicles cannot leave it, proteins bound for secretion stay trapped inside the cell. The Golgi does not supply ATP, and translation on free ribosomes and DNA replication do not depend on Golgi vesicles.'
           },
           {
-            question: 'A researcher stains cells with a fluorescent dye that binds to actin. Under the fluorescence microscope, which structures would glow?',
+            question: 'A cell has very many mitochondria but little rough ER and no chloroplasts. Which function is this cell most likely specialized for?',
             options: [
-              'Microtubules, mitotic spindle fibers, and cilia',
-              'Microfilaments, cleavage furrows, and microvilli',
-              'Intermediate filaments, keratin, and the nuclear lamina',
-              'Rough ER, the Golgi apparatus, and vesicles'
+              'Energy-demanding work such as active transport',
+              'Secreting large amounts of digestive enzymes',
+              'Storing water and maintaining turgor pressure',
+              'Capturing light energy to build sugars'
             ],
-            correctAnswer: 1,
-            explanation: 'Actin is the protein that makes up microfilaments (7 nm). These form cleavage furrows during cytokinesis, support microvilli, and are involved in cell crawling. Microtubules (tubulin) form the spindle and cilia. Intermediate filaments are made of keratins/lamins.'
+            correctAnswer: 0,
+            explanation: 'Mitochondria supply ATP, so a cell packed with them is built for energy-demanding work such as active transport or contraction. Heavy protein secretion would require extensive rough ER, turgor needs a central vacuole, and capturing light needs chloroplasts.'
           }
         ]
       }

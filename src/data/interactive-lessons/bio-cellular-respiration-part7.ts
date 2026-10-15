@@ -24,8 +24,8 @@ $$\\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2 + \\sim30\\text{ADP} + \\s
 
 1. **Energy flows through carriers:** Glucose $\\rightarrow$ NADH/FADH$_2$ $\\rightarrow$ proton gradient $\\rightarrow$ ATP
 2. **Carbon tracking:** 6C glucose $\\rightarrow$ 2 × 3C pyruvate $\\rightarrow$ 2 × 2C acetyl-CoA + 2 CO$_2$ $\\rightarrow$ 4 CO$_2$ (from cycle) = 6 CO$_2$ total
-3. **Oxygen role:** O$_2$ is ONLY used at Complex IV as the final electron acceptor — it does not participate in any earlier step
-4. **Water production:** H$_2$O is formed at Complex IV when O$_2$ accepts electrons and combines with H$^+$
+3. **Oxygen role:** O$_2$ is used ONLY at the end of the electron transport chain, as the terminal electron acceptor — it does not participate in any earlier step
+4. **Water production:** H$_2$O is formed at the end of the chain when O$_2$ accepts electrons and combines with H$^+$
 5. **Coupling:** The ETC does not make ATP directly — it builds the proton gradient that ATP synthase uses
       `
     },
@@ -60,15 +60,15 @@ $$\\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2 + \\sim30\\text{ADP} + \\s
             explanation: 'Thermogenin (UCP1) uncouples electron transport from ATP synthesis — similar to DNP. Protons flow through thermogenin instead of ATP synthase, and the energy of the gradient is released as heat. This "non-shivering thermogenesis" helps hibernating animals maintain body temperature.'
           },
           {
-            question: 'In a cell with fully functioning mitochondria, which of the following would directly cause an increase in the rate of glycolysis?',
+            question: 'In a cell with fully functioning mitochondria, which change would most directly increase the rate of glycolysis?',
             options: [
-              'An increase in ATP concentration',
-              'An increase in citrate concentration',
-              'An increase in AMP concentration',
-              'An increase in NADH concentration'
+              'A rise in the ATP concentration of the cytosol',
+              'A sharp drop in ATP as the cell does more work',
+              'A rise in NADH with no rise in NAD+',
+              'A rise in O2 while ATP use stays the same'
             ],
-            correctAnswer: 2,
-            explanation: 'AMP allosterically activates phosphofructokinase (PFK), the primary regulatory enzyme of glycolysis. High AMP signals that the cell is low on energy and needs to increase glucose catabolism. ATP, citrate, and NADH all inhibit glycolysis at various points.'
+            correctAnswer: 1,
+            explanation: 'ATP inhibits an early enzyme of glycolysis by feedback inhibition. When the cell uses ATP quickly, ATP levels fall, the inhibition is relieved, and glycolysis speeds up. High ATP or a shortage of NAD+ slows glycolysis, and extra O2 alone does not raise the demand for ATP.'
           }
         ]
       }
@@ -93,15 +93,15 @@ $$\\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2 + \\sim30\\text{ADP} + \\s
             explanation: 'Blocking the chain partway makes electrons back up: carriers before the block stay reduced because they cannot pass electrons on, and no electrons reach oxygen, so O2 consumption drops. NADH cannot be reoxidized, so it accumulates and the citric acid cycle slows.'
           },
           {
-            question: 'Skeletal muscle cells can function under both aerobic and anaerobic conditions. During a sprint, lactate levels in the blood rise. Once the sprint ends and oxygen becomes available again, what happens to the accumulated lactate?',
+            question: 'During a sprint, oxygen delivery cannot keep up with demand, and muscle cells produce lactate. What does making lactate do for the muscle cells?',
             options: [
-              'It is excreted in urine and sweat as waste that cannot be reused',
-              'It is turned back into pyruvate in the liver and oxidized or made into glucose',
-              'It is converted directly into ATP inside the muscle cells that made it',
-              'It is converted into ethanol by the liver and exhaled'
+              'It supplies oxygen to the electron transport chain',
+              'It regenerates NAD+, so glycolysis can keep producing ATP',
+              'It produces about 30 extra ATP per glucose molecule',
+              'It moves pyruvate into the mitochondria for oxidation'
             ],
             correctAnswer: 1,
-            explanation: 'Lactate is transported to the liver via the blood (the Cori cycle). There, lactate dehydrogenase converts lactate back to pyruvate. The pyruvate can be oxidized aerobically or used in gluconeogenesis to regenerate glucose, which can return to the muscles.'
+            explanation: 'Converting pyruvate to lactate oxidizes NADH back to NAD+. With NAD+ available, glycolysis can continue to make its 2 ATP per glucose even though the electron transport chain is limited by oxygen. Fermentation adds no ATP of its own.'
           },
           {
             question: 'A mutation cuts by 50% the activity of the protein that passes electrons to oxygen at the end of the electron transport chain. How would this affect the cell?',

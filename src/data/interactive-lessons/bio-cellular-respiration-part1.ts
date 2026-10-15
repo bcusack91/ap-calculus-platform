@@ -33,7 +33,7 @@ Cellular respiration can be divided into four main stages, each occurring in a s
 | **Citric Acid Cycle** | Mitochondrial matrix | 2 Acetyl-CoA | 4 CO$_2$, 6 NADH, 2 FADH$_2$, 2 ATP | 2 ATP |
 | **Oxidative Phosphorylation** | Inner mitochondrial membrane | NADH, FADH$_2$, O$_2$ | H$_2$O, ~26-28 ATP | ~26-28 ATP |
 
-The total yield is about **30-32 ATP** per glucose, depending on the shuttle system used to transport cytoplasmic NADH into the mitochondria.
+The total yield is about **30-32 ATP** per glucose. The figure is approximate because the number of protons pumped per NADH, and the number that must flow back through ATP synthase per ATP, are not fixed whole numbers.
 
 > **Key Concept:** The vast majority of ATP (~90%) is produced in the final stage — oxidative phosphorylation. The earlier stages primarily generate the electron carriers (NADH and FADH$_2$) that feed into the electron transport chain.
       `
@@ -145,15 +145,14 @@ Each NADH molecule carries a pair of high-energy electrons.  These electrons tra
       content: `
 ### ATP: Structure and Function
 
-ATP consists of three components: the nitrogenous base adenine, the sugar ribose, and a chain of **three phosphate groups**.  The bonds between the phosphate groups are often called "high-energy bonds" — not because the bonds themselves are unusually strong, but because **hydrolysis of these bonds releases a large amount of free energy** due to:
+ATP consists of three components: the nitrogenous base adenine, the sugar ribose, and a chain of **three phosphate groups**.  Removing the terminal phosphate by hydrolysis releases energy that the cell can use:
 
-1. **Electrostatic repulsion** — the negatively charged phosphate groups repel each other
-2. **Resonance stabilization** — the products (ADP + P$_i$) are more stable than ATP
-3. **Increased entropy** — hydrolysis increases the number of molecules in solution
+$$\\text{ATP} + \\text{H}_2\\text{O} \\longrightarrow \\text{ADP} + \\text{P}_i + \\text{energy}$$
 
-$$\\text{ATP} + \\text{H}_2\\text{O} \\longrightarrow \\text{ADP} + \\text{P}_i + \\text{energy} \\quad (\\Delta G = -30.5 \\text{ kJ/mol})$$
-
-The cell maintains an ATP/ADP ratio far from equilibrium, ensuring that ATP hydrolysis always releases energy when and where it is needed.
+**Why cells use ATP as the go-between:**
+- **Energy coupling:** A process that releases energy (such as ATP hydrolysis) is coupled to a process that requires energy (such as active transport or building a polymer). The released energy drives the unfavorable process forward.
+- **Constant input:** Living systems are highly ordered. Energy input must exceed energy loss to maintain that order; a significant loss of order or energy flow results in death.
+- **Controlled transfer:** Respiration is a *sequential* pathway. The product of one reaction is the reactant for the next, so energy is released in small steps that can be captured, not in one burst lost as heat.
 
 **Substrate-level phosphorylation** vs. **Oxidative phosphorylation:**
 - *Substrate-level*: An enzyme directly transfers a phosphate group from a substrate molecule to ADP. Occurs in glycolysis and the citric acid cycle.

@@ -93,13 +93,13 @@ Cholesterol acts as a **fluidity buffer** — it keeps membranes functional acro
         dropdowns: [
           { label: 'Phospholipid heads are ___', options: ['hydrophobic', 'hydrophilic', 'nonpolar', 'inert'] },
           { label: 'Cholesterol acts as a fluidity ___', options: ['accelerator', 'buffer', 'eliminator', 'pump'] },
-          { label: 'Steroid hormones are derived from ___', options: ['cholesterol', 'glucose', 'amino acids', 'nucleotides'] }
+          { label: 'Steroids such as estrogen and testosterone function as ___', options: ['hormones', 'enzymes', 'ion channels', 'genetic material'] }
         ],
-        correctAnswers: ['hydrophilic', 'buffer', 'cholesterol'],
+        correctAnswers: ['hydrophilic', 'buffer', 'hormones'],
         hint1: 'Phosphate is polar.',
         hint2: 'It works in BOTH directions.',
-        hint3: 'Same 4-ring backbone.',
-        explanation: 'Phospholipid heads are hydrophilic. Cholesterol buffers membrane fluidity across temperatures. All steroid hormones (testosterone, estrogen, cortisol) share the cholesterol four-ring backbone.'
+        hint3: 'They are chemical signals that travel through the blood.',
+        explanation: 'Phospholipid heads are hydrophilic. Cholesterol buffers membrane fluidity across temperatures. Steroids such as estrogen and testosterone are hormones that regulate growth, development, and homeostasis.'
       }
     }
   ]

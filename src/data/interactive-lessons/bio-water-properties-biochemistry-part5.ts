@@ -95,8 +95,8 @@ All of these properties trace back to one feature: **hydrogen bonding** between 
       exercise: {
         dropdowns: [
           {
-            label: 'The density of ice is about ___ g/mL',
-            options: ['0.50', '0.917', '1.00', '1.25']
+            label: 'In ice, hydrogen bonds hold water molecules ___ than in liquid water',
+            options: ['farther apart', 'closer together', 'at the same spacing', 'with no fixed spacing']
           },
           {
             label: 'All of water\'s unique properties are due to ___',
@@ -107,11 +107,11 @@ All of these properties trace back to one feature: **hydrogen bonding** between 
             options: ['bottom', 'surface', 'middle', 'sides']
           }
         ],
-        correctAnswers: ['0.917', 'hydrogen bonds', 'surface'],
-        hint1: 'Ice is about 9% less dense than liquid water.',
+        correctAnswers: ['farther apart', 'hydrogen bonds', 'surface'],
+        hint1: 'Ice is less dense than liquid water, so its molecules must be more spread out.',
         hint2: 'The one feature that explains everything...',
         hint3: 'Ice is less dense so it rises.',
-        explanation: 'Ice has a density of 0.917 g/mL. All of water\'s unique properties stem from hydrogen bonding. Ice floats on the surface, insulating the water below.'
+        explanation: 'The fixed hydrogen-bond lattice in ice holds molecules farther apart, so ice is less dense than liquid water. All of water\'s unique properties stem from hydrogen bonding. Ice floats on the surface, insulating the water below.'
       }
     }
   ]

@@ -62,32 +62,39 @@ After fertilization with a normal gamete:
     {
       id: 'chr4-disorders',
       type: 'text' as const,
-      content: `## Aneuploid Conditions in Humans
+      content: `## Why Changes in Chromosome Number Disrupt Development
 
-### Autosomal Aneuploidy
+The CED states that changes in chromosome number often result in **new phenotypes** and in **disorders with developmental limitations**. The reason is **gene dosage**.
 
-| Condition | Karyotype | Features |
-|-----------|-----------|----------|
-| **Down syndrome (Trisomy 21)** | 47, XX/XY, +21 | Intellectual disability, characteristic facial features, heart defects; incidence increases with maternal age |
-| **Edwards syndrome (Trisomy 18)** | 47, XX/XY, +18 | Severe intellectual disability, organ defects; most die within first year |
-| **Patau syndrome (Trisomy 13)** | 47, XX/XY, +13 | Severe defects; most die within first month |
+### Gene dosage
 
-> 💡 **Why chromosome 21?** Chromosome 21 is the smallest autosome with the fewest genes (~200), which is why trisomy 21 is the most survivable autosomal trisomy.
+A single chromosome carries hundreds to thousands of genes. A diploid cell normally has two copies of each, and development depends on gene products being made in **balanced amounts**.
 
-### Sex Chromosome Aneuploidy
+| Karyotype change | Copies of each gene on that chromosome | Amount of those gene products |
+|------------------|----------------------------------------|-------------------------------|
+| Normal (2n) | 2 | Normal |
+| Trisomy (2n + 1) | 3 | About 1.5 times normal |
+| Monosomy (2n − 1) | 1 | About half of normal |
 
-| Condition | Karyotype | Phenotype | Features |
-|-----------|-----------|-----------|----------|
-| **Turner syndrome** | 45, X (monosomy X) | Female | Short stature, infertility, webbed neck; only viable human monosomy |
-| **Klinefelter syndrome** | 47, XXY | Male | Tall, long limbs, reduced fertility, may have breast development |
-| **Triple X** | 47, XXX | Female | Usually phenotypically normal; may have learning difficulties |
-| **XYY syndrome** | 47, XYY | Male | Tall stature; usually phenotypically normal |
+Because the change affects **every gene** on the chromosome at once, many proteins are out of balance together. That is why aneuploidy usually changes development far more than a mutation in one gene does.
 
-### Why Sex Chromosome Aneuploidies Are More Survivable
+### Predictable patterns
 
-- **X-inactivation** (Lyon hypothesis): In any cell with more than one X, extra X chromosomes are inactivated as **Barr bodies**
-- The Y chromosome carries few essential genes
-- Therefore, sex chromosome aneuploidies cause less gene dosage imbalance`
+- **More genes, bigger effect.** Trisomies of large, gene-rich chromosomes are almost always lethal early in development; the few that survive to birth involve small chromosomes carrying relatively few genes.
+- **Sex chromosomes are a special case.** Extra or missing sex chromosomes are often less severe, partly because the Y chromosome carries few genes.
+- **Every cell is affected.** An error in meiosis produces a gamete, so the resulting zygote, and every cell that descends from it, carries the abnormal number.
+
+### Worked Example: Tracing an aneuploid zygote
+
+**Problem.** In a human, the two homologs of one chromosome pair fail to separate in meiosis I. One of the resulting gametes is fertilized by a normal gamete. Give the possible chromosome numbers of the zygote.
+
+**Step 1.** Nondisjunction in meiosis I gives two gametes with 24 chromosomes (n + 1) and two with 22 (n − 1).
+
+**Step 2.** A normal gamete carries 23 chromosomes.
+
+**Step 3.** 24 + 23 = **47** (trisomic, 2n + 1), or 22 + 23 = **45** (monosomic, 2n − 1).
+
+> 📝 **Scope note:** You should be able to predict and explain the effects of changes in chromosome number, but the names of specific disorders caused by them are not tested on the AP exam.`
     },
     {
       id: 'chr4-dropdown1',
@@ -96,27 +103,27 @@ After fertilization with a normal gamete:
       exercise: {
         dropdowns: [
           {
-            label: 'Down syndrome results from trisomy of chromosome ___',
-            options: ['21', '18', '13', 'X']
+            label: 'A zygote formed from an n + 1 gamete and a normal gamete is ___',
+            options: ['trisomic', 'monosomic', 'triploid', 'haploid']
           },
           {
-            label: 'Turner syndrome (45, X) is the only survivable human ___',
-            options: ['monosomy', 'trisomy', 'triploidy', 'translocation']
+            label: 'A zygote formed from an n − 1 gamete and a normal gamete is ___',
+            options: ['trisomic', 'monosomic', 'tetraploid', 'diploid']
           },
           {
-            label: 'Extra X chromosomes are inactivated as ___ bodies',
-            options: ['Barr', 'polar', 'Golgi', 'Nissl']
+            label: 'A human cell with 47 chromosomes has ___ extra chromosome',
+            options: ['one', 'two', 'a whole set of', 'no']
           },
           {
-            label: 'Klinefelter syndrome has the karyotype ___',
-            options: ['47, XXY', '47, XYY', '45, X', '47, XXX']
+            label: 'Aneuploidy disrupts development mainly by changing gene ___',
+            options: ['dosage', 'sequence', 'order', 'dominance']
           }
         ],
-        correctAnswers: ['21', 'monosomy', 'Barr', '47, XXY'],
-        hint1: 'This is the smallest human autosome.',
-        hint2: 'Having only one copy of a chromosome is called...',
-        hint3: 'Named after Murray Barr, who discovered inactivated X chromosomes.',
-        explanation: 'Down syndrome = trisomy 21. Turner syndrome (45, X) is the only viable monosomy. Extra X chromosomes form Barr bodies via X-inactivation. Klinefelter syndrome = 47, XXY (phenotypically male with an extra X).'
+        correctAnswers: ['trisomic', 'monosomic', 'one', 'dosage'],
+        hint1: 'Add the chromosomes in the two gametes: (n + 1) + n and (n − 1) + n.',
+        hint2: 'Humans normally have 46 chromosomes.',
+        hint3: 'An extra or missing chromosome changes how many copies of every gene on it are present.',
+        explanation: 'An n + 1 gamete plus a normal gamete gives 2n + 1 (trisomy), and an n − 1 gamete gives 2n − 1 (monosomy). A human cell with 47 chromosomes has one extra. Aneuploidy changes the number of copies, and so the amount of product, of every gene on the affected chromosome.'
       }
     },
     {
@@ -124,30 +131,23 @@ After fertilization with a normal gamete:
       type: 'text' as const,
       content: `## Polyploidy
 
-**Polyploidy** involves having more than two complete sets of chromosomes.
+**Polyploidy** involves having more than two complete sets of chromosomes. It can arise when an error in mitosis or meiosis leaves a whole set of chromosomes in one cell.
 
 | Term | Chromosome sets | Notation |
 |------|----------------|----------|
-| **Triploid** | 3n | 3 sets |
-| **Tetraploid** | 4n | 4 sets |
-| **Hexaploid** | 6n | 6 sets |
+| **Triploid** | 3 sets | 3n |
+| **Tetraploid** | 4 sets | 4n |
+| **Hexaploid** | 6 sets | 6n |
 
 ### Polyploidy in Nature
 
-- **Rare in animals** — usually lethal (disrupts sex determination and development)
-- **Common in plants** — many crop species are polyploid:
-  - Wheat (*Triticum aestivum*): **hexaploid (6n = 42)**
-  - Potato (*Solanum tuberosum*): **tetraploid (4n = 48)**
-  - Banana: **triploid (3n)** — seedless!
-  - Strawberry: **octoploid (8n = 56)**
+- **Rare in animals**, where it is usually lethal because it disrupts development.
+- **Common in plants.** Many crop plants, including wheat, potatoes and strawberries, are polyploid.
+- **Triploids are usually sterile.** With three copies of each chromosome, homologs cannot pair and separate evenly in meiosis, so most gametes are unbalanced. Seedless bananas and watermelons are triploid.
 
-### Types of Polyploidy
+### Polyploidy and Speciation
 
-- **Autopolyploidy**: Extra chromosome sets from the **same species** (e.g., failure of cell division)
-- **Allopolyploidy**: Chromosome sets from **two different species** after hybridization followed by chromosome doubling
-  - This is a mechanism of **instant speciation** — the allopolyploid is reproductively isolated from both parent species
-
-> 🌾 Allopolyploidy has been critically important in the evolution of crop plants and is a major mechanism of speciation in plants.`
+Suppose a diploid plant produces a tetraploid offspring through an error in cell division. The tetraploid can often self-fertilize and produce fertile tetraploid offspring. If it crosses with a diploid plant, however, the offspring are triploid and sterile. The tetraploid is therefore **reproductively isolated** from its parent population after a single generation, even though the two grow side by side. This is an example of **sympatric speciation** (Topic 7.10).`
     },
     {
       id: 'chr4-quiz2',
@@ -156,26 +156,26 @@ After fertilization with a normal gamete:
       exercise: {
         questions: [
           {
-            question: 'A new plant species arises when two different species hybridize and the hybrid undergoes chromosome doubling. This is an example of:',
+            question: 'A tetraploid plant arises in one generation within a diploid population. It self-fertilizes successfully, but its crosses with the diploid plants produce only sterile triploid offspring. What does this show?',
             options: [
-              'Allopolyploidy',
-              'Autopolyploidy',
-              'Aneuploidy',
-              'Nondisjunction'
+              'It is reproductively isolated, so a new species arose without geographic separation',
+              'It is the same species, since it arose from plants in the same population',
+              'It carries a new point mutation that makes all of its own offspring sterile',
+              'It will return to the diploid number after a single round of normal meiosis'
             ],
             correctAnswer: 0,
-            explanation: 'Allopolyploidy occurs when two different species hybridize and the resulting hybrid undergoes chromosome doubling. The allopolyploid has complete chromosome sets from both parent species and is reproductively isolated, making it a new species.'
+            explanation: 'Because crosses with the diploid parents give only sterile offspring, the tetraploid cannot exchange genes with them: it is reproductively isolated, which is sympatric speciation. Arising from the same population does not prevent isolation, the sterility comes from a change in chromosome number rather than a point mutation, and meiosis in a tetraploid gives diploid gametes, not a return to the diploid state.'
           },
           {
-            question: 'Which of the following is the best explanation for why sex chromosome aneuploidies are generally less severe than autosomal aneuploidies?',
+            question: 'Why is an extra copy of a large chromosome usually more harmful to development than an extra copy of a very small one?',
             options: [
-              'X-inactivation compensates for extra X chromosomes, and the Y carries few essential genes',
-              'Sex chromosomes carry no essential genes at all, so gaining or losing one has little effect',
-              'Sex chromosome aneuploidies never cause phenotypic effects, since sex is set only by hormones',
-              'The immune system destroys cells with extra sex chromosomes, restoring the normal chromosome number'
+              'Small chromosomes carry no genes at all, so an extra copy has no effect',
+              'More genes sit on the larger one, so more gene products are out of balance',
+              'The larger chromosome is too big to pass through the nuclear pores during interphase',
+              'Cells always destroy an extra small chromosome before they next divide'
             ],
-            correctAnswer: 0,
-            explanation: 'X-inactivation silences extra X chromosomes (forming Barr bodies), minimizing gene dosage problems. The Y chromosome has relatively few genes. Together, these factors make sex chromosome aneuploidies more survivable than autosomal trisomies or monosomies. They still cause phenotypes (Turner and Klinefelter syndromes), and the X carries many essential genes — a person cannot survive with no X at all.'
+            correctAnswer: 1,
+            explanation: 'Aneuploidy changes the dosage of every gene on the affected chromosome, and a large chromosome usually carries more genes, so more gene products are made in the wrong amounts. Small chromosomes still carry genes, chromosomes do not pass through nuclear pores, and cells do not reliably remove an extra chromosome.'
           }
         ]
       }

@@ -16,18 +16,17 @@ export const bioBiotechPart2Data = {
 |---------|
 | How a Gel Separates Molecules |
 | Reading a Gel: Ladders, Sizes and Brightness |
-| Worked Examples: Restriction Maps and Genotypes |
+| Worked Examples: Predicting a Gel and Reading Genotypes |
 
-> 🔑 **Key Concept:** **Electrophoresis separates molecules according to size and charge** (EK IST-1.P.1). DNA is negatively charged along its whole length, so in a gel it moves toward the positive electrode, and **smaller fragments travel farther** than larger ones.
+> 🔑 **Key Concept:** **Gel electrophoresis separates DNA fragments by size and charge** (EK 6.8.A.1). DNA is negatively charged along its whole length, so in a gel it moves toward the positive electrode, and **smaller fragments travel farther** than larger ones.
 
 ## How a Gel Separates Molecules
 
 ### The setup
-1. A slab of **agarose gel** is cast with small **wells** at one end. The gel is a mesh of polymer strands with tiny pores.
-2. The gel sits in a buffer that conducts electricity. The wells are placed at the **negative electrode** (cathode).
-3. DNA samples, mixed with a dense loading dye, are pipetted into the wells.
-4. Current is applied. DNA migrates through the gel toward the **positive electrode** (anode).
-5. After the run, the gel is stained with a dye that binds DNA, and the bands are viewed under light that makes the dye glow.
+1. A slab of gel, a mesh of polymer strands with tiny pores, has small **wells** at one end.
+2. The wells are placed at the **negative electrode**.
+3. DNA samples are loaded into the wells, and an electric current is applied. DNA migrates through the gel toward the **positive electrode**.
+4. The DNA is then stained so that each group of same-size fragments shows up as a **band**.
 
 ### Why DNA moves, and why size decides how far
 - **Charge:** each nucleotide carries a negatively charged **phosphate group** in the backbone. DNA is therefore negative, and it is pulled toward the positive pole. ("Run to red": the positive electrode is usually red.)
@@ -38,8 +37,8 @@ export const bioBiotechPart2Data = {
 | Small (e.g., 300 bp) | Passes through pores easily | Far from the well |
 | Large (e.g., 8,000 bp) | Repeatedly blocked by the mesh | Close to the well |
 
-### What about proteins?
-Proteins can also be separated by electrophoresis, usually in a finer polyacrylamide gel. Unlike DNA, proteins differ in **charge** as well as size, because their R groups can be acidic, basic or neutral. That is why the essential knowledge says electrophoresis separates molecules by **size and charge**, not by size alone. For DNA, size is the variable that matters.`
+### Size and charge, together
+The CED says gel electrophoresis separates DNA fragments **by size and charge**. The two do different jobs: the negative **charge** of DNA sets the **direction** of movement (toward the positive electrode), and fragment **size** sets **how far** each fragment travels. That is why every DNA band ends up on the same side of the wells, spread out from largest (nearest the wells) to smallest (farthest).`
     },
     {
       id: 'bio-biotechnology-p2-s2-mcq-mechanism',
@@ -96,18 +95,12 @@ An unknown band has moved **23 mm**.
 2. It is a little closer to the 3,000-bp band, so its size is a little above the midpoint of 2,000 and 3,000.
 3. **Estimate: about 2,600 bp.**
 
-### Not a straight line
-Migration distance is roughly proportional to the **logarithm** of fragment size, not to size itself. In the ladder above, halving the size from 10,000 to 5,000 bp adds 7 mm, and halving again from 2,000 to 1,000 bp adds 8 mm: similar steps for each halving. That is why scientists plot the ladder on a semi-log graph (size on a log axis, distance on a linear axis) to read unknowns accurately.
-
 ### What band brightness means
 Brightness reflects **how much DNA** is in a band, not how far it moved.
 
 - More copies of a fragment give a brighter band.
 - Two different fragments of the **same size** run together as **one** band, which is brighter than it would be alone.
-- With equal numbers of copies, a longer fragment binds more stain and looks brighter than a short one.
-
-### Uncut plasmids are a special case
-An uncut plasmid is a closed circle, usually tightly twisted (**supercoiled**). Supercoiled DNA is compact and often runs **faster** than a linear piece of the same length, and a nicked, relaxed circle runs slower. Uncut plasmid lanes can therefore show more than one band even though only one kind of molecule is present. Always size plasmids from a **linearized** (cut once) sample.`
+- With equal numbers of copies, a longer fragment binds more stain and looks brighter than a short one.`
     },
     {
       id: 'bio-biotechnology-p2-s4-dropdown',
@@ -142,29 +135,24 @@ An uncut plasmid is a closed circle, usually tightly twisted (**supercoiled**). 
     {
       id: 'bio-biotechnology-p2-s5-worked',
       type: 'text' as const,
-      content: `## Worked Examples: Restriction Maps and Genotypes
+      content: `## Worked Examples: Predicting a Gel and Reading Genotypes
 
-### Worked Example 1: building a restriction map
-An 8,000-bp linear DNA molecule is cut in three reactions.
+### Worked Example 1: predicting a gel
+In Part 1, a 10,000-bp linear molecule cut at two sites gave fragments of **2,000**, **5,500** and **2,500 bp**. Predict the lane.
 
-| Reaction | Bands (bp) |
-|---|---|
-| Enzyme A alone | 5,000 and 3,000 |
-| Enzyme B alone | 6,000 and 2,000 |
-| Enzymes A + B together | 3,000 (bright) and 2,000 |
+**Step 1 — Order by size.** Largest to smallest: 5,500, then 2,500, then 2,000 bp.
 
-**Step 1.** Each single digest gives 2 fragments, so each enzyme cuts once (linear DNA: $n + 1$ fragments).
+**Step 2 — Translate size into position.** The largest fragment moves least, so the order from the wells outward is **5,500 → 2,500 → 2,000**.
 
-**Step 2.** Place A. Its site is 3,000 bp from one end. Call that end position 0, so A cuts at 3,000.
+**Step 3 — Place each band against the ladder.**
 
-**Step 3.** Place B. B's site is 2,000 bp from one end, so B cuts at either 2,000 or 6,000.
-
-| If B cuts at… | A + B fragments would be | Matches the gel? |
+| Fragment (bp) | Falls between ladder bands | Approximate distance from well |
 |---|---|---|
-| 2,000 | 2,000; 1,000; 5,000 | No: there is no 1,000 or 5,000 band |
-| 6,000 | 3,000; 3,000; 2,000 | Yes: two 3,000-bp pieces make one bright band |
+| 5,500 | 10,000 (8 mm) and 5,000 (15 mm), close to 5,000 | About 14 mm |
+| 2,500 | 3,000 (21 mm) and 2,000 (26 mm) | About 23–24 mm |
+| 2,000 | Level with the 2,000 ladder band | 26 mm |
 
-**Conclusion:** A cuts at 3,000 and B at 6,000. The double digest settled what the single digests could not, and the **bright** 3,000-bp band is the clue that two same-size fragments ran together.
+**Step 4 — Check.** Three fragments give three bands, because no two are the same size. The uncut 10,000-bp molecule would instead give one band, level with the 10,000-bp ladder band.
 
 ### Worked Example 2: a genotype from a gel (simplified)
 The mutation that causes sickle-cell disease changes one base pair in the β-globin gene, and that change destroys a restriction site. Researchers amplify the region and cut it.
@@ -205,10 +193,10 @@ Use the ladder table (10,000 bp at 8 mm, 5,000 at 15, 3,000 at 21, 2,000 at 26, 
             explanation: 'The uncut sickle-cell allele gives 1,300 bp, and the cut normal allele gives 1,100 and 200 bp: three bands.'
           },
           {
-            question: 'In Worked Example 1, how many base pairs separate the sites for enzymes A and B?',
-            answer: '3000',
-            acceptableAnswers: ['3,000'],
-            explanation: 'A cuts at 3,000 and B at 6,000, so the sites are 3,000 bp apart, which is the middle fragment of the double digest.'
+            question: 'In Worked Example 1, what is the size in bp of the fragment whose band lies closest to the wells?',
+            answer: '5500',
+            acceptableAnswers: ['5,500'],
+            explanation: 'The largest fragment is slowed most by the gel, so the 5,500-bp fragment stays closest to the wells.'
           }
         ]
       }
@@ -233,26 +221,26 @@ A forensic scientist digests a DNA sample with a restriction enzyme and runs it 
             explanation: 'Brightness reflects the amount of DNA in a band, and same-size fragments co-migrate into one band. Charge per base pair is nearly constant in DNA, and migration speed does not change how much stain a band holds.'
           },
           {
-            question: 'Which change would most improve the separation of two fragments of 4,000 bp and 4,200 bp that ran as one band?',
+            question: 'Another lane contains fragments of 500, 2,000 and 6,000 bp. Listing the bands from closest to the wells to farthest from the wells, which order is correct?',
             options: [
-              'Run the gel for longer so the small gap between the bands can widen',
-              'Reverse the electrodes halfway so the fragments run back again',
-              'Load more DNA so each band becomes brighter and easier to see',
-              'Add a second ladder lane on the other side of the sample lanes'
+              '500; 2,000; 6,000',
+              '6,000; 2,000; 500',
+              '2,000; 500; 6,000',
+              '6,000; 500; 2,000'
             ],
-            correctAnswer: 0,
-            explanation: 'Fragments of slightly different sizes move at slightly different speeds, so a longer run lets the gap between them grow. Loading more DNA or adding a ladder does not change their relative positions.'
+            correctAnswer: 1,
+            explanation: 'Larger fragments are slowed more by the gel mesh, so the 6,000-bp fragment stays closest to the wells and the 500-bp fragment travels farthest. Listing 500 first reverses the rule, and the other two orders do not follow size at all.'
           },
           {
-            question: 'A protein and a DNA fragment of similar mass are run in separate gels. Why can the protein end up far from where the DNA did?',
+            question: 'An unknown band in a sample lane lies between the 3,000-bp and 2,000-bp bands of the ladder. Which estimate of its size is most reasonable?',
             options: [
-              'Proteins have no charge, so they do not move in the gel',
-              'Proteins always carry a stronger negative charge than DNA',
-              'Proteins vary in net charge according to their R groups',
-              'Proteins are too large to enter any kind of gel matrix'
+              '1,500 bp',
+              '2,500 bp',
+              '3,500 bp',
+              '5,000 bp'
             ],
-            correctAnswer: 2,
-            explanation: 'Electrophoresis separates by size and charge; DNA has a uniform negative charge per nucleotide, but a protein\'s net charge depends on its acidic and basic R groups. Proteins do carry charge and do enter gels, often finer polyacrylamide gels.'
+            correctAnswer: 1,
+            explanation: 'A band between the 3,000-bp and 2,000-bp ladder bands must be smaller than 3,000 bp and larger than 2,000 bp, so about 2,500 bp. A 1,500-bp fragment would run past the 2,000-bp band, and fragments of 3,500 or 5,000 bp would stay nearer the wells than the 3,000-bp band.'
           }
         ]
       }

@@ -69,21 +69,17 @@ This experiment demonstrated that:
       id: 'ps6-scenario2',
       type: 'text' as const,
       content: `
-### Scenario 2: The Lollipop Experiment (Calvin and Benson)
+### Scenario 2: Tracing Carbon with a Radioactive Label
 
-Melvin Calvin and Andrew Benson used the "lollipop" apparatus and $^{14}\\text{C}$-labeled CO$_2$ to trace the path of carbon through photosynthesis:
+In a classic experiment, researchers gave illuminated algae a short pulse of CO$_2$ containing radioactive carbon ($^{14}\\text{C}$), then killed samples at different times and identified which compounds were radioactive:
 
-1. Algae (*Chlorella*) were grown in a thin, flat flask illuminated continuously
-2. $^{14}\\text{CO}_2$ was injected into the culture
-3. At various time intervals (5 seconds, 30 seconds, 5 minutes), samples were killed in hot methanol
-4. Radioactive compounds were separated by **two-dimensional paper chromatography** and identified by autoradiography
+| Time after the $^{14}\\text{CO}_2$ pulse | Where the label was found |
+|------------------------|---------------------------|
+| 5 seconds | Almost entirely in one 3-carbon compound |
+| 30 seconds | In several sugar phosphates, including the CO$_2$ acceptor molecule |
+| 5 minutes | In glucose, amino acids, and lipids |
 
-**Results:**
-- After **5 seconds:** Nearly all $^{14}\\text{C}$ was in **3-PGA** (confirming it as the first stable product)
-- After **30 seconds:** $^{14}\\text{C}$ appeared in G3P, RuBP, and several sugar phosphates
-- After **5 minutes:** $^{14}\\text{C}$ was found in glucose, amino acids, and lipids
-
-This experiment mapped out the complete Calvin cycle and earned Calvin the 1961 Nobel Prize.
+The experiment did not require knowing the names of the compounds to draw its main conclusions: carbon from CO$_2$ is fixed first into a small organic molecule, then built into sugars, and finally into the cell's other macromolecules.
       `
     },
     {
@@ -95,26 +91,26 @@ This experiment mapped out the complete Calvin cycle and earned Calvin the 1961 
       exercise: {
         questions: [
           {
-            question: 'In the Calvin-Benson experiment, why was 3-PGA the first molecule to become radioactively labeled?',
+            question: 'Why did the label appear in a single 3-carbon compound after only 5 seconds?',
             options: [
-              'Because 3-PGA is the most abundant molecule in the chloroplast',
-              'Because 3-PGA is the first stable product of CO2 fixation',
-              'Because 3-PGA directly absorbs 14C from the atmosphere',
-              'Because RuBisCO converts 3-PGA into RuBP during fixation'
+              'It is the most abundant molecule in the chloroplast',
+              'It is the first stable product formed when CO2 is fixed',
+              'It absorbs radioactive carbon directly from the atmosphere',
+              'It is made from the label by the light reactions'
             ],
             correctAnswer: 1,
-            explanation: 'When 14CO2 enters the Calvin cycle, RuBisCO attaches the 14C to RuBP (5C), forming an unstable 6C intermediate that immediately splits into two 3-PGA molecules. Since this is the first stable product, 3-PGA is the first to contain the radioactive label.'
+            explanation: 'The compound that is labeled first, after the shortest exposure, must be the first stable product of carbon fixation. Compounds labeled later are made from it. Abundance alone would not explain the timing, and the light reactions do not fix carbon.'
           },
           {
-            question: 'If the light is suddenly turned OFF while 14CO2 is being supplied, what would happen to the levels of 3-PGA and RuBP?',
+            question: 'The light is switched off while 14CO2 is still supplied. What happens to the amount of the CO2 acceptor molecule in the stroma?',
             options: [
-              'Both rise, because the Calvin cycle stops using either one',
-              '3-PGA rises (cannot be reduced); RuBP falls (not regenerated)',
-              'Both fall, because RuBisCO stops working when light is off',
-              '3-PGA falls (not formed without ATP); RuBP rises (not used)'
+              'It rises, because CO2 can no longer be fixed without light',
+              'It falls, because it is consumed but cannot be remade without ATP',
+              'It stays constant, because the Calvin cycle does not need light',
+              'It rises, because ATP is no longer being made'
             ],
             correctAnswer: 1,
-            explanation: 'Without light, the light reactions stop producing ATP and NADPH. 3-PGA cannot be reduced to G3P (needs NADPH and ATP), so it accumulates. RuBP cannot be regenerated (needs ATP), so it is consumed but not replaced, and its level drops.'
+            explanation: 'Fixing CO2 uses up the acceptor, and regenerating it requires ATP from the light reactions. In the dark, fixation can continue briefly while regeneration stops, so the acceptor is consumed and not replaced, and its level falls.'
           }
         ]
       }
@@ -123,18 +119,18 @@ This experiment mapped out the complete Calvin cycle and earned Calvin the 1961 
       id: 'ps6-scenario3',
       type: 'text' as const,
       content: `
-### Scenario 3: Comparing C3 and C4 Productivity
+### Scenario 3: Net Photosynthesis and Light Intensity
 
-Researchers measure net photosynthesis rates in a C3 grass and a C4 grass under varying temperatures:
+A student measures the **net** rate of O$_2$ production by a leaf at different light intensities. Net rate = O$_2$ released by photosynthesis − O$_2$ used by respiration.
 
-| Temperature (°C) | C3 Net Photosynthesis ($\\mu$mol CO$_2$/m$^2$/s) | C4 Net Photosynthesis ($\\mu$mol CO$_2$/m$^2$/s) |
-|------|------|------|
-| 10 | 12 | 5 |
-| 20 | 22 | 18 |
-| 30 | 18 | 30 |
-| 35 | 10 | 35 |
-| 40 | 3 | 28 |
-| 45 | 0 | 8 |
+| Light intensity (relative units) | Net O$_2$ production ($\\mu$mol/h) |
+|------|------|
+| 0 | -5 |
+| 50 | 0 |
+| 100 | 6 |
+| 200 | 14 |
+| 400 | 20 |
+| 800 | 21 |
       `
     },
     {
@@ -146,26 +142,37 @@ Researchers measure net photosynthesis rates in a C3 grass and a C4 grass under 
       exercise: {
         questions: [
           {
-            question: 'At 30 °C, C3 net photosynthesis drops from its peak, but C4 continues to increase. What explains this difference?',
+            question: 'Why is the net O2 production negative at a light intensity of 0?',
             options: [
-              'C4 leaves have more chloroplasts; they absorb more light in heat',
-              'C3 photorespiration rises with heat; C4 plants concentrate CO2',
-              'C4 plants use a heat-stable form of RuBisCO that C3 plants lack',
-              'C3 plants stop absorbing light once leaves pass about 25 °C'
+              'Photosynthesis runs in reverse in the dark and consumes O2',
+              'Cellular respiration keeps using O2, and no photosynthesis offsets it',
+              'Stored O2 is pumped back into the chloroplasts at night',
+              'The equipment cannot read O2 unless some light is present'
             ],
             correctAnswer: 1,
-            explanation: 'At higher temperatures, RuBisCO in C3 plants increasingly fixes O2 instead of CO2 (photorespiration), reducing net carbon gain. C4 plants pump CO2 into bundle-sheath cells via PEP carboxylase, maintaining high CO2 around RuBisCO and virtually eliminating photorespiration.'
+            explanation: 'In the dark, photosynthesis stops but cellular respiration continues, so the leaf consumes O2. The net rate is therefore negative: here, 5 umol/h of O2 is used by respiration.'
           },
           {
-            question: 'At 10 °C, the C3 grass outperforms the C4 grass. Why?',
+            question: 'Between 400 and 800 light units the net rate barely changes. Which conclusion is best supported?',
             options: [
-              'C3 grasses make antifreeze proteins that protect their thylakoids',
-              'Photorespiration is low in the cold, so the C4 ATP cost is wasted',
-              'C4 plants cannot carry out photosynthesis at all below 15 °C',
-              'Only C3 plants can run the Calvin cycle at low temperatures'
+              'A factor other than light now limits the rate',
+              'Respiration stops completely at high light',
+              'The chlorophyll has been destroyed by the light',
+              'The leaf is now at its compensation point'
             ],
-            correctAnswer: 1,
-            explanation: 'At cool temperatures, the ratio of CO2:O2 fixation by RuBisCO favors CO2, so photorespiration is low in C3 plants. The C4 carbon-concentrating mechanism (which costs 2 extra ATP per CO2) becomes an unnecessary expense, putting C4 plants at a net energy disadvantage.'
+            correctAnswer: 0,
+            explanation: 'When doubling the light hardly raises the rate, light is no longer limiting; another factor such as CO2 supply or temperature (enzyme activity) is. The compensation point is where net O2 production is zero, which in this data set is about 50 units.'
+          },
+          {
+            question: 'Using the data, what is the gross rate of O2 production by photosynthesis at a light intensity of 200, assuming respiration stays at 5 umol/h?',
+            options: [
+              '9 umol/h',
+              '14 umol/h',
+              '19 umol/h',
+              '70 umol/h'
+            ],
+            correctAnswer: 2,
+            explanation: 'Gross photosynthesis = net O2 production + O2 used by respiration = 14 + 5 = 19 umol/h. Using the net value alone (14) ignores the O2 consumed by respiration.'
           }
         ]
       }
@@ -179,13 +186,13 @@ Researchers measure net photosynthesis rates in a C3 grass and a C4 grass under 
       exercise: {
         questions: [
           {
-            question: 'If light is turned off, 3-PGA levels will (increase/decrease):',
-            answer: 'increase',
-            acceptableAnswers: ['increase', 'Increase', 'go up', 'rise'],
-            placeholder: 'e.g. stay the same'
+            question: 'In Scenario 3, the light intensity at which net O2 production is zero (the compensation point):',
+            answer: '50',
+            acceptableAnswers: ['50', 'fifty', '50 units'],
+            placeholder: 'e.g. 100'
           },
           {
-            question: 'If CO2 is suddenly removed, RuBP levels will (increase/decrease):',
+            question: 'If CO2 is suddenly removed while the light stays on, the level of the CO2 acceptor molecule will (increase/decrease):',
             answer: 'increase',
             acceptableAnswers: ['increase', 'Increase', 'go up', 'rise', 'accumulate'],
             placeholder: 'e.g. decrease'
@@ -202,15 +209,15 @@ Researchers measure net photosynthesis rates in a C3 grass and a C4 grass under 
       exercise: {
         questions: [
           {
-            question: 'A researcher adds DCMU (a herbicide that blocks electron flow from PSII to plastoquinone) to illuminated chloroplasts. What will happen?',
+            question: 'A researcher adds DCMU, a herbicide that blocks electrons from leaving PSII, to illuminated chloroplasts. What will happen?',
             options: [
               'O2 production continues but NADPH production stops',
               'O2 evolution and NADPH production both stop',
               'The Calvin cycle speeds up to use stored NADPH',
-              'Cyclic electron flow around PSI stops at once'
+              'ATP synthase reverses direction and pumps H+ out'
             ],
             correctAnswer: 1,
-            explanation: 'DCMU blocks electron flow from PSII. Without electron flow, water splitting stops (no O2), no electrons reach PSI or NADP+ (no NADPH), and proton pumping by cytochrome b6f stops (reduced ATP). The Calvin cycle loses both ATP and NADPH and shuts down.'
+            explanation: 'If electrons cannot leave PSII, PSII cannot accept new electrons from water, so water splitting and O2 release stop. No electrons reach PSI or NADP+, so no NADPH is made, and the electron transport chain stops moving H+, so ATP production falls. The Calvin cycle then loses both ATP and NADPH.'
           }
         ]
       }

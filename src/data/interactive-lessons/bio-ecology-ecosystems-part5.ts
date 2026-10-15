@@ -130,7 +130,7 @@ Notice how these effects connect to earlier parts. Corals are a foundation speci
 |---|---|
 | **El Niño** | Warm surface water spreads across the eastern tropical Pacific and weakens the upwelling of cold, nutrient-rich water off South America. Phytoplankton decline, anchovy populations crash, and the seabirds and sea lions that eat them starve. The 1997–1998 El Niño also caused widespread coral bleaching. |
 | **Continental drift** | Moving continents split populations apart, which can lead to speciation, and join landmasses together. When the Isthmus of Panama formed about 3 million years ago, North and South American mammals crossed in both directions, and many South American mammal groups later declined or went extinct. |
-| **Volcanic eruptions** | Destroy local ecosystems and restart succession (the 1980 Mount St. Helens eruption). Very large eruptions put sulfur aerosols into the stratosphere and cool the global climate for a year or two, as Mount Pinatubo did after 1991. |
+| **Volcanic eruptions** | Destroy local ecosystems, which must then be recolonized from surrounding areas (the 1980 Mount St. Helens eruption). Very large eruptions put sulfur aerosols into the stratosphere and cool the global climate for a year or two, as Mount Pinatubo did after 1991. |
 | **Asteroid impact** | About 66 million years ago, an impact at Chicxulub on the Yucatán Peninsula filled the atmosphere with debris, blocked sunlight and collapsed photosynthesis. Roughly three-quarters of species, including all non-avian dinosaurs, went extinct (the K-Pg mass extinction). Mammals then diversified into the vacated niches. |
 
 ### Disruption acts on variation that already exists

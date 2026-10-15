@@ -22,7 +22,7 @@ export const bioProteinsPart1Data = {
 
 ### Element composition
 
-Proteins always contain C, H, O, **N** (nitrogen makes proteins distinctive), and often S (sulfur, in cysteine and methionine).
+Proteins always contain C, H, O, **N** (nitrogen makes proteins distinctive), and often S (sulfur, found in some R groups).
       `
     },
     {
@@ -55,13 +55,14 @@ Every amino acid has the same backbone:
 
 ### R-group classes (high yield!)
 
-| R-group type | Property | Examples |
+| R-group type | Property | Where it tends to end up |
 |-------------|----------|----------|
-| **Nonpolar / hydrophobic** | Cluster in protein interior | Valine, leucine, alanine |
-| **Polar / uncharged** | Form hydrogen bonds | Serine, threonine |
-| **Acidic (negative)** | Carboxyl R group | Aspartate, glutamate |
-| **Basic (positive)** | Amino R group | Lysine, arginine |
-| **Special** | Sulfur (S–S bonds) | Cysteine |
+| **Nonpolar / hydrophobic** | Uncharged; avoids water | Clustered in the protein interior |
+| **Polar / hydrophilic** | Forms hydrogen bonds | On the surface, facing water |
+| **Ionic (negative)** | Carries a negative charge | Ionic bonds with positive R groups |
+| **Ionic (positive)** | Carries a positive charge | Ionic bonds with negative R groups |
+
+Some R groups contain sulfur; two of them can form a covalent **disulfide bridge** that locks part of the fold in place. You classify R groups by property; the structures and names of individual amino acids are not tested on the AP exam.
 
 ### The peptide bond
 

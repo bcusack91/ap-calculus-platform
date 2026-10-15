@@ -149,7 +149,7 @@ Along one chromosome, gene 1 may be transcribed using the "top" strand as templa
 |---------|-----------------|---------------|
 | Template | Both strands | One strand of one gene |
 | Product | Two complete DNA molecules | One RNA copy of a gene |
-| Enzyme | DNA polymerase (plus helicase, primase and others) | RNA polymerase alone opens and copies |
+| Enzyme | DNA polymerase (plus helicase, topoisomerase and ligase) | RNA polymerase alone opens and copies |
 | Primer needed | Yes | No |
 | Base opposite template A | T | U |
 | How often | Once per cell cycle | Many times, whenever the gene is expressed |

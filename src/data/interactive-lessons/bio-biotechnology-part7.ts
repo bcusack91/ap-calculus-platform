@@ -31,9 +31,9 @@ Here is how the parts of this lesson fit together in one project: making a human
 | 1. Get the coding sequence | Make cDNA from mature mRNA; amplify it by **PCR** | 3, 4 | A band of the expected size on a gel |
 | 2. Prepare the pieces | Cut cDNA and plasmid with the same **restriction enzyme** | 1 | Linearized plasmid runs as one band of the expected size |
 | 3. Join them | **DNA ligase** seals the backbones | 1 | Recombinant plasmid |
-| 4. Put it in cells | **Bacterial transformation** with heat shock | 4 | Colonies on antibiotic plates |
+| 4. Put it in cells | **Bacterial transformation** | 4 | Colonies on antibiotic plates |
 | 5. Confirm the insert | PCR or a restriction digest of plasmid from a colony; **gel electrophoresis** | 2 | Insert-sized band present |
-| 6. Confirm the sequence | **DNA sequencing** of the insert | 5 | No mutations; correct orientation |
+| 6. Confirm the sequence | **DNA sequencing** of the insert | 5 | No mutations in the coding sequence |
 | 7. Make the protein | Grow the culture; induce the promoter | 4 | Protein detected |
 
 ## Choosing the Right Technique
@@ -45,7 +45,7 @@ Here is how the parts of this lesson fit together in one project: making a human
 | "Do these two people share DNA profiles?" | PCR of STR loci, then electrophoresis | Repeat numbers differ between people |
 | "What is the exact base sequence?" | DNA sequencing | Only sequencing reads each nucleotide |
 | "Can bacteria make this protein?" | Cloning into a plasmid and transformation | Bacteria copy and express the plasmid |
-| "Can we change one specific gene?" | Gene editing such as CRISPR | A guide RNA targets a chosen sequence |`
+| "Which species did this sample come from?" | PCR of a standard gene, then sequencing | Each species has a characteristic sequence |`
     },
     {
       id: 'bio-biotechnology-p7-s2-mcq-choose',
@@ -87,10 +87,10 @@ Biotechnology is applied biology. Each technique works because of a principle yo
 
 | Principle | Where it appears in biotechnology |
 |---|---|
-| **Complementary base pairing** | Sticky ends pair; primers anneal; guide RNAs find targets; sequencing reads the complement |
-| **Antiparallel strands and 5′→3′ synthesis** | Polymerase extends primers only at their 3′ ends; terminators lacking a 3′-OH stop synthesis |
+| **Complementary base pairing** | Sticky ends pair; primers anneal; sequencing reads the complement |
+| **Antiparallel strands and 5′→3′ synthesis** | Polymerase extends primers only at their 3′ ends; a sequencing read must be reversed to give the template 5′→3′ |
 | **DNA's negative charge** | Phosphate groups pull DNA toward the positive electrode |
-| **Structure determines function** | A heat-stable polymerase survives 95°C; a restriction enzyme's shape fits one sequence |
+| **Structure determines function** | A heat-tolerant polymerase survives the PCR heating step; a restriction enzyme's shape fits one sequence |
 | **Gene regulation** | An inducer such as arabinose switches on an inserted gene |
 | **Eukaryotic RNA processing** | Introns force the use of cDNA in bacteria |
 | **Common ancestry** | A nearly universal genetic code lets one species express another's genes |
@@ -106,7 +106,7 @@ Experimental results that "go wrong" are rich FRQ material. Work backward from t
 | No PCR product, even in the positive control | Reagent or cycling problem (for example, a polymerase that is not heat-stable) |
 | Lawn on the "no plasmid + ampicillin" plate | Inactive antibiotic |
 | No colonies on any ampicillin plate, including with plasmid | Failed transformation or no recovery period |
-| Colonies on ampicillin, but the protein is wrong | Genomic gene with introns used instead of cDNA, or insert in the wrong orientation |
+| Colonies on ampicillin, but the protein is wrong | Genomic gene with introns used instead of cDNA |
 | Colonies glow only on plates with arabinose | Expected: the GFP gene is under inducible control |`
     },
     {
@@ -148,19 +148,17 @@ Experimental results that "go wrong" are rich FRQ material. Work backward from t
 |---|---|---|
 | Fragments from a linear molecule | $n$ cuts → $n + 1$ fragments | 2 sites → 3 fragments |
 | Fragments from a circular plasmid | $n$ cuts → $n$ fragments | 2 sites → 2 fragments |
-| Expected spacing of a site | $4^{\\text{site length}}$ bp | 6-bp site → about 4,096 bp |
 | PCR copies | $N = N_0 \\times 2^{n}$ | 10 copies, 10 cycles → 10,240 |
-| qPCR threshold | 1 cycle earlier ≈ twice the starting template | 3 cycles earlier ≈ 8× |
 | Transformation efficiency | colonies ÷ µg DNA **spread on the plate** | 240 ÷ 0.1 µg = 2,400 per µg |
 | Gel migration | Smaller fragments travel farther; DNA moves toward + | 500 bp runs past 3,000 bp |
 | STR inheritance | One allele per locus from each parent | A child's non-maternal allele must be paternal |
 
 ### One-sentence summaries
-- **Restriction enzymes** cut at specific, usually palindromic sequences; **ligase** seals backbones.
-- **Electrophoresis** separates molecules by size and charge.
+- **Restriction enzymes** cut at specific short sequences; **ligase** seals backbones.
+- **Electrophoresis** separates DNA fragments by size and charge.
 - **PCR** amplifies the DNA between two primers by repeated denature-anneal-extend cycles.
 - **Transformation** introduces plasmid DNA into bacteria; antibiotic selection finds the transformed cells.
-- **Sequencing** determines nucleotide order from fragments that stop at every position.
+- **Sequencing** determines the order of nucleotides in a DNA molecule.
 
 > 🔑 **AP Connection:** On the exam, a strong biotechnology answer names the technique, states the principle it relies on, and ties the data to that principle. "Smaller fragments migrate farther because the gel matrix slows larger molecules" beats "the band is lower, so it's smaller."`
     },
@@ -182,15 +180,15 @@ Experimental results that "go wrong" are rich FRQ material. Work backward from t
             explanation: 'Cutting at the cloning sites releases the insert, giving the 4,000-bp vector and the 1,500-bp insert. One 4,000-bp band means an empty plasmid; a single 5,500-bp band would come only from a single cut that leaves the insert attached.'
           },
           {
-            question: 'Why can PCR and DNA sequencing both use the same kind of DNA polymerase?',
+            question: 'A PCR product from a patient\'s gene runs at exactly the same position on a gel as the product from a healthy control. Why might the patient still carry a disease-causing mutation in that region?',
             options: [
-              'Each requires an enzyme that cuts at palindromic sites',
-              'Each extends a short starter strand from its 3′ end',
-              'Both depend on sealing nicks in the sugar-phosphate backbone',
-              'Both copy RNA templates into matching strands of DNA'
+              'A single-base substitution changes the sequence but not the fragment length',
+              'PCR products from patients always run at the same place as controls',
+              'Mutations shift a band only when the gel has run for a short time',
+              'The gel separates fragments by base sequence rather than by size'
             ],
-            correctAnswer: 1,
-            explanation: 'In both methods, polymerase adds nucleotides to the 3′ end of a primer annealed to a template; in sequencing, terminators stop some strands. Cutting, sealing and reverse transcription are done by other enzymes.'
+            correctAnswer: 0,
+            explanation: 'Gel electrophoresis separates by size, and a substitution swaps one base for another without changing the fragment\'s length, so the bands match. Sequencing the product would reveal it. Insertions or deletions can shift a band, run time does not create or hide size differences, and gels do not separate by sequence.'
           },
           {
             question: 'A crop engineered to make a bacterial toxin that kills insect larvae is planted across a whole region for many years. Which outcome is most likely?',

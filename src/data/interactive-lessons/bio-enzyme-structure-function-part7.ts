@@ -14,10 +14,10 @@ export const bioEnzymesPart7Data = {
 | **Activation energy** | Energy barrier enzymes lower |
 | **Active site** | Specific 3D pocket for substrate |
 | **Induced fit** | Enzyme changes shape upon binding |
-| **$V_{max}$** | Max rate when saturated |
-| **$K_m$** | Substrate concentration at ½ $V_{max}$ |
-| **Competitive** | Binds active site, ↑ $K_m$ |
-| **Noncompetitive** | Binds allosteric site, ↓ $V_{max}$ |
+| **Saturation** | Rate levels off when all active sites are occupied |
+| **Denaturation** | Temperature, pH, or chemicals disrupt shape → activity lost |
+| **Competitive** | Binds active site; overcome by more substrate |
+| **Noncompetitive** | Binds allosteric site; not overcome by more substrate |
 | **Feedback inhibition** | End product inhibits early enzyme |
       `
     },
@@ -30,15 +30,15 @@ export const bioEnzymesPart7Data = {
       exercise: {
         questions: [
           {
-            question: 'Which graph shows the effect of a competitive inhibitor?',
+            question: 'Rate-versus-substrate curves are drawn for an enzyme alone and with an inhibitor. At low substrate the inhibited rate is much lower, but at very high substrate both curves reach the same rate. Which kind of inhibitor was added?',
             options: [
-              'Higher $V_{max}$, same $K_m$',
-              'Same $V_{max}$, higher apparent $K_m$',
-              'Lower $V_{max}$, same apparent $K_m$',
-              'Lower $V_{max}$, lower $K_m$'
+              'A competitive inhibitor that binds the active site',
+              'A noncompetitive inhibitor that binds an allosteric site',
+              'An irreversible inhibitor that denatures the enzyme',
+              'An allosteric activator that speeds the reaction'
             ],
-            correctAnswer: 1,
-            explanation: 'Competitive inhibitors increase the apparent $K_m$ (more substrate needed) but don\'t change $V_{max}$ (at high enough [S], the inhibitor is outcompeted).'
+            correctAnswer: 0,
+            explanation: 'Only a competitive inhibitor can be outcompeted: at very high substrate, substrate occupies nearly every active site and the inhibited rate catches up. A noncompetitive or irreversible inhibitor would keep the rate lower even at high substrate, and an activator would raise the rate.'
           }
         ]
       }
@@ -50,7 +50,7 @@ export const bioEnzymesPart7Data = {
 ## AP Exam Tips
 
 - Be able to **interpret enzyme kinetics graphs** (rate vs. [S] curves)
-- Know how **inhibitor types** affect $K_m$ and $V_{max}$
+- Know how **competitive and noncompetitive inhibitors** change a rate-vs-[S] curve
 - Understand **how pH and temperature** affect enzyme activity
 - Connect enzyme regulation to **metabolic pathways**
 - Practice **experimental design** questions about enzyme activity

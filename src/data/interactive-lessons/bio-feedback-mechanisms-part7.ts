@@ -19,12 +19,11 @@ This part pulls the whole topic together. Use the master table as a one-page rev
 | Thermoregulation (ectotherm) | Body temperature | Thermoreceptors / brain | Nerve impulses | Behavior (basking, seeking shade) | Negative | Limited when no warm or cool refuge exists |
 | Blood glucose | Glucose concentration | Pancreatic islet cells | Insulin, glucagon | Liver, muscle, fat cells | Negative | Type 1: signal missing; type 2: effectors unresponsive |
 | Water balance | Blood concentration | Osmoreceptors / hypothalamus | ADH | Kidney collecting ducts | Negative | Low ADH → dehydration |
-| Thyroid axis | T₃/T₄ level | Hypothalamus, pituitary | TRH, TSH | Thyroid | Negative | Graves': antibodies stimulate the thyroid without control |
 | Plant water loss | Leaf water status | Leaf and root cells | ABA | Guard cells | Negative | ABA-deficient or ABA-insensitive mutants wilt |
 | Labor | Cervical stretch | Stretch receptors / hypothalamus | Oxytocin | Uterine muscle | Positive | Ends at birth |
 | Lactation | Suckling | Nipple nerve endings / hypothalamus | Oxytocin, prolactin | Milk glands | Positive | Ends when suckling stops |
 | Fruit ripening | Ethylene level | Fruit cells | Ethylene | Fruit cells | Positive | Ends when fruit is ripe |
-| Clotting | Platelet activation | Platelets at the injury | Platelet chemicals, thrombin | Platelets, fibrin | Positive | Ends when sealed; hemophilia stalls it |
+| Clotting | Platelet activation | Platelets at the injury | Platelet chemicals | Platelets, clotting proteins | Positive | Ends when sealed; a missing clotting protein stalls it |
 | Population regulation | Population size | (Built into individuals) | Resource shortage, disease | Birth and death rates | Negative | Holds N near K |
 | Eutrophication | Dissolved oxygen | (None) | Decomposition | Bacteria, dying animals | Positive | Spirals into a dead zone |
       `
@@ -104,7 +103,7 @@ Feedback is a theme that connects units across the course, not just a Unit 4 fac
 
 | Scale | Negative-feedback example | Positive-feedback example |
 |---|---|---|
-| **Molecule** | **Feedback inhibition:** the end product of a metabolic pathway binds an allosteric site on an early enzyme and slows its own production (for example, isoleucine inhibits the first enzyme of its synthesis pathway) | Thrombin activating clotting factors that increase thrombin production |
+| **Molecule** | **Feedback inhibition:** the end product of a metabolic pathway binds an allosteric site on an early enzyme and slows its own production (for example, isoleucine inhibits the first enzyme of its synthesis pathway) | A clotting protein activating other clotting proteins that make still more of it |
 | **Gene** | In *E. coli*, tryptophan binds the trp repressor, which then shuts off transcription of the genes for making more tryptophan | (Rare at this level in the AP course) |
 | **Organism** | Thermoregulation, glucose, water balance, ABA and stomata | Labor, lactation, fruit ripening |
 | **Population** | Density-dependent regulation toward K | (Seen mainly when control breaks down) |
@@ -186,7 +185,7 @@ Feedback is a theme that connects units across the course, not just a Unit 4 fac
             explanation: 'Overshooting and then settling in smaller and smaller swings is the signature of negative feedback with a delay between sensing and responding. Positive feedback would keep moving away from the start, and a broken loop would not return to baseline.'
           },
           {
-            question: 'Isoleucine binds an allosteric site on threonine deaminase, the first enzyme in the pathway that makes isoleucine. As isoleucine accumulates, what happens?',
+            question: 'Isoleucine binds an allosteric site on the first enzyme in the pathway that makes isoleucine. As isoleucine accumulates, what happens?',
             options: [
               'Its synthesis slows, an example of negative feedback',
               'Production speeds up, an example of positive feedback',
@@ -209,15 +208,15 @@ Feedback is a theme that connects units across the course, not just a Unit 4 fac
 
 2) Type of feedback that amplifies the original change (one word):
 
-3) The hormone that raises blood calcium (abbreviation):
+3) The word for two hormones with opposite effects on the same variable, such as insulin and glucagon (one word):
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['negative', 'positive', 'PTH'],
+        correctAnswers: ['negative', 'positive', 'antagonistic'],
         hint1: 'This type is responsible for most homeostasis.',
         hint2: 'Labor and fruit ripening use this type.',
-        hint3: 'It is made by the parathyroid glands.',
-        explanation: 'Negative feedback stabilizes, positive feedback amplifies, and parathyroid hormone (PTH) raises blood calcium.'
+        hint3: 'It is the same word used for opposing muscles or opposing effectors.',
+        explanation: 'Negative feedback stabilizes, positive feedback amplifies, and antagonistic hormones such as insulin and glucagon (or calcitonin and PTH) push the same variable in opposite directions.'
       }
     }
   ]

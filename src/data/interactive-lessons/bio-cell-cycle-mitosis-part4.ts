@@ -22,14 +22,13 @@ The mechanism differs between animal and plant cells.
 
 Animal cells divide by **cleavage**:
 
-1. A **contractile ring** of actin microfilaments and myosin II motor proteins assembles just beneath the plasma membrane at the former metaphase plate
-2. The position of the contractile ring is determined by signals from the **mitotic spindle** (specifically, the central spindle — overlapping polar microtubules between the separating chromosomes)
-3. Myosin II hydrolyzes ATP and slides along actin filaments, constricting the ring
+1. A **contractile ring** of protein filaments (actin) assembles just beneath the plasma membrane at the former metaphase plate
+2. Signals from the mitotic spindle place the ring midway between the two sets of separated chromosomes
+3. The ring tightens, using energy from ATP
 4. This creates an inward indentation called the **cleavage furrow**
 5. The furrow deepens progressively until the cell is pinched in two
-6. Final separation (abscission) involves membrane fusion at the narrow bridge connecting the two cells
 
-> **Why the middle?** The position of the contractile ring is specified by signals from the spindle midzone and astral microtubules. The RhoA GTPase pathway activates myosin II and actin assembly at the equator. This ensures the cell divides between the two sets of chromosomes.
+> **Why the middle?** Placing the furrow at the equator ensures that each daughter cell receives one of the two new nuclei. The molecular details of how the ring is positioned and tightened are not tested on the AP exam.
       `
     },
     {
@@ -42,17 +41,14 @@ Plant cells cannot form a cleavage furrow because of their rigid **cell wall**. 
 
 1. **Golgi-derived vesicles** carrying cell wall materials (polysaccharides, glycoproteins) are transported along remaining spindle microtubules to the center of the cell
 2. Vesicles fuse to form the **cell plate**, which grows outward from the center toward the existing cell wall
-3. The cell plate matures into a new **middle lamella** (shared layer between adjacent cell walls) and regions of new cell wall (primary wall)
-4. New plasma membrane lines each side of the cell plate
-5. The cell plate eventually fuses with the existing cell wall, completing the division
-
-**Plasmodesmata** (channels connecting adjacent plant cells) are established during cell plate formation — portions of ER become trapped in the forming plate, creating cytoplasmic bridges between daughter cells.
+3. The vesicle membranes become the new plasma membrane on each side, and their contents become the new cell wall between the daughter cells
+4. The cell plate eventually fuses with the existing cell wall, completing the division
 
 | Feature | Animal Cytokinesis | Plant Cytokinesis |
 |---------|-------------------|-------------------|
 | Mechanism | Cleavage furrow (contractile ring) | Cell plate formation |
 | Direction | Outside → in (constriction) | Inside → out (vesicle fusion) |
-| Key proteins | Actin, myosin II | Golgi vesicles, phragmoplast microtubules |
+| What does the work | A ring of protein filaments | Golgi vesicles guided by microtubules |
 | Cell wall | Not present | New cell wall built |
       `
     },
@@ -84,7 +80,7 @@ Plant cells cannot form a cleavage furrow because of their rigid **cell wall**. 
               'By the plasma membrane pinching inward along an actin-myosin ring'
             ],
             correctAnswer: 1,
-            explanation: 'Plant cell cytokinesis builds a new partition from the inside out. Golgi vesicles carrying cell wall precursors are guided to the cell center by phragmoplast microtubules, fuse into a cell plate, and expand outward until they merge with the existing cell wall.'
+            explanation: 'Plant cell cytokinesis builds a new partition from the inside out. Golgi vesicles carrying cell wall materials are guided to the cell center by microtubules, fuse into a cell plate, and expand outward until they merge with the existing cell wall.'
           }
         ]
       }
@@ -97,11 +93,11 @@ Plant cells cannot form a cleavage furrow because of their rigid **cell wall**. 
 
 Prokaryotes (bacteria and archaea) do not undergo mitosis.  They reproduce by **binary fission**:
 
-1. The single circular chromosome is replicated starting from the **origin of replication** (oriC)
-2. The two copies of the chromosome are moved to opposite ends of the cell (by proteins attached to the membrane, including ParA/ParB system)
+1. The single circular chromosome is replicated, starting from one **origin of replication**
+2. The two copies of the chromosome are moved toward opposite ends of the cell
 3. The cell elongates
-4. A **septum** (new cell wall and membrane) forms at the midpoint, guided by the **FtsZ protein ring** (a tubulin-like protein that forms a contractile ring analogous to the animal cell contractile ring)
-5. The cell divides into two identical daughter cells
+4. A ring of protein forms at the midpoint and the cell pinches inward as new membrane and cell wall form between the two copies
+5. The cell divides into two genetically identical daughter cells
 
 **Key differences from mitosis:**
 
@@ -109,7 +105,7 @@ Prokaryotes (bacteria and archaea) do not undergo mitosis.  They reproduce by **
 |---------|---------------|---------|
 | Organism | Prokaryotes | Eukaryotes |
 | Chromosome type | Single, circular | Multiple, linear |
-| Spindle apparatus | None (FtsZ ring instead) | Mitotic spindle with microtubules |
+| Spindle apparatus | None | Mitotic spindle with microtubules |
 | Speed | Very fast (20 min in E. coli) | Slower (1+ hour for M phase) |
 | Nuclear envelope | None (no nucleus) | Breaks down and reforms |
       `
@@ -135,10 +131,10 @@ Prokaryotes (bacteria and archaea) do not undergo mitosis.  They reproduce by **
             placeholder: 'e.g. cleavage furrow'
           },
           {
-            question: 'The prokaryotic tubulin-like protein that forms a ring during binary fission:',
-            answer: 'FtsZ',
-            acceptableAnswers: ['FtsZ', 'ftsZ', 'Ftsz', 'FTSZ'],
-            placeholder: 'e.g. actin'
+            question: 'The process by which prokaryotes divide without mitosis (two words):',
+            answer: 'binary fission',
+            acceptableAnswers: ['binary fission', 'Binary fission', 'fission'],
+            placeholder: 'e.g. budding'
           }
         ]
       }
@@ -152,15 +148,15 @@ Prokaryotes (bacteria and archaea) do not undergo mitosis.  They reproduce by **
       exercise: {
         questions: [
           {
-            question: 'FtsZ in bacteria is considered a homolog of eukaryotic tubulin. What does this suggest about the evolution of cell division?',
+            question: 'Which feature is shared by binary fission in bacteria and mitosis followed by cytokinesis in eukaryotes?',
             options: [
-              'Bacteria evolved from early eukaryotes that later lost their nucleus',
-              'Cell division machinery is ancient, inherited from a shared ancestor',
-              'Eukaryotes acquired tubulin from bacteria by horizontal gene transfer',
-              'FtsZ and tubulin arose independently in two unrelated division systems'
+              'Each daughter cell receives a full copy of the replicated DNA',
+              'A nuclear envelope breaks down and then re-forms around the DNA',
+              'A spindle made of microtubules separates several linear chromosomes',
+              'Homologous chromosomes pair up and exchange segments of DNA'
             ],
-            correctAnswer: 1,
-            explanation: 'FtsZ and tubulin share structural and functional similarities despite billions of years of divergence. Both polymerize into filaments and are essential for cell division. Their homology suggests that the basic molecular machinery for cell division was present in the last common ancestor of prokaryotes and eukaryotes.'
+            correctAnswer: 0,
+            explanation: 'Both processes replicate the DNA and then deliver one complete copy to each of two genetically identical daughter cells. Bacteria have no nucleus or mitotic spindle, and pairing of homologous chromosomes happens in meiosis, not in either of these processes.'
           },
           {
             question: 'A mutation disrupts the signaling pathway that positions the cleavage furrow in an animal cell.  The furrow forms, but at a random position instead of the cell equator.  What is the likely outcome?',

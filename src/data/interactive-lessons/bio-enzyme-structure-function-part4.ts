@@ -11,20 +11,21 @@ export const bioEnzymesPart4Data = {
 
 - Inhibitor **resembles the substrate** and binds to the **active site**
 - Competes directly with substrate for the active site
-- Can be overcome by **increasing substrate concentration**
-- Increases apparent $K_m$ (lower affinity), $V_{max}$ unchanged
+- Binds **reversibly**, so it can be overcome by **increasing substrate concentration**
+- On a rate-vs-[S] graph: the inhibited curve rises more slowly but reaches the same plateau at very high [S]
 
 ### Noncompetitive Inhibition
 
 - Inhibitor binds to an **allosteric site** (not the active site)
 - Changes enzyme shape so the active site no longer fits the substrate
 - **Cannot** be overcome by increasing [S]
-- $K_m$ unchanged, $V_{max}$ decreases
+- On a rate-vs-[S] graph: the inhibited curve levels off at a lower rate, no matter how much substrate is added
 
-### Uncompetitive Inhibition
-
-- Inhibitor binds only to the **enzyme-substrate complex**
-- Both $K_m$ and $V_{max}$ decrease
+| | Competitive | Noncompetitive |
+|---|---|---|
+| Binding site | Active site | Allosteric site |
+| Resembles substrate? | Yes | No |
+| Overcome by more substrate? | Yes | No |
       `
     },
     {
@@ -108,19 +109,19 @@ This is a form of **negative feedback** that prevents overproduction.
             options: ['allosteric site', 'active site', 'substrate', 'product']
           },
           {
-            label: 'Noncompetitive inhibition ___ $V_{max}$',
-            options: ['increases', 'decreases', 'does not change', 'doubles']
+            label: 'Noncompetitive inhibitors bind to the ___',
+            options: ['allosteric site', 'active site', 'substrate', 'product']
           },
           {
             label: 'Feedback inhibition is a type of ___ regulation',
             options: ['positive feedback', 'negative feedback', 'feed-forward', 'constitutive']
           }
         ],
-        correctAnswers: ['active site', 'decreases', 'negative feedback'],
+        correctAnswers: ['active site', 'allosteric site', 'negative feedback'],
         hint1: 'Competitive inhibitors mimic the substrate.',
-        hint2: 'The enzyme shape changes even when substrate is present.',
+        hint2: 'They bind somewhere other than the active site and change the enzyme\'s shape.',
         hint3: 'The end product turns off its own production.',
-        explanation: 'Competitive inhibitors bind at the active site. Noncompetitive inhibition decreases Vmax. Feedback inhibition is negative feedback.'
+        explanation: 'Competitive inhibitors bind at the active site. Noncompetitive inhibitors bind an allosteric site and change the enzyme\'s shape. Feedback inhibition is negative feedback.'
       }
     }
   ]

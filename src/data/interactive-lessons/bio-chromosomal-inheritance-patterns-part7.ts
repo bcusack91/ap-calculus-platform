@@ -109,31 +109,31 @@ The genes are **12.5 centimorgans apart** on the same chromosome.`
     {
       id: 'chr7-dropdown1',
       type: 'dropdown-select' as const,
-      content: `**Practice Problem 3: Karyotype Analysis** 🔍`,
+      content: `**Practice Problem 3: Chromosome Number and Structure** 🔍`,
       exercise: {
         dropdowns: [
           {
-            label: 'A karyotype showing 47 chromosomes with three copies of chromosome 21 indicates ___',
-            options: ['Down syndrome (trisomy 21)', 'Turner syndrome', 'Klinefelter syndrome', 'Cri-du-chat syndrome']
+            label: 'A human karyotype with 47 chromosomes, including three copies of one autosome, shows ___',
+            options: ['a trisomy', 'a monosomy', 'triploidy', 'a translocation']
           },
           {
-            label: 'A karyotype of 45,X indicates ___',
-            options: ['Turner syndrome', 'Down syndrome', 'Klinefelter syndrome', 'Edwards syndrome']
+            label: 'A human karyotype with 45 chromosomes, including only one copy of one autosome, shows ___',
+            options: ['a trisomy', 'a monosomy', 'tetraploidy', 'a duplication']
           },
           {
-            label: 'A karyotype showing 46 chromosomes with a translocation between chromosomes 9 and 22 suggests ___',
-            options: ['chronic myelogenous leukemia (CML)', 'Down syndrome', 'cri-du-chat syndrome', 'Turner syndrome']
+            label: 'A karyotype with 46 chromosomes in which part of one chromosome is attached to a non-homologous chromosome shows ___',
+            options: ['a translocation', 'a trisomy', 'a deletion', 'polyploidy']
           },
           {
-            label: 'An individual with 47,XXY karyotype has ___',
-            options: ['Klinefelter syndrome', 'Turner syndrome', 'Triple X syndrome', 'XYY syndrome']
+            label: 'The error in which homologs fail to separate during meiosis I is called ___',
+            options: ['nondisjunction', 'crossing over', 'an inversion', 'independent assortment']
           }
         ],
-        correctAnswers: ['Down syndrome (trisomy 21)', 'Turner syndrome', 'chronic myelogenous leukemia (CML)', 'Klinefelter syndrome'],
-        hint1: 'Count the copies of chromosome 21.',
-        hint2: '45 total with only one sex chromosome — which syndrome involves monosomy X?',
-        hint3: 'The t(9;22) translocation creates the Philadelphia chromosome.',
-        explanation: 'Trisomy 21 → Down syndrome. 45,X → Turner syndrome (monosomy X). t(9;22) → Philadelphia chromosome (BCR-ABL fusion) → CML. 47,XXY → Klinefelter syndrome.'
+        correctAnswers: ['a trisomy', 'a monosomy', 'a translocation', 'nondisjunction'],
+        hint1: 'Count copies: three copies of one chromosome is 2n + 1; one copy is 2n − 1.',
+        hint2: 'A normal chromosome number with a segment in the wrong place is a structural change.',
+        hint3: 'Failure of chromosomes or chromatids to separate gives gametes with the wrong number.',
+        explanation: 'Three copies of one chromosome (47) is a trisomy, and one copy (45) is a monosomy. A segment moved to a non-homologous chromosome is a translocation, which can leave the count at 46. Homologs failing to separate is nondisjunction, the usual cause of trisomy and monosomy.'
       }
     },
     {

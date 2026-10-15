@@ -219,11 +219,11 @@ $$= \\frac{272.25}{73.5} + \\frac{1089}{273} + \\frac{272.25}{253.5}$$
 
 $$= 3.704 + 3.989 + 1.074 = 8.767$$
 
-**Step 4:** With $df = 1$ and $\\alpha = 0.05$, the critical value is 3.841.
+**Step 4:** With three genotype categories, $df = 3 - 1 = 2$; at $\\alpha = 0.05$ the critical value is 5.99.
 
-Since $8.767 > 3.841$, we **reject** $H_0$.
+Since $8.767 > 5.99$, we **reject** $H_0$.
 
-**Conclusion:** This population is NOT in Hardy-Weinberg equilibrium. There is an **excess of homozygotes** and a **deficit of heterozygotes**, which is characteristic of **inbreeding** or **population substructure** (Wahlund effect).
+**Conclusion:** This population is NOT in Hardy-Weinberg equilibrium. There is an **excess of homozygotes** and a **deficit of heterozygotes**, which is characteristic of **inbreeding** or **population substructure** (nonrandom mating).
       `
     },
     {
@@ -241,7 +241,7 @@ Since $8.767 > 3.841$, we **reject** $H_0$.
               'High gene flow from nearby populations'
             ],
             correctAnswer: 2,
-            explanation: 'An excess of both homozygote classes and a deficit of heterozygotes is the hallmark of inbreeding (or the Wahlund effect from population substructure). Inbreeding increases the probability that an individual receives two copies of the same allele, boosting homozygosity at the expense of heterozygosity.'
+            explanation: 'An excess of both homozygote classes and a deficit of heterozygotes is the hallmark of inbreeding (or of a sample that mixes partly separated subpopulations). Inbreeding increases the probability that an individual receives two copies of the same allele, boosting homozygosity at the expense of heterozygosity.'
           },
           {
             question: 'A student claims that because the dominant allele in a population has a frequency of 0.1, dominant traits will eventually disappear. This reasoning is:',

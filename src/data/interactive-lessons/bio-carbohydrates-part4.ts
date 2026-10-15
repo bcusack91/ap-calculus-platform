@@ -10,8 +10,8 @@ export const bioCarbohydratesPart4Data = {
 ### Must-know synthesis points
 
 1. **Monomer/polymer relationship** — monosaccharides → glycosidic bond (dehydration synthesis) → di/polysaccharides; polymers split by **hydrolysis**.
-2. **α vs β linkage** — α coils for storage (starch, glycogen); β straightens for structure (cellulose, chitin).
-3. **Function follows structure** — branching (glycogen, amylopectin) speeds energy release; straight β-fibers (cellulose) supply tensile strength.
+2. **Storage vs structure** — storage polymers coil and branch (starch, glycogen); structural polymers form straight, unbranched fibers (cellulose, chitin). Same glucose monomer, different arrangement.
+3. **Function follows structure** — branching (glycogen, amylopectin) speeds energy release; straight fibers (cellulose) supply tensile strength.
 4. **Cell-surface sugars (glycocalyx)** — recognition, signaling, immunity, blood typing.
 
 ### High-yield FRQ traps
@@ -51,7 +51,7 @@ export const bioCarbohydratesPart4Data = {
               'It is stored in large amounts in liver cells'
             ],
             correctAnswer: 2,
-            explanation: 'Structural polysaccharides like cellulose form rigid fibers and resist hydrolysis (β-linkages). Quick solubility and amylase digestion are storage hallmarks.'
+            explanation: 'Structural polysaccharides like cellulose form rigid fibers and resist hydrolysis by digestive enzymes. Quick solubility and amylase digestion are storage hallmarks.'
           }
         ]
       }
@@ -63,14 +63,14 @@ export const bioCarbohydratesPart4Data = {
       exercise: {
         dropdowns: [
           { label: 'Excess blood glucose in mammals is stored as ___ in the liver', options: ['starch', 'glycogen', 'cellulose', 'maltose'] },
-          { label: 'Cellulose forms straight chains because of ___ linkages', options: ['α-1,4', 'β-1,4', 'α-1,6', 'peptide'] },
+          { label: 'When energy is needed, starch and glycogen are hydrolyzed into ___ monomers', options: ['glucose', 'amino acid', 'nucleotide', 'fatty acid'] },
           { label: 'Joining 50 glucose monomers releases ___ water molecules', options: ['49', '50', '51', '25'] }
         ],
-        correctAnswers: ['glycogen', 'β-1,4', '49'],
+        correctAnswers: ['glycogen', 'glucose', '49'],
         hint1: 'Animal storage polysaccharide.',
-        hint2: 'Beta = straight = strong.',
+        hint2: 'Both storage polymers are built from one sugar.',
         hint3: 'n − 1 bonds for n monomers.',
-        explanation: 'Glycogen stores glucose in mammalian liver/muscle. β-1,4 linkages give cellulose its straight, structural character. n monomers → (n − 1) bonds → (n − 1) waters released.'
+        explanation: 'Glycogen stores glucose in mammalian liver/muscle. Starch and glycogen are broken down into glucose for respiration. n monomers → (n − 1) bonds → (n − 1) waters released.'
       }
     }
   ]

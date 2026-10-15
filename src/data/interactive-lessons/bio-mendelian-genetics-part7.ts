@@ -18,7 +18,7 @@ This final part synthesizes the unit, names the misconceptions that cost student
 | Mendel's laws | Segregation, independent assortment, dominance | Meiosis (anaphase I) |
 | Monohybrid cross | Genotype 1:2:1, phenotype 3:1 | Punnett square; test cross |
 | Dihybrid cross | Phenotype 9:3:3:1 | 4×4 grid; forked-line / $2^n$ gametes |
-| Probability | Product (AND), sum (OR), complement, binomial | Per-gene multiplication |
+| Probability | Product (AND), sum (OR), complement | Per-gene multiplication; list birth orders |
 | Pedigrees | Deduce mode of inheritance | Conditional (carrier) probability |
 | Data testing | Do observed counts fit the model? | Chi-square $\\chi^2 = \\sum \\frac{(O-E)^2}{E}$ |
 
@@ -173,7 +173,7 @@ Use this as a final pre-exam scan. Each row is a fact that, if recalled cleanly,
 | "AND" across genes/events | **Multiply** (product rule) |
 | "OR" across mutually exclusive outcomes | **Add** (sum rule) |
 | "At least one" | $1 - P(\\text{none})$ (complement) |
-| "Exactly k of n offspring" | Binomial $\\binom{n}{k}p^k q^{n-k}$ |
+| "Exactly one of two offspring" | List both birth orders, multiply along each, then add: $2 \\times p \\times q$ |
 | Unaffected sib of an *aa* child | Carrier probability **$\\frac{2}{3}$**, not $\\frac{1}{2}$ |
 | Incomplete dominance / codominance | Phenotype ratio **equals** genotype ratio (1:2:1) |
 | Chi-square decision | $\\chi^2 \\geq$ critical value ⇒ **reject**; pair with df = (classes − 1) |

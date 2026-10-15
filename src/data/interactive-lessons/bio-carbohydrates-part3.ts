@@ -18,10 +18,10 @@ Carbohydrates serve **four** core biological roles:
 
 ### Storage vs Structural
 
-- **Storage polysaccharides** use **α-glycosidic linkages** that coil → easy to mobilize when energy is needed.
-- **Structural polysaccharides** use **β-glycosidic linkages** that form rigid straight fibers → great for support, hard to digest.
+- **Storage polysaccharides** (starch, glycogen) are coiled and often branched → many chain ends where glucose can be released quickly when energy is needed.
+- **Structural polysaccharides** (cellulose, chitin) are straight, unbranched chains that bundle into rigid fibers → great for support, hard to digest.
 
-This single linkage difference (α vs β) is why we can digest starch but not cellulose.
+Starch and cellulose are both made of glucose; the monomers are simply connected in a different arrangement. Because enzymes are specific to the shape of their substrate, that difference is why we can digest starch but not cellulose. (The exact bond geometry is not tested on the AP exam.)
       `
     },
     {
@@ -34,12 +34,12 @@ This single linkage difference (α vs β) is why we can digest starch but not ce
             question: 'Why can humans digest starch but not cellulose, even though both are glucose polymers?',
             options: [
               'Cellulose contains nitrogen atoms that human enzymes cannot break apart',
-              'Humans lack enzymes that hydrolyze β-1,4 glycosidic linkages',
+              'Human enzymes fit starch\'s linkages but not the arrangement in cellulose',
               'Cellulose is a lipid, not a true carbohydrate, so human amylase ignores it',
               'Starch has much shorter chains than cellulose, so humans absorb it whole'
             ],
             correctAnswer: 1,
-            explanation: 'Amylase digests α-1,4 linkages found in starch. Cellulose uses β-1,4 linkages, which require cellulase — an enzyme humans (and most animals) do not produce.'
+            explanation: 'Enzymes are specific to the shape of their substrate. Human digestive enzymes fit the way glucose units are linked in starch, but cellulose links the same glucose units in a different arrangement that those enzymes cannot bind. Grazing animals digest cellulose only with help from gut microbes.'
           }
         ]
       }
@@ -92,13 +92,13 @@ The total carbohydrate coating of a cell is called the **glycocalyx**.
         dropdowns: [
           { label: 'Animals store excess glucose as ___', options: ['starch', 'cellulose', 'glycogen', 'chitin'] },
           { label: 'Insects build their exoskeletons largely from ___', options: ['cellulose', 'chitin', 'starch', 'glycogen'] },
-          { label: 'Cellulose chains link via ___-glycosidic bonds', options: ['α-1,4', 'β-1,4', 'α-1,6', 'β-1,2'] }
+          { label: 'Compared with cellulose, glycogen is much more ___', options: ['branched', 'fibrous', 'rigid', 'linear'] }
         ],
-        correctAnswers: ['glycogen', 'chitin', 'β-1,4'],
+        correctAnswers: ['glycogen', 'chitin', 'branched'],
         hint1: 'Liver and muscle reservoir.',
         hint2: 'Modified glucose with nitrogen.',
-        hint3: 'Beta linkages = straight, rigid fibers.',
-        explanation: 'Glycogen is the animal storage polysaccharide. Chitin (modified glucose) builds insect exoskeletons. Cellulose uses β-1,4 linkages, giving plant cell walls their tensile strength.'
+        hint3: 'Storage polymers branch; structural polymers form straight fibers.',
+        explanation: 'Glycogen is the animal storage polysaccharide. Chitin (modified glucose) builds insect exoskeletons. Glycogen is highly branched for fast glucose release, while cellulose forms straight, unbranched fibers that give plant cell walls their strength.'
       }
     }
   ]

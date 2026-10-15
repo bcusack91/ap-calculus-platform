@@ -11,7 +11,7 @@ export const bioNucleicAcidsPart4Data = {
 
 1. **Nucleotides = sugar + phosphate + nitrogenous base.**
 2. **DNA vs RNA** — DNA: deoxyribose, T, double-stranded, stable. RNA: ribose, U, usually single-stranded.
-3. **Chargaff's pairing** — A–T (or A–U), G–C; G–C bonds are stronger (3 H-bonds).
+3. **Chargaff's pairing** — A–T (or A–U), G–C; G–C pairs are held by more hydrogen bonds than A–T pairs.
 4. **Antiparallel orientation** enables semiconservative replication and accurate copying.
 5. **Central dogma** — DNA → mRNA → protein (transcription → translation).
 6. **Nucleotides also serve as energy carriers** — ATP, $NAD^{+}$, FAD, cAMP all share a nucleotide backbone.
@@ -45,11 +45,11 @@ export const bioNucleicAcidsPart4Data = {
       exercise: {
         questions: [
           {
-            question: 'A region of DNA with very high G–C content will be ___ to separate by heat than an A–T-rich region.',
+            question: 'Each G–C base pair is held by three hydrogen bonds, and each A–T pair by two. A region of DNA with very high G–C content will be ___ to separate by heat than an A–T-rich region.',
             options: [
               'Easier — fewer hydrogen bonds',
               'Easier — phosphate bonds break first',
-              'Harder — three H-bonds per pair vs two',
+              'Harder — more hydrogen bonds must be broken',
               'Identical — base composition does not affect strand stability'
             ],
             correctAnswer: 2,
@@ -69,10 +69,10 @@ export const bioNucleicAcidsPart4Data = {
           { label: 'A nucleic acid contains C, H, O, N, and ___', options: ['S', 'P', 'Fe', 'Mg'] }
         ],
         correctAnswers: ['deoxyribose', 'uracil', 'P'],
-        hint1: 'Missing 2′ –OH.',
+        hint1: 'DNA = deoxyribonucleic acid.',
         hint2: 'Replaces thymine.',
         hint3: 'In every phosphate group.',
-        explanation: 'DNA uses deoxyribose (no 2′ –OH). Uracil replaces thymine in RNA. Phosphorus is found in every nucleotide\'s phosphate group.'
+        explanation: 'DNA uses deoxyribose. Uracil replaces thymine in RNA. Phosphorus is found in every nucleotide\'s phosphate group.'
       }
     }
   ]

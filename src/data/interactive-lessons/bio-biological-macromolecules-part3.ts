@@ -9,7 +9,7 @@ export const bioMacromoleculesPart3Data = {
 
 ### Triglycerides (Fats & Oils)
 
-Trigleride = **glycerol** + **3 fatty acids** (linked by ester bonds)
+Triglyceride = **glycerol** + **3 fatty acids** (linked by ester bonds)
 
 | Type | Saturation | State at RT | Example |
 |------|-----------|-------------|----------|

@@ -13,18 +13,17 @@ export const bioEnzymesPart5Data = {
 
 | Type | Nature | Examples |
 |------|--------|----------|
-| **Inorganic cofactors** | Metal ions | $Zn^{2+}$, $Fe^{2+}$, $Mg^{2+}$, $Cu^{2+}$ |
-| **Coenzymes** | Organic molecules | $NAD^{+}$, FAD, coenzyme A |
-| **Prosthetic groups** | Tightly bound | Heme group in hemoglobin |
+| **Inorganic cofactors** | Metal ions | $Zn^{2+}$, $Fe^{2+}$, $Mg^{2+}$ |
+| **Coenzymes** | Organic molecules | $NAD^{+}$, FAD |
 
-### Important Coenzymes
+### Coenzymes you will meet in Unit 3
 
-| Coenzyme | Derived from | Function |
-|----------|-------------|----------|
-| **$NAD^{+}$** | Niacin (B3) | Electron carrier in respiration |
-| **FAD** | Riboflavin (B2) | Electron carrier in Krebs cycle |
-| **Coenzyme A** | Pantothenic acid (B5) | Carries acetyl groups |
-| **ATP** | Adenine nucleotide | Energy currency |
+| Coenzyme | Function |
+|----------|----------|
+| **$NAD^{+}$** | Picks up electrons (becoming NADH) in glycolysis and the Krebs cycle |
+| **FAD** | Picks up electrons (becoming $FADH_2$) in the Krebs cycle |
+
+A cofactor is a **component of the enzymatic system**. If it is missing or changed, the enzyme's function or efficiency changes, just as it would if the protein itself were altered.
       `
     },
     {
@@ -53,16 +52,29 @@ export const bioEnzymesPart5Data = {
       id: 'enzy5-vitamins',
       type: 'text' as const,
       content: `
-## Vitamins as Coenzymes
+## Testing for a Cofactor: Experimental Design
 
-Many **vitamins** function as coenzymes or coenzyme precursors.
+Suppose you suspect that an enzyme needs $Mg^{2+}$ to work. A clean experiment changes **one** variable and measures its effect.
 
-- **Water-soluble vitamins** (B vitamins, vitamin C) often serve as coenzymes
-- **Fat-soluble vitamins** (A, D, E, K) have other roles
-- Vitamin deficiencies impair enzyme function
-- Example: Scurvy (vitamin C deficiency) → impaired collagen synthesis
+| Element | In this experiment |
+|---|---|
+| **Independent variable** | Whether $Mg^{2+}$ is added (or how much) |
+| **Dependent variable** | Reaction rate (product formed per minute) |
+| **Held constant** | Enzyme amount, substrate concentration, temperature, pH, total volume, time |
+| **Negative control** | Substrate + $Mg^{2+}$ with **no enzyme** — shows the ion alone does not make product |
+| **Comparison group** | Enzyme + substrate with no $Mg^{2+}$ |
 
-Without the proper cofactor, an enzyme is called an **apoenzyme** (inactive). With its cofactor, it's a **holoenzyme** (active).
+### Worked example — interpreting the results
+
+| Tube | Contents | Rate (μmol/min) |
+|---|---|---|
+| 1 | Enzyme + substrate | 0.4 |
+| 2 | Enzyme + substrate + $Mg^{2+}$ | 6.0 |
+| 3 | Substrate + $Mg^{2+}$, no enzyme | 0.0 |
+
+1. **Compare tubes 1 and 2:** adding $Mg^{2+}$ raises the rate 15-fold (6.0 ÷ 0.4).
+2. **Check the control:** tube 3 makes no product, so the ion is not doing the catalysis itself.
+3. **Claim:** the enzyme requires $Mg^{2+}$ as a cofactor for full activity.
       `
     },
     {
@@ -74,15 +86,15 @@ Without the proper cofactor, an enzyme is called an **apoenzyme** (inactive). Wi
       exercise: {
         questions: [
           {
-            question: 'An apoenzyme is:',
+            question: 'In the cofactor experiment, why is the tube with substrate and $Mg^{2+}$ but no enzyme included?',
             options: [
-              'An enzyme with its cofactor attached',
-              'An enzyme lacking its required cofactor',
-              'An enzyme denatured by high heat',
-              'An inhibitor bound to the active site'
+              'To show that the ion alone does not produce the product',
+              'To measure how quickly the enzyme denatures without the ion',
+              'To provide the largest possible rate for comparison',
+              'To keep the temperature of the other tubes constant'
             ],
-            correctAnswer: 1,
-            explanation: 'An apoenzyme is the protein portion of an enzyme without its required cofactor. It\'s inactive. With the cofactor, it becomes a holoenzyme.'
+            correctAnswer: 0,
+            explanation: 'It is a negative control. If the ion by itself could convert substrate to product, the higher rate in the enzyme + ion tube might not reflect any effect on the enzyme. A rate of zero rules that out.'
           }
         ]
       }
@@ -100,19 +112,19 @@ Without the proper cofactor, an enzyme is called an **apoenzyme** (inactive). Wi
             options: ['substrates', 'cofactors', 'products', 'inhibitors']
           },
           {
-            label: '$NAD^{+}$ is derived from vitamin ___',
-            options: ['A', 'B3', 'C', 'D']
+            label: '$NAD^{+}$ acts as a coenzyme by carrying ___',
+            options: ['electrons', 'amino acids', 'oxygen gas', 'glucose']
           },
           {
-            label: 'An enzyme with its cofactor is called a ___',
-            options: ['apoenzyme', 'holoenzyme', 'proenzyme', 'isoenzyme']
+            label: 'In the cofactor experiment, the presence of $Mg^{2+}$ is the ___ variable',
+            options: ['independent', 'dependent', 'controlled', 'confounding']
           }
         ],
-        correctAnswers: ['cofactors', 'B3', 'holoenzyme'],
+        correctAnswers: ['cofactors', 'electrons', 'independent'],
         hint1: 'These non-protein helpers are often metal ions.',
-        hint2: 'This B vitamin is essential for cellular respiration.',
-        hint3: 'Holo = whole, complete.',
-        explanation: 'Metal ion helpers are cofactors. $NAD^{+}$ comes from niacin (vitamin B3). A complete, active enzyme with its cofactor is a holoenzyme.'
+        hint2: 'It becomes NADH when it is loaded.',
+        hint3: 'It is the factor the researcher deliberately changes.',
+        explanation: 'Metal ion helpers are cofactors. $NAD^{+}$ carries electrons (as NADH). The researcher changes whether $Mg^{2+}$ is present, so it is the independent variable; the reaction rate is the dependent variable.'
       }
     }
   ]

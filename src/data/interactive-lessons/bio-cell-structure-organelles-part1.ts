@@ -28,9 +28,9 @@ export const bioCellStructurePart1Data = {
 
 ### What You'll Master in Part 1
 - The three tenets of cell theory
-- How cell theory was developed through microscopy
 - The relationship between surface area and volume in cells
-- Why cells must remain small`
+- Why cells must remain small
+- How body size affects heat exchange and metabolic rate`
     },
     {
       id: 'cs1-cell-theory',
@@ -38,13 +38,13 @@ export const bioCellStructurePart1Data = {
       content: `
 ## 📖 The Three Tenets of Cell Theory
 
-Cell theory was established in the 1830s–1850s by **Schleiden**, **Schwann**, and **Virchow**:
+Cell theory is one of the unifying ideas of biology:
 
-| Tenet | Statement | Key Scientist |
-|-------|-----------|---------------|
-| **1** | All living things are composed of one or more cells | Schleiden & Schwann (1838–1839) |
-| **2** | The cell is the basic unit of structure and function in living organisms | Schwann (1839) |
-| **3** | All cells arise from pre-existing cells | Virchow (1855) — "*Omnis cellula e cellula*" |
+| Tenet | Statement |
+|-------|-----------|
+| **1** | All living things are composed of one or more cells |
+| **2** | The cell is the basic unit of structure and function in living organisms |
+| **3** | All cells arise from pre-existing cells |
 
 ---
 
@@ -56,20 +56,7 @@ Cell theory was established in the 1830s–1850s by **Schleiden**, **Schwann**, 
 | All cells have the same basic chemical composition | All cells use DNA, RNA, proteins, carbohydrates, and lipids |
 | Energy flow occurs within cells | All cells require energy and carry out metabolic processes |
 
-> 🔑 **AP Exam Tip:** The third tenet — all cells come from pre-existing cells — directly contradicts spontaneous generation. Pasteur's swan-neck flask experiment (1859) provided definitive evidence.
-
----
-
-### Key Historical Experiments
-
-| Scientist | Contribution | Year |
-|-----------|-------------|------|
-| **Robert Hooke** | First to observe cells (cork) and coin the term "cell" | 1665 |
-| **Anton van Leeuwenhoek** | First to observe living cells (bacteria, protists) | 1670s |
-| **Matthias Schleiden** | All plants are made of cells | 1838 |
-| **Theodor Schwann** | All animals are made of cells | 1839 |
-| **Rudolf Virchow** | All cells come from pre-existing cells | 1855 |
-| **Louis Pasteur** | Disproved spontaneous generation | 1859 |
+> 🔑 **AP Exam Tip:** The third tenet — all cells come from pre-existing cells — rules out spontaneous generation. The shared chemistry of all cells (DNA, ribosomes, membranes) is evidence of common ancestry. The names and dates of the scientists who built cell theory are not tested on the AP exam.
       `
     },
     {
@@ -81,26 +68,26 @@ Cell theory was established in the 1830s–1850s by **Schleiden**, **Schwann**, 
       exercise: {
         questions: [
           {
-            question: 'Which tenet of cell theory did Rudolf Virchow contribute?',
+            question: 'Sealed flasks of sterile broth stay free of microbes, but microbes grow as soon as living cells are added. This result most directly supports which tenet of cell theory?',
             options: [
-              'All living things are composed of cells',
-              'The cell is the basic unit of life',
               'All cells arise from pre-existing cells',
-              'DNA is the hereditary material'
+              'The cell is the basic unit of structure and function',
+              'All living things are composed of one or more cells',
+              'Every cell uses DNA as its hereditary material'
             ],
-            correctAnswer: 2,
-            explanation: 'Virchow (1855) stated "Omnis cellula e cellula" — all cells come from pre-existing cells. This was the third and final tenet of classical cell theory, contradicting spontaneous generation.'
+            correctAnswer: 0,
+            explanation: 'New cells appeared only when living cells were already present, so cells came from pre-existing cells rather than arising spontaneously from the broth. The other statements are true parts of cell theory, but this experiment does not test them.'
           },
           {
-            question: 'Robert Hooke observed cells in cork tissue and coined the term "cell." Why did he choose this word?',
+            question: 'Bacteria, plants, and animals all store information in DNA, build proteins on ribosomes, and are bounded by a phospholipid membrane. Which conclusion does this shared set of features best support?',
             options: [
-              'The chambers seemed to move and divide like living organisms',
-              'The empty chambers reminded him of the small rooms monks lived in',
-              'He could see a nucleus and cytoplasm inside each cork chamber',
-              'The cork contained visible organelles'
+              'Bacteria evolved from plant and animal cells',
+              'All living cells descend from a common ancestor',
+              'These features arose separately in each group',
+              'All cells have the same size and shape'
             ],
             correctAnswer: 1,
-            explanation: 'Hooke saw empty, box-like chambers in dead cork cells that reminded him of the small rooms (cellae) that monks lived in. He was actually looking at the cell walls of dead plant cells — the cytoplasm had long since dried away.'
+            explanation: 'Features found in every known cell, such as ribosomes made of rRNA and protein, are best explained by inheritance from a common ancestor. Independent origin of the same complex machinery in each group is far less likely, and the shared features say nothing about size or shape.'
           },
           {
             question: 'Which of the following would violate cell theory?',
@@ -195,42 +182,26 @@ As a cell gets **larger**:
       id: 'cs1-microscopy',
       type: 'text' as const,
       content: `
-## 🔬 Microscopy & Cell Observation
+## 🐘 Scaling Up: SA:V in Whole Organisms
 
-Different types of microscopes reveal different levels of cellular detail:
+The same geometry applies to whole organisms. As body size increases, the surface area-to-volume ratio **decreases**.
 
-| Microscope Type | Max Resolution | What It Reveals | Specimen |
-|----------------|---------------|-----------------|----------|
-| **Light microscope (LM)** | ~200 nm | Cells, large organelles (nucleus, chloroplasts) | Living or fixed |
-| **Transmission electron (TEM)** | ~0.2 nm | Internal ultrastructure, membranes, ribosomes | Fixed & stained (2D) |
-| **Scanning electron (SEM)** | ~2 nm | 3D surface topology | Fixed & coated (3D) |
+| Feature | Small organism (e.g., a shrew) | Large organism (e.g., an elephant) |
+|---------|-------------------------------|------------------------------------|
+| **SA:V ratio** | High | Low |
+| **Heat exchange per unit mass** | Fast — loses heat quickly | Slow — retains heat |
+| **Metabolic rate per unit body mass** | High | Low |
 
----
+### Why the metabolic pattern follows
 
-### Key Definitions
+- A small body exchanges proportionally more heat with its surroundings, so a small endotherm must burn fuel faster per gram just to stay warm.
+- A large body exchanges heat slowly, so its metabolic rate per gram can be lower.
 
-- **Resolution** — The minimum distance between two points that can be distinguished as separate; determines image clarity
-- **Magnification** — How much larger an image appears compared to actual size
-- **Contrast** — The difference in brightness between structures; staining improves contrast
+### Structural solutions at every level
 
-> ⚠️ **Common misconception:** Higher magnification does NOT automatically mean better images. Resolution is the limiting factor. Blowing up a blurry image just makes a bigger blurry image.
+When exchange can't keep up, organisms add surface without adding much volume: microvilli on gut cells, root hairs on plant roots, folded membranes inside organelles, and thin, flat leaves.
 
----
-
-### Cell Size Reference
-
-| Structure | Approximate Size |
-|-----------|-----------------|
-| Water molecule | 0.3 nm |
-| Ribosome | 25 nm |
-| Virus | 50–200 nm |
-| Bacterium | 1–5 μm |
-| Mitochondrion | 1–10 μm |
-| Animal cell | 10–30 μm |
-| Plant cell | 10–100 μm |
-| Human egg cell | ~100 μm |
-
-> 💡 **Size scale:** 1 mm = 1,000 μm = 1,000,000 nm
+> 🔑 **AP Exam Tip:** Expect to calculate SA:V for a cube or sphere and then explain the consequence for exchange, heat loss, or metabolic rate.
       `
     },
     {
@@ -242,27 +213,27 @@ Different types of microscopes reveal different levels of cellular detail:
       exercise: {
         dropdowns: [
           {
-            label: 'To view the 3D surface of a pollen grain, you would use',
-            options: ['Light microscope', 'TEM', 'SEM', 'Fluorescence microscope']
+            label: 'As a cell grows larger, its surface area-to-volume ratio',
+            options: ['Increases', 'Decreases', 'Stays the same', 'Doubles']
           },
           {
-            label: 'To view the internal cristae of a mitochondrion, you would use',
-            options: ['Light microscope', 'TEM', 'SEM', 'Dissecting microscope']
+            label: 'Per gram of body mass, a small mammal loses heat to its surroundings',
+            options: ['Faster than a large mammal', 'Slower than a large mammal', 'At the same rate as a large mammal', 'Only when it is active']
           },
           {
-            label: 'The factor that limits the useful detail in an image is',
-            options: ['Magnification', 'Resolution', 'Contrast', 'Brightness']
+            label: 'Per gram of body mass, a shrew has a metabolic rate that is',
+            options: ['Higher than an elephant\'s', 'Lower than an elephant\'s', 'Equal to an elephant\'s', 'Zero at rest']
           },
           {
-            label: 'A typical animal cell is approximately',
-            options: ['0.2 nm', '1–5 μm', '10–30 μm', '1 mm']
+            label: 'Microvilli and root hairs mainly increase a cell\'s',
+            options: ['Volume', 'Surface area', 'DNA content', 'Number of nuclei']
           }
         ],
-        correctAnswers: ['SEM', 'TEM', 'Resolution', '10–30 μm'],
-        hint1: 'SEM provides 3D surface images of specimens.',
-        hint2: 'TEM shoots electrons through thin sections to reveal internal ultrastructure.',
-        hint3: 'Resolution determines the minimum distance between two distinguishable points.',
-        explanation: 'SEM gives 3D surface views (pollen grain surface). TEM reveals internal structure at the nanometer scale (cristae inside mitochondria). Resolution is the true determinant of image detail — not magnification. Typical animal cells are 10–30 μm in diameter.'
+        correctAnswers: ['Decreases', 'Faster than a large mammal', 'Higher than an elephant\'s', 'Surface area'],
+        hint1: 'Volume grows as the cube of length; surface area only as the square.',
+        hint2: 'Smaller bodies have a higher SA:V ratio.',
+        hint3: 'Fast heat loss must be balanced by fast heat production.',
+        explanation: 'Larger cells have lower SA:V ratios. Small animals have a high SA:V ratio, so they exchange heat with the environment proportionally faster and need a higher metabolic rate per unit body mass to stay warm. Microvilli and root hairs add surface area with little added volume.'
       }
     },
     {
@@ -275,11 +246,11 @@ Enter the correct term for each description.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['resolution', 'Virchow', 'surface area'],
-        hint1: 'This is the minimum distance between two points that can still be distinguished as separate.',
-        hint2: 'This scientist stated "Omnis cellula e cellula" — all cells from cells.',
+        correctAnswers: ['microvilli', 'volume', 'surface area'],
+        hint1: 'Finger-like projections on intestinal cells that increase the absorptive surface.',
+        hint2: 'As a cell grows, this measurement increases as the cube of its length.',
         hint3: 'As a cell grows, which measurement increases more slowly than volume?',
-        explanation: 'Resolution determines image clarity (not magnification). Virchow contributed the third tenet of cell theory. Surface area increases as the square of the radius, while volume increases as the cube — so surface area cannot keep up with volume as cells grow.'
+        explanation: 'Microvilli increase surface area for absorption. Volume grows with the cube of a cell\'s length while surface area grows only with the square, so surface area cannot keep up with volume as cells grow.'
       }
     },
     {

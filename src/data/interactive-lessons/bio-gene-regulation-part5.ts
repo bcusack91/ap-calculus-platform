@@ -9,69 +9,74 @@ export const bioGeneRegPart5Data = {
 
 **Part 5 of 7**
 
-Not all gene regulation is done by proteins. Cells also use **small RNA molecules** to control which mRNAs get translated — a system called **RNA interference (RNAi)**. Because these RNAs act *after* an mRNA is already made, RNAi is a form of **post-transcriptional** regulation: it does not stop transcription; it controls the fate of the transcript.
+Not all gene regulation is done by proteins. The CED states that **certain small RNA molecules have roles in regulating gene expression**. These short RNAs pair with complementary mRNAs and shut them down, a process called **RNA interference (RNAi)**. Because they act *after* an mRNA is already made, they are a form of **post-transcriptional** regulation: they do not stop transcription; they control the fate of the transcript.
 
-The two main players are **microRNAs (miRNAs)** and **small interfering RNAs (siRNAs)** — short (~21-23 nucleotide) RNAs that guide a protein complex to complementary mRNAs and shut them down. The discovery of RNAi reshaped our understanding of gene regulation and handed researchers a precise tool for switching genes off.
+You will often see two names: **microRNAs (miRNAs)**, which a cell makes from its own genes, and **small interfering RNAs (siRNAs)**, which often come from double-stranded RNA such as a viral genome or a molecule introduced in the lab. Both work the same basic way.
 
-> **AP trap (bank it now):** **RNAi acts post-transcriptionally** — on the mRNA, not the DNA. It does not change the DNA sequence and (in the AP-canonical view) does not block transcription itself; it degrades or silences transcripts that already exist.
+> **AP trap (bank it now):** **Small regulatory RNAs act post-transcriptionally** — on the mRNA, not the DNA. They do not change the DNA sequence and do not block transcription itself; they reduce how much protein is made from transcripts that already exist.
       `
     },
     {
       id: 'grp5-biogenesis',
       type: 'text' as const,
       content: `
-### Biogenesis — Where the Small RNAs Come From
+### How a Small RNA Silences an mRNA
 
-Both miRNAs and siRNAs are processed from double-stranded RNA precursors and loaded into the same effector machinery, but their origins differ:
+1. **Production.** A longer RNA molecule folds back on itself (or pairs with a complementary RNA) to form a double-stranded region. Enzymes cut it into short pieces about 20 nucleotides long.
+2. **Loading.** One strand of each short piece joins a protein complex.
+3. **Targeting.** The small RNA in the complex **base-pairs** with any mRNA that has a complementary sequence. This is the same base-pairing logic as DNA replication and transcription.
+4. **Silencing.** The bound mRNA is either **broken down** or **blocked from being translated**.
 
-- **miRNAs** are encoded by the organism's **own genome**. They are transcribed as longer precursors that fold into hairpins, then trimmed by the enzyme **Dicer** into short double-stranded fragments.
-- **siRNAs** typically derive from **longer double-stranded RNA**, often of viral or experimental (exogenous) origin, also diced by **Dicer** into short duplexes.
+Either way, the net effect is the **same direction**: **less protein** from the targeted gene.
 
-The shared downstream pathway:
+| Feature | Small regulatory RNA (miRNA or siRNA) |
+|---|---|
+| What it is | A short, single-stranded RNA, about 20 nucleotides |
+| What it binds | A complementary sequence in a target **mRNA** |
+| Where it acts | Cytoplasm, after transcription and processing |
+| Outcome | mRNA degraded or not translated → less protein |
+| DNA sequence changed? | **No** |
 
-1. **Dicer** cuts the precursor into a short (~21-23 nt) RNA duplex.
-2. One strand (the **guide strand**) is loaded into **RISC** (the RNA-Induced Silencing Complex), whose catalytic core is an **Argonaute** protein. The other strand is discarded.
-3. The guide RNA base-pairs with complementary sequences in target mRNAs, directing RISC to silence them.
-
-| Feature | miRNA | siRNA |
-|---|---|---|
-| Source | Cell's own genome (endogenous) | Long dsRNA, often viral or lab-introduced (exogenous) |
-| Processing enzyme | **Dicer** | **Dicer** |
-| Effector complex | **RISC** (Argonaute) | **RISC** (Argonaute) |
-| Typical complementarity to target | Often **partial** | Usually **perfect/extensive** |
-| Typical outcome | Translational repression (and/or destabilization) | mRNA **cleavage/degradation** |
-
-> **One enzyme, one complex, two inputs:** Remember the pipeline **Dicer → RISC/Argonaute**. Whether a small RNA came from your own genes (miRNA) or from outside (siRNA), it ends up steering the same silencing machine.
+(The names of the enzymes and protein complexes involved are beyond the scope of the AP exam.)
       `
     },
     {
       id: 'grp5-mechanism',
       type: 'text' as const,
       content: `
-### Mechanism — Degrade or Repress? It Depends on the Match
+### One Small RNA, Many Targets
 
-Once a guide RNA inside RISC finds a target mRNA, the *degree of base-pairing complementarity* determines the outcome:
+A small RNA needs only a matching stretch of sequence to find its target, so **one miRNA can dampen many different mRNAs** that share that stretch. This makes small RNAs powerful coordinators: a single miRNA can lower the output of a whole group of genes at once, the post-transcriptional counterpart of a transcription factor that switches on many genes.
 
-- **Extensive / perfect complementarity** → Argonaute **cleaves** the mRNA, which is then degraded. The target is destroyed. (Typical of siRNAs.)
-- **Partial complementarity** → RISC does not cut; instead it **blocks translation** and/or promotes mRNA destabilization, so the mRNA persists but is poorly translated. (Typical of many animal miRNAs binding the $3'$ UTR.)
+### Worked Example: Predicting Protein Levels
 
-Either way, the net effect is the **same direction**: **less protein** from the targeted gene. The two routes differ in *how* — destroying the message vs. silencing it — and in whether the mRNA disappears or merely goes quiet.
+A miRNA called miR-X pairs with the mRNAs of genes A and B but not gene C. Predict each protein's level in three cell types.
 
-This makes RNAi a versatile dimmer switch. A single miRNA can have **many** target mRNAs (any transcript with a matching sequence), so one small RNA can coordinate the dampening of a whole set of genes — a counterpart to how one transcription factor regulates many genes.
+| Cell type | miR-X level | Protein A | Protein B | Protein C |
+|---|---|---|---|---|
+| Normal | Moderate | Moderate | Moderate | Normal |
+| miR-X overproduced | High | **Low** | **Low** | Normal |
+| miR-X gene deleted | None | **High** | **High** | Normal |
 
-> **Quantitative intuition (fold-change):** If a miRNA represses its target to one-fourth of normal, that is roughly a $4\\times$ drop, a fold-change of about $0.25$. Remove that miRNA and the target rebounds toward $1\\times$. RNAi outcomes are usually described as *relative* changes in protein/mRNA level, not absolute on/off.
+**Step 1 — Find the targets.** Only mRNAs with a sequence complementary to miR-X (A and B) are affected.
+
+**Step 2 — Apply the direction.** More miR-X means more silencing and less protein; no miR-X means no silencing and more protein.
+
+**Step 3 — Check the mRNA level of the gene itself.** Transcription of A, B and C is unchanged in all three cell types; only the amount of protein made from A and B differs.
+
+> **Quantitative intuition (fold-change):** If a miRNA represses its target to one-fourth of normal, that is a fold-change of about $0.25$. Remove that miRNA and the target rebounds toward $1\\times$. Small-RNA effects are usually described as *relative* changes in protein level, not absolute on/off.
       `
     },
     {
       id: 'grp5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-### Checkpoint — Predicting RNAi Outcomes
+### Checkpoint — Predicting Small-RNA Outcomes
       `,
       exercise: {
         questions: [
           {
-            question: 'A miRNA represses gene X by binding the 3\' UTR of X\'s mRNA. A mutation causes the cell to OVER-express this miRNA (much more than normal). What is the predicted effect on protein X?',
+            question: 'A miRNA represses gene X by binding X\'s mRNA. A mutation causes the cell to OVER-express this miRNA (much more than normal). What is the predicted effect on protein X?',
             options: [
               'Protein X increases, because more miRNA means more transcription of X',
               'Protein X decreases, because more miRNA silences more of X\'s mRNA',
@@ -79,7 +84,7 @@ This makes RNAi a versatile dimmer switch. A single miRNA can have **many** targ
               'Protein X increases, because miRNAs stabilize their target mRNAs'
             ],
             correctAnswer: 1,
-            explanation: 'A miRNA silences its target, so over-expressing it drives MORE silencing and LESS protein X. The "more transcription of X" option inverts the logic and wrongly claims miRNA boosts transcription. The "act only on DNA" option misplaces RNAi at the DNA level (it is post-transcriptional, acting on mRNA). The "stabilize their target mRNAs" option contradicts the repressive function — miRNAs destabilize or block their targets, they do not stabilize them.'
+            explanation: 'A miRNA silences its target, so over-expressing it drives MORE silencing and LESS protein X. The "more transcription of X" option inverts the logic and wrongly claims miRNA boosts transcription. The "act only on DNA" option misplaces small RNAs at the DNA level (they are post-transcriptional, acting on mRNA). The "stabilize their target mRNAs" option contradicts the repressive function — miRNAs destabilize or block their targets, they do not stabilize them.'
           },
           {
             question: 'Conversely, gene Y is normally kept partly repressed by a miRNA. A knockout removes that miRNA entirely. What happens to protein Y, and why?',
@@ -93,15 +98,15 @@ This makes RNAi a versatile dimmer switch. A single miRNA can have **many** targ
             explanation: 'Removing a repressor (here, the miRNA) de-represses its target, so protein Y rises. The "needed for translation" option reverses the relationship (the miRNA represses, it is not required for translation). The "gene sequence is intact" option is a trap: an intact gene can still be repressed or de-repressed — sequence intactness does not fix expression level. The gene-deletion option confuses removing a regulatory RNA with deleting the target gene.'
           },
           {
-            question: 'An siRNA shows perfect complementarity to its target mRNA, whereas a particular miRNA shows only partial complementarity to its target. What is the expected difference in outcome?',
+            question: 'In which part of the gene-expression pathway do small regulatory RNAs such as miRNAs act?',
             options: [
-              'siRNA mainly cleaves the mRNA; miRNA mainly blocks translation',
-              'The siRNA increases protein output; the miRNA decreases it',
-              'Only the miRNA reduces protein; the siRNA has no effect at all',
-              'Both act in the nucleus to stop transcription of the gene'
+              'Before transcription, by pairing with the gene\'s promoter DNA',
+              'After transcription, by pairing with a complementary mRNA',
+              'During replication, by pairing with the lagging strand',
+              'After translation, by pairing with the finished protein'
             ],
-            correctAnswer: 0,
-            explanation: 'Degree of complementarity sets the route: perfect match (siRNA) → cleavage; partial match (miRNA) → translational repression — yet both lower protein. The "siRNA increases protein" option wrongly has siRNA raising protein. The "only the miRNA reduces protein" option wrongly says siRNA does nothing. The "stop transcription" option is the post-transcriptional trap: RNAi acts on mRNA in the cytoplasm, not on transcription in the nucleus.'
+            correctAnswer: 1,
+            explanation: 'Small regulatory RNAs base-pair with complementary sequences in mRNA, so they act after transcription and before or during translation, lowering how much protein is made. They do not bind promoter DNA or replicating DNA, and RNA cannot base-pair with a protein.'
           }
         ]
       }
@@ -110,74 +115,60 @@ This makes RNAi a versatile dimmer switch. A single miRNA can have **many** targ
       id: 'grp5-tool',
       type: 'text' as const,
       content: `
-### RNAi as a Laboratory Tool — Targeted Knockdown
+### Small RNAs in Experiments — Lowering One Protein
 
-Because siRNAs silence whatever mRNA they match, researchers exploit RNAi to **knock down** a gene of interest on demand. The workflow:
+Because a small RNA silences whatever mRNA it matches, researchers can introduce a synthetic small RNA that matches a gene of interest and **knock down** that gene's protein, without changing the genome. This is a **loss-of-function** experiment: by lowering one protein and watching what changes, scientists infer that protein's normal role.
 
-1. Design a synthetic siRNA (or an expressed short-hairpin RNA) complementary to the target gene's mRNA.
-2. Introduce it into cells. Dicer/RISC processing loads the guide strand into RISC.
-3. RISC finds and silences the target mRNA, reducing the gene's protein output — without altering the genome.
+How to read such an experiment:
+- **mRNA of the target falls (or protein falls while transcription is normal)** → the small RNA is working post-transcriptionally.
+- **The gene's DNA sequence is unchanged** → this is not a mutation.
+- **The phenotype changes** → the protein normally contributes to that trait.
 
-This is a **loss-of-function** experiment: by lowering one protein and watching what changes, scientists infer that protein's normal role. Note the contrast with a true genetic knockout:
-
-| | RNAi knockdown | Genetic knockout |
-|---|---|---|
-| Target | mRNA (post-transcriptional) | The gene itself (DNA) |
-| Effect | Reduces protein (partial) | Eliminates the gene/protein |
-| DNA sequence changed? | **No** | **Yes** |
-| Reversibility | Often transient/tunable | Permanent |
-
-Because RNAi leaves the DNA untouched and usually produces a *partial, dose-dependent* reduction, it is ideal for asking "what happens when there is *less* of protein X?" while keeping the gene intact.
-
-> **Connecting the unit:** RNAi is a regulatory layer that *the cell itself uses* (miRNAs fine-tuning developmental genes) and that *scientists borrow* (siRNA knockdowns). In both cases the action is post-transcriptional — controlling the message after the gene has been read.
+> **Connecting the unit:** Small regulatory RNAs are a layer that *the cell itself uses* (miRNAs fine-tuning developmental genes) and that *scientists borrow* (introduced siRNAs). In both cases the action is post-transcriptional — controlling the message after the gene has been read.
       `
     },
     {
       id: 'grp5-roles-context',
       type: 'text' as const,
       content: `
-### miRNA in the Cell vs. siRNA in the Lab — and Where RNAi Fits
+### Where Small RNAs Fit Among the Regulatory Levels
 
-It helps to separate the **biological role** of each small RNA from its **experimental use**, because AP questions probe both.
+**Antiviral defense.** Many viruses make **double-stranded RNA** while they replicate. Cutting that RNA into small pieces and silencing the matching viral mRNAs is a built-in **defense** in many organisms, which is one reason the small-RNA system is so widespread.
 
-**miRNA — an endogenous regulatory layer.** The genome encodes hundreds of miRNAs. Each fine-tunes its targets, and because a miRNA needs only partial complementarity, **one miRNA can dampen dozens of different mRNAs** that share a short matching seed sequence. This makes miRNAs powerful coordinators of programs such as development and the cell cycle — a single miRNA can lower the output of a whole functional group of genes at once, the post-transcriptional counterpart to a transcription factor that activates many genes.
-
-**siRNA / RNAi as antiviral defense and as a tool.** siRNAs often originate from **double-stranded RNA**, a molecular signature of viral replication. Dicing that dsRNA into siRNAs and silencing the matching (viral) mRNAs is a built-in **antiviral defense** in many organisms. Researchers co-opt the same pathway by introducing synthetic dsRNA/siRNA to knock down *any* chosen gene.
-
-**Placing RNAi among the regulatory levels (the whole unit on one axis):**
+**Placing small RNAs among the regulatory levels (the whole unit on one axis):**
 
 | Regulatory event | Acts on | Level |
 |---|---|---|
 | Repressor blocks operator (lac/trp) | DNA (operator) | Transcriptional |
 | Activators + enhancers (eukaryotic) | DNA (enhancer) | Transcriptional |
 | DNA methylation / histone marks | Chromatin | Transcriptional (epigenetic) |
-| **miRNA / siRNA via RISC** | **mRNA** | **Post-transcriptional** |
-| Translation-initiation control | mRNA / ribosome | Translational |
-| Phosphorylation, ubiquitination | Protein | Post-translational |
+| **Small regulatory RNAs (miRNA / siRNA)** | **mRNA** | **Post-transcriptional** |
+| Control of translation start | mRNA / ribosome | Translational |
+| Phosphorylation, protein breakdown | Protein | Post-translational |
 
-RNAi occupies the **post-transcriptional** slot: the gene has been transcribed, the mRNA exists, and RNAi decides how much of it survives to be translated. That placement is exactly what distinguishes it from a repressor (which prevents the mRNA from being made) and from a phosphorylation event (which modifies a protein already made).
+Small RNAs occupy the **post-transcriptional** slot: the gene has been transcribed, the mRNA exists, and the small RNA decides how much of it is translated. That placement is exactly what distinguishes it from a repressor (which prevents the mRNA from being made) and from a phosphorylation event (which modifies a protein already made).
 
-> **AP framing:** If a question says a treatment "lowered the protein but the mRNA was destroyed and the DNA was unchanged," that is **RNAi (post-transcriptional)** — not transcriptional repression and not mutation. The destroyed-mRNA-plus-intact-DNA signature is the giveaway.
+> **AP framing:** If a question says a treatment "lowered the protein, the mRNA was destroyed, and the DNA was unchanged," that is **small-RNA silencing (post-transcriptional)** — not transcriptional repression and not mutation. The destroyed-mRNA-plus-intact-DNA signature is the giveaway.
       `
     },
     {
       id: 'grp5-exit',
       type: 'multiple-choice' as const,
       content: `
-### Exit Ticket — RNAi Reasoning
+### Exit Ticket — Small-RNA Reasoning
       `,
       exercise: {
         questions: [
           {
-            question: 'A researcher introduces a synthetic siRNA targeting gene Z into cultured cells. A Northern blot later shows the level of gene Z\'s mRNA has dropped sharply, while sequencing of gene Z shows no change. What level of regulation has the researcher engineered, and what does the unchanged sequence tell you?',
+            question: 'A researcher introduces a synthetic siRNA matching gene Z into cultured cells. Measurements later show that gene Z\'s mRNA level has dropped sharply, while sequencing of gene Z shows no change. What level of regulation has the researcher engineered, and what does the unchanged sequence tell you?',
             options: [
               'Transcriptional regulation; the siRNA mutated the promoter',
-              'Post-transcriptional regulation; the siRNA led Z\'s mRNA to be cleaved',
+              'Post-transcriptional regulation; the siRNA led to breakdown of Z\'s mRNA',
               'Translational regulation only; the mRNA level should not have changed',
               'Epigenetic regulation; the siRNA methylated the gene\'s DNA'
             ],
             correctAnswer: 1,
-            explanation: 'siRNA with good complementarity triggers mRNA cleavage and degradation — post-transcriptional control — and the intact sequence confirms no mutation occurred. The mutated-promoter option wrongly claims a sequence change. The translational-only option is inconsistent with the observed mRNA drop (pure translational control would leave mRNA level unchanged). The methylation option misattributes the effect to DNA methylation rather than mRNA targeting.'
+            explanation: 'A matching siRNA pairs with the target mRNA and leads to its breakdown — post-transcriptional control — and the intact sequence confirms no mutation occurred. The mutated-promoter option wrongly claims a sequence change. The translational-only option is inconsistent with the observed mRNA drop (pure translational control would leave mRNA level unchanged). The methylation option misattributes the effect to DNA methylation rather than mRNA targeting.'
           },
           {
             question: 'During normal development, a miRNA is needed to keep a certain "stem-cell" gene repressed so cells can differentiate. A mutation inactivates this miRNA. What is the most likely consequence?',

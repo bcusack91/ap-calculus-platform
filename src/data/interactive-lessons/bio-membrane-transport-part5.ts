@@ -24,9 +24,8 @@ In exocytosis, a **vesicle** fuses with the plasma membrane and releases its con
 
 1. Material is packaged into a vesicle (often by the Golgi apparatus)
 2. The vesicle is transported to the cell surface along the cytoskeleton
-3. **SNARE proteins** on the vesicle (v-SNARE) and target membrane (t-SNARE) interact, bringing the membranes together
-4. The vesicle membrane fuses with the plasma membrane
-5. Contents are released to the exterior; vesicle membrane becomes part of the plasma membrane
+3. The vesicle membrane fuses with the plasma membrane
+4. Contents are released to the exterior; vesicle membrane becomes part of the plasma membrane
 
 **Examples of exocytosis:**
 - Secretion of neurotransmitters at synapses
@@ -52,17 +51,11 @@ Endocytosis is the inward folding of the plasma membrane to form a vesicle that 
 |------|-----------|-----------------|---------|
 | **Phagocytosis** ("cell eating") | Cell extends pseudopods to engulf large particles | Cells, bacteria, debris | Macrophages engulfing pathogens |
 | **Pinocytosis** ("cell drinking") | Small indentations of membrane capture droplets of extracellular fluid | Small dissolved molecules in fluid | Most cell types; non-specific |
-| **Receptor-mediated endocytosis** | Specific molecules bind to receptors, triggering clathrin-coated pit formation | Specific molecules (ligands) | Cholesterol uptake via LDL receptors |
+| **Receptor-mediated endocytosis** | Specific molecules bind to receptors, and that patch of membrane folds inward | Specific molecules (ligands) | Cholesterol uptake |
 
-**Receptor-mediated endocytosis in detail:**
-1. Ligands (e.g., LDL particles carrying cholesterol) bind to specific receptor proteins on the cell surface
-2. Receptors cluster in **clathrin-coated pits** — regions of the membrane lined with the protein clathrin on the cytoplasmic side
-3. The coated pit invaginates (folds inward) and pinches off as a **clathrin-coated vesicle**
-4. The clathrin coat is removed; the vesicle fuses with an **early endosome**
-5. Contents are processed (e.g., LDL is broken down to release cholesterol)
-6. Receptors may be recycled back to the membrane
+**Why receptors matter:** because receptors bind only their specific ligand, the vesicle that forms is packed with the molecule the cell needs, even when that molecule is scarce outside. If the receptors are missing or defective, the ligand stays outside the cell and can build up there (for example, cholesterol accumulating in the blood).
 
-> **Clinical Connection:** In **familial hypercholesterolemia**, mutations in the LDL receptor reduce or eliminate receptor-mediated endocytosis of LDL cholesterol. Cholesterol accumulates in the blood, dramatically increasing the risk of cardiovascular disease.
+> The protein coats and sorting compartments involved in each kind of endocytosis are not tested on the AP exam; the CED requires that endocytosis and exocytosis move large substances in vesicles and require energy.
       `
     },
     {
@@ -104,7 +97,7 @@ Endocytosis is the inward folding of the plasma membrane to form a vesicle that 
               'Facilitated diffusion'
             ],
             correctAnswer: 2,
-            explanation: 'Neurotransmitter release is a classic example of exocytosis. Synaptic vesicles containing acetylcholine fuse with the presynaptic membrane (mediated by SNARE proteins), releasing the neurotransmitter into the synaptic cleft.'
+            explanation: 'Neurotransmitter release is a classic example of exocytosis. Synaptic vesicles containing acetylcholine fuse with the presynaptic membrane, releasing the neurotransmitter into the synaptic cleft.'
           }
         ]
       }
@@ -119,11 +112,11 @@ Endocytosis is the inward folding of the plasma membrane to form a vesicle that 
 |---------------|-------------------------------|-----------------|------------------|---------|
 | Simple diffusion | Down | No | No | O$_2$, CO$_2$, ethanol |
 | Facilitated diffusion (channels) | Down | No | Yes (channel) | K$^+$ leak channels, aquaporins |
-| Facilitated diffusion (carriers) | Down | No | Yes (carrier) | GLUT glucose transporters |
-| Primary active transport | Against | Yes (ATP) | Yes (pump) | Na$^+$/K$^+$ ATPase, Ca$^{2+}$ ATPase |
-| Secondary active transport | Against (for cargo) | Yes (indirect — gradient) | Yes (cotransporter) | SGLT1, Na$^+$/H$^+$ exchanger |
-| Exocytosis | Out of cell | Yes (ATP) | Yes (SNAREs) | Neurotransmitter release, insulin secretion |
-| Endocytosis | Into cell | Yes (ATP) | Yes (clathrin, receptors) | Phagocytosis, LDL receptor uptake |
+| Facilitated diffusion (carriers) | Down | No | Yes (carrier) | Glucose carrier proteins |
+| Primary active transport | Against | Yes (ATP) | Yes (pump) | Na$^+$/K$^+$ pump, proton pump |
+| Secondary active transport | Against (for cargo) | Yes (indirect — gradient) | Yes (cotransporter) | Na$^+$/glucose symporter |
+| Exocytosis | Out of cell | Yes (ATP) | Yes (vesicle fusion) | Neurotransmitter release, insulin secretion |
+| Endocytosis | Into cell | Yes (ATP) | Often (receptors) | Phagocytosis, receptor-mediated uptake |
       `
     },
     {
@@ -135,10 +128,10 @@ Endocytosis is the inward folding of the plasma membrane to form a vesicle that 
       exercise: {
         questions: [
           {
-            question: 'The protein that coats the cytoplasmic side of membrane pits during receptor-mediated endocytosis:',
-            answer: 'clathrin',
-            acceptableAnswers: ['clathrin', 'Clathrin'],
-            placeholder: 'e.g. actin'
+            question: 'The general term for folding the plasma membrane inward to bring material into the cell in a vesicle:',
+            answer: 'endocytosis',
+            acceptableAnswers: ['endocytosis', 'Endocytosis'],
+            placeholder: 'e.g. diffusion'
           },
           {
             question: 'The general term for vesicle fusion with the plasma membrane to release contents outside the cell:',
@@ -169,7 +162,7 @@ Endocytosis is the inward folding of the plasma membrane to form a vesicle that 
             correctAnswer: 'Phagocytosis'
           },
           {
-            question: 'LDL cholesterol binding to receptors and being internalized via coated pits:',
+            question: 'Cholesterol particles binding to specific surface receptors and being taken in:',
             options: ['Exocytosis', 'Phagocytosis', 'Pinocytosis', 'Receptor-mediated endocytosis'],
             correctAnswer: 'Receptor-mediated endocytosis'
           },

@@ -46,7 +46,7 @@ Operon map (no lactose, repressed):
 |---|---|---|---|---|---|
 | → LacI repressor | RNA pol site | **LacI bound — BLOCKED** | (off) | (off) | (off) |
 
-> **Mechanistic note:** Allolactose, not lactose itself, is the inducer. In the lab, the non-metabolizable mimic **IPTG** is used to induce the operon without being consumed — a detail that signals the inducer acts on LacI, not as a fuel.
+> **Mechanistic note:** The inducer works by changing the **shape** of the repressor (an allosteric change), not by being used as fuel. A lactose look-alike that binds the repressor but cannot be broken down still switches the operon on.
       `
     },
     {
@@ -118,15 +118,15 @@ The lac operon integrates **two inputs** (is lactose present? is glucose present
             explanation: 'With lactose present the repressor is released, but glucose keeps cAMP low, so CAP-cAMP cannot bind and the weak promoter yields only LOW transcription — this is catabolite repression. The "high because lactose is present" option is the trap: lactose alone is not sufficient for HIGH output; you also need glucose absent. The "off because the repressor binds" option wrongly claims glucose acts through the repressor (glucose acts through cAMP/CAP). The "glucose increases cAMP" option inverts the cAMP relationship — glucose LOWERS cAMP.'
           },
           {
-            question: 'In the lab, IPTG (a non-metabolizable lactose analog) is added to a wild-type lac culture growing on glucose. What happens, and what does this reveal?',
+            question: 'A lactose look-alike that binds the lac repressor but cannot be broken down is added to a wild-type culture growing on glucose. What happens, and what does this reveal?',
             options: [
-              'The operon turns fully ON, which proves that IPTG raises cAMP',
+              'The operon turns fully ON, which proves that the look-alike raises cAMP',
               'Repressor releases, but output stays low because cAMP/CAP stays low',
-              'Nothing happens, because IPTG cannot cross the bacterial membrane',
-              'The operon stays OFF, because IPTG is not real lactose and cannot bind'
+              'Nothing happens, because a molecule that is not used as fuel cannot act',
+              'The operon stays OFF, because only real lactose can bind the repressor'
             ],
             correctAnswer: 1,
-            explanation: 'IPTG binds LacI and releases the operator (it mimics allolactose), so the negative switch flips — but the positive switch is still off because glucose is present and cAMP is low. Result: low transcription, demonstrating the two controls are separable. The "turns fully ON" option is wrong because IPTG does not affect cAMP. The "IPTG is not real lactose" option misunderstands induction: IPTG induces precisely because it binds the repressor without needing to be metabolized.'
+            explanation: 'The look-alike binds the repressor and releases the operator, so the negative switch flips — but the positive switch is still off because glucose is present and cAMP is low. Result: low transcription, demonstrating the two controls are separable. The "turns fully ON" option is wrong because the look-alike does not affect cAMP. The other two options misunderstand induction: an inducer acts by changing the repressor\'s shape, so it does not need to be metabolized, and a molecule with the right shape can bind just as lactose-derived allolactose does.'
           },
           {
             question: 'Which condition produces the HIGHEST level of lac operon transcription in wild-type E. coli?',
@@ -146,7 +146,7 @@ The lac operon integrates **two inputs** (is lactose present? is glucose present
       id: 'grp2-trp',
       type: 'text' as const,
       content: `
-### The *trp* Operon — Repressible Control and Attenuation
+### The *trp* Operon — Repressible Control
 
 The *trp* operon encodes enzymes that **synthesize** the amino acid tryptophan. The logic is opposite to lac: a cell should make tryptophan-building enzymes **only when tryptophan is scarce**, and shut them off once enough has accumulated. So the trp operon is **repressible** — normally **ON**, switched **OFF** by its own end product.
 
@@ -165,8 +165,6 @@ The *trp* operon encodes enzymes that **synthesize** the amino acid tryptophan. 
 | Signal molecule | **Inducer** (allolactose) | **Corepressor** (tryptophan) |
 | Effect of signal | Turns operon ON (removes repressor) | Turns operon OFF (activates repressor) |
 | Repressor's default | Active (binds operator) | Inactive (cannot bind) |
-
-**Attenuation** (a second, finer layer in trp): beyond the on/off operator switch, *E. coli* uses **attenuation** to fine-tune output. Because transcription and translation are coupled, the speed of a ribosome translating a short leader peptide rich in Trp codons determines whether a terminator hairpin forms in the mRNA. When tryptophan (and thus charged tRNA-Trp) is plentiful, the ribosome moves fast, a terminator hairpin forms, and transcription **stops early** — adding extra dampening on top of repression. When Trp is scarce, the ribosome stalls, an antiterminator forms, and transcription proceeds.
 
 > **AP trap:** **Repressible ≠ inducible.** The trp operon is repressible (default ON, end product turns it OFF via a *corepressor*); the lac operon is inducible (default OFF, substrate turns it ON via an *inducer*). Both can use repressor proteins, but the repressor's *default activity* and the *direction of the switch* are opposite.
       `

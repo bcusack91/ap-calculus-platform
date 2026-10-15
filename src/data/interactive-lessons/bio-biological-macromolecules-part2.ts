@@ -39,15 +39,15 @@ Two monosaccharides linked by a **glycosidic bond**:
       exercise: {
         questions: [
           {
-            question: 'What distinguishes cellulose from starch?',
+            question: 'During digestion, sucrose is split into glucose and fructose. Which reaction does this, and what happens to water?',
             options: [
-              'Different monomers (fructose vs glucose)',
-              'Different glycosidic linkages (α vs β)',
-              'Cellulose contains nitrogen (as in chitin)',
-              'Different bond types (ionic vs covalent)'
+              'It is hydrolysis, and one water molecule is used up',
+              'It is dehydration synthesis, and one water molecule is released',
+              'It is hydrolysis, and one water molecule is released',
+              'It is dehydration synthesis, and one water molecule is used up'
             ],
-            correctAnswer: 1,
-            explanation: 'Both are glucose polymers built with covalent glycosidic bonds, but starch uses α-1,4 linkages while cellulose uses β-1,4 linkages. This makes cellulose indigestible to most animals.'
+            correctAnswer: 0,
+            explanation: 'Breaking a covalent bond between monomers is hydrolysis: a water molecule is added across the bond, with H going to one monomer and OH to the other. Dehydration synthesis is the reverse; it builds the bond and releases water.'
           }
         ]
       }
@@ -58,14 +58,14 @@ Two monosaccharides linked by a **glycosidic bond**:
       content: `
 ## Polysaccharides
 
-| Polysaccharide | Function | Organism | Linkage |
+| Polysaccharide | Function | Organism | Shape of the chains |
 |---------------|----------|----------|---------|
-| **Starch** | Energy storage | Plants | α-1,4 glucose |
-| **Glycogen** | Energy storage | Animals | α-1,4 glucose (more branched) |
-| **Cellulose** | Structural | Plants | β-1,4 glucose |
-| **Chitin** | Structural | Arthropods, fungi | Modified glucose (NAG) |
+| **Starch** | Energy storage | Plants | Glucose chains, unbranched or branched |
+| **Glycogen** | Energy storage | Animals | Glucose chains, highly branched |
+| **Cellulose** | Structural | Plants | Straight, unbranched glucose chains bundled into fibers |
+| **Chitin** | Structural | Arthropods, fungi | Chains of a nitrogen-containing modified glucose |
 
-**Key distinction:** Starch and glycogen use **alpha (α) linkages** (digestible), while cellulose uses **beta (β) linkages** (indigestible by most animals).
+**Key distinction:** Starch, glycogen, and cellulose are all built from glucose. What differs is how the monomers are connected, which changes the shape of the polymer. The coiled and branched storage polymers are easy to break down for energy; the straight cellulose chains pack into rigid fibers that most animals cannot digest. (The exact bond geometry is not tested on the AP exam.)
       `
     },
     {

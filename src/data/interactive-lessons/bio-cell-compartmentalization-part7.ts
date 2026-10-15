@@ -15,7 +15,7 @@ This review ties the six parts into one picture. Use the map below to check that
 |---|---|---|---|
 | 1 | Why compartments | Membranes separate competing reactions, hold distinct conditions and concentrate reactants | Lysosome near pH 5; nuclear envelope delaying translation until mRNA is processed |
 | 2 | Membranes as surfaces | Embedded enzymes scale with membrane area, and sealed membranes hold gradients | Cristae; thylakoids; uncoupling in brown fat |
-| 3 | Case studies | Ask what a membrane keeps apart and what happens if separation fails | Tay-Sachs; calcium stores in muscle; central vacuole; the secretory route |
+| 3 | Case studies | Ask what a membrane keeps apart and what happens if separation fails | Lysosomal storage disease; contractile vacuole; central vacuole; the secretory route |
 | 4 | Data | Locate enzymes by the fraction with most activity; latency shows enclosure | Fractionation tables; detergent experiments; pH-activity curves |
 | 5 | Origins | Prokaryotes organize without organelles; mitochondria and chloroplasts came from endosymbiosis | Nucleoid; cyanobacterial thylakoids; circular organelle DNA |
 | 6 | Exam practice | Predict with direction and comparison; justify with a mechanism | Isolated mitochondria data set |
@@ -25,7 +25,7 @@ This review ties the six parts into one picture. Use the map below to check that
 | Unit | Connection to compartmentalization |
 |---|---|
 | Unit 3 (Cellular Energetics) | Chemiosmosis needs a sealed inner mitochondrial membrane or thylakoid membrane |
-| Unit 4 (Cell Communication) | Calcium released from the ER acts as an intracellular signal |
+| Unit 4 (Cell Communication) | Receptors in the plasma membrane relay signals from outside the cell to targets inside it |
 | Unit 6 (Gene Expression) | The nuclear envelope allows pre-mRNA processing before translation |
 | Unit 7 (Natural Selection) | Endosymbiosis is an example of how complex cells evolved from simpler ancestors |
       `

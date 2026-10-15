@@ -45,8 +45,7 @@ Once chromatin is open, transcription of a eukaryotic gene depends on proteins b
 
 - **Enhancers** are DNA elements (cis) that **increase** transcription, often located thousands of base pairs upstream, downstream, or even within introns. **Activator** proteins (trans) bind enhancers; the DNA loops so the bound activators contact the promoter machinery.
 - **Silencers** are DNA elements (cis) that **decrease** transcription when bound by **repressor** proteins (trans).
-- **General (basal) transcription factors** assemble at the promoter (around the TATA box) and position **RNA polymerase II**; they are required for any transcription but give only a low basal rate.
-- The **Mediator complex** is the physical bridge: it relays signals from distant enhancer-bound activators to the general transcription factors and polymerase at the promoter.
+- **General transcription factors** assemble at the promoter and position **RNA polymerase**; they are required for any transcription but give only a low basal rate. Enhancer-bound activators raise that rate by contacting the proteins at the promoter. (The CED notes that these regulatory sequences can lie upstream or downstream of the transcription start site.)
 
 **Combinatorial control** is the key eukaryotic principle: a typical gene is governed not by one switch but by a **combination** of many transcription factors binding many elements. A gene turns on only when the *right set* of activators is present together. This is powerful because a few hundred transcription factors, used in different combinations, can specify thousands of distinct gene-expression patterns — enough to define every cell type from one genome.
 
@@ -94,7 +93,7 @@ Cell-type specificity emerges from this: a liver cell and a neuron differ becaus
               'Enhancers this far away cannot affect transcription of the gene'
             ],
             correctAnswer: 1,
-            explanation: 'DNA looping brings the distant enhancer-bound activators into physical contact with the promoter; Mediator relays the signal to RNA polymerase II and the general transcription factors. The sliding option misdescribes the mechanism (activators do not slide thousands of bp). The enhancer-mRNA option invents enhancer transcription as the mechanism, and the "cannot affect transcription" option contradicts the defining property of enhancers — they act at a distance.'
+            explanation: 'DNA looping brings the distant enhancer-bound activators into physical contact with the proteins at the promoter, which helps recruit RNA polymerase. The sliding option misdescribes the mechanism (activators do not slide thousands of bp). The enhancer-mRNA option invents enhancer transcription as the mechanism, and the "cannot affect transcription" option contradicts the defining property of enhancers — they act at a distance.'
           }
         ]
       }
@@ -109,7 +108,7 @@ Transcription is only the first control point. Eukaryotes regulate the RNA itsel
 
 **Alternative splicing.** A single pre-mRNA can be spliced in different ways, including or excluding particular exons, to produce **multiple distinct proteins from one gene**. This is a major reason humans make far more proteins than they have genes; it is also cell-type-specific, so a gene can yield one protein isoform in the brain and another in muscle.
 
-**mRNA stability.** How long an mRNA survives before being degraded sets how many protein copies can be made from it. Sequences in the **$3'$ UTR** (and miRNA targeting — Part 5) control the rate of degradation. A long-lived mRNA yields far more protein than a short-lived one, even at equal transcription rates.
+**mRNA stability.** How long an mRNA survives before being degraded sets how many protein copies can be made from it. Sequences in the mRNA itself, and small regulatory RNAs (Part 5), help control the rate of degradation. A long-lived mRNA yields far more protein than a short-lived one, even at equal transcription rates.
 
 **mRNA localization.** Cells can transport specific mRNAs to particular regions and translate them only there, concentrating a protein exactly where it is needed (e.g., at one end of a developing embryo). This produces spatial control that transcription alone cannot.
 
@@ -118,12 +117,12 @@ A control-level map for eukaryotic regulation:
 | Control level | Representative mechanism | Example outcome |
 |---|---|---|
 | **Chromatin** | Euchromatin vs. heterochromatin | Whole regions silenced in a cell type |
-| **Transcriptional** | Enhancers + combinatorial activators; Mediator | Cell-type-specific gene sets switched on |
+| **Transcriptional** | Enhancers + combinatorial activators | Cell-type-specific gene sets switched on |
 | **RNA processing** | **Alternative splicing** | Multiple protein isoforms from one gene |
-| **mRNA stability** | $3'$ UTR signals; miRNA degradation | More vs. less protein per transcript |
+| **mRNA stability** | Signals in the mRNA; small regulatory RNAs | More vs. less protein per transcript |
 | **mRNA localization** | Targeted transport of transcripts | Protein concentrated in one cell region |
-| **Translational** | $5'$ UTR structure; initiation control | Fast on/off without changing mRNA level |
-| **Post-translational** | Phosphorylation; ubiquitin → proteasome | Activity/lifetime of finished protein tuned |
+| **Translational** | Control of when ribosomes start translating | Fast on/off without changing mRNA level |
+| **Post-translational** | Phosphorylation; protein breakdown | Activity/lifetime of finished protein tuned |
 
 > **Big picture:** Where bacteria mostly regulate at transcription, eukaryotes deploy a **stack** of control points — chromatin, transcription, splicing, stability, localization, translation, and protein modification. Each adds a tuning knob, and together they let one genome run an entire multicellular organism.
       `

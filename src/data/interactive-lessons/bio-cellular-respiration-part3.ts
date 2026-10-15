@@ -9,47 +9,37 @@ export const bioCellRespirationPart3Data = {
 
 **Part 3 of 7**
 
-After glycolysis, each glucose molecule has been converted into two molecules of **pyruvate** in the cytoplasm.  Before pyruvate can enter the citric acid cycle, it must be transported into the **mitochondrial matrix** and converted into **acetyl-CoA** — a process called pyruvate oxidation (also known as the "link reaction" or "transition step").
+After glycolysis, each glucose molecule has been converted into two molecules of **pyruvate** in the cytoplasm.  What happens next depends on whether oxygen is available:
 
-This is a brief but critical step that connects glycolysis to the rest of aerobic respiration.
-      `
-    },
-    {
-      id: 'cr3-transport',
-      type: 'text' as const,
-      content: `
-### Pyruvate Transport into the Mitochondria
+- **With oxygen:** pyruvate is transported from the cytosol into the **mitochondrion**, where it is oxidized and its carbons feed the citric acid cycle.
+- **Without oxygen:** pyruvate stays in the cytosol and is used in **fermentation**, which regenerates NAD$^+$ so glycolysis can keep going.
 
-Pyruvate is a small, charged molecule that cannot freely diffuse across the mitochondrial membranes.  It enters the mitochondrial matrix through a specific **pyruvate translocase** (a transport protein) in the inner mitochondrial membrane.
-
-This transport is an example of **facilitated transport** — pyruvate moves down its concentration gradient (higher in cytoplasm, lower in matrix) through a carrier protein.  It is co-transported with a proton (H$^+$), making it a **symport** mechanism.
-
-> **Important:** This transport step requires an intact inner mitochondrial membrane.  Any damage to the membrane or inhibition of the translocase blocks all downstream aerobic respiration.
+This part covers both paths.
       `
     },
     {
       id: 'cr3-reaction',
       type: 'text' as const,
       content: `
-### The Pyruvate Dehydrogenase Complex
+### Pyruvate Oxidation in the Mitochondrial Matrix
 
-Once inside the matrix, pyruvate undergoes an **oxidative decarboxylation** catalyzed by the **pyruvate dehydrogenase complex (PDC)** — a massive multi-enzyme complex consisting of three enzymes and five coenzymes.
+Pyruvate is carried across the mitochondrial membranes by a transport protein and enters the **matrix**.  There it is oxidized in a single linked process:
 
-The reaction proceeds in three steps:
+1. One carbon is removed and released as **CO$_2$** — the first CO$_2$ released in respiration
+2. The remaining 2-carbon fragment is oxidized, and NAD$^+$ is reduced to **NADH**
+3. The 2-carbon fragment is attached to a carrier, forming **acetyl-CoA**, which enters the citric acid cycle
 
-1. **Decarboxylation:** The carboxyl group of pyruvate is removed as **CO$_2$** (the first CO$_2$ released in respiration)
-2. **Oxidation:** The remaining 2-carbon fragment is oxidized, and NAD$^+$ is reduced to **NADH**
-3. **Attachment to Coenzyme A:** The oxidized 2-carbon fragment (acetyl group) is attached to **coenzyme A** (CoA), forming **acetyl-CoA**
-
-$$\\text{Pyruvate} + \\text{NAD}^+ + \\text{CoA} \\longrightarrow \\text{Acetyl-CoA} + \\text{CO}_2 + \\text{NADH}$$
+$$\\text{Pyruvate} + \\text{NAD}^+ \\longrightarrow \\text{acetyl-CoA} + \\text{CO}_2 + \\text{NADH}$$
 
 **Per glucose (2 pyruvates):**
 - 2 CO$_2$ released
 - 2 NADH produced
-- 2 Acetyl-CoA formed
+- 2 acetyl-CoA formed
 - **0 ATP** produced directly
 
-The CO$_2$ released here (and in the subsequent citric acid cycle) is ultimately exhaled by the organism.  This is literally where the carbon in your food becomes the carbon dioxide in your breath.
+The CO$_2$ released here (and in the citric acid cycle) is ultimately exhaled.  This is literally where the carbon in your food becomes the carbon dioxide in your breath, and it is how carbon returns to the atmosphere in the **carbon cycle**.
+
+> **Why the location matters:** this step, the citric acid cycle, and the electron transport chain all depend on intact mitochondria.  If pyruvate cannot get into the mitochondrion, aerobic respiration beyond glycolysis cannot happen.
       `
     },
     {
@@ -69,18 +59,18 @@ The CO$_2$ released here (and in the subsequent citric acid cycle) is ultimately
               'Lactate, ATP, and NADH'
             ],
             correctAnswer: 1,
-            explanation: 'Each pyruvate is decarboxylated (releasing CO2), oxidized (reducing NAD+ to NADH), and the remaining acetyl group is attached to CoA to form acetyl-CoA. No ATP is produced directly.'
+            explanation: 'Each pyruvate loses one carbon as CO2, its remaining 2-carbon fragment is oxidized (reducing NAD+ to NADH), and that fragment is attached to a carrier to form acetyl-CoA. No ATP is produced directly.'
           },
           {
-            question: 'The pyruvate dehydrogenase complex performs an "oxidative decarboxylation." What does this term mean?',
+            question: 'During pyruvate oxidation, NAD+ is converted to NADH. What does this show about pyruvate?',
             options: [
-              'Oxygen is added to the molecule and a phosphate is removed',
-              'A carboxyl group leaves as CO2 and the molecule loses electrons',
-              'Water is added to split off a carbon group from the molecule',
-              'The molecule gains electrons and gains a carboxyl group'
+              'Pyruvate gains electrons, so it is reduced',
+              'Pyruvate loses electrons, so it is oxidized',
+              'Pyruvate gains a phosphate group from ATP during the step',
+              'Pyruvate neither gains nor loses electrons in this step'
             ],
             correctAnswer: 1,
-            explanation: 'Decarboxylation = removal of a carboxyl group as CO2. Oxidation = removal of electrons (carried away by NADH). The term "oxidative decarboxylation" describes both processes happening simultaneously.'
+            explanation: 'NAD+ is reduced to NADH by accepting electrons. Those electrons come from the carbon fragment derived from pyruvate, so pyruvate is oxidized. Oxidation is loss of electrons.'
           },
           {
             question: 'Where specifically does pyruvate oxidation occur?',
@@ -91,32 +81,10 @@ The CO$_2$ released here (and in the subsequent citric acid cycle) is ultimately
               'Intermembrane space'
             ],
             correctAnswer: 2,
-            explanation: 'Pyruvate is transported into the mitochondrial matrix via pyruvate translocase. The pyruvate dehydrogenase complex is located in the matrix, where it converts pyruvate to acetyl-CoA.'
+            explanation: 'Pyruvate made in the cytosol is transported into the mitochondrion, and its oxidation to acetyl-CoA takes place in the mitochondrial matrix.'
           }
         ]
       }
-    },
-    {
-      id: 'cr3-regulation',
-      type: 'text' as const,
-      content: `
-### Regulation of the Pyruvate Dehydrogenase Complex
-
-The PDC is tightly regulated because it commits carbon to the citric acid cycle (an irreversible reaction):
-
-| Regulator | Effect | Rationale |
-|-----------|--------|-----------|
-| **Acetyl-CoA** (high) | Inhibits | Product inhibition — citric acid cycle is backed up |
-| **NADH** (high) | Inhibits | Electron carriers are saturated |
-| **ATP** (high) | Inhibits | Cell energy is sufficient |
-| **AMP** (high) | Activates | Cell needs more energy |
-| **CoA** (free, high) | Activates | Substrate availability — ready to accept acetyl groups |
-| **NAD+** (high) | Activates | Electron carriers are available |
-
-The PDC is also regulated by **covalent modification**: a kinase phosphorylates (inactivates) the complex when energy is abundant, while a phosphatase dephosphorylates (activates) it when energy is needed.
-
-> **Clinical Connection:** Pyruvate dehydrogenase deficiency is a genetic disorder that impairs the conversion of pyruvate to acetyl-CoA. Patients accumulate pyruvate and lactate, leading to lactic acidosis and neurological problems, because the brain relies heavily on aerobic glucose metabolism.
-      `
     },
     {
       id: 'cr3-fermentation',
@@ -126,18 +94,23 @@ The PDC is also regulated by **covalent modification**: a kinase phosphorylates 
 
 When oxygen is absent, the electron transport chain cannot operate, NADH cannot be reoxidized, and the citric acid cycle stalls.  Without NAD$^+$ regeneration, glycolysis would also stop.
 
-**Fermentation** solves this problem by regenerating NAD$^+$ without using the electron transport chain:
+**Fermentation** solves this problem by regenerating NAD$^+$ without using the electron transport chain.  The AP framework states that respiration and fermentation are characteristic of all forms of life, and that fermentation produces organic molecules such as **alcohol** and **lactic acid**.
 
-**Lactic Acid Fermentation:**
+**Lactic acid fermentation:**
 $$\\text{Pyruvate} + \\text{NADH} \\longrightarrow \\text{Lactate} + \\text{NAD}^+$$
 - Occurs in animal muscle cells during intense exercise and in certain bacteria (e.g., *Lactobacillus* in yogurt production)
-- Pyruvate is directly reduced to lactate
+- No CO$_2$ is released
 
-**Alcoholic (Ethanol) Fermentation:**
-$$\\text{Pyruvate} \\longrightarrow \\text{Acetaldehyde} + \\text{CO}_2$$
-$$\\text{Acetaldehyde} + \\text{NADH} \\longrightarrow \\text{Ethanol} + \\text{NAD}^+$$
-- Occurs in yeast and some plant cells
-- Pyruvate is first decarboxylated, then the acetaldehyde is reduced to ethanol
+**Alcoholic (ethanol) fermentation:**
+$$\\text{Pyruvate} + \\text{NADH} \\longrightarrow \\text{Ethanol} + \\text{CO}_2 + \\text{NAD}^+$$
+- Occurs in yeast and some bacteria
+- Releases CO$_2$ (the bubbles in bread dough and in the yeast fermentation lab)
+
+| Pathway | Final electron acceptor | ATP per glucose |
+|---------|------------------------|-----------------|
+| Aerobic respiration | O$_2$ | about 30-32 |
+| Anaerobic respiration (some prokaryotes) | Another inorganic molecule | fewer than aerobic |
+| Fermentation | An organic molecule made from pyruvate | 2 (glycolysis only) |
 
 > **Key Point:** Fermentation does NOT produce additional ATP beyond the 2 ATP from glycolysis. Its sole purpose is to regenerate NAD$^+$ so that glycolysis can continue.
       `
@@ -159,18 +132,18 @@ $$\\text{Acetaldehyde} + \\text{NADH} \\longrightarrow \\text{Ethanol} + \\text{
               'To produce oxygen for the electron transport chain'
             ],
             correctAnswer: 1,
-            explanation: 'Fermentation regenerates NAD+ from NADH by transferring electrons to pyruvate (or its derivative). This allows glycolysis to continue producing 2 ATP per glucose even without oxygen.'
+            explanation: 'Fermentation regenerates NAD+ from NADH by transferring electrons to pyruvate (or a molecule made from it). This allows glycolysis to continue producing 2 ATP per glucose even without oxygen.'
           },
           {
-            question: 'An organism produces ethanol and CO2 as byproducts of glucose metabolism. This organism is performing:',
+            question: 'A student measures CO2 released by yeast in sealed tubes with sugar and no oxygen. Which result is expected, and why?',
             options: [
-              'Lactic acid fermentation',
-              'Aerobic respiration',
-              'Alcoholic fermentation',
-              'Chemiosmosis'
+              'No CO2, because CO2 is only made by the citric acid cycle',
+              'CO2 is given off, because alcoholic fermentation produces it',
+              'No CO2, because yeast carry out lactic acid fermentation',
+              'CO2 is absorbed, because yeast fix it into sugar in the dark'
             ],
-            correctAnswer: 2,
-            explanation: 'Alcoholic (ethanol) fermentation decarboxylates pyruvate to acetaldehyde (releasing CO2) and then reduces acetaldehyde to ethanol while oxidizing NADH to NAD+. This pathway is characteristic of yeast.'
+            correctAnswer: 1,
+            explanation: 'Yeast in the absence of oxygen carry out alcoholic fermentation, which converts pyruvate to ethanol and releases CO2. Lactic acid fermentation (in muscle and some bacteria) releases no CO2.'
           }
         ]
       }
@@ -187,7 +160,7 @@ $$\\text{Acetaldehyde} + \\text{NADH} \\longrightarrow \\text{Ethanol} + \\text{
             question: 'The 2-carbon molecule that enters the citric acid cycle after pyruvate is oxidized:',
             answer: 'acetyl-CoA',
             acceptableAnswers: ['acetyl-CoA', 'Acetyl-CoA', 'acetyl CoA', 'Acetyl CoA', 'acetyl coA'],
-            placeholder: 'e.g. oxaloacetate'
+            placeholder: 'e.g. lactate'
           },
           {
             question: 'The product of lactic acid fermentation in animal muscle cells:',
@@ -196,10 +169,10 @@ $$\\text{Acetaldehyde} + \\text{NADH} \\longrightarrow \\text{Ethanol} + \\text{
             placeholder: 'e.g. ethanol'
           },
           {
-            question: 'The multi-enzyme complex that catalyzes the conversion of pyruvate to acetyl-CoA (abbreviation is acceptable):',
-            answer: 'pyruvate dehydrogenase complex',
-            acceptableAnswers: ['pyruvate dehydrogenase complex', 'PDC', 'pyruvate dehydrogenase', 'PDH', 'pdc'],
-            placeholder: 'e.g. ATP synthase'
+            question: 'The gas released when pyruvate is oxidized (and during alcoholic fermentation):',
+            answer: 'CO2',
+            acceptableAnswers: ['CO2', 'co2', 'carbon dioxide', 'Carbon dioxide'],
+            placeholder: 'e.g. O2'
           }
         ]
       }
@@ -224,7 +197,7 @@ $$\\text{Acetaldehyde} + \\text{NADH} \\longrightarrow \\text{Ethanol} + \\text{
             explanation: 'Each glucose produces 2 pyruvates in glycolysis. Each pyruvate loses one CO2 during pyruvate oxidation. Therefore, 2 CO2 molecules are released (the remaining 4 CO2 are released during the citric acid cycle).'
           },
           {
-            question: 'A researcher adds a chemical that blocks pyruvate translocase. What will happen in the cell?',
+            question: 'A researcher adds a chemical that blocks the transport of pyruvate into mitochondria. What will happen in the cell?',
             options: [
               'Glycolysis will stop at once because pyruvate cannot be made',
               'Pyruvate will pile up in the cytosol, favoring fermentation',
@@ -232,7 +205,7 @@ $$\\text{Acetaldehyde} + \\text{NADH} \\longrightarrow \\text{Ethanol} + \\text{
               'ATP production will rise through substrate-level phosphorylation'
             ],
             correctAnswer: 1,
-            explanation: 'Blocking pyruvate translocase prevents pyruvate from entering the mitochondria. Pyruvate accumulates in the cytoplasm. The cell may switch to fermentation to regenerate NAD+ and continue glycolysis, but total ATP output drops dramatically.'
+            explanation: 'If pyruvate cannot enter the mitochondria, it accumulates in the cytoplasm. The cell may rely on fermentation to regenerate NAD+ and continue glycolysis, but total ATP output drops dramatically.'
           }
         ]
       }

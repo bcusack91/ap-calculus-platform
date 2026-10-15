@@ -20,9 +20,9 @@ Understanding DNA replication requires a thorough understanding of DNA structure
 
 DNA is a polymer of **nucleotides**.  Each nucleotide has three components:
 
-1. **Deoxyribose sugar** (5-carbon sugar lacking an -OH group at the 2' carbon)
-2. **Phosphate group** (attached to the 5' carbon of the sugar)
-3. **Nitrogenous base** (attached to the 1' carbon of the sugar)
+1. **Deoxyribose sugar** (a 5-carbon sugar)
+2. **Phosphate group**, which links one nucleotide's sugar to the next, forming the backbone
+3. **Nitrogenous base**: a purine or a pyrimidine
 
 **The four DNA bases:**
 
@@ -39,9 +39,8 @@ DNA is a polymer of **nucleotides**.  Each nucleotide has three components:
 - Two antiparallel strands (one runs 5' → 3', the other 3' → 5')
 - Sugar-phosphate backbones on the outside; bases face inward
 - Bases held together by **hydrogen bonds** (A-T: 2 H-bonds; G-C: 3 H-bonds)
-- The helix has a **major groove** and a **minor groove** (important for protein-DNA interactions)
-- One complete turn = 10 base pairs = 3.4 nm
-- Diameter = 2 nm
+- A **purine always pairs with a pyrimidine**, so every base pair is the same width and the helix has a uniform diameter
+- The sequence of bases along one strand carries the genetic information; the other strand is its complement
       `
     },
     {
@@ -92,18 +91,18 @@ DNA is a polymer of **nucleotides**.  Each nucleotide has three components:
       id: 'dr1-packaging',
       type: 'text' as const,
       content: `
-### DNA Packaging in Eukaryotes
+### How Prokaryotes and Eukaryotes Store DNA
 
-Human cells contain about **6.4 billion base pairs** of DNA (~2 meters per cell if stretched out).  This must be packaged into a nucleus only ~6 $\\mu$m in diameter — a compaction ratio of ~10,000:1.
+| Feature | Prokaryotes | Eukaryotes |
+|---------|-------------|------------|
+| Main chromosome(s) | Usually one **circular** chromosome | Several **linear** chromosomes |
+| Location | Cytoplasm (nucleoid region) | Nucleus |
+| Packaging | Little protein packaging | DNA wound around **histone** proteins and further condensed |
+| **Plasmids** | Common: small, extra-chromosomal circular DNA | Occur in some eukaryotes, such as yeast |
 
-**Packaging hierarchy:**
-1. **Nucleosome** — 147 bp of DNA wraps ~1.65 times around a histone octamer (2 copies each of H2A, H2B, H3, H4); the fundamental unit of chromatin (11 nm "beads on a string")
-2. **Linker histone H1** binds between nucleosomes, helping them pack into a **30 nm fiber**
-3. **Looped domains** — 30 nm fiber forms loops of 30,000-100,000 bp attached to a protein scaffold
-4. **Heterochromatin** — maximally condensed, transcriptionally inactive
-5. **Metaphase chromosome** — highest compaction (~10,000-fold), visible under a light microscope
+**Packaging in eukaryotes.** A human cell holds about 2 meters of DNA in a nucleus a few micrometers across. The DNA wraps around clusters of **histones** to form **nucleosomes** ("beads on a string"), and these coil and fold further with other proteins. During mitosis and meiosis the chromosomes condense the most, which is when they are visible under a light microscope.
 
-> **Epigenetics and Histones:** Chemical modifications to histones (acetylation, methylation, phosphorylation) alter chromatin structure and gene accessibility.  **Histone acetylation** (by HATs) generally OPENS chromatin (euchromatin, active).  **Histone deacetylation** (by HDACs) CLOSES it (heterochromatin, silenced).
+> **Epigenetics and Histones:** Chemical modifications to histones change how tightly DNA is packed and so how accessible genes are. **Adding acetyl groups** to histones generally loosens chromatin and allows transcription; **removing them** tightens it and silences genes. These modifications are reversible and do not change the DNA sequence.
       `
     },
     {
@@ -127,9 +126,9 @@ Human cells contain about **6.4 billion base pairs** of DNA (~2 meters per cell 
             placeholder: 'e.g. guanine'
           },
           {
-            question: 'The protein complex around which DNA wraps to form nucleosomes:',
-            answer: 'histone octamer',
-            acceptableAnswers: ['histone octamer', 'histones', 'histone', 'Histones', 'Histone octamer'],
+            question: 'The proteins around which eukaryotic DNA wraps to form nucleosomes:',
+            answer: 'histones',
+            acceptableAnswers: ['histones', 'histone', 'Histones', 'Histone', 'histone proteins', 'histone octamer'],
             placeholder: 'e.g. condensin'
           }
         ]

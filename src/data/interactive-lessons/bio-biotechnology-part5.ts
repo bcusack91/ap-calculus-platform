@@ -6,7 +6,7 @@ export const bioBiotechPart5Data = {
       type: 'text' as const,
       content: `# 🧬 Biotechnology
 
-**Part 5 of 7 — Sequencing, DNA Fingerprinting and Gene Editing**
+**Part 5 of 7 — Sequencing, DNA Fingerprinting and Using Sequence Data**
 
 ---
 
@@ -14,41 +14,28 @@ export const bioBiotechPart5Data = {
 
 | Section |
 |---------|
-| DNA Sequencing by Chain Termination |
+| DNA Sequencing |
 | DNA Fingerprinting with Short Tandem Repeats |
-| Gene Editing, Gene Therapy and Ethics |
+| Using Sequence Data: Identifying Organisms and Building Trees |
 | Misconceptions Across the Topic |
 
-> 🔑 **Key Concept:** **DNA sequencing determines the order of nucleotides in a DNA molecule** (EK IST-1.P.4). Sequencing, together with PCR and electrophoresis, lets scientists identify individuals, diagnose mutations, compare species and design precise genetic changes.
+> 🔑 **Key Concept:** **DNA sequencing technology determines the order of nucleotides in a DNA molecule** (EK 6.8.A.1). Sequencing, together with PCR and electrophoresis, lets scientists identify individuals and organisms, diagnose mutations and compare species.
 
-## DNA Sequencing by Chain Termination
+## DNA Sequencing
 
-The classic method copies a template with DNA polymerase but deliberately stops the copies at every possible position.
+### What sequencing tells you
+Gel electrophoresis reports fragment **sizes**. Sequencing goes further: it reports the **exact order of bases**, so it can detect a difference of a single nucleotide anywhere in a gene, even one that changes no fragment size.
 
-### The ingredients
-- Many copies of the **template** strand (often made by PCR)
-- A **primer** and **DNA polymerase**
-- Normal nucleotides (dNTPs)
-- A small amount of **chain-terminating nucleotides**: modified nucleotides that **lack the 3′-OH group**. Each of the four kinds (A, T, C, G) carries a different colored fluorescent tag.
+Most sequencing methods work by having DNA polymerase copy a template, using the same base-pairing rules as replication, and detecting which base is added at each position. The output is the sequence of the **new strand**, written 5′ → 3′. (The chemistry of particular sequencing methods is beyond the scope of the AP exam.)
 
-### Why the chains stop
-Polymerase joins each new nucleotide to the **3′-OH** of the last one. When it happens to add a terminating nucleotide, there is no 3′-OH to build on, so that strand ends. Because terminators are rare compared with normal nucleotides, they are added at random positions in different copies. The reaction ends up with strands that stop at **every** position, each tagged with the color of its last base.
+### Worked Example: from a read to the template
+A sequencer reports a new strand as **5′-ACCGTA-3′**. What is the template strand?
 
-### Reading the result
-The fragments are separated by size with single-nucleotide precision (by electrophoresis in a thin capillary). A detector reads the color of each fragment from **shortest to longest**, which is the order of the new strand from its **5′ end to its 3′ end**.
+**Step 1 — Complement each base.** A→T, C→G, C→G, G→C, T→A, A→T, giving T G G C A T.
 
-### Worked Example
-| Fragment length (nucleotides after the primer) | Color of last base |
-|---|---|
-| 1 | A |
-| 2 | C |
-| 3 | C |
-| 4 | G |
-| 5 | T |
-| 6 | A |
+**Step 2 — Apply antiparallel orientation.** The template runs opposite to the new strand: **3′-TGGCAT-5′**.
 
-- New strand: **5′-ACCGTA-3′**
-- Template strand (complementary and antiparallel): **3′-TGGCAT-5′**, which written 5′→3′ is **5′-TACGGT-3′**
+**Step 3 — Rewrite 5′ → 3′** (the usual convention): read it backward, **5′-TACGGT-3′**.
 
 ### High-throughput sequencing
 Newer methods sequence millions of short fragments **in parallel**, then use computers to assemble overlapping reads into a full sequence. Whole genomes can now be sequenced quickly and cheaply, which supports:
@@ -63,15 +50,15 @@ Newer methods sequence millions of short fragments **in parallel**, then use com
       exercise: {
         questions: [
           {
-            question: 'In chain-termination sequencing, why does adding a modified nucleotide stop the growing strand?',
+            question: 'Which question can DNA sequencing answer that gel electrophoresis of the same DNA cannot?',
             options: [
-              'It cannot base-pair with any nucleotide on the template',
-              'It has no 3′-OH group for the next nucleotide to bond to',
-              'It causes the primer to separate from the template strand',
-              'It changes the template so polymerase can no longer read it'
+              'Whether a DNA sample contains any fragments at all',
+              'Whether two samples differ by one base at one position',
+              'Whether a fragment is larger or smaller than 1,000 bp',
+              'Whether DNA carries a negative charge in solution'
             ],
             correctAnswer: 1,
-            explanation: 'DNA polymerase forms each phosphodiester bond with the 3′-OH of the previous nucleotide, and the modified nucleotide lacks it, so no further nucleotide can be added. It still base-pairs normally, which is why it is incorporated at all.'
+            explanation: 'Sequencing reads every nucleotide, so it detects a single-base difference even when fragment sizes are identical. A gel can already show whether fragments are present and how large they are, and DNA\'s negative charge is what makes electrophoresis work in the first place.'
           },
           {
             question: 'A sequencing read gives the new strand as 5′-GATTC-3′. What is the template strand, written 5′→3′?',
@@ -156,41 +143,40 @@ A child has alleles 10 and 13 at an STR locus. The mother has 10 and 16.`,
     {
       id: 'bio-biotechnology-p5-s5-editing',
       type: 'text' as const,
-      content: `## Gene Editing, Gene Therapy and Ethics
+      content: `## Using Sequence Data: Identifying Organisms and Building Trees
 
-### CRISPR: a targeted cut
-Like restriction enzymes, CRISPR began as a **bacterial defense against viruses**. Bacteria store short pieces of viral DNA and use RNA copies of them to guide a DNA-cutting enzyme to matching viral DNA. Scientists adapted this system for gene editing.
+The CED's illustrative examples include using **amplified DNA fragments to identify organisms and perform phylogenetic analysis**. Both rely on the same workflow: amplify a chosen gene by PCR, sequence it, and compare the sequence with others.
 
-| Component | What it does |
-|---|---|
-| **Guide RNA** (about 20 nucleotides of targeting sequence) | Base-pairs with the matching DNA sequence, choosing the target |
-| **DNA-cutting enzyme** (Cas9 is the most widely used) | Cuts both DNA strands at the site the guide RNA selects |
-| **The cell's own repair systems** | Rejoin the cut ends |
+### Identifying an organism
+Scientists amplify and sequence a short, standard stretch of a gene that every species in a group has but that differs slightly between species. Matching the sequence against a database of known species identifies the source:
+- **Food testing:** checking whether fish sold under one name is really that species
+- **Medicine:** identifying the bacterium or virus causing an infection
+- **Ecology:** detecting which species live in a pond from DNA left in the water
 
-What happens next depends on repair:
-- **Error-prone rejoining** often adds or deletes a few nucleotides, which can cause a frameshift and **knock out** the gene.
-- If scientists supply a **DNA template** with the desired sequence, the cell can copy it into the cut site, **correcting or changing** the gene.
+### Building a phylogenetic tree
+Mutations accumulate in a gene over time, so species that share a more recent common ancestor have had less time to diverge and usually differ at **fewer** positions.
 
-Compared with restriction enzymes, which cut wherever their fixed recognition site occurs, CRISPR can be **reprogrammed** to cut almost any sequence by changing the guide RNA. Its specificity comes from **complementary base pairing**, and guides that partly match other sites can cause **off-target** cuts.
+**Worked Example.** A 40-base stretch of the same gene is compared among four species. The table gives the number of positions that differ.
 
-### Gene therapy
-Gene therapy treats a genetic disorder by adding a working copy of a gene, or by editing the faulty one, in a patient's cells. Modified viruses that cannot replicate are often used as vectors to deliver the gene.
+| | Species A | Species B | Species C | Species D |
+|---|---|---|---|---|
+| **A** | — | 3 | 12 | 13 |
+| **B** | 3 | — | 11 | 12 |
+| **C** | 12 | 11 | — | 4 |
+| **D** | 13 | 12 | 4 | — |
 
-| Target cells | Heritable? | Main concern |
-|---|---|---|
-| **Somatic** cells (e.g., blood stem cells) | No; affects only the patient | Safety, cost, access |
-| **Germline** cells or embryos | Yes; passes to descendants | Unknown long-term effects on future generations, consent |
+**Step 1.** Find the smallest numbers: A–B differ at 3 positions and C–D at 4.
 
-### Ethical and ecological questions
+**Step 2.** Group the closest pairs: A with B, and C with D.
 
-| Issue | Example concern |
-|---|---|
-| Genetic privacy | Who may see or use a person's genome data? |
-| GMO ecology | Transgenes may spread to wild relatives; pests may evolve resistance to engineered toxins |
-| Equity | Expensive therapies may be available only to some |
-| Germline editing | Changes are inherited by people who could not consent |
+**Step 3.** All comparisons between the two groups are much larger (11–13), so the two pairs share a more distant common ancestor.
 
-The resistance concern is natural selection at work: a crop that makes an insecticidal protein everywhere selects strongly for any insects that survive it.
+**Conclusion:** the tree joins A and B, joins C and D, and then joins those two pairs at a deeper branch point (Topic 7.9).
+
+### Genetically modified organisms
+An organism whose DNA has been changed by genetic engineering is a **genetically modified organism (GMO)**; one carrying a gene from another species is **transgenic**. Planting a crop that makes an insecticidal protein everywhere selects strongly for insects that survive it, so resistance can spread by **natural selection**.
+
+(Gene-editing tools such as CRISPR are often in the news, but how they work is beyond the scope of the AP exam.)
 
 ## Misconceptions Across the Topic
 - **"Restriction enzymes were invented in labs."** They are natural bacterial defenses.
@@ -207,15 +193,15 @@ The resistance concern is natural selection at work: a crop that makes an insect
       exercise: {
         questions: [
           {
-            question: 'A researcher wants to disrupt one specific gene in a mouse cell line. What makes CRISPR suited to this when a restriction enzyme is not?',
+            question: 'A 30-base stretch of a shared gene differs at 2 positions between species P and Q, at 9 positions between P and R, and at 9 positions between Q and R. Which conclusion is best supported?',
             options: [
-              'The guide RNA can be designed to pair with that one gene',
-              'The DNA-cutting enzyme recognizes only damaged DNA',
-              'CRISPR cuts only one strand, so the cell is not harmed',
-              'CRISPR adds new nucleotides without any template needed'
+              'R is the common ancestor from which both P and Q evolved',
+              'P and Q share a more recent common ancestor with each other',
+              'P and R are the most closely related of the three species',
+              'The three species are equally related, as all share the gene'
             ],
-            correctAnswer: 0,
-            explanation: 'Targeting comes from complementary base pairing between the guide RNA and the chosen DNA sequence, so changing the guide retargets the cut. A restriction enzyme cuts wherever its fixed site occurs, which may be thousands of places in a genome.'
+            correctAnswer: 1,
+            explanation: 'Fewer sequence differences mean less time since two lineages split, so P and Q, with only 2 differences, share a more recent common ancestor with each other than either does with R. Living species are not ancestors of one another, P and R differ at 9 positions, and sharing a gene does not make the species equally related.'
           },
           {
             question: 'A crime-scene sample and Suspect 1 share the same alleles at 3 STR loci, but differ at 2 others. What is the best conclusion?',
@@ -229,15 +215,15 @@ The resistance concern is natural selection at work: a crop that makes an insect
             explanation: 'A single true mismatch excludes a person as the source, and two loci differ here. Matches at some loci are common among unrelated people, so they cannot outweigh a mismatch.'
           },
           {
-            question: 'Why is editing a human embryo more ethically contested than editing a patient\'s blood stem cells?',
+            question: 'Fish sold as "red snapper" is tested by amplifying and sequencing a standard gene. The sequence matches a database entry for tilapia, not red snapper. What does this result show?',
             options: [
-              'Precision is lower when editing an embryo than an adult',
-              'Embryo edits can be inherited by future generations',
-              'Stem cells lack the gene that the edit is meant to change',
-              'Repair enzymes undo edits made in blood stem cells'
+              'The fish is red snapper with a rare mutation in that gene',
+              'The fish is mislabeled and actually came from a different species',
+              'Sequencing cannot identify species, only individual people',
+              'The fish became tilapia after it was caught and stored'
             ],
             correctAnswer: 1,
-            explanation: 'Edits in an embryo reach the germline, so they can be inherited by future generations who cannot consent. Somatic edits in blood stem cells affect only the patient.'
+            explanation: 'The sequence of a standard gene identifies the species it came from, and this one matches tilapia, so the product is mislabeled. A single rare mutation would not turn a red snapper sequence into a tilapia sequence, sequencing identifies species as well as individuals, and an organism\'s DNA does not change after death.'
           }
         ]
       }

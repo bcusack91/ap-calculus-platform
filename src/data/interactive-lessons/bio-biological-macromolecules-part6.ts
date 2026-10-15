@@ -83,12 +83,12 @@ An unknown sample contains C, H, O, N, and S. Which macromolecule is it most lik
             question: 'Cellulose and starch are both made of glucose but have different properties because:',
             options: [
               'They contain different elements in their rings',
-              'They have different glycosidic linkages',
+              'Their monomers are linked in different arrangements',
               'Cellulose has more branches than starch does',
               'Starch contains fructose'
             ],
             correctAnswer: 1,
-            explanation: 'Starch uses α-glycosidic linkages (digestible), cellulose uses β-glycosidic linkages (indigestible by humans). Same monomer, different bonds.'
+            explanation: 'Both are glucose polymers, but the glucose units are connected differently. Starch chains coil (and some branch), so they are easy to hydrolyze for energy; cellulose forms straight, unbranched chains that bundle into rigid fibers. Same monomer, different arrangement, different function.'
           }
         ]
       }
@@ -110,15 +110,15 @@ An unknown sample contains C, H, O, N, and S. Which macromolecule is it most lik
             options: ['ribose', 'deoxyribose', 'glucose', 'fructose']
           },
           {
-            label: 'Trans fats are created by ___ unsaturated fats',
-            options: ['heating', 'hydrogenating', 'oxidizing', 'dehydrating']
+            label: 'The more double bonds in its fatty acid tails, the more ___ a fat is at room temperature',
+            options: ['solid', 'liquid', 'charged', 'polar']
           }
         ],
-        correctAnswers: ['protein', 'deoxyribose', 'hydrogenating'],
+        correctAnswers: ['protein', 'deoxyribose', 'liquid'],
         hint1: 'Enzymes catalyze reactions and have specific 3D shapes.',
         hint2: 'DNA = deoxyribonucleic acid.',
-        hint3: 'Adding hydrogen atoms to double bonds.',
-        explanation: 'Enzymes are proteins. DNA contains deoxyribose sugar. Trans fats are made by hydrogenating (adding hydrogen to) unsaturated fats.'
+        hint3: 'Double bonds put kinks in the tails, so they cannot pack tightly.',
+        explanation: 'Enzymes are proteins. DNA contains deoxyribose sugar. The more unsaturated a fat is, the more kinked its tails and the more liquid it is at room temperature.'
       }
     }
   ]

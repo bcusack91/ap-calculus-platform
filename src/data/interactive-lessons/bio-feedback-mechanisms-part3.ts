@@ -105,7 +105,7 @@ That is the biology behind "one bad apple spoils the bunch," and why a banana pl
 1. A blood vessel wall is damaged, exposing collagen fibers.
 2. **Platelets** stick to the exposed collagen and become activated.
 3. Activated platelets release chemicals that **attract and activate more platelets**, building a platelet plug.
-4. At the same time, a cascade of clotting factors produces **thrombin**, which converts fibrinogen into **fibrin** threads that reinforce the plug. Thrombin also activates earlier clotting factors, speeding up its own production.
+4. At the same time, clotting proteins in the blood activate one another in a cascade and form protein threads that reinforce the plug. (The names of the individual clotting factors are not tested on the AP exam.)
 5. **Off switch:** once the break is sealed, no new collagen is exposed, and anticlotting mechanisms in healthy vessel walls confine the clot to the injury.
 
 | Loop | Stimulus that is amplified | Signal | What ends it |
@@ -113,7 +113,7 @@ That is the biology behind "one bad apple spoils the bunch," and why a banana pl
 | Labor | Cervical stretch | Oxytocin | Birth |
 | Lactation | Suckling | Oxytocin and prolactin | Suckling stops |
 | Fruit ripening | Ethylene concentration | Ethylene | Fruit fully ripe; ethylene dissipates |
-| Clotting | Platelet activation at injury | Platelet chemicals; thrombin | Wound sealed |
+| Clotting | Platelet activation at injury | Chemicals released by activated platelets | Wound sealed |
       `
     },
     {
@@ -126,26 +126,26 @@ That is the biology behind "one bad apple spoils the bunch," and why a banana pl
         dropdowns: [
           {
             label: 'A box of bananas ripens faster when sealed than when left open',
-            options: ['ethylene', 'oxytocin', 'thrombin', 'prolactin']
+            options: ['ethylene', 'oxytocin', 'platelet signals', 'prolactin']
           },
           {
             label: 'Contractions intensify as the cervix stretches',
-            options: ['prolactin', 'thrombin', 'oxytocin', 'ethylene']
+            options: ['prolactin', 'platelet signals', 'oxytocin', 'ethylene']
           },
           {
-            label: 'Fibrin threads form ever faster at a cut',
-            options: ['oxytocin', 'ethylene', 'prolactin', 'thrombin']
+            label: 'More and more platelets pile up at a cut',
+            options: ['oxytocin', 'ethylene', 'prolactin', 'platelet signals']
           },
           {
             label: 'Milk production rises as nursing becomes more frequent',
-            options: ['thrombin', 'prolactin', 'ethylene', 'oxytocin']
+            options: ['platelet signals', 'prolactin', 'ethylene', 'oxytocin']
           }
         ],
-        correctAnswers: ['ethylene', 'oxytocin', 'thrombin', 'prolactin'],
+        correctAnswers: ['ethylene', 'oxytocin', 'platelet signals', 'prolactin'],
         hint1: 'Only one of these signals is a gas that can build up inside a closed container.',
         hint2: 'Milk production (not ejection) is controlled by a hormone from the anterior pituitary.',
-        hint3: 'The enzyme that converts fibrinogen to fibrin also speeds its own formation.',
-        explanation: 'Ethylene drives ripening, oxytocin drives labor contractions, thrombin drives fibrin formation and its own production, and prolactin drives milk production.'
+        hint3: 'Activated platelets release chemicals that activate still more platelets.',
+        explanation: 'Ethylene drives ripening, oxytocin drives labor contractions, chemicals from activated platelets recruit more platelets, and prolactin drives milk production.'
       }
     },
     {
@@ -198,11 +198,11 @@ When control breaks down, positive feedback can become harmful:
             options: [
               'Plugs form more slowly, so bleeding lasts longer',
               'Clots spread through intact vessels throughout the body',
-              'Fibrinogen levels in the blood climb to toxic amounts',
+              'Clotting proteins in the blood climb to toxic amounts',
               'Body temperature drops as blood flow to the skin falls'
             ],
             correctAnswer: 0,
-            explanation: 'Blocking the platelet signal breaks the amplification step, so fewer platelets are recruited and the plug forms slowly. Clotting would be reduced rather than spread, and the drug acts on platelets rather than on fibrinogen levels or temperature control.'
+            explanation: 'Blocking the platelet signal breaks the amplification step, so fewer platelets are recruited and the plug forms slowly. Clotting would be reduced rather than spread, and the drug acts on platelets rather than on the amount of clotting protein made or on temperature control.'
           }
         ]
       }
@@ -215,17 +215,17 @@ When control breaks down, positive feedback can become harmful:
 
 1) Gaseous plant hormone that drives fruit ripening:
 
-2) Protein threads that reinforce a platelet plug:
+2) Cell fragments that stick to a damaged vessel and recruit more of their own kind:
 
 3) Hormone from the anterior pituitary that stimulates milk production:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['ethylene', 'fibrin', 'prolactin'],
+        correctAnswers: ['ethylene', 'platelets', 'prolactin'],
         hint1: 'This hormone can spread from one fruit to another through the air.',
-        hint2: 'Thrombin converts fibrinogen into this.',
+        hint2: 'They release chemicals that activate more of themselves, building a plug.',
         hint3: 'Oxytocin ejects milk; this other hormone makes it.',
-        explanation: 'Ethylene drives ripening, fibrin threads reinforce clots, and prolactin stimulates milk production.'
+        explanation: 'Ethylene drives ripening, platelets build a plug by recruiting more platelets, and prolactin stimulates milk production.'
       }
     }
   ]

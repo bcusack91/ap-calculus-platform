@@ -9,7 +9,7 @@ export const bioCellCompartmentPart5Data = {
 
 **Part 5 of 7 — Prokaryotes and the Origin of Organelles**
 
-CED Topic 2.11 (Origins of Cell Compartmentalization) asks you to compare how prokaryotic and eukaryotic cells are organized inside and to explain where mitochondria and chloroplasts came from. Its essential knowledge makes three points:
+CED Topic 2.10 (Origins of Cell Compartmentalization) asks you to compare how prokaryotic and eukaryotic cells are organized inside and to explain where mitochondria and chloroplasts came from. Its essential knowledge makes three points:
 
 1. Membrane-bound organelles **evolved from previously free-living prokaryotic cells via endosymbiosis**.
 2. Prokaryotes **generally lack internal membrane-bound organelles** but have internal regions with specialized structures and functions.
@@ -26,7 +26,7 @@ CED Topic 2.11 (Origins of Cell Compartmentalization) asks you to compare how pr
 | **Plasmids** | Small circular DNA molecules that often carry genes such as antibiotic resistance |
 | **Plasma membrane** | Site of the electron transport chain and ATP synthase, and of many transport proteins |
 | **Internal membranes in some groups** | Cyanobacteria have thylakoid membranes that hold their photosynthetic machinery |
-| **Protein-shelled compartments in some groups** | Some photosynthetic bacteria enclose the carbon-fixing enzyme rubisco in a protein shell (not a membrane) that concentrates $\\text{CO}_2$ around it |
+| **Protein-shelled compartments in some groups** | Some photosynthetic bacteria enclose their main carbon-fixing enzyme in a protein shell (not a membrane) that concentrates $\\text{CO}_2$ around it |
 
 The last row is a useful reminder: the *benefits* of compartmentalization (concentrating reactants, separating reactions) can be achieved without a lipid membrane.
       `
@@ -68,7 +68,7 @@ Prokaryotic cells are usually about 1 to 5 μm across, while many eukaryotic cel
             explanation: 'A membrane-free region of concentrated circular DNA is a nucleoid, and ATP synthesis at the plasma membrane is the prokaryotic arrangement. Nothing in the description suggests missing ribosomes.'
           },
           {
-            question: 'Some bacteria surround the enzyme rubisco with a protein shell that keeps $\\text{CO}_2$ concentrated around the enzyme. Which statement best describes this structure?',
+            question: 'Some bacteria surround their carbon-fixing enzyme with a protein shell that keeps $\\text{CO}_2$ concentrated around the enzyme. Which statement best describes this structure?',
             options: [
               'It is an organelle with a membrane of its own',
               'It shows compartment benefits without a membrane',

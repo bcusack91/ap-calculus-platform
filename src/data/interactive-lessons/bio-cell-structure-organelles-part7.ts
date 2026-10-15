@@ -63,7 +63,7 @@ export const bioCellStructurePart7Data = {
               'Central vacuole — animal muscle cells'
             ],
             correctAnswer: 2,
-            explanation: 'Pancreatic acinar cells secrete digestive enzymes (proteins), requiring extensive rough ER for protein synthesis. Smooth ER is most abundant in liver cells (detox) and steroid-producing cells. Chloroplasts are in photosynthetic cells (leaves, not roots). Central vacuoles are in plant cells, not animal cells.'
+            explanation: 'Pancreatic acinar cells secrete digestive enzymes (proteins), requiring extensive rough ER for protein synthesis. White blood cells are not marked by unusually abundant smooth ER. Chloroplasts are in photosynthetic cells (leaves, not roots). Central vacuoles are in plant cells, not animal cells.'
           }
         ]
       }
@@ -88,15 +88,15 @@ export const bioCellStructurePart7Data = {
             explanation: 'Cell theory applies to living organisms. Viruses lack key characteristics of life — they have no metabolism, cannot reproduce independently (they hijack host cell machinery), and are not made of cells. Most biologists classify viruses as "non-living" or "obligate intracellular parasites," so they exist outside the scope of cell theory.'
           },
           {
-            question: 'An antibiotic targets the 30S ribosomal subunit. This drug would inhibit protein synthesis in:',
+            question: 'How do internal membranes help a eukaryotic cell carry out its metabolism?',
             options: [
-              'Eukaryotic cells only, through their 80S ribosomes',
-              'Bacteria only, since mitochondria use 80S ribosomes',
-              'Bacteria and the mitochondria of human cells',
-              'Neither bacteria nor eukaryotic cells'
+              'They separate competing reactions and add surface area for enzymes',
+              'They let the cell skip making ribosomes in its cytoplasm',
+              'They block every substance from moving between compartments',
+              'They keep the cell smaller than a typical prokaryotic cell'
             ],
-            correctAnswer: 2,
-            explanation: 'Both bacteria and mitochondria have 70S ribosomes (composed of 30S + 50S subunits). An antibiotic targeting the 30S subunit would inhibit protein synthesis in both. This explains why some antibiotics can cause mitochondrial side effects — a direct consequence of endosymbiotic origin.'
+            correctAnswer: 0,
+            explanation: 'Internal membranes compartmentalize the cell: they keep competing reactions apart and increase the surface area where membrane-bound reactions occur (for example, the folded inner membrane of the mitochondrion). Eukaryotic cells still need ribosomes, materials do move between compartments (by vesicles and transport proteins), and eukaryotic cells are usually larger than prokaryotes.'
           },
           {
             question: 'If a cell\'s Golgi apparatus were removed, which of the following would still occur normally?',
@@ -121,12 +121,12 @@ export const bioCellStructurePart7Data = {
       exercise: {
         dropdowns: [
           {
-            label: 'Tay-Sachs disease results from a deficiency of enzymes in the',
-            options: ['Mitochondria', 'Lysosomes', 'Peroxisomes', 'Golgi apparatus']
+            label: 'Hydrolytic enzymes that digest worn-out organelles are found in the',
+            options: ['Mitochondria', 'Lysosomes', 'Ribosomes', 'Golgi apparatus']
           },
           {
-            label: 'The 9+2 arrangement of microtubules is found in',
-            options: ['Centrioles', 'Cilia and flagella', 'The mitotic spindle', 'Intermediate filaments']
+            label: 'The organelle that modifies, sorts, and packages proteins from the ER is the',
+            options: ['Lysosome', 'Golgi apparatus', 'Nucleolus', 'Mitochondrion']
           },
           {
             label: 'A cell with many mitochondria and extensive rough ER is likely specialized for',
@@ -137,11 +137,11 @@ export const bioCellStructurePart7Data = {
             options: ['Nucleus', 'Ribosomes', 'Mitochondria', 'Endoplasmic reticulum']
           }
         ],
-        correctAnswers: ['Lysosomes', 'Cilia and flagella', 'Protein secretion', 'Ribosomes'],
-        hint1: 'Tay-Sachs is a lysosomal storage disease — lipids accumulate because the degrading enzyme is missing.',
-        hint2: 'The 9+2 axoneme arrangement (9 outer doublets + 2 central microtubules) is the hallmark of motile cilia and flagella.',
+        correctAnswers: ['Lysosomes', 'Golgi apparatus', 'Protein secretion', 'Ribosomes'],
+        hint1: 'These acidic sacs are the cell\'s digestive compartments.',
+        hint2: 'Vesicles from the rough ER deliver proteins here before they are shipped out.',
         hint3: 'Energy (mitochondria) + protein synthesis (rough ER) = secretory cell.',
-        explanation: 'Tay-Sachs is caused by missing hexosaminidase A in lysosomes. The 9+2 microtubule pattern is unique to motile cilia and flagella (centrioles have 9×3). Abundant mitochondria + rough ER indicates a protein-secreting cell. Ribosomes are universal to ALL cells.'
+        explanation: 'Lysosomes hold hydrolytic enzymes that digest worn-out organelles and engulfed material. The Golgi apparatus modifies, sorts, and packages proteins received from the ER. Abundant mitochondria + rough ER indicates a protein-secreting cell. Ribosomes are universal to ALL cells.'
       }
     },
     {
@@ -154,11 +154,11 @@ Enter the correct term for each description.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['endosymbiosis', 'plasmodesmata', 'peroxisome'],
+        correctAnswers: ['endosymbiosis', 'plasmodesmata', 'exocytosis'],
         hint1: 'The theory that mitochondria and chloroplasts originated from engulfed prokaryotes.',
         hint2: 'Channels through plant cell walls that allow direct cytoplasmic communication between adjacent cells.',
-        hint3: 'An organelle that breaks down fatty acids and detoxifies hydrogen peroxide using catalase.',
-        explanation: 'Endosymbiotic theory (Lynn Margulis, 1967) explains the origin of mitochondria and chloroplasts. Plasmodesmata are plant-specific cell junctions. Peroxisomes are single-membrane organelles that oxidize fatty acids and use catalase to convert $H_{2}O_{2}$ to water.'
+        hint3: 'The process in which vesicles fuse with the plasma membrane to release their contents outside the cell.',
+        explanation: 'Endosymbiotic theory (Lynn Margulis, 1967) explains the origin of mitochondria and chloroplasts. Plasmodesmata are plant-specific cell junctions. In exocytosis, vesicles fuse with the plasma membrane and secrete their contents — the last step of the secretory pathway.'
       }
     },
     {

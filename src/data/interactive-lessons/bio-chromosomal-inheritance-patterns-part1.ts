@@ -15,15 +15,16 @@ The **chromosome theory of inheritance** states that genes are located on chromo
 - Chromosomes on **different pairs** assort independently → explains Mendel's Law of Independent Assortment
 - Each chromosome carries **hundreds to thousands** of genes
 
-## Historical Development
+## The Evidence: Chromosomes Behave Like Mendel's Factors
 
-| Scientist | Contribution |
+| Mendel's factors (alleles) | Chromosomes in meiosis |
 |-----------|-------------|
-| **Walter Sutton** (1902) | Observed parallels between chromosome behavior and Mendel's factors |
-| **Theodor Boveri** (1902) | Demonstrated chromosomes are required for proper development in sea urchins |
-| **Thomas Hunt Morgan** (1910) | Provided first direct evidence linking a gene to a specific chromosome |
+| Come in pairs in each body cell | Come in homologous pairs in each diploid cell |
+| The two alleles of a pair separate into different gametes | The two homologs of a pair separate in anaphase I |
+| Alleles of different genes assort independently | Each homologous pair orients independently at metaphase I |
+| Fertilization restores the pair | Fertilization restores the diploid number |
 
-The Sutton-Boveri hypothesis proposed that chromosomes are the physical carriers of genes — a revolutionary idea that unified cytology and genetics.`
+Because chromosomes do exactly what Mendel's factors do, biologists concluded that genes are carried on chromosomes. Fruit-fly crosses (below) then tied one specific gene to one specific chromosome. The AP exam tests this reasoning, not the names of the scientists involved.`
     },
     {
       id: 'chr1-quiz1',
@@ -43,15 +44,15 @@ The Sutton-Boveri hypothesis proposed that chromosomes are the physical carriers
             explanation: 'The chromosome theory states that genes reside at specific loci on chromosomes, and the segregation and independent assortment of chromosomes during meiosis explain Mendel\'s laws.'
           },
           {
-            question: 'Which scientists independently proposed the chromosome theory of inheritance?',
+            question: 'Which observation about meiosis best supports the claim that genes are carried on chromosomes?',
             options: [
-              'Walter Sutton and Theodor Boveri',
-              'Gregor Mendel and Charles Darwin',
-              'James Watson and Francis Crick',
-              'Thomas Morgan and Alfred Sturtevant'
+              'Chromosomes condense in prophase, just as dominant alleles mask recessive ones',
+              'Homologs separate in anaphase I, just as the two alleles of a gene segregate',
+              'Sister chromatids are identical, just as F1 hybrids all look like one parent',
+              'The nuclear envelope re-forms, just as hybrid offspring blend parental traits'
             ],
-            correctAnswer: 0,
-            explanation: 'Walter Sutton and Theodor Boveri independently proposed in 1902 that chromosomes carry the hereditary factors described by Mendel. This became known as the Sutton-Boveri chromosome theory.'
+            correctAnswer: 1,
+            explanation: 'The two alleles of a gene separate into different gametes, and the two homologs of a pair separate into different cells in anaphase I, so the behavior of chromosomes matches the behavior of alleles. Condensation and nuclear envelope re-formation have no allele counterpart, sister chromatids carry the same alleles rather than a pair of different ones, and blending is the idea Mendel\'s data refuted.'
           }
         ]
       }

@@ -18,9 +18,9 @@ export const bioChromosomalInheritancePatternsPart2Data = {
 | **Haplodiploidy** | Diploid (2n) | Haploid (n) | Bees, ants, wasps |
 
 In the XX-XY system:
-- The **X chromosome** is large, carrying ~800 genes
-- The **Y chromosome** is small, carrying ~50 genes (mostly involved in male development)
-- The **SRY gene** on the Y chromosome triggers male development`
+- The **X chromosome** is large and carries many genes unrelated to sex
+- The **Y chromosome** is small and carries few genes, mostly involved in male development
+- Because the Y lacks most X-linked genes, a male has only **one copy** of nearly every X-linked gene`
     },
     {
       id: 'chr2-xlinked',
@@ -37,23 +37,16 @@ X-linked recessive traits are the most commonly tested sex-linked pattern on the
 - An affected male gets the allele from his **mother** (never from father)
 - An affected father passes the allele to **all daughters** (who become carriers) but **no sons**
 
-### Classic Examples
+### Why Males Are Affected More Often
 
-| Trait | Gene | Frequency |
-|-------|------|-----------|
-| **Red-green color blindness** | OPN1LW/OPN1MW on Xq28 | ~8% of males, ~0.5% of females |
-| **Hemophilia A** | Factor VIII on Xq28 | ~1 in 5,000 males |
-| **Duchenne muscular dystrophy** | Dystrophin on Xp21 | ~1 in 3,500 males |
+Red-green color blindness and hemophilia are familiar X-linked recessive traits. In a population, a male shows the trait whenever his single X carries the allele, but a female shows it only when **both** of her X chromosomes carry it. So if 1 in 12 X chromosomes carries a color-blindness allele, about 1 in 12 males is color-blind, while far fewer females are.
 
 ### Punnett Square: Carrier Female × Normal Male
 
-\`\`\`
-           $X^{A}$        $X^{a}$
-  $X^{A}$    $X^{A}$ $X^{A}$    $X^{A}$ $X^{a}$
-          (normal ♀)  (carrier ♀)
-  Y      $X^{A}$ Y      $X^{a}$ Y
-          (normal ♂)  (affected ♂)
-\`\`\`
+| | Mother's $X^{A}$ | Mother's $X^{a}$ |
+|---|---|---|
+| **Father's $X^{A}$** | $X^{A}X^{A}$ (normal daughter) | $X^{A}X^{a}$ (carrier daughter) |
+| **Father's Y** | $X^{A}Y$ (normal son) | $X^{a}Y$ (affected son) |
 
 **Result**: 50% of sons affected, 50% of daughters are carriers`
     },
@@ -99,24 +92,15 @@ X-linked dominant traits are expressed in **both heterozygous females and hemizy
 - Affected males pass the trait to **all daughters** and **no sons**
 - Affected heterozygous females pass to **50% of all children** regardless of sex
 - Often **more common in females** (they have two X chromosomes, so two chances to inherit)
-- May be **lethal in males** (e.g., Rett syndrome, incontinentia pigmenti)
+- Never passed from father to son, because a son receives his father's Y, not his X
 
-### Examples
-- **Hypophosphatemic rickets** (vitamin D-resistant rickets)
-- **Rett syndrome** (usually lethal in males)
-
-## Y-Linked (Holandric) Traits
+## Y-Linked Traits
 
 Genes on the **Y chromosome** that have no counterpart on the X:
 - Passed **exclusively from father to son**
 - **All sons** of an affected father are affected
 - **No daughters** ever inherit the trait
-- Very few Y-linked genes affect phenotype beyond sex determination
-
-### Examples
-- **SRY** (sex-determining region Y)
-- **Hairy ear rims** (hypertrichosis pinnae auris — debated)
-- Some **azoospermia factors** (AZF) affecting male fertility`
+- Very few Y-linked genes affect phenotype beyond male development, so Y-linked traits are rare in pedigrees`
     },
     {
       id: 'chr2-dropdown1',

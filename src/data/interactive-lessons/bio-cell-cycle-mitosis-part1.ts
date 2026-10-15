@@ -108,12 +108,7 @@ Understanding chromosome structure throughout the cell cycle is critical:
 
 > **Key Distinction:** "Chromosome number" counts centromeres, not chromatids.  A replicated chromosome with two sister chromatids counts as ONE chromosome.
 
-**DNA packaging hierarchy:**
-1. DNA double helix (2 nm diameter)
-2. DNA wraps around **histone octamers** → **nucleosomes** ("beads on a string," 11 nm)
-3. Nucleosomes coil into **30 nm fiber** (solenoid)
-4. Looped domains of 30 nm fiber attached to a **protein scaffold**
-5. Maximum condensation during metaphase → visible chromosomes (~1400 nm)
+**Condensation:** during interphase, DNA wound around histone proteins is spread out as **chromatin**, so genes can be read and the DNA copied. In prophase the chromatin condenses into compact, visible chromosomes, which can be moved without tangling. (The levels of DNA packaging are not tested on the AP exam.)
       `
     },
     {
@@ -162,7 +157,7 @@ Understanding chromosome structure throughout the cell cycle is critical:
             question: 'The structure that joins two sister chromatids together:',
             answer: 'centromere',
             acceptableAnswers: ['centromere', 'Centromere'],
-            placeholder: 'e.g. telomere'
+            placeholder: 'e.g. kinetochore'
           }
         ]
       }

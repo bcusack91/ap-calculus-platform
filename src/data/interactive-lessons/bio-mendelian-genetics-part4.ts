@@ -121,17 +121,23 @@ So about 58% of offspring will display at least one recessive trait.
       id: 'mgp4-binomial',
       type: 'text' as const,
       content: `
-### The Binomial: "Exactly k of n" Offspring
+### "Exactly One of Two": List the Birth Orders
 
-The product rule answers "all children affected." The complement answers "at least one." But what about **"exactly 2 of 3 children are affected"** — a specific count, in any birth order? For that, you need the **binomial formula**.
+The product rule answers "all children affected." The complement answers "at least one." But what about **"exactly one of two children is affected"** — a specific count, in either birth order? You need both rules from the AP formula sheet, used together:
 
-If each independent offspring has probability *p* of being affected and *q = 1 − p* of being unaffected, the probability of **exactly k affected out of n** children is:
+- Each **specific birth order** (first affected and second unaffected, say) requires several independent events to all happen, so you **multiply** along that order.
+- The different orders **cannot happen at the same time**, so they are mutually exclusive, and you **add** the orders together.
 
-$P = \\binom{n}{k}\\, p^{k}\\, q^{\\,n-k}$
+**Example.** Two carriers (*Cc* $\\times$ *Cc*) have two children. Each child is affected (*cc*) with probability $\\frac{1}{4}$ and unaffected with probability $\\frac{3}{4}$.
 
-where the binomial coefficient $\\binom{n}{k} = \\dfrac{n!}{k!\\,(n-k)!}$ counts how many different birth orders give *k* affected children.
+| Birth order | Probability of that order |
+|-------------|---------------------------|
+| Affected, then unaffected | $\\frac{1}{4}\\times\\frac{3}{4} = \\frac{3}{16}$ |
+| Unaffected, then affected | $\\frac{3}{4}\\times\\frac{1}{4} = \\frac{3}{16}$ |
 
-**Why the coefficient is needed:** "2 affected, 1 unaffected" can happen as (affected, affected, unaffected), (affected, unaffected, affected), or (unaffected, affected, affected) — **3** orderings. Each single ordering has probability $p^2 q$; multiplying by 3 accounts for all the ways it can occur. Forgetting $\\binom{n}{k}$ (just writing $p^k q^{n-k}$) is the most common binomial mistake.
+$P(\\text{exactly one affected}) = \\frac{3}{16} + \\frac{3}{16} = \\frac{6}{16} = \\frac{3}{8}$
+
+**The most common mistake** is to stop after one row and answer $\\frac{3}{16}$. That is the probability of one particular order ("the first child is affected and the second is not"), not of "exactly one" in either order. Always ask: *does the question name an order, or will any order do?*
       `
     },
     {
@@ -142,52 +148,52 @@ where the binomial coefficient $\\binom{n}{k} = \\dfrac{n!}{k!\\,(n-k)!}$ counts
 
 **Problem.** Two carriers for an autosomal recessive disease (*Cc* $\\times$ *Cc*) have 3 children. What is the probability that **exactly 2** of the 3 are affected (*cc*)?
 
-**Step 1 — Per-child probabilities.** From *Cc* $\\times$ *Cc*:
-- $p = P(\\text{affected, } cc) = \\frac{1}{4}$
-- $q = P(\\text{unaffected}) = \\frac{3}{4}$
+**Step 1 — Per-child probabilities.** From *Cc* $\\times$ *Cc*, each child is affected with probability $\\frac{1}{4}$ and unaffected with probability $\\frac{3}{4}$, independently of the others.
 
-**Step 2 — Identify n and k.** $n = 3$ children, $k = 2$ affected.
+**Step 2 — List every order with exactly two affected children** (A = affected, U = unaffected):
 
-**Step 3 — Compute the coefficient.**
-$\\binom{3}{2} = \\frac{3!}{2!\\,1!} = 3$
+| Order | Probability (product rule) |
+|-------|----------------------------|
+| A, A, U | $\\frac{1}{4}\\times\\frac{1}{4}\\times\\frac{3}{4} = \\frac{3}{64}$ |
+| A, U, A | $\\frac{1}{4}\\times\\frac{3}{4}\\times\\frac{1}{4} = \\frac{3}{64}$ |
+| U, A, A | $\\frac{3}{4}\\times\\frac{1}{4}\\times\\frac{1}{4} = \\frac{3}{64}$ |
 
-**Step 4 — Plug into the binomial.**
-$P = \\binom{3}{2}\\left(\\frac{1}{4}\\right)^{2}\\left(\\frac{3}{4}\\right)^{1} = 3 \\times \\frac{1}{16}\\times\\frac{3}{4} = 3\\times\\frac{3}{64} = \\frac{9}{64}$
+**Step 3 — Add the mutually exclusive orders (sum rule).**
 
-So $P(\\text{exactly 2 of 3 affected}) = \\frac{9}{64} \\approx 0.14$.
+$P(\\text{exactly 2 of 3 affected}) = \\frac{3}{64}+\\frac{3}{64}+\\frac{3}{64} = \\frac{9}{64} \\approx 0.14$
 
-> **Sanity check on the coefficient:** if you had written only $p^2 q = \\frac{3}{64}$, you would be computing the probability of *one specific* order (say, first two affected, third not). The factor $\\binom{3}{2} = 3$ correctly scales that up to cover all three possible orders. Always ask: "in how many orders can this happen?"
+> **Sanity check:** every order in the table has the same probability, because each contains two A's and one U. So you can also count the orders (3) and multiply by the probability of one order ($\\frac{3}{64}$). If a question names a specific order ("the first two children are affected and the third is not"), stop at a single row: $\\frac{3}{64}$.
       `
     },
     {
       id: 'mgp4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-### Checkpoint — Binomial Problems
+### Checkpoint — Specific Orders and Counts
       `,
       exercise: {
         questions: [
           {
-            question: 'Two parents heterozygous for albinism (Aa × Aa; aa = albino) have 4 children. What is the probability that exactly 1 of the 4 children is albino?',
+            question: 'Two parents heterozygous for albinism (Aa × Aa; aa = albino) have 2 children. What is the probability that exactly 1 of the 2 children is albino?',
             options: [
-              '$\\left(\\frac{1}{4}\\right)^1\\left(\\frac{3}{4}\\right)^3 = \\frac{27}{256}$',
-              '$\\binom{4}{1}\\left(\\frac{1}{4}\\right)^1\\left(\\frac{3}{4}\\right)^3 = \\frac{108}{256} = \\frac{27}{64}$',
-              '$\\binom{4}{1}\\left(\\frac{1}{4}\\right)^1\\left(\\frac{3}{4}\\right)^1 = \\frac{12}{16} = \\frac{3}{4}$',
-              '$\\binom{4}{1}\\left(\\frac{1}{4}\\right)^3\\left(\\frac{3}{4}\\right)^1 = \\frac{3}{64}$'
+              '$\\frac{3}{16}$',
+              '$\\frac{3}{8}$',
+              '$\\frac{1}{4}$',
+              '$\\frac{9}{16}$'
             ],
             correctAnswer: 1,
-            explanation: 'This is binomial with p = 1/4 (albino), q = 3/4, n = 4, k = 1: P = C(4,1)$(1/4)^{1}(3/4)^{3}$ = 4 × (1/4) × (27/64) = 108/256 = 27/64. The 27/256 option leaves out the C(4,1) coefficient, so it counts only ONE birth order for the albino child instead of all four. The 3/4 option uses an exponent of 1 for the unaffected children, ignoring two of the three unaffected births, and the 3/64 option swaps the exponents, giving the probability of exactly THREE albino children.'
+            explanation: 'Each specific order has probability 1/4 × 3/4 = 3/16 (product rule). The two orders, albino first or albino second, are mutually exclusive, so add them: 3/16 + 3/16 = 3/8. The 3/16 option counts only one of the two orders, 1/4 is just the chance that a single child is albino, and 9/16 is the chance that neither child is albino.'
           },
           {
-            question: 'A geneticist computes the probability of "exactly 2 affected out of 3 children" and gets the same numeric answer whether she uses the binomial formula or lists every birth order by hand and adds them. Why must these two methods always agree?',
+            question: 'Two carriers of a recessive disorder (Cc × Cc) plan to have 3 children. What is the probability that the FIRST child is affected and the next two are both unaffected?',
             options: [
-              'They agree only by coincidence when n = 3, since in larger families the orders stop having equal probabilities',
-              'The coefficient counts the distinct birth orders, and the formula adds their equal probabilities',
-              'The sum rule does not apply to offspring, so hand enumeration is just an approximation that lands near the formula',
-              'Listing birth orders double-counts each outcome, so the hand method gives twice the binomial answer unless halved'
+              '$\\frac{27}{64}$',
+              '$\\frac{3}{64}$',
+              '$\\frac{9}{64}$',
+              '$\\frac{1}{64}$'
             ],
-            correctAnswer: 1,
-            explanation: 'Each specific birth order with k affected and (n−k) unaffected has identical probability $p^{k}$ $q^{n-k}$ (product rule). The number of such orders is exactly C(n,k). Adding the equal probabilities of all those mutually exclusive orders (sum rule) gives C(n,k) × $p^{k}$ $q^{n-k}$ — which IS the binomial formula. So the two approaches are the same computation, just written differently. The double-counting option is wrong: enumerating distinct orders does not double-count, since each order is a unique, mutually exclusive sequence.'
+            correctAnswer: 2,
+            explanation: 'The question names one specific order, so multiply along it: 1/4 (affected) × 3/4 (unaffected) × 3/4 (unaffected) = 9/64. The 27/64 option adds all three orders with one affected child, which answers "exactly one in any order" instead. The 3/64 option is the probability of one order with two affected children, and 1/64 is the chance that all three are affected.'
           }
         ]
       }
@@ -238,15 +244,15 @@ $P(\\text{homozygous at A}) = \\frac{1}{2}\\times 1 = \\frac{1}{2}$
             explanation: 'Being homozygous means AA OR aa — two mutually exclusive outcomes — so the SUM rule applies: 1/4 + 1/4 = 1/2. The product-rule option misapplies the rule: an offspring cannot be AA AND aa simultaneously, so multiplying those probabilities is meaningless. The product rule is for independent events that co-occur, not for alternative outcomes of the same gene.'
           },
           {
-            question: 'From the cross AaBb × AaBb, what is the probability of an offspring that is recessive for trait A (aa) OR recessive for trait B (bb)? (Hint: these events overlap, since an offspring could be both aabb.)',
+            question: 'From the cross AaBb × AaBb, what is the probability that an offspring shows at least one recessive trait, meaning it is aa, bb, or both?',
             options: [
-              '$\\frac{1}{4} + \\frac{1}{4} + \\frac{1}{16} = \\frac{9}{16}$',
-              '$\\frac{1}{4} + \\frac{1}{4} - \\frac{1}{16} = \\frac{7}{16}$',
+              '$\\frac{1}{4} + \\frac{1}{4} = \\frac{8}{16}$',
+              '$1 - \\left(\\frac{3}{4}\\right)^{2} = \\frac{7}{16}$',
               '$\\frac{1}{4} \\times \\frac{1}{4} = \\frac{1}{16}$',
-              '$\\frac{1}{4} + \\frac{1}{4} - \\frac{2}{16} = \\frac{3}{8}$'
+              '$1 - \\left(\\frac{1}{4}\\right)^{2} = \\frac{15}{16}$'
             ],
             correctAnswer: 1,
-            explanation: 'Because "aa" and "bb" can occur together (aabb), they are NOT mutually exclusive, so a naive sum double-counts the overlap. Use inclusion-exclusion: P(aa or bb) = P(aa) + P(bb) − P(aa and bb) = 1/4 + 1/4 − 1/16 = 7/16. Check with the complement: P(dominant for both) = 3/4 × 3/4 = 9/16, and 1 − 9/16 = 7/16. Adding the 1/16 overlap instead of subtracting it counts aabb three times, subtracting 2/16 removes the overlap twice instead of once, and 1/4 × 1/4 = 1/16 is only the aabb overlap itself.'
+            explanation: 'Use the complement. The only way to show no recessive trait is to be dominant for both genes: 3/4 × 3/4 = 9/16. So P(at least one recessive trait) = 1 − 9/16 = 7/16. Simply adding 1/4 + 1/4 counts the aabb offspring twice, because aa and bb can occur together and are not mutually exclusive. The 1/16 option is only the aabb class, and 15/16 uses the recessive probability where the dominant one belongs.'
           }
         ]
       }

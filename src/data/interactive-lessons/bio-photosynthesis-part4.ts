@@ -5,164 +5,136 @@ export const bioPhotosynthesisPart4Data = {
       id: 'ps4-intro',
       type: 'text' as const,
       content: `
-## C3, C4, and CAM Photosynthesis
+## Photosynthesis, Respiration, and the Carbon Cycle
 
 **Part 4 of 7**
 
-Plants have evolved different strategies to deal with the problem of photorespiration.  Three major carbon fixation pathways are recognized, named after the first stable product of carbon fixation:
+The AP exam often asks you to compare photosynthesis with cellular respiration, to explain how the two work together in an ecosystem, and to predict what happens when one of them is disrupted.  This part puts the two processes side by side and follows carbon as it moves between organisms and the atmosphere.
 
-- **C3 plants** — initial product is a 3-carbon molecule (3-PGA)
-- **C4 plants** — initial product is a 4-carbon molecule (oxaloacetate)
-- **CAM plants** — use crassulacean acid metabolism (temporal separation)
-
-All three types ultimately use the Calvin cycle for sugar synthesis, but C4 and CAM plants have evolved mechanisms to **concentrate CO$_2$ around RuBisCO**, minimizing photorespiration.
+> Many textbooks also cover C4 and CAM photosynthesis; those pathways are not part of the AP Biology framework.
       `
     },
     {
-      id: 'ps4-c3',
+      id: 'ps4-compare',
       type: 'text' as const,
       content: `
-### C3 Photosynthesis
+### Side by Side
 
-C3 plants (e.g., rice, wheat, soybeans, most trees) use only the Calvin cycle for carbon fixation.  RuBisCO directly fixes CO$_2$ from the air in the **mesophyll cells**.
+| Feature | Photosynthesis | Cellular respiration |
+|---------|----------------|----------------------|
+| Organelle (eukaryotes) | Chloroplast | Mitochondrion (glycolysis in the cytosol) |
+| Energy source | Light | Chemical energy in organic molecules |
+| Carbon | CO$_2$ is **fixed** into sugar | Sugar carbon is **released** as CO$_2$ |
+| Electron source | Water | Glucose (via NADH and FADH$_2$) |
+| Final electron acceptor | NADP$^+$ → NADPH | O$_2$ → H$_2$O |
+| Where H$^+$ accumulates | Inside the thylakoid | Intermembrane space |
+| How ATP is made | ATP synthase (photophosphorylation) | ATP synthase (oxidative phosphorylation) plus substrate-level |
+| Who does it | Plants, algae, cyanobacteria and other photosynthetic prokaryotes | Nearly all organisms, **including plants** |
 
-**Characteristics:**
-- Most common pathway (~85% of plant species)
-- Initial fixation product: **3-PGA** (3-phosphoglycerate), a 3-carbon molecule
-- Susceptible to photorespiration, especially in hot, dry, or bright conditions
-- **Optimal environment:** Cool, moist climates with moderate light
+**What they share:** both use an electron transport chain built into a membrane, both build an H$^+$ gradient, and both use ATP synthase and chemiosmosis to make ATP.  This shared machinery is part of the evidence that these processes trace back to common ancestors.
 
-When stomata close to conserve water, CO$_2$ levels drop and O$_2$ rises inside the leaf, dramatically increasing photorespiration.
-      `
-    },
-    {
-      id: 'ps4-c4',
-      type: 'text' as const,
-      content: `
-### C4 Photosynthesis — Spatial Separation
-
-C4 plants (e.g., corn/maize, sugarcane, sorghum, crabgrass) have evolved a two-step carbon fixation process that **spatially separates** initial carbon fixation from the Calvin cycle:
-
-**Step 1 — Mesophyll cells:**
-- The enzyme **PEP carboxylase** (not RuBisCO) fixes CO$_2$ by attaching it to **PEP** (phosphoenolpyruvate, 3C) to form **oxaloacetate** (OAA, 4C)
-- OAA is quickly converted to **malate** (4C)
-- Malate is transported to the **bundle-sheath cells** via plasmodesmata
-
-**Step 2 — Bundle-sheath cells:**
-- Malate is decarboxylated, releasing CO$_2$ inside the bundle-sheath cells
-- This CO$_2$ is then fixed by **RuBisCO** in the normal Calvin cycle
-- The remaining 3C molecule (pyruvate) returns to the mesophyll to regenerate PEP (costs 2 ATP)
-
-**Why this works:**
-- PEP carboxylase has a **much higher affinity for CO$_2$** than RuBisCO and does **not** bind O$_2$
-- CO$_2$ is concentrated to high levels around RuBisCO in the bundle-sheath cells
-- Photorespiration is virtually eliminated
-
-**Cost:** 2 extra ATP per CO$_2$ fixed (for PEP regeneration), so C4 photosynthesis is only advantageous when photorespiration would otherwise be significant.
-
-| Feature | C3 | C4 |
-|---------|----|----|
-| First CO$_2$ fixation enzyme | RuBisCO | PEP carboxylase |
-| First stable product | 3-PGA (3C) | Oxaloacetate (4C) |
-| Leaf anatomy | No bundle-sheath distinction | **Kranz anatomy** (distinct mesophyll/bundle-sheath) |
-| Photorespiration | Significant in hot conditions | Minimal |
-| ATP cost per CO$_2$ | 3 ATP | 5 ATP |
-| Optimal environment | Cool, moist | Hot, sunny, tropical |
+**Common misconceptions the exam targets:**
+- "Plants photosynthesize instead of respiring."  Plant cells respire all the time; photosynthesis happens only in light.
+- "Photosynthesis creates oxygen from nothing" or "the O$_2$ comes from CO$_2$."  The O$_2$ comes from splitting **water**.
+- "Only plants photosynthesize."  Algae and many prokaryotes do too.
       `
     },
     {
       id: 'ps4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-### Checkpoint — C3 vs C4
+### Checkpoint — Comparing the Processes
       `,
       exercise: {
         questions: [
           {
-            question: 'What is the key advantage of PEP carboxylase over RuBisCO for initial CO2 fixation?',
+            question: 'Which feature is shared by photosynthesis and cellular respiration?',
             options: [
-              'PEP carboxylase makes ATP as it fixes CO2 in the mesophyll',
-              'PEP carboxylase has a high CO2 affinity and does not bind O2',
-              'PEP carboxylase makes glucose directly, bypassing the Calvin cycle',
-              'PEP carboxylase fixes CO2 without needing any energy input'
+              'Both use light as their direct source of energy',
+              'Both make ATP with ATP synthase powered by an H+ gradient',
+              'Both release O2 as a byproduct',
+              'Both fix CO2 into sugar'
             ],
             correctAnswer: 1,
-            explanation: 'PEP carboxylase binds CO2 effectively even at low concentrations and lacks the oxygenase activity that plagues RuBisCO. This allows C4 plants to capture CO2 efficiently in the mesophyll and deliver it at high concentrations to RuBisCO in the bundle-sheath cells.'
+            explanation: 'Both processes use an electron transport chain to build an H+ gradient across a membrane, and both use ATP synthase (chemiosmosis) to make ATP. Only photosynthesis uses light, releases O2, and fixes CO2.'
           },
           {
-            question: 'C4 photosynthesis requires 2 additional ATP per CO2 compared to C3. Under what conditions is this extra cost worthwhile?',
+            question: 'A leaf disc experiment is run in the dark. The discs slowly take in O2 and release CO2. What explains this?',
             options: [
-              'In cool, shady places where light rather than CO2 limits growth',
-              'In hot, sunny places where photorespiration would waste more',
-              'In wet, cloudy climates where stomata can stay open all day',
-              'At night, when the Calvin cycle in C3 plants is inactive'
+              'Photosynthesis is running backward in the dark',
+              'The leaf cells are carrying out cellular respiration',
+              'The Calvin cycle releases CO2 when there is no light',
+              'Chlorophyll absorbs O2 when no light is available'
             ],
             correctAnswer: 1,
-            explanation: 'The extra 2 ATP per CO2 is a worthwhile investment only when photorespiration would otherwise consume more energy than the C4 "pump" costs. In hot, bright conditions, photorespiration can waste 25-50% of fixed carbon in C3 plants, far exceeding the 2 ATP cost of C4.'
+            explanation: 'Plant cells respire continuously, using O2 and releasing CO2. In the dark, photosynthesis stops, so respiration is the only gas exchange process and the net exchange is O2 in, CO2 out.'
+          },
+          {
+            question: 'In photosynthesis the electrons ultimately reduce NADP+. In aerobic respiration, what do the electrons ultimately reduce?',
+            options: [
+              'Carbon dioxide, forming glucose',
+              'Oxygen, forming water',
+              'NAD+, forming NADH',
+              'Water, forming oxygen'
+            ],
+            correctAnswer: 1,
+            explanation: 'In aerobic respiration, O2 is the terminal electron acceptor at the end of the electron transport chain, and it is reduced to water. NAD+ is reduced earlier, when it picks up electrons from fuel molecules, but it passes them on to the chain.'
           }
         ]
       }
     },
     {
-      id: 'ps4-cam',
+      id: 'ps4-carbon',
       type: 'text' as const,
       content: `
-### CAM Photosynthesis — Temporal Separation
+### Following Carbon Through an Ecosystem
 
-**CAM** (Crassulacean Acid Metabolism) plants — e.g., cacti, pineapple, jade plant, many succulents — face extreme water stress and have evolved a different strategy: **temporal separation** of carbon fixation and the Calvin cycle.
+At the highest level, the **carbon cycle** can be simplified into four processes:
 
-**Night (stomata OPEN):**
-- CO$_2$ enters through open stomata
-- **PEP carboxylase** fixes CO$_2$ into oxaloacetate, which is converted to **malate**
-- Malate is stored in large **vacuoles** (as malic acid)
+| Process | Carbon moves... | Who/what |
+|---------|-----------------|----------|
+| **Photosynthesis** | From atmospheric CO$_2$ into organic molecules | Producers |
+| **Cellular respiration** | From organic molecules back to CO$_2$ | Nearly all organisms |
+| **Decomposition** | From dead organic matter back to CO$_2$ | Bacteria and fungi (decomposers) |
+| **Combustion** | From organic matter and fossil fuels to CO$_2$ | Fire, burning fuels |
 
-**Day (stomata CLOSED):**
-- Stomata close to prevent water loss
-- Malate is released from the vacuole and **decarboxylated**, releasing CO$_2$
-- CO$_2$ is fixed by RuBisCO in the Calvin cycle using ATP and NADPH from the light reactions
+Energy behaves differently from carbon.  **Energy flows** through an ecosystem in one direction: light → chemical energy in producers → consumers, with heat lost at every step.  **Matter cycles**: the same carbon atoms move back and forth between the atmosphere and living things.
 
-**Key difference from C4:**
-- C4 plants separate fixation and Calvin cycle **spatially** (different cell types)
-- CAM plants separate them **temporally** (different times of day)
-- Both use PEP carboxylase for initial fixation and concentrate CO$_2$ around RuBisCO
-
-| Feature | C4 | CAM |
-|---------|----|----|
-| Separation type | Spatial (mesophyll vs. bundle-sheath) | Temporal (night vs. day) |
-| Stomata | Open during the day | Open at **night**, closed during the day |
-| Growth rate | Fast (corn, sugarcane) | Slow (cacti, succulents) |
-| Environment | Hot, sunny, moderate water | Hot, very dry (desert) |
+**Disruptions ripple outward:**
+- Less light or fewer producers → less carbon fixed and less energy available to every trophic level above them.
+- More combustion than photosynthesis can absorb → atmospheric CO$_2$ rises.
+- Loss of decomposers → carbon stays locked in dead matter and nutrients stop returning to the soil.
       `
     },
     {
       id: 'ps4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-### Checkpoint — CAM Plants
+### Checkpoint — The Carbon Cycle
       `,
       exercise: {
         questions: [
           {
-            question: 'CAM plants open their stomata at night and close them during the day. What is the primary advantage of this strategy?',
+            question: 'Which process moves carbon from the atmosphere into living organisms?',
             options: [
-              'It lets the plant run the light reactions at night',
-              'It cuts water loss by taking in CO2 during the cooler night',
-              'It keeps O2 out of the leaf so RuBisCO can never bind O2',
-              'It speeds the Calvin cycle by supplying CO2 around the clock'
+              'Cellular respiration',
+              'Photosynthesis',
+              'Combustion',
+              'Decomposition'
             ],
             correctAnswer: 1,
-            explanation: 'Opening stomata at night (when temperatures are lower and humidity is higher) dramatically reduces water loss through transpiration. CO2 is stored as malic acid overnight and released for the Calvin cycle during the day when light is available.'
+            explanation: 'Photosynthesis fixes atmospheric CO2 into organic molecules. Respiration, decomposition, and combustion all return carbon to the atmosphere as CO2.'
           },
           {
-            question: 'Both C4 and CAM plants use PEP carboxylase for initial CO2 fixation. The key difference between the two strategies is:',
+            question: 'Why is energy said to flow through an ecosystem while carbon cycles?',
             options: [
-              'C4 separates fixation temporally (day vs. night); CAM separates it spatially (different cells)',
-              'C4 separates fixation spatially (different cells); CAM separates fixation temporally (day vs. night)',
-              'CAM plants skip the Calvin cycle entirely; C4 plants run it in their bundle-sheath cells',
-              'C4 plants store malate in vacuoles overnight; CAM plants send it to bundle-sheath cells'
+              'Carbon is lost as heat at each step, while energy is reused',
+              'Energy enters as light and leaves as heat, but carbon atoms are reused',
+              'Both are recycled completely by decomposers',
+              'Energy is stored in CO2 and released by photosynthesis'
             ],
             correctAnswer: 1,
-            explanation: 'Both rely on PEP carboxylase for initial fixation and RuBisCO for the Calvin cycle. C4 achieves separation in different cell types (mesophyll vs. bundle-sheath). CAM achieves separation at different times (night for fixation, day for Calvin cycle).'
+            explanation: 'Energy enters ecosystems as light, is stored in chemical bonds, and is lost as heat at each transfer, so it must be continuously resupplied. Carbon atoms are not lost; they move between the atmosphere and organisms through photosynthesis, respiration, decomposition, and combustion.'
           }
         ]
       }
@@ -171,29 +143,29 @@ C4 plants (e.g., corn/maize, sugarcane, sorghum, crabgrass) have evolved a two-s
       id: 'ps4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-### Match the Plant Type
+### Match the Process
       `,
       exercise: {
         questions: [
           {
-            question: 'Rice and wheat are examples of:',
-            options: ['C3 plants', 'C4 plants', 'CAM plants'],
-            correctAnswer: 'C3 plants'
+            question: 'Uses light energy and fixes CO2 into sugar:',
+            options: ['Photosynthesis', 'Cellular respiration', 'Decomposition', 'Combustion'],
+            correctAnswer: 'Photosynthesis'
           },
           {
-            question: 'Corn (maize) and sugarcane are examples of:',
-            options: ['C3 plants', 'C4 plants', 'CAM plants'],
-            correctAnswer: 'C4 plants'
+            question: 'Runs in plant cells both day and night:',
+            options: ['Photosynthesis', 'Cellular respiration', 'The light reactions', 'The Calvin cycle'],
+            correctAnswer: 'Cellular respiration'
           },
           {
-            question: 'Cacti and pineapple are examples of:',
-            options: ['C3 plants', 'C4 plants', 'CAM plants'],
-            correctAnswer: 'CAM plants'
+            question: 'Returns carbon from dead organisms to the atmosphere:',
+            options: ['Photosynthesis', 'Carbon fixation', 'Decomposition', 'Photophosphorylation'],
+            correctAnswer: 'Decomposition'
           },
           {
-            question: 'Plants with Kranz anatomy (distinct mesophyll and bundle-sheath cells) are:',
-            options: ['C3 plants', 'C4 plants', 'CAM plants'],
-            correctAnswer: 'C4 plants'
+            question: 'Uses O2 as the terminal electron acceptor:',
+            options: ['Aerobic respiration', 'Photosynthesis', 'Fermentation', 'The Calvin cycle'],
+            correctAnswer: 'Aerobic respiration'
           }
         ]
       }
@@ -202,31 +174,31 @@ C4 plants (e.g., corn/maize, sugarcane, sorghum, crabgrass) have evolved a two-s
       id: 'ps4-exit',
       type: 'multiple-choice' as const,
       content: `
-### Exit Ticket — Carbon Fixation Strategies
+### Exit Ticket — Putting It Together
       `,
       exercise: {
         questions: [
           {
-            question: 'Global warming is increasing both temperature and atmospheric CO2 levels. How might this affect the competitive advantage of C4 plants over C3 plants?',
+            question: 'A sealed, lit terrarium contains plants and snails. The plants are removed and the terrarium stays sealed. What happens to the gases over the next days?',
             options: [
-              'It would grow, because rising heat favors C4 plants in every habitat',
-              'It would shrink, as more CO2 cuts photorespiration in C3 plants',
-              'It would not change, because CO2 levels do not affect RuBisCO',
-              'It would vanish, as CAM plants replace both C3 and C4 plants'
+              'O2 rises and CO2 falls, because the snails photosynthesize',
+              'O2 falls and CO2 rises, because only respiration continues',
+              'Both stay constant, because the terrarium is sealed',
+              'Both rise, because the snails produce O2 and CO2'
             ],
             correctAnswer: 1,
-            explanation: 'Rising CO2 levels benefit C3 plants by providing more CO2 relative to O2 at the RuBisCO active site, reducing photorespiration. This "CO2 fertilization effect" partially offsets the increased photorespiration from higher temperatures, potentially narrowing the C4 advantage in some environments.'
+            explanation: 'Without plants, nothing in the terrarium fixes CO2 or releases O2. The snails (and any microbes) keep respiring, consuming O2 and releasing CO2, so O2 falls and CO2 rises.'
           },
           {
-            question: 'A student identifies a desert plant that gains weight mainly at night and has thick, fleshy leaves with large vacuoles. This plant most likely uses:',
+            question: 'Large areas of forest are cleared and burned. Which combined effect on the carbon cycle is most likely?',
             options: [
-              'C3 photosynthesis',
-              'C4 photosynthesis',
-              'CAM photosynthesis',
-              'Anoxygenic photosynthesis'
+              'Less CO2 is fixed by photosynthesis and more is released by combustion',
+              'More CO2 is fixed, because burning adds nutrients to the soil',
+              'Decomposition stops, so atmospheric CO2 falls',
+              'Carbon stops cycling because the trees are gone'
             ],
-            correctAnswer: 2,
-            explanation: 'Night CO2 fixation, desert habitat, fleshy leaves, and large vacuoles (for storing malic acid) are all hallmarks of CAM plants. The plant opens stomata at night to fix CO2 via PEP carboxylase, stores malate in vacuoles, and runs the Calvin cycle during the day with stomata closed.'
+            correctAnswer: 0,
+            explanation: 'Removing forest removes producers that fix CO2, and burning releases the carbon stored in their tissues as CO2. Both changes raise atmospheric CO2. Decomposers and other organisms keep cycling carbon.'
           }
         ]
       }

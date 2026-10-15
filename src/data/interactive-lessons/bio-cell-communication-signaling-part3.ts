@@ -34,16 +34,15 @@ The plasma membrane has a hydrophobic interior. That single fact predicts where 
 
 - A single protein that crosses the membrane seven times.
 - Inside the cell it works with a **G protein**, a switch protein that is **off when GDP is bound** and **on when GTP is bound**.
-- Ligand binding changes the receptor's shape, so the receptor makes the G protein swap GDP for GTP. The active G protein then moves along the membrane and activates an enzyme (for example, adenylyl cyclase).
+- Ligand binding changes the receptor's shape, so the receptor makes the G protein swap GDP for GTP. The active G protein then moves along the membrane and activates an enzyme (for example, the enzyme that makes cAMP).
 - The G protein turns itself off by hydrolyzing its GTP back to GDP, so the signal is temporary.
 - GPCRs detect epinephrine, many neurotransmitters, odors and light. The CED uses them as its example of a eukaryotic receptor.
 
 **2. Receptor tyrosine kinases (RTKs)**
 
-- The receptor itself is an **enzyme**: its inside portion is a kinase that adds phosphate groups to the amino acid tyrosine.
-- Ligand binding causes two receptor units to pair up (**dimerize**). Each unit then phosphorylates tyrosines on its partner.
-- Different relay proteins bind different phosphorylated tyrosines, so **one RTK can start several pathways at once**.
-- The insulin receptor and many growth-factor receptors are RTKs. Faulty RTKs that are active without a ligand are linked to some cancers.
+- The receptor itself is an **enzyme**: when the ligand binds, its inside portion adds phosphate groups to proteins, starting a phosphorylation cascade.
+- The insulin receptor and many growth-factor receptors are of this type. A faulty receptor that signals even without its ligand can drive uncontrolled cell division.
+- The step-by-step activation mechanism of RTKs is not tested on the AP exam; know them only as another class of membrane receptor.
 
 **3. Ligand-gated ion channels**
 
@@ -83,15 +82,15 @@ The plasma membrane has a hydrophobic interior. That single fact predicts where 
             explanation: 'G proteins switch themselves off by hydrolyzing GTP to GDP. If they cannot, they stay in the GTP-bound "on" state and keep activating the target enzyme long after the ligand is gone.'
           },
           {
-            question: 'Binding of one growth factor to its receptor activates two different relay proteins and two separate pathways. Which receptor type best fits this result?',
+            question: 'A neurotransmitter binds a receptor on a muscle cell, and within milliseconds Na+ ions flow into the cell. Which type of receptor best fits this result?',
             options: [
               'A ligand-gated ion channel',
-              'A receptor tyrosine kinase',
+              'A G protein-coupled receptor',
               'A steroid hormone receptor',
               'A gap junction channel'
             ],
-            correctAnswer: 1,
-            explanation: 'An RTK phosphorylates several tyrosines, and different relay proteins bind different phosphorylated sites, so one activated RTK can start more than one pathway.'
+            correctAnswer: 0,
+            explanation: 'Ion flow that begins within milliseconds of ligand binding means the receptor is itself a channel whose gate opens when the ligand binds. A G protein pathway works through several relay steps, a steroid receptor acts on genes over hours, and a gap junction is not a receptor.'
           }
         ]
       }
@@ -190,7 +189,7 @@ So "acetylcholine excites" or "acetylcholine inhibits" are both incomplete state
             options: ['G protein-coupled receptor', 'Receptor tyrosine kinase', 'Ligand-gated ion channel', 'Intracellular receptor']
           },
           {
-            label: 'Pairs up and phosphorylates its partner after binding a ligand',
+            label: 'Has an inside portion that is itself an enzyme adding phosphate groups to proteins',
             options: ['G protein-coupled receptor', 'Receptor tyrosine kinase', 'Ligand-gated ion channel', 'Intracellular receptor']
           },
           {
@@ -200,9 +199,9 @@ So "acetylcholine excites" or "acetylcholine inhibits" are both incomplete state
         ],
         correctAnswers: ['Ligand-gated ion channel', 'G protein-coupled receptor', 'Receptor tyrosine kinase', 'Intracellular receptor'],
         hint1: 'Ion flow means a channel; GDP and GTP mean a G protein.',
-        hint2: 'Dimerization and self-phosphorylation are the signature of RTKs.',
+        hint2: 'A receptor that is itself a kinase is an RTK.',
         hint3: 'Steroids cross the membrane, so their receptor is inside the cell.',
-        explanation: 'Ligand-gated channels let ions through, GPCRs activate G proteins, RTKs dimerize and cross-phosphorylate, and intracellular receptors for steroids act as transcription factors.'
+        explanation: 'Ligand-gated channels let ions through, GPCRs activate G proteins, RTKs are receptors with their own kinase activity, and intracellular receptors for steroids act as transcription factors.'
       }
     }
   ]

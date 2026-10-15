@@ -13,7 +13,7 @@ Every cell in your body — a neuron, a hepatocyte, a B lymphocyte — carries t
 
 **Differential gene expression** is the source of cell differentiation in multicellular organisms and of metabolic flexibility in single-celled ones. A muscle cell transcribes actin and myosin genes heavily and keeps insulin genes silent; a pancreatic $\\beta$-cell does the reverse. The genome is the same — the *regulatory state* differs.
 
-> **Big Idea (AP):** Information stored in DNA is not expressed uniformly. Cells regulate gene expression in response to internal signals and the external environment, and this regulation produces the diversity of cell types and the ability to respond to change. (AP Bio EU IST-2)
+> **Big Idea (AP):** Information stored in DNA is not expressed uniformly. Cells regulate gene expression in response to internal signals and the external environment, and this regulation produces the diversity of cell types and the ability to respond to change. (CED Topics 6.5–6.6)
       `
     },
     {
@@ -28,12 +28,12 @@ The path from a gene to a functional protein is long, and the cell can throttle 
 |---|---|---|
 | **Transcriptional** | Whether (and how often) RNA polymerase transcribes the gene | Repressors/activators binding DNA; chromatin state |
 | **Post-transcriptional** | Processing, stability, and export of the RNA | Alternative splicing; mRNA degradation; miRNA targeting |
-| **Translational** | Whether ribosomes translate the mRNA, and how fast | $5'$ UTR structure; translational repressors; initiation factors |
-| **Post-translational** | Activity, location, and lifetime of the finished protein | Phosphorylation; ubiquitin-tagged degradation; cleavage |
+| **Translational** | Whether ribosomes translate the mRNA, and how fast | Proteins or small RNAs that block ribosomes from starting |
+| **Post-translational** | Activity, location, and lifetime of the finished protein | Phosphorylation; tagging for breakdown |
 
 **Transcriptional control is the most common and most energy-efficient** point of regulation: if a cell never makes the mRNA, it spends nothing on processing, translating, or degrading a protein it does not need. Most of this unit focuses on transcriptional control, but keep the full menu in mind — AP loves asking *which level* a given experiment is probing.
 
-> **Logic check:** A drug that prevents an mRNA from being translated but leaves its abundance unchanged is acting at the **translational** level, not the transcriptional level. A Northern blot (which measures mRNA) would look normal; a Western blot (which measures protein) would show a drop.
+> **Logic check:** A drug that prevents an mRNA from being translated but leaves its abundance unchanged is acting at the **translational** level, not the transcriptional level. A measurement of the mRNA level would look normal; a measurement of the protein level would show a drop.
       `
     },
     {
@@ -49,7 +49,7 @@ To regulate transcription, two categories of player work together:
 - **Cis-regulatory elements** are **DNA sequences** — they sit *on the same molecule* as the gene they control (promoters, operators, enhancers, silencers). "Cis" = "on the same side." A cis-element only affects the gene physically linked to it.
 - **Trans-acting factors** are **diffusible molecules** (almost always proteins — transcription factors, repressors, activators) that are made elsewhere, float through the cell, and bind cis-elements. "Trans" = "across." A trans-factor can act on *any* matching DNA site in the cell.
 
-This distinction is the single most tested concept in operon genetics (Part 6). A mutation in a **cis-element** affects only the copy of the gene it is attached to; a mutation in a **trans-factor's gene** affects every target the factor would normally bind, because the broken (or hyperactive) protein diffuses everywhere.
+The CED puts the same idea as **regulatory sequences** (DNA) that interact with **regulatory proteins**. The distinction lets you predict mutations: a change in a **regulatory sequence** affects only the gene it is attached to, while a change in the gene for a **regulatory protein** affects every target the protein would normally bind, because the broken (or hyperactive) protein diffuses everywhere.
 
 > **The central idea:** Regulation determines **which proteins a cell makes and how much** of each. Transcription factors (trans) read the cell's signals and bind regulatory DNA (cis) to set each gene's output. Differentiation, development, and homeostasis all reduce to this read-and-respond logic.
       `
@@ -113,7 +113,7 @@ Bacteria and eukaryotes solve the same problem — making the right proteins at 
 | **Chromatin** | Minimal packaging; DNA broadly accessible | DNA wound on histones; **chromatin state gates access** |
 | **Transcription + translation** | **Coupled** (no nucleus; ribosomes load onto mRNA as it is made) | **Separated** by the nuclear envelope; mRNA is processed before export |
 | **RNA processing** | Little or none | Extensive: 5' cap, poly-A tail, splicing |
-| **Hallmark mechanisms** | Operons; repressors/inducers; CAP-cAMP | Enhancers + combinatorial TFs; epigenetics; alternative splicing; RNAi |
+| **Hallmark mechanisms** | Operons; repressors/inducers; CAP-cAMP | Enhancers + combinatorial TFs; epigenetics; alternative splicing; small regulatory RNAs |
 
 The deepest structural difference: because eukaryotes wrap DNA around **histones** to form chromatin, a eukaryotic gene must first be made *physically accessible* before it can be transcribed. Prokaryotes skip that gatekeeping layer. And because prokaryotes transcribe and translate in the same compartment at the same time, they can respond to a changing meal in seconds — which is exactly what the lac operon (Part 2) does.
 

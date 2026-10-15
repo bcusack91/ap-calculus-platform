@@ -124,7 +124,7 @@ The four products are $\\frac{9}{16}, \\frac{3}{16}, \\frac{3}{16}, \\frac{1}{16
       content: `
 ### Worked Example: Probability of a Specific Genotype
 
-**Problem.** From the cross **RrYy × RrYy**, what is the probability that an offspring has the exact genotype **AABb**... wait — using our symbols, what is the probability of genotype **RRYy**?
+**Problem.** From the cross **RrYy × RrYy**, what is the probability that an offspring has the exact genotype **RRYy**?
 
 **The Punnett-square route.** Scan the 16-cell grid above for *RRYy*. It appears in 2 cells (row RY × column Ry, and row Ry × column RY). So $P(RRYy) = \\frac{2}{16} = \\frac{1}{8}$.
 

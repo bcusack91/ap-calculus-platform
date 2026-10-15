@@ -114,8 +114,8 @@ Because eukaryotes separate the two steps with the nuclear envelope, they gain e
 mRNA is read in groups of three bases called **codons**. There are $4^3 = 64$ possible codons:
 
 - **61** codons specify the 20 amino acids, so most amino acids have **more than one** codon (the code is redundant).
-- **3** codons (UAA, UAG, UGA) are **stop** signals.
-- **AUG** codes for methionine and also serves as the usual **start** codon.
+- **3** codons are **stop** signals. (A codon chart identifies them; you do not need to memorize which ones they are.)
+- **AUG** codes for methionine and also serves as the usual **start** codon. AUG is the one codon the AP exam expects you to know without a chart.
 
 Nearly every organism, from bacteria to plants to people, uses the same codon assignments. A human gene placed in a bacterium can be translated into the correct human protein, which is how bacteria are engineered to make human insulin.
 

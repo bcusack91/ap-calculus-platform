@@ -11,7 +11,7 @@ export const bioCellCompartmentPart1Data = {
 
 A single liver cell runs thousands of chemical reactions at once. It builds proteins and digests worn-out proteins, makes fats and burns fats, stores calcium and keeps calcium out of the cytosol. If every enzyme and substrate floated in one shared solution, many of these reactions would undo or sabotage one another.
 
-Eukaryotic cells solve this problem with **compartmentalization**: internal membranes divide the cell into separate spaces, each with its own set of enzymes and its own chemical conditions. The AP Biology Course and Exam Description (Topic 2.10) states the idea in two parts:
+Eukaryotic cells solve this problem with **compartmentalization**: internal membranes divide the cell into separate spaces, each with its own set of enzymes and its own chemical conditions. The AP Biology Course and Exam Description (Topic 2.9) states the idea in two parts:
 
 1. Membranes and membrane-bound organelles **compartmentalize intracellular metabolic processes and specific enzymatic reactions**.
 2. Internal membranes **minimize competing interactions** and **increase the surface area where reactions can occur**.

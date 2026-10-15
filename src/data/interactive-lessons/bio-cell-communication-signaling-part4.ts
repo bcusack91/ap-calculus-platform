@@ -50,14 +50,13 @@ In a **phosphorylation cascade**, kinase 1 phosphorylates and activates kinase 2
 
 The ligand is the "first messenger." A **second messenger** is a small, non-protein molecule or ion that spreads quickly through the cytoplasm and carries the signal onward.
 
-| Second messenger | How it is made or released | What it typically activates |
-|------------------|----------------------------|-----------------------------|
-| **Cyclic AMP (cAMP)** | **Adenylyl cyclase** in the membrane converts ATP → cAMP | **Protein kinase A (PKA)** |
-| **Calcium ions (Ca²⁺)** | Released from the endoplasmic reticulum or let in through channels | Many enzymes and muscle contraction |
+**Cyclic AMP (cAMP)** is the CED's model second messenger:
 
-The cAMP signal is short-lived. An enzyme called **phosphodiesterase** quickly converts cAMP to AMP, which is inactive. The cAMP level therefore rises only while the receptor keeps stimulating adenylyl cyclase.
+- An enzyme in the plasma membrane, switched on by the active G protein, converts **ATP → cAMP**.
+- Many cAMP molecules spread through the cytoplasm and activate a **protein kinase**, which starts a phosphorylation cascade.
+- The cAMP signal is short-lived: another cytoplasmic enzyme quickly breaks cAMP down to inactive AMP. The cAMP level therefore stays high only while the receptor keeps being stimulated.
 
-> 📝 **AP Connection:** The CED names cAMP as its model second messenger. Know the sequence ligand → GPCR → G protein → adenylyl cyclase → cAMP → protein kinase A, and be ready to predict what happens if any link is removed.
+> 📝 **AP Connection:** Know the sequence ligand → GPCR → G protein → cAMP-making enzyme → cAMP → protein kinase cascade → response, and be ready to predict what happens if any link is removed or stuck "on." The names of the individual enzymes and kinases in a pathway are not tested on the AP exam.
       `
     },
     {
@@ -69,15 +68,15 @@ The cAMP signal is short-lived. An enzyme called **phosphodiesterase** quickly c
       exercise: {
         questions: [
           {
-            question: 'A drug blocks phosphodiesterase in liver cells. How will cAMP levels change after epinephrine binds and is then removed?',
+            question: 'A drug blocks the enzyme that breaks cAMP down to AMP in liver cells. How will cAMP levels change after epinephrine binds and is then removed?',
             options: [
-              'cAMP will never rise, since adenylyl cyclase also needs phosphodiesterase',
+              'cAMP will never rise, since cAMP is made by the same enzyme the drug blocks',
               'cAMP will rise as usual and stay high after the hormone leaves',
               'cAMP will rise more slowly but fall back at the usual rate afterward',
               'cAMP will rise only if the cell first makes more epinephrine receptors'
             ],
             correctAnswer: 1,
-            explanation: 'Phosphodiesterase breaks cAMP down to AMP. Without it, cAMP is still made normally but is not removed, so the signal persists after the hormone is gone.'
+            explanation: 'That enzyme removes cAMP by converting it to AMP. Without it, cAMP is still made normally but is not removed, so the signal persists after the hormone is gone.'
           },
           {
             question: 'A cell lacks a protein phosphatase that normally acts on the last kinase in a cascade. What is the most likely effect?',
@@ -103,27 +102,27 @@ The cAMP signal is short-lived. An enzyme called **phosphodiesterase** quickly c
 |------|-------|-------|
 | 1 | Epinephrine binds its G protein-coupled receptor on the cell surface | Reception |
 | 2 | The receptor changes shape; the G protein releases GDP and binds GTP | Transduction |
-| 3 | The active G protein activates **adenylyl cyclase** | Transduction |
-| 4 | Adenylyl cyclase converts many ATP molecules to **cAMP** | Transduction |
-| 5 | cAMP activates **protein kinase A** | Transduction |
-| 6 | Protein kinase A phosphorylates and activates **phosphorylase kinase** | Transduction |
-| 7 | Phosphorylase kinase phosphorylates and activates **glycogen phosphorylase** | Transduction |
-| 8 | Glycogen phosphorylase breaks glycogen into glucose-1-phosphate, and the cell releases glucose | Response |
+| 3 | The active G protein activates the membrane enzyme that makes cAMP | Transduction |
+| 4 | That enzyme converts many ATP molecules to **cAMP** | Transduction |
+| 5 | cAMP activates a **protein kinase** | Transduction |
+| 6 | The kinase phosphorylates and activates the next kinase in a **phosphorylation cascade** | Transduction |
+| 7 | The last kinase phosphorylates and activates the **enzyme that breaks down glycogen** | Transduction |
+| 8 | Glycogen is broken down, and the cell releases glucose into the blood | Response |
 
-**How it switches off:** epinephrine leaves the receptor; the G protein hydrolyzes GTP; phosphodiesterase destroys cAMP; phosphatases remove the phosphates. Every "on" step has a matching "off" step.
+**How it switches off:** epinephrine leaves the receptor; the G protein hydrolyzes GTP; an enzyme breaks cAMP down; phosphatases remove the phosphates. Every "on" step has a matching "off" step.
 
 ### Amplification in numbers
 
 Suppose (with simplified, illustrative numbers) that:
 
-- 1 active receptor activates 10 G proteins, each of which activates one adenylyl cyclase,
-- each adenylyl cyclase makes 100 cAMP molecules,
-- every cAMP leads to one active protein kinase A, and each PKA activates 10 phosphorylase kinases,
-- each phosphorylase kinase activates 10 glycogen phosphorylases.
+- 1 active receptor activates 10 G proteins, each of which activates one cAMP-making enzyme,
+- each of those enzymes makes 100 cAMP molecules,
+- every cAMP leads to one active first kinase, and each first kinase activates 10 second kinases,
+- each second kinase activates 10 glycogen-breaking enzymes.
 
 Then one epinephrine molecule yields:
 
-$$1 \\times 10 \\times 100 \\times 10 \\times 10 = 10^5 \\text{ active glycogen phosphorylase molecules}$$
+$$1 \\times 10 \\times 100 \\times 10 \\times 10 = 10^5 \\text{ active glycogen-breaking enzymes}$$
 
 Each of those enzymes then releases many glucose units per second, so the final output can reach the order of $10^8$ glucose molecules. This is why a tiny concentration of hormone in the blood can change the behavior of an entire organ.
       `
@@ -134,19 +133,19 @@ Each of those enzymes then releases many glucose units per second, so the final 
       content: `
 **Amplification Practice** 🧮
 
-A hypothetical cascade works like this: one active receptor activates **5** G proteins; each G protein activates **1** adenylyl cyclase; each adenylyl cyclase makes **200** cAMP; each cAMP activates **1** protein kinase A; and each protein kinase A activates **20** target enzymes.
+A hypothetical cascade works like this: one active receptor activates **5** G proteins; each G protein activates **1** cAMP-making enzyme; each of those enzymes makes **200** cAMP; each cAMP activates **1** protein kinase; and each kinase activates **20** target enzymes.
 
 **1)** How many cAMP molecules are made per active receptor?
 **2)** How many target enzymes are activated per active receptor?
-**3)** A drug halves the number of cAMP made by each adenylyl cyclase. How many target enzymes are now activated per receptor?
+**3)** A drug halves the number of cAMP made by each cAMP-making enzyme. How many target enzymes are now activated per receptor?
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['1000', '20000', '10000'],
-        hint1: 'cAMP: 5 G proteins × 1 cyclase × 200 cAMP each.',
-        hint2: 'Target enzymes: (number of cAMP) × 1 PKA each × 20 targets per PKA.',
+        hint1: 'cAMP: 5 G proteins × 1 enzyme each × 200 cAMP per enzyme.',
+        hint2: 'Target enzymes: (number of cAMP) × 1 kinase each × 20 targets per kinase.',
         hint3: 'Halving one factor in a product halves the final result.',
-        explanation: '1) 5 × 200 = 1,000 cAMP. 2) 1,000 × 20 = 20,000 enzymes. 3) With 100 cAMP per cyclase: 5 × 100 × 20 = 10,000 enzymes, half the original output.'
+        explanation: '1) 5 × 200 = 1,000 cAMP. 2) 1,000 × 20 = 20,000 enzymes. 3) With 100 cAMP per enzyme: 5 × 100 × 20 = 10,000 enzymes, half the original output.'
       }
     },
     {
@@ -157,7 +156,7 @@ A hypothetical cascade works like this: one active receptor activates **5** G pr
 
 Real cells do not run one isolated chain. Two features matter for the exam:
 
-- **Branching (divergence):** one pathway can activate several targets. In the liver, protein kinase A both **activates** glycogen breakdown and **inactivates** glycogen synthesis, so the cell does not build glycogen while breaking it down.
+- **Branching (divergence):** one pathway can activate several targets. In the liver, a kinase in the epinephrine pathway both **activates** glycogen breakdown and **inactivates** glycogen synthesis, so the cell does not build glycogen while breaking it down.
 - **Cross-talk (convergence):** two different signals can feed into the same relay molecule, and one pathway can block another. The cell's response reflects **all** the signals it receives at once.
 
 > 🎯 **Takeaway:** In any cascade, ask what turns each step on, what turns it off, and how many molecules each step activates. Those three questions let you predict amplification, duration and the effect of any drug or mutation.
@@ -172,18 +171,18 @@ Real cells do not run one isolated chain. Two features matter for the exam:
       exercise: {
         questions: [
           {
-            question: 'In liver cells exposed to epinephrine, what is the direct role of adenylyl cyclase?',
+            question: 'In liver cells exposed to epinephrine, what is the direct job of the activated G protein?',
             options: [
-              'It removes phosphates from glycogen phosphorylase to activate it',
-              'It makes cAMP from ATP once the G protein activates it',
+              'It removes phosphates from the glycogen-breaking enzyme to activate it',
+              'It activates the membrane enzyme that makes cAMP from ATP',
               'It binds epinephrine at the cell surface and changes shape',
               'It breaks glycogen into glucose units for export from the cell'
             ],
             correctAnswer: 1,
-            explanation: 'Adenylyl cyclase is the membrane enzyme, switched on by the active G protein, that makes the second messenger cAMP from ATP. The receptor binds the hormone, and glycogen phosphorylase breaks down glycogen.'
+            explanation: 'The GTP-bound G protein switches on the membrane enzyme that makes the second messenger cAMP. The receptor binds the hormone, kinases (not phosphate removal) activate the glycogen-breaking enzyme, and that enzyme breaks down glycogen.'
           },
           {
-            question: 'Protein kinase A activates glycogen breakdown and also inactivates glycogen synthesis. What is the advantage of this branching for the cell?',
+            question: 'A kinase in the epinephrine pathway activates glycogen breakdown and also inactivates glycogen synthesis. What is the advantage of this branching for the cell?',
             options: [
               'It allows the cell to store glucose and release glucose at the same time',
               'It keeps the cell from wasting ATP to rebuild the same stores it is now using up',
@@ -200,32 +199,32 @@ Real cells do not run one isolated chain. Two features matter for the exam:
       id: 'cell4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Name the Molecule** 🔍
+**Name the Role** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Enzyme that makes cAMP from ATP',
-            options: ['Adenylyl cyclase', 'Phosphodiesterase', 'Protein kinase A', 'Protein phosphatase']
+            label: 'The signal molecule that binds the receptor on the outside of the cell',
+            options: ['Ligand', 'cAMP', 'Protein kinase', 'Protein phosphatase']
           },
           {
-            label: 'Enzyme that converts cAMP to inactive AMP',
-            options: ['Adenylyl cyclase', 'Phosphodiesterase', 'Protein kinase A', 'Protein phosphatase']
+            label: 'Small molecule that spreads through the cytoplasm and relays the signal inside',
+            options: ['Ligand', 'cAMP', 'Protein kinase', 'Protein phosphatase']
           },
           {
             label: 'Enzyme that removes phosphate groups from proteins',
-            options: ['Adenylyl cyclase', 'Phosphodiesterase', 'Protein kinase A', 'Protein phosphatase']
+            options: ['Ligand', 'cAMP', 'Protein kinase', 'Protein phosphatase']
           },
           {
-            label: 'Enzyme activated by cAMP that phosphorylates other proteins',
-            options: ['Adenylyl cyclase', 'Phosphodiesterase', 'Protein kinase A', 'Protein phosphatase']
+            label: 'Enzyme that adds a phosphate from ATP to the next protein in a cascade',
+            options: ['Ligand', 'cAMP', 'Protein kinase', 'Protein phosphatase']
           }
         ],
-        correctAnswers: ['Adenylyl cyclase', 'Phosphodiesterase', 'Protein phosphatase', 'Protein kinase A'],
-        hint1: '"Cyclase" makes the cyclic molecule.',
-        hint2: 'The "on" enzymes are the cyclase and the kinase; the "off" enzymes are the other two.',
+        correctAnswers: ['Ligand', 'cAMP', 'Protein phosphatase', 'Protein kinase'],
+        hint1: 'The ligand is the first messenger; the second messenger works inside.',
+        hint2: 'The "on" switches add phosphates; the "off" switches remove them.',
         hint3: 'Kinases add phosphates; phosphatases remove them.',
-        explanation: 'Adenylyl cyclase makes cAMP, phosphodiesterase destroys it, protein kinase A is activated by cAMP and phosphorylates targets, and protein phosphatases remove those phosphates.'
+        explanation: 'The ligand is the first messenger that binds the receptor, cAMP is the second messenger inside the cell, protein kinases add phosphates to switch relay proteins on, and protein phosphatases remove those phosphates.'
       }
     }
   ]

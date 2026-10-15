@@ -163,7 +163,7 @@ A population of 400 beetles has two color morphs controlled by a single gene wit
               'Heterozygote advantage in fitness'
             ],
             correctAnswer: 2,
-            explanation: 'Inbreeding increases homozygosity (and therefore decreases heterozygosity) because relatives share alleles. Population substructure (Wahlund effect) also produces a deficit of heterozygotes when subpopulations with different allele frequencies are pooled.'
+            explanation: 'Inbreeding increases homozygosity (and therefore decreases heterozygosity) because relatives share alleles. Sampling a mix of partly separated subpopulations also produces a deficit of heterozygotes when subpopulations with different allele frequencies are pooled.'
           }
         ]
       }

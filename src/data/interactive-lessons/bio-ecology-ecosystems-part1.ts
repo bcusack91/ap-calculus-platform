@@ -9,7 +9,7 @@ export const bioEcologyPart1Data = {
 
 **Part 1 of 7 — Ecosystem Structure and Components**
 
-Ecology studies how organisms interact with each other and with their physical surroundings. The topic **Population & Community Ecology** worked at the population and community levels: growth curves, species interactions, keystone species and succession. This topic zooms out to the **ecosystem**. It asks what an ecosystem is built from, why biodiversity makes it more resilient, and what happens when parts are added, removed or disrupted (AP Biology CED 8.6 Biodiversity and 8.7 Disruptions to Ecosystems).
+Ecology studies how organisms interact with each other and with their physical surroundings. The topic **Population & Community Ecology** worked at the population and community levels: growth curves, species interactions, keystone species and biodiversity. This topic zooms out to the **ecosystem**. It asks what an ecosystem is built from, why biodiversity makes it more resilient, and what happens when parts are added, removed or disrupted (AP Biology CED 8.6 Biodiversity and 8.7 Disruptions to Ecosystems).
 
 ### Levels of organization
 

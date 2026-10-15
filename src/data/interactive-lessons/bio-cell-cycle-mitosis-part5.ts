@@ -20,25 +20,27 @@ Loss of cell cycle control is the fundamental basis of **cancer**.
       content: `
 ### Cyclins and Cdks — The Engine of the Cell Cycle
 
-**Cyclin-dependent kinases (Cdks)** are enzymes that phosphorylate target proteins to drive the cell through each phase.  Cdks are only active when bound to a **cyclin** partner.
-
-**Key Cdk-cyclin complexes:**
-
-| Complex | Phase regulated | Function |
-|---------|----------------|----------|
-| **Cyclin D — Cdk4/6** | G$_1$ progression | Responds to growth factor signals; phosphorylates Rb |
-| **Cyclin E — Cdk2** | G$_1$/S transition | Commits cell to S phase; initiates DNA replication licensing |
-| **Cyclin A — Cdk2** | S phase | Drives DNA replication; prevents re-replication |
-| **Cyclin B — Cdk1 (MPF)** | G$_2$/M transition | Triggers entry into mitosis; promotes chromosome condensation, nuclear envelope breakdown, spindle assembly |
+**Cyclin-dependent kinases (Cdks)** are enzymes that phosphorylate target proteins to drive the cell through each phase. Cdks are present at fairly constant levels, but they are **only active when bound to a cyclin** partner.
 
 **How cyclin-Cdk regulation works:**
-1. Cyclins are synthesized and degraded in a cyclical pattern — each cyclin accumulates during a specific phase
-2. When cyclin levels are high, Cdks are activated
-3. Activated Cdk phosphorylates target proteins, driving the next cell cycle event
-4. After the event, cyclins are tagged for destruction by ubiquitin ligases (e.g., APC/C, SCF) and degraded by the proteasome
-5. Cdk activity drops, resetting the system
+1. Cyclins are synthesized and broken down in a repeating pattern, so each kind of cyclin builds up during a particular part of the cycle
+2. When enough cyclin has accumulated, it binds and activates its Cdk
+3. The active cyclin-Cdk complex phosphorylates target proteins, pushing the cell past a checkpoint into the next phase
+4. After that event, the cyclin is broken down
+5. Cdk activity drops, resetting the system for the next round
 
-> **MPF (Maturation/Mitosis Promoting Factor):** The Cyclin B-Cdk1 complex was originally discovered in frog oocytes as the factor that triggers entry into M phase.  Its discovery by Leland Hartwell, Tim Hunt, and Paul Nurse earned the 2001 Nobel Prize in Physiology or Medicine.
+### Reading a cyclin graph
+
+A typical AP graph plots cyclin concentration and Cdk activity over two or three cycles:
+
+| Observation on the graph | What it means |
+|---|---|
+| Cyclin rises gradually through interphase | Cyclin is being made faster than it is broken down |
+| Cdk activity rises only once cyclin is high | Cdks need cyclin to be active |
+| Both drop sharply during mitosis | Cyclin is destroyed, switching the Cdk off so the cell can finish dividing |
+| Cdk protein level stays flat | The Cdk itself is not made or destroyed each cycle; only its activity changes |
+
+> Which specific cyclin pairs with which Cdk at each checkpoint is not tested on the AP exam. Know the general mechanism: cyclins activate Cdks, and the rise and fall of cyclins drives the cell through its checkpoints.
       `
     },
     {
@@ -47,21 +49,17 @@ Loss of cell cycle control is the fundamental basis of **cancer**.
       content: `
 ### Checkpoint Summary
 
-| Checkpoint | Location | What is checked | Key molecules |
+| Checkpoint | Location | What is checked | If the check fails |
 |-----------|----------|----------------|---------------|
-| **G$_1$/S (Restriction Point)** | End of G$_1$ | Cell size, nutrients, growth signals, DNA integrity | Cyclin D-Cdk4/6, Rb, p53, p21 |
-| **Intra-S** | During S phase | Replication fork stalling, DNA damage | ATR, Chk1 |
-| **G$_2$/M** | End of G$_2$ | Complete DNA replication, DNA damage repair | Cyclin B-Cdk1, ATM, Chk2, p53 |
-| **Spindle Assembly (SAC)** | Metaphase | All kinetochores attached to spindle | Mad2, BubR1, APC/C |
+| **G$_1$/S** | End of G$_1$ | Cell size, nutrients, growth-factor signals, DNA damage | Cell pauses or enters G$_0$ |
+| **G$_2$/M** | End of G$_2$ | DNA completely replicated; damage repaired | Cycle halts for repair, or apoptosis |
+| **Metaphase (M)** | Metaphase | Every chromosome attached to the spindle from both poles | Anaphase is delayed |
 
-### The Rb Pathway (G$_1$/S control)
+### How a checkpoint stops the cycle
 
-1. **Rb (Retinoblastoma protein)** normally INHIBITS E2F transcription factors
-2. When E2F is inhibited, genes needed for S phase entry are NOT transcribed
-3. Growth factor signaling activates **Cyclin D-Cdk4/6**, which **phosphorylates Rb**
-4. Phosphorylated Rb releases E2F
-5. E2F activates transcription of genes for DNA replication (DNA polymerase, thymidine kinase, Cyclin E, etc.)
-6. Cyclin E-Cdk2 further phosphorylates Rb, creating a positive feedback loop that commits the cell to S phase
+Checkpoints work by controlling cyclin-Cdk activity. When DNA is damaged, the tumor suppressor protein **p53** builds up. It halts the cycle by blocking the cyclin-Cdk activity needed to move forward, giving time for repair. If the damage cannot be repaired, p53 triggers **apoptosis** (programmed cell death), so the damaged cell does not divide.
+
+Another tumor suppressor, **Rb**, acts as a brake at the G$_1$/S checkpoint: it blocks the genes needed for S phase until growth-factor signals, acting through cyclin-Cdk complexes, switch the brake off.
       `
     },
     {
@@ -73,26 +71,26 @@ Loss of cell cycle control is the fundamental basis of **cancer**.
       exercise: {
         questions: [
           {
-            question: 'If a cell has a mutation that makes Rb constitutively active (always bound to E2F, even when phosphorylated), what would happen?',
+            question: 'A drug blocks the cyclin-Cdk complex that is required for a cell to pass the G2/M checkpoint. Where would treated cells accumulate?',
             options: [
-              'The cell would divide uncontrollably because E2F would stay active',
-              'The cell would stay arrested in G1 because E2F could never be released',
-              'The cell would replicate its DNA normally but fail to enter mitosis',
-              'The cell would skip S phase and enter M phase with unreplicated DNA'
+              'At the end of G2, unable to begin mitosis',
+              'In S phase, unable to finish copying their DNA',
+              'In anaphase, unable to separate their chromatids',
+              'In G0, permanently unable to divide again'
             ],
-            correctAnswer: 1,
-            explanation: 'If Rb cannot be inactivated by phosphorylation, it permanently sequesters E2F. Without E2F activity, the genes needed for DNA replication are never transcribed, and the cell cannot enter S phase. The cell is permanently stuck in G1.'
+            correctAnswer: 0,
+            explanation: 'Without that cyclin-Cdk activity the cell cannot pass the G2/M checkpoint, so it stops after finishing G2. DNA replication in S phase is already complete, the cell never reaches anaphase, and G0 is entered from G1, not G2.'
           },
           {
-            question: 'Cyclin B levels rise throughout G2 and peak at the onset of mitosis, then drop sharply during anaphase.  What causes the drop?',
+            question: 'In dividing cells, cyclin concentration rises through interphase, peaks at the start of mitosis, and then drops sharply, while the amount of Cdk protein stays constant. Cdk activity rises and falls along with cyclin. What best explains this pattern?',
             options: [
-              'Cyclin B is diluted as the cytoplasm divides into two daughter cells',
-              'APC/C tags Cyclin B with ubiquitin for proteasomal degradation',
-              'Cyclin B degrades spontaneously once it reaches high concentrations',
-              'Active Cdk1 phosphorylates its own cyclin partner, triggering its breakdown'
+              'Cdks function only while attached to cyclin',
+              'Cdks are made only while cyclin is present',
+              'Cdks are destroyed whenever cyclin is destroyed',
+              'Cdks convert themselves into cyclin molecules'
             ],
-            correctAnswer: 1,
-            explanation: 'The APC/C is a ubiquitin ligase activated during mitosis. It tags Cyclin B (and securin) with ubiquitin chains, marking them for destruction by the 26S proteasome. This drops Cdk1 activity and allows the cell to exit mitosis.'
+            correctAnswer: 0,
+            explanation: 'The amount of Cdk never changes, so its activity must depend on something else: binding to cyclin. When cyclin is destroyed, the Cdk is still there but inactive. That is why Cdk activity tracks cyclin concentration.'
           }
         ]
       }
@@ -109,20 +107,16 @@ Cancer results from the accumulation of mutations in genes that regulate the cel
 - Proto-oncogenes are normal genes that PROMOTE cell division (e.g., growth factors, growth factor receptors, signal transduction proteins, cyclins)
 - A mutation that makes the gene product hyperactive or overexpressed converts it into an **oncogene**
 - Only ONE mutant allele is needed (dominant)
-- Examples:
-  - **Ras** — GTPase in growth factor signaling; mutant Ras is stuck "on" (~30% of all cancers)
-  - **HER2** — growth factor receptor overexpressed in some breast cancers
-  - **Myc** — transcription factor that drives cell proliferation
+- Examples: a growth-factor receptor that signals even without its ligand; a relay protein in a growth-signaling pathway that is stuck "on"; a cyclin made in excess
 
 **2. Tumor suppressor genes (loss-of-function mutations)**
 - Normal products INHIBIT cell division, promote apoptosis, or repair DNA
-- BOTH alleles must be inactivated (recessive — Knudson two-hit hypothesis)
+- BOTH alleles usually must be inactivated (recessive — the "two-hit" hypothesis)
 - Examples:
-  - **p53** — "guardian of the genome"; halts the cycle for DNA repair or triggers apoptosis; mutated in >50% of cancers
-  - **Rb** — blocks E2F-mediated S phase entry; loss causes retinoblastoma
-  - **BRCA1/BRCA2** — DNA repair (homologous recombination); mutations increase breast/ovarian cancer risk
+  - **p53** — "guardian of the genome"; halts the cycle for DNA repair or triggers apoptosis; mutated in about half of human cancers
+  - **Rb** — the G$_1$/S brake; when it is lost, cells enter S phase without growth signals
 
-> **Hallmarks of Cancer (Hanahan & Weinberg):** sustained proliferative signaling, evading growth suppressors, resisting cell death, enabling replicative immortality (telomerase), inducing angiogenesis, activating invasion and metastasis.
+> **Why cancer takes several mutations:** a cell usually needs both an accelerator stuck "on" (an oncogene) and lost brakes (both copies of a tumor suppressor) before it divides without control. That is one reason cancer risk rises with age.
       `
     },
     {
@@ -173,10 +167,10 @@ Cancer results from the accumulation of mutations in genes that regulate the cel
             placeholder: 'e.g. Rb'
           },
           {
-            question: 'An oncogenic GTPase stuck in the "on" state in ~30% of cancers:',
-            answer: 'Ras',
-            acceptableAnswers: ['Ras', 'RAS', 'ras', 'K-Ras', 'KRAS'],
-            placeholder: 'e.g. Myc'
+            question: 'The general term for a gene whose normal product slows cell division or triggers apoptosis (two words):',
+            answer: 'tumor suppressor',
+            acceptableAnswers: ['tumor suppressor', 'Tumor suppressor', 'tumor suppressor gene', 'tumour suppressor', 'tumor-suppressor'],
+            placeholder: 'e.g. oncogene'
           },
           {
             question: 'The general term for a normal gene that, when mutated, becomes an oncogene:',
@@ -196,15 +190,15 @@ Cancer results from the accumulation of mutations in genes that regulate the cel
       exercise: {
         questions: [
           {
-            question: 'A cancer cell is found to have a mutation that causes overproduction of Cyclin D. What is the expected effect?',
+            question: 'A cancer cell has a mutation that causes overproduction of the cyclin that drives cells past the G1/S checkpoint. What is the expected effect?',
             options: [
-              'The cell would arrest in G1 because Cdk4/6 would be inhibited',
-              'Rb would stay phosphorylated, freeing E2F to drive repeated S-phase entry',
-              'DNA replication would be blocked because Rb would bind E2F even more tightly',
-              'The cell would undergo apoptosis as p53 detects the excess cyclin'
+              'The cell would arrest in G1, since extra cyclin blocks its Cdk',
+              'The cell would enter S phase again and again and keep dividing',
+              'DNA replication would stop, since the extra cyclin binds to the DNA',
+              'The cell would enter G0 for good and stop dividing altogether'
             ],
             correctAnswer: 1,
-            explanation: 'Cyclin D activates Cdk4/6, which phosphorylates Rb. Rb releases E2F, driving S phase entry. Overproduction of Cyclin D means Rb is constantly inactivated, and the cell bypasses the G1/S checkpoint repeatedly — a common mechanism in cancer (Cyclin D is encoded by the CCND1 gene, amplified in many cancers).'
+            explanation: 'Extra cyclin keeps its Cdk active, so the signal to pass the G1/S checkpoint is always on and the cell enters S phase again and again without waiting for growth signals. This makes the cyclin gene act like an oncogene. Cyclin activates, rather than blocks, its Cdk.'
           }
         ]
       }

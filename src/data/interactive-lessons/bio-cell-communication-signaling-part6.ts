@@ -93,9 +93,9 @@ Three mutant liver cell lines and normal cells are given epinephrine. cAMP and g
 
 **Worked reasoning with the four-step method.**
 
-- **Mutant A:** nothing downstream responds, not even cAMP. The break is **at or before adenylyl cyclase**: the receptor, the G protein or the cyclase is stuck off. More data would be needed to tell which.
-- **Mutant B:** responds normally but cannot shut off. Something that ends the signal is missing, for example a G protein that cannot hydrolyze GTP, or a missing phosphodiesterase. This is a **stuck-on** defect.
-- **Mutant C:** cAMP rises normally, but glucose is not released. Every step through cAMP works, so the defect is **after cAMP**: protein kinase A, phosphorylase kinase or glycogen phosphorylase.
+- **Mutant A:** nothing downstream responds, not even cAMP. The break is **at or before the enzyme that makes cAMP**: the receptor, the G protein or that enzyme is stuck off. More data would be needed to tell which.
+- **Mutant B:** responds normally but cannot shut off. Something that ends the signal is missing, for example a G protein that cannot hydrolyze GTP, or a missing enzyme for breaking down cAMP. This is a **stuck-on** defect.
+- **Mutant C:** cAMP rises normally, but glucose is not released. Every step through cAMP works, so the defect is **after cAMP**: in one of the kinases of the cascade or in the glycogen-breaking enzyme itself.
 
 > 📝 **AP Connection:** Notice the language: "the defect lies downstream of cAMP **because** cAMP rises normally **but** glucose release does not." AP scoring rewards a claim tied to a specific piece of evidence.
       `
@@ -111,24 +111,24 @@ Three mutant liver cell lines and normal cells are given epinephrine. cAMP and g
           {
             question: 'Adding a membrane-permeable form of cAMP to Mutant A cells restores normal glucose release. What does this show about the defect?',
             options: [
-              'It lies in protein kinase A or in a later step of the pathway',
+              'It lies in the kinase cascade or in a later step of the pathway',
               'It lies in a step that comes before cAMP is produced',
               'It lies in the glycogen stores of the mutant cells',
               'It lies in the genes that are transcribed in response'
             ],
             correctAnswer: 1,
-            explanation: 'If supplying cAMP rescues the response, every step from cAMP onward works, so the defect must be upstream, at the receptor, the G protein or adenylyl cyclase.'
+            explanation: 'If supplying cAMP rescues the response, every step from cAMP onward works, so the defect must be upstream, at the receptor, the G protein or the enzyme that makes cAMP.'
           },
           {
             question: 'Which change would most likely produce the pattern seen in Mutant C?',
             options: [
               'A receptor with a binding site that no longer fits epinephrine',
               'A G protein that is unable to swap its GDP for GTP when activated',
-              'A protein kinase A that cannot phosphorylate its target proteins',
-              'A phosphodiesterase that breaks down cAMP faster than normal'
+              'A cAMP-activated kinase that cannot phosphorylate its targets',
+              'An enzyme that breaks down cAMP much faster than normal'
             ],
             correctAnswer: 2,
-            explanation: 'In Mutant C, cAMP rises normally but glucose is not released, so the break is after cAMP. A nonfunctional protein kinase A fits; the other changes would all lower cAMP.'
+            explanation: 'In Mutant C, cAMP rises normally but glucose is not released, so the break is after cAMP. A nonfunctional cAMP-activated kinase fits; the other changes would all lower cAMP.'
           },
           {
             question: 'Why do Mutant B cells keep a high cAMP level after the hormone is washed away?',
@@ -139,7 +139,7 @@ Three mutant liver cell lines and normal cells are given epinephrine. cAMP and g
               'They lack the enzyme that produces cAMP from ATP'
             ],
             correctAnswer: 0,
-            explanation: 'The pathway turns on normally but does not turn off, which points to a missing off-switch such as GTP hydrolysis by the G protein or cAMP breakdown by phosphodiesterase.'
+            explanation: 'The pathway turns on normally but does not turn off, which points to a missing off-switch such as GTP hydrolysis by the G protein or the breakdown of cAMP.'
           }
         ]
       }

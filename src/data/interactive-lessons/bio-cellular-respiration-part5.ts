@@ -11,7 +11,7 @@ export const bioCellRespirationPart5Data = {
 
 Oxidative phosphorylation is the culminating stage of aerobic respiration and produces the vast majority of ATP — approximately **26-28 ATP** per glucose.  It consists of two tightly coupled components:
 
-1. **The Electron Transport Chain (ETC):** A series of protein complexes in the inner mitochondrial membrane that pass electrons from NADH and FADH$_2$ to O$_2$, pumping protons (H$^+$) into the intermembrane space
+1. **The Electron Transport Chain (ETC):** A series of electron carriers (mostly proteins) embedded in the inner mitochondrial membrane that pass electrons from NADH and FADH$_2$ to O$_2$, pumping protons (H$^+$) into the intermembrane space
 2. **Chemiosmosis:** The flow of protons back through ATP synthase, driving the phosphorylation of ADP to ATP
 
 **Location:** Inner mitochondrial membrane and intermembrane space
@@ -23,28 +23,18 @@ Oxidative phosphorylation is the culminating stage of aerobic respiration and pr
       content: `
 ### The Electron Transport Chain
 
-The ETC consists of four major protein complexes plus two mobile electron carriers:
+The ETC is a series of electron acceptors embedded in the **inner mitochondrial membrane**.  The AP framework excludes the names of the individual carriers; what matters is what the chain does:
 
-| Component | Name | Function |
-|-----------|------|----------|
-| **Complex I** | NADH dehydrogenase | Accepts electrons from NADH; pumps 4 H$^+$ |
-| **Complex II** | Succinate dehydrogenase | Accepts electrons from FADH$_2$; does NOT pump H$^+$ |
-| **Ubiquinone (Q)** | Coenzyme Q | Mobile carrier; shuttles electrons from Complexes I and II to Complex III |
-| **Complex III** | Cytochrome bc1 complex | Passes electrons to cytochrome c; pumps 4 H$^+$ |
-| **Cytochrome c** | — | Mobile carrier; shuttles electrons from Complex III to Complex IV |
-| **Complex IV** | Cytochrome c oxidase | Passes electrons to O$_2$ (final electron acceptor); pumps 2 H$^+$ |
-
-**The electron flow path:**
-
-$$\\text{NADH} \\rightarrow \\text{Complex I} \\rightarrow \\text{Q} \\rightarrow \\text{Complex III} \\rightarrow \\text{Cyt c} \\rightarrow \\text{Complex IV} \\rightarrow \\text{O}_2$$
-
-$$\\text{FADH}_2 \\rightarrow \\text{Complex II} \\rightarrow \\text{Q} \\rightarrow \\text{Complex III} \\rightarrow \\text{Cyt c} \\rightarrow \\text{Complex IV} \\rightarrow \\text{O}_2$$
-
-> **Why FADH$_2$ produces fewer ATP than NADH:** FADH$_2$ enters at Complex II, which does NOT pump protons. NADH enters at Complex I, which does pump protons. Fewer protons pumped = smaller gradient = fewer ATP via chemiosmosis (1.5 ATP per FADH$_2$ vs. 2.5 ATP per NADH).
-
-At Complex IV, molecular oxygen accepts the electrons and combines with H$^+$ to form **water** — this is why we breathe oxygen:
+1. **NADH and FADH$_2$ deliver electrons** that were extracted from fuel molecules during glycolysis, pyruvate oxidation, and the citric acid cycle.
+2. **Electrons pass from carrier to carrier in a series of redox reactions.**  Each carrier holds electrons more tightly than the one before it, so the electrons lose energy at each step.
+3. **That released energy pumps H$^+$** from the matrix into the intermembrane space.  The membrane now separates a region of **high H$^+$ concentration** (intermembrane space) from a region of **low H$^+$ concentration** (matrix), so the pH in the matrix is higher than in the intermembrane space.
+4. **Oxygen is the terminal electron acceptor.**  At the end of the chain, O$_2$ accepts the electrons and combines with H$^+$ to form **water**:
 
 $$\\frac{1}{2}\\text{O}_2 + 2\\text{H}^+ + 2e^- \\longrightarrow \\text{H}_2\\text{O}$$
+
+> **Why FADH$_2$ yields less ATP than NADH:** FADH$_2$ hands its electrons to the chain at a later point, past the first proton pump, so fewer H$^+$ are pumped per FADH$_2$ (about 1.5 ATP per FADH$_2$ vs. about 2.5 per NADH).
+
+**The same machinery in prokaryotes.**  ETC reactions occur in mitochondria, in chloroplasts, and across the plasma membranes of prokaryotes.  A prokaryote has no mitochondria, so it pumps protons across its **plasma membrane**.  Aerobic prokaryotes use O$_2$ as the terminal electron acceptor; anaerobic prokaryotes use other molecules (for example, sulfate or nitrate).
       `
     },
     {
@@ -97,25 +87,22 @@ $$\\frac{1}{2}\\text{O}_2 + 2\\text{H}^+ + 2e^- \\longrightarrow \\text{H}_2\\te
       content: `
 ### Chemiosmosis and ATP Synthase
 
-As electrons pass through Complexes I, III, and IV, the energy released is used to pump H$^+$ ions from the mitochondrial matrix into the **intermembrane space**.  This creates an **electrochemical gradient** (also called the **proton-motive force**):
+The H$^+$ gradient built by the ETC is an **electrochemical gradient** (also called the **proton-motive force**):
 
 - **Chemical gradient:** Higher H$^+$ concentration in the intermembrane space
 - **Electrical gradient:** More positive charge in the intermembrane space
 
-This gradient represents **stored potential energy** — like water behind a dam.
+This gradient represents **stored potential energy**, like water behind a dam.
 
-**ATP synthase** (sometimes called Complex V) is a remarkable molecular machine that harnesses this gradient.  It has two main components:
-
-- **F$_0$ subunit:** A channel embedded in the membrane through which H$^+$ ions flow back into the matrix
-- **F$_1$ subunit:** The catalytic "head" that protrudes into the matrix and synthesizes ATP
-
-As protons flow through F$_0$, the rotor spins (~100 revolutions per second), causing conformational changes in F$_1$ that catalyze:
+**ATP synthase** is a membrane-bound enzyme that provides the only easy route for H$^+$ to flow back into the matrix.  As protons flow down their gradient through ATP synthase (**chemiosmosis**), the enzyme uses that energy to make ATP from ADP and inorganic phosphate:
 
 $$\\text{ADP} + \\text{P}_i \\longrightarrow \\text{ATP}$$
 
-Approximately **4 H$^+$** must pass through ATP synthase to produce 1 ATP.
+This is **oxidative phosphorylation**.
 
-> **Nobel Prize Connection:** Peter Mitchell received the 1978 Nobel Prize for the chemiosmotic hypothesis — the idea that ATP synthesis is driven by an electrochemical proton gradient across a membrane.  This was initially controversial but is now one of the most fundamental concepts in bioenergetics.
+**Structure supports function.**  The inner mitochondrial membrane is highly folded (into cristae).  The folds increase the surface area available for ETC carriers and ATP synthase, so more ATP can be made per mitochondrion.
+
+**Uncoupling makes heat.**  If protons leak back across the membrane without passing through ATP synthase, electron transport continues but the gradient's energy is released as **heat** instead of being captured in ATP.  Endothermic organisms use this deliberate uncoupling (for example, in brown fat) to help regulate body temperature.
       `
     },
     {
@@ -146,7 +133,7 @@ Approximately **4 H$^+$** must pass through ATP synthase to produce 1 ATP.
               'It pumps protons out of the matrix, using the energy to make heat'
             ],
             correctAnswer: 1,
-            explanation: 'ATP synthase is a rotary motor enzyme. Protons flow through its channel (F0) down the electrochemical gradient, causing rotation that drives conformational changes in the catalytic head (F1), forcing ADP and Pi together to form ATP.'
+            explanation: 'Protons flow through ATP synthase down their electrochemical gradient, from the intermembrane space back into the matrix. The enzyme uses the energy of that flow to join ADP and inorganic phosphate into ATP. This is chemiosmosis.'
           }
         ]
       }

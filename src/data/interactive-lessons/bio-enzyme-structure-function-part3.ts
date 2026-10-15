@@ -61,7 +61,7 @@ export const bioEnzymesPart3Data = {
 - More enzyme = more active sites available
 
 ### Effect of Substrate Concentration
-- At fixed [enzyme], increasing [S] increases rate until $V_{max}$
+- At fixed [enzyme], increasing [S] increases rate until the rate levels off
 - Eventually, all active sites are occupied (saturation)
       `
     },

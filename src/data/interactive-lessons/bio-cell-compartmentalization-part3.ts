@@ -19,7 +19,7 @@ This part works through five cases. Each one shows a different benefit from Part
 | Case | Compartment | What it keeps apart | Benefit shown |
 |---|---|---|---|
 | A | Lysosome | Hydrolases and their substrates from the cytosol | Separation and distinct pH |
-| B | Smooth ER of muscle (sarcoplasmic reticulum) | A stored supply of $\\text{Ca}^{2+}$ from the cytosol | Ion storage for signaling |
+| B | Contractile vacuole of a freshwater protist | Excess water from the cytosol | Osmoregulation (water balance) |
 | C | Plant central vacuole | Water, ions, pigments and defensive compounds from the cytosol | Storage and turgor |
 | D | ER, Golgi and secretory vesicles | Proteins bound for export from the cytosol | A sealed route out of the cell |
 | E | Mitochondrion | The proton gradient from the rest of the cell | Gradient for ATP synthesis |
@@ -33,7 +33,7 @@ This part works through five cases. Each one shows a different benefit from Part
 
 Lysosomes receive worn-out organelles and macromolecules and break them down with hydrolytic enzymes. The building blocks (amino acids, sugars, nucleotides, fatty acids) are transported back to the cytosol for reuse. The CED lists three lysosome roles: intracellular digestion, recycling of the cell's organic materials, and programmed cell death (apoptosis).
 
-In **Tay-Sachs disease**, an inherited mutation leaves lysosomes without one working enzyme that breaks down a specific membrane lipid. The steps of the problem:
+In some inherited **lysosomal storage diseases** (Tay-Sachs disease is one example), a mutation leaves lysosomes without one working enzyme that breaks down a particular membrane lipid. The steps of the problem:
 
 1. The lipid is delivered to lysosomes in nerve cells as usual.
 2. Without the enzyme, it cannot be broken into pieces small enough to be transported out.
@@ -42,18 +42,18 @@ In **Tay-Sachs disease**, an inherited mutation leaves lysosomes without one wor
 
 **Lesson:** the membrane that keeps hydrolases away from the cytosol also traps whatever the hydrolases fail to digest. The defect stays inside the compartment, so symptoms appear in the cells that rely most on that compartment.
 
-### Case B — A compartment as a signal reservoir
+### Case B — A compartment that bails out water
 
-Muscle cells store calcium inside a specialized smooth ER called the **sarcoplasmic reticulum**. When a nerve signal arrives, channels open and $\\text{Ca}^{2+}$ floods into the cytosol, triggering contraction. Pumps in the membrane then use ATP to move $\\text{Ca}^{2+}$ back inside, and the muscle relaxes.
+A freshwater protist such as *Paramecium* lives in pond water that is **hypotonic** to its cytoplasm, so water constantly enters the cell by osmosis. The cell has no wall to resist swelling. Its solution is a **contractile vacuole**, a membrane-bound sac that collects excess water from the cytoplasm and then contracts to expel it through the plasma membrane. Pumping the water out is active work that uses ATP.
 
-The compartment works like a charged battery: because the cytosol is kept almost free of calcium, a brief release produces a large, fast change in cytosolic concentration. **Prediction:** if the calcium pumps fail, cytosolic calcium stays high and relaxation is delayed.
+The compartment lets the cell keep its internal solute concentration and volume steady while living in water that would otherwise burst it, a direct example of osmoregulation (CED 2.7). **Prediction:** if the contractile vacuole stops working, water keeps entering by osmosis, the cell swells, and it may burst (osmotic lysis).
       `
     },
     {
       id: 'bio-cell-compartmentalization-p3-s3-mcq-ab',
       type: 'multiple-choice' as const,
       content: `
-### Checkpoint — Lysosomes and Calcium Stores
+### Checkpoint — Lysosomes and Water Balance
       `,
       exercise: {
         questions: [
@@ -69,15 +69,15 @@ The compartment works like a charged battery: because the cytosol is kept almost
             explanation: 'The substrate is delivered into lysosomes but cannot be broken into pieces small enough to be transported out, so it accumulates there. Hydrolases are made on the rough ER, not in the Golgi.'
           },
           {
-            question: 'A toxin blocks the ATP-powered pumps that move calcium from the cytosol back into the sarcoplasmic reticulum of a muscle cell. Which result is most likely?',
+            question: 'A freshwater protist is treated with a drug that stops its contractile vacuole from working. What is the most likely result?',
             options: [
-              'Contraction cannot begin because no calcium can be released',
-              'Calcium stays high in the cytosol and relaxation is delayed',
-              'The sarcoplasmic reticulum fills with excess calcium ions',
-              'The cytosol becomes acidic as protons replace the calcium'
+              'The cell swells as water keeps entering by osmosis',
+              'The cell shrinks as water rushes out into the pond',
+              'Nothing changes, since its membrane blocks all water',
+              'The cell gains salt until it matches the pond water'
             ],
-            correctAnswer: 1,
-            explanation: 'Release through channels does not need the pumps, but returning calcium to storage does, so cytosolic calcium stays elevated and the muscle stays contracted longer. The store would gradually empty, not fill.'
+            correctAnswer: 0,
+            explanation: 'Pond water is hypotonic to the cytoplasm, so water keeps moving in by osmosis. Without the contractile vacuole to expel it, the cell swells and may burst. Water does cross the membrane (in part through aquaporins), and the cell does not lose water to a hypotonic surrounding.'
           }
         ]
       }
@@ -123,15 +123,15 @@ Match each observation to the compartment whose separation has most likely faile
         dropdowns: [
           {
             label: 'Leaves droop even though the cell walls are intact and the soil was dry for a week',
-            options: ['Central vacuole', 'Lysosome', 'Sarcoplasmic reticulum', 'Inner mitochondrial membrane']
+            options: ['Central vacuole', 'Lysosome', 'Contractile vacuole', 'Inner mitochondrial membrane']
           },
           {
             label: 'Oxygen use continues but ATP output falls sharply and the cells warm up',
-            options: ['Lysosome', 'Inner mitochondrial membrane', 'Central vacuole', 'Sarcoplasmic reticulum']
+            options: ['Lysosome', 'Inner mitochondrial membrane', 'Central vacuole', 'Contractile vacuole']
           },
           {
             label: 'Neurons fill with swollen sacs packed with an undigested lipid',
-            options: ['Sarcoplasmic reticulum', 'Central vacuole', 'Lysosome', 'Inner mitochondrial membrane']
+            options: ['Contractile vacuole', 'Central vacuole', 'Lysosome', 'Inner mitochondrial membrane']
           }
         ],
         correctAnswers: ['Central vacuole', 'Inner mitochondrial membrane', 'Lysosome'],
@@ -150,7 +150,7 @@ Match each observation to the compartment whose separation has most likely faile
 | Case | If separation fails... | Type of failure |
 |---|---|---|
 | Lysosome missing an enzyme | Undigested material is trapped and builds up | Process inside the compartment stops |
-| Calcium pumps blocked | Signal cannot be turned off | Gradient cannot be restored |
+| Contractile vacuole stops | Water floods in and the cell swells or bursts | Process inside the compartment stops |
 | Vacuole loses water | Turgor falls and tissues wilt | Stored contents are lost |
 | Secretory route bypassed | Enzymes or hormones could act on the cytosol | Products reach the wrong space |
 | Inner membrane leaky | Energy released as heat, little ATP | Gradient collapses |

@@ -23,13 +23,12 @@ $$6\\text{CO}_2 + 6\\text{H}_2\\text{O} + \\text{light} \\longrightarrow \\text{
 **Light Reactions (thylakoid membrane):**
 - Inputs: H$_2$O, light, NADP$^+$, ADP + P$_i$
 - Outputs: O$_2$, ATP, NADPH
-- Key complexes: PSII, cytochrome b6f, PSI, ATP synthase
+- Key components: PSII, an electron transport chain, PSI, ATP synthase
 
 **Calvin Cycle (stroma):**
 - Inputs: CO$_2$, ATP, NADPH
-- Outputs: G3P, ADP + P$_i$, NADP$^+$
-- Key enzyme: RuBisCO
-- 3 phases: fixation, reduction, regeneration
+- Outputs: a 3-carbon sugar used to build glucose and other molecules; ADP + P$_i$ and NADP$^+$ return to the light reactions
+- Logic: fix CO$_2$, reduce it to sugar with ATP and NADPH, regenerate the CO$_2$ acceptor
 
 **Connections to respiration:**
 - Products of photosynthesis (glucose, O$_2$) are the reactants of respiration
@@ -55,7 +54,7 @@ $$6\\text{CO}_2 + 6\\text{H}_2\\text{O} + \\text{light} \\longrightarrow \\text{
               'In both the glucose and the O2 released'
             ],
             correctAnswer: 2,
-            explanation: 'The oxygen in CO2 is incorporated into 3-PGA during carbon fixation, and ultimately into the carbon skeleton of glucose (and other organic molecules). The O2 released by photosynthesis comes from water splitting, not from CO2.'
+            explanation: 'The oxygen atoms in CO2 are fixed along with its carbon in the Calvin cycle and end up in glucose (and other organic molecules). The O2 released by photosynthesis comes from water splitting, not from CO2.'
           },
           {
             question: 'During photosynthesis, chemiosmosis in chloroplasts differs from chemiosmosis in mitochondria in that:',
@@ -63,7 +62,7 @@ $$6\\text{CO}_2 + 6\\text{H}_2\\text{O} + \\text{light} \\longrightarrow \\text{
               'Chloroplasts pump H+ into the stroma; mitochondria pump H+ into the matrix',
               'Chloroplasts pump H+ into the thylakoid lumen; mitochondria into the intermembrane space',
               'Chloroplasts use FADH2 as electron donor; mitochondria use NADPH instead',
-              'Chloroplasts pump H+ using RuBisCO; mitochondria pump H+ using an ETC'
+              'Chloroplasts pump H+ using the Calvin cycle; mitochondria use an ETC'
             ],
             correctAnswer: 1,
             explanation: 'Both organelles use proton gradients and ATP synthase, but the topology differs. In chloroplasts: H+ accumulates in the thylakoid lumen; ATP synthase releases ATP into the stroma. In mitochondria: H+ accumulates in the intermembrane space; ATP synthase releases ATP into the matrix.'
@@ -105,12 +104,12 @@ $$6\\text{CO}_2 + 6\\text{H}_2\\text{O} + \\text{light} \\longrightarrow \\text{
             question: 'Engineers are attempting to design artificial photosynthesis systems. Which of the following biological components would be MOST critical to replicate?',
             options: [
               'A rigid cell wall to hold the reaction chamber\'s shape',
-              'A light-driven catalyst that splits water, like PSII\'s OEC',
-              'A large vacuole that stores malic acid for later use',
+              'A light-driven catalyst that splits water, as PSII does',
+              'A large vacuole that stores sugar for later use',
               'Stomata-like pores that regulate gas exchange with the air'
             ],
             correctAnswer: 1,
-            explanation: 'The oxygen-evolving complex (OEC) of PSII performs one of the most thermodynamically demanding reactions in biology — splitting water using light energy. Replicating this water-splitting catalyst is the central challenge of artificial photosynthesis, as it is the source of electrons and protons for all downstream chemistry.'
+            explanation: 'Splitting water with light energy, as PSII does, supplies the electrons and protons for everything downstream in photosynthesis. It is one of the hardest reactions in biology to reproduce, so a light-driven water-splitting catalyst is the central challenge of artificial photosynthesis. A cell wall, vacuole, or pores would not capture energy.'
           },
           {
             question: 'If you provide a plant with heavy-oxygen water (H218O) and normal CO2, where does the labeled oxygen end up?',
@@ -145,9 +144,9 @@ $$6\\text{CO}_2 + 6\\text{H}_2\\text{O} + \\text{light} \\longrightarrow \\text{
             correctAnswer: 'Stroma'
           },
           {
-            question: 'The primary enzyme of carbon fixation:',
-            options: ['PEP carboxylase', 'RuBisCO', 'ATP synthase', 'NADP+ reductase'],
-            correctAnswer: 'RuBisCO'
+            question: 'The enzyme that makes ATP in both chloroplasts and mitochondria:',
+            options: ['ATP synthase', 'DNA polymerase', 'Helicase', 'Ligase'],
+            correctAnswer: 'ATP synthase'
           },
           {
             question: 'The gas released as a byproduct of the light reactions:',
@@ -155,9 +154,9 @@ $$6\\text{CO}_2 + 6\\text{H}_2\\text{O} + \\text{light} \\longrightarrow \\text{
             correctAnswer: 'O2'
           },
           {
-            question: 'The process that allows C4 plants to minimize photorespiration:',
-            options: ['Temporal separation of fixation steps', 'Spatial separation of fixation steps', 'Higher RuBisCO concentration', 'Lower stomatal density'],
-            correctAnswer: 'Spatial separation of fixation steps'
+            question: 'The energy carriers the Calvin cycle receives from the light reactions:',
+            options: ['ATP and NADPH', 'ATP and NADH', 'Glucose and O2', 'CO2 and H2O'],
+            correctAnswer: 'ATP and NADPH'
           }
         ]
       }
@@ -177,10 +176,10 @@ $$6\\text{CO}_2 + 6\\text{H}_2\\text{O} + \\text{light} \\longrightarrow \\text{
             placeholder: 'e.g. 3'
           },
           {
-            question: 'The ATP:NADPH ratio required by the Calvin cycle per CO2:',
-            answer: '3:2',
-            acceptableAnswers: ['3:2', '3 to 2', '3/2'],
-            placeholder: 'e.g. 2:1'
+            question: 'The pores in the leaf surface through which CO2 enters:',
+            answer: 'stomata',
+            acceptableAnswers: ['stomata', 'Stomata', 'stoma', 'stomates'],
+            placeholder: 'e.g. grana'
           },
           {
             question: 'The source of all O2 released during photosynthesis:',

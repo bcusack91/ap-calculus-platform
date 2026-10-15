@@ -37,15 +37,15 @@ Water is the most abundant molecule in living organisms, making up 60-70% of you
             explanation: 'Water molecules are held together by hydrogen bonds — the attraction between the $\\delta^{+}$ hydrogen of one molecule and the $\\delta^{-}$ oxygen of another.'
           },
           {
-            question: 'The bond angle in a water molecule is approximately:',
+            question: 'What makes a water molecule polar?',
             options: [
-              '180°',
-              '120°',
-              '109.5°',
-              '104.5°'
+              'Oxygen attracts the shared electrons more strongly than hydrogen does',
+              'Hydrogen gives up its electron completely, forming ions',
+              'Its O–H bonds share electrons equally between the atoms',
+              'Each molecule carries a net positive charge overall'
             ],
-            correctAnswer: 3,
-            explanation: 'Water has a bent geometry with a bond angle of approximately 104.5°, slightly less than the tetrahedral angle due to lone pair repulsion.'
+            correctAnswer: 0,
+            explanation: 'Oxygen is more electronegative than hydrogen, so the shared electrons in each O–H covalent bond spend more time near oxygen. Oxygen becomes partially negative and the hydrogens partially positive. The bonds are polar covalent, not ionic, and the molecule as a whole is neutral.'
           }
         ]
       }

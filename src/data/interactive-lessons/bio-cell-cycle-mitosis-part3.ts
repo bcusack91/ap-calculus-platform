@@ -9,7 +9,7 @@ export const bioCellCyclePart3Data = {
 
 **Part 3 of 7**
 
-Mitosis is the division of the nucleus to produce two **genetically identical** daughter nuclei.  It is a continuous process but is conventionally divided into four (or five) stages: **prophase, prometaphase, metaphase, anaphase, and telophase**.
+Mitosis is the division of the nucleus to produce two **genetically identical** daughter nuclei.  It is a continuous process, but it is conventionally divided into four stages: **prophase, metaphase, anaphase, and telophase**. (Some textbooks call late prophase "prometaphase"; the AP framework uses the four-stage model.)
       `
     },
     {
@@ -20,20 +20,13 @@ Mitosis is the division of the nucleus to produce two **genetically identical** 
 
 **Key events:**
 - Chromatin condenses into visible **chromosomes** (each consisting of two sister chromatids joined at the centromere)
-- Condensation is driven by **condensin** proteins that coil and compact the chromatin
-- The **mitotic spindle** begins to form:
-  - In animal cells: centrosomes (each with two centrioles) migrate toward opposite poles; asters (radial arrays of microtubules) form around them
-  - In plant cells: spindle forms without centrioles (acentrosomal spindle)
-- **Nucleolus** disappears (ribosomal RNA synthesis ceases)
+- The **mitotic spindle** begins to form, and the **centrosomes** move toward opposite poles of the cell (plant cells build a spindle without centrosomes)
+- **Nucleolus** disappears
 
-### Prometaphase
-
-**Key events:**
-- **Nuclear envelope breaks down** (fragments into vesicles)
-- Spindle microtubules now access the chromosomes
-- **Kinetochores** form at the centromere of each sister chromatid — these are protein complexes that serve as attachment points for spindle microtubules
-- **Kinetochore microtubules** from opposite poles attach to the kinetochores of sister chromatids
-- Chromosomes are moved by motor proteins along microtubules in a "search and capture" process
+**Late prophase:**
+- The **nuclear envelope breaks down**, so spindle microtubules can reach the chromosomes
+- **Kinetochores**, protein structures at the centromere of each sister chromatid, attach to spindle microtubules
+- Sister chromatids become attached to microtubules from **opposite** poles
       `
     },
     {
@@ -45,20 +38,18 @@ Mitosis is the division of the nucleus to produce two **genetically identical** 
 **Key events:**
 - All chromosomes align at the **metaphase plate** (the equator of the cell, equidistant from both poles)
 - Each chromosome is attached to kinetochore microtubules from BOTH poles (bipolar attachment)
-- **Spindle Assembly Checkpoint (SAC)** — verifies that every kinetochore is properly attached to spindle microtubules from both poles before allowing anaphase to proceed
+- **Metaphase checkpoint** (also called the spindle assembly checkpoint) — verifies that every chromosome is attached to spindle microtubules from both poles before allowing anaphase to proceed
 
-> **The Spindle Assembly Checkpoint is critical:** If even one kinetochore is unattached, the checkpoint protein **Mad2** inhibits the **Anaphase-Promoting Complex (APC/C)**, preventing the cell from entering anaphase.  Failure of this checkpoint leads to **aneuploidy** (abnormal chromosome number).
+> **Why this checkpoint matters:** if anaphase began while a chromosome was still unattached, both of its chromatids could be pulled to the same pole. One daughter cell would get an extra chromosome and the other would be missing one, a condition called **aneuploidy** (abnormal chromosome number). The checkpoint therefore holds the cell in metaphase until every chromosome is attached.
 
 ### Anaphase
 
 The shortest phase of mitosis, but the most dramatic:
 
 **Key events:**
-- **Cohesin** proteins holding sister chromatids together are cleaved by the enzyme **separase**
-- Separase is activated when APC/C degrades **securin** (the inhibitor of separase)
-- Sister chromatids separate and move toward opposite poles:
-  - **Anaphase A:** Kinetochore microtubules shorten (depolymerize at the kinetochore end), pulling chromatids poleward
-  - **Anaphase B:** Polar microtubules elongate, pushing the poles apart; motor proteins (dynein) pull on astral microtubules, moving poles apart
+- The proteins holding sister chromatids together at the centromere are broken down
+- Paired sister chromatids separate as spindle fibers pull them toward opposite poles
+- At the same time, the poles themselves move farther apart, elongating the cell
 - Once separated, each chromatid is now called an independent **chromosome**
       `
     },
@@ -75,13 +66,14 @@ The shortest phase of mitosis, but the most dramatic:
 - Spindle microtubules depolymerize
 - The cell now contains two nuclei, each with a complete set of chromosomes
 
-**Summary of chromosome movement by microtubule type:**
+**Summary of the four stages (as the AP framework describes them):**
 
-| Microtubule Type | Attachment | Role |
-|-----------------|------------|------|
-| **Kinetochore microtubules** | Kinetochore to pole | Pull chromatids poleward (anaphase A) |
-| **Polar (interpolar) microtubules** | Overlap at cell center | Push poles apart (anaphase B) |
-| **Astral microtubules** | Centrosome to cell cortex | Position the spindle; aid pole separation |
+| Stage | What to look for |
+|-------|------------------|
+| **Prophase** | Sister chromatids condense; spindle forms; centrosomes move to opposite poles |
+| **Metaphase** | Spindle fibers align the chromosomes along the cell's equator |
+| **Anaphase** | Sister chromatids separate and are pulled toward opposite poles |
+| **Telophase** | Spindle breaks down; a new nuclear envelope forms around each set; cytokinesis follows |
       `
     },
     {
@@ -104,7 +96,7 @@ The shortest phase of mitosis, but the most dramatic:
             explanation: 'The hallmark of metaphase is chromosomes aligned at the metaphase plate (cell equator) with bipolar kinetochore attachment. The spindle assembly checkpoint verifies proper attachment before allowing progression to anaphase.'
           },
           {
-            question: 'The drug colchicine binds to tubulin and prevents microtubule polymerization. If added to dividing cells, at which stage would cells arrest?',
+            question: 'A drug prevents microtubules from assembling. If it is added to dividing cells, at which stage would the cells arrest?',
             options: [
               'G1 — cells cannot grow without an intact microtubule cytoskeleton',
               'S phase — replication forks need microtubules to move along the DNA',
@@ -112,18 +104,18 @@ The shortest phase of mitosis, but the most dramatic:
               'Telophase — the nuclear envelope cannot re-form around the chromosomes'
             ],
             correctAnswer: 2,
-            explanation: 'Colchicine prevents spindle formation. Without proper kinetochore-microtubule attachment, the spindle assembly checkpoint (Mad2/APC pathway) is activated and the cell cannot enter anaphase. Cells accumulate in metaphase. This is why colchicine is used to prepare karyotypes.'
+            explanation: 'Without microtubules no spindle can form, so the chromosomes never become attached to both poles. The metaphase checkpoint then blocks entry into anaphase, and cells accumulate in metaphase with condensed chromosomes, which is why such drugs are used when preparing karyotypes.'
           },
           {
-            question: 'What triggers the separation of sister chromatids at the onset of anaphase?',
+            question: 'Suppose the metaphase checkpoint fails, and anaphase begins while one chromosome is attached to spindle fibers from only one pole. What is the most likely result?',
             options: [
-              'Condensin cleaves the centromere once all chromosomes are aligned',
-              'APC/C marks securin for destruction, freeing separase to cleave cohesin',
-              'Kinetochore microtubules pull hard enough to tear the chromatids apart',
-              'A nuclease digests the DNA linking the sister chromatids so they separate'
+              'Both chromatids of that chromosome could end up in one daughter cell',
+              'The cell would return to S phase and copy that chromosome once more',
+              'The unattached chromosome would be destroyed before telophase began',
+              'Both daughter cells would receive an extra copy of every chromosome'
             ],
-            correctAnswer: 1,
-            explanation: 'The Anaphase-Promoting Complex/Cyclosome (APC/C) tags securin for proteasomal degradation. Securin normally inhibits separase. When securin is destroyed, separase is freed to cleave the cohesin molecules at the centromere, allowing sister chromatids to separate.'
+            correctAnswer: 0,
+            explanation: 'A chromosome attached to only one pole can be pulled to that pole whole, so one daughter cell gets an extra copy and the other is missing it (aneuploidy). Cells do not return to S phase from anaphase, and the error affects one chromosome, not all of them.'
           }
         ]
       }
@@ -143,15 +135,15 @@ The shortest phase of mitosis, but the most dramatic:
             placeholder: 'e.g. centrosome'
           },
           {
-            question: 'The enzyme that cleaves cohesin to separate sister chromatids:',
-            answer: 'separase',
-            acceptableAnswers: ['separase', 'Separase'],
-            placeholder: 'e.g. ligase'
+            question: 'The plane at the cell\'s equator where chromosomes line up during metaphase:',
+            answer: 'metaphase plate',
+            acceptableAnswers: ['metaphase plate', 'Metaphase plate', 'equatorial plate', 'equator'],
+            placeholder: 'e.g. cell plate'
           },
           {
-            question: 'The checkpoint that verifies all kinetochores are attached before anaphase:',
-            answer: 'spindle assembly checkpoint',
-            acceptableAnswers: ['spindle assembly checkpoint', 'SAC', 'Spindle assembly checkpoint', 'spindle checkpoint'],
+            question: 'The checkpoint that verifies all chromosomes are attached to the spindle before anaphase:',
+            answer: 'metaphase checkpoint',
+            acceptableAnswers: ['metaphase checkpoint', 'M checkpoint', 'M phase checkpoint', 'spindle assembly checkpoint', 'spindle checkpoint', 'SAC'],
             placeholder: 'e.g. G2/M checkpoint'
           }
         ]
@@ -167,22 +159,22 @@ The shortest phase of mitosis, but the most dramatic:
         questions: [
           {
             question: 'Chromatin condenses; spindle begins to form:',
-            options: ['Prophase', 'Prometaphase', 'Metaphase', 'Anaphase', 'Telophase'],
+            options: ['Prophase', 'Metaphase', 'Anaphase', 'Telophase'],
             correctAnswer: 'Prophase'
           },
           {
-            question: 'Nuclear envelope breaks down; kinetochores attach to microtubules:',
-            options: ['Prophase', 'Prometaphase', 'Metaphase', 'Anaphase', 'Telophase'],
-            correctAnswer: 'Prometaphase'
+            question: 'Spindle fibers align the chromosomes along the cell\'s equator:',
+            options: ['Prophase', 'Metaphase', 'Anaphase', 'Telophase'],
+            correctAnswer: 'Metaphase'
           },
           {
             question: 'Sister chromatids separate and move to opposite poles:',
-            options: ['Prophase', 'Prometaphase', 'Metaphase', 'Anaphase', 'Telophase'],
+            options: ['Prophase', 'Metaphase', 'Anaphase', 'Telophase'],
             correctAnswer: 'Anaphase'
           },
           {
             question: 'Nuclear envelopes re-form; chromosomes decondense:',
-            options: ['Prophase', 'Prometaphase', 'Metaphase', 'Anaphase', 'Telophase'],
+            options: ['Prophase', 'Metaphase', 'Anaphase', 'Telophase'],
             correctAnswer: 'Telophase'
           }
         ]

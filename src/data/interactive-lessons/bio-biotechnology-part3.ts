@@ -19,7 +19,7 @@ export const bioBiotechPart3Data = {
 | The Math of Doubling |
 | Primers, Controls and Uses |
 
-> 🔑 **Key Concept:** **During polymerase chain reaction (PCR), DNA fragments are amplified** (EK IST-1.P.2). PCR copies one chosen region of DNA over and over in a test tube, doubling the number of copies with every cycle, so a few molecules become billions in a few hours.
+> 🔑 **Key Concept:** **During polymerase chain reaction (PCR), DNA fragments are amplified** (EK 6.8.A.1). PCR copies one chosen region of DNA over and over in a test tube, doubling the number of copies with every cycle, so a few molecules become billions in a few hours.
 
 ## What PCR Needs
 
@@ -28,10 +28,10 @@ PCR is DNA replication carried out in a tube, so it needs the same raw materials
 | Ingredient | Role | Link to cellular replication |
 |---|---|---|
 | **Template DNA** | The DNA that contains the target region | The parent strands |
-| **Two primers** | Short single-stranded DNA pieces (about 18–25 nucleotides) that base-pair at the two ends of the target | In cells, primase lays down short RNA primers |
-| **DNA nucleotides** (dNTPs: dATP, dTTP, dGTP, dCTP) | Building blocks of the new strands | Same building blocks |
-| **Heat-stable DNA polymerase** | Adds nucleotides to the 3′ end of each primer | DNA polymerase, which also needs a primer's free 3′ end |
-| **Thermal cycler** | Changes the temperature in timed steps | No equivalent: cells use helicase instead of heat |
+| **Two primers** | Short single-stranded DNA pieces that base-pair at the two ends of the target | In cells, short RNA primers are laid down |
+| **DNA nucleotides** | Building blocks of the new strands | Same building blocks |
+| **Heat-tolerant DNA polymerase** | Adds nucleotides to the 3′ end of each primer | DNA polymerase, which also needs a primer's free 3′ end |
+| **Heating and cooling** | Separates the strands, then lets primers bind | No equivalent: cells use helicase instead of heat |
 
 Why primers? DNA polymerase cannot start a new strand from nothing. It can only **add nucleotides to an existing 3′ end**. The primers provide those 3′ ends, and their positions decide exactly which stretch of DNA gets copied.`
     },
@@ -40,21 +40,22 @@ Why primers? DNA polymerase cannot start a new strand from nothing. It can only 
       type: 'text' as const,
       content: `## The Three Steps of a Cycle
 
-| Step | Temperature (typical) | What happens | Bonds affected |
-|---|---|---|---|
-| **1. Denaturation** | about 95°C | The two strands of the template separate | Hydrogen bonds between bases break |
-| **2. Annealing** | about 50–65°C | Primers base-pair with their complementary sequences on each single strand | New hydrogen bonds form between primer and template |
-| **3. Extension** | about 72°C | DNA polymerase adds nucleotides to each primer's 3′ end, building a new strand 5′→3′ | New phosphodiester bonds form in the backbone |
+The CED describes PCR as three steps: **denaturing** DNA, **annealing** primers to the original strands, and **extending** the new DNA molecule.
 
-One run of these three steps is one **cycle**, usually lasting 1–3 minutes. A typical PCR runs 25–35 cycles.
+| Step | What happens | Bonds affected |
+|---|---|---|
+| **1. Denaturation** | Heating separates the two strands of the template | Hydrogen bonds between bases break |
+| **2. Annealing** | On cooling, primers base-pair with their complementary sequences on each single strand | New hydrogen bonds form between primer and template |
+| **3. Extension** | DNA polymerase adds nucleotides to each primer's 3′ end, building a new strand 5′→3′ | New covalent bonds form in the backbone |
 
-### Why the polymerase must be heat-stable
-At 95°C most proteins **denature**: their hydrogen bonds and other weak interactions break and they lose their shape. A human DNA polymerase would be destroyed in the first cycle. PCR uses a polymerase from a bacterium that lives in hot springs (the best-known is *Taq* polymerase, from *Thermus aquaticus*). Its structure stays functional at high temperature, so it survives every cycle and works best near 72°C.
+One run of these three steps is one **cycle**, and a PCR repeats the cycle many times.
+
+### Why the polymerase must tolerate heat
+The heating step is hot enough to **denature** most proteins: their hydrogen bonds and other weak interactions break and they lose their shape. A human DNA polymerase would be destroyed in the first cycle. PCR therefore uses a polymerase from a bacterium that lives in hot springs, whose structure stays functional at high temperature.
 
 This is a clear case of **structure determining function**, and of evolution: the enzyme's stability is an adaptation to the bacterium's environment that biotechnology borrowed.
 
-### Why the temperature drops for annealing
-At 95°C, primers cannot stay paired with the template. Cooling lets hydrogen bonds form between the primers and their matching sequences. Primers are present in huge excess, so they bind before the long template strands can re-pair with each other.`
+(The exact temperatures, times and enzyme names used in PCR are details beyond the scope of the AP exam.)`
     },
     {
       id: 'bio-biotechnology-p3-s3-mcq-steps',
@@ -63,7 +64,7 @@ At 95°C, primers cannot stay paired with the template. Cooling lets hydrogen bo
       exercise: {
         questions: [
           {
-            question: 'In PCR, what is the purpose of heating the reaction to about 95°C at the start of each cycle?',
+            question: 'In PCR, what is the purpose of heating the reaction at the start of each cycle?',
             options: [
               'To break the hydrogen bonds between the two template strands',
               'To activate the primers so they can bind to the template',
@@ -71,7 +72,7 @@ At 95°C, primers cannot stay paired with the template. Cooling lets hydrogen bo
               'To speed up DNA polymerase as it adds new nucleotides'
             ],
             correctAnswer: 0,
-            explanation: 'High heat separates the double helix by breaking the hydrogen bonds between complementary bases. The covalent backbone stays intact, primers bind during the cooler annealing step, and polymerase works fastest near 72°C.'
+            explanation: 'High heat separates the double helix by breaking the hydrogen bonds between complementary bases. The covalent backbone stays intact, primers bind during the cooler annealing step, and heat is not what drives the polymerase to add nucleotides.'
           },
           {
             question: 'A student replaces the heat-stable polymerase with a polymerase purified from human cells. What result is most likely?',
@@ -122,8 +123,8 @@ $$N = 100 \\times 2^{10} = 100 \\times 1{,}024 = 102{,}400$$
 How many cycles turn 500 copies into 64,000 copies?
 $$\\frac{64{,}000}{500} = 128 = 2^{7} \\quad \\Rightarrow \\quad 7 \\text{ cycles}$$
 
-### Why the products are the right length
-In the first cycles, new strands start at a primer but run past the end of the target, so they are longer than the target. From the **third cycle** on, strands begin to appear that start at one primer and end exactly at the other. These target-length pieces are themselves copied every cycle and soon vastly outnumber everything else, so the final product is almost entirely the region **between the two primers**.
+### Why the product is the region between the primers
+Each new strand starts at a primer, and each copy then serves as a template in the next cycle. After a few cycles, copies that begin at one primer and end at the other vastly outnumber everything else, so the final product is almost entirely the region **between the two primers**.
 
 ### Why real reactions level off
 The doubling formula is an ideal. After many cycles the reaction slows and reaches a **plateau** because primers and nucleotides are used up and the polymerase cannot keep pace with so many templates. Exponential growth lasts only while ingredients are in excess, the same logic as population growth reaching a carrying capacity.`
@@ -181,17 +182,14 @@ Because PCR amplifies even a single stray molecule into billions, contamination 
 | Forensics | Amplifies DNA from a tiny sample, such as a hair root or a drop of blood |
 | Genetic testing | Copies a gene region so it can be cut, run on a gel or sequenced |
 | Studying ancient or degraded DNA | Copies short surviving fragments from old specimens |
-| Cloning | Produces many copies of a gene, with added restriction sites built into the primers |
-
-### Real-time (quantitative) PCR
-In quantitative PCR, a fluorescent signal rises as product accumulates, and the machine records the cycle at which the signal crosses a threshold. A sample with **more starting template crosses sooner**. Each one-cycle difference means about a **twofold** difference in starting amount, because each cycle doubles the product.
+| Cloning | Produces many copies of a gene to insert into a plasmid |
 
 ### Misconceptions to avoid
 - PCR does **not** copy the whole genome; it copies only the region between the primers.
 - PCR does **not** make DNA from nothing; with no template, there is no product.
 - PCR does **not** tell you the sequence by itself; it makes enough copies to analyze (by gel or sequencing).
 
-> 🔑 **AP Connection:** In FRQs, name the step and the bond: denaturation breaks **hydrogen bonds**; extension forms **phosphodiester bonds**. Saying only "heat separates DNA" earns less credit than naming what breaks.`
+> 🔑 **AP Connection:** In FRQs, name the step and the bond: denaturation breaks **hydrogen bonds**; extension forms **covalent bonds** in the sugar-phosphate backbone. Saying only "heat separates DNA" earns less credit than naming what breaks.`
     },
     {
       id: 'bio-biotechnology-p3-s7-mcq-apply',
@@ -219,26 +217,26 @@ A clinic tests swabs for a bacterial pathogen using PCR with primers specific to
             explanation: 'The water lane is the negative control and should show no band, so a band there means the reagents contain stray target DNA, and the patient\'s band cannot be trusted. A human-DNA explanation fails because lane 3 contains no human DNA.'
           },
           {
-            question: 'In a repeat run with clean reagents, sample P reaches the fluorescence threshold at cycle 20 and sample Q at cycle 23. How does the starting amount of target in P compare with Q?',
+            question: 'In a repeat run with clean reagents, a sample starts with 10 copies of the target. Assuming perfect doubling, how many copies are present after 6 cycles?',
             options: [
-              'P had about 8 times as much target as Q',
-              'P had about 3 times as much target as Q',
-              'P had about one-eighth as much target as Q',
-              'P had about the same target as Q'
+              '60 copies',
+              '640 copies',
+              '320 copies',
+              '1,280 copies'
             ],
-            correctAnswer: 0,
-            explanation: 'P crosses 3 cycles earlier, and each cycle doubles the product, so P started with about 2^3 = 8 times more target. Fewer cycles to threshold means more starting template, not less.'
+            correctAnswer: 1,
+            explanation: 'Each cycle doubles the number of copies: 10 × 2^6 = 10 × 64 = 640. Multiplying 10 by 6 treats PCR as adding a fixed amount per cycle, and 320 and 1,280 are the counts after 5 and 7 cycles.'
           },
           {
-            question: 'Why does the final PCR product consist almost entirely of fragments that begin and end at the two primer sites?',
+            question: 'The clinic redesigns its primers so they bind farther apart on the pathogen\'s gene. How will the PCR product change?',
             options: [
-              'Polymerase stops automatically at the end of each gene',
-              'Restriction enzymes in the mix trim longer strands to size',
-              'Target-length strands appear by cycle 3 and then double fastest',
-              'Longer strands are destroyed by the high temperature each cycle'
+              'It will be shorter, since primers that bind farther apart copy less DNA',
+              'It will be longer, since it covers a longer stretch of DNA between primers',
+              'It will be the same length, since PCR always copies the whole gene',
+              'It will disappear, since primers must bind right next to each other'
             ],
-            correctAnswer: 2,
-            explanation: 'Once strands bounded by both primers appear (from cycle 3), they are copied every cycle and grow exponentially, while longer early products grow only linearly. PCR contains no restriction enzymes, and heat separates strands without destroying them.'
+            correctAnswer: 1,
+            explanation: 'The primers set the two ends of the PCR product, so moving them farther apart lengthens the copied region. PCR copies only the stretch between the primers, not the whole gene, and primers bound some distance apart are exactly how PCR defines its target.'
           }
         ]
       }

@@ -28,7 +28,7 @@ Conditions that disrupt the bonds holding a protein in shape will **denature** i
 - **Extreme pH** (stomach acid denaturing food proteins)
 - **High salt** or **organic solvents**
 
-Denatured proteins typically cannot refold spontaneously — function is lost permanently.
+Denaturation is often permanent, but in some cases it is reversible: if normal conditions return, the protein can refold and regain its activity.
       `
     },
     {

@@ -25,7 +25,7 @@ Most introduced species never become invasive. Many fail to establish, and many 
 
 1. **Enemy release.** The species left its predators, parasites and pathogens behind in its home range. Without them, death rates fall.
 2. **Open resources.** It can exploit a niche or resource that no native species uses fully, so it faces little competition.
-3. **High reproductive rate and fast dispersal.** Many invaders mature early and produce many offspring, the r-selected traits from Population & Community Ecology.
+3. **High reproductive rate and fast dispersal.** Many invaders mature early and produce many offspring, so their populations can grow quickly once established.
 4. **Broad tolerance.** Generalists that eat many foods and tolerate a wide range of abiotic conditions establish more easily.
 5. **Naive natives.** Native prey may not recognize the invader as a threat, and native hosts may have no resistance to a new pathogen.
 

@@ -32,9 +32,9 @@ export const bioCellStructurePart2Data = {
 | **Nucleus** | No — DNA in **nucleoid** region | Yes — membrane-bound nucleus |
 | **DNA shape** | Single, circular chromosome | Multiple, linear chromosomes |
 | **Membrane-bound organelles** | None | Mitochondria, ER, Golgi, etc. |
-| **Ribosomes** | 70S (50S + 30S) | 80S (60S + 40S) |
+| **Ribosomes** | Present (smaller) | Present (larger in the cytoplasm) |
 | **Cell wall** | Present (peptidoglycan in bacteria) | Present in plants/fungi; absent in animals |
-| **Cytoskeleton** | Simple (FtsZ, MreB) | Complex (microtubules, microfilaments, intermediate filaments) |
+| **Internal organization** | Specialized regions, no membrane-bound compartments | Membrane-bound compartments |
 | **Reproduction** | Binary fission | Mitosis / meiosis |
 | **Gene regulation** | Operons, polycistronic mRNA | Complex (enhancers, silencers, splicing) |
 
@@ -61,7 +61,7 @@ Every cell — whether prokaryotic or eukaryotic — has:
       exercise: {
         questions: [
           {
-            question: 'A cell is observed to have a single circular chromosome, 70S ribosomes, and no membrane-bound organelles. This cell is most likely:',
+            question: 'A cell is observed to have a single circular chromosome, ribosomes, and no membrane-bound organelles. This cell is most likely:',
             options: [
               'A plant root cell',
               'A eukaryotic animal cell',
@@ -69,7 +69,7 @@ Every cell — whether prokaryotic or eukaryotic — has:
               'A fungal cell'
             ],
             correctAnswer: 2,
-            explanation: 'Circular chromosome, 70S ribosomes, and no membrane-bound organelles are all hallmarks of prokaryotic cells. Eukaryotes (plants, animals, fungi) have linear chromosomes, 80S ribosomes, and membrane-bound organelles.'
+            explanation: 'A single circular chromosome with no membrane-bound organelles is the hallmark of a prokaryotic cell. Ribosomes do not help decide, since every cell has them. Eukaryotes (plants, animals, fungi) have linear chromosomes in a nucleus and membrane-bound organelles.'
           },
           {
             question: 'Which feature is found in BOTH prokaryotic and eukaryotic cells?',
@@ -83,15 +83,15 @@ Every cell — whether prokaryotic or eukaryotic — has:
             explanation: 'The plasma membrane is universal to all cells. The nuclear envelope, ER, and mitochondria are found only in eukaryotes. Both cell types need a plasma membrane to regulate what enters and exits the cell.'
           },
           {
-            question: 'Prokaryotic ribosomes are 70S while eukaryotic cytoplasmic ribosomes are 80S. Why is this difference medically significant?',
+            question: 'Which observation provides the strongest evidence that prokaryotes and eukaryotes share a common ancestor?',
             options: [
-              'It allows eukaryotic cells to make larger and more complex proteins',
-              'Antibiotics can target 70S ribosomes without harming host 80S ribosomes',
-              'Prokaryotic ribosomes use different amino acids than ours do',
-              '70S ribosomes cannot read eukaryotic mRNA, so infections cannot spread'
+              'Both build proteins on ribosomes made of rRNA and protein',
+              'Both are always single-celled and similar in size',
+              'Both keep their DNA inside a membrane-bound nucleus',
+              'Both have cell walls made of cellulose'
             ],
-            correctAnswer: 1,
-            explanation: "This structural difference is the basis for many antibiotics (tetracycline, chloramphenicol, erythromycin). These drugs bind to bacterial 70S ribosomes but not human 80S ribosomes, killing bacteria without harming the patient's cells."
+            correctAnswer: 0,
+            explanation: 'Ribosomes are found in all known cells and are built from the same kinds of components (rRNA and protein), which reflects common ancestry. Many eukaryotes are multicellular, prokaryotes have no nucleus, and cellulose walls are found in plants, not in all cells.'
           }
         ]
       }
@@ -112,14 +112,7 @@ Every cell — whether prokaryotic or eukaryotic — has:
 
 ### Bacteria vs. Archaea — Not the Same!
 
-Although both are prokaryotic, Bacteria and Archaea differ in important ways:
-
-| Feature | Bacteria | Archaea |
-|---------|---------|---------|
-| **Cell wall** | Peptidoglycan | Pseudopeptidoglycan or protein |
-| **Membrane lipids** | Ester-linked fatty acids | Ether-linked isoprenes |
-| **RNA polymerase** | One type (simple) | Multiple types (more like eukaryotes) |
-| **Response to antibiotics** | Susceptible to most | Resistant to most bacterial antibiotics |
+Both are prokaryotic: no nucleus and no membrane-bound organelles. Both have cell walls that protect against osmotic lysis, but archaeal walls lack peptidoglycan, and many archaea live in extreme environments.
 
 > 🔑 **AP Exam Tip:** Archaea are actually more closely related to Eukarya than to Bacteria on the phylogenetic tree. This is a frequently tested concept.
 
@@ -161,12 +154,12 @@ Enter the correct term for each description.
       exercise: {
         dropdowns: [
           {
-            label: 'An organism with ether-linked membrane lipids and no peptidoglycan belongs to domain',
-            options: ['Bacteria', 'Archaea', 'Eukarya', 'Protista']
+            label: 'Cell walls are found in Bacteria, Archaea, fungi, and',
+            options: ['Plants', 'Animals', 'All protists', 'Viruses']
           },
           {
-            label: 'Eukaryotic cytoplasmic ribosomes have a sedimentation coefficient of',
-            options: ['30S', '50S', '70S', '80S']
+            label: 'The structure that every cell uses to synthesize proteins is the',
+            options: ['Ribosome', 'Nucleus', 'Golgi apparatus', 'Mitochondrion']
           },
           {
             label: 'The primary advantage of compartmentalization in eukaryotic cells is',
@@ -177,11 +170,11 @@ Enter the correct term for each description.
             options: ['Bacteria', 'Eukarya', 'Viruses', 'Cyanobacteria']
           }
         ],
-        correctAnswers: ['Archaea', '80S', 'Separating incompatible reactions into distinct regions', 'Eukarya'],
-        hint1: 'Ether-linked lipids and no peptidoglycan rule out Bacteria.',
-        hint2: 'Prokaryotic = 70S, Eukaryotic cytoplasmic = 80S.',
+        correctAnswers: ['Plants', 'Ribosome', 'Separating incompatible reactions into distinct regions', 'Eukarya'],
+        hint1: 'Animal cells are the group without a wall.',
+        hint2: 'It is found in all cells, prokaryotic and eukaryotic.',
         hint3: 'Compartmentalization allows different chemical environments within one cell.',
-        explanation: 'Archaea have unique ether-linked membrane lipids. Eukaryotic cytoplasmic ribosomes are 80S (mitochondrial ribosomes are 70S — evidence for endosymbiosis). Compartmentalization is the key evolutionary advantage of eukaryotes. Archaea share more molecular features with Eukarya than with Bacteria.'
+        explanation: 'Cell walls of Bacteria, Archaea, fungi, and plants provide structure and protect against osmotic lysis; animal cells have none. Ribosomes are universal; they are not membrane-bound, so even prokaryotes have them. Compartmentalization is the key evolutionary advantage of eukaryotes. Archaea share more molecular features with Eukarya than with Bacteria.'
       }
     },
     {
@@ -193,7 +186,7 @@ Enter the correct term for each description.
       exercise: {
         questions: [
           {
-            question: 'Mitochondria contain 70S ribosomes and circular DNA, similar to bacteria. This observation best supports which hypothesis?',
+            question: 'Mitochondria contain their own ribosomes and circular DNA, both similar to those of bacteria. This observation best supports which hypothesis?',
             options: [
               'Mitochondria evolved from pieces of the nuclear genome',
               'Bacteria evolved from mitochondria released by eukaryotes',
@@ -201,18 +194,18 @@ Enter the correct term for each description.
               'All organelles contain their own DNA'
             ],
             correctAnswer: 2,
-            explanation: 'The endosymbiotic theory proposes that mitochondria (and chloroplasts) were once free-living bacteria that were engulfed by an ancestral eukaryotic cell. Evidence includes: 70S ribosomes, circular DNA, double membrane, and independent replication by binary fission.'
+            explanation: 'The endosymbiotic theory proposes that mitochondria (and chloroplasts) were once free-living bacteria that were engulfed by an ancestral eukaryotic cell. Evidence includes bacteria-like ribosomes, circular DNA, a double membrane, and division by a process like binary fission.'
           },
           {
-            question: 'A researcher treats cells with an antibiotic that specifically binds to the 50S ribosomal subunit. Which cells would be MOST affected?',
+            question: 'A bacterium has no membrane-bound organelles, yet it keeps its DNA in a defined area and carries out many separate metabolic tasks. Which statement best describes how prokaryotes organize these functions?',
             options: [
-              'Eukaryotic cells only, through their 80S cytoplasmic ribosomes',
-              'Plant cells only, because their cell walls absorb the drug',
-              'Bacterial cells and mitochondria within eukaryotic cells',
-              'Only cells in the domain Archaea, which lack 80S ribosomes'
+              'They use internal regions with specialized structures, like the nucleoid',
+              'They hide a small nucleus too thin to see with most microscopes',
+              'They borrow mitochondria from nearby eukaryotic cells for ATP',
+              'They run every reaction everywhere in the cell with no organization'
             ],
-            correctAnswer: 2,
-            explanation: 'The 50S subunit is part of the 70S prokaryotic ribosome. Both bacteria and mitochondria have 70S ribosomes (supporting endosymbiotic theory). This is why some antibiotics can have side effects — they can partially inhibit mitochondrial protein synthesis.'
+            correctAnswer: 0,
+            explanation: 'Prokaryotes typically lack internal membrane-bound organelles but have internal regions with specialized structures and functions, such as the nucleoid where the chromosome sits. They have no nucleus, cannot borrow organelles, and their cytoplasm is organized rather than random.'
           }
         ]
       }

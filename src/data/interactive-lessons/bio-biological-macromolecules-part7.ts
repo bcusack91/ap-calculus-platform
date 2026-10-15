@@ -14,7 +14,6 @@ export const bioMacromoleculesPart7Data = {
 | **Monomer** | Monosaccharide | Fatty acid/glycerol | Amino acid | Nucleotide |
 | **Bond** | Glycosidic | Ester | Peptide | Phosphodiester |
 | **Elements** | C, H, O | C, H, O | C, H, O, N, S | C, H, O, N, P |
-| **Testing** | Benedict's/Iodine | Sudan/Paper | Biuret | — |
 
 ### Key Themes
 1. **Structure determines function** — the shape of a molecule determines what it can do
@@ -89,8 +88,8 @@ export const bioMacromoleculesPart7Data = {
       exercise: {
         dropdowns: [
           {
-            label: 'The test for proteins is the ___ test',
-            options: ['Benedict\'s', 'Iodine', 'Biuret', 'Sudan IV']
+            label: 'Sulfur is used to build ___',
+            options: ['carbohydrates', 'fatty acids', 'proteins', 'nucleotides']
           },
           {
             label: 'Long-term energy storage in animals uses ___',
@@ -101,11 +100,11 @@ export const bioMacromoleculesPart7Data = {
             options: ['energy', 'structural', 'genetic', 'metabolic']
           }
         ],
-        correctAnswers: ['Biuret', 'fat', 'genetic'],
-        hint1: 'Biuret reagent turns purple in the presence of peptide bonds.',
+        correctAnswers: ['proteins', 'fat', 'genetic'],
+        hint1: 'Check the Elements row of the comparison table.',
         hint2: 'Which macromolecule stores the most energy per gram?',
         hint3: 'DNA is the blueprint of life.',
-        explanation: 'Biuret test detects proteins. Fat is the long-term energy storage molecule. DNA stores genetic information.'
+        explanation: 'Sulfur is a building element of proteins (phosphorus goes into nucleic acids and phospholipids). Fat is the long-term energy storage molecule. DNA stores genetic information.'
       }
     }
   ]

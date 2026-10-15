@@ -87,16 +87,16 @@ The **Meselson-Stahl experiment** (1958) elegantly determined which model is cor
 DNA replication begins at specific sequences called **origins of replication**:
 
 **Prokaryotes:**
-- Single circular chromosome with **one origin** (oriC in E. coli)
+- Single circular chromosome with **one origin** of replication
 - Replication proceeds **bidirectionally** from the origin, creating two replication forks that move in opposite directions and meet on the opposite side of the chromosome
 - Total replication time: ~40 minutes
 
 **Eukaryotes:**
 - Multiple linear chromosomes with **many origins** (30,000-50,000 in human cells)
 - Multiple origins allow the much larger genome to be replicated within the S phase time window
-- Each origin fires once per S phase (controlled by the **licensing system** — pre-replication complexes mark origins for use)
-- Adjacent origins define a **replicon** — the segment of DNA replicated from one origin
-- Replication forks from adjacent origins meet and the replicons fuse
+- Each origin opens into a **replication bubble** with a fork at each end; the forks move apart in opposite directions
+- Neighboring bubbles grow until they meet and merge, so each chromosome is copied as one continuous molecule
+- Each stretch of DNA is copied **exactly once** per cell cycle, so each daughter cell receives one complete copy
 
 > **Why multiple origins?** Human DNA polymerase moves at ~50 nucleotides/second. With 6.4 billion bp and bidirectional replication from one origin, it would take ~2 years. Multiple origins reduce this to ~8 hours.
       `
@@ -116,10 +116,10 @@ DNA replication begins at specific sequences called **origins of replication**:
             placeholder: 'e.g. conservative'
           },
           {
-            question: 'In E. coli, the single origin of replication is called:',
-            answer: 'oriC',
-            acceptableAnswers: ['oriC', 'OriC', 'oricC', 'ori C'],
-            placeholder: 'e.g. ori1'
+            question: 'The number of replication forks that form at a single origin of replication:',
+            answer: '2',
+            acceptableAnswers: ['2', 'two', 'Two'],
+            placeholder: 'e.g. 1'
           },
           {
             question: 'The isotope of nitrogen used to make heavy DNA in the Meselson-Stahl experiment:',
@@ -139,15 +139,15 @@ DNA replication begins at specific sequences called **origins of replication**:
       exercise: {
         questions: [
           {
-            question: 'If a drug blocks the licensing of replication origins, what would be the consequence?',
+            question: 'A human genome has about 6 billion base pairs, yet a human cell copies all of it in a few hours of S phase. Which feature of eukaryotic replication best explains this?',
             options: [
-              'Helicase would unwind DNA without origins, so replication speeds up',
-              'Origins could not fire, so the genome would not be fully duplicated',
-              'Origins would fire repeatedly, so DNA would be re-replicated in S phase',
-              'Replication would begin, but Okazaki fragments would never be joined'
+              'Helicase unwinds the DNA so quickly that one fork covers the genome',
+              'Copying starts at many origins, so many forks work at the same time',
+              'Only the genes that are being expressed are copied in each S phase',
+              'Each strand is copied by RNA polymerase, which needs no primer'
             ],
             correctAnswer: 1,
-            explanation: 'The licensing system ensures that pre-replication complexes are loaded at origins during G1. If licensing is blocked, origins cannot fire during S phase, DNA replication cannot initiate (or is incomplete), and the cell cannot proceed through the cell cycle.'
+            explanation: 'Thousands of origins each open into a bubble with two forks, so many stretches of each chromosome are copied at the same time. A single fork would need far longer, every part of the genome must be copied (not just expressed genes), and DNA polymerase, not RNA polymerase, builds the new DNA strands.'
           }
         ]
       }

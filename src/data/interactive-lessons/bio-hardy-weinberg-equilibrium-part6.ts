@@ -26,11 +26,11 @@ Where:
 2. **Calculate** allele frequencies (p and q) from the data
 3. **Calculate** expected genotype counts using $p^2$, $2pq$, $q^2$
 4. **Compute** $\\chi^2$ using the formula
-5. **Determine** degrees of freedom: $df = \\text{categories} - 1 - \\text{parameters estimated}$
+5. **Determine** degrees of freedom: $df = \\text{number of categories} - 1$
 6. **Compare** $\\chi^2$ to the critical value at $\\alpha = 0.05$
 7. **Conclude:** reject or fail to reject $H_0$
 
-> ⚠️ **Degrees of freedom for HW:** With 3 genotype categories and 1 estimated parameter (p or q), $df = 3 - 1 - 1 = 1$.
+> ⚠️ **Degrees of freedom for HW:** The AP Biology formula sheet defines degrees of freedom as the number of distinct possible outcomes minus one. With 3 genotype categories, $df = 3 - 1 = 2$. (Some college statistics courses subtract one more when p is estimated from the same data; on the AP exam, use categories − 1.)
       `
     },
     {
@@ -70,11 +70,11 @@ $$\\chi^2 = \\frac{13.69}{294.3} + \\frac{54.76}{496.4} + \\frac{13.69}{209.3}$$
 
 $$\\chi^2 = 0.047 + 0.110 + 0.065 = 0.222$$
 
-**Step 5:** $df = 1$
+**Step 5:** $df = 3 - 1 = 2$
 
-**Step 6:** Critical value at $\\alpha = 0.05$, $df = 1$ → $\\chi^2_{\\text{crit}} = 3.841$
+**Step 6:** Critical value at $\\alpha = 0.05$, $df = 2$ → $\\chi^2_{\\text{crit}} = 5.99$
 
-**Step 7:** Since $0.222 < 3.841$, we **fail to reject** $H_0$.
+**Step 7:** Since $0.222 < 5.99$, we **fail to reject** $H_0$.
 
 > ✅ **Conclusion:** There is no significant evidence that this population deviates from Hardy-Weinberg equilibrium for the MN blood group.
       `
@@ -88,8 +88,8 @@ $$\\chi^2 = 0.047 + 0.110 + 0.065 = 0.222$$
           {
             question: 'In a Hardy-Weinberg chi-square test with three genotype categories, the degrees of freedom equals:',
             options: ['3', '2', '1', '0'],
-            correctAnswer: 2,
-            explanation: 'df = (number of categories) − 1 − (number of estimated parameters) = 3 − 1 − 1 = 1. We subtract 1 because we estimated one parameter (p) from the data; q is determined since p + q = 1.'
+            correctAnswer: 1,
+            explanation: 'On the AP exam, degrees of freedom = number of categories − 1. Three genotype categories (for example AA, Aa, aa) give df = 3 − 1 = 2, so the critical value at p = 0.05 is 5.99.'
           },
           {
             question: 'If the calculated chi-square value is LARGER than the critical value, you should:',
@@ -111,19 +111,19 @@ $$\\chi^2 = 0.047 + 0.110 + 0.065 = 0.222$$
       content: `
 ### Chi-Square Critical Values Reference
 
-For HW tests, $df = 1$. Here are critical values at common significance levels:
+For a HW test with three genotypes, $df = 2$. Here are critical values at the two significance levels on the AP formula sheet:
 
-| Significance level ($\\alpha$) | Critical $\\chi^2$ value | Meaning |
+| Significance level ($\\alpha$) | Critical $\\chi^2$ value (df = 2) | Meaning |
 |-------------------------------|------------------------|---------|
-| 0.10 | 2.706 | 10% chance of Type I error |
-| **0.05** | **3.841** | **Standard threshold for AP exam** |
-| 0.01 | 6.635 | 1% chance of Type I error |
-| 0.001 | 10.828 | Very stringent |
+| **0.05** | **5.99** | **Standard threshold for the AP exam** |
+| 0.01 | 9.21 | Stricter: only a 1% chance of rejecting a true null hypothesis |
+
+(For a test with only two categories, df = 1 and the critical value at 0.05 is 3.84.)
 
 ### Interpreting Results
 
-- $\\chi^2 < 3.841$ → **Fail to reject** $H_0$ → Data are consistent with HW equilibrium
-- $\\chi^2 > 3.841$ → **Reject** $H_0$ → Population may not be in HW equilibrium
+- $\\chi^2 < 5.99$ → **Fail to reject** $H_0$ → Data are consistent with HW equilibrium
+- $\\chi^2 > 5.99$ → **Reject** $H_0$ → Population may not be in HW equilibrium
 
 > ⚠️ **Common AP mistake:** "Fail to reject" does NOT mean "we proved the population is in equilibrium." It means we don't have enough statistical evidence to conclude otherwise. The population may still be evolving — we just can't detect it with this sample.
 
@@ -152,8 +152,8 @@ A biologist tests whether a population of frogs is in HW equilibrium for a color
         correctAnswers: ['2.0', '4.0', '8.0', 'rejected'],
         hint1: 'For GG: $(40 - 50)^{2}/50$ = 100/50',
         hint2: 'For Gg: $(120 - 100)^{2}/100$ = 400/100',
-        hint3: 'Total $\\chi^{2}$ = 2.0 + 4.0 + 2.0 = 8.0. Compare with 3.841.',
-        explanation: 'GG: $(40-50)^{2}/50$ = 2.0. Gg: $(120-100)^{2}/100$ = 4.0. gg: $(40-50)^{2}/50$ = 2.0. Total $\\chi^{2}$ = 8.0. Since 8.0 > 3.841, we reject $H_{0}$. There is excess heterozygosity — possibly heterozygote advantage.'
+        hint3: 'Total $\\chi^{2}$ = 2.0 + 4.0 + 2.0 = 8.0. Compare with 5.99 (df = 2).',
+        explanation: 'GG: $(40-50)^{2}/50$ = 2.0. Gg: $(120-100)^{2}/100$ = 4.0. gg: $(40-50)^{2}/50$ = 2.0. Total $\\chi^{2}$ = 8.0. With df = 3 − 1 = 2, the critical value is 5.99. Since 8.0 > 5.99, we reject $H_{0}$. There is excess heterozygosity — possibly heterozygote advantage.'
       }
     },
     {
@@ -163,7 +163,7 @@ A biologist tests whether a population of frogs is in HW equilibrium for a color
       exercise: {
         questions: [
           {
-            question: 'A researcher calculates $\\chi^{2}$ = 1.85 for a HW test (df = 1, α = 0.05). What should she conclude?',
+            question: 'A researcher calculates $\\chi^{2}$ = 1.85 for a HW test with three genotype categories (α = 0.05). What should she conclude?',
             options: [
               'The population has been proven to be in HW equilibrium',
               'The population is evolving, so HW equilibrium is rejected',
@@ -171,7 +171,7 @@ A biologist tests whether a population of frogs is in HW equilibrium for a color
               'The sample was too small to draw any conclusion'
             ],
             correctAnswer: 2,
-            explanation: 'Since $\\chi^{2}$ = 1.85 < 3.841 (critical value at α = 0.05, df = 1), we fail to reject the null hypothesis. This means we do not have sufficient statistical evidence to conclude the population deviates from HW equilibrium — but this does NOT prove equilibrium exists.'
+            explanation: 'Since $\\chi^{2}$ = 1.85 < 5.99 (critical value at α = 0.05, df = 2), we fail to reject the null hypothesis. This means we do not have sufficient statistical evidence to conclude the population deviates from HW equilibrium — but this does NOT prove equilibrium exists.'
           },
           {
             question: 'In the frog example, the excess of heterozygotes (Gg) compared to HW expectations most likely suggests:',

@@ -69,8 +69,8 @@ $$RF = \\frac{\\text{Number of recombinant offspring}}{\\text{Total offspring}} 
 ### Map Distance
 
 - **1% recombination frequency = 1 centimorgan (cM) = 1 map unit (m.u.)**
-- Named after Thomas Hunt Morgan
-- **Alfred Sturtevant** (Morgan's student) created the first genetic map in 1913 using *Drosophila*
+- The more often two genes recombine, the farther apart they are on the chromosome
+- Calculating map distance from recombination data is called **gene (genetic) mapping**
 
 ### Important Limits
 
@@ -114,44 +114,53 @@ $$RF = \\frac{97 + 103}{412 + 388 + 97 + 103} \\times 100\\% = \\frac{200}{1000}
             options: ['4', '40', '0.4', '400']
           },
           {
-            label: 'The first genetic map was constructed by ___',
-            options: ['Alfred Sturtevant', 'Gregor Mendel', 'Thomas Morgan', 'Walter Sutton']
+            label: 'In a test cross of two linked genes, the two most frequent offspring classes are the ___ types',
+            options: ['parental', 'recombinant', 'double-mutant', 'wild']
           }
         ],
-        correctAnswers: ['centimorgan', '50%', '4', 'Alfred Sturtevant'],
-        hint1: 'The unit of genetic map distance is named after Morgan.',
+        correctAnswers: ['centimorgan', '50%', '4', 'parental'],
+        hint1: 'The unit of genetic map distance is the map unit, also called a centimorgan.',
         hint2: 'Only 2 of 4 chromatids recombine in a single crossover event.',
         hint3: 'RF = recombinants / total × 100% → 40/1000 × 100% = ?',
-        explanation: '1% RF = 1 centimorgan (cM). Maximum RF is 50% because only 2 of 4 chromatids cross over. RF = 40/1000 = 4%. Sturtevant created the first genetic map in 1913 as Morgan\'s undergraduate student.'
+        explanation: '1% RF = 1 centimorgan (cM), or 1 map unit. Maximum RF is 50% because only 2 of 4 chromatids cross over. RF = 40/1000 = 4%. Crossing over separates linked alleles only some of the time, so the parental combinations stay the most common classes.'
       }
     },
     {
       id: 'chr3-threept',
       type: 'text' as const,
-      content: `## Three-Point Test Cross & Gene Mapping
+      content: `## Building a Map from Two-Point Distances
 
-A **three-point test cross** allows you to determine the order of three linked genes and the distances between them simultaneously.
+Each two-point test cross gives one distance. Because map distances between nearby genes are roughly **additive**, distances measured in pairs can place three genes in order on a chromosome.
 
-### Steps for a Three-Point Cross
+### Worked Example: Ordering Three Genes
 
-1. **Identify the parental classes** — the two most frequent phenotype classes
-2. **Identify the double crossover (DCO) classes** — the two least frequent classes
-3. **Determine gene order** — compare DCO classes to parental classes; the allele that "switches" in the DCO reveals the **middle gene**
-4. **Calculate map distances**:
-   - Distance A–B = (single CO between A and B + DCO) / total × 100%
-   - Distance B–C = (single CO between B and C + DCO) / total × 100%
+Three separate two-point test crosses give these recombination frequencies:
 
-### Interference & Coefficient of Coincidence
+| Gene pair | Recombination frequency | Map distance |
+|-----------|------------------------|--------------|
+| A and B | 12% | 12 cM |
+| B and C | 7% | 7 cM |
+| A and C | 19% | 19 cM |
 
-$$\\text{Coefficient of Coincidence (c.o.c.)} = \\frac{\\text{Observed DCO}}{\\text{Expected DCO}}$$
+**Step 1 — Find the outer genes.** The largest distance (A–C, 19 cM) must span the two genes at the ends.
 
-$$\\text{Expected DCO} = (\\text{distance 1}) \\times (\\text{distance 2}) \\times \\text{total offspring}$$
+**Step 2 — Place the middle gene.** That leaves B in the middle.
 
-$$\\text{Interference (I)} = 1 - \\text{c.o.c.}$$
+**Step 3 — Check additivity.** A–B + B–C = 12 + 7 = 19 cM = A–C. ✓
 
-- **I = 0**: No interference (crossovers occur independently)
-- **I > 0**: **Positive interference** (one crossover inhibits nearby crossovers) — most common
-- **I < 0**: **Negative interference** (one crossover stimulates nearby crossovers) — rare`
+**Map:** A ——12—— B ——7—— C
+
+> 💡 Genes very far apart recombine about 50% of the time, just like genes on different chromosomes, so a long distance is measured most accurately by adding up shorter intervals between genes in the middle.
+
+### Testing for Linkage with Chi-Square
+
+Linkage is identified by **quantitative analysis**: if two genes assort independently, a dihybrid test cross predicts four classes in a **1:1:1:1** ratio. Using the counts from the Recombination Frequency example (412, 388, 97, 103; total 1,000), the expected count is 250 per class:
+
+$$\\chi^2 = \\frac{162^2}{250} + \\frac{138^2}{250} + \\frac{153^2}{250} + \\frac{147^2}{250} \\approx 361$$
+
+With 4 classes, df = 4 − 1 = 3, and the critical value at p = 0.05 is 7.81. Because 361 is far above 7.81, we **reject** the hypothesis of independent assortment: the excess of parental types means the genes are linked.
+
+(Three-point crosses and interference calculations are beyond the scope of the AP exam.)`
     },
     {
       id: 'chr3-quiz2',
@@ -160,26 +169,26 @@ $$\\text{Interference (I)} = 1 - \\text{c.o.c.}$$
       exercise: {
         questions: [
           {
-            question: 'In a three-point test cross, the double crossover classes are used to determine:',
+            question: 'Two-point test crosses give these map distances: M–N = 4 cM, N–P = 10 cM, and M–P = 14 cM. What is the order of the three genes on the chromosome?',
             options: [
-              'The gene in the middle position',
-              'Which genes are on different chromosomes',
-              'The total map length',
-              'Whether the genes are autosomal or sex-linked'
+              'N — M — P',
+              'M — N — P',
+              'M — P — N',
+              'N — P — M'
             ],
-            correctAnswer: 0,
-            explanation: 'The double crossover (DCO) classes are the rarest. Comparing them to the parental classes reveals which allele has "switched" — that allele belongs to the middle gene in the linear order.'
+            correctAnswer: 1,
+            explanation: 'The largest distance, M–P (14 cM), must span the two outer genes, so N lies between them. The check works: M–N + N–P = 4 + 10 = 14 cM. Any order that puts M or P in the middle would require a distance larger than 14 cM between the ends.'
           },
           {
-            question: 'If the coefficient of coincidence is 0.6, the interference is:',
+            question: 'A dihybrid fly is test crossed, and the four offspring classes are compared with a 1:1:1:1 ratio. The chi-square value is 52.0 (df = 3; critical value 7.81). What do the results suggest about the two genes?',
             options: [
-              '0.4 (positive interference)',
-              '0.6 (positive interference)',
-              '1.4 (negative interference)',
-              '0 (no interference)'
+              'They are likely linked, as the counts depart from 1:1:1:1 by more than chance',
+              'They assort independently, as a large χ² means a close fit to 1:1:1:1',
+              'They lie on different chromosomes, as some recombinant offspring appeared',
+              'They cannot be tested, as chi-square applies only to monohybrid crosses'
             ],
             correctAnswer: 0,
-            explanation: 'Interference = 1 − c.o.c. = 1 − 0.6 = 0.4. Positive interference means that one crossover partially inhibits a second crossover nearby, so fewer DCOs are observed than expected.'
+            explanation: 'A χ² of 52.0 is far above 7.81, so the deviation from the 1:1:1:1 ratio expected for independent assortment is too large to be chance, which suggests the genes are linked. A large χ² signals a poor fit, not a close one. Recombinant offspring appear for linked genes too, whenever a crossover falls between them, and chi-square works for any number of classes.'
           }
         ]
       }

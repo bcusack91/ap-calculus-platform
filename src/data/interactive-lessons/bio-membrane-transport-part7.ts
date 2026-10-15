@@ -127,7 +127,7 @@ Comprehensive AP-exam-style questions integrating concepts from all parts of the
             correctAnswer: 'Simple diffusion'
           },
           {
-            question: 'Glucose entering a cell via GLUT transporter down its gradient:',
+            question: 'Glucose entering a cell through a carrier protein, down its gradient:',
             options: ['Simple diffusion', 'Facilitated diffusion', 'Active transport', 'Endocytosis'],
             correctAnswer: 'Facilitated diffusion'
           },

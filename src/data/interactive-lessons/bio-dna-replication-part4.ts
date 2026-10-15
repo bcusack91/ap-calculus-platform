@@ -18,24 +18,22 @@ DNA replication must be extraordinarily accurate — the error rate is approxima
       content: `
 ### Three Layers of Replication Fidelity
 
-**Layer 1: Base selection by DNA polymerase (~10$^5$ accuracy)**
-- DNA polymerase has a tight active site that favors correct Watson-Crick base pairs (A-T, G-C)
-- Incorrect bases fit poorly and are rejected before incorporation
-- Error rate: ~1 in 100,000
+**Layer 1: Base selection by DNA polymerase**
+- DNA polymerase has a tight active site that favors correct base pairs (A-T, G-C)
+- Incorrect bases fit poorly and are usually rejected before they are added
+- Error rate at this stage: roughly 1 in 100,000 bases
 
-**Layer 2: Proofreading (3' → 5' exonuclease activity, ~10$^2$ improvement)**
-- DNA polymerase has a built-in editor: if a wrong nucleotide is incorporated, the polymerase detects the mismatch (distortion in the helix)
-- The polymerase reverses direction and removes the incorrect nucleotide using **3' → 5' exonuclease** activity
-- A correct nucleotide is then inserted
-- Combined error rate: ~1 in 10$^7$
+**Layer 2: Proofreading by DNA polymerase**
+- If a wrong nucleotide is added anyway, the mismatched pair distorts the helix
+- DNA polymerase detects the distortion, backs up, removes the incorrect nucleotide and inserts the correct one
+- Proofreading improves accuracy about a hundredfold
 
-**Layer 3: Mismatch repair (MMR, ~10$^3$ improvement)**
-- After replication, mismatch repair proteins scan the newly synthesized DNA
-- They detect and correct remaining mismatches
-- The key challenge: distinguishing which strand has the error (old vs. new strand)
-  - In E. coli: the parental strand is methylated (GATC sites); the new strand is not yet methylated, so repair enzymes know to fix the new strand
-  - In eukaryotes: the new strand is identified by the presence of nicks (gaps not yet sealed)
-- Combined final error rate: ~1 in 10$^{10}$
+**Layer 3: Mismatch repair after replication**
+- Repair proteins scan the newly made DNA for mismatched bases that escaped proofreading
+- They cut out a short stretch of the new strand containing the error; DNA polymerase fills the gap using the old strand as a template, and **ligase** seals the backbone
+- Combined final error rate: about 1 in 10$^{10}$
+
+> **Why this matters for the AP exam:** The CED states that errors in DNA replication or in DNA repair mechanisms can cause random **mutations**. An error that escapes all three layers is copied into both daughter molecules at the next replication and becomes a permanent change in sequence.
       `
     },
     {
@@ -47,7 +45,7 @@ DNA replication must be extraordinarily accurate — the error rate is approxima
       exercise: {
         questions: [
           {
-            question: 'A mutant DNA polymerase lacks 3\u2019 to 5\u2019 exonuclease activity but retains normal polymerase activity. What is the predicted effect on mutation rates?',
+            question: 'A mutant DNA polymerase has lost its proofreading activity but still adds nucleotides normally. What is the predicted effect on mutation rates?',
             options: [
               'No change in mutation rate, as mismatch repair corrects every slip',
               'Mutation rate rises sharply, since misincorporated bases are no longer removed',
@@ -55,18 +53,18 @@ DNA replication must be extraordinarily accurate — the error rate is approxima
               'The error rate falls, because the polymerase now adds bases more slowly'
             ],
             correctAnswer: 1,
-            explanation: 'Proofreading (3\u2019-5\u2019 exonuclease) typically provides a 100-fold improvement in accuracy. Losing it increases the error rate from ~$1/10^{10}$ to ~$1/10^{8}$ (base selection and mismatch repair still operate). This is a significant increase in mutation rate.'
+            explanation: 'Proofreading typically improves accuracy about 100-fold. Losing it means more wrong bases are left in the new strand; mismatch repair catches many but not all of them, so the mutation rate rises. Polymerase can still build DNA without proofreading, and nothing about the change makes it more accurate.'
           },
           {
-            question: 'In mismatch repair, how does the cell distinguish the parental (correct) strand from the daughter (potentially incorrect) strand in E. coli?',
+            question: 'A mismatched base pair escapes both proofreading and mismatch repair. Why does the error become a permanent mutation after the next round of replication?',
             options: [
-              'The parental strand is longer because the new strand still lacks its ends',
-              'Only the parental strand is methylated at GATC sites right after replication',
-              'The parental strand still carries RNA primers that mark it as the template',
-              'The new strand is methylated at GATC sites, which flags it for repair'
+              'The wrong base acts as a template for a matching partner, leaving no mismatch',
+              'The mismatch is copied exactly into both daughter molecules as the same mismatch',
+              'The cell destroys the strand with the error, so only the mutant strand survives',
+              'The mismatch is translated into protein, which then changes the DNA sequence'
             ],
-            correctAnswer: 1,
-            explanation: 'E. coli uses Dam methylase to add methyl groups to GATC sequences. Immediately after replication, only the parental strand is methylated (the new strand has not yet been methylated). Mismatch repair proteins use this asymmetry to determine which strand to repair.'
+            correctAnswer: 0,
+            explanation: 'When the strands separate, the strand carrying the wrong base is used as a template, and the new strand built on it pairs correctly with that wrong base. That daughter molecule is now fully base-paired, so repair proteins have no mismatch to detect, and the change is permanent. A mismatch cannot be copied as a mismatch, the cell does not simply destroy one strand, and proteins do not rewrite DNA.'
           }
         ]
       }
@@ -75,47 +73,41 @@ DNA replication must be extraordinarily accurate — the error rate is approxima
       id: 'dr4-damage',
       type: 'text' as const,
       content: `
-### DNA Damage and Additional Repair Mechanisms
+### External Causes of Mutation and Their Repair
 
-Beyond replication errors, DNA is constantly damaged by environmental and metabolic factors:
+Beyond replication errors, the CED names **external factors, including radiation and reactive chemicals**, as causes of random mutations. Agents that raise the mutation rate are called **mutagens**.
 
-**Types of DNA damage:**
-- **Deamination:** Spontaneous loss of an amino group from cytosine, converting it to uracil (if not repaired, G-C becomes A-T after replication)
-- **Depurination:** Loss of a purine base (A or G) from the sugar-phosphate backbone (~5000 per cell per day)
-- **Thymine dimers:** UV light causes adjacent thymines to form covalent bonds (pyrimidine dimers), distorting the helix
-- **Oxidative damage:** Reactive oxygen species (ROS) modify bases (e.g., 8-oxoguanine mispairs with adenine)
-- **Alkylation:** Chemical agents add alkyl groups to bases
+| Mutagen | What it does to DNA |
+|---------|---------------------|
+| **Ultraviolet (UV) radiation** | Can link two adjacent bases on the same strand, distorting the helix so it is copied incorrectly |
+| **High-energy radiation** (X-rays, gamma rays) | Can break the DNA backbone, sometimes on both strands |
+| **Reactive chemicals** (some in tobacco smoke, for example) | Change the structure of bases so they pair with the wrong partner |
 
-**Repair pathways:**
+**How damage is repaired.** Cells constantly monitor their DNA. In most repair, proteins recognize a damaged or distorted region, cut it out of one strand, and **DNA polymerase** fills the gap using the undamaged strand as a template; **ligase** then seals the backbone. The same complementary base pairing that makes replication accurate is what makes this repair possible.
 
-| Pathway | Damage type | Mechanism |
-|---------|------------|-----------|
-| **Base excision repair (BER)** | Modified/damaged single bases | Glycosylase removes damaged base → AP endonuclease cuts backbone → polymerase fills gap → ligase seals |
-| **Nucleotide excision repair (NER)** | Bulky lesions (thymine dimers, crosslinks) | Endonucleases cut on both sides of damage → ~12 nt oligonucleotide removed → polymerase fills → ligase seals |
-| **Homologous recombination (HR)** | Double-strand breaks (DSBs) | Uses sister chromatid as template for accurate repair — only in S/G$_2$ phase |
-| **Non-homologous end joining (NHEJ)** | Double-strand breaks | Directly ligates broken ends — faster but error-prone (may lose bases) |
+**When repair fails.** If repair systems are overwhelmed (very high UV exposure) or defective (an inherited mutation in a repair gene), mutations accumulate. Mutations in genes that control the cell cycle can then lead to **cancer**. People who inherit a defect in the system that removes UV damage, for example, develop skin cancers at very high rates after sun exposure.
 
-> **Xeroderma pigmentosum (XP):** A genetic disease caused by mutations in NER genes.  Patients cannot repair UV-induced thymine dimers and are extremely sensitive to sunlight, with high rates of skin cancer.
+**Mutations as raw material.** Whether a mutation is beneficial, harmful or neutral depends on its effect and on the environment. Mutations that escape repair are the ultimate source of new alleles, and so of the genetic variation that natural selection acts on.
       `
     },
     {
       id: 'dr4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-### Checkpoint — DNA Repair
+### Checkpoint — DNA Damage and Repair
       `,
       exercise: {
         questions: [
           {
-            question: 'A patient with xeroderma pigmentosum develops skin cancer after minimal sun exposure. Which DNA repair pathway is defective?',
+            question: 'A person inherits a defect in the repair system that removes UV-damaged stretches of DNA. Which outcome is most likely?',
             options: [
-              'Mismatch repair, which corrects bases misincorporated during replication',
-              'Nucleotide excision repair, which removes UV-induced thymine dimers',
-              'Base excision repair, which removes single oxidized or deaminated bases',
-              'Homologous recombination, which repairs breaks using the sister chromatid'
+              'Skin cells accumulate mutations after sun exposure, raising cancer risk',
+              'The person cannot replicate DNA, so their cells never divide',
+              'Sunlight damage is repaired faster because DNA polymerase compensates',
+              'Only the person\'s gametes are affected, so they themselves stay healthy'
             ],
-            correctAnswer: 1,
-            explanation: 'XP is caused by mutations in genes encoding NER proteins. NER removes thymine dimers caused by UV radiation. Without functional NER, these dimers persist, block replication, and if bypassed by error-prone polymerases, cause mutations that lead to cancer.'
+            correctAnswer: 0,
+            explanation: 'Without that repair system, UV damage in skin cells persists and is copied incorrectly, so mutations build up, and mutations in cell-cycle genes can cause cancer. Replication itself still works, DNA polymerase alone cannot remove damaged stretches, and the defect is present in every cell, including skin cells.'
           }
         ]
       }
@@ -129,16 +121,16 @@ Beyond replication errors, DNA is constantly damaged by environmental and metabo
       exercise: {
         questions: [
           {
-            question: 'The UV-induced lesion where adjacent pyrimidines become covalently linked:',
-            answer: 'thymine dimer',
-            acceptableAnswers: ['thymine dimer', 'Thymine dimer', 'pyrimidine dimer', 'thymine dimers'],
-            placeholder: 'e.g. deletion mutation'
+            question: 'The general term for an agent, such as UV radiation, that increases the rate of mutation:',
+            answer: 'mutagen',
+            acceptableAnswers: ['mutagen', 'Mutagen', 'mutagens', 'a mutagen'],
+            placeholder: 'e.g. allele'
           },
           {
-            question: 'The repair pathway that uses a sister chromatid as a template for accurate double-strand break repair:',
-            answer: 'homologous recombination',
-            acceptableAnswers: ['homologous recombination', 'HR', 'Homologous recombination', 'homologous recombination repair'],
-            placeholder: 'e.g. NHEJ'
+            question: 'The enzyme that seals the sugar-phosphate backbone after a damaged stretch is cut out and refilled:',
+            answer: 'DNA ligase',
+            acceptableAnswers: ['DNA ligase', 'ligase', 'Ligase', 'DNA Ligase'],
+            placeholder: 'e.g. helicase'
           }
         ]
       }
@@ -152,15 +144,15 @@ Beyond replication errors, DNA is constantly damaged by environmental and metabo
       exercise: {
         questions: [
           {
-            question: 'Why is homologous recombination (HR) a more accurate repair mechanism for double-strand breaks than non-homologous end joining (NHEJ)?',
+            question: 'A bacterial strain lacking mismatch repair is grown for many generations alongside a normal strain. Which prediction is best supported?',
             options: [
-              'HR works faster than NHEJ, so fewer breaks stay open long enough to mutate',
-              'HR copies the intact sister chromatid; NHEJ rejoins ends with no template',
-              'NHEJ is limited to prokaryotes; eukaryotes repair breaks only by HR',
-              'HR needs no enzymes, so no enzyme errors can enter the repaired DNA'
+              'The repair-deficient strain stops dividing because replication cannot occur',
+              'The repair-deficient strain gains more mutations, so it becomes more varied',
+              'Both strains gain mutations at the same rate, since proofreading is identical',
+              'The repair-deficient strain gains only beneficial mutations over time'
             ],
             correctAnswer: 1,
-            explanation: 'HR uses the intact sister chromatid as a template for synthesis across the break, restoring the original sequence exactly. NHEJ processes and ligates the broken ends directly, often resulting in small deletions or insertions at the repair site. However, HR is only available in S/G2 phase when a sister chromatid exists.'
+            explanation: 'Without mismatch repair, errors that escape proofreading become permanent, so mutations accumulate faster and the population becomes more genetically varied. Replication still occurs, proofreading alone does not make the rates equal, and mutations arise at random: most are neutral or harmful, and whether any is beneficial depends on the environment.'
           }
         ]
       }

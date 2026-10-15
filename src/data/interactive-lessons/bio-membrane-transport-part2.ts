@@ -57,15 +57,15 @@ Large polar molecules and ions cannot pass through the lipid bilayer by simple d
 - Bind the solute and undergo a **conformational change** to transport it across
 - Slower than channels (100-1000 molecules/second)
 - Specific to particular molecules
-- Can be saturated (exhibit **Michaelis-Menten kinetics**)
-- Example: **GLUT transporters** — facilitate glucose entry into cells
+- Can be **saturated**: once every carrier is occupied, adding more solute cannot speed transport
+- Example: **glucose carrier proteins** — facilitate glucose entry into cells
 
 | Feature | Channel Proteins | Carrier Proteins |
 |---------|-----------------|-----------------|
 | Mechanism | Hydrophilic pore | Conformational change |
 | Speed | Very fast | Slower |
 | Saturation | Rarely saturated | Can be saturated |
-| Example | K$^+$ channels, aquaporins | GLUT glucose transporters |
+| Example | K$^+$ channels, aquaporins | Glucose carrier proteins |
       `
     },
     {
@@ -88,7 +88,7 @@ Large polar molecules and ions cannot pass through the lipid bilayer by simple d
             explanation: 'Facilitated diffusion uses channel or carrier proteins to help polar molecules and ions cross the membrane, but the driving force is the concentration gradient — no cellular energy (ATP) is expended. It is still passive transport.'
           },
           {
-            question: 'A carrier protein that transports glucose shows a maximum transport rate (Vmax) that cannot be exceeded even at very high glucose concentrations. What explains this saturation?',
+            question: 'A carrier protein that transports glucose shows a maximum transport rate that cannot be exceeded even at very high glucose concentrations. What explains this saturation?',
             options: [
               'The cell runs out of the ATP that carrier proteins need',
               'Every carrier protein is already occupied at high glucose levels',
@@ -96,7 +96,7 @@ Large polar molecules and ions cannot pass through the lipid bilayer by simple d
               'The concentration gradient reverses as glucose fills the cell'
             ],
             correctAnswer: 1,
-            explanation: 'Like enzymes, carrier proteins have a finite number of binding sites. When all carriers are simultaneously occupied (saturated), increasing substrate concentration cannot increase the rate further — the system operates at Vmax. This is analogous to enzyme saturation kinetics.'
+            explanation: 'Like enzymes, carrier proteins have a finite number of binding sites. When all carriers are simultaneously occupied (saturated), increasing glucose concentration cannot increase the rate further — the transport rate levels off. This is the same saturation seen when every active site of an enzyme is occupied.'
           },
           {
             question: 'Nerve cells have voltage-gated Na+ channels that open when the membrane depolarizes. This is an example of:',

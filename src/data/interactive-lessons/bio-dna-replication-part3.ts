@@ -16,21 +16,20 @@ DNA replication requires a team of enzymes and proteins working together at the 
       id: 'dr3-enzymes',
       type: 'text' as const,
       content: `
-### Key Enzymes and Proteins
+### Key Enzymes
 
-| Enzyme/Protein | Function |
+The CED names five enzymes for DNA replication and transcription. Four of them work at the replication fork:
+
+| Enzyme | Function |
 |---------------|----------|
-| **Helicase** | Unwinds the double helix by breaking hydrogen bonds between bases; moves along the DNA using ATP hydrolysis |
-| **Single-strand binding proteins (SSB)** | Bind to exposed single-stranded DNA to prevent reannealing and protect from nuclease degradation |
-| **Topoisomerase (Gyrase in prokaryotes)** | Relieves torsional strain (supercoiling) ahead of the replication fork by cutting, swiveling, and re-joining the DNA backbone |
-| **Primase** | RNA polymerase that synthesizes a short **RNA primer** (5-10 nucleotides) complementary to the template; provides the free 3'-OH needed by DNA polymerase |
-| **DNA Polymerase III** (prokaryotes) | The main replicative polymerase; adds nucleotides to the 3' end of the primer/growing strand in the 5' → 3' direction |
-| **DNA Polymerase I** (prokaryotes) | Removes RNA primers (5' → 3' exonuclease activity) and replaces them with DNA |
-| **DNA Ligase** | Seals the nick (phosphodiester bond) between adjacent Okazaki fragments after primer removal |
-| **Sliding clamp (PCNA in eukaryotes)** | Ring-shaped protein that encircles DNA and tethers DNA polymerase to the template, increasing processivity |
-| **Clamp loader** | Uses ATP to load the sliding clamp onto DNA at primer-template junctions |
+| **Helicase** | Unwinds the double helix by breaking the hydrogen bonds between bases, separating the two template strands |
+| **Topoisomerase** | Relieves the strain (supercoiling) that builds up ahead of the replication fork as the helix unwinds, by cutting, swiveling and rejoining the DNA backbone |
+| **DNA polymerase** | Adds nucleotides to the 3′ end of a growing strand, building new DNA in the 5′ → 3′ direction using the template strand as a guide; it needs an **RNA primer** to start |
+| **DNA ligase** | Seals the gaps in the sugar-phosphate backbone between DNA fragments on the lagging strand |
 
-> **Why primers?** DNA polymerase can only ADD nucleotides to an existing 3'-OH group.  It cannot start a new strand from scratch.  Primase (an RNA polymerase) CAN start de novo, providing the initial 3'-OH.
+(The fifth, **RNA polymerase**, carries out transcription. Other proteins at the fork, and the names of the separate steps, are beyond the scope of the AP exam.)
+
+> **Why primers?** DNA polymerase can only ADD nucleotides to an existing 3'-OH group.  It cannot start a new strand from scratch.  So a short **RNA primer**, complementary to the template, is laid down first to provide that starting 3' end. The primers are later removed and replaced with DNA.
       `
     },
     {
@@ -50,18 +49,18 @@ DNA replication requires a team of enzymes and proteins working together at the 
               'The primer activates helicase so the two strands can be pulled apart'
             ],
             correctAnswer: 1,
-            explanation: 'DNA polymerase has a fundamental limitation — it can only add nucleotides to the 3\u2019-OH of an existing nucleic acid chain. Primase synthesizes a short RNA primer to provide this initial 3\u2019-OH, which DNA polymerase then extends with deoxyribonucleotides.'
+            explanation: 'DNA polymerase has a fundamental limitation — it can only add nucleotides to the 3\u2019-OH of an existing nucleic acid chain. A short RNA primer, laid down first, provides this initial 3\u2019-OH, which DNA polymerase then extends with DNA nucleotides.'
           },
           {
             question: 'If topoisomerase is inhibited while helicase continues to unwind DNA, what occurs?',
             options: [
               'The DNA unwinds on its own, so the fork no longer needs helicase',
               'Overwinding builds ahead of the fork until the fork stalls',
-              'Single strands re-anneal behind the fork as SSB proteins detach',
-              'Primase can no longer bind, so no new primers are made'
+              'Single strands re-anneal behind the fork as ligase detaches',
+              'RNA primers can no longer form, so no new strands begin'
             ],
             correctAnswer: 1,
-            explanation: 'As helicase unwinds the helix, it creates positive supercoils (overwinding) ahead of the fork. Without topoisomerase to relieve this tension, the DNA becomes so tightly wound that helicase can no longer separate the strands. Many antibiotics (fluoroquinolones) and anticancer drugs (camptothecin) target topoisomerases.'
+            explanation: 'As helicase unwinds the helix, it creates overwinding (supercoiling) ahead of the fork. Without topoisomerase to relieve this tension, the DNA becomes so tightly wound that helicase can no longer separate the strands. Topoisomerase does not make primers, and ligase works behind the fork, not ahead of it.'
           }
         ]
       }
@@ -82,12 +81,11 @@ Because DNA polymerase can only synthesize in the **5' → 3' direction**, and t
 **Lagging strand:**
 - Template runs 5' → 3' (so new strand must grow 5' → 3' AWAY from the fork)
 - Synthesized **discontinuously** as a series of short fragments called **Okazaki fragments**
-  - ~1000-2000 nt in prokaryotes; ~100-200 nt in eukaryotes
 - Each Okazaki fragment requires its own RNA primer
-- After synthesis, **DNA Polymerase I** removes the RNA primers and fills in with DNA
-- **DNA Ligase** seals the remaining nicks, joining the Okazaki fragments into a continuous strand
+- After synthesis, the RNA primers are removed and replaced with DNA
+- **DNA ligase** seals the remaining gaps in the backbone, joining the Okazaki fragments into a continuous strand
 
-> **The lagging strand is the "complex" strand** — it requires repeated cycles of priming, extension, primer removal, gap filling, and ligation.  This makes lagging strand synthesis more error-prone and slower than leading strand synthesis.
+> **The lagging strand is the "complex" strand** — it requires repeated cycles of priming, extension, primer replacement, and joining by ligase, while the leading strand is built in one continuous piece.
       `
     },
     {
@@ -104,7 +102,7 @@ Because DNA polymerase can only synthesize in the **5' → 3' direction**, and t
               'The leading strand, which needs ligase to attach to the origin',
               'The lagging strand, whose Okazaki fragments stay unjoined',
               'Both strands equally, since each is built from many fragments',
-              'Neither strand, because DNA polymerase I seals every nick itself'
+              'Neither strand, because DNA polymerase seals every gap itself'
             ],
             correctAnswer: 1,
             explanation: 'The leading strand is synthesized continuously and needs only one ligation event. The lagging strand consists of hundreds or thousands of Okazaki fragments, each needing to be ligated to the next. Without ligase, the lagging strand remains in fragments — a severe defect.'
@@ -138,9 +136,9 @@ Because DNA polymerase can only synthesize in the **5' → 3' direction**, and t
             placeholder: 'e.g. restriction fragments'
           },
           {
-            question: 'The enzyme that synthesizes RNA primers:',
-            answer: 'primase',
-            acceptableAnswers: ['primase', 'Primase', 'RNA primase'],
+            question: 'The enzyme that unwinds the double helix at the replication fork:',
+            answer: 'helicase',
+            acceptableAnswers: ['helicase', 'Helicase', 'DNA helicase'],
             placeholder: 'e.g. polymerase'
           },
           {
@@ -161,15 +159,15 @@ Because DNA polymerase can only synthesize in the **5' → 3' direction**, and t
       exercise: {
         questions: [
           {
-            question: 'An antibiotic targets the bacterial DNA gyrase (topoisomerase II).  Why would this drug selectively affect bacteria without harming human cells?',
+            question: 'An antibiotic blocks the topoisomerase of bacteria but has little effect on the topoisomerase of human cells. What is the most likely reason it can act selectively?',
             options: [
-              'Human cells lack topoisomerases and relieve supercoils by other means',
-              'The bacterial enzyme differs in structure from human topoisomerases',
-              'Most human cells rarely replicate DNA, so they are seldom exposed to it',
+              'Human cells lack topoisomerase and relieve DNA strain by other means',
+              'The bacterial enzyme differs in structure from the human version',
+              'Most human cells never replicate DNA, so they never need the enzyme',
               'The drug enters bacterial cells but cannot cross human cell membranes'
             ],
             correctAnswer: 1,
-            explanation: 'Bacterial DNA gyrase (topoisomerase II) and eukaryotic topoisomerases are related but structurally different. Fluoroquinolone antibiotics (e.g., ciprofloxacin) specifically inhibit the bacterial enzyme. Human topoisomerase II is sufficiently different that it is not targeted at therapeutic doses.'
+            explanation: 'Bacterial and human topoisomerases do the same job but differ in shape, so a drug can fit the bacterial enzyme\'s binding site without fitting the human one. Human cells do have topoisomerases, many human cells divide and replicate DNA, and the selectivity comes from the enzyme, not from the membrane.'
           }
         ]
       }

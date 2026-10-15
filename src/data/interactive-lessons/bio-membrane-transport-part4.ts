@@ -35,20 +35,12 @@ This creates and maintains steep concentration gradients:
 - High K$^+$ inside, low K$^+$ outside
 - Net export of positive charge → contributes to the negative resting membrane potential (-70 mV)
 
-**The pump cycle:**
-1. 3 Na$^+$ bind to cytoplasmic side of the pump
-2. ATP is hydrolyzed; phosphate group is transferred to the pump (phosphorylation)
-3. Conformational change exposes Na$^+$ to the extracellular side; Na$^+$ is released
-4. 2 K$^+$ bind to the extracellular side
-5. Dephosphorylation causes conformational change back
-6. K$^+$ is released into the cytoplasm
+**How it works, in one sentence:** energy from ATP changes the pump protein's shape, so it alternately picks up ions on one side of the membrane and releases them on the other. (The step-by-step pump cycle and the exact ion counts are not tested on the AP exam; the idea that ATP-powered pumps build and maintain the gradients, and so the membrane potential, is.)
 
 > **Energy Cost:** The Na$^+$/K$^+$ ATPase consumes approximately **25-30% of total cellular ATP** in many animal cells. In neurons, this figure can reach 70%.
 
-**Other primary active transport pumps:**
-- **Ca$^{2+}$ ATPase** — pumps Ca$^{2+}$ out of the cytoplasm (into ER or extracellular space)
-- **H$^+$/K$^+$ ATPase** — pumps H$^+$ into the stomach lumen (gastric acid secretion)
-- **H$^+$ ATPase (proton pump)** — in plant cell membranes, creates proton gradients for secondary transport
+**Another primary active transport pump:**
+- **Proton pump (H$^+$ ATPase)** — in plant cell membranes, uses ATP to pump H$^+$ out of the cell, creating a proton gradient that other transport can use
       `
     },
     {
@@ -97,11 +89,11 @@ Secondary active transport uses the energy stored in an **existing ion gradient*
 **1. Symport (cotransport):**
 - Both substances move in the **same direction**
 - The ion moves DOWN its gradient, providing energy for the other substance to move AGAINST its gradient
-- Example: **SGLT1** — Na$^+$/glucose symporter in the intestinal epithelium uses the Na$^+$ gradient (established by Na$^+$/K$^+$ ATPase) to import glucose against its gradient
+- Example: a **Na$^+$/glucose symporter** in intestinal cells uses the Na$^+$ gradient (established by the Na$^+$/K$^+$ pump) to import glucose against its gradient
 
 **2. Antiport (exchange):**
 - Substances move in **opposite directions**
-- Example: **Na$^+$/H$^+$ exchanger** — Na$^+$ enters (down its gradient), H$^+$ exits (against its gradient), helping regulate intracellular pH
+- Example: a Na$^+$/H$^+$ exchanger — Na$^+$ enters (down its gradient) while H$^+$ exits (against its gradient), helping regulate the pH inside the cell
 
 > **Key Concept:** Secondary active transport is "indirectly" active — it does not directly use ATP, but it depends on a gradient that was created by a primary active transporter that DID use ATP. The energy was stored in the gradient.
 
@@ -117,7 +109,7 @@ Secondary active transport uses the energy stored in an **existing ion gradient*
       exercise: {
         questions: [
           {
-            question: 'In the small intestine, glucose is absorbed against its concentration gradient using a Na+/glucose symporter (SGLT1). Why is this considered secondary active transport?',
+            question: 'In the small intestine, glucose is absorbed against its concentration gradient using a Na+/glucose symporter. Why is this considered secondary active transport?',
             options: [
               'The symporter uses ATP directly to pump glucose against its gradient',
               'Glucose uptake is powered by the Na+ gradient that the Na+/K+ pump builds',
@@ -125,7 +117,7 @@ Secondary active transport uses the energy stored in an **existing ion gradient*
               'It uses GTP instead of ATP to pump glucose into the cell'
             ],
             correctAnswer: 1,
-            explanation: 'SGLT1 couples the downhill movement of Na+ (established by the Na+/K+ ATPase on the basolateral membrane) with the uphill movement of glucose. The energy for glucose transport comes indirectly from ATP — via the Na+ gradient — hence "secondary" active transport.'
+            explanation: 'The symporter couples the downhill movement of Na+ (a gradient built by the Na+/K+ pump) with the uphill movement of glucose. The energy for glucose transport comes indirectly from ATP — via the Na+ gradient — hence "secondary" active transport.'
           },
           {
             question: 'What is the difference between a symporter and an antiporter?',
@@ -162,10 +154,10 @@ Secondary active transport uses the energy stored in an **existing ion gradient*
             placeholder: 'e.g. antiporter'
           },
           {
-            question: 'Number of Na+ ions exported per cycle of the Na+/K+ ATPase:',
-            answer: '3',
-            acceptableAnswers: ['3', 'three', 'Three'],
-            placeholder: 'e.g. 2'
+            question: 'Transport that uses an existing ion gradient, rather than ATP directly, to move another substance against its gradient (two words):',
+            answer: 'secondary active',
+            acceptableAnswers: ['secondary active', 'secondary active transport', 'Secondary active transport', 'cotransport'],
+            placeholder: 'e.g. simple diffusion'
           }
         ]
       }
@@ -184,21 +176,21 @@ Secondary active transport uses the energy stored in an **existing ion gradient*
               'Simple diffusion of O2 and CO2 across the lipid bilayer of the membrane',
               'Osmosis of water through aquaporin channels',
               'The Na+/K+ ATPase and all other primary active transport systems',
-              'Facilitated diffusion of glucose through GLUT channels'
+              'Facilitated diffusion of glucose through carrier proteins'
             ],
             correctAnswer: 2,
             explanation: 'Primary active transport (like the Na+/K+ ATPase) directly requires ATP. Without ATP, these pumps stop. Passive processes (simple diffusion, osmosis, facilitated diffusion) do not require ATP and would continue, though gradient-dependent secondary transport would gradually fail as the Na+ gradient collapses.'
           },
           {
-            question: 'A drug called ouabain specifically inhibits the Na+/K+ ATPase. If ouabain is applied to intestinal epithelial cells, what would happen to glucose absorption via SGLT1?',
+            question: 'A drug specifically inhibits the Na+/K+ pump. If the drug is applied to intestinal cells, what would happen to glucose absorption by the Na+/glucose symporter?',
             options: [
               'It would rise, because more Na+ would stay outside the cells to drive it',
-              'It would drop as the Na+ gradient powering SGLT1 collapses',
-              'It would be unaffected, because SGLT1 hydrolyzes ATP directly',
+              'It would drop as the Na+ gradient powering the symporter collapses',
+              'It would be unaffected, because the symporter hydrolyzes ATP directly',
               'It would continue, since the cells would switch to simple diffusion'
             ],
             correctAnswer: 1,
-            explanation: 'SGLT1 (secondary active transport) depends on the Na+ gradient maintained by the Na+/K+ ATPase (primary active transport). Ouabain inhibits the pump, causing Na+ to accumulate inside the cell, collapsing the Na+ gradient. Without this gradient, SGLT1 cannot drive glucose against its gradient.'
+            explanation: 'The symporter (secondary active transport) depends on the Na+ gradient maintained by the Na+/K+ pump (primary active transport). Blocking the pump lets Na+ accumulate inside the cell and collapses the Na+ gradient. Without this gradient, the symporter cannot drive glucose against its gradient.'
           }
         ]
       }

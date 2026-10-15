@@ -95,23 +95,25 @@ So $D \\approx 0.64$. Interpretation: there is about a 64% chance that two rando
       }
     },
     {
-      id: 'pcp5-succession',
+      id: 'pcp5-genetic-diversity',
       type: 'text' as const,
       content: `
-### Ecological Succession
+### Diversity Within a Species: Genetic Diversity
 
-Communities are not static; they change over time through **ecological succession** — a directional, somewhat predictable sequence of species replacements following a disturbance or the appearance of new substrate.
+Biodiversity is not only the number of species.  It also includes **genetic diversity** within each species, and the AP framework treats it as a key factor in how populations respond to change:
 
-| Feature | Primary succession | Secondary succession |
+- The ability of a population to respond to changes in the environment is influenced by its **genetic diversity**.  Species and populations with little genetic diversity are at risk of decline or extinction.
+- Genetically diverse populations are more resilient to environmental perturbation, because they are more likely to contain individuals that can withstand the new pressure.
+- An allele that is adaptive in one environment may be harmful in another, because selective pressures differ.
+
+| Case | What happened | Lesson |
 |---|---|---|
-| Starting point | Lifeless, **no soil** (bare rock, new volcanic island, retreating glacier) | Disturbed area where **soil remains** (after fire, flood, abandoned farm field) |
-| First colonizers | **Pioneer species** — lichens, mosses, nitrogen-fixing bacteria that build soil | Fast-growing weeds, grasses, and seeds already in the soil seed bank |
-| Speed | Very slow (soil must form first, over centuries) | Faster (soil and some organisms already present) |
-| Example | Lichens colonizing new lava, eventually leading to forest | Forest regrowing after a wildfire |
+| **Irish potato famine (potato blight)** | Most potatoes were one genetically uniform variety; a water mold destroyed nearly all of them | Low genetic diversity left no resistant plants |
+| **Southern corn leaf blight (1970)** | Much of the US corn crop shared one genetic trait that made it susceptible to a fungus | A uniform crop failed across a huge area |
+| **Prairie chickens, California condors, black-footed ferrets** | Populations shrank to very few individuals, losing genetic diversity | Small, low-diversity populations suffer reduced fertility and are vulnerable to disease |
+| **Antibiotic resistance** | In a diverse bacterial population, a few cells already carry resistance alleles | Diversity lets some individuals survive a new pressure |
 
-The sequence proceeds from **pioneer species** toward a relatively stable **climax community**. Pioneers (such as lichens, which secrete acids that break down rock, and nitrogen-fixers that enrich the substrate) modify the environment in ways that make it suitable for later, often larger and more competitive species — a process of facilitation that gradually changes who can live there.
-
-> **Key distinction:** the presence or absence of **soil** is what separates primary from secondary succession. Secondary succession is faster *because* it starts with intact soil (and often a seed bank and surviving roots), whereas primary succession must first build soil from bare mineral substrate.
+> **Connection:** genetic drift and bottlenecks (Natural Selection unit) are the usual reasons small populations lose genetic diversity.
       `
     },
     {
@@ -135,31 +137,31 @@ The mechanism is sometimes called the **insurance** or **redundancy** effect: wh
       id: 'pcp5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-### Checkpoint — Succession & Stability
+### Checkpoint — Genetic Diversity & Stability
       `,
       exercise: {
         questions: [
           {
-            question: 'A retreating glacier exposes bare rock with no soil. Lichens and nitrogen-fixing bacteria colonize first, gradually building soil that later supports shrubs and trees. This sequence is:',
+            question: 'Two populations of the same plant species are hit by a new fungal disease. Population A is genetically diverse; Population B descends from a few cuttings of one plant. Which outcome is most likely?',
             options: [
-              'Secondary succession, because a forest eventually forms',
-              'Primary succession, because it begins where no soil exists',
-              'A trophic cascade initiated by the pioneer lichens',
-              'Resource partitioning among the pioneer species'
+              'Population B survives better, because identical plants share defenses',
+              'Population A is more likely to include some resistant individuals that survive',
+              'Both populations decline equally, because they are the same species',
+              'Population A is completely immune because it is diverse'
             ],
             correctAnswer: 1,
-            explanation: 'Succession starting on bare rock with NO pre-existing soil is primary succession; pioneer lichens and nitrogen-fixers must build soil before larger plants can establish. The trap "secondary succession" is defined by an intact soil layer remaining after a disturbance (e.g., post-fire) — but here there is no soil at all initially, which is the defining feature of PRIMARY succession.'
+            explanation: 'A genetically diverse population is more likely to contain individuals with alleles that let them withstand the new disease, so some survive and reproduce. A population of near-identical plants shares the same susceptibility. Diversity raises the chance of survival; it does not guarantee immunity.'
           },
           {
-            question: 'After a wildfire burns a forest but leaves the soil and seed bank intact, regrowth begins within months with grasses and fast-growing weeds. Compared with succession on new volcanic rock, this secondary succession is:',
+            question: 'Prairie chicken numbers in one state fell to under 50 birds, and egg hatching success dropped. After birds from larger, genetically different populations were introduced, hatching success rose. What best explains the recovery?',
             options: [
-              'Slower, because fire sterilizes the soil and kills the seed bank',
-              'Faster, because soil and a seed bank are already present',
-              'Equal in rate, because all succession proceeds at a fixed pace',
-              'Slower, because grasses and weeds block tree establishment'
+              'The new birds brought fresh food sources to the habitat',
+              'Gene flow brought back alleles that the tiny population had lost',
+              'The introduced birds outcompeted and replaced all the native birds',
+              'Hatching success rose because the population got even smaller'
             ],
             correctAnswer: 1,
-            explanation: 'Secondary succession is faster than primary because the soil (and often a seed bank and surviving roots) is already present, so colonizers skip the slow soil-building stage. The trap "slower because fire sterilizes the soil" overstates fire damage — most fires leave soil and seed banks viable, which is exactly WHY secondary succession outpaces primary succession on bare rock. Early grasses and weeds do not block recovery; they are the first stage of it.'
+            explanation: 'In a very small population, genetic drift and inbreeding reduce genetic diversity, so harmful recessive alleles are more often homozygous and fertility drops. Introducing birds from other populations added new alleles (gene flow), restoring diversity and fitness.'
           },
           {
             question: 'A monoculture plantation of a single tree species and a species-rich natural forest both face a new fungal pathogen specialized on that tree species. Which outcome is most consistent with the diversity-stability relationship?',

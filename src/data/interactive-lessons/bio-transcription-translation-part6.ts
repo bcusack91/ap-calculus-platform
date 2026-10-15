@@ -87,7 +87,7 @@ Each row changes one thing in the wild-type mRNA \`AUG UUU GAA GGC UAA\`.
             explanation: 'Deleting a single base shifts the reading frame, so every downstream codon is read differently. Removing a whole codon keeps the frame, and intron changes are usually spliced out.'
           },
           {
-            question: 'A substitution changes the mRNA codon CCU to CCC. Using the codon table, what is the effect on the protein?',
+            question: 'A substitution changes the mRNA codon CCU to CCC. A codon chart lists both CCU and CCC as proline. What is the effect on the protein?',
             options: [
               'Proline is replaced by a different amino acid',
               'The amino acid sequence stays exactly the same',
@@ -199,6 +199,8 @@ Cells are treated with one of two drugs, then given a labeled precursor. New mRN
 **Classify the Mutation** 🔍
 
 Wild-type mRNA: \`AUG AAA UGG GGC UAA\` (Met–Lys–Trp–Gly–Stop).
+
+Codon chart entries you need: AAA and AAG = Lys; UGG = Trp; GGC = Gly; GCC = Ala; UAA and UGA = Stop.
       `,
       exercise: {
         dropdowns: [
@@ -220,7 +222,7 @@ Wild-type mRNA: \`AUG AAA UGG GGC UAA\` (Met–Lys–Trp–Gly–Stop).
           }
         ],
         correctAnswers: ['Silent', 'Nonsense', 'Missense', 'Frameshift'],
-        hint1: 'UGA is one of the three stop codons.',
+        hint1: 'Check the chart entries above: UGA is listed as a stop codon.',
         hint2: 'GGC codes for Gly and GCC codes for Ala.',
         hint3: 'Adding one base changes the grouping of every later codon.',
         explanation: 'AAG still codes for Lys (silent); UGA is a stop (nonsense); GCC codes for Ala instead of Gly (missense); an inserted base shifts the reading frame.'

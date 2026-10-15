@@ -21,7 +21,7 @@ Comprehensive AP-exam-style questions integrating all cell cycle and mitosis con
 1. The cell cycle consists of **interphase** (G$_1$, S, G$_2$) and **M phase** (mitosis + cytokinesis)
 2. **Mitosis** produces two genetically identical daughter cells (preserving chromosome number)
 3. **Cyclin-Cdk complexes** drive progression through each phase; cyclin degradation resets the system
-4. **Checkpoints** (G$_1$/S, G$_2$/M, SAC) ensure accuracy before committing to the next phase
+4. **Checkpoints** (G$_1$/S, G$_2$/M, metaphase) ensure accuracy before committing to the next phase
 5. **Cancer** results from mutations in proto-oncogenes (gain of function) and tumor suppressors (loss of function)
 6. Cytokinesis uses a **cleavage furrow** (animal) or **cell plate** (plant)
       `
@@ -46,18 +46,18 @@ Comprehensive AP-exam-style questions integrating all cell cycle and mitosis con
             explanation: 'In G2, each chromosome has been replicated and consists of 2 sister chromatids, each containing one DNA molecule. With 8 chromosomes, there are 8 x 2 = 16 DNA molecules. Note: the chromosome count is still 8 (counted by centromeres).'
           },
           {
-            question: 'HPV (Human Papillomavirus) produces the E7 protein, which binds and inactivates Rb. How does this contribute to cervical cancer?',
+            question: 'A virus makes a protein that disables Rb, the tumor suppressor that acts as a brake at the G1/S checkpoint. How could this contribute to cancer?',
             options: [
-              'E7 directly breaks DNA strands, causing mutations in growth genes',
-              'E7 frees E2F from Rb, so S-phase genes turn on without growth signals',
-              'E7 blocks cytokinesis, producing large polyploid cells that become cancerous',
-              'E7 blocks apoptosis but leaves the G1/S checkpoint fully intact'
+              'Infected cells could enter S phase and divide without growth signals',
+              'Infected cells could no longer replicate their DNA during S phase',
+              'Infected cells would undergo apoptosis as soon as the virus entered',
+              'Infected cells would stop at the G2/M checkpoint and never divide'
             ],
-            correctAnswer: 1,
-            explanation: 'By binding and inactivating Rb, the viral E7 protein mimics the effect of Rb phosphorylation. E2F is free to activate S-phase genes regardless of growth signals or cell cycle status. Combined with E6 (which degrades p53), HPV effectively disables both major tumor suppressor pathways.'
+            correctAnswer: 0,
+            explanation: 'With the G1/S brake removed, cells pass into S phase and keep dividing even when no growth signal is present, a step toward uncontrolled growth. Losing a brake speeds the cycle up; it does not block replication, trigger apoptosis, or stop cells at G2/M.'
           },
           {
-            question: 'Taxol (paclitaxel) is a chemotherapy drug that stabilizes microtubules and prevents their depolymerization. How does this kill cancer cells?',
+            question: 'A chemotherapy drug stabilizes microtubules so they cannot shrink. How does this kill dividing cancer cells?',
             options: [
               'It blocks DNA polymerase, so cancer cells cannot replicate their DNA',
               'It prevents chromosomes from condensing at the start of prophase',
@@ -65,7 +65,7 @@ Comprehensive AP-exam-style questions integrating all cell cycle and mitosis con
               'It prevents only cytokinesis, producing binucleate cells that keep dividing'
             ],
             correctAnswer: 2,
-            explanation: 'Taxol locks microtubules in a polymerized state. Spindle microtubules must grow and shrink to capture chromosomes and move them, so the spindle cannot function properly. The spindle assembly checkpoint stays active, anaphase never begins, and the prolonged mitotic arrest eventually triggers apoptosis.'
+            explanation: 'The drug locks microtubules in place. Spindle microtubules must grow and shrink to capture chromosomes and move them, so the spindle cannot function properly. The metaphase checkpoint stays active, anaphase never begins, and the prolonged mitotic arrest eventually triggers apoptosis.'
           }
         ]
       }
@@ -98,7 +98,7 @@ Comprehensive AP-exam-style questions integrating all cell cycle and mitosis con
               'Random variation in cell shape with no regulatory basis'
             ],
             correctAnswer: 1,
-            explanation: 'Both daughter cells have identical genomes, but asymmetric distribution of regulatory proteins (like CtrA in Caulobacter) during division causes different sets of genes to be expressed in each cell. This is a fundamental principle of developmental biology — identical genomes, different gene expression.'
+            explanation: 'Both daughter cells have identical genomes, but asymmetric distribution of regulatory proteins during division causes different sets of genes to be expressed in each cell. This is a fundamental principle of developmental biology — identical genomes, different gene expression.'
           },
           {
             question: 'After mitosis, each daughter cell has 46 chromosomes. If a cell undergoes mitosis without cytokinesis, and then undergoes a second round of mitosis WITH cytokinesis, how many chromosomes will each final daughter cell have?',
@@ -123,7 +123,7 @@ Comprehensive AP-exam-style questions integrating all cell cycle and mitosis con
       exercise: {
         questions: [
           {
-            question: 'Sister chromatids are separated by cleavage of cohesin:',
+            question: 'Sister chromatids separate and move to opposite poles:',
             options: ['Prophase', 'Metaphase', 'Anaphase', 'Telophase', 'S phase'],
             correctAnswer: 'Anaphase'
           },
@@ -133,17 +133,17 @@ Comprehensive AP-exam-style questions integrating all cell cycle and mitosis con
             correctAnswer: 'S phase'
           },
           {
-            question: 'Cyclin B-Cdk1 (MPF) triggers entry into this phase:',
+            question: 'A peak of cyclin-Cdk activity at the end of G2 triggers entry into this phase:',
             options: ['G1 phase', 'S phase', 'G2 phase', 'M phase', 'G0'],
             correctAnswer: 'M phase'
           },
           {
-            question: 'The Rb protein blocks E2F to prevent progression into:',
+            question: 'The Rb protein acts as a brake that prevents progression into:',
             options: ['G1 phase', 'S phase', 'G2 phase', 'M phase', 'Cytokinesis'],
             correctAnswer: 'S phase'
           },
           {
-            question: 'The contractile ring of actin and myosin functions during:',
+            question: 'A cleavage furrow pinches an animal cell in two during:',
             options: ['Prophase', 'Metaphase', 'Anaphase', 'Cytokinesis', 'S phase'],
             correctAnswer: 'Cytokinesis'
           }
@@ -159,16 +159,16 @@ Comprehensive AP-exam-style questions integrating all cell cycle and mitosis con
       exercise: {
         questions: [
           {
-            question: 'The chemotherapy drug that stabilizes microtubules, preventing depolymerization:',
-            answer: 'Taxol',
-            acceptableAnswers: ['Taxol', 'taxol', 'paclitaxel', 'Paclitaxel'],
-            placeholder: 'e.g. colchicine'
+            question: 'A mutated gene whose overactive product drives uncontrolled cell division:',
+            answer: 'oncogene',
+            acceptableAnswers: ['oncogene', 'Oncogene', 'oncogenes'],
+            placeholder: 'e.g. tumor suppressor'
           },
           {
-            question: 'The viral protein from HPV that inactivates Rb:',
-            answer: 'E7',
-            acceptableAnswers: ['E7', 'e7'],
-            placeholder: 'e.g. E6'
+            question: 'Division of the cytoplasm that follows mitosis:',
+            answer: 'cytokinesis',
+            acceptableAnswers: ['cytokinesis', 'Cytokinesis'],
+            placeholder: 'e.g. karyokinesis'
           }
         ]
       }
@@ -182,15 +182,15 @@ Comprehensive AP-exam-style questions integrating all cell cycle and mitosis con
       exercise: {
         questions: [
           {
-            question: 'Integration question: A cancer cell has three mutations — Ras is constitutively active, p53 is non-functional, and telomerase is overexpressed. Explain how EACH mutation contributes to the cancer phenotype.',
+            question: 'Integration question: A cancer cell has two mutations: a growth-factor receptor that signals without its ligand, and a nonfunctional p53. How does EACH mutation contribute to the cancer phenotype?',
             options: [
-              'All three have one shared effect, blocking apoptosis, so damaged cells survive',
-              'Ras signals without growth factors, p53 loss removes damage arrest, and telomerase permits endless division',
-              'Only the Ras mutation matters; p53 loss and telomerase overexpression are neutral passengers',
-              'These mutations can cause cancer only if all three were inherited through the germ line'
+              'Both mutations only block apoptosis, so damaged cells simply survive longer',
+              'The receptor drives constant division, and p53 loss removes the damage arrest',
+              'Only the receptor mutation matters; losing p53 has no effect on cell division',
+              'These mutations cause cancer only when both are inherited through the germ line'
             ],
             correctAnswer: 1,
-            explanation: 'Cancer typically requires multiple mutations affecting different regulatory pathways: (1) Ras (oncogene) provides constant proliferative signaling. (2) p53 (tumor suppressor) loss eliminates DNA damage checkpoints and apoptosis. (3) Telomerase (normally silent in somatic cells) allows indefinite replication by preventing telomere shortening. Together, these create an immortal, uncontrollably dividing, damage-tolerant cell.'
+            explanation: 'Cancer usually requires several mutations affecting different controls. The receptor mutation (an oncogene) supplies constant proliferative signaling. Losing p53 (a tumor suppressor) removes the arrest and apoptosis that would normally stop a cell with damaged DNA. Together they produce a cell that divides without control and tolerates damage. Somatic mutations are enough; they need not be inherited.'
           }
         ]
       }

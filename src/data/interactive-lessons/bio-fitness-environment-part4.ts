@@ -23,7 +23,7 @@ Animals face the same timing problem as plants on two scales: **daily** (when to
 | **Taxis** | Movement directed toward or away from a stimulus |
 | **Kinesis** | A change in the speed of movement or rate of turning in response to a stimulus, with no particular direction |
 
-> **Scope note:** this part covers *timing* and simple orientation. Learned behavior, foraging, communication and mating behavior are treated in the animal behavior topic, and hormone-by-hormone detail is in the endocrine topic.
+> **Scope note:** this part covers *timing* and simple orientation. As with plants, the AP framework asks you to connect a cue to a response and its effect on fitness; it excludes knowledge of the specific physiological mechanisms behind them.
       `
     },
     {
@@ -53,7 +53,7 @@ A nocturnal mouse is kept on 12 h light : 12 h dark, with lights off at 18:00. I
 
 ### The same clock in humans
 - The average human free-running period is slightly **longer** than 24 hours (about 24.2 h in controlled studies), so morning light each day resets the clock.
-- In mammals, a master clock in the **suprachiasmatic nucleus (SCN)** of the hypothalamus receives light information from the eyes and coordinates clocks throughout the body; the pineal gland releases the hormone **melatonin** at night.
+- The clock is internal (endogenous) but is reset every day by light, so the body's rhythms of sleep, hunger and body temperature stay matched to the real day. (The specific brain structures and hormones involved are not part of the AP framework.)
 - **Jet lag** happens because the clock can shift only about an hour or so per day. After crossing many time zones, sleep, hunger and body temperature rhythms stay out of step with local time until daily light re-entrains the clock.
       `
     },

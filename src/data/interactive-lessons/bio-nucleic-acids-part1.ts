@@ -57,7 +57,7 @@ A **nucleotide** has three parts:
 
 | Feature | DNA | RNA |
 |---------|-----|-----|
-| Sugar | Deoxyribose (no –OH on 2′ C) | Ribose (–OH on 2′ C) |
+| Sugar | Deoxyribose | Ribose |
 | Bases | A, T, G, C | A, **U**, G, C |
 | Strands | Double helix | Usually single-stranded |
 | Stability | Very stable | Less stable (degrades easily) |
@@ -98,7 +98,7 @@ In RNA: **A pairs with U** instead.
         correctAnswers: ['nucleotide', 'thymine', 'ribose'],
         hint1: 'Three parts: sugar, phosphate, base.',
         hint2: 'A–T, G–C in DNA.',
-        hint3: 'Has –OH on the 2′ carbon.',
+        hint3: 'RNA = ribonucleic acid.',
         explanation: 'Nucleotides are the monomers of nucleic acids. In DNA, A pairs with T; in RNA the sugar is ribose (RNA = Ribo-Nucleic Acid).'
       }
     }

@@ -4,50 +4,43 @@ export const bioChromosomalInheritancePatternsPart6Data = {
     {
       id: 'chr6-intro',
       type: 'text' as const,
-      content: `# Genomic Imprinting & Extranuclear Inheritance
+      content: `# Non-Nuclear (Extranuclear) Inheritance
 
-Not all inheritance follows standard Mendelian patterns. **Genomic imprinting** and **extranuclear inheritance** demonstrate that the source of an allele (which parent) and the location of genes (nucleus vs. organelles) can both influence phenotype.
+Not every gene sits on a chromosome in the nucleus. **Mitochondria** and **chloroplasts** carry their own small, circular DNA, and traits determined by that DNA show a pattern of inheritance that does not follow Mendel's rules. The CED calls this **non-nuclear inheritance**.
 
-## Genomic Imprinting
+## Why Organelle Genes Break Mendel's Rules
 
-**Genomic imprinting** is an epigenetic phenomenon where certain genes are expressed differently depending on whether they were inherited from the **mother or the father**.
+| Nuclear genes | Mitochondrial and chloroplast genes |
+|---------------|--------------------------------------|
+| Two copies in a diploid cell, one on each homolog | Many copies per cell, one or more in each of many organelles |
+| Homologs pair and separate evenly in meiosis | No pairing: organelles are **randomly assorted** into daughter cells and gametes |
+| Each parent contributes one allele | Organelles usually come from **one parent**, the one that supplies the egg's cytoplasm |
+| Predictable ratios (3:1, 1:1, 9:3:3:1) | **No Mendelian ratios** |
 
-### How It Works
+> 💡 Organelle DNA is circular and resembles a bacterial chromosome, one line of evidence that mitochondria and chloroplasts descend from free-living prokaryotes (endosymbiosis).
 
-- Specific genes are **silenced** (imprinted) by DNA methylation during gamete formation
-- The imprint is **parent-of-origin specific**: one parental allele is always silenced
-- Result: **only one allele** is expressed (monoallelic expression)
-- Imprints are **erased and reset** each generation during gametogenesis
-
-### Key Points
-- ~100–200 imprinted genes have been identified in mammals
-- Imprinting does NOT change the DNA sequence — it's **epigenetic** (methylation, histone modification)
-- Both the maternal AND paternal copies are needed for normal development`
+(Other parent-of-origin effects you may see in textbooks, such as genomic imprinting and maternal-effect genes, are beyond the scope of the AP exam.)`
     },
     {
       id: 'chr6-imprintex',
       type: 'text' as const,
-      content: `## Imprinting Disorders
+      content: `## Random Assortment of Organelles
 
-### Prader-Willi Syndrome vs. Angelman Syndrome
+A single cell can hold hundreds of mitochondria. When the cell divides, its mitochondria are split between the two daughter cells **at random**; nothing sorts them evenly, the way the spindle sorts chromosomes.
 
-These two syndromes beautifully illustrate genomic imprinting — both involve the **same region of chromosome 15** (15q11-13) but result from losing the contribution of different parents.
+This matters when a cell contains a **mixture** of normal and mutant mitochondrial DNA:
 
-| Feature | Prader-Willi Syndrome | Angelman Syndrome |
-|---------|----------------------|-------------------|
-| **Affected allele** | Paternal genes silenced/deleted | Maternal genes silenced/deleted |
-| **Which parent's copy is needed** | Father's (normally active) | Mother's (normally active) |
-| **Cause** | Loss of paternal 15q11-13 | Loss of maternal 15q11-13 |
-| **Symptoms** | Obesity, intellectual disability, short stature, hypogonadism | Severe intellectual disability, seizures, inappropriate laughter, puppet-like gait |
-| **Mechanism** | ~70% deletion, ~25% maternal UPD | ~70% deletion, ~10% paternal UPD, ~10% UBE3A mutation |
+| Generation of cell division | Typical result |
+|-----------------------------|----------------|
+| Starting cell | About half normal, half mutant mitochondria |
+| After a few divisions | Daughter cells differ: some have mostly normal mitochondria, others mostly mutant |
+| After many divisions | Some cell lines are nearly all normal, others nearly all mutant |
 
-> 💡 **UPD (Uniparental Disomy)**: Inheriting both copies of a chromosome from ONE parent. If both copies come from the "wrong" parent (the one whose genes are normally imprinted), disease results.
+### Consequences
 
-### Igf2 Gene (Insulin-like Growth Factor 2)
-- Classic example of an imprinted gene
-- **Maternally imprinted** (maternal copy is silenced)
-- Only the **paternal copy** is expressed
-- Promotes fetal growth — "parental conflict" hypothesis: father's genes favor larger offspring, mother's genes limit offspring size`
+- **Variable severity.** Siblings who inherit mitochondria from the same mother can receive very different proportions of mutant mitochondria, so a mitochondrial disorder can be mild in one child and severe in another.
+- **Tissue differences.** Mutant mitochondria cause the most harm in tissues with high energy demand, such as muscle and nerve, because mitochondria carry out most of the cell's ATP production by cellular respiration.
+- **No fixed ratio.** Because the split is random, offspring do not fall into predictable Mendelian classes.`
     },
     {
       id: 'chr6-quiz1',
@@ -56,26 +49,26 @@ These two syndromes beautifully illustrate genomic imprinting — both involve t
       exercise: {
         questions: [
           {
-            question: 'A child inherits a deletion of 15q11-13 from their father. The child will most likely develop:',
+            question: 'A mother carries a mixture of normal and mutant mitochondria. Her three children all inherit the mutation, but one has severe muscle weakness and the other two have mild symptoms. What best explains the difference?',
             options: [
-              'Prader-Willi syndrome',
-              'Angelman syndrome',
-              'Down syndrome',
-              'No disorder — the maternal copy compensates'
+              'Each child received its own random share of the mutant mitochondria',
+              'The father passed a second copy of the mutant mitochondria to one child',
+              'The mutation is recessive, so only a homozygous child shows full symptoms',
+              'One child inherited the mutation on an X chromosome instead of in mitochondria'
             ],
             correctAnswer: 0,
-            explanation: 'The paternal copy of 15q11-13 contains genes that are normally active (the maternal copies of these specific genes are imprinted/silenced). Losing the paternal copy means no functional copy is expressed → Prader-Willi syndrome.'
+            explanation: 'Mitochondria are assorted randomly into eggs and later into body cells, so siblings can carry very different fractions of mutant mitochondria, which changes severity. Fathers do not pass on mitochondria, and mitochondrial genes are neither homozygous nor heterozygous in the Mendelian sense, nor are they carried on the X chromosome.'
           },
           {
-            question: 'Genomic imprinting differs from standard Mendelian inheritance because:',
+            question: 'Why do traits determined by mitochondrial DNA fail to show Mendelian ratios such as 3:1?',
             options: [
-              'Gene expression depends on the parent that transmitted the allele',
-              'It changes the DNA sequence of the allele inherited from one parent',
-              'Both parental alleles are always expressed equally, whatever their origin',
-              'It only affects sex-linked genes, so its effects are seen mainly in males'
+              'Mitochondrial genes are never transcribed, so they cannot affect phenotype',
+              'Organelles are assorted randomly rather than segregated in homologous pairs',
+              'Mitochondrial DNA mutates every generation, so no allele is passed on intact',
+              'Mitochondria are inherited from both parents equally and blend in the zygote'
             ],
-            correctAnswer: 0,
-            explanation: 'In genomic imprinting, the same allele can be expressed or silenced depending on whether it came from the mother or father. This parent-of-origin effect is epigenetic — the DNA sequence is unchanged, but methylation patterns differ. Imprinted genes are mostly autosomal (for example, the 15q11-13 region), and imprinting means the two parental alleles are NOT expressed equally.'
+            correctAnswer: 1,
+            explanation: 'Mendelian ratios come from homologous chromosomes pairing and separating evenly in meiosis. Mitochondria have no homologs to pair with and are distributed at random, so no fixed ratio results. Mitochondrial genes are expressed, mitochondrial DNA is passed on largely intact, and mitochondria usually come only from the egg.'
           }
         ]
       }
@@ -83,42 +76,42 @@ These two syndromes beautifully illustrate genomic imprinting — both involve t
     {
       id: 'chr6-extranuclear',
       type: 'text' as const,
-      content: `## Extranuclear (Cytoplasmic) Inheritance
+      content: `## Maternal Inheritance in Animals and Plants
 
-Some genes are located outside the nucleus — in **mitochondria** and **chloroplasts**. These organelles have their own circular DNA and show a unique pattern of inheritance.
+### Animals
 
-### Mitochondrial DNA (mtDNA)
+The egg contributes nearly all of the zygote's cytoplasm, including its mitochondria. Sperm mitochondria are not passed on. Mitochondrial traits are therefore **maternally inherited**:
 
-- Human mtDNA: **16,569 bp**, circular, encodes 37 genes
-- Encodes: 13 proteins (electron transport chain), 22 tRNAs, 2 rRNAs
-- **Maternal inheritance**: mitochondria in the egg are passed to all offspring; sperm contribute essentially no mitochondria
-- **No recombination**: mtDNA is clonally inherited
-- **High mutation rate**: ~10× higher than nuclear DNA (no histones, limited repair)
-- **Heteroplasmy**: A cell can contain a mix of normal and mutant mitochondria
+- An **affected mother** can pass the trait to **all** of her children, sons and daughters alike.
+- An **affected father** passes it to **none** of his children.
 
-### Mitochondrial Diseases
+### Plants
 
-| Disease | Mutation | Symptoms |
-|---------|----------|----------|
-| **MELAS** | tRNA mutation | Muscle weakness, seizures, stroke-like episodes |
-| **MERRF** | tRNA mutation | Myoclonic epilepsy, ragged red fibers |
-| **Leber hereditary optic neuropathy (LHON)** | Complex I genes | Sudden vision loss, usually in young adults |
-| **Kearns-Sayre syndrome** | Large deletion | Progressive external ophthalmoplegia, cardiac conduction defects |
+In plants, mitochondria and chloroplasts are transmitted in the **ovule** (which contains the egg) and not in the pollen. Traits determined by chloroplast or mitochondrial DNA are therefore also **maternally inherited**: offspring resemble the plant that produced the seed.
 
-### Inheritance Pattern
-- **Affected mother** → all children may be affected (maternal inheritance)
-- **Affected father** → no children affected
-- Severity can vary due to **heteroplasmy** — the proportion of mutant vs. normal mitochondria
+### Worked Example: Reciprocal Crosses with a Variegated Plant
 
-## Maternal Effect Genes
+Some four-o'clock plants have **green** branches, **white** branches (whose chloroplasts cannot make chlorophyll) and **variegated** branches with both. Flowers on different branches are crossed, and the seedlings are scored.
 
-**Maternal effect** (not the same as maternal inheritance): Gene products deposited in the egg by the mother determine early embryonic phenotype.
+| Flower that produced the seed (egg) | Flower that supplied pollen | Seedlings |
+|-------------------------------------|-----------------------------|-----------|
+| Green branch | White branch | All green |
+| White branch | Green branch | All white (they die once seed reserves run out) |
+| Variegated branch | Green branch | Green, white and variegated, in unpredictable proportions |
 
-### Example: Snail Shell Coiling in *Lymnaea*
-- The **mother's genotype** (not the offspring's) determines the direction of shell coiling
-- Dextral (right-coiling, D) is dominant over sinistral (left-coiling, d)
-- A dd mother will produce sinistral offspring even if the offspring are Dd
-- The effect is delayed one generation because maternal mRNA in the egg directs early development`
+**Step 1 — Compare the reciprocal crosses.** Green × white and white × green give opposite results, so the sex of the parent matters.
+
+**Step 2 — Identify which parent decides.** In every row, the seedlings match the **seed (egg) parent**, whatever the pollen carried.
+
+**Step 3 — Explain the variegated row.** A variegated branch's eggs receive random mixtures of normal and defective chloroplasts, so the seedlings vary with no fixed ratio.
+
+**Conclusion.** Leaf color here is determined by chloroplast DNA, inherited through the egg's cytoplasm.
+
+| Feature | Nuclear (autosomal) gene | Mitochondrial or chloroplast gene |
+|---------|--------------------------|-----------------------------------|
+| Do reciprocal crosses differ? | No | Yes: offspring match the mother |
+| Can an affected father pass it on? | Yes | No |
+| Mendelian ratios? | Yes | No |`
     },
     {
       id: 'chr6-dropdown1',
@@ -127,27 +120,27 @@ Some genes are located outside the nucleus — in **mitochondria** and **chlorop
       exercise: {
         dropdowns: [
           {
-            label: 'Mitochondrial DNA is inherited exclusively from the ___',
+            label: 'In animals, mitochondrial DNA is usually inherited from the ___',
             options: ['mother', 'father', 'both parents equally', 'random parent']
           },
           {
-            label: 'A cell containing a mix of normal and mutant mitochondria exhibits ___',
-            options: ['heteroplasmy', 'homoplasmy', 'aneuploidy', 'polyploidy']
+            label: 'When a cell with mixed normal and mutant mitochondria divides, its mitochondria are split between the daughter cells ___',
+            options: ['randomly', 'evenly', 'by dominance', 'by size']
           },
           {
-            label: 'In maternal effect inheritance, the ___ genotype determines the offspring phenotype',
-            options: ["mother's", "offspring's", "father's", "grandparent's"]
+            label: 'In plants, chloroplasts pass to the next generation through the ___',
+            options: ['ovule', 'pollen', 'roots', 'flower petals']
           },
           {
-            label: 'Genomic imprinting involves ___ silencing of genes based on parental origin',
-            options: ['epigenetic', 'mutational', 'translational', 'chromosomal']
+            label: 'A man with a mitochondrial disorder passes it to ___ of his children',
+            options: ['none', 'all', 'half', 'only the sons']
           }
         ],
-        correctAnswers: ['mother', 'heteroplasmy', "mother's", 'epigenetic'],
-        hint1: 'Sperm contribute almost no cytoplasm (and few mitochondria) to the zygote.',
-        hint2: '"Hetero" = different, "plasmy" relates to cytoplasmic organelles.',
-        hint3: 'Think about snail shell coiling — which generation\'s genes control the phenotype?',
-        explanation: 'Mitochondria are maternally inherited via the egg cytoplasm. Heteroplasmy = mix of mutant and normal mitochondria. In maternal effect, the mother\'s genotype controls offspring phenotype through mRNA deposited in the egg. Imprinting uses epigenetic marks (methylation).'
+        correctAnswers: ['mother', 'randomly', 'ovule', 'none'],
+        hint1: 'Sperm contribute almost no cytoplasm to the zygote.',
+        hint2: 'Organelles have no spindle mechanism to divide them evenly.',
+        hint3: 'The seed parent supplies the egg and its cytoplasm.',
+        explanation: 'Mitochondria come from the egg, so they are maternally inherited and a father passes none of his on. Organelles are distributed randomly at cell division. In plants, chloroplasts are transmitted in the ovule, not in the pollen.'
       }
     },
     {
@@ -157,7 +150,7 @@ Some genes are located outside the nucleus — in **mitochondria** and **chlorop
       exercise: {
         questions: [
           {
-            question: 'A woman with a mitochondrial disease has children with an unaffected man. What proportion of their children could be affected?',
+            question: 'A woman with a mitochondrial disease has children with an unaffected man. Which of their children could be affected?',
             options: [
               'Sons and daughters alike may be affected',
               'Only her daughters can be affected',
@@ -165,18 +158,18 @@ Some genes are located outside the nucleus — in **mitochondria** and **chlorop
               '25% of her children will be affected'
             ],
             correctAnswer: 0,
-            explanation: 'Mitochondria are inherited from the mother only. ALL children (sons and daughters) receive their mitochondria from their mother, so all may be affected. The severity may vary due to heteroplasmy and the random distribution of mitochondria during cell division.'
+            explanation: 'Mitochondria are inherited from the mother only. All children, sons and daughters, receive their mitochondria from her, so any of them may be affected. Severity can still vary because mitochondria are distributed randomly.'
           },
           {
-            question: 'A Dd snail (maternal effect gene, D = dextral dominant) mates with a dd snail. If the mother is Dd, the offspring will be:',
+            question: 'Pollen from a flower on an all-white branch of a variegated plant is used to pollinate a flower on an all-green branch. What will the seedlings most likely be like?',
             options: [
-              'All dextral (right-coiling), regardless of offspring genotype',
-              'Half dextral, half sinistral, matching their own genotypes',
-              'All sinistral (left-coiling), because the father is dd',
-              'Dextral only for offspring that inherit D'
+              'White, matching the branch that supplied the pollen',
+              'Green, matching the branch that supplied the egg',
+              'Variegated, mixing plastids from both of the parents',
+              'Three green to one white, by Mendelian segregation'
             ],
-            correctAnswer: 0,
-            explanation: 'In maternal effect inheritance, the MOTHER\'s genotype determines offspring phenotype. Since the mother is Dd (heterozygous with dominant D), she produces mRNA for dextral coiling → all her offspring will be dextral, regardless of their own genotypes or the father\'s genotype.'
+            correctAnswer: 1,
+            explanation: 'Chloroplasts are transmitted in the ovule, not the pollen, so the seedlings inherit the green branch\'s normal chloroplasts and are green. Pollen contributes no chloroplasts, so the seedlings cannot be white or variegated, and organelle traits do not segregate in Mendelian ratios.'
           }
         ]
       }

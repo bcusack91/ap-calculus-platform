@@ -9,7 +9,7 @@ export const bioMendelianPart6Data = {
 
 **Part 6 of 7**
 
-Real AP free-response questions rarely test one idea in isolation. They braid together **crosses**, **probability rules**, and **pedigree reasoning** into multi-part problems where each answer feeds the next. This workshop walks through three fully worked, multi-step problems that integrate the whole unit, then finishes with a checkpoint testing the methods.
+Real AP free-response questions rarely test one idea in isolation. They braid together **crosses**, **probability rules**, and **pedigree reasoning** into multi-part problems where each answer feeds the next. This workshop walks through four fully worked, multi-step problems that integrate the whole unit, with a short checkpoint after each of the first three.
 
 ### The integrated problem-solving checklist
 
@@ -17,7 +17,7 @@ Before diving in, internalize this workflow — it converts a scary paragraph in
 
 1. **Define every allele symbol** and note which is dominant.
 2. **Extract genotypes** from the phenotypes and family information given (work *backwards* from affected individuals, who pin down recessive genotypes).
-3. **Choose your tool per step:** a Punnett square for one or two genes; the **product rule** for "AND across genes"; the **complement** for "at least one"; the **binomial** for "exactly k of n offspring."
+3. **Choose your tool per step:** a Punnett square for one or two genes; the **product rule** for "AND across genes"; the **complement** for "at least one"; for "exactly k of n offspring," **list the birth orders**, multiply along each order and add the orders.
 4. **Condition when told an outcome** (e.g., "given the child is unaffected," remove impossible genotypes and renormalize).
 5. **Chain the steps:** multiply independent stage-probabilities together to get the final answer.
 
@@ -46,14 +46,39 @@ $P(bbss) = \\frac{1}{4}\\times\\frac{1}{2} = \\frac{1}{8}$
 
 $P(B\\_ S\\_) = \\frac{3}{4}\\times\\frac{1}{2} = \\frac{3}{8}$
 
-**(c) If this pair has 4 puppies, what is the probability that exactly 1 is brown and spotted?**
+**(c) If this pair has 2 puppies, what is the probability that exactly 1 is brown and spotted?**
 
-This is a binomial with $p = P(bbss) = \\frac{1}{8}$ (from part a), $q = \\frac{7}{8}$, $n = 4$, $k = 1$:
+Each puppy is brown and spotted with probability $\\frac{1}{8}$ (from part a) and is not with probability $\\frac{7}{8}$. "Exactly one" can happen in two mutually exclusive orders:
 
-$P = \\binom{4}{1}\\left(\\frac{1}{8}\\right)^{1}\\left(\\frac{7}{8}\\right)^{3} = 4\\times\\frac{1}{8}\\times\\frac{343}{512} = \\frac{1372}{4096} \\approx 0.335$
+- First puppy *bbss*, second not: $\\frac{1}{8}\\times\\frac{7}{8} = \\frac{7}{64}$
+- First puppy not, second *bbss*: $\\frac{7}{8}\\times\\frac{1}{8} = \\frac{7}{64}$
 
-**Notice the chain:** part (a)'s single-puppy probability ($\\frac{1}{8}$) became the *p* plugged into part (c)'s binomial. Multi-part problems are designed so earlier answers feed later ones.
+$P = \\frac{7}{64} + \\frac{7}{64} = \\frac{14}{64} = \\frac{7}{32} \\approx 0.22$
+
+**Notice the chain:** part (a)'s single-puppy probability ($\\frac{1}{8}$) became the building block of every order in part (c). Multi-part problems are designed so earlier answers feed later ones.
       `
+    },
+    {
+      id: 'mgp6-quiz1',
+      type: 'multiple-choice' as const,
+      content: `
+### Checkpoint — Crosses by the Product Rule
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In tomatoes, tall (D) is dominant to dwarf (d) and round fruit (P) is dominant to pear-shaped (p); the genes are independent. A DdPp plant is crossed with a ddpp plant. What fraction of offspring are tall and pear-shaped (D_ pp)?',
+            options: [
+              '$\\frac{9}{16}$',
+              '$\\frac{1}{4}$',
+              '$\\frac{3}{16}$',
+              '$\\frac{1}{2}$'
+            ],
+            correctAnswer: 1,
+            explanation: 'Solve each gene as a test cross: Dd × dd gives P(tall, D_) = 1/2; Pp × pp gives P(pear, pp) = 1/2. By the product rule, P(D_ pp) = 1/2 × 1/2 = 1/4. The trap 3/16 comes from mistakenly using 3/4 for the tall probability — but that 3/4 is the value for a Dd × Dd cross, not the Dd × dd cross given here, where each gene splits 1:1.'
+          }
+        ]
+      }
     },
     {
       id: 'mgp6-problem2',
@@ -80,6 +105,28 @@ $P(\\text{child has CF}) = \\underbrace{\\frac{2}{3}}_{\\text{Maria is } Ff}\\ti
 
 **The subtlety:** if you had wrongly assumed Maria was *definitely* a carrier, you would have gotten $\\frac{1}{2}\\times\\frac{1}{2} = \\frac{1}{4}$. The correct answer $\\frac{1}{6}$ properly weights by the $\\frac{2}{3}$ chance that Maria carries the allele at all. Carrier *uncertainty* must be multiplied into the chain.
       `
+    },
+    {
+      id: 'mgp6-quiz2',
+      type: 'multiple-choice' as const,
+      content: `
+### Checkpoint — Carrier Uncertainty
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A woman\'s brother has an autosomal recessive disease (aa); the woman is unaffected, and her parents were both carriers. She marries a man who is a known carrier (Aa). What is the probability their first child is affected?',
+            options: [
+              '$\\frac{1}{4}$',
+              '$\\frac{1}{6}$',
+              '$\\frac{1}{3}$',
+              '$\\frac{1}{2}$'
+            ],
+            correctAnswer: 1,
+            explanation: 'The woman is an unaffected child of two carriers, so P(she is Aa) = 2/3 (conditioning out the aa case). For an affected child: P = P(woman is Aa) × P(she transmits a) × P(husband transmits a) = 2/3 × 1/2 × 1/2 = 1/6. The trap answer 1/4 wrongly assumes the woman is definitely a carrier; it omits the 2/3 factor that accounts for her uncertain carrier status.'
+          }
+        ]
+      }
     },
     {
       id: 'mgp6-problem3',
@@ -110,10 +157,32 @@ $P(\\text{at least one child affected}) = 1 - \\frac{81}{256} = \\frac{175}{256}
       `
     },
     {
+      id: 'mgp6-quiz3',
+      type: 'multiple-choice' as const,
+      content: `
+### Checkpoint — Two Traits Across Children
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Two parents are AaBb × AaBb for two independent recessive disorders. They have 2 children. What is the probability that BOTH children are free of both disorders?',
+            options: [
+              '$\\frac{9}{16}$',
+              '$\\frac{81}{256}$',
+              '$\\frac{7}{16}$',
+              '$\\frac{49}{256}$'
+            ],
+            correctAnswer: 1,
+            explanation: 'One child is disorder-free (A_ B_) with probability 3/4 × 3/4 = 9/16. Because the two children are independent, multiply: P(both free) = 9/16 × 9/16 = 81/256. The 9/16 option is the probability for just ONE child — it forgets to apply the product rule across the two children. The 49/256 option squares 7/16, which is the chance that a child HAS at least one disorder, not that it is free of both.'
+          }
+        ]
+      }
+    },
+    {
       id: 'mgp6-problem4',
       type: 'text' as const,
       content: `
-### Worked Problem 4: Multiple Alleles + Binomial (ABO Blood Type)
+### Worked Problem 4: Multiple Alleles + Birth Orders (ABO Blood Type)
 
 **Setup.** Human ABO blood type uses **three alleles**: *$I^{A}$* and *$I^{B}$* are codominant to each other, and both are dominant to the recessive *i*. So genotype *$I^{A}$ $I^{A}$* or *$I^{A}$ i* → type A; *$I^{B}$ $I^{B}$* or *$I^{B}$ i* → type B; *$I^{A}$ $I^{B}$* → type AB; *ii* → type O. A man of genotype *$I^{A}$ i* has children with a woman of genotype *$I^{B}$ i*.
 
@@ -132,13 +201,13 @@ The four equally likely children are **AB : B : A : O = 1 : 1 : 1 : 1** — each
 
 Type O requires genotype *ii* — the child must inherit *i* from each parent: $\\frac{1}{2}\\times\\frac{1}{2} = \\frac{1}{4}$. Consistent with the single O cell in the square.
 
-**(c) If the couple has 3 children, what is the probability that exactly 1 has type O blood?**
+**(c) If the couple has 2 children, what is the probability that exactly 1 has type O blood?**
 
-Binomial with $p = P(\\text{type O}) = \\frac{1}{4}$, $q = \\frac{3}{4}$, $n = 3$, $k = 1$:
+Each child is type O with probability $\\frac{1}{4}$ and not type O with probability $\\frac{3}{4}$. List the two orders and add them:
 
-$P = \\binom{3}{1}\\left(\\frac{1}{4}\\right)^{1}\\left(\\frac{3}{4}\\right)^{2} = 3\\times\\frac{1}{4}\\times\\frac{9}{16} = \\frac{27}{64}\\approx 0.42$
+$P = \\left(\\frac{1}{4}\\times\\frac{3}{4}\\right) + \\left(\\frac{3}{4}\\times\\frac{1}{4}\\right) = \\frac{3}{16} + \\frac{3}{16} = \\frac{3}{8}$
 
-**The integration:** this problem chained a *multiple-allele monohybrid cross* (part a) → a *single-genotype probability* (part b) → a *binomial across siblings* (part c). Notice that codominance changed the phenotype *labels* (AB is its own class) but did **not** change the underlying segregation arithmetic — the gametes still split 50/50, exactly as in Mendel's peas.
+**The integration:** this problem chained a *multiple-allele monohybrid cross* (part a) → a *single-genotype probability* (part b) → *birth orders across siblings* (part c). Notice that codominance changed the phenotype *labels* (AB is its own class) but did **not** change the underlying segregation arithmetic — the gametes still split 50/50, exactly as in Mendel's peas.
       `
     },
     {
@@ -155,57 +224,13 @@ Integrated problems fail not because any single step is hard, but because a smal
 | **Genotype vs. phenotype mismatch** | Multiplying $\\frac{3}{4}$ (phenotype) when a *specific genotype* was asked | Match the fraction to what's requested: $\\frac{1}{4},\\frac{1}{2},\\frac{1}{4}$ for genotypes; $\\frac{3}{4},\\frac{1}{4}$ for phenotypes |
 | **Forgetting carrier uncertainty** | Treating a "possible carrier" as a definite carrier | Multiply in the $\\frac{2}{3}$ (or other) probability that the parent carries the allele |
 | **Add/multiply confusion** | Adding probabilities of independent "AND" events | "AND" → multiply; "OR" (mutually exclusive) → add |
-| **Binomial without the coefficient** | Writing $p^k q^{n-k}$ and forgetting $\\binom{n}{k}$ | Always include the count of birth orders |
+| **Counting only one birth order** | Answering $\\frac{3}{16}$ for "exactly one of two children is affected" | List every order that fits the question, then add them |
 | **"At least one" by direct sum** | Summing overlapping cases and overcounting | Use $1 - P(\\text{none})$ |
 
 **A two-line self-check before you commit an answer.** First: *is every probability between 0 and 1, and does a complete set of outcomes sum to 1?* Second: *did I answer the exact event asked* (specific genotype vs. phenotype, "exactly k" vs. "at least one," carrier vs. affected)? These two checks catch the large majority of multi-step errors.
 
 > **Habit to build:** write the event in plain English first ("at least one of three children is *aa*"), then translate it into the operation ("$1 - (\\frac{3}{4})^3$"). The translation step is where points are won or lost — never jump straight to numbers.
       `
-    },
-    {
-      id: 'mgp6-quiz1',
-      type: 'multiple-choice' as const,
-      content: `
-### Checkpoint — Integrated Problem Solving
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'In tomatoes, tall (D) is dominant to dwarf (d) and round fruit (P) is dominant to pear-shaped (p); the genes are independent. A DdPp plant is crossed with a ddpp plant. What fraction of offspring are tall and pear-shaped (D_ pp)?',
-            options: [
-              '$\\frac{9}{16}$',
-              '$\\frac{1}{4}$',
-              '$\\frac{3}{16}$',
-              '$\\frac{1}{2}$'
-            ],
-            correctAnswer: 1,
-            explanation: 'Solve each gene as a test cross: Dd × dd gives P(tall, D_) = 1/2; Pp × pp gives P(pear, pp) = 1/2. By the product rule, P(D_ pp) = 1/2 × 1/2 = 1/4. The trap 3/16 comes from mistakenly using 3/4 for the tall probability — but that 3/4 is the value for a Dd × Dd cross, not the Dd × dd cross given here, where each gene splits 1:1.'
-          },
-          {
-            question: 'A woman\'s brother has an autosomal recessive disease (aa); the woman is unaffected, and her parents were both carriers. She marries a man who is a known carrier (Aa). What is the probability their first child is affected?',
-            options: [
-              '$\\frac{1}{4}$',
-              '$\\frac{1}{6}$',
-              '$\\frac{1}{3}$',
-              '$\\frac{1}{2}$'
-            ],
-            correctAnswer: 1,
-            explanation: 'The woman is an unaffected child of two carriers, so P(she is Aa) = 2/3 (conditioning out the aa case). For an affected child: P = P(woman is Aa) × P(she transmits a) × P(husband transmits a) = 2/3 × 1/2 × 1/2 = 1/6. The trap answer 1/4 wrongly assumes the woman is definitely a carrier; it omits the 2/3 factor that accounts for her uncertain carrier status.'
-          },
-          {
-            question: 'Two parents are AaBb × AaBb for two independent recessive disorders. They have 2 children. What is the probability that BOTH children are free of both disorders?',
-            options: [
-              '$\\frac{9}{16}$',
-              '$\\frac{81}{256}$',
-              '$\\frac{7}{16}$',
-              '$\\frac{49}{256}$'
-            ],
-            correctAnswer: 1,
-            explanation: 'One child is disorder-free (A_ B_) with probability 3/4 × 3/4 = 9/16. Because the two children are independent, multiply: P(both free) = 9/16 × 9/16 = 81/256. The 9/16 option is the probability for just ONE child — it forgets to apply the product rule across the two children. The 49/256 option squares 7/16, which is the chance that a child HAS at least one disorder, not that it is free of both.'
-          }
-        ]
-      }
     }
   ]
 };

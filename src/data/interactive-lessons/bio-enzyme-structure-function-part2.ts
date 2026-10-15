@@ -9,23 +9,25 @@ export const bioEnzymesPart2Data = {
 
 ### Reaction Rate
 
-Enzyme-catalyzed reactions follow a characteristic pattern:
+The **rate** of an enzyme-catalyzed reaction is how fast product appears (or substrate disappears):
 
-1. **Initial rate** increases linearly with substrate concentration
-2. Rate begins to **plateau** as enzymes become saturated
-3. **$V_{max}$** is reached when all enzyme active sites are occupied
+$$\\text{rate} = \\frac{\\text{change in amount of product}}{\\text{change in time}}$$
 
-### Key Terms
+In a typical experiment you measure product at several times and plot product against time. The **initial rate** is the slope at the start, before substrate has been used up.
 
-| Term | Definition |
+### How Rate Responds to Substrate
+
+1. At low substrate concentration, the rate **rises** as substrate is added — more substrate means more enzyme-substrate collisions.
+2. The rise slows and the rate **levels off** (plateaus).
+3. At the plateau, every active site is occupied; the enzyme is **saturated**, and adding more substrate cannot speed the reaction.
+
+| Region of the rate-vs-[S] graph | What is happening |
 |------|------------|
-| **$V_{max}$** | Maximum reaction velocity (all enzymes saturated) |
-| **$K_m$** | Substrate concentration at ½ $V_{max}$ |
-| **Turnover number** | Reactions catalyzed per enzyme per second |
+| Steep rise | Many active sites are free; more substrate fills them |
+| Curve bending over | Most active sites are already occupied |
+| Plateau | All active sites are occupied (saturation) |
 
-$K_m$ is a measure of enzyme-substrate affinity:
-- **Low $K_m$** = high affinity (enzyme binds substrate tightly)
-- **High $K_m$** = low affinity (enzyme requires more substrate)
+> Formal kinetic constants used in college biochemistry are not tested on the AP exam. You need to explain the shape of the curve and calculate rates from data.
       `
     },
     {
@@ -37,15 +39,15 @@ $K_m$ is a measure of enzyme-substrate affinity:
       exercise: {
         questions: [
           {
-            question: 'A low Km value indicates:',
+            question: 'In an enzyme assay, the amount of product rises from 0 to 12 μmol during the first 4 minutes. What is the initial reaction rate?',
             options: [
-              'Low enzyme-substrate affinity',
-              'High enzyme-substrate affinity',
-              'The enzyme has a slow maximum rate',
-              'The reaction is strongly endergonic'
+              '3 μmol/min',
+              '12 μmol/min',
+              '48 μmol/min',
+              '0.33 μmol/min'
             ],
-            correctAnswer: 1,
-            explanation: '$K_m$ is the substrate concentration needed to reach half of $V_{max}$. A low $K_m$ means less substrate is needed, indicating high affinity.'
+            correctAnswer: 0,
+            explanation: 'Rate = change in product ÷ change in time = 12 μmol ÷ 4 min = 3 μmol/min. Multiplying (48) or dividing time by product (0.33) gives the wrong quantity, and 12 is the total amount, not a rate.'
           }
         ]
       }
@@ -54,13 +56,27 @@ $K_m$ is a measure of enzyme-substrate affinity:
       id: 'enzy2-factors',
       type: 'text' as const,
       content: `
-## Substrate Concentration Effects
+## Substrate and Product Concentration Effects
 
-At low [S]: Reaction rate is proportional to substrate concentration (first-order kinetics)
+The relative amounts of substrate and product determine how efficiently an enzymatic reaction proceeds.
 
-At high [S]: Reaction rate levels off at $V_{max}$ (zero-order kinetics)
+- **Low [substrate]:** the rate depends strongly on how much substrate is present.
+- **High [substrate]:** the rate levels off because the enzyme is **saturated**. The only way to go faster is to add more enzyme (more active sites).
+- **Over time in a closed tube:** substrate is used up and product accumulates, so the rate slows. A product-vs-time curve therefore starts steep and flattens out even though the enzyme is still active.
 
-This is because at high concentrations, all enzyme active sites are occupied — the enzyme is **saturated**. Adding more substrate has no effect.
+### Worked example — reading a product curve
+
+| Time (min) | Product (μmol) |
+|---|---|
+| 0 | 0 |
+| 2 | 8 |
+| 4 | 14 |
+| 6 | 17 |
+| 8 | 18 |
+
+1. **Rate from 0 to 2 min:** 8 ÷ 2 = **4 μmol/min**.
+2. **Rate from 6 to 8 min:** (18 − 17) ÷ 2 = **0.5 μmol/min**.
+3. **Explanation:** the rate falls because substrate is running out, not because the enzyme was destroyed. Adding fresh substrate at 8 minutes would speed the reaction up again.
       `
     },
     {
@@ -72,15 +88,15 @@ This is because at high concentrations, all enzyme active sites are occupied —
       exercise: {
         questions: [
           {
-            question: 'When all enzyme active sites are occupied by substrate, the reaction is at:',
+            question: 'A student keeps adding substrate to an enzyme reaction, but past a certain point the rate stops increasing. What is the best explanation?',
             options: [
-              'Equilibrium',
-              '$V_{max}$',
-              'Zero rate',
-              '$K_m$'
+              'The active sites are already full',
+              'The extra substrate denatured the enzyme',
+              'The reaction ran out of activation energy',
+              'The substrate began acting as an inhibitor'
             ],
-            correctAnswer: 1,
-            explanation: 'When all enzyme molecules are bound to substrate (saturated), the reaction proceeds at its maximum velocity ($V_{max}$).'
+            correctAnswer: 0,
+            explanation: 'When every active site is occupied, the enzyme is saturated and extra substrate has nowhere to bind, so the rate levels off. Substrate does not denature the enzyme, and activation energy is a barrier, not a supply that runs out.'
           }
         ]
       }
@@ -94,23 +110,23 @@ This is because at high concentrations, all enzyme active sites are occupied —
       exercise: {
         dropdowns: [
           {
-            label: 'At $V_{max}$, all enzymes are ___',
+            label: 'When the rate levels off at high substrate, the enzymes are ___',
             options: ['denatured', 'inhibited', 'saturated', 'destroyed']
           },
           {
-            label: '$K_m$ is measured in units of ___',
-            options: ['time', 'concentration', 'energy', 'velocity']
+            label: 'A reaction rate is the amount of product formed per unit of ___',
+            options: ['time', 'concentration', 'energy', 'temperature']
           },
           {
-            label: 'Adding more enzyme ___ the $V_{max}$',
+            label: 'Once the enzyme is saturated, adding more enzyme ___ the rate',
             options: ['increases', 'decreases', 'does not change', 'halves']
           }
         ],
-        correctAnswers: ['saturated', 'concentration', 'increases'],
+        correctAnswers: ['saturated', 'time', 'increases'],
         hint1: 'All active sites are filled.',
-        hint2: 'It\'s a substrate concentration.',
-        hint3: 'More enzyme molecules = more total capacity.',
-        explanation: 'At Vmax, all enzymes are saturated. Km is a concentration (moles/liter). Adding more enzyme increases the total number of active sites, increasing Vmax.'
+        hint2: 'Rate = change in product ÷ change in ___.',
+        hint3: 'More enzyme molecules = more active sites.',
+        explanation: 'At the plateau, all enzymes are saturated. A rate is product formed per unit time. Adding more enzyme adds active sites, so the rate increases even when the existing enzyme is saturated.'
       }
     }
   ]

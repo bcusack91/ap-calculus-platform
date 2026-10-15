@@ -21,7 +21,7 @@ This part pulls Parts 1–6 into one picture. Read the map, check yourself again
 | How is the signal relayed? | G proteins, kinase cascades and second messengers such as cAMP | 4 |
 | Why is a small signal enough? | Each step activates many molecules: amplification | 4 |
 | What can the response be? | Enzyme or channel activity, gene expression, division, apoptosis | 5 |
-| How is the signal ended? | Ligand leaves, GTP hydrolysis, phosphodiesterase, phosphatases | 4, 5 |
+| How is the signal ended? | Ligand leaves, GTP hydrolysis, cAMP breakdown, phosphatases | 4, 5 |
 | What if a part changes? | Downstream steps are stuck on or stuck off | 5, 6 |
       `
     },
@@ -35,7 +35,7 @@ This part pulls Parts 1–6 into one picture. Read the map, check yourself again
 |---------|-----------------------------|-------------------------------|
 | Ligand chemistry | Hydrophilic | Hydrophobic steroid |
 | Receptor | G protein-coupled receptor in the membrane | Intracellular receptor |
-| Transduction | G protein → adenylyl cyclase → cAMP → kinase cascade | Hormone-receptor complex moves to the nucleus |
+| Transduction | G protein → cAMP-making enzyme → cAMP → kinase cascade | Hormone-receptor complex moves to the nucleus |
 | Response | Existing enzyme activated; glucose released | New genes transcribed; new proteins made |
 | Speed | Seconds | Hours |
 | Amplification | Large, through the cascade | Smaller; each complex activates genes directly |
@@ -100,11 +100,11 @@ This part pulls Parts 1–6 into one picture. Read the map, check yourself again
       content: `
 ### FRQ practice: a model response
 
-**Prompt (adapted, AP style).** A researcher studies a growth factor that binds a receptor tyrosine kinase and causes cell division. A mutant cell line divides rapidly even when no growth factor is present. (a) **Identify** one component of the pathway that could be altered in the mutant. (b) **Predict** the effect of adding a drug that blocks the growth factor's binding site on the receptor in the mutant cells. (c) **Justify** your prediction.
+**Prompt (adapted, AP style).** A researcher studies a growth factor that binds a membrane receptor and causes cell division. A mutant cell line divides rapidly even when no growth factor is present. (a) **Identify** one component of the pathway that could be altered in the mutant. (b) **Predict** the effect of adding a drug that blocks the growth factor's binding site on the receptor in the mutant cells. (c) **Justify** your prediction.
 
 **Model response.**
 
-(a) A relay protein downstream of the receptor, such as Ras, could be locked in its active, GTP-bound form.
+(a) A relay protein downstream of the receptor, such as a G protein, could be locked in its active, GTP-bound form.
 
 (b) The drug would **not** slow division in the mutant cells.
 
@@ -133,15 +133,15 @@ This part pulls Parts 1–6 into one picture. Read the map, check yourself again
             explanation: 'Shared molecular machinery across distantly related eukaryotes, including single-celled yeast, is evidence that the pathways evolved in a common ancestor and were retained.'
           },
           {
-            question: 'Drug Y raises cAMP levels in heart cells even when no hormone is present, but has no effect on cells lacking adenylyl cyclase. Where does drug Y most likely act?',
+            question: 'Drug Y raises cAMP levels in heart cells even when no hormone is present, but has no effect on cells lacking the enzyme that makes cAMP. Where does drug Y most likely act?',
             options: [
-              'On protein kinase A, directly',
+              'On a kinase activated by cAMP',
               'On the hormone receptor or the G protein',
-              'On the phosphodiesterase enzyme',
+              'On the final target enzyme',
               'On the genes for the hormone receptor'
             ],
             correctAnswer: 1,
-            explanation: 'Drug Y needs adenylyl cyclase to work, so it acts at or above the cyclase. Activating the receptor or G protein would switch the cyclase on and raise cAMP without the hormone.'
+            explanation: 'Drug Y needs the cAMP-making enzyme to work, so it acts at or above that enzyme. Activating the receptor or G protein would switch the enzyme on and raise cAMP without the hormone. A kinase or target enzyme acts after cAMP, so acting there could not raise cAMP.'
           },
           {
             question: 'Why can quorum sensing coordinate behavior among many bacteria while a single bacterium does not respond to its own signal?',
@@ -165,7 +165,7 @@ This part pulls Parts 1–6 into one picture. Read the map, check yourself again
 
 - I can classify a signal as contact, local or long-distance, with an example of each.
 - I can predict a receptor's location from the ligand's chemistry and justify it.
-- I can trace epinephrine → GPCR → G protein → adenylyl cyclase → cAMP → protein kinase A → response.
+- I can trace epinephrine → GPCR → G protein → cAMP-making enzyme → cAMP → kinase cascade → response.
 - I can calculate amplification through a cascade.
 - I can name four kinds of response, including apoptosis.
 - I can predict the effect of a mutation or drug at any step, upstream versus downstream.
@@ -187,7 +187,7 @@ This part pulls Parts 1–6 into one picture. Read the map, check yourself again
             options: ['Quorum sensing', 'Apoptosis', 'Amplification', 'Signal termination']
           },
           {
-            label: 'Phosphodiesterase converts cAMP to AMP',
+            label: 'An enzyme breaks cAMP down to inactive AMP',
             options: ['Quorum sensing', 'Apoptosis', 'Amplification', 'Signal termination']
           },
           {

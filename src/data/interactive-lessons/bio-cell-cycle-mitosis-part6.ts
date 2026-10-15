@@ -83,11 +83,11 @@ Researchers fuse cells in different phases and observe the results:
 
 **Experiment A:** S-phase cell fused with G$_1$-phase cell
 - Result: The G$_1$ nucleus immediately enters S phase (begins DNA replication)
-- Interpretation: S-phase cells contain factors (Cyclin E/A-Cdk2) that can drive a G$_1$ nucleus into S phase
+- Interpretation: S-phase cells contain cytoplasmic factors (cyclin-Cdk complexes) that can drive a G$_1$ nucleus into S phase
 
 **Experiment B:** M-phase cell fused with G$_1$-phase cell
-- Result: The G$_1$ nucleus undergoes premature chromosome condensation (PCC) — but the chromosomes are single-chromatid (unreplicated), leading to chromosome damage
-- Interpretation: M-phase cells contain MPF (Cyclin B-Cdk1) that forces any nucleus to enter M phase regardless of DNA replication status
+- Result: The G$_1$ chromosomes condense early — but they are single-chromatid (unreplicated), leading to chromosome damage
+- Interpretation: M-phase cells contain a factor (a cyclin-Cdk complex) that forces any nucleus to enter M phase regardless of DNA replication status
 
 **Experiment C:** M-phase cell fused with S-phase cell
 - Result: The S-phase chromosomes show premature condensation of partially replicated DNA — pulverized chromosomes (chromosome fragmentation)
@@ -108,12 +108,12 @@ Researchers fuse cells in different phases and observe the results:
             question: 'Why does fusing an M-phase cell with an S-phase cell produce pulverized (fragmented) chromosomes?',
             options: [
               'The chromosomes from the two cells are genetically incompatible and fragment',
-              'MPF forces S-phase DNA to condense mid-replication, breaking it at the forks',
+              'An M-phase factor forces S-phase DNA to condense mid-replication, breaking it',
               'Enzymes in the S-phase cell digest the condensed M-phase chromosomes',
               'DNA polymerase from the S-phase cell cuts the M-phase chromosomes apart'
             ],
             correctAnswer: 1,
-            explanation: 'During S phase, DNA is being actively copied at thousands of replication forks. Forcing condensation (via MPF) on this partially replicated DNA creates enormous mechanical stress at replication forks, causing DNA breakage and chromosomal fragmentation.'
+            explanation: 'During S phase, DNA is being actively copied at thousands of replication forks. Forcing condensation on this partially replicated DNA creates enormous mechanical stress at replication forks, causing DNA breakage and chromosomal fragmentation.'
           },
           {
             question: 'These cell fusion experiments provide evidence that:',
@@ -124,7 +124,7 @@ Researchers fuse cells in different phases and observe the results:
               'Cell cycle phases are fixed in length and cannot be accelerated artificially'
             ],
             correctAnswer: 1,
-            explanation: 'The experiments show that factors in the cytoplasm (MPF, S-phase kinases) can cross into a foreign nucleus and trigger phase-specific events. This was pivotal in establishing that cell cycle control is mediated by diffusible, enzymatically active protein complexes.'
+            explanation: 'The experiments show that factors in the cytoplasm (cyclin-Cdk complexes) can cross into a foreign nucleus and trigger phase-specific events. This was pivotal in establishing that cell cycle control is mediated by diffusible, enzymatically active protein complexes.'
           }
         ]
       }
@@ -144,10 +144,10 @@ Researchers fuse cells in different phases and observe the results:
             placeholder: 'e.g. growth rate'
           },
           {
-            question: 'The phenomenon where chromosomes condense prematurely in a cell not yet ready for mitosis:',
-            answer: 'premature chromosome condensation',
-            acceptableAnswers: ['premature chromosome condensation', 'PCC', 'Premature chromosome condensation'],
-            placeholder: 'e.g. nondisjunction'
+            question: 'Proteins whose concentrations rise and fall during the cycle and that activate Cdks:',
+            answer: 'cyclins',
+            acceptableAnswers: ['cyclins', 'cyclin', 'Cyclins', 'Cyclin'],
+            placeholder: 'e.g. kinases'
           }
         ]
       }
@@ -161,15 +161,15 @@ Researchers fuse cells in different phases and observe the results:
       exercise: {
         questions: [
           {
-            question: 'A researcher treats cells with a drug that prevents Cyclin B degradation.  What stage will the cells arrest in?',
+            question: 'A researcher treats cells with a drug that prevents the cyclin that peaks at the G2/M transition from being broken down. In what stage will the cells arrest?',
             options: [
               'G1 — the cells cannot pass the restriction point into S phase',
               'S phase — the cells cannot finish replicating their DNA',
-              'Mitosis — persistent Cdk1 activity blocks exit from mitosis',
+              'Mitosis — persistent Cdk activity keeps the cell from finishing',
               'Cytokinesis — the contractile ring forms but cannot constrict'
             ],
             correctAnswer: 2,
-            explanation: 'Cyclin B degradation by APC/C is required to exit mitosis. If Cyclin B cannot be degraded, Cdk1 remains active, which prevents chromosome decondensation, nuclear envelope reformation, and cytokinesis. The cells arrest in mitosis.'
+            explanation: 'Breaking down the mitotic cyclin is required to exit mitosis. If that cyclin cannot be degraded, its Cdk remains active, which prevents chromosome decondensation, nuclear envelope reformation, and cytokinesis. The cells arrest in mitosis.'
           }
         ]
       }

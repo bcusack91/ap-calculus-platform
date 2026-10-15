@@ -103,20 +103,18 @@ Two adults fasted overnight, drank a solution containing 75 g of glucose, and ha
       id: 'bio-feedback-mechanisms-p6-s4-thyroid',
       type: 'text' as const,
       content: `
-### Data set 2: reading paired hormone levels
+### Data set 2: reading the signal and the variable together
 
-In a hormone axis, measuring **both** the stimulating hormone and the final hormone tells you where the problem is, because negative feedback links them.
-
-Recall the thyroid axis: the hypothalamus releases TRH → the anterior pituitary releases TSH → the thyroid releases T₄ (and T₃) → high T₄ inhibits TRH and TSH release.
+Measuring **both** the regulated variable and the signal that controls it tells you where a loop is broken, because negative feedback links them. For the glucose loop, measure blood glucose (the variable) and insulin (the signal) after an overnight fast and after a meal.
 
 | Pattern | Interpretation | Reasoning |
 |---|---|---|
-| TSH normal, T₄ normal | Healthy axis | Loop in balance |
-| TSH **high**, T₄ **low** | The thyroid itself is failing | The pituitary is trying harder because T₄ is low, but the thyroid cannot respond |
-| TSH **low**, T₄ **high** | The thyroid is overactive on its own (for example, Graves' disease) | Feedback has correctly shut TSH down, but the thyroid is driven by something else |
-| TSH **low**, T₄ **low** | The pituitary is failing | Without TSH, the thyroid is not stimulated |
+| Glucose normal, insulin normal | Healthy loop | Signal and variable in balance |
+| Glucose **high**, insulin **low** | Signal missing (beta cells failing, as in type 1 diabetes) | The variable is out of range, but the signal that should correct it is absent |
+| Glucose **high**, insulin **high** | Target cells unresponsive (insulin resistance, as in type 2 diabetes) | The signal is being sent, but the effectors do not act on it |
+| Glucose **low**, insulin **high** | Signal uncontrolled (for example, an insulin-secreting tumor) | The signal stays on even after the variable has been pushed below the set point |
 
-**General rule:** when the two hormones move in **opposite** directions, the problem is usually at the **final gland**, and the upstream hormone is responding correctly through feedback. When they move in the **same** direction, the problem is usually **upstream**.
+**General rule:** ask whether the signal is doing what the loop *should* do given the variable. A missing signal points to the sensor or gland; a strong signal with no correction points to the effectors; a signal that stays on when it should be off points to an uncontrolled source.
       `
     },
     {
@@ -128,23 +126,23 @@ Recall the thyroid axis: the hypothalamus releases TRH → the anterior pituitar
       exercise: {
         dropdowns: [
           {
-            label: 'Patient 1: TSH high, T₄ low',
-            options: ['thyroid failing', 'pituitary failing', 'thyroid overactive', 'healthy axis']
+            label: 'Patient 1: fasting glucose high, insulin low',
+            options: ['signal missing', 'target cells unresponsive', 'signal uncontrolled', 'healthy loop']
           },
           {
-            label: 'Patient 2: TSH low, T₄ high',
-            options: ['healthy axis', 'thyroid overactive', 'pituitary failing', 'thyroid failing']
+            label: 'Patient 2: fasting glucose high, insulin high',
+            options: ['healthy loop', 'target cells unresponsive', 'signal missing', 'signal uncontrolled']
           },
           {
-            label: 'Patient 3: TSH low, T₄ low',
-            options: ['thyroid overactive', 'thyroid failing', 'healthy axis', 'pituitary failing']
+            label: 'Patient 3: fasting glucose low, insulin high',
+            options: ['signal uncontrolled', 'signal missing', 'healthy loop', 'target cells unresponsive']
           }
         ],
-        correctAnswers: ['thyroid failing', 'thyroid overactive', 'pituitary failing'],
-        hint1: 'Opposite directions usually mean the final gland is the problem.',
-        hint2: 'If T₄ is high, a healthy pituitary should lower TSH.',
-        hint3: 'If both are low, the thyroid is not being told to work.',
-        explanation: 'High TSH with low T₄ means the thyroid cannot respond; low TSH with high T₄ means the thyroid is overactive on its own; low TSH with low T₄ points to the pituitary.'
+        correctAnswers: ['signal missing', 'target cells unresponsive', 'signal uncontrolled'],
+        hint1: 'High glucose should trigger insulin release. Is the insulin there?',
+        hint2: 'If insulin is high but glucose is still high, the message is sent but not acted on.',
+        hint3: 'Low glucose should switch insulin off; if insulin stays high, its source is not under control.',
+        explanation: 'High glucose with low insulin means the signal is missing; high glucose with high insulin means the target cells do not respond; low glucose with high insulin means insulin is being released without control.'
       }
     },
     {

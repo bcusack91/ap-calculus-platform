@@ -19,7 +19,7 @@ This part ties the whole pathway together, from a gene in the nucleus to a worki
 | RNA processing | Nucleus | 5′ cap, poly-A tail, spliceosome | Splice-site mutation → exon skipped or intron kept |
 | Export | Nuclear pore | Mature mRNA | Unprocessed RNA is held back |
 | Translation | Cytosol / rough ER | Ribosome, tRNA, codons, start and stop codons | Coding mutation → silent, missense, nonsense or frameshift |
-| Folding and modification | Cytosol, ER, Golgi | Chaperones, glycosylation, cleavage | Misfolding → protein degraded |
+| Folding and modification | Cytosol, ER, Golgi | Folding, glycosylation, phosphorylation | Misfolding → protein degraded |
 | Delivery | ER → Golgi → vesicles, or free ribosome → cytosol | Signal sequence | Wrong or missing signal → wrong location |
 
 ### Prokaryote versus eukaryote, one more time
@@ -66,7 +66,7 @@ This part ties the whole pathway together, from a gene in the nucleus to a worki
       exercise: {
         questions: [
           {
-            question: 'A gene\'s coding strand is 5′–ATG GCA TGG TAA–3′. What polypeptide is produced? (GCA = Ala, UGG = Trp.)',
+            question: 'A gene\'s coding strand is 5′–ATG GCA TGG TAA–3′. What polypeptide is produced? (GCA = Ala, UGG = Trp, UAA = Stop.)',
             options: [
               'Met – Ala – Trp',
               'Met – Ala – Trp – Stop – Met',
@@ -115,7 +115,7 @@ This part ties the whole pathway together, from a gene in the nucleus to a worki
 
 (b) The substitution lies in the coding region, not the promoter, so RNA polymerase still binds and transcribes the gene at the normal rate; the change only matters once the ribosome reads the mRNA.
 
-(c) Sequence the mRNA (or the gene) of allele 2 and compare it with allele 1: a stop codon (UAA, UAG or UGA) at the position where translation ends would confirm a nonsense mutation.
+(c) Sequence the mRNA (or the gene) of allele 2 and compare it with allele 1: a codon that the codon chart lists as a stop codon, at the position where translation ends, would confirm a nonsense mutation.
 
 > 📝 **Scoring notes:** (b) earns the point only by linking the mutation's **location** to the step it affects. Saying "the mutation does not affect transcription" without a reason is not enough.
       `

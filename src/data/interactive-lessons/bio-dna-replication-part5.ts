@@ -5,128 +5,129 @@ export const bioDnaReplicationPart5Data = {
       id: 'dr5-intro',
       type: 'text' as const,
       content: `
-## Telomeres and the End Replication Problem
+## Modeling the Replication Fork
 
 **Part 5 of 7**
 
-Linear chromosomes in eukaryotes face a unique challenge: the **end replication problem**.  This problem does not exist in prokaryotes because their chromosomes are circular.
+The CED asks you to **explain relationships between the parts of a biological model**. For DNA replication, the model is usually a diagram of a replication fork with strands, arrows and 5′/3′ labels, and the questions ask what each part does and what happens when one part fails. This part trains you to read that model quickly and reliably.
+
+(Some textbooks also cover telomeres and the "end-replication problem" of linear chromosomes. Those topics are beyond the scope of the AP exam.)
       `
     },
     {
       id: 'dr5-problem',
       type: 'text' as const,
       content: `
-### The End Replication Problem
+### Reading a Fork Diagram in Four Steps
 
-**The problem:**
-- On the lagging strand, an RNA primer must initiate each Okazaki fragment
-- At the very end of the chromosome (3' end of the template), the last RNA primer is synthesized, and DNA polymerase extends from it
-- When this primer is removed, there is a short gap at the 5' end of the new strand that CANNOT be filled — there is no upstream 3'-OH for DNA polymerase to extend from
-- Result: the daughter strand is slightly shorter than the parent
+**Step 1 — Label the template strands.** The two parental strands are antiparallel: if one runs 3′ → 5′ toward the fork, the other runs 5′ → 3′ toward the fork.
 
-**Consequence:** With each round of replication, chromosomes get shorter at both ends.  After many divisions, essential genes near the ends would be lost.
+**Step 2 — Place the enzymes.** **Helicase** sits at the point of the fork, separating the strands. **Topoisomerase** acts **ahead** of the fork, on the still-double-stranded DNA, relieving the overwinding that unwinding creates.
 
-### Telomeres — The Protective Solution
+**Step 3 — Decide which new strand is leading.** New DNA always grows 5′ → 3′, so it is built along a template read 3′ → 5′.
+- The template that runs **3′ → 5′ toward the fork** lets its new strand grow **toward** the fork, continuously: the **leading strand**.
+- The other template lets its new strand grow only **away** from the fork, so that strand is made in short pieces (**Okazaki fragments**), each started by its own **RNA primer**: the **lagging strand**.
 
-**Telomeres** are repetitive, non-coding DNA sequences at the ends of linear chromosomes:
-- Human telomere repeat: **TTAGGG** (repeated 1000-2000 times, totaling 5-15 kb)
-- Telomeres provide a "buffer zone" of expendable sequence — shortening removes repeats, not genes
-- Telomeres also form a protective structure called a **T-loop** (the 3' overhang folds back and invades the double-stranded region) with a protein complex called **shelterin** that prevents the cell from recognizing chromosome ends as DNA breaks
+**Step 4 — Finish the lagging strand.** The RNA primers are replaced with DNA, and **ligase** joins the fragments into one continuous strand.
 
-> **Hayflick Limit:** Normal somatic cells can divide approximately **50-70 times** before telomeres become critically short.  At this point, cells enter **replicative senescence** (a permanent G$_0$ state) or undergo apoptosis.  This is a tumor-suppression mechanism.
+### Worked Example: Predicting a New Strand
+
+**Problem.** At a fork, one template strand reads 3′–T A C G G T A C–5′ running toward the fork. Write the new strand and say whether it is leading or lagging.
+
+**Step 1 — Pair the bases.** T → A, A → T, C → G, G → C, giving A T G C C A T G.
+
+**Step 2 — Label the ends.** The new strand is antiparallel to its template: **5′–A T G C C A T G–3′**.
+
+**Step 3 — Decide the strand type.** The template runs 3′ → 5′ toward the fork, so the new strand grows toward the fork as one continuous piece: it is the **leading strand**.
+
+**Check.** The new strand grows from its 5′ end to its 3′ end, which is the only direction DNA polymerase can build.
       `
     },
     {
       id: 'dr5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-### Checkpoint
+### Checkpoint — Reading the Fork
       `,
       exercise: {
         questions: [
           {
-            question: 'Why does the end replication problem only affect eukaryotes, not prokaryotes?',
+            question: 'In a fork diagram, the upper template strand runs 3′ → 5′ toward the fork and the lower template strand runs 5′ → 3′ toward the fork. Which statement is correct?',
             options: [
-              'Prokaryotic genomes are small enough to copy before the ends erode',
-              'Prokaryotic chromosomes are circular, so there are no ends to lose',
-              'Prokaryotes make no Okazaki fragments, so no primer gaps ever form',
-              'Prokaryotic polymerases can build strands in both the 5’-3’ and 3’-5’ directions'
+              'The new upper strand is lagging, and the new lower strand is leading',
+              'The new strands are both leading, since each grows toward the fork',
+              'The new upper strand is leading, and the new lower strand is the lagging one',
+              'Both new strands are lagging, since each must be made in fragments'
             ],
-            correctAnswer: 1,
-            explanation: 'Circular chromosomes have no free ends. The last Okazaki fragment on the lagging strand can be completed by extending from the adjacent fragment or by closing the circle. Only linear chromosomes have terminal sequences that cannot be fully replicated.'
+            correctAnswer: 2,
+            explanation: 'New DNA grows 5′ → 3′ along a template read 3′ → 5′. The upper template runs 3′ → 5′ toward the fork, so its new strand grows toward the fork continuously (leading). The lower template forces its new strand to grow away from the fork in fragments (lagging). The two strands of one fork always differ, because the templates are antiparallel.'
           },
           {
-            question: 'What would happen if telomeres were removed from a chromosome?',
+            question: 'A drug stops topoisomerase from working. Where on a fork diagram would the first problem appear?',
             options: [
-              'Nothing, because telomeres carry no genes and serve no function',
-              'Ends would be treated as DNA breaks, causing fusions or cell death',
-              'The chromosome would replicate faster with less DNA to copy',
-              'The cell would become cancerous at once from unchecked division'
+              'Ahead of the fork, where unwound DNA becomes overwound',
+              'Behind the fork, where Okazaki fragments must be joined',
+              'At each RNA primer, which can no longer be laid down',
+              'On the leading strand only, which then stops growing at once'
             ],
-            correctAnswer: 1,
-            explanation: 'Without telomeres and their associated shelterin complex, chromosome ends resemble DSBs. The cell tries to "repair" them by fusing chromosomes together (creating dicentric chromosomes) or by triggering checkpoint-mediated apoptosis. Additionally, essential genes near the ends would be eroded.'
+            correctAnswer: 0,
+            explanation: 'Topoisomerase relieves the strain that builds up ahead of the fork as helicase unwinds the helix. Without it, the DNA ahead of the fork becomes overwound and the fork eventually stalls on both strands. Joining fragments is ligase\'s job, and priming does not depend on topoisomerase.'
           }
         ]
       }
     },
     {
-      id: 'dr5-telomerase',
+      id: 'dr5-circular',
       type: 'text' as const,
       content: `
-### Telomerase — Extending the Ends
+### Replicating Circular and Linear DNA
 
-**Telomerase** is a specialized enzyme that extends telomeres, counteracting the end replication problem:
+**Prokaryotic chromosomes and plasmids are circular.** Replication of a bacterial chromosome begins at a single origin. Two forks move in opposite directions around the circle until they meet, giving two complete circular chromosomes, each with one old and one new strand.
 
-**Structure:**
-- Telomerase is a **ribonucleoprotein** (protein + RNA)
-- Contains **TERT** (telomerase reverse transcriptase) — the catalytic protein subunit
-- Contains **TERC** (telomerase RNA component) — includes a template sequence complementary to the telomeric repeat
+**Plasmids** are small, extra-chromosomal circles of DNA found in many prokaryotes and some eukaryotes. Each plasmid has its own origin, so it is replicated independently of the chromosome, and copies are passed to daughter cells. Plasmids often carry genes that help the cell survive, such as genes for antibiotic resistance, and they can be transferred between bacteria, a source of genetic variation.
 
-**Mechanism:**
-1. The TERC template (3'-AAUCCC-5') base-pairs with the 3' overhang of the telomere
-2. TERT extends the 3' end using the RNA template (reverse transcription — RNA → DNA)
-3. Telomerase translocates and repeats, adding multiple TTAGGG repeats
-4. Primase then synthesizes a primer on the extended 3' overhang
-5. DNA polymerase fills in the complementary strand
-6. The primer is removed, leaving a slightly extended chromosome
+**Eukaryotic chromosomes are linear** and much longer, so each one is replicated from many origins at once, as Part 2 described.
 
-**Telomerase expression:**
-- **Active** in: germ cells, stem cells, early embryonic cells — these cells must divide indefinitely
-- **Inactive** in: most somatic cells — contributes to the Hayflick limit and aging
-- **Reactivated** in: ~85-90% of cancers — telomerase reactivation grants immortality
+### Connecting Replication to Cell Division
 
-> **Cancer Connection:** Telomerase reactivation is one of the hallmarks of cancer. Drugs targeting telomerase (e.g., imetelstat) are being developed as potential cancer therapies.  However, targeting telomerase could also affect stem cells, posing a therapeutic challenge.
+DNA is replicated during **S phase**, before mitosis or meiosis begins. Because replication is semiconservative, each **sister chromatid** of a replicated chromosome contains **one original strand and one new strand**. When sister chromatids separate in mitosis (or in meiosis II), each daughter cell receives a complete copy of the genetic information.
+
+| Stage | What happens to the DNA |
+|-------|-------------------------|
+| S phase | Each chromosome is replicated; sister chromatids form, each one parental strand + one new strand |
+| Mitosis | Sister chromatids separate, so each daughter cell gets one copy of every chromosome |
+| Meiosis | One replication is followed by two divisions, so gametes get half the DNA (Topic 5.1) |
       `
     },
     {
       id: 'dr5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-### Checkpoint — Telomerase
+### Checkpoint — Circles, Plasmids and Chromatids
       `,
       exercise: {
         questions: [
           {
-            question: 'Telomerase contains an RNA component (TERC). Why is this RNA essential?',
+            question: 'A bacterium carries a plasmid with an antibiotic-resistance gene. Why do its descendants usually keep the resistance after many cell divisions?',
             options: [
-              'It serves only to stabilize the enzyme and plays no part in the reaction',
-              'It serves as the template that TERT copies into telomeric DNA repeats',
-              'It is the catalytic core that adds new nucleotides to the telomere end',
-              'It shields TERT from protease degradation inside the nucleus'
+              'The resistance gene is copied into each daughter cell\'s main chromosome',
+              'The plasmid has its own origin, so it is replicated and passed on',
+              'The antibiotic induces each new cell to make a fresh resistance gene',
+              'Plasmids are made of RNA, which is copied faster than chromosomes'
             ],
             correctAnswer: 1,
-            explanation: 'TERC contains a short template sequence (complementary to the telomere repeat) that TERT uses to synthesize new telomeric DNA. This makes telomerase a reverse transcriptase — it copies RNA into DNA. Without TERC, TERT has no template and cannot extend telomeres.'
+            explanation: 'A plasmid replicates independently from its own origin of replication, so copies are passed to daughter cells along with the chromosome. The resistance gene stays on the plasmid rather than moving into the chromosome, antibiotics do not create resistance genes, and plasmids are DNA, not RNA.'
           },
           {
-            question: 'If telomerase is inhibited in cancer cells, what is the predicted long-term effect?',
+            question: 'A chromosome is replicated in S phase in the presence of labeled nucleotides, and the cell then divides by mitosis without the label. How is the label distributed between the two sister chromatids before they separate?',
             options: [
-              'The cells would die at once, as soon as telomerase activity stops',
-              'Telomeres would shorten each division until cells senesce or die',
-              'The cells would switch to conservative replication to protect their ends',
-              'Nothing, because cancer cells never lose DNA from their chromosome ends'
+              'One chromatid is fully labeled, and the other carries no label at all',
+              'Each chromatid has one labeled strand and one unlabeled strand',
+              'Neither chromatid is labeled, since the label is lost in mitosis',
+              'Both chromatids carry a random mix of labeled and old segments'
             ],
             correctAnswer: 1,
-            explanation: 'Telomerase inhibition does not kill cells immediately. Rather, with each division, telomeres shorten further. After many divisions (depends on initial telomere length), telomeres become critically short, triggering checkpoint-mediated senescence or apoptosis. This is why telomerase inhibitors require prolonged treatment.'
+            explanation: 'Replication is semiconservative, so each sister chromatid is one DNA molecule made of one parental (unlabeled) strand and one new (labeled) strand. A fully labeled and a fully unlabeled chromatid would require conservative replication, and a random mix would require dispersive replication.'
           }
         ]
       }
@@ -135,27 +136,27 @@ Linear chromosomes in eukaryotes face a unique challenge: the **end replication 
       id: 'dr5-input',
       type: 'input-boxes' as const,
       content: `
-### Key Terms — Telomeres
+### Key Terms — The Replication Fork
       `,
       exercise: {
         questions: [
           {
-            question: 'The repetitive DNA sequence at human chromosome ends:',
-            answer: 'TTAGGG',
-            acceptableAnswers: ['TTAGGG', 'ttaggg'],
-            placeholder: 'e.g. AATCGG'
+            question: 'The new strand that is synthesized continuously toward the replication fork:',
+            answer: 'leading strand',
+            acceptableAnswers: ['leading strand', 'leading', 'Leading strand', 'the leading strand'],
+            placeholder: 'e.g. template strand'
           },
           {
-            question: 'The approximate maximum number of times a normal somatic cell can divide:',
-            answer: '50-70',
-            acceptableAnswers: ['50-70', '50', '50 to 70', 'about 50', 'approximately 50'],
-            placeholder: 'e.g. 100'
+            question: 'The short molecule that must be laid down before DNA polymerase can begin a new strand:',
+            answer: 'RNA primer',
+            acceptableAnswers: ['RNA primer', 'primer', 'an RNA primer', 'Primer', 'RNA primers'],
+            placeholder: 'e.g. promoter'
           },
           {
-            question: 'The protein subunit of telomerase that acts as a reverse transcriptase:',
-            answer: 'TERT',
-            acceptableAnswers: ['TERT', 'tert', 'telomerase reverse transcriptase'],
-            placeholder: 'e.g. TERC'
+            question: 'Small circular DNA molecules that replicate independently of a bacterium\'s chromosome:',
+            answer: 'plasmids',
+            acceptableAnswers: ['plasmids', 'plasmid', 'Plasmids', 'Plasmid'],
+            placeholder: 'e.g. ribosomes'
           }
         ]
       }
@@ -169,15 +170,15 @@ Linear chromosomes in eukaryotes face a unique challenge: the **end replication 
       exercise: {
         questions: [
           {
-            question: 'Dolly the sheep (the first mammal cloned from an adult somatic cell) had shortened telomeres compared to age-matched naturally born sheep. Why?',
+            question: 'A template strand reads 3′–GACCTA–5′. What is the sequence of the new DNA strand built on it?',
             options: [
-              'Cloning from an adult cell damaged her DNA, and the damaged ends were trimmed',
-              'Her nucleus came from an adult cell whose telomeres had already shortened',
-              'Sheep lack telomerase, so all sheep telomeres shorten with age',
-              'Dolly carried different alleles that encode a shorter telomere repeat'
+              '5′–CTGGAT–3′',
+              '3′–CTGGAT–5′',
+              '5′–GACCTA–3′',
+              '5′–CUGGAU–3′'
             ],
-            correctAnswer: 1,
-            explanation: 'The donor nucleus had the shortened telomeres characteristic of an adult somatic cell. During reprogramming and subsequent development, telomeres were not fully restored to embryonic length. This meant Dolly effectively started life with "older" chromosomes, which may have contributed to her premature aging.'
+            correctAnswer: 0,
+            explanation: 'Each base pairs with its complement (G–C, A–T), giving CTGGAT, and the new strand is antiparallel to its template, so it runs 5′–CTGGAT–3′. Writing it 3′ to 5′ ignores antiparallel structure, copying the template sequence ignores base pairing, and U belongs in RNA, not DNA.'
           }
         ]
       }

@@ -20,7 +20,7 @@ export const bioBiotechPart4Data = {
 | Transformation Efficiency |
 | Making a Human Protein in Bacteria |
 
-> 🔑 **Key Concept:** **Bacterial transformation introduces DNA into bacterial cells** (EK IST-1.P.3). A gene placed in a plasmid can be taken up by bacteria, copied every time they divide, and, with the right promoter, expressed as protein. Selection with an antibiotic finds the few cells that took the plasmid in.
+> 🔑 **Key Concept:** **Bacterial transformation introduces DNA into bacterial cells** (EK 6.8.A.1). A gene placed in a plasmid can be taken up by bacteria, copied every time they divide, and, with the right promoter, expressed as protein. Selection with an antibiotic finds the few cells that took the plasmid in.
 
 ## Plasmids as Vectors
 
@@ -40,15 +40,16 @@ Transformation also happens in nature. Some bacteria take up DNA released by dea
       type: 'text' as const,
       content: `## The Transformation Procedure
 
-Most laboratory bacteria do not take up DNA easily. The procedure makes them **competent**, able to take up DNA, for a short time.
+Most laboratory bacteria do not take up DNA easily, so the procedure first treats them to make their membranes briefly permeable to DNA.
 
-| Step | What is done | Why |
+| Stage | What happens | Why |
 |---|---|---|
-| 1. Calcium chloride treatment | Cells are suspended in cold CaCl₂ | Positive calcium ions shield the negative charges on the DNA and the cell surface, so DNA can get close to the membrane |
-| 2. Add plasmid; keep on ice | Plasmid DNA is mixed with the cells | DNA settles onto the cell surface |
-| 3. **Heat shock** | About 42°C for under a minute, then straight back to ice | The sudden temperature change briefly makes the membrane more permeable, so some plasmids enter |
-| 4. Recovery | Nutrient broth, short incubation at 37°C | Cells repair their membranes and begin **expressing** the resistance gene before facing antibiotic |
-| 5. Plating | Cells are spread on agar plates, some containing antibiotic | Selects for transformed cells |
+| 1. Prepare the cells | Cells are treated so DNA can cross the cell envelope | Uptake of large DNA molecules is otherwise rare |
+| 2. Add the plasmid | Plasmid DNA is mixed with the cells, and some cells take it in | This is the transformation itself |
+| 3. Recovery | Cells grow briefly without antibiotic | Transformed cells begin **expressing** the plasmid's resistance gene |
+| 4. Selection | Cells are spread on plates, some containing antibiotic | Only cells carrying the plasmid survive on the antibiotic |
+
+(The specific chemicals, temperatures and timings used in the laboratory procedure are beyond the scope of the AP exam.)
 
 Only a tiny fraction of cells, often well under 1%, actually take up a plasmid. That is why selection matters: on a plate with antibiotic, untransformed cells die and **every colony that grows comes from a single transformed cell** that then divided many times.`
     },
@@ -70,15 +71,15 @@ Only a tiny fraction of cells, often well under 1%, actually take up a plasmid. 
             explanation: 'Without an origin of replication, the plasmid is not copied, so daughter cells do not inherit it and the population cannot keep it. Each plasmid needs its own origin; it does not borrow the chromosome\'s.'
           },
           {
-            question: 'After heat shock, cells are incubated in broth without antibiotic before plating on ampicillin. What is the main purpose of this step?',
+            question: 'After transformation, cells are spread on a plate containing ampicillin. Why can every colony that grows be assumed to carry the plasmid?',
             options: [
-              'It kills the cells that failed to take up the plasmid',
-              'It gives cells time to make the resistance protein first',
-              'It lets the plasmid replace the bacterial chromosome',
-              'It removes the calcium chloride from the cell surfaces'
+              'Ampicillin causes the bacteria to take up plasmids from the plate',
+              'Only cells with the plasmid\'s resistance gene survive to divide',
+              'The plasmid makes every cell divide faster than untransformed cells',
+              'Untransformed cells form colonies too small to be counted on agar'
             ],
             correctAnswer: 1,
-            explanation: 'A cell that has just taken up the plasmid has not yet transcribed and translated the resistance gene, so a recovery period lets it build the protein before the antibiotic acts. The broth itself kills nothing; selection happens on the antibiotic plate.'
+            explanation: 'The plasmid carries an ampicillin-resistance gene, so ampicillin kills cells without it, and each surviving cell divides into a colony of plasmid-carrying cells. Ampicillin does not cause plasmid uptake, the plasmid does not speed division, and untransformed cells do not form colonies on ampicillin at all.'
           }
         ]
       }
@@ -214,7 +215,7 @@ An organism whose DNA has been changed by genetic engineering is a **genetically
             question: 'In the four-plate experiment, colonies grow on plate C (LB + ampicillin, + plasmid) but none of them glow. Which conclusion is best supported?',
             options: [
               'The cells took up the plasmid but failed to keep it',
-              'The cells lost the GFP gene during the heat-shock step',
+              'The cells lost the GFP gene during the transformation step',
               'The cells carry the plasmid, but the GFP gene is not induced',
               'The cells are not transformed and resist ampicillin naturally'
             ],

@@ -86,8 +86,8 @@ A researcher treats four groups of cells with different metabolic poisons and me
 
 | Poison | Target | Observation |
 |--------|--------|-------------|
-| **Fluoroacetate** | Aconitase (step 2 of citric acid cycle) | Citrate accumulates; NADH production from cycle drops |
-| **Rotenone** | Complex I of ETC | NADH accumulates; proton gradient weakens; ATP output drops sharply |
+| **Fluoroacetate** | An enzyme early in the citric acid cycle | The molecule just before the block accumulates; NADH production from the cycle drops |
+| **Rotenone** | The first carrier that accepts electrons from NADH | NADH accumulates; proton gradient weakens; ATP output drops sharply |
 | **Oligomycin** | ATP synthase (blocks proton channel) | Proton gradient builds to maximum; ATP production stops; ETC eventually slows |
 | **DNP (dinitrophenol)** | None — creates proton leak in membrane | Proton gradient collapses; ETC runs at maximum rate; energy released as heat; ATP drops |
       `
@@ -135,18 +135,16 @@ Complete the ATP accounting table for the aerobic oxidation of one glucose molec
 
 | Stage | ATP by SLP | NADH | FADH$_2$ | ATP from e$^-$ carriers* |
 |-------|-----------|------|------------|---------------------------|
-| Glycolysis | 2 | 2 | 0 | 2 × 2.5 = 5** |
+| Glycolysis | 2 | 2 | 0 | 2 × 2.5 = 5 |
 | Pyruvate oxidation | 0 | 2 | 0 | 2 × 2.5 = 5 |
 | Citric acid cycle | 2 | 6 | 2 | (6 × 2.5) + (2 × 1.5) = 18 |
 | **Total** | **4** | **10** | **2** | **28** |
 
 *Using 2.5 ATP per NADH and 1.5 ATP per FADH$_2$
 
-**The cytoplasmic NADH from glycolysis may yield only 1.5 ATP each if transported via the glycerol-3-phosphate shuttle (instead of 2.5 via the malate-aspartate shuttle), reducing the total to 30 ATP.
+**Grand total: about 30-32 ATP per glucose** (4 by SLP + about 26-28 by oxidative phosphorylation)
 
-**Grand total: 30-32 ATP per glucose** (4 by SLP + 26-28 by oxidative phosphorylation)
-
-> **AP Exam Note:** The AP exam uses the approximate value of 30-32 ATP per glucose.  Older textbooks cite 36-38, but this figure has been revised downward based on more accurate measurements of the H+/ATP ratio and shuttle system costs.
+> **AP Exam Note:** Treat ATP yields as approximate. The number of H$^+$ pumped per NADH and the number needed per ATP are not fixed whole numbers, so textbooks give a range (older books cite 36-38). What the exam tests is the comparison: aerobic respiration yields far more ATP per glucose than fermentation.
       `
     },
     {
@@ -161,12 +159,12 @@ Complete the ATP accounting table for the aerobic oxidation of one glucose molec
             question: 'Why is the total ATP yield from glucose oxidation described as an approximation (30-32) rather than an exact number?',
             options: [
               'Because some of the ATP is used up by the cell as soon as it is made',
-              'Because protons per ATP and the NADH shuttle used can both vary',
+              'Because the H+ pumped per NADH and used per ATP can vary',
               'Because cells always run fermentation alongside aerobic respiration',
               'Because some glucose molecules are only partly oxidized to pyruvate'
             ],
             correctAnswer: 1,
-            explanation: 'Two factors create variability: (1) the H+/ATP ratio may not be exactly 4:1, and (2) cytoplasmic NADH from glycolysis must be transported into mitochondria via shuttle systems — the malate-aspartate shuttle preserves 2.5 ATP/NADH while the glycerol-3-phosphate shuttle yields only 1.5 ATP/NADH.'
+            explanation: 'The yield depends on how many H+ the chain pumps for each NADH or FADH2 and how many H+ must flow through ATP synthase for each ATP. Neither is a fixed whole number, and conditions in the cell vary, so the total is given as a range.'
           },
           {
             question: 'Approximately what percentage of the ATP from aerobic respiration comes from oxidative phosphorylation?',
@@ -197,10 +195,10 @@ Complete the ATP accounting table for the aerobic oxidation of one glucose molec
             placeholder: 'e.g. 6'
           },
           {
-            question: 'The poison that uncouples the ETC from ATP synthesis by creating proton leaks (abbreviation):',
-            answer: 'DNP',
-            acceptableAnswers: ['DNP', 'dnp', 'dinitrophenol', 'Dinitrophenol', '2,4-dinitrophenol'],
-            placeholder: 'e.g. KCN'
+            question: 'In the respirometer experiment, the gas whose uptake is measured once KOH has absorbed the CO2:',
+            answer: 'O2',
+            acceptableAnswers: ['O2', 'o2', 'oxygen', 'Oxygen'],
+            placeholder: 'e.g. N2'
           }
         ]
       }

@@ -9,7 +9,7 @@ export const bioCellCommPart5Data = {
 
 **Part 5 of 7 — Cellular Responses**
 
-A pathway exists to change what the cell does. The CED states that signal transduction may change **gene expression** and **cell function**, which can alter the phenotype, or can lead to **programmed cell death (apoptosis)**. It also asks you to explain how a change in **any** part of a pathway changes the response (Topic 4.4). This part covers both halves.
+A pathway exists to change what the cell does. The CED states that signal transduction may change **gene expression** and **cell function**, which can alter the phenotype, or can lead to **programmed cell death (apoptosis)**. It also asks you to explain how a change in **any** part of a pathway changes the response (Topic 4.3). This part covers both halves.
 
 ### Where the response happens
 
@@ -25,13 +25,13 @@ A pathway exists to change what the cell does. The CED states that signal transd
       content: `
 ### Four kinds of response to know
 
-**1. Changes in enzyme or channel activity.** The final relay protein activates or inhibits an existing protein. Example: glycogen phosphorylase is switched on and glucose is released.
+**1. Changes in enzyme or channel activity.** The final relay protein activates or inhibits an existing protein. Example: the enzyme that breaks down glycogen is switched on and glucose is released.
 
 **2. Changes in gene expression.** The pathway activates a **transcription factor**, which turns specific genes on or off. The DNA sequence is not changed; the cell simply makes different mRNAs and proteins.
 
 - *Plants:* the gas **ethylene** triggers a pathway that turns on genes for enzymes that soften fruit and convert starch to sugar, so the fruit ripens.
 - *Seeds:* the hormone **gibberellin** turns on genes for enzymes that break down stored starch, so a germinating seed can feed the embryo.
-- *Animal development:* expression of the **SRY** gene on the Y chromosome starts a signaling program that leads to male development.
+- *Animal development:* signals switch on **HOX genes**, which set up the body plan along the head-to-tail axis.
 
 **3. Cell division.** Growth factors bind receptors (often receptor tyrosine kinases) and start pathways that push the cell past the G₁ checkpoint into the cell cycle.
 
@@ -94,7 +94,7 @@ Then decide whether the change makes the component **stuck off** (loss of functi
 | Relay protein (e.g., a G protein) | No response | Response continues after the ligand is gone |
 | Final target protein | No response; earlier steps still occur normally | Response all the time |
 
-**Case: Ras and cancer.** Ras is a small G protein in growth-factor pathways. Like other G proteins it is active with GTP bound and turns itself off by hydrolyzing GTP. Certain mutations stop Ras from hydrolyzing GTP, so it stays **on** and sends a constant "divide" signal even when no growth factor is present. Mutant Ras is found in many human cancers.
+**Case: a stuck relay protein and cancer.** Many growth-factor pathways include a small relay G protein. Like other G proteins it is active with GTP bound and turns itself off by hydrolyzing GTP. Certain mutations stop it from hydrolyzing GTP, so it stays **on** and sends a constant "divide" signal even when no growth factor is present. Mutations of this kind are found in many human cancers.
 
 **Case: type 2 diabetes.** Insulin is present, but target cells respond weakly because of problems in the receptor or the pathway downstream of it. Glucose uptake stays low, so blood glucose stays high. (In type 1 diabetes, by contrast, the signal itself is missing because insulin-producing cells were destroyed.)
       `
@@ -109,7 +109,7 @@ The CED notes that chemicals that interfere with any component can **activate or
 
 | Chemical | What it targets | Result |
 |----------|-----------------|--------|
-| **Cholera toxin** | Chemically modifies the G protein in intestinal cells so it cannot hydrolyze GTP | G protein stuck on → adenylyl cyclase keeps making cAMP → cells pump chloride ions and water into the gut → severe diarrhea |
+| **Cholera toxin** | Chemically modifies the G protein in intestinal cells so it cannot hydrolyze GTP | G protein stuck on → the cAMP-making enzyme keeps working → cells pump chloride ions and water into the gut → severe diarrhea |
 | **Beta-blockers** (blood-pressure drugs) | Bind and block epinephrine receptors on heart cells without activating them | Heart rate and force fall |
 | **Antihistamines** | Block histamine receptors | Allergy symptoms are reduced |
 | **Organophosphate pesticides and nerve agents** | Inhibit the enzyme that breaks down acetylcholine at synapses | Acetylcholine accumulates, and muscles are stimulated without stopping |
@@ -147,7 +147,7 @@ A chemical that **blocks** a receptor without activating it is an **antagonist**
               'Rate at which glucose is absorbed from the gut into the blood'
             ],
             correctAnswer: 1,
-            explanation: 'An active G protein keeps adenylyl cyclase working, so cAMP accumulates. The toxin acts below the receptor, so ligand binding is unchanged.'
+            explanation: 'An active G protein keeps the cAMP-making enzyme working, so cAMP accumulates. The toxin acts below the receptor, so ligand binding is unchanged.'
           },
           {
             question: 'A patient takes a drug that binds heart-cell epinephrine receptors without activating them. During a stressful event, how will the heart respond compared with an untreated person?',
@@ -172,7 +172,7 @@ A chemical that **blocks** a receptor without activating it is an **antagonist**
       exercise: {
         dropdowns: [
           {
-            label: 'Ras that cannot hydrolyze GTP',
+            label: 'A growth-pathway G protein that cannot hydrolyze GTP',
             options: ['Pathway stuck on', 'Pathway stuck off']
           },
           {
@@ -192,7 +192,7 @@ A chemical that **blocks** a receptor without activating it is an **antagonist**
         hint1: 'A G protein that cannot hydrolyze GTP stays in the active state.',
         hint2: 'If the ligand cannot bind, reception never happens.',
         hint3: 'Antagonists bind without activating.',
-        explanation: 'Mutant Ras and cholera-toxin-modified G proteins stay GTP-bound and active. A receptor that cannot bind its ligand and a receptor blocked by an antagonist both prevent the pathway from starting.'
+        explanation: 'A G protein that cannot hydrolyze GTP and a cholera-toxin-modified G protein both stay GTP-bound and active. A receptor that cannot bind its ligand and a receptor blocked by an antagonist both prevent the pathway from starting.'
       }
     }
   ]

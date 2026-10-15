@@ -178,7 +178,7 @@ Since the potato is in a hypotonic solution at 0.2 M (gains mass), water enters.
               'The symporter begins exporting glucose out of the cell instead'
             ],
             correctAnswer: 1,
-            explanation: 'The Na+/glucose symporter (SGLT1) is powered by the Na+ gradient — Na+ flows down its gradient, providing energy to move glucose against its gradient. If the Na+ gradient is eliminated, there is no energy source to drive glucose transport, and it stops.'
+            explanation: 'The Na+/glucose symporter is powered by the Na+ gradient — Na+ flows down its gradient, providing energy to move glucose against its gradient. If the Na+ gradient is eliminated, there is no energy source to drive glucose transport, and it stops.'
           }
         ]
       }

@@ -11,7 +11,7 @@ export const bioMembraneTransportPart1Data = {
 
 The plasma membrane is far more than a passive barrier â€” it is a dynamic, selectively permeable structure that regulates the flow of materials into and out of the cell.  Understanding membrane structure is essential for understanding transport mechanisms.
 
-The modern model of membrane structure is the **fluid mosaic model**, proposed by Singer and Nicolson in 1972.
+The modern model of membrane structure is the **fluid mosaic model**: a phospholipid framework with embedded proteins, steroids such as cholesterol, glycoproteins, and glycolipids, all able to move within the membrane.
       `
     },
     {
@@ -38,7 +38,7 @@ In an aqueous environment, phospholipids spontaneously arrange into a bilayer â€
 | **Temperature** | Higher temp increases fluidity; lower temp decreases fluidity |
 | **Tail length** | Shorter tails increase fluidity (fewer van der Waals interactions) |
 
-> **Why "fluid"?** Phospholipids can move **laterally** within their leaflet (~10$^7$ times per second) but rarely **flip-flop** between leaflets (requires flippase enzymes).  Membrane proteins also move laterally, as demonstrated by the **Frye-Edidin experiment** (1970) using fluorescent labels on human and mouse cells fused into heterokaryons.
+> **Why "fluid"?** Phospholipids move **laterally** within their own layer of the bilayer constantly, but rarely flip from one layer to the other. Membrane proteins drift laterally too: when the membranes of two differently labeled cells are fused, their proteins intermix over time.
       `
     },
     {
@@ -69,7 +69,7 @@ In an aqueous environment, phospholipids spontaneously arrange into a bilayer â€
               'It absorbs excess heat from the membrane so its temperature never changes at all'
             ],
             correctAnswer: 2,
-            explanation: 'Cholesterol inserts between phospholipids with its hydroxyl group near the heads and its rigid steroid ring among the tails. At high temps, it restricts adjacent tail movement. At low temps, it prevents the tails from packing into a rigid crystalline state. It stabilizes fluidity across a range of temperatures.'
+            explanation: 'Cholesterol sits between phospholipids in the bilayer. At high temps, it restricts adjacent tail movement. At low temps, it prevents the tails from packing into a rigid crystalline state. It stabilizes fluidity across a range of temperatures.'
           }
         ]
       }
@@ -160,7 +160,7 @@ Substances that cannot cross freely require **transport proteins** (channels or 
       exercise: {
         questions: [
           {
-            question: 'The model name for modern membrane structure (proposed by Singer and Nicolson):',
+            question: 'The model name for modern membrane structure (phospholipids and proteins that move within the membrane):',
             answer: 'fluid mosaic model',
             acceptableAnswers: ['fluid mosaic model', 'Fluid mosaic model', 'fluid mosaic', 'Fluid Mosaic Model'],
             placeholder: 'e.g. lock and key model'

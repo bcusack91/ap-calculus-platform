@@ -9,7 +9,7 @@ export const bioFeedbackPart5Data = {
 
 **Part 5 of 7 — When Feedback Fails**
 
-The AP framework asks you to **explain how alterations in feedback mechanisms affect the organism**, and to predict what happens when one part of a loop is changed. Its named examples are **diabetes mellitus** (decreased insulin), **dehydration** (decreased antidiuretic hormone, ADH), **Graves' disease** (hyperthyroidism) and **blood clotting** disorders.
+The AP framework's skill for this topic is to **predict the causes or effects of a change in, or disruption to, one or more components** of a biological system. For feedback, that means predicting what happens when one part of a loop is changed. Its own example of negative feedback is blood-glucose regulation by insulin and glucagon, so diabetes is the case to know best.
 
 You do not need to memorize every disease. You need a method: locate the broken part of the loop, then trace the consequence around the loop.
 
@@ -36,11 +36,11 @@ You do not need to memorize every disease. You need a method: locate the broken 
 **2. Dehydration from decreased ADH — the water-balance loop**
 Normally, when blood becomes concentrated, ADH from the posterior pituitary causes the kidney's collecting ducts to insert more **aquaporins** and reabsorb water. If ADH release is too low (as in the condition diabetes insipidus, or temporarily after drinking alcohol, which suppresses ADH release), the kidneys cannot retain water. Large volumes of dilute urine are produced, and the person becomes dehydrated even while drinking.
 
-**3. Graves' disease — the thyroid loop**
-Normally, the hypothalamus and anterior pituitary release TRH and TSH; TSH stimulates the thyroid to release thyroid hormones (T₃ and T₄), and high T₃/T₄ **inhibits** TRH and TSH release. In Graves' disease, the immune system makes **antibodies that bind and activate the TSH receptor**. The thyroid is stimulated constantly, regardless of TSH. T₃/T₄ rise, and the negative feedback still suppresses TSH, but suppressing TSH no longer matters, because the antibodies are not under its control. Result: high metabolic rate, weight loss, rapid heartbeat, heat intolerance, often an enlarged thyroid (goiter).
+**3. An uncontrolled signal — an insulin-secreting tumor**
+Normally, beta cells release insulin only when blood glucose is high, and release falls as glucose returns to the set point. A rare tumor of beta cells releases insulin **continuously**, whether glucose is high or low. The signal is no longer tied to the stimulus, so the loop cannot switch it off. Blood glucose is pushed **below** the normal range, causing shakiness, confusion and, if severe, loss of consciousness. Glucagon release rises in response, but it cannot fully overcome the constant insulin signal. (Some autoimmune thyroid disorders follow the same pattern: antibodies keep a gland stimulated regardless of the body's needs.)
 
-**4. Hemophilia — the clotting loop**
-Hemophilia A is caused by a missing or defective clotting factor (factor VIII), coded on the X chromosome. Without it, the cascade that amplifies thrombin production is weakened, so the **positive-feedback amplification stalls**. Small injuries bleed for a long time, and bleeding into joints is common.
+**4. A clotting disorder — the clotting loop**
+In some inherited clotting disorders (hemophilia is the best-known), one of the clotting proteins is missing or defective. The cascade that amplifies clot formation is weakened, so the **positive-feedback amplification stalls**. Small injuries bleed for a long time.
       `
     },
     {
@@ -63,15 +63,15 @@ Hemophilia A is caused by a missing or defective clotting factor (factor VIII), 
             explanation: 'Insulin is present, so the signal is being sent; glucose staying high means target cells are not responding, which is the pattern of insulin resistance in type 2 diabetes. Failing beta cells would produce low insulin, as in type 1.'
           },
           {
-            question: 'A blood test shows very high thyroid hormone (T₄) and very low TSH. Which explanation is most consistent with these results?',
+            question: 'A tumor of pancreatic beta cells releases insulin continuously, even when blood glucose is low. What is the most likely result?',
             options: [
-              'Too much TSH from the pituitary is overstimulating the thyroid',
-              'Something other than TSH is stimulating the thyroid',
-              'Damage has left the thyroid unable to make any hormone',
-              'High T₄ is stimulating the pituitary to release more TSH'
+              'Blood glucose falls and stays below the normal range',
+              'Blood glucose rises because the extra insulin stops working',
+              'Blood glucose stays normal because glucagon fully cancels insulin',
+              'Blood glucose rises because the liver stores less glycogen'
             ],
-            correctAnswer: 1,
-            explanation: 'Low TSH shows the pituitary is responding normally to high T₄ by cutting back, so the thyroid must be driven by another stimulus, such as the TSH-receptor antibodies of Graves\' disease. Excess TSH would show up as high TSH, and a damaged thyroid would give low T₄.'
+            correctAnswer: 0,
+            explanation: 'Insulin lowers blood glucose. Because the tumor releases it regardless of the glucose level, the loop cannot switch the signal off, and glucose is pushed below the set point. Glucagon rises in response but cannot fully offset a constant insulin signal.'
           },
           {
             question: 'After drinking alcohol, which suppresses ADH release, a person produces large volumes of dilute urine. What is the direct cause?',
@@ -110,7 +110,7 @@ The loop never stopped working. Only the **target** changed. An elevated tempera
 | "Negative feedback is harmful." | It is the stabilizing kind and runs constantly in healthy organisms. |
 | "Positive feedback is healthy." | Direction, not outcome, defines it; runaway positive loops can be lethal. |
 | "High hormone level means a strong response." | A response also needs working receptors and effectors, as type 2 diabetes shows. |
-| "If a hormone level is low, the gland that makes it is broken." | The gland may be responding correctly to feedback, as low TSH in Graves' disease shows. |
+| "If a hormone level is low, the gland that makes it is broken." | The gland may be responding correctly to feedback, as falling insulin after glucose returns to normal shows. |
 | "Homeostasis keeps every variable constant." | Variables fluctuate within a range, and set points can shift (fever, sleep, exercise). |
       `
     },
@@ -131,7 +131,7 @@ The loop never stopped working. Only the **target** changed. An elevated tempera
             options: ['set point moved', 'effector unresponsive', 'signal uncontrolled', 'signal missing']
           },
           {
-            label: 'Graves\' disease: antibodies activate TSH receptors',
+            label: 'A beta-cell tumor releases insulin regardless of glucose level',
             options: ['effector unresponsive', 'signal missing', 'set point moved', 'signal uncontrolled']
           },
           {
@@ -142,8 +142,8 @@ The loop never stopped working. Only the **target** changed. An elevated tempera
         correctAnswers: ['signal missing', 'effector unresponsive', 'signal uncontrolled', 'set point moved'],
         hint1: 'In type 1 diabetes, the cells that make the hormone are gone.',
         hint2: 'In type 2 diabetes, insulin is present but nothing happens when it arrives.',
-        hint3: 'Antibodies stimulate the thyroid without any regulation; in fever, the loop works around a new target.',
-        explanation: 'Type 1 diabetes removes the insulin signal, type 2 makes the target cells unresponsive, Graves\' antibodies supply an uncontrolled stimulating signal, and fever moves the set point.'
+        hint3: 'A tumor releasing hormone nonstop is unregulated; in fever, the loop works around a new target.',
+        explanation: 'Type 1 diabetes removes the insulin signal, type 2 makes the target cells unresponsive, an insulin-secreting tumor supplies an uncontrolled signal, and fever moves the set point.'
       }
     },
     {
@@ -187,7 +187,7 @@ Notice the pattern that also showed up in type 2 diabetes: **when the effector f
             explanation: 'Signals from the immune system raise the hypothalamic set point, so a normal 37 °C now reads as too cold, triggering shivering and vasoconstriction. The negative-feedback loop is still working; only its target has moved.'
           },
           {
-            question: 'A person inherits an allele that produces nonfunctional clotting factor VIII. Which outcome is most likely?',
+            question: 'A person inherits an allele that makes one of the clotting proteins nonfunctional. Which outcome is most likely?',
             options: [
               'Clots form inside healthy vessels without any injury',
               'Bleeding from small cuts lasts much longer than normal',
@@ -195,7 +195,7 @@ Notice the pattern that also showed up in type 2 diabetes: **when the effector f
               'Blood glucose drops because clotting uses glucose'
             ],
             correctAnswer: 1,
-            explanation: 'Factor VIII is part of the cascade that amplifies thrombin and fibrin formation, so without it the positive-feedback amplification stalls and bleeding is prolonged, as in hemophilia A. Excess clotting is the opposite outcome.'
+            explanation: 'Each clotting protein is a step in the cascade that amplifies clot formation, so without it the positive-feedback amplification stalls and bleeding is prolonged. Excess clotting is the opposite outcome.'
           }
         ]
       }
@@ -210,15 +210,15 @@ Notice the pattern that also showed up in type 2 diabetes: **when the effector f
 
 2) The condition in which target cells respond poorly to insulin (two words):
 
-3) The gland that is overstimulated in Graves' disease:
+3) The pancreatic hormone that raises blood glucose when it falls too low:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['aquaporins', 'insulin resistance', 'thyroid'],
+        correctAnswers: ['aquaporins', 'insulin resistance', 'glucagon'],
         hint1: 'Their name combines the Latin word for water with "pore."',
         hint2: 'It is the hallmark of type 2 diabetes.',
-        hint3: 'It makes T₃ and T₄.',
-        explanation: 'ADH increases aquaporins in collecting-duct membranes, insulin resistance underlies type 2 diabetes, and Graves\' disease overstimulates the thyroid gland.'
+        hint3: 'It is released by alpha cells and works opposite to insulin.',
+        explanation: 'ADH increases aquaporins in collecting-duct membranes, insulin resistance underlies type 2 diabetes, and glucagon raises blood glucose by triggering glycogen breakdown in the liver.'
       }
     }
   ]
