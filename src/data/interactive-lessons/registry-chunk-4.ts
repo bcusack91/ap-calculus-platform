@@ -487,36 +487,36 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./aas-black-power-beyond-part1').then(m => m.aasBlackPowerBeyondPart1Data) },
-      { title: 'Key Processes', loader: () => import('./aas-black-power-beyond-part2').then(m => m.aasBlackPowerBeyondPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./aas-black-power-beyond-part3').then(m => m.aasBlackPowerBeyondPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./aas-black-power-beyond-part4').then(m => m.aasBlackPowerBeyondPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./aas-black-power-beyond-part5').then(m => m.aasBlackPowerBeyondPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./aas-black-power-beyond-part6').then(m => m.aasBlackPowerBeyondPart6Data) },
-      { title: 'AP Review', loader: () => import('./aas-black-power-beyond-part7').then(m => m.aasBlackPowerBeyondPart7Data) }
+      { title: 'Key Processes: How the Movement Turned to Black Power, 1964–1968', loader: () => import('./aas-black-power-beyond-part2').then(m => m.aasBlackPowerBeyondPart2Data) },
+      { title: 'Comparing Cases: Panthers, US Organization, RNA and the League', loader: () => import('./aas-black-power-beyond-part3').then(m => m.aasBlackPowerBeyondPart3Data) },
+      { title: 'Connections: Black Arts, Black Studies and the World', loader: () => import('./aas-black-power-beyond-part4').then(m => m.aasBlackPowerBeyondPart4Data) },
+      { title: 'Continuity & Change, 1967–1980: Repression, Women\'s Leadership and the Turn to the Ballot', loader: () => import('./aas-black-power-beyond-part5').then(m => m.aasBlackPowerBeyondPart5Data) },
+      { title: 'Source Workshop: The Kerner Report, the Mexico City Podium and a Document Set', loader: () => import('./aas-black-power-beyond-part6').then(m => m.aasBlackPowerBeyondPart6Data) },
+      { title: 'AP Review: Black Power, 1964–1980', loader: () => import('./aas-black-power-beyond-part7').then(m => m.aasBlackPowerBeyondPart7Data) }
     ],
   },
   'aas-contemporary-issues': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./aas-contemporary-issues-part1').then(m => m.aasContemporaryIssuesPart1Data) },
-      { title: 'Key Processes', loader: () => import('./aas-contemporary-issues-part2').then(m => m.aasContemporaryIssuesPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./aas-contemporary-issues-part3').then(m => m.aasContemporaryIssuesPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./aas-contemporary-issues-part4').then(m => m.aasContemporaryIssuesPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./aas-contemporary-issues-part5').then(m => m.aasContemporaryIssuesPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./aas-contemporary-issues-part6').then(m => m.aasContemporaryIssuesPart6Data) },
-      { title: 'AP Review', loader: () => import('./aas-contemporary-issues-part7').then(m => m.aasContemporaryIssuesPart7Data) }
+      { title: 'Key Processes: How Mass Incarceration Was Built', loader: () => import('./aas-contemporary-issues-part2').then(m => m.aasContemporaryIssuesPart2Data) },
+      { title: 'Comparing Cases: Political Power and Voting Rights since 1980', loader: () => import('./aas-contemporary-issues-part3').then(m => m.aasContemporaryIssuesPart3Data) },
+      { title: 'Connections: Reading the Data on Wealth, Housing and Health', loader: () => import('./aas-contemporary-issues-part4').then(m => m.aasContemporaryIssuesPart4Data) },
+      { title: 'Continuity & Change: A Changing Black America', loader: () => import('./aas-contemporary-issues-part5').then(m => m.aasContemporaryIssuesPart5Data) },
+      { title: 'Source Workshop: Protest, Policing and Redress since 2013', loader: () => import('./aas-contemporary-issues-part6').then(m => m.aasContemporaryIssuesPart6Data) },
+      { title: 'AP Review: Contemporary Issues in Synthesis', loader: () => import('./aas-contemporary-issues-part7').then(m => m.aasContemporaryIssuesPart7Data) }
     ],
   },
   'aas-movements-debates': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./aas-movements-debates-part1').then(m => m.aasMovementsDebatesPart1Data) },
-      { title: 'Key Processes', loader: () => import('./aas-movements-debates-part2').then(m => m.aasMovementsDebatesPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./aas-movements-debates-part3').then(m => m.aasMovementsDebatesPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./aas-movements-debates-part4').then(m => m.aasMovementsDebatesPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./aas-movements-debates-part5').then(m => m.aasMovementsDebatesPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./aas-movements-debates-part6').then(m => m.aasMovementsDebatesPart6Data) },
-      { title: 'AP Review', loader: () => import('./aas-movements-debates-part7').then(m => m.aasMovementsDebatesPart7Data) }
+      { title: 'Stay or Go? Emigration, Nationalism and Garvey (1850–1927)', loader: () => import('./aas-movements-debates-part2').then(m => m.aasMovementsDebatesPart2Data) },
+      { title: 'Comparing Cases: Accommodation vs. Agitation (1892–1915) and the Self-Help Lineage', loader: () => import('./aas-movements-debates-part3').then(m => m.aasMovementsDebatesPart3Data) },
+      { title: 'Connections: Pan-Africanism, Black Internationalism and the Art-and-Politics Debate (1900–1957)', loader: () => import('./aas-movements-debates-part4').then(m => m.aasMovementsDebatesPart4Data) },
+      { title: 'Continuity & Change: Self-Defense, Separatism and Redress (1850–1989)', loader: () => import('./aas-movements-debates-part5').then(m => m.aasMovementsDebatesPart5Data) },
+      { title: 'Source Workshop: Black Women\'s Thought from Cooper to Crenshaw (1892–1989)', loader: () => import('./aas-movements-debates-part6').then(m => m.aasMovementsDebatesPart6Data) },
+      { title: 'AP Review: The Debates Side by Side', loader: () => import('./aas-movements-debates-part7').then(m => m.aasMovementsDebatesPart7Data) }
     ],
   },
   'englit-short-fiction-1': {
