@@ -981,10 +981,10 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./hg-urban-challenges-part1').then(m => m.hgUrbanChallengesPart1Data) },
-      { title: 'Key Processes', loader: () => import('./hg-urban-challenges-part2').then(m => m.hgUrbanChallengesPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./hg-urban-challenges-part3').then(m => m.hgUrbanChallengesPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./hg-urban-challenges-part4').then(m => m.hgUrbanChallengesPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./hg-urban-challenges-part5').then(m => m.hgUrbanChallengesPart5Data) },
+      { title: 'Density, Land Use and Sprawl, and the Policies That Answer It', loader: () => import('./hg-urban-challenges-part2').then(m => m.hgUrbanChallengesPart2Data) },
+      { title: 'Infrastructure and Transportation', loader: () => import('./hg-urban-challenges-part3').then(m => m.hgUrbanChallengesPart3Data) },
+      { title: 'Housing, Inequality and Neighborhood Change', loader: () => import('./hg-urban-challenges-part4').then(m => m.hgUrbanChallengesPart4Data) },
+      { title: 'Environmental Challenges and Sustainable Responses', loader: () => import('./hg-urban-challenges-part5').then(m => m.hgUrbanChallengesPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./hg-urban-challenges-part6').then(m => m.hgUrbanChallengesPart6Data) },
       { title: 'AP Review', loader: () => import('./hg-urban-challenges-part7').then(m => m.hgUrbanChallengesPart7Data) }
     ],
@@ -993,33 +993,33 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./hg-industrialization-part1').then(m => m.hgIndustrializationPart1Data) },
-      { title: 'Key Processes', loader: () => import('./hg-industrialization-part2').then(m => m.hgIndustrializationPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./hg-industrialization-part3').then(m => m.hgIndustrializationPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./hg-industrialization-part4').then(m => m.hgIndustrializationPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./hg-industrialization-part5').then(m => m.hgIndustrializationPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./hg-industrialization-part6').then(m => m.hgIndustrializationPart6Data) },
-      { title: 'AP Review', loader: () => import('./hg-industrialization-part7').then(m => m.hgIndustrializationPart7Data) }
+      { title: 'The Industrial Revolution: Origins, Diffusion and Consequences', loader: () => import('./hg-industrialization-part2').then(m => m.hgIndustrializationPart2Data) },
+      { title: 'Where Industry Locates: Weber\'s Model and Beyond', loader: () => import('./hg-industrialization-part3').then(m => m.hgIndustrializationPart3Data) },
+      { title: 'Measuring Development: Indicators and Indexes', loader: () => import('./hg-industrialization-part4').then(m => m.hgIndustrializationPart4Data) },
+      { title: 'Women and Economic Development', loader: () => import('./hg-industrialization-part5').then(m => m.hgIndustrializationPart5Data) },
+      { title: 'Theories of Development in Depth', loader: () => import('./hg-industrialization-part6').then(m => m.hgIndustrializationPart6Data) },
+      { title: 'AP Exam Practice and Synthesis Review', loader: () => import('./hg-industrialization-part7').then(m => m.hgIndustrializationPart7Data) }
     ],
   },
   'hg-industrialization-development': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./hg-industrialization-part1').then(m => m.hgIndustrializationPart1Data) },
-      { title: 'Key Processes', loader: () => import('./hg-industrialization-part2').then(m => m.hgIndustrializationPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./hg-industrialization-part3').then(m => m.hgIndustrializationPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./hg-industrialization-part4').then(m => m.hgIndustrializationPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./hg-industrialization-part5').then(m => m.hgIndustrializationPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./hg-industrialization-part6').then(m => m.hgIndustrializationPart6Data) },
-      { title: 'AP Review', loader: () => import('./hg-industrialization-part7').then(m => m.hgIndustrializationPart7Data) }
+      { title: 'The Industrial Revolution: Origins, Diffusion and Consequences', loader: () => import('./hg-industrialization-part2').then(m => m.hgIndustrializationPart2Data) },
+      { title: 'Where Industry Locates: Weber\'s Model and Beyond', loader: () => import('./hg-industrialization-part3').then(m => m.hgIndustrializationPart3Data) },
+      { title: 'Measuring Development: Indicators and Indexes', loader: () => import('./hg-industrialization-part4').then(m => m.hgIndustrializationPart4Data) },
+      { title: 'Women and Economic Development', loader: () => import('./hg-industrialization-part5').then(m => m.hgIndustrializationPart5Data) },
+      { title: 'Theories of Development in Depth', loader: () => import('./hg-industrialization-part6').then(m => m.hgIndustrializationPart6Data) },
+      { title: 'AP Exam Practice and Synthesis Review', loader: () => import('./hg-industrialization-part7').then(m => m.hgIndustrializationPart7Data) }
     ],
   },
   'hg-globalization-trade': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./hg-globalization-trade-part1').then(m => m.hgGlobalizationTradePart1Data) },
-      { title: 'Key Processes', loader: () => import('./hg-globalization-trade-part2').then(m => m.hgGlobalizationTradePart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./hg-globalization-trade-part3').then(m => m.hgGlobalizationTradePart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./hg-globalization-trade-part4').then(m => m.hgGlobalizationTradePart4Data) },
+      { title: 'Why Countries Trade: Complementarity, Comparative Advantage and Trade Agreements', loader: () => import('./hg-globalization-trade-part2').then(m => m.hgGlobalizationTradePart2Data) },
+      { title: 'Global Finance, Debt and Interdependence', loader: () => import('./hg-globalization-trade-part3').then(m => m.hgGlobalizationTradePart3Data) },
+      { title: 'Restructuring the World Economy: New Ways and New Places to Make Things', loader: () => import('./hg-globalization-trade-part4').then(m => m.hgGlobalizationTradePart4Data) },
       { title: 'Change Over Time', loader: () => import('./hg-globalization-trade-part5').then(m => m.hgGlobalizationTradePart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./hg-globalization-trade-part6').then(m => m.hgGlobalizationTradePart6Data) },
       { title: 'AP Review', loader: () => import('./hg-globalization-trade-part7').then(m => m.hgGlobalizationTradePart7Data) }
