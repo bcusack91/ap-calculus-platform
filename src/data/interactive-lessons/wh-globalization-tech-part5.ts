@@ -90,10 +90,10 @@ export const whGlobalizationTechPart5Data = {
           {
             question: 'Which best characterizes the "embedded liberalism" of the 1945–1971 phase of globalization?',
             options: [
-              'Trade liberalization through GATT and Bretton Woods exchange-rate stability paired with strong domestic welfare states, capital controls, and full-employment commitments by major industrial democracies',
-              'Pure laissez-faire global capitalism with no welfare states, no capital controls, and no employment commitments by any major industrial democracy during the postwar period from 1945 to 1971',
-              'Soviet-style central planning across all major industrial democracies including the U.S., Britain, France, West Germany, and Japan during the period from 1945 to 1971 with no private firms operating',
-              'Pure autarky and trade isolation among all major industrial democracies during the period from 1945 to 1971 with no international trade or investment of any kind crossing national borders'
+              'Trade liberalization through GATT and stable Bretton Woods exchange rates, paired with strong welfare states, capital controls, and full-employment commitments at home',
+              'Laissez-faire global capitalism with minimal welfare states, free movement of capital, and little commitment to full employment in the major industrial democracies',
+              'Central economic planning across the major liberal democracies, as the U.S., Britain, and West Germany nationalized most private firms after 1945',
+              'Trade isolation among the major industrial democracies, which kept high tariffs and limited foreign investment until GATT was founded in 1971'
             ],
             correctAnswer: 0,
             explanation: '"Embedded liberalism" = open international trade + strong domestic welfare states + capital controls. A bargain that held until the 1970s.'
@@ -101,10 +101,10 @@ export const whGlobalizationTechPart5Data = {
           {
             question: 'Which response best identifies the dominant ideological shift between Phase 2 (1971–1991) and Phase 1 (1945–1971)?',
             options: [
-              "A shift from 'embedded liberalism' (open trade + strong state + capital controls) to neoliberalism (open trade + retrenched state + open capital flows), associated with Thatcher (1979) and Reagan (1981) and exported through IMF Structural Adjustment Programs",
-              "A shift from neoliberalism (open trade + retrenched state) back to 'embedded liberalism' (strong state + capital controls), associated with the rise of welfare states across all major economies in the late 1970s",
-              "A shift from 'embedded liberalism' to Soviet-style central planning across all major Western democracies during the period from the 1970s into the 1990s, replacing private ownership with state planning",
-              "A shift from 'embedded liberalism' to pure autarky and trade isolation across all major Western democracies during the period from the 1970s into the 1990s, ending all international trade and investment"
+              "A shift from embedded liberalism (open trade, strong state, capital controls) to neoliberalism (retrenched state, open capital flows) under Thatcher and Reagan, spread by IMF SAPs",
+              "A shift from neoliberalism back to embedded liberalism (welfare states, capital controls, and full employment), as such policies spread across Western economies in the late 1970s and 1980s",
+              "A shift from embedded liberalism to central planning across the major Western democracies in the 1970s and 1980s, as states took ownership of private industries",
+              "A shift from embedded liberalism to trade isolation across the major Western democracies in the 1970s and 1980s, as high tariffs closed most international markets"
             ],
             correctAnswer: 0,
             explanation: 'Thatcher 1979 + Reagan 1981 + Volcker disinflation + capital control dismantling = the neoliberal turn. SAPs exported the model globally.'
@@ -174,24 +174,24 @@ export const whGlobalizationTechPart5Data = {
           {
             question: 'Which response best demonstrates AP CCOT skill by naming both a continuity and a change across the three phases of post-1945 globalization?',
             options: [
-              "U.S. dollar dominance and Western-led institutions (IMF, World Bank, UN) persisted across all three phases, while exchange-rate regimes changed sharply: fixed dollar-gold under Bretton Woods (1945–71), floating exchange rates after the Nixon Shock (1971+), and continued dollar dominance into a multi-currency hyper-globalized system (1991+)",
-              "Both the dollar dominance of the international system AND the fixed exchange rate system of Bretton Woods persisted unchanged across all three phases of post-1945 globalization with no meaningful changes between 1945 and the present day",
-              "Neither the dollar dominance of the international system nor the institutional architecture of the IMF and World Bank persisted in any form across the three phases of post-1945 globalization between 1945 and the present day",
-              "Post-1945 globalization had no meaningful continuities or changes across the period and the international economy looked exactly the same in 2020 as it did in 1945 with no shifts in monetary regime, trade rules, or institutional architecture"
+              "Dollar dominance and Western-led institutions (IMF, World Bank) persisted, while fixed dollar-gold rates gave way to floating rates after 1971",
+              "Both dollar dominance and the fixed exchange rates of Bretton Woods persisted unchanged across all three phases, with no meaningful monetary change since 1945",
+              "Neither dollar dominance nor the Bretton Woods twins (the IMF and World Bank) persisted, as each phase built entirely new institutions and a new reserve currency",
+              "The international economy changed little across the three phases, since monetary rules, trade rules, and institutions looked much the same in 2020 as they had in 1945"
             ],
             correctAnswer: 0,
-            explanation: 'AP CCOT requires explicitly naming BOTH a continuity AND a change. Dollar/Western institutions = continuity; exchange-rate regime = change.'
+            explanation: 'AP CCOT requires explicitly naming BOTH a continuity AND a change. Dollar dominance and Western institutions = continuity; the exchange-rate regime (fixed under Bretton Woods, 1945–71; floating after the Nixon Shock) = change.'
           },
           {
             question: 'Which best explains why the late 1970s and early 1980s constitute a meaningful phase break in post-1945 globalization?',
             options: [
-              "The Nixon Shock (1971) ended fixed exchange rates; OPEC oil shocks (1973, 1979) destabilized industrial economies; Thatcher (1979) and Reagan (1981) led the political turn to deregulation and privatization; and the 1982 Latin American debt crisis exported neoliberal conditionality through IMF SAPs",
-              "Nothing changed in the late 1970s or early 1980s and Bretton Woods institutions, fixed exchange rates, and embedded liberalism continued unchanged from 1945 through the entire 20th century without any meaningful phase break",
-              "The late 1970s and early 1980s saw the founding of GATT, the Bretton Woods institutions, and the decolonization of Asia and Africa as the actual beginning of post-1945 globalization rather than a phase break",
-              "The late 1970s and early 1980s saw a return to pure autarky and the dismantling of all international trade and investment by all major industrial democracies, ending globalization rather than constituting a phase break within it"
+              "The Nixon Shock ended fixed rates, oil shocks (1973, 1979) shook industrial economies, Thatcher and Reagan turned to deregulation, and the 1982 debt crisis spread IMF conditionality",
+              "Little changed in the late 1970s and early 1980s, as Bretton Woods institutions (the IMF and World Bank), fixed rates, and embedded liberalism continued through the century",
+              "The late 1970s and early 1980s saw the founding of GATT and the Bretton Woods institutions, which marked the real beginning of post-1945 globalization",
+              "The late 1970s and early 1980s saw a return to autarky, as the major industrial democracies dismantled their international trade and investment ties and brought globalization to an end"
             ],
             correctAnswer: 0,
-            explanation: 'The cluster of Nixon Shock, oil shocks, Thatcher/Reagan, and the debt crisis is the canonical AP justification for the Phase 1 → Phase 2 break.'
+            explanation: 'The cluster of Nixon Shock (1971), oil shocks, Thatcher (1979) and Reagan (1981), and the 1982 Latin American debt crisis is the canonical AP justification for the Phase 1 → Phase 2 break.'
           }
         ]
       }

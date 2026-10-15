@@ -105,18 +105,18 @@ export const whNewlyIndependentStatesPart7Data = {
             question: 'Which year saw both Indian and Pakistani independence and the Partition that displaced approximately 14 million people?',
             options: ['1945', '1947', '1949', '1956'],
             correctAnswer: 1,
-            explanation: '1947: August 14 (Pakistan) and August 15 (India). The Partition violence killed about 1 million and displaced 14 million.'
+            explanation: '1947: August 14 (Pakistan) and August 15 (India). Estimates of Partition deaths range from several hundred thousand to about 2 million (roughly 1 million is a common figure), and about 14 million people were displaced.'
           },
           {
             question: 'Which event most directly marks the end of European great-power independence in foreign affairs?',
             options: [
-              "The 1956 Suez Crisis, in which the U.S. and USSR jointly pressured Britain, France, and Israel to withdraw from Egypt after their invasion to retake the Suez Canal",
-              "The 1955 Warsaw Pact founding, which formalized the Soviet-led military alliance into a permanent treaty structure with eight Eastern European member states",
-              "The 1949 founding of NATO, which committed the United States to the collective defense of Western Europe under a permanent peacetime alliance treaty",
-              "The 1961 Bay of Pigs invasion, in which Cuban exiles backed by the U.S. CIA failed to overthrow the Castro government in a covert paramilitary operation"
+              "The 1956 Suez Crisis, in which U.S. and Soviet pressure forced Britain, France, and Israel to withdraw from Egypt after their invasion to retake the canal",
+              "The 1955 Warsaw Pact founding, which bound Poland, Hungary, and five other Eastern European states into a Soviet-led alliance",
+              "The 1949 founding of NATO, which committed the United States to the collective defense of Western Europe under a peacetime alliance treaty",
+              "The 1961 Bay of Pigs invasion, in which Cuban exiles backed by the CIA failed to overthrow the Castro government in a covert operation"
             ],
             correctAnswer: 0,
-            explanation: 'Suez 1956 is the canonical end-of-European-great-power-independence moment. Britain and France learned they could no longer act independently of U.S. policy.'
+            explanation: 'Suez 1956 is the canonical end-of-European-great-power-independence moment. Britain and France learned they could no longer act independently of U.S. policy, which, alongside Soviet threats, forced their withdrawal.'
           }
         ]
       }
@@ -183,21 +183,21 @@ export const whNewlyIndependentStatesPart7Data = {
           {
             question: 'A historian writes: "Post-independence economic transformations were both products of long-term colonial inheritance and contingent products of specific political decisions." Which response best supports both halves with AP-quality reasoning?',
             options: [
-              "Newly independent states inherited export-dependent colonial economies that constrained their long-term options, but specific decisions — Nehru\'s License Raj (1947), Park Chung-hee\'s 1962 export-led strategy in South Korea, India\'s 1991 liberalization — produced sharply different trajectories from similar starting conditions",
-              "Post-independence economic transformations were driven entirely by the colonial inheritance and there were no contingent leadership decisions that meaningfully affected the trajectory of any newly independent state during the period from 1945 to 2000",
-              "Post-independence economic transformations were driven entirely by individual leadership choices and there were no meaningful long-term structural inheritances from the colonial period that constrained the options of any newly independent state",
-              "Post-independence economic transformations were inevitable historical events with no contingent dimension at all and would have produced identical outcomes regardless of which leaders held office in any newly independent state"
+              "Inherited export economies constrained new states, but choices such as India's License Raj, Park Chung-hee's 1962 export plan, and India's 1991 reforms set them on divergent paths",
+              "Colonial inheritance alone drove post-independence economies, so leadership decisions had little real effect on the trajectory of any newly independent state from 1945 to the year 2000",
+              "Leadership choices alone drove post-independence economies, since colonial borders, export patterns, and institutions placed no constraints on any new state after 1945",
+              "Post-independence economic outcomes were inevitable, and they would have been identical regardless of which leaders held office in any newly independent state"
             ],
             correctAnswer: 0,
-            explanation: 'The both/and AP move: structural inheritance (colonial export economies) PLUS contingent choices (Nehru, Park, 1991 liberalization) is the high-scoring framing.'
+            explanation: 'The both/and AP move: structural inheritance (colonial export economies) PLUS contingent choices (Nehru\'s licensing system from the early 1950s, Park\'s 1962 plan, India\'s 1991 liberalization) is the high-scoring framing.'
           },
           {
             question: 'Which best summarizes the post-1945 transformation of newly independent states in a way that an AP reader would credit as a "complexity" claim?',
             options: [
-              "Post-1945 newly independent states retained inherited colonial borders and faced the same Cold War aid politics, but their specific political choices — democratic India, authoritarian South Korea, single-party Tanzania, religious-revolutionary Iran — produced sharply divergent post-independence trajectories within similar global constraints",
-              "Post-1945 newly independent states all followed identical political and economic trajectories regardless of region, religion, or leadership during the entire period from 1945 to 2000 across the entire world",
-              "Post-1945 newly independent states were entirely shaped by either the United States or the Soviet Union and had no autonomous political or economic agency of their own during the period from 1945 to 2000",
-              "Post-1945 newly independent states were all democratic capitalist economies fully integrated into Western markets from independence and had no experiments with socialism, single-party rule, or non-alignment at any point in the period"
+              "Shared borders and Cold War politics constrained new states, yet democratic India, authoritarian South Korea, and single-party Tanzania took divergent paths",
+              "Post-1945 newly independent states followed nearly identical political and economic paths regardless of region, religion, or leadership from 1945 to 2000 across the whole world",
+              "Post-1945 newly independent states were shaped entirely by either the United States or the Soviet Union and had no autonomous political or economic agency of their own after 1945",
+              "Post-1945 newly independent states were democratic capitalist economies integrated into Western markets from independence, with no experiments in socialism or non-alignment"
             ],
             correctAnswer: 0,
             explanation: 'AP "complexity" rewards naming the shared constraints AND the divergent outcomes in the same sentence. The other options collapse into reductive caricatures.'

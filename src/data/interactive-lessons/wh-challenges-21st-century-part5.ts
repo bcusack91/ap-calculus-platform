@@ -89,21 +89,21 @@ export const whChallenges21stCenturyPart5Data = {
           {
             question: 'Which best characterizes the geopolitical structure of the 2001–2008 "unipolar moment" of the 21st century?',
             options: [
-              'The United States was the sole global superpower with defense spending exceeding the next 10 nations combined; this position eroded over the following decade as China rose and Russia recovered, producing a multi-polar structure dominant by Phase 3',
-              'The 2001–2008 period was already a fully multi-polar order with the U.S., China, EU, Russia, India, Brazil, and Japan as roughly co-equal great powers in every major dimension of international politics',
-              'The 2001–2008 period was a Cold-War-style bipolar order with the U.S. and China as roughly co-equal superpowers from the start of the period through the entire decade until the 2008 GFC',
-              'The 2001–2008 period had no superpowers and the international order operated through equal participation by all 193 UN member states without any concentration of military, economic, or technological power'
+              'The U.S. was the sole superpower, outspending the next several nations combined on defense; its lead eroded over the next decade as China rose and Russia recovered',
+              'The period was already fully multi-polar, with the U.S., China, the EU, Russia, India, and Japan acting as roughly equal great powers in military and economic terms',
+              'The period was a Cold War-style bipolar order, with the U.S. and China acting as roughly equal superpowers in military spending throughout the decade before 2008',
+              'The period had no dominant power, as the 193 UN member states shared military, economic, and technological influence in roughly equal measure across the decade'
             ],
             correctAnswer: 0,
-            explanation: '2001–08 = U.S. unipolar moment. By the 2020s, the order is multi-polar with U.S.-China as the primary axis.'
+            explanation: '2001–08 = U.S. unipolar moment, when U.S. defense spending exceeded that of the next several countries combined. By the 2020s, the order is multi-polar with U.S.-China as the primary axis.'
           },
           {
             question: 'Which response best identifies the dominant defining event of Phase 2 (2008–2020) of the 21st century?',
             options: [
-              "The 2008 Global Financial Crisis, which triggered a decade of economic stagnation, fiscal austerity, populist mobilization, and erosion of the post-1945 liberal-internationalist consensus across major Western democracies",
-              "The 2008 Global Financial Crisis, which produced rapid global economic recovery within months, strengthened the post-1945 liberal consensus, and eliminated populist movements in all major Western democracies",
-              "The 2008 Global Financial Crisis, which had no measurable economic, political, or institutional consequences of any kind in any major Western democracy during the decade from 2008 through 2018 in any region",
-              "The 2008 Global Financial Crisis, which was confined entirely to the United States and produced no economic stagnation, austerity politics, or populist mobilization in any other major democracy globally"
+              "The 2008 Global Financial Crisis, which brought years of stagnation, austerity, populist mobilization, and erosion of the post-1945 liberal consensus in Western democracies",
+              "The 2008 Global Financial Crisis, which produced a rapid recovery within months, strengthened the post-1945 liberal consensus, and weakened populist movements",
+              "The 2008 Global Financial Crisis, which caused a brief recession that ended by 2010 and left few lasting political or institutional effects in Western democracies",
+              "The 2008 Global Financial Crisis, which stayed confined to the United States and caused no stagnation, austerity, or populist backlash in any other democracy"
             ],
             correctAnswer: 0,
             explanation: '2008 GFC is the canonical defining event of Phase 2. It triggered a decade of austerity politics, populist surge, and erosion of post-1945 consensus.'
@@ -173,21 +173,21 @@ export const whChallenges21stCenturyPart5Data = {
           {
             question: 'Which response best demonstrates AP CCOT skill by naming both a continuity and a change across the three phases of the 21st century?',
             options: [
-              "The U.S. dollar's role as the dominant global reserve currency persisted across all three phases despite challenges from the GFC and post-2022 sanctions, while the geopolitical structure changed sharply: from a U.S. unipolar moment in Phase 1 to a multi-polar order with U.S.-China as the primary axis by Phase 3",
-              "Both the U.S. dollar's reserve-currency role AND the U.S. unipolar moment persisted unchanged across all three phases of the 21st century with no meaningful changes from 2001 through the present day",
-              "Neither the U.S. dollar's reserve-currency role nor the U.S. unipolar moment persisted in any form across the three phases of the 21st century from 2001 through the present day in any policy domain",
-              "The 21st century had no meaningful continuities or changes across the period and the international order looked exactly the same in 2024 as it did in 2001 with no shifts in geopolitics or economics"
+              "The dollar stayed the leading reserve currency, but the order shifted from a U.S. unipolar moment to a multi-polar one centered on U.S.-China rivalry",
+              "Both the dollar's reserve-currency role and the U.S. unipolar moment persisted essentially unchanged across all three phases, from 2001 through the present day",
+              "Neither the dollar's reserve-currency role nor U.S. primacy survived the 2008 crisis, as the Chinese yuan became the main reserve currency by the mid-2010s",
+              "The international order looked much the same in 2024 as in 2001, with few shifts in geopolitics, economics, or the distribution of global power over the period"
             ],
             correctAnswer: 0,
-            explanation: 'AP CCOT requires explicitly naming BOTH a continuity AND a change. Dollar dominance = continuity; geopolitical structure = change.'
+            explanation: 'AP CCOT requires explicitly naming BOTH a continuity AND a change. Dollar dominance, which survived the GFC and post-2022 sanctions, is the continuity; the shift in geopolitical structure is the change.'
           },
           {
             question: 'Which best explains why the late 2010s and early 2020s constitute a meaningful phase break within the 21st century?',
             options: [
-              "The COVID-19 pandemic (2020), Russia's invasion of Ukraine (2022), the surge of generative AI (ChatGPT in late 2022), and the renewed acceleration of climate impacts together transformed the global agenda from the 2008-era \'crisis decade\' framing to a \'polycrisis\' framing of overlapping simultaneous shocks",
-              "Nothing changed in the late 2010s or early 2020s and the 2008-era 'crisis decade' framing continued unchanged through the present day with no new defining events of any kind in any major region of the world",
-              "The late 2010s and early 2020s saw the founding of the WTO, the introduction of the Euro, and the September 11 attacks as the actual beginning of the 21st century rather than a phase break within it",
-              "The late 2010s and early 2020s saw a complete return to the 2001 unipolar moment with the U.S. as the sole superpower and no Chinese, Russian, or technological challenges to U.S. primacy of any kind"
+              "COVID-19 (2020), Russia's invasion of Ukraine (2022), generative AI (ChatGPT, 2022), and faster climate impacts shifted the agenda from a \"crisis decade\" to a \"polycrisis\"",
+              "Little changed in the late 2010s and early 2020s, as the 2008-era \"crisis decade\" framing continued with no major new defining events in any region of the world",
+              "The late 2010s and early 2020s saw the founding of the WTO, the launch of the euro, and the 9/11 attacks, which marked the true start of the 21st century",
+              "The late 2010s and early 2020s saw a return to the unipolar moment (as in 2001–08), with the U.S. again the sole superpower facing no Chinese or Russian challenge to its primacy"
             ],
             correctAnswer: 0,
             explanation: 'The cluster of COVID + Ukraine + ChatGPT + climate acceleration is the canonical justification for the Phase 2 → Phase 3 break.'

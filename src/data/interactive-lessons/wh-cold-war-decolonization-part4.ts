@@ -77,10 +77,10 @@ The Cold War was framed as capitalism vs. communism — but post-1945 history wa
           {
             question: 'Which best illustrates how the 1979 Iranian Revolution challenged the bipolar Cold War framework?',
             options: [
-              'It produced an Islamic Republic that was hostile to both the United States and the Soviet Union, demonstrating that religious-political movements could not be reduced to either Cold War bloc',
-              'It produced a pro-American secular military dictatorship that aligned itself with NATO and that supported U.S. policy throughout the Persian Gulf during the 1980s decade',
-              'It produced a pro-Soviet Marxist regime that joined the Warsaw Pact and that hosted Soviet missiles to threaten the United States during the late Cold War period',
-              'It produced no meaningful change in Iranian government and Iran continued under the Shah for the remainder of the Cold War period until the early 1990s'
+              'It produced an Islamic Republic hostile to both the United States and the Soviet Union, showing that religious-political movements fit neither Cold War bloc',
+              'It produced a secular military regime that joined the U.S.-led alliance system and backed American policy in the Persian Gulf through the 1980s',
+              'It produced a pro-Soviet Marxist regime that joined the Warsaw Pact and hosted Soviet missiles aimed at U.S. bases across the Persian Gulf region',
+              'It restored the Shah to full power with U.S. support, repeating the 1953 coup and keeping Iran firmly inside the Western bloc for another decade'
             ],
             correctAnswer: 0,
             explanation: 'The Iranian Revolution is the canonical case of a movement that fit neither Cold War bloc — explicitly anti-American AND anti-Soviet. AP often uses it to show the limits of the bipolar frame.'
@@ -88,10 +88,10 @@ The Cold War was framed as capitalism vs. communism — but post-1945 history wa
           {
             question: 'Which best describes the role of the Bretton Woods institutions (IMF and World Bank) in the postwar global economy?',
             options: [
-              'They stabilized the postwar capitalist economic system, set rules for currency exchange, and lent to developing states — often producing dependency, debt crises, and Structural Adjustment Programs by the 1980s',
-              'They ran the Soviet planned economy and provided five-year plans, agricultural collectivization advice, and heavy industrial planning to communist states throughout the post-1945 era',
-              'They were established by the Non-Aligned Movement at Bandung in 1955 to provide development aid that bypassed both the United States and the Soviet Union for new states',
-              'They had no relationship to decolonization and operated only inside North America and Western Europe without lending to or auditing any developing country governments at all'
+              'They stabilized the postwar capitalist system, set currency-exchange rules, and lent to developing states, often leading to debt and structural adjustment by the 1980s',
+              'They coordinated the Soviet planned economy, supplying five-year plans, collectivization advice, and heavy-industry loans to communist states after 1945',
+              'They were founded by the Non-Aligned Movement at Bandung in 1955 to provide postwar development aid that bypassed both superpowers',
+              'They operated only within North America and Western Europe, lending to industrialized states while refusing loans to newly independent governments'
             ],
             correctAnswer: 0,
             explanation: 'IMF and World Bank were Western capitalist institutions; their lending to Third World states became a source of leverage and dependency, producing the 1980s debt crisis.'
@@ -161,10 +161,10 @@ The Cold War was framed as capitalism vs. communism — but post-1945 history wa
           {
             question: 'A historian writes: "The U.S. Civil Rights Movement was a domestic American story but also a Cold War story." Which response best supports both halves of that claim?',
             options: [
-              'Civil rights leaders explicitly drew on decolonization rhetoric and African leaders, while the U.S. government supported civil rights reforms partly to counter Soviet propaganda about American racism that damaged U.S. standing in the Third World',
-              'The Civil Rights Movement had no international dimension and was conducted entirely between Southern segregationists and African-American activists without any global rhetorical or diplomatic component',
-              'The Civil Rights Movement was directly organized and funded by the Soviet Union as part of its Cold War strategy to undermine the United States from within using its own minority population',
-              'The Civil Rights Movement ended segregation in the United States by 1949 before the Cold War began and therefore had no overlap or interaction with Cold War politics or rhetoric'
+              'Activists drew on decolonization rhetoric and African leaders, and Washington backed reforms partly to counter Soviet propaganda about American racism abroad',
+              'The movement was a purely regional conflict between Southern segregationists and Black activists, with no global rhetoric or diplomatic dimension',
+              'The movement was largely organized and funded by the Soviet Union as a Cold War strategy to weaken the United States from within',
+              'Segregation ended with the 1948 desegregation of the armed forces, so later activism had no real link to Cold War diplomacy or to Soviet propaganda about American racism'
             ],
             correctAnswer: 0,
             explanation: 'The both/and framing requires acknowledging the domestic struggle AND the Cold War context (Soviet propaganda about Jim Crow; U.S. desire to court Third World opinion). This is the AP "complexity" move.'
@@ -172,10 +172,10 @@ The Cold War was framed as capitalism vs. communism — but post-1945 history wa
           {
             question: 'Which best explains why the 1957 Soviet launch of Sputnik mattered well beyond engineering?',
             options: [
-              'It produced a wave of U.S. investment in science education (NDEA 1958), reshaped the cultural Cold War to include space achievements as prestige, and made the Space Race a measure of system superiority',
-              'It immediately produced the Apollo 11 Moon landing in 1957 and ended the Space Race within months while leaving Soviet space achievements behind permanently',
-              'It had no impact on U.S. domestic policy or on the global cultural Cold War and was treated by both superpowers as a routine engineering achievement of no real significance',
-              'It produced a binding U.S.-Soviet treaty that demilitarized space and that ended Cold War prestige competition over technological achievement for the rest of the period'
+              'It spurred U.S. investment in science education (NDEA 1958), made space feats a measure of prestige, and turned the Space Race into a test of system superiority',
+              'It led directly to the Apollo 11 Moon landing within a few months, ending the Space Race and leaving Soviet space achievements permanently behind',
+              'It was treated by both superpowers as a routine engineering feat, with no real effect on U.S. domestic policy or on the wider cultural Cold War',
+              'It led the United States to abandon rocket research for a decade (until 1967), conceding space to the USSR, and to focus on conventional arms'
             ],
             correctAnswer: 0,
             explanation: 'Sputnik triggered cascading effects: U.S. NDEA funding for science education, the Space Race, and a reframing of the cultural Cold War. AP rewards multi-domain explanations.'

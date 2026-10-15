@@ -62,21 +62,21 @@ export const whNewlyIndependentStatesPart1Data = {
           {
             question: 'Which structural inheritance most directly shaped the political problems of post-independence African states?',
             options: [
-              'Colonial borders drawn at the 1884–85 Berlin Conference cut across ethnic and linguistic groups, producing post-independence states whose populations did not share a common ethnic or political identity',
-              'Newly independent African states were uniformly ethnically homogeneous and the colonial era had drawn borders that closely matched precolonial ethnic and political boundaries throughout the entire continent',
-              'European colonial powers had built dense industrial economies in their African colonies that gave newly independent states diversified manufacturing bases ready for postwar economic competition',
-              'Newly independent African states inherited functioning multi-party parliamentary democracies fully staffed with experienced African politicians and civil servants ready to govern from independence'
+              'Colonial borders drawn in the Scramble for Africa cut across ethnic and linguistic groups, leaving states whose peoples shared no common identity',
+              'Borders under colonial rule closely followed precolonial ethnic and political lines, so most new African states began with ethnically uniform populations',
+              'Colonial powers had built dense industrial economies in Africa, leaving new states diversified manufacturing bases ready for global competition',
+              'New African states inherited functioning multi-party parliaments fully staffed by experienced African politicians and senior civil servants'
             ],
             correctAnswer: 0,
-            explanation: 'The Berlin Conference borders are the canonical AP example of colonial inheritance shaping post-independence conflict. Civil wars in Nigeria, Sudan, and the DRC trace directly to those borders.'
+            explanation: 'Borders drawn in the era of the 1884–85 Berlin Conference are the canonical AP example of colonial inheritance shaping post-independence conflict. Civil wars in Nigeria, Sudan, and the DRC are often linked in part to those borders.'
           },
           {
             question: 'Which best characterizes the typical post-independence economic inheritance?',
             options: [
-              'A diversified industrial economy producing finished consumer goods for both domestic and international export markets in fully developed industrial sectors',
-              'An export-dependent economy oriented to producing raw materials (cotton, copper, cocoa, oil) for the former colonial power, with limited domestic industry or processing capacity',
-              'A fully self-sufficient agricultural economy that did not engage in international trade and required no external markets to function in the postwar period',
-              'A purely service-sector economy based on global finance and information technology that newly independent states inherited from the colonial period of the late 19th century'
+              'A diversified industrial economy (textiles, steel, machinery) producing finished goods for domestic buyers and export markets',
+              'An export economy built to supply raw materials (cotton, copper, cocoa, oil) to the former colonial power, with little local processing',
+              'A self-sufficient farming economy that traded little abroad and needed no external markets for its crops in the postwar period',
+              'A service economy built on finance and shipping, inherited from colonial port cities that had served as global trading hubs'
             ],
             correctAnswer: 1,
             explanation: 'Colonial economies were built to export raw materials. Diversifying away from this single-commodity dependency was the central economic project of newly independent states.'
@@ -146,10 +146,10 @@ export const whNewlyIndependentStatesPart1Data = {
           {
             question: 'A historian writes: "Independence was the start, not the end, of the nation-building project." Which response best supports the claim with AP-quality reasoning?',
             options: [
-              'Newly independent states inherited colonial borders that often did not match ethnic lines, weak administrations, and export-dependent economies, all of which required decades of further state-building, civil-rights legislation, and economic reform after the formal date of independence',
-              'Newly independent states inherited fully formed national identities, strong central administrations, and diversified industrial economies that required no further state-building work after the date of formal independence from European colonial rule',
-              'Newly independent states ceased to exist as coherent political units shortly after independence and were absorbed back into former colonial empires by the early 1960s without sustained nation-building efforts',
-              'Newly independent states had no inheritance from the colonial period and were able to begin nation-building from a blank slate without any constraints from the colonial-era economic and political structures'
+              'New states inherited mismatched borders, weak administrations, and export-dependent economies, demanding decades of state-building',
+              'New states inherited unified national identities, strong central administrations, and diversified economies that needed little further state-building work',
+              'New states soon ceased to be coherent political units and were absorbed back into the former colonial empires by the early 1960s, ending nation-building',
+              'New states began from a blank slate, free of colonial economic and political structures, so independence itself completed most of the nation-building work'
             ],
             correctAnswer: 0,
             explanation: 'The strongest response identifies the structural inheritance (borders, administration, economy) AND the long-term work required after independence. The other options collapse into caricatures.'
@@ -157,10 +157,10 @@ export const whNewlyIndependentStatesPart1Data = {
           {
             question: 'Which best demonstrates AP "complexity" by holding two ideas about post-independence governance in tension?',
             options: [
-              'Many newly independent states adopted democratic constitutions at independence, but also faced strong pressure toward one-party or military rule from inherited weak institutions, ethnic fragmentation, and Cold War aid politics that often rewarded strongman regimes',
-              'Newly independent states all adopted identical political systems and faced no meaningful variation in their political trajectories during the long period between 1945 and the end of the Cold War in 1991',
-              'Newly independent states all became one-party states immediately after independence and never experimented with multi-party elections at any point in the period from 1945 to 1991 worldwide',
-              'Newly independent states had no agency in choosing political systems and had political models imposed on them by either the United States or the Soviet Union at the moment of formal independence'
+              'Many new states adopted democratic constitutions, yet weak institutions, ethnic fragmentation, and Cold War aid that rewarded strongmen pushed them toward one-party or military rule',
+              'New states all adopted identical political systems, so their political paths showed little meaningful variation between independence and the end of the Cold War in 1991',
+              'New states all became one-party regimes at independence and never held competitive, free, or multi-party elections at any point between 1945 and 1991',
+              'New states had little agency in choosing their political systems, since the United States or the Soviet Union imposed a political model on each one at the moment of formal independence'
             ],
             correctAnswer: 0,
             explanation: 'Complexity rewards holding democratic aspirations AND structural pressure toward authoritarianism in the same sentence. The other options are reductive.'

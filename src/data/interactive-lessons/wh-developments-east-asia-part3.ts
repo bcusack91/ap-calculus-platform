@@ -58,21 +58,21 @@ AP World rewards pattern detection backed by specific evidence. This part builds
           {
             question: 'Which example best illustrates cultural diffusion without full political unification?',
             options: [
-              'Japan adopted selected Chinese cultural forms while preserving feudal military rule',
-              'China abolished all social hierarchy',
-              'Korea adopted no external influences',
-              'All East Asian kingdoms merged into one empire'
+              'Japan adopted selected Chinese cultural forms but kept its feudal military rule',
+              'The Mongols united China and Korea under the Yuan and imposed one administration',
+              'Korea rejected Chinese writing and Confucian ideas to protect its own cultural traditions',
+              'The Japanese and Korean courts merged into a single kingdom under one ruling dynasty'
             ],
             correctAnswer: 0,
-            explanation: 'This is a direct example of borrowing ideas while preserving distinct institutions.'
+            explanation: 'Japan adopting selected Chinese cultural forms while preserving feudal military rule is a direct example of borrowing ideas while keeping distinct institutions. Korea in fact embraced Chinese writing and Confucianism, and Japan and Korea never merged.'
           },
           {
             question: 'What is the strongest evidence for commercialization in Song China?',
             options: [
-              'Sharp decline in all internal trade',
-              'Growth of cities, market exchange, and paper currency use',
-              'Complete return to subsistence economy',
-              'Ban on merchant activity in all regions'
+              'A decline in internal trade as households grew their own food',
+              'Rapid urban growth alongside wide use of paper currency',
+              'A return to barter after copper coins vanished from circulation',
+              'A ban on merchants traveling between provinces without permits'
             ],
             correctAnswer: 1,
             explanation: 'Urban expansion and monetary innovation are classic markers of Song commercial growth.'
@@ -90,13 +90,13 @@ AP World rewards pattern detection backed by specific evidence. This part builds
         questions: [
           {
             question: 'Which ideology most reinforced social hierarchy in Song elite culture?',
-            options: ['Neo-Confucianism', 'Classical liberalism', 'Calvinism', 'Romantic nationalism'],
+            options: ['Neo-Confucianism', 'Legalism', 'Pure Land Buddhism', 'Daoism'],
             correctAnswer: 0,
-            explanation: 'Neo-Confucian thought underpinned hierarchy, order, and moral cultivation in elite governance.'
+            explanation: 'Neo-Confucian thought, which revived Confucian ethics in the Song, underpinned hierarchy, order, and moral cultivation in elite governance. Legalism was associated with the much earlier Qin, and Pure Land Buddhism and Daoism stressed salvation or harmony rather than social rank.'
           },
           {
             question: 'Which is the strongest indicator of Song commercialization?',
-            options: ['Paper money circulation', 'Total urban decline', 'Ban on merchants', 'Collapse of long-distance trade'],
+            options: ['Paper money circulation', 'Return to barter exchange', 'Ban on merchant travel', 'Collapse of long-distance trade'],
             correctAnswer: 0,
             explanation: 'Paper money and expanding market exchange are core evidence of Song commercial growth.'
           },
@@ -121,15 +121,15 @@ Pick the strongest pattern label, then connect it to one named historical exampl
         dropdowns: [
           {
             label: 'Expansion of urban markets and merchant activity is strongest evidence of: ___',
-            options: ['commercialization', 'deurbanization', 'isolationism', 'serf emancipation']
+            options: ['commercialization', 'deurbanization', 'manorialism', 'agrarian self-sufficiency']
           },
           {
             label: 'Spread of Confucian ideas beyond China is strongest evidence of: ___',
-            options: ['cultural diffusion', 'demographic collapse', 'industrialization', 'legal secularization']
+            options: ['cultural diffusion', 'military conquest', 'economic integration', 'forced conversion']
           },
           {
             label: 'Samurai-based rule in Japan is strongest evidence of: ___',
-            options: ['political divergence within a shared region', 'full regional unification', 'bureaucratic sameness', 'identical state structure']
+            options: ['political divergence within a shared region', 'Chinese-style bureaucratic centralization in Japan', 'Mongol-imposed regional unification', 'isolation from mainland culture']
           }
         ],
         correctAnswers: ['commercialization', 'cultural diffusion', 'political divergence within a shared region'],
@@ -150,10 +150,10 @@ Pick the strongest pattern label, then connect it to one named historical exampl
           {
             question: 'Which thesis best fits the evidence from East Asia c. 1200-1450?',
             options: [
-              'The region experienced complete cultural and political isolation',
+              'Each East Asian state developed in isolation, with little cultural borrowing',
               'The region showed both cultural integration and institutional diversity',
-              'All states abandoned hierarchy and centralized authority',
-              'Commercial life disappeared as tribute diplomacy expanded'
+              'Chinese models produced uniform political institutions across the whole region',
+              'Commercial life declined as tributary diplomacy replaced private trade networks'
             ],
             correctAnswer: 1,
             explanation: 'This claim captures both sides of the historical pattern, making it a strong AP thesis move.'
@@ -162,12 +162,12 @@ Pick the strongest pattern label, then connect it to one named historical exampl
             question: 'A prompt asks for one continuity in East Asia across this era. Which is best?',
             options: [
               'Persistent influence of Confucian social hierarchy in elite governance',
-              'Continuous constitutional democracy across all states',
-              'Permanent Mongol rule in all East Asian territories',
-              'Complete absence of long-distance exchange'
+              'Continuous rule by a single dynasty in China across the whole era',
+              'Steady decline of Buddhism as a force in Korean and Japanese life',
+              'Persistent isolation of Japan from trade with the Asian mainland'
             ],
             correctAnswer: 0,
-            explanation: 'Confucian hierarchy remained a durable framework in key East Asian political cultures.'
+            explanation: 'Confucian hierarchy remained a durable framework in key East Asian political cultures. China moved from Song to Yuan to Ming rule, Buddhism flourished in Kamakura Japan, and Japan kept trading with the mainland.'
           }
         ]
       }

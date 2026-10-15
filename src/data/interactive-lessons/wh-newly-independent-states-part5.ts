@@ -91,21 +91,21 @@ export const whNewlyIndependentStatesPart5Data = {
           {
             question: 'Which best characterizes the typical Phase 1 (1945–1965) post-independence political pattern?',
             options: [
-              'Charismatic founding leaders, ambitious modernization plans (dams, steel mills, five-year plans), state-led ISI economies, and single-party or military regimes asserting national unity over ethnic and regional divides',
-              'Multi-party democracies with stable parliamentary opposition, fully privatized market economies with no state involvement, and complete absence of charismatic founding leaders or ethnic tensions during the immediate post-independence years',
-              'Direct foreign rule by either the United States or the Soviet Union with no formal independence, no domestic leaders, and no domestic economic policy choices for newly independent states between 1945 and 1965',
-              'Pre-industrial agrarian societies with no significant industrial development plans, no state institutions, and no political mobilization between independence and the start of the second post-independence phase in 1965'
+              'Charismatic founding leaders, ambitious modernization plans (dams, steel mills, five-year plans), state-led ISI economies, and single-party or military rule',
+              'Multi-party democracies with stable parliamentary oppositions (on the British model), privatized market economies, and little ethnic tension after independence',
+              'Direct rule by the United States or the Soviet Union, with new states lacking domestic leaders and making no economic policy choices of their own before 1965',
+              'Agrarian societies with no plans for industrial development, weak state institutions, and little political mobilization between independence and 1965'
             ],
             correctAnswer: 0,
-            explanation: 'The Phase 1 pattern is canonical: founding leader (Nehru, Nasser, Nkrumah, Sukarno), high-modernist plans, ISI, single-party or military rule. The other options describe trajectories that did not exist.'
+            explanation: 'The Phase 1 pattern is canonical: founding leader (Nehru, Nasser, Nkrumah, Sukarno), high-modernist plans, ISI, single-party or military rule. The other options do not describe the typical pattern of the period.'
           },
           {
             question: "Which best describes the impact of 1980s IMF Structural Adjustment Programs on African economies?",
             options: [
-              'SAPs forced governments to cut social spending, devalue currencies, and open to foreign investment in exchange for IMF loans, often producing severe short-term hardship and weakening the state\'s capacity to deliver public services',
-              'SAPs produced rapid industrial growth and full employment across all African economies during the 1980s decade and lifted most African populations out of poverty within a single decade of implementation',
-              'SAPs strengthened state-led economic planning and expanded public sector spending across African economies during the 1980s decade as part of a broader international commitment to development assistance',
-              'SAPs had no measurable impact on African economic policy or social conditions during the 1980s decade and were rejected by all African governments in favor of continued state-led ISI policies'
+              'SAPs required spending cuts, currency devaluation, and openness to foreign investment in exchange for IMF loans, often causing hardship and weakening public services',
+              'SAPs produced rapid industrial growth and full employment across most African economies, lifting most of the population out of poverty within a decade',
+              'SAPs expanded state-led planning, public sector hiring, and subsidies across African economies as part of a broad international push for development aid',
+              'SAPs had little impact on African economic policy, since most African governments rejected them in favor of continued state-led ISI policies'
             ],
             correctAnswer: 0,
             explanation: 'SAPs imposed liberalization in exchange for loans. The short-term result was widespread social hardship; the long-term legacy is contested. AP responses should name both the mechanism and the cost.'
@@ -175,10 +175,10 @@ export const whNewlyIndependentStatesPart5Data = {
           {
             question: 'A CCOT prompt asks: "Evaluate the extent to which post-independence economic strategies remained the same and the extent to which they changed between 1945 and 2000." Which thesis would score highest?',
             options: [
-              'Post-independence economies retained colonial-era export dependence on raw materials throughout the period, but their dominant strategies transformed from state-led import substitution (1945–1970s) to export-led growth and IMF-driven structural adjustment (1980s–1990s), reshaping state-market relations across most newly independent regions',
-              'Post-independence economies remained identical from 1945 to 2000 with no meaningful changes in either the dominant strategy or the role of the state in any region of the world during the entire period',
-              'Post-independence economies changed completely in 1980 and there were no continuities at all in either the inherited colonial economic structure or the pattern of raw-material export dependence across newly independent states',
-              'Post-independence economies were entirely shaped by either the United States or the Soviet Union and newly independent states had no autonomous economic strategies of their own during the period from 1945 to 2000 anywhere'
+              'Raw-material export dependence persisted, but strategies shifted from state-led import substitution to export-led growth and IMF structural adjustment',
+              'Post-independence economic strategies stayed essentially the same from 1945 to 2000, with no meaningful change in the role of the state in any region of the world',
+              'Post-independence economies changed completely around 1980, with no continuity at all in the colonial pattern of raw-material export dependence after that date',
+              'Post-independence economies were shaped entirely by the United States or the Soviet Union, leaving new states no autonomous economic strategies between 1945 and 2000'
             ],
             correctAnswer: 0,
             explanation: 'Strong CCOT theses name a continuity (raw-material export dependence) AND a change (ISI to liberalization) AND specify the mechanism. The other options collapse into one-sided claims.'
@@ -186,13 +186,13 @@ export const whNewlyIndependentStatesPart5Data = {
           {
             question: 'Which best illustrates a meaningful continuity across the 1945–2000 period in newly independent states?',
             options: [
-              'Inherited colonial borders persisted throughout the period with very few exceptions (Bangladesh 1971; Eritrea 1993), even as governments and economic models within those borders changed dramatically across the three phases',
-              'Inherited colonial borders changed completely across the period and most newly independent states were redrawn into entirely new political units between 1945 and 2000 across all regions of the world',
-              'Inherited colonial borders had no relevance to post-independence politics and were ignored by all newly independent states regardless of region or decade during the entire period from 1945 to 2000',
-              'Inherited colonial borders applied only to former British colonies and had no influence on French, Belgian, Dutch, or Portuguese former colonies in any region during the post-1945 period'
+              'Inherited colonial borders persisted with very few exceptions (Bangladesh 1971; Eritrea 1993), even as governments and economic models within them changed',
+              'Inherited colonial borders changed completely, as most newly independent states were redrawn into entirely new political units between 1945 and 2000',
+              'Inherited colonial borders were widely ignored, as new states routinely annexed neighbors and redrew the map after each regional war (Biafra 1967; Katanga 1960)',
+              'Inherited colonial borders shaped only former British colonies and had little influence on French, Belgian, Dutch, or Portuguese ones after 1945'
             ],
             correctAnswer: 0,
-            explanation: 'Persistent colonial borders are the canonical AP continuity for this topic. Bangladesh and Eritrea are the standard exceptions.'
+            explanation: 'Persistent colonial borders are the canonical AP continuity for this topic. Bangladesh and Eritrea are the standard exceptions; secessions such as Biafra and Katanga failed, which shows how durable the borders were.'
           }
         ]
       }

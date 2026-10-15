@@ -85,10 +85,10 @@ export const whNewlyIndependentStatesPart2Data = {
           {
             question: 'Which best describes the import-substitution industrialization (ISI) strategy adopted by many post-independence states from the 1940s to the 1970s?',
             options: [
-              'Government use of tariffs and subsidies to build domestic industries that replaced imported goods, often producing initial growth followed by inefficiency, foreign-exchange shortages, and balance of payments crises',
-              'Government commitment to free trade and zero tariffs, designed to produce rapid integration into global capitalist markets without protecting domestic firms from foreign competition during the early industrial period',
-              'Government withdrawal from all economic planning and full reliance on private foreign investment to direct industrial development without any state involvement in setting industrial priorities or directions',
-              'Government adoption of identical Soviet-style central planning across all post-independence economies regardless of political alignment with either the United States or the Soviet Union during the Cold War'
+              'Using tariffs and subsidies to build domestic industries that replaced imports, often yielding early growth followed by inefficiency and balance-of-payments crises',
+              'Committing to free trade and low tariffs on imports to integrate quickly into global markets, leaving domestic firms exposed to foreign competition',
+              'Withdrawing from economic planning and relying on private foreign investment to set industrial priorities without direction from the state',
+              'Adopting Soviet-style central planning in every new state regardless of alignment, abolishing private firms in favor of state-owned enterprises across the entire economy'
             ],
             correctAnswer: 0,
             explanation: 'ISI is the canonical post-independence strategy: protect domestic industry behind tariffs to substitute for imports. India\'s License Raj and Brazil\'s ISI period are the textbook examples.'
@@ -96,13 +96,13 @@ export const whNewlyIndependentStatesPart2Data = {
           {
             question: 'Which best characterizes the outcome of land reform in Mexico under President Lázaro Cárdenas in the 1930s?',
             options: [
-              'About 45 million acres were redistributed through communal ejido holdings, which stabilized rural support for the ruling Institutional Revolutionary Party (PRI) for decades after the reforms',
-              'Land was concentrated in the hands of foreign oil companies and the largest hacienda owners, removing peasant access to communal lands and producing rural depopulation across central Mexico during the 1930s',
-              'Land reform was attempted but immediately reversed within months and Mexican land tenure returned to the pre-revolutionary pattern that had existed under the Porfirio Díaz regime before 1910',
-              'Land reform created a new class of large commercial farmers who became the dominant landholders, eliminating ejido communal holdings and producing private agricultural concentration similar to settler-colonial patterns'
+              'About 45 million acres were redistributed as communal ejido holdings, building rural support for the ruling party (later the PRI) for several decades',
+              'Land was concentrated in the hands of foreign oil companies (such as Standard Oil) and the largest hacienda owners, cutting peasant access to communal lands',
+              'Land reform was attempted but reversed within months, and Mexican land tenure returned to the pattern that had existed under Porfirio Díaz before 1910',
+              'Land reform created a class of large commercial farmers who became the dominant landholders, replacing the ejido communal holdings with private estates'
             ],
             correctAnswer: 0,
-            explanation: 'Cárdenas\'s ejido distributions are the most successful Latin American land reform of the 20th century. They built durable peasant loyalty to the PRI, which governed Mexico continuously until 2000.'
+            explanation: 'Cárdenas\'s ejido distributions are the most successful Latin American land reform of the 20th century. They built durable peasant loyalty to the ruling party (renamed the PRI in 1946), which governed Mexico continuously until 2000. Cárdenas also nationalized foreign oil companies in 1938 rather than enriching them.'
           }
         ]
       }
@@ -169,10 +169,10 @@ export const whNewlyIndependentStatesPart2Data = {
           {
             question: 'Which best explains the divergent economic trajectories of India (after 1947) and South Korea (after 1953)?',
             options: [
-              'India pursued state-led import substitution behind high tariffs and produced slow steady growth, while South Korea pursued state-coordinated export-led growth that integrated into global markets and produced rapid industrialization by the 1980s',
-              'India and South Korea pursued identical economic strategies during the period from 1947 to 1990 and produced equivalent rates of growth and industrialization throughout the period without any meaningful difference',
-              'India had no economic strategy and grew through pure private market activity, while South Korea was a fully Soviet-style command economy with no private sector during the period from 1953 to 1990',
-              'India industrialized rapidly through Cold War U.S. aid, while South Korea remained an agricultural economy throughout the period from 1953 to 1990 without producing any major industrial sectors of its own'
+              'India pursued import substitution behind high tariffs and grew slowly, while South Korea pursued state-guided export-led growth and industrialized fast',
+              'India and South Korea pursued nearly identical economic strategies from 1947 to 1990 and achieved similar rates of growth and industrialization over the period',
+              'India relied on free-market private enterprise with little planning, while South Korea built a Soviet-style command economy with no private sector after 1953',
+              'India industrialized rapidly with Cold War U.S. aid, while South Korea remained a mainly agricultural economy without major industrial sectors through the 1980s'
             ],
             correctAnswer: 0,
             explanation: 'India = ISI = slow steady growth. South Korea = export-led growth + state coordination of chaebols = rapid industrialization. This is the canonical AP comparison for post-independence economic strategy.'
@@ -180,13 +180,13 @@ export const whNewlyIndependentStatesPart2Data = {
           {
             question: 'Which post-1945 case best illustrates the political costs of failed land reform?',
             options: [
-              "China's 1958 Great Leap Forward, in which forced collectivization combined with unrealistic production quotas produced a famine that killed approximately 30 million people in three years",
-              "Mexico's 1934–40 ejido distribution, which redistributed about 45 million acres and stabilized rural support for the ruling party for decades after the reform was completed",
-              "Egypt's 1952 land reform under Nasser, which capped land holdings and redistributed land to small farmers and strengthened the Free Officers regime in the countryside",
-              "Taiwan's 1949–53 land-to-the-tiller program, which redistributed land to peasant cultivators and laid the foundation for postwar Taiwanese economic growth"
+              "China's 1958 Great Leap Forward, in which forced collectivization and unrealistic quotas caused a famine that killed an estimated 15 to 45 million people",
+              "Mexico's 1934–40 ejido distribution, which redistributed about 45 million acres and stabilized rural support for the ruling party for decades",
+              "Egypt's 1952 land reform under Nasser, which capped holdings, redistributed land to small farmers, and strengthened the regime in the countryside",
+              "Taiwan's 1949–53 land-to-the-tiller program, which transferred land to peasant cultivators and laid a foundation for postwar economic growth"
             ],
             correctAnswer: 0,
-            explanation: 'The Great Leap Forward is the catastrophic-failure case. The other options are successful land reforms. AP often pairs these to test whether students can distinguish outcomes.'
+            explanation: 'The Great Leap Forward is the catastrophic-failure case; scholarly estimates of the famine\'s death toll range from about 15 million to 45 million, with roughly 30 million a common figure. The other options are successful land reforms. AP often pairs these to test whether students can distinguish outcomes.'
           }
         ]
       }

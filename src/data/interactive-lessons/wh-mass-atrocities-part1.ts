@@ -66,7 +66,7 @@ Use this structure when writing: name the regime, name the targeted group, ident
               'Any act of large-scale violence committed during a war between two sovereign states regardless of which group is being targeted',
               'Acts committed with intent to destroy, in whole or in part, a national, ethnic, racial, or religious group',
               'A spontaneous outbreak of communal violence between neighbors that occurs without any state planning or organization',
-              'Any government policy that produces a high number of civilian casualties during a counter-insurgency campaign'
+              'Any government policy that produces high civilian casualties, whether by bombing, blockade, or counter-insurgency'
             ],
             correctAnswer: 1,
             explanation: 'The 1948 UN Convention requires intent and identifies the four protected categories. Memorize this phrasing — many AP MCQs hinge on the words "intent" and "in whole or in part."'
@@ -74,10 +74,10 @@ Use this structure when writing: name the regime, name the targeted group, ident
           {
             question: 'Which set of structural conditions appears across the Armenian Genocide, the Holocaust, and the Rwandan Genocide?',
             options: [
-              'A democratic government, a free press, an independent judiciary, and an active international peacekeeping force on the ground',
-              'A totalizing ideology, a constructed enemy group, a wartime or political crisis, and a bureaucratic apparatus that organized killing as policy',
-              'A foreign occupying army, a long-running famine, the absence of any organized military forces, and unanimous international intervention',
-              'A purely economic crisis, a single charismatic leader, no use of mass media, and a complete absence of any ideological justification offered'
+              'A long-running famine, a foreign occupying army, a collapse of the state, and killing driven by local looting rather than policy',
+              'A totalizing ideology, a constructed enemy group, a wartime or political crisis, and a bureaucracy that organized killing',
+              'Ancient ethnic hatreds, spontaneous mob violence, an absence of state direction, and killing confined to a few border villages',
+              'A purely economic crisis, a single leader acting alone, and no ideology or bureaucracy to justify the violence'
             ],
             correctAnswer: 1,
             explanation: 'These four elements (ideology + targeted group + crisis + organization) are the AP comparison framework. Use them as your skeleton for any short-answer or essay on mass atrocity.'
@@ -147,10 +147,10 @@ Use this structure when writing: name the regime, name the targeted group, ident
           {
             question: "A historian writes: \"Twentieth-century genocides cannot be explained by hatred alone.\" Which response would most strengthen the historian's claim with AP-quality reasoning?",
             options: [
-              'Mass atrocities are simply the result of long-standing ethnic hostilities that build up over generations until communities erupt into violence on their own',
-              'Mass atrocities require a totalizing ideology, an organized state apparatus, and a crisis context that allows leaders to mobilize hatred into systematic killing policy',
-              'Mass atrocities only occur when foreign powers intervene militarily and impose new political boundaries on previously stable multi-ethnic societies in transition',
-              'Mass atrocities are random tragedies that historians cannot meaningfully explain because the motives of perpetrators are too individual and too varied to generalize'
+              'Mass atrocities result from ancient ethnic hatred, built up over generations of rivalry, grievance, and fear until communities erupt on their own',
+              'Leaders used a totalizing ideology, an organized state apparatus, and a crisis context to turn hatred into systematic policy',
+              'Mass atrocities occur when foreign powers redraw borders, so outside intervention rather than local leadership explains the killing',
+              'Mass atrocities are unpredictable tragedies, since the motives of individual perpetrators are too varied for historians to generalize'
             ],
             correctAnswer: 1,
             explanation: 'The strongest AP response moves beyond emotion ("hatred") to structural causation. Naming ideology + organization + crisis is the move that earns the complexity point.'
@@ -158,10 +158,10 @@ Use this structure when writing: name the regime, name the targeted group, ident
           {
             question: 'Which comparison best illustrates that the AP comparison skill requires shared analytical categories rather than just listing two events?',
             options: [
-              'The Armenian Genocide happened in 1915 and the Holocaust happened in the 1940s, so they are different events that occurred in different decades and regions',
-              'Both the Armenian Genocide and the Holocaust used wartime crisis to justify mass deportation and killing of a religious or ethnic minority defined as a security threat',
-              'The Armenian Genocide involved Turks and Armenians while the Holocaust involved Germans and Jews, so each case has its own particular national identities',
-              'The Holocaust killed more people than the Armenian Genocide so the two cases cannot really be compared using the same analytical categories or framework'
+              'The Armenian Genocide happened in 1915 and the Holocaust in the 1940s, so they occurred in different decades and regions',
+              'Both the Armenian Genocide and the Holocaust used wartime crisis to justify deporting and killing a minority cast as a security threat',
+              'The Armenian Genocide involved Turks and Armenians while the Holocaust involved Germans and Jews, so each had its own identities',
+              'Both cases differ in scale, since the Holocaust killed far more people, so they cannot be analyzed with the same categories'
             ],
             correctAnswer: 1,
             explanation: 'AP comparison rewards shared categories: wartime crisis, security framing, mass deportation, targeted minority. Lists of differences without analytical frame do not score the complexity point.'

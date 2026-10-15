@@ -177,10 +177,10 @@ export const whColdWarDecolonizationPart7Data = {
           {
             question: 'A historian writes: "The end of the Cold War in 1989–1991 was both the result of long-term Soviet economic decline and the contingent product of specific reform decisions." Which response best supports both halves with AP-quality reasoning?',
             options: [
-              "Soviet economic stagnation since the 1970s created the structural pressure for reform, but Gorbachev's specific decisions to launch glasnost (openness) and perestroika (restructuring), and to refuse military intervention as Eastern European regimes collapsed in 1989, made the rapid bloodless collapse possible",
-              "The end of the Cold War was driven entirely by long-term economic decline and there were no meaningful contingent leadership decisions on either side that affected the timing or the form of the Soviet collapse during the late 1980s decade",
-              "The end of the Cold War was driven entirely by individual leadership choices and there were no meaningful long-term structural pressures (economic, demographic, or military) on the Soviet system during the long period from the 1970s to the late 1980s",
-              "The end of the Cold War was an inevitable historical event with no contingent dimension at all and would have occurred at the same time and in the same form regardless of which leaders held office in either superpower"
+              "Soviet stagnation since the 1970s created pressure for reform, but Gorbachev's glasnost, perestroika, and refusal to intervene in 1989 made a rapid, bloodless collapse possible",
+              "Long-term economic decline alone ended the Cold War, so no decisions by Gorbachev, Reagan, or anyone else affected the timing or form of the collapse",
+              "Individual leadership choices alone ended the Cold War, since the Soviet economy was growing steadily and faced no structural pressure from the 1970s onward",
+              "U.S. military pressure alone ended the Cold War, as Reagan's arms buildup forced an immediate Soviet surrender in 1983 with no role for Soviet reformers"
             ],
             correctAnswer: 0,
             explanation: 'The both/and AP move: structural pressure (1970s economic stagnation) PLUS contingent choices (Gorbachev\'s reforms; the 1989 decision not to use Soviet troops) is the high-scoring framing.'
@@ -188,10 +188,10 @@ export const whColdWarDecolonizationPart7Data = {
           {
             question: 'Which best summarizes the post-1945 transformation of the international order in a way that an AP reader would credit as a "complexity" claim?',
             options: [
-              'The post-1945 order replaced European empires with U.S.-Soviet bipolarity, but bipolarity was complicated from the start by Third World non-alignment, by the rise of religious-political movements, and by economic interdependence that no single bloc could fully control',
-              'The post-1945 order was a simple two-sided contest between the United States and the Soviet Union with no other meaningful actors, ideologies, or processes shaping the global system at any point during the second half of the twentieth century',
-              'The post-1945 order remained identical to the pre-1914 European balance-of-power system without any meaningful changes attributable to nuclear weapons, decolonization, or other distinctively post-1945 features of the global system',
-              'The post-1945 order had no relationship to either the world wars or to the prior history of European empires and emerged as a fully novel system without any continuity from earlier patterns of international relations'
+              'Bipolarity replaced European empires, but non-alignment, religious-political movements, and economic interdependence complicated it from the start',
+              'The post-1945 order was a simple two-sided contest between the United States and the Soviet Union, with no other actors, ideologies, or processes shaping the global system',
+              'The post-1945 order repeated the pre-1914 European balance of power, as nuclear weapons and decolonization left the basic structure of great-power rivalry unchanged',
+              'The post-1945 order broke completely with the world wars and European empires, emerging as a fully novel system with no continuity from earlier international relations'
             ],
             correctAnswer: 0,
             explanation: 'AP "complexity" rewards naming the dominant pattern AND its qualifications/exceptions in the same sentence. The other options collapse into single-cause caricatures.'

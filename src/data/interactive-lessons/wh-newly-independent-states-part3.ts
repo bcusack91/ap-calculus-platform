@@ -99,21 +99,21 @@ export const whNewlyIndependentStatesPart3Data = {
           {
             question: 'Which best explains the historical significance of the 1956 Suez Crisis?',
             options: [
-              'Nasser\'s nationalization of the canal triggered an Anglo-French-Israeli invasion that the U.S. and USSR jointly pressured to withdraw, marking the end of European great-power independence and the rise of Arab nationalism',
-              'The Suez Crisis produced a binding peace treaty between Egypt and Israel that ended Arab-Israeli conflict for the rest of the 20th century without any further wars between the two states',
-              'The Suez Crisis was a routine border dispute that produced no major changes in the international position of either Britain, France, Egypt, or the United States during the 1950s',
-              'The Suez Crisis was a Soviet-Egyptian war in which the United States and Britain jointly defended Egypt from Soviet invasion of the Sinai Peninsula during November 1956'
+              'Nasser\'s canal nationalization provoked an Anglo-French-Israeli invasion that U.S. and Soviet pressure forced back, exposing Europe\'s limits and boosting Arab nationalism',
+              'The Suez Crisis produced a binding peace treaty between Egypt and Israel that ended the Arab-Israeli conflict for the rest of the 20th century without any further wars',
+              'The Suez Crisis confirmed Britain and France as independent great powers, as their joint invasion forced Nasser to return the canal to the Suez Canal Company',
+              'The Suez Crisis was a Soviet-Egyptian war in which the United States and Britain jointly defended Egypt against a Soviet invasion of the Sinai in November 1956'
             ],
             correctAnswer: 0,
-            explanation: 'Suez 1956 is the canonical end-of-European-empire moment. Britain and France discovered they could no longer act independently of the U.S. The crisis also boosted Nasser\'s status across the Arab world.'
+            explanation: 'Suez 1956 is the canonical end-of-European-empire moment. Britain and France discovered they could no longer act independently of the U.S., which (alongside separate Soviet threats) pressed them to withdraw. The crisis also boosted Nasser\'s status across the Arab world; the Egypt-Israel peace treaty came only in 1979.'
           },
           {
             question: 'Which best characterizes the Asian Tigers economic model from the 1960s to the 1990s?',
             options: [
-              'Strong state coordination of private firms toward export industries, heavy investment in education, and authoritarian or semi-authoritarian politics during the rapid-growth phase, with access to U.S. markets as a Cold War ally',
-              'Pure laissez-faire free-market capitalism with no state involvement in directing economic development, no industrial policy, and no protection from foreign competition during the early industrial period',
-              'Soviet-style central planning with no private firms or export industries during the entire period from 1960 to 1990 across all four of the Asian Tiger economies (Korea, Taiwan, Singapore, Hong Kong)',
-              'Pure agricultural economies based on rice exports with no manufacturing or finance sectors at any point during the period from 1960 to 1990 across the four Tiger economies'
+              'State coordination of private firms toward exports, heavy investment in education, and authoritarian or semi-authoritarian rule, with U.S. markets open to them as Cold War allies',
+              'Laissez-faire capitalism with no industrial policy, no state direction of investment, and no protection of local firms from foreign competition during the early phase of industrialization',
+              'Soviet-style central planning with state ownership of all major firms and little export activity across the four Tiger economies (Korea, Taiwan, Singapore, Hong Kong)',
+              'Agricultural economies based on rice exports, with manufacturing and finance sectors that remained small throughout the period from 1960 to 1990'
             ],
             correctAnswer: 0,
             explanation: 'The Tiger model is canonically: state-coordinated export-led growth + education investment + authoritarian politics + Cold War U.S. market access. The other options are caricatures.'
@@ -187,10 +187,10 @@ export const whNewlyIndependentStatesPart3Data = {
           {
             question: 'A historian writes: "Newly independent states were not blank slates — they inherited colonial administrative structures and used them in different ways." Which response best supports the claim with AP-quality reasoning?',
             options: [
-              'India under Nehru retained the British civil service and parliamentary structure but layered onto it universal suffrage and ISI tariffs, while Indonesia under Sukarno retained Dutch administration but layered "Guided Democracy" and authoritarian centralization onto it',
-              'Newly independent states all dismantled colonial administrative structures immediately at independence and built entirely new systems from scratch without retaining any element of the colonial state',
-              'Newly independent states inherited no administrative capacity from the colonial period and had to build governance entirely from precolonial traditional institutions during the post-independence era',
-              'Newly independent states were forced to adopt identical postwar political systems imposed by the United Nations General Assembly and had no autonomy to choose their own governance models'
+              'Nehru\'s India kept the British civil service and parliament but added universal suffrage and ISI, and Sukarno\'s Indonesia layered "Guided Democracy" onto Dutch administration',
+              'Newly independent states dismantled colonial administrative structures at independence and built entirely new systems from scratch, retaining no element of the colonial state',
+              'Newly independent states inherited no administrative capacity from the colonial period and had to govern entirely through restored precolonial traditional institutions and local chiefs',
+              'Newly independent states adopted identical political systems imposed by the UN General Assembly, leaving them no autonomy to choose their own models of governance'
             ],
             correctAnswer: 0,
             explanation: 'The strongest response identifies the inheritance AND the variation in how it was used. India and Indonesia are the canonical contrast: same colonial bureaucratic inheritance, different political projects.'
@@ -198,10 +198,10 @@ export const whNewlyIndependentStatesPart3Data = {
           {
             question: 'Which contextualization sentence best opens an AP essay on post-independence economic development between 1945 and 1990?',
             options: [
-              'After 1945, newly independent states inherited colonial economies built for raw-material extraction, faced Cold War pressure to align with one of the two blocs, and chose between import-substitution and export-led growth models that produced sharply divergent trajectories by the 1980s',
-              'After 1945, newly independent states inherited highly diversified industrial economies from European colonial powers and faced no significant economic challenges in the postwar period before the start of globalization in the 1990s',
-              'After 1945, newly independent states all chose identical economic strategies regardless of political alignment and produced uniformly equivalent rates of growth across all regions and decades',
-              'After 1945, newly independent states had no agency in economic policy and had economic models imposed on them entirely by the IMF and World Bank during the immediate post-independence period'
+              'After 1945, new states inherited extraction-built colonial economies, faced Cold War pressure to align, and chose between import substitution and export-led growth',
+              'After 1945, new states inherited diversified industrial economies from the colonial powers and faced few serious economic challenges before globalization in the 1990s',
+              'After 1945, new states chose nearly identical economic strategies regardless of political alignment, producing similar rates of growth across all regions and decades',
+              'After 1945, new states had little agency in economic policy, as the IMF and World Bank imposed structural adjustment programs on them from the moment of independence'
             ],
             correctAnswer: 0,
             explanation: 'Strong contextualization names the inheritance, the geopolitical pressure, AND the variation in policy choices. The other options collapse into reductive caricatures.'

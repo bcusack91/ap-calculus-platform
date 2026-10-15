@@ -72,10 +72,10 @@ Final review: high-yield terms, likely prompts, and exam strategy.
           {
             question: 'Which thesis is strongest for a comparison prompt on WWI and WWII?',
             options: [
-              'The two wars were identical in cause, conduct, and consequence with no meaningful differences in scale, ideology, or postwar outcome',
-              'Both were total wars that mobilized industrial economies and colonial empires, but WWII was more ideologically polarized, more devastating to civilians, and produced a more constructive postwar order',
-              'WWII was less destructive than WWI in every dimension including casualties, ideological intensity, geographic scope, and postwar political change',
-              'Neither war involved colonial troops, strategic bombing of civilian targets, or the creation of any major postwar international institution'
+              'Both were total wars, but WWI was deadlier for civilians, since the 1918 flu and famine outstripped WWII\'s bombing and genocide',
+              'Both were total wars that mobilized industrial economies and colonies, but WWII was more ideological and more devastating to civilians',
+              'WWI was as ideological as WWII, because fascism and communism already divided the two alliance blocs before 1914',
+              'Both were limited wars fought by professional armies, but WWII was larger in scale because more nations joined the fighting'
             ],
             correctAnswer: 1,
             explanation: 'Strong AP comparison theses name shared structural features and meaningful differences in scope, ideology, and outcome.'
@@ -83,13 +83,13 @@ Final review: high-yield terms, likely prompts, and exam strategy.
           {
             question: 'Which is the strongest causation argument for the outbreak of WWII?',
             options: [
-              'Versailles grievances alone made WWII inevitable from the moment the treaty was signed at the Hall of Mirrors in June 1919',
-              'Versailles grievances, the Great Depression, the failure of collective security, and Axis expansion together produced WWII; no single factor is sufficient',
-              'WWII was an unforeseeable accident with no structural causes or identifiable diplomatic warning signs in the years before 1939',
-              'WWII was caused entirely by Soviet expansion in Eastern Europe following the Molotov-Ribbentrop Pact and the invasion of Finland'
+              'Germany\'s Versailles grievances alone made WWII inevitable from the moment it signed the treaty in 1919',
+              'Versailles grievances, the Depression, failed collective security, and Axis expansion together produced WWII',
+              'WWII was an unforeseeable accident, since no crises, warnings, or treaty violations came before 1939',
+              'Soviet expansion alone caused WWII, as the Nazi-Soviet Pact led Britain and France to declare war'
             ],
             correctAnswer: 1,
-            explanation: 'AP causation rewards multi-factor explanations that name structural conditions and aggressive policies together.'
+            explanation: 'AP causation rewards multi-factor explanations that name structural conditions and aggressive policies together; no single factor is sufficient.'
           }
         ]
       }
@@ -110,15 +110,15 @@ Final review: high-yield terms, likely prompts, and exam strategy.
           },
           {
             question: 'Which 1941 document outlined Allied war aims including self-determination?',
-            options: ['Atlantic Charter', 'Treaty of Versailles', 'Magna Carta', 'Twelve Points'],
+            options: ['Atlantic Charter', 'Treaty of Versailles', 'Balfour Declaration', 'Fourteen Points'],
             correctAnswer: 0,
-            explanation: 'The Atlantic Charter (Aug 1941) committed Allied powers to postwar self-determination and free trade.'
+            explanation: 'The Atlantic Charter (Aug 1941) committed Allied powers to postwar self-determination and free trade. The Balfour Declaration (1917) and the Fourteen Points (1918) date from WWI.'
           },
           {
             question: 'Which postwar institution succeeded the failed League of Nations after WWII?',
-            options: ['NATO', 'United Nations', 'European Union', 'Warsaw Pact'],
+            options: ['NATO', 'United Nations', 'Association of Southeast Asian Nations', 'Warsaw Pact'],
             correctAnswer: 1,
-            explanation: 'The United Nations (1945) replaced the League of Nations as the primary postwar collective-security institution.'
+            explanation: 'The United Nations (1945) replaced the League of Nations as the primary postwar collective-security institution. ASEAN (1967) is a regional association, and NATO and the Warsaw Pact were Cold War military alliances.'
           }
         ]
       }
@@ -164,10 +164,10 @@ Identify the prompt type first, then select evidence that directly matches that 
           {
             question: 'Which short claim is best for an SAQ asking one continuity in industrial warfare from 1914 to 1945?',
             options: [
-              'Both world wars relied on industrial mass production, state-directed economies, and colonial empires for sustained mobilization',
-              'Neither world war involved any industrial production, state economic planning, or significant material mobilization beyond local levies',
-              'Both world wars used only feudal levy systems and small volunteer professional armies under hereditary aristocratic command',
-              'Both world wars avoided any state economic planning and relied entirely on private market production for munitions and equipment'
+              'Both world wars relied on industrial mass production, state-directed economies, and colonial empires',
+              'Both world wars were won mainly by naval blockade, as the Allies starved the Central and Axis powers of food, fuel, and industrial inputs',
+              'Both world wars relied on volunteer armies, as major powers avoided conscription to preserve public support for the war',
+              'Both world wars relied on private markets for munitions, as governments left production decisions to independent firms'
             ],
             correctAnswer: 0,
             explanation: 'It is precise, accurate, and directly responsive to a continuity question on industrial mobilization.'
@@ -175,13 +175,13 @@ Identify the prompt type first, then select evidence that directly matches that 
           {
             question: 'Which sentence best shows strong AP reasoning after citing the Munich Agreement (1938)?',
             options: [
-              'This evidence matters because it shows that the policy of appeasement, by rewarding aggression, encouraged further German expansion and is a key cause of the outbreak of WWII in 1939',
-              'This evidence has no broader significance for understanding the diplomatic origins of WWII or the development of interwar foreign policy',
-              'This evidence proves that WWII began in 1914 with the assassination of Archduke Franz Ferdinand by a Bosnian-Serb nationalist',
-              'This evidence shows that the League of Nations was effective at preventing aggression throughout the interwar period before 1939'
+              'This matters because appeasement rewarded aggression and encouraged the German expansion that led to war',
+              'This matters because Munich shows Britain and France were ready to fight in 1938 but were held back by the League',
+              'This matters because Munich shows the Soviet Union and Germany had already agreed to divide Poland between them',
+              'This matters because Munich shows the League of Nations was effective at stopping aggression throughout the 1930s'
             ],
             correctAnswer: 0,
-            explanation: 'The sentence explicitly links the source to a broader causation argument with named consequences.'
+            explanation: 'The sentence explicitly links the source to a broader causation argument with named consequences. The Nazi-Soviet Pact that divided Poland came in August 1939, nearly a year after Munich.'
           }
         ]
       }

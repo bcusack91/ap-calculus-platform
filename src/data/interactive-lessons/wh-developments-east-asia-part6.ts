@@ -48,21 +48,21 @@ Use evidence like an AP reader expects: identify, contextualize, and explain sig
           {
             question: 'Which option is strongest evidence for diffusion plus divergence?',
             options: [
-              'East Asia had no internal differences',
-              'Japan adopted selected Chinese cultural elements while preserving feudal governance',
-              'China and Japan used identical political structures',
-              'Mongols permanently unified all East Asian states'
+              'Korea and Japan both adopted Chinese writing and studied Confucian classics',
+              'Japan adopted selected Chinese cultural elements but kept its feudal governance',
+              'China and Japan built identical exam-based bureaucracies staffed by scholars',
+              'The Mongols unified China, Korea, and Japan under a single Yuan administration'
             ],
             correctAnswer: 1,
-            explanation: 'This evidence directly supports a nuanced argument with both similarity and difference.'
+            explanation: 'Japan adopting selected Chinese cultural elements while preserving feudal governance shows both similarity and difference. Shared writing shows diffusion only, Japan never built a Song-style exam bureaucracy, and the Mongols failed to conquer Japan.'
           },
           {
             question: 'For an SAQ, which response move is most effective?',
             options: [
-              'Use abstract claims with no examples',
+              'Make a broad claim about the region and let it stand without evidence',
               'Use one specific example and explain how it supports the claim',
-              'List as many names as possible without context',
-              'Avoid discussing causation'
+              'List as many relevant names and dates as possible without explanation',
+              'Describe the example in detail but leave its link to the claim unstated'
             ],
             correctAnswer: 1,
             explanation: 'AP scoring rewards precise evidence tied to explicit reasoning.'
@@ -80,9 +80,9 @@ Use evidence like an AP reader expects: identify, contextualize, and explain sig
         questions: [
           {
             question: 'Which is the strongest evidence of Chinese cultural influence in Korea?',
-            options: ['Confucian administrative traditions', 'Atlantic plantation labor', 'Industrial labor unions', 'Roman senatorial offices'],
+            options: ['Confucian administrative traditions', 'A warrior class ruled by a shogun', 'Islamic law courts in the capital', 'Christian missions at the royal court'],
             correctAnswer: 0,
-            explanation: 'Korean elite and administrative traditions reflected major Confucian influence from China.'
+            explanation: 'Korean elite and administrative traditions, including civil service exams, reflected major Confucian influence from China. Shogunal rule was Japanese, and Islam and Christianity did not shape the Korean court in this era.'
           },
           {
             question: 'Which is the strongest evidence of political divergence in Japan?',
@@ -92,7 +92,7 @@ Use evidence like an AP reader expects: identify, contextualize, and explain sig
           },
           {
             question: 'Which analytical phrase best links both pieces of evidence?',
-            options: ['Diffusion with divergence', 'Total institutional sameness', 'No regional interaction', 'Pure isolationism'],
+            options: ['Diffusion with divergence', 'Uniform assimilation', 'Isolated development', 'Conquest-driven uniformity'],
             correctAnswer: 0,
             explanation: 'This phrase captures shared influence alongside distinct political structures.'
           }
@@ -111,15 +111,15 @@ Select the strongest reasoning move, then explain how it improves AP scoring.
         dropdowns: [
           {
             label: 'Turning a fact into an argument requires adding: ___',
-            options: ['historical reasoning', 'more dates only', 'less precision', 'no context']
+            options: ['historical reasoning', 'additional dates', 'a longer quotation', 'a list of names']
           },
           {
             label: 'A claim supported by one specific example and explanation is: ___',
-            options: ['AP-effective', 'too weak automatically', 'invalid by definition', 'never used in SAQs']
+            options: ['AP-effective', 'insufficient', 'off-task', 'overgeneralized']
           },
           {
             label: 'Comparing China and Japan should emphasize: ___',
-            options: ['both shared influence and institutional differences', 'only similarities', 'only geography', 'no evidence']
+            options: ['both shared influence and institutional differences', 'their shared Confucian culture and writing system', 'differences in geography and climate', 'the sequence of dynasties in each country']
           }
         ],
         correctAnswers: ['historical reasoning', 'AP-effective', 'both shared influence and institutional differences'],
@@ -140,10 +140,10 @@ Select the strongest reasoning move, then explain how it improves AP scoring.
           {
             question: 'A document praises Confucian hierarchy in governance. Which contextualization is strongest?',
             options: [
-              'It reflects broader East Asian traditions linking social order with political legitimacy',
-              'It proves hierarchy did not exist in East Asia',
-              'It only applies to modern industrial states',
-              'It has no relation to governance'
+              'It reflects East Asian traditions linking social order to political legitimacy',
+              'It reflects Mongol steppe customs that the Yuan imposed on their Chinese subjects',
+              'It reflects Buddhist teachings that rejected worldly rank as an illusion',
+              'It reflects merchant values that tied rank to wealth rather than learning'
             ],
             correctAnswer: 0,
             explanation: 'This places the source in regional ideological context and links it to AP themes.'
@@ -151,10 +151,10 @@ Select the strongest reasoning move, then explain how it improves AP scoring.
           {
             question: 'Which sentence best explains significance after citing Japanese feudal institutions?',
             options: [
-              'This evidence shows East Asia was politically uniform',
-              'This demonstrates that even within a shared cultural sphere, governance structures could diverge sharply',
-              'This has no relevance to AP comparison',
-              'This proves Chinese bureaucracy never existed'
+              'This shows East Asia was politically uniform, since Japan copied China\'s bureaucracy',
+              'This shows that a shared cultural sphere could still contain divergent governments',
+              'This shows Japanese culture developed without any borrowing from the Asian mainland',
+              'This shows Chinese bureaucracy declined everywhere as warrior rule spread across Asia'
             ],
             correctAnswer: 1,
             explanation: 'Strong significance statements connect evidence to a broader analytical claim.'

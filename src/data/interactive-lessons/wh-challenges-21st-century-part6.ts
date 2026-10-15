@@ -91,10 +91,10 @@ For a 21st-century SAQ:
           {
             question: "Which historical context is most essential for sourcing Bush's January 2002 'Axis of Evil' State of the Union speech?",
             options: [
-              "The speech was delivered less than five months after 9/11; the U.S. had toppled the Taliban in Afghanistan in November 2001 but Osama bin Laden remained at large; the Bush administration was preparing to expand the War on Terror beyond al-Qaeda to include state targets",
-              "The speech was delivered before 9/11 and reflected the foreign-policy consensus of the Clinton administration with no connection to the September 11 attacks or the U.S. response in Afghanistan during the period",
-              "The speech was delivered after the 2003 U.S. invasion of Iraq and reflected post-invasion doctrine rather than any pre-invasion preparation by the Bush administration during the immediate post-9/11 period",
-              "The speech was delivered in 2008 at the end of the Bush administration and had no connection to the immediate post-9/11 period or to the run-up to the 2003 U.S. invasion of Iraq during the second term"
+              "It came under five months after 9/11; the U.S. had toppled the Taliban by late 2001 but bin Laden remained at large; the administration was widening the war to hostile governments",
+              "It came before 9/11; it reflected the Clinton-era foreign policy consensus, with no connection to the attacks or to the U.S. response in Afghanistan",
+              "It came after the 2003 invasion of Iraq and defended that war after the fact, rather than preparing the public for any new military action",
+              "It came at the end of the Bush presidency in 2008, as a farewell review of the Iraq War with no link to the immediate aftermath of 9/11"
             ],
             correctAnswer: 0,
             explanation: 'January 2002, post-9/11, post-Afghanistan, pre-Iraq is the canonical sourcing for the Axis of Evil speech.'
@@ -102,13 +102,13 @@ For a 21st-century SAQ:
           {
             question: "Which best identifies the intended audience and purpose of Putin's February 24, 2022 speech announcing the invasion of Ukraine?",
             options: [
-              "A speech delivered via state TV at the moment of launching the largest European war since 1945; intended audience is the Russian public, Ukrainian leadership, and Western governments; purpose is to justify the invasion as defensive against NATO expansion and to declare a 'denazification' of Ukraine",
-              "A diplomatic protest delivered to the United Nations General Assembly; intended audience is the global community of states; purpose is to formally accuse NATO of aggression while reaffirming Russian commitment to Ukrainian territorial integrity within the existing international framework",
-              "A peace negotiation address delivered to Ukrainian President Zelensky; intended audience is the Ukrainian government; purpose is to negotiate a peaceful settlement of pre-2022 disputes without any military operation against Ukraine of any kind during the 2022 period",
-              "A domestic policy address to the Russian Duma; intended audience is Russian legislators; purpose is to announce internal economic reforms unrelated to Ukraine, NATO, or the broader European security order at any point during the 2022 period"
+              "A state TV address launching the largest European war since 1945; its audience was Russians, Ukraine's leaders, and the West; its purpose was to cast the invasion as defense against NATO",
+              "A protest to the UN General Assembly; its audience was the community of states; its purpose was to accuse NATO of aggression while affirming Russia's respect for Ukraine's borders",
+              "A peace address to President Zelensky; its audience was the Ukrainian government; its purpose was to settle earlier disputes through talks and rule out any invasion",
+              "A policy address to the Russian Duma; its audience was Russian legislators; its purpose was to announce domestic economic reforms unrelated to Ukraine or to NATO's expansion eastward after 1991"
             ],
             correctAnswer: 0,
-            explanation: 'Putin\'s 2022 invasion speech: state-TV address, Russian public + Ukrainian leadership + Western governments, justify invasion as defensive against NATO + "denazify" Ukraine.'
+            explanation: 'Putin\'s 2022 invasion speech: a state-TV address to the Russian public, Ukrainian leadership, and Western governments, meant to justify the invasion as defensive against NATO and to declare a "denazification" of Ukraine.'
           }
         ]
       }
@@ -175,24 +175,24 @@ For a 21st-century SAQ:
           {
             question: 'An SAQ asks: "Identify ONE 21st-century challenge, and explain how it has tested existing international institutions." Which response would score highest?',
             options: [
-              "The COVID-19 pandemic (2020+) tested the World Health Organization, which coordinated rapid global mRNA vaccine development but was widely criticized for early deference to China during the initial Wuhan outbreak; the pandemic also exposed deep inequalities in vaccine access between wealthy countries and developing economies under COVAX",
-              "Globalization tested some institution at some point during the 21st century in some way that produced some kind of outcome related to international cooperation during the period from 2000 to today across regions",
-              "Globalization is a feature of the 21st century and international institutions have addressed it over time during the period from 2000 to today in a way that is generally well known to scholars of international relations",
-              "Globalization is a famous 21st-century phenomenon and its effects on international institutions are widely recognized as having been significant during the period from 2000 to the end of the early 21st century"
+              "COVID-19 (2020) tested the WHO, criticized for early deference to China, and its COVAX program, which failed to close the vaccine gap between rich and poor countries",
+              "COVID-19 (2020) was a serious, global, and widely studied pandemic that tested many institutions and is recognized as a major challenge of the century",
+              "The pandemic (2020) tested the World Trade Organization, which responded by suspending all international trade until vaccines were widely available in every member country",
+              "Climate change (2000s) tested the WHO, which responded by negotiating the Paris Agreement in 2015 and setting binding emissions targets for every member state"
             ],
             correctAnswer: 0,
-            explanation: 'AP SAQ scoring rewards specific challenge + date + specific institution + specific outcome. Vague gestures earn no credit.'
+            explanation: 'AP SAQ scoring rewards a specific challenge + date + specific institution + specific outcome. A response that names the challenge without explaining how it tested an institution earns no "explain" credit, and the WTO never halted world trade nor did the WHO negotiate the Paris Agreement.'
           },
           {
             question: 'Which short answer best demonstrates AP "complexity" by complicating a single-cause narrative about a 21st-century event?',
             options: [
-              "Although the 2016 Brexit vote is often blamed on UKIP\'s anti-immigration messaging, scholars note that long-term British Euroscepticism, post-2008 austerity, regional inequality between London and the deindustrialized North, and the Conservative Party\'s internal divisions over Europe also drove the result — making Brexit a multi-causal product of structural and contingent factors",
-              "The 2016 Brexit vote was caused entirely by UKIP\'s anti-immigration messaging and there were no other contributing factors of any kind from austerity, regional inequality, or Conservative Party divisions in the period",
-              "The 2016 Brexit vote had no connection to UKIP\'s messaging and was caused entirely by external factors unrelated to British politics or economics during the period from 2008 through the 2016 referendum",
-              "The 2016 Brexit vote was a myth and the United Kingdom remained a fully integrated EU member throughout the entire period from 1973 through the present day with no exit process of any kind in any year"
+              "Although Brexit is often blamed on UKIP's anti-immigration message, Euroscepticism, austerity, regional inequality, and Tory divisions over Europe also drove the result",
+              "Brexit was caused entirely by UKIP's anti-immigration messaging, and long-term Euroscepticism, austerity, regional inequality, and Conservative Party divisions played no role",
+              "Brexit had no connection to UKIP's messaging and was caused instead by outside pressure from the United States, which urged British voters to leave the EU",
+              "Brexit was decided mainly by younger urban voters in London and Scotland, who voted heavily to leave in protest against the costs of EU membership"
             ],
             correctAnswer: 0,
-            explanation: 'The "complexity" point requires complicating a dominant narrative. Naming UKIP messaging PLUS long-term Euroscepticism PLUS austerity PLUS regional inequality PLUS Conservative divisions is the canonical AP move.'
+            explanation: 'The "complexity" point requires complicating a dominant narrative. Naming UKIP messaging PLUS long-term Euroscepticism PLUS austerity PLUS regional inequality PLUS Conservative divisions is the canonical AP move. London and Scotland in fact voted to remain.'
           }
         ]
       }

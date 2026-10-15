@@ -82,10 +82,10 @@ Seventeen African countries became independent in a single year, including Niger
           {
             question: 'Which best explains the historical significance of the 1955 Bandung Conference?',
             options: [
-              'It established a permanent United Nations agency that managed European decolonization and oversaw constitutional handovers throughout Africa during the 1960s decade',
+              'It created a permanent United Nations agency to manage European decolonization and supervise the constitutional handover of power in African colonies during the 1960s',
               'It was the first major postwar gathering of newly independent Asian and African states asserting a Third World political identity outside the U.S.-Soviet rivalry',
-              'It dissolved the Warsaw Pact and ended the Cold War by uniting all Asian and African states under a single neutral political and military leadership in Indonesia',
-              'It produced a binding nuclear arms control treaty that ended the U.S.-Soviet arms race and that enabled both superpowers to disarm their strategic nuclear forces'
+              'It founded a military alliance of Asian and African states, led by Indonesia, to defend members against both U.S. and Soviet intervention',
+              'It produced a nuclear test ban signed by the superpowers at the urging of newly independent states, ending atmospheric testing worldwide'
             ],
             correctAnswer: 1,
             explanation: 'Bandung 1955 is the founding moment of organized Third World political identity. It led directly to the Non-Aligned Movement (1961) but did not dissolve any superpower alliance.'
@@ -93,10 +93,10 @@ Seventeen African countries became independent in a single year, including Niger
           {
             question: 'Why did the 1962 Cuban Missile Crisis become a Cold War turning point in AP framing?',
             options: [
-              'It pushed the world to the brink of nuclear war and produced new arms-control arrangements (the hotline; the 1963 Limited Test Ban Treaty), marking a shift toward détente',
-              'It produced a peace treaty between Cuba and the United States that fully restored diplomatic relations and that ended Cuban alignment with the Soviet Union for the rest of the Cold War',
-              'It led to the immediate collapse of the Soviet Union and produced a unipolar world dominated by the United States by the middle of the 1960s decade',
-              'It expanded the Cold War to Africa for the first time and produced the rapid decolonization of British, French, and Belgian African colonies during 1962 alone'
+              'It pushed the world to the brink of nuclear war and produced new arms-control arrangements (the hotline and the 1963 Limited Test Ban Treaty), marking a shift toward détente',
+              'It produced a treaty that restored full U.S.-Cuban diplomatic relations and ended Cuba\'s alignment with the Soviet Union for the remainder of the Cold War',
+              'It triggered the rapid collapse of Soviet power (and of the Warsaw Pact), leaving the United States as the sole superpower by the mid-1960s',
+              'It expanded the Cold War to Africa and sped the decolonization of British, French, and Belgian colonies across the continent within that same year'
             ],
             correctAnswer: 0,
             explanation: 'The crisis mattered because both sides recognized how close they had come to nuclear war and built new mechanisms (hotline, 1963 LTBT) to prevent another such confrontation.'
@@ -170,10 +170,10 @@ Seventeen African countries became independent in a single year, including Niger
           {
             question: 'Which thesis statement would score highest on an AP DBQ asking about responses to superpower competition in the Third World, 1955–1975?',
             options: [
-              'Many Third World leaders rejected formal alliance with either bloc, building the Non-Aligned Movement (Bandung 1955; NAM 1961) while still accepting selective superpower aid to advance national modernization',
-              'Third World leaders all aligned themselves with the United States during the period from 1955 to 1975 and fully rejected any Soviet political, economic, or military assistance offered',
-              'Third World leaders all aligned themselves with the Soviet Union during the period from 1955 to 1975 and fully rejected all Western economic, political, or military assistance offered',
-              'Third World leaders during the period from 1955 to 1975 had no political agency of their own and simply followed whatever decisions were made by the United States and the Soviet Union'
+              'Many Third World leaders rejected formal alliance with either bloc, founding the Non-Aligned Movement (Bandung 1955 and NAM 1961) yet accepting aid from both',
+              'Most Third World leaders aligned firmly with the United States after Bandung (1955), rejecting Soviet aid in exchange for Western loans and military protection',
+              'Most Third World leaders aligned firmly with the Soviet Union after the founding of NAM (1961), adopting central planning and rejecting all Western aid',
+              'Third World leaders had little real agency of their own (1955–1975), simply following whatever decisions were made for them by the governments of the United States and the Soviet Union'
             ],
             correctAnswer: 0,
             explanation: 'A strong AP thesis names the pattern (rejection of formal alignment), the institutional moves (Bandung 1955, NAM 1961), and the qualifying nuance (selective acceptance of aid). The other options are caricatures.'
@@ -181,10 +181,10 @@ Seventeen African countries became independent in a single year, including Niger
           {
             question: 'Which contextualization sentence best opens an AP essay on decolonization in the period 1945–1975?',
             options: [
-              'After 1945, European empires entered terminal crisis under the combined pressure of wartime exhaustion, U.S. and Soviet anti-colonial rhetoric, and rising nationalist movements that had been organizing since the interwar period',
-              'After 1945, European empires expanded to their largest extent in world history through new colonial conquests in Africa and Asia made possible by postwar industrial capacity in Europe and North America',
-              'After 1945, all European empires had already collapsed by 1900 and there was therefore no decolonization process between 1945 and 1975 in any region of the world',
-              'After 1945, the Cold War had no relationship to decolonization and the two processes occurred in entirely separate regions of the world without any meaningful overlap'
+              'After 1945, empires entered terminal crisis amid wartime exhaustion, superpower anti-colonial rhetoric, and nationalist movements built up in the interwar years',
+              'After 1945, European empires expanded to their greatest extent as postwar industrial strength enabled new conquests in Africa and Asia, delaying independence movements',
+              'After 1945, European empires faced little pressure, as the superpowers backed colonial rule and nationalist movements remained small and poorly organized until the 1970s',
+              'After 1945, the Cold War and decolonization unfolded in entirely separate regions of the world, so superpower rivalry had no bearing at all on the end of European empire'
             ],
             correctAnswer: 0,
             explanation: 'Strong contextualization names structural conditions (wartime exhaustion, superpower rhetoric, prior nationalist organizing) that explain why the pattern emerged when it did.'

@@ -65,24 +65,24 @@ AP World rewards pattern detection backed by named evidence. This part trains yo
           {
             question: 'Which example best illustrates stalemate and attrition warfare in WWI?',
             options: [
-              'The 1940 German blitzkrieg through the Ardennes that produced French surrender within roughly six weeks of fighting',
+              'The 1940 German blitzkrieg through the Ardennes that forced a French surrender in about six weeks',
               'The 1916 battles of the Somme and Verdun, where massive casualties produced minimal territorial change',
-              'The 1945 atomic bombings of Hiroshima and Nagasaki that ended large-scale Pacific combat in a matter of days',
-              'The 1905 Russo-Japanese naval engagement at Tsushima that decisively destroyed the Russian Baltic Fleet'
+              'The 1914 First Battle of the Marne, which halted the German advance on Paris within a week',
+              'The 1905 naval battle at Tsushima, where Japan destroyed most of Russia\'s Baltic Fleet'
             ],
             correctAnswer: 1,
-            explanation: 'Somme and Verdun are the canonical AP examples of attritional industrial warfare with enormous casualties and little movement.'
+            explanation: 'Somme and Verdun are the canonical AP examples of attritional industrial warfare with enormous casualties and little movement. The Marne was a war of movement that came just before the trenches settled in, and blitzkrieg and Tsushima were decisive, fast results.'
           },
           {
             question: 'Which event most clearly illustrates the erosion of the civilian-combatant distinction in WWII?',
             options: [
-              'The Treaty of Versailles and its associated reparations, war-guilt clause, and territorial provisions of June 1919',
+              'Naval battles at Midway, the Coral Sea, and Leyte Gulf, fought between carrier fleets far from cities',
               'Strategic bombing campaigns including the London Blitz, Dresden, Tokyo, and Hiroshima',
-              'The signing of the Atlantic Charter by Roosevelt and Churchill aboard a warship off Newfoundland in August 1941',
-              'The Locarno Treaties of 1925, which formally confirmed the western borders of Germany with France and Belgium'
+              'Tank battles such as Kursk and El Alamein, fought by armored armies across open country',
+              'The Atlantic Charter and the Yalta talks, where Allied leaders planned the postwar order'
             ],
             correctAnswer: 1,
-            explanation: "WWII strategic bombing deliberately targeted civilian population and industrial centers, marking total war's full erosion of front/home distinctions."
+            explanation: "WWII strategic bombing deliberately targeted civilian population and industrial centers, marking total war's full erosion of front/home distinctions. Naval and tank battles were fought between armed forces, and the Atlantic Charter and Yalta were diplomacy."
           }
         ]
       }
@@ -109,9 +109,9 @@ AP World rewards pattern detection backed by named evidence. This part trains yo
           },
           {
             question: 'Which postwar international body emerged from WWI?',
-            options: ['United Nations', 'League of Nations', 'NATO', 'Warsaw Pact'],
+            options: ['United Nations', 'League of Nations', 'Concert of Europe', 'Warsaw Pact'],
             correctAnswer: 1,
-            explanation: 'The League of Nations was created by the Treaty of Versailles (1919) and began operating in 1920; the U.N. came after WWII.'
+            explanation: 'The League of Nations was created by the Treaty of Versailles (1919) and began operating in 1920; the U.N. came after WWII, the Concert of Europe followed the Napoleonic Wars, and the Warsaw Pact dates from 1955.'
           }
         ]
       }
@@ -128,15 +128,15 @@ Pick the strongest pattern label, then connect it to one named historical exampl
         dropdowns: [
           {
             label: 'British "munitionettes" and U.S. "Rosie the Riveter" are evidence of: ___',
-            options: ['wartime mobilization of women', 'feudal serfdom', 'agrarian collectivization', 'guild monopolies']
+            options: ['wartime mobilization of women', 'the women\'s suffrage campaign', 'colonial labor recruitment', 'postwar demobilization of labor']
           },
           {
             label: 'The Allied bombings of Dresden and Tokyo are evidence of: ___',
-            options: ['strategic bombing of civilian centers', 'limited dynastic warfare', 'religious crusade', 'naval cavalry doctrine']
+            options: ['strategic bombing of civilian centers', 'trench warfare on the Western Front', 'blitzkrieg strikes on enemy front lines', 'naval blockade of enemy ports']
           },
           {
             label: 'The collapse of the Ottoman, Russian, and Austro-Hungarian empires after WWI is evidence of: ___',
-            options: ['postwar political restructuring', 'imperial reconsolidation', 'feudal fragmentation', 'industrial revolution']
+            options: ['postwar political restructuring', 'postwar imperial reconsolidation', 'colonial expansion overseas', 'economic globalization']
           }
         ],
         correctAnswers: ['wartime mobilization of women', 'strategic bombing of civilian centers', 'postwar political restructuring'],
@@ -157,21 +157,21 @@ Pick the strongest pattern label, then connect it to one named historical exampl
           {
             question: 'Which thesis best fits a comparison prompt on WWI and WWII?',
             options: [
-              'WWI and WWII were essentially identical conflicts with the same causes, technologies, ideological framing, and territorial outcomes',
-              'Both were total wars that mobilized industrial economies and colonial empires, but WWII was more ideologically polarized and produced far greater civilian casualties through strategic bombing and genocide',
-              'WWI was more destructive than WWII in every dimension including casualties, geographic scope, ideological intensity, and postwar political consequences',
-              'Neither war involved colonial troops, strategic bombing of civilian centers, or the creation of any major postwar international institution'
+              'Each was a total war, but WWI was deadlier for civilians because trench warfare spread disease into cities',
+              'Both were total wars fought with industrial and colonial resources, but WWII was more ideological and far deadlier for civilians',
+              'WWI was as ideological as WWII, since fascism and communism already divided the two alliance blocs in 1914',
+              'Both wars stemmed mainly from colonial rivalry in Africa, so their causes, conduct, and outcomes were essentially the same'
             ],
             correctAnswer: 1,
-            explanation: 'A strong AP comparison thesis names a similarity (total war, colonial mobilization) and a meaningful difference (ideological polarization, civilian targeting, scale).'
+            explanation: 'A strong AP comparison thesis names a similarity (total war, colonial mobilization) and a meaningful difference (ideological polarization, civilian targeting, scale). Fascism did not exist in 1914, and WWII killed far more civilians than WWI.'
           },
           {
             question: "Which continuity is strongest across both world wars?",
             options: [
-              'Use of long-bow infantry and pike formations as the dominant combat force on the major land battlefields',
+              'Reliance on trench stalemate as the dominant form of fighting on every major front',
               'Mass mobilization of state economies and colonial empires for sustained industrial warfare',
-              'Reliance on horse cavalry charges as the decisive arm in the major land battles of both world wars',
-              'Strict avoidance of civilian and industrial targets through full adherence to Hague treaty provisions on warfare'
+              'Reliance on horse cavalry as the decisive arm in the major land battles of both wars',
+              'Restraint toward civilian targets under the Hague rules on the conduct of warfare'
             ],
             correctAnswer: 1,
             explanation: 'Industrial total war — state-directed economies plus colonial mobilization — is the defining continuity across both world wars.'

@@ -62,21 +62,21 @@ This part tracks continuity and change from 1914 through the interwar period and
           {
             question: "Which is the strongest example of change from WWI to WWII?",
             options: [
-              'Both wars relied on horse cavalry charges as the dominant arm in nearly all major land engagements',
+              'Both wars were fought mainly from fixed trench lines, with little change in tactics or weapons',
               'WWI featured trench stalemate while WWII featured mobile warfare, strategic bombing, and atomic weapons',
-              'Neither war involved colonial troops or any large-scale military mobilization beyond European borders',
-              'WWII produced no postwar international institutions of any kind for collective security or reconstruction'
+              'WWII was fought only in Europe and North Africa, while WWI had already spread to Asia, Africa, and the Pacific',
+              'WWII ended without new international bodies, unlike WWI, which had created the League'
             ],
             correctAnswer: 1,
-            explanation: 'AP CCOT rewards specific contrasts: trench warfare versus blitzkrieg/strategic bombing/atomic weapons.'
+            explanation: 'AP CCOT rewards specific contrasts: trench warfare versus blitzkrieg/strategic bombing/atomic weapons. WWII was more global than WWI, and it produced the United Nations.'
           },
           {
             question: 'Which is the strongest example of continuity across both world wars?',
             options: [
-              'Reliance on small volunteer professional armies without state economic planning or any wartime conscription system',
+              'Reliance on small volunteer armies, with conscription avoided by all the major powers',
               'Mass mobilization of state economies and colonial empires for sustained industrial warfare',
-              'Use of feudal levy systems with hereditary nobles personally commanding their own armed retinues in the field',
-              'Strict avoidance of state propaganda and full press freedom maintained throughout both world wars in all combatant states'
+              'Reliance on trench stalemate as the dominant form of fighting on every major front',
+              'Full press freedom in every combatant state, as governments avoided organized wartime propaganda'
             ],
             correctAnswer: 1,
             explanation: 'Industrial total war — state economies plus colonial empires plus propaganda — is the defining continuity from 1914 through 1945.'
@@ -94,21 +94,21 @@ This part tracks continuity and change from 1914 through the interwar period and
         questions: [
           {
             question: 'Which 1938 agreement ceded the Sudetenland to Nazi Germany without resistance?',
-            options: ['Treaty of Versailles', 'Munich Agreement', 'Yalta Conference', 'Locarno Treaties'],
+            options: ['Treaty of Versailles', 'Munich Agreement', 'Anglo-German Naval Agreement', 'Locarno Treaties'],
             correctAnswer: 1,
-            explanation: 'The Munich Agreement (Sept 1938) is the textbook example of appeasement and is closely tied to the outbreak of WWII.'
+            explanation: 'The Munich Agreement (Sept 1938) is the textbook example of appeasement and is closely tied to the outbreak of WWII. The 1935 Anglo-German Naval Agreement concerned fleet sizes, not territory.'
           },
           {
             question: 'Which Versailles clause assigned formal responsibility for WWI to Germany?',
-            options: ['Article 231 (the "war guilt" clause)', 'The Atlantic Charter', 'The Twelve Points', 'The Petition of Right'],
+            options: ['Article 231, the "war guilt" clause', 'Article 10, the League security pledge', 'Article 42, the Rhineland demilitarization clause', 'The Fourteen Points'],
             correctAnswer: 0,
-            explanation: 'Article 231 of the Treaty of Versailles assigned war guilt to Germany and justified reparations.'
+            explanation: 'Article 231 of the Treaty of Versailles assigned war guilt to Germany and justified reparations. Article 10 of the League Covenant pledged collective security, Articles 42–44 demilitarized the Rhineland, and the Fourteen Points was Wilson\'s 1918 peace plan.'
           },
           {
             question: 'Which event in December 1941 brought the United States into WWII?',
-            options: ['Battle of Verdun', 'German invasion of Poland', 'Japanese attack on Pearl Harbor', 'Berlin Blockade'],
+            options: ['German sinking of the liner Lusitania', 'German invasion of the Soviet Union', 'Japanese attack on Pearl Harbor', 'Soviet entry into the war against Japan'],
             correctAnswer: 2,
-            explanation: 'The Japanese attack on Pearl Harbor on Dec 7, 1941 led the U.S. to declare war on Japan; Germany declared war on the U.S. on Dec 11, 1941.'
+            explanation: 'The Japanese attack on Pearl Harbor on Dec 7, 1941 led the U.S. to declare war on Japan; Germany declared war on the U.S. on Dec 11, 1941. The Lusitania sank in 1915, Germany invaded the USSR in June 1941, and the USSR entered the Pacific war in August 1945.'
           }
         ]
       }
@@ -125,15 +125,15 @@ Label each statement, then justify your choice with one piece of named evidence.
         dropdowns: [
           {
             label: 'Mass mobilization of colonial soldiers across both world wars is best labeled: ___',
-            options: ['continuity', 'change', 'unrelated event', 'demographic collapse']
+            options: ['continuity', 'change', 'causation', 'comparison']
           },
           {
             label: 'The shift from trench warfare to blitzkrieg and atomic weapons is best labeled: ___',
-            options: ['change', 'continuity', 'reversal to medieval combat', 'no shift']
+            options: ['change', 'continuity', 'causation', 'comparison']
           },
           {
             label: 'The replacement of the punitive Versailles model with the U.N. and Marshall Plan reconstruction is best labeled: ___',
-            options: ['change in postwar order', 'continuity of postwar order', 'restoration of monarchy', 'collapse of diplomacy']
+            options: ['change in postwar order', 'continuity of postwar order', 'cause of the Cold War split', 'contrast across regions']
           }
         ],
         correctAnswers: ['continuity', 'change', 'change in postwar order'],
@@ -154,24 +154,24 @@ Label each statement, then justify your choice with one piece of named evidence.
           {
             question: 'Which thesis best answers a CCOT prompt on the world wars?',
             options: [
-              'WWI and WWII were unconnected events with no shared causes, mobilization patterns, technologies, or political consequences',
-              'Both wars relied on industrial mobilization and colonial empires, but WWII expanded the scope of civilian targeting, ideological conflict, and produced a more constructive postwar order through the U.N. and Marshall Plan',
-              'The Treaty of Versailles successfully prevented further European conflict for the entire interwar period without need for additional collective security',
-              'No meaningful change occurred in warfare, ideology, or international institutions between the outbreak of WWI in 1914 and the end of WWII in 1945'
+              'Both wars relied on trench warfare, but WWII ended with a harsher peace settlement than Versailles had imposed',
+              'Both wars relied on industrial and colonial mobilization, but WWII widened civilian targeting and built a sturdier postwar order',
+              'WWI introduced total war, but WWII returned to limited war fought mainly by professional armies away from cities',
+              'Both wars were fought for the same ideological goals, so the League of Nations and United Nations were nearly identical'
             ],
             correctAnswer: 1,
-            explanation: 'A strong AP CCOT thesis names a continuity (industrial mobilization), a clear change (civilian targeting, ideological framing), and a postwar consequence.'
+            explanation: 'A strong AP CCOT thesis names a continuity (industrial mobilization), a clear change (civilian targeting, ideological framing), and a postwar consequence such as the U.N. and the Marshall Plan.'
           },
           {
             question: 'Which is the best causal explanation for the outbreak of WWII?',
             options: [
-              'A single assassination in Sarajevo by a young nationalist student that immediately triggered global mobilization',
-              'A combination of unresolved Versailles grievances, the Great Depression, the failure of collective security, and aggressive expansion by Germany, Italy, and Japan',
-              'Soviet aggression alone, including the invasion of Finland and the occupation of the Baltic states in 1939 and 1940',
-              'A wave of decolonization across African and Asian territories that destabilized British and French imperial budgets in the late 1930s'
+              'Germany\'s Versailles grievances alone made war certain, since it planned revenge from the moment it signed in 1919',
+              'Versailles grievances, the Great Depression, failed collective security, and Axis expansion combined to produce the war',
+              'The Great Depression alone caused the war, because economic collapse forced every major power to seek new markets',
+              'Soviet expansion caused the war, as the Nazi-Soviet Pact, the Baltic occupations, and the Finnish war pushed Britain and France to fight'
             ],
             correctAnswer: 1,
-            explanation: 'AP causation prefers multi-factor explanations: Versailles, Depression, League failure, and Axis expansion together produced WWII.'
+            explanation: 'AP causation prefers multi-factor explanations: Versailles, Depression, League failure, and Axis expansion (Germany, Italy, Japan) together produced WWII. Britain and France declared war over the German invasion of Poland, not over Finland.'
           }
         ]
       }

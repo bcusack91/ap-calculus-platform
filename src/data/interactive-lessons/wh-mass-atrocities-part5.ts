@@ -67,10 +67,10 @@ export const whMassAtrocitiesPart5Data = {
           {
             question: 'Which statement best captures a key change in mass atrocity over the course of the 20th century?',
             options: [
-              'Mass atrocities became less deadly across the century because international institutions and human-rights norms eliminated all major outbreaks of state-organized violence after 1945',
-              'The dominant method shifted from deportation-and-massacre toward industrial death-camp killing and then toward media-mobilized neighbor violence in different regional contexts',
-              'Mass atrocities throughout the century relied exclusively on the same machete-based methods used in 1994 Rwanda, with no significant variation in technology or scale',
-              'Mass atrocities of the late century used pre-industrial transportation and communication methods identical to those used by Ottoman authorities during the 1915 deportations'
+              'Mass atrocities became steadily rarer after 1945, as human-rights treaties ended state-organized killing worldwide',
+              'The dominant method shifted from deportation and massacre to industrial death camps and then to media-mobilized neighbor violence',
+              'Methods shifted from industrial death camps early in the century to deportation marches in its final decades',
+              'Methods stayed constant, as late-century perpetrators relied on the same desert deportation marches that Ottoman authorities used in 1915'
             ],
             correctAnswer: 1,
             explanation: 'AP CCOT: name a specific shift in method (deportation → industrial → media-mobilized). This is more precise than "they changed."'
@@ -78,10 +78,10 @@ export const whMassAtrocitiesPart5Data = {
           {
             question: 'Which continuity is most clearly visible across the Armenian, Holocaust, and Rwandan cases?',
             options: [
-              'A democratically elected legislature directly authorized the killing in advance through open public debate followed by a free and recorded vote of representatives',
-              'A regime defined a targeted group as an existential threat, mobilized organized force against that group, and exploited a crisis context to suspend legal protections',
-              'An external occupying army arrived from another continent and imposed killings on a population that had no prior history of state-organized communal violence at all',
-              'A purely economic policy of resource extraction without any ideological component or organized state apparatus motivated and directed all three of the major killing campaigns'
+              'An elected legislature openly debated and voted to authorize the killing in advance, giving each campaign formal democratic approval at home',
+              'A regime cast a targeted group as an existential threat and mobilized organized force against it, using a crisis to suspend legal protections',
+              'An occupying army from another continent imposed the killing on a local population that had no prior history of communal violence',
+              'Economic motives alone drove the killing, as regimes seized the victims\' land and property without offering any ideological justification'
             ],
             correctAnswer: 1,
             explanation: 'The structural continuity (ideology + targeted group + organized force + crisis context) is the AP-quality answer. Avoid culturally specific or "ancient hatreds" framings.'
@@ -151,10 +151,10 @@ export const whMassAtrocitiesPart5Data = {
           {
             question: 'Which thesis best models a CCOT (continuity and change over time) response on 20th-century mass atrocities?',
             options: [
-              'Mass atrocities throughout the 20th century were essentially identical in cause, conduct, and international response, with no significant change between Armenia in 1915 and Rwanda in 1994',
-              'Across the 20th century, mass atrocities continued to share a structure of ideology, organized targeting, and crisis context, but the methods evolved from deportation to industrial killing to media-mobilized neighbor violence, and international responses shifted from impunity to ad-hoc and then permanent tribunals',
-              'Mass atrocities in the 20th century had no shared causes or features and represent isolated tragedies that historians cannot meaningfully compare across different national contexts',
-              'Mass atrocities only became possible in the 20th century after the founding of the League of Nations and immediately stopped occurring once the United Nations was established'
+              'Atrocities were essentially identical in cause, conduct, and international response from Armenia in 1915 to Rwanda in 1994, with international tribunals present throughout',
+              'Atrocities kept a shared structure of ideology, targeting, and crisis, while methods grew industrial, then media-driven, and responses moved from impunity to tribunals',
+              'Atrocities shared no common features, so their methods and the world\'s responses varied randomly from case to case without any overall pattern',
+              'Atrocities changed in method but not in response, since no perpetrator of any 20th-century genocide was ever convicted by an international court'
             ],
             correctAnswer: 1,
             explanation: 'CCOT requires naming continuity AND change in a single thesis. The strongest version names structure (continuity), method (change), and law/response (change) together.'
@@ -163,9 +163,9 @@ export const whMassAtrocitiesPart5Data = {
             question: 'Hitler\'s alleged 1939 statement, "Who, after all, speaks today of the annihilation of the Armenians?", is most useful as evidence for which AP-style argument?',
             options: [
               'It demonstrates that the international failure to prosecute the Armenian Genocide created a permissive precedent that emboldened later perpetrators in the Nazi regime',
-              'It proves that Hitler had no awareness of any prior 20th-century cases of mass killing or any international legal framework regarding genocide before WWII',
+              'It shows Hitler believed the Armenian Genocide had been punished severely, so he expected the world to resist Nazi plans',
               'It establishes that the Armenian Genocide was meaningfully prosecuted by the Treaty of Sèvres and that all senior Ottoman officials served substantial prison sentences',
-              'It shows that the Holocaust began in 1915 and was directed continuously by the same political and ideological leadership that organized the Armenian killings during WWI'
+              'It shows the Nazi regime planned the Holocaust together with surviving Ottoman officials who had organized the 1915 killings'
             ],
             correctAnswer: 0,
             explanation: 'The quotation is the canonical evidence for the "impunity emboldens future atrocity" argument and is heavily used in AP comparison and connection responses.'

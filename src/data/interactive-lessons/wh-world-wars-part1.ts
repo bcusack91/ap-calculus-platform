@@ -77,13 +77,13 @@ Use this structure when writing: name the long-term cause, attach a specific emp
           {
             question: 'Which factor most directly explains why the assassination of Franz Ferdinand in 1914 escalated into a continental war?',
             options: [
-              'A failed mediation effort by the League of Nations and its associated peace commissions',
+              'Britain declared war on Serbia first to protect its naval lead over Germany',
               'The interlocking alliance system pulled major powers into the conflict within weeks',
-              'Ongoing decolonization across British and French Africa had paralyzed European diplomatic channels',
-              'Germany was already engaged in a separate naval war against the United States in the Atlantic'
+              'Serbia\'s army invaded Austria-Hungary in June, before any diplomacy began',
+              'Colonial uprisings in Africa forced the European powers to mobilize at once'
             ],
             correctAnswer: 1,
-            explanation: 'The Triple Entente and Triple Alliance commitments meant a Balkan crisis activated mobilization across Europe within roughly six weeks.'
+            explanation: 'The Triple Entente and Triple Alliance commitments meant a Balkan crisis activated mobilization across Europe within roughly six weeks: Austria-Hungary\'s declaration of war on Serbia drew in Russia, then Germany, France, and Britain.'
           },
           {
             question: 'Which development best supports the claim that global power was shifting before 1914?',
@@ -124,8 +124,8 @@ Use this structure when writing: name the long-term cause, attach a specific emp
             options: [
               'A conflict fought primarily by small professional armies operating under aristocratic command structures',
               'A war that mobilizes entire societies, economies, and colonial empires for sustained industrial conflict',
-              'A conflict limited to naval engagements between rival imperial fleets in the open ocean',
-              'A conflict fought entirely outside the borders of the participating states with no civilian impact'
+              'A conflict limited to naval engagements, blockades, and raids between rival imperial fleets',
+              'A war in which governments avoid conscription and rely on volunteers and mercenaries'
             ],
             correctAnswer: 1,
             explanation: 'Total war involves full societal mobilization — economy, civilians, propaganda, and colonial labor — not just battlefield armies.'
@@ -145,15 +145,15 @@ Choose the best label, then state one piece of supporting evidence out loud.
         dropdowns: [
           {
             label: 'Anglo-German naval race and Schlieffen Plan are evidence of: ___',
-            options: ['militarism', 'pacifism', 'isolationism', 'liberal democracy']
+            options: ['militarism', 'pacifism', 'isolationism', 'appeasement']
           },
           {
             label: 'Pan-Slavism and Serbian opposition to Austro-Hungarian rule are evidence of: ___',
-            options: ['nationalism', 'mercantilism', 'feudalism', 'monasticism']
+            options: ['nationalism', 'militarism', 'isolationism', 'appeasement']
           },
           {
             label: 'European competition over Morocco and Ottoman territories is evidence of: ___',
-            options: ['imperialism', 'free trade', 'religious tolerance', 'agrarian reform']
+            options: ['imperialism', 'isolationism', 'appeasement', 'pacifism']
           }
         ],
         correctAnswers: ['militarism', 'nationalism', 'imperialism'],
@@ -174,24 +174,24 @@ Choose the best label, then state one piece of supporting evidence out loud.
           {
             question: 'A student argues that WWI was caused solely by the Sarajevo assassination. Which evidence best refutes this?',
             options: [
-              "Austria-Hungary's ultimatum to Serbia in July 1914 was the first diplomatic incident between the two states in decades",
-              'The pre-existing alliance system, naval arms race, and imperial rivalries had set conditions for general war well before 1914',
-              'Russia and Germany had signed a binding non-aggression treaty in 1913 that should have prevented their mobilization',
-              'The United States declared war on Germany within days of the Sarajevo assassination and triggered Allied mobilization'
+              "Austria-Hungary's ultimatum, Serbia's reply, and Russia's mobilization all followed within weeks of the assassination",
+              'Alliances, a naval arms race, and imperial rivalries had set conditions for war well before 1914',
+              'Russia and Germany had signed a binding non-aggression treaty in 1913 that should have prevented mobilization',
+              'The United States declared war on Germany within days of the assassination, triggering Allied mobilization'
             ],
             correctAnswer: 1,
-            explanation: 'Strong refutations of "trigger-only" explanations cite the structural causes (MAIN) that made the trigger consequential.'
+            explanation: 'Strong refutations of "trigger-only" explanations cite the structural causes (MAIN) that made the trigger consequential. Austria-Hungary and Serbia had clashed repeatedly (for example, the 1908 Bosnian crisis), there was no 1913 Russo-German treaty, and the U.S. did not enter the war until 1917.'
           },
           {
             question: 'Which thesis best fits an LEQ on the causes of WWI?',
             options: [
-              'WWI resulted from a single isolated act of terrorism by a Bosnian-Serb nationalist student in late June 1914',
-              'WWI emerged from long-term militarism, alliances, imperial competition, and nationalism, with the Sarajevo crisis serving as the immediate trigger',
-              'WWI was caused entirely by an economic collapse and a wave of currency devaluations across Europe in early 1914',
-              'WWI began because the United Nations failed to enforce its collective-security guarantees against Austrian aggression'
+              'The Sarajevo assassination alone caused the war, since Europe had been stable and peaceful until June 1914',
+              'Long-term militarism, alliances, imperialism, and nationalism made war likely, and the Sarajevo crisis triggered it',
+              'Economic depression, currency collapse, and food shortages across Europe in 1913 drove governments to seek war',
+              'Germany alone caused the war through a plan for European domination, so alliances and Balkan nationalism were irrelevant'
             ],
             correctAnswer: 1,
-            explanation: 'AP readers reward theses that distinguish long-term structural causes from immediate triggers.'
+            explanation: 'AP readers reward theses that distinguish long-term structural causes from immediate triggers. Monocausal claims (the assassination alone, Germany alone) ignore the structure, and there was no Europe-wide depression in 1913.'
           }
         ]
       }

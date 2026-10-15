@@ -84,7 +84,7 @@ Use this 3-step lens: identify the mechanism, show its effect, and prove it with
           {
             question: 'Which best describes the role of state-directed war economies in WWI and WWII?',
             options: [
-              'Governments removed wartime regulations and allowed private markets to maximize munitions output through profit incentives',
+              'Governments lifted price, wage, and production controls and let private markets maximize munitions output for profit',
               'Governments used boards and ministries to coordinate factory output, prices, and labor for sustained military production',
               'Governments banned heavy industry production and shifted entirely to imported finished goods from neutral countries',
               'Only the United States used central economic planning while European powers maintained free-market production throughout'
@@ -95,10 +95,10 @@ Use this 3-step lens: identify the mechanism, show its effect, and prove it with
           {
             question: 'Why is colonial conscription a high-yield AP example for the world wars?',
             options: [
-              'It shows the wars were geographically limited to European battlefields with little involvement from colonial territories',
-              'It demonstrates the global scope of total war and helps explain postwar nationalist movements in colonized regions',
-              'It demonstrates that European empires emerged structurally stronger and more politically legitimate after both world wars',
-              'It illustrates how colonized populations successfully refused conscription and remained politically uninvolved throughout'
+              'It shows the wars stayed European, since colonial troops served only as laborers behind the lines',
+              'It shows the global scope of total war and helps explain postwar nationalist movements in colonies',
+              'It shows European empires emerged stronger and more legitimate after both world wars',
+              'It shows colonized peoples refused conscription and stayed out of both wars entirely'
             ],
             correctAnswer: 1,
             explanation: "Colonial conscription globalized the wars, exposed imperial dependency, and contributed to postwar independence movements (India, Vietnam, Algeria, West Africa)."
@@ -116,26 +116,26 @@ Use this 3-step lens: identify the mechanism, show its effect, and prove it with
         questions: [
           {
             question: 'Which weapon was first used at large scale at Ypres in 1915?',
-            options: ['Atomic bomb', 'Poison gas', 'V-2 missile', 'Aircraft carrier'],
+            options: ['Tanks', 'Poison gas', 'Machine guns', 'Atomic bomb'],
             correctAnswer: 1,
-            explanation: 'Chemical weapons (chlorine, then mustard gas) were introduced at Ypres in 1915 and became a symbol of WWI industrial warfare.'
+            explanation: 'Chemical weapons (chlorine, then mustard gas) were introduced at Ypres in 1915 and became a symbol of WWI industrial warfare. Tanks first appeared at the Somme in 1916, machine guns were in use from the war\'s opening weeks, and the atomic bomb came in 1945.'
           },
           {
             question: 'Which colonial force fought in large numbers for Britain in both world wars?',
-            options: ['The French Foreign Legion', 'The Indian Army', 'The Russian Imperial Guard', 'The Australian First Fleet'],
+            options: ['The French Foreign Legion', 'The Indian Army', 'The Senegalese Tirailleurs', 'The Philippine Scouts'],
             correctAnswer: 1,
-            explanation: "The Indian Army contributed roughly 1.3M soldiers in WWI and 2.5M in WWII — the largest volunteer force in history during WWII."
+            explanation: "The Indian Army contributed roughly 1.3M soldiers in WWI and 2.5M in WWII — the largest volunteer force in history during WWII. The Foreign Legion and the Senegalese Tirailleurs served France, and the Philippine Scouts served the United States."
           },
           {
             question: 'Which event in August 1945 ended WWII in the Pacific?',
             options: [
-              'Allied amphibious landings on the beaches of Normandy followed by the surrender of Berlin to Soviet forces',
+              'A U.S. amphibious invasion of the Japanese home islands at Kyushu',
               'U.S. atomic bombings of Hiroshima and Nagasaki, followed by Japanese surrender',
-              'Signing of the Treaty of Versailles by Allied and Central Powers representatives in the Hall of Mirrors',
-              'Soviet victory at the Battle of Stalingrad and the German retreat from the Eastern Front through Poland'
+              'The Battle of Midway, which destroyed most of Japan\'s aircraft carriers',
+              'The capture of Okinawa after nearly three months of fierce fighting'
             ],
             correctAnswer: 1,
-            explanation: "The atomic bombings of Hiroshima (Aug 6) and Nagasaki (Aug 9), combined with Soviet entry into the Pacific war, led to Japan's surrender on Aug 15, 1945."
+            explanation: "The atomic bombings of Hiroshima (Aug 6) and Nagasaki (Aug 9), combined with Soviet entry into the Pacific war, led to Japan's surrender on Aug 15, 1945. Midway (1942) and Okinawa (April–June 1945) were earlier turning points, and the planned invasion of Kyushu never took place."
           }
         ]
       }
@@ -152,15 +152,15 @@ Choose the strongest label, then pair it with one named historical example.
         dropdowns: [
           {
             label: 'Mass-producing posters and films to sustain civilian morale is best labeled: ___',
-            options: ['propaganda', 'tariff policy', 'gold standard', 'feudal levy']
+            options: ['propaganda', 'censorship', 'conscription', 'rationing']
           },
           {
             label: 'Drafting Senegalese, Indian, and Vietnamese soldiers into European armies is best labeled: ___',
-            options: ['colonial conscription', 'private mercenary recruitment', 'maritime piracy', 'tributary diplomacy']
+            options: ['colonial conscription', 'indentured servitude', 'mercenary recruitment', 'settler colonialism']
           },
           {
             label: 'Government coordination of munitions factories, rationing, and labor is best labeled: ___',
-            options: ['state-directed war economy', 'laissez-faire capitalism', 'manorial subsistence', 'free banking']
+            options: ['state-directed war economy', 'laissez-faire capitalism', 'Soviet-style collectivization', 'postwar demobilization']
           }
         ],
         correctAnswers: ['propaganda', 'colonial conscription', 'state-directed war economy'],
@@ -181,10 +181,10 @@ Choose the strongest label, then pair it with one named historical example.
           {
             question: 'A prompt asks why the world wars are described as global, not just European. Which evidence is strongest?',
             options: [
-              'Both wars were confined to a single Western European front along the Franco-German and Belgian borders without colonial or Pacific involvement',
-              'Both wars mobilized colonial soldiers and resources from Asia, Africa, and the Americas, and included theaters across the Pacific, Mediterranean, and North Africa',
-              'Only the United States and Britain fought in either war while continental and Asian powers remained strictly neutral throughout',
-              'Neither war involved naval engagements, troop movements by sea, or the mobilization of any non-European territories or populations'
+              'Both wars were decided on European fronts, and fighting elsewhere was too limited to shape the outcome',
+              'Both wars drew colonial troops from Asia and Africa and spread to Pacific and North African theaters',
+              'Both wars began with declarations by the United States, which then drew Europe into a wider conflict',
+              'Both wars involved only European powers, though neutral colonies supplied raw materials through trade'
             ],
             correctAnswer: 1,
             explanation: 'AP readers reward globally-scoped evidence: colonial troops, multiple theaters, and worldwide economic mobilization.'
@@ -192,10 +192,10 @@ Choose the strongest label, then pair it with one named historical example.
           {
             question: 'Which evidence best supports an argument that total war contributed to postwar political change?',
             options: [
-              'Industrial production collapsed during both wars and never returned to prewar levels in any of the participating economies',
+              'Wartime booms ended class conflict, so labor and socialist parties declined in the postwar years',
               'Mass mobilization of women and colonial subjects strengthened postwar suffrage and decolonization movements',
-              'European monarchies were restored across the entire continent after 1945 through Allied diplomatic agreement at Yalta',
-              'Colonial empires emerged structurally stronger and more politically legitimate after WWII than they had been before WWI'
+              'European monarchies were restored across the continent after 1945 through Allied agreement at Yalta',
+              'Colonial empires emerged stronger after WWII, as wartime service bound colonized subjects to their rulers'
             ],
             correctAnswer: 1,
             explanation: 'Wartime mobilization expanded political claims by women (suffrage in UK 1918/1928, U.S. 1920) and colonial subjects (independence movements after 1945).'

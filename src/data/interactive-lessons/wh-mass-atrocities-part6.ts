@@ -77,10 +77,10 @@ Strong response model:
           {
             question: 'A student includes the Wannsee Protocol of January 1942 as primary evidence in an AP essay. Which use of HIPP sourcing is the most analytically powerful?',
             options: [
-              'Note that the document is in German and was therefore not legally binding under any contemporary international agreement applying to wartime atrocities',
-              'Note that the protocol was a closed bureaucratic memo intended for senior SS and ministry officials, used to coordinate logistics, and treats mass killing as routine administrative business',
-              'Note that the document was made public in 1947 and therefore has no relevance to understanding the policy formation that occurred between 1933 and 1945 in Germany',
-              'Note that the document was authored by Reinhard Heydrich and therefore expresses only one personal opinion not representative of the broader Nazi state apparatus or its leadership'
+              'Note that the document is in German and therefore was not legally binding under any international agreement on wartime conduct then in force',
+              'Note that the protocol was a closed memo for senior SS and ministry officials that coordinated logistics and treated killing as routine',
+              'Note that the protocol became public only in 1947, which means it reveals nothing about policy formation inside Germany between 1933 and 1945',
+              'Note that Reinhard Heydrich chaired the meeting, so the document reflects one man\'s personal opinion rather than the policy of the Nazi state'
             ],
             correctAnswer: 1,
             explanation: 'The strongest use of HIPP names audience (senior officials), purpose (coordination of logistics), and point of view (the bureaucratic register that treats killing as administration). This earns the sourcing point on the LEQ rubric.'
@@ -88,9 +88,9 @@ Strong response model:
           {
             question: 'Which short-answer move is most likely to earn the "explain" point on a prompt about the connection between the Holocaust and the postwar human-rights regime?',
             options: [
-              'Restate the prompt back to the reader and provide a list of dates without naming any specific institution, treaty, or causal mechanism connecting them',
-              'Identify Lemkin\'s coining of "genocide" (1944) and explicitly link it to the 1948 UN Genocide Convention as the direct institutional outcome of the Holocaust experience',
-              'Argue that postwar human-rights law had no relationship to the Holocaust and emerged independently from 18th-century Enlightenment philosophy without reference to recent events',
+              'Restate the prompt and list dates (such as 1945 and 1948) without naming the institution or mechanism that connects them',
+              'Identify Lemkin\'s coining of "genocide" (1944) and link it to the 1948 UN Genocide Convention as a direct outcome of the Holocaust',
+              'Argue that postwar human-rights law came from Enlightenment philosophy alone, with no reference to the Holocaust or to the war',
               'Discuss the personal biography of Adolf Hitler in detail without naming any postwar legal instrument or human-rights organization that emerged in response to the war'
             ],
             correctAnswer: 1,
@@ -142,7 +142,7 @@ Strong response model:
           },
           {
             label: 'To document the postwar global commitment to inherent rights of all persons, the strongest source is: ___',
-            options: ['the Wannsee Protocol (1942)', 'RTLM radio transcripts (1994)', "Anne Frank's diary (1942–24)", 'the Universal Declaration of Human Rights (1948)']
+            options: ['the Wannsee Protocol (1942)', 'RTLM radio transcripts (1994)', "Anne Frank's diary (1942–44)", 'the Universal Declaration of Human Rights (1948)']
           }
         ],
         correctAnswers: ['the Wannsee Protocol (1942)', 'RTLM radio transcripts (1994)', 'the Universal Declaration of Human Rights (1948)'],
@@ -161,10 +161,10 @@ Strong response model:
           {
             question: 'A student uses RTLM radio transcripts as evidence in an essay on the Rwandan Genocide. Which use of HIPP earns the sourcing point on the LEQ rubric?',
             options: [
-              'Note that radio is a popular form of communication in many countries and was used widely in Africa during the late twentieth century without specifying audience or purpose',
-              'Note that RTLM was a Hutu Power station broadcast in Kinyarwanda directly to civilians, naming individual Tutsi targets in real time, with the explicit purpose of mobilizing neighbor-on-neighbor killing',
-              'Note that the transcripts are incomplete because some broadcasts were lost, which means the source has no analytical value at all for understanding the role of media incitement in the genocide',
-              'Note that RTLM ceased broadcasting in 1994 and therefore cannot be used as evidence about the role of media in mobilizing perpetrators during the Rwandan Genocide'
+              'Note that radio was widely used across Africa in the late twentieth century, without specifying RTLM\'s audience or purpose',
+              'Note that RTLM was a Hutu Power station broadcasting in Kinyarwanda to civilians, naming Tutsi targets in real time to mobilize killing',
+              'Note that some broadcasts were lost, so the transcripts have no analytical value for understanding the role of media incitement',
+              'Note that RTLM was a state-run news service whose broadcasts reported events neutrally to an international French-speaking audience'
             ],
             correctAnswer: 1,
             explanation: 'Strong HIPP sourcing names audience (Kinyarwanda-speaking civilians), purpose (mobilizing killing), and point of view (Hutu Power station). This is the move that earns the LEQ sourcing point.'
@@ -172,13 +172,13 @@ Strong response model:
           {
             question: 'Which AP-style argument is best supported by combining survivor testimony (Wiesel\'s Night) with the legal record (Nuremberg trials)?',
             options: [
-              'The two sources together prove that the Holocaust never occurred and that postwar legal proceedings were entirely fabricated by Allied prosecutors after WWII',
-              'The two sources together connect lived victim experience to the postwar legal architecture, showing that survivor testimony and bureaucratic evidence jointly underwrote the Nuremberg Principles',
-              'The two sources are unrelated and cannot be combined in an AP-style argument because one is a memoir and the other is a court transcript with no shared analytical relevance',
-              'The two sources together prove that perpetrators were always prosecuted immediately and that no senior Nazi escaped trial in any postwar Allied jurisdiction'
+              'Together they show that memoirs are more reliable than court records, so survivor testimony should replace legal evidence in arguments',
+              'Together they link lived victim experience to postwar law, showing how testimony and the documentary record establish the crimes Nuremberg judged',
+              'They cannot be combined in one argument, because a memoir and a court transcript differ in genre and share no analytical relevance',
+              'Together they show perpetrators were always prosecuted promptly, since no senior Nazi escaped trial at Nuremberg or elsewhere'
             ],
             correctAnswer: 1,
-            explanation: 'Combining different source types (survivor + legal record) to support a single thesis is the kind of synthesis that earns complexity points on the AP LEQ.'
+            explanation: 'Combining different source types (survivor testimony and the legal record) to support a single thesis is the kind of synthesis that earns complexity points on the AP LEQ. Night was published in the late 1950s, after the trials, so the pairing works as corroboration rather than as evidence the court itself heard.'
           }
         ]
       }

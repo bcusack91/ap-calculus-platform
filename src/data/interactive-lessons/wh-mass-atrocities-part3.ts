@@ -69,24 +69,24 @@ export const whMassAtrocitiesPart3Data = {
           {
             question: 'Which feature most clearly distinguishes the Rwandan Genocide from earlier 20th-century cases of mass killing?',
             options: [
-              'The use of an industrial death-camp system designed to produce killings on a factory scale across central Africa',
-              'The speed and decentralized neighbor-on-neighbor character of the violence, mobilized by radio rather than carried out primarily by a centralized military bureaucracy',
-              'The total absence of any ideological or political organization providing direction and instructions to the perpetrators of the killings',
-              'The complete absence of any prior colonial categorization of ethnic groups before the violence began across the country'
+              'The use of industrial death camps with rail transport, modeled on the system the Nazis built in occupied Poland',
+              'The speed and decentralized neighbor-on-neighbor violence, mobilized by radio rather than run mainly by a central bureaucracy',
+              'The absence of any political organization, since the killing arose spontaneously without direction from party or state leaders',
+              'The absence of colonial-era ethnic categories, since Belgian rule had never classified Rwandans as Hutu or Tutsi'
             ],
             correctAnswer: 1,
-            explanation: 'Rwanda is studied as proof that low-tech tools (machetes) plus mass radio mobilization (RTLM) can produce one of the fastest genocides in history. The killing model differs from Holocaust industrial logistics.'
+            explanation: 'Rwanda is studied as proof that low-tech tools (machetes) plus mass radio mobilization (RTLM) can produce one of the fastest genocides in history. The killing model differs from Holocaust industrial logistics; Hutu Power leaders organized it, and Belgian identity cards had hardened the Hutu/Tutsi categories.'
           },
           {
             question: 'The Srebrenica massacre is significant as a legal precedent because:',
             options: [
-              'It was the first 20th-century atrocity prosecuted in the courts of any sovereign state involved in the underlying conflict',
-              'International courts (ICTY 2004, ICJ 2007) ruled it constituted genocide under the 1948 Convention, expanding postwar accountability',
-              'It involved no targeting of any identifiable group and is now classified as a routine combat operation by international tribunals',
-              'It demonstrated that the international community will always intervene immediately to protect any UN-declared safe area from armed attack'
+              'It was the first atrocity prosecuted in the national courts of a state involved in the underlying conflict',
+              'International courts (the ICTY in 2004 and the ICJ in 2007) ruled it genocide under the 1948 Convention, expanding postwar accountability',
+              'It was the first atrocity ever tried by an international tribunal (the ICTY), since no such court had existed before the 1990s',
+              'It showed UN safe areas worked, since Dutch peacekeepers protected the town\'s Bosniak men and boys until NATO airstrikes finally ended the siege'
             ],
             correctAnswer: 1,
-            explanation: 'Srebrenica forced international tribunals to apply the strict UN genocide definition to a European event in the 1990s, and produced major war-crimes convictions including Mladić (2017) and Karadžić (2016).'
+            explanation: 'Srebrenica forced international tribunals to apply the strict UN genocide definition to a European event in the 1990s, and produced major war-crimes convictions including Mladić (2017) and Karadžić (2016). Nuremberg had tried individuals internationally fifty years earlier, and the Dutch peacekeepers did not prevent the killing of about 8,000 Bosniak men and boys.'
           }
         ]
       }
@@ -153,10 +153,10 @@ export const whMassAtrocitiesPart3Data = {
           {
             question: 'Which thesis best supports a comparison essay that asks how 20th-century mass atrocities both repeated and changed across the century?',
             options: [
-              'The 20th-century atrocities were all identical events with the same causes, methods, and consequences in every case from Armenia in 1915 to Bosnia in 1995',
-              'Mass atrocities across the century shared a common structure of ideology, organized targeting, and crisis context, but the methods evolved from deportation-and-massacre toward industrial killing and then mass-mobilized neighbor violence enabled by media',
-              'Mass atrocities had no shared structural features and were random local outbursts that historians cannot meaningfully compare across different decades or regions',
-              'Mass atrocities only became possible after the United Nations was founded in 1945 and modern bureaucracies emerged in postwar Europe and decolonizing states'
+              'Atrocities were identical in cause, method, and outcome from Armenia in 1915 to Bosnia in 1995, since each relied on deportation marches',
+              'Atrocities shared ideology, organized targeting, and crisis, but methods shifted from deportation to industrial killing to media-driven neighbor violence',
+              'No common structure linked the atrocities, since each was a local outburst of ethnic hatred with methods and causes unique to its region',
+              'Atrocities became steadily more industrial, since each later case copied the Nazi death camps and rail logistics more efficiently'
             ],
             correctAnswer: 1,
             explanation: 'The strongest thesis names BOTH continuity (ideology, organized targeting) AND change (deportation → industrial → media-mobilized). This is the AP CCOT/comparison structure.'
@@ -164,13 +164,13 @@ export const whMassAtrocitiesPart3Data = {
           {
             question: 'A student argues: "The Rwandan Genocide proves that international institutions failed in the post-Cold-War era." Which evidence most directly supports the claim?',
             options: [
-              'The UN Assistance Mission for Rwanda was reduced rather than reinforced as the killings began, and the U.S. State Department avoided the word "genocide" until June 1994',
-              'The UN intervened immediately with overwhelming military force in early April 1994 and ended the violence within several days using a coalition of African and European peacekeepers',
-              'No international body had any awareness of events in Rwanda during the killings because all communication infrastructure was destroyed before April 1994 by the militias',
-              'The international community had already established a permanent intervention force exclusively for African genocides under the African Union charter long before 1994'
+              'The UN cut its peacekeeping mission in Rwanda as the killings began, and U.S. officials avoided the word "genocide" for weeks',
+              'The UN Security Council quickly expanded its Rwanda force to several thousand troops in April 1994, and the killing ended within days',
+              'International observers knew nothing of the genocide until it ended, because militias had cut all outside communications',
+              'The African Union\'s standing intervention force deployed to Kigali as the killings began, under a charter adopted years earlier'
             ],
             correctAnswer: 0,
-            explanation: 'The UNAMIR drawdown and the U.S. delay in using the legal term "genocide" are the canonical examples of international failure in 1994. The ICTR (1994) was created after the fact.'
+            explanation: 'The UNAMIR drawdown (Security Council Resolution 912, April 1994) and the U.S. delay until June in using the legal term "genocide" are the canonical examples of international failure in 1994. The African Union was not founded until 2002, and the ICTR (November 1994) was created after the fact.'
           }
         ]
       }

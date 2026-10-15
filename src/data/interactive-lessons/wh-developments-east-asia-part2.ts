@@ -70,21 +70,21 @@ Use this 3-step lens when writing AP responses: identify the mechanism, show its
           {
             question: 'What was the primary function of civil service examinations in imperial China?',
             options: [
-              'To elect local governors by popular vote',
-              'To recruit bureaucrats through Confucian learning and literary competence',
-              'To train military officers only',
-              'To assign hereditary noble titles'
+              'To confirm sons of nobles in offices their families already held',
+              'To recruit bureaucrats based on mastery of Confucian texts',
+              'To select military commanders based on archery and horsemanship',
+              'To let local villagers elect their own magistrates'
             ],
             correctAnswer: 1,
-            explanation: 'Exam systems supported centralized administration by selecting literate officials tied to Confucian norms.'
+            explanation: 'Exam systems supported centralized administration by selecting literate officials tested on Confucian classics and literary competence, rather than by birth, military skill, or election.'
           },
           {
             question: 'Which statement best describes tributary diplomacy in East Asia?',
             options: [
-              'A uniform empire directly ruled from Beijing',
+              'A system of direct rule in which Beijing appointed governors for each state',
               'A symbolic hierarchy and exchange network that coexisted with local autonomy',
-              'A military alliance against Mongols only',
-              'A complete replacement of local political institutions'
+              'A defensive military alliance in which states shared troops against invaders',
+              'A trade treaty system that set fixed tariffs among equal sovereign states'
             ],
             correctAnswer: 1,
             explanation: 'Tributary relations conveyed status and ritual order, but outcomes differed by state and period.'
@@ -102,9 +102,9 @@ Use this 3-step lens when writing AP responses: identify the mechanism, show its
         questions: [
           {
             question: 'What phrase best describes diplomacy structured around Chinese ritual hierarchy and exchange?',
-            options: ['Tributary system', 'Constitutional federalism', 'Atlantic charter order', 'Mercenary confederation'],
+            options: ['Tributary system', 'Treaty-port system', 'Dynastic cycle', 'Feudal vassalage'],
             correctAnswer: 0,
-            explanation: 'The tributary system organized symbolic hierarchy and diplomatic exchange around Chinese court prestige.'
+            explanation: 'The tributary system organized symbolic hierarchy and diplomatic exchange around Chinese court prestige. The treaty-port system was imposed on China by Western powers in the 1800s, and the dynastic cycle describes the rise and fall of ruling houses, not diplomacy.'
           },
           {
             question: 'What phrase best describes adopting outside models while preserving local institutions?',
@@ -133,11 +133,11 @@ Choose the strongest mechanism label, then pair it with one concrete historical 
         dropdowns: [
           {
             label: 'Recruiting officials through Confucian exams is best labeled: ___',
-            options: ['bureaucratic governance', 'feudal vassalage', 'charter colonization', 'market liberalization']
+            options: ['bureaucratic governance', 'feudal vassalage', 'hereditary aristocratic rule', 'military patronage']
           },
           {
             label: 'Ritualized regional hierarchy centered on Chinese prestige is: ___',
-            options: ['tributary diplomacy', 'parliamentary federalism', 'absolute isolation', 'direct annexation']
+            options: ['tributary diplomacy', 'balance-of-power diplomacy', 'direct annexation', 'feudal vassalage']
           },
           {
             label: 'Borrowing institutions while preserving local structures is: ___',
@@ -162,24 +162,24 @@ Choose the strongest mechanism label, then pair it with one concrete historical 
           {
             question: 'A prompt asks why East Asian states showed both similarity and difference. The best explanation is:',
             options: [
-              'They shared no cultural interaction at all',
-              'Chinese models influenced the region, but local elites adapted institutions to domestic conditions',
-              'Mongol conquest made all East Asian systems identical',
-              'Geography alone fully determined all institutions'
+              'Each state developed in isolation, so any shared features arose by coincidence alone',
+              'Chinese models spread, but local elites adapted them to fit domestic conditions',
+              'Mongol conquest imposed one administrative system on China, Korea, and Japan alike',
+              'Geography alone determined institutions, so similar terrain produced similar states'
             ],
             correctAnswer: 1,
-            explanation: 'This explains both convergence (influence) and divergence (local adaptation), which is strong AP reasoning.'
+            explanation: 'This explains both convergence (Chinese influence) and divergence (local adaptation), which is strong AP reasoning. The Mongols never conquered Japan, so they could not have imposed one system on the whole region.'
           },
           {
             question: 'Which evidence most directly supports an argument about selective adaptation?',
             options: [
               'Japan maintained shogunal military rule despite Chinese cultural influence',
-              'Song China used paper money',
-              'Mongols conquered parts of Eurasia',
-              'Silk Roads connected many regions'
+              'Song China issued paper money to support growing commerce in its cities',
+              'Mongol armies conquered much of Eurasia in the thirteenth century',
+              'Silk Road routes carried goods between China and the Mediterranean'
             ],
             correctAnswer: 0,
-            explanation: 'This option explicitly shows borrowing without institutional duplication.'
+            explanation: 'Japan keeping shogunal military rule while absorbing Chinese culture explicitly shows borrowing without institutional duplication. The other facts are true but show no adaptation of an outside model.'
           }
         ]
       }

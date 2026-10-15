@@ -69,21 +69,21 @@ Use this structure when writing: identify a regional pattern, prove it with evid
           {
             question: 'Which development best supports a claim that Song China experienced major economic expansion?',
             options: [
-              'Decline in urban market activity',
+              'A ban on maritime trade that pushed merchants back into farming',
               'Widespread use of paper money and growth in commercial centers',
-              'Total prohibition of foreign trade',
-              'Replacement of the exam system with hereditary office'
+              'A return from cash taxes to tax payments in grain and labor service',
+              'The spread of self-sufficient manors producing mainly for local use'
             ],
             correctAnswer: 1,
-            explanation: 'Paper money, commercialization, and urban growth are classic evidence of Song economic dynamism.'
+            explanation: 'Paper money, commercialization, and urban growth are classic evidence of Song economic dynamism. A maritime-trade ban, a return to in-kind taxes, and self-sufficient manors would all point to contraction, not expansion.'
           },
           {
             question: 'Which statement best compares Song China and feudal Japan?',
             options: [
-              'Both relied on identical centralized bureaucratic institutions',
-              'Song China was centralized and exam-based, while Japan remained decentralized and military-feudal',
-              'Japan was more centralized than Song China',
-              'Neither society had social hierarchy'
+              'Both China and Japan relied on scholar-officials chosen by exams to staff a central bureaucracy',
+              'Song China was centralized and exam-based, but Japan stayed decentralized under warriors',
+              'Japan was more centralized, with an emperor ruling through a salaried bureaucracy',
+              'Both rested on hereditary warrior elites, and neither state used exams to choose officials'
             ],
             correctAnswer: 1,
             explanation: 'This is a high-value AP contrast: centralized bureaucracy in China versus feudal military decentralization in Japan.'
@@ -101,9 +101,9 @@ Use this structure when writing: identify a regional pattern, prove it with evid
         questions: [
           {
             question: 'Which innovation most directly helped support Song-era population growth?',
-            options: ['Heavy cavalry expansion', 'Champa rice', 'Atlantic plantation systems', 'Steam mechanization'],
+            options: ['New World maize', 'Champa rice', 'Steam-powered pumps', 'Potatoes'],
             correctAnswer: 1,
-            explanation: 'Champa rice matured quickly and supported increased agricultural output in Song China.'
+            explanation: 'Champa rice, a fast-ripening strain from Southeast Asia, allowed two harvests a year and supported increased agricultural output in Song China. Maize and potatoes reached China only after the Columbian Exchange, and steam power came centuries later.'
           },
           {
             question: 'Which institution selected many Chinese officials through Confucian learning?',
@@ -113,9 +113,9 @@ Use this structure when writing: identify a regional pattern, prove it with evid
           },
           {
             question: 'In feudal Japan, who held most real military-political power?',
-            options: ['The shogun', 'The pope', 'The civil service minister', 'The Mongol khan in Beijing'],
+            options: ['The shogun', 'The emperor', 'The court nobles', 'The Buddhist monasteries'],
             correctAnswer: 0,
-            explanation: 'The shogun, not the emperor, held dominant military authority in feudal Japan.'
+            explanation: 'The shogun, not the emperor, held dominant military authority in feudal Japan; the emperor and court nobles kept ceremonial prestige but little real power.'
           }
         ]
       }
@@ -132,7 +132,7 @@ Choose the best term, then state one piece of supporting evidence out loud.
         dropdowns: [
           {
             label: 'Dominant ideological framework of Song elite governance: ___',
-            options: ['Neo-Confucianism', 'Mercantilism', 'Calvinism', 'Legal equality doctrine']
+            options: ['Neo-Confucianism', 'Legalism', 'Theravada Buddhism', 'Daoism']
           },
           {
             label: 'Foreign-led dynasty that ruled China after the Song: ___',
@@ -140,7 +140,7 @@ Choose the best term, then state one piece of supporting evidence out loud.
           },
           {
             label: 'Decentralized military-landholding order in medieval Japan: ___',
-            options: ['feudalism', 'direct democracy', 'bureaucratic meritocracy', 'industrial capitalism']
+            options: ['feudalism', 'meritocracy', 'absolutism', 'theocracy']
           }
         ],
         correctAnswers: ['Neo-Confucianism', 'Yuan', 'feudalism'],
@@ -161,24 +161,24 @@ Choose the best term, then state one piece of supporting evidence out loud.
           {
             question: 'A student argues that East Asia was politically uniform because of Chinese influence. Which evidence best refutes this?',
             options: [
-              'Song China and Japan both used maritime trade',
-              'Korea and Japan used Chinese writing systems',
-              'Japan developed feudal military rule while China maintained centralized bureaucracy',
-              'East Asia had shared Buddhist traditions'
+              'Song China and Japan both took part in maritime trade across the East China Sea',
+              'Korea and Japan both adapted Chinese characters for their own writing systems',
+              'Japan developed feudal military rule, but China kept a centralized bureaucracy',
+              'Buddhism spread from China to both Korea and Japan and shaped elite culture in each'
             ],
             correctAnswer: 2,
-            explanation: 'The strongest refutation contrasts political structure, not just cultural overlap.'
+            explanation: 'The strongest refutation contrasts political structure — Japanese feudal military rule versus Chinese centralized bureaucracy. Shared trade, writing, and Buddhism are cultural overlap, which supports the uniformity claim rather than refuting it.'
           },
           {
             question: 'Which claim is most defensible for an SAQ on East Asia c. 1200-1450?',
             options: [
-              'Chinese influence erased all regional differences',
-              'East Asian states shared cultural borrowing but preserved distinct political institutions',
-              'Japan and Korea had no interaction with China',
-              'Mongol rule had no effect on Chinese governance or trade'
+              'Chinese influence erased regional differences, giving the states identical institutions',
+              'East Asian states borrowed culturally but kept distinct political institutions',
+              'Japan and Korea remained cut off from China, developing with little outside contact',
+              'Mongol rule left Chinese governance and trade much as they had been under the Song'
             ],
             correctAnswer: 1,
-            explanation: 'This statement is nuanced and aligns with AP expectations for comparison and regional complexity.'
+            explanation: 'This statement is nuanced and aligns with AP expectations for comparison and regional complexity: cultural borrowing (writing, Confucianism, Buddhism) alongside distinct political institutions such as Japan\'s shogunate.'
           }
         ]
       }

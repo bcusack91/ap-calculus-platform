@@ -91,21 +91,21 @@ For a globalization SAQ:
           {
             question: "Which historical context is most essential for sourcing Stiglitz's 'Globalization and Its Discontents' (2002)?",
             options: [
-              "The 1997 Asian Financial Crisis had recently exposed serious shortcomings in IMF crisis management; Stiglitz had served as World Bank Chief Economist (1997–2000); 1999 Seattle protests had launched the public anti-globalization movement; the book was a critique from within the institutions",
-              "The 2008 Global Financial Crisis had fully unfolded by the time the book was published, providing the central case study for Stiglitz's critique of post-2008 economic management decisions made by the U.S. Federal Reserve",
-              "The book was published before any major financial crisis of the post-1990 globalization era and treated globalization as a hypothetical future scenario rather than a phenomenon already in motion across major economies",
-              "Stiglitz wrote the book as an outsider with no professional experience at the World Bank, the IMF, or any other Bretton Woods institution at any point during his economics career before publication"
+              "The 1997 Asian crisis had exposed IMF failures, Stiglitz had been World Bank chief economist (1997–2000), and the 1999 Seattle protests had launched a public anti-globalization movement",
+              "The 2008 Global Financial Crisis (after Lehman's collapse) had already unfolded, giving Stiglitz his case study for critiquing Fed, Treasury, and IMF decisions",
+              "The book appeared before any major crisis of the post-1990 era, so Stiglitz treated globalization as a future possibility rather than a process already under way",
+              "Stiglitz wrote as an outsider with no experience inside the World Bank or the IMF, relying on press reports and activist accounts of their lending programs"
             ],
             correctAnswer: 0,
-            explanation: '1997 Asian Crisis + Stiglitz\'s World Bank tenure + 1999 Seattle is the canonical context for Stiglitz 2002.'
+            explanation: '1997 Asian Crisis + Stiglitz\'s World Bank tenure (1997–2000) + 1999 Seattle is the canonical context for Stiglitz 2002: a critique of the IMF from someone who had worked inside the Bretton Woods institutions. The book predates the 2008 crisis.'
           },
           {
             question: "Which best identifies the intended audience and purpose of Trump's January 2017 Inaugural Address?",
             options: [
-              "An inaugural address by the 45th U.S. president; intended audience is the American public, particularly working-class voters in deindustrialized regions; purpose is to repudiate the post-1945 free-trade consensus and signal an 'America First' protectionist turn",
-              "A diplomatic address to the WTO ministerial council; intended audience is foreign trade negotiators; purpose is to negotiate a new multilateral trade round to deepen post-1945 free-trade commitments under the binding rules of the WTO",
-              "An address to a meeting of leftist anti-globalization activists; intended audience is the World Social Forum; purpose is to commit the United States to dismantling the IMF and World Bank in favor of alternative South-led development institutions",
-              "A diplomatic message to the United Nations General Assembly; intended audience is the international community of states; purpose is to recommit the United States to the post-1945 multilateral order without any change in U.S. trade policy"
+              "A swearing-in speech; its audience was the American public, especially working-class voters in deindustrialized regions; its purpose was to reject the free-trade consensus for \"America First\"",
+              "A diplomatic address to a WTO ministerial meeting; its audience was foreign trade negotiators; its purpose was to launch a new multilateral round deepening free-trade commitments",
+              "An address to anti-globalization activists; its audience was the World Social Forum; its purpose was to commit the U.S. to replacing the IMF and World Bank with new South-led development banks",
+              "A message to the UN General Assembly; its audience was the international community of states; its purpose was to recommit the U.S. to multilateralism with no change in trade policy"
             ],
             correctAnswer: 0,
             explanation: 'Trump\'s 2017 inaugural is the canonical right-populist anti-globalization document. Naming the audience (deindustrialized voters) and purpose (repudiate free-trade consensus) is the AP move.'
@@ -175,21 +175,21 @@ For a globalization SAQ:
           {
             question: 'An SAQ asks: "Identify ONE feature of post-1945 globalization, and explain how it contributed to economic integration." Which response would score highest?',
             options: [
-              "Containerization beginning in 1956 standardized cargo handling, cutting port costs by roughly 90%, which made globally distributed supply chains economically viable and contributed directly to the offshoring of manufacturing from high-wage to lower-wage countries from the 1980s onward",
-              "Globalization had some kind of feature at some point during the post-1945 period that contributed to economic integration over time during the late 20th century period in some way",
-              "Globalization was a feature of the post-1945 world economy and produced economic integration over time during the late 20th century in a way that is generally well known to scholars of global economic history",
-              "Globalization is a famous post-1945 development and its effects on economic integration are widely recognized as having been significant during the period from 1945 to the end of the 20th century"
+              "Containerization from 1956 standardized cargo handling and cut port costs by roughly 90%, which made global supply chains viable and drove the offshoring of manufacturing after 1980",
+              "Containerization from 1956 was an important innovation in shipping, and it is widely recognized as one of the most significant developments in the history of global trade",
+              "Containerization from 1956 cut port costs by roughly 90%, which lowered consumer prices in the United States and helped the U.S. win the Cold War against the Soviet Union",
+              "The Internet from 1989 cut communication costs sharply, which made containerized cargo handling possible for the first time and led directly to the founding of the WTO in 1995 to regulate it"
             ],
             correctAnswer: 0,
-            explanation: 'AP SAQ scoring rewards specific feature + date + mechanism + outcome. Vague gestures earn no credit.'
+            explanation: 'AP SAQ scoring rewards specific feature + date + mechanism + outcome tied to the prompt. A response that names the feature but never explains integration, or that links it to the wrong outcome or a false causal chain, earns no "explain" credit.'
           },
           {
             question: 'Which short answer best demonstrates AP "complexity" by complicating a single-cause narrative about globalization?',
             options: [
-              "Although the 2008 Global Financial Crisis is often blamed on U.S. subprime mortgages, scholars note that pre-2008 capital account liberalization, European bank purchases of U.S. mortgage-backed securities, and the eurozone\'s structural imbalances together transmitted the crisis globally — making 2008 a genuinely globalized failure",
-              "The 2008 Global Financial Crisis was caused entirely by U.S. subprime mortgages and there were no other contributing factors of any kind from European banks, capital markets, or the eurozone in any phase of the crisis",
-              "The 2008 Global Financial Crisis had no connection to U.S. subprime mortgages and was caused entirely by the People's Republic of China and its trade surplus with the United States during the period",
-              "The 2008 Global Financial Crisis was a myth and there was no measurable global recession during the period from 2008 through 2010 in any major economy in any region of the world"
+              "Although 2008 is often blamed on U.S. subprime loans, capital-account liberalization, European banks' U.S. mortgage holdings, and eurozone imbalances spread it globally",
+              "The 2008 crisis was caused entirely by U.S. subprime mortgages, and European banks, global capital markets, and the eurozone's imbalances played no role in any phase of its spread",
+              "The 2008 crisis had little real connection to U.S. subprime mortgages and was caused mainly by China's large trade surplus with the United States in the 2000s",
+              "The 2008 crisis was a myth, since no major economy in any region of the world fell into a measurable recession at any point between 2008 and 2010"
             ],
             correctAnswer: 0,
             explanation: 'The "complexity" point requires complicating a dominant single-cause narrative. Naming subprime PLUS European bank exposures PLUS eurozone imbalances is the canonical AP move.'

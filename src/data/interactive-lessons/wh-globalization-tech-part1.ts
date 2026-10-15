@@ -84,21 +84,21 @@ In July 1944 — before WWII even ended — 730 delegates from 44 Allied nations
           {
             question: 'Which best describes the original purpose of the International Monetary Fund (IMF) at its 1944 founding?',
             options: [
-              'To stabilize exchange rates among member currencies and to lend short-term to countries facing balance-of-payments crises so that they would not need to devalue or impose trade restrictions',
-              'To finance long-term infrastructure projects in developing countries through low-interest loans repayable over decades from project revenues collected in local currencies',
-              'To negotiate progressive tariff reductions among member states through periodic multilateral negotiating rounds organized over many years of diplomacy',
-              'To resolve trade disputes among member states through binding arbitration with the authority to impose enforceable sanctions on noncompliant member governments'
+              'To stabilize exchange rates and lend short-term to members facing balance-of-payments crises',
+              'To finance long-term infrastructure projects in developing countries through low-interest loans repaid over decades',
+              'To negotiate step-by-step tariff reductions among member states through periodic multilateral bargaining rounds',
+              'To settle trade disputes among member states through binding arbitration backed by enforceable sanctions on violators'
             ],
             correctAnswer: 0,
-            explanation: 'IMF = exchange-rate stability + balance-of-payments lending. The other options describe the World Bank, GATT, and WTO respectively.'
+            explanation: 'IMF = exchange-rate stability + short-term balance-of-payments lending, so members would not need to devalue or impose trade restrictions. The other options describe the World Bank, GATT, and WTO respectively.'
           },
           {
             question: 'Which event most directly ended the original Bretton Woods system of fixed exchange rates anchored by dollar-gold convertibility?',
             options: [
-              'The 1971 "Nixon Shock," in which President Nixon unilaterally ended the U.S. commitment to convert dollars into gold at \\$35 per ounce, pushing the world toward floating exchange rates',
-              'The 1973 OPEC oil embargo, in which Arab oil producers cut shipments to states that supported Israel during the Yom Kippur War, quadrupling global oil prices in a few months',
-              'The 1995 founding of the World Trade Organization, which formally replaced the General Agreement on Tariffs and Trade with a permanent trade body with binding dispute resolution',
-              'The 1989 fall of the Berlin Wall, which marked the symbolic end of the Cold War division of Europe and the imminent collapse of the Soviet bloc planned economies'
+              'The 1971 "Nixon Shock," in which the U.S. stopped redeeming dollars for gold at \\$35 per ounce, pushing the world toward floating currencies',
+              'The 1973 OPEC oil embargo, in which Arab producers cut shipments to states backing Israel and quadrupled the dollar price of oil',
+              'The 1995 founding of the World Trade Organization, which replaced GATT with a permanent trade body that had binding dispute settlement',
+              'The 1989 fall of the Berlin Wall, which ended Europe\'s division, opened Eastern currency exchange, and doomed Soviet planning'
             ],
             correctAnswer: 0,
             explanation: 'August 15, 1971 — Nixon ended dollar-gold convertibility, ending the gold-anchored Bretton Woods system. The other events mattered but did not end Bretton Woods.'
@@ -168,10 +168,10 @@ In July 1944 — before WWII even ended — 730 delegates from 44 Allied nations
           {
             question: 'Which response best explains why globalization accelerated after 1945?',
             options: [
-              'U.S.-led Bretton Woods institutions stabilized currency markets and lowered tariffs, while parallel innovations in containerization (1956), satellites (1962), and computing (1971 microprocessor onward) drastically cut transportation and communications costs',
-              'Globalization after 1945 was driven entirely by individual entrepreneurs without any role for international institutions, transportation infrastructure, or computing technology developed by states or large firms during the Cold War',
-              'Globalization after 1945 was primarily caused by the Soviet Union exporting communism through international organizations and transportation infrastructure built across the Eastern Bloc economies',
-              'Globalization after 1945 happened by accident with no institutional, technological, or geopolitical drivers and produced no meaningful economic effects on either the United States or any other major world economy'
+              'Bretton Woods institutions stabilized currencies and lowered tariffs, while containerization (1956), satellites (1962), and microprocessors (1971) slashed transport and communication costs',
+              'Globalization after 1945 was driven by individual entrepreneurs, with international institutions and state-funded technologies such as satellites and computing playing little role',
+              'Globalization after 1945 was driven mainly by the Soviet Union, which spread trade and transport networks worldwide through Comecon (founded in 1949) and its partners in the developing world',
+              'Globalization after 1945 resulted mainly from the end of colonial empires, as newly independent states opened markets that European powers had closed, with technology playing only a small role'
             ],
             correctAnswer: 0,
             explanation: 'AP rewards naming both the institutional framework (Bretton Woods) AND the technological enabler (containers + satellites + computing).'
@@ -179,13 +179,13 @@ In July 1944 — before WWII even ended — 730 delegates from 44 Allied nations
           {
             question: 'Which best explains why containerization (1956 onward) was a more transformative innovation for global trade than its inventor Malcom McLean initially anticipated?',
             options: [
-              'Container shipping cut port handling costs by roughly 90% and reduced theft, allowing manufacturers to source components from anywhere in the world cheaply, which in turn enabled global supply chains and the relocation of manufacturing to lower-wage countries',
-              'Container shipping made cross-border trade prohibitively expensive and slow, which actually reversed the trend toward global supply chains and forced manufacturers to keep all production in their home countries throughout the late 20th century',
-              'Container shipping had no measurable effect on port handling costs or shipping times and produced no changes in the geography of global manufacturing during the period from 1956 to the end of the 20th century',
-              'Container shipping was used only for military cargo during the Cold War and never became a significant component of civilian trade among non-military commercial shippers in any region of the world'
+              'Container shipping cut port handling costs by roughly 90% and reduced theft, letting firms source parts worldwide cheaply and enabling global supply chains and offshoring',
+              'Container shipping mainly sped up military logistics, and its civilian use stayed limited because most ports refused to invest in the cranes and docks it required',
+              'Container shipping lowered costs only on short coastal routes, so manufacturers kept producing near home markets and long-distance supply chains grew only after 2000',
+              'Container shipping raised costs at first because of the expensive new equipment it needed, which slowed global trade until air freight replaced ships for most manufactured goods'
             ],
             correctAnswer: 0,
-            explanation: 'Containerization is the canonical AP example of a transportation innovation that enabled global supply chains by collapsing port costs.'
+            explanation: 'Containerization is the canonical AP example of a transportation innovation that enabled global supply chains by collapsing port costs. Containers did become standard in civilian shipping by the 1970s, and ocean freight, not air freight, still carries most manufactured goods.'
           }
         ]
       }

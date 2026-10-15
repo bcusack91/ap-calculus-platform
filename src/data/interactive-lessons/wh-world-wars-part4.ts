@@ -65,24 +65,24 @@ This part focuses on how the wars connected to economic systems, ideological mov
           {
             question: 'Which connection between WWI and the Great Depression is most accurate?',
             options: [
-              'The two were entirely unrelated economic events with no shared causes, financial institutions, or chain of consequences',
-              'War debts, German reparations, and U.S. lending created a financial chain that collapsed when American credit dried up in 1929',
-              'The Depression preceded and caused WWI through tariff wars and competitive currency devaluations across Europe in 1913',
-              'German reparations were never assessed or collected by the Allied powers because Germany refused to sign Versailles in 1919'
+              'The two crises were unrelated, since the Depression began with a farm-belt drought in the 1930s',
+              'War debts, reparations, and U.S. loans formed a financial chain that broke when American credit dried up in 1929',
+              'The Depression came first and caused WWI, as tariff wars, devaluations, and bank runs swept Europe in 1913',
+              'Germany never paid reparations because it refused to sign Versailles, so war debts played no role'
             ],
             correctAnswer: 1,
-            explanation: 'AP causation tightly links WWI debts and reparations through U.S. loans (Dawes/Young Plans) to Depression-era collapse.'
+            explanation: 'AP causation tightly links WWI debts and reparations through U.S. loans (Dawes/Young Plans) to Depression-era collapse. Germany did sign Versailles and paid reparations into the early 1930s, and the Dust Bowl drought followed rather than caused the 1929 crash.'
           },
           {
             question: 'Which is the strongest example of how WWI undermined imperial legitimacy?',
             options: [
-              'European empires expanded freely after the war with no organized resistance from any colonized population in Asia or Africa',
-              'Britain made contradictory wartime promises to Arabs and Zionists, and Indian leaders cited wartime sacrifices to demand self-rule',
-              'Colonial subjects refused to participate in either world war and remained politically uninvolved throughout the interwar period',
-              'No European empire lost any territory or political authority over its colonial possessions during or after the First World War'
+              'Britain rewarded Indian war service with dominion status in 1919, satisfying nationalists and calming unrest',
+              'Britain made conflicting wartime promises to Arabs and Zionists, and Indian leaders cited war service to demand self-rule',
+              'Colonial subjects largely stayed out of the war, so imperial rule faced little new pressure in the interwar years',
+              'The League\'s mandate system granted immediate independence to all former Ottoman and German territories in Africa and Asia'
             ],
             correctAnswer: 1,
-            explanation: 'Wartime contradictions (Hussein-McMahon vs. Balfour) and colonial mobilization fueled postwar nationalist movements across Asia and Africa.'
+            explanation: 'Wartime contradictions (Hussein-McMahon vs. Balfour) and colonial mobilization fueled postwar nationalist movements across Asia and Africa. India did not get dominion status in 1919 — the Amritsar Massacre that year deepened anger — and League mandates placed former Ottoman and German lands under British and French control rather than freeing them.'
           }
         ]
       }
@@ -97,23 +97,23 @@ This part focuses on how the wars connected to economic systems, ideological mov
         questions: [
           {
             question: 'Which 1917 revolution was made possible by WWI exhaustion?',
-            options: ['French Revolution', 'Bolshevik Revolution', 'Cuban Revolution', 'Iranian Revolution'],
+            options: ['Mexican Revolution', 'Bolshevik Revolution', 'Young Turk Revolution', 'Xinhai Revolution'],
             correctAnswer: 1,
-            explanation: "Russia's collapse on the Eastern Front and food shortages enabled the Bolshevik seizure of power in October 1917."
+            explanation: "Russia's collapse on the Eastern Front and food shortages enabled the Bolshevik seizure of power in October 1917. The Mexican (1910), Young Turk (1908), and Xinhai (1911) revolutions all began before WWI."
           },
           {
             question: 'Which 1941 document expressed Allied war aims including self-determination?',
-            options: ['Treaty of Versailles', 'Atlantic Charter', 'Yalta Communique', 'Twelve Points'],
+            options: ['Treaty of Versailles', 'Atlantic Charter', 'Yalta Communique', 'Fourteen Points'],
             correctAnswer: 1,
-            explanation: 'The Atlantic Charter (Aug 1941), signed by Roosevelt and Churchill, became a foundation for the U.N. and decolonization claims.'
+            explanation: 'The Atlantic Charter (Aug 1941), signed by Roosevelt and Churchill, became a foundation for the U.N. and decolonization claims. Wilson\'s Fourteen Points also invoked self-determination, but in 1918, during WWI.'
           },
           {
             question: 'Which contradictory British wartime pledges shaped the modern Middle East?',
             options: [
-              'Sykes-Picot Agreement and the Treaty of Sevres',
+              'The Treaty of Sevres and the later Treaty of Lausanne',
               'Hussein-McMahon Correspondence and the Balfour Declaration',
-              'Atlantic Charter and the Marshall Plan',
-              'Twelve Points and the Locarno Treaties'
+              'The Atlantic Charter and the postwar Truman Doctrine of 1947',
+              'The Fourteen Points and the Locarno Treaties of 1925'
             ],
             correctAnswer: 1,
             explanation: 'The Hussein-McMahon Correspondence (1915) promised Arab independence; the Balfour Declaration (1917) promised a Jewish homeland in Palestine.'
@@ -141,7 +141,7 @@ Pick the strongest causal link in each row, then justify your choice in one AP-s
           },
           {
             label: 'Indian, African, and Vietnamese wartime contributions most directly fueled: ___',
-            options: ['postwar decolonization movements', 'the consolidation of European empires after 1945', 'a return to feudal landholding patterns', 'the spread of Confucian governance ideals']
+            options: ['postwar decolonization movements', 'the consolidation of European empires after 1945', 'pan-European federalist movements', 'a revival of pro-imperial loyalism']
           }
         ],
         correctAnswers: ['the Great Depression', "the world's first communist state", 'postwar decolonization movements'],
@@ -162,21 +162,21 @@ Pick the strongest causal link in each row, then justify your choice in one AP-s
           {
             question: 'Which statement best synthesizes how the world wars reshaped the international order?',
             options: [
-              'The wars had no significant effect on the structure of the international order, the balance of power, or the colonial system',
-              'The wars destroyed older European empires, accelerated U.S. and Soviet superpower status, gave rise to international institutions (League, U.N.), and seeded global decolonization',
-              'The wars restored 18th-century absolute monarchies across continental Europe through Allied diplomatic agreements at Versailles and Yalta',
-              'The wars eliminated all ideological conflict and produced a stable democratic peace among the major industrial powers worldwide'
+              'The wars strengthened the British and French empires, which used League mandates and the U.N. to expand their holdings after 1945',
+              'The wars broke up older empires, made the U.S. and USSR superpowers, built new institutions, and seeded decolonization',
+              'The wars restored the prewar balance of power, as Germany, Austria, and Russia returned to their 1914 borders and dynasties by 1950',
+              'The wars ended ideological conflict, producing a stable democratic peace in which the U.S. and USSR cooperated through the U.N.'
             ],
             correctAnswer: 1,
-            explanation: 'A strong synthesis names imperial collapse, superpower rise, institution building, and decolonization as interlocking outcomes.'
+            explanation: 'A strong synthesis names imperial collapse, superpower rise, institution building (League, U.N.), and decolonization as interlocking outcomes.'
           },
           {
             question: 'A student claims wartime decisions in Europe had no impact on Asia or Africa. Which evidence best refutes this?',
             options: [
-              'European powers operated entirely within metropolitan European borders throughout both wars without any colonial mobilization',
-              'Colonial conscription, contradictory wartime pledges (e.g., Balfour, Hussein-McMahon), and the Atlantic Charter all directly shaped postwar political movements outside Europe',
-              'Colonial subjects had no awareness of either European conflict or its political implications for their territories or governance',
-              'African and Asian states remained politically untouched by European decolonization debates throughout the entire postwar period'
+              'European powers fought both wars with metropolitan troops alone, so their colonies supplied neither soldiers nor raw materials',
+              'Colonial conscription, pledges such as Balfour and Hussein-McMahon, and the Atlantic Charter all shaped movements outside Europe',
+              'Colonial subjects in India, Egypt, and Vietnam learned of the wars only after 1945, so wartime choices reached them late',
+              'African and Asian nationalist movements grew only from local religious revivals, with no link to wartime promises or service abroad'
             ],
             correctAnswer: 1,
             explanation: 'AP synthesis requires showing how European wartime choices produced political consequences in Asia, Africa, and the Middle East.'

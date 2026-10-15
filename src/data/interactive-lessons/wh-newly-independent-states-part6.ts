@@ -91,21 +91,21 @@ For a post-independence SAQ:
           {
             question: "Which historical context is most essential for sourcing Nasser's 1956 Suez Nationalization Speech?",
             options: [
-              'Egypt had been a British protectorate since 1882; the U.S. had just withdrawn financing for the Aswan High Dam after Nasser recognized the PRC; Britain and France controlled the Suez Canal Company; this speech directly preceded the Anglo-French-Israeli invasion in October 1956',
-              'Egypt had been an independent monarchy under King Farouk since 1922 and the 1956 Suez speech announced a peaceful transition of canal management to a multinational consortium negotiated through the United Nations',
-              'Egypt was a Soviet satellite state in 1956 and the Suez speech was delivered to communicate the formal accession of Egypt to the Warsaw Pact military alliance during the early Cold War period',
-              'Egypt had no significant historical relationship with the Suez Canal before 1956 and the speech announced the construction of an entirely new canal not connected to the existing waterway through the Sinai'
+              'Britain had occupied Egypt from 1882, the U.S. had just withdrawn Aswan Dam financing, and Britain and France controlled the Suez Canal Company; an invasion followed months later',
+              'Egypt was a stable monarchy under King Farouk in 1956, and the speech announced a peaceful handover of the canal to a multinational consortium negotiated through the United Nations',
+              'Egypt had just joined the Warsaw Pact in 1956, and the speech announced its accession, its troop commitments, and Soviet basing rights in the alliance',
+              'Egypt had no prior connection to the Suez Canal before 1956, and the speech announced plans for a new canal across the Sinai that would bypass the existing waterway'
             ],
             correctAnswer: 0,
-            explanation: 'The Suez speech is best sourced by naming the British protectorate history, the U.S. withdrawal of Aswan financing, the Anglo-French canal control, and the impending invasion. The other options describe contexts that did not exist.'
+            explanation: 'The Suez speech (July 26, 1956) is best sourced by naming Britain\'s occupation of Egypt since 1882, the U.S. withdrawal of Aswan financing that July, the Anglo-French control of the canal company, and the invasion that followed in late October. Farouk had been overthrown in 1952, and Egypt never joined the Warsaw Pact.'
           },
           {
             question: "Which best identifies the intended audience and purpose of Nyerere's 1967 Arusha Declaration?",
             options: [
-              'A founding programmatic statement of Tanzania\'s ruling TANU party; intended audience is the Tanzanian people and African socialists across the continent; purpose is to commit Tanzania to Ujamaa village socialism and to self-reliance against neocolonial economic dependence',
-              'A diplomatic protest delivered to the United Nations General Assembly; intended audience is the global community of states; purpose is to formally accuse Britain and France of continuing colonial control over East African territory after independence',
-              'A speech to the World Bank and IMF; intended audience is international lenders; purpose is to negotiate a Structural Adjustment Program for Tanzania during the early post-independence period of the 1960s decade',
-              'A military mobilization order; intended audience is the Tanzanian armed forces; purpose is to direct an immediate invasion of neighboring Uganda during a 1967 border crisis between the two East African states'
+              'A founding statement of Tanzania\'s ruling TANU party; its audience was Tanzanians and African socialists; its purpose was to commit Tanzania to Ujamaa socialism and self-reliance',
+              'A diplomatic protest to the UN General Assembly; its audience was the global community of states; its purpose was to accuse Britain of keeping control over East Africa',
+              'A speech to the World Bank and IMF; its audience was international lenders; its purpose was to negotiate a structural adjustment loan for Tanzania in the 1960s',
+              'A military order to the armed forces; its audience was Tanzanian officers; its purpose was to launch an invasion of neighboring Uganda during a border crisis'
             ],
             correctAnswer: 0,
             explanation: 'Arusha is the canonical African socialist programmatic document. Naming TANU + Ujamaa + self-reliance + the African socialist audience is the AP sourcing move.'
@@ -147,7 +147,7 @@ For a post-independence SAQ:
       exercise: {
         dropdowns: [
           {
-            label: "Knowing Nehru's 'Tryst with Destiny' was delivered the night of independence to the Constituent Assembly is most useful for: ___",
+            label: "Knowing Nehru's 'Tryst with Destiny' was delivered at midnight as British rule ended in August 1947 is most useful for: ___",
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           },
           {
@@ -175,21 +175,21 @@ For a post-independence SAQ:
           {
             question: 'An SAQ asks: "Identify ONE economic strategy adopted by a newly independent state between 1945 and 1990, and explain how it shaped that state\'s development trajectory." Which response would score highest?',
             options: [
-              "South Korea adopted state-coordinated export-led growth from 1962 onward, channeling capital through chaebols (Hyundai, Samsung, LG) for global markets, which produced rapid industrialization and lifted per capita GDP from below \\$100 in 1960 to over \\$5,000 by 1989",
-              "South Korea adopted some kind of economic strategy at some point during the Cold War period that helped its economy grow over time during the late 20th century period in some way",
-              "South Korea was an East Asian country during the Cold War era and developed economically over time during the late 20th century in a way that is generally well known to scholars of Asian history",
-              "South Korea is a famous Asian country and its economy is widely recognized as having grown significantly during the period from 1962 to the end of the 20th century in important ways"
+              "South Korea adopted state-guided export-led growth from 1962, channeling capital through chaebols such as Hyundai, which lifted per capita GDP from under \\$200 in 1960 to over \\$5,000 by 1989",
+              "South Korea adopted state-guided export-led growth from 1962 under Park Chung-hee, and its economy became one of the most successful in Asia by the end of the twentieth century",
+              "South Korea adopted import substitution behind high tariffs from 1962, which shielded chaebols such as Hyundai from foreign competition and lifted per capita GDP from under \\$200 in 1960 to over \\$5,000 by 1989",
+              "South Korea grew rapidly after 1962 because it received large amounts of U.S. aid during the Cold War, which explains why its per capita income rose so quickly by 1989"
             ],
             correctAnswer: 0,
-            explanation: 'AP SAQ scoring rewards specific name + date + mechanism + outcome. Vague gestures earn no credit even if technically true.'
+            explanation: 'AP SAQ scoring rewards specific name + date + mechanism + outcome. Naming the strategy without explaining how it shaped development, misidentifying the strategy as import substitution, or crediting aid alone does not earn the "explain" point.'
           },
           {
             question: 'Which short answer best demonstrates AP "complexity" by complicating a single-cause post-independence argument?',
             options: [
-              "Although Indian economic stagnation in the 1980s is often blamed on the License Raj, scholars note that India\'s political stability, durable democracy, and skilled English-speaking workforce — products of the same period — were preconditions for the 1991 liberalization that produced rapid post-1991 growth",
-              "Indian economic stagnation in the 1980s was caused entirely by the License Raj and there were no other contributing factors and no countervailing benefits of any kind from the same period of state-led industrial planning",
-              "Indian economic stagnation in the 1980s had no connection to the License Raj and was caused entirely by external factors unrelated to Indian economic policy choices made by Nehru and his successors",
-              "Indian economic stagnation in the 1980s was a myth and India experienced rapid economic growth throughout the period from independence to liberalization in 1991 without any meaningful slowdowns at all"
+              "Although India's 1980s slowdown is often blamed on the License Raj, that era's stable democracy and English-speaking workforce helped enable post-1991 growth",
+              "India's 1980s slowdown was caused entirely by the License Raj, and state-led planning in that period produced no countervailing benefits for the economy of any kind",
+              "India's 1980s slowdown had no connection to the License Raj and was caused entirely by outside factors such as oil prices, unrelated to Indian policy choices after 1947",
+              "India's 1980s slowdown is largely a myth, since India grew rapidly from independence to the 1991 liberalization without any significant slow period"
             ],
             correctAnswer: 0,
             explanation: 'The "complexity" point requires complicating a dominant narrative. Naming both the costs of the License Raj AND the institutional preconditions it produced for later growth is the canonical AP complexity move.'

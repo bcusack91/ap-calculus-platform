@@ -126,7 +126,7 @@ export const whGlobalizationTechPart7Data = {
             options: [
               "The 1971 'Nixon Shock,' in which the U.S. unilaterally ended dollar-gold convertibility, pushing the world toward floating exchange rates",
               "The 1994 entry into force of NAFTA, which committed the United States, Canada, and Mexico to a trilateral free-trade agreement covering goods, services, and investment",
-              "The 1995 founding of the WTO, which replaced GATT as the binding rule-making body for international trade in goods, services, and intellectual property",
+              "The 1995 founding of the WTO, which replaced GATT as the binding rule-making body for the exchange of goods, services, and intellectual property",
               "The 2008 Global Financial Crisis, which began with the collapse of subprime mortgage-backed securities held by U.S. and European banks during the crisis period"
             ],
             correctAnswer: 0,
@@ -197,10 +197,10 @@ export const whGlobalizationTechPart7Data = {
           {
             question: 'A historian writes: "Post-1945 globalization was both the product of long-term institutional design and a contingent product of specific technological breakthroughs." Which response best supports both halves with AP-quality reasoning?',
             options: [
-              "The 1944 Bretton Woods institutions designed a stable monetary order that enabled trade, but specific technologies — Malcom McLean\'s 1956 container ship, Tim Berners-Lee\'s 1989 Web, Steve Jobs\'s 2007 iPhone — produced sharply different forms of globalization within the same institutional framework",
-              "Post-1945 globalization was driven entirely by Bretton Woods institutional design and there were no contingent technological breakthroughs that meaningfully affected the form globalization took during the period from 1945 to today",
-              "Post-1945 globalization was driven entirely by specific technological breakthroughs and there were no meaningful institutional foundations from Bretton Woods that constrained or enabled the form globalization took during the period",
-              "Post-1945 globalization was an inevitable historical event with no contingent dimension at all and would have produced identical outcomes regardless of which institutions or technologies emerged in any decade"
+              "A stable monetary order from Bretton Woods enabled trade, but technologies such as the 1956 container ship, the 1989 Web, and the 2007 iPhone shaped distinct forms of globalization",
+              "Bretton Woods design alone drove post-1945 globalization, so breakthroughs such as containers did little to shape the form globalization took",
+              "Technological breakthroughs alone drove post-1945 globalization, since Bretton Woods institutions did little to enable or constrain trade and investment",
+              "Post-1945 globalization was inevitable, taking the same form whichever institutions, technologies, or leaders emerged in any decade after the war"
             ],
             correctAnswer: 0,
             explanation: 'Both/and AP framing: institutional foundation (Bretton Woods) PLUS contingent breakthroughs (container, Web, iPhone). High-scoring complexity.'
@@ -208,10 +208,10 @@ export const whGlobalizationTechPart7Data = {
           {
             question: 'Which best summarizes the post-1945 transformation of the world economy in a way that an AP reader would credit as a "complexity" claim?',
             options: [
-              "Post-1945 globalization was driven by U.S.-led institutions and dollar dominance and accelerated by containers and the Internet, but its distributive effects were sharply uneven: ~800 million Chinese left poverty while many Rust Belt regions in the U.S. and Europe saw decades of wage stagnation and deindustrialization",
-              "Post-1945 globalization had identical distributive effects on every region of the world and produced uniform economic outcomes across all major economies during the period from 1945 to the present day in every region",
-              "Post-1945 globalization was entirely shaped by either the United States or the Soviet Union and had no autonomous economic, technological, or institutional dynamics of its own during the period from 1945 to today",
-              "Post-1945 globalization was a fully democratic and equitable economic system with no winners or losers in any region of the world during the entire period from 1945 to the present day across all major economies"
+              "U.S.-led institutions and new technologies drove globalization, but gains were uneven, with about 800 million Chinese leaving poverty and Rust Belts deindustrializing",
+              "Post-1945 globalization produced nearly identical gains in every region, giving all major economies similar rates of growth, wage increases, and poverty reduction since 1945",
+              "Post-1945 globalization was shaped entirely by the United States and the Soviet Union, leaving it without economic, technological, or institutional dynamics of its own",
+              "Post-1945 globalization produced no clear winners or losers, since its benefits were shared equally among workers, consumers, and capital owners in every region of the world"
             ],
             correctAnswer: 0,
             explanation: 'AP "complexity" rewards naming both the shared causes (institutions + technology) and the divergent distributive effects (China up, Rust Belt down).'

@@ -85,7 +85,7 @@ Changes:
           {
             question: 'Which combination correctly pairs a 20th-century atrocity with the international legal body created to prosecute it?',
             options: [
-              'The Holocaust → International Criminal Tribunal for Rwanda (ICTR), founded in November 1994 by a UN Security Council resolution after the Rwandan genocide',
+              'The Holocaust → International Criminal Tribunal for Rwanda (ICTR); the Armenian Genocide → International Criminal Court (ICC)',
               'The Rwandan Genocide → International Criminal Tribunal for Rwanda (ICTR); the Bosnian War → International Criminal Tribunal for the former Yugoslavia (ICTY)',
               'The Armenian Genocide → International Criminal Court (ICC), founded in 2002 by the Rome Statute for general international prosecution of genocide and war crimes',
               'The Cambodian Genocide → Nuremberg Trials, held in 1945 and 1946 in postwar Germany to prosecute the senior leadership of the Khmer Rouge under Pol Pot'
@@ -98,8 +98,8 @@ Changes:
             options: [
               'It established the term in popular journalism in the early twentieth century but had no impact on international law during or after the Second World War',
               'It provided a legal vocabulary that directly shaped the 1948 UN Genocide Convention and the postwar architecture of human-rights prosecution',
-              'It was rejected by the United Nations and never adopted into any binding international agreement during the postwar period or thereafter',
-              'It applied only to Nazi crimes against Jews and explicitly excluded any other 20th-century case of mass killing or state violence against any group'
+              'It was rejected by the United Nations, and the word genocide never entered any binding international agreement in the postwar period',
+              'It applied only to Nazi crimes against Jews, so later tribunals had to invent new legal terms for Rwanda, Bosnia, and Cambodia'
             ],
             correctAnswer: 1,
             explanation: 'Lemkin\'s coining → 1948 Convention → modern tribunals is the canonical legal-history chain. This is high-yield AP knowledge.'
@@ -169,10 +169,10 @@ Changes:
           {
             question: 'Which thesis would most likely earn the complexity point on a long-essay prompt about the relationship between mass atrocities and the development of international law in the 20th century?',
             options: [
-              'International law had no relationship to mass atrocities and developed entirely from 18th-century Enlightenment philosophy without reference to actual events of state-organized violence',
-              'Mass atrocities of the early century (Armenia 1915) produced almost no legal response, but the Holocaust generated the Nuremberg Principles, the UDHR, and the Genocide Convention, which in turn supported the post-Cold-War tribunals (ICTY, ICTR) and the permanent ICC, even as selective enforcement reveals continuing tension between sovereignty and accountability',
-              'International law was fully developed before any 20th-century atrocity occurred, and all senior perpetrators of genocide were prosecuted by the same permanent court from 1900 onward',
-              'International law cannot meaningfully respond to mass atrocity, and no postwar legal instrument has had any prosecutorial effect on any senior official involved in any 20th-century campaign of state violence'
+              'International law owed nothing to mass atrocities and developed from Enlightenment philosophy alone, without any reference to the actual state violence of the 20th century',
+              'Armenia drew little legal response, but the Holocaust produced Nuremberg and the Genocide Convention, then the ICTY, ICTR, and ICC, though enforcement stayed selective',
+              'International law was fully formed before 1900, and a single permanent court tried every senior perpetrator of genocide in Armenia, Cambodia, and Rwanda',
+              'International law has never responded to mass atrocity effectively, since no postwar tribunal or treaty has ever led to the conviction of any senior official for genocide'
             ],
             correctAnswer: 1,
             explanation: 'Complexity is earned by acknowledging both the institutional achievement (Nuremberg → ICC chain) AND the continuing tension (selective enforcement, sovereignty vs. accountability). This is the AP "qualified" thesis.'
@@ -180,10 +180,10 @@ Changes:
           {
             question: 'A student writes: "The Rwandan Genocide proves that low-tech killing can be as devastating as industrial killing." Which evidence MOST DIRECTLY supports the claim?',
             options: [
-              'The use of mass radio (RTLM) to mobilize Hutu civilians, combined with machetes as the primary weapon, produced roughly 800,000 deaths in approximately 100 days — among the fastest killing rates in modern history',
-              'The Rwandan Genocide used a network of industrial death camps with rail logistics and gas chambers identical to those used by the Nazi state during the Second World War',
-              'The Rwandan Genocide caused fewer deaths than the Armenian Genocide and is therefore the smallest case of 20th-century mass killing studied by professional historians',
-              'The Rwandan Genocide had no organized state or media component and was the result of purely spontaneous neighbor-on-neighbor disputes without any external mobilization'
+              'RTLM radio mobilized Hutu civilians who killed mainly with machetes, causing roughly 800,000 deaths in about 100 days',
+              'Rwanda\'s killers relied on industrial death camps with rail logistics and gas chambers, copying the methods of the Nazi state',
+              'Rwanda\'s death toll was smaller than that of any other 20th-century genocide, showing that low-tech killing has limited reach',
+              'Rwanda\'s violence arose from spontaneous neighbor disputes, with no organized state, militia, or media mobilization behind it'
             ],
             correctAnswer: 0,
             explanation: 'The 800,000 / 100 days figure with RTLM + machete method is the canonical evidence for the "low-tech can equal industrial-scale" claim. This is high-yield evidence for AP.'

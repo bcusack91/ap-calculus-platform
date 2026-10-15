@@ -86,21 +86,21 @@ export const whChallenges21stCenturyPart1Data = {
           {
             question: 'Which best characterizes the post-9/11 "Global War on Terror" launched by the United States after September 11, 2001?',
             options: [
-              'A multi-front, two-decade military and intelligence campaign that included the 2001 invasion of Afghanistan, the 2003 invasion of Iraq, drone strikes in Pakistan and Yemen, and the 2011 killing of Osama bin Laden, ending with the 2021 U.S. withdrawal from Afghanistan',
-              'A single, brief military operation that ended in 2002 after the U.S. successfully captured Osama bin Laden in Afghanistan and dismantled all global jihadist networks within months of the September 11 attacks',
-              'A purely diplomatic initiative that involved no military operations of any kind in Afghanistan, Iraq, Pakistan, Yemen, or any other country during the entire two decades following the September 11 attacks',
-              'A NATO-only ground war confined entirely to European territory that did not involve any U.S. military operations in Afghanistan, Iraq, or any country in the Middle East during the two decades after September 11'
+              'A two-decade campaign spanning the invasions of Afghanistan (2001) and Iraq (2003), drone strikes in Pakistan and Yemen, and the 2011 killing of bin Laden',
+              'A brief operation that ended in 2002 after U.S. forces captured Osama bin Laden (at Tora Bora) and broke up most of the global jihadist networks within months',
+              'A mainly diplomatic campaign of sanctions and UN resolutions, with U.S. military action limited to a few short air strikes on training camps in Afghanistan in late 2001',
+              'A NATO ground war fought mainly in the Balkans and Central Asia, with the U.S. providing air support but no ground troops in Afghanistan, Iraq, or the wider Middle East'
             ],
             correctAnswer: 0,
-            explanation: 'The Global War on Terror was a multi-front, two-decade campaign spanning Afghanistan, Iraq, Pakistan, Yemen, and beyond.'
+            explanation: 'The Global War on Terror was a multi-front, two-decade campaign spanning Afghanistan, Iraq, Pakistan, Yemen, and beyond; it wound down with the 2021 U.S. withdrawal from Afghanistan, ten years after bin Laden was killed in Pakistan.'
           },
           {
             question: 'Which best explains why 21st-century challenges are often called "transnational" rather than "international" challenges?',
             options: [
-              'They cross national borders without being controlled by any single state — networks like al-Qaeda, viruses like SARS-CoV-2, and emissions causing climate change all operate independently of any state\'s authority and resist resolution by state-to-state diplomacy alone',
-              'They are confined entirely within single nation-states with no spillovers across borders into other countries during the entire period from 2001 to the present day across all major regions of the world',
-              'They are managed entirely through formal state-to-state diplomatic channels at the United Nations with no role for non-state actors or cross-border phenomena of any kind during the 21st century',
-              'They take place exclusively on the high seas in international waters and have no presence in any nation-state\'s domestic territory during the entire period from 2001 to the present day in any region'
+              'They cross borders beyond any one state\'s control, as networks like al-Qaeda, viruses like SARS-CoV-2, and climate-changing emissions resist state-to-state diplomacy alone',
+              'They arise mainly inside single states, and they become international only when a government asks the United Nations to send peacekeepers or aid across a border',
+              'They are managed mainly through formal channels at the United Nations, where governments, diplomats, and courts negotiate with little role for non-state networks',
+              'They occur mainly in stateless spaces such as the high seas and outer space, so they rarely affect daily life inside the domestic territory of any particular country'
             ],
             correctAnswer: 0,
             explanation: '"Transnational" = crossing borders independent of state control. AP prompts use this distinction frequently.'
@@ -170,10 +170,10 @@ export const whChallenges21stCenturyPart1Data = {
           {
             question: 'Which response best demonstrates AP comparison skill in contrasting the dominant security threats of the Cold War era with those of the 21st century?',
             options: [
-              'Cold War threats centered on state-to-state nuclear confrontation between two superpower blocs, while 21st-century threats are more transnational and networked: stateless terrorism (al-Qaeda, ISIS), planetary climate change, global pandemics (COVID-19), and U.S.-China rivalry alongside Russian revanchism',
-              'Cold War threats and 21st-century threats are identical in form and substance with no meaningful differences in actors, scale, or required policy responses across the entire period from 1945 to the present day',
-              'Cold War threats centered on stateless terrorism while 21st-century threats center on state-to-state nuclear confrontation, reversing the actual historical pattern of security challenges across the two periods',
-              'Cold War threats and 21st-century threats both centered exclusively on environmental challenges with no security or military dimension of any kind in either period across the entire post-1945 era'
+              'Cold War threats centered on nuclear standoff between two state blocs, while 21st-century threats are more transnational, such as terrorism, climate change, pandemics, and great-power rivalry',
+              'Cold War and 21st-century threats are essentially the same, since both periods have centered on a bipolar nuclear standoff between the United States and a single rival superpower bloc in Europe',
+              'Cold War threats centered on stateless terrorist networks, while 21st-century threats center on a nuclear standoff between two blocs, the reverse of the earlier pattern',
+              'Cold War and 21st-century threats both centered on environmental dangers, with military rivalry between great powers playing only a minor role in either period'
             ],
             correctAnswer: 0,
             explanation: 'Cold War = bipolar state nuclear standoff; 21st century = multi-polar, transnational, networked threats. The shift is the canonical AP framing.'
@@ -181,13 +181,13 @@ export const whChallenges21stCenturyPart1Data = {
           {
             question: 'Which response best explains why climate change is considered the defining "collective action problem" of the 21st century?',
             options: [
-              'Greenhouse gas emissions from any country contribute to warming felt by every country, but no single country can solve the problem alone, and each country has incentives to free-ride on others\' emission cuts — making cooperation hard despite shared interest in stabilizing the climate',
-              'Climate change is contained entirely within the borders of the country emitting greenhouse gases and produces no measurable spillovers of any kind into any other country at any point during the 21st century',
-              'Climate change can be solved by any single country acting alone without any cooperation from other major emitters in any region of the world during the 21st century period of accelerating warming',
-              'Climate change is a problem only for poor countries and produces no measurable effects on rich countries or middle-income countries in any region of the world during the 21st century period'
+              'Every country\'s emissions warm the whole planet, yet no country can fix it alone, and each is tempted to free-ride on others\' emission cuts',
+              'Climate change mainly affects the country that emits the gases, so each government has a strong incentive to cut its own emissions without any need for treaties',
+              'Climate change could be solved by the largest emitter acting alone, since its cuts would be large enough to stabilize the climate without help from other countries',
+              'Climate change mainly harms poor countries, so rich countries face little pressure to cooperate, and the problem is one of foreign aid rather than shared action'
                 ],
             correctAnswer: 0,
-            explanation: 'The collective-action framing — emissions globalize while incentives to free-ride localize — is the canonical AP explanation for why climate cooperation is hard.'
+            explanation: 'The collective-action framing — the costs of emissions are shared globally while the costs of cutting them fall on each country, so each is tempted to free-ride — is the canonical AP explanation for why climate cooperation is hard.'
           }
         ]
       }

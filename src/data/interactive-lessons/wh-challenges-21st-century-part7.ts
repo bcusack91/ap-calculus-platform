@@ -121,10 +121,10 @@ export const whChallenges21stCenturyPart7Data = {
           {
             question: 'Which event most directly marks the start of Phase 3 of the 21st century in the framework presented in this lesson?',
             options: [
-              "The COVID-19 pandemic that the WHO declared in March 2020 and that triggered global lockdowns, supply chain disruption, and the rapid development of mRNA vaccines as the defining shock of the post-2020 phase",
-              "The 2008 Global Financial Crisis, which triggered a decade of austerity politics, populist mobilization, and erosion of the post-1945 liberal-internationalist consensus across major Western democracies",
-              "The September 11 attacks, which triggered the U.S. invasions of Afghanistan and Iraq and shaped the post-9/11 unipolar moment of the early 21st century during the period from 2001 through 2008",
-              "The 2015 Paris Agreement on climate change, which committed signatories to limit warming to well below 2°C through nationally determined contributions across the major emitter economies of the world"
+              "The COVID-19 pandemic, declared by the WHO in March 2020, which brought global lockdowns, supply chain disruption, and the rapid development of mRNA vaccines",
+              "The 2008 Global Financial Crisis, which brought a decade of austerity politics, populist mobilization, and erosion of the post-1945 liberal consensus",
+              "The September 11 attacks, which led to the U.S. invasions of Afghanistan and Iraq and shaped the unipolar moment of the early 21st century",
+              "The 2015 Paris Agreement, which committed signatories to limit warming to well below 2°C through nationally determined contributions"
             ],
             correctAnswer: 0,
             explanation: 'In the framework here, COVID-19 (2020) is the canonical phase break opening Phase 3, joined later by Russia-Ukraine 2022 and ChatGPT 2022.'
@@ -194,10 +194,10 @@ export const whChallenges21stCenturyPart7Data = {
           {
             question: 'A historian writes: "The 21st century is best understood as both the continuation of post-1945 globalization and the contingent product of new shocks like 9/11, the GFC, and COVID-19." Which response best supports both halves with AP-quality reasoning?',
             options: [
-              "Post-1945 globalization persisted in the 21st century through the dollar system, WTO, and supply chains, but contingent shocks reshaped its trajectory: 9/11 launched the War on Terror; the 2008 GFC discredited pre-crisis economic governance; COVID-19 exposed supply chain fragility; Russia-Ukraine 2022 ended the post-Cold-War European peace",
-              "The 21st century was driven entirely by post-1945 globalization patterns and there were no contingent shocks like 9/11, the GFC, or COVID-19 that meaningfully affected its trajectory in any region of the world during the period",
-              "The 21st century was driven entirely by contingent shocks and there was no meaningful continuity with post-1945 globalization patterns during the period from 2001 to today in any major region of the world",
-              "The 21st century was an inevitable historical period with no contingent shocks and no continuities with post-1945 globalization, producing identical outcomes regardless of any specific events that occurred"
+              "Globalization persisted through the dollar system, the WTO, and supply chains, but shocks such as 9/11, the 2008 crisis, COVID-19, and Russia's 2022 invasion of Ukraine reshaped it",
+              "Post-1945 globalization patterns alone drove the 21st century, so shocks such as 9/11, the 2008 crisis, and COVID-19 did little to change its overall trajectory in any major world region",
+              "Contingent shocks alone drove the 21st century, so the dollar system, the WTO, and global supply chains inherited from post-1945 globalization mattered little after 2001",
+              "The 21st century was inevitable, so its outcomes would have been identical regardless of 9/11, the 2008 crisis, or COVID-19, and regardless of post-1945 institutions"
             ],
             correctAnswer: 0,
             explanation: 'Both/and AP framing: post-1945 continuity (dollar, WTO, supply chains) PLUS contingent shocks (9/11, GFC, COVID, Ukraine). High-scoring complexity.'
@@ -205,10 +205,10 @@ export const whChallenges21stCenturyPart7Data = {
           {
             question: 'Which best summarizes the 21st century in a way that an AP reader would credit as a "complexity" claim?',
             options: [
-              "The 21st century has produced both deepening global integration (Chinese WTO accession, mRNA vaccines, generative AI) and powerful backlash (right-populism, Brexit, Trump, Russia-Ukraine), making the period less a simple story of progress or decline than a contested transformation with sharply uneven distributive and geopolitical effects",
-              "The 21st century has produced uniform global progress with no meaningful backlash to globalization in any major region of the world during the entire period from 2001 to the present day across all democracies and economies",
-              "The 21st century has produced uniform decline across all dimensions of human life in all regions of the world during the entire period from 2001 to the present day in every major economy and political system globally",
-              "The 21st century has had no meaningful integration, backlash, distributive effects, or geopolitical change of any kind during the entire period from 2001 to the present day in any major region or political system in the world"
+              "The century brought both deeper integration (China in the WTO, mRNA vaccines, AI) and backlash (populism, Brexit, war in Ukraine), with uneven effects",
+              "The 21st century has brought steady global progress, with little backlash against globalization in any region and gains shared broadly across democracies and economies",
+              "The 21st century has brought steady global decline, with living standards, health, and freedom (by every major index) falling in nearly every region since 2001",
+              "The 21st century has brought little real change, since patterns of integration, inequality, and great-power politics look much as they did at the end of the Cold War"
             ],
             correctAnswer: 0,
             explanation: 'AP "complexity" rewards holding both integration AND backlash in the same frame, with attention to uneven distributive and geopolitical effects.'

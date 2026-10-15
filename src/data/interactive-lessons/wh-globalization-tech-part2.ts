@@ -78,10 +78,10 @@ export const whGlobalizationTechPart2Data = {
           {
             question: 'Which best describes the post-1980 transformation of multinational corporations?',
             options: [
-              'A shift from vertically integrated firms producing mostly in their home country toward globally distributed supply chains in which design, components, and assembly are sourced from different countries based on cost and capability',
-              'A shift away from international production back to fully domestic manufacturing in home countries with no involvement in foreign component sourcing or foreign assembly operations after 1980',
-              'A shift toward state ownership of all multinational corporations by their home governments with elimination of private shareholder ownership of large firms operating across borders after 1980',
-              'A shift away from manufacturing entirely toward purely financial firms with no physical production of goods of any kind across all major multinational firms after 1980'
+              'A shift from vertically integrated firms producing at home toward global supply chains sourcing design, components, and assembly from different countries',
+              'A shift away from foreign production back to domestic manufacturing in home countries, as firms ended foreign component sourcing and closed overseas assembly plants after 1980',
+              'A shift toward state ownership of multinational firms, as home governments bought out the shareholders, boards, and founders of large cross-border companies',
+              'A shift away from manufacturing toward purely financial firms, as major multinationals sold off their factories and stopped producing physical goods'
             ],
             correctAnswer: 0,
             explanation: 'Post-1980 MNCs are defined by globally unbundled production. Apple is the canonical example: U.S. design, Asian components, Chinese assembly, global sales.'
@@ -157,10 +157,10 @@ export const whGlobalizationTechPart2Data = {
           {
             question: 'Which response best demonstrates AP "complexity" in addressing whether post-1980 globalization "helped" or "hurt" workers?',
             options: [
-              'Post-1980 globalization had divergent distributive effects: consumers gained from cheaper goods, workers in offshoring destinations gained manufacturing jobs, workers in deindustrializing regions lost stable employment and wages, and capital owners gained from rising returns',
-              'Post-1980 globalization helped all workers everywhere with no negative distributive effects of any kind on any group of workers in any region of the world during the entire period from 1980 to the present day',
-              'Post-1980 globalization hurt all workers everywhere with no positive effects on any group of workers in any region of the world during the entire period from 1980 to the present day',
-              'Post-1980 globalization had no measurable distributive effects on any group of workers anywhere and produced no significant changes in wages, employment, or returns to capital in any major economy'
+              'Effects diverged, as consumers got cheaper goods, offshoring hubs gained factory jobs, deindustrialized regions lost stable work, and capital gained',
+              'Post-1980 globalization helped nearly all workers everywhere, since cheaper goods, new export jobs, and rising wages lifted rich and poor countries alike',
+              'Post-1980 globalization hurt nearly all workers everywhere, since offshoring drove down wages in rich countries while factory jobs abroad paid too little to help',
+              'Post-1980 globalization had little measurable effect on workers, since changes in wages and employment came almost entirely from domestic policy and automation'
             ],
             correctAnswer: 0,
             explanation: 'AP "complexity" rewards distinguishing among groups: consumers, offshoring-destination workers, deindustrializing workers, and capital owners had different experiences.'
@@ -168,13 +168,13 @@ export const whGlobalizationTechPart2Data = {
           {
             question: 'Which best explains why the 2008 Global Financial Crisis was global rather than confined to the United States, where the subprime mortgage market originated?',
             options: [
-              'European, Asian, and Middle Eastern banks held trillions in U.S. mortgage-backed securities and credit derivatives, so when U.S. housing prices fell, balance sheets across the entire global banking system became impaired',
-              'The 2008 Global Financial Crisis was actually confined entirely to the U.S. economy and produced no measurable spillovers into the European, Asian, or any other major regional banking system at any point',
-              'European, Asian, and Middle Eastern banks held no U.S. financial assets in 2008 and were entirely insulated from any spillovers from the U.S. subprime mortgage market collapse during the crisis',
-              'The 2008 Global Financial Crisis was caused entirely by the European Central Bank without any role for the U.S. subprime mortgage market or U.S. financial regulators in any aspect of the crisis'
+              'European, Asian, and Middle Eastern banks held trillions in U.S. mortgage-backed securities, so falling U.S. home prices impaired bank balance sheets worldwide',
+              'The crisis began in China, whose collapsing export sector cut demand for U.S. goods and then spread heavy losses to European and American banks',
+              'The crisis began in the eurozone, where Greek debt defaults in 2008 triggered bank failures that later spread to U.S. mortgage lenders',
+              'The crisis spread through trade alone, as U.S. consumers stopped buying cars, electronics, and clothing while foreign banks held few U.S. assets'
             ],
             correctAnswer: 0,
-            explanation: '2008 was global because dollar-denominated U.S. mortgage assets were held throughout global banking. This is the canonical AP example of financial globalization\'s contagion risks.'
+            explanation: '2008 was global because dollar-denominated U.S. mortgage assets were held throughout global banking. This is the canonical AP example of financial globalization\'s contagion risks. The Greek debt crisis came later, in 2009–2010.'
           }
         ]
       }

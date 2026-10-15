@@ -72,7 +72,7 @@ export const whColdWarDecolonizationPart2Data = {
           {
             question: 'Which event most directly demonstrated the limits of Soviet enforcement of bloc discipline in Eastern Europe before 1989?',
             options: [
-              'The 1956 Hungarian Revolution and the 1968 Prague Spring, both crushed by Warsaw Pact military intervention to enforce single-party rule',
+              'The 1956 Hungarian Revolution and the 1968 Prague Spring, both crushed by Warsaw Pact military intervention to restore single-party rule',
               'The 1955 Bandung Conference of newly independent African and Asian states meeting in Indonesia to discuss non-alignment between the superpowers',
               'The 1962 Cuban Missile Crisis confrontation between the United States and the Soviet Union over nuclear missiles deployed in Cuba',
               'The 1963 signing of the Limited Nuclear Test Ban Treaty between the United States, the Soviet Union, and the United Kingdom'
@@ -84,12 +84,12 @@ export const whColdWarDecolonizationPart2Data = {
             question: 'Which decolonization case best illustrates the "revolutionary war" path rather than the "negotiated transfer" path?',
             options: [
               "India in 1947, where mass civil resistance led by Gandhi and Nehru ended in a negotiated British constitutional transfer of power and partition",
-              "Algeria from 1954 to 1962, where the FLN waged an armed insurgency against French rule and a settler population that produced roughly 500,000 deaths",
+              "Algeria from 1954 to 1962, where the FLN waged an armed insurgency against French rule and a settler population in a war that killed hundreds of thousands",
               "Ghana in 1957, where Kwame Nkrumah's Convention People's Party led nonviolent organizing that culminated in a peaceful British constitutional handover",
               "Jamaica in 1962, where the British government oversaw a peaceful constitutional transition without any extended armed conflict between colonial forces and locals"
             ],
             correctAnswer: 1,
-            explanation: 'Algeria is the textbook revolutionary war: armed FLN insurgency, settler population, brutal counterinsurgency, eventual independence at high cost. India and Ghana are the negotiated-transfer template.'
+            explanation: 'Algeria is the textbook revolutionary war: armed FLN insurgency, settler population, brutal counterinsurgency, eventual independence at high cost (estimates of Algerian deaths range from roughly 300,000 to the Algerian government\'s figure of 1.5 million). India and Ghana are the negotiated-transfer template.'
           }
         ]
       }
@@ -156,10 +156,10 @@ export const whColdWarDecolonizationPart2Data = {
           {
             question: 'A historian argues that "the Vietnam War was simultaneously a war of decolonization and a Cold War proxy war." Which statement most strongly supports both halves of that claim?',
             options: [
-              'The conflict began as Vietnamese nationalist resistance to French colonial rule (1946–54), and after 1954 became a U.S.-USSR/PRC proxy struggle in which Cold War superpowers backed opposing Vietnamese sides',
-              'The conflict was purely an American intervention against communism with no meaningful colonial origin or any Vietnamese nationalist content shaping the political objectives of the Vietnamese leadership',
-              'The conflict was purely a colonial-era war between France and Vietnam that ended at Dien Bien Phu in 1954 and never had any post-1954 dimension involving the Cold War or its superpowers',
-              'The conflict had no superpower involvement on either side and was conducted entirely between Vietnamese factions without any external military aid or any external diplomatic engagement at all'
+              'It began as resistance to French rule (1946–54), then became a proxy war as the U.S. and the USSR and PRC backed rival sides',
+              'It was mainly an American war against communism, since the Viet Minh had no nationalist goals and fought only as a Soviet proxy',
+              'It was mainly a colonial war between France and Vietnam (1946–54) that ended at Dien Bien Phu, with later fighting a separate civil conflict',
+              'It was mainly a civil war between Vietnamese factions, as neither superpower supplied weapons or advisers to either side at any stage of the fighting'
             ],
             correctAnswer: 0,
             explanation: 'Both/and reasoning is the AP move. Vietnam was a decolonization war (against French rule) AND a Cold War proxy (after 1954, U.S./USSR/PRC backing opposing sides). Single-cause answers miss the complexity point.'
@@ -167,10 +167,10 @@ export const whColdWarDecolonizationPart2Data = {
           {
             question: 'Which best explains why the Cuban Missile Crisis (1962) is treated as a Cold War turning point on the AP exam?',
             options: [
-              'It produced direct combat between U.S. and Soviet ground forces in the Caribbean, ending in clear superpower military victory and the immediate dissolution of the Soviet bloc',
+              'It produced direct combat between U.S. and Soviet forces in the Caribbean, ending without any treaty and collapsing Soviet influence in Latin America',
               'It pushed the world to the brink of nuclear war and led to the installation of the U.S.-Soviet "hotline" and the 1963 Limited Test Ban Treaty, marking a shift toward détente',
-              'It expanded the Cold War to Africa for the first time and ended European decolonization within a decade by replacing colonial governments with democratic regimes',
-              'It removed Fidel Castro from power in Cuba in October 1962 and converted Cuba into a long-term U.S. ally for the remainder of the Cold War period'
+              'It brought the Cold War to Africa for the first time, as both superpowers began arming rival independence movements across the whole African continent during that very same year',
+              'It removed Fidel Castro from power in October 1962 and turned Cuba into a long-term U.S. ally for the rest of the Cold War'
             ],
             correctAnswer: 1,
             explanation: 'The crisis matters because it produced new arms-control arrangements (hotline, 1963 LTBT) and a partial shift toward détente. The other answers describe events that did not happen.'

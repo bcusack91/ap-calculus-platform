@@ -81,10 +81,10 @@ export const whChallenges21stCenturyPart4Data = {
           {
             question: 'Which response best characterizes the 21st-century U.S.-China rivalry as it has developed since roughly 2017?',
             options: [
-              'A multi-dimensional rivalry combining trade tariffs, semiconductor export controls, technology competition (5G, AI), military positioning in the South China Sea and around Taiwan, and Chinese-financed Belt and Road Initiative infrastructure across multiple continents',
-              'A purely military rivalry confined entirely to the South China Sea with no trade, technology, or diplomatic dimensions of any kind during the period from 2017 through the present day in any region',
-              'A purely diplomatic rivalry without any meaningful trade, technology, military, or infrastructure-investment dimensions during the entire period from 2017 through the present day in any region',
-              'A trade-only rivalry that ended completely in 2018 after the initial round of tariffs without any further escalation in technology, military, or infrastructure dimensions during the period from 2018 onward'
+              'A rivalry combining tariffs, chip export controls, tech competition (5G, AI), military moves near Taiwan and the South China Sea, and China\'s Belt and Road lending',
+              'A mainly military rivalry confined to the South China Sea, with trade, technology, and investment ties between the two countries continuing much as they had before 2017',
+              'A mainly diplomatic rivalry over UN votes and human-rights resolutions, with little conflict over trade, technology, military power, or infrastructure investment',
+              'A trade-only rivalry that ended in 2018 after the first round of tariffs (on steel and aluminum), with no later escalation over technology or military power'
             ],
             correctAnswer: 0,
             explanation: 'The post-2017 U.S.-China rivalry is multi-dimensional: trade + tech + military + influence projection.'
@@ -92,10 +92,10 @@ export const whChallenges21stCenturyPart4Data = {
           {
             question: "Which best characterizes the 2019–20 Hong Kong protests?",
             options: [
-              "Mass protests against a proposed extradition bill that would have allowed transfers to mainland China expanded into broader pro-democracy demonstrations; Beijing imposed a National Security Law in June 2020 that effectively ended large-scale protest in the territory",
-              "Hong Kong residents staged mass protests in 2019–20 to demand closer political integration with mainland China and the imposition of a National Security Law to enhance public order in the territory's neighborhoods",
-              "Hong Kong residents held no significant protests during 2019–20 and the territory remained politically calm throughout the entire period from 2019 through the imposition of the 2020 National Security Law",
-              "Hong Kong's 2019–20 protests successfully secured full universal suffrage for the territory and reversed Beijing's encroachments on Hong Kong autonomy by the end of the protest movement during 2020"
+              "Protests against an extradition bill grew into a broad pro-democracy movement until Beijing's June 2020 National Security Law effectively ended mass protest",
+              "Mass protests demanded closer integration with mainland China, and Beijing answered with a 2020 law that expanded local voting rights and autonomy",
+              "Small protests over transit fares faded quickly, and the territory stayed politically calm until a 2020 law gave Hong Kong full universal suffrage",
+              "Mass protests won full universal suffrage for the territory, forcing Beijing to withdraw its 2020 National Security Law within weeks of passing it"
             ],
             correctAnswer: 0,
             explanation: 'Hong Kong 2019–20: extradition bill triggered protests → broader democracy movement → 2020 National Security Law ended large-scale protest.'
@@ -165,10 +165,10 @@ export const whChallenges21stCenturyPart4Data = {
           {
             question: 'Which response best traces the connections among climate change, migration, and populism in the 21st century?',
             options: [
-              "Climate-related crop failures in the Sahel and Central America, combined with the Syrian war and other conflicts, drove mass refugee and economic-migrant flows; receiving-country political backlash against migration mobilized right-populist parties (AfD, FN, FIDESZ); right-populist governments then weakened international climate cooperation (e.g., Trump\'s 2017 Paris withdrawal), creating a feedback loop",
-              "Climate change, migration, and populism are entirely unrelated 21st-century phenomena with no causal connections of any kind among them in any major region of the world during the entire 21st-century period",
-              "Climate change has the only causal direction in the 21st century, and migration and populism have no effect on climate cooperation or international climate policy in any direction during the entire 21st-century period",
-              "Migration is the only causal driver in the 21st century, and climate change and populism are downstream consequences of migration with no independent causal role of their own during the entire 21st-century period"
+              "Climate-linked crop failures and wars such as Syria's drove migration, backlash fed right-populism, and populist governments weakened climate cooperation (the 2017 U.S. Paris exit)",
+              "Climate change, migration, and populism are unrelated 21st-century trends, each with its own separate local causes and no meaningful causal links among them in any region of the world",
+              "Climate change drives migration and populism, but causation runs only one way (from climate to politics), since populist governments have not affected climate policy",
+              "Migration is the sole driver, since climate change and populism are both downstream results of migration with no independent causal role of their own in the 21st century"
             ],
             correctAnswer: 0,
             explanation: 'The full connection — climate → migration → populism → weakened climate cooperation → worsened climate — is the canonical AP feedback-loop framing.'
@@ -176,13 +176,13 @@ export const whChallenges21stCenturyPart4Data = {
           {
             question: 'Which best demonstrates AP "complexity" by showing how 21st-century international institutions performed unevenly on different challenges?',
             options: [
-              'International institutions performed unevenly: the WHO coordinated rapid COVID-19 vaccine development and distribution but was criticized for early deference to China; the UN Security Council was paralyzed on Russia by Russian vetoes after 2022; the IPCC produced authoritative climate science but the Paris Agreement\'s nationally determined contributions remain insufficient',
-              'International institutions performed identically on all 21st-century challenges with no meaningful variation in effectiveness across different policy domains during the entire period from 2000 to the present day',
-              'International institutions had no role in addressing any 21st-century challenge during the entire period from 2000 to the present day in any policy domain across pandemics, climate, security, or trade',
-              'International institutions completely solved every 21st-century challenge with full international cooperation across pandemics, climate, security, and trade during the entire period from 2000 to today'
+              'Results varied, as the WHO led vaccine sharing but was faulted over China, Russian vetoes stalled the Security Council, and Paris pledges fell short',
+              'Institutions performed about equally well on every 21st-century challenge, since the same rules and voting procedures applied to pandemics, climate, security, and trade alike',
+              'Institutions played almost no role in 21st-century challenges, since states handled pandemics, climate, security, and trade entirely through bilateral deals with one another',
+              'Institutions fully solved each major 21st-century challenge, as the WHO, the UN Security Council, and the Paris Agreement all achieved their goals with broad cooperation'
             ],
             correctAnswer: 0,
-            explanation: 'AP "complexity" rewards naming the uneven performance of institutions across challenges (WHO worked on vaccines but missed early COVID; UNSC paralyzed by veto; IPCC strong, Paris weak).'
+            explanation: 'AP "complexity" rewards naming the uneven performance of institutions across challenges: the WHO co-led the COVAX vaccine-sharing effort but was criticized for early deference to China; the Security Council was blocked by Russian vetoes after 2022; and the IPCC produced authoritative science while national Paris pledges remained insufficient.'
           }
         ]
       }

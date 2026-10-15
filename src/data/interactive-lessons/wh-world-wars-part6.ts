@@ -61,21 +61,21 @@ Use evidence the way an AP reader expects: identify the source claim, contextual
           {
             question: 'Which is the strongest refinement of the claim that "Versailles caused WWII"?',
             options: [
-              'Versailles had no meaningful effect on later European politics, German political development, or the rise of interwar nationalism',
-              'Versailles created the grievances that Hitler exploited, but the Depression and the failure of collective security were equally necessary causes',
-              'WWII was caused entirely by Soviet aggression following the Molotov-Ribbentrop Pact and the invasion of eastern Poland in 1939',
-              'WWII was caused entirely by U.S. isolationism and the Senate refusal to ratify the Treaty of Versailles in March 1919'
+              'Versailles was the sole cause, because its reparations alone produced the inflation that brought Hitler to power',
+              'Versailles created grievances Hitler exploited, but the Depression and failed collective security were also necessary causes',
+              'Versailles mattered little, since Soviet aggression after the Nazi-Soviet Pact turned a regional crisis into WWII',
+              'Versailles mattered little, since U.S. isolationism after the Senate rejected the treaty left Europe unable to resist'
             ],
             correctAnswer: 1,
-            explanation: 'AP scoring rewards qualification and multi-causal reasoning rather than monocausal blame.'
+            explanation: 'AP scoring rewards qualification and multi-causal reasoning rather than monocausal blame. German hyperinflation peaked in 1923, a decade before Hitler took power during the Depression.'
           },
           {
             question: 'For an SAQ on WWI propaganda, which response move is most effective?',
             options: [
-              'Make a generic claim about the emotional power of wartime communication without naming any specific poster or campaign',
-              'Identify a specific poster or campaign (e.g., the British "Lord Kitchener Wants You" poster) and explain how it served state recruitment goals',
-              'List as many participating countries and propaganda agencies as possible without explaining audience or rhetorical purpose',
-              'Avoid discussing audience, message, or rhetorical purpose to keep the response analytically neutral and balanced overall'
+              'Make a general claim about the emotional power of wartime posters without naming a specific example',
+              'Identify a specific poster, such as Britain\'s "Lord Kitchener Wants You," and explain how it served recruitment',
+              'List as many agencies, countries, and slogans as possible, then summarize the war\'s main battles',
+              'Describe a specific poster\'s colors and images in close detail without connecting them to state recruitment goals'
             ],
             correctAnswer: 1,
             explanation: 'AP scoring rewards precise sourced evidence (specific poster) tied to explicit reasoning (recruitment, mobilization).'
@@ -94,13 +94,13 @@ Use evidence the way an AP reader expects: identify the source claim, contextual
           {
             question: 'Which is the strongest documentary evidence of WWI causation?',
             options: [
-              'The 1918 Armistice text signed at Compiegne, paired with the formal abdication letter of Kaiser Wilhelm II',
-              'The 1914 Austrian ultimatum to Serbia, paired with the alliance treaties of the Triple Entente and Triple Alliance',
-              'A 1945 atomic test report from the Trinity site in the New Mexico desert and the Potsdam Declaration',
-              'A 1919 League of Nations Covenant draft and the Wilson Fourteen Points address to the U.S. Congress'
+              'The 1918 Armistice signed at Compiegne, paired with the abdication statement of Kaiser Wilhelm II',
+              'The 1914 Austrian ultimatum to Serbia, paired with the prewar alliance treaties',
+              'The 1919 League of Nations Covenant, paired with Wilson\'s Fourteen Points address to Congress',
+              'The 1917 Zimmermann Telegram, paired with Germany\'s resumption of unrestricted submarine warfare'
             ],
             correctAnswer: 1,
-            explanation: 'AP source analysis pairs immediate (ultimatum) and structural (alliances) evidence to explain causation.'
+            explanation: 'AP source analysis pairs immediate (ultimatum) and structural (alliances) evidence to explain causation. The Zimmermann Telegram explains U.S. entry in 1917, not the war\'s outbreak, and the other pairs date from the war\'s end.'
           },
           {
             question: 'Which is the strongest documentary evidence for analyzing WWII Allied war aims?',
@@ -134,15 +134,15 @@ Select the strongest reasoning move, then explain how it improves AP scoring.
         dropdowns: [
           {
             label: 'Turning a fact about reparations into an argument requires adding: ___',
-            options: ['historical reasoning that links it to political consequence', 'more dates only', 'less precision', 'no context']
+            options: ['historical reasoning that links it to political consequence', 'a fuller list of the exact reparations totals and payment dates', 'a longer quotation from the treaty\'s reparations clause', 'a summary of the treaty\'s other territorial terms']
           },
           {
             label: 'A claim supported by one specific named source plus explanation is: ___',
-            options: ['AP-effective', 'too narrow by definition', 'invalid by default', 'never used in DBQs']
+            options: ['AP-effective', 'insufficient', 'off-task', 'overgeneralized']
           },
           {
             label: 'Comparing WWI and WWII propaganda should emphasize: ___',
-            options: ['shared mobilization purpose with different ideological framing', 'identical messages in both wars', 'only artistic style', 'no useful comparison']
+            options: ['shared mobilization purpose with different ideological framing', 'differences in the colors, fonts, and artistic techniques of posters', 'the total number of posters each government printed', 'the names of the artists who designed the posters']
           }
         ],
         correctAnswers: ['historical reasoning that links it to political consequence', 'AP-effective', 'shared mobilization purpose with different ideological framing'],
@@ -163,24 +163,24 @@ Select the strongest reasoning move, then explain how it improves AP scoring.
           {
             question: 'A document praises the League of Nations as a guarantor of peace. Which contextualization is strongest?',
             options: [
-              'The League successfully prevented all major interwar conflicts and acts of military aggression for the entire interwar period',
-              'The League represented an unprecedented attempt at collective security but lacked enforcement power, as shown by its failure to stop Japan in Manchuria (1931) or Italy in Ethiopia (1935)',
-              'The League had no historical relevance to the interwar period and was disbanded immediately after its founding meeting in 1920',
-              'The League was created in 1945 by the Allies after WWII to manage postwar reconstruction and decolonization across Europe and Asia'
+              'The League kept the peace through the 1930s, as its sanctions forced Japan to withdraw from Manchuria in 1933',
+              'The League pioneered collective security but lacked enforcement, failing to stop Japan in Manchuria or Italy in Ethiopia',
+              'The League was dominated by the United States, which used it to enforce the Fourteen Points across Europe between 1920 and 1939',
+              'The League was founded after WWII in 1945 to manage reconstruction and decolonization across Europe, Africa, and Asia'
             ],
             correctAnswer: 1,
-            explanation: 'Strong contextualization places the source in its institutional context and uses specific failures to refine its claim.'
+            explanation: 'Strong contextualization places the source in its institutional context and uses specific failures — Manchuria (1931) and Ethiopia (1935) — to refine its claim. Japan left the League in 1933 rather than leave Manchuria, the U.S. never joined, and the League was founded in 1920.'
           },
           {
             question: 'Which sentence best explains the significance of citing the Atlantic Charter (1941) in an essay on the postwar order?',
             options: [
-              'It demonstrates that Allied war aims included self-determination, which provided rhetorical leverage for postwar decolonization movements in Asia and Africa',
-              'It has no relation to decolonization or to the political development of colonial territories during the postwar period',
-              'It proves that the war was about restoring 18th-century absolute monarchies across continental Europe through Allied diplomacy',
-              'It eliminated all imperial holdings immediately upon its signing in August 1941 by Roosevelt and Churchill aboard a warship'
+              'It shows Allied war aims included self-determination, giving later decolonization movements leverage',
+              'It shows the Allies planned to keep their empires, since Churchill insisted the charter applied to all colonies',
+              'It shows the U.S. had already entered the war, since the charter served as a formal military alliance',
+              'It shows the charter ended imperial rule at once, as Britain and France freed their colonies upon signing'
             ],
             correctAnswer: 0,
-            explanation: 'Strong significance statements connect a specific document to a broader analytical claim about postwar political possibilities.'
+            explanation: 'Strong significance statements connect a specific document to a broader analytical claim about postwar political possibilities. Churchill in fact argued the charter applied to Nazi-occupied Europe rather than the British Empire, and the U.S. was still neutral in August 1941.'
           }
         ]
       }

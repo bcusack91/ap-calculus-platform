@@ -29,7 +29,7 @@ export const whGlobalizationTechPart3Data = {
 
 | Tiger | Strategy | Result |
 |---|---|---|
-| South Korea | Park Chung-hee\'s 1962 export-led plan; chaebols (Samsung, Hyundai, LG) | Per capita GDP under \\$100 in 1960 → over \\$10,000 by 1995 |
+| South Korea | Park Chung-hee\'s 1962 export-led plan; chaebols (Samsung, Hyundai, LG) | Per capita GDP under \\$200 in 1960 → over \\$10,000 by 1995 |
 | Taiwan | Land reform; export-processing zones; semiconductor industry (TSMC founded 1987) | Built dominant global chip foundry capability |
 | Hong Kong | British colony until 1997; free trade port; finance hub | Reverted to PRC under "one country, two systems" |
 | Singapore | Lee Kuan Yew\'s state-led developmentalism; English-language education | World\'s busiest port; financial hub |
@@ -93,10 +93,10 @@ export const whGlobalizationTechPart3Data = {
           {
             question: 'Which best characterizes the developmental strategy of the Asian Tigers from the 1960s through the 1990s?',
             options: [
-              'State-coordinated export-led industrialization, heavy investment in education, authoritarian or semi-authoritarian politics, and access to U.S. consumer markets as Cold War allies',
-              'Pure laissez-faire free-market capitalism with no state coordination of industrial policy and no investment in education by the state in any of the four Tiger economies during the period',
-              'Soviet-style central planning with state ownership of all major industries and no private firms or export industries during the entire period from 1960 through the 1990s',
-              'Pure agricultural economies based on rice and tea exports with no manufacturing, finance, or technology sectors at any point during the period from 1960 through the 1990s'
+              'State-coordinated export-led industrialization, heavy education spending, authoritarian or semi-authoritarian rule, and access to U.S. markets as Cold War allies',
+              'Laissez-faire capitalism with no state industrial policy and little public investment in education in any of the four Tiger economies during their rapid-growth decades',
+              'Soviet-style central planning with state ownership of all major industries and few private firms or export industries from 1960 through the 1990s',
+              'Agricultural economies built on rice, tea, and rubber exports, with manufacturing and finance sectors that stayed small from 1960 through the 1990s'
             ],
             correctAnswer: 0,
             explanation: 'The Tiger model is canonically: state-coordinated export-led growth + education + authoritarian politics + Cold War U.S. market access.'
@@ -148,7 +148,7 @@ export const whGlobalizationTechPart3Data = {
             options: ['1970s', '1980s', '1990s', '2000s']
           },
           {
-            label: 'Tim Berners-Lee invents the World Wide Web at CERN; commercial Internet begins to take off: ___',
+            label: 'Tim Berners-Lee proposes the World Wide Web at CERN; personal computers spread into offices and homes: ___',
             options: ['1970s', '1980s', '1990s', '2000s']
           },
           {
@@ -158,7 +158,7 @@ export const whGlobalizationTechPart3Data = {
         ],
         correctAnswers: ['1970s', '1980s', '2000s'],
         hint1: 'Reform and Opening launched in 1978.',
-        hint2: 'The Web was invented at CERN in 1989.',
+        hint2: 'Berners-Lee wrote his Web proposal at CERN in 1989.',
         hint3: 'WTO accession 2001, iPhone 2007, Beijing Olympics 2008.',
         explanation: 'Three globalization waves: Chinese reforms 1970s, Internet infrastructure 1980s–90s, and the China + mobile + global commerce surge of the 2000s.'
       }
@@ -172,10 +172,10 @@ export const whGlobalizationTechPart3Data = {
           {
             question: 'Which response best explains why the Asian Tigers and China experienced rapid growth while many sub-Saharan African economies struggled during the 1980s and 1990s?',
             options: [
-              'East Asian states combined coordinated industrial policy with heavy investment in education and Cold War access to U.S. markets, while many African states faced commodity-price collapses, IMF Structural Adjustment Programs, and inherited colonial export dependence',
-              'East Asian and African economies experienced identical growth trajectories during the 1980s and 1990s with no meaningful differences in policy, education investment, or access to global markets between the two regions',
-              'East Asian growth was caused entirely by natural resource endowments and African stagnation was caused entirely by lack of natural resources, with no role for industrial policy or education investment in either case',
-              'East Asian growth was caused entirely by Cold War U.S. military aid and African stagnation was caused entirely by absence of Cold War military aid, with no role for economic policy or education investment in either case'
+              'East Asia paired industrial policy and education with U.S. market access, while many African states faced commodity-price collapses, SAPs, and colonial export dependence',
+              'East Asian and African economies followed nearly identical growth paths in the 1980s and 1990s, with no real differences in policy, schooling, or access to global markets',
+              'East Asian growth came mainly from abundant natural resources, while African stagnation came mainly from a lack of resources, with industrial policy and education playing little role',
+              'East Asian growth came mainly from U.S. military aid during the Cold War, while African stagnation came from the absence of such aid, with economic policy and education playing little role'
             ],
             correctAnswer: 0,
             explanation: 'The AP-quality answer names policy choices (industrial policy, education) AND the global structural context (Cold War market access vs. SAPs, commodity prices).'
@@ -183,10 +183,10 @@ export const whGlobalizationTechPart3Data = {
           {
             question: 'Which response best evaluates the long-term legacy of the Green Revolution?',
             options: [
-              'The Green Revolution dramatically increased grain yields in India, Pakistan, Mexico, and the Philippines, averting predicted famines, but its reliance on fertilizers, pesticides, and irrigation produced soil degradation, groundwater depletion, and concentration of land in the hands of larger farmers',
-              "The Green Revolution had no measurable effect on global grain yields and did not avert any famines anywhere in the world during the period from the 1960s through the 1990s when it was being implemented in major regions",
-              "The Green Revolution increased grain yields with no measurable environmental costs or distributive effects on landholding patterns of any kind during the period from the 1960s through the 1990s in any region",
-              "The Green Revolution caused famines in India, Pakistan, Mexico, and the Philippines and did not increase grain yields in any of those countries during the period from the 1960s through the 1990s when implemented"
+              'It sharply raised grain yields in India, Pakistan, and Mexico and averted feared famines, but its chemical and water demands degraded soil and favored larger farmers',
+              "It had little measurable effect on grain yields in India, Pakistan, and Mexico, since famines there were averted mainly by food aid shipments from the United States",
+              "It raised grain yields in India, Pakistan, and Mexico with few environmental costs, and it spread benefits evenly to small and large farmers across all three countries",
+              "It caused famines in India, Pakistan, and Mexico, as the new seed varieties failed in local soils and yields fell sharply below their pre-1960s levels in all three of these countries"
             ],
             correctAnswer: 0,
             explanation: 'The both/and AP move: dramatic yield gains AND environmental + distributive costs. This is the canonical complexity framing.'

@@ -100,10 +100,10 @@ export const whChallenges21stCenturyPart3Data = {
           {
             question: 'Which best characterizes the long-term outcomes of the 2010–12 Arab Spring across the affected countries?',
             options: [
-              'Tunisia produced the only durable democratic transition (later eroded under Kais Saied after 2021); Egypt returned to military rule under Sisi in 2013; Libya, Syria, and Yemen descended into prolonged civil wars',
-              'All Arab Spring countries produced durable democratic transitions that were still functioning as multi-party democracies a decade later in 2020 across all the affected countries in North Africa and the Middle East',
-              'All Arab Spring countries returned to identical authoritarian governments within months of the initial protests with no meaningful political openings or civil wars in any of the affected countries during the period',
-              'The Arab Spring did not produce any meaningful political changes in any country and the regimes in power before 2010 remained in power without any disruption through the entire period from 2010 to today'
+              'Tunisia made the only lasting democratic transition (later eroded under Kais Saied); Egypt returned to military rule under Sisi in 2013; Libya, Syria, and Yemen fell into civil war',
+              'Most Arab Spring countries made durable democratic transitions that were still functioning as multi-party democracies a decade later, with the Syrian civil war as the main exception to the pattern',
+              'Most Arab Spring countries returned to their old rulers within months (Ben Ali and Mubarak included); none saw lasting openings or civil wars',
+              'The Arab Spring produced few changes of government, since almost all of the leaders in power in 2010 stayed in office through the following decade'
                 ],
             correctAnswer: 0,
             explanation: 'The Arab Spring outcomes diverged sharply: Tunisia\'s qualified success vs. Egypt\'s coup vs. Libya/Syria/Yemen\'s civil wars.'
@@ -111,10 +111,10 @@ export const whChallenges21stCenturyPart3Data = {
           {
             question: 'Which best characterizes the 2016 Brexit referendum result?',
             options: [
-              "The UK voted 52% to 48% to leave the European Union; Brexit was formally completed on January 31, 2020 after years of difficult negotiations over the Irish border, citizens' rights, and trade arrangements",
-              "The UK voted 52% to 48% to remain in the European Union; the British government rejected the referendum result and remained an EU member with no formal departure during any year of the period",
-              "The UK voted 90% to 10% to leave the European Union; Brexit was formally completed within weeks of the referendum without any significant political or trade negotiation process at any point",
-              "The UK held no referendum on EU membership in 2016 and remained a fully integrated EU member throughout the entire period from 1973 through the present day with no exit process of any kind"
+              "The UK voted 52% to 48% to leave the EU; departure was completed on January 31, 2020 after long talks over the Irish border, citizens' rights, and trade",
+              "The UK voted 52% to 48% to remain in the EU, but Parliament overruled the result and began a withdrawal process that was finalized in 2020",
+              "The UK voted 52% to 48% to leave the EU, and departure was completed within months as Britain kept full access to the EU single market",
+              "The UK voted 52% to 48% to leave the EU, but a second referendum in 2019 reversed the result, and the UK remains an EU member"
             ],
             correctAnswer: 0,
             explanation: 'Brexit: 52–48 vote on June 23, 2016; formally completed January 31, 2020.'
@@ -184,24 +184,24 @@ export const whChallenges21stCenturyPart3Data = {
           {
             question: 'Which response best explains the causal chain linking the 2011 Syrian civil war to the 2016 rise of right-populism in Europe?',
             options: [
-              'The 2011 Syrian civil war drove ~6 million refugees into the region by 2015; ~1 million reached Europe in 2015; the resulting cultural and political backlash strengthened far-right parties (AfD in Germany, FN in France) and contributed to the 2016 Brexit campaign\'s emphasis on borders and immigration control',
-              'The 2011 Syrian civil war had no measurable effect on European politics or migration patterns of any kind during the entire period from 2011 through 2016 in any major European democracy or region',
-              'The 2011 Syrian civil war produced a leftward shift in European politics with no role for far-right parties or anti-immigration movements of any kind during the period from 2011 through 2016 in any European democracy',
-              'The 2016 rise of right-populism in Europe occurred entirely independently of any migration patterns and was caused exclusively by economic factors with no connection to the Syrian war or 2015 refugee flows of any kind'
+              'The war sent over 4 million refugees abroad by 2015; as about 1 million asylum seekers reached Europe, backlash boosted the far right and Brexit\'s border focus',
+              'The war had little effect on European politics, since nearly all Syrian refugees stayed in camps in Turkey, Lebanon, and Jordan and very few ever reached the European Union',
+              'The war pushed European politics to the left, as sympathy for refugees boosted Green and Social Democratic parties and weakened anti-immigration movements across the continent',
+              'The war mattered only through oil prices, since rising fuel costs after 2011 caused a European recession that fueled right-wing populism with no link to refugees'
             ],
             correctAnswer: 0,
-            explanation: 'The Syria → 2015 migration crisis → 2016 backlash chain is a canonical AP causal sequence linking 21st-century events.'
+            explanation: 'The Syria → 2015 migration crisis → 2016 backlash chain is a canonical AP causal sequence linking 21st-century events. UNHCR counted about 4.6 million registered Syrian refugees by the end of 2015, and roughly 1 million asylum seekers of many nationalities, about half of them Syrian, crossed the Mediterranean to Europe that year; parties such as the AfD in Germany and the National Front in France gained ground.'
           },
           {
             question: 'Which best explains why Russia\'s 2022 invasion of Ukraine is considered a turning point in post-1945 European security?',
             options: [
-              "It marked the return of large-scale conventional interstate war to Europe for the first time since 1945; it reversed decades of European energy dependence on Russian gas; it triggered NATO enlargement (Finland 2023, Sweden 2024) and unprecedented Western sanctions and weapons aid to a non-NATO state",
-              "Russia's 2022 invasion of Ukraine had no measurable effect on European security, energy policy, or NATO enlargement in any direction during the period from 2022 through the present day in any European country",
-              "Russia's 2022 invasion of Ukraine produced an immediate Russian victory that conquered all of Ukraine within weeks and ended any threat to Russian power in Eastern Europe during the period from 2022 onward",
-              "Russia's 2022 invasion of Ukraine was a continuation of routine post-1945 European interstate warfare and produced no meaningful changes in NATO membership, European energy policy, or sanctions of any kind"
+              "It returned large-scale interstate war to Europe for the first time in the postwar era, ended reliance on Russian gas, and prompted NATO enlargement (Finland 2023, Sweden 2024)",
+              "It had little effect on European security, as Europe kept buying Russian gas at prewar levels (via Nord Stream) and no new members joined NATO afterward",
+              "It ended in a quick Russian victory that conquered all of Ukraine within weeks, removing any challenge to Russian power in Eastern Europe after 2022",
+              "It continued a long pattern of routine interstate wars in post-1945 Europe, so NATO membership, energy policy, and Western sanctions all changed very little in the years afterward"
             ],
             correctAnswer: 0,
-            explanation: 'The 2022 invasion is the canonical 21st-century European security turning point: conventional war returns, NATO enlarges, energy reorients, sanctions escalate.'
+            explanation: 'The 2022 invasion is the canonical 21st-century European security turning point: conventional war returns, NATO enlarges, energy reorients away from Russian gas, and Western sanctions and weapons aid to a non-NATO state escalate.'
           }
         ]
       }

@@ -64,8 +64,8 @@ The Cold War (1947–1991) was a global ideological competition between U.S.-led
             question: 'Which 1947 U.S. policy committed the United States to "support free peoples who are resisting attempted subjugation by armed minorities or by outside pressures" — the founding statement of containment?',
             options: [
               'The Marshall Plan, which provided about \\$13 billion in postwar economic reconstruction aid to Western European states recovering from war',
-              'The Truman Doctrine, which pledged U.S. aid first to Greece and Turkey and became the foundational statement of containment policy',
-              'The North Atlantic Treaty, which established a peacetime military alliance among Western states for collective defense in Europe',
+              'The Truman Doctrine, which pledged U.S. aid first to Greece and Turkey and became the basis of containment',
+              'The North Atlantic Treaty, which created a peacetime military alliance to defend Western Europe and became the military arm of containment',
               'The Atlantic Charter, which articulated war aims of the United States and Britain during the Second World War in 1941'
             ],
             correctAnswer: 1,
@@ -76,8 +76,8 @@ The Cold War (1947–1991) was a global ideological competition between U.S.-led
             options: [
               'The two main rivals competed primarily through ideological influence, proxy wars, and an arms race rather than through direct military combat against each other',
               'The two main rivals fought a long series of conventional battles in Europe and Asia involving direct deployment of their own armed forces against one another in combat',
-              'The two main rivals shared a single political and economic system and competed only over disputed colonial possessions rather than over governing ideology',
-              'The two main rivals avoided any economic competition and concentrated their rivalry exclusively on naval power and overseas colonial trade routes worldwide'
+              'The two main rivals shared one political, economic, and social system and competed only over disputed colonial possessions rather than ideology',
+              'The two main rivals competed mainly over overseas colonies and naval trade routes, much as Britain and France had in earlier centuries'
             ],
             correctAnswer: 0,
             explanation: 'The defining feature is global ideological competition without direct superpower combat. Proxy wars in Korea, Vietnam, Angola, and Afghanistan were the actual fighting.'
@@ -120,15 +120,15 @@ The Cold War (1947–1991) was a global ideological competition between U.S.-led
         dropdowns: [
           {
             label: 'The 1948–49 Berlin Airlift is evidence of: ___',
-            options: ['superpower confrontation without direct combat', 'classical colonial warfare', 'pre-1914 great-power balance of power', 'industrial revolution era diplomacy']
+            options: ['superpower confrontation without direct combat', 'Third World political assertion against bloc politics', 'institutionalization of bloc rivalry', 'negotiated decolonization']
           },
           {
             label: 'The 1955 Bandung Conference is evidence of: ___',
-            options: ['superpower confrontation without direct combat', 'Third World political assertion against bloc politics', 'pre-1914 great-power balance of power', 'industrial revolution era diplomacy']
+            options: ['superpower confrontation without direct combat', 'Third World political assertion against bloc politics', 'institutionalization of bloc rivalry', 'negotiated decolonization']
           },
           {
             label: 'The 1949 founding of NATO and the 1955 Warsaw Pact is evidence of: ___',
-            options: ['institutionalization of bloc rivalry', 'Third World political assertion against bloc politics', 'pre-1914 great-power balance of power', 'industrial revolution era diplomacy']
+            options: ['superpower confrontation without direct combat', 'Third World political assertion against bloc politics', 'institutionalization of bloc rivalry', 'negotiated decolonization']
           }
         ],
         correctAnswers: ['superpower confrontation without direct combat', 'Third World political assertion against bloc politics', 'institutionalization of bloc rivalry'],
@@ -147,10 +147,10 @@ The Cold War (1947–1991) was a global ideological competition between U.S.-led
           {
             question: 'A historian writes: "The Cold War made decolonization more dangerous, and decolonization made the Cold War more global." Which response best supports this claim with AP-quality reasoning?',
             options: [
-              'Decolonization was a separate process that occurred independently of the Cold War and was not shaped by superpower competition or aid politics in any meaningful way',
-              'Newly independent states became proxy battlegrounds in which superpower aid, weapons, and ideology fueled civil wars and coups, while their independence votes globalized U.S.-Soviet competition beyond Europe',
-              'European empires collapsed entirely because of internal economic exhaustion alone, while the Cold War remained an entirely European concern about the future of central European territory',
-              'The Cold War ended decolonization quickly because both superpowers preferred to maintain stable European empires for their own strategic interests in raw materials and naval bases'
+              'Decolonization was a separate process driven by local nationalism, and global superpower competition and aid politics did little to shape it',
+              'New states became proxy battlegrounds where superpower aid and arms fed civil wars, and their UN votes globalized the rivalry',
+              'European empires collapsed from internal economic exhaustion alone, while the Cold War stayed a European dispute over Germany\'s future',
+              'The Cold War slowed decolonization, because both superpowers preferred stable European empires that protected their access to bases and raw materials'
             ],
             correctAnswer: 1,
             explanation: 'The strongest answer integrates both processes: superpower involvement intensified post-colonial conflicts (Vietnam, Angola, Afghanistan), and decolonization expanded the Cold War theater to Asia, Africa, and Latin America.'
@@ -158,10 +158,10 @@ The Cold War (1947–1991) was a global ideological competition between U.S.-led
           {
             question: 'Which comparison best uses shared analytical categories required by the AP comparison skill?',
             options: [
-              'Both the Marshall Plan (1948) and Comecon (1949) created economic frameworks designed to bind a bloc of states to a superpower patron through trade and aid mechanisms',
-              'The Marshall Plan happened in Western Europe and Comecon happened in Eastern Europe, so they were two events in different geographic regions of postwar Europe',
-              'The Marshall Plan was an American program and Comecon was a Soviet program, so the two cases involved different national identities of the patron states',
-              'The Marshall Plan transferred more total dollars than Comecon did, so the two cases cannot be meaningfully compared using shared analytical categories'
+              'Both the Marshall Plan (1948) and Comecon (1949) created economic frameworks that bound a bloc of states to a superpower patron through aid and trade',
+              'The Marshall Plan happened in Western Europe and Comecon in Eastern Europe, so they were two separate events in two different regions of postwar Europe',
+              'Both programs had different patrons (American and Soviet), so the two cases involved different national identities and cannot be compared',
+              'The Marshall Plan transferred far more money than Comecon did, so the two programs cannot be compared using any shared analytical categories at all'
             ],
             correctAnswer: 0,
             explanation: 'AP comparison rewards shared categories ("economic frameworks," "bind a bloc," "patron"). Surface differences (geography, names, totals) do not earn the complexity point.'

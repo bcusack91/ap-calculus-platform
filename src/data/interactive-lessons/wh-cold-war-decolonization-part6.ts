@@ -93,24 +93,24 @@ For a Cold War SAQ, structure each part as **Claim + Evidence + Connection**:
           {
             question: 'Which historical context is most essential for sourcing the 1947 Truman Doctrine speech?',
             options: [
-              'Postwar Greek and Turkish governments faced communist pressure, the British announced they could no longer support those governments, and U.S. policymakers framed the moment as the start of global containment',
-              'The 1962 Cuban Missile Crisis was unfolding and President Truman was responding directly to Soviet missile deployments in the Caribbean during a 13-day standoff with Premier Khrushchev',
-              'The 1979 Iranian Revolution had just overthrown the U.S.-backed Shah and the Truman administration was responding to the rise of Ayatollah Khomeini and the new Islamic Republic',
-              'The 1989 fall of the Berlin Wall had just dissolved the Iron Curtain and the Truman administration was negotiating the formal terms of German reunification with Soviet leadership'
+              'Greek and Turkish governments faced communist pressure, Britain could no longer support them, and U.S. officials framed the moment as the start of containment',
+              'The Berlin Blockade was underway, Soviet forces had closed the land routes, and Truman was asking Congress to fund the airlift to West Berlin',
+              'The Korean War had just begun, and Truman was asking Congress for troops after North Korean forces crossed the 38th parallel into the South',
+              'The Soviet Union had just tested its first atomic bomb, and Truman was responding to the end of the U.S. nuclear monopoly with a sweeping new plan for national defense'
             ],
             correctAnswer: 0,
-            explanation: 'The Truman Doctrine was a March 1947 response to British withdrawal of aid from Greece and Turkey. The other options name later events Truman could not have addressed.'
+            explanation: 'The Truman Doctrine was a March 1947 response to British withdrawal of aid from Greece and Turkey. The Berlin Blockade (1948), the Soviet atomic test (1949), and the Korean War (1950) all came later.'
           },
           {
             question: 'Which best identifies the intended audience and purpose of NSC-68 (April 1950)?',
             options: [
-              'A top-secret National Security Council planning document intended for the U.S. cabinet, designed to justify a massive U.S. military buildup in response to perceived Soviet expansionism',
-              'A public broadcast intended for the Soviet population, designed to encourage popular dissent and to undermine the Stalin regime through direct rhetorical pressure on Soviet citizens',
-              'A diplomatic note intended for the United Nations General Assembly, designed to negotiate a binding nuclear-arms-control treaty during the early years of the Cold War',
-              'A U.S. presidential campaign speech intended for American voters, designed to win the 1952 presidential election by demonstrating tough anti-Soviet credentials in a contested race'
+              'A top-secret National Security Council report to President Truman, designed to justify a massive U.S. military buildup against perceived Soviet expansionism',
+              'A public radio broadcast aimed at the Soviet population, designed to encourage popular dissent and to undermine Stalin\'s regime through direct appeals to its citizens',
+              'A diplomatic note addressed to the United Nations General Assembly, designed to open negotiations on a binding nuclear arms control treaty with the Soviet Union',
+              'A presidential campaign speech aimed at American voters, designed to win the 1952 election by demonstrating tough anti-Soviet credentials in a contested race'
             ],
             correctAnswer: 0,
-            explanation: 'NSC-68 was top-secret cabinet-level planning aimed at scaling up U.S. defense spending. Naming the document\'s "internal planning" character is the AP sourcing move.'
+            explanation: 'NSC-68 was top-secret planning prepared for President Truman and his senior national security officials, aimed at scaling up U.S. defense spending. Naming the document\'s "internal planning" character is the AP sourcing move.'
           }
         ]
       }
@@ -177,21 +177,21 @@ For a Cold War SAQ, structure each part as **Claim + Evidence + Connection**:
           {
             question: 'An SAQ asks: "Identify ONE U.S. policy used to contain communism between 1947 and 1962, and explain how it advanced containment." Which response would score highest?',
             options: [
-              'The Marshall Plan (1948) advanced containment by funneling roughly \\$13 billion in U.S. aid to Western European recovery, binding recipient governments to the U.S.-led economic order and reducing the appeal of communist parties in war-damaged states',
-              'The Marshall Plan was a foreign aid program for European countries that needed help after the war ended, and it generally helped them rebuild their economies during the late 1940s',
-              'The Marshall Plan was a famous Cold War event that involved a man named George Marshall doing something important regarding Europe in the years after the Second World War concluded',
-              'The Marshall Plan was a long time ago and it had something to do with the Cold War in Europe, but it was not really one of the most important policies of containment in the period'
+              'The Marshall Plan (1948) advanced containment by sending roughly \\$13 billion to rebuild Western Europe, tying recipients to the U.S.-led order and reducing communism\'s appeal',
+              'The Marshall Plan (1948) was a U.S. aid program that helped European countries rebuild after the war, and it generally improved their economies in the late 1940s',
+              'NATO (1949) advanced containment by sending billions in economic aid to rebuild Western Europe, tying recipients to the U.S. and reducing communism\'s appeal',
+              'The Marshall Plan (1948) advanced containment by stationing U.S. troops in Eastern Europe, which forced Soviet forces to withdraw from the countries they had occupied since 1945'
             ],
             correctAnswer: 0,
-            explanation: 'AP SAQ scoring rewards: specific name + date + mechanism + outcome. Vague gestures earn no credit even if technically true.'
+            explanation: 'AP SAQ scoring rewards: specific name + date + mechanism + outcome. A description with no link to containment earns no "explain" credit, NATO was a military alliance rather than an aid program, and the Marshall Plan sent no troops into the Soviet bloc.'
           },
           {
             question: 'Which short answer best demonstrates AP "complexity" by complicating a single-cause Cold War argument?',
             options: [
-              'Although the United States framed its 1953 Iran intervention as Cold War containment of communism, scholars have emphasized that protection of British and U.S. oil interests under the Anglo-Iranian Oil Company was also a central motivation, complicating the pure containment narrative',
-              'The 1953 Iran intervention was simply a routine application of containment policy with no other meaningful motivations or interests at stake on either the U.S. or the British side of the joint operation',
-              'The 1953 Iran intervention had nothing to do with the Cold War at all and was conducted entirely for reasons unrelated to U.S. or British policy toward the Soviet Union or its global allies',
-              'The 1953 Iran intervention was conducted entirely by the Soviet Union and reflected Soviet rather than U.S. or British strategic interests in Persian Gulf oil resources during the early Cold War'
+              'Although the U.S. framed its 1953 Iran intervention as containing communism, scholars stress that protecting Anglo-Iranian Oil Company interests also drove it',
+              'The 1953 Iran intervention was routine containment, since U.S. and British planners had no interests at stake in Iran beyond stopping communism',
+              'The 1953 Iran intervention had nothing to do with the Cold War, since the U.S. and Britain acted only to settle a private dispute over oil royalties',
+              'The 1953 Iran intervention was organized by the Soviet Union to seize Persian Gulf oil, and the United States merely protested at the UN afterward'
             ],
             correctAnswer: 0,
             explanation: 'The "complexity" point requires complicating dominant narratives. Naming both containment AND oil interests in Iran 1953 is the canonical example AP exam writers reward.'

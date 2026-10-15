@@ -71,24 +71,24 @@ export const whMassAtrocitiesPart4Data = {
           {
             question: 'Which event is best understood as the most significant act of armed Jewish resistance against Nazi occupation in WWII?',
             options: [
-              'The Warsaw Ghetto Uprising of April–May 1943, in which a few hundred fighters held off German forces for nearly a month',
-              'The 1939 invasion of Poland by Wehrmacht units that triggered the start of the Second World War in early September of that year',
-              'The June 1944 Allied D-Day landings on the beaches of Normandy that opened the western front in occupied France against Germany',
-              'The 1942 Wannsee Conference outside Berlin where senior SS officials coordinated the bureaucracy of the Final Solution policy'
+              'The Warsaw Ghetto Uprising of April–May 1943, in which several hundred fighters held off German forces for nearly a month',
+              'The Polish Home Army\'s Warsaw Uprising of August–October 1944, which fought German forces for about two months',
+              'The Danish rescue of October 1943, in which fishermen ferried more than 7,000 Jews across the sea to Sweden',
+              'The White Rose campaign of 1942–43, in which Munich students distributed leaflets denouncing Nazi crimes'
             ],
             correctAnswer: 0,
-            explanation: 'The Warsaw Ghetto Uprising is the canonical AP example of organized armed Jewish resistance under occupation. Camp revolts at Sobibor and Treblinka are the secondary examples.'
+            explanation: 'The Warsaw Ghetto Uprising is the canonical AP example of organized armed Jewish resistance under occupation; camp revolts at Sobibor and Treblinka are the secondary examples. The 1944 Warsaw Uprising was a Polish Home Army revolt, the Danish operation was a rescue, and the White Rose was nonviolent German dissent.'
           },
           {
             question: 'Which postwar instrument established individual criminal responsibility for "crimes against humanity" — a doctrine still applied by international tribunals today?',
             options: [
-              'The 1648 Treaties of Westphalia ending the Thirty Years War in central Europe and codifying state sovereignty',
+              'The 1919 Treaty of Versailles, whose Article 227 called for trying the Kaiser before a special tribunal',
               'The Nuremberg Trials of 1945–46, which prosecuted Nazi leadership and produced the Nuremberg Principles',
-              'The 1815 Congress of Vienna that redrew the European political map after the Napoleonic Wars and the fall of Napoleon',
-              'The 1815 Final Act of Vienna, which abolished the Atlantic slave trade among signatory European powers and their colonies'
+              'The 1945 United Nations Charter, which created the Security Council and the International Court of Justice',
+              'The 1948 Universal Declaration of Human Rights, a nonbinding list of rights adopted by the UN'
             ],
             correctAnswer: 1,
-            explanation: 'Nuremberg established that individuals — not just states — could be prosecuted for crimes against humanity. The 1945 London Charter created the legal framework that the ICC still relies on.'
+            explanation: 'Nuremberg established that individuals — not just states — could be prosecuted for crimes against humanity; the 1945 London Charter set out the legal framework, and its principles still inform the ICC\'s 1998 Rome Statute. The Kaiser was never tried under Versailles, the International Court of Justice hears disputes between states, and the Universal Declaration is not a criminal statute.'
           }
         ]
       }
@@ -155,10 +155,10 @@ export const whMassAtrocitiesPart4Data = {
           {
             question: 'Which AP-style claim best explains the historical relationship between mass atrocities and the postwar human-rights regime?',
             options: [
-              'The postwar human-rights regime emerged independently of any mass atrocities and was based purely on 18th-century Enlightenment philosophy without reference to recent events',
-              'Mass atrocities of the 20th century directly shaped the legal architecture of human rights, from Nuremberg (1945) to the Genocide Convention (1948), the Refugee Convention (1951), and ultimately the ICC (2002)',
-              'The postwar human-rights regime was created by the League of Nations in 1920 in direct response to the Armenian Genocide and was subsequently dissolved in 1946 with the dissolution of the League itself',
-              'The postwar human-rights regime had no significant institutional foundation and operated entirely as informal moral pressure exerted by individual national governments without any treaty basis'
+              'The human-rights regime grew from Enlightenment philosophy alone, as postwar drafters relied on 18th-century texts rather than recent events',
+              'Atrocities shaped human-rights law, from Nuremberg (1945) and the Genocide Convention (1948) to the ICC (2002)',
+              'The human-rights regime was built by the League of Nations after the Armenian atrocities (1915–1923) and dissolved along with the League in 1946',
+              'The human-rights regime rested on informal moral pressure, since no binding treaty on genocide or refugees was adopted before the 1990s'
             ],
             correctAnswer: 1,
             explanation: 'The chain Holocaust → Nuremberg → UDHR → Genocide Convention → Refugee Convention → ICTR/ICTY → ICC is one of the clearest connection-and-causation arguments in 20th-century history. Use it on the AP.'
@@ -166,13 +166,13 @@ export const whMassAtrocitiesPart4Data = {
           {
             question: 'Christopher Browning\'s Ordinary Men argues that situational factors — peer pressure, deference to authority, routinization — explain why ordinary Germans participated in killing. Which counter-argument or refinement is the most historically supported?',
             options: [
-              'Browning\'s argument applies only to Reserve Police Battalion 101 and cannot be extended to any other context of perpetrator behavior in the 20th century at all',
-              'Daniel Goldhagen\'s response (Hitler\'s Willing Executioners) emphasizes the role of long-standing eliminationist anti-Semitism in German culture as a necessary motivating ideology',
-              'Browning\'s argument was definitively disproved by archival research of the 1990s and is no longer used in scholarly discussion of perpetrator behavior in the modern period',
-              'Browning\'s argument shows that ideology was wholly irrelevant in the Holocaust because all Germans were forced to participate against their personal will or risk immediate execution'
+              'Browning\'s argument applies only to Reserve Police Battalion 101, so it cannot be extended to German perpetrators in any other unit',
+              'Daniel Goldhagen\'s Hitler\'s Willing Executioners stresses long-standing eliminationist anti-Semitism in German culture as a motivating ideology',
+              'Raul Hilberg\'s research showed perpetrators acted under direct threat of execution, so refusing to kill was never a realistic option for any of them',
+              'Hannah Arendt\'s Eichmann in Jerusalem proved ideology played no role in the Holocaust, since every perpetrator was a mere careerist'
             ],
             correctAnswer: 1,
-            explanation: 'The Browning–Goldhagen debate is the standard AP-level historiographical debate on perpetrators. Knowing both sides — situational and ideological — earns the complexity point.'
+            explanation: 'The Browning–Goldhagen debate is the standard AP-level historiographical debate on perpetrators. Knowing both sides — situational and ideological — earns the complexity point. Browning found that men who asked to be excused from killing were not executed, and Arendt\'s "banality of evil" argument did not claim ideology was irrelevant.'
           }
         ]
       }

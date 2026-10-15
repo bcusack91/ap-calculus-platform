@@ -79,10 +79,10 @@ export const whGlobalizationTechPart4Data = {
           {
             question: 'Which best describes the West German Gastarbeiter ("guest worker") program of the 1960s?',
             options: [
-              'A bilateral labor recruitment program that brought Turkish, Italian, Greek, and Yugoslav workers to West Germany on temporary contracts; many settled permanently and built lasting diaspora communities',
-              'A West German policy that prohibited any foreign workers from entering Germany during the postwar economic recovery between 1955 and 1973 across all industrial sectors and skill levels',
-              'A Soviet-organized program that resettled East German workers in Turkey and Yugoslavia during the Cold War to build communist labor solidarity across the Mediterranean basin',
-              'A NATO security program that stationed Turkish and Italian soldiers in West Germany during the Cold War without any civilian labor migration component of any kind'
+              'A labor recruitment program that brought Turkish, Italian, Greek, and Yugoslav workers to West Germany on temporary contracts; many settled and built lasting communities',
+              'A West German policy that barred foreign workers from entering the country during the postwar recovery, reserving industrial jobs for German citizens and East German refugees',
+              'A program that resettled West German workers in Turkey, Greece, and Yugoslavia during the Cold War to staff factories built with Marshall Plan aid',
+              'A NATO program that stationed Turkish and Italian soldiers in West Germany during the Cold War, with no civilian labor migration involved'
             ],
             correctAnswer: 0,
             explanation: 'Gastarbeiter brought Turkish, Italian, Greek, and Yugoslav workers under temporary contracts that, in practice, became permanent immigration.'
@@ -90,10 +90,10 @@ export const whGlobalizationTechPart4Data = {
           {
             question: 'Which best characterizes the 1999 "Battle of Seattle"?',
             options: [
-              'A coalition of trade unions, environmentalists, and indigenous-rights activists shut down a WTO ministerial meeting through mass protests, marking the international emergence of the anti-globalization movement',
-              'A formal WTO ministerial agreement on environmental and labor standards that successfully resolved disputes between developed and developing countries during the late 1990s in Seattle',
-              'A Seattle-based environmental group that successfully sued the WTO in U.S. federal court to force binding emissions reduction commitments from all WTO member states during 1999',
-              'A Microsoft trade conference held in Seattle in 1999 that was unrelated to the WTO and produced no political mobilization or protest activity of any kind during the late 1990s'
+              'A coalition of unions, environmentalists, and indigenous-rights activists disrupted a WTO ministerial meeting with mass protests, marking the anti-globalization movement\'s debut',
+              'A WTO ministerial agreement on environmental and labor standards that resolved disputes between developed and developing countries at the 1999 Seattle meeting',
+              'A lawsuit in which Seattle environmental, labor, and consumer groups sued the WTO in U.S. federal court to force binding emissions cuts in 1999',
+              'A strike by Seattle dockworkers that shut down West Coast ports for weeks, disrupting container shipments from Asia during the 1999 holiday season'
             ],
             correctAnswer: 0,
             explanation: 'Seattle 1999 is the international debut of the anti-globalization movement: union/environmental/indigenous coalition shut down the WTO meeting.'
@@ -163,10 +163,10 @@ export const whGlobalizationTechPart4Data = {
           {
             question: 'Which response best uses the COVID-19 pandemic to illustrate a paradox of post-1990 globalization?',
             options: [
-              "Cheap air travel and integrated supply chains, the very infrastructure that made post-1990 globalization possible, also turned a regional outbreak in Wuhan into a global pandemic in weeks, exposing the speed at which interdependence transmits both goods and risks",
-              "The COVID-19 pandemic spread independently of any feature of post-1990 globalization and would have spread at the same speed and to the same regions even without modern air travel or integrated supply chains anywhere in the world",
-              "The COVID-19 pandemic was contained entirely within China and produced no measurable spillover effects of any kind into any other region of the world during the entire period from late 2019 through the present day",
-              "The COVID-19 pandemic was caused entirely by trade restrictions imposed during the U.S.-China trade war and not by any biological pathogen or pattern of human movement of any kind during the period from late 2019 onward"
+              "The air travel and supply chains behind post-1990 globalization spread a Wuhan outbreak worldwide in weeks, showing interdependence transmits risks too",
+              "The pandemic spread independently of globalization, and it would have reached the same regions at the same speed without modern air travel or integrated supply chains",
+              "The pandemic stayed largely contained within China, producing few spillover effects elsewhere because global supply chains had already shifted away from Chinese factories",
+              "The pandemic showed that globalization had already ended, since trade restrictions from the U.S.-China trade war had cut most air travel and shipping before the outbreak began"
             ],
             correctAnswer: 0,
             explanation: 'AP rewards the paradox framing: globalization\'s infrastructure (planes, supply chains) is what enabled both economic integration AND rapid pandemic spread.'
@@ -174,10 +174,10 @@ export const whGlobalizationTechPart4Data = {
           {
             question: 'Which response best demonstrates the political and economic significance of remittance flows for major sending countries?',
             options: [
-              "Remittances exceed foreign aid for many sending countries; for the Philippines, remittances are roughly 10% of GDP, providing foreign currency that stabilizes the peso and household income that keeps millions of Filipino families above the poverty line",
-              "Remittances have no measurable effect on the GDP, currency stability, or household incomes of any sending country in any region of the world during the entire period from 1990 through the present day",
-              "Remittances flow only from poor countries to rich countries and have no role in supporting household incomes in major migrant-sending countries like the Philippines, Mexico, India, or Egypt at any point",
-              "Remittances are entirely controlled by sending-country governments and do not reach individual households in the Philippines, Mexico, India, or Egypt at any point during the period from 1990 onward"
+              "Remittances exceed foreign aid for many countries; in the Philippines they equal roughly 10% of GDP, steadying the peso and keeping millions of families above the poverty line",
+              "Remittances matter little to sending countries, since most migrant earnings stay abroad and the sums that do return home are too small to affect GDP or household incomes there",
+              "Remittances flow mainly from poor countries to rich ones, as families in Mexico, India, and the Philippines send money to support relatives working in wealthy economies",
+              "Remittances are collected by sending-country governments, which use them for state budgets rather than passing them on to households in the Philippines, Mexico, or India"
             ],
             correctAnswer: 0,
             explanation: 'The AP-quality answer cites a specific country (Philippines), a specific share of GDP (~10%), and the household-income mechanism.'

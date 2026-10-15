@@ -80,21 +80,21 @@ export const whMassAtrocitiesPart2Data = {
           {
             question: 'Which sequence best describes the cumulative path that scholars use to analyze the Holocaust?',
             options: [
-              'Death camps appeared first in 1933, followed by ghettos, then by the Nuremberg Laws and finally by the Wannsee Conference in 1945',
-              'Legal exclusion (1935) was followed by organized violence (1938), then ghettoization (1939–41), Eastern Front shootings (1941), and death camps (1942–45)',
-              'The Holocaust began with the Wannsee Conference of 1942 with no preceding stages of legal discrimination, organized violence, or ghettoization in occupied territory',
-              'The Holocaust was a single event of mass killing in 1942 that occurred without any preparatory stages of policy, propaganda, or bureaucratic organization beforehand'
+              'Death camps opened first (1933), followed by ghettoization (1936), the Nuremberg Laws (1938), and finally the Wannsee Conference (1945)',
+              'Legal exclusion (1933–35), then organized violence (1938), ghettoization (1939–41), mass shootings (1941), and death camps (1942–45)',
+              'Mass shootings began first (1935), then legal exclusion (1938), then deportation to camps (1940), and finally ghettoization (1943–45)',
+              'Wannsee (1942) began the process, followed by legal exclusion (1943) and then ghettos and camps (1944–45)'
             ],
             correctAnswer: 1,
-            explanation: 'The cumulative model is the AP framework: legal exclusion, then organized violence, then ghettoization, then mass shootings, then death camps. Wannsee was a coordination meeting, not the beginning.'
+            explanation: 'The cumulative model is the AP framework: legal exclusion (the 1933 civil-service law and the 1935 Nuremberg Laws), then organized violence (Kristallnacht, 1938), then ghettoization, then mass shootings behind the Eastern Front, then death camps. Wannsee was a coordination meeting, not the beginning.'
           },
           {
             question: 'Which feature distinguishes the Cambodian case from the Armenian and Holocaust cases under the strict UN definition of genocide?',
             options: [
               'The Cambodian regime targeted political and class categories such as "new people," not only ethnic, religious, or national groups',
-              'The Cambodian regime never deported any urban populations to rural areas, focusing exclusively on overseas military operations and territorial expansion',
-              'The Cambodian regime had no ideological framework and operated as a purely opportunistic kleptocracy with no claim to revolutionary purpose',
-              'The Cambodian regime was a multi-party democracy that reluctantly resorted to violence only after losing free and fair elections to political rivals'
+              'The Khmer Rouge killed mainly foreign soldiers in border wars with Vietnam, so few Cambodian civilians were among its victims',
+              'The Khmer Rouge targeted only the Cham Muslim minority, making it a purely religious case like the Armenian Genocide',
+              'The Khmer Rouge used gas chambers, rail deportations, and death camps copied from Nazi practice, making it an industrial case like the Holocaust'
             ],
             correctAnswer: 0,
             explanation: 'The UN Convention names national, ethnic, racial, and religious groups but not political/class categories. Cambodia is therefore often labeled "crimes against humanity" or "auto-genocide" under strict legal definitions, while still being studied as a genocide in historical scholarship.'
@@ -164,10 +164,10 @@ export const whMassAtrocitiesPart2Data = {
           {
             question: 'Which element best explains why scholars describe the Holocaust as an "industrialized" genocide compared with the Armenian case?',
             options: [
-              'The Holocaust used pre-industrial methods of mass violence such as cavalry raids and forced marches across long deserts to remote killing sites',
-              'The Holocaust deployed railways, gas chambers, IBM punch-card record systems, and a coordinated SS bureaucracy to systematize killing across occupied Europe',
-              'The Holocaust killed fewer people than the Armenian Genocide but used a more decentralized network of perpetrators acting on local initiative without central planning',
-              'The Holocaust was carried out by a single charismatic leader without any administrative apparatus or formal policy framework supporting the killing'
+              'The Holocaust relied mainly on forced marches, starvation, and exposure, the same methods Ottoman authorities used against Armenians',
+              'The Holocaust used railways, gas chambers, punch-card census data, and an SS bureaucracy to systematize killing across Europe',
+              'The Holocaust was carried out mostly by local mobs acting on their own initiative, without central planning or record keeping',
+              'The Holocaust took place mostly in factories inside Germany\'s industrial heartland rather than in occupied territory'
             ],
             correctAnswer: 1,
             explanation: 'Industrialization in this context means rail logistics, factory-style killing facilities, data systems, and bureaucratic chain of command — features that distinguished WWII-era killing from earlier deportation-based atrocities.'
@@ -175,10 +175,10 @@ export const whMassAtrocitiesPart2Data = {
           {
             question: 'Which AP-style explanation best accounts for why the same regime can target multiple groups during a single genocidal episode?',
             options: [
-              'Genocidal regimes always target only one group at a time and immediately stop targeting other groups once the first campaign begins to attract international attention',
-              'Totalizing ideologies define a broad "internal enemy" category that can include ethnic, religious, political, and class subgroups simultaneously, all framed as threats to the imagined nation',
-              'The targeting of multiple groups is always purely accidental and reflects bureaucratic confusion rather than any coherent ideological framework or policy direction',
-              'Multiple targeted groups indicates the absence of any organized state policy and proves that the violence was driven entirely by local perpetrators acting independently'
+              'Regimes target one group at a time and turn to another only after the first campaign is complete and attention fades',
+              'Totalizing ideologies define a broad "internal enemy" that can include ethnic, religious, political, and class groups at once',
+              'Targeting several groups reflects bureaucratic confusion, as lower officials misread orders aimed at one group',
+              'Targeting several groups shows locals were settling personal, family, and land disputes, not following state policy'
             ],
             correctAnswer: 1,
             explanation: 'Totalizing ideologies are inclusive in their hatred. The Nazis targeted Jews, Roma, disabled people, Soviet POWs, and political opponents under the same "racial-political enemy" frame. The Khmer Rouge targeted "new people," ethnic minorities, and Buddhist clergy together.'

@@ -95,10 +95,10 @@ export const whColdWarDecolonizationPart5Data = {
           {
             question: 'Which best characterizes the shift from the first Cold War phase (1945–1962) to the détente phase (1963–1979)?',
             options: [
-              'Direct superpower confrontation gave way to negotiated arms control (hotline 1963; SALT I 1972), even as proxy wars and Third World interventions continued and even intensified',
-              'The two superpowers ended all aid programs, all alliance systems, and all proxy wars by 1963 and entered a long peace that lasted until 1979 without any military competition',
-              'The two superpowers shifted to direct combat between their own armed forces in Europe during the 1960s, abandoning proxy strategies and concentrating on conventional ground combat',
-              'The two superpowers fully merged their economic systems into a single global capitalist order by 1972 and ended ideological competition for the remainder of the Cold War period'
+              'Direct confrontation gave way to arms control such as the 1963 hotline and SALT I in 1972, even as proxy wars and Third World interventions continued',
+              'The superpowers ended their proxy wars and military aid programs by 1963, entering a long and stable peace that lasted until the Soviet invasion of Afghanistan in December 1979',
+              'The superpowers shifted to direct combat between their own forces in Europe during the 1960s, abandoning proxy strategies for conventional warfare',
+              'The superpowers merged their economies into one global trading order by 1972, ending ideological rivalry as Soviet planners adopted market pricing'
             ],
             correctAnswer: 0,
             explanation: 'Détente was selective: arms control progressed, but proxy wars in Vietnam, Angola, and Latin America intensified. The "softer-yet-still-competitive" framing is the AP nuance.'
@@ -106,13 +106,13 @@ export const whColdWarDecolonizationPart5Data = {
           {
             question: 'Which two reforms most directly enabled the rapid late-1980s collapse of the Soviet bloc?',
             options: [
-              "Mikhail Gorbachev's policies of glasnost (openness) and perestroika (restructuring), which legitimized political criticism and exposed the failures of the Soviet planned economy",
-              "The 1947 Truman Doctrine and the 1948 Marshall Plan, which committed the United States to containing communism and to rebuilding Western European economies after the war",
-              "The 1955 Bandung Conference and the 1961 Non-Aligned Movement, which created a Third World political bloc that refused to choose between either superpower",
-              "The 1949 founding of NATO and the 1955 founding of the Warsaw Pact, which created the formal military alliance structures that bound each superpower's bloc"
+              "Gorbachev's glasnost (openness) and perestroika (restructuring), which legitimized criticism and exposed the planned economy's failures",
+              "The 1947 Truman Doctrine and the 1948 Marshall Plan, which committed the United States to containing communism and rebuilding Western Europe",
+              "The 1955 Bandung Conference and the 1961 Non-Aligned Movement, which created a Third World bloc that refused to choose between the superpowers",
+              "Nikita Khrushchev's de-Stalinization (1956) and the Virgin Lands campaign, which loosened censorship and expanded Soviet grain production"
             ],
             correctAnswer: 0,
-            explanation: 'Glasnost and perestroika are the canonical late-Cold-War reform pair. They opened space for criticism and exposed economic stagnation, accelerating the collapse.'
+            explanation: 'Glasnost and perestroika are the canonical late-Cold-War reform pair. They opened space for criticism and exposed economic stagnation, accelerating the collapse. Khrushchev\'s reforms came three decades earlier and did not threaten the bloc\'s survival.'
           }
         ]
       }
@@ -179,24 +179,24 @@ export const whColdWarDecolonizationPart5Data = {
           {
             question: 'A CCOT prompt asks: "Evaluate the extent to which the Cold War remained the same and the extent to which it changed between 1947 and 1991." Which thesis would score highest?',
             options: [
-              "Throughout the period the superpowers continued to compete through ideology, aid, and proxies, but the rivalry transformed from direct confrontation (1948 Berlin; 1962 Cuba) to negotiated arms control (1972 SALT I; 1987 INF) and finally to Soviet collapse, reshaping the bipolar system into a unipolar order",
-              "Nothing about the Cold War changed between 1947 and 1991 and the rivalry remained an unaltered confrontation between two evenly matched superpowers throughout the entire period without any meaningful evolution at all",
-              "Everything about the Cold War changed in 1991 and there were no meaningful continuities in superpower competition, aid politics, or ideological rivalry across the period from 1947 to 1991 at any point",
-              "The Cold War was identical in form to the 19th-century European balance-of-power system with no changes attributable to nuclear weapons, decolonization, or other distinctively post-1945 historical conditions"
+              "Superpowers kept competing through ideology, aid, and proxies, but rivalry moved from crises over Berlin and Cuba to arms control such as SALT I and finally to Soviet collapse",
+              "The Cold War stayed an unchanging confrontation between two evenly matched superpowers from 1947 to 1991, with crises such as Berlin and Cuba repeating the very same basic pattern",
+              "The Cold War changed completely after Stalin's death in 1953, since the superpowers thereafter abandoned ideological competition and proxy wars for peaceful trade",
+              "The Cold War repeated the 19th-century balance of power, as nuclear weapons, decolonization, and new ideologies left great-power rivalry unchanged"
             ],
             correctAnswer: 0,
-            explanation: 'Strong CCOT theses identify a continuity AND a change AND specify mechanisms (treaties, events) that mark the transformation. The other options collapse into one-sided claims.'
+            explanation: 'Strong CCOT theses identify a continuity AND a change AND specify mechanisms (treaties such as SALT I in 1972 and the INF Treaty in 1987, events such as the Soviet collapse) that mark the transformation. The other options collapse into one-sided claims.'
           },
           {
             question: 'Which best illustrates a meaningful transformation in decolonization across the period 1945–1991?',
             options: [
-              'Decolonization shifted from negotiated transfers in Asia (India 1947; Indonesia 1949) to a mix of armed struggle and negotiation in Africa (Algeria 1962; Ghana 1957) and finally to late settler-state transitions (Zimbabwe 1980; South Africa 1994)',
-              'Decolonization remained identical in method across all regions and all decades and produced no variation in outcomes between Asian, African, and settler-colonial cases at any point in the period',
-              'Decolonization ended completely by 1950 with no further independence movements anywhere in the world for the rest of the Cold War period or into the post-1991 era globally',
-              'Decolonization was driven entirely by the Soviet Union and ended whenever the Soviet Union withdrew its support from a particular nationalist movement during the period from 1947 to 1991'
+              'Decolonization moved from negotiated handover in Asia (India 1947) to armed and negotiated paths in Africa (Ghana 1957; Algeria 1962) and late settler cases (Zimbabwe 1980)',
+              'Decolonization followed one identical method in every region and decade, producing similar outcomes in Asian, African, and settler cases (India 1947; Kenya 1963)',
+              'Decolonization was largely complete by 1950, with only a handful of small island colonies gaining independence later in the Cold War (Jamaica 1962; Fiji 1970)',
+              'Decolonization was driven by Soviet sponsorship, advancing wherever Moscow funded nationalist movements and stalling wherever it withdrew support (Angola 1975)'
             ],
             correctAnswer: 0,
-            explanation: 'A strong AP CCOT response names the regional shift (Asia → Africa → settler states) and identifies how the methods varied. The other options are reductive caricatures.'
+            explanation: 'A strong AP CCOT response names the regional shift (Asia → Africa → settler states) and identifies how the methods varied. Kenya\'s Mau Mau war and India\'s negotiated transfer show methods were not identical, most of Africa became independent after 1956, and nationalist movements had local roots regardless of Soviet aid.'
           }
         ]
       }

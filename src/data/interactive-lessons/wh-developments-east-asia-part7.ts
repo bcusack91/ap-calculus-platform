@@ -52,10 +52,10 @@ Final review: high-yield terms, likely prompts, and exam strategy.
           {
             question: 'Which thesis is strongest for a comparison prompt on East Asia c. 1200-1450?',
             options: [
-              'China and Japan were effectively identical in governance',
-              'Chinese influence shaped both societies, but China remained bureaucratically centralized while Japan developed decentralized military-feudal rule',
-              'Japan had no social hierarchy',
-              'China lacked formal governance institutions'
+              'China and Japan shared Confucian bureaucracies, since Japan copied the Song exam system along with its writing',
+              'Chinese influence shaped both, but China stayed bureaucratically centralized while Japan became military-feudal',
+              'Japan and China diverged because Japan rejected all Chinese culture, including Buddhism and written characters',
+              'Both developed decentralized warrior rule, as Song emperors relied on regional lords much as Japan relied on the shogun'
             ],
             correctAnswer: 1,
             explanation: 'This thesis presents both similarity and difference with specific institutional language.'
@@ -64,12 +64,12 @@ Final review: high-yield terms, likely prompts, and exam strategy.
             question: 'Which evidence best supports a causation argument about political change in China?',
             options: [
               'Mongol conquest helped produce the Song-to-Yuan transition',
-              'European industrialization transformed Song governance',
-              'Atlantic revolutions replaced Confucianism in the 1200s',
-              'No external pressure affected Chinese dynastic change'
+              'A Japanese invasion of the mainland toppled the Song in 1279',
+              'Peasant rebels led by the Red Turbans founded the Yuan dynasty',
+              'Court factions invited a Jurchen prince to found the Yuan dynasty'
             ],
             correctAnswer: 0,
-            explanation: 'Mongol expansion is the direct causal mechanism for the major dynastic shift.'
+            explanation: 'Mongol expansion is the direct causal mechanism for the Song-to-Yuan shift. The Red Turban rebels helped topple the Yuan and found the Ming, the Jurchen Jin state was itself conquered by the Mongols, and Japan never invaded Song China.'
           }
         ]
       }
@@ -84,19 +84,19 @@ Final review: high-yield terms, likely prompts, and exam strategy.
         questions: [
           {
             question: 'Which ideology remained central to elite governance traditions in East Asia?',
-            options: ['Neo-Confucianism', 'Industrial socialism', 'Constitutional liberalism', 'Renaissance humanism'],
+            options: ['Neo-Confucianism', 'Legalism', 'Daoism', 'Zen Buddhism'],
             correctAnswer: 0,
             explanation: 'Neo-Confucian political ethics shaped elite governance norms across much of the region.'
           },
           {
             question: 'Which Chinese institution selected many bureaucratic officials?',
-            options: ['Civil service examinations', 'Hereditary parliament', 'Merchant guild voting', 'Samurai councils'],
+            options: ['Civil service examinations', 'Hereditary noble appointment', 'Merchant guild nomination', 'Buddhist temple ordination'],
             correctAnswer: 0,
             explanation: 'The exam system was a core institution in imperial Chinese bureaucratic recruitment.'
           },
           {
             question: 'Which term best describes Chinese-centered regional diplomatic hierarchy?',
-            options: ['Tributary system', 'Congress diplomacy', 'Industrial cartel system', 'Treaty-port federalism'],
+            options: ['Tributary system', 'Dynastic cycle', 'Treaty ports', 'Feudal levy'],
             correctAnswer: 0,
             explanation: 'The tributary system organized ritual hierarchy and prestige diplomacy around Chinese courts.'
           }
@@ -115,15 +115,15 @@ Identify the prompt type first, then select evidence that directly matches that 
         dropdowns: [
           {
             label: 'A question asking "how and why institutions changed" is mainly testing: ___',
-            options: ['causation', 'vocabulary only', 'pure chronology', 'map reading only']
+            options: ['causation', 'comparison', 'contextualization', 'periodization']
           },
           {
             label: 'A question asking "similarities and differences" is mainly testing: ___',
-            options: ['comparison', 'periodization only', 'source reliability only', 'quantitative methods only']
+            options: ['comparison', 'causation', 'periodization', 'sourcing']
           },
           {
             label: 'A question asking what stayed the same while other things shifted is mainly testing: ___',
-            options: ['continuity and change over time', 'none of the AP themes', 'random recall', 'citation format']
+            options: ['continuity and change over time', 'comparison across regions', 'causation of events', 'contextualization of sources']
           }
         ],
         correctAnswers: ['causation', 'comparison', 'continuity and change over time'],
@@ -144,10 +144,10 @@ Identify the prompt type first, then select evidence that directly matches that 
           {
             question: 'Which short claim is best for an SAQ asking one continuity in East Asia c. 1200-1450?',
             options: [
-              'Confucian political ethics remained influential in elite governance across dynastic shifts',
-              'No elite ideology existed in East Asia',
-              'All East Asian states became constitutional monarchies',
-              'Trade and diplomacy ceased across the region'
+              'Confucian political ethics stayed influential in elite governance across dynastic shifts',
+              'Mongol rule ended Confucian influence, which never recovered in elite governance',
+              'Buddhist monasteries governed China directly after the fall of the Song dynasty',
+              'Trade and diplomacy ceased across the region once Mongol armies closed land and sea routes'
             ],
             correctAnswer: 0,
             explanation: 'It is precise, accurate, and directly responsive to continuity.'
@@ -155,10 +155,10 @@ Identify the prompt type first, then select evidence that directly matches that 
           {
             question: 'Which sentence best shows strong AP reasoning after citing Japanese feudal institutions?',
             options: [
-              'This evidence matters because it demonstrates regional divergence in state structure despite shared Chinese cultural influence',
-              'This evidence has no broader significance',
-              'This proves all East Asian governments were the same',
-              'This means Japan had no contact with the continent'
+              'This matters because it shows regional divergence in state structure despite shared Chinese influence',
+              'This matters because it shows Japan copied every Chinese institution, including the civil service examination system',
+              'This matters because it shows Japan had no contact with the mainland, so its feudalism emerged in complete isolation',
+              'This matters because it shows that all East Asian governments were the same, with emperors ruling through warrior lords'
             ],
             correctAnswer: 0,
             explanation: 'The sentence explicitly links evidence to a broader comparative argument.'
