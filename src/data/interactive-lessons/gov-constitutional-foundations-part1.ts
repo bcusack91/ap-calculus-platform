@@ -15,7 +15,7 @@ export const govConstitutionalFoundationsPart1Data = {
 |---|
 | Enlightenment foundations (Locke, Montesquieu, Hobbes) |
 | Foundational documents (Declaration, Articles, Constitution) |
-| Five required AP foundational documents |
+| Five of the 13 required foundational documents |
 | Federalists vs. Anti-Federalists |
 
 > 🔑 Key idea: The U.S. Constitution (drafted summer 1787, ratified June 1788, effective March 4, 1789) was the product of a sustained Enlightenment debate over the proper sources of legitimate political authority and the proper structure of government to secure liberty without producing tyranny — a debate that continues to shape American constitutional argument today.
@@ -44,7 +44,7 @@ export const govConstitutionalFoundationsPart1Data = {
 | **Bill of Rights** | Drafted 1789, ratified Dec 15, 1791 | First 10 amendments; protections against federal government action (originally); negotiated by Anti-Federalists in exchange for ratification |
 | **Federalist Papers** | Oct 1787 – Aug 1788 | 85 essays by Hamilton, Madison, and Jay (under "Publius") urging New York ratification; canonical interpretive source for the Constitution's original meaning |
 
-## Five Required AP Foundational Documents
+## Five of the 13 Required AP Foundational Documents
 
 | Document | Author/Date | Core Argument |
 |---|---|---|
@@ -77,10 +77,10 @@ export const govConstitutionalFoundationsPart1Data = {
           {
             question: 'Which best describes the central argument of *Federalist No. 10* (Madison, November 22, 1787)?',
             options: [
-              "James Madison argued that the greatest danger to popular government is 'faction' — a number of citizens 'united and actuated by some common impulse of passion, or of interest, adverse to the rights of other citizens, or to the permanent and aggregate interests of the community' — and that the proposed large extended republic is the best institutional remedy for the mischiefs of faction because (1) the size and diversity of the country makes it harder for any single faction to form a national majority, (2) representation through elected officials filters and refines popular passion, and (3) competition among multiple factions forces coalition-building rather than tyrannical majority rule",
-              'James Madison argued that the greatest danger to popular government is the existence of any government at all and that the United States should abolish all federal authority with no Congress, no presidency, and no Supreme Court of any kind during the entire period from 1788 onward in any region of the United States during the period',
-              "James Madison argued that the greatest danger to popular government is the absence of a hereditary monarch and that the United States should adopt a king with no Congress, no presidency, and no Supreme Court of any kind during the entire period from 1788 onward in any region of the United States during the period",
-              "There was no Federalist No. 10 of any kind during the entire period from 1787 onward in any region of the United States with no Madison, no faction argument, no extended-republic argument, and no representation argument of any kind during the entire period in any region"
+              "Factions are inevitable, so a large republic should control their effects by multiplying competing interests and filtering passions through elected representatives",
+              'Factions can be eliminated by giving citizens the same opinions, so the new government should promote one shared civic creed across the states',
+              "A small, homogeneous republic best protects liberty, so most power should remain with states whose citizens share common interests",
+              "Separating powers among three branches lets ambition counteract ambition, so no single branch can dominate the others"
             ],
             correctAnswer: 0,
             explanation: 'Federalist No. 10 (Madison, Nov 22 1787) central argument: faction = greatest danger → large extended republic is the cure (size/diversity prevents national majority faction + representation filters passion + multi-faction competition forces coalition).'
@@ -88,10 +88,10 @@ export const govConstitutionalFoundationsPart1Data = {
           {
             question: 'Which best describes the relationship between the Articles of Confederation (1781) and the U.S. Constitution (1789)?',
             options: [
-              "The Articles of Confederation (drafted 1777, ratified 1781) created a 'league of friendship' among sovereign states with a weak unicameral Congress that lacked the power to tax (had to requisition states), to regulate interstate commerce, to enforce laws, to maintain a standing army, or to create a national executive or judiciary; this structure proved inadequate to address the post-Revolutionary debt crisis, interstate economic disputes, and Shays\' Rebellion (1786-87, Massachusetts farmers protesting debt collection); the Philadelphia Convention (May-September 1787) was called to revise the Articles but instead drafted an entirely new Constitution that created a federal republic with enumerated and implied federal powers, separated powers (executive + legislative + judicial), and a stronger national government — ratified June 21, 1788 (NH 9th state); effective March 4, 1789",
-              'The Articles of Confederation and the U.S. Constitution had no relationship of any kind with no league of friendship, no Shays\' Rebellion, no Philadelphia Convention, and no Constitutional ratification of any kind during the entire period in any region',
-              "The Articles of Confederation created a strong central government and the U.S. Constitution weakened it with no Shays' Rebellion, no Philadelphia Convention, and no enumerated/implied federal powers of any kind during the entire period in any region of the United States",
-              "There were no Articles of Confederation and no U.S. Constitution of any kind during the entire period from 1777 through 1789 in any region of the United States with no league of friendship, no Shays' Rebellion, and no Philadelphia Convention of any kind during the entire period in any region"
+              "The Articles' weak Congress could not tax or regulate commerce, and the Constitution replaced them with a stronger national government",
+              'The Constitution was drafted as a set of amendments to the Articles, adding a president and federal courts but keeping the one-state, one-vote Congress',
+              "The Articles created a strong central government that overrode the states, and the Constitution restored state sovereignty through the Tenth Amendment",
+              "The Articles and the Constitution both gave Congress the power to tax, but only the Constitution allowed Congress to raise a standing army in peacetime"
             ],
             correctAnswer: 0,
             explanation: 'Articles (1781) → Constitution (1789): Articles = league of friendship + weak Congress (no tax/commerce/enforce/army/exec/judiciary); inadequate (post-Rev debt + interstate disputes + Shays 1786-87) → Philadelphia Convention May-Sept 1787 (called to revise; drafted new) → Constitution = federal republic + enumerated/implied powers + separated powers → ratified June 21 1788 (NH 9th); effective March 4 1789.'
@@ -161,10 +161,10 @@ export const govConstitutionalFoundationsPart1Data = {
           {
             question: 'An AP argumentative essay asks: "Develop an argument that explains whether the Federalists or the Anti-Federalists were more correct about the dangers facing the new republic." Which response demonstrates the strongest use of foundational documents?',
             options: [
-              "The Anti-Federalist arguments in *Brutus No. 1* (Oct 18, 1787) — that a large extended republic of competing factions cannot sustain the civic virtue, common interest, and direct representation that self-government requires, and that consolidated federal authority will inevitably erode state authority and individual liberty — have proven more prescient than Madison's Federalist No. 10 optimism: the federal government has dramatically expanded relative to states (post-New Deal commerce-clause doctrine, post-1965 civil-rights enforcement, post-1965 Great Society programs), the Bill of Rights that Anti-Federalists demanded as the price of ratification (ratified Dec 1791) has proven essential to liberty, and contemporary American politics displays exactly the factional polarization Madison hoped the extended republic would dilute — though Federalists were correct that a stronger union was needed for economic integration, national defense, and constitutional stability",
-              'Neither the Federalists nor the Anti-Federalists were correct about anything of any kind with no Brutus No. 1, no Federalist No. 10, no Bill of Rights, no commerce-clause expansion, and no factional polarization of any kind during the entire period in any region',
-              'The Federalists and Anti-Federalists were entirely identical in their arguments with no meaningful differences of any kind during the entire period from 1787 through 1791 in any region of the United States during the period in any region of the country',
-              'There were no Federalists, no Anti-Federalists, no Brutus No. 1, no Federalist No. 10, no Bill of Rights, and no ratification debate of any kind during the entire period from 1787 through 1791 in any region of the United States with no foundational documents of any kind during the period'
+              "Brutus No. 1 warned that the Necessary and Proper and Supremacy Clauses would let national power swallow the states, a fear borne out by federal growth since the New Deal",
+              'Federalist No. 10 proves the Anti-Federalists right, since Madison admitted that a large republic would let one national faction dominate the states',
+              'The Anti-Federalists were more correct because the federal government today is much larger and spends far more money than it did in 1787',
+              'Brutus No. 1 shows the Federalists were more correct, since Brutus argued that only a large and diverse republic could control factions and protect the rights of minorities in every state'
             ],
             correctAnswer: 0,
             explanation: 'Strong AP argumentative essay: takes a position (Anti-Federalists more prescient) + uses required foundational documents (Brutus No. 1 + Federalist No. 10) + provides specific evidence (Bill of Rights ratification + commerce-clause expansion + Great Society + factional polarization) + acknowledges counterargument (Federalists correct on union/defense/stability).'
@@ -172,10 +172,10 @@ export const govConstitutionalFoundationsPart1Data = {
           {
             question: 'Which AP "complexity" claim best illuminates the Constitution as a compromise document?',
             options: [
-              "The Constitution is the product of multiple, partially-incompatible compromises: (1) the Connecticut Compromise (between large-state Virginia Plan / proportional representation and small-state New Jersey Plan / equal representation) created a bicameral Congress with proportional House and equal Senate; (2) the Three-Fifths Compromise (Article I, § 2, clause 3) counted enslaved persons as 3/5 of a person for purposes of House representation and direct taxation, embedding slavery in the Constitution; (3) the slave-trade compromise (Article I, § 9, clause 1) prohibited Congress from banning the international slave trade until 1808; (4) the Federalist–Anti-Federalist compromise yielded the Bill of Rights; (5) the Electoral College emerged from disputes over executive selection — making the Constitution simultaneously a triumph of constitutional engineering and a document deeply marked by 18th-century slavery, sectional rivalry, and elite skepticism of direct democracy",
-              "The Constitution had no compromises of any kind with no Connecticut Compromise, no Three-Fifths Compromise, no slave-trade compromise, no Bill of Rights compromise, and no Electoral College compromise of any kind during the entire period in any region of the United States during the period in any region of the country",
-              "The Constitution was a single drafter's work with no compromises of any kind during the entire period from 1787 through 1791 in any region of the United States with no Connecticut Compromise, no Three-Fifths Compromise, and no slave-trade compromise of any kind during the entire period in any region",
-              "There was no Constitution of any kind during the entire period from 1787 through 1791 in any region of the United States with no Connecticut Compromise, no Three-Fifths Compromise, no slave-trade compromise, no Bill of Rights, and no Electoral College of any kind during the entire period in any region"
+              "The Constitution resolved disputes over representation and slavery through bargains that strengthened the union while also embedding slavery and overrepresenting small states",
+              "The Constitution reflected a single shared vision among the delegates, which is why the Convention adopted the Virginia Plan without major changes",
+              "The Constitution's Great Compromise gave large states control of both chambers, while small states received the presidency in exchange for ratifying",
+              "The framers compromised only on slavery, leaving every question about representation and the scope of federal power to be settled later by the First Congress in the Bill of Rights"
                 ],
             correctAnswer: 0,
             explanation: 'AP complexity: Constitution = product of multiple compromises — Connecticut (large vs. small states → bicameral) + Three-Fifths (slavery in representation/taxation) + slave-trade (1808 sunset) + Federalist/Anti-Federalist (Bill of Rights) + Electoral College → triumph of engineering AND document marked by slavery, sectional rivalry, elite skepticism.'

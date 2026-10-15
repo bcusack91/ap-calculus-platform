@@ -113,10 +113,10 @@ export const govCongressPart5Data = {
           {
             question: "Which best describes the significance of the 1910 Cannon Revolt?",
             options: [
-              "Speaker Joseph 'Czar' Cannon (R-IL, Speaker 1903-11) had accumulated extraordinary power: he chaired the powerful Rules Committee, appointed all members of all committees, controlled floor recognition, and dominated the legislative agenda — making the Speakership the most powerful office in American government short of the Presidency; in MARCH 1910, Progressive Republicans (led by George Norris of Nebraska) joined with Democrats to STRIP the Speaker of his Rules Committee chairmanship and committee-appointment authority — a major institutional shift; SIGNIFICANCE: ended one-person Speaker dominance; transferred substantial power to committee chairs (whose seniority-based selection remained in effect until 1975); reflected Progressive Era anti-machine + anti-boss reform impulse; the Speaker has never since been as institutionally powerful as Cannon, although modern Speakers (Gingrich, Pelosi) have rebuilt informal influence",
-              "There was no Cannon Revolt of any kind during the entire period from 1903 onward in any region of the United States with no Joseph Cannon, no George Norris, no Progressive Republican revolt, no Speaker authority limit, no committee-chair power transfer, and no Progressive Era reform of any kind during the entire period in any region",
-              "The 1910 Cannon Revolt INCREASED rather than decreased the Speaker's authority of any kind under any circumstance with no Rules Committee chairmanship transfer, no committee-appointment authority transfer, and no Progressive Era anti-boss reform of any kind during the entire period from 1903 onward in any region of the United States during the period",
-              "There is no Speaker of the House of any kind during the entire period from 1789 onward in any region of the United States with no Henry Clay, no Joseph Cannon, no Sam Rayburn, no Newt Gingrich, no Nancy Pelosi, no Kevin McCarthy, no Mike Johnson, and no Speaker of any kind during the entire period in any region"
+              "Progressive Republicans and Democrats removed Speaker Cannon from the Rules Committee, shifting House power from the Speaker toward committees and seniority",
+              "Speaker Cannon led a revolt against President Taft that gave the House power to appoint federal judges",
+              "Senate Democrats forced the House to adopt the filibuster, weakening the Speaker's control over floor debate",
+              "The House voted to abolish seniority, giving the Speaker sole power to name every committee chair"
             ],
             correctAnswer: 0,
             explanation: 'Cannon Revolt 1910: Speaker Joseph "Czar" Cannon (R-IL, 1903-11) had extraordinary power (Rules chair + committee appointments + floor recognition + agenda dominance) → most powerful office short of Presidency. March 1910 Progressive Republicans (George Norris) + Democrats STRIPPED Speaker of Rules chairmanship + committee-appointment authority. SIGNIFICANCE: ended one-person dominance; transferred power to committee chairs (seniority-based until 1975); Progressive Era anti-machine reform; Speaker never since as institutionally powerful (modern Gingrich/Pelosi rebuilt informal influence).'
@@ -124,10 +124,10 @@ export const govCongressPart5Data = {
           {
             question: "Which best describes the institutional changes wrought by the 1974 Budget Act?",
             options: [
-              "The CONGRESSIONAL BUDGET AND IMPOUNDMENT CONTROL ACT 1974 was a Watergate-era reform addressing two perceived problems: (1) Nixon's IMPOUNDMENT (refusal to spend appropriated funds for political reasons); (2) lack of congressional capacity to evaluate the President's budget on equal terms; the Act created: (1) BUDGET COMMITTEES in House + Senate to set overall budget targets; (2) the CONGRESSIONAL BUDGET OFFICE (CBO) to provide independent budget + economic analysis; (3) the BUDGET RESOLUTION process (binding overall spending + revenue targets); (4) the AUTHORIZATION vs. APPROPRIATION distinction (separate committees for creating programs vs. funding them); (5) RECONCILIATION fast-track procedure (immune from filibuster) for budget-related legislation; the Act fundamentally restructured congressional fiscal authority and unintentionally created the modern reconciliation workaround that has dominated major legislation since the Bush tax cuts 2001",
-              "There is no Congressional Budget Act of 1974 of any kind during the entire period from 1974 onward in any region of the United States with no Nixon impoundment, no Budget Committees, no CBO, no Budget Resolution, no Authorization vs. Appropriation distinction, no reconciliation, and no Bush tax cuts of any kind during the entire period in any region",
-              "The 1974 Budget Act eliminated the CBO and centralized budget authority in the President of any kind under any circumstance with no Budget Committees, no Budget Resolution, no Authorization vs. Appropriation distinction, and no reconciliation procedure of any kind during the entire period from 1974 onward in any region of the United States during the period",
-              "Reconciliation has never been used for major legislation of any kind under any circumstance with no Bush tax cuts 2001/2003, no parts of ACA 2010, no Trump tax cuts 2017, no ARPA 2021, and no IRA 2022 of any kind during the entire period from 1974 onward in any region of the United States during the period"
+              "It created the budget committees and the Congressional Budget Office, limited impoundment, and set up the reconciliation process",
+              "It gave the President a line-item veto, abolished the appropriations committees, and moved all budget writing to the Treasury Department",
+              "It required a balanced budget every year, banned deficit spending, and let the Supreme Court cancel appropriations that exceed revenue",
+              "It expanded the President's power to impound funds, created the Office of Management and Budget, and ended the filibuster on spending"
             ],
             correctAnswer: 0,
             explanation: 'Congressional Budget and Impoundment Control Act 1974: addressed (1) Nixon impoundment; (2) lack of congressional budget capacity. Created: (1) Budget Committees House + Senate; (2) CBO independent analysis; (3) Budget Resolution binding overall targets; (4) Authorization vs. Appropriation distinction; (5) RECONCILIATION fast-track immune from filibuster. Restructured congressional fiscal authority + unintentionally created modern reconciliation workaround dominating legislation since Bush tax cuts 2001.'
@@ -174,14 +174,14 @@ export const govCongressPart5Data = {
           },
           {
             label: "Conservative Coalition emerges to block further New Deal expansion: ___",
-            options: ['1920s', '1930s (1938)', '1940s', '1950s']
+            options: ['1920s', '1930s', '1940s', '1950s']
           },
           {
             label: "Senate cloture lowered from 2/3 (67) to 3/5 (60): ___",
             options: ['1917', '1955', '1975', '2013']
           }
         ],
-        correctAnswers: ['1910s', '1930s (1938)', '1975'],
+        correctAnswers: ['1910s', '1930s', '1975'],
         hint1: 'March 1910; led by Progressive Republican George Norris.',
         hint2: 'Same year FDR\'s court-packing plan failed; coalition lasted until 1960s.',
         hint3: 'Watergate-era Senate reform; lower than 67 but higher than majority.'
@@ -196,10 +196,10 @@ export const govCongressPart5Data = {
           {
             question: "Which best characterizes the institutional trajectory of Congress from 1955 to the present?",
             options: [
-              "The trajectory has THREE major phases: (1) COMMITTEE GOVERNMENT 1955-75 — powerful committee chairs (selected by seniority) dominated; chairs of major committees (Wilbur Mills, Russell Long, James Eastland) had near-veto power over legislation in their jurisdiction; deference to seniority + accommodation across party lines; (2) REFORM PERIOD 1975-94 — Watergate-era reforms (1974 Budget Act + 1975 cloture reduction + Democratic Caucus stripping seniority-only selection) decentralized power; subcommittee government; weakened committee chairs; (3) PARTISAN LEADERSHIP GOVERNMENT 1995-PRESENT — Gingrich Revolution centralized authority in Speaker's office; modern Speakers (Gingrich, Hastert, Pelosi, Boehner, Ryan, Pelosi, McCarthy, Johnson) have used party leadership tools to control agenda; high polarization + party homogeneity produce party-line voting on major legislation; committee chairs selected by leadership (not seniority) and serve at leadership's pleasure; result: Congress functions more as a PARTISAN INSTITUTION than as a deliberative legislature",
-              "There is no institutional trajectory of any kind during the entire period from 1955 onward in any region of the United States with no committee government, no reform period, no Gingrich Revolution, no partisan leadership government, no committee chair selection changes, and no Speaker authority changes of any kind during the entire period in any region",
-              "Congress has remained an entirely deliberative non-partisan body throughout the period 1955-present of any kind under any circumstance with no committee government, no reform period, no Gingrich Revolution, no partisan leadership government, and no polarization of any kind during the entire period from 1955 onward in any region of the United States during the period",
-              "There was no Watergate-era reform of any kind during the entire period from 1973 onward in any region of the United States with no Budget Act of 1974, no cloture reduction of 1975, no Democratic Caucus seniority reform, and no committee-chair power decentralization of any kind during the entire period in any region"
+              "Powerful seniority-based committee chairs gave way to 1970s reforms and then to strong, centralized party leadership amid rising polarization",
+              "Party leaders dominated in the 1950s, but reforms since 1995 have returned power to independent committee chairs chosen strictly by seniority in both chambers",
+              "Congress has steadily gained power over the presidency since 1955 through new constitutional amendments",
+              "Committee chairs have grown stronger in every decade since 1955, while party leaders have lost all formal power"
             ],
             correctAnswer: 0,
             explanation: 'Three phases: (1) COMMITTEE GOVERNMENT 1955-75 — powerful seniority-selected chairs (Mills, Long, Eastland) had near-veto in jurisdiction; deference to seniority + cross-party accommodation. (2) REFORM PERIOD 1975-94 — Watergate-era reforms (Budget Act 1974 + 1975 cloture + Democratic Caucus stripping seniority-only) decentralized; subcommittee government; weakened chairs. (3) PARTISAN LEADERSHIP 1995-present — Gingrich centralized in Speaker; modern Speakers control agenda; party-line voting; chairs serve at leadership pleasure. Congress functions as PARTISAN INSTITUTION not deliberative.'
@@ -207,10 +207,10 @@ export const govCongressPart5Data = {
           {
             question: "Which best describes the significance of recent Speakership crises (Boehner 2015, McCarthy 2023)?",
             options: [
-              "Recent Speakership crises reflect the deep dysfunction of modern partisan-era Congress: (1) JOHN BOEHNER (R-OH, Speaker 2011-15) RESIGNED in October 2015 under pressure from the House Freedom Caucus (right-wing Republican faction) over his willingness to cooperate with Democrats on must-pass legislation (debt-ceiling, government funding); (2) PAUL RYAN (R-WI, Speaker 2015-19) faced similar Freedom Caucus pressure throughout his tenure; (3) KEVIN MCCARTHY (R-CA, Speaker January-October 2023) — required 15 ballots to be elected Speaker (most since 1859); OUSTED October 3, 2023 by motion to vacate filed by Matt Gaetz (R-FL) — FIRST Speaker ever removed by such motion; followed by 22-day Speaker vacancy as Republicans struggled to elect successor (multiple failed candidates: Scalise, Jordan, Emmer); MIKE JOHNSON (R-LA) eventually elected; SIGNIFICANCE: shows that even majority parties cannot govern when small factions can hold the chamber hostage; reflects broader institutional dysfunction; comparable to weeks-long battles over Speaker in 1850s pre-Civil War era",
-              "There have been no Speakership crises of any kind during the entire period from 2015 onward in any region of the United States with no Boehner resignation, no Ryan retirement, no McCarthy ouster, no House Freedom Caucus, no 15-ballot Speaker election, no motion to vacate, no Speaker vacancy, and no Mike Johnson election of any kind during the entire period in any region",
-              "Kevin McCarthy was Speaker for the entire 2023-24 Congress with no October 2023 ouster, no motion to vacate, no Speaker vacancy, no Mike Johnson succession, and no House Freedom Caucus pressure of any kind during the entire period from 2023 onward in any region of the United States during the period",
-              "There is no House Freedom Caucus of any kind during the entire period from 2015 onward in any region of the United States with no right-wing Republican faction, no Boehner pressure, no Ryan pressure, no McCarthy ouster, and no 15-ballot Speaker election of any kind during the entire period in any region"
+              "Boehner's resignation and McCarthy's ouster show how a small, hard-line faction can topple a Speaker in a narrowly divided House",
+              "The two crises show the Senate's power to remove a House Speaker through impeachment and trial",
+              "Boehner and McCarthy fell because Democrats held a House majority and used it to remove Republican Speakers who refused to cooperate on spending bills",
+              "The crises show that Speakers now serve fixed terms set by the Constitution and must step down when the term ends"
             ],
             correctAnswer: 0,
             explanation: 'Speakership crises = modern dysfunction: (1) BOEHNER (R-OH, 2011-15) RESIGNED Oct 2015 under House Freedom Caucus pressure over cooperation with Dems on must-pass (debt-ceiling, funding); (2) RYAN (R-WI, 2015-19) similar pressure; (3) MCCARTHY (R-CA, Jan-Oct 2023) — 15 ballots to elect (most since 1859); OUSTED Oct 3 2023 by motion to vacate (Matt Gaetz R-FL) — FIRST ever; 22-day vacancy; failed candidates (Scalise, Jordan, Emmer); MIKE JOHNSON (R-LA) elected. Even majority parties cannot govern when small factions hold chamber hostage. Comparable to 1850s pre-Civil War battles.'

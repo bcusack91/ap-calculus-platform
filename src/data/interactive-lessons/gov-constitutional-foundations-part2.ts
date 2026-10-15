@@ -80,10 +80,10 @@ export const govConstitutionalFoundationsPart2Data = {
           {
             question: 'Which best describes the formal process by which Congress can override a presidential veto?',
             options: [
-              "After the President vetoes a bill (returns it to the originating chamber with objections within 10 days, Sundays excluded; if Congress is in session and 10 days pass without signature the bill becomes law; if Congress adjourns within 10 days and the President takes no action, the bill is killed by 'pocket veto'), Congress can override the veto by a two-thirds vote of each chamber present and voting; the override is rare in U.S. history (~7% of regular vetoes overridden); the President has no line-item veto for federal legislation (Congress passed the Line Item Veto Act 1996 but the Supreme Court struck it down in *Clinton v. City of New York*, 1998, on Presentment Clause grounds)",
-              'Congress cannot override a presidential veto under any circumstance with no two-thirds vote of any kind during the entire period from 1789 onward in any region of the United States during the period in any region of the country',
-              'Congress overrides a presidential veto by a simple majority of one chamber with no two-thirds vote of any kind during the entire period from 1789 onward in any region of the United States during the period in any region of the country',
-              "There is no presidential veto and no congressional override of any kind during the entire period from 1789 onward in any region of the United States with no Presentment Clause and no Clinton v. City of New York of any kind during the entire period in any region"
+              "Each chamber must repass the vetoed bill by a two-thirds vote of the members present, after which it becomes law without the President's signature",
+              'The House and Senate must each repass the bill by a simple majority within ten days, after which the President cannot veto it again',
+              'Three-fourths of the state legislatures must approve the vetoed bill within seven years, as with a proposed constitutional amendment',
+              "The Senate alone may override a veto by a two-thirds vote, since the House already passed the bill before it reached the President"
             ],
             correctAnswer: 0,
             explanation: 'Veto override: 2/3 of each chamber present and voting (rare; ~7%). Presidential veto = 10 days (Sundays excluded); pocket veto if Congress adjourns within 10 days. No line-item veto (Clinton v. City of NY 1998 struck Line Item Veto Act 1996 on Presentment Clause).'
@@ -91,10 +91,10 @@ export const govConstitutionalFoundationsPart2Data = {
           {
             question: 'Which best describes the constitutional power of judicial review?',
             options: [
-              "Judicial review is the power of federal courts to declare an act of Congress, an action of the executive branch, or a state law unconstitutional and therefore unenforceable; it was not explicitly granted by the Constitution but was established by Chief Justice John Marshall in *Marbury v. Madison* (1803), in which the Court held § 13 of the Judiciary Act of 1789 unconstitutional for purporting to expand the Court's original jurisdiction beyond Article III; Marshall's reasoning ('It is emphatically the province and duty of the judicial department to say what the law is') has been treated as the foundational statement of judicial supremacy in constitutional interpretation",
-              'Judicial review is explicitly granted to Congress by Article I with no Marbury v. Madison and no John Marshall of any kind during the entire period from 1789 onward in any region of the United States during the period in any region of the country',
-              'Judicial review allows federal courts to declare any state law constitutional but never to declare any act of Congress unconstitutional with no Marbury v. Madison and no Judiciary Act of 1789 of any kind during the entire period in any region',
-              "There is no judicial review of any kind during the entire period from 1789 onward in any region of the United States with no Marbury v. Madison, no John Marshall, no Judiciary Act of 1789, and no Article III of any kind during the entire period in any region"
+              "The power of courts to void laws and actions that violate the Constitution, first asserted by the Supreme Court in Marbury v. Madison",
+              'The power of the Supreme Court to issue advisory opinions on bills before Congress votes, expressly granted in Article III and first used in McCulloch v. Maryland',
+              'The power of Congress to overturn Supreme Court rulings by a two-thirds vote, created by the Judiciary Act of 1789 and first used against Marbury v. Madison',
+              "The power of state courts to nullify federal laws that conflict with the Constitution, recognized by the Tenth Amendment and affirmed in Marbury v. Madison"
             ],
             correctAnswer: 0,
             explanation: 'Judicial review: not explicit in Constitution; established by CJ Marshall in Marbury v. Madison (1803) → § 13 of Judiciary Act of 1789 unconstitutional (purported to expand Court\'s original jurisdiction beyond Article III). "It is emphatically the province and duty of the judicial department to say what the law is."'
@@ -162,12 +162,12 @@ export const govConstitutionalFoundationsPart2Data = {
       exercise: {
         questions: [
           {
-            question: 'AP SCOTUS comparison prompt: A non-required case asks whether a presidential executive order seizing private steel mills during the Korean War was constitutional. Which AP-required case provides the most useful comparison?',
+            question: 'AP SCOTUS comparison prompt: A non-required case asks whether a presidential executive order seizing private steel mills during the Korean War was constitutional. Which landmark case on presidential power provides the most useful comparison?',
             options: [
-              "*United States v. Nixon* (1974), in which the Court rejected an absolute executive privilege and ordered President Nixon to turn over Watergate tapes to the special prosecutor, establishing that no person — including the President — is above the law and that executive power has constitutional limits even in matters the President considers within his sole authority; the case is the canonical AP-required example of judicial enforcement of constitutional limits on executive power, directly analogous to *Youngstown Sheet & Tube Co. v. Sawyer* (1952), in which the Court (Justice Black, with the famous Justice Jackson concurrence categorizing presidential power into three zones depending on congressional support) struck down President Truman's seizure of steel mills as unauthorized by Congress and beyond the President's Article II powers",
-              "There is no AP-required case of any kind that provides a useful comparison for executive-power questions of any kind during the entire period from 1789 onward in any region of the United States during the period in any region of the country",
-              "Marbury v. Madison (1803) is the only useful comparison for executive-power questions of any kind during the entire period from 1789 onward in any region of the United States during the period in any region of the country",
-              "There are no AP-required Supreme Court cases of any kind during the entire period from 1789 onward in any region of the United States with no judicial review and no executive-power doctrine of any kind during the entire period in any region"
+              "United States v. Nixon (1974), which held that executive privilege is not absolute and that the President must comply with a judicial subpoena",
+              "Marbury v. Madison (1803), which held that the Court could order the Secretary of State to deliver a commission",
+              "Clinton v. City of New York (1998), which held that the President may cancel individual items in spending bills",
+              "Schenck v. United States (1919), which held that wartime emergencies allow the executive to seize private property without approval from Congress"
             ],
             correctAnswer: 0,
             explanation: 'AP SCOTUS comparison: US v. Nixon (1974) — judicial enforcement of constitutional limits on executive power → analogous to Youngstown (1952, Black + Jackson concurrence with three zones depending on congressional support) striking Truman steel seizure as unauthorized by Congress and beyond Article II.'
@@ -175,10 +175,10 @@ export const govConstitutionalFoundationsPart2Data = {
           {
             question: 'Which best demonstrates AP "complexity" by analyzing the limits of formal checks and balances?',
             options: [
-              "Although the Constitution's formal checks and balances remain on paper, the practical balance has shifted dramatically toward the executive branch since the New Deal: presidents have used executive orders (Truman EO 9981 desegregating armed forces 1948; Eisenhower EO 10730 Little Rock 1957; Obama DACA 2012; Trump EO 13769 travel ban 2017), executive agreements (now ~90% of international agreements vs. treaties), signing statements (Bush 43 used to challenge ~1,200 statutory provisions), prosecutorial discretion, and administrative-state rulemaking to expand presidential power; meanwhile Congress has often delegated broad authority to executive agencies (the New Deal-era nondelegation doctrine reset of the 'switch in time' opened the door); the courts have generally deferred (Chevron deference 1984 — overturned 2024) until the recent revival of major-questions doctrine and unitary-executive theory; the result is a constitutional system in which formal text and operational reality have substantially diverged",
-              'Formal checks and balances perfectly constrain the executive branch with no executive orders, no executive agreements, no signing statements, no Chevron deference, and no unitary-executive theory of any kind during the entire period from 1933 onward in any region of the United States during the period',
-              'There has been no shift in the balance among the branches since the New Deal with no executive orders, no executive agreements, no signing statements, no administrative state, and no Chevron deference of any kind during the entire period from 1933 onward in any region of the United States during the period',
-              "There is no executive branch, no Congress, and no judiciary of any kind during the entire period from 1933 onward in any region of the United States with no executive orders, no executive agreements, no signing statements, and no administrative state of any kind during the entire period in any region"
+              "The formal checks still exist on paper, yet executive orders and broad congressional delegation have shifted much practical power toward the President",
+              'The formal checks have grown stronger over time, since Congress now overrides most vetoes and rejects most executive nominations',
+              'The Court has stopped reviewing executive actions entirely, so presidents now act without any judicial check on their power',
+              "The formal checks have shifted practical power toward Congress, which now writes detailed statutes that leave agencies and the President little discretion in carrying them out"
             ],
             correctAnswer: 0,
             explanation: 'AP complexity: post-New Deal balance shift toward executive — executive orders (EO 9981, 10730, DACA, 13769) + executive agreements (~90% intl agreements vs treaties) + signing statements (Bush 43 ~1,200 challenges) + prosecutorial discretion + administrative state + Chevron deference 1984 (overturned 2024) → formal text and operational reality diverge.'
