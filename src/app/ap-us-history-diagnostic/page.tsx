@@ -175,7 +175,7 @@ export default function APUsHistoryDiagnosticPage() {
           <div className="mb-4"><span className="rounded-full bg-red-100 px-3 py-1 text-xs font-semibold text-red-700 dark:bg-red-900/30 dark:text-red-400">{testData.domains.find(d => d.id === q.domain)?.name ?? q.domain}</span></div>
 
           <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-            <p className="mb-6 text-sm leading-relaxed text-gray-800 dark:text-gray-200">{q.question}</p>
+            <p className="mb-6 whitespace-pre-line text-sm leading-relaxed text-gray-800 dark:text-gray-200">{q.question}</p>
             <div className="space-y-2">
               {q.options.map((opt, i) => {
                 const isSelected = answers[currentIndex] === i
