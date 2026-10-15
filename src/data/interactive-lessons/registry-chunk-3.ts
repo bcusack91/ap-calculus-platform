@@ -1594,10 +1594,10 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./apush-reconstruction-part1').then(m => m.apushReconstructionPart1Data) },
-      { title: 'Key Processes', loader: () => import('./apush-reconstruction-part2').then(m => m.apushReconstructionPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./apush-reconstruction-part3').then(m => m.apushReconstructionPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./apush-reconstruction-part4').then(m => m.apushReconstructionPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./apush-reconstruction-part5').then(m => m.apushReconstructionPart5Data) },
+      { title: 'The Fight Over Who Controls Reconstruction, 1863–1870', loader: () => import('./apush-reconstruction-part2').then(m => m.apushReconstructionPart2Data) },
+      { title: 'Freedom in Practice: Freedpeople\'s Voices and the Land Question', loader: () => import('./apush-reconstruction-part3').then(m => m.apushReconstructionPart3Data) },
+      { title: 'From Slavery to Sharecropping and the Reconstruction Governments', loader: () => import('./apush-reconstruction-part4').then(m => m.apushReconstructionPart4Data) },
+      { title: 'The Retreat from Reconstruction, Women\'s Suffrage, and Historians\' Debates', loader: () => import('./apush-reconstruction-part5').then(m => m.apushReconstructionPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./apush-reconstruction-part6').then(m => m.apushReconstructionPart6Data) },
       { title: 'AP Review', loader: () => import('./apush-reconstruction-part7').then(m => m.apushReconstructionPart7Data) }
     ],

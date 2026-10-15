@@ -10,7 +10,7 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'How Industrial Capitalism Was Built (1865–1898)', loader: () => import('./apush-gilded-age-part2').then(m => m.apushGildedAgePart2Data) },
       { title: 'Voices of the Gilded Age: Reading the Sources', loader: () => import('./apush-gilded-age-part3').then(m => m.apushGildedAgePart3Data) },
       { title: 'The West and the New South Compared', loader: () => import('./apush-gilded-age-part4').then(m => m.apushGildedAgePart4Data) },
-      { title: 'Change Over Time', loader: () => import('./apush-gilded-age-part5').then(m => m.apushGildedAgePart5Data) },
+      { title: 'Politics, Reform and How Historians Read the Era', loader: () => import('./apush-gilded-age-part5').then(m => m.apushGildedAgePart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./apush-gilded-age-part6').then(m => m.apushGildedAgePart6Data) },
       { title: 'AP Review', loader: () => import('./apush-gilded-age-part7').then(m => m.apushGildedAgePart7Data) }
     ],
@@ -19,10 +19,10 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./apush-progressivism-wwi-part1').then(m => m.apushProgressivismWwiPart1Data) },
-      { title: 'Key Processes', loader: () => import('./apush-progressivism-wwi-part2').then(m => m.apushProgressivismWwiPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./apush-progressivism-wwi-part3').then(m => m.apushProgressivismWwiPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./apush-progressivism-wwi-part4').then(m => m.apushProgressivismWwiPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./apush-progressivism-wwi-part5').then(m => m.apushProgressivismWwiPart5Data) },
+      { title: 'Becoming a World Power (1890–1914)', loader: () => import('./apush-progressivism-wwi-part2').then(m => m.apushProgressivismWwiPart2Data) },
+      { title: 'Progressive Voices: Reading the Sources', loader: () => import('./apush-progressivism-wwi-part3').then(m => m.apushProgressivismWwiPart3Data) },
+      { title: 'World War I: From Neutrality to Mobilization (1914–1918)', loader: () => import('./apush-progressivism-wwi-part4').then(m => m.apushProgressivismWwiPart4Data) },
+      { title: 'Peace, Backlash and Legacy (1918–1920)', loader: () => import('./apush-progressivism-wwi-part5').then(m => m.apushProgressivismWwiPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./apush-progressivism-wwi-part6').then(m => m.apushProgressivismWwiPart6Data) },
       { title: 'AP Review', loader: () => import('./apush-progressivism-wwi-part7').then(m => m.apushProgressivismWwiPart7Data) }
     ],
@@ -31,10 +31,10 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./apush-depression-wwii-part1').then(m => m.apushDepressionWwiiPart1Data) },
-      { title: 'Key Processes', loader: () => import('./apush-depression-wwii-part2').then(m => m.apushDepressionWwiiPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./apush-depression-wwii-part3').then(m => m.apushDepressionWwiiPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./apush-depression-wwii-part4').then(m => m.apushDepressionWwiiPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./apush-depression-wwii-part5').then(m => m.apushDepressionWwiiPart5Data) },
+      { title: 'From Crash to New Deal: How the Crisis Deepened and How Washington Responded', loader: () => import('./apush-depression-wwii-part2').then(m => m.apushDepressionWwiiPart2Data) },
+      { title: 'Voices of the Depression, Read Closely (1928–1937)', loader: () => import('./apush-depression-wwii-part3').then(m => m.apushDepressionWwiiPart3Data) },
+      { title: 'From Isolation to Intervention, 1921–1941', loader: () => import('./apush-depression-wwii-part4').then(m => m.apushDepressionWwiiPart4Data) },
+      { title: 'The Home Front and Victory, 1941–1945', loader: () => import('./apush-depression-wwii-part5').then(m => m.apushDepressionWwiiPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./apush-depression-wwii-part6').then(m => m.apushDepressionWwiiPart6Data) },
       { title: 'AP Review', loader: () => import('./apush-depression-wwii-part7').then(m => m.apushDepressionWwiiPart7Data) }
     ],
@@ -619,12 +619,12 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englit-longer-fiction-2-part1').then(m => m.englitLongerFiction2Part1Data) },
-      { title: 'Key Processes', loader: () => import('./englit-longer-fiction-2-part2').then(m => m.englitLongerFiction2Part2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englit-longer-fiction-2-part3').then(m => m.englitLongerFiction2Part3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englit-longer-fiction-2-part4').then(m => m.englitLongerFiction2Part4Data) },
-      { title: 'Change Over Time', loader: () => import('./englit-longer-fiction-2-part5').then(m => m.englitLongerFiction2Part5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englit-longer-fiction-2-part6').then(m => m.englitLongerFiction2Part6Data) },
-      { title: 'AP Review', loader: () => import('./englit-longer-fiction-2-part7').then(m => m.englitLongerFiction2Part7Data) }
+      { title: 'Subplots and the Multiplot Novel', loader: () => import('./englit-longer-fiction-2-part2').then(m => m.englitLongerFiction2Part2Data) },
+      { title: 'Foreshadowing, Suspense and Surprise', loader: () => import('./englit-longer-fiction-2-part3').then(m => m.englitLongerFiction2Part3Data) },
+      { title: 'Reading Tension in a Passage', loader: () => import('./englit-longer-fiction-2-part4').then(m => m.englitLongerFiction2Part4Data) },
+      { title: 'Endings: Resolution, Irony and Open Questions', loader: () => import('./englit-longer-fiction-2-part5').then(m => m.englitLongerFiction2Part5Data) },
+      { title: 'Novel Structure on the Exam', loader: () => import('./englit-longer-fiction-2-part6').then(m => m.englitLongerFiction2Part6Data) },
+      { title: 'Unit 6 Synthesis: Lydgate\'s "Spots of Commonness"', loader: () => import('./englit-longer-fiction-2-part7').then(m => m.englitLongerFiction2Part7Data) }
     ],
   },
   'englit-dramatic-structure': {
@@ -635,7 +635,7 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Speech on Stage: Dialogue, Soliloquy, Aside and Monologue', loader: () => import('./englit-dramatic-structure-part3').then(m => m.englitDramaticStructurePart3Data) },
       { title: 'Tragedy: Hamartia, Peripeteia, Anagnorisis and Catharsis', loader: () => import('./englit-dramatic-structure-part4').then(m => m.englitDramaticStructurePart4Data) },
       { title: 'Dramatic Irony, Comic Structure and Staging', loader: () => import('./englit-dramatic-structure-part5').then(m => m.englitDramaticStructurePart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englit-dramatic-structure-part6').then(m => m.englitDramaticStructurePart6Data) },
+      { title: 'Drama on the AP Exam', loader: () => import('./englit-dramatic-structure-part6').then(m => m.englitDramaticStructurePart6Data) },
       { title: 'AP Review', loader: () => import('./englit-dramatic-structure-part7').then(m => m.englitDramaticStructurePart7Data) }
     ],
   },
@@ -646,9 +646,9 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Building a Character: The Channels of Characterization', loader: () => import('./englit-character-setting-part2').then(m => m.englitCharacterSettingPart2Data) },
       { title: 'Setting as a Social World', loader: () => import('./englit-character-setting-part3').then(m => m.englitCharacterSettingPart3Data) },
       { title: 'Setting as Atmosphere, Mirror and Antagonist', loader: () => import('./englit-character-setting-part4').then(m => m.englitCharacterSettingPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englit-character-setting-part5').then(m => m.englitCharacterSettingPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englit-character-setting-part6').then(m => m.englitCharacterSettingPart6Data) },
-      { title: 'AP Review', loader: () => import('./englit-character-setting-part7').then(m => m.englitCharacterSettingPart7Data) }
+      { title: 'Characters in Relationship, and Setting Inside Character', loader: () => import('./englit-character-setting-part5').then(m => m.englitCharacterSettingPart5Data) },
+      { title: 'Character and Setting on the Exam', loader: () => import('./englit-character-setting-part6').then(m => m.englitCharacterSettingPart6Data) },
+      { title: 'Character and Setting Synthesis', loader: () => import('./englit-character-setting-part7').then(m => m.englitCharacterSettingPart7Data) }
     ],
   },
   'englit-narration-pov': {
@@ -657,10 +657,10 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Core Concepts', loader: () => import('./englit-narration-pov-part1').then(m => m.englitNarrationPovPart1Data) },
       { title: 'The Point-of-View Toolkit: Person and Access', loader: () => import('./englit-narration-pov-part2').then(m => m.englitNarrationPovPart2Data) },
       { title: 'Point of View vs. Perspective', loader: () => import('./englit-narration-pov-part3').then(m => m.englitNarrationPovPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englit-narration-pov-part4').then(m => m.englitNarrationPovPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englit-narration-pov-part5').then(m => m.englitNarrationPovPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englit-narration-pov-part6').then(m => m.englitNarrationPovPart6Data) },
-      { title: 'AP Review', loader: () => import('./englit-narration-pov-part7').then(m => m.englitNarrationPovPart7Data) }
+      { title: 'Naive Narrators and the Gap Between Narrator and Reader', loader: () => import('./englit-narration-pov-part4').then(m => m.englitNarrationPovPart4Data) },
+      { title: 'How Point of View Controls Knowledge', loader: () => import('./englit-narration-pov-part5').then(m => m.englitNarrationPovPart5Data) },
+      { title: 'Narration on the Exam', loader: () => import('./englit-narration-pov-part6').then(m => m.englitNarrationPovPart6Data) },
+      { title: 'Narration Synthesis: Reading Montresor', loader: () => import('./englit-narration-pov-part7').then(m => m.englitNarrationPovPart7Data) }
     ],
   },
   'englit-narrative-complexity': {
@@ -668,23 +668,23 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'Core Concepts', loader: () => import('./englit-narrative-complexity-part1').then(m => m.englitNarrativeComplexityPart1Data) },
       { title: 'Story Order and Telling Order', loader: () => import('./englit-narrative-complexity-part2').then(m => m.englitNarrativeComplexityPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englit-narrative-complexity-part3').then(m => m.englitNarrativeComplexityPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englit-narrative-complexity-part4').then(m => m.englitNarrativeComplexityPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englit-narrative-complexity-part5').then(m => m.englitNarrativeComplexityPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englit-narrative-complexity-part6').then(m => m.englitNarrativeComplexityPart6Data) },
-      { title: 'AP Review', loader: () => import('./englit-narrative-complexity-part7').then(m => m.englitNarrativeComplexityPart7Data) }
+      { title: 'Frame Narratives in Depth', loader: () => import('./englit-narrative-complexity-part3').then(m => m.englitNarrativeComplexityPart3Data) },
+      { title: 'Multiple Narrators and Assembled Documents', loader: () => import('./englit-narrative-complexity-part4').then(m => m.englitNarrativeComplexityPart4Data) },
+      { title: 'Sustained Ambiguity and Contradiction', loader: () => import('./englit-narrative-complexity-part5').then(m => m.englitNarrativeComplexityPart5Data) },
+      { title: 'Narrative Complexity on the Exam', loader: () => import('./englit-narrative-complexity-part6').then(m => m.englitNarrativeComplexityPart6Data) },
+      { title: 'Narrative Complexity Synthesis', loader: () => import('./englit-narrative-complexity-part7').then(m => m.englitNarrativeComplexityPart7Data) }
     ],
   },
   'englit-narrative-perspective': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englit-narrative-perspective-part1').then(m => m.englitNarrativePerspectivePart1Data) },
-      { title: 'Key Processes', loader: () => import('./englit-narrative-perspective-part2').then(m => m.englitNarrativePerspectivePart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englit-narrative-perspective-part3').then(m => m.englitNarrativePerspectivePart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englit-narrative-perspective-part4').then(m => m.englitNarrativePerspectivePart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englit-narrative-perspective-part5').then(m => m.englitNarrativePerspectivePart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englit-narrative-perspective-part6').then(m => m.englitNarrativePerspectivePart6Data) },
-      { title: 'AP Review', loader: () => import('./englit-narrative-perspective-part7').then(m => m.englitNarrativePerspectivePart7Data) }
+      { title: 'Focalization: Who Sees and Who Speaks', loader: () => import('./englit-narrative-perspective-part2').then(m => m.englitNarrativePerspectivePart2Data) },
+      { title: 'The Narrative Distance Scale', loader: () => import('./englit-narrative-perspective-part3').then(m => m.englitNarrativePerspectivePart3Data) },
+      { title: 'Stream of Consciousness and Interior Monologue', loader: () => import('./englit-narrative-perspective-part4').then(m => m.englitNarrativePerspectivePart4Data) },
+      { title: 'Blind Spots, Bias and Multiple Focalizers', loader: () => import('./englit-narrative-perspective-part5').then(m => m.englitNarrativePerspectivePart5Data) },
+      { title: 'Perspective on the Exam', loader: () => import('./englit-narrative-perspective-part6').then(m => m.englitNarrativePerspectivePart6Data) },
+      { title: 'Narrative Perspective Synthesis', loader: () => import('./englit-narrative-perspective-part7').then(m => m.englitNarrativePerspectivePart7Data) }
     ],
   },
   'englit-figurative-language': {
@@ -692,11 +692,11 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'Core Concepts', loader: () => import('./englit-figurative-language-part1').then(m => m.englitFigurativeLanguagePart1Data) },
       { title: 'Imagery in Depth: Senses, Synesthesia and Image Patterns', loader: () => import('./englit-figurative-language-part2').then(m => m.englitFigurativeLanguagePart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englit-figurative-language-part3').then(m => m.englitFigurativeLanguagePart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englit-figurative-language-part4').then(m => m.englitFigurativeLanguagePart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englit-figurative-language-part5').then(m => m.englitFigurativeLanguagePart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englit-figurative-language-part6').then(m => m.englitFigurativeLanguagePart6Data) },
-      { title: 'AP Review', loader: () => import('./englit-figurative-language-part7').then(m => m.englitFigurativeLanguagePart7Data) }
+      { title: 'Saying More, Saying Less: Hyperbole, Understatement, Paradox and Oxymoron', loader: () => import('./englit-figurative-language-part3').then(m => m.englitFigurativeLanguagePart3Data) },
+      { title: 'Allusion and Its Work', loader: () => import('./englit-figurative-language-part4').then(m => m.englitFigurativeLanguagePart4Data) },
+      { title: 'Figurative Language in Prose Fiction', loader: () => import('./englit-figurative-language-part5').then(m => m.englitFigurativeLanguagePart5Data) },
+      { title: 'Figurative Language on the Exam', loader: () => import('./englit-figurative-language-part6').then(m => m.englitFigurativeLanguagePart6Data) },
+      { title: 'Synthesis: Dickinson\'s "There\'s a certain slant of light"', loader: () => import('./englit-figurative-language-part7').then(m => m.englitFigurativeLanguagePart7Data) }
     ],
   },
   'englit-tone-speaker': {
@@ -704,33 +704,33 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'Core Concepts', loader: () => import('./englit-tone-speaker-part1').then(m => m.englitToneSpeakerPart1Data) },
       { title: 'A Precise Vocabulary for Tone', loader: () => import('./englit-tone-speaker-part2').then(m => m.englitToneSpeakerPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englit-tone-speaker-part3').then(m => m.englitToneSpeakerPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englit-tone-speaker-part4').then(m => m.englitToneSpeakerPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englit-tone-speaker-part5').then(m => m.englitToneSpeakerPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englit-tone-speaker-part6').then(m => m.englitToneSpeakerPart6Data) },
-      { title: 'AP Review', loader: () => import('./englit-tone-speaker-part7').then(m => m.englitToneSpeakerPart7Data) }
+      { title: 'Speaker, Listener and Occasion', loader: () => import('./englit-tone-speaker-part3').then(m => m.englitToneSpeakerPart3Data) },
+      { title: 'Tone in Prose: The Narrator\'s Voice and Irony', loader: () => import('./englit-tone-speaker-part4').then(m => m.englitToneSpeakerPart4Data) },
+      { title: 'Tonal Shifts and Complex Tone', loader: () => import('./englit-tone-speaker-part5').then(m => m.englitToneSpeakerPart5Data) },
+      { title: 'Tone on the Exam', loader: () => import('./englit-tone-speaker-part6').then(m => m.englitToneSpeakerPart6Data) },
+      { title: 'Tone and Speaker Synthesis', loader: () => import('./englit-tone-speaker-part7').then(m => m.englitToneSpeakerPart7Data) }
     ],
   },
   'englit-symbol-motif-fiction': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englit-symbol-motif-fiction-part1').then(m => m.englitSymbolMotifFictionPart1Data) },
-      { title: 'Key Processes', loader: () => import('./englit-symbol-motif-fiction-part2').then(m => m.englitSymbolMotifFictionPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englit-symbol-motif-fiction-part3').then(m => m.englitSymbolMotifFictionPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englit-symbol-motif-fiction-part4').then(m => m.englitSymbolMotifFictionPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englit-symbol-motif-fiction-part5').then(m => m.englitSymbolMotifFictionPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englit-symbol-motif-fiction-part6').then(m => m.englitSymbolMotifFictionPart6Data) },
-      { title: 'AP Review', loader: () => import('./englit-symbol-motif-fiction-part7').then(m => m.englitSymbolMotifFictionPart7Data) }
+      { title: 'Kinds of Symbols and How a Story Signals Them', loader: () => import('./englit-symbol-motif-fiction-part2').then(m => m.englitSymbolMotifFictionPart2Data) },
+      { title: 'A Contested Symbol: The Scarlet Letter\'s A', loader: () => import('./englit-symbol-motif-fiction-part3').then(m => m.englitSymbolMotifFictionPart3Data) },
+      { title: 'Tracking a Motif Across a Work', loader: () => import('./englit-symbol-motif-fiction-part4').then(m => m.englitSymbolMotifFictionPart4Data) },
+      { title: 'Symbolic Characters, Places and Actions; Common Misconceptions', loader: () => import('./englit-symbol-motif-fiction-part5').then(m => m.englitSymbolMotifFictionPart5Data) },
+      { title: 'Symbol and Motif on the Exam', loader: () => import('./englit-symbol-motif-fiction-part6').then(m => m.englitSymbolMotifFictionPart6Data) },
+      { title: 'Synthesis: The Plough Against the Sun', loader: () => import('./englit-symbol-motif-fiction-part7').then(m => m.englitSymbolMotifFictionPart7Data) }
     ],
   },
   'englit-plot-conflict-theme': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englit-plot-conflict-theme-part1').then(m => m.englitPlotConflictThemePart1Data) },
-      { title: 'Key Processes', loader: () => import('./englit-plot-conflict-theme-part2').then(m => m.englitPlotConflictThemePart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englit-plot-conflict-theme-part3').then(m => m.englitPlotConflictThemePart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englit-plot-conflict-theme-part4').then(m => m.englitPlotConflictThemePart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englit-plot-conflict-theme-part5').then(m => m.englitPlotConflictThemePart5Data) },
+      { title: 'Plot as Causality: Story, Plot and the Chain of Events', loader: () => import('./englit-plot-conflict-theme-part2').then(m => m.englitPlotConflictThemePart2Data) },
+      { title: 'Kinds of Conflict and Layered Conflicts', loader: () => import('./englit-plot-conflict-theme-part3').then(m => m.englitPlotConflictThemePart3Data) },
+      { title: 'From Conflict to Theme: What Resolution Says', loader: () => import('./englit-plot-conflict-theme-part4').then(m => m.englitPlotConflictThemePart4Data) },
+      { title: 'Stated vs. Implied Theme, and Competing Themes', loader: () => import('./englit-plot-conflict-theme-part5').then(m => m.englitPlotConflictThemePart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./englit-plot-conflict-theme-part6').then(m => m.englitPlotConflictThemePart6Data) },
       { title: 'AP Review', loader: () => import('./englit-plot-conflict-theme-part7').then(m => m.englitPlotConflictThemePart7Data) }
     ],
@@ -739,9 +739,9 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englit-social-commentary-drama-part1').then(m => m.englitSocialCommentaryDramaPart1Data) },
-      { title: 'Key Processes', loader: () => import('./englit-social-commentary-drama-part2').then(m => m.englitSocialCommentaryDramaPart2Data) },
+      { title: 'How a Play Argues: The Problem Play and Social Realism', loader: () => import('./englit-social-commentary-drama-part2').then(m => m.englitSocialCommentaryDramaPart2Data) },
       { title: 'Patterns & Examples', loader: () => import('./englit-social-commentary-drama-part3').then(m => m.englitSocialCommentaryDramaPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englit-social-commentary-drama-part4').then(m => m.englitSocialCommentaryDramaPart4Data) },
+      { title: 'Satire on Stage: Target, Norm and Method', loader: () => import('./englit-social-commentary-drama-part4').then(m => m.englitSocialCommentaryDramaPart4Data) },
       { title: 'Change Over Time', loader: () => import('./englit-social-commentary-drama-part5').then(m => m.englitSocialCommentaryDramaPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./englit-social-commentary-drama-part6').then(m => m.englitSocialCommentaryDramaPart6Data) },
       { title: 'AP Review', loader: () => import('./englit-social-commentary-drama-part7').then(m => m.englitSocialCommentaryDramaPart7Data) }
@@ -943,34 +943,34 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englang-synthesis-essay-part1').then(m => m.englangSynthesisEssayPart1Data) },
-      { title: 'Key Processes', loader: () => import('./englang-synthesis-essay-part2').then(m => m.englangSynthesisEssayPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englang-synthesis-essay-part3').then(m => m.englangSynthesisEssayPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englang-synthesis-essay-part4').then(m => m.englangSynthesisEssayPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englang-synthesis-essay-part5').then(m => m.englangSynthesisEssayPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englang-synthesis-essay-part6').then(m => m.englangSynthesisEssayPart6Data) },
-      { title: 'AP Review', loader: () => import('./englang-synthesis-essay-part7').then(m => m.englangSynthesisEssayPart7Data) }
+      { title: 'From Prompt to Position: Reading the Task and the Sources, Then Taking a Stand', loader: () => import('./englang-synthesis-essay-part2').then(m => m.englangSynthesisEssayPart2Data) },
+      { title: 'Planning and Drafting a Complete Essay: A Model Response, Annotated', loader: () => import('./englang-synthesis-essay-part3').then(m => m.englangSynthesisEssayPart3Data) },
+      { title: 'Arguing With and Against the Sources: Counter-Sources, Whole Positions, and Fair Use', loader: () => import('./englang-synthesis-essay-part4').then(m => m.englangSynthesisEssayPart4Data) },
+      { title: 'Earning Row C in the Synthesis Essay, and the Myths That Cost Points', loader: () => import('./englang-synthesis-essay-part5').then(m => m.englangSynthesisEssayPart5Data) },
+      { title: 'Timed Practice: A Seven-Source Set on Preserving Old Buildings', loader: () => import('./englang-synthesis-essay-part6').then(m => m.englangSynthesisEssayPart6Data) },
+      { title: 'Synthesis Review: The Whole Essay, From Reading Period to Final Check', loader: () => import('./englang-synthesis-essay-part7').then(m => m.englangSynthesisEssayPart7Data) }
     ],
   },
   'englang-developing-arguments': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englang-developing-arguments-part1').then(m => m.englangDevelopingArgumentsPart1Data) },
-      { title: 'Key Processes', loader: () => import('./englang-developing-arguments-part2').then(m => m.englangDevelopingArgumentsPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englang-developing-arguments-part3').then(m => m.englangDevelopingArgumentsPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englang-developing-arguments-part4').then(m => m.englangDevelopingArgumentsPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englang-developing-arguments-part5').then(m => m.englangDevelopingArgumentsPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englang-developing-arguments-part6').then(m => m.englangDevelopingArgumentsPart6Data) },
-      { title: 'AP Review', loader: () => import('./englang-developing-arguments-part7').then(m => m.englangDevelopingArgumentsPart7Data) }
+      { title: 'From Prompt to Developed Position: Invention and Definition', loader: () => import('./englang-developing-arguments-part2').then(m => m.englangDevelopingArgumentsPart2Data) },
+      { title: 'The Extended Example: Hazlitt\'s "On the Ignorance of the Learned," 1821', loader: () => import('./englang-developing-arguments-part3').then(m => m.englangDevelopingArgumentsPart3Data) },
+      { title: 'Developing Through Complication: William James, "The Moral Equivalent of War," 1910', loader: () => import('./englang-developing-arguments-part4').then(m => m.englangDevelopingArgumentsPart4Data) },
+      { title: 'Implications, Conclusions, and Misconceptions', loader: () => import('./englang-developing-arguments-part5').then(m => m.englangDevelopingArgumentsPart5Data) },
+      { title: 'Exam Practice: Developing a Q3 Response and Revising a Draft', loader: () => import('./englang-developing-arguments-part6').then(m => m.englangDevelopingArgumentsPart6Data) },
+      { title: 'Review: Choosing the Right Development Move', loader: () => import('./englang-developing-arguments-part7').then(m => m.englangDevelopingArgumentsPart7Data) }
     ],
   },
   'englang-writing-for-audience': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englang-writing-for-audience-part1').then(m => m.englangWritingForAudiencePart1Data) },
-      { title: 'Key Processes', loader: () => import('./englang-writing-for-audience-part2').then(m => m.englangWritingForAudiencePart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englang-writing-for-audience-part3').then(m => m.englangWritingForAudiencePart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englang-writing-for-audience-part4').then(m => m.englangWritingForAudiencePart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englang-writing-for-audience-part5').then(m => m.englangWritingForAudiencePart5Data) },
+      { title: 'A Theory of Persuasion: Lincoln\'s Temperance Address, 1842', loader: () => import('./englang-writing-for-audience-part2').then(m => m.englangWritingForAudiencePart2Data) },
+      { title: 'Writing to an Angry Audience: Washington at Newburgh, 1783', loader: () => import('./englang-writing-for-audience-part3').then(m => m.englangWritingForAudiencePart3Data) },
+      { title: 'Writing for Distant Readers: Chief Joseph (1879) and Stanton (1892)', loader: () => import('./englang-writing-for-audience-part4').then(m => m.englangWritingForAudiencePart4Data) },
+      { title: 'One Argument, Three Audiences: Adapting Your Own Writing', loader: () => import('./englang-writing-for-audience-part5').then(m => m.englangWritingForAudiencePart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./englang-writing-for-audience-part6').then(m => m.englangWritingForAudiencePart6Data) },
       { title: 'AP Review', loader: () => import('./englang-writing-for-audience-part7').then(m => m.englangWritingForAudiencePart7Data) }
     ],
