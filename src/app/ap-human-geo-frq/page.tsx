@@ -11,7 +11,9 @@ import rehypeKatex from 'rehype-katex'
 import {
   getApHumanGeoFRQs,
   generateFullExamFRQs,
+  HUMAN_GEO_FRQ_TYPES,
   type HumanGeoFRQ,
+  type HumanGeoFRQType,
   type FRQRubricItem,
 } from '@/data/ap-human-geo-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
@@ -40,7 +42,21 @@ function formatTime(seconds: number): string {
 }
 
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
-type Filter = 'all' | 'long' | 'short'
+type Filter = 'all' | HumanGeoFRQType
+
+const TYPE_META = Object.fromEntries(HUMAN_GEO_FRQ_TYPES.map((t) => [t.type, t])) as Record<HumanGeoFRQType, (typeof HUMAN_GEO_FRQ_TYPES)[number]>
+
+const TYPE_STYLE: Record<HumanGeoFRQType, { icon: string; gradient: string; badge: string; headerBadge: string; blurb: string }> = {
+  'no-stimulus': { icon: '✍️', gradient: 'from-sky-500 to-blue-500', badge: 'bg-sky-100 dark:bg-sky-900/30 text-sky-600', headerBadge: 'bg-sky-800', blurb: 'Seven one-point parts (A–G) on a single topic, answered from your own knowledge of concepts, models, and examples.' },
+  'one-stimulus': { icon: '🗺️', gradient: 'from-emerald-500 to-teal-500', badge: 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600', headerBadge: 'bg-emerald-700', blurb: 'Seven parts built on one stimulus (a data table or a map) that you must read and use in your answers.' },
+  'two-stimuli': { icon: '🧭', gradient: 'from-violet-500 to-purple-500', badge: 'bg-violet-100 dark:bg-violet-900/30 text-violet-600', headerBadge: 'bg-violet-700', blurb: 'Seven parts that use two stimuli (data, maps, images) and ask you to connect them, compare, and judge limitations.' },
+}
+
+/** Only current-format items (the three 2027 types); an older content-store copy falls back to the static pool. */
+function currentFormat(frqs: unknown): HumanGeoFRQ[] {
+  if (!Array.isArray(frqs)) return []
+  return frqs.filter((q): q is HumanGeoFRQ => typeof q?.type === 'string' && q.type in TYPE_META)
+}
 
 function APHumanGeoFRQPageInner() {
   const { status } = useSession()
@@ -69,7 +85,10 @@ function APHumanGeoFRQPageInner() {
     let active = true
     fetch('/api/frq/ap-human-geo')
       .then((r) => (r.ok ? r.json() : null))
-      .then((data) => { if (active && Array.isArray(data?.frqs) && data.frqs.length > 0) setAllFrqs(data.frqs) })
+      .then((data) => {
+        const fresh = currentFormat(data?.frqs)
+        if (active && fresh.length > 0) setAllFrqs(fresh)
+      })
       .catch(() => {})
     return () => { active = false }
   }, [])
@@ -92,7 +111,7 @@ function APHumanGeoFRQPageInner() {
 
   const startPractice = useCallback((f: Filter) => {
     setFilter(f)
-    const pool = f === 'long' ? allFrqs.filter(q => q.type === 'long') : f === 'short' ? allFrqs.filter(q => q.type === 'short') : allFrqs
+    const pool = f === 'all' ? allFrqs : allFrqs.filter((q) => q.type === f)
     setFrqs(pool)
     setCurrentIdx(0)
     setResponses({})
@@ -103,16 +122,16 @@ function APHumanGeoFRQPageInner() {
   }, [allFrqs])
 
   const startTimedExam = useCallback(() => {
-    const { long, short } = generateFullExamFRQs(allFrqs)
-    setFrqs([...long, ...short])
+    const { questions, totalMinutes } = generateFullExamFRQs()
+    setFrqs(questions)
     setCurrentIdx(0)
     setResponses({})
     setResults({})
     setShowSample({})
     setShowRubric({})
-    setTimeRemaining(75 * 60)
+    setTimeRemaining(totalMinutes * 60)
     setMode('timed')
-  }, [allFrqs])
+  }, [])
 
   const handleGrade = (frqId: string, partLabel: string, rubric: FRQRubricItem[]) => {
     const key = `${frqId}-${partLabel}`
@@ -208,33 +227,25 @@ function APHumanGeoFRQPageInner() {
                   <li>• Explaining spatial patterns and processes</li>
                   <li>• Applying models to real-world scenarios</li>
                   <li>• Comparing regions and scales of analysis</li>
+                  <li>• Task verbs: identify, define, describe, explain, compare, explain the degree to which</li>
                 </ul>
               </div>
             </div>
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4 mb-8">
-            <button onClick={() => startPractice('long')} className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-sky-500 to-blue-500 text-white text-xl">📄</div>
-                <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400">Long FRQs</h3>
-                  <p className="text-xs text-gray-500">7 points · ~25 min each</p>
+            {HUMAN_GEO_FRQ_TYPES.map((t) => (
+              <button key={t.type} onClick={() => startPractice(t.type)} className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className={`h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r ${TYPE_STYLE[t.type].gradient} text-white text-xl`}>{TYPE_STYLE[t.type].icon}</div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400">{t.short}: {t.label}</h3>
+                    <p className="text-xs text-gray-500">{t.points} points (A–G) · ~{t.minutes} min · {allFrqs.filter((q) => q.type === t.type).length} questions</p>
+                  </div>
                 </div>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Multi-part questions requiring spatial analysis, data interpretation, and application of geographic concepts</p>
-            </button>
-
-            <button onClick={() => startPractice('short')} className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xl">📝</div>
-                <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400">Short FRQs</h3>
-                  <p className="text-xs text-gray-500">3 points · ~12 min each</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Focused questions on specific geographic processes, patterns, and models</p>
-            </button>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{TYPE_STYLE[t.type].blurb}</p>
+              </button>
+            ))}
 
             <button onClick={() => startPractice('all')} className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
               <div className="flex items-center gap-3 mb-3">
@@ -252,10 +263,10 @@ function APHumanGeoFRQPageInner() {
                 <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-red-500 to-orange-500 text-white text-xl">⏱️</div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400">Timed Exam Simulation</h3>
-                  <p className="text-xs text-gray-500">75 min</p>
+                  <p className="text-xs text-gray-500">3 FRQs (Q1, Q2, Q3) · 21 points · 75 min</p>
                 </div>
               </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Simulate the real AP Human Geography Section II under exam conditions with a countdown timer.</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">One question of each type in exam order, 75 minutes on the clock, as on the real Section II.</p>
             </button>
           </div>
 
@@ -315,7 +326,7 @@ function APHumanGeoFRQPageInner() {
                 <div key={frq.id} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4">
                   <div className="flex items-center justify-between">
                     <div>
-                      <span className={`text-xs font-bold px-2 py-0.5 rounded ${frq.type === 'long' ? 'bg-sky-100 dark:bg-sky-900/30 text-sky-600' : 'bg-purple-100 dark:bg-purple-900/30 text-purple-600'}`}>{frq.type === 'long' ? 'Long FRQ' : 'Short FRQ'}</span>
+                      <span className={`text-xs font-bold px-2 py-0.5 rounded ${TYPE_STYLE[frq.type]?.badge ?? ''}`}>{TYPE_META[frq.type]?.short ?? 'FRQ'}</span>
                       <span className="ml-2 text-sm font-medium text-gray-900 dark:text-white">{frq.title}</span>
                     </div>
                     <span className={`font-bold ${frqTotal >= frq.totalPoints * 0.7 ? 'text-green-600' : frqTotal >= frq.totalPoints * 0.4 ? 'text-yellow-600' : 'text-red-600'}`}>{frqTotal}/{frq.totalPoints}</span>
@@ -341,7 +352,7 @@ function APHumanGeoFRQPageInner() {
         <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
           <div>
             <button onClick={() => setMode('menu')} className="text-sm text-sky-600 dark:text-sky-400 hover:underline mb-1">&larr; Back to Menu</button>
-            <h1 className="text-xl font-bold text-gray-900 dark:text-white">{mode === 'timed' ? 'Timed FRQ Exam' : `FRQ Practice (${filter})`}</h1>
+            <h1 className="text-xl font-bold text-gray-900 dark:text-white">{mode === 'timed' ? 'Timed FRQ Exam' : `FRQ Practice: ${filter === 'all' ? 'All FRQs' : TYPE_META[filter].label}`}</h1>
           </div>
           <div className="flex items-center gap-4">
             {mode === 'timed' && (
@@ -359,7 +370,8 @@ function APHumanGeoFRQPageInner() {
           <div className="bg-gradient-to-r from-sky-600 to-blue-600 text-white px-6 py-4">
             <div className="flex items-center justify-between flex-wrap gap-2">
               <div>
-                <span className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${currentFRQ.type === 'long' ? 'bg-sky-800' : 'bg-purple-700'}`}>{currentFRQ.type === 'long' ? 'Long FRQ' : 'Short FRQ'}</span>
+                <span className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${TYPE_STYLE[currentFRQ.type]?.headerBadge ?? ''}`}>{TYPE_META[currentFRQ.type] ? `${TYPE_META[currentFRQ.type].short}: ${TYPE_META[currentFRQ.type].label}` : 'FRQ'}</span>
+                <span className="text-xs text-sky-100">Unit {currentFRQ.unit}</span>
                 <h2 className="text-lg font-bold mt-1">{currentFRQ.title}</h2>
               </div>
               <div className="flex items-center gap-3 text-sm">
@@ -375,6 +387,13 @@ function APHumanGeoFRQPageInner() {
                 <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{escapeCurrencyMath(currentFRQ.prompt)}</ReactMarkdown>
               </div>
             </div>
+
+            {currentFRQ.dataTableHtml && (
+              <div
+                className="mb-6 overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700 p-4 bg-gray-50 dark:bg-gray-900 text-sm text-gray-800 dark:text-gray-200 [&_table]:border-collapse [&_th]:border [&_td]:border [&_th]:border-gray-300 [&_td]:border-gray-300 dark:[&_th]:border-gray-600 dark:[&_td]:border-gray-600 [&_th]:px-3 [&_td]:px-3 [&_th]:py-1.5 [&_td]:py-1.5 [&_th]:text-left [&_th]:font-semibold"
+                dangerouslySetInnerHTML={{ __html: currentFRQ.dataTableHtml }}
+              />
+            )}
 
             <div className="space-y-6">
               {currentFRQ.parts.map((part) => {
