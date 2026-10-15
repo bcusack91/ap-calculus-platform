@@ -204,24 +204,24 @@ $$\\boxed{E_a(\\text{catalyzed}) < E_a(\\text{uncatalyzed})}$$
           {
             question: 'A catalyst speeds up a reaction by:',
             options: [
-              'Increasing the temperature of the reaction',
-              'Increasing the concentration of reactants',
-              'Providing an alternative pathway with lower activation energy',
+              'Raising the kinetic energy of the reactant molecules',
+              'Increasing the concentration of the reactants',
+              'Providing a different pathway with a lower activation energy',
               'Making the reaction more thermodynamically favorable'
             ],
             correctAnswer: 2,
-            explanation: 'A catalyst provides an alternative mechanism with a lower activation energy. It does NOT change ΔH, ΔG, or equilibrium position.'
+            explanation: 'A catalyst provides an alternative mechanism with a lower activation energy. It does NOT change ΔH, ΔG, or equilibrium position, and it does not heat the molecules or add reactant.'
           },
           {
             question: 'Powdered zinc reacts with HCl faster than a zinc strip because:',
             options: [
-              'Powdered zinc has a higher molar mass',
-              'Powdered zinc has greater surface area exposed to the acid',
-              'Powdered zinc is at a higher temperature',
-              'The powder acts as a catalyst'
+              'Powdered zinc has a lower activation energy than a strip',
+              'Powder exposes more zinc surface to the acid',
+              'Grinding warms the zinc to a higher temperature',
+              'The powder acts as a catalyst for its own reaction'
             ],
             correctAnswer: 1,
-            explanation: 'Powdering increases the surface area dramatically. More Zn surface is in contact with HCl at any given moment, so the rate of the heterogeneous reaction increases.'
+            explanation: 'Powdering increases the surface area dramatically. More Zn surface is in contact with HCl at any given moment, so collisions are more frequent and the rate of the heterogeneous reaction increases. The activation energy and the temperature are the same for powder and strip, and zinc is a reactant, not a catalyst.'
           }
         ]
       }
@@ -248,7 +248,7 @@ $$\\boxed{E_a(\\text{catalyzed}) < E_a(\\text{uncatalyzed})}$$
           },
           {
             label: 'Increasing temperature increases rate primarily by increasing the',
-            options: ['number of moles', 'fraction of molecules exceeding Ea', 'equilibrium constant', 'volume']
+            options: ['number of moles of reactant present', 'fraction of molecules exceeding Ea', 'equilibrium constant', 'activation energy of the reaction']
           }
         ],
         correctAnswers: ['activation energy', 'surface area', 'double the rate', 'fraction of molecules exceeding Ea'],

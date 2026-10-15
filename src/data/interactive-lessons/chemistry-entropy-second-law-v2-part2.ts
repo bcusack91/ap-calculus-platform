@@ -92,15 +92,15 @@ This is why entropy **always increases with temperature**.
             question: 'For 4 molecules in a box divided into 2 halves, how many total positional microstates exist?',
             options: ['4', '8', '16', '24'],
             correctAnswer: 2,
-            explanation: '$W = 2^4 = 16$ microstates. Each molecule can be in either half.'
+            explanation: '$W = 2^4 = 16$ microstates. Each molecule can independently be in either half. Counting 2 × 4 = 8 adds the choices instead of multiplying them, and 24 = 4! counts orderings of the molecules, not positions.'
           },
           {
             question: 'Why does higher temperature increase entropy?',
             options: [
-              'Molecules move faster and collide more',
-              'More energy quanta are available, creating more ways to distribute energy',
-              'Chemical bonds break at higher temperatures',
-              'Volume always increases with temperature'
+              'Faster molecules collide more often, which creates disorder',
+              'More energy quanta mean more ways to spread the energy',
+              'Chemical bonds break at higher T, producing more particles',
+              'The sample always expands to a larger volume when heated'
             ],
             correctAnswer: 1,
             explanation: 'Higher T means more energy quanta, and more quanta can be distributed among molecules in more ways, increasing microstates and entropy.'
@@ -108,10 +108,10 @@ This is why entropy **always increases with temperature**.
           {
             question: 'The probability of all molecules spontaneously gathering in one corner of a room is:',
             options: [
-              'Impossible — it violates thermodynamic laws',
+              'Impossible — it would violate the Second Law',
               'Essentially zero — it is vanishingly improbable',
-              'About 50% — molecules move randomly',
-              'High — molecules attract each other'
+              'About 50% — each molecule moves randomly',
+              'High — the molecules attract each other'
             ],
             correctAnswer: 1,
             explanation: 'It is not forbidden by any law, but the probability is so tiny ($\\sim 1/2^{N_A}$) that it would never be observed in the lifetime of the universe.'
@@ -132,8 +132,7 @@ This is why entropy **always increases with temperature**.
 **3)** What percentage of microstates have the molecules evenly split (3 left, 3 right)? The number of such microstates is $\\binom{6}{3} = 20$. Round to the nearest whole percent.
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['64', '1', '31'],
+        questions: [{ question: '(1)', answer: '64', acceptableAnswers: ['64'] }, { question: '(2)', answer: '1', acceptableAnswers: ['1'] }, { question: '(3)', answer: '31', acceptableAnswers: ['31', '31.25', '31.3'] }],
         hint1: '$2^6 = 64$',
         hint2: 'There is exactly 1 way to place all 6 on the left.',
         hint3: '$20/64 \\times 100 = 31.25\\%$',
@@ -150,15 +149,15 @@ This is why entropy **always increases with temperature**.
         dropdowns: [
           {
             label: 'As the number of molecules increases, the probability of all being in one half',
-            options: ['increases', 'decreases dramatically', 'stays the same', 'equals 50%']
+            options: ['increases steadily', 'decreases dramatically', 'stays the same', 'decreases only slightly']
           },
           {
             label: 'Energy microstates depend on',
-            options: ['only position', 'only temperature', 'how energy quanta are distributed', 'molecular mass']
+            options: ['only the positions of the molecules', 'only the total mass of the sample', 'how energy quanta are distributed', "the container's shape and volume"]
           },
           {
             label: 'The most probable energy distribution is usually',
-            options: ['all energy in one molecule', 'evenly spread', 'partially shared among molecules', 'zero energy']
+            options: ['all quanta concentrated in one molecule', 'exactly equal shares for every molecule', 'partially shared among molecules', 'no energy in most of the molecules']
           }
         ],
         correctAnswers: ['decreases dramatically', 'how energy quanta are distributed', 'partially shared among molecules'],
@@ -192,11 +191,11 @@ This is why entropy **always increases with temperature**.
             options: [
               '50%',
               '10%',
-              'About 0.1%',
-              'About 0.001% or less'
+              '0.1%',
+              '5%'
             ],
             correctAnswer: 2,
-            explanation: '$P = 1/2^{10} = 1/1024 \\approx 0.098\\% \\approx 0.1\\%$. Already very unlikely with just 10 molecules!'
+            explanation: '$P = 1/2^{10} = 1/1024 \\approx 0.098\\% \\approx 0.1\\%$. Already very unlikely with just 10 molecules! 50% is the chance for one molecule, 10% treats the probability as $1/n$, and 5% uses $1/(2n)$ instead of $1/2^n$.'
           }
         ]
       }

@@ -125,10 +125,10 @@ $$\\boxed{\\text{Rate law}_{\\text{mechanism}} = \\text{Rate law}_{\\text{experi
           {
             question: 'A mechanism passes both criteria. This means the mechanism is:',
             options: [
-              'Proven to be correct',
-              'Consistent with the data (but not proven)',
-              'The only possible mechanism',
-              'Thermodynamically favorable'
+              'Proven to be the actual pathway',
+              'Consistent with the data, but not proven',
+              'The only mechanism that fits the data',
+              'Thermodynamically favorable overall'
             ],
             correctAnswer: 1,
             explanation: 'A mechanism can be disproven but never definitively proven. Passing both criteria means it is consistent with experimental data, but other mechanisms might also be consistent.'
@@ -243,8 +243,8 @@ $$\\boxed{\\text{Rate law}_{\\text{mechanism}} = \\text{Rate law}_{\\text{experi
             options: [
               'Valid because it satisfies Criterion 1',
               'Invalid because the rate law doesn\'t match',
-              'Valid if the steps sum correctly',
-              'Uncertain — need more data'
+              'Valid if the steps sum to the overall',
+              'Uncertain until intermediates are found'
             ],
             correctAnswer: 1,
             explanation: 'The mechanism fails Criterion 2 (rate law mismatch). Even if the steps sum correctly (Criterion 1), BOTH criteria must be met. This mechanism is definitively invalid.'
@@ -252,13 +252,13 @@ $$\\boxed{\\text{Rate law}_{\\text{mechanism}} = \\text{Rate law}_{\\text{experi
           {
             question: 'Two different mechanisms both satisfy the two criteria. What can we conclude?',
             options: [
-              'Both are correct',
-              'The simpler one is correct',
-              'We cannot distinguish between them with rate law data alone',
-              'Neither is correct'
+              'Both mechanisms must be occurring at the same time',
+              'The mechanism with fewer steps must be correct',
+              'Rate law data alone cannot tell them apart',
+              'Neither is correct, since a valid mechanism is unique'
             ],
             correctAnswer: 2,
-            explanation: 'When multiple mechanisms are consistent with the data, additional experiments (e.g., detecting intermediates, isotope labeling) are needed to distinguish between them.'
+            explanation: 'When multiple mechanisms are consistent with the data, additional experiments (e.g., detecting intermediates, isotope labeling) are needed to distinguish between them. Simplicity does not decide it, and passing both criteria never rules a mechanism out.'
           }
         ]
       }

@@ -51,7 +51,7 @@ Using the table: $S°$(N₂) = 191.5, $S°$(H₂) = 130.6, $S°$(NH₃) = 192.3
 
 $\\text{C(graphite)} + \\text{O}_2\\text{(g)} \\to \\text{CO}_2\\text{(g)}$
 
-Using: $S°$(C) = 5.7, $S°$(O₂) = 205.0, $S°$(CO₂) = 213.7
+Using: $S°$(graphite) = 5.7, $S°$(O₂) = 205.0, $S°$(CO₂) = 213.7
 
 **1)** Calculate $\\Delta S°_{\\text{rxn}}$ in J/(mol·K). Round to 1 decimal.
 
@@ -66,16 +66,16 @@ Using: $S°$(C) = 5.7, $S°$(O₂) = 205.0, $S°$(CO₂) = 213.7
     { id: 'en4v3-quiz', type: 'multiple-choice' as const, content: `
 **Trends Check** 🎯
     `, exercise: { questions: [
-          { question: 'Why is $S°$ for elements NOT zero (unlike $\\Delta H_f°$)?', options: ['It should be zero — this is an error', 'Because the Third Law gives a non-zero reference', 'Because entropy is measured from 0 K where $S = 0$, and substances gain entropy as they warm to 298 K', 'Because entropy is relative'], correctAnswer: 2, explanation: '$\\Delta H_f°$ for elements is zero by convention (chosen reference). But $S°$ is measured absolutely from 0 K (Third Law), and warming from 0 K to 298 K adds entropy.' },
-          { question: 'Between Ne(g) and Xe(g) at 298 K, which has higher $S°$?', options: ['Ne — lighter, moves faster', 'Xe — heavier, more closely spaced energy levels', 'Equal — both are noble gases', 'Cannot determine without data'], correctAnswer: 1, explanation: 'Heavier atoms have more closely spaced energy levels, meaning more energy microstates are accessible at the same temperature. $S°$(Xe) > $S°$(Ne).' }
+          { question: 'Why is $S°$ for elements NOT zero (unlike $\\Delta H_f°$)?', options: ['It should be zero; nonzero tabulated values are rounding errors', 'The Third Law assigns every element a nonzero reference value', 'S° is measured from zero at 0 K, and warming adds entropy', 'S° is relative, like ΔH°f, but uses a different reference state'], correctAnswer: 2, explanation: '$\\Delta H_f°$ for elements is zero by convention (chosen reference). But $S°$ is measured absolutely from 0 K (Third Law), and warming from 0 K to 298 K adds entropy.' },
+          { question: 'Between Ne(g) and Xe(g) at 298 K, which has higher $S°$?', options: ['Ne — lighter atoms move faster, so they have more entropy', 'Xe — heavier, more closely spaced energy levels', 'Equal — both are monatomic gases at the same T', 'Cannot determine without tabulated S° values'], correctAnswer: 1, explanation: 'Heavier atoms have more closely spaced energy levels, meaning more energy microstates are accessible at the same temperature. $S°$(Xe) > $S°$(Ne).' }
         ] } },
     { id: 'en4v3-dropdown', type: 'dropdown-select' as const, content: `
 **Quick Checks** 🔽
     `, exercise: { dropdowns: [
-          { label: '$S°$(H₂O(g)) compared to $S°$(H₂O(l)) is', options: ['smaller', 'much larger', 'the same', 'negative'] },
-          { label: 'The unit for $S°$ is', options: ['kJ/mol', 'J/(mol·K)', 'atm', 'mol/L'] },
-          { label: '$S°$ for a substance is always', options: ['zero', 'negative', 'positive (at T > 0 K)', 'equal to $\\Delta H_f°$'] }
-        ], correctAnswers: ['much larger', 'J/(mol·K)', 'positive (at T > 0 K)'],
+          { label: '$S°$(H₂O(g)) compared to $S°$(H₂O(l)) is', options: ['slightly larger', 'much larger', 'the same', 'negative'] },
+          { label: 'The unit for $S°$ is', options: ['kJ/mol', 'J/(mol·K)', '(J·K)/mol', 'J/mol'] },
+          { label: '$S°$ for a substance is always', options: ['zero for elements', 'negative for solids', 'positive above 0 K', 'equal to $\\Delta H_f°$'] }
+        ], correctAnswers: ['much larger', 'J/(mol·K)', 'positive above 0 K'],
         hint1: 'Gas vs liquid — enormous difference in microstates.',
         hint2: 'Watch: J not kJ!',
         hint3: 'Third Law: only a perfect crystal at 0 K has S = 0.',
@@ -83,7 +83,7 @@ Using: $S°$(C) = 5.7, $S°$(O₂) = 205.0, $S°$(CO₂) = 213.7
     { id: 'en4v3-exit', type: 'multiple-choice' as const, content: `
 **Exit Check** ✅
     `, exercise: { questions: [
-          { question: 'For the reaction $\\text{2 H}_2\\text{(g)} + \\text{O}_2\\text{(g)} \\to \\text{2 H}_2\\text{O(l)}$, you expect $\\Delta S°$ to be:', options: ['Very positive — water is formed', 'Very negative — 3 mol gas → 0 mol gas (all liquid)', 'Slightly positive', 'Zero'], correctAnswer: 1, explanation: '3 moles of gas become 2 moles of liquid. This massive loss of gas-phase molecules means a very negative $\\Delta S°$.' }
+          { question: 'For the reaction $\\text{2 H}_2\\text{(g)} + \\text{O}_2\\text{(g)} \\to \\text{2 H}_2\\text{O(l)}$, you expect $\\Delta S°$ to be:', options: ['Very positive — water is a larger molecule', 'Very negative — all 3 mol of gas become liquid', 'Slightly negative — 3 molecules become 2', 'Close to zero — atoms are conserved'], correctAnswer: 1, explanation: '3 moles of gas become 2 moles of liquid ($\\Delta n_{\\text{gas}} = -3$). This massive loss of gas-phase molecules means a very negative $\\Delta S°$ (about −327 J/K from tabulated values). Counting only molecules (3 → 2) and ignoring the phase change badly underestimates the drop.' }
         ] } }
   ]
 }

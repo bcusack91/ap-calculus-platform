@@ -113,9 +113,9 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
         questions: [
           {
             question: 'Balance in basic solution: $MnO_{4}^{-}$ + $CN^{-}$ → $MnO_{2}$ + $CNO^{-}$. After converting to basic, which species appear in the final equation?',
-            options: ['$H^{+}$ and $H_{2}O$ only', '$OH^{-}$ and $H_{2}O$ only', '$H^{+}$, $OH^{-}$, and $H_{2}O$', '$OH^{-}$ only, with no $H_{2}O$'],
+            options: ['$H^{+}$ and $H_{2}O$ only', '$OH^{-}$ and $H_{2}O$ only', '$H^{+}$ and $OH^{-}$ only', '$OH^{-}$ only'],
             correctAnswer: 1,
-            explanation: 'In basic solution, after converting from acidic form, the equation contains $OH^{-}$ and $H_{2}O$ but NO $H^{+}$. All $H^{+}$ ions have been neutralized by adding $OH^{-}$.'
+            explanation: 'Balanced in acid: $2MnO_{4}^{-}$ + $3CN^{-}$ + $2H^{+}$ → $2MnO_{2}$ + $3CNO^{-}$ + $H_{2}O$. Adding 2 $OH^{-}$ to both sides and cancelling one $H_{2}O$ gives $2MnO_{4}^{-}$ + $3CN^{-}$ + $H_{2}O$ → $2MnO_{2}$ + $3CNO^{-}$ + $2OH^{-}$. In basic solution the equation contains $OH^{-}$ and $H_{2}O$ but NO $H^{+}$.'
           },
           {
             question: 'In basic solution: Al(s) + $MnO_{4}^{-}$ → $Al(OH)_{4}^{-}$ + $MnO_{2}$. How many electrons does each Al atom lose?',
@@ -136,8 +136,8 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
               '$OH^{-}$ on the product side',
               'No $H_{2}O$ or $OH^{-}$'
             ],
-            correctAnswer: 1,
-            explanation: 'In basic solution, after fully balancing, $OH^{-}$ typically appears. For this equation, $OH^{-}$ and $H_{2}O$ appear on specific sides depending on the balance. After converting from acidic, $OH^{-}$ ends up on the reactant side with $H_{2}O$ on the product side.'
+            correctAnswer: 2,
+            explanation: 'Cr goes from +6 to +3 (gains $3e^{-}$) and S from −2 to 0 (loses $2e^{-}$), so use $2CrO_{4}^{2-}$ and $3S^{2-}$. In acid: $2CrO_{4}^{2-}$ + $3S^{2-}$ + $10H^{+}$ → $2Cr(OH)_{3}$ + 3S + $2H_{2}O$. Adding 10 $OH^{-}$ to both sides turns the $10H^{+}$ into $10H_{2}O$; cancelling 2 $H_{2}O$ gives $2CrO_{4}^{2-}$ + $3S^{2-}$ + $8H_{2}O$ → $2Cr(OH)_{3}$ + 3S + $10OH^{-}$. So $OH^{-}$ ends up on the product side, with $H_{2}O$ on the reactant side.'
           }
         ]
       }
@@ -187,10 +187,10 @@ Determine the oxidation state change for the underlined element in each half-rea
           },
           {
             label: 'The number of electrons transferred must be equal in both half-reactions because',
-            options: ['it makes the math easier', 'electrons cannot be created or destroyed', 'it balances hydrogen', 'it balances oxygen']
+            options: ['it keeps the hydrogen atoms balanced', 'electrons cannot be created or lost', 'it keeps the oxygen atoms balanced', 'each half-reaction must be neutral']
           }
         ],
-        correctAnswers: ['$Mn^{2+}$', '$MnO_{2}$', '$O_{2}$', 'electrons cannot be created or destroyed'],
+        correctAnswers: ['$Mn^{2+}$', '$MnO_{2}$', '$O_{2}$', 'electrons cannot be created or lost'],
         hint1: 'Acidic conditions allow Mn to be fully reduced to +2.',
         hint2: 'In basic/neutral, $MnO_{4}^{-}$ is partially reduced (Mn goes from +7 to +4).',
         hint3: 'When $H_{2}O_{2}$ is oxidized, O goes from −1 to 0.',
@@ -219,13 +219,13 @@ Determine the oxidation state change for the underlined element in each half-rea
           {
             question: 'In the balanced equation above, the total charge on the reactant side is:',
             options: [
-              '+2',
+              '+12',
               '+4',
-              '+6',
-              '+4'
+              '+5',
+              '−12'
             ],
             correctAnswer: 1,
-            explanation: 'Left: 2(−1) + 5(−2) + 16(+1) = −2 − 10 + 16 = +4. Right: 2(+2) + 0 + 0 = +4. Charge balanced ✓.'
+            explanation: 'Left: 2(−1) + 5(−2) + 16(+1) = −2 − 10 + 16 = +4. Right: 2(+2) + 0 + 0 = +4. Charge balanced ✓. Forgetting the $16H^{+}$ gives −12; dropping the coefficient 5 on oxalate gives −2 − 2 + 16 = +12; dropping the coefficient 2 on permanganate gives −1 − 10 + 16 = +5.'
           }
         ]
       }

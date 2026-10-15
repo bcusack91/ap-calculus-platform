@@ -120,17 +120,17 @@ For the reaction $\\text{P} + \\text{Q} \\rightarrow \\text{R}$:
 
 **2)** What is the order with respect to Q? (integer)
 
-**3)** What is the value of the rate constant k? (give the number; e.g., enter 7.5 for 7.5)
+**3)** What is the value of the rate constant k? (number only, no units)
 
 *Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1', '2', '7.5'],
+        correctAnswers: ['1', '2', '1.5'],
         hint1: 'Compare Exp 1 & 2: Rate doubles when [P] doubles → order 1.',
         hint2: 'Compare Exp 1 & 3: Rate quadruples when [Q] doubles → $2^{n}$ = 4 → n = 2.',
-        hint3: 'Rate = k[P][Q]$ {}^{2}$. 0.0030 = $k(0.20)(0.10)^{2}$ = k(0.0020). k = 1.5... wait, recheck: k = 0.0030/0.0020 = 1.5? No: (0.20)(0.01) = 0.002; 0.003/0.002 = 1.5. Hmm, but check units. Actually k = 0.0030 / (0.20 × 0.0100) = 0.0030/0.0020 = 1.5. Let me recheck with Exp 3: 0.012 = $k(0.20)(0.20)^{2}$ = k(0.20)(0.04) = 0.008k → k = 1.5. So k = 1.5. Actually re-examining: 0.0030/(0.20 × 0.01) = 0.0030/0.002 = 1.5. Yes k = 1.5.',
-        explanation: '1) Exp 1→2: 0.0060/0.0030 = 2, and 0.40/0.20 = 2. $2^{m}$ = 2, m = 1. 2) Exp 1→3: 0.012/0.0030 = 4, and 0.20/0.10 = 2. $2^{n}$ = 4, n = 2. 3) Rate = k[P][Q]$ {}^{2}$. Using Exp 1: 0.0030 = $k(0.20)(0.10)^{2}$ = 0.0020k → k = 1.5 $M^{-2}s^{-1}$. Hmm wait let me recheck the expected answer. Using Exp 3 as check: 0.012 = 1.5(0.20)(0.04) = 1.5(0.008) = 0.012 ✓. k = 1.5.'
+        hint3: 'Rate = k[P][Q]$ {}^{2}$. Using Exp 1: 0.0030 = $k(0.20)(0.10)^{2}$ = k(0.0020), so k = 0.0030/0.0020. Check your value with Exp 3.',
+        explanation: '1) Exp 1→2: 0.0060/0.0030 = 2, and 0.40/0.20 = 2. $2^{m}$ = 2, m = 1. 2) Exp 1→3: 0.012/0.0030 = 4, and 0.20/0.10 = 2. $2^{n}$ = 4, n = 2. 3) Rate = k[P][Q]$ {}^{2}$. Using Exp 1: 0.0030 = $k(0.20)(0.10)^{2}$ = 0.0020k → k = 1.5 $M^{-2}s^{-1}$. Check with Exp 3: 0.012 = 1.5(0.20)(0.04) = 1.5(0.008) = 0.012 ✓. k = 1.5.'
       }
     },
     {
@@ -174,13 +174,13 @@ $$\\boxed{k = 180 \\; \\text{M}^{-2}\\text{s}^{-1}}$$
           {
             question: 'In the method of initial rates, why do we use initial rates rather than rates measured later in the reaction?',
             options: [
-              'Later rates are always larger',
-              'Initial rates avoid complications from reverse reactions and product buildup',
-              'Initial rates are always faster',
-              'It is easier to measure rates at t = 0'
+              'Later rates are always larger and harder to measure',
+              'Concentrations are known and no reverse reaction occurs yet',
+              'Initial rates do not depend on the reactant concentrations',
+              'The rate constant k changes as the reaction proceeds'
             ],
             correctAnswer: 1,
-            explanation: 'At t = 0, concentrations are precisely known (the ones you prepared), and the reverse reaction has not yet begun. This simplifies the analysis considerably.'
+            explanation: 'At t = 0, concentrations are precisely known (the ones you prepared), and products have not built up, so the reverse reaction has not yet begun. This simplifies the analysis considerably. Rates usually decrease (not increase) as reactants are used up, initial rates do depend on concentration (that is the point of the method), and k is constant at a fixed temperature.'
           },
           {
             question: 'For three experiments: Exp 1 gives Rate = 0.010, Exp 2 doubles [A] giving Rate = 0.010, Exp 3 doubles [B] giving Rate = 0.040. The rate law is:',
@@ -196,13 +196,13 @@ $$\\boxed{k = 180 \\; \\text{M}^{-2}\\text{s}^{-1}}$$
           {
             question: 'If the rate ratio is 5.66 when the concentration ratio is 4.00, the order is closest to:',
             options: [
-              '1',
+              '1.00',
               '1.25',
-              '1.5',
-              '2'
+              '1.41',
+              '0.80'
             ],
             correctAnswer: 1,
-            explanation: 'm = ln(5.66)/ln(4.00) = 1.733/1.386 = 1.25. This is a non-integer (fractional) order.'
+            explanation: '$m = \\ln(5.66)/\\ln(4.00) = 1.733/1.386 = 1.25$, a non-integer (fractional) order; check: $4^{1.25} = 5.66$. Dividing the ratios directly (5.66/4.00) gives 1.41, inverting the logarithms gives 0.80, and rounding to the nearest whole number gives 1.00.'
           }
         ]
       }
@@ -232,9 +232,9 @@ For $\\text{A} + \\text{B} + \\text{C} \\rightarrow \\text{Products}$:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3', '50', '0.18'],
+        correctAnswers: ['3', '5.0', '0.060'],
         hint1: 'Order in A: 0.010/0.0050 = 2 = $(0.20/0.10)^{m}$ → m = 1. Order in B: 0.020/0.0050 = 4 = $(0.20/0.10)^{n}$ → n = 2. Order in C: 0.0050/0.0050 = 1 = $(0.30/0.10)^{p}$ → p = 0. Overall = 1 + 2 + 0 = 3.',
-        hint2: 'Rate = k[A][B]$ {}^{2}$. Using Exp 1: 0.0050 = $k(0.10)(0.10)^{2}$ = k(0.001). k = 5.0. Hmm wait: k = 0.0050/0.001 = 5.0. Let me verify with Exp 3: 0.020 = $5.0(0.10)(0.20)^{2}$ = 5.0(0.10)(0.04) = 5.0(0.004) = 0.020 ✓. So k = 5.0.',
+        hint2: 'Rate = k[A][B]$ {}^{2}$ (order 0 in C). Using Exp 1: 0.0050 = $k(0.10)(0.10)^{2}$ = k(0.0010), so k = 5.0. Check with Exp 3: $5.0(0.10)(0.20)^{2}$ = 5.0(0.004) = 0.020 ✓.',
         hint3: 'Rate = $5.0(0.30)(0.20)^{2}$ = 5.0(0.30)(0.04) = 5.0(0.012) = 0.060.',
         explanation: 'Order in A = 1, B = 2, C = 0. Overall order = 3. Rate = k[A][B]$ {}^{2}$. k = 0.0050/(0.10 × 0.01) = 5.0 $M^{-2}s^{-1}$. Rate = $5.0(0.30)(0.20)^{2}$ = 5.0(0.30)(0.04) = 0.060 M/s.'
       }
@@ -250,13 +250,13 @@ For $\\text{A} + \\text{B} + \\text{C} \\rightarrow \\text{Products}$:
           {
             question: 'Why must you vary only one concentration at a time when determining reaction orders?',
             options: [
-              'Varying two simultaneously makes the math impossible',
+              'Changing two at once makes the math impossible',
               'It isolates the effect of each reactant on the rate',
-              'Reactions only respond to one concentration change at a time',
+              'Reactions respond to only one change at a time',
               'It keeps the temperature constant'
             ],
             correctAnswer: 1,
-            explanation: 'By changing only [A] while keeping [B] fixed, the ratio of rates depends only on the order in A: $Rate_{2}/Rate_{1}$ = ([A]$ {}_{2}$/[A]$ {}_{1}$)^m. This isolates the effect of A.'
+            explanation: 'By changing only [A] while keeping [B] fixed, the ratio of rates depends only on the order in A: $Rate_{2}/Rate_{1}$ = ([A]$ {}_{2}$/[A]$ {}_{1}$)^m. This isolates the effect of A. Changing two at once can still be solved, but it mixes the two effects; and holding concentrations fixed has nothing to do with temperature control.'
           },
           {
             question: 'Data: Exp 1 has [A] = 0.10 M, Rate = 0.002 M/s. Exp 2 has [A] = 0.30 M, Rate = 0.018 M/s. (B held constant.) The order in A is:',

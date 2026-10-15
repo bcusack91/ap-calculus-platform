@@ -164,11 +164,11 @@ Given this data:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '0.2', '0.13'],
+        correctAnswers: ['2', '0.200', '0.143'],
         hint1: 'Check Δ(1/[C]): 1.00, 1.00, 1.00 → constant → second-order.',
         hint2: 'Slope = k = 1.00/5 = 0.20 $M^{-1}min^{-1}$.',
-        hint3: '1/[C] = 0.20(25) + 2.00 = 5.00 + 2.00 = 7.00. [C] = 1/7.00 = 0.143 ≈ 0.14. Hmm let me recalc: 0.20 × 25 = 5.0; 5.0 + 2.0 = 7.0; 1/7.0 = 0.1429 ≈ 0.14.',
-        explanation: '1) Δ(1/[C]) = 1.00 per 5 min (constant) → second-order. 2) k = slope = 1.00/5 = 0.20 $M^{-1}min^{-1}$. 3) 1/[C] = 0.20(25) + 2.00 = 7.00 → [C] = 0.14 M.'
+        hint3: '1/[C] = 0.20(25) + 2.00 = 5.00 + 2.00 = 7.00. [C] = 1/7.00 = 0.143 M.',
+        explanation: '1) Δ(1/[C]) = 1.00 per 5 min (constant) → second-order. 2) k = slope = 1.00/5 = 0.20 $M^{-1}min^{-1}$. 3) 1/[C] = 0.20(25) + 2.00 = 7.00 → [C] = 0.143 M.'
       }
     },
     {
@@ -193,7 +193,7 @@ Given this data:
           },
           {
             label: 'If none of the three standard plots is linear, the reaction',
-            options: ['has no rate law', 'may have fractional or higher order', 'is at equilibrium', 'must be zero-order']
+            options: ['has no rate law that can be written', 'may have fractional or higher order', 'must be at chemical equilibrium', 'must be zero-order in every reactant']
           }
         ],
         correctAnswers: ['k = |slope|', 'always positive', 'zero', 'may have fractional or higher order'],

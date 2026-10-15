@@ -173,12 +173,12 @@ An energy diagram for a two-step mechanism shows:
             question: 'Which step is the rate-determining step?',
             options: [
               'Step 1 (first peak is higher)',
-              'Step 2 (second peak is lower)',
+              'Step 2 (the last step limits the rate)',
               'Both steps equally',
               'Cannot determine from the diagram'
             ],
             correctAnswer: 0,
-            explanation: 'The RDS is the step with the highest activation energy barrier. The first peak is higher, so Step 1 has the larger Ea and is the RDS.'
+            explanation: 'The RDS is the step with the highest activation energy barrier, not necessarily the last step. The first peak is higher, so Step 1 has the larger Ea and is the RDS.'
           },
           {
             question: 'The overall reaction is:',
@@ -195,12 +195,12 @@ An energy diagram for a two-step mechanism shows:
             question: 'Adding a catalyst would:',
             options: [
               'Lower both peaks',
-              'Raise the valley',
+              'Raise the energy of the valley',
               'Lower only the first peak',
               'Move the products to lower energy'
             ],
             correctAnswer: 0,
-            explanation: 'A catalyst provides an entirely new pathway with lower activation barriers. Both peaks (transition states) would be lower, while reactant, product, and intermediate energies remain unchanged.'
+            explanation: 'A catalyst provides a new pathway with lower activation barriers, so both peaks (transition states) would be lower. The reactant and product energies do not change, so ΔH stays the same.'
           }
         ]
       }
@@ -219,7 +219,7 @@ An energy diagram for a two-step mechanism shows:
           },
           {
             label: 'The order of a reaction can be fractional when the mechanism involves',
-            options: ['a termolecular step', 'a pre-equilibrium with dissociation', 'only one step', 'a catalyst']
+            options: ['a slow termolecular step', 'a pre-equilibrium with dissociation', 'only one elementary step', 'a catalyst in the slow step']
           },
           {
             label: 'If experimental rate law is rate = k[A] but a proposed mechanism predicts rate = k[A]$ {}^{2}$, the mechanism is',
@@ -278,21 +278,21 @@ A student proposes:
           {
             question: 'Which statement best describes the relationship between mechanisms and rate laws?',
             options: [
-              'The rate law proves the mechanism',
-              'The mechanism must predict a rate law consistent with experiment',
-              'The rate law and mechanism are independent',
-              'The rate law is determined by the fastest step'
+              'A matching rate law proves the mechanism is correct',
+              'A valid mechanism must predict the experimental rate law',
+              'The rate law and the mechanism are independent',
+              'The rate law is set by the fastest elementary step'
             ],
             correctAnswer: 1,
-            explanation: 'A valid mechanism must predict a rate law that matches experiment (Criterion 2). However, a matching rate law does not prove the mechanism — it only shows consistency.'
+            explanation: 'A valid mechanism must predict a rate law that matches experiment (Criterion 2). However, a matching rate law does not prove the mechanism — it only shows consistency. The rate law comes from the slowest step, not the fastest.'
           },
           {
             question: 'On the AP exam, you are given a mechanism and asked to derive the rate law. Your first step should be:',
             options: [
-              'Add all the steps together',
+              'Add all the steps to get the overall equation',
               'Identify the rate-determining step',
-              'Find the intermediates',
-              'Write the equilibrium expression'
+              'Cancel the intermediates from each step',
+              'Write the equilibrium expression for step 1'
             ],
             correctAnswer: 1,
             explanation: 'The first and most important step is to identify the RDS (slow step), because the overall rate law comes from the RDS. Then check for intermediates and eliminate them if needed.'

@@ -137,24 +137,24 @@ $$\\boxed{5\\text{Fe}^{2+} + 8\\text{H}^+ + \\text{MnO}_4^- \\rightarrow 5\\text
           {
             question: 'In acidic solution, oxygen atoms are balanced by adding:',
             options: [
-              '$O_{2}$ molecules',
-              '$OH^{-}$ ions',
+              '$O_{2}$ gas molecules',
+              '$OH^{-}$ hydroxide ions',
               '$H_{2}O$ molecules',
-              '$O^{2-}$ ions'
+              '$O^{2-}$ oxide ions'
             ],
             correctAnswer: 2,
-            explanation: 'In acidic solution, oxygen is balanced by adding $H_{2}O$ to the side that needs more O. Then hydrogen is balanced by adding $H^{+}$.'
+            explanation: 'In acidic solution, oxygen is balanced by adding $H_{2}O$ to the side that needs more O. Then hydrogen is balanced by adding $H^{+}$. Free $O_{2}$ or $O^{2-}$ would change the chemistry, and $OH^{-}$ is used only when converting to basic solution.'
           },
           {
             question: 'After balancing O with $H_{2}O$ and H with $H^{+}$, what is added to balance charge?',
             options: [
-              'More $H^{+}$ ions',
-              '$OH^{-}$ ions',
-              'Electrons $(e^{-})$',
-              'Protons'
+              'Additional $H^{+}$ ions',
+              'Hydroxide ions, $OH^{-}$',
+              'Electrons, $e^{-}$',
+              'More $H_{2}O$ molecules'
             ],
             correctAnswer: 2,
-            explanation: 'After atoms are balanced, charge is balanced by adding electrons $(e^{-})$ to the more positive side of each half-reaction.'
+            explanation: 'After atoms are balanced, charge is balanced by adding electrons $(e^{-})$ to the more positive side of each half-reaction. Adding more $H^{+}$ or $H_{2}O$ would unbalance the H and O you just fixed, and $OH^{-}$ does not belong in an acidic half-reaction.'
           },
           {
             question: 'In the half-reaction $MnO_{4}^{-}$ → $Mn^{2+}$ (acidic), how many electrons are gained?',
@@ -170,13 +170,13 @@ $$\\boxed{5\\text{Fe}^{2+} + 8\\text{H}^+ + \\text{MnO}_4^- \\rightarrow 5\\text
           {
             question: 'Why must electrons be equalized before adding half-reactions?',
             options: [
-              'To make the math easier',
-              'Because electrons cannot appear in the final balanced equation',
-              'To conserve energy',
-              'To balance oxygen atoms'
+              'So the two half-reactions have the same number of atoms',
+              'So no free electrons remain in the overall equation',
+              'So both elements end up with matching oxidation states',
+              'So oxygen balances without adding extra $H_{2}O$ molecules'
             ],
             correctAnswer: 1,
-            explanation: 'Electrons are transferred, not created or destroyed. They must cancel when the half-reactions are added. If the oxidation half gives $2e^{-}$ and reduction takes $5e^{-}$, we need to find the LCM and multiply each accordingly.'
+            explanation: 'Electrons are transferred, not created or destroyed, so the electrons lost must equal the electrons gained and they must cancel when the half-reactions are added. If the oxidation half gives $2e^{-}$ and reduction takes $5e^{-}$, find the LCM (10) and multiply each half-reaction accordingly. Equalizing electrons does not make atom counts or oxidation states equal, and O is balanced earlier with $H_{2}O$.'
           }
         ]
       }

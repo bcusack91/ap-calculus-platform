@@ -64,11 +64,11 @@ $S°$ values (J/(mol·K)): $CH_{4}$ = 186.3, $O_{2}$ = 205.0, $CO_{2}$ = 213.7, 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-5.6', '2691.3', 'yes'],
+        correctAnswers: ['-5.2', '2691.3', 'yes'],
         hint1: '$\\Delta S° = [213.7 + 2(188.7)] - [186.3 + 2(205.0)]$',
         hint2: '$\\Delta S_{\\text{surr}} = -(-802{,}000)/298$',
         hint3: 'Is $\\Delta S_{\\text{univ}} = \\Delta S_{\\text{sys}} + \\Delta S_{\\text{surr}} > 0$?',
-        explanation: '1) $\\Delta S° = 591.1 - 596.3 = -5.2$ J/(mol·K) ≈ −5.6 (with more precise values). 2) $\\Delta S_{\\text{surr}} = 802{,}000/298 = 2691.3$ J/K. 3) $\\Delta S_{\\text{univ}} = -5.6 + 2691.3 > 0$, so yes — highly spontaneous!'
+        explanation: '1) $\\Delta S° = [213.7 + 377.4] - [186.3 + 410.0] = 591.1 - 596.3 = -5.2$ J/(mol·K). 2) $\\Delta S_{\\text{surr}} = 802{,}000/298 = 2691.3$ J/K. 3) $\\Delta S_{\\text{univ}} = -5.2 + 2691.3 > 0$, so yes — highly spontaneous!'
       }
     },
     {
@@ -82,10 +82,10 @@ $S°$ values (J/(mol·K)): $CH_{4}$ = 186.3, $O_{2}$ = 205.0, $CO_{2}$ = 213.7, 
           {
             question: "Methane combustion has a slightly negative $\\Delta S_{\\text{sys}}$ (3 mol gas → 3 mol gas, but products are heavier). Yet it's highly spontaneous. Why?",
             options: [
-              'Because $\\Delta S_{\\text{sys}}$ is always positive for combustion',
-              'Because the large exothermic $\\Delta H$ makes $\\Delta S_{\\text{surr}}$ extremely positive',
-              'Because gas-phase reactions are always spontaneous',
-              'Because $\\Delta S_{\\text{univ}}$ is negative for combustion'
+              'Combustion always has a positive $\\Delta S_{\\text{sys}}$, despite the gas count',
+              'The large heat release makes $\\Delta S_{\\text{surr}}$ hugely positive',
+              'Reactions in the gas phase are always spontaneous because gases mix freely',
+              'Its $\\Delta S_{\\text{univ}}$ is negative, but $\\Delta H$ alone decides spontaneity'
             ],
             correctAnswer: 1,
             explanation: 'The massive heat release ($-802$ kJ) creates a huge $\\Delta S_{\\text{surr}} = +2691$ J/K, which vastly overwhelms the small negative $\\Delta S_{\\text{sys}}$.'
@@ -95,8 +95,8 @@ $S°$ values (J/(mol·K)): $CH_{4}$ = 186.3, $O_{2}$ = 205.0, $CO_{2}$ = 213.7, 
             options: [
               'Nothing — the reaction would be equally spontaneous',
               '$\\Delta S_{\\text{surr}}$ would be smaller, making it less spontaneous',
-              '$\\Delta S_{\\text{sys}}$ would become positive',
-              'The reaction would become nonspontaneous'
+              '$\\Delta S_{\\text{sys}}$ would turn positive, which makes it even more spontaneous',
+              '$\\Delta S_{\\text{surr}}$ would turn negative, making it nonspontaneous'
             ],
             correctAnswer: 1,
             explanation: '$\\Delta S_{\\text{surr}} = -\\Delta H/T$. Higher T → smaller $\\Delta S_{\\text{surr}}$. The reaction is still spontaneous (combustion works at all reasonable T) but the driving force is reduced.'
@@ -138,10 +138,10 @@ A reaction has $\\Delta H = +150$ kJ and $\\Delta S_{\\text{sys}} = +400$ J/K.
           {
             question: 'A reaction has $\\Delta H > 0$ and $\\Delta S > 0$. At LOW temperatures, this reaction is:',
             options: [
-              'Spontaneous — entropy drives it',
+              'Spontaneous — the positive $\\Delta S$ drives it',
               'Nonspontaneous — the endothermic $\\Delta H$ dominates',
-              'At equilibrium',
-              'Cannot determine'
+              'At equilibrium at every low temperature',
+              'Spontaneous — endothermic reactions favor low T'
             ],
             correctAnswer: 1,
             explanation: 'At low T, $\\Delta S_{\\text{surr}} = -\\Delta H/T$ is a large negative number (endothermic + low T). This overwhelms the positive $\\Delta S_{\\text{sys}}$, making $\\Delta S_{\\text{univ}} < 0$. Nonspontaneous.'

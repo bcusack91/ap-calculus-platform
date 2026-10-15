@@ -117,13 +117,13 @@ $$\\boxed{\\text{Elementary step: Rate law exponents} = \\text{stoichiometric co
           {
             question: 'Why are termolecular elementary steps so rare?',
             options: [
-              'They violate conservation of mass',
-              'Three molecules rarely collide simultaneously with correct energy and orientation',
-              'They always have zero activation energy',
-              'They are too fast to observe'
+              'Three-particle steps cannot conserve both mass and charge',
+              'Simultaneous three-body collisions are improbable',
+              'Their activation energy is too high to reach at room temperature',
+              'They are too fast for their transition states to be observed'
             ],
             correctAnswer: 1,
-            explanation: 'A three-body collision is statistically very unlikely. For three molecules to collide simultaneously with both sufficient energy AND correct orientation is extremely improbable.'
+            explanation: 'Three molecules must collide at the same instant, with enough energy and the correct orientation, and such a three-body collision is statistically very unlikely. Termolecular steps conserve mass and charge like any other step, and their rarity has nothing to do with an unusually high barrier or an unobservable speed.'
           }
         ]
       }
@@ -175,11 +175,11 @@ $$\\boxed{2\\text{NO}_2 + \\text{F}_2 \\rightarrow 2\\text{NO}_2\\text{F}}$$ ✓
         dropdowns: [
           {
             label: 'For an elementary step, the exponents in the rate law equal the',
-            options: ['overall order', 'stoichiometric coefficients', 'number of products', 'activation energy']
+            options: ['overall reaction order', 'stoichiometric coefficients', 'number of product molecules', 'activation energy']
           },
           {
             label: 'A reaction mechanism is a',
-            options: ['single step process', 'series of elementary steps', 'type of equilibrium', 'rate law']
+            options: ['single-step overall process', 'series of elementary steps', 'type of equilibrium expression', 'rate law']
           },
           {
             label: 'Molecularity can ONLY be assigned to',
@@ -233,24 +233,24 @@ Consider the mechanism:
           {
             question: 'Why can\'t we write the rate law directly from the overall balanced equation?',
             options: [
-              'The overall equation doesn\'t conserve mass',
+              'The overall equation does not have to conserve mass or charge',
               'The overall equation may not represent a single molecular event',
-              'Rate laws always have integer exponents',
-              'The overall equation is always wrong'
+              'Rate law exponents are always 1, whatever the coefficients',
+              'The overall equation applies only at standard conditions'
             ],
             correctAnswer: 1,
-            explanation: 'Only elementary steps represent single molecular events. The overall reaction is usually the sum of multiple steps, so its stoichiometry doesn\'t directly give the rate law. The rate law must be determined experimentally.'
+            explanation: 'Only elementary steps represent single molecular events. The overall reaction is usually the sum of multiple steps, so its stoichiometry doesn\'t directly give the rate law. The rate law must be determined experimentally (orders can be 0, 1, 2 or even fractional, so they are not always 1).'
           },
           {
             question: 'The overall reaction A + 2B → C + D has an experimentally determined rate law: rate = k[A][B]. This tells us the reaction:',
             options: [
-              'Occurs in one bimolecular step',
-              'Cannot occur in one step since the rate law doesn\'t match stoichiometry',
-              'Must involve a catalyst',
-              'Has no activation energy'
+              'Occurs in one bimolecular step between A and B',
+              'Cannot be a single elementary step with these orders',
+              'Must involve a catalyst that lowers the order in B',
+              'Has a slow step that consumes two molecules of B'
             ],
             correctAnswer: 1,
-            explanation: 'If it were a single elementary step, the rate law would be rate = k[A][B]$ {}^{2}$ (from stoichiometry). Since the experimental rate law is rate = k[A][B], the reaction must have a multi-step mechanism.'
+            explanation: 'If it were a single elementary step, the rate law would be rate = k[A][B]$ {}^{2}$ (from stoichiometry). Since the experimental rate law is rate = k[A][B], the reaction must have a multi-step mechanism. A slow step that consumed two B molecules would also give [B]$ {}^{2}$, so it cannot be the rate-determining step either.'
           }
         ]
       }

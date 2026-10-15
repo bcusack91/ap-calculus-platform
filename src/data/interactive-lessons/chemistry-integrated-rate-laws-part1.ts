@@ -269,13 +269,13 @@ $k = 0.050/10 = 0.005$ M/s
           {
             question: 'Which statement about zero-order reactions is TRUE?',
             options: [
-              'Half-life is independent of initial concentration',
+              'Half-life is independent of [A]$ {}_{0}$',
               'A plot of ln[A] vs t is linear',
               'The reaction reaches completion in finite time',
               'Rate increases as concentration decreases'
             ],
             correctAnswer: 2,
-            explanation: 'Zero-order: [A] decreases linearly until it hits zero at t = [A]$ {}_{0}/k$. This is unique — first and second-order reactions theoretically never reach [A] = 0.'
+            explanation: 'Zero-order: [A] decreases linearly until it hits zero at t = [A]$ {}_{0}/k$. This is unique — first and second-order reactions theoretically never reach [A] = 0. A zero-order half-life, [A]$ {}_{0}/2k$, depends on [A]$ {}_{0}$; ln[A] vs t is linear for first-order; and a zero-order rate stays constant as concentration falls.'
           }
         ]
       }

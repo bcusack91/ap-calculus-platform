@@ -59,15 +59,15 @@ a) Calculate $\\Delta S^\\circ_{\\text{rxn}}$ in J/(mol·K):
 b) Now calculate for: $2\\text{H}_2\\text{(g)} + \\text{O}_2\\text{(g)} \\to 2\\text{H}_2\\text{O(l)}$
 
 $\\Delta S^\\circ_{\\text{rxn}}$ in J/(mol·K):
-    `, exercise: { boxes: 2, correctAnswers: ['-88.4', '-326.6'],
+    `, exercise: { boxes: 2, correctAnswers: ['-89.0', '-326.8'],
         hint1: 'Part a: Products: 2 × 188.8 = 377.6. Reactants: 2 × 130.7 + 205.2 = 466.6.',
         hint2: 'Part b: Products: 2 × 69.9 = 139.8. Same reactants: 466.6.',
-        explanation: 'a) $377.6 - 466.6 = -88.4$ J/(mol·K). b) $139.8 - 466.6 = -326.6$ J/(mol·K). Forming liquid water gives much more negative $\\Delta S$ because liquid has far less entropy than gas.' } },
+        explanation: 'a) $377.6 - 466.6 = -89.0$ J/(mol·K). b) $139.8 - 466.6 = -326.8$ J/(mol·K). Forming liquid water gives much more negative $\\Delta S$ because liquid has far less entropy than gas.' } },
     { id: 'en6v3-analysis', type: 'multiple-choice' as const, content: `
 **Analysis Questions**
     `, exercise: { questions: [
-          { question: 'In Problem 3, why is ΔS° much more negative when $H_{2}O(l)$ forms vs $H_{2}O(g)$?', options: ['Liquid water has higher entropy', 'You lose 3 mol of gas instead of 1 mol', 'The temperature changes', 'The enthalpy is different'], correctAnswer: 1, explanation: 'With $H_{2}O(g)$: 3 mol gas → 2 mol gas (net -1). With $H_{2}O(l)$: 3 mol gas → 0 mol gas (net -3). Going from gas to liquid represents a much larger decrease in disorder.' },
-          { question: 'A student calculates $\\Delta S^\\circ = +45$ J/(mol·K) for a reaction. Which is most likely true?', options: ['More gas molecules in products', 'All reactants and products are solids', 'Fewer gas molecules in products', 'Temperature must be positive'], correctAnswer: 0, explanation: 'A positive $\\Delta S^\\circ$ most commonly results from a net increase in gas molecules. Solids have such small $S^\\circ$ values that reactions among only solids rarely give +45 J/(mol·K).' }
+          { question: 'In Problem 3, why is ΔS° much more negative when $H_{2}O(l)$ forms vs $H_{2}O(g)$?', options: ['Liquid water has higher entropy', 'You lose 3 mol of gas instead of 1 mol', 'The reaction temperature changes', 'The enthalpy change is larger'], correctAnswer: 1, explanation: 'With $H_{2}O(g)$: 3 mol gas → 2 mol gas (net -1). With $H_{2}O(l)$: 3 mol gas → 0 mol gas (net -3). Going from gas to liquid represents a much larger decrease in disorder.' },
+          { question: 'A student calculates $\\Delta S^\\circ = +45$ J/(mol·K) for a reaction. Which is most likely true?', options: ['More gas molecules in products', 'All reactants and products are solids', 'Fewer gas molecules in products', 'Products are solids formed from aqueous ions'], correctAnswer: 0, explanation: 'A positive $\\Delta S^\\circ$ most commonly results from a net increase in gas molecules. Solids have such small $S^\\circ$ values that reactions among only solids rarely give +45 J/(mol·K), and forming solids from aqueous ions (precipitation) usually gives a negative $\\Delta S^\\circ$.' }
         ] } },
     { id: 'en6v3-check', type: 'multiple-choice' as const, content: `
 **Final Check** ✅

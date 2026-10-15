@@ -92,13 +92,13 @@ $$\\boxed{\\text{Rate} = -\\frac{1}{a}\\frac{\\Delta[A]}{\\Delta t} = -\\frac{1}
           {
             question: 'Why do we include the negative sign when expressing rate in terms of a reactant?',
             options: [
-              'Reactants always have negative concentrations',
-              'It converts the negative Δ[reactant] to a positive rate value',
-              'It indicates the reaction goes in reverse',
-              'It is just a convention with no mathematical purpose'
+              'It shows reactant concentrations are negative quantities',
+              'It makes the rate positive as [reactant] decreases',
+              'It signals that the reverse reaction is being measured',
+              'It is a convention with no effect on the rate\'s value'
             ],
             correctAnswer: 1,
-            explanation: 'Reactant concentrations decrease over time, so Δ[A] is negative. Multiplying by −1 gives a positive rate, since we define rate as a positive quantity.'
+            explanation: 'Reactant concentrations decrease over time, so Δ[A] is negative. Multiplying by −1 gives a positive rate, since we define rate as a positive quantity. Concentrations themselves are never negative, the sign has nothing to do with the reverse reaction, and without it the computed rate would come out negative.'
           },
           {
             question: 'For $N_{2}$ + $3H_{2}$ → $2NH_{3}$, the rate of disappearance of $H_{2}$ is 0.30 M/s. What is the rate of appearance of $NH_{3}$?',
@@ -275,10 +275,10 @@ Consider the reaction: $2\\text{NO}_2 \\rightarrow 2\\text{NO} + \\text{O}_2$
               'Measuring mass loss',
               'Spectrophotometry',
               'Measuring pressure change',
-              'Conductivity'
+              'Measuring conductivity'
             ],
             correctAnswer: 1,
-            explanation: 'Spectrophotometry (Beer\'s Law) is ideal for tracking colored species. Absorbance is proportional to concentration, allowing direct monitoring.'
+            explanation: 'Spectrophotometry (Beer\'s Law) is ideal for tracking colored species. Absorbance is proportional to concentration, allowing direct monitoring. Mass loss and pressure change work only when a gas escapes or forms, and conductivity tracks ions rather than color.'
           }
         ]
       }

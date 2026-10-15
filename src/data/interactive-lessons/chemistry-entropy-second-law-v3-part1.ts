@@ -71,8 +71,7 @@ This equation connects the microscopic (molecular arrangements) to the macroscop
 **3)** What fraction of all microstates is the "all heads" state? Write as a fraction.
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['16', '6', '1/16'],
+        questions: [{ question: '(1)', answer: '16', acceptableAnswers: ['16'] }, { question: '(2)', answer: '6', acceptableAnswers: ['6'] }, { question: '(3)', answer: '1/16', acceptableAnswers: ['1/16', '0.0625', '0.063'] }],
         hint1: '$2^4 = ?$',
         hint2: 'Count: HHTT, HTHT, HTTH, THHT, THTH, TTHH.',
         hint3: 'Only 1 out of 16 microstates is HHHH.',
@@ -107,17 +106,17 @@ This equation connects the microscopic (molecular arrangements) to the macroscop
         questions: [
           {
             question: 'A container has 20 gas molecules. The probability they ALL spontaneously move to the left half is $1/2^{20}$. This equals approximately:',
-            options: ['1 in 100', '1 in 10,000', '1 in 1,000,000', '1 in 1,000,000 — and that is with only 20 molecules!'],
+            options: ['1 in 40', '1 in 400', '1 in a million', '1 in $10^{20}$'],
             correctAnswer: 2,
-            explanation: '$2^{20} = 1{,}048{,}576 \\approx 10^6$. So the probability is about 1 in a million. With $10^{23}$ molecules (a mole), it becomes $10^{-10^{22}}$ — utterly impossible.'
+            explanation: '$2^{20} = 1{,}048{,}576 \\approx 10^6$. So the probability is about 1 in a million — with only 20 molecules. With a mole of molecules ($6 \\times 10^{23}$), it becomes about $10^{-1.8 \\times 10^{23}}$ — effectively impossible. Using $2 \\times 20$ gives 1 in 40, using $20^2$ gives 1 in 400, and confusing $2^{20}$ with $10^{20}$ gives 1 in $10^{20}$.'
           },
           {
             question: 'Which is NOT a property of entropy?',
             options: [
-              'State function',
+              'A state function, independent of path',
               'Conserved in all processes',
-              'Extensive property',
-              'Measured in J/K'
+              'An extensive property that scales with amount',
+              'Measured in J/K, or J/(mol·K) per mole'
             ],
             correctAnswer: 1,
             explanation: 'Entropy is NOT conserved — it can be created in irreversible processes. Energy is the conserved quantity (First Law).'
@@ -154,7 +153,7 @@ This equation connects the microscopic (molecular arrangements) to the macroscop
           },
           {
             label: 'The reason ice melts at room temperature is fundamentally about',
-            options: ['chemical bonds breaking', 'probability and microstates', 'gravity', 'electromagnetic forces']
+            options: ['chemical bonds breaking', 'probability and microstates', 'density differences in the water', 'electromagnetic forces']
           }
         ],
         correctAnswers: ['zero', 'doubles', 'probability and microstates'],
@@ -175,13 +174,13 @@ This equation connects the microscopic (molecular arrangements) to the macroscop
           {
             question: 'A student says "entropy measures how much energy a system has." Is this correct?',
             options: [
-              'Yes — entropy and energy are the same',
-              'No — entropy measures the number of ways energy and matter can be arranged (microstates)',
-              'No — entropy measures temperature',
-              'Partially — entropy is the ratio of energy to temperature'
+              'Yes — entropy is the total energy stored in a system',
+              'No — it counts the ways matter and energy can be arranged',
+              'No — entropy is a measure of the system\'s temperature',
+              'Partly — entropy is the energy a system loses as heat'
             ],
             correctAnswer: 1,
-            explanation: 'Entropy measures microstates — the number of ways to arrange energy and matter. A system can have high energy but low entropy (e.g., a compressed gas) or low energy but high entropy (e.g., a diffuse gas at low temperature).'
+            explanation: 'Entropy measures microstates — the number of ways to arrange energy and matter — not how much energy a system contains. Two systems with the same energy can have very different entropies, and heat lost by a system is energy, not entropy.'
           }
         ]
       }

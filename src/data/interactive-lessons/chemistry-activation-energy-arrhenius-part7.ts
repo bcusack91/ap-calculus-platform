@@ -128,12 +128,11 @@ The rate constant for the decomposition of $N_{2}O_{5}$ is $k = 3.46 \\times 10^
 **3)** What would $k$ be at 310 K? (in $s^{-1}$, to 1 significant figure in scientific notation, e.g., 2e-4)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['103.5', '13', '2e-4'],
-        hint1: 'ln(4.87e-3/3.46e-5) = ln(140.8) = 4.948. 1/298 − 1/338 = 3.356e-3 − 2.959e-3 = 3.97e-4. Ea = 8.314 × 4.948/3.97e-4 = 41.14/3.97e-4 = 103,600 J/mol = 103.6 kJ/mol.',
+        questions: [{ question: '(1)', answer: '103.6', acceptableAnswers: ['103.6'] }, { question: '(2)', answer: '13', acceptableAnswers: ['13'] }, { question: '(3)', answer: '2e-4', acceptableAnswers: ['2e-4', '1.7e-4', '1.74e-4', '1.75e-4', '2×10^-4', '2x10^-4', '2*10^-4'] }],
+        hint1: 'ln(4.87e-3/3.46e-5) = ln(140.8) = 4.947. 1/298 − 1/338 = 3.356e-3 − 2.959e-3 = 3.971e-4. Ea = 8.314 × 4.947/3.971e-4 = 41.13/3.971e-4 = 103,600 J/mol = 103.6 kJ/mol.',
         hint2: 'ln A = ln k + Ea/(RT) = ln(3.46e-5) + 103,600/(8.314 × 298) = −10.27 + 41.77 = 31.50. A = $e^{31.5}$ ≈ $4.8 \\times 10^{13}$. Exponent = 13.',
         hint3: 'ln(k/3.46e-5) = (103,600/8.314)(1/298 − 1/310) = 12,462 × (3.356e-3 − 3.226e-3) = 12,462 × 1.30e-4 = 1.62. k = 3.46e-5 × $e^{1.62}$ = 3.46e-5 × 5.05 = 1.75e-4 ≈ 2e-4.',
-        explanation: '1) Ea = 8.314 × ln(140.8)/3.97e-4 = 103,600 J/mol = 103.5 kJ/mol. 2) ln A = 31.5 → A ≈ $10^{13}$. 3) At 310 K: k ≈ $2 \\times 10^{-4}$ $s^{-1}$.'
+        explanation: '1) Ea = 8.314 × ln(140.8)/3.97e-4 = 103,600 J/mol = 103.6 kJ/mol. 2) ln A = 31.5 → A ≈ $10^{13}$. 3) At 310 K: k = $1.75 \\times 10^{-4}$ ≈ $2 \\times 10^{-4}$ $s^{-1}$.'
       }
     },
     {
@@ -147,35 +146,35 @@ The rate constant for the decomposition of $N_{2}O_{5}$ is $k = 3.46 \\times 10^
           {
             question: 'On an Arrhenius plot (ln k vs 1/T), adding a catalyst to a reaction would change the graph by:',
             options: [
-              'Shifting the line up (same slope)',
-              'Making the line less steep (less negative slope) and shifting it up',
-              'Making the line steeper',
-              'Not changing the graph at all'
+              'Shifting the line up with the same slope',
+              'Making the line less steep and shifting it upward',
+              'Making the line steeper and shifting it downward',
+              'Leaving the graph unchanged'
             ],
             correctAnswer: 1,
-            explanation: 'A catalyst lowers Ea, which makes the slope (−Ea/R) less negative (less steep). It also generally increases k at all temperatures (shifts line up). The y-intercept (ln A) may also change since the mechanism is different.'
+            explanation: 'A catalyst lowers Ea, which makes the slope (−Ea/R) less negative (less steep). It also generally increases k at all temperatures (shifts the line up). The y-intercept (ln A) may also change since the mechanism is different. Keeping the same slope would mean the same Ea, which a catalyst does not leave unchanged.'
           },
           {
             question: 'A reaction has Ea = 75 kJ/mol. A catalyst lowers Ea to 50 kJ/mol. At 300 K, the ratio k(catalyzed)/k(uncatalyzed) is approximately:',
             options: [
               '1.5',
-              '150',
-              '22,000',
-              '$4.5 \\times 10^{4}$'
+              '1.01',
+              '23,000',
+              '$1.1 \\times 10^{10}$'
             ],
             correctAnswer: 2,
-            explanation: 'Ratio = e^((75,000−50,000)/(8.314×300)) = e^(25,000/2494) = $e^{10.02}$ ≈ 22,400 ≈ 22,000.'
+            explanation: 'Ratio = e^((75,000 − 50,000)/(8.314 × 300)) = e^(25,000/2494) = $e^{10.02}$ ≈ 22,500 ≈ 23,000. Taking the ratio of the Ea values gives 1.5; leaving Ea in kJ gives $e^{0.010}$ = 1.01; and using $10^{10.02}$ instead of $e^{10.02}$ gives $1.1 \\times 10^{10}$.'
           },
           {
             question: 'Why do enzymes stop working at very high temperatures?',
             options: [
-              'Ea becomes too large',
-              'The enzyme denatures (loses its 3D structure)',
-              'The substrate evaporates',
-              'The equilibrium shifts left'
+              'The activation energy increases at high temperature',
+              'The enzyme unfolds and loses its active site',
+              'The substrate molecules move too fast to collide',
+              'The equilibrium shifts back toward the reactants'
             ],
             correctAnswer: 1,
-            explanation: 'At high temperatures, the protein unfolds (denatures), destroying the active site shape. Without the proper 3D structure, the enzyme cannot bind substrate or catalyze the reaction.'
+            explanation: 'At high temperatures, the protein unfolds (denatures), destroying the active site shape. Without the proper 3D structure, the enzyme cannot bind substrate or catalyze the reaction. Ea is a property of the pathway and does not rise with temperature, faster molecules collide more often, and equilibrium shifts do not explain a catalyst failing.'
           }
         ]
       }
@@ -198,14 +197,14 @@ The rate constant for the decomposition of $N_{2}O_{5}$ is $k = 3.46 \\times 10^
           },
           {
             label: 'A reaction with Ea ≈ 0 would have rate constant approximately equal to',
-            options: ['0', 'R', 'T', 'A (frequency factor)']
+            options: ['0', 'R', 'T', 'A']
           },
           {
             label: 'Heterogeneous catalysts work by',
-            options: ['increasing temperature', 'adsorbing reactants and weakening bonds', 'increasing concentration', 'absorbing light']
+            options: ['raising the temperature at the surface', 'adsorbing reactants and weakening bonds', 'increasing the concentration of reactants', 'absorbing light to excite the reactants']
           }
         ],
-        correctAnswers: ['energy ≥ Ea', 'slope', 'A (frequency factor)', 'adsorbing reactants and weakening bonds'],
+        correctAnswers: ['energy ≥ Ea', 'slope', 'A', 'adsorbing reactants and weakening bonds'],
         hint1: '$e^{-Ea/RT}$ gives the fraction of molecules with enough energy to react.',
         hint2: 'slope = −Ea/R → Ea = −R × slope.',
         hint3: 'If Ea = 0: k = $Ae^{0}$ = A.',
@@ -232,12 +231,11 @@ A catalyzed reaction has the following data:
 **3)** At 300 K, what is the ratio k(cat)/k(uncat)? (to 1 significant figure, scientific notation: e.g., 3e5)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['50.2', '49.8', '5e8'],
-        hint1: 'ln(0.85/0.050) = ln(17) = 2.833. 1/300 − 1/350 = 3.333e-3 − 2.857e-3 = 4.76e-4. Ea = 8.314 × 2.833/4.76e-4 = 23.55/4.76e-4 = 49,500 J/mol ≈ 50.2 kJ/mol.',
-        hint2: 'ΔEa = 100 − 50.2 = 49.8 kJ/mol.',
-        hint3: 'k(cat)/k(uncat) = e^((100,000−50,200)/(8.314×300)) = e^(49,800/2494) = $e^{19.97}$ ≈ $4.7 \\times 10^{8}$ ≈ $5 \\times 10^{8}$.',
-        explanation: '1) Ea = 8.314 × 2.833/4.76e-4 = 49,500 J/mol ≈ 50.2 kJ/mol. 2) 100.0 − 50.2 = 49.8 kJ/mol. 3) $e^{19.97}$ ≈ $5 \\times 10^{8}$.'
+        questions: [{ question: '(1)', answer: '49.5', acceptableAnswers: ['49.5'] }, { question: '(2)', answer: '50.5', acceptableAnswers: ['50.5'] }, { question: '(3)', answer: '6e8', acceptableAnswers: ['6e8', '6.2e8', '6.3e8', '6×10^8', '6x10^8', '6*10^8'] }],
+        hint1: 'ln(0.85/0.050) = ln(17) = 2.833. 1/300 − 1/350 = 3.333e-3 − 2.857e-3 = 4.762e-4. Ea = 8.314 × 2.833/4.762e-4 = 23.55/4.762e-4 = 49,500 J/mol = 49.5 kJ/mol.',
+        hint2: 'ΔEa = 100 − 49.5 = 50.5 kJ/mol.',
+        hint3: 'k(cat)/k(uncat) = e^((100,000 − 49,500)/(8.314 × 300)) = e^(50,500/2494) = $e^{20.25}$ ≈ $6.2 \\times 10^{8}$ ≈ $6 \\times 10^{8}$.',
+        explanation: '1) Ea = 8.314 × 2.833/4.762e-4 = 49,500 J/mol = 49.5 kJ/mol. 2) 100.0 − 49.5 = 50.5 kJ/mol. 3) $e^{20.25}$ ≈ $6 \\times 10^{8}$.'
       }
     },
     {
@@ -251,24 +249,24 @@ A catalyzed reaction has the following data:
           {
             question: 'A student measures k at 5 temperatures and plots ln k vs 1/T. The best-fit line has slope = −6,000 K and y-intercept = 25.0. What is Ea and A?',
             options: [
-              'Ea = 49.9 kJ/mol, A = $e^{25}$ ≈ $7.2 \\times 10^{10}$',
-              'Ea = 6.0 kJ/mol, A = 25.0',
+              'Ea = 49.9 kJ/mol, A = $7.2 \\times 10^{10}$',
+              'Ea = 6.0 kJ/mol, A = $7.2 \\times 10^{10}$',
               'Ea = 49.9 kJ/mol, A = 25.0',
-              'Ea = 6,000 J/mol, A = $e^{25}$'
+              'Ea = 722 J/mol, A = $7.2 \\times 10^{10}$'
             ],
             correctAnswer: 0,
-            explanation: 'Ea = −R × slope = −8.314 × (−6,000) = 49,884 J/mol = 49.9 kJ/mol. A = $e^{y-intercept}$ = $e^{25}$ ≈ $7.2 \\times 10^{10}$.'
+            explanation: 'Ea = −R × slope = −8.314 × (−6,000) = 49,884 J/mol = 49.9 kJ/mol. A = $e^{y-intercept}$ = $e^{25}$ ≈ $7.2 \\times 10^{10}$. Forgetting R gives 6.0 kJ/mol, dividing by R gives 722 J/mol, and reading the intercept as A itself (instead of ln A) gives 25.0.'
           },
           {
             question: 'Which combination would make a reaction fastest?',
             options: [
               'High Ea, low T, no catalyst',
               'Low Ea, high T, with catalyst',
-              'High Ea, high T, with catalyst',
+              'High Ea, high T, no catalyst',
               'Low Ea, low T, no catalyst'
             ],
             correctAnswer: 1,
-            explanation: 'Fastest rate requires: low Ea (large Boltzmann factor), high T (more energy), and a catalyst (further lowers Ea). This maximizes k = $Ae^{-Ea/RT}$.'
+            explanation: 'Fastest rate requires: low Ea (large Boltzmann factor), high T (more energy), and a catalyst (further lowers Ea). This maximizes k = $Ae^{-Ea/RT}$. A high Ea or a low T shrinks $e^{-Ea/RT}$ and slows the reaction.'
           }
         ]
       }

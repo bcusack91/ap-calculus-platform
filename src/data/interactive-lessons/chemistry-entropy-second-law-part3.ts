@@ -163,19 +163,19 @@ Above 0°C: melting is spontaneous. Below 0°C: freezing is spontaneous.
             options: [
               '−167 J/K',
               '+167 J/K',
-              '−50 J/K',
-              '+50 J/K'
+              '+0.167 J/K',
+              '+6.00 J/K'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta S_{\\text{surr}} = -\\Delta H/T = -(-50{,}000 \\text{ J})/300 = +167$ J/K. The surroundings absorb heat, so their entropy increases.'
+            explanation: '$\\Delta S_{\\text{surr}} = -\\Delta H/T = -(-50{,}000 \\text{ J})/300 \\text{ K} = +167$ J/K. The surroundings absorb heat, so their entropy increases. Dropping the minus sign gives −167 J/K, leaving ΔH in kJ gives 0.167, and dividing T by ΔH (300/50) gives 6.00.'
           },
           {
             question: '"Spontaneous" in thermodynamics means:',
             options: [
-              'The reaction happens instantly',
-              'No energy input is ever needed',
-              'The process is thermodynamically favorable in the forward direction',
-              'The reaction is always exothermic'
+              'The reaction happens quickly once started',
+              'No energy input is needed to start it',
+              'The process is favorable in the direction written',
+              'The reaction must be exothermic, releasing heat'
             ],
             correctAnswer: 2,
             explanation: 'Spontaneous means thermodynamically favorable — the reaction will proceed in the forward direction given enough time. It says nothing about speed (kinetics) and does not require exothermicity.'
@@ -218,11 +218,11 @@ Above 0°C: melting is spontaneous. Below 0°C: freezing is spontaneous.
           },
           {
             label: 'An endothermic process can be spontaneous if',
-            options: ['ΔS_system is sufficiently positive', 'ΔS_system is negative', 'temperature is very low', 'it never can be']
+            options: ['ΔS_system is sufficiently positive', 'ΔS_system is sufficiently negative', 'the temperature is kept very low', 'the activation energy is very small']
           },
           {
             label: 'Adding heat to a cold object changes its entropy MORE than adding the same heat to a hot object because',
-            options: ['cold objects have more microstates', 'ΔS = q/T, and smaller T gives larger ΔS', 'cold objects have no entropy', 'the Second Law requires it']
+            options: ['cold objects already have more microstates', 'ΔS = q/T, and smaller T gives larger ΔS', 'cold objects have no entropy', 'the Second Law requires it']
           },
           {
             label: 'The entropy of the universe',
@@ -258,13 +258,13 @@ Above 0°C: melting is spontaneous. Below 0°C: freezing is spontaneous.
           {
             question: 'The conversion of diamond to graphite is thermodynamically spontaneous but does not occur at room temperature. Why?',
             options: [
-              'The Second Law is wrong',
-              'The process has high activation energy (kinetic barrier)',
-              'ΔS_universe is actually negative',
-              'Diamond has higher entropy than graphite'
+              'The Second Law does not apply to solid-solid changes',
+              'Its activation energy is too high for a measurable rate',
+              'ΔS_universe for the conversion is actually negative',
+              'Diamond has higher entropy than graphite at 298 K'
             ],
             correctAnswer: 1,
-            explanation: 'Thermodynamics tells us IF a process is favorable, not HOW FAST it occurs. The diamond → graphite conversion is spontaneous ($\\Delta G < 0$) but has an enormous activation energy barrier, making it infinitely slow at room temperature.'
+            explanation: 'Thermodynamics tells us IF a process is favorable, not HOW FAST it occurs. The diamond → graphite conversion is favorable ($\\Delta G < 0$, so $\\Delta S_{\\text{universe}} > 0$) but has an enormous activation energy (a kinetic barrier), making it immeasurably slow at room temperature. Diamond actually has lower entropy than graphite (2.4 vs 5.7 J/(mol·K)).'
           }
         ]
       }

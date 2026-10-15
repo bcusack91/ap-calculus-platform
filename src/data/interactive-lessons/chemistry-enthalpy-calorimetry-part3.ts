@@ -168,13 +168,13 @@ $$q_p = \\Delta H$$
           {
             question: 'Why is water commonly used in calorimeters?',
             options: [
-              'It is transparent',
-              'It has a very high specific heat capacity',
-              'It is the cheapest liquid',
-              'It has a low boiling point'
+              'It is transparent, so reactions can be watched',
+              'It has a high specific heat capacity',
+              'It speeds up most reactions dissolved in it',
+              'It conducts heat to the surroundings quickly'
             ],
             correctAnswer: 1,
-            explanation: 'Water\'s high specific heat (4.184 J/g·°C) means it can absorb a lot of heat per degree of temperature change, making temperature changes easier to detect and measure accurately.'
+            explanation: 'Water\'s high, precisely known specific heat (4.184 J/g·°C) lets it absorb a lot of heat with only a modest temperature change, and because c is known so well, $q = mc\\Delta T$ can be calculated accurately. A good calorimeter should lose as little heat to the surroundings as possible.'
           },
           {
             question: 'A coffee-cup calorimeter measures enthalpy because it operates at:',
@@ -203,12 +203,11 @@ $$q_p = \\Delta H$$
 **3)** When 100.0 mL of 0.500 M HCl and 100.0 mL of 0.500 M NaOH are mixed, the temperature rises by 3.4°C. What is $q_{\\text{rxn}}$ in kJ? (to 3 significant figures, include sign)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['20.9', '0.26', '-2.85'],
+        questions: [{ question: '(1)', answer: '20.9', acceptableAnswers: ['20.9', '20.92'] }, { question: '(2)', answer: '0.523', acceptableAnswers: ['0.523', '0.52'] }, { question: '(3)', answer: '-2.85', acceptableAnswers: ['-2.85', '-2.845'] }],
         hint1: '$q = mc\\Delta T = (200.0)(4.184)(25.0)$. Convert J to kJ.',
         hint2: 'Heat lost by metal = heat gained by water. $m_{\\text{metal}} c_{\\text{metal}} \\Delta T_{\\text{metal}} = m_{\\text{water}} c_{\\text{water}} \\Delta T_{\\text{water}}$',
         hint3: '$q_{\\text{solution}} = mc\\Delta T = (200.0)(4.184)(3.4)$. Then $q_{\\text{rxn}} = -q_{\\text{solution}}$.',
-        explanation: '1) $q = (200.0)(4.184)(25.0) = 20920$ J $= 20.9$ kJ. 2) $(50.0)(c)(72.0) = (150.0)(4.184)(3.0)$, so $c = 1882.8/3600 = 0.523$... Wait: $\\Delta T_{\\text{metal}} = 23.0 - 95.0 = -72.0$, $\\Delta T_{\\text{water}} = 23.0 - 20.0 = 3.0$. $c = (150.0)(4.184)(3.0)/[(50.0)(72.0)] = 1882.8/3600 = 0.52$ J/(g·°C). Let me recalculate: answer is 0.52. 3) $q_{\\text{sol}} = (200.0)(4.184)(3.4) = 2845$ J $= 2.85$ kJ. $q_{\\text{rxn}} = -2.85$ kJ.'
+        explanation: '1) $q = (200.0)(4.184)(25.0) = 20920$ J $= 20.9$ kJ. 2) Heat lost by metal = heat gained by water, with $\\Delta T_{\\text{metal}} = 95.0 - 23.0 = 72.0$ and $\\Delta T_{\\text{water}} = 23.0 - 20.0 = 3.0$: $(50.0)(c)(72.0) = (150.0)(4.184)(3.0)$, so $c = 1882.8/3600 = 0.523$ J/(g·°C). 3) $q_{\\text{sol}} = (200.0)(4.184)(3.4) = 2845$ J $= 2.85$ kJ. $q_{\\text{rxn}} = -2.85$ kJ.'
       }
     },
     {
@@ -221,7 +220,7 @@ $$q_p = \\Delta H$$
         dropdowns: [
           {
             label: 'In the equation q = mcΔT, the "c" stands for',
-            options: ['concentration', 'specific heat capacity', 'heat capacity', 'calories']
+            options: ['concentration', 'specific heat capacity', 'heat capacity', 'calorimeter constant']
           },
           {
             label: 'If a reaction causes the calorimeter temperature to DECREASE, the reaction is',
@@ -233,7 +232,7 @@ $$q_p = \\Delta H$$
           },
           {
             label: 'The main assumption in coffee-cup calorimetry is that',
-            options: ['no heat escapes the cup', 'the reaction is fast', 'the solution is acidic', 'temperature is constant']
+            options: ['no heat escapes the cup', 'the reaction is fast', 'the cup absorbs most of the heat', 'temperature is constant']
           }
         ],
         correctAnswers: ['specific heat capacity', 'endothermic', 'q_rxn = -q_solution', 'no heat escapes the cup'],
@@ -254,21 +253,21 @@ $$q_p = \\Delta H$$
           {
             question: 'A 25.0 g sample of a metal (c = 0.450 J/g·°C) at 100.0°C is placed in 100.0 g of water at 22.0°C. Assuming no heat loss, the final temperature will be:',
             options: [
-              '24.6°C',
-              '28.3°C',
-              '35.1°C',
+              '24.0°C',
+              '37.6°C',
+              '45.5°C',
               '61.0°C'
             ],
             correctAnswer: 0,
-            explanation: 'Heat lost by metal = heat gained by water: $(25.0)(0.450)(100.0 - T_f) = (100.0)(4.184)(T_f - 22.0)$. $11.25(100.0 - T_f) = 418.4(T_f - 22.0)$. $1125 - 11.25T_f = 418.4T_f - 9204.8$. $10329.8 = 429.65T_f$. $T_f = 24.0°\\text{C} \\approx 24.6°\\text{C}$.'
+            explanation: 'Heat lost by metal = heat gained by water: $(25.0)(0.450)(100.0 - T_f) = (100.0)(4.184)(T_f - 22.0)$. $11.25(100.0 - T_f) = 418.4(T_f - 22.0)$. $1125 - 11.25T_f = 418.4T_f - 9204.8$. $10329.8 = 429.65T_f$. $T_f = 24.0°\\text{C}$. Ignoring the specific heats (a mass-weighted average) gives 37.6°C, swapping the two masses gives 45.5°C, and simply averaging the two temperatures gives 61.0°C. Water\'s large heat capacity keeps the final temperature close to 22.0°C.'
           },
           {
             question: 'Why does a coffee-cup calorimeter give ΔH directly?',
             options: [
-              'It operates at constant volume',
-              'It measures work, not heat',
+              'It operates at constant volume, so q_v = ΔH',
+              'It measures the work done on the air',
               'It operates at constant pressure, so q_p = ΔH',
-              'It measures entropy changes'
+              'It measures the entropy change of the water'
             ],
             correctAnswer: 2,
             explanation: 'The coffee-cup calorimeter is open to the atmosphere (constant pressure). At constant pressure, the heat measured equals the enthalpy change: $q_p = \\Delta H$.'

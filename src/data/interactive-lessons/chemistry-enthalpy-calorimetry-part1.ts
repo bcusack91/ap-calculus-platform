@@ -249,10 +249,10 @@ Type "exothermic" or "endothermic" for each process:
           {
             question: 'A chemical cold pack contains ammonium nitrate and water. When activated, the pack feels cold because:',
             options: [
-              'The dissolving process is exothermic',
-              'The dissolving process is endothermic — it absorbs heat from your hand',
-              'The cold pack creates cold energy',
-              'The reaction destroys heat energy'
+              'Dissolving it is exothermic, so the pack loses heat',
+              'Dissolving it is endothermic, drawing heat from your hand',
+              'The pack releases stored cold energy into your hand',
+              'Dissolving it destroys heat energy as it proceeds'
             ],
             correctAnswer: 1,
             explanation: '$NH_{4}NO_{3}$ dissolving in water is endothermic. The system absorbs heat from your hand (the surroundings), making your hand feel cold. Energy is not created or destroyed — it flows from surroundings to system.'
@@ -266,7 +266,7 @@ Type "exothermic" or "endothermic" for each process:
               '+242 kJ'
             ],
             correctAnswer: 1,
-            explanation: 'Reversing a reaction changes the sign of ΔH. If the forward reaction releases 484 kJ, the reverse reaction absorbs 484 kJ. $\\Delta H_{\\text{reverse}} = +484$ kJ.'
+            explanation: 'Reversing a reaction changes the sign of ΔH. If the forward reaction releases 484 kJ, the reverse reaction absorbs 484 kJ. $\\Delta H_{\\text{reverse}} = +484$ kJ. Keeping the sign gives −484 kJ, doubling gives −968 kJ, and halving while flipping the sign gives +242 kJ; none of these match the reversed reaction.'
           }
         ]
       }

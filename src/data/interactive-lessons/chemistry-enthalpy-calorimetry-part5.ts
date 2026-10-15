@@ -117,9 +117,9 @@ $$\\Delta H = -393.5 + 283.0 = -110.5 \\text{ kJ}$$
           {
             question: 'If you reverse a reaction AND multiply it by 2, what happens to ΔH?',
             options: [
-              'It stays the same',
-              'It changes sign only',
-              'It doubles only',
+              'It stays the same, since ΔH is a state function',
+              'It changes sign but keeps its magnitude',
+              'It doubles but keeps its original sign',
               'It changes sign AND doubles'
             ],
             correctAnswer: 3,
@@ -128,10 +128,10 @@ $$\\Delta H = -393.5 + 283.0 = -110.5 \\text{ kJ}$$
           {
             question: 'When adding two chemical equations, species that appear on both sides:',
             options: [
-              'Are doubled',
+              'Are doubled in the sum',
               'Cancel out',
-              'Must be kept',
-              'Change phase'
+              'Must stay in the final equation',
+              'Move to the reactant side'
             ],
             correctAnswer: 1,
             explanation: 'Species that appear on both sides of the combined equation cancel out, just like terms in an algebraic equation. This is how intermediate species disappear.'
@@ -184,11 +184,11 @@ Find $\\Delta H$ for: $2\\text{S}(s) + 3\\text{O}_2(g) \\rightarrow 2\\text{SO}_
           },
           {
             label: 'Hess\'s Law allows us to calculate ΔH for reactions that',
-            options: ['are very fast', 'cannot be performed directly', 'are at equilibrium', 'have no ΔH']
+            options: ['are very fast', 'cannot be performed directly', 'are at equilibrium', 'release no heat at all']
           },
           {
             label: 'When adding manipulated equations, intermediate species',
-            options: ['remain in the final equation', 'cancel out', 'must be balanced separately', 'are always gases']
+            options: ['remain in the final equation', 'cancel out', 'must be balanced separately', 'are doubled in the sum']
           }
         ],
         correctAnswers: ['reverse the equation', 'opposite in sign', 'cannot be performed directly', 'cancel out'],
@@ -215,7 +215,7 @@ Find $\\Delta H$ for: $2\\text{S}(s) + 3\\text{O}_2(g) \\rightarrow 2\\text{SO}_
               '+150 kJ'
             ],
             correctAnswer: 1,
-            explanation: 'By Hess\'s Law: $\\Delta H = \\Delta H_1 + \\Delta H_2 = (-100) + (+50) = -50$ kJ. The intermediate B cancels out.'
+            explanation: 'By Hess\'s Law: $\\Delta H = \\Delta H_1 + \\Delta H_2 = (-100) + (+50) = -50$ kJ. The intermediate B cancels out. Treating $\\Delta H_2$ as −50 kJ gives −150 kJ, and dropping the negative sign on $\\Delta H_1$ gives +150 kJ.'
           },
           {
             question: 'Given: $C_{2}H_{4}(g)$ + $3O_{2}(g)$ → $2CO_{2}(g)$ + $2H_{2}O(l)$, ΔH = −1411 kJ. What is ΔH for the reverse reaction: $2CO_{2}(g)$ + $2H_{2}O(l)$ → $C_{2}H_{4}(g)$ + $3O_{2}(g)$?',
@@ -226,7 +226,7 @@ Find $\\Delta H$ for: $2\\text{S}(s) + 3\\text{O}_2(g) \\rightarrow 2\\text{SO}_
               '+2822 kJ'
             ],
             correctAnswer: 1,
-            explanation: 'Reversing a reaction changes the sign of ΔH: $\\Delta H_{\\text{reverse}} = +1411$ kJ. The reverse of an exothermic reaction is endothermic by the same magnitude.'
+            explanation: 'Reversing a reaction changes the sign of ΔH: $\\Delta H_{\\text{reverse}} = +1411$ kJ. The reverse of an exothermic reaction is endothermic by the same magnitude. Halving (−705.5 kJ) or doubling (+2822 kJ) would apply only if the coefficients changed, and they did not.'
           }
         ]
       }

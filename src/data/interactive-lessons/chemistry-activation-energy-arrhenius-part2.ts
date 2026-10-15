@@ -110,12 +110,12 @@ $$\\text{Reactants} \\xrightarrow{E_a} \\text{Transition State} \\rightarrow \\t
             question: 'A reaction has Ea(forward) = 80 kJ/mol and ΔH = −50 kJ/mol. What is Ea(reverse)?',
             options: [
               '30 kJ/mol',
-              '50 kJ/mol',
+              '−130 kJ/mol',
               '80 kJ/mol',
               '130 kJ/mol'
             ],
             correctAnswer: 3,
-            explanation: 'Ea(reverse) = Ea(forward) − ΔH = 80 − (−50) = 80 + 50 = 130 kJ/mol.'
+            explanation: 'Ea(reverse) = Ea(forward) − ΔH = 80 − (−50) = 80 + 50 = 130 kJ/mol. Dropping the sign on ΔH gives 80 − 50 = 30 kJ/mol; subtracting in the wrong order (ΔH − Ea) gives −130 kJ/mol; assuming the barrier is the same both ways gives 80 kJ/mol.'
           },
           {
             question: 'For an endothermic reaction:',
@@ -131,13 +131,13 @@ $$\\text{Reactants} \\xrightarrow{E_a} \\text{Transition State} \\rightarrow \\t
           {
             question: 'The transition state (activated complex) is:',
             options: [
-              'A stable intermediate that can be isolated',
-              'The highest energy point on the reaction coordinate',
-              'The point where ΔG = 0',
-              'The same as a reaction intermediate'
+              'A stable intermediate that can be isolated and studied',
+              'The highest-energy point on the reaction path',
+              'The point where reactants and products have equal energy',
+              'The lowest-energy point between two reaction steps'
             ],
             correctAnswer: 1,
-            explanation: 'The transition state is the highest energy configuration along the reaction path. It exists for only ~$10^{-13}$ s and cannot be isolated. It is NOT an intermediate (which sits in an energy valley between two peaks).'
+            explanation: 'The transition state is the highest energy configuration along the reaction path. It exists for only ~$10^{-13}$ s and cannot be isolated. It is NOT an intermediate (which sits in an energy valley between two peaks), and its energy has nothing to do with reactants and products being equal in energy.'
           }
         ]
       }
@@ -217,7 +217,7 @@ An energy diagram shows:
           },
           {
             label: 'A catalyst affects an energy diagram by',
-            options: ['lowering the product energy', 'lowering the transition state energy', 'raising the reactant energy', 'changing ΔH']
+            options: ['lowering the product energy', 'lowering the transition state energy', 'raising the reactant energy', 'lowering both reactant and product energies']
           },
           {
             label: 'The activation energy is always',
@@ -225,10 +225,10 @@ An energy diagram shows:
           },
           {
             label: 'A multi-step reaction has multiple',
-            options: ['ΔH values', 'transition states (peaks)', 'overall Ea values', 'equilibrium constants']
+            options: ['ΔH values', 'transition states', 'overall Ea values', 'equilibrium constants']
           }
         ],
-        correctAnswers: ['exothermic', 'lowering the transition state energy', 'positive', 'transition states (peaks)'],
+        correctAnswers: ['exothermic', 'lowering the transition state energy', 'positive', 'transition states'],
         hint1: 'Products lower → energy released → exothermic.',
         hint2: 'Catalysts lower Ea by providing an alternative pathway with a lower-energy transition state.',
         hint3: 'Ea is a barrier height — always positive.',
@@ -257,13 +257,13 @@ An energy diagram shows:
           {
             question: 'On an energy diagram with two peaks (two-step mechanism), the valley between the peaks represents:',
             options: [
-              'The transition state',
+              'A transition state',
               'The products',
               'A reaction intermediate',
               'The activation energy'
             ],
             correctAnswer: 2,
-            explanation: 'The valley between two peaks is a local energy minimum — this is where a reaction intermediate exists. It has lower energy than the transition states on either side.'
+            explanation: 'The valley between two peaks is a local energy minimum — this is where a reaction intermediate exists. It has lower energy than the transition states on either side; the transition states are the peaks themselves.'
           }
         ]
       }

@@ -145,10 +145,10 @@ This formula applies at the **equilibrium** transition temperature, where the pr
           {
             question: 'According to the Third Law, S = 0 when:',
             options: [
-              'The substance is at 0°C',
+              'The substance is a pure crystalline solid at 0°C',
               'The substance is a perfect crystal at 0 K',
-              'The substance is in its standard state',
-              'The substance is an element'
+              'The substance is in its standard state at 298 K',
+              'The substance is an element, as with ΔH°f = 0'
             ],
             correctAnswer: 1,
             explanation: 'The Third Law states that the entropy of a perfect crystal at absolute zero (0 K = −273.15°C) is zero. This is because there is only one microstate ($W = 1$, $S = k \\ln 1 = 0$).'
@@ -156,10 +156,10 @@ This formula applies at the **equilibrium** transition temperature, where the pr
           {
             question: 'Which has a higher standard molar entropy: $H_{2}O(l)$ or $H_{2}O(g)$?',
             options: [
-              '$H_{2}O(l)$ — liquid has more hydrogen bonding',
-              '$H_{2}O(g)$ — gas has far more freedom of motion',
-              'They are equal — same compound',
-              'Cannot be determined'
+              '$H_{2}O(l)$ — hydrogen bonding gives it more entropy',
+              '$H_{2}O(g)$ — gas molecules have far more freedom of motion',
+              'They are equal — it is the same compound',
+              '$H_{2}O(l)$ — the denser liquid holds more energy'
             ],
             correctAnswer: 1,
             explanation: '$S°[\\text{H}_2\\text{O}(g)] = 188.8$ J/(mol·K) vs. $S°[\\text{H}_2\\text{O}(l)] = 69.9$ J/(mol·K). The gas phase has far more microstates due to greater molecular freedom.'
@@ -167,13 +167,13 @@ This formula applies at the **equilibrium** transition temperature, where the pr
           {
             question: 'Unlike ΔH°_f for elements, the standard molar entropy S° for an element is:',
             options: [
-              'Always zero',
-              'Always negative',
+              'Always zero, by the same convention as ΔH°f',
+              'Zero only for the element\'s most stable form',
               'Always greater than zero at 298 K',
               'Sometimes zero, sometimes positive'
             ],
             correctAnswer: 2,
-            explanation: '$\\Delta H°_f = 0$ for elements in their standard state (by convention), but $S° > 0$ for all substances at temperatures above 0 K (by the Third Law). These are different concepts!'
+            explanation: '$\\Delta H°_f = 0$ for elements in their standard states (by convention), but $S°$ is an absolute value measured up from 0 K, and every substance has $S° > 0$ at temperatures above 0 K (Third Law). The "zero for elements in their most stable form" convention applies to $\\Delta H°_f$, never to $S°$. These are different concepts!'
           }
         ]
       }
@@ -193,8 +193,7 @@ Which substance has the HIGHER standard molar entropy? Type the chemical formula
 **3)** $\\text{O}_2(g)$ or $\\text{O}_3(g)$?
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['H2O(g)', 'C(s, graphite)', 'O3(g)'],
+        questions: [{ question: '(1)', answer: 'H2O(g)', acceptableAnswers: ['H2O(g)', 'H₂O(g)', 'H2O (g)'] }, { question: '(2)', answer: 'C(s, graphite)', acceptableAnswers: ['C(s, graphite)', 'C(graphite)', 'graphite', 'C(s,graphite)', 'C (graphite)'] }, { question: '(3)', answer: 'O3(g)', acceptableAnswers: ['O3(g)', 'O3', 'O₃(g)', 'O₃'] }],
         hint1: 'Gas always has higher entropy than liquid.',
         hint2: 'Graphite has a layered structure with more freedom than diamond\'s rigid lattice.',
         hint3: 'More atoms per molecule = more vibrational modes = more entropy.',

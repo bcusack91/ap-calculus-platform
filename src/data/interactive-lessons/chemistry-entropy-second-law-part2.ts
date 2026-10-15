@@ -165,9 +165,9 @@ More complex molecules (more atoms, more bonds, more ways to vibrate) have highe
           {
             question: 'Dissolving NaCl in water generally:',
             options: [
-              'Decreases entropy because ions are organized',
+              'Decreases entropy because the ions become organized',
               'Increases entropy because the crystal lattice breaks apart',
-              'Has no effect on entropy',
+              'Has no effect on entropy, since no gas forms',
               'Decreases entropy because water molecules become ordered'
             ],
             correctAnswer: 1,
@@ -209,7 +209,7 @@ Type "+" or "−" for the sign of $\\Delta S$:
         dropdowns: [
           {
             label: 'The most reliable predictor of ΔS for a reaction is',
-            options: ['change in temperature', 'change in pressure', 'change in moles of gas', 'change in color']
+            options: ['change in temperature', 'change in pressure', 'change in moles of gas', 'change in number of bonds']
           },
           {
             label: 'Compressing a gas into a smaller volume causes entropy to',

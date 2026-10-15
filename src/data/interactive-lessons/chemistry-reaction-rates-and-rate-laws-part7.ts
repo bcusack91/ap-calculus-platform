@@ -114,10 +114,10 @@ $2\\text{N}_2\\text{O}_5(g) \\rightarrow 4\\text{NO}_2(g) + \\text{O}_2(g)$
               '2,888 s',
               '1,444 s',
               '4,167 s',
-              '694 s'
+              '208,333 s'
             ],
             correctAnswer: 0,
-            explanation: 'For first-order: $t_{1}/_{2}$ = 0.693/k = $0.693/(2.4 \\times 10^{-4})$ = 2,888 s ≈ 48 min.'
+            explanation: 'For first-order: $t_{1}/_{2}$ = 0.693/k = $0.693/(2.4 \\times 10^{-4})$ = 2,888 s ≈ 48 min. Halving instead gives 1,444 s, using 1/k gives 4,167 s, and using the second-order formula $1/(k[A]_{0})$ with 0.020 M gives 208,333 s.'
           }
         ]
       }
@@ -146,10 +146,10 @@ The reaction $\\text{A} + 2\\text{B} \\rightarrow \\text{C}$ was studied:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '0', '3.0'],
+        correctAnswers: ['2', '0', '0.30'],
         hint1: 'Exp 1→2: Rate × 4 when [A] × 2. $2^{m}$ = 4 → m = 2.',
         hint2: 'Exp 1→3: Rate unchanged when [B] × 3. $3^{n}$ = 1 → n = 0.',
-        hint3: 'Rate = k[A]$ {}^{2}$. Using Exp 1: 3.0e-3 = $k(0.10)^{2}$ = 0.01k. k = 0.30. Hmm wait: 3.0e-3/0.01 = 0.30. Check with Exp 2: $0.30(0.20)^{2}$ = 0.30(0.04) = 0.012 = 1.2e-2 ✓. k = 0.30? But the answer should be 3.0 if we interpret the answer differently. k = 3.0e-3/1.0e-2 = 0.30 $M^{-1}s^{-1}$. So k = 0.30.',
+        hint3: 'Rate = k[A]$ {}^{2}$. Using Exp 1: $3.0 \\times 10^{-3}$ = $k(0.10)^{2}$ = 0.010k, so k = 0.30. Check with Exp 2: $0.30(0.20)^{2}$ = 0.012 ✓.',
         explanation: '1) 1.2e-2/3.0e-3 = 4 = $2^{m}$ → m = 2. 2) 3.0e-3/3.0e-3 = 1 = $3^{n}$ → n = 0. 3) Rate = k[A]$ {}^{2}$. k = $3.0e-3/(0.10)^{2}$ = 3.0e-3/0.01 = 0.30 $M^{-1}s^{-1}$.'
       }
     },
@@ -164,13 +164,13 @@ The reaction $\\text{A} + 2\\text{B} \\rightarrow \\text{C}$ was studied:
           {
             question: 'A student claims that for 2NO + $O_{2}$ → $2NO_{2}$, the rate law must be Rate = k[NO]$ {}^{2}$[$O_{2}$] because the coefficients are 2, 1. This reasoning is:',
             options: [
-              'Correct — orders always equal coefficients',
-              'Incorrect — orders are only equal to coefficients for elementary steps',
-              'Correct — but only at high temperatures',
+              'Correct — orders always equal the coefficients',
+              'Incorrect — orders match coefficients only for elementary steps',
+              'Correct — but only at high temperature',
               'Incorrect — the rate law must be Rate = k[$NO_{2}$]$ {}^{2}$'
             ],
             correctAnswer: 1,
-            explanation: 'Rate law exponents equal stoichiometric coefficients ONLY for elementary steps (single-step reactions). For an overall reaction (which may have multiple steps), the rate law must be determined experimentally. It happens to match here, but the reasoning is wrong.'
+            explanation: 'Rate law exponents equal stoichiometric coefficients ONLY for elementary steps (single-step reactions). For an overall reaction (which may have multiple steps), the rate law must be determined experimentally. It happens to match here, but the reasoning is wrong. Temperature changes k, not the orders, and $NO_{2}$ is a product, so it does not appear in this forward rate law.'
           },
           {
             question: 'The rate of a reaction at 25°C is 0.010 M/s. If the temperature is raised to 35°C and all else stays the same, the rate might be approximately:',
@@ -208,7 +208,7 @@ The reaction $\\text{A} + 2\\text{B} \\rightarrow \\text{C}$ was studied:
           },
           {
             label: 'The initial rate is preferred for rate law determination because',
-            options: ['it is the largest rate', 'concentrations are known and reverse reaction is negligible', 'it equals k', 'it is temperature-independent']
+            options: ['it is the largest rate, so measurement error is smallest', 'concentrations are known and reverse reaction is negligible', 'it does not depend on the starting concentrations', 'it is the only rate unaffected by temperature changes']
           }
         ],
         correctAnswers: ['stoichiometric coefficient', '3', 'more molecules exceed Ea', 'concentrations are known and reverse reaction is negligible'],

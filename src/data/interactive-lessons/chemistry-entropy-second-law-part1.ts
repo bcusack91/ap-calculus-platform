@@ -142,35 +142,35 @@ Entropy is measured in **J/K** (joules per kelvin) or **J/(mol·K)** for molar e
           {
             question: 'In the Boltzmann equation S = k ln W, a larger W means:',
             options: [
-              'Lower entropy',
+              'Lower entropy, since S varies inversely with W',
               'Higher entropy',
-              'Lower temperature',
-              'Fewer particles'
+              'A lower temperature for the same system',
+              'Fewer particles in the system'
             ],
             correctAnswer: 1,
-            explanation: 'Since $S = k_B \\ln W$, a larger $W$ (more microstates) gives a larger $S$ (higher entropy). More ways to arrange = more entropy.'
+            explanation: 'Since $S = k_B \\ln W$ and $\\ln W$ grows as $W$ grows, a larger $W$ (more microstates) gives a larger $S$ (higher entropy). $S$ depends on $\\ln W$, not on $1/W$, and a larger $W$ for a given system does not mean it is colder or has fewer particles. More ways to arrange = more entropy.'
           },
           {
             question: 'Which has the highest entropy?',
             options: [
               '1 mol $H_{2}O(s)$ at 0°C',
-              '1 mol $H_{2}O(l)$ at 25°C',
+              '1 mol $H_{2}O(l)$ at 100°C',
               '1 mol $H_{2}O(g)$ at 100°C',
               '1 mol $H_{2}O(l)$ at 0°C'
             ],
             correctAnswer: 2,
-            explanation: 'Gases have far more microstates than liquids or solids. Water vapor at 100°C has the most freedom of motion and the highest entropy of the choices.'
+            explanation: 'Gases have far more microstates than liquids or solids. Even at the same temperature, 1 mol of water vapor at 100°C has much more entropy than 1 mol of liquid water at 100°C, and both exceed the colder liquid and the ice.'
           },
           {
             question: 'Entropy is measured in:',
             options: [
-              'kJ/mol',
+              'kJ/mol or J/mol',
               'J/K or J/(mol·K)',
-              'atm·L',
-              '$kg\\cdot m/s^{2}$'
+              'J·K or J·K/mol',
+              'atm·L or (atm·L)/mol'
             ],
             correctAnswer: 1,
-            explanation: 'Entropy has units of J/K (or J/(mol·K) for molar entropy). Note: joules, not kilojoules! This is a common AP exam unit trap.'
+            explanation: 'Entropy is energy per kelvin: J/K, or J/(mol·K) for molar entropy. kJ/mol is the unit of ΔH, atm·L is a unit of work (energy), and J·K multiplies by temperature where it should divide. Note: tabulated entropies use joules, not kilojoules! This is a common AP exam unit trap.'
           }
         ]
       }
@@ -188,8 +188,7 @@ Entropy is measured in **J/K** (joules per kelvin) or **J/(mol·K)** for molar e
 **3)** If system A has $W = 100$ microstates and system B has $W = 200$ microstates, which has higher entropy? (type A or B)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['8', '1/16', 'B'],
+        questions: [{ question: '(1)', answer: '8', acceptableAnswers: ['8'] }, { question: '(2)', answer: '1/16', acceptableAnswers: ['1/16', '0.0625', '0.063'] }, { question: '(3)', answer: 'B', acceptableAnswers: ['B'] }],
         hint1: '$W = 2^3$',
         hint2: '$W_{\\text{total}} = 2^4 = 16$. Only 1 microstate has all heads (HHHH).',
         hint3: '$S = k \\ln W$. Larger W means larger S.',
@@ -239,18 +238,18 @@ Entropy is measured in **J/K** (joules per kelvin) or **J/(mol·K)** for molar e
           {
             question: 'Why do gas molecules spread out to fill their container?',
             options: [
-              'They are repelled by each other',
-              'There are vastly more spread-out microstates than concentrated ones',
-              'The container walls push them apart',
-              'The temperature forces expansion'
+              'Gas molecules repel one another and push apart until evenly spaced',
+              'Spread-out microstates vastly outnumber clustered ones',
+              'Pressure from the container walls pushes the molecules apart',
+              'Gas molecules seek the lowest-energy arrangement, which is spread out'
             ],
             correctAnswer: 1,
-            explanation: 'Gas molecules spread out because the number of microstates where molecules are spread throughout the container vastly exceeds the microstates where they are concentrated in one spot. It is overwhelmingly more probable.'
+            explanation: 'Spreading is a matter of probability, not force. The number of microstates with molecules spread throughout the container vastly exceeds the number with them clustered in one spot, so the spread-out state is overwhelmingly more probable. Ideal-gas molecules barely interact, the walls do not push them apart, and an ideal gas\'s energy does not change when it spreads at constant temperature.'
           },
           {
             question: 'Which process involves a DECREASE in entropy?',
             options: [
-              'Ice melting to water',
+              'Ice melting to liquid water',
               'Water evaporating to steam',
               'Water freezing to ice',
               'A gas expanding into a vacuum'

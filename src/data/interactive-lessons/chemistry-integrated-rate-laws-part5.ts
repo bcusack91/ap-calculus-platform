@@ -90,8 +90,7 @@ A zero-order reaction has $k = 0.0020$ M/s.
 **3)** Iodine-131 has a half-life of 8.02 days. What fraction remains after 24.06 days? Express as a fraction with denominator 8 (e.g., enter 3/8).
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['15.0', '4', '1/8'],
+        questions: [{ question: '(1)', answer: '15.0', acceptableAnswers: ['15.0'] }, { question: '(2)', answer: '4', acceptableAnswers: ['4'] }, { question: '(3)', answer: '1/8', acceptableAnswers: ['1/8', '0.125', '12.5%'] }],
         hint1: '$t_{1}/_{2}$ = 0.693/0.0462 = 15.0 s.',
         hint2: '93.75% decomposed → 6.25% remains = 1/16 = $(1/2)^{n}$. n = 4.',
         hint3: '24.06/8.02 = 3 half-lives. Fraction = $(1/2)^{3}$ = 1/8.',
@@ -114,11 +113,11 @@ A second-order reaction has $k = 0.40$ $M^{-1}s^{-1}$ and $[A]_0 = 0.50$ M.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5.0', '10.0', '0.13'],
+        correctAnswers: ['5.0', '10.0', '0.125'],
         hint1: '$t_{1}/_{2}$ = 1/(k[A]$ {}_{0}$) = 1/(0.40 × 0.50) = 1/0.20 = 5.0 s.',
         hint2: 'After 1st half-life, [A] = 0.25 M. 2nd $t_{1}/_{2}$ = 1/(0.40 × 0.25) = 10.0 s. It doubled!',
-        hint3: '1/[A] = 0.40(15) + 1/0.50 = 6.0 + 2.0 = 8.0. [A] = 1/8.0 = 0.125 ≈ 0.13.',
-        explanation: '1) $t_{1}/_{2}$ = 1/(0.40 × 0.50) = 5.0 s. 2) $t_{1}/_{2}$ = 1/(0.40 × 0.25) = 10.0 s. 3) 1/[A] = 6.0 + 2.0 = 8.0 → [A] = 0.13 M.'
+        hint3: '1/[A] = 0.40(15) + 1/0.50 = 6.0 + 2.0 = 8.0. [A] = 1/8.0 = 0.125 M.',
+        explanation: '1) $t_{1}/_{2}$ = 1/(0.40 × 0.50) = 5.0 s. 2) $t_{1}/_{2}$ = 1/(0.40 × 0.25) = 10.0 s. 3) 1/[A] = 6.0 + 2.0 = 8.0 → [A] = 0.125 M.'
       }
     },
     {
@@ -185,13 +184,13 @@ $$\\text{Age} = 2 \\times 5{,}730 = 11{,}460 \\text{ years}$$
           {
             question: 'Why is radioactive decay always first-order?',
             options: [
-              'It depends on temperature',
-              'The probability of any one nucleus decaying is constant per unit time',
-              'It involves two reactant molecules',
-              'It occurs on a surface'
+              'Decay speeds up as the temperature rises, like most reactions',
+              'Each nucleus has a fixed chance of decaying per unit time',
+              'Each decay requires a collision between two separate nuclei',
+              'The decay rate stays the same no matter how many nuclei remain'
             ],
             correctAnswer: 1,
-            explanation: 'Each nucleus has a fixed probability of decaying per unit time, independent of how many nuclei are present or the temperature. This constant probability per unit time defines first-order kinetics.'
+            explanation: 'Each nucleus has a fixed probability of decaying per unit time, independent of how many nuclei are present or the temperature. So the rate is proportional to the number of nuclei present, which defines first-order kinetics. Decay is not temperature-dependent and needs no collisions, and a rate that ignored the number of nuclei would be zero-order.'
           }
         ]
       }

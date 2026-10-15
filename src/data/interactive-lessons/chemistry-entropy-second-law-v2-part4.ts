@@ -148,10 +148,10 @@ Given: $S°$(CaCO₃) = 92.9, $S°$(CaO) = 39.7, $S°$(CO₂) = 213.7 J/(mol·K)
           },
           {
             label: 'Unlike $\\Delta H_f°$, $S°$ values for elements at standard state are',
-            options: ['always zero', 'always positive (at T > 0 K)', 'always negative', 'undefined']
+            options: ['always zero', 'always positive', 'always negative', 'zero only for gases']
           }
         ],
-        correctAnswers: ['zero', '$H_{2}O(g)$', 'positive', 'always positive (at T > 0 K)'],
+        correctAnswers: ['zero', '$H_{2}O(g)$', 'positive', 'always positive'],
         hint1: 'Third Law: $S = k \\ln 1 = 0$.',
         hint2: 'Gases have vastly more microstates.',
         hint3: 'More gas molecules = more microstates.',
@@ -169,13 +169,13 @@ Given: $S°$(CaCO₃) = 92.9, $S°$(CaO) = 39.7, $S°$(CO₂) = 213.7 J/(mol·K)
           {
             question: 'Why can we assign absolute entropy values but not absolute enthalpy values?',
             options: [
-              'Entropy is more fundamental than enthalpy',
-              'The Third Law gives us a zero-point reference (perfect crystal at 0 K)',
-              'Enthalpy cannot be measured',
-              'Entropy is always positive'
+              'Entropy is a state function, while enthalpy depends on path',
+              'The Third Law fixes S = 0 for a perfect crystal at 0 K',
+              'Enthalpy cannot be measured, only estimated from bond energies',
+              'Entropy is always positive, so it needs no reference state'
             ],
             correctAnswer: 1,
-            explanation: 'The Third Law provides an absolute reference: S = 0 for a perfect crystal at 0 K. No such reference exists for enthalpy, so we use formation values (ΔH°f) instead.'
+            explanation: 'The Third Law provides an absolute reference: S = 0 for a perfect crystal at 0 K. No such zero point exists for enthalpy (which, like entropy, is a state function), so we use formation values (ΔH°f) measured relative to the elements instead.'
           }
         ]
       }

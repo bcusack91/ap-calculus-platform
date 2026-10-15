@@ -118,11 +118,11 @@ A reaction has $E_a = 50.0$ kJ/mol and $k = 0.010$ $s^{-1}$ at 350 K.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.16', '0.087', '8.7'],
-        hint1: '$\\ln (k_{2}/k_{1})$ = $(Ea/R)(1/T_{1} - 1/T_{2})$ = (50,000/8.314)(1/350 − 1/400) = 6,014 × (2.857e-3 − 2.500e-3) = 6,014 × 3.57e-4 = 2.147 ≈ 2.16.',
-        hint2: '$k_{2}/k_{1}$ = $e^{2.16}$ = 8.67. $k_{2}$ = 0.010 × 8.67 = 0.0867 ≈ 0.087.',
-        hint3: 'Factor = $k_{2}/k_{1}$ = 0.087/0.010 = 8.7.',
-        explanation: '1) $\\ln (k_{2}/k_{1})$ = (50,000/8.314)(1/350 − 1/400) = 6,014 × $3.57 \\times 10^{-4}$ = 2.16. 2) $k_{2}$ = 0.010 × $e^{2.16}$ = 0.010 × 8.67 = 0.087 $s^{-1}$. 3) Factor = 8.7.'
+        correctAnswers: ['2.15', '0.0857', '8.57'],
+        hint1: '$\\ln (k_{2}/k_{1})$ = $(Ea/R)(1/T_{1} - 1/T_{2})$ = (50,000/8.314)(1/350 − 1/400) = 6,014 × (2.857e-3 − 2.500e-3) = 6,014 × 3.571e-4 = 2.15.',
+        hint2: '$k_{2}/k_{1}$ = $e^{2.15}$ = 8.57. $k_{2}$ = 0.010 × 8.57 = 0.0857 $s^{-1}$.',
+        hint3: 'Factor = $k_{2}/k_{1}$ = 0.0857/0.010 = 8.57.',
+        explanation: '1) $\\ln (k_{2}/k_{1})$ = (50,000/8.314)(1/350 − 1/400) = 6,014 × $3.571 \\times 10^{-4}$ = 2.15. 2) $k_{2}$ = 0.010 × $e^{2.15}$ = 0.010 × 8.57 = 0.0857 $s^{-1}$. 3) Factor = 8.57.'
       }
     },
     {
@@ -136,24 +136,24 @@ A reaction has $E_a = 50.0$ kJ/mol and $k = 0.010$ $s^{-1}$ at 350 K.
           {
             question: 'In the two-point Arrhenius equation, which variable cancels out?',
             options: [
-              'Ea',
-              'R',
-              'A (frequency factor)',
-              'k'
+              'Ea, the energy barrier',
+              'R, the gas constant',
+              'A, the frequency factor',
+              'k, the rate constant'
             ],
             correctAnswer: 2,
-            explanation: 'When we subtract ln $k_{1}$ from ln $k_{2}$, the ln A terms cancel: ln A − ln A = 0. This is why we can find Ea without knowing A.'
+            explanation: 'When we subtract ln $k_{1}$ from ln $k_{2}$, the ln A terms cancel: ln A − ln A = 0. This is why we can find Ea without knowing A. Ea and R remain in the factor $E_{a}/R$, and the two k values remain as the ratio $k_{2}/k_{1}$.'
           },
           {
             question: 'If k doubles when T increases from 300 K to 310 K, what is Ea approximately?',
             options: [
-              '16 kJ/mol',
-              '53 kJ/mol',
-              '106 kJ/mol',
-              '212 kJ/mol'
+              '23 kJ/mol',
+              '54 kJ/mol',
+              '6.4 kJ/mol',
+              '0.58 kJ/mol'
             ],
             correctAnswer: 1,
-            explanation: 'ln(2) = 0.693. 1/300 − 1/310 = $1.075 \\times 10^{-4}$. Ea = 8.314 × $0.693/(1.075 \\times 10^{-4})$ = $5.761/(1.075 \\times 10^{-4})$ = 53,590 J/mol ≈ 53 kJ/mol.'
+            explanation: 'ln(2) = 0.693. 1/300 − 1/310 = $1.075 \\times 10^{-4}$. Ea = 8.314 × $0.693/(1.075 \\times 10^{-4})$ = $5.763/(1.075 \\times 10^{-4})$ = 53,600 J/mol ≈ 54 kJ/mol. Using log instead of ln gives 23 kJ/mol, leaving out R gives 6.4 kJ/mol, and using °C (27 and 37) instead of kelvins gives 0.58 kJ/mol.'
           }
         ]
       }
@@ -180,7 +180,7 @@ A reaction has $E_a = 50.0$ kJ/mol and $k = 0.010$ $s^{-1}$ at 350 K.
           },
           {
             label: 'The two-point equation can be derived by subtracting two',
-            options: ['rate laws', 'equilibrium expressions', 'Arrhenius equations in ln form', 'integrated rate laws']
+            options: ['rate laws at two concentrations', 'equilibrium expressions', 'Arrhenius equations in ln form', 'integrated rate laws']
           }
         ],
         correctAnswers: ['temperatures', 'temperature', 'greater than $k_{1}$', 'Arrhenius equations in ln form'],
@@ -201,24 +201,24 @@ A reaction has $E_a = 50.0$ kJ/mol and $k = 0.010$ $s^{-1}$ at 350 K.
           {
             question: 'A reaction has k = $1.0 \\times 10^{-5}$ $s^{-1}$ at 500 K and Ea = 80 kJ/mol. At what temperature will k = $1.0 \\times 10^{-3}$ $s^{-1}$?',
             options: [
-              '562 K',
-              '600 K',
-              '625 K',
-              '650 K'
+              '558 K',
+              '657 K',
+              '403 K',
+              '2,090 K'
             ],
             correctAnswer: 1,
-            explanation: '$\\ln (k_{2}/k_{1})$ = ln(100) = 4.605. 4.605 = $(80,000/8.314)(1/500 - 1/T_{2})$ = 9,$621(0.00200 - 1/T_{2})$. 0.000479 = 0.00200 − $1/T_{2}$. $1/T_{2}$ = 0.001521. $T_{2}$ = 657 K. This is closest to 650 K, but let me recheck: 9621 × $(0.002 - 1/T_{2})$ = 4.605 → 0.002 − $1/T_{2}$ = 4.785e-4 → $1/T_{2}$ = 0.001521 → $T_{2}$ ≈ 657. Hmm none match exactly. Let me try 600 K: (Ea/R)(1/500−1/600) = 9621(0.002−0.001667) = 9621(3.33e-4) = 3.204. $e^{3.204}$ = 24.6. $k_{2}$ = 1.0e-5 × 24.6 = 2.46e-4. Not 1.0e-3. At 650: 9621(0.002−0.001538) = 9621(4.62e-4) = 4.44. $e^{4.44}$ = 84.8. k = 8.5e-4. Close to 1e-3 but not exact. The exact answer $T_{2}$ ≈ 657 K is closest to 650 K.'
+            explanation: '$\\ln (k_{2}/k_{1})$ = ln(100) = 4.605 and $E_{a}/R$ = 80,000/8.314 = 9,622 K. So 4.605 = 9,622$(1/500 - 1/T_{2})$, giving $1/500 - 1/T_{2}$ = $4.786 \\times 10^{-4}$ and $1/T_{2}$ = 0.002000 − 0.000479 = 0.001521, so $T_{2}$ = 657 K. Using log instead of ln gives 558 K, adding instead of subtracting (a sign slip, the same as inverting the k ratio) gives 403 K, and taking 1/(4.786 × 10⁻⁴) without subtracting from 1/500 gives 2,090 K.'
           },
           {
             question: 'If k triples when temperature increases from 300 K to 320 K, what is Ea?',
             options: [
-              '25 kJ/mol',
-              '42 kJ/mol',
-              '53 kJ/mol',
-              '84 kJ/mol'
+              '19 kJ/mol',
+              '44 kJ/mol',
+              '5.3 kJ/mol',
+              '−44 kJ/mol'
             ],
             correctAnswer: 1,
-            explanation: 'ln(3) = 1.099. 1/300 − 1/320 = 3.333e-3 − 3.125e-3 = 2.083e-4. Ea = 8.314 × 1.099/2.083e-4 = 9.14/2.083e-4 = 43,880 J/mol ≈ 42 kJ/mol (to 2 sig figs).'
+            explanation: 'ln(3) = 1.099. 1/300 − 1/320 = 3.333e-3 − 3.125e-3 = 2.083e-4. Ea = 8.314 × 1.099/2.083e-4 = 9.14/2.083e-4 = 43,900 J/mol ≈ 44 kJ/mol. Using log instead of ln gives 19 kJ/mol, leaving out R gives 5.3 kJ/mol, and inverting the k ratio gives −44 kJ/mol, which is impossible because Ea is always positive.'
           }
         ]
       }

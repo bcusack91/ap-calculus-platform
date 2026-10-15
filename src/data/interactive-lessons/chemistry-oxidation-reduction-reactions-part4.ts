@@ -137,24 +137,24 @@ $$\\boxed{\\text{H}_2\\text{O} + 2\\text{MnO}_4^- + \\text{Br}^- \\rightarrow 2\
           {
             question: 'After adding $OH^{-}$ to neutralize $H^{+}$, what must you do?',
             options: [
-              'Add more electrons',
+              'Add electrons to offset the charge of the new $OH^{-}$ ions',
               'Combine $H^{+}$ + $OH^{-}$ → $H_{2}O$ and cancel $H_{2}O$ on both sides',
-              'Remove all water molecules',
-              'Add more $H^{+}$'
+              'Delete every $H_{2}O$ so only $OH^{-}$ ions remain',
+              'Add $H^{+}$ back to the other side to restore charge balance'
             ],
             correctAnswer: 1,
-            explanation: 'After adding $OH^{-}$, combine $H^{+}$ + $OH^{-}$ to form $H_{2}O$. Then cancel any $H_{2}O$ molecules that appear on both sides of the equation.'
+            explanation: 'After adding $OH^{-}$, combine $H^{+}$ + $OH^{-}$ to form $H_{2}O$. Then cancel any $H_{2}O$ molecules that appear on both sides of the equation. The $OH^{-}$ was added equally to both sides, so charge is already balanced; no extra electrons or $H^{+}$ are needed, and deleting water would unbalance O and H.'
           },
           {
             question: 'In basic solution, a properly balanced equation should contain:',
             options: [
-              '$H^{+}$ ions',
-              'Only $H_{2}O$ and $OH^{-}$ (no free $H^{+}$)',
-              'Neither $H_{2}O$ nor $OH^{-}$',
+              '$H^{+}$ and $H_{2}O$, no $OH^{-}$',
+              '$OH^{-}$ and $H_{2}O$, with no $H^{+}$',
+              '$OH^{-}$ only, with no $H_{2}O$',
               'Equal amounts of $H^{+}$ and $OH^{-}$'
             ],
             correctAnswer: 1,
-            explanation: 'In basic solution, free $H^{+}$ doesn\'t exist. A properly balanced equation should have $OH^{-}$ and $H_{2}O$ but NO $H^{+}$ ions.'
+            explanation: 'In basic solution, free $H^{+}$ doesn\'t exist. A properly balanced equation has $OH^{-}$ (and usually $H_{2}O$) but NO $H^{+}$ ions. Leaving $H^{+}$ in the equation is the acidic form, and $H^{+}$ and $OH^{-}$ would combine to water rather than coexist.'
           }
         ]
       }
@@ -200,7 +200,7 @@ Convert to basic solution:
           },
           {
             label: 'In basic solution, oxygen atoms are ultimately balanced using',
-            options: ['$H_{2}O$ and $OH^{-}$', '$O_{2}$ molecules', '$H_{2}O_{2}$', '$O^{2-}$ ions']
+            options: ['$H_{2}O$ and $OH^{-}$', '$O_{2}$ molecules', '$H_{2}O_{2}$', '$O^{2-}$ and $H^{+}$ ions']
           },
           {
             label: 'A correctly balanced basic equation will have',

@@ -166,10 +166,10 @@ The negative sign reflects that heat released by the reaction is absorbed by the
           {
             question: 'The heat capacity of a bomb calorimeter is determined by:',
             options: [
-              'Weighing the calorimeter',
-              'Measuring its volume',
-              'Calibration with a substance of known heat of combustion',
-              'Calculating from the mass of water'
+              'Weighing the calorimeter and its water',
+              'Measuring the volume of the steel bomb',
+              'Calibrating it with a substance of known heat of combustion',
+              'Calculating it from the mass of water alone'
             ],
             correctAnswer: 2,
             explanation: 'The calorimeter is calibrated by burning a known mass of a standard substance (like benzoic acid) with a known heat of combustion. From the measured ΔT, we can calculate $C_{\\text{cal}}$.'
@@ -180,7 +180,7 @@ The negative sign reflects that heat released by the reaction is absorbed by the
               'J/(g·°C)',
               'kJ/°C',
               'kJ/mol',
-              '$J/K^{2}$'
+              'kJ/(mol·°C)'
             ],
             correctAnswer: 1,
             explanation: '$C_{\\text{cal}}$ is the heat capacity of the entire calorimeter apparatus. Its units are energy per degree: kJ/°C (or J/°C). This is different from specific heat, which is per gram.'
@@ -202,11 +202,11 @@ The negative sign reflects that heat released by the reaction is absorbed by the
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-35.70', '7743', '10.34'],
+        correctAnswers: ['-35.70', '7747', '10.3'],
         hint1: '$q_{\\text{rxn}} = -C_{\\text{cal}} \\Delta T = -(8.50)(4.20)$.',
         hint2: '$q_{\\text{rxn}} = -C_{\\text{cal}} \\Delta T$, then divide by moles. Moles = 0.500/342.3.',
         hint3: '$C_{\\text{cal}} = q/\\Delta T = (1.000 \\times 26.38)/2.55$.',
-        explanation: '1) $q_{\\text{rxn}} = -(8.50)(4.20) = -35.70$ kJ. 2) $q = (9.20)(1.23) = 11.316$ kJ, moles = 0.500/342.3 = 0.001461, per mole = 11.316/0.001461 = 7745 ≈ 7743 kJ/mol. 3) $C_{\\text{cal}} = (1.000)(26.38)/2.55 = 10.34$ kJ/°C.'
+        explanation: '1) $q_{\\text{rxn}} = -(8.50)(4.20) = -35.70$ kJ. 2) $q = (9.20)(1.23) = 11.316$ kJ, moles = 0.500/342.3 = 0.001461, per mole = 11.316/0.0014607 = 7747 kJ/mol. 3) $C_{\\text{cal}} = (1.000)(26.38)/2.55 = 10.345 \\approx 10.3$ kJ/°C.'
       }
     },
     {
@@ -252,19 +252,19 @@ The negative sign reflects that heat released by the reaction is absorbed by the
           {
             question: 'A 2.00 g sample of food is burned in a bomb calorimeter (C_cal = 10.00 kJ/°C), and the temperature rises by 3.50°C. The energy content per gram of food is:',
             options: [
-              '7.0 kJ/g',
+              '1.43 kJ/g',
               '17.5 kJ/g',
               '35.0 kJ/g',
               '70.0 kJ/g'
             ],
             correctAnswer: 1,
-            explanation: '$q = C_{\\text{cal}} \\Delta T = (10.00)(3.50) = 35.0$ kJ total. Per gram: $35.0/2.00 = 17.5$ kJ/g.'
+            explanation: '$q = C_{\\text{cal}} \\Delta T = (10.00)(3.50) = 35.0$ kJ total. Per gram: $35.0/2.00 = 17.5$ kJ/g. Forgetting to divide by the mass leaves 35.0 kJ/g, multiplying by the mass gives 70.0 kJ/g, and dividing $C_{\\text{cal}}$ by ΔT instead of multiplying gives 1.43 kJ/g.'
           },
           {
             question: 'The key difference between a bomb calorimeter and a coffee-cup calorimeter is:',
             options: [
               'The bomb uses water; the coffee cup does not',
-              'The bomb operates at constant volume; the coffee cup at constant pressure',
+              'The bomb is at constant volume; the cup is at constant pressure',
               'The bomb is more accurate because it uses more water',
               'The coffee cup can measure combustion; the bomb cannot'
             ],

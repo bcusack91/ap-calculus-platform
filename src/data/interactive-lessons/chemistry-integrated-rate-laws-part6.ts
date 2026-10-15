@@ -82,11 +82,11 @@ Use the appropriate integrated rate law to find:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1', '0.069', '0.0252'],
+        correctAnswers: ['1', '0.0693', '0.0250'],
         hint1: 'Check: $t_{1}/_{2}$ from 0.800→0.400 = 10 min. From 0.400→0.200 = 10 min. Constant → first-order.',
-        hint2: 'k = $0.693/t_{1}/_{2}$ = 0.693/10 = 0.0693 ≈ 0.069 $s^{-1}$.',
-        hint3: '[A] = 0.800 × $e^{-0.0693 \\times 50}$ = 0.800 × $e^{-3.465}$ = 0.800 × 0.0313 = 0.0250.',
-        explanation: '1) Constant half-lives (10 min each) → first-order. 2) k = 0.693/10 = 0.069 $min^{-1}$. 3) [A] = $0.800e^{-0.069\\times 50}$ = $0.800e^{-3.47}$ ≈ 0.025 M.'
+        hint2: 'k = $0.693/t_{1}/_{2}$ = 0.693/10 = 0.0693 $min^{-1}$.',
+        hint3: '[A] = 0.800 × $e^{-0.0693 \\times 50}$ = 0.800 × $e^{-3.465}$ = 0.800 × 0.0313 = 0.0250 M (50 min is exactly 5 half-lives).',
+        explanation: '1) Constant half-lives (10 min each) → first-order. 2) k = 0.693/10 = 0.0693 $min^{-1}$. 3) 50 min is exactly 5 half-lives, so [A] = $0.800 \\times (1/2)^{5}$ = 0.0250 M (the same as $0.800e^{-0.0693\\times 50}$).'
       }
     },
     {
@@ -121,10 +121,10 @@ Use the appropriate integrated rate law to find:
               '0.020 M/s',
               '0.020 $s^{-1}$',
               '0.020 $M^{-1}s^{-1}$',
-              '1.00 $M^{-1}s^{-1}$'
+              '0.020 $M^{-2}s^{-1}$'
             ],
             correctAnswer: 2,
-            explanation: 'Slope = Δ(1/[B])/Δt = 1.00/50 = 0.020 $M^{-1}s^{-1}$. For second-order, slope = +k.'
+            explanation: 'Slope = Δ(1/[B])/Δt = 1.00/50 = 0.020 $M^{-1}s^{-1}$. For second-order, slope = +k, and the units of k are $M^{-1}s^{-1}$. M/s belongs to zero-order, $s^{-1}$ to first-order and $M^{-2}s^{-1}$ to third-order.'
           },
           {
             question: 'What is the half-life (from the initial concentration)?',
@@ -211,10 +211,10 @@ A certain reaction is second-order with $k = 0.10$ $M^{-1}s^{-1}$ and $[A]_0 = 2
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5.0', '35.0', '0.22'],
+        correctAnswers: ['5.0', '35.0', '0.250'],
         hint1: '$t_{1}/_{2}$ = 1/(k[A]$ {}_{0}$) = 1/(0.10 × 2.0) = 5.0 s.',
         hint2: '87.5% reacted → 12.5% remains → [A] = 0.25 M. 1/[A] = kt + 1/[A]$ {}_{0}$. 1/0.25 = 0.10t + 1/2.0. 4.0 = 0.10t + 0.50. 0.10t = 3.5. t = 35.0 s.',
-        hint3: '1/[A] = 0.10(35) + 0.50 = 3.5 + 0.5 = 4.0. Hmm that\'s [A] = 0.25. Wait: 1/[A] = 0.10(35) + 1/2.0 = 3.5 + 0.5 = 4.0. [A] = 1/4.0 = 0.25. But I said the answer is 0.22. Let me recheck at t = 35: 1/[A] = 0.10(35) + 0.50 = 4.0. [A] = 0.25.',
+        hint3: '1/[A] = kt + 1/[A]$ {}_{0}$ = 0.10(35) + 1/2.0 = 3.5 + 0.50 = 4.0. [A] = 1/4.0 = 0.250 M. (Same time as part 2, so the same concentration.)',
         explanation: '1) $t_{1}/_{2}$ = 1/(0.10 × 2.0) = 5.0 s. 2) [A] = 0.25 M: 1/0.25 = 0.10t + 0.50 → 4.0 = 0.10t + 0.50 → t = 35.0 s. 3) 1/[A] = 0.10(35) + 0.50 = 4.0 → [A] = 0.25 M.'
       }
     },

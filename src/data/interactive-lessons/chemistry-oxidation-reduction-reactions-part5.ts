@@ -140,13 +140,13 @@ Gold requires **aqua regia** (a mixture of $HNO_{3}$ and HCl) — ordinary acids
           {
             question: 'A strip of zinc metal is placed in a solution of $CuSO_{4}$. What happens?',
             options: [
-              'No reaction — Cu is more active than Zn',
-              'Zn dissolves and Cu metal deposits — Zn is more active than Cu',
-              'Both metals dissolve',
-              '$ZnSO_{4}$ precipitates'
+              'No reaction occurs, because Cu is more active than Zn',
+              'Zn dissolves and Cu metal deposits on the strip',
+              'Cu dissolves into solution and Zn metal plates out',
+              'Both metals dissolve and the blue color grows deeper'
             ],
             correctAnswer: 1,
-            explanation: 'Zn is above Cu in the activity series, so Zn can displace $Cu^{2+}$ from solution. Zn → $Zn^{2+}$ (dissolves) and $Cu^{2+}$ → Cu (deposits as solid copper).'
+            explanation: 'Zn is above Cu in the activity series (Zn is more active), so Zn can displace $Cu^{2+}$ from solution. Zn → $Zn^{2+}$ (dissolves) and $Cu^{2+}$ → Cu (deposits as solid copper). Reversing the activity order predicts either no reaction or Zn plating out, and the blue $Cu^{2+}$ color fades rather than deepens.'
           },
           {
             question: 'Which metal will NOT react with dilute HCl?',
@@ -164,22 +164,22 @@ Gold requires **aqua regia** (a mixture of $HNO_{3}$ and HCl) — ordinary acids
             options: [
               'Fe displaces Al — iron is more active',
               'No reaction — iron is less active than aluminum',
-              'Both metals react with sulfate',
-              'A precipitate of $FeSO_{4}$ forms'
+              'Sulfate ions oxidize the nail to $Fe^{3+}$',
+              'A precipitate of $FeSO_{4}$ forms on the nail'
             ],
             correctAnswer: 1,
-            explanation: 'Aluminum (Al) is above iron (Fe) in the activity series. Fe cannot displace $Al^{3+}$ from solution. A less active metal cannot displace a more active metal\'s ions.'
+            explanation: 'Aluminum (Al) is above iron (Fe) in the activity series. Fe cannot displace $Al^{3+}$ from solution: a less active metal cannot displace a more active metal\'s ions. Sulfate is a spectator here, and $FeSO_{4}$ is soluble, so no precipitate forms either.'
           },
           {
             question: 'Galvanized steel uses zinc coating to protect iron because:',
             options: [
-              'Zinc is less active and creates a barrier',
+              'Zinc is less active and acts as an inert barrier',
               'Zinc is more active and corrodes preferentially',
-              'Zinc reacts with iron to form an alloy',
-              'Zinc is cheaper than iron'
+              'Zinc alloys with the iron to form stainless steel',
+              'Zinc gains electrons from iron, keeping iron reduced'
             ],
             correctAnswer: 1,
-            explanation: 'Zinc is more active (higher in the activity series) than iron. It oxidizes preferentially, sacrificing itself to protect the iron underneath. This is sacrificial (cathodic) protection.'
+            explanation: 'Zinc is more active (higher in the activity series) than iron. It oxidizes preferentially, sacrificing itself to protect the iron underneath. This is sacrificial (cathodic) protection. Zinc loses electrons (it is oxidized); it does not take electrons from iron, and galvanizing is a surface coating, not stainless steel (an Fe–Cr alloy).'
           }
         ]
       }
@@ -229,10 +229,10 @@ Will a reaction occur? Type **yes** or **no**.
           },
           {
             label: 'Gold is at the bottom of the activity series, meaning it is',
-            options: ['the most reactive metal', 'the least reactive metal listed', 'a strong reducing agent', 'easily oxidized']
+            options: ['the most reactive metal', 'the least reactive metal', 'a strong reducing agent', 'the most easily oxidized metal']
           }
         ],
-        correctAnswers: ['loses electrons easily', 'do not react with dilute acids', 'above', 'the least reactive metal listed'],
+        correctAnswers: ['loses electrons easily', 'do not react with dilute acids', 'above', 'the least reactive metal'],
         hint1: 'Active metals are strong reducing agents — they give up electrons.',
         hint2: 'Cu, Ag, Pt, Au cannot reduce $H^{+}$ to $H_{2}$.',
         hint3: 'More active = higher in the series = can displace lower ones.',

@@ -45,8 +45,8 @@ Predict $\\Delta S$ sign for each:
     { id: 'en5v3-tricky', type: 'multiple-choice' as const, content: `
 **Tricky Cases** 🎯
     `, exercise: { questions: [
-          { question: 'For $\\text{H}_2\\text{(g)} + \\text{Cl}_2\\text{(g)} \\to \\text{2 HCl(g)}$, $\\Delta S$ is approximately:', options: ['Very positive', 'Very negative', 'Close to zero (slightly positive)', 'Cannot predict'], correctAnswer: 2, explanation: '2 mol gas → 2 mol gas. Same number of gas moles, so $\\Delta S \\approx 0$. In reality slightly positive because HCl has more vibrational modes.' },
-          { question: 'Mixing 50 mL of 1M HCl with 50 mL of 1M NaOH (neutralization) — $\\Delta S_{\\text{sys}}$ is:', options: ['Very positive', 'Close to zero or slightly negative', 'Very negative', 'Exactly zero'], correctAnswer: 1, explanation: 'Ions in solution combine with water to form more water molecules. The solution becomes slightly more organized as ion concentration decreases. $\\Delta S_{\\text{sys}}$ is close to zero or slightly negative.' }
+          { question: 'For $\\text{H}_2\\text{(g)} + \\text{Cl}_2\\text{(g)} \\to \\text{2 HCl(g)}$, $\\Delta S$ is approximately:', options: ['Large and positive', 'Large and negative', 'Small, near zero', 'Exactly zero'], correctAnswer: 2, explanation: '2 mol gas → 2 mol gas. With no change in moles of gas, $\\Delta S$ is small. It is not exactly zero, though: tabulated values give $\\Delta S° \\approx +20$ J/K, small compared with reactions that change the number of moles of gas.' },
+          { question: 'Mixing 50 mL of 1M HCl with 50 mL of 1M NaOH (neutralization) — $\\Delta S_{\\text{sys}}$ is:', options: ['Positive, as ordered hydration water is released', 'Close to zero, since no gas is produced or consumed', 'Negative, since two ions combine into one molecule', 'Exactly zero, since the total volume is unchanged'], correctAnswer: 0, explanation: 'The net reaction is $\\text{H}^+(aq) + \\text{OH}^-(aq) \\to \\text{H}_2\\text{O}(l)$. Counting particles (two ions → one molecule) suggests a decrease, but each ion holds a tightly ordered shell of water molecules that is released when the ions combine. Tabulated values give $\\Delta S° \\approx +81$ J/(mol·K), so $\\Delta S_{\\text{sys}}$ is positive. (This hydration effect goes beyond the AP exam; there, focus on phase and moles of gas.)' }
         ] } },
     { id: 'en5v3-practice', type: 'input-boxes' as const, content: `
 **Applying the Rules** 🧮
@@ -66,7 +66,7 @@ For each reaction, determine the net change in moles of GAS.
     { id: 'en5v3-exit', type: 'multiple-choice' as const, content: `
 **Exit Check** ✅
     `, exercise: { questions: [
-          { question: 'What is the MOST reliable predictor of $\\Delta S$ sign for a chemical reaction?', options: ['Whether it is exothermic', 'The net change in moles of gas', 'The number of reactants vs products', 'The temperature'], correctAnswer: 1, explanation: 'Gas molecules have enormously higher entropy than any condensed phase. The net change in moles of gas is the most reliable predictor of the sign of $\\Delta S$.' }
+          { question: 'What is the MOST reliable predictor of $\\Delta S$ sign for a chemical reaction?', options: ['Whether it is exothermic', 'The net change in moles of gas', 'The number of reactants vs products', 'The reaction temperature'], correctAnswer: 1, explanation: 'Gas molecules have enormously higher entropy than any condensed phase. The net change in moles of gas is the most reliable predictor of the sign of $\\Delta S$.' }
         ] } }
   ]
 }

@@ -89,13 +89,13 @@ $$\\boxed{\\frac{1}{[A]} = kt + \\frac{1}{[A]_0}}$$
           {
             question: 'Which observation confirms a reaction is second-order rather than first-order?',
             options: [
-              'A plot of [A] vs t is curved',
-              'A plot of ln[A] vs t is curved, but 1/[A] vs t is linear',
-              'A plot of ln[A] vs t is linear',
-              'The half-life is constant'
+              '[A] vs t is curved, but ln[A] vs t is linear',
+              'ln[A] vs t is curved, but 1/[A] vs t is linear',
+              '1/[A] vs t is curved, but [A] vs t is linear',
+              'Successive half-lives stay constant'
             ],
             correctAnswer: 1,
-            explanation: 'If ln[A] vs t is curved but 1/[A] vs t is linear, the reaction is second-order. For first-order, ln[A] vs t would be linear.'
+            explanation: 'If ln[A] vs t is curved but 1/[A] vs t is linear, the reaction is second-order. A linear ln[A] plot or constant half-lives point to first-order, and a linear [A] plot points to zero-order.'
           },
           {
             question: 'The units of k for a second-order reaction are:',
@@ -164,11 +164,11 @@ A second-order reaction has $k = 0.50$ $M^{-1}s^{-1}$ and $[A]_0 = 0.80$ M.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.5', '0.24', '5.0'],
+        correctAnswers: ['2.5', '0.267', '5.0'],
         hint1: '$t_{1}/_{2}$ = 1/(k[A]$ {}_{0}$) = 1/(0.50 × 0.80) = 1/0.40 = 2.5 s.',
-        hint2: '1/[A] = kt + 1/[A]$ {}_{0}$ = 0.50(5.0) + 1/0.80 = 2.50 + 1.25 = 3.75. [A] = 1/3.75 = 0.267 ≈ 0.27. Hmm wait let me recalc: 1/0.80 = 1.25. 0.50(5.0) = 2.50. Total = 3.75. [A] = 1/3.75 = 0.2667. Rounding to 2 decimal places: 0.27. Actually let me re-examine. 1/[A] = 0.50(5.0) + 1.25 = 3.75. [A] = 0.267 → 0.27.',
+        hint2: '1/[A] = kt + 1/[A]$ {}_{0}$ = 0.50(5.0) + 1/0.80 = 2.50 + 1.25 = 3.75. [A] = 1/3.75 = 0.267 M.',
         hint3: '$t_{1}/_{2}$ = 1/(k × 0.40) = 1/(0.50 × 0.40) = 1/0.20 = 5.0 s. This is double the first half-life!',
-        explanation: '1) $t_{1}/_{2}$ = 1/(0.50 × 0.80) = 2.5 s. 2) 1/[A] = 0.50(5.0) + 1.25 = 3.75 → [A] = 0.27 M. 3) Second $t_{1}/_{2}$ = 1/(0.50 × 0.40) = 5.0 s = 2 × first $t_{1}/_{2}$.'
+        explanation: '1) $t_{1}/_{2}$ = 1/(0.50 × 0.80) = 2.5 s. 2) 1/[A] = 0.50(5.0) + 1.25 = 3.75 → [A] = 0.267 M. 3) Second $t_{1}/_{2}$ = 1/(0.50 × 0.40) = 5.0 s = 2 × first $t_{1}/_{2}$.'
       }
     },
     {

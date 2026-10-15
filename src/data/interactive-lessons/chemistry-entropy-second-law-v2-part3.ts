@@ -87,22 +87,22 @@ Adding heat to cold surroundings makes more of a difference than adding the same
             options: [
               '−200 J/K',
               '+200 J/K',
-              '−50 J/K',
-              '+50 J/K'
+              '+0.200 J/K',
+              '+5.00 J/K'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta S_{\\text{surr}} = -\\Delta H/T = -(-50{,}000)/250 = +200$ J/K. Exothermic reactions increase the entropy of the surroundings.'
+            explanation: '$\\Delta S_{\\text{surr}} = -\\Delta H/T = -(-50{,}000)/250 = +200$ J/K. Exothermic reactions increase the entropy of the surroundings. Dropping the minus sign gives −200, leaving ΔH in kJ gives 0.200, and dividing T by ΔH (250/50) gives 5.00.'
           },
           {
             question: "Can a system's entropy decrease in a spontaneous process?",
             options: [
-              'No — entropy must always increase',
-              "Yes — as long as the surroundings' entropy increases by more",
-              'Only at absolute zero',
-              'Only for gases'
+              'No, a spontaneous process always raises the system\'s entropy',
+              "Yes, if the surroundings gain more entropy",
+              'Only if the process is endothermic, absorbing heat',
+              'Only for gases, since condensed phases cannot lose entropy'
             ],
             correctAnswer: 1,
-            explanation: "A system can lose entropy (e.g., water freezing) as long as the surroundings gain even more entropy, so $\\Delta S_{\\text{univ}} > 0$."
+            explanation: "A system can lose entropy (e.g., water freezing) as long as the surroundings gain even more entropy, so $\\Delta S_{\\text{univ}} > 0$. That usually takes an exothermic process, which releases heat into the surroundings — not an endothermic one."
           }
         ]
       }
@@ -167,13 +167,13 @@ Adding heat to cold surroundings makes more of a difference than adding the same
           {
             question: 'Water freezing at −10°C is spontaneous even though the system loses entropy. How?',
             options: [
-              "The Second Law doesn't apply to phase changes",
-              'The heat released to surroundings increases $\\Delta S_{\\text{surr}}$ by more than $\\Delta S_{\\text{sys}}$ decreases',
-              "The system's entropy actually increases during freezing",
-              'Freezing violates the Second Law'
+              "The Second Law applies only to chemical reactions, not to phase changes",
+              'Released heat raises the surroundings\' entropy more than the system\'s falls',
+              "The system's entropy actually rises as the ordered crystal lattice forms",
+              'Freezing absorbs heat from the surroundings, which raises their entropy'
             ],
             correctAnswer: 1,
-            explanation: "Freezing is exothermic — the released heat increases the surroundings' entropy enough to make $\\Delta S_{\\text{univ}} > 0$."
+            explanation: "Freezing is exothermic — the released heat increases $\\Delta S_{\\text{surr}}$ by more than $\\Delta S_{\\text{sys}}$ decreases, so $\\Delta S_{\\text{univ}} > 0$. The system's own entropy does fall as the lattice forms, and the Second Law applies to every process."
           }
         ]
       }

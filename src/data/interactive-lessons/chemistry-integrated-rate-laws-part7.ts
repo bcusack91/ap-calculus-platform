@@ -119,11 +119,11 @@ Verify: $1/[A]$ values are 1.00, 2.00, 3.00, 4.00 (constant Δ of 1.00 per 20 mi
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '0.05', '0.17'],
+        correctAnswers: ['2', '0.0500', '0.167'],
         hint1: 'Δ(1/[A]) = 1.00 per 20 min is constant → 1/[A] vs t is linear → second-order.',
         hint2: 'k = slope = 1.00/20 = 0.05 $M^{-1}min^{-1}$.',
-        hint3: '1/[A] = 0.05(100) + 1.00 = 5.0 + 1.0 = 6.0. [A] = 1/6.0 = 0.167 ≈ 0.17.',
-        explanation: '1) Second-order (1/[A] vs t is linear). 2) k = 1.00/20 = 0.05 $M^{-1}min^{-1}$. 3) 1/[A] = 0.05(100) + 1.00 = 6.00 → [A] = 0.17 M.'
+        hint3: '1/[A] = 0.05(100) + 1.00 = 5.0 + 1.0 = 6.0. [A] = 1/6.0 = 0.167 M.',
+        explanation: '1) Second-order (1/[A] vs t is linear). 2) k = 1.00/20 = 0.05 $M^{-1}min^{-1}$. 3) 1/[A] = 0.05(100) + 1.00 = 6.00 → [A] = 0.167 M.'
       }
     },
     {
@@ -238,13 +238,13 @@ A first-order reaction has $k = 3.46 \\times 10^{-2}$ $s^{-1}$.
           {
             question: 'Which quantity is unique to each reaction order?',
             options: [
-              'The rate constant k',
-              'The initial concentration',
+              'The numerical value of the rate constant',
+              'The initial concentration of the reactant',
               'The pattern of successive half-lives',
-              'The activation energy'
+              'The size of the activation energy barrier'
             ],
             correctAnswer: 2,
-            explanation: 'Each order has a distinctive half-life pattern: zero (decreasing), first (constant), second (increasing). This is one of the best ways to identify order from experimental data.'
+            explanation: 'Each order has a distinctive half-life pattern: zero (decreasing), first (constant), second (increasing). This is one of the best ways to identify order from experimental data. The value of k, the starting concentration and the activation energy vary from reaction to reaction regardless of order.'
           }
         ]
       }

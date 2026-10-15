@@ -122,32 +122,32 @@ The catalyzed pathway shows a **lower peak** (transition state) while the reacta
           {
             question: 'A catalyst speeds up a reaction by:',
             options: [
-              'Increasing ΔH',
+              'Making ΔH more negative so more energy is released',
               'Lowering Ea by providing an alternative pathway',
-              'Increasing the temperature',
-              'Shifting equilibrium toward products'
+              'Raising the average kinetic energy of the molecules',
+              'Shifting the equilibrium position toward the products'
             ],
             correctAnswer: 1,
-            explanation: 'Catalysts provide an alternative mechanism with lower Ea. They do not change ΔH, temperature, or equilibrium position.'
+            explanation: 'Catalysts provide an alternative mechanism with lower Ea. They do not change ΔH, temperature (the average kinetic energy), or equilibrium position.'
           },
           {
             question: 'If a catalyst lowers Ea from 100 kJ/mol to 60 kJ/mol at 300 K, by what factor does k increase? (Use $k_{2}/k_{1}$ = $e^{(Ea1-Ea2)/(RT)}$)',
             options: [
               '1.7',
-              '167',
+              '1.02',
               '$9.2 \\times 10^{6}$',
-              '$1.5 \\times 10^{7}$'
+              '$1.1 \\times 10^{16}$'
             ],
-            correctAnswer: 3,
-            explanation: '$k_{2}/k_{1}$ = e^((100,000−60,000)/(8.314×300)) = e^(40,000/2494) = $e^{16.04}$ = $9.2 \\times 10^{6}$ ≈ $10^{7}$. Actually $e^{16}$ = $8.9 \\times 10^{6}$, so the closest is $1.5 \\times 10^{7}$ depending on precise rounding.'
+            correctAnswer: 2,
+            explanation: '$k_{2}/k_{1}$ = e^((100,000 − 60,000)/(8.314 × 300)) = e^(40,000/2494) = $e^{16.04}$ = $9.2 \\times 10^{6}$ (roughly $10^{7}$). Taking the ratio of the two Ea values gives 1.7; leaving Ea in kJ while R is in J gives $e^{0.016}$ = 1.02; and using $10^{16.04}$ instead of $e^{16.04}$ gives $1.1 \\times 10^{16}$.'
           },
           {
             question: 'Which statement about enzymes is correct?',
             options: [
-              'Enzymes can catalyze any reaction',
-              'Enzymes are consumed during the reaction',
+              'Enzymes can catalyze almost any reaction they contact',
+              'Enzymes are used up as the reaction proceeds to completion',
               'Enzymes are highly specific biological catalysts',
-              'Enzymes shift equilibrium toward products'
+              'Enzymes shift the equilibrium position toward products'
             ],
             correctAnswer: 2,
             explanation: 'Enzymes are biological catalysts with high specificity — each enzyme typically catalyzes one specific reaction or class of reactions. Like all catalysts, they are regenerated and do not shift equilibrium.'
@@ -246,11 +246,11 @@ An uncatalyzed reaction has $E_a = 120$ kJ/mol and $k = 1.0 \\times 10^{-10}$ $s
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['16.1', '7', '693'],
-        hint1: '(120,000 − 80,000)/(8.314 × 300) = 40,000/2494 = 16.04 ≈ 16.1.',
-        hint2: '$e^{16.1}$ ≈ $9.7 \\times 10^{6}$ ≈ $10^{7}$. Power of 10 = 7.',
+        correctAnswers: ['16.0', '7', '693'],
+        hint1: '(120,000 − 80,000)/(8.314 × 300) = 40,000/2494 = 16.04 ≈ 16.0.',
+        hint2: '$e^{16.0}$ ≈ $9.2 \\times 10^{6}$ ≈ $10^{7}$. Power of 10 = 7.',
         hint3: '$t_{1}/_{2}$ = $0.693/(1.0 \\times 10^{-3})$ = 693 s.',
-        explanation: '1) ΔEa/(RT) = 40,000/2494 = 16.1. 2) $e^{16.1}$ ≈ $10^{7}$ → 7 orders of magnitude. 3) $t_{1}/_{2}$ = 0.693/0.001 = 693 s (about 11.5 minutes).'
+        explanation: '1) ΔEa/(RT) = 40,000/2494 = 16.0. 2) $e^{16.0}$ ≈ $9.2 \\times 10^{6}$ ≈ $10^{7}$ → 7 orders of magnitude. 3) $t_{1}/_{2}$ = 0.693/0.001 = 693 s (about 11.5 minutes).'
       }
     },
     {
@@ -266,8 +266,8 @@ An uncatalyzed reaction has $E_a = 120$ kJ/mol and $k = 1.0 \\times 10^{-10}$ $s
             options: [
               'The catalyzed reaction has a more negative ΔH',
               'The catalyzed reaction has a lower activation energy',
-              'The catalyzed reaction produces more product at equilibrium',
-              'The catalyzed reaction has a different overall equation'
+              'The catalyzed reaction yields more product',
+              'The catalyzed reaction has a different net equation'
             ],
             correctAnswer: 1,
             explanation: 'A catalyst lowers Ea without changing ΔH, equilibrium position, or the overall balanced equation. It only changes the pathway (mechanism).'
@@ -277,11 +277,11 @@ An uncatalyzed reaction has $E_a = 120$ kJ/mol and $k = 1.0 \\times 10^{-10}$ $s
             options: [
               'The reaction reaches equilibrium',
               'A substance blocks active sites on the catalyst surface',
-              'The catalyst is consumed by the reaction',
-              'Temperature becomes too high'
+              'The catalyst is used up as it converts reactants',
+              'The products build up and push the reaction in reverse'
             ],
             correctAnswer: 1,
-            explanation: 'Poisoning occurs when a substance (like lead or CO) binds irreversibly to catalyst active sites, blocking reactant molecules from adsorbing.'
+            explanation: 'Poisoning occurs when a substance (like lead or CO) binds irreversibly to catalyst active sites, blocking reactant molecules from adsorbing. A catalyst is not used up, and reaching equilibrium or product buildup does not deactivate it.'
           }
         ]
       }

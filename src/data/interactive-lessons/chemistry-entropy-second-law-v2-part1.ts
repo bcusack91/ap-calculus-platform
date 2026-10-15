@@ -110,21 +110,21 @@ This is the key to understanding why some reactions happen and others don't!
           {
             question: 'Food coloring spreads in water because:',
             options: [
-              'Water molecules push the dye apart',
-              'The dye is lighter than water',
-              'Spread-out microstates vastly outnumber concentrated ones',
-              'Chemical bonds break between dye molecules'
+              'Water molecules collide with the dye and push it apart evenly',
+              'The dye is less dense than water, so it rises and spreads',
+              'Dispersed arrangements vastly outnumber clustered ones',
+              'Bonds between dye molecules break, freeing them to move'
             ],
             correctAnswer: 2,
-            explanation: 'The number of microstates where dye molecules are spread throughout the water is astronomically larger than the states where they are concentrated in one spot.'
+            explanation: 'Spreading is driven by probability: the number of microstates where dye molecules are spread throughout the water is astronomically larger than the number where they are concentrated in one spot. No push, density difference or bond breaking is needed.'
           },
           {
             question: 'Why does Boltzmann use a logarithm in S = k ln W?',
             options: [
-              'To make the numbers smaller',
+              'To keep entropy values small',
               'So entropy is additive when combining systems',
-              'Because entropy is always negative',
-              'To convert temperature to energy'
+              'Because entropy is negative for small W',
+              'To convert temperature into energy'
             ],
             correctAnswer: 1,
             explanation: 'When combining two systems, $W_{\\text{total}} = W_A \\times W_B$, but $\\ln(W_A \\times W_B) = \\ln W_A + \\ln W_B$, so $S_{\\text{total}} = S_A + S_B$.'
@@ -132,9 +132,9 @@ This is the key to understanding why some reactions happen and others don't!
           {
             question: 'Unlike energy, entropy:',
             options: [
-              'Is always conserved',
+              'Is conserved in every process',
               'Can be created in irreversible processes',
-              'Has units of kJ/mol',
+              'Is reported in kJ/mol, like enthalpy',
               'Decreases in all spontaneous processes'
             ],
             correctAnswer: 1,
@@ -156,8 +156,7 @@ This is the key to understanding why some reactions happen and others don't!
 **3)** If $W$ doubles, does entropy double? (type yes or no)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['32', '1/32', 'no'],
+        questions: [{ question: '(1)', answer: '32', acceptableAnswers: ['32'] }, { question: '(2)', answer: '1/32', acceptableAnswers: ['1/32', '0.03125', '0.0313', '0.031'] }, { question: '(3)', answer: 'no', acceptableAnswers: ['no'] }],
         hint1: '$W = 2^5$',
         hint2: 'Only 1 of the $2^5$ microstates has all heads.',
         hint3: 'Since $S = k \\ln W$, doubling W gives $S_2 = k \\ln(2W) = k \\ln 2 + k \\ln W$. It increases by $k \\ln 2$, not doubles.',
@@ -207,13 +206,13 @@ This is the key to understanding why some reactions happen and others don't!
           {
             question: 'A glass of ice water sits in a warm room. Why does the ice melt?',
             options: [
-              'The warm room provides activation energy',
-              'The liquid state has more microstates, making it overwhelmingly more probable',
-              'Ice is chemically unstable',
-              'Gravity pulls the ice apart'
+              'The warm room supplies the activation energy the ice needs',
+              'The liquid has many more accessible microstates',
+              'Ice is less stable than liquid water at every temperature',
+              'Melting lowers the energy of the water molecules'
             ],
             correctAnswer: 1,
-            explanation: 'Liquid water at room temperature has vastly more accessible microstates than solid ice. The system evolves toward the state with higher probability (higher entropy).'
+            explanation: 'Above 0°C, liquid water has vastly more accessible microstates than solid ice, and heat flowing in from the warm room makes the liquid the overwhelmingly more probable state (higher entropy). Melting raises the molecules\' energy (it is endothermic), and ice is the stable phase below 0°C.'
           },
           {
             question: 'Which statement about entropy is FALSE?',

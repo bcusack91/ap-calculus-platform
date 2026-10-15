@@ -52,24 +52,24 @@ This section reviews all entropy concepts and presents AP-style questions that c
           {
             question: 'Consider the dissolution of ammonium nitrate: $NH_{4}NO_{3}(s)$ → $NH_{4}^{+}(aq)$ + $NO_{3}^{-}(aq)$. This process is endothermic ($\\Delta H > 0$) but spontaneous at room temperature. Which statement best explains this?',
             options: [
-              'The decrease in enthalpy drives the reaction',
-              'The increase in system entropy ($\\Delta S_{\\text{sys}} > 0$) is large enough to overcome the unfavorable $\\Delta H$',
-              'Endothermic reactions are always spontaneous',
-              'The entropy of the surroundings increases'
+              'The decrease in enthalpy as the ions form drives the process',
+              'Its large entropy gain outweighs the unfavorable ΔH',
+              'Endothermic processes are always spontaneous at room temperature',
+              'The surroundings gain entropy because heat flows out to them'
             ],
             correctAnswer: 1,
-            explanation: 'The solid dissolving into ions significantly increases entropy ($\\Delta S_{\\text{sys}} > 0$). At room temperature, $T\\Delta S$ exceeds $\\Delta H$, so $\\Delta G < 0$ (or equivalently, $\\Delta S_{\\text{univ}} > 0$).'
+            explanation: 'The solid dissolving into freely moving ions significantly increases entropy ($\\Delta S_{\\text{sys}} > 0$). At room temperature, $T\\Delta S$ exceeds $\\Delta H$, so $\\Delta G < 0$ (or equivalently, $\\Delta S_{\\text{univ}} > 0$). Because the process is endothermic, heat flows in from the surroundings, so their entropy actually falls.'
           },
           {
             question: 'At what temperature would the dissolution of $NH_{4}NO_{3}$ become nonspontaneous if $\\Delta H = +25.7$ kJ and $\\Delta S = +108.7$ J/K?',
             options: [
               'Below 236 K',
               'Above 236 K',
-              'At all temperatures',
-              'Below 108.7 K'
+              'Below 0.236 K',
+              'Below 4.23 K'
             ],
             correctAnswer: 0,
-            explanation: '$T_{\\text{crossover}} = \\Delta H/\\Delta S = 25{,}700/108.7 = 236$ K. Below this temperature, the process becomes nonspontaneous.'
+            explanation: '$T_{\\text{crossover}} = \\Delta H/\\Delta S = 25{,}700/108.7 = 236$ K. Since $\\Delta H > 0$ and $\\Delta S > 0$, the process is spontaneous above this temperature and becomes nonspontaneous below it. Leaving ΔH in kJ gives 0.236 K, and dividing ΔS by ΔH gives 4.23 K.'
           }
         ]
       }
@@ -141,16 +141,16 @@ Given: $\\Delta H° = -198$ kJ, $\\Delta S° = -187$ J/K
         questions: [
           {
             question: 'A chemist discovers a reaction that is exothermic with $\\Delta H = -50$ kJ and has $\\Delta S = -200$ J/K. Above what temperature will this reaction become nonspontaneous?',
-            options: ['125 K', '250 K', '400 K', 'It is always spontaneous'],
+            options: ['0.25 K', '250 K', '4.0 K', 'It is always spontaneous'],
             correctAnswer: 1,
-            explanation: '$T = |\\Delta H/\\Delta S| = 50{,}000/200 = 250$ K. Above 250 K, the $T\\Delta S$ term makes $\\Delta G > 0$.'
+            explanation: '$T = \\Delta H/\\Delta S = (-50{,}000)/(-200) = 250$ K. Above 250 K, the $-T\\Delta S$ term (positive, since $\\Delta S < 0$) outweighs $\\Delta H$ and makes $\\Delta G > 0$. Leaving ΔH in kJ gives 0.25 K, dividing ΔS by ΔH gives 4.0 K, and an exothermic reaction with $\\Delta S < 0$ is not spontaneous at every temperature.'
           },
           {
             question: 'Which is the BEST single-sentence summary of the Second Law?',
             options: [
-              'Energy cannot be created or destroyed',
-              'Every spontaneous process increases the total entropy of the universe',
-              'Entropy of a crystal is zero at 0 K',
+              'Energy can be neither created nor destroyed',
+              'Spontaneous processes increase the universe\'s entropy',
+              'A perfect crystal has zero entropy at 0 K',
               'Exothermic reactions are always spontaneous'
             ],
             correctAnswer: 1,

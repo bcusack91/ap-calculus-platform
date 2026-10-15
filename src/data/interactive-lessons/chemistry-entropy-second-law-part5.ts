@@ -103,35 +103,35 @@ $\\Delta S < 0$ ✓ — consistent with our prediction!
           {
             question: 'When calculating ΔS°_rxn, the standard entropy of $O_{2}(g)$ is:',
             options: [
-              'Zero, because $O_{2}$ is an element',
-              '205.1 J/(mol·K) — its absolute standard entropy',
-              'Undefined for elements',
-              'Negative because oxygen is a gas'
+              '0 J/(mol·K), as for any element in its standard state',
+              '205.1 J/(mol·K), an absolute value',
+              '−205.1 J/(mol·K), since $O_{2}$ is a reactant',
+              'Undefined, since only compounds have tabulated S°'
             ],
             correctAnswer: 1,
-            explanation: 'Unlike $\\Delta H°_f$ (which IS zero for elements), $S°$ is the absolute entropy and is always positive at $T > 0$ K. $S°[\\text{O}_2(g)] = 205.1$ J/(mol·K).'
+            explanation: 'Unlike $\\Delta H°_f$ (which IS zero for elements), $S°$ is the absolute entropy and is positive for every substance at $T > 0$ K: $S°[\\text{O}_2(g)] = 205.1$ J/(mol·K). Reactant values are subtracted in $\\sum nS°_{\\text{products}} - \\sum nS°_{\\text{reactants}}$, but the tabulated $S°$ itself stays positive.'
           },
           {
             question: 'If ΔS°_rxn is negative, this tells us:',
             options: [
-              'The reaction is nonspontaneous',
-              'The products are more ordered than the reactants',
-              'The reaction is endothermic',
-              'The reaction is at equilibrium'
+              'The reaction is nonspontaneous at any T',
+              'The products have less entropy than the reactants',
+              'The reaction must be endothermic overall',
+              'The reaction has reached equilibrium'
             ],
             correctAnswer: 1,
-            explanation: 'Negative $\\Delta S°$ means the products have less entropy (more ordered) than the reactants. It does NOT by itself determine spontaneity — that requires considering both ΔH and ΔS (via ΔG).'
+            explanation: 'Negative $\\Delta S°$ means the products have less entropy (are more ordered) than the reactants. It does NOT by itself determine spontaneity, the sign of ΔH, or equilibrium — spontaneity requires considering both ΔH and ΔS (via ΔG).'
           },
           {
             question: 'The units of ΔS°_rxn are:',
             options: [
               'kJ/mol',
-              'kJ/K',
-              'J/K (or J/(mol·K))',
+              '(J·K)/mol',
+              'J/(mol·K)',
               'J/mol'
             ],
             correctAnswer: 2,
-            explanation: 'Entropy has units of J/K (or J/(mol·K) when expressed per mole of reaction). Remember: joules, NOT kilojoules!'
+            explanation: 'Entropy changes are in J/K, or J/(mol·K) when expressed per mole of reaction. kJ/mol and J/mol are energy-per-mole units (like ΔH) with no temperature in them, and J·K/mol multiplies by temperature instead of dividing. Remember: joules, NOT kilojoules!'
           }
         ]
       }
@@ -154,16 +154,16 @@ $\\Delta S < 0$ ✓ — consistent with our prediction!
 | $\\text{C}(s)$ | $5.7$ |
 | $\\text{H}_2(g)$ | $130.7$ |
 
-**1)** Calculate $\\Delta S°$ for: $\\text{C}(s) + \\text{O}_2(g) \\rightarrow \\text{CO}_2(g)$ [J/K, to 3 significant figures]
+**1)** Calculate $\\Delta S°$ for: $\\text{C}(s) + \\text{O}_2(g) \\rightarrow \\text{CO}_2(g)$ [J/K, to one decimal place]
 
-**2)** Calculate $\\Delta S°$ for: $\\text{CH}_4(g) + 2\\text{O}_2(g) \\rightarrow \\text{CO}_2(g) + 2\\text{H}_2\\text{O}(g)$ [J/K, to 3 significant figures]
+**2)** Calculate $\\Delta S°$ for: $\\text{CH}_4(g) + 2\\text{O}_2(g) \\rightarrow \\text{CO}_2(g) + 2\\text{H}_2\\text{O}(g)$ [J/K, to one decimal place]
       `,
       exercise: {
         boxes: 2,
-        correctAnswers: ['2.9', '-242.2'],
+        correctAnswers: ['2.9', '-5.2'],
         hint1: '$[213.7] - [5.7 + 205.1]$',
         hint2: '$[213.7 + 2(188.8)] - [186.3 + 2(205.1)]$',
-        explanation: '1) $\\Delta S° = 213.7 - (5.7 + 205.1) = 213.7 - 210.8 = 2.9$ J/K. Note: despite $\\Delta n_{\\text{gas}} = 0$, ΔS° is slightly positive. 2) $\\Delta S° = [213.7 + 377.6] - [186.3 + 410.2] = 591.3 - 596.5 = -5.2$ J/K. Wait, let me recalculate: $213.7 + 2(188.8) = 213.7 + 377.6 = 591.3$. $186.3 + 2(205.1) = 186.3 + 410.2 = 596.5$. $\\Delta S° = 591.3 - 596.5 = -5.2$ J/K. Hmm, that contradicts the answer. Let me recheck with $\\Delta n_{gas} = 3-3=0$... The answer -5.2 is correct. Actually I need to reconsider the given answer of -242.2. With $H_{2}O(l)$ instead: $[213.7 + 2(69.9)] - [186.3 + 2(205.1)] = 353.5 - 596.5 = -243.0$. The answer should be -5.2 J/K with $H_{2}O(g)$.'
+        explanation: '1) $\\Delta S° = 213.7 - (5.7 + 205.1) = 213.7 - 210.8 = 2.9$ J/K. Note: despite $\\Delta n_{\\text{gas}} = 0$, ΔS° is slightly positive. 2) $\\Delta S° = [213.7 + 2(188.8)] - [186.3 + 2(205.1)] = 591.3 - 596.5 = -5.2$ J/K. With $\\Delta n_{\\text{gas}} = 3 - 3 = 0$, a value close to zero is expected. (If the water formed were liquid, using $S°[\\text{H}_2\\text{O}(l)] = 69.9$, the result would be $353.5 - 596.5 = -243.0$ J/K.)'
       }
     },
     {
@@ -176,7 +176,7 @@ $\\Delta S < 0$ ✓ — consistent with our prediction!
         dropdowns: [
           {
             label: 'When using the ΔS° formula, S° for elements like $N_{2}(g)$ is',
-            options: ['zero', 'always negative', 'a positive value you must look up', 'undefined']
+            options: ['zero by convention, like ΔH°f', 'negative, since elements are reactants', 'a positive value you must look up', 'undefined for pure elements']
           },
           {
             label: 'A reaction that produces more moles of gas will likely have ΔS°',
@@ -184,11 +184,11 @@ $\\Delta S < 0$ ✓ — consistent with our prediction!
           },
           {
             label: 'The main unit trap on the AP exam is mixing up',
-            options: ['grams and moles', 'joules and kilojoules for entropy', 'liters and milliliters', 'seconds and minutes']
+            options: ['grams and moles of each species', 'joules and kilojoules for entropy', 'liters and moles for gases', 'atm and bar for standard pressure']
           },
           {
             label: 'ΔS° alone determines whether a reaction is',
-            options: ['spontaneous', 'fast', 'neither — need ΔH too', 'exothermic']
+            options: ['spontaneous at 298 K', 'fast or slow', 'neither — need ΔH too', 'exothermic or endothermic']
           }
         ],
         correctAnswers: ['a positive value you must look up', 'positive', 'joules and kilojoules for entropy', 'neither — need ΔH too'],
@@ -209,24 +209,24 @@ $\\Delta S < 0$ ✓ — consistent with our prediction!
           {
             question: 'For $2H_{2}(g)$ + $O_{2}(g)$ → $2H_{2}O(g)$, using S° values: $H_{2}$ = 130.7, $O_{2}$ = 205.1, $H_{2}O(g)$ = 188.8 [all in J/(mol·K)], ΔS° is:',
             options: [
-              '+88.6 J/K',
-              '−88.6 J/K',
-              '+466.5 J/K',
-              '−466.5 J/K'
+              '+88.9 J/K',
+              '−88.9 J/K',
+              '−147.0 J/K',
+              '+377.6 J/K'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta S° = 2(188.8) - [2(130.7) + 205.1] = 377.6 - 466.5 = -88.9 \\approx -88.6$ J/K. The negative sign is expected since $\\Delta n_{\\text{gas}} = 2 - 3 = -1$.'
+            explanation: '$\\Delta S° = \\sum nS°_{\\text{products}} - \\sum nS°_{\\text{reactants}} = 2(188.8) - [2(130.7) + 205.1] = 377.6 - 466.5 = -88.9$ J/K. The negative sign is expected since $\\Delta n_{\\text{gas}} = 2 - 3 = -1$. Reversing the subtraction gives +88.9, ignoring the coefficients gives 188.8 − 130.7 − 205.1 = −147.0, and treating the elements\' $S°$ as zero (as for $\\Delta H°_f$) gives +377.6.'
           },
           {
             question: 'A student calculates ΔS° = −100 J/K and ΔH° = −50 kJ. To use ΔG° = ΔH° − TΔS°, they should:',
             options: [
-              'Use ΔS° = −100 kJ/K',
-              'Convert ΔS° to −0.100 kJ/K (or ΔH° to −50,000 J)',
-              'No conversion needed',
-              'Convert temperature to °C'
+              'Use ΔS° = −100 kJ/K, keeping the same number',
+              'Convert ΔS° to −0.100 kJ/K',
+              'Use both as given, since the units cancel anyway',
+              'Convert T to °C so it matches ΔH° in kJ'
             ],
             correctAnswer: 1,
-            explanation: 'ΔH is in kJ and ΔS is in J/K. You must convert one: either ΔS to kJ/K (divide by 1000: −0.100 kJ/K) or ΔH to J (multiply by 1000: −50,000 J). Temperature must be in Kelvin.'
+            explanation: 'ΔH is in kJ and ΔS is in J/K, so one must be converted: either ΔS to kJ/K (divide by 1000: −0.100 kJ/K) or ΔH to J (multiply by 1000: −50,000 J). Relabeling −100 J/K as −100 kJ/K inflates it 1000-fold, the units do not cancel on their own, and temperature must stay in kelvins.'
           }
         ]
       }

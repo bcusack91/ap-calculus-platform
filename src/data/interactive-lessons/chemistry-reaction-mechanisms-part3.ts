@@ -72,7 +72,7 @@ The RDS corresponds to the **tallest peak** (largest $E_a$ barrier) on the energ
             options: [
               'The lowest activation energy',
               'The highest activation energy',
-              'The most reactants',
+              'The greatest number of reactant molecules',
               'The fastest rate'
             ],
             correctAnswer: 1,
@@ -216,11 +216,11 @@ Mechanism:
           },
           {
             label: 'The pre-equilibrium approximation assumes the fast step',
-            options: ['is irreversible', 'reaches equilibrium before the slow step proceeds', 'has zero Ea', 'is the RDS']
+            options: ['is irreversible and goes to completion first', 'reaches equilibrium before the slow step proceeds', 'has an activation energy of essentially zero', 'is itself the rate-determining step']
           },
           {
             label: 'Intermediates cannot appear in the final rate law because they',
-            options: ['are too fast', 'are not measurable reactant concentrations', 'have no effect on rate', 'are products']
+            options: ['are consumed too fast to affect the rate', 'are not measurable reactant concentrations', 'have no effect on the rate of the reaction', 'are products of the overall reaction']
           }
         ],
         correctAnswers: ['comes directly from Step 1', 'the pre-equilibrium approximation', 'reaches equilibrium before the slow step proceeds', 'are not measurable reactant concentrations'],

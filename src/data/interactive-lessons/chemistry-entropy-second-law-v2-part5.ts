@@ -102,7 +102,7 @@ When multiple rules conflict, the **gas molecule count** usually dominates becau
           {
             question: 'Which rule is usually the most important for predicting $\\Delta S$ sign?',
             options: [
-              'Temperature change',
+              'Change in the temperature',
               'Number of gas molecules',
               'Whether substances dissolve',
               'Number of solid products'

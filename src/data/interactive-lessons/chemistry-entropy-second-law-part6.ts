@@ -76,23 +76,23 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
             question: 'A reaction has ΔH = −80 kJ and ΔS = −200 J/K. At what temperature does the reaction switch from spontaneous to nonspontaneous?',
             options: [
               '400 K',
-              '250 K',
               '0.4 K',
-              '40,000 K'
+              '2.5 K',
+              '16,000 K'
             ],
             correctAnswer: 0,
-            explanation: 'At the switchover: $\\Delta G = 0$, so $\\Delta H = T\\Delta S$. $T = \\Delta H/\\Delta S = -80{,}000/-200 = 400$ K. Below 400 K: spontaneous. Above 400 K: nonspontaneous.'
+            explanation: 'At the switchover: $\\Delta G = 0$, so $\\Delta H = T\\Delta S$. $T = \\Delta H/\\Delta S = -80{,}000/-200 = 400$ K. Below 400 K: spontaneous. Above 400 K: nonspontaneous. Leaving ΔH in kJ gives 0.4 K, dividing ΔS by ΔH gives 2.5 K, and multiplying (80 × 200) instead of dividing gives 16,000 K.'
           },
           {
             question: 'The vaporization of water at 100°C and 1 atm has ΔH_vap = 40.7 kJ/mol. What is ΔS_vap?',
             options: [
-              '40.7 J/(mol·K)',
+              '407 J/(mol·K)',
               '109 J/(mol·K)',
-              '0.407 J/(mol·K)',
-              '373 J/(mol·K)'
+              '0.109 J/(mol·K)',
+              '−109 J/(mol·K)'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta S = \\Delta H/T = 40{,}700/(373) = 109$ J/(mol·K). At the boiling point, the process is reversible so this formula applies directly.'
+            explanation: '$\\Delta S = \\Delta H/T = 40{,}700/(373) = 109$ J/(mol·K). At the boiling point, the process is reversible so this formula applies directly. Using 100 (°C) instead of 373 K gives 407, leaving ΔH in kJ gives 0.109, and vaporization absorbs heat, so ΔS is positive, not −109.'
           }
         ]
       }
@@ -128,7 +128,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
         dropdowns: [
           {
             label: 'The formula ΔS = ΔH/T applies specifically at',
-            options: ['any temperature', 'the equilibrium phase transition temperature', 'absolute zero', '25°C only']
+            options: ['any temperature, for any process', 'the phase-transition temperature', 'absolute zero, where S = 0', '298 K, the standard temperature']
           },
           {
             label: 'For ΔG = ΔH − TΔS, if ΔH < 0 and ΔS > 0, the reaction is',
@@ -136,14 +136,14 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
           },
           {
             label: 'When ΔS is in J/K and ΔH is in kJ, you should',
-            options: ['use them as-is', 'convert ΔS to kJ/K by dividing by 1000', 'convert ΔH to J/K', 'ignore the units']
+            options: ['use them as-is, since T fixes the units', 'convert ΔS to kJ/K by dividing by 1000', 'convert ΔS to kJ/K by multiplying by 1000', 'convert ΔH to kJ/K by dividing by 1000']
           },
           {
             label: 'If a reaction has ΔH > 0 and ΔS > 0, it becomes spontaneous at',
             options: ['low temperatures', 'high temperatures', 'all temperatures', 'no temperature']
           }
         ],
-        correctAnswers: ['the equilibrium phase transition temperature', 'always spontaneous', 'convert ΔS to kJ/K by dividing by 1000', 'high temperatures'],
+        correctAnswers: ['the phase-transition temperature', 'always spontaneous', 'convert ΔS to kJ/K by dividing by 1000', 'high temperatures'],
         hint1: 'At the phase transition, the process is reversible and ΔG = 0.',
         hint2: 'Both terms in ΔG = ΔH − TΔS favor spontaneity.',
         hint3: 'Units must match before you can subtract.',
@@ -161,24 +161,24 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
           {
             question: 'A reaction has ΔH° = +30.0 kJ and ΔS° = +100 J/K. Above what temperature is the reaction spontaneous?',
             options: [
-              '30 K',
+              '0.300 K',
               '300 K',
-              '3000 K',
-              '0.30 K'
+              '3.33 K',
+              '3,000,000 K'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta G = \\Delta H - T\\Delta S = 0$ at the switchover. $T = \\Delta H/\\Delta S = 30{,}000/100 = 300$ K. Above 300 K, $T\\Delta S > \\Delta H$, so $\\Delta G < 0$ (spontaneous).'
+            explanation: '$\\Delta G = \\Delta H - T\\Delta S = 0$ at the switchover. $T = \\Delta H/\\Delta S = 30{,}000/100 = 300$ K. Above 300 K, $T\\Delta S > \\Delta H$, so $\\Delta G < 0$ (spontaneous). Leaving ΔH in kJ gives 0.300 K, dividing ΔS by ΔH gives 3.33 K, and multiplying (30,000 × 100) gives 3,000,000 K.'
           },
           {
             question: 'At 200 K, a reaction has ΔH = +10 kJ and ΔS = +80 J/K. Is it spontaneous?',
             options: [
               'Yes — ΔG = −6 kJ',
               'No — ΔG = +26 kJ',
-              'No — ΔG = −6 kJ',
-              'Yes — ΔG = +26 kJ'
+              'Yes — ΔG = −15,990 kJ',
+              'No — ΔG = +6 kJ'
             ],
             correctAnswer: 0,
-            explanation: '$\\Delta G = \\Delta H - T\\Delta S = 10 - (200)(0.080) = 10 - 16 = -6$ kJ. Since $\\Delta G < 0$, the reaction is spontaneous at 200 K.'
+            explanation: '$\\Delta G = \\Delta H - T\\Delta S = 10 - (200)(0.080) = 10 - 16 = -6$ kJ. Since $\\Delta G < 0$, the reaction is spontaneous at 200 K. Adding TΔS instead of subtracting gives +26 kJ, using ΔS in J/K alongside ΔH in kJ gives 10 − 16,000 = −15,990 kJ, and subtracting in the wrong order (TΔS − ΔH) gives +6 kJ.'
           }
         ]
       }
@@ -205,10 +205,10 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
           {
             question: 'The dissolution of $NH_{4}Cl$ in water is endothermic (ΔH > 0) and spontaneous at room temperature. What must be true?',
             options: [
-              'ΔS must be negative',
+              'ΔS must be negative so that −TΔS offsets ΔH',
               'ΔS must be positive and large enough that TΔS > ΔH',
-              'The Second Law is violated',
-              'Temperature must be below 0°C'
+              'ΔH must become negative once the solid dissolves',
+              'T must be low so TΔS stays below ΔH'
             ],
             correctAnswer: 1,
             explanation: 'For an endothermic process to be spontaneous: $\\Delta G = \\Delta H - T\\Delta S < 0$. Since $\\Delta H > 0$, we need $T\\Delta S > \\Delta H$, which requires a sufficiently large positive $\\Delta S$.'

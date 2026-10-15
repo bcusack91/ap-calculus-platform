@@ -152,13 +152,13 @@ $$\\boxed{\\sum \\text{(oxidation states)} = \\text{overall charge}}$$
           {
             question: 'In which compound does oxygen NOT have an oxidation state of −2?',
             options: [
-              '$H_{2}O$',
+              '$H_{2}SO_{4}$',
               '$CO_{2}$',
               '$H_{2}O_{2}$',
               'MgO'
             ],
             correctAnswer: 2,
-            explanation: 'In $H_{2}O_{2}$ (hydrogen peroxide), oxygen has an oxidation state of −1. This is the peroxide exception. In all the other compounds, oxygen is −2.'
+            explanation: 'In $H_{2}O_{2}$ (hydrogen peroxide), oxygen has an oxidation state of −1. This is the peroxide exception. In $H_{2}SO_{4}$, $CO_{2}$ and MgO, oxygen is −2.'
           },
           {
             question: 'What is the oxidation state of each atom in $Fe_{2}O_{3}$?',
@@ -215,14 +215,14 @@ Find the oxidation state of the underlined element. Give your answer as a number
           },
           {
             label: 'Hydrogen has an oxidation state of −1 when bonded to',
-            options: ['nonmetals', 'oxygen', 'metals (metal hydrides)', 'halogens']
+            options: ['nonmetals', 'oxygen', 'metals', 'halogens']
           },
           {
             label: 'In a polyatomic ion, the sum of oxidation states equals',
-            options: ['zero', 'the charge of the ion', 'the number of atoms', '+1']
+            options: ['zero', 'the charge of the ion', 'the number of atoms', 'the charge of the central atom']
           }
         ],
-        correctAnswers: ['0', '−1', 'metals (metal hydrides)', 'the charge of the ion'],
+        correctAnswers: ['0', '−1', 'metals', 'the charge of the ion'],
         hint1: 'Fe(s), $O_{2}(g)$, $N_{2}(g)$ — what do they all have in common?',
         hint2: 'Fluorine is the most electronegative element.',
         hint3: 'NaH, $CaH_{2}$ — H bonded to metals takes electrons.',

@@ -92,10 +92,10 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
           {
             question: 'The standard molar entropy of $N_{2}(g)$ is 191.6 J/(mol·K). This value is NOT zero because:',
             options: [
-              '$N_{2}$ has a very high molar mass',
-              '$N_{2}$ is not in its standard state',
-              'All substances have S° > 0 at temperatures above 0 K',
-              '$N_{2}$ is a molecule, not an atom'
+              '$N_{2}$ has a fairly high molar mass for a gas',
+              '$N_{2}$ at 298 K is not in its standard state',
+              'S° > 0 for any substance at temperatures above 0 K',
+              'Only isolated atoms, not molecules, have S° = 0'
             ],
             correctAnswer: 2,
             explanation: 'By the Third Law, S = 0 only at 0 K for a perfect crystal. At any temperature above 0 K (including standard 298 K), all substances have positive entropy. This is true for elements AND compounds alike.'
@@ -105,11 +105,11 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             options: [
               '−100 kJ',
               '+20 kJ',
-              '−20 kJ',
+              '+59,960 kJ',
               '+100 kJ'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta G° = \\Delta H° - T\\Delta S° = -40 - (500)(-0.120) = -40 + 60 = +20$ kJ. At 500 K, the reaction is nonspontaneous because the entropy penalty ($T\\Delta S$) outweighs the enthalpy benefit.'
+            explanation: '$\\Delta G° = \\Delta H° - T\\Delta S° = -40 - (500)(-0.120) = -40 + 60 = +20$ kJ. At 500 K, the reaction is nonspontaneous because the entropy penalty ($-T\\Delta S$) outweighs the enthalpy benefit. Dropping the sign of ΔS° gives −100 kJ, flipping the sign of ΔH° gives +100 kJ, and using ΔS° in J/K with ΔH° in kJ gives −40 + 60,000 = +59,960 kJ.'
           }
         ]
       }
@@ -145,7 +145,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
         dropdowns: [
           {
             label: 'The Boltzmann constant k_B relates entropy to',
-            options: ['temperature', 'pressure', 'the number of microstates', 'molar mass']
+            options: ['the absolute temperature', 'the pressure of the gas', 'the number of microstates', 'the molar mass of the gas']
           },
           {
             label: 'A reaction with ΔH < 0 and ΔS < 0 is spontaneous at',
@@ -179,12 +179,12 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             question: 'At equilibrium, ΔG = 0. If ΔH = +50 kJ and ΔS = +125 J/K, the equilibrium temperature is:',
             options: [
               '400 K',
-              '250 K',
               '0.4 K',
-              '625 K'
+              '2.5 K',
+              '6,250 K'
             ],
             correctAnswer: 0,
-            explanation: '$\\Delta G = 0 \\Rightarrow \\Delta H = T\\Delta S \\Rightarrow T = \\Delta H/\\Delta S = 50{,}000/125 = 400$ K. Below 400 K: nonspontaneous. Above 400 K: spontaneous.'
+            explanation: '$\\Delta G = 0 \\Rightarrow \\Delta H = T\\Delta S \\Rightarrow T = \\Delta H/\\Delta S = 50{,}000/125 = 400$ K. Below 400 K: nonspontaneous. Above 400 K: spontaneous. Leaving ΔH in kJ gives 0.4 K, dividing ΔS by ΔH gives 2.5 K, and multiplying (50 × 125) gives 6,250 K.'
           },
           {
             question: 'Which statement about entropy is FALSE?',

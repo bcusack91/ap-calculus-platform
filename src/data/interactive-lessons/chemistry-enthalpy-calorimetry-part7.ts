@@ -100,12 +100,12 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             question: 'A 5.00 g sample of propane ($C_{3}H_{8}$, molar mass = 44.1 g/mol) is burned in a bomb calorimeter (C_cal = 12.0 kJ/°C), causing a 7.30°C temperature rise. The molar energy of combustion is approximately:',
             options: [
               '−773 kJ/mol',
-              '−2220 kJ/mol',
+              '−9.93 kJ/mol',
               '−87.6 kJ/mol',
               '+773 kJ/mol'
             ],
             correctAnswer: 0,
-            explanation: '$q_{\\text{cal}} = (12.0)(7.30) = 87.6$ kJ. $q_{\\text{rxn}} = -87.6$ kJ. Moles = $5.00/44.1 = 0.1134$ mol. $\\Delta E = -87.6/0.1134 = -773$ kJ/mol.'
+            explanation: '$q_{\\text{cal}} = (12.0)(7.30) = 87.6$ kJ. $q_{\\text{rxn}} = -87.6$ kJ. Moles = $5.00/44.1 = 0.1134$ mol. $\\Delta E = -87.6/0.1134 = -773$ kJ/mol. Stopping at −87.6 kJ forgets to divide by moles, multiplying by moles instead gives −9.93 kJ/mol, and +773 kJ/mol drops the sign of an exothermic combustion.'
           },
           {
             question: 'Given: (1) 2Fe(s) + 3/2 $O_{2}(g)$ → $Fe_{2}O_{3}(s)$, ΔH = −824 kJ and (2) 2Al(s) + 3/2 $O_{2}(g)$ → $Al_{2}O_{3}(s)$, ΔH = −1676 kJ. What is ΔH for $Fe_{2}O_{3}(s)$ + 2Al(s) → $Al_{2}O_{3}(s)$ + 2Fe(s)?',
@@ -116,7 +116,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
               '+2500 kJ'
             ],
             correctAnswer: 0,
-            explanation: 'Reverse (1): $Fe_{2}O_{3}$ → 2Fe + 3/2 $O_{2}$, ΔH = +824 kJ. Keep (2): 2Al + 3/2 $O_{2}$ → $Al_{2}O_{3}$, ΔH = −1676 kJ. Add: $+824 + (-1676) = -852$ kJ.'
+            explanation: 'Reverse (1): $Fe_{2}O_{3}$ → 2Fe + 3/2 $O_{2}$, ΔH = +824 kJ. Keep (2): 2Al + 3/2 $O_{2}$ → $Al_{2}O_{3}$, ΔH = −1676 kJ. Add: $+824 + (-1676) = -852$ kJ. Adding both equations without reversing (1) gives −2500 kJ, and reversing (2) instead of (1) gives +852 kJ.'
           },
           {
             question: 'Which statement about $\\Delta H°_f$ is correct?',
@@ -127,7 +127,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
               '$\\Delta H°_f$ is always negative'
             ],
             correctAnswer: 2,
-            explanation: 'By definition, $\\Delta H°_f = 0$ for elements in their standard states. $O_{3}$ is NOT the standard state of oxygen $(O_{2} is)$, so $\\Delta H°_f$(O₃) ≠ 0. $H_{2}O(g)$ and $H_{2}O(l)$ have different ΔH°_f values. Many compounds have positive $\\Delta H°_f$.'
+            explanation: 'By definition, $\\Delta H°_f = 0$ for elements in their standard states. $O_{3}$ is NOT the standard state of oxygen ($O_{2}$ is), so $\\Delta H°_f$($O_{3}$) ≠ 0. $H_{2}O(g)$ and $H_{2}O(l)$ have different $\\Delta H°_f$ values. Many compounds have positive $\\Delta H°_f$.'
           }
         ]
       }
@@ -205,18 +205,18 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
               '+200 kJ'
             ],
             correctAnswer: 1,
-            explanation: 'Reversing: $\\Delta H = +200$ kJ. Tripling: $\\Delta H = 3 \\times 200 = +600$ kJ.'
+            explanation: 'Reversing: $\\Delta H = +200$ kJ. Tripling: $\\Delta H = 3 \\times 200 = +600$ kJ. Forgetting to flip the sign gives −600 kJ, dividing by 3 instead of multiplying gives −66.7 kJ, and forgetting to triple gives +200 kJ.'
           },
           {
             question: 'An AP free-response asks you to calculate ΔH°_rxn. You are given a table of ΔH°_f values. The correct formula is:',
             options: [
-              'ΔH° = Σ ΔH°_f(reactants) − Σ ΔH°_f(products)',
+              'ΔH° = Σ n·ΔH°_f(reactants) − Σ m·ΔH°_f(products)',
               'ΔH° = Σ n·ΔH°_f(products) − Σ m·ΔH°_f(reactants)',
-              'ΔH° = Σ ΔH°_f(products) × Σ ΔH°_f(reactants)',
-              'ΔH° = Σ ΔH°_f(products) + Σ ΔH°_f(reactants)'
+              'ΔH° = Σ n·ΔH°_f(products) × Σ m·ΔH°_f(reactants)',
+              'ΔH° = Σ n·ΔH°_f(products) + Σ m·ΔH°_f(reactants)'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta H°_{\\text{rxn}} = \\sum n \\cdot \\Delta H°_f(\\text{products}) - \\sum m \\cdot \\Delta H°_f(\\text{reactants})$. Products minus reactants, each multiplied by their stoichiometric coefficients.'
+            explanation: '$\\Delta H°_{\\text{rxn}} = \\sum n \\cdot \\Delta H°_f(\\text{products}) - \\sum m \\cdot \\Delta H°_f(\\text{reactants})$. Products minus reactants, each multiplied by their stoichiometric coefficients. Reversing the subtraction flips the sign of the answer, and adding or multiplying the two sums has no physical meaning.'
           }
         ]
       }

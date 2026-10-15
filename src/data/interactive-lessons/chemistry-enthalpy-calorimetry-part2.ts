@@ -167,7 +167,7 @@ $$\\Delta H_{\\text{reverse}} = -\\Delta H_{\\text{forward}}$$
               'It depends on the pathway of the reaction',
               'It can only be measured at standard conditions',
               'ΔH depends only on the initial and final states',
-              'It is always positive'
+              'It is positive for every reaction'
             ],
             correctAnswer: 2,
             explanation: 'A state function depends only on the initial and final states, not on the path taken. This is why Hess\'s Law works — you can add up steps and get the same total ΔH.'
@@ -181,7 +181,7 @@ $$\\Delta H_{\\text{reverse}} = -\\Delta H_{\\text{forward}}$$
               '−968 kJ'
             ],
             correctAnswer: 1,
-            explanation: 'The second equation is exactly half of the first. When you multiply a reaction by ½, you multiply ΔH by ½: $\\frac{-484}{2} = -242$ kJ.'
+            explanation: 'The second equation is exactly half of the first. When you multiply a reaction by ½, you multiply ΔH by ½: $\\frac{-484}{2} = -242$ kJ. Forgetting to halve leaves −484 kJ, doubling instead gives −968 kJ, and flipping the sign gives +242 kJ (the reaction was not reversed).'
           },
           {
             question: 'The standard state of carbon is:',
@@ -280,7 +280,7 @@ Given: $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightarrow 2\\text{NH}_3(g) \\quad \\
               '+1180.5 kJ'
             ],
             correctAnswer: 2,
-            explanation: 'Multiplying the reaction by 3 multiplies ΔH by 3: $3 \\times (-393.5) = -1180.5$ kJ.'
+            explanation: 'Multiplying the reaction by 3 multiplies ΔH by 3: $3 \\times (-393.5) = -1180.5$ kJ. Multiplying by 2 instead gives −787.0 kJ, and flipping the sign gives +1180.5 kJ even though the reaction was not reversed.'
           }
         ]
       }

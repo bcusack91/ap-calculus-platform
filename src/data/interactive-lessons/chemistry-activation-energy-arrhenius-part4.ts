@@ -81,7 +81,7 @@ A plot of $\\ln k$ vs $1/T$ gives a **straight line** with:
               '601 J/mol'
             ],
             correctAnswer: 1,
-            explanation: 'Ea = −R × slope = −8.314 × (−5,000) = 41,570 J/mol ≈ 41,600 J/mol = 41.6 kJ/mol.'
+            explanation: 'Ea = −R × slope = −8.314 × (−5,000) = 41,570 J/mol ≈ 41,600 J/mol = 41.6 kJ/mol. Forgetting R gives 5,000 J/mol, mislabeling J as kJ gives 5,000 kJ/mol, and dividing by R instead of multiplying gives 601 J/mol.'
           },
           {
             question: 'The slope of an Arrhenius plot is always:',
@@ -209,7 +209,7 @@ $$T(K) = T(°C) + 273.15$$
           },
           {
             label: 'If two reactions have the same A but different Ea values, their Arrhenius lines',
-            options: ['are parallel', 'intersect at 1/T = 0', 'have the same slope', 'have the same y-intercept']
+            options: ['are parallel', 'have the same x-intercept', 'have the same slope', 'have the same y-intercept']
           },
           {
             label: 'The x-axis of an Arrhenius plot is',
@@ -250,8 +250,8 @@ $$T(K) = T(°C) + 273.15$$
             question: 'Two Arrhenius plots for different reactions have the same slope but different y-intercepts. This means:',
             options: [
               'Same Ea, different A values',
-              'Different Ea, same A values',
-              'Same k values at all temperatures',
+              'Different Ea, same A value',
+              'Same k at all temperatures',
               'Same Ea, same A values'
             ],
             correctAnswer: 0,

@@ -73,10 +73,10 @@ For $\\text{A} + \\text{B} \\rightarrow \\text{Products}$:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '1', '1000'],
+        correctAnswers: ['2', '1', '1.0'],
         hint1: 'Exp 1→2: Rate × 4 when [A] × 2. $2^{m}$ = 4, m = 2.',
         hint2: 'Exp 1→3: Rate × 2 when [B] × 2. $2^{n}$ = 2, n = 1.',
-        hint3: 'Rate = k[A]$ {}^{2}$[B]. $1.25 \\times 10^{-4}$ = $k(0.050)^{2}(0.050)$ = $k(1.25 \\times 10^{-4})$. k = 1.0. Wait: $(0.050)^{2}$ = 0.0025; × 0.050 = 0.000125 = $1.25 \\times 10^{-4}$. k = 1.25e-4/1.25e-4 = 1.0. Hmm that gives 1. Let me recheck. Actually 1.25e-4 / 1.25e-4 = 1.0. But let me verify with Exp 2: 5.00e-4 = $k(0.100)^{2}(0.050)$ = k(0.01)(0.05) = 5e-4·k → k = 1.0. So k = 1.0.',
+        hint3: 'Rate = k[A]$ {}^{2}$[B]. Using Exp 1: $1.25 \\times 10^{-4}$ = $k(0.050)^{2}(0.050)$ = $k(1.25 \\times 10^{-4})$, so k = 1.0. Check with Exp 2: $1.0(0.100)^{2}(0.050)$ = $5.0 \\times 10^{-4}$ ✓.',
         explanation: '1) 5.00e-4/1.25e-4 = 4 = $2^{m}$ → m = 2. 2) 2.50e-4/1.25e-4 = 2 = $2^{n}$ → n = 1. 3) k = $1.25e-4/((0.050)^{2}(0.050))$ = 1.25e-4/1.25e-4 = 1.0 $M^{-2}s^{-1}$.'
       }
     },
@@ -142,10 +142,10 @@ For the reaction $2\\text{A} + \\text{B} \\rightarrow \\text{C} + 3\\text{D}$:
               '2.5 $M^{-2}s^{-1}$',
               '5.0 $M^{-2}s^{-1}$',
               '25 $M^{-2}s^{-1}$',
-              '50 $M^{-2}s^{-1}$'
+              '0.50 $M^{-2}s^{-1}$'
             ],
-            correctAnswer: 2,
-            explanation: 'Using Exp 1: 0.010 = $k(0.10)(0.20)^{2}$ = k(0.10)(0.04) = 0.004k. k = 0.010/0.004 = 2.5 $M^{-2}s^{-1}$. Verify with Exp 3: $2.5(0.20)(0.40)^{2}$ = 2.5(0.20)(0.16) = 0.080 ✓. Hmm wait 2.5 × 0.032 = 0.080 ✓. So k = 2.5.'
+            correctAnswer: 0,
+            explanation: 'Using Exp 1: 0.010 = $k(0.10)(0.20)^{2}$ = k(0.10)(0.04) = 0.004k. k = 0.010/0.004 = 2.5 $M^{-2}s^{-1}$. Verify with Exp 3: $2.5(0.20)(0.40)^{2}$ = 2.5(0.032) = 0.080 ✓. Swapping the orders (Rate = k[A]$ {}^{2}$[B]) gives 0.010/0.0020 = 5.0; a decimal slip that makes $(0.10)(0.20)^{2}$ = 0.0004 gives 25; forgetting to square [B] gives 0.010/0.020 = 0.50.'
           },
           {
             question: 'Predict the rate when [A] = 0.30 M and [B] = 0.10 M.',
@@ -227,13 +227,13 @@ Given Rate = k[M]$ {}^{2}$[N] and the following data point: when [M] = 0.25 M an
           {
             question: 'After determining a rate law, what is the best way to verify it is correct?',
             options: [
-              'Check that orders match stoichiometric coefficients',
-              'Plug k back into a different experiment and see if the predicted rate matches',
-              'Check that k has integer units',
-              'Confirm the reaction is balanced'
+              'Check that each order matches its stoichiometric coefficient',
+              'Use k to predict another trial\'s rate and compare',
+              'Check that k comes out as a whole number with simple units',
+              'Confirm the overall equation is balanced before testing'
             ],
             correctAnswer: 1,
-            explanation: 'The best verification is to use k in a different experiment\'s data and confirm the calculated rate matches the observed rate. Orders do NOT have to match coefficients.'
+            explanation: 'The best verification is to use k in a different experiment\'s data and confirm the calculated rate matches the observed rate. Orders do NOT have to match coefficients, k can be any positive value, and a balanced equation says nothing about the rate law.'
           },
           {
             question: 'Given Rate = k[A][B]$ {}^{2}$ with k = 5.0 $M^{-2}s^{-1}$. If [A] = 0.10 M and [B] = 0.20 M, the rate is:',

@@ -46,8 +46,8 @@ For a reaction with $\\Delta H = -120$ kJ and $\\Delta S_{\\text{sys}} = -250$ J
     { id: 'en3v3-quiz', type: 'multiple-choice' as const, content: `
 **Conceptual Check** 🎯
     `, exercise: { questions: [
-          { question: 'A refrigerator moves heat from cold to hot. Does this violate the Second Law?', options: ['Yes — heat cannot flow from cold to hot', 'No — electrical work input increases the total entropy of the universe', 'Yes — entropy of the food decreases', 'No — refrigerators are exempt from thermodynamic laws'], correctAnswer: 1, explanation: 'The refrigerator uses work (electricity) to move heat. The total entropy increase from electricity generation exceeds the local entropy decrease, so $\\Delta S_{\\text{univ}} > 0$.' },
-          { question: 'At what temperature does a reaction with $\\Delta H = +60$ kJ and $\\Delta S = +200$ J/K become spontaneous?', options: ['100 K', '200 K', '300 K', '400 K'], correctAnswer: 2, explanation: '$T = \\Delta H/\\Delta S = 60{,}000/200 = 300$ K. Above 300 K, the $T\\Delta S$ term dominates and the reaction becomes spontaneous.' }
+          { question: 'A refrigerator moves heat from cold to hot. Does this violate the Second Law?', options: ['Yes — heat can never flow from a colder body to a hotter one', 'No — its work input raises the universe\'s total entropy', 'Yes — the entropy of the food inside decreases as it cools', 'No — the Second Law applies only to isolated chemical reactions'], correctAnswer: 1, explanation: 'The refrigerator uses work (electricity) to move heat. The total entropy increase from electricity generation exceeds the local entropy decrease, so $\\Delta S_{\\text{univ}} > 0$.' },
+          { question: 'At what temperature does a reaction with $\\Delta H = +60$ kJ and $\\Delta S = +200$ J/K become spontaneous?', options: ['0.3 K', '3.3 K', '300 K', '12,000 K'], correctAnswer: 2, explanation: '$T = \\Delta H/\\Delta S = 60{,}000/200 = 300$ K. Above 300 K, the $T\\Delta S$ term dominates and the reaction becomes spontaneous. Leaving ΔH in kJ gives 0.3 K, dividing ΔS by ΔH gives 3.3 K, and multiplying (60 × 200) gives 12,000 K.' }
         ] } },
     { id: 'en3v3-dropdown', type: 'dropdown-select' as const, content: `
 **Classify** 🔽
@@ -63,7 +63,7 @@ For a reaction with $\\Delta H = -120$ kJ and $\\Delta S_{\\text{sys}} = -250$ J
     { id: 'en3v3-exit', type: 'multiple-choice' as const, content: `
 **Exit Check** ✅
     `, exercise: { questions: [
-          { question: 'The key insight of the Second Law is:', options: ['Energy is conserved', 'The universe tends toward maximum entropy', 'Reactions always release heat', 'Entropy is conserved'], correctAnswer: 1, explanation: 'The Second Law says $\\Delta S_{\\text{univ}} > 0$ for spontaneous processes — the universe always moves toward higher total entropy.' }
+          { question: 'The key insight of the Second Law is:', options: ['Energy is conserved in every process', 'The universe tends toward maximum entropy', 'Reactions always release heat overall', 'Entropy is conserved, like energy'], correctAnswer: 1, explanation: 'The Second Law says $\\Delta S_{\\text{univ}} > 0$ for spontaneous processes — the universe always moves toward higher total entropy.' }
         ] } }
   ]
 }

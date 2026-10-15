@@ -280,13 +280,13 @@ Step 4: H + D → P + A (fast)
           {
             question: 'A reaction intermediate differs from a catalyst because an intermediate:',
             options: [
-              'Is not present in the overall equation',
-              'Is produced in one step and consumed in another (not present at start)',
-              'Changes the activation energy',
-              'Is always a gas-phase species'
+              'Is absent from the overall balanced equation',
+              'Is produced in one step and consumed in a later one',
+              'Lowers the activation energy of the reaction',
+              'Is present at both the start and the end'
             ],
             correctAnswer: 1,
-            explanation: 'Both intermediates and catalysts are absent from the overall equation. The key difference: intermediates are PRODUCED then consumed (not present initially), while catalysts are CONSUMED then regenerated (present at start and end).'
+            explanation: 'Both intermediates and catalysts are absent from the overall equation, so that is not a difference. The key difference: intermediates are PRODUCED then consumed (not present initially), while catalysts are CONSUMED then regenerated (present at start and end). Lowering the activation energy is what a catalyst does.'
           },
           {
             question: 'An energy diagram for a 3-step mechanism shows:',

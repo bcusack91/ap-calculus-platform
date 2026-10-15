@@ -283,11 +283,11 @@ For the reaction: $\\text{2Al}(s) + 3\\text{Cl}_2(g) \\rightarrow 2\\text{AlCl}_
             options: [
               'A precipitate forms when two clear solutions are mixed',
               'A shiny metal dissolves in acid while gas bubbles appear',
-              'An indicator changes color',
-              'Two solutions are mixed with no visible change'
+              'An acid-base indicator changes color as base is added',
+              'Mixing an acid with a base warms the solution'
             ],
             correctAnswer: 1,
-            explanation: 'A metal dissolving in acid with gas evolution $(H_{2})$ is classic redox: the metal is oxidized (0 → positive) and $H^{+}$ is reduced ($H^{+}$ → $H_{2}$, oxidation state +1 → 0).'
+            explanation: 'A metal dissolving in acid with gas evolution $(H_{2})$ is classic redox: the metal is oxidized (0 → positive) and $H^{+}$ is reduced ($H^{+}$ → $H_{2}$, oxidation state +1 → 0). A precipitate, an indicator color change and the warmth of neutralization all come from reactions in which no oxidation state changes.'
           }
         ]
       }

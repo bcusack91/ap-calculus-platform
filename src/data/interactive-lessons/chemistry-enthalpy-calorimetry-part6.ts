@@ -122,20 +122,20 @@ $$= -965.1 + 74.8 = -890.3 \\text{ kJ}$$
             question: 'The formation reaction for $H_{2}O(l)$ is:',
             options: [
               '2H(g) + O(g) → $H_{2}O(l)$',
-              '$H_{2}O(g)$ → $H_{2}O(l)$',
+              '$2H_{2}(g)$ + $O_{2}(g)$ → $2H_{2}O(l)$',
               '$H_{2}(g)$ + $\\tfrac{1}{2} O_{2}(g)$ → $H_{2}O(l)$',
               '$H_{2}(g)$ + $O_{2}(g)$ → $H_{2}O_{2}(l)$'
             ],
             correctAnswer: 2,
-            explanation: 'A formation reaction starts with elements in their standard states and produces exactly one mole of the compound. $H_{2}(g)$ and $O_{2}(g)$ are the standard states of hydrogen and oxygen.'
+            explanation: 'A formation reaction starts with elements in their standard states and produces exactly one mole of the compound. $H_{2}(g)$ and $O_{2}(g)$ are the standard states of hydrogen and oxygen. The equation with whole-number coefficients makes 2 mol of water, and H(g) and O(g) atoms are not the standard states.'
           },
           {
             question: 'Why is the formula "products minus reactants"?',
             options: [
-              'Because products always have more energy',
-              'It is an arbitrary convention',
-              'Because ΔH = H_final − H_initial, and products are the final state',
-              'Because reactants don\'t have enthalpy'
+              'Because products always have more energy than reactants',
+              'It is an arbitrary convention chosen by IUPAC',
+              'Products are the final state, and ΔH = H_final − H_initial',
+              'Because reactants are defined as having zero enthalpy'
             ],
             correctAnswer: 2,
             explanation: '$\\Delta H = H_{\\text{products}} - H_{\\text{reactants}} = H_{\\text{final}} - H_{\\text{initial}}$. Products are the final state, so they come first in the subtraction.'
@@ -232,7 +232,7 @@ $$= -965.1 + 74.8 = -890.3 \\text{ kJ}$$
               '+2499.9 kJ'
             ],
             correctAnswer: 0,
-            explanation: '$\\Delta H° = [(-1675.7) + 0] - [0 + (-824.2)] = -1675.7 + 824.2 = -851.5$ kJ. This is the thermite reaction — highly exothermic!'
+            explanation: '$\\Delta H° = [(-1675.7) + 0] - [0 + (-824.2)] = -1675.7 + 824.2 = -851.5$ kJ. This is the thermite reaction — highly exothermic! Subtracting products from reactants gives +851.5 kJ, and adding the two $\\Delta H°_f$ values instead of subtracting gives −2499.9 kJ.'
           }
         ]
       }

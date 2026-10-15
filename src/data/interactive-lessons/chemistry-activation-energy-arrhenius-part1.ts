@@ -84,7 +84,7 @@ The fraction of collisions with correct orientation is called the **steric facto
               'High pressure and high temperature',
               'Sufficient energy and proper orientation',
               'Correct stoichiometry and a catalyst',
-              'Low activation energy and many collisions'
+              'A low Ea and frequent collisions'
             ],
             correctAnswer: 1,
             explanation: 'An effective collision requires (1) kinetic energy ≥ Ea and (2) proper geometric orientation of the colliding molecules.'
@@ -92,13 +92,13 @@ The fraction of collisions with correct orientation is called the **steric facto
           {
             question: 'The steric factor p represents:',
             options: [
-              'The fraction of molecules with energy ≥ Ea',
+              'The fraction of molecules with energy at or above Ea',
               'The fraction of collisions with correct orientation',
-              'The activation energy divided by RT',
-              'The rate constant'
+              'The ratio of activation energy to thermal energy, Ea/RT',
+              'The number of collisions per second in each liter of gas'
             ],
             correctAnswer: 1,
-            explanation: 'The steric factor is the fraction of collisions where molecules are correctly oriented for reaction. For complex molecules, this can be very small.'
+            explanation: 'The steric factor is the fraction of collisions where molecules are correctly oriented for reaction. For complex molecules, this can be very small. The fraction with enough energy is the Boltzmann factor $e^{-Ea/RT}$, and the number of collisions per second is the collision frequency, both separate terms.'
           },
           {
             question: 'If every collision had sufficient energy and correct orientation, the rate would equal:',
@@ -166,7 +166,7 @@ $$\\boxed{f = e^{-E_a/(RT)}}$$
           },
           {
             label: 'Increasing temperature increases the fraction beyond Ea because',
-            options: ['Ea decreases', 'the distribution broadens to higher energies', 'molecules slow down', 'pressure increases']
+            options: ['Ea decreases as the temperature rises', 'the distribution broadens to higher energies', 'the molecules slow down and collide longer', 'the gas pressure increases at higher temperature']
           },
           {
             label: 'The total area under the Maxwell-Boltzmann curve',
@@ -222,8 +222,7 @@ where $A = Z \\cdot p$ is the **frequency factor** (also called the pre-exponent
 **3)** If temperature increases from 300 K to 310 K ($E_a = 50$ kJ/mol), calculate $E_a/(RT)$ at 310 K. (to 3 significant figures)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['20.0', '2.1e-9', '19.4'],
+        questions: [{ question: '(1)', answer: '20.0', acceptableAnswers: ['20.0'] }, { question: '(2)', answer: '2.1e-9', acceptableAnswers: ['2.1e-9', '2.06e-9', '2.1×10^-9', '2.1x10^-9', '2.1*10^-9'] }, { question: '(3)', answer: '19.4', acceptableAnswers: ['19.4'] }],
         hint1: 'Ea/(RT) = 50,000/(8.314 × 300) = 50,000/2494.2 = 20.05 ≈ 20.0.',
         hint2: '$e^{-20.0}$ = $2.06 \\times 10^{-9}$ ≈ $2.1 \\times 10^{-9}$.',
         hint3: 'Ea/(RT) = 50,000/(8.314 × 310) = 50,000/2577.3 = 19.40 ≈ 19.4.',
@@ -254,11 +253,11 @@ where $A = Z \\cdot p$ is the **frequency factor** (also called the pre-exponent
             options: [
               'Be very fast at any temperature',
               'Be very slow at most temperatures',
-              'Not depend on temperature',
-              'Not require collisions'
+              'Be unaffected by temperature',
+              'Be fast, releasing more energy'
             ],
             correctAnswer: 1,
-            explanation: 'Large Ea means $e^{-Ea/RT}$ is very small, so only a tiny fraction of collisions have enough energy. The reaction is slow unless temperature is very high.'
+            explanation: 'Large Ea means $e^{-Ea/RT}$ is very small, so only a tiny fraction of collisions have enough energy. The reaction is slow unless temperature is very high. A large Ea actually makes the rate MORE sensitive to temperature, and Ea says nothing about how much energy the reaction releases (that is ΔH).'
           }
         ]
       }

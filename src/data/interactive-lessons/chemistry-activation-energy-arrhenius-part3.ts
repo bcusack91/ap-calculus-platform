@@ -84,13 +84,13 @@ $$\\boxed{k = Ae^{-E_a/(RT)}}$$
           {
             question: 'If Ea = 0 (no activation barrier), then k equals:',
             options: [
-              '0',
-              'A (the frequency factor)',
-              'RT',
-              'Infinity'
+              '1, because $e^{0} = 1$',
+              'A, the frequency factor',
+              'RT, the thermal energy',
+              'Infinity, no barrier'
             ],
             correctAnswer: 1,
-            explanation: 'If Ea = 0: k = $Ae^{0}$ = A × 1 = A. Every collision with correct orientation leads to reaction.'
+            explanation: 'If Ea = 0: k = $Ae^{0}$ = A × 1 = A. Every collision with correct orientation leads to reaction. Forgetting the A in front gives 1, and k stays finite because collisions still happen at a finite rate.'
           },
           {
             question: 'Two reactions have the same A value. Reaction 1 has Ea = 40 kJ/mol, Reaction 2 has Ea = 80 kJ/mol. At the same temperature:',
@@ -155,12 +155,11 @@ Only a 30% increase — much less sensitive.
 **3)** If $k = 0.010$ $s^{-1}$ at 300 K and $k = 0.040$ $s^{-1}$ at 310 K, by what factor does k increase? (to 3 significant figures)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['18.0', '2e-9', '4.0'],
+        questions: [{ question: '(1)', answer: '18.0', acceptableAnswers: ['18.0'] }, { question: '(2)', answer: '4e-5', acceptableAnswers: ['4e-5', '3.9e-5', '3.87e-5', '4×10^-5', '4x10^-5', '4*10^-5'] }, { question: '(3)', answer: '4.0', acceptableAnswers: ['4.0'] }],
         hint1: 'Ea/(RT) = 75,000/(8.314 × 500) = 75,000/4157 = 18.04 ≈ 18.0.',
-        hint2: 'k = 1.0e13 × e^(−100,000/(8.314×300)) = 1.0e13 × $e^{-40.1}$ = 1.0e13 × 3.7e-18... Hmm: $e^{-40.1}$ ≈ $3.7 \\times 10^{-18}$. k = 1.0e13 × 3.7e-18 = 3.7e-5. Wait, let me recalculate: Ea/RT = 100,000/(8.314×300) = 100,000/2494 = 40.1. $e^{-40.1}$ ≈ $3.7 \\times 10^{-18}$. k = 1.0e13 × 3.7e-18 = 3.7e-5.',
+        hint2: 'k = $Ae^{-E_a/(RT)}$. First Ea/(RT) = 100,000/(8.314 × 300) = 100,000/2494 = 40.1. Then $e^{-40.1}$ ≈ $3.9 \\times 10^{-18}$, so k = $1.0 \\times 10^{13}$ × $3.9 \\times 10^{-18}$ ≈ $3.9 \\times 10^{-5}$.',
         hint3: '0.040/0.010 = 4.0.',
-        explanation: '1) 75,000/(8.314 × 500) = 18.0. 2) Ea/(RT) = 100,000/2494 = 40.1; $e^{-40.1}$ = $3.7 \\times 10^{-18}$; k = $1.0 \\times 10^{13}$ × $3.7 \\times 10^{-18}$ = $3.7 \\times 10^{-5}$ $s^{-1}$. 3) $k_{2}/k_{1}$ = 0.040/0.010 = 4.0.'
+        explanation: '1) 75,000/(8.314 × 500) = 18.0. 2) Ea/(RT) = 100,000/2494 = 40.1; $e^{-40.1}$ = $3.9 \\times 10^{-18}$; k = $1.0 \\times 10^{13}$ × $3.9 \\times 10^{-18}$ = $3.9 \\times 10^{-5}$ ≈ $4 \\times 10^{-5}$ $s^{-1}$. 3) $k_{2}/k_{1}$ = 0.040/0.010 = 4.0.'
       }
     },
     {
@@ -233,7 +232,7 @@ The frequency factor $A$ represents the maximum possible rate constant — the v
           {
             question: 'Which graph of k vs T correctly shows the Arrhenius relationship?',
             options: [
-              'A straight line through the origin',
+              'A straight line through (0, 0)',
               'A decreasing exponential curve',
               'An increasing exponential curve',
               'A parabola'

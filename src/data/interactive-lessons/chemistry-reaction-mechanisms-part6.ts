@@ -51,8 +51,8 @@ $$\\boxed{\\text{Rate} = k\\frac{[\\text{O}_3]^2}{[\\text{O}_2]}}$$
           {
             question: 'What is the intermediate in this mechanism?',
             options: [
-              '$O_{3}$',
-              '$O_{2}$',
+              '$O_{3}$ (ozone molecule)',
+              '$O_{2}$ (oxygen molecule)',
               'O (oxygen atom)',
               'There is no intermediate'
             ],
@@ -209,21 +209,21 @@ If reactants start at energy = 0 kJ:
               'I only',
               'II only',
               'Both I and II',
-              'Neither'
+              'Neither I nor II'
             ],
-            correctAnswer: 2,
-            explanation: 'I: Step 1 slow → rate = k[X]$ {}^{2}$ ✗ (missing [Y]). II: Step 2 slow → rate = $k_{2}$[Z][X]. [Z] = Keq[X][Y]. Rate = k_obs[X]$ {}^{2}$[Y] ✓. Only II matches.'
+            correctAnswer: 1,
+            explanation: 'I: Step 1 slow → rate = k[X]$ {}^{2}$ ✗ (missing [Y]). II: Step 2 slow → rate = $k_{2}$[Z][X]. [Z] = Keq[X][Y]. Rate = k_obs[X]$ {}^{2}$[Y] ✓. Only II matches, so choosing both mechanisms is wrong: mechanism I fails Criterion 2.'
           },
           {
             question: 'A negative-order dependence on a product (like rate ∝ 1/[P]) typically indicates:',
             options: [
-              'The product is a catalyst',
-              'A pre-equilibrium step where the product shifts equilibrium backward',
-              'The reaction is endothermic',
-              'The product is an intermediate'
+              'The product acts as a catalyst for the reaction',
+              'A reversible pre-equilibrium that the product shifts backward',
+              'The overall reaction must be endothermic',
+              'The product is also an intermediate in the slow step'
             ],
             correctAnswer: 1,
-            explanation: 'Negative order in a product indicates a reversible pre-equilibrium step where the product appears. Adding more product shifts the equilibrium backward, reducing the intermediate concentration and slowing the rate.'
+            explanation: 'Negative order in a product indicates a reversible pre-equilibrium step where the product appears. Adding more product shifts the equilibrium backward, reducing the intermediate concentration and slowing the rate. A catalyst would speed the reaction up, and ΔH has no bearing on reaction order.'
           }
         ]
       }

@@ -123,11 +123,11 @@ Where $n$ = moles of electrons transferred, $F$ = Faraday\'s constant (96,485 C/
             options: [
               'Cathode (reduction occurs)',
               'Anode (oxidation occurs)',
-              'Salt bridge',
+              'Salt bridge (it carries ions)',
               'It depends on concentration'
             ],
             correctAnswer: 1,
-            explanation: 'Zn is more active than Cu (more negative E°). Zn is oxidized (Zn → $Zn^{2+}$ + $2e^{-}$) at the anode. $Cu^{2+}$ is reduced ($Cu^{2+}$ + $2e^{-}$ → Cu) at the cathode.'
+            explanation: 'Zn is more active than Cu (more negative E°). Zn is oxidized (Zn → $Zn^{2+}$ + $2e^{-}$) at the anode. $Cu^{2+}$ is reduced ($Cu^{2+}$ + $2e^{-}$ → Cu) at the cathode. The salt bridge is a separate component, and for standard Zn/Cu half-cells the zinc electrode is always the anode.'
           },
           {
             question: 'Calculate $E^\\circ_{\\text{cell}}$ for a galvanic cell: Zn | $Zn^{2+}$ || $Cu^{2+}$ | Cu. Given: $E^\\circ_{\\text{Cu}} = +0.34$ V, $E^\\circ_{\\text{Zn}} = -0.76$ V.',
@@ -143,24 +143,24 @@ Where $n$ = moles of electrons transferred, $F$ = Faraday\'s constant (96,485 C/
           {
             question: 'Which statement about a galvanic cell is correct?',
             options: [
-              'Electrons flow from cathode to anode through the wire',
-              'Cations in the salt bridge migrate toward the cathode',
-              'The anode gains mass during operation',
+              'Electrons flow from cathode to anode in the wire',
+              'Anions in the salt bridge migrate toward the cathode',
+              'The anode gains mass as the cell operates',
               'Electrons flow from anode to cathode through the wire'
             ],
             correctAnswer: 3,
-            explanation: 'In a galvanic cell, electrons flow from the anode (where oxidation releases them) through the external wire to the cathode (where reduction uses them). The anode loses mass as it dissolves.'
+            explanation: 'In a galvanic cell, electrons flow from the anode (where oxidation releases them) through the external wire to the cathode (where reduction uses them). In the salt bridge, anions migrate toward the anode and cations toward the cathode. The anode loses mass as it dissolves.'
           },
           {
             question: 'A student is told that $\\Delta G^\\circ$ for a reaction is negative. This means the reaction is:',
             options: [
-              'Non-spontaneous',
-              'At equilibrium',
+              'Nonspontaneous under standard conditions',
+              'At equilibrium under standard conditions',
               'Spontaneous under standard conditions',
-              'Impossible'
+              'Fast, because its activation energy is low'
             ],
             correctAnswer: 2,
-            explanation: '$\\Delta G^\\circ < 0$ means the reaction is spontaneous under standard conditions. Since $\\Delta G^\\circ = -nFE^\\circ$, a negative $\\Delta G^\\circ$ corresponds to a positive $E^\\circ_{\\text{cell}}$.'
+            explanation: '$\\Delta G^\\circ < 0$ means the reaction is spontaneous under standard conditions. Since $\\Delta G^\\circ = -nFE^\\circ$, a negative $\\Delta G^\\circ$ corresponds to a positive $E^\\circ_{\\text{cell}}$. A positive $\\Delta G^\\circ$ would mean nonspontaneous, $\\Delta G = 0$ means equilibrium, and $\\Delta G^\\circ$ says nothing about speed, which depends on activation energy.'
           }
         ]
       }
@@ -210,7 +210,7 @@ Use the reduction potentials: $Ag^{+}/Ag$ = +0.80 V, $Fe^{2+}/Fe$ = −0.45 V, $
           },
           {
             label: 'The salt bridge in a galvanic cell serves to',
-            options: ['carry electrons', 'maintain electrical neutrality', 'store energy', 'prevent the reaction']
+            options: ['carry electrons between the half-cells', 'maintain electrical neutrality', 'store charge like a capacitor', 'keep the two solutions from reacting']
           }
         ],
         correctAnswers: ['anode', 'spontaneous', 'oxidation occurs', 'maintain electrical neutrality'],
@@ -242,13 +242,13 @@ Use the reduction potentials: $Ag^{+}/Ag$ = +0.80 V, $Fe^{2+}/Fe$ = −0.45 V, $
           {
             question: 'A strip of copper is placed in a solution of $AgNO_{3}$. Which statement is true?',
             options: [
-              'No reaction occurs because copper is less active than silver',
-              'Silver crystals form on the copper strip and the solution turns blue',
+              'No reaction, because copper is less active than silver',
+              'Silver deposits on the copper and the solution turns blue',
               'Copper crystals form and the solution turns colorless',
-              'Both metals dissolve into solution'
+              'Both metals dissolve and the solution stays colorless'
             ],
             correctAnswer: 1,
-            explanation: 'Cu is above Ag in the activity series. Cu(s) + $2Ag^{+}(aq)$ → $Cu^{2+}(aq)$ + 2Ag(s). Silver deposits on the copper strip (shiny crystals), and $Cu^{2+}$ ions make the solution turn blue.'
+            explanation: 'Cu is above Ag in the activity series. Cu(s) + $2Ag^{+}(aq)$ → $Cu^{2+}(aq)$ + 2Ag(s). Silver deposits on the copper strip (shiny crystals), and $Cu^{2+}$ ions make the solution turn blue. Silver ions are reduced, not dissolved, and the new $Cu^{2+}$ means the solution cannot stay colorless.'
           }
         ]
       }
@@ -275,13 +275,13 @@ Use the reduction potentials: $Ag^{+}/Ag$ = +0.80 V, $Fe^{2+}/Fe$ = −0.45 V, $
           {
             question: 'Which of the following best explains why redox reactions are fundamental to electrochemistry?',
             options: [
-              'Redox reactions always produce gases',
-              'Electron transfer in redox can be harnessed as electrical current',
-              'Redox reactions only occur in batteries',
-              'Electrochemistry does not involve redox'
+              'Redox reactions always produce gases that carry charge to electrodes',
+              'Electron transfer can be harnessed as an electric current',
+              'Redox reactions occur only inside batteries and electrolytic cells',
+              'Electrochemistry relies on proton transfer, which redox provides'
             ],
             correctAnswer: 1,
-            explanation: 'Redox reactions involve electron transfer. By separating the oxidation and reduction half-reactions into different compartments (half-cells), the electron flow through a wire generates electrical current. This is the basis of all batteries and fuel cells.'
+            explanation: 'Redox reactions involve electron transfer. By separating the oxidation and reduction half-reactions into different compartments (half-cells), the electron flow through a wire generates electrical current. This is the basis of all batteries and fuel cells. Many redox reactions produce no gas, redox happens everywhere (rusting, respiration, combustion), and proton transfer is acid-base chemistry, not redox.'
           }
         ]
       }

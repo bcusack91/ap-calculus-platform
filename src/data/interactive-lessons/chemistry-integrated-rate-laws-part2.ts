@@ -102,13 +102,13 @@ $$\\boxed{[A] = [A]_0 e^{-kt}}$$
           {
             question: 'For [A] = [A]$ {}_{0}e^{-kt}$, the concentration:',
             options: [
-              'Decreases linearly with time',
-              'Decreases exponentially, never reaching zero',
-              'Decreases to zero in finite time',
-              'Remains constant'
+              'Decreases linearly at a constant rate of k',
+              'Decays exponentially, never reaching zero',
+              'Decreases to zero after exactly two half-lives',
+              'Falls by the same amount in each half-life'
             ],
             correctAnswer: 1,
-            explanation: 'Exponential decay: [A] approaches zero asymptotically but theoretically never reaches it. This contrasts with zero-order, where [A] = 0 at t = [A]$ {}_{0}/k$.'
+            explanation: 'Exponential decay: [A] approaches zero asymptotically but theoretically never reaches it, and each half-life removes the same FRACTION (half), not the same amount. This contrasts with zero-order, where [A] falls linearly and reaches 0 at t = [A]$ {}_{0}/k$. After two half-lives a quarter of A still remains.'
           }
         ]
       }
@@ -186,7 +186,7 @@ A first-order reaction has $k = 0.0100$ $s^{-1}$ and $[A]_0 = 2.00$ M.
         dropdowns: [
           {
             label: 'For first-order, doubling [A]$ {}_{0}$ changes the half-life by a factor of',
-            options: ['2', '1/2', '1 (no change)', '4']
+            options: ['2', '1/2', '1', '4']
           },
           {
             label: 'After 3 half-lives, the fraction of A remaining is',
@@ -201,7 +201,7 @@ A first-order reaction has $k = 0.0100$ $s^{-1}$ and $[A]_0 = 2.00$ M.
             options: ['linear', 'exponential decay', 'parabolic', 'sigmoidal']
           }
         ],
-        correctAnswers: ['1 (no change)', '1/8', '$s^{-1}$', 'exponential decay'],
+        correctAnswers: ['1', '1/8', '$s^{-1}$', 'exponential decay'],
         hint1: '$t_{1}/_{2}$ = 0.693/k — does not contain [A]$ {}_{0}$.',
         hint2: '$(1/2)^{3}$ = 1/8.',
         hint3: 'k = Rate/[A] = (M/s)/M = $s^{-1}$.',

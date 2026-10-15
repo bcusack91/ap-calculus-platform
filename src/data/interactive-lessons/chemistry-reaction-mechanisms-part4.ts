@@ -115,11 +115,11 @@ where $k_{\\text{obs}} = k_2 K_{eq}$.
       exercise: {
         questions: [
           {
-            question: 'Mechanism:\nStep 1: $Cl_{2}$ ⇌ 2Cl (fast)\nStep 2: Cl + $CHCl_{3}$ → $CCl_{4}$ + H (slow)\nStep 3: H + Cl → HCl (fast)\nWhat is the rate law?',
+            question: 'Mechanism:\nStep 1: $Cl_{2}$ ⇌ 2Cl (fast)\nStep 2: Cl + $CHCl_{3}$ → HCl + $CCl_{3}$ (slow)\nStep 3: $CCl_{3}$ + Cl → $CCl_{4}$ (fast)\nWhat is the rate law?',
             options: [
               'rate = k[$Cl_{2}$][$CHCl_{3}$]',
               'rate = k[Cl][$CHCl_{3}$]',
-              'rate = k[$Cl_{2}$]^(1/2)[$CHCl_{3}$]',
+              'rate = k[$Cl_{2}$]$ {}^{1/2}$[$CHCl_{3}$]',
               'rate = k[$Cl_{2}$]$ {}^{2}$[$CHCl_{3}$]'
             ],
             correctAnswer: 2,
@@ -128,13 +128,13 @@ where $k_{\\text{obs}} = k_2 K_{eq}$.
           {
             question: 'In the $NO_{2}$ + CO example, why doesn\'t [CO] appear in the rate law?',
             options: [
-              'CO is a catalyst',
-              'CO reacts only in the fast step, after the RDS',
-              'CO is an intermediate',
-              'CO has no effect on the reaction'
+              'CO acts as a catalyst and is regenerated',
+              'CO reacts only after the slow step',
+              'CO is an intermediate that cancels out',
+              'CO is in excess, so its concentration is constant'
             ],
             correctAnswer: 1,
-            explanation: 'CO participates only in Step 2 (the fast step). Since the rate is determined by the slow step (Step 1), and CO is not involved in Step 1, it does not appear in the rate law.'
+            explanation: 'CO participates only in Step 2 (the fast step, after the RDS). Since the rate is determined by the slow step (Step 1), and CO is not involved in Step 1, it does not appear in the rate law. CO is a reactant in the overall equation, so it is neither a catalyst nor an intermediate.'
           }
         ]
       }
@@ -178,7 +178,7 @@ where $k_{\\text{obs}} = k_2 K_{eq}$.
           },
           {
             label: 'Fractional orders in rate laws (like [X]^(1/2)) arise when',
-            options: ['the reaction is zero order', 'a pre-equilibrium produces a dissociated species', 'temperature is very high', 'a catalyst is used']
+            options: ['the reaction is zero order in every reactant', 'a pre-equilibrium produces a dissociated species', 'the temperature is very high', 'a catalyst is added to the slow step']
           },
           {
             label: 'If the observed rate law is rate = k[A]$ {}^{2}$ but the overall equation is A + B → C, this suggests',
@@ -208,7 +208,7 @@ where $k_{\\text{obs}} = k_2 K_{eq}$.
             question: 'Mechanism:\nStep 1: A ⇌ 2B (fast)\nStep 2: B + C → D (slow)\nThe rate law is:',
             options: [
               'rate = k[B][C]',
-              'rate = k[A]^(1/2)[C]',
+              'rate = k[A]$ {}^{1/2}$[C]',
               'rate = k[A][C]',
               'rate = k[A]$ {}^{2}$[C]'
             ],
