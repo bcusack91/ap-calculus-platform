@@ -7,17 +7,50 @@ export const microExternalitiesPublicGoodsPart4Data = {
       content: `
 # 💰 Externalities & Public Goods
 
-**Part 4 of 7 — Connections & Interactions**
+**Part 4 of 7 — Correcting Externalities: Policy Tools**
 
-Externalities & Public Goods connects to other topics in AP Microeconomics. Understanding these connections reveals how different processes interact.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Setting the Pigouvian Tax |
+| Getting the Size Wrong |
+| Subsidies for Positive Externalities |
+| Regulation and Other Tools |
 
-| Concept | Description |
-|---------|-------------|
-| **Interconnection** | How Externalities & Public Goods links to other course topics |
-| **Scale interaction** | How Externalities & Public Goods operates differently at local, national, and global scales |
-| **Feedback loop** | How outcomes of Externalities & Public Goods can reinforce or modify the original process |
+> 🔑 **Key Concept:** A corrective policy works by making decision makers face the **full social cost or benefit** of each unit, which economists call **internalizing** the externality. The ideal per-unit tax equals the **marginal external cost at the socially optimal quantity**; the ideal per-unit subsidy equals the **marginal external benefit at the socially optimal quantity**. A policy that is too small or too large leaves a deadweight loss behind.
+      `
+    },
+    {
+      id: 'microext4-pigouvian',
+      type: 'text' as const,
+      content: `
+## 📖 Setting the Pigouvian Tax
+
+A **Pigouvian tax** is a per-unit tax set to correct a negative externality. When the marginal external cost is the same for every unit, the right tax is simply that MEC (Part 3). When the harm per unit **grows** with output, you must decide **which unit's** MEC to use.
+
+### Worked Example: Rising External Cost
+A competitive market for a pesticide has demand **P = 70 − Q** and marginal private cost **P = 10 + Q**. Runoff gets more harmful as more pesticide is used: **MEC = Q**, so MSC is **P = 10 + 2Q**.
+
+**Market outcome:** 70 − Q = 10 + Q gives $Q_m$ = **30** at **\\$40**. The MEC of the 30th unit is \\$30.
+
+**Social optimum:** 70 − Q = 10 + 2Q gives $Q^*$ = **20**, where MSB = MSC = **\\$50**. The MEC of the 20th unit is \\$20.
+
+**Deadweight loss without a tax:** at Q = 30, MSC = \\$70 and MSB = \\$40, so DWL = ½ × (30 − 20) × \\$30 = **\\$150**.
+
+**The right tax is \\$20, the MEC at $Q^*$.** Firms now face P = 30 + Q:
+
+| Result with a \\$20 tax | Value |
+|---|---|
+| Quantity | 70 − Q = 30 + Q, so **20** |
+| Price buyers pay | **\\$50** |
+| Price sellers keep | **\\$30** |
+| Tax revenue | \\$20 × 20 = **\\$400** |
+| Deadweight loss | **\\$0** |
+
+With the tax, the private cost firms face (MPC + \\$20) crosses demand at the same point where MSC does. Units beyond 20 are no longer worth producing to the firm, because the buyer's price would not cover the firm's cost plus the tax.
+
+> 🔑 **AP Connection:** A per-unit tax works because it raises **marginal** cost. A flat fee that does not depend on how much is produced, such as a one-time permit charge, leaves each unit's marginal cost unchanged, so it does not target the externality at the margin.
       `
     },
     {
@@ -29,144 +62,184 @@ Externalities & Public Goods connects to other topics in AP Microeconomics. Unde
       exercise: {
         questions: [
           {
-            question: 'Externalities & Public Goods connects to other course topics through:',
+            question: 'Each extra unit of a good does more pollution damage than the one before. A regulator wants a per-unit tax that eliminates the deadweight loss. The tax should equal the marginal external cost',
             options: [
-              'No connections exist',
-              'Shared processes, causes, and outcomes',
-              'Random coincidence',
-              'Administrative categories only'
+              'at the socially optimal quantity',
+              'at the current market quantity',
+              'averaged over all units now sold',
+              'of the very first unit produced'
             ],
-            correctAnswer: 1,
-            explanation: 'Topics in AP Microeconomics are interconnected through shared processes, causes, and outcomes.'
+            correctAnswer: 0,
+            explanation: 'The goal is for the taxed private cost to cross demand exactly where MSC does, which happens only if the tax equals MEC at the optimal quantity. The MEC at the market quantity is larger and would cut output too far, while an average or first-unit MEC is too small.'
           },
           {
-            question: 'A feedback loop in Externalities & Public Goods means:',
+            question: 'Demand is P = 100 − Q and marginal private cost is P = 20 + Q. The marginal external cost is MEC = 0.5Q. What per-unit tax moves the market to the socially optimal quantity?',
             options: [
-              'The process stops',
-              'Outcomes reinforce or modify the original process',
-              'Nothing changes',
-              'The exam skips this topic'
+              '\\$16',
+              '\\$20',
+              '\\$32',
+              '\\$60'
             ],
-            correctAnswer: 1,
-            explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.'
+            correctAnswer: 0,
+            explanation: 'MSC is P = 20 + 1.5Q, and 100 − Q = 20 + 1.5Q gives an optimal quantity of 32, where MEC = 0.5 × 32 = \\$16. \\$20 is the MEC at the market quantity of 40, \\$32 is the optimal quantity itself, and \\$60 is the untaxed market price.'
+          },
+          {
+            question: 'Which policy toward a positive consumption externality moves the market toward the socially optimal quantity?',
+            options: [
+              'A per-unit subsidy to buyers',
+              'A per-unit tax on sellers',
+              'A binding price floor',
+              'A cap on the quantity sold'
+            ],
+            correctAnswer: 0,
+            explanation: 'The market buys too little, so the policy must raise quantity; a subsidy to buyers lifts demand toward MSB. A tax, a binding price floor and a quantity cap all reduce the quantity traded and make the shortfall worse.'
           }
         ]
       }
     },
     {
-      id: 'microext4-content',
+      id: 'microext4-wrong',
       type: 'text' as const,
       content: `
-## Connections & Interactions — Deeper Dive
+## Getting the Size Wrong
 
-### Interconnection
-How Externalities & Public Goods links to other course topics. Understanding this concept is essential for mastering Externalities & Public Goods in AP Microeconomics.
+Stay in the pesticide market and try four different taxes. Each one shifts the private cost curve up to P = (10 + t) + Q, so the quantity is (60 − t) ÷ 2.
 
-### Scale interaction
-How Externalities & Public Goods operates differently at local, national, and global scales. This builds on the previous concept and connects to broader themes in the course.
+| Per-unit tax | Quantity | Buyers pay | Sellers keep | Revenue | Deadweight loss |
+|---|---|---|---|---|---|
+| \\$0 | 30 | \\$40 | \\$40 | \\$0 | ½ × 10 × \\$30 = **\\$150** |
+| \\$10 (too small) | 25 | \\$45 | \\$35 | \\$250 | ½ × 5 × \\$15 = **\\$37.50** |
+| **\\$20 (MEC at Q\\*)** | **20** | **\\$50** | **\\$30** | **\\$400** | **\\$0** |
+| \\$30 (MEC at $Q_m$) | 15 | \\$55 | \\$25 | \\$450 | ½ × 5 × \\$15 = **\\$37.50** |
 
-### Feedback loop
-How outcomes of Externalities & Public Goods can reinforce or modify the original process. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Undercorrection
+A \\$10 tax stops at 25 units. The units from 21 to 25 still have MSC above MSB (at 25: MSC = \\$60, MSB = \\$45), so part of the original triangle remains.
+
+### Overcorrection
+A \\$30 tax, set at the harm of the **last** unit the untaxed market produced, cuts output to 15. Now units 16 to 20 are missing even though their MSB is **above** their MSC (at 15: MSB = \\$55, MSC = \\$40). A **new** deadweight loss triangle appears on the other side of $Q^*$.
+
+### Why Not Ban It?
+A ban sets Q = 0. In this market, social surplus at the optimum is the area between MSB and MSC from 0 to 20: (\\$60 + \\$0) ÷ 2 × 20 = **\\$600**. A ban gives all of it up, which is worse than doing nothing (a \\$150 loss). Banning makes sense only when MSC is above MSB for **every** unit.
+
+> ⚠️ **Common trap:** "The tax should equal the damage the market is causing now" sounds right but overcorrects whenever MEC rises with output. The correct tax is the damage of the **last unit that should be produced**.
       `
     },
     {
       id: 'microext4-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Size the Tax** ✍️
 
-1) What term refers to how Externalities & Public Goods links to other course topics?
+In a competitive market, demand is **P = 80 − Q** and marginal private cost is **P = 20 + Q**. The marginal external cost is **MEC = 0.5Q**.
 
-2) What concept describes how Externalities & Public Goods operates differently at local, national, and global scales?
+1) What is the socially optimal quantity?
 
-3) Name the term for how outcomes of Externalities & Public Goods can reinforce or modify the original process.
+2) What per-unit tax moves the market to that quantity? (dollars, number only)
 
-Use the exact term from this part.
+3) How much revenue does that tax raise? (dollars, number only)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'Starts with: I',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: F',
-        explanation: 'Expected answers: Interconnection (How Externalities & Public Goods links to other course topics), Scale interaction (How Externalities & Public Goods operates differently at local, national, and global scales), and Feedback loop (How outcomes of Externalities & Public Goods can reinforce or modify the original process).'
+        correctAnswers: ['24', '12', '288'],
+        hint1: 'MSC = MPC + MEC = 20 + 1.5Q. Set it equal to demand.',
+        hint2: 'Evaluate MEC = 0.5Q at the optimal quantity, not at the market quantity of 30.',
+        hint3: 'Revenue = tax × quantity after the tax.',
+        explanation: '1) 80 − Q = 20 + 1.5Q gives 2.5Q = 60, so Q* = 24. 2) MEC at 24 is 0.5 × 24 = \\$12; check: 80 − Q = 32 + Q gives Q = 24. 3) \\$12 × 24 = \\$288. A tax of \\$15, the MEC at the market quantity of 30, would overcorrect to 22.5 units.'
       }
     },
     {
-      id: 'microext4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'How Externalities & Public Goods links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
-          },
-          {
-            label: 'How Externalities & Public Goods operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
-          },
-          {
-            label: 'How outcomes of Externalities & Public Goods can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
-          }
-        ],
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Interconnection — How Externalities & Public Goods links to other course topics. Scale interaction — How Externalities & Public Goods operates differently at local, national, and global scales. Feedback loop — How outcomes of Externalities & Public Goods can reinforce or modify the original process.'
-      }
-    },
-    {
-      id: 'microext4-strategy',
+      id: 'microext4-subsidy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Subsidies for Positive Externalities
 
-### Misconceptions to Avoid
-- Don\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of Externalities & Public Goods.
-- **Feedback loop** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+For a positive externality, the mirror-image tool is a per-unit **subsidy equal to the MEB at the socially optimal quantity**.
 
-### AP Strategy Moves
-- When you see questions about connections & interactions, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect connections & interactions to broader themes in AP Microeconomics for higher scores.
+| Who receives the subsidy | Which curve moves | Example |
+|---|---|---|
+| **Buyers** (positive consumption externality) | Demand (MPB) shifts **up** to MSB | A \\$10 voucher toward each flu shot |
+| **Sellers** (positive production externality) | Supply (MPC) shifts **down** to MSC | A payment per acre to farmers who plant windbreaks that protect neighbors' soil |
+
+As Part 3 showed, paying the same per-unit subsidy to buyers or to sellers leads to the same quantity, the same net prices and the same cost to the government. The choice is about administration, not results.
+
+### Other Ways to Raise Quantity
+- **Government provision:** the government supplies the good itself, as with public schools or free vaccination clinics.
+- **Mandates:** a rule requires the activity, as with school vaccination requirements.
+
+### The Same Sizing Rules Apply
+- A subsidy **smaller** than the MEB at $Q^*$ leaves some underproduction.
+- A subsidy **larger** than the MEB at $Q^*$ pushes output past $Q^*$, and those extra units cost more than they are worth to society. A **new** deadweight loss appears.
+
+> 🔑 **AP Connection:** In Government Intervention, a subsidy in a market with no externality caused overproduction and a deadweight loss. With a positive externality, the market starts **below** $Q^*$, so the right-sized subsidy removes deadweight loss instead.
       `
     },
     {
-      id: 'microext4-applied',
+      id: 'microext4-regulation',
+      type: 'text' as const,
+      content: `
+## Regulation and Other Tools
+
+Instead of changing prices, the government can set **quantities** directly, for example by limiting how much of a polluting good firms may produce.
+
+### A Quantity Limit in the Pesticide Market
+A cap of **20 units** reaches the social optimum, just like the \\$20 tax. But the two policies split the gains differently:
+- At 20 units, buyers are willing to pay **\\$50**, and the MPC of the 20th unit is only **\\$30**.
+- Under the **tax**, the \\$20 gap goes to the government as \\$400 of revenue.
+- Under the **cap**, there is no revenue. The firms allowed to sell keep the higher price as extra profit.
+
+### Comparing the Tools
+
+| Tool | Reaches $Q^*$ if set correctly? | Government revenue or cost | Information needed |
+|---|---|---|---|
+| Pigouvian tax | Yes | Raises revenue | MEC at $Q^*$ |
+| Quantity limit | Yes | None | The value of $Q^*$ |
+| Per-unit subsidy (positive externality) | Yes | Costs money | MEB at $Q^*$ |
+| Ban | Only if no unit is worth producing | None | Whether MSB is ever above MSC |
+| Doing nothing | No | None | None |
+
+Every tool depends on an estimate of the external cost or benefit. If regulators overestimate the harm, any of these tools can overcorrect.
+      `
+    },
+    {
+      id: 'microext4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, demonstrating connections between Externalities & Public Goods and other units earns higher scores because:',
+            question: 'A regulator sets a per-unit tax on a polluting good that is larger than the marginal external cost at the socially optimal quantity. The tax will',
             options: [
-              'The exam is random',
-              'It shows deeper understanding and analytical thinking',
-              'It wastes time',
-              'Connections are never tested'
+              'cut output below the optimal quantity and create a new deadweight loss',
+              'reach the optimal quantity and collect some extra tax revenue too',
+              'raise output above the market quantity and widen the deadweight loss',
+              'leave output unchanged, since sellers simply pass the whole tax on'
             ],
-            correctAnswer: 1,
-            explanation: 'The AP exam rewards students who can connect concepts across units — demonstrating synthesis and analytical depth.'
+            correctAnswer: 0,
+            explanation: 'A tax larger than the MEC at the optimum pushes the private cost curve above MSC where it crosses demand, so output falls below the optimal quantity and units worth more than their social cost are lost. A tax raises cost, so it cannot raise output.'
           },
           {
-            question: 'If Externalities & Public Goods produces outcomes that further intensify the original process, this is:',
+            question: 'A town caps a factory\'s output at the socially optimal quantity instead of taxing each unit. Compared with a tax that reaches the same quantity, the cap',
             options: [
-              'A negative feedback loop',
-              'A positive feedback loop — outcomes reinforce the process',
-              'An unrelated event',
-              'A one-time occurrence'
+              'raises no tax revenue',
+              'creates a larger deadweight loss',
+              'lets more pollution reach the river',
+              'charges buyers a lower price per unit'
             ],
-            correctAnswer: 1,
-            explanation: 'A positive feedback loop intensifies: the outcome amplifies the original process, creating a cycle.'
+            correctAnswer: 0,
+            explanation: 'Both policies end at the same quantity, so pollution, the buyers\' price and the deadweight loss (zero) are the same. The difference is who keeps the gap between the buyers\' price and MPC: the government under the tax, the firms under the cap.'
+          },
+          {
+            question: 'For a certain good, MSB is greater than MSC for the first 20 units and less than MSC for every unit after that. Banning the good entirely would',
+            options: [
+              'give up the gains on output worth making',
+              'remove the deadweight loss with no cost at all',
+              'raise social surplus to its largest possible value',
+              'leave social surplus exactly where the market left it'
+            ],
+            correctAnswer: 0,
+            explanation: 'The first 20 units are worth more to society than they cost, so a ban destroys that surplus, possibly more than the deadweight loss it removes. The best quantity is 20, which a correctly sized tax or cap reaches.'
           }
         ]
       }

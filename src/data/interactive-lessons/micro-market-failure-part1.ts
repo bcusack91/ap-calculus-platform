@@ -21,7 +21,7 @@ export const microMarketFailurePart1Data = {
 | **Public goods** | Non-rival + non-excludable → free riding | National defense |
 | **Common resources** | Non-excludable → overuse | Overfishing |
 | **Market power** | Monopolies restrict output | Single utility company |
-| **Asymmetric information** | One party knows more | Used car "lemons" |
+| **Asymmetric information** (enrichment, not on the AP exam) | One party knows more | Used car "lemons" |
 
 > 🔑 In each case, the market produces at a quantity ≠ the socially optimal quantity, creating **deadweight loss**.
 
@@ -67,10 +67,10 @@ Market failure occurs when **any of these conditions break down**.
               'Externalities',
               'Perfect competition',
               'Public goods',
-              'Asymmetric information'
+              'Common resources'
             ],
             correctAnswer: 1,
-            explanation: 'Perfect competition actually achieves efficiency (P = MC, minimum ATC). The other three — externalities, public goods, and asymmetric info — all cause markets to fail.'
+            explanation: 'Perfect competition actually achieves efficiency (P = MC, minimum ATC). The other three — externalities, public goods and common resources — all cause markets to fail.'
           }
         ]
       }
@@ -79,7 +79,9 @@ Market failure occurs when **any of these conditions break down**.
       id: 'micromf1-content',
       type: 'text' as const,
       content: `
-## Asymmetric Information
+## Beyond the AP Course: Asymmetric Information
+
+> ℹ️ **Enrichment:** Asymmetric information is not part of the AP Microeconomics Course and Exam Description, so the AP exam does not test it. The market failures the AP course does test are externalities, public goods and market power (Unit 6). This section shows another reason real markets can fail.
 
 When one party in a transaction has more information than the other:
 
@@ -114,17 +116,17 @@ Occurs **after** the transaction. Having insurance or a safety net changes behav
 
 1) Market failure occurs when the equilibrium does not maximize total _______.
 
-2) The "lemons problem" in used car markets is an example of adverse _______.
+2) A good that is non-rival and non-excludable, such as national defense, is called a _______ good.
 
-3) When having insurance causes riskier behavior, this is called moral _______.
+3) A firm that produces at the minimum of its ATC curve achieves _______ efficiency.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['surplus', 'selection', 'hazard'],
+        correctAnswers: ['surplus', 'public', 'productive'],
         hint1: 'Consumer surplus + producer surplus.',
-        hint2: 'Bad outcomes are "selected" more frequently.',
-        hint3: 'The "hazard" of changed behavior after a transaction.',
-        explanation: 'Market failure = total surplus not maximized. Lemons problem = adverse selection (before transaction). Riskier behavior with insurance = moral hazard (after transaction).'
+        hint2: 'It is the type of good that free riders can enjoy without paying.',
+        hint3: 'Look at the efficiency table: one condition is P = MC, the other is the lowest cost per unit.',
+        explanation: 'Market failure = total surplus not maximized. A non-rival, non-excludable good is a public good, which markets underprovide because of free riders. Producing at minimum ATC is productive efficiency; P = MC is allocative efficiency.'
       }
     },
     {
@@ -137,22 +139,22 @@ Occurs **after** the transaction. Having insurance or a safety net changes behav
         dropdowns: [
           {
             label: 'A monopoly restricts output to raise price. This is market failure from ___',
-            options: ['Market power', 'Externality', 'Public good undersupply', 'Adverse selection']
+            options: ['Market power', 'Externality', 'Public good undersupply', 'Common resource overuse']
           },
           {
-            label: 'A person buys health insurance knowing they have a pre-existing condition. This is ___',
-            options: ['Adverse selection', 'Moral hazard', 'Free-rider problem', 'Market power']
+            label: 'A steel mill\'s smoke damages nearby farms, and the mill pays nothing for the harm. This is market failure from ___',
+            options: ['Externality', 'Market power', 'Public good undersupply', 'Common resource overuse']
           },
           {
-            label: 'After getting fire insurance, a homeowner becomes careless with candles. This is ___',
-            options: ['Moral hazard', 'Adverse selection', 'Externality', 'Market power']
+            label: 'Everyone in town can watch a fireworks show without paying, so no private firm will put it on. This is ___',
+            options: ['Free-rider problem', 'Market power', 'Externality', 'Common resource overuse']
           }
         ],
-        correctAnswers: ['Market power', 'Adverse selection', 'Moral hazard'],
+        correctAnswers: ['Market power', 'Externality', 'Free-rider problem'],
         hint1: 'The monopoly has pricing power.',
-        hint2: 'Happens BEFORE the transaction — the buyer has hidden information.',
-        hint3: 'Happens AFTER the transaction — behavior changes.',
-        explanation: 'Monopoly = market power. Buying insurance with known health issues = adverse selection (pre-transaction). Reckless behavior after getting insurance = moral hazard (post-transaction).'
+        hint2: 'A cost falls on third parties who are not part of the steel market.',
+        hint3: 'Viewers cannot be excluded, so they have no reason to pay.',
+        explanation: 'Monopoly = market power. Smoke that harms farms the mill does not pay = a negative externality. A show nobody can be excluded from = the free-rider problem, so the market underprovides this public good.'
       }
     },
     {
@@ -168,7 +170,7 @@ Occurs **after** the transaction. Having insurance or a safety net changes behav
 | Public good | Government provision via taxes | Voluntary contribution (underprovides) |
 | Common resource | Regulation, quotas, property rights | Community norms (Ostrom) |
 | Monopoly | Antitrust, regulation, price caps | Potential entry, innovation |
-| Asymmetric info | Disclosure laws, licensing | Signaling, screening, reputation |
+| Asymmetric info (enrichment) | Disclosure laws, licensing | Signaling, screening, reputation |
 
 > ⚠️ **AP Key Point:** Government intervention can also fail (**government failure**). Interventions may create their own deadweight loss, be captured by special interests, or have unintended consequences. The AP exam expects you to evaluate BOTH market failure AND potential government failure.
       `
@@ -182,26 +184,26 @@ Occurs **after** the transaction. Having insurance or a safety net changes behav
       exercise: {
         questions: [
           {
-            question: 'In the used car market, adverse selection may lead to:',
+            question: 'Which of the following best illustrates government failure?',
             options: [
-              'Only high-quality cars being sold at premium prices',
-              'Good cars leaving the market as sellers cannot get fair prices',
-              'Government banning all used car sales',
-              'Buyers gaining more information than sellers'
-            ],
-            correctAnswer: 1,
-            explanation: 'Buyers assume average quality → offer average prices → owners of good cars won\'t sell at those prices → good cars leave → average quality drops further. This is the "lemons" spiral.'
-          },
-          {
-            question: 'Which situation best illustrates moral hazard?',
-            options: [
-              'A bank makes risky loans knowing the government will bail it out',
-              'A consumer avoids buying an extended warranty',
-              'A firm prices above marginal cost',
-              'Fishermen deplete a shared fishing ground'
+              'A pollution tax set far above the external cost',
+              'A factory that pollutes without paying for the harm',
+              'A monopoly that restricts output to raise its price',
+              'Free riders who avoid paying for street lights'
             ],
             correctAnswer: 0,
-            explanation: 'Moral hazard occurs when a safety net (bailout guarantee) changes behavior (riskier lending). The bank takes on more risk BECAUSE of the safety net — classic moral hazard.'
+            explanation: 'A tax far above the external cost cuts output below the efficient level, so the intervention itself creates a deadweight loss. The factory, the monopoly and the free riders are market failures that government action is meant to fix.'
+          },
+          {
+            question: 'Why do private markets tend to underprovide national defense?',
+            options: [
+              'Nonpayers cannot be excluded, so many free ride',
+              'One more user raises the cost of providing it',
+              'Its benefits go only to the people who pay for it',
+              'Firms that supply it face too much competition'
+            ],
+            correctAnswer: 0,
+            explanation: 'National defense is non-excludable, so people can benefit without paying and private sellers cannot collect enough revenue to supply it. It is also non-rival, so one more person protected adds no cost, and its benefits reach payers and nonpayers alike.'
           }
         ]
       }

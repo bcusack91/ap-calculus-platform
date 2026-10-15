@@ -185,13 +185,15 @@ Because of free riders, **private markets will underprovide public goods** — o
 | Negative consumption | **Excise tax** | Raises price to reflect social cost |
 | Positive consumption | **Subsidy to consumers** | Lowers price to encourage optimal consumption |
 
-### The Coase Theorem
+### Beyond the AP Course: The Coase Theorem
+
+> ℹ️ **Enrichment:** The Coase theorem is not part of the AP Microeconomics Course and Exam Description, so the AP exam does not test it. It is included because it explains how some externalities are settled without a tax or subsidy.
 
 If **property rights are clearly defined** and **transaction costs are low**, private parties can negotiate to resolve externalities without government intervention.
 
 Example: If a factory has the right to pollute, fisheries downstream can pay the factory to reduce output. If fisheries have the right to clean water, the factory must compensate them.
 
-> ⚠️ **AP Trap:** The Coase Theorem requires LOW transaction costs and CLEAR property rights. If either condition fails, private negotiation will not work.
+> ⚠️ **Note:** The Coase theorem requires LOW transaction costs and CLEAR property rights. If either condition fails, private negotiation will not work, which is why the AP course focuses on per-unit taxes and subsidies.
       `
     },
     {
@@ -214,15 +216,15 @@ Example: If a factory has the right to pollute, fisheries downstream can pay the
             explanation: 'A Pigouvian tax equal to the external cost per unit shifts MPC up to MSC, reducing quantity from the market equilibrium to the socially optimal level and eliminating deadweight loss.'
           },
           {
-            question: 'Which of the following is a requirement for the Coase Theorem to hold?',
+            question: 'Student vaccinations protect classmates who are not vaccinated. Which policy would move this market toward the socially optimal quantity?',
             options: [
-              'Government must set the tax rate correctly',
-              'Transaction costs must be low and property rights clearly defined',
-              'The externality must be positive rather than negative',
-              'There must be no free riders in the market'
+              'A per-unit subsidy equal to the external benefit',
+              'A per-unit tax equal to the external benefit',
+              'A price ceiling set below the market price',
+              'A quota capping vaccinations at the market level'
             ],
-            correctAnswer: 1,
-            explanation: 'The Coase Theorem states that private negotiation can resolve externalities IF property rights are clearly defined AND transaction costs are low.'
+            correctAnswer: 0,
+            explanation: 'A positive consumption externality makes the market underproduce, and a per-unit subsidy equal to the external benefit raises quantity to where MSB = MSC. A tax or a cap would push quantity even further below the optimum, and a ceiling below the market price creates a shortage.'
           }
         ]
       }
