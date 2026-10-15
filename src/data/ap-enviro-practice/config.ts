@@ -29,7 +29,7 @@ export const config: FullLengthExamConfig = {
       name: 'Section II',
       shortName: 'Free Response',
       description:
-        '3 long free-response questions (10 points each, ~23 min each): Q1 Design an Investigation, Q2 Analyze an Environmental Problem and Propose a Solution (with calculations), Q3 Analyze an Environmental Problem (with calculations). Self-graded rubric checklist after each part.',
+        '3 long free-response questions (10 points each, ~23 min each): Q1 Design an Investigation, Q2 Analyze an Environmental Problem and Propose a Solution, Q3 Analyze an Environmental Problem and Propose a Solution Doing Calculations. Self-graded rubric checklist after each part.',
       timeLimitMinutes: 70,
       items: FRQS,
     },

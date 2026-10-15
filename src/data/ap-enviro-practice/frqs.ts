@@ -4,8 +4,8 @@ import type { SAQItem } from '@/components/FullLengthPracticeExam'
  * AP Environmental Science — Section II Free-Response.
  * 3 long FRQs, 10 points each, 70 minutes total (~23 min each):
  *   Q1 — Design an Investigation
- *   Q2 — Analyze an Environmental Problem and Propose a Solution (with calculations)
- *   Q3 — Analyze an Environmental Problem and Propose a Solution (doing math)
+ *   Q2 — Analyze an Environmental Problem and Propose a Solution
+ *   Q3 — Analyze an Environmental Problem and Propose a Solution Doing Calculations
  */
 
 export const FRQS: SAQItem[] = [

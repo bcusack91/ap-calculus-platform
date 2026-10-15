@@ -5,7 +5,7 @@ import { FRQS } from './frqs'
 export const config: FullLengthExamConfig = {
   subject: 'AP Biology',
   description:
-    'Full-length practice exam modeled on the official College Board AP Biology exam. 60 stimulus-based MCQs and 6 free-response questions (2 long + 4 short) covering all 8 units. Each FRQ part has a 1-point rubric checklist you grade after submitting.',
+    'Full-length practice exam modeled on the official College Board AP Biology exam. 60 MCQs, many built on data or scenarios, and 6 free-response questions (2 long + 4 short) covering all 8 units. Each FRQ part has a 1-point rubric checklist you grade after submitting.',
   backLink: { href: '/ap-biology', label: 'AP Biology' },
   ctaLinks: [
     { href: '/ap-bio-diagnostic', label: 'Diagnostic Test' },
@@ -20,7 +20,7 @@ export const config: FullLengthExamConfig = {
       name: 'Section I',
       shortName: 'Multiple Choice',
       description:
-        '60 stimulus-based multiple-choice questions across all 8 units (Chemistry of Life; Cell Structure & Function; Cellular Energetics; Cell Communication & Cell Cycle; Heredity; Gene Expression & Regulation; Natural Selection; Ecology).',
+        '60 multiple-choice questions, many built on data or scenarios, across all 8 units (Chemistry of Life; Cell Structure & Function; Cellular Energetics; Cell Communication & Cell Cycle; Heredity; Gene Expression & Regulation; Natural Selection; Ecology).',
       timeLimitMinutes: 90,
       items: MCQS,
     },
