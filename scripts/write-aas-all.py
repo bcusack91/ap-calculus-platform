@@ -21,8 +21,14 @@ Part angles (1-7):
   6. Source/data analysis (primary sources + interpretation)
   7. AP exam strategy & review
 """
-
 from __future__ import annotations
+
+
+import sys as _sys
+if "--force" not in _sys.argv:
+    _sys.exit("write-aas-all.py is retired: the AAS lessons were rewritten and rebalanced by hand in Oct 2026 (AP Phase 1). Running it would overwrite that work. Pass --force only if you mean to.")
+
+
 import os, json, textwrap
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
