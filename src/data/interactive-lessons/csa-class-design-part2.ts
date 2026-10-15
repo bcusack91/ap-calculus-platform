@@ -5,19 +5,74 @@ export const csaClassDesignPart2Data = {
       id: 'csaclass2-intro',
       type: 'text' as const,
       content: `
-# 💻 Class Design & Encapsulation
+# 🏛️ Class Design
 
-**Part 2 of 7 — Key Processes**
+**Part 2 of 7 — Static Variables and Methods in Depth**
 
-Understanding the processes related to Class Design & Encapsulation helps explain how and why patterns develop. This part explores the mechanisms driving key phenomena.
+---
 
-### Key Concepts
+Part 1 compared static and instance members in a table. This part traces them (CED Topic 3.7): how one shared variable changes as objects are created and used, how constants work, and exactly what a static method may refer to.
 
-| Concept | Description |
-|---------|-------------|
-| **Process 1** | The primary mechanism that drives patterns in Class Design & Encapsulation |
-| **Process 2** | A secondary process that shapes outcomes in Class Design & Encapsulation |
-| **Cause and effect** | The relationship between actions and outcomes in Class Design & Encapsulation |
+| In this part |
+|---|
+| One shared copy: tracing static and instance state together |
+| \`static final\` constants |
+| What a static method can and cannot reference |
+| Worked example: a team total shared by every player |
+      `
+    },
+    {
+      id: 'csaclass2-shared',
+      type: 'text' as const,
+      content: `
+## One Copy for the Whole Class
+
+A **class variable** (declared \`static\`) belongs to the class. There is exactly one copy, no matter how many objects exist, and every object reads and writes that same copy. An **instance variable** gives every object its own copy.
+
+\`\`\`java
+public class Ticket {
+    public static final int LIMIT = 500;
+    private static int nextNumber = 100;
+    private static int issued = 0;
+
+    private int number;
+
+    public Ticket() {
+        number = nextNumber;
+        nextNumber++;
+        issued++;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public static int getIssued() {
+        return issued;
+    }
+}
+\`\`\`
+
+\`\`\`java
+Ticket a = new Ticket();
+Ticket b = new Ticket();
+Ticket c = new Ticket();
+\`\`\`
+
+| After | nextNumber (shared) | issued (shared) | a.number | b.number | c.number |
+|---|---|---|---|---|---|
+| class is loaded | 100 | 0 | | | |
+| \`new Ticket()\` for a | 101 | 1 | 100 | | |
+| \`new Ticket()\` for b | 102 | 2 | 100 | 101 | |
+| \`new Ticket()\` for c | 103 | 3 | 100 | 101 | 102 |
+
+- The initializers \`= 100\` and \`= 0\` on the static variables run **once**, when the class is loaded, not on every \`new\`.
+- Each constructor call copies the shared counter into the new object's own \`number\`, then advances the counter. This is the standard way to give objects unique IDs.
+- \`Ticket.getIssued()\` returns 3. Client code calls a static method with the **class name**.
+
+### Constants
+
+\`LIMIT\` is \`public static final\`: \`static\` because one value serves the whole class, and \`final\` because it can never be reassigned. Any assignment such as \`Ticket.LIMIT = 600;\` is a compile error, anywhere. Constants are written in capitals by convention and are often public, since nobody can change them.
       `
     },
     {
@@ -25,148 +80,202 @@ Understanding the processes related to Class Design & Encapsulation helps explai
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
+
+Use the Ticket class above.
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key process in Class Design & Encapsulation?',
+            question: 'A student deletes the word static from the declaration of nextNumber. After the three tickets above are created, what does c.getNumber() return?',
             options: [
-              'A random event',
-              'A systematic mechanism that produces predictable patterns',
-              'An unexplainable phenomenon',
-              'A one-time occurrence'
+              '100',
+              '102',
+              '103',
+              '101'
             ],
-            correctAnswer: 1,
-            explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.'
+            correctAnswer: 0,
+            explanation: 'As an instance variable, nextNumber is created at 100 inside every new Ticket, so each ticket copies 100 and then advances only its own counter. The shared issued count still reaches 3.'
           },
           {
-            question: 'Understanding cause and effect in Class Design & Encapsulation helps students:',
+            question: 'Which statement in a client class does NOT compile?',
             options: [
-              'Memorize dates',
-              'Explain why patterns exist rather than just describing them',
-              'Avoid analysis',
-              'Skip exam questions'
+              'Ticket.LIMIT = 600;',
+              'int n = Ticket.getIssued();',
+              'int x = Ticket.LIMIT + 1;',
+              'Ticket t = new Ticket();'
             ],
-            correctAnswer: 1,
-            explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.'
+            correctAnswer: 0,
+            explanation: 'A final variable cannot be reassigned. Reading the public constant, calling the public static method and constructing a Ticket are all legal from another class.'
+          },
+          {
+            question: 'What is the value of a.getNumber() + b.getNumber() for the tickets above?',
+            options: [
+              '201',
+              '200',
+              '203',
+              '202'
+            ],
+            correctAnswer: 0,
+            explanation: 'a was given 100 and b was given 101, because the shared counter advanced after each constructor call. Their sum is 201.'
           }
         ]
       }
     },
     {
-      id: 'csaclass2-content',
+      id: 'csaclass2-rules',
       type: 'text' as const,
       content: `
-## Key Processes — Deeper Dive
+## What a Static Method Can Reference
 
-### Process 1
-The primary mechanism that drives patterns in Class Design & Encapsulation. Understanding this concept is essential for mastering Class Design & Encapsulation in AP Computer Science A.
+A static method is called on the class, not on an object, so inside it there is **no current object** and no \`this\`.
 
-### Process 2
-A secondary process that shapes outcomes in Class Design & Encapsulation. This builds on the previous concept and connects to broader themes in the course.
+| Inside a static method of class Ticket | Allowed? |
+|---|---|
+| static variables and static methods, by name (\`issued\`, \`getIssued()\`) | yes |
+| its own parameters and local variables | yes |
+| an instance variable by its bare name (\`number\`) | **no** — whose number? |
+| an instance method by its bare name (\`getNumber()\`) | **no** — called on which object? |
+| the keyword \`this\` | **no** |
+| an instance variable or method through an object reference (\`t.number\`, \`t.getNumber()\`) | yes |
 
-### Cause and effect
-The relationship between actions and outcomes in Class Design & Encapsulation. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+\`\`\`java
+// inside Ticket
+public static int later(Ticket t1, Ticket t2) {
+    if (t1.number > t2.number) {   // OK: instance data through references
+        return t1.number;
+    }
+    return t2.number;
+}
+
+public static int lastNumber() {
+    return number;                  // does NOT compile: no current object
+}
+\`\`\`
+
+An **instance** method has no such limits: it can use instance variables, static variables, instance methods and static methods, because it always runs on some object and can also see everything the class shares.
+
+> 🔑 **Key Concept:** Make a method static when its job does not depend on any one object's state, such as reporting a class-wide count or doing a calculation from its parameters alone. If it needs one object's fields, make it an instance method, or pass the object in as a parameter.
       `
     },
     {
-      id: 'csaclass2-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to the primary mechanism that drives patterns in Class Design & Encapsulation?
-
-2) What concept describes a secondary process that shapes outcomes in Class Design & Encapsulation?
-
-3) Name the term for the relationship between actions and outcomes in Class Design & Encapsulation.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: P',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Process 1 (The primary mechanism that drives patterns in Class Design & Encapsulation), Process 2 (A secondary process that shapes outcomes in Class Design & Encapsulation), and Cause and effect (The relationship between actions and outcomes in Class Design & Encapsulation).'
-      }
-    },
-    {
-      id: 'csaclass2-dropdown',
+      id: 'csaclass2-static-check',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Static or Not?** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The primary mechanism that drives patterns in Class Design & Encapsulation is called ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'None of these']
+            label: 'Inside a static method of Ticket, the statement return issued; ___',
+            options: ['compiles', 'does not compile', 'compiles only with this.issued', 'compiles only with a Ticket parameter']
           },
           {
-            label: 'A secondary process that shapes outcomes in Class Design & Encapsulation describes ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'All of these']
+            label: 'Inside a static method of Ticket with a Ticket parameter t, the expression t.getNumber() ___',
+            options: ['compiles', 'does not compile', 'needs the word static added', 'returns the shared counter']
           },
           {
-            label: 'The relationship between actions and outcomes in Class Design & Encapsulation is known as ___',
-            options: ['Cause and effect', 'Process 1', 'Process 2', 'None of these']
+            label: 'Inside an instance method of Ticket, the statement issued++; ___',
+            options: ['changes the one shared count', 'changes this object\'s own count', 'does not compile', 'changes only a local copy']
           }
         ],
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Process 1 — The primary mechanism that drives patterns in Class Design & Encapsulation. Process 2 — A secondary process that shapes outcomes in Class Design & Encapsulation. Cause and effect — The relationship between actions and outcomes in Class Design & Encapsulation.'
+        correctAnswers: ['compiles', 'compiles', 'changes the one shared count'],
+        hint1: 'issued is a static variable of the same class.',
+        hint2: 'An object reference supplies the object that the static method itself lacks.',
+        hint3: 'Instance methods can see static variables too, and there is only one copy.',
+        explanation: 'A static method may name static variables directly, and may reach instance members through an object reference such as t. An instance method can also use static variables, and since only one copy exists, issued++ changes the count every Ticket sees.'
       }
     },
     {
-      id: 'csaclass2-strategy',
+      id: 'csaclass2-worked',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Worked Example: A Shared Team Total
 
-### Misconceptions to Avoid
-- Don\'t confuse **Process 1** with **Process 2** — while related, they address different aspects of Class Design & Encapsulation.
-- **Cause and effect** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+\`\`\`java
+public class Player {
+    private static int playerCount = 0;
+    private static int teamPoints = 0;
 
-### AP Strategy Moves
-- When you see questions about key processes, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect key processes to broader themes in AP Computer Science A for higher scores.
+    private String name;
+    private int points;
+
+    public Player(String n) {
+        name = n;
+        points = 0;
+        playerCount++;
+    }
+
+    public void score(int p) {
+        points += p;
+        teamPoints += p;
+    }
+
+    public double share() {
+        return (double) points / teamPoints;
+    }
+
+    public static double average() {
+        return (double) teamPoints / playerCount;
+    }
+}
+\`\`\`
+
+\`\`\`java
+Player a = new Player("Ana");
+Player b = new Player("Bo");
+a.score(6);
+b.score(4);
+a.score(10);
+\`\`\`
+
+**Step 1 — Separate the two kinds of state.** \`playerCount\` and \`teamPoints\` have one copy each. \`name\` and \`points\` exist once per Player.
+
+**Step 2 — Trace.**
+
+| Statement | playerCount | teamPoints | a.points | b.points |
+|---|---|---|---|---|
+| \`new Player("Ana")\` | 1 | 0 | 0 | |
+| \`new Player("Bo")\` | 2 | 0 | 0 | 0 |
+| \`a.score(6)\` | 2 | 6 | 6 | 0 |
+| \`b.score(4)\` | 2 | 10 | 6 | 4 |
+| \`a.score(10)\` | 2 | 20 | 16 | 4 |
+
+**Step 3 — Evaluate.** \`a.share()\` is 16 / 20 = 0.8 and \`b.share()\` is 4 / 20 = 0.2. \`Player.average()\` is 20 / 2 = 10.0.
+
+**Step 4 — Check the method kinds.** \`share\` must be an instance method because it reads one player's \`points\`. \`average\` uses only class variables, so it is static and is called as \`Player.average()\`.
       `
     },
     {
       id: 'csaclass2-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
+
+Use the Player trace above.
       `,
       exercise: {
         questions: [
           {
-            question: 'A student observes a pattern and needs to explain the underlying process. They should:',
+            question: 'A third Player c = new Player("Cy") is created after the trace and never scores. Which value changes?',
             options: [
-              'Just describe what they see',
-              'Identify the mechanism causing the pattern and explain how it operates',
-              'Say the pattern is random',
-              'Ignore the pattern'
+              'the class average',
+              'a\'s share',
+              'b\'s share',
+              'a\'s points'
             ],
-            correctAnswer: 1,
-            explanation: 'Explaining processes requires identifying the underlying mechanism, not just describing the observable pattern.'
+            correctAnswer: 0,
+            explanation: 'The constructor adds 1 to playerCount, so the average becomes 20 / 3. teamPoints and each player\'s points are unchanged, so both shares stay the same.'
           },
           {
-            question: 'On the AP exam, process questions typically require students to:',
+            question: 'Why could share NOT be declared static?',
             options: [
-              'List facts',
-              'Explain how a mechanism works and connect it to outcomes',
-              'Draw a picture',
-              'Write a poem'
+              'It reads points, which each Player object holds its own copy of',
+              'It returns a double, but static methods may only return int values',
+              'It is called by client code, which may only call instance methods',
+              'It divides by teamPoints, which a static method is unable to read'
             ],
-            correctAnswer: 1,
-            explanation: 'AP process questions test whether students understand HOW things work, not just WHAT happens.'
+            correctAnswer: 0,
+            explanation: 'A static method has no current object, so the bare name points would have no meaning. Static methods can return any type, may be called by clients, and can read static variables such as teamPoints.'
           }
         ]
       }

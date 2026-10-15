@@ -128,7 +128,7 @@ public boolean hasConsecutiveDuplicates(int[] arr) {
 
 > ⚠️ Loop to \`arr.length - 1\` (not \`arr.length\`) when comparing arr[i] with arr[i + 1] to avoid ArrayIndexOutOfBoundsException.
 
-## Selection Sort (AP Exam Reference)
+## Selection Sort (Traced on the AP Exam)
 
 \`\`\`java
 for (int i = 0; i < arr.length - 1; i++) {
@@ -152,7 +152,7 @@ for (int i = 0; i < arr.length - 1; i++) {
       content: `
 **Applied Recall** ✍️
 
-1) Linear search checks each element one by one and has worst-case complexity of _______ comparisons for an array of n elements.
+1) Linear search checks each element one by one, so in the worst case it makes _______ comparisons for an array of n elements.
 
 2) When comparing consecutive pairs arr[i] and arr[i+1], the loop should run to arr.length - _______.
 
@@ -164,7 +164,7 @@ for (int i = 0; i < arr.length - 1; i++) {
         hint1: 'It may need to check every single element.',
         hint2: 'Stopping one before the end prevents going out of bounds.',
         hint3: 'A holding variable for the swap.',
-        explanation: 'Linear search = O(n) worst case. Loop to length - 1 for consecutive pairs. temp variable for swapping.'
+        explanation: 'Linear search makes n comparisons in the worst case (target absent or last). Loop to length - 1 for consecutive pairs. temp variable for swapping.'
       }
     },
     {
@@ -206,7 +206,7 @@ for (int i = 0; i < arr.length - 1; i++) {
 - When shifting RIGHT, start from the END to avoid overwriting
 - **Reversing** only needs length/2 iterations — do not double-swap!
 - Know how to write a **swap** using a temp variable — this is fundamental
-- Selection sort and insertion sort are on the AP quick reference — know how they work
+- Selection sort and insertion sort are CED algorithms you must be able to trace — they are NOT on the Java Quick Reference, so know how each pass works
       `
     },
     {

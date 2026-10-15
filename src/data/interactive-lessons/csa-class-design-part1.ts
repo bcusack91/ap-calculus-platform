@@ -17,7 +17,7 @@ export const csaClassDesignPart1Data = {
 |---------|----------|--------|
 | **Belongs to** | Each object | The class itself |
 | **Access** | \`object.method()\` | \`ClassName.method()\` |
-| **Can access** | Instance + static members | Static members only |
+| **Can access** | Instance + static members | Static members directly; instance members only through an object reference |
 | **Keyword** | (none) | \`static\` |
 | **Example** | \`s.length()\` | \`Math.sqrt(16)\` |
 
@@ -36,12 +36,14 @@ public class Counter {
 
     public static int getTotalCount() {
         return totalCount;      // OK - static method accessing static variable
-        // return myCount;      // ERROR - static method cannot access instance variable
+        // return myCount;      // ERROR - no current object here, so the bare name myCount has no meaning
     }
 }
 \`\`\`
 
 > 🔑 **Static variables** are shared across all instances of a class. Changing it in one place changes it everywhere. Great for counting objects or shared constants.
+
+> ⚠️ A static method has no \`this\`, so it cannot use an instance variable by its bare name. It **can** reach instance data through an object reference it is given or creates, for example \`c.myCount\` for a Counter \`c\` passed in as a parameter.
       `
     },
     {
@@ -64,7 +66,7 @@ public class Counter {
             explanation: 'Each time the constructor runs, totalCount++ is executed. After 3 objects are created, totalCount = 3. Since totalCount is static, it is shared by all Counter instances.'
           },
           {
-            question: 'Why would a static method cause a compile error if it tries to access an instance variable?',
+            question: 'Why does a static method cause a compile error if it uses an instance variable by its bare name, as in return myCount;?',
             options: [
               'Static methods run faster and cannot use slow instance data',
               'Static methods belong to the class, not any object, so there is no "this" to reference',
@@ -72,7 +74,7 @@ public class Counter {
               'Static methods can only return void'
             ],
             correctAnswer: 1,
-            explanation: 'A static method is called on the class (e.g., Math.sqrt()), not on an object. Since no object exists in that context, there are no instance variables to access.'
+            explanation: 'A static method is called on the class (e.g., Math.sqrt()), not on an object, so there is no current object whose myCount the bare name could mean. It can still reach instance data through an object reference, such as c.myCount for a Counter c passed in as a parameter.'
           }
         ]
       }
@@ -149,15 +151,15 @@ public class Example {
             options: ['Loop scope (only inside the loop)', 'Method scope', 'Class scope', 'Global scope']
           },
           {
-            label: 'Math.PI is a static final variable. It is accessed using ___',
-            options: ['The class name: Math.PI', 'An object: new Math().PI', 'A method: Math.getPI()', 'Import only']
+            label: 'Integer.MAX_VALUE is a static final variable. It is accessed using ___',
+            options: ['The class name: Integer.MAX_VALUE', 'A new object: new Integer().MAX_VALUE', 'A method: Integer.getMaxValue()', 'The bare name: MAX_VALUE']
           },
           {
             label: 'Two methods named calculate(int x) and calculate(int x, int y) demonstrate ___',
             options: ['Method overloading', 'Method overriding', 'Inheritance', 'Polymorphism']
           }
         ],
-        correctAnswers: ['Loop scope (only inside the loop)', 'The class name: Math.PI', 'Method overloading'],
+        correctAnswers: ['Loop scope (only inside the loop)', 'The class name: Integer.MAX_VALUE', 'Method overloading'],
         hint1: 'The variable dies when the loop ends.',
         hint2: 'Static members are accessed via the class.',
         hint3: 'Same name, different parameter count.',
@@ -172,8 +174,8 @@ public class Example {
 
 - Know the difference between **static and instance** — this determines how you call methods and access data
 - **Scope** questions test whether a variable is accessible in a given context
-- A static method CANNOT access instance variables (no \`this\` exists)
-- **Overloading**: same name, different parameters. **Overriding**: subclass redefines superclass method (covered in inheritance)
+- A static method has no \`this\`: it cannot use instance variables by their bare names, but it can reach them through an object reference (\`c.myCount\`)
+- **Overloading**: same name, different parameter lists. A different return type alone does not make a legal overload
 - FRQ tip: when designing a class, always start with private instance variables, then write the constructor(s), then methods
       `
     },
