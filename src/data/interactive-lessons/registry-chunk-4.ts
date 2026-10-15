@@ -476,11 +476,11 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'Core Concepts', loader: () => import('./aas-civil-rights-movement-part1').then(m => m.aasCivilRightsMovementPart1Data) },
       { title: 'Key Processes', loader: () => import('./aas-civil-rights-movement-part2').then(m => m.aasCivilRightsMovementPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./aas-civil-rights-movement-part3').then(m => m.aasCivilRightsMovementPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./aas-civil-rights-movement-part4').then(m => m.aasCivilRightsMovementPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./aas-civil-rights-movement-part5').then(m => m.aasCivilRightsMovementPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./aas-civil-rights-movement-part6').then(m => m.aasCivilRightsMovementPart6Data) },
-      { title: 'AP Review', loader: () => import('./aas-civil-rights-movement-part7').then(m => m.aasCivilRightsMovementPart7Data) }
+      { title: 'Mass Nonviolence Takes Shape: Montgomery, the Sit-ins and the Freedom Rides (1955–1962)', loader: () => import('./aas-civil-rights-movement-part3').then(m => m.aasCivilRightsMovementPart3Data) },
+      { title: '1963–1964: Birmingham, the March on Washington and the Civil Rights Act', loader: () => import('./aas-civil-rights-movement-part4').then(m => m.aasCivilRightsMovementPart4Data) },
+      { title: 'Voting Rights and the Limits of Victory (1965–1968)', loader: () => import('./aas-civil-rights-movement-part5').then(m => m.aasCivilRightsMovementPart5Data) },
+      { title: 'Source Workshop: Voices and Images of the Movement', loader: () => import('./aas-civil-rights-movement-part6').then(m => m.aasCivilRightsMovementPart6Data) },
+      { title: 'Synthesis and AP Review', loader: () => import('./aas-civil-rights-movement-part7').then(m => m.aasCivilRightsMovementPart7Data) }
     ],
   },
   'aas-black-power-beyond': {
