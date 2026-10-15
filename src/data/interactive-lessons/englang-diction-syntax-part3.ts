@@ -5,171 +5,227 @@ export const englangDictionSyntaxPart3Data = {
       id: 'englangd3-intro',
       type: 'text' as const,
       content: `
-# ✍️ Diction & Syntax
+# 🧩 Diction and Syntax
 
-**Part 3 of 7 — Patterns & Examples**
+**Part 3 of 7 — Syntax in Depth: Clauses, Balance, and Johnson's Letter to Lord Chesterfield, 1755**
 
-This part examines specific patterns and real-world examples related to Diction & Syntax. Case studies help illustrate abstract concepts.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| Clauses Show Relationships |
+| Where the Main Clause Goes |
+| Patterns of Balance |
+| 📖 Close Reading: Johnson to Chesterfield |
 
-| Concept | Description |
-|---------|-------------|
-| **Structural pattern** | A recurring structure within Diction & Syntax |
-| **Case study** | A specific real-world example that illustrates Diction & Syntax |
-| **Comparison** | Analyzing similarities and differences across examples of Diction & Syntax |
-      `
+> 🔑 **Key Concept:** Skill 7.B asks you to explain how writers **create, combine, and place independent and dependent clauses** to show relationships between ideas. Syntax is not only rhythm. Which idea gets the main clause, which is subordinated, and which comes last tell the reader what matters most.
+`
+    },
+    {
+      id: 'englangd3-clauses',
+      type: 'text' as const,
+      content: `
+## Clauses Show Relationships
+
+An **independent clause** can stand alone as a sentence. A **dependent (subordinate) clause** cannot; it begins with a word such as *because, although, when, if, unless, since,* or a relative pronoun such as *which* or *who*.
+
+### Coordination and Subordination
+
+| Method | Signals | Relationship shown | Example |
+|---|---|---|---|
+| **Coordination** | and, but, or, nor, for, so, yet; a semicolon | The ideas are of **equal** weight | "The council debated for hours, but it reached no decision." |
+| **Subordination** | because, although, if, when, which | One idea is **main**, the other **supporting** | "Although the council debated for hours, it reached no decision." |
+
+The same two facts can say different things depending on which one gets the main clause.
+
+| Sentence | What it emphasizes |
+|---|---|
+| "Although the bridge is old, it is safe." | Safety: the age is conceded |
+| "Although the bridge is safe, it is old." | Age: the safety is conceded |
+
+A concession placed in a dependent clause is granted and then set aside. That is why "although" clauses are a writer's favorite tool for qualifying a claim without weakening it.
+
+## Where the Main Clause Goes
+
+| Sentence type | Structure | Effect | Example |
+|---|---|---|---|
+| **Loose (cumulative)** | Main clause first, details added after | Natural, conversational; adds detail as it goes | "She left the hall, pausing at the door, looking back once at the crowd." |
+| **Periodic** | Main clause held to the end | Suspense; the final words get the emphasis | "Pausing at the door, looking back once at the crowd, she left the hall." |
+
+The end of a sentence is its position of greatest emphasis. Writers often place the idea they most want remembered there.
+`
     },
     {
       id: 'englangd3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Why do analysts use case studies?',
+            question: 'Which sentence places the most emphasis on the cost of the new stadium?',
             options: [
-              'They are easier than analysis',
-              'They provide concrete examples that illustrate abstract concepts',
-              'They replace all other methods',
-              'They are required by law'
+              'The new stadium will attract visitors, but it will cost \\$400 million.',
+              'Although it will cost \\$400 million, the new stadium will attract visitors.',
+              'The new stadium will cost \\$400 million and will attract many visitors.',
+              'Costing \\$400 million, the new stadium will attract many new visitors.'
             ],
-            correctAnswer: 1,
-            explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
+            correctAnswer: 0,
+            explanation: 'The cost is in its own independent clause after "but," and it falls at the end of the sentence, the position of greatest emphasis. The other versions subordinate the cost, coordinate it equally with the visitors, or tuck it into an opening phrase.'
           },
           {
-            question: 'Comparing examples of Diction & Syntax across examples helps:',
+            question: 'In the sentence "Although the evidence is incomplete, the committee should act now," the dependent clause functions to',
             options: [
-              'Nothing',
-              'Identify universal patterns and unique local variations',
-              'Confuse students',
-              'Waste time'
+              'state the writer\'s main claim about the evidence',
+              'concede a limitation before asserting the claim',
+              'give a reason why the committee should wait longer',
+              'introduce a second claim equal in weight to the first'
             ],
             correctAnswer: 1,
-            explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).'
+            explanation: 'The "although" clause grants that the evidence is incomplete and then yields to the main clause, which holds the claim. Subordination makes the concession secondary rather than equal, and the sentence argues against waiting.'
           }
         ]
       }
     },
     {
-      id: 'englangd3-content',
+      id: 'englangd3-balance',
       type: 'text' as const,
       content: `
-## Patterns & Examples — Deeper Dive
+## Patterns of Balance
 
-### Structural pattern
-A recurring structure within Diction & Syntax. Understanding this concept is essential for mastering Diction & Syntax in AP English Language.
+| Pattern | Definition | Example |
+|---|---|---|
+| **Parallelism** | Matching grammatical forms for matching ideas | "to work, to save, and to give" |
+| **Tricolon** | A series of three parallel elements, often building | "one act of assistance, one word of encouragement, or one smile of favour" |
+| **Antithesis** | Contrasting ideas in parallel form | "had it been early, had been kind; but it has been delayed" |
+| **Balanced sentence** | Two halves of similar length and structure | "Such treatment I did not expect, for I never had a Patron before." |
+| **Inversion** | Normal word order reversed | "Such treatment I did not expect" (object before subject) |
 
-### Case study
-A specific real-world example that illustrates Diction & Syntax. This builds on the previous concept and connects to broader themes in the course.
+Balance suggests control and judgment. A writer who weighs one clause against another sounds as if he has weighed the ideas themselves. That impression of control is part of the writer's ethos.
+`
+    },
+    {
+      id: 'englangd3-situation',
+      type: 'text' as const,
+      content: `
+## 📖 Close Reading: Johnson to Chesterfield
 
-### Comparison
-Analyzing similarities and differences across examples of Diction & Syntax. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
+### The Situation
+
+| Component | Details |
+|---|---|
+| **Writer** | Samuel Johnson, who spent most of a decade compiling *A Dictionary of the English Language* (published April 1755) |
+| **Audience** | Philip Stanhope, Earl of Chesterfield, a powerful nobleman whom Johnson had approached as a possible patron years earlier, with little result |
+| **Exigence** | Shortly before the Dictionary appeared, Chesterfield published two essays in the periodical *The World* praising it, as if he had been its supporter all along |
+| **Purpose** | To refuse, with perfect courtesy, the credit Chesterfield was claiming |
+
+The text follows James Boswell's *Life of Samuel Johnson* (1791), including Boswell's spellings ("past," "favour").
+
+> Seven years, my Lord, have now past, since I waited in your outward rooms, or was repulsed from your door; during which time I have been pushing on my work through difficulties, of which it is useless to complain, and have brought it, at last, to the verge of publication, without one act of assistance, one word of encouragement, or one smile of favour. Such treatment I did not expect, for I never had a Patron before.
+>
+> The shepherd in Virgil grew at last acquainted with Love, and found him a native of the rocks.
+>
+> Is not a Patron, my Lord, one who looks with unconcern on a man struggling for life in the water, and, when he has reached ground, encumbers him with help? The notice which you have been pleased to take of my labours, had it been early, had been kind; but it has been delayed till I am indifferent, and cannot enjoy it; till I am solitary, and cannot impart it; till I am known, and do not want it.
+>
+> — Samuel Johnson, letter to the Earl of Chesterfield, February 7, 1755
+`
+    },
+    {
+      id: 'englangd3-reading',
+      type: 'text' as const,
+      content: `
+### Sentence 1: The Long Wait, Then the Tricolon
+
+The first sentence is long and loaded with subordinate material ("since I waited...," "during which time...," "of which it is useless to complain"). Its length imitates the seven years of labor it describes. Then it ends on a tricolon of absence: "without one act of assistance, one word of encouragement, or one smile of favour." The repeated "one" shrinks the request to almost nothing. Johnson did not need much, and he received none of it.
+
+### Sentence 2: Inversion and Irony
+
+"Such treatment I did not expect, for I never had a Patron before." Normal order would be "I did not expect such treatment." Moving "Such treatment" to the front puts the insult first. The coordinating "for" then supplies a reason that is really an accusation: Johnson did not know patrons behaved this way because Chesterfield is the only patron he has had.
+
+### Sentence 3: The Question That Saves Its Sting for the End
+
+The question builds a picture of a drowning man and then delivers its point in the last three words: "encumbers him with help." "Help" should be welcome; "encumbers" makes it a burden. Because the sentence is periodic in effect, holding its main point to the end, the irony lands last and hardest.
+
+### Sentence 4: Antithesis and a Climactic Tricolon
+
+| Clause | Structure | Meaning |
+|---|---|---|
+| "had it been early, had been kind" | Conditional (subordinate) clause | Help would once have been welcome |
+| "but it has been delayed" | Coordinate clause after "but" | The turn |
+| "till I am indifferent, and cannot enjoy it" | "till" clause + consequence | Too late for pleasure |
+| "till I am solitary, and cannot impart it" | Same structure | Too late to share (Johnson's wife had died in 1752) |
+| "till I am known, and do not want it" | Same structure, shortest | Too late to be needed |
+
+Each "till" clause is built the same way, so the reader hears the pattern and waits for its last step. The adjectives shrink as they go, from "indifferent" to "solitary" to the one-syllable "known." The final one is the most damaging: Johnson is now famous and "do[es] not want" (does not need) Chesterfield at all. Placing that clause last makes independence, not grievance, the letter's final word on patronage.
+
+> 🔑 **AP Connection:** When a Section I question asks about "the series of clauses beginning with 'till,'" do not stop at "parallelism." Explain what the **order** does: each clause names a later and larger loss, ending with the one that hurts Chesterfield most.
+`
     },
     {
       id: 'englangd3-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to a recurring structure within Diction & Syntax?
+1) A clause that cannot stand alone as a sentence is a _______ clause.
 
-2) What concept describes a specific real-world example that illustrates Diction & Syntax?
+2) A series of three parallel elements, such as "one act of assistance, one word of encouragement, or one smile of favour," is a _______.
 
-3) Name the term for analyzing similarities and differences across examples of Diction & Syntax.
-
-Use the exact term from this part.
+3) A sentence that holds its main clause or point until the end is a _______ sentence.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Structural pattern', 'Case study', 'Comparison'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Structural pattern (A recurring structure within Diction & Syntax), Case study (A specific real-world example that illustrates Diction & Syntax), and Comparison (Analyzing similarities and differences across examples of Diction & Syntax).'
+        correctAnswers: ['dependent', 'tricolon', 'periodic'],
+        hint1: 'Also called subordinate.',
+        hint2: 'From the Greek for "three limbs."',
+        hint3: 'The opposite of loose or cumulative.',
+        explanation: 'A dependent clause cannot stand alone, three parallel parts form a tricolon, and a sentence that saves its main point for the end is periodic.'
       }
     },
     {
-      id: 'englangd3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'A recurring structure within Diction & Syntax is called ___',
-            options: ['Structural pattern', 'Case study', 'Comparison', 'Footnote']
-          },
-          {
-            label: 'A specific real-world example that illustrates Diction & Syntax describes ___',
-            options: ['Structural pattern', 'Case study', 'Comparison', 'Footnote']
-          },
-          {
-            label: 'Analyzing similarities and differences across examples of Diction & Syntax is known as ___',
-            options: ['Comparison', 'Structural pattern', 'Case study', 'Footnote']
-          }
-        ],
-        correctAnswers: ['Structural pattern', 'Case study', 'Comparison'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Structural pattern — A recurring structure within Diction & Syntax. Case study — A specific real-world example that illustrates Diction & Syntax. Comparison — Analyzing similarities and differences across examples of Diction & Syntax.'
-      }
-    },
-    {
-      id: 'englangd3-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'t confuse **Structural pattern** with **Case study** — while related, they address different aspects of Diction & Syntax.
-- **Comparison** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about patterns & examples, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect patterns & examples to broader themes in AP English Language for higher scores.
-      `
-    },
-    {
-      id: 'englangd3-applied',
+      id: 'englangd3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Practice** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks you to provide TWO examples of Diction & Syntax. The strongest response would:',
+            question: 'The phrase "encumbers him with help" at the end of Johnson\'s question about the drowning man is effective chiefly because',
             options: [
-              'Use two examples from the same place',
-              'Use examples from different examples to show the concept applies broadly',
-              'Make up fictional examples',
-              'Provide only one example'
+              'it describes the rescue in plain, everyday language',
+              'its placement at the very end delivers an ironic reversal',
+              'it repeats the opening words of the question exactly',
+              'it introduces a literary allusion to Virgil\'s poetry'
             ],
             correctAnswer: 1,
-            explanation: 'Using examples from different contexts demonstrates broader understanding and the universality of the concept.'
+            explanation: 'The sentence saves the paradox of burdensome "help" for its final position, so the irony lands with full force. The phrase is not plain description, does not repeat the opening, and the Virgil allusion appears in a separate sentence.'
           },
           {
-            question: 'A pattern observed in Diction & Syntax is consistent across many examples. This suggests:',
+            question: 'The inversion in "Such treatment I did not expect" primarily serves to',
             options: [
-              'Coincidence',
-              'An underlying process that reflects a broad general principle',
-              'The data is wrong',
-              'Local factors only'
+              'make the sentence sound more like ordinary speech',
+              'place the insult Johnson received in a position of emphasis',
+              'conceal the fact that Chesterfield is the one being criticized',
+              'indicate that Johnson is uncertain about what happened to him'
             ],
             correctAnswer: 1,
-            explanation: 'Consistent patterns across examples suggest a systematic process rather than coincidence.'
+            explanation: 'Fronting "Such treatment" puts Chesterfield\'s neglect first, where it cannot be missed. Inversion makes a sentence less like ordinary speech, does not hide the target, and the clipped sentence shows certainty rather than doubt.'
+          },
+          {
+            question: 'The three "till" clauses in the final sentence are arranged so that',
+            options: [
+              'each repeats the same loss in more elaborate language',
+              'the last presents Johnson as a man who no longer needs any patron',
+              'the first shows Johnson\'s anger and the others forgive it',
+              'they move backward in time toward their first meeting'
+            ],
+            correctAnswer: 1,
+            explanation: 'The series ends with "till I am known, and do not want it," which shifts from what Johnson has lost to his independence. The clauses name different losses, grow plainer rather than more elaborate, show no forgiveness, and move forward rather than backward in time.'
           }
         ]
       }
     }
   ]
-}
+};

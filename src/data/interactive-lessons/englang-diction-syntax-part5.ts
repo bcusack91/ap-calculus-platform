@@ -5,171 +5,207 @@ export const englangDictionSyntaxPart5Data = {
       id: 'englangd5-intro',
       type: 'text' as const,
       content: `
-# ✍️ Diction & Syntax
+# 🧩 Diction and Syntax
 
-**Part 5 of 7 — Change Over Time**
+**Part 5 of 7 — Diction and Syntax Together: Older Meanings, Combined Effects, and Common Misreadings**
 
-Diction & Syntax has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| Older Words, Older Meanings |
+| Reading Diction and Syntax as One Choice |
+| Seven Misconceptions |
 
-| Concept | Description |
-|---------|-------------|
-| **Continuity** | Aspects of Diction & Syntax that have remained stable over time |
-| **Change** | How Diction & Syntax has transformed due to new forces and conditions |
-| **Trend** | The direction of change in Diction & Syntax over time |
-      `
+> 🔑 **Key Concept:** Parts 2–4 separated word choice from sentence structure so you could see each clearly. On the exam they arrive together, in passages often written one or two centuries ago. This part covers the two places students most often go wrong: reading old words with modern meanings, and assigning fixed effects to devices regardless of context.
+`
+    },
+    {
+      id: 'englangd5-older',
+      type: 'text' as const,
+      content: `
+## Older Words, Older Meanings
+
+Section I passages range from the seventeenth century to the present. A word that looks familiar may have meant something different when it was written. Misreading one word can flip the meaning of a sentence.
+
+| Word in context | Meaning then | A modern misreading |
+|---|---|---|
+| Thoreau (1854): "Still we live meanly, like ants" | In a low, petty, poor way | Cruelly or unkindly |
+| Johnson (1755): "till I am known, and do not want it" | Do not **need** it; do not lack it | Do not desire it |
+| Johnson (1755): "the enchantment of your address" | Your manner and skill in conversation | Your street address or a speech |
+| Lincoln (1861): "intercourse, either amicable or hostile, must continue" | Dealings, communication, trade | The modern narrow sense |
+| Lincoln (1860): "I fully indorse this" | Endorse (older spelling) | A misspelling to correct |
+
+### How to Handle an Unfamiliar or Old Word
+
+1. **Read the sentence around it.** Johnson's "do not want it" follows "till I am known," so *need* fits: a known writer no longer needs a patron.
+2. **Ask what the passage's argument requires.** Thoreau is complaining about petty, cluttered lives, not cruelty, so *mean* must mean *petty*.
+3. **Watch for answer choices that rely on a modern meaning.** Test writers sometimes include one deliberately.
+
+> 🔑 **AP Connection:** A question such as "In context, the word 'want' (line 14) most nearly means" is testing exactly this. The right answer is the meaning that makes the sentence's logic work, which is often not the first meaning you know.
+`
     },
     {
       id: 'englangd5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Studying change over time in Diction & Syntax helps:',
+            question: 'In Johnson\'s "till I am known, and do not want it," the word "want" most nearly means',
             options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
+              'desire',
+              'need',
+              'expect',
+              'deserve'
             ],
             correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
+            explanation: 'Johnson\'s point is that, now famous, he no longer lacks or needs Chesterfield\'s help, the older sense of "want." "Desire" is the modern sense, and neither expecting nor deserving fits the logic of being too late to be useful.'
           },
           {
-            question: 'Continuity in Diction & Syntax means:',
+            question: 'A student reads Thoreau\'s "we live meanly" as an accusation that people treat one another cruelly. The best correction is that "meanly" here means',
             options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
+              'secretly, without telling our neighbors what we do',
+              'in a low and petty way, crowded with trivial things',
+              'selfishly, refusing to share our wealth with the poor',
+              'cautiously, out of fear of what the future may bring'
             ],
             correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
+            explanation: 'The surrounding sentences complain that "our life is frittered away by detail," so "meanly" carries its older sense of lowly and petty. The passage is not about secrecy, selfishness toward the poor, or fear of the future.'
           }
         ]
       }
     },
     {
-      id: 'englangd5-content',
+      id: 'englangd5-together',
       type: 'text' as const,
       content: `
-## Change Over Time — Deeper Dive
+## Reading Diction and Syntax as One Choice
 
-### Continuity
-Aspects of Diction & Syntax that have remained stable over time. Understanding this concept is essential for mastering Diction & Syntax in AP English Language.
+The strongest analysis shows how a word and the sentence around it work together. Look at the close of Roosevelt's war message from Part 2.
 
-### Change
-How Diction & Syntax has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+> Hostilities exist. There is no blinking at the fact that our people, our territory and our interests are in grave danger.
+>
+> With confidence in our armed forces—with the unbounding determination of our people—we will gain the inevitable triumph—so help us God.
 
-### Trend
-The direction of change in Diction & Syntax over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'englangd5-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
+| Feature | Diction | Syntax | Combined effect |
+|---|---|---|---|
+| "Hostilities exist." | A formal, Latin-derived noun and a flat verb | Two words; the shortest sentence in the speech | The legal fact of war, stated without ornament, as if no more words are needed |
+| "our people, our territory and our interests" | Plain, inclusive "our" | Tricolon with repeated "our" | Every listener is included in what is endangered |
+| "With confidence... with the unbounding determination..." | Abstract nouns of resolve | Two parallel "with" phrases set off by dashes, delaying the main clause | Builds anticipation, so the promise arrives last |
+| "so help us God" | Echoes "so help me God," the traditional close of official oaths | A final phrase after a dash | Turns a prediction into a vow |
 
-1) What term refers to aspects of Diction & Syntax that have remained stable over time?
+Neither column alone explains the passage. "Hostilities exist" is powerful because a formal word sits in a two-word sentence; the closing is powerful because abstract words of resolve are arranged to hold back the main clause.
 
-2) What concept describes how Diction & Syntax has transformed due to new forces and conditions?
+### A Model Analysis Sentence
 
-3) Name the term for the direction of change in Diction & Syntax over time.
+> After the speech's long account of diplomacy and attacks, Roosevelt's two-word sentence "Hostilities exist" states the fact of war in the flat, formal language of law, as though the evidence has made argument unnecessary; the closing sentence then reverses this economy, holding back its promise behind two "with" phrases so that "we will gain the inevitable triumph" arrives as the release of built-up resolve.
 
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of Diction & Syntax that have remained stable over time), Change (How Diction & Syntax has transformed due to new forces and conditions), and Trend (The direction of change in Diction & Syntax over time).'
-      }
+Notice the model never says "diction" or "syntax." It quotes, describes the choice precisely, and explains the effect in context.
+`
     },
     {
       id: 'englangd5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Name the Choice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Aspects of Diction & Syntax that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'Audience']
+            label: 'Lincoln, 1861: "intercourse, either amicable or hostile, must continue between them." In context, "intercourse" means ___',
+            options: ['dealings', 'arguments', 'marriages', 'travel']
           },
           {
-            label: 'How Diction & Syntax has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'Audience']
+            label: 'Roosevelt, 1941: "our people, our territory and our interests." The repeated "our" in a series of three forms a ___',
+            options: ['chiasmus', 'tricolon', 'fragment', 'inversion']
           },
           {
-            label: 'The direction of change in Diction & Syntax over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'Audience']
+            label: 'Roosevelt, 1941: the dashes around "with the unbounding determination of our people" chiefly ___',
+            options: ['hold back the main clause', 'show the speaker is unsure', 'mark a quotation', 'cut the sentence short']
           }
         ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of Diction & Syntax that have remained stable over time. Change — How Diction & Syntax has transformed due to new forces and conditions. Trend — The direction of change in Diction & Syntax over time.'
+        correctAnswers: ['dealings', 'tricolon', 'hold back the main clause'],
+        hint1: 'Lincoln means the trade and communication two neighbors cannot avoid.',
+        hint2: 'Three parallel elements.',
+        hint3: 'The main clause, "we will gain the inevitable triumph," comes after them.',
+        explanation: '"Intercourse" here means dealings, the repeated "our" builds a tricolon, and the dashes delay the main clause so the promise lands last.'
       }
     },
     {
-      id: 'englangd5-strategy',
+      id: 'englangd5-misconceptions',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Seven Misconceptions
 
-### Misconceptions to Avoid
-- Don\'t confuse **Continuity** with **Change** — while related, they address different aspects of Diction & Syntax.
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+| Misconception | Why it fails | Better approach |
+|---|---|---|
+| **1. "Short sentences create urgency."** | Thoreau's "Our life is frittered away by detail" is not urgent; it is a calm, plain verdict after a cluttered sentence. | Describe what the contrast in length does **in this passage**: verdict, emphasis, finality, simplicity, or urgency. |
+| **2. "Long sentences are hard to follow, so they weaken an argument."** | Johnson's long first sentence imitates seven years of labor; Thoreau's long purpose sentence imitates deliberation. | Ask whether length mirrors content or builds suspense. |
+| **3. "A word's connotation is fixed."** | "Mean," "want," and "address" changed meaning over time; "simultaneously" and "suddenly" differ only in context. | Read the sentence and the argument before deciding what a word suggests. |
+| **4. "Naming the device is analysis."** | "Johnson uses parallelism" is true of thousands of texts. | Explain what this parallel structure does here: the "till" clauses name a later and larger loss each time. |
+| **5. "Formal language is always more persuasive."** | Roosevelt's homely "There is no blinking at the fact" reaches listeners at home. | Match register to audience and moment. |
+| **6. "Every repetition is anaphora."** | "Simplicity, simplicity, simplicity!" repeats a word back to back (epizeuxis); "ride on the railroad; it rides upon us" reverses order (antimetabole). | Name the pattern accurately, but spend most words on its effect. |
+| **7. "The effect is on 'the reader.'"** | Every text in this topic had a specific audience: Congress, a nobleman, readers in industrial America. | Name the audience and explain why the effect matters to **them**. |
 
-### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP English Language for higher scores.
-      `
+> 🔑 **AP Connection:** Many wrong answers in Section I are **true about the passage but not about the question**. A choice that says "the short sentence creates urgency" may describe a short sentence correctly in general but miss what this one does. Always check the choice against the specific lines.
+`
     },
     {
-      id: 'englangd5-applied',
+      id: 'englangd5-input',
+      type: 'input-boxes' as const,
+      content: `
+**Applied Recall** ✍️
+
+1) In Thoreau's sentence "Still we live meanly, like ants," "meanly" carries its older sense of living in a low and _______ way.
+
+2) Repeating the same word immediately, as in "Simplicity, simplicity, simplicity!", is called _______.
+
+3) Roosevelt's two-word sentence "Hostilities exist" uses a Latin-derived noun, which places it in a _______ register.
+      `,
+      exercise: {
+        boxes: 3,
+        correctAnswers: ['petty', 'epizeuxis', 'formal'],
+        hint1: 'Trivial, small-minded; the word starts with p.',
+        hint2: 'From the Greek for "fastening together"; repetition with nothing between.',
+        hint3: 'The opposite of informal or colloquial.',
+        explanation: 'Thoreau\'s "meanly" means pettily, back-to-back repetition is epizeuxis, and "Hostilities" belongs to a formal register.'
+      }
+    },
+    {
+      id: 'englangd5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Practice** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks how Diction & Syntax has changed in the last 50 years. A strong answer would:',
+            question: 'Which statement about Roosevelt\'s "Hostilities exist" best combines analysis of diction and syntax?',
             options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
+              'It is short, so it creates urgency in the listeners.',
+              'It pairs a formal, legal noun with a stark two-word sentence.',
+              'It uses a noun and a verb, the basic parts of a sentence.',
+              'It is the single most memorable sentence in the entire war message.'
             ],
             correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
+            explanation: 'The analysis links a word choice (a formal, legal noun) to a structure (a two-word sentence), which together state war as a bare fact. The other statements rely on a fixed effect of length, a grammar description, or a judgment with no explanation.'
           },
           {
-            question: 'A trend in Diction & Syntax shows acceleration in recent decades. The most likely explanation is:',
+            question: 'A student writes, "Thoreau uses short sentences to create urgency." Why is this a weak reading of "Our life is frittered away by detail"?',
             options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
+              'Thoreau never uses short sentences anywhere in Walden.',
+              'It delivers a calm verdict, with no call for haste.',
+              'Short sentences cannot carry any meaning in an essay.',
+              'The sentence is actually a fragment, not a full clause.'
             ],
             correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
+            explanation: 'After the crowded sentence before it, the short sentence delivers a plain judgment; nothing in it calls for hurry. It is a complete clause, Thoreau uses short sentences often, and short sentences can carry great weight.'
           }
         ]
       }
     }
   ]
-}
+};
