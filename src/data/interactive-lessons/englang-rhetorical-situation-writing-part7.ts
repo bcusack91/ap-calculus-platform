@@ -63,7 +63,7 @@ The pattern is the same each time: the writer starts from something the audience
             question: 'What strategy do Wollstonecraft\'s dedication and Stanton\'s opening have in common?',
             options: [
               'Each starts from a value the audience holds and extends it to women',
-              'Each opens with a statistic that establishes the scale of the harm',
+              'Each opens with a statistic that establishes the full scale of the harm',
               'Each begins by conceding that the current laws are mostly just',
               'Each addresses an audience of women who already agree with her'
             ],
@@ -85,7 +85,7 @@ The pattern is the same each time: the writer starts from something the audience
             question: 'Which conclusion is most appropriate for an argument essay urging a city council to fund a one-year trial of later library hours?',
             options: [
               'In conclusion, libraries are important, so the hours should be extended.',
-              'A twelve-month test lets the council decide with evidence, not guesses.',
+              'A year-long test lets the council act on evidence, not guesses.',
               'Libraries have existed since ancient times and will continue to exist.',
               'Every council member should be ashamed of the cuts made last year.'
             ],
