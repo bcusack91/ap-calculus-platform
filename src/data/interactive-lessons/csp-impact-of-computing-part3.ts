@@ -36,10 +36,10 @@ Recurring categories of impact you'll be asked to recognize.
           {
             question: "A face-recognition system is significantly less accurate on people of color than on white faces. The most accurate diagnosis is ___",
             options: [
-              "the underlying recognition algorithm itself is intrinsically unfair regardless of which training images were used to fit it.",
-              "the training image dataset was likely not representative of the target population, leading to biased recognition outcomes.",
-              "pixel data fundamentally encodes a bias against certain skin tones at the level of the file format the camera produced.",
-              "modern digital camera sensors have been shown to systematically dislike certain skin tones during the recognition process."
+              "the recognition algorithm itself is inherently unfair no matter which training images are used.",
+              "the training images likely did not represent the population the system is used on, so it learned uneven accuracy.",
+              "the system's developers must have deliberately programmed it to treat some faces differently.",
+              "darker skin tones carry less information in an image, so no system can match them accurately."
             ],
             correctAnswer: 1,
             explanation: "Algorithmic bias most often stems from non-representative training data; the model learns the gaps in its input."
@@ -48,7 +48,7 @@ Recurring categories of impact you'll be asked to recognize.
             question: "Wikipedia is most clearly an example of ___",
             options: [
               "a strict client-server architecture in which one central authoritative server publishes all article content to passive readers.",
-              "crowdsourcing — many distributed contributors collectively producing and editing a shared body of encyclopedic knowledge.",
+              "crowdsourcing, in which many volunteer contributors write and edit a shared body of encyclopedic knowledge.",
               "a peer-to-peer file-sharing network in which each reader directly distributes article files to other readers nearby.",
               "a machine-learning system that automatically generates new encyclopedia articles from raw web-scraped training data."
             ],
@@ -135,15 +135,15 @@ A digital file is trivially copyable. This collides with traditional IP law (cop
         dropdowns: [
           {
             label: "A \"Creative Commons BY-SA\" license requires ___",
-            options: ["attribution and that derivatives use the same license", "paying a fee", "no use whatsoever", "destroying the original"]
+            options: ["attribution and that derivatives use the same license", "attribution and that derivatives are never sold commercially", "attribution and that the work is never modified at all", "a license fee paid to the creator for every copy shared"]
           },
           {
             label: "An \"anonymized\" dataset of medical records combined with public voter rolls might allow ___",
-            options: ["re-identification of specific individuals", "no privacy concerns", "TLS encryption", "longer battery life"]
+            options: ["re-identification of specific individuals", "permanent deletion of the original records", "stronger encryption of the medical records", "guaranteed anonymity for every patient listed"]
           },
           {
             label: "Open-source software is most clearly an example of ___",
-            options: ["crowdsourcing applied to code", "centralized corporate development", "a P2P file system", "compression"]
+            options: ["crowdsourcing applied to code", "centralized corporate development", "proprietary licensing of code", "closed-source vendor software"]
           }
         ],
         correctAnswers: ["attribution and that derivatives use the same license", "re-identification of specific individuals", "crowdsourcing applied to code"],
@@ -176,10 +176,10 @@ A digital file is trivially copyable. This collides with traditional IP law (cop
           {
             question: "A hiring tool is trained on resumes from the past 10 years of a company that historically hired mostly men. The most likely outcome is ___",
             options: [
-              "the hiring tool will be perfectly fair across genders because algorithms automatically remove human bias from the hiring process.",
-              "the hiring tool will likely reproduce the historical hiring bias, systematically disadvantaging qualified women applying for the same roles.",
-              "the hiring tool will simply fail to read resume files because resumes contain too many free-form text fields for it to parse.",
-              "the hiring tool will overcorrect and end up hiring only women, even when the male candidates are clearly better qualified."
+              "the tool will be fair across genders, since algorithms remove human bias from hiring.",
+              "the tool will likely repeat the old bias, rating qualified women lower than similar men.",
+              "the tool will ignore past outcomes and judge each resume only on the skills it lists.",
+              "the tool will overcorrect and favor women, even over clearly better-qualified men."
             ],
             correctAnswer: 1,
             explanation: "ML systems learn historical patterns; biased input data → biased predictions."
@@ -187,10 +187,10 @@ A digital file is trivially copyable. This collides with traditional IP law (cop
           {
             question: "A free photo-storage service offers unlimited storage in exchange for permission to scan photos for advertising data. Which is the most accurate framing?",
             options: [
-              "The user pays nothing of value for the storage service and faces no other costs in return for the unlimited storage offer.",
-              "The user pays with personal data; the economic value of that data may exceed the storage cost the company would otherwise charge.",
-              "There are no privacy implications because photos uploaded to the service are scanned only by automated software and not by humans.",
-              "Photos cannot reliably be stored in digital form on a remote service like this one without significantly degrading their quality."
+              "Nothing is paid, since a service that charges no money has no other cost to the user.",
+              "The user pays with personal data, which can be worth more to the company than a fee.",
+              "There is no privacy concern, since only software, not people, scans the uploaded photos.",
+              "The scanning permission is meaningless, since terms of service cannot be enforced in court."
             ],
             correctAnswer: 1,
             explanation: "When the product is free, you are often the product — the data has economic value."

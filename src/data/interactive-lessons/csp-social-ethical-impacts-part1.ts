@@ -50,10 +50,10 @@ There is no single right answer — this is an ongoing societal debate.
           {
             question: 'What is the primary trade-off users make when using free online services?',
             options: [
-              'Speed for accuracy',
+              'Higher device costs in exchange for faster load times',
               'Personal data and privacy for convenience and free access',
-              'Security for simplicity',
-              'Storage space for processing power'
+              'Weaker encryption in exchange for simpler login screens',
+              'Software ownership in exchange for automatic updates'
             ],
             correctAnswer: 1,
             explanation: 'Free services (social media, email, search) are funded by advertising. Companies collect user data to target ads. Users trade privacy and personal data for free access to the service.'
@@ -61,10 +61,10 @@ There is no single right answer — this is an ongoing societal debate.
           {
             question: 'What is a "chilling effect" in the context of surveillance?',
             options: [
-              'Surveillance makes computers run slower',
-              'People self-censor and avoid free expression because they know they are being watched',
-              'Surveillance lowers the temperature of data centers',
-              'It refers to cold storage of digital data'
+              'Monitored computers slow down because of the extra logging they are forced to do',
+              'People self-censor lawful speech because they know they are being watched',
+              'Watched users become more careful with their passwords and so are safer online',
+              'Governments pause surveillance programs after the public complains about them'
             ],
             correctAnswer: 1,
             explanation: 'When people know they are being surveilled, they may avoid expressing controversial opinions, organizing protests, or engaging in lawful but sensitive activities. This self-censorship is the chilling effect.'
@@ -150,7 +150,7 @@ There is no single right answer — this is an ongoing societal debate.
           },
           {
             label: 'An author releases a book that anyone can share but not sell commercially. This uses ___',
-            options: ['Creative Commons license', 'Public domain', 'Patent', 'Proprietary license']
+            options: ['Creative Commons license', 'Public domain dedication', 'All-rights-reserved copyright', 'Utility patent']
           }
         ],
         correctAnswers: ['Patent', 'Trademark', 'Creative Commons license'],
@@ -187,8 +187,8 @@ There is no single right answer — this is an ongoing societal debate.
             options: [
               'Only use the app; they cannot see the code',
               'View, modify, and redistribute the source code',
-              'Nothing — open source means the app is not functional',
-              'Only use it for educational purposes'
+              'Use and share it, but never change the source code',
+              'Only use it for non-commercial educational purposes'
             ],
             correctAnswer: 1,
             explanation: 'Open source means the source code is freely available. Users can view it, modify it, and distribute their modifications. This enables collaboration, transparency, and community-driven improvement.'
@@ -196,10 +196,10 @@ There is no single right answer — this is an ongoing societal debate.
           {
             question: 'A company collects user location data and sells it to advertisers without informing users. Which ethical principle is violated?',
             options: [
-              'Copyright law',
-              'Transparency and informed consent regarding data collection',
-              'Open-source licensing',
-              'Patent protection'
+              'Copyright protection for the company\'s own app code',
+              'Transparency and user consent about personal data use',
+              'Open-source licensing terms for third-party libraries',
+              'Patent rights over the location-tracking technology'
             ],
             correctAnswer: 1,
             explanation: 'Users should be informed about what data is collected and how it is used. Selling location data without disclosure violates the principle of transparency and informed consent — a key privacy issue.'

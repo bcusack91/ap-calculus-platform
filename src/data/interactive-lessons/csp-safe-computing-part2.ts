@@ -36,9 +36,9 @@ CSP's "safe computing" topic focuses on what individuals and organizations DO to
             question: "A breach exposes the password \"qwerty123\" used at 14 different sites by the same person. The biggest direct consequence is ___",
             options: [
               "no measurable impact, since each site stores its own independent password copy.",
-              "attackers can try the same password on the user's other sites — credential stuffing.",
-              "the user's connection to those sites runs slightly slower because of the breach.",
-              "the user's browser refuses to compress requests sent to any of the breached sites."
+              "attackers can reuse the leaked password to break into the user's accounts elsewhere.",
+              "only the breached site's account is at risk, since passwords are checked per site.",
+              "the user's other accounts lock automatically once the password appears in a breach."
             ],
             correctAnswer: 1,
             explanation: "Password reuse + breach = credential stuffing."
@@ -48,8 +48,8 @@ CSP's "safe computing" topic focuses on what individuals and organizations DO to
             options: [
               "no risk at all, since the operating system already shipped with security defaults.",
               "known vulnerabilities patched in those updates remain exploitable on this device.",
-              "the device's file compression algorithm becomes slightly slower than freshly patched ones.",
-              "the device removes its support for transport-layer security on outbound connections."
+              "the device slowly loses storage space as older update files pile up unused.",
+              "the device's antivirus stops working, since it needs each update to start."
             ],
             correctAnswer: 1,
             explanation: "Patches close known vulnerabilities."
@@ -120,15 +120,15 @@ Every account is a target. Reduce risk by:
         dropdowns: [
           {
             label: "A password manager primarily helps by ___",
-            options: ["enabling unique strong passwords for every site without memorizing them", "shortening passwords", "compressing data", "replacing TLS"]
+            options: ["enabling unique strong passwords for every site without memorizing them", "letting you reuse one memorable password safely across every site", "encrypting your web traffic so no one on the network can see it", "replacing two-factor authentication on every account you own"]
           },
           {
             label: "An email asking for an MFA code \"to verify your account\" is most likely ___",
-            options: ["phishing — never share MFA codes", "a legitimate request", "a CDN issue", "a TLS handshake"]
+            options: ["phishing — never share MFA codes", "legitimate — reply with the code", "a DDoS attack — flooding your inbox", "a keylogger — malware on your PC"]
           },
           {
             label: "Limiting an app's permissions reduces ___",
-            options: ["the data it can access if compromised", "compression ratio", "TLS overhead", "IPv6 routing"]
+            options: ["the data it can access if compromised", "the need for MFA on your accounts", "the number of updates it needs", "its encryption strength in transit"]
           }
         ],
         correctAnswers: ["enabling unique strong passwords for every site without memorizing them", "phishing — never share MFA codes", "the data it can access if compromised"],
@@ -161,7 +161,7 @@ Every account is a target. Reduce risk by:
             question: "A user gets a text \"From [bank]: confirm transfer with code 482911\". They didn't initiate a transfer. The most appropriate response is ___",
             options: [
               "reply to the text with the code so the bank can finalize the transfer for them.",
-              "don't share the code; contact the bank directly using a known channel — likely phishing.",
+              "don't share the code and call the bank on a number you already know is real.",
               "click any link in the text to investigate the source of the unexpected transfer.",
               "reset every personal password without first contacting the bank to verify the text."
             ],
@@ -172,9 +172,9 @@ Every account is a target. Reduce risk by:
             question: "A school encourages students to use the same password on every system \"for convenience\". The most CSP-aligned critique is ___",
             options: [
               "no critique — password reuse is a reasonable trade-off for student convenience here.",
-              "a single breach exposes every system; teach unique passwords + a manager + MFA instead.",
-              "transport-layer security on each login form fully replaces the need for unique passwords.",
-              "compressing each password before storage would resolve the underlying reuse problem here."
+              "one breach would expose every system, so teach unique passwords with a manager and MFA.",
+              "longer shared passwords would fully solve the problem, since length matters more than reuse.",
+              "reuse is safe as long as the school changes the shared password once every semester."
             ],
             correctAnswer: 1,
             explanation: "Reuse compounds breach impact."

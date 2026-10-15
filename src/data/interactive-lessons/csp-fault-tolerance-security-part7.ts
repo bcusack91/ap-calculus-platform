@@ -26,9 +26,9 @@ export const cspFaultToleranceSecurityPart7Data = {
             question: "CIA in security stands for ___",
             options: [
               "Confidentiality, Integrity, Availability",
-              "Compression, Internet, Authentication",
-              "Cryptography, Internet, Auth",
-              "Confidentiality, Internet, Algorithms"
+              "Confidentiality, Identity, Authentication",
+              "Cryptography, Integrity, Authorization",
+              "Control, Integrity, Accountability"
             ],
             correctAnswer: 0,
             explanation: "CIA = Confidentiality, Integrity, Availability."
@@ -36,10 +36,10 @@ export const cspFaultToleranceSecurityPart7Data = {
           {
             question: "A system that keeps serving users when one server crashes is ___",
             options: [
-              "encrypted",
+              "scalable",
               "fault-tolerant",
-              "compressed",
-              "optional"
+              "high-performance",
+              "secure"
             ],
             correctAnswer: 1,
             explanation: "Fault tolerance = continued operation despite failures."
@@ -107,15 +107,15 @@ export const cspFaultToleranceSecurityPart7Data = {
         dropdowns: [
           {
             label: "A password should be ___",
-            options: ["salted-hashed using a slow KDF (bcrypt / Argon2 / scrypt)", "stored in plaintext for support", "simple MD5 hashed", "encrypted reversibly"]
+            options: ["salted-hashed using a slow KDF (bcrypt / Argon2 / scrypt)", "hashed using a fast unsalted function (MD5 / SHA-1)", "encrypted reversibly with one shared key (AES / DES)", "stored in plaintext so support can read it (no hashing)"]
           },
           {
             label: "TLS protects ___",
-            options: ["confidentiality and integrity in transit", "data at rest only", "against phishing alone", "against compression"]
+            options: ["confidentiality and integrity in transit", "confidentiality and integrity of data at rest", "availability and uptime during a DDoS attack", "users from phishing sites and fake login pages"]
           },
           {
             label: "A blameless post-mortem focuses on ___",
-            options: ["systemic causes and improvements, not individual blame", "finding someone to fire", "compressing logs", "TLS upgrades only"]
+            options: ["systemic causes and improvements, not individual blame", "the individual who caused the outage, not the process", "speed of recovery only, not underlying causes", "identifying who to discipline, not process changes"]
           }
         ],
         correctAnswers: ["salted-hashed using a slow KDF (bcrypt / Argon2 / scrypt)", "confidentiality and integrity in transit", "systemic causes and improvements, not individual blame"],
@@ -148,10 +148,10 @@ export const cspFaultToleranceSecurityPart7Data = {
           {
             question: "A school upgrades to MFA for student accounts. The most accurate framing is ___",
             options: [
-              "no measurable improvement to the security posture of any student account at the school.",
-              "reduces the risk that a stolen or phished password alone gives an attacker access — a major win.",
-              "simply compresses each student's authentication request before sending it to the server.",
-              "replaces transport-layer security on the login form with a different cryptographic primitive."
+              "no real improvement, since attackers who steal a password can also skip the second step.",
+              "it reduces the risk that a stolen or phished password alone lets an attacker in.",
+              "it removes the need for strong passwords, since the second factor alone protects accounts.",
+              "it fully prevents phishing, since students can no longer be tricked into sharing any codes."
             ],
             correctAnswer: 1,
             explanation: "MFA dramatically reduces credential-based account takeover."
@@ -160,9 +160,9 @@ export const cspFaultToleranceSecurityPart7Data = {
             question: "A team's backup strategy is \"the database has 3 replicas.\" The most CSP-aligned critique is ___",
             options: [
               "the strategy is perfect because three live replicas are equivalent to three independent backups.",
-              "replicas don't protect against accidental or malicious deletes; add point-in-time backups stored offline.",
-              "transport-layer security on the database's replication links would replace the need for any backups.",
-              "compressing the database files would have made the replication strategy a complete backup solution."
+              "replicas copy deletes and corruption too; add separate point-in-time backups kept offline.",
+              "three replicas are too many; one primary and one replica would be safer against deletes.",
+              "the replicas must be in the same data center so they stay perfectly in sync with no lag."
             ],
             correctAnswer: 1,
             explanation: "Replicas ≠ backups; need separate offline / immutable backups."

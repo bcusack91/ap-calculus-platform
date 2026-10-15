@@ -25,7 +25,7 @@ The framings most likely to appear on the AP exam.
       exercise: {
         questions: [
           {
-            question: "AP impact-of-computing answers usually require ___",
+            question: "Strong impact-of-computing analysis usually requires ___",
             options: [
               "identifying only one specific beneficial effect of the technology under analysis without naming any specific affected party or population.",
               "identifying only one specific harmful effect of the technology under analysis without naming any specific affected party or population.",
@@ -33,15 +33,15 @@ The framings most likely to appear on the AP exam.
               "identifying neither a beneficial nor a harmful effect of the technology under analysis and offering only abstract general statements."
             ],
             correctAnswer: 2,
-            explanation: "The rubric typically demands balanced analysis with affected parties."
+            explanation: "Balanced analysis names both a beneficial and a harmful effect and identifies who is affected by each."
           },
           {
             question: "The phrase \"the digital divide\" describes ___",
             options: [
-              "an ongoing technical dispute among ISPs and standards bodies about the relative merits of IPv4 versus IPv6 for the public internet.",
-              "gaps in meaningful access to digital technology across geography, income, age, or ability between groups of people in a society.",
-              "the process of splitting digital files into individual packets for transmission across a packet-switched network like the modern internet.",
-              "a lossy audio compression technique that splits a digital sound file into low-frequency and high-frequency bands for separate processing."
+              "the gap between people who build software and people who only use apps and websites made by others.",
+              "unequal access to computers and the internet between groups such as rural and urban households.",
+              "the split between countries that make computer hardware and countries that write the software for it.",
+              "the difference between analog and digital media, such as film cameras versus digital cameras."
             ],
             correctAnswer: 1,
             explanation: "Digital divide = unequal access."
@@ -115,15 +115,15 @@ The framings most likely to appear on the AP exam.
         dropdowns: [
           {
             label: "When a model trained on biased data produces unfair outcomes, the root cause is most often ___",
-            options: ["the training data and how the model was evaluated", "pure randomness", "TCP packet loss", "Wi-Fi signal strength"]
+            options: ["the training data and how the model was evaluated", "the programming language the model was written in", "the speed of the computer the model runs on", "random chance in each individual prediction"]
           },
           {
             label: "A platform that uses engagement-maximizing recommendations may unintentionally promote ___",
-            options: ["extreme or polarizing content", "always-truthful content", "always-boring content", "random unrelated content"]
+            options: ["extreme or polarizing content", "balanced, verified news content", "content chosen purely at random", "older, less-viewed posts first"]
           },
           {
             label: "Asking \"WHO benefits and WHO is harmed?\" is the right starting point for ___",
-            options: ["any AP impact-of-computing question", "no AP impact question", "only privacy questions", "only IP questions"]
+            options: ["any AP impact-of-computing question", "only intellectual-property questions", "only questions about a program's code", "only questions with a single user group"]
           }
         ],
         correctAnswers: ["the training data and how the model was evaluated", "extreme or polarizing content", "any AP impact-of-computing question"],
@@ -156,26 +156,26 @@ The framings most likely to appear on the AP exam.
       exercise: {
         questions: [
           {
-            question: "An AP exam free-response asks: \"Describe one beneficial and one harmful effect of using ML in college admissions.\" A model answer would ___",
+            question: "A student is asked to describe one beneficial and one harmful effect of using ML in college admissions. A strong answer would ___",
             options: [
-              "praise the efficiency of automated college-admissions screening across thousands of applications and stop the response there.",
-              "name a specific benefit (consistency or scale) and a specific harm (encoded bias against under-represented groups), naming the affected population.",
-              "argue at length that no machine-learning system can ever meaningfully read or evaluate the free-form essays submitted with college applications.",
-              "discuss the ongoing IPv6 deployment in the residential ISPs that admitted college students will use to access their online learning platforms."
+              "praise how quickly automated screening handles thousands of applications and stop there.",
+              "name one positive effect such as consistency and one negative such as bias against under-represented applicants.",
+              "argue that no machine-learning system could ever meaningfully evaluate an application essay.",
+              "explain how the model is trained, without naming any effect on applicants or on colleges."
             ],
             correctAnswer: 1,
             explanation: "Balanced answer with specific benefit + specific harm + named population."
           },
           {
-            question: "An AP exam free-response asks: \"What mitigation could reduce harm from using ML in admissions?\" A strong response would mention ___",
+            question: "A student is asked what mitigation could reduce harm from using ML in admissions. A strong answer would mention ___",
             options: [
-              "nothing at all about possible mitigations because machine-learning admissions systems are fundamentally impossible to fix or to make any fairer.",
-              "auditing the model on demographic subgroups, requiring human review of borderline decisions, and being transparent with applicants about how decisions are made.",
-              "switching the underlying transport-layer protocol used by the admissions system from TCP to UDP for faster delivery of admissions decisions.",
-              "switching the underlying network-layer protocol used by the admissions system from IPv4 to IPv6 for more reliable delivery of decisions."
+              "no mitigation, since machine-learning admissions systems cannot be made any fairer.",
+              "auditing the model across demographic groups and having humans review borderline cases.",
+              "training the model on more years of past admissions decisions so its biases average out.",
+              "hiding the model's criteria from applicants so that no one can game the admissions process."
             ],
             correctAnswer: 1,
-            explanation: "Mitigations: subgroup audits, human-in-the-loop, transparency. Concrete and rubric-friendly."
+            explanation: "Concrete mitigations include auditing outcomes across demographic groups, human review of borderline cases, and transparency with applicants about how decisions are made."
           }
         ]
       }

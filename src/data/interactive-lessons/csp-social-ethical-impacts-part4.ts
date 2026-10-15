@@ -33,9 +33,9 @@ export const cspSocialEthicalImpactsPart4Data = {
             question: "A predictive-policing model trained on historic arrest data may ___",
             options: [
               "perfectly predict every future criminal incident across every neighborhood it is deployed in.",
-              "reproduce historical biases in policing patterns, harming the same communities again — bias laundering.",
+              "repeat past biases in policing patterns, harming the same communities again.",
               "eliminate every form of bias automatically by virtue of being a statistical machine-learning model.",
-              "compress the historic arrest dataset to a smaller form than any human analyst could produce."
+              "shift policing evenly to every neighborhood, regardless of where arrests occurred before."
             ],
             correctAnswer: 1,
             explanation: "\"Bias laundering\" — historical patterns replicated as objective predictions."
@@ -44,9 +44,9 @@ export const cspSocialEthicalImpactsPart4Data = {
             question: "A region without high-speed Internet ___",
             options: [
               "has no measurable impact on the residents' daily access to opportunities and public services.",
-              "faces limited access to telehealth, online education, and modern jobs — the digital divide is real.",
-              "has lower transport-layer-security overhead than connected regions on the same continental backbone.",
-              "has consistently better data compression than connected regions because of reduced background traffic."
+              "faces limited access to telehealth, online education, and many jobs that need a fast connection.",
+              "gains better privacy, fewer scams, and less screen time with no real downside to residents.",
+              "can rely on mobile data alone, since phones now offer the same access as home broadband."
             ],
             correctAnswer: 1,
             explanation: "Connectivity = access to opportunity."
@@ -113,15 +113,15 @@ Different cultures, populations, and contexts have different expectations. A "pu
         dropdowns: [
           {
             label: "A hiring algorithm that disproportionately rejects qualified candidates from a group is ___",
-            options: ["exhibiting bias that needs investigation, regardless of intent", "unbiased", "a TLS issue", "a compression issue"]
+            options: ["exhibiting bias that needs investigation, regardless of intent", "unbiased, as long as the developers never intended any group to be harmed", "acceptable, because an algorithm is objective and cannot hold any bias of its own", "fair, since the identical code is applied to every single applicant who submits"]
           },
           {
             label: "Reusing a CC-BY image requires ___",
-            options: ["attribution to the creator under the license terms", "no acknowledgment", "payment to the creator", "TLS only"]
+            options: ["attribution to the creator under the license terms", "payment to the creator under the license terms", "written permission from the creator for each use", "no acknowledgment, since CC-BY works are public domain"]
           },
           {
             label: "Privacy expectations vary by ___",
-            options: ["context, culture, and population", "never — they're universal", "only file size", "only TLS version"]
+            options: ["context, culture, and population", "nothing — identical everywhere", "device, browser, and OS", "file size and format only"]
           }
         ],
         correctAnswers: ["exhibiting bias that needs investigation, regardless of intent", "attribution to the creator under the license terms", "context, culture, and population"],
@@ -154,8 +154,8 @@ Different cultures, populations, and contexts have different expectations. A "pu
             question: "A school deploys a predictive model to flag \"at-risk\" students. The most CSP-aligned design includes ___",
             options: [
               "fully automated decisions with no human review of any individual flag the model produces during use.",
-              "human review of every flag, transparency about the criteria, audited bias across demographics, and appeals.",
-              "no documentation of how the model works, on the grounds that disclosure would let students game it.",
+              "human review of every flag, transparent criteria, bias audits across student groups, and appeals.",
+              "no documentation, no appeals, and no audits, so that students cannot learn to game the model.",
               "no review process at all, on the grounds that the model's training data is statistically representative."
             ],
             correctAnswer: 1,
@@ -165,9 +165,9 @@ Different cultures, populations, and contexts have different expectations. A "pu
             question: "A user remixes a CC-BY song without attribution and posts it. The most CSP-aligned framing is ___",
             options: [
               "no measurable concern, since the user has remixed the song into something that sounds different.",
-              "CC-BY requires attribution; using without it violates the license and disrespects the creator's terms.",
-              "transport-layer security on the upload of the remix would have prevented the licensing issue here.",
-              "compressing the remix more aggressively before upload would have prevented the licensing issue here."
+              "CC-BY requires crediting the original creator, so posting the remix without credit breaks the license.",
+              "CC-BY only forbids selling the song, so posting a free remix without credit is allowed.",
+              "remixing creates a new work, so the original license no longer applies to the remix."
             ],
             correctAnswer: 1,
             explanation: "CC-BY = attribution required."

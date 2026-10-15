@@ -35,7 +35,7 @@ export const cspFaultToleranceSecurityPart5Data = {
               "only individual end users' phones, with no impact on the broader software ecosystem.",
               "a tool or library many systems depend on, multiplying the impact across all users.",
               "only firewalls at the network perimeter, leaving applications inside untouched.",
-              "only the compression algorithm used by the build pipeline of the affected project."
+              "a single website's login page, which attackers copy to collect user passwords."
             ],
             correctAnswer: 1,
             explanation: "Supply chain = trusted dependency compromise."
@@ -44,9 +44,9 @@ export const cspFaultToleranceSecurityPart5Data = {
             question: "Post-quantum cryptography research aims to ___",
             options: [
               "speed up classical encryption algorithms by using more efficient mathematical primitives.",
-              "design algorithms that resist attacks from sufficiently powerful future quantum computers.",
-              "eliminate the need for transport-layer security by relying on physical isolation alone.",
-              "compress encrypted data so that ciphertext takes less storage than the original plaintext."
+              "design algorithms that resist attacks from future large quantum computers.",
+              "use quantum computers to encrypt everyday web traffic in place of current algorithms.",
+              "prove that today's public-key algorithms are already safe against quantum attacks."
             ],
             correctAnswer: 1,
             explanation: "Post-quantum = quantum-resistant designs."
@@ -104,15 +104,15 @@ Hiding the algorithm isn't a substitute for sound design. Strong cryptography is
         dropdowns: [
           {
             label: "\"Security through obscurity\" alone ___",
-            options: ["is widely considered insufficient — open-design + strong keys is preferred", "is the strongest defense", "replaces TLS", "eliminates phishing"]
+            options: ["is widely considered insufficient — open-design + strong keys is preferred", "is widely considered sufficient — secret designs + short keys are enough", "is the strongest defense — hidden code + no public review is preferred", "replaces encryption — attackers cannot break what they cannot see"]
           },
           {
             label: "Ransomware's greatest defense is ___",
-            options: ["regular tested backups + network segmentation + a plan", "a single antivirus tool", "TLS only", "compression"]
+            options: ["regular tested backups + network segmentation + a plan", "paying the ransom promptly + asking for the decryption key", "full-disk encryption + longer passwords + a VPN", "a single antivirus tool + a perimeter firewall alone"]
           },
           {
             label: "AI-assisted phishing is harder to detect because ___",
-            options: ["it produces grammatically clean, personalized messages at scale", "it slows down emails", "it removes encryption", "it shrinks attachments"]
+            options: ["it produces grammatically clean, personalized messages at scale", "it encrypts every message so spam filters cannot read its content", "it always comes from the real company's verified email servers", "it is sent only through text messages rather than through email"]
           }
         ],
         correctAnswers: ["is widely considered insufficient — open-design + strong keys is preferred", "regular tested backups + network segmentation + a plan", "it produces grammatically clean, personalized messages at scale"],
@@ -146,8 +146,8 @@ Hiding the algorithm isn't a substitute for sound design. Strong cryptography is
             options: [
               "phishing of individual customers via emails sent from the compromised build server.",
               "a supply-chain attack: a trusted artifact source was compromised, multiplying impact.",
-              "a compression error in which the build output happened to corrupt some downloads.",
-              "a transport-layer-security misconfiguration on the customer-facing download server."
+              "a DDoS attack: the download server was flooded until it served corrupted files.",
+              "a man-in-the-middle attack: each customer's connection was intercepted separately."
             ],
             correctAnswer: 1,
             explanation: "Build pipeline compromise = canonical supply-chain attack."
@@ -155,10 +155,10 @@ Hiding the algorithm isn't a substitute for sound design. Strong cryptography is
           {
             question: "A school is hit by ransomware. The single most useful preparation BEFORE the attack would have been ___",
             options: [
-              "no preparation — ransomware response is purely reactive once the attack begins.",
-              "tested offline backups, network segmentation, and a written incident-response plan.",
-              "transport-layer security on every external link the school operates with the internet.",
-              "aggressive compression of the school's data so the encrypted blobs would be smaller."
+              "no preparation, since ransomware response is purely reactive",
+              "tested offline backups, network segmentation, and a written response plan.",
+              "antivirus, firewalls, and spam filters, with no backups needed",
+              "cyber insurance, which restores files once the ransom is paid"
             ],
             correctAnswer: 1,
             explanation: "Backups + segmentation + plan = ransomware resilience."

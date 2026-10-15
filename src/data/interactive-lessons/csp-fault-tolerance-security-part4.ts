@@ -34,8 +34,8 @@ export const cspFaultToleranceSecurityPart4Data = {
             options: [
               "no impact, since children's data is automatically anonymized by data-protection laws.",
               "serious privacy and safety consequences for vulnerable users and their families.",
-              "transport-layer-security implications only, with no human-level harm involved.",
-              "compression-related issues only, because the breached files happened to be small."
+              "only financial costs for the company, since children have no credit to steal.",
+              "little lasting effect, since children's data changes as they grow older."
             ],
             correctAnswer: 1,
             explanation: "Breaches harm real people."
@@ -43,10 +43,10 @@ export const cspFaultToleranceSecurityPart4Data = {
           {
             question: "A system that crashes whenever any single component fails is the OPPOSITE of ___",
             options: [
-              "encrypted — protecting data confidentiality through cryptographic algorithms",
-              "fault-tolerant — continuing to operate even when some components fail",
-              "compressed — storing the same content in fewer bits than its raw form",
-              "routed — forwarded between systems by intermediate network devices"
+              "scalable — handling more users by adding servers as demand grows",
+              "fault-tolerant — continuing to run even when some parts break",
+              "secure — keeping data safe from attackers who try to break in",
+              "efficient — finishing tasks using as little time and memory as possible"
             ],
             correctAnswer: 1,
             explanation: "Fault tolerance = survives failures."
@@ -114,15 +114,15 @@ Tools alone don't make a system secure. Patching, monitoring, and incident respo
         dropdowns: [
           {
             label: "Security is best treated as ___",
-            options: ["an ongoing process: patch, monitor, respond", "a one-time install", "a feature toggle", "a compression setting"]
+            options: ["an ongoing process: patch, monitor, respond", "a one-time setup: install, configure, done", "a product purchase: buy antivirus, then forget", "a launch checklist: audit once before release"]
           },
           {
             label: "Defense in depth means ___",
-            options: ["layering multiple defenses so a single failure does not breach the system", "one strong wall and nothing else", "no defenses at all", "TLS only"]
+            options: ["layering multiple defenses so a single failure does not breach the system", "relying on one very strong firewall so attackers never get past the perimeter", "hiding the system's design so attackers cannot learn how it works", "encrypting all data once so no other defenses are needed"]
           },
           {
             label: "A breach plan that includes detection + response is part of ___",
-            options: ["incident-response readiness", "compression", "IPv6 routing", "lossy encoding"]
+            options: ["incident-response readiness", "firewall configuration", "password-strength policy", "encryption key management"]
           }
         ],
         correctAnswers: ["an ongoing process: patch, monitor, respond", "layering multiple defenses so a single failure does not breach the system", "incident-response readiness"],
@@ -155,9 +155,9 @@ Tools alone don't make a system secure. Patching, monitoring, and incident respo
             question: "A startup fixes a critical bug but never deploys patches automatically. Six months later, an unpatched server is breached. The most CSP-aligned lesson is ___",
             options: [
               "patches are optional once the original code has been initially reviewed and tested.",
-              "security is an ongoing process; automated patching and monitoring are part of the posture.",
-              "transport-layer security on inbound traffic would have made the unpatched bug irrelevant.",
-              "compressing the server's log files more aggressively would have prevented the breach."
+              "security is ongoing, so updates must reach every server promptly and be monitored.",
+              "a strong firewall in front of the server would have made applying the patch unnecessary.",
+              "the original code review should have caught the bug, so the breach was an unavoidable fluke."
             ],
             correctAnswer: 1,
             explanation: "Process matters more than one-time fixes."
@@ -165,10 +165,10 @@ Tools alone don't make a system secure. Patching, monitoring, and incident respo
           {
             question: "A health app that stores patient records would benefit MOST from ___",
             options: [
-              "just transport-layer security on incoming requests and nothing else added on top.",
-              "defense in depth: TLS, encryption at rest, MFA, audit logs, regular pen-tests, breach plan.",
-              "just multi-factor authentication on user logins, with no other defenses added.",
-              "just nightly backups, with no other defenses added on top of the backup process."
+              "one very strong firewall, since a single solid barrier keeps all attackers out.",
+              "defense in depth, layering encryption, MFA, audit logs, and backups",
+              "encryption in transit alone, since stored records are already safe on the server.",
+              "strong passwords alone, since MFA, logs, and backups add cost without protection."
             ],
             correctAnswer: 1,
             explanation: "Sensitive data needs layered defenses."

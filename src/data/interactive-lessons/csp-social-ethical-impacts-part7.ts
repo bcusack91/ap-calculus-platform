@@ -26,7 +26,7 @@ export const cspSocialEthicalImpactsPart7Data = {
             question: "Computing innovations typically have ___",
             options: [
               "only positive effects on every population they reach across society as a whole.",
-              "both positive AND negative effects, often unevenly distributed across stakeholder groups.",
+              "positive AND negative effects that fall unevenly across different stakeholder groups.",
               "only negative effects on every population that they reach in any direct or indirect way.",
               "no measurable effects at all on the populations they reach in any direct or indirect way."
             ],
@@ -36,10 +36,10 @@ export const cspSocialEthicalImpactsPart7Data = {
           {
             question: "A \"digital divide\" refers to ___",
             options: [
-              "differences between popular file-compression formats used by different operating systems",
-              "unequal access to computing and connectivity, which leads to unequal opportunity in society",
-              "transport-layer-security version mismatches between web browsers and the servers they call",
-              "differences between IPv4 and IPv6 addressing across consumer-grade home internet connections"
+              "the gap between people who write code and people who only use apps that others build",
+              "unequal access to computing and connectivity, leading to unequal opportunity",
+              "the difference between analog and digital media, such as print books versus e-books",
+              "the split between countries that design computer chips and countries that build them"
             ],
             correctAnswer: 1,
             explanation: "Digital divide = unequal access."
@@ -107,15 +107,15 @@ export const cspSocialEthicalImpactsPart7Data = {
         dropdowns: [
           {
             label: "A high-stakes algorithmic decision should provide ___",
-            options: ["transparency, accountability, and recourse", "only the result", "no documentation", "no appeal"]
+            options: ["transparency, accountability, and recourse", "only the final result, with no explanation", "secrecy, speed, and finality without appeal", "full automation, no logs, and no appeals"]
           },
           {
             label: "AI training-data ethics centers on ___",
-            options: ["provenance, consent, attribution, and bias", "compression ratio", "TLS handshake", "IPv6 routing"]
+            options: ["provenance, consent, attribution, and bias", "model speed, accuracy, cost, and latency", "hardware, cooling, bandwidth, and uptime", "dataset size alone, regardless of its source"]
           },
           {
             label: "Computing innovations' impacts are typically ___",
-            options: ["unevenly distributed across groups", "identical for everyone", "always negligible", "always positive"]
+            options: ["unevenly distributed across groups", "evenly distributed across all groups", "limited to the people who build them", "identical for every user everywhere"]
           }
         ],
         correctAnswers: ["transparency, accountability, and recourse", "provenance, consent, attribution, and bias", "unevenly distributed across groups"],
@@ -150,9 +150,9 @@ export const cspSocialEthicalImpactsPart7Data = {
             question: "A new translation app makes communication easier across languages but reinforces stereotypes through gendered defaults. The most CSP-aligned response is ___",
             options: [
               "ignore the stereotypes on the grounds that the underlying translation accuracy is statistically high overall.",
-              "audit outputs across demographic groups, document the issue, fix gendered defaults, and offer overrides.",
-              "remove the translation app entirely from circulation rather than attempt to fix the underlying defaults.",
-              "compress the app's training data more aggressively so the gendered defaults will be harder to surface."
+              "audit outputs for each demographic group, document the issue, fix gendered defaults, and offer overrides.",
+              "remove the app, its data, and its models from circulation rather than fix the defaults.",
+              "warn users about the stereotypes but leave the gendered defaults unchanged for now."
             ],
             correctAnswer: 1,
             explanation: "Audit + fix + user agency."
@@ -161,9 +161,9 @@ export const cspSocialEthicalImpactsPart7Data = {
             question: "A school district deploys an algorithm to allocate counseling resources. The MOST important guardrails are ___",
             options: [
               "no specific guardrails, on the grounds that any algorithm that ships in production has already been reviewed.",
-              "transparent criteria, human review of high-stakes decisions, bias audits across student groups, and an appeal path.",
-              "transport-layer security on the algorithm's outbound traffic, with no other guardrails on its decision process.",
-              "aggressive compression of the algorithm's training data, with no other guardrails on its decision process at all."
+              "transparent criteria, human review of high-stakes decisions, bias audits, and an appeal path.",
+              "keeping the criteria secret, so families cannot game the algorithm's allocation process.",
+              "letting the algorithm decide alone, with no reviews, audits, or appeals, to avoid human bias."
             ],
             correctAnswer: 1,
             explanation: "Full ethical-design framing for high-stakes algorithms."

@@ -48,10 +48,10 @@ If the link between B and C fails, data can route A → B → E → F → C or A
           {
             question: 'In a network with redundant paths, what happens when one link fails?',
             options: [
-              'All communication stops immediately',
-              'Data is automatically rerouted through alternative paths',
-              'The failed link repairs itself',
-              'Users must manually select a new path'
+              'All communication stops until the link is repaired',
+              'Data is automatically rerouted through other links',
+              'Routers wait for an admin to set up a new route',
+              'Users must pick a different path by hand'
             ],
             correctAnswer: 1,
             explanation: 'Routers automatically detect failed links and reroute packets through alternative paths. This is the key benefit of redundancy — the network continues to function despite failures.'
@@ -59,13 +59,13 @@ If the link between B and C fails, data can route A → B → E → F → C or A
           {
             question: 'Which network design is MORE fault tolerant?\nA: Each node connected to exactly one other node (chain)\nB: Each node connected to multiple other nodes (mesh)',
             options: [
-              'A — simpler is more reliable',
-              'B — multiple connections provide alternative paths if one fails',
-              'Both are equally fault tolerant',
-              'Neither is fault tolerant'
+              'A — fewer links mean fewer parts that can fail',
+              'B — extra links give data another route if one fails',
+              'Both — either design can survive one failed link',
+              'Neither — one broken link splits either network'
             ],
             correctAnswer: 1,
-            explanation: 'A mesh network (B) has multiple paths between nodes. If one connection fails, data can take another route. A chain network has single points of failure — one broken link disconnects part of the network.'
+            explanation: 'A mesh network has multiple paths between nodes. If one connection fails, data can take another route. A chain network has single points of failure — one broken link disconnects part of the network.'
           }
         ]
       }
@@ -133,15 +133,15 @@ If the link between B and C fails, data can route A → B → E → F → C or A
         dropdowns: [
           {
             label: 'HTTPS uses ___ encryption for the initial key exchange',
-            options: ['Asymmetric (public/private key pair)', 'Symmetric (shared key)', 'No encryption', 'Caesar cipher']
+            options: ['Asymmetric (public/private key pair)', 'Symmetric (a single shared secret key)', 'Hashing (one-way digest only)', 'No encryption (plaintext handshake)']
           },
           {
             label: 'A DDoS attack works by ___',
-            options: ['Flooding a server with traffic so it cannot serve legitimate users', 'Stealing passwords', 'Encrypting user files', 'Guessing passwords']
+            options: ['Flooding a server with traffic so it cannot serve legitimate users', 'Guessing many passwords until one account finally lets the attacker in', 'Tricking users into revealing login credentials through fake emails', 'Recording each keystroke a user types to capture their passwords']
           },
           {
             label: 'A network where every node connects to every other node is the MOST ___',
-            options: ['Fault tolerant (maximum redundancy)', 'Vulnerable', 'Efficient', 'Simple']
+            options: ['Fault tolerant (maximum redundancy)', 'Fragile (any one link failure splits it)', 'Centralized (all traffic through one hub)', 'Inexpensive (fewest cables required)']
           }
         ],
         correctAnswers: ['Asymmetric (public/private key pair)', 'Flooding a server with traffic so it cannot serve legitimate users', 'Fault tolerant (maximum redundancy)'],
@@ -176,10 +176,10 @@ If the link between B and C fails, data can route A → B → E → F → C or A
           {
             question: 'A company stores customer data on a single server with no backups. A hard drive fails. What is the result?',
             options: [
-              'Data is automatically recovered from the cloud',
-              'Customer data is permanently lost because there is no redundancy',
-              'The data can be recovered from RAM',
-              'The operating system recreates the data'
+              'The data is restored automatically from the cloud provider',
+              'The data is lost because no other copy of it exists',
+              'The data can be rebuilt from what was cached in the server\'s RAM',
+              'The operating system recreates the files because it logs every write'
             ],
             correctAnswer: 1,
             explanation: 'Without redundancy (backups, RAID, etc.), a single hardware failure causes permanent data loss. This is why redundancy is critical for fault tolerance.'
@@ -187,10 +187,10 @@ If the link between B and C fails, data can route A → B → E → F → C or A
           {
             question: 'Alice wants to send a secure message to Bob. She encrypts it with Bob public key. Who can decrypt it?',
             options: [
-              'Anyone with the public key',
+              'Anyone who has Bob\'s public key',
               'Only Bob, using his private key',
               'Only Alice, using her private key',
-              'No one — public key encryption cannot be decrypted'
+              'Both Alice and Bob, using the public key'
             ],
             correctAnswer: 1,
             explanation: 'In asymmetric encryption, data encrypted with the public key can ONLY be decrypted with the corresponding private key. Only Bob has his private key, so only Bob can read the message.'

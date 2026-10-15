@@ -34,8 +34,8 @@ export const cspSafeComputingPart5Data = {
             options: [
               "encryption of stored data with a fundamentally different cryptographic primitive",
               "passwords with cryptographic device-bound credentials that resist phishing",
-              "compression of the user's authentication request before it reaches the server",
-              "IPv6 addressing of authentication endpoints with a more compact alternative"
+              "two-factor codes with longer codes sent by text message to the user's phone",
+              "usernames with randomly generated IDs that are harder for attackers to guess"
             ],
             correctAnswer: 1,
             explanation: "Passkeys replace passwords with phishing-resistant cryptography."
@@ -44,9 +44,9 @@ export const cspSafeComputingPart5Data = {
             question: "AI-assisted phishing is concerning because ___",
             options: [
               "it produces grammatically clean, personalized lures at scale.",
-              "it makes passwords weaker.",
-              "it removes TLS.",
-              "it shrinks attachments."
+              "it lets attackers crack strong passwords much more quickly.",
+              "it removes encryption from the emails that victims receive.",
+              "it hides malware inside attachments that antivirus can't scan."
             ],
             correctAnswer: 0,
             explanation: "Personalized, fluent lures are harder to spot."
@@ -109,15 +109,15 @@ Modern attackers target the **cloud account** itself (email, identity provider) 
         dropdowns: [
           {
             label: "Passkeys are phishing-resistant because ___",
-            options: ["the private key never leaves the device and the signature is bound to the real site", "they use longer passwords", "they use TLS only", "they compress data"]
+            options: ["the private key never leaves the device and the signature is bound to the real site", "the private key is sent to the site and checked against a stored copy each login", "they are long passwords that the user memorizes and types on each site", "the server stores the private key so it can detect fake sites"]
           },
           {
             label: "Compromise of the user's primary email account often ___",
-            options: ["enables password resets and account takeovers across many other services", "has no other consequences", "speeds up TLS", "compresses data"]
+            options: ["enables password resets and account takeovers across many other services", "only exposes old messages and has no effect on any other accounts", "is harmless as long as the email password is changed within a week", "automatically locks every linked account until you visit each provider in person"]
           },
           {
             label: "AI-generated phishing emails ___",
-            options: ["are typically more polished and personalized than older phishing", "are easier to spot", "remove TLS", "compress data"]
+            options: ["are typically more polished and personalized than older phishing", "are typically easier to spot because of awkward grammar and typos", "are always blocked by modern spam filters before delivery", "cannot include links, so they are harmless to open and read"]
           }
         ],
         correctAnswers: ["the private key never leaves the device and the signature is bound to the real site", "enables password resets and account takeovers across many other services", "are typically more polished and personalized than older phishing"],
@@ -150,9 +150,9 @@ Modern attackers target the **cloud account** itself (email, identity provider) 
             question: "A user's personal email is compromised. Within hours, attackers reset passwords on 12 other services. The most accurate framing is ___",
             options: [
               "unrelated — the email compromise has no causal connection to the other twelve service resets.",
-              "email is the recovery channel for those services; protecting it (MFA / passkey) protects them all.",
-              "transport-layer security on the email account would have slowed but not blocked the takeovers.",
-              "compressing the user's mailbox would have prevented the attackers from acting on the breach."
+              "email is the recovery channel for those services, so securing it with MFA protects them all.",
+              "the attackers must have guessed each of the twelve passwords separately in a few hours.",
+              "the twelve services were breached together, and the email takeover was a coincidence."
             ],
             correctAnswer: 1,
             explanation: "Email is the master account."
@@ -162,8 +162,8 @@ Modern attackers target the **cloud account** itself (email, identity provider) 
             options: [
               "no compelling reason, since passwords with MFA are equivalent to passkeys in every way.",
               "they resist phishing because the credential is bound to the real site's origin and stays on device.",
-              "they compress the user's authentication request to a smaller size than passwords would do.",
-              "they shorten the URL the browser uses when sending the user's authentication challenge."
+              "they let the user skip MFA entirely, since a passkey is just a longer stored password.",
+              "they work without a device, since the passkey is kept on the site's server for the user."
             ],
             correctAnswer: 1,
             explanation: "Passkeys = phishing-resistant by construction."

@@ -32,10 +32,10 @@ export const cspSafeComputingPart4Data = {
           {
             question: "A compromised personal account that automatically forwarded contacts' info caused phishing attacks against them. The most accurate framing is ___",
             options: [
-              "no measurable impact on others, since the original compromise affected only one user account.",
-              "the user's safe-computing posture has effects on people connected to them — a network effect.",
-              "each affected contact's transport-layer security handshake will slow down for several days.",
-              "the affected contacts' inboxes will simply compress less efficiently for several weeks afterward."
+              "no impact on others, since the compromise affected only one account.",
+              "one user's weak security can harm the people connected to them, not just that user.",
+              "the contacts are safe as long as their own passwords are strong and never reused.",
+              "the email provider alone is responsible, since users cannot affect others' security."
             ],
             correctAnswer: 1,
             explanation: "One person's lapse can harm many."
@@ -44,9 +44,9 @@ export const cspSafeComputingPart4Data = {
             question: "A user installs random browser extensions for novelty. The most direct risk is ___",
             options: [
               "no risk, since browser extensions run inside a fully isolated sandbox by default everywhere.",
-              "extensions can read browsing data, inject scripts, and exfiltrate credentials — vet permissions.",
-              "each installed extension speeds up the browser's transport-layer security handshake noticeably.",
-              "each installed extension forces the browser to abandon its built-in compression of cached data."
+              "extensions can read browsing data and steal credentials, so their permissions need vetting.",
+              "only slower page loads, since extensions mainly use extra memory while the browser runs.",
+              "only extra ads, since extensions can change how pages look but cannot read what you type."
             ],
             correctAnswer: 1,
             explanation: "Browser extensions are powerful and abusable."
@@ -111,15 +111,15 @@ Match your defenses to your realistic threat model.
         dropdowns: [
           {
             label: "Locking your screen when leaving a device ___",
-            options: ["blocks casual physical access to your accounts", "has no benefit", "speeds up TLS", "compresses data"]
+            options: ["blocks casual physical access to your accounts", "encrypts all network traffic sent from the device", "stops remote phishing attacks against your accounts", "removes any malware already installed on the device"]
           },
           {
             label: "A backup that lives only on the same device ___",
-            options: ["does not protect against device loss / theft / ransomware", "is the safest possible setup", "replaces encryption", "eliminates phishing risk"]
+            options: ["does not protect against device loss / theft / ransomware", "fully protects against device loss / theft / ransomware", "is safer than cloud / external / offline backups", "replaces the need for encryption / passwords / MFA"]
           },
           {
             label: "Trusted browser extensions should be ___",
-            options: ["installed only from reputable stores with reviewed permissions", "installed from any random site", "never reviewed", "always silent"]
+            options: ["installed only from reputable stores with reviewed permissions", "installed from any site, since browsers sandbox all extensions", "granted every permission they request so they work correctly", "installed freely, as extensions cannot read page contents"]
           }
         ],
         correctAnswers: ["blocks casual physical access to your accounts", "does not protect against device loss / theft / ransomware", "installed only from reputable stores with reviewed permissions"],
@@ -152,9 +152,9 @@ Match your defenses to your realistic threat model.
             question: "A high-profile journalist's threat model includes targeted state-level adversaries. The most appropriate baseline is ___",
             options: [
               "just a strong password and nothing else added on top of it for the journalist's accounts.",
-              "hardware-key MFA, full-disk encryption, vetted device + app sources, OPSEC training, and a plan.",
-              "just multi-factor authentication via SMS text messages and no other defenses for the accounts.",
-              "just transport-layer security on the journalist's outbound traffic and no other defenses at all."
+              "hardware-key MFA, full-disk encryption, vetted apps, OPSEC training, and a response plan.",
+              "just SMS codes, a strong password, and a screen lock, with no other defenses on the accounts.",
+              "just a VPN on the journalist's devices, with no other defenses added to the accounts."
             ],
             correctAnswer: 1,
             explanation: "High-risk targets need stronger defenses, including hardware MFA."
@@ -163,9 +163,9 @@ Match your defenses to your realistic threat model.
             question: "A teenager streams video games and shares their schedule publicly. The most accurate concern is ___",
             options: [
               "no measurable concern, since publicly shared streaming schedules are normal among gamers.",
-              "predictable presence + visible patterns may enable harassment, swatting, or physical-world risks.",
-              "the streamer's transport-layer security handshake will slow down because of the public schedule.",
-              "the streamer's upload connection will simply compress less efficiently while a stream is live."
+              "predictable times and visible patterns may enable harassment or real-world risks like swatting.",
+              "the main risk is copyright strikes, since posting schedules can reveal unlicensed content.",
+              "the risk is limited to online trolling, since viewers cannot learn anything offline."
             ],
             correctAnswer: 1,
             explanation: "Public exposure of patterns enables real-world risks."

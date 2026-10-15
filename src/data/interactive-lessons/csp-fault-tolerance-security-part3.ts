@@ -33,10 +33,10 @@ Different threats target different goals; defenses are different for each.
           {
             question: "A man-in-the-middle eavesdropping on traffic primarily threatens ___",
             options: [
-              "confidentiality, since the attacker can read messages they were never authorized to see",
-              "integrity only, leaving the secrecy of the conversation entirely undisturbed",
-              "availability only, by preventing the legitimate parties from communicating",
-              "compression efficiency, by injecting noise that defeats lossless coders downstream"
+              "confidentiality, since the attacker can read messages not meant for them",
+              "integrity, since the attacker must change each message in order to read it",
+              "availability, since listening in blocks the parties from reaching each other",
+              "authentication, since the attacker must log in as one party to see traffic"
             ],
             correctAnswer: 0,
             explanation: "Eavesdropping = confidentiality breach."
@@ -47,7 +47,7 @@ Different threats target different goals; defenses are different for each.
               "confidentiality, by exposing private user data stored on the targeted service",
               "integrity, by silently rewriting the data the targeted service stores on disk",
               "availability, by overwhelming the service so legitimate users cannot reach it",
-              "compression efficiency, by stuffing data with patterns that codecs cannot exploit"
+              "authentication, by guessing the passwords of the service's administrators"
             ],
             correctAnswer: 2,
             explanation: "DDoS overwhelms a service → availability loss."
@@ -121,15 +121,15 @@ A password should be **hashed** (with salt + slow algorithm), not encrypted.
         dropdowns: [
           {
             label: "TLS / HTTPS protects ___",
-            options: ["data confidentiality + integrity in transit", "data on disk", "against compression", "against phishing alone"]
+            options: ["data confidentiality + integrity in transit", "data confidentiality + integrity at rest on disk", "users from phishing sites + fake login pages", "server uptime + availability during a DDoS"]
           },
           {
             label: "A password database should store ___",
-            options: ["salted hashes (e.g., bcrypt / Argon2), not plaintext or reversible encryption", "plaintext for fast retrieval", "simple MD5 hashes only", "encrypted strings only"]
+            options: ["salted hashes (e.g., bcrypt / Argon2), not plaintext or reversible encryption", "fast unsalted hashes (e.g., MD5 / SHA-1), since slow hashing delays logins", "reversible encryption (e.g., AES), so support staff can recover forgotten passwords", "plaintext (e.g., a users table), so password resets stay fast and simple"]
           },
           {
             label: "Multi-factor authentication (MFA) defends against ___",
-            options: ["stolen passwords being enough to log in alone", "all malware", "all DDoS", "all phishing forever"]
+            options: ["stolen passwords being enough to log in alone", "DDoS floods being enough to take a server offline", "malware already running on the user's unlocked device", "lost data being unrecoverable after a disk failure"]
           }
         ],
         correctAnswers: ["data confidentiality + integrity in transit", "salted hashes (e.g., bcrypt / Argon2), not plaintext or reversible encryption", "stolen passwords being enough to log in alone"],
@@ -163,8 +163,8 @@ A password should be **hashed** (with salt + slow algorithm), not encrypted.
             question: "A site stores user passwords as plaintext \"for support to look up if needed\". The most accurate critique is ___",
             options: [
               "no concern — storing plaintext passwords is acceptable as long as the database is private.",
-              "a single breach exposes every user's password instantly; passwords should be salted-hashed.",
-              "compression of the password column would resolve the underlying security problem here.",
+              "one breach would expose every user's password at once, so store salted hashes.",
+              "encrypting the passwords with a key stored beside them is just as safe as hashing them here.",
               "transport-layer security on incoming login requests fully replaces the need for hashing."
             ],
             correctAnswer: 1,
@@ -173,10 +173,10 @@ A password should be **hashed** (with salt + slow algorithm), not encrypted.
           {
             question: "A user enables MFA. An attacker who steals their password ___",
             options: [
-              "logs in immediately, since the password alone is sufficient credential material.",
+              "logs in immediately, since the password alone is enough.",
               "still cannot log in without producing the second factor required by MFA.",
-              "is unaffected by MFA, which only protects against unrelated phishing attacks.",
-              "logs in only over a transport-layer-secured connection but otherwise succeeds."
+              "is unaffected, since MFA only guards against phishing.",
+              "logs in anyway, since MFA only applies on new devices."
             ],
             correctAnswer: 1,
             explanation: "MFA breaks the \"password alone is enough\" assumption."

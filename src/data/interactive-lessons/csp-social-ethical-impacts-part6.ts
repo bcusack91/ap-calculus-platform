@@ -26,9 +26,9 @@ export const cspSocialEthicalImpactsPart6Data = {
             question: "A new app helps the deaf community communicate AND collects voice samples for training. The most CSP-aligned framing is ___",
             options: [
               "only the benefit to deaf users, with no further consideration of how voice samples are reused.",
-              "evaluate stakeholders: benefits to direct users PLUS privacy / consent for voice samples and downstream use.",
+              "weigh the benefits to deaf users against privacy and consent for the collected voice samples.",
               "only the implementation cost of building the underlying voice-sample collection and training pipeline.",
-              "only the transport-layer security between the app and the server that receives the voice samples."
+              "only the accuracy of the speech recognition, since that decides whether the app helps."
             ],
             correctAnswer: 1,
             explanation: "Stakeholder + privacy + consent analysis."
@@ -37,9 +37,9 @@ export const cspSocialEthicalImpactsPart6Data = {
             question: "A \"neutral\" app exposes a digital divide because some students lack home internet. The most CSP-aligned response is ___",
             options: [
               "ignore the divide on the grounds that home connectivity is the family's responsibility, not the school's.",
-              "provide alternative access (devices, hotspots, library hours) AND evaluate whether the design degrades gracefully.",
-              "upgrade the school's outbound transport-layer security to a newer version on every classroom workstation.",
-              "compress the app's assets more aggressively so the existing connections will load slightly faster."
+              "provide hotspots or library access, and check that the app still works on slow connections.",
+              "require every student to buy a home internet plan before the app becomes part of grading.",
+              "drop the app entirely, since any technology that some students lack must never be used."
             ],
             correctAnswer: 1,
             explanation: "Alternative access + design-time consideration."
@@ -110,15 +110,15 @@ export const cspSocialEthicalImpactsPart6Data = {
         dropdowns: [
           {
             label: "A school deploying an automated scheduling tool should also ___",
-            options: ["offer humans a way to override and appeal", "lock decisions in permanently", "forbid all overrides", "compress logs"]
+            options: ["offer humans a way to override and appeal", "lock every decision in permanently after release", "hide how the tool reaches its decisions from staff", "let the tool's output replace all human review"]
           },
           {
             label: "A bias audit reports ___",
-            options: ["error rates broken down by relevant groups", "compression ratio", "TLS handshake time", "IPv6 latency"]
+            options: ["error rates broken down by relevant groups", "overall accuracy averaged across all users", "the developers' stated intentions for the model", "total error rate only, with no group breakdown"]
           },
           {
             label: "Stakeholder analysis explicitly includes ___",
-            options: ["vulnerable populations who may be hardest hit", "only paying customers", "only developers", "only managers"]
+            options: ["vulnerable populations who may be hardest hit", "only paying customers who generate revenue", "only the developers who designed the system", "only the managers who approve the project"]
           }
         ],
         correctAnswers: ["offer humans a way to override and appeal", "error rates broken down by relevant groups", "vulnerable populations who may be hardest hit"],
@@ -151,9 +151,9 @@ export const cspSocialEthicalImpactsPart6Data = {
             question: "A team launches a hiring screener. The most CSP-aligned ethical guard is ___",
             options: [
               "no formal guard at all, on the grounds that the screener's training data is statistically representative.",
-              "audit pass-rates by demographic group, document criteria, allow human review, and let candidates appeal.",
-              "compress incoming resumes more aggressively so the screener's decisions execute faster on each application.",
-              "switch the screener's outbound traffic from TCP to UDP so that pass-rate decisions arrive sooner downstream."
+              "audit pass rates by demographic group, document criteria, and allow human review and appeals.",
+              "hide the criteria, scores, and cutoffs from candidates so that no one can tailor resumes to them.",
+              "train the screener on more past hires so that its decisions match previous managers."
             ],
             correctAnswer: 1,
             explanation: "Audit + transparency + review + appeal."
@@ -162,9 +162,9 @@ export const cspSocialEthicalImpactsPart6Data = {
             question: "A volunteer crowdsources a community map. The most CSP-aligned guardrail against vandalism is ___",
             options: [
               "no guardrail at all, on the grounds that volunteer contributors will self-police one another's edits.",
-              "governance: clear contribution policy, trusted moderators, change history, and well-defined escalation paths.",
-              "transport-layer security on every contributor's connection, with no other defenses against vandalism added.",
-              "aggressive compression of every map tile, with no other defenses against contributor-introduced vandalism."
+              "governance through a clear policy, trusted moderators, change history, and escalation paths.",
+              "require each contributor to pay a small fee, since paid edits are never vandalized.",
+              "lock the map after its first version, so no one can edit, correct, or update it later."
             ],
             correctAnswer: 1,
             explanation: "Crowdsourcing + governance."

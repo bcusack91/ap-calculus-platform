@@ -34,9 +34,9 @@ export const cspSafeComputingPart3Data = {
             question: "A new IoT camera is installed with default credentials \"admin/admin\". The most direct risk is ___",
             options: [
               "no measurable risk, since attackers cannot easily find new IoT devices on the internet.",
-              "attackers can access the camera (and possibly the home network) using widely known defaults.",
-              "the camera's built-in compression algorithm becomes less efficient than recently shipped models.",
-              "the camera's transport-layer security handshake slows down measurably under default credentials."
+              "attackers can log in with the widely published defaults and reach the home network.",
+              "the camera's video is stored unencrypted, since default credentials disable encryption.",
+              "the camera stops receiving firmware updates until the default password is changed."
             ],
             correctAnswer: 1,
             explanation: "Default creds are scanned and exploited at scale."
@@ -46,8 +46,8 @@ export const cspSafeComputingPart3Data = {
             options: [
               "has no measurable impact on the safety of the home left empty during the vacation period.",
               "tells anyone watching the public posts that your home is currently unoccupied for days.",
-              "compresses your stored vacation photos to a smaller size than untagged photos would be.",
-              "speeds up your residential internet connection slightly while you are away from home."
+              "lets the platform sell your location, but strangers have no way to view the tags.",
+              "only matters if the account is private, since public posts are rarely viewed by strangers."
             ],
             correctAnswer: 1,
             explanation: "Location patterns enable physical-world risks."
@@ -118,15 +118,15 @@ Modern HTTPS protects most traffic on public Wi-Fi. But:
         dropdowns: [
           {
             label: "Default credentials should be ___",
-            options: ["changed immediately on setup", "left as-is", "shared with neighbors", "compressed"]
+            options: ["changed immediately on setup", "kept until the first breach", "written on a label on the device", "shared only with family members"]
           },
           {
             label: "A browser warning \"your connection is not private\" should ___",
-            options: ["be taken seriously, especially on public Wi-Fi", "always be ignored", "be compressed", "be encrypted further"]
+            options: ["be taken seriously, especially on public Wi-Fi", "be clicked through, since it is usually harmless", "be fixed by turning off the antivirus program", "be ignored if the site's padlock is still shown"]
           },
           {
             label: "After an account takeover, you should also ___",
-            options: ["check (and reset) recovery email, phone, and connected apps", "tell no one and continue normally", "compress logs", "switch to UDP"]
+            options: ["check (and reset) recovery email, phone, and connected apps", "change (only) the password, then assume the attacker is gone", "wait (a few days) to see whether the attacker returns", "disable (all) MFA so the account is easier to recover"]
           }
         ],
         correctAnswers: ["changed immediately on setup", "be taken seriously, especially on public Wi-Fi", "check (and reset) recovery email, phone, and connected apps"],
@@ -159,8 +159,8 @@ Modern HTTPS protects most traffic on public Wi-Fi. But:
             question: "A friend's social account starts sending suspicious links to everyone. The most CSP-aligned response from the friend is ___",
             options: [
               "ignore the situation entirely and continue using the account normally without any changes.",
-              "sign out everywhere, reset password + MFA, audit recovery email/phone and connected apps.",
-              "reply to the contacts with the requested credentials so the friend can confirm the activity.",
+              "sign out of all sessions and reset the password and MFA, then check linked apps.",
+              "delete the sent messages and keep the password, since the account itself still works.",
               "switch to a brand new account immediately with no warning to existing contacts at all."
             ],
             correctAnswer: 1,
@@ -169,10 +169,10 @@ Modern HTTPS protects most traffic on public Wi-Fi. But:
           {
             question: "A school deploys 200 IoT thermostats with default passwords. The biggest CSP-aligned concern is ___",
             options: [
-              "no measurable concern, since the thermostats only control room temperatures within the school.",
+              "the main risk is higher energy bills if students change the room temperature settings.",
               "200 devices easily found and exploited via default-credential scans, possibly pivoting onward.",
-              "each thermostat's built-in compression algorithm becomes slightly less efficient than newer models.",
-              "each thermostat's transport-layer security handshake will slow down by a small amount over time."
+              "thermostats hold no personal data, so a breach would only change room temperatures.",
+              "default passwords only matter for cameras, since thermostats cannot join networks."
             ],
             correctAnswer: 1,
             explanation: "Default creds at scale = mass exploitation surface."

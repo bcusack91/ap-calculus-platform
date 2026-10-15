@@ -25,10 +25,10 @@ export const cspFaultToleranceSecurityPart6Data = {
           {
             question: "A user notices their bank prompted for a one-time code via app push. This is most directly ___",
             options: [
-              "encryption applied to the login request before it leaves the user's device",
+              "encryption applied to the login request before it leaves the phone",
               "multi-factor authentication via a second factor delivered through the app",
-              "compression of the user's credentials before they are sent to the bank server",
-              "a content-delivery-network optimization unrelated to the user's authentication"
+              "single-factor authentication, since the code replaces the password",
+              "a phishing attempt, since banks never send codes through apps"
             ],
             correctAnswer: 1,
             explanation: "A second factor = MFA."
@@ -37,8 +37,8 @@ export const cspFaultToleranceSecurityPart6Data = {
             question: "A web service auto-restarts crashed worker processes. The general technique is ___",
             options: [
               "failover or self-healing — automated recovery from a worker process crash",
-              "encryption of every restart event so workers cannot observe each other's state",
-              "compression of the worker's in-memory state before its replacement starts up",
+              "load balancing — spreading incoming requests evenly across all the workers",
+              "encryption — hiding each crashed worker's memory contents from other workers",
               "caching of the worker's most recent output so future requests can skip it entirely"
             ],
             correctAnswer: 0,
@@ -111,15 +111,15 @@ export const cspFaultToleranceSecurityPart6Data = {
         dropdowns: [
           {
             label: "Email from \"support@bnk-of-anytown.com\" warning your account is locked is most likely ___",
-            options: ["phishing — typo-squatted domain", "a legitimate alert", "a CDN issue", "a TLS handshake"]
+            options: ["phishing — typo-squatted domain", "legitimate — official bank domain", "a DDoS attack — flooded mail server", "a keylogger — malware on your device"]
           },
           {
             label: "A canary release ___",
-            options: ["routes a small fraction of traffic to the new version first to detect regressions", "replaces all traffic instantly", "eliminates testing", "turns off TLS"]
+            options: ["routes a small fraction of traffic to the new version first to detect regressions", "switches all traffic to the new version at once and rolls back only if users complain", "runs the old and new versions side by side forever so neither can ever fail", "tests the new version only on developer laptops before shipping it to everyone"]
           },
           {
             label: "Tabletop exercises (drills) help teams ___",
-            options: ["practice incident response BEFORE a real outage", "compress code", "replace monitoring", "shrink databases"]
+            options: ["practice incident response BEFORE a real outage", "assign personal blame AFTER a real outage", "replace automated monitoring DURING production", "eliminate the need for backups and redundancy"]
           }
         ],
         correctAnswers: ["phishing — typo-squatted domain", "routes a small fraction of traffic to the new version first to detect regressions", "practice incident response BEFORE a real outage"],
@@ -152,9 +152,9 @@ export const cspFaultToleranceSecurityPart6Data = {
             question: "A team deploys a buggy change directly to all users. Errors spike. The most CSP-aligned post-mortem recommendation is ___",
             options: [
               "publicly punish the engineer responsible for writing the change that caused the spike.",
-              "add canary or staged rollout, automated rollback on error spikes, and a blameless post-mortem.",
-              "remove transport-layer security so future deploys can roll out faster than they currently do.",
-              "compress the team's log files so the next bug investigation requires less disk space."
+              "add staged rollouts, automatic rollback on error spikes, and blameless reviews.",
+              "freeze all future deploys indefinitely so that no new change can ever cause another error spike.",
+              "add more servers, bigger caches, and faster disks so the next spike is absorbed quietly."
             ],
             correctAnswer: 1,
             explanation: "Process improvements + blameless post-mortems beat blame."
@@ -163,7 +163,7 @@ export const cspFaultToleranceSecurityPart6Data = {
             question: "A user reports an email from \"amaz0n-security@example.com\". The most accurate response is ___",
             options: [
               "click the link in the email and explore the destination page to investigate further.",
-              "don't click the link, verify the sender domain is legitimate, and report as phishing.",
+              "leave the link unclicked and flag the message as phishing after checking its domain.",
               "reply to the email with the requested credentials so the sender can confirm the account.",
               "forward the email to all colleagues so they can each click and investigate independently."
             ],

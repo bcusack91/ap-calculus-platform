@@ -53,10 +53,10 @@ Computing innovations often have BOTH beneficial and harmful consequences:
           {
             question: 'What is the digital divide?',
             options: [
-              'The difference between digital and analog technology',
+              'A divide between people who create software and people who only use it',
               'The gap between those with and without access to computing and the internet',
-              'The border between safe and unsafe websites',
-              'The split between hardware and software'
+              'The split in internet traffic between wired and wireless connections',
+              'The difference in speed between older and newer computer processors'
             ],
             correctAnswer: 1,
             explanation: 'The digital divide refers to inequalities in access to technology and the internet. It can be economic, geographic, or demographic, and it creates unequal opportunities in education, employment, and services.'
@@ -64,10 +64,10 @@ Computing innovations often have BOTH beneficial and harmful consequences:
           {
             question: 'Which best describes the impact of most computing innovations?',
             options: [
-              'They are always beneficial',
-              'They are always harmful',
+              'They are always beneficial to the people who use them',
+              'They are mostly harmful, whatever their designers intend',
               'They have both beneficial and harmful effects',
-              'Their effects are neutral'
+              'Their effects are neutral until a law regulates them'
             ],
             correctAnswer: 2,
             explanation: 'Nearly every computing innovation has dual-use potential. Social media connects people (good) but also enables misinformation (bad). The impact depends on how the technology is used.'
@@ -140,15 +140,15 @@ Computing innovations often have BOTH beneficial and harmful consequences:
         dropdowns: [
           {
             label: 'A facial recognition system that performs poorly on certain skin tones demonstrates ___',
-            options: ['Algorithmic bias (biased training data)', 'The digital divide', 'Data compression', 'Fault tolerance']
+            options: ['Algorithmic bias (biased training data)', 'The digital divide (unequal internet access)', 'Crowdsourcing (many contributors\' data)', 'A privacy breach (exposed face data)']
           },
           {
             label: 'Free software that anyone can modify and share is called ___',
-            options: ['Open source', 'Proprietary', 'Copyrighted', 'Crowdfunded']
+            options: ['Open source', 'Proprietary', 'Shareware', 'Crowdfunded']
           },
           {
             label: 'Rural communities lacking broadband internet is an example of the ___',
-            options: ['Digital divide', 'Algorithmic bias', 'Digital footprint', 'Encryption gap']
+            options: ['Digital divide', 'Algorithmic bias', 'Digital footprint', 'Net neutrality']
           }
         ],
         correctAnswers: ['Algorithmic bias (biased training data)', 'Open source', 'Digital divide'],
@@ -169,7 +169,7 @@ Computing innovations often have BOTH beneficial and harmful consequences:
 - **Algorithmic bias** stems from biased data, not intentional malice — but the effects are real
 - Know examples of crowdsourcing: Wikipedia, open source, citizen science
 - Copyright protects original works; open source/Creative Commons offer flexible alternatives
-- Exam tip: when asked about impact, provide specific examples with both positive and negative effects
+- Exam tip: on impact questions, favor the choice that names specific positive and negative effects
       `
     },
     {
@@ -183,10 +183,10 @@ Computing innovations often have BOTH beneficial and harmful consequences:
           {
             question: 'A hiring algorithm is trained on 10 years of hiring data from a company that historically hired mostly men. What is the likely result?',
             options: [
-              'The algorithm will hire the best candidates regardless of gender',
-              'The algorithm will likely favor male candidates, reflecting the bias in the training data',
-              'The algorithm will favor female candidates to compensate',
-              'The training data does not affect algorithm outcomes'
+              'The algorithm will hire the best candidates, since it ignores gender entirely',
+              'The algorithm will likely favor male candidates, copying the bias in its data',
+              'The algorithm will favor female candidates to correct for the past imbalance',
+              'The algorithm will pick candidates at random, since old data no longer applies'
             ],
             correctAnswer: 1,
             explanation: 'The algorithm learns patterns from historical data. If past hiring was biased toward men, the algorithm replicates that bias. This is algorithmic bias — the system reflects the biases present in its training data.'
@@ -194,10 +194,10 @@ Computing innovations often have BOTH beneficial and harmful consequences:
           {
             question: 'A school district moves all coursework online. Which group is MOST negatively affected?',
             options: [
-              'Students who already own computers',
+              'Students who already own laptops and home broadband',
               'Students without reliable internet access at home',
-              'Teachers with technology training',
-              'Students who prefer digital assignments'
+              'Teachers who completed technology training last year',
+              'Students who prefer to submit assignments digitally'
             ],
             correctAnswer: 1,
             explanation: 'Moving coursework online makes internet access essential. Students without reliable home internet are excluded — this is the digital divide in action. The policy widens educational inequality.'

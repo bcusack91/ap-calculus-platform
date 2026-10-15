@@ -56,8 +56,8 @@ Companies collect this data for targeted advertising, product improvement, and a
             options: [
               'Favorite color and preferred music genre',
               'ZIP code, date of birth, and gender',
-              'The weather in their city',
-              'The brand of phone they use'
+              'Phone brand, screen size, and carrier',
+              'Hair color and favorite sports team'
             ],
             correctAnswer: 1,
             explanation: 'Research shows ZIP code + date of birth + gender can uniquely identify 87% of Americans. Each piece alone is not identifying, but combined they narrow down to one person.'
@@ -65,10 +65,10 @@ Companies collect this data for targeted advertising, product improvement, and a
           {
             question: 'What is the primary purpose of cookies on websites?',
             options: [
-              'To protect against viruses',
-              'To speed up the internet connection',
+              'To scan downloaded files for viruses before opening',
+              'To speed up the network connection to the server',
               'To track user behavior and preferences across sessions',
-              'To encrypt all website data'
+              'To encrypt all data sent between browser and site'
             ],
             correctAnswer: 2,
             explanation: 'Cookies are small files stored by websites on your computer. They track browsing behavior, remember login status, and enable personalized advertising by following users across sites.'
@@ -145,15 +145,15 @@ Everything you do online creates a **digital footprint** — a trail of data inc
         dropdowns: [
           {
             label: 'A fingerprint scan is an example of ___ authentication',
-            options: ['Something you ARE (biometric)', 'Something you KNOW', 'Something you HAVE', 'Multi-factor by itself']
+            options: ['Something you ARE (biometric)', 'Something you HAVE (a device)', 'Something you KNOW (a password)', 'Multi-factor (two factors in one)']
           },
           {
             label: 'Checking if a logged-in user has permission to delete files is ___',
-            options: ['Authorization', 'Authentication', 'Encryption', 'Compression']
+            options: ['Authorization', 'Authentication', 'Encryption', 'Hashing']
           },
           {
             label: 'Using the same password on every website is dangerous because ___',
-            options: ['If one site is breached, all accounts are compromised', 'Passwords expire faster', 'Websites reject reused passwords', 'It slows down login times']
+            options: ['If one site is breached, all accounts are compromised', 'Passwords expire faster when used on several sites', 'Websites detect and lock out reused passwords', 'Reused passwords are stored without encryption']
           }
         ],
         correctAnswers: ['Something you ARE (biometric)', 'Authorization', 'If one site is breached, all accounts are compromised'],
@@ -189,9 +189,9 @@ Everything you do online creates a **digital footprint** — a trail of data inc
             question: 'A website requires both a password and a fingerprint to log in. This is an example of:',
             options: [
               'Single-factor authentication',
-              'Multi-factor authentication (knowledge + biometric)',
-              'Authorization',
-              'Encryption'
+              'Multi-factor authentication',
+              'Role-based authorization',
+              'Public-key encryption'
             ],
             correctAnswer: 1,
             explanation: 'Password = something you know. Fingerprint = something you are. Using two DIFFERENT factors = multi-factor authentication. This is much more secure than a password alone.'
@@ -199,10 +199,10 @@ Everything you do online creates a **digital footprint** — a trail of data inc
           {
             question: 'A data breach exposes millions of users email addresses and hashed passwords. Users who reused that password on other sites are at risk because:',
             options: [
-              'The breach also affects other websites directly',
-              'Attackers can try those credentials on other services (credential stuffing)',
-              'Email addresses become invalid after a breach',
-              'Hashed passwords cannot be cracked'
+              'The breach spreads directly to every site using that email',
+              'Attackers can try those stolen credentials on other services',
+              'Their email address stops working on other sites',
+              'The hashed passwords cannot be reversed by attackers'
             ],
             correctAnswer: 1,
             explanation: 'If stolen credentials work on other sites (because the user reused the password), attackers gain access to multiple accounts. This is called credential stuffing and is why password reuse is dangerous.'

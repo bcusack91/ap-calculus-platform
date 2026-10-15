@@ -26,9 +26,9 @@ export const cspSafeComputingPart6Data = {
             question: "A user asks if MFA via SMS is enough for an admin account. The most accurate answer is ___",
             options: [
               "SMS MFA is the strongest possible second factor available for any sensitive admin account.",
-              "SMS MFA helps but is vulnerable to SIM-swap; use an authenticator app or hardware key instead.",
+              "it helps but can be beaten by SIM-swap attacks, so an authenticator app or hardware key is better.",
               "No multi-factor authentication is needed at all on a properly configured admin account.",
-              "Transport-layer security on the admin login fully covers everything multi-factor would add."
+              "Email-based codes are stronger than SMS and fully protect against SIM-swap attacks."
             ],
             correctAnswer: 1,
             explanation: "SMS > nothing, but app/hardware factor is stronger."
@@ -37,9 +37,9 @@ export const cspSafeComputingPart6Data = {
             question: "Using a unique random password per site requires ___",
             options: [
               "memorizing each random password yourself, as humans can reliably recall hundreds of strings.",
-              "a password manager — humans cannot reliably memorize hundreds of unique random passwords.",
+              "a password manager, since people cannot reliably memorize hundreds of distinct strings.",
               "no tool whatsoever, since browsers will autofill any random password without storing it.",
-              "transport-layer security on the login form to make each random password short enough."
+              "a written list of passwords taped near the computer, which is safe from online attackers."
             ],
             correctAnswer: 1,
             explanation: "Password managers enable real uniqueness."
@@ -116,15 +116,15 @@ If a message:
         dropdowns: [
           {
             label: "A password manager primarily makes ___ practical",
-            options: ["unique strong passwords for every site", "memorizing one password for all sites", "no passwords at all", "compression of passwords"]
+            options: ["unique strong passwords for every site", "one memorized password reused on every site", "short passwords that are easy to type", "writing passwords on a sticky note"]
           },
           {
             label: "A long passphrase like \"correct-horse-battery-staple\" is ___",
-            options: ["stronger than a short complex password and easier to remember", "weaker than \"P@ss1\"", "always invalid", "always rejected"]
+            options: ["stronger than a short complex password and easier to remember", "weaker than a short complex password such as \"P@ss1\"", "harder to remember than a short complex password", "invalid on most sites because it contains hyphens"]
           },
           {
             label: "Reviewing privacy settings periodically is ___",
-            options: ["important because defaults and policies change over time", "unnecessary", "a TLS feature", "a compression feature"]
+            options: ["important because defaults and policies change over time", "unnecessary because defaults never change after signup", "unnecessary because privacy laws already protect all data", "important only when you first create an account"]
           }
         ],
         correctAnswers: ["unique strong passwords for every site", "stronger than a short complex password and easier to remember", "important because defaults and policies change over time"],
@@ -157,9 +157,9 @@ If a message:
             question: "A user gets an authenticator-app push they did NOT initiate. The most appropriate response is ___",
             options: [
               "approve the push so the notification disappears and the user can return to what they were doing.",
-              "deny the push, then change the password and review account activity — someone has the password.",
+              "deny the push and change the password at once, as someone else clearly has it.",
               "turn off multi-factor authentication on the account so future spurious pushes will not appear.",
-              "compress the authenticator app's notification log so the spurious push will be hidden inside."
+              "approve it once to check whether the notification was a glitch, then change nothing."
             ],
             correctAnswer: 1,
             explanation: "\"MFA bombing\" deny + investigate is the right answer."
@@ -169,8 +169,8 @@ If a message:
             options: [
               "use shorter passwords so students will reliably memorize them across every account they own.",
               "enable MFA on the student email account, since it's the recovery channel for everything else.",
-              "disable transport-layer security on the student's outbound browser traffic to simplify access.",
-              "install a wide variety of unfamiliar browser extensions to extend the student's capabilities."
+              "require students to change their passwords every week, even if no breach has occurred.",
+              "install antivirus on student laptops, since malware is the main way email gets hacked."
             ],
             correctAnswer: 1,
             explanation: "MFA on email is highest-leverage."

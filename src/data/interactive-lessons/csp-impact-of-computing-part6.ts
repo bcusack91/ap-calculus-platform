@@ -13,7 +13,7 @@ export const cspImpactOfComputingPart6Data = {
 
 ## Impact Of Computing Workshop
 
-Apply the dual-effect framework to scenarios — exactly the format the AP exam uses.
+Apply the dual-effect framework to scenarios — the kind of scenario the AP exam's multiple-choice impact questions use.
       `
     },
     {
@@ -27,10 +27,10 @@ Apply the dual-effect framework to scenarios — exactly the format the AP exam 
           {
             question: "A new app shows a personalized news feed. The most likely UNINTENDED harmful effect is ___",
             options: [
-              "users will receive their news significantly faster than they previously did from non-personalized news feed apps elsewhere.",
-              "users may be siloed into a filter bubble of viewpoints similar to those they have already engaged with in the past.",
-              "the TCP transport-layer protocol carrying the personalized news feed will gradually slow down on residential broadband connections.",
-              "the IPv6 deployment carrying the personalized news feed will stop working on residential broadband connections in many regions."
+              "users will receive their news significantly faster than they did from non-personalized feeds.",
+              "users may end up in a filter bubble of views they already agree with.",
+              "users will see more news sources than before, since personalized feeds draw from more outlets.",
+              "the app will stop working for users who have not yet set any personal content preferences."
             ],
             correctAnswer: 1,
             explanation: "Personalization can narrow exposure (filter bubble) — a classic unintended effect."
@@ -38,13 +38,13 @@ Apply the dual-effect framework to scenarios — exactly the format the AP exam 
           {
             question: "A school district installs cameras in every hallway \"for safety\". A reasonable balanced response is ___",
             options: [
-              "the newly installed hallway cameras have only beneficial effects on the school district's students, families, and staff alike.",
-              "the cameras may improve incident response (benefit) but raise privacy and chilling-effect concerns (harm) and need governance about who can view footage.",
-              "the newly installed hallway cameras have only harmful effects on the school district's students, families, and staff alike.",
-              "no impact analysis is needed for the newly installed hallway cameras because they only run during normal school district hours."
+              "the cameras only benefit students and staff, since anyone behaving well has nothing to hide.",
+              "cameras may speed up handling of incidents but raise privacy concerns, so rules on viewing footage are needed.",
+              "the cameras only harm students, since being recorded never improves safety in a school.",
+              "no analysis is needed, since the cameras record hallways only during normal school hours."
             ],
             correctAnswer: 1,
-            explanation: "A balanced AP-style answer names both effects and the governance question."
+            explanation: "A balanced impact analysis names both effects and the governance question."
           }
         ]
       }
@@ -91,7 +91,7 @@ Always name **affected populations** and the **mechanism** of impact (data, algo
       content: `
 **Applied Recall** ✍️
 
-1) A balanced AP-style impact answer should describe both _______ and harms.
+1) A balanced impact analysis should describe both _______ and harms.
 
 2) When a system's data collection identifies individuals despite "anonymization", this is a _______ concern.
 
@@ -103,7 +103,7 @@ Always name **affected populations** and the **mechanism** of impact (data, algo
         hint1: "Positive side.",
         hint2: "Anonymity isn't guaranteed.",
         hint3: "Be specific about WHO.",
-        explanation: "Balanced answers, privacy as a key lens, and naming affected populations are AP rubric basics."
+        explanation: "Balanced analysis, privacy as a key lens, and naming affected populations are the basics of strong impact analysis."
       }
     },
     {
@@ -116,11 +116,11 @@ Always name **affected populations** and the **mechanism** of impact (data, algo
         dropdowns: [
           {
             label: "A \"sunset clause\" on collected data means ___",
-            options: ["data is deleted after a defined period", "data is duplicated", "data is encrypted", "data is published"]
+            options: ["data is deleted after a defined period", "data is published after a defined period", "data is encrypted after a defined period", "data is archived permanently after a defined period"]
           },
           {
             label: "Aggregating data before publishing protects privacy by ___",
-            options: ["removing individual-level identifiability", "making data more identifiable", "compressing it losslessly", "changing the format"]
+            options: ["removing individual-level identifiability", "encrypting each individual-level record", "adding individual-level detail to records", "publishing every individual's raw record"]
           },
           {
             label: "A mitigation that gives users control over whether their data is used is ___",
@@ -144,7 +144,7 @@ Always name **affected populations** and the **mechanism** of impact (data, algo
 - Name a specific population (low-income, rural, students, elderly, etc.).
 - Name a specific mechanism (data collection, algorithmic decision, network amplification).
 - Suggest at least one mitigation (consent, aggregation, transparency, audit, sunset).
-- Avoid extreme answers ("only good", "only bad") — the rubric rewards balance.
+- Avoid extreme answer choices ("only good", "only bad") — the correct choice is usually the balanced one.
       `
     },
     {
@@ -159,7 +159,7 @@ Always name **affected populations** and the **mechanism** of impact (data, algo
             question: "A school deploys an AI grading assistant for essays. The strongest AP-style impact analysis would ___",
             options: [
               "praise the AI grading assistant as a substantial time-saver for classroom teachers and stop the impact analysis there.",
-              "note efficiency benefits AND risks of bias against non-standard writing styles AND propose human review of borderline grades.",
+              "note efficiency benefits AND risks of bias against non-standard writing AND propose human review of borderline grades.",
               "criticize the AI grading assistant as fundamentally unfit for any classroom essay-grading purpose without offering any concrete benefits.",
               "argue at length that computers in any form are intrinsically incapable of grading written student essays meaningfully or accurately."
             ],
@@ -169,10 +169,10 @@ Always name **affected populations** and the **mechanism** of impact (data, algo
           {
             question: "A city offers free public Wi-Fi in parks. A complete AP-style impact analysis would mention ___",
             options: [
-              "only the access benefit that the new free public Wi-Fi service provides for residents and park visitors in the city.",
-              "access benefits, plus that traffic on open Wi-Fi is exposed to eavesdropping unless users use HTTPS or a VPN, plus equity benefits for those without home internet.",
-              "only the security harm that traffic on the new free public Wi-Fi may be exposed to eavesdropping by other users on the same open wireless network.",
-              "only the equity harm that the new free public Wi-Fi service is unavailable to city residents who never visit any of the public parks."
+              "only the access benefit the free Wi-Fi gives residents and visitors who come to the parks.",
+              "the access benefit for residents without home internet and the eavesdropping risk on open networks.",
+              "only the security risk that traffic on the open network can be read by other nearby users.",
+              "only the equity harm that residents who never visit the parks cannot use the free Wi-Fi."
             ],
             correctAnswer: 1,
             explanation: "A complete answer names the equity benefit AND the security caveat."

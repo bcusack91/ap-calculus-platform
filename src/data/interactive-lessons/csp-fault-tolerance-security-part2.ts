@@ -35,10 +35,10 @@ A **fault-tolerant** system continues operating correctly when a component fails
           {
             question: "A web service runs on 3 servers behind a load balancer. One server crashes; users keep working. This demonstrates ___",
             options: [
-              "compression of failed requests so they take less storage on the surviving servers",
+              "load balancing that makes each server faster, with no redundancy involved",
               "fault tolerance via redundancy and automatic failover to healthy servers",
-              "transport-layer security replacing the failed server's role for waiting clients",
-              "a routing-table update on the load balancer with no underlying redundancy at all"
+              "data replication, which copies the crashed server's files onto a backup disk",
+              "encryption, which keeps the crashed server's sessions hidden from attackers"
             ],
             correctAnswer: 1,
             explanation: "Redundancy + failover = classic fault tolerance."
@@ -47,7 +47,7 @@ A **fault-tolerant** system continues operating correctly when a component fails
             question: "When a sensor returns an obviously wrong value, the most defensive approach is ___",
             options: [
               "use the obviously wrong value anyway and propagate it into downstream calculations.",
-              "detect the anomaly, ignore or flag the bad reading, and continue with valid data.",
+              "detect the anomaly, then flag or skip that reading and keep using the valid data.",
               "crash the entire program so that no further sensor reading can ever be processed.",
               "shut off all sensors connected to the program until a human operator intervenes."
             ],
@@ -124,15 +124,15 @@ Exponential backoff prevents retry storms from overwhelming a recovering service
         dropdowns: [
           {
             label: "Replication alone does NOT protect against ___",
-            options: ["a buggy delete that propagates to every replica", "a single disk failure", "a single server failure", "a network blip"]
+            options: ["a buggy delete that propagates to every replica", "a disk failure on one storage server", "the crash of one server while others stay up", "a hardware fault confined to a single machine in the cluster"]
           },
           {
             label: "Exponential backoff exists to ___",
-            options: ["avoid hammering a recovering service with retry storms", "compress data", "encrypt data", "route packets"]
+            options: ["avoid hammering a recovering service with retry storms", "retry failed requests as fast as possible until they succeed", "guarantee every request succeeds on its very first attempt", "send each request to several servers at the same instant"]
           },
           {
             label: "A multi-region deployment protects against ___",
-            options: ["region-level outages and natural disasters", "all bugs", "compression failure", "TLS failure"]
+            options: ["region-level outages and natural disasters", "a bug shipped to every region at once", "a stolen admin password", "phishing emails sent to the company's employees"]
           }
         ],
         correctAnswers: ["a buggy delete that propagates to every replica", "avoid hammering a recovering service with retry storms", "region-level outages and natural disasters"],
@@ -164,10 +164,10 @@ Exponential backoff prevents retry storms from overwhelming a recovering service
           {
             question: "A team replicates their database across 3 servers but takes no backups. A bug deletes a critical table. The most accurate framing is ___",
             options: [
-              "replication is enough — having three live copies guarantees the table can be restored.",
-              "replication propagates the deletion to all servers; only a backup could recover the data.",
-              "transport-layer security would have prevented the buggy delete from reaching any replica.",
-              "compression of the database file would have made the deletion easier to undo afterward."
+              "replication is enough — three live copies work just as well as a backup would.",
+              "the delete was copied to every replica, so only a backup could recover the table.",
+              "replication with a short sync delay would have kept at least one replica free of the delete.",
+              "the deleted table can be recovered by reading it back from whichever replica is the primary."
             ],
             correctAnswer: 1,
             explanation: "Replication ≠ backup."
@@ -177,7 +177,7 @@ Exponential backoff prevents retry storms from overwhelming a recovering service
             options: [
               "immediately retry forever, as fast as the client can produce new outbound requests.",
               "retry a small bounded number of times with exponential backoff, then surface a clear error.",
-              "crash the application immediately on the first failure and require a manual restart.",
+              "crash the application on the first failure so the user knows to restart it and try again later.",
               "silently ignore the failure and proceed as if the request had completed successfully."
             ],
             correctAnswer: 1,

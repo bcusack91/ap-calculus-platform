@@ -34,10 +34,10 @@ Every powerful technology produces both **beneficial** and **harmful** effects, 
           {
             question: "A new app helps farmers in remote areas check crop prices on a basic phone. The most likely UNINTENDED consequence is ___",
             options: [
-              "farmers across the entire region will permanently abandon their basic phones in favor of in-person market visits.",
-              "farmers without phones may be at a disadvantage relative to those with phones who can check crop prices instantly.",
-              "the basic phones used to check crop prices will gradually become more weather-resistant in remote farming areas.",
-              "crop prices set at central markets will become entirely irrelevant for the farmers using the price-checking app."
+              "farmers who check prices on the app will get better deals by comparing markets before selling.",
+              "farmers without phones may fall behind those who can check crop prices instantly.",
+              "crop prices across the region will become identical, since every farmer will see the same data.",
+              "the app will cause basic phones to stop working in areas without strong cellular coverage."
             ],
             correctAnswer: 1,
             explanation: "Even helpful technology can deepen the gap for those who don't have access (a digital-divide effect)."
@@ -45,10 +45,10 @@ Every powerful technology produces both **beneficial** and **harmful** effects, 
           {
             question: "Computing technologies generally have ___",
             options: [
-              "only beneficial effects on the people and groups who choose to use them or are affected by their deployment.",
-              "only harmful effects on the people and groups who choose to use them or are affected by their deployment.",
-              "both beneficial and harmful effects on the people and groups affected, often in the same product simultaneously.",
-              "no significant effects on the people and groups affected that are worth analyzing under the AP CSP framework."
+              "only beneficial effects, since people choose whether to adopt each new technology.",
+              "only harmful effects, since every technology eventually gets misused by someone.",
+              "beneficial and harmful effects, which may fall on different groups at the same time.",
+              "no significant effects, since any impact depends entirely on the user, not the tool."
             ],
             correctAnswer: 2,
             explanation: "AP CSP frames technologies as having dual effects — both must be considered."
@@ -69,7 +69,7 @@ When evaluating a technology, ask:
 - Was the harm **intended** or **unintended**?
 - What are **secondary** effects (e.g., changes to industries, public discourse)?
 
-These questions structure the AP exam's "impact of computing" prompts.
+These questions structure the AP exam's multiple-choice "impact of computing" questions.
 
 ## Intended vs. Unintended Consequences
 
@@ -125,15 +125,15 @@ A "best in class" web service is meaningless to users who can't afford service o
         dropdowns: [
           {
             label: "Telemedicine that requires high-speed Internet may worsen ___",
-            options: ["the digital divide for rural patients", "doctor handwriting", "paper consumption", "patient height"]
+            options: ["the digital divide for rural patients", "data redundancy in hospital servers", "patent disputes between device makers", "the digital footprint of hospital staff"]
           },
           {
             label: "A platform that goes viral globally affects ___",
-            options: ["far more people than its designers may have anticipated", "only its designers", "only one country", "only Wi-Fi networks"]
+            options: ["far more people than its designers may have anticipated", "only the users its designers originally intended to reach", "only people within the country where it was first launched", "only people who have chosen to create an account on it"]
           },
           {
             label: "A \"dual use\" technology is one that ___",
-            options: ["can be used for both beneficial and harmful purposes", "requires two users", "has two pricing tiers", "doubles the bandwidth"]
+            options: ["can be used for both beneficial and harmful purposes", "requires two separate users to approve each action", "runs on both desktop and mobile devices at once", "is licensed for both commercial and personal use"]
           }
         ],
         correctAnswers: ["the digital divide for rural patients", "far more people than its designers may have anticipated", "can be used for both beneficial and harmful purposes"],
@@ -149,7 +149,7 @@ A "best in class" web service is meaningless to users who can't afford service o
       content: `
 ## AP Exam Strategy: Impact Analysis
 
-- Always answer with **both** a benefit and a harm — the rubric usually demands both.
+- Always weigh **both** a benefit and a harm — the best answer choice usually accounts for both.
 - Look for **second-order** effects (e.g., displaced jobs, behavioral changes).
 - Mention specific affected populations (rural users, low-income users, users with disabilities, minors, etc.).
 - Don't just say "good" or "bad" — explain WHO is affected and HOW.
@@ -166,10 +166,10 @@ A "best in class" web service is meaningless to users who can't afford service o
           {
             question: "A school replaces paper textbooks with tablets to save money. What is a likely UNINTENDED harmful effect?",
             options: [
-              "Books delivered to students at the start of the year will no longer be printed with paper pages bound together.",
-              "Students without home Wi-Fi may struggle to do homework that requires the new tablet to access digital textbook content.",
-              "The new tablets distributed to students will be noticeably heavier in their backpacks than the old paper textbooks were.",
-              "Teachers across the entire district will collectively refuse to teach any further classes if textbooks are replaced."
+              "Paper textbooks will no longer be printed, which is the change the district set out to make.",
+              "Students without home Wi-Fi may struggle with homework that needs the digital textbooks.",
+              "The district will save money on printing and replacing worn-out books every school year.",
+              "Every student's reading scores will fall, regardless of how the tablets are used in class."
             ],
             correctAnswer: 1,
             explanation: "A digital-divide effect — students without home connectivity may be disadvantaged."
@@ -177,10 +177,10 @@ A "best in class" web service is meaningless to users who can't afford service o
           {
             question: "A facial-recognition system is deployed in a city to find missing children (intended beneficial use). What is a plausible UNINTENDED harmful use?",
             options: [
-              "It will reliably help locate every missing child reported in the city without ever producing a false positive identification.",
-              "The same camera-and-recognition infrastructure can later be repurposed to track political protesters or other lawful demonstrators.",
-              "It runs on the standard TCP/IP networking protocols used elsewhere on the internet for routine application-layer traffic.",
-              "It will gradually increase broadband demand on the city's residential ISPs as more cameras are added to the facial system."
+              "It will locate every missing child in the city without ever producing a false match.",
+              "The same camera network could later be aimed at tracking lawful protesters.",
+              "It will find missing children faster than officers could by searching the city on foot.",
+              "It will lower camera monitoring costs, since fewer officers need to watch the footage."
             ],
             correctAnswer: 1,
             explanation: "Surveillance infrastructure built for one purpose is easily redeployed for others — a classic dual-use concern."

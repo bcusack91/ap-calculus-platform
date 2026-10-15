@@ -34,10 +34,10 @@ Impact of computing ties everything together.
           {
             question: "Two services collect overlapping personal data. Combining them via a data-broker poses risks beyond either alone because ___",
             options: [
-              "data records about individuals visibly shrink in total size when two overlapping personal-data sources are combined.",
-              "cross-linking quasi-identifiers across the two sets can re-identify people who appear anonymous in either set alone.",
-              "the TCP transport protocol fundamentally cannot carry the combined output of two overlapping personal-data sources.",
-              "combining the records on disk routinely corrupts the underlying data files and renders the merged dataset unreadable."
+              "combining the two sets averages out individual records, which makes each person harder to find.",
+              "linking shared details across the two sets can re-identify people who seem anonymous in each.",
+              "each service already holds all the data the other has, so the merged set adds nothing new.",
+              "the risk arises only if a breach occurs, since merging the data sets alone reveals nothing."
             ],
             correctAnswer: 1,
             explanation: "Linkage attacks defeat naive anonymization — a core privacy theme."
@@ -45,10 +45,10 @@ Impact of computing ties everything together.
           {
             question: "A government deploys an automated system that decides who is eligible for benefits. The most CSP-aligned concern is ___",
             options: [
-              "the deployed eligibility system will run too quickly to give human caseworkers enough processing time per applicant.",
-              "the system's decisions affect lives, so its accuracy, fairness, and explainability all matter to people denied benefits.",
-              "the deployed eligibility system will require an upgrade to IPv6 networking before it can process new benefit applicants.",
-              "the deployed eligibility system will only run reliably on government servers during normal weekday business hours."
+              "the system will be more consistent than caseworkers, so fairness concerns no longer apply.",
+              "its decisions shape people's lives, so they must be accurate, fair, and explainable.",
+              "the code, data, and rules are government property, so applicants cannot question a denial.",
+              "automated decisions are always more accurate than human ones, so appeals are unnecessary."
             ],
             correctAnswer: 1,
             explanation: "High-stakes algorithmic decisions demand fairness, accuracy, and transparency."
@@ -130,15 +130,15 @@ These are not "future" issues — they are present.
         dropdowns: [
           {
             label: "A \"filter bubble\" describes ___",
-            options: ["being shown only viewpoints similar to one's past clicks", "a Wi-Fi router protector", "an audio compression", "an HTTPS layer"]
+            options: ["being shown only viewpoints similar to one's past clicks", "being shown a random mix of all viewpoints regardless of clicks", "a firewall that filters malicious traffic from one's network", "a spam filter that blocks phishing emails before they arrive"]
           },
           {
             label: "A bot army inflating likes affects ___",
-            options: ["perceived popularity, distorting public discourse", "TCP retransmission", "IPv6 adoption", "pixel resolution"]
+            options: ["perceived popularity, distorting public discourse", "server uptime, causing a denial-of-service outage", "network bandwidth, slowing every user's connection", "data privacy, exposing users' personal information"]
           },
           {
             label: "High-stakes algorithmic decisions especially benefit from ___",
-            options: ["human oversight and appeal mechanisms", "no review at all", "random outputs", "closed-source designs"]
+            options: ["human oversight and appeal mechanisms", "fully automated decisions with no appeal", "closed-source models kept secret from users", "larger training sets with no human review"]
           }
         ],
         correctAnswers: ["being shown only viewpoints similar to one's past clicks", "perceived popularity, distorting public discourse", "human oversight and appeal mechanisms"],
@@ -171,10 +171,10 @@ These are not "future" issues — they are present.
           {
             question: "A health app sells \"anonymized\" exercise data. A researcher links the data to public running club rosters and identifies many users. Which CSP concept is illustrated?",
             options: [
-              "Lossless data compression of the exercise dataset before publication for sale to outside researchers and partners.",
-              "A linkage attack defeating naive anonymization by joining quasi-identifiers across the dataset and a public roster.",
-              "A best-effort packet-routing decision made by the internet routers between the app's server and the researcher.",
-              "A TCP transport-layer retransmission of dropped exercise-data packets between the app's server and the researcher."
+              "A data breach, since attackers broke into the app's servers to steal the exercise records.",
+              "Re-identification, since joining the data with outside records revealed who the runners were.",
+              "Crowdsourcing, since many runners contributed data that the researcher combined into one set.",
+              "Encryption failure, since anonymized data must be encrypted before it can be sold to anyone."
             ],
             correctAnswer: 1,
             explanation: "Quasi-identifiers (location, time, route) link \"anonymous\" records back to people."
@@ -182,10 +182,10 @@ These are not "future" issues — they are present.
           {
             question: "A social platform's recommendation algorithm boosts engagement. Over time it shows users increasingly extreme content. What CSP-aligned framing best fits?",
             options: [
-              "The recommendation algorithm has developed something like a personality and is independently choosing the extreme content.",
-              "Optimizing for user engagement is not the same as optimizing for truth or wellbeing — an unintended harmful consequence.",
-              "The internet itself is fundamentally broken in a way that causes any deployed recommendation system to surface extreme content.",
-              "The internet routers carrying the recommendations have a built-in bias that pushes increasingly extreme content to viewers."
+              "The algorithm has developed its own preferences and is choosing extreme content on purpose.",
+              "Optimizing for engagement differs from optimizing for wellbeing, so harm emerged as a side effect.",
+              "Users' engagement shows they asked for extreme content, so the system is doing what they chose.",
+              "Extreme content spreads only because of a few bad actors, so the algorithm itself plays no role."
             ],
             correctAnswer: 1,
             explanation: "Optimization targets shape outcomes; engagement-maximization can produce harmful content as a side effect."

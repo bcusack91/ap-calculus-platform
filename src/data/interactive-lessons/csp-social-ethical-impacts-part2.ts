@@ -39,7 +39,7 @@ The same technology can enable opportunity AND harm. Both happen at once.
             question: "A new app helps users connect AND enables harassment. The most accurate framing is ___",
             options: [
               "it has only positive effects on the people who choose to use the app to connect with each other.",
-              "computing innovations typically have BOTH beneficial and harmful effects, often for different groups.",
+              "the app can bring some people together and expose others to harm at the same time.",
               "it has only negative effects on every population that ends up exposed to the app indirectly.",
               "its effects on people are essentially random and cannot be evaluated systematically in advance."
             ],
@@ -50,9 +50,9 @@ The same technology can enable opportunity AND harm. Both happen at once.
             question: "When evaluating a new technology, the most rigorous approach is ___",
             options: [
               "consider only the technology's intended use case as described by the original designers.",
-              "consider intended use, foreseeable misuse, and unintended consequences for different stakeholders.",
-              "consider only the public statements and press releases that the technology's makers issue.",
-              "consider only the marketing material the technology's makers prepare for general consumers."
+              "consider intended use, foreseeable misuse, and unintended effects on different stakeholders.",
+              "consider only the price, speed, and features listed in the makers' press releases.",
+              "consider only the opinions of early adopters who chose to try the technology first."
             ],
             correctAnswer: 1,
             explanation: "Holistic stakeholder analysis."
@@ -125,15 +125,15 @@ Bias is rarely intentional but always real. The CSP-aligned response is to test 
         dropdowns: [
           {
             label: "A new technology typically ___",
-            options: ["has both beneficial and harmful effects, often for different groups", "has only positive effects", "has only negative effects", "has no measurable effects"]
+            options: ["has both beneficial and harmful effects, often for different groups", "has only beneficial effects, shared equally by all groups", "has only harmful effects, falling equally on all groups", "has effects that are fully predictable before release"]
           },
           {
             label: "A facial-recognition system that performs much worse on dark-skinned faces demonstrates ___",
-            options: ["bias often rooted in training-data composition", "random errors only", "a TLS issue", "a compression issue"]
+            options: ["bias often rooted in training-data composition", "a privacy breach rooted in leaked face data", "fault tolerance rooted in redundant servers", "the digital divide rooted in internet access gaps"]
           },
           {
             label: "Vulnerable populations include ___",
-            options: ["children, people with disabilities, marginalized groups, and others", "no one in particular", "only adults", "only English speakers"]
+            options: ["children, people with disabilities, marginalized groups, and others", "only paying customers, investors, and company shareholders", "only the engineers, designers, and testers who built it", "only adults, English speakers, and frequent Internet users"]
           }
         ],
         correctAnswers: ["has both beneficial and harmful effects, often for different groups", "bias often rooted in training-data composition", "children, people with disabilities, marginalized groups, and others"],
@@ -167,9 +167,9 @@ Bias is rarely intentional but always real. The CSP-aligned response is to test 
             question: "A school adopts facial-recognition attendance. The most CSP-aligned analysis is ___",
             options: [
               "only the convenience of how much faster student attendance can be recorded each morning.",
-              "weigh benefits against bias risks, surveillance impact, data retention, consent, and alternatives.",
-              "only the transport-layer security implications of the camera traffic between the cameras and server.",
-              "only the storage compression ratio of recorded attendance data over a typical academic year."
+              "weigh the benefits against bias, privacy, consent, and data-retention risks.",
+              "only whether the cameras, software, and storage fit within the school's yearly budget.",
+              "only the accuracy rate, since a system that works well on average is fair to everyone."
             ],
             correctAnswer: 1,
             explanation: "Stakeholder + bias + privacy + alternatives = full analysis."
@@ -178,9 +178,9 @@ Bias is rarely intentional but always real. The CSP-aligned response is to test 
             question: "A gig-economy app benefits riders and consumers but precarious workers face inconsistent income. The most accurate framing is ___",
             options: [
               "the app is purely beneficial to every party that interacts with it through the gig-economy model.",
-              "computing reshapes work — benefits and harms are unevenly distributed across stakeholder groups.",
+              "computing reshapes work, and its benefits and harms are spread unevenly across stakeholder groups.",
               "the app has no measurable impact on the precarious workers who fulfill the gig-economy requests.",
-              "the app raises only a transport-layer-security issue between worker devices and the central server."
+              "the workers' unstable income comes from rider demand alone and has nothing to do with the app."
             ],
             correctAnswer: 1,
             explanation: "Uneven impact across stakeholder groups."
