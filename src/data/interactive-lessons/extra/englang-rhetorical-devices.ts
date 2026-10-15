@@ -78,10 +78,10 @@ A device's *effect* depends on every one of these. "I have a dream" lands as it 
             {
               question: 'On the AP English Language exam, what are you primarily asked to do with a rhetorical device?',
               options: [
-                'Name the device using its Greek or Latin term',
-                'Explain the effect the device has on the audience and how it advances the writer’s purpose',
-                'Count how many times the device appears in the passage',
-                'Replace the device with a plainer phrasing',
+                'Identify the device precisely by its correct Greek or Latin term',
+                'Explain the device’s effect on the audience and its link to purpose',
+                'Count how often the device appears to show how central it is to the text',
+                'Rewrite the device in plainer language to show what it means',
               ],
               correctAnswer: 1,
               explanation: 'AP rewards analysis of *function*, not labeling. Naming a device earns nothing on its own; you must connect the choice to its effect on the audience and the writer’s purpose.',
@@ -120,8 +120,8 @@ A senator delivers a televised speech urging Congress to fund flood relief after
         exercise: {
           dropdowns: [
             { label: 'Speaker:', options: ['the hurricane', 'the senator', 'the flood victims', 'Congress'] },
-            { label: 'Occasion:', options: ['a routine budget hearing', 'the aftermath of a hurricane', 'an election victory', 'a book launch'] },
-            { label: 'Purpose:', options: ['to entertain viewers', 'to persuade Congress to fund relief', 'to describe weather patterns', 'to apologize'] },
+            { label: 'Occasion:', options: ['a routine budget hearing', 'the aftermath of a hurricane', 'an election victory', 'a campaign rally'] },
+            { label: 'Purpose:', options: ['to console the flood victims', 'to persuade Congress to fund relief', 'to explain what caused the storm', 'to criticize the relief agencies'] },
           ],
           correctAnswers: ['the senator', 'the aftermath of a hurricane', 'to persuade Congress to fund relief'],
           hint1: 'The Speaker is the voice delivering the message — the person who chose the words.',
@@ -194,13 +194,13 @@ Fill in the missing SOAPSTone elements. Type each word in lowercase, exactly as 
           questions: [
             {
               question: 'Which appeal is at work? "According to the CDC, vaccination has reduced measles cases by 99% since 1963."',
-              options: ['Ethos — credibility', 'Pathos — emotion', 'Logos — logic and evidence', 'None of these'],
+              options: ['Ethos — credibility', 'Pathos — emotion', 'Logos — reasoning', 'None of these'],
               correctAnswer: 2,
               explanation: 'A precise statistic from a study is a textbook appeal to logos — persuasion through evidence and reason. (The CDC citation adds a touch of ethos, but the dominant move is the data.)',
             },
             {
               question: '"As someone who lost a brother to this disease, I beg you to listen." The phrase "As someone who lost a brother" primarily builds:',
-              options: ['Logos', 'Ethos', 'Antithesis', 'Logos and only logos'],
+              options: ['Logos', 'Ethos', 'Antithesis', 'Hyperbole'],
               correctAnswer: 1,
               explanation: 'Personal experience establishes the speaker’s standing to speak — ethos. (The loss also stirs pathos, but the clause "as someone who…" is doing credibility work.)',
             },
@@ -515,7 +515,7 @@ Diction also ranges on a scale of **formality**: *formal* ("commence," "purchase
           questions: [
             {
               question: 'A reviewer calls a politician’s plan "a scheme cooked up behind closed doors." The diction ("scheme," "cooked up") most clearly conveys a tone of:',
-              options: ['Admiration', 'Suspicion / disapproval', 'Neutral reporting', 'Joyful celebration'],
+              options: ['Admiration', 'Suspicion', 'Neutral reporting', 'Amused affection'],
               correctAnswer: 1,
               explanation: '"Scheme" and "cooked up" carry negative connotations of secrecy and trickery. The denotation (a plan made privately) is neutral, but the connotation signals suspicion and disapproval.',
             },
@@ -638,10 +638,10 @@ Notice the *braid*: anaphora (a scheme) carries three pathos appeals; antithesis
             {
               question: 'What is the primary effect of the anaphora "where my daughter… where a jobless veteran… where a lonely widow…"?',
               options: [
-                'It provides statistical proof of the library’s budget',
-                'It accumulates concrete human examples, making the library’s value feel personal and broad',
-                'It confuses the council with overly formal diction',
-                'It changes the literal meaning of the word "where"',
+                'It supplies statistical proof that the library saves the city money',
+                'It stacks concrete human examples so the library’s value feels personal',
+                'It confuses the council by shifting into an overly formal register',
+                'It changes the literal meaning of "where" from a place to a time',
               ],
               correctAnswer: 1,
               explanation: 'The repeated "where" stacks three vivid, sympathetic users of the library. The repetition (a scheme) carries the pathos, so the value feels personal and wide-reaching — exactly what the persuasive purpose needs.',
@@ -649,10 +649,10 @@ Notice the *braid*: anaphora (a scheme) carries three pathos appeals; antithesis
             {
               question: '"You do not save money — you spend it" works mainly by:',
               options: [
-                'Using a simile to compare money to time',
-                'Employing antithesis to flip the council’s own cost logic against them',
-                'Understating the seriousness of the closure',
-                'Citing a peer-reviewed study',
+                'Using a simile that compares spending money to wasting time',
+                'Using antithesis to turn the council’s cost logic against it',
+                'Understating how serious the closure will be for the city',
+                'Citing budget data showing closure costs more than it saves',
               ],
               correctAnswer: 1,
               explanation: 'The balanced opposition "save… / spend…" is antithesis. It takes the council’s framing (closing saves money) and reverses it (closing actually costs more), turning their own logic into the speaker’s argument.',
@@ -670,9 +670,9 @@ Map each quoted phrase to its device.`,
           dropdowns: [
             { label: '"in dropouts, in despair, in a community…" (no "and")', options: ['asyndeton', 'polysyndeton', 'simile'] },
             { label: '"what kind of city balances its budget on the backs of its children?"', options: ['metaphor only', 'rhetorical question', 'understatement'] },
-            { label: '"This is not just a building."', options: ['antithesis (reframing)', 'epistrophe', 'logos statistic'] },
+            { label: '"This is not just a building."', options: ['antithesis', 'epistrophe', 'logos statistic'] },
           ],
-          correctAnswers: ['asyndeton', 'rhetorical question', 'antithesis (reframing)'],
+          correctAnswers: ['asyndeton', 'rhetorical question', 'antithesis'],
           hint1: 'A list with the conjunctions dropped is asyndeton.',
           hint2: 'A question posed for effect, expecting no literal answer, is rhetorical.',
           hint3: '"Not just a building — [but] the room where…" sets up a contrast that reframes the issue: antithesis.',
@@ -757,9 +757,9 @@ You can now (1) read the rhetorical situation, (2) identify the three appeals, (
               question: 'Which statement correctly distinguishes a scheme from a trope?',
               options: [
                 'A scheme changes word *meaning*; a trope changes word *order*',
-                'A scheme changes word *order/arrangement*; a trope changes word *meaning*',
-                'Schemes are emotional; tropes are logical',
-                'There is no difference — the terms are synonyms',
+                'A scheme changes word *order*; a trope changes word *meaning*',
+                'Schemes appeal to emotion; tropes appeal to logic and reason',
+                'There is no difference — the two terms are synonyms',
               ],
               correctAnswer: 1,
               explanation: 'A scheme (e.g., anaphora, antithesis) alters arrangement without changing literal meaning. A trope (e.g., metaphor, irony) turns the meaning of words themselves.',

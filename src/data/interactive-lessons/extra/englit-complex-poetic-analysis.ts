@@ -7,7 +7,7 @@ import type { LessonData } from '../registry'
  * teach (text) → interactive check (multiple-choice / dropdown-select / input-boxes) →
  * close reading / worked applications → Exit Quiz. Concept-forward (non-math topic), so
  * checks favor multiple-choice + dropdown, with a few short-answer input-boxes (scansion
- * counts, term recall, rhyme-scheme letters). Every poem excerpt quoted is public domain.
+ * counts, term recall, rhyme-scheme letters). Poem excerpts are public domain except one short fair-use line (Dylan Thomas) in the forms table.
  * LaTeX uses DOUBLED backslashes (template-literal strings). Scansion marks use ˘ (unstressed)
  * and ´ (stressed) Unicode glyphs to render reliably in markdown.
  */
@@ -60,21 +60,21 @@ Skilled readers pass through three levels, in order. Skipping a level is the mos
             {
               question: 'Which of the following statements is *analysis* rather than *summary*?',
               options: [
-                'The harsh consonants in "cracked black bark" slow the line and mimic the roughness the speaker describes.',
-                'The poem is about a tree in winter.',
-                'In the second stanza, the speaker walks past the tree.',
-                'The poem has four stanzas and ends with a question.',
+                'The harsh consonants in "cracked black bark" slow the line and mimic the roughness described.',
+                'The poem is about a tree in winter, standing alone in a field with its bark cracked and black.',
+                'In the second stanza, the speaker walks past the tree and notices its "cracked black bark."',
+                'The poem has four stanzas, uses many hard consonant sounds, and ends with a question.',
               ],
               correctAnswer: 0,
-              explanation: 'Only the first option connects a specific technique (clustered hard consonants) to an effect (slowing, roughness) and to meaning. The others merely restate content or describe structure without explaining its effect.',
+              explanation: 'Only the "cracked black bark" sound analysis connects a specific technique (clustered hard consonants) to an effect (slowing, roughness) and to meaning. The others merely restate content or describe structure without explaining its effect.',
             },
             {
               question: 'A reader claims a poem is "about hope" but has misidentified the speaker as cheerful when the diction is actually bitter. Which level of reading failed?',
               options: [
-                'Level 1 (literal) — the situation/tone was misread, so the interpretation is unsupported',
-                'Level 3 (interpretive) — the claim was too ambitious',
-                'No level failed; "hope" is always a valid reading',
-                'Level 2 only, because tone is purely subjective',
+                'Level 1 (literal) — the tone was misread, so the claim built on it is unsupported',
+                'Level 3 (interpretive) — the claim about hope was simply too ambitious to defend',
+                'No level failed — "hope" is a valid reading of any poem, whatever its diction',
+                'Level 2 only — tone is subjective, so the reader\'s cheerful reading is just as valid',
               ],
               correctAnswer: 0,
               explanation: 'A wrong interpretation that rests on a misread tone is a level-1/level-2 accuracy failure. The fix is to re-paraphrase and re-check the diction before claiming meaning. Tone is inferred from evidence, not "purely subjective."',
@@ -207,7 +207,7 @@ The **iamb** is the natural rhythm of English — most ordinary phrases ("today,
               question: 'Which phrase is naturally **trochaic** (´ ˘)?',
               options: ['"Tiger, tiger"', '"the road ahead"', '"to be or not"', '"in the deep"'],
               correctAnswer: 0,
-              explanation: '"TI-ger, TI-ger" stresses the first syllable of each word: ´ ˘ ´ ˘ — trochaic (the famous opening of Blake\'s "The Tyger"). "the road aHEAD" and "to BE or NOT" are iambic; "in the DEEP" is anapestic.',
+              explanation: '"TI-ger, TI-ger" stresses the first syllable of each word: ´ ˘ ´ ˘ — trochaic (the modernized spelling of the opening of Blake\'s "The Tyger": "Tyger Tyger, burning bright"). "the road aHEAD" and "to BE or NOT" are iambic; "in the DEEP" is anapestic.',
             },
           ],
         },
@@ -381,15 +381,15 @@ Classify each described rhyme.`,
           questions: [
             {
               question: 'In "the silken, sad, uncertain rustling of each purple curtain" (Poe), the repeated *s* sounds are an example of —',
-              options: ['Sibilance/alliteration that creates a hushed, whispery euphony', 'Cacophony that creates harshness', 'Onomatopoeia of a bell', 'Slant rhyme'],
+              options: ['Sibilance that creates a hushed, whispery sound', 'Cacophony that creates a harsh, grating sound', 'Onomatopoeia that imitates the sound of a bell', 'Internal slant rhyme that unsettles the line'],
               correctAnswer: 0,
               explanation: 'The clustered soft *s* sounds (sibilance, a form of alliteration/consonance) produce a whispering, uneasy hush — euphonic in texture, matching the eerie quiet of the scene. There are no harsh stops, so it is not cacophony.',
             },
             {
               question: 'A line packed with hard *k*, *t*, and *g* sounds describing a battlefield best illustrates —',
-              options: ['Cacophony reinforcing violence (sound echoing sense)', 'Euphony reinforcing calm', 'Eye rhyme', 'Iambic substitution'],
+              options: ['Cacophony echoing violence', 'Euphony that softens the violence', 'Assonance that slows the whole line', 'Eye rhyme linking the line endings'],
               correctAnswer: 0,
-              explanation: 'Clustered harsh stop-consonants create cacophony; pairing that grating texture with a violent subject is "sound echoing sense." Euphony would be the opposite (smooth, pleasing).',
+              explanation: 'Clustered harsh stop-consonants create cacophony; pairing that grating texture with a violent subject is "sound echoing sense." Euphony would be the opposite (smooth, pleasing), assonance is repeated vowel sounds, and eye rhyme concerns spelling at line ends.',
             },
           ],
         },
@@ -413,7 +413,7 @@ Read this stanza and give the rhyme scheme as **four capital letters, no spaces*
           hint1: 'Label line 1 "A." Then ask whether line 2 rhymes with it — if not, it becomes "B."',
           hint2: 'cloud/crowd rhyme; hills/daffodils rhyme. The rhyming lines should share a letter.',
           hint3: 'Lines 1 and 3 (cloud/crowd) = A; lines 2 and 4 (hills/daffodils) = B → A,B,A,B.',
-          explanation: 'cloud (A), hills (B), crowd (A), daffodils (B) → ABAB, an alternating/cross rhyme. This is the opening of Wordsworth\'s "I Wandered Lonely as a Cloud."',
+          explanation: 'cloud = A, hills = B, crowd = A, daffodils = B → ABAB, an alternating/cross rhyme. This is the opening of Wordsworth\'s "I Wandered Lonely as a Cloud."',
         },
       },
     ],
@@ -447,7 +447,7 @@ Read this stanza and give the rhyme scheme as **four capital letters, no spaces*
 | **Metonymy** | a thing named by something associated with it | "the **crown** ruled" (= the monarchy) |
 | **Synecdoche** | a part stands for the whole (or vice versa) | "all hands on deck" (= sailors) |
 | **Apostrophe** | direct address to an absent/abstract/dead thing | "Death, be not proud" |
-| **Hyperbole** | deliberate exaggeration | "I'll love you till the seas gang dry" |
+| **Hyperbole** | deliberate exaggeration | "Till a' the seas gang dry" (Burns) |
 | **Symbol** | a concrete thing standing for a larger idea | a road = a life choice |
 
 > 💡 **Metonymy vs. synecdoche:** synecdoche uses a literal **part** ("hands" are literally part of sailors); metonymy uses an **associated** thing that isn't a part ("crown" is associated with, but not part of, a monarch). When unsure on the exam, "metonymy" is the safer umbrella term.`,
@@ -497,10 +497,10 @@ Read this stanza and give the rhyme scheme as **four capital letters, no spaces*
             {
               question: 'A stanza repeatedly invokes "ash," "smoke," "embers," and "the last red coal." This *pattern* most directly creates —',
               options: [
-                'A motif of dying fire that suggests fading vitality or an ending',
-                'A cheerful, energetic tone',
-                'An example of synecdoche',
-                'Iambic pentameter',
+                'A motif of dying fire suggesting decline or an ending',
+                'A warm, hopeful mood of comfort beside the hearth',
+                'A synecdoche in which the embers stand for the whole house',
+                'A sound pattern of harsh, clashing consonants',
               ],
               correctAnswer: 0,
               explanation: 'The shared quality of the images — a fire in its final stage — accumulates into a motif of decline/ending. The mood comes from the pattern, not from any single word. None of the other options describes what repeated dying-fire images do.',
@@ -602,6 +602,8 @@ Consider:
 
 > "I am not yet so old
 > But I may learn..."
+>
+> — adapted from Shakespeare, *The Merchant of Venice* 3.2 ("She is not yet so old / But she may learn")
 
 Read line 1 alone — "I am not yet so old" — and it sounds like a confident claim. The enjambment then **delays and qualifies** it: the thought isn't finished, and the eye's hop to line 2 enacts the speaker reaching for more. The *break itself* produces a small drama of expectation and revision.
 
@@ -615,20 +617,20 @@ Read line 1 alone — "I am not yet so old" — and it sounds like a confident c
           questions: [
             {
               question: 'A Petrarchan sonnet poses a question across its octave, then begins line 9 with "Yet—". This "Yet" most likely marks the —',
-              options: ['Volta (the turn), where the poem pivots from problem to resolution', 'Caesura', 'End rhyme', 'Refrain'],
+              options: ['Volta, the turn from problem to response', 'Caesura, a pause in the middle of a line', 'Refrain, a line repeated from the octave', 'Couplet, the closing pair of rhymed lines'],
               correctAnswer: 0,
-              explanation: 'In a Petrarchan sonnet the volta (turn) characteristically falls around line 9, opening the sestet; a pivot word like "Yet" signals the shift from the octave\'s problem to the sestet\'s response.',
+              explanation: 'In a Petrarchan sonnet the volta (turn) characteristically falls around line 9, opening the sestet; a pivot word like "Yet" signals the shift from the octave\'s problem to the sestet\'s response. A Petrarchan sonnet has no refrain and does not close on a rhymed couplet.',
             },
             {
               question: 'A poet enjambs a line so that "she let it / go" splits the verb across the break. The most defensible reading is that the break —',
               options: [
-                'Enacts the release — the eye must "let go" of one line and drop to the next, mirroring the action',
-                'Is a printing error with no meaning',
-                'Proves the poem is a sonnet',
-                'Creates perfect rhyme',
+                'Enacts the release, as the reader must "let go" and drop to the next line',
+                'Marks a caesura that slows the reader down at the moment of release',
+                'Signals the volta, where the poem turns from problem to resolution',
+                'Creates an end-stopped line that closes off the speaker\'s thought',
               ],
               correctAnswer: 0,
-              explanation: 'Form mirrors content: by splitting "let it / go," the line break makes the reader perform a small letting-go, dropping to the next line. That is enjambment doing interpretive work, not an error.',
+              explanation: 'Form mirrors content: by splitting "let it / go," the line break makes the reader perform a small letting-go, dropping to the next line. That is enjambment doing interpretive work — the opposite of an end-stopped line, and not a mid-line pause or a sonnet\'s turn.',
             },
           ],
         },
@@ -699,10 +701,10 @@ Tone lives in **diction** (word choice), **imagery**, **syntax**, and **sound**.
             {
               question: 'A speaker describes a lavish party using only words like "glittering," "brittle," "hollow," and "polished smiles." The tone is best described as —',
               options: [
-                'Ironic / quietly contemptuous — surface glamour undercut by words implying emptiness',
-                'Sincerely celebratory and warm',
-                'Furious and openly hostile',
-                'Neutral and purely descriptive',
+                'Quietly contemptuous, undercutting the glamour as empty',
+                'Sincerely celebratory, delighting in the glamour of the evening',
+                'Openly furious, attacking the guests in harsh, direct language',
+                'Neutral and descriptive, recording the scene without judgment',
               ],
               correctAnswer: 0,
               explanation: 'The connotations ("brittle," "hollow," "polished smiles") signal that the speaker sees through the glamour to something empty — a controlled, ironic contempt, not warmth or open fury. The diction is evaluative, so it is not neutral.',
@@ -710,10 +712,10 @@ Tone lives in **diction** (word choice), **imagery**, **syntax**, and **sound**.
             {
               question: 'Why is it risky to say "the poet feels lonely" when analyzing a first-person poem?',
               options: [
-                'Because the "I" is the speaker — a crafted voice that may differ from the poet\'s own feelings',
-                'Because poems never use the word "I"',
-                'Because loneliness cannot be a tone',
-                'Because the poet always agrees with the speaker',
+                'The "I" is a crafted speaker whose feelings may differ from the poet\'s',
+                'Loneliness is a mood felt by the reader, not a tone held by a speaker',
+                'Claims about feelings are opinions that evidence cannot support',
+                'First-person poems are written to be read aloud, not analyzed as text',
               ],
               correctAnswer: 0,
               explanation: 'The first-person "I" is a constructed speaker, not necessarily the biographical poet. Strong analysis says "the speaker," reserving claims about the poet for cases with clear external evidence.',
@@ -859,10 +861,10 @@ You now command the whole toolkit: levels of reading, meter, sound, figurative l
             {
               question: 'In "Bare ruined choirs, where late the sweet birds sang," the phrase "ruined choirs" works primarily as —',
               options: [
-                'A metaphor equating the bare branches with the empty ruins of a church',
-                'A simile comparing leaves to birds',
-                'An example of perfect end rhyme',
-                'Onomatopoeia',
+                'A metaphor equating bare branches with a roofless church',
+                'A simile comparing the yellow leaves to singing birds',
+                'A personification giving the trees the voices of a choir',
+                'An apostrophe addressing the empty church directly',
               ],
               correctAnswer: 0,
               explanation: 'The branches are not *like* ruins — they *become* "ruined choirs," a compressed metaphor. (Historically, "choirs" were the part of a church where singers sat; stripped boughs = roofless ruins where birds, the former "choir," once sang.)',
@@ -870,13 +872,13 @@ You now command the whole toolkit: levels of reading, meter, sound, figurative l
             {
               question: 'The best reason to call a poem "complex" in a thesis is that —',
               options: [
-                'It sustains a genuine tension or development (e.g., two tones, a turn) that the evidence supports',
-                'It is long and uses difficult vocabulary',
-                'It rhymes perfectly throughout',
-                'It can only mean one thing',
+                'It sustains a real tension that the evidence supports',
+                'It is long and uses difficult, unfamiliar vocabulary throughout',
+                'It follows a demanding fixed form with a perfect rhyme scheme',
+                'It has one hidden meaning that careful readers must decode',
               ],
               correctAnswer: 0,
-              explanation: 'Complexity, on the AP rubric, means a defensible tension, development, or ambiguity supported by the text — not mere length, vocabulary, or rhyme. A poem with only one possible meaning is the opposite of complex.',
+              explanation: 'Complexity, on the AP rubric, means a defensible tension, development (such as a turn), or ambiguity supported by the text — not mere length, vocabulary, or strict form. A poem with a single hidden meaning to decode is not complex in this sense.',
             },
           ],
         },
@@ -911,21 +913,21 @@ Answer all three to finish the lesson.`,
             {
               question: 'A line of poetry reads: "and MILES to GO be-FORE I SLEEP." Counting the stresses, this line is closest to —',
               options: [
-                'Iambic tetrameter (four iambs: ˘ ´ ˘ ´ ˘ ´ ˘ ´)',
-                'Trochaic pentameter',
-                'Dactylic hexameter',
-                'Free verse with no meter',
+                'Iambic tetrameter',
+                'Trochaic tetrameter',
+                'Iambic pentameter',
+                'Anapestic trimeter',
               ],
               correctAnswer: 0,
-              explanation: '"and MILES | to GO | be-FORE | I SLEEP" = four unstressed–stressed feet → iambic tetrameter (Frost\'s famous closing lines). Eight syllables in four iambs.',
+              explanation: '"and MILES | to GO | be-FORE | I SLEEP" = four unstressed–stressed feet (˘ ´ ˘ ´ ˘ ´ ˘ ´) → iambic tetrameter (Frost\'s famous closing lines). Eight syllables in four iambs; pentameter would need ten.',
             },
             {
               question: 'A poem\'s tone is "wistful" in its first three stanzas but turns "defiant" in the last. The most useful analytical move is to —',
               options: [
-                'Identify the shift, locate exactly where it happens, and explain what triggers and means it',
-                'Pick only one tone and ignore the other',
-                'Conclude the poem is poorly written',
-                'List every sound device in the poem regardless of relevance',
+                'Locate the shift and explain what triggers it and what it means',
+                'Choose the dominant tone and treat the final stanza as an exception',
+                'Conclude that the poem is inconsistent and poorly controlled',
+                'List every sound device so the essay covers the whole poem',
               ],
               correctAnswer: 0,
               explanation: 'A tonal shift is a gift to the analyst: pinpoint the turn, then explain its cause and significance. Ignoring half the poem, or dumping unconnected devices, abandons the complexity the rubric rewards.',
@@ -933,13 +935,13 @@ Answer all three to finish the lesson.`,
             {
               question: 'Which thesis best demonstrates "technique + effect + meaning"?',
               options: [
-                'Through harsh cacophony and fractured enjambment, the poem makes grief feel physically violent, suggesting that mourning is an assault the speaker cannot control.',
-                'This poem uses many literary devices to talk about grief.',
-                'The poem is sad and has fourteen lines.',
-                'The poet probably felt bad when writing this.',
+                'Through harsh cacophony and broken enjambment, the poem makes grief feel violent, an assault the speaker cannot control.',
+                'This poem uses many literary devices, such as cacophony, enjambment, and imagery, to talk about the speaker\'s feelings of grief.',
+                'The poem is a sad sonnet of fourteen lines in which the speaker describes the death of someone close and the grief that follows.',
+                'The poet probably felt very bad when writing this poem, since it seems to come from a real loss in the poet\'s own life.',
               ],
               correctAnswer: 0,
-              explanation: 'Only the first names specific techniques (cacophony, enjambment), states their effect (grief feels violent), and reaches meaning (mourning as uncontrollable assault). The others stop at vague labeling, summary, or biography.',
+              explanation: 'Only the cacophony thesis names specific techniques (cacophony, enjambment), states their effect (grief feels violent), and reaches meaning (mourning as an assault the speaker cannot control). The others stop at device-listing, summary, or biography.',
             },
           ],
         },
