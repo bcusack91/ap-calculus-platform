@@ -234,6 +234,8 @@ interface Section {
 interface ExerciseInput {
   label: string
   correctAnswer: string
+  // Some lesson files write the key as `answer`; normalized to correctAnswer below.
+  answer?: string
   explanation?: string
 }
 
@@ -4366,7 +4368,7 @@ function InputBoxExercise({
   // Treat Formats C and D as inputs rows so the question renders as the
   // (KaTeX-capable) label and the existing inputs UI/feedback is reused.
   const exerciseInputs: ExerciseInput[] = (exercise.inputs && exercise.inputs.length > 0)
-    ? exercise.inputs
+    ? exercise.inputs.map((input) => ({ ...input, correctAnswer: input.correctAnswer ?? input.answer ?? '' }))
     : hasQuestionsArray
       ? questionsFmt!.map((q) => ({ label: q.question ?? q.prompt ?? '', correctAnswer: q.answer ?? q.correctAnswer ?? '', explanation: q.explanation }))
       : isSingleQuestionFormat
