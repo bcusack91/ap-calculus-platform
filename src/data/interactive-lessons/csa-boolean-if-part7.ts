@@ -5,171 +5,189 @@ export const csaBooleanIfPart7Data = {
       id: 'csaboole7-intro',
       type: 'text' as const,
       content: `
-# 💻 Boolean Expressions & If Statements
+# ✅ Boolean Expressions & If Statements
 
-**Part 7 of 7 — AP Review**
+**Part 7 of 7 — Synthesis Review**
 
-Comprehensive review of Boolean Expressions & If Statements for the AP exam. Focus on key concepts, common question types, and exam strategies.
+---
 
-### Key Concepts
+This review ties together everything in this lesson: the building blocks of algorithms, Boolean values, one-way and two-way selection, compound conditions, and the pitfalls that cost points.
 
-| Concept | Description |
-|---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for Boolean Expressions & If Statements |
-| **Common question types** | The most frequent ways Boolean Expressions & If Statements is tested on the AP exam |
-| **Exam strategy** | Approaches for answering Boolean Expressions & If Statements questions effectively |
+| In this part |
+|---|
+| The whole lesson in one table |
+| A five-step method for any selection question |
+| Mixed review |
       `
     },
     {
-      id: 'csaboole7-quiz1',
+      id: 'csaboole7-table',
+      type: 'text' as const,
+      content: `
+## The Lesson in One Table
+
+| Part | Big idea | One-line reminder |
+|---|---|---|
+| 1 | Operators | \`==\` and \`!=\` for primitives; \`equals\` for String content |
+| 2 | Boolean values | Sequencing, selection, repetition; int division before comparing |
+| 3 | if and if-else | Braces make the body; a stray \`;\` empties it |
+| 4 | Compound conditions | \`&&\` before \`\\|\\|\`; guard on the left |
+| 5 | Pitfalls | Separate ifs all run; \`=\` is not \`==\` |
+| 6 | Practice | Return, do not print; test the boundaries |
+
+## A Five-Step Method for Any Selection Question
+
+1. **Check that it compiles.** Look for \`<\` on Strings, \`if (x = 5)\` with an int, and a variable that might not be assigned.
+2. **Find each body.** Braces decide it, and a semicolon right after a condition empties it.
+3. **Evaluate each condition with the current values.** Do arithmetic first, then comparisons, then \`&&\`, then \`||\`.
+4. **Watch for short-circuits.** Decide whether the right side runs before you evaluate it.
+5. **Update a trace table** after every body that runs.
+      `
+    },
+    {
+      id: 'csaboole7-mc1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Mixed Review** 🎯
+
+**Segment A**
+\`\`\`java
+int t = 72;
+boolean humid = true;
+String msg = "ok";
+if (t > 85 || humid && t > 70) {
+    msg = "uncomfortable";
+}
+if (!humid) {
+    msg = msg + "!";
+}
+System.out.println(msg);
+\`\`\`
       `,
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for Boolean Expressions & If Statements is:',
+            question: 'What is printed by Segment A?',
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              'uncomfortable',
+              'ok',
+              'uncomfortable!',
+              'ok!'
             ],
-            correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'The && part is true because humid is true and 72 > 70, so the || is true even though 72 > 85 is false. The second if is skipped because !humid is false.'
           },
           {
-            question: 'AP multiple-choice questions about Boolean Expressions & If Statements often test:',
+            question: 'Which expression throws an exception when the String s is null?',
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              's.length() > 0 && s != null',
+              's != null && s.length() > 0',
+              's == null || s.length() == 0',
+              's == null || s.equals("")'
             ],
-            correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            correctAnswer: 0,
+            explanation: 'Calling length on a null reference throws a NullPointerException, and that expression makes the call before the null check. The other three test for null first, and short-circuiting skips the call.'
+          },
+          {
+            question: 'Which statement prints true?',
+            options: [
+              'System.out.println(7 / 2 == 3);',
+              'System.out.println(7 / 2 == 3.5);',
+              'System.out.println(7 % 2 == 0);',
+              'System.out.println(7 / 2.0 == 3);'
+            ],
+            correctAnswer: 0,
+            explanation: 'Int division makes 7 / 2 equal 3, so the comparison with 3 is true. The same division is not 3.5, 7 % 2 is 1, and 7 / 2.0 is 3.5, not 3.'
+          },
+          {
+            question: 'Which task needs both selection and repetition?',
+            options: [
+              'Counting how many of the 30 test scores are 90 or higher',
+              'Adding a 5-point bonus to a score if it is under 60',
+              'Printing each number from 1 to 30 on its own line',
+              'Converting one temperature from Celsius to Fahrenheit'
+            ],
+            correctAnswer: 0,
+            explanation: 'Counting repeats a step for each of the 30 scores and decides each time whether to count it. Printing 1 to 30 repeats with no decision, the bonus is one decision, and the conversion is pure sequencing.'
           }
         ]
-      }
-    },
-    {
-      id: 'csaboole7-content',
-      type: 'text' as const,
-      content: `
-## AP Review — Deeper Dive
-
-### Key vocabulary
-Essential terms and definitions for Boolean Expressions & If Statements. Understanding this concept is essential for mastering Boolean Expressions & If Statements in AP Computer Science A.
-
-### Common question types
-The most frequent ways Boolean Expressions & If Statements is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
-
-### Exam strategy
-Approaches for answering Boolean Expressions & If Statements questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'csaboole7-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to essential terms and definitions for Boolean Expressions & If Statements?
-
-2) What concept describes the most frequent ways Boolean Expressions & If Statements is tested on the AP exam?
-
-3) Name the term for approaches for answering Boolean Expressions & If Statements questions effectively.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for Boolean Expressions & If Statements), Common question types (The most frequent ways Boolean Expressions & If Statements is tested on the AP exam), and Exam strategy (Approaches for answering Boolean Expressions & If Statements questions effectively).'
       }
     },
     {
       id: 'csaboole7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Rules Review** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Essential terms and definitions for Boolean Expressions & If Statements is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
+            label: 'In a || b && c, the operator applied first is ___',
+            options: ['&&', '||', 'whichever is leftmost', 'neither, since it does not compile']
           },
           {
-            label: 'The most frequent ways Boolean Expressions & If Statements is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
+            label: 'If the left side of an && is false, the right side is ___',
+            options: ['skipped', 'evaluated first', 'evaluated last', 'checked for errors only']
           },
           {
-            label: 'Approaches for answering Boolean Expressions & If Statements questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
+            label: 'A method that must report a result to its caller should ___ it',
+            options: ['return', 'print', 'store', 'declare']
           }
         ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for Boolean Expressions & If Statements. Common question types — The most frequent ways Boolean Expressions & If Statements is tested on the AP exam. Exam strategy — Approaches for answering Boolean Expressions & If Statements questions effectively.'
+        correctAnswers: ['&&', 'skipped', 'return'],
+        hint1: '&& has higher precedence.',
+        hint2: 'false && anything is already false.',
+        hint3: 'The caller can only use what the method gives back.',
+        explanation: '&& binds tighter than ||, so a || b && c means a || (b && c). A false left side ends an && without evaluating the right. The caller receives a value only through return.'
       }
     },
     {
-      id: 'csaboole7-strategy',
-      type: 'text' as const,
+      id: 'csaboole7-input',
+      type: 'input-boxes' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+**Final Recall** ✍️
 
-### Misconceptions to Avoid
-- Don\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of Boolean Expressions & If Statements.
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+1) For \`int n = 24;\`, type the value of \`n % 4 == 0 && n % 6 != 0 || n > 20\`.
 
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP Computer Science A for higher scores.
-      `
-    },
-    {
-      id: 'csaboole7-applied',
-      type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
+2) What is printed?
+\`\`\`java
+int k = 3;
+if (k > 2) {
+    k = k * 3;
+}
+if (k > 5) {
+    k = k - 5;
+} else {
+    k = 0;
+}
+System.out.println(k);
+\`\`\`
+
+3) What does \`ticketPrice(65, false, true)\` from Part 6 return?
       `,
       exercise: {
-        questions: [
-          {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about Boolean Expressions & If Statements. You should:',
-            options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
-            ],
-            correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
-          },
-          {
-            question: 'For free-response questions on Boolean Expressions & If Statements, the most common mistake is:',
-            options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
-            ],
-            correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['true', '4', '8'],
+        hint1: 'Apply && before ||.',
+        hint2: 'The second if tests the value of k after the first if.',
+        hint3: 'A 65-year-old pays the senior price, then check the day.',
+        explanation: '24 % 6 != 0 is false, so the && is false, but 24 > 20 makes the || true. k becomes 9, then 9 > 5 is true, so k becomes 4. The senior price of 10 drops by 2 on Tuesday, giving 8.'
       }
+    },
+    {
+      id: 'csaboole7-close',
+      type: 'text' as const,
+      content: `
+## Ready for What Comes Next
+
+| If you can... | You are ready for... |
+|---|---|
+| Evaluate any compound condition by hand | nested and multiway selection |
+| Trace separate ifs with a table | loops, which repeat a body many times |
+| Explain why the guard goes on the left | null checks on objects and Strings |
+
+> 🎯 **AP Connection:** Selection appears in nearly every free-response question. The points usually depend on boundary cases: test the value just inside and just outside every comparison you write.
+      `
     }
   ]
 }

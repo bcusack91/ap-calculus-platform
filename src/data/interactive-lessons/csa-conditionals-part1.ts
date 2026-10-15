@@ -91,7 +91,7 @@ if (a > b) {
 } else {
     max = b;
 }
-// Equivalent: int max = Math.max(a, b);
+// Math.max is not on the AP Java Quick Reference: write the comparison yourself
 \`\`\`
 
 ### 2. Absolute Value
@@ -184,7 +184,7 @@ else
 - **Trace nested ifs** from the outside in — do not skip levels
 - The **dangling else** is a trick question favorite — else matches the nearest unmatched if
 - Simplify boolean returns: \`if (cond) return true; else return false;\` → \`return cond;\`
-- \`Math.abs()\`, \`Math.max()\`, \`Math.min()\` are allowed on the AP exam — know them
+- \`Math.abs()\` is on the AP Java Quick Reference, but \`Math.max()\` and \`Math.min()\` are not — be ready to write the if/else comparison for a larger or smaller value yourself
 - Watch for conditions that are always true or always false (tautologies/contradictions)
 - Common error: using \`1 < x < 100\` — Java requires \`x > 1 && x < 100\`
       `
@@ -209,15 +209,15 @@ else
             explanation: 'a > b (3 > 7) is false, so the outer if body is skipped entirely. The else belongs to the INNER if (dangling else), so it is also skipped. Only "Done" prints.'
           },
           {
-            question: 'Which method call returns the larger of two values x and y?',
+            question: 'Which code segment always assigns the larger of the int values x and y to big?',
             options: [
-              'Math.max(x, y)',
-              'Math.abs(x, y)',
-              'Math.min(x, y)',
-              'Math.pow(x, y)'
+              'if (x > y) { big = x; } else { big = y; }',
+              'if (x > y) { big = y; } else { big = x; }',
+              'big = y; if (x < y) { big = x; }',
+              'if (x > y) { big = x; } big = y;'
             ],
             correctAnswer: 0,
-            explanation: 'Math.max(x, y) returns the larger value. Math.min returns the smaller. Math.abs returns absolute value of one number. Math.pow computes x raised to the y power.'
+            explanation: 'The if/else stores x exactly when x is larger and y otherwise, which is the larger value (either one when they are equal). Swapping the branches or starting with y and replacing it when x is smaller stores the smaller value, and an unconditional big = y; after the if always overwrites the result.'
           }
         ]
       }

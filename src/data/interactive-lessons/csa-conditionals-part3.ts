@@ -5,19 +5,97 @@ export const csaConditionalsPart3Data = {
       id: 'csacondi3-intro',
       type: 'text' as const,
       content: `
-# 💻 Conditionals & Control Flow
+# 🔀 Conditionals (Advanced)
 
-**Part 3 of 7 — Patterns & Examples**
+**Part 3 of 7 — Nested Decisions and Their Compound Equivalents**
 
-This part examines specific patterns and real-world examples related to Conditionals & Control Flow. Case studies help illustrate abstract concepts.
+---
 
-### Key Concepts
+A **nested** if statement is an if inside the body of another if (CED Topic 2.4). Nesting lets one decision depend on another. This part traces nested decisions path by path, shows when nesting can be rewritten with \`&&\`, and builds a classic exam method: the largest of three values.
 
-| Concept | Description |
-|---------|-------------|
-| **Structural pattern** | A recurring structure within Conditionals & Control Flow |
-| **Case study** | A specific real-world example that illustrates Conditionals & Control Flow |
-| **Comparison** | Analyzing similarities and differences across examples of Conditionals & Control Flow |
+| In this part |
+|---|
+| Nested ifs as decision trees |
+| Nesting vs. \`&&\` |
+| Using braces to control which if an else belongs to |
+| Largest of three, two ways, and a tie bug |
+      `
+    },
+    {
+      id: 'csacondi3-trees',
+      type: 'text' as const,
+      content: `
+## Nested ifs as Decision Trees
+
+\`\`\`java
+int discount;
+if (member) {
+    if (total >= 50) {
+        discount = 10;
+    } else {
+        discount = 5;
+    }
+} else {
+    if (total >= 100) {
+        discount = 5;
+    } else {
+        discount = 0;
+    }
+}
+\`\`\`
+
+Two yes-or-no questions give **four paths**. List every path with an input that reaches it:
+
+| \`member\` | \`total\` | Path | \`discount\` |
+|---|---|---|---|
+| true | 60 | member, at least 50 | 10 |
+| true | 30 | member, under 50 | 5 |
+| false | 120 | non-member, at least 100 | 5 |
+| false | 80 | non-member, under 100 | 0 |
+
+## Nesting vs. &&
+
+When neither if has an \`else\`, nesting is the same as \`&&\`:
+
+\`\`\`java
+if (a) {
+    if (b) {
+        System.out.print("X");
+    }
+}
+// same as
+if (a && b) {
+    System.out.print("X");
+}
+\`\`\`
+
+Once an \`else\` is involved, keep track of which condition it belongs to:
+
+\`\`\`java
+if (a) {
+    if (b) {
+        System.out.print("X");
+    } else {
+        System.out.print("Y");
+    }
+}
+\`\`\`
+
+\`Y\` prints only when \`a\` is true and \`b\` is false. The flat version is \`if (a && b) {...X...} else if (a) {...Y...}\`. Writing \`if (a && b) {...X...} else {...Y...}\` is **not** the same, because it also prints \`Y\` whenever \`a\` is false.
+
+## Braces Decide Where an else Belongs
+
+Part 1 showed that, without braces, an \`else\` pairs with the nearest unmatched \`if\`. To attach it to the **outer** if, close the inner if with a brace first:
+
+\`\`\`java
+if (x > 0) {
+    if (y > 0) {
+        System.out.println("both positive");
+    }
+} else {
+    System.out.println("x is not positive");
+}
+\`\`\`
       `
     },
     {
@@ -29,147 +107,164 @@ This part examines specific patterns and real-world examples related to Conditio
       exercise: {
         questions: [
           {
-            question: 'Why do analysts use case studies?',
+            question: 'In the discount code, what is discount when member is false and total is 100?',
             options: [
-              'They are easier than analysis',
-              'They provide concrete examples that illustrate abstract concepts',
-              'They replace all other methods',
-              'They are required by law'
+              '5',
+              '0',
+              '10',
+              '15'
             ],
-            correctAnswer: 1,
-            explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
+            correctAnswer: 0,
+            explanation: 'A non-member reaches the outer else, and 100 >= 100 is true, so discount is 5. A discount of 0 would need a total under 100, and 10 is for members only.'
           },
           {
-            question: 'Comparing examples of Conditionals & Control Flow across examples helps:',
+            question: 'Which code is equivalent to if (a) { if (b) { X } else { Y } } for every combination of a and b?',
             options: [
-              'Nothing',
-              'Identify universal patterns and unique local variations',
-              'Confuse students',
-              'Waste time'
+              'if (a && b) { X } else if (a) { Y }',
+              'if (a && b) { X } else { Y }',
+              'if (a || b) { X } else { Y }',
+              'if (b) { X } else if (a) { Y }'
             ],
-            correctAnswer: 1,
-            explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).'
+            correctAnswer: 0,
+            explanation: 'Y must run only when a is true and b is false, and else if (a) reaches exactly that case after a && b fails. A plain else runs Y even when a is false, the || version runs X when only b is true, and testing b alone runs X even when a is false.'
           }
         ]
       }
     },
     {
-      id: 'csacondi3-content',
+      id: 'csacondi3-largest',
       type: 'text' as const,
       content: `
-## Patterns & Examples — Deeper Dive
+## Worked Example: Largest of Three
 
-### Structural pattern
-A recurring structure within Conditionals & Control Flow. Understanding this concept is essential for mastering Conditionals & Control Flow in AP Computer Science A.
+\`Math.max\` is not on the AP Java Quick Reference, so exam questions expect you to build this with if statements.
 
-### Case study
-A specific real-world example that illustrates Conditionals & Control Flow. This builds on the previous concept and connects to broader themes in the course.
+**Version 1: nested decisions.**
 
-### Comparison
-Analyzing similarities and differences across examples of Conditionals & Control Flow. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+\`\`\`java
+int big;
+if (a >= b) {
+    if (a >= c) {
+        big = a;
+    } else {
+        big = c;
+    }
+} else {
+    if (b >= c) {
+        big = b;
+    } else {
+        big = c;
+    }
+}
+\`\`\`
+
+| \`a\`, \`b\`, \`c\` | Path | \`big\` |
+|---|---|---|
+| 3, 7, 5 | a >= b false; b >= c true | 7 |
+| 9, 2, 9 | a >= b true; a >= c true | 9 |
+| 4, 4, 6 | a >= b true; a >= c false | 6 |
+
+**Version 2: keep a running largest.**
+
+\`\`\`java
+int big = a;
+if (b > big) {
+    big = b;
+}
+if (c > big) {
+    big = c;
+}
+\`\`\`
+
+Here separate ifs are exactly right, because each test compares with the **updated** \`big\`.
+
+**A version with a tie bug.**
+
+\`\`\`java
+int big;
+if (a > b && a > c) {
+    big = a;
+} else if (b > a && b > c) {
+    big = b;
+} else {
+    big = c;
+}
+\`\`\`
+
+With \`a = 5\`, \`b = 5\` and \`c = 1\`, neither strict test passes, so \`big\` becomes 1. Strict \`>\` fails whenever the two largest values tie.
       `
+    },
+    {
+      id: 'csacondi3-quiz2',
+      type: 'multiple-choice' as const,
+      content: `
+**Trace the Versions** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Which input makes the tie-bug version store the wrong value in big?',
+            options: [
+              'a = 8, b = 8, c = 3',
+              'a = 8, b = 3, c = 18',
+              'a = 3, b = 18, c = 8',
+              'a = 12, b = 4, c = 6'
+            ],
+            correctAnswer: 0,
+            explanation: 'When a and b tie for largest, both strict tests fail and the else stores c, which is 3. In the other inputs the largest value is unique, so a strict test or the else picks it correctly.'
+          },
+          {
+            question: 'Version 2 runs with a = 6, b = 9 and c = 9. How many times is an assignment to big executed, counting its declaration?',
+            options: [
+              '2',
+              '3',
+              '1',
+              '4'
+            ],
+            correctAnswer: 0,
+            explanation: 'big starts at 6, and 9 > 6 replaces it with 9. Then 9 > 9 is false, so the third assignment is skipped.'
+          }
+        ]
+      }
     },
     {
       id: 'csacondi3-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to a recurring structure within Conditionals & Control Flow?
+1) In the discount code, what is \`discount\` when \`member\` is true and \`total\` is 50?
 
-2) What concept describes a specific real-world example that illustrates Conditionals & Control Flow?
+2) In the discount code, what is \`discount\` when \`member\` is false and \`total\` is 99?
 
-3) Name the term for analyzing similarities and differences across examples of Conditionals & Control Flow.
-
-Use the exact term from this part.
+3) Version 1 of largest of three runs with \`a = 2\`, \`b = 2\`, \`c = 1\`. What is \`big\`?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Structural pattern', 'Case study', 'Comparison'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Structural pattern (A recurring structure within Conditionals & Control Flow), Case study (A specific real-world example that illustrates Conditionals & Control Flow), and Comparison (Analyzing similarities and differences across examples of Conditionals & Control Flow).'
+        correctAnswers: ['10', '0', '2'],
+        hint1: '50 >= 50 is true.',
+        hint2: 'A non-member needs at least 100.',
+        hint3: 'a >= b is true when they are equal.',
+        explanation: 'A member with a total of 50 meets total >= 50, so the discount is 10. A non-member with 99 misses the 100 mark and gets 0. With a = b = 2, a >= b and a >= c are both true, so big is 2.'
       }
     },
     {
-      id: 'csacondi3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'A recurring structure within Conditionals & Control Flow is called ___',
-            options: ['Structural pattern', 'Case study', 'Comparison', 'None of these']
-          },
-          {
-            label: 'A specific real-world example that illustrates Conditionals & Control Flow describes ___',
-            options: ['Structural pattern', 'Case study', 'Comparison', 'All of these']
-          },
-          {
-            label: 'Analyzing similarities and differences across examples of Conditionals & Control Flow is known as ___',
-            options: ['Comparison', 'Structural pattern', 'Case study', 'None of these']
-          }
-        ],
-        correctAnswers: ['Structural pattern', 'Case study', 'Comparison'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Structural pattern — A recurring structure within Conditionals & Control Flow. Case study — A specific real-world example that illustrates Conditionals & Control Flow. Comparison — Analyzing similarities and differences across examples of Conditionals & Control Flow.'
-      }
-    },
-    {
-      id: 'csacondi3-strategy',
+      id: 'csacondi3-summary',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Part 3 Summary
 
-### Misconceptions to Avoid
-- Don\'t confuse **Structural pattern** with **Case study** — while related, they address different aspects of Conditionals & Control Flow.
-- **Comparison** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+| Idea | Rule |
+|---|---|
+| Nested ifs | One path per combination of answers; test an input for each path |
+| No else anywhere | \`if (a) { if (b) ... }\` is \`if (a && b)\` |
+| Inner else | Runs only when the outer test is true and the inner one is false |
+| Outer else | Close the inner if with a brace before the \`else\` |
+| Largest of three | Nested \`>=\` tests, or a running largest with separate ifs |
+| Strict \`>\` on ties | Two equal largest values can fail every test |
 
-### AP Strategy Moves
-- When you see questions about patterns & examples, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect patterns & examples to broader themes in AP Computer Science A for higher scores.
+**Next:** Part 4 proves when two conditions are equivalent, using truth tables and De Morgan's laws.
       `
-    },
-    {
-      id: 'csacondi3-applied',
-      type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'An AP question asks you to provide TWO examples of Conditionals & Control Flow. The strongest response would:',
-            options: [
-              'Use two examples from the same place',
-              'Use examples from different examples to show the concept applies broadly',
-              'Make up fictional examples',
-              'Provide only one example'
-            ],
-            correctAnswer: 1,
-            explanation: 'Using examples from different contexts demonstrates broader understanding and the universality of the concept.'
-          },
-          {
-            question: 'A pattern observed in Conditionals & Control Flow is consistent across many examples. This suggests:',
-            options: [
-              'Coincidence',
-              'An underlying process that reflects a broad general principle',
-              'The data is wrong',
-              'Local factors only'
-            ],
-            correctAnswer: 1,
-            explanation: 'Consistent patterns across examples suggest a systematic process rather than coincidence.'
-          }
-        ]
-      }
     }
   ]
 }

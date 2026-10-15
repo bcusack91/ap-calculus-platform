@@ -5,170 +5,245 @@ export const csaConditionalsPart6Data = {
       id: 'csacondi6-intro',
       type: 'text' as const,
       content: `
-# 💻 Conditionals & Control Flow
+# 🔀 Conditionals (Advanced)
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — AP-Style Practice**
 
-Apply Conditionals & Control Flow concepts to data interpretation and analytical scenarios. Practice the types of questions seen on the AP exam.
+---
 
-### Key Concepts
+This part is exam practice for CED Topics 2.4 through 2.6: multiple-choice questions on chains, nesting and equivalence, then two free-response style methods with a scoring checklist.
 
-| Concept | Description |
-|---------|-------------|
-| **Data interpretation** | Analyzing maps, graphs, and tables related to Conditionals & Control Flow |
-| **Argumentation** | Making evidence-based claims about Conditionals & Control Flow |
-| **Spatial reasoning** | Using geographic thinking to analyze Conditionals & Control Flow |
+| In this part |
+|---|
+| Multiple-choice practice |
+| FRQ-style method 1: shippingCost |
+| FRQ-style method 2: classify |
+| What earns and loses points |
       `
     },
     {
-      id: 'csacondi6-quiz1',
+      id: 'csacondi6-mc1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Multiple Choice** 🎯
+
+**Segment A**
+\`\`\`java
+int x = 7;
+int y = 3;
+if (x > 5) {
+    if (y > 5) {
+        x = 0;
+    } else {
+        y = x + y;
+    }
+} else if (y < 5) {
+    y = 0;
+}
+x = x - y;
+System.out.println(x + " " + y);
+\`\`\`
       `,
       exercise: {
         questions: [
           {
-            question: 'When interpreting data about Conditionals & Control Flow, the first step is:',
+            question: 'What is printed by Segment A?',
             options: [
-              'Jump to conclusions',
-              'Identify what the data shows and note any patterns or trends',
-              'Ignore the data',
-              'Only look at the title'
+              '-3 10',
+              '7 10',
+              '4 3',
+              '7 0'
             ],
-            correctAnswer: 1,
-            explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.'
+            correctAnswer: 0,
+            explanation: 'x > 5 is true and y > 5 is false, so the inner else makes y equal 10. The else if belongs to the outer if, so it is skipped, and then x becomes 7 - 10 = -3.'
           },
           {
-            question: 'An evidence-based argument about Conditionals & Control Flow requires:',
+            question: 'Which expression is equivalent to !(score >= 90 || absences > 3)?',
             options: [
-              'Just opinions',
-              'A clear claim supported by specific evidence and reasoning',
-              'No evidence',
-              'Only emotional appeals'
+              'score < 90 && absences <= 3',
+              'score < 90 || absences < 3',
+              'score < 90 && absences < 3',
+              'score > 90 && absences > 3'
             ],
-            correctAnswer: 1,
-            explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).'
+            correctAnswer: 0,
+            explanation: 'De Morgan changes the || to && and negates each comparison, so >= 90 becomes < 90 and > 3 becomes <= 3. The negation of > 3 must include 3 itself, which < 3 leaves out, and keeping || or the original comparisons describes different inputs.'
+          },
+          {
+            question: 'Assume String a = "red"; String b = new String("red");. Which expression is true?',
+            options: [
+              'a.equals(b) && a != b',
+              'a == b && a.equals("red")',
+              'a.equals(b) && b == null',
+              '!a.equals(b) || a == b'
+            ],
+            correctAnswer: 0,
+            explanation: 'The Strings have the same characters but are different objects, so a.equals(b) is true and a != b is true. Each of the other expressions needs a == b, b == null, or a mismatch in content, and none of those holds.'
           }
         ]
       }
     },
     {
-      id: 'csacondi6-content',
+      id: 'csacondi6-frq1',
       type: 'text' as const,
       content: `
-## Problem-Solving Workshop — Deeper Dive
+## FRQ-Style Method 1: shippingCost
 
-### Data interpretation
-Analyzing maps, graphs, and tables related to Conditionals & Control Flow. Understanding this concept is essential for mastering Conditionals & Control Flow in AP Computer Science A.
+A store charges by package weight in pounds.
 
-### Argumentation
-Making evidence-based claims about Conditionals & Control Flow. This builds on the previous concept and connects to broader themes in the course.
+| Weight | Standard cost |
+|---|---|
+| 1 or less | 6 |
+| more than 1, up to 5 | 10 |
+| more than 5, up to 20 | 18 |
+| more than 20 | 18 plus 2 for each pound over 20 |
 
-### Spatial reasoning
-Using geographic thinking to analyze Conditionals & Control Flow. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+Express shipping adds 7 to any package. Members get free standard shipping on packages of 5 pounds or less, but still pay the 7 for express.
+
+Write \`shippingCost(int pounds, boolean express, boolean member)\`.
+
+### A Full-Credit Solution
+
+\`\`\`java
+public static int shippingCost(int pounds, boolean express, boolean member) {
+    int cost;
+    if (member && pounds <= 5) {
+        cost = 0;
+    } else if (pounds <= 1) {
+        cost = 6;
+    } else if (pounds <= 5) {
+        cost = 10;
+    } else if (pounds <= 20) {
+        cost = 18;
+    } else {
+        cost = 18 + 2 * (pounds - 20);
+    }
+    if (express) {
+        cost += 7;
+    }
+    return cost;
+}
+\`\`\`
+
+| Call | Standard part | Express part | Returns |
+|---|---|---|---|
+| \`shippingCost(1, false, false)\` | 6 | 0 | 6 |
+| \`shippingCost(4, true, true)\` | 0 | 7 | 7 |
+| \`shippingCost(20, false, true)\` | 18 | 0 | 18 |
+| \`shippingCost(25, true, false)\` | 18 + 10 = 28 | 7 | 35 |
+
+### Scoring Checklist
+- The member case is tested **before** the weight chain, and only for 5 pounds or less.
+- The chain uses \`<=\` at 1, 5 and 20, with the smallest threshold first.
+- The over-20 formula charges only for the pounds above 20.
+- Express is a separate if, so it applies on every path.
+- The method **returns** the cost.
+      `
+    },
+    {
+      id: 'csacondi6-mc2',
+      type: 'multiple-choice' as const,
+      content: `
+**Check the Method** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'What does shippingCost(6, true, true) return?',
+            options: [
+              '25',
+              '7',
+              '18',
+              '32'
+            ],
+            correctAnswer: 0,
+            explanation: 'A 6-pound package is too heavy for free member shipping, so the standard cost is 18, and express adds 7. Free shipping would give 7, and charging express twice would give 32.'
+          },
+          {
+            question: 'A student moves if (express) { cost += 7; } inside the final else, after the over-20 formula. Which call then returns the wrong value?',
+            options: [
+              'shippingCost(3, true, false)',
+              'shippingCost(3, false, false)',
+              'shippingCost(30, false, true)',
+              'shippingCost(1, false, true)'
+            ],
+            correctAnswer: 0,
+            explanation: 'Inside the final else, only packages over 20 pounds ever get the express fee, so a 3-pound express package returns 10 instead of 17. Calls without express never reach the moved step, so they are unaffected.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'csacondi6-frq2',
+      type: 'text' as const,
+      content: `
+## FRQ-Style Method 2: classify
+
+Write \`classify(int a, int b, int c)\`, which describes three side lengths:
+
+- \`"invalid"\` if any side is 0 or less, or if some side is at least the sum of the other two;
+- otherwise \`"equilateral"\` if all three sides are equal;
+- otherwise \`"isosceles"\` if exactly two sides are equal;
+- otherwise \`"scalene"\`.
+
+### A Full-Credit Solution
+
+\`\`\`java
+public static String classify(int a, int b, int c) {
+    if (a <= 0 || b <= 0 || c <= 0) {
+        return "invalid";
+    }
+    if (a >= b + c || b >= a + c || c >= a + b) {
+        return "invalid";
+    }
+    if (a == b && b == c) {
+        return "equilateral";
+    }
+    if (a == b || b == c || a == c) {
+        return "isosceles";
+    }
+    return "scalene";
+}
+\`\`\`
+
+The order of the checks does real work. Because the equilateral case returns first, the isosceles test can use \`||\` without excluding three equal sides.
+
+| Call | Result | Deciding test |
+|---|---|---|
+| \`classify(3, 4, 5)\` | scalene | no two sides equal |
+| \`classify(2, 2, 3)\` | isosceles | \`a == b\` |
+| \`classify(1, 2, 3)\` | invalid | \`c >= a + b\`, since 3 >= 3 |
+| \`classify(5, 5, 5)\` | equilateral | \`a == b && b == c\` |
+| \`classify(0, 4, 4)\` | invalid | \`a <= 0\` |
+
+### Common Deductions
+
+| Mistake | Wrong result |
+|---|---|
+| \`a > b + c\` instead of \`>=\` | \`classify(1, 2, 3)\` returns "scalene" |
+| \`a == b == c\` | does not compile |
+| isosceles test placed before equilateral | \`classify(5, 5, 5)\` returns "isosceles" |
+| isosceles test missing \`a == c\` | \`classify(3, 4, 3)\` returns "scalene" |
       `
     },
     {
       id: 'csacondi6-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to analyzing maps, graphs, and tables related to Conditionals & Control Flow?
+1) What does \`shippingCost(21, false, false)\` return?
 
-2) What concept describes making evidence-based claims about Conditionals & Control Flow?
+2) What does \`shippingCost(5, false, true)\` return?
 
-3) Name the term for using geographic thinking to analyze Conditionals & Control Flow.
-
-Use the exact term from this part.
+3) Type the word \`classify(4, 4, 9)\` returns, without quotation marks.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'Starts with: D',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: Data interpretation (Analyzing maps, graphs, and tables related to Conditionals & Control Flow), Argumentation (Making evidence-based claims about Conditionals & Control Flow), and Spatial reasoning (Using geographic thinking to analyze Conditionals & Control Flow).'
-      }
-    },
-    {
-      id: 'csacondi6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Analyzing maps, graphs, and tables related to Conditionals & Control Flow is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
-          },
-          {
-            label: 'Making evidence-based claims about Conditionals & Control Flow describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
-          },
-          {
-            label: 'Using geographic thinking to analyze Conditionals & Control Flow is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
-          }
-        ],
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Data interpretation — Analyzing maps, graphs, and tables related to Conditionals & Control Flow. Argumentation — Making evidence-based claims about Conditionals & Control Flow. Spatial reasoning — Using geographic thinking to analyze Conditionals & Control Flow.'
-      }
-    },
-    {
-      id: 'csacondi6-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of Conditionals & Control Flow.
-- **Spatial reasoning** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about problem-solving workshop, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect problem-solving workshop to broader themes in AP Computer Science A for higher scores.
-      `
-    },
-    {
-      id: 'csacondi6-applied',
-      type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'You are given a data table about Conditionals & Control Flow and asked to identify a trend. You should:',
-            options: [
-              'Pick random numbers',
-              'Look for consistent increases, decreases, or patterns across the data',
-              'Ignore the table',
-              'Only read the first row'
-            ],
-            correctAnswer: 1,
-            explanation: 'Trend identification requires examining the entire dataset for consistent patterns of change.'
-          },
-          {
-            question: 'A free-response question asks you to use evidence to support an argument about Conditionals & Control Flow. The best approach is:',
-            options: [
-              'State your opinion without evidence',
-              'Make a clear claim, cite specific data or examples, and explain how they support your argument',
-              'Copy the question',
-              'Write about a different topic'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP free-response answers require a clear thesis, specific supporting evidence, and explanation of how evidence supports the argument.'
-          }
-        ]
+        correctAnswers: ['20', '0', 'invalid'],
+        hint1: 'One pound over 20 adds 2.',
+        hint2: 'A member package of 5 pounds is free.',
+        hint3: 'Compare 9 with 4 + 4.',
+        explanation: 'A 21-pound package costs 18 + 2 * 1 = 20. A member shipping 5 pounds without express pays nothing. Since 9 >= 4 + 4, the sides cannot form a triangle.'
       }
     }
   ]

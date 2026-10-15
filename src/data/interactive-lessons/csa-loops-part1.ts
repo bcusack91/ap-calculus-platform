@@ -64,15 +64,15 @@ Output:
             explanation: 'i=1: j goes 1 to 1 (one star). i=2: j goes 1 to 2 (two stars). i=3: j goes 1 to 3 (three stars). The inner loop count depends on the outer loop variable, creating a triangle.'
           },
           {
-            question: 'A nested loop where the outer runs n times and inner runs n times has what total complexity?',
+            question: 'An outer loop runs n times, and for each of its passes an inner loop runs n times. How many times does a statement in the inner loop body execute?',
             options: [
-              'n operations',
-              '2n operations',
-              'n squared operations',
-              'n + 1 operations'
+              'n times',
+              '2 * n times',
+              'n * n times',
+              'n + 1 times'
             ],
             correctAnswer: 2,
-            explanation: 'When both loops run n times, the inner body executes n x n = n squared times. This is O(n squared) complexity — important for understanding algorithm efficiency.'
+            explanation: 'Each of the n outer passes runs the inner body n times, so the statement executes n * n times. Adding the two loop counts to get 2 * n would treat the loops as if they ran one after the other instead of one inside the other.'
           }
         ]
       }
@@ -121,15 +121,16 @@ public int countChar(String s, String target) {
 \`\`\`
 
 ## Sentinel-Controlled Loops
+Assume a method \`getNextScore()\` returns the next score in a list, and returns -1 once there are no scores left.
 \`\`\`java
-Scanner input = new Scanner(System.in);
 int sum = 0;
-int value = input.nextInt();
+int value = getNextScore();
 while (value != -1) {    // -1 is the sentinel value
     sum += value;
-    value = input.nextInt();
+    value = getNextScore();
 }
 \`\`\`
+The first value is read **before** the loop, and the next value is read at the **end** of the body, so the sentinel itself is never added to \`sum\`.
       `
     },
     {
@@ -170,15 +171,15 @@ while (value != -1) {    // -1 is the sentinel value
             options: ['i < s.length()', 'i <= s.length()', 'i < s.length() - 1', 'i < s.size()']
           },
           {
-            label: 'The time complexity of a nested loop with independent bounds (both O(n)) is ___',
-            options: ['O(n squared)', 'O(n)', 'O(2n)', 'O(log n)']
+            label: 'If an outer loop and the inner loop inside it each run n times, the inner body executes ___ times',
+            options: ['n * n', 'n', '2 * n', 'n + 1']
           }
         ],
-        correctAnswers: ['The outer loop variable (j <= i)', 'i < s.length()', 'O(n squared)'],
+        correctAnswers: ['The outer loop variable (j <= i)', 'i < s.length()', 'n * n'],
         hint1: 'Each row has stars equal to the row number.',
         hint2: 'Indices go from 0 to length-1.',
-        hint3: 'n times n = n squared.',
-        explanation: 'Triangle: inner depends on outer. String traversal: i < length(). Nested loops: O(n) x O(n) = O(n squared).'
+        hint3: 'The inner loop runs all n of its passes for every outer pass.',
+        explanation: 'Triangle: inner depends on outer. String traversal: i < length(). Nested loops: n outer passes x n inner passes = n * n executions.'
       }
     },
     {
