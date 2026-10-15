@@ -4,9 +4,9 @@ export const calcbcVectorsPart4Data = {
     {
       id: 'vv4-intro',
       type: 'text' as const,
-      content: `# Vector-Valued Functions — Arc Length & Unit Tangent
+      content: `# Vector-Valued Functions — Arc Length, Speed & Acceleration
 
-**Part 4 of 7 — Arc Length and the Unit Tangent Vector**
+**Part 4 of 7 — Arc Length, Speed, and Acceleration**
 
 ### Arc Length
 
@@ -16,17 +16,15 @@ $$s = \\int_a^b \\|\\vec{r}\\,'(t)\\|\\,dt = \\int_a^b \\sqrt{[x'(t)]^2 + [y'(t)
 
 Note: this is identical to the total distance formula — arc length = distance traveled.
 
-### Unit Tangent Vector
+### Speed and Acceleration
 
-$$\\hat{T}(t) = \\frac{\\vec{r}\\,'(t)}{\\|\\vec{r}\\,'(t)\\|}$$
-
-The unit tangent points in the direction of motion with magnitude 1.
-
-| Vector | Formula | Meaning |
+| Quantity | Formula | Meaning |
 |--------|---------|---------|
-| $\\vec{r}\\,'(t)$ | $\\langle x', y' \\rangle$ | Tangent (velocity) |
-| $\\hat{T}(t)$ | $\\vec{r}\\,'/\\|\\vec{r}\\,'\\|$ | Unit tangent (direction only) |
-| $\\hat{N}(t)$ | $\\hat{T}\\,'/\\|\\hat{T}\\,'\\|$ | Unit normal (beyond BC scope) |`
+| $\\vec{v}(t) = \\vec{r}\\,'(t)$ | $\\langle x', y' \\rangle$ | Velocity (direction of motion) |
+| $\\|\\vec{v}(t)\\|$ | $\\sqrt{(x')^2 + (y')^2}$ | Speed (a scalar) |
+| $\\vec{a}(t) = \\vec{r}\\,''(t)$ | $\\langle x'', y'' \\rangle$ | Acceleration |
+
+To decide whether the particle is **speeding up**, differentiate the speed itself: the speed is increasing when $\\frac{d}{dt}\\|\\vec{v}(t)\\| > 0$. A nonzero acceleration vector alone does not mean the speed is changing; a particle moving around a circle at constant speed still has nonzero acceleration.`
     },
     {
       id: 'vv4-examples',
@@ -41,7 +39,7 @@ $\\|\\vec{r}\\,'(t)\\| = \\sqrt{9\\sin^2 t + 9\\cos^2 t} = 3$
 
 **Arc length:** $s = \\int_0^{2\\pi} 3\\,dt = 6\\pi$ ✓ (circumference of circle of radius 3)
 
-**Unit tangent:** $\\hat{T}(t) = \\frac{1}{3}\\langle -3\\sin t, 3\\cos t \\rangle = \\langle -\\sin t, \\cos t \\rangle$
+**Acceleration:** $\\vec{a}(t) = \\langle -3\\cos t, -3\\sin t \\rangle$, which is never $\\vec{0}$, even though the speed stays $3$.
 
 > **AP Tip:** Arc length and total distance are computed with the same integral. The only difference is interpretation: arc length describes the curve, distance describes the motion.`
     },
@@ -58,10 +56,10 @@ $\\|\\vec{r}\\,'(t)\\| = \\sqrt{9\\sin^2 t + 9\\cos^2 t} = 3$
             explanation: '$\\vec{r}\\,\' = \\langle 1, 1 \\rangle$, $\\|\\vec{r}\\,\'\\| = \\sqrt{2}$. Arc length $= \\int_0^1 \\sqrt{2}\\,dt = \\sqrt{2}$.'
           },
           {
-            question: 'The unit tangent vector has magnitude:',
-            options: ['Always 1', 'Equal to the speed', 'Variable, depending on $t$', 'Always greater than 1'],
-            correctAnswer: 0,
-            explanation: 'By definition, $\\hat{T} = \\vec{r}\\,\'/\\|\\vec{r}\\,\'\\|$ is normalized to have unit length, so its magnitude is always 1 no matter how the speed changes.'
+            question: 'A particle has position $\\vec{r}(t) = \\langle t^2, 2t \\rangle$. For $t > 0$, its speed is:',
+            options: ['Decreasing, because $y\'(t)$ is constant', 'Constant, because $\\vec{a}(t)$ is constant', 'Increasing, because $2\\sqrt{t^2 + 1}$ grows', 'Increasing, because $x(t)$ is increasing'],
+            correctAnswer: 2,
+            explanation: 'The speed is $\\sqrt{(2t)^2 + 2^2} = 2\\sqrt{t^2 + 1}$, whose derivative $\\frac{2t}{\\sqrt{t^2+1}}$ is positive for $t > 0$. A constant $y\'$ does not make the speed fall, a constant acceleration $\\langle 2, 0 \\rangle$ does not make the speed constant, and an increasing position says nothing about speed.'
           }
         ]
       }
@@ -73,11 +71,11 @@ $\\|\\vec{r}\\,'(t)\\| = \\sqrt{9\\sin^2 t + 9\\cos^2 t} = 3$
       exercise: {
         dropdowns: [
           {
-            label: 'For $\\vec{r}(t) = \\langle 4t, 3t \\rangle$, the unit tangent vector $\\hat{T}$ is:',
-            options: ['$\\langle 4/5, 3/5 \\rangle$', '$\\langle 4, 3 \\rangle$', '$\\langle 3/5, 4/5 \\rangle$', '$\\langle 1/2, 1/2 \\rangle$'],
-            correctAnswers: ['$\\langle 4/5, 3/5 \\rangle$'],
-            hints: ['$\\vec{r}\\,\' = \\langle 4, 3 \\rangle$, $\\|\\vec{r}\\,\'\\| = 5$.'],
-            explanation: '$\\hat{T} = \\langle 4, 3 \\rangle / 5 = \\langle 4/5, 3/5 \\rangle$. Constant direction — the path is a straight line.'
+            label: 'For $\\vec{r}(t) = \\langle 4t, 3t \\rangle$, the speed of the particle is',
+            options: ['$7$', '$5$', '$25$', '$5t$'],
+            correctAnswers: ['$5$'],
+            hints: ['$\\vec{r}\\,\' = \\langle 4, 3 \\rangle$.'],
+            explanation: 'Speed $= \\|\\langle 4, 3 \\rangle\\| = \\sqrt{16 + 9} = 5$, constant because the path is a straight line traced at a steady rate. Adding components gives $7$, forgetting the square root gives $25$, and $5t$ is the distance traveled from $t = 0$, not the speed.'
           },
           {
             label: 'Arc length depends on:',
@@ -107,10 +105,10 @@ $\\|\\vec{r}\\,'(t)\\| = \\sqrt{9\\sin^2 t + 9\\cos^2 t} = 3$
       content: `### Summary
 
 - Arc length $= \\int_a^b \\|\\vec{r}\\,'(t)\\|\\,dt$ (same as total distance)
-- Unit tangent vector: $\\hat{T}(t) = \\vec{r}\\,'/\\|\\vec{r}\\,'\\|$
-- $\\hat{T}$ gives direction of motion, $\\|\\vec{r}\\,'\\|$ gives speed
+- Velocity $\\vec{r}\\,'$ gives the direction of motion; its magnitude is the speed
+- Speed is increasing when $\\frac{d}{dt}\\|\\vec{v}\\| > 0$; acceleration is $\\vec{r}\\,''$
 
-$$\\boxed{s = \\int_a^b \\|\\vec{r}\\,'(t)\\|\\,dt \\qquad \\hat{T} = \\frac{\\vec{r}\\,'}{\\|\\vec{r}\\,'\\|}}$$
+$$\\boxed{s = \\int_a^b \\|\\vec{r}\\,'(t)\\|\\,dt}$$
 
 > **Next:** Part 5 — Motion problems and free-response strategies.`
     }

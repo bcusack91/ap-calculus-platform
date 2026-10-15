@@ -103,11 +103,11 @@ This final part tests your mastery of all IBP techniques: the basic formula, LIA
             explanation: '$(-3)^2 + 4^2 = 9 + 16 = 25$.'
           },
           {
-            label: '$\\int (\\ln x)^3\\,dx$ uses the reduction formula how many times?',
+            label: '$\\int (\\ln x)^3\\,dx$ needs integration by parts how many times?',
             options: ['Once', 'Twice', 'Three times', 'Not applicable'],
             correctAnswers: ['Three times'],
             hints: ['$(\\ln x)^3 \\to (\\ln x)^2 \\to \\ln x \\to 1$. Each step uses IBP.'],
-            explanation: 'The reduction formula $\\int(\\ln x)^n\\,dx = x(\\ln x)^n - n\\int(\\ln x)^{n-1}\\,dx$ is applied 3 times: $n=3 \\to 2 \\to 1 \\to 0$.'
+            explanation: 'Each round with $u = (\\ln x)^n$ and $dv = dx$ lowers the power of $\\ln x$ by one, since $du = \\frac{n(\\ln x)^{n-1}}{x}\\,dx$ and the $\\frac{1}{x}$ cancels the $x$ from $v$. Going $(\\ln x)^3 \\to (\\ln x)^2 \\to \\ln x \\to \\int dx$ takes three rounds.'
           }
         ]
       }

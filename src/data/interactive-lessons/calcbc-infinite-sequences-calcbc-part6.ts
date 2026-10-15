@@ -15,7 +15,7 @@ Mixed problems covering sequence convergence, series basics, and special types.
 | Problem Type | Key Technique |
 |-------------|--------------|
 | Sequence limit | Growth hierarchy, L'Hôpital's |
-| Recursive sequence | Solve $L = f(L)$ |
+| Limit of terms | L'Hospital's Rule on $f(x)$, or the growth hierarchy |
 | Telescoping sum | Partial fractions, cancellation |
 | Series classification | Geometric, $p$-series, $n$th term test |`
     },
@@ -71,7 +71,7 @@ $p$-series with $p = \\pi \\approx 3.14 > 1$. **Converges**.`
             explanation: '$\\frac{1}{3n-1}$ is comparable to $\\frac{1}{3n} = \\frac{1}{3}\\cdot\\frac{1}{n}$. Since $\\sum 1/n$ diverges, so does $\\sum 1/(3n-1)$ by the Limit Comparison Test.'
           },
           {
-            label: '$a_1 = 10$, $a_{n+1} = a_n/2$. The sequence converges to:',
+            label: 'The sequence $a_n = 10\\left(\\frac{1}{2}\\right)^{n-1}$ converges to:',
             options: ['$0$', '$10$', '$5$', 'Diverges'],
             correctAnswers: ['$0$'],
             hints: ['$a_n = 10/2^{n-1}$.'],

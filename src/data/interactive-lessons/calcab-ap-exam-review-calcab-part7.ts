@@ -14,8 +14,8 @@ export const calcabExamReviewPart7Data = {
 
 | Section | Questions | Time | Calculator |
 |:---:|:---|:---:|:---:|
-| MC Part A | 30 questions | 60 min | No |
-| MC Part B | 15 questions | 45 min | Yes |
+| MC Part A | 29 questions | 62 min | No |
+| MC Part B | 13 questions | 38 min | Yes (graphing) |
 | FRQ Part A | 2 questions | 30 min | Yes |
 | FRQ Part B | 4 questions | 60 min | No |
 
@@ -31,7 +31,7 @@ export const calcabExamReviewPart7Data = {
 | Disk volume | $\\pi\\int_a^b [R(x)]^2\\,dx$ |
 | Accumulation | $f(b) = f(a) + \\int_a^b f'(t)\\,dt$ |
 
-> **Key Fact:** You must show ALL work on FRQs. An answer without justification earns 0 points.`
+> **Key Fact:** Show your work on FRQs. In the scoring guidelines most answer points require supporting work, so a bare answer usually earns little or no credit for that part.`
     },
     {
       id: 'examrev7-quiz1',

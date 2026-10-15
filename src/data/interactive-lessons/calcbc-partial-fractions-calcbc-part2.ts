@@ -6,104 +6,96 @@ export const calcbcPartialFracPart2Data = {
       type: 'text' as const,
       content: `# Partial Fraction Decomposition
 
-**Part 2 of 7 \u2014 Repeated Linear Factors**
+**Part 2 of 7 — Cover-Up, Definite Integrals, and Log Answers**
 
-When the denominator has a factor like $(x-a)^n$, you need $n$ separate terms with increasing powers in the denominator.`
-    },
-    {
-      id: 'pf2-rule',
-      type: 'text' as const,
-      content: `### Setup for Repeated Factors
+### Factor Completely First
 
-$$\\frac{P(x)}{(x-a)^n} = \\frac{A_1}{x-a} + \\frac{A_2}{(x-a)^2} + \\cdots + \\frac{A_n}{(x-a)^n}$$
+The cover-up method needs every factor of the denominator to be linear and distinct, so factor all the way:
 
-### Example: $\\frac{3x+5}{(x+1)^2}$
+| Denominator | Factored |
+|------|-------|
+| $x^2 - 9$ | $(x - 3)(x + 3)$ |
+| $x^2 + x - 6$ | $(x + 3)(x - 2)$ |
+| $x^3 - 4x$ | $x(x - 2)(x + 2)$ |
 
-$$\\frac{3x+5}{(x+1)^2} = \\frac{A}{x+1} + \\frac{B}{(x+1)^2}$$
+### Why Cover-Up Works
 
-Multiply through: $3x + 5 = A(x+1) + B$
+Start from $\\frac{P(x)}{(x-a)(x-b)} = \\frac{A}{x-a} + \\frac{B}{x-b}$ and multiply both sides by $(x - a)$:
 
-| Method | Step | Result |
-|--------|------|--------|
-| Plug in $x = -1$ | $-3+5 = B$ | $B = 2$ |
-| Compare $x$-coefficients | $3 = A$ | $A = 3$ |
+$$\\frac{P(x)}{x-b} = A + \\frac{B(x-a)}{x-b}$$
 
-$$\\frac{3x+5}{(x+1)^2} = \\frac{3}{x+1} + \\frac{2}{(x+1)^2}$$
+At $x = a$ the last term is $0$, so $A = \\frac{P(a)}{a - b}$: "cover up" $(x - a)$ and evaluate what is left at $x = a$.
 
-### Integration
+### Worked Example with Three Factors
 
-$$\\int \\frac{3x+5}{(x+1)^2}\\,dx = 3\\ln|x+1| - \\frac{2}{x+1} + C$$
+$$\\frac{2x^2 + 3}{x(x-1)(x+3)} = \\frac{A}{x} + \\frac{B}{x-1} + \\frac{C}{x+3}$$
 
-> **Key Fact:** $\\int \\frac{A}{(x-a)^n}\\,dx = \\frac{A}{(1-n)(x-a)^{n-1}} + C$ for $n \\geq 2$.`
-    },
-    {
-      id: 'pf2-mixed',
-      type: 'text' as const,
-      content: `### Mixed: Distinct + Repeated Factors
-
-**Example:** $\\frac{x^2}{(x-1)(x+2)^2}$
-
-$$= \\frac{A}{x-1} + \\frac{B}{x+2} + \\frac{C}{(x+2)^2}$$
-
-$x^2 = A(x+2)^2 + B(x-1)(x+2) + C(x-1)$
-
-| Substitution | Equation | Result |
+| Cover | Evaluate at | Result |
 |-------------|----------|--------|
-| $x = 1$ | $1 = A(9)$ | $A = \\frac{1}{9}$ |
-| $x = -2$ | $4 = C(-3)$ | $C = -\\frac{4}{3}$ |
-| $x = 0$ | $0 = 4A - 2B - C = \\frac{4}{9} - 2B + \\frac{4}{3}$ | $B = \\frac{8}{9}$ |
+| $x$ | $x = 0$ | $A = \\frac{3}{(-1)(3)} = -1$ |
+| $x - 1$ | $x = 1$ | $B = \\frac{5}{(1)(4)} = \\frac{5}{4}$ |
+| $x + 3$ | $x = -3$ | $C = \\frac{21}{(-3)(-4)} = \\frac{7}{4}$ |
 
-$$\\boxed{\\frac{x^2}{(x-1)(x+2)^2} = \\frac{1/9}{x-1} + \\frac{8/9}{x+2} - \\frac{4/3}{(x+2)^2}}$$`
+**Quick check:** recombining gives an $x^2$ coefficient of $A + B + C = -1 + \\frac{5}{4} + \\frac{7}{4} = 2$, which matches the numerator $2x^2 + 3$.`
     },
     {
       id: 'pf2-mc1',
       type: 'multiple-choice' as const,
-      content: '**Repeated Factors Practice**',
+      content: '**Cover-Up Practice**',
       exercise: {
         questions: [
           {
-            question: 'How many constants are needed to decompose $\\frac{2x+1}{x^2(x-3)}$?',
-            options: ['3', '2', '4', '1'],
+            question: 'Before decomposing $\\frac{4}{x^3 - 4x}$, factor the denominator completely:',
+            options: ['$x(x-2)(x+2)$', '$x(x-2)^2$', '$(x-2)(x+2)$', '$x(x^2+4)$'],
             correctAnswer: 0,
-            explanation: '$x^2$ is a repeated factor needing $\\frac{A}{x} + \\frac{B}{x^2}$, plus $\\frac{C}{x-3}$ for the distinct factor. Total: 3 constants.'
+            explanation: 'Factor out $x$, then use the difference of squares: $x^3 - 4x = x(x^2 - 4) = x(x-2)(x+2)$. Writing $(x-2)^2$ confuses $x^2 - 4$ with $x^2 - 4x + 4$, dropping the factor $x$ loses a root, and $x^2 + 4$ has the wrong sign.'
           },
           {
-            question: 'For $\\frac{5}{(x-1)^2}$, the integral is:',
-            options: [
-              '$-\\frac{5}{x-1} + C$',
-              '$5\\ln|x-1| + C$',
-              '$\\frac{5}{x-1} + C$',
-              '$\\frac{5}{2}\\ln(x-1)^2 + C$'
-            ],
+            question: 'In $\\frac{2x^2+3}{x(x-1)(x+3)} = \\frac{A}{x} + \\frac{B}{x-1} + \\frac{C}{x+3}$, cover-up gives $C =$',
+            options: ['$\\frac{7}{4}$', '$-\\frac{7}{4}$', '$\\frac{21}{4}$', '$-\\frac{1}{4}$'],
             correctAnswer: 0,
-            explanation: '$\\int 5(x-1)^{-2}\\,dx = 5 \\cdot \\frac{(x-1)^{-1}}{-1} + C = -\\frac{5}{x-1} + C$.'
+            explanation: 'Cover $x + 3$ and set $x = -3$: $C = \\frac{2(9) + 3}{(-3)(-3 - 1)} = \\frac{21}{12} = \\frac{7}{4}$. A sign slip in $(-3)(-4)$ gives $-\\frac{7}{4}$, dividing by $4$ alone forgets the factor $x = -3$, and $-\\frac{1}{4}$ comes from using $2(-3)$ instead of $2(-3)^2$ in the numerator.'
           }
         ]
       }
     },
     {
+      id: 'pf2-definite',
+      type: 'text' as const,
+      content: `### Definite Integrals and Log Answers
+
+**Example:** $\\int_2^3 \\frac{5}{(x-1)(x+4)}\\,dx$
+
+| Step | Work |
+|------|------|
+| Cover-up | $A = \\frac{5}{1 + 4} = 1$, $B = \\frac{5}{-4 - 1} = -1$ |
+| Antiderivative | $\\ln\\lvert x - 1\\rvert - \\ln\\lvert x + 4\\rvert = \\ln\\left\\lvert \\frac{x-1}{x+4} \\right\\rvert$ |
+| Evaluate | $\\ln\\frac{2}{7} - \\ln\\frac{1}{6}$ |
+| Combine | $\\ln\\frac{2/7}{1/6} = \\ln\\frac{12}{7}$ |
+
+Every form above ($\\ln 2 - \\ln 7 + \\ln 6$, $\\ln\\frac{12}{7}$, ...) is the same number. AP scoring guidelines state that answers need not be simplified, but combining logs makes it easier to match multiple-choice options.
+
+> **Key Fact:** The interval of integration must not contain a root of the denominator. Here $x = 1$ and $x = -4$ lie outside $[2, 3]$, so this is an ordinary definite integral. If a root were inside the interval, the integral would be improper.`
+    },
+    {
       id: 'pf2-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Decomposition Setup**',
+      content: '**Log Answers and Intervals**',
       exercise: {
         dropdowns: [
           {
-            label: 'The correct partial fraction form for $\\frac{1}{x(x+1)^2}$ is:',
-            options: [
-              '$\\frac{A}{x} + \\frac{B}{x+1} + \\frac{C}{(x+1)^2}$',
-              '$\\frac{A}{x} + \\frac{B}{(x+1)^2}$',
-              '$\\frac{A}{x} + \\frac{B}{x+1} + \\frac{C}{x+1}$'
-            ],
-            correctAnswers: ['$\\frac{A}{x} + \\frac{B}{x+1} + \\frac{C}{(x+1)^2}$'],
-            hints: ['Repeated linear factor $(x+1)^2$ requires TWO terms: one with $(x+1)$ and one with $(x+1)^2$.'],
-            explanation: 'Each power of the repeated factor gets its own constant: $\\frac{B}{x+1} + \\frac{C}{(x+1)^2}$. Two first-power terms over $x+1$ just merge into one term and can never produce the $(x+1)^2$ in the denominator.'
+            label: '$\\left(\\ln 2 - \\ln 7\\right) - \\left(\\ln 1 - \\ln 6\\right)$ simplifies to:',
+            options: ['$\\ln\\frac{12}{7}$', '$\\ln\\frac{2}{42}$', '$\\ln\\frac{7}{12}$', '$\\ln 3$'],
+            correctAnswers: ['$\\ln\\frac{12}{7}$'],
+            hints: ['$\\ln 1 = 0$, and subtracting $-\\ln 6$ adds $\\ln 6$.'],
+            explanation: '$\\ln 2 - \\ln 7 + \\ln 6 = \\ln\\frac{2 \\cdot 6}{7} = \\ln\\frac{12}{7}$. Dividing by $6$ instead of multiplying gives $\\ln\\frac{2}{42}$, and $\\ln\\frac{7}{12}$ has every sign reversed.'
           },
           {
-            label: 'For $\\frac{1}{x(x+1)^2}$, plugging $x = 0$ gives $A = $',
-            options: ['$1$', '$-1$', '$0$', '$2$'],
-            correctAnswers: ['$1$'],
-            hints: ['$1 = A(x+1)^2 + B(x)(x+1) + Cx$. At $x=0$: $1 = A(1) = A$.'],
-            explanation: 'Plug $x = 0$: $1 = A(0+1)^2 = A$. So $A = 1$.'
+            label: '$\\int \\frac{5}{(x-1)(x+4)}\\,dx$ can be evaluated as an ordinary definite integral on:',
+            options: ['$[2, 3]$', '$[0, 2]$', '$[-5, 0]$', '$[-4, 1]$'],
+            correctAnswers: ['$[2, 3]$'],
+            hints: ['The integrand is undefined at $x = 1$ and $x = -4$.'],
+            explanation: 'Only $[2, 3]$ avoids both $x = 1$ and $x = -4$. The interval $[0, 2]$ contains $1$, $[-5, 0]$ contains $-4$, and $[-4, 1]$ has both as endpoints.'
           }
         ]
       }
@@ -111,28 +103,29 @@ $$\\boxed{\\frac{x^2}{(x-1)(x+2)^2} = \\frac{1/9}{x-1} + \\frac{8/9}{x+2} - \\fr
     {
       id: 'pf2-input',
       type: 'input-box' as const,
-      content: '**Finding Constants**',
+      content: '**Evaluate the Integral**',
       exercise: {
-        question: 'For $\\frac{1}{x(x+1)^2} = \\frac{1}{x} + \\frac{B}{x+1} + \\frac{C}{(x+1)^2}$, multiply through: $1 = (x+1)^2 + Bx(x+1) + Cx$. Plug in $x = -1$ to find $C$. What is $C$?',
-        correctAnswer: '-1',
-        acceptableAnswers: ['-1', '-1.0'],
-        hints: ['At $x = -1$: $1 = 0 + 0 + C(-1)$.', '$1 = -C$, so $C = -1$.'],
-        explanation: 'At $x = -1$: $1 = (0)^2 + B(-1)(0) + C(-1) = -C$. Therefore $C = -1$.'
+        question: 'Evaluate $\\int_0^1 \\frac{3}{(x+1)(x+4)}\\,dx$. Give an exact answer as a single logarithm, such as ln(a/b), or a decimal to three places.',
+        correctAnswer: 'ln(8/5)',
+        acceptableAnswers: ['ln(8/5)', 'ln8/5', 'ln(1.6)', '0.470'],
+        hints: ['Cover-up: $A = \\frac{3}{-1 + 4} = 1$ and $B = \\frac{3}{-4 + 1} = -1$.', 'Antiderivative: $\\ln\\lvert x + 1\\rvert - \\ln\\lvert x + 4\\rvert$. Evaluate from $0$ to $1$.'],
+        explanation: '$\\left(\\ln 2 - \\ln 5\\right) - \\left(\\ln 1 - \\ln 4\\right) = \\ln\\frac{2 \\cdot 4}{5} = \\ln\\frac{8}{5} \\approx 0.470$.'
       }
     },
     {
       id: 'pf2-summary',
       type: 'text' as const,
-      content: `### Key Takeaways \u2014 Part 2
+      content: `### Key Takeaways — Part 2
 
 | Concept | Details |
 |---------|---------|
-| Repeated factor $(x-a)^n$ | Needs $n$ terms: $\\frac{A_1}{x-a} + \\cdots + \\frac{A_n}{(x-a)^n}$ |
-| Integration | $\\int \\frac{A}{(x-a)^n}\\,dx = \\frac{A}{(1-n)(x-a)^{n-1}} + C$ for $n \\geq 2$ |
-| Mixed problems | Combine distinct + repeated factor rules |
-| Finding constants | Substitution at roots + coefficient comparison |
+| Factor completely | Pull out common factors, then use difference of squares |
+| Cover-up | $A = \\frac{P(a)}{\\text{other factors at } x = a}$ |
+| Check | Recombined leading coefficient must match the numerator |
+| Definite integrals | Evaluate the logs, then combine with log rules |
+| Interval check | No root of the denominator inside $[a, b]$ |
 
-> **Coming Up:** Part 3 covers **irreducible quadratic factors** \u2014 denominators like $x^2 + 1$ that can\u2019t be factored further.`
+> **Coming Up:** Part 3 shows when a rational integrand needs partial fractions and when $u$-substitution or an arctangent form is the better tool.`
     }
   ]
 };

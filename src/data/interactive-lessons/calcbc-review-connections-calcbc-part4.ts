@@ -19,9 +19,8 @@ $$\\text{Given } \\sum a_n: \\text{ Does it converge?}$$
 | 3 | Is it a p-series? | **p-series:** converges iff $p > 1$ |
 | 4 | Does it alternate? | **AST:** $a_n \\to 0$ decreasingly → converges |
 | 5 | Factorials or exponentials? | **Ratio Test:** $L < 1$ converges, $L > 1$ diverges |
-| 6 | $n$th powers? | **Root Test:** same criteria as ratio |
-| 7 | Can you compare? | **Comparison/LCT** with known series |
-| 8 | Decreasing positive terms? | **Integral Test** |
+| 6 | Can you compare? | **Comparison/LCT** with known series |
+| 7 | Decreasing positive terms? | **Integral Test** |
 
 > **AP Tip:** On the exam, 90% of convergence questions are answered by steps 1–5.`
     },
@@ -34,7 +33,7 @@ $$\\sum_{n=0}^\\infty c_n(x-a)^n$$
 
 **Three-step process:**
 
-1. **Find radius $R$:** Ratio test on $|c_{n+1}/c_n|$ or root test
+1. **Find radius $R$:** Ratio test on the terms $|a_{n+1}/a_n|$
 2. **Test endpoints:** Plug in $x = a \\pm R$ and test each resulting numeric series
 3. **Use the series:** Substitute, differentiate, or integrate
 

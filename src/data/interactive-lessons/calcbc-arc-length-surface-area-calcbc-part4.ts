@@ -4,48 +4,46 @@ export const calcbcArcLengthPart4Data = {
     {
       id: 'al4-intro',
       type: 'text' as const,
-      content: `# Arc Length & Surface Area — Parametric & Polar Surface Area
+      content: `# Arc Length — Integrating in $y$ and Arc Length Functions
 
-**Part 4 of 7 — Surface Area in Parametric and Polar Forms**
+**Part 4 of 7 — Arc Length in $y$ and Arc Length Functions**
 
-### Parametric Surface Area (about the $x$-axis)
+### Integrating with Respect to $y$
 
-$$\\boxed{S = 2\\pi\\int_a^b y(t)\\sqrt{\\left(\\frac{dx}{dt}\\right)^2 + \\left(\\frac{dy}{dt}\\right)^2}\\,dt}$$
+If the curve is given as $x = g(y)$ for $c \\le y \\le d$, swap the roles of $x$ and $y$:
 
-### Polar Surface Area (about the polar axis / $x$-axis)
+$$\\boxed{L = \\int_c^d \\sqrt{1 + \\left(\\frac{dx}{dy}\\right)^2}\\,dy}$$
 
-Since $y = r\\sin\\theta$ and $ds = \\sqrt{r^2 + (r')^2}\\,d\\theta$:
+This helps when $dy/dx$ is undefined somewhere on the curve. For $y = x^{2/3}$ near the origin, $dy/dx = \\frac{2}{3}x^{-1/3}$ blows up at $x = 0$, but written as $x = y^{3/2}$ the derivative $dx/dy = \\frac{3}{2}y^{1/2}$ is perfectly well behaved.
 
-$$\\boxed{S = 2\\pi\\int_\\alpha^\\beta r\\sin\\theta\\,\\sqrt{r^2 + \\left(\\frac{dr}{d\\theta}\\right)^2}\\,d\\theta}$$
+### Arc Length Functions
 
-| Form | $S$ (about $x$-axis) |
-|------|---------------------|
-| Cartesian | $2\\pi\\int y\\sqrt{1+(y')^2}\\,dx$ |
-| Parametric | $2\\pi\\int y\\sqrt{(x')^2+(y')^2}\\,dt$ |
-| Polar | $2\\pi\\int r\\sin\\theta\\sqrt{r^2+(r')^2}\\,d\\theta$ |`
+Measuring length from a fixed starting point $x = a$ to a variable endpoint $x$ defines a function:
+
+$$s(x) = \\int_a^x \\sqrt{1 + \\left(f'(t)\\right)^2}\\,dt$$
+
+By the Fundamental Theorem of Calculus,
+
+$$\\boxed{s'(x) = \\sqrt{1 + \\left(f'(x)\\right)^2} \\ge 1}$$
+
+> **Key Fact:** $s'(x) \\ge 1$ means the length of the curve grows at least as fast as $x$ does, with equality exactly where the tangent line is horizontal.`
     },
     {
       id: 'al4-examples',
       type: 'text' as const,
-      content: `### Example — Parametric
+      content: `### Worked Examples
 
-Rotate $x = \\cos t$, $y = \\sin t$ ($0 \\le t \\le \\pi$) about the $x$-axis.
+**Example 1 — integrating in $y$.** $x = \\frac{2}{3}(y - 1)^{3/2}$ for $1 \\le y \\le 4$.
 
-This is the upper semicircle of radius 1 — should give $4\\pi$ (sphere).
+$\\frac{dx}{dy} = (y - 1)^{1/2}$, so $1 + \\left(\\frac{dx}{dy}\\right)^2 = 1 + (y - 1) = y$.
 
-$ds = \\sqrt{\\sin^2 t + \\cos^2 t}\\,dt = dt$
+$$L = \\int_1^4 \\sqrt{y}\\,dy = \\left[\\tfrac{2}{3}y^{3/2}\\right]_1^4 = \\tfrac{2}{3}(8 - 1) = \\tfrac{14}{3}$$
 
-$S = 2\\pi\\int_0^\\pi \\sin t\\,dt = 2\\pi[-\\cos t]_0^\\pi = 2\\pi(1+1) = 4\\pi$ ✓
+**Example 2 — reading an arc length function.** Suppose the length of a curve $y = f(x)$ from $x = 0$ to $x$ is
 
-### Example — Polar
+$$s(x) = \\int_0^x \\sqrt{1 + 9t^4}\\,dt.$$
 
-Rotate $r = 2\\cos\\theta$ ($0 \\le \\theta \\le \\pi/2$) about the polar axis.
-
-$r' = -2\\sin\\theta$. $r^2 + (r')^2 = 4\\cos^2\\theta + 4\\sin^2\\theta = 4$.
-
-$y = r\\sin\\theta = 2\\cos\\theta\\sin\\theta = \\sin 2\\theta$.
-
-$S = 2\\pi\\int_0^{\\pi/2}\\sin(2\\theta)\\cdot 2\\,d\\theta = 4\\pi\\int_0^{\\pi/2}\\sin 2\\theta\\,d\\theta = 4\\pi\\left[-\\tfrac{1}{2}\\cos 2\\theta\\right]_0^{\\pi/2} = 4\\pi$`
+Matching $1 + (f'(t))^2 = 1 + 9t^4$ gives $f'(t) = \\pm 3t^2$, so the curve is $f(x) = x^3 + C$ or $f(x) = -x^3 + C$. The arc length function fixes the shape of the curve up to a reflection and a vertical shift.`
     },
     {
       id: 'al4-mc1',
@@ -54,16 +52,16 @@ $S = 2\\pi\\int_0^{\\pi/2}\\sin(2\\theta)\\cdot 2\\,d\\theta = 4\\pi\\int_0^{\\p
       exercise: {
         questions: [
           {
-            question: 'To find the surface area when rotating a parametric curve about the $y$-axis, replace $y(t)$ with:',
-            options: ['$x(t)$', '$x\'(t)$', '$y\'(t)$', '$\\sqrt{x^2+y^2}$'],
-            correctAnswer: 0,
-            explanation: 'About the $y$-axis, the radius is the distance from the $y$-axis, which is $x(t)$: $S = 2\\pi\\int x(t)\\,ds$. The derivatives $x\'(t)$ and $y\'(t)$ belong inside $ds$, not in the radius.'
+            question: 'The curve $x = y^2$ runs from $(0, 0)$ to $(4, 2)$. Its arc length is:',
+            options: ['$\\int_0^4 \\sqrt{1 + 4y^2}\\,dy$', '$\\int_0^2 \\sqrt{1 + y^4}\\,dy$', '$\\int_0^2 (1 + 4y^2)\\,dy$', '$\\int_0^2 \\sqrt{1 + 4y^2}\\,dy$'],
+            correctAnswer: 3,
+            explanation: 'With $x = g(y) = y^2$, $dx/dy = 2y$, and the $y$-limits are $0$ and $2$, so $L = \\int_0^2\\sqrt{1 + 4y^2}\\,dy$. Using the $x$-values $0$ to $4$ mixes variables, $1 + y^4$ squares $x$ instead of $dx/dy$, and dropping the square root changes the integrand.'
           },
           {
-            question: 'For the cardioid $r = 1 + \\cos\\theta$ rotated about the polar axis, $r^2 + (r\')^2 = $',
-            options: ['$2 + 2\\cos\\theta$', '$1 + 2\\cos\\theta + \\cos^2\\theta + \\sin^2\\theta$', '$2(1+\\cos\\theta)$', 'All are the same expression'],
-            correctAnswer: 3,
-            explanation: '$r^2 = (1+\\cos\\theta)^2 = 1 + 2\\cos\\theta + \\cos^2\\theta$. $(r\')^2 = \\sin^2\\theta$. Sum $= 1 + 2\\cos\\theta + 1 = 2 + 2\\cos\\theta = 2(1+\\cos\\theta)$. All three options simplify to the same thing.'
+            question: 'The function $s(x) = \\int_0^x \\sqrt{1 + \\cos^2 t}\\,dt$ gives the arc length, starting at $x = 0$, of which curve?',
+            options: ['$y = \\cos x$', '$y = \\sin x$', '$y = \\cos^2 x$', '$y = x + \\sin x$'],
+            correctAnswer: 1,
+            explanation: 'The integrand is $\\sqrt{1 + (f\'(t))^2}$ with $f\'(t) = \\cos t$, so $f(x) = \\sin x$ (plus a constant). The curve $y = \\cos x$ gives $\\sqrt{1 + \\sin^2 t}$, $\\cos^2 x$ has derivative $-\\sin 2x$, and $x + \\sin x$ has derivative $1 + \\cos x$.'
           }
         ]
       }
@@ -75,18 +73,18 @@ $S = 2\\pi\\int_0^{\\pi/2}\\sin(2\\theta)\\cdot 2\\,d\\theta = 4\\pi\\int_0^{\\p
       exercise: {
         dropdowns: [
           {
-            label: 'The surface area of a torus (doughnut) is found by rotating a circle about an external axis. The appropriate form is:',
-            options: ['Parametric surface area formula', 'Polar surface area formula', 'Washer method volume formula', 'Shell method volume formula'],
-            correctAnswers: ['Parametric surface area formula'],
-            hints: ['A circle is most naturally parametrized with $\\cos$ and $\\sin$.'],
-            explanation: 'Use $x = R + r\\cos t$, $y = r\\sin t$ (circle of radius $r$ centered at distance $R$ from axis), then apply $S = 2\\pi\\int y\\,ds$. Washers and shells compute volume, not surface area, and the off-center circle has no simple polar equation.'
+            label: 'If $s(x) = \\int_1^x \\sqrt{1 + (f\'(t))^2}\\,dt$, then $s\'(x) =$',
+            options: ['$\\sqrt{1 + (f\'(x))^2} - \\sqrt{1 + (f\'(1))^2}$', '$\\sqrt{1 + (f\'(x))^2}$', '$\\frac{f\'(x) f\'\'(x)}{\\sqrt{1 + (f\'(x))^2}}$', '$1 + f\'(x)$'],
+            correctAnswers: ['$\\sqrt{1 + (f\'(x))^2}$'],
+            hints: ['Fundamental Theorem of Calculus: differentiate an integral with a variable upper limit.'],
+            explanation: 'By FTC, the derivative of $\\int_1^x h(t)\\,dt$ is $h(x)$, so $s\'(x) = \\sqrt{1 + (f\'(x))^2}$. Subtracting the value at $1$ confuses FTC with evaluating an antiderivative, the quotient form differentiates the integrand again, and $1 + f\'(x)$ drops the square and root.'
           },
           {
-            label: 'When computing polar surface area about the $x$-axis, $y = $',
-            options: ['$r\\sin\\theta$', '$r\\cos\\theta$', '$r$', '$\\theta$'],
-            correctAnswers: ['$r\\sin\\theta$'],
-            hints: ['Convert from polar to Cartesian: $y = ?$'],
-            explanation: 'In polar coordinates, $y = r\\sin\\theta$. This is the distance from the curve to the $x$-axis.'
+            label: 'Writing the curve as $x = g(y)$ is most helpful when',
+            options: ['the curve passes through the origin', 'the arc length needs a calculator', '$dy/dx$ is undefined on the interval', 'the curve is a straight line'],
+            correctAnswers: ['$dy/dx$ is undefined on the interval'],
+            hints: ['Think of $y = x^{2/3}$ at $x = 0$.'],
+            explanation: 'A vertical tangent makes $dy/dx$ undefined and the $dx$-integrand unbounded; in terms of $y$ the derivative $dx/dy$ is finite. Passing through the origin, needing a calculator, or being a line do not by themselves call for a change of variable.'
           }
         ]
       }
@@ -96,11 +94,11 @@ $S = 2\\pi\\int_0^{\\pi/2}\\sin(2\\theta)\\cdot 2\\,d\\theta = 4\\pi\\int_0^{\\p
       type: 'input-box' as const,
       content: '**Computation**',
       exercise: {
-        question: 'Rotate $x = t$, $y = 2t$ from $t = 0$ to $t = 1$ about the $x$-axis. This is a cone. $ds = \\sqrt{1+4}\\,dt = \\sqrt{5}\\,dt$. Compute $S = 2\\pi\\int_0^1 2t\\sqrt{5}\\,dt$. Give your answer as a multiple of $\\pi\\sqrt{5}$ (e.g. "2pisqrt5").',
-        correctAnswer: '2pisqrt5',
-        acceptableAnswers: ['2pisqrt5', '2π√5', '2pi*sqrt(5)', '2pi sqrt5', '2pisqrt(5)'],
-        hints: ['$\\int_0^1 2t\\,dt = 1$.'],
-        explanation: '$S = 2\\pi\\sqrt{5}\\int_0^1 2t\\,dt = 2\\pi\\sqrt{5}\\cdot[t^2]_0^1 = 2\\pi\\sqrt{5}$.'
+        question: 'Let $s(x) = \\int_0^x \\sqrt{1 + 4t^2}\\,dt$ be the arc length function of $y = x^2$. Find $s\'(2)$ to three decimal places.',
+        correctAnswer: '4.123',
+        acceptableAnswers: ['4.123', '4.12', 'sqrt(17)', '√17'],
+        hints: ['By FTC, $s\'(x) = \\sqrt{1 + 4x^2}$.', '$\\sqrt{1 + 16} = \\sqrt{17}$.'],
+        explanation: '$s\'(2) = \\sqrt{1 + 4(2)^2} = \\sqrt{17} \\approx 4.123$. Near $x = 2$, the curve gains about $4.123$ units of length per unit of $x$.'
       }
     },
     {
@@ -108,11 +106,11 @@ $S = 2\\pi\\int_0^{\\pi/2}\\sin(2\\theta)\\cdot 2\\,d\\theta = 4\\pi\\int_0^{\\p
       type: 'text' as const,
       content: `### Summary
 
-- Parametric: $S = 2\\pi\\int y(t)\\,ds$ (about $x$-axis) or $2\\pi\\int x(t)\\,ds$ (about $y$-axis)
-- Polar: $S = 2\\pi\\int r\\sin\\theta\\,ds$ (about polar axis) or $2\\pi\\int r\\cos\\theta\\,ds$ (about $\\theta = \\pi/2$)
-- All formulas follow the pattern: $S = 2\\pi\\int(\\text{radius})\\,ds$
+- $x = g(y)$: $L = \\int_c^d \\sqrt{1 + (dx/dy)^2}\\,dy$ with $y$-limits
+- Arc length function: $s(x) = \\int_a^x \\sqrt{1 + (f'(t))^2}\\,dt$, so $s'(x) = \\sqrt{1 + (f'(x))^2}$
+- An arc length integrand $\\sqrt{1 + (f')^2}$ tells you $f'$ up to sign
 
-> **Next:** Part 5 — Comparison of arc length methods and exam strategies.`
+> **Next:** Part 5 — Choosing the right formula and AP exam strategies.`
     }
   ]
 };

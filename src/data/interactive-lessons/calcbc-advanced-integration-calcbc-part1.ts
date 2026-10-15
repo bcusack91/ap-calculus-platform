@@ -18,8 +18,7 @@ When facing an integral on the BC exam, use this decision process:
 | Product of unlike functions | **Integration by parts** |
 | $\\frac{P(x)}{Q(x)}$ with $\\deg P \\ge \\deg Q$ | **Long division first** |
 | $\\frac{P(x)}{Q(x)}$ with factorable $Q$ | **Partial fractions** |
-| $\\sqrt{a^2 - x^2}$, $\\sqrt{a^2 + x^2}$, $\\sqrt{x^2 - a^2}$ | **Trig substitution** |
-| Powers of $\\sin x$ and $\\cos x$ | **Reduction formulas / identities** |
+| $\\frac{1}{a^2 + u^2}$ or $\\frac{1}{\\sqrt{a^2 - u^2}}$ (complete the square if needed) | **Inverse trig form** |
 | Infinite limits or discontinuities | **Improper integral** |
 
 $$\\boxed{\\text{Step 1: Simplify} \\to \\text{Step 2: Identify pattern} \\to \\text{Step 3: Apply method}}$$`
@@ -134,7 +133,7 @@ $$\\boxed{\\text{Recognize the form} \\to \\text{Choose the method} \\to \\text{
 | Degree top ≥ bottom | Long division first |
 | Factorable denominator | Partial fractions |
 
-**Next: Part 2 — Trigonometric Integrals and Substitution**`
+**Next: Part 2 — Integration by Parts in Depth**`
     }
   ]
 };

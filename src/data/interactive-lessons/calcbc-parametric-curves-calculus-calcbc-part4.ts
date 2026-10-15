@@ -127,7 +127,7 @@ This confirms the well-known ellipse area formula.
 | $A = \\pi ab$ | Ellipse $x = a\\cos t$, $y = b\\sin t$ |
 | Cycloid arch | $3\\pi$ (for unit cycloid) |
 
-> **Coming Up:** Part 5 covers **surface area of revolution** for parametric curves.`
+> **Coming Up:** Part 5 covers **planar motion**: tangents, velocity, speed, and position.`
     }
   ]
 };

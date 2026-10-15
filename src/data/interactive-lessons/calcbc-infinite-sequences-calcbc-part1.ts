@@ -91,7 +91,7 @@ $a_n = \\frac{n!}{n^n} \\to 0$ (factorial grows slower than exponential of $n$)`
             options: ['Arbitrarily close to $5$', 'Eventually exactly equal to $5$', 'Always slightly greater than $5$', 'Always slightly less than $5$'],
             correctAnswers: ['Arbitrarily close to $5$'],
             hints: ['Convergence means the terms GET close, not that they equal the limit.'],
-            explanation: '$\\forall\\varepsilon > 0, \\exists N$ such that $|a_n - 5| < \\varepsilon$ for all $n > N$. The terms approach $5$ but may never equal it, and they may approach from above, from below, or from both sides.'
+            explanation: 'For large $n$ the distance $|a_n - 5|$ becomes as small as you like and stays small. The terms approach $5$ but may never equal it, and they may approach from above, from below, or from both sides.'
           },
           {
             label: '$\\lim_{n \\to \\infty} \\frac{2^n}{n!}$ equals:',
@@ -125,7 +125,7 @@ $a_n = \\frac{n!}{n^n} \\to 0$ (factorial grows slower than exponential of $n$)`
 - Techniques: direct comparison, squeeze theorem, L'Hôpital's, growth rate ordering
 - Growth rate hierarchy: $\\ln n \\ll n^p \\ll a^n \\ll n! \\ll n^n$
 
-> **Next:** Part 2 — Monotone sequences and boundedness.`
+> **Next:** Part 2 — Decreasing terms and limits by L\'Hospital\'s Rule.`
     }
   ]
 };

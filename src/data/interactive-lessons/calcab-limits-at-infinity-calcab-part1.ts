@@ -17,7 +17,7 @@ export const calcabLimitsInfinityPart1Data = {
 | 📖 What Does "Limit at Infinity" Mean? |
 | Intuitive Approach: End Behavior |
 | 📌 Horizontal Asymptotes |
-| Formal Definitions |
+| Infinite Limits & Two-Sided End Behavior |
 
 > 🔑 **Key Concept:** Limits at infinity describe the long-run behavior of a function — what happens to $f(x)$ as $x$ grows without bound or decreases without bound.
 
@@ -156,26 +156,20 @@ $$\\lim_{x \\to \\infty} \\frac{4x^2 - 3x + 1}{2x^2 + 5} = \\lim_{x \\to \\infty
       }
     },
     {
-      id: 'lai1-formal-definitions',
+      id: 'lai1-infinite-limits',
       type: 'text' as const,
       content: `
-## Formal Definitions
+## Infinite Limits & Two-Sided End Behavior
 
-### Precise Definition of $\\lim_{x \\to \\infty} f(x) = L$
+### What $\\lim_{x \\to \\infty} f(x) = L$ Means
 
-For every $\\varepsilon > 0$, there exists an $N > 0$ such that:
-
-$$x > N \\implies |f(x) - L| < \\varepsilon$$
-
-In plain language: no matter how small a neighborhood around $L$ you choose, there's a point beyond which **all** function values stay within that neighborhood.
+As $x$ grows without bound, the values $f(x)$ get as close to $L$ as we like and stay close. Graphically, the curve settles onto the horizontal line $y = L$.
 
 ---
 
 ### Infinite Limits at Infinity
 
-We write $\\lim_{x \\to \\infty} f(x) = \\infty$ when $f(x)$ grows without bound:
-
-$$\\text{For every } M > 0, \\text{ there exists } N > 0 \\text{ such that } x > N \\implies f(x) > M$$
+We write $\\lim_{x \\to \\infty} f(x) = \\infty$ when $f(x)$ grows without bound as $x$ grows without bound. Such a function has no horizontal asymptote on that side.
 
 **Examples:**
 

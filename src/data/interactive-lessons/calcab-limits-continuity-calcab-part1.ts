@@ -148,7 +148,7 @@ At $x = 0$: $\\frac{1}{2+2} = \\frac{1}{4}$
 
 $$\\lim_{x \\to 0} \\frac{(x+3)^2 - 9}{x} = \\lim_{x \\to 0} \\frac{x^2+6x+9-9}{x} = \\lim_{x \\to 0} \\frac{x^2+6x}{x} = \\lim_{x \\to 0}(x+6) = 6$$
 
-> **AP Tip:** On free-response questions, always show the algebraic simplification step. Simply writing the final answer without work earns 0 points.`
+> **AP Tip:** On free-response questions, always show the algebraic simplification step. A final answer with no supporting work usually earns no credit for that part.`
     },
     {
       id: 'limit1-quiz2',

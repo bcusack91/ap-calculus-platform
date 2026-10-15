@@ -59,15 +59,13 @@ $$\\frac{x}{-x\\sqrt{1 + 3/x^2}} = \\frac{-1}{\\sqrt{1 + 0}} = -1$$
 
 ---
 
-### Example 3: $\\lim_{x \\to \\infty} (\\sqrt{x^2 + x} - x)$
+### Example 3: $\\lim_{x \\to -\\infty} \\frac{2x^2 - 1}{\\sqrt{x^4 + 3x}}$
 
-Multiply by conjugate:
+Here the radical holds $x^4$, and $\\sqrt{x^4} = x^2$ is positive for every $x$, so no sign change is needed even as $x \\to -\\infty$:
 
-$$\\frac{(\\sqrt{x^2+x}-x)(\\sqrt{x^2+x}+x)}{\\sqrt{x^2+x}+x} = \\frac{x^2+x-x^2}{\\sqrt{x^2+x}+x} = \\frac{x}{\\sqrt{x^2+x}+x}$$
+$$\\frac{2x^2 - 1}{x^2\\sqrt{1 + 3/x^3}} = \\frac{2 - 1/x^2}{\\sqrt{1 + 3/x^3}} \\to \\frac{2 - 0}{\\sqrt{1 + 0}} = 2$$
 
-Divide numerator and denominator by $x$ (with $x > 0$):
-
-$$= \\frac{1}{\\sqrt{1+1/x}+1} \\to \\frac{1}{1+1} = \\frac{1}{2}$$`
+> 🔑 **Key Concept:** The sign check is needed only when the radical produces an odd power of $x$: $\\sqrt{x^2} = |x|$, but $\\sqrt{x^4} = x^2$ is never negative.`
     },
     {
       id: 'lai2-exp-log',
@@ -97,7 +95,7 @@ $$\\lim_{x \\to \\infty} \\frac{\\ln x}{x^p} = 0 \\quad \\text{for any } p > 0$$
 
 From **slowest** to **fastest** growth as $x \\to \\infty$:
 
-$$\\boxed{\\ln x \\ll x^{1/2} \\ll x \\ll x^2 \\ll x^n \\ll e^x \\ll x!}$$
+$$\\boxed{\\ln x \\ll x^{1/2} \\ll x \\ll x^2 \\ll x^n \\ll e^x}$$
 
 | Function | At $x = 10$ | At $x = 100$ |
 |----------|------------|-------------|
@@ -138,10 +136,10 @@ $$\\lim_{x \\to \\infty} x^3 e^{-x} = 0 \\qquad \\text{(rewrite: } \\frac{x^3}{e
             explanation: 'For $x < 0$, $\\sqrt{4x^2} = -2x$. So $\\frac{3x}{-2x\\sqrt{1+1/(4x^2)}} = \\frac{-3}{2\\sqrt{1+0}} = -\\frac{3}{2}$. Using $\\sqrt{4x^2} = 2x$ loses the sign ($\\frac{3}{2}$); forgetting both the sign and the square root of $4$ gives $\\frac{3}{4}$; dropping the $4$ entirely gives $-3$.'
           },
           {
-            question: 'Evaluate $\\lim_{x \\to \\infty} (\\sqrt{x^2+4x} - x)$.',
-            options: ['$0$', '$2$', '$4$', '$\\infty$'],
+            question: 'Evaluate $\\lim_{x \\to -\\infty} \\frac{\\sqrt{x^4 + 1}}{3x^2 - x}$.',
+            options: ['$0$', '$\\frac{1}{3}$', '$-\\frac{1}{3}$', '$\\infty$'],
             correctAnswer: 1,
-            explanation: 'Multiply by conjugate: $\\frac{4x}{\\sqrt{x^2+4x}+x}$. Divide by $x$: $\\frac{4}{\\sqrt{1+4/x}+1} \\to \\frac{4}{2} = 2$.'
+            explanation: '$\\sqrt{x^4 + 1} \\approx x^2$, which is positive even when $x < 0$, so the limit is $\\frac{x^2}{3x^2} \\to \\frac{1}{3}$. The value $-\\frac{1}{3}$ applies the $|x| = -x$ sign change where no odd power is pulled out, and $0$ or $\\infty$ would require different degrees on top and bottom (both are degree $2$).'
           }
         ]
       }
@@ -176,13 +174,13 @@ $$\\frac{0}{0+1} = 0$$
 
 ---
 
-### Example 7: $\\lim_{x \\to \\infty} x \\sin\\left(\\frac{1}{x}\\right)$
+### Example 7: $\\lim_{x \\to \\infty} \\frac{\\ln(x^2)}{\\ln x}$
 
-Let $u = \\frac{1}{x}$, so $u \\to 0^+$:
+Both parts grow without bound, but a log property settles it:
 
-$$\\lim_{u \\to 0^+} \\frac{\\sin u}{u} = 1$$
+$$\\frac{\\ln(x^2)}{\\ln x} = \\frac{2\\ln x}{\\ln x} = 2$$
 
-> **AP Tip:** The identity $\\lim_{u \\to 0} \\frac{\\sin u}{u} = 1$ frequently appears in disguise in limits at infinity.`
+> **AP Tip:** Simplify with algebra or log rules before reaching for a bigger tool. Many limits at infinity collapse once the expression is rewritten.`
     },
     {
       id: 'lai2-calculation-drill',

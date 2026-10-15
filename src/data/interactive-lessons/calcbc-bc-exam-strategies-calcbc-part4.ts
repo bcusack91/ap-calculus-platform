@@ -35,7 +35,7 @@ export const calcbcExamStrategyPart4Data = {
 | 7 | Using wrong error bound | Alternating → AST bound; non-alternating → Lagrange |
 | 8 | Integration by parts sign error | Use tabular method to reduce mistakes |
 | 9 | Polar area: forgetting $1/2$ | $A = \\frac{1}{2}\\int r^2\\,d\\theta$ |
-| 10 | Not simplifying series answers | $\\sum$ must match a known series for credit |`
+| 10 | Simplifying a correct answer into a wrong one | Answers need not be simplified; stop once the answer is correct |`
     },
     {
       id: 'es4-mc',
@@ -51,9 +51,9 @@ export const calcbcExamStrategyPart4Data = {
           },
           {
             question: 'A student applies the ratio test to $\\sum (-1)^n/n$ and gets $L = 1$. They conclude the series diverges. This is:',
-            options: ['Incorrect — $L = 1$ is inconclusive; the AST gives convergence', 'Correct — $L = 1$ means divergence', 'Incorrect — it should use the root test', 'Correct — alternating series diverge'],
+            options: ['Incorrect — $L = 1$ is inconclusive; the AST gives convergence', 'Correct — $L = 1$ means divergence', 'Incorrect — the $n$th-term test shows divergence', 'Correct — alternating series diverge'],
             correctAnswer: 0,
-            explanation: '$L = 1$ means the ratio test is inconclusive (the root test is inconclusive here too). The alternating series test shows $\\sum (-1)^n/n$ converges (alternating harmonic series); many alternating series converge.'
+            explanation: '$L = 1$ means the ratio test is inconclusive. The alternating series test shows $\\sum (-1)^n/n$ converges (alternating harmonic series). The $n$th-term test cannot show divergence here because $\\frac{(-1)^n}{n} \\to 0$, and many alternating series converge.'
           },
           {
             question: 'On a polar area problem, a student writes $A = \\int_0^{\\pi} r^2\\,d\\theta$ instead of $A = \\frac{1}{2}\\int_0^{\\pi} r^2\\,d\\theta$. This costs:',
@@ -93,8 +93,8 @@ export const calcbcExamStrategyPart4Data = {
       content: '**Quick Check**',
       exercise: {
         question: 'If $x(t) = \\cos t$ and $y(t) = \\sin t$, what is $\\frac{d^2y}{dx^2}$ at $t = \\pi/4$? Use the correct parametric formula.',
-        correctAnswer: '-sqrt(2)',
-        acceptableAnswers: ['-sqrt(2)', '-√2', '-1.414', '-1.41'],
+        correctAnswer: '-2sqrt(2)',
+        acceptableAnswers: ['-2sqrt(2)', '-2√2', '-2*sqrt(2)', '-sqrt(8)', '-√8', '-2.828', '-2.83'],
         hints: ['$dy/dx = \\cos t / (-\\sin t) = -\\cot t$. Then $\\frac{d}{dt}[-\\cot t] = \\csc^2 t$. Divide by $dx/dt = -\\sin t$.'],
         explanation: '$dy/dx = -\\cot t$. $\\frac{d}{dt}(-\\cot t) = \\csc^2 t$. $d^2y/dx^2 = \\csc^2 t / (-\\sin t) = -\\csc^3 t$. At $t = \\pi/4$: $-\\csc^3(\\pi/4) = -(\\sqrt{2})^3 = -2\\sqrt{2}$.'
       }

@@ -18,7 +18,7 @@ export const calcbcVectorsPart7Data = {
 | Speed | $\\|\\vec{v}\\| = \\sqrt{(x')^2 + (y')^2}$ |
 | Distance | $\\int_a^b \\|\\vec{v}\\|\\,dt$ |
 | Displacement | $\\int_a^b \\vec{v}\\,dt = \\vec{r}(b) - \\vec{r}(a)$ |
-| Unit tangent | $\\hat{T} = \\vec{v}/\\|\\vec{v}\\|$ |
+| Speeding up | $\\frac{d}{dt}\\|\\vec{v}\\| > 0$ |
 | At rest | $\\vec{v}(t) = \\vec{0}$ |
 
 > **AP Tip:** This table covers everything you need for vector motion questions. Memorize it.`
@@ -111,12 +111,12 @@ You've mastered vector-valued functions:
 - Position, velocity, acceleration — component-wise derivatives
 - Speed vs. velocity vs. displacement vs. distance
 - Integration with initial conditions
-- Arc length and unit tangent vectors
+- Arc length, speed, and acceleration
 - AP FRQ strategies for motion problems
 
 $$\\boxed{\\vec{v}(t) = \\vec{r}\\,'(t) \\qquad \\text{Distance} = \\int_a^b \\|\\vec{v}(t)\\|\\,dt}$$
 
-> **Up next:** Arc Length & Surface Area — extending these ideas to general curves.`
+> **Up next:** Arc Length — extending these ideas to general curves.`
     }
   ]
 };

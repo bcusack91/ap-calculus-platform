@@ -4,50 +4,45 @@ export const calcbcArcLengthPart2Data = {
     {
       id: 'al2-intro',
       type: 'text' as const,
-      content: `# Arc Length & Surface Area — Parametric & Polar Arc Length
+      content: `# Arc Length — Parametric Curves
 
-**Part 2 of 7 — Arc Length in Parametric and Polar Forms**
+**Part 2 of 7 — Arc Length of Parametric Curves**
 
 ### Parametric Arc Length
 
-For $x = f(t)$, $y = g(t)$, $a \\le t \\le b$:
+For $x = f(t)$, $y = g(t)$, $a \\le t \\le b$, with the curve traced once:
 
 $$\\boxed{L = \\int_a^b \\sqrt{\\left(\\frac{dx}{dt}\\right)^2 + \\left(\\frac{dy}{dt}\\right)^2}\\,dt}$$
 
-### Polar Arc Length
+It comes from the same idea as Part 1: a tiny piece of the curve has length $ds = \\sqrt{dx^2 + dy^2}$, and dividing inside by $dt^2$ gives $\\sqrt{(dx/dt)^2 + (dy/dt)^2}\\,dt$.
 
-For $r = f(\\theta)$, $\\alpha \\le \\theta \\le \\beta$:
+| Curve given as | $ds$ expression | Limits are values of |
+|------|----------------|------|
+| $y = f(x)$ | $\\sqrt{1 + (dy/dx)^2}\\,dx$ | $x$ |
+| $x = f(t)$, $y = g(t)$ | $\\sqrt{(dx/dt)^2 + (dy/dt)^2}\\,dt$ | $t$ |
 
-$$\\boxed{L = \\int_\\alpha^\\beta \\sqrt{r^2 + \\left(\\frac{dr}{d\\theta}\\right)^2}\\,d\\theta}$$
-
-| Form | $ds$ expression |
-|------|----------------|
-| Cartesian | $\\sqrt{1 + (dy/dx)^2}\\,dx$ |
-| Parametric | $\\sqrt{(dx/dt)^2 + (dy/dt)^2}\\,dt$ |
-| Polar | $\\sqrt{r^2 + (dr/d\\theta)^2}\\,d\\theta$ |
-
-> **Key Fact:** The polar formula comes from substituting $x = r\\cos\\theta$, $y = r\\sin\\theta$ into the parametric formula.`
+> **Key Fact:** The limits of a parametric arc length integral are $t$-values, not $x$-values. Converting endpoints given as points into $t$-values is a common first step on the AP exam.`
     },
     {
       id: 'al2-examples',
       type: 'text' as const,
-      content: `### Examples
+      content: `### Worked Examples
 
-**Parametric:** $x = \\cos t$, $y = \\sin t$, $0 \\le t \\le 2\\pi$.
+**Example 1 (by hand).** $x = \\cos t$, $y = \\sin t$, $0 \\le t \\le 2\\pi$.
 
-$dx/dt = -\\sin t$, $dy/dt = \\cos t$.
+$dx/dt = -\\sin t$, $dy/dt = \\cos t$, so the integrand is $\\sqrt{\\sin^2 t + \\cos^2 t} = 1$.
 
-$L = \\int_0^{2\\pi}\\sqrt{\\sin^2 t + \\cos^2 t}\\,dt = \\int_0^{2\\pi} 1\\,dt = 2\\pi$ ✓
+$L = \\int_0^{2\\pi} 1\\,dt = 2\\pi$, the circumference of the unit circle ✓
 
-**Polar:** $r = 1$ (unit circle), $0 \\le \\theta \\le 2\\pi$.
+**Example 2 (by hand).** $x = t^2$, $y = \\frac{2}{3}t^3$, $0 \\le t \\le \\sqrt{3}$.
 
-$dr/d\\theta = 0$.
+$dx/dt = 2t$, $dy/dt = 2t^2$, so $\\sqrt{4t^2 + 4t^4} = 2t\\sqrt{1 + t^2}$ for $t \\ge 0$.
 
-$L = \\int_0^{2\\pi}\\sqrt{1 + 0}\\,d\\theta = 2\\pi$ ✓
+$$L = \\int_0^{\\sqrt{3}} 2t\\sqrt{1+t^2}\\,dt = \\left[\\tfrac{2}{3}(1+t^2)^{3/2}\\right]_0^{\\sqrt{3}} = \\tfrac{2}{3}(8 - 1) = \\tfrac{14}{3}$$
 
-**Polar arc length of $r = e^\\theta$** from $\\theta = 0$ to $\\theta = \\ln 2$:
+**Example 3 (endpoints given as points).** The curve $x = t^2 + 1$, $y = 3t$ runs from $(1, 0)$ to $(5, 6)$. Since $y = 3t$, the endpoints are $t = 0$ and $t = 2$:
 
-$dr/d\\theta = e^\\theta$. $L = \\int_0^{\\ln 2}\\sqrt{e^{2\\theta} + e^{2\\theta}}\\,d\\theta = \\int_0^{\\ln 2}e^\\theta\\sqrt{2}\\,d\\theta = \\sqrt{2}[e^\\theta]_0^{\\ln 2} = \\sqrt{2}(2-1) = \\sqrt{2}$`
+$$L = \\int_0^2 \\sqrt{4t^2 + 9}\\,dt \\approx 7.472 \\text{ (calculator)}$$`
     },
     {
       id: 'al2-mc1',
@@ -56,16 +51,16 @@ $dr/d\\theta = e^\\theta$. $L = \\int_0^{\\ln 2}\\sqrt{e^{2\\theta} + e^{2\\thet
       exercise: {
         questions: [
           {
-            question: 'The circumference of the circle $r = 2a\\cos\\theta$ ($a > 0$) is:',
-            options: ['$2\\pi a$', '$4\\pi a$', '$\\pi a$', '$2\\pi a^2$'],
-            correctAnswer: 0,
-            explanation: 'This is a circle of diameter $2a$ (radius $a$), so circumference $= 2\\pi a$. The curve traces the full circle for $\\theta \\in [0, \\pi]$.'
+            question: 'For the parametric curve $x = t^2$, $y = t^3$ from $t = 0$ to $t = 1$, the arc length integral is:',
+            options: ['$\\int_0^1 \\sqrt{t^4 + t^6}\\,dt$', '$\\int_0^1 \\sqrt{4t^2 + 9t^4}\\,dt$', '$\\int_0^1 (2t + 3t^2)\\,dt$', '$\\int_0^1 \\sqrt{1 + 9t^4}\\,dt$'],
+            correctAnswer: 1,
+            explanation: '$dx/dt = 2t$ and $dy/dt = 3t^2$, so $L = \\int_0^1\\sqrt{4t^2 + 9t^4}\\,dt$. Squaring the coordinates instead of their derivatives gives $t^4 + t^6$, adding the rates skips the square root of a sum of squares, and $1 + 9t^4$ mixes the Cartesian form into a $dt$ integral.'
           },
           {
-            question: 'For the parametric curve $x = t^2$, $y = t^3$ from $t = 0$ to $t = 1$, the arc length integral is:',
-            options: ['$\\int_0^1 \\sqrt{4t^2 + 9t^4}\\,dt$', '$\\int_0^1 \\sqrt{t^4 + t^6}\\,dt$', '$\\int_0^1 (2t + 3t^2)\\,dt$', '$\\int_0^1 \\sqrt{4 + 9t^2}\\,dt$'],
-            correctAnswer: 0,
-            explanation: '$dx/dt = 2t$, $dy/dt = 3t^2$. $L = \\int_0^1\\sqrt{4t^2 + 9t^4}\\,dt = \\int_0^1 t\\sqrt{4 + 9t^2}\\,dt$.'
+            question: 'A curve is given by $x = e^t$, $y = 2t$. Its arc length from the point $(1, 0)$ to the point $(e^2, 4)$ is:',
+            options: ['$\\int_1^{e^2} \\sqrt{e^{2t} + 4}\\,dt$', '$\\int_0^4 \\sqrt{e^{2t} + 4}\\,dt$', '$\\int_0^2 \\sqrt{e^{2t} + 4}\\,dt$', '$\\int_0^2 \\sqrt{e^{t} + 2}\\,dt$'],
+            correctAnswer: 2,
+            explanation: 'The point $(1, 0)$ is $t = 0$ and $(e^2, 4)$ is $t = 2$, so the limits are $0$ and $2$. With $dx/dt = e^t$ and $dy/dt = 2$, the integrand is $\\sqrt{e^{2t} + 4}$. Using the $x$-values or $y$-values as limits mixes up the variable, and leaving the rates unsquared drops the Pythagorean structure.'
           }
         ]
       }
@@ -73,22 +68,22 @@ $dr/d\\theta = e^\\theta$. $L = \\int_0^{\\ln 2}\\sqrt{e^{2\\theta} + e^{2\\thet
     {
       id: 'al2-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Form Selection**',
+      content: '**Concept Checks**',
       exercise: {
         dropdowns: [
           {
-            label: 'For the spiral $r = \\theta$, $0 \\le \\theta \\le 2\\pi$, the arc length integral has $r^2 + (dr/d\\theta)^2 = $',
-            options: ['$\\theta^2 + 1$', '$\\theta^2$', '$(\\theta + 1)^2$', '$\\theta + 1$'],
-            correctAnswers: ['$\\theta^2 + 1$'],
-            hints: ['$r = \\theta$, $dr/d\\theta = 1$.'],
-            explanation: '$r^2 + (r\')^2 = \\theta^2 + 1$. So $L = \\int_0^{2\\pi}\\sqrt{\\theta^2 + 1}\\,d\\theta$ (requires trig substitution or calculator). Squaring $r + r\'$ as a single quantity, or forgetting to square $r$, are the common slips.'
+            label: 'For $x = 3\\cos t$, $y = 3\\sin t$ on $0 \\le t \\le \\pi$, the arc length is',
+            options: ['$6\\pi$', '$9\\pi$', '$3\\pi$', '$\\pi$'],
+            correctAnswers: ['$3\\pi$'],
+            hints: ['Compute $(dx/dt)^2 + (dy/dt)^2$ first.'],
+            explanation: 'The integrand is $\\sqrt{9\\sin^2 t + 9\\cos^2 t} = 3$, so $L = \\int_0^\\pi 3\\,dt = 3\\pi$: half the circumference of a circle of radius $3$. The full circumference is $6\\pi$, $9\\pi$ forgets the square root, and $\\pi$ drops the radius.'
           },
           {
-            label: 'The polar arc length formula reduces to the Cartesian formula when $r = $ constant because:',
-            options: ['$dr/d\\theta = 0$, so $ds = r\\,d\\theta$, giving the circumference formula', 'Polar and Cartesian coordinates coincide when $r$ is constant', '$dr/d\\theta = 0$, so $ds = d\\theta$ and the length is just $\\beta - \\alpha$', 'It does not reduce; a circle needs the Cartesian formula instead'],
-            correctAnswers: ['$dr/d\\theta = 0$, so $ds = r\\,d\\theta$, giving the circumference formula'],
-            hints: ['What happens when the radius is fixed?'],
-            explanation: 'With $r$ constant and $dr/d\\theta = 0$: $ds = \\sqrt{r^2 + 0}\\,d\\theta = r\\,d\\theta$, so $L = \\int_\\alpha^\\beta r\\,d\\theta = r(\\beta - \\alpha)$. Over $[0, 2\\pi]$: $L = 2\\pi r$. Dropping the $r^2$ term (getting $ds = d\\theta$) is the usual slip.'
+            label: 'A parametric arc length integral must use limits that are values of',
+            options: ['the parameter $t$', 'the coordinate $x$', 'the coordinate $y$', 'the speed $ds/dt$'],
+            correctAnswers: ['the parameter $t$'],
+            hints: ['What variable is the integral written in?'],
+            explanation: 'The integrand is a function of $t$ and the differential is $dt$, so the limits must be $t$-values. Endpoints given as points must be converted to $t$-values first; $x$- or $y$-values only work when they happen to equal $t$.'
           }
         ]
       }
@@ -102,7 +97,7 @@ $dr/d\\theta = e^\\theta$. $L = \\int_0^{\\ln 2}\\sqrt{e^{2\\theta} + e^{2\\thet
         correctAnswer: '10',
         acceptableAnswers: ['10', '10.0'],
         hints: ['$dx/dt = 3$, $dy/dt = 4$.', '$\\sqrt{9+16} = 5$.'],
-        explanation: '$L = \\int_0^2 \\sqrt{9+16}\\,dt = \\int_0^2 5\\,dt = 10$. Straight line from origin to $(6,8)$ — distance $= \\sqrt{36+64} = 10$. ✓'
+        explanation: '$L = \\int_0^2 \\sqrt{9+16}\\,dt = \\int_0^2 5\\,dt = 10$. Straight line from the origin to $(6,8)$, distance $= \\sqrt{36+64} = 10$. ✓'
       }
     },
     {
@@ -110,11 +105,11 @@ $dr/d\\theta = e^\\theta$. $L = \\int_0^{\\ln 2}\\sqrt{e^{2\\theta} + e^{2\\thet
       type: 'text' as const,
       content: `### Summary
 
-- Parametric: $L = \\int_a^b \\sqrt{(x\')^2 + (y\')^2}\\,dt$
-- Polar: $L = \\int_\\alpha^\\beta \\sqrt{r^2 + (r\')^2}\\,d\\theta$
-- All arc length formulas come from $ds = \\sqrt{dx^2 + dy^2}$
+- Parametric: $L = \\int_a^b \\sqrt{(dx/dt)^2 + (dy/dt)^2}\\,dt$ (BC Topic 9.3)
+- Limits are $t$-values; convert endpoint coordinates to $t$ first
+- Both formulas come from $ds = \\sqrt{dx^2 + dy^2}$
 
-> **Next:** Part 3 — Surface area of revolution.`
+> **Next:** Part 3 — Distance traveled along a parametric path.`
     }
   ]
 };

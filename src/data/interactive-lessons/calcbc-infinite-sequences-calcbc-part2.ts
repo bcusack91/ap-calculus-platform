@@ -4,50 +4,47 @@ export const calcbcSequencesPart2Data = {
     {
       id: 'seq2-intro',
       type: 'text' as const,
-      content: `# Infinite Sequences — Monotone & Bounded Sequences
+      content: `# Infinite Sequences — Decreasing Terms & Limits
 
-**Part 2 of 7 — Monotonicity, Bounds, and the Monotone Convergence Theorem**
+**Part 2 of 7 — Decreasing Terms and Limits by L'Hospital's Rule**
 
-### Definitions
+### Increasing and Decreasing Terms
 
 | Property | Meaning |
 |----------|---------|
 | **Increasing** | $a_{n+1} \\ge a_n$ for all $n$ |
 | **Decreasing** | $a_{n+1} \\le a_n$ for all $n$ |
-| **Monotone** | Either increasing or decreasing |
-| **Bounded above** | $\\exists M: a_n \\le M$ for all $n$ |
-| **Bounded below** | $\\exists m: a_n \\ge m$ for all $n$ |
-| **Bounded** | Both bounded above and below |
 
-### Monotone Convergence Theorem
+On the BC exam you check that terms are decreasing when you apply the **alternating series test** (the terms $b_n$ must decrease to $0$) and the **integral test** (the function $f$ must be decreasing).
 
-$$\\boxed{\\text{Monotone + Bounded} \\implies \\text{Convergent}}$$
+### How to Show Terms Are Decreasing
 
-This is one of the most powerful tools for proving convergence without finding the limit.
+**Method 1: Difference.** Show $a_{n+1} - a_n < 0$.
 
-> **Key Fact:** An increasing sequence that is bounded above must converge. A decreasing sequence that is bounded below must converge.`
+**Method 2: Derivative.** If $a_n = f(n)$ and $f'(x) < 0$ for $x \\ge N$, the terms are decreasing from $n = N$ on.
+
+> **Key Fact:** The derivative method is usually fastest, and it lets you use every calculus tool you already have.`
     },
     {
       id: 'seq2-tests',
       type: 'text' as const,
-      content: `### Testing Monotonicity
+      content: `### Example: Decreasing Terms
 
-**Method 1: Difference test**
-$a_{n+1} - a_n > 0 \\implies$ increasing; $< 0 \\implies$ decreasing.
+$b_n = \\frac{n}{n^2 + 1}$. Let $f(x) = \\frac{x}{x^2 + 1}$. By the quotient rule,
 
-**Method 2: Ratio test** (for positive sequences)
-$a_{n+1}/a_n > 1 \\implies$ increasing; $< 1 \\implies$ decreasing.
+$$f'(x) = \\frac{(x^2 + 1) - x(2x)}{(x^2 + 1)^2} = \\frac{1 - x^2}{(x^2 + 1)^2} \\le 0 \\text{ for } x \\ge 1$$
 
-**Method 3: Derivative test**
-If $a_n = f(n)$ and $f'(x) > 0$ for $x \\ge 1$, then $\\{a_n\\}$ is increasing.
+so $\\{b_n\\}$ is decreasing for $n \\ge 1$.
 
-### Example
+### Limits of Sequences with L'Hospital's Rule
 
-$a_n = \\frac{n}{n+1}$. Is it monotone? Bounded?
+If $a_n = f(n)$ and $\\lim_{x \\to \\infty} f(x) = L$, then $\\lim_{n \\to \\infty} a_n = L$. This lets you use L'Hospital's Rule on the function $f(x)$ when the limit has the form $\\frac{\\infty}{\\infty}$ or $\\frac{0}{0}$.
 
-$a_{n+1} - a_n = \\frac{n+1}{n+2} - \\frac{n}{n+1} = \\frac{(n+1)^2 - n(n+2)}{(n+2)(n+1)} = \\frac{1}{(n+2)(n+1)} > 0$
+**Example:** $a_n = \\frac{n^2}{e^n}$. The form is $\\frac{\\infty}{\\infty}$, so apply L'Hospital's Rule twice to $\\frac{x^2}{e^x}$:
 
-So $\\{a_n\\}$ is **increasing**. Also $a_n < 1$ for all $n$ (bounded above). By MCT, it converges. Indeed, $\\lim a_n = 1$.`
+$$\\lim_{x \\to \\infty}\\frac{x^2}{e^x} = \\lim_{x \\to \\infty}\\frac{2x}{e^x} = \\lim_{x \\to \\infty}\\frac{2}{e^x} = 0$$
+
+So $a_n \\to 0$. Exponentials eventually outgrow every power of $n$.`
     },
     {
       id: 'seq2-mc1',
@@ -56,16 +53,16 @@ So $\\{a_n\\}$ is **increasing**. Also $a_n < 1$ for all $n$ (bounded above). By
       exercise: {
         questions: [
           {
-            question: 'The sequence $a_n = \\frac{1}{n!}$ is:',
-            options: ['Decreasing and bounded below by $0$', 'Increasing and bounded above', 'Neither increasing nor decreasing', 'Decreasing and unbounded'],
-            correctAnswer: 0,
-            explanation: '$a_{n+1}/a_n = \\frac{n!}{(n+1)!} = \\frac{1}{n+1} < 1$, so the sequence is decreasing, not increasing. $a_n > 0$ for all $n$, so it is bounded below by $0$ (and above by $a_1 = 1$). By the Monotone Convergence Theorem, it converges (to $0$).'
+            question: 'To show that $b_n = \\frac{\\ln n}{n}$ is decreasing for $n \\ge 3$, the most direct argument is:',
+            options: ['$\\lim b_n = 0$, so the terms must shrink', '$f\'$ is negative for $x > e$, where $f = \\frac{\\ln x}{x}$', '$b_n > 0$ for every $n \\ge 2$ by inspection', '$b_3 > b_4$, so every later term is smaller'],
+            correctAnswer: 1,
+            explanation: 'With $f(x) = \\frac{\\ln x}{x}$, the quotient rule gives $f\'(x) = \\frac{1 - \\ln x}{x^2}$, which is negative once $\\ln x > 1$, so for $n \\ge 3$. A limit of $0$ does not force every term to decrease, positivity says nothing about order, and one comparison does not cover all later terms.'
           },
           {
-            question: 'A bounded sequence that is NOT monotone:',
-            options: ['May or may not converge', 'Must converge', 'Must diverge', 'Must converge to $0$'],
+            question: 'Using L\'Hospital\'s Rule on the related function, $\\lim_{n \\to \\infty} \\frac{3n + \\ln n}{2n}$ equals:',
+            options: ['$\\frac{3}{2}$', '$0$', '$\\infty$', '$\\frac{2}{3}$'],
             correctAnswer: 0,
-            explanation: '$a_n = (-1)^n/n$ is bounded and not monotone, but converges. $a_n = (-1)^n$ is bounded and not monotone, but diverges. Boundedness alone is not sufficient, and the Monotone Convergence Theorem needs monotonicity.'
+            explanation: 'The form is $\\frac{\\infty}{\\infty}$, and differentiating gives $\\frac{3 + 1/x}{2} \\to \\frac{3}{2}$. Treating $\\ln n$ as dominant gives $\\infty$, dropping the $3n$ term gives $0$, and $\\frac{2}{3}$ inverts the ratio of the leading coefficients.'
           }
         ]
       }
@@ -77,18 +74,18 @@ So $\\{a_n\\}$ is **increasing**. Also $a_n < 1$ for all $n$ (bounded above). By
       exercise: {
         dropdowns: [
           {
-            label: 'The Monotone Convergence Theorem says convergence is guaranteed when a sequence is:',
-            options: ['Both monotone and bounded', 'Monotone, even if unbounded', 'Bounded, even if not monotone', 'Alternating, with bounded terms'],
-            correctAnswers: ['Both monotone and bounded'],
-            hints: ['Both conditions are needed.'],
-            explanation: '$a_n = n$ is monotone but not bounded (diverges). $a_n = (-1)^n$ is bounded but not monotone (diverges). You need both.'
+            label: 'The alternating series test requires the terms $b_n$ to be',
+            options: ['increasing and bounded above', 'decreasing, with any limit', 'positive and bounded above', 'decreasing with limit $0$'],
+            correctAnswers: ['decreasing with limit $0$'],
+            hints: ['Two conditions: the size of the terms shrinks, and it shrinks all the way to zero.'],
+            explanation: 'The alternating series test needs $b_n$ decreasing and $\\lim b_n = 0$. Increasing terms or a nonzero limit fail the test, and boundedness is not one of its conditions.'
           },
           {
-            label: '$a_n = \\left(1 + \\frac{1}{n}\\right)^n$ is:',
-            options: ['Increasing and bounded above (converges to $e$)', 'Decreasing and bounded (converges to $1$)', 'Increasing and unbounded (diverges to $\\infty$)', 'Oscillating but bounded (has no limit)'],
-            correctAnswers: ['Increasing and bounded above (converges to $e$)'],
-            hints: ['This is the classic definition of $e$.'],
-            explanation: 'This sequence is increasing (can be shown by AM-GM) and bounded above by $3$. By MCT, it converges. The limit is $e \\approx 2.71828$. The base tends to $1$ while the exponent grows, so neither $1$ nor $\\infty$ is the limit.'
+            label: '$\\lim_{n \\to \\infty} \\frac{\\ln(n^2)}{\\sqrt{n}}$ equals',
+            options: ['$2$', '$0$', '$\\infty$', '$1$'],
+            correctAnswers: ['$0$'],
+            hints: ['The form is $\\frac{\\infty}{\\infty}$; differentiate the top and bottom of $\\frac{2\\ln x}{\\sqrt{x}}$.'],
+            explanation: 'L\'Hospital\'s Rule gives $\\frac{2/x}{1/(2\\sqrt{x})} = \\frac{4}{\\sqrt{x}} \\to 0$: logarithms grow more slowly than any positive power. The value $2$ keeps only the exponent, $\\infty$ assumes the numerator wins, and $1$ treats the two growth rates as equal.'
           }
         ]
       }
@@ -101,8 +98,8 @@ So $\\{a_n\\}$ is **increasing**. Also $a_n < 1$ for all $n$ (bounded above). By
         question: 'Let $a_n = \\frac{2n}{n+3}$. Compute $a_1$, $a_2$, $a_3$ and determine the limit. What is $\\lim_{n \\to \\infty} a_n$?',
         correctAnswer: '2',
         acceptableAnswers: ['2', '2.0'],
-        hints: ['$a_1 = 2/4 = 0.5$, $a_2 = 4/5 = 0.8$, $a_3 = 6/6 = 1$.', 'The sequence is increasing toward...'],
-        explanation: '$a_n = \\frac{2n}{n+3} = \\frac{2}{1 + 3/n} \\to 2$. The sequence is increasing and bounded above by $2$.'
+        hints: ['$a_1 = 2/4 = 0.5$, $a_2 = 4/5 = 0.8$, $a_3 = 6/6 = 1$.', 'Divide the numerator and denominator by $n$.'],
+        explanation: '$a_n = \\frac{2n}{n+3} = \\frac{2}{1 + 3/n} \\to 2$. The terms increase toward $2$ without reaching it.'
       }
     },
     {
@@ -110,12 +107,11 @@ So $\\{a_n\\}$ is **increasing**. Also $a_n < 1$ for all $n$ (bounded above). By
       type: 'text' as const,
       content: `### Summary
 
-- Monotone: always increasing or always decreasing
-- Test with: difference, ratio, or derivative
-- **Monotone Convergence Theorem:** Monotone + Bounded $\\implies$ Convergent
-- This theorem proves existence of a limit without finding it
+- Decreasing terms are a condition of the alternating series test and the integral test
+- Show decreasing with a difference or with $f'(x) < 0$
+- $\\lim a_n$ can be found from $\\lim_{x \\to \\infty} f(x)$, using L'Hospital's Rule for $\\frac{\\infty}{\\infty}$ or $\\frac{0}{0}$
 
-> **Next:** Part 3 — Recursive sequences and special limits.`
+> **Next:** Part 3 — Special limits and growth rates.`
     }
   ]
 };

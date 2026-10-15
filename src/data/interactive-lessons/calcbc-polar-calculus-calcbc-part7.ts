@@ -16,7 +16,7 @@ export const calcbcPolarPart7Data = {
 | Area | $A = \\frac{1}{2}\\int_{\\alpha}^{\\beta}r^2\\,d\\theta$ |
 | Area between curves | $\\frac{1}{2}\\int(r_{\\text{out}}^2 - r_{\\text{in}}^2)\\,d\\theta$ |
 | Slope | $\\frac{dy}{dx} = \\frac{r'\\sin\\theta + r\\cos\\theta}{r'\\cos\\theta - r\\sin\\theta}$ |
-| Arc length | $L = \\int\\sqrt{r^2+(r')^2}\\,d\\theta$ |
+| Toward or away from origin | Compare the signs of $r$ and $dr/d\\theta$ |
 | Horizontal tangent | $dy/d\\theta = 0$, $dx/d\\theta \\ne 0$ |
 | Vertical tangent | $dx/d\\theta = 0$, $dy/d\\theta \\ne 0$ |`
     },
@@ -97,11 +97,11 @@ export const calcbcPolarPart7Data = {
       type: 'input-box' as const,
       content: '**Final Computation**',
       exercise: {
-        question: 'The arc length of the full cardioid $r = 1 + \\cos\\theta$ is $8$ (derived using the half-angle identity). What is the arc length of $r = 3(1 + \\cos\\theta)$?',
-        correctAnswer: '24',
-        acceptableAnswers: ['24'],
-        hints: ['Scaling $r$ by factor $k$ scales arc length by $k$.', '$3 \\times 8 = 24$.'],
-        explanation: 'Scaling a polar curve by constant $k$ scales all lengths by $k$. Arc length of $r = 3(1+\\cos\\theta)$ is $3 \\times 8 = 24$.'
+        question: 'The area enclosed by the cardioid $r = 1 + \\cos\\theta$ is $\\frac{3\\pi}{2}$. What is the area enclosed by $r = 3(1 + \\cos\\theta)$? Give an exact answer in terms of $\\pi$.',
+        correctAnswer: '27pi/2',
+        acceptableAnswers: ['27pi/2', '27π/2', '13.5pi', '13.5π', '42.412', '42.41'],
+        hints: ['Area uses $\\frac{1}{2}\\int r^2\\,d\\theta$, so scaling $r$ by $3$ scales $r^2$ by $9$.', '$9 \\times \\frac{3\\pi}{2}$.'],
+        explanation: '$\\frac{1}{2}\\int_0^{2\\pi} 9(1 + \\cos\\theta)^2\\,d\\theta = 9 \\cdot \\frac{3\\pi}{2} = \\frac{27\\pi}{2}$. Area scales by the square of the factor, not by the factor itself, so the answer is not $\\frac{9\\pi}{2}$.'
       }
     },
     {
@@ -114,9 +114,9 @@ You have mastered:
 - Graphing polar curves and symmetry analysis
 - Polar area formula and area between curves
 - Slopes of polar curves via parametric conversion
-- Arc length in polar coordinates
+- Rates of change $dr/d\\theta$, $dx/d\\theta$, and $dy/d\\theta$
 
-> **AP Exam Note:** The polar/parametric FRQ is one of the most predictable on the BC exam. Practice setting up area and arc length integrals with correct limits. Always check for intersections at the origin separately!`
+> **AP Exam Note:** The polar/parametric FRQ is one of the most predictable on the BC exam. Practice setting up area integrals with correct limits and interpreting $dr/d\\theta$. Always check for intersections at the origin separately!`
     }
   ]
 };

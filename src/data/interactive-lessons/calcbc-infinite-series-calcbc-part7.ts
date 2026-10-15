@@ -19,7 +19,6 @@ export const calcbcSeriesPart7Data = {
 | **DCT** | $0 \\le a_n \\le b_n$ | $\\sum b_n$ conv. $\\Rightarrow \\sum a_n$ conv. |
 | **LCT** | $\\lim a_n/b_n = L > 0$ | Both converge or both diverge |
 | **Ratio** | $L = \\lim |a_{n+1}/a_n|$ | $L < 1$: conv; $L > 1$: div; $L = 1$: inconc. |
-| **Root** | $L = \\lim \\sqrt[n]{|a_n|}$ | Same as Ratio |
 | **AST** | $(-1)^n b_n$, $b_n$ decreasing, $b_n \\to 0$ | Converges |
 
 $$\\boxed{\\text{Absolute convergence} \\implies \\text{Convergence} \\implies a_n \\to 0}$$
@@ -123,11 +122,11 @@ $$\\boxed{\\text{Absolute convergence} \\implies \\text{Convergence} \\implies a
 You've mastered:
 - **Integral Test** — connects series and improper integrals
 - **Comparison Tests** — DCT and LCT for bounding series
-- **Ratio & Root Tests** — best for factorials, exponentials, and $n$-th powers
+- **Ratio Test** — best for factorials and exponentials
 - **Absolute vs. Conditional Convergence** — fundamental classification
 - **Test Selection Strategy** — choosing the right tool for each series
 
-> **Key Fact:** Series convergence is a major BC topic, typically appearing in both MC and FRQ sections. Expect 3-5 questions on the AP exam.
+> **Key Fact:** Series convergence is a major BC topic, typically appearing in both MC and FRQ sections. Unit 10 (series) carries 15–20% of the BC multiple-choice weighting.
 
 > **Up Next:** Alternating Series — deep dive into the Alternating Series Test, error bounds, and applications.`
     }

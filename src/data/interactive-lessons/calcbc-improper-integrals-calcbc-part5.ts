@@ -20,7 +20,7 @@ This part consolidates key results that appear repeatedly on the AP Calculus BC 
 | $\\int_0^{\\infty} e^{-x}\\,dx$ | $1$ | Direct: $[-e^{-x}]_0^{\\infty}$ |
 | $\\int_0^{\\infty} e^{-kx}\\,dx$ ($k>0$) | $\\frac{1}{k}$ | Direct |
 | $\\int_0^{\\infty} xe^{-x}\\,dx$ | $1$ | Integration by parts |
-| $\\int_0^{\\infty} x^n e^{-x}\\,dx$ | $n!$ | IBP $n$ times (Gamma function) |
+| $\\int_0^{\\infty} x^2 e^{-x}\\,dx$ | $2$ | Integration by parts twice |
 | $\\int_1^{\\infty} \\frac{1}{x^2}\\,dx$ | $1$ | $p$-test, $p=2$ |
 | $\\int_0^1 \\frac{1}{\\sqrt{x}}\\,dx$ | $2$ | Type II, $p = 1/2 < 1$ |
 | $\\int_{-\\infty}^{\\infty} \\frac{1}{1+x^2}\\,dx$ | $\\pi$ | $\\arctan$ |
@@ -30,23 +30,22 @@ $$\\boxed{\\int_0^{\\infty} xe^{-x}\\,dx = 1 \\quad \\text{and} \\quad \\int_{-\
 > **AP Tip:** Memorize the arctan integral: $\\int_0^{\\infty} \\frac{1}{1+x^2}\\,dx = \\frac{\\pi}{2}$. It appears in multiple-choice questions regularly.`
     },
     {
-      id: 'imp5-gamma',
+      id: 'imp5-ibp',
       type: 'text' as const,
-      content: `### The Gamma Function Connection
+      content: `### Integration by Parts on an Infinite Interval
 
-$$\\Gamma(n+1) = \\int_0^{\\infty} x^n e^{-x}\\,dx = n!$$
+Write the improper integral as a limit, integrate by parts, then take the limit.
 
-| $n$ | $\\int_0^{\\infty} x^n e^{-x}\\,dx$ | Value |
+**Example:** $\\int_0^{\\infty} xe^{-x}\\,dx$ with $u = x$, $dv = e^{-x}\\,dx$:
+
+$$\\int_0^{b} xe^{-x}\\,dx = \\Big[-xe^{-x}\\Big]_0^{b} + \\int_0^{b} e^{-x}\\,dx = -be^{-b} - e^{-b} + 1$$
+
+| Piece | Limit as $b \\to \\infty$ | Reason |
 |:---:|:---:|:---:|
-| $0$ | $\\int_0^{\\infty} e^{-x}\\,dx$ | $0! = 1$ |
-| $1$ | $\\int_0^{\\infty} xe^{-x}\\,dx$ | $1! = 1$ |
-| $2$ | $\\int_0^{\\infty} x^2 e^{-x}\\,dx$ | $2! = 2$ |
-| $3$ | $\\int_0^{\\infty} x^3 e^{-x}\\,dx$ | $3! = 6$ |
+| $-be^{-b} = -\\frac{b}{e^b}$ | $0$ | L'Hospital's Rule on $\\frac{\\infty}{\\infty}$: $\\frac{1}{e^b} \\to 0$ |
+| $-e^{-b}$ | $0$ | $e^b \\to \\infty$ |
 
-While $\\Gamma$ is beyond the AP exam, knowing $\\int_0^{\\infty} xe^{-x}\\,dx = 1$ via IBP is testable.
-
-**Derivation:** $u = x$, $dv = e^{-x}dx$:
-$$\\int_0^{\\infty} xe^{-x}\\,dx = [-xe^{-x}]_0^{\\infty} + \\int_0^{\\infty} e^{-x}\\,dx = 0 + 1 = 1$$`
+So $\\int_0^{\\infty} xe^{-x}\\,dx = 1$. Applying parts twice the same way gives $\\int_0^{\\infty} x^2 e^{-x}\\,dx = 2$.`
     },
     {
       id: 'imp5-mc1',
@@ -63,13 +62,13 @@ $$\\int_0^{\\infty} xe^{-x}\\,dx = [-xe^{-x}]_0^{\\infty} + \\int_0^{\\infty} e^
           {
             question: 'Which integral diverges?',
             options: [
-              '$\\int_1^{\\infty} \\frac{1}{x \\ln^2 x}\\,dx$',
-              '$\\int_1^{\\infty} \\frac{1}{x \\ln x}\\,dx$',
-              '$\\int_1^{\\infty} \\frac{1}{x^2 \\ln x}\\,dx$',
+              '$\\int_e^{\\infty} \\frac{1}{x \\ln^2 x}\\,dx$',
+              '$\\int_e^{\\infty} \\frac{1}{x \\ln x}\\,dx$',
+              '$\\int_e^{\\infty} \\frac{1}{x^2 \\ln x}\\,dx$',
               '$\\int_0^{\\infty} e^{-x^2}\\,dx$'
             ],
             correctAnswer: 1,
-            explanation: '$\\int_1^{\\infty} \\frac{1}{x \\ln x}\\,dx$: substitute $u = \\ln x$, get $\\int_0^{\\infty} \\frac{1}{u}\\,du = \\infty$. The others converge: $\\frac{1}{x\\ln^2 x}$ gives $\\int u^{-2}\\,du$ (converges); $\\frac{1}{x^2 \\ln x}$ is dominated by $1/x^2$; $e^{-x^2}$ decays faster than any power.'
+            explanation: '$\\int_e^{\\infty} \\frac{1}{x \\ln x}\\,dx$: substitute $u = \\ln x$ to get $\\int_1^{\\infty} \\frac{1}{u}\\,du = \\lim_{b \\to \\infty} \\ln b = \\infty$. The others converge: $\\frac{1}{x\\ln^2 x}$ becomes $\\int_1^{\\infty} u^{-2}\\,du = 1$; $\\frac{1}{x^2 \\ln x}$ is smaller than $\\frac{1}{x^2}$ for $x \\ge e$; and $e^{-x^2}$ shrinks much faster than any power of $x$.'
           }
         ]
       }
@@ -84,14 +83,14 @@ A typical AP FRQ might say:
 > *Let $R$ be the unbounded region between $y = \\frac{1}{x^2}$ and the $x$-axis for $x \\ge 1$.*
 > *(a) Find the area of $R$.*
 > *(b) Find the volume when $R$ is revolved about the $x$-axis.*
-> *(c) Set up, but do not evaluate, the volume when $R$ is revolved about the $y$-axis.*
+> *(c) Find the volume when $R$ is revolved about the line $y = -1$.*
 
 **Solutions:**
 - (a) $A = \\int_1^{\\infty} \\frac{1}{x^2}\\,dx = 1$ (finite area)
 - (b) $V = \\pi \\int_1^{\\infty} \\frac{1}{x^4}\\,dx = \\pi \\cdot \\frac{1}{3}$ (finite volume)
-- (c) $V = 2\\pi \\int_1^{\\infty} x \\cdot \\frac{1}{x^2}\\,dx = 2\\pi \\int_1^{\\infty} \\frac{1}{x}\\,dx$ (diverges!)
+- (c) Washers with outer radius $\\frac{1}{x^2} + 1$ and inner radius $1$: $V = \\pi \\int_1^{\\infty} \\left[\\left(\\frac{1}{x^2} + 1\\right)^2 - 1^2\\right]dx = \\pi \\int_1^{\\infty} \\left(\\frac{1}{x^4} + \\frac{2}{x^2}\\right)dx = \\pi\\left(\\frac{1}{3} + 2\\right) = \\frac{7\\pi}{3}$
 
-$$\\boxed{\\text{Gabriel\u2019s Horn: finite volume but infinite surface area!}}$$`
+$$\\boxed{\\text{Unbounded region} \\to \\text{improper integral} \\to \\text{evaluate as a limit}}$$`
     },
     {
       id: 'imp5-dropdown',
@@ -114,11 +113,11 @@ $$\\boxed{\\text{Gabriel\u2019s Horn: finite volume but infinite surface area!}}
             explanation: '$V = \\pi \\int_1^{\\infty} x^{-2}\\,dx = \\pi \\cdot 1 = \\pi$.'
           },
           {
-            label: 'Surface area of $y = 1/x$ for $x \\ge 1$ revolved about $x$-axis:',
-            options: ['Infinite', 'Finite, equals $2\\pi$', 'Finite, equals $\\pi$', 'Equals the volume'],
+            label: 'Area under $y = 1/x$ for $x \\ge 1$:',
+            options: ['Infinite', 'Finite, equals $1$', 'Finite, equals $\\pi$', 'Finite, equals $\\ln 2$'],
             correctAnswers: ['Infinite'],
-            hints: ['$SA \\ge 2\\pi \\int_1^{\\infty} \\frac{1}{x}\\,dx = \\infty$.'],
-            explanation: 'The surface area integral involves $\\frac{1}{x}\\sqrt{1 + 1/x^4}$, which is $\\ge \\frac{1}{x}$ and therefore diverges. This is Gabriel\u2019s Horn paradox.'
+            hints: ['$\\int_1^{b} \\frac{1}{x}\\,dx = \\ln b$. What happens as $b \\to \\infty$?'],
+            explanation: '$\\lim_{b \\to \\infty} \\ln b = \\infty$, so the area is infinite. Yet the volume from revolving this same region is finite ($\\pi$): squaring $\\frac{1}{x}$ for the disks makes the integrand shrink fast enough.'
           }
         ]
       }
@@ -145,7 +144,7 @@ $$\\boxed{\\text{Gabriel\u2019s Horn: finite volume but infinite surface area!}}
 - $\\int_0^{\\infty} xe^{-x}\\,dx = 1$
 - $\\int_0^{\\infty} \\frac{dx}{1+x^2} = \\pi/2$
 
-**Gabriel\u2019s Horn:** $y = 1/x$ for $x \\ge 1$ revolved about the $x$-axis has finite volume ($\\pi$) but infinite surface area.
+**Area vs. volume:** the region under $y = 1/x$ for $x \\ge 1$ has infinite area, but revolving it about the $x$-axis gives the finite volume $\\pi$, because the disk integrand $\\frac{\\pi}{x^2}$ shrinks faster.
 
 > **Coming Up:** Part 6 is a **Problem-Solving Workshop** with mixed practice.`
     }

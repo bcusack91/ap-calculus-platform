@@ -14,7 +14,7 @@ export const calcabDerivExpLogPart3Data = {
     {
       "id": "del3-quotient",
       "type": "text" as const,
-      "content": "## Quotient Rule with Exp/Log\n\n### Example 1: $f(x) = \\frac{e^x}{x^2}$\n\n$$f'(x) = \\frac{x^2 e^x - e^x \\cdot 2x}{x^4} = \\frac{e^x(x^2 - 2x)}{x^4} = \\frac{e^x(x-2)}{x^3}$$\n\nCritical point at $x = 2$ (not $x = 0$ — that's not in the domain).\n\n### Example 2: $f(x) = \\frac{\\ln x}{x}$\n\n$$f'(x) = \\frac{(1/x) \\cdot x - \\ln x \\cdot 1}{x^2} = \\frac{1 - \\ln x}{x^2}$$\n\n$f'(x) = 0$ when $\\ln x = 1$, i.e., $x = e$.\n\nMaximum of $\\frac{\\ln x}{x}$ at $x = e$: value $= \\frac{1}{e}$.\n\n### Example 3: $f(x) = \\frac{e^x - e^{-x}}{2}$ (this is $\\sinh x$)\n\n$$f'(x) = \\frac{e^x + e^{-x}}{2} = \\cosh x$$"
+      "content": "## Quotient Rule with Exp/Log\n\n### Example 1: $f(x) = \\frac{e^x}{x^2}$\n\n$$f'(x) = \\frac{x^2 e^x - e^x \\cdot 2x}{x^4} = \\frac{e^x(x^2 - 2x)}{x^4} = \\frac{e^x(x-2)}{x^3}$$\n\nCritical point at $x = 2$ (not $x = 0$ — that's not in the domain).\n\n### Example 2: $f(x) = \\frac{\\ln x}{x}$\n\n$$f'(x) = \\frac{(1/x) \\cdot x - \\ln x \\cdot 1}{x^2} = \\frac{1 - \\ln x}{x^2}$$\n\n$f'(x) = 0$ when $\\ln x = 1$, i.e., $x = e$.\n\nMaximum of $\\frac{\\ln x}{x}$ at $x = e$: value $= \\frac{1}{e}$.\n\n### Example 3: $f(x) = \\frac{e^x - e^{-x}}{2}$\n\n$$f'(x) = \\frac{e^x - (-e^{-x})}{2} = \\frac{e^x + e^{-x}}{2}$$"
     },
     {
       "id": "del3-quiz",

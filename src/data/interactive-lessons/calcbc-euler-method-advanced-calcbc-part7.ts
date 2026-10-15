@@ -61,10 +61,10 @@ $$\\boxed{y_{n+1} = y_n + f(x_n, y_n) \\cdot \\Delta x}$$`
             explanation: 'Smaller $\\Delta x$ → smaller truncation error. Student B is more accurate.'
           },
           {
-            question: 'Euler\'s method uses the slope at the beginning of each step. Improved Euler (Heun\'s method) uses:',
-            options: ['The average of slopes at the beginning and predicted end', 'The slope at the predicted end of each step', 'The slope at the midpoint of each step', 'A weighted average of four slopes per step'],
+            question: 'An FRQ asks you to justify that your Euler approximation is an underestimate. Which reason is complete?',
+            options: ['$\\frac{d^2y}{dx^2} > 0$ on the interval, so the solution is concave up', '$\\frac{dy}{dx} > 0$ on the whole interval, so the solution is increasing', 'The step size $\\Delta x$ is small enough', 'The approximation is less than the initial value'],
             correctAnswer: 0,
-            explanation: 'Heun\'s method: predict $y^*$ using Euler, then average the slopes at $(x_n, y_n)$ and $(x_{n+1}, y^*)$. (Beyond AP scope, but good to know.)'
+            explanation: 'Euler steps along tangent lines, and a concave-up curve lies above its tangent lines, so the steps fall below the curve. Increasing alone says nothing about which side of the tangent line the curve is on, a small step changes only the size of the error, and comparing with the initial value is irrelevant.'
           }
         ]
       }

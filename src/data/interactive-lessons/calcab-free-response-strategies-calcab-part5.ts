@@ -95,23 +95,27 @@ $y^2 = 2x^2 + 16 \\implies y = \\sqrt{2x^2 + 16}$ (positive since $y(0)=4>0$)
 
 | Mistake | Why It Costs Points |
 |:---|:---|
-| Forgetting $+C$ | Lose 1 point even if rest is correct |
+| Forgetting $+C$ | Costs the constant-of-integration point, and the solution that follows is wrong |
 | Not separating correctly | Cannot integrate an unseparated DE |
 | Wrong sign on $\\ln|y|$ | Direction of inequality matters |
 | Not checking domain | $y > 0$ vs $y < 0$ affects $|y|$ removal |
 | Slope field: wrong direction | Double-check sign at each point |
 
-### Euler\u2019s Method (Calculator FRQ)
+### Tangent Line and Concavity Parts (No Calculator)
 
-When asked to approximate $y(x_1)$ using Euler\u2019s method with step size $h$:
+Many DE questions ask: "Write an equation for the line tangent to the graph of $y = f(x)$ at $x = 1$, and use it to approximate $f(1.3)$." A follow-up asks for $\\frac{d^2y}{dx^2}$ and whether the approximation is an over- or underestimate.
 
-$$\\boxed{y_{n+1} = y_n + h \\cdot f(x_n, y_n)}$$
+**Example:** $\\frac{dy}{dx} = \\frac{2x}{y}$ with $f(1) = 3$.
 
-**Example:** $\\frac{dy}{dx} = x + y$, $y(0) = 1$, $h = 0.5$.
+**Tangent line:** slope $= \\frac{2(1)}{3} = \\frac{2}{3}$, so $y = 3 + \\frac{2}{3}(x - 1)$ and $f(1.3) \\approx 3 + \\frac{2}{3}(0.3) = 3.2$.
 
-$y(0.5) = 1 + 0.5(0 + 1) = 1.5$
+**Second derivative (quotient rule, then substitute the DE):**
 
-$y(1) = 1.5 + 0.5(0.5 + 1.5) = 1.5 + 1 = 2.5$`
+$$\\frac{d^2y}{dx^2} = \\frac{2y - 2x\\frac{dy}{dx}}{y^2} = \\frac{2y - \\frac{4x^2}{y}}{y^2}$$
+
+At $(1, 3)$: $\\frac{d^2y}{dx^2} = \\frac{6 - \\frac{4}{3}}{9} = \\frac{14}{27} > 0$, so the graph is concave up near $x = 1$, the tangent line lies below it, and $3.2$ is an **underestimate**.
+
+> **AP Tip:** State the reason in words: "$\\frac{d^2y}{dx^2} > 0$, so $f$ is concave up, so the tangent line lies below the graph." Euler's method is BC-only; AB free-response questions do not ask for it.`
     },
     {
       id: 'frq5-dropdown',
@@ -121,7 +125,7 @@ $y(1) = 1.5 + 0.5(0.5 + 1.5) = 1.5 + 1 = 2.5$`
         dropdowns: [
           {
             label: '$\\frac{dy}{dx} = \\frac{y}{x}$ \u2014 to solve:',
-            options: ['Separate and integrate', 'Use Euler\u2019s method', 'Apply FTC directly', 'Cannot be solved analytically'],
+            options: ['Separate and integrate', 'Use a tangent line', 'Apply FTC directly', 'Cannot be solved analytically'],
             correctAnswers: ['Separate and integrate'],
             hints: ['$\\frac{dy}{y} = \\frac{dx}{x}$ \u2192 both sides integrate to $\\ln$.'],
             explanation: '$\\ln|y| = \\ln|x| + C \\implies y = Ax$.'
@@ -167,7 +171,7 @@ $y(1) = 1.5 + 0.5(0.5 + 1.5) = 1.5 + 1 = 2.5$`
 - DE FRQs: slope fields, separation of variables, initial conditions
 - Always include $+C$ and solve for it using the IC
 - Solution curves follow the slope field segments
-- Euler\u2019s method: $y_{n+1} = y_n + h \\cdot f(x_n, y_n)$`
+- Tangent-line estimates take their slope from the DE; the sign of $\\frac{d^2y}{dx^2}$ decides over or under`
     }
   ]
 };

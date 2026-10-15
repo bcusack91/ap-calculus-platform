@@ -16,7 +16,7 @@ export const calcabExpModelsPart1Data = {
 | 2 | Newton\u2019s Law of Cooling |
 | 3 | Compound Interest & Continuous Growth |
 | 4 | Derivatives & Integrals of Exponentials |
-| 5 | Logistic Growth |
+| 5 | Writing and Solving Rate Models |
 | 6 | Problem-Solving Workshop |
 | 7 | Comprehensive Assessment |
 

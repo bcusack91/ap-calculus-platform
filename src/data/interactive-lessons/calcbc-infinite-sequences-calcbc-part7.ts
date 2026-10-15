@@ -13,8 +13,8 @@ export const calcbcSequencesPart7Data = {
 | Topic | Key Result |
 |-------|-----------|
 | Sequence convergence | $\\lim a_n = L$ (finite) |
-| Monotone Convergence | Monotone + Bounded $\\implies$ Convergent |
-| Recursive sequences | Solve $L = f(L)$ for the limit |
+| Decreasing terms | Show $f'(x) < 0$ (needed for the alternating series and integral tests) |
+| Limits of terms | L'Hospital's Rule on $f(x)$ for $\\frac{\\infty}{\\infty}$ or $\\frac{0}{0}$ |
 | $n$th Term Test | $a_n \\not\\to 0 \\implies \\sum a_n$ diverges |
 | Geometric series | $\\sum ar^n = \\frac{a}{1-r}$ if $|r| < 1$ |
 | $p$-series | $\\sum 1/n^p$ converges iff $p > 1$ |
@@ -32,7 +32,7 @@ export const calcbcSequencesPart7Data = {
 
 2. **Confusing the sequence $\\{a_n\\}$ with the series $\\sum a_n$** — one asks about the terms, the other about the sum.
 
-3. **Forgetting to verify convergence of recursive sequences** — solving $L = f(L)$ only finds CANDIDATES for the limit.
+3. **Using the growth hierarchy backwards** — $\\frac{a^n}{n!} \\to 0$ but $\\frac{n!}{a^n} \\to \\infty$; factorials outgrow exponentials, not the reverse.
 
 4. **Incorrect geometric series formula** — remember $\\sum_{n=0}^\\infty ar^n = \\frac{a}{1-r}$ starts at $n = 0$. If starting at $n = 1$: $\\frac{ar}{1-r}$.
 
@@ -106,8 +106,8 @@ export const calcbcSequencesPart7Data = {
       content: `### Topic Complete!
 
 You've mastered infinite sequences and the bridge to series:
-- Sequence convergence (limits, monotonicity, boundedness)
-- Recursive sequences and special limits
+- Sequence convergence and limits by L'Hospital's Rule
+- Decreasing terms and special limits
 - Geometric series, $p$-series, and telescoping series
 - The $n$th term test and its limitations
 

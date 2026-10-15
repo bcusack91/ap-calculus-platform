@@ -4,9 +4,9 @@ export const calcbcSeriesPart3Data = {
     {
       id: 'is3-intro',
       type: 'text' as const,
-      content: `# Infinite Series — Ratio & Root Tests
+      content: `# Infinite Series — The Ratio Test
 
-**Part 3 of 7 — The Ratio and Root Tests**
+**Part 3 of 7 — The Ratio Test**
 
 ### The Ratio Test
 
@@ -18,11 +18,7 @@ Let $L = \\lim_{n \\to \\infty} \\left|\\frac{a_{n+1}}{a_n}\\right|$. Then:
 | $L > 1$ (or $L = \\infty$) | **Diverges** |
 | $L = 1$ | **Inconclusive** |
 
-### The Root Test
-
-Let $L = \\lim_{n \\to \\infty} \\sqrt[n]{|a_n|}$. Same conclusions as ratio test.
-
-> **Key Fact:** The ratio test works best with **factorials and exponentials**. The root test works best with **$n$th powers**. Both are inconclusive for $p$-series.`
+> **Key Fact:** The ratio test works best with **factorials and exponentials**, because consecutive terms cancel cleanly. It is inconclusive for every $p$-series and for rational functions of $n$, where $L = 1$. The root test is not assessed on the AP exam, so use the ratio test for these series.`
     },
     {
       id: 'is3-examples',
@@ -41,11 +37,11 @@ $$\\frac{a_{n+1}}{a_n} = \\frac{2^{n+1}}{(n+1)!} \\cdot \\frac{n!}{2^n} = \\frac
 
 $L = 0 < 1$: **converges absolutely**.
 
-**Root Test:** $\\sum \\left(\\frac{n}{2n+1}\\right)^n$
+**Ratio Test with $n^n$:** $\\sum \\frac{n!}{n^n}$
 
-$$\\sqrt[n]{a_n} = \\frac{n}{2n+1} \\to \\frac{1}{2}$$
+$$\\frac{a_{n+1}}{a_n} = \\frac{(n+1)!}{(n+1)^{n+1}} \\cdot \\frac{n^n}{n!} = \\frac{n^n}{(n+1)^n} = \\frac{1}{\\left(1 + \\frac{1}{n}\\right)^n} \\to \\frac{1}{e}$$
 
-$L = 1/2 < 1$: **converges absolutely**.`
+$L = 1/e < 1$: **converges absolutely**.`
     },
     {
       id: 'is3-mc1',
@@ -76,17 +72,17 @@ $L = 1/2 < 1$: **converges absolutely**.`
         dropdowns: [
           {
             label: 'Best test for $\\sum \\frac{n!}{10^n}$:',
-            options: ['Ratio test (involves factorial)', 'Root test (involves the power $10^n$)', 'Integral test (all terms are positive)', 'Comparison test (with $\\sum 1/10^n$)'],
+            options: ['Ratio test (involves factorial)', 'nth term test (terms tend to $0$)', 'Integral test (all terms are positive)', 'Comparison test (with $\\sum 1/10^n$)'],
             correctAnswers: ['Ratio test (involves factorial)'],
             hints: ['Factorial in the series $\\implies$ ratio test.'],
-            explanation: '$|a_{n+1}/a_n| = \\frac{n+1}{10} \\to \\infty$. Diverges. The ratio test handles factorials cleanly. The $n$th root of $n!$ is awkward, $x!$ cannot be integrated directly, and comparing with the smaller convergent $\\sum 1/10^n$ proves nothing.'
+            explanation: '$|a_{n+1}/a_n| = \\frac{n+1}{10} \\to \\infty$. Diverges. The ratio test handles factorials cleanly. The terms actually grow, so the nth term test claim is false, $x!$ cannot be integrated directly, and comparing with the smaller convergent $\\sum 1/10^n$ proves nothing.'
           },
           {
-            label: 'Best test for $\\sum \\left(\\frac{3}{n}\\right)^n$:',
-            options: ['Root test (whole term is an $n$th power)', 'Ratio test (numerator is $3^n$)', 'Comparison test (with $\\sum 3^n$)', 'Integral test (terms are positive)'],
-            correctAnswers: ['Root test (whole term is an $n$th power)'],
-            hints: ['When $a_n$ has the form $(f(n))^n$, use root test.'],
-            explanation: '$\\sqrt[n]{a_n} = 3/n \\to 0 < 1$. Converges. Root test naturally handles $n$th powers. Comparing with the larger divergent $\\sum 3^n$ proves nothing, and $(3/x)^x$ has no elementary antiderivative.'
+            label: 'For $\\sum \\frac{n^3}{2^n}$, the ratio test gives',
+            options: ['$L = 2$, so the series diverges', '$L = 1$, so the test is inconclusive', '$L = \\frac{1}{2}$, so the series converges', '$L = 0$, so the series converges'],
+            correctAnswers: ['$L = \\frac{1}{2}$, so the series converges'],
+            hints: ['$\\frac{a_{n+1}}{a_n} = \\frac{(n+1)^3}{n^3} \\cdot \\frac{1}{2}$.'],
+            explanation: 'The ratio is $\\left(\\frac{n+1}{n}\\right)^3 \\cdot \\frac{1}{2} \\to \\frac{1}{2} < 1$, so the series converges absolutely. Flipping the fraction gives $2$, stopping at the polynomial factor gives $1$, and the cubic factor tends to $1$, not $0$.'
           }
         ]
       }
@@ -109,9 +105,9 @@ $L = 1/2 < 1$: **converges absolutely**.`
       content: `### Summary
 
 - Ratio test: $L = \\lim |a_{n+1}/a_n|$ — best for factorials and exponentials
-- Root test: $L = \\lim \\sqrt[n]{|a_n|}$ — best for $n$th powers
-- $L < 1$: converges; $L > 1$: diverges; $L = 1$: inconclusive
-- Both tests are inconclusive for $p$-series (use comparison or integral test instead)
+- $L < 1$: converges absolutely; $L > 1$: diverges; $L = 1$: inconclusive
+- Inconclusive for $p$-series and rational functions of $n$ (use comparison or integral test instead)
+- With $n^n$ in the terms, expect the limit $\\left(1 + \\frac{1}{n}\\right)^n \\to e$
 
 $$\\boxed{L < 1 \\implies \\text{converges} \\qquad L > 1 \\implies \\text{diverges} \\qquad L = 1 \\implies \\text{inconclusive}}$$
 

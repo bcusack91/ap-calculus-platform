@@ -32,7 +32,7 @@ You're walking along tangent lines, taking small steps. Each step uses the slope
 | 0 | $x_0$ | $y_0$ | $f(x_0, y_0)$ | — | — |
 | 1 | $x_0 + \\Delta x$ | $y_0 + f \\cdot \\Delta x$ | ... | ... | ... |
 
-> **Key Fact:** Euler's method is a first-order method — the error per step is proportional to $(\\Delta x)^2$, and the global error is proportional to $\\Delta x$.`
+> **Key Fact:** Each step follows a tangent line, so the error comes from how much the solution curve bends away from that line during the step. Smaller steps follow the curve more closely.`
     },
     {
       id: 'euler1-example',
@@ -51,11 +51,11 @@ $$\\boxed{y(0.3) \\approx 1.362}$$
 
 ### Step Size Matters
 
-| $\\Delta x$ | Approximation of $y(1)$ | Actual = $2e - 1 \\approx 4.437$ |
+| $\\Delta x$ | Approximation of $y(1)$ | Actual = $2e - 2 \\approx 3.437$ |
 |------------|------------------------|----------------------------------|
-| 0.5 | 3.5 | Error ≈ 21% |
-| 0.1 | 4.187 | Error ≈ 5.6% |
-| 0.01 | 4.411 | Error ≈ 0.6% |
+| 0.5 | 2.5 | Error ≈ 27% |
+| 0.1 | 3.187 | Error ≈ 7.2% |
+| 0.01 | 3.410 | Error ≈ 0.8% |
 
 Smaller step size → better approximation (but more computation).`
     },
@@ -78,10 +78,10 @@ Smaller step size → better approximation (but more computation).`
             explanation: 'Euler\'s method uses the slope at the current point $(x_n, y_n)$, not the destination.'
           },
           {
-            question: 'If $\\Delta x$ is halved, the global error approximately:',
-            options: ['Halves, since error $\\propto \\Delta x$', 'Quarters, since error $\\propto (\\Delta x)^2$', 'Stays the same, since $f$ has not changed', 'Doubles, since twice as many steps add error'],
+            question: 'Which change usually makes an Euler approximation of $y(1)$ more accurate?',
+            options: ['A smaller step size $\\Delta x$', 'A larger step size $\\Delta x$ with fewer steps', 'The slope at the end of each step', 'Rounding each $y_n$ to one decimal place'],
             correctAnswer: 0,
-            explanation: 'Euler\'s method has first-order global error, $E \\propto \\Delta x$: halving the step roughly halves the error, even though the number of steps doubles. An error proportional to $(\\Delta x)^2$ belongs to second-order methods.'
+            explanation: 'Smaller steps keep each tangent-line segment closer to the curve, as the table above shows ($27\\%$ error at $\\Delta x = 0.5$ versus under $1\\%$ at $\\Delta x = 0.01$). Larger steps drift farther from the curve, using the end-of-step slope is no longer Euler\'s method, and rounding intermediate values adds error instead of removing it.'
           }
         ]
       }
@@ -136,7 +136,7 @@ Smaller step size → better approximation (but more computation).`
 - Euler's method: $y_{n+1} = y_n + f(x_n, y_n) \\cdot \\Delta x$
 - Uses tangent-line approximation at each step
 - Smaller $\\Delta x$ → better accuracy but more steps
-- First-order method: global error $\\propto \\Delta x$
+- The direction of the error depends on concavity (Part 3)
 
 > **Next:** Part 2 — Multi-Step Computations and Table Problems.`
     }

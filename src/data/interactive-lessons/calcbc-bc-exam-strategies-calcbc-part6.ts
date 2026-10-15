@@ -35,10 +35,10 @@ Work through these problems as if under exam conditions. Target 2–3 minutes pe
             explanation: '$\\vec{v}(t) = \\langle 2t, 1/t \\rangle$. At $t = 1$: $\\vec{v}(1) = \\langle 2, 1 \\rangle$. Speed $= \\sqrt{2^2 + 1^2} = \\sqrt{5}$. Not squaring the components gives $\\sqrt{3}$, forgetting the square root gives $5$, and using the position $\\langle 1, 0 \\rangle$ instead of the velocity gives $1$.'
           },
           {
-            question: '$\\lim_{n\\to\\infty} \\left(1 + \\frac{3}{n}\\right)^n =$',
-            options: ['$e^3$', '$3e$', '$e$', '$\\infty$'],
+            question: '$\\lim_{x\\to 0} \\frac{1 - \\cos(3x)}{x^2} =$',
+            options: ['$\\frac{9}{2}$', '$\\frac{3}{2}$', '$9$', '$0$'],
             correctAnswer: 0,
-            explanation: 'By the limit definition of $e$: $\\lim (1 + k/n)^n = e^k$. With $k = 3$: $e^3$.'
+            explanation: 'The form is $\\frac{0}{0}$, so apply L\'Hospital\'s Rule: $\\frac{3\\sin(3x)}{2x}$, still $\\frac{0}{0}$; again: $\\frac{9\\cos(3x)}{2} \\to \\frac{9}{2}$. Dropping the chain-rule factor in the second step gives $\\frac{3}{2}$, forgetting the $2$ from $\\frac{d}{dx}x^2$ gives $9$, and $0$ comes from plugging in after one step even though the denominator is also $0$.'
           }
         ]
       }

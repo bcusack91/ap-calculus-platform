@@ -17,21 +17,21 @@ Each FRQ has **9 points** distributed across parts (a)–(d). Points are earned 
 | Correct integral/derivative setup | 1–2 pts |
 | Correct evaluation/simplification | 1–2 pts |
 | Proper justification | 1–2 pts |
-| Answer with correct units (if applicable) | 1 pt |
-| Final numerical answer | 1 pt |
+| Units, only when the question asks you to indicate units | 1 pt |
+| Correct answer (decimals accurate to three places) | 1 pt |
 
 > **Key Fact:** You can earn setup points even if your final computation is wrong. **Always show your setup!**
 
-### The "Bald Answer" Rule
+### Answers Without Work
 
-If you write ONLY the final answer with no work:
-- **Correct:** usually NO credit — the official FRQ directions say answers without supporting work will usually not receive credit
-- **Incorrect:** ZERO credit
+If you write ONLY the final answer:
+- **Correct:** it depends on the point. Some answer points are marked "with or without supporting work" (common on calculator parts), but points for a setup, a justification, or an "answer with supporting work" cannot be earned by a bare answer.
+- **Incorrect:** no credit, since there is no work to earn a setup point
 
-If you show setup AND get the wrong numerical answer:
-- You can still earn 50–75% of the points
+If you show the setup AND get the wrong numerical answer:
+- You keep the setup points and lose only the points that depend on the wrong value
 
-**Bottom line: Always show work.**`
+**Bottom line: Always show work.** Also, answers need not be simplified, and within one question at most one point is lost for inappropriate rounding.`
     },
     {
       id: 'es3-notation',
@@ -60,16 +60,16 @@ If you show setup AND get the wrong numerical answer:
       exercise: {
         questions: [
           {
-            question: 'A student writes $\\int_0^3 f(x)\\,dx = 12$ with no work shown. The correct answer is $12$. The student earns:',
-            options: ['Usually no credit — supporting work is required', 'Full credit — a correct answer stands on its own', 'Partial credit — the answer point but no setup point', 'Full credit, but only on calculator-active parts'],
+            question: 'Which statement about a correct FRQ answer written with no supporting work matches the official scoring guidelines?',
+            options: ['Some points accept it, not setup or justification points', 'It always earns full credit for every point in that part of the question', 'It never earns any credit, even on a calculator-active part', 'It earns credit only when the final value is fully simplified'],
             correctAnswer: 0,
-            explanation: 'The official AP Calculus FRQ directions say that answers without supporting work will usually not receive credit. Show the setup and how you evaluated it, even when the answer is right; with work shown, even a wrong final value can still earn setup points.'
+            explanation: 'Recent scoring guidelines mark some answer points "with or without supporting work," while setup, justification, and "answer with supporting work" points need the work shown. So a bare correct answer can earn some credit but never all of it on a multi-point part, and answers need not be simplified to earn credit.'
           },
           {
             question: 'On an FRQ about particle motion, a student forgets to include units. This typically costs:',
             options: ['1 point, when the problem asks for units', '0 points — units are never scored', '3 points — one per part', 'The entire question score'],
             correctAnswer: 0,
-            explanation: 'When units are specified in the problem, omitting them typically costs 1 point. Always check if the problem gives units.'
+            explanation: 'A units point exists only when the question asks you to indicate units of measure; then a missing or wrong unit costs that 1 point. There is no units point on parts that do not ask for units.'
           },
           {
             question: 'A student writes two different answers for part (b) without crossing either out. The reader:',

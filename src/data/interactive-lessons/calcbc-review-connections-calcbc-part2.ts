@@ -43,7 +43,7 @@ This formula works for **both parametric and polar** (with $t = \\theta$).
 
 $$\\boxed{L = \\int_a^b \\sqrt{\\left(\\frac{dx}{dt}\\right)^2 + \\left(\\frac{dy}{dt}\\right)^2}\\,dt}$$
 
-In polar: $L = \\int_{\\alpha}^{\\beta} \\sqrt{r^2 + (r')^2}\\,d\\theta$.`
+Polar arc length is not tested on the AP exam; polar questions ask for slopes, rates of change, and area.`
     },
     {
       id: 'rc2-mc',
@@ -114,8 +114,8 @@ In polar: $L = \\int_{\\alpha}^{\\beta} \\sqrt{r^2 + (r')^2}\\,d\\theta$.`
 
 - Polar → Parametric: $x = r\\cos\\theta$, $y = r\\sin\\theta$
 - Vector = Parametric with angle-bracket notation
-- Same calculus (derivatives, integrals, arc length) in all three systems
-- Polar area has the extra $1/2$; arc length uses $\\sqrt{r^2 + (r')^2}$
+- Same derivative calculus in all three systems; arc length for parametric and vector forms
+- Polar area has the extra $1/2$
 
 **Next: Part 3 — Differential Equations and Modeling**`
     }

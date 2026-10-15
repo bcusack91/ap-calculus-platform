@@ -13,8 +13,8 @@ Partial fractions is a technique for integrating rational functions (polynomial 
 | Part | Topic |
 |------|-------|
 | **1** | **Distinct Linear Factors** |
-| 2 | Repeated Linear Factors |
-| 3 | Irreducible Quadratic Factors |
+| 2 | Cover-Up, Definite Integrals, and Log Answers |
+| 3 | Choosing the Right Tool for Rational Integrands |
 | 4 | Integration with Partial Fractions |
 | 5 | Long Division First |
 | 6 | Problem-Solving Workshop |
@@ -32,11 +32,9 @@ Use partial fractions when:
 
 ### Prerequisite: Factor the Denominator
 
-Every polynomial with real coefficients factors into:
-- **Linear factors**: $(x - a)$
-- **Irreducible quadratic factors**: $(x^2 + bx + c)$ where $b^2 - 4c < 0$
+On the AP exam, the denominator factors into **distinct linear factors** such as $(x - 1)(x + 2)$ or $x(x - 3)(x + 3)$. Each factor gets one constant.
 
-> **Key Fact:** AP Calculus BC only tests partial fractions with linear factors and non-repeating irreducible quadratics. The decomposition setup is the hardest part \u2014 once you have the pieces, integration is straightforward.`
+> **Key Fact:** AP Calculus BC tests partial fractions only with linear, nonrepeating factors (CED FUN-6.F.1). Repeated factors such as $(x-1)^2$ and quadratic factors that do not factor, such as $x^2 + 1$, are not tested. The decomposition setup is the hardest part \u2014 once you have the pieces, integration is straightforward.`
     },
     {
       id: 'pf1-distinct',
@@ -150,7 +148,7 @@ Multiply through: $x + 7 = A(x-1)(x+3) + B(x+1)(x+3) + C(x+1)(x-1)$
 | Finding constants | Plug in roots (cover-up/Heaviside method) |
 | Integration | Each $\\frac{A}{x-a}$ integrates to $A\\ln|x-a| + C$ |
 
-> **Coming Up:** Part 2 handles **repeated linear factors** like $(x-a)^2$ or $(x-a)^3$.`
+> **Coming Up:** Part 2 sharpens the **cover-up method** and evaluates definite integrals with logarithm answers.`
     }
   ]
 };

@@ -20,12 +20,12 @@ export const calcbcConvergencePart5Data = {
 
 ### The 30-Second Flowchart for MC
 
-$$\\boxed{\\text{Divergence Test} \\to \\text{Geometric/p?} \\to \\text{Alternating?} \\to \\text{Ratio/Root?} \\to \\text{Comparison}}$$
+$$\\boxed{\\text{Divergence Test} \\to \\text{Geometric/p?} \\to \\text{Alternating?} \\to \\text{Ratio?} \\to \\text{Comparison}}$$
 
 1. **Quick check:** $\\lim a_n \\neq 0$? → Diverges
 2. **Recognizable?** Geometric or $p$-series → formula
 3. **Alternating?** AST (verify $b_n \\downarrow 0$)
-4. **Factorials or $n$th powers?** Ratio or Root Test
+4. **Factorials or exponentials?** Ratio Test
 5. **Compare:** DCT or LCT with known series
 
 > **AP Tip:** On FRQs, always state the test name, verify ALL conditions, and write a concluding statement.`
@@ -79,7 +79,7 @@ $$\\boxed{\\text{Divergence Test} \\to \\text{Geometric/p?} \\to \\text{Alternat
           },
           {
             question: 'For $\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$, after finding $R = \\infty$ by Ratio Test, what else must you do?',
-            options: ['Nothing more, as it converges for all $x$', 'Test the endpoints $x = \\pm\\infty$ separately', 'Apply the Root Test to confirm the radius', 'Check for conditional convergence at $x = 0$'],
+            options: ['Nothing more, as it converges for all $x$', 'Test the endpoints $x = \\pm\\infty$ separately', 'Apply the Ratio Test again to confirm $R$', 'Check for conditional convergence at $x = 0$'],
             correctAnswer: 0,
             explanation: '$R = \\infty$ means the interval of convergence is $(-\\infty, \\infty)$. There are no endpoints to test.'
           }
@@ -94,10 +94,10 @@ $$\\boxed{\\text{Divergence Test} \\to \\text{Geometric/p?} \\to \\text{Alternat
         dropdowns: [
           {
             label: '$\\sum_{n=1}^{\\infty} \\frac{3^n}{n!}$: Best test?',
-            options: ['Ratio Test (factorial in denominator)', 'Root Test (power $3^n$ in numerator)', 'Direct Comparison with $\\sum 3^n$', 'Integral Test (terms are positive)'],
+            options: ['Ratio Test (factorial in denominator)', 'Divergence Test (power $3^n$ in numerator)', 'Direct Comparison with $\\sum 3^n$', 'Integral Test (terms are positive)'],
             correctAnswers: ['Ratio Test (factorial in denominator)'],
             hints: ['Factorials → Ratio Test is almost always the right choice.'],
-            explanation: 'Ratio: $L = \\lim 3/(n+1) = 0 < 1$. Converges. Comparing with the larger divergent $\\sum 3^n$ proves nothing, the $n$th root of $n!$ is awkward, and $x!$ cannot be integrated directly.'
+            explanation: 'Ratio: $L = \\lim 3/(n+1) = 0 < 1$. Converges. Comparing with the larger divergent $\\sum 3^n$ proves nothing, the terms tend to $0$ so the Divergence Test is silent, and $x!$ cannot be integrated directly.'
           },
           {
             label: '$\\sum_{n=1}^{\\infty} \\frac{1}{n^2 + 3n + 2}$: Best test?',
@@ -126,7 +126,7 @@ $$\\boxed{\\text{Divergence Test} \\to \\text{Geometric/p?} \\to \\text{Alternat
       type: 'text' as const,
       content: `### Summary
 
-- Use the flowchart: Div Test → recognize → alternating → ratio/root → comparison
+- Use the flowchart: Div Test → recognize → alternating → ratio → comparison
 - FRQs: name the test, verify conditions, write a conclusion
 - Common errors: "converges by Divergence Test," forgetting endpoint tests, weak comparisons
 

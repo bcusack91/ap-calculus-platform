@@ -80,7 +80,7 @@ const standard: StudyPlanTemplate = {
     ]),
     ...weekTasks(6, [
       { title: 'Integral & Comparison Tests', type: 'LESSON', topicSlug: 'convergence-tests-summary-calcbc', dayOfWeek: 0 },
-      { title: 'Ratio & Root Tests', type: 'LESSON', topicSlug: 'convergence-tests-summary-calcbc', dayOfWeek: 2 },
+      { title: 'Ratio Test & Test Selection', type: 'LESSON', topicSlug: 'convergence-tests-summary-calcbc', dayOfWeek: 2 },
       { title: 'Alternating Series Test & Error', type: 'LESSON', topicSlug: 'alternating-series-calcbc', dayOfWeek: 4 },
       { title: 'Convergence Tests Quiz', type: 'QUIZ', topicSlug: 'convergence-tests-summary-calcbc', dayOfWeek: 5 },
     ]),
@@ -181,7 +181,7 @@ const comprehensive: StudyPlanTemplate = {
     ...weekTasks(11, [
       { title: 'Integral Test & Comparison Tests', type: 'LESSON', topicSlug: 'convergence-tests-summary-calcbc', dayOfWeek: 0 },
       { title: 'Limit Comparison Test', type: 'LESSON', topicSlug: 'convergence-tests-summary-calcbc', dayOfWeek: 2 },
-      { title: 'Ratio & Root Tests', type: 'LESSON', topicSlug: 'convergence-tests-summary-calcbc', dayOfWeek: 4 },
+      { title: 'Ratio Test & Test Selection', type: 'LESSON', topicSlug: 'convergence-tests-summary-calcbc', dayOfWeek: 4 },
       { title: 'Convergence Tests Quiz', type: 'QUIZ', topicSlug: 'convergence-tests-summary-calcbc', dayOfWeek: 5 },
     ]),
     ...weekTasks(12, [

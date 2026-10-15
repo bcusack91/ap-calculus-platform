@@ -17,7 +17,7 @@ export const calcbcAdvIntegrationPart7Data = {
 | Partial fractions | Rational function, factorable denominator |
 | Complete the square | Quadratic denominator, no real roots |
 | Inverse trig formula | $1/(a^2+u^2)$ or $1/\\sqrt{a^2-u^2}$ |
-| Trig powers | $\\sin^m x \\cos^n x$ |
+| Improper integral | Infinite bound, or the integrand is unbounded on $[a, b]$ |
 | Long division | Degree of numerator $\\ge$ denominator |
 
 $$\\boxed{\\text{Simplify} \\to \\text{Identify} \\to \\text{Execute} \\to \\text{Verify by differentiation}}$$`
@@ -113,7 +113,7 @@ $$\\boxed{\\text{Simplify} \\to \\text{Identify} \\to \\text{Execute} \\to \\tex
 You've mastered:
 - Choosing the right integration technique
 - Inverse trig integrals ($\\arcsin$, $\\arctan$)
-- Trig integrals (powers of sine/cosine, trig sub)
+- Integration by parts, including tabular and circular cases
 - Algebraic preparation (long division, completing the square, splitting numerators)
 - FTC with variable bounds and chain rule
 - AP exam strategies

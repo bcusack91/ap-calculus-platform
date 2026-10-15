@@ -17,9 +17,8 @@ export const calcbcSeriesPart5Data = {
 | 3 | Is it a $p$-series $\\sum 1/n^p$? | Converges iff $p > 1$ |
 | 4 | Alternating sign? | Try AST |
 | 5 | Contains $n!$, $n^n$, or $a^n$? | Try Ratio Test |
-| 6 | Contains $n$-th powers $(f(n))^n$? | Try Root Test |
-| 7 | Similar to $p$-series or geometric? | Try Comparison (DCT/LCT) |
-| 8 | Positive, decreasing, integratable? | Try Integral Test |
+| 6 | Similar to $p$-series or geometric? | Try Comparison (DCT/LCT) |
+| 7 | Positive, decreasing, integrable? | Try Integral Test |
 
 $$\\boxed{\\text{No single test works for all series — practice builds intuition.}}$$
 
@@ -47,7 +46,7 @@ $$\\boxed{\\text{No single test works for all series — practice builds intuiti
 | Mistake | Correction |
 |---------|-----------|
 | AST on $|a_n| \\not\\to 0$ | Must verify $b_n \\to 0$ first |
-| Ratio/Root gives $L = 1$ | Test is **inconclusive** — try another |
+| Ratio Test gives $L = 1$ | Test is **inconclusive** — try another |
 | Comparison in wrong direction | $a_n \\le b_n$ and $\\sum b_n$ converges → $\\sum a_n$ converges. NOT the other way for convergence |`
     },
     {
@@ -64,9 +63,9 @@ $$\\boxed{\\text{No single test works for all series — practice builds intuiti
           },
           {
             question: 'Which test is BEST for $\\sum_{n=1}^\\infty \\frac{1}{n^2 + 5n + 6}$?',
-            options: ['Limit Comparison with $1/n^2$', 'Ratio Test on $a_{n+1}/a_n$', 'Root Test on $\\sqrt[n]{a_n}$', 'Limit Comparison with $1/n$'],
+            options: ['Limit Comparison with $1/n^2$', 'Ratio Test on $a_{n+1}/a_n$', 'Integral Test on $\\frac{1}{x}$', 'Limit Comparison with $1/n$'],
             correctAnswer: 0,
-            explanation: '$a_n \\sim 1/n^2$ for large $n$. LCT with $b_n = 1/n^2$: $a_n/b_n \\to 1 > 0$. Since $\\sum 1/n^2$ converges, so does our series. The Ratio and Root Tests both give $L = 1$ here, and comparing with $1/n$ gives $L = 0$ against a divergent series, which proves nothing.'
+            explanation: '$a_n \\sim 1/n^2$ for large $n$. LCT with $b_n = 1/n^2$: $a_n/b_n \\to 1 > 0$. Since $\\sum 1/n^2$ converges, so does our series. The Ratio Test gives $L = 1$ here, the integral of $\\frac{1}{x}$ belongs to a different series, and comparing with $1/n$ gives $L = 0$ against a divergent series, which proves nothing.'
           },
           {
             question: 'The Divergence Test can only prove:',
@@ -84,11 +83,11 @@ $$\\boxed{\\text{No single test works for all series — practice builds intuiti
       exercise: {
         dropdowns: [
           {
-            label: 'For $\\sum_{n=1}^\\infty \\left(\\frac{2n+1}{3n+4}\\right)^n$, the best test is:',
-            options: ['Root Test (nth power form)', 'Ratio Test (rational base)', 'Divergence Test (base $\\to 2/3$)', 'Comparison Test'],
-            correctAnswers: ['Root Test (nth power form)'],
-            hints: ['The entire expression is raised to the $n$-th power.'],
-            explanation: '$\\sqrt[n]{|a_n|} = (2n+1)/(3n+4) \\to 2/3 < 1$. Converges by Root Test. The base tends to $2/3$, but the terms (base raised to the $n$) still tend to $0$, so the Divergence Test says nothing.'
+            label: 'For $\\sum_{n=1}^\\infty \\left(\\frac{2n+1}{3n+4}\\right)^n$, a test that works is:',
+            options: ['Divergence Test (base $\\to 2/3$)', 'Direct Comparison with $\\sum (2/3)^n$', 'Ratio Test, which gives $L = 1$', 'Integral Test on $\\frac{2x+1}{3x+4}$'],
+            correctAnswers: ['Direct Comparison with $\\sum (2/3)^n$'],
+            hints: ['Is $\\frac{2n+1}{3n+4}$ smaller than $\\frac{2}{3}$ for every $n$?'],
+            explanation: 'Since $3(2n+1) = 6n+3 < 6n+8 = 2(3n+4)$, the base is less than $\\frac{2}{3}$, so $0 < a_n < \\left(\\frac{2}{3}\\right)^n$ and the series converges by comparison with a convergent geometric series. The terms tend to $0$, so the Divergence Test says nothing; the ratio limit is $\\frac{2}{3}$, not $1$, though it is messy to compute; and the integral test would need the whole term, not just its base.'
           },
           {
             label: 'When the Ratio Test gives $L = 1$, the result is:',
@@ -121,7 +120,7 @@ $$\\boxed{\\text{No single test works for all series — practice builds intuiti
 |-----------|-----------|
 | $a_n \\not\\to 0$ | Divergence Test |
 | Factorials or exponentials | Ratio Test |
-| $n$-th power structure | Root Test |
+| $n$-th power with a base below $r < 1$ | Compare with geometric $\\sum r^n$ |
 | Polynomial-like terms | Comparison / LCT |
 | Positive, continuous, decreasing | Integral Test |
 | Alternating signs | AST |

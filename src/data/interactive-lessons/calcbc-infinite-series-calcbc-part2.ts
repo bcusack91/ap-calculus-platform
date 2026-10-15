@@ -118,7 +118,7 @@ $\\sum 1/\\sqrt{n}$ diverges ($p = 1/2$), so $\\sum \\frac{1}{\\sqrt{n}-1}$ dive
 - Choose $b_n$ by identifying dominant terms
 - Both tests require positive terms
 
-> **Next:** Part 3 — The Ratio and Root Tests.`
+> **Next:** Part 3 — The Ratio Test.`
     }
   ]
 };

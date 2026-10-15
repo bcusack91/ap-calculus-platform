@@ -21,11 +21,11 @@ Euler's method follows the tangent line. If the curve is:
 
 ### How to Determine Concavity
 
-Given $dy/dx = f(x, y)$, find $d^2y/dx^2$ using the chain rule:
+Given $dy/dx = f(x, y)$, differentiate the right side with respect to $x$, treating $y$ as a function of $x$ (so every $y$ term picks up a factor $\\frac{dy}{dx}$ by the chain rule). Then substitute the DE for $\\frac{dy}{dx}$.
 
-$$\\frac{d^2y}{dx^2} = \\frac{\\partial f}{\\partial x} + \\frac{\\partial f}{\\partial y} \\cdot f(x, y)$$
+**Example:** $\\frac{dy}{dx} = x + y^2$
 
-Or more simply: differentiate $f(x,y)$ implicitly with respect to $x$.
+$$\\frac{d^2y}{dx^2} = 1 + 2y\\frac{dy}{dx} = 1 + 2y(x + y^2)$$
 
 | If $d^2y/dx^2$ | And solution is increasing | Then Euler... |
 |----------------|--------------------------|---------------|

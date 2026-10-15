@@ -45,7 +45,7 @@ We say $f$ and $g$ grow at the **same rate** if $\\lim_{x \\to \\infty} \\frac{f
 | $\\frac{x^n}{\\ln x}$ | $\\infty$ | Any power beats logarithm |
 | $\\frac{(\\ln x)^k}{x^p}$ | $0$ | Even powers of $\\ln$ lose to $x^p$ |
 | $\\frac{2^x}{e^x}$ | $0$ | $(2/e)^x \\to 0$ since $2/e < 1$ |
-| $\\frac{e^x}{3^x}$ | $\\infty$ | $(e/3)^x \\to 0$ but we have $e < 3$, so this → 0. Correction: $e \\approx 2.718 < 3$ gives $\\frac{e^x}{3^x} = (e/3)^x \\to 0$ |
+| $\\frac{e^x}{3^x}$ | $0$ | $(e/3)^x \\to 0$ since $e \\approx 2.718 < 3$ |
 
 > ⚠️ **Careful:** Among exponentials, the one with the larger base dominates: $3^x$ beats $e^x$ beats $2^x$ for large $x$.
 
@@ -142,13 +142,13 @@ Evaluate each limit.
           { label: '$\\lim_{x \\to \\infty} \\frac{x}{e^x} = 0$', options: ['True', 'False'] },
           { label: '$\\lim_{x \\to \\infty} \\frac{e^x}{x^{1000}} = 0$', options: ['True', 'False'] },
           { label: 'If $\\lim_{x \\to \\infty} f(x) = 3$, then the graph never crosses $y = 3$', options: ['True', 'False'] },
-          { label: '$\\lim_{x \\to \\infty} (1 + 1/x)^x = e$', options: ['True', 'False'] }
+          { label: '$\\lim_{x \\to \\infty} \\frac{3^x}{e^x} = \\infty$', options: ['True', 'False'] }
         ],
         correctAnswers: ['True', 'False', 'False', 'True'],
         hint1: 'Exponential dominates polynomial.',
         hint2: 'Exponential beats ANY polynomial, so this ratio → $\\infty$, not $0$.',
         hint3: 'A function can cross its horizontal asymptote — the asymptote only describes end behavior.',
-        explanation: '1) True, $e^x$ dominates $x$. 2) False, $e^x$ dominates so the ratio → $\\infty$. 3) False, functions can cross HAs (e.g., $\\frac{\\sin x}{x}$ oscillates around $y=0$). 4) True, this is the definition of $e$.'
+        explanation: '1) True, $e^x$ dominates $x$. 2) False, $e^x$ dominates so the ratio → $\\infty$. 3) False, functions can cross HAs (e.g., $\\frac{\\sin x}{x}$ oscillates around $y=0$). 4) True, $\\frac{3^x}{e^x} = (3/e)^x$ and $3/e > 1$.'
       }
     },
     {

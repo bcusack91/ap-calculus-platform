@@ -39,12 +39,12 @@ The BC exam also generates an **AB subscore** from a subset of questions. This s
 - No deduction for wrong answers — **always guess!**
 
 **Free Response:**
-- Each FRQ is worth 9 points
+- Each FRQ is worth 9 points (54 points in Section II)
 - Partial credit is available on every part
 - Points are earned for:
-  - Correct setup (even without the final answer)
-  - Proper notation (e.g., $\\frac{d}{dx}$, $\\int_a^b$)
+  - Correct setups, such as an integral with the right integrand and limits
   - Justification and reasoning
+  - Correct answers (decimal answers must be accurate to three places after the decimal point)
 
 ### BC-Specific FRQ Topics
 
@@ -52,7 +52,7 @@ The BC exam **always** includes FRQs on:
 1. **Series** — Taylor/Maclaurin, interval of convergence, error bounds
 2. **Parametric/polar/vector** — motion, area, arc length
 
-These are **guaranteed BC-only** FRQ topics. Prepare them thoroughly.`
+These BC-only topics have appeared on nearly every recent BC exam. Prepare them thoroughly.`
     },
     {
       id: 'es1-mc',

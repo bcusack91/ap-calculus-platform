@@ -40,7 +40,7 @@ $$\\vec{r}(2) - \\vec{r}(0) = \\langle 5, 4 \\rangle - \\langle 1, -2 \\rangle =
 
 **Total distance from $t=0$ to $t=2$:**
 $$\\int_0^2 \\sqrt{4t^2 + 9}\\,dt$$
-This requires trig sub or a calculator. On the AP exam, a calculator-active section would provide a numerical answer.`
+This has no simple antiderivative, so it appears on calculator-active questions: $\\int_0^2 \\sqrt{4t^2 + 9}\\,dt \\approx 7.472$.`
     },
     {
       id: 'vv3-mc1',
@@ -116,7 +116,7 @@ This requires trig sub or a calculator. On the AP exam, a calculator-active sect
 
 $$\\boxed{\\text{Distance} = \\int_a^b \\sqrt{[x'(t)]^2 + [y'(t)]^2}\\,dt}$$
 
-> **Next:** Part 4 — Arc length and the unit tangent vector.`
+> **Next:** Part 4 — Arc length, speed, and acceleration.`
     }
   ]
 };

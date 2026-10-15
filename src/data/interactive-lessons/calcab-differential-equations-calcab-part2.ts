@@ -37,7 +37,7 @@ $$\\boxed{\\frac{dy}{dx} = f(x) \\cdot g(y)}$$
 | $\\frac{dy}{dx} = \\frac{x}{y}$ | $y\\,dy = x\\,dx$ | $y^2 = x^2 + C$ |
 | $\\frac{dy}{dx} = xy^2$ | $\\frac{dy}{y^2} = x\\,dx$ | $y = \\frac{-1}{x^2/2 + C}$ |
 | $\\frac{dy}{dx} = \\frac{y}{x}$ | $\\frac{dy}{y} = \\frac{dx}{x}$ | $y = Ax$ |
-| $\\frac{dy}{dx} = y(1-y)$ | $\\frac{dy}{y(1-y)} = dx$ | Logistic (partial fractions) |
+| $\\frac{dy}{dx} = k(y - A)$ | $\\frac{dy}{y - A} = k\\,dx$ | $y = A + Be^{kx}$ |
 
 ### Worked Example — Careful with Signs
 

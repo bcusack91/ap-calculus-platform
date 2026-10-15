@@ -20,7 +20,6 @@ export const calcbcConvergencePart1Data = {
 | **Limit Comparison** | $a_n, b_n > 0$ | $\\lim a_n/b_n = L > 0$: same behavior |
 | **AST** | $\\sum (-1)^n b_n$ | $b_n \\downarrow 0$: converges |
 | **Ratio** | Any, best for $n!$ | $L < 1$: abs conv; $L > 1$: div |
-| **Root** | Any, best for $b_n^n$ | Same thresholds as Ratio |
 
 ### The First Question: Does $a_n \\to 0$?
 
@@ -46,16 +45,13 @@ $$\\boxed{\\lim_{n \\to \\infty} a_n \\neq 0 \\quad \\Longrightarrow \\quad \\su
 **Step 4: Contains factorials or $r^n$?**
 - Yes → Ratio Test
 
-**Step 5: Form $(b_n)^n$?**
-- Yes → Root Test
+**Step 5: Looks like a known series?**
+- Yes → Limit Comparison or Direct Comparison (a term like $(b_n)^n$ with $b_n < r < 1$ compares with the geometric series $\\sum r^n$)
 
-**Step 6: Looks like a known series?**
-- Yes → Limit Comparison or Direct Comparison
-
-**Step 7: Positive, decreasing, integratable?**
+**Step 6: Positive, decreasing, integrable?**
 - Yes → Integral Test
 
-> **AP Tip:** This flowchart covers 95%+ of AP exam series. Memorize it.`
+> **AP Tip:** The AP exam assesses exactly these tests: nth term, geometric and $p$-series, integral, direct and limit comparison, alternating series, and ratio. The root test is not assessed.`
     },
     {
       id: 'ct1-mc1',
@@ -65,9 +61,9 @@ $$\\boxed{\\lim_{n \\to \\infty} a_n \\neq 0 \\quad \\Longrightarrow \\quad \\su
         questions: [
           {
             question: '$\\sum_{n=1}^{\\infty} \\frac{n}{n+1}$. Which test resolves this immediately?',
-            options: ['Divergence Test', 'Ratio Test', 'Root Test', 'Integral Test'],
+            options: ['Divergence Test', 'Ratio Test', 'Limit Comparison Test', 'Integral Test'],
             correctAnswer: 0,
-            explanation: '$\\lim n/(n+1) = 1 \\neq 0$, so the series diverges by the Divergence Test right away. The Ratio and Root Tests both give $L = 1$ here (inconclusive), and the Integral Test is far more work.'
+            explanation: '$\\lim n/(n+1) = 1 \\neq 0$, so the series diverges by the Divergence Test right away. The Ratio Test gives $L = 1$ here (inconclusive), a limit comparison needs a second series and more work, and the Integral Test is far more work.'
           },
           {
             question: '$\\sum_{n=1}^{\\infty} \\frac{5}{3^n}$. This is a:',

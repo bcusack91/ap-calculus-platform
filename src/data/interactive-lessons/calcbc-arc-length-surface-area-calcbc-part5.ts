@@ -4,7 +4,7 @@ export const calcbcArcLengthPart5Data = {
     {
       id: 'al5-intro',
       type: 'text' as const,
-      content: `# Arc Length & Surface Area — Exam Strategies
+      content: `# Arc Length — Exam Strategies
 
 **Part 5 of 7 — Choosing the Right Formula & AP Tips**
 
@@ -15,7 +15,8 @@ export const calcbcArcLengthPart5Data = {
 | $y = f(x)$ | $\\sqrt{1+(f')^2}\\,dx$ |
 | $x = g(y)$ | $\\sqrt{1+(g')^2}\\,dy$ |
 | $x(t), y(t)$ | $\\sqrt{(x')^2+(y')^2}\\,dt$ |
-| $r(\\theta)$ | $\\sqrt{r^2+(r')^2}\\,d\\theta$ |
+
+Polar curves on the AP exam ask for slopes and area, not arc length, and surface area of revolution is not tested.
 
 ### Common AP Patterns
 
@@ -24,7 +25,7 @@ export const calcbcArcLengthPart5Data = {
 3. **Perfect square** — $(y')^2$ is chosen so $1 + (y')^2$ is a perfect square
 4. **Parametric motion** — Arc length = total distance; same integral
 
-> **Scoring:** Setup points and computation points are awarded separately. A correct integral with a computation error still earns most credit.`
+> **Scoring:** In AP scoring guidelines an arc length or distance part is typically worth 2 points: one for a correct integral (integrand and limits) and one for the answer, reported to three decimal places. A correct integral earns its point even if the evaluation goes wrong.`
     },
     {
       id: 'al5-tricky',
@@ -52,16 +53,16 @@ For example, $x = \\cos(2t)$, $y = \\sin(2t)$ from $0$ to $2\\pi$ traces the uni
       exercise: {
         questions: [
           {
-            question: 'For $y = \\cosh x$ from $x = 0$ to $x = 1$, what is $(y\')^2$?',
-            options: ['$\\sinh^2 x$', '$\\cosh^2 x$', '$e^{2x}$', '$1$'],
-            correctAnswer: 0,
-            explanation: '$y\' = \\sinh x$, so $(y\')^2 = \\sinh^2 x$. Then $1 + \\sinh^2 x = \\cosh^2 x$ (hyperbolic identity), making this a perfect-square problem: $L = \\int_0^1 \\cosh x\\,dx = \\sinh 1$.'
+            question: 'For $y = \\frac{x^2}{8} - \\ln x$, the expression $1 + (y\')^2$ equals:',
+            options: ['$\\left(\\frac{x}{4} - \\frac{1}{x}\\right)^2$', '$\\left(\\frac{x}{4} + \\frac{1}{x}\\right)^2$', '$1 + \\frac{x^2}{16} + \\frac{1}{x^2}$', '$\\frac{x^2}{16} + \\frac{1}{x^2}$'],
+            correctAnswer: 1,
+            explanation: '$y\' = \\frac{x}{4} - \\frac{1}{x}$, so $(y\')^2 = \\frac{x^2}{16} - \\frac{1}{2} + \\frac{1}{x^2}$ and adding $1$ flips the middle sign: $\\left(\\frac{x}{4} + \\frac{1}{x}\\right)^2$. The other choices are $(y\')^2$ itself, a version that drops the cross term, and the sum of squares with the $\\frac{1}{2}$ lost.'
           },
           {
             question: 'On the AP exam, which gives the MOST partial credit for an arc length problem?',
             options: ['Correct integrand and correct limits', 'A numerical answer only, with no supporting work', 'The general formula $L = \\int ds$ with no specifics', 'A labeled sketch of the curve and its endpoints'],
             correctAnswer: 0,
-            explanation: 'AP rubrics typically award 2-3 points for correct setup (integrand + limits) and 1-2 points for evaluation, so a correct setup earns significant credit even with algebra errors in the evaluation.'
+            explanation: 'Scoring guidelines usually give one point for a correct definite integral (integrand and limits) and one for the answer, so the setup point is earned even if the evaluation goes wrong. A bare number earns nothing without the supporting integral, and a generic formula or a sketch does not show the specific integral.'
           }
         ]
       }
@@ -73,11 +74,11 @@ For example, $x = \\cos(2t)$, $y = \\sin(2t)$ from $0$ to $2\\pi$ traces the uni
       exercise: {
         dropdowns: [
           {
-            label: '$y = \\cosh x$ has the special property that $\\sqrt{1+(y\')^2} = $',
-            options: ['$\\cosh x$', '$1 + \\sinh x$', '$\\sqrt{1+\\cosh^2 x}$', '$\\sqrt{2}\\cosh x$'],
-            correctAnswers: ['$\\cosh x$'],
-            hints: ['$1 + \\sinh^2 x = ?$ (hyperbolic identity)'],
-            explanation: '$y\' = \\sinh x$ and $1 + \\sinh^2 x = \\cosh^2 x$, so $\\sqrt{1 + (y\')^2} = \\cosh x$: it simplifies perfectly. Taking the root term by term gives $1 + \\sinh x$, and using $y$ in place of $y\'$ gives $\\sqrt{1+\\cosh^2 x}$. The catenary is a natural arc length curve.'
+            label: 'For $y = \\ln x$ from $x = 1$ to $x = e$, rewriting the curve as $x = e^y$ gives $L =$',
+            options: ['$\\int_1^e \\sqrt{1 + e^{2y}}\\,dy$', '$\\int_0^1 \\sqrt{1 + e^{y}}\\,dy$', '$\\int_0^1 \\sqrt{1 + e^{2y}}\\,dy$', '$\\int_0^1 (1 + e^{2y})\\,dy$'],
+            correctAnswers: ['$\\int_0^1 \\sqrt{1 + e^{2y}}\\,dy$'],
+            hints: ['$x$ runs from $1$ to $e$, so $y = \\ln x$ runs from $0$ to $1$.'],
+            explanation: 'With $x = e^y$, $dx/dy = e^y$, and the $y$-limits are $\\ln 1 = 0$ and $\\ln e = 1$, so $L = \\int_0^1\\sqrt{1 + e^{2y}}\\,dy \\approx 2.003$, matching $\\int_1^e\\sqrt{1 + 1/x^2}\\,dx$. Keeping the $x$-limits, forgetting to square $e^y$, or dropping the square root are the usual slips.'
           },
           {
             label: 'If a parametrization traces a curve $n$ times, $\\int_a^b ds$ gives:',
@@ -94,11 +95,11 @@ For example, $x = \\cos(2t)$, $y = \\sin(2t)$ from $0$ to $2\\pi$ traces the uni
       type: 'input-box' as const,
       content: '**Computation**',
       exercise: {
-        question: 'Find the arc length of $y = \\cosh x$ from $x = 0$ to $x = 1$. Since $\\sqrt{1 + \\sinh^2 x} = \\cosh x$, $L = \\int_0^1 \\cosh x\\,dx = \\sinh(1)$. What is $\\sinh(1)$ to two decimal places?',
-        correctAnswer: '1.18',
-        acceptableAnswers: ['1.18', '1.175', '1.1752', 'sinh(1)', 'sinh 1'],
-        hints: ['$\\sinh x = \\frac{e^x - e^{-x}}{2}$.', '$\\sinh 1 = \\frac{e - e^{-1}}{2} \\approx \\frac{2.718 - 0.368}{2}$.'],
-        explanation: '$\\sinh(1) = \\frac{e - 1/e}{2} = \\frac{2.71828 - 0.36788}{2} \\approx 1.1752 \\approx 1.18$.'
+        question: 'Find the arc length of $y = \\frac{x^2}{8} - \\ln x$ from $x = 1$ to $x = 4$. Give the answer to three decimal places.',
+        correctAnswer: '3.261',
+        acceptableAnswers: ['3.261', '3.26', '15/8 + ln 4', '15/8+ln4'],
+        hints: ['$1 + (y\')^2 = \\left(\\frac{x}{4} + \\frac{1}{x}\\right)^2$.', '$L = \\int_1^4 \\left(\\frac{x}{4} + \\frac{1}{x}\\right)dx = \\left[\\frac{x^2}{8} + \\ln x\\right]_1^4$.'],
+        explanation: '$L = \\left(2 + \\ln 4\\right) - \\left(\\frac{1}{8} + 0\\right) = \\frac{15}{8} + \\ln 4 \\approx 1.875 + 1.386 = 3.261$.'
       }
     },
     {
@@ -106,7 +107,7 @@ For example, $x = \\cos(2t)$, $y = \\sin(2t)$ from $0$ to $2\\pi$ traces the uni
       type: 'text' as const,
       content: `### Summary
 
-- Choose $ds$ based on how the curve is given (Cartesian, parametric, polar)
+- Choose $ds$ based on how the curve is given ($y = f(x)$, $x = g(y)$, or parametric)
 - Perfect-square problems are designed for hand computation
 - Multiple traversals multiply the arc length
 - On the AP exam: show setup first, then evaluate

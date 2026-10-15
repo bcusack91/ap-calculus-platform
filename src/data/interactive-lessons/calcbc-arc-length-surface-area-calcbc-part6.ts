@@ -4,18 +4,18 @@ export const calcbcArcLengthPart6Data = {
     {
       id: 'al6-intro',
       type: 'text' as const,
-      content: `# Arc Length & Surface Area — Workshop
+      content: `# Arc Length — Workshop
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Mixed problems covering all forms of arc length and surface area.
+Mixed problems covering arc length for $y = f(x)$ and for parametric curves.
 
 ### Workshop Overview
 
 | Problem | Topic |
 |---------|-------|
 | 1 | Cartesian arc length (hand computation) |
-| 2 | Parametric surface area |
+| 2 | Parametric arc length by hand |
 | 3 | Choosing the right form |`
     },
     {
@@ -46,10 +46,10 @@ $$L = \\int_1^3 \\left(x^2 + \\frac{1}{4x^2}\\right)dx = \\left[\\frac{x^3}{3} -
             explanation: 'The function was chosen so $1 + (y\')^2 = (x^2 + \\frac{1}{4x^2})^2$. This is the standard "perfect square" arc length trick: the square root cancels the square.'
           },
           {
-            question: 'The surface area when rotating $y = \\sqrt{x}$ from $x = 0$ to $x = 4$ about the $x$-axis is:',
-            options: ['$\\frac{\\pi}{6}(17\\sqrt{17} - 1)$', '$8\\pi$', '$\\frac{32\\pi}{3}$', '$\\frac{\\pi}{6}(17\\sqrt{17})$'],
-            correctAnswer: 0,
-            explanation: '$y\' = \\frac{1}{2\\sqrt{x}}$, $1 + (y\')^2 = 1 + \\frac{1}{4x} = \\frac{4x+1}{4x}$. $S = 2\\pi\\int_0^4 \\sqrt{x}\\cdot\\frac{\\sqrt{4x+1}}{2\\sqrt{x}}\\,dx = \\pi\\int_0^4\\sqrt{4x+1}\\,dx = \\frac{\\pi}{6}[(4x+1)^{3/2}]_0^4 = \\frac{\\pi}{6}(17\\sqrt{17}-1)$. Dropping the lower limit gives $\\frac{\\pi}{6}(17\\sqrt{17})$, leaving out the $ds$ factor gives $2\\pi\\int_0^4\\sqrt{x}\\,dx = \\frac{32\\pi}{3}$, and the disk-volume integral $\\pi\\int_0^4 x\\,dx$ gives $8\\pi$.'
+            question: 'The curve $x = 1 + 3t^2$, $y = 4 + 2t^3$ for $0 \\le t \\le 1$ has arc length:',
+            options: ['$4\\sqrt{2}$', '$4\\sqrt{2} - 2$', '$2\\sqrt{2} - 1$', '$5$'],
+            correctAnswer: 1,
+            explanation: '$dx/dt = 6t$ and $dy/dt = 6t^2$, so the integrand is $\\sqrt{36t^2 + 36t^4} = 6t\\sqrt{1 + t^2}$ and $L = \\left[2(1 + t^2)^{3/2}\\right]_0^1 = 4\\sqrt{2} - 2$. Skipping the lower limit gives $4\\sqrt{2}$, losing the factor $2$ from $6 \\cdot \\frac{1}{3}$ gives $2\\sqrt{2} - 1$, and $\\int_0^1 (6t + 6t^2)\\,dt = 5$ adds the rates instead of using the square root.'
           }
         ]
       }
@@ -61,11 +61,11 @@ $$L = \\int_1^3 \\left(x^2 + \\frac{1}{4x^2}\\right)dx = \\left[\\frac{x^3}{3} -
       exercise: {
         dropdowns: [
           {
-            label: 'For the curve $r = 1 + \\cos\\theta$, use the _____ arc length formula.',
-            options: ['Polar', 'Cartesian', 'Parametric', 'Any — all give the same integral'],
-            correctAnswers: ['Polar'],
-            hints: ['The curve is given in polar form.'],
-            explanation: 'Use $L = \\int\\sqrt{r^2 + (r\')^2}\\,d\\theta$. Converting to Cartesian would make it much harder.'
+            label: 'For $x = t^2$, $y = t^3$ on $-1 \\le t \\le 1$, the integrand $\\sqrt{4t^2 + 9t^4}$ simplifies to',
+            options: ['$t\\sqrt{4 + 9t^2}$', '$|t|\\sqrt{4 + 9t^2}$', '$2t + 3t^2$', '$t^2\\sqrt{4 + 9t^2}$'],
+            correctAnswers: ['$|t|\\sqrt{4 + 9t^2}$'],
+            hints: ['$\\sqrt{t^2} = |t|$, and $t$ is negative on part of the interval.'],
+            explanation: '$\\sqrt{t^2(4 + 9t^2)} = |t|\\sqrt{4 + 9t^2}$. Writing $t$ makes the integrand negative for $t < 0$, so the two halves would cancel to $0$; the correct length is $2\\int_0^1 t\\sqrt{4 + 9t^2}\\,dt$. The other choices take the root term by term or factor out the wrong power.'
           },
           {
             label: 'Perfect-square arc length problems always involve functions of the form $y = \\frac{x^n}{n} + \\frac{1}{cx^m}$ because:',
@@ -95,8 +95,8 @@ $$L = \\int_1^3 \\left(x^2 + \\frac{1}{4x^2}\\right)dx = \\left[\\frac{x^3}{3} -
       content: `### Workshop Summary
 
 - Recognize perfect-square arc length problems: $y = ax^n + bx^{-m}$
-- Choose polar form for polar curves, parametric for parametric curves
-- Surface area: always $2\\pi\\int(\\text{radius})\\,ds$
+- Use the parametric formula for parametric curves, with $t$-limits
+- Watch for $\\sqrt{t^2} = |t|$ when the parameter interval includes negative values
 
 > **Next:** Part 7 — Comprehensive Review.`
     }

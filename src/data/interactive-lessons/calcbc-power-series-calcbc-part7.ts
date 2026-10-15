@@ -36,7 +36,7 @@ $$\\boxed{\\text{Power series = the bridge between algebra and analysis on the A
           },
           {
             question: 'The series $1 + x + x^2/2! + x^3/3! + \\cdots$ represents:',
-            options: ['$e^x$', '$1/(1-x)$', '$\\cosh x$', '$\\sinh x$'],
+            options: ['$e^x$', '$1/(1-x)$', '$\\cos x$', '$\\ln(1+x)$'],
             correctAnswer: 0,
             explanation: '$\\sum x^n/n! = e^x$, the most important power series in mathematics.'
           },

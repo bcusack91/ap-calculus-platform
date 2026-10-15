@@ -12,9 +12,9 @@ export const calcbcPartialFracPart7Data = {
 
 | Denominator Type | Decomposition Form | Integration Result |
 |-----------------|-------------------|-------------------|
-| $(x-a)$ distinct | $\\frac{A}{x-a}$ | $A\\ln|x-a|$ |
-| $(x-a)^n$ repeated | $\\frac{A_1}{x-a} + \\cdots + \\frac{A_n}{(x-a)^n}$ | log + power terms |
-| $x^2+a^2$ irreducible | $\\frac{Bx+C}{x^2+a^2}$ | $\\frac{B}{2}\\ln(x^2+a^2) + \\frac{C}{a}\\arctan\\frac{x}{a}$ |`
+| $(x-a)(x-b)$ distinct linear | $\\frac{A}{x-a} + \\frac{B}{x-b}$ | $A\\ln\\lvert x-a\\rvert + B\\ln\\lvert x-b\\rvert$ |
+| Improper fraction | Quotient $+$ proper remainder | Polynomial $+$ logs |
+| $x^2+a^2$ (does not factor) | No decomposition | $\\frac{1}{a}\\arctan\\frac{x}{a}$ |`
     },
     {
       id: 'pf7-mc1',
@@ -23,10 +23,10 @@ export const calcbcPartialFracPart7Data = {
       exercise: {
         questions: [
           {
-            question: 'How many constants are needed to decompose $\\frac{1}{(x-1)^2(x^2+4)}$?',
+            question: 'How many constants are needed to decompose $\\frac{x^2+1}{x(x-1)(x+2)(x-3)}$?',
             options: ['4', '3', '2', '5'],
             correctAnswer: 0,
-            explanation: '$(x-1)^2$ needs $\\frac{A}{x-1} + \\frac{B}{(x-1)^2}$ (2 constants). $x^2+4$ needs $\\frac{Cx+D}{x^2+4}$ (2 constants). Total: 4.'
+            explanation: 'The fraction is proper (degree 2 over degree 4) and has four distinct linear factors, so it needs one constant for each: $\\frac{A}{x} + \\frac{B}{x-1} + \\frac{C}{x+2} + \\frac{D}{x-3}$.'
           },
           {
             question: 'Before decomposing $\\frac{x^4+1}{x^3-x}$, you must:',
@@ -40,15 +40,15 @@ export const calcbcPartialFracPart7Data = {
             explanation: 'Degree 4 > degree 3 means the fraction is improper. Always divide first; then factor the remainder\'s denominator $x^3 - x = x(x-1)(x+1)$ and decompose.'
           },
           {
-            question: 'The cover-up (Heaviside) method works directly for:',
+            question: 'For $\\frac{5x-1}{(x+1)(x-2)} = \\frac{A}{x+1} + \\frac{B}{x-2}$, cover-up gives:',
             options: [
-              'Distinct linear factors only',
-              'Every factor type, including quadratics',
-              'Repeated linear factors such as $(x-1)^2$',
-              'Irreducible quadratic factors only'
+              '$A = 2$, $B = 3$',
+              '$A = 3$, $B = 2$',
+              '$A = -2$, $B = 3$',
+              '$A = 2$, $B = -3$'
             ],
             correctAnswer: 0,
-            explanation: 'Cover-up works by setting $x$ equal to the root of a linear factor and reading off the constant. It does not work directly for repeated or irreducible quadratic factors.'
+            explanation: 'At $x = -1$: $A = \\frac{-5-1}{-1-2} = 2$. At $x = 2$: $B = \\frac{10-1}{2+1} = 3$. Check: $A + B = 5$ matches the $x$-coefficient of the numerator. Swapping the values attaches them to the wrong factors, and each negative option comes from a sign slip in the covered-up denominator.'
           }
         ]
       }
@@ -133,22 +133,21 @@ export const calcbcPartialFracPart7Data = {
 
 You\u2019ve mastered:
 1. \u2714 Distinct linear factor decomposition
-2. \u2714 Repeated linear factors
-3. \u2714 Irreducible quadratic factors
+2. \u2714 Cover-up checks and definite integrals with log answers
+3. \u2714 Choosing between partial fractions, $u$-substitution, and arctangent
 4. \u2714 Full integration workflow
 5. \u2714 Long division for improper fractions
 6. \u2714 Cover-up (Heaviside) method
 
 ### AP Exam Frequency
 
-| PF Topic | Likelihood on AP BC |
+| PF Topic | On the AP BC exam? |
 |----------|-------------------|
-| Simple distinct linear | Very common (MC + FRQ) |
-| Repeated factors | Occasional |
-| Irreducible quadratic | Less common but tested |
-| Improper fraction (division first) | Common trap question |
+| Distinct linear factors | Yes (FUN-6.F.1) |
+| Improper fraction (division first) | Yes: divide, then decompose |
+| Repeated or non-factoring quadratic factors | No |
 
-> **Key Fact:** Partial fractions is one of the BC-only integration techniques. Combined with IBP and trig substitution, it\u2019s essential for the full AP BC integration toolkit.`
+> **Key Fact:** Partial fractions is a BC-only integration technique (Topic 6.12). Together with integration by parts and improper integrals, it completes the AP BC integration toolkit.`
     }
   ]
 };

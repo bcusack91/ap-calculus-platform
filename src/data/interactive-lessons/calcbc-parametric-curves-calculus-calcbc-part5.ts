@@ -6,76 +6,77 @@ export const calcbcParametricPart5Data = {
       type: 'text' as const,
       content: `# Parametric Curves & Calculus
 
-**Part 5 of 7 \u2014 Surface Area & Volume of Revolution**
+**Part 5 of 7 — Planar Motion with Parametric Equations**
 
-When parametric curves are revolved around an axis, we can compute the surface area and volume using modified integral formulas.`
+On the BC exam, parametric equations usually describe a particle moving in the plane. With position $(x(t), y(t))$:
+
+| Quantity | Formula |
+|:---|:---|
+| Velocity vector | $\\langle x'(t),\\ y'(t) \\rangle$ |
+| Acceleration vector | $\\langle x''(t),\\ y''(t) \\rangle$ |
+| Speed | $\\sqrt{(x'(t))^2 + (y'(t))^2}$ |
+| Slope of the path | $\\dfrac{dy}{dx} = \\dfrac{y'(t)}{x'(t)}$, when $x'(t) \\ne 0$ |
+| Position at $t = b$ | $\\left(x(a) + \\int_a^b x'(t)\\,dt,\\ y(a) + \\int_a^b y'(t)\\,dt\\right)$ |
+
+> **Key Fact:** Each coordinate is handled separately. The sign of $x'(t)$ tells you whether the particle moves right or left, and the sign of $y'(t)$ tells you whether it moves up or down.`
     },
     {
-      id: 'par5-sa',
+      id: 'par5-tangents',
       type: 'text' as const,
-      content: `### Surface Area of Revolution
+      content: `### Horizontal and Vertical Tangents
 
-**Revolution about the $x$-axis:**
-$$\\boxed{SA = 2\\pi \\int_a^b |y(t)| \\cdot \\sqrt{(x')^2 + (y')^2}\\,dt}$$
+| Condition | Tangent line |
+|:---|:---|
+| $y'(t) = 0$ and $x'(t) \\ne 0$ | Horizontal |
+| $x'(t) = 0$ and $y'(t) \\ne 0$ | Vertical |
+| $x'(t) = 0$ and $y'(t) = 0$ | Not decided yet: examine $\\lim \\frac{y'(t)}{x'(t)}$ |
 
-**Revolution about the $y$-axis:**
-$$\\boxed{SA = 2\\pi \\int_a^b |x(t)| \\cdot \\sqrt{(x')^2 + (y')^2}\\,dt}$$
+### Worked Example
 
-The factor $2\\pi r$ comes from the circumference of revolution, and $ds = \\sqrt{(x')^2 + (y')^2}\\,dt$ is the arc element.
+A particle moves with $x(t) = t^2 - 4t$ and $y(t) = t^3 - 3t$ for $t \\ge 0$.
 
-### Example: Sphere from $x = R\\cos t$, $y = R\\sin t$, $0 \\le t \\le \\pi$
-
-Revolving the upper semicircle about the $x$-axis:
-
-$$SA = 2\\pi \\int_0^{\\pi} R\\sin t \\cdot R\\,dt = 2\\pi R^2 \\int_0^{\\pi} \\sin t\\,dt = 2\\pi R^2 \\cdot 2 = 4\\pi R^2$$
-
-$$\\boxed{SA_{\\text{sphere}} = 4\\pi R^2 \\quad \\checkmark}$$`
-    },
-    {
-      id: 'par5-volume',
-      type: 'text' as const,
-      content: `### Volume of Revolution (Disk/Washer)
-
-**About the $x$-axis** (using disks):
-$$V = \\pi \\int_a^b [y(t)]^2 \\cdot x'(t)\\,dt$$
-
-### Example: Sphere volume from semicircle
-
-$x = R\\cos t$, $y = R\\sin t$, $0 \\le t \\le \\pi$:
-
-$$V = \\pi \\int_0^{\\pi} R^2\\sin^2 t \\cdot (-R\\sin t)\\,dt = -\\pi R^3 \\int_0^{\\pi} \\sin^3 t\\,dt$$
-
-$$= \\pi R^3 \\cdot \\frac{4}{3} = \\frac{4}{3}\\pi R^3$$
-
-$$\\boxed{V_{\\text{sphere}} = \\frac{4}{3}\\pi R^3 \\quad \\checkmark}$$
-
-> **AP Tip:** Volume problems with parametric curves often appear in BC FRQs. Set up the integral carefully, matching the revolution axis.`
+- $x'(t) = 2t - 4$, $y'(t) = 3t^2 - 3$.
+- **Vertical tangent:** $x'(t) = 0$ at $t = 2$, where $y'(2) = 9 \\ne 0$.
+- **Horizontal tangent:** $y'(t) = 0$ at $t = 1$, where $x'(1) = -2 \\ne 0$.
+- **Moving left:** $x'(t) < 0$ for $0 \\le t < 2$.
+- **Speed at $t = 1$:** $\\sqrt{(-2)^2 + 0^2} = 2$.
+- **Acceleration at $t = 1$:** $\\langle x''(1), y''(1) \\rangle = \\langle 2, 6 \\rangle$.`
     },
     {
       id: 'par5-mc1',
       type: 'multiple-choice' as const,
-      content: '**Surface Area & Volume**',
+      content: '**Reading the Motion**',
       exercise: {
         questions: [
           {
-            question: 'Surface area of $x = t$, $y = t^2$ for $0 \\le t \\le 1$ revolved about the $x$-axis has integrand:',
-            options: [
-              '$2\\pi t^2 \\sqrt{1+4t^2}$',
-              '$2\\pi t \\sqrt{1+4t^2}$',
-              '$\\pi (t^2)^2 \\cdot 1$',
-              '$2\\pi t^2 \\cdot 2t$'
-            ],
-            correctAnswer: 0,
-            explanation: '$|y| = t^2$, speed $= \\sqrt{1 + (2t)^2} = \\sqrt{1+4t^2}$. $SA$ integrand $= 2\\pi t^2 \\sqrt{1+4t^2}$.'
+            question: 'A particle moves with $x(t) = t^3 - 12t$ and $y(t) = t^2 + 1$. At which time $t > 0$ does its path have a vertical tangent line?',
+            options: ['$t = 1$', '$t = 2$', '$t = 4$', '$t = 2\\sqrt{3}$'],
+            correctAnswer: 1,
+            explanation: 'A vertical tangent needs $x\'(t) = 3t^2 - 12 = 0$ with $y\'(t) \\ne 0$; at $t = 2$, $y\'(2) = 4 \\ne 0$. The value $2\\sqrt{3}$ solves $x(t) = 0$ instead of $x\'(t) = 0$, $t = 4$ solves $3t = 12$, and $t = 1$ makes neither derivative zero.'
           },
           {
-            question: 'For $x = \\cos t$, $y = \\sin t$, $0 \\le t \\le \\pi$ revolved about the $x$-axis, $SA$ equals:',
-            options: ['$4\\pi$', '$2\\pi$', '$\\pi$', '$4\\pi^2$'],
+            question: 'At time $t = 3$ a particle has velocity vector $\\langle -2, 5 \\rangle$. Which describes its motion at that instant?',
+            options: ['It moves left while rising', 'It moves right while rising', 'It moves left while falling', 'Its speed is $3$'],
             correctAnswer: 0,
-            explanation: '$2\\pi \\int_0^{\\pi} \\sin t \\cdot 1\\,dt = 2\\pi[-\\cos t]_0^{\\pi} = 2\\pi(1+1) = 4\\pi$. This is the surface area of the unit sphere.'
+            explanation: 'The horizontal component $-2$ is negative, so the particle moves left; the vertical component $5$ is positive, so it moves up. Reading either sign the other way gives the wrong direction, and the speed is $\\sqrt{(-2)^2 + 5^2} = \\sqrt{29}$, not the sum $-2 + 5 = 3$.'
           }
         ]
       }
+    },
+    {
+      id: 'par5-position',
+      type: 'text' as const,
+      content: `### Finding Position from Velocity
+
+A particle has $x'(t) = 4t + 1$ and $y'(t) = \\sin(\\pi t)$, and is at $(3, -2)$ at $t = 0$. Find its position at $t = 2$.
+
+$$x(2) = 3 + \\int_0^2 (4t + 1)\\,dt = 3 + \\left[2t^2 + t\\right]_0^2 = 3 + 10 = 13$$
+
+$$y(2) = -2 + \\int_0^2 \\sin(\\pi t)\\,dt = -2 + \\left[-\\tfrac{1}{\\pi}\\cos(\\pi t)\\right]_0^2 = -2 + 0 = -2$$
+
+The particle is at $(13, -2)$. Notice that $y$ returns to its starting value: the particle moved up and then down by equal amounts, so the net change in $y$ is $0$ even though it travelled vertically.
+
+> **AP Tip:** On calculator-active parts, write each position as "starting value $+ \\int$ velocity component" and report three decimal places. Writing only the integral without the starting value is the most common lost point.`
     },
     {
       id: 'par5-dropdown',
@@ -84,18 +85,18 @@ $$\\boxed{V_{\\text{sphere}} = \\frac{4}{3}\\pi R^3 \\quad \\checkmark}$$
       exercise: {
         dropdowns: [
           {
-            label: 'Revolving $x = t^2$, $y = t$ about the $y$-axis, $SA$ uses:',
-            options: ['$2\\pi |x(t)| \\cdot \\text{speed}$', '$2\\pi y(t) \\cdot \\text{speed}$', '$\\pi [x(t)]^2 \\cdot y\'(t)$', '$\\pi [y(t)]^2 \\cdot x\'(t)$'],
-            correctAnswers: ['$2\\pi |x(t)| \\cdot \\text{speed}$'],
-            hints: ['Revolution about $y$-axis uses the distance from the $y$-axis, which is $|x|$.'],
-            explanation: 'About $y$-axis the radius is the distance to the $y$-axis, $|x| = t^2$: $SA = 2\\pi \\int |x| \\cdot ds = 2\\pi \\int t^2 \\sqrt{(2t)^2 + 1}\\,dt$. The $\\pi[\\,\\cdot\\,]^2$ forms are disk volumes, not surface areas.'
+            label: 'A particle has $x\'(t) = e^{t} - 2$ and $y\'(t) = t^2 - 1$. At $t = 1$ its path has',
+            options: ['a vertical tangent', 'no tangent line', 'a horizontal tangent', 'a slope of $-2$'],
+            correctAnswers: ['a horizontal tangent'],
+            hints: ['Evaluate both components at $t = 1$.'],
+            explanation: 'At $t = 1$, $y\'(1) = 0$ and $x\'(1) = e - 2 \\approx 0.718 \\ne 0$, so $dy/dx = 0$ and the tangent is horizontal. A vertical tangent would need $x\' = 0$, the tangent line exists because $x\' \\ne 0$, and $-2$ is the constant term of $x\'$, not the slope.'
           },
           {
-            label: 'Volume of $x = 2\\cos t$, $y = 2\\sin t$ ($0 \\le t \\le \\pi$) about $x$-axis uses:',
-            options: ['$\\pi \\int_{\\pi}^{0} (2\\sin t)^2(-2\\sin t)\\,dt$', '$2\\pi \\int_0^{\\pi} 2\\sin t \\cdot 2\\,dt$', '$\\pi \\int_0^2 y^2\\,dx$', '$\\pi \\int_0^{\\pi} (2\\sin t)^2(-2\\sin t)\\,dt$'],
-            correctAnswers: ['$\\pi \\int_{\\pi}^{0} (2\\sin t)^2(-2\\sin t)\\,dt$'],
-            hints: ['Disk method: $V = \\pi \\int [y(t)]^2 x\'(t)\\,dt$. $x\' = -2\\sin t$.'],
-            explanation: 'Disk method: $V = \\pi \\int y^2\\,dx$ with $dx = -2\\sin t\\,dt$. As $x$ runs from $-2$ to $2$, $t$ runs from $\\pi$ down to $0$, so $V = \\pi \\int_{\\pi}^{0} 4\\sin^2 t \\cdot (-2\\sin t)\\,dt = 8\\pi \\int_0^{\\pi} \\sin^3 t\\,dt = 8\\pi \\cdot \\frac{4}{3} = \\frac{32\\pi}{3}$, the volume of a sphere of radius $2$. Integrating from $t = 0$ to $\\pi$ gives $-\\frac{32\\pi}{3}$ (a negative volume), $\\int_0^2$ covers only half the sphere, and $2\\pi\\int y \\cdot \\text{speed}\\,dt$ is the surface area.'
+            label: 'The particle in the position example is at $(3, -2)$ when $t = 0$. Its $x$-coordinate at $t = 1$ is',
+            options: ['$3$', '$6$', '$8$', '$13$'],
+            correctAnswers: ['$6$'],
+            hints: ['$x(1) = 3 + \\int_0^1 (4t + 1)\\,dt$.'],
+            explanation: '$x(1) = 3 + [2t^2 + t]_0^1 = 3 + 3 = 6$. The value $3$ ignores the motion, $8$ treats the velocity $x\'(1) = 5$ as constant on $[0, 1]$, and $13$ is the position at $t = 2$.'
           }
         ]
       }
@@ -105,22 +106,24 @@ $$\\boxed{V_{\\text{sphere}} = \\frac{4}{3}\\pi R^3 \\quad \\checkmark}$$
       type: 'input-box' as const,
       content: '**Quick Computation**',
       exercise: {
-        question: 'The lateral surface area of a cone with slant height $\\ell$ and base radius $r$ is $\\pi r \\ell$. Parametrize the slant side as $x = t$, $y = (r/\\ell)t$ for $0 \\le t \\le \\ell$. What is the speed (constant)?',
-        correctAnswer: 'sqrt(1+r^2/l^2)',
-        acceptableAnswers: ['sqrt(1+r^2/l^2)', '1'],
-        hints: ['$x\' = 1$, $y\' = r/\\ell$.', 'Speed $= \\sqrt{1 + r^2/\\ell^2}$.'],
-        explanation: 'Speed $= \\sqrt{1 + (r/\\ell)^2} = \\sqrt{(\\ell^2 + r^2)/\\ell^2}$. The SA integral with proper simplification gives $\\pi r \\ell$.'
+        question: 'For the worked example $x(t) = t^2 - 4t$, $y(t) = t^3 - 3t$, find the speed of the particle at $t = 2$.',
+        correctAnswer: '9',
+        acceptableAnswers: ['9', '9.0'],
+        hints: ['$x\'(2) = 0$ and $y\'(2) = 3(4) - 3$.'],
+        explanation: 'At $t = 2$, $x\'(2) = 0$ and $y\'(2) = 9$, so the speed is $\\sqrt{0^2 + 9^2} = 9$. The particle is moving straight up at that instant, which matches the vertical tangent there.'
       }
     },
     {
       id: 'par5-summary',
       type: 'text' as const,
-      content: `### Key Takeaways \u2014 Part 5
+      content: `### Key Takeaways — Part 5
 
-| Quantity | About $x$-axis | About $y$-axis |
-|:---:|:---:|:---:|
-| Surface area | $2\\pi \\int |y| \\cdot ds$ | $2\\pi \\int |x| \\cdot ds$ |
-| Volume (disk) | $\\pi \\int y^2 x'\\,dt$ | $\\pi \\int x^2 y'\\,dt$ |
+| Question | What to compute |
+|:---:|:---:|
+| Horizontal / vertical tangent | Where $y' = 0$ / $x' = 0$ (other component nonzero) |
+| Direction of motion | Signs of $x'(t)$ and $y'(t)$ |
+| Speed | $\\sqrt{(x')^2 + (y')^2}$ |
+| Position | Start $+ \\int$ each velocity component |
 
 > **Coming Up:** Part 6 is a **Problem-Solving Workshop** with mixed parametric problems.`
     }

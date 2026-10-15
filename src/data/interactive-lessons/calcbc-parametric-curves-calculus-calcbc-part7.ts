@@ -8,7 +8,7 @@ export const calcbcParametricPart7Data = {
 
 **Part 7 of 7 \u2014 Comprehensive Review**
 
-Master all parametric curve concepts: equations, derivatives, arc length, area, and surface area.
+Master all parametric curve concepts: equations, derivatives, arc length, area, and planar motion.
 
 | Concept | Key Formula |
 |---------|------------|
@@ -66,7 +66,7 @@ Master all parametric curve concepts: equations, derivatives, arc length, area, 
 | Concavity | Compute $d^2y/dx^2$ |
 | Distance traveled | $\\int_a^b \\sqrt{(x')^2+(y')^2}\\,dt$ |
 | Area enclosed | $-\\oint y\\,dx = -\\int_a^b y(t)\\,x'(t)\\,dt$ |
-| Surface area (about $x$-axis) | $2\\pi\\int y\\,\\sqrt{(x')^2+(y')^2}\\,dt$ |
+| Position at $t = b$ | $x(a) + \\int_a^b x'(t)\\,dt$ and $y(a) + \\int_a^b y'(t)\\,dt$ |
 
 > **AP Key Fact:** On the AP exam, distinguish between *distance traveled* (always positive, involves speed integral) and *displacement* ($\\Delta x, \\Delta y$ separately). They ask both!`
     },
@@ -84,11 +84,11 @@ Master all parametric curve concepts: equations, derivatives, arc length, area, 
             explanation: 'At $t = 2n\\pi$: $dx/dt = 1 - \\cos(2n\\pi) = 0$ and $dy/dt = \\sin(2n\\pi) = 0$. Both zero, creating a cusp. At odd multiples of $\\pi$ only $dy/dt$ is $0$ (the top of an arch), so $t = n\\pi$ is too broad.'
           },
           {
-            label: 'To convert parametric arc length to polar arc length, substitute:',
-            options: ['$x = f(\\theta)\\cos\\theta$, $y = f(\\theta)\\sin\\theta$', '$x = r$, $y = \\theta$, with $r = f(\\theta)$', '$x = \\cos\\theta$, $y = \\sin\\theta$, then scale by $r$', '$x = r\\cos\\theta$, $y = r\\sin\\theta$ with $r$ held constant'],
-            correctAnswers: ['$x = f(\\theta)\\cos\\theta$, $y = f(\\theta)\\sin\\theta$'],
-            hints: ['Polar is a special parametric form with parameter $\\theta$.'],
-            explanation: 'Polar curves are parametric with $\\theta$ as parameter: $x = r\\cos\\theta$, $y = r\\sin\\theta$ where $r = f(\\theta)$ varies with $\\theta$. Substituting gives the polar arc length formula $\\int\\sqrt{r^2 + (dr/d\\theta)^2}\\,d\\theta$; holding $r$ constant would lose the $(dr/d\\theta)^2$ term.'
+            label: 'At $t = 0$ a particle is at $(1, 4)$, with $x\'(t) = 2t$ and $y\'(t) = -3$. At $t = 2$ it is at',
+            options: ['$(4, -6)$', '$(5, -2)$', '$(5, 1)$', '$(4, -3)$'],
+            correctAnswers: ['$(5, -2)$'],
+            hints: ['Add each starting coordinate to the integral of its velocity component from $0$ to $2$.'],
+            explanation: '$x(2) = 1 + \\int_0^2 2t\\,dt = 1 + 4 = 5$ and $y(2) = 4 + \\int_0^2 (-3)\\,dt = 4 - 6 = -2$. Leaving out the starting point gives $(4, -6)$, using only one second of vertical motion gives $(5, 1)$, and $(4, -3)$ is the velocity at $t = 2$, not a position.'
           },
           {
             label: 'The speed of a particle at time $t$ can be zero only when:',
@@ -122,9 +122,9 @@ You have mastered:
 - First and second derivatives via the chain rule
 - Arc length and speed computations
 - Area under and enclosed by parametric curves
-- Surface area and volume of revolution
+- Planar motion: tangents, velocity, speed, and position
 
-> **AP Exam Note:** Parametric/polar/vector questions appear as a dedicated FRQ (usually problem 2 or 3). Practice computing derivatives and integrals quickly since both calculator and non-calculator parts appear.`
+> **AP Exam Note:** Parametric and vector motion is a regular BC free-response context, on both calculator-active and no-calculator questions. Practice computing derivatives and integrals quickly in both settings.`
     }
   ]
 };

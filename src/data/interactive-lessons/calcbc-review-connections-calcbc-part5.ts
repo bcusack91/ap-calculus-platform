@@ -13,9 +13,9 @@ export const calcbcReviewPart5Data = {
 | See this... | Try this... |
 |-------------|------------|
 | Product of unlike functions ($xe^x$, $x\\ln x$) | **Integration by parts** |
-| Rational function $P(x)/Q(x)$ | **Partial fractions** |
-| $\\sqrt{a^2 - x^2}$, $\\sqrt{a^2 + x^2}$, $\\sqrt{x^2 - a^2}$ | **Trig substitution** |
-| Powers of $\\sin x$, $\\cos x$ | **Trig identities** (even: half-angle; odd: save one) |
+| Rational function $P(x)/Q(x)$ with distinct linear factors | **Partial fractions** |
+| Rational function with $\\deg P \\ge \\deg Q$ | **Long division** first |
+| Quadratic denominator that will not factor | **Complete the square**, then arctan |
 | Composition $f(g(x))g'(x)$ | **u-substitution** |
 | $1/(x^2 + a^2)$, $1/\\sqrt{a^2 - x^2}$ | **Inverse trig** ($\\arctan$, $\\arcsin$) |
 | Infinite bounds or vertical asymptote | **Improper integral** (limit definition) |

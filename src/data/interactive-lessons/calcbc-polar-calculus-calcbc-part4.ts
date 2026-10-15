@@ -109,7 +109,7 @@ The tangent is **horizontal** at $\\theta = \\pi/3$!
 - Horizontal tangent: numerator $= 0$, denominator $\\ne 0$
 - At the origin: tangent line has slope $\\tan\\theta_0$ where $f(\\theta_0) = 0$
 
-> **Next:** Part 5 covers **arc length** in polar coordinates.`
+> **Next:** Part 5 covers **rates of change** on polar curves: $dr/d\\theta$, $dx/d\\theta$, and $dy/d\\theta$.`
     }
   ]
 };

@@ -4,7 +4,7 @@ export const calcabLimitsInfinityPart3Data = {
     {
       id: 'lai3-intro',
       type: 'text' as const,
-      content: `# ∫ Limits at Infinity — Oblique & Slant Asymptotes
+      content: `# ∫ Limits at Infinity — Unbounded & Oscillating End Behavior
 
 **Part 3 of 7 — When Horizontal Asymptotes Don't Exist**
 
@@ -14,85 +14,77 @@ export const calcabLimitsInfinityPart3Data = {
 
 | Section |
 |---------|
-| 📖 Oblique (Slant) Asymptotes |
-| Polynomial Long Division |
+| 📖 Unbounded End Behavior |
+| Leading-Term Analysis |
 | 📌 End Behavior of Non-Rational Functions |
 | Piecewise & Absolute Value Limits |
 
-> 🔑 **Key Concept:** When the numerator's degree exceeds the denominator's by exactly one, the function has an oblique asymptote — a slanted line the graph approaches at infinity.`
+> 🔑 **Key Concept:** A function has no horizontal asymptote when its values grow without bound or keep oscillating. The limit at infinity then tells you which: $\\infty$, $-\\infty$, or no limit at all.`
     },
     {
-      id: 'lai3-oblique',
+      id: 'lai3-unbounded',
       type: 'text' as const,
       content: `
-## 📖 Oblique (Slant) Asymptotes
+## 📖 Unbounded End Behavior
 
-When $\\deg(p) = \\deg(q) + 1$ in $\\frac{p(x)}{q(x)}$, the function has an **oblique asymptote**.
+When $\\deg(p) > \\deg(q)$ in $\\frac{p(x)}{q(x)}$, the limit at infinity is $\\infty$ or $-\\infty$, and there is no horizontal asymptote.
 
-### How to Find It: Polynomial Long Division
+### Leading-Term Analysis
 
-Divide $p(x)$ by $q(x)$:
+For large $|x|$, only the leading terms matter:
 
-$$\\frac{p(x)}{q(x)} = (\\text{linear quotient}) + \\frac{\\text{remainder}}{q(x)}$$
+$$\\frac{p(x)}{q(x)} \\approx \\frac{a_n x^n}{b_m x^m} = \\frac{a_n}{b_m}\\,x^{n-m}$$
 
-As $x \\to \\pm\\infty$, the remainder fraction $\\to 0$, leaving just the linear part.
-
----
-
-### Worked Example
-
-Find the oblique asymptote of $f(x) = \\frac{x^2 + 3x + 2}{x + 1}$.
-
-**Long division:**
-
-$$x^2 + 3x + 2 \\div (x+1) = x + 2 \\text{ R } 0$$
-
-So $f(x) = x + 2$ (exactly, after cancellation). The oblique asymptote is $y = x + 2$.
+The sign of $\\frac{a_n}{b_m}$ and whether $n - m$ is odd or even decide the sign of the infinite limit.
 
 ---
 
-### Example with Remainder
+### Worked Example (Odd Degree Difference)
 
-$g(x) = \\frac{2x^2 - x + 3}{x - 1}$
+$f(x) = \\frac{x^2 + 3x + 2}{2x - 5}$. Leading terms: $\\frac{x^2}{2x} = \\frac{x}{2}$.
 
-**Long division:**
-
-$$2x^2 - x + 3 \\div (x-1) = 2x + 1 \\text{ R } 4$$
-
-$$g(x) = 2x + 1 + \\frac{4}{x-1}$$
-
-As $x \\to \\pm\\infty$, $\\frac{4}{x-1} \\to 0$, so the oblique asymptote is $y = 2x + 1$.
-
-> ⚠️ **Warning:** If $\\deg(p) - \\deg(q) \\geq 2$, there is no oblique asymptote — the end behavior is parabolic or higher.
+- As $x \\to \\infty$: $\\frac{x}{2} \\to \\infty$, so $\\lim_{x \\to \\infty} f(x) = \\infty$.
+- As $x \\to -\\infty$: $\\frac{x}{2} \\to -\\infty$, so $\\lim_{x \\to -\\infty} f(x) = -\\infty$.
 
 ---
 
-### Summary of Asymptote Types
+### Worked Example (Even Degree Difference)
 
-| Degree Comparison | Asymptote Type |
-|-------------------|---------------|
-| $\\deg(p) < \\deg(q)$ | Horizontal: $y = 0$ |
-| $\\deg(p) = \\deg(q)$ | Horizontal: $y = \\frac{a_n}{b_n}$ |
-| $\\deg(p) = \\deg(q) + 1$ | Oblique: $y = mx + b$ |
-| $\\deg(p) > \\deg(q) + 1$ | No asymptote (→ ±∞) |`
+$g(x) = \\frac{-3x^4 + x}{x^2 + 1}$. Leading terms: $\\frac{-3x^4}{x^2} = -3x^2$.
+
+Since $-3x^2 \\to -\\infty$ in both directions, $\\lim_{x \\to \\pm\\infty} g(x) = -\\infty$.
+
+> ⚠️ **Warning:** Check each direction separately. An odd degree difference sends the two ends in opposite directions; an even one sends them the same way.
+
+---
+
+### Summary for Rational Functions
+
+| Degree Comparison | $\\lim_{x \\to \\pm\\infty} \\frac{p(x)}{q(x)}$ | Horizontal Asymptote |
+|-------------------|---------------|---------------|
+| $\\deg(p) < \\deg(q)$ | $0$ | $y = 0$ |
+| $\\deg(p) = \\deg(q)$ | $\\frac{a_n}{b_n}$ | $y = \\frac{a_n}{b_n}$ |
+| $\\deg(p) > \\deg(q)$ | $\\infty$ or $-\\infty$ (leading terms) | None |
+
+Slant (oblique) asymptotes are a precalculus idea; they are not tested on the AP Calculus exam.`
     },
     {
       id: 'lai3-quiz1',
       type: 'multiple-choice' as const,
-      content: `**Oblique Asymptotes Check** 🎯`,
+      content: `**Unbounded End Behavior Check** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'What is the oblique asymptote of $f(x) = \\frac{x^2 - 4}{x + 3}$?',
-            options: ['$y = x - 3$', '$y = x + 3$', '$y = x - 7$', '$y = x$'],
-            correctAnswer: 0,
-            explanation: 'Long division: $x^2 - 4 \\div (x+3) = x - 3$ remainder $5$. So the oblique asymptote is $y = x - 3$.'
+            question: 'Evaluate $\\lim_{x \\to -\\infty} \\frac{x^2 - 4}{x + 3}$.',
+            options: ['$\\infty$', '$-\\infty$', '$1$', '$0$'],
+            correctAnswer: 1,
+            explanation: 'Leading terms: $\\frac{x^2}{x} = x$, which goes to $-\\infty$ as $x \\to -\\infty$. Answering $\\infty$ ignores the direction, $1$ (the ratio of leading coefficients) applies only to equal degrees, and $0$ applies when the denominator has the higher degree.'
           },
           {
-            question: 'Which function has an oblique asymptote?',
+            question: 'Which function satisfies $\\lim_{x \\to \\infty} f(x) = \\infty$ AND $\\lim_{x \\to -\\infty} f(x) = \\infty$?',
             options: ['$\\frac{x}{x^2+1}$', '$\\frac{x^2+1}{x}$', '$\\frac{x^2}{x^2+1}$', '$\\frac{x^3}{x+1}$'],
-            correctAnswer: 1,
-            explanation: '$\\frac{x^2+1}{x}$: degree 2 over degree 1, difference is exactly 1. This gives an oblique asymptote. ($\\frac{x^3}{x+1}$ has degree difference 2, so no oblique asymptote.)'
+            correctAnswer: 3,
+            explanation: '$\\frac{x^3}{x+1} \\approx x^2$, which goes to $\\infty$ in both directions. $\\frac{x^2+1}{x} \\approx x$ goes to $-\\infty$ on the left, $\\frac{x}{x^2+1} \\to 0$, and $\\frac{x^2}{x^2+1} \\to 1$.'
           }
         ]
       }
@@ -142,22 +134,22 @@ For $x < 3$: $|x-3| = -(x-3) = 3-x$, so $\\frac{3-x}{x+1} = \\frac{-x+3}{x+1} \\
       id: 'lai3-calculation-drill',
       type: 'input-boxes' as const,
       content: `
-**Oblique Asymptote Drill** 🧮
+**End Behavior Drill** 🧮
 
-Find the oblique asymptote $y = mx + b$. Enter your answer as "mx + b" (e.g., "2x + 3").
+Evaluate each limit. Enter a number, "infinity", or "-infinity".
 
-**1)** $f(x) = \\frac{3x^2 + 2x - 1}{x + 2}$. Oblique asymptote:
+**1)** $\\lim_{x \\to \\infty} \\frac{3x^2 + 2x - 1}{x + 2}$
 
-**2)** $g(x) = \\frac{x^2 - 5x + 4}{x - 2}$. Oblique asymptote:
+**2)** $\\lim_{x \\to -\\infty} \\frac{x^2 - 5x + 4}{x - 2}$
 
-**3)** $h(x) = \\frac{-x^2 + 6x}{x - 1}$. Oblique asymptote:
+**3)** $\\lim_{x \\to \\infty} \\frac{-x^2 + 6x}{2x^2 - 1}$
       `,
       exercise: {
-        questions: [{ question: '(1)', answer: '3x - 4', acceptableAnswers: ['3x - 4', 'y = 3x - 4', '-4 + 3x'] }, { question: '(2)', answer: 'x - 3', acceptableAnswers: ['x - 3', 'y = x - 3', '-3 + x'] }, { question: '(3)', answer: '-x + 5', acceptableAnswers: ['-x + 5', 'y = -x + 5', '5 - x', 'y = 5 - x'] }],
-        hint1: '$3x^2 + 2x - 1 \\div (x+2)$: first term $3x$, then $3x(x+2)=3x^2+6x$, remainder starts with $-4x-1$. Continue division.',
-        hint2: '$x^2 - 5x + 4 \\div (x-2)$: first term $x$, then $x(x-2) = x^2-2x$, subtract to get $-3x+4$. Next term $-3$.',
-        hint3: '$-x^2+6x \\div (x-1)$: first term $-x$, then $-x(x-1) = -x^2+x$, subtract to get $5x$. Next term $5$.',
-        explanation: '1) $3x - 4$ (R $7$). 2) $x - 3$ (R $-2$). 3) $-x + 5$ (R $5$).'
+        questions: [{ question: '(1)', answer: 'infinity', acceptableAnswers: ['infinity', '∞', 'inf', '+infinity'] }, { question: '(2)', answer: '-infinity', acceptableAnswers: ['-infinity', '-∞', '-inf'] }, { question: '(3)', answer: '-1/2', acceptableAnswers: ['-1/2', '-0.5', '-.5'] }],
+        hint1: 'Leading terms: $\\frac{3x^2}{x} = 3x$. What does $3x$ do as $x \\to \\infty$?',
+        hint2: 'Leading terms: $\\frac{x^2}{x} = x$. Now let $x \\to -\\infty$.',
+        hint3: 'Equal degrees: use the ratio of leading coefficients, $\\frac{-1}{2}$.',
+        explanation: '1) $3x \\to \\infty$. 2) $x \\to -\\infty$. 3) $-\\frac{1}{2}$ (equal degrees).'
       }
     },
     {
@@ -187,35 +179,35 @@ Find the oblique asymptote $y = mx + b$. Enter your answer as "mx + b" (e.g., "2
       content: `**Asymptote Classification** 🔽\n\nFor each function, identify the type of asymptote as $x \\to \\infty$.`,
       exercise: {
         dropdowns: [
-          { label: '$f(x) = \\frac{x^2+1}{2x-3}$', options: ['Horizontal at $y=0$', 'Horizontal at $y=1/2$', 'Oblique', 'No asymptote'] },
-          { label: '$g(x) = \\frac{5x^3}{x^3+x}$', options: ['Horizontal at $y=0$', 'Horizontal at $y=5$', 'Oblique', 'No asymptote'] },
-          { label: '$h(x) = \\frac{x^4+2}{x^2-1}$', options: ['Horizontal at $y=0$', 'Horizontal at $y=1$', 'Oblique', 'No asymptote'] },
-          { label: '$k(x) = \\frac{3}{x^2+4}$', options: ['Horizontal at $y=0$', 'Horizontal at $y=3$', 'Oblique', 'No asymptote'] }
+          { label: '$f(x) = \\frac{x^2+1}{2x-3}$', options: ['Horizontal at $y=0$', 'Horizontal at $y=1/2$', 'None: $f \\to \\infty$', 'None: $f \\to -\\infty$'] },
+          { label: '$g(x) = \\frac{5x^3}{x^3+x}$', options: ['Horizontal at $y=0$', 'Horizontal at $y=5$', 'None: $g \\to \\infty$', 'None: $g \\to -\\infty$'] },
+          { label: '$h(x) = \\frac{-x^4+2}{x^2-1}$', options: ['Horizontal at $y=0$', 'Horizontal at $y=-1$', 'None: $h \\to \\infty$', 'None: $h \\to -\\infty$'] },
+          { label: '$k(x) = \\frac{3}{x^2+4}$', options: ['Horizontal at $y=0$', 'Horizontal at $y=3$', 'None: $k \\to \\infty$', 'None: $k \\to -\\infty$'] }
         ],
-        correctAnswers: ['Oblique', 'Horizontal at $y=5$', 'No asymptote', 'Horizontal at $y=0$'],
-        hint1: 'Degree 2 over degree 1: difference is 1, so oblique.',
+        correctAnswers: ['None: $f \\to \\infty$', 'Horizontal at $y=5$', 'None: $h \\to -\\infty$', 'Horizontal at $y=0$'],
+        hint1: 'Leading terms: $\\frac{x^2}{2x} = \\frac{x}{2}$.',
         hint2: 'Degree 3 over degree 3: equal degrees, horizontal at ratio of leading coefficients.',
-        hint3: 'Degree 4 over degree 2: difference is 2, so no oblique (parabolic end behavior).',
-        explanation: '$f$: oblique (deg diff = 1). $g$: horizontal $y=5$ (equal degrees). $h$: no asymptote (deg diff = 2). $k$: horizontal $y=0$ (deg 0 < deg 2).'
+        hint3: 'Leading terms: $\\frac{-x^4}{x^2} = -x^2$.',
+        explanation: '$f \\approx \\frac{x}{2} \\to \\infty$. $g$: horizontal $y=5$ (equal degrees). $h \\approx -x^2 \\to -\\infty$. $k$: horizontal $y=0$ (deg 0 < deg 2).'
       }
     },
     {
       id: 'lai3-exit-quiz',
       type: 'multiple-choice' as const,
-      content: `**Exit Quiz — Oblique Asymptotes & End Behavior** ✅`,
+      content: `**Exit Quiz — Unbounded & Oscillating End Behavior** ✅`,
       exercise: {
         questions: [
           {
-            question: 'The oblique asymptote of $f(x) = \\frac{2x^2 + 5x - 3}{x + 4}$ is:',
-            options: ['$y = 2x - 3$', '$y = 2x + 5$', '$y = 2x + 13$', '$y = 2x - 13$'],
+            question: 'Evaluate $\\lim_{x \\to -\\infty} \\frac{2x^3 + 5x - 3}{x + 4}$.',
+            options: ['$\\infty$', '$-\\infty$', '$2$', '$0$'],
             correctAnswer: 0,
-            explanation: 'Long division: $2x^2+5x-3 \\div (x+4)$. First: $2x$, multiply: $2x^2+8x$, subtract: $-3x-3$. Next: $-3$, multiply: $-3x-12$, subtract: $9$. Asymptote: $y = 2x-3$.'
+            explanation: 'Leading terms: $\\frac{2x^3}{x} = 2x^2$, which goes to $\\infty$ as $x \\to -\\infty$ because the degree difference is even. Answering $-\\infty$ follows the direction of $x$ instead of the sign of $2x^2$, $2$ is the ratio of leading coefficients (equal degrees only), and $0$ needs a higher-degree denominator.'
           },
           {
-            question: 'Evaluate $\\lim_{x \\to \\infty} \\left(\\sqrt{4x^2 + x} - 2x\\right)$.',
-            options: ['$0$', '$\\frac{1}{4}$', '$\\frac{1}{2}$', '$1$'],
+            question: 'Evaluate $\\lim_{x \\to -\\infty} \\frac{|2x - 1|}{x + 4}$.',
+            options: ['$2$', '$-2$', '$0$', '$-\\frac{1}{2}$'],
             correctAnswer: 1,
-            explanation: 'Conjugate: $\\frac{4x^2+x-4x^2}{\\sqrt{4x^2+x}+2x} = \\frac{x}{\\sqrt{4x^2+x}+2x}$. Divide by $x$: $\\frac{1}{\\sqrt{4+1/x}+2} \\to \\frac{1}{2+2} = \\frac{1}{4}$.'
+            explanation: 'For $x < \\frac{1}{2}$, $|2x - 1| = 1 - 2x$, so the expression is $\\frac{1 - 2x}{x + 4} \\to \\frac{-2}{1} = -2$. Dropping the absolute-value sign change gives $2$, $-\\frac{1}{2}$ flips the coefficients, and $0$ would need a higher-degree denominator.'
           }
         ]
       }

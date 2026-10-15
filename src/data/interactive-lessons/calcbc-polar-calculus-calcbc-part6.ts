@@ -8,7 +8,7 @@ export const calcbcPolarPart6Data = {
 
 **Part 6 of 7 \u2014 Problem-Solving Workshop**
 
-Mixed practice covering polar coordinates, graphing, area, slopes, and arc length.`
+Mixed practice covering polar coordinates, graphing, area, slopes, and rates of change.`
     },
     {
       id: 'pol6-mc1',
@@ -54,9 +54,9 @@ $r = \\sqrt{3}$, $dr/d\\theta = -2\\sin(\\pi/6) = -1$
 
 $$\\frac{dy}{dx} = \\frac{(-1)(1/2) + \\sqrt{3}(\\sqrt{3}/2)}{(-1)(\\sqrt{3}/2) - \\sqrt{3}(1/2)} = \\frac{-1/2 + 3/2}{-\\sqrt{3}/2 - \\sqrt{3}/2} = \\frac{1}{-\\sqrt{3}} = -\\frac{1}{\\sqrt{3}}$$
 
-**(c)** Find the arc length.
+**(c)** At $\\theta = \\pi/6$, is the point on the curve moving toward or away from the origin?
 
-$$L = \\int_0^{\\pi/2}\\sqrt{4\\cos^2\\theta + 4\\sin^2\\theta}\\,d\\theta = \\int_0^{\\pi/2}2\\,d\\theta = \\pi$$`
+From part (b), $r = \\sqrt{3} > 0$ and $dr/d\\theta = -1 < 0$. The signs are opposite, so $|r|$ is decreasing: the point is moving **toward** the origin.`
     },
     {
       id: 'pol6-dropdown',
@@ -101,7 +101,7 @@ $$L = \\int_0^{\\pi/2}\\sqrt{4\\cos^2\\theta + 4\\sin^2\\theta}\\,d\\theta = \\i
 **Polar Problem Checklist:**
 1. Identify the curve type (circle, cardioid, rose, etc.)
 2. Determine symmetry and appropriate limits
-3. Set up the correct integral (area: $\\frac{1}{2}r^2$; arc length: $\\sqrt{r^2+(r\')^2}$)
+3. Set up the correct integral (area: $\\frac{1}{2}r^2$; slope: $\\frac{dy/d\\theta}{dx/d\\theta}$)
 4. Use trig identities to evaluate
 5. Check your answer against geometric intuition
 

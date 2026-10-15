@@ -38,7 +38,7 @@ export const calcbcPowerSeriesPart6Data = {
           },
           {
             question: '$\\sum_{n=0}^\\infty (-1)^n \\frac{x^{2n+1}}{2n+1}$ represents:',
-            options: ['$\\arctan x$', '$\\sin x$', '$\\ln(1+x)$', '$\\tanh^{-1} x$'],
+            options: ['$\\arctan x$', '$\\sin x$', '$\\ln(1+x)$', '$\\cos x$'],
             correctAnswer: 0,
             explanation: 'This is the Maclaurin series for $\\arctan x = x - x^3/3 + x^5/5 - \\cdots = \\sum (-1)^n x^{2n+1}/(2n+1)$.'
           },

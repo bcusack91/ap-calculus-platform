@@ -35,13 +35,11 @@ $$\\frac{-3x\\sqrt{1 - 1/(9x)}}{2x+3} = \\frac{-3\\sqrt{1-0}}{2 + 3/x} = \\frac{
 ---
 
 ### Problem 3
-$$\\lim_{x \\to \\infty} \\left(\\sqrt{x^2 + 6x + 1} - x\\right)$$
+$$\\lim_{x \\to \\infty} \\frac{\\sqrt{x^2 + 6x + 1}}{3x - 2}$$
 
-**Solution:** Multiply by conjugate:
+**Solution:** For $x > 0$, $\\sqrt{x^2 + 6x + 1} = x\\sqrt{1 + 6/x + 1/x^2}$:
 
-$$\\frac{x^2+6x+1-x^2}{\\sqrt{x^2+6x+1}+x} = \\frac{6x+1}{\\sqrt{x^2+6x+1}+x}$$
-
-Divide by $x$: $\\frac{6+1/x}{\\sqrt{1+6/x+1/x^2}+1} \\to \\frac{6}{2} = 3$`
+$$\\frac{x\\sqrt{1 + 6/x + 1/x^2}}{3x - 2} = \\frac{\\sqrt{1 + 6/x + 1/x^2}}{3 - 2/x} \\to \\frac{\\sqrt{1}}{3} = \\frac{1}{3}$$`
     },
     {
       id: 'lai6-quiz1',
@@ -56,10 +54,10 @@ Divide by $x$: $\\frac{6+1/x}{\\sqrt{1+6/x+1/x^2}+1} \\to \\frac{6}{2} = 3$`
             explanation: '$(3x+1)^2 = 9x^2 + 6x + 1$. Degree 2 over degree 2: $\\frac{9}{1} = 9$.'
           },
           {
-            question: 'Evaluate $\\lim_{x \\to \\infty} \\frac{\\sqrt{x^2+1} - \\sqrt{x^2-1}}{1}$.',
-            options: ['$0$', '$2$', '$1$', '$\\infty$'],
+            question: 'Evaluate $\\lim_{x \\to \\infty} \\frac{\\sqrt{x^2+1}}{\\sqrt{4x^2-1}}$.',
+            options: ['$\\frac{1}{2}$', '$\\frac{1}{4}$', '$2$', '$1$'],
             correctAnswer: 0,
-            explanation: 'Conjugate: $\\frac{(x^2+1)-(x^2-1)}{\\sqrt{x^2+1}+\\sqrt{x^2-1}} = \\frac{2}{\\sqrt{x^2+1}+\\sqrt{x^2-1}} \\to \\frac{2}{x+x} = \\frac{1}{x} \\to 0$.'
+            explanation: 'For large $x$, $\\sqrt{x^2+1} \\approx x$ and $\\sqrt{4x^2-1} \\approx 2x$, so the ratio tends to $\\frac{x}{2x} = \\frac{1}{2}$. The value $\\frac{1}{4}$ forgets to take the square root of $4$, $2$ flips the ratio, and $1$ ignores the coefficient $4$.'
           },
           {
             question: '$\\lim_{x \\to -\\infty} \\frac{|2x+1|}{x+3}$ equals:',
@@ -85,15 +83,13 @@ $$\\frac{3 - e^{-x}}{1 + 5e^{-2x}} \\to \\frac{3-0}{1+0} = 3$$
 ---
 
 ### Problem 5
-$$\\lim_{x \\to \\infty} x^2(1 - \\cos(2/x))$$
+$$\\lim_{x \\to -\\infty} \\frac{3e^{2x} - e^x}{e^{2x} + 5}$$
 
-Let $u = 2/x$: as $x \\to \\infty, u \\to 0$. Rewrite:
+Same function as Problem 4, opposite direction. As $x \\to -\\infty$, $e^{2x} \\to 0$ and $e^x \\to 0$, so nothing grows and no division is needed:
 
-$$\\frac{4}{u^2}(1 - \\cos u) = 4 \\cdot \\frac{1 - \\cos u}{u^2}$$
+$$\\frac{3(0) - 0}{0 + 5} = 0$$
 
-Using $\\lim_{u \\to 0} \\frac{1-\\cos u}{u^2} = \\frac{1}{2}$:
-
-$$= 4 \\cdot \\frac{1}{2} = 2$$
+Problem 4 gave $y = 3$ on the right; this gives $y = 0$ on the left. Exponential functions often have different horizontal asymptotes in the two directions.
 
 ---
 
@@ -109,10 +105,10 @@ $$= \\lim_{x \\to \\infty} \\frac{\\ln 3 + \\ln x}{\\ln 5 + \\ln x} = \\lim_{x \
       exercise: {
         questions: [
           {
-            question: 'Evaluate $\\lim_{x \\to \\infty} x\\left(e^{3/x} - 1\\right)$.',
-            options: ['$\\infty$', '$\\frac{1}{3}$', '$3$', '$e^3$'],
+            question: 'Evaluate $\\lim_{x \\to \\infty} e^{(3x + 1)/x}$.',
+            options: ['$\\infty$', '$e$', '$e^3$', '$3$'],
             correctAnswer: 2,
-            explanation: 'Let $u = 3/x$: $\\frac{3}{u}(e^u - 1) = 3 \\cdot \\frac{e^u-1}{u} \\to 3 \\cdot 1 = 3$. The form $\\infty \\cdot 0$ is indeterminate, not automatically $\\infty$; writing $x = \\frac{u}{3}$ instead of $\\frac{3}{u}$ gives $\\frac{1}{3}$.'
+            explanation: 'The exponent $\\frac{3x + 1}{x} \\to 3$, and $e^u$ is continuous, so the limit is $e^3$. Answering $\\infty$ treats the exponent as growing, $e$ treats it as tending to $1$, and $3$ drops the exponential.'
           },
           {
             question: 'Evaluate $\\lim_{x \\to \\infty} \\frac{\\ln x^5}{5\\ln x + 2}$.',
@@ -131,14 +127,14 @@ $$= \\lim_{x \\to \\infty} \\frac{\\ln 3 + \\ln x}{\\ln 5 + \\ln x} = \\lim_{x \
 
 **1)** $\\lim_{x \\to \\infty} \\frac{(2x-1)(3x+4)}{(x+2)(6x-5)} = $
 
-**2)** $\\lim_{x \\to \\infty} \\left(\\sqrt{4x^2+3x} - 2x\\right) = $
+**2)** $\\lim_{x \\to \\infty} \\frac{3x}{\\sqrt{16x^2+3x}} = $
 
 **3)** $\\lim_{x \\to \\infty} \\frac{\\sin(x) + x^2}{x^2 + 1} = $
       `,
       exercise: {
         questions: [{ question: '(1)', answer: '1', acceptableAnswers: ['1'] }, { question: '(2)', answer: '3/4', acceptableAnswers: ['3/4', '0.75'] }, { question: '(3)', answer: '1', acceptableAnswers: ['1'] }],
         hint1: 'Expand: $\\frac{6x^2+5x-4}{6x^2+7x-10}$. Equal degrees, ratio = $6/6 = 1$.',
-        hint2: 'Conjugate: $\\frac{4x^2+3x-4x^2}{\\sqrt{4x^2+3x}+2x} = \\frac{3x}{\\sqrt{4x^2+3x}+2x}$. Divide by $x$: $\\frac{3}{2+2} = 3/4$.',
+        hint2: 'For $x > 0$, $\\sqrt{16x^2+3x} = 4x\\sqrt{1 + 3/(16x)}$, so the ratio tends to $\\frac{3x}{4x} = \\frac{3}{4}$.',
         hint3: '$\\frac{\\sin x + x^2}{x^2+1} = \\frac{\\sin x/x^2 + 1}{1 + 1/x^2} \\to \\frac{0+1}{1+0} = 1$.',
         explanation: '1) $1$. 2) $3/4$. 3) $1$ (using Squeeze for the $\\sin x / x^2$ term).'
       }
@@ -152,13 +148,13 @@ $$= \\lim_{x \\to \\infty} \\frac{\\ln 3 + \\ln x}{\\ln 5 + \\ln x} = \\lim_{x \
           { label: '$\\lim_{x \\to \\infty} \\frac{x}{\\sqrt{x^2+4}}$', options: ['$0$', '$1/2$', '$1$', '$2$'] },
           { label: '$\\lim_{x \\to -\\infty} \\frac{3x}{\\sqrt{9x^2+1}}$', options: ['$1$', '$-1$', '$3$', '$-3$'] },
           { label: '$\\lim_{x \\to \\infty} \\frac{2^x + 3^x}{4^x}$', options: ['$0$', '$1$', '$\\infty$', '$5$'] },
-          { label: '$\\lim_{x \\to \\infty} (1+2/x)^{5x}$', options: ['$1$', '$e^{10}$', '$e^5$', '$e^2$'] }
+          { label: '$\\lim_{x \\to \\infty} \\frac{5e^x}{2e^x + x^3}$', options: ['$0$', '$5/2$', '$\\infty$', '$5$'] }
         ],
-        correctAnswers: ['$1$', '$-1$', '$0$', '$e^{10}$'],
+        correctAnswers: ['$1$', '$-1$', '$0$', '$5/2$'],
         hint1: '$\\sqrt{x^2+4} \\approx x$ for large $x > 0$.',
         hint2: 'For $x < 0$: $\\sqrt{9x^2} = -3x$.',
         hint3: 'Divide by $4^x$: $(2/4)^x + (3/4)^x = (1/2)^x + (3/4)^x \\to 0+0$.',
-        explanation: '1) $1$. 2) $-1$. 3) $0$ (both terms decay). 4) $[(1+2/x)^x]^5 = (e^2)^5 = e^{10}$.'
+        explanation: '1) $1$. 2) $-1$. 3) $0$ (both terms decay). 4) Divide by $e^x$: $\\frac{5}{2 + x^3/e^x} \\to \\frac{5}{2}$, since $e^x$ dominates $x^3$.'
       }
     },
     {
@@ -177,7 +173,7 @@ $$= \\lim_{x \\to \\infty} \\frac{\\ln 3 + \\ln x}{\\ln 5 + \\ln x} = \\lim_{x \
             question: 'Evaluate $\\lim_{x \\to \\infty} \\frac{e^x - e^{-x}}{e^x + e^{-x}}$.',
             options: ['$0$', '$1$', '$-1$', 'Does not exist'],
             correctAnswer: 1,
-            explanation: 'Divide by $e^x$: $\\frac{1 - e^{-2x}}{1 + e^{-2x}} \\to \\frac{1-0}{1+0} = 1$. (This function is $\\tanh x$.)'
+            explanation: 'Divide by $e^x$: $\\frac{1 - e^{-2x}}{1 + e^{-2x}} \\to \\frac{1-0}{1+0} = 1$.'
           }
         ]
       }

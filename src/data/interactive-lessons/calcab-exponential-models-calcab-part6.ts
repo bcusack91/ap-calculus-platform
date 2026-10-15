@@ -13,7 +13,7 @@ export const calcabExpModelsPart6Data = {
 | Verbal Clue | Model | Equation |
 |:---:|:---:|:---:|
 | "Rate proportional to amount" | Exponential | $dy/dt = ky$ |
-| "Approaches a limiting value" | Logistic | $dP/dt = kP(1-P/L)$ |
+| "Rate proportional to the gap from a limit $A$" | Limited growth | $dy/dt = k(A-y)$ |
 | "Rate proportional to difference" | Newton\u2019s Cooling | $dT/dt = k(T-T_s)$ |
 | "Doubles every $n$ years" | Exponential | $y = y_0 \\cdot 2^{t/n}$ |
 | "Half-life of $n$ years" | Exponential decay | $y = y_0 (1/2)^{t/n}$ |
@@ -35,15 +35,15 @@ export const calcabExpModelsPart6Data = {
 | Use 30% | $0.30 = e^{kt}$ |
 | Solve | $t = \\frac{\\ln(0.30)}{k} = \\frac{5730 \\ln(0.30)}{-\\ln 2} \\approx 9953$ years |
 
-**Problem 2:** A lake has 1000 fish. The population follows $\\frac{dP}{dt} = 0.2P(1-P/5000)$.
+**Problem 2:** A lake is stocked toward 5000 fish. The population $F$ (with $t$ in years) follows $\\frac{dF}{dt} = 0.2(5000 - F)$, and $F(0) = 1000$.
 
 | Question | Answer |
 |:---:|:---:|
-| Carrying capacity? | $L = 5000$ |
-| Currently growing? | Yes: $P = 1000 < 5000$ |
-| Current growth rate? | $0.2(1000)(1-1000/5000) = 160$ fish/year |
-| Max possible rate? | $kL/4 = 0.2(5000)/4 = 250$ fish/year |
-| When is max rate? | At $P = 2500$ |`
+| Long-run population? | $F \\to 5000$ |
+| Currently growing? | Yes: $F = 1000 < 5000$, so $\\frac{dF}{dt} > 0$ |
+| Current growth rate? | $0.2(5000 - 1000) = 800$ fish/year |
+| Speeding up or slowing down? | $\\frac{d^2F}{dt^2} = -0.2\\frac{dF}{dt} < 0$: growth is slowing |
+| Particular solution? | $F(t) = 5000 - 4000e^{-0.2t}$ |`
     },
     {
       id: 'exp6-quiz1',
@@ -86,11 +86,11 @@ export const calcabExpModelsPart6Data = {
             explanation: 'Rate proportional to amount with elimination = exponential decay.'
           },
           {
-            label: '"A rumor spreads quickly at first, then slows as most people already know." Model:',
-            options: ['Exponential growth', 'Logistic growth', 'Exponential decay', 'Linear growth'],
-            correctAnswers: ['Logistic growth'],
-            hints: ['Growth that levels off = logistic.'],
-            explanation: 'The "levels off" behavior indicates a carrying capacity: logistic.'
+            label: '"An IV drip raises a drug level $y$ toward 40 mg at a rate proportional to how far below 40 mg it is." Model:',
+            options: ['$dy/dt = ky$', '$dy/dt = k(40 - y)$', '$dy/dt = 40 - kt$', '$dy/dt = ky(40 - y)$'],
+            correctAnswers: ['$dy/dt = k(40 - y)$'],
+            hints: ['"How far below 40 mg" is the gap $40 - y$.'],
+            explanation: 'The rate is proportional to the gap $40 - y$, so $dy/dt = k(40 - y)$ with $k > 0$. $ky$ ignores the 40 mg limit, $40 - kt$ depends on time instead of the gap, and $ky(40 - y)$ is jointly proportional to $y$ and the gap, which the statement does not say.'
           },
           {
             label: '"A hot pizza cools toward room temperature." The rate of cooling _____ over time.',
@@ -107,15 +107,14 @@ export const calcabExpModelsPart6Data = {
       type: 'input-box' as const,
       content: '**Apply the right model.** \u270d\ufe0f',
       exercise: {
-        question: 'A population of 2000 follows $\\frac{dP}{dt} = 0.3P(1-P/8000)$. What is the current rate of growth (in organisms per unit time)?\n\n(Enter an integer.)',
-        correctAnswer: '450',
-        acceptableAnswers: ['450'],
+        question: 'A population of 2000 follows $\\frac{dP}{dt} = 0.3(8000 - P)$. What is the current rate of growth (in organisms per unit time)?\n\n(Enter an integer.)',
+        correctAnswer: '1800',
+        acceptableAnswers: ['1800'],
         hints: [
           'Plug $P = 2000$ directly into the DE.',
-          '$0.3(2000)(1-2000/8000)$.',
-          '$0.3(2000)(1-0.25) = 0.3(2000)(0.75)$.'
+          '$0.3(8000 - 2000) = 0.3(6000)$.'
         ],
-        explanation: '$\\frac{dP}{dt} = 0.3(2000)(1-2000/8000) = 600(0.75) = 450$.'
+        explanation: '$\\frac{dP}{dt} = 0.3(8000 - 2000) = 0.3(6000) = 1800$. No solving is needed: the DE gives the rate directly.'
       }
     },
     {
@@ -126,7 +125,7 @@ export const calcabExpModelsPart6Data = {
 | Keyword | Model |
 |:---:|:---:|
 | Proportional to amount | Exponential |
-| Approaches limit | Logistic |
+| Approaches a limit $A$ | $dy/dt = k(A - y)$ |
 | Proportional to difference | Newton\u2019s cooling |
 | Doubles/halves | Exponential with $2^{t/n}$ or $(1/2)^{t/n}$ |
 

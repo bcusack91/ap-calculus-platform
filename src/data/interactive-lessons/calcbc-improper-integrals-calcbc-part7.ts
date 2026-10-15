@@ -108,9 +108,9 @@ $$A = \\int_1^{\\infty} \\frac{1}{x^2}\\,dx = \\lim_{t \\to \\infty} [-\\frac{1}
 **(b)** Volume revolved about the $x$-axis:
 $$V = \\pi\\int_1^{\\infty} \\frac{1}{x^4}\\,dx = \\pi \\cdot \\frac{1}{3} = \\frac{\\pi}{3}$$
 
-**(c)** Compare: $y = 1/x$ (Gabriel\u2019s Horn) has finite volume ($\\pi$) but infinite surface area. The $y = 1/x^2$ version has finite everything.
+**(c)** Compare: for $y = 1/x$ the area $\\int_1^{\\infty} \\frac{1}{x}\\,dx$ diverges, but the volume $\\pi\\int_1^{\\infty} \\frac{1}{x^2}\\,dx = \\pi$ is finite. For $y = 1/x^2$, both are finite.
 
-> **Key Insight:** Whether area/volume/surface area is finite depends on the power of $x$ in the denominator.`
+> **Key Insight:** Whether an area or volume is finite depends on the power of $x$ in the denominator. Squaring the radius for disks raises that power, which is why a volume can be finite when the area is not.`
     },
     {
       id: 'imp7-input',
@@ -134,7 +134,7 @@ $$V = \\pi\\int_1^{\\infty} \\frac{1}{x^4}\\,dx = \\pi \\cdot \\frac{1}{3} = \\f
 - Type II: discontinuous integrand \u2192 one-sided limit
 - $p$-test: the fundamental convergence criterion
 - Comparison tests: extend $p$-test to harder integrals
-- Key results: $e^{-kx}$, $\\arctan$, Gabriel\u2019s Horn
+- Key results: $e^{-kx}$, $\\arctan$, finite volume from an infinite area ($y = 1/x$)
 
 **AP Exam Checklist:**
 - Can you identify improper integrals?

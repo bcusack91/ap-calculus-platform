@@ -24,7 +24,7 @@ Now let\u2019s put the decomposition and integration together in complete worked
 | 5 | Find the constants ($A$, $B$, $C$, ...) |
 | 6 | Integrate each term separately |
 
-> **Key Fact:** Each integration produces either $\\ln|\\text{linear}|$, $\\frac{\\text{const}}{\\text{linear power}}$, $\\ln(\\text{quadratic})$, or $\\arctan$.`
+> **Key Fact:** With distinct linear factors, each piece $\\frac{A}{x-a}$ integrates to $A\\ln|x-a|$, so every answer is a sum of logarithms (plus any polynomial from long division).`
     },
     {
       id: 'pf4-example1',
@@ -132,10 +132,10 @@ $$\\boxed{\\int \\frac{1}{x^2-4}\\,dx = \\frac{1}{4}\\ln\\left|\\frac{x-2}{x+2}\
 
 | Integration Result | From |
 |-------------------|------|
-| $A\\ln|x-a|$ | $\\frac{A}{x-a}$ |
-| $\\frac{A}{(1-n)(x-a)^{n-1}}$ | $\\frac{A}{(x-a)^n}$, $n \\geq 2$ |
-| $\\frac{B}{2}\\ln(x^2+a^2)$ | $\\frac{Bx}{x^2+a^2}$ |
-| $\\frac{C}{a}\\arctan\\frac{x}{a}$ | $\\frac{C}{x^2+a^2}$ |
+| $A\\ln\\lvert x-a\\rvert$ | $\\frac{A}{x-a}$ |
+| $A\\ln\\lvert x-a\\rvert + B\\ln\\lvert x-b\\rvert$ | $\\frac{A}{x-a} + \\frac{B}{x-b}$ |
+| $\\ln\\left\\lvert\\frac{x-a}{x-b}\\right\\rvert$ | $\\frac{1}{x-a} - \\frac{1}{x-b}$ (combined) |
+| Quotient $+$ logs | Improper fraction after long division |
 
 > **Coming Up:** Part 5 covers what to do when the fraction is **improper** \u2014 long division before decomposition.`
     }

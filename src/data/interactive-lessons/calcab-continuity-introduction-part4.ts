@@ -66,7 +66,7 @@ In words: **a continuous function on a closed interval takes on every value betw
 
 By IVT, there exists $c \\in (0, 1)$ with $f(c) = 0$. **A root exists in $(0, 1)$.**
 
-> 💡 IVT *guarantees* existence; doesn\'t tell you the root\'s location. You\'d use other methods (bisection, Newton\'s method) to find it.
+> 💡 IVT *guarantees* existence; it doesn\'t tell you exactly where the root is. On the exam, a calculator finds the value when one is needed.
       `
     },
     {

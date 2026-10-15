@@ -137,7 +137,7 @@ $$\\boxed{\\int e^{kx}\\,dx = \\frac{1}{k}e^{kx} + C \\qquad \\int a^x\\,dx = \\
 | $\\frac{d}{dx}[a^x]$ | $a^x \\ln a$ |
 | $\\int a^x\\,dx$ | $\\frac{a^x}{\\ln a}+C$ |
 
-> **Up Next:** Part 5 \u2014 Logistic Growth.`
+> **Up Next:** Part 5 \u2014 Writing and Solving Rate Models.`
     }
   ]
 };

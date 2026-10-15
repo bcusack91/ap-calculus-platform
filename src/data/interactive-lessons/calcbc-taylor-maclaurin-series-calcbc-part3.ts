@@ -29,7 +29,7 @@ $$
 | **Multiplication** | $x\\cos x$: multiply $\\cos x$ series by $x$ |
 | **Differentiation** | $1/(1-x)^2$: differentiate $1/(1-x)$ |
 | **Integration** | $\\arctan x$: integrate $1/(1+x^2)$ |
-| **Addition** | $\\cosh x = (e^x + e^{-x})/2$: add two series |
+| **Addition** | $\\frac{e^x + e^{-x}}{2}$: add two series |
 
 > **AP Tip:** Building from known series is MUCH faster than computing derivatives from scratch. Always try this first.`
     },
@@ -90,7 +90,7 @@ $\\cos^2 x = 1 - x^2 + x^4/3 - \\cdots$
       exercise: {
         dropdowns: [
           {
-            label: 'The Maclaurin series for $\\sinh x = (e^x - e^{-x})/2$ is:',
+            label: 'The Maclaurin series for $\\frac{e^x - e^{-x}}{2}$ is:',
             options: ['$\\sum_{n=0}^\\infty \\frac{x^{2n+1}}{(2n+1)!}$', '$\\sum_{n=0}^\\infty \\frac{x^{n}}{2 \\cdot n!}$', '$\\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$', '$\\sum_{n=0}^\\infty \\frac{x^{2n}}{(2n)!}$'],
             correctAnswers: ['$\\sum_{n=0}^\\infty \\frac{x^{2n+1}}{(2n+1)!}$'],
             hints: ['$e^x - e^{-x}$ cancels even terms and doubles odd terms.'],

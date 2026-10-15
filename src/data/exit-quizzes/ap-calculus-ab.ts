@@ -1269,10 +1269,10 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     formSet: 'both',
   },
   {
-    question: 'What is $\\lim_{x \\to \\infty} \\left(1 + \\dfrac{3}{x}\\right)^x$?',
-    options: ['$1$', '$e^3$', '$3e$', '$\\infty$'],
+    question: 'What is $\\lim_{x \\to 0} \\dfrac{e^{2x} - 1}{x}$?',
+    options: ['$1$', '$2$', '$0$', '$e^2$'],
     correctAnswer: 1,
-    explanation: 'This is the standard form $\\lim(1 + k/x)^x = e^k$. Here $k = 3$, so the limit is $e^3$.',
+    explanation: 'The form is $\\frac{0}{0}$, and L\'Hospital\'s Rule gives $\\lim_{x \\to 0} \\frac{2e^{2x}}{1} = 2$; equivalently it is the derivative of $e^{2x}$ at $0$. Forgetting the chain-rule factor gives $1$, $0$ comes from substituting $x = 0$ into the numerator alone, and $e^2$ evaluates at $x = 1$ instead of $0$.',
     difficulty: 'hard',
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
@@ -3285,7 +3285,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     question: 'A student computes $\\dfrac{1 - \\cos(10^{-10})}{(10^{-10})^2}$ and gets 0 on a calculator. The most likely explanation:',
     options: ['The true limit is 0', 'Calculator precision broke down (catastrophic cancellation); true limit is $1/2$', 'The function blows up', 'The function oscillates'],
     correctAnswer: 1,
-    explanation: 'For tiny $x$, $1 - \\cos x$ rounds to 0 in finite precision. True limit is $1/2$ from the Taylor expansion.',
+    explanation: 'For tiny $x$, $1 - \\cos x$ rounds to 0 in finite precision. The true limit is $1/2$: applying L\'Hospital\'s Rule twice to $\\frac{1 - \\cos x}{x^2}$ gives $\\frac{\\cos x}{2} \\to \\frac{1}{2}$.',
     difficulty: 'hard', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both',
   },
   {

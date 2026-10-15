@@ -6,92 +6,71 @@ export const calcbcPartialFracPart3Data = {
       type: 'text' as const,
       content: `# Partial Fraction Decomposition
 
-**Part 3 of 7 \u2014 Irreducible Quadratic Factors**
+**Part 3 of 7 — Choosing the Right Tool for Rational Integrands**
 
-When the denominator contains a quadratic that can\u2019t be factored over the reals (discriminant < 0), the numerator in that partial fraction must be LINEAR, not constant.`
+Not every rational function needs partial fractions. Before decomposing, check for a faster route.
+
+| What you see | Tool |
+|-------------|------|
+| Numerator is a constant multiple of the denominator’s derivative | $u$-substitution: $\\ln\\lvert\\text{denominator}\\rvert$ |
+| Constant over $x^2 + a^2$ | Arctangent: $\\frac{1}{a}\\arctan\\frac{x}{a}$ |
+| Constant over a perfect square $(x - a)^2$ | Power rule: $-\\frac{1}{x - a}$ |
+| Denominator factors into distinct linear factors | Partial fractions |
+| Degree of numerator $\\ge$ degree of denominator | Long division first |
+
+> **Key Fact:** On the AP exam, partial fractions is used only when the denominator factors into distinct linear factors (FUN-6.F.1). A quadratic like $x^2 + 9$ that does not factor leads to an arctangent or a $u$-substitution, not to partial fractions.`
     },
     {
-      id: 'pf3-rule',
+      id: 'pf3-compare',
       type: 'text' as const,
-      content: `### Setup Rule
+      content: `### Three Integrals, Three Tools
 
-For an irreducible quadratic factor $(ax^2 + bx + c)$:
+| Integral | Why | Result |
+|----------|-----|--------|
+| $\\int \\frac{2x}{x^2 - 9}\\,dx$ | $2x$ is the derivative of $x^2 - 9$ | $\\ln\\lvert x^2 - 9\\rvert + C$ |
+| $\\int \\frac{6}{x^2 - 9}\\,dx$ | Constant numerator; $x^2 - 9 = (x-3)(x+3)$ | $\\ln\\lvert x - 3\\rvert - \\ln\\lvert x + 3\\rvert + C$ |
+| $\\int \\frac{6}{x^2 + 9}\\,dx$ | $x^2 + 9$ does not factor | $2\\arctan\\frac{x}{3} + C$ |
 
-$$\\frac{P(x)}{(x - r)(ax^2 + bx + c)} = \\frac{A}{x - r} + \\frac{Bx + C}{ax^2 + bx + c}$$
+For the middle integral, cover-up gives $A = \\frac{6}{3 + 3} = 1$ and $B = \\frac{6}{-3 - 3} = -1$.
 
-The numerator over the quadratic is $Bx + C$ (not just a constant $B$).
-
-### Why Linear Numerator?
-
-A quadratic factor has degree 2, so its partial fraction numerator must have degree at most 1 (one less than the factor\u2019s degree). This ensures enough unknowns for a unique decomposition.
-
-> **Key Fact:** \u201cIrreducible\u201d means $b^2 - 4ac < 0$. Examples: $x^2 + 1$, $x^2 + 4$, $x^2 + x + 1$.`
-    },
-    {
-      id: 'pf3-example',
-      type: 'text' as const,
-      content: `### Worked Example: $\\int \\frac{x+2}{(x-1)(x^2+1)}\\,dx$
-
-**Step 1:** Decompose
-$$\\frac{x+2}{(x-1)(x^2+1)} = \\frac{A}{x-1} + \\frac{Bx+C}{x^2+1}$$
-
-**Step 2:** Multiply through: $x+2 = A(x^2+1) + (Bx+C)(x-1)$
-
-| Method | Result |
-|--------|--------|
-| $x = 1$: $3 = 2A$ | $A = \\frac{3}{2}$ |
-| $x = 0$: $2 = A - C = \\frac{3}{2} - C$ | $C = -\\frac{1}{2}$ |
-| $x$-coefficients: $0 = A + B - C$... wait, compare $x^2$: $0 = A + B$ | $B = -\\frac{3}{2}$ |
-
-**Step 3:** Integrate each piece
-
-$$\\int \\frac{3/2}{x-1}\\,dx = \\frac{3}{2}\\ln|x-1|$$
-
-$$\\int \\frac{-\\frac{3}{2}x - \\frac{1}{2}}{x^2+1}\\,dx = -\\frac{3}{4}\\ln(x^2+1) - \\frac{1}{2}\\arctan x$$
-
-$$\\boxed{\\frac{3}{2}\\ln|x-1| - \\frac{3}{4}\\ln(x^2+1) - \\frac{1}{2}\\arctan x + C}$$`
-    },
-    {
-      id: 'pf3-integration',
-      type: 'text' as const,
-      content: `### Integrating $\\frac{Bx + C}{x^2 + a^2}$
-
-Split into two integrals:
-
-$$\\int \\frac{Bx + C}{x^2 + a^2}\\,dx = B \\int \\frac{x}{x^2+a^2}\\,dx + C\\int \\frac{1}{x^2+a^2}\\,dx$$
-
-| Integral | Result |
-|----------|--------|
-| $\\int \\frac{x}{x^2+a^2}\\,dx$ | $\\frac{1}{2}\\ln(x^2+a^2) + C$ (u-sub) |
-| $\\int \\frac{1}{x^2+a^2}\\,dx$ | $\\frac{1}{a}\\arctan\\frac{x}{a} + C$ |
-
-> **AP Tip:** Always split the numerator into an $x$-part (which gives logarithmic) and a constant part (which gives arctangent).`
+> **AP Tip:** Spend five seconds checking for $\\frac{f'(x)}{f(x)}$ before you start a decomposition. On a no-calculator question it can save several steps.`
     },
     {
       id: 'pf3-mc1',
       type: 'multiple-choice' as const,
-      content: '**Irreducible Quadratic Practice**',
+      content: '**Pick the Tool**',
       exercise: {
         questions: [
           {
-            question: 'The correct decomposition form for $\\frac{3}{(x+1)(x^2+4)}$ is:',
-            options: [
-              '$\\frac{A}{x+1} + \\frac{Bx+C}{x^2+4}$',
-              '$\\frac{A}{x+1} + \\frac{B}{x^2+4}$',
-              '$\\frac{Ax+B}{x+1} + \\frac{C}{x^2+4}$',
-              '$\\frac{A}{x+1} + \\frac{B}{x+2} + \\frac{C}{x-2}$'
-            ],
+            question: '$\\int \\frac{6}{x^2+9}\\,dx =$',
+            options: ['$2\\arctan\\frac{x}{3} + C$', '$6\\arctan\\frac{x}{3} + C$', '$\\ln|x-3| - \\ln|x+3| + C$', '$3\\ln(x^2+9) + C$'],
             correctAnswer: 0,
-            explanation: '$x^2+4$ is irreducible (discriminant $= 0 - 16 < 0$), so its numerator must be linear: $Bx + C$.'
+            explanation: '$\\int \\frac{6}{x^2 + 3^2}\\,dx = 6 \\cdot \\frac{1}{3}\\arctan\\frac{x}{3} + C = 2\\arctan\\frac{x}{3} + C$. Leaving out the $\\frac{1}{3}$ gives $6\\arctan\\frac{x}{3}$, the logarithm difference belongs to $x^2 - 9$ (which factors), and $3\\ln(x^2+9)$ would need an $x$ in the numerator.'
           },
           {
-            question: 'For $\\frac{3}{(x+1)(x^2+4)}$, using cover-up at $x = -1$: $A = $',
-            options: ['$\\frac{3}{5}$', '$\\frac{1}{5}$', '$3$', '$\\frac{3}{4}$'],
+            question: 'Which integral is best done with partial fractions?',
+            options: ['$\\int \\frac{5}{x^2 - x - 6}\\,dx$', '$\\int \\frac{2x - 1}{x^2 - x - 6}\\,dx$', '$\\int \\frac{5}{x^2 + 4x + 13}\\,dx$', '$\\int \\frac{5}{x^2 - 6x + 9}\\,dx$'],
             correctAnswer: 0,
-            explanation: 'Cover $(x+1)$, plug in $x=-1$: $A = \\frac{3}{(-1)^2+4} = \\frac{3}{5}$.'
+            explanation: '$x^2 - x - 6 = (x - 3)(x + 2)$ and the constant numerator is not its derivative, so decompose. The numerator $2x - 1$ is exactly the derivative of $x^2 - x - 6$ (use $u$-substitution), $x^2 + 4x + 13 = (x + 2)^2 + 9$ gives an arctangent, and $x^2 - 6x + 9 = (x - 3)^2$ integrates by the power rule.'
           }
         ]
       }
+    },
+    {
+      id: 'pf3-improper',
+      type: 'text' as const,
+      content: `### Partial Fractions Inside an Improper Integral
+
+$$\\int_2^{\\infty} \\frac{2}{x^2 - 1}\\,dx$$
+
+| Step | Work |
+|------|------|
+| Decompose | $\\frac{2}{(x-1)(x+1)} = \\frac{1}{x-1} - \\frac{1}{x+1}$ |
+| Antiderivative | $\\ln\\left\\lvert \\frac{x-1}{x+1} \\right\\rvert$ |
+| Set up the limit | $\\lim_{b \\to \\infty} \\left[\\ln\\frac{b-1}{b+1} - \\ln\\frac{1}{3}\\right]$ |
+| Evaluate | $\\ln 1 - \\ln\\frac{1}{3} = \\ln 3$ |
+
+The integral converges to $\\ln 3$. Combining the two logarithms first is what makes the limit easy: $\\frac{b-1}{b+1} \\to 1$, so its logarithm goes to $0$.`
     },
     {
       id: 'pf3-dropdown',
@@ -119,28 +98,29 @@ $$\\int \\frac{Bx + C}{x^2 + a^2}\\,dx = B \\int \\frac{x}{x^2+a^2}\\,dx + C\\in
     {
       id: 'pf3-input',
       type: 'input-box' as const,
-      content: '**Coefficient Finding**',
+      content: '**Improper Integral**',
       exercise: {
-        question: 'For $\\frac{x+2}{(x-1)(x^2+1)} = \\frac{3/2}{x-1} + \\frac{Bx+C}{x^2+1}$, compare $x^2$ coefficients on both sides: $0 = A + B = \\frac{3}{2} + B$. What is $B$?',
-        correctAnswer: '-3/2',
-        acceptableAnswers: ['-3/2', '-1.5'],
-        hints: ['$0 = \\frac{3}{2} + B$, so $B = -\\frac{3}{2}$.'],
-        explanation: '$B = -\\frac{3}{2}$. Then from constant terms: $2 = A - C = \\frac{3}{2} - C$, giving $C = -\\frac{1}{2}$.'
+        question: 'Evaluate $\\int_3^{\\infty} \\frac{4}{x^2 - 4}\\,dx$. Give an exact answer, such as ln(a), or a decimal to three places.',
+        correctAnswer: 'ln(5)',
+        acceptableAnswers: ['ln(5)', 'ln5', 'ln 5', '1.609'],
+        hints: ['Cover-up: $\\frac{4}{(x-2)(x+2)} = \\frac{1}{x-2} - \\frac{1}{x+2}$.', 'Antiderivative: $\\ln\\left\\lvert\\frac{x-2}{x+2}\\right\\rvert$. As $b \\to \\infty$, $\\ln\\frac{b-2}{b+2} \\to 0$.'],
+        explanation: '$\\lim_{b \\to \\infty}\\left[\\ln\\frac{b-2}{b+2} - \\ln\\frac{1}{5}\\right] = 0 + \\ln 5 = \\ln 5 \\approx 1.609$.'
       }
     },
     {
       id: 'pf3-summary',
       type: 'text' as const,
-      content: `### Key Takeaways \u2014 Part 3
+      content: `### Key Takeaways — Part 3
 
-| Concept | Details |
+| Integrand | First move |
 |---------|---------|
-| Irreducible quadratic | $b^2 - 4ac < 0$; needs $\\frac{Bx+C}{ax^2+bx+c}$ |
-| Integration split | Separate $Bx$ part (log) from $C$ part (arctan) |
-| Key formulas | $\\int \\frac{x}{x^2+a^2}\\,dx = \\frac{1}{2}\\ln(x^2+a^2)$ |
-| | $\\int \\frac{1}{x^2+a^2}\\,dx = \\frac{1}{a}\\arctan\\frac{x}{a}$ |
+| $\\frac{f'(x)}{f(x)}$ | $u$-substitution |
+| $\\frac{c}{x^2 + a^2}$ | Arctangent |
+| $\\frac{c}{(x - a)^2}$ | Power rule |
+| Distinct linear factors | Partial fractions |
+| Improper rational function | Long division first |
 
-> **Coming Up:** Part 4 puts it all together \u2014 full **integration with partial fractions** from start to finish.`
+> **Coming Up:** Part 4 puts it all together — full **integration with partial fractions** from start to finish.`
     }
   ]
 };

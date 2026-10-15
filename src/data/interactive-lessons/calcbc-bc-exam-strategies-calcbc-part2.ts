@@ -59,9 +59,9 @@ export const calcbcExamStrategyPart2Data = {
           },
           {
             question: 'On a calculator MC question asking for $\\int_0^2 \\sqrt{1 + (2x)^2}\\,dx$, the best approach is:',
-            options: ['Enter the integral into the calculator', 'Use the trig substitution $2x = \\tan\\theta$ by hand', 'Estimate it with a left Riemann sum of 4 rectangles', 'Simplify the integrand to $1 + 2x$ and integrate by hand'],
+            options: ['Enter the integral into the calculator', 'Find an antiderivative using $u = 1 + 4x^2$', 'Estimate it with a left Riemann sum of 4 rectangles', 'Simplify the integrand to $1 + 2x$ and integrate by hand'],
             correctAnswer: 0,
-            explanation: 'Calculator section integrals are designed to be evaluated numerically. Type it in and round to match the answer choices. Trig substitution is slow, a 4-rectangle Riemann sum is too rough to match the choices, and $\\sqrt{1 + (2x)^2} \\neq 1 + 2x$.'
+            explanation: 'Calculator section integrals are designed to be evaluated numerically. Type it in and round to match the answer choices. The substitution $u = 1 + 4x^2$ needs a factor of $x$ that the integrand does not have, a 4-rectangle Riemann sum is too rough to match the choices, and $\\sqrt{1 + (2x)^2} \\neq 1 + 2x$.'
           },
           {
             question: 'Process of elimination is most useful when:',
@@ -101,8 +101,8 @@ export const calcbcExamStrategyPart2Data = {
       content: '**Quick Estimation**',
       exercise: {
         question: 'Estimate $\\int_0^1 e^{-x^2}\\,dx$ using the trapezoidal rule with $n=2$ (to 2 decimal places).',
-        correctAnswer: '0.77',
-        acceptableAnswers: ['0.77', '0.771'],
+        correctAnswer: '0.73',
+        acceptableAnswers: ['0.73', '0.731'],
         hints: ['$h = 0.5$. Trap rule: $h/2[f(0) + 2f(0.5) + f(1)]$. $f(x) = e^{-x^2}$, so $f(0) = 1$, $f(0.5) = e^{-0.25} \\approx 0.7788$, $f(1) = e^{-1} \\approx 0.3679$.'],
         explanation: '$T = \\frac{0.5}{2}[f(0) + 2f(0.5) + f(1)] = 0.25[1 + 2(0.7788) + 0.3679] = 0.25(2.9255) \\approx 0.7314$, so the answer is approximately $0.73$.'
       }

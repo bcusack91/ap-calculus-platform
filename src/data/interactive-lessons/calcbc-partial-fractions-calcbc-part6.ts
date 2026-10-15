@@ -16,8 +16,8 @@ Mixed practice combining all partial fraction techniques. For each problem, deci
 |----------|-----------|
 | Is deg(num) $\\geq$ deg(den)? | Long division first |
 | All distinct linear factors? | $\\frac{A}{x-a} + \\frac{B}{x-b} + \\ldots$ |
-| Repeated linear factor $(x-a)^n$? | Add terms through $(x-a)^n$ |
-| Irreducible quadratic $ax^2+bx+c$? | Use $\\frac{Bx+C}{ax^2+bx+c}$ |`
+| Numerator a multiple of the denominator’s derivative? | $u$-substitution instead |
+| Quadratic denominator that does not factor? | Arctangent (complete the square if needed) |`
     },
     {
       id: 'pf6-mc1',
@@ -37,15 +37,15 @@ Mixed practice combining all partial fraction techniques. For each problem, deci
             explanation: '$\\frac{3}{(x-3)(x+3)} = \\frac{1/2}{x-3} - \\frac{1/2}{x+3}$. Cover-up: $A = \\frac{3}{6} = \\frac{1}{2}$, $B = \\frac{3}{-6} = -\\frac{1}{2}$. Result: $\\frac{1}{2}\\ln\\left|\\frac{x-3}{x+3}\\right| + C$.'
           },
           {
-            question: '$\\int \\frac{x}{(x+1)^2}\\,dx = $',
+            question: '$\\int \\frac{x+4}{x^2+x-2}\\,dx = $',
             options: [
-              '$\\ln|x+1| + \\frac{1}{x+1} + C$',
-              '$\\frac{x}{x+1} + C$',
-              '$\\ln|x+1| - \\frac{1}{x+1} + C$',
-              '$-\\frac{x}{(x+1)^2} + C$'
+              '$\\frac{5}{3}\\ln|x-1| - \\frac{2}{3}\\ln|x+2| + C$',
+              '$\\frac{5}{3}\\ln|x-1| + \\frac{2}{3}\\ln|x+2| + C$',
+              '$\\frac{2}{3}\\ln|x-1| - \\frac{5}{3}\\ln|x+2| + C$',
+              '$\\ln|x^2+x-2| + C$'
             ],
             correctAnswer: 0,
-            explanation: '$\\frac{x}{(x+1)^2} = \\frac{A}{x+1} + \\frac{B}{(x+1)^2}$. Multiply: $x = A(x+1) + B$. At $x=-1$: $B = -1$. Coefficients: $A = 1$. So $\\int \\frac{1}{x+1} - \\frac{1}{(x+1)^2}\\,dx = \\ln|x+1| + \\frac{1}{x+1} + C$.'
+            explanation: '$x^2+x-2 = (x-1)(x+2)$. Cover-up: $A = \\frac{1+4}{1+2} = \\frac{5}{3}$ and $B = \\frac{-2+4}{-2-1} = -\\frac{2}{3}$. A plus sign drops the negative from $-2 - 1$, swapping the constants attaches each to the wrong factor, and $\\ln|x^2+x-2|$ would need the numerator $2x + 1$.'
           },
           {
             question: 'Before applying partial fractions to $\\frac{x^3+x}{x^2-4}$, you must first:',
@@ -68,15 +68,15 @@ Mixed practice combining all partial fraction techniques. For each problem, deci
       exercise: {
         questions: [
           {
-            question: '$\\int \\frac{1}{x(x^2+1)}\\,dx = $',
+            question: '$\\int_1^2 \\frac{2}{x(x+2)}\\,dx = $',
             options: [
-              '$\\ln|x| - \\frac{1}{2}\\ln(x^2+1) + C$',
-              '$\\ln|x| + \\arctan x + C$',
-              '$\\ln|x| - \\ln(x^2+1) + C$',
-              '$\\ln|x| - \\arctan x + C$'
+              '$\\ln\\frac{3}{2}$',
+              '$\\ln\\frac{2}{3}$',
+              '$2\\ln\\frac{3}{2}$',
+              '$\\ln\\frac{1}{2}$'
             ],
             correctAnswer: 0,
-            explanation: 'Decompose: $\\frac{1}{x} + \\frac{Bx+C}{x^2+1}$. Multiply: $1 = (x^2+1) + (Bx+C)x$. At $x=0$: $A = 1$. Coefficients of $x^2$: $0 = 1 + B$, so $B = -1$. Coefficients of $x$: $C = 0$. Integral: $\\ln|x| - \\frac{1}{2}\\ln(x^2+1) + C$.'
+            explanation: 'Cover-up: $A = \\frac{2}{0+2} = 1$ and $B = \\frac{2}{-2} = -1$, so the antiderivative is $\\ln\\left|\\frac{x}{x+2}\\right|$. Then $\\ln\\frac{2}{4} - \\ln\\frac{1}{3} = \\ln\\frac{3}{2}$. Reversing the signs of $A$ and $B$ gives $\\ln\\frac{2}{3}$, skipping the division by the other factor gives $A = 2$ and doubles the answer, and $\\ln\\frac{1}{2}$ evaluates only the upper limit.'
           }
         ]
       }
@@ -124,7 +124,7 @@ Mixed practice combining all partial fraction techniques. For each problem, deci
 | Common Mistake | How to Avoid |
 |---------------|-------------|
 | Forgetting long division | Always check degrees first |
-| Wrong decomposition form | Repeated: need all powers; quadratic: need $Bx+C$ |
+| Decomposing when $u$-sub works | Check for $\\frac{f'(x)}{f(x)}$ first |
 | Sign errors in cover-up | Double-check by plugging back in |
 | Missing absolute values | $\\ln|x-a|$, not $\\ln(x-a)$ |
 

@@ -4,47 +4,48 @@ export const calcbcArcLengthPart3Data = {
     {
       id: 'al3-intro',
       type: 'text' as const,
-      content: `# Arc Length & Surface Area — Surface Area of Revolution
+      content: `# Arc Length — Distance Traveled
 
-**Part 3 of 7 — Surfaces of Revolution**
+**Part 3 of 7 — Speed, Distance Traveled, and Displacement**
 
-When a curve is rotated about an axis, it sweeps out a surface. The surface area is:
+For a particle moving in the plane with position $(x(t), y(t))$:
 
-### About the $x$-axis ($y \\ge 0$):
+$$\\text{speed} = \\sqrt{\\left(\\frac{dx}{dt}\\right)^2 + \\left(\\frac{dy}{dt}\\right)^2}$$
 
-$$\\boxed{S = 2\\pi \\int_a^b y\\,ds = 2\\pi \\int_a^b f(x)\\sqrt{1 + (f'(x))^2}\\,dx}$$
+$$\\boxed{\\text{distance traveled from } t = a \\text{ to } t = b = \\int_a^b \\sqrt{\\left(\\frac{dx}{dt}\\right)^2 + \\left(\\frac{dy}{dt}\\right)^2}\\,dt}$$
 
-### About the $y$-axis ($x \\ge 0$):
+This is exactly the parametric arc length integral from Part 2: the integral of speed is the length of the path the particle covers.
 
-$$\\boxed{S = 2\\pi \\int_a^b x\\,ds = 2\\pi \\int_a^b x\\sqrt{1 + (f'(x))^2}\\,dx}$$
+| Quantity | How to find it | Can cancel? |
+|----------|---------------|-------------|
+| Displacement in $x$ | $\\int_a^b x'(t)\\,dt$ | Yes |
+| Position at $t = b$ | $x(a) + \\int_a^b x'(t)\\,dt$ (same for $y$) | Yes |
+| Distance traveled | $\\int_a^b \\text{speed}\\,dt$ | No |
 
-| Axis of Revolution | Radius of Revolution | Formula |
-|-------------------|---------------------|---------|
-| $x$-axis | $y = f(x)$ | $2\\pi\\int y\\,ds$ |
-| $y$-axis | $x$ | $2\\pi\\int x\\,ds$ |
-
-> **Key Fact:** The formula is $S = 2\\pi\\int(\\text{radius})(ds)$. The "radius" is the distance from the curve to the axis of rotation.`
+> **Key Fact:** Distance traveled equals the arc length of the path only when the path is traced once. If the particle goes around a loop twice, the distance counts both trips.`
     },
     {
       id: 'al3-examples',
       type: 'text' as const,
-      content: `### Example 1 — Sphere Surface Area
+      content: `### Worked Example (calculator active)
 
-Rotate $y = \\sqrt{r^2 - x^2}$ (semicircle) about the $x$-axis, $-r \\le x \\le r$.
+A particle has $x'(t) = \\cos(t^2)$ and $y'(t) = e^{0.5t}$, and is at $(2, 1)$ when $t = 0$.
 
-$y' = \\frac{-x}{\\sqrt{r^2-x^2}}$, $1 + (y')^2 = \\frac{r^2}{r^2 - x^2}$
+**(a) Speed at $t = 1$:** $\\sqrt{\\cos^2(1) + e^{1}} = \\sqrt{0.2919 + 2.7183} \\approx 1.735$.
 
-$$S = 2\\pi\\int_{-r}^{r} \\sqrt{r^2 - x^2}\\cdot\\frac{r}{\\sqrt{r^2-x^2}}\\,dx = 2\\pi r\\int_{-r}^{r}dx = 2\\pi r(2r) = 4\\pi r^2$$
+**(b) Distance traveled on $0 \\le t \\le 2$:**
 
-This confirms the known sphere surface area formula. ✓
+$$\\int_0^2 \\sqrt{\\cos^2(t^2) + e^{t}}\\,dt \\approx 3.828$$
 
-### Example 2 — Cone Lateral Surface
+**(c) Position at $t = 2$:**
 
-Rotate $y = 2x$ from $x = 0$ to $x = 3$ about the $x$-axis.
+$$x(2) = 2 + \\int_0^2 \\cos(t^2)\\,dt \\approx 2.461, \\qquad y(2) = 1 + \\int_0^2 e^{0.5t}\\,dt \\approx 4.437$$
 
-$y' = 2$, $ds = \\sqrt{1+4}\\,dx = \\sqrt{5}\\,dx$
+Notice the different jobs: part (b) integrates speed, which is never negative, while part (c) integrates each velocity component separately and adds the starting position.
 
-$$S = 2\\pi\\int_0^3 2x\\cdot\\sqrt{5}\\,dx = 4\\pi\\sqrt{5}\\cdot\\frac{9}{2} = 18\\pi\\sqrt{5}$$`
+### A Path Traced Twice
+
+$x = \\cos 2t$, $y = \\sin 2t$, $0 \\le t \\le 2\\pi$: the speed is $2$, so the distance traveled is $\\int_0^{2\\pi} 2\\,dt = 4\\pi$. The circle itself has length $2\\pi$; the particle goes around it twice. Its displacement is $0$ because it ends where it started.`
     },
     {
       id: 'al3-mc1',
@@ -53,16 +54,16 @@ $$S = 2\\pi\\int_0^3 2x\\cdot\\sqrt{5}\\,dx = 4\\pi\\sqrt{5}\\cdot\\frac{9}{2} =
       exercise: {
         questions: [
           {
-            question: 'The surface area formula $S = 2\\pi\\int y\\,ds$ assumes revolution about which axis?',
-            options: ['The $x$-axis', 'The $y$-axis', 'Either axis', 'The line $y = x$'],
-            correctAnswer: 0,
-            explanation: 'When revolving about the $x$-axis, each point traces a circle of radius $y$ (its distance from the $x$-axis). So the integrand involves $2\\pi y$.'
+            question: 'A particle has velocity vector $\\langle 3, 4t \\rangle$. The total distance it travels from $t = 0$ to $t = 1$ is:',
+            options: ['$\\int_0^1 (3 + 4t)\\,dt$', '$\\sqrt{\\int_0^1 (9 + 16t^2)\\,dt}$', '$\\int_0^1 \\sqrt{9 + 16t^2}\\,dt$', '$\\int_0^1 (9 + 16t^2)\\,dt$'],
+            correctAnswer: 2,
+            explanation: 'Distance traveled is the integral of speed, $\\sqrt{3^2 + (4t)^2}$, so it is $\\int_0^1\\sqrt{9 + 16t^2}\\,dt \\approx 3.736$. Adding the components skips the Pythagorean step, the square root must sit inside the integral, and leaving out the root integrates speed squared.'
           },
           {
-            question: 'For revolution about the $y$-axis, the "radius of revolution" for a point $(x, y)$ is:',
-            options: ['$x$', '$y$', '$\\sqrt{x^2+y^2}$', '$x + y$'],
-            correctAnswer: 0,
-            explanation: 'The radius is the horizontal distance from $(x, y)$ to the $y$-axis, which is $|x|$. With $x \\ge 0$, this is simply $x$.'
+            question: 'A particle moves with $x = \\cos 2t$, $y = \\sin 2t$ for $0 \\le t \\le 2\\pi$. Its total distance traveled is:',
+            options: ['$0$', '$2\\pi$', '$4\\pi$', '$8\\pi$'],
+            correctAnswer: 2,
+            explanation: 'The speed is $\\sqrt{4\\sin^2 2t + 4\\cos^2 2t} = 2$, so the distance is $2 \\cdot 2\\pi = 4\\pi$: two laps of the unit circle. The displacement is $0$, the length of the circle traced once is $2\\pi$, and $8\\pi$ doubles the speed again.'
           }
         ]
       }
@@ -74,18 +75,18 @@ $$S = 2\\pi\\int_0^3 2x\\cdot\\sqrt{5}\\,dx = 4\\pi\\sqrt{5}\\cdot\\frac{9}{2} =
       exercise: {
         dropdowns: [
           {
-            label: 'Rotating $y = x^2$ from $x = 0$ to $x = 1$ about the $x$-axis gives $S = $',
-            options: ['$2\\pi\\int_0^1 x^2\\sqrt{1+4x^2}\\,dx$', '$2\\pi\\int_0^1 x\\sqrt{1+4x^2}\\,dx$', '$2\\pi\\int_0^1 \\sqrt{1+4x^2}\\,dx$', '$\\pi\\int_0^1 x^4\\sqrt{1+4x^2}\\,dx$'],
-            correctAnswers: ['$2\\pi\\int_0^1 x^2\\sqrt{1+4x^2}\\,dx$'],
-            hints: ['About the $x$-axis: radius $= y = x^2$, $ds = \\sqrt{1+(2x)^2}\\,dx$.'],
-            explanation: '$S = 2\\pi\\int y\\,ds = 2\\pi\\int_0^1 x^2\\sqrt{1+4x^2}\\,dx$. Using the disk-style $\\pi y^2$, using $x$ instead of $y$ as the radius, or dropping the radius altogether are the common slips.'
+            label: 'For a particle with known $x(0)$, the $x$-coordinate at $t = 3$ is found from',
+            options: ['$x(0) + \\int_0^3 x\'(t)\\,dt$', '$\\int_0^3 x\'(t)\\,dt$', '$x(0) + \\int_0^3 |x\'(t)|\\,dt$', '$x(0) + x\'(3) \\cdot 3$'],
+            correctAnswers: ['$x(0) + \\int_0^3 x\'(t)\\,dt$'],
+            hints: ['Position = starting position + net change.'],
+            explanation: 'Net change in $x$ is $\\int_0^3 x\'(t)\\,dt$, added to the starting value. Leaving out $x(0)$ gives only the displacement, the absolute value gives the horizontal distance traveled, and $x\'(3)\\cdot 3$ treats the velocity as constant.'
           },
           {
-            label: 'If a curve lies below the $x$-axis and is rotated about the $x$-axis, the radius is:',
-            options: ['$|y|$ (distance to the axis)', '$y$ (signed, so negative here)', '$y^2$ (squared to stay positive)', '$\\sqrt{1+(y\')^2}$ (the arc length factor)'],
-            correctAnswers: ['$|y|$ (distance to the axis)'],
-            hints: ['Surface area must be positive.'],
-            explanation: 'The radius is the distance from the curve to the axis, $|y|$ (which equals $-y$ when $y < 0$). Using signed $y$ makes the integral negative, $y^2$ is not a distance, and $\\sqrt{1+(y\')^2}$ is the $ds$ factor, not the radius. Surface area is always non-negative.'
+            label: 'Distance traveled equals the arc length of the path when',
+            options: ['the particle never stops moving', 'the path is traced exactly once', 'the path is a closed loop', 'both velocity components are positive'],
+            correctAnswers: ['the path is traced exactly once'],
+            hints: ['What happens to the distance if part of the path is covered twice?'],
+            explanation: 'The integral of speed counts every trip along the path, so it matches the curve\'s length only when no part is retraced. A closed loop can still be traced twice, and a particle can keep moving while it backtracks; positive components are sufficient but not necessary.'
           }
         ]
       }
@@ -93,13 +94,13 @@ $$S = 2\\pi\\int_0^3 2x\\cdot\\sqrt{5}\\,dx = 4\\pi\\sqrt{5}\\cdot\\frac{9}{2} =
     {
       id: 'al3-input',
       type: 'input-box' as const,
-      content: '**Verification**',
+      content: '**Computation**',
       exercise: {
-        question: 'Rotate $y = r$ (horizontal line, constant) from $x = 0$ to $x = h$ about the $x$-axis. The surface is a cylinder. Its surface area is $2\\pi r h$. Verify: $y\' = 0$, so $S = 2\\pi\\int_0^h r\\cdot 1\\,dx = ?$ Give the answer in terms of $r$ and $h$ as "2pirh".',
-        correctAnswer: '2pirh',
-        acceptableAnswers: ['2pirh', '2πrh', '2pi*r*h', '2 pi r h'],
-        hints: ['$ds = \\sqrt{1+0}\\,dx = dx$.'],
-        explanation: '$S = 2\\pi\\int_0^h r\\,dx = 2\\pi r[x]_0^h = 2\\pi rh$. This is the lateral surface area of a cylinder. ✓'
+        question: 'A particle has $x\'(t) = 6t$ and $y\'(t) = 8t$. Find the total distance it travels from $t = 0$ to $t = 3$.',
+        correctAnswer: '45',
+        acceptableAnswers: ['45', '45.0'],
+        hints: ['Speed $= \\sqrt{36t^2 + 64t^2}$.', 'For $t \\ge 0$, speed $= 10t$.'],
+        explanation: 'Speed $= \\sqrt{100t^2} = 10t$ for $t \\ge 0$, so the distance is $\\int_0^3 10t\\,dt = 5t^2\\big|_0^3 = 45$.'
       }
     },
     {
@@ -107,12 +108,12 @@ $$S = 2\\pi\\int_0^3 2x\\cdot\\sqrt{5}\\,dx = 4\\pi\\sqrt{5}\\cdot\\frac{9}{2} =
       type: 'text' as const,
       content: `### Summary
 
-- Surface area of revolution = $2\\pi\\int(\\text{radius})(ds)$
-- About $x$-axis: radius $= |y|$
-- About $y$-axis: radius $= |x|$
-- Verify with known shapes: sphere ($4\\pi r^2$), cylinder ($2\\pi rh$), cone ($\\pi r\\ell$)
+- Distance traveled $= \\int_a^b \\sqrt{(x')^2 + (y')^2}\\,dt$, the integral of speed
+- Position $=$ starting position $+ \\int$ velocity component (one coordinate at a time)
+- Distance never cancels; displacement can
+- Distance equals arc length only when the path is traced once
 
-> **Next:** Part 4 — Parametric and polar surface area formulas.`
+> **Next:** Part 4 — Arc length with respect to $y$ and arc length functions.`
     }
   ]
 };

@@ -23,23 +23,20 @@ export const calcabLimitsInfinityPart7Data = {
 |------|---------------------|
 | $\\deg(p) < \\deg(q)$ | $y = 0$ |
 | $\\deg(p) = \\deg(q)$ | $y = \\frac{\\text{lead coeff of } p}{\\text{lead coeff of } q}$ |
-| $\\deg(p) = \\deg(q)+1$ | Oblique: $y = mx + b$ (from division) |
-| $\\deg(p) > \\deg(q)+1$ | None |
+| $\\deg(p) > \\deg(q)$ | None: $f(x) \\to \\pm\\infty$ |
 
 ### Growth Rate Hierarchy (slowest → fastest)
-$$\\ln x \\ll x^p \\ll a^x \\ll x! \\quad (p > 0, \\, a > 1)$$
+$$\\ln x \\ll x^p \\ll a^x \\quad (p > 0, \\, a > 1)$$
 
 ### Key Techniques
 1. **Divide by highest power** of $x$ in denominator
-2. **Conjugate multiplication** for $\\sqrt{\\phantom{x}} - \\text{linear}$ forms
+2. **Pull $\\sqrt{x^2} = |x|$ out of radicals**, using $|x| = -x$ when $x \\to -\\infty$
 3. **Squeeze Theorem** for oscillating functions
-4. **Substitution** $u = 1/x$ for trigonometric limits
+4. **Continuity** for composite limits: find the inside limit first
 5. **Factor** dominant terms for exponential expressions
 
 ### Essential Special Limits
-$$\\lim_{x \\to \\infty}\\left(1+\\frac{k}{x}\\right)^x = e^k \\qquad \\lim_{u \\to 0}\\frac{\\sin u}{u} = 1$$
-
-$$\\lim_{u \\to 0}\\frac{1-\\cos u}{u}=0 \\qquad \\lim_{u \\to 0}\\frac{e^u-1}{u}=1$$`
+$$\\lim_{u \\to 0}\\frac{\\sin u}{u} = 1 \\qquad \\lim_{u \\to 0}\\frac{1-\\cos u}{u}=0 \\qquad \\lim_{u \\to 0}\\frac{e^u-1}{u}=1$$`
     },
     {
       id: 'lai7-quiz1',
@@ -61,9 +58,9 @@ $$\\lim_{u \\to 0}\\frac{1-\\cos u}{u}=0 \\qquad \\lim_{u \\to 0}\\frac{e^u-1}{u
           },
           {
             question: 'The function $f(x) = \\frac{3x^2 + 2}{x - 5}$ has:',
-            options: ['A horizontal asymptote at $y = 3$', 'An oblique asymptote', 'Only a vertical asymptote at $x = 5$', 'A horizontal asymptote at $y = 0$'],
+            options: ['A horizontal asymptote at $y = 3$', 'No horizontal asymptote at all', 'A horizontal asymptote at $y = 0$', 'Two horizontal asymptotes, $y = \\pm 3$'],
             correctAnswer: 1,
-            explanation: 'Degree 2 over degree 1: difference is exactly 1, so $f$ has an oblique asymptote. (Long division gives $y = 3x + 15$.) It also has a vertical asymptote at $x = 5$, but that is not the only one, and with the numerator\'s degree higher there is no horizontal asymptote.'
+            explanation: 'The numerator has the higher degree, so $f(x) \\to \\infty$ as $x \\to \\infty$ and $f(x) \\to -\\infty$ as $x \\to -\\infty$: no horizontal asymptote on either side. The value $3$ is the ratio of leading coefficients, which applies only to equal degrees; $y = 0$ applies when the denominator has the higher degree; and a rational function has the same end behavior type on both sides, so it cannot have two. ($f$ does have a vertical asymptote at $x = 5$.)'
           }
         ]
       }
@@ -81,10 +78,10 @@ $$\\lim_{u \\to 0}\\frac{1-\\cos u}{u}=0 \\qquad \\lim_{u \\to 0}\\frac{e^u-1}{u
             explanation: 'Divide by $e^x$: $\\frac{1 + 2x^{10}/e^x}{3 - x^5/e^x} \\to \\frac{1+0}{3-0} = \\frac{1}{3}$. Taking the ratio of the polynomial coefficients, $\\frac{2}{-1} = -2$, ignores that the exponentials dominate every power of $x$.'
           },
           {
-            question: 'Evaluate $\\lim_{x \\to \\infty} \\left(\\sqrt{x^2+8x} - x\\right)$.',
-            options: ['$0$', '$2$', '$4$', '$8$'],
+            question: 'Evaluate $\\lim_{x \\to \\infty} \\frac{\\sqrt{x^2+8x}}{2x - 1}$.',
+            options: ['$1$', '$2$', '$\\frac{1}{2}$', '$4$'],
             correctAnswer: 2,
-            explanation: 'Conjugate: $\\frac{x^2+8x-x^2}{\\sqrt{x^2+8x}+x} = \\frac{8x}{\\sqrt{x^2+8x}+x}$. Divide by $x$: $\\frac{8}{\\sqrt{1+8/x}+1} \\to \\frac{8}{2} = 4$.'
+            explanation: 'Factor $x^2$ out of the radical: $\\sqrt{x^2 + 8x} = x\\sqrt{1 + 8/x}$ for $x > 0$, so the limit is $\\frac{\\sqrt{1 + 0}}{2 - 0} = \\frac{1}{2}$. The value $2$ flips the coefficients, $1$ ignores the $2$ in the denominator, and $4$ uses the $8x$ term, which becomes negligible.'
           },
           {
             question: 'Which statement is FALSE about horizontal asymptotes?',
@@ -108,17 +105,17 @@ $$\\lim_{u \\to 0}\\frac{1-\\cos u}{u}=0 \\qquad \\lim_{u \\to 0}\\frac{e^u-1}{u
 
 **1)** $\\lim_{x \\to \\infty} \\frac{\\sqrt{16x^2+x}}{2x+1} = $
 
-**2)** $\\lim_{x \\to \\infty} x(\\ln(x+1) - \\ln x) = $
+**2)** $\\lim_{x \\to \\infty} \\frac{5x + 3\\cos x}{x + 2} = $
 
-**3)** $\\lim_{x \\to \\infty} \\left(1 + \\frac{3}{2x}\\right)^{4x} = e^{?}$. Enter the exponent.
+**3)** $\\lim_{x \\to \\infty} \\frac{4}{\\pi}\\arctan x = $
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '1', '6'],
+        correctAnswers: ['2', '5', '2'],
         hint1: '$\\sqrt{16x^2+x} \\approx 4x$. So $\\frac{4x}{2x+1} \\to 2$.',
-        hint2: '$x \\ln\\frac{x+1}{x} = x\\ln(1+1/x)$. Let $u=1/x$: $\\frac{\\ln(1+u)}{u} \\to 1$.',
-        hint3: 'Rewrite: $[(1+\\frac{3}{2x})^{2x}]^2 = [e^{3}]^2=e^6$.',
-        explanation: '1) $2$. 2) $1$ (using $\\ln(1+u)/u \\to 1$). 3) $6$.'
+        hint2: 'Divide by $x$: $\\frac{5 + 3\\cos x / x}{1 + 2/x}$, and $\\frac{3\\cos x}{x} \\to 0$ by the Squeeze Theorem.',
+        hint3: '$\\arctan x \\to \\frac{\\pi}{2}$ as $x \\to \\infty$.',
+        explanation: '1) $2$. 2) $5$ (the bounded $\\cos x$ term is negligible). 3) $\\frac{4}{\\pi} \\cdot \\frac{\\pi}{2} = 2$.'
       }
     },
     {

@@ -15,7 +15,7 @@ export const calcabExpModelsPart7Data = {
 | Exponential growth | $dy/dt = ky$, $k>0$ | $y = y_0 e^{kt}$ |
 | Exponential decay | $dy/dt = ky$, $k<0$ | $y = y_0 e^{kt}$ |
 | Newton\u2019s cooling | $dT/dt = k(T-T_s)$ | $T = T_s+(T_0-T_s)e^{kt}$ |
-| Logistic | $dP/dt=kP(1-P/L)$ | $P \\to L$ as $t \\to \\infty$ |
+| Limited growth | $dy/dt = k(A-y)$ | $y = A-(A-y_0)e^{-kt}$ |
 | Continuous compounding | $dA/dt = rA$ | $A = Pe^{rt}$ |
 
 ### Top AP Mistakes
@@ -24,7 +24,7 @@ export const calcabExpModelsPart7Data = {
 |:---:|:---:|
 | Using wrong sign for $k$ | Decay: $k < 0$. Growth: $k > 0$. |
 | Forgetting $T_s$ in Newton\u2019s Law | $T = T_s + (\\text{diff})e^{kt}$, not $T = T_0 e^{kt}$ |
-| Max logistic rate at $P=L$ | Max rate at $P = L/2$, NOT at $L$ |
+| Losing the sign in $\\int \\frac{dy}{A - y}$ | It equals $-\\ln\\lvert A - y\\rvert + C$ |
 | Confusing half-life formula | $t_{1/2} = \\frac{\\ln 2}{|k|}$, not $\\frac{1}{2k}$ |
 | Wrong doubling formula | $t_{double} = \\frac{\\ln 2}{k}$, not $\\frac{2}{k}$ |
 | Not checking units | Rate units = (quantity units)/(time units) |`
@@ -59,7 +59,7 @@ export const calcabExpModelsPart7Data = {
     {
       id: 'exp7-quiz2',
       type: 'multiple-choice' as const,
-      content: '**Quiz \u2014 Cooling & Logistic** \ud83c\udfaf',
+      content: '**Quiz \u2014 Cooling & Limited Growth** \ud83c\udfaf',
       exercise: {
         questions: [
           {
@@ -69,16 +69,16 @@ export const calcabExpModelsPart7Data = {
             explanation: 'As $t \\to \\infty$, $T \\to 72$. Ambient = $T_s = 72\u00b0$.'
           },
           {
-            question: '$\\frac{dP}{dt} = 2P - 0.001P^2$. The carrying capacity is:',
-            options: ['$2000$', '$1000$', '$0.001$', '$2$'],
+            question: 'If $\\frac{dy}{dt} = 6 - 0.002y$ and $y(0) = 0$, then as $t \\to \\infty$, $y$ approaches:',
+            options: ['$3000$', '$6$', '$0.012$', '$0.002$'],
             correctAnswer: 0,
-            explanation: 'Factor: $P(2-0.001P) = 2P(1-P/2000)$. So $L = 2000$.'
+            explanation: 'Factor: $6 - 0.002y = 0.002(3000 - y)$, a gap model with limit $3000$; the rate is $0$ exactly when $y = 3000$. The $6$ is the starting rate, $0.012$ multiplies $6$ by $0.002$ instead of dividing, and $0.002$ is the constant $k$.'
           },
           {
-            question: 'In the logistic equation $\\frac{dP}{dt} = 2P(1-P/2000)$, the maximum growth rate is:',
-            options: ['$1000$', '$2000$', '$4000$', '$500$'],
+            question: 'For $\\frac{dy}{dt} = 0.5(80 - y)$ with $y(0) = 20$, the particular solution is:',
+            options: ['$y = 80 - 60e^{-0.5t}$', '$y = 80 - 20e^{-0.5t}$', '$y = 20 + 60e^{-0.5t}$', '$y = 80e^{-0.5t}$'],
             correctAnswer: 0,
-            explanation: '$kL/4 = 2(2000)/4 = 1000$.'
+            explanation: 'Separating gives $80 - y = Be^{-0.5t}$, and $y(0) = 20$ gives $B = 60$. Using $20$ as the coefficient confuses the starting value with the gap, $20 + 60e^{-0.5t}$ decreases toward $20$ instead of rising to $80$, and $80e^{-0.5t}$ treats the model as plain decay.'
           },
           {
             question: 'A substance with $k = -0.1$ per hour. After how many hours is 10% remaining?',
@@ -96,11 +96,11 @@ export const calcabExpModelsPart7Data = {
       exercise: {
         dropdowns: [
           {
-            label: '$\\frac{dy}{dt} = 0.03y(500-y)$ can be rewritten in standard logistic form with $L =$',
-            options: ['$500$', '$0.03$', '$15$', '$500/0.03$'],
+            label: '$\\frac{dy}{dt} = 0.03(500 - y)$ with $y(0) = 100$. As $t \\to \\infty$, $y \\to$',
+            options: ['$500$', '$0.03$', '$100$', '$\\infty$'],
             correctAnswers: ['$500$'],
-            hints: ['$0.03y(500-y) = 0.03 \\cdot 500 \\cdot y(1-y/500) = 15y(1-y/500)$.'],
-            explanation: '$k_{\\text{eff}} = 15$, $L = 500$.'
+            hints: ['The rate is $0$ when $y = 500$, and $y$ rises toward that value while $y < 500$.'],
+            explanation: 'While $y < 500$, $\\frac{dy}{dt} > 0$ and the gap shrinks, so $y \\to 500$.'
           },
           {
             label: 'If $y = 5e^{3t}$, then $\\frac{dy}{dt} =$',
@@ -148,7 +148,7 @@ You\u2019ve mastered:
 | 2 | Newton\u2019s Law of Cooling |
 | 3 | Compound interest & continuous growth |
 | 4 | Derivatives & integrals of exponentials |
-| 5 | Logistic growth |
+| 5 | Writing and solving rate models |
 | 6 | Problem-solving workshop |
 | 7 | Comprehensive assessment |
 

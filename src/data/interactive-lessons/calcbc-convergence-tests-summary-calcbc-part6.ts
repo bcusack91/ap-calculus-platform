@@ -44,10 +44,10 @@ Work through these problems choosing the best test for each.`
       exercise: {
         questions: [
           {
-            question: '$\\sum_{n=1}^{\\infty} \\left(\\frac{2n+1}{3n+4}\\right)^n$. Best test?',
-            options: ['Root Test', 'Ratio Test', 'Direct Comparison', 'Integral Test'],
-            correctAnswer: 0,
-            explanation: '$\\sqrt[n]{|a_n|} = \\frac{2n+1}{3n+4} \\to 2/3 < 1$. Converges by the Root Test. An $n$th power of an expression in $n$ is the signal for the Root Test.'
+            question: '$\\sum_{n=1}^{\\infty} \\left(\\frac{2n+1}{3n+4}\\right)^n$. Which test settles it most efficiently?',
+            options: ['Divergence Test', 'Ratio Test', 'Direct Comparison', 'Integral Test'],
+            correctAnswer: 2,
+            explanation: 'Because $6n + 3 < 6n + 8$, the base $\\frac{2n+1}{3n+4}$ is less than $\\frac{2}{3}$, so $0 < a_n < \\left(\\frac{2}{3}\\right)^n$ and the series converges by comparison with a convergent geometric series. The terms tend to $0$, so the Divergence Test is silent; the ratio limit is hard to compute here; and the integral of the whole term has no elementary antiderivative.'
           },
           {
             question: '$\\sum_{n=1}^{\\infty} \\frac{n^2+1}{n^4-n+2}$. Best test?',

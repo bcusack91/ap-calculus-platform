@@ -54,7 +54,7 @@ These problems intentionally mix topics. On the AP exam, you must identify which
             options: ['$\\frac{e^x - e^{-x}}{2}$', '$\\sin x$', '$\\frac{e^x + e^{-x}}{2}$', '$e^x$'],
             correctAnswers: ['$\\frac{e^x - e^{-x}}{2}$'],
             hints: ['Compare with $\\sin x = \\sum (-1)^n x^{2n+1}/(2n+1)!$. This has no alternating sign.'],
-            explanation: 'Without the $(-1)^n$, this is the odd-power half of the series for $e^x$: $\\frac{e^x - e^{-x}}{2} = x + x^3/6 + x^5/120 + \\cdots$ (sometimes called $\\sinh x$). The even-power half is $\\frac{e^x + e^{-x}}{2}$.'
+            explanation: 'Without the $(-1)^n$, this is the odd-power half of the series for $e^x$: $\\frac{e^x - e^{-x}}{2} = x + x^3/6 + x^5/120 + \\cdots$. The even-power half is $\\frac{e^x + e^{-x}}{2}$.'
           },
           {
             label: '$f\'(x) =$',

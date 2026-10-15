@@ -145,9 +145,9 @@ $$\\boxed{\\lim_{x \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots} = 
       content: `
 ## 📌 Limits Involving $e$
 
-The number $e$ is defined by:
+The number $e \\approx 2.71828$ is the base for which the graph of $y = e^x$ crosses the $y$-axis with slope exactly $1$:
 
-$$\\boxed{e = \\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n \\approx 2.71828}$$
+$$\\boxed{\\lim_{h \\to 0} \\frac{e^h - 1}{h} = 1}$$
 
 ---
 
@@ -157,7 +157,6 @@ $$\\boxed{e = \\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n \\approx 
 |-------|--------|-----------------|
 | $\\lim_{x \\to 0} \\frac{e^x - 1}{x}$ | $1$ | Derivative definition of $e^x$ at $x=0$ |
 | $\\lim_{x \\to 0} \\frac{e^{ax} - 1}{x}$ | $a$ | Chain rule extension |
-| $\\lim_{n \\to \\infty} \\left(1 + \\frac{r}{n}\\right)^n$ | $e^r$ | Compound interest formula |
 
 > **AP Tip:** The limit $\\frac{e^x - 1}{x} \\to 1$ is really $f'(0)$ where $f(x) = e^x$. Recognizing limits as derivatives in disguise is a powerful exam strategy.`
     },

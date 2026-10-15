@@ -14,7 +14,7 @@ After finding $R$, the open interval $( c - R,\\ c + R )$ is guaranteed. But end
 
 ### Endpoint Testing Procedure
 
-1. Find $R$ using Ratio/Root Test
+1. Find $R$ using the Ratio Test
 2. Substitute $x = c - R$ into $\\sum a_n(x-c)^n$ → get a numerical series
 3. Substitute $x = c + R$ → get another numerical series
 4. Test each for convergence (often $p$-series, alternating, geometric, etc.)

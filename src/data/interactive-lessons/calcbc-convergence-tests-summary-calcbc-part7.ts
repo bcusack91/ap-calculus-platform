@@ -17,13 +17,12 @@ export const calcbcConvergencePart7Data = {
 | $p$-Series | $\\sum 1/n^p$ | $p > 1$: conv; $p \\leq 1$: div |
 | AST | $\\sum (-1)^n b_n$ | $b_n \\downarrow 0$: conv |
 | Ratio | Factorials, $n$th powers of constants | $L < 1$: conv; $L > 1$: div |
-| Root | $a_n = [f(n)]^n$ | $L < 1$: conv; $L > 1$: div |
 | DCT | Can bound $0 \\leq a_n \\leq b_n$ | $\\sum b_n$ conv ⇒ $\\sum a_n$ conv |
 | LCT | Rational-type terms | $\\lim a_n/b_n = L > 0$: same behavior |
 | Integral | Positive, decreasing, continuous | $\\int_1^\\infty f$ and $\\sum a_n$ agree |
 | Telescoping | Partial fractions collapse | Compute $\\lim S_n$ |
 
-$$\\boxed{\\text{Flowchart: Div Test} \\to \\text{Recognizable} \\to \\text{Alternating} \\to \\text{Ratio/Root} \\to \\text{Comparison}}$$`
+$$\\boxed{\\text{Flowchart: Div Test} \\to \\text{Recognizable} \\to \\text{Alternating} \\to \\text{Ratio} \\to \\text{Comparison}}$$`
     },
     {
       id: 'ct7-mc1',
@@ -81,10 +80,10 @@ $$\\boxed{\\text{Flowchart: Div Test} \\to \\text{Recognizable} \\to \\text{Alte
         dropdowns: [
           {
             label: '$\\sum_{n=1}^{\\infty} \\frac{(n!)^2}{(2n)!}$:',
-            options: ['Ratio Test (factorials cancel cleanly)', 'Root Test', 'LCT with $\\sum 1/n$', 'Integral Test'],
+            options: ['Ratio Test (factorials cancel cleanly)', 'Divergence Test', 'LCT with $\\sum 1/n$', 'Integral Test'],
             correctAnswers: ['Ratio Test (factorials cancel cleanly)'],
             hints: ['Factorials signal Ratio Test. $\\frac{a_{n+1}}{a_n} = \\frac{(n+1)^2}{(2n+2)(2n+1)}$.'],
-            explanation: 'Ratio: $\\frac{a_{n+1}}{a_n} = \\frac{(n+1)^2}{(2n+2)(2n+1)} = \\frac{n+1}{2(2n+1)} \\to \\frac{1}{4} < 1$. Converges. Factorials have no simple $n$th root and cannot be integrated, and against the divergent $\\sum 1/n$ the LCT limit is $0$, which proves nothing.'
+            explanation: 'Ratio: $\\frac{a_{n+1}}{a_n} = \\frac{(n+1)^2}{(2n+2)(2n+1)} = \\frac{n+1}{2(2n+1)} \\to \\frac{1}{4} < 1$. Converges. The terms tend to $0$, so the Divergence Test is silent, factorials cannot be integrated, and against the divergent $\\sum 1/n$ the LCT limit is $0$, which proves nothing.'
           },
           {
             label: '$\\sum_{n=1}^{\\infty} \\frac{n}{e^n}$:',

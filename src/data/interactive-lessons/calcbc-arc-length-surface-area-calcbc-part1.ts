@@ -4,7 +4,7 @@ export const calcbcArcLengthPart1Data = {
     {
       id: 'al1-intro',
       type: 'text' as const,
-      content: `# Arc Length & Surface Area
+      content: `# Arc Length
 
 **Part 1 of 7 — Arc Length of Cartesian Curves**
 

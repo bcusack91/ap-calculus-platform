@@ -57,7 +57,7 @@ Recognize $f'/f$ pattern: the numerator IS the derivative of the denominator!
 
 $$= \\ln|e^x + e^{-x}| + C = \\ln(e^x + e^{-x}) + C$$
 
-> **AP Tip:** This is $\\int \\tanh x\\,dx$ (hyperbolic tangent). The $f'/f$ pattern saves enormous work.`
+> **AP Tip:** Whenever the numerator is the derivative of the denominator, the answer is $\\ln|\\text{denominator}| + C$. Spotting the $f'/f$ pattern saves enormous work.`
     },
     {
       id: 'usub6-quiz1',

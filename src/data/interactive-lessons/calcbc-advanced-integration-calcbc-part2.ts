@@ -4,60 +4,46 @@ export const calcbcAdvIntegrationPart2Data = {
     {
       id: 'ai2-intro',
       type: 'text' as const,
-      content: `# Trigonometric Integrals and Substitution
+      content: `# Integration by Parts in Depth
 
-**Part 2 of 7 — Working with Trig Functions**
+**Part 2 of 7 — Repeated, Tabular, and Circular Integration by Parts**
 
-### Powers of Sine and Cosine
+### The Formula
 
-$$\\int \\sin^m x \\cos^n x\\,dx$$
+$$\\boxed{\\int u\\,dv = uv - \\int v\\,du}$$
 
-| Case | Strategy |
-|------|----------|
-| $m$ odd | Save one $\\sin x$, convert rest to $\\cos$ via $\\sin^2 = 1 - \\cos^2$, $u = \\cos x$ |
-| $n$ odd | Save one $\\cos x$, convert rest to $\\sin$ via $\\cos^2 = 1 - \\sin^2$, $u = \\sin x$ |
-| Both even | Use half-angle: $\\sin^2 x = \\frac{1-\\cos 2x}{2}$, $\\cos^2 x = \\frac{1+\\cos 2x}{2}$ |
+Choose $u$ so that it gets simpler when differentiated, and $dv$ so that you can integrate it. The **LIATE** order (Logarithmic, Inverse trig, Algebraic, Trig, Exponential) suggests which factor to call $u$: pick the type that comes first.
 
-> **Key Fact:** "Save one" means factor out one copy to pair with $dx$ for substitution.`
+| Integral | $u$ | $dv$ |
+|------|----------|----------|
+| $\\int x e^{2x}\\,dx$ | $x$ | $e^{2x}\\,dx$ |
+| $\\int x \\ln x\\,dx$ | $\\ln x$ | $x\\,dx$ |
+| $\\int \\arctan x\\,dx$ | $\\arctan x$ | $dx$ |
+| $\\int x^2 \\cos x\\,dx$ | $x^2$ (twice) | $\\cos x\\,dx$ |
+
+> **Key Fact:** When the integrand is a single log or inverse trig function, take $dv = dx$. For example, $\\int \\ln x\\,dx = x\\ln x - x + C$.`
     },
     {
       id: 'ai2-example',
       type: 'text' as const,
-      content: `### Worked Example
+      content: `### Repeated Parts with the Tabular Method
 
-$\\int \\sin^3 x \\cos^2 x\\,dx$ ($m = 3$ is odd)
+$\\int x^2 e^x\\,dx$ needs parts twice. The tabular method organizes the work: differentiate $u$ down to $0$, integrate $dv$ the same number of times, and alternate signs starting with $+$.
 
-| Step | Work |
-|------|------|
-| Save one $\\sin x$ | $\\int \\sin^2 x \\cos^2 x \\cdot \\sin x\\,dx$ |
-| Convert $\\sin^2 x$ | $\\int (1 - \\cos^2 x)\\cos^2 x \\sin x\\,dx$ |
-| Let $u = \\cos x$ | $du = -\\sin x\\,dx$ |
-| Substitute | $-\\int (1 - u^2)u^2\\,du = -\\int (u^2 - u^4)\\,du$ |
-| Integrate | $-\\frac{u^3}{3} + \\frac{u^5}{5} + C$ |
-| Back-sub | $-\\frac{\\cos^3 x}{3} + \\frac{\\cos^5 x}{5} + C$ |
+| Sign | Derivatives of $x^2$ | Integrals of $e^x$ |
+|------|------|------|
+| $+$ | $x^2$ | $e^x$ |
+| $-$ | $2x$ | $e^x$ |
+| $+$ | $2$ | $e^x$ |
+| | $0$ | |
 
-### Trigonometric Substitution
+Multiply along the diagonals:
 
-| Expression | Substitution | Identity used |
-|-----------|-------------|---------------|
-| $\\sqrt{a^2 - x^2}$ | $x = a\\sin\\theta$ | $1 - \\sin^2\\theta = \\cos^2\\theta$ |
-| $\\sqrt{a^2 + x^2}$ | $x = a\\tan\\theta$ | $1 + \\tan^2\\theta = \\sec^2\\theta$ |
-| $\\sqrt{x^2 - a^2}$ | $x = a\\sec\\theta$ | $\\sec^2\\theta - 1 = \\tan^2\\theta$ |`
-    },
-    {
-      id: 'ai2-trigsub',
-      type: 'text' as const,
-      content: `### Trig Substitution Example
+$$\\int x^2 e^x\\,dx = x^2e^x - 2xe^x + 2e^x + C = e^x(x^2 - 2x + 2) + C$$
 
-$\\int \\frac{dx}{\\sqrt{4 - x^2}}$
+### A Definite Integral by Parts
 
-Let $x = 2\\sin\\theta$, $dx = 2\\cos\\theta\\,d\\theta$.
-
-$\\sqrt{4 - x^2} = \\sqrt{4 - 4\\sin^2\\theta} = 2\\cos\\theta$
-
-$$\\int \\frac{2\\cos\\theta\\,d\\theta}{2\\cos\\theta} = \\int d\\theta = \\theta + C = \\arcsin\\frac{x}{2} + C$$
-
-> **AP Tip:** Many trig substitution problems on the BC exam reduce to inverse trig results. Recognizing the pattern $1/\\sqrt{a^2 - x^2}$ directly gives $\\arcsin(x/a)$ without going through the full substitution.`
+$$\\int_1^e \\ln x\\,dx = \\Big[x\\ln x - x\\Big]_1^e = (e - e) - (0 - 1) = 1$$`
     },
     {
       id: 'ai2-mc',
@@ -66,45 +52,70 @@ $$\\int \\frac{2\\cos\\theta\\,d\\theta}{2\\cos\\theta} = \\int d\\theta = \\the
       exercise: {
         questions: [
           {
-            question: 'For $\\int \\sin^2 x\\,dx$, the correct approach is:',
-            options: ['Use the half-angle identity for $\\sin^2 x$', 'Let $u = \\sin x$, so $du = \\cos x\\,dx$', 'Apply the power rule to $\\sin^2 x$', 'Rewrite it as $1 - \\cos^2 x$'],
+            question: 'For $\\int x \\ln x\\,dx$, the best choice of parts is:',
+            options: ['$u = \\ln x$, $dv = x\\,dx$', '$u = x$, $dv = \\ln x\\,dx$', '$u = x\\ln x$, $dv = dx$', '$u = \\ln x$, $dv = dx$'],
             correctAnswer: 0,
-            explanation: 'An even power of sine with no odd cosine factor calls for the half-angle identity $\\sin^2 x = \\frac{1 - \\cos 2x}{2}$, giving $\\frac{x}{2} - \\frac{\\sin 2x}{4} + C$. $u = \\sin x$ needs a $\\cos x$ factor that is not there, the power rule ignores the chain rule (it would give $\\frac{\\sin^3 x}{3}$), and $1 - \\cos^2 x$ just trades one even power for another.'
+            explanation: 'Differentiating $\\ln x$ gives the simpler $\\frac{1}{x}$, and $x\\,dx$ integrates to $\\frac{x^2}{2}$, leaving $\\int \\frac{x}{2}\\,dx$. Taking $dv = \\ln x\\,dx$ forces you to integrate $\\ln x$ first, $u = x\\ln x$ makes $du$ more complicated, and $u = \\ln x$ with $dv = dx$ leaves out the factor $x$ entirely.'
           },
           {
-            question: 'For $\\int \\sqrt{x^2 - 9}\\,dx$, the trig substitution is:',
-            options: ['$x = 3\\sec\\theta$', '$x = 3\\sin\\theta$', '$x = 3\\tan\\theta$', '$x = 9\\sec\\theta$'],
+            question: '$\\int x^2 e^x\\,dx =$',
+            options: ['$e^x(x^2 - 2x + 2) + C$', '$e^x(x^2 + 2x + 2) + C$', '$e^x(x^2 - 2x) + C$', '$\\frac{x^3}{3}e^x + C$'],
             correctAnswer: 0,
-            explanation: '$\\sqrt{x^2 - a^2}$ pattern with $a = 3$ → $x = 3\\sec\\theta$.'
+            explanation: 'Tabular: $x^2e^x - 2xe^x + 2e^x + C$. Forgetting to alternate signs gives $+2x$, stopping after one round of parts drops the $+2$, and $\\frac{x^3}{3}e^x$ integrates the two factors separately.'
           },
           {
-            question: '$\\int \\cos^3 x\\,dx =$',
-            options: ['$\\sin x - \\frac{\\sin^3 x}{3} + C$', '$\\frac{\\cos^4 x}{4} + C$', '$\\sin^3 x/3 + C$', '$\\cos^2 x \\sin x + C$'],
+            question: '$\\int \\arctan x\\,dx =$',
+            options: ['$x\\arctan x - \\frac{1}{2}\\ln(1 + x^2) + C$', '$x\\arctan x + \\frac{1}{2}\\ln(1 + x^2) + C$', '$x\\arctan x - \\ln(1 + x^2) + C$', '$\\frac{1}{1 + x^2} + C$'],
             correctAnswer: 0,
-            explanation: '$\\int \\cos^2 x \\cos x\\,dx = \\int (1-\\sin^2 x)\\cos x\\,dx$. With $u = \\sin x$: $\\int (1-u^2)\\,du = u - u^3/3 + C$.'
+            explanation: 'Take $u = \\arctan x$, $dv = dx$: $x\\arctan x - \\int \\frac{x}{1 + x^2}\\,dx = x\\arctan x - \\frac{1}{2}\\ln(1 + x^2) + C$. A plus sign forgets the minus in $uv - \\int v\\,du$, dropping the $\\frac{1}{2}$ misses the factor from $du = 2x\\,dx$, and $\\frac{1}{1 + x^2}$ is the derivative of $\\arctan x$, not its antiderivative.'
           }
         ]
       }
     },
     {
+      id: 'ai2-circular',
+      type: 'text' as const,
+      content: `### Circular Integration by Parts
+
+For $e^x$ times $\\sin x$ or $\\cos x$, neither factor ever differentiates to $0$. Apply parts twice, then solve for the original integral.
+
+Let $I = \\int e^x \\cos x\\,dx$.
+
+| Step | Work |
+|------|------|
+| Parts with $u = \\cos x$, $dv = e^x\\,dx$ | $I = e^x\\cos x + \\int e^x\\sin x\\,dx$ |
+| Parts again with $u = \\sin x$, $dv = e^x\\,dx$ | $\\int e^x\\sin x\\,dx = e^x\\sin x - I$ |
+| Combine | $I = e^x\\cos x + e^x\\sin x - I$ |
+| Solve for $I$ | $I = \\frac{e^x(\\sin x + \\cos x)}{2} + C$ |
+
+> **AP Tip:** Keep the same type of function as $u$ in both rounds (trig both times here). Switching to $u = e^x$ in the second round undoes the first step. Trigonometric substitution and reduction formulas for powers of sine and cosine are not tested on the AP Calculus BC exam.`
+    },
+    {
       id: 'ai2-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Trig Integral Strategy**',
+      content: '**Parts Strategy**',
       exercise: {
         dropdowns: [
           {
-            label: '$\\int \\sin^5 x \\cos^4 x\\,dx$: since $m = 5$ is odd, you should:',
-            options: ['Save one $\\sin x$, write $\\sin^4 x$ in cosines, let $u = \\cos x$', 'Apply half-angle identities to $\\sin^2 x$ and $\\cos^2 x$', 'Save one $\\cos x$, write $\\cos^3 x$ in sines, let $u = \\sin x$', 'Use the reduction formula for $\\int \\sin^n x\\,dx$'],
-            correctAnswers: ['Save one $\\sin x$, write $\\sin^4 x$ in cosines, let $u = \\cos x$'],
-            hints: ['Odd power of sine → save one $\\sin x$.'],
-            explanation: 'Save $\\sin x$ for $du$, convert remaining $\\sin^4 x = (1-\\cos^2 x)^2$, then $u = \\cos x$. Saving a $\\cos x$ fails because the leftover $\\cos^3 x$ is an odd power, and half-angle identities are the tool when both powers are even.'
+            label: 'In the tabular method for $\\int x^3 e^{2x}\\,dx$, you stop differentiating when:',
+            options: ['The derivative column reaches $0$', 'The integral column repeats', 'You have completed two rows', 'The signs stop alternating'],
+            correctAnswers: ['The derivative column reaches $0$'],
+            hints: ['Differentiate $x^3$ until nothing is left.'],
+            explanation: '$x^3 \\to 3x^2 \\to 6x \\to 6 \\to 0$. Once the derivative is $0$, every later product is $0$, so the table is complete after four nonzero rows.'
           },
           {
-            label: '$\\int \\sin^2 x \\cos^2 x\\,dx$: both even, so use:',
-            options: ['$\\sin^2 x \\cos^2 x = \\frac{1}{8}(1-\\cos 4x)$', '$\\sin^2 x \\cos^2 x = \\frac{1}{4}(1-\\cos 4x)$', '$\\sin^2 x \\cos^2 x = \\frac{1}{8}(1-\\cos 2x)$', '$\\sin^2 x \\cos^2 x = \\frac{1}{2}\\sin^2(2x)$'],
-            correctAnswers: ['$\\sin^2 x \\cos^2 x = \\frac{1}{8}(1-\\cos 4x)$'],
-            hints: ['$\\sin x \\cos x = \\frac{1}{2}\\sin 2x$, then apply half-angle again.'],
-            explanation: 'Double angle first: $\\sin x\\cos x = \\frac{1}{2}\\sin 2x$, so $\\sin^2 x \\cos^2 x = \\frac{1}{4}\\sin^2(2x)$. Then half-angle: $\\sin^2(2x) = \\frac{1-\\cos 4x}{2}$, giving $\\frac{1}{8}(1-\\cos 4x)$. Forgetting to square the $\\frac{1}{2}$, dropping the half-angle $\\frac{1}{2}$, or not doubling the angle gives the other forms.'
+            label: 'Two rounds of parts on $I = \\int e^x \\sin x\\,dx$ give $I = e^x\\sin x - e^x\\cos x - I$. So $I =$',
+            options: ['$\\frac{e^x(\\sin x - \\cos x)}{2} + C$', '$e^x(\\sin x - \\cos x) + C$', '$\\frac{e^x(\\sin x + \\cos x)}{2} + C$', '$0$'],
+            correctAnswers: ['$\\frac{e^x(\\sin x - \\cos x)}{2} + C$'],
+            hints: ['Add $I$ to both sides, then divide by $2$.'],
+            explanation: '$2I = e^x(\\sin x - \\cos x)$, so $I = \\frac{e^x(\\sin x - \\cos x)}{2} + C$. Not dividing by $2$ forgets to solve for $I$, and $I - I = 0$ is a sign slip: the $I$ terms are on opposite sides.'
+          },
+          {
+            label: '$\\int_0^{\\pi} x\\cos x\\,dx =$',
+            options: ['$-2$', '$2$', '$0$', '$\\pi$'],
+            correctAnswers: ['$-2$'],
+            hints: ['With $u = x$, $dv = \\cos x\\,dx$: the antiderivative is $x\\sin x + \\cos x$.'],
+            explanation: '$\\Big[x\\sin x + \\cos x\\Big]_0^{\\pi} = (0 - 1) - (0 + 1) = -2$.'
           }
         ]
       }
@@ -114,11 +125,11 @@ $$\\int \\frac{2\\cos\\theta\\,d\\theta}{2\\cos\\theta} = \\int d\\theta = \\the
       type: 'input-box' as const,
       content: '**Practice**',
       exercise: {
-        question: '$\\int_0^{\\pi/2} \\sin^2 x\\,dx$. Evaluate the definite integral. (Use pi for $\\pi$.)',
-        correctAnswer: 'pi/4',
-        acceptableAnswers: ['pi/4', 'π/4', '0.785', '0.7854'],
-        hints: ['$\\int_0^{\\pi/2} \\frac{1-\\cos 2x}{2}\\,dx = \\frac{1}{2}[x - \\frac{\\sin 2x}{2}]_0^{\\pi/2}$.'],
-        explanation: '$\\frac{1}{2}[\\frac{\\pi}{2} - 0] - \\frac{1}{2}[0 - 0] = \\frac{\\pi}{4}$.'
+        question: 'Evaluate $\\int_0^1 x e^{2x}\\,dx$. Give the exact answer in terms of $e$ (or a decimal to three places).',
+        correctAnswer: '(e^2+1)/4',
+        acceptableAnswers: ['(e^2+1)/4', '(e^2 + 1)/4', '(1+e^2)/4', 'e^2/4+1/4', '2.097'],
+        hints: ['$u = x$, $dv = e^{2x}\\,dx$, so $v = \\frac{1}{2}e^{2x}$.', 'The antiderivative is $\\frac{x}{2}e^{2x} - \\frac{1}{4}e^{2x}$.'],
+        explanation: '$\\Big[\\frac{x}{2}e^{2x} - \\frac{1}{4}e^{2x}\\Big]_0^1 = \\left(\\frac{e^2}{2} - \\frac{e^2}{4}\\right) - \\left(0 - \\frac{1}{4}\\right) = \\frac{e^2 + 1}{4} \\approx 2.097$.'
       }
     },
     {
@@ -126,13 +137,14 @@ $$\\int \\frac{2\\cos\\theta\\,d\\theta}{2\\cos\\theta} = \\int d\\theta = \\the
       type: 'text' as const,
       content: `### Key Strategies
 
-$$\\boxed{\\text{Odd power} \\to \\text{save one, convert, } u\\text{-sub} \\qquad \\text{Even powers} \\to \\text{half-angle}}$$
+$$\\boxed{\\int u\\,dv = uv - \\int v\\,du}$$
 
-| Trig Sub Pattern | Use when you see |
+| Situation | Strategy |
 |-----------------|-----------------|
-| $x = a\\sin\\theta$ | $\\sqrt{a^2 - x^2}$ |
-| $x = a\\tan\\theta$ | $\\sqrt{a^2 + x^2}$ |
-| $x = a\\sec\\theta$ | $\\sqrt{x^2 - a^2}$ |
+| Polynomial times $e^{ax}$, $\\sin$, or $\\cos$ | Tabular method; polynomial is $u$ |
+| Single $\\ln x$ or $\\arctan x$ | $u$ = that function, $dv = dx$ |
+| $e^{ax}$ times $\\sin$ or $\\cos$ | Parts twice, then solve for the integral |
+| Definite integral | Evaluate $uv$ at the bounds too |
 
 **Next: Part 3 — Long Division, Completing the Square, and Algebraic Manipulation**`
     }

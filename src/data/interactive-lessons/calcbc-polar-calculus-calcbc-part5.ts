@@ -6,41 +6,44 @@ export const calcbcPolarPart5Data = {
       type: 'text' as const,
       content: `# Polar Calculus
 
-**Part 5 of 7 \u2014 Arc Length in Polar Coordinates**
+**Part 5 of 7 \u2014 Rates of Change on Polar Curves**
 
-### The Polar Arc Length Formula
+A polar curve $r = f(\\theta)$ can change in three ways as $\\theta$ increases, and each has its own derivative:
 
-For $r = f(\\theta)$ from $\\theta = \\alpha$ to $\\theta = \\beta$:
+| Derivative | Tells you | Formula |
+|:---|:---|:---|
+| $\\dfrac{dr}{d\\theta}$ | how the signed radius changes | $f'(\\theta)$ |
+| $\\dfrac{dy}{d\\theta}$ | whether the point moves up or down | $r'\\sin\\theta + r\\cos\\theta$ |
+| $\\dfrac{dx}{d\\theta}$ | whether the point moves right or left | $r'\\cos\\theta - r\\sin\\theta$ |
 
-$$\\boxed{L = \\int_{\\alpha}^{\\beta}\\sqrt{r^2 + \\left(\\frac{dr}{d\\theta}\\right)^2}\\,d\\theta}$$
+The last two come from the product rule on $y = r\\sin\\theta$ and $x = r\\cos\\theta$.
 
-**Derivation:** From the parametric formula with $x = r\\cos\\theta$, $y = r\\sin\\theta$:
+### Toward or Away from the Origin
 
-$$(dx/d\\theta)^2 + (dy/d\\theta)^2 = (r')^2\\cos^2\\theta - 2rr'\\cos\\theta\\sin\\theta + r^2\\sin^2\\theta$$
-$$+ (r')^2\\sin^2\\theta + 2rr'\\sin\\theta\\cos\\theta + r^2\\cos^2\\theta = (r')^2 + r^2$$
+The distance from the origin is $|r|$, not $r$. So:
 
-> **Key Fact:** The polar arc length formula is simpler than the parametric one because the cross terms cancel!`
+- $r > 0$ and $\\dfrac{dr}{d\\theta} > 0$: distance increasing (moving **away**)
+- $r > 0$ and $\\dfrac{dr}{d\\theta} < 0$: distance decreasing (moving **toward**)
+- $r < 0$: the conclusions flip
+
+> **Key Fact:** The point moves away from the origin when $r$ and $dr/d\\theta$ have the same sign, and toward it when they have opposite signs. This is a frequent BC free-response question.`
     },
     {
       id: 'pol5-examples',
       type: 'text' as const,
-      content: `### Example 1: Arc Length of a Circle
+      content: `### Worked Example
 
-$r = a$ (constant). $dr/d\\theta = 0$.
+Let $r = 2 + \\cos\\theta$. At $\\theta = \\frac{\\pi}{2}$:
 
-$$L = \\int_0^{2\\pi}\\sqrt{a^2+0}\\,d\\theta = a \\cdot 2\\pi = 2\\pi a \\checkmark$$
+- $r = 2 + 0 = 2$ and $\\dfrac{dr}{d\\theta} = -\\sin\\theta = -1$.
+- $r > 0$ and $dr/d\\theta < 0$, so the point is moving **toward** the origin.
+- $\\dfrac{dy}{d\\theta} = r'\\sin\\theta + r\\cos\\theta = (-1)(1) + 2(0) = -1$, so $y$ is **decreasing**.
+- $\\dfrac{dx}{d\\theta} = r'\\cos\\theta - r\\sin\\theta = (-1)(0) - 2(1) = -2$, so $x$ is **decreasing**.
+- Slope of the curve: $\\dfrac{dy}{dx} = \\dfrac{dy/d\\theta}{dx/d\\theta} = \\dfrac{-1}{-2} = \\dfrac{1}{2}$.
 
-### Example 2: Cardioid $r = 1 + \\cos\\theta$
+### Interpreting in Context
 
-$dr/d\\theta = -\\sin\\theta$
-
-$$L = \\int_0^{2\\pi}\\sqrt{(1+\\cos\\theta)^2 + \\sin^2\\theta}\\,d\\theta$$
-
-$$= \\int_0^{2\\pi}\\sqrt{2 + 2\\cos\\theta}\\,d\\theta = \\int_0^{2\\pi}\\sqrt{4\\cos^2(\\theta/2)}\\,d\\theta = \\int_0^{2\\pi}2|\\cos(\\theta/2)|\\,d\\theta$$
-
-Using symmetry: $= 4\\int_0^{\\pi}\\cos(\\theta/2)\\,d\\theta = 4[2\\sin(\\theta/2)]_0^{\\pi} = 8$
-
-> **AP Note:** The half-angle identity $1 + \\cos\\theta = 2\\cos^2(\\theta/2)$ is essential for cardioid problems.`
+If $r(\\theta)$ is the distance (in meters) from a sprinkler to the edge of the watered region, then $r'(\\theta) = -1$ means the edge is getting closer to the sprinkler at $1$ meter per radian as $\\theta$ increases. Units of $dr/d\\theta$ are units of $r$ per radian.`
     },
     {
       id: 'pol5-mc1',
@@ -49,22 +52,16 @@ Using symmetry: $= 4\\int_0^{\\pi}\\cos(\\theta/2)\\,d\\theta = 4[2\\sin(\\theta
       exercise: {
         questions: [
           {
-            question: 'The arc length of $r = 2$ from $\\theta = 0$ to $\\theta = \\pi$ is:',
-            options: ['$2\\pi$', '$\\pi$', '$4\\pi$', '$2$'],
-            correctAnswer: 0,
-            explanation: '$L = \\int_0^{\\pi}\\sqrt{4+0}\\,d\\theta = 2\\pi$. This is half the circumference of a circle of radius $2$.'
+            question: 'For $r = \\theta - 2$, consider the point at $\\theta = 1$. As $\\theta$ increases, the point is moving:',
+            options: ['Away from the origin, because $dr/d\\theta > 0$', 'Toward the origin, because $r$ and $dr/d\\theta$ have opposite signs', 'Away from the origin, because $r$ and $dr/d\\theta$ have opposite signs', 'Toward the origin, because $r < 0$'],
+            correctAnswer: 1,
+            explanation: 'At $\\theta = 1$, $r = -1$ and $dr/d\\theta = 1$. Opposite signs mean $|r|$ is shrinking, so the point moves toward the origin. A positive $dr/d\\theta$ alone does not decide it when $r < 0$, opposite signs mean toward rather than away, and $r < 0$ alone says nothing about the change.'
           },
           {
-            question: 'For $r = e^\\theta$, $\\sqrt{r^2 + (r\')^2}$ simplifies to:',
-            options: ['$e^\\theta\\sqrt{2}$', '$e^\\theta$', '$2e^\\theta$', '$e^{2\\theta}$'],
-            correctAnswer: 0,
-            explanation: '$r\' = e^\\theta$. $\\sqrt{e^{2\\theta}+e^{2\\theta}} = e^\\theta\\sqrt{2}$.'
-          },
-          {
-            question: 'The arc length of the spiral $r = \\theta$ from $\\theta = 0$ to $\\theta = 2\\pi$ requires:',
-            options: ['$\\int_0^{2\\pi}\\sqrt{\\theta^2 + 1}\\,d\\theta$', '$\\int_0^{2\\pi}\\theta\\,d\\theta$', '$\\int_0^{2\\pi}\\sqrt{\\theta}\\,d\\theta$', '$\\frac{1}{2}\\int_0^{2\\pi}\\theta^2\\,d\\theta$'],
-            correctAnswer: 0,
-            explanation: '$r = \\theta$, $r\' = 1$. $L = \\int_0^{2\\pi}\\sqrt{r^2 + (r\')^2}\\,d\\theta = \\int_0^{2\\pi}\\sqrt{\\theta^2+1}\\,d\\theta$, which needs trig substitution or a calculator. Dropping $r\'$, taking $\\sqrt{r}$, or using the area formula $\\frac{1}{2}\\int r^2\\,d\\theta$ gives the other integrals.'
+            question: 'For a polar curve $r = f(\\theta)$, the derivative $\\dfrac{dy}{d\\theta}$ equals:',
+            options: ['$r\'\\cos\\theta - r\\sin\\theta$', '$r\'\\sin\\theta - r\\cos\\theta$', '$r\'\\sin\\theta + r\\cos\\theta$', '$r\'\\cos\\theta$'],
+            correctAnswer: 2,
+            explanation: 'With $y = r\\sin\\theta$, the product rule gives $\\frac{dy}{d\\theta} = r\'\\sin\\theta + r\\cos\\theta$. The first option is $dx/d\\theta$, the second has the wrong sign on $r\\cos\\theta$, and the last forgets the product rule.'
           }
         ]
       }
@@ -72,22 +69,22 @@ Using symmetry: $= 4\\int_0^{\\pi}\\cos(\\theta/2)\\,d\\theta = 4[2\\sin(\\theta
     {
       id: 'pol5-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Setting Up Arc Length**',
+      content: '**Reading the Derivatives**',
       exercise: {
         dropdowns: [
           {
-            label: 'For one petal of $r = \\cos(2\\theta)$, the arc length integral limits are:',
-            options: ['$-\\pi/4$ to $\\pi/4$', '$0$ to $\\pi/4$', '$0$ to $\\pi$', '$0$ to $2\\pi$'],
-            correctAnswers: ['$-\\pi/4$ to $\\pi/4$'],
-            hints: ['The first petal exists where $\\cos(2\\theta) \\ge 0$.'],
-            explanation: '$\\cos(2\\theta) \\ge 0$ when $-\\pi/4 \\le \\theta \\le \\pi/4$. This traces one petal. Running only from $0$ to $\\pi/4$ traces half a petal, and the full turns $0$ to $\\pi$ or $0$ to $2\\pi$ trace two or four petals.'
+            label: 'For $r = 3\\sin\\theta$ at $\\theta = \\frac{\\pi}{6}$, the distance from the origin is',
+            options: ['decreasing', 'constant', 'increasing', 'undefined'],
+            correctAnswers: ['increasing'],
+            hints: ['Find the signs of $r$ and $dr/d\\theta$ at $\\theta = \\pi/6$.'],
+            explanation: 'At $\\theta = \\pi/6$, $r = 1.5 > 0$ and $dr/d\\theta = 3\\cos(\\pi/6) \\approx 2.598 > 0$. Same signs, so the distance from the origin is increasing. It would be decreasing only if the signs differed, and a nonzero $dr/d\\theta$ rules out constant.'
           },
           {
-            label: 'The identity $1 + \\cos\\theta = 2\\cos^2(\\theta/2)$ is most useful for:',
-            options: ['Cardioid arc length integrals', 'Converting polar equations to Cartesian form', 'Finding slopes $dy/dx$ on polar curves', 'Locating the tips of rose petals'],
-            correctAnswers: ['Cardioid arc length integrals'],
-            hints: ['It simplifies $\\sqrt{(1+\\cos\\theta)^2 + \\sin^2\\theta}$.'],
-            explanation: 'In cardioid arc length, the integrand becomes $\\sqrt{2+2\\cos\\theta}$, which simplifies to $2|\\cos(\\theta/2)|$ via this identity.'
+            label: 'For $r = 2 + \\cos\\theta$ at $\\theta = \\pi$, the value of $\\dfrac{dy}{d\\theta}$ is',
+            options: ['$-1$', '$1$', '$0$', '$-2$'],
+            correctAnswers: ['$-1$'],
+            hints: ['At $\\theta = \\pi$: $r = 1$ and $r\' = -\\sin\\pi = 0$.'],
+            explanation: '$\\frac{dy}{d\\theta} = r\'\\sin\\theta + r\\cos\\theta = 0 \\cdot 0 + 1 \\cdot (-1) = -1$, so $y$ is decreasing there. Dropping the sign of $\\cos\\pi$ gives $1$, using only the $r\'$ term gives $0$, and $-2$ uses $r = 2$ instead of $r(\\pi) = 1$.'
           }
         ]
       }
@@ -97,11 +94,11 @@ Using symmetry: $= 4\\int_0^{\\pi}\\cos(\\theta/2)\\,d\\theta = 4[2\\sin(\\theta
       type: 'input-box' as const,
       content: '**Compute**',
       exercise: {
-        question: 'Find the arc length of the logarithmic spiral $r = e^\\theta$ from $\\theta = 0$ to $\\theta = \\ln 2$. The integrand is $e^\\theta\\sqrt{2}$. Evaluate and express as $a(\\sqrt{2})$ where $a$ is a number. What is $a$?',
-        correctAnswer: '1',
-        acceptableAnswers: ['1', '1.0'],
-        hints: ['$L = \\sqrt{2}\\int_0^{\\ln 2}e^\\theta\\,d\\theta = \\sqrt{2}[e^\\theta]_0^{\\ln 2}$.', '$= \\sqrt{2}(2 - 1) = \\sqrt{2}$.'],
-        explanation: '$L = \\sqrt{2}(e^{\\ln 2} - e^0) = \\sqrt{2}(2-1) = \\sqrt{2} = 1 \\cdot \\sqrt{2}$. So $a = 1$.'
+        question: 'For $r = 1 + 2\\sin\\theta$, find $\\dfrac{dx}{d\\theta}$ at $\\theta = 0$.',
+        correctAnswer: '2',
+        acceptableAnswers: ['2', '2.0'],
+        hints: ['At $\\theta = 0$: $r = 1$ and $r\' = 2\\cos 0 = 2$.', '$\\frac{dx}{d\\theta} = r\'\\cos\\theta - r\\sin\\theta$.'],
+        explanation: '$\\frac{dx}{d\\theta} = 2\\cos 0 - 1 \\cdot \\sin 0 = 2 - 0 = 2$. The point is moving to the right as $\\theta$ increases through $0$.'
       }
     },
     {
@@ -109,10 +106,10 @@ Using symmetry: $= 4\\int_0^{\\pi}\\cos(\\theta/2)\\,d\\theta = 4[2\\sin(\\theta
       type: 'text' as const,
       content: `### Key Takeaways
 
-- Polar arc length: $L = \\int\\sqrt{r^2 + (dr/d\\theta)^2}\\,d\\theta$
-- For a circle $r = a$: arc length on $[\\alpha, \\beta]$ is $a(\\beta - \\alpha)$
-- Half-angle identities simplify cardioid integrals
-- Logarithmic spiral $r = e^\\theta$: integrand is $e^\\theta\\sqrt{2}$ (nice!)
+- $dr/d\\theta$: same sign as $r$ means moving away from the origin; opposite sign means toward
+- $dy/d\\theta = r'\\sin\\theta + r\\cos\\theta$ (up or down)
+- $dx/d\\theta = r'\\cos\\theta - r\\sin\\theta$ (right or left)
+- In context, $dr/d\\theta$ has units of $r$ per radian
 
 > **Next:** Part 6 is a **Problem-Solving Workshop** with mixed polar problems.`
     }

@@ -67,7 +67,7 @@ $$\\boxed{\\frac{1}{1-x},\\quad e^x,\\quad \\sin x,\\quad \\cos x,\\quad \\ln(1+
             question: '$f(x)$ has Maclaurin series with only odd powers of $x$. This means $f$ is:',
             options: ['An odd function', 'An even function', 'Neither odd nor even', 'A periodic function'],
             correctAnswer: 0,
-            explanation: 'Only odd powers: $f(-x) = -f(x)$. Examples: $\\sin x$, $\\arctan x$, $\\sinh x$.'
+            explanation: 'Only odd powers: $f(-x) = -f(x)$. Examples: $\\sin x$, $\\arctan x$, and $x^3$.'
           }
         ]
       }

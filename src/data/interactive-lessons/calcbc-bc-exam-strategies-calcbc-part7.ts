@@ -112,7 +112,7 @@ $$e^x = \\sum_{n=0}^\\infty \\frac{x^n}{n!}, \\quad \\sin x = \\sum_{n=0}^\\inft
 **Final reminders:**
 1. ✓ Always show work on FRQs
 2. ✓ Always guess on MC — no penalty
-3. ✓ Series and parametric/polar: guaranteed BC FRQ topics
+3. ✓ Series and parametric/polar: BC FRQ topics on nearly every recent exam
 4. ✓ Know the 6 Maclaurin series and their intervals
 5. ✓ $1/2$ in polar area, proper $d^2y/dx^2$ formula
 6. ✓ Pace yourself: don't get stuck on one problem

@@ -16,7 +16,7 @@ export const calcabDiffEqPart7Data = {
 | Separation of variables | $\\frac{dy}{g(y)} = f(x)\\,dx$, integrate both sides |
 | Exponential model | $dy/dt = ky \\implies y = y_0e^{kt}$ |
 | Newton's cooling | $dT/dt = -k(T-T_{env}) \\implies T = T_{env}+(T_0-T_{env})e^{-kt}$ |
-| Euler's method | $y_{n+1} = y_n + f(x_n,y_n)\\Delta x$ |
+| Tangent-line estimate | $y \\approx y_0 + m(x - x_0)$, $m$ = DE's value at $(x_0, y_0)$ |
 | Half-life | $T_h = \\ln 2/|k|$ |
 | Equilibrium | $dy/dx = 0$ → constant solutions |
 
@@ -27,7 +27,7 @@ export const calcabDiffEqPart7Data = {
 | Forgetting $+C$ | ALWAYS include until IC is applied |
 | Not separating completely | ALL $y$'s on one side, ALL $x$'s on the other |
 | Losing equilibrium solutions | Check $g(y)=0$ before dividing |
-| Wrong Euler direction | Concave up = underestimate |
+| Wrong over/under call | $d^2y/dx^2 > 0$ (concave up) means the tangent line underestimates |
 | Forgetting domain | Check where solution is defined |`
     },
     {
@@ -49,10 +49,10 @@ export const calcabDiffEqPart7Data = {
             explanation: '$500e^{0.05t} = 2000$. $e^{0.05t} = 4$. $t = \\ln 4/0.05 = 20\\ln 4 \\approx 27.7$. Using $\\ln 2$ answers a single doubling, $80 = 4/0.05$ forgets the logarithm, and $0.05\\ln 4$ multiplies instead of dividing.'
           },
           {
-            question: 'Using Euler\'s method: $dy/dx = y$, $y(0)=1$, $\\Delta x = 1$. Approximate $y(2)$.',
-            options: ['$4$', '$e^2$', '$2$', '$3$'],
+            question: 'Let $y = f(x)$ solve $\\frac{dy}{dx} = y - x$ with $f(0) = 2$. The tangent line at $x = 0$ is used to approximate $f(0.1)$. Is the estimate too large or too small, and why?',
+            options: ['Underestimate, since $\\frac{d^2y}{dx^2} = 1 > 0$ at $(0, 2)$', 'Overestimate, since $\\frac{d^2y}{dx^2} = 1 > 0$ at $(0, 2)$', 'Underestimate, since $\\frac{dy}{dx} = 2 > 0$ at $(0, 2)$', 'Overestimate, since $\\frac{d^2y}{dx^2} = -1 < 0$ at $(0, 2)$'],
             correctAnswer: 0,
-            explanation: '$y(1) = 1 + 1(1) = 2$. $y(2) = 2 + 2(1) = 4$. (Exact: $e^2 \\approx 7.39$, so Euler underestimates.)'
+            explanation: '$\\frac{d^2y}{dx^2} = \\frac{dy}{dx} - 1 = (y - x) - 1$, which is $1 > 0$ at $(0, 2)$, so $f$ is concave up there and the tangent line lies below the graph. A concave-up graph never sits below its tangent line, a positive first derivative only says $f$ is increasing, and $-1$ comes from treating $y$ as a constant when differentiating.'
           }
         ]
       }
@@ -98,11 +98,11 @@ export const calcabDiffEqPart7Data = {
             explanation: '"Rate of change" → $dQ/dt$. "Proportional to $Q$" → $= kQ$.'
           },
           {
-            label: 'Euler\'s method with $dy/dx = -y$, $y(0)=4$, $\\Delta x=0.5$: $y(0.5) =$',
+            label: 'For $dy/dx = -y$ with $y(0) = 4$, the tangent line at $x = 0$ gives $y(0.5) \\approx$',
             options: ['$2$', '$-2$', '$4e^{-0.5}$', '$3.5$'],
             correctAnswers: ['$2$'],
-            hints: ['$y_1 = 4 + (-4)(0.5) = 4 - 2 = 2$.'],
-            explanation: '$f(0,4) = -4$. $y_1 = 4 + (-4)(0.5) = 2$.'
+            hints: ['The slope at $(0, 4)$ is $-4$, so $y \\approx 4 + (-4)(0.5)$.'],
+            explanation: 'The slope at $(0, 4)$ is $-4$, so $y(0.5) \\approx 4 + (-4)(0.5) = 2$. The exact value $4e^{-0.5} \\approx 2.43$ is larger because the solution is concave up ($\\frac{d^2y}{dx^2} = y > 0$).'
           },
           {
             label: '$\\frac{dy}{dx} = e^{x+y}$ can be separated as:',
@@ -142,7 +142,7 @@ export const calcabDiffEqPart7Data = {
 | Slope fields | ✅ |
 | Exponential growth/decay | ✅ |
 | Newton's cooling | ✅ |
-| Euler's method | ✅ |
+| Tangent-line estimates & concavity of solutions | ✅ |
 | Equilibrium & stability | ✅ |
 | Particular solutions & domains | ✅ |
 

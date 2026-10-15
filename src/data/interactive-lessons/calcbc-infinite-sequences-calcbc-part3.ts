@@ -4,27 +4,21 @@ export const calcbcSequencesPart3Data = {
     {
       id: 'seq3-intro',
       type: 'text' as const,
-      content: `# Infinite Sequences — Recursive Sequences & Special Limits
+      content: `# Infinite Sequences — Special Limits & Growth Rates
 
-**Part 3 of 7 — Recursion and Important Limits**
+**Part 3 of 7 — Important Limits and Growth Rates**
 
-### Recursive Sequences
+### Why These Limits Matter
 
-A **recursive** sequence defines $a_{n+1}$ in terms of previous terms:
+Series questions on the BC exam keep asking the same sequence question in disguise: *what happens to the terms as $n \\to \\infty$?*
 
-$$a_{n+1} = f(a_n), \\quad a_1 = \\text{given}$$
-
-To find the limit (if it converges), assume $\\lim a_n = L$ and solve:
-
-$$L = f(L)$$
+- The **nth term test** needs $\\lim a_n$.
+- The **ratio test** needs $\\lim \\left|\\frac{a_{n+1}}{a_n}\\right|$, which is itself a sequence limit.
+- The **alternating series test** needs $\\lim b_n = 0$.
 
 ### Example
 
-$a_1 = 1$, $a_{n+1} = \\sqrt{2 + a_n}$.
-
-If $L$ exists: $L = \\sqrt{2 + L} \\implies L^2 = 2 + L \\implies L^2 - L - 2 = 0 \\implies L = 2$ (since $L > 0$).
-
-Must also verify convergence: show the sequence is increasing and bounded above by $2$.`
+$a_n = \\frac{3^n}{n!}$. The ratio $\\frac{a_{n+1}}{a_n} = \\frac{3}{n+1} \\to 0$, and once $n \\ge 3$ each term is smaller than the one before it, so the terms shrink to $0$: factorials eventually outgrow exponentials.`
     },
     {
       id: 'seq3-special',
@@ -60,10 +54,10 @@ Each function on the left grows **infinitely slower** than the one on its right.
             explanation: 'Exponential ($2^n$) beats any polynomial ($n^{100}$). Apply L\'Hôpital\'s $100$ times (or use the growth hierarchy).'
           },
           {
-            question: '$a_1 = 3$, $a_{n+1} = \\frac{a_n + 5}{2}$. If the limit exists, $L = $',
-            options: ['$5$', '$3$', '$4$', '$8$'],
-            correctAnswer: 0,
-            explanation: '$L = \\frac{L + 5}{2} \\implies 2L = L + 5 \\implies L = 5$.'
+            question: '$\\lim_{n \\to \\infty} \\frac{n!}{5^n} = $',
+            options: ['$0$', '$\\infty$', '$\\frac{1}{5}$', '$5$'],
+            correctAnswer: 1,
+            explanation: 'The ratio of consecutive terms is $\\frac{n+1}{5}$, which exceeds $1$ once $n \\ge 5$, so the terms grow without bound: factorial beats exponential. A limit of $0$ reverses the hierarchy, and $\\frac{1}{5}$ and $5$ confuse the ratio with the limit of the terms.'
           },
           {
             question: '$\\lim_{n \\to \\infty} \\left(\\frac{n+1}{n}\\right)^n = $',
@@ -100,13 +94,13 @@ Each function on the left grows **infinitely slower** than the one on its right.
     {
       id: 'seq3-input',
       type: 'input-box' as const,
-      content: '**Recursive Sequence**',
+      content: '**Special Limit**',
       exercise: {
-        question: '$a_1 = 0$, $a_{n+1} = \\frac{a_n}{2} + 3$. If the sequence converges to $L$, what is $L$?',
-        correctAnswer: '6',
-        acceptableAnswers: ['6', '6.0'],
-        hints: ['Set $L = L/2 + 3$.', 'Solve: $L - L/2 = 3$.'],
-        explanation: '$L = L/2 + 3 \\implies L/2 = 3 \\implies L = 6$.'
+        question: 'Find $\\lim_{n \\to \\infty} \\frac{n^2 + 3^n}{2 \\cdot 3^n + n^5}$. Give the exact value.',
+        correctAnswer: '1/2',
+        acceptableAnswers: ['1/2', '0.5', '.5'],
+        hints: ['In both the numerator and the denominator the exponential term dominates the powers of $n$.', 'Divide every term by $3^n$.'],
+        explanation: 'Dividing by $3^n$ gives $\\frac{n^2/3^n + 1}{2 + n^5/3^n}$, and $\\frac{n^p}{3^n} \\to 0$ for every power $p$, so the limit is $\\frac{1}{2}$.'
       }
     },
     {
@@ -114,8 +108,7 @@ Each function on the left grows **infinitely slower** than the one on its right.
       type: 'text' as const,
       content: `### Summary
 
-- Recursive sequences: find limit by solving $L = f(L)$
-- Must separately verify convergence (monotone + bounded)
+- Sequence limits drive the nth term, ratio, and alternating series tests
 - Growth hierarchy: $\\ln n \\ll n^p \\ll a^n \\ll n! \\ll n^n$
 - Key limit: $(1 + k/n)^n \\to e^k$
 
