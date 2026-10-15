@@ -82,10 +82,10 @@ where $P_{\\text{triple}}$ is the pressure at the triple point of water (273.16 
           {
             question: 'The Zeroth Law of Thermodynamics establishes:',
             options: [
-              'Energy conservation in thermal processes',
-              'The transitivity of thermal equilibrium, enabling temperature measurement',
-              'That entropy always increases',
-              'That heat flows from hot to cold'
+              'That energy is conserved when heat and work are exchanged',
+              'That thermal equilibrium is transitive, so thermometers work',
+              'That the entropy of an isolated system always increases',
+              'That heat flows on its own from hot objects to cold ones'
             ],
             correctAnswer: 1,
             explanation: 'The Zeroth Law says thermal equilibrium is transitive: if A is in equilibrium with C and B is in equilibrium with C, then A is in equilibrium with B. This is what makes thermometers meaningful.'
@@ -93,10 +93,10 @@ where $P_{\\text{triple}}$ is the pressure at the triple point of water (273.16 
           {
             question: 'Two objects are in thermal equilibrium when:',
             options: [
-              'They have the same mass',
-              'They are made of the same material',
+              'They have the same mass and the same volume',
+              'They are made of the same material and phase',
               'They are at the same temperature and no net heat flows between them',
-              'They have the same total thermal energy'
+              'They hold the same total thermal energy'
             ],
             correctAnswer: 2,
             explanation: 'Thermal equilibrium means equal temperatures and zero net heat transfer. Objects can differ in mass, material, and total energy while being in thermal equilibrium.'
@@ -104,10 +104,10 @@ where $P_{\\text{triple}}$ is the pressure at the triple point of water (273.16 
           {
             question: 'A metal spoon at 20°C is placed in soup at 80°C. Heat flows:',
             options: [
-              'From spoon to soup',
-              'From soup to spoon until both reach 80°C',
+              'From spoon to soup, as cold moves into the hot liquid',
+              'From soup to spoon until both reach the soup\'s 80°C',
               'From soup to spoon until they reach the same temperature between 20°C and 80°C',
-              'In both directions equally'
+              'Both ways equally, so neither temperature changes'
             ],
             correctAnswer: 2,
             explanation: 'Heat flows from hot (soup) to cold (spoon). The final equilibrium temperature is between 20°C and 80°C (the exact value depends on the masses and specific heats). The soup cools and the spoon warms.'
@@ -135,7 +135,7 @@ Complete each statement about thermal equilibrium and heat flow.
           },
           {
             label: 'Object X is in thermal equilibrium with a thermometer reading 50°C. Object Y is also in equilibrium with a thermometer reading 50°C. By the Zeroth Law, X and Y are',
-            options: ['not related', 'in thermal equilibrium with each other', 'at different temperatures', 'exchanging heat']
+            options: ['in equilibrium only after they touch', 'in thermal equilibrium with each other', 'at different temperatures from each other', 'exchanging heat with each other']
           },
           {
             label: 'At thermal equilibrium, the net heat transfer between two objects is',

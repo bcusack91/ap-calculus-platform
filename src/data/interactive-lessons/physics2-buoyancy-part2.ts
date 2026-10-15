@@ -85,10 +85,10 @@ Only 10.5% of an iceberg is visible above the surface!
           {
             question: 'A steel ship floats even though steel is denser than water because:',
             options: [
-              'Steel becomes lighter in water',
-              'The ship\'s hollow shape gives it a low *average* density (less than water)',
-              'Water can\'t exert force on metal',
-              'The ship is moving'
+              'Steel loses some of its weight when it sits in water',
+              'Its hollow shape gives it a low average density',
+              'Water pushes harder on metal than on other materials',
+              'Its forward motion lifts it the way a wing lifts a plane'
             ],
             correctAnswer: 1,
             explanation: 'The ship is mostly air inside. Its *average* density (total mass / total volume including air spaces) is less than water\'s density. It displaces more water than a solid steel block of the same mass would.'
@@ -96,13 +96,13 @@ Only 10.5% of an iceberg is visible above the surface!
           {
             question: 'A submarine dives by:',
             options: [
-              'Turning its propellers downward',
-              'Flooding ballast tanks to increase its average density above water\'s density',
-              'Reducing the buoyant force',
-              'Using gravity rockets'
+              'Angling its propellers to drive itself straight down',
+              'Flooding ballast tanks, raising its average density',
+              'Shrinking its hull to reduce the buoyant force on it',
+              'Pumping air into its tanks to make itself heavier'
             ],
             correctAnswer: 1,
-            explanation: 'Ballast tanks are filled with seawater, increasing the sub\'s total mass without changing its volume → density increases. When $\\rho_{\\text{sub}} > \\rho_{\\text{water}}$, it sinks. To surface, compressed air blows water out of the tanks.'
+            explanation: 'Ballast tanks are filled with seawater, increasing the sub\'s total mass without changing its volume → average density increases. When $\\rho_{\\text{sub}} > \\rho_{\\text{water}}$, it sinks. To surface, compressed air blows water out of the tanks — adding air makes it lighter, not heavier.'
           },
           {
             question: 'A block floats in water with 75% submerged. If the water is replaced with a denser liquid (SG = 1.5), the fraction submerged becomes:',

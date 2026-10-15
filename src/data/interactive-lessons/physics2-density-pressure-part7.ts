@@ -94,13 +94,13 @@ $$\\text{Floating } (\\text{fraction} = \\rho_{\\text{obj}}/\\rho_{\\text{fluid}
           {
             question: 'Oil (SG = 0.85) and water are in a U-tube. The oil column is 34 cm tall. The water column height is:',
             options: [
-              '40 cm',
+              '40.0 cm',
               '34 cm',
               '28.9 cm',
-              '25 cm'
+              '5.1 cm'
             ],
             correctAnswer: 2,
-            explanation: 'Equal pressures at the interface: $\\rho_{\\text{oil}} g h_{\\text{oil}} = \\rho_w g h_w$. So $h_w = h_{\\text{oil}} \\times (\\rho_{\\text{oil}}/\\rho_w) = 34 \\times 0.85 = 28.9$ cm.'
+            explanation: 'Equal pressures at the interface: $\\rho_{\\text{oil}} g h_{\\text{oil}} = \\rho_w g h_w$. So $h_w = h_{\\text{oil}} \\times (\\rho_{\\text{oil}}/\\rho_w) = 34 \\times 0.85 = 28.9$ cm. Inverting the ratio gives $34/0.85 = 40.0$ cm, and the denser water must stand shorter than the oil, not equal.'
           },
           {
             question: 'A 500 $cm^{3}$ object has mass 350 g. It is placed in water. What happens?',
@@ -150,10 +150,10 @@ $$\\text{Floating } (\\text{fraction} = \\rho_{\\text{obj}}/\\rho_{\\text{fluid}
           {
             question: 'A student says: "Pressure at the bottom of a swimming pool is greater near the drain because all the water flows there." Is this correct?',
             options: [
-              'Yes — more water near the drain means more pressure',
-              'No — in a static fluid, pressure depends only on depth, not on horizontal position',
-              'Yes — the drain creates extra suction',
-              'It depends on the pool shape'
+              'Yes — more water collects near the drain, adding weight above it',
+              'No — in still water, pressure depends only on depth',
+              'Yes — the drain\'s suction adds extra pressure along the bottom',
+              'It depends on the pool\'s shape and where the drain is placed'
             ],
             correctAnswer: 1,
             explanation: 'In a static fluid (or nearly static), pressure at the same depth is the same everywhere. The drain\'s location doesn\'t change the hydrostatic pressure. (If water is flowing, there\'s a slight dynamic effect, but for AP purposes, the answer is clear.)'

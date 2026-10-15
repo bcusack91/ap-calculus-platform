@@ -92,7 +92,7 @@ A liquid boils when its vapor pressure equals the external pressure above it.
             question: 'A liquid boils when:',
             options: [
               'Its temperature reaches a universal constant',
-              'Its vapor pressure equals the external (atmospheric) pressure',
+              'Its vapor pressure equals the external pressure on it',
               'All intermolecular bonds are broken',
               'Its temperature exceeds the critical temperature'
             ],
@@ -147,7 +147,7 @@ For each process on a typical phase diagram:
         dropdowns: [
           {
             label: 'Moving right (increasing T) along a horizontal line above the triple point pressure crosses:',
-            options: ['No boundary lines', 'One boundary (sublimation only)', 'Two boundaries (melting then boiling)', 'Three boundaries']
+            options: ['No boundaries (it stays in one phase)', 'One boundary (sublimation only)', 'Two boundaries (melting then boiling)', 'Three boundaries (melting, boiling, critical)']
           },
           {
             label: 'Moving right along a horizontal line BELOW the triple point pressure crosses:',

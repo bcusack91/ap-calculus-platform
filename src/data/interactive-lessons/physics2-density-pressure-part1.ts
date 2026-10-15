@@ -89,13 +89,13 @@ That's about 10 N per $cm^{2}$ — roughly the weight of a 1 kg mass on your fin
           {
             question: 'A block of metal has mass 5.4 kg and volume 0.002 $m^{3}$. Its density is:',
             options: [
-              '270 $kg/m^{3}$',
+              '0.00037 $kg/m^{3}$',
               '2700 $kg/m^{3}$',
               '0.0108 $kg/m^{3}$',
               '27,000 $kg/m^{3}$'
             ],
             correctAnswer: 1,
-            explanation: '$\\rho = m/V = 5.4/0.002 = 2700$ $kg/m^{3}$. This matches aluminum!'
+            explanation: '$\\rho = m/V = 5.4/0.002 = 2700$ $kg/m^{3}$. This matches aluminum! Dividing $V/m$ gives 0.00037, multiplying $m \\times V$ gives 0.0108, and a decimal slip gives 27,000.'
           },
           {
             question: 'An object with density 800 $kg/m^{3}$ is placed in water $(1000 kg/m^{3})$. It will:',
@@ -103,10 +103,10 @@ That's about 10 N per $cm^{2}$ — roughly the weight of a 1 kg mass on your fin
               'Sink to the bottom',
               'Float with part above the surface',
               'Hover at any depth (neutrally buoyant)',
-              'Dissolve'
+              'Float completely submerged, just under the surface'
             ],
             correctAnswer: 1,
-            explanation: '$\\rho_{\\text{object}} < \\rho_{\\text{water}}$, so it floats. The fraction submerged equals $\\rho_{\\text{obj}}/\\rho_{\\text{fluid}} = 800/1000 = 80\\%$.'
+            explanation: '$\\rho_{\\text{object}} < \\rho_{\\text{water}}$, so it floats with part above the surface. The fraction submerged equals $\\rho_{\\text{obj}}/\\rho_{\\text{fluid}} = 800/1000 = 80\\%$, so 20% sticks out. Only an object exactly as dense as water hovers at any depth.'
           },
           {
             question: 'A 600 N force is spread over an area of 0.03 $m^{2}$. The pressure is:',
@@ -138,11 +138,11 @@ A solid sphere has radius $r = 0.05$ m and mass $m = 1.5$ kg. (Volume of sphere:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.00052', '2885', 'sink'],
+        correctAnswers: ['0.000524', '2865', 'sink'],
         hint1: '$V = \\frac{4}{3}\\pi (0.05)^3 = \\frac{4}{3}\\pi (1.25 \\times 10^{-4})$.',
-        hint2: '$V \\approx 5.24 \\times 10^{-4}\ \\text{m}^3 \\approx 0.00052\ \\text{m}^3$. Then $\\rho = 1.5 / 0.00052$.',
-        hint3: '$\\rho \\approx 2885$ $kg/m^{3}$. Since $2885 > 1000$, it sinks.',
-        explanation: '$V = (4/3)\\pi(0.05)^3 \\approx 5.24 \\times 10^{-4}$ $m^{3}$. Rounded: $0.00052$ $m^{3}$. $\\rho = 1.5/0.00052 \\approx 2885$ $kg/m^{3}$. Since this is greater than water (1000), it sinks. Accept values in range 2860-2890.'
+        hint2: '$V \\approx 5.24 \\times 10^{-4}\ \\text{m}^3 \\approx 0.000524\ \\text{m}^3$. Then $\\rho = 1.5 / 0.000524$.',
+        hint3: '$\\rho \\approx 2865$ $kg/m^{3}$. Since $2865 > 1000$, it sinks.',
+        explanation: '$V = (4/3)\\pi(0.05)^3 \\approx 5.24 \\times 10^{-4}$ $m^{3}$. To 3 significant figures: $0.000524$ $m^{3}$. $\\rho = 1.5/(5.236 \\times 10^{-4}) \\approx 2865$ $kg/m^{3}$. Since this is greater than water (1000), it sinks.'
       }
     },
     {
@@ -156,24 +156,24 @@ A solid sphere has radius $r = 0.05$ m and mass $m = 1.5$ kg. (Volume of sphere:
           {
             question: 'Why do snowshoes prevent you from sinking into snow?',
             options: [
-              'They make you lighter',
-              'They increase the area, decreasing the pressure on the snow',
-              'They decrease the area, increasing the pressure',
-              'They change the density of snow'
+              'They lower the force your weight exerts on the snow',
+              'They spread the same weight over a larger area',
+              'They raise the pressure, packing snow into a firm base',
+              'They make the snow denser so it can hold more weight'
             ],
             correctAnswer: 1,
-            explanation: 'Your weight (force) stays the same, but the larger area means $P = F/A$ decreases. Less pressure = less sinking.'
+            explanation: 'Your weight (the force) stays the same, but spreading it over a larger area means $P = F/A$ decreases. Less pressure on the snow = less sinking.'
           },
           {
             question: 'A tire pressure gauge reads 0 Pa. This means:',
             options: [
-              'There is a vacuum inside the tire',
-              'The tire is at atmospheric pressure (no excess)',
-              'The tire has no air at all',
-              'The gauge is broken'
+              'There is a perfect vacuum inside the tire',
+              'Inside pressure equals atmospheric pressure',
+              'The absolute pressure inside the tire is 0 Pa',
+              'The air inside exerts no force on the tire walls'
             ],
             correctAnswer: 1,
-            explanation: 'Gauge pressure = 0 means the inside pressure equals atmospheric pressure. The absolute pressure is still ~101,325 Pa.'
+            explanation: 'A gauge reads pressure above atmospheric. Gauge pressure = 0 means the inside pressure equals atmospheric pressure, so the absolute pressure is still about 101,325 Pa and the air still pushes on the walls (balanced by the atmosphere outside).'
           }
         ]
       }

@@ -103,11 +103,11 @@ The air gap provides about **98%** of the total thermal resistance, despite bein
             options: [
               '2× faster than Wall A',
               '100× faster than Wall A',
-              '1{,}000× faster than Wall A',
-              '10{,}000× faster than Wall A'
+              '1,000× faster than Wall A',
+              '10,000× faster than Wall A'
             ],
             correctAnswer: 2,
-            explanation: '$Q/t \\propto k$. The ratio is $40/0.04 = 1{,}000$. Wall B (a metal) conducts heat 1{,}000 times faster than Wall A (an insulator).'
+            explanation: '$Q/t \\propto k$. The ratio is $40/0.04 = 1{,}000$. Wall B (a metal) conducts heat 1,000 times faster than Wall A (an insulator).'
           }
         ]
       }
@@ -151,11 +151,11 @@ A wall consists of 10 cm of brick ($k = 0.60$ W/(m·K)) and 5 cm of insulation (
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.17', '1.25', '254'],
+        correctAnswers: ['0.167', '1.25', '254'],
         hint1: '$R_{\\text{brick}} = L/k = 0.10/0.60$.',
         hint2: '$R_{\\text{insulation}} = L/k = 0.05/0.040$.',
         hint3: '$R_{\\text{total}} = R_{\\text{brick}} + R_{\\text{insulation}}$. Then $Q/t = A \\Delta T / R_{\\text{total}} = (12)(30)/R_{\\text{total}}$.',
-        explanation: '1) $R_{\\text{brick}} = 0.10/0.60 = 0.167 \\approx 0.17$ $m^{2}\\cdot K/W$. 2) $R_{\\text{insulation}} = 0.05/0.04 = 1.25$ $m^{2}\\cdot K/W$. 3) $R_{\\text{total}} = 0.17 + 1.25 = 1.42$ $m^{2}\\cdot K/W$. $Q/t = (12)(30)/1.42 = 254$ W. Note the insulation provides 88% of the total resistance!'
+        explanation: '1) $R_{\\text{brick}} = 0.10/0.60 = 0.167$ $m^{2}\\cdot K/W$. 2) $R_{\\text{insulation}} = 0.05/0.04 = 1.25$ $m^{2}\\cdot K/W$. 3) $R_{\\text{total}} = 0.167 + 1.25 = 1.42$ $m^{2}\\cdot K/W$. $Q/t = (12)(30)/1.42 = 254$ W. Note the insulation provides 88% of the total resistance!'
       }
     },
     {
@@ -170,12 +170,12 @@ A wall consists of 10 cm of brick ($k = 0.60$ W/(m·K)) and 5 cm of insulation (
             question: 'Adding a 2 cm layer of Styrofoam insulation ($k = 0.033$ W/(m·K)) to a 10 cm brick wall ($k = 0.60$ W/(m·K)). The insulation\'s R-value relative to the brick\'s R-value is approximately:',
             options: [
               'Much smaller — the insulation barely helps',
-              'About the same',
+              'About the same — each layer adds equal resistance',
               'About 3.6 times larger — the insulation dominates',
-              'About 10 times larger'
+              'About 18 times larger — from the $k$ values alone'
             ],
             correctAnswer: 2,
-            explanation: '$R_{\\text{foam}} = 0.02/0.033 = 0.606$ $m^{2}\\cdot K/W$. $R_{\\text{brick}} = 0.10/0.60 = 0.167$ $m^{2}\\cdot K/W$. Ratio: $0.606/0.167 \\approx 3.6$. A thin layer of good insulation beats a thick wall of brick!'
+            explanation: '$R_{\\text{foam}} = 0.02/0.033 = 0.606$ $m^{2}\\cdot K/W$. $R_{\\text{brick}} = 0.10/0.60 = 0.167$ $m^{2}\\cdot K/W$. Ratio: $0.606/0.167 \\approx 3.6$. Comparing only the conductivities ($0.60/0.033 \\approx 18$) ignores that the brick is five times thicker. A thin layer of good insulation beats a thick wall of brick!'
           },
           {
             question: 'In steady-state conduction through a composite wall, which quantity is the SAME through every layer?',

@@ -92,10 +92,10 @@ A Pitot tube on an airplane measures the stagnation pressure (air brought to res
           {
             question: 'Water flows upward through a vertical pipe that narrows. At a higher, narrower point, the speed is greater. The pressure at this point compared to the wider, lower point is:',
             options: [
-              'Definitely higher (it\'s narrower)',
-              'Definitely lower (both speed increase AND height increase reduce pressure)',
-              'It depends on the exact dimensions',
-              'The same (effects cancel)'
+              'Higher (the narrowing squeezes the water)',
+              'Lower (higher speed and higher position both lower it)',
+              'It depends on the exact pipe dimensions',
+              'The same (the two effects cancel out)'
             ],
             correctAnswer: 1,
             explanation: 'Both effects work in the same direction: higher speed (from narrowing) lowers pressure, AND higher elevation lowers pressure. The pressure at the top narrow section is definitely lower. $P_2 = P_1 - \\frac{1}{2}\\rho(v_2^2 - v_1^2) - \\rho g(h_2 - h_1)$.'
@@ -103,10 +103,10 @@ A Pitot tube on an airplane measures the stagnation pressure (air brought to res
           {
             question: 'Water flows through a horizontal pipe that WIDENS. The pressure in the wider section is:',
             options: [
-              'Lower (wider pipe → more area → less pressure)',
+              'Lower (wider pipe → more area → less pressure on the walls)',
               'Higher (wider pipe → slower speed → higher pressure)',
-              'The same',
-              'Zero'
+              'The same (the flow rate doesn\'t change)',
+              'The same (the pipe is horizontal)'
             ],
             correctAnswer: 1,
             explanation: 'Wider pipe → slower speed (continuity) → higher pressure (Bernoulli). This seems counterintuitive but is correct! Wider = slower = higher pressure. The fluid decelerates and "recovers" pressure.'
@@ -145,10 +145,10 @@ A large open tank has water 10 m deep. A pipe at the bottom carries water horizo
           {
             question: 'You need to combine both continuity and Bernoulli to solve a problem when:',
             options: [
-              'The pipe changes area (you need continuity to find the other speed)',
-              'The pipe has the same area everywhere',
-              'The fluid is at rest',
-              'Only pressure is unknown'
+              'The pipe\'s area changes, so the speeds differ',
+              'The pipe has the same area everywhere along it',
+              'The fluid is at rest, so pressure depends on depth',
+              'Only one pressure is unknown and the speeds are given'
             ],
             correctAnswer: 0,
             explanation: 'When the pipe changes area, Bernoulli has two unknowns ($v$ and $P$). Continuity provides the relationship between speeds ($A_1 v_1 = A_2 v_2$), allowing you to solve the system. If the area is constant, $v_1 = v_2$ and you only need Bernoulli.'

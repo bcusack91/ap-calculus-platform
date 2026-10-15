@@ -94,10 +94,10 @@ A circular pipe (diameter 4.0 cm) delivers water at 5.0 m/s into a cylindrical t
           {
             question: 'Water flows steadily through a horizontal pipe that gradually widens. At a wider section, compared to a narrower section, the water moves:',
             options: [
-              'Faster, because there\'s more room',
-              'Slower, because the same flow rate passes through more area',
-              'At the same speed',
-              'Cannot determine without knowing the pressure'
+              'Faster, because the wider pipe gives the water more room',
+              'Slower, as the same flow passes through more area',
+              'At the same speed, because the flow rate is unchanged',
+              'Cannot determine without first knowing the pressure'
             ],
             correctAnswer: 1,
             explanation: '$Av = $ constant. Larger area → slower speed. This is counterintuitive — more room means slower flow, not faster! The same volume per second spreads across more area.'
@@ -129,11 +129,11 @@ A circular pipe (diameter 4.0 cm) delivers water at 5.0 m/s into a cylindrical t
             options: [
               '0.47 cm/s',
               '4.7 cm/s',
-              '0.47 m/s',
-              '4.7 m/s'
+              '28 cm/s',
+              '0.12 cm/s'
             ],
             correctAnswer: 0,
-            explanation: '$Q = 2.0$ mL/min = $2.0 \\times 10^{-6}/60 = 3.33 \\times 10^{-8}$ $m^{3}/s$. $A = \\pi(1.5 \\times 10^{-3})^2 = 7.07 \\times 10^{-6}$ $m^{2}$. $v = Q/A = 4.71 \\times 10^{-3}$ m/s ≈ 0.47 cm/s. Slow and steady!'
+            explanation: '$Q = 2.0$ mL/min = $2.0 \\times 10^{-6}/60 = 3.33 \\times 10^{-8}$ $m^{3}/s$. $A = \\pi(1.5 \\times 10^{-3})^2 = 7.07 \\times 10^{-6}$ $m^{2}$. $v = Q/A = 4.71 \\times 10^{-3}$ m/s ≈ 0.47 cm/s. Forgetting to divide by 60 s gives 28 cm/s, and using the 3.0 mm diameter as the radius gives 0.12 cm/s. Slow and steady!'
           }
         ]
       }

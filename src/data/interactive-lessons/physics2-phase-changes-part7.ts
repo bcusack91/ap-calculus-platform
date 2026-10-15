@@ -58,9 +58,9 @@ Identify the CORRECT statement in each question:
             question: 'Which statement about phase changes is CORRECT?',
             options: [
               'Temperature always increases when you add heat to a substance',
-              'Boiling and evaporation are exactly the same process',
-              'Temperature remains constant during a phase change because added energy goes into changing intermolecular potential energy',
-              'The latent heat of fusion is always larger than the latent heat of vaporization'
+              'Boiling and evaporation are the same process at the same temperature',
+              'Added energy changes bond energy, not temperature, in a phase change',
+              'The latent heat of fusion is always larger than that of vaporization'
             ],
             correctAnswer: 2,
             explanation: 'Common mistake: thinking temperature always rises with added heat. During a phase change, temperature stays constant — energy goes into breaking bonds (potential energy), not increasing kinetic energy. Also, $L_v > L_f$ always, and evaporation occurs at any temperature while boiling occurs only at the boiling point.'
@@ -68,10 +68,10 @@ Identify the CORRECT statement in each question:
           {
             question: 'In a calorimetry problem, a student writes: "Energy from hot water = energy to melt ice." This setup is incomplete if:',
             options: [
-              'The ice starts at 0°C',
-              'The ice starts below 0°C, because heating the ice to 0°C must also be included',
-              'The container is insulated',
-              'The water starts above 100°C'
+              'The ice starts at exactly 0°C, right at its melting point',
+              'The ice starts below 0°C and must first warm to 0°C',
+              'The container is well insulated, so no heat escapes to the air',
+              'The hot water starts at 100°C instead of room temperature'
             ],
             correctAnswer: 1,
             explanation: 'If ice starts below 0°C, you must first include $Q = mc_{\\text{ice}}\\Delta T$ to bring it to 0°C before applying $Q = mL_f$ for melting. Forgetting this step is one of the most common AP errors.'
@@ -140,10 +140,10 @@ AP Physics 2 free-response questions on this topic typically ask you to:
           {
             question: 'A student heats a substance at a constant rate and plots temperature vs. time. The graph shows a sloped region, then a flat region, then another sloped region with a gentler slope. The flat region represents:',
             options: [
-              'The substance cooling down',
+              'The substance cooling down while heat is still added',
               'A phase change where the substance absorbs energy without temperature change',
-              'The heater being turned off',
-              'The substance reaching thermal equilibrium'
+              'The heater being turned off for that stretch of time',
+              'The substance reaching thermal equilibrium with the heater'
             ],
             correctAnswer: 1,
             explanation: 'The flat region on a heating curve is a phase change. Energy is being added (constant heating rate) but temperature stays constant — all energy goes into breaking intermolecular bonds. The gentler second slope indicates a higher specific heat capacity in the new phase.'
@@ -153,7 +153,7 @@ AP Physics 2 free-response questions on this topic typically ask you to:
             options: [
               'Ice at 0°C to water at 100°C (larger temperature change)',
               'Water at 100°C to steam at 100°C (latent heat of vaporization is huge)',
-              'They require the same energy',
+              'They require the same energy, since both end at 100°C',
               'Cannot be determined without knowing the pressure'
             ],
             correctAnswer: 1,
@@ -173,13 +173,13 @@ AP Physics 2 free-response questions on this topic typically ask you to:
           {
             question: 'An insulated container holds 1.0 kg of water at 20°C. How much ice at 0°C must be added so the final temperature is exactly 0°C with no ice remaining?',
             options: [
-              '$m = c_w(20)/(L_f) \\times 1.0$ kg ≈ 0.25 kg',
-              '1.0 kg',
+              '0.25 kg',
+              '0.037 kg',
               '0.50 kg',
-              '0.10 kg'
+              '1.25 kg'
             ],
             correctAnswer: 0,
-            explanation: 'Energy released by water cooling to 0°C: $Q = (1.0)(4{,}186)(20) = 83{,}720$ J. This must exactly melt mass $m$ of ice: $83{,}720 = m(334{,}000)$. $m = 83{,}720/334{,}000 = 0.2506$ kg ≈ 0.25 kg.'
+            explanation: 'Energy released by water cooling to 0°C: $Q = (1.0)(4{,}186)(20) = 83{,}720$ J. This must exactly melt mass $m$ of ice: $83{,}720 = m(334{,}000)$. $m = 83{,}720/334{,}000 = 0.2506$ kg ≈ 0.25 kg. Using $L_v$ instead of $L_f$ gives 0.037 kg, and using a 100°C temperature drop instead of 20°C gives 1.25 kg.'
           }
         ]
       }

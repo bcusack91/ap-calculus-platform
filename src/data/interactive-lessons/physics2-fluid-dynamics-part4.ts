@@ -62,10 +62,10 @@ Where $\\mu$ is the fluid's viscosity and $D$ is the pipe diameter.
           {
             question: 'Smoke rising from a candle initially rises in a smooth column, then becomes chaotic higher up. This is because:',
             options: [
-              'The smoke cools down',
-              'The flow transitions from laminar to turbulent as speed increases and the column widens',
-              'Air currents only exist high up',
-              'The smoke runs out of energy'
+              'The smoke cools, so its particles start to clump together',
+              'Its flow turns turbulent as it speeds up and widens',
+              'Room air currents exist only well above the candle flame',
+              'The smoke runs out of energy and loses its direction'
             ],
             correctAnswer: 1,
             explanation: 'Near the candle, the smoke moves slowly in a narrow column (low Reynolds number → laminar). As it rises, it speeds up and the column widens → Reynolds number increases → transition to turbulence.'
@@ -129,10 +129,10 @@ AP treats fluids as non-viscous (ideal). But understanding viscosity helps you k
           {
             question: 'In a real (viscous) fluid flowing through a pipe, the velocity is fastest:',
             options: [
-              'At the pipe walls',
+              'Right along the pipe walls',
               'At the center of the pipe',
-              'Uniformly everywhere',
-              'Just inside the walls'
+              'Equally at every point across the pipe',
+              'Just inside the walls, in a thin layer'
             ],
             correctAnswer: 1,
             explanation: 'Viscosity creates a "no-slip" condition at the walls (velocity = 0). The fastest flow is at the center, with a parabolic velocity profile. This is called Poiseuille flow.'
@@ -140,10 +140,10 @@ AP treats fluids as non-viscous (ideal). But understanding viscosity helps you k
           {
             question: 'Motor oil works better when warm because:',
             options: [
-              'It becomes more viscous and sticks better',
+              'It becomes more viscous and clings to the moving parts better',
               'It becomes less viscous and flows more easily through the engine',
-              'Its density increases',
-              'It becomes compressible'
+              'Its density increases, so it forms a thicker protective film',
+              'It becomes compressible and cushions the moving parts'
             ],
             correctAnswer: 1,
             explanation: 'Like all liquids, oil\'s viscosity *decreases* with temperature. Warm oil flows more easily through engine parts, providing better lubrication and circulation.'
@@ -162,20 +162,20 @@ AP treats fluids as non-viscous (ideal). But understanding viscosity helps you k
           {
             question: 'A doctor listens to blood flow in an artery with a stethoscope. If they hear a whooshing sound (instead of silence), it likely indicates:',
             options: [
-              'Normal laminar flow',
-              'The heart has stopped',
+              'Normal, smooth laminar flow through a healthy artery',
+              'A complete blockage that has stopped all blood flow',
               'Turbulent flow, possibly from a narrowed artery',
-              'The stethoscope is broken'
+              'Air bubbles in the blood bursting against the artery wall'
             ],
             correctAnswer: 2,
-            explanation: 'Normal blood flow is laminar and nearly silent. A narrowed artery (stenosis) forces blood through a smaller opening at higher speed → turbulence → audible turbulence called a "bruit" or murmur. This is a real diagnostic technique!'
+            explanation: 'Normal blood flow is laminar and nearly silent, and a fully blocked artery has no flow to make sound. A narrowed artery (stenosis) forces blood through a smaller opening at higher speed → turbulence → an audible sound called a "bruit." This is a real diagnostic technique!'
           },
           {
             question: 'The ideal fluid model used in AP Physics 2 would work BEST for:',
             options: [
-              'Honey flowing down a spoon',
+              'Honey flowing slowly down a spoon',
               'Water flowing smoothly through a garden hose',
-              'Whitewater rapids',
+              'Fast whitewater crashing through river rapids',
               'Ketchup being squeezed from a bottle'
             ],
             correctAnswer: 1,

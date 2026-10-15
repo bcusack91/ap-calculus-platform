@@ -155,10 +155,10 @@ Water flows horizontally through a pipe. At point 1: $P_1 = 200{,}000$ Pa, $v_1 
           {
             question: 'If Bernoulli\'s equation for a static fluid ($v = 0$) gives $P + \\rho g h = $ constant, this is equivalent to:',
             options: [
-              'Pascal\'s Law',
-              'The hydrostatic pressure equation $P = P_0 + \\rho g d$',
-              'The continuity equation',
-              'Archimedes\' Principle'
+              'Pascal\'s principle for enclosed fluids',
+              'The hydrostatic equation $P = P_0 + \\rho g d$',
+              'The continuity equation for flow',
+              'Archimedes\' principle for buoyancy'
             ],
             correctAnswer: 1,
             explanation: 'Setting $v = 0$ in Bernoulli\'s equation gives $P + \\rho g h = $ const, which rearranges to $P_2 - P_1 = \\rho g(h_1 - h_2) = \\rho g d$. This is exactly the hydrostatic pressure equation from our earlier study!'

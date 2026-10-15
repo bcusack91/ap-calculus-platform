@@ -177,7 +177,7 @@ For rectangular cycles: $W_{\\text{net}} = \\Delta P \\times \\Delta V$
           },
           {
             label: 'Adiabatic process on a PV diagram',
-            options: ['Vertical line', 'Horizontal line', 'Hyperbola', 'Steeper curve than isothermal']
+            options: ['Vertical line at constant volume', 'Horizontal line at constant pressure', 'Hyperbola, the same as an isotherm', 'Steeper curve than isothermal']
           }
         ],
         correctAnswers: ['Horizontal line', 'Vertical line', 'Hyperbola', 'Steeper curve than isothermal'],

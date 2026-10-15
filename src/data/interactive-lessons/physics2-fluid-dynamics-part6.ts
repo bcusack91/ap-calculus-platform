@@ -55,10 +55,10 @@ Blood slows down dramatically in capillaries because the total cross-sectional a
               'Half the normal speed',
               'The same as normal',
               'Double the normal speed',
-              'Cannot be determined'
+              'Four times normal'
             ],
             correctAnswer: 2,
-            explanation: '$A_1 v_1 = A_2 v_2$. If $A_2 = A_1/2$, then $v_2 = 2v_1$. The blood must speed up to maintain the same flow rate — this is why blockages are dangerous (high speed → turbulence → plaque damage).'
+            explanation: '$A_1 v_1 = A_2 v_2$. If $A_2 = A_1/2$, then $v_2 = 2v_1$. The blood must speed up to maintain the same flow rate — this is why blockages are dangerous (high speed → turbulence → plaque damage). "Four times" would apply if the *radius*, not the area, were halved.'
           },
           {
             question: 'The cardiac output (volume pumped per minute) of a healthy heart is about 5 L/min. If the aorta has radius 1.2 cm, the average blood speed in the aorta is approximately:',
@@ -142,10 +142,10 @@ A sprinkler system has one main pipe (radius 2.0 cm, speed 3.0 m/s) that feeds 8
           {
             question: 'An aneurysm is a bulge in a blood vessel (the vessel widens). Blood flow speed in the aneurysm region:',
             options: [
-              'Increases (the bulge pushes blood faster)',
+              'Increases (the stretched wall squeezes blood faster)',
               'Decreases (larger area → slower speed by continuity)',
-              'Stays the same',
-              'Becomes zero'
+              'Stays the same, since the heart sets the flow',
+              'Drops to zero as blood pools in the bulge'
             ],
             correctAnswer: 1,
             explanation: 'By continuity, a wider vessel means slower blood flow. Ironically, this slower flow can cause blood clots (stagnation), making aneurysms dangerous. The wall is also thinner and under more stress — risk of rupture.'

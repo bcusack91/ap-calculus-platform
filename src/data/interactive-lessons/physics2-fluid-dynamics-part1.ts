@@ -151,13 +151,13 @@ Water flows through a circular pipe of diameter 4.0 cm at a speed of 3.0 m/s.
           {
             question: 'Blood flows more slowly in capillaries than in arteries, even though capillaries are much narrower. This is because:',
             options: [
-              'Blood is thicker in capillaries',
-              'The total cross-sectional area of all capillaries combined is much larger than the artery',
-              'Gravity slows the blood',
-              'Capillaries have higher pressure'
+              'Blood thickens in capillaries, so it moves more slowly',
+              'Together, the capillaries have a far larger total area',
+              'Narrow tubes always slow a fluid down, by continuity',
+              'Capillaries are under higher pressure than arteries'
             ],
             correctAnswer: 1,
-            explanation: 'While each capillary is tiny, there are *billions* of them. The total combined area is enormous. Since $Q = Av$ is roughly constant, a huge $A$ means a small $v$. This slow flow gives blood time to exchange nutrients!'
+            explanation: 'While each capillary is tiny, there are *billions* of them, so their total combined cross-sectional area is far larger than the artery\'s. Since $Q = Av$ is roughly constant, a huge total $A$ means a small $v$. Continuity says a single narrow tube speeds flow up — it\'s the total area that matters. This slow flow gives blood time to exchange nutrients!'
           }
         ]
       }

@@ -144,7 +144,7 @@ Where:
               'Convection — hot air flows through the rod',
               'Radiation — the flame emits infrared waves',
               'Conduction — energy passes through molecular collisions in the solid',
-              'All three equally'
+              'All three mechanisms contribute equally'
             ],
             correctAnswer: 2,
             explanation: 'Within a solid rod, heat transfers by conduction — vibrating atoms pass energy to neighbors, and free electrons (in metals) carry energy along the rod. Convection cannot occur within a solid.'
@@ -208,7 +208,7 @@ Where:
             options: [
               'The silvered (reflective) walls',
               'The vacuum between the double walls',
-              'The sealed lid',
+              'The sealed lid on top of the bottle',
               'The outer plastic shell'
             ],
             correctAnswer: 1,
@@ -218,7 +218,7 @@ Where:
             question: 'On a cold winter night, you feel colder near a window even without a draft. This is primarily because:',
             options: [
               'Cold passes through the glass by conduction',
-              'Your body radiates heat toward the cold glass surface (net radiation loss)',
+              'Your body loses more heat by radiation to the cold glass than it gets back',
               'Convection currents push cold air toward you',
               'The glass has a high specific heat'
             ],

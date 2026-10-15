@@ -88,7 +88,7 @@ Water molecules form **hydrogen bonds** with each other. Much of the energy you 
       exercise: {
         questions: [
           {
-            question: 'Equal masses of water ($c = 4{,}186$ J/(kg·°C)) and copper ($c = 390$ J/(kg·°C)) both absorb 1{,}000 J of heat. Which statement is correct?',
+            question: 'Equal masses of water ($c = 4{,}186$ J/(kg·°C)) and copper ($c = 390$ J/(kg·°C)) both absorb 1,000 J of heat. Which statement is correct?',
             options: [
               'Water\'s temperature increases more than copper\'s',
               'Copper\'s temperature increases more than water\'s',
@@ -122,14 +122,14 @@ Use $Q = mc\\Delta T$. Round answers to the nearest whole number.
 
 1) How much heat is needed to raise 2.0 kg of water from 20°C to 80°C? ($c_w = 4{,}186$ J/(kg·°C)). Answer in **kJ**.
 
-2) A 0.50 kg block of aluminum ($c = 900$ J/(kg·°C)) absorbs 9{,}000 J of heat. What is the temperature change in °C?
+2) A 0.50 kg block of aluminum ($c = 900$ J/(kg·°C)) absorbs 9,000 J of heat. What is the temperature change in °C?
 
 3) A 0.30 kg piece of copper ($c = 390$ J/(kg·°C)) cools from 200°C to 50°C. How much heat does it release? Answer as a positive number in **J**.
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['502', '20', '17550'],
-        hint1: '$Q = (2.0)(4{,}186)(80 - 20) = (2.0)(4{,}186)(60)$. Convert J to kJ by dividing by 1{,}000.',
+        hint1: '$Q = (2.0)(4{,}186)(80 - 20) = (2.0)(4{,}186)(60)$. Convert J to kJ by dividing by 1,000.',
         hint2: '$\\Delta T = Q/(mc) = 9{,}000 / (0.50 \\times 900)$.',
         hint3: '$|Q| = mc|\\Delta T| = (0.30)(390)(200 - 50) = (0.30)(390)(150)$.',
         explanation: '1) $Q = (2.0)(4{,}186)(60) = 502{,}320$ J $= 502$ kJ. 2) $\\Delta T = 9{,}000/450 = 20$°C. 3) $|Q| = (0.30)(390)(150) = 17{,}550$ J.'
@@ -146,24 +146,24 @@ Use $Q = mc\\Delta T$. Round answers to the nearest whole number.
           {
             question: 'On a hot summer day, the sand at the beach feels much hotter than the ocean water, even though both receive the same solar energy. This is because:',
             options: [
-              'Sand absorbs more solar radiation than water',
+              'Sand absorbs more of the solar radiation than water',
               'Sand has a much lower specific heat than water',
-              'Water reflects all sunlight',
-              'Sand is darker in color'
+              'Water reflects nearly all the sunlight that hits it',
+              'Sand\'s darker color makes it reach a higher temperature'
             ],
             correctAnswer: 1,
-            explanation: 'Sand has a low specific heat (~800 J/(kg·°C)) compared to water (4{,}186 J/(kg·°C)). The same energy input produces a much larger temperature change in sand than in water.'
+            explanation: 'Sand has a low specific heat (~800 J/(kg·°C)) compared to water (4,186 J/(kg·°C)). The same energy input produces a much larger temperature change in sand than in water. The stem fixes the energy received as equal, so absorption and color are not the explanation, and water reflects only a small fraction of sunlight.'
           },
           {
-            question: 'It takes 13{,}500 J to raise the temperature of 0.50 kg of an unknown substance by 30°C. What is the specific heat of this substance?',
+            question: 'It takes 13,500 J to raise the temperature of 0.50 kg of an unknown substance by 30°C. What is the specific heat of this substance?',
             options: [
               '225 J/(kg·°C)',
               '450 J/(kg·°C)',
               '900 J/(kg·°C)',
-              '1{,}350 J/(kg·°C)'
+              '1,350 J/(kg·°C)'
             ],
             correctAnswer: 2,
-            explanation: '$c = Q/(m\\Delta T) = 13{,}500 / (0.50 \\times 30) = 13{,}500 / 15 = 900$ J/(kg·°C). This matches aluminum!'
+            explanation: '$c = Q/(m\\Delta T) = 13{,}500 / (0.50 \\times 30) = 13{,}500 / 15 = 900$ J/(kg·°C). This matches aluminum! Leaving out the mass gives 450, and multiplying by 0.50 instead of dividing gives 225.'
           }
         ]
       }

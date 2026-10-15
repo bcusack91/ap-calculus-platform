@@ -67,13 +67,13 @@ A 1 $m^{3}$ helium balloon can lift about 1 kg!
           {
             question: 'A weather balloon rises. As it goes higher, the buoyant force:',
             options: [
-              'Increases (balloon expands)',
-              'Decreases (air density drops)',
-              'Stays constant',
-              'First increases, then decreases — it\'s complex!'
+              'Increases steadily, because the balloon keeps expanding',
+              'Decreases steadily, because the air keeps getting thinner',
+              'Increases, because the pressure on its underside grows',
+              'Stays roughly constant until the balloon stops expanding'
             ],
             correctAnswer: 3,
-            explanation: 'Two competing effects: the balloon expands (increasing $V$), but air density $\\rho$ decreases. The net buoyant force depends on which effect dominates. Initially buoyancy can increase, but eventually the air becomes too thin — this is why weather balloons burst at high altitude.'
+            explanation: '$F_B = \\rho_{\\text{air}} V g$. As the balloon rises, the air pressure falls, so $\\rho_{\\text{air}}$ drops — but the balloon expands in proportion (at similar temperatures, $V \\propto 1/P$ while $\\rho_{\\text{air}} \\propto P$). The product $\\rho_{\\text{air}} V$ stays roughly constant, so the buoyant force does too. Once the balloon reaches its maximum size, further thinning of the air lowers $F_B$ — and soon after, the balloon bursts.'
           }
         ]
       }
@@ -153,7 +153,7 @@ $\\rho_{\\text{air}} = 1.2$ $kg/m^{3}$, $\\rho_{\\text{He}} = 0.16$ $kg/m^{3}$.
               'Rises higher in the water',
               'Sinks lower in the water',
               'Stays at the same level',
-              'Tips over'
+              'Rises at first, then returns to the same level'
             ],
             correctAnswer: 1,
             explanation: 'The ship\'s weight is unchanged, so it must displace the *same weight* of water. Freshwater is less dense, so the ship must displace *more volume* → it sits lower. $V_{\\text{sub}} = m_{\\text{ship}}/\\rho_{\\text{fluid}}$ increases when $\\rho$ decreases.'
@@ -161,10 +161,10 @@ $\\rho_{\\text{air}} = 1.2$ $kg/m^{3}$, $\\rho_{\\text{He}} = 0.16$ $kg/m^{3}$.
           {
             question: 'A diver at 30 m depth releases a small air bubble. As the bubble rises, its buoyant force:',
             options: [
-              'Stays constant (same mass of air)',
+              'Stays constant (same mass of air inside it)',
               'Increases (bubble expands as pressure decreases)',
-              'Decreases (farther from the bottom)',
-              'Decreases then increases'
+              'Decreases (less water above it to push it up)',
+              'Decreases (the air inside cools as it rises)'
             ],
             correctAnswer: 1,
             explanation: 'As the bubble rises, water pressure decreases → the bubble expands (Boyle\'s Law: $PV = $ const). Larger volume → more displaced water → greater buoyant force. The bubble actually accelerates as it rises!'

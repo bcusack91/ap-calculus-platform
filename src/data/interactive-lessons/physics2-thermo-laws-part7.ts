@@ -47,7 +47,7 @@ For any complete cycle: $\\Delta U = 0$, so $Q_{\\text{net}} = W_{\\text{net}} =
 Carnot efficiency requires **Kelvin**: $e = 1 - T_C/T_H$. Always convert: $T(K) = T(°C) + 273$.
 
 ### ❌ Mistake 2: Confusing $W$ sign conventions
-Some textbooks define $W$ as work done ON the gas. AP Physics 2 typically uses $W$ = work done BY the gas. Check which convention the problem uses!
+Some textbooks define $W$ as work done BY the gas ($\\Delta U = Q - W$). The AP Physics 2 equation sheet uses $W$ = work done ON the gas ($\\Delta U = Q + W$, with $W = -P\\Delta V$). Check which convention the problem uses!
 
 ### ❌ Mistake 3: Thinking $\\Delta U = 0$ means $T$ is constant
 For an **ideal gas**, $\\Delta U = 0 \\Leftrightarrow \\Delta T = 0$ (true). But this is specific to ideal gases.

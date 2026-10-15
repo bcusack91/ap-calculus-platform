@@ -128,13 +128,13 @@ Water is unusual because its solid-liquid boundary line slopes **to the left** (
           {
             question: 'Above the critical point, a substance:',
             options: [
-              'Is always a solid',
-              'Cannot exist',
+              'Is always a solid, whatever the pressure',
+              'Can only exist as a low-density gas',
               'Becomes a supercritical fluid with no liquid-gas distinction',
-              'Has zero vapor pressure'
+              'Condenses into a liquid if compressed enough'
             ],
             correctAnswer: 2,
-            explanation: 'Above the critical temperature and pressure, there is no phase boundary between liquid and gas. The substance exists as a supercritical fluid with properties of both phases.'
+            explanation: 'Above the critical temperature and pressure, there is no phase boundary between liquid and gas. The substance exists as a supercritical fluid with properties of both phases, and no amount of compression produces a separate liquid.'
           }
         ]
       }

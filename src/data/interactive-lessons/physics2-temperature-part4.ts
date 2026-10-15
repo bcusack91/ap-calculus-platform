@@ -123,7 +123,7 @@ If water behaved like a "normal" liquid (contracting all the way to freezing), l
               'Stay at the same level (both expand equally)',
               'Drop below the rim (tank expands more than gasoline)',
               'Overflow (gasoline expands much more than the steel tank)',
-              'Compress itself to fit'
+              'Shrink as it warms, like water just above 0°C'
             ],
             correctAnswer: 2,
             explanation: 'Gasoline has $\\beta = 950 \\times 10^{-6}$ /°C while steel has $\\beta = 36 \\times 10^{-6}$ /°C. The gasoline expands about 26 times more than the tank, so it overflows.'
@@ -163,10 +163,10 @@ If water behaved like a "normal" liquid (contracting all the way to freezing), l
           {
             question: 'Lakes freeze from the top down because:',
             options: [
-              'Ice is a good thermal insulator',
-              'Water below 4°C is less dense than water at 4°C, so cold water rises to the surface and freezes there',
-              'Sunlight heats the bottom of the lake',
-              'The wind cools only the surface'
+              'Ice is a good thermal insulator for the water beneath it',
+              'Water below 4°C is less dense, so the coldest water stays on top',
+              'Sunlight warms the bottom of the lake more than the top',
+              'Wind cools only the surface layer of the lake'
             ],
             correctAnswer: 1,
             explanation: 'Water is densest at 4°C. As surface water cools below 4°C, it becomes less dense and stays on top, eventually freezing. The 4°C water sinks to the bottom, keeping it liquid and habitable for aquatic life.'
@@ -174,10 +174,10 @@ If water behaved like a "normal" liquid (contracting all the way to freezing), l
           {
             question: 'A mercury thermometer works because mercury has a much larger $\\beta$ than glass. If $\\beta_{\\text{Hg}} = \\beta_{\\text{glass}}$, the thermometer would:',
             options: [
-              'Work the same way',
-              'Show no change in mercury level (both expand equally)',
-              'Show twice the reading',
-              'Break from thermal stress'
+              'Work the same way, just more slowly',
+              'Show no change in mercury level',
+              'Read about twice the true temperature change',
+              'Crack from thermal stress at high temperatures'
             ],
             correctAnswer: 1,
             explanation: 'A mercury thermometer shows the **difference** between mercury expansion and glass expansion. If both expanded at the same rate, the mercury level would not change relative to the glass tube, and the thermometer would be useless.'

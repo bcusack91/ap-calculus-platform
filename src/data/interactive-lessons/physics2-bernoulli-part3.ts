@@ -77,10 +77,10 @@ This is exactly the speed an object would have if it **fell freely** from height
           {
             question: 'Torricelli\'s theorem assumes the tank is "large." What does this mean physically?',
             options: [
-              'The tank is made of strong material',
-              'The surface area of the water is much larger than the hole area, so the surface barely drops',
-              'The tank is taller than it is wide',
-              'The tank holds more than 1000 liters'
+              'Its walls are thick enough to hold the pressure without bulging',
+              'The water surface is much wider than the hole, so it barely drops',
+              'It is taller than it is wide, so the water has plenty of height',
+              'It holds so much water that its weight dominates the flow'
             ],
             correctAnswer: 1,
             explanation: 'If $A_{\\text{tank}} \\gg A_{\\text{hole}}$, then by continuity ($A_1 v_1 = A_2 v_2$), $v_1 \\approx 0$. The surface drops negligibly while water exits the hole. This lets us set $v_1 = 0$ in Bernoulli\'s equation.'
@@ -166,10 +166,10 @@ The exit speed increases with depth ($v = \\sqrt{2gh}$), but a deeper hole means
           {
             question: 'As water drains from a tank through a bottom hole, the exit speed:',
             options: [
-              'Increases over time',
-              'Stays constant',
-              'Decreases over time (water level drops → less height)',
-              'Oscillates'
+              'Increases over time, as the water above gets lighter',
+              'Stays constant, since $g$ never changes',
+              'Decreases as the water level drops',
+              'Stays constant until the tank is almost empty'
             ],
             correctAnswer: 2,
             explanation: '$v = \\sqrt{2gh}$. As the tank drains, $h$ decreases → $v$ decreases. The stream gets slower and slower. (The time to fully drain involves calculus — the rate isn\'t constant!)'

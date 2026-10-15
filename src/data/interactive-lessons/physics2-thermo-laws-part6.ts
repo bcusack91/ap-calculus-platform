@@ -128,10 +128,10 @@ This makes sense: $Q_H/W = Q_C/W + W/W = Q_C/W + 1$.
           {
             question: 'Why can COP be greater than 1, while engine efficiency cannot?',
             options: [
-              'COP violates conservation of energy',
-              'COP measures useful output (heat moved) per work input, not energy conversion',
-              'COP uses different units',
-              'COP is measured differently in Europe'
+              'COP breaks energy conservation, which only engines must obey',
+              'It measures heat moved per unit of work, not energy converted',
+              'COP is in different units, so it isn\'t a true fraction of input',
+              'Electric motors convert all their energy, unlike heat engines'
             ],
             correctAnswer: 1,
             explanation: 'COP is not an energy conversion efficiency — it measures how much heat is moved per unit of work. Since heat is being moved (not created), you can move more heat energy than the work you put in.'

@@ -57,13 +57,13 @@ $$F_B = \\rho_{\\text{fluid}} \\cdot V_{\\text{displaced}} \\cdot g$$
           {
             question: 'A sealed, air-filled container sits at the bottom of a pool. The buoyant force on it is 100 N and its weight is 40 N. The normal force from the pool floor on the container is:',
             options: [
-              '140 N (downward)',
-              '60 N (downward)',
-              '0 N',
-              'The container can\'t sit on the bottom if $F_B > W$'
+              '140 N — the weight plus the buoyant force',
+              '60 N — the buoyant force minus the weight',
+              '40 N, since the floor supports only its weight',
+              'None — it can\'t rest there, since $F_B > W$'
             ],
             correctAnswer: 3,
-            explanation: 'If $F_B > W$, the container would float up! It cannot sit on the bottom unless held down. The normal force cannot pull downward. This is a trick — the scenario is physically impossible without the container being anchored.'
+            explanation: 'If $F_B > W$, the container would float up! The floor can only push up, never pull down, so it cannot sit on the bottom unless it is anchored. Adding or subtracting the forces gives a number, but no normal force can balance a net upward push. This is a trick — the scenario is physically impossible without an anchor.'
           },
           {
             question: 'A cube of ice ($\\rho = 917$ $kg/m^{3}$) floats in a glass of water. As the ice melts, the water level:',
@@ -71,7 +71,7 @@ $$F_B = \\rho_{\\text{fluid}} \\cdot V_{\\text{displaced}} \\cdot g$$
               'Rises (liquid water takes more space)',
               'Falls (ice is less dense)',
               'Stays exactly the same',
-              'Oscillates'
+              'Falls slightly, as the meltwater is colder'
             ],
             correctAnswer: 2,
             explanation: 'The ice displaces water equal to its *weight*. When it melts, the liquid water has the same mass and takes up exactly the same volume as the water that was being displaced. Level stays the same. (This assumes pure water ice in pure water.)'
@@ -159,21 +159,21 @@ Beyond this mass, water floods the top and the cup sinks rapidly!
           {
             question: 'An astronaut is in the International Space Station with a glass of water and an ice cube. She releases the ice cube into the water in microgravity. What happens?',
             options: [
-              'The ice floats as usual',
-              'The ice sinks (no buoyancy without gravity)',
-              'The ice stays wherever she puts it — buoyancy requires gravity and there\'s no buoyant force in free fall',
-              'The water freezes around the ice'
+              'The ice floats to the top of the water as usual',
+              'The ice sinks, since there is no buoyancy without gravity',
+              'It stays wherever she releases it',
+              'The water freezes solid around the ice cube'
             ],
             correctAnswer: 2,
-            explanation: 'Buoyancy arises from the *pressure difference* caused by gravity. In free fall (microgravity), there\'s no pressure gradient in the fluid → no buoyant force → the ice stays put. In fact, the water itself forms spheres due to surface tension!'
+            explanation: 'Buoyancy arises from the *pressure difference* caused by gravity. In free fall (microgravity), the water has no pressure gradient → no buoyant force → the ice stays wherever it is released. With no buoyancy and no apparent weight, there is no "up" for it to float toward or "down" for it to sink toward. In fact, the water itself forms spheres due to surface tension!'
           },
           {
             question: 'Which of the following changes would NOT affect the buoyant force on a fully submerged object?',
             options: [
-              'Changing the fluid density',
-              'Changing the object\'s volume',
-              'Changing the object\'s mass (same volume)',
-              'Moving to a planet with different g'
+              'Changing the density of the surrounding fluid',
+              'Changing the object\'s volume while keeping its mass',
+              'Changing the object\'s mass at the same volume',
+              'Moving the setup to a planet with a different g'
             ],
             correctAnswer: 2,
             explanation: '$F_B = \\rho_{\\text{fluid}} V_{\\text{obj}} g$. The object\'s mass doesn\'t appear! Changing $\\rho_{\\text{fluid}}$, $V$, or $g$ all affect $F_B$, but changing the object\'s mass (while keeping volume the same) has zero effect on buoyant force.'

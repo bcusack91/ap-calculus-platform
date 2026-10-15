@@ -160,20 +160,20 @@ Use $\\alpha_{\\text{steel}} = 12 \\times 10^{-6}$ /°C and $\\alpha_{\\text{Al}
             question: 'Doubling the original length $L_0$ while keeping $\\alpha$ and $\\Delta T$ the same will:',
             options: [
               'Double the change in length $\\Delta L$',
-              'Quadruple $\\Delta L$',
-              'Not affect $\\Delta L$',
-              'Halve $\\Delta L$'
+              'Quadruple $\\Delta L$, as with an area change',
+              'Leave $\\Delta L$ unchanged, since $\\alpha$ is fixed',
+              'Halve $\\Delta L$, since longer rods stretch less per meter'
             ],
             correctAnswer: 0,
-            explanation: '$\\Delta L = \\alpha L_0 \\Delta T$. Since $\\Delta L$ is directly proportional to $L_0$, doubling $L_0$ doubles $\\Delta L$.'
+            explanation: '$\\Delta L = \\alpha L_0 \\Delta T$. Since $\\Delta L$ is directly proportional to $L_0$, doubling $L_0$ doubles $\\Delta L$. The fractional change $\\Delta L / L_0 = \\alpha \\Delta T$ stays the same, so each meter stretches by the same amount.'
           },
           {
             question: 'Pyrex glass (α = $3.2 \\times 10^{-6}$ /°C) is preferred for laboratory glassware because:',
             options: [
-              'It is cheaper than ordinary glass',
-              'Its very low α means minimal expansion, reducing the risk of cracking from thermal stress',
-              'It has a higher melting point',
-              'It is more transparent'
+              'It costs less to produce than ordinary soda-lime glass',
+              'Its low α means less expansion and less thermal-stress cracking',
+              'It has a much higher melting point, so it never softens on burners',
+              'It is more transparent, so samples are easier to observe'
             ],
             correctAnswer: 1,
             explanation: 'Pyrex has $\\alpha = 3.2 \\times 10^{-6}$ /°C vs. $9 \\times 10^{-6}$ /°C for ordinary glass. Less expansion means less thermal stress, so Pyrex is far less likely to crack when exposed to rapid temperature changes.'

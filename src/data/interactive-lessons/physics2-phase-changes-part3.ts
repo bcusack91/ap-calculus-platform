@@ -58,10 +58,10 @@ The flat sections (stages 2 and 4) on the heating curve represent phase changes 
           {
             question: 'On a heating curve, the flat (horizontal) sections represent:',
             options: [
-              'The heater being turned off',
+              'The heater being switched off for a short interval',
               'A phase change where temperature stays constant',
-              'A decrease in specific heat capacity',
-              'Thermal equilibrium with surroundings'
+              'A drop in the specific heat capacity of the sample',
+              'Thermal equilibrium with the surrounding room air'
             ],
             correctAnswer: 1,
             explanation: 'Flat sections on a heating curve indicate phase changes. During these intervals, all added energy goes into breaking intermolecular bonds (changing potential energy) rather than increasing kinetic energy, so the temperature remains constant.'
@@ -164,13 +164,13 @@ Use: $c_{\\text{ice}} = 2{,}090$ J/(kg·°C), $L_f = 334{,}000$ J/kg, $c_{\\text
           {
             question: 'You are heating 1.0 kg of water at 100°C with a 1000 W heater. Approximately how long until all the water has boiled away?',
             options: [
-              '334 seconds',
-              '2260 seconds (about 38 minutes)',
-              '4186 seconds',
-              '100 seconds'
+              '334 s (about 6 minutes)',
+              '2260 s (about 38 minutes)',
+              '4186 s (about 70 minutes)',
+              '100 s (under 2 minutes)'
             ],
             correctAnswer: 1,
-            explanation: '$t = Q/P = mL_v/P = (1.0)(2{,}260{,}000)/1000 = 2260$ s ≈ 37.7 minutes. All the energy goes into the phase change at constant 100°C.'
+            explanation: '$t = Q/P = mL_v/P = (1.0)(2{,}260{,}000)/1000 = 2260$ s ≈ 37.7 minutes. All the energy goes into the phase change at constant 100°C. Using $L_f$ (334 kJ/kg) or the specific heat of water (4186) in place of $L_v$ gives the other times.'
           }
         ]
       }

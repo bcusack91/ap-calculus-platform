@@ -95,13 +95,13 @@ The buoyant force depends on:
           {
             question: 'If you push a beach ball underwater and release it, it shoots up because:',
             options: [
-              'The air inside makes it light',
+              'The air inside pushes up on the ball from within',
               'The buoyant force exceeds the ball\'s weight',
-              'Water pressure is zero at the surface',
-              'Gravity doesn\'t act underwater'
+              'Water pressure at the surface sucks the ball upward',
+              'Gravity barely acts on objects that are underwater'
             ],
             correctAnswer: 1,
-            explanation: 'The ball displaces a large volume of water → large buoyant force ($F_B = \\rho_w V g$). Since the ball is mostly air, its weight is much less than $F_B$. The net upward force accelerates it out of the water.'
+            explanation: 'The ball displaces a large volume of water → large buoyant force ($F_B = \\rho_w V g$). Since the ball is mostly air, its weight is much less than $F_B$. The net upward force accelerates it out of the water. Gravity still acts underwater, and the air inside only pushes outward equally in all directions.'
           }
         ]
       }
@@ -140,21 +140,21 @@ A block with volume $V = 0.005$ $m^{3}$ is fully submerged in water.
           {
             question: 'A rock is lowered into water by a string. As it enters the water, the tension in the string:',
             options: [
-              'Increases (water adds weight)',
+              'Increases (the water above presses the rock down)',
               'Decreases (buoyant force supports part of the weight)',
-              'Stays the same',
-              'Drops to zero'
+              'Stays the same (the rock\'s weight does not change)',
+              'Drops to zero (the water holds the rock up)'
             ],
             correctAnswer: 1,
-            explanation: '$T + F_B = W$. As $F_B$ increases (more volume submerged), $T$ must decrease. The string tension equals the apparent weight: $T = W - F_B$.'
+            explanation: '$T + F_B = W$. As $F_B$ increases (more volume submerged), $T$ must decrease. The rock\'s weight is unchanged, but the string now carries only the apparent weight: $T = W - F_B$. It drops to zero only if the rock is less dense than water.'
           },
           {
             question: 'Archimedes allegedly discovered his principle while taking a bath. What did he notice?',
             options: [
-              'The water got hotter',
-              'Water overflowed when he got in — the displaced volume equals his body\'s submerged volume',
-              'The bathtub cracked',
-              'Bubbles formed'
+              'He felt lighter, which he took as proof that water removes mass',
+              'The water level rose by the volume of his submerged body',
+              'The water rose only after he fully ducked under the surface',
+              'Warm water expanded and overflowed when he sat down'
             ],
             correctAnswer: 1,
             explanation: 'Legend has it that Archimedes noticed the water level rise as he entered the bath, realizing that the displaced water volume equaled his submerged body volume. He supposedly ran through the streets shouting "Eureka!" ("I found it!").'

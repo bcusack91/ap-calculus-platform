@@ -73,10 +73,10 @@ Common unknowns: final temperature $T_f$, mass of ice melted, or time required.
           {
             question: 'In a calorimetry problem, if the available energy is NOT enough to complete the phase change, the final temperature equals:',
             options: [
-              'The average of the initial temperatures',
-              'The phase-change temperature (e.g., 0°C for melting ice)',
-              'Absolute zero',
-              'Room temperature'
+              'The average of the two starting temperatures',
+              'The phase-change temperature (0°C for ice)',
+              'The cold substance\'s starting temperature',
+              'The temperature of the surrounding room (about 20°C)'
             ],
             correctAnswer: 1,
             explanation: 'If there is not enough energy to complete the phase change, both the original substance and the partially changed substance coexist at the phase-change temperature. For ice-water mixtures, this means $T_f = 0$°C.'
@@ -154,10 +154,10 @@ Use: $c_w = 4{,}186$ J/(kg·°C), $L_f = 334{,}000$ J/kg.
           {
             question: 'You place a small amount of ice in a large amount of very warm water. The most likely outcome is:',
             options: [
-              'The final temperature is 0°C',
-              'All ice melts and the water cools only slightly',
-              'The water freezes around the ice',
-              'Nothing happens'
+              'The final temperature drops all the way down to 0°C',
+              'The ice melts and the water cools slightly',
+              'The warm water freezes in a layer around the ice',
+              'The ice stays solid, since it floats above the water'
             ],
             correctAnswer: 1,
             explanation: 'A small amount of ice in a large amount of warm water: the warm water provides far more energy than needed to melt the ice. All ice melts quickly, and the large thermal mass of the warm water means its temperature drops only slightly.'
@@ -165,10 +165,10 @@ Use: $c_w = 4{,}186$ J/(kg·°C), $L_f = 334{,}000$ J/kg.
           {
             question: 'In a calorimetry problem with ice and water, you find that the energy available is exactly equal to the energy needed to melt the ice. The final temperature is:',
             options: [
-              'Slightly above 0°C',
+              'Slightly above 0°C, from leftover energy',
               'Exactly 0°C with all water and no ice',
-              'Slightly below 0°C',
-              'Cannot be determined'
+              'Slightly below 0°C, as melting absorbs energy',
+              'Cannot be found without knowing both masses'
             ],
             correctAnswer: 1,
             explanation: 'If the available energy exactly equals $mL_f$, all the ice just barely melts. There is no leftover energy to raise the temperature, so the final state is all liquid water at exactly 0°C.'

@@ -87,15 +87,15 @@ On a **Pressure vs. Volume** (PV) diagram, the **work equals the area under the 
             explanation: '$W = P\\Delta V = (200{,}000)(5.0 - 2.0) \\times 10^{-3} = (200{,}000)(0.003) = 600$ J. Positive because the gas expanded.'
           },
           {
-            question: 'A gas is compressed at constant pressure. Which statement is correct?',
+            question: 'A gas is compressed at constant pressure. Taking $W$ as the work done BY the gas, which statement is correct?',
             options: [
-              '$W > 0$ because work is being done',
-              '$W < 0$ because the gas does negative work (surroundings do work on the gas)',
+              '$W > 0$ because work is done during the compression',
+              '$W < 0$ because the surroundings do positive work on the gas',
               '$W = 0$ because compression involves no energy change',
               '$W > 0$ because pressure is always positive'
             ],
             correctAnswer: 1,
-            explanation: 'During compression $\\Delta V < 0$, so $W = P\\Delta V < 0$. The gas does negative work, meaning the surroundings do work on the gas.'
+            explanation: 'During compression $\\Delta V < 0$, so the work done by the gas, $W = P\\Delta V$, is negative. The gas does negative work, meaning the surroundings do positive work on the gas. (The AP equation sheet instead uses $W$ = work done ON the gas, $W = -P\\Delta V$, which is positive for a compression — always check the convention.)'
           }
         ]
       }

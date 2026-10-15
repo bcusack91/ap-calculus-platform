@@ -177,10 +177,10 @@ Since $V_{\\text{sub}} = 0.0025 < V_1 = 0.003$ $m^{3}$, the stack still floats (
           {
             question: 'A helium balloon is tied to a string attached to a rock at the bottom of a pool. If the string is cut, the balloon:',
             options: [
-              'Sinks to the bottom',
-              'Stays in place',
-              'Rises to the surface (and out of the water if buoyant enough)',
-              'Implodes from water pressure'
+              'Sinks, pushed down by the water above it',
+              'Stays at the same depth where it was tied',
+              'Rises to the surface, then floats there',
+              'Collapses under the water pressure and sinks'
             ],
             correctAnswer: 2,
             explanation: 'Helium is much less dense than water. The buoyant force greatly exceeds the balloon\'s weight. Once the string is cut, the net upward force causes the balloon to rise rapidly to the surface.'
@@ -188,10 +188,10 @@ Since $V_{\\text{sub}} = 0.0025 < V_1 = 0.003$ $m^{3}$, the stack still floats (
           {
             question: 'A wooden block floats in water with 40% above the surface. A coin is placed on the block and it now floats with 30% above the surface. If more coins are added until 0% is above the surface, adding one more coin will:',
             options: [
-              'Make the block float deeper',
-              'Cause the block (and coins) to sink',
-              'Have no effect',
-              'Make the water level rise'
+              'Push the block deeper but leave it floating',
+              'Cause the block and coins to sink',
+              'Have no effect, since it can\'t go any lower',
+              'Make the water level rise without sinking it'
             ],
             correctAnswer: 1,
             explanation: 'When the block is fully submerged, it has reached its maximum buoyant force ($\\rho_w V_{\\text{block}} g$). Any additional weight exceeds this maximum → the total weight exceeds $F_B$ → the system sinks.'

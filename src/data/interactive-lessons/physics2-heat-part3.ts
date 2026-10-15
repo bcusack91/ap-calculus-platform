@@ -164,13 +164,13 @@ A 0.40 kg block of copper ($c = 390$ J/(kg·°C)) at 250°C is placed in 1.5 kg 
           {
             question: 'In an ideal calorimetry experiment, if no heat is lost to the surroundings, which quantity is conserved?',
             options: [
-              'Temperature',
-              'Specific heat',
+              'Temperature of each object in the cup',
+              'Specific heat of the combined mixture',
               'Total thermal energy of the system',
-              'Mass times temperature'
+              'The product of mass and temperature'
             ],
             correctAnswer: 2,
-            explanation: 'Conservation of energy: the total thermal energy is conserved. Heat lost by the hot object equals heat gained by the cold object. Temperature and specific heat are properties, not conserved quantities.'
+            explanation: 'Conservation of energy: the total thermal energy is conserved. Heat lost by the hot object equals heat gained by the cold object. Temperature and specific heat are properties, not conserved quantities, and mass × temperature is conserved only in the special case of identical materials.'
           },
           {
             question: 'Two identical blocks of the same material at different temperatures are brought into thermal contact. The final temperature is:',

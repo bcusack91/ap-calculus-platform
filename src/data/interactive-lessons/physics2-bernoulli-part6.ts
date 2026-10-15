@@ -85,10 +85,10 @@ Then: $Q = A_1 v_1$
           {
             question: 'In a Venturi meter, the pressure is measured using:',
             options: [
-              'A thermometer',
+              'A thermometer at each section, since pressure tracks temperature',
               'Manometer tubes at the wide and narrow sections',
-              'A scale',
-              'Sound waves'
+              'A flowmeter that counts the volume passing per second',
+              'A spring scale weighing the water in each section'
             ],
             correctAnswer: 1,
             explanation: 'Manometer tubes (often a U-tube with liquid) are connected to ports at the wide and narrow sections. The height difference in the manometer liquid indicates the pressure difference.'
@@ -165,9 +165,9 @@ Street main pressure: 400,000 Pa. The pipe (constant area) goes up to the 10th f
             question: 'An IV bag is at height $h$ above the patient. If the bag is raised higher:',
             options: [
               'Flow rate increases (more pressure head)',
-              'Flow rate decreases',
-              'Flow rate stays the same',
-              'The fluid flows backward'
+              'Flow rate decreases (fluid must fall farther)',
+              'Flow rate stays the same (the drip sets it)',
+              'The fluid reverses back toward the bag'
             ],
             correctAnswer: 0,
             explanation: 'Higher $h$ → more gravitational potential energy → greater pressure driving the flow → faster drip rate. Nurses adjust the IV bag height to control the flow rate.'
@@ -175,10 +175,10 @@ Street main pressure: 400,000 Pa. The pipe (constant area) goes up to the 10th f
           {
             question: 'A Pitot tube is used in both airplanes and weather stations. If the same Pitot tube reads the same pressure difference at altitude (where $\\rho_{\\text{air}}$ is lower), the true airspeed is:',
             options: [
-              'The same as at sea level',
-              'Higher than indicated (lower density → need more speed for same dynamic pressure)',
-              'Lower than indicated',
-              'Zero'
+              'The same as at sea level (same pressure difference)',
+              'Higher than indicated (less dense air needs more speed)',
+              'Lower than indicated (thin air flows more easily)',
+              'Lower than indicated (the tube reads high at altitude)'
             ],
             correctAnswer: 1,
             explanation: '$\\frac{1}{2}\\rho v^2 = \\Delta P$. Same $\\Delta P$ with lower $\\rho$ means $v$ must be higher. At altitude, the "true airspeed" is faster than the "indicated airspeed." Pilots must correct for this!'

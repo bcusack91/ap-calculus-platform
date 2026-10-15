@@ -123,13 +123,13 @@ This is the principle behind thermometers! The thermometer (C) reaches equilibri
           {
             question: 'If $Q = -500$ J for a system, this means:',
             options: [
-              'The system absorbed 500 J of energy',
-              'The system released 500 J of energy to its surroundings',
-              'The system\'s temperature dropped by 500°C',
-              'The system did 500 J of work'
+              'The system absorbed 500 J from its surroundings',
+              'The system released 500 J to its surroundings',
+              'The system\'s temperature dropped by 500 degrees',
+              'The system did 500 J of work on its surroundings'
             ],
             correctAnswer: 1,
-            explanation: 'Negative $Q$ means energy flows OUT of the system. The system lost (released) 500 J of thermal energy to its surroundings.'
+            explanation: 'Negative $Q$ means energy flows OUT of the system by heating. The system lost (released) 500 J of thermal energy to its surroundings. $Q$ is an energy in joules, not a temperature change, and work is counted separately from heat.'
           }
         ]
       }
@@ -144,7 +144,7 @@ Convert between heat energy units. Round to the nearest whole number.
 
 1) 500 calories = ___ joules (use 1 cal = 4.186 J)
 
-2) 8{,}372 J = ___ kilocalories
+2) 8,372 J = ___ kilocalories
 
 3) 3 food Calories (kcal) = ___ joules
       `,
@@ -152,8 +152,8 @@ Convert between heat energy units. Round to the nearest whole number.
         boxes: 3,
         correctAnswers: ['2093', '2', '12558'],
         hint1: 'Multiply: $500 \\times 4.186$.',
-        hint2: 'Divide by 4{,}186: $8{,}372 / 4{,}186$.',
-        hint3: '3 kcal = 3{,}000 cal. Then multiply by 4.186.',
+        hint2: 'Divide by 4,186: $8{,}372 / 4{,}186$.',
+        hint3: '3 kcal = 3,000 cal. Then multiply by 4.186.',
         explanation: '1) $500 \\times 4.186 = 2{,}093$ J. 2) $8{,}372 / 4{,}186 = 2$ kcal. 3) $3 \\times 4{,}186 = 12{,}558$ J.'
       }
     },

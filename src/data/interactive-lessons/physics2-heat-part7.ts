@@ -62,7 +62,7 @@ During a phase change (melting, boiling), temperature stays constant while heat 
       exercise: {
         questions: [
           {
-            question: 'Two objects, A and B, are in thermal contact. Object A has mass 2 kg and specific heat 500 J/(kg·°C). Object B has mass 1 kg and specific heat 2{,}000 J/(kg·°C). Their thermal masses ($mc$) are:',
+            question: 'Two objects, A and B, are in thermal contact. Object A has mass 2 kg and specific heat 500 J/(kg·°C). Object B has mass 1 kg and specific heat 2,000 J/(kg·°C). Their thermal masses ($mc$) are:',
             options: [
               'A has larger thermal mass',
               'B has larger thermal mass',
@@ -76,7 +76,7 @@ During a phase change (melting, boiling), temperature stays constant while heat 
             question: 'A black asphalt road ($\\varepsilon = 0.95$) and a white concrete sidewalk ($\\varepsilon = 0.30$) are side by side in sunlight. After several hours, the asphalt is much hotter. On the AP exam, this is best explained by:',
             options: [
               'Asphalt has a higher specific heat',
-              'Asphalt absorbs more solar radiation due to higher absorptivity',
+              'Asphalt\'s higher absorptivity means it takes in more sunlight',
               'Concrete conducts heat into the ground faster',
               'Asphalt undergoes convection more readily'
             ],
@@ -158,15 +158,15 @@ A 0.25 kg iron block ($c = 450$ J/(kg·°C)) at 350°C is dropped into 0.80 kg o
       exercise: {
         questions: [
           {
-            question: 'A student calculates the power radiated by a lightbulb filament at 2{,}500°C using $P = \\sigma \\varepsilon A T^4$. If she accidentally uses $T = 2{,}500$ instead of converting to kelvins (2{,}773 K), her answer will be:',
+            question: 'A student calculates the power radiated by a lightbulb filament at 2,500°C using $P = \\sigma \\varepsilon A T^4$. If she accidentally uses $T = 2{,}500$ instead of converting to kelvins (2,773 K), her answer will be:',
             options: [
-              'Slightly too low (by about 5%)',
-              'Slightly too high',
-              'Significantly too low (about 33% too low)',
+              'Slightly too low (about 10% low)',
+              'Too high (by about 51%)',
+              'Significantly too low (about 34% too low)',
               'The same, since the difference is small'
             ],
             correctAnswer: 2,
-            explanation: 'Using 2{,}500 K vs 2{,}773 K: ratio $= (2{,}500/2{,}773)^4 = (0.9015)^4 = 0.660$. Her answer would be only 66% of the correct value — about 34% too low. Always use kelvins for radiation!'
+            explanation: 'Using 2,500 K vs 2,773 K: ratio $= (2{,}500/2{,}773)^4 = (0.9015)^4 = 0.660$. Her answer would be only 66% of the correct value — about 34% too low. Forgetting the fourth power gives only a 10% error, and flipping the ratio gives 51% too high. Always use kelvins for radiation!'
           },
           {
             question: 'In a well-insulated calorimeter, 0.10 kg of an unknown metal at 200°C is placed in 0.40 kg of water at 20°C. The final temperature is 21°C. The specific heat of the metal is closest to:',
@@ -177,7 +177,7 @@ A 0.25 kg iron block ($c = 450$ J/(kg·°C)) at 350°C is dropped into 0.80 kg o
               '900 J/(kg·°C)'
             ],
             correctAnswer: 0,
-            explanation: '$c = \\frac{-m_w c_w(T_f - T_{w,i})}{m(T_f - T_i)} = \\frac{-(0.40)(4{,}186)(1)}{(0.10)(-179)} = \\frac{-1{,}674.4}{-17.9} = 93.5$ J/(kg·°C). This is very low — close to gold (129) or lead (128), suggesting a dense metal.'
+            explanation: '$c = \\frac{-m_w c_w(T_f - T_{w,i})}{m(T_f - T_i)} = \\frac{-(0.40)(4{,}186)(1)}{(0.10)(-179)} = \\frac{-1{,}674.4}{-17.9} = 93.5$ J/(kg·°C). This is very low — even lower than gold (129) or lead (128), suggesting a dense metal.'
           },
           {
             question: 'A double-pane window has two glass layers ($R_1 = R_3 = 0.005$ $m^{2}\\cdot K/W$) with an air gap ($R_2 = 0.40$ $m^{2}\\cdot K/W$). What percentage of the total thermal resistance is provided by the air gap?',
@@ -199,7 +199,7 @@ A 0.25 kg iron block ($c = 450$ J/(kg·°C)) at 350°C is dropped into 0.80 kg o
               'Aluminum > Water > Iron > Copper'
             ],
             correctAnswer: 1,
-            explanation: 'Water (4{,}186) > Aluminum (900) > Iron (450) > Copper (390), all in J/(kg·°C). Water\'s specific heat is roughly 4-10 times higher than common metals.'
+            explanation: 'Water (4,186) > Aluminum (900) > Iron (450) > Copper (390), all in J/(kg·°C). Water\'s specific heat is roughly 4-10 times higher than common metals.'
           }
         ]
       }

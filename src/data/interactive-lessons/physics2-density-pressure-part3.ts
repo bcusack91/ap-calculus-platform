@@ -105,13 +105,13 @@ Or equivalently: 1 mmHg ≈ 133.3 Pa.
           {
             question: 'Why can\'t you use a water manometer to measure pressures much above 1 atm?',
             options: [
-              'Water evaporates too easily',
-              'Water would require a 10+ meter column, which is impractical',
-              'Water is too viscous',
-              'Water doesn\'t exert pressure'
+              'Water evaporates from the open arm and throws off the reading',
+              'Each extra atmosphere needs about 10 m more of water column',
+              'Water is too viscous to move up a narrow tube in time',
+              'Water\'s density changes too much under high pressure'
             ],
             correctAnswer: 1,
-            explanation: '1 atm of pressure supports ~10.3 m of water. Measuring 2 atm would need a ~20 m column — impractical. Mercury\'s high density keeps columns short.'
+            explanation: '1 atm of pressure supports about 10.3 m of water. Measuring 2 atm would need a column about 20 m taller than at 1 atm — impractical. Mercury\'s high density (13.6 times water) keeps columns short.'
           },
           {
             question: 'A gas has a pressure of 2.5 atm (absolute). The gauge pressure is:',
@@ -163,21 +163,21 @@ A closed-end manometer has mercury ($\\rho = 13{,}600$ $kg/m^{3}$) with a height
           {
             question: 'On top of a tall mountain, a barometer reads 650 mmHg instead of 760 mmHg. This means:',
             options: [
-              'The barometer is broken',
-              'Atmospheric pressure is lower at higher altitude',
-              'Mercury is less dense at altitude',
-              'Gravity is significantly weaker'
+              'Cold mountain air has shrunk the mercury column',
+              'Less air sits above the barometer up there',
+              'Mercury becomes less dense at high altitude',
+              'Gravity is much weaker on top of the mountain'
             ],
             correctAnswer: 1,
-            explanation: 'At higher altitude, there is less atmosphere above you pressing down. Lower $P_{\\text{atm}}$ means a shorter mercury column. This is how altimeters work!'
+            explanation: 'At higher altitude, there is less atmosphere above you pressing down. Lower $P_{\\text{atm}}$ supports a shorter mercury column. Temperature and $g$ change only slightly over a mountain\'s height, and a less dense liquid would give a taller column, not a shorter one. This is how altimeters work!'
           },
           {
             question: 'Two identical containers are connected at the bottom. One has water, the other has mercury. When connected, the levels will adjust so that:',
             options: [
-              'Both surfaces are at the same height',
+              'Both free surfaces end up at the same height',
               'Pressure at the connecting point is equal from both sides',
-              'Mercury rises and water drops',
-              'Nothing happens — they don\'t mix'
+              'The mercury column ends up taller, since it is heavier',
+              'The levels stay where they started, since the liquids don\'t mix'
             ],
             correctAnswer: 1,
             explanation: 'The fluid levels adjust until the pressure at the connecting point is equal from both sides: $\\rho_1 g h_1 = \\rho_2 g h_2$. Since mercury is denser, its column will be shorter.'

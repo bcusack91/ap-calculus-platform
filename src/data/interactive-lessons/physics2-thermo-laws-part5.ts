@@ -95,7 +95,7 @@ If entropy always increases, the universe will eventually reach a state of **max
             question: 'The entropy of a system can decrease when:',
             options: [
               'Never — entropy can only increase',
-              'Heat is removed from the system (but the surroundings gain more entropy)',
+              'Heat leaves the system and the surroundings gain more entropy',
               'The system is perfectly insulated',
               'The system does work on its surroundings'
             ],

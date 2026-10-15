@@ -80,10 +80,10 @@ You amplified the force by 50×! But there's a trade-off: the small piston moves
           {
             question: 'A swimming pool has a deep end (3 m) and a shallow end (1 m). At the bottom of the deep end vs. shallow end, the pressure is:',
             options: [
-              'Same — both are at the bottom',
-              'Higher at the deep end — pressure increases with depth',
-              'Higher at the shallow end — less water above',
-              'Cannot compare without knowing the pool\'s width'
+              'Equal — both points sit on the bottom of the same pool',
+              'Higher at the deep end — greater depth of water above',
+              'Higher at the shallow end — the sloping floor focuses the weight',
+              'Cannot compare without knowing the pool\'s width and length'
             ],
             correctAnswer: 1,
             explanation: '$P = P_0 + \\rho g h$. Greater depth $h$ → greater pressure. The shape or width of the pool doesn\'t matter — only depth.'
@@ -181,13 +181,13 @@ A car (mass 1500 kg, weight 15,000 N) sits on a hydraulic lift piston with area 
           {
             question: 'Pascal\'s Law says pressure is transmitted "undiminished." This works because:',
             options: [
-              'Fluids are compressible',
-              'Fluids cannot exert forces',
-              'Fluids are essentially incompressible (for liquids) so the pressure change reaches everywhere instantly',
-              'Only in a vacuum'
+              'Gases compress easily, so they pass a pressure change along best',
+              'The fluid\'s weight adds the same extra pressure at every depth',
+              'Liquids are nearly incompressible, so a pressure change reaches every point',
+              'Pressure acts only downward, so it travels straight to the bottom'
             ],
             correctAnswer: 2,
-            explanation: 'Liquids are nearly incompressible. A pressure increase at one point is transmitted throughout the fluid — the basis of all hydraulic systems.'
+            explanation: 'Liquids are nearly incompressible, so a pressure increase at one point is transmitted to every point in the fluid and to the container walls — the basis of all hydraulic systems. Pressure in a fluid acts in all directions, not just downward, and a compressible gas absorbs part of the push by compressing.'
           }
         ]
       }

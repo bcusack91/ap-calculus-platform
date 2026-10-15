@@ -146,10 +146,10 @@ A styrofoam raft ($\\rho = 50$ $kg/m^{3}$) is $2.0 \\times 1.0 \\times 0.20$ m.
           {
             question: 'You pour oil ($\\rho = 800$ $kg/m^{3}$) on top of water in a tank. A block ($\\rho = 900$ $kg/m^{3}$) is placed in the tank. The block will:',
             options: [
-              'Float on the oil',
-              'Sink to the bottom',
+              'Float on top of the oil with part above it',
+              'Sink through both layers to the bottom',
               'Float at the oil-water interface (partially in each)',
-              'Hover in the middle of the water'
+              'Hover in the water layer (fully submerged)'
             ],
             correctAnswer: 2,
             explanation: 'The block is denser than oil (900 > 800) but less dense than water (900 < 1000). It sinks through the oil but floats on the water — resting at the interface with part in each fluid.'

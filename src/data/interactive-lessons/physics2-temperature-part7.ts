@@ -76,7 +76,7 @@ Always: $v_p < \\bar{v} < v_{\\text{rms}}$. The rms speed is the one that appear
               'Helium molecules have greater average KE',
               'Oxygen molecules have greater average KE',
               'Both have the same average KE per molecule, and helium moves faster',
-              'Both have the same rms speed'
+              'Both have the same rms speed at equal temperature'
             ],
             correctAnswer: 2,
             explanation: '$KE_{\\text{avg}} = \\frac{3}{2}k_BT$ depends only on temperature, so both gases have the same average KE. Since helium is lighter ($M = 4$ vs $M = 32$), it must move faster to have the same KE: $v_{\\text{He}}/v_{\\text{O}_2} = \\sqrt{32/4} = 2\\sqrt{2} \\approx 2.83$.'
@@ -84,10 +84,10 @@ Always: $v_p < \\bar{v} < v_{\\text{rms}}$. The rms speed is the one that appear
           {
             question: 'A mercury thermometer is placed in warm water. As the thermometer first enters the water, the mercury level briefly dips before rising. This is because:',
             options: [
-              'Mercury contracts when first heated',
-              'The glass bulb expands before the mercury inside heats up, so the mercury level drops momentarily',
-              'Water pressure pushes the mercury down',
-              'This does not actually happen'
+              'Mercury contracts briefly when it is first heated',
+              'The glass bulb heats and expands before the mercury does',
+              'Water pressure squeezes the bulb and pushes mercury down',
+              'It doesn\'t happen; the level only ever rises'
             ],
             correctAnswer: 1,
             explanation: 'The glass bulb is in direct contact with the warm water and heats first. The bulb expands, increasing its internal volume, so the mercury level drops briefly. Once heat conducts through to the mercury, the mercury expands much more than the glass ($\\beta_{\\text{Hg}} \\gg \\beta_{\\text{glass}}$) and the level rises.'
@@ -194,7 +194,7 @@ Here is the type of multi-part question you might see on the AP Physics 2 exam:
             options: [
               'The ring loosens because aluminum contracts more than glass',
               'The ring tightens because aluminum contracts more than glass, gripping the rod',
-              'Nothing happens — both contract equally',
+              'Nothing happens, since both contract by the same amount',
               'The glass rod cracks because it contracts less'
             ],
             correctAnswer: 1,

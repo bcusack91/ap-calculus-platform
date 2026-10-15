@@ -96,10 +96,10 @@ A container has three layers:
           {
             question: 'A straw works by:',
             options: [
-              'Sucking the liquid up',
-              'Reducing pressure inside the straw so atmospheric pressure pushes the liquid up',
-              'Creating a vacuum that lifts the liquid',
-              'Capillary action'
+              'Your suction pulls the liquid up with an attractive force',
+              'Air pressure outside pushes liquid up the straw',
+              'A vacuum in the straw lifts the liquid with its own pull',
+              'Capillary action draws the liquid up the narrow tube'
             ],
             correctAnswer: 1,
             explanation: 'You lower the pressure inside the straw by expanding your lungs. The higher atmospheric pressure on the liquid surface outside the straw then pushes the liquid up. Atmospheric pressure does the work!'
@@ -107,13 +107,13 @@ A container has three layers:
           {
             question: 'If you could create a perfect vacuum in a straw, what is the maximum height water could rise? (Use $P_{\\text{atm}} = 10^5$ Pa)',
             options: [
-              'About 1 m',
-              'About 5 m',
+              'About 100 m',
+              'About 10,000 m',
               'About 10 m',
               'Unlimited height'
             ],
             correctAnswer: 2,
-            explanation: '$h_{\\text{max}} = P_{\\text{atm}}/(\\rho g) = 10^5/(1000 \\times 10) = 10$ m. This is why suction pumps can\'t lift water more than ~10 m!'
+            explanation: '$h_{\\text{max}} = P_{\\text{atm}}/(\\rho g) = 10^5/(1000 \\times 10) = 10$ m. Leaving out $g$ gives 100 m, and leaving out $\\rho$ gives 10,000 m. This is why suction pumps can\'t lift water more than ~10 m!'
           },
           {
             question: 'Three containers of different shapes (narrow cylinder, wide cylinder, cone) are all filled with water to the same depth. The pressure at the bottom of each is:',
@@ -177,10 +177,10 @@ The mercury on the right rises **2.0 cm** above the mercury on the left. The tot
               '$1.1 \\times 10^{5}$ Pa (about 1 atm)',
               '$1.1 \\times 10^{7}$ Pa (about 100 atm)',
               '$1.1 \\times 10^{8}$ Pa (about 1100 atm)',
-              '$1.1 \\times 10^{10}$ Pa'
+              '$1.1 \\times 10^{9}$ Pa (about 11,000 atm)'
             ],
             correctAnswer: 2,
-            explanation: '$P = \\rho g h = (1000)(10)(11{,}000) = 1.1 \\times 10^8$ Pa ≈ 1100 atm. The pressure is enormous — about 1100 times atmospheric!'
+            explanation: '$P = \\rho g h = (1000)(10)(11{,}000) = 1.1 \\times 10^8$ Pa ≈ 1100 atm. Writing 11 km as 110,000 m gives the $10^{9}$ answer, and 1 atm is what you get with no water at all. The pressure is enormous — about 1100 times atmospheric!'
           }
         ]
       }

@@ -92,26 +92,26 @@ You must heat the brass ring to about **152°C** for it to slip over the steel r
       exercise: {
         questions: [
           {
-            question: 'Two identical steel rails (each 12.0 m long) are laid end-to-end with a gap at their junction. If the temperature can increase by 40°C, the minimum gap needed to prevent buckling is: (α_steel = $12 \\times 10^{-6}$ /°C)',
+            question: 'Two identical steel rails (each 12.0 m long) are laid end-to-end, with their far ends fixed and a gap at their junction. If the temperature can increase by 40°C, the minimum gap needed to prevent buckling is: (α_steel = $12 \\times 10^{-6}$ /°C)',
             options: [
-              '5.76 mm (one rail expands into the gap)',
+              '5.76 mm (only one rail expands into the gap)',
               '11.52 mm (both rails expand toward the gap)',
-              '2.88 mm',
-              '23.04 mm'
+              '2.88 mm (half of one rail\'s expansion)',
+              '23.04 mm (double-counting both rails)'
             ],
             correctAnswer: 1,
-            explanation: 'Each rail expands: $\\Delta L = (12 \\times 10^{-6})(12.0)(40) = 5.76 \\times 10^{-3}$ m = 5.76 mm. Both rails push toward the gap, so the total gap needed is $2 \\times 5.76 = 11.52$ mm.'
+            explanation: 'Each rail expands: $\\Delta L = (12 \\times 10^{-6})(12.0)(40) = 5.76 \\times 10^{-3}$ m = 5.76 mm. With the far ends fixed, both rails grow toward the junction, so the total gap needed is $2 \\times 5.76 = 11.52$ mm.'
           },
           {
             question: 'To remove a tight metal lid from a glass jar, you should:',
             options: [
-              'Cool both the lid and jar',
-              'Heat the glass jar only',
+              'Cool both the lid and the jar together',
+              'Heat the glass jar only, leaving the lid cool',
               'Run hot water over the metal lid',
-              'Cool the metal lid'
+              'Cool the metal lid so it contracts and loosens'
             ],
             correctAnswer: 2,
-            explanation: 'Metals typically have a higher $\\alpha$ than glass. Heating the metal lid causes it to expand more than the glass, loosening its grip. Running hot water over the lid is the classic kitchen trick!'
+            explanation: 'Metals typically have a higher $\\alpha$ than glass. Heating the metal lid causes it to expand more than the glass, loosening its grip. Cooling the lid would make it contract and grip tighter, and heating only the jar expands the glass into the lid. Running hot water over the lid is the classic kitchen trick!'
           }
         ]
       }
@@ -150,10 +150,10 @@ You must heat the brass ring to about **152°C** for it to slip over the steel r
           {
             question: 'A brass ring at 20°C is too small to fit over an aluminum cylinder at 20°C. Both are heated together. As temperature increases:',
             options: [
-              'The ring fits eventually because brass expands faster (α_brass = 19 > α_Al = $23 \\times 10^{-6}$)',
+              'The ring fits eventually, because brass expands faster than aluminum',
               'The ring never fits because aluminum expands faster than brass',
-              'The ring fits immediately at any higher temperature',
-              'Whether it fits depends on the initial size difference and the α values'
+              'The ring fits right away at any higher temperature',
+              'Whether it fits depends only on the initial size difference'
             ],
             correctAnswer: 1,
             explanation: 'Since $\\alpha_{\\text{Al}} = 23 \\times 10^{-6} > \\alpha_{\\text{brass}} = 19 \\times 10^{-6}$, the aluminum cylinder diameter grows faster than the brass ring hole. If heated together, the fit gets **worse**, not better. You would need to heat only the ring or cool only the cylinder.'
@@ -161,10 +161,10 @@ You must heat the brass ring to about **152°C** for it to slip over the steel r
           {
             question: 'A steel tape measure gives accurate readings at 20°C. If you use it on a hot day at 40°C, your measurements of a building will read:',
             options: [
-              'Correct (thermal effects cancel out)',
-              'Too small (tape expanded, so each mark spans more than 1 cm — you undercount)',
-              'The same (tape and building both expand equally)',
-              'Too large because the building expanded'
+              'Correct, since thermal effects cancel out on the tape',
+              'Too small, since each expanded mark spans over 1 cm',
+              'The same, because the tape and building expand equally',
+              'Too large, because the building itself has expanded'
             ],
             correctAnswer: 1,
             explanation: 'The tape expands, so each "centimeter" mark is now slightly longer than a true centimeter. The tape reads fewer centimeters than the actual length — the reading is **smaller** than the true value. The actual building dimension is **larger** than what the expanded tape reads.'

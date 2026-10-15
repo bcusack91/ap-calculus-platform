@@ -128,24 +128,24 @@ A U-tube has water ($\\rho = 1000$ $kg/m^{3}$) in the left arm and oil (SG = 0.8
           {
             question: 'An object floats in water with 40% of its volume above the surface. Its density is:',
             options: [
-              '400 $kg/m^{3}$',
+              '0.60 $kg/m^{3}$',
               '600 $kg/m^{3}$',
               '1000 $kg/m^{3}$',
               '1400 $kg/m^{3}$'
             ],
             correctAnswer: 1,
-            explanation: '40% above → 60% submerged. $\\rho_{\\text{obj}} = 0.60 \\times 1000 = 600$ $kg/m^{3}$.'
+            explanation: '40% above → 60% submerged. $\\rho_{\\text{obj}} = 0.60 \\times 1000 = 600$ $kg/m^{3}$. Forgetting to multiply by $\\rho_{\\text{water}}$ gives 0.60, and adding 40% to water\'s density gives 1400.'
           },
           {
             question: 'A hydrometer (a floating instrument that measures liquid density) floats higher in a denser liquid. Why?',
             options: [
-              'The hydrometer becomes lighter in denser liquid',
-              'Less volume needs to be submerged to displace enough weight of the denser fluid',
-              'Denser liquids push objects out',
-              'The hydrometer absorbs liquid'
+              'The denser liquid makes the hydrometer itself weigh less',
+              'A smaller submerged volume displaces enough weight',
+              'The buoyant force on it grows larger than its weight',
+              'Surface tension is stronger in denser liquids and lifts it'
             ],
             correctAnswer: 1,
-            explanation: 'Fraction submerged = $\\rho_{\\text{obj}}/\\rho_{\\text{fluid}}$. As $\\rho_{\\text{fluid}}$ increases, the fraction decreases → the hydrometer rides higher. It displaces less volume but the same weight of fluid.'
+            explanation: 'A floating hydrometer always displaces its own weight of fluid, so the buoyant force equals its weight in every liquid. In a denser fluid, a smaller submerged volume has that weight: fraction submerged $= \\rho_{\\text{obj}}/\\rho_{\\text{fluid}}$ falls, so the hydrometer rides higher.'
           }
         ]
       }

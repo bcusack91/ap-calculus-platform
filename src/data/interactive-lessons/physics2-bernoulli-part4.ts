@@ -56,13 +56,13 @@ AP Physics 2 focuses on the Bernoulli explanation: faster air on top → lower p
           {
             question: 'Air flows at 80 m/s over the top of a wing and 70 m/s under the bottom. The pressure difference between bottom and top is: ($\\rho_{\\text{air}} = 1.2$ $kg/m^{3}$)',
             options: [
-              '600 Pa',
+              '60 Pa',
               '900 Pa',
               '1200 Pa',
               '1800 Pa'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta P = \\frac{1}{2}\\rho(v_{\\text{top}}^2 - v_{\\text{bottom}}^2) = \\frac{1}{2}(1.2)(6400 - 4900) = 0.6(1500) = 900$ Pa.'
+            explanation: '$\\Delta P = \\frac{1}{2}\\rho(v_{\\text{top}}^2 - v_{\\text{bottom}}^2) = \\frac{1}{2}(1.2)(6400 - 4900) = 0.6(1500) = 900$ Pa. Squaring the difference, $(80 - 70)^2$, gives only 60 Pa, and dropping the $\\frac{1}{2}$ gives 1800 Pa.'
           },
           {
             question: 'An airplane has wing area 30 $m^{2}$ and the pressure difference between bottom and top is 900 Pa. The lift force is:',
@@ -78,10 +78,10 @@ AP Physics 2 focuses on the Bernoulli explanation: faster air on top → lower p
           {
             question: 'An airplane flies upside down during an air show. This is possible because:',
             options: [
-              'Bernoulli\'s equation reverses when upside down',
-              'The pilot increases the angle of attack to deflect air downward, generating an upward reaction force by Newton\'s 3rd law',
-              'Gravity reverses at altitude',
-              'It\'s impossible — the plane must be falling'
+              'Bernoulli\'s effect reverses when the wing flips over',
+              'A higher angle of attack deflects air down, pushing the wing up',
+              'The plane\'s engines push it upward when it flips',
+              'It can\'t — an inverted plane is only falling slowly'
             ],
             correctAnswer: 1,
             explanation: 'Inverted flight proves that wing shape alone isn\'t sufficient for lift. By increasing the angle of attack, the flat bottom (now on top) deflects air downward. Newton\'s 3rd law gives an upward reaction force. This is why angle of attack matters as much as wing shape!'
@@ -150,10 +150,10 @@ A hurricane with wind speed 50 m/s blows over a flat roof. The air inside the ho
           {
             question: 'A convertible car is driving fast with the top down. A loose paper on the seat:',
             options: [
-              'Gets pushed down by the wind',
-              'Gets sucked upward out of the car',
-              'Stays put',
-              'Slides sideways'
+              'Gets pressed down onto the seat by the wind',
+              'Gets lifted up and out of the car',
+              'Stays put, since the inside air is still',
+              'Slides toward the back seat with the airflow'
             ],
             correctAnswer: 1,
             explanation: 'Fast air flows over the open car → low pressure above. Still air inside the car → higher pressure below the paper. The pressure difference lifts the paper up and out — Bernoulli in action!'
@@ -163,7 +163,7 @@ A hurricane with wind speed 50 m/s blows over a flat roof. The air inside the ho
             options: [
               'Downward more than gravity alone',
               'Upward (appears to "rise")',
-              'Sideways',
+              'Sideways, in the direction of the spin',
               'Straight (spin has no effect)'
             ],
             correctAnswer: 1,

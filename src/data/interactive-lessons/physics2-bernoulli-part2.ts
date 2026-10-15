@@ -65,12 +65,12 @@ This pressure difference can be measured with a U-tube manometer connected betwe
             question: 'A pipe narrows from area 20 $cm^{2}$ to 5 $cm^{2}$. If the speed in the wide section is 2 m/s and the pressure is 150 kPa, the pressure in the narrow section is: ($\\rho = 1000$ $kg/m^{3}$)',
             options: [
               '150 kPa',
-              '138 kPa',
-              '162 kPa',
+              '118 kPa',
+              '180 kPa',
               '120 kPa'
             ],
             correctAnswer: 3,
-            explanation: '$v_2 = (20/5)(2) = 8$ m/s. $\\Delta P = \\frac{1}{2}(1000)(8^2 - 2^2) = \\frac{1}{2}(1000)(60) = 30{,}000$ Pa. $P_2 = 150{,}000 - 30{,}000 = 120{,}000$ Pa = 120 kPa.'
+            explanation: '$v_2 = (20/5)(2) = 8$ m/s. $\\Delta P = \\frac{1}{2}(1000)(8^2 - 2^2) = \\frac{1}{2}(1000)(60) = 30{,}000$ Pa. $P_2 = 150{,}000 - 30{,}000 = 120{,}000$ Pa = 120 kPa. Using only $v_2^2$ gives 118 kPa, and adding $\\Delta P$ instead of subtracting gives 180 kPa — but faster flow means lower pressure.'
           }
         ]
       }
@@ -138,10 +138,10 @@ A horizontal Venturi tube has wide diameter 8.0 cm and narrow diameter 4.0 cm. T
           {
             question: 'Two pieces of paper are held parallel, about 5 cm apart. You blow air between them. The papers will:',
             options: [
-              'Move apart (the air pushes them)',
+              'Move apart (the moving air pushes them outward)',
               'Move toward each other (low pressure between them)',
-              'Not move',
-              'Flap randomly'
+              'Stay still (the air flows parallel to the paper)',
+              'Swing apart, then hang still once the airflow is steady'
             ],
             correctAnswer: 1,
             explanation: 'Fast-moving air between the papers creates LOW pressure (Bernoulli). The still air on the outside has atmospheric pressure (higher). The pressure difference pushes the papers inward. Try it yourself!'

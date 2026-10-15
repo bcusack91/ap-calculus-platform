@@ -111,10 +111,10 @@ At higher temperatures, the distribution **flattens and shifts right** — more 
           {
             question: 'If you double the Kelvin temperature of a gas, the rms speed of its molecules:',
             options: [
-              'Doubles',
+              'Doubles, just as the average KE does',
               'Increases by a factor of $\\sqrt{2}$ ≈ 1.41',
-              'Quadruples',
-              'Stays the same'
+              'Quadruples, since KE depends on $v^2$',
+              'Stays the same, since the mass is fixed'
             ],
             correctAnswer: 1,
             explanation: '$v_{\\text{rms}} = \\sqrt{3RT/M}$. Since $v_{\\text{rms}} \\propto \\sqrt{T}$, doubling $T$ increases $v_{\\text{rms}}$ by a factor of $\\sqrt{2} \\approx 1.41$. Note: $KE_{\\text{avg}}$ doubles, but speed only increases by $\\sqrt{2}$ because $KE \\propto v^2$.'
@@ -145,7 +145,7 @@ Use $k_B = 1.38 \\times 10^{-23}$ J/K and $R = 8.314$ J/(mol·K).
 
 2) Find the rms speed (in m/s) of oxygen molecules ($M = 32 \\times 10^{-3}$ kg/mol) at $T = 300$ K. Round to the nearest whole number.
 
-3) At what temperature (in K) would hydrogen molecules ($M = 2 \\times 10^{-3}$ kg/mol) have an rms speed of 2{,}500 m/s? Round to the nearest whole number.
+3) At what temperature (in K) would hydrogen molecules ($M = 2 \\times 10^{-3}$ kg/mol) have an rms speed of 2,500 m/s? Round to the nearest whole number.
       `,
       exercise: {
         boxes: 3,
@@ -168,9 +168,9 @@ Use $k_B = 1.38 \\times 10^{-23}$ J/K and $R = 8.314$ J/(mol·K).
             question: 'A container holds a mixture of helium (M = 4) and argon (M = 40) at thermal equilibrium. Which statement is true?',
             options: [
               'Helium atoms have greater average KE than argon atoms',
-              'Argon atoms move faster than helium atoms',
-              'Both gases have the same average KE per molecule, but helium atoms move faster',
-              'Both gases have the same rms speed'
+              'Argon atoms move faster, since they carry more energy',
+              'Both have the same average KE per atom, but helium moves faster',
+              'Both gases have the same rms speed at equal temperature'
             ],
             correctAnswer: 2,
             explanation: 'At thermal equilibrium, both gases are at the same temperature, so $KE_{\\text{avg}} = \\frac{3}{2}k_BT$ is the same for both. Since $\\frac{1}{2}mv^2$ is the same but helium has less mass, helium atoms must move faster: $v_{\\text{He}}/v_{\\text{Ar}} = \\sqrt{40/4} = \\sqrt{10} \\approx 3.16$.'
@@ -178,10 +178,10 @@ Use $k_B = 1.38 \\times 10^{-23}$ J/K and $R = 8.314$ J/(mol·K).
           {
             question: 'As an ideal gas is heated, the Maxwell-Boltzmann speed distribution:',
             options: [
-              'Gets taller and narrower',
-              'Gets shorter and broader, shifting to higher speeds',
-              'Shifts left to lower speeds',
-              'Does not change shape'
+              'Gets taller and narrower, shifting to higher speeds',
+              'Flattens and broadens, shifting to higher speeds',
+              'Shifts left toward lower speeds as it grows taller',
+              'Keeps exactly the same shape and slides to higher speeds'
             ],
             correctAnswer: 1,
             explanation: 'Higher temperature means higher average speed. The distribution shifts to the right (higher speeds) and flattens out (broader range of speeds). The peak decreases in height because the total area under the curve (total number of molecules) stays constant.'

@@ -66,7 +66,7 @@ Vaporization requires **much more** energy than fusion because:
             options: [
               'No energy is being transferred',
               'The specific heat capacity becomes infinite',
-              'All energy goes into breaking/forming intermolecular bonds rather than changing kinetic energy',
+              'Added energy goes into breaking/forming intermolecular bonds rather than changing kinetic energy',
               'The substance reaches thermal equilibrium with its surroundings'
             ],
             correctAnswer: 2,
@@ -77,7 +77,7 @@ Vaporization requires **much more** energy than fusion because:
             options: [
               'Water molecules are heavier than ice molecules',
               'Boiling occurs at a higher temperature than melting',
-              'Vaporization requires completely separating molecules, while melting only loosens their arrangement',
+              'Vaporizing fully separates molecules, while melting only loosens them',
               'Steam occupies more volume than liquid water'
             ],
             correctAnswer: 2,
@@ -153,20 +153,20 @@ Use: $L_f = 334{,}000$ J/kg, $L_v = 2{,}260{,}000$ J/kg for water.
             question: 'You add 668 kJ of heat to 1.0 kg of ice at 0°C. What is the final state? ($L_f = 334$ kJ/kg, $c_w = 4{,}186$ J/(kg·°C))',
             options: [
               '1.0 kg of water at 0°C',
-              '1.0 kg of water at approximately 80°C',
+              '1.0 kg of water at about 80°C',
               '0.5 kg ice + 0.5 kg water at 0°C',
-              '1.0 kg of water at 100°C'
+              '1.0 kg of water at about 160°C'
             ],
             correctAnswer: 1,
-            explanation: 'Melting 1.0 kg of ice requires $Q_1 = (1.0)(334{,}000) = 334$ kJ. Remaining energy: $668 - 334 = 334$ kJ. Temperature rise: $\\Delta T = Q/(mc) = 334{,}000/((1.0)(4{,}186)) \\approx 79.8$°C. Final state: water at about 80°C.'
+            explanation: 'Melting 1.0 kg of ice requires $Q_1 = (1.0)(334{,}000) = 334$ kJ. Remaining energy: $668 - 334 = 334$ kJ. Temperature rise: $\\Delta T = Q/(mc) = 334{,}000/((1.0)(4{,}186)) \\approx 79.8$°C. Final state: water at about 80°C. Skipping the melting step and putting all 668 kJ into warming gives about 160°C.'
           },
           {
             question: 'Which process releases more energy: freezing 1 kg of water or condensing 1 kg of steam?',
             options: [
-              'Freezing (it happens at a lower temperature)',
-              'Condensing (latent heat of vaporization is much larger than latent heat of fusion)',
-              'They release the same energy',
-              'It depends on the ambient pressure'
+              'Freezing, since it happens at a lower temperature',
+              'Condensing, since $L_v$ far exceeds $L_f$',
+              'They release the same energy, since both are phase changes',
+              'It depends on the pressure of the surrounding air'
             ],
             correctAnswer: 1,
             explanation: 'Condensing releases $L_v = 2{,}260{,}000$ J/kg, while freezing releases $L_f = 334{,}000$ J/kg. Condensation releases about 6.8× more energy per kilogram.'

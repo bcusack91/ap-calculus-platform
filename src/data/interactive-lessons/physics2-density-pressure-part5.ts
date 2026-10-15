@@ -76,13 +76,13 @@ Because pressure increases with depth. The lower part of the wall experiences mo
           {
             question: 'Why must dam walls be thicker at the bottom?',
             options: [
-              'The water moves faster at the bottom',
-              'Gravity pulls the dam down',
-              'Water pressure increases with depth, requiring more structural support at the base',
-              'The bottom has more surface area'
+              'The water moves fastest near the bottom of the reservoir',
+              'Waves at the surface push hardest, so the base must anchor the top',
+              'Water pressure grows with depth, so the base takes the most force',
+              'The bottom of the dam holds back a larger volume of water'
             ],
             correctAnswer: 2,
-            explanation: '$P = \\rho g h$ is greatest at the bottom. The base must withstand this larger force, so it needs more material. Most dams have a triangular cross-section — thin at top, thick at bottom.'
+            explanation: '$P = \\rho g h$ is greatest at the bottom, so the base must withstand the largest force per area and needs more material. The total volume of the lake doesn\'t set the pressure — only depth does. Most dams have a triangular cross-section — thin at top, thick at bottom.'
           }
         ]
       }

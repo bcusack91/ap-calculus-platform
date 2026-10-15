@@ -128,7 +128,7 @@ Water's high specific heat means oceans absorb enormous amounts of energy with s
           },
           {
             question: 'A thermos bottle reduces convective heat loss primarily through:',
-            options: ['Its silvered walls', 'Its vacuum gap and its sealed lid', 'Its thick plastic outer case', 'Its dark-colored exterior'],
+            options: ['Its silvered, mirror-like inner walls', 'Its vacuum gap and its sealed lid', 'Its thick plastic outer case and base', 'Its dark-colored, heat-absorbing exterior'],
             correctAnswer: 1,
             explanation: 'Convection requires a fluid medium. The vacuum eliminates convection in the walls, and the sealed lid prevents warm air from escaping out the top. The silvered walls reduce radiation, not convection.'
           },
@@ -189,21 +189,21 @@ Water's high specific heat means oceans absorb enormous amounts of energy with s
           {
             question: 'Coastal cities tend to have milder climates (cooler summers, warmer winters) than inland cities at the same latitude. This is primarily because:',
             options: [
-              'Ocean currents bring warm water from the equator',
-              'Water has a very high specific heat, so oceans resist temperature changes and moderate nearby air temperatures',
-              'Coastal cities are at lower elevation',
-              'Sea breezes constantly cool the cities'
+              'Ocean currents carry warm equatorial water to every coast',
+              'Water\'s high specific heat buffers coastal temperatures',
+              'Coastal cities sit at lower elevations than inland cities',
+              'Sea breezes blow all day and keep the coastal air cool'
             ],
             correctAnswer: 1,
-            explanation: 'Water\'s high specific heat ($c = 4{,}186$ J/(kg·°C)) means oceans absorb and release large amounts of energy with small temperature changes. This thermal buffering moderates the climate of nearby coastal areas.'
+            explanation: 'Water\'s high specific heat ($c = 4{,}186$ J/(kg·°C)) means oceans absorb and release large amounts of energy with small temperature changes. This thermal buffering keeps nearby coastal air cooler in summer and warmer in winter. Sea breezes and currents vary from place to place and could not explain warmer winters everywhere.'
           },
           {
             question: 'At high altitude (like Denver or La Paz), water boils at a temperature below 100°C. As a practical consequence:',
             options: [
-              'Food cooks faster because water boils sooner',
-              'Food takes longer to cook because the boiling water is at a lower temperature',
-              'There is no difference in cooking time',
-              'Food cannot be cooked in boiling water at high altitude'
+              'Food cooks faster because the water reaches a boil sooner',
+              'Food takes longer, since the water boils below 100°C',
+              'There is no difference, since the water is boiling either way',
+              'Food can\'t be cooked in boiling water at high altitude'
             ],
             correctAnswer: 1,
             explanation: 'Lower atmospheric pressure at altitude lowers the boiling point. Boiling water at 95°C (for example) cooks food more slowly than at 100°C because the rate of chemical reactions in cooking depends on temperature. This is why pressure cookers are popular at high altitude.'

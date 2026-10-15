@@ -115,7 +115,7 @@ If you add 500 J of heat and the gas does 200 J of work expanding, then $\\Delta
               'Increases because the gas does work',
               'Decreases because the gas uses internal energy to do work',
               'Stays the same because no heat is exchanged',
-              'Cannot be determined'
+              'Cannot be found without knowing the pressure'
             ],
             correctAnswer: 1,
             explanation: 'Adiabatic: $Q = 0$, so $\\Delta U = -W$. During expansion $W > 0$, so $\\Delta U < 0$, meaning $T$ decreases. The gas cools because it uses its own internal energy to push the piston.'
@@ -151,7 +151,7 @@ If you add 500 J of heat and the gas does 200 J of work expanding, then $\\Delta
               '400 J'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta U = Q - W = 600 - 400 = 200$ J. The gas gets hotter because more heat came in than left as work.'
+            explanation: '$\\Delta U = Q - W = 600 - 400 = 200$ J, with $W$ = work done by the gas. The gas gets hotter because more heat came in than left as work. In the AP form $\\Delta U = Q + W$ (with $W$ = work done on the gas $= -400$ J), you get the same 200 J.'
           },
           {
             question: 'During an isothermal expansion, a gas does 350 J of work. How much heat was added?',

@@ -78,13 +78,13 @@ This is why:
           {
             question: 'The continuity equation $A_1 v_1 = A_2 v_2$ assumes:',
             options: [
-              'The fluid is compressible',
-              'The pipe has no friction',
+              'The fluid is compressible (its density can change)',
+              'The pipe walls have no friction (zero viscosity)',
               'The fluid density is constant (incompressible)',
-              'The flow is turbulent'
+              'The flow is turbulent rather than smooth'
             ],
             correctAnswer: 2,
-            explanation: 'The continuity equation in this form requires incompressibility ($\\rho = $ constant). For compressible fluids, the equation becomes $\\rho_1 A_1 v_1 = \\rho_2 A_2 v_2$ (mass flow rate conservation).'
+            explanation: 'The continuity equation in this form requires incompressibility ($\\rho = $ constant). It holds whether or not the fluid is viscous, because it only counts the fluid passing each point. For compressible fluids, the equation becomes $\\rho_1 A_1 v_1 = \\rho_2 A_2 v_2$ (mass flow rate conservation).'
           }
         ]
       }
@@ -163,13 +163,13 @@ The current triples as the river narrows!
           {
             question: 'Oil flows through a pipe that branches into two equal-sized pipes. If the original pipe has radius $R$, what radius of each branch pipe keeps the oil at the same speed?',
             options: [
-              '$R$',
+              '$\\sqrt{2}\\,R$',
               '$R/2$',
               '$R/\\sqrt{2}$',
               '$R/4$'
             ],
             correctAnswer: 2,
-            explanation: '$A_1 v = 2 A_{\\text{branch}} v$ (same speed → $v$ cancels). $\\pi R^2 = 2\\pi r^2$. $r = R/\\sqrt{2} \\approx 0.707R$.'
+            explanation: '$A_1 v = 2 A_{\\text{branch}} v$ (same speed → $v$ cancels). $\\pi R^2 = 2\\pi r^2$. $r = R/\\sqrt{2} \\approx 0.707R$. Choosing $R/2$ gives each branch only a quarter of the original area, so the two branches together have half the area and the oil speeds up.'
           }
         ]
       }

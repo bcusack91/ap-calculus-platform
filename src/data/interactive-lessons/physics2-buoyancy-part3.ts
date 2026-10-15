@@ -110,7 +110,7 @@ Much slower — buoyancy is providing significant support.
               'Alcohol (ρ = 800 $kg/m^{3}$)',
               'Water (ρ = 1000 $kg/m^{3}$)',
               'Mercury (ρ = 13,600 $kg/m^{3}$)',
-              'All read the same'
+              'All read the same weight'
             ],
             correctAnswer: 2,
             explanation: 'Higher fluid density → larger buoyant force → lower apparent weight. Mercury has the highest density, so the buoyant force is greatest, and the scale reading is lowest.'
@@ -118,10 +118,10 @@ Much slower — buoyancy is providing significant support.
           {
             question: 'An object has density exactly equal to the fluid. If you push it down and release it:',
             options: [
-              'It returns to the surface',
-              'It sinks to the bottom',
-              'It stays wherever you put it (neutral buoyancy)',
-              'It oscillates up and down'
+              'It slowly rises back up to the surface',
+              'It sinks gradually to the bottom',
+              'It stays wherever you leave it',
+              'It bobs up and down around where you released it'
             ],
             correctAnswer: 2,
             explanation: 'At every depth, $F_B = W$ when $\\rho_{\\text{obj}} = \\rho_{\\text{fluid}}$. There\'s no net force at any position — it stays wherever you leave it. This is neutral buoyancy.'
@@ -162,18 +162,18 @@ $\\rho = m/V = 2.5 / (2.4 \\times 10^{-4}) = 10{,}417$ $kg/m^{3}$
               '19,300 $kg/m^{3}$ (pure gold)',
               '15,700 $kg/m^{3}$ (gold-silver mix)',
               '10,500 $kg/m^{3}$ (silver)',
-              '7,800 $kg/m^{3}$ (iron)'
+              '14,700 $kg/m^{3}$ (gold-silver mix)'
             ],
             correctAnswer: 1,
-            explanation: '$F_B = 0.50$ N. $V = 0.50/10{,}000 = 5 \\times 10^{-5}$ $m^{3}$. $m = 0.784$ kg. $\\rho = 0.784/(5 \\times 10^{-5}) = 15{,}680 \\approx 15{,}700$ $kg/m^{3}$. Not pure gold, not pure silver — a mix.'
+            explanation: '$F_B = 7.84 - 7.34 = 0.50$ N. $V = 0.50/10{,}000 = 5 \\times 10^{-5}$ $m^{3}$. $m = 0.784$ kg. $\\rho = 0.784/(5 \\times 10^{-5}) = 15{,}680 \\approx 15{,}700$ $kg/m^{3}$. Not pure gold, not pure silver — a mix. Using the 7.34 N in-water reading as the weight gives 14,700, which is a common slip.'
           },
           {
             question: 'Two objects are fully submerged in water: a 1 kg block of aluminum and a 1 kg block of lead. Which has a greater buoyant force?',
             options: [
-              'Lead (it\'s heavier)',
+              'Lead (heavier per volume, so more upthrust)',
               'Aluminum (it has more volume)',
-              'They\'re equal (same mass)',
-              'Cannot determine'
+              'They\'re equal (same mass, so same weight to support)',
+              'Cannot tell without knowing the depth of each block'
             ],
             correctAnswer: 1,
             explanation: '$F_B = \\rho_w V g$. Aluminum is less dense than lead, so 1 kg of aluminum has *more volume* → displaces more water → greater buoyant force. Same mass, but the aluminum block is physically larger.'

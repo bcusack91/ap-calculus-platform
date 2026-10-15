@@ -48,10 +48,10 @@ Canvas water bags hung on the front of old cars: water seeps through the canvas 
           {
             question: 'Why is a burn from 100°C steam more severe than a burn from 100°C boiling water?',
             options: [
-              'Steam is at a higher temperature',
-              'Steam moves faster and hits the skin harder',
-              'Steam releases its latent heat of vaporization (2.26 MJ/kg) when it condenses on skin, in addition to cooling from 100°C',
-              'Steam contains more molecules per unit volume'
+              'Steam is at a higher temperature than boiling water',
+              'Steam moves faster and strikes the skin harder',
+              'Condensing steam releases its large latent heat into the skin',
+              'Steam holds more molecules per unit volume than water'
             ],
             correctAnswer: 2,
             explanation: 'When steam contacts your skin, it first condenses — releasing $L_v = 2.26$ MJ/kg (a huge amount of energy). Then the resulting 100°C water continues to transfer heat as it cools. Boiling water only does the second part. The condensation step delivers about 8.6× more energy than cooling the water from 100°C to 37°C body temperature.'
@@ -115,10 +115,10 @@ Salt lowers the freezing point of water (colligative property). Ice at $-5$°C i
           {
             question: 'A pressure cooker cooks food faster because:',
             options: [
-              'Higher pressure forces heat into the food',
-              'The sealed environment traps steam, raising pressure and thus the boiling point of water',
-              'Food molecules move faster at higher pressure',
-              'The metal pot conducts heat better under pressure'
+              'The high pressure forces heat directly into the food\'s interior',
+              'Trapped steam raises the pressure and the boiling point',
+              'Food molecules move faster when they are kept under pressure',
+              'The metal pot conducts heat better when it is under pressure'
             ],
             correctAnswer: 1,
             explanation: 'In a sealed pressure cooker, steam builds up, raising the pressure inside. Higher pressure raises the boiling point of water — typically to about 120°C at 2 atm. The water stays liquid at higher temperatures, cooking food faster.'
@@ -138,19 +138,19 @@ Match each phenomenon with its primary physics principle:
         dropdowns: [
           {
             label: 'Stepping out of a pool and feeling cold',
-            options: ['Conduction', 'Evaporative cooling (latent heat of vaporization)', 'Radiation', 'Convection']
+            options: ['Conduction from your feet into the cool pool deck', 'Evaporative cooling (latent heat of vaporization)', 'Radiation of your body heat out to the open sky', 'Cold flowing from the pool water into your skin']
           },
           {
             label: 'Water boiling at 70°C on Mount Everest',
-            options: ['Lower latent heat at altitude', 'Lower atmospheric pressure reduces the boiling point', 'Colder air at altitude', 'Wind chill effect']
+            options: ['Lower latent heat of vaporization at high altitude', 'Lower atmospheric pressure reduces the boiling point', 'Colder air at altitude cools the water before it boils', 'Weaker gravity at altitude lets molecules escape']
           },
           {
             label: 'Frost forming on a car windshield overnight',
-            options: ['Condensation', 'Freezing', 'Deposition (gas → solid)', 'Sublimation']
+            options: ['Condensation (gas → liquid)', 'Freezing (liquid → solid)', 'Deposition (gas → solid)', 'Sublimation (solid → gas)']
           },
           {
             label: 'Dry ice "smoking" at room temperature',
-            options: ['Melting and then boiling', 'Sublimation (solid → gas)', 'Combustion', 'Deposition']
+            options: ['Melting (solid → liquid)', 'Sublimation (solid → gas)', 'Evaporation (liquid → gas)', 'Deposition (gas → solid)']
           }
         ],
         correctAnswers: [
