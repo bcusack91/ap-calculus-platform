@@ -74,15 +74,15 @@ A lower **price level** raises the total quantity of real GDP demanded for three
           questions: [
             {
               question: 'When the overall price level falls, the purchasing power of the money households already hold rises, so they buy more. This is the:',
-              options: ['Wealth (real-balances) effect', 'Interest-rate effect', 'Net-export effect', 'Substitution effect'],
+              options: ['Wealth (real-balances) effect', 'Interest-rate (investment) effect', 'Net-export (exchange-rate) effect', 'Substitution (relative-price) effect'],
               correctAnswer: 0,
               explanation: 'The wealth (real-balances) effect: a lower price level raises the real value of money holdings, making consumers feel wealthier so they spend more. The substitution effect is a microeconomic idea about choosing between two goods.',
             },
             {
               question: 'A lower U.S. price level makes American exports cheaper to foreigners, raising net exports. This describes the:',
-              options: ['Net-export (exchange-rate) effect', 'Wealth effect', 'Interest-rate effect', 'Multiplier effect'],
+              options: ['Exchange-rate effect', 'Real-wealth effect', 'Interest-rate effect', 'Multiplier effect'],
               correctAnswer: 0,
-              explanation: 'The net-export effect: a lower domestic price level makes home goods relatively cheaper, raising exports and lowering imports, so net exports (and AD quantity) rise.',
+              explanation: 'The exchange-rate effect (also called the net-export effect): a lower domestic price level makes home goods relatively cheaper, raising exports and lowering imports, so net exports (and AD quantity) rise. The multiplier is about how a shift in spending is amplified, not about why AD slopes down.',
             },
           ],
         },
@@ -208,7 +208,7 @@ Anything that raises spending at a given price level shifts AD **right** ($\\rig
           questions: [
             {
               question: 'Consumer confidence collapses and households cut spending at every price level. Aggregate demand:',
-              options: ['Shifts left', 'Shifts right', 'Stays fixed; we move down along it', 'Becomes vertical'],
+              options: ['Shifts left', 'Shifts right', 'Moves down along the curve', 'Becomes vertical'],
               correctAnswer: 0,
               explanation: 'Lower confidence reduces $C$ at every price level, so AD shifts left. Because the trigger is NOT a change in the price level, this is a true shift, not a movement along the curve.',
             },
@@ -247,15 +247,15 @@ Ask one question: **"Did the *price level* change first, or did something else?"
 For each event, choose what happens to AD.`,
         exercise: {
           dropdowns: [
-            { label: 'The overall price level rises:', options: ['Movement along AD (up-left)', 'AD shifts right', 'AD shifts left', 'AD becomes vertical'] },
+            { label: 'The overall price level rises:', options: ['Movement along AD', 'AD shifts right', 'AD shifts left', 'AD becomes steeper'] },
             { label: 'A weaker dollar makes exports cheaper abroad:', options: ['AD shifts right', 'AD shifts left', 'Movement along AD', 'No effect on AD'] },
             { label: 'Taxes on households are raised:', options: ['AD shifts left', 'AD shifts right', 'Movement along AD', 'No effect on AD'] },
           ],
-          correctAnswers: ['Movement along AD (up-left)', 'AD shifts right', 'AD shifts left'],
+          correctAnswers: ['Movement along AD', 'AD shifts right', 'AD shifts left'],
           hint1: 'If the *price level* is the trigger, it is a movement along the curve, not a shift.',
           hint2: 'A weaker dollar raises net exports ($NX$) at every price level — a true shift.',
           hint3: 'Higher taxes lower disposable income → less $C$ at every price level → AD shifts left.',
-          explanation: 'Price level changing = movement along AD. Weaker dollar → $NX$ ↑ → AD shifts right. Higher taxes → $C$ ↓ → AD shifts left.',
+          explanation: 'Price level changing = movement along AD (up and to the left when it rises). Weaker dollar → $NX$ ↑ → AD shifts right. Higher taxes → $C$ ↓ → AD shifts left.',
         },
       },
       {
@@ -284,7 +284,7 @@ The exchange rate quietly moves AD through net exports:
             },
             {
               question: 'A major trading partner enters a deep recession, so it buys far fewer U.S. exports. U.S. aggregate demand:',
-              options: ['Shifts left', 'Shifts right', 'Moves along the curve', 'Is unaffected'],
+              options: ['Shifts left', 'Shifts right', 'Moves along the curve', 'Stays fixed'],
               correctAnswer: 0,
               explanation: 'Lower foreign income reduces U.S. exports → net exports fall → AD shifts left. The trigger is not the U.S. price level, so it is a shift, not a movement along AD.',
             },
@@ -349,15 +349,15 @@ The reason output can respond at all is **sticky prices/wages**: contracts, menu
           questions: [
             {
               question: 'A sharp rise in global oil prices increases input costs across the economy. In the short run, SRAS:',
-              options: ['Shifts left', 'Shifts right', 'Becomes vertical', 'Does not move'],
+              options: ['Shifts left', 'Shifts right', 'Becomes vertical', 'Stays fixed'],
               correctAnswer: 0,
               explanation: 'Higher input costs make production less profitable at every price level, shifting SRAS left. This raises the price level and lowers output — a negative supply shock / stagflation.',
             },
             {
               question: 'The main reason SRAS slopes upward (rather than being vertical) is that, in the short run:',
-              options: ['Some input prices, especially wages, are sticky', 'The price level never changes', 'Potential GDP is fixed', 'Households save all extra income'],
+              options: ['Wages and some other input prices are sticky', 'Potential GDP rises whenever the price level rises', 'Firms adjust input prices instantly to the price level', 'Households save more of their income as prices rise'],
               correctAnswer: 0,
-              explanation: 'Sticky nominal wages and input prices mean a higher output price temporarily widens profit margins, so firms raise output. That responsiveness is exactly what gives SRAS its upward slope.',
+              explanation: 'Sticky nominal wages and input prices mean a higher output price temporarily widens profit margins, so firms raise output. That responsiveness is exactly what gives SRAS its upward slope. If input prices adjusted instantly, the profit incentive would vanish and supply would be vertical, as LRAS is. Potential GDP does not depend on the price level.',
             },
           ],
         },
@@ -391,15 +391,15 @@ Only things that change the economy's real capacity to produce:
 Decide whether each event shifts **SRAS only**, **LRAS (and SRAS)**, or **neither**.`,
         exercise: {
           dropdowns: [
-            { label: 'A one-time spike in oil prices:', options: ['SRAS shifts left (short run)', 'LRAS shifts right', 'LRAS shifts left', 'No supply curve moves'] },
-            { label: 'A permanent technological breakthrough raises productivity:', options: ['LRAS shifts right (growth)', 'SRAS shifts left only', 'LRAS shifts left', 'Neither curve moves'] },
-            { label: 'The labor force grows as immigration rises:', options: ['LRAS shifts right (growth)', 'LRAS shifts left', 'SRAS shifts left', 'AD shifts left'] },
+            { label: 'A one-time spike in oil prices:', options: ['SRAS shifts left only', 'LRAS shifts right only', 'LRAS and SRAS shift left', 'No supply curve moves'] },
+            { label: 'A permanent technological breakthrough raises productivity:', options: ['LRAS and SRAS shift right', 'SRAS shifts right only', 'LRAS and SRAS shift left', 'AD shifts right, not supply'] },
+            { label: 'The labor force grows as immigration rises:', options: ['LRAS and SRAS shift right', 'SRAS shifts right but LRAS stays put', 'AD shifts right but supply stays put', 'LRAS shifts left as wages fall'] },
           ],
-          correctAnswers: ['SRAS shifts left (short run)', 'LRAS shifts right (growth)', 'LRAS shifts right (growth)'],
+          correctAnswers: ['SRAS shifts left only', 'LRAS and SRAS shift right', 'LRAS and SRAS shift right'],
           hint1: 'A temporary cost change affects short-run supply; permanent capacity changes affect long-run supply.',
           hint2: 'Productivity and technology raise potential output → LRAS shifts right (that is economic growth).',
           hint3: 'More available labor expands productive capacity → LRAS shifts right.',
-          explanation: 'Oil spike = temporary cost shock → SRAS left. Better technology and a larger labor force expand potential GDP → LRAS shifts right (economic growth). Only real-capacity changes move LRAS.',
+          explanation: 'Oil spike = temporary cost shock → SRAS left only. Better technology and a larger labor force expand potential GDP → LRAS shifts right (economic growth), and SRAS shifts right with it. Only real-capacity changes move LRAS.',
         },
       },
       {
@@ -422,13 +422,13 @@ A useful rule of thumb:
           questions: [
             {
               question: 'Workers negotiate higher nominal wages across the economy, raising firms\' costs. In the short run this:',
-              options: ['Shifts SRAS left, leaving LRAS unchanged', 'Shifts LRAS left', 'Shifts SRAS right', 'Shifts AD right'],
+              options: ['Shifts SRAS left, leaving LRAS unchanged', 'Shifts LRAS left, leaving SRAS as is', 'Shifts SRAS and LRAS both to the left', 'Shifts SRAS right as workers spend more'],
               correctAnswer: 0,
               explanation: 'Higher nominal wages raise production costs, shifting SRAS left. They do not change the economy\'s real productive capacity, so LRAS (potential output) stays put.',
             },
             {
               question: 'Which of these shifts the LONG-RUN aggregate supply curve to the right?',
-              options: ['A lasting increase in worker productivity', 'A temporary drop in oil prices', 'A surge in consumer confidence', 'A cut in income tax rates that boosts spending'],
+              options: ['A lasting increase in worker productivity', 'A temporary drop in world oil prices', 'A lasting surge in consumer confidence', 'A household tax cut that boosts spending'],
               correctAnswer: 0,
               explanation: 'LRAS moves only with real capacity. A lasting productivity gain raises potential output → LRAS shifts right (growth). The temporary oil drop affects SRAS; confidence and tax-driven spending affect AD.',
             },
@@ -499,9 +499,9 @@ We then compare equilibrium $Y$ to **potential output $Y_f$** (the vertical LRAS
             },
             {
               question: 'An economy is in long-run equilibrium when:',
-              options: ['AD, SRAS, and LRAS all intersect at the same point', 'AD intersects SRAS only', 'The price level is zero', 'SRAS is vertical'],
+              options: ['AD and SRAS intersect on the vertical LRAS line', 'AD intersects SRAS to the right of LRAS', 'The unemployment rate falls all the way to zero', 'SRAS becomes vertical at the current output'],
               correctAnswer: 0,
-              explanation: 'Long-run equilibrium is the special case where all three curves meet — short-run equilibrium output equals potential output ($Y = Y_f$).',
+              explanation: 'Long-run equilibrium is the special case where all three curves meet — short-run equilibrium output equals potential output ($Y = Y_f$). An AD–SRAS intersection right of LRAS is an inflationary gap, and full employment still includes natural unemployment, so the unemployment rate is not zero.',
             },
           ],
         },
@@ -665,9 +665,9 @@ So AD shifts right by **\\$250 billion**, not just the original \\$50 billion.
           questions: [
             {
               question: 'With $MPC = 0.75$, an initial \\$40 billion increase in investment shifts AD to the right by approximately:',
-              options: ['\\$160 billion', '\\$40 billion', '\\$53 billion', '\\$30 billion'],
+              options: ['\\$160 billion', '\\$40 billion', '\\$53 billion', '\\$120 billion'],
               correctAnswer: 0,
-              explanation: 'Multiplier $= 1/(1-0.75) = 1/0.25 = 4$. $\\Delta Y = 4 \\times \\$40\\text{B} = \\$160$ billion.',
+              explanation: 'Multiplier $= 1/(1-0.75) = 1/0.25 = 4$. $\\Delta Y = 4 \\times \\$40\\text{B} = \\$160$ billion. The \\$120 billion figure counts only the re-spending rounds and leaves out the initial \\$40 billion.',
             },
             {
               question: 'An economy has a \\$300 billion recessionary gap and $MPC = 0.8$ (multiplier $= 5$). The required increase in government spending to close it is:',
@@ -804,15 +804,15 @@ Even with no policy, the economy drifts back to potential as wages adjust:
           questions: [
             {
               question: 'An economy is in a recessionary gap and policymakers do nothing. Self-correction occurs because:',
-              options: ['High unemployment lowers nominal wages, shifting SRAS right', 'AD spontaneously shifts right on its own', 'LRAS shifts left to meet output', 'The price level is fixed forever'],
+              options: ['High unemployment lowers nominal wages, shifting SRAS right', 'High unemployment lowers prices, which shifts AD right', 'LRAS shifts left until it meets the lower output level', 'High unemployment raises nominal wages, shifting SRAS left'],
               correctAnswer: 0,
-              explanation: 'In a recessionary gap, unemployment pushes nominal wages down. Lower input costs shift SRAS right, raising output back toward potential ($Y_f$) and lowering the price level.',
+              explanation: 'In a recessionary gap, unemployment pushes nominal wages down. Lower input costs shift SRAS right, raising output back toward potential ($Y_f$) and lowering the price level. A lower price level moves the economy along AD (it does not shift AD), and LRAS does not move to meet output.',
             },
             {
               question: 'To close an inflationary gap, appropriate discretionary policy is:',
-              options: ['Contractionary policy that shifts AD left', 'Expansionary policy that shifts AD right', 'A policy that shifts LRAS left', 'No change to AD or AS'],
+              options: ['Contractionary policy that shifts AD left', 'Expansionary policy that shifts AD right', 'Supply-side policy that shifts LRAS left', 'Letting wages fall so SRAS shifts right'],
               correctAnswer: 0,
-              explanation: 'An inflationary gap ($Y > Y_f$) calls for contractionary policy — cut $G$, raise taxes, or reduce the money supply — to shift AD left back to potential, easing inflation.',
+              explanation: 'An inflationary gap ($Y > Y_f$) calls for contractionary policy — cut $G$, raise taxes, or reduce the money supply — to shift AD left back to potential, easing inflation. Without policy, wages would rise (not fall) and shift SRAS left; no stabilization policy aims to shrink LRAS.',
             },
           ],
         },
@@ -896,9 +896,9 @@ One question from each major idea.`,
             { label: 'A lower price level raises the real value of money holdings:', options: ['Wealth effect', 'Net-export effect', 'Multiplier effect', 'Supply shock'] },
             { label: 'Output \\$11T, potential \\$12T → gap type:', options: ['Recessionary gap', 'Inflationary gap', 'Long-run equilibrium', 'Stagflation'] },
             { label: '$MPC = 0.75 \\Rightarrow$ multiplier:', options: ['$4$', '$5$', '$1.33$', '$0.25$'] },
-            { label: 'Oil-price spike shifts SRAS left → result:', options: ['Stagflation (PL ↑, GDP ↓)', 'PL ↑, GDP ↑', 'PL ↓, GDP ↓', 'No change'] },
+            { label: 'Oil-price spike shifts SRAS left → result:', options: ['Stagflation: PL ↑, GDP ↓', 'Demand-pull boom: PL ↑, GDP ↑', 'Demand-driven recession: PL ↓, GDP ↓', 'Supply-led expansion: PL ↓, GDP ↑'] },
           ],
-          correctAnswers: ['Wealth effect', 'Recessionary gap', '$4$', 'Stagflation (PL ↑, GDP ↓)'],
+          correctAnswers: ['Wealth effect', 'Recessionary gap', '$4$', 'Stagflation: PL ↑, GDP ↓'],
           hint1: 'Real value of money rising = the wealth (real-balances) effect.',
           hint2: '\\$11T < \\$12T means output is below potential.',
           hint3: '$1/(1-0.75) = 1/0.25 = 4$; a leftward SRAS shift raises prices while cutting output.',
@@ -932,19 +932,19 @@ Answer all three to finish the lesson.`,
           questions: [
             {
               question: 'Which event causes a movement ALONG the aggregate demand curve rather than a shift of it?',
-              options: ['A change in the overall price level', 'A cut in income taxes', 'A surge in consumer confidence', 'An increase in government spending'],
+              options: ['A change in the price level', 'A cut in income taxes', 'A surge in consumer confidence', 'An increase in government spending'],
               correctAnswer: 0,
               explanation: 'Only a change in the price level moves you along a fixed AD curve. Tax cuts, confidence surges, and more government spending change spending at a given price level, so they shift AD.',
             },
             {
               question: 'The long-run aggregate supply (LRAS) curve is vertical because, in the long run, real GDP is determined by:',
-              options: ['The economy\'s productive capacity (potential output), independent of the price level', 'The current price level', 'Aggregate demand alone', 'The marginal propensity to consume'],
+              options: ['The economy\'s productive capacity', 'The price level set by the central bank', 'Total spending on goods and services', 'The marginal propensity to consume'],
               correctAnswer: 0,
-              explanation: 'In the long run all wages and prices adjust, so output settles at potential ($Y_f$) regardless of the price level — hence a vertical LRAS at the economy\'s productive capacity.',
+              explanation: 'In the long run all wages and prices adjust, so output settles at potential ($Y_f$), set by the economy\'s resources and technology, regardless of the price level — hence a vertical LRAS at the economy\'s productive capacity. Total spending (AD) and the MPC affect output only in the short run.',
             },
             {
               question: 'An economy starts at full employment, then experiences a sharp leftward shift of SRAS from a negative supply shock. The short-run result is:',
-              options: ['A higher price level and lower real GDP (stagflation)', 'A higher price level and higher real GDP', 'A lower price level and higher real GDP', 'No change in price level or output'],
+              options: ['A higher price level and lower real GDP', 'A higher price level and higher real GDP', 'A lower price level and higher real GDP', 'No change in price level or output'],
               correctAnswer: 0,
               explanation: 'A leftward SRAS shift raises the price level while lowering real GDP — the simultaneous inflation-and-recession combination known as stagflation. Supply shifts always move PL and Y in opposite directions.',
             },

@@ -248,7 +248,7 @@ The table shows four **hypothetical** countries.
           },
           {
             label: 'Two countries with similar GNI per capita but different well-being are best compared using ___',
-            options: ['The Gini coefficient', 'Total population', 'Total land area', 'Total exports']
+            options: ['The Gini coefficient', 'Total population size', 'GDP growth rate', 'Total export value']
           },
           {
             label: 'The country most likely in Stage 2 of the demographic transition is ___',

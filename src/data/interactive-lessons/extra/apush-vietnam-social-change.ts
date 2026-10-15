@@ -62,13 +62,13 @@ In Southeast Asia, containment took the form of the **domino theory**: the belie
             {
               question: 'The "domino theory" was used primarily to justify which policy?',
               options: [
-                'Continued U.S. military commitment to prevent communism from spreading in Southeast Asia',
-                'Direct invasion of the Soviet Union',
-                'Withdrawal of all U.S. forces from Asia',
-                'A return to pre-war isolationism',
+                'Continued U.S. military commitment to keep communism from spreading in Southeast Asia',
+                'A direct invasion of North Vietnam and China to overthrow their communist governments',
+                'A phased withdrawal of U.S. forces from Asia to avoid a wider war with China',
+                'A return to prewar isolationism and a sharp cut in U.S. foreign military aid',
               ],
               correctAnswer: 0,
-              explanation: 'The domino theory held that if South Vietnam fell, neighboring nations would fall in turn. It was used to justify deepening U.S. commitment under containment, not invasion of the USSR or withdrawal.',
+              explanation: 'The domino theory held that if South Vietnam fell, neighboring nations would fall in turn. It was used to justify deepening U.S. commitment under containment — not an invasion of the North or China, and not withdrawal or isolationism.',
             },
             {
               question: 'Containment as a Cold War strategy is most closely associated with which figure?',
@@ -106,7 +106,7 @@ Fill in each blank about the road into Vietnam.`,
         exercise: {
           dropdowns: [
             { label: 'Nationalist/communist leader of the Viet Minh:', options: ['Ho Chi Minh', 'Mao Zedong', 'Ngo Dinh Diem', 'Pol Pot'] },
-            { label: 'The 1954 French defeat that ended colonial rule:', options: ['Dien Bien Phu', 'Tet', 'Khe Sanh', 'Hue'] },
+            { label: 'The 1954 French defeat that ended colonial rule:', options: ['Dien Bien Phu', 'Ia Drang Valley', 'Khe Sanh', 'Hamburger Hill'] },
             { label: 'The Geneva Accords divided Vietnam at the:', options: ['17th parallel', '38th parallel', 'Mekong Delta', 'Equator'] },
             { label: 'U.S.-backed leader of South Vietnam:', options: ['Ngo Dinh Diem', 'Ho Chi Minh', 'Nguyen Cao Ky', 'Bao Dai'] },
           ],
@@ -190,13 +190,13 @@ In **August 1964**, the Johnson administration reported that North Vietnamese bo
             {
               question: 'The Gulf of Tonkin Resolution is significant primarily because it:',
               options: [
-                'Gave the president broad authority to escalate the war without a formal declaration of war',
-                'Formally declared war on North Vietnam and China',
-                'Ended U.S. involvement in Vietnam',
-                'Required all troops to withdraw within 90 days',
+                'Gave the president broad authority to escalate the war without a declaration of war',
+                'Formally declared war on North Vietnam and China after the attacks on U.S. destroyers',
+                'Ended U.S. involvement in Vietnam and set a timetable to bring all combat troops home',
+                'Required the president to withdraw all troops within 90 days unless Congress declared war',
               ],
               correctAnswer: 0,
-              explanation: 'The resolution authorized the president to "take all necessary measures," functioning as a substitute for a declaration of war and enabling massive escalation.',
+              explanation: 'The resolution authorized the president to "take all necessary measures," functioning as a substitute for a declaration of war and enabling massive escalation. The 90-day limit belongs to the later War Powers Resolution (1973), which Congress passed to rein in exactly this kind of open-ended authority.',
             },
             {
               question: 'Which president used the Gulf of Tonkin Resolution to escalate U.S. ground involvement?',
@@ -256,7 +256,7 @@ It helps to keep the era's vocabulary straight, because the exam loves to test w
         content: `**Match the Strategy** 🔽`,
         exercise: {
           dropdowns: [
-            { label: 'The sustained bombing campaign against North Vietnam:', options: ['Operation Rolling Thunder', 'Operation Overlord', 'Operation Desert Storm', 'Operation Linebacker'] },
+            { label: 'The sustained bombing campaign against North Vietnam:', options: ['Operation Rolling Thunder', 'Operation Ranch Hand', 'Operation Desert Storm', 'Operation Enduring Freedom'] },
             { label: 'Metric used to measure "progress" in a war of attrition:', options: ['body count', 'territory held', 'cities liberated', 'GDP growth'] },
             { label: 'System that conscripted young men into the military:', options: ['Selective Service draft', 'volunteer enlistment only', 'National Guard lottery', 'GI Bill'] },
           ],
@@ -309,10 +309,10 @@ The contradiction was devastating. Just months earlier, U.S. commander **General
             {
               question: 'The Tet Offensive is best described as:',
               options: [
-                'A military defeat for the communists but a turning point that eroded U.S. public support for the war',
-                'A decisive communist military victory that ended the war',
-                'A minor skirmish with no political consequences',
-                'A successful U.S. invasion of North Vietnam',
+                'A military defeat for the communists that still turned U.S. public opinion against the war',
+                'A decisive communist military victory that forced the U.S. to sign a peace treaty',
+                'A minor skirmish that had little effect on American public opinion about the war',
+                'A successful U.S. invasion of North Vietnam that briefly captured the city of Hanoi',
               ],
               correctAnswer: 0,
               explanation: 'U.S. and South Vietnamese forces repelled Tet and inflicted heavy losses on the Viet Cong, but the scale of the attacks contradicted official optimism and sharply reduced American support.',
@@ -320,13 +320,13 @@ The contradiction was devastating. Just months earlier, U.S. commander **General
             {
               question: 'The "credibility gap" of the late 1960s refers to:',
               options: [
-                'The growing distance between government claims of progress and the reality Americans witnessed',
-                'A shortage of qualified soldiers',
-                'A budget shortfall in the Great Society',
-                'The gap in nuclear weapons between the U.S. and USSR',
+                'The distance between official claims of progress and the reality Americans saw on TV',
+                'A shortage of trained soldiers that forced the military to lower its draft standards',
+                'The supposed Soviet lead in missiles that Kennedy warned about in the 1960 campaign',
+                'A loss of trust between the U.S. and its NATO allies over sharing nuclear weapons',
               ],
               correctAnswer: 0,
-              explanation: 'The credibility gap described the public\'s growing distrust as official optimism clashed with battlefield reality, especially after Tet.',
+              explanation: 'The credibility gap described the public\'s growing distrust as official optimism clashed with battlefield reality, especially after Tet. The supposed Soviet missile lead of the 1960 campaign was the "missile gap," a different idea.',
             },
           ],
         },
@@ -383,7 +383,7 @@ Match each figure or event to its description.`,
         exercise: {
           dropdowns: [
             { label: 'Antiwar candidate whose New Hampshire showing weakened LBJ:', options: ['Eugene McCarthy', 'Joseph McCarthy', 'George Wallace', 'Hubert Humphrey'] },
-            { label: 'Senator assassinated in June 1968 after the California primary:', options: ['Robert F. Kennedy', 'John F. Kennedy', 'Malcolm X', 'Medgar Evers'] },
+            { label: 'Senator assassinated in June 1968 after the California primary:', options: ['Robert F. Kennedy', 'Edward M. Kennedy', 'Hubert Humphrey', 'Eugene McCarthy'] },
             { label: 'City where police and protesters clashed at the Democratic Convention:', options: ['Chicago', 'Miami', 'Los Angeles', 'New York'] },
             { label: 'Republican who won the 1968 election on a "law and order" platform:', options: ['Richard Nixon', 'Barry Goldwater', 'Gerald Ford', 'Ronald Reagan'] },
           ],
@@ -435,10 +435,10 @@ But Nixon simultaneously **widened** the war:
             {
               question: '"Vietnamization" under Nixon refers to:',
               options: [
-                'Gradually withdrawing U.S. troops while transferring combat responsibility to South Vietnamese forces',
-                'Sending hundreds of thousands more American troops into Vietnam',
-                'Granting independence to North Vietnam',
-                'Annexing South Vietnam as a U.S. territory',
+                'Gradually withdrawing U.S. troops while shifting combat duties to South Vietnamese forces',
+                'Sending hundreds of thousands more American troops to take over the fighting from the ARVN',
+                'Negotiating a reunified, neutral Vietnam under a coalition government with the communists',
+                'Training North Vietnamese defectors to wage a guerrilla war behind communist lines',
               ],
               correctAnswer: 0,
               explanation: 'Vietnamization shifted the ground fighting to the ARVN (South Vietnamese army) while U.S. forces were drawn down, aiming to reduce American casualties and protest.',
@@ -447,9 +447,9 @@ But Nixon simultaneously **widened** the war:
               question: 'The Pentagon Papers (1971) were significant because they:',
               options: [
                 'Revealed that the government had repeatedly misled the public about the war',
-                'Proved the U.S. had already won the war',
-                'Were a secret peace treaty with North Vietnam',
-                'Documented Soviet plans to invade Alaska',
+                'Showed that U.S. commanders had secretly planned an invasion of North Vietnam',
+                'Contained the secret terms of the peace deal Kissinger was negotiating in Paris',
+                'Proved that Soviet advisers had staged the Gulf of Tonkin attacks on U.S. ships',
               ],
               correctAnswer: 0,
               explanation: 'Leaked by Daniel Ellsberg, the classified study showed years of official deception, deepening public distrust and the credibility gap.',
@@ -564,10 +564,10 @@ A central grievance was the **draft's inequity**: college **deferments** allowed
             {
               question: 'In Vietnam-era debates, "doves" and "hawks" referred to:',
               options: [
-                'Those who opposed the war (doves) versus those who supported continued military effort (hawks)',
-                'Two rival branches of the U.S. military',
-                'Northern versus Southern Vietnamese soldiers',
-                'Two political parties in South Vietnam',
+                'Opponents of the war (doves) versus supporters of continued military effort (hawks)',
+                'Air Force bomber crews (hawks) versus Army and Marine ground commanders (doves)',
+                'North Vietnamese soldiers (hawks) versus South Vietnamese soldiers (doves)',
+                'Southern Democrats in Congress (hawks) versus Northern Republicans (doves)',
               ],
               correctAnswer: 0,
               explanation: 'Doves favored de-escalation or withdrawal; hawks favored continued or intensified military commitment.',
@@ -575,10 +575,10 @@ A central grievance was the **draft's inequity**: college **deferments** allowed
             {
               question: 'A major criticism of the Vietnam-era draft was that it:',
               options: [
-                'Fell disproportionately on working-class and minority men because college deferments shielded wealthier students',
-                'Applied only to women',
-                'Exempted everyone under age 30',
-                'Was never actually used to conscript anyone',
+                'Fell hardest on working-class and minority men while college students won deferments',
+                'Applied only to men who had already enlisted in the military reserves or National Guard units',
+                'Relied on volunteers alone, so its burden fell evenly on young men from every income level',
+                'Was never actually used to conscript anyone once the first U.S. combat troops had arrived there',
               ],
               correctAnswer: 0,
               explanation: 'Student deferments let many wealthier young men avoid service, making the system widely seen as unjust along class and racial lines.',
@@ -605,12 +605,12 @@ The **counterculture** of the 1960s rejected mainstream values around materialis
         content: `**Match the Movement** 🔽`,
         exercise: {
           dropdowns: [
-            { label: 'Leading New Left student organization:', options: ['SDS (Students for a Democratic Society)', 'ROTC', 'AFL-CIO', 'NAACP'] },
+            { label: 'Leading New Left student organization:', options: ['Students for a Democratic Society', 'Young Americans for Freedom', 'Americans for Democratic Action', 'Southern Christian Leadership Conference'] },
             { label: '1969 music festival symbolizing the counterculture:', options: ['Woodstock', 'Coachella', 'Lollapalooza', 'Newport'] },
             { label: 'Nixon\'s term for ordinary Americans who disliked the protests:', options: ['silent majority', 'moral majority', 'New Left', 'beat generation'] },
-            { label: '1962 SDS manifesto calling for "participatory democracy":', options: ['Port Huron Statement', 'Sharon Statement', 'Southern Manifesto', 'Powell Memo'] },
+            { label: '1962 SDS manifesto calling for "participatory democracy":', options: ['Port Huron Statement', 'Sharon Statement', 'Southern Manifesto', 'Declaration of Conscience'] },
           ],
-          correctAnswers: ['SDS (Students for a Democratic Society)', 'Woodstock', 'silent majority', 'Port Huron Statement'],
+          correctAnswers: ['Students for a Democratic Society', 'Woodstock', 'silent majority', 'Port Huron Statement'],
           hint1: 'The student New Left group shares initials with "Students for a Democratic Society."',
           hint2: 'The 1969 festival took place on a farm in upstate New York.',
           hint3: 'Nixon appealed to the quiet, non-protesting majority; SDS\'s founding document was written at Port Huron, Michigan.',
@@ -689,10 +689,10 @@ The women's movement of the 1960s–70s ("**second-wave feminism**") expanded th
             {
               question: 'Betty Friedan\'s The Feminine Mystique (1963) is credited with:',
               options: [
-                'Helping launch second-wave feminism by naming the dissatisfaction of many American housewives',
-                'Securing women the right to vote',
-                'Ending the Vietnam War',
-                'Founding the Republican Party',
+                'Helping launch second-wave feminism by naming the discontent of many suburban housewives',
+                'Building feminist support for the Nineteenth Amendment, which secured women\'s suffrage',
+                'Persuading the Supreme Court to recognize a right to abortion in Roe v. Wade',
+                'Arguing that women were happiest devoting their lives to homemaking and motherhood',
               ],
               correctAnswer: 0,
               explanation: 'Friedan\'s book gave voice to the frustration of suburban women confined to domestic roles, energizing the women\'s movement; she later co-founded NOW.',
@@ -700,10 +700,10 @@ The women's movement of the 1960s–70s ("**second-wave feminism**") expanded th
             {
               question: 'Title IX (1972) is best known for:',
               options: [
-                'Prohibiting sex discrimination in federally funded education, including school athletics',
-                'Granting the right to abortion',
-                'Lowering the voting age',
-                'Desegregating the armed forces',
+                'Prohibiting sex discrimination in federally funded education, including athletics',
+                'Guaranteeing a constitutional right to abortion in the first trimester of pregnancy',
+                'Lowering the voting age to 18 in federal, state, and local elections nationwide',
+                'Requiring equal pay for men and women who perform the same work for one employer',
               ],
               correctAnswer: 0,
               explanation: 'Title IX banned sex-based discrimination in any education program receiving federal funds, dramatically expanding opportunities for women in sports and academics.',
@@ -719,7 +719,7 @@ The women's movement of the 1960s–70s ("**second-wave feminism**") expanded th
 The model of organized protest spread to many groups seeking equality:
 
 - **Chicano Movement** — Mexican Americans organized for labor and civil rights. **César Chávez** and **Dolores Huerta** founded the **United Farm Workers (UFW)** and led the **Delano grape boycott** to win better conditions for farmworkers.
-- **American Indian Movement (AIM)** — Founded 1968; activists staged the **occupation of Alcatraz (1969–71)** and the standoff at **Wounded Knee (1973)** to demand treaty rights and self-determination.
+- **American Indian Movement (AIM)** — Founded 1968. Red Power activists (the Indians of All Tribes group, which AIM supported) staged the **occupation of Alcatraz (1969–71)**, and AIM led the standoff at **Wounded Knee (1973)** to demand treaty rights and self-determination.
 - **Gay rights movement** — The **Stonewall uprising** in New York City in **1969** is widely seen as the catalyst for the modern LGBTQ rights movement.
 - **Environmental movement** — The first **Earth Day (1970)** and creation of the **EPA (1970)** reflected rising ecological awareness.
 
@@ -733,10 +733,10 @@ The model of organized protest spread to many groups seeking equality:
           dropdowns: [
             { label: 'Co-founder of the United Farm Workers (Chicano labor movement):', options: ['César Chávez', 'Russell Means', 'Harvey Milk', 'Betty Friedan'] },
             { label: '1969 event seen as the catalyst of the modern gay rights movement:', options: ['Stonewall uprising', 'March on Washington', 'Selma march', 'Bay of Pigs'] },
-            { label: 'Activist group behind the 1973 Wounded Knee standoff:', options: ['American Indian Movement (AIM)', 'NAACP', 'SNCC', 'NOW'] },
+            { label: 'Activist group behind the 1973 Wounded Knee standoff:', options: ['American Indian Movement', 'National Congress of American Indians', 'Bureau of Indian Affairs', 'Indians of All Tribes'] },
             { label: 'Federal agency created in 1970 amid the new environmental movement:', options: ['EPA', 'FDA', 'CIA', 'FBI'] },
           ],
-          correctAnswers: ['César Chávez', 'Stonewall uprising', 'American Indian Movement (AIM)', 'EPA'],
+          correctAnswers: ['César Chávez', 'Stonewall uprising', 'American Indian Movement', 'EPA'],
           hint1: 'He led the Delano grape boycott alongside Dolores Huerta.',
           hint2: 'The uprising happened at a bar in New York\'s Greenwich Village in 1969.',
           hint3: 'AIM occupied Wounded Knee in 1973; the Environmental Protection Agency was established in 1970.',
@@ -827,9 +827,9 @@ You now have the full arc: how the U.S. entered Vietnam, escalated, faced a turn
               question: 'The "silent majority" Nixon appealed to in 1969 referred to:',
               options: [
                 'Ordinary Americans who did not protest and disapproved of the antiwar counterculture',
-                'Soldiers who refused to fight',
-                'Members of the Viet Cong',
-                'Civil rights marchers in the South',
+                'Soldiers in Vietnam who quietly refused combat orders instead of protesting in public',
+                'Draft-age young men who opposed the war but could not yet vote in any national election',
+                'Southern Black voters whom Nixon openly courted after passage of the Voting Rights Act',
               ],
               correctAnswer: 0,
               explanation: 'Nixon used "silent majority" to describe non-protesting Americans who supported his policies and resented the protest movements — a key part of the conservative backlash.',
@@ -854,11 +854,11 @@ APUSH rarely rewards isolated facts — it rewards **reasoning**, especially **c
 Match each cause to its most direct effect.`,
         exercise: {
           dropdowns: [
-            { label: 'The Tet Offensive (1968) led directly to:', options: ['a sharp decline in U.S. public support for the war', 'an immediate communist surrender', 'the start of the draft', 'the Geneva Accords'] },
-            { label: 'The unequal draft and college deferments fueled:', options: ['the antiwar movement and charges of class injustice', 'the domino theory', 'Vietnamization', 'the Marshall Plan'] },
-            { label: 'Executive overreach in waging the war led Congress to pass the:', options: ['War Powers Act (1973)', 'Gulf of Tonkin Resolution', '26th Amendment', 'Title IX'] },
+            { label: 'The Tet Offensive (1968) led directly to:', options: ['a sharp decline in U.S. public support for the war', 'an immediate surrender by North Vietnamese forces', 'the first large deployment of U.S. ground troops', 'a surge in public approval of Johnson\'s handling of the war'] },
+            { label: 'The unequal draft and college deferments fueled:', options: ['the antiwar movement and charges of class injustice', 'the Vietnamization policy of turning the war over to the ARVN', 'the Gulf of Tonkin Resolution and wider escalation', 'a wave of patriotic enlistment among college students'] },
+            { label: 'Executive overreach in waging the war led Congress to pass the:', options: ['War Powers Act', 'Gulf of Tonkin Resolution', '26th Amendment', 'Title IX'] },
           ],
-          correctAnswers: ['a sharp decline in U.S. public support for the war', 'the antiwar movement and charges of class injustice', 'War Powers Act (1973)'],
+          correctAnswers: ['a sharp decline in U.S. public support for the war', 'the antiwar movement and charges of class injustice', 'War Powers Act'],
           hint1: 'Tet contradicted official optimism and widened the credibility gap.',
           hint2: 'Working-class and minority men bore the heaviest draft burden, sparking protest.',
           hint3: 'The 1973 law required the president to consult Congress before extended deployments.',
@@ -920,21 +920,21 @@ Answer all three to finish the lesson.`,
             {
               question: 'U.S. involvement in Vietnam is best explained as an application of which broader Cold War strategy?',
               options: [
-                'Containment of the spread of communism',
+                'Containment',
+                'Rollback',
+                'Détente',
                 'Isolationism',
-                'Manifest Destiny',
-                'Appeasement',
               ],
               correctAnswer: 0,
-              explanation: 'Vietnam was fought to contain communism in Southeast Asia, consistent with the domino theory and the containment doctrine dating to the late 1940s.',
+              explanation: 'Vietnam was fought to contain communism in Southeast Asia, consistent with the domino theory and the containment doctrine dating to the late 1940s. The U.S. did not try to roll back communism in North Vietnam, détente with the Soviets came later under Nixon, and isolationism is the opposite of intervention.',
             },
             {
               question: 'Which best describes the relationship between the Vietnam War and 1960s social change?',
               options: [
-                'The war radicalized students, deepened distrust of government, and helped energize the antiwar movement and broader rights movements',
-                'The war had no effect on American domestic life',
-                'The war united Americans behind the government',
-                'Social movements caused the war',
+                'The war radicalized students, deepened distrust of government, and energized protest movements',
+                'The war had little effect on domestic life because the fighting was on the other side of the world',
+                'The war united Americans behind their government in the same way World War II had done',
+                'The war drew attention, money, and volunteers away from the era\'s rights movements',
               ],
               correctAnswer: 0,
               explanation: 'Vietnam intensified activism: the antiwar movement, the counterculture, and the era\'s rights movements all drew on the same energy and distrust of authority the war helped generate.',
@@ -942,10 +942,10 @@ Answer all three to finish the lesson.`,
             {
               question: 'The 26th Amendment (1971), which lowered the voting age to 18, is most directly connected to:',
               options: [
-                'The argument that those old enough to be drafted to fight in Vietnam should be old enough to vote',
-                'The women\'s suffrage movement of the 1910s',
-                'The end of Reconstruction',
-                'The New Deal',
+                'The argument that men old enough to be drafted for Vietnam were old enough to vote',
+                'The women\'s suffrage movement and the push for a federal Equal Rights Amendment',
+                'The end of Reconstruction and Southern efforts to disfranchise Black voters',
+                'The New Deal\'s push to give younger workers a voice in labor and wage policy',
               ],
               correctAnswer: 0,
               explanation: 'The slogan "old enough to fight, old enough to vote" tied the draft age to voting rights, driving ratification of the 26th Amendment during the Vietnam War.',

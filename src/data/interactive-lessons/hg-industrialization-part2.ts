@@ -135,11 +135,11 @@ Britain tried to protect its lead, for example by banning the emigration of skil
           },
           {
             label: 'Japan\'s government imports foreign engineers and builds model factories after 1868. This is ___',
-            options: ['State-led industrialization', 'Deindustrialization', 'Commodity dependence', 'Agglomeration diseconomy']
+            options: ['State-led industrialization', 'Deindustrialization', 'Commodity export dependence', 'Agglomeration diseconomy']
           },
           {
             label: 'Factories appear first in ports and capitals and only later in small towns. This is ___',
-            options: ['Hierarchical diffusion', 'Relocation diffusion', 'Contagious diffusion', 'Stimulus diffusion']
+            options: ['Hierarchical diffusion', 'Relocation diffusion', 'Contagious diffusion', 'Reverse hierarchical diffusion']
           }
         ],
         correctAnswers: ['Relocation diffusion', 'State-led industrialization', 'Hierarchical diffusion'],

@@ -210,7 +210,7 @@ Bangladesh shows both sides of women's work in an industrializing economy.
         dropdowns: [
           {
             label: 'A village group of women takes small loans to buy sewing machines and repays weekly. This is ___',
-            options: ['Microfinance', 'Foreign aid', 'Remittances', 'Fair trade']
+            options: ['Microfinance', 'Foreign aid', 'Remittances', 'Fair-trade pricing']
           },
           {
             label: 'Women\'s share of paid work falls during industrialization and rises again with service jobs. This describes ___',

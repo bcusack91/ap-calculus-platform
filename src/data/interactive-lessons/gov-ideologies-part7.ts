@@ -128,6 +128,7 @@ export const govIdeologiesPart7Data = {
 | **FEDERALIST 78** | 1788 | Hamilton | Judicial review necessary; judiciary "least dangerous branch" with neither sword nor purse |
 | **BRUTUS 1** | 1787 | Anti-Federalist (likely Robert Yates) | Large republic CANNOT preserve liberty; federal government will absorb states; need Bill of Rights |
 | **LETTER FROM BIRMINGHAM JAIL** | 1963 | MLK Jr. | Defense of nonviolent direct action + civil disobedience; "unjust law is no law at all"; structural injustice critique |
+| **THE WEALTH OF NATIONS** (core principles; added to the required list for 2026-27) | 1776 | Adam Smith | Free enterprise + free markets + limited government role in the economy; the CED ties the core American value of free enterprise to Smith |
 
 ## AP FRQ Strategy for Ideology Questions
 
@@ -175,7 +176,7 @@ export const govIdeologiesPart7Data = {
 - **TEA PARTY** — right-wing populist movement 2009-2016 that transformed into MAGA
 - **MAGA** — Make America Great Again; Trump-era populist-nationalist Republican coalition 2016+
 
-> 🔑 Key takeaway: HIGH-YIELD CONCEPTS — left-right spectrum (radical-liberal-moderate-conservative-reactionary); Nolan chart 2-D (4 quadrants: liberal, conservative, libertarian, populist/authoritarian); core American ideologies; political socialization agents (family strongest); polling fundamentals + historical failures (Literary Digest 1936 + Truman-Dewey 1948 + 2016/2020); Keynesian vs supply-side vs monetarist economic policy; originalism vs living constitution interpretation; MAJOR REALIGNMENTS (1932 New Deal, 1964-1980 Southern Shift, 1980 Reagan, 2016 Educational); POLARIZATION (elite + mass + partisan sorting + affective + Pew typology); REQUIRED FOUNDATIONAL DOCUMENTS (Federalist 10/51/70/78, Brutus 1, Letter from Birmingham Jail); AP FRQ strategy (SCAR template + 15 required cases + 9 required documents).
+> 🔑 Key takeaway: HIGH-YIELD CONCEPTS — left-right spectrum (radical-liberal-moderate-conservative-reactionary); Nolan chart 2-D (4 quadrants: liberal, conservative, libertarian, populist/authoritarian); core American ideologies; political socialization agents (family strongest); polling fundamentals + historical failures (Literary Digest 1936 + Truman-Dewey 1948 + 2016/2020); Keynesian vs supply-side vs monetarist economic policy; originalism vs living constitution interpretation; MAJOR REALIGNMENTS (1932 New Deal, 1964-1980 Southern Shift, 1980 Reagan, 2016 Educational); POLARIZATION (elite + mass + partisan sorting + affective + Pew typology); REQUIRED FOUNDATIONAL DOCUMENTS (Federalist 10/51/70/78, Brutus 1, Letter from Birmingham Jail); AP FRQ strategy (SCAR template + 15 required cases + 13 required documents for 2026-27).
       `
     },
     {
@@ -233,18 +234,18 @@ export const govIdeologiesPart7Data = {
         dropdowns: [
           {
             label: "FEDERALIST 10 (Madison Nov 22 1787) — large republic controls ___ better than small republic by enabling more diverse interests preventing majority oppression: ___",
-            options: ['Faction', 'Separation of powers + checks', 'Energetic single executive', 'Judicial review', 'Anti-Federalist warning about large republic + Bill of Rights demand', 'Civil disobedience + nonviolent direct action']
+            options: ['Faction', 'Separation of powers + checks', 'Energetic single executive', 'Judicial review', 'Anti-Federalist warning about large republic', 'Civil disobedience + nonviolent direct action']
           },
           {
             label: "BRUTUS 1 (Anti-Federalist Oct 1787) — large republic CANNOT preserve liberty; federal government will absorb states; need Bill of Rights: ___",
-            options: ['Faction', 'Separation of powers + checks', 'Energetic single executive', 'Judicial review', 'Anti-Federalist warning about large republic + Bill of Rights demand', 'Civil disobedience + nonviolent direct action']
+            options: ['Faction', 'Separation of powers + checks', 'Energetic single executive', 'Judicial review', 'Anti-Federalist warning about large republic', 'Civil disobedience + nonviolent direct action']
           },
           {
             label: "LETTER FROM BIRMINGHAM JAIL (MLK Jr. April 16 1963) — defense of nonviolent direct action + 'unjust law is no law at all' (Augustine) + critique of white moderate: ___",
-            options: ['Faction', 'Separation of powers + checks', 'Energetic single executive', 'Judicial review', 'Anti-Federalist warning about large republic + Bill of Rights demand', 'Civil disobedience + nonviolent direct action']
+            options: ['Faction', 'Separation of powers + checks', 'Energetic single executive', 'Judicial review', 'Anti-Federalist warning about large republic', 'Civil disobedience + nonviolent direct action']
           }
         ],
-        correctAnswers: ['Faction', 'Anti-Federalist warning about large republic + Bill of Rights demand', 'Civil disobedience + nonviolent direct action'],
+        correctAnswers: ['Faction', 'Anti-Federalist warning about large republic', 'Civil disobedience + nonviolent direct action'],
         hint1: 'F10 — defined faction as "a number of citizens, whether amounting to a majority or minority of the whole, who are united and actuated by some common impulse of passion, or of interest, adverse to the rights of other citizens"; cure must NOT remove cause (liberty) but CONTROL effects (large diverse republic).',
         hint2: 'BRUTUS 1 (likely Robert Yates) — Anti-Federalist Oct 18 1787 NY Journal; argued large republic too distant from people, federal taxation crowds out states, standing army threatens liberty, Necessary + Proper + Supremacy expansive readings will absorb states, federal judiciary swallows state courts; demanded BILL OF RIGHTS as ratification condition.',
         hint3: 'LETTER FROM BIRMINGHAM JAIL — written in margins of newspaper while jailed for violating Birmingham injunction April 16 1963; responded to 8 white moderate clergymen "Call for Unity" criticizing demonstrations; "unjust law is no law at all" (Augustine); "justice too long delayed is justice denied"; "injustice anywhere is a threat to justice everywhere."'
@@ -257,7 +258,7 @@ export const govIdeologiesPart7Data = {
       exercise: {
         questions: [
           {
-            question: "Develop an argument responding to the prompt: 'POLITICAL POLARIZATION HAS UNDERMINED AMERICAN DEMOCRACY.' Develop an argument that explains whether polarization has undermined democracy. In your essay use ONE piece of evidence from a required AP foundational document (FEDERALIST 10, BRUTUS 1, FEDERALIST 51, FEDERALIST 70, FEDERALIST 78, LETTER FROM BIRMINGHAM JAIL, ARTICLES OF CONFEDERATION, CONSTITUTION, DECLARATION OF INDEPENDENCE) + ONE additional piece of evidence (foundational document OR contemporary example).",
+            question: "Develop an argument responding to the prompt: 'POLITICAL POLARIZATION HAS UNDERMINED AMERICAN DEMOCRACY.' Develop an argument that explains whether polarization has undermined democracy. In your essay use ONE piece of evidence from one of the following foundational documents listed in the prompt (FEDERALIST 10, FEDERALIST 51, BRUTUS 1) + ONE additional piece of evidence (another foundational document OR a contemporary example).",
             options: [
               "A defensible thesis using Federalist 10 on faction, a second piece of evidence such as affective polarization data, reasoning, and a response to an opposing view.",
               "A thesis restating the prompt, evidence from Federalist 10 on the Electoral College, a list of polarization statistics without explanation, and no response to opposing views.",

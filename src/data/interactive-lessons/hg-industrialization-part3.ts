@@ -250,7 +250,7 @@ A **break-of-bulk point** is a place where cargo moves from one mode of transpor
         dropdowns: [
           {
             label: 'A sugar mill sits beside the cane fields because cane loses most of its weight in processing. The deciding factor is ___',
-            options: ['Weight-losing raw materials', 'A break-of-bulk point', 'Agglomeration economies', 'Low labor costs']
+            options: ['Weight-losing raw materials', 'A break-of-bulk point', 'Agglomeration economies', 'A low-cost local labor supply']
           },
           {
             label: 'An app developer chooses a city for its pool of programmers, not its freight links. The firm is ___',

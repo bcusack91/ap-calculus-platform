@@ -75,15 +75,15 @@ The method \`factorial\` **calls itself** with a smaller argument (\`n - 1\`). I
                 'There is no base case.',
               ],
               correctAnswer: 0,
-              explanation: 'The base case is the branch that returns a value **without** calling the method again. `if (n == 0) return 1;` stops the recursion. The second line is the recursive case.',
+              explanation: 'The base case is the branch that returns a value **without** calling the method again. `if (n == 0) return 1;` stops the recursion. `return n * factorial(n - 1);` is the recursive case, and the header only declares the method.',
             },
             {
               question: 'What is the single most important reason every recursive method needs a base case?',
               options: [
-                'To give the recursion a place to stop so it does not call itself forever',
-                'To make the method run faster',
-                'To allow the method to return a String instead of an int',
-                'To let the method be called from main',
+                'To give the calls a point where they stop',
+                'To make the method run faster than a loop would',
+                'To set the starting value of the method\'s parameter',
+                'To let other methods, such as main, call this method',
               ],
               correctAnswer: 0,
               explanation: 'Without a reachable base case, each call makes another call, the call stack grows without bound, and the program crashes with a StackOverflowError.',
@@ -130,7 +130,7 @@ Now the answers flow **back up**: $1 \\to 1 \\to 2 \\to 6 \\to 24$.
                 '`void f(int n){ if(n==0) return; System.out.print(n); f(n-1); }`',
               ],
               correctAnswer: 0,
-              explanation: 'Calling `f(n+1)` moves *away* from the base case `n <= 0`, so it never stops. The others all shrink `n` toward the base case (the last one is fine for n ≥ 0, though it would overshoot a negative start — but it still moves toward 0).',
+              explanation: 'Calling `f(n+1)` moves *away* from the base case `n <= 0`, so it never stops. The other versions all shrink `n` toward their base case. (The version that tests `n==0` stops for any non-negative start; only a negative start would slip past 0.)',
             },
           ],
         },
@@ -347,24 +347,24 @@ public static int sumRec(int n) {
             {
               question: 'Which statement about recursion and iteration is TRUE?',
               options: [
-                'Any loop can be rewritten with recursion, and any recursion can be rewritten with a loop',
-                'Recursion is always faster than iteration',
-                'Only recursion can solve problems involving repetition',
-                'A recursive method can never cause an error that a loop can',
+                'Any loop can be rewritten recursively, and vice versa',
+                'Recursion always runs faster than the equivalent for-loop',
+                'Only recursion can solve problems that involve repetition',
+                'A recursive method uses less memory than an equivalent loop',
               ],
               correctAnswer: 0,
-              explanation: 'Recursion and iteration are equally powerful — either can be converted to the other. Recursion is usually *not* faster (it adds call-stack overhead), and both can fail (infinite loop vs. StackOverflowError).',
+              explanation: 'Recursion and iteration are equally powerful — either can be converted to the other. Recursion is usually *not* faster and usually uses *more* memory (each pending call keeps a stack frame), and loops handle repetition just as well.',
             },
             {
               question: 'Compared to the iterative version, the recursive `sumRec(n)` uses extra memory because it...',
               options: [
                 'creates a stack frame for each pending call',
                 'stores the whole answer in a single variable',
-                'uses a for-loop internally',
-                'cannot use the int type',
+                'runs a hidden loop that repeats each addition',
+                'copies the method\'s code again for every new call',
               ],
               correctAnswer: 0,
-              explanation: 'Each unfinished recursive call keeps a stack frame (its own `n` and pending `n + ...`) until the base case returns. That is the memory cost recursion adds over a loop.',
+              explanation: 'Each unfinished recursive call keeps a stack frame (its own `n` and pending `n + ...`) until the base case returns. That is the memory cost recursion adds over a loop. The method\'s code exists once; only the frames (parameters and local variables) multiply.',
             },
           ],
         },
@@ -418,7 +418,7 @@ You're converting the loop \`for(int i=1;i<=n;i++) total+=i;\` into a recursive 
           dropdowns: [
             { label: 'Base case:', options: ['`if (n <= 0) return 0;`', '`if (n == n) return n;`', '`if (n > 0) return 0;`', '(no base case)'] },
             { label: 'Recursive case:', options: ['`return n + sumRec(n - 1);`', '`return sumRec(n - 1);`', '`return n + sumRec(n);`', '`return n * sumRec(n - 1);`'] },
-            { label: 'What replaces the loop variable `i`:', options: ['the call stack of pending calls', 'a global counter', 'the array length', 'nothing — it stays a loop'] },
+            { label: 'What replaces the loop variable `i`:', options: ['the call stack of pending calls', 'a static counter shared by all calls', 'a new for-loop inside the method', 'nothing — it stays a loop'] },
           ],
           correctAnswers: ['`if (n <= 0) return 0;`', '`return n + sumRec(n - 1);`', 'the call stack of pending calls'],
           hint1: 'The loop sums down to 1; the recursion should stop (return 0) at or below 0.',
@@ -456,7 +456,7 @@ Two String methods power almost every recursive String problem:
 |--------|---------|
 | \`s.length()\` | number of characters |
 | \`s.substring(1)\` | everything **except** the first character |
-| \`s.charAt(0)\` | the **first** character |
+| \`s.substring(0, 1)\` | the **first** character (as a String) |
 | \`s.substring(0, s.length()-1)\` | everything **except** the last character |
 
 **Reverse a String** by moving the first character to the *end* of the reversed rest:
@@ -464,15 +464,15 @@ Two String methods power almost every recursive String problem:
 \`\`\`java
 public static String reverse(String s) {
     if (s.length() <= 1) return s;            // base case
-    return reverse(s.substring(1)) + s.charAt(0);
+    return reverse(s.substring(1)) + s.substring(0, 1);
 }
 \`\`\`
 
 Trace \`reverse("cat")\`:
 
 \`\`\`text
-reverse("cat") = reverse("at") + 'c'
-reverse("at")  = reverse("t")  + 'a'
+reverse("cat") = reverse("at") + "c"
+reverse("at")  = reverse("t")  + "a"
 reverse("t")   = "t"                 (base case, length 1)
 \`\`\`
 
@@ -495,13 +495,13 @@ Unwinding: \`reverse("t") = "t"\` → \`reverse("at") = "t" + "a" = "ta"\` → \
             {
               question: 'Why does `reverse` use `s.length() <= 1` (not `s.length() == 0`) as the base case?',
               options: [
-                'Both `""` and a single character should return unchanged, and stopping at length 1 avoids an extra call',
-                'Because `substring(1)` does not work on length-1 strings',
-                'Because a String of length 1 cannot be reversed at all',
-                'It is a bug — it should be `== 0`',
+                'A string of length 0 or 1 reads the same backward',
+                'Calling `substring(1)` on a length-1 string throws an exception',
+                'The `== 0` test would never be true for a non-empty string',
+                'It is a bug; the base case should be `s.length() == 0`',
               ],
               correctAnswer: 0,
-              explanation: 'A length-0 or length-1 string is its own reverse, so returning `s` directly is correct and slightly more efficient. (Using `== 0` also works, but recurses one extra time.)',
+              explanation: 'A length-0 or length-1 string is its own reverse, so returning `s` directly is correct and slightly more efficient. Using `== 0` also works (it recurses one extra time), and `"t".substring(1)` legally returns `""`, so there is no exception.',
             },
           ],
         },
@@ -511,20 +511,20 @@ Unwinding: \`reverse("t") = "t"\` → \`reverse("at") = "t" + "a" = "ta"\` → \
         type: 'text' as const,
         content: `## Counting With Recursion
 
-To **count** something in a String, add \`1\` (or \`0\`) for the first character, then recurse on the rest. Here we count occurrences of a target character:
+To **count** something in a String, add \`1\` (or \`0\`) for the first character, then recurse on the rest. Here we count occurrences of a one-character target String:
 
 \`\`\`java
-public static int countChar(String s, char c) {
+public static int countChar(String s, String target) {
     if (s.length() == 0) return 0;           // base case: empty
-    int rest = countChar(s.substring(1), c); // count in the rest
-    if (s.charAt(0) == c) {
+    int rest = countChar(s.substring(1), target); // count in the rest
+    if (s.substring(0, 1).equals(target)) {
         return 1 + rest;
     }
     return rest;
 }
 \`\`\`
 
-Trace \`countChar("banana", 'a')\`:
+Trace \`countChar("banana", "a")\`:
 
 \`\`\`text
 b → 0 + count("anana")
@@ -544,11 +544,11 @@ Adding the \`1\`s: there are **3** \`a\`'s in \`"banana"\`.
         type: 'input-boxes' as const,
         content: `**Count It** 🧮
 
-Using \`countChar(String s, char c)\` above:
+Using \`countChar(String s, String target)\` above:
 
-**1)** \`countChar("mississippi", 's')\` returns?
-**2)** \`countChar("hello", 'z')\` returns?
-**3)** \`countChar("aaaa", 'a')\` returns?`,
+**1)** \`countChar("mississippi", "s")\` returns?
+**2)** \`countChar("hello", "z")\` returns?
+**3)** \`countChar("aaaa", "a")\` returns?`,
         exercise: {
           boxes: 3,
           correctAnswers: ['4', '0', '4'],
@@ -566,16 +566,16 @@ Using \`countChar(String s, char c)\` above:
 Complete the recursive \`reverse\` trace for \`reverse("hi")\`.`,
         exercise: {
           dropdowns: [
-            { label: 'Recursive line returns:', options: ['`reverse(s.substring(1)) + s.charAt(0)`', '`s.charAt(0) + reverse(s.substring(1))`', '`reverse(s) + s`', '`s.substring(1)`'] },
-            { label: '`reverse("hi")` first computes:', options: ['`reverse("i") + \'h\'`', '`reverse("h") + \'i\'`', '`reverse("hi") + \'h\'`', '`\'h\' + reverse("i")`'] },
+            { label: 'Recursive line returns:', options: ['`reverse(s.substring(1)) + s.substring(0, 1)`', '`s.substring(0, 1) + reverse(s.substring(1))`', '`reverse(s) + s`', '`s.substring(1)`'] },
+            { label: '`reverse("hi")` first computes:', options: ['`reverse("i") + "h"`', '`reverse("h") + "i"`', '`reverse("hi") + "h"`', '`"h" + reverse("i")`'] },
             { label: '`reverse("i")` returns:', options: ['`"i"`', '`""`', '`"hi"`', '`"ih"`'] },
             { label: 'Final result `reverse("hi")`:', options: ['`"ih"`', '`"hi"`', '`"ii"`', '`"hh"`'] },
           ],
-          correctAnswers: ['`reverse(s.substring(1)) + s.charAt(0)`', '`reverse("i") + \'h\'`', '`"i"`', '`"ih"`'],
-          hint1: 'Reverse moves the FIRST char to the END of the reversed rest.',
-          hint2: '`s.substring(1)` of `"hi"` is `"i"`; `s.charAt(0)` is `\'h\'`.',
+          correctAnswers: ['`reverse(s.substring(1)) + s.substring(0, 1)`', '`reverse("i") + "h"`', '`"i"`', '`"ih"`'],
+          hint1: 'Reverse moves the FIRST character to the END of the reversed rest.',
+          hint2: 'For `"hi"`, `s.substring(1)` is `"i"` and `s.substring(0, 1)` is `"h"`.',
           hint3: '`reverse("i") = "i"`, so `reverse("hi") = "i" + "h" = "ih"`.',
-          explanation: 'The reversed rest comes first, then the first character is appended: `reverse("hi") = reverse("i") + \'h\' = "i" + "h" = "ih"`.',
+          explanation: 'The reversed rest comes first, then the first character is appended: `reverse("hi") = reverse("i") + "h" = "i" + "h" = "ih"`.',
         },
       },
     ],
@@ -676,10 +676,10 @@ Count the calls: \`fib(4)\` triggers **9** total calls to \`fib\` (1 + 2 + 2 + 2
             {
               question: 'Why does `fib` need TWO base cases (`n == 0` and `n == 1`)?',
               options: [
-                'Because the recursive step `fib(n-1) + fib(n-2)` reaches down two steps, so stopping at only `n == 0` would let `fib(1)` call `fib(-1)`',
-                'Because Fibonacci numbers are always even',
-                'Because Java requires every method to have two return statements',
-                'To make the method run twice as fast',
+                'The step reaches down two values, so `fib(1)` would otherwise call `fib(-1)`',
+                'Java requires one return statement for each recursive call in the method',
+                'Each base case handles one of the two calls in `fib(n-1) + fib(n-2)`',
+                'Fibonacci numbers are defined only for `n` values greater than 1',
               ],
               correctAnswer: 0,
               explanation: 'Since each call reaches `n-1` AND `n-2`, you must catch both `n == 0` and `n == 1`; otherwise `fib(1)` would evaluate `fib(0) + fib(-1)` and recurse below zero forever.',
@@ -723,7 +723,7 @@ Complete the recursive \`fib\` and read the sequence.`,
 
 ---
 
-> 🔑 **The Idea:** To recurse over an array, pass an **index** that moves toward the end (or the length toward 0). Combined with the pitfalls section, this rounds out everything the AP exam asks about recursion.`,
+> 🔑 **The Idea:** To recurse over an array, pass an **index** that moves toward the end (or the length toward 0). Combined with the pitfalls section, this covers the core recursion-tracing skills. The AP exam also asks you to trace recursive binary search and merge sort, which build on exactly these ideas.`,
       },
       {
         id: 'rec6-array',
@@ -782,10 +782,10 @@ Using \`arraySum(int[] arr, int i)\` above, with \`arr = {5, 1, 3, 6}\`:
 | **No base case** | calls itself forever | Add a branch that returns without recursing |
 | **Base case never reached** | recursive call doesn't make progress (e.g. \`n\` unchanged or \`n+1\`) | Shrink the argument toward the base case |
 | **Wrong order of work** | output reversed / wrong | Put code *before* the call for top-down, *after* for bottom-up |
-| **Off-by-one in index recursion** | \`ArrayIndexOutOfBounds\` or missed element | Base case at \`i == arr.length\`; recurse with \`i + 1\` |
+| **Off-by-one in index recursion** | \`ArrayIndexOutOfBoundsException\` or missed element | Base case at \`i == arr.length\`; recurse with \`i + 1\` |
 | **Forgetting to return the recursive result** | method returns a default / wrong value | Use \`return helper(...)\`, not just \`helper(...)\` |
 
-> ⚠️ **Most common AP free-response error:** writing \`fib(n-1) + fib(n-2)\` but forgetting the \`return\`, or recursing without using the returned value. A recursive call's result is **useless** unless you \`return\` it (or store/combine it).`,
+> ⚠️ **Most common recursion bug (and a favorite multiple-choice trap):** writing \`fib(n-1) + fib(n-2)\` but forgetting the \`return\`, or recursing without using the returned value. A recursive call's result is **useless** unless you \`return\` it (or store/combine it).`,
       },
       {
         id: 'rec6-q-pitfalls',
@@ -796,24 +796,24 @@ Using \`arraySum(int[] arr, int i)\` above, with \`arr = {5, 1, 3, 6}\`:
             {
               question: 'What is wrong with: `int sum(int n){ if(n<=0) return 0; sum(n-1); return n; }`?',
               options: [
-                'It ignores the recursive result — `sum(n-1)` is computed but never added, so it returns only `n`',
-                'It has no base case',
-                'It will throw a StackOverflowError',
-                'Nothing is wrong; it sums correctly',
+                'It discards the result of `sum(n-1)`, so it returns only `n`',
+                'Its base case `if(n<=0)` is never reached for positive `n`',
+                'Each call adds `n` twice, so it returns double the true sum',
+                'Nothing is wrong; it returns 1 + 2 + ... + n correctly',
               ],
               correctAnswer: 0,
-              explanation: 'The line `sum(n-1);` runs but its return value is thrown away. The method returns just `n`. It should be `return n + sum(n-1);`. This is a classic "forgot to use the recursive result" bug.',
+              explanation: 'The line `sum(n-1);` runs but its return value is thrown away, so the method returns just `n` (the base case is still reached, so there is no StackOverflowError). It should be `return n + sum(n-1);`. This is a classic "forgot to use the recursive result" bug.',
             },
             {
               question: 'A recursive method runs forever and crashes with StackOverflowError. The MOST likely cause is:',
               options: [
-                'The recursive calls never make progress toward a reachable base case',
-                'The method returns the wrong type',
-                'The array is too large',
-                'It uses a for-loop inside',
+                'The calls never progress toward a reachable base case',
+                'The method returns a double where an int is expected',
+                'The base case returns before the recursive call runs',
+                'The method contains a loop that runs once too often',
               ],
               correctAnswer: 0,
-              explanation: 'StackOverflowError from recursion means the base case is never reached — either there is no base case, or the argument is not shrinking toward it.',
+              explanation: 'StackOverflowError from recursion means the base case is never reached — either there is no base case, or the argument is not shrinking toward it. A type mismatch is a compile-time error, a base case is supposed to return without recursing, and an off-by-one loop does not grow the call stack.',
             },
           ],
         },
@@ -827,7 +827,7 @@ You want \`countdown(n)\` to print \`n, n-1, ..., 1\` then stop. Choose each cor
         exercise: {
           dropdowns: [
             { label: 'Base case:', options: ['`if (n <= 0) return;`', '`if (n == 100) return;`', '`if (n > 0) return;`', '(no base case)'] },
-            { label: 'Print statement:', options: ['`System.out.print(n + " ");`', '`System.out.print(0);`', '`return n;`', '`System.out.print(n+1);`'] },
+            { label: 'Print statement:', options: ['`System.out.print(n + " ");`', '`System.out.print(0 + " ");`', '`System.out.print(n + 1 + " ");`', '`return n;`'] },
             { label: 'Recursive call:', options: ['`countdown(n - 1);`', '`countdown(n);`', '`countdown(n + 1);`', '`countdown(0);`'] },
           ],
           correctAnswers: ['`if (n <= 0) return;`', '`System.out.print(n + " ");`', '`countdown(n - 1);`'],
@@ -885,10 +885,10 @@ You can now (1) identify base and recursive cases, (2) trace the call stack, (3)
               explanation: 'Each of the 5 recursive steps adds 2 before hitting the base case (which adds 0): `2*5 = 10`. (`f(5)=2+f(4)=...=2+2+2+2+2+0 = 10`.)',
             },
             {
-              question: 'What does `g("abc")` return?  `String g(String s){ if(s.length()==0) return ""; return g(s.substring(1)) + s.charAt(0); }`',
+              question: 'What does `g("abc")` return?  `String g(String s){ if(s.length()==0) return ""; return g(s.substring(1)) + s.substring(0, 1); }`',
               options: ['`"cba"`', '`"abc"`', '`"bca"`', '`""`'],
               correctAnswer: 0,
-              explanation: 'This is the reverse method: it puts the reversed rest first, then appends the first char. `g("abc") = "cba"`.',
+              explanation: 'This is the reverse method: it puts the reversed rest first, then appends the first character, `s.substring(0, 1)`. `g("abc") = g("bc") + "a" = (g("c") + "b") + "a" = "cba"`.',
             },
           ],
         },
@@ -922,21 +922,21 @@ Answer all three to finish the lesson.`,
             {
               question: 'Which is the defining feature of a recursive method?',
               options: [
-                'It calls itself, with a base case to stop and a recursive case that moves toward it',
-                'It always uses a for-loop',
-                'It can only return an int',
-                'It never returns a value',
+                'It calls itself on a smaller version of its input',
+                'It repeats its body with a loop until a condition fails',
+                'It calls a different helper method to finish the work',
+                'It returns a value from more than one return statement',
               ],
               correctAnswer: 0,
-              explanation: 'Recursion = a method that calls itself, with at least one base case (stops) and a recursive case that shrinks the input toward that base case.',
+              explanation: 'Recursion = a method that calls itself on a smaller version of the problem, with at least one base case (stops) and a recursive case that shrinks the input toward that base case. Loops, helper methods, and multiple return statements can appear in any method.',
             },
             {
               question: 'A method recurses forever and throws a StackOverflowError. What is wrong?',
               options: [
-                'The base case is never reached (missing, or the input is not shrinking toward it)',
-                'It returns the wrong data type',
-                'The base case returns too early',
-                'It has too many comments',
+                'The base case is never reached by the recursive calls',
+                'It returns an int where a String is expected',
+                'Its base case returns before any recursion happens',
+                'It prints output inside the recursive case',
               ],
               correctAnswer: 0,
               explanation: 'StackOverflowError from recursion always means the base case is unreachable — there is no base case, or each call fails to make progress toward it.',
