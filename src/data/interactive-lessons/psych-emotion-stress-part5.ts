@@ -5,35 +5,34 @@ export const psychEmotionPart5Data = {
       id: 'emot5-s1-intro',
       type: 'text' as const,
       content: `
-## Coping Strategies
+## Coping and Positive Psychology
 
-**Part 5 of 7 — Problem-Focused, Emotion-Focused & Social Support**
+**Part 5 of 7 — Coping, Control, and Positive Psychology**
 
-How people cope with stress determines its long-term impact on health. The AP exam tests two major coping categories, the role of perceived control, learned helplessness, and the protective power of social support.
+> 🔑 **Key Concept:** **Problem-focused coping** treats stress as a problem to solve; **emotion-focused coping** manages the emotional reaction. **Positive psychology** studies what leads to well-being, resilience, and psychological health, such as gratitude, signature strengths, and posttraumatic growth.
 
 ### Core Definitions
 
 | Term | Definition |
 |------|-----------|
-| **Problem-focused coping** | Directly addressing the stressor itself — taking action to change the situation |
-| **Emotion-focused coping** | Managing the emotional response to the stressor without changing the situation |
-| **Social support** | The perception of being cared for, valued, and part of a network — acts as a stress buffer |
-| **Perceived control** | The belief that you can influence events and outcomes — reduces stress even when actual control is limited |
-| **Learned helplessness** | Seligman's concept: when organisms learn that they have no control, they give up even when escape is possible |
-| **Explanatory style** | How you explain bad events: pessimistic (permanent, pervasive, personal) vs. optimistic (temporary, specific, external) |
+| **Problem-focused coping** | Seeing stress as a problem to be solved and working through solutions until one works |
+| **Emotion-focused coping** | Managing emotional reactions to stress, for example with deep breathing, meditation, or medication that reduces stressful emotional responses |
+| **Learned helplessness** | Learning that you have no control over aversive events, and then giving up even when control is possible |
+| **Locus of control** | Whether you believe outcomes depend on your own actions (internal) or on luck and outside forces (external) |
+| **Explanatory style** | How a person explains good and bad events; it can be optimistic or pessimistic |
+| **Positive psychology** | The study of factors that lead to well-being, resilience, positive emotions, and psychological health |
 
 ### Coping Comparison
 
 | Feature | Problem-focused | Emotion-focused |
 |---------|----------------|-----------------|
 | **Strategy** | Change the situation | Change how you feel about the situation |
-| **Example** | Failing a test → make a study plan, get a tutor | Failing a test → talk to friends, exercise, practice relaxation |
-| **When effective** | When the situation IS controllable | When the situation is NOT controllable or while waiting for change |
-| **Connection** | Linked to higher perceived control | Useful but can become avoidance if overused |
+| **Example** | Failing a test → make a study plan, get a tutor | Failing a test → deep breathing, meditation, talking it through |
+| **When effective** | When the situation IS controllable | When the situation is NOT controllable, or while waiting for change |
 
 ### Real-World Example
 
-A student diagnosed with test anxiety uses BOTH strategies: (1) problem-focused — she develops a structured study schedule and practices retrieval (changing the situation), AND (2) emotion-focused — she learns deep breathing techniques for test day (managing the emotional response). Effective coping often involves using both strategies together.
+A student with test anxiety uses BOTH strategies: (1) problem-focused, she builds a study schedule and practices retrieval, changing the situation; and (2) emotion-focused, she practices deep breathing on test day, managing the emotional response. Effective coping often combines the two.
       `
     },
     {
@@ -47,24 +46,24 @@ A student diagnosed with test anxiety uses BOTH strategies: (1) problem-focused 
           {
             question: 'After being laid off from her job, Carla immediately updates her resume, networks with former colleagues, and enrolls in a skills workshop. This is an example of:',
             options: [
-              'Emotion-focused coping — she is managing her feelings about the layoff',
-              'Problem-focused coping — she is acting directly to change the stressor',
-              'Learned helplessness — she has stopped expecting her efforts to work',
-              'Tend-and-befriend — she is seeking social support rather than addressing the problem'
+              'Emotion-focused coping, managing her feelings about the layoff',
+              'Problem-focused coping, acting directly to change the stressor',
+              'Learned helplessness, no longer expecting her efforts to work',
+              'Tend-and-befriend, seeking comfort instead of solving the problem'
             ],
             correctAnswer: 1,
-            explanation: 'Problem-focused coping involves taking direct action to address or change the stressful situation. Carla is actively working to solve the problem (unemployment) by updating her resume, networking, and building new skills. She is changing the situation, not just managing her feelings about it.'
+            explanation: 'Problem-focused coping treats stress as a problem to be solved. Carla is working on solutions to unemployment, not just managing her feelings about it.'
           },
           {
-            question: 'In Seligman\'s learned helplessness experiments, dogs that had previously received inescapable shocks later failed to escape shocks even when escape was possible. This is because:',
+            question: 'In learned helplessness experiments, dogs that had previously received inescapable shocks later failed to escape shocks even when escape was possible. Why?',
             options: [
-              'The dogs had been injured by the earlier shocks and could not move well',
-              'The dogs had learned that their actions did not affect the outcome',
-              'The dogs had been classically conditioned to associate the box with safety',
-              'The dogs had forgotten the escape response during the long delay'
+              'The earlier shocks had injured them, so they could not move well',
+              'They expected that nothing they did would change the outcome',
+              'They had been conditioned to associate the box with safety',
+              'They had forgotten the escape response during the long delay'
             ],
             correctAnswer: 1,
-            explanation: 'Learned helplessness occurs when an organism learns that its actions have no effect on outcomes. The dogs that experienced inescapable shocks learned "nothing I do matters" — and this belief carried over even when escape became possible. Seligman later applied this to human depression: people who believe they have no control may develop helplessness and depression.'
+            explanation: 'Learned helplessness occurs when organisms learn that they have no control over aversive events. The dogs learned that their actions did not matter and stopped trying, even when escape became possible.'
           }
         ]
       }
@@ -73,87 +72,100 @@ A student diagnosed with test anxiety uses BOTH strategies: (1) problem-focused 
       id: 'emot5-s3-deep',
       type: 'text' as const,
       content: `
-### Deep Dive: Control, Helplessness & Social Support
+### Deep Dive: Control, Helplessness & Positive Psychology
 
-#### Perceived Control and Health
+#### Control and Stress
 
-| Study | Finding |
-|-------|---------|
-| **Nursing home study (Langer & Rodin)** | Elderly residents given control over small decisions (choosing movie night, caring for a plant) showed improved health, happiness, and LONGEVITY compared to those given no choices |
-| **Workplace studies** | Workers with more autonomy and decision-making power report less stress, even with the same workload |
-| **Crowding studies** | Perceived control over one's environment (e.g., access to a quiet room) reduces stress of crowding |
+| Concept | How it affects stress |
+|---------|----------------------|
+| **Internal locus of control** | Believing your actions matter encourages problem-focused coping and is linked to lower stress |
+| **External locus of control** | Believing outcomes depend on luck or others can lead to passivity |
+| **Learned helplessness** | Repeated lack of control → "nothing I do matters" → passivity and low motivation, a pattern linked to depression |
+| **Explanatory style** | A pessimistic style ("this will always happen, and it's my fault") is linked to helplessness and depression; an optimistic style ("this was a bad day") protects motivation |
 
-**Key insight:** It's the PERCEPTION of control that matters — even minor, symbolic control reduces stress dramatically.
+In one classic study, nursing-home residents given small choices, such as caring for a plant, became more active and happier than residents whose choices were made for them. A sense of control, even over small things, reduces stress.
 
-#### Learned Helplessness → Depression
+#### Positive Psychology
 
-| Seligman's connection | How it works |
-|----------------------|--------------|
-| **Animal model** | Dogs given inescapable shocks → passivity in future escapable situations |
-| **Human parallel** | Repeated failure/lack of control → belief "nothing I do matters" → depression, passivity, low motivation |
-| **Explanatory style** | Pessimistic style ("bad things are permanent, pervasive, personal") predicts depression; optimistic style ("temporary, specific, external") protects against it |
+Positive psychology seeks to identify the factors that lead to well-being, resilience, positive emotions, and psychological health, rather than focusing only on illness.
 
-#### Social Support as a Stress Buffer
+| Concept | What the research says | Example |
+|---------|----------------------|---------|
+| **Gratitude** | Expressing gratitude, a positive subjective experience, increases subjective well-being | Writing three good things each night or a thank-you letter |
+| **Signature strengths** | People who exercise their signature strengths or virtues report more happiness and subjective well-being | A student strong in kindness tutors younger kids |
+| **Posttraumatic growth** | Positive change that may result after trauma or stress, such as deeper relationships or a new sense of purpose | A survivor of a serious illness reorders her priorities around family |
 
-| Type of social support | Example |
-|-----------------------|---------|
-| **Emotional support** | A friend listens and validates your feelings |
-| **Informational support** | A mentor gives you advice on handling a situation |
-| **Tangible support** | A neighbor brings meals after surgery |
-| **Companionship** | Friends invite you out to prevent isolation |
+#### The Six Virtue Categories
 
-**Research finding:** Social support doesn't eliminate the stressor — it BUFFERS its impact. People with strong social networks show lower cortisol levels, better immune function, and faster recovery from illness.
+A classification of character strengths has been built around **six categories of virtues**:
+
+| Virtue | Example strengths |
+|--------|------------------|
+| **Wisdom** | Curiosity, creativity, love of learning |
+| **Courage** | Bravery, persistence, honesty |
+| **Humanity** | Kindness, love, social intelligence |
+| **Justice** | Fairness, teamwork, leadership |
+| **Temperance** | Self-control, forgiveness, humility |
+| **Transcendence** | Gratitude, hope, humor, appreciation of beauty |
       `
     },
     {
       id: 'emot5-s4-input',
       type: 'input-boxes' as const,
       content: `
-      **Applied Recall** ✍️
+**Applied Recall** ✍️
 
-      1) Coping that directly addresses the stressor by changing the situation is called ___-focused coping. (one word)
-
-      2) Seligman's concept where organisms stop trying after learning they have no control is called learned ___. (one word)
-
-      3) Elderly residents given small decisions (plant care, movie choice) showed improved health due to increased perceived ___. (one word)
-
-      Type the exact term.
+Type one word for each blank.
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['problem', 'helplessness', 'control'],
-        hint1: 'Addressing the problem directly = ___-focused',
-        hint2: 'They learned to feel ___ — like nothing they do matters',
-        hint3: 'The Langer & Rodin nursing home study: having ___ over decisions improved outcomes',
-        explanation: 'Expected answers: problem (problem-focused coping = direct action to change the situation), helplessness (learned helplessness = giving up after learning actions don\'t affect outcomes), and control (perceived control — the Langer & Rodin study showed that even small amounts of control improve health outcomes).'
+        questions: [
+          {
+            question: 'Coping that treats stress as a problem to be solved by changing the situation is called _____-focused coping.',
+            answer: 'problem',
+            acceptableAnswers: ['problem-focused', 'problem focused'],
+            explanation: 'Problem-focused coping works on solutions until one is found; emotion-focused coping manages the emotional reaction.'
+          },
+          {
+            question: 'Believing that outcomes depend on your own actions reflects an _____ locus of control.',
+            answer: 'internal',
+            acceptableAnswers: ['internal locus'],
+            explanation: 'An internal locus of control is the belief that your actions shape outcomes; an external locus credits luck or outside forces.'
+          },
+          {
+            question: 'Positive change that may follow trauma or stress, such as a new sense of purpose, is called posttraumatic _____.',
+            answer: 'growth',
+            acceptableAnswers: ['growing'],
+            explanation: 'Posttraumatic growth is a positive subjective experience that may result after the experience of trauma or stress.'
+          }
+        ]
       }
     },
     {
       id: 'emot5-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Match the Concepts** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'After a breakup, Maya journals about her feelings and practices meditation. This is ___ coping',
-            options: ['problem-focused', 'emotion-focused', 'avoidance-focused']
+            label: 'After a breakup, Maya meditates and practices slow breathing each evening. This is _____ coping',
+            options: ['problem-focused', 'emotion-focused', 'helpless', 'external']
           },
           {
-            label: 'A person who explains bad events as "This always happens to me and it\'s my fault" has a ___ explanatory style',
+            label: 'A person who explains bad events as "This always happens to me, and it\'s my fault" has a _____ explanatory style',
             options: ['optimistic', 'pessimistic', 'realistic', 'neutral']
           },
           {
-            label: 'A friend bringing meals to someone recovering from surgery is providing ___ support',
-            options: ['emotional', 'informational', 'tangible', 'companionship']
+            label: 'Persistence, bravery, and honesty belong to the virtue category of _____',
+            options: ['wisdom', 'courage', 'temperance', 'transcendence']
           }
         ],
-        correctAnswers: ['emotion-focused', 'pessimistic', 'tangible'],
-        hint1: 'Managing feelings (not changing the situation) = emotion-focused.',
-        hint2: 'Permanent + pervasive + personal = pessimistic.',
-        hint3: 'Physical, concrete help (meals, money, transportation) = tangible.',
-        explanation: 'Journaling and meditation manage the emotional response = emotion-focused coping. "Always happens, my fault" = pessimistic explanatory style (permanent, personal, pervasive). Bringing meals = tangible support (concrete, physical assistance).'
+        correctAnswers: ['emotion-focused', 'pessimistic', 'courage'],
+        hint1: 'Managing feelings rather than changing the situation.',
+        hint2: 'Permanent and personal explanations for bad events.',
+        hint3: 'Strengths for facing difficulty or danger.',
+        explanation: 'Meditation and slow breathing manage the emotional response, so they are emotion-focused coping. "Always" and "my fault" mark a pessimistic explanatory style. Persistence, bravery, and honesty are strengths under courage.'
       }
     },
     {
@@ -162,48 +174,46 @@ A student diagnosed with test anxiety uses BOTH strategies: (1) problem-focused 
       content: `
 ## Common Misconceptions and Exam Strategy
 
-### Misconceptions to Avoid
-- **"Problem-focused is always better than emotion-focused"** — Problem-focused works when the situation IS controllable. When it's NOT controllable (terminal illness, natural disaster), emotion-focused coping is more adaptive. Both have their place.
-- **"Learned helplessness = laziness"** — Learned helplessness is a conditioned response from repeated experience of uncontrollable events, not a character flaw. Seligman drew direct parallels to clinical depression.
-- **"Social support prevents stress"** — Social support doesn't prevent stressors from occurring — it BUFFERS their impact. People with support still experience stress, but they cope better and recover faster.
-- **"More control = less stress always"** — Too much control or responsibility can INCREASE stress. The benefit comes from PERCEIVED control appropriate to the situation.
+| Misconception | Correction |
+|--------------|-----------|
+| "Problem-focused coping is always better." | It works when the situation is controllable. When it is not, emotion-focused coping is often more adaptive. |
+| "Emotion-focused coping means avoiding the problem." | It means managing the emotional reaction: deep breathing, meditation, or medication that reduces stressful emotional responses. |
+| "Learned helplessness is laziness." | It is learned from repeated experience of uncontrollable events, not a character flaw. |
+| "Positive psychology means ignoring problems." | It studies what builds well-being and resilience alongside, not instead of, the study of disorders. |
+| "Trauma always leaves only damage." | Posttraumatic growth may follow trauma or stress for some people. |
 
-### AP Strategy Moves
-- **Problem-focused vs. emotion-focused is a high-frequency AP question.** Read scenarios carefully: is the person changing the situation (problem-focused) or managing their emotional response (emotion-focused)?
-- **Learned helplessness connects to depression.** The AP exam may ask you to connect Seligman's animal research to human depression — the explanatory style (pessimistic vs. optimistic) is the bridge.
-- **The Langer & Rodin nursing home study** is a classic AP study. Know it: small decisions → perceived control → improved health and longevity.
-- **Explanatory style framework:** Pessimistic = permanent ("always"), pervasive ("everything"), personal ("my fault"). Optimistic = temporary, specific, external.
+> 🔑 **AP Connection:** Positive psychology research, such as gratitude studies, makes a good AAQ source. If participants are randomly assigned to a gratitude activity or a neutral activity, call it an **experiment**; the operational definition of well-being is usually a score on a well-being scale.
       `
     },
     {
       id: 'emot5-s7-applied',
       type: 'multiple-choice' as const,
       content: `
-      **Applied Scenarios** 🎯
+**Applied Scenarios** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A patient with a terminal illness can no longer work toward a cure. Her therapist encourages her to focus on spending meaningful time with loved ones, practicing mindfulness, and writing letters to her grandchildren. The therapist is primarily promoting:',
+            question: 'A patient with an incurable illness can no longer work toward a cure. Her therapist encourages her to practice meditation, spend meaningful time with loved ones, and write letters to her grandchildren. The therapist is mainly promoting:',
             options: [
-              'Problem-focused coping — she is taking direct action against the medical problem',
-              'Emotion-focused coping — managing her emotional response to a stressor she cannot change',
-              'Learned helplessness — the therapist is encouraging her to stop trying to get well',
-              'Denial — the therapist is helping her avoid thinking about the illness and death'
+              'Problem-focused coping, taking direct action against the illness',
+              'Emotion-focused coping with a stressor she cannot change',
+              'Learned helplessness, encouraging her to stop trying to get well',
+              'An external locus of control, blaming outside forces for the illness'
             ],
             correctAnswer: 1,
-            explanation: 'When a stressor is uncontrollable (a terminal illness that cannot be cured), emotion-focused coping is the most adaptive approach. The therapist is helping the patient find meaning, connect with loved ones, and manage her emotional response to the situation. This is NOT giving up — it\'s wisely directing energy toward what CAN be influenced (emotional well-being) rather than what cannot (the disease).'
+            explanation: 'When a stressor cannot be changed, emotion-focused coping is the most adaptive choice. The therapist is helping the patient manage her emotional response rather than trying to fix the illness itself.'
           },
           {
-            question: 'A researcher studies two groups of students with the same GPA. Group A attributes poor grades to "I\'m just not smart enough" (permanent, personal). Group B attributes poor grades to "I didn\'t study enough this time" (temporary, specific). The researcher would predict that:',
+            question: 'Students are randomly assigned to write either three things they are grateful for or three neutral events each night for two weeks. Which result would best fit the positive psychology research described in this part?',
             options: [
-              'Both groups will respond the same way, because their GPAs are currently equal',
-              'Group A is more likely to give up and become depressed; Group B is more likely to persist',
-              'Group B is more likely to develop learned helplessness, because it blames the situation',
-              'Neither group will be affected, since explanatory style predicts health, not school'
+              'Both groups report the same well-being, since writing tasks never matter',
+              'The neutral-events group reports higher well-being than the gratitude group',
+              'The gratitude group reports higher subjective well-being than others',
+              'Gratitude writers report more stress because they focus on what is missing'
             ],
-            correctAnswer: 1,
-            explanation: 'Seligman\'s explanatory style research directly predicts this: Group A\'s pessimistic style (permanent: "just not smart," personal: "me") leads to helplessness and depression. Group B\'s optimistic style (temporary: "this time," specific: "didn\'t study enough") preserves motivation and effort. This is the foundation of Seligman\'s later work on "learned optimism" — the idea that explanatory style can be changed through intervention.'
+            correctAnswer: 2,
+            explanation: 'Expressing gratitude is a positive subjective experience that increases subjective well-being. Random assignment lets researchers attribute the difference to the gratitude activity.'
           }
         ]
       }

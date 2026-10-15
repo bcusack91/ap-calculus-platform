@@ -17,9 +17,8 @@ How do you train an animal to do something it would never do naturally, like a p
 |------|-----------|---------|
 | **Shaping** | Reinforcing successive approximations (closer and closer attempts) toward a desired behavior | Teaching a dog to roll over by first rewarding lying down, then turning, then full roll |
 | **Successive approximations** | Each step that gets progressively closer to the target behavior | Turn head → lean → lie down → roll partly → full roll |
-| **Chaining** | Linking a sequence of individually shaped behaviors into a complex chain | A rat pressing a lever, then pulling a chain, then climbing stairs |
 | **Token economy** | A system where secondary reinforcers (tokens) are earned and exchanged for primary reinforcers | Classroom behavior chart — earn stars, exchange for prizes |
-| **Applied Behavior Analysis (ABA)** | A therapeutic application of operant conditioning, commonly used for autism spectrum disorder | Breaking social skills into steps and reinforcing each one |
+| **Instinctive drift** | Trained behaviors drift back toward an animal's innate, species-typical behaviors, so only certain behaviors can be shaped | A raccoon trained to drop coins in a bank rubs them together instead |
 
 ### Real-World Example
 
@@ -27,7 +26,7 @@ Training a dolphin to jump through a hoop: First, reinforce the dolphin for swim
 
 ### Why This Matters
 
-Shaping questions appear on nearly every AP exam. You need to understand the process: reinforce close attempts, gradually require closer and closer approximations, and stop reinforcing earlier approximations once the next step is achieved.
+Shaping is named in the CED (3.8.A.3), along with its limit, instinctive drift. You need to understand the process: reinforce close attempts, gradually require closer and closer approximations, and stop reinforcing earlier approximations once the next step is achieved.
       `
     },
     {
@@ -43,7 +42,7 @@ Shaping questions appear on nearly every AP exam. You need to understand the pro
             options: [
               'Classical conditioning — pairing the sounds with a reinforcing stimulus',
               'Shaping — reinforcing successive approximations toward the target',
-              'Chaining — linking separate sounds into a sequence of reinforced behaviors',
+              'Generalization — reinforcing "mmm" spreads the response to similar sounds',
               'Negative reinforcement — removing the child\'s frustration whenever she speaks'
             ],
             correctAnswer: 1,
@@ -77,22 +76,18 @@ Shaping questions appear on nearly every AP exam. You need to understand the pro
 5. Continue until the target behavior is achieved
 6. Once the target is reached, maintain with a partial reinforcement schedule
 
-**Shaping vs. Chaining**
+### The Limits of Shaping: Instinctive Drift
 
-| Feature | Shaping | Chaining |
-|---------|---------|----------|
-| **Goal** | Teach ONE new behavior | Link MULTIPLE behaviors into a sequence |
-| **Method** | Reinforce closer and closer attempts | Teach individual steps, then link them together |
-| **Example** | Teaching a pigeon to peck a specific spot | Teaching a rat to press lever → pull chain → climb stairs |
-| **Key concept** | Successive approximations | Behavioral chain |
+Research with animals shows that **only certain behaviors can be shaped through reinforcement** (CED 3.8.A.3). When trainers Keller and Marian Breland reinforced animals for performing tricks with coins, the animals' innate food-handling behaviors kept taking over:
 
-### Applied Behavior Analysis (ABA)
+| Animal | Trained behavior | What drifted in |
+|--------|------------------|-----------------|
+| Raccoon | Drop a coin in a bank | Rubbing the coins together, like washing food |
+| Pig | Carry a coin to a bank | Rooting the coin along the ground with its snout |
 
-ABA takes operant conditioning principles and applies them therapeutically:
-- **Where it's used:** Most commonly for autism spectrum disorder, but also for education, workplace training, and rehabilitation
-- **How it works:** Complex social behaviors are broken into small, teachable steps. Each step is reinforced individually.
-- **Example:** Teaching eye contact: First reinforce looking toward the trainer's face, then looking at the face, then making brief eye contact, then maintaining eye contact for 2+ seconds
-- **Controversy:** Some advocates argue ABA can be overly rigid or attempt to eliminate natural behaviors. Modern ABA focuses on teaching functional skills rather than suppressing natural traits.
+Reinforcement continued the whole time, yet the trained behavior got WORSE. Shaping works within the boundaries of an animal's biology.
+
+> Therapists also use shaping and token economies in **applied behavior analysis**; that application is covered in Treatment & Therapy.
 
 ### Token Economies in Practice
 
@@ -113,17 +108,17 @@ Token economies work because they bridge the gap between behavior and delayed re
 
       2) In a token economy, tokens are what type of reinforcer? (one word)
 
-      3) What does ABA stand for? (three words)
+      3) Trained behaviors that slide back toward an animal's innate behaviors show instinctive ___. (one word)
 
       Type the exact term.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['successive approximations', 'secondary', 'Applied Behavior Analysis'],
+        correctAnswers: ['successive approximations', 'secondary', 'drift'],
         hint1: 'Two words: ___ approximations — each step gets closer to the target',
         hint2: 'Tokens gain value through learning/association, not biology',
-        hint3: 'A-B-A: ___ Behavior ___',
-        explanation: 'Expected answers: successive approximations (the progressive steps toward the target behavior), secondary (tokens are conditioned/secondary reinforcers), and Applied Behavior Analysis (the therapeutic application of operant conditioning).'
+        hint3: 'The Brelands\' raccoon kept "washing" its coins: instinctive ___',
+        explanation: 'Expected answers: successive approximations (the progressive steps toward the target behavior), secondary (tokens are conditioned/secondary reinforcers), and drift (instinctive drift limits which behaviors can be shaped).'
       }
     },
     {
@@ -136,22 +131,22 @@ Token economies work because they bridge the gap between behavior and delayed re
         dropdowns: [
           {
             label: 'Teaching a pigeon to peck a target by reinforcing closer and closer attempts is ___',
-            options: ['shaping', 'chaining', 'extinction', 'classical conditioning']
+            options: ['shaping', 'instinctive drift', 'extinction', 'classical conditioning']
           },
           {
-            label: 'A rat learns to press a lever, then pull a chain, then climb stairs — each as a linked sequence. This is ___',
-            options: ['shaping', 'chaining', 'token economy', 'negative reinforcement']
+            label: 'A pig reinforced for carrying a coin to a bank starts rooting the coin along the ground instead. This is ___',
+            options: ['shaping', 'instinctive drift', 'token economy', 'negative reinforcement']
           },
           {
-            label: 'ABA therapy is most commonly associated with ___',
-            options: ['depression treatment', 'autism spectrum disorder', 'drug addiction', 'phobia treatment']
+            label: 'Stickers that students can trade for extra recess time are ___ reinforcers',
+            options: ['primary', 'secondary', 'negative', 'continuous']
           }
         ],
-        correctAnswers: ['shaping', 'chaining', 'autism spectrum disorder'],
+        correctAnswers: ['shaping', 'instinctive drift', 'secondary'],
         hint1: 'Reinforcing successive approximations = shaping.',
-        hint2: 'Linking multiple behaviors into a sequence = chaining.',
-        hint3: 'ABA breaks complex social skills into teachable steps.',
-        explanation: 'Shaping reinforces progressively closer approximations. Chaining links separate behaviors into a sequence. ABA is most commonly used for autism spectrum disorder.'
+        hint2: 'An innate food-handling behavior is replacing the trained one.',
+        hint3: 'Stickers have value only because they can be exchanged for something else.',
+        explanation: 'Shaping reinforces progressively closer approximations. The pig\'s rooting is instinctive drift, an innate behavior overriding the trained one. Stickers are secondary (conditioned) reinforcers because their value is learned.'
       }
     },
     {
@@ -161,17 +156,15 @@ Token economies work because they bridge the gap between behavior and delayed re
 ## Common Misconceptions and Exam Strategy
 
 ### Misconceptions to Avoid
-- **"Shaping and chaining are the same"** — Shaping teaches ONE behavior through progressive steps. Chaining links MULTIPLE already-learned behaviors into a sequence. Very different processes.
+- **"Reinforcement can shape any behavior"** — Instinctive drift shows that innate behaviors can override training, so only certain behaviors can be shaped.
 - **"Token economies use primary reinforcers"** — Tokens themselves are secondary reinforcers. They can be EXCHANGED for primary reinforcers, but the tokens themselves are learned/conditioned.
-- **"ABA is only for autism"** — While ABA is most commonly associated with autism, operant principles are used in education, workplace training, animal training, and rehabilitation.
 - **"Shaping means you wait for the perfect behavior"** — No! That's the whole point of shaping — you reinforce IMPERFECT attempts and gradually raise the bar. You never wait for the final behavior to appear on its own.
 
 ### AP Strategy Moves
 - If an AP question describes teaching a NEW behavior step-by-step → shaping (successive approximations).
-- If it describes linking EXISTING behaviors into a sequence → chaining.
-- Token economy questions often appear in FRQ scenarios about classroom management or institutional settings.
+- If a trained animal keeps slipping back into a natural, species-typical behavior despite reinforcement → instinctive drift.
+- Token economy questions often describe classrooms, hospitals, or other institutional settings.
 - Know the shaping process: define target → identify starting point → reinforce first approximation → raise the bar → repeat until target is reached.
-- ABA is a common FRQ topic — be ready to explain how operant principles are applied therapeutically.
       `
     },
     {
@@ -185,7 +178,7 @@ Token economies work because they bridge the gap between behavior and delayed re
           {
             question: 'A kindergarten teacher wants to teach students to raise their hands before speaking. She first praises ANY student who lifts their arm at all, then only praises students who raise their hand high, and finally only praises students who raise their hand and wait to be called on. What principle is she using?',
             options: [
-              'Chaining — she is linking several separate behaviors into a sequence',
+              'Positive punishment — she scolds students who call out answers',
               'Shaping — reinforcing successive approximations toward the target behavior',
               'Negative reinforcement — she removes the noise of students calling out',
               'Fixed-ratio reinforcement — she praises every third raised hand'
@@ -194,7 +187,7 @@ Token economies work because they bridge the gap between behavior and delayed re
             explanation: 'The teacher is reinforcing progressively closer approximations: any arm lift → high hand raise → hand raise + waiting. Each step gets closer to the target behavior. She stops reinforcing earlier approximations once students master the next step. This is classic shaping.'
           },
           {
-            question: 'A behavioral therapy program for a child with autism uses tokens (stickers) earned for appropriate social behaviors. The child exchanges 10 stickers for 15 minutes of iPad time. Which operant conditioning concepts are being applied?',
+            question: 'A classroom behavior program gives a student tokens (stickers) earned for appropriate social behaviors. The child exchanges 10 stickers for 15 minutes of iPad time. Which operant conditioning concepts are being applied?',
             options: [
               'Token economy (stickers as secondary reinforcers) and fixed-ratio schedule (set sticker count)',
               'Classical conditioning (pairing tokens with the iPad) and continuous reinforcement (every behavior)',
@@ -202,7 +195,7 @@ Token economies work because they bridge the gap between behavior and delayed re
               'Shaping (successive approximations) and primary reinforcement (tokens as innate rewards)'
             ],
             correctAnswer: 0,
-            explanation: 'The stickers are secondary reinforcers in a token economy — they have no inherent value but can be exchanged for reinforcers (iPad time). The exchange rate of 10 stickers makes this a fixed-ratio schedule (FR-10). iPad time serves as the backup reinforcer. This is a textbook ABA application.'
+            explanation: 'The stickers are secondary reinforcers in a token economy — they have no inherent value but can be exchanged for reinforcers (iPad time). The exchange rate of 10 stickers makes this a fixed-ratio schedule (FR-10). iPad time serves as the backup reinforcer.'
           }
         ]
       }

@@ -155,7 +155,7 @@ What we perceive depends not just on what's "out there" — it depends on what's
 - Context provides the CURRENT information that activates specific schemas
 - Priming is the MECHANISM by which recent experience creates temporary perceptual sets
 
-> **AP Tip:** When an FRQ mentions "expectations," "prior experience," or "cultural background" affecting how someone perceives something, use the term "perceptual set" explicitly. Define it, then apply it to the scenario's specific details.
+> **AP Tip:** When a scenario or EBQ source mentions "expectations," "prior experience," or "cultural background" affecting how someone perceives something, name "perceptual set" explicitly and tie it to the specific evidence in the scenario or source.
       `
     },
     {

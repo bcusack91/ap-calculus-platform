@@ -17,9 +17,9 @@ How do we organize the endless stream of information we encounter? Through conce
 |------|-----------|
 | **Concept** | A mental category that groups similar objects, events, ideas, or people (e.g., "furniture," "democracy") |
 | **Prototype** | The BEST, most typical example of a concept — what comes to mind first (robin = prototype of "bird," not penguin) |
-| **Exemplar** | A specific remembered example of a concept used for comparison (your neighbor's golden retriever as your personal "dog" reference) |
 | **Schema** | An organized framework of knowledge about a topic, event, or concept stored in long-term memory |
-| **Script** | A type of schema for a SEQUENCE of events — what to expect in a familiar situation (restaurant script: seat → menu → order → eat → pay) |
+| **Assimilation** | Taking in new information WITHOUT changing the schema (fitting it into what you already think) |
+| **Accommodation** | Taking in new information and CHANGING the schema to incorporate it |
 
 ### Prototype Theory (Rosch, 1973)
 
@@ -45,7 +45,7 @@ We categorize new items by comparing them to our PROTOTYPE — the most typical 
           {
             question: 'When asked to name a bird, most Americans say "robin" before "penguin," even though both are equally valid birds. This BEST illustrates:',
             options: [
-              'A script — a schema for the usual order of events in a familiar setting',
+              'A schema — an organized framework of everything a person knows about birds',
               'A prototype — the most typical example of the "bird" concept',
               'An algorithm — a step-by-step procedure that guarantees correct categorization',
               'Functional fixedness — seeing an object in only one role'
@@ -54,15 +54,15 @@ We categorize new items by comparing them to our PROTOTYPE — the most typical 
             explanation: 'Robin is the PROTOTYPE of the bird category for most Americans — it\'s the most typical example that comes to mind. Prototypes are central, typical members of a category that serve as a reference point. We categorize faster when items match our prototype (robin → "bird" faster than penguin → "bird"). This is Eleanor Rosch\'s prototype theory.'
           },
           {
-            question: 'A child who visits a new restaurant and automatically expects to be seated, given a menu, order food, eat, and then pay is using a:',
+            question: 'A child believes that every bird can fly. At the zoo she learns that penguins are birds that cannot fly, and she revises her idea of what a bird is. This change BEST illustrates:',
             options: [
-              'Prototype — the restaurant that best represents the whole category',
-              'Concept — a mental category grouping restaurants by shared features',
-              'Script — a schema for the usual sequence of events',
-              'Heuristic — a mental shortcut for making fast judgments under uncertainty'
+              'Assimilation — she fits the penguin into her existing bird schema without changing it',
+              'A prototype — she now treats the penguin as the most typical member of the bird category',
+              'Accommodation — she changes her bird schema to take in the new information',
+              'An algorithm — she follows a step-by-step rule that guarantees correct categorization'
             ],
             correctAnswer: 2,
-            explanation: 'A script is a type of schema that organizes our knowledge about the SEQUENCE of events in a familiar situation. The "restaurant script" is the classic example: you know to wait to be seated, look at a menu, order from a server, eat, and pay — even in a restaurant you\'ve never visited before. Scripts help us navigate familiar situations efficiently, but they can also cause errors when a situation doesn\'t follow the expected script.'
+            explanation: 'She does not just file the penguin under her old schema; she changes the schema itself ("not all birds fly"), which is accommodation (CED 2.2.A.2). Assimilation would leave the schema unchanged, and the penguin is clearly not her prototype bird.'
           }
         ]
       }
@@ -93,17 +93,18 @@ Schemas are mental frameworks that organize and interpret information. They are 
 | **Key changes** | Unfamiliar details were dropped or transformed (canoes → boats, supernatural elements removed) |
 | **Conclusion** | Memory is RECONSTRUCTIVE — we don't reproduce memories, we REBUILD them using schemas |
 
-### Prototype vs. Exemplar Models
+### Assimilation vs. Accommodation
 
-| | Prototype Model | Exemplar Model |
-|--|----------------|----------------|
-| **How we categorize** | Compare to an ABSTRACT average/ideal | Compare to SPECIFIC remembered examples |
-| **Stored in memory** | One generalized prototype | Many specific examples |
-| **Strength** | Efficient — only one template needed | Captures variability within categories |
-| **Weakness** | Loses information about individual examples | Memory-intensive — requires storing many examples |
-| **Example** | "Dog" = abstract medium-sized, four-legged animal | "Dog" = your neighbor's lab + your childhood poodle + dog from a movie |
+People form and modify schemas through two processes (CED 2.2.A.2):
 
-> **AP Connection:** Both models explain categorization. The AP exam may ask you to distinguish them. Prototype = abstract ideal. Exemplar = specific remembered instances. Most psychologists believe we use BOTH, depending on the situation.
+| | Assimilation | Accommodation |
+|--|-------------|---------------|
+| **What happens to the schema** | Stays the same | Changes |
+| **What happens to the new information** | Is interpreted to fit the existing schema | Is used to revise or add to the schema |
+| **Example** | A toddler calls a cow a "doggy" because it has four legs and fur | The toddler learns cows moo and give milk, and forms a separate "cow" schema |
+| **Example** | A new student assumes a quiet classmate is shy, fitting her "quiet = shy" schema | After seeing the classmate lead a debate, the student revises the schema: quiet people can be confident speakers |
+
+> **AP Connection:** Assimilation can preserve errors (the schema never gets corrected), which links to belief perseverance and stereotypes. Accommodation is how schemas become more accurate. Piaget used the same two terms to describe children's cognitive development (Topic 3.4).
       `
     },
     {
@@ -115,7 +116,7 @@ Schemas are mental frameworks that organize and interpret information. They are 
       exercise: {
         inputs: [
           { label: 'A ___ is the most typical example of a concept (e.g., robin for birds)', answer: 'prototype' },
-          { label: 'A ___ is a schema for a familiar sequence of events (e.g., what happens at a restaurant)', answer: 'script' },
+          { label: 'Changing an existing schema to incorporate new information is called ___', answer: 'accommodation' },
           { label: 'Bartlett\'s study showed that memory is ___ — we rebuild memories using schemas', answer: 'reconstructive' }
         ]
       }
@@ -128,15 +129,15 @@ Schemas are mental frameworks that organize and interpret information. They are 
       `,
       exercise: {
         dropdowns: [
-          { label: 'A child who sees a horse for the first time and calls it a "big dog"', options: ['Schema assimilation', 'Prototype matching', 'Script activation', 'Algorithm application'] },
-          { label: 'Knowing to raise your hand before speaking in class without being told', options: ['Script', 'Prototype', 'Exemplar', 'Concept'] },
-          { label: 'Thinking of a golden retriever when someone says "dog"', options: ['Prototype', 'Script', 'Schema', 'Algorithm'] }
+          { label: 'A child who sees a horse for the first time and calls it a "big dog"', options: ['Schema assimilation', 'Prototype matching', 'Schema accommodation', 'Algorithm application'] },
+          { label: 'A student who thought all metals stick to magnets tests an aluminum can, sees it does not stick, and revises what she believes about metals', options: ['Schema accommodation', 'Prototype matching', 'Schema assimilation', 'Concept formation'] },
+          { label: 'Thinking of a golden retriever when someone says "dog"', options: ['Prototype', 'Accommodation', 'Schema', 'Algorithm'] }
         ],
-        correctAnswers: ['Schema assimilation', 'Script', 'Prototype'],
+        correctAnswers: ['Schema assimilation', 'Schema accommodation', 'Prototype'],
         hint1: 'The child is fitting new information into an existing schema (four-legged animal = dog).',
-        hint2: 'This is an automatic sequence of expected behavior in a familiar setting — a classroom script.',
+        hint2: 'The new evidence did not fit, so the existing framework itself was changed.',
         hint3: 'Golden retriever is the most typical, representative example of "dog" for many people.',
-        explanation: 'Horse → "big dog" = schema assimilation (fitting new info into existing schema, borrowed from Piaget). Raising hand = script (expected behavior sequence in classroom). Golden retriever = prototype (most typical example of the dog concept).'
+        explanation: 'Horse → "big dog" = schema assimilation (fitting new info into existing schema, borrowed from Piaget). Aluminum can = schema accommodation (the metals schema was revised to fit new evidence). Golden retriever = prototype (most typical example of the dog concept).'
       }
     },
     {
@@ -152,13 +153,13 @@ Schemas are mental frameworks that organize and interpret information. They are 
 | Concepts and categories are the same | A concept is the MENTAL REPRESENTATION; a category is the GROUP of items the concept refers to |
 | Prototypes are the "best" examples objectively | Prototypes vary by CULTURE and PERSONAL EXPERIENCE (Americans: robin = bird prototype; Australians might say kookaburra) |
 | Schemas only store information | Schemas ACTIVELY shape perception, memory, and interpretation — they're not passive storage |
-| Scripts are rigid | Scripts are flexible defaults — we notice when scripts are violated (waiter throws food at you) |
+| Assimilation means learning nothing | Assimilation does add the new item to memory; it just leaves the schema itself unchanged |
 
 **Quick Decision Guide:**
 - Most typical example of a category → **Prototype**
-- Specific remembered example used for comparison → **Exemplar**
 - Organized knowledge framework → **Schema**
-- Expected sequence of events → **Script**
+- New information fit into a schema that stays the same → **Assimilation**
+- Schema changed to fit new information → **Accommodation**
 - Mental group for similar things → **Concept**
 
 > **AP Tip:** Bartlett's "War of the Ghosts" study is frequently used to demonstrate that memory is reconstructive and influenced by schemas. The key word pair is "schema + memory distortion."
@@ -173,15 +174,15 @@ Schemas are mental frameworks that organize and interpret information. They are 
       exercise: {
         questions: [
           {
-            question: 'A police officer who has arrested many young males in hoodies for theft is more likely to suspect a young male in a hoodie of shoplifting. This officer\'s judgment is MOST influenced by:',
+            question: 'In a reaction-time study, participants verify the sentence "A robin is a bird" faster than "A penguin is a bird." Which explanation BEST fits this result?',
             options: [
-              'A script — the officer expects a sequence of events',
-              'An exemplar — the officer is comparing to specific past cases stored in memory',
-              'An algorithm — the officer is following a systematic procedure',
-              'A prototype — the officer is comparing the person to an abstract ideal of a "thief"'
+              'Robins match the bird prototype more closely, so they are recognized more quickly',
+              'Penguins are assimilated into the bird schema, which takes extra time to do',
+              'Participants follow an algorithm that checks robins before checking penguins',
+              'Functional fixedness keeps participants from seeing penguins in a new role'
             ],
-            correctAnswer: 1,
-            explanation: 'The officer is comparing the current person to SPECIFIC past cases (the young males previously arrested). This is exemplar-based reasoning, not prototype-based. If the officer were using a prototype, they would compare to an ABSTRACT ideal of "thief" rather than specific remembered individuals. This example also connects to racial profiling and perceptual set — our past experiences shape what we expect to see.'
+            correctAnswer: 0,
+            explanation: 'Items that closely resemble the prototype of a concept are categorized faster, and a robin is closer to the typical bird than a penguin (CED 2.2.A.1). Assimilation does not explain a speed difference between two members of the same category, no step-by-step algorithm is involved, and functional fixedness concerns object uses.'
           },
           {
             question: 'When reading a story about a birthday party, readers automatically assume there was cake, presents, and singing — even though the story never mentioned these details. This gap-filling is BEST explained by:',

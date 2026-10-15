@@ -168,7 +168,7 @@ The distinction matters because secondary reinforcers are **learned** and can va
 - **Two-question test:** (1) Did behavior increase or decrease? If increase → reinforcement. (2) Was something added or removed? Added → positive. Removed → negative.
 - The AP exam LOVES negative reinforcement scenarios because students confuse them with punishment. If the question says "removes" + "behavior increases" → negative reinforcement.
 - Watch for the word "escape" or "avoid" — these signal negative reinforcement (the organism escapes/avoids an aversive stimulus).
-- Primary vs. secondary reinforcer questions often appear in free-response. Know examples of each.
+- Primary vs. secondary reinforcers (CED 3.8.A.2) show up in scenario questions. Know examples of each: food and warmth are primary; money, grades, and tokens are secondary.
       `
     },
     {

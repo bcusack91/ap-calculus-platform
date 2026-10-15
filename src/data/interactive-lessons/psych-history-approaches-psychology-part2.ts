@@ -5,24 +5,32 @@ export const psychHistoryApproachesPart2Data = {
       id: 'histo2-perspectives',
       type: 'text' as const,
       content: `
-## Modern Psychological Perspectives
+# 🧠 History & Approaches to Psychology
 
-| Perspective | Focus | Key Figures |
+**Part 2 of 7 — Psychological Perspectives and the Biopsychosocial Approach**
+
+> 🔑 **Key Concept:** The AP exam asks you to compare and contrast how seven perspectives (biological, behavioral, cognitive, evolutionary, humanistic, psychodynamic, and sociocultural) explain behavior and mental processes (skill 1.A). Each is a lens that highlights different causes of the same behavior.
+
+## The Seven Perspectives
+
+| Perspective | Focuses on | Typical question it asks |
 |------------|-------|-------------|
-| **Biological** | Brain, genetics, neurotransmitters | — |
-| **Behavioral** | Observable behavior, learning | Watson, Skinner |
-| **Cognitive** | Thinking, memory, perception | Piaget, Chomsky |
-| **Psychodynamic** | Unconscious, childhood | Freud, Jung |
-| **Humanistic** | Free will, self-actualization | Maslow, Rogers |
-| **Sociocultural** | Culture, social context | Vygotsky |
-| **Evolutionary** | Natural selection of behaviors | — |
+| **Biological** | Brain, nervous system, hormones, neurotransmitters, genes | What is happening in the body and brain? |
+| **Behavioral** | Observable behavior learned through conditioning and reinforcement | What rewards, punishments, or associations shaped this behavior? |
+| **Cognitive** | Thinking, memory, attention, beliefs, and interpretations | How is the person perceiving and interpreting the situation? |
+| **Evolutionary** | How natural selection shaped behaviors that aided survival and reproduction | How might this behavior have helped our ancestors survive or reproduce? |
+| **Humanistic** | Free will, personal growth, and the drive to fulfill one's potential | How is the person striving to grow, and are their needs for acceptance being met? |
+| **Psychodynamic** | Unconscious thoughts, feelings, and conflicts, often rooted in childhood | What unconscious conflict might be driving this behavior? |
+| **Sociocultural** | Culture, social norms, family, peers, and social context | How do culture and the people around the person shape this behavior? |
 
-### Biopsychosocial Approach
+## The Biopsychosocial Approach
 
-Modern psychology recognizes that behavior results from the interaction of:
-- **Biological** factors (genetics, brain chemistry)
-- **Psychological** factors (thoughts, emotions, personality)
-- **Social** factors (culture, family, peers)
+Most behavior has more than one cause. The **biopsychosocial approach** combines three levels of analysis:
+- **Biological** factors: genes, brain chemistry, hormones, health
+- **Psychological** factors: thoughts, emotions, learning, personality
+- **Social-cultural** factors: family, peers, culture, economic circumstances
+
+The perspectives are not competitors that must be ranked. Each explains part of the picture, and the biopsychosocial approach brings them together.
       `
     },
     {
@@ -34,35 +42,49 @@ Modern psychology recognizes that behavior results from the interaction of:
       exercise: {
         questions: [
           {
-            question: 'The biopsychosocial approach emphasizes:',
+            question: 'The biopsychosocial approach emphasizes',
             options: [
-              'Genes and brain chemistry as the root cause of all behavior',
-              'The interaction of biological, psychological, and social factors',
-              'Unconscious drives, childhood conflicts, and defense mechanisms as causes',
-              'Observable behavior shaped by rewards, punishments, and conditioning'
+              'genes and brain chemistry as the root cause of all behavior',
+              'the interaction of biological, psychological, and social factors',
+              'unconscious drives, childhood conflicts, and defense mechanisms',
+              'observable behavior shaped by rewards, punishments, and conditioning'
             ],
             correctAnswer: 1,
-            explanation: 'The biopsychosocial approach recognizes that behavior results from the complex interaction of biological, psychological, and social factors.'
+            explanation: 'The biopsychosocial approach explains behavior as the combined result of biological, psychological, and social-cultural factors rather than any single cause.'
+          },
+          {
+            question: 'A psychologist suggests that people fear snakes more easily than cars because ancestors who quickly learned to avoid snakes were more likely to survive. Which perspective is she using?',
+            options: [
+              'Sociocultural',
+              'Behavioral',
+              'Humanistic',
+              'Evolutionary'
+            ],
+            correctAnswer: 3,
+            explanation: 'Explaining a behavior by how it helped ancestors survive and reproduce is the evolutionary perspective.'
           }
         ]
       }
     },
     {
-      id: 'histo2-subfields',
+      id: 'histo2-worked',
       type: 'text' as const,
       content: `
-## Subfields of Psychology
+## Worked Example: One Behavior, Seven Lenses
 
-| Subfield | Focus |
-|----------|-------|
-| **Clinical** | Diagnosis and treatment of disorders |
-| **Counseling** | Help with adjustment and life challenges |
-| **Developmental** | Lifespan changes |
-| **Cognitive** | Mental processes |
-| **Social** | Group behavior and influence |
-| **Industrial/Organizational** | Workplace behavior |
-| **School** | Learning and education |
-| **Forensic** | Psychology and law |
+**Behavior:** A high school junior has intense test anxiety and freezes during exams.
+
+| Perspective | Explanation |
+|-------------|-------------|
+| **Biological** | The stress response floods the body with stress hormones, raising heart rate and making it hard to retrieve memories |
+| **Behavioral** | Past exams were followed by embarrassment, so test settings became a conditioned cue for fear; avoiding studying is reinforced because it brings short-term relief |
+| **Cognitive** | The student interprets each hard question as proof of failure ("I'm going to bomb this"), and that worry uses up working memory |
+| **Evolutionary** | A fast fear response to threats helped ancestors survive, but the same system fires in situations that are not physically dangerous |
+| **Humanistic** | The student feels accepted by others only when earning high grades, so each test threatens their sense of worth |
+| **Psychodynamic** | Unconscious fears of disappointing a demanding parent, rooted in childhood, surface as anxiety during tests |
+| **Sociocultural** | Family and community expectations, and a school culture that ranks students publicly, raise the stakes of every exam |
+
+**Compare and contrast:** The behavioral and cognitive explanations both point to learning, but the behavioral lens looks at observable associations and consequences, while the cognitive lens looks at the student's interpretations. A **biopsychosocial** account would combine the stress response (biological), the catastrophic thoughts (psychological), and the school's public ranking (social).
       `
     },
     {
@@ -71,22 +93,41 @@ Modern psychology recognizes that behavior results from the interaction of:
       content: `
       **Applied Recall (exact term answers)** ✍️
 
-      1) Which perspective focuses on unconscious motivations and childhood experiences?
+      1) Which perspective focuses on unconscious thoughts and conflicts rooted in childhood?
 
-      2) Which approach recognizes the interaction of biological, psychological, and social factors?
+      2) Which approach combines biological, psychological, and social-cultural levels of analysis?
 
-      3) Which perspective emphasizes free will, personal growth, and self-actualization?
+      3) Which perspective emphasizes free will, personal growth, and fulfilling one's potential?
 
       Use the exact term from this part.
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['psychodynamic', 'biopsychosocial', 'humanistic'],
-        hint1: 'Starts with: P — founded by Freud',
-        hint2: 'Starts with: B — combines three levels of analysis',
-        hint3: 'Starts with: H — Maslow and Rogers',
-        explanation: 'Expected answers: psychodynamic (Freud, unconscious), biopsychosocial (integrates biological + psychological + social), and humanistic (Maslow, Rogers, self-actualization).'
+        hint1: 'Starts with: P — the unconscious mind',
+        hint2: 'Starts with: B — three levels of analysis in one word',
+        hint3: 'Starts with: H — growth and potential',
+        explanation: 'Expected answers: psychodynamic (unconscious conflicts), biopsychosocial (biological + psychological + social-cultural), and humanistic (free will and personal growth).'
       }
+    },
+    {
+      id: 'histo2-culture-misuse',
+      type: 'text' as const,
+      content: `
+## Culture, Expectations, and Misapplied Ideas (Skill 1.B)
+
+**Cultural norms and circumstances matter.** A behavior that seems unusual in one culture may be expected in another. For example, avoiding direct eye contact with an adult is a sign of respect in some cultures and can be misread as dishonesty in others. Good explanations ask what the person's culture and circumstances expect.
+
+**Psychological ideas can be applied in inappropriate or discriminatory ways.** The exam asks you to explain the implications when this happens:
+
+| Misapplication | What happened | Implication |
+|----------------|--------------|-------------|
+| **Eugenics** | Some theorists used evolutionary ideas to claim certain groups were "unfit," supporting forced sterilization and discriminatory laws (CED 1.1.A.2) | Real harm to people's rights and lives |
+| **Intelligence test misuse** | Test scores were used to limit access to jobs, military ranks, schools, and immigration to the US (CED 2.8.C.3) | Opportunities denied based on biased measurement |
+| **Overgeneralizing from narrow samples** | Findings from one cultural group are treated as true for all people | Behavior in other groups is mislabeled as abnormal or deficient |
+
+> 🔑 **AP Connection:** When a question asks about the implications of misapplying a concept, name the concept, explain how it was misused, and state the specific consequence for the people affected.
+      `
     },
     {
       id: 'histo2-dropdown',
@@ -97,42 +138,41 @@ Modern psychology recognizes that behavior results from the interaction of:
       exercise: {
         dropdowns: [
           {
-            label: 'Behaviorists study only ___ behavior',
-            options: ['unconscious', 'observable', 'cognitive', 'emotional']
+            label: 'The behavioral perspective explains behavior through _____ and its consequences.',
+            options: ['unconscious conflict', 'learning', 'natural selection', 'neurotransmitters']
           },
           {
-            label: 'Maslow and Rogers are associated with the ___ perspective',
+            label: 'A psychologist who explains depression by examining negative, self-blaming thoughts is using the _____ perspective.',
             options: ['behavioral', 'cognitive', 'humanistic', 'biological']
           },
           {
-            label: 'The ___ perspective examines how natural selection shaped behaviors',
+            label: 'A psychologist who studies how a society\'s norms about emotion shape how people express sadness is using the _____ perspective.',
             options: ['cognitive', 'evolutionary', 'psychodynamic', 'sociocultural']
           }
         ],
-        correctAnswers: ['observable', 'humanistic', 'evolutionary'],
-        hint1: 'Behaviorists rejected introspection in favor of what can be measured.',
-        hint2: 'Self-actualization and unconditional positive regard.',
-        hint3: 'Darwin\'s ideas applied to behavior.',
-        explanation: 'Behaviorists study observable behavior. Maslow and Rogers founded humanistic psychology. The evolutionary perspective applies natural selection to behavior.'
+        correctAnswers: ['learning', 'cognitive', 'sociocultural'],
+        hint1: 'Conditioning, reinforcement, and punishment.',
+        hint2: 'Thoughts and interpretations.',
+        hint3: 'Culture and social norms.',
+        explanation: 'The behavioral perspective focuses on learning through conditioning and consequences. Self-blaming thoughts are the focus of the cognitive perspective. Norms about emotional expression are a sociocultural explanation.'
       }
     },
     {
       id: 'histo2-strategy',
       type: 'text' as const,
       content: `
-      ## Common Misconceptions and Exam Strategy
+## Common Misconceptions and Exam Strategy
 
-      ### Misconceptions to Avoid
-      - The perspectives are NOT mutually exclusive — the biopsychosocial approach shows they can complement each other.
-      - "Psychodynamic" is NOT just Freud — it includes Neo-Freudians like Jung, Adler, and Erikson who modified Freud's ideas.
-      - The cognitive perspective is NOT the same as cognitive behavioral therapy (CBT) — the perspective studies thinking; CBT is a therapy technique.
-      - The sociocultural perspective does NOT claim culture determines everything — it highlights cultural INFLUENCE on behavior.
+### Misconceptions to Avoid
+- The perspectives are NOT mutually exclusive. They describe different causes that can all be true at once.
+- The cognitive perspective is NOT the same as cognitive behavioral therapy. The perspective is a way of explaining behavior; the therapy is a treatment.
+- The sociocultural perspective does NOT claim culture determines everything; it highlights cultural INFLUENCE.
+- The evolutionary perspective explains why a tendency may have been useful for ancestors. It does NOT mean a behavior is good, fixed, or justified today.
 
-      ### AP Strategy Moves
-      - The AP exam frequently asks you to apply MULTIPLE perspectives to the same behavior (e.g., explain aggression from biological, cognitive, and sociocultural viewpoints).
-      - Know which subfield each psychologist works in — matching is a common question type.
-      - The biopsychosocial approach is the modern "correct answer" when asked which approach is most comprehensive.
-      - Be able to explain how each perspective would differently explain the same behavior (depression, aggression, learning, etc.).
+### AP Strategy Moves
+- Expect questions that apply MULTIPLE perspectives to the same behavior. Match each explanation to the perspective's key word: brain (biological), consequences (behavioral), thoughts (cognitive), ancestors (evolutionary), growth (humanistic), unconscious (psychodynamic), culture (sociocultural).
+- When asked which approach is most complete, the biopsychosocial approach is the one that combines levels.
+- When comparing two perspectives, state one similarity and one difference, each tied to the scenario.
       `
     },
     {
@@ -144,26 +184,37 @@ Modern psychology recognizes that behavior results from the interaction of:
       exercise: {
         questions: [
           {
-            question: 'A psychologist explains depression by examining neurotransmitter imbalances, pessimistic thinking patterns, AND the patient\'s social isolation. This approach is best described as:',
+            question: 'A psychologist explains a patient\'s depression by examining neurotransmitter levels, pessimistic thinking patterns, and the patient\'s social isolation. This approach is best described as',
             options: [
-              'biopsychosocial — combining the biological, psychological and social levels',
-              'psychodynamic — tracing the depression to unresolved conflicts from early childhood',
-              'behavioral — examining how depressed behaviors were learned through reinforcement',
-              'cognitive — focusing on how pessimistic thoughts feed social withdrawal and low mood'
+              'biopsychosocial, since it combines several types of causes',
+              'psychodynamic, since it traces depression to childhood conflict',
+              'behavioral, since it looks at how sad behavior was reinforced',
+              'cognitive, since it focuses on how thoughts shape low mood'
             ],
             correctAnswer: 0,
-            explanation: 'The biopsychosocial approach integrates all three levels: biological (neurotransmitters), psychological (pessimistic thinking), and social (isolation). No single perspective captures the full picture — the biopsychosocial model combines them.'
+            explanation: 'Neurotransmitters (biological), pessimistic thinking (psychological), and isolation (social) together form a biopsychosocial explanation. No single perspective covers all three.'
           },
           {
-            question: 'If asked "How would a behaviorist explain why a student studies hard?", the best answer would focus on:',
+            question: 'How would a behavioral psychologist most likely explain why a student studies hard?',
             options: [
-              'the rewards and punishments that have followed studying in the past',
-              'an unconscious desire to please parents rooted in childhood experiences',
-              'the student\'s genetic predisposition toward conscientiousness',
-              'the student\'s intrinsic motivation and drive toward self-actualization'
+              'By an unconscious wish to please parents rooted in childhood',
+              'By the student\'s inherited tendency toward conscientiousness',
+              'By the rewards and punishments that followed past studying',
+              'By the student\'s drive to grow and fulfill personal potential'
             ],
-            correctAnswer: 0,
-            explanation: 'Behaviorists explain behavior through observable stimuli and responses — specifically reinforcements and punishments. They would NOT reference unconscious desires (psychodynamic), genetics (biological), or intrinsic motivation (humanistic).'
+            correctAnswer: 2,
+            explanation: 'The behavioral perspective explains behavior through its consequences, so past rewards for studying are the key. Unconscious wishes are psychodynamic, inherited tendencies are biological, and the drive to grow is humanistic.'
+          },
+          {
+            question: 'In the early 1900s, some lawmakers cited claims about "inherited unfitness" to justify forced sterilization laws. This is best described as',
+            options: [
+              'a falsifiable hypothesis later supported by replication',
+              'an evolutionary idea applied in a discriminatory way',
+              'a cognitive explanation built on faulty interpretations',
+              'an ethical research practice approved by a review board'
+            ],
+            correctAnswer: 1,
+            explanation: 'Using claims about inheritance and natural selection to label groups as unfit and restrict their rights is eugenics, a discriminatory application of evolutionary ideas that the CED names explicitly.'
           }
         ]
       }

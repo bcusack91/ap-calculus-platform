@@ -152,7 +152,7 @@ Sources of self-efficacy (strongest → weakest):
 | Effect on behavior | Passivity, giving up | Persistence, challenge-seeking |
 | Connection to | Depression | Achievement, motivation |
 
-> **AP Tip:** These concepts are OPPOSITES in their effect on behavior. If an FRQ asks you to discuss how cognitive factors affect learning, use BOTH — learned helplessness as the negative example and self-efficacy as the positive.
+> **AP Tip:** These concepts are OPPOSITES in their effect on behavior. On the Evidence-Based Question (EBQ), each source you cite must be explained with a DIFFERENT psychological concept, so a pair like learned helplessness (for a source about students who stop trying) and self-efficacy (for a source about students who persist) gives you two distinct explanations.
       `
     },
     {

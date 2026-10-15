@@ -51,7 +51,7 @@ This workshop applies all learning concepts to AP-style scenarios. The exam's fa
               'Insight learning — she suddenly realized on her own how cooking must work'
             ],
             correctAnswer: 2,
-            explanation: 'The child watched her father (model), remembered the behavior (retention), was able to imitate it (reproduction), and was motivated to do so (motivation) — all WITHOUT direct reinforcement. This is textbook observational learning (Bandura). The key clue is "never been rewarded for cooking."'
+            explanation: 'The child watched her father (the model) and later imitated him, all WITHOUT direct reinforcement for cooking. This is textbook observational learning (Bandura). The key clue is "never been rewarded for cooking."'
           },
           {
             question: 'A teenager gets grounded (loses phone privileges) for staying out past curfew and subsequently comes home on time. Meanwhile, her younger brother — who witnessed the grounding — also starts coming home on time even though he has never been punished. Which TWO learning types are demonstrated?',
@@ -80,7 +80,7 @@ A school shooting occurs. Politicians blame violent video games. Evaluate using 
 | Perspective | Analysis |
 |------------|----------|
 | **Bandura (observational)** | Video games model aggression; players observe successful violence being rewarded (vicarious reinforcement). Supports concern. |
-| **Counterargument** | Bandura's ARRM model: reproduction requires ability and motivation. Most gamers do NOT reproduce violence. Learning ≠ performance. |
+| **Counterargument** | Learning ≠ performance: players may learn aggressive acts on screen without performing them, especially when real-world consequences punish aggression. Most gamers do NOT reproduce violence. |
 | **Operant conditioning** | Games reinforce virtual aggression with points/rewards. But real-world consequences (punishment) discourage real aggression. |
 | **Biological preparedness** | Aggression has evolutionary roots, but social constraints usually override it. |
 | **Research consensus** | Violent media may increase aggressive THOUGHTS but does NOT reliably predict violent BEHAVIOR. |
@@ -160,7 +160,7 @@ Confusing CLASSICAL and OPERANT conditioning:
 - **Operant**: Organism is ACTIVE — behavior is followed by a consequence
 - **Test**: Ask "Did the organism DO something to get the consequence?" If YES → operant. If NO (response is automatic) → classical.
 
-> **AP Tip:** When describing observational learning in an FRQ, always mention at least ONE of the four processes (attention, retention, reproduction, motivation) to earn full credit.
+> **AP Tip:** When you use observational learning to explain a source on the EBQ, name the model, what the observer saw happen to the model (vicarious reinforcement or punishment), and the behavior that changed. Tie each point to the specific evidence in the source.
       `
     },
     {

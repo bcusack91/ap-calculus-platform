@@ -7,31 +7,26 @@ export const psychAdolescencePart4Data = {
       content: `
 ## Adulthood & Aging
 
-**Part 4 of 7 — Physical, Cognitive & Social Changes**
+**Part 4 of 7 — Physical and Cognitive Change in Adulthood**
 
-Development doesn't stop at adulthood — physical, cognitive, and social changes continue throughout the lifespan. Understanding these changes (and which popular beliefs about aging are MYTHS) is critical for the AP exam.
+> 🔑 **Key Concept:** Adulthood spans most of the lifespan. Physical abilities level off and then decline at varying rates, crystallized intelligence stays relatively stable while fluid intelligence tends to wane, and dementia is a disorder, not a normal part of aging.
+
+Development doesn't stop at adulthood. The AP exam expects you to explain how physical and cognitive changes in adulthood affect behavior, and to separate normal aging from disease.
 
 ### Core Definitions
 
 | Term | Definition |
 |------|-----------|
-| **Crystallized intelligence** | Accumulated knowledge and verbal skills — tends to INCREASE or remain stable with age |
-| **Fluid intelligence** | Ability to reason speedily and abstractly — tends to DECLINE with age |
-| **Menopause** | The cessation of menstruation and reproductive capacity in women, typically around age 50 |
-| **Empty nest syndrome** | Feelings of sadness when children leave home (research shows most parents actually adjust positively) |
-| **Social clock** | Cultural expectations for the "right time" for major life events (marriage, career, children) |
-
-### Erikson's Adult Stages
-
-| Stage | Age | Crisis | Key question |
-|-------|-----|--------|-------------|
-| **Intimacy vs. Isolation** | Young adulthood (18-40) | Can I form deep, committed relationships? | Do I have love and connection? |
-| **Generativity vs. Stagnation** | Middle adulthood (40-65) | Am I contributing to future generations? | Am I making a difference? |
-| **Integrity vs. Despair** | Late adulthood (65+) | Was my life meaningful? | Can I look back with satisfaction? |
+| **Menopause** | The end of menstruation and of reproductive ability in women, typically around age 50 |
+| **Reaction time** | The time needed to respond to a stimulus; it slows gradually across adulthood |
+| **Sensory acuity** | The sharpness of a sense, such as seeing fine detail or hearing high-pitched sounds; both visual and auditory acuity decline with age |
+| **Crystallized intelligence** | Accumulated knowledge, vocabulary, and skills; remains relatively stable through adulthood |
+| **Fluid intelligence** | The ability to reason quickly and solve new problems; tends to decline as people age |
+| **Dementia** | A cognitive disorder in which memory and thinking decline enough to interfere with daily life; Alzheimer's disease is the most common cause |
 
 ### Real-World Example
 
-A 75-year-old retired teacher can still recite Shakespeare passages she learned decades ago (crystallized intelligence preserved), but finds it harder to learn new smartphone apps quickly (fluid intelligence declining). This pattern — preserved knowledge with declining processing speed — is normal aging, NOT dementia.
+A 75-year-old retired teacher can still recite Shakespeare passages she learned decades ago (crystallized intelligence preserved), but finds it harder to learn a new phone app quickly (fluid intelligence declining). She now needs reading glasses and asks people to repeat themselves in noisy restaurants (declining sensory acuity). This pattern, preserved knowledge with slower processing and duller senses, is normal aging, NOT dementia.
       `
     },
     {
@@ -46,23 +41,23 @@ A 75-year-old retired teacher can still recite Shakespeare passages she learned 
             question: 'A 65-year-old crossword champion continues to excel at puzzles requiring vocabulary and general knowledge, but struggles with timed tasks requiring rapid problem-solving of novel patterns. This illustrates:',
             options: [
               'Crystallized and fluid intelligence both decline at the same rate with age',
-              'Crystallized intelligence is preserved while fluid intelligence declines',
+              'Crystallized intelligence is largely preserved while fluid intelligence tends to decline',
               'Fluid intelligence rises with age while crystallized intelligence declines',
               'The slower puzzle speed is most likely an early sign of developing dementia'
             ],
             correctAnswer: 1,
-            explanation: 'Crystallized intelligence (accumulated knowledge, vocabulary, expertise) tends to remain stable or even increase throughout adulthood. Fluid intelligence (processing speed, abstract reasoning with novel problems) begins declining in the mid-20s. The crossword champion\'s pattern is completely normal aging.'
+            explanation: 'Crystallized intelligence (accumulated knowledge, vocabulary, expertise) tends to remain stable through adulthood, while fluid intelligence (speed and reasoning with novel problems) tends to decline. The crossword champion\'s pattern is normal aging.'
           },
           {
-            question: 'According to Erikson, a 50-year-old who mentors young employees, volunteers in the community, and feels a strong sense of purpose has successfully resolved which crisis?',
+            question: 'Which change is part of the typical physical decline of adulthood described by developmental psychologists?',
             options: [
-              'Identity vs. Role Confusion — forming a sense of self',
-              'Intimacy vs. Isolation — forming close relationships',
-              'Generativity vs. Stagnation — contributing to and guiding the next generation',
-              'Integrity vs. Despair — reflecting on a life well lived with a sense of satisfaction'
+              'A sudden loss of all reproductive ability in both sexes at age 40',
+              'Faster reaction times as experience with daily tasks accumulates',
+              'Gradual slowing of reaction time and duller hearing and vision',
+              'Improved flexibility once people stop playing competitive sports'
             ],
             correctAnswer: 2,
-            explanation: 'Generativity vs. Stagnation is the middle adulthood crisis (40-65). Generativity = contributing to the next generation through mentoring, parenting, community involvement, and creative work. Stagnation = feeling unproductive and uninvolved. This person is clearly generative — actively contributing to others.'
+            explanation: 'Adulthood brings a leveling off and then a varying decline in reproductive ability, mobility, flexibility, reaction time, and visual and auditory acuity. Menopause ends reproduction for women around age 50, and the decline is gradual rather than sudden for men.'
           }
         ]
       }
@@ -71,79 +66,94 @@ A 75-year-old retired teacher can still recite Shakespeare passages she learned 
       id: 'adol4-s3-deep',
       type: 'text' as const,
       content: `
-### Deep Dive: Aging — Facts vs. Myths
+### Deep Dive: Physical Change Across Adulthood
 
-| Popular belief | Reality |
-|---------------|---------|
-| "Memory inevitably declines dramatically" | Normal aging involves some memory decline, but most older adults maintain functional memory. Severe memory loss signals disease, not normal aging |
-| "Older adults are generally unhappy" | Research shows well-being often INCREASES in later life — the "positivity effect" means older adults focus more on positive experiences |
-| "Creativity declines with age" | Some forms of creativity peak later. Architects, writers, and historians often produce their best work in their 50s-60s |
-| "Empty nest = depression" | Most parents adjust well and report increased relationship satisfaction after children leave |
-| "Intelligence declines overall" | Crystallized intelligence is maintained; only fluid intelligence declines. Total intellectual capacity remains substantial |
+| Ability | Typical course | How it shows up in behavior |
+|---------|---------------|-----------------------------|
+| **Reproductive ability** | Women: menopause around 50 ends fertility. Men: a gradual decline in fertility with no single endpoint | Family planning decisions shift with age |
+| **Mobility and flexibility** | Strength, joint flexibility, and endurance peak in early adulthood, then decline gradually | Older adults may give up high-impact sports for walking or swimming |
+| **Reaction time** | Slows gradually from early adulthood | Older drivers leave more following distance and avoid night driving |
+| **Visual acuity** | Focusing on near objects gets harder (most people need reading glasses by their mid-40s to 50s) | Larger print, brighter light |
+| **Auditory acuity** | High-pitched sounds fade first | Trouble following conversation in noisy places; risk of social withdrawal |
 
-### Physical Changes in Adulthood
+**Wide individual variation:** Exercise, diet, and health habits slow many of these declines. A fit 70-year-old may outperform a sedentary 45-year-old.
 
-**Young adulthood (20s-30s):** Peak physical performance, peak bone density
-**Middle adulthood (40s-50s):** Gradual decline in vision, hearing, reaction time; menopause in women; some decline in fertility
-**Late adulthood (60s+):** Continued sensory decline, decreased immune function, slower processing speed — BUT wide individual variation
+### Normal Aging vs. Dementia
 
-### Social Changes
+| Normal aging | Dementia |
+|-------------|----------|
+| Occasionally forgetting a name, then remembering it later | Forgetting recent events and repeating the same question many times |
+| Slower to learn new technology | Losing the ability to follow familiar routines, such as a recipe used for years |
+| Vocabulary and knowledge intact | Language and judgment decline over time |
+| Daily life continues independently | Decline interferes with daily functioning and worsens over time |
 
-- **Social clock:** Cultural timeline for "appropriate" life milestones. Missing the social clock (e.g., unmarried at 40) can cause stress, though social clocks vary across cultures and generations
-- **Empty nest:** Transition when children leave home — initially stressful for some, but most parents report improved relationship satisfaction
-- **Retirement:** Can be positive (freedom, leisure) or negative (loss of identity, social connections)
-- **Selective optimization with compensation (Baltes):** Older adults focus on their most important activities and find new ways to compensate for declining abilities
+### How Researchers Study Aging: Cross-Sectional vs. Longitudinal
+
+| Design | How it works | Weakness when studying aging |
+|--------|-------------|------------------------------|
+| **Cross-sectional** | Compares different age groups at one time (25-, 45-, 65-, and 85-year-olds tested this year) | **Cohort effects**: age groups grew up with different schooling, health care, and technology, so differences may reflect generation rather than age |
+| **Longitudinal** | Follows the same people and retests them for years | **Attrition**: people who drop out tend to be less healthy, so the remaining sample can make aging look kinder than it is |
+
+**Classic result:** Early cross-sectional studies suggested that intelligence declined steadily from young adulthood. Longitudinal studies that followed the same adults found that many abilities, especially crystallized ones, held steady into the 60s. Part of the "decline" in the cross-sectional data was a cohort effect: the older groups had received less schooling.
       `
     },
     {
       id: 'adol4-s4-input',
       type: 'input-boxes' as const,
       content: `
-      **Applied Recall** ✍️
+**Applied Recall** ✍️
 
-      1) What type of intelligence involves accumulated knowledge and vocabulary and is maintained with age?
-
-      2) What type of intelligence involves processing speed and abstract reasoning and declines with age?
-
-      3) Erikson's final stage crisis is integrity vs. ___. (one word)
-
-      Type the exact term.
+Type one word for each blank.
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['crystallized', 'fluid', 'despair'],
-        hint1: 'Like crystals forming over time — knowledge builds up',
-        hint2: 'Like fluid flowing — quick, flexible, but diminishes',
-        hint3: 'Looking back on life with regret = ___',
-        explanation: 'Expected answers: crystallized (knowledge-based intelligence preserved with age), fluid (speed/reasoning intelligence that declines), and despair (looking back on life with regret and bitterness — the negative outcome of Erikson\'s final stage).'
+        questions: [
+          {
+            question: 'The type of intelligence based on accumulated knowledge and vocabulary, which stays relatively stable with age, is _____ intelligence.',
+            answer: 'crystallized',
+            acceptableAnswers: ['crystallised', 'crystal'],
+            explanation: 'Crystallized intelligence reflects what a person has learned, and it remains relatively stable through adulthood.'
+          },
+          {
+            question: 'The end of menstruation and reproductive ability in women, typically around age 50, is called _____.',
+            answer: 'menopause',
+            acceptableAnswers: ['the menopause'],
+            explanation: 'Menopause is the reproductive milestone named in the CED for adult physical development.'
+          },
+          {
+            question: 'In a cross-sectional study of aging, differences caused by the era each age group grew up in rather than by age itself are called _____ effects.',
+            answer: 'cohort',
+            acceptableAnswers: ['cohorts', 'generational', 'generation'],
+            explanation: 'Cohort effects arise because people born in different years had different schooling, health care, and experiences.'
+          }
+        ]
       }
     },
     {
       id: 'adol4-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Match the Concepts** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'A 45-year-old who coaches youth soccer and mentors interns at work is demonstrating ___',
-            options: ['identity achievement', 'intimacy', 'generativity', 'integrity']
-          },
-          {
-            label: 'An 80-year-old reflects on life with peace, saying "I lived a good life" — this is ___',
-            options: ['generativity', 'integrity', 'despair', 'identity']
-          },
-          {
-            label: 'A retired professor scores well on vocabulary tests but slowly on timed puzzles. This illustrates preserved ___ intelligence',
+            label: 'A retired professor scores well on vocabulary tests but slowly on timed puzzles. This illustrates preserved _____ intelligence',
             options: ['fluid', 'crystallized', 'emotional', 'general']
+          },
+          {
+            label: 'A 58-year-old can no longer hear birdsong but hears low voices clearly. This reflects declining _____',
+            options: ['reaction time', 'auditory acuity', 'flexibility', 'fluid intelligence']
+          },
+          {
+            label: 'A woman who gets lost driving the route to her home of 30 years is showing signs of _____',
+            options: ['normal aging', 'menopause', 'dementia', 'a cohort effect']
           }
         ],
-        correctAnswers: ['generativity', 'integrity', 'crystallized'],
-        hint1: 'Contributing to the next generation = generativity.',
-        hint2: 'Looking back with satisfaction and acceptance = integrity.',
-        hint3: 'Knowledge and vocabulary = crystallized intelligence.',
-        explanation: 'Mentoring and coaching = generativity (Erikson\'s middle adulthood stage). Peaceful reflection on life = integrity (Erikson\'s final stage). Vocabulary preserved = crystallized intelligence.'
+        correctAnswers: ['crystallized', 'auditory acuity', 'dementia'],
+        hint1: 'Knowledge and vocabulary hold up with age.',
+        hint2: 'High-pitched sounds are the first to fade.',
+        hint3: 'Losing a long-familiar routine goes beyond normal forgetting.',
+        explanation: 'Preserved vocabulary is crystallized intelligence. Losing high-pitched sounds first is declining auditory acuity. Getting lost on a route used for decades interferes with daily life and suggests dementia rather than normal aging.'
       }
     },
     {
@@ -152,48 +162,45 @@ A 75-year-old retired teacher can still recite Shakespeare passages she learned 
       content: `
 ## Common Misconceptions and Exam Strategy
 
-### Misconceptions to Avoid
-- **"All intelligence declines with age"** — Only fluid intelligence declines. Crystallized intelligence (knowledge, vocabulary, expertise) remains stable or increases. The AP exam specifically tests this distinction.
-- **"The empty nest always causes depression"** — Research shows most parents adjust positively and report improved relationship satisfaction. Don't assume empty nest = negative.
-- **"Erikson's stages stop being relevant in adulthood"** — The three adult stages (intimacy, generativity, integrity) are heavily tested on the AP exam.
-- **"Aging = inevitable decline in everything"** — Aging involves selective changes. Physical abilities decline, but emotional regulation, wisdom, and life satisfaction often IMPROVE.
+| Misconception | Correction |
+|--------------|-----------|
+| "All intelligence declines with age." | Only fluid intelligence tends to wane; crystallized intelligence remains relatively stable. |
+| "Memory loss is just part of getting old." | Mild slowing is normal. Memory loss that disrupts daily life signals dementia, a disorder. |
+| "Physical decline is sudden and the same for everyone." | Decline is gradual and varies widely with health, exercise, and genetics. |
+| "A cross-sectional study shows how people change with age." | It shows **age differences** at one time; only a longitudinal study tracks change in the same people. |
 
-### AP Strategy Moves
-- **Crystallized vs. fluid is one of the most tested concepts in developmental psychology.** Know examples: crystallized = vocabulary, trivia, historical knowledge; fluid = puzzle speed, novel problem-solving, working memory.
-- Erikson's three adult stages: 18-40 (intimacy), 40-65 (generativity), 65+ (integrity). Match scenarios to the correct stage.
-- If a question describes someone looking back on life → integrity vs. despair. If someone is mentoring/parenting → generativity. If forming deep relationships → intimacy.
-- The AP exam may test the "positivity effect" — the finding that older adults tend to focus on positive stimuli and memories more than younger adults.
+> 🔑 **AP Connection:** Aging research is a natural AAQ topic. If a study compares age groups at one time, call it **cross-sectional** and name a cohort effect as a limit. If it retests the same people for years, call it **longitudinal** and name attrition as a limit. Neither design is an experiment, because age cannot be randomly assigned.
       `
     },
     {
       id: 'adol4-s7-applied',
       type: 'multiple-choice' as const,
       content: `
-      **Applied Scenarios** 🎯
+**Applied Scenarios** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A 70-year-old woman says she can no longer garden as fast as she used to, so she now focuses only on her favorite roses and uses raised beds to avoid bending. According to developmental psychology, this strategy is called:',
+            question: 'In 2026, researchers test the problem-solving speed of 30-, 50-, and 70-year-olds and find the 70-year-olds slowest. A critic says the gap may partly reflect differences in schooling between generations. The critic is pointing to:',
             options: [
-              'Denial of aging — she refuses to accept that her abilities have declined',
-              'Selective optimization with compensation — narrowing focus and compensating',
-              'Learned helplessness — she has given up on activities that now feel too hard',
-              'Identity diffusion — she has lost her sense of purpose after retirement'
+              'Attrition in a longitudinal design',
+              'A cohort effect in a cross-sectional design',
+              'Demand characteristics in an experiment',
+              'Regression toward the mean across groups'
             ],
             correctAnswer: 1,
-            explanation: 'Selective optimization with compensation (Baltes) describes how older adults cope with decline: they SELECT their most important activities (favorite roses), OPTIMIZE their performance in those areas, and COMPENSATE for limitations (raised beds). This is an adaptive, healthy aging strategy — not giving up.'
+            explanation: 'Comparing different age groups at one time is cross-sectional, and differences caused by the era each group grew up in are cohort effects. Attrition is the matching weakness of longitudinal studies, which follow the same people.'
           },
           {
-            question: 'Research on the "positivity effect" in aging suggests that compared to younger adults, older adults tend to:',
+            question: 'An employer says, "Workers over 60 should not be hired because they can\'t learn anything new." Which research-based response best challenges this claim?',
             options: [
-              'Remember negative events more vividly due to accumulated life stress',
-              'Attend more to positive information and memories than to negative ones',
-              'Have identical emotional processing patterns as younger adults',
-              'Grow steadily more pessimistic as their physical abilities decline'
+              'Older workers learn new tasks more slowly but keep their knowledge and expertise',
+              'Older workers learn new tasks faster because fluid intelligence peaks late',
+              'Older workers cannot learn new tasks, but they rarely need to at work',
+              'Older workers learn at the same speed as 25-year-olds in every type of task'
             ],
-            correctAnswer: 1,
-            explanation: 'The positivity effect is a well-documented finding: older adults pay more attention to positive information, remember positive events better, and spend less time dwelling on negative experiences compared to younger adults. This cognitive shift contributes to the surprising finding that emotional well-being often INCREASES in later life.'
+            correctAnswer: 0,
+            explanation: 'Fluid intelligence and processing speed tend to decline, so new tasks may take longer, but crystallized knowledge and expertise remain relatively stable. Older adults can learn; they may simply need more time on novel tasks.'
           }
         ]
       }

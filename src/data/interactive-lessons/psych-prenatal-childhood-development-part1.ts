@@ -23,7 +23,7 @@ The developing child is connected to the mother through the **placenta**, which 
 |---|---|---|---|
 | **Teratogens** | Agents from outside the body (chemicals, drugs, some infections) that can harm prenatal development | Alcohol | Fetal alcohol spectrum disorders: small head, facial differences, learning and attention problems |
 | **Maternal illness** | Diseases the mother has or catches during pregnancy | Rubella (German measles); Zika virus | Rubella: deafness, heart defects, cataracts. Zika: microcephaly (an unusually small head and brain) |
-| **Genetic mutations** | Changes in genes or chromosomes the child carries | An extra copy of chromosome 21 | Down syndrome: intellectual disability and characteristic physical features |
+| **Genetic mutations** | Changes in the genetic material the child carries | A genetic difference present from conception | Down syndrome: developmental delays and characteristic physical features |
 | **Hormonal factors** | Hormone levels the developing child is exposed to | Unusually high prenatal androgen exposure | On average, shifts in later play preferences and other sex-typed behaviors |
 | **Environmental factors** | Nutrition, stress, pollutants and health care | Low folic acid in the mother's diet | Higher risk of neural tube defects such as spina bifida |
 
@@ -58,7 +58,7 @@ Notice that "teratogen" is the broad label for harmful outside agents. Some viru
               'It begins functioning only in the final weeks before delivery'
             ],
             correctAnswer: 1,
-            explanation: 'The placenta exchanges oxygen, nutrients and wastes, but it is not a complete barrier: alcohol, nicotine, many medications and some viruses cross it. Down syndrome comes from an extra chromosome, not from the placenta.'
+            explanation: 'The placenta exchanges oxygen, nutrients and wastes, but it is not a complete barrier: alcohol, nicotine, many medications and some viruses cross it. Down syndrome comes from a genetic difference present from conception, not from the placenta.'
           }
         ]
       }
@@ -109,7 +109,7 @@ A practice dataset tracks 600 children whose mothers reported their smoking in p
       content: `
 **Recall Practice — Prenatal Influences** ✍️
 
-Type one term or number for each blank.
+Type one term for each blank.
       `,
       exercise: {
         questions: [
@@ -120,10 +120,10 @@ Type one term or number for each blank.
             explanation: 'Teratogens include alcohol, nicotine, some medications, lead and some viruses.'
           },
           {
-            question: 'Down syndrome results from an extra copy of chromosome number ______.',
-            answer: '21',
-            acceptableAnswers: ['twenty-one', 'twenty one'],
-            explanation: 'Trisomy 21, a chromosomal difference, is the genetic cause of Down syndrome.'
+            question: 'Changes in the genetic material a child carries, such as the difference behind Down syndrome, are called genetic ______.',
+            answer: 'mutations',
+            acceptableAnswers: ['mutation'],
+            explanation: 'The CED lists genetic mutations alongside teratogens, maternal illness, hormones and environmental factors as prenatal influences.'
           },
           {
             question: 'The organ that passes oxygen and nutrients to the developing child but lets many substances cross is the ______.',
@@ -132,7 +132,7 @@ Type one term or number for each blank.
           }
         ],
         hint1: 'The first term comes from Greek roots meaning "monster-forming".',
-        hint2: 'Down syndrome is also called trisomy ___.',
+        hint2: 'The CED word for a change in genes is a genetic ___.',
         hint3: 'This organ connects mother and developing child through the umbilical cord.'
       }
     },

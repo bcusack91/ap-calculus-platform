@@ -19,18 +19,20 @@ Every emotional experience has three components. The AP exam tests whether you c
 | **Behavioral (expressive)** | Facial expressions, body language, vocal tone, gestures | Eyes widen, mouth opens, body tenses, voice rises |
 | **Cognitive (subjective)** | Conscious interpretation, appraisal, and labeling of the experience | "I'm scared" — the mental awareness and interpretation |
 
-### Ekman's Universal Emotions
+### Are Some Emotional Expressions Universal?
 
-Paul Ekman identified **six basic emotions** expressed through universally recognized facial expressions across all cultures:
+Research, much of it by Paul Ekman, has explored whether the expression of emotions is universally common. Six emotions that may be commonly experienced and recognized across cultures are:
 
-| Emotion | Universal expression | Cross-cultural? |
-|---------|---------------------|----------------|
-| **Happiness** | Duchenne smile (activates both mouth AND eyes) | ✅ Yes |
-| **Sadness** | Corners of mouth down, inner brow raised | ✅ Yes |
-| **Fear** | Eyes wide, mouth open, brows raised | ✅ Yes |
-| **Anger** | Brows lowered, lips pressed, jaw tightened | ✅ Yes |
-| **Disgust** | Nose wrinkled, upper lip raised | ✅ Yes |
-| **Surprise** | Eyebrows raised, mouth open (briefly) | ✅ Yes |
+| Emotion | Typical facial expression |
+|---------|--------------------------|
+| **Happiness** | Smile that raises the cheeks and crinkles the eyes |
+| **Sadness** | Corners of mouth down, inner brow raised |
+| **Fear** | Eyes wide, mouth open, brows raised |
+| **Anger** | Brows lowered, lips pressed, jaw tightened |
+| **Disgust** | Nose wrinkled, upper lip raised |
+| **Surprise** | Eyebrows raised, mouth open (briefly) |
+
+Research on the universality of emotions shows **mixed results**: people across cultures recognize these expressions at rates well above chance, but accuracy is higher for faces from their own culture, and some studies find weaker agreement in remote communities.
 
 ### Real-World Example
 
@@ -54,7 +56,7 @@ A student receives an A+ on a test she studied hard for. The physiological compo
               'The social component — how participants discuss the film with others'
             ],
             correctAnswer: 2,
-            explanation: 'Galvanic skin response measures sweat gland activity — a pure physiological response controlled by the autonomic nervous system. This is the physiological component of emotion: the body\'s automatic, measurable reactions (heart rate, sweating, pupil dilation, cortisol levels).'
+            explanation: 'Galvanic skin response measures sweat gland activity — a pure physiological response controlled by the autonomic nervous system. This is the physiological component of emotion: the body\'s automatic, measurable reactions (heart rate, sweating, pupil dilation, blood pressure).'
           },
           {
             question: 'Paul Ekman\'s cross-cultural research on facial expressions demonstrated that:',
@@ -65,7 +67,7 @@ A student receives an A+ on a test she studied hard for. The physiological compo
               'Facial expressions of emotion are entirely learned through each culture\'s own display rules'
             ],
             correctAnswer: 1,
-            explanation: 'Ekman\'s research — including studies with isolated tribes in Papua New Guinea who had no exposure to Western media — demonstrated that six basic emotions are expressed and recognized universally. This is strong evidence that some emotional expressions are innate (biological), not entirely learned.'
+            explanation: 'Ekman\'s research, including studies with isolated communities in Papua New Guinea who had little exposure to Western media, found that several basic expressions were recognized across cultures. This suggests some expressions are biologically based, although later research on universality has produced mixed results.'
           }
         ]
       }
@@ -84,11 +86,14 @@ The facial feedback hypothesis proposes that facial expressions can actually INF
 |--------------|---------------|
 | **Strack's pen study** | Participants who held a pen in their teeth (forcing a smile) rated cartoons as funnier than those who held the pen with their lips (forcing a frown) |
 | **Botox research** | People who received Botox (reducing ability to frown) reported feeling LESS negative emotion — their inability to make the expression reduced the emotion |
-| **Implication** | Supports James-Lange theory: bodily states (including facial expressions) can CAUSE emotional feelings |
+| **Large replication** | A 2016 replication of the pen study across 17 labs found no reliable effect, while later reviews report small effects |
+| **Implication** | Supports theories in which the physiological experience of emotion comes BEFORE the cognitive appraisal, but the evidence is mixed |
 
 #### Display Rules
 
-While basic emotions may be universal, **display rules** are culturally learned norms about WHEN, WHERE, and HOW it's appropriate to express emotions.
+While some expressions may be shared across cultures, **display rules** are learned norms about WHEN, WHERE, and HOW it's appropriate to express emotions. **Elicitors**, the situations that trigger an emotion, also differ: a gesture that insults in one culture may mean nothing in another.
+
+Display rules and elicitors differ **among cultures** and also **within a culture**, where they can regulate how people of different **genders, ages, or socioeconomic classes** display and interpret emotions.
 
 | Culture | Display rule |
 |---------|-------------|
@@ -96,6 +101,7 @@ While basic emotions may be universal, **display rules** are culturally learned 
 | **Japanese** | Public displays of negative emotion are minimized; smiling used to mask discomfort |
 | **Mediterranean** | More open display of grief, with loud mourning at funerals |
 | **British** | "Stiff upper lip" — emotional restraint valued publicly |
+| **Within one culture** | Adults may be expected to hide anger at work, while young children are allowed to cry openly in public |
 
 #### Key Distinction: Emotion vs. Expression
 
@@ -141,19 +147,19 @@ While basic emotions may be universal, **display rules** are culturally learned 
             options: ['physiological', 'behavioral', 'cognitive']
           },
           {
-            label: 'A genuine smile that activates the muscles around both the mouth AND the eyes is called a ___ smile',
-            options: ['forced', 'social', 'Duchenne', 'display']
+            label: 'In some communities, boys are told not to cry in public while girls are not. This shows display rules can differ by ___',
+            options: ['gender', 'age', 'social class', 'language']
           },
           {
             label: 'In Japan, smiling when receiving bad news (to avoid burdening others) is an example of a ___',
             options: ['universal emotion', 'facial feedback response', 'display rule', 'cognitive appraisal']
           }
         ],
-        correctAnswers: ['physiological', 'Duchenne', 'display rule'],
+        correctAnswers: ['physiological', 'gender', 'display rule'],
         hint1: 'Heart rate and sweating = autonomic nervous system = physiological.',
-        hint2: 'Named after a French neurologist who studied genuine vs. fake smiles.',
+        hint2: 'The rule applies to boys but not to girls.',
         hint3: 'Cultural norms for expressing emotions = display rules.',
-        explanation: 'Heart racing and sweating = physiological (autonomic nervous system). A genuine smile engaging the eye muscles = Duchenne smile (vs. a social/polite smile that only uses the mouth). Culturally masking emotions = display rule (Japanese cultural norm of minimizing public negative emotion).'
+        explanation: 'Heart racing and sweating = physiological (autonomic nervous system). A rule that applies to boys but not girls shows display rules can differ by gender within a culture. Culturally masking emotions = display rule (Japanese cultural norm of minimizing public negative emotion).'
       }
     },
     {
@@ -163,15 +169,15 @@ While basic emotions may be universal, **display rules** are culturally learned 
 ## Common Misconceptions and Exam Strategy
 
 ### Misconceptions to Avoid
-- **"Ekman's six emotions are the ONLY emotions"** — Ekman identified six BASIC emotions with universal facial expressions. There are many more emotions (jealousy, pride, guilt, shame) — they just don't have universally recognized facial expressions.
+- **"Those six are the ONLY emotions"** — They are emotions that may be commonly recognized across cultures. There are many more emotions (jealousy, pride, guilt, shame) without widely shared facial expressions.
 - **"Display rules mean emotions are fake"** — No. Display rules affect the EXPRESSION, not the EXPERIENCE. A person following a display rule still feels the emotion internally.
-- **"Facial feedback = Schachter-Singer"** — Facial feedback supports JAMES-LANGE (body → emotion). Schachter-Singer requires a cognitive label. Don't confuse them.
-- **"All smiles are genuine"** — Duchenne smiles (eyes + mouth) indicate genuine happiness. Social/polite smiles use only the mouth.
+- **"Facial feedback shows that emotions need a cognitive label"** — Facial feedback supports the body-first sequence (expression → feeling). The cognitive-label view says arousal must be interpreted. Don't confuse them.
+- **"Universal means identical everywhere"** — Research on universality shows mixed results; recognition is above chance across cultures but better within one's own culture.
 
 ### AP Strategy Moves
-- If a question asks about measuring emotion PHYSIOLOGICALLY → galvanic skin response, heart rate, fMRI, cortisol levels.
-- If a question asks about universal aspects of emotion → Ekman's six basic emotions and their facial expressions.
-- If a question describes cultural variation in emotional expression → display rules.
+- If a question asks about measuring emotion PHYSIOLOGICALLY → galvanic skin response, heart rate, blood pressure, fMRI.
+- If a question asks about universal aspects of emotion → anger, disgust, sadness, happiness, surprise, and fear, with the caveat that results are mixed.
+- If a question describes cultural (or gender, age, or class) variation in emotional expression → display rules.
 - **The three components (physiological, behavioral, cognitive) appear frequently in free-response questions.** You'll be asked to identify which component is illustrated in a scenario.
 - Remember: expression ≠ experience. A calm-looking person may be intensely emotional but following display rules.
       `
@@ -188,23 +194,23 @@ While basic emotions may be universal, **display rules** are culturally learned 
             question: 'Researchers show photographs of facial expressions to both American college students and members of an isolated tribe in Papua New Guinea. Both groups identify the same emotions from the same faces. This finding most strongly supports:',
             options: [
               'Display rules — both cultures have learned the same norms for showing emotion',
-              'Cognitive appraisal theory — both groups are interpreting the faces intellectually',
-              'Ekman\'s view that basic emotional expressions are universal and likely innate',
-              'James-Lange theory — both groups experience the same physiological responses'
+              'Facial feedback — making the faces caused both groups to feel the same way',
+              'Universality — some basic emotional displays are shared across cultures',
+              'Broaden-and-build — positive emotions widened both groups\' awareness'
             ],
             correctAnswer: 2,
-            explanation: 'This is the exact design of Ekman\'s classic cross-cultural research. If an isolated group with no Western media exposure can recognize the same emotions from the same expressions, those expressions must be biologically innate — not culturally learned. This supports the universality of basic emotional expressions.'
+            explanation: 'This mirrors Ekman\'s classic cross-cultural research. If an isolated group with little Western media exposure recognizes the same emotions from the same expressions, those expressions are likely shared rather than purely learned, which supports universality (though later studies show mixed results).'
           },
           {
             question: 'A therapist tells an anxious patient, "Even though you feel nervous, try putting on a slight smile for the next few minutes." The therapist is applying which concept?',
             options: [
               'Display rules — teaching the patient the cultural norms for showing nervousness',
               'The facial feedback hypothesis — the smile itself can ease the anxious feeling',
-              'Schachter-Singer theory — giving the patient a new label for the arousal she feels',
-              'Cannon-Bard theory — showing that the expression and the feeling are fully independent'
+              'Cognitive labeling — giving the patient a new name for the arousal she feels',
+              'Simultaneous emotion — showing that expression and feeling are independent'
             ],
             correctAnswer: 1,
-            explanation: 'The therapist is using the facial feedback hypothesis: by changing the physical expression (smiling), the patient\'s brain may receive feedback that reduces the anxious feeling. This is actually used in some therapeutic approaches — forcing a different facial expression can modestly shift the emotional experience.'
+            explanation: 'The therapist is using the facial feedback hypothesis: by changing the physical expression (smiling), the patient\'s brain may receive feedback that reduces the anxious feeling. Research testing this idea has produced mixed results, so any effect is likely modest.'
           }
         ]
       }

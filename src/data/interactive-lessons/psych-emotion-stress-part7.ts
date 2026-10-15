@@ -9,26 +9,24 @@ export const psychEmotionPart7Data = {
 
 **Part 7 of 7 — Integrating Emotion & Stress for the AP Exam**
 
-This final part brings together ALL concepts from the Emotion & Stress unit. Emotion theories, components of emotion, stressors, stress responses, and coping strategies frequently appear together on the AP exam — often in a single free-response question.
+This final part brings together the concepts from the Emotion & Stress topic. The order of body and mind in emotion, universality and display rules, stressors, stress responses, coping, and positive psychology often appear together on the AP exam, in multiple-choice scenarios and as concepts you use to explain evidence in an EBQ.
 
 ### Master Integration Table
 
-| Concept | Theorist/Key term | What to remember | Common AP trap |
-|---------|-------------------|------------------|----------------|
-| **James-Lange** | James, Lange | Body first → then emotion | Confusing with Schachter-Singer (both start with body — but SS adds cognitive label) |
-| **Cannon-Bard** | Cannon, Bard | Simultaneous body + emotion | Thinking this means the body doesn't matter (it does — just simultaneously) |
-| **Schachter-Singer** | Schachter, Singer | Arousal + label = emotion | Confusing with James-Lange (SS requires cognitive interpretation of AMBIGUOUS arousal) |
-| **Lazarus** | Lazarus | Thought first → then emotion | Confusing with Zajonc (who says some emotions skip cognition) |
-| **Ekman** | Ekman | 6 universal emotions | Thinking these are the ONLY emotions (they're the only UNIVERSAL ones) |
-| **GAS** | Selye | Alarm → Resistance → Exhaustion | Thinking exhaustion = just tiredness (it means immune system failure) |
-| **Type A** | Friedman & Rosenman | Hostility → heart disease | Thinking ALL Type A traits cause heart disease (only hostility) |
-| **Coping** | Lazarus & Folkman | Problem-focused vs. emotion-focused | Thinking problem-focused is always better (depends on controllability) |
-| **Learned helplessness** | Seligman | No control → giving up | Thinking it's laziness (it's a conditioned response) |
-| **Social support** | Cohen et al. | Buffers stress impact | Thinking it prevents stress (it buffers, doesn't prevent) |
-
-### Why This Matters
-
-The Motivation, Emotion, and Stress unit accounts for approximately 6-8% of the AP Psychology exam. Questions in this unit are heavily scenario-based — you must be able to apply theories to real-world situations, not just recite definitions.
+| Concept | What to remember | Common AP trap |
+|---------|------------------|----------------|
+| **Ordering body and mind** | Succession (body first, or appraisal first), simultaneous, or cognitive label required | Trying to name the theory: names are outside the scope of the exam; describe the sequence |
+| **Facial-feedback hypothesis** | Facial expressions influence felt emotion; supports physiology before appraisal | Forgetting that results are mixed |
+| **Broaden-and-build** | Positive emotions broaden thinking and build resources; negative emotions narrow them | Thinking negative emotions have no function |
+| **Universality and display rules** | Some expressions may be recognized across cultures (mixed results); display rules and elicitors vary by culture, gender, age, and class | Treating expression as a reliable readout of feeling |
+| **Eustress vs. distress** | Motivating vs. debilitating stress | Thinking all stress is harmful |
+| **Stressors** | Traumatic stressors, daily hassles that build up, ACEs | Overlooking daily hassles |
+| **Stress and health** | Hypertension, headaches, immune suppression | Claiming causation from correlational studies |
+| **GAS (Selye)** | Alarm (fight-flight-freeze) → resistance → exhaustion | Thinking exhaustion is just tiredness (illness risk peaks there) |
+| **Tend-and-befriend** | Caring for others and seeking connection, mostly in women | Treating fight-flight-freeze as the only response |
+| **Coping** | Problem-focused vs. emotion-focused | Thinking problem-focused is always better (it depends on controllability) |
+| **Learned helplessness** | No control → giving up | Thinking it is laziness |
+| **Positive psychology** | Gratitude, signature strengths and six virtues, posttraumatic growth | Thinking it ignores suffering |
       `
     },
     {
@@ -40,18 +38,18 @@ The Motivation, Emotion, and Stress unit accounts for approximately 6-8% of the 
       exercise: {
         questions: [
           {
-            question: 'A free-response question describes a college student whose roommate plays loud music every night. The student\'s heart races (physiology), she clenches her fists (behavioral), she thinks "this is unacceptable" (cognitive), she confronts the roommate about quiet hours (coping), and her grades drop because she can\'t sleep (health). Which set of terms CORRECTLY identifies ALL the concepts illustrated?',
+            question: 'A college student\'s roommate plays loud music every night. The student\'s heart races, she clenches her fists, she thinks "this is unacceptable," she asks the roommate to agree on quiet hours, and her grades drop because she can\'t sleep. Which set of terms correctly identifies the concepts illustrated?',
             options: [
-              'Cannon-Bard theory, one emotion component, problem-focused coping, and a daily hassle stressor',
+              'Simultaneous emotion, one emotion component, problem-focused coping, and a traumatic stressor',
               'Three emotion components, problem-focused coping, and a daily hassle affecting health',
-              'James-Lange theory, learned helplessness, emotion-focused coping, and a daily hassle',
-              'Schachter-Singer theory, the exhaustion stage of GAS, and seeking social support'
+              'Body-first emotion, learned helplessness, emotion-focused coping, and a daily hassle',
+              'Cognitive labeling, the exhaustion phase of the GAS, and tend-and-befriend'
             ],
             correctAnswer: 1,
-            explanation: 'Five concepts: (1) Physiological component — heart racing, (2) Behavioral component — clenching fists, (3) Cognitive component — "this is unacceptable," (4) Problem-focused coping — confronting the roommate to change the situation, (5) Daily hassle — the recurring loud music is a chronic, daily stressor that affects health (sleep/grades). Notice that this scenario illustrates concepts from MULTIPLE parts of the unit — exactly how the AP exam works.'
+            explanation: 'The racing heart, clenched fists, and angry thought are the physiological, behavioral, and cognitive components; asking for quiet hours is problem-focused coping; and the nightly music is a daily hassle that affects her sleep and grades.'
           },
           {
-            question: 'Which statement about the relationship between emotion theories is MOST accurate for the AP exam?',
+            question: 'Which statement about theories of emotion is MOST accurate for the AP exam?',
             options: [
               'Only one theory is correct, and the AP exam expects you to identify which one',
               'Each captures part of emotion; the exam tests the sequences, not the theory names',
@@ -59,7 +57,7 @@ The Motivation, Emotion, and Stress unit accounts for approximately 6-8% of the 
               'The theories apply only to negative emotions such as fear, anger, and disgust'
             ],
             correctAnswer: 1,
-            explanation: 'The current AP Psychology framework treats the specific names of emotion theories as outside the scope of the exam. What it does test is the idea behind them: some accounts put the physiological response first, some have the body\'s response and the feeling occur together, and some require a cognitive label or appraisal before an emotion is felt. Each captures part of emotional experience, so match a scenario to the sequence it shows rather than asking which theory is "correct."'
+            explanation: 'The current AP Psychology framework treats the specific names of emotion theories as outside the scope of the exam. It tests the ideas: physiological and cognitive experiences in succession, simultaneously, or with a required cognitive label.'
           }
         ]
       }
@@ -72,90 +70,96 @@ The Motivation, Emotion, and Stress unit accounts for approximately 6-8% of the 
 
 The AP exam loves questions that connect Emotion & Stress to other units:
 
-#### Emotion & Stress + Biological Psychology
+#### Emotion & Stress + Biological Bases
 
 | Connection | How they link |
 |-----------|-------------|
-| **Amygdala** | Processes fear and emotional memories — connects to all emotion theories |
-| **Hypothalamus** | Triggers the HPA axis stress response — links emotion to GAS |
-| **Autonomic nervous system** | Mediates fight-or-flight (sympathetic) and rest-and-digest (parasympathetic) |
-| **Prefrontal cortex** | Involved in cognitive appraisal (Lazarus) and emotion regulation |
+| **Amygdala** | Processes fear and emotional memories |
+| **Autonomic nervous system** | Sympathetic division drives fight-flight-freeze; parasympathetic division restores rest and digest |
+| **Adrenaline and oxytocin** | Adrenaline mobilizes the alarm reaction; oxytocin is linked to bonding in tend-and-befriend |
+| **Prefrontal cortex** | Involved in appraising situations and regulating emotion |
 
 #### Emotion & Stress + Learning
 
 | Connection | How they link |
 |-----------|-------------|
 | **Classical conditioning** | Phobias = conditioned emotional responses (Little Albert) |
-| **Operant conditioning** | Learned helplessness = uncontrollable punishment → passive behavior |
-| **Observational learning** | Children learn emotional expression and coping by watching parents |
+| **Operant conditioning** | Learned helplessness = uncontrollable aversive events → passive behavior |
+| **Observational learning** | Children learn emotional expression, display rules, and coping by watching parents |
 
-#### Emotion & Stress + Social Psychology
+#### Emotion & Stress + Motivation and Social Psychology
 
 | Connection | How they link |
 |-----------|-------------|
-| **Social facilitation** | Arousal from others' presence affects performance (Yerkes-Dodson law) |
-| **Social support** | Group membership buffers stress |
+| **Arousal theory (Yerkes-Dodson law)** | Moderate arousal aids performance, which helps explain eustress |
+| **Locus of control and explanatory style** | Shape whether people cope actively or give up |
 | **Display rules** | Cultural norms shape emotional expression |
 
-#### Free-Response Scoring Guide
+#### Using These Concepts on the Free-Response Section
 
-When analyzing an emotion/stress scenario in the FRQ:
-
-**Point 1:** Name the theory or concept correctly
-**Point 2:** Define it accurately in your own words
-**Point 3:** Apply it to the specific scenario with behavioral evidence
-**Point 4:** Explain WHY this evidence matches (connect behavior to definition)
+| Format | How emotion and stress concepts earn points |
+|--------|--------------------------------------------|
+| **AAQ (7 points, 6 parts)** | A stress or emotion study is the source. Identify the method, give the operational definition (e.g., well-being = score on a questionnaire), describe a statistic, name an ethical guideline and how it was applied, judge generalizability from the sample, and explain support or refutation |
+| **EBQ (7 points, 3 parts)** | Make a defensible claim, then explain evidence from two different sources with two different concepts, such as immune suppression for one source and daily hassles for another |
       `
     },
     {
       id: 'emot7-s4-input',
       type: 'input-boxes' as const,
       content: `
-      **Applied Recall** ✍️
+**Applied Recall** ✍️
 
-      1) The emotion theory that explains "misattribution of arousal" (same arousal, different label) is ___. (hyphenated last names)
-
-      2) The three GAS stages in order: Alarm, Resistance, ___. (one word)
-
-      3) The specific Type A component most linked to coronary heart disease is ___. (one word)
-
-      Type the exact term.
+Type one word for each blank.
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Schachter-Singer', 'Exhaustion', 'hostility'],
-        hint1: 'Two-factor theory: arousal + label = emotion',
-        hint2: 'Body resources depleted → illness → potential organ failure',
-        hint3: 'Not competitiveness, not time urgency — the "toxic" component is chronic anger',
-        explanation: 'Expected answers: Schachter-Singer (two-factor theory — the only theory that explains how the same arousal can produce different emotions based on cognitive labeling), Exhaustion (the final GAS stage where body resources are depleted and vulnerability to illness increases), and hostility (the specific component of Type A personality most strongly linked to heart disease).'
+        questions: [
+          {
+            question: 'The hypothesis that facial expressions influence the experience of emotion is the facial-_____ hypothesis.',
+            answer: 'feedback',
+            acceptableAnswers: ['feed-back'],
+            explanation: 'The facial-feedback hypothesis supports the idea that physiology comes before appraisal, though research results are mixed.'
+          },
+          {
+            question: 'The three GAS phases in order are alarm, resistance, and _____.',
+            answer: 'exhaustion',
+            acceptableAnswers: ['exhaustion phase', 'exhaustion stage'],
+            explanation: 'Exhaustion is the phase of greatest susceptibility to illness.'
+          },
+          {
+            question: 'Character strengths are classified under six categories of _____, such as wisdom and courage.',
+            answer: 'virtues',
+            acceptableAnswers: ['virtue'],
+            explanation: 'The six virtue categories are wisdom, courage, humanity, justice, temperance, and transcendence.'
+          }
+        ]
       }
     },
     {
       id: 'emot7-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Match the Concepts** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'You appraise a situation as threatening FIRST, then feel fear. This is ___',
-            options: ['James-Lange', 'Cannon-Bard', 'Schachter-Singer', 'Lazarus']
+            label: 'You judge a situation as threatening FIRST, then feel fear and a racing heart. This fits the _____ view',
+            options: ['body-first', 'simultaneous', 'cognitive-label', 'appraisal-first']
           },
           {
-            label: 'The best predictor of day-to-day health problems is ___',
-            options: ['catastrophes', 'major life changes', 'daily hassles', 'Type A personality']
+            label: 'Small stressors that build up over time and predict everyday colds and headaches are _____',
+            options: ['traumatic stressors', 'major life events', 'daily hassles', 'eustress']
           },
           {
-            label: 'A patient with terminal illness practices meditation and spends time with family. This is ___ coping',
-            options: ['problem-focused', 'emotion-focused', 'avoidance']
+            label: 'A patient with an incurable illness practices meditation and spends time with family. This is _____ coping',
+            options: ['problem-focused', 'emotion-focused', 'helpless', 'external']
           }
         ],
-        correctAnswers: ['Lazarus', 'daily hassles', 'emotion-focused'],
-        hint1: 'Cognitive appraisal FIRST = Lazarus.',
-        hint2: 'Chronic, small, everyday stressors are the strongest predictor.',
-        hint3: 'Can\'t change the illness — managing the emotional experience.',
-        explanation: 'Thinking/appraising first = Lazarus (cognitive appraisal precedes emotion). Daily hassles = best predictor of everyday health problems (chronic and cumulative). Terminal illness is uncontrollable → emotion-focused coping (meditation, family time) is most adaptive.'
+        correctAnswers: ['appraisal-first', 'daily hassles', 'emotion-focused'],
+        hint1: 'A judgment of the situation comes before the feeling.',
+        hint2: 'Chronic, small, everyday stressors.',
+        hint3: 'The illness cannot be changed, so manage the emotional experience.',
+        explanation: 'Judging first, then feeling, is the appraisal-first succession. Daily hassles build up and predict everyday symptoms. With an uncontrollable illness, managing the emotional response is emotion-focused coping.'
       }
     },
     {
@@ -164,55 +168,55 @@ When analyzing an emotion/stress scenario in the FRQ:
       content: `
 ## Final Exam Strategy: Emotion & Stress
 
-### High-Frequency AP Topics (This Unit)
-1. **Emotion theory comparison** — Identifying which theory a scenario illustrates (especially James-Lange vs. Schachter-Singer)
-2. **Misattribution of arousal** — The bridge study (Dutton & Aron) is a classic
-3. **GAS stages** — Alarm, Resistance, Exhaustion
-4. **Daily hassles** — Best predictor of health problems (counterintuitive)
-5. **Type A hostility** — Only hostility (not all Type A traits) predicts heart disease
-6. **Problem-focused vs. emotion-focused coping** — Matching to scenario
-7. **Learned helplessness** — Seligman, connection to depression
+### High-Frequency AP Topics (This Topic)
+1. **Ordering body and mind** — succession, simultaneous, or cognitive label required (no theory names)
+2. **Facial feedback and broaden-and-build** — the two emotion ideas the CED names
+3. **Universality and display rules** — including within-culture differences
+4. **Stress and health** — eustress vs. distress, daily hassles, ACEs, hypertension, headaches, immune suppression
+5. **GAS and tend-and-befriend** — alarm, resistance, exhaustion
+6. **Problem-focused vs. emotion-focused coping** — matching to the scenario
+7. **Positive psychology** — gratitude, signature strengths, six virtues, posttraumatic growth
 
 ### Critical Distinctions to Master
-- **James-Lange vs. Schachter-Singer:** Both body-first, but JL = specific body → specific emotion; SS = ambiguous arousal + label from context
-- **Problem-focused vs. emotion-focused:** PF = change the situation; EF = change how you feel
-- **Sympathetic vs. parasympathetic:** Sympathetic = accelerator; parasympathetic = brake
-- **Stress vs. stressor:** Stress = response; stressor = the event/situation
-- **Eustress vs. distress:** Both are stress, just positive vs. negative
+- **Body first vs. cognitive label required:** both start with arousal, but the label view says arousal must be interpreted
+- **Problem-focused vs. emotion-focused:** change the situation vs. change how you feel
+- **Sympathetic vs. parasympathetic:** accelerator vs. brake
+- **Stress vs. stressor:** the response vs. the event
+- **Eustress vs. distress:** motivating vs. debilitating
 
-### Free-Response Template
-"According to [theory/concept] proposed by [theorist], [definition]. In this scenario, the person is demonstrating [concept] because [specific behavioral evidence]. This is an example of [concept] because [explanation connecting evidence to definition]."
+### EBQ Sentence Frame
+"According to Source 2, [specific evidence]. This supports the claim that [claim] because [psychological concept, e.g., immune suppression] explains [how the evidence connects to the claim]."
       `
     },
     {
       id: 'emot7-s7-applied',
       type: 'multiple-choice' as const,
       content: `
-      **Applied Scenarios** 🎯
+**Applied Scenarios** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP free-response question asks: "Using TWO theories of emotion, explain how a person might experience fear differently when encountering a bear on a hiking trail." The strongest response would compare:',
+            question: 'Two hikers see a bear. Hiker A notices his heart pounding and only then feels afraid. Hiker B feels afraid at the very moment her heart starts pounding. Which statement best compares them?',
             options: [
-              'Type A and Type B personality patterns and how each would respond to the bear',
-              'Problem-focused coping (running away) and emotion-focused coping (deep breathing)',
-              'James-Lange (body reacts, then fear) and Lazarus (appraisal, then fear)',
-              'Ekman\'s universal facial expressions and the display rules for showing fear'
+              'A shows a body-first succession; B shows a simultaneous experience',
+              'A shows a simultaneous experience; B shows a body-first succession',
+              'Both show a cognitive label applied after searching for a reason',
+              'Both show a quick appraisal of danger that came before any arousal'
             ],
-            correctAnswer: 2,
-            explanation: 'The question asks for TWO THEORIES OF EMOTION. A strong response picks two theories and shows how they predict DIFFERENT sequences: (1) James-Lange: see bear → heart races → "I must be afraid" (body first). (2) Lazarus: see bear → appraise "dangerous animal" → feel fear (thought first). Notice the same situation (bear) but the order of events differs by theory. This is exactly what the AP exam wants — you demonstrate understanding by showing HOW the theories differ, not just WHAT they say.'
+            correctAnswer: 0,
+            explanation: 'For Hiker A the arousal came first and the fear followed, a body-first succession. For Hiker B the arousal and the fear occurred together, the simultaneous view.'
           },
           {
-            question: 'A student experiences the following sequence during a semester: (1) Learns she will be failing calculus — heart pounds, can\'t sleep. (2) For the next month, she studies intensely, appears to function normally, but cortisol remains elevated. (3) After the final exam, she collapses with bronchitis and sleeps for three days. This sequence illustrates:',
+            question: 'A student learns she is failing calculus; her heart pounds and she can\'t sleep. For the next month, she studies intensely and appears to function normally. After the final exam, she comes down with bronchitis and sleeps for three days. This sequence illustrates:',
             options: [
-              'The three components of emotion (physiological, behavioral, cognitive)',
-              'Selye\'s general adaptation syndrome: alarm, resistance, then exhaustion',
-              'Problem-focused coping that later shifts into emotion-focused coping',
-              'The Lazarus-Zajonc debate about whether cognition precedes emotion'
+              'The three components of emotion, from physiological to cognitive',
+              'Selye\'s general adaptation syndrome, from the alarm phase to exhaustion',
+              'Problem-focused coping that later shifts to emotion-focused coping',
+              'The broaden-and-build effect of a negative emotion on her thinking'
             ],
             correctAnswer: 1,
-            explanation: 'This is a textbook GAS sequence: (1) ALARM — learning about failure triggers sympathetic activation (heart pounds, can\'t sleep). (2) RESISTANCE — she adapts and functions but body is working hard (cortisol elevated). (3) EXHAUSTION — body resources depleted, immune system fails, she gets sick (bronchitis). This is the same pattern Selye identified: prolonged stress → resistance → eventual physical breakdown.'
+            explanation: 'The pounding heart and sleeplessness are the alarm reaction, the month of intense but functional studying is resistance, and getting sick once the stress ends is exhaustion, when susceptibility to illness is greatest.'
           }
         ]
       }

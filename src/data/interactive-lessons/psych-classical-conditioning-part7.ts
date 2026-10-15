@@ -155,12 +155,11 @@ export const psychClassicalPart7Data = {
       - Watson's Little Albert study would NOT be ethical today — lack of informed consent and causing lasting harm violate modern research standards.
 
       ### AP Free-Response Strategy
-      When answering a classical conditioning FRQ:
-      1. **Define** the term before applying it
-      2. **Label** all four components (UCS, UCR, CS, CR) explicitly
-      3. **Connect** each label to the specific scenario details
-      4. **Predict** what would happen next (extinction, generalization, etc.)
-      5. **Distinguish** from operant conditioning if the question requires comparison
+      The free-response section has an Article Analysis Question (AAQ, 7 points, 6 parts) and an Evidence-Based Question (EBQ, 7 points, 3 parts).
+      1. **AAQ:** a conditioning study summary may ask you to identify the research method, state how a variable was operationally defined (for example, "fear = seconds before touching the rat"), describe what a statistic shows, name an ethical guideline the researchers applied, judge generalizability, and say whether a finding supports the hypothesis
+      2. **EBQ:** if you use classical conditioning to explain a source, label the UCS, UCR, CS, and CR with details FROM that source
+      3. **Use a different concept** for each source on the EBQ (for example, classical conditioning for one source and counterconditioning for another)
+      4. **Predict** what would happen next (extinction, generalization, etc.) when a scenario asks
 
       ### High-Frequency AP Topics in This Unit
       - Labeling UCS/UCR/CS/CR in novel scenarios
@@ -190,7 +189,7 @@ export const psychClassicalPart7Data = {
             explanation: 'The freshener (CS) was paired with exam stress (UCS) during school, creating conditioned anxiety (CR). In the store, the CS triggered anxiety without the UCS. On the later visit, repeated exposure without exams resulted in extinction. This is a complete classical conditioning timeline.'
           },
           {
-            question: 'On an AP free-response question, a student writes: "The loud noise is the CR because it causes Albert to cry." What error did the student make?',
+            question: 'In a practice explanation, a student writes: "The loud noise is the CR because it causes Albert to cry." What error did the student make?',
             options: [
               'The noise is the UCS, a stimulus that naturally triggers fear, not a learned response',
               'The noise is the CS, since it was the stimulus repeatedly paired with the rat',

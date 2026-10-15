@@ -9,7 +9,7 @@ export const psychThinkingPart4Data = {
 
 **Part 4 of 7 — Judgment & Heuristics**
 
-Heuristics are mental shortcuts we use for quick judgments. Tversky and Kahneman identified specific heuristics that lead to predictable, systematic errors. These are among the MOST tested topics on the AP exam.
+Heuristics are mental shortcuts we use for quick judgments. The CED (2.2.A.4) names two that lead to predictable errors: the **representativeness heuristic** (judging by prior expectations or stereotypes) and the **availability heuristic** (judging by the first or most vivid example that comes to mind).
 
 ### Key Definitions
 
@@ -17,7 +17,6 @@ Heuristics are mental shortcuts we use for quick judgments. Tversky and Kahneman
 |------|-----------|
 | **Availability heuristic** | Judging the FREQUENCY or LIKELIHOOD of an event by how easily examples come to mind |
 | **Representativeness heuristic** | Judging the PROBABILITY that something belongs to a category by how well it matches the prototype of that category |
-| **Anchoring bias** | Relying too heavily on the FIRST piece of information (the "anchor") when making judgments |
 | **Confirmation bias** | Tendency to SEARCH FOR, INTERPRET, and REMEMBER information that confirms existing beliefs |
 | **Base rate neglect** | Ignoring statistical base rates (how common something actually is) in favor of individual case information |
 
@@ -60,7 +59,7 @@ Which is more probable?
             options: [
               'The representativeness heuristic — her neighborhood matches her prototype of a high-crime area',
               'The availability heuristic — vivid news coverage makes break-ins seem common',
-              'Anchoring bias — the first crime report she saw set an anchor for how often crime occurs',
+              'Mental set — she keeps solving problems with the same approach that worked before',
               'Confirmation bias — she seeks out only news stories that confirm her fear of crime'
             ],
             correctAnswer: 1,
@@ -84,28 +83,25 @@ Which is more probable?
       id: 'think4-s3-deep-dive',
       type: 'text' as const,
       content: `
-### 📚 Anchoring Bias (Tversky & Kahneman, 1974)
+### 📚 When Representativeness Becomes Stereotyping
 
-The first piece of information you encounter (the "anchor") disproportionately influences subsequent judgments — even when the anchor is ARBITRARY.
+The CED ties the representativeness heuristic directly to **stereotypes**: we judge a person by how well they match our mental prototype of a group, and that shortcut can override actual evidence about the individual.
 
-**Classic Study:**
-Participants spun a RIGGED wheel that landed on either 10 or 65. They were then asked: "What percentage of African countries are in the United Nations?"
+| Situation | Heuristic at work | Hidden cost |
+|-----------|-------------------|-------------|
+| A hiring manager assumes a soft-spoken applicant "isn't a leader" | Representativeness — the applicant does not match the manager's leader prototype | Qualified people are screened out on appearance, not record |
+| A teacher expects a student from a particular neighborhood to struggle | Representativeness — the student is matched to a group stereotype | Low expectations can become a self-fulfilling prophecy |
+| A shopper assumes the most expensive brand is the best one | Representativeness — "pricey" fits the prototype of "high quality" | Price is treated as evidence of quality without checking |
 
-| Anchor | Average Estimate |
-|--------|-----------------|
-| Wheel landed on 10 | ~25% |
-| Wheel landed on 65 | ~45% |
+### Availability: Vivid, Recent, First
 
-The wheel was completely RANDOM and IRRELEVANT — yet it still influenced answers by nearly 20 percentage points!
+The availability heuristic leans on whatever is easiest to retrieve. Three things make an example easy to retrieve:
 
-**Real-World Anchoring:**
-
-| Context | Anchor Effect |
-|---------|--------------|
-| **Salary negotiation** | The first number mentioned becomes the anchor — whoever states a number first has an advantage |
-| **Real estate** | Listing price anchors the buyer's perception of value, even if inflated |
-| **Retail pricing** | "Was \\$100, now \\$40" — the \\$100 anchor makes \\$40 seem like a bargain |
-| **Sentencing** | Prosecutors' recommended sentences anchor judges' decisions |
+| Feature | Example | Resulting misjudgment |
+|---------|---------|----------------------|
+| **Vividness** | A dramatic plane crash on every channel | Flying feels riskier than driving |
+| **Recency** | A friend's car was stolen last week | Car theft feels like it is spiking |
+| **First to mind** | Words that START with K come to mind before words with K in third place | People think K-first words are more common |
 
 ### Confirmation Bias
 
@@ -118,13 +114,12 @@ The wheel was completely RANDOM and IRRELEVANT — yet it still influenced answe
 
 ### Heuristic Comparison Table
 
-| | Availability | Representativeness | Anchoring |
-|--|------------|-------------------|-----------|
-| **Question it answers** | "How COMMON is this?" | "What CATEGORY does this belong to?" | "What NUMBER should I estimate?" |
-| **Based on** | Ease of recall | Match to prototype | First piece of information |
-| **Error it causes** | Overestimating dramatic events | Ignoring base rates | Estimates biased toward anchor |
-| **Classic example** | Fear of flying after plane crash news | "Linda problem" (conjunction fallacy) | Wheel of fortune → UN question |
-| **Key researcher** | Tversky & Kahneman | Tversky & Kahneman | Tversky & Kahneman |
+| | Availability | Representativeness |
+|--|------------|-------------------|
+| **Question it answers** | "How COMMON is this?" | "What CATEGORY does this belong to?" |
+| **Based on** | Ease of recall | Match to prototype or stereotype |
+| **Error it causes** | Overestimating dramatic or recent events | Ignoring how common each category really is |
+| **Classic example** | Fear of flying after plane crash news | "Linda problem" |
 
 > **AP Connection:** The availability heuristic and representativeness heuristic are the TWO most-tested heuristics on the AP exam. The key: availability = "how easily can I THINK OF examples?" Representativeness = "how well does this MATCH my prototype?"
       `
@@ -151,15 +146,15 @@ The wheel was completely RANDOM and IRRELEVANT — yet it still influenced answe
       `,
       exercise: {
         dropdowns: [
-          { label: 'A person estimates that more words start with "K" than have "K" as the third letter (the reverse is true)', options: ['Availability heuristic', 'Representativeness heuristic', 'Anchoring bias', 'Confirmation bias'] },
-          { label: 'A car buyer sees a \\$50,000 sticker price and thinks \\$38,000 is a great deal, even though the car is worth \\$30,000', options: ['Anchoring bias', 'Availability heuristic', 'Representativeness heuristic', 'Sunk cost fallacy'] },
-          { label: 'A person who believes vaccines are harmful only reads anti-vaccine websites and dismisses medical research', options: ['Confirmation bias', 'Availability heuristic', 'Anchoring bias', 'Representativeness heuristic'] }
+          { label: 'A person estimates that more words start with "K" than have "K" as the third letter (the reverse is true)', options: ['Availability heuristic', 'Representativeness heuristic', 'Mental set', 'Confirmation bias'] },
+          { label: 'A diner assumes a restaurant with candles and white tablecloths must serve better food than a plain diner, without reading any reviews', options: ['Representativeness heuristic', 'Availability heuristic', 'Confirmation bias', 'Sunk cost fallacy'] },
+          { label: 'A person who believes vaccines are harmful only reads anti-vaccine websites and dismisses medical research', options: ['Confirmation bias', 'Availability heuristic', 'Framing effect', 'Representativeness heuristic'] }
         ],
-        correctAnswers: ['Availability heuristic', 'Anchoring bias', 'Confirmation bias'],
+        correctAnswers: ['Availability heuristic', 'Representativeness heuristic', 'Confirmation bias'],
         hint1: 'It\'s easier to THINK OF words that START with K than words with K as the THIRD letter — ease of recall biases judgment.',
-        hint2: 'The $50,000 sticker price is the FIRST number (anchor) — everything is judged relative to it.',
+        hint2: 'The decor matches a prototype of a "fine" restaurant, and the match is treated as evidence.',
         hint3: 'Selectively seeking information that confirms existing beliefs while ignoring disconfirming evidence.',
-        explanation: 'Letter K = availability heuristic (easier to generate words starting with K, so we think there are more). $50K sticker = anchoring (first price biases all subsequent judgments). Anti-vax websites = confirmation bias (selectively seeking confirming information).'
+        explanation: 'Letter K = availability heuristic (easier to generate words starting with K, so we think there are more). Candlelit restaurant = representativeness (the setting fits a prototype of quality, so quality is assumed). Anti-vax websites = confirmation bias (selectively seeking confirming information).'
       }
     },
     {
@@ -181,7 +176,6 @@ The wheel was completely RANDOM and IRRELEVANT — yet it still influenced answe
 |---------|---------------|
 | "Easy to recall," "comes to mind," "vivid," "recent news" | Availability |
 | "Looks like," "matches," "typical," "stereotype," "base rate" | Representativeness |
-| "First number," "initial offer," "starting price" | Anchoring |
 | "Only looks for confirming," "ignores contradictory" | Confirmation bias |
 
 > **AP Tip:** If a question describes someone who fears flying after seeing a plane crash on the news = AVAILABILITY (vivid example is easy to recall). If a question describes someone who assumes a quiet person must be a librarian = REPRESENTATIVENESS (matches the prototype). These are the two most commonly confused heuristics on the AP exam.
@@ -198,7 +192,7 @@ The wheel was completely RANDOM and IRRELEVANT — yet it still influenced answe
           {
             question: 'A student is described as quiet, meticulous, and passionate about numbers. When asked whether this student is more likely studying accounting or psychology, most people guess accounting — even though psychology programs are far larger. Which TWO cognitive errors contribute to this incorrect judgment?',
             options: [
-              'Availability heuristic + anchoring bias — accountants come to mind easily and the first trait anchors the guess',
+              'Availability heuristic + mental set — accountants come to mind easily and a familiar approach is reused',
               'Representativeness heuristic + base rate neglect — the profile fits an accountant and the base rate is ignored',
               'Framing effect + sunk cost fallacy — the word "numbers" frames the choice and past guesses lock it in',
               'Confirmation bias + hindsight bias — people seek clues that fit accounting and later feel they knew it'
@@ -207,15 +201,15 @@ The wheel was completely RANDOM and IRRELEVANT — yet it still influenced answe
             explanation: 'Two errors work together: (1) Representativeness heuristic — the description matches the "accountant" prototype (quiet, meticulous, numbers), so people judge "accounting" as more likely. (2) Base rate neglect — psychology programs are MUCH larger, so any random student is more likely to be a psych major. But the vivid description overrides this statistical fact. This is the same mechanism as the Linda problem — prototype matching overrides probability.'
           },
           {
-            question: 'A jury must decide if a defendant is guilty. The prosecution mentions that 80% of similar cases resulted in conviction. Then the defense presents DNA evidence exonerating the defendant, but multiple jurors still lean toward guilty. The jurors\' judgment is MOST influenced by:',
+            question: 'After a week of news coverage about a rare tropical illness that infected two travelers, a town council votes to spend most of its health budget on screening for that illness rather than on flu shots, which prevent far more local hospitalizations. The council\'s judgment is MOST influenced by:',
             options: [
-              'The availability heuristic — they recall news stories about convictions more easily than acquittals',
-              'Anchoring bias — the 80% figure holds their estimate up despite the DNA results',
-              'The representativeness heuristic — the defendant matches their mental prototype of a criminal',
-              'Loss aversion — they fear freeing a guilty person more than they fear convicting an innocent one'
+              'The availability heuristic — the recent, vivid reports make this illness seem common',
+              'The representativeness heuristic — the illness fits the members\' prototype of a typical disease',
+              'The sunk cost fallacy — the council has already spent money studying tropical illnesses',
+              'The gambler\'s fallacy — the council believes the town is due for an outbreak after a quiet year'
             ],
-            correctAnswer: 1,
-            explanation: 'The 80% conviction rate serves as an ANCHOR — even when strong new evidence (DNA) should shift the probability dramatically, the anchor keeps the estimate higher than it should be. This is a dangerous real-world example of anchoring: once jurors hear a strong initial number, subsequent evidence is underweighted. The DNA evidence should logically be decisive, but the anchor biases interpretations. This is why some argue that conviction statistics should not be presented to juries.'
+            correctAnswer: 0,
+            explanation: 'Heavy, recent coverage makes the rare illness easy to bring to mind, so its likelihood is overestimated relative to the flu, which is the availability heuristic. Nothing in the scenario involves matching the illness to a prototype, past spending, or a belief that an event is due.'
           }
         ]
       }

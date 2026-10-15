@@ -9,11 +9,11 @@ export const psychClassicalPart6Data = {
 
       **Part 6 of 7 — Problem-Solving Workshop**
 
-      This part trains you to analyze novel scenarios like the AP exam requires. You'll practice identifying conditioning components, designing experiments, and predicting outcomes.
+      This part trains you to analyze novel scenarios like the AP exam requires. You'll practice identifying conditioning components, reading conditioning studies, and predicting outcomes.
 
       ### Core Skills
       - **Identifying UCS, UCR, CS, CR in novel scenarios**: the most common AP question type for this topic
-      - **Designing classical conditioning experiments**: knowing what controls and variables to include
+      - **Evaluating classical conditioning experiments**: recognizing the controls and variables a sound study includes
       - **Predicting generalization and discrimination**: determining how a conditioned response will spread or narrow
       - **Analyzing real-world conditioning**: applying concepts to everyday situations like advertising, phobias, and therapy
 
@@ -86,9 +86,9 @@ export const psychClassicalPart6Data = {
       | Sam feels anxious in ANY doctor's office | Anxiety spreads to similar settings | Generalization |
       | Sam is anxious at dentist but NOT at pediatrician | He distinguishes the two | Discrimination |
 
-      ### Experiment Design Checklist
+      ### Evaluating a Conditioning Experiment
 
-      | Element | What to Include |
+      | Element | What a sound study includes |
       |---|---|
       | Independent variable | The CS-UCS pairing (present or absent) |
       | Dependent variable | The strength/presence of the CR |
@@ -164,9 +164,9 @@ export const psychClassicalPart6Data = {
 
       ### AP Strategy Moves
       - For scenario analysis: (1) Find what's natural/unlearned → UCS/UCR. (2) Find the new trigger → CS. (3) Find the learned response → CR.
-      - If asked to design an experiment: include IV, DV, control group, operational definitions, and random assignment.
+      - When reading a conditioning study (as on the AAQ): identify the method, the IV and DV, how the DV was operationally defined, and whether random assignment was used.
       - Prediction questions: ask "What would happen if the CS is presented alone repeatedly?" → extinction. "After a rest period?" → spontaneous recovery.
-      - Free-response tip: Always explicitly label each component AND explain WHY it fits that label.
+      - Written-explanation tip: Always explicitly label each component AND explain WHY it fits that label.
       `
     },
     {

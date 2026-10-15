@@ -163,7 +163,7 @@ Despite limitations, punishment is most effective when it is:
 ### AP Strategy Moves
 - **Use the 2×2 grid:** First determine if behavior increased (reinforcement) or decreased (punishment). Then determine if something was added (positive) or removed (negative).
 - Watch for trick questions where "positive punishment" sounds like reinforcement because something is being "given." A speeding ticket is "given" to you, but it's still positive PUNISHMENT because the behavior decreases.
-- FRQ questions often ask you to design a behavior plan — always explain WHY reinforcement is preferred over punishment and what limitations punishment has.
+- On the EBQ, a source about discipline can be explained with the limits of punishment (it suppresses rather than teaches, and it can model aggression); use a DIFFERENT concept, such as positive reinforcement, for a second source.
 - If a scenario mentions grounding, losing privileges, or having something taken away → think negative punishment first.
       `
     },

@@ -87,20 +87,22 @@ export const psychSocialInfluencePart7Data = {
 | Deindividuation | Aggression | Anonymity + arousal → increased aggression (connects to frustration-aggression hypothesis) |
 | Attribution biases | Clinical psychology | Depressed individuals show REVERSE self-serving bias (blame self for failures) |
 
-### FRQ Template: Social Influence
+### Free-Response Practice: Social Influence on the AAQ and EBQ
 
-**Sample Prompt:** "Maya is a new employee at a company. Using social psychology concepts, explain the following behaviors."
+The free-response section has two questions: the **Article Analysis Question (AAQ, 7 points, 6 parts)** and the **Evidence-Based Question (EBQ, 7 points, 3 parts)**. Social psychology studies are common material for both.
 
-**Model Answer Structure:**
+**Practice study summary (hypothetical):** Researchers recruited 120 adults through an online panel and randomly assigned them to answer 20 general-knowledge questions either alone or after seeing four "previous participants" (all scripted) give the same wrong answer. Conformity was operationally defined as the number of critical questions on which a participant gave the scripted wrong answer. The group condition averaged 6.4 conforming answers; the alone condition averaged 1.1 errors on the same items. Participants gave informed consent, the deception was explained in a debriefing, and responses were kept anonymous.
 
-**Maya agrees with her team's marketing strategy even though she privately thinks it's flawed.**
-→ This illustrates **normative social influence** — Maya publicly conforms to the group's opinion to gain social acceptance and avoid being seen as a troublemaker. She maintains her private belief but adjusts her public behavior, which is **compliance** rather than acceptance. This parallels **Asch's (1951)** conformity study, where participants gave wrong answers to match the group even when they knew the correct answer.
+| AAQ task | What a strong answer says |
+|----------|---------------------------|
+| Identify the research method | An experiment: the social condition was manipulated with random assignment |
+| Operational definition | Conformity = number of critical questions answered with the scripted wrong answer |
+| What the statistic shows | Seeing unanimous wrong answers raised the mean errors from 1.1 to 6.4 |
+| Ethical guideline | Debriefing: participants were told about the scripted answers after the study |
+| Generalizability | An online adult panel may not represent people deciding face to face in a real group |
+| Support or refute | The higher mean in the group condition supports the hypothesis that a unanimous majority increases conformity |
 
-**Maya's team, which initially slightly favored a risky advertising campaign, decides unanimously to pursue an extremely aggressive version.**
-→ This demonstrates **group polarization** — the team's initial lean toward the risky campaign became MORE extreme after discussion. This occurs because members heard predominantly one-sided arguments and engaged in social comparison (wanting to be at least as bold as others). Note: this is NOT groupthink, because there's no evidence of suppressed dissent — the team genuinely agreed and became more extreme.
-
-**Maya's boss tells her to inflate the sales figures in a report, and she complies despite knowing it's unethical.**
-→ This is **obedience** — Maya follows a direct order from an authority figure (her boss), even though it conflicts with her values. This parallels **Milgram's (1963)** study, where 65% of participants obeyed destructive commands from an authority figure. The situational factors facilitating Maya's obedience include: the boss's perceived legitimacy, institutional authority, and the gradual escalation (it may have started with small compromises).
+**EBQ use:** for a claim such as "Workplaces should collect opinions anonymously before group meetings," one source on employees echoing a manager could be explained with **obedience**, and a DIFFERENT source on employees copying coworkers' answers could be explained with **normative social influence**. Each explanation names the concept and ties it to that source's evidence.
       `
     },
     {

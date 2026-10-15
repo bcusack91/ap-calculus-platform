@@ -7,7 +7,7 @@ export const psychObservationalPart4Data = {
       content: `
 # 🧠 Observational & Cognitive Learning
 
-**Part 4 of 7 — Insight Learning & Beyond**
+**Part 4 of 7 — Insight Learning vs. Trial and Error**
 
 While Thorndike saw learning as gradual trial-and-error, Wolfgang Köhler demonstrated something different: sometimes learning happens in a sudden flash of understanding. This "aha!" moment — insight learning — cannot be explained by behaviorism's slow, incremental reinforcement model.
 
@@ -15,8 +15,9 @@ While Thorndike saw learning as gradual trial-and-error, Wolfgang Köhler demons
 |---------|-----------|------------|-------------|
 | **Insight learning** | Köhler (1925) | Sudden realization of a solution without trial-and-error | Discontinuous — "aha!" moment |
 | **Trial-and-error** | Thorndike | Learning through repeated attempts and feedback | Gradual, incremental improvement |
-| **Abstract learning** | Harlow | Learning a "rule" that transfers across problems | Learning to learn (learning sets) |
-| **Transfer of learning** | — | Applying knowledge from one situation to another | Positive transfer (helps) vs. negative transfer (hinders) |
+| **Latent learning** | Tolman | Learning without reinforcement that is not immediately evident | Shows up later, once there is a reason to use it |
+
+> 🔑 **CED 3.9.B.1:** Insight learning occurs when the solution to a problem appears **without any association, consequence, or model being present**. That phrase is the test: no pairing (classical), no reinforcement (operant), and no one to imitate (observational).
 
 ### 🗣️ Real-World Example
 
@@ -45,15 +46,15 @@ You're stuck on a difficult puzzle for 30 minutes. Suddenly, while getting a gla
             explanation: 'Sultan didn\'t randomly try solutions — he paused, surveyed the situation, and then acted decisively and correctly on the first attempt. This sudden reorganization of the problem (seeing boxes as a tool to reach bananas) is the hallmark of insight learning. Trial-and-error would show gradual improvement, not a sudden solution.'
           },
           {
-            question: 'A student who masters algebra finds it easier to learn calculus because both require similar logical thinking. This is an example of:',
+            question: 'A toddler\'s ball rolls under the couch. Nobody is in the room, and she has never seen anyone fetch a ball this way. She stares for a moment, then picks up a toy broom and sweeps the ball out on her very first try. This BEST illustrates:',
             options: [
-              'Negative transfer — algebra interferes with calculus',
-              'Insight learning — the student suddenly understands calculus',
-              'Positive transfer — skills from algebra help with calculus',
-              'Latent learning — the algebra knowledge was hidden until needed'
+              'Observational learning — she is copying a model she saw retrieve a ball before',
+              'Shaping — she is reinforced for successive approximations of using the broom',
+              'Insight learning — the solution appears with no association, consequence or model',
+              'Latent learning — she learned the couch layout earlier and only now has a reason to show it'
             ],
             correctAnswer: 2,
-            explanation: 'Positive transfer occurs when learning one skill facilitates learning another related skill. Algebra develops logical reasoning and equation-solving skills that directly help with calculus. Negative transfer would occur if the prior learning INTERFERED (e.g., driving on the right making it harder to drive on the left in the UK).'
+            explanation: 'The solution appears suddenly, on the first attempt, with no model to imitate, no prior reinforcement, and no conditioned association, which matches the CED definition of insight learning. Observational learning requires a model, shaping requires a series of reinforced approximations, and latent learning involves knowledge acquired earlier without reinforcement.'
           }
         ]
       }
@@ -68,12 +69,12 @@ You're stuck on a difficult puzzle for 30 minutes. Suddenly, while getting a gla
 1. Bananas hung from the ceiling, out of reach
 2. Boxes (and sometimes sticks) available in the cage
 3. Sultan sat, looked around, then SUDDENLY stacked boxes and reached the bananas
-4. On later trials, Sultan solved similar problems immediately — showing **transfer of learning**
+4. On later trials, Sultan solved similar problems immediately, without returning to random attempts
 
 **Key characteristics of insight learning:**
 - **Sudden** — no gradual improvement; solution appears all at once
 - **Complete** — once insight occurs, the learner performs perfectly (no practice needed)
-- **Transferable** — insight applies to similar problems
+- **Applies to new versions** — once grasped, the solution works on similar problems
 - **Requires prerequisites** — Sultan needed prior experience with boxes and sticks
 
 ### Thorndike vs. Köhler: The Great Comparison
@@ -84,14 +85,25 @@ You're stuck on a difficult puzzle for 30 minutes. Suddenly, while getting a gla
 | Learning pattern | Gradual, decreasing errors | Sudden, all-or-nothing |
 | Graph shape | Smooth learning curve | Flat → sudden drop in errors |
 | Cognition involved? | Minimal (mechanical) | High (understanding relationships) |
-| Transfer? | Limited | Strong |
 | Key concept | Law of Effect | Restructuring/reorganization |
 
-### Harlow's Learning Sets ("Learning to Learn")
+### Reading the Learning Curve
 
-Harry Harlow (also famous for attachment studies) gave monkeys a series of discrimination problems. On the FIRST problem, monkeys used trial-and-error. But by the HUNDREDTH problem, they solved it in ONE trial. They had learned the ABSTRACT RULE of how to solve discrimination problems — they "learned to learn."
+On the AP exam you may be asked to identify a learning process from a graph or table of errors across trials (skill 3.A). The SHAPE of the curve is the clue.
 
-This demonstrates **abstract learning** — understanding the underlying principle rather than just the specific response. It's a cognitive process that behaviorism struggles to explain.
+| Trial | Errors: cat in puzzle box (trial and error) | Errors: chimp with boxes (insight) |
+|-------|--------------------------------------------|-----------------------------------|
+| 1 | 12 | 10 |
+| 2 | 10 | 10 |
+| 3 | 8 | 9 |
+| 4 | 6 | 0 |
+| 5 | 4 | 0 |
+| 6 | 3 | 0 |
+
+- **Trial and error:** errors fall a little on each trial, a smooth downward slope.
+- **Insight:** errors stay high, then drop to zero at once and stay there, a step-shaped curve.
+
+> **AP Connection:** A step-shaped drop with no reinforcement during the "flat" trials is the data signature of insight. A gradual slope is the signature of learning by consequences.
       `
     },
     {
@@ -104,7 +116,7 @@ This demonstrates **abstract learning** — understanding the underlying princip
         inputs: [
           { label: 'Who demonstrated insight learning with chimpanzees?', answer: 'Köhler' },
           { label: 'Learning through gradual repeated attempts is called ___ and error', answer: 'trial' },
-          { label: 'When learning one skill helps with learning a new one, it\'s called ___ transfer', answer: 'positive' }
+          { label: 'Learning that happens without reinforcement and is not immediately evident is called ___ learning', answer: 'latent' }
         ]
       }
     },
@@ -118,13 +130,13 @@ This demonstrates **abstract learning** — understanding the underlying princip
         dropdowns: [
           { label: 'A student suddenly sees how to solve a math proof after struggling for hours', options: ['Trial-and-error', 'Insight learning', 'Latent learning', 'Classical conditioning'] },
           { label: 'A cat escapes a puzzle box faster each time (gradual improvement)', options: ['Insight learning', 'Trial-and-error learning', 'Observational learning', 'Learned helplessness'] },
-          { label: 'Knowing Spanish makes learning Italian easier', options: ['Negative transfer', 'Positive transfer', 'Latent learning', 'Abstract learning'] }
+          { label: 'A rat that wandered a maze for days without food takes the shortest route as soon as food is placed at the end', options: ['Insight learning', 'Latent learning', 'Trial-and-error learning', 'Learned helplessness'] }
         ],
-        correctAnswers: ['Insight learning', 'Trial-and-error learning', 'Positive transfer'],
+        correctAnswers: ['Insight learning', 'Trial-and-error learning', 'Latent learning'],
         hint1: 'Sudden "aha!" moment after struggling = insight learning.',
         hint2: 'Gradual improvement with each trial = Thorndike\'s trial-and-error.',
-        hint3: 'A prior skill helping with a new related skill = positive transfer.',
-        explanation: 'Sudden realization = insight (Köhler). Gradual escape improvement = trial-and-error (Thorndike). Spanish helping Italian = positive transfer (similar languages facilitate learning).'
+        hint3: 'The rat learned the maze without reinforcement; the learning only showed once food gave it a reason.',
+        explanation: 'Sudden realization = insight (Köhler). Gradual escape improvement = trial-and-error (Thorndike). Rat taking the shortest route once food appears = latent learning (learned without reinforcement, shown later).'
       }
     },
     {
@@ -145,7 +157,7 @@ This demonstrates **abstract learning** — understanding the underlying princip
 The common thread connecting insight (Köhler), cognitive maps (Tolman), latent learning (Tolman), and observational learning (Bandura) is that they all challenged strict behaviorism by showing that MENTAL PROCESSES are involved in learning:
 - **Köhler**: Reorganization of mental representations → sudden solution
 - **Tolman**: Internal spatial maps → navigation without reinforcement
-- **Bandura**: Attention, retention, and motivation → learning without direct reinforcement
+- **Bandura**: Watching a model and the model's consequences → learning without direct reinforcement
 
 > **AP Tip:** If a question asks "Which finding challenged strict behaviorism?" — look for answers involving cognitive maps, latent learning, insight, or observational learning. All of these demonstrated that organisms do more than just respond to stimuli.
       `
@@ -159,26 +171,26 @@ The common thread connecting insight (Köhler), cognitive maps (Tolman), latent 
       exercise: {
         questions: [
           {
-            question: 'A researcher gives monkeys 200 different object discrimination problems. On the first few problems, the monkeys perform at chance level. By problem 190, they solve new problems on the first trial. This pattern best demonstrates:',
+            question: 'A researcher records how many wrong moves a chimpanzee makes on each of eight trials of a new tool problem: 9, 9, 8, 9, 0, 0, 0, 0. No food is given until the problem is solved. Which interpretation BEST fits these data?',
             options: [
-              'Classical conditioning — the correct objects became conditioned stimuli for food',
-              'Insight learning — each new problem was solved in a sudden, separate "aha!" moment',
-              'Learning sets — the monkeys learned a general rule for solving such problems',
-              'Operant conditioning — the monkeys were reinforced for each specific correct choice'
-            ],
-            correctAnswer: 2,
-            explanation: 'This is Harlow\'s learning sets experiment. The monkeys didn\'t just learn specific object-reward associations (operant) — they learned the ABSTRACT STRATEGY of how to solve discrimination problems in general. By problem 190, they needed only one trial because they had "learned to learn." This is a cognitive process beyond simple reinforcement.'
-          },
-          {
-            question: 'A physics student who excels at Newtonian mechanics initially struggles with quantum mechanics because the rules are contradictory. This is best explained by:',
-            options: [
-              'Positive transfer — Newtonian skills make the quantum material easier to master',
-              'Negative transfer — prior Newtonian learning interferes with quantum learning',
-              'Insight learning — the student will suddenly understand quantum mechanics',
-              'Learned helplessness — the student gives up after early failures in quantum'
+              'Trial-and-error learning, because errors drop steadily across the trials',
+              'Insight learning, because errors stay high and then fall to zero all at once',
+              'Shaping, because each small improvement on the early trials was reinforced',
+              'Spontaneous recovery, because the errors return after a period of no responding'
             ],
             correctAnswer: 1,
-            explanation: 'Negative transfer occurs when previously learned knowledge INTERFERES with learning new material. In this case, Newtonian mechanics (deterministic, objects have definite positions) contradicts quantum mechanics (probabilistic, particles have wave-like properties), making the transition harder, not easier.'
+            explanation: 'The errors hover near 9 and then drop to zero at trial 5 and stay there, the step-shaped pattern of insight learning. A steady decline would suggest trial and error, no reinforcement was given for small improvements, and spontaneous recovery describes a conditioned response returning after extinction.'
+          },
+          {
+            question: 'Which finding would MOST directly support the claim that cognition, not just reinforcement, plays a role in learning?',
+            options: [
+              'A cat escapes a puzzle box a little faster on each trial as its errors decline',
+              'A dog salivates at a bell that has been paired with food many times',
+              'A pigeon pecks a key more often after its pecks are followed by grain',
+              'A chimpanzee solves a new problem on its first try after surveying the materials'
+            ],
+            correctAnswer: 3,
+            explanation: 'Solving a new problem on the first attempt, with no reinforcement history for that solution, points to a mental reorganization of the problem, which is insight learning. The cat\'s gradual improvement, the pigeon\'s reinforced pecking, and the dog\'s conditioned salivation can all be explained by conditioning alone.'
           }
         ]
       }

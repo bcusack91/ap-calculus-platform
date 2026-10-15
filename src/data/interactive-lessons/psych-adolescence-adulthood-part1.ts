@@ -84,8 +84,10 @@ This explains the "gas pedal without brakes" phenomenon: adolescents are emotion
 
 - **Hormonal changes:** Increased estrogen (females) and testosterone (males) trigger development of secondary sex characteristics
 - **Growth spurt:** Rapid increase in height and weight
-- **Primary sex characteristics:** Reproductive organs mature
-- **Secondary sex characteristics:** Body hair, voice changes, breast development
+- **Primary sex characteristics:** The reproductive organs mature, so reproduction becomes possible
+- **Secondary sex characteristics:** Nonreproductive traits such as body hair, voice changes, breast development and wider shoulders
+- **Menarche:** A girl's first menstrual period, a landmark of female puberty
+- **Spermarche:** A boy's first ejaculation, the matching landmark of male puberty
 - **Timing matters:** Early-maturing girls and late-maturing boys tend to experience more psychological distress
 
 ### Adolescent Egocentrism (Elkind)
@@ -193,7 +195,7 @@ Both decline as the prefrontal cortex matures and perspective-taking improves.
               'Personal fable (invulnerability) and immature prefrontal cortex (poor impulse control)',
               'Imaginary audience (showing off for friends) and concrete operational thinking',
               'Identity foreclosure (copying peers\' choices) and declining crystallized intelligence',
-              'Formal operations (abstract thinking) and postconventional moral reasoning'
+              'Formal operations (abstract thinking) and identity moratorium (role trials)'
             ],
             correctAnswer: 0,
             explanation: 'The teen\'s belief that "accidents happen to others, not me" is the personal fable (illusion of invulnerability). The risky behavior itself reflects the immature prefrontal cortex — the brain\'s impulse-control center isn\'t fully developed, so the limbic system\'s thrill-seeking overrides rational judgment. Both concepts work together to explain adolescent risk-taking.'

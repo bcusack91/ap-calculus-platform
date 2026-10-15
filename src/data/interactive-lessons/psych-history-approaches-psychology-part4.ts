@@ -5,31 +5,40 @@ export const psychHistoryApproachesPart4Data = {
       id: 'histo4-stats',
       type: 'text' as const,
       content: `
+# 🧠 History & Approaches to Psychology
+
+**Part 4 of 7 — Statistics**
+
+> 🔑 **Key Concept:** Descriptive statistics summarize a data set (central tendency, variation, percentile rank, and the shape of the distribution). Inferential statistics tell you whether a result is likely real (statistical significance) and how big it is (effect size) (skills 3.B and 3.C).
+
 ## Descriptive Statistics
 
 ### Measures of Central Tendency
 
 | Measure | Definition | When to Use |
 |---------|-----------|-------------|
-| **Mean** | Average of all scores | Normal distribution |
-| **Median** | Middle score | Skewed distribution |
-| **Mode** | Most frequent score | Categorical data |
+| **Mean** | Average of all scores | Roughly symmetric data without extreme scores |
+| **Median** | Middle score when scores are ordered | Skewed data or data with outliers |
+| **Mode** | Most frequent score | Categories, or to spot more than one peak |
 
-### Measures of Variability
+### Measures of Variation
 
 | Measure | Definition |
 |---------|------------|
-| **Range** | Highest - lowest score |
-| **Standard deviation** | Average distance from the mean |
-| **Variance** | Standard deviation squared |
+| **Range** | Highest score minus lowest score |
+| **Standard deviation (SD)** | How far scores typically fall from the mean; larger SD = more spread out |
 
-### Normal Distribution
+### Percentile Rank
 
-- Bell-shaped curve
-- Mean = median = mode
-- ~68% of scores within 1 SD of mean
-- ~95% within 2 SD
-- ~99.7% within 3 SD
+**Percentile rank** is the percentage of scores at or below a given score. A student at the 80th percentile scored as well as or better than 80% of test takers. It is NOT the percentage of questions answered correctly.
+
+### The Normal Curve
+
+- Bell-shaped and symmetric; mean = median = mode
+- About **68%** of scores fall within 1 SD of the mean
+- About **95%** fall within 2 SD
+- About **99.7%** fall within 3 SD
+- A score 1 SD above the mean is at about the **84th** percentile (50% + 34%)
       `
     },
     {
@@ -49,29 +58,59 @@ export const psychHistoryApproachesPart4Data = {
               '99.7%'
             ],
             correctAnswer: 1,
-            explanation: 'In a normal distribution, approximately 68% of scores fall within 1 standard deviation of the mean (the 68-95-99.7 rule).'
+            explanation: 'About 68% of scores fall within 1 standard deviation of the mean (the 68-95-99.7 pattern).'
+          },
+          {
+            question: 'A student\'s score on a national exam is at the 70th percentile. This means the student',
+            options: [
+              'answered 70% of the questions on the exam correctly',
+              'scored at or above the scores of about 70% of test takers',
+              'scored 70 points higher than the average test taker',
+              'scored lower than about 70% of the other test takers'
+            ],
+            correctAnswer: 1,
+            explanation: 'Percentile rank compares a score with other people\'s scores. The 70th percentile means the score is at or above about 70% of the scores, regardless of how many questions were correct.'
           }
         ]
       }
     },
     {
-      id: 'histo4-inferential',
+      id: 'histo4-shape',
       type: 'text' as const,
       content: `
+## Shapes of Distributions
+
+| Shape | What it looks like | Effect on mean and median |
+|-------|-------------------|---------------------------|
+| **Positively skewed** | Most scores are low, with a long tail toward HIGH scores | Mean is pulled up, above the median |
+| **Negatively skewed** | Most scores are high, with a long tail toward LOW scores | Mean is pulled down, below the median |
+| **Bimodal** | Two separate peaks | Suggests two different groups in the data; the mean may describe neither group |
+
+**Tip:** The tail tells the name. A tail stretching to the right (high scores) = positive skew. Household income is a classic positively skewed variable.
+
+## Correlation Coefficient
+
+A **correlation coefficient (r)** runs from −1.00 to +1.00.
+- The **sign** gives the direction: positive (both rise together) or negative (one rises as the other falls).
+- The **absolute value** gives the strength: r = −.85 is stronger than r = +.40.
+- On a **scatterplot**, points close to a straight line mean a strong correlation; a shapeless cloud means a weak one.
+
 ## Inferential Statistics
 
-### Statistical Significance
+- **Statistical significance** indicates that a result is not likely due to chance and is instead likely due to the variables being studied. Psychologists often use p < .05 as the cutoff. Significance can be calculated for all types of research methods.
+- **Effect size** indicates the strength of a relationship (non-experimental studies) or the size of the difference between conditions (experiments).
 
-- **p-value:** probability that results occurred by chance
-- **p < 0.05:** results are statistically significant
-- Means there's less than a 5% chance the results are due to chance
+| Effect size statistic | Usual interpretation |
+|-------------|--------|
+| 0.2 and below | Small |
+| about 0.3 to 0.7 | Medium |
+| 0.8 or greater | Large |
 
-### Key Concepts
+A result can be statistically significant but have a small effect size, especially with a very large sample. Significance answers "Is it likely real?" Effect size answers "How big is it?"
 
-- **Reliability:** consistency of results
-- **Validity:** does it measure what it claims to?
-- **Replication:** repeating a study to verify results
-- **Operational definition:** precise description of how a variable is measured
+## Regression Toward the Mean
+
+Extreme scores tend to be followed by scores closer to the average, and as more data are collected, the average of the data moves toward the true mean. A student who scores unusually high on one quiz will probably score somewhat lower on the next, not because of a slump, but because part of the first score was luck.
       `
     },
     {
@@ -80,21 +119,21 @@ export const psychHistoryApproachesPart4Data = {
       content: `
       **Applied Recall (exact term answers)** ✍️
 
-      1) What measure of central tendency is best for skewed distributions?
+      1) Which measure of central tendency is best for skewed distributions?
 
-      2) What is the standard threshold for statistical significance? (format: p < ___)
+      2) What is the common cutoff for statistical significance? (format: p < 0.__)
 
-      3) What term means a test measures what it claims to measure?
+      3) What statistic tells you how LARGE a difference or relationship is? (two words)
 
       Use the exact term from this part.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['median', '0.05', 'validity'],
+        correctAnswers: ['median', '0.05', 'effect size'],
         hint1: 'Starts with: M — resistant to outliers',
-        hint2: 'The standard threshold in psychology',
-        hint3: 'Starts with: V — does it measure the right thing?',
-        explanation: 'Expected answers: median (resistant to outliers/skew), 0.05 (standard significance threshold), and validity (does the test measure what it claims to).'
+        hint2: 'Five hundredths, written with a leading zero',
+        hint3: 'Two words: ___ size',
+        explanation: 'Expected answers: median (resistant to outliers and skew), 0.05 (the common significance cutoff), and effect size (how big the difference or relationship is).'
       }
     },
     {
@@ -106,42 +145,43 @@ export const psychHistoryApproachesPart4Data = {
       exercise: {
         dropdowns: [
           {
-            label: 'The best measure of central tendency for skewed data is the ___',
-            options: ['mean', 'median', 'mode', 'range']
+            label: 'In a positively skewed distribution, the mean is _____ the median.',
+            options: ['below', 'above', 'equal to', 'unrelated to']
           },
           {
-            label: 'Results are statistically significant when p < ___',
-            options: ['0.01', '0.05', '0.50', '1.00']
+            label: 'An effect size of 0.9 is usually interpreted as _____.',
+            options: ['small', 'medium', 'large', 'not significant']
           },
           {
-            label: '___ refers to whether a test measures what it claims to measure',
-            options: ['Reliability', 'Validity', 'Replication', 'Standardization']
+            label: 'A distribution with two separate peaks is called _____.',
+            options: ['normal', 'bimodal', 'negatively skewed', 'positively skewed']
           }
         ],
-        correctAnswers: ['median', '0.05', 'Validity'],
-        hint1: 'The median is resistant to outliers.',
-        hint2: 'The standard threshold in psychology.',
-        hint3: 'Does the test measure the right thing?',
-        explanation: 'Median is best for skewed data. p < 0.05 is the standard significance threshold. Validity = measuring what you intend to measure.'
+        correctAnswers: ['above', 'large', 'bimodal'],
+        hint1: 'A few very high scores pull the mean toward the tail.',
+        hint2: '0.8 or greater.',
+        hint3: '"Bi" means two.',
+        explanation: 'In positive skew, high outliers pull the mean above the median. An effect size of 0.9 is large. Two peaks make a bimodal distribution.'
       }
     },
     {
       id: 'histo4-strategy',
       type: 'text' as const,
       content: `
-      ## Common Misconceptions and Exam Strategy
+## Common Misconceptions and Exam Strategy
 
-      ### Misconceptions to Avoid
-      - The mean is NOT always the best measure of central tendency — outliers and skewed distributions make the median more appropriate.
-      - A p-value of 0.05 does NOT mean there's a 95% chance the hypothesis is true — it means there's a 5% probability the results occurred by chance IF the null hypothesis is true.
-      - Reliability and validity are NOT the same — a test can be reliable (consistent) without being valid (measuring the right thing).
-      - Standard deviation is NOT the range — SD measures average distance from the mean; range is just highest minus lowest.
+### Misconceptions to Avoid
+- The mean is NOT always the best measure of central tendency. With outliers or skew, use the median.
+- Statistical significance does NOT mean a result is large or important. Check the effect size.
+- Statistical significance does NOT prove the hypothesis is true; it means the result is unlikely to be due to chance alone.
+- Percentile rank is NOT percent correct.
+- Standard deviation is NOT the range. SD describes typical distance from the mean; range is just highest minus lowest.
+- A negative correlation is NOT a weak correlation. The sign is direction; the size is strength.
 
-      ### AP Strategy Moves
-      - If a distribution has extreme outliers or is described as "skewed," choose the median over the mean.
-      - Know the 68-95-99.7 rule cold: within 1 SD (68%), 2 SD (95%), 3 SD (99.7%).
-      - p < 0.05 questions appear frequently — be ready to interpret what it means and what it does NOT mean.
-      - Distinguish reliability (consistency) from validity (accuracy). A broken clock is reliable but not valid.
+### AP Strategy Moves
+- If a distribution is described as "skewed" or has extreme outliers, choose the median.
+- Know the 68-95-99.7 pattern and how to turn it into percentiles (1 SD above = about 84th percentile).
+- On the AAQ, when asked what a statistic shows, describe it **in the context of the study**: "The experimental group's mean was 4 points higher, a medium effect," not "it was significant."
       `
     },
     {
@@ -153,26 +193,37 @@ export const psychHistoryApproachesPart4Data = {
       exercise: {
         questions: [
           {
-            question: 'Five employees earn \\$30K, \\$32K, \\$35K, \\$33K, and \\$200K. Which measure of central tendency best represents the typical salary?',
+            question: 'Five employees earn \\$30K, \\$32K, \\$35K, \\$33K, and \\$200K. Which measure best represents the typical salary?',
             options: [
-              'Median (\\$33K) — the \\$200K outlier would inflate the mean',
-              'Mean (\\$66K) — it gives every salary equal weight in the average',
-              'Mode — it reports the salary that occurs most often in the data',
-              'Range (\\$170K) — it captures how widely the salaries are spread'
+              'The mean of \\$66K, because it gives every salary equal weight',
+              'The median of \\$33K, because the one outlier would inflate the mean',
+              'The mode, because it reports the salary that occurs most often',
+              'The range of \\$170K, because it shows how widely salaries spread'
             ],
-            correctAnswer: 0,
-            explanation: 'The \\$200K salary is an extreme outlier that pulls the mean (\\$66K) far above most salaries. The median (\\$33K) is unaffected by outliers and better represents the typical salary. This is why the AP exam tests when to use mean vs. median.'
+            correctAnswer: 1,
+            explanation: 'The \\$200K salary is an outlier that pulls the mean (\\$66K) far above most salaries. The median (\\$33K) is not affected by the outlier and better represents the typical salary.'
           },
           {
-            question: 'A personality test gives a student similar scores every time they take it, but experts agree it doesn\'t actually measure personality well. This test has:',
+            question: 'A study of 20,000 people finds that a memory app improves recall by a statistically significant amount, with an effect size of 0.1. How should this be interpreted?',
             options: [
-              'high reliability but low validity — consistent, but not measuring the trait it claims to measure',
-              'high validity but low reliability — accurate, but its scores vary from one test to the next',
-              'both high reliability and high validity — consistent scores show it measures personality',
-              'low reliability and low validity — expert doubts mean its scores are also inconsistent'
+              'The effect is large, since the result reached statistical significance',
+              'The effect is probably real but small in size',
+              'The effect is likely due to chance, since the effect size is low',
+              'The effect cannot be judged, since the sample was too large'
+            ],
+            correctAnswer: 1,
+            explanation: 'Significance means the result is unlikely to be due to chance, and an effect size of 0.1 is small. Very large samples can detect real effects that are too small to matter much.'
+          },
+          {
+            question: 'A basketball player has her best game of the season, scoring 38 points when she usually scores about 15. In the next game she scores 19. Which concept best explains the drop?',
+            options: [
+              'Regression toward the mean',
+              'A negatively skewed distribution',
+              'A negative correlation',
+              'Statistical significance'
             ],
             correctAnswer: 0,
-            explanation: 'Consistent scores = high reliability. Not measuring personality well = low validity. A test can be reliable without being valid (like a bathroom scale that always reads 5 pounds too heavy — it\'s consistent but inaccurate).'
+            explanation: 'An extreme performance is usually followed by one closer to the player\'s average, partly because luck contributed to the extreme score. That is regression toward the mean.'
           }
         ]
       }

@@ -9,21 +9,22 @@ export const psychLanguagePart5Data = {
 
 **Part 5 of 7 — Intelligence Controversies**
 
-Few topics in psychology generate more debate than the nature of intelligence. Is it genetic? Environmental? Can tests be fair across cultures? These controversies are heavily tested on the AP exam — and you need to understand the nuance, not just the headlines.
+> 🔑 **Key Concept:** Intelligence scores are shaped by genes, environments, and the conditions of testing. Systemic issues such as poverty, discrimination, and unequal schooling affect scores, and test results have been misused to limit people's opportunities (CED 2.8.B.3, 2.8.C, 2.8.D.2).
 
-| Controversy | Key Question | Current Consensus |
+| Controversy | Key Question | What the evidence shows |
 |-------------|-------------|-------------------|
-| **Nature vs. Nurture** | Is intelligence inherited or learned? | Both matter — heritability ≈ .50–.80 in adults |
-| **Flynn Effect** | Why do IQ scores keep rising generation over generation? | Better nutrition, education, test familiarity |
-| **Stereotype Threat** | Can awareness of stereotypes lower test performance? | Yes — Steele & Aronson (1995) demonstrated this |
-| **Cultural Bias** | Do IQ tests favor certain cultural groups? | Some items show bias; "culture-fair" tests attempt to fix this |
-| **Growth vs. Fixed Mindset** | Does believing intelligence is fixed harm performance? | Yes — Dweck showed growth mindset improves outcomes |
+| **Genes and environment** | Are differences in IQ inherited or learned? | Both matter; twin and adoption studies show genetic influence, and environments shift scores |
+| **Flynn effect** | Why have IQ scores risen across generations? | Societal factors such as higher socioeconomic status, better health care, and better nutrition |
+| **Within vs. between groups** | Do group averages tell us about individuals? | Scores vary more within a group than between groups |
+| **Stereotype threat and lift** | Can stereotypes change test performance? | Yes; testing situations that call up stereotypes can lower or raise scores |
+| **Misuse of tests** | How have scores been used against people? | To limit access to jobs, military ranks, schools, and immigration to the US |
+| **Fixed vs. growth mindset** | Do beliefs about intelligence matter? | Believing intelligence can grow is linked to better academic achievement |
 
 ### 🗣️ Real-World Example
 
-In Steele & Aronson's (1995) landmark study, Black college students performed worse on a difficult test when told it measured "intellectual ability" (activating stereotype threat) compared to when told it was a "lab exercise." Same test, same students — the only difference was the framing. This showed that stereotypes can become self-fulfilling prophecies.
+In a well-known 1995 study, Claude Steele and Joshua Aronson gave Black and White college students a difficult verbal test. When the test was described as a measure of intellectual ability, Black students scored lower than White students with similar prior test scores. When the same test was described as a problem-solving exercise that did not measure ability, the gap largely disappeared. Same test, same kind of students; only the framing changed.
 
-> **Why This Matters for the AP Exam:** The nature-nurture debate for intelligence appears on nearly every AP exam. The key: heritability is about GROUPS, not individuals. Even if heritability is 80%, it does NOT mean 80% of YOUR intelligence is genetic.
+> **Why This Matters for the AP Exam:** Heritability describes differences within a **group**, not any one person. Even a high heritability estimate does not mean that a person's own score is fixed by genes.
       `
     },
     {
@@ -35,122 +36,126 @@ In Steele & Aronson's (1995) landmark study, Black college students performed wo
       exercise: {
         questions: [
           {
-            question: 'If the heritability of IQ is estimated at .75, this means:',
+            question: 'If the heritability of IQ in a population is estimated at .75, this means',
             options: [
               '75% of any one person\'s IQ score was fixed by the genes they inherited',
-              '75% of the variation in IQ within a population reflects genetic differences',
-              'Environment explains 75% of the IQ differences within the population',
+              '75% of the variation in IQ within that population is linked to genetic differences',
+              'environment explains 75% of the IQ differences within that population',
               'IQ scores can be raised by at most 25% through changes in environment'
             ],
             correctAnswer: 1,
-            explanation: 'Heritability describes how much of the VARIATION in a trait within a POPULATION is due to genetic differences. It does NOT tell you about any individual. Even with high heritability, environmental interventions (better nutrition, education) can still raise IQ scores — as the Flynn effect proves.'
+            explanation: 'Heritability describes how much of the variation among people in a particular population is linked to genetic differences. It says nothing about an individual and does not limit how much environments can change scores.'
           },
           {
-            question: 'The Flynn effect refers to the observation that:',
+            question: 'The Flynn effect refers to the observation that',
             options: [
               'IQ scores have fallen across generations as schooling has grown less rigorous',
-              'IQ scores have risen about 3 points per decade across generations',
-              'Adopted children\'s IQs drift toward those of their adoptive parents over time',
-              'Cultural bias in IQ tests has been eliminated by modern nonverbal test items'
+              'IQ scores in many countries have risen across generations',
+              'adopted children\'s IQs drift toward those of their adoptive parents over time',
+              'cultural bias in IQ tests has been eliminated by modern nonverbal test items'
             ],
             correctAnswer: 1,
-            explanation: 'James Flynn documented that IQ scores have risen about 3 points per decade across 30+ countries throughout the 20th century. This CANNOT be genetic (genes don\'t change that fast) — it must be environmental (better nutrition, education, familiarity with testing, more cognitively stimulating environments).'
+            explanation: 'Average IQ scores have risen across generations in much of the world. The rise is too fast to be genetic and is linked to societal factors such as higher socioeconomic status, better health care, and better nutrition.'
           }
         ]
       }
     },
     {
-      id: 'langu5-s3-deep-dive',
+      id: 'langu5-s3-nature-nurture',
       type: 'text' as const,
       content: `
-### 📚 Deep Dive: The Nature-Nurture Evidence
+### 📚 Genes and Environment: The Evidence
 
-**Evidence for Genetic Influence (Nature)**
+**Evidence for genetic influence** (twin and adoption studies, CED 1.1.A.3)
 
-| Study Type | Finding | What It Shows |
+| Comparison | Typical IQ correlation | What it shows |
 |-----------|---------|---------------|
-| **Identical twins raised together** | IQ correlation ≈ .86 | Shared genes + shared environment |
-| **Identical twins raised apart** | IQ correlation ≈ .72 | Genes alone produce high similarity |
-| **Fraternal twins raised together** | IQ correlation ≈ .60 | Shared environment + 50% shared genes |
-| **Adopted siblings** | IQ correlation ≈ .00 by adulthood | Shared environment alone has diminishing effect |
+| Identical twins raised together | about +.85 | Shared genes plus shared home |
+| Identical twins raised apart | about +.75 | Similarity remains even without a shared home |
+| Fraternal twins raised together | about +.60 | Half the shared genes, same home |
+| Unrelated children adopted into the same home (as adults) | near 0 | Shared home alone has little lasting effect on differences |
 
-Key finding: As people age, the genetic influence on IQ INCREASES and the environmental influence DECREASES. Adopted children's IQs correlate more with biological parents by adulthood.
+**Evidence for environmental influence**
 
-**Evidence for Environmental Influence (Nurture)**
+| Factor | Effect |
+|--------|--------|
+| **Schooling** | Each additional year of school is linked to higher scores |
+| **Poverty and health** | Malnutrition, lead exposure, and poor health care are linked to lower scores |
+| **Discrimination and educational inequity** | Unequal access to good schools and resources lowers scores for individuals and groups (CED 2.8.C.2) |
+| **Flynn effect** | Scores rose across generations as living standards improved (CED 2.8.C.1) |
 
-| Factor | Effect on IQ | Research |
-|--------|-------------|----------|
-| **Nutrition** | Malnutrition lowers IQ by 10–15 points | Studies from developing nations |
-| **Education** | Each year of school adds ~1–5 IQ points | Summer learning loss studies |
-| **Enriched environments** | Early intervention programs raise IQ | Head Start, Perry Preschool study |
-| **Lead exposure** | Lowers IQ significantly | Environmental toxin research |
-| **Flynn Effect** | IQ rises ~3 points/decade | Cannot be genetic — too fast for evolution |
+### 📚 Within-Group vs. Between-Group Differences (CED 2.8.C.2)
 
-### Stereotype Threat vs. Self-Fulfilling Prophecy
+IQ scores vary **more within a group than between groups**. The range of scores inside any one group is far larger than the difference between two groups' averages.
 
-| Concept | Definition | Mechanism |
-|---------|-----------|-----------|
-| **Stereotype threat** | Fear of confirming a negative stereotype impairs performance | Anxiety → working memory overload → worse performance |
-| **Self-fulfilling prophecy** | Expectations cause the expected behavior | Teacher expects less → teaches less → student learns less |
+**Seed analogy:** Plant seeds from the same varied batch in two pots, one with rich soil and one with poor soil. Within each pot, height differences reflect the seeds' genes, because the soil is the same. The difference **between** the pots comes entirely from the soil. In the same way, a trait can be highly heritable within groups while the gap between groups is caused by environment.
 
-**Carol Dweck's Mindset Research**: Students who believe intelligence is FIXED ("I'm just not a math person") give up when challenged. Students with a GROWTH mindset ("I can improve with effort") persist and perform better over time. Praising effort > praising intelligence.
+Personal and sociocultural biases can also affect how an individual's score is interpreted. A tester who expects low performance from a group may read the same score differently.
       `
     },
     {
-      id: 'langu5-s4-input-boxes',
-      type: 'input-boxes' as const,
-      content: `
-**Recall Practice** ✍️
-      `,
-      exercise: {
-        inputs: [
-          { label: 'Who demonstrated stereotype threat in a 1995 study?', answer: 'Steele and Aronson' },
-          { label: 'IQ scores rising ~3 points per decade across generations is called the ___ effect', answer: 'Flynn' },
-          { label: 'Who proposed the concepts of fixed mindset vs. growth mindset?', answer: 'Dweck' }
-        ]
-      }
-    },
-    {
-      id: 'langu5-s5-dropdown',
+      id: 'langu5-s4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Controversy** 🔍
+**Match the Finding to the Concept** 🔍
       `,
       exercise: {
         dropdowns: [
-          { label: 'Black students score lower when told test measures "ability" vs. "lab exercise"', options: ['Flynn effect', 'Stereotype threat', 'Cultural bias', 'Heritability'] },
-          { label: 'IQ scores have risen 3 points per decade worldwide', options: ['Flynn effect', 'Stereotype threat', 'Growth mindset', 'Heritability'] },
-          { label: 'Identical twins reared apart still have similar IQs (r ≈ .72)', options: ['Flynn effect', 'Stereotype threat', 'Cultural bias', 'Genetic heritability'] }
+          { label: 'Women score lower on a math test after being reminded of a gender stereotype about math: _____', options: ['Flynn effect', 'Stereotype threat', 'Stereotype lift', 'Heritability'] },
+          { label: 'A nation\'s average IQ score rises over 50 years as nutrition and health care improve: _____', options: ['Flynn effect', 'Stereotype threat', 'Growth mindset', 'Heritability'] },
+          { label: 'Members of a group score higher after being reminded that another group is stereotyped as weaker in that area: _____', options: ['Flynn effect', 'Stereotype threat', 'Stereotype lift', 'Fixed mindset'] }
         ],
-        correctAnswers: ['Stereotype threat', 'Flynn effect', 'Genetic heritability'],
-        hint1: 'Being told a test measures ability activates fear of confirming stereotypes.',
-        hint2: 'Rising scores over generations = Flynn effect.',
-        hint3: 'Twins reared apart sharing similar IQs shows genetic influence.',
-        explanation: 'Steele & Aronson\'s study demonstrated stereotype threat — framing affects performance. Rising IQ scores across generations = Flynn effect. Twin studies showing similarity despite different environments = genetic heritability.'
+        correctAnswers: ['Stereotype threat', 'Flynn effect', 'Stereotype lift'],
+        hint1: 'A reminder of a negative stereotype about your OWN group.',
+        hint2: 'Scores rising across generations.',
+        hint3: 'A boost from comparing yourself with a group stereotyped as worse.',
+        explanation: 'Worry about confirming a negative stereotype about one\'s own group is stereotype threat. Rising scores across generations is the Flynn effect. A performance boost from awareness that another group is negatively stereotyped is stereotype lift.'
       }
     },
     {
-      id: 'langu5-s6-strategy',
+      id: 'langu5-s5-threat-misuse',
       type: 'text' as const,
       content: `
+### 📚 Stereotype Threat and Stereotype Lift (CED 2.8.B.3)
+
+| Concept | Definition | Effect on scores |
+|---------|-----------|-----------|
+| **Stereotype threat** | Worry about confirming a negative stereotype about one's own group | Lowers performance, often by adding anxiety that uses up working memory |
+| **Stereotype lift** | A boost in performance from awareness that another group is negatively stereotyped | Raises performance for members of the non-stereotyped group |
+
+Both effects can make test scores unequal for reasons that have nothing to do with ability. That is why researchers try to build assessments that are **socio-culturally responsive**: familiar content, neutral framing, and testing conditions that do not call attention to group stereotypes.
+
+### 📚 How Test Scores Have Been Misused (CED 2.8.C.3)
+
+Scores from intelligence tests have been used to **limit access** to:
+- **Jobs** (screening applicants with tests unrelated to the work)
+- **Military ranks** (assigning recruits to roles and promotions by test score)
+- **Educational institutions** (keeping students out of programs or schools)
+- **Immigration to the US** (early-1900s testers claimed that some immigrant groups were less intelligent, using tests given in English to people who had just arrived)
+
+This history is an example of applying psychological concepts in inappropriate or discriminatory ways (skill 1.B).
+
+### 📚 Fixed vs. Growth Mindset (CED 2.8.D.2)
+
+People's beliefs about intelligence can affect academic achievement. Psychologist **Carol Dweck** described two beliefs:
+- **Fixed mindset:** intelligence is set at birth. Students who hold this view tend to avoid challenges and give up after failure, because failure seems to reveal low ability.
+- **Growth mindset:** intelligence can grow through effort and experience. Students who hold this view tend to persist and see mistakes as information.
+
+In studies by Dweck's group, children praised for being smart were more likely to choose easy tasks afterward than children praised for their effort.
+
 ### 🎯 AP Exam Strategy: Controversy Traps
 
 | Common Mistake | Why It's Wrong | Correct Understanding |
 |----------------|---------------|----------------------|
-| High heritability = genes determine YOUR IQ | Heritability applies to populations, not individuals | Even 80% heritability leaves room for environmental impact |
-| Flynn effect is genetic | Genes cannot change fast enough across 1–2 generations | Environmental factors (nutrition, education) drive it |
-| Stereotype threat = low ability | It affects HIGH-ability members of stereotyped groups most | The anxiety, not low ability, impairs performance |
-| Group IQ differences = genetic | Within-group heritability ≠ between-group differences | Between-group differences can be entirely environmental |
-
-**Critical Distinction: Within-Group vs. Between-Group Heritability**
-
-Imagine planting seeds from the same batch in rich soil vs. poor soil. Within EACH pot, height differences are genetic (same soil, different genes). But the BETWEEN-pot difference is entirely environmental (different soil). The same logic applies to IQ group differences — within-group heritability tells us NOTHING about between-group causes.
-
-> **AP Tip:** If a free-response question asks about "the role of genetics AND environment in intelligence," you MUST discuss BOTH. Use twin studies for genetics and Flynn effect/intervention programs for environment. Conclude that it's an interaction, not either/or.
+| High heritability means genes decide YOUR IQ | Heritability describes variation in a group | It says nothing about one person |
+| The Flynn effect is genetic | Genes cannot change that fast | Societal factors drive it |
+| Group gaps must be genetic | Within-group heritability says nothing about between-group causes | Environment can explain the gap |
+| Stereotype threat means low ability | The test situation, not ability, lowers scores | Changing the framing changes scores |
+| Mindset is just self-esteem | Mindset is a belief about whether ability can change | It affects how students respond to challenge |
       `
     },
     {
-      id: 'langu5-s7-applied',
+      id: 'langu5-s6-applied',
       type: 'multiple-choice' as const,
       content: `
 **Applied Scenarios** 🔬
@@ -158,26 +163,37 @@ Imagine planting seeds from the same batch in rich soil vs. poor soil. Within EA
       exercise: {
         questions: [
           {
-            question: 'A researcher finds that children raised in enriched foster homes have IQ scores 15 points higher than their biological siblings raised in deprived institutions, even though identical twins in the study have correlated IQs. What conclusion is best supported?',
+            question: 'In a study, identical twins have more similar IQ scores than fraternal twins, and children adopted from under-resourced orphanages into well-resourced homes score higher than expected. What conclusion is best supported?',
             options: [
-              'Genes explain the twin data, so the foster-home gap must reflect sampling error',
-              'Environment explains the foster gap, so the twin correlation must reflect shared homes',
-              'Both genes and environment contribute to intelligence',
+              'Genes explain the twin data, so the adoption gain must reflect sampling error',
+              'Environment explains the adoption gain, so the twin pattern must reflect shared homes',
+              'Genetic and environmental influences each play a real part',
               'The two results conflict, so the study cannot support any conclusion'
             ],
             correctAnswer: 2,
-            explanation: 'The twin correlations show genetic influence, while the foster home vs. institution difference shows environmental influence. Both are present simultaneously — genes set a RANGE of potential, and environment determines where within that range a person falls. This is the interactionist conclusion the AP exam expects.'
+            explanation: 'The twin comparison points to genetic influence, and the adoption gain points to environmental influence. The findings fit together: genes and environments each contribute.'
           },
           {
-            question: 'A teacher tells a student, "You\'re so smart — you don\'t even have to try!" According to Dweck\'s research, what is the most likely effect on the student?',
+            question: 'A teacher tells a student, "You\'re so smart, you don\'t even have to try!" According to mindset research, what is the most likely effect on the student?',
             options: [
-              'The student will be motivated to work harder to maintain the "smart" label',
+              'The student will work harder to keep earning praise for being smart',
               'The student will start avoiding challenges that could expose mistakes',
-              'The student will develop a growth mindset from the positive reinforcement',
+              'The student will develop a growth mindset from the positive feedback',
               'The praise will have no lasting effect on the student\'s effort or choices'
             ],
             correctAnswer: 1,
-            explanation: 'Dweck\'s research shows that praising intelligence ("You\'re so smart") fosters a FIXED mindset — students begin to see intelligence as a trait to protect rather than a skill to develop. They avoid challenges because failure would threaten their "smart" identity. Praising EFFORT ("You worked so hard on that!") fosters a growth mindset instead.'
+            explanation: 'Praising intelligence encourages a fixed mindset, so the student may avoid hard tasks that could threaten the "smart" label. Praising effort encourages a growth mindset instead.'
+          },
+          {
+            question: 'Two groups differ by a few points in average test score, yet scores within each group span more than 60 points. Which conclusion is best supported?',
+            options: [
+              'Knowing a person\'s group predicts that person\'s score quite accurately',
+              'The difference between the groups must be caused by genetic differences',
+              'The test cannot be reliable if scores within each group vary so widely',
+              'Group membership tells you very little about any one person\'s score'
+            ],
+            correctAnswer: 3,
+            explanation: 'Because variation within each group is far larger than the gap between the averages, group membership is a poor guide to an individual\'s score. Nothing in the data shows the cause of the small gap.'
           }
         ]
       }

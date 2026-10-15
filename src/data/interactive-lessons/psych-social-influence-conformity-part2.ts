@@ -172,7 +172,7 @@ Conformity is adjusting your behavior or thinking to match a group standard. It'
 - **4-5** — Group size at which conformity plateaus
 - **~80%** — Reduction in conformity when ONE dissenter is present
 
-> **AP Tip:** When describing Asch in an FRQ, mention: (1) the LINE JUDGMENT task, (2) confederates gave unanimous WRONG answers, (3) ~75% conformed at least once, and (4) this was primarily NORMATIVE influence.
+> **AP Tip:** When you use Asch's study as evidence, mention: (1) the LINE JUDGMENT task, (2) confederates gave unanimous WRONG answers, (3) ~75% conformed at least once, and (4) this was primarily NORMATIVE influence.
       `
     },
     {

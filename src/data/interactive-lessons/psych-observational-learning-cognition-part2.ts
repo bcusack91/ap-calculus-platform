@@ -7,22 +7,36 @@ export const psychObservationalPart2Data = {
       content: `
 # 🧠 Observational & Cognitive Learning
 
-**Part 2 of 7 — Modeling Processes**
+**Part 2 of 7 — Models, Similarity, and Vicarious Conditioning**
 
-Not all observation leads to learning. Bandura identified four essential processes that must occur for observational learning to succeed. If any one fails, the behavior will NOT be reproduced. Think of it as a chain — every link must hold.
+> 🔑 **Key Concept (CED 3.9.A.1):** Social learning theory proposes that learning can occur by observation and does not have to involve personal experience with a consequence (**vicarious conditioning**). Learning can occur by copying the behavior of **models**, and **the more similar a model is, the more likely the behavior is to be learned**.
 
-| Process | Definition | What Breaks It |
-|---------|-----------|----------------|
-| **Attention** | You must NOTICE and focus on the model | Distraction, model not salient, low interest |
-| **Retention** | You must REMEMBER what you observed | Poor memory, too complex, no mental rehearsal |
-| **Reproduction** | You must be physically/mentally ABLE to perform the behavior | Lack of skill, physical limitations, insufficient practice |
-| **Motivation** | You must WANT to perform the behavior | No incentive, vicarious punishment, low self-efficacy |
+Part 1 showed THAT people learn by watching. This part asks WHEN watching is most likely to change behavior. Two factors carry most of the weight: who the model is, and what happens to the model.
+
+### Factor 1: How Similar the Model Is
+
+| Observer | More similar model | Less similar model | Who is more likely to be imitated? |
+|----------|-------------------|--------------------|------------------------------------|
+| A 9-year-old learning to skateboard | A 10-year-old at the same skate park | A 35-year-old professional skater | The 10-year-old |
+| A first-year nursing student | A second-year student from the same program | A hospital chief of medicine | The second-year student |
+| A teen deciding whether to vape | A friend from the same grade | An adult celebrity in an ad | The friend |
+
+Similarity can be age, gender, background, interests, or situation. A similar model makes the behavior look like something "people like me" do.
+
+### Factor 2: What Happens to the Model
+
+| Term | What the observer sees | Effect on the observer |
+|------|------------------------|------------------------|
+| **Vicarious reinforcement** | The model is rewarded for the behavior | Observer becomes MORE likely to perform it |
+| **Vicarious punishment** | The model is punished for the behavior | Observer becomes LESS likely to perform it |
+
+The observer never receives a consequence directly; the consequence to the MODEL does the work. That is what "vicarious" means.
 
 ### 🗣️ Real-World Example
 
-You watch a cooking show and see a chef make a soufflé. You paid **attention** (watched carefully), you **retained** the steps (took mental notes), and you are **motivated** (you want to impress dinner guests). But when you try to **reproduce** it, your soufflé collapses — you lacked the motor skill. Learning occurred (you know HOW), but reproduction failed.
+A new player on a soccer team watches a teammate her own age stay late to practice free kicks, and the coach starts the teammate in the next game. The new player begins staying late too. She has received no reward herself: a similar model was reinforced, and she learned vicariously.
 
-> **Why This Matters for the AP Exam:** The four processes (ARRM — Attention, Retention, Reproduction, Motivation) frequently appear in FRQ questions. You may be asked to identify which process failed in a given scenario. Motivation is the trickiest — it involves vicarious reinforcement/punishment.
+> You may see a four-step list of modeling processes in other textbooks; the current AP exam does not test it by name. Focus on vicarious conditioning and model similarity.
       `
     },
     {
@@ -34,26 +48,26 @@ You watch a cooking show and see a chef make a soufflé. You paid **attention** 
       exercise: {
         questions: [
           {
-            question: 'A student watches a math teacher solve a problem on the board but is texting during the demonstration. When asked to solve a similar problem, the student cannot do it. Which modeling process FAILED?',
+            question: 'Two anti-littering videos show a person being fined for littering. Middle schoolers who watch a version starring a student their own age litter less afterward than those who watch a version starring a retired adult. This difference is BEST explained by:',
             options: [
-              'Attention — the student was distracted and missed the worked steps',
-              'Retention — the student saw the steps but failed to store them in memory',
-              'Reproduction — the student lacks the math ability to carry out the steps',
-              'Motivation — the student saw no reason to use the steps afterward'
+              'Model similarity, since a model like the observer makes imitation more likely',
+              'Vicarious reinforcement, since the student in the video was rewarded for littering',
+              'Latent learning, since the students learned about fines but showed it only later',
+              'Classical conditioning, since the fine became paired with the sight of litter'
             ],
             correctAnswer: 0,
-            explanation: 'The student was texting (distracted) and therefore did not attend to the model\'s demonstration. Without attention — the FIRST step — retention, reproduction, and motivation are irrelevant. The chain breaks at the first link.'
+            explanation: 'Both videos show the same consequence, so the difference comes from who the model is: a model similar to the observer makes learning from that model more likely (CED 3.9.A.1). The model was punished, not reinforced, and nothing in the scenario involves hidden learning or a stimulus pairing.'
           },
           {
-            question: 'A child watches an older sibling ride a bicycle and tries to imitate but keeps falling. Which modeling process is the primary barrier?',
+            question: 'A boy sees his older cousin get grounded for sneaking out at night. The boy, who has never been punished for it himself, decides not to sneak out. This is an example of:',
             options: [
-              'Attention — the child didn\'t watch the sibling\'s movements carefully enough',
-              'Retention — the child forgot the sequence of steps the sibling used',
-              'Reproduction — the child lacks the coordination to perform it',
-              'Motivation — the child doesn\'t really want to ride the bike yet'
+              'Positive punishment, since the boy received an unpleasant consequence',
+              'Vicarious punishment, since a consequence to the model reduced the behavior',
+              'Negative reinforcement, since the boy avoided an unpleasant outcome',
+              'Extinction, since the sneaking-out behavior stopped being reinforced'
             ],
-            correctAnswer: 2,
-            explanation: 'The child watched (attention), remembered (retention), and is motivated (trying to do it). The problem is reproduction — the child\'s motor skills and coordination are not yet developed enough to perform the behavior. With practice, reproduction will improve.'
+            correctAnswer: 1,
+            explanation: 'The punishment happened to the cousin, not the boy, and it still lowered the boy\'s likelihood of sneaking out, which is vicarious punishment. Positive punishment and negative reinforcement require a consequence to the learner himself, and extinction requires a behavior that was previously reinforced.'
           }
         ]
       }
@@ -62,41 +76,26 @@ You watch a cooking show and see a chef make a soufflé. You paid **attention** 
       id: 'obser2-s3-deep-dive',
       type: 'text' as const,
       content: `
-### 📚 Deep Dive: The Four Processes Explained
+### 📚 Deep Dive: Modeling in Everyday Life
 
-**1. Attention — "Did I watch?"**
-- Model characteristics that increase attention: attractiveness, prestige, similarity to observer, competence
-- Observer characteristics: arousal level, perceptual capacity, past reinforcement for paying attention
-- **AP key:** Children pay MORE attention to models who are similar to them (same gender, age, perceived status)
+Observational learning works in both directions: models can teach helpful behavior and harmful behavior.
 
-**2. Retention — "Do I remember?"**
-- Requires mental rehearsal (cognitive rehearsal, mental imagery)
-- More complex behaviors require more retention effort
-- Verbal coding (describing the behavior to yourself) improves retention
-- **AP key:** This is the cognitive component that separates Bandura from Skinner
+| Setting | Behavior modeled | Likely effect on observers |
+|---------|------------------|----------------------------|
+| A coach who calmly congratulates the other team after a loss | Good sportsmanship | Players copy the calm handshake, especially players who look up to the coach |
+| An older sibling who reads every night | Reading habit | A younger sibling picks up books more often |
+| A video game character rewarded with points for fighting | Aggression rewarded on screen | Possible increase in aggressive thoughts; real-world consequences usually discourage real aggression |
+| A classmate praised for asking questions in class | Speaking up | Quieter students who see themselves in that classmate start asking questions |
 
-**3. Reproduction — "Can I do it?"**
-- Physical and cognitive ability to perform the behavior
-- Improves with practice; initial attempts may be imperfect
-- Self-observation and corrective feedback help
-- **AP key:** Reproduction separates LEARNING from PERFORMANCE — you can learn something you can't perform
+### How Psychologists Study Modeling
 
-**4. Motivation — "Do I want to?"**
+| Design | What it can show | Example |
+|--------|------------------|---------|
+| **Experiment** | Cause and effect, because participants are randomly assigned and the model's behavior is manipulated | Children randomly assigned to watch an aggressive or a calm adult model, then observed at play |
+| **Correlational study** | A relationship only, because no variable is manipulated | Survey linking hours of violent video games to self-reported aggression |
+| **Naturalistic observation** | Behavior in real settings without interference | Recording how often toddlers copy older children on a playground |
 
-| Motivation Factor | Effect | Example |
-|-------------------|--------|---------|
-| **Vicarious reinforcement** | Model rewarded → observer more likely to imitate | Seeing classmate praised for helping |
-| **Vicarious punishment** | Model punished → observer less likely to imitate | Seeing classmate scolded for cheating |
-| **Self-reinforcement** | Internal satisfaction from performing the behavior | Pride after mastering a new skill |
-| **Self-efficacy** | Belief in one's ability to succeed | "I CAN do this" → more likely to try |
-
-### Bandura's Reciprocal Determinism
-
-Bandura also proposed that behavior, personal factors (cognition, emotion), and the environment all influence each other in a continuous loop:
-
-**Behavior ↔ Person ↔ Environment**
-
-Example: A confident student (person) participates in class (behavior), which leads to teacher praise (environment), which increases confidence (person), which leads to more participation (behavior).
+> **AP Connection:** In a correlational study of media and aggression, a **third variable** (such as a hostile home environment) could drive both game choice and aggression, and **directionality** is unclear (aggressive kids may choose violent games). Only an experiment with random assignment can show that watching a model CAUSES a change.
       `
     },
     {
@@ -106,10 +105,25 @@ Example: A confident student (person) participates in class (behavior), which le
 **Recall Practice** ✍️
       `,
       exercise: {
-        inputs: [
-          { label: 'What are Bandura\'s four modeling processes? (A, R, R, M)', answer: 'attention, retention, reproduction, motivation' },
-          { label: 'What is it called when seeing a model get REWARDED makes you more likely to imitate?', answer: 'vicarious reinforcement' },
-          { label: 'Bandura\'s model where behavior, person, and environment all interact is called reciprocal ___', answer: 'determinism' }
+        questions: [
+          {
+            question: 'Learning from the consequences another person receives, without experiencing them yourself, is called ___ conditioning.',
+            answer: 'vicarious',
+            acceptableAnswers: ['vicarious conditioning'],
+            explanation: 'Vicarious conditioning is learning from consequences delivered to a model rather than to the observer (CED 3.9.A.1).'
+          },
+          {
+            question: 'According to the CED, the more ___ a model is to the observer, the more likely the behavior is to be learned.',
+            answer: 'similar',
+            acceptableAnswers: ['alike', 'like'],
+            explanation: 'Model similarity increases the likelihood that an observed behavior is learned and imitated.'
+          },
+          {
+            question: 'The person whose behavior is observed and copied in social learning theory is called the ___.',
+            answer: 'model',
+            acceptableAnswers: ['models', 'role model'],
+            explanation: 'Observers learn by copying the behavior of models.'
+          }
         ]
       }
     },
@@ -117,19 +131,19 @@ Example: A confident student (person) participates in class (behavior), which le
       id: 'obser2-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Identify the Failed Process** 🔍
+**Identify the Process** 🔍
       `,
       exercise: {
         dropdowns: [
-          { label: 'A gymnast watches an Olympic routine but can\'t perform the triple flip', options: ['Attention failure', 'Retention failure', 'Reproduction failure', 'Motivation failure'] },
-          { label: 'A child sees a classmate get detention for swearing and decides not to swear', options: ['Vicarious reinforcement', 'Vicarious punishment', 'Self-reinforcement', 'Direct punishment'] },
-          { label: 'A student watched the lecture but can\'t recall the steps a week later', options: ['Attention failure', 'Retention failure', 'Reproduction failure', 'Motivation failure'] }
+          { label: 'A new employee starts arriving early after seeing a coworker praised by the manager for punctuality', options: ['Vicarious reinforcement', 'Vicarious punishment', 'Positive reinforcement', 'Latent learning'] },
+          { label: 'A child stops climbing the bookshelf after watching her brother fall and get scolded for it', options: ['Vicarious reinforcement', 'Vicarious punishment', 'Negative reinforcement', 'Instinctive drift'] },
+          { label: 'A teen copies the study routine of a classmate in her grade rather than one recommended by a famous author', options: ['Model similarity', 'Vicarious punishment', 'Insight learning', 'Classical conditioning'] }
         ],
-        correctAnswers: ['Reproduction failure', 'Vicarious punishment', 'Retention failure'],
-        hint1: 'The gymnast watched and remembered, but can\'t physically perform it.',
-        hint2: 'Seeing someone ELSE get punished = vicarious punishment.',
-        hint3: 'Watched the lecture (attention was fine) but can\'t recall = retention failure.',
-        explanation: 'The gymnast has attention, retention, and motivation — but lacks the physical ability (reproduction). The child\'s decision is driven by vicarious punishment. The student attended but retention failed over time.'
+        correctAnswers: ['Vicarious reinforcement', 'Vicarious punishment', 'Model similarity'],
+        hint1: 'The coworker, not the new employee, was rewarded.',
+        hint2: 'The brother, not the child, received the consequence.',
+        hint3: 'The classmate is more like the teen than the famous author is.',
+        explanation: 'Praise for the coworker raised the new employee\'s punctuality (vicarious reinforcement). The brother\'s scolding lowered the child\'s climbing (vicarious punishment). Choosing the same-grade classmate as a model reflects model similarity.'
       }
     },
     {
@@ -140,20 +154,17 @@ Example: A confident student (person) participates in class (behavior), which le
 
 | Common Mistake | Why It's Wrong | Correct Understanding |
 |----------------|---------------|----------------------|
-| Confusing motivation with reproduction | Motivation = wanting to; Reproduction = being able to | A person can be motivated but unable to reproduce |
-| Thinking vicarious reinforcement = direct reinforcement | Vicarious = watching someone ELSE get reinforced | Direct = YOU receive the reinforcement |
-| Ignoring the attention step | Attention is required FIRST | Without attention, no other process matters |
-| Reciprocal determinism = one-way causation | All three elements influence each other | It's a continuous feedback loop, not linear |
+| "Vicarious punishment is a kind of positive punishment" | Positive punishment is delivered to the LEARNER | Vicarious consequences are delivered to the MODEL |
+| "Observational learning needs a reward to happen" | Learning can occur with no consequence to anyone | Consequences to the model affect whether the behavior is PERFORMED |
+| "Any model is equally effective" | The CED states that similarity matters | The more similar the model, the more likely the behavior is learned |
+| "A correlation between violent games and aggression proves games cause aggression" | Correlation cannot show causation | Third variables and directionality must be ruled out by an experiment |
 
-**Memory Trick:** **A**-**R**-**R**-**M** = **A** **R**abbit **R**uns **M**adly (Attention → Retention → Reproduction → Motivation)
+**Quick Decision Guide:**
+- Consequence happened to someone ELSE and changed the observer's behavior → **vicarious** reinforcement or punishment
+- Observer copies the model most like themselves → **model similarity**
+- Consequence happened to the LEARNER directly → **operant** conditioning, not vicarious
 
-**Who Increases Attention?** Models who are:
-- **P**restigious (celebrity, authority figure)
-- **S**imilar (same gender, age, ethnicity)
-- **A**ttractive (physically or socially)
-- **C**ompetent (skilled at the behavior)
-
-> **AP Tip:** In FRQ questions about observational learning, always identify WHICH of the four processes is relevant. Simply saying "observational learning" without specifying the process earns partial credit at best.
+> **AP Tip:** On the multiple-choice section, the word "watched" or "saw" plus a consequence to someone else signals vicarious conditioning. Check who received the consequence before choosing an operant term.
       `
     },
     {
@@ -165,26 +176,26 @@ Example: A confident student (person) participates in class (behavior), which le
       exercise: {
         questions: [
           {
-            question: 'A music student watches a famous pianist perform a complex piece on YouTube (attention), practices it mentally in her head (retention), and is highly motivated to learn it. After months of practice, she finally performs it successfully. Which statement best captures the role of reproduction in this scenario?',
+            question: 'A practice study randomly assigns 60 first-graders to watch a short video in which a first-grader shares crayons and is thanked, or a video in which the same child keeps the crayons. Afterward, researchers count how many crayons each child shares with a classmate. What is the independent variable?',
             options: [
-              'Reproduction happened instantly, as soon as she finished watching',
-              'Reproduction required extensive practice to develop the needed motor skills',
-              'Reproduction was unnecessary because she already had the knowledge',
-              'Reproduction depended only on motivation, not on physical practice'
+              'The number of crayons each child shares with a classmate afterward',
+              'The version of the video the children are shown, sharing or keeping',
+              'The age and grade level of the children who take part in the study',
+              'How long the video lasts for each of the children in the study'
             ],
             correctAnswer: 1,
-            explanation: 'Reproduction — the third process — requires physical and cognitive ability to perform the observed behavior. For complex motor skills like piano performance, reproduction requires extensive practice even when attention, retention, and motivation are all present. Learning occurred during observation, but performance required developing the motor skills.'
+            explanation: 'The researchers manipulate which video each child sees, so the video version is the independent variable. The number of crayons shared is the measured dependent variable, the children\'s age is a characteristic of the sample, and the video\'s length was the same for everyone.'
           },
           {
-            question: 'According to reciprocal determinism, a child who is naturally outgoing (personal factor) joins a drama club (behavior), receives praise from the teacher (environment), and becomes even more outgoing (personal factor). What does this example illustrate?',
+            question: 'A survey of 500 teens finds that those who report watching more online videos of risky stunts also report doing more risky stunts themselves. Which conclusion is BEST supported?',
             options: [
-              'Environmental factors, such as the teacher\'s praise, entirely determine the child\'s behavior',
-              'Personal factors, behavior, and environment continuously influence each other',
-              'Behavior, like personality, is set only by the child\'s past history of reinforcement',
-              'Inner traits outweigh the environment, so the teacher\'s praise played no real role'
+              'Watching stunt videos causes teens to perform more risky stunts',
+              'Teens who do risky stunts are the cause of more stunt videos being posted',
+              'A positive relationship links stunt-video watching and stunt performing in this sample',
+              'There is no link, because survey data cannot show any relationship between variables'
             ],
-            correctAnswer: 1,
-            explanation: 'Reciprocal determinism states that personal factors (outgoing personality), behavior (joining drama), and environment (teacher praise) all influence each other in a continuous feedback loop. None is the sole cause — they interact. This is Bandura\'s key contribution beyond simple behaviorism.'
+            correctAnswer: 2,
+            explanation: 'A survey like this is correlational, so it supports only a positive relationship between watching and doing stunts. It cannot show that watching causes stunts (a third variable such as sensation seeking could drive both, and the direction is unclear), and surveys can reveal relationships.'
           }
         ]
       }

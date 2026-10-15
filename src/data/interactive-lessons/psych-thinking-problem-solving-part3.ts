@@ -9,14 +9,15 @@ export const psychThinkingPart3Data = {
 
 **Part 3 of 7 — Decision Making**
 
-How do we make choices? Research by Kahneman and Tversky revealed that human decision-making is systematically biased — we are NOT the rational calculators we think we are.
+How do we make choices? Research on judgment and decision-making shows that human choices are systematically biased — we are NOT the rational calculators we think we are. The CED (2.2.A.5–2.2.A.6) names the influences to know: **mental set**, **priming**, **framing**, the **gambler's fallacy**, and the **sunk-cost fallacy**; skill 1.B adds **overconfidence**, **hindsight bias**, and **confirmation bias**.
 
 ### Key Definitions
 
 | Term | Definition |
 |------|-----------|
 | **Framing effect** | The way a question or choice is PRESENTED (framed) affects the decision, even when the options are logically identical |
-| **Loss aversion** | Losses feel approximately TWICE as painful as equivalent gains feel pleasant — we hate losing more than we enjoy winning |
+| **Priming** | Earlier exposure to a word, image, or idea activates related associations and nudges a later judgment or choice |
+| **Gambler's fallacy** | Believing that a chance event is "due" because it has not happened recently, even though each event is independent |
 | **Sunk cost fallacy** | Continuing to invest in something because of PAST investment (time, money, effort) rather than future value |
 | **Overconfidence** | Overestimating the accuracy of one's own beliefs and predictions |
 | **Belief perseverance** | Clinging to beliefs even after the evidence supporting them has been disproven |
@@ -32,7 +33,7 @@ How do we make choices? Research by Kahneman and Tversky revealed that human dec
 | **Loss frame** | "400 people will DIE" | "1/3 chance NO ONE dies, 2/3 chance ALL 600 die" |
 | **Result** | Gain frame → people choose the CERTAIN option (Option A) | Loss frame → people choose the RISKY option (Option B) |
 
-> **The options are mathematically IDENTICAL** — but framing changes the decision. We are risk-averse with gains ("let's keep what we have") and risk-seeking with losses ("let's gamble to avoid losing"). This is a cornerstone finding of behavioral economics.
+> **The options are mathematically IDENTICAL** — but framing changes the decision. When outcomes are worded as lives saved, most people pick the sure thing; when the same outcomes are worded as deaths, most people take the gamble. Only the wording changed.
       `
     },
     {
@@ -46,7 +47,7 @@ How do we make choices? Research by Kahneman and Tversky revealed that human dec
           {
             question: 'A doctor tells Patient A: "This surgery has a 90% survival rate." She tells Patient B: "This surgery has a 10% mortality rate." Both patients receive identical information, but Patient B is more hesitant. This BEST illustrates:',
             options: [
-              'Loss aversion — Patient B weighs the possible loss more than Patient A weighs the gain',
+              'Priming — an earlier word Patient B heard activated fearful thoughts before the visit',
               'The framing effect — the same facts worded differently change the response',
               'Overconfidence — Patient A overestimates the surgery\'s chance of success',
               'The sunk cost fallacy — Patient B is weighing the money already spent on medical care'
@@ -58,7 +59,7 @@ How do we make choices? Research by Kahneman and Tversky revealed that human dec
             question: 'A person continues watching a terrible movie because they already paid \\$15 for the ticket, even though leaving and doing something enjoyable would make them happier. This BEST illustrates:',
             options: [
               'The framing effect — the ticket price frames how enjoyable the movie seems to be',
-              'Loss aversion — the person wants to avoid the unpleasant feeling of losing the \\$15',
+              'The gambler\'s fallacy — the person thinks a good scene is due after so many bad ones',
               'The sunk cost fallacy — an unrecoverable past cost is driving the choice',
               'Overconfidence — the person is overly sure the movie will improve before it ends'
             ],
@@ -72,17 +73,25 @@ How do we make choices? Research by Kahneman and Tversky revealed that human dec
       id: 'think3-s3-deep-dive',
       type: 'text' as const,
       content: `
-### 📚 Loss Aversion & Prospect Theory (Kahneman & Tversky, 1979)
+### 📚 Two More Decision Traps: Priming and the Gambler's Fallacy
 
-**Prospect theory** is the foundation of behavioral economics. Its key insight: people evaluate outcomes relative to a REFERENCE POINT, and losses loom larger than gains.
+**Priming** works below awareness: an earlier stimulus activates related ideas in memory, and those active ideas tilt the next judgment.
 
-| Principle | Explanation | Example |
-|-----------|------------|---------|
-| **Loss aversion** | Losing \\$100 feels WORSE than gaining \\$100 feels good (~2x worse) | People reject a coin flip where they could win \\$100 or lose \\$80, even though the expected value is positive |
-| **Reference point** | Gains and losses are judged relative to a starting point, not absolute outcomes | A salary cut from \\$80K to \\$70K feels devastating; \\$70K for someone making \\$50K feels wonderful — same salary, different reference points |
-| **Diminishing sensitivity** | The difference between \\$0 and \\$100 feels larger than between \\$1000 and \\$1100 | People drive across town to save \\$10 on a \\$20 item but not on a \\$500 item |
-| **Risk aversion for gains** | People prefer a CERTAIN gain to a larger but risky gain | Prefer guaranteed \\$50 over 50% chance of \\$100 |
-| **Risk seeking for losses** | People prefer a RISKY loss to a certain smaller loss | Prefer 50% chance of losing \\$100 over guaranteed loss of \\$50 |
+| Prime | Later judgment it nudges |
+|-------|--------------------------|
+| A store plays French music near the wine shelf | Shoppers pick French wine more often, and few mention the music when asked |
+| Participants first unscramble words about rudeness | They interrupt an experimenter sooner than participants primed with polite words |
+| A survey asks about recent hospital visits first | Later ratings of personal health come out lower |
+
+**The gambler's fallacy** treats independent random events as if they kept score.
+
+| Situation | Fallacious thought | Why it is wrong |
+|-----------|-------------------|-----------------|
+| A coin lands heads 5 times in a row | "Tails is due" | The coin has no memory; the next flip is still 50/50 |
+| A roulette wheel shows red 8 times | "Bet on black now" | Each spin is independent of the last |
+| A family has three daughters | "The next baby is surely a boy" | Each birth's odds are unchanged by earlier births |
+
+> **Do not confuse it with the sunk-cost fallacy.** The gambler's fallacy is a wrong belief about PROBABILITY (the future outcome is "due"). The sunk-cost fallacy is a wrong use of PAST INVESTMENT ("I've already put in too much to quit").
 
 ### Overconfidence Bias
 
@@ -114,7 +123,7 @@ How do we make choices? Research by Kahneman and Tversky revealed that human dec
       exercise: {
         inputs: [
           { label: 'The ___ effect occurs when identical information presented differently leads to different decisions', answer: 'framing' },
-          { label: 'Loss ___ means losses feel about twice as painful as equivalent gains feel good', answer: 'aversion' },
+          { label: 'Earlier exposure to a word or image that activates related ideas and shifts a later judgment is called ___', answer: 'priming' },
           { label: 'The sunk ___ fallacy is continuing to invest because of past costs that cannot be recovered', answer: 'cost' }
         ]
       }
@@ -128,7 +137,7 @@ How do we make choices? Research by Kahneman and Tversky revealed that human dec
       exercise: {
         dropdowns: [
           { label: 'After a stock market crash, an investor says "I knew the market was going to drop — all the signs were there"', options: ['Hindsight bias', 'Overconfidence', 'Framing effect', 'Sunk cost fallacy'] },
-          { label: 'A company continues funding a failing project because they\'ve already spent \\$2 million on it', options: ['Sunk cost fallacy', 'Loss aversion', 'Framing effect', 'Belief perseverance'] },
+          { label: 'A company continues funding a failing project because they\'ve already spent \\$2 million on it', options: ['Sunk cost fallacy', 'Gambler\'s fallacy', 'Framing effect', 'Belief perseverance'] },
           { label: 'A voter is shown clear evidence that their preferred candidate lied, but continues to support them', options: ['Belief perseverance', 'Confirmation bias', 'Hindsight bias', 'Overconfidence'] }
         ],
         correctAnswers: ['Hindsight bias', 'Sunk cost fallacy', 'Belief perseverance'],
@@ -149,16 +158,13 @@ How do we make choices? Research by Kahneman and Tversky revealed that human dec
 | Misconception | Correction |
 |--------------|-----------|
 | Framing effect = lying or manipulation | The information is IDENTICAL — only the presentation changes. No deception involved |
-| Loss aversion = the sunk cost fallacy | Loss aversion = losses hurt more than gains. Sunk cost = investing because of PAST costs. Related but different |
+| The gambler's fallacy = the sunk cost fallacy | Gambler's fallacy = believing an independent chance outcome is "due." Sunk cost = continuing because of PAST costs. Different errors |
+| Priming requires conscious awareness | Primes often work without the person noticing them, which is why people deny being influenced |
 | Overconfidence only affects unintelligent people | Experts (doctors, lawyers, analysts) are ALSO overconfident — often MORE so |
 | Belief perseverance = confirmation bias | Perseverance = keeping beliefs after disconfirmation. Confirmation bias = selectively seeking confirming evidence |
 | Hindsight bias = actual foresight | Hindsight bias is an ILLUSION — you didn't actually predict it; you just believe you did after learning the outcome |
 
-**Key Researchers:**
-- **Kahneman & Tversky** → Prospect theory, framing effects, heuristics and biases
-- **Daniel Kahneman** won the Nobel Prize in Economics (2002) — a psychologist winning an economics prize!
-
-> **AP Tip:** The framing effect and loss aversion are HIGH-FREQUENCY topics. For framing, look for two options that are mathematically identical but presented differently. For loss aversion, look for someone overweighting a potential loss compared to an equivalent gain.
+> **AP Tip:** For framing, look for two descriptions that are logically identical but worded differently. For priming, look for an EARLIER, often incidental, stimulus that shifts a LATER choice. For the gambler's fallacy, look for someone treating independent chance events as if they balance out.
       `
     },
     {
@@ -170,21 +176,21 @@ How do we make choices? Research by Kahneman and Tversky revealed that human dec
       exercise: {
         questions: [
           {
-            question: 'A researcher finds that people will drive 20 minutes to save \\$10 on a \\$25 calculator but will NOT drive 20 minutes to save \\$10 on a \\$500 jacket. This irrational difference is BEST explained by:',
+            question: 'A basketball fan watches a player miss six free throws in a row. The fan tells a friend, "She is a 75% shooter, so she is due to make the next few." Assuming each shot is independent, the fan\'s reasoning BEST illustrates:',
             options: [
-              'The framing effect — the calculator discount is described as a bigger deal than the jacket\'s',
-              'Diminishing sensitivity — \\$10 feels larger relative to \\$25 than relative to \\$500',
-              'Loss aversion — people fear losing money more on small purchases than on large ones',
-              'Overconfidence — people overestimate how much the calculator savings are really worth'
+              'The gambler\'s fallacy — treating the missed shots as making a success more likely next',
+              'The sunk cost fallacy — valuing the player because of the time already spent watching',
+              'The framing effect — describing her as a 75% shooter changes how her misses are judged',
+              'Hindsight bias — believing after the misses that the streak was predictable all along'
             ],
-            correctAnswer: 1,
-            explanation: 'This is diminishing sensitivity from prospect theory. \\$10 is \\$10 regardless of the original price — 20 minutes of driving is the same tradeoff. But people evaluate gains relative to a reference point: \\$10 off \\$25 = 40% savings (feels big). \\$10 off \\$500 = 2% savings (feels tiny). The ABSOLUTE value (\\$10) is the same, but the RELATIVE value (percentage of original) differs. This violates rational economic theory but reflects how humans actually process value.'
+            correctAnswer: 0,
+            explanation: 'The fan believes past misses make a make "due," which is the gambler\'s fallacy: if shots are independent, her chance on the next shot is about the same as always. The sunk cost fallacy concerns past investment, framing concerns wording of identical information, and hindsight bias concerns feeling an outcome was predictable after learning it.'
           },
           {
             question: 'A team of executives predicted their new product would capture 30% of the market within one year. When it only achieved 8%, they attributed the failure to unexpected competition. Their initial prediction MOST demonstrates:',
             options: [
               'Hindsight bias — believing they should have predicted the competition',
-              'The framing effect — the prediction was framed positively',
+              'Priming — upbeat sales meetings activated optimistic thoughts',
               'Overconfidence — overestimating the accuracy of their prediction',
               'Belief perseverance — continuing to believe in the product despite poor sales'
             ],

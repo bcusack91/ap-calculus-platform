@@ -91,7 +91,6 @@ How do we solve problems? We have two main approaches — slow-and-sure algorith
 | **Sudden** | Solution appears all at once — no gradual progress |
 | **Complete** | Once you "see it," the solution is fully formed |
 | **Accompanied by "aha!" feeling** | Emotional component — certainty that you've found the answer |
-| **Brain activity** | Associated with burst of activity in right temporal lobe (anterior superior temporal gyrus) |
 | **Impasse usually precedes it** | You feel stuck, then suddenly see the answer |
 
 **The Nine-Dot Problem:**

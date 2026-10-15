@@ -5,30 +5,38 @@ export const psychHistoryApproachesPart5Data = {
       id: 'histo5-ethics',
       type: 'text' as const,
       content: `
-## Ethics in Psychological Research
+# 🧠 History & Approaches to Psychology
 
-### APA Ethical Guidelines
+**Part 5 of 7 — Research Ethics**
 
-1. **Informed consent:** participants must know what the study involves
-2. **Deception:** allowed only when necessary, must debrief afterward
-3. **Confidentiality:** protect participants' personal information
-4. **Right to withdraw:** participants can leave at any time
-5. **Debriefing:** explain the true purpose of the study afterward
-6. **Minimize harm:** avoid physical and psychological harm
+> 🔑 **Key Concept:** The exam asks you to evaluate whether a study followed appropriate ethical procedures (skill 2.D): institutional review, informed consent or assent, protection from harm, confidentiality or anonymity, justified use of deception, and debriefing.
 
-### Institutional Review Board (IRB)
+### Ethical Guidelines for Research with People
 
-- Reviews all research proposals involving human subjects
-- Ensures ethical standards are met
-- Weighs potential benefits against risks
+| Guideline | What it requires | When it happens |
+|-----------|-----------------|-----------------|
+| **Institutional review** | An institutional review board (IRB) reviews the study before it begins and weighs risks against benefits | Before the study |
+| **Informed consent** | Participants learn what the study involves and agree voluntarily, knowing they can withdraw at any time | Before the study |
+| **Informed assent** | Minors (or others who cannot legally consent) agree to take part, while a parent or guardian gives consent | Before the study |
+| **Protection from harm** | Researchers minimize physical and psychological risks | Throughout |
+| **Confidentiality** | Researchers know who participants are but keep their information private | Throughout and after |
+| **Anonymity** | Researchers never record who gave which responses | Throughout |
+| **Deception** | Misleading participants is allowed only when necessary and when it causes no lasting harm, sometimes using **confederates** (people secretly working with the researcher) | During the study |
+| **Debriefing** | Researchers explain the true purpose, reveal any deception, and answer questions | After the study |
 
-### Famous Ethical Controversies
+### Confidentiality vs. Anonymity
+- **Confidential:** "Your name is on file, but no one outside the research team will see your answers."
+- **Anonymous:** "We are not collecting your name at all, so no one can link answers to you."
 
-| Study | Researcher | Ethical Issue |
-|-------|-----------|---------------|
-| **Milgram obedience** | Milgram | Psychological distress |
-| **Stanford prison** | Zimbardo | Harm to participants |
-| **Little Albert** | Watson | Conditioning fear in infant |
+### Famous Studies That Shaped Ethics Rules
+
+| Study | Ethical issue |
+|-------|---------------|
+| **Milgram's obedience studies** | Participants were deceived and experienced intense stress while believing they were shocking another person |
+| **The Stanford prison study** | Participants were harmed emotionally, and the study was stopped early |
+| **The "Little Albert" study** | An infant was conditioned to fear a white rat, and the fear was never removed |
+
+These studies are useful examples of WHY the guidelines exist. The exam focuses on applying the guidelines to a described study.
       `
     },
     {
@@ -40,15 +48,26 @@ export const psychHistoryApproachesPart5Data = {
       exercise: {
         questions: [
           {
-            question: 'Informed consent requires that participants:',
+            question: 'Informed consent requires that participants',
             options: [
-              'Sign a legal contract waiving their right to withdraw',
-              'Know what the study involves before they agree to take part',
-              'Are paid fairly for the time they spend in the study',
-              'Have the research background to judge its methods'
+              'sign a legal contract waiving their right to withdraw',
+              'know what the study involves before they agree to take part',
+              'are paid fairly for the time they spend in the study',
+              'have the research background to judge the study\'s methods'
             ],
             correctAnswer: 1,
-            explanation: 'Informed consent means participants must be told what the study involves and voluntarily agree to participate before the study begins.'
+            explanation: 'Informed consent means participants are told what the study involves and agree voluntarily before it begins, with the right to withdraw at any time.'
+          },
+          {
+            question: 'A researcher studying 14-year-olds gets signed permission from parents and also asks each teen to agree to participate. Asking the teens to agree is called',
+            options: [
+              'debriefing',
+              'informed assent',
+              'anonymity',
+              'peer review'
+            ],
+            correctAnswer: 1,
+            explanation: 'Minors give informed assent, while their parents or guardians give informed consent.'
           }
         ]
       }
@@ -57,19 +76,28 @@ export const psychHistoryApproachesPart5Data = {
       id: 'histo5-animal',
       type: 'text' as const,
       content: `
-## Animal Research Ethics
+## Research with Non-Human Animals
 
-- **IACUC** (Institutional Animal Care and Use Committee) oversees animal research
-- Animals must be treated humanely
-- Research must have scientific merit
-- Minimize pain and suffering
-- Use alternatives when possible
+Institutional review applies to research with non-human animals too. A review committee checks that:
+- the research has scientific value that could not be gained another way,
+- animals are housed and treated humanely,
+- pain and distress are minimized, and
+- alternatives are used whenever possible.
 
-Animal research has contributed to understanding of:
-- Learning (conditioning)
-- Brain function
-- Drug effects
-- Genetics of behavior
+Animal research has contributed to understanding of learning (conditioning), brain function, and drug effects.
+
+## Worked Example: Evaluating a Study's Ethics
+
+*Hypothetical study:* Researchers tell high school volunteers they are testing "reading speed." Actually, they are measuring whether students conform when a **confederate** gives a wrong answer out loud. Parents sign consent forms, students sign assent forms, and response sheets are labeled with numbers instead of names. At the end, the researchers explain the real purpose and why deception was needed.
+
+| Guideline | Followed? | Evidence |
+|-----------|-----------|---------|
+| Informed consent and assent | ✔ | Parents signed consent forms; students signed assent forms |
+| Deception | ✔ (justified) | The true purpose was hidden because telling it would change behavior; a confederate was used |
+| Confidentiality | ✔ | Numbers replaced names |
+| Debriefing | ✔ | The true purpose was explained afterward |
+
+On the AAQ, you will **identify one guideline described in the study** and **describe how the researchers applied it**, for example: "The researchers used debriefing: at the end they explained that the study measured conformity, not reading speed."
       `
     },
     {
@@ -78,21 +106,21 @@ Animal research has contributed to understanding of:
       content: `
       **Applied Recall (exact term answers)** ✍️
 
-      1) What board reviews all research proposals involving human subjects?
+      1) What board reviews research proposals involving human participants? (abbreviation)
 
-      2) What ethical principle requires telling participants the true purpose after a study?
+      2) What procedure explains the true purpose of a study to participants after it ends?
 
-      3) What committee oversees animal research ethics?
+      3) What term describes a person who secretly works with the researcher while posing as a participant?
 
       Use the exact abbreviation or term from this part.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['IRB', 'debriefing', 'IACUC'],
+        correctAnswers: ['IRB', 'debriefing', 'confederate'],
         hint1: 'Three-letter abbreviation: Institutional Review ___',
         hint2: 'Starts with: D — happens after the study ends',
-        hint3: 'Abbreviation for Institutional Animal Care and Use Committee',
-        explanation: 'Expected answers: IRB (Institutional Review Board reviews human research), debriefing (explaining the true purpose afterward), and IACUC (oversees animal research ethics).'
+        hint3: 'Starts with: C — an insider playing a role',
+        explanation: 'Expected answers: IRB (institutional review board), debriefing (explaining the true purpose afterward), and confederate (a researcher\'s accomplice posing as a participant).'
       }
     },
     {
@@ -104,43 +132,42 @@ Animal research has contributed to understanding of:
       exercise: {
         dropdowns: [
           {
-            label: 'The committee that reviews research ethics is the ___',
-            options: ['APA', 'IRB', 'NIH', 'FDA']
+            label: 'A survey that never collects names, so no answer can be linked to a person, is _____.',
+            options: ['confidential', 'anonymous', 'debriefed', 'deceptive']
           },
           {
-            label: 'Participants must always have the right to ___',
+            label: 'Participants must always have the right to _____.',
             options: ['be paid', 'withdraw', 'see results', 'choose their group']
           },
           {
-            label: 'The Milgram study raised concerns about ___',
+            label: 'Milgram\'s obedience studies raised concerns mainly about _____.',
             options: ['animal welfare', 'participant distress', 'data fabrication', 'sampling bias']
           }
         ],
-        correctAnswers: ['IRB', 'withdraw', 'participant distress'],
-        hint1: 'This board reviews all human research proposals.',
-        hint2: 'Participation must always be voluntary.',
-        hint3: 'Participants showed extreme anxiety during this obedience study.',
-        explanation: 'The IRB reviews research ethics. Participants can always withdraw. The Milgram study caused significant psychological distress.'
+        correctAnswers: ['anonymous', 'withdraw', 'participant distress'],
+        hint1: 'No names collected at all.',
+        hint2: 'Participation must stay voluntary.',
+        hint3: 'Participants showed extreme stress during the study.',
+        explanation: 'A survey that never records identities is anonymous. Participants can always withdraw. Milgram\'s participants experienced intense stress, which raised concerns about protection from harm.'
       }
     },
     {
       id: 'histo5-strategy',
       type: 'text' as const,
       content: `
-      ## Common Misconceptions and Exam Strategy
+## Common Misconceptions and Exam Strategy
 
-      ### Misconceptions to Avoid
-      - Deception is NOT always unethical — it's allowed when necessary, but participants MUST be debriefed afterward.
-      - Debriefing happens AFTER the study, not before — don't confuse it with informed consent (which happens before).
-      - The IRB does NOT only review deceptive studies — it reviews ALL human research proposals regardless of perceived risk.
-      - The Milgram study was controversial because of psychological distress, NOT physical harm — participants weren't actually shocking anyone.
-      - Informed consent does NOT mean participants know everything about the study — some details may be withheld if deception is justified.
+### Misconceptions to Avoid
+- Deception is NOT always unethical. It is allowed when necessary and harmless, but participants MUST be debriefed afterward.
+- Debriefing happens AFTER the study; informed consent happens BEFORE.
+- Confidential is NOT the same as anonymous. Confidential data have names that are protected; anonymous data never had names.
+- The IRB reviews ALL human research proposals, not only risky or deceptive ones.
+- Informed consent does NOT mean participants know every detail. Some details may be withheld when deception is justified.
 
-      ### AP Strategy Moves
-      - Ethics questions often present scenarios and ask which principle was violated — read for the specific violation (consent? deception without debriefing? harm?).
-      - Know the big three controversial studies cold: Milgram (obedience/distress), Zimbardo (prison/harm), Watson/Little Albert (fear conditioning in infant).
-      - If a question asks about animal research, think IACUC. If it asks about human research, think IRB.
-      - Debriefing and informed consent are the most commonly tested ethical concepts — know exactly when each occurs and what each requires.
+### AP Strategy Moves
+- Ethics questions often describe a study and ask which guideline was followed or violated. Find the specific procedure in the description (signed forms? ID numbers? an explanation at the end?).
+- For minors, look for BOTH parental consent and the child's assent.
+- On the AAQ, name ONE guideline and quote how the researchers applied it. Do not list every guideline.
       `
     },
     {
@@ -152,26 +179,26 @@ Animal research has contributed to understanding of:
       exercise: {
         questions: [
           {
-            question: 'A researcher tells participants they are testing "memory skills," but the study actually measures conformity. After the study, the researcher explains the true purpose and answers questions. Which ethical principles are relevant?',
+            question: 'A researcher tells participants they are testing "memory skills," but the study actually measures conformity. After the study, she explains the true purpose and answers questions. Which statement best evaluates the ethics?',
             options: [
-              'Deception was used, but debriefing made it ethically acceptable',
-              'This study is unethical because any deception violates informed consent',
+              'Deception was used, and debriefing afterward made it acceptable',
+              'The study is unethical, since any deception violates informed consent',
               'The researcher should have debriefed before the study, not after',
-              'The IRB would automatically reject any study involving deception'
+              'The IRB would reject the study, since it involved deception'
             ],
             correctAnswer: 0,
-            explanation: 'Deception is permitted in psychology when necessary and when followed by debriefing. The researcher properly debriefed participants by explaining the true purpose afterward. The APA allows deception when the research has scientific merit and harm is minimized.'
+            explanation: 'Deception is permitted when necessary and followed by debriefing. The researcher explained the true purpose afterward, so the deception was handled properly.'
           },
           {
-            question: 'A psychology student reads that Zimbardo\'s Stanford prison experiment was halted early. What was the primary ethical concern?',
+            question: 'A researcher records participants\' names next to their answers about drug use and later shares the list with their school principal. Which guideline was violated?',
             options: [
-              'Participants were never paid the full wages they had been promised',
-              'Guards and inmates suffered serious emotional harm and distress',
-              'The study used deception and never debriefed the participants',
-              'The results could not be replicated'
+              'Informed assent',
+              'Debriefing',
+              'Confidentiality',
+              'Random assignment'
             ],
-            correctAnswer: 1,
-            explanation: 'The Stanford prison experiment was stopped after 6 days (planned for 14) because participants playing guards became abusive and "prisoners" experienced severe emotional distress. The primary ethical violation was failure to minimize harm — the situation escalated beyond acceptable levels.'
+            correctAnswer: 2,
+            explanation: 'Sharing identified answers with someone outside the research team breaks confidentiality. Random assignment is a design feature, not an ethical guideline.'
           }
         ]
       }

@@ -7,39 +7,27 @@ export const psychEmotionPart3Data = {
       content: `
 ## Stress & Health
 
-**Part 3 of 7 — Stressors, Personality, and Health**
+**Part 3 of 7 — Stressors and Their Effects on Health**
 
-Stress is not just "feeling overwhelmed" — it's a measurable psychological and physiological response with real health consequences. The AP exam tests your understanding of different types of stressors, personality factors that affect stress responses, and the connection between stress and physical health.
+> 🔑 **Key Concept:** Stress raises susceptibility to disorders and disease. It has been linked to **hypertension, headaches, and immune suppression**. Stressors can be experienced as motivating (**eustress**) or debilitating (**distress**), and they range from traumatic events to **daily hassles** that build up over time.
+
+**Health psychology** studies how psychological factors, including stress, affect physical health, illness, and health-related behavior.
 
 ### Core Definitions
 
 | Term | Definition |
 |------|-----------|
-| **Stress** | The process by which we perceive and respond to events (stressors) that we appraise as threatening or challenging |
+| **Stress** | The process of perceiving and responding to events that we see as threatening or challenging |
 | **Stressor** | Any event or situation that triggers a stress response |
-| **Eustress** | Positive stress that motivates and energizes (e.g., a wedding, a promotion) |
-| **Distress** | Negative stress that overwhelms and damages health (e.g., job loss, chronic illness) |
-| **Health psychology** | A subfield that studies how psychological factors affect health, illness, and health-related behaviors |
-
-### Types of Stressors
-
-| Type | Time frame | Examples | Impact |
-|------|-----------|----------|--------|
-| **Catastrophes** | Sudden, large-scale | Earthquakes, pandemics, terrorist attacks | Affect large groups; can cause PTSD |
-| **Significant life changes** | Medium-term | Death of a spouse, divorce, job loss, retirement | Measured by Holmes and Rahe SRRS |
-| **Daily hassles** | Ongoing, small | Traffic, deadlines, arguments, lost keys | Research shows these are the BEST predictor of day-to-day health problems |
-
-### Personality Types and Stress
-
-| Type | Characteristics | Health risk |
-|------|----------------|-------------|
-| **Type A** | Competitive, impatient, hostile, time-urgent, aggressive | Higher risk of coronary heart disease (specifically the HOSTILITY component) |
-| **Type B** | Relaxed, easygoing, patient, non-competitive | Lower health risk from stress |
-| **Type C** | Suppresses emotions, avoids conflict, passive | Some research links to cancer susceptibility (controversial) |
+| **Eustress** | Stress viewed as motivating: it energizes effort (e.g., training for a race, a new job you want) |
+| **Distress** | Stress viewed as debilitating: it overwhelms and harms health (e.g., ongoing conflict at home) |
+| **Traumatic stressor** | A severe, often sudden event such as an assault, a disaster, or combat |
+| **Daily hassles** | Small, everyday irritations (traffic, lost keys, deadlines) that can **build up over time** |
+| **Adverse childhood experiences (ACEs)** | Childhood abuse, neglect, or household dysfunction: sources of stress that can affect a person throughout the lifespan |
 
 ### Real-World Example
 
-A student's daily hassles (alarm didn't go off, traffic jam, cold coffee, late to class) may predict her health better than the "big" stressor of her parents' divorce. Research consistently shows that the accumulation of daily hassles has a stronger correlation with health problems than major life events.
+Two seniors face the same college application season. Jada sees it as a chance to show what she can do; the deadlines energize her (eustress). Marcus feels he can't possibly finish; he sleeps badly and gets headaches (distress). Meanwhile, both deal with daily hassles: a long bus ride, a noisy house, a broken laptop charger. None is a big deal alone, but together they add to the load.
       `
     },
     {
@@ -51,26 +39,26 @@ A student's daily hassles (alarm didn't go off, traffic jam, cold coffee, late t
       exercise: {
         questions: [
           {
-            question: 'Research on stress and health has consistently found that the BEST predictor of day-to-day health problems is:',
+            question: 'Which set lists physiological problems that research has linked to stress?',
             options: [
-              'Rare catastrophic events such as natural disasters',
-              'Major life changes such as moving or a new job',
-              'The accumulation of daily hassles over time',
-              'A relaxed, easygoing Type B personality pattern'
+              'Hypertension, headaches, and immune suppression',
+              'Improved immunity, lower blood pressure, and deeper sleep',
+              'Color blindness, hearing loss, and nearsightedness',
+              'Faster wound healing and fewer colds in winter'
             ],
-            correctAnswer: 2,
-            explanation: 'While catastrophes and major life changes are significant stressors, research consistently shows that the accumulation of DAILY HASSLES is the best predictor of everyday health problems. This is because daily hassles are chronic and ongoing — their effects compound over time. The AP exam frequently tests this counterintuitive finding.'
+            correctAnswer: 0,
+            explanation: 'Stress has been linked to hypertension (high blood pressure), headaches, and immune suppression, which raises susceptibility to illness. It does not improve immunity or speed healing.'
           },
           {
-            question: 'Research on Type A personality and heart disease found that the SPECIFIC component most strongly linked to coronary heart disease is:',
+            question: 'A student who is excited about a debate tournament practices harder as the date approaches and performs her best. Her stress is best described as:',
             options: [
-              'Competitiveness — striving to achieve more than others',
-              'Time urgency — feeling constantly rushed and impatient',
-              'Hostility — chronic anger and cynicism toward others',
-              'Perfectionism — holding oneself to impossibly high standards'
+              'Distress, since any stressor harms performance',
+              'A traumatic stressor that she has adapted to',
+              'Eustress, because the stressor is motivating her',
+              'A daily hassle that has built up over the season'
             ],
             correctAnswer: 2,
-            explanation: 'While the original Type A description included competitiveness, time urgency, and hostility, subsequent research by Redford Williams and others found that HOSTILITY is the specific "toxic" component most strongly linked to heart disease. Not all competitive or time-urgent people have elevated cardiac risk — but hostile, chronically angry people do.'
+            explanation: 'Eustress is stress viewed as motivating, and it energizes effort. Distress is debilitating; a traumatic stressor is a severe event, and a debate tournament is neither.'
           }
         ]
       }
@@ -79,93 +67,102 @@ A student's daily hassles (alarm didn't go off, traffic jam, cold coffee, late t
       id: 'emot3-s3-deep',
       type: 'text' as const,
       content: `
-### Deep Dive: Measuring Stress & The Biopsychosocial Model
+### Deep Dive: From Stressor to Illness
 
-#### The Holmes and Rahe Social Readjustment Rating Scale (SRRS)
+#### Kinds of Stressors
 
-Holmes and Rahe quantified stress by assigning "life change units" (LCUs) to major events:
+| Type | What it is | Examples | Health note |
+|------|-----------|----------|-------------|
+| **Traumatic stressors** | Severe events that threaten safety or life | Assault, natural disaster, combat, a serious accident | Can lead to lasting psychological effects such as PTSD |
+| **Daily hassles** | Minor, frequent irritations | Traffic, deadlines, arguments, crowded buses | Individually small, but they **build up over time**; studies find accumulated hassles predict everyday symptoms such as headaches and colds |
+| **ACEs** | Stressful or traumatic experiences in childhood | Abuse, neglect, a parent's incarceration or addiction | Linked to health and relationship problems across the lifespan; what counts as an ACE and how it affects people differ across cultures |
 
-| Event | LCUs |
-|-------|------|
-| Death of a spouse | 100 |
-| Divorce | 73 |
-| Marriage | 50 |
-| Job loss | 47 |
-| Retirement | 45 |
-| Pregnancy | 40 |
-| Vacation | 13 |
+#### Same Stressor, Different Stress
 
-**Key insight:** BOTH positive and negative events require adjustment → BOTH cause stress. Marriage (50 LCUs) and vacation (13 LCUs) are on the scale because they still require adaptation.
+Whether a stressor becomes **eustress** or **distress** depends partly on how the person views it:
 
-#### The Biopsychosocial Model of Health
+| Viewed as... | Typical thought | Typical result |
+|-------------|----------------|----------------|
+| **A challenge** | "This is hard, but I can handle it." | Energized effort (eustress) |
+| **A threat** | "This is too much for me." | Worry, poor sleep, physical symptoms (distress) |
 
-| Factor | Influence on health |
-|--------|-------------------|
-| **Biological** | Genetics, immune function, hormones, brain chemistry |
-| **Psychological** | Stress appraisal, coping strategies, personality type, perceived control |
-| **Social** | Social support, cultural norms, socioeconomic status, relationships |
+#### How Stress Damages Health
 
-This model emphasizes that health and illness result from the INTERACTION of all three factors — not just one. A biologically vulnerable person (genetics) with poor coping strategies (psychological) and no social support (social) is at the highest risk.
+| Link | What research shows |
+|------|---------------------|
+| **Hypertension** | Repeated surges of arousal raise blood pressure; chronic stress is linked to lasting high blood pressure and heart disease |
+| **Headaches** | Tension headaches and migraines become more frequent during stressful periods |
+| **Immune suppression** | Students show weaker immune responses during exam periods than during breaks, and long-term caregivers' wounds heal more slowly than those of similar non-caregivers |
+| **Behavior** | Stressed people often sleep less, exercise less, and smoke or drink more, which harms health further |
 
-#### Stress Appraisal: Why the Same Event Affects People Differently
+These findings are mostly **correlational** or **quasi-experimental**: researchers cannot ethically assign people to years of stress. In some experiments, though, volunteers who reported more stress were more likely to develop a cold after being exposed to a cold virus.
 
-| Step | Appraisal | Question asked |
-|------|-----------|---------------|
-| **Primary appraisal** | Is this event threatening, challenging, or irrelevant? | "Is this a problem for me?" |
-| **Secondary appraisal** | Do I have the resources to cope? | "Can I handle this?" |
+#### The Biopsychosocial View of Health
 
-A job promotion can be appraised as exciting (challenge = eustress) or terrifying (threat = distress) depending on the person's secondary appraisal of their resources.
+| Factor | Example influences on stress-related illness |
+|--------|---------------------------------------------|
+| **Biological** | Genetic vulnerability, current health |
+| **Psychological** | Whether stressors are viewed as challenges or threats, coping strategies |
+| **Social** | Social support, poverty, discrimination, culture |
       `
     },
     {
       id: 'emot3-s4-input',
       type: 'input-boxes' as const,
       content: `
-      **Applied Recall** ✍️
+**Applied Recall** ✍️
 
-      1) The specific component of Type A personality most linked to heart disease is ___. (one word)
-
-      2) Positive stress that motivates and energizes is called ___. (one word)
-
-      3) Holmes and Rahe measured stress using the Social Readjustment Rating ___. (one word)
-
-      Type the exact term.
+Type one word for each blank.
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['hostility', 'eustress', 'Scale'],
-        hint1: 'Chronic anger and cynicism — the "toxic" part of Type A',
-        hint2: 'Eu- (Greek for "good") + stress = positive stress',
-        hint3: 'SRRS — the last S stands for ___',
-        explanation: 'Expected answers: hostility (the specific toxic component of Type A personality most associated with coronary heart disease), eustress (positive, motivating stress — eu = good in Greek), and Scale (the SRRS = Social Readjustment Rating Scale, which assigns life change units to stressful events).'
+        questions: [
+          {
+            question: 'Stress that a person views as motivating rather than debilitating is called _____.',
+            answer: 'eustress',
+            acceptableAnswers: ['eu-stress', 'good stress', 'positive stress'],
+            explanation: 'Eustress is motivating stress; distress is debilitating stress.'
+          },
+          {
+            question: 'Small, everyday irritations such as lost keys and traffic, which can build up over time, are called daily _____.',
+            answer: 'hassles',
+            acceptableAnswers: ['hassle'],
+            explanation: 'Daily hassles are minor stressors, but their effects accumulate.'
+          },
+          {
+            question: 'Chronically high blood pressure, one physiological problem linked to stress, is called _____.',
+            answer: 'hypertension',
+            acceptableAnswers: ['high blood pressure'],
+            explanation: 'The CED names hypertension, headaches, and immune suppression as physiological issues linked to stress.'
+          }
+        ]
       }
     },
     {
       id: 'emot3-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Match the Concepts** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Traffic jams, lost keys, and late deadlines are examples of ___',
-            options: ['catastrophes', 'significant life changes', 'daily hassles', 'eustress']
+            label: 'Traffic jams, lost keys, and late deadlines are examples of _____',
+            options: ['traumatic stressors', 'ACEs', 'daily hassles', 'eustress']
           },
           {
-            label: 'The model that says health results from the interaction of biological, psychological, and social factors is the ___',
-            options: ['biomedical model', 'biopsychosocial model', 'medical model', 'cognitive model']
+            label: 'A soldier who survived a roadside bomb experienced a _____',
+            options: ['daily hassle', 'traumatic stressor', 'form of eustress', 'social clock']
           },
           {
-            label: 'A relaxed, easygoing, patient person with lower stress-related health risk has ___ personality',
-            options: ['Type A', 'Type B', 'Type C', 'Type D']
+            label: 'Students catch more colds during exam weeks. This pattern best illustrates stress-related _____',
+            options: ['hypertension', 'immune suppression', 'eustress', 'headaches']
           }
         ],
-        correctAnswers: ['daily hassles', 'biopsychosocial model', 'Type B'],
+        correctAnswers: ['daily hassles', 'traumatic stressor', 'immune suppression'],
         hint1: 'Small, ongoing, everyday stressors.',
-        hint2: 'Bio + psycho + social = three factors interact.',
-        hint3: 'The opposite of competitive, hostile Type A.',
-        explanation: 'Traffic, lost keys, deadlines = daily hassles (chronic, small stressors that are the best predictor of health problems). The biopsychosocial model integrates biological, psychological, and social factors. Type B personality = relaxed, easygoing, lower stress-related health risk.'
+        hint2: 'A severe event that threatened his life.',
+        hint3: 'The body is less able to fight off infection.',
+        explanation: 'Traffic, lost keys, and deadlines are daily hassles. A life-threatening blast is a traumatic stressor. More colds under stress reflects immune suppression.'
       }
     },
     {
@@ -174,49 +171,46 @@ A job promotion can be appraised as exciting (challenge = eustress) or terrifyin
       content: `
 ## Common Misconceptions and Exam Strategy
 
-### Misconceptions to Avoid
-- **"Only negative events cause stress"** — BOTH positive (marriage, promotion) and negative (divorce, job loss) events require adjustment and cause stress. The Holmes-Rahe scale includes positive events.
-- **"Type A personality = heart disease"** — The WHOLE Type A profile doesn't predict heart disease. Only the HOSTILITY component (chronic anger, cynicism) is the key predictor.
-- **"Major life events are the biggest health threat"** — Counterintuitively, daily hassles are actually the BEST predictor of day-to-day health problems because they are chronic and cumulative.
-- **"Stress is always bad"** — Eustress (positive stress) can enhance performance and motivation. The Yerkes-Dodson law shows moderate arousal produces optimal performance.
+| Misconception | Correction |
+|--------------|-----------|
+| "Stress is always bad." | Eustress motivates and energizes. Only debilitating stress is distress. |
+| "Only big events matter for health." | Daily hassles build up over time and predict everyday symptoms. |
+| "Stress only affects mood." | It is linked to hypertension, headaches, and immune suppression. |
+| "ACEs only matter in childhood." | They are sources of stress that can affect a person across the whole lifespan. |
+| "Studies prove stress causes illness." | Most stress research is correlational; be careful with causal claims. |
 
-### AP Strategy Moves
-- **Daily hassles > major life events** for predicting health. The AP exam loves this counterintuitive finding.
-- **Type A → hostility → heart disease.** Know the specific connection: not ALL of Type A, just the hostility component.
-- **Holmes-Rahe SRRS:** Know that it measures life CHANGES (both positive and negative), not just negative events.
-- **Biopsychosocial model** is the modern framework for understanding health — it replaces the purely biomedical model. The AP exam may ask you to apply it.
-- **Primary appraisal** = "Is this threatening?" **Secondary appraisal** = "Can I cope?" Know both.
+> 🔑 **AP Connection:** If a stem describes **the same stressor** producing energy in one person and symptoms in another, the answer is about **how the stressor is viewed** (eustress vs. distress). If it asks what predicts everyday health complaints such as colds and headaches, look for **accumulated daily hassles**.
       `
     },
     {
       id: 'emot3-s7-applied',
       type: 'multiple-choice' as const,
       content: `
-      **Applied Scenarios** 🎯
+**Applied Scenarios** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Two employees both receive a surprise promotion. Employee A feels excited and energized, while Employee B feels overwhelmed and anxious. The difference in their reactions is BEST explained by:',
+            question: 'Two employees both receive a surprise promotion. Employee A feels excited and energized, while Employee B feels overwhelmed and gets frequent headaches. The difference in their reactions is BEST explained by:',
             options: [
-              'A has a Type A personality, while B has a more relaxed Type B personality',
-              'A appraised the promotion as a challenge, while B appraised it as a threat',
-              'A is biologically less sensitive to cortisol than B is',
-              'B is in the exhaustion stage of GAS, while A is still in the alarm stage'
+              'Employee B has more daily hassles at home than Employee A does',
+              'A views the promotion as a challenge and B views it as a threat',
+              'A promotion is a traumatic stressor for B but not for A',
+              'B is in a later stage of the stress response than A is'
             ],
             correctAnswer: 1,
-            explanation: 'The same event can be appraised differently by different people. Employee A\'s primary appraisal = "this is exciting" (challenge) and secondary appraisal = "I can handle this." Employee B\'s primary appraisal = "this is overwhelming" (threat) and secondary appraisal = "I don\'t have the resources to cope." This is exactly what Lazarus\'s cognitive appraisal model predicts — appraisal determines the stress response.'
+            explanation: 'The same event can become eustress or distress depending on how a person views it. Employee A sees a manageable challenge; Employee B sees a threat and develops symptoms.'
           },
           {
-            question: 'A researcher wants to predict which college students will visit the health center most frequently during the semester. Based on stress research, the BEST predictor would be:',
+            question: 'A researcher wants to predict which college students will visit the health center most often for colds and headaches this semester. Based on stress research, the BEST predictor would be:',
             options: [
-              'Whether they experienced a catastrophic event in the past year',
-              'Their score on the Holmes-Rahe SRRS (major life changes)',
+              'Whether they experienced a natural disaster as children',
+              'How many major life events they had in the past ten years',
               'How often they face daily hassles such as roommate conflicts',
-              'Whether they score as Type A on a personality screening survey'
+              'Whether they describe themselves as competitive or relaxed'
             ],
             correctAnswer: 2,
-            explanation: 'Research consistently shows that daily hassles are the best predictor of everyday health problems like headaches, colds, and health center visits. Major life events (SRRS) predict health over longer periods, but for day-to-day health, chronic daily hassles have the strongest correlation. This is one of the most commonly tested findings in the stress unit.'
+            explanation: 'Daily hassles build up over time, and research links their accumulation to everyday symptoms such as colds and headaches. Rare major events matter, but they predict day-to-day complaints less well.'
           }
         ]
       }

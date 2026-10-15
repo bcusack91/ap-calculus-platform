@@ -150,7 +150,7 @@ Illusions reveal HOW our perceptual system works by showing when it fails. Each 
 - Question mentions lighting changing → **Color constancy**
 - Question mentions arrows or converging lines → **Müller-Lyer or Ponzo**
 
-> **AP Tip:** In FRQs, always explain the MECHANISM behind an illusion (e.g., "misapplied depth cues triggering size constancy"), not just what the illusion looks like.
+> **AP Tip:** When you use an illusion as evidence in a written explanation, state the MECHANISM (e.g., "misapplied depth cues triggering size constancy"), not just what the illusion looks like.
       `
     },
     {

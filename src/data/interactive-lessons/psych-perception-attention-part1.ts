@@ -30,10 +30,7 @@ The Gestalt psychologists (early 1900s, Germany) argued **"the whole is differen
 | **Proximity** | Objects near each other are grouped together | ●● ●● looks like 2 pairs, not 4 dots |
 | **Similarity** | Similar objects are grouped together | ●●○○●● — dots grouped by type |
 | **Closure** | We fill in gaps to perceive complete figures | A circle with a gap is still seen as a circle |
-| **Continuity** | We perceive smooth, continuous patterns | Crossing lines seen as 2 smooth lines, not 4 segments |
-| **Common fate** | Objects moving in the same direction are grouped | A flock of birds perceived as one unit |
-
-> **Why this matters for the AP exam:** Gestalt principles appear in ~2-3 questions per exam. You must identify which principle is operating in a scenario — especially figure-ground, closure, and proximity.
+> **Why this matters for the AP exam:** The CED (2.1.A.4) names exactly these four Gestalt principles: closure, figure and ground, proximity, and similarity. You must identify which principle is operating in a scenario.
       `
     },
     {
@@ -61,7 +58,7 @@ The Gestalt psychologists (early 1900s, Germany) argued **"the whole is differen
               'Proximity — the rings sit close together, so they are grouped as one logo',
               'Similarity — the rings share a shape, so they are grouped as a single set',
               'Closure — the brain fills in the covered arcs so each ring is seen as whole',
-              'Common fate — the rings seem to move as a unit, so they are seen as linked'
+              'Figure-ground — the rings stand out as a figure against the white background'
             ],
             correctAnswer: 2,
             explanation: 'Even though portions of each ring are occluded (hidden) by overlapping rings, we perceive five COMPLETE circles. Our brain fills in the missing segments — this is the Gestalt principle of closure. Proximity and similarity are also present but don\'t explain why we see complete circles rather than arcs.'
@@ -120,15 +117,15 @@ Most real-world perception uses BOTH simultaneously. When you read this sentence
       `,
       exercise: {
         dropdowns: [
-          { label: 'You see a circle drawn with dashed lines and perceive a complete circle', options: ['Proximity', 'Similarity', 'Closure', 'Common fate'] },
-          { label: 'Stars and circles arranged in alternating rows are grouped by shape', options: ['Proximity', 'Similarity', 'Closure', 'Continuity'] },
-          { label: 'Two crossing lines are perceived as two smooth continuous lines rather than four separate segments', options: ['Proximity', 'Similarity', 'Closure', 'Continuity'] }
+          { label: 'You see a circle drawn with dashed lines and perceive a complete circle', options: ['Proximity', 'Similarity', 'Closure', 'Figure-ground'] },
+          { label: 'Stars and circles arranged in alternating rows are grouped by shape', options: ['Proximity', 'Similarity', 'Closure', 'Figure-ground'] },
+          { label: 'A white logo on a black poster can flip so the black shapes look like two faces and the white looks like background', options: ['Proximity', 'Similarity', 'Closure', 'Figure-ground'] }
         ],
-        correctAnswers: ['Closure', 'Similarity', 'Continuity'],
+        correctAnswers: ['Closure', 'Similarity', 'Figure-ground'],
         hint1: 'We fill in gaps to see complete figures.',
         hint2: 'We group similar-looking objects together.',
-        hint3: 'We perceive smooth, continuous patterns rather than abrupt changes.',
-        explanation: 'Dashed circle = closure (filling gaps). Grouping by shape = similarity. Smooth crossing lines = continuity (we prefer smooth continuous paths).'
+        hint3: 'Which part is seen as the object and which as the background keeps switching.',
+        explanation: 'Dashed circle = closure (filling gaps). Grouping by shape = similarity. Reversing logo = figure-ground (separating a figure from its background).'
       }
     },
     {
@@ -151,7 +148,7 @@ Most real-world perception uses BOTH simultaneously. When you read this sentence
 - **Top-down vs. Bottom-up**: Ask "Is prior knowledge needed?" If YES → top-down. If the organism is starting from scratch → bottom-up.
 - **Figure-ground vs. other Gestalt principles**: Figure-ground is about separating foreground from background. The other principles are about GROUPING elements within the figure.
 
-> **AP Tip:** When asked about perceptual organization in an FRQ, always name the SPECIFIC Gestalt principle — don't just say "Gestalt."
+> **AP Tip:** When a question or source involves perceptual organization, name the SPECIFIC Gestalt principle (closure, figure-ground, proximity, or similarity) — don't just say "Gestalt."
       `
     },
     {
@@ -179,7 +176,7 @@ Most real-world perception uses BOTH simultaneously. When you read this sentence
               'Similarity — the text elements share a color and font with the buttons',
               'Proximity — users group the nearby text elements as related',
               'Closure — users mentally complete the text into one navigation bar',
-              'Continuity — users follow the line of text as if it were a menu path'
+              'Figure-ground — users see the text as the figure and the buttons as background'
             ],
             correctAnswer: 1,
             explanation: 'Proximity overrides similarity in this case. Even though the buttons are visually distinct (different colors), users group the nearby text elements together because proximity is one of the strongest Gestalt principles. Good UI/UX design uses Gestalt principles: related items should be near each other (proximity), visually similar (similarity), and clearly separated from unrelated items.'

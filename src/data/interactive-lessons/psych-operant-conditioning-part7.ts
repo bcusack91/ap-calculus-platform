@@ -160,7 +160,7 @@ Not all behaviors are equally easy to condition:
 - **"Instinctive drift means training doesn't work"** — Training works, but biology can override it. Instinctive drift shows that operant conditioning has biological limits.
 
 ### AP Strategy Moves
-- **FRQ design questions:** If asked to design a behavior modification plan, include: (1) target behavior, (2) type of reinforcement, (3) reinforcement schedule, (4) shaping steps if needed, (5) how to maintain the behavior long-term.
+- **Free-response connection:** The AAQ gives you a study summary (often a learning experiment) and asks for the method, an operational definition, what a statistic shows, an ethical guideline, generalizability, and whether a finding supports the hypothesis. Practice reading reinforcement studies with those six tasks in mind.
 - Know the cognitive challenges to behaviorism: Tolman (cognitive maps, latent learning), Köhler (insight), Seligman (learned helplessness), Breland & Breland (instinctive drift).
 - The AP exam loves to combine topics: "Which type of conditioning best explains..." → use the voluntary/involuntary distinction first.
 - Learned helplessness is linked to depression on the AP exam — know this connection.
@@ -187,15 +187,15 @@ Not all behaviors are equally easy to condition:
             explanation: 'This is learned helplessness — the student experienced repeated "inescapable" failure (like Seligman\'s dogs receiving inescapable shocks) and developed the belief that their behavior (studying) has no effect on outcomes (grades). This cognitive expectation of failure is a key model for understanding depression. Note: extinction is also partially correct, but the cognitive component ("Nothing I do makes a difference") is the hallmark of learned helplessness.'
           },
           {
-            question: 'A free-response practice prompt asks: "Using operant conditioning principles, design a plan to increase a child\'s reading behavior." Which response element would earn the MOST points?',
+            question: 'A practice study summary reads: "Researchers randomly assigned 40 second-graders to receive a sticker for every book they finished (continuous reinforcement) or a sticker after an unpredictable number of books (variable-ratio). When stickers stopped, the variable-ratio group kept reading for a mean of 9 more days; the continuous group, 3 days." Which statement BEST describes what these results show?',
             options: [
-              'Pair books with pleasant music so that reading comes to elicit a conditioned positive emotional response',
-              'Use positive reinforcement for reading, starting continuous and shifting to a variable-ratio schedule',
-              'Apply positive punishment for not reading and negative punishment for reading non-academic books',
-              'Rely on insight learning, so the child eventually realizes on his own that reading is valuable'
+              'The variable-ratio group read more books in total, because it received more stickers overall',
+              'Reading learned on the variable-ratio schedule was more resistant to extinction once stickers stopped',
+              'Continuous reinforcement produced faster learning, because the group stopped reading sooner',
+              'Stickers were primary reinforcers for these children, because the stickers increased reading'
             ],
             correctAnswer: 1,
-            explanation: 'A complete FRQ response should: (1) identify the type of reinforcement (positive — adding rewards), (2) specify starting with continuous reinforcement for fast acquisition, (3) transition to partial reinforcement (VR) for resistance to extinction, and (4) potentially include shaping if the child isn\'t reading at all yet. Punishment-based approaches would lose points because they don\'t teach the desired behavior and have well-documented limitations.'
+            explanation: 'The variable-ratio group kept reading longer once stickers stopped (9 vs. 3 days), which is the classic finding that partial, especially variable-ratio, reinforcement makes behavior more resistant to extinction. The summary gives no total book counts, stopping sooner shows weaker persistence rather than faster learning, and stickers are secondary reinforcers.'
           }
         ]
       }

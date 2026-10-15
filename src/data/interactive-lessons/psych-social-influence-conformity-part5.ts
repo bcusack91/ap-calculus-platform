@@ -78,8 +78,6 @@ How do people change others' attitudes? The Elaboration Likelihood Model explain
 |-----------|----------|-----------|---------|
 | **Foot-in-the-door** | Small request → Large request | Consistency | "Can you watch my bag?" → later → "Can you give me a ride to the airport?" |
 | **Door-in-the-face** | Large request → Small request | Reciprocity + Contrast | "Can you volunteer 10 hours/week?" → "No" → "How about just 2 hours?" |
-| **Lowball** | Agree to attractive offer → terms change → person still complies | Commitment | Car dealer quotes low price → adds fees after you've committed |
-| **That's-not-all** | Initial offer → sweeten the deal before response | Reciprocity | "This blender is \\$100 — but wait, I'll throw in free shipping AND a recipe book!" |
 
 ### Cognitive Dissonance (Festinger, 1957)
 
@@ -138,14 +136,14 @@ When behavior contradicts beliefs, people experience uncomfortable tension (diss
       exercise: {
         dropdowns: [
           { label: 'A teenager buys expensive sneakers because their favorite athlete wears them, without researching quality', options: ['Peripheral route', 'Central route', 'Foot-in-the-door', 'Cognitive dissonance'] },
-          { label: 'A car dealer quotes \\$20,000, then adds \\$3,000 in fees after you\'ve already committed to buying', options: ['Lowball technique', 'Door-in-the-face', 'Foot-in-the-door', 'Central route'] },
+          { label: 'A neighbor asks you to water her plants for one day; a week later she asks you to care for her dog for a whole weekend', options: ['Door-in-the-face', 'Foot-in-the-door', 'Peripheral route', 'Central route'] },
           { label: 'A person who eats meat tells themselves "Humans are designed to eat meat" after watching a documentary about animal cruelty', options: ['Cognitive dissonance reduction', 'Peripheral route', 'Door-in-the-face', 'Foot-in-the-door'] }
         ],
-        correctAnswers: ['Peripheral route', 'Lowball technique', 'Cognitive dissonance reduction'],
+        correctAnswers: ['Peripheral route', 'Foot-in-the-door', 'Cognitive dissonance reduction'],
         hint1: 'The teenager isn\'t analyzing product quality — they\'re influenced by a superficial cue (celebrity).',
-        hint2: 'The buyer already committed, then the terms changed. They feel committed and still comply.',
+        hint2: 'A small request came first and a larger one followed.',
         hint3: 'Behavior (eating meat) contradicts new belief (animal cruelty is wrong) — so they change their belief to reduce discomfort.',
-        explanation: 'Sneakers = peripheral route (celebrity cue, no argument evaluation). Car dealer = lowball (attractive offer → changed terms after commitment). Meat eater = cognitive dissonance reduction (adding a new cognition to justify behavior that conflicts with beliefs).'
+        explanation: 'Sneakers = peripheral route (celebrity cue, no argument evaluation). Plants then dog = foot-in-the-door (small request first, larger request second). Meat eater = cognitive dissonance reduction (adding a new cognition to justify behavior that conflicts with beliefs).'
       }
     },
     {
@@ -168,7 +166,6 @@ When behavior contradicts beliefs, people experience uncomfortable tension (diss
 - Person influenced by celebrity/emotions/attractiveness → **Peripheral route**
 - Small request then large request → **Foot-in-the-door**
 - Large request refused, then smaller request → **Door-in-the-face**
-- Low price then hidden costs → **Lowball**
 - Behavior contradicts beliefs, person feels uncomfortable → **Cognitive dissonance**
 
 > **AP Tip:** The \\$1/\\$20 study is a TOP AP exam topic. Remember: \\$1 = MORE attitude change. The key term is "insufficient justification" — when external justification is weak, people must justify internally by changing their attitude.

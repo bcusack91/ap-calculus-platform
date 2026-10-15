@@ -9,7 +9,7 @@ export const psychPerceptionPart4Data = {
 
 **Part 4 of 7 — Attention**
 
-Attention is the gateway to perception — you can only perceive what you attend to. But attention is LIMITED, which leads to some surprising failures of awareness.
+Attention is the gateway to perception — you can only perceive what you attend to. The CED (2.1.A.5) describes attention as an **interaction of sensation and perception that is affected by internal and external processes**. Because attention is LIMITED, it also leads to some surprising failures of awareness.
 
 ### Key Definitions
 
@@ -19,17 +19,15 @@ Attention is the gateway to perception — you can only perceive what you attend
 | **Cocktail party effect** | Ability to detect personally relevant stimuli (like your name) in unattended channels | Moray (1959) — name recognition |
 | **Inattentional blindness** | Failure to notice fully visible, unexpected stimuli when attention is focused elsewhere | Simons & Chabris (1999) — gorilla study |
 | **Change blindness** | Failure to detect changes in visual scenes, especially during disruptions | Simons & Levin (1998) — door study |
-| **Divided attention** | Attempting to attend to multiple stimuli simultaneously | Strayer & Johnston (2001) — cell phone driving |
 
-### Selective Attention: The Filter Models
+### What Captures Attention: Internal and External Factors
 
-| Model | Researcher | Key Idea |
-|-------|-----------|----------|
-| **Early selection** (filter theory) | Broadbent (1958) | Filter based on physical features BEFORE meaning is processed |
-| **Late selection** | Deutsch & Deutsch (1963) | ALL stimuli are processed for meaning; filter occurs at response selection |
-| **Attenuation theory** | Treisman (1964) | Unattended messages are turned DOWN (attenuated), not completely blocked — important words (your name) break through |
+| Factor type | Examples | Scenario |
+|-------------|----------|----------|
+| **External** (features of the stimulus) | Loudness, brightness, sudden motion, novelty | A siren cuts through classroom chatter |
+| **Internal** (features of the perceiver) | Personal relevance, goals, expectations, current task | You hear your own name across a noisy cafeteria; a hungry shopper notices every food sign |
 
-> **AP Favorite:** Treisman's attenuation theory best explains the cocktail party effect — unattended channels are attenuated (turned down) but not completely blocked, so highly relevant stimuli (your name, "fire!") can break through.
+> **AP Favorite:** The cocktail party effect shows an INTERNAL factor at work: the unattended conversation is not processed as fully as the one you are in, yet a personally relevant word (your name, a topic you care about) still breaks through and captures attention.
       `
     },
     {
@@ -43,13 +41,13 @@ Attention is the gateway to perception — you can only perceive what you attend
           {
             question: 'At a noisy party, you\'re deep in conversation when you suddenly hear your name mentioned across the room. This is BEST explained by:',
             options: [
-              'Broadbent\'s filter theory — your name got through because it was on the attended channel',
-              'Treisman\'s attenuation theory — weakened unattended input still lets your name through',
+              'Sensory adaptation — your ears stopped responding to the steady party noise around you',
+              'The cocktail party effect — personally relevant words in unattended speech can grab attention',
               'Inattentional blindness — absorbed in conversation, you missed most of the room around you',
               'Change blindness — you detected a sudden shift in the background noise of the room'
             ],
             correctAnswer: 1,
-            explanation: 'The cocktail party effect — hearing your name in unattended background noise — is best explained by Treisman\'s attenuation theory. According to Treisman, unattended messages are NOT completely filtered out (as Broadbent suggested) but are ATTENUATED (turned down). Highly personally relevant stimuli like your name have a low activation threshold, so they can break through even when attenuated. This is why Treisman\'s model replaced Broadbent\'s strict filter theory.'
+            explanation: 'Hearing your own name in speech you were not attending to is the cocktail party effect, a form of selective attention in which personally relevant stimuli capture attention (CED 2.1.A.5.i). Sensory adaptation would make you LESS responsive to the noise, and inattentional and change blindness describe failures to notice, not noticing.'
           },
           {
             question: 'In Simons and Chabris\' famous study, participants counting basketball passes failed to notice a person in a gorilla suit walking through the scene. This demonstrates:',
@@ -110,7 +108,7 @@ Attention is the gateway to perception — you can only perceive what you attend
       `,
       exercise: {
         inputs: [
-          { label: 'Treisman\'s theory says unattended messages are ___ (turned down, not completely blocked)', answer: 'attenuated' },
+          { label: 'Hearing your own name across a noisy room while focused on another conversation is the ___ party effect', answer: 'cocktail' },
           { label: 'Failing to notice a gorilla in a basketball video demonstrates ___ blindness', answer: 'inattentional' },
           { label: 'Failing to notice you\'re talking to a different person after a door passes by demonstrates ___ blindness', answer: 'change' }
         ]
@@ -126,7 +124,7 @@ Attention is the gateway to perception — you can only perceive what you attend
         dropdowns: [
           { label: 'A student studying in a noisy cafeteria manages to focus on her textbook and ignore surrounding conversations', options: ['Selective attention', 'Inattentional blindness', 'Change blindness', 'Cocktail party effect'] },
           { label: 'A driver talking on a cell phone runs a red light because they were focused on the conversation', options: ['Selective attention', 'Inattentional blindness', 'Change blindness', 'Cocktail party effect'] },
-          { label: 'A viewer watching a magic show doesn\'t notice the magician slip a card into their pocket', options: ['Selective attention', 'Inattentional blindness', 'Change blindness', 'Divided attention'] }
+          { label: 'A viewer watching a magic show doesn\'t notice the magician slip a card into their pocket', options: ['Selective attention', 'Inattentional blindness', 'Change blindness', 'Cocktail party effect'] }
         ],
         correctAnswers: ['Selective attention', 'Inattentional blindness', 'Inattentional blindness'],
         hint1: 'Successfully focusing on one thing while filtering out others.',
@@ -146,7 +144,7 @@ Attention is the gateway to perception — you can only perceive what you attend
 | Misconception | Reality |
 |--------------|---------|
 | Inattentional blindness = not looking | You ARE looking — your eyes are pointed at it, but you don't consciously perceive it |
-| Multitasking is efficient | Divided attention reduces performance on ALL tasks |
+| Multitasking is efficient | Splitting attention between two demanding tasks lowers performance on both |
 | Change blindness = poor memory | It's a perceptual failure, not a memory failure — the change is happening in real time |
 | The cocktail party effect means we hear everything | We only detect HIGH-RELEVANCE stimuli in unattended channels |
 
@@ -178,15 +176,15 @@ Attention is the gateway to perception — you can only perceive what you attend
             explanation: 'The danger of cell phone use while driving is NOT about the hands — it\'s about the cognitive load. Engaging in a phone conversation diverts attentional resources from driving, causing INATTENTIONAL blindness. Drivers "look but don\'t see" — they may look directly at a red light or pedestrian but fail to consciously perceive it because attention is consumed by the conversation. This is why hands-free laws alone don\'t solve the problem.'
           },
           {
-            question: 'During a dichotic listening experiment, a participant shadows (repeats) a message in the right ear while ignoring the left ear. The participant does NOT notice when the left ear message switches from English to French, but DOES notice when their own name is played in the left ear. This pattern supports:',
+            question: 'In a listening experiment, a participant repeats a message played in the right ear while ignoring a message in the left ear. She does NOT notice when the left-ear message switches from English to French, but she DOES notice when her own name is played in the left ear. What do these results suggest about selective attention?',
             options: [
-              'Broadbent\'s filter theory — all unattended input is completely blocked before meaning',
-              'Deutsch & Deutsch\'s late selection — all input in both ears is fully processed for meaning',
-              'Treisman\'s attenuation theory — unattended input is weakened but not fully blocked',
-              'Bottom-up processing — raw sensory features alone determine what reaches awareness'
+              'Unattended speech is fully processed for meaning, so she should have caught the switch',
+              'Unattended input gets limited processing, so only relevant words like her name break through',
+              'Attention depends only on loudness, so her name must have been played more loudly',
+              'Selective attention breaks down whenever two messages are played at the same time'
             ],
-            correctAnswer: 2,
-            explanation: 'This result is inconsistent with both Broadbent (who would predict NOTHING gets through in the unattended ear) and Deutsch & Deutsch (who would predict the language switch WOULD be noticed since all meaning is processed). Treisman\'s attenuation theory perfectly explains it: unattended messages are attenuated (so the language switch isn\'t noticed), but highly relevant stimuli like your own name have a low activation threshold and break through the attenuation.'
+            correctAnswer: 1,
+            explanation: 'Missing the language switch shows that unattended speech gets limited processing, yet catching her own name shows that personally relevant words can still break through, which is the cocktail party effect. Full processing would have revealed the switch, nothing indicates her name was louder, and she successfully attended to the right-ear message.'
           }
         ]
       }

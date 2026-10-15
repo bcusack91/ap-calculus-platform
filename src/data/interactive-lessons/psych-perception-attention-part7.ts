@@ -19,13 +19,13 @@ This final part integrates everything from the unit into one comprehensive revie
 | Top-down processing | Knowledge/expectations guide perception | — | Don't confuse with bottom-up (data → concept) |
 | Bottom-up processing | Raw data builds up to recognition | Gibson | Don't say it requires no brain processing — it does |
 | Binocular cues | Depth cues needing both eyes | — | Only 2: retinal disparity + convergence |
-| Monocular cues | Depth cues needing one eye | — | Motion parallax is monocular (not binocular) |
+| Monocular cues | Depth cues needing one eye | — | The exam uses five: relative clarity, relative size, texture gradient, linear perspective, interposition |
 | Visual cliff | Tests innate depth perception | Gibson & Walk (1960) | Can't prove depth perception is fully innate |
 | Size constancy | Stable size despite distance | — | Different from relative size (depth cue) |
 | Shape constancy | Stable shape despite angle | — | The retinal image DOES change — perception doesn't |
 | Color constancy | Stable color despite lighting | — | Can fail in ambiguous conditions (The Dress) |
 | Müller-Lyer | Arrow direction affects perceived line length | Müller-Lyer | Cultural experience affects susceptibility |
-| Selective attention | Focusing while filtering | Cherry, Broadbent | Treisman's attenuation is the most accepted model |
+| Selective attention | Focusing while filtering | Cherry | Relevant words in unattended input can still capture attention (cocktail party effect) |
 | Inattentional blindness | Missing visible stimuli when focused | Simons & Chabris (1999) | They ARE looking — just not consciously perceiving |
 | Change blindness | Missing changes during disruptions | Simons & Levin (1998) | It's not about memory — the change is happening NOW |
 | Perceptual set | Expectations shape perception | — | Different from perceptual constancy |
@@ -63,11 +63,11 @@ This connects to:
             explanation: 'Color constancy perfectly demonstrates constructive perception. Your retina receives BLUE light reflected from the shirt (physical reality), but your brain COMPUTES that the shirt is white by factoring out the blue illumination. This is active construction — your brain creates a perception that differs from the raw sensory data to give you a more useful representation of the world. The retina, pupil, and cochlea options describe SENSATION (passive detection), not perception (active interpretation).'
           },
           {
-            question: 'A free-response practice prompt asks: "Explain how TWO concepts from perception and attention relate to eyewitness testimony reliability." Which pair would earn the MOST credit?',
+            question: 'On an Evidence-Based Question about eyewitness reliability, a student must explain two different sources with two DIFFERENT perception and attention concepts. Which pair fits the topic BEST?',
             options: [
               'Size constancy and shape constancy',
               'Inattentional blindness and perceptual set',
-              'Motion parallax and convergence',
+              'Retinal disparity and convergence',
               'Perceptual constancy and Gestalt proximity'
             ],
             correctAnswer: 1,
@@ -93,18 +93,18 @@ This connects to:
 | Cultural influences | **Social Psychology** | Individualist vs. collectivist differences in attention patterns |
 | Selective attention | **Biological** | Neural mechanisms of attention in the thalamus and cortex |
 
-### FRQ Template for Perception Questions
+### Free-Response Connection: Perception on the AAQ and EBQ
 
-**Step 1: IDENTIFY** the concept from the scenario
-**Step 2: DEFINE** it precisely (use textbook language)
-**Step 3: APPLY** it to the specific scenario details
-**Step 4: EXPLAIN** why it matters / what it demonstrates
+**EBQ (7 points, 3 parts):** you write a defensible claim, then explain evidence from one source with a psychological concept and evidence from a DIFFERENT source with a DIFFERENT concept.
 
-**Example FRQ Application:**
+*Sample claim:* "Eyewitness accounts should be corroborated before they are used to convict."
 
-*"Explain how inattentional blindness could affect the reliability of an eyewitness account."*
+| Source evidence (hypothetical) | Concept used to explain it |
+|--------------------------------|----------------------------|
+| Source 1: witnesses who watched a staged theft while a weapon was visible described the thief's face less accurately | **Inattentional blindness** — attention fixed on the weapon left the face unprocessed even though it was in view |
+| Source 2: witnesses told beforehand that the area had "a lot of gang activity" more often described a neutral bystander as threatening | **Perceptual set** — expectations primed by the warning shaped what witnesses perceived |
 
-**Model Answer:** **Inattentional blindness** is the failure to notice a fully visible but unexpected stimulus when attention is focused on another task. An eyewitness who is focused on the weapon during a robbery (known as the **weapon focus effect**) may experience inattentional blindness for the perpetrator's facial features, clothing, or other identifying details. Despite looking directly at the scene, the witness's selective attention was narrowed to the threatening stimulus, leaving other details unprocessed at the conscious level. This means the eyewitness may provide an **inaccurate or incomplete** identification, not because of dishonesty or poor memory, but because the relevant details were never fully perceived in the first place.
+**AAQ (7 points, 6 parts):** a perception study summary might report a visual cliff or change-blindness experiment. Be ready to name the method, a variable's operational definition (for example, "noticed the change = reported a different person within 10 seconds"), what a percentage or mean shows, an ethical guideline the researchers followed, how far the sample generalizes, and whether a finding supports the hypothesis.
       `
     },
     {
@@ -116,7 +116,7 @@ This connects to:
       exercise: {
         inputs: [
           { label: 'The Gestalt psychologists said "the whole is different from the sum of its ___"', answer: 'parts' },
-          { label: 'Treisman proposed that unattended messages are ___, not completely blocked', answer: 'attenuated' },
+          { label: 'Failing to notice a fully visible but unexpected object while attending to something else is ___ blindness', answer: 'inattentional' },
           { label: 'Gibson & Walk\'s visual ___ experiment tested depth perception in infants', answer: 'cliff' }
         ]
       }
@@ -129,15 +129,15 @@ This connects to:
       `,
       exercise: {
         dropdowns: [
-          { label: 'Proposed the attenuation model of selective attention', options: ['Broadbent', 'Treisman', 'Simons & Chabris', 'Gibson & Walk'] },
-          { label: 'Demonstrated inattentional blindness with the gorilla study', options: ['Broadbent', 'Treisman', 'Simons & Chabris', 'Gibson & Walk'] },
-          { label: 'Tested infant depth perception using the visual cliff', options: ['Broadbent', 'Treisman', 'Simons & Chabris', 'Gibson & Walk'] }
+          { label: 'Showed that many people giving directions fail to notice when the stranger they are talking to is swapped for someone else', options: ['Simons & Levin', 'Cherry', 'Simons & Chabris', 'Gibson & Walk'] },
+          { label: 'Demonstrated inattentional blindness with the gorilla study', options: ['Simons & Levin', 'Cherry', 'Simons & Chabris', 'Gibson & Walk'] },
+          { label: 'Tested infant depth perception using the visual cliff', options: ['Simons & Levin', 'Cherry', 'Simons & Chabris', 'Gibson & Walk'] }
         ],
-        correctAnswers: ['Treisman', 'Simons & Chabris', 'Gibson & Walk'],
-        hint1: 'This researcher modified Broadbent\'s filter theory to allow important stimuli to break through.',
+        correctAnswers: ['Simons & Levin', 'Simons & Chabris', 'Gibson & Walk'],
+        hint1: 'A door carried between two people hid the swap; this is the classic change blindness study.',
         hint2: 'These researchers had participants count basketball passes while a gorilla walked through.',
         hint3: 'These researchers created a glass-topped table with a shallow and deep side.',
-        explanation: 'Treisman (1964) proposed attenuation theory. Simons & Chabris (1999) demonstrated inattentional blindness with the gorilla video. Gibson & Walk (1960) tested infant depth perception with the visual cliff.'
+        explanation: 'Simons & Levin (1998) demonstrated change blindness with the person-swap study. Simons & Chabris (1999) demonstrated inattentional blindness with the gorilla video. Gibson & Walk (1960) tested infant depth perception with the visual cliff.'
       }
     },
     {
@@ -146,15 +146,15 @@ This connects to:
       content: `
 ### 🎯 High-Frequency AP Topics
 
-**Most likely to appear on the AP exam** (based on frequency analysis):
+**Core CED perception content to master:**
 
 1. **Gestalt principles** — Especially proximity, closure, and figure-ground
 2. **Top-down vs. bottom-up processing** — Know the difference and examples
 3. **Inattentional blindness** — The gorilla study is a favorite
 4. **Depth cues** — Binocular vs. monocular; identify specific cues
 5. **Perceptual constancies** — Size, shape, and color
-6. **Müller-Lyer illusion** — Mechanism AND cultural differences
-7. **Selective attention** — Cocktail party effect and Treisman's model
+6. **Cultural and contextual influences** — Experiences and expectations filter perception (CED 2.1.A.3)
+7. **Selective attention and change blindness** — Cocktail party effect; failing to notice changes
 8. **Perceptual set** — Expectations shaping perception
 
 ### Common Misconceptions (Wrong Answer Choices)
@@ -164,7 +164,7 @@ This connects to:
 | Perception = sensation | Sensation is detection; perception is interpretation |
 | We see things as they are | We construct perception from data + context + expectations |
 | Inattentional blindness = not looking | You ARE looking — you're just not perceiving |
-| Only 2 Gestalt principles exist | There are at least 6: figure-ground, proximity, similarity, closure, continuity, common fate |
+| Gestalt principles are all about grouping | Figure-ground separates an object from its background; proximity, similarity, and closure organize elements into wholes |
 | Binocular cues include relative size | Relative size is monocular — only retinal disparity and convergence are binocular |
 | The visual cliff proves depth perception is innate | It shows depth perception exists by crawling age — can't prove it's innate |
 

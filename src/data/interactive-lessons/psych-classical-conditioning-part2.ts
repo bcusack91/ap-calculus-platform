@@ -151,7 +151,7 @@ export const psychClassicalPart2Data = {
       ### AP Strategy Moves
       - For any scenario, first identify what is natural/unlearned (UCS → UCR), then identify what was learned (CS → CR).
       - Use the "before and after" test: Before conditioning, did this stimulus cause this response? If no → it's a CS/CR pair.
-      - On free-response, always label all four components explicitly and connect each to the scenario.
+      - In any written explanation, label all four components explicitly and connect each to the scenario.
       - Watch for the word "neutral" — it signals the stimulus that will become the CS.
       `
     },

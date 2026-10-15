@@ -151,7 +151,7 @@ export const psychClassicalPart1Data = {
       - When a scenario describes an involuntary response (fear, salivation, nausea) triggered by a previously neutral stimulus, think classical conditioning.
       - Always identify all four components: UCS, UCR, CS, CR (covered in Part 2).
       - Be ready to distinguish classical from operant conditioning — the AP exam tests this distinction frequently.
-      - For free-response questions, define the term first, then apply it to the specific scenario given.
+      - When you use a conditioning concept to explain a source on the EBQ, tie it to the source's specific evidence (name the stimulus and the response from the source), not just a definition.
       `
     },
     {

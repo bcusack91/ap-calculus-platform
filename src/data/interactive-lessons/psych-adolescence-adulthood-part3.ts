@@ -5,35 +5,28 @@ export const psychAdolescencePart3Data = {
       id: 'adol3-s1-intro',
       type: 'text' as const,
       content: `
-## Moral Development
+## Peers, Identity, and Gender
 
-**Part 3 of 7 — Kohlberg's Stages of Moral Reasoning**
+**Part 3 of 7 — Peers, Identity Domains, and Gender Socialization**
 
-How do people decide what is right and wrong? Lawrence Kohlberg studied moral reasoning by presenting people with moral dilemmas and analyzing their REASONING — not their answers. He identified three levels, each with two stages.
+> 🔑 **Key Concept:** Adolescents gradually rely more on peer relationships, and they build a sense of identity in several separate domains at once, often by imagining the selves they might become. Sex and gender shape how they are socialized along the way.
+
+Part 2 gave you Marcia's four identity statuses. This part looks at the social world those statuses develop in: friends and peer groups, the different areas of life where identity forms, and the expectations a culture attaches to sex and gender.
 
 ### Core Definitions
 
-| Level | Focus | How it sounds |
-|-------|-------|---------------|
-| **Preconventional** | Self-interest — "What's in it for me?" | "I'll get in trouble" / "What do I gain?" |
-| **Conventional** | Social norms — "What do others expect?" | "It's the law" / "Good people do this" |
-| **Postconventional** | Universal principles — "What is truly just?" | "Human rights transcend laws" / "Justice demands this" |
-
-### The Heinz Dilemma
-
-Kohlberg's most famous dilemma: A man named Heinz can't afford an overpriced drug that could save his dying wife. Should he steal it?
-
-**Kohlberg cared about WHY, not WHAT they answered:**
-
-| Level | "Yes, steal it" reasoning | "No, don't steal" reasoning |
-|-------|------------------------|-----------------------------|
-| **Preconventional** | "He'll be sad if his wife dies" (avoiding personal pain) | "He'll go to jail" (avoiding punishment) |
-| **Conventional** | "A good husband would do anything for his wife" (social role) | "Stealing is against the law" (maintaining social order) |
-| **Postconventional** | "Human life has greater value than property" (universal principle) | "If everyone stole, society would collapse" (social contract) |
+| Term | Definition |
+|------|-----------|
+| **Peer relationships** | Relationships with people of similar age and status; adolescents gradually rely more on peers for support, advice, and feedback about who they are |
+| **Identity domains** | The separate areas of life in which identity develops: racial/ethnic, gender, sexual orientation, religious, occupational, and familial identity |
+| **Possible selves** | The images people hold of who they might become, including **hoped-for selves** ("a nurse," "a first-generation college graduate") and **feared selves** ("someone who drops out") |
+| **Sex** | Biological characteristics, such as reproductive anatomy and hormones, used to classify people as male or female |
+| **Gender** | The roles, behaviors, and expectations that a culture associates with being male, female, or another gender |
+| **Gender socialization** | The process of learning a culture's gender roles from family, peers, school, and media |
 
 ### Real-World Example
 
-A child doesn't steal candy because "Mom will punish me" (preconventional). A teenager doesn't steal because "It's against the law and people will think I'm bad" (conventional). An adult activist breaks an unjust law during a protest because "Justice is more important than legality" (postconventional).
+Priya, 16, spends more weekend time with her friends than with her family and asks them, not her parents, what to wear to a dance. Yet when she thinks about college, she pictures herself as an engineer like her aunt (a hoped-for self) and worries about becoming "someone who gave up on math" (a feared self). She is also working out what her family's Indian heritage means to her, which is identity work in the racial/ethnic domain. Each of these is a separate thread of adolescent social development.
       `
     },
     {
@@ -45,26 +38,26 @@ A child doesn't steal candy because "Mom will punish me" (preconventional). A te
       exercise: {
         questions: [
           {
-            question: 'A child says "I won\'t hit my brother because I\'ll get grounded." According to Kohlberg, this reasoning reflects which level?',
+            question: 'Compared with when he was 9, a 15-year-old now turns mostly to his friends to talk through problems and judge his choices. Developmental research describes this shift as:',
             options: [
-              'Conventional — the child is following the rules the family has set',
-              'Postconventional — the child understands the principle behind the rule',
-              'Preconventional — the child is motivated by avoiding punishment',
-              'Formal operational — the child is using abstract moral reasoning'
+              'A sign of insecure attachment to his parents that began in infancy',
+              'A normal, gradual increase in his reliance on peer relationships',
+              'Identity foreclosure, because he is adopting the views of his friends',
+              'A return to parallel play, now carried out with same-age companions'
             ],
-            correctAnswer: 2,
-            explanation: 'Preconventional reasoning is focused on consequences to SELF: avoiding punishment or gaining rewards. "I\'ll get grounded" = I want to avoid a negative consequence to me. The child isn\'t thinking about social norms or universal principles — just personal outcomes.'
+            correctAnswer: 1,
+            explanation: 'Adolescents gradually rely more on peer relationships as they age, so turning to friends for advice is typical development. It does not by itself show insecure attachment, and foreclosure refers to committing to an identity without exploring alternatives.'
           },
           {
-            question: 'A protester deliberately breaks a segregation law because they believe racial equality is a fundamental human right. According to Kohlberg, this reflects:',
+            question: 'A high school junior imagines herself as a future veterinarian and also fears becoming "someone stuck in a job I hate." These two images are best described as:',
             options: [
-              'Preconventional morality — breaking rules for personal benefit',
-              'Conventional morality — following what society expects',
-              'Postconventional morality — reasoning from universal ethical principles',
-              'Moral relativism — believing there are no moral absolutes'
+              'Her ideal self and actual self',
+              'Her imaginary audience at work',
+              'Possible selves, hoped and feared',
+              'Two stages in Erikson\'s theory'
             ],
             correctAnswer: 2,
-            explanation: 'Postconventional reasoning involves applying universal principles (equality, justice, human rights) even when they conflict with existing laws. The protester isn\'t motivated by self-interest (preconventional) or social conformity (conventional) — they\'re appealing to a higher moral standard that transcends the law.'
+            explanation: 'Possible selves are images of who a person might become, and they include both hoped-for selves (a veterinarian) and feared selves (stuck in a hated job). Adolescents often use them to guide identity choices.'
           }
         ]
       }
@@ -73,80 +66,107 @@ A child doesn't steal candy because "Mom will punish me" (preconventional). A te
       id: 'adol3-s3-deep',
       type: 'text' as const,
       content: `
-### Deep Dive: Kohlberg's Six Stages
+### Deep Dive: Identity Is Built Domain by Domain
 
-| Level | Stage | Focus | Example reasoning |
-|-------|-------|-------|-------------------|
-| **Preconventional** | 1. Obedience & punishment | Avoid punishment | "I'll get in trouble" |
-| | 2. Self-interest | Seek personal reward | "What's in it for me?" |
-| **Conventional** | 3. Good boy/nice girl | Gain approval | "People will think I'm a good person" |
-| | 4. Law and order | Maintain social order | "Rules are rules — society needs laws" |
-| **Postconventional** | 5. Social contract | Rights and democratic principles | "Laws should serve the greater good" |
-| | 6. Universal ethical principles | Abstract justice | "Human dignity transcends any law" |
+Marcia's statuses (achievement, moratorium, foreclosure, diffusion) can be applied to **each domain separately**. One teenager can be in different statuses in different areas of life at the same time.
 
-### Critiques of Kohlberg
+| Identity domain | Question the teen is working on | Example of one status |
+|----------------|-------------------------------|----------------------|
+| **Occupational** | What work will I do? | Moratorium: job-shadowing a nurse, a mechanic, and a coder before choosing |
+| **Religious** | What do I believe? | Foreclosure: accepts the family's faith without ever questioning it |
+| **Racial/ethnic** | What does my heritage mean to me? | Achievement: explored family history and culture, now feels a settled, proud identity |
+| **Gender identity** | What is my internal sense of my own gender? | Develops through self-reflection and the reactions of family and peers |
+| **Sexual orientation** | Whom am I romantically attracted to? | Often becomes clearer during adolescence |
+| **Familial** | What role will family play in my adult life? | Diffusion: has not thought about it and is not trying to |
 
-**Carol Gilligan** argued that Kohlberg's model was biased toward a male, Western perspective:
-- Kohlberg's stages emphasize **justice** and abstract principles
-- Gilligan argued that many people (especially women, in her view) reason more from an **ethic of care** — focusing on relationships, compassion, and responsibility to others
-- Gilligan's critique: Kohlberg studied mostly males and then applied his framework universally
-- Modern view: Both justice AND care orientations are valid approaches to moral reasoning
+**AP move:** If a scenario describes a teen who is settled in one area and still exploring in another, do not force a single label. Name the status **for the domain** the question asks about.
 
-**Other critiques:**
-- Moral reasoning ≠ moral behavior (knowing what's right doesn't mean you'll DO it)
-- Cultural bias — not all cultures value individualistic moral principles
-- Most adults never reach postconventional reasoning
+### Possible Selves Guide Present Behavior
+
+Possible selves are not daydreams. They connect the future to what a teen does today:
+
+- A **hoped-for self** gives a goal to work toward ("future nurse" → takes biology seriously).
+- A **feared self** marks an outcome to avoid ("dropout" → asks for tutoring).
+- Possible selves motivate most when they come with concrete strategies. "I'll be a nurse" matters more when it comes with "so I'll pass chemistry this year."
+
+### Peers in Adolescence
+
+- In childhood, peer interaction centers on **play** (parallel and pretend play). In adolescence, it shifts toward talk, shared identity, and emotional support.
+- Adolescents **gradually** rely more on peers as they age; parents still matter, especially for long-term values and educational goals.
+- Peers serve as an audience for identity: teens try out styles and roles and watch how friends react.
+- In driving-game studies, teenagers took more risks when friends were watching than when alone; adults did not show the same jump. Peer presence amplifies the reward-seeking you learned about in Part 1.
+
+### Sex, Gender, and Socialization
+
+Sex and gender influence how children and adolescents are **socialized**:
+
+| Source of gender socialization | Example |
+|------------------------------|---------|
+| **Family** | Different chores or toys offered to sons and daughters |
+| **Peers** | Teasing a classmate whose interests do not fit the group's gender expectations |
+| **School** | Teachers' expectations about who is "good at" math or writing |
+| **Media** | Characters who model narrow gender roles |
+
+Gender roles **vary across cultures and change across generations**, which is strong evidence that they are learned rather than fixed by biology alone.
       `
     },
     {
       id: 'adol3-s4-input',
       type: 'input-boxes' as const,
       content: `
-      **Applied Recall** ✍️
+**Applied Recall** ✍️
 
-      1) At the preconventional level, moral reasoning is driven by ___-interest. (one word)
-
-      2) At the conventional level, moral reasoning is driven by social ___ and rules. (one word)
-
-      3) Who criticized Kohlberg for gender bias and proposed an ethics of care? (last name)
-
-      Type the exact term.
+Type one word for each blank.
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['self', 'norms', 'Gilligan'],
-        hint1: 'Preconventional = "What happens to ME?"',
-        hint2: 'Conventional = following what society expects',
-        hint3: 'Starts with G — argued Kohlberg\'s model favored a justice orientation',
-        explanation: 'Expected answers: self (preconventional = self-interest/consequences to self), norms (conventional = following social rules and expectations), and Gilligan (Carol Gilligan argued for an ethic of care as an alternative moral framework).'
+        questions: [
+          {
+            question: 'The images people hold of who they might become, such as a hoped-for "future teacher," are called possible _____.',
+            answer: 'selves',
+            acceptableAnswers: ['self'],
+            explanation: 'Possible selves include hoped-for selves and feared selves, and they help guide identity choices.'
+          },
+          {
+            question: 'The roles and expectations a culture attaches to being male, female, or another gender make up _____, as distinct from biological sex.',
+            answer: 'gender',
+            acceptableAnswers: ['gender roles', 'gender role'],
+            explanation: 'Sex refers to biological characteristics; gender refers to the culturally shaped roles, behaviors, and expectations linked with them.'
+          },
+          {
+            question: 'Identity about what work a person will do as an adult is called _____ identity.',
+            answer: 'occupational',
+            acceptableAnswers: ['career', 'vocational'],
+            explanation: 'Occupational identity is one of the identity domains, alongside racial/ethnic, gender, sexual orientation, religious, and familial identity.'
+          }
+        ]
       }
     },
     {
       id: 'adol3-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Match the Concepts** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: '"I donated to charity because it will look good on my college application" reflects ___ reasoning',
-            options: ['preconventional', 'conventional', 'postconventional']
+            label: 'A teen joins a club for students of Korean heritage to learn what that background means to her. She is exploring her _____ identity',
+            options: ['occupational', 'racial/ethnic', 'religious', 'familial']
           },
           {
-            label: '"I returned the wallet because stealing is against the law" reflects ___ reasoning',
-            options: ['preconventional', 'conventional', 'postconventional']
+            label: 'A boy is mocked by teammates for taking a dance class, and he quits. This is an example of _____',
+            options: ['gender socialization by peers', 'a feared possible self', 'identity achievement', 'the personal fable']
           },
           {
-            label: '"I protested the unjust law because human rights matter more than legal codes" reflects ___ reasoning',
-            options: ['preconventional', 'conventional', 'postconventional']
+            label: 'A teen is settled on becoming an electrician but has never thought about religion. His status in the religious domain is _____',
+            options: ['achievement', 'moratorium', 'foreclosure', 'diffusion']
           }
         ],
-        correctAnswers: ['preconventional', 'conventional', 'postconventional'],
-        hint1: 'Motivated by personal benefit = self-interest = preconventional.',
-        hint2: 'Motivated by following the law = social order = conventional.',
-        hint3: 'Motivated by universal principles that transcend laws = postconventional.',
-        explanation: 'College application benefit = self-interest (preconventional). Following the law = maintaining social order (conventional). Appealing to human rights above law = postconventional reasoning.'
+        correctAnswers: ['racial/ethnic', 'gender socialization by peers', 'diffusion'],
+        hint1: 'She is working out what her heritage means to her.',
+        hint2: 'Peers are teaching which activities "fit" a gender.',
+        hint3: 'No exploration and no commitment in that one domain.',
+        explanation: 'Exploring heritage is racial/ethnic identity work. Teammates mocking a "gender-inconsistent" activity is gender socialization by peers. A teen can be achieved in the occupational domain yet in diffusion in the religious domain, because statuses apply domain by domain.'
       }
     },
     {
@@ -155,49 +175,46 @@ A child doesn't steal candy because "Mom will punish me" (preconventional). A te
       content: `
 ## Common Misconceptions and Exam Strategy
 
-### Misconceptions to Avoid
-- **"Kohlberg judged whether the answer was right or wrong"** — He analyzed the REASONING, not the conclusion. Both "yes, steal it" and "no, don't steal" can be at any level.
-- **"Preconventional = children only"** — While common in children, adults can reason at the preconventional level too ("I won't cheat on my taxes because I don't want to get audited").
-- **"Everyone reaches postconventional"** — Most adults reason at the conventional level. Postconventional reasoning is relatively rare.
-- **"Gilligan completely disproved Kohlberg"** — Research hasn't consistently shown gender differences in moral reasoning. Gilligan's contribution was expanding the framework to include care-based reasoning alongside justice-based reasoning.
+| Misconception | Correction |
+|--------------|-----------|
+| "Teens replace their parents with peers." | Reliance on peers rises **gradually**; parents keep influence on long-term values and goals. |
+| "A person has one identity status." | Statuses can differ by **domain**: occupational, religious, racial/ethnic, and so on. |
+| "Sex and gender mean the same thing." | Sex is biological; gender is the set of roles and expectations a culture attaches to it. |
+| "Gender roles are the same everywhere." | They differ across cultures and change across generations, which points to socialization. |
+| "Possible selves are just fantasies." | Hoped-for and feared selves guide present choices, especially when paired with a plan. |
 
-### AP Strategy Moves
-- **Focus on the reasoning, not the action.** Two people can make the same choice for different moral reasons — each representing a different Kohlberg level.
-- If reasoning mentions punishment, reward, or personal consequences → preconventional.
-- If reasoning mentions laws, rules, social approval, or "what good people do" → conventional.
-- If reasoning mentions universal rights, justice, or principles that override laws → postconventional.
-- Gilligan + care ethics is a common FRQ comparison topic. Know her critique and her alternative framework.
+> 🔑 **AP Connection:** Research on peers, identity, and gender is almost always **correlational** or **quasi-experimental**: you cannot randomly assign teens to friend groups, heritage, or gender. In an AAQ, expect to name the method as correlational (or as a survey or naturalistic observation) and to explain why a finding shows a relationship rather than proof of cause.
       `
     },
     {
       id: 'adol3-s7-applied',
       type: 'multiple-choice' as const,
       content: `
-      **Applied Scenarios** 🎯
+**Applied Scenarios** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Two students are asked why cheating on a test is wrong. Student A says: "If you get caught, you\'ll fail the class." Student B says: "It\'s unfair to students who studied honestly." How would Kohlberg classify each student\'s reasoning?',
+            question: 'Researchers survey 600 teens and find that those with more friends who smoke are more likely to smoke themselves. Which conclusion is best supported by this design?',
             options: [
-              'Both are conventional — each one is upholding the school\'s rules against cheating',
-              'Student A: preconventional (avoiding punishment); Student B: conventional (fairness to peers)',
-              'Student A: conventional (following rules); Student B: postconventional (universal justice)',
-              'Both are postconventional — each one appeals to a general principle of honesty'
-            ],
-            correctAnswer: 1,
-            explanation: 'Student A\'s reasoning centers on consequences to SELF ("you\'ll fail") = preconventional (Stage 1: punishment avoidance). Student B\'s reasoning centers on what\'s fair within the social system ("unfair to students who studied") = conventional (Stage 3/4: maintaining social order and fairness). Same moral conclusion, different levels of reasoning.'
-          },
-          {
-            question: 'Carol Gilligan would most likely criticize Kohlberg for:',
-            options: [
-              'Relying on hypothetical dilemmas that were too simple to separate the stages',
-              'Ignoring biological and hormonal influences on how people make moral choices',
-              'Ranking justice-based reasoning above care-based reasoning about relationships',
-              'Placing too much weight on what people actually do rather than how they reason'
+              'Having friends who smoke causes teens to start smoking',
+              'Smoking teens choose other smokers, so peers have no effect',
+              'Peer smoking and teen smoking are related, but cause is unclear',
+              'Peer pressure is stronger for smoking than for any other habit'
             ],
             correctAnswer: 2,
-            explanation: 'Gilligan argued that Kohlberg\'s highest stages reward abstract, justice-oriented reasoning while devaluing care-oriented reasoning that focuses on relationships, compassion, and responsibility to others. She suggested this created a framework that could unfairly rate care-based reasoning as "less mature" when it represents a valid alternative moral approach.'
+            explanation: 'A survey shows a correlation, not a cause. Friends may influence smoking, teens who smoke may choose friends who smoke, or a third variable such as neighborhood may affect both.'
+          },
+          {
+            question: 'In one culture, boys are expected to hide sadness and girls to be soft-spoken; in another, both are encouraged to express feelings openly. This contrast best supports the idea that:',
+            options: [
+              'Gender roles are largely learned through cultural socialization',
+              'Biological sex alone fixes how children express their emotions',
+              'Peer relationships matter more in childhood than in adolescence',
+              'Identity domains develop in the same order in every culture'
+            ],
+            correctAnswer: 0,
+            explanation: 'When expectations for boys and girls differ from culture to culture, the differences must be taught and learned, which is gender socialization. Sex is the same across both cultures, so it cannot explain the contrast by itself.'
           }
         ]
       }

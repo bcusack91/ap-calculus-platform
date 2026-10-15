@@ -7,19 +7,9 @@ export const psychThinkingPart5Data = {
       content: `
 # 🧠 Thinking & Problem Solving
 
-**Part 5 of 7 — Creativity**
+**Part 5 of 7 — Creativity and Executive Functions**
 
-What is creativity, and how does it work? Creativity involves generating novel, useful ideas — and it requires both knowledge (convergent) and flexibility (divergent) thinking.
-
-### Key Definitions
-
-| Term | Definition |
-|------|-----------|
-| **Convergent thinking** | Narrowing down to a SINGLE correct answer — using logic and knowledge (tested on traditional IQ tests) |
-| **Divergent thinking** | Generating MANY possible solutions or ideas — open-ended, creative thinking |
-| **Creativity** | The ability to produce ideas that are both NOVEL (original) and USEFUL (valuable/appropriate) |
-| **Intrinsic motivation** | Motivation driven by internal satisfaction, curiosity, or enjoyment — associated with GREATER creativity |
-| **Extrinsic motivation** | Motivation driven by external rewards (money, grades) — can DECREASE creativity (overjustification effect) |
+> 🔑 **Key Concept:** Creativity is a way of thinking that generates **novel ideas** through **divergent** (versus convergent) thinking, and it is hindered by **functional fixedness** (CED 2.2.A.8). **Executive functions** are the cognitive processes that let people generate, organize, plan, and carry out goal-directed behavior and think critically (CED 2.2.A.7).
 
 ### Convergent vs. Divergent Thinking
 
@@ -27,21 +17,21 @@ What is creativity, and how does it work? Creativity involves generating novel, 
 |--|--------------------|--------------------|
 | **Direction** | Narrows DOWN to one answer | Expands OUT to many answers |
 | **Type of question** | "What is 7 × 8?" | "How many uses can you think of for a brick?" |
-| **Measured by** | IQ tests, standardized tests | Alternate uses test, creative production |
-| **Associated with** | Intelligence, analytical ability | Creativity, flexibility, originality |
-| **Example** | Solving a math equation | Brainstorming startup ideas |
+| **Typical measure** | Multiple-choice and short-answer tests with one key | Alternate-uses tasks scored for number and originality of ideas |
+| **What it produces** | The single best or correct solution | A wide range of possible solutions |
+| **Example** | Solving a math equation | Brainstorming names for a new club |
 
-### Sternberg's Five Components of Creativity
+Creative work usually uses BOTH: divergent thinking produces many options, then convergent thinking picks the one that actually works. A student designing a science-fair project might list fifteen possible questions (divergent) and then choose the one that can be tested with the equipment available (convergent).
 
-| Component | What It Means | Example |
-|-----------|--------------|---------|
-| **Expertise** | Well-developed knowledge base | A musician must master their instrument before they can improvise |
-| **Imaginative thinking** | Ability to see things in new ways, make connections | Seeing a connection between two unrelated fields |
-| **Venturesome personality** | Tolerance for ambiguity and risk | Willingness to try unconventional approaches |
-| **Intrinsic motivation** | Driven by interest, satisfaction, challenge | Creating art for the joy of it, not for money |
-| **Creative environment** | Surroundings that spark, support, and refine creative ideas | Collaborative workspace, freedom to fail, feedback |
+### What Blocks Creative Thinking
 
-> **Key insight from research:** Creativity is NOT purely "talent" — it can be cultivated through expertise, the right mindset, and supportive environments. The AP exam may test this: creativity requires BOTH knowledge (convergent) AND flexibility (divergent).
+| Obstacle | What it looks like | Why it blocks new ideas |
+|----------|--------------------|-------------------------|
+| **Functional fixedness** | Seeing a coin only as money, never as a screwdriver | The object's usual use hides its other possible uses |
+| **Mental set** | Reusing the method that solved the last five problems | A strategy that worked before crowds out a better one |
+| **Settling on the first answer** | Stopping after one idea on an open-ended task | Convergent closure arrives before divergent search has started |
+
+> **AP Connection:** The CED names functional fixedness as the obstacle to creativity. In a scenario, ask: is the person stuck on an OBJECT's usual function (functional fixedness) or on a familiar STRATEGY (mental set)?
       `
     },
     {
@@ -61,18 +51,18 @@ What is creativity, and how does it work? Creativity involves generating novel, 
               'The availability heuristic — recalling common uses for paperclips'
             ],
             correctAnswer: 1,
-            explanation: 'This is Guilford\'s Alternate Uses Test, which measures DIVERGENT thinking. The task is open-ended — there is no single correct answer. The goal is to generate as MANY different ideas as possible (fluency), as many CATEGORIES of ideas as possible (flexibility), and as many UNUSUAL ideas as possible (originality). A student who only lists "hold papers" would show low divergent thinking and possibly functional fixedness.'
+            explanation: 'An alternate-uses task is open-ended, with no single correct answer, so it measures divergent thinking: producing many different and unusual ideas. A student who lists only "hold papers" would show low divergent thinking and possibly functional fixedness.'
           },
           {
-            question: 'Research shows that people who are paid to do creative work often produce LESS creative output than those who do it voluntarily. This finding BEST supports the role of:',
+            question: 'Campers need to stir a pot but forgot a spoon. One camper says there is nothing to stir with, even though a clean tent stake and a pair of tongs are sitting nearby. The camper\'s difficulty BEST illustrates:',
             options: [
-              'Convergent thinking — payment pushes people to narrow in on one safe approach',
-              'Extrinsic motivation — outside rewards can undermine the intrinsic interest original work needs',
-              'Mental set — payment locks workers into a rigid approach that worked for them before',
-              'Functional fixedness — paid workers see their materials only in their standard uses'
+              'Mental set, because the camper keeps using a cooking routine that worked well at home',
+              'Divergent thinking, because the camper is generating too many possible uses at once',
+              'Functional fixedness, because the camper sees those objects only in their usual roles',
+              'Convergent thinking, because the camper has narrowed the problem to the one right tool'
             ],
-            correctAnswer: 1,
-            explanation: 'This demonstrates the OVERJUSTIFICATION EFFECT: when an external reward is added to an already intrinsically motivating activity, intrinsic motivation decreases. The person shifts from "I\'m doing this because I enjoy it" to "I\'m doing this for the money." This undermines the intrinsic motivation that Sternberg identified as a key component of creativity. Exception: rewards that INFORM (feedback) rather than CONTROL can maintain intrinsic motivation.'
+            correctAnswer: 2,
+            explanation: 'The camper cannot see the tent stake or tongs as stirring tools because they are fixed on those objects\' usual functions, which is functional fixedness, the CED\'s named obstacle to creative thinking. Mental set would involve a strategy rather than an object, and the camper is producing too few ideas, not too many.'
           }
         ]
       }
@@ -81,44 +71,34 @@ What is creativity, and how does it work? Creativity involves generating novel, 
       id: 'think5-s3-deep-dive',
       type: 'text' as const,
       content: `
-### 📚 Creativity & Intelligence
+### 📚 Executive Functions: The Brain's Project Manager
 
-**Is intelligence the same as creativity?**
+Executive functions are the cognitive processes that let people **generate, organize, plan, and carry out goal-directed behavior** and engage in **critical thinking** (CED 2.2.A.7). They are what turn a creative idea into a finished product.
 
-| Finding | Implication |
-|---------|------------|
-| IQ and creativity are correlated UP TO about IQ 120 | You need a minimum level of intelligence to be creative |
-| Above IQ 120, the correlation weakens | Being smarter doesn't make you proportionally more creative |
-| Many high-IQ people are NOT particularly creative | Intelligence is necessary but NOT sufficient for creativity |
-| Many highly creative people have above-average but not extraordinary IQ | Creativity requires MORE than just intelligence |
+| Executive function | What it does | Everyday example |
+|--------------------|--------------|------------------|
+| **Generating** | Produces goals and options | Listing possible topics for a research paper |
+| **Organizing** | Puts information and steps in order | Sorting notes into sections before writing |
+| **Planning** | Sequences steps toward a goal and anticipates obstacles | Scheduling drafts so the paper is done two days early |
+| **Carrying out goal-directed behavior** | Starts the work, keeps it going, and shifts strategy when needed | Switching to a new source when the first one is unhelpful |
+| **Critical thinking** | Evaluates ideas and evidence before accepting them | Checking whether a source's claim is supported by data |
 
-> **Threshold theory:** You need to be "smart enough" (roughly IQ 120) for creativity, but beyond that threshold, other factors (motivation, personality, environment) matter more.
+### Where Executive Functions Live
 
-### The Brainstorming Debate
+The **prefrontal cortex** in the frontal lobe is the brain region most associated with executive functioning (CED 1.4). Damage there often leaves vocabulary and memory for facts intact while disrupting planning and self-control.
 
-| Common Belief | Research Finding |
-|--------------|-----------------|
-| Group brainstorming produces more creative ideas | Individuals brainstorming ALONE often produce MORE and BETTER ideas than groups |
-| Why? | Social loafing, evaluation apprehension (fear of judgment), production blocking (waiting to speak) |
-| Best approach? | Individual brainstorming first → then combine and evaluate in a group |
+| Case pattern | What stays intact | What breaks down |
+|--------------|-------------------|------------------|
+| Prefrontal damage after an accident | Knowing how to cook each dish | Planning a meal so all dishes are ready at the same time |
+| Prefrontal damage after a stroke | Knowing the rules of a game | Sticking to a strategy and adjusting when it fails |
 
-### Creativity & Mental Health
+### Creativity, Executive Functions, and Intelligence Are Not the Same
 
-| Popular Belief | Research Reality |
-|---------------|-----------------|
-| "Creative people are all crazy" | There IS a slight statistical association between creativity and certain mood disorders (bipolar) |
-| "You need to suffer to create" | Most creative people are NOT mentally ill — and mental illness typically INHIBITS creative output |
-| "Genius and madness are linked" | The association is modest and does not imply causation |
-
-### Obstacles to Creativity
-
-| Obstacle | How It Blocks Creativity |
-|----------|------------------------|
-| **Functional fixedness** | Can't see new uses for familiar objects/concepts |
-| **Mental set** | Stuck using previously successful but now inappropriate strategies |
-| **Fear of failure** | Risk-aversion prevents trying unconventional approaches |
-| **Excessive extrinsic motivation** | External rewards shift focus from exploration to "getting it right" |
-| **Conformity pressure** | Social pressure to fit in discourages original thinking |
+| Statement | Accurate? | Why |
+|-----------|-----------|-----|
+| "A high test score means a person is creative." | No | Tests with one correct answer mostly tap convergent thinking |
+| "A creative person must be organized." | No | Generating novel ideas (divergent thinking) and carrying a plan through (executive functions) are different processes |
+| "Executive functions help creative ideas become real products." | Yes | Planning and organizing turn ideas into completed work |
       `
     },
     {
@@ -130,8 +110,8 @@ What is creativity, and how does it work? Creativity involves generating novel, 
       exercise: {
         inputs: [
           { label: '___ thinking generates many possible solutions; convergent thinking narrows to one answer', answer: 'Divergent' },
-          { label: '___ motivation (internal enjoyment) is associated with greater creativity than extrinsic rewards', answer: 'Intrinsic' },
-          { label: 'According to threshold theory, creativity requires a minimum IQ of about ___, after which other factors matter more', answer: '120' }
+          { label: 'Functional ___ is the inability to see a new use for a familiar object, and it hinders creativity', answer: 'fixedness' },
+          { label: 'The cognitive processes that generate, organize, plan, and carry out goal-directed behavior are called ___ functions', answer: 'executive' }
         ]
       }
     },
@@ -139,45 +119,43 @@ What is creativity, and how does it work? Creativity involves generating novel, 
       id: 'think5-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Classify the Thinking Type** 🔍
+**Classify the Thinking Process** 🔍
       `,
       exercise: {
         dropdowns: [
-          { label: '"What is the capital of France?"', options: ['Convergent thinking', 'Divergent thinking', 'Insight', 'Creativity'] },
+          { label: '"What is the capital of France?"', options: ['Convergent thinking', 'Divergent thinking', 'Executive functions', 'Functional fixedness'] },
           { label: '"Design a new product to solve a common household problem"', options: ['Divergent thinking', 'Convergent thinking', 'Functional fixedness', 'Mental set'] },
-          { label: 'A scientist driven by pure curiosity about how cells divide — no grant pressure', options: ['Intrinsic motivation', 'Extrinsic motivation', 'Convergent thinking', 'Anchoring bias'] }
+          { label: 'A student breaks a big project into weekly steps, tracks progress, and changes the plan when a step falls behind', options: ['Executive functions', 'Divergent thinking', 'Convergent thinking', 'Functional fixedness'] }
         ],
-        correctAnswers: ['Convergent thinking', 'Divergent thinking', 'Intrinsic motivation'],
+        correctAnswers: ['Convergent thinking', 'Divergent thinking', 'Executive functions'],
         hint1: 'One specific correct answer — narrowing down to the single right response.',
-        hint2: 'Open-ended, many possible solutions, generating creative ideas.',
-        hint3: 'Driven by internal curiosity and satisfaction, not external rewards.',
-        explanation: 'Capital of France = convergent (one correct answer: Paris). Design a product = divergent (many possible solutions, open-ended creativity). Curiosity-driven scientist = intrinsic motivation (internal drive, no external reward pressure).'
+        hint2: 'Open-ended, many possible solutions, generating novel ideas.',
+        hint3: 'Planning, organizing, monitoring, and adjusting goal-directed behavior.',
+        explanation: 'Capital of France = convergent (one correct answer: Paris). Design a product = divergent (many possible solutions). Breaking a project into steps and adjusting the plan = executive functions (planning and carrying out goal-directed behavior).'
       }
     },
     {
       id: 'think5-s6-strategy',
       type: 'text' as const,
       content: `
-### 🎯 AP Strategy: Creativity Questions
+### 🎯 AP Strategy: Creativity and Executive-Function Questions
 
 **Common Misconceptions:**
 
 | Misconception | Correction |
 |--------------|-----------|
-| Creativity = divergent thinking | Creativity requires BOTH divergent (generating ideas) AND convergent (evaluating which ideas are useful) |
-| High IQ = high creativity | Intelligence is necessary but NOT sufficient — above ~120 IQ, other factors matter more |
-| Group brainstorming is better | Research shows individuals often generate more/better ideas alone — then groups evaluate |
-| Extrinsic rewards always hurt creativity | They CAN — through overjustification — but informational rewards (feedback) may not |
-| Creativity is purely innate | Creativity can be developed through expertise, environment, and motivational support |
+| Creativity = divergent thinking only | Creativity GENERATES ideas divergently, but choosing a workable idea is convergent |
+| Functional fixedness = mental set | Fixedness is stuck on an OBJECT's usual use; mental set is stuck on a familiar STRATEGY |
+| Executive functions = intelligence | Executive functions are about planning and carrying out behavior; a person can know a lot and still plan poorly |
+| Executive functions happen everywhere in the brain equally | The prefrontal cortex is the region most associated with them |
 
 **Quick Decision Guide:**
 - One correct answer → **Convergent thinking**
 - Many possible answers → **Divergent thinking**
-- Doing it for fun/interest → **Intrinsic motivation**
-- Doing it for rewards/grades → **Extrinsic motivation**
-- External rewards reduce internal drive → **Overjustification effect**
+- Can't see a new use for an object → **Functional fixedness**
+- Planning, organizing, and following through on a goal → **Executive functions**
 
-> **AP Tip:** Convergent = CONverge = come together to ONE point. Divergent = DIverge = spread OUT in many directions. This mnemonic helps distinguish them quickly on the exam.
+> **AP Tip:** Convergent = CONverge = come together to ONE point. Divergent = DIverge = spread OUT in many directions. Executive functions = the "executive" who runs the project once the ideas exist.
       `
     },
     {
@@ -189,26 +167,26 @@ What is creativity, and how does it work? Creativity involves generating novel, 
       exercise: {
         questions: [
           {
-            question: 'A company offers its engineering team a $10,000 bonus for the most innovative product design. After implementing the bonus, the team produces designs that are technically competent but less original than before. This outcome is BEST explained by:',
+            question: 'After a car accident injured her prefrontal cortex, a chef still knows every recipe but can no longer get a full dinner ready on time; she starts dishes in the wrong order and does not adjust when one runs late. Her difficulty is BEST described as a problem with:',
             options: [
-              'Functional fixedness — the bonus keeps the engineers from seeing new uses for their parts',
-              'The overjustification effect — the reward displaced the team\'s intrinsic motivation',
-              'Mental set — the team keeps reusing design strategies that succeeded in the past',
-              'Group polarization — group discussion pushed the team\'s designs toward an extreme'
+              'Divergent thinking, since she can no longer invent new recipes',
+              'Executive functions, since she can no longer plan the meal and carry the plan through',
+              'Functional fixedness, since she sees her kitchen tools only in their usual roles',
+              'Convergent thinking, since she cannot recall the one correct recipe for a dish'
             ],
             correctAnswer: 1,
-            explanation: 'The overjustification effect: the \\$10,000 bonus shifted the team\'s motivation from intrinsic (love of innovation, curiosity) to extrinsic (winning the bonus). This narrows focus to "what will win the money?" rather than "what\'s truly innovative?" — leading to safer, less creative designs. Research consistently shows that when external rewards are introduced for creative tasks, the work becomes more conventional and less original. The designs are "technically competent" (convergent thinking maintained) but "less original" (divergent thinking decreased).'
+            explanation: 'Her recipe knowledge is intact, but sequencing, timing, and adjusting the plan fail, which is a breakdown of executive functions linked to the prefrontal cortex. The scenario says nothing about inventing new recipes, using tools in new ways, or recalling a single answer.'
           },
           {
-            question: 'A teacher wants to foster creativity in her students. Based on research, which approach would be MOST effective?',
+            question: 'A researcher surveys 200 high school students and finds a positive correlation (r = +.35) between their scores on an alternate-uses task and the number of hobbies they report. Which conclusion is BEST supported?',
             options: [
-              'Give the top grade to the most creative project, since competition for rewards drives innovation',
-              'Teach only divergent-thinking exercises and drop subject content, since knowledge limits originality',
-              'Make failure safe while building expertise and nurturing students\' intrinsic interest in the subject',
-              'Have students always brainstorm in groups, since groups produce more creative ideas than individuals'
+              'Taking up more hobbies causes students to become better divergent thinkers',
+              'Students with more hobbies tend to do somewhat better on the divergent thinking measure',
+              'Divergent thinking ability causes students to take up a larger number of hobbies',
+              'The two measures are unrelated, because .35 is too small to count as a relationship'
             ],
-            correctAnswer: 2,
-            explanation: 'This combines multiple research findings: (1) Creative environment — a safe space where failure is acceptable encourages risk-taking. (2) Expertise — you need a knowledge base (convergent) to be creative. (3) Intrinsic motivation — nurturing internal interest is more effective than external rewards (competitive grades could trigger overjustification). Competitive grading adds extrinsic pressure. Teaching only divergent thinking ignores the need for expertise. Always brainstorming in groups contradicts research showing individuals often outperform groups in idea generation.'
+            correctAnswer: 1,
+            explanation: 'A positive correlation of +.35 shows a modest tendency for the two measures to rise together, so students with more hobbies tend to score somewhat higher. Because this is correlational research, neither causal direction can be concluded (directionality and third-variable problems), and +.35 is a real, if moderate, relationship.'
           }
         ]
       }

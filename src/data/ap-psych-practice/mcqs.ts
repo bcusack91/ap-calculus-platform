@@ -165,7 +165,7 @@ export const MCQS: MCQItem[] = [
       'Trichromatic theory, because three types of cones detect red, green, and blue light',
       'Opponent-process theory, because paired color channels rebound after fatigue',
       'Place theory, because different colors stimulate different parts of the retina',
-      'Signal detection theory, because her criterion for seeing color changes',
+      'Frequency theory, because each color is coded by how fast the cones fire',
     ],
     correctAnswer: 1,
     explanation: 'Opponent-process theory proposes red-green, blue-yellow, and black-white channels; fatiguing one side produces the opposing color when the stimulus is removed. Trichromatic theory explains color detection by three cone types but does not predict complementary-color afterimages.',
@@ -195,15 +195,15 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'biological-bases',
-    question: 'Late in her shift, a radiologist is told that missing a tumor is far more costly than a false alarm. She begins reporting possible tumors on more scans, including some scans that show none. Signal detection theory explains this change as',
+    question: 'During a bad head cold, a student says her favorite soup tastes bland even though her taste buds are working normally. This is best explained by',
     options: [
-      'a lower absolute threshold, so her eyes now detect fainter shadows',
-      'sensory adaptation, which has dulled her sensitivity to the images',
-      'a more lenient decision criterion, so she says yes when unsure',
-      'a larger difference threshold, as Weber\'s law predicts for fatigue',
+      'sensory interaction, because smell usually contributes to flavor',
+      'sensory adaptation, because her taste receptors stopped responding',
+      'synesthesia, because one sense is triggering a second, unrelated sense',
+      'a raised difference threshold, as Weber\'s law predicts for illness',
     ],
-    correctAnswer: 2,
-    explanation: 'Signal detection theory separates sensitivity from response bias; changing the costs of errors shifts the criterion, so she says "tumor" more often and gets more hits and more false alarms. Her visual sensitivity did not improve, so a lower absolute threshold does not explain the extra false alarms.',
+    correctAnswer: 0,
+    explanation: 'Smell and taste interact, so when congestion blocks smell, food tastes muted even though the taste receptors still work (sensory interaction). Adaptation would follow constant exposure to the same taste, synesthesia is a blending of senses rather than a loss, and Weber\'s law concerns detecting changes in intensity.',
   },
 
   /* ============== UNIT 2: Cognition (Q16–Q30) ============== */
@@ -421,7 +421,7 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'development-learning',
-    question: 'A child whose mother drank heavily during pregnancy is born with a small head, distinctive facial features, and later shows intellectual disability. These effects are best explained as',
+    question: 'A child whose mother drank heavily during pregnancy is born with a small head, distinctive facial features, and later shows learning difficulties. These effects are best explained as',
     options: [
       'fetal alcohol syndrome caused by a teratogen',
       'a genetic disorder inherited from the father',
@@ -784,13 +784,13 @@ export const MCQS: MCQItem[] = [
     stimulus: 'Participants were told the study was about motor coordination. Some held a pen between their teeth, which forces a smile-like expression; others held it between their lips, which prevents smiling. All participants then rated how funny a set of cartoons was. Those holding the pen in their teeth gave higher ratings.',
     question: 'These results are most consistent with',
     options: [
-      'the two-factor theory, which says emotion follows labeling of arousal',
+      'broaden-and-build theory, which says positive emotions widen thinking',
       'the facial feedback hypothesis, which says expressions shape emotion',
       'display rules, which are cultural norms for showing emotions in public',
       'the mere exposure effect, which says familiarity increases liking',
     ],
     correctAnswer: 1,
-    explanation: 'Producing a smile-like expression intensified amusement, which supports the facial feedback hypothesis that facial expressions can influence emotional experience. The two-factor theory emphasizes interpreting general physiological arousal, which the pen manipulation did not change. Large later replications of this pen procedure have produced mixed results, so the hypothesis is best treated as supported by some but not all studies.',
+    explanation: 'Producing a smile-like expression intensified amusement, which supports the facial feedback hypothesis that facial expressions can influence emotional experience. Broaden-and-build theory concerns how positive emotions widen thinking and action, not how expressions create emotion. Large later replications of this pen procedure have produced mixed results, so the hypothesis is best treated as supported by some but not all studies.',
   },
   {
     type: 'mcq',

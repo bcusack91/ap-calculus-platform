@@ -7,30 +7,39 @@ export const psychLanguagePart1Data = {
       content: `
 # 🧠 Language & Intelligence
 
-**Part 1 of 7 — Language Structure & Development**
+**Part 1 of 7 — The Building Blocks of Language**
 
-Language is the crown jewel of human cognition — no other species combines sounds into an infinite number of meaningful sentences. Understanding how language is built from its smallest units to full sentences is essential for AP Psychology.
+> 🔑 **Key Concept:** Language is a **shared** system of **arbitrary symbols** that is **rule-governed** and **generative**. Small units of sound combine into units of meaning, and rules for combining words let speakers produce an unlimited number of new sentences.
+
+### What makes something a language?
+
+| Feature | What it means | Example |
+|---------|---------------|---------|
+| **Shared** | Speakers of a language agree on what the symbols mean | Every English speaker treats "dog" as the animal |
+| **Arbitrary symbols** | The sound or sign has no natural link to its meaning | The same animal is "dog" in English and "perro" in Spanish |
+| **Rule-governed** | Grammar and syntax limit how symbols combine | "The dog barked" is English; "Barked dog the" is not |
+| **Generative** | A small set of units and rules produces endless new sentences | You can say a sentence no one has ever said before |
+
+### The units of language
 
 | Term | Definition | Example |
 |------|-----------|---------|
-| **Phoneme** | Smallest unit of sound in a language | /b/ and /p/ are different phonemes ("bat" vs. "pat") |
-| **Morpheme** | Smallest unit of meaning | "unhappiness" has 3 morphemes: un- + happy + -ness |
-| **Syntax** | Rules for arranging words into grammatical sentences | "The dog bit the man" ≠ "The man bit the dog" |
-| **Semantics** | The meaning of words and sentences | "bark" means different things for dogs vs. trees |
-| **Pragmatics** | Social rules of language use (context, tone) | Saying "Nice job!" sarcastically vs. sincerely |
+| **Phoneme** | Smallest unit of SOUND that can change meaning | /b/ and /p/ separate "bat" from "pat" |
+| **Morpheme** | Smallest unit of MEANING | "unhappiness" = un- + happy + -ness (3 morphemes) |
+| **Semantics** | The meaning of words and sentences | "Bark" means one thing for dogs and another for trees |
+| **Grammar** | The full system of rules that lets people communicate | Rules for forming past tense, plurals, and questions |
+| **Syntax** | The part of grammar that orders words into sentences | "The dog bit the man" vs. "The man bit the dog" |
 
-### 🗣️ Real-World Example
+Pragmatics, the social rules for using language in context, is excluded from the AP exam (CED 3.5.A); focus on the five units above.
 
-When you say "cats," you use 4 phonemes (/k/ /æ/ /t/ /s/) and 2 morphemes ("cat" + "s" for plural). Syntax tells you "The cats are sleeping" is grammatical, while "Cats the sleeping are" is not. Semantics gives it meaning, and pragmatics tells you when it's appropriate to say it.
-
-> **Why This Matters for the AP Exam:** The phoneme-morpheme distinction is one of the most commonly tested concepts. Remember: phonemes are about SOUND, morphemes are about MEANING. English has ~40 phonemes but hundreds of thousands of morphemes.
+> **Why This Matters for the AP Exam:** Questions often ask you to count or identify units. Phonemes are about SOUND; morphemes are about MEANING. English uses about 40 phonemes, and those few sounds build every English word.
       `
     },
     {
       id: 'langu1-s2-concept-check',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check — Units of Language** 🎯
       `,
       exercise: {
         questions: [
@@ -43,46 +52,62 @@ When you say "cats," you use 4 phonemes (/k/ /æ/ /t/ /s/) and 2 morphemes ("cat
               'Four (r + e + start + ed)'
             ],
             correctAnswer: 2,
-            explanation: 'Correct! "Restarted" has 3 morphemes: the prefix "re-" (meaning again), the root "start," and the suffix "-ed" (past tense). Morphemes are the smallest meaningful units — individual letters are not morphemes unless they carry meaning (like "s" for plural).'
+            explanation: '"Restarted" has three units of meaning: "re-" (again), the root "start," and "-ed" (past tense). Single letters are not morphemes unless they carry meaning on their own, as plural "-s" does.'
           },
           {
-            question: 'A child says "I goed to the store." This error demonstrates understanding of which language component?',
+            question: 'Changing the first sound of "cap" to make "map" changes the word\'s meaning. The sounds /k/ and /m/ are best described as different',
             options: [
-              'Phonemics — the child is mispronouncing "went"',
-              'Syntax — the child has applied a grammatical rule too broadly',
-              'Semantics — the child does not understand the meaning of "go"',
-              'Pragmatics — the child is using language in the wrong context'
+              'phonemes',
+              'morphemes',
+              'syntactic rules',
+              'semantic categories'
+            ],
+            correctAnswer: 0,
+            explanation: 'A phoneme is the smallest unit of sound that can change meaning, and swapping /k/ for /m/ turns one word into another. Neither sound carries meaning by itself, so they are not morphemes.'
+          },
+          {
+            question: 'English speakers say "tree," French speakers say "arbre," and Japanese speakers say "ki" for the same object. This pattern best shows that language symbols are',
+            options: [
+              'generative in nature',
+              'arbitrary in form',
+              'identical in grammar',
+              'based on syntax alone'
             ],
             correctAnswer: 1,
-            explanation: 'This is an example of overgeneralization (also called overregularization) — the child has learned the syntactic rule of adding "-ed" for past tense and applied it to an irregular verb. This error actually shows the child IS learning grammar rules, not that they are failing.'
+            explanation: 'Nothing about the sound "tree" resembles a tree, so each language assigns its own arbitrary symbol. Generativity concerns producing new sentences, which this example does not involve.'
           }
         ]
       }
     },
     {
-      id: 'langu1-s3-deep-dive',
+      id: 'langu1-s3-worked-examples',
       type: 'text' as const,
       content: `
-### 📚 Deep Dive: Language Development Milestones
+### 📚 Worked Examples: Counting and Comparing Units
 
-Babies are born with remarkable linguistic abilities. They can distinguish phonemes from ALL languages — a skill they lose by about 10 months as their brains "tune in" to their native language.
+**Example 1 — Phonemes are sounds, not letters.**
+- "ship" has 4 letters but 3 phonemes: /sh/ /i/ /p/.
+- "cats" has 4 phonemes (/k/ /a/ /t/ /s/) and 2 morphemes ("cat" + plural "-s").
+- "box" and "rocks" end with the same sounds, /ks/. But "box" is 1 morpheme, while "rocks" is 2 (rock + plural "-s"). The same sound can be a morpheme in one word and not in another.
 
-| Age | Stage | Description | Example |
-|-----|-------|-------------|---------|
-| 0–4 months | **Cooing** | Vowel-like sounds | "oooh," "aaah" |
-| 4–6 months | **Babbling** | Consonant-vowel combos; all languages sound the same | "bababa," "mamama" |
-| 10 months | **Babbling narrows** | Sounds match native language | English babbling vs. Mandarin babbling differ |
-| 12 months | **One-word (holophrastic)** | Single words convey whole ideas | "Milk!" = "I want milk" |
-| 18–24 months | **Two-word (telegraphic)** | Noun-verb combos, no grammar words | "Daddy go," "Want cookie" |
-| 24–36 months | **Sentences** | Rapid grammar acquisition, overgeneralization | "I goed to store" |
+**Example 2 — Morphemes can be words or word parts.**
+| Word | Morphemes | Count |
+|------|-----------|-------|
+| dog | dog | 1 |
+| dogs | dog + -s | 2 |
+| unkind | un- + kind | 2 |
+| replayed | re- + play + -ed | 3 |
+| unbelievable | un- + believe + -able | 3 |
 
-### Key Concepts in Language Development
+**Example 3 — Syntax and semantics are different.**
+- "Colorless green ideas sleep furiously" follows English syntax (adjective, adjective, noun, verb, adverb) but makes no sense. It has correct **syntax** and broken **semantics**.
+- "The dog bit the man" and "The man bit the dog" use the same words. Only the **syntax** (word order) differs, and that changes the meaning.
 
-**Overregularization (overgeneralization):** Children apply grammatical rules too broadly — saying "foots" instead of "feet" or "goed" instead of "went." Ironically, this proves they ARE learning rules, not just imitating.
+**Example 4 — Generativity.**
+With about 40 phonemes, thousands of morphemes, and a limited set of rules, a speaker can build sentences that have never been spoken before, such as "The purple giraffe borrowed my calculator during lunch." Rules can also repeat inside one another ("the friend of the sister of the coach..."), so there is no longest possible sentence.
 
-**Parentese (child-directed speech):** The exaggerated, high-pitched speech adults use with babies. It is NOT "baby talk" — parentese uses real words with simplified grammar and exaggerated intonation, helping infants identify word boundaries.
-
-**Receptive vs. Expressive language:** Babies understand (receive) far more words than they can produce (express). A 12-month-old may say 2–3 words but understand 50+.
+**Example 5 — Sign languages are full languages.**
+Sign languages such as American Sign Language have all of the same features. Handshape, location, and movement combine like phonemes, signs carry meaning like morphemes, and a grammar orders signs into sentences. Language does not require sound.
       `
     },
     {
@@ -92,49 +117,63 @@ Babies are born with remarkable linguistic abilities. They can distinguish phone
 **Recall Practice** ✍️
       `,
       exercise: {
-        inputs: [
-          { label: 'What are the smallest units of SOUND in a language called?', answer: 'phonemes' },
-          { label: 'What is it called when a child says "goed" instead of "went"?', answer: 'overregularization' },
-          { label: 'At what age does babbling typically begin?', answer: '4 months' }
+        questions: [
+          {
+            question: 'What is the smallest unit of sound that can change the meaning of a word?',
+            answer: 'phoneme',
+            acceptableAnswers: ['phonemes', 'a phoneme'],
+            explanation: 'Phonemes are units of sound, such as the /b/ that separates "bat" from "pat."'
+          },
+          {
+            question: 'How many morphemes are in the word "replayed"? (Enter a number.)',
+            answer: '3',
+            acceptableAnswers: ['three'],
+            explanation: '"Replayed" = re- (again) + play + -ed (past tense), so it has 3 morphemes.'
+          },
+          {
+            question: 'What one-word term describes the fact that a limited set of units and rules can produce an unlimited number of new sentences?',
+            answer: 'generative',
+            acceptableAnswers: ['generativity', 'generative language'],
+            explanation: 'Language is generative: finite units and rules yield an infinite number of possible sentences.'
+          }
         ]
       }
     },
     {
-      id: 'langu1-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Language Stage** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          { label: '4–6 months old, produces "bababa"', options: ['Cooing', 'Babbling', 'Holophrastic stage', 'Telegraphic speech'] },
-          { label: '"Want cookie" — two-word combo, no grammar words', options: ['Babbling', 'Holophrastic stage', 'Telegraphic speech', 'Full sentences'] },
-          { label: '"un-" + "happy" + "-ness" = 3 units of meaning', options: ['3 phonemes', '3 morphemes', '3 syntax rules', '3 pragmatic rules'] }
-        ],
-        correctAnswers: ['Babbling', 'Telegraphic speech', '3 morphemes'],
-        hint1: 'Babbling involves consonant-vowel combinations like "bababa."',
-        hint2: 'Telegraphic speech uses only essential content words, like a telegram.',
-        hint3: 'Morphemes are the smallest units of MEANING, not sound.',
-        explanation: 'Babbling (4–6 months) features consonant-vowel combos. Telegraphic speech (18–24 months) uses noun-verb pairs without grammar words. Morphemes are meaningful units — "unhappiness" has three: un- + happy + -ness.'
-      }
-    },
-    {
-      id: 'langu1-s6-strategy',
+      id: 'langu1-s5-misconceptions',
       type: 'text' as const,
       content: `
-### 🎯 AP Exam Strategy: Language Traps
+### 🎯 AP Exam Strategy: Language Structure Traps
 
 | Common Mistake | Why It's Wrong | Correct Understanding |
 |----------------|---------------|----------------------|
-| Confusing phoneme and morpheme | They sound similar but measure different things | Phoneme = SOUND; morpheme = MEANING |
-| Thinking babbling is random | It narrows to native language by 10 months | Even deaf babies babble (with hands if exposed to sign) |
-| Overgeneralization = language failure | It actually shows rule learning | "Goed" proves the child learned the past-tense rule |
-| Parentese = baby talk | Baby talk uses made-up words | Parentese uses real words with exaggerated intonation |
+| Counting letters as phonemes | Spelling and sound do not match one-to-one | "ship" has 4 letters but 3 phonemes |
+| Calling every word part a morpheme | A part is a morpheme only if it carries meaning | The "s" in "bus" is not a morpheme; the "s" in "buses" is part of the plural |
+| Treating syntax and semantics as the same | A sentence can be grammatical but meaningless | "Colorless green ideas sleep furiously" |
+| Thinking words resemble their meanings | Symbols are arbitrary and shared by agreement | "Dog," "perro," and "chien" name the same animal |
+| Thinking sign languages are just gestures | They have phoneme-like units, meaning units, and grammar | ASL is a complete language |
 
-**Memory Trick:** **P**honeme = **P**ronunciation (sound). **M**orpheme = **M**eaning.
-
-> **AP Tip:** If a question describes a child making grammatical errors with regular rules applied to irregular forms (like "mouses" for "mice"), the answer is overgeneralization — not a language delay or disorder.
+**Memory Trick:** **P**honeme = **P**ronunciation (sound). **M**orpheme = **M**eaning. **S**yntax = **S**equence (word order). Se**man**tics = **mean**ing.
       `
+    },
+    {
+      id: 'langu1-s6-dropdown',
+      type: 'dropdown-select' as const,
+      content: `
+**Identify the Unit or Feature** 🔍
+      `,
+      exercise: {
+        dropdowns: [
+          { label: '"un-" + "happy" + "-ness" are three _____', options: ['phonemes', 'morphemes', 'syntax rules', 'semantic errors'] },
+          { label: '"The cat chased the mouse" and "The mouse chased the cat" differ only in _____', options: ['phonemes', 'morphemes', 'syntax', 'arbitrariness'] },
+          { label: 'A teen invents a sentence no one has ever said, and listeners understand it. This shows language is _____', options: ['arbitrary', 'generative', 'phonemic', 'semantic'] }
+        ],
+        correctAnswers: ['morphemes', 'syntax', 'generative'],
+        hint1: 'Morphemes are the smallest units of MEANING, not sound.',
+        hint2: 'The words are identical; only their ORDER changed.',
+        hint3: 'Finite rules, infinite new sentences.',
+        explanation: '"Unhappiness" has three morphemes. Swapping who chased whom changes only word order, which is syntax. Producing and understanding brand-new sentences shows that language is generative.'
+      }
     },
     {
       id: 'langu1-s7-applied',
@@ -145,29 +184,36 @@ Babies are born with remarkable linguistic abilities. They can distinguish phone
       exercise: {
         questions: [
           {
-            question: 'A researcher studies infants from different countries and finds that by 10 months, babies can no longer distinguish phonemes that are not used in their native language. This finding best supports which conclusion?',
+            question: 'A teacher writes "The silent pencil argued with a cloud" on the board. Students agree the sentence is correctly built but impossible to picture. The sentence follows the rules of',
             options: [
-              'Caregivers\' reinforcement teaches infants which sounds matter',
-              'The brain prunes unused neural connections for non-native sounds',
-              'Babies cannot hear foreign language sounds after 10 months',
-              'Morpheme recognition develops before phoneme recognition'
+              'semantics but violates syntax',
+              'syntax but violates semantics',
+              'both syntax and semantics',
+              'neither syntax nor semantics'
             ],
             correctAnswer: 1,
-            explanation: 'This illustrates neural pruning — the "use it or lose it" principle. Babies are born able to distinguish all human phonemes (~800), but the brain prunes connections for sounds not heard regularly in the environment. They can still HEAR the sounds, but can no longer easily distinguish between them.'
+            explanation: 'The words are in a legal English order, so the syntax is fine. The meaning does not make sense, so the semantics is broken.'
           },
           {
-            question: 'Which sequence correctly orders language development from earliest to latest?',
+            question: 'A researcher argues that American Sign Language is a true language rather than a set of gestures. Which observation would best support her claim?',
             options: [
-              'Babbling → cooing → one-word → telegraphic',
-              'Cooing → babbling → telegraphic → one-word',
-              'Cooing → babbling → one-word → telegraphic',
-              'One-word → babbling → cooing → telegraphic'
+              'Signers use their hands and faces rather than their voices to communicate ideas',
+              'Signers produce new sentences by combining signs according to grammatical rules',
+              'Signers often point at nearby objects in order to show other people what they want',
+              'Signers in different countries use different signs to stand for the same objects'
             ],
-            correctAnswer: 2,
-            explanation: 'The correct sequence is: cooing (0–4 months, vowel sounds) → babbling (4–6 months, consonant-vowel combos) → one-word/holophrastic stage (12 months) → telegraphic/two-word stage (18–24 months). This sequence is universal across languages and cultures.'
+            correctAnswer: 1,
+            explanation: 'Combining units by rules to create new sentences shows that ASL is rule-governed and generative, the defining features of language. Pointing and using the hands could describe gestures that are not a language.'
           }
         ]
       }
+    },
+    {
+      id: 'langu1-s8-connection',
+      type: 'text' as const,
+      content: `
+> 🔑 **AP Connection:** These units also explain children's speech errors. A child who says "foots" has learned the plural morpheme "-s" and applied it too widely. Part 2 follows how children move from cooing to full sentences and why those errors are a sign of progress.
+      `
     }
   ]
 }

@@ -17,7 +17,7 @@ This final part integrates everything from the unit into one comprehensive revie
 |---------|---------------|----------------|----------------|------------------|
 | Classical conditioning | Pavlov | Dog salivation (1890s) | CS-UCS pairing → CR | Confusing with operant (involuntary vs voluntary) |
 | Operant conditioning | Skinner | Skinner box (1930s) | Consequences shape behavior | Mixing up positive/negative (add/remove, not good/bad) |
-| Observational learning | Bandura | Bobo doll (1961) | Modeling via ARRM | Forgetting learning ≠ performance |
+| Observational learning | Bandura | Bobo doll (1961) | Modeling; vicarious reinforcement and punishment | Forgetting learning ≠ performance |
 | Latent learning | Tolman | Rat maze (1930) | Cognitive maps, hidden learning | Assuming no behavior = no learning |
 | Insight learning | Köhler | Sultan the chimp (1925) | Sudden "aha!" restructuring | Confusing with trial-and-error |
 | Learned helplessness | Seligman | Dog shock (1967) | Perceived lack of control | Not connecting to depression |
@@ -31,7 +31,7 @@ This final part integrates everything from the unit into one comprehensive revie
 |-----|------|-------------|-----------|
 | **Behaviorist** (1920s-1960s) | Only observable behavior matters | Watson, Skinner | Learning = stimulus-response associations |
 | **Transitional** (1930s-1960s) | Cracks in pure behaviorism | Tolman, Köhler | Internal mental processes affect learning |
-| **Cognitive revolution** (1960s+) | Mind matters again | Bandura, Chomsky | Learning involves mental representations, expectations, cognition |
+| **Cognitive revolution** (1960s+) | Mind matters again | Bandura | Learning involves mental representations, expectations, cognition |
 
 > **Key insight**: Tolman's cognitive maps and Köhler's insight learning PREDATED the cognitive revolution but were largely ignored during the height of behaviorism. Bandura's social learning theory helped bridge behaviorism and cognitive psychology.
       `
@@ -83,7 +83,6 @@ Learning theory connects to MANY other AP Psychology units:
 | **Therapy** | Systematic desensitization (counterconditioning) → Treatment |
 | **Token economies** | Operant conditioning → Treatment & Abnormal |
 | **Media violence** | Observational learning → Social Psychology |
-| **Language acquisition** | Skinner vs Chomsky → Cognition & Language |
 | **Depression** | Learned helplessness → Abnormal Psychology |
 | **Prejudice** | Observational learning of stereotypes → Social Psychology |
 | **Parenting** | Reinforcement schedules, modeling → Developmental |
@@ -91,30 +90,22 @@ Learning theory connects to MANY other AP Psychology units:
 | **Memory** | Encoding as learning → Cognition |
 | **Motivation** | Reinforcement and drives → Motivation & Emotion |
 
-### FRQ Template for Learning Questions
+### Free-Response Practice: Learning Concepts on the AAQ and EBQ
 
-When an FRQ asks you to "explain how [concept] relates to the scenario":
+The free-response section has two questions: the **Article Analysis Question (AAQ, 7 points, 6 parts)** and the **Evidence-Based Question (EBQ, 7 points, 3 parts)**. Learning studies are a natural fit for both.
 
-**Step 1: IDENTIFY** the type of learning (use the Big Three comparison + special cases)
+**Practice study summary (hypothetical):** Researchers recruited 80 children aged 5–7 from two after-school programs. With parental consent and the children's assent, they randomly assigned each child to watch a 3-minute video of a same-age child either sharing stickers and being praised, or keeping the stickers. Sharing was operationally defined as the number of stickers (0–10) each child later gave to an unseen classmate. Children who watched the praised model shared a mean of 5.2 stickers; the comparison group shared a mean of 2.9. All children kept their own stickers and were debriefed with their parents.
 
-**Step 2: DEFINE** the concept using textbook language
-- "Classical conditioning is a form of learning in which…"
-- "Observational learning occurs when an organism…"
+| AAQ task | What a strong answer says |
+|----------|---------------------------|
+| Identify the research method | An experiment: the video was manipulated and children were randomly assigned |
+| Operational definition | Sharing = the number of stickers (0–10) given to the unseen classmate |
+| What the statistic shows | Children who saw the praised model shared more on average (5.2 vs. 2.9) |
+| Ethical guideline | Informed consent from parents plus the children's assent before participation |
+| Generalizability | Limited: two after-school programs and ages 5–7 may not represent other children |
+| Support or refute | The higher mean for the praised-model group supports the hypothesis that vicarious reinforcement increases sharing |
 
-**Step 3: APPLY** directly to the scenario's specific details
-- Name the specific stimulus/response/model from the scenario
-- Use "In this case…" or "For example, [character name]…"
-
-**Step 4: EXPLAIN** the mechanism
-- For classical: identify CS, UCS, CR, UCR
-- For operant: identify the behavior, consequence, and type (positive/negative reinforcement/punishment)
-- For observational: identify the model, observer, and which ARRM process is relevant
-
-### Sample FRQ Application
-
-*"Marcus watches his older brother successfully negotiate a raise at work. Marcus then uses the same strategy when asking his teacher for extra credit."*
-
-**Model Answer:** Marcus demonstrates **observational learning** (Bandura). His older brother serves as the **model**, and the successful raise is **vicarious reinforcement** — Marcus observed the positive outcome without experiencing it directly. Marcus paid **attention** to his brother's strategy, **retained** the negotiation approach, had the **ability to reproduce** it (motor reproduction), and was **motivated** by the vicarious success. This illustrates Bandura's principle that **learning can occur without direct reinforcement** — the observer need only watch and remember.
+**EBQ use:** a claim that "schools can increase kindness by showcasing peer role models" could be explained with **vicarious reinforcement** for one source (students who saw peers praised for helping) and with **model similarity** for a different source (students copied same-age models more than adult ones). Each explanation names the concept AND ties it to that source's specific evidence.
       `
     },
     {
@@ -125,7 +116,7 @@ When an FRQ asks you to "explain how [concept] relates to the scenario":
       `,
       exercise: {
         inputs: [
-          { label: 'Bandura\'s four modeling processes: Attention, Retention, Reproduction, and ___', answer: 'Motivation' },
+          { label: 'Seeing a model rewarded makes an observer more likely to imitate; this is called vicarious ___', answer: 'reinforcement' },
           { label: 'Garcia\'s research demonstrated that organisms are biologically ___ to form certain associations', answer: 'prepared' },
           { label: 'Bandura\'s model where behavior, person, and environment all influence each other is called reciprocal ___', answer: 'determinism' }
         ]
@@ -156,14 +147,14 @@ When an FRQ asks you to "explain how [concept] relates to the scenario":
       content: `
 ### 🎯 High-Frequency AP Topics in This Unit
 
-**Most likely to appear on the AP exam** (based on frequency analysis):
+**Core CED learning content to master:**
 
 1. **Classical vs. Operant conditioning** — Know the differences cold
 2. **Bandura's Bobo doll study** — Procedure, results, and implications
 3. **Reinforcement schedules** — Especially ratio vs. interval, fixed vs. variable
 4. **Garcia's taste aversion** — How it challenges classical conditioning assumptions
 5. **Learned helplessness** — Connection to depression
-6. **Observational learning processes** — ARRM (Attention, Retention, Reproduction, Motivation)
+6. **Vicarious conditioning and model similarity** — consequences to the model change the observer; similar models are copied more
 7. **Biological preparedness** — Why some phobias are more common than others
 
 ### Common Misconceptions (Likely Wrong Answer Choices)
@@ -177,7 +168,7 @@ When an FRQ asks you to "explain how [concept] relates to the scenario":
 | Classical conditioning only works with food | Any involuntary response can be conditioned (fear, arousal, nausea, etc.) |
 | Insight learning is just fast trial-and-error | Insight involves cognitive restructuring — a qualitatively different process |
 
-> **Final AP Tip:** The learning unit is one of the most heavily tested on the AP exam. Expect 8-12 multiple-choice questions and a high probability of an FRQ involving learning concepts. When in doubt, identify the type of learning FIRST, then explain the mechanism.
+> **Final AP Tip:** Learning is part of Unit 3 (Development and Learning), which makes up 15–25% of the multiple-choice section, and learning studies are common material for the AAQ. When in doubt, identify the type of learning FIRST, then explain the mechanism.
       `
     },
     {
