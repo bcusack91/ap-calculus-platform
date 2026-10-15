@@ -120,7 +120,7 @@ PROCEDURE findMax(list)
             max ← item
         }
     }
-    RETURN max
+    RETURN(max)
 }
 \`\`\`
 
@@ -136,7 +136,7 @@ PROCEDURE getPositives(list)
             APPEND(result, item)
         }
     }
-    RETURN result
+    RETURN(result)
 }
 \`\`\`
 
@@ -220,7 +220,7 @@ list[j] ← temp
       exercise: {
         questions: [
           {
-            question: 'list ← [3, 1, 4, 1, 5]\nWhat does this procedure return?\nPROCEDURE mystery(list)\n{\n    count ← 0\n    FOR EACH item IN list\n    {\n        IF (item > 2)\n        { count ← count + 1 }\n    }\n    RETURN count\n}',
+            question: 'list ← [3, 1, 4, 1, 5]\nWhat does this procedure return?\nPROCEDURE mystery(list)\n{\n    count ← 0\n    FOR EACH item IN list\n    {\n        IF (item > 2)\n        { count ← count + 1 }\n    }\n    RETURN(count)\n}',
             options: [
               '2',
               '3',

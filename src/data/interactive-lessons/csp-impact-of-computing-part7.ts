@@ -25,15 +25,15 @@ The framings most likely to appear on the AP exam.
       exercise: {
         questions: [
           {
-            question: "Strong impact-of-computing analysis usually requires ___",
+            question: "On an AP impact-of-computing question, the best answer choice usually ___",
             options: [
-              "identifying only one specific beneficial effect of the technology under analysis without naming any specific affected party or population.",
-              "identifying only one specific harmful effect of the technology under analysis without naming any specific affected party or population.",
-              "identifying BOTH a beneficial AND a harmful effect of the technology under analysis, with specific affected parties named for each.",
-              "identifying neither a beneficial nor a harmful effect of the technology under analysis and offering only abstract general statements."
+              "names only one beneficial effect of the technology and no affected group.",
+              "names only one harmful effect of the technology and no affected group.",
+              "accounts for a benefit and a harm and says who is affected by each.",
+              "avoids naming any effect and offers only abstract general statements."
             ],
             correctAnswer: 2,
-            explanation: "Balanced analysis names both a beneficial and a harmful effect and identifies who is affected by each."
+            explanation: "A single effect can be viewed as both beneficial and harmful by different people, so the best choice accounts for both and identifies who is affected."
           },
           {
             question: "The phrase \"the digital divide\" describes ___",
@@ -59,29 +59,30 @@ The framings most likely to appear on the AP exam.
 |------|-----------|
 | Digital divide | Gap in meaningful access to digital tech. |
 | PII | Personally Identifiable Information. |
-| Re-identification | Linking "anonymous" data back to specific people. |
-| Algorithmic bias | Systematic skew in algorithmic outputs, often from biased data. |
-| Crowdsourcing | Many small contributors → one shared product. |
-| Open-source / Creative Commons | Licenses that grant permissions explicitly. |
-| Filter bubble | Algorithmically narrowed information exposure. |
-| Deepfake | AI-generated synthetic likeness or voice. |
-| Sunset clause | Scheduled deletion of collected data. |
+| Algorithmic bias | Systematic skew in algorithmic outputs, from biased algorithms or biased data. |
+| Crowdsourcing | Obtaining input or information from many people via the Internet. |
+| Citizen science | Research done partly by volunteers who contribute data with their own devices. |
+| Intellectual property | Material created on a computer belongs to its creator or an organization. |
+| Creative Commons / open source / open access | Legal ways to share and reuse others' work. |
+| Plagiarism | Using someone else's work without permission and presenting it as your own. |
 
 ## Common Pitfalls
 
 - "It's just a tool — neutral." Tools have consequences shaped by who builds and deploys them.
-- "Anonymous data is safe." Linkage attacks frequently re-identify.
+- "Anonymous data is safe." Combined with other data, it can often identify people.
 - "If it's legal, it's fine." Legality and ethics differ.
 - "Automation just kills jobs." It changes job mix; some new jobs are created, others disappear, distribution shifts.
 - "More data is always better." Collected data is also collected risk.
 
-## How To Write A Strong Impact Answer
+## How To Answer Impact Questions
+
+Impact of computing is tested with multiple-choice questions only.
 
 1. Identify the technology and its intended purpose.
-2. Name **at least one** beneficial effect with WHO benefits.
-3. Name **at least one** harmful effect (preferably unintended) with WHO is harmed.
-4. Describe the **mechanism** (data, algorithm, network reach).
-5. Suggest a **mitigation** if asked.
+2. Look for the beneficial effect and WHO benefits.
+3. Look for the harmful effect (often unintended) and WHO is harmed.
+4. Check the **mechanism** (data, algorithm, network reach).
+5. Eliminate extreme choices ("only good", "only bad", "no effect").
       `
     },
     {
@@ -94,15 +95,15 @@ The framings most likely to appear on the AP exam.
 
 2) PII stands for Personally _______ Information.
 
-3) A scheduled deletion of stored data is enabled by a _______ clause.
+3) Obtaining input or information from a large number of people via the Internet is called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["harm", "Identifiable", "sunset"],
+        correctAnswers: ["harm", "Identifiable", "crowdsourcing"],
         hint1: "Negative side.",
         hint2: "Identifying.",
-        hint3: "Setting beyond which data ends.",
-        explanation: "Balance harms with benefits, recognize PII, and know sunset clauses as a privacy mitigation."
+        hint3: "Wikipedia is a famous example.",
+        explanation: "Balance harms with benefits, recognize PII, and know crowdsourcing."
       }
     },
     {
@@ -141,10 +142,10 @@ The framings most likely to appear on the AP exam.
 
 - Lead with WHO benefits and WHO is harmed.
 - Distinguish intended vs. unintended consequences.
-- Recognize key vocabulary: PII, digital divide, algorithmic bias, crowdsourcing, filter bubble, deepfake.
-- For privacy: think aggregation, opt-in, sunset, transparency.
-- For algorithmic fairness: think representative data, oversight, auditability, recourse.
-- Always end with a concrete mitigation if the prompt asks "how could this be addressed?"
+- Recognize key vocabulary: PII, digital divide, algorithmic bias, crowdsourcing, citizen science, Creative Commons, open source, open access, plagiarism.
+- For privacy: think aggregation of data, consent, and how hard it is to delete information once it is online.
+- For algorithmic fairness: think representative data, oversight, and testing across groups.
+- When a question asks how a harm could be reduced, pick the choice with a concrete, targeted action.
       `
     },
     {
@@ -156,23 +157,23 @@ The framings most likely to appear on the AP exam.
       exercise: {
         questions: [
           {
-            question: "A student is asked to describe one beneficial and one harmful effect of using ML in college admissions. A strong answer would ___",
+            question: "A college uses machine learning to screen applications. Which statement best describes one beneficial and one harmful effect?",
             options: [
-              "praise how quickly automated screening handles thousands of applications and stop there.",
-              "name one positive effect such as consistency and one negative such as bias against under-represented applicants.",
-              "argue that no machine-learning system could ever meaningfully evaluate an application essay.",
-              "explain how the model is trained, without naming any effect on applicants or on colleges."
+              "It screens thousands of applications quickly, and it has no harmful effects.",
+              "It applies the same rules to everyone, but it may be biased against some groups.",
+              "It cannot evaluate applications at all, so it has no beneficial effects.",
+              "It changes how the model is trained, but it has no effect on applicants."
             ],
             correctAnswer: 1,
-            explanation: "Balanced answer with specific benefit + specific harm + named population."
+            explanation: "Consistency is a benefit; bias learned from past decisions can harm under-represented applicants."
           },
           {
-            question: "A student is asked what mitigation could reduce harm from using ML in admissions. A strong answer would mention ___",
+            question: "Which action would most directly reduce the harm of bias in a machine-learning admissions system?",
             options: [
-              "no mitigation, since machine-learning admissions systems cannot be made any fairer.",
-              "auditing the model across demographic groups and having humans review borderline cases.",
-              "training the model on more years of past admissions decisions so its biases average out.",
-              "hiding the model's criteria from applicants so that no one can game the admissions process."
+              "Doing nothing, since machine-learning systems can never be made any fairer.",
+              "Testing the model across demographic groups and having humans review close cases.",
+              "Training the model on more years of the same past decisions so the bias averages out.",
+              "Hiding the model's criteria from applicants so that no one can game the process."
             ],
             correctAnswer: 1,
             explanation: "Concrete mitigations include auditing outcomes across demographic groups, human review of borderline cases, and transparency with applicants about how decisions are made."

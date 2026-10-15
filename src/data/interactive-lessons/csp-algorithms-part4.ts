@@ -17,7 +17,7 @@ Algorithms don’t live in isolation. An efficient sort matters because of **dat
 
 | Connection | Why it matters |
 |-----------|----------------|
-| **Algorithms ↔ Data** | Choice of data structure (list vs. set) changes the algorithm’s running time. |
+| **Algorithms ↔ Data** | Whether a list is sorted decides whether binary search can be used. |
 | **Algorithms ↔ Abstraction** | Procedures hide algorithmic detail behind a name. |
 | **Algorithms ↔ Computing Systems** | Faster CPUs help, but a bad algorithm wastes any hardware budget. |
 | **Algorithms ↔ Impact** | A biased ranking algorithm can amplify inequity at scale. |
@@ -40,13 +40,13 @@ Algorithms don’t live in isolation. An efficient sort matters because of **dat
               "Splitting one procedure into two procedures that do the same work."
             ],
             correctAnswer: 0,
-            explanation: "Asymptotic improvement ($n^{2}$ → n) dominates micro-optimizations."
+            explanation: "Changing how fast the number of steps grows (from about $n^{2}$ to about n) matters far more than renaming or comments, which do not change the steps at all."
           },
           {
-            question: "A search algorithm runs over a sorted list. Which fact most clearly enables a faster (logarithmic) search?",
+            question: "A search algorithm runs over a sorted list. Which fact most clearly enables a much faster search?",
             options: [
               "The list is short, so a search checks few elements.",
-              "The list is in order, so binary search can be used.",
+              "The list is in order, so binary search works.",
               "The list holds only integers, so comparisons are fast.",
               "The list has no duplicates, so each value is unique."
             ],
@@ -129,7 +129,7 @@ A recommendation algorithm that always returns the most-clicked content reinforc
         hint1: "Worst case checks every element.",
         hint2: "Each step halves the remaining range.",
         hint3: "$\\log_{2}(2^{20})$ = 20.",
-        explanation: "Linear is O(n); binary is O(log n). $2^{20}$ ≈ 1.05 million, so $\\log_{2}(1M)$ ≈ 20."
+        explanation: "Linear search may check all n items; binary search checks about $\\log_{2}(n)$. $2^{20}$ ≈ 1.05 million, so $\\log_{2}(1M)$ ≈ 20."
       }
     },
     {

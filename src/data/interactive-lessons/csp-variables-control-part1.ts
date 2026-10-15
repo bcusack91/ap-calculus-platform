@@ -223,7 +223,7 @@ REPEAT UNTIL (x > 5)
               '0'
             ],
             correctAnswer: 1,
-            explanation: 'count starts at 0. Loop: 0 < 3 (run, count=1), 1 < 3 (run, count=2), 2 < 3 (run, count=3), 3 >= 3 (stop). Display: 3.'
+            explanation: 'count starts at 0. Loop: 0 < 3 (run, count=1), 1 < 3 (run, count=2), 2 < 3 (run, count=3), 3 ≥ 3 (stop). Display: 3.'
           }
         ]
       }

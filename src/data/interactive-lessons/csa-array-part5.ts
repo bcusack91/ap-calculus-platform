@@ -262,9 +262,9 @@ Trace of the first pass:
 - Every piece is still a **String**. \`parts[1] + 1\` is \`"111"\`, because + joins Strings; \`Integer.parseInt(parts[1]) + 1\` is 12. Parsing a String that is not a whole number, such as \`Integer.parseInt("3.5")\`, throws a NumberFormatException.
 - The result is three **parallel arrays**: index i in names, grades and gpas describes the same student.
 
-### Mixing nextInt and nextLine
+### One Reading Style per File
 
-\`nextInt\` reads the number but leaves the line break after it. If a file starts with a count line, \`in.nextInt()\` followed by \`in.nextLine()\` returns \`""\`, the empty rest of the count line, not the first record. Either call \`nextLine()\` once more to move past it, or read the count with \`Integer.parseInt(in.nextLine())\`.
+Read a file either token by token (\`next\`, \`nextInt\`, \`nextDouble\`) or line by line (\`nextLine\`, then \`split\`). If a line-based file starts with a count, read that line with \`Integer.parseInt(in.nextLine())\` so every read uses \`nextLine\`. Code that mixes \`nextLine\` with the other Scanner methods on the same file is not on the AP exam.
 
 > 🎯 **AP Connection:** File, the Scanner methods, split, Integer.parseInt and Double.parseDouble are all on the Java Quick Reference. Questions focus on what each call returns: a token or a line, a String or a number.
       `

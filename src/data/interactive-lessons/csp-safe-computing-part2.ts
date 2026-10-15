@@ -20,7 +20,7 @@ CSP's "safe computing" topic focuses on what individuals and organizations DO to
 | **Strong unique passwords** | Limits damage of any one breach. |
 | **Multi-factor authentication** | Makes a stolen password insufficient. |
 | **Software updates** | Closes known vulnerabilities. |
-| **Backups** | Recover from ransomware / mistakes. |
+| **Backups** | Recover from lost, damaged, or infected files. |
 | **Awareness of phishing** | Block attacks that exploit users, not code. |
       `
     },
@@ -41,7 +41,7 @@ CSP's "safe computing" topic focuses on what individuals and organizations DO to
               "the user's other accounts lock automatically once the password appears in a breach."
             ],
             correctAnswer: 1,
-            explanation: "Password reuse + breach = credential stuffing."
+            explanation: "A leaked password that was reused lets attackers into every account that shares it."
           },
           {
             question: "A user delays installing OS updates for 6 months. The biggest practical risk is ___",
@@ -65,14 +65,14 @@ CSP's "safe computing" topic focuses on what individuals and organizations DO to
 
 | Anti-pattern | Better practice |
 |-------------|----------------|
-| Same password everywhere | Use a password manager + unique passwords. |
-| Short / common passwords | Long passphrases or generated random strings. |
-| Sharing passwords | Use account delegation features. |
-| Writing them on a sticky note | Encrypted vault. |
+| Same password everywhere | A unique password for each account. |
+| Short / common passwords | Long passphrases that are easy for you to remember but hard for others to guess. |
+| Passwords based on personal facts | Avoid pet names, birthdays, and other things people can learn about you. |
+| Password alone | Add multifactor authentication. |
 
 ## Phishing And Social Engineering
 
-Most modern breaches start with a person, not a zero-day. Recognize warning signs:
+**Phishing** is a technique that attempts to trick a user into providing personal information, which can then be used to access sensitive accounts such as bank accounts and email. Many attacks start with a person, not a flaw in the software. Recognize warning signs:
 
 - Urgency / threats ("Your account will be locked in 24 hours").
 - Mismatched sender / domain.
@@ -95,7 +95,7 @@ Every account is a target. Reduce risk by:
       content: `
 **Applied Recall** ✍️
 
-1) Reusing the same password across sites is risky because of the _______ stuffing attack.
+1) A password that is easy for you to remember but hard for others to guess is called a _______ password.
 
 2) A separate device or app providing a one-time code is the second _______ in MFA.
 
@@ -103,11 +103,11 @@ Every account is a target. Reduce risk by:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["credential", "factor", "phishing"],
-        hint1: "Reuse attack name.",
+        correctAnswers: ["strong", "factor", "phishing"],
+        hint1: "The opposite of weak.",
         hint2: "MFA term.",
         hint3: "Social engineering.",
-        explanation: "Credential stuffing, second factor, phishing."
+        explanation: "Strong password, second factor, phishing."
       }
     },
     {
@@ -119,8 +119,8 @@ Every account is a target. Reduce risk by:
       exercise: {
         dropdowns: [
           {
-            label: "A password manager primarily helps by ___",
-            options: ["enabling unique strong passwords for every site without memorizing them", "letting you reuse one memorable password safely across every site", "encrypting your web traffic so no one on the network can see it", "replacing two-factor authentication on every account you own"]
+            label: "Regular software updates primarily help by ___",
+            options: ["fixing errors and design flaws that attackers could exploit", "letting you reuse one memorable password safely across every site", "encrypting your web traffic so no one on the network can see it", "replacing two-factor authentication on every account you own"]
           },
           {
             label: "An email asking for an MFA code \"to verify your account\" is most likely ___",
@@ -131,11 +131,11 @@ Every account is a target. Reduce risk by:
             options: ["the data it can access if compromised", "the need for MFA on your accounts", "the number of updates it needs", "its encryption strength in transit"]
           }
         ],
-        correctAnswers: ["enabling unique strong passwords for every site without memorizing them", "phishing — never share MFA codes", "the data it can access if compromised"],
-        hint1: "Manager solves reuse.",
+        correctAnswers: ["fixing errors and design flaws that attackers could exploit", "phishing — never share MFA codes", "the data it can access if compromised"],
+        hint1: "All real-world systems have flaws.",
         hint2: "Codes are private.",
         hint3: "Least privilege.",
-        explanation: "Password managers, never-share-codes, least privilege."
+        explanation: "Updates fix exploitable flaws; never share MFA codes; reviewing permissions limits what programs can collect."
       }
     },
     {
@@ -144,7 +144,7 @@ Every account is a target. Reduce risk by:
       content: `
 ## AP Exam Strategy: Safe Computing Basics
 
-- Unique strong passwords + password manager + MFA = the modern baseline.
+- Unique strong passwords + MFA = the baseline.
 - Don't share MFA codes; legitimate services never ask.
 - Patch promptly; phishing is the most common entry point.
       `
@@ -172,7 +172,7 @@ Every account is a target. Reduce risk by:
             question: "A school encourages students to use the same password on every system \"for convenience\". The most CSP-aligned critique is ___",
             options: [
               "no critique — password reuse is a reasonable trade-off for student convenience here.",
-              "one breach would expose every system, so teach unique passwords with a manager and MFA.",
+              "one breach would expose every system, so teach unique strong passwords and MFA.",
               "longer shared passwords would fully solve the problem, since length matters more than reuse.",
               "reuse is safe as long as the school changes the shared password once every semester."
             ],

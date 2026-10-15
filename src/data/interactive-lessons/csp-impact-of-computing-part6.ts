@@ -28,12 +28,12 @@ Apply the dual-effect framework to scenarios — the kind of scenario the AP exa
             question: "A new app shows a personalized news feed. The most likely UNINTENDED harmful effect is ___",
             options: [
               "users will receive their news significantly faster than they did from non-personalized feeds.",
-              "users may end up in a filter bubble of views they already agree with.",
+              "users may end up seeing mostly views they already agree with.",
               "users will see more news sources than before, since personalized feeds draw from more outlets.",
               "the app will stop working for users who have not yet set any personal content preferences."
             ],
             correctAnswer: 1,
-            explanation: "Personalization can narrow exposure (filter bubble) — a classic unintended effect."
+            explanation: "Personalization can narrow what users see — a classic unintended effect."
           },
           {
             question: "A school district installs cameras in every hallway \"for safety\". A reasonable balanced response is ___",
@@ -53,16 +53,16 @@ Apply the dual-effect framework to scenarios — the kind of scenario the AP exa
       id: "cspic6-content",
       type: 'text' as const,
       content: `
-## Workshop Template
+## Workshop Checklist
 
-For any scenario, write four bullet points:
+Impact is tested with multiple-choice questions only. Before you choose an answer, sort the scenario's effects into four boxes:
 
 1. **Beneficial intended:** what the system is designed to do well.
 2. **Harmful intended (if any):** ways the design itself causes harm (e.g., addictive design).
 3. **Unintended beneficial:** unexpected helpful uses.
 4. **Unintended harmful:** unexpected harm — the most exam-relevant.
 
-Always name **affected populations** and the **mechanism** of impact (data, algorithm, network reach).
+Then pick the choice that matches the right box and names the **affected group** and the **mechanism** (data, algorithm, network reach).
 
 ## Worked Scenario: Smart Doorbell
 
@@ -80,9 +80,9 @@ Always name **affected populations** and the **mechanism** of impact (data, algo
 |------|------|
 | Beneficial intended | Identify outbreak hotspots; allocate resources. |
 | Unintended beneficial | Data informs urban planning beyond health. |
-| Unintended harmful (privacy) | Location data could re-identify individuals. |
+| Unintended harmful (privacy) | Location data could be combined with other data to identify individuals. |
 | Unintended harmful (equity) | People without smartphones are invisible. |
-| Mitigations | Aggregate data, opt-in, sunset clauses, audits. |
+| Mitigations | Publish only group totals, ask permission first, delete data that is no longer needed. |
       `
     },
     {
@@ -95,15 +95,15 @@ Always name **affected populations** and the **mechanism** of impact (data, algo
 
 2) When a system's data collection identifies individuals despite "anonymization", this is a _______ concern.
 
-3) Naming the specific _______ population affected strengthens an impact answer.
+3) A single effect of a computing innovation can be viewed as both beneficial and _______ by different people.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["benefits", "privacy", "affected"],
+        correctAnswers: ["benefits", "privacy", "harmful"],
         hint1: "Positive side.",
         hint2: "Anonymity isn't guaranteed.",
-        hint3: "Be specific about WHO.",
-        explanation: "Balanced analysis, privacy as a key lens, and naming affected populations are the basics of strong impact analysis."
+        hint3: "The opposite of beneficial.",
+        explanation: "Balanced analysis, privacy as a key lens, and the fact that one effect can help some people and hurt others are the basics of impact questions."
       }
     },
     {
@@ -115,8 +115,8 @@ Always name **affected populations** and the **mechanism** of impact (data, algo
       exercise: {
         dropdowns: [
           {
-            label: "A \"sunset clause\" on collected data means ___",
-            options: ["data is deleted after a defined period", "data is published after a defined period", "data is encrypted after a defined period", "data is archived permanently after a defined period"]
+            label: "Once information is placed online, it is ___",
+            options: ["difficult to delete", "deleted after a year", "visible only to its author", "impossible to copy"]
           },
           {
             label: "Aggregating data before publishing protects privacy by ___",
@@ -127,11 +127,11 @@ Always name **affected populations** and the **mechanism** of impact (data, algo
             options: ["opt-in consent", "mandatory inclusion", "auto-publication", "no notice at all"]
           }
         ],
-        correctAnswers: ["data is deleted after a defined period", "removing individual-level identifiability", "opt-in consent"],
-        hint1: "Sunset = end-of-life.",
+        correctAnswers: ["difficult to delete", "removing individual-level identifiability", "opt-in consent"],
+        hint1: "Copies can be forwarded and saved.",
         hint2: "Aggregate ≠ individual.",
         hint3: "Opt-in respects autonomy.",
-        explanation: "Sunset = scheduled deletion. Aggregation hides individuals. Opt-in is the strongest consent."
+        explanation: "Online information is hard to remove. Aggregation hides individuals. Opt-in gives users control over their data."
       }
     },
     {
@@ -140,10 +140,10 @@ Always name **affected populations** and the **mechanism** of impact (data, algo
       content: `
 ## AP Exam Strategy: Impact Workshops
 
-- Use the four-bullet template (intended/unintended × beneficial/harmful).
-- Name a specific population (low-income, rural, students, elderly, etc.).
-- Name a specific mechanism (data collection, algorithmic decision, network amplification).
-- Suggest at least one mitigation (consent, aggregation, transparency, audit, sunset).
+- Sort effects into the four boxes (intended/unintended × beneficial/harmful) before reading the choices.
+- Prefer choices that name a specific population (low-income, rural, students, elderly, etc.).
+- Prefer choices that name a specific mechanism (data collection, algorithmic decision, network amplification).
+- For "how could this harm be reduced?" questions, look for consent, aggregation, transparency, or human review.
 - Avoid extreme answer choices ("only good", "only bad") — the correct choice is usually the balanced one.
       `
     },
@@ -156,23 +156,23 @@ Always name **affected populations** and the **mechanism** of impact (data, algo
       exercise: {
         questions: [
           {
-            question: "A school deploys an AI grading assistant for essays. The strongest AP-style impact analysis would ___",
+            question: "A school deploys an AI grading assistant for essays. Which statement best describes its likely impact?",
             options: [
-              "praise the AI grading assistant as a substantial time-saver for classroom teachers and stop the impact analysis there.",
-              "note efficiency benefits AND risks of bias against non-standard writing AND propose human review of borderline grades.",
-              "criticize the AI grading assistant as fundamentally unfit for any classroom essay-grading purpose without offering any concrete benefits.",
-              "argue at length that computers in any form are intrinsically incapable of grading written student essays meaningfully or accurately."
+              "It saves teachers time, and that benefit is the only effect worth considering.",
+              "It saves time but may be biased against some writing, so humans should check close calls.",
+              "It is unfit for any classroom use, since it offers teachers no benefit of any kind.",
+              "Computers can never grade written work, so the tool will have no effect on grades."
             ],
             correctAnswer: 1,
             explanation: "Balanced: benefits + biases + concrete mitigation (human review)."
           },
           {
-            question: "A city offers free public Wi-Fi in parks. A complete AP-style impact analysis would mention ___",
+            question: "A city offers free public Wi-Fi in parks. Which statement most completely describes its effects?",
             options: [
-              "only the access benefit the free Wi-Fi gives residents and visitors who come to the parks.",
-              "the access benefit for residents without home internet and the eavesdropping risk on open networks.",
-              "only the security risk that traffic on the open network can be read by other nearby users.",
-              "only the equity harm that residents who never visit the parks cannot use the free Wi-Fi."
+              "It gives residents and visitors in the parks free access, and it has no drawbacks.",
+              "It helps residents without home internet, but data sent on the open network can be intercepted.",
+              "It creates a security risk on the open network, and it gives no one any real benefit.",
+              "It only matters to residents who never visit the parks, since they cannot use it."
             ],
             correctAnswer: 1,
             explanation: "A complete answer names the equity benefit AND the security caveat."

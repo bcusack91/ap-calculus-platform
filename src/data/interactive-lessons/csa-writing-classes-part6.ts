@@ -105,7 +105,7 @@ public class Tally {
 - \`earn(int spent)\` adds one point for every full 10 units spent. **Every third call** to \`earn\` (the 3rd, 6th, 9th, ...) adds double points.
 - \`redeem(int pts)\` removes pts points and returns true if the card has at least pts points; otherwise it changes nothing and returns false.
 - \`getPoints()\` returns the current points.
-- \`toString()\` returns the owner, a colon and space, the points, and " pts".
+- \`getLabel()\` returns the owner, a colon and space, the points, and " pts".
 
 | Statement | Returns / prints | Points after |
 |---|---|---|
@@ -116,7 +116,7 @@ public class Tally {
 | \`c.redeem(12)\` | \`false\` | 11 |
 | \`c.redeem(10)\` | \`true\` | 1 |
 | \`c.earn(9);\` | | 1 |
-| \`System.out.println(c);\` | \`Kai: 1 pts\` | 1 |
+| \`System.out.println(c.getLabel());\` | \`Kai: 1 pts\` | 1 |
 
 ### Plan Before You Write
 
@@ -162,7 +162,7 @@ public class RewardCard {
         return points;
     }
 
-    public String toString() {
+    public String getLabel() {
         return owner + ": " + points + " pts";
     }
 }
@@ -176,7 +176,7 @@ public class RewardCard {
 | Constructor | assigns every field; replaces a negative start with 0 |
 | earn | increments the counter on every call, uses int division, doubles on calls divisible by 3 |
 | redeem | tests before changing, subtracts only on success, returns the correct boolean on both paths |
-| getPoints / toString | return (not print) the required values in the required format |
+| getPoints / getLabel | return (not print) the required values in the required format |
       `
     },
     {
@@ -249,7 +249,7 @@ Start each question from a new card: \`RewardCard d = new RewardCard("Mo", 20);\
 | a method header that changes the return type or parameter types | it no longer matches the calls in the table |
 | printing inside a method that should return | the caller receives nothing |
 | changing state before checking a condition (redeem subtracts, then tests) | a failed call still changes the object |
-| \`toString\` text that differs from the example by a space or colon | the String must match exactly |
+| \`getLabel\` text that differs from the example by a space or colon | the String must match exactly |
 
 > 🎯 **AP Connection:** After writing the class, run the example table through it line by line, the way the worked examples in this lesson do. Most lost points show up as a single row whose value does not match.
       `

@@ -13,14 +13,17 @@ export const cspInternetProtocolsPart2Data = {
 
 ## How Information Travels The Internet
 
-Two devices talk by following a stack of **protocols** — agreed rules at each layer. Each layer hides the layer below it.
+1. Information is passed through the Internet as a **data stream**.
+2. The stream is split into **chunks of data**, and each chunk is wrapped in a **packet**.
+3. Each packet carries **metadata** used to route it from origin to destination and to reassemble the data.
+4. **Routing** is dynamic: each packet's path is found as it travels, not fixed in advance.
+5. Packets may arrive **in order, out of order, or not at all**, so the receiver uses the metadata (and TCP) to rebuild the original data.
 
-| Layer | Job | Example protocol |
-|-------|-----|------------------|
-| **Application** | What the data MEANS to the app. | HTTP, SMTP, DNS |
-| **Transport** | Reliable (or fast-but-lossy) delivery between two endpoints. | TCP, UDP |
-| **Internet** | Routing packets across networks; addressing. | IP |
-| **Link** | Physical signaling on a single hop (Wi-Fi, Ethernet). | 802.11, Ethernet |
+| Step | Who does it |
+|------|-------------|
+| Split data into packets | The sending device |
+| Find a path for each packet | Routers along the way |
+| Put packets back in order, ask for missing ones | TCP on the receiving device |
       `
     },
     {
@@ -32,15 +35,15 @@ Two devices talk by following a stack of **protocols** — agreed rules at each 
       exercise: {
         questions: [
           {
-            question: "When you type a URL in a browser, the very first step usually involves which protocol?",
+            question: "Which information does a packet carry in addition to its chunk of data?",
             options: [
-              "SMTP",
-              "DNS",
-              "FTP",
-              "SSH"
+              "metadata",
+              "a key",
+              "a bitmap",
+              "a protocol"
             ],
-            correctAnswer: 1,
-            explanation: "DNS resolves the human-readable name to an IP address before the browser can connect."
+            correctAnswer: 0,
+            explanation: "Packets contain a chunk of data plus metadata used for routing and for reassembling the data."
           },
           {
             question: "Data that crosses the Internet is broken into ___",
@@ -51,7 +54,7 @@ Two devices talk by following a stack of **protocols** — agreed rules at each 
               "channels"
             ],
             correctAnswer: 2,
-            explanation: "IP networks are packet-switched; everything is divided into discrete packets."
+            explanation: "Data streams are split into chunks, and each chunk is encapsulated in a packet."
           }
         ]
       }
@@ -60,27 +63,21 @@ Two devices talk by following a stack of **protocols** — agreed rules at each 
       id: "cspip2-content",
       type: 'text' as const,
       content: `
-## A Single Web Request, Layer By Layer
+## Worked Example: Packets Out of Order
 
-You click a link to **example.com/page**:
+A message is split into five packets, numbered 1 to 5 in their metadata. They arrive in this order: **2, 1, 5, 3**. Packet 4 never arrives.
 
-1. **DNS** (application layer): browser asks a DNS server, "What's the IP for example.com?" → gets back, e.g., 93.184.216.34.
-2. **TCP** (transport layer): browser opens a reliable connection to 93.184.216.34 on port 80 (or 443 for HTTPS).
-3. **HTTP** (application layer): browser sends "GET /page HTTP/1.1".
-4. **IP + link** layers: each TCP segment is wrapped in an IP packet and sent hop-by-hop across routers.
-5. Server replies with the page; browser reassembles packets in order; renders HTML.
+- The receiver uses the numbers in the metadata to place packets 1, 2, 3, and 5.
+- With **TCP**, the receiver notices that packet 4 is missing and asks for it to be sent again, then rebuilds the full message in order.
+- With **UDP**, there is no guarantee: the missing data is simply lost, and the program must cope (a video call might skip a frame).
 
-## Why Layered Protocols?
+## Why Open Protocols?
 
-- **Independence:** the link layer can change (Wi-Fi → 5G) without breaking the higher layers.
-- **Interoperability:** any device that speaks the standard layers can join.
-- **Scalability:** changes at one layer don't cascade.
+- **Anyone can join**: because the protocols are open (nonproprietary), any company or person can build a device that connects to the Internet.
+- **Access** depends on connecting a device to an Internet-connected device.
+- **Scalability**: the Internet was designed so it can grow to meet new demands, from a few thousand devices to billions.
 
-This is **abstraction at scale** — the central design idea of the Internet.
-
-## Packets, Routers, And Best-Effort
-
-A router's job is simple: read the destination IP in each packet's header and forward it toward the next hop. There's no guaranteed path; consecutive packets might take different routes. The Internet provides **best-effort** delivery — TCP layers reliability on top.
+This is **abstraction at scale**: a person sending a message does not need to know how it is split up, which path each packet takes, or how it is put back together.
       `
     },
     {
@@ -89,19 +86,19 @@ A router's job is simple: read the destination IP in each packet's header and fo
       content: `
 **Applied Recall** ✍️
 
-1) A set of agreed rules for how computers communicate is called a _______.
+1) A set of agreed-upon rules for how computers communicate is called a _______.
 
-2) The system that translates domain names like example.com into IP addresses is called _______.
+2) The data that a packet carries for routing and reassembly is called _______.
 
 3) The basic unit of data that travels across the Internet is called a _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["protocol", "DNS", "packet"],
-        hint1: "Greek for \"first\" + \"agreement\".",
-        hint2: "Domain Name System.",
-        hint3: "Small chunks with headers.",
-        explanation: "A protocol is an agreed rule. DNS resolves names → IPs. Data crosses the Internet as packets."
+        correctAnswers: ["protocol", "metadata", "packet"],
+        hint1: "IP, TCP, and UDP are examples.",
+        hint2: "Data about the data.",
+        hint3: "A small chunk with metadata.",
+        explanation: "A protocol is an agreed set of rules. Packets carry metadata for routing and reassembly. Data cross the Internet as packets."
       }
     },
     {
@@ -118,31 +115,30 @@ A router's job is simple: read the destination IP in each packet's header and fo
           },
           {
             label: "IP's primary job is ___",
-            options: ["routing packets to the destination address", "translating domain names into addresses", "guaranteeing packets arrive in order", "encrypting data before transmission"]
+            options: ["routing packets to the destination address", "translating web pages into packets", "guaranteeing packets arrive in order", "encrypting data before transmission"]
           },
           {
-            label: "A web page that fails to load might be a problem at the ___ layer",
-            options: ["any layer of the stack", "the physical layer only", "the application layer only", "the DNS lookup step only"]
+            label: "Routing on the Internet is usually ___",
+            options: ["dynamic, not specified in advance", "fixed by the sender before sending", "the same for every packet in a message", "done once when a device first connects"]
           }
         ],
-        correctAnswers: ["ordered, reliable delivery", "routing packets to the destination address", "any layer of the stack"],
+        correctAnswers: ["ordered, reliable delivery", "routing packets to the destination address", "dynamic, not specified in advance"],
         hint1: "That's TCP's defining feature.",
         hint2: "IP = Internet Protocol = routing.",
-        hint3: "Every layer can fail.",
-        explanation: "TCP = ordered & reliable. IP = routing. A failed page load can come from any layer."
+        hint3: "Paths can change as conditions change.",
+        explanation: "TCP = ordered and reliable. IP = addressing and routing. Internet routing is dynamic."
       }
     },
     {
       id: "cspip2-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: The Stack
+## AP Exam Strategy: How Data Travels
 
-- The exam will name a protocol and ask its **layer / job**. Memorize: DNS = naming, HTTP = web, SMTP = email, TCP = reliable transport, UDP = fast/unreliable transport, IP = routing.
-- "Reliable + ordered" → TCP.
-- "Fast, real-time, can drop packets" (e.g., voice/video) → UDP.
-- "Best-effort" describes IP's lack of delivery guarantees.
-- A change at one layer (new physical medium, new app) doesn't require changes elsewhere — that's the whole point of the layered design.
+- Data stream → chunks → packets (data + metadata) → routed dynamically → reassembled.
+- Packets may arrive in order, out of order, or not at all.
+- "Reliable + ordered" → TCP. "Fast, real-time, can drop packets" → UDP. Routing → IP.
+- Open protocols make it easy to connect new devices; the Internet was designed to scale.
       `
     },
     {
@@ -154,26 +150,26 @@ A router's job is simple: read the destination IP in each packet's header and fo
       exercise: {
         questions: [
           {
-            question: "You're streaming a live video call. Some packets arrive out of order or are dropped. The call still works. Which transport-layer protocol is most likely in use?",
+            question: "You're on a live video call. Some packets arrive out of order or are dropped, and the call keeps going without waiting for them. Which protocol is most likely carrying the video?",
             options: [
               "TCP, because reliability is the most important property of any real-time video-call session.",
-              "UDP, because real-time apps prefer low latency over the cost of waiting for retransmission.",
-              "IP, because the Internet Protocol itself provides the reliability guarantees a video call needs.",
+              "UDP, because real-time apps prefer low delay over having every lost packet resent.",
+              "IP alone, because the Internet Protocol itself guarantees every packet arrives in the right order.",
               "HTTP, because web requests automatically skip any lost frames so the call keeps running smoothly."
             ],
             correctAnswer: 1,
-            explanation: "Real-time A/V uses UDP; a slightly garbled frame is preferable to waiting for retransmits."
+            explanation: "Real-time audio and video commonly use UDP; a skipped frame is better than waiting for a resend."
           },
           {
-            question: "A new wireless standard (Wi-Fi 7) is rolled out. Existing web browsers continue to work without modification. Why?",
+            question: "A start-up builds a new kind of device without asking permission from anyone who runs the Internet, and the device connects and communicates successfully. Which feature of the Internet best explains this?",
             options: [
-              "Wi-Fi 7 fundamentally does not carry IP packets the way previous Wi-Fi standards historically did.",
-              "The layered protocol design isolates link-layer changes from the higher application-layer software.",
-              "Browser developers worldwide pushed an emergency overnight update to support the new wireless standard.",
-              "Wi-Fi 7 only carries the TCP transport-layer protocol and not application-layer protocols like HTTP."
+              "The protocols are open, so any company can make hardware that follows them.",
+              "Every device must be approved by one central company before it can connect.",
+              "Each new device receives its own private network that is separate from others.",
+              "Only approved vendors know the secret protocols needed to connect."
             ],
-            correctAnswer: 1,
-            explanation: "Layering means the application layer doesn't need to know which physical medium carries its packets."
+            correctAnswer: 0,
+            explanation: "The Internet's protocols are open (nonproprietary), which lets users easily connect additional computing devices."
           }
         ]
       }

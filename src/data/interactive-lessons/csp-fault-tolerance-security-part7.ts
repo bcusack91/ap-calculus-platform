@@ -23,15 +23,15 @@ export const cspFaultToleranceSecurityPart7Data = {
       exercise: {
         questions: [
           {
-            question: "CIA in security stands for ___",
+            question: "In public key encryption, which key is needed to decrypt a message sent to Maya?",
             options: [
-              "Confidentiality, Integrity, Availability",
-              "Confidentiality, Identity, Authentication",
-              "Cryptography, Integrity, Authorization",
-              "Control, Integrity, Accountability"
+              "Maya's private key",
+              "Maya's public key",
+              "the sender's public key",
+              "the sender's private key"
             ],
             correctAnswer: 0,
-            explanation: "CIA = Confidentiality, Integrity, Availability."
+            explanation: "Anyone can encrypt with Maya's public key, but only Maya's private key decrypts the message."
           },
           {
             question: "A system that keeps serving users when one server crashes is ___",
@@ -55,25 +55,23 @@ export const cspFaultToleranceSecurityPart7Data = {
 
 | Term | Definition |
 |------|-----------|
-| Fault tolerance | Continues operating during failures. |
-| Redundancy / replication / failover | Mechanisms enabling fault tolerance. |
-| Backup | Point-in-time data snapshot. |
-| CIA | Confidentiality, Integrity, Availability. |
-| Symmetric / asymmetric encryption | One key vs. key pair. |
-| Hash | One-way digest. |
-| MFA | Multi-factor authentication. |
-| Phishing / DDoS / ransomware | Common threats. |
-| Defense in depth | Layered defenses. |
-| Zero trust | Verify every request. |
-| Supply-chain attack | Compromise a trusted dependency. |
+| Fault tolerance | Supports failures and still continues to function. |
+| Redundancy | Extra components that mitigate failure; costs additional resources. |
+| Sequential / parallel / distributed | One at a time / some at the same time / many devices. |
+| Speedup | Sequential time ÷ parallel time. |
+| Symmetric / public key encryption | One shared key vs. a public key to encrypt and a private key to decrypt. |
+| Certificate authority | Issues digital certificates that validate ownership of encryption keys. |
+| MFA | Access only after evidence from two or more categories: know, have, are. |
+| Phishing / keylogging / rogue access point | Common ways unauthorized access is gained. |
+| Malware / virus | Software meant to damage or control a system / a program that copies itself. |
 
 ## Common Pitfalls
 
-- Confusing replication and backup.
-- Storing passwords in plaintext or reversible encryption.
-- Treating security as a one-time install.
-- No incident plan / runbooks / drills.
-- Trusting the network instead of verifying each request.
+- Thinking redundancy is free; it costs extra resources.
+- Adding parallel task times instead of taking the longest one.
+- Forgetting the sequential portion limits speedup.
+- Thinking the sender needs the receiver's private key to encrypt.
+- Treating a password plus a second password as multifactor.
       `
     },
     {
@@ -82,19 +80,19 @@ export const cspFaultToleranceSecurityPart7Data = {
       content: `
 **Applied Recall** ✍️
 
-1) The "I" in CIA stands for _______.
+1) Including extra components to mitigate failure is called _______.
 
-2) An attack that overwhelms a service to deny availability is a _______ attack.
+2) A program that records every keystroke to capture passwords is used for _______.
 
 3) A second proof of identity beyond the password is the second _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["integrity", "DDoS", "factor"],
-        hint1: "Unaltered data.",
-        hint2: "Distributed denial.",
+        correctAnswers: ["redundancy", "keylogging", "factor"],
+        hint1: "Backup parts.",
+        hint2: "Key + logging.",
         hint3: "MFA.",
-        explanation: "Integrity / DDoS / second factor."
+        explanation: "Redundancy / keylogging / second factor."
       }
     },
     {
@@ -106,23 +104,23 @@ export const cspFaultToleranceSecurityPart7Data = {
       exercise: {
         dropdowns: [
           {
-            label: "A password should be ___",
-            options: ["salted-hashed using a slow KDF (bcrypt / Argon2 / scrypt)", "hashed using a fast unsalted function (MD5 / SHA-1)", "encrypted reversibly with one shared key (AES / DES)", "stored in plaintext so support can read it (no hashing)"]
+            label: "A strong password is ___",
+            options: ["easy for you to remember but hard for others to guess", "a word anyone who knows you could figure out", "as short as possible so it is quick to type", "the same one reused on every account you have"]
           },
           {
-            label: "TLS protects ___",
-            options: ["confidentiality and integrity in transit", "confidentiality and integrity of data at rest", "availability and uptime during a DDoS attack", "users from phishing sites and fake login pages"]
+            label: "A sequential step of 5 seconds followed by parallel tasks of 3 and 8 seconds takes at least ___",
+            options: ["13 seconds", "16 seconds", "8 seconds", "11 seconds"]
           },
           {
-            label: "A blameless post-mortem focuses on ___",
-            options: ["systemic causes and improvements, not individual blame", "the individual who caused the outage, not the process", "speed of recovery only, not underlying causes", "identifying who to discipline, not process changes"]
+            label: "A wireless access point that gives unauthorized access to a secure network is called a ___",
+            options: ["rogue access point", "certificate authority", "redundant path", "public key"]
           }
         ],
-        correctAnswers: ["salted-hashed using a slow KDF (bcrypt / Argon2 / scrypt)", "confidentiality and integrity in transit", "systemic causes and improvements, not individual blame"],
-        hint1: "Slow + salted hash.",
-        hint2: "In-transit protection.",
-        hint3: "Systemic > blame.",
-        explanation: "Slow hashed passwords; TLS in transit; blameless post-mortems improve systems."
+        correctAnswers: ["easy for you to remember but hard for others to guess", "13 seconds", "rogue access point"],
+        hint1: "Memorable to you, not guessable by others.",
+        hint2: "Sequential step + longest parallel task.",
+        hint3: "It is not supposed to be there.",
+        explanation: "Strong passwords resist guessing. 5 + 8 = 13 seconds. A rogue access point gives unauthorized network access."
       }
     },
     {
@@ -131,10 +129,10 @@ export const cspFaultToleranceSecurityPart7Data = {
       content: `
 ## Final Exam Tips
 
-- CIA framing for security questions.
-- Replication ≠ backup.
-- Defense in depth, MFA, TLS, hashed passwords.
-- Process matters: patches, monitoring, drills, post-mortems.
+- Fault tolerance comes from redundancy; find and remove single points of failure.
+- Parallel time, speedup, and the limit set by the sequential portion.
+- Symmetric vs. public key encryption; certificate authorities; MFA categories.
+- Know how unauthorized access is gained: phishing, keylogging, malware, rogue access points, untrustworthy downloads.
       `
     },
     {
@@ -157,15 +155,15 @@ export const cspFaultToleranceSecurityPart7Data = {
             explanation: "MFA dramatically reduces credential-based account takeover."
           },
           {
-            question: "A team's backup strategy is \"the database has 3 replicas.\" The most CSP-aligned critique is ___",
+            question: "A video-processing job takes 200 seconds sequentially. With a parallel solution it takes 50 seconds. Adding many more processors only brings it down to 45 seconds. Which is the best explanation?",
             options: [
-              "the strategy is perfect because three live replicas are equivalent to three independent backups.",
-              "replicas copy deletes and corruption too; add separate point-in-time backups kept offline.",
-              "three replicas are too many; one primary and one replica would be safer against deletes.",
-              "the replicas must be in the same data center so they stay perfectly in sync with no lag."
+              "The parallel portion is too small to split, so it all runs sequentially.",
+              "The sequential portion needs about 45 seconds and cannot be split up.",
+              "Each new processor slows the others, adding about 45 seconds of delay.",
+              "The speedup of a parallel solution always falls as processors are added."
             ],
             correctAnswer: 1,
-            explanation: "Replicas ≠ backups; need separate offline / immutable backups."
+            explanation: "The time can never drop below the sequential portion, so the speedup levels off near 200 ÷ 45 ≈ 4.4."
           }
         ]
       }

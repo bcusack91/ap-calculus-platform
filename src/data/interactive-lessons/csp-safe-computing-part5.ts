@@ -7,18 +7,20 @@ export const cspSafeComputingPart5Data = {
       content: `
 # 🔐 Safe Computing
 
-**Part 5 of 7 — Change Over Time**
+**Part 5 of 7 — Encryption, Certificates, and Data Collection**
 
 ---
 
-## How Safe Computing Has Evolved
+## Encryption
 
-| Era | Defining shift |
-|-----|----------------|
-| 1990s | Antivirus + "don't open weird attachments". |
-| 2000s | Spyware, popups, browser hardening. |
-| 2010s | Mobile phishing; MFA mainstream. |
-| 2020s | Passkeys, AI-assisted phishing, cloud account takeovers. |
+**Encryption** is the process of encoding data to prevent unauthorized access. **Decryption** is the process of decoding the data. There are two common approaches:
+
+| Approach | Keys | Example |
+|-----|----------------|---------|
+| **Symmetric** | One key both encrypts and decrypts | Two friends share one secret key for their messages |
+| **Public key** | A public key encrypts; a matching private key decrypts | Anyone can encrypt a message to Ana with her public key, but only Ana's private key can decrypt it |
+
+In public key encryption, the sender does **not** need the receiver's private key to encrypt a message, but the receiver's private key **is** required to decrypt it. The math behind these methods is not on the AP exam.
       `
     },
     {
@@ -30,26 +32,26 @@ export const cspSafeComputingPart5Data = {
       exercise: {
         questions: [
           {
-            question: "Passkeys (FIDO2) primarily replace ___",
+            question: "Lena wants to send Omar a message using public key encryption. Which key does she use to encrypt it?",
             options: [
-              "encryption of stored data with a fundamentally different cryptographic primitive",
-              "passwords with cryptographic device-bound credentials that resist phishing",
-              "two-factor codes with longer codes sent by text message to the user's phone",
-              "usernames with randomly generated IDs that are harder for attackers to guess"
+              "Omar's private key",
+              "Omar's public key",
+              "Lena's private key",
+              "Lena's public key"
             ],
             correctAnswer: 1,
-            explanation: "Passkeys replace passwords with phishing-resistant cryptography."
+            explanation: "The sender encrypts with the receiver's public key; only the receiver's private key can decrypt it."
           },
           {
-            question: "AI-assisted phishing is concerning because ___",
+            question: "Which statement describes symmetric encryption?",
             options: [
-              "it produces grammatically clean, personalized lures at scale.",
-              "it lets attackers crack strong passwords much more quickly.",
-              "it removes encryption from the emails that victims receive.",
-              "it hides malware inside attachments that antivirus can't scan."
+              "The same key both encrypts and decrypts the data.",
+              "A public key encrypts and a private key decrypts.",
+              "No key is needed, because the data is only hidden.",
+              "The data can be decrypted only by a certificate authority."
             ],
             correctAnswer: 0,
-            explanation: "Personalized, fluent lures are harder to spot."
+            explanation: "Symmetric encryption uses one key for both encryption and decryption."
           }
         ]
       }
@@ -58,24 +60,20 @@ export const cspSafeComputingPart5Data = {
       id: "cspsc5-content",
       type: 'text' as const,
       content: `
-## Passwordless Future
+## Certificate Authorities
 
-Industry is moving toward **passkeys** (FIDO2 / WebAuthn): the user's device holds a private key; the site only ever sees a public key + signed challenge. This is phishing-resistant by design.
+How do you know a public key really belongs to your bank and not an impostor? **Certificate authorities** issue **digital certificates** that validate the ownership of encryption keys used in secure communications. The system is based on a **trust model**: your browser trusts certain certificate authorities, and they vouch for the sites' keys.
 
-## Cloud Account Takeover
+## Who Is Collecting Data About You?
 
-Modern attackers target the **cloud account** itself (email, identity provider) because that often unlocks dozens of services. Defenses:
+| Collector | What it can record |
+|--------|---------|
+| Search engines | A history of your searches, used to suggest websites or for targeted marketing |
+| Websites | A history of who has viewed their pages |
+| Devices, websites, and networks | Your location: where you have been, how you got there, and how long you stayed |
+| Social media | Posts that others can combine with other sources to deduce private information about you |
 
-- MFA on the identity provider.
-- Audit which services are connected.
-- Review session activity.
-
-## What Hasn't Changed
-
-- Patches still matter.
-- Phishing still works.
-- Backups still save you.
-- Healthy skepticism still beats most attacks.
+Personal data also has benefits: it can enhance your online experience and simplify online purchases. But commercial and governmental curation of information may be exploited if privacy and other protections are ignored.
       `
     },
     {
@@ -84,19 +82,19 @@ Modern attackers target the **cloud account** itself (email, identity provider) 
       content: `
 **Applied Recall** ✍️
 
-1) A modern phishing-resistant alternative to passwords is called a _______.
+1) Encoding data to prevent unauthorized access is called _______.
 
-2) A single account that grants access to many services is often the user's _______ provider.
+2) Decoding encrypted data back into readable form is called _______.
 
-3) Despite new attacks, _______ patches remain essential.
+3) Organizations that issue digital certificates validating who owns encryption keys are called certificate _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["passkey", "identity", "software"],
-        hint1: "FIDO2.",
-        hint2: "IdP.",
-        hint3: "Patch hygiene.",
-        explanation: "Passkeys / identity provider / software patches."
+        correctAnswers: ["encryption", "decryption", "authorities"],
+        hint1: "Encoding.",
+        hint2: "The reverse.",
+        hint3: "They have the authority to vouch.",
+        explanation: "Encryption / decryption / certificate authorities."
       }
     },
     {
@@ -108,34 +106,35 @@ Modern attackers target the **cloud account** itself (email, identity provider) 
       exercise: {
         dropdowns: [
           {
-            label: "Passkeys are phishing-resistant because ___",
-            options: ["the private key never leaves the device and the signature is bound to the real site", "the private key is sent to the site and checked against a stored copy each login", "they are long passwords that the user memorizes and types on each site", "the server stores the private key so it can detect fake sites"]
+            label: "In public key encryption, the key needed to decrypt a message is ___",
+            options: ["the receiver's private key", "the receiver's public key", "the sender's public key", "any public key at all"]
           },
           {
-            label: "Compromise of the user's primary email account often ___",
-            options: ["enables password resets and account takeovers across many other services", "only exposes old messages and has no effect on any other accounts", "is harmless as long as the email password is changed within a week", "automatically locks every linked account until you visit each provider in person"]
+            label: "A phone app that records where you go and how long you stay is collecting ___",
+            options: ["location data", "only photo metadata", "no personal data", "only encrypted data"]
           },
           {
-            label: "AI-generated phishing emails ___",
-            options: ["are typically more polished and personalized than older phishing", "are typically easier to spot because of awkward grammar and typos", "are always blocked by modern spam filters before delivery", "cannot include links, so they are harmless to open and read"]
+            label: "A search engine that keeps your search history can use it to ___",
+            options: ["suggest websites and target ads", "make your connection faster", "encrypt your future searches", "delete your browsing history"]
           }
         ],
-        correctAnswers: ["the private key never leaves the device and the signature is bound to the real site", "enables password resets and account takeovers across many other services", "are typically more polished and personalized than older phishing"],
-        hint1: "Origin-bound crypto.",
-        hint2: "Email = master key.",
-        hint3: "Quality boost.",
-        explanation: "Passkeys are origin-bound; email is high-value; AI improves phishing quality."
+        correctAnswers: ["the receiver's private key", "location data", "suggest websites and target ads"],
+        hint1: "Private keys stay private.",
+        hint2: "Where you have been.",
+        hint3: "Targeted marketing.",
+        explanation: "Only the receiver's private key decrypts. Programs can record your location history. Search history is used for suggestions and targeted marketing."
       }
     },
     {
       id: "cspsc5-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: Modern Safe Computing
+## AP Exam Strategy: Encryption and Data Collection
 
-- Passkeys are the modern direction.
-- Identity providers are high-value targets — protect them.
-- AI raises the floor of phishing quality.
+- Symmetric = one shared key. Public key = encrypt with the receiver's public key, decrypt with the receiver's private key.
+- Certificate authorities issue digital certificates that validate key ownership (a trust model).
+- Search engines, websites, devices, and networks all collect data about you; combined, it reveals a lot.
+- You do not need encryption math for the exam.
       `
     },
     {
@@ -147,26 +146,26 @@ Modern attackers target the **cloud account** itself (email, identity provider) 
       exercise: {
         questions: [
           {
-            question: "A user's personal email is compromised. Within hours, attackers reset passwords on 12 other services. The most accurate framing is ___",
+            question: "A messaging app uses public key encryption. An attacker intercepts a message that was sent to Ana. Why can't the attacker read it?",
             options: [
-              "unrelated — the email compromise has no causal connection to the other twelve service resets.",
-              "email is the recovery channel for those services, so securing it with MFA protects them all.",
-              "the attackers must have guessed each of the twelve passwords separately in a few hours.",
-              "the twelve services were breached together, and the email takeover was a coincidence."
+              "The message was deleted from the network as soon as it was sent.",
+              "Only Ana's private key can decrypt it, and the attacker does not have it.",
+              "The attacker would need the sender's public key, which is kept secret.",
+              "Intercepted messages are automatically sent back to the original sender."
             ],
             correctAnswer: 1,
-            explanation: "Email is the master account."
+            explanation: "Messages encrypted with Ana's public key can be decrypted only with Ana's private key."
           },
           {
-            question: "A site offers passkeys instead of passwords. The most CSP-aligned reason to enable them is ___",
+            question: "A browser warns that a shopping site's certificate was not issued by a trusted certificate authority. What is the most appropriate action?",
             options: [
-              "no compelling reason, since passwords with MFA are equivalent to passkeys in every way.",
-              "they resist phishing because the credential is bound to the real site's origin and stays on device.",
-              "they let the user skip MFA entirely, since a passkey is just a longer stored password.",
-              "they work without a device, since the passkey is kept on the site's server for the user."
+              "Continue and enter payment details, since the warning is usually wrong.",
+              "Stop, since the site's keys can't be validated and it may be an impostor.",
+              "Turn off the browser's warnings so they do not appear on other sites again.",
+              "Continue, but only after clearing the browser's history and cookies first."
             ],
             correctAnswer: 1,
-            explanation: "Passkeys = phishing-resistant by construction."
+            explanation: "Certificate authorities validate who owns the encryption keys; without that, the connection could belong to an impostor."
           }
         ]
       }

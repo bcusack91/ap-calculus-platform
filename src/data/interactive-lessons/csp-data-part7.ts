@@ -62,18 +62,18 @@ Core data concepts the AP exam tests.
 | Cleaning | Removing duplicates, fixing missing or invalid values. |
 | Aggregation | Combining many values (sum, mean, count). |
 | Filtering | Keeping rows that match a condition. |
-| Join | Combining datasets on a shared key. |
-| Quasi-identifier | A field (or combination) that can identify an individual. |
-| Data minimization | Collect only what you need. |
-| Encryption at rest / in transit | Protect data on disk / on the network. |
+| Combining sources | Merging data sets on a shared ID; often needed to draw a conclusion. |
+| PII | Personally identifiable information: identifies, links, relates, or describes a person. |
+| Bias | Created by the type or source of data; more data does not remove it. |
+| Scalability | A system's capacity to grow to meet new demands. |
 
 ## Common Pitfalls
 
 - Treating correlation as causation.
 - Choosing the wrong chart type.
 - Forgetting metadata is also data.
-- Indefinite retention without sunset clauses.
-- Publishing "anonymized" data without auditing for re-identification.
+- Believing more data from the same source removes bias.
+- Assuming that removing names makes combined personal data anonymous.
       `
     },
     {
@@ -84,17 +84,17 @@ Core data concepts the AP exam tests.
 
 1) Combining many values into one summary (sum, mean, count) is called _______.
 
-2) A field (or combination) that can identify a person is called a _______-identifier.
+2) Information that identifies or describes a specific person is abbreviated _______.
 
-3) Collecting only the data actually needed is called data _______.
+3) Making data uniform without changing their meaning is called _______ the data.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["aggregation", "quasi", "minimization"],
+        correctAnswers: ["aggregation", "PII", "cleaning"],
         hint1: "Roll-up.",
-        hint2: "Almost-identifier.",
-        hint3: "Less = safer.",
-        explanation: "Aggregation = roll-up. Quasi-identifiers can re-identify. Data minimization = collect less."
+        hint2: "Personally identifiable information.",
+        hint3: "Tidying the data.",
+        explanation: "Aggregation = roll-up. PII identifies a person. Cleaning makes data uniform."
       }
     },
     {
@@ -114,15 +114,15 @@ Core data concepts the AP exam tests.
             options: ["the choice should match the question being asked", "bar charts are always more accurate than line charts", "line charts can only show one data series at a time", "the choice changes the underlying values in the data"]
           },
           {
-            label: "A \"right to be forgotten\" policy implements ___",
-            options: ["data deletion at user request", "data anonymization at user request", "data encryption at user request", "data export at user request"]
+            label: "Changing the date stored in a photo's metadata ___",
+            options: ["does not change the photo itself", "also changes the photo's pixels", "deletes the photo from storage", "compresses the photo losslessly"]
           }
         ],
-        correctAnswers: ["data quality before analysis", "the choice should match the question being asked", "data deletion at user request"],
+        correctAnswers: ["data quality before analysis", "the choice should match the question being asked", "does not change the photo itself"],
         hint1: "Quality matters.",
         hint2: "Question-driven.",
-        hint3: "User control.",
-        explanation: "Garbage in = garbage out. Charts should match questions. Right-to-be-forgotten = deletion."
+        hint3: "Metadata are separate from the primary data.",
+        explanation: "Garbage in = garbage out. Charts should match questions. Edits to metadata leave the primary data unchanged."
       }
     },
     {
@@ -131,10 +131,10 @@ Core data concepts the AP exam tests.
       content: `
 ## Final Exam Tips
 
-- Know the data lifecycle: collect → process → store → share → archive → DELETE.
+- Data → information: filter, transform, combine, visualize.
 - Match chart to question.
 - Watch for correlation/causation traps.
-- Privacy framing: minimization + sunset + at-rest/in-transit encryption.
+- Privacy framing: PII, combining data, hard to delete once online; encryption prevents unauthorized access.
       `
     },
     {
@@ -160,12 +160,12 @@ Core data concepts the AP exam tests.
             question: "A research team plans to publish a dataset with ages and ZIP codes \"for transparency\". The most appropriate concern is ___",
             options: [
               "publishing aggregate ages and ZIP codes raises no meaningful re-identification risk.",
-              "these quasi-identifiers can re-identify people, so coarsen them before publishing.",
+              "ages and ZIP codes can be linked with other data to identify people.",
               "the resulting dataset file will be too small for collaborators to download easily.",
               "the resulting dataset file will be too large for collaborators to host inexpensively."
             ],
             correctAnswer: 1,
-            explanation: "Quasi-identifiers + public release = re-identification risk."
+            explanation: "Combining age and ZIP code with other public data can single out individuals, so publishing them raises privacy risk."
           }
         ]
       }

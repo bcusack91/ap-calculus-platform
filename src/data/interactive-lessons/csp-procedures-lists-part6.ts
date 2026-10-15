@@ -12,6 +12,8 @@ export const cspProceduresListsPart6Data = {
 ---
 
 ## Procedures & Lists Workshop
+
+End-to-end problems that combine procedures, parameters, and list traversals, written in exam reference sheet pseudocode.
       `
     },
     {
@@ -23,7 +25,7 @@ export const cspProceduresListsPart6Data = {
       exercise: {
         questions: [
           {
-            question: "In **PROCEDURE add(a, b) RETURN a + b**, calling **add(2, 3)** returns ___",
+            question: "PROCEDURE add(a, b)\n{\n    RETURN(a + b)\n}\n\nWhat does add(2, 3) return?",
             options: [
               "2",
               "5",
@@ -31,18 +33,18 @@ export const cspProceduresListsPart6Data = {
               "undefined"
             ],
             correctAnswer: 1,
-            explanation: "Substitute a=2, b=3 → 5."
+            explanation: "a is assigned 2 and b is assigned 3, so the procedure returns 2 + 3 = 5."
           },
           {
-            question: "**APPEND(list, x)** then **LENGTH(list)** vs original LENGTH ___",
+            question: "After **APPEND(list, x)**, how does LENGTH(list) compare with its original value?",
             options: [
-              "decreases by 1.",
-              "increases by 1.",
-              "stays the same.",
-              "is undefined."
+              "It decreases by 1.",
+              "It increases by 1.",
+              "It stays the same.",
+              "It doubles."
             ],
             correctAnswer: 1,
-            explanation: "APPEND adds one element."
+            explanation: "APPEND adds one element to the end of the list."
           }
         ]
       }
@@ -51,36 +53,54 @@ export const cspProceduresListsPart6Data = {
       id: "csppl6-content",
       type: 'text' as const,
       content: `
-## Worked: Build A "Top K" Procedure
+## Worked: Top k From a Sorted List
 
-    PROCEDURE topK(scores, k)
-      sorted ← SORT(scores, descending)
-      result ← []
-      FOR i FROM 1 TO k:
-        APPEND(result, sorted[i])
-      RETURN result
+The list is **already sorted from highest to lowest**. Return a new list holding its first k values.
 
-Now any caller can ask for the top 3, top 10, etc.
+\`\`\`
+PROCEDURE topK(sortedScores, k)
+{
+    result ← []
+    i ← 1
+    REPEAT k TIMES
+    {
+        APPEND(result, sortedScores[i])
+        i ← i + 1
+    }
+    RETURN(result)
+}
+\`\`\`
 
-## Worked: Compose Map + Filter + Reduce
+If k > LENGTH(sortedScores), sortedScores[i] goes out of range and the program stops with an error. A guard at the top fixes this: IF (k > LENGTH(sortedScores)) { k ← LENGTH(sortedScores) }.
 
-Sum the squares of even numbers in **nums**:
+## Worked: Several Steps in One Traversal
 
-    total ← 0
-    FOR EACH n IN nums:
-      IF n MOD 2 = 0 THEN
-        total ← total + n * n
+Sum the squares of the even numbers in nums:
 
-Conceptually: filter (even) → map (square) → reduce (sum).
+\`\`\`
+total ← 0
+FOR EACH n IN nums
+{
+    IF (n MOD 2 = 0)
+    {
+        total ← total + n * n
+    }
+}
+\`\`\`
 
-## Worked: 2D Sum
+The IF picks the even values, and the accumulator adds each square.
 
-    PROCEDURE gridSum(grid)
-      total ← 0
-      FOR EACH row IN grid:
-        FOR EACH cell IN row:
-          total ← total + cell
-      RETURN total
+## Worked: Procedures Calling Procedures
+
+\`\`\`
+PROCEDURE topAverage(sortedScores, k)
+{
+    best ← topK(sortedScores, k)
+    RETURN(average(best))
+}
+\`\`\`
+
+Here average(nums) is the sum-and-divide procedure from Part 3. For topAverage([98, 91, 85, 70], 2), topK returns [98, 91], and average returns 94.5. Each procedure solves one subproblem, and the results are combined.
       `
     },
     {
@@ -89,19 +109,19 @@ Conceptually: filter (even) → map (square) → reduce (sum).
       content: `
 **Applied Recall** ✍️
 
-1) A "top K" procedure usually first _______ the list, then takes the first k elements.
+1) topK([90, 80, 70, 60], 3) returns a list of length _______.
 
-2) Filter then map then reduce is a common functional _______.
+2) After the even-squares loop runs with nums ← [1, 2, 3, 4], total is _______.
 
-3) Touching every cell in a 2D list requires _______ loops.
+3) topAverage([88, 84, 79, 60], 2) returns _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["sorts", "pipeline", "nested"],
-        hint1: "Order first.",
-        hint2: "Composition.",
-        hint3: "One inside another.",
-        explanation: "Sort → take. Pipeline of patterns. Nested loops for 2D."
+        correctAnswers: ["3", "20", "86"],
+        hint1: "One APPEND per repetition.",
+        hint2: "Only 2 and 4 are even.",
+        hint3: "Average the first two values.",
+        explanation: "REPEAT 3 TIMES appends 3 values. The even values 2 and 4 give 4 + 16 = 20. The top two values, 88 and 84, average to 86."
       }
     },
     {
@@ -113,23 +133,23 @@ Conceptually: filter (even) → map (square) → reduce (sum).
       exercise: {
         dropdowns: [
           {
-            label: "A procedure that takes a list and returns its sum is most accurately a ___",
-            options: ["reduce-pattern procedure", "filter-pattern procedure", "map-pattern procedure", "sort-pattern procedure"]
+            label: "Without the guard, topK([50, 40], 3) ___",
+            options: ["produces an error", "returns [50, 40]", "returns [50, 40, 0]", "returns an empty list"]
           },
           {
-            label: "A procedure that takes a list and returns a new list of squared values is a ___",
-            options: ["map-pattern procedure", "reduce-pattern procedure", "filter-pattern procedure", "sort-pattern procedure"]
+            label: "Inside topAverage, the procedure whose call is completed first is ___",
+            options: ["topK", "average", "DISPLAY", "APPEND"]
           },
           {
-            label: "A procedure that takes a list and returns only positive numbers is a ___",
-            options: ["filter-pattern procedure", "map-pattern procedure", "reduce-pattern procedure", "sort-pattern procedure"]
+            label: "A list returned by one procedure can be passed directly as ___",
+            options: ["an argument to another procedure", "the name of a parameter", "the number of loop repetitions", "an index into another list"]
           }
         ],
-        correctAnswers: ["reduce-pattern procedure", "map-pattern procedure", "filter-pattern procedure"],
-        hint1: "Roll up.",
-        hint2: "Transform each.",
-        hint3: "Subset.",
-        explanation: "Sum = reduce. Squaring each = map. Positives only = filter."
+        correctAnswers: ["produces an error", "topK", "an argument to another procedure"],
+        hint1: "The third repetition reads index 3 of a 2-element list.",
+        hint2: "best must have a value before average can use it.",
+        hint3: "Return values can feed other calls.",
+        explanation: "Reading index 3 of a 2-element list is an error. topK runs first so its result can be stored in best and passed to average. A returned list can be an argument to another procedure."
       }
     },
     {
@@ -138,9 +158,10 @@ Conceptually: filter (even) → map (square) → reduce (sum).
       content: `
 ## AP Exam Strategy: Workshop
 
-- Recognize map / filter / reduce shape from the loop body.
-- Top-K = sort + take.
-- 2D traversal = nested loops.
+- Trace the innermost or earliest call first, then pass its result outward.
+- Count APPENDs to find the length of a returned list.
+- Check every index a loop can reach; a value above LENGTH(list) is an error.
+- Combining a filter and an accumulator in one FOR EACH loop is a common exam pattern.
       `
     },
     {
@@ -152,26 +173,26 @@ Conceptually: filter (even) → map (square) → reduce (sum).
       exercise: {
         questions: [
           {
-            question: "A program processes a 1000×1000 grid. A nested loop runs how many iterations?",
+            question: "A procedure calls average(nums) once for each of the n elements of nums, and average itself loops over all n elements. For n = 1,000, about how many times does the body of average's loop run in total?",
             options: [
-              "2,000",
-              "1,000,000",
-              "1000",
-              "1,000,000,000"
+              "About 1,000",
+              "About 2,000",
+              "About 1,000,000",
+              "About 1,000,000,000"
             ],
-            correctAnswer: 1,
-            explanation: "1000 × 1000 = 1,000,000 iterations."
+            correctAnswer: 2,
+            explanation: "1,000 calls each run 1,000 loop passes: 1,000 × 1,000 = 1,000,000. That square growth is polynomial, so it is still reasonable, but calling average once and saving the result would need only about 1,000 passes."
           },
           {
-            question: "A team needs the average of the top 10 scores in a list of 1,000. The most reasonable approach is ___",
+            question: "A team needs the average of the top 10 scores in a list of 1,000 scores that is already sorted from highest to lowest. The most reasonable approach is to ___",
             options: [
-              "inline the sorting, slicing, and averaging code directly at the call site.",
-              "call existing topK and average procedures in sequence.",
-              "average all 1,000 scores and scale the result up by a fixed bonus.",
-              "write one procedure that sorts, slices, and averages with no inputs."
+              "copy the code of both procedures directly into the place that needs the result.",
+              "call the existing topK and average procedures, one after the other.",
+              "average all 1,000 scores and then scale the result up by a fixed bonus.",
+              "write one new procedure with no parameters that only works for 10 scores."
             ],
             correctAnswer: 1,
-            explanation: "Compose existing procedures: one returns the top 10 scores, the other averages them."
+            explanation: "Composing existing, tested procedures reuses code: topK returns the top 10 scores, and average averages them."
           }
         ]
       }

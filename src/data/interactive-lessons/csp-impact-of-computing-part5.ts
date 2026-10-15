@@ -11,16 +11,16 @@ export const cspImpactOfComputingPart5Data = {
 
 ---
 
-## How Computing Impact Has Evolved
+## Innovations Get Used in New Ways
 
-Themes to recognize across decades.
+The AP framework describes how the effects of computing innovations change once people start using them:
 
-| Decade | Defining impact theme |
-|--------|----------------------|
-| 1990s | Web makes information widely accessible. |
-| 2000s | Social media reshapes communication. |
-| 2010s | Smartphones move computing into pockets; data collection becomes ambient. |
-| 2020s | AI / ML produce decisions and content at scale; new IP and labor questions. |
+| Idea | Example |
+|------|---------|
+| The way people complete tasks changes to incorporate new innovations. | Students submit homework online instead of on paper. |
+| Innovations get used in ways their creators did not intend. | The World Wide Web was first meant only for scientists to share information quickly. |
+| Not every effect is anticipated in advance. | Location sharing built for maps is also used to track people. |
+| Computing has increased creativity in other fields. | Medicine, engineering, communications, and the arts all use computing to create new things. |
       `
     },
     {
@@ -78,7 +78,6 @@ Generative AI now produces text, images, audio, and video at near-human quality.
 - Who **owns** the output of a model trained on others' work?
 - What **labor disruption** comes from automating creative tasks?
 - How do we **detect** synthetic content?
-- What are the **environmental** costs (training large models requires massive energy)?
 
 ## Labor Effects
 
@@ -130,23 +129,23 @@ These are exactly the kinds of "evaluate the impact" scenarios the AP exam's mul
       exercise: {
         dropdowns: [
           {
-            label: "Training a large generative model requires ___",
-            options: ["significant energy and computation", "minimal energy and small datasets", "a single laptop and a few minutes", "little data and no special chips"]
+            label: "The World Wide Web was originally intended for ___",
+            options: ["rapid sharing of information among scientists", "online shopping and advertising for businesses", "social media posts shared among friends", "streaming music and video to the public"]
           },
           {
             label: "Automation usually changes ___",
             options: ["the mix and distribution of jobs, not their total elimination", "the total number of jobs, eliminating nearly all of them quickly", "only low-skill jobs, leaving every other industry unchanged", "nothing about the job market, since new tools only add work"]
           },
           {
-            label: "Synthetic media that imitates a real person's likeness or voice is called ___",
-            options: ["a deepfake", "a computer virus", "a filter bubble", "a digital footprint"]
+            label: "Using someone else's work without permission and presenting it as your own is ___",
+            options: ["plagiarism", "crowdsourcing", "open access", "citizen science"]
           }
         ],
-        correctAnswers: ["significant energy and computation", "the mix and distribution of jobs, not their total elimination", "a deepfake"],
-        hint1: "Data centers, GPUs, electricity.",
+        correctAnswers: ["rapid sharing of information among scientists", "the mix and distribution of jobs, not their total elimination", "plagiarism"],
+        hint1: "An example of an innovation used beyond its intended purpose.",
         hint2: "Net effects, not \"no jobs\".",
-        hint3: "Deep learning + fake.",
-        explanation: "Large models = big energy. Automation = job-mix shifts. Deepfakes = synthetic likeness/voice."
+        hint3: "It may have legal consequences.",
+        explanation: "The Web began as a tool for scientists. Automation = job-mix shifts. Presenting others' work as your own is plagiarism."
       }
     },
     {
@@ -158,7 +157,7 @@ These are exactly the kinds of "evaluate the impact" scenarios the AP exam's mul
 - "Always-on devices" → continuous data + privacy concerns.
 - "AI-generated content" → IP, labor, misinformation framing.
 - "Automation" → distribution of work, not pure replacement.
-- Cite a SPECIFIC affected group when describing harm.
+- The best answer choice usually names a SPECIFIC affected group.
       `
     },
     {

@@ -18,8 +18,8 @@ The Internet is the substrate everything else runs on.
 | Connection | Why it matters |
 |-----------|---------------|
 | Internet ↔ Binary (BI 2) | All packets are bit sequences. |
-| Internet ↔ Algorithms (BI 3) | Routing IS an algorithm; so is congestion control. |
-| Internet ↔ Security (BI 4) | TLS encrypts traffic; certificates establish trust. |
+| Internet ↔ Algorithms (BI 3) | Routing, finding a path, is an algorithm. |
+| Internet ↔ Security (BI 5) | Encryption protects traffic; certificate authorities establish trust. |
 | Internet ↔ Impact (BI 5) | Global reach amplifies both benefit and harm. |
       `
     },
@@ -45,13 +45,13 @@ The Internet is the substrate everything else runs on.
           {
             question: "HTTPS adds which property over HTTP?",
             options: [
-              "Faster page loads, since TLS compresses every response.",
-              "Encryption and server authentication, provided by TLS.",
-              "Guaranteed delivery of every packet, provided by TLS.",
+              "Faster page loads, since every response is compressed.",
+              "Encryption, with a certificate that validates the server.",
+              "Guaranteed delivery of every packet in the right order.",
               "Lower bandwidth use, since encrypted pages are smaller."
             ],
             correctAnswer: 1,
-            explanation: "HTTPS = HTTP over TLS, which encrypts traffic and authenticates the server's certificate."
+            explanation: "HTTPS encrypts the traffic, and the site's digital certificate, issued by a certificate authority, validates its encryption keys."
           }
         ]
       }
@@ -62,27 +62,24 @@ The Internet is the substrate everything else runs on.
       content: `
 ## Open Standards As The Internet's Superpower
 
-Anyone can implement TCP/IP. Any vendor's router can interoperate with any other's. This **open standardization** is why the Internet scaled to billions of devices in 30 years.
+Anyone can implement TCP/IP. Any vendor's router can interoperate with any other's. Because the protocols are **open**, users can easily connect additional devices, which is a big reason the Internet scaled to billions of devices.
 
 ## Routing As An Algorithm
 
-Routers run algorithms (e.g., BGP) to decide where to forward each packet. These algorithms must adapt to:
+Routing is the process of finding a path from sender to receiver, and on the Internet it is **dynamic**. Paths adapt to:
 
 - New networks coming online.
-- Failed links being removed.
-- Congestion shifting traffic to alternate paths.
+- Failed devices or connections.
+- Busy connections, shifting traffic to other paths.
 
-The result is a network that **self-heals** as conditions change.
+If a device or connection fails, later data are sent along a different route if one exists, so the network keeps working. This is **fault tolerance**, made possible by **redundant** paths.
 
 ## Encryption On The Internet
 
-TLS (Transport Layer Security) wraps TCP connections to provide:
+Data sent over public networks can be intercepted, analyzed, and modified. **Encryption** encodes data to prevent unauthorized access; only someone with the right key can decrypt it. When you see **https://** and a padlock:
 
-- **Confidentiality**: an eavesdropper sees ciphertext only.
-- **Integrity**: tampering is detected.
-- **Authentication**: the server's certificate proves it's really who it claims to be.
-
-Modern web traffic is overwhelmingly HTTPS. The padlock icon in your browser indicates TLS is active.
+- The traffic between you and the site is **encrypted**.
+- The site presented a **digital certificate**. **Certificate authorities** issue these certificates to validate who owns the encryption keys, based on a trust model.
 
 ## Global Reach And Impact
 
@@ -104,15 +101,15 @@ Big Idea 5 examines these consequences.
 
 2) An open _______ enables any device to join the Internet.
 
-3) When a network self-adapts after a router fails, this is enabled by _______ algorithms.
+3) When data are rerouted after a router fails, this is made possible by _______ paths between devices.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["secure", "standard", "routing"],
+        correctAnswers: ["secure", "standard", "redundant"],
         hint1: "HTTP + secure = HTTPS.",
         hint2: "Like TCP/IP standards.",
-        hint3: "They adjust paths.",
-        explanation: "HTTPS = HTTP over TLS (S for secure). Open standards enable joining. Routing algorithms enable resilience."
+        hint3: "Extra, backup paths.",
+        explanation: "HTTPS = HTTP Secure. Open standards enable joining. Redundant paths make rerouting possible."
       }
     },
     {
@@ -124,8 +121,8 @@ Big Idea 5 examines these consequences.
       exercise: {
         dropdowns: [
           {
-            label: "Inside HTTPS, the encryption itself happens at the ___ layer",
-            options: ["TLS (between transport and application)", "IP (the internet / routing layer)", "TCP (the transport layer itself)", "HTTP (the application layer itself)"]
+            label: "A digital certificate for a website is issued by ___",
+            options: ["a certificate authority", "the user's web browser", "the nearest router", "the Internet's routing protocol"]
           },
           {
             label: "A \"self-healing\" property of the Internet means ___",
@@ -136,11 +133,11 @@ Big Idea 5 examines these consequences.
             options: ["interoperable across vendors", "controlled by a single company", "faster than proprietary networks", "secure by default for all users"]
           }
         ],
-        correctAnswers: ["TLS (between transport and application)", "traffic re-routes around failed links", "interoperable across vendors"],
-        hint1: "TLS sits above TCP.",
-        hint2: "Routing protocols adjust.",
+        correctAnswers: ["a certificate authority", "traffic re-routes around failed links", "interoperable across vendors"],
+        hint1: "They validate ownership of encryption keys.",
+        hint2: "Routing is dynamic.",
         hint3: "Anyone can implement the standards.",
-        explanation: "TLS sits above TCP; routing self-heals around failures; open standards enable interoperability."
+        explanation: "Certificate authorities issue digital certificates; routing works around failures; open standards enable interoperability."
       }
     },
     {
@@ -150,8 +147,8 @@ Big Idea 5 examines these consequences.
 ## AP Exam Strategy: Cross-Topic Internet Questions
 
 - "Open standards" + "interoperability" + "scalability" = Internet design wins.
-- HTTPS = HTTP + TLS. Provides confidentiality, integrity, authentication.
-- Self-healing routing = a built-in algorithmic property of the Internet.
+- HTTPS = HTTP + encryption, with a certificate from a certificate authority.
+- Dynamic routing + redundant paths = fault tolerance.
 - A question about "single point of failure" is asking about redundancy / distributed design.
       `
     },
@@ -172,7 +169,7 @@ Big Idea 5 examines these consequences.
               "The page and its images will load faster than they would over HTTP."
             ],
             correctAnswer: 1,
-            explanation: "HTTPS provides encryption and server authentication; it does NOT promise safety of the site's practices or the user's account."
+            explanation: "HTTPS encrypts the connection and the certificate validates the site's keys; it does NOT promise the site's practices are safe or that the user's account cannot be compromised."
           },
           {
             question: "A regional Internet outage causes a major undersea cable to fail. Many websites still load, possibly slower. The most accurate explanation is ___",
@@ -183,7 +180,7 @@ Big Idea 5 examines these consequences.
               "TCP retransmits packets until the broken cable is repaired."
             ],
             correctAnswer: 1,
-            explanation: "Routing protocols redirect packets via remaining paths — the network's self-healing property."
+            explanation: "The Internet is fault-tolerant: when a connection fails, data are sent along a different route if one exists."
           }
         ]
       }

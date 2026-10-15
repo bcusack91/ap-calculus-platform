@@ -20,7 +20,7 @@ The "everything is bits" idea makes the rest of the course possible.
 | **Internet (BI 4)** | All packets are bits, regardless of media (fiber, copper, radio). |
 | **Algorithms (BI 3)** | Algorithms manipulate bit patterns — search, sort, compress. |
 | **Compression (BI 2)** | Encode the same data in fewer bits. |
-| **Security (BI 4)** | Encryption transforms bits into other bits unreadable without a key. |
+| **Security (BI 5)** | Encryption transforms bits into other bits unreadable without a key. |
 | **Impact (BI 5)** | A digital file is trivial to copy and share — that changes society. |
       `
     },
@@ -69,16 +69,16 @@ A network router doesn't know whether the bits it forwards are an image, a song,
 
 A 4-byte sequence 01000001 01000010 01000011 01000100 could mean:
 
-- **Text (ASCII)**: "ABCD"
+- **Text**: the letters "ABCD", under a common character code
 - **Four small unsigned integers**: 65, 66, 67, 68
-- **One 32-bit unsigned integer**: 1,094,861,636
-- **Pixels**: ¼ of a row of an image (each byte a grayscale level)
+- **One large whole number**: all 32 bits read together as a single binary number
+- **Pixels**: four grayscale brightness levels, one byte each
 
-The interpretation lives in the program reading the file, not in the file itself. **File extensions** (".txt", ".png") and **headers** (magic bytes at the start of the file) tell programs how to interpret bytes.
+The interpretation lives in the program reading the file, not in the file itself. This is the CED idea that **the same sequence of bits may represent different types of data in different contexts**.
 
 ## Lossless Encoding Connections
 
-Compression (next part) takes a bit pattern and produces a shorter one that decodes back to the same original. Encryption takes a bit pattern and produces a same-length one that only decodes with a key. Both rely on the universality of bits.
+Lossless compression takes a bit pattern and produces a shorter one that decodes back to the same original. Encryption takes a bit pattern and produces one that can only be decoded with a key. Both rely on the universality of bits.
       `
     },
     {
@@ -91,15 +91,15 @@ Compression (next part) takes a bit pattern and produces a shorter one that deco
 
 2) The same byte sequence can have different meanings depending on how the program _______ it.
 
-3) A short magic-bytes signature at the start of a file tells programs the file _______.
+3) Using digital data to approximate real-world analog data is an example of _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["bits", "interprets", "format"],
+        correctAnswers: ["bits", "interprets", "abstraction"],
         hint1: "The base-2 universal layer.",
         hint2: "Reading-side decision.",
-        hint3: "PNG, JPEG, GIF — these are all formats.",
-        explanation: "All network data = bits. Bytes need an interpretation. File format is signaled by headers and extensions."
+        hint3: "Hiding details to focus on the main idea.",
+        explanation: "All network data = bits. Bytes need an interpretation. Approximating analog data with digital samples is abstraction."
       }
     },
     {
@@ -111,23 +111,23 @@ Compression (next part) takes a bit pattern and produces a shorter one that deco
       exercise: {
         dropdowns: [
           {
-            label: "Encrypting a 1 MB document produces a ciphertext that is approximately ___",
-            options: ["1 MB", "0.5 MB", "2 MB", "8 MB"]
+            label: "Read as a whole number, the byte 01000001 equals ___",
+            options: ["65", "64", "129", "130"]
           },
           {
             label: "A network router primarily reads ___ when forwarding a packet",
             options: ["the headers (source / destination)", "the payload (the data being sent)", "the file metadata (name / type)", "the encryption key (sender's / receiver's)"]
           },
           {
-            label: "The same 8 bits 01000001 mean \"A\" only when interpreted as ___",
-            options: ["ASCII text", "a grayscale pixel", "a machine instruction", "an audio sample"]
+            label: "The same 8 bits 01000001 mean the letter \"A\" only when interpreted as ___",
+            options: ["a text character", "a grayscale pixel", "a whole number", "an audio sample"]
           }
         ],
-        correctAnswers: ["1 MB", "the headers (source / destination)", "ASCII text"],
-        hint1: "Encryption preserves length (roughly).",
+        correctAnswers: ["65", "the headers (source / destination)", "a text character"],
+        hint1: "Place values 64 and 1 are on.",
         hint2: "Routers care about routing.",
         hint3: "Interpretation gives meaning.",
-        explanation: "Encryption preserves size. Routers route by header. Interpretation gives bit patterns meaning."
+        explanation: "01000001 = 64 + 1 = 65. Routers route using the packet's metadata. Interpretation gives bit patterns meaning."
       }
     },
     {
@@ -139,7 +139,6 @@ Compression (next part) takes a bit pattern and produces a shorter one that deco
 - "How is X transmitted on the Internet?" → bits, regardless of X.
 - "What does a byte sequence MEAN?" → the encoding scheme decides.
 - Encryption and compression are both bit-pattern transformations.
-- File extension ≠ guarantee: malicious bytes can be mislabeled. (Hence: never rely on extension for security.)
       `
     },
     {
@@ -154,23 +153,23 @@ Compression (next part) takes a bit pattern and produces a shorter one that deco
             question: "A video conferencing app simultaneously sends video frames, audio samples, and chat text. From a network standpoint, ___",
             options: [
               "each of the three media must travel on its own physically separate channel between the endpoints.",
-              "every stream is bits in packets, separated by metadata in the application protocol.",
-              "the video stream bypasses transport-layer encryption while the audio and chat streams are still encrypted.",
+              "every stream is sent as bits in packets, with metadata that lets the receiver reassemble each stream.",
+              "the video stream must first be converted back into an analog signal before it can travel across the network.",
               "the chat text must arrive at the recipient before any of the video frames or audio samples are processed."
             ],
             correctAnswer: 1,
-            explanation: "Different media share the same physical and Internet protocols; the application layer separates them."
+            explanation: "Different media share the same network and protocols; each packet carries metadata used for routing and reassembly."
           },
           {
-            question: "A user receives a file labeled \"vacation.jpg\" but the file's magic bytes correspond to a Windows executable. What is the most accurate concern?",
+            question: "One program saves a list of pixel brightness values to a file. A second program opens the same file as text and shows meaningless characters. What is the best explanation?",
             options: [
-              "The image will simply appear inverted or color-shifted in a normal viewer.",
-              "The extension may be misleading, and opening the file could run malicious code.",
-              "A file's magic bytes are guaranteed by the operating system to always match the file extension on disk.",
-              "There is no concern at all, since file extensions on a downloaded file always honestly describe the contents."
+              "The bits were damaged while the file was being saved.",
+              "The same bits mean different things in different contexts.",
+              "Pixel brightness values cannot be stored as binary data.",
+              "Text characters always need more bits than pixel values."
             ],
             correctAnswer: 1,
-            explanation: "Mismatched magic bytes / extensions are a classic malware-delivery technique."
+            explanation: "The bits were stored correctly; the second program interpreted them under a different convention, so they became different data."
           }
         ]
       }

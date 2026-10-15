@@ -36,7 +36,7 @@ export const cspCreativeDevelopmentPart3Data = {
               "sequential code that runs top-to-bottom on launch",
               "event-driven code triggered by a user action",
               "iterative code that loops a fixed number of times",
-              "recursive code that calls itself for each event"
+              "selection code that picks a branch once at launch"
             ],
             correctAnswer: 1,
             explanation: "Event-driven code responds to events."
@@ -45,7 +45,7 @@ export const cspCreativeDevelopmentPart3Data = {
             question: "Which pattern most directly reduces code duplication?",
             options: [
               "Writing the same block of statements at each call site.",
-              "Defining a procedure once and calling it from many places.",
+              "Defining a procedure once and calling it.",
               "Replacing functions with a long chain of IF statements.",
               "Using hardcoded literal values inline at every single call site."
             ],
@@ -76,12 +76,7 @@ Hide details behind a simple interface. Once **gradeAnswer(userAnswer, key)** wo
 
 ## Event-Driven Programming
 
-Modern UIs wait for events:
-
-    ON CLICK button1:
-      DISPLAY("You clicked!")
-
-The program responds to events instead of running top-to-bottom and exiting.
+An **event** is associated with an action, such as a key press, a mouse click, or the program starting, and it supplies input to the program. In **event-driven programming**, statements run when they are **triggered** rather than through the sequential flow of control. For example, a procedure that displays "You clicked!" runs each time button1 is clicked, and not at any other time.
       `
     },
     {
@@ -118,7 +113,7 @@ The program responds to events instead of running top-to-bottom and exiting.
             options: ["a reusable abstraction called from many places", "code copied wherever a list is printed", "an event handler tied to one button", "a loop written inline each time"]
           },
           {
-            label: "Pseudocode like ON CLICK followed by a block is ___",
+            label: "Code that runs only when a user clicks a button is ___",
             options: ["event-driven", "iterative", "sequential", "conditional selection"]
           },
           {
@@ -128,9 +123,9 @@ The program responds to events instead of running top-to-bottom and exiting.
         ],
         correctAnswers: ["a reusable abstraction called from many places", "event-driven", "understand, test, and maintain"],
         hint1: "Bundling logic for reuse.",
-        hint2: "Triggered by an event.",
+        hint2: "It is triggered by an action.",
         hint3: "Cognitive load drops.",
-        explanation: "Reusable procedures = abstraction. ON CLICK = event-driven. Decomposition aids comprehension."
+        explanation: "Reusable procedures are abstractions. Code triggered by a click is event-driven. Decomposition makes programs easier to understand, test, and maintain."
       }
     },
     {
@@ -168,9 +163,9 @@ The program responds to events instead of running top-to-bottom and exiting.
             question: "You're building a drawing app. Which pattern best fits responding to mouse drags?",
             options: [
               "One sequential script that runs top-to-bottom and then exits.",
-              "Event-driven handlers for mousedown, mousemove, and mouseup events.",
-              "A single while-true loop that polls the mouse x, y, and button state.",
-              "A recursive function that calls itself for every pixel of movement."
+              "Event handlers for mouse presses and moves.",
+              "A single loop that repeats until the mouse stops, then exits.",
+              "A list of every screen pixel, filled in once when the app starts."
             ],
             correctAnswer: 1,
             explanation: "UI interactions are naturally modeled as event handlers."

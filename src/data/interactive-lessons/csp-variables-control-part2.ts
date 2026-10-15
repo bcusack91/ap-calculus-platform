@@ -71,15 +71,15 @@ The arrow ← (or = in many languages) is **assignment**, not equality.
 | String | "hello" |
 | List | [1, 2, 3] |
 
-Some languages enforce types strictly (Java, Rust); others are flexible (Python, JavaScript). AP CSP pseudocode is flexible.
+AP pseudocode does not declare types: the same variable can be assigned a number, a string, a Boolean, or a list.
 
 ## Control Flow: Sequencing, Selection, Iteration
 
 | Construct | Pattern |
 |-----------|---------|
 | **Sequencing** | Step 1, then step 2, then step 3. |
-| **Selection** | IF condition THEN ... ELSE ... |
-| **Iteration** | REPEAT n TIMES ... or REPEAT UNTIL condition ... |
+| **Selection** | IF (condition) { … } ELSE { … } |
+| **Iteration** | REPEAT n TIMES { … } or REPEAT UNTIL (condition) { … } |
 
 Every algorithm in AP CSP can be expressed using just these three building blocks.
 
@@ -91,15 +91,19 @@ Conditions evaluate to true or false. Combine with AND / OR / NOT.
 |-----------|-------|
 | **age ≥ 18** | true if age is at least 18 |
 | **NOT (x = 0)** | true if x is not 0 |
-| **(a > 0) AND (a < 100)** | true if a is in (0, 100) |
+| **(a > 0) AND (a < 100)** | true if a is strictly between 0 and 100 |
 | **(role = "admin") OR (role = "owner")** | true if either |
 
 ## Short Walk-through
 
-    total ← 0
-    FOR EACH grade IN gradeList:
-      total ← total + grade
-    average ← total / LENGTH(gradeList)
+\`\`\`
+total ← 0
+FOR EACH grade IN gradeList
+{
+    total ← total + grade
+}
+average ← total / LENGTH(gradeList)
+\`\`\`
 
 This computes the average using sequencing + iteration + variables.
       `
@@ -177,7 +181,7 @@ This computes the average using sequencing + iteration + variables.
             options: [
               "no loop — just write 50 separate sequential print statements one per even number.",
               "iteration with selection inside, printing n only when n MOD 2 = 0.",
-              "recursion only, with each call deciding whether to print and recursing on n+1.",
+              "selection only, with one IF that checks whether a single number is even.",
               "a loop with no selection, printing every value from 1 to 100."
             ],
             correctAnswer: 1,

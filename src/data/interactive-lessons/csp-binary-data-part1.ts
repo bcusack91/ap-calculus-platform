@@ -19,7 +19,8 @@ Computers use **binary** (base-2) because electronic circuits have two states: O
 |------|------|------------|---------|
 | Base-2 | Binary | 0, 1 | 1010 |
 | Base-10 | Decimal | 0-9 | 10 |
-| Base-16 | Hexadecimal | 0-9, A-F | A |
+
+The AP exam uses only binary and decimal; hexadecimal is not tested.
 
 ---
 
@@ -93,8 +94,12 @@ Repeatedly divide by 2 and track remainders (read bottom to top):
 
 When a value exceeds the number of bits available:
 - 4 bits can store 0-15
-- Trying to store 16 in 4 bits causes an **overflow error**: the value needs more bits than are available
-- Some systems silently wrap around to 0 instead, like an odometer rolling over from 999 to 000, which is why overflow causes wrong results
+- Trying to store 16 in 4 bits causes an **overflow error**: the value needs more bits than are available, so the program either stops with an error or produces a wrong result
+- This happens in languages that store integers in a **fixed number of bits**. The language on the AP exam reference sheet does not have this limit: its integers are limited only by the computer's memory
+
+## Round-off Error
+
+Real numbers (numbers with a decimal part) are also stored in a fixed number of bits, so many of them can only be stored as **approximations**. Calculations with them can produce small **round-off errors** (for example, a result that should be 0.3 printing as 0.30000000000000004).
 
 ## Data Units
 
@@ -108,9 +113,10 @@ When a value exceeds the number of bits available:
 | **Terabyte (TB)** | ~1,000 GB |
 
 ## Representing Other Data Types
-- **Text**: Each character mapped to a number (ASCII: 7 bits, Unicode: up to 32 bits)
+Bits are grouped to represent **abstractions** such as numbers, characters, and colors:
+- **Text**: Each character is stored as a bit pattern under an agreed-upon code
 - **Colors**: RGB values (each 0-255 = 8 bits, total 24 bits per pixel)
-- **Sound**: Sampled as numbers at regular intervals (sampling rate x bit depth)
+- **Sound**: Analog sound is **sampled**: its value is measured at regular intervals and each sample is stored in bits
       `
     },
     {
@@ -171,8 +177,8 @@ When a value exceeds the number of bits available:
 - **Memorize** powers of 2: 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024
 - Know both conversions: binary-to-decimal and decimal-to-binary
 - With n bits: 2^n values, range 0 to 2^n - 1
-- **Overflow** = value exceeds bit capacity. AP loves testing this concept
-- Know how text (ASCII/Unicode), images (RGB pixels), and sound (samples) are stored in binary
+- **Overflow** = value exceeds a fixed number of bits; **round-off** = a real number can only be stored approximately
+- Know that text, images (RGB pixels), and sound (samples) are all stored as bits, and that the same bits can mean different things in different contexts
 - One additional bit DOUBLES the representable values — this is the key relationship
       `
     },

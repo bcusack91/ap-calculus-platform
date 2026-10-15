@@ -70,21 +70,21 @@ Defaults often favor sharing. Periodically review:
 
 ## Public Wi-Fi Caveats
 
-Modern HTTPS protects most traffic on public Wi-Fi. But:
+Data sent over public networks can be intercepted, analyzed, and modified. One way this happens is through a **rogue access point**: a wireless access point that gives unauthorized access to a network. Encryption (HTTPS) protects most web traffic, but:
 
-- Some apps still use unencrypted endpoints.
-- A malicious access point can present invalid certificates (don't bypass).
-- Using a trusted VPN adds an extra layer for higher-risk activities.
+- Some apps still send data unencrypted.
+- A rogue access point may present a certificate that a certificate authority did not issue for that site; never click past a certificate warning.
 
-## Account-Takeover Recovery Plan
+## Warning Signs From Familiar Senders
 
-| Step | Why |
+Unsolicited emails, attachments, links, and forms can be used to compromise a computing system. They can come from **unknown senders** or from **known senders whose security has been compromised**.
+
+| Sign | Why it matters |
 |------|-----|
-| Sign out everywhere | Force attackers off if you re-secure. |
-| Reset password + MFA | Lock attackers out. |
-| Check connected apps | Revoke anything suspicious. |
-| Check recovery email + phone | Attackers often change these. |
-| Notify contacts if needed | They may receive impostor messages. |
+| A friend's account suddenly sends odd links | The account may be compromised; the link may be malicious. |
+| A link's text doesn't match where it leads | A malicious link can be disguised on a web page or in an email. |
+| An unexpected attachment "you must open" | Attachments can carry viruses or other malware. |
+| A free download from an unfamiliar site | Untrustworthy (often free) downloads can contain malware. |
       `
     },
     {
@@ -97,15 +97,15 @@ Modern HTTPS protects most traffic on public Wi-Fi. But:
 
 2) Public Wi-Fi is much safer when sites use _______ rather than HTTP.
 
-3) After an account compromise, you should also check connected apps and the recovery _______.
+3) A wireless access point that gives unauthorized access to a secure network is called a _______ access point.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["default", "HTTPS", "email"],
+        correctAnswers: ["default", "HTTPS", "rogue"],
         hint1: "Out of the box.",
         hint2: "Encrypted web.",
-        hint3: "Recovery channel.",
-        explanation: "Default passwords, HTTPS, recovery email."
+        hint3: "It is not supposed to be there.",
+        explanation: "Default passwords, HTTPS, rogue access points."
       }
     },
     {
@@ -125,15 +125,15 @@ Modern HTTPS protects most traffic on public Wi-Fi. But:
             options: ["be taken seriously, especially on public Wi-Fi", "be clicked through, since it is usually harmless", "be fixed by turning off the antivirus program", "be ignored if the site's padlock is still shown"]
           },
           {
-            label: "After an account takeover, you should also ___",
-            options: ["check (and reset) recovery email, phone, and connected apps", "change (only) the password, then assume the attacker is gone", "wait (a few days) to see whether the attacker returns", "disable (all) MFA so the account is easier to recover"]
+            label: "An unexpected email attachment from a friend whose account was hacked ___",
+            options: ["could contain malware, so don't open it", "is safe because you know the sender", "is safe if it arrived in the morning", "can only contain plain text, not malware"]
           }
         ],
-        correctAnswers: ["changed immediately on setup", "be taken seriously, especially on public Wi-Fi", "check (and reset) recovery email, phone, and connected apps"],
+        correctAnswers: ["changed immediately on setup", "be taken seriously, especially on public Wi-Fi", "could contain malware, so don't open it"],
         hint1: "Setup hardening.",
-        hint2: "TLS warnings.",
-        hint3: "Recovery surface.",
-        explanation: "Change defaults; respect TLS warnings; reset recovery surface after compromise."
+        hint2: "Certificate warnings.",
+        hint3: "Known senders can be compromised.",
+        explanation: "Change defaults; respect certificate warnings; attachments from compromised known senders can carry malware."
       }
     },
     {
@@ -144,7 +144,8 @@ Modern HTTPS protects most traffic on public Wi-Fi. But:
 
 - Defaults favor sharing; review privacy settings.
 - Default device passwords are widely known and scanned.
-- Don't bypass TLS warnings.
+- Don't click past certificate warnings, especially on public Wi-Fi (rogue access points).
+- Unsolicited links and attachments can come from known senders whose accounts were compromised.
       `
     },
     {
@@ -164,7 +165,7 @@ Modern HTTPS protects most traffic on public Wi-Fi. But:
               "switch to a brand new account immediately with no warning to existing contacts at all."
             ],
             correctAnswer: 1,
-            explanation: "Standard account-recovery checklist."
+            explanation: "Malicious links can come from known senders whose security has been compromised; the friend should lock the attacker out and warn contacts not to click."
           },
           {
             question: "A school deploys 200 IoT thermostats with default passwords. The biggest CSP-aligned concern is ___",

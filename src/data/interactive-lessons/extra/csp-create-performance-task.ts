@@ -3,13 +3,13 @@ import type { LessonData } from '../registry'
 /**
  * Hand-authored interactive lesson — Create Performance Task (AP Computer Science Principles).
  * Registry key / DB Topic.slug: 'csp-create-performance-task'.
- * 7 parts, gold-standard structure modeled on the algebra1-completing-the-square pilot:
- * teach (text) → interactive check (multiple-choice / dropdown-select / input-boxes) →
- * worked applications → Exit Quiz. Concept-forward (non-math topic), so checks favor
- * multiple-choice + dropdown, with quantitative input-boxes where natural (scoring points,
- * list indexing, binary/data sizes). Pseudocode follows the College Board AP CSP Exam
- * Reference (1-indexed lists, DISPLAY/INPUT, MOD, etc.). LaTeX uses DOUBLED backslashes
- * (template-literal strings); bare currency is escaped as \\$.
+ * 7 parts: teach (text) → interactive check (multiple-choice / dropdown-select / input-boxes) →
+ * worked applications → Exit Quiz. Follows the current (2023 CED, unchanged for May 2027) task:
+ * program code + video + Personalized Project Reference submitted in the AP Digital Portfolio,
+ * then Written Response 1 and 2(a)–(c) answered on exam day using the PPR. Six rubric rows.
+ * Pseudocode follows the College Board AP CSP Exam Reference (1-indexed lists, DISPLAY/INPUT,
+ * RETURN(expression), etc.); the task itself allows any programming language. LaTeX uses
+ * DOUBLED backslashes (template-literal strings); bare currency is escaped as \\$.
  */
 export const parts: LessonData[] = [
   // ───────────────────────── PART 1 ─────────────────────────
@@ -30,29 +30,28 @@ export const parts: LessonData[] = [
 | Section |
 |---------|
 | What the Create Performance Task Is |
-| What You Submit |
-| The Six Scoring Points |
-| The Rules: Time, Collaboration, Plagiarism |
+| What You Submit, and What You Write on Exam Day |
+| The Six Scoring Rows |
+| The Rules: Time, Collaboration, Acknowledgment |
 
-> 🔑 **Key Concept:** The **Create Performance Task (CPT)** is a through-course assessment for AP Computer Science Principles. You design and build a working program, then submit the **code**, a short **video** of it running, and **written responses**. It is scored against **6 points**, and almost every lost point traces back to a *missing requirement*, not bad coding.`,
+> 🔑 **Key Concept:** The **Create performance task** is Section II of the AP CSP Exam, worth **30%** of your score. During the course you build a program and submit three components. Then, on exam day, you answer written-response prompts about **your own code**, using a reference sheet you made from it. Six rubric rows are scored, and most lost points trace back to a *missing requirement*, not bad coding.`,
       },
       {
         id: 'cpt1-overview',
         type: 'text' as const,
-        content: `## What You Actually Submit
+        content: `## Two Stages
 
-The College Board requires **four components**:
+**Stage 1 — during the course (at least 9 hours of class time).** You submit three components in the AP Digital Portfolio by the deadline in late April:
 
-| Artifact | What it is | Key limit |
-|----------|-----------|-----------|
-| **Program Code** | Your full program as a single PDF | Must include the required features |
-| **Video** | Screen capture of the program **running** | $\\le 1$ minute, $\\le 30$ MB, no narration/audio |
-| **Personalized Project Reference (PPR)** | Screenshots of *your* procedure and *your* list, pasted into the written-response template | 2 required code segments |
-| **Written Responses** | Prose answers (3a–3d) describing your program | Word limits per prompt |
+| Component | What it is | Key limit |
+|-----------|-----------|-----------|
+| **Program Code** | Your complete program, saved as a PDF | Must meet the program requirements |
+| **Video** | A screen recording of your program **running** | $\\le 1$ minute, $\\le 30$ MB, no voice narration |
+| **Personalized Project Reference (PPR)** | Screen captures of your **procedure** (and a call to it) and your **list** (where data is stored and where it is used) | No comments allowed in the captured code |
 
-> 💡 The video must show **input → output** behavior — it has to demonstrate the program *doing something* in response to input, not just a static screen.
+**Stage 2 — on exam day.** In Section II of the exam, you answer **Written Response 1** and **Written Response 2(a), 2(b), and 2(c)** about your program. The College Board gives you back your PPR to look at while you write.
 
-> ⚠️ **Audio matters:** the video may **not** contain any spoken narration. Submitting a narrated video can cost you a point and risks a plagiarism-policy flag.`,
+> ⚠️ If your PPR is not submitted as final by the deadline, you will not have it on exam day.`,
       },
       {
         id: 'cpt1-q-artifacts',
@@ -61,21 +60,21 @@ The College Board requires **four components**:
         exercise: {
           questions: [
             {
-              question: 'Which of these is NOT something you submit for the Create Performance Task?',
+              question: 'Which of these is NOT submitted in the AP Digital Portfolio before the deadline?',
               options: [
-                'A typed reflection essay graded for grammar and citations',
                 'A video of the program running',
                 'The full program code as a PDF',
-                'Written responses describing the program',
+                'Your answers to the written-response prompts',
+                'The Personalized Project Reference',
               ],
-              correctAnswer: 0,
-              explanation: 'You submit code, a video, the Personalized Project Reference, and written responses (3a–3d). There is no graded grammar/citation essay — the written responses are scored for technical accuracy, not English-class mechanics.',
+              correctAnswer: 2,
+              explanation: 'You submit the program code, the video, and the Personalized Project Reference during the course. The written responses are answered on exam day, using your PPR.',
             },
             {
-              question: 'What is the maximum length of the Create Performance Task video?',
+              question: 'What is the maximum length of the Create performance task video?',
               options: ['1 minute', '3 minutes', '5 minutes', '30 seconds'],
               correctAnswer: 0,
-              explanation: 'The video must be at most 1 minute long and at most 30 MB, with no audio narration. It must show the program receiving input and producing output.',
+              explanation: 'The video must be at most 1 minute long and at most 30 MB, with no voice narration (text captions are allowed). It must show input, program functionality, and output.',
             },
           ],
         },
@@ -83,38 +82,38 @@ The College Board requires **four components**:
       {
         id: 'cpt1-scoring',
         type: 'text' as const,
-        content: `## The Six Scoring Points
+        content: `## The Six Scoring Rows
 
-Your submission is scored against **6 independent points**. You can earn each one separately.
+Each row is worth 1 point, and you can earn each one separately.
 
-| # | Row | What it asks for |
-|---|-----|------------------|
-| **1** | Program Purpose & Function | Video shows input/output; 3a names the purpose & function |
-| **2** | Data Abstraction | A **list** (or other collection) that stores data the program uses |
-| **3** | Managing Complexity | The list is used in a way that makes the program *easier* than without it |
-| **4** | Procedural Abstraction | A **student-developed procedure with $\\ge 1$ parameter** that affects its behavior |
-| **5** | Algorithm Implementation | That procedure contains **sequencing, selection, AND iteration** |
-| **6** | Testing | 3d describes two calls with different arguments and their results |
+| # | Row | What earns the point |
+|---|-----|----------------------|
+| **1** | Video | The video shows the program running: **input**, program **functionality**, and **output** |
+| **2** | Program Requirements | The code includes a **list**, a **procedure**, a **call** to that procedure, **selection**, and **iteration** |
+| **3** | Written Response 1 | Program design, function, and purpose (e.g., an expected user and how your design meets their needs) |
+| **4** | Written Response 2(a) | Algorithm development (e.g., how many times a loop runs; what would make it run forever) |
+| **5** | Written Response 2(b) | Errors and testing (e.g., a change to your procedure that would cause a run-time error, and why) |
+| **6** | Written Response 2(c) | Data and procedural abstraction (e.g., an algorithm that uses your list) |
 
-> 🔑 **The headline:** Points 2–6 are all about **two pieces of code** — your **list** and your **procedure**. Pick those two carefully and most of the rubric falls into place.`,
+> 🔑 **The headline:** rows 2 through 6 all depend on **two pieces of your code**: your **list** and your **procedure**. Choose them carefully, and know them well enough to explain on exam day.`,
       },
       {
         id: 'cpt1-input-points',
         type: 'input-boxes' as const,
         content: `**Score Arithmetic** 🧮
 
-The Create Performance Task contributes **30%** of your total AP CSP score, and the multiple-choice exam contributes the other 70%.
+Section II (the Create performance task, including the written responses) is **30%** of your AP CSP score; the multiple-choice section is the rest.
 
-**1)** How many scoring points is the Create Performance Task worth? Enter the number.
-**2)** A student earns points 1, 2, 4, and 6 but misses 3 and 5. How many of the 6 points did they earn?
-**3)** What percent of the final AP score comes from the end-of-course multiple-choice exam? Enter the number only (no % sign).`,
+**1)** How many rubric rows (points) are there for the Create performance task? Enter the number.
+**2)** A student earns the Video, Program Requirements, Written Response 1, and Written Response 2(b) rows. How many of the 6 points did they earn?
+**3)** What percent of the AP score comes from the multiple-choice section? Enter the number only (no % sign).`,
         exercise: {
           boxes: 3,
           correctAnswers: ['6', '4', '70'],
-          hint1: 'The rubric lists points 1 through 6 — count them.',
-          hint2: 'Points earned: 1, 2, 4, 6 — that is four checkmarks.',
-          hint3: 'The CPT is 30% of the score, so the multiple-choice exam is the remaining $100 - 30$ percent.',
-          explanation: '1) The CPT has 6 scoring points. 2) Earning points 1, 2, 4, and 6 is 4 points. 3) The exam is 70% (the CPT is 30%).',
+          hint1: 'Video, Program Requirements, and four written-response prompts.',
+          hint2: 'Count the rows named: four of them.',
+          hint3: 'Section II is 30% of the score, so the multiple-choice section is $100 - 30$ percent.',
+          explanation: '1) There are 6 rows. 2) The four rows named earn 4 points. 3) Multiple choice is 70% (Section II is 30%).',
         },
       },
       {
@@ -122,14 +121,13 @@ The Create Performance Task contributes **30%** of your total AP CSP score, and 
         type: 'text' as const,
         content: `## The Rules You Must Not Break
 
-The CPT is completed **in class** under your teacher's supervision.
+- ⏱️ Your teacher provides **at least 9 hours** of class time for the program, video, and PPR.
+- 🤝 You **may collaborate** while coming up with ideas and **developing the program code**, including debugging and testing. You may **not** collaborate on the **video** or the **PPR**, and the written responses are yours alone on exam day.
+- 📝 Code you did not write (a teacher's starter code, an API or open-source code, or code generated by an AI tool) must be **acknowledged with a comment in your program code**, such as "This code was generated using [AI tool name]."
+- 🚫 The **PPR** may not contain comments or course content. Including them earns a score of **0** on the entire Create performance task, written responses included.
+- 🖊️ Plagiarism also earns a **0** on the Create performance task, including the written responses.
 
-- ⏱️ You get **at least 12 hours** of in-class time to complete it.
-- 🤝 You **may collaborate** while *developing* the program — but the **video and all written responses must be entirely your own**.
-- 🚫 Borrowed code (from the internet, a friend, AI tools, or a library) must be **clearly marked** and **cannot** be the part you describe for the procedure/algorithm points.
-- 🖊️ You sign that the submission is your own work; plagiarism can void your entire AP score.
-
-> ⚠️ **The single most common disaster:** describing borrowed code as your "student-developed procedure." Points 4 and 5 require code **you wrote**. If you didn't write it, it can't earn those points — and claiming otherwise is an integrity violation.`,
+> ⚠️ Built-in or existing procedures, event handlers, and main methods are **not** student-developed. Your PPR procedure must be one you wrote.`,
       },
       {
         id: 'cpt1-q-rules',
@@ -138,26 +136,26 @@ The CPT is completed **in class** under your teacher's supervision.
         exercise: {
           questions: [
             {
-              question: 'During the Create Performance Task, which of these is ALLOWED?',
+              question: 'During the Create performance task, which of these is ALLOWED?',
               options: [
-                'Collaborating with classmates while developing the program.',
-                'Having a friend write your video script and record it for you.',
-                'Submitting a procedure you copied from a website as your own student-developed code.',
-                'Adding spoken narration over your demonstration video.',
+                'Having a friend record and edit your video for you',
+                'Adding comments that explain your code to the PPR',
+                'Debugging your program code alongside a classmate',
+                'Adding spoken narration over your demonstration video',
               ],
-              correctAnswer: 0,
-              explanation: 'Collaboration during program development is explicitly permitted. The video and written responses must be your own, borrowed code can\'t serve as your student-developed procedure, and the video must have no narration.',
+              correctAnswer: 2,
+              explanation: 'Collaboration is allowed during ideation and development of the program code, including debugging. The video and PPR must be created independently, the PPR may not contain comments, and the video may not have narration.',
             },
             {
-              question: 'How is borrowed code (from the internet, a friend, or an AI tool) handled?',
+              question: 'Part of your program was generated by an AI tool. How should it be handled?',
               options: [
-                'It must be clearly marked and cannot be the procedure you describe for Points 4 & 5.',
-                'It is forbidden entirely; using any is an automatic zero.',
-                'It can be used freely and described as your own work.',
-                'It only needs to be mentioned in the video.',
+                'It is forbidden, and using any of it is an automatic zero',
+                'It can be used freely and described as your own work',
+                'It only needs to be mentioned in the video',
+                'It needs a comment in the code that names the AI tool',
               ],
-              correctAnswer: 0,
-              explanation: 'Borrowed code is allowed but must be clearly marked, and it cannot be the student-developed procedure that earns the procedural-abstraction and algorithm points.',
+              correctAnswer: 3,
+              explanation: 'AI-assisted code is allowed but must be acknowledged with a comment in the program code, and you must understand it well enough to explain it on exam day.',
             },
           ],
         },
@@ -165,7 +163,7 @@ The CPT is completed **in class** under your teacher's supervision.
       {
         id: 'cpt1-outro',
         type: 'text' as const,
-        content: `In Part 2 we lock in **Point 1** — choosing a purpose and capturing the right video.`,
+        content: `In Part 2 we lock in the **Video** row, the **Program Requirements** row, and **Written Response 1**.`,
       },
     ],
   },
@@ -179,27 +177,27 @@ The CPT is completed **in class** under your teacher's supervision.
         type: 'text' as const,
         content: `# 💻 Create Performance Task
 
-**Part 2 of 7 — Point 1: Program Purpose, Input & Output**
+**Part 2 of 7 — The Video, the Program Requirements & Written Response 1**
 
 ---
 
-> 🔑 **The Idea:** Point 1 rewards a program that *does something visible*. The video must show your program **respond to input** and **produce output**, and response 3a must state the program's **purpose** (what problem it addresses) and its **function** (what it does when run).`,
+> 🔑 **The Idea:** The Video row rewards a recording that shows your program **receiving input**, **doing something** (its functionality), and **producing output**. The Program Requirements row checks your code for the required parts. Written Response 1 asks you to explain your program's **design, function, and purpose**.`,
       },
       {
         id: 'cpt2-purpose',
         type: 'text' as const,
         content: `## Purpose vs. Function
 
-These two words are scored separately in 3a — don't blur them.
+These two words mean different things — don't blur them.
 
 | Term | Question it answers | Example |
 |------|--------------------|---------|
-| **Purpose** | *Why* does this program exist? What need does it meet? | "Help a user track daily water intake to stay hydrated." |
+| **Purpose** | *Why* does this program exist? What problem does it solve or what interest does it pursue? | "Help a user track daily water intake to stay hydrated." |
 | **Function** | *What* happens when it runs? The behavior the user sees. | "The user enters how many cups they drank; the program adds it to a running total and warns them if they're below their goal." |
 
-To earn Point 1, the **video** must demonstrate that function: it has to show the program **receiving input** (a click, typed value, sensor reading, etc.) and **producing output** (text, graphics, sound, or a state change) as a result.
+**Input** can come from the user (including actions that trigger events), a device, an online data stream, or a file. **Output** can be visual, audible, tactile, or text, and it should depend on the input and the program's functionality.
 
-> 💡 A program that only *prints a fixed message* with no input will **not** earn Point 1 — there must be a visible **input → output** relationship.`,
+> 💡 A program that only displays a fixed message, with no input, cannot show the input → functionality → output that the Video row requires.`,
       },
       {
         id: 'cpt2-q-purpose',
@@ -210,24 +208,24 @@ To earn Point 1, the **video** must demonstrate that function: it has to show th
             {
               question: 'Which statement describes a program\'s FUNCTION (not its purpose)?',
               options: [
-                'When the user clicks a fruit, the program adds its calories to a total and displays the new total.',
                 'The program helps people eat more healthily.',
-                'The program was created because obesity is a public-health concern.',
+                'The program exists because poor nutrition is a public-health concern.',
+                'When the user taps a fruit, the program adds its calories to a total.',
                 'The goal is to make nutrition tracking less tedious.',
               ],
-              correctAnswer: 0,
-              explanation: 'Function = what the program does when it runs (the observable behavior). The other three describe why the program exists — that is the purpose.',
+              correctAnswer: 2,
+              explanation: 'Function is what the program does when it runs (its observable behavior). The other three describe why the program exists, which is its purpose.',
             },
             {
-              question: 'A video shows a program that prints "Hello, world!" and nothing else, with no input. Which scoring point is at risk?',
+              question: 'A video shows a program that displays "Hello, world!" and nothing else, with no input. Which row is at risk?',
               options: [
-                'Point 1 — the video must show input producing output, and this program takes no input.',
-                'Point 4 — procedural abstraction.',
-                'Point 2 — data abstraction.',
-                'No point is at risk; printing text is enough.',
+                'The Video row, since a click or keypress never changes the display',
+                'Written Response 2(c), since that prompt covers abstraction',
+                'Written Response 2(a), since that prompt covers loops',
+                'No row, since displaying any text is enough for a video',
               ],
               correctAnswer: 0,
-              explanation: 'Point 1 requires the video to demonstrate input-driven output. A fixed message with no input fails to show that input → output relationship.',
+              explanation: 'The Video row requires the recording to show input, program functionality, and output. A fixed message with no input shows none of that relationship.',
             },
           ],
         },
@@ -235,15 +233,15 @@ To earn Point 1, the **video** must demonstrate that function: it has to show th
       {
         id: 'cpt2-video',
         type: 'text' as const,
-        content: `## Capturing a Point-1 Video
+        content: `## Capturing the Video
 
-A clean video that earns Point 1 follows a simple arc:
+A clean video follows a simple arc:
 
 1. **Show a starting state** (the screen before input).
 2. **Provide input** — type a value, click a button, move a slider.
 3. **Show the output change** — a number updates, a sprite moves, a message appears.
 
-> 🔑 Plan your video as a **30-second demo of one feature**, not a tour of the whole app. One crisp input → output cycle is worth more than a rushed montage.
+> 🔑 Plan your video as a **short demo of one feature**, not a tour of the whole app. One clear input → output cycle is enough.
 
 ### Video Specs to Memorize
 
@@ -251,14 +249,19 @@ A clean video that earns Point 1 follows a simple arc:
 |------|------------|
 | Length | $\\le 1$ minute |
 | File size | $\\le 30$ MB |
-| Audio | **None** (no narration) |
-| Format | .mp4, .wmv, .avi, or .mov |
-| Must show | Input **and** the resulting output |`,
+| Audio | **No voice narration** (text captions are allowed) |
+| Personal details | No distinguishing information about yourself |
+| Format | .webm, .mp4, .wmv, .avi, or .mov |
+| Must show | Input, program functionality, **and** output |
+
+## The Program Requirements Row
+
+Your code must include a **list**, a **procedure**, a **call** to that procedure, **selection**, and **iteration**. The point is **not** earned if the list holds only one element, if the list is never really used, or if the selection or iteration is trivial (it does not affect the program's outcome).`,
       },
       {
         id: 'cpt2-dropdown',
         type: 'dropdown-select' as const,
-        content: `**Classify Each Part of 3a** 🔽
+        content: `**Classify Each Statement** 🔽
 
 For a program that *recommends a movie based on the user's chosen genre*, sort each statement.`,
         exercise: {
@@ -279,36 +282,40 @@ For a program that *recommends a movie based on the user's chosen genre*, sort e
           correctAnswers: ['Purpose', 'Function', 'Demonstrates input → output'],
           hint1: 'Purpose = the *why* / the need being addressed.',
           hint2: 'Function = the observable *behavior* when the program runs.',
-          hint3: 'For Point 1 the video must show input (selecting a genre) causing output (a title appearing).',
-          explanation: 'The "busy night" statement is the purpose; the "select genre → return title" statement is the function; the video requirement is exactly the input → output demonstration Point 1 wants.',
+          hint3: 'The Video row needs input (selecting a genre) causing output (a title appearing).',
+          explanation: 'The "busy night" statement is the purpose; the "select genre → return title" statement is the function; the video requirement is exactly the input → output demonstration the Video row wants.',
         },
       },
       {
         id: 'cpt2-specs-recap',
         type: 'text' as const,
-        content: `## Don't Lose Point 1 on a Technicality
+        content: `## Written Response 1: Program Design, Function, and Purpose
 
-The hardest part of Point 1 isn't the demo — it's the **specs**. Every year, otherwise-perfect submissions get flagged because the video is too long, too large, or has narration. Commit the numbers to memory.
+On exam day, Written Response 1 asks about your program's design, function, and purpose. A sample prompt from the CED:
 
-> 💡 If your raw screen recording is over the limit, trim it to the **single feature** you're demonstrating and re-export at a lower resolution. You only need *one* clean input → output cycle.`,
+> *Identify an expected user of your program. Describe one way your program's design meets the needs of this user.*
+
+To earn the point, **name a user** and **connect a specific design choice to that user's need** — and the description must be accurate for your program. For the water-tracker: "A student athlete who forgets to drink water. The program shows a warning in red when the running total is below the daily goal, so the user notices right away."
+
+> 💡 Keep notes during development (a programming journal) about who your users are and why you made each design choice. You will not have your full code on exam day — only your PPR.`,
       },
       {
         id: 'cpt2-input-specs',
         type: 'input-boxes' as const,
         content: `**Video Specs** 🧮
 
-Fill in the official Create Performance Task video limits.
+Fill in the official Create performance task video limits.
 
 **1)** Maximum video length, in **minutes**?
 **2)** Maximum file size, in **MB**?
-**3)** How many seconds of **audio narration** are allowed in the video?`,
+**3)** How many seconds of **voice narration** are allowed in the video?`,
         exercise: {
           boxes: 3,
           correctAnswers: ['1', '30', '0'],
           hint1: 'The video may be at most one minute long.',
           hint2: 'The file-size cap is thirty megabytes.',
-          hint3: 'No narration is permitted at all — zero seconds of audio.',
-          explanation: '1) $\\le 1$ minute. 2) $\\le 30$ MB. 3) $0$ seconds — the video must contain no spoken narration.',
+          hint3: 'No voice narration is permitted at all (captions are fine).',
+          explanation: '1) $\\le 1$ minute. 2) $\\le 30$ MB. 3) $0$ seconds — the video may not contain voice narration, though text captions are allowed.',
         },
       },
     ],
@@ -323,18 +330,18 @@ Fill in the official Create Performance Task video limits.
         type: 'text' as const,
         content: `# 💻 Create Performance Task
 
-**Part 3 of 7 — Points 2 & 3: Data Abstraction with a List**
+**Part 3 of 7 — Data Abstraction with a List**
 
 ---
 
-> 🔑 **The Idea:** A **list** is the easiest way to earn Points 2 and 3. Point 2 asks that a list **stores data** your program actually uses; Point 3 asks that using the list **manages complexity** — the program would be harder to write *without* it.`,
+> 🔑 **The Idea:** Your program must use a **list** (or another collection type) to store data that is **used** to manage complexity and help fulfill the program's purpose. The PPR's List section needs two captures: (i) code showing how data are **stored** in the list, and (ii) code showing the data in that **same list being used**.`,
       },
       {
         id: 'cpt3-list',
         type: 'text' as const,
         content: `## What a List Buys You
 
-A **list** (also called an array or collection) stores **multiple values under one name**. In AP CSP pseudocode, lists are **1-indexed** — the first element is at index $1$.
+A **list** (also called an array) stores **multiple values under one name**. In AP CSP pseudocode, lists are **1-indexed** — the first element is at index $1$.
 
 $$\\text{scores} \\leftarrow [88, 92, 75, 100]$$
 
@@ -345,7 +352,7 @@ $$\\text{scores} \\leftarrow [88, 92, 75, 100]$$
 | Length | $\\text{LENGTH}(\\text{scores})$ | $4$ |
 | Append a value | $\\text{APPEND}(\\text{scores}, 60)$ | list becomes $[88,92,75,100,60]$ |
 
-> 💡 **Why a list manages complexity (Point 3):** Without a list you'd need a separate variable for *every* value — \`s1, s2, s3, s4, …\`. With a list, **one loop** handles all of them. Adding a fifth score means changing data, not code.`,
+> 💡 **Why a list manages complexity:** without a list you'd need a separate variable for *every* value — \`s1, s2, s3, s4, …\`. With a list, **one loop** handles all of them, and adding a fifth score changes the data, not the code.`,
       },
       {
         id: 'cpt3-input-index',
@@ -369,15 +376,13 @@ Using the AP CSP pseudocode list $\\text{names} \\leftarrow [\\text{"Ada"}, \\te
       {
         id: 'cpt3-managing',
         type: 'text' as const,
-        content: `## Point 3: Managing Complexity
+        content: `## Managing Complexity
 
-Point 3 is **not** automatic just because you have a list. You must **explain in 3c** how the list makes the program manageable.
-
-A winning explanation contrasts *with vs. without*:
+Having a list is not enough. The list must be **used**: the program creates new data from it or accesses multiple elements of it, as part of the program's purpose. Written Response 2(c) can ask you to explain or extend an algorithm that uses your list, so be ready to explain **with vs. without**:
 
 > "The list \`highScores\` stores all the leaderboard entries. **Without** it, I would need a separate variable for each score and separate code to compare each one. **With** the list, a single \`FOR EACH\` loop checks every entry, so adding more players never requires new code."
 
-> ⚠️ **Trap:** A list that is created but never *used* (e.g., you store names but never read them back) earns Point 2 at best and **fails Point 3**. The data must flow into the program's behavior.`,
+> ⚠️ **Traps:** a list that is created but never read again, or a list with only **one** element, does not earn the Program Requirements row. The data must flow into the program's behavior.`,
       },
       {
         id: 'cpt3-q-managing',
@@ -386,20 +391,20 @@ A winning explanation contrasts *with vs. without*:
         exercise: {
           questions: [
             {
-              question: 'Which use of a list best demonstrates "managing complexity" for Point 3?',
+              question: 'Which use of a list best shows it managing complexity in a program?',
               options: [
-                'A loop iterates over a list of quiz answers to count how many are correct, instead of writing a separate comparison for each answer.',
                 'A list is declared at the top of the program but never accessed again.',
-                'Three separate variables x1, x2, x3 each hold one number.',
-                'A list stores the program title as a single string.',
+                'One loop checks every quiz answer in a list instead of one IF per answer.',
+                'Three separate variables x1, x2, and x3 each hold one of the numbers.',
+                'A list holds a single element: the title of the program as a string.',
               ],
-              correctAnswer: 0,
-              explanation: 'Looping over a list to replace many near-identical statements is the textbook example of managing complexity. An unused list, separate variables, or a list holding just one value do not reduce complexity.',
+              correctAnswer: 1,
+              explanation: 'Looping over a list to replace many near-identical statements is the textbook example of managing complexity. An unused list, separate variables, or a one-element list do not reduce complexity.',
             },
             {
               question: 'In AP CSP pseudocode, what is the index of the FIRST element of a list?',
-              options: ['1', '0', '-1', 'It depends on the language'],
-              correctAnswer: 0,
+              options: ['0', '1', '-1', 'It depends on the language'],
+              correctAnswer: 1,
               explanation: 'AP CSP exam-reference pseudocode is 1-indexed: the first element is at index 1 and the last is at index LENGTH(list).',
             },
           ],
@@ -408,32 +413,32 @@ A winning explanation contrasts *with vs. without*:
       {
         id: 'cpt3-other-collections',
         type: 'text' as const,
-        content: `## Lists Aren't the Only Collection
+        content: `## Lists Aren't the Only Collection (for Your Program)
 
-The rubric says "list **or other collection**." A *dictionary/map*, a *set*, or a *2D list* also counts — as long as it stores multiple values your program uses.
+The task allows "a list **or other collection type**" — any type that aggregates elements in a single structure, such as a list, a database, or a set. Your program can be written in any language.
 
 | Collection | Stores | Good when… |
 |------------|--------|-----------|
 | **List** | ordered values | order matters; you loop in sequence |
-| **Dictionary / Map** | key → value pairs | you look things up by name/id |
-| **2D list** | a grid of values | board games, tables, images |
+| **Database table** | records with named fields | the program reads stored records |
+| **Set** | values with no duplicates | you only care whether a value is present |
 
-> 💡 For most CPT submissions a plain **list** is the safest choice — it's the easiest to loop over (helping Points 3 and 5) and the easiest to explain in 3b.`,
+> 💡 For most submissions a plain **list** is the safest choice: it is the easiest to loop over, and the exam-day prompts talk about "your list". The multiple-choice exam itself uses only the reference-sheet list.`,
       },
       {
         id: 'cpt3-dropdown-collections',
         type: 'dropdown-select' as const,
-        content: `**Which Collection & Why** 🔽
+        content: `**List Requirements** 🔽
 
 Pick the best answer for each.`,
         exercise: {
           dropdowns: [
             {
-              label: 'You need to look up a student\'s grade by their name. Best collection:',
-              options: ['Dictionary / Map', 'Single variable', 'No collection needed'],
+              label: 'The PPR List section needs one capture of data being stored in the list and one of:',
+              options: ['the same list being used', 'a different list being created', 'the video'],
             },
             {
-              label: 'A list earns Point 3 (managing complexity) when:',
+              label: 'A list helps manage complexity when:',
               options: ['A loop processes its elements instead of repeated code', 'It is declared but never used', 'It holds exactly one value'],
             },
             {
@@ -441,11 +446,11 @@ Pick the best answer for each.`,
               options: ['1', '0', '-1'],
             },
           ],
-          correctAnswers: ['Dictionary / Map', 'A loop processes its elements instead of repeated code', '1'],
-          hint1: 'Looking up a value *by a key* (the name) points to a dictionary/map.',
-          hint2: 'Point 3 is about *reducing* complexity — a loop replacing repeated statements.',
+          correctAnswers: ['the same list being used', 'A loop processes its elements instead of repeated code', '1'],
+          hint1: 'Stored, then used — the same list.',
+          hint2: 'Managing complexity means *reducing* repeated code.',
           hint3: 'AP CSP pseudocode is 1-indexed.',
-          explanation: 'A dictionary maps a key (name) to a value (grade); a loop over a list is what manages complexity; and AP CSP lists are 1-indexed.',
+          explanation: 'The PPR shows the list being stored and then the same list being used; a loop over a list is what manages complexity; and AP CSP lists are 1-indexed.',
         },
       },
     ],
@@ -460,26 +465,24 @@ Pick the best answer for each.`,
         type: 'text' as const,
         content: `# 💻 Create Performance Task
 
-**Part 4 of 7 — Point 4: Procedural Abstraction with a Parameter**
+**Part 4 of 7 — Procedural Abstraction with a Parameter**
 
 ---
 
-> 🔑 **The Idea:** Point 4 requires a **student-developed procedure** (a function/method *you* wrote) that has **at least one parameter**, where **changing the parameter changes what the procedure does**. A procedure with no parameters — or with a parameter that's never used — does **not** earn Point 4.`,
+> 🔑 **The Idea:** The PPR's Procedure section needs (i) a **student-developed procedure** that has **at least one parameter that affects what the procedure does**, and (ii) a capture of where that procedure is **called**. A procedure with no parameters, or with a parameter that is never used, does not meet the requirement.`,
       },
       {
         id: 'cpt4-procedure',
         type: 'text' as const,
         content: `## Anatomy of a Procedure
 
-A **procedure** is a named, reusable block of code. A **parameter** is an input variable in its definition; an **argument** is the actual value you pass when you call it.
-
-$$\\text{PROCEDURE } \\texttt{areaOfRectangle}(\\texttt{width}, \\texttt{height})$$
+A **procedure** is a named group of programming instructions that may have parameters and return values. A **parameter** is an input variable of the procedure; an **argument** is the actual value passed when you call it.
 
 \`\`\`
 PROCEDURE areaOfRectangle(width, height)
 {
     area ← width * height
-    RETURN area
+    RETURN(area)
 }
 \`\`\`
 
@@ -491,7 +494,7 @@ PROCEDURE areaOfRectangle(width, height)
 | Arguments in that call | \`4\` and \`5\` |
 | Returned value | \`20\` |
 
-> 🔑 **The parameter must matter.** \`areaOfRectangle(4, 5)\` returns $20$ but \`areaOfRectangle(2, 5)\` returns $10$ — the result *depends on* the parameters. That dependency is exactly what Point 4 checks.`,
+> 🔑 **The parameter must matter.** \`areaOfRectangle(4, 5)\` returns $20$ but \`areaOfRectangle(2, 5)\` returns $10$ — the result *depends on* the parameters. That dependency is exactly what the PPR requirement checks.`,
       },
       {
         id: 'cpt4-q-procedure',
@@ -500,20 +503,20 @@ PROCEDURE areaOfRectangle(width, height)
         exercise: {
           questions: [
             {
-              question: 'Which procedure could earn Point 4 (procedural abstraction)?',
+              question: 'Which procedure meets the PPR requirement for a student-developed procedure with a parameter?',
               options: [
-                'PROCEDURE discountedPrice(price, percentOff) — returns price reduced by percentOff.',
-                'PROCEDURE showLogo() — always displays the same image, takes no parameters.',
-                'PROCEDURE greet(name) — ignores name and always prints "Hello!".',
-                'A built-in library function you imported but did not write.',
+                'showLogo() — always displays the same image and takes no parameters',
+                'greet(name) — ignores name and always displays "Hello!"',
+                'discountedPrice(price, percentOff) — returns price reduced by percentOff',
+                'A built-in library function that you imported but did not write',
               ],
-              correctAnswer: 0,
-              explanation: 'Point 4 needs a student-written procedure with a parameter that affects behavior. discountedPrice uses both parameters to change its result. showLogo has no parameter; greet has a parameter it never uses; the library function was not written by the student.',
+              correctAnswer: 2,
+              explanation: 'The PPR procedure must be student-written and use a parameter that affects its functionality. discountedPrice uses both parameters. showLogo has no parameter, greet never uses its parameter, and the library function was not written by the student.',
             },
             {
               question: 'In the call discountedPrice(50, 20), the values 50 and 20 are called the ___.',
-              options: ['arguments', 'parameters', 'return values', 'data abstractions'],
-              correctAnswer: 0,
+              options: ['parameters', 'arguments', 'return values', 'data abstractions'],
+              correctAnswer: 1,
               explanation: 'The values passed into a call are arguments. The variable names in the procedure DEFINITION (price, percentOff) are the parameters.',
             },
           ],
@@ -524,13 +527,13 @@ PROCEDURE areaOfRectangle(width, height)
         type: 'text' as const,
         content: `## Tracing a Call
 
-Reading what a procedure *returns* for given arguments is the skill 3d (testing) and the exam both reward.
+Reading what a procedure *returns* for given arguments is a skill the written responses and the multiple-choice section both reward.
 
 \`\`\`
 PROCEDURE applyTax(price, rate)
 {
     tax ← price * rate
-    RETURN price + tax
+    RETURN(price + tax)
 }
 \`\`\`
 
@@ -538,7 +541,7 @@ For \`applyTax(100, 0.08)\`:
 
 $$\\text{tax} = 100 \\times 0.08 = 8 \\quad\\Rightarrow\\quad \\text{RETURN } 100 + 8 = 108$$
 
-> 💡 To describe "two calls with different arguments" in 3d, just trace your procedure twice with different inputs and report each result — like \`applyTax(100, 0.08) = 108\` and \`applyTax(50, 0.10) = 55\`.`,
+> 💡 Practice tracing **your own** procedure with several different arguments before exam day. Written Response 2(b) can ask how a change to your procedure would cause an error, and you will need to reason about what it does with specific inputs.`,
       },
       {
         id: 'cpt4-input-trace',
@@ -549,7 +552,7 @@ $$\\text{tax} = 100 \\times 0.08 = 8 \\quad\\Rightarrow\\quad \\text{RETURN } 10
 PROCEDURE applyTax(price, rate)
 {
     tax ← price * rate
-    RETURN price + tax
+    RETURN(price + tax)
 }
 \`\`\`
 
@@ -568,17 +571,16 @@ PROCEDURE applyTax(price, rate)
       {
         id: 'cpt4-pitfalls',
         type: 'text' as const,
-        content: `## Three Ways to Lose Point 4
+        content: `## Ways a Procedure Fails the Requirement
 
-A procedure exists, but it still might not count:
+| Mistake | Why it fails |
+|---------|--------------|
+| No parameter | The PPR procedure needs one or more parameters |
+| Parameter never used | If the result is the same no matter the argument, the parameter has no effect on functionality |
+| Not student-written | Built-in or existing procedures, event handlers, and main methods are not student-developed |
+| No call captured | The PPR also needs a capture showing where the procedure is called |
 
-| Mistake | Why it fails Point 4 |
-|---------|----------------------|
-| No parameter | The point literally requires $\\ge 1$ parameter |
-| Parameter never used | If the result is the same no matter the argument, the parameter doesn't *manage* anything |
-| Not student-written | A built-in or copied function isn't *your* abstraction |
-
-> ⚠️ The deepest trap is the **unused parameter**: \`PROCEDURE greet(name)\` that always prints "Hi!" has a parameter, but because \`name\` never changes the output, it does **not** demonstrate procedural abstraction.`,
+> ⚠️ The deepest trap is the **unused parameter**: \`PROCEDURE greet(name)\` that always displays "Hi!" has a parameter, but because \`name\` never changes the output, it does not affect the procedure's functionality.`,
       },
       {
         id: 'cpt4-dropdown-terms',
@@ -597,15 +599,15 @@ For \`PROCEDURE applyTax(price, rate)\` called as \`applyTax(100, 0.08)\`:`,
               options: ['arguments', 'parameters', 'procedures'],
             },
             {
-              label: 'For Point 4, the parameter must:',
+              label: 'For the PPR procedure, a parameter must:',
               options: ['affect what the procedure does', 'be unused', 'be a whole number'],
             },
           ],
           correctAnswers: ['parameters', 'arguments', 'affect what the procedure does'],
           hint1: 'The variable names in the PROCEDURE definition are parameters.',
           hint2: 'The actual values passed in a call are arguments.',
-          hint3: 'Point 4 requires the parameter to change the procedure\'s behavior.',
-          explanation: 'Definition names = parameters; values passed in = arguments; and the parameter must affect behavior to earn Point 4.',
+          hint3: 'The parameter has to change the procedure\'s behavior.',
+          explanation: 'Definition names = parameters; values passed in = arguments; and the PPR procedure needs a parameter that affects its functionality.',
         },
       },
     ],
@@ -620,24 +622,24 @@ For \`PROCEDURE applyTax(price, rate)\` called as \`applyTax(100, 0.08)\`:`,
         type: 'text' as const,
         content: `# 💻 Create Performance Task
 
-**Part 5 of 7 — Point 5: Algorithm with Sequencing, Selection & Iteration**
+**Part 5 of 7 — Algorithm with Sequencing, Selection & Iteration**
 
 ---
 
-> 🔑 **The Idea:** Point 5 requires that the procedure from Point 4 contains an **algorithm** built from **all three** of these working together: **sequencing**, **selection**, and **iteration**. Miss any one and you miss the point.`,
+> 🔑 **The Idea:** The procedure in your PPR must implement an **algorithm** that includes **sequencing**, **selection**, and **iteration** working together. Selection and iteration are also part of the Program Requirements row, and Written Response 2(a) asks about the first loop in your PPR procedure.`,
       },
       {
         id: 'cpt5-three',
         type: 'text' as const,
         content: `## The Three Building Blocks
 
-Every algorithm is built from three constructs:
+Every algorithm can be built from three constructs:
 
 | Construct | What it means | Pseudocode signal |
 |-----------|---------------|-------------------|
-| **Sequencing** | Steps run in order, top to bottom | one line after another |
-| **Selection** | A choice between paths | \`IF\` / \`ELSE\` |
-| **Iteration** | Repeating steps | \`REPEAT\` / \`FOR EACH\` / \`UNTIL\` |
+| **Sequencing** | Steps run in the order they are written | one line after another |
+| **Selection** | A choice between paths based on a condition | \`IF\` / \`ELSE\` |
+| **Iteration** | Repeating steps | \`REPEAT n TIMES\` / \`REPEAT UNTIL\` / \`FOR EACH\` |
 
 ### Worked Procedure: count the passing scores
 
@@ -652,11 +654,11 @@ PROCEDURE countPassing(scores, cutoff)
             count ← count + 1
         }
     }
-    RETURN count
+    RETURN(count)
 }
 \`\`\`
 
-> 🔑 This **one procedure** hits all three: statements in order (**sequencing**), a loop over the list (**iteration**), and an \`IF\` decision inside (**selection**). That is exactly the structure Point 5 wants — and it reuses your list (Points 2–3) and your parameter (Point 4).`,
+> 🔑 This **one procedure** has all three: statements in order (**sequencing**), a loop over the list (**iteration**), and an \`IF\` decision inside (**selection**). It also uses your list and a parameter that changes the result. (Your real program can be in any language; the PPR code must not contain comments like the labels above.)`,
       },
       {
         id: 'cpt5-dropdown',
@@ -675,7 +677,7 @@ Match each line from \`countPassing\` to the construct it demonstrates.`,
               options: ['Iteration', 'Selection', 'Sequencing'],
             },
             {
-              label: '\`count ← 0\` then later \`RETURN count\` (in order)',
+              label: '\`count ← 0\` then later \`RETURN(count)\` (in order)',
               options: ['Iteration', 'Selection', 'Sequencing'],
             },
           ],
@@ -683,7 +685,7 @@ Match each line from \`countPassing\` to the construct it demonstrates.`,
           hint1: 'A loop that repeats over each element is iteration.',
           hint2: 'An IF that chooses whether to run a block is selection.',
           hint3: 'Statements that simply run one after another in order are sequencing.',
-          explanation: 'FOR EACH = iteration, IF = selection, and the ordered statements (initialize, then loop, then return) = sequencing. All three appear in one procedure, satisfying Point 5.',
+          explanation: 'FOR EACH = iteration, IF = selection, and the ordered statements (initialize, then loop, then return) = sequencing. All three appear in one procedure.',
         },
       },
       {
@@ -703,7 +705,7 @@ Let's run \`countPassing([88, 92, 75, 100], 80)\`:
 
 $$\\text{RETURN } 3$$
 
-> 💡 Changing the **argument** \`cutoff\` changes the answer: \`countPassing([88,92,75,100], 90)\` returns $2$ (only $92$ and $100$ pass). Different arguments → different results is your 3d testing evidence.`,
+> 💡 The loop body ran **4 times** — once per element, because FOR EACH visits every element of the list. Counting loop repetitions like this is exactly what Written Response 2(a) can ask about your own code.`,
       },
       {
         id: 'cpt5-input-trace',
@@ -714,14 +716,14 @@ Using \`countPassing(scores, cutoff)\` from above with $\\text{scores} = [70, 85
 
 **1)** \`countPassing(scores, 80)\` returns ___?
 **2)** \`countPassing(scores, 60)\` returns ___?  *(count values $\\ge 60$)*
-**3)** \`countPassing(scores, 100)\` returns ___?`,
+**3)** How many times does the loop body run during \`countPassing(scores, 100)\`?`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['2', '4', '0'],
-          hint1: 'Which of 70, 85, 60, 95, 50 are $\\ge 80$? That gives the first answer.',
+          correctAnswers: ['2', '4', '5'],
+          hint1: 'Which of 70, 85, 60, 95, 50 are $\\ge 80$?',
           hint2: 'Which are $\\ge 60$? Note that $60 \\ge 60$ is TRUE.',
-          hint3: 'Which are $\\ge 100$? None of these reach 100.',
-          explanation: '1) $\\ge 80$: 85 and 95 → 2. 2) $\\ge 60$: 70, 85, 60, 95 → 4 (50 is excluded). 3) $\\ge 100$: none → 0.',
+          hint3: 'FOR EACH visits every element, whatever the cutoff is.',
+          explanation: '1) $\\ge 80$: 85 and 95 → 2. 2) $\\ge 60$: 70, 85, 60, 95 → 4 (50 is excluded). 3) The list has 5 elements, so the body runs 5 times, even though the IF is never true.',
         },
       },
       {
@@ -729,15 +731,15 @@ Using \`countPassing(scores, cutoff)\` from above with $\\text{scores} = [70, 85
         type: 'text' as const,
         content: `## The "All Three" Trap
 
-Point 5 is **all-or-nothing on three constructs**. The most common near-miss is a procedure that has sequencing and a loop — but no decision inside.
+The PPR procedure needs **all three** constructs. The most common near-miss is a procedure with sequencing and a loop but no decision inside.
 
-| Procedure has… | Earns Point 5? |
-|----------------|----------------|
+| Procedure has… | Meets the algorithm requirement? |
+|----------------|----------------------------------|
 | sequencing + selection + iteration | ✅ Yes |
 | sequencing + iteration, no IF | ❌ No (missing selection) |
 | sequencing + selection, no loop | ❌ No (missing iteration) |
 
-> 🔑 **The fix is usually one line:** drop an \`IF\` *inside* your loop. The \`countPassing\` procedure works precisely because the \`IF (s ≥ cutoff)\` lives **inside** the \`FOR EACH\` — that nesting gives you all three at once.`,
+> 🔑 **The fix is usually one line:** put an \`IF\` *inside* your loop. \`countPassing\` works because the \`IF (s ≥ cutoff)\` lives **inside** the \`FOR EACH\` — that nesting gives you all three at once. Make sure the selection and iteration actually affect the outcome; trivial ones do not count.`,
       },
       {
         id: 'cpt5-q-constructs',
@@ -746,25 +748,25 @@ Point 5 is **all-or-nothing on three constructs**. The most common near-miss is 
         exercise: {
           questions: [
             {
-              question: 'A procedure loops over a list and adds every element to a running total, but contains no IF statement. Does it satisfy Point 5?',
+              question: 'A procedure loops over a list and adds every element to a running total, but contains no IF statement. Does it meet the PPR algorithm requirement?',
               options: [
-                'No — it has sequencing and iteration but is missing selection.',
-                'Yes — a loop is enough for Point 5.',
-                'No — it is missing iteration.',
-                'Yes — Point 5 only needs sequencing.',
+                'Yes, since a loop by itself is enough',
+                'No, since it is missing iteration',
+                'No, since it is missing selection',
+                'Yes, since only sequencing is needed',
               ],
-              correctAnswer: 0,
-              explanation: 'Point 5 requires sequencing AND selection AND iteration. A loop with no IF has sequencing and iteration but lacks selection, so it does not earn Point 5.',
+              correctAnswer: 2,
+              explanation: 'The algorithm needs sequencing AND selection AND iteration. A loop with no IF has sequencing and iteration but lacks selection.',
             },
             {
-              question: 'In countPassing, which feature provides the SELECTION required by Point 5?',
+              question: 'In countPassing, which feature provides the SELECTION?',
               options: [
-                'The IF (s ≥ cutoff) inside the loop.',
-                'The FOR EACH loop.',
-                'The RETURN statement.',
-                'The count ← 0 initialization.',
+                'The FOR EACH loop over scores',
+                'The IF statement that tests s ≥ cutoff',
+                'The RETURN statement at the end',
+                'The count ← 0 initialization',
               ],
-              correctAnswer: 0,
+              correctAnswer: 1,
               explanation: 'The IF that decides whether to increment count is the selection. The FOR EACH is iteration, and the ordered statements are sequencing.',
             },
           ],
@@ -782,25 +784,25 @@ Point 5 is **all-or-nothing on three constructs**. The most common near-miss is 
         type: 'text' as const,
         content: `# 💻 Create Performance Task
 
-**Part 6 of 7 — The Written Responses (3a–3d) & Point 6: Testing**
+**Part 6 of 7 — The Exam-Day Written Responses**
 
 ---
 
-> 🔑 **The Idea:** The written responses are where readers *see* the points. Even perfect code loses points if the prose doesn't point to it. Each prompt maps to specific scoring rows — answer the exact question asked, nothing extra.`,
+> 🔑 **The Idea:** On exam day you answer two written-response questions (four prompts) about **your** program, with your Personalized Project Reference in front of you. The exact prompts change from exam to exam, but each prompt always comes from the same category. Answer exactly what is asked, and make every claim match your code.`,
       },
       {
         id: 'cpt6-prompts',
         type: 'text' as const,
-        content: `## The Four Written Prompts
+        content: `## The Four Prompt Categories
 
-| Prompt | Asks for | Feeds points |
-|--------|----------|--------------|
-| **3a** | Program purpose & function; what the video shows | Point 1 |
-| **3b** | Your **data abstraction**: name the list, explain how it manages complexity | Points 2 & 3 |
-| **3c** | Your **procedure**: paste it, name it, explain how it works | Points 4 & 5 |
-| **3d** | **Testing**: two calls with **different arguments**, the condition each tests, and the result | Point 6 |
+| Prompt | Category | Sample prompt from the CED |
+|--------|----------|----------------------------|
+| **WR 1** | Program Design, Function, and Purpose | Identify an expected user and describe one way your design meets that user's needs. |
+| **WR 2(a)** | Algorithm Development | For the first loop in your PPR procedure: how many times does its body run, and what condition or error would make it an infinite loop? |
+| **WR 2(b)** | Errors and Testing | Describe a change to your PPR procedure that would cause a run-time error, and explain why. |
+| **WR 2(c)** | Data and Procedural Abstraction | Using a given procedure isEqual(value1, value2), explain in detailed steps an algorithm that counts how many times a value appears in your list. |
 
-> 💡 In the **Personalized Project Reference (PPR)** you paste a screenshot of your **list code** and your **procedure code** (with line numbers). The written responses then *refer* to that code — readers grade the code in your PPR, not loose snippets.`,
+> 💡 When there are several loops, procedures, or lists in your PPR, the readers score the **first** one. Put the code you know best first.`,
       },
       {
         id: 'cpt6-q-prompts',
@@ -809,26 +811,26 @@ Point 5 is **all-or-nothing on three constructs**. The most common near-miss is 
         exercise: {
           questions: [
             {
-              question: 'Response 3d (Testing / Point 6) asks you to describe:',
+              question: 'Which written response is most likely to ask how a change to your procedure could make the program crash while it runs?',
               options: [
-                'Two calls to your procedure with different arguments, the condition each tests, and the result of each call.',
-                'The purpose of the entire program in one sentence.',
-                'The name of every variable in your program.',
-                'Why you chose your programming language.',
+                'Written Response 1, about program design and purpose',
+                'Written Response 2(a), about algorithm development',
+                'Written Response 2(b), about errors and testing',
+                'Written Response 2(c), about abstraction',
               ],
-              correctAnswer: 0,
-              explanation: 'Point 6 (testing) requires describing two calls to the procedure with different arguments, what each call tests, and the result each produces — showing the procedure behaves correctly under different conditions.',
+              correctAnswer: 2,
+              explanation: 'Written Response 2(b) covers errors and testing: identifying and correcting errors and choosing inputs that check correctness.',
             },
             {
-              question: 'Where do you place the screenshots of your list code and procedure code?',
+              question: 'What do you have in front of you while answering the written responses on exam day?',
               options: [
-                'In the Personalized Project Reference (PPR).',
-                'In the video only.',
-                'Nowhere — readers run your program themselves.',
-                'In a separate emailed attachment.',
+                'Your complete program code with all of your comments',
+                'Your Personalized Project Reference',
+                'Your video and its captions',
+                'Nothing except the prompts themselves',
               ],
-              correctAnswer: 0,
-              explanation: 'The two required code segments (your list and your procedure) go in the Personalized Project Reference, which the written responses then reference by line number.',
+              correctAnswer: 1,
+              explanation: 'The College Board returns your Personalized Project Reference (if it was submitted as final by the deadline) for you to use while answering.',
             },
           ],
         },
@@ -836,68 +838,82 @@ Point 5 is **all-or-nothing on three constructs**. The most common near-miss is 
       {
         id: 'cpt6-testing',
         type: 'text' as const,
-        content: `## Writing a Clean 3d (Testing)
+        content: `## Answering Each Prompt Well
 
-A full-credit 3d does **three things** for **each** of two calls:
+**WR 2(a) — loops.** Count how many times the loop body runs for the inputs in the prompt (a FOR EACH over a list runs once per element). For an infinite loop, name a specific condition: for example, if \`i ← i + 1\` were removed from a REPEAT UNTIL (i > LENGTH(list)) loop, the condition would never become true.
 
-1. **State the call** with specific arguments — e.g., \`countPassing(scores, 80)\`.
-2. **State the condition it tests** — e.g., "tests a normal cutoff where some scores pass and some fail."
-3. **State the result** — e.g., "returns $3$."
+**WR 2(b) — run-time errors.** Describe a specific change and why it fails while running: for example, changing the loop to read \`list[i + 1]\` would go past the last index, or dividing by a count that could be 0.
 
-> ⚠️ **Trap:** Using the **same argument twice** (or two calls that hit the *same* path through the code) does not demonstrate different behavior. Choose calls that exercise **different branches** — e.g., one where the \`IF\` is true and one where it's mostly false.`,
+**WR 2(c) — abstraction.** Describe the algorithm in enough detail that someone else could write it: start a counter at 0, loop over **every** element of your list, call isEqual on each element and the target value, add 1 when it returns true, and finally return or display the counter.
+
+> ⚠️ **Trap:** an answer that is "implausible, inaccurate, or inconsistent with the program" does not earn the point. Every claim must match the code in your PPR.`,
       },
       {
         id: 'cpt6-dropdown',
         type: 'dropdown-select' as const,
-        content: `**Map Prompt → Points** 🔽
+        content: `**Map Each Task → Prompt** 🔽
 
-Match each written-response prompt to the scoring points it primarily addresses.`,
+Match each exam-day task to the written response it most likely belongs to.`,
         exercise: {
           dropdowns: [
             {
-              label: '3b (your list / data abstraction)',
-              options: ['Points 2 & 3', 'Points 4 & 5', 'Point 1', 'Point 6'],
+              label: 'Explain an algorithm that counts how many list elements equal a value',
+              options: ['WR 2(c)', 'WR 2(a)', 'WR 1', 'WR 2(b)'],
             },
             {
-              label: '3c (your procedure & algorithm)',
-              options: ['Points 4 & 5', 'Points 2 & 3', 'Point 1', 'Point 6'],
+              label: 'State how many times your first loop\'s body runs',
+              options: ['WR 2(a)', 'WR 2(c)', 'WR 1', 'WR 2(b)'],
             },
             {
-              label: '3d (two calls, different arguments)',
-              options: ['Point 6', 'Point 1', 'Points 2 & 3', 'Points 4 & 5'],
+              label: 'Describe how your design meets an expected user\'s needs',
+              options: ['WR 1', 'WR 2(a)', 'WR 2(b)', 'WR 2(c)'],
             },
           ],
-          correctAnswers: ['Points 2 & 3', 'Points 4 & 5', 'Point 6'],
-          hint1: 'The list is the DATA abstraction (storing + managing complexity).',
-          hint2: 'The procedure carries procedural abstraction AND the sequencing/selection/iteration algorithm.',
-          hint3: 'Two calls with different arguments is the testing evidence.',
-          explanation: '3b → data abstraction (Points 2 & 3), 3c → procedure + algorithm (Points 4 & 5), 3d → testing (Point 6). 3a (not shown) covers Point 1.',
+          correctAnswers: ['WR 2(c)', 'WR 2(a)', 'WR 1'],
+          hint1: 'Data and procedural abstraction with your list.',
+          hint2: 'Algorithm development: loops.',
+          hint3: 'Program design, function, and purpose.',
+          explanation: 'Counting with isEqual over your list is WR 2(c); loop repetitions and infinite loops are WR 2(a); users and design are WR 1. Errors and testing are WR 2(b).',
         },
       },
       {
         id: 'cpt6-checklist',
         type: 'text' as const,
-        content: `## A 3d Sanity Checklist
+        content: `## A Worked WR 2(c) Answer
 
-Before you submit, count the pieces of your testing response. A complete 3d names, for **each** of two calls, the **call**, the **condition it tests**, and the **result** — so two complete calls means **6 pieces of information** in total.
+Suppose the PPR list is \`colors\` and the target value is stored in \`target\`:
 
-> 💡 The two calls should travel **different paths**: pick one argument that makes your \`IF\` mostly true and another that makes it mostly false. Identical-behavior calls don't show your algorithm handles different conditions.`,
+1. Set \`count\` to 0.
+2. For each element \`c\` in \`colors\`, call \`isEqual(c, target)\`.
+3. If the call returns true, add 1 to \`count\`.
+4. After the loop has visited every element, return \`count\`.
+
+> 💡 Every step names a concrete action, the loop covers **all** elements, and the result is stored and returned. That is the level of detail "someone else could write the code" means.`,
       },
       {
         id: 'cpt6-input-3d',
         type: 'input-boxes' as const,
-        content: `**Count the Pieces** 🧮
+        content: `**Count the Loop** 🧮
 
-**1)** How many calls to your procedure must 3d describe?
-**2)** For each call, you state the call, the condition it tests, and the result — how many items is that per call?
-**3)** Across both calls, how many items of information should a complete 3d contain? *(multiply)*`,
+\`\`\`
+i ← 1
+REPEAT UNTIL (i > LENGTH(colors))
+{
+    DISPLAY(colors[i])
+    i ← i + 1
+}
+\`\`\`
+
+**1)** If colors has 6 elements, how many times does the loop body run?
+**2)** If colors is empty, how many times does the loop body run?
+**3)** If the line \`i ← i + 1\` were deleted and colors had 6 elements, how many times would the loop body run? *(type infinite)*`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['2', '3', '6'],
-          hint1: '3d asks for two calls with different arguments.',
-          hint2: 'Per call: the call itself, the condition tested, and the result — count them.',
-          hint3: '$2 \\text{ calls} \\times 3 \\text{ items} = ?$',
-          explanation: '1) 2 calls. 2) 3 items each (call, condition, result). 3) $2 \\times 3 = 6$ items total for a full-credit 3d.',
+          correctAnswers: ['6', '0', 'infinite'],
+          hint1: 'i takes the values 1 through 6.',
+          hint2: 'REPEAT UNTIL checks its condition before each pass: is 1 > 0?',
+          hint3: 'Without the update, i stays 1 forever.',
+          explanation: '1) The body runs for i = 1, 2, …, 6: 6 times. 2) With an empty list, 1 > 0 is already true, so the body runs 0 times. 3) Without i ← i + 1 the condition never becomes true, so the loop never ends.',
         },
       },
     ],
@@ -916,52 +932,52 @@ Before you submit, count the pieces of your testing response. A complete 3d name
 
 ---
 
-You now know all six points, both required code segments, and all four written prompts. Let's lock it in.`,
+You now know the three components, the PPR's procedure and list sections, all six rubric rows, and the four exam-day prompt categories. Let's lock it in.`,
       },
       {
         id: 'cpt7-summary',
         type: 'text' as const,
         content: `## Quick Reference
 
-| Point | Earned by | Shown in |
-|-------|-----------|----------|
-| **1** Purpose & Function | Video shows input → output; 3a names purpose & function | Video + 3a |
-| **2** Data Abstraction | A list stores data the program uses | PPR list + 3b |
-| **3** Managing Complexity | List makes the program easier than without it | 3b |
-| **4** Procedural Abstraction | Student-written procedure with a parameter that matters | PPR procedure + 3c |
-| **5** Algorithm | That procedure has sequencing + selection + iteration | 3c |
-| **6** Testing | Two calls, different arguments, conditions & results | 3d |
+| Row | Earned by | Based on |
+|-----|-----------|----------|
+| **Video** | Recording shows input, functionality, and output | Video |
+| **Program Requirements** | Code has a list, a procedure, a call to it, selection, and iteration | PPR (or full code) |
+| **WR 1** | Design, function, and purpose (e.g., a user and how the design meets their need) | Exam-day response |
+| **WR 2(a)** | Algorithm development (loop count, infinite-loop condition) | PPR + response |
+| **WR 2(b)** | Errors and testing (e.g., a change causing a run-time error) | PPR + response |
+| **WR 2(c)** | Data and procedural abstraction (e.g., an algorithm over your list) | PPR + response |
 
-> 🔑 **The whole strategy in one line:** build **one list** (Points 2–3) and **one parameterized procedure containing a loop with an IF** (Points 4–5), demonstrate it on video (Point 1), then describe two contrasting calls (Point 6).
+> 🔑 **The whole strategy in one line:** build **one list that is stored and then used** and **one procedure, with a parameter that matters, containing a loop with an IF inside**; capture both in a comment-free PPR; demonstrate input → output on video; and practice explaining that code before exam day.
 
-> ⚠️ **Integrity reminder:** the procedure and algorithm you describe must be **yours**. Borrowed/AI-generated code can't earn Points 4 and 5 and must be clearly marked.`,
+> ⚠️ **Integrity reminder:** your PPR procedure must be one **you** wrote; acknowledge borrowed or AI-generated code with comments in your program code (but not in the PPR).`,
       },
       {
         id: 'cpt7-dropdown-review',
         type: 'dropdown-select' as const,
-        content: `**Diagnose the Missing Point** 🔽
+        content: `**Diagnose the Problem** 🔽
 
-Each student is missing exactly one point. Pick which one.`,
+Each student has one problem. Pick the requirement it breaks.`,
         exercise: {
           dropdowns: [
             {
-              label: 'Procedure has a parameter and an IF, but no loop:',
-              options: ['Point 5 (no iteration)', 'Point 4 (no parameter)', 'Point 2 (no list)'],
+              label: 'The PPR procedure has a parameter and an IF, but no loop:',
+              options: ['Algorithm needs iteration', 'Procedure needs a parameter', 'Program needs a list'],
             },
             {
-              label: 'Program runs but the video shows only a fixed message with no input:',
-              options: ['Point 1 (no input → output)', 'Point 6 (testing)', 'Point 3 (managing complexity)'],
+              label: 'The video shows only a fixed message, with no input:',
+              options: ['Video row (no input → output)', 'WR 2(b) (errors and testing)', 'WR 2(c) (abstraction)'],
             },
             {
-              label: 'A list is declared but never read or looped over:',
-              options: ['Point 3 (not managing complexity)', 'Point 4 (procedure)', 'Point 1 (purpose)'],
+              label: 'The PPR screenshots include explanatory comments:',
+              options: ['The whole task can score 0', 'Only the video row is lost', 'No effect on the score'],
             },
           ],
-          correctAnswers: ['Point 5 (no iteration)', 'Point 1 (no input → output)', 'Point 3 (not managing complexity)'],
-          hint1: 'Point 5 needs sequencing + selection + iteration — a missing loop kills iteration.',
-          hint2: 'Point 1 needs the video to show input causing output.',
-          hint3: 'A list that is never used can earn Point 2 but not Point 3.',
-          explanation: 'No loop → Point 5 lost; no input → output in the video → Point 1 lost; an unused list → Point 3 lost (though it may still earn Point 2).',
+          correctAnswers: ['Algorithm needs iteration', 'Video row (no input → output)', 'The whole task can score 0'],
+          hint1: 'Sequencing + selection + iteration — what is missing?',
+          hint2: 'The Video row needs input causing output.',
+          hint3: 'The PPR may not contain comments or course content.',
+          explanation: 'No loop means the algorithm lacks iteration; no input → output loses the Video row; comments in the PPR can earn a 0 on the entire Create performance task.',
         },
       },
       {
@@ -978,26 +994,26 @@ These last questions blend the rubric, the pseudocode, and the integrity rules �
         exercise: {
           questions: [
             {
-              question: 'A student\'s procedure has a parameter, sequencing, and an IF statement, but no loop. Which point is at risk?',
+              question: 'A student\'s PPR procedure has a parameter, sequencing, and an IF statement, but no loop. Which requirement is not met?',
               options: [
-                'Point 5 — the algorithm needs iteration, which is missing.',
-                'Point 4 — there is no parameter.',
-                'Point 2 — there is no list.',
-                'Point 1 — the program has no purpose.',
+                'The procedure has no parameter.',
+                'The algorithm is missing iteration.',
+                'The program has no list.',
+                'The program has no purpose.',
               ],
-              correctAnswer: 0,
-              explanation: 'Point 5 requires sequencing AND selection AND iteration. With sequencing and selection (the IF) but no loop, iteration is missing, so Point 5 is not earned. Point 4 is still fine because the parameter is present.',
+              correctAnswer: 1,
+              explanation: 'The PPR procedure needs sequencing AND selection AND iteration. With sequencing and selection (the IF) but no loop, iteration is missing. The parameter requirement is still met.',
             },
             {
               question: 'Which choice would JEOPARDIZE the integrity of the submission?',
               options: [
-                'Describing code copied from an online tutorial as your own student-developed procedure for Points 4 & 5.',
-                'Collaborating with a classmate while developing the program.',
-                'Using a list to manage complexity.',
-                'Tracing your procedure with two different arguments in 3d.',
+                'Describing code copied from an online tutorial as your own procedure',
+                'Collaborating with a classmate while developing the program code',
+                'Using a list to manage complexity in the program',
+                'Tracing your procedure with several different arguments',
               ],
               correctAnswer: 0,
-              explanation: 'Borrowed code must be clearly marked and cannot serve as your student-developed procedure. Claiming it as your own is a plagiarism violation. Collaboration during development is allowed; the other choices are exactly what you should do.',
+              explanation: 'Code you did not write must be acknowledged and cannot be your student-developed procedure; presenting it as your own is plagiarism. Collaboration during development is allowed, and the other choices are good practice.',
             },
           ],
         },
@@ -1007,9 +1023,9 @@ These last questions blend the rubric, the pseudocode, and the integrity rules �
         type: 'text' as const,
         content: `## One Last Strategy Note
 
-If you remember nothing else: **choose your list and your procedure first, then build the rest of the program around them.** Those two pieces of code carry five of the six points, and the written responses simply *point a reader to them*.
+If you remember nothing else: **choose your list and your procedure first, then build the rest of the program around them.** Those two pieces of code are what the PPR shows and what every Written Response 2 prompt asks about.
 
-> 🔑 A simple, fully-explained program that nails one list and one parameterized loop-with-an-IF scores far better than an ambitious program where the reader can't find the required parts.
+> 🔑 A simple program whose list and procedure you can explain in detail scores far better than an ambitious program you cannot explain on exam day.
 
 Finish with the Exit Quiz below.`,
       },
@@ -1022,32 +1038,32 @@ Answer all three to finish the lesson.`,
         exercise: {
           questions: [
             {
-              question: 'The Create Performance Task is worth what fraction of the AP CSP score, and how many scoring points does it have?',
+              question: 'How much of the AP CSP score does Section II (the Create performance task and its written responses) count for, and how many rubric rows does it have?',
               options: [
-                '30% of the score; 6 points',
-                '70% of the score; 5 points',
-                '50% of the score; 8 points',
-                '100% of the score; 6 points',
+                '70% of the score; 5 rows',
+                '30% of the score; 6 rows',
+                '50% of the score; 8 rows',
+                '100% of the score; 6 rows',
               ],
-              correctAnswer: 0,
-              explanation: 'The CPT is 30% of the final AP score (the multiple-choice exam is 70%) and is scored against 6 points.',
+              correctAnswer: 1,
+              explanation: 'Section II is 30% of the AP score (the multiple-choice section is 70%) and is scored on 6 rows: Video, Program Requirements, and Written Responses 1, 2(a), 2(b), and 2(c).',
             },
             {
               question: 'For \`countPassing([90, 70, 85], 80)\` — counting values ≥ 80 — what does the procedure return?',
-              options: ['2', '3', '1', '0'],
-              correctAnswer: 0,
+              options: ['3', '2', '1', '0'],
+              correctAnswer: 1,
               explanation: 'Values $\\ge 80$ are 90 and 85 (70 fails), so the count is 2.',
             },
             {
-              question: 'Which combination earns BOTH Points 4 and 5 with a single procedure?',
+              question: 'Which procedure meets every PPR requirement for the Procedure section?',
               options: [
-                'A student-written procedure with a parameter that affects behavior, containing sequencing, selection, and iteration.',
-                'A built-in sort function with no IF or loop you can see.',
-                'A procedure with a parameter but only sequential statements (no IF, no loop).',
-                'A list that stores data but no procedure at all.',
+                'A built-in sort function that has no IF or loop you can see',
+                'A procedure with a parameter but only sequential statements',
+                'A list that stores data, with no procedure at all',
+                'A student-written procedure whose parameter matters, with a loop holding an IF',
               ],
-              correctAnswer: 0,
-              explanation: 'Point 4 needs a student-written procedure with a meaningful parameter; Point 5 needs that procedure to contain sequencing + selection + iteration. Only the first option satisfies both at once.',
+              correctAnswer: 3,
+              explanation: 'The PPR procedure must be student-written, use a parameter that affects its functionality, and implement an algorithm with sequencing, selection, and iteration.',
             },
           ],
         },

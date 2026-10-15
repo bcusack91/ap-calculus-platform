@@ -18,7 +18,7 @@ A computer represents every kind of data — numbers, text, images, sound — us
 | Data type | Encoding scheme |
 |-----------|-----------------|
 | Whole number | Place values 1, 2, 4, 8, 16, … (binary) |
-| Text | A code mapping bit pattern → character (e.g., ASCII) |
+| Text | An agreed-upon code mapping each bit pattern to a character |
 | Color (pixel) | Three numbers: R, G, B — each 8 bits |
 | Sound | Repeated samples of air-pressure amplitude |
       `
@@ -159,7 +159,8 @@ Memorize $2^{8}$ = 256 and $2^{16}$ = 65,536 — both appear constantly on the A
 - Write the place-value row first; then plug in the bits.
 - Memorize: $2^{0}$=1, $2^{1}$=2, $2^{2}$=4, $2^{3}$=8, $2^{4}$=16, $2^{5}$=32, $2^{6}$=64, $2^{7}$=128, $2^{8}$=256, $2^{10}$=1024.
 - Decimal → binary: greedy subtraction by largest power of 2.
-- For "how many bits do I need to represent N values?" use ⌈$\\log_{2}$ N⌉.
+- For "how many bits do I need to represent N values?" find the smallest n with $2^{n}$ ≥ N.
+- To compare two binary numbers of the same length, read from the left: the first position where they differ decides which is larger.
       `
     },
     {

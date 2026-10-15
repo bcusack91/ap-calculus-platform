@@ -13,7 +13,7 @@ export const cspInternetProtocolsPart6Data = {
 
 ## Internet & Protocols Workshop
 
-Apply the layered model and the protocol vocabulary to scenarios.
+Apply packets, protocols, routing, and fault tolerance to scenarios.
       `
     },
     {
@@ -25,26 +25,26 @@ Apply the layered model and the protocol vocabulary to scenarios.
       exercise: {
         questions: [
           {
-            question: "A page loads partially: text and CSS arrive but a single image doesn't. The most likely cause is at the ___",
+            question: "A message is split into packets 1 through 5. Packets 1, 2, 4, and 5 arrive, and packet 3 never does. The message is delivered with TCP. What happens next?",
             options: [
-              "transport layer for the entire page, since the image's failure means TCP itself stopped working.",
-              "application/HTTP layer for that one image request, since the other files loaded.",
-              "physical layer because the network connection itself is fully down for every resource the page requested.",
-              "DNS layer for the entire page, since the failed image lookup blocked every other DNS resolution attempt."
+              "The receiver displays the message with a gap where packet 3 belongs.",
+              "The receiver notices packet 3 is missing and has it sent again.",
+              "The receiver throws away packets 4 and 5 and keeps only 1 and 2.",
+              "The receiver waits for the sender to start over from packet 1."
             ],
             correctAnswer: 1,
-            explanation: "Other resources loaded, so DNS / transport / physical work. The image's individual HTTP request failed (e.g., 404, server error)."
+            explanation: "TCP provides reliable delivery: missing packets are requested again, and the data are reassembled in order."
           },
           {
-            question: "You're building a real-time multiplayer game. Which transport protocol is most appropriate for in-game position updates?",
+            question: "You're building a real-time multiplayer game. Which protocol is most appropriate for in-game position updates?",
             options: [
               "TCP, because reliability of every single position update is the most important property of the game.",
-              "UDP, because low latency matters more than retransmitting position updates that are already stale by then.",
-              "DNS, because the Domain Name System resolves position updates faster than the transport layer alone could.",
-              "IP only with no transport-layer protocol layered on top, since the game does not need any reliability features."
+              "UDP, because low delay matters more than resending position updates that are already out of date.",
+              "HTTP, because the Web's protocol delivers position updates faster than any other protocol could.",
+              "IP alone with no other protocol on top, because IP guarantees the updates arrive in order."
             ],
             correctAnswer: 1,
-            explanation: "Stale position updates aren't worth retransmitting; UDP fits real-time games."
+            explanation: "Old position updates are not worth resending; UDP fits real-time games."
           }
         ]
       }
@@ -53,35 +53,30 @@ Apply the layered model and the protocol vocabulary to scenarios.
       id: "cspip6-content",
       type: 'text' as const,
       content: `
-## Worked Scenario 1: Diagnose A Slow Site
+## Worked Scenario 1: Choose A Protocol
 
-Symptoms: site loads but is slow.
-
-Possible bottlenecks by layer:
-
-| Layer | Symptom | Diagnosis tool |
-|-------|---------|---------------|
-| DNS | Long delay before any byte | DNS lookup time. |
-| TCP | Connect succeeds slowly | TCP handshake timing. |
-| HTTP server | Slow response after request sent | Server response time. |
-| Network path | All traffic slow | Traceroute / latency. |
-
-Modern dev tools show this waterfall directly.
-
-## Worked Scenario 2: Choose A Protocol
-
-| Use case | Best transport |
+| Use case | Best fit |
 |---------|---------------|
-| File download | TCP (reliability matters). |
-| Live video call | UDP (latency matters; small drops tolerated). |
-| Online banking page | TCP + TLS (HTTPS — reliability + encryption). |
+| File download | TCP (every byte must arrive). |
+| Live video call | UDP (low delay; small drops tolerated). |
+| Online banking page | TCP, with encryption (HTTPS). |
 | Software update | TCP (must arrive complete and correct). |
 
-## Worked Scenario 3: Naming vs. Routing
+## Worked Scenario 2: Reassemble A Message
 
-A user goes to bank.com → DNS resolves to 192.0.2.5 → packets routed via IP → TCP connection on port 443 → TLS handshake → HTTP GET.
+A message is split into packets 1 to 6. They arrive as **4, 1, 6, 2**.
 
-If DNS is wrong, the user lands on a wrong server. If the cert doesn't match, TLS warns the user. Both protect against impersonation.
+- Packets 3 and 5 are missing.
+- With TCP, the receiver requests packets 3 and 5 again, then uses each packet's metadata to put all six in order: 1, 2, 3, 4, 5, 6.
+- With UDP, packets 3 and 5 are simply lost.
+
+## Worked Scenario 3: Will It Keep Working?
+
+Network: Home–R1, Home–R2, R1–R3, R2–R3, R3–Server.
+
+- If R1 fails, data go Home → R2 → R3 → Server. Still works (redundant path).
+- If R3 fails, every path is broken. R3 is a **single point of failure**.
+- Adding a connection R2–Server would make the network tolerate the loss of R3.
       `
     },
     {
@@ -90,19 +85,19 @@ If DNS is wrong, the user lands on a wrong server. If the cert doesn't match, TL
       content: `
 **Applied Recall** ✍️
 
-1) A real-time game uses _______ transport for low-latency state updates.
+1) A real-time game uses _______ for low-delay position updates.
 
-2) A banking page uses _______ over TCP for confidentiality and authentication.
+2) A banking page is sent with HTTPS so that the data are _______.
 
-3) A long delay before any byte arrives often points to a _______ lookup problem.
+3) A message is split into 6 packets, and only packets 1, 2, 4, and 6 arrive. With TCP, the receiver requests _______ packets again.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["UDP", "TLS", "DNS"],
-        hint1: "Connectionless, fast.",
-        hint2: "The \"S\" in HTTPS.",
-        hint3: "First step of every web request.",
-        explanation: "UDP for low latency, TLS for HTTPS confidentiality, DNS for early-stage delays."
+        correctAnswers: ["UDP", "encrypted", "2"],
+        hint1: "No waiting for resends.",
+        hint2: "The \"S\" means secure.",
+        hint3: "Which numbers from 1 to 6 are missing?",
+        explanation: "UDP for low delay. HTTPS encrypts data in transit. Packets 3 and 5 are missing, so 2 packets are requested again."
       }
     },
     {
@@ -114,35 +109,35 @@ If DNS is wrong, the user lands on a wrong server. If the cert doesn't match, TL
       exercise: {
         dropdowns: [
           {
-            label: "A 503 status code most likely means ___",
-            options: ["the server is temporarily overloaded or down", "the requested page does not exist on the server", "the user must log in before viewing the page", "the request was redirected to a new address"]
+            label: "A message's packets arrive in the order 3, 1, 2. Using TCP, the receiver ___",
+            options: ["reorders them using their metadata", "discards the whole message", "shows the data in arrival order", "asks for all three again"]
           },
           {
-            label: "For software updates that must arrive complete, the right transport is ___",
-            options: ["TCP", "UDP", "IP only", "DNS"]
+            label: "For software updates that must arrive complete, the right protocol is ___",
+            options: ["TCP", "UDP", "IP only", "HTTP only"]
           },
           {
-            label: "For audio in a live call, the right transport is usually ___",
-            options: ["UDP", "TCP", "IP only", "DNS"]
+            label: "For audio in a live call, the right protocol is usually ___",
+            options: ["UDP", "TCP", "IP only", "HTTP only"]
           }
         ],
-        correctAnswers: ["the server is temporarily overloaded or down", "TCP", "UDP"],
-        hint1: "5xx = server side.",
+        correctAnswers: ["reorders them using their metadata", "TCP", "UDP"],
+        hint1: "Packets carry data for reassembly.",
         hint2: "Reliability needed.",
-        hint3: "Latency matters more than retransmission.",
-        explanation: "503 = service unavailable. TCP for reliability. UDP for real-time."
+        hint3: "Delay matters more than resending.",
+        explanation: "TCP reorders packets using metadata. TCP for reliability. UDP for real-time audio."
       }
     },
     {
       id: "cspip6-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: Protocol Choice Workshops
+## AP Exam Strategy: Protocol Workshops
 
-- Ask "what does this app prioritize?": reliability, latency, security?
-- Reliability → TCP. Confidentiality → TLS (HTTPS). Real-time / drop-tolerant → UDP.
-- For naming → DNS. For routing → IP. For requests → HTTP.
-- The Internet's layered model means you can swap any layer's protocol without breaking the others.
+- Ask "what does this app prioritize?": complete data or low delay?
+- Complete and in order → TCP. Real-time, drops tolerated → UDP. Routing → IP. Web pages → HTTP.
+- Track packets by number: which arrived, which are missing, what order they go back in.
+- For network diagrams, look for a device or connection that is on every path.
       `
     },
     {
@@ -154,26 +149,26 @@ If DNS is wrong, the user lands on a wrong server. If the cert doesn't match, TL
       exercise: {
         questions: [
           {
-            question: "A school records video lectures and posts them for students to watch later. Which two technologies fit this best?",
+            question: "A school posts recorded lectures that students download to watch later. Which protocol choice fits the download best?",
             options: [
-              "HTTPS to deliver to each student's browser and a CDN that caches copies near students.",
-              "UDP-only video calls between every student and the school's central origin server, with no caching at all.",
-              "Plain HTTP served from a single origin server worldwide, with no encryption and no geographic caching layer.",
-              "A peer-to-peer-only design with no central catalog server, where students must discover lectures from each other."
+              "TCP, since every part of the file must arrive complete and in order.",
+              "UDP, since lost parts of a lecture file can be skipped with no effect.",
+              "IP alone, since it guarantees that every packet arrives in order.",
+              "No protocol, since files can be sent without any agreed rules."
             ],
             correctAnswer: 0,
-            explanation: "HTTPS for secure delivery + CDN for low-latency global access."
+            explanation: "A downloaded file must be complete, so TCP's reliable, ordered delivery fits."
           },
           {
-            question: "A social app must immediately notify followers when a user posts. The most appropriate pattern is ___",
+            question: "A new app sends a live sports score every second. If one update is lost, a newer one arrives a second later anyway. Which choice fits best?",
             options: [
-              "publish/subscribe with persistent connections so the central server can push new posts to followers at once.",
-              "have every follower's browser poll the central server every 60 seconds for new posts.",
-              "send each follower an email notification through the school's SMTP mail server every time someone posts.",
-              "require every follower to manually refresh their feed page in order to ever see any newly published posts."
+              "TCP, since every out-of-date score must eventually be delivered.",
+              "UDP, since waiting for a resend would gain nothing here.",
+              "HTTP only, since live data cannot use any other Internet protocol.",
+              "No packets at all, since live scores need their own dedicated wire."
             ],
-            correctAnswer: 0,
-            explanation: "Pub/sub with push delivers low-latency notifications without polling overhead."
+            correctAnswer: 1,
+            explanation: "When old data quickly become useless, there is no point waiting to resend them; UDP fits."
           }
         ]
       }

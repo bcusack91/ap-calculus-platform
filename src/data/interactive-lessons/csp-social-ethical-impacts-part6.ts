@@ -60,23 +60,23 @@ export const cspSocialEthicalImpactsPart6Data = {
 | Vulnerable groups | Possibly better access | Possibly worse if poorly designed |
 | Society | Productivity gains | Concentration of power |
 
-## Worked: Bias Audit Sketch
+## Worked: Checking a System for Bias
 
-1. Define metric (accuracy, error rate, false-positive rate).
-2. Compute the metric across demographic groups.
-3. Investigate and report disparities.
-4. Iterate design / data; re-test.
-5. Document the audit process.
+Programmers should take action to reduce bias in the algorithms they write. One way to check:
 
-## Worked: Responsible AI Use
+1. Decide what "working well" means (for example, how often the system is wrong).
+2. Measure it separately for each group of people the system affects.
+3. If one group fares much worse, look at the data and the algorithm for the cause.
+4. Fix the data or design, then check again.
+
+## Worked: Questions to Ask About a New Innovation
 
 | Question | Why it matters |
 |---------|----------------|
-| Where did training data come from? | Provenance & consent. |
-| Who is over / under represented? | Bias risk. |
-| What can go wrong if the model is wrong? | Stakes. |
-| Is there human review? | Accountability. |
-| Is there recourse for affected users? | Justice. |
+| Who benefits, and who could be harmed? | One effect can be beneficial to some people and harmful to others. |
+| Who might be left out? | The digital divide affects groups and individuals. |
+| Does the data represent everyone affected? | Biased data lead to biased results. |
+| How could it be used in ways nobody intended? | Not every effect can be anticipated in advance. |
       `
     },
     {
@@ -85,19 +85,19 @@ export const cspSocialEthicalImpactsPart6Data = {
       content: `
 **Applied Recall** ✍️
 
-1) A formal exercise to measure bias across demographic groups is called a bias _______.
+1) A single effect of an innovation can be viewed as both beneficial and harmful by different _______.
 
-2) Identifying everyone who might be affected by a system is called a _______ analysis.
+2) Differing access to computing devices and the Internet is called the digital _______.
 
-3) A way for affected users to appeal a system's decision is called _______.
+3) Computing innovations can reflect existing human biases through their algorithms or their _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["audit", "stakeholder", "recourse"],
-        hint1: "Measure + report.",
-        hint2: "Affected parties.",
-        hint3: "Appeal mechanism.",
-        explanation: "Bias audit, stakeholder analysis, recourse."
+        correctAnswers: ["people", "divide", "data"],
+        hint1: "Or even by the same person.",
+        hint2: "An access gap.",
+        hint3: "What the innovation learns from.",
+        explanation: "One effect can help some people and harm others. Unequal access is the digital divide. Bias comes from algorithms or data."
       }
     },
     {
@@ -109,11 +109,11 @@ export const cspSocialEthicalImpactsPart6Data = {
       exercise: {
         dropdowns: [
           {
-            label: "A school deploying an automated scheduling tool should also ___",
-            options: ["offer humans a way to override and appeal", "lock every decision in permanently after release", "hide how the tool reaches its decisions from staff", "let the tool's output replace all human review"]
+            label: "Programmers who find that their algorithm treats one group unfairly should ___",
+            options: ["take action to reduce the bias", "ignore it if it was not intended", "hide the results from users", "collect more of the same data"]
           },
           {
-            label: "A bias audit reports ___",
+            label: "A check for bias in a system should report ___",
             options: ["error rates broken down by relevant groups", "overall accuracy averaged across all users", "the developers' stated intentions for the model", "total error rate only, with no group breakdown"]
           },
           {
@@ -121,11 +121,11 @@ export const cspSocialEthicalImpactsPart6Data = {
             options: ["vulnerable populations who may be hardest hit", "only paying customers who generate revenue", "only the developers who designed the system", "only the managers who approve the project"]
           }
         ],
-        correctAnswers: ["offer humans a way to override and appeal", "error rates broken down by relevant groups", "vulnerable populations who may be hardest hit"],
-        hint1: "Recourse.",
-        hint2: "Disaggregated metrics.",
+        correctAnswers: ["take action to reduce the bias", "error rates broken down by relevant groups", "vulnerable populations who may be hardest hit"],
+        hint1: "Responsible programmers act.",
+        hint2: "Results for each group.",
         hint3: "Inclusive list.",
-        explanation: "Override + recourse, group-level metrics, inclusive stakeholder lists."
+        explanation: "Programmers should act to reduce bias, results should be checked group by group, and the groups most at risk should be considered."
       }
     },
     {
@@ -134,9 +134,9 @@ export const cspSocialEthicalImpactsPart6Data = {
       content: `
 ## AP Exam Strategy: Workshop
 
-- Always do stakeholder analysis (including vulnerable populations).
-- Bias audits: report metrics by group, not just overall.
-- Build in human override + recourse for high-stakes decisions.
+- Ask who benefits, who is harmed, and who is left out (including vulnerable populations).
+- Check for bias by measuring results for each group, not just overall.
+- Programmers should act to reduce bias; collecting more of the same biased data does not fix it.
       `
     },
     {
@@ -151,23 +151,23 @@ export const cspSocialEthicalImpactsPart6Data = {
             question: "A team launches a hiring screener. The most CSP-aligned ethical guard is ___",
             options: [
               "no formal guard at all, on the grounds that the screener's training data is statistically representative.",
-              "audit pass rates by demographic group, document criteria, and allow human review and appeals.",
+              "check pass rates for each group, document the criteria, and let humans review decisions.",
               "hide the criteria, scores, and cutoffs from candidates so that no one can tailor resumes to them.",
               "train the screener on more past hires so that its decisions match previous managers."
             ],
             correctAnswer: 1,
-            explanation: "Audit + transparency + review + appeal."
+            explanation: "Checking results by group and allowing human review are ways programmers can act to reduce bias."
           },
           {
             question: "A volunteer crowdsources a community map. The most CSP-aligned guardrail against vandalism is ___",
             options: [
               "no guardrail at all, on the grounds that volunteer contributors will self-police one another's edits.",
-              "governance through a clear policy, trusted moderators, change history, and escalation paths.",
+              "clear rules, trusted moderators, and a history of changes so bad edits can be undone.",
               "require each contributor to pay a small fee, since paid edits are never vandalized.",
               "lock the map after its first version, so no one can edit, correct, or update it later."
             ],
             correctAnswer: 1,
-            explanation: "Crowdsourcing + governance."
+            explanation: "Crowdsourcing works best when contributions can be reviewed and corrected."
           }
         ]
       }

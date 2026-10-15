@@ -13,7 +13,7 @@ export const cspFaultToleranceSecurityPart1Data = {
 
 ## Fault Tolerance
 
-**Fault tolerance** is the ability of a system to continue operating when a component fails.
+**Fault tolerance** is the ability of a system to support failures and still continue to function.
 
 ### Redundancy
 The primary method for achieving fault tolerance is **redundancy** — having backup components or paths.
@@ -21,7 +21,7 @@ The primary method for achieving fault tolerance is **redundancy** — having ba
 | Type | Description | Example |
 |------|-----------|---------|
 | **Path redundancy** | Multiple routes between nodes | Internet routing around a failed link |
-| **Data redundancy** | Multiple copies of data | Cloud backups, RAID drives |
+| **Data redundancy** | Multiple copies of data | Backup copies kept on another device |
 | **Hardware redundancy** | Backup equipment | Redundant servers, power supplies |
 
 ### Internet Redundancy
@@ -34,7 +34,7 @@ The primary method for achieving fault tolerance is **redundancy** — having ba
 
 If the link between B and C fails, data can route A → B → E → F → C or A → D → E → F → C. Multiple paths ensure no single failure brings down the network.
 
-> 🔑 The Internet was designed with redundancy so that **no single point of failure** can take down the entire network. Packets automatically reroute around failed links.
+> 🔑 The Internet was engineered to be fault-tolerant, with redundant paths so that a single failure does not take down the network. If a device or connection fails, later data are sent along a different route, if one exists.
       `
     },
     {
@@ -79,16 +79,12 @@ If the link between B and C fails, data can route A → B → E → F → C or A
 ### Encryption
 **Encryption** transforms readable data (plaintext) into unreadable data (ciphertext) to protect it from unauthorized access.
 
-| Type | Keys | Speed | Use Case |
-|------|------|-------|----------|
-| **Symmetric** | One shared key for encrypt and decrypt | Fast | Encrypting stored data |
-| **Asymmetric** | Public key (encrypt) + Private key (decrypt) | Slower | Secure communication, HTTPS |
+| Type | Keys | Who can decrypt |
+|------|------|-----------------|
+| **Symmetric** | One shared key for both encryption and decryption | Anyone with the shared key |
+| **Public key** (asymmetric) | A public key encrypts; a private key decrypts | Only the holder of the private key |
 
-### How HTTPS Uses Both
-1. Browser gets web server public key (asymmetric)
-2. Browser encrypts a session key with the public key
-3. Server decrypts session key with its private key
-4. Both sides use the session key (symmetric) for fast communication
+With public key encryption, the sender does **not** need the receiver's private key to encrypt a message, but the receiver's private key is required to decrypt it. **Certificate authorities** issue digital certificates that validate who owns the encryption keys used in secure communications. (The math behind encryption is not on the AP exam.)
 
 ## Common Threats
 
@@ -96,10 +92,9 @@ If the link between B and C fails, data can route A → B → E → F → C or A
 |--------|-----------|
 | **Phishing** | Fake emails/sites tricking users into giving up passwords |
 | **Malware** | Software designed to damage or gain unauthorized access |
-| **DDoS** | Distributed Denial of Service — flooding a server with traffic |
-| **Man-in-the-middle** | Attacker intercepts communication between two parties |
-| **Keylogger** | Records everything typed, capturing passwords |
-| **Ransomware** | Encrypts user files and demands payment to unlock |
+| **Computer virus** | A malicious program that copies itself and gains unauthorized access, often by attaching to a legitimate program |
+| **Keylogging** | A program records every keystroke to capture passwords |
+| **Rogue access point** | A wireless access point that gives unauthorized access to a network; data sent through it can be intercepted |
       `
     },
     {
@@ -132,23 +127,23 @@ If the link between B and C fails, data can route A → B → E → F → C or A
       exercise: {
         dropdowns: [
           {
-            label: 'HTTPS uses ___ encryption for the initial key exchange',
-            options: ['Asymmetric (public/private key pair)', 'Symmetric (a single shared secret key)', 'Hashing (one-way digest only)', 'No encryption (plaintext handshake)']
+            label: 'Encryption in which a public key encrypts and only a private key decrypts is called ___',
+            options: ['Public key encryption (a key pair)', 'Symmetric encryption (one shared key)', 'Multifactor authentication (two steps)', 'No encryption (plain, readable text)']
           },
           {
-            label: 'A DDoS attack works by ___',
-            options: ['Flooding a server with traffic so it cannot serve legitimate users', 'Guessing many passwords until one account finally lets the attacker in', 'Tricking users into revealing login credentials through fake emails', 'Recording each keystroke a user types to capture their passwords']
+            label: 'Keylogging works by ___',
+            options: ['Recording each keystroke a user types to capture their passwords', 'Guessing many passwords until one account finally lets the attacker in', 'Tricking users into revealing login credentials through fake emails', 'Setting up a fake wireless network that intercepts users\' traffic']
           },
           {
             label: 'A network where every node connects to every other node is the MOST ___',
             options: ['Fault tolerant (maximum redundancy)', 'Fragile (any one link failure splits it)', 'Centralized (all traffic through one hub)', 'Inexpensive (fewest cables required)']
           }
         ],
-        correctAnswers: ['Asymmetric (public/private key pair)', 'Flooding a server with traffic so it cannot serve legitimate users', 'Fault tolerant (maximum redundancy)'],
+        correctAnswers: ['Public key encryption (a key pair)', 'Recording each keystroke a user types to capture their passwords', 'Fault tolerant (maximum redundancy)'],
         hint1: 'Public key encrypts, private key decrypts.',
-        hint2: 'Denial of service = denying access by overloading.',
+        hint2: 'Key + logging.',
         hint3: 'Maximum connections = maximum backup paths.',
-        explanation: 'HTTPS starts with asymmetric. DDoS floods servers. Full mesh = most fault tolerant.'
+        explanation: 'A public/private key pair is public key encryption. Keylogging records keystrokes. Full mesh = most fault tolerant.'
       }
     },
     {
@@ -158,9 +153,9 @@ If the link between B and C fails, data can route A → B → E → F → C or A
 ## AP Exam Strategy: Fault Tolerance & Security
 
 - **Redundancy** is the #1 fault tolerance mechanism — multiple paths and backups
-- Know symmetric (one key, fast) vs asymmetric (two keys, secure key exchange)
-- HTTPS uses BOTH: asymmetric for initial handshake, symmetric for ongoing communication
-- Know common attacks: phishing, malware, DDoS, man-in-the-middle
+- Know symmetric (one shared key) vs public key (public key encrypts, private key decrypts)
+- Certificate authorities issue digital certificates that validate ownership of encryption keys
+- Know common threats: phishing, malware and viruses, keylogging, rogue access points
 - A single point of failure means the system is NOT fault tolerant at that point
 - More connections in a network = more redundancy = more fault tolerant
       `
@@ -182,10 +177,10 @@ If the link between B and C fails, data can route A → B → E → F → C or A
               'The operating system recreates the files because it logs every write'
             ],
             correctAnswer: 1,
-            explanation: 'Without redundancy (backups, RAID, etc.), a single hardware failure causes permanent data loss. This is why redundancy is critical for fault tolerance.'
+            explanation: 'Without redundancy, such as a backup copy on another device, a single hardware failure causes permanent data loss. This is why redundancy is critical for fault tolerance.'
           },
           {
-            question: 'Alice wants to send a secure message to Bob. She encrypts it with Bob public key. Who can decrypt it?',
+            question: 'Alice wants to send a secure message to Bob. She encrypts it with Bob\'s public key. Who can decrypt it?',
             options: [
               'Anyone who has Bob\'s public key',
               'Only Bob, using his private key',
@@ -193,7 +188,7 @@ If the link between B and C fails, data can route A → B → E → F → C or A
               'Both Alice and Bob, using the public key'
             ],
             correctAnswer: 1,
-            explanation: 'In asymmetric encryption, data encrypted with the public key can ONLY be decrypted with the corresponding private key. Only Bob has his private key, so only Bob can read the message.'
+            explanation: 'In public key encryption, data encrypted with the public key can ONLY be decrypted with the matching private key. Only Bob has his private key, so only Bob can read the message.'
           }
         ]
       }

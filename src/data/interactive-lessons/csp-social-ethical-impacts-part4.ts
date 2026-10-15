@@ -38,7 +38,7 @@ export const cspSocialEthicalImpactsPart4Data = {
               "shift policing evenly to every neighborhood, regardless of where arrests occurred before."
             ],
             correctAnswer: 1,
-            explanation: "\"Bias laundering\" — historical patterns replicated as objective predictions."
+            explanation: "Computing innovations can reflect existing human biases through the data they learn from; past patterns get repeated as if they were objective."
           },
           {
             question: "A region without high-speed Internet ___",
@@ -60,26 +60,26 @@ export const cspSocialEthicalImpactsPart4Data = {
       content: `
 ## Algorithm Choices Are Policy Choices
 
-When a credit-score, hiring, or healthcare-triage algorithm is deployed, its rules become policy. CSP frames this as a design and accountability concern:
+When a credit-score, hiring, or healthcare-triage algorithm is deployed, its rules become policy. Computing innovations can reflect existing human biases, through biases written into the algorithm or biases in the data it uses, and **biases can be embedded at all levels of software development**. Programmers should take action to reduce bias, for example by:
 
-- **Transparency**: can outsiders audit the system?
-- **Accountability**: who is responsible for harms?
-- **Recourse**: can affected people appeal?
+- testing results separately for different groups of people,
+- checking whether the training data represent everyone the system will affect,
+- letting people see how a decision was made and ask for it to be reviewed.
 
 ## Intellectual Property And Creative Commons
 
-| License | Effect |
+| Option | Effect |
 |---------|--------|
-| Public domain | No restrictions. |
-| Creative Commons (CC-BY) | Reuse with attribution. |
-| Open source (MIT, GPL) | Reuse under license terms. |
+| Creative Commons | The creator lets others share, use, and build on the work; most Creative Commons licenses require credit. |
+| Open source | Programs freely available to redistribute and modify. |
+| Open access | Research free of access restrictions. |
 | Proprietary | All rights reserved. |
 
-CSP-aligned thinking: respect creators' intent, give credit, understand what AI training and remix imply.
+CSP-aligned thinking: respect creators' intent, cite your sources, and remember that using someone else's work without permission and presenting it as your own is plagiarism.
 
 ## Privacy Expectations
 
-Different cultures, populations, and contexts have different expectations. A "public" post in a small-town context becomes very different when amplified globally. **Contextual integrity** is the CSP framing: data should flow in ways consistent with the original context's norms.
+Information placed online can be used in ways that were not intended: an email can be forwarded, a post can be reshared, and social media can be viewed by potential employers. A "public" post in a small-town context becomes very different when it is shared globally.
       `
     },
     {
@@ -88,19 +88,19 @@ Different cultures, populations, and contexts have different expectations. A "pu
       content: `
 **Applied Recall** ✍️
 
-1) A property of a system that lets outsiders examine how it works is called _______.
+1) Using someone else's work without permission and presenting it as your own is called _______.
 
-2) A property that allows affected users to appeal a decision is called _______.
+2) Biases can be embedded at _______ levels of software development.
 
-3) A privacy framework that asks whether data flows match the original context's norms is called contextual _______.
+3) A Creative Commons license lets others share, use, and build on a work, usually as long as they give the creator _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["transparency", "recourse", "integrity"],
-        hint1: "Visibility.",
-        hint2: "Appeal mechanism.",
-        hint3: "Context-aware.",
-        explanation: "Transparency / recourse / contextual integrity."
+        correctAnswers: ["plagiarism", "all", "credit"],
+        hint1: "It may have legal consequences.",
+        hint2: "Not just one stage.",
+        hint3: "Attribution.",
+        explanation: "Plagiarism / bias can enter at all levels / Creative Commons usually requires credit."
       }
     },
     {
@@ -116,15 +116,15 @@ Different cultures, populations, and contexts have different expectations. A "pu
             options: ["exhibiting bias that needs investigation, regardless of intent", "unbiased, as long as the developers never intended any group to be harmed", "acceptable, because an algorithm is objective and cannot hold any bias of its own", "fair, since the identical code is applied to every single applicant who submits"]
           },
           {
-            label: "Reusing a CC-BY image requires ___",
-            options: ["attribution to the creator under the license terms", "payment to the creator under the license terms", "written permission from the creator for each use", "no acknowledgment, since CC-BY works are public domain"]
+            label: "Reusing an image under a Creative Commons license that requires credit means ___",
+            options: ["giving credit to the creator under the license terms", "paying the creator under the license terms", "asking the creator for written permission each time", "giving no credit, since the work is free to use"]
           },
           {
             label: "Privacy expectations vary by ___",
             options: ["context, culture, and population", "nothing — identical everywhere", "device, browser, and OS", "file size and format only"]
           }
         ],
-        correctAnswers: ["exhibiting bias that needs investigation, regardless of intent", "attribution to the creator under the license terms", "context, culture, and population"],
+        correctAnswers: ["exhibiting bias that needs investigation, regardless of intent", "giving credit to the creator under the license terms", "context, culture, and population"],
         hint1: "Outcome bias.",
         hint2: "Attribution.",
         hint3: "Context matters.",
@@ -137,9 +137,9 @@ Different cultures, populations, and contexts have different expectations. A "pu
       content: `
 ## AP Exam Strategy: Cross-Topic Impact
 
-- Algorithm + data choices encode policy.
-- Transparency, accountability, recourse for high-stakes systems.
-- Respect creator licenses and contextual privacy norms.
+- Algorithm + data choices encode policy; bias can enter at every level.
+- Programmers should act to reduce bias: test across groups and check the data.
+- Respect creator licenses, cite sources, and remember online information can be used in unintended ways.
       `
     },
     {
@@ -159,18 +159,18 @@ Different cultures, populations, and contexts have different expectations. A "pu
               "no review process at all, on the grounds that the model's training data is statistically representative."
             ],
             correctAnswer: 1,
-            explanation: "Transparency + accountability + recourse + bias audits = ethical deployment."
+            explanation: "Programmers should take action to reduce bias: human review, clear criteria, checking results across groups, and a way to appeal all help."
           },
           {
-            question: "A user remixes a CC-BY song without attribution and posts it. The most CSP-aligned framing is ___",
+            question: "A song is shared under a Creative Commons license that requires credit. A user remixes it and posts the remix without crediting the creator. The most CSP-aligned framing is ___",
             options: [
               "no measurable concern, since the user has remixed the song into something that sounds different.",
-              "CC-BY requires crediting the original creator, so posting the remix without credit breaks the license.",
-              "CC-BY only forbids selling the song, so posting a free remix without credit is allowed.",
+              "the user broke the terms by leaving out the attribution the license asks for.",
+              "the license only forbids selling the song, so posting a free remix without credit is allowed.",
               "remixing creates a new work, so the original license no longer applies to the remix."
             ],
             correctAnswer: 1,
-            explanation: "CC-BY = attribution required."
+            explanation: "Creative Commons lets creators set the terms of reuse; this license requires credit, and others' work should always be cited."
           }
         ]
       }

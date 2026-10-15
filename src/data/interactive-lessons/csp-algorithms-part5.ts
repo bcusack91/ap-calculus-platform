@@ -68,16 +68,13 @@ The CED uses two key terms:
 - **Reasonable**: time grows polynomially (constant, log, linear, $n^{2}$, $n^{3}$, …).
 - **Unreasonable**: time grows exponentially ($2^{n}$, n!, …) — quickly impossible to run.
 
-A 30-element problem that needs to try every subset $(2^{30} \\approx 1 billion)$ is borderline. At 50 elements $(2^{50} \\approx 10^{15})$, no realistic computer finishes in your lifetime.
+A 30-element problem that tries every subset needs about 1 billion ($2^{30}$) checks, which a computer can still finish. At 100 elements ($2^{100}$ ≈ $10^{30}$ checks), no realistic computer finishes in your lifetime.
 
 ## Heuristics: When Exact Is Too Slow
 
 When an exact algorithm is unreasonable, we often use a **heuristic** — an approach that finds a *good enough* answer quickly without guaranteeing optimality.
 
-| Problem | Exact (unreasonable) | Heuristic (reasonable) |
-|---------|----------------------|----------------------|
-| Traveling Salesperson | Try all routes | "Always go to nearest unvisited city." |
-| Schedule fitting | Try all schedules | Greedy first-fit. |
+For example, finding the single shortest route through many cities by checking every possible route is unreasonable even for a few dozen cities, so route-planning programs use heuristics that find a short (but not always the shortest) route quickly. The exam asks when a heuristic is appropriate; specific heuristic algorithms are not tested.
 
 **Trade-off:** speed vs. guaranteed optimality.
 
@@ -124,7 +121,7 @@ Some problems can't be solved by *any* algorithm for *all* inputs (e.g., the Hal
             options: ["the optimal answer", "a good answer in less time", "a correct answer on every input", "the shortest possible runtime"]
           },
           {
-            label: "Doubling the input of an $O(n^{2})$ algorithm makes it ___ as long",
+            label: "Doubling the input of an algorithm whose steps grow like $n^{2}$ makes it run ___ as long",
             options: ["twice", "four times", "the same length of", "half"]
           }
         ],
@@ -167,7 +164,7 @@ Some problems can't be solved by *any* algorithm for *all* inputs (e.g., the Hal
             explanation: "Exponential growth is unreasonable; doubling CPU speed buys one extra n. A heuristic returns a usable answer quickly."
           },
           {
-            question: "A search algorithm runs in O(log n). On 1,000 items it does about 10 comparisons. On 1,000,000 items it does about how many?",
+            question: "A search on sorted data eliminates half of the remaining items at each step. On 1,000 items it makes about 10 comparisons. On 1,000,000 items it makes about how many?",
             options: [
               "1,000",
               "10,000,000",

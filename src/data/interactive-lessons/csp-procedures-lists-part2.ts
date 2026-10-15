@@ -15,10 +15,15 @@ export const cspProceduresListsPart2Data = {
 
 A **procedure** (a.k.a. function or method) is a named, reusable block of instructions. Define once, call many times.
 
-    PROCEDURE greet(name)
-      DISPLAY("Hello, " + name)
+\`\`\`
+PROCEDURE greet(name)
+{
+    DISPLAY("Hello,")
+    DISPLAY(name)
+}
+\`\`\`
 
-Calling **greet("Alex")** runs the body with name = "Alex".
+Calling **greet("Alex")** runs the body with name assigned "Alex", so it displays Hello, Alex.
 
 | Concept | Meaning |
 |---------|---------|
@@ -53,7 +58,7 @@ Calling **greet("Alex")** runs the body with name = "Alex".
               "argument — the value supplied at the call site of the procedure",
               "parameter — the variable named in the procedure's definition",
               "return value — what the procedure produces back to its caller",
-              "global variable — a value visible from every part of the program"
+              "procedure name — the identifier used to call the procedure"
             ],
             correctAnswer: 1,
             explanation: "The variable in the definition is the parameter."
@@ -78,9 +83,11 @@ Calling **greet("Alex")** runs the body with name = "Alex".
 
 A **list** is an ordered collection of values, accessed by index.
 
-    grades ← [85, 92, 78, 90]
-    grades[1] = 85   (in 1-indexed AP pseudocode)
-    LENGTH(grades) = 4
+\`\`\`
+grades ← [85, 92, 78, 90]
+DISPLAY(grades[1])          // 85 (AP lists start at index 1)
+DISPLAY(LENGTH(grades))     // 4
+\`\`\`
 
 Common list operations:
 
@@ -94,11 +101,17 @@ Common list operations:
 
 ## Mini-walkthrough
 
-    PROCEDURE average(scores)
-      total ← 0
-      FOR EACH s IN scores:
-        total ← total + s
-      RETURN total / LENGTH(scores)
+\`\`\`
+PROCEDURE average(scores)
+{
+    total ← 0
+    FOR EACH s IN scores
+    {
+        total ← total + s
+    }
+    RETURN(total / LENGTH(scores))
+}
+\`\`\`
 
 Now anywhere we need an average, we call **average(myList)**.
       `

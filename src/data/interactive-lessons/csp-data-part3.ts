@@ -19,7 +19,7 @@ export const cspDataPart3Data = {
 | **Aggregation** | Sum, mean, count over a group. |
 | **Filtering** | Keep only rows that match a condition. |
 | **Sorting** | Order by a field. |
-| **Joining** | Combine two related datasets. |
+| **Combining** | Merge two related datasets. |
 | **Visualization** | Bar charts, line graphs, maps. |
       `
     },
@@ -72,11 +72,11 @@ export const cspDataPart3Data = {
 
 Bad chart choice can mislead — exam answers reward picking the chart that matches the question.
 
-## Joining Two Datasets
+## Combining Two Datasets
 
-You have a list of student IDs and a list of (ID, grade). To produce a joined view (name, grade), you **join** on ID. The result has both pieces of information per student.
+You have a list of (student ID, name) and a list of (student ID, grade). To produce (name, grade), you **combine** the two on the shared ID. The result has both pieces of information per student.
 
-Joins enable powerful analysis (linking voter rolls + medical records + purchase history) — and powerful re-identification.
+Often a single source does not contain the data needed to draw a conclusion, so combining sources is powerful. It is also a privacy risk: combining separate pieces of personal data (location, browsing history, purchases) can create knowledge about an individual.
 
 ## Insights vs. Causation
 
@@ -91,17 +91,17 @@ A correlation in data ≠ causation. Ice-cream sales and drowning correlate (bot
 
 1) A chart that best shows two variables' relationship is a _______ plot.
 
-2) Combining two datasets on a shared key (e.g., student ID) is called a _______.
+2) Keeping only the rows that match a condition is called _______.
 
 3) A correlation in data does not necessarily mean _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["scatter", "join", "causation"],
+        correctAnswers: ["scatter", "filtering", "causation"],
         hint1: "Dots, two axes.",
-        hint2: "SQL term.",
+        hint2: "Like a coffee filter.",
         hint3: "Cause vs correlation.",
-        explanation: "Scatter plots show pair relationships. Joins combine datasets. Correlation ≠ causation."
+        explanation: "Scatter plots show pair relationships. Filtering keeps matching rows. Correlation ≠ causation."
       }
     },
     {
@@ -121,15 +121,15 @@ A correlation in data ≠ causation. Ice-cream sales and drowning correlate (bot
             options: ["comparing categories", "change over time at high resolution", "showing causation", "plotting two numeric variables"]
           },
           {
-            label: "Linking medical records to voter rolls on (ZIP, birth date, gender) demonstrates ___",
-            options: ["re-identification via quasi-identifiers", "anonymization via removing names", "data cleaning via record deduplication", "encryption via hashing personal fields"]
+            label: "Linking \"anonymous\" medical records to public voter lists by ZIP code, birth date, and gender demonstrates ___",
+            options: ["identifying people by combining data", "anonymizing data by removing names", "cleaning data by removing duplicates", "protecting data by encrypting fields"]
           }
         ],
-        correctAnswers: ["change over time", "comparing categories", "re-identification via quasi-identifiers"],
+        correctAnswers: ["change over time", "comparing categories", "identifying people by combining data"],
         hint1: "Time series.",
         hint2: "Bars compare.",
-        hint3: "Linkage attack.",
-        explanation: "Lines = trends. Bars = categories. Linkage on quasi-IDs = re-identification."
+        hint3: "Disparate data can be aggregated.",
+        explanation: "Lines = trends. Bars = categories. Combining separate pieces of personal data can identify an individual."
       }
     },
     {
@@ -139,7 +139,7 @@ A correlation in data ≠ causation. Ice-cream sales and drowning correlate (bot
 ## AP Exam Strategy: Patterns Of Data Use
 
 - Match chart to question: line/time, bar/category, scatter/relationship, histogram/distribution.
-- Joins are powerful — and the seed of many privacy concerns.
+- Combining data sources is powerful — and the seed of many privacy concerns.
 - Correlation ≠ causation. Always.
       `
     },

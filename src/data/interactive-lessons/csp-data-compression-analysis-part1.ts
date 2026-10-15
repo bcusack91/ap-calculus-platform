@@ -92,11 +92,11 @@ When working with large datasets, visualization reveals patterns that raw number
 | **Histogram** | Showing frequency distributions |
 
 ### Filtering and Transforming Data
-\`\`\`
-// Filter: Keep only rows where score > 80
-// Sort: Order by date ascending
-// Aggregate: Calculate average score per student
-\`\`\`
+Programs extract information from data with a few basic processes:
+- **Transforming**: change every element (double every value, add a parent's email to every student record)
+- **Filtering**: keep only the elements that meet a condition (only scores above 80)
+- **Combining or comparing**: add up a list, or find the student with the highest GPA
+- **Visualizing**: turn the data into a chart or graph
 
 ## Interpreting Results
 - Look for **trends** (increasing, decreasing, stable)
@@ -168,7 +168,7 @@ When working with large datasets, visualization reveals patterns that raw number
 
 - Know the difference: **lossless** (ZIP, PNG) vs **lossy** (JPEG, MP3, MP4)
 - Lossless for critical data (medical, legal, code). Lossy for media where small quality loss is acceptable
-- Run-length encoding is the lossless technique the AP exam expects you to understand
+- Run-length encoding is a simple example of lossless compression; the exam asks you to compare lossless and lossy, not to name specific algorithms
 - Data analysis questions test your ability to interpret visualizations and identify patterns
 - **Correlation does not imply causation** — always consider confounding variables
 - Large datasets can reveal patterns but also amplify errors and privacy concerns
@@ -191,7 +191,7 @@ When working with large datasets, visualization reveals patterns that raw number
               'The file is restored to its original quality on decompression'
             ],
             correctAnswer: 1,
-            explanation: 'Each round of lossy compression removes more data. Compressing an MP3 file again as a lower-bitrate MP3 removes additional frequencies. Quality only goes down, never up. This is called generation loss.'
+            explanation: 'Each round of lossy compression removes more data. Compressing an MP3 file again as a lower-bitrate MP3 removes additional frequencies. Quality only goes down, never up.'
           },
           {
             question: 'Run-length encoding converts "AAAABBCC" to "4A2B2C". Which input would NOT benefit from this technique?',

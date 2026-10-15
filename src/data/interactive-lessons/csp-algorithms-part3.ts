@@ -21,7 +21,7 @@ You will see the same building blocks again and again. Recognize them and tracin
 | **Counter** | Increment when a condition holds. |
 | **Min/Max** | Track best-so-far, compare each new element. |
 | **Filter** | Build a new list of elements meeting a condition. |
-| **Map (transform)** | Replace each element with f(element). |
+| **Transform** | Build a new list by APPENDing a changed version of each element. |
       `
     },
     {
@@ -102,15 +102,15 @@ Tracking the *position* of the minimum, not just the value.
 
 2) To pick out elements meeting a condition into a new list, use the _______ pattern.
 
-3) To replace every element with f(element) without filtering, use the _______ pattern.
+3) A variable that goes up by 1 each time a condition holds is called a _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["accumulator", "filter", "map"],
+        correctAnswers: ["accumulator", "filter", "counter"],
         hint1: "It accumulates a result.",
         hint2: "Like a sieve.",
-        hint3: "Like a one-to-one transformation.",
-        explanation: "Accumulator builds totals. Filter selects. Map transforms element-by-element."
+        hint3: "It counts matches.",
+        explanation: "An accumulator builds totals. A filter keeps the elements that meet a condition. A counter tallies matches."
       }
     },
     {
@@ -150,7 +150,7 @@ Tracking the *position* of the minimum, not just the value.
 - Skim pseudocode for the **shape**: is there a counter? An accumulator? A min/max comparison?
 - Watch for **strict vs. non-strict** comparisons (> vs ≥). They change boundary results.
 - Watch the **starting value** of an accumulator — wrong identity is a frequent FRQ deduction.
-- For "first occurrence" patterns, remember to **break/exit** or guard with a flag so you don't overwrite a found index later.
+- For "first occurrence" patterns, remember to **RETURN** early or guard with a flag so you don't overwrite a found index later.
       `
     },
     {

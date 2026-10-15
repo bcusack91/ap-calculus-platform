@@ -7,18 +7,15 @@ export const cspDataPart5Data = {
       content: `
 # 📊 Data
 
-**Part 5 of 7 — Change Over Time**
+**Part 5 of 7 — Large Data Sets, Scalability, and Bias**
 
 ---
 
-## How Data Practices Have Evolved
+## Why the Size of a Data Set Matters
 
-| Era | Defining shift |
-|-----|----------------|
-| 1980s | Relational databases (SQL); structured tables. |
-| 2000s | "Big data" — terabytes routine. |
-| 2010s | NoSQL, cloud data warehouses, real-time streams. |
-| 2020s | ML-ready datasets, vector databases, AI training corpora. |
+- The **size** of a data set affects how much information can be extracted from it.
+- **Large data sets are difficult to process using a single computer** and may require **parallel systems**: many processors or computers working at the same time.
+- **Scalability**, a system's capacity to change in size and scale to meet new demands, is an important consideration, because the computing capacity of a system affects how data sets can be processed and stored.
       `
     },
     {
@@ -30,26 +27,26 @@ export const cspDataPart5Data = {
       exercise: {
         questions: [
           {
-            question: "\"Big data\" most commonly refers to datasets that ___",
+            question: "Which data set is most likely to require parallel systems to process in a reasonable time?",
             options: [
-              "fit easily on one laptop and can be processed by one program.",
-              "are too large or too fast for traditional single-machine processing.",
-              "are encrypted with strong cryptography before they touch persistent storage.",
-              "are written in pure binary rather than human-readable structured text."
+              "A list of the 30 students enrolled in one classroom",
+              "Every trip on a large city's transit system for ten years",
+              "A spreadsheet of one family's monthly expenses",
+              "The metadata of a single photo taken with a phone"
             ],
             correctAnswer: 1,
-            explanation: "Big data = scale exceeds single-machine capability."
+            explanation: "Large data sets are difficult to process on a single computer and may require parallel systems."
           },
           {
-            question: "A vector database is most associated with ___",
+            question: "Machine learning and data mining have enabled innovation in medicine, business, and science. Which harmful use does the AP framework also point out?",
             options: [
-              "storing user passwords for the application's authentication system.",
-              "storing embeddings used by ML/AI for similarity search.",
-              "compressing video streams before they are sent over the network.",
-              "storing rows in fixed tables joined by matching ID columns."
+              "These methods can only run on one computer at a time.",
+              "Information found this way has been used to discriminate.",
+              "These methods always remove any bias from their data.",
+              "These methods cannot find patterns in large data sets."
             ],
             correctAnswer: 1,
-            explanation: "Vector DBs power similarity search for AI/ML."
+            explanation: "Information discovered through machine learning and data mining has also been used to discriminate against groups of individuals."
           }
         ]
       }
@@ -58,38 +55,19 @@ export const cspDataPart5Data = {
       id: "cspdata5-content",
       type: 'text' as const,
       content: `
-## Storage Cost Collapse
+## Keeping Everything Has a Cost
 
-| Year | $ / GB |
-|------|--------|
-| 1990 | ~$10,000 |
-| 2000 | ~$10 |
-| 2010 | ~$0.10 |
-| 2020 | ~$0.02 |
+Cheap storage makes it tempting to "just keep everything." Large collections of personal data have research benefits, but they also raise privacy risks: separate pieces of data can be combined to learn about individuals, and once information is shared online it is difficult to delete.
 
-This collapse changed what's feasible. "Just keep everything" became cheap. That has both research benefits and surveillance risks.
+## Bias in Large Data Sets
 
-## Real-Time Streams
+- Computing innovations can reflect existing human biases, because of **biases written into the algorithms** or **biases in the data** used by the innovation.
+- Problems of bias are often created by the **type or source** of data being collected. Bias is **not** eliminated by simply collecting more data.
+- Biases can be embedded at all levels of software development, so programmers should take action to reduce bias in the algorithms they write.
 
-Many systems no longer batch-process daily logs; they consume data continuously:
+## Using Other People's Data
 
-- Financial trading.
-- Fraud detection.
-- Live dashboards.
-- IoT sensor pipelines.
-
-Streaming systems (Kafka, Flink, Spark Streaming) became standard.
-
-## ML-Era Datasets
-
-Modern AI training requires massive curated datasets. New questions:
-
-- **Provenance**: where did the data come from?
-- **Consent**: did sources agree to this use?
-- **Bias**: who is represented, and who isn't?
-- **Quality**: is the labeling reliable?
-
-The dataset is now part of the AI system's ethical surface.
+Data and text created by others are their intellectual property. Using material created by someone else without permission raises legal and ethical concerns, and the source should always be cited.
       `
     },
     {
@@ -98,19 +76,19 @@ The dataset is now part of the AI system's ethical surface.
       content: `
 **Applied Recall** ✍️
 
-1) Datasets too large for a single machine are commonly called _______ data.
+1) Data sets too large for a single computer may require _______ systems.
 
-2) A database optimized for similarity search of AI embeddings is a _______ database.
+2) A system's capacity to change in size and scale to meet new demands is called _______.
 
-3) Documenting where data came from is called data _______.
+3) A model trained on biased data will likely produce _______ results.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["big", "vector", "provenance"],
-        hint1: "Term of art.",
-        hint2: "Similarity search.",
-        hint3: "Origin story.",
-        explanation: "Big data = beyond single-machine. Vector DB = embeddings. Provenance = origin."
+        correctAnswers: ["parallel", "scalability", "biased"],
+        hint1: "Many processors working at the same time.",
+        hint2: "Can the system scale?",
+        hint3: "Bias in, bias out.",
+        explanation: "Large data sets may need parallel systems. Scalability is the capacity to grow. Biased data lead to biased results."
       }
     },
     {
@@ -126,30 +104,31 @@ The dataset is now part of the AI system's ethical surface.
             options: ["\"keep everything\" is feasible — and risky for privacy", "\"keep everything\" is feasible — and free of privacy risk", "\"keep everything\" is required — by data-retention law", "\"compress everything\" is pointless — since disks are cheap"]
           },
           {
-            label: "A real-time streaming system processes events ___",
-            options: ["as they arrive, with low latency", "in nightly batches, after storage", "once the full dataset is collected", "after a human reviews and approves each one"]
+            label: "Adding more computers to keep up with a growing data set is an example of ___",
+            options: ["scaling the system", "cleaning the data", "filtering the data", "compressing the data"]
           },
           {
             label: "A model trained on a biased dataset will ___",
             options: ["likely produce biased outputs", "correct the bias as it trains on more data", "be fair if the code itself is neutral", "average out the bias across its outputs"]
           }
         ],
-        correctAnswers: ["\"keep everything\" is feasible — and risky for privacy", "as they arrive, with low latency", "likely produce biased outputs"],
+        correctAnswers: ["\"keep everything\" is feasible — and risky for privacy", "scaling the system", "likely produce biased outputs"],
         hint1: "Cheap storage = retention temptation.",
-        hint2: "Low latency.",
+        hint2: "Meeting new demands.",
         hint3: "Garbage in = garbage out.",
-        explanation: "Cheap storage tempts over-retention. Streaming = low-latency. Biased data → biased model."
+        explanation: "Cheap storage tempts over-retention. Adding capacity to meet demand is scaling. Biased data → biased model."
       }
     },
     {
       id: "cspdata5-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: Data Evolution
+## AP Exam Strategy: Large Data Sets
 
-- Know "big data" means scale beyond single machines.
-- Cheap storage doesn't mean unlimited retention should be policy.
-- Modern AI raises new dataset-ethics questions.
+- Large data sets are hard to process on one computer → parallel systems; scalability matters.
+- Bias comes from the algorithm or the data; more data from the same source does not remove it.
+- Keeping data forever increases privacy risk.
+- Using others' work without permission raises legal and ethical concerns; cite sources.
       `
     },
     {
@@ -169,18 +148,18 @@ The dataset is now part of the AI system's ethical surface.
               "copyright never applies to text that has been published openly on the web."
             ],
             correctAnswer: 1,
-            explanation: "Provenance + consent are core dataset-ethics issues."
+            explanation: "Material created by others is their intellectual property; using it without permission or credit raises legal and ethical concerns."
           },
           {
             question: "A retailer stores every transaction back to 2005. A breach exposes 20 years of purchase history. The most appropriate long-term mitigation is ___",
             options: [
               "ignore it, since old transactions can no longer cause harm.",
-              "adopt data minimization and retention limits, with encryption at rest.",
+              "keep only the data still needed, and encrypt whatever is kept.",
               "keep everything forever and rely on stronger passwords.",
               "rely on a firewall, since breaches only come from outside."
             ],
             correctAnswer: 1,
-            explanation: "Combine minimization + sunsets + encryption."
+            explanation: "Data that is no longer kept cannot be exposed, and encryption protects what remains from unauthorized access."
           }
         ]
       }

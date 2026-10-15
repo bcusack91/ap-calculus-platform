@@ -62,16 +62,17 @@ export const cspProceduresListsPart7Data = {
 | List | Ordered indexed collection. |
 | LENGTH | Number of elements. |
 | APPEND | Add to end. |
-| Map / filter / reduce | Three core list patterns. |
-| Higher-order procedure | Takes / returns procedures. |
-| Pure function | No side effects. |
+| Traversal | Accessing list elements with a loop (complete or partial). |
+| Data abstraction | One name for a collection of data. |
+| Procedural abstraction | Using a procedure knowing what it does, not how. |
+| Modularity | Dividing a program into separate subprograms. |
 
 ## Common Pitfalls
 
 - Confusing parameter and argument.
 - Off-by-one with 1-indexed lists.
 - Forgetting to RETURN a value.
-- Mutating a caller's list without documenting it.
+- Reading an index below 1 or above LENGTH(list), which is an error.
 - Writing one big function instead of decomposing.
       `
     },
@@ -81,19 +82,19 @@ export const cspProceduresListsPart7Data = {
       content: `
 **Applied Recall** ✍️
 
-1) A higher-order procedure takes another _______ as an argument.
+1) Dividing a program into separate subprograms is called _______.
 
 2) The number of elements in a list is given by the _______ operation.
 
-3) A function with no side effects whose output depends only on its inputs is called _______.
+3) A loop that RETURNs as soon as it finds a match performs a _______ traversal.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["procedure", "LENGTH", "pure"],
-        hint1: "Procedures as values.",
+        correctAnswers: ["modularity", "LENGTH", "partial"],
+        hint1: "Built from modules.",
         hint2: "List size.",
-        hint3: "Predictable.",
-        explanation: "HOF / LENGTH / pure functions."
+        hint3: "Not every element is accessed.",
+        explanation: "Modularity divides a program into subprograms. LENGTH counts elements. Stopping early makes a traversal partial."
       }
     },
     {
@@ -109,19 +110,19 @@ export const cspProceduresListsPart7Data = {
             options: ["readability, testability, and reuse", "execution speed and memory efficiency", "the program's compiled file size", "the number of features the program has"]
           },
           {
-            label: "A procedure that returns true / false is called a ___",
-            options: ["predicate", "constructor", "reducer", "mapper"]
+            label: "After list ← [2, 4, 6] and REMOVE(list, 1), list[1] is ___",
+            options: ["4", "2", "6", "an error"]
           },
           {
-            label: "A unit test ideally exercises ___",
-            options: ["a single procedure with known inputs and expected outputs", "the whole program at once, running with real users and live data", "a single procedure with random inputs and no expected outputs", "all procedures together, each called from the main program"]
+            label: "A good set of test inputs for a list procedure includes ___",
+            options: ["typical values, boundary values, and an empty list", "only the values the programmer expects users to enter", "one very large list and no other test cases", "random values chosen after the procedure has shipped"]
           }
         ],
-        correctAnswers: ["readability, testability, and reuse", "predicate", "a single procedure with known inputs and expected outputs"],
+        correctAnswers: ["readability, testability, and reuse", "4", "typical values, boundary values, and an empty list"],
         hint1: "Decomposition wins.",
-        hint2: "Boolean returner.",
-        hint3: "Single procedure.",
-        explanation: "Decomposition + predicates + unit tests are core good practice."
+        hint2: "REMOVE shifts the later elements left.",
+        hint3: "Test the extremes, not just the usual case.",
+        explanation: "Decomposing into procedures improves readability and reuse. After 2 is removed, 4 moves to index 1. Testing should cover typical, boundary, and empty inputs."
       }
     },
     {
@@ -132,7 +133,7 @@ export const cspProceduresListsPart7Data = {
 
 - Parameter vs. argument: definition vs. call.
 - LENGTH, APPEND, INSERT, REMOVE, list[i] are AP's core list ops.
-- Map / filter / reduce: name them when you see them.
+- Name the traversal pattern when you see it: sum/average, min/max, keep some (APPEND inside IF), or linear search.
 - Decomposing into named procedures is almost always the right move.
       `
     },
@@ -156,15 +157,15 @@ export const cspProceduresListsPart7Data = {
             explanation: "Decompose into named, single-responsibility procedures."
           },
           {
-            question: "A procedure **removeFirstNegative(list)** modifies the caller's list. A teammate is surprised when their original list changes. The CSP-aligned fix is ___",
+            question: "aList ← [1, 2, 3]\nbList ← aList\nbList[1] ← 9\nDISPLAY(aList[1])\n\nWhat is displayed?",
             options: [
-              "leave it; teammates should expect mutation from any procedure.",
-              "document the mutation, or return a changed copy and keep the input intact.",
-              "make the list global so every teammate can see the change as it happens.",
-              "rename the procedure so its name hides that it changes the list."
+              "9",
+              "1",
+              "2",
+              "an error"
             ],
             correctAnswer: 1,
-            explanation: "Make mutation explicit, or avoid it."
+            explanation: "On the exam reference sheet, bList ← aList assigns a copy of aList. Changing bList[1] does not change aList, so aList[1] is still 1."
           }
         ]
       }

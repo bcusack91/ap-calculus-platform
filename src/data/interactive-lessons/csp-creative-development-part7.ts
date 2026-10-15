@@ -40,7 +40,7 @@ Final review of dev-process vocabulary.
             options: [
               "fails to compile because a keyword is misspelled.",
               "stops immediately with a runtime crash message.",
-              "runs but produces an incorrect result.",
+              "runs but gives a wrong result.",
               "runs correctly but uses more memory."
             ],
             correctAnswer: 2,
@@ -66,9 +66,9 @@ Final review of dev-process vocabulary.
 | Syntax error | Caught at parse time. |
 | Runtime error | Caught while running. |
 | Logic error | Wrong output, no crash. |
-| Version control | Tracks every change. |
-| CI / CD | Automatic integration / deployment. |
-| Code review | Other devs inspect changes. |
+| Incremental development | Build and test small pieces before adding them to the whole. |
+| Program documentation | Written description of what code does and how it was developed. |
+| Overflow error | A number outside the range that can be represented. |
 
 ## Common Pitfalls
 
@@ -89,15 +89,15 @@ Final review of dev-process vocabulary.
 
 2) A program that produces the wrong output without crashing has a _______ error.
 
-3) A process where teammates inspect proposed changes before merging is called code _______.
+3) A process that builds and tests small pieces before adding each one to the whole is called _______ development.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["iterative", "logic", "review"],
+        correctAnswers: ["iterative", "logic", "incremental"],
         hint1: "Repeated cycles.",
         hint2: "Wrong answer, no crash.",
-        hint3: "Sanity check.",
-        explanation: "Iterative dev, logic errors, and code review are core CSP concepts."
+        hint3: "Piece by piece, in increments.",
+        explanation: "Iterative and incremental development and the error types are core CSP Big Idea 1 concepts."
       }
     },
     {
@@ -109,23 +109,23 @@ Final review of dev-process vocabulary.
       exercise: {
         dropdowns: [
           {
-            label: "A team that releases small changes daily with automated tests is using ___",
-            options: ["CI / CD", "the waterfall model", "pair programming", "big-bang integration"]
+            label: "A team that builds one small feature, tests it, and only then adds the next is using ___",
+            options: ["incremental development", "a single big-bang release", "pair programming", "no development process"]
           },
           {
-            label: "A feature documented for users in a \"how to\" guide is part of ___",
-            options: ["user-facing documentation", "program code comments", "the commit history", "an API reference for developers"]
+            label: "A comment stating \"This code was generated using [AI tool name]\" is ___",
+            options: ["an acknowledgment of the code's source", "a syntax error in the program", "a test case for the procedure", "an event that triggers the code"]
           },
           {
             label: "When designing for a target audience, the best validation is ___",
-            options: ["testing with real users from that audience", "a review by the development team", "positive results on the automated test suite", "a code review by senior engineers"]
+            options: ["testing with real users from that audience", "a review by the development team", "positive results on the automated test suite", "a quick look by senior engineers"]
           }
         ],
-        correctAnswers: ["CI / CD", "user-facing documentation", "testing with real users from that audience"],
-        hint1: "Continuous integration / deployment.",
-        hint2: "Help users.",
+        correctAnswers: ["incremental development", "an acknowledgment of the code's source", "testing with real users from that audience"],
+        hint1: "Small increments, each tested.",
+        hint2: "It credits where the code came from.",
         hint3: "Real users surface real issues.",
-        explanation: "Daily releases + tests = CI/CD. User guides = documentation. Real users validate design."
+        explanation: "Building and testing piece by piece is incremental development. Naming the AI tool acknowledges the code's source. Real users validate a design."
       }
     },
     {
@@ -136,7 +136,7 @@ Final review of dev-process vocabulary.
 
 - The AP exam loves "what would the team do NEXT?" — answer with iterate, test, gather feedback, document.
 - Distinguish syntax / runtime / logic errors with a one-sentence example each.
-- Code review and version control are foundational.
+- Acknowledge code from other sources, including AI tools, in the program documentation.
 - Frame development decisions as having technical AND user/ethical impact.
       `
     },
@@ -149,7 +149,7 @@ Final review of dev-process vocabulary.
       exercise: {
         questions: [
           {
-            question: "A startup releases an MVP, gets feedback, and rebuilds key features based on user behavior. Which model best describes this?",
+            question: "A startup releases a basic first version, gets feedback, and rebuilds key features based on user behavior. Which model best describes this?",
             options: [
               "Iterative development.",
               "Waterfall development.",
@@ -160,7 +160,7 @@ Final review of dev-process vocabulary.
             explanation: "Releasing, gathering feedback, rebuilding = iterative."
           },
           {
-            question: "You inherit code with no comments, no tests, no commit history. The most appropriate FIRST step is ___",
+            question: "You inherit a program with no comments, no documentation, and no tests. The most appropriate FIRST step is ___",
             options: [
               "rewrite the entire codebase from scratch in a cleaner, modern style.",
               "add tests that capture current behavior before changing anything.",

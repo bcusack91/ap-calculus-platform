@@ -23,15 +23,15 @@ export const cspComputingSystemsNetworksPart7Data = {
       exercise: {
         questions: [
           {
-            question: "A \"system\" in CSP is ___",
+            question: "A \"computing system\" in CSP is ___",
             options: [
-              "only the software programs installed on a device.",
-              "a collection of components that interact to provide some function.",
-              "only the physical hardware inside a computer's case.",
+              "only the software programs installed on one device.",
+              "a group of devices and programs working toward a common purpose.",
+              "only the physical hardware inside a single computer's case.",
               "only the network links that connect separate devices."
             ],
             correctAnswer: 1,
-            explanation: "System = interacting components."
+            explanation: "A computing system is a group of computing devices and programs working together for a common purpose."
           },
           {
             question: "A protocol is ___",
@@ -55,23 +55,24 @@ export const cspComputingSystemsNetworksPart7Data = {
 
 | Term | Definition |
 |------|-----------|
-| System | Interacting components. |
-| Network | A system where components communicate. |
-| Bandwidth / throughput / latency | Capacity / actual / delay. |
-| Client-server / P2P | Two architecture models. |
-| Packet switching | Independent packet routing. |
-| TCP / UDP | Reliable / unreliable transport. |
-| DNS | Name → address. |
-| Cloud / edge | Remote / nearby compute. |
-| Digital divide | Unequal connectivity → unequal opportunity. |
+| Computing device | A physical artifact that can run a program. |
+| Computing system | Devices and programs working together for a common purpose. |
+| Network | Interconnected devices that can send or receive data. |
+| Path / routing | Directly connected devices from sender to receiver / finding a path. |
+| Bandwidth | Maximum data sent in a fixed time, in bits per second. |
+| Packet | A chunk of data plus metadata for routing and reassembly. |
+| IP, TCP, UDP / HTTP | Common Internet protocols / the Web's protocol. |
+| Redundancy / fault tolerance | Extra components / keeps working when parts fail. |
+| Speedup | Sequential time ÷ parallel time. |
+| Digital divide | Unequal access to devices and the Internet. |
 
 ## Common Pitfalls
 
-- Confusing bandwidth and latency.
-- Assuming all packets take the same path.
-- Forgetting DNS exists until it breaks.
-- Treating IoT devices as patched.
-- Ignoring connectivity inequality.
+- Assuming all packets take the same path or arrive in order.
+- Treating the Internet and the World Wide Web as the same thing.
+- Mixing up bits and bytes in bandwidth questions.
+- Adding the parallel tasks instead of taking the longest one.
+- Forgetting that redundancy costs extra resources.
       `
     },
     {
@@ -82,17 +83,17 @@ export const cspComputingSystemsNetworksPart7Data = {
 
 1) A reliable, in-order transport protocol is _______.
 
-2) Translating example.com to an IP is the job of _______.
+2) The process of finding a path from sender to receiver is called _______.
 
 3) Unequal access to computing and connectivity is called the digital _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["TCP", "DNS", "divide"],
+        correctAnswers: ["TCP", "routing", "divide"],
         hint1: "Reliable transport.",
-        hint2: "Name resolver.",
+        hint2: "Finding the route.",
         hint3: "Equity gap.",
-        explanation: "TCP / DNS / digital divide."
+        explanation: "TCP / routing / digital divide."
       }
     },
     {
@@ -104,23 +105,23 @@ export const cspComputingSystemsNetworksPart7Data = {
       exercise: {
         dropdowns: [
           {
-            label: "High bandwidth ___",
-            options: ["does NOT guarantee low latency", "guarantees low latency on every connection", "is just another word for latency", "prevents congestion on busy links"]
+            label: "Having more than one path between devices makes a network ___",
+            options: ["more fault-tolerant", "less fault-tolerant", "unable to route data", "slower in every case"]
           },
           {
-            label: "A CDN reduces ___",
-            options: ["latency for users far from origin servers", "the need for any origin servers at all", "the number of packets in each download", "the security risks of using HTTPS"]
+            label: "A job with a 10-second sequential step and parallel tasks of 5 and 8 seconds takes at least ___",
+            options: ["18 seconds", "23 seconds", "13 seconds", "8 seconds"]
           },
           {
             label: "A protocol like HTTP is ___",
             options: ["an agreed set of rules for client / server communication", "a hardware device that forwards packets between networks", "a naming system that maps domain names to IP addresses", "a programming language used to build web pages"]
           }
         ],
-        correctAnswers: ["does NOT guarantee low latency", "latency for users far from origin servers", "an agreed set of rules for client / server communication"],
-        hint1: "Bandwidth ≠ latency.",
-        hint2: "Edge proximity.",
+        correctAnswers: ["more fault-tolerant", "18 seconds", "an agreed set of rules for client / server communication"],
+        hint1: "Redundant paths.",
+        hint2: "Sequential part + longest parallel task.",
         hint3: "Rules of communication.",
-        explanation: "Bandwidth ≠ latency; CDN cuts latency; protocols = rules."
+        explanation: "Redundant paths add fault tolerance. 10 + 8 = 18 seconds. Protocols are agreed-upon rules."
       }
     },
     {
@@ -129,10 +130,11 @@ export const cspComputingSystemsNetworksPart7Data = {
       content: `
 ## Final Exam Tips
 
-- Distinguish bandwidth, throughput, latency.
-- Packet switching, TCP/UDP, DNS, CDNs.
+- Know the definitions: device, system, network, path, routing, bandwidth, protocol.
+- Packets, IP/TCP/UDP, and HTTP for the Web.
+- Fault tolerance through redundancy; find single points of failure.
+- Parallel time, speedup, and the limit set by the sequential portion.
 - Digital divide framing for access questions.
-- Layered systems = abstraction at every layer.
       `
     },
     {
@@ -152,18 +154,18 @@ export const cspComputingSystemsNetworksPart7Data = {
               "serve uncompressed videos and rely on the network's full capacity."
             ],
             correctAnswer: 1,
-            explanation: "Local caching + appropriate bitrate is the standard equity-aware design."
+            explanation: "Smaller lossy versions stored locally reduce how much bandwidth each student needs, which helps where access is limited."
           },
           {
-            question: "A team builds an API used by partners worldwide. The single most impactful step to reduce global latency is ___",
+            question: "A research group must analyze a data set too large to store on any one of its computers. Which approach best fits?",
             options: [
-              "add a CDN or edge points-of-presence close to its users.",
-              "switch every API endpoint from TCP to UDP and accept the packet loss.",
-              "remove HTTPS and serve every API response over plain HTTP instead.",
-              "move the API to one larger server in a single central data center."
+              "distribute the data and processing across many computers.",
+              "run the analysis sequentially on the group's fastest computer.",
+              "delete most of the data so that it fits on a single computer.",
+              "compress the data with a lossy method and analyze the result."
             ],
             correctAnswer: 0,
-            explanation: "CDNs / edge POPs are the standard latency mitigation for global APIs."
+            explanation: "Distributed computing allows problems to be solved that could not be solved on a single computer because of processing time or storage needs."
           }
         ]
       }

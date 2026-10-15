@@ -28,7 +28,7 @@ Walk through end-to-end problems that combine sequence, selection, iteration, li
             question: "You need to compute the average of a list of test scores, ignoring zeros. Which two patterns must you combine?",
             options: [
               "A filter that skips zeros and an accumulator for sum and count",
-              "A map that doubles each score and a binary search for zeros",
+              "A loop that doubles each score and a binary search for zeros",
               "Two minimum trackers, one for scores and one for zeros",
               "A sort of the scores and a count of the largest values"
             ],
@@ -55,15 +55,26 @@ Walk through end-to-end problems that combine sequence, selection, iteration, li
       content: `
 ## Worked Problem: Average Skipping Zeros
 
-    PROCEDURE averageNonzero(scores) {
-      total ← 0
-      count ← 0
-      FOR EACH s IN scores {
-        IF (s ≠ 0) { total ← total + s; count ← count + 1 }
-      }
-      IF (count = 0) { RETURN 0 }
-      RETURN total / count
-    }
+\`\`\`
+PROCEDURE averageNonzero(scores)
+{
+    total ← 0
+    count ← 0
+    FOR EACH s IN scores
+    {
+        IF (s ≠ 0)
+        {
+            total ← total + s
+            count ← count + 1
+        }
+    }
+    IF (count = 0)
+    {
+        RETURN(0)
+    }
+    RETURN(total / count)
+}
+\`\`\`
 
 **Test traces:**
 
@@ -75,16 +86,23 @@ Walk through end-to-end problems that combine sequence, selection, iteration, li
 
 ## Worked Problem: Detecting a Pattern
 
-Goal: return TRUE if a list contains two consecutive equal elements.
+Goal: return true if a list contains two consecutive equal elements.
 
-    PROCEDURE hasRun(list) {
-      i ← 2
-      REPEAT UNTIL (i > LENGTH(list)) {
-        IF (list[i] = list[i − 1]) { RETURN TRUE }
-        i ← i + 1
-      }
-      RETURN FALSE
-    }
+\`\`\`
+PROCEDURE hasRun(list)
+{
+    i ← 2
+    REPEAT UNTIL (i > LENGTH(list))
+    {
+        IF (list[i] = list[i - 1])
+        {
+            RETURN(true)
+        }
+        i ← i + 1
+    }
+    RETURN(false)
+}
+\`\`\`
 
 **Why start at 2?** list[i − 1] would be list[0] when i = 1, which doesn’t exist in 1-indexed pseudocode.
       `
@@ -159,26 +177,26 @@ Goal: return TRUE if a list contains two consecutive equal elements.
       exercise: {
         questions: [
           {
-            question: "A function mode(list) returns the most common value. A student writes a doubly-nested loop that for each element counts how many times it appears, tracking the best count. For n = 100,000 inputs the program is far too slow. Which change is most appropriate?",
+            question: "A procedure mode(list) returns the most common value. For each element, it loops over the whole list to count how many times that element appears, keeping the best count. For a list of 1,000 elements, about how many comparisons does it make?",
             options: [
-              "Replace the nested loops with one pass that tallies each item in a frequency table.",
-              "Add explanatory comments throughout the inner loop describing the comparison logic in clearer English.",
-              "Switch the entire program to a different programming language with the same nested-loop structure preserved.",
-              "Run the same nested-loop code on more powerful server hardware with faster CPU clock speeds and more RAM."
+              "2,000 comparisons, since there are two loops",
+              "1,000 comparisons, since the list is traversed once",
+              "1,000,000 comparisons, a reasonable number of steps",
+              "1,000,000 comparisons, an unreasonable number of steps"
             ],
-            correctAnswer: 0,
-            explanation: "Algorithmic fix: $O(n^{2})$ → O(n) by counting frequencies in one pass."
+            correctAnswer: 2,
+            explanation: "Each of the 1,000 elements is compared with all 1,000 elements: 1,000 × 1,000 = 1,000,000. That grows like $n^{2}$, which is polynomial, so it is still a reasonable running time."
           },
           {
-            question: "A procedure should return TRUE if at least one element of list is greater than every element of other. Which structure is most efficient and correct?",
+            question: "A procedure should return true if at least one element of list is greater than every element of other. Which structure is most efficient and correct?",
             options: [
-              "Find the maximum of other once, then loop over list checking each x against it.",
+              "Find the maximum of other once, then compare each x in list to it.",
               "Use a nested loop comparing every element of list to every element of other.",
               "Sort both lists, then compare the first element of list with the first of other.",
               "Pick one random element of list and compare it to the maximum of other."
             ],
             correctAnswer: 0,
-            explanation: "Precomputing the max once is O(n + m); nested comparison is O(n·m)."
+            explanation: "Finding the maximum of other once takes about m steps, and one pass over list takes about n more, so about n + m steps in all; comparing every pair takes about n × m."
           }
         ]
       }

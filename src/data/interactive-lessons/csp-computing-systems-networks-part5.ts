@@ -7,20 +7,21 @@ export const cspComputingSystemsNetworksPart5Data = {
       content: `
 # 🖥️ Computing Systems & Networks
 
-**Part 5 of 7 — Change Over Time**
+**Part 5 of 7 — Parallel and Distributed Computing**
 
 ---
 
-## How Systems & Networks Have Evolved
+## Three Computational Models
 
-| Era | Defining shift |
-|-----|----------------|
-| 1960s | Mainframes; time-sharing. |
-| 1980s | Personal computers. |
-| 1990s | Public Internet; World Wide Web. |
-| 2000s | Cloud + mobile. |
-| 2010s | Smartphones everywhere; IoT. |
-| 2020s | Edge computing; 5G; specialized AI hardware. |
+| Model | Meaning | How long it takes |
+|-------|---------|-------------------|
+| **Sequential** | Operations are performed in order, one at a time. | The **sum** of all its steps. |
+| **Parallel** | The program is broken into smaller sequential operations, some of which run at the same time. | Its **sequential tasks plus the longest of its parallel tasks**. |
+| **Distributed** | Multiple devices are used to run a program. | Depends on how the work is split among the devices. |
+
+We compare the efficiency of solutions by comparing the **time** each takes to do the same task. The **speedup** of a parallel solution is:
+
+**speedup = time to complete the task sequentially ÷ time to complete it in parallel**
       `
     },
     {
@@ -32,26 +33,26 @@ export const cspComputingSystemsNetworksPart5Data = {
       exercise: {
         questions: [
           {
-            question: "\"Cloud\" computing primarily means ___",
+            question: "Three independent tasks take 30, 40, and 50 seconds. How long does it take to run all of them sequentially on one processor?",
             options: [
-              "computing that stores files only on removable drives carried between devices.",
-              "on-demand access to remote computing resources delivered over networks.",
-              "computing in which all programs run only on each user's local laptop.",
-              "computing that runs without any networks between client and any server."
+              "40 seconds",
+              "50 seconds",
+              "60 seconds",
+              "120 seconds"
             ],
-            correctAnswer: 1,
-            explanation: "Cloud = on-demand remote resources."
+            correctAnswer: 3,
+            explanation: "A sequential solution takes as long as the sum of its steps: 30 + 40 + 50 = 120 seconds."
           },
           {
-            question: "Edge computing pushes processing ___",
+            question: "The same three tasks (30, 40, and 50 seconds) run in parallel on two processors, and each task must stay on one processor. What is the minimum total time?",
             options: [
-              "toward central data centers, far from the devices that produce the data.",
-              "closer to sensors and other data sources to cut latency and bandwidth use.",
-              "onto users' screens, so each display renders data without any servers.",
-              "into one global server so every request is handled in the same place."
+              "50 seconds",
+              "60 seconds",
+              "70 seconds",
+              "120 seconds"
             ],
-            correctAnswer: 1,
-            explanation: "Edge = nearer data source."
+            correctAnswer: 2,
+            explanation: "Put the 50-second task on one processor and the 30- and 40-second tasks on the other (70 seconds). The job finishes when the slower processor does, at 70 seconds."
           }
         ]
       }
@@ -60,21 +61,24 @@ export const cspComputingSystemsNetworksPart5Data = {
       id: "cspcsn5-content",
       type: 'text' as const,
       content: `
-## Cloud Service Models
+## Worked Example: The Sequential Portion Limits Speedup
 
-| Model | What you manage |
-|-------|----------------|
-| **IaaS** | Virtual machines and storage. |
-| **PaaS** | Your application code. |
-| **SaaS** | Just the user interface (provider runs everything). |
+A program must first run a 20-second setup step (sequential), then four independent 10-second tasks.
 
-## 5G And Edge
+| Processors | Time | Speedup |
+|-----------|------|---------|
+| 1 (sequential) | 20 + 10 + 10 + 10 + 10 = 60 s | — |
+| 2 | 20 + (10 + 10) = 40 s | 60 ÷ 40 = 1.5 |
+| 4 | 20 + 10 = 30 s | 60 ÷ 30 = 2 |
+| 8 | 20 + 10 = 30 s | still 2 |
 
-5G enables higher mobile bandwidth and lower latency. Edge computing puts compute near users (e.g., a CDN edge node) so latency-sensitive apps work even with intermittent core connectivity.
+Going from 4 to 8 processors does not help: there are only four parallel tasks, and the 20-second setup can never be split. **When increasing parallel computing in a solution, efficiency is still limited by the sequential portion.** At some point, adding parallel portions no longer meaningfully increases efficiency.
 
-## Specialized Hardware
+## Benefits of Parallel and Distributed Computing
 
-Modern AI workloads run on GPUs / TPUs / NPUs. The CSP big idea: hardware specialization keeps reshaping what kinds of programs are feasible.
+- Parallel solutions can **scale more effectively** than sequential ones.
+- Distributed computing allows problems to be solved that **could not be solved on a single computer** because of the processing time or storage needed.
+- Distributed computing allows much larger problems to be solved **more quickly** than a single computer could.
       `
     },
     {
@@ -83,19 +87,19 @@ Modern AI workloads run on GPUs / TPUs / NPUs. The CSP big idea: hardware specia
       content: `
 **Applied Recall** ✍️
 
-1) On-demand access to remote computing resources is called the _______.
+1) Speedup equals the sequential time divided by the _______ time.
 
-2) Pushing computation closer to the data source is called _______ computing.
+2) In the worked example, the speedup with 4 processors is _______.
 
-3) A model where the provider runs everything and you only use a UI is called _______.
+3) Using multiple devices to run a program is called _______ computing.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["cloud", "edge", "SaaS"],
-        hint1: "Symbolic.",
-        hint2: "Boundary location.",
-        hint3: "Software as a Service.",
-        explanation: "Cloud / edge / SaaS."
+        correctAnswers: ["parallel", "2", "distributed"],
+        hint1: "The time when tasks run at the same time.",
+        hint2: "60 ÷ 30.",
+        hint3: "The work is spread across devices.",
+        explanation: "Speedup = sequential ÷ parallel. 60 ÷ 30 = 2. Many devices running one program is distributed computing."
       }
     },
     {
@@ -107,34 +111,35 @@ Modern AI workloads run on GPUs / TPUs / NPUs. The CSP big idea: hardware specia
       exercise: {
         dropdowns: [
           {
-            label: "A real-time video filter on a phone is best run ___",
-            options: ["on the device or at the network edge — local for low latency", "at a distant central data center — more power for lower latency", "on a satellite relay overhead — wider coverage for lower latency", "on the home Wi-Fi router — its shared hardware for lower latency"]
+            label: "A parallel solution takes as long as its sequential tasks plus ___",
+            options: ["its longest parallel task", "its shortest parallel task", "the sum of its parallel tasks", "the number of processors used"]
           },
           {
-            label: "5G primarily improves ___",
-            options: ["mobile bandwidth and latency", "encryption strength of data", "battery life of phones", "data compression ratios"]
+            label: "As more processors are added, a parallel solution's efficiency is still limited by ___",
+            options: ["its sequential portion", "its network bandwidth", "its file's metadata", "the size of each packet"]
           },
           {
-            label: "GPUs / TPUs are specialized for ___",
-            options: ["parallel matrix / tensor math used by AI workloads", "sequential logic used by operating system kernels", "long-term storage of large training datasets", "routing packets between networks on the Internet"]
+            label: "A problem that needs more storage than any single computer has is best solved with ___ computing",
+            options: ["distributed", "sequential", "lossy", "single-device"]
           }
         ],
-        correctAnswers: ["on the device or at the network edge — local for low latency", "mobile bandwidth and latency", "parallel matrix / tensor math used by AI workloads"],
-        hint1: "Latency wins on edge.",
-        hint2: "5G specs.",
-        hint3: "AI math.",
-        explanation: "Edge for latency; 5G for mobile speed; GPUs/TPUs for AI."
+        correctAnswers: ["its longest parallel task", "its sequential portion", "distributed"],
+        hint1: "Parallel tasks finish when the slowest one does.",
+        hint2: "Some work can never be split.",
+        hint3: "Spread the data across many devices.",
+        explanation: "Parallel time = sequential tasks + longest parallel task. The sequential portion caps the speedup. Distributed computing handles problems too big for one computer."
       }
     },
     {
       id: "cspcsn5-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: Systems Evolution
+## AP Exam Strategy: Parallel Computing
 
-- Cloud + mobile reshaped where computation happens.
-- Edge brings compute near users — lower latency, less core network usage.
-- Specialized hardware enables new classes of applications.
+- Sequential time = sum of every task.
+- Parallel time = sequential tasks + the longest parallel task (on its processor).
+- Speedup = sequential time ÷ parallel time.
+- Extra processors stop helping once the sequential portion dominates or there are no more tasks to split.
       `
     },
     {
@@ -146,26 +151,26 @@ Modern AI workloads run on GPUs / TPUs / NPUs. The CSP big idea: hardware specia
       exercise: {
         questions: [
           {
-            question: "A startup wants its app to load fast for users worldwide. The most CSP-aligned strategy is ___",
+            question: "A job has a 10-second step that must run first, followed by three independent tasks of 20, 30, and 15 seconds. With three processors, what is the minimum time for the whole job?",
             options: [
-              "one origin server in one country, serving every user worldwide directly from there.",
-              "a CDN with edge nodes globally so static content is served close to each user.",
-              "no caching anywhere; rely on the user's browser to fetch every byte every time.",
-              "a faster processor in the one origin server so each request finishes sooner."
+              "30 seconds",
+              "40 seconds",
+              "65 seconds",
+              "75 seconds"
             ],
             correctAnswer: 1,
-            explanation: "CDN edges minimize latency."
+            explanation: "The 10-second sequential step runs first; then the three tasks run at once and finish with the longest (30 seconds): 10 + 30 = 40 seconds."
           },
           {
-            question: "A medical-imaging team trains AI models on tens of thousands of scans. The most appropriate hardware is ___",
+            question: "A job takes 90 seconds sequentially and 30 seconds with a parallel solution. What is the speedup?",
             options: [
-              "general-purpose CPUs only, without specialized parallel-math accelerators added.",
-              "GPUs or TPUs built for the parallel tensor math these AI workloads need.",
-              "a single laptop running a desktop operating system and consumer-grade hardware.",
-              "a mainframe from the 1980s, since older machines handle large batch jobs well."
+              "1/3",
+              "3",
+              "60",
+              "120"
             ],
             correctAnswer: 1,
-            explanation: "AI training requires specialized parallel hardware."
+            explanation: "Speedup = sequential time ÷ parallel time = 90 ÷ 30 = 3."
           }
         ]
       }

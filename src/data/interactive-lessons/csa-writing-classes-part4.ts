@@ -223,7 +223,7 @@ public class Wallet {
         return false;
     }
 
-    public String toString() {
+    public String getReport() {
         return balance + " (" + failed + " failed)";
     }
 }
@@ -236,7 +236,7 @@ boolean b = w.withdraw(40);
 w.deposit(-10);
 w.deposit(15);
 boolean c = w.withdraw(45);
-System.out.println(a + " " + b + " " + c + " " + w);
+System.out.println(a + " " + b + " " + c + " " + w.getReport());
 \`\`\`
 
 **Step 1 — One row per call.** Track every field after each statement.
@@ -252,7 +252,7 @@ System.out.println(a + " " + b + " " + c + " " + w);
 
 **Step 2 — Note the early return.** When \`withdraw\` succeeds, \`return true;\` ends the method, so \`failed++\` never runs on that path. The failure lines run only when the if test is false.
 
-**Step 3 — Output.** Concatenating \`w\` calls its \`toString()\`, so the line printed is \`true false true 0 (1 failed)\`.
+**Step 3 — Output.** \`w.getReport()\` returns \`"0 (1 failed)"\`, so the line printed is \`true false true 0 (1 failed)\`.
       `
     },
     {
@@ -266,7 +266,7 @@ Use the Wallet class above.
       exercise: {
         questions: [
           {
-            question: 'What is printed by: Wallet v = new Wallet(10); v.withdraw(10); v.withdraw(1); v.withdraw(0); System.out.println(v);',
+            question: 'What is printed by: Wallet v = new Wallet(10); v.withdraw(10); v.withdraw(1); v.withdraw(0); System.out.println(v.getReport());',
             options: [
               '0 (2 failed)',
               '0 (1 failed)',

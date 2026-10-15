@@ -7,19 +7,24 @@ export const cspDataCompressionAnalysisPart5Data = {
       content: `
 # 🗜️ Data Compression & Analysis
 
-**Part 5 of 7 — Change Over Time**
+**Part 5 of 7 — Challenges of Processing Data**
 
 ---
 
-## How Compression Has Evolved
+## Every Data Set Has Problems
 
-| Era | Defining codec |
-|-----|---------------|
-| 1980s | RLE, LZW (used in GIF). |
-| 1990s | JPEG for images, MP3 for audio, MPEG-2 for video. |
-| 2000s | H.264 (ubiquitous video), AAC (audio). |
-| 2010s | WebP, HEVC (H.265). |
-| 2020s | AV1, AVIF — open, royalty-free, even better quality-per-bit. |
+Data sets pose challenges **regardless of size**:
+
+| Challenge | Example |
+|-----------|---------|
+| **Data need cleaning** | "NYC", "New York City", and "new york" all mean the same place. |
+| **Incomplete data** | Some survey takers left the age field blank. |
+| **Invalid data** | A high school roster lists a student's age as 150. |
+| **Sources must be combined** | Grades are in one file and attendance in another. |
+
+Data collected through **open fields** (free typing) are often not uniform: people abbreviate, spell, and capitalize differently. **Cleaning** makes the data uniform **without changing their meaning**, for example by replacing every equivalent spelling or abbreviation with the same word.
+
+How well data can be processed also depends on the **capabilities of the users and their tools**.
       `
     },
     {
@@ -31,26 +36,26 @@ export const cspDataCompressionAnalysisPart5Data = {
       exercise: {
         questions: [
           {
-            question: "AV1 / AVIF are notable for being ___",
+            question: "A survey's \"state\" field contains \"Calif.\", \"CA\", and \"california\". What should be done before counting responses by state?",
             options: [
-              "proprietary closed standards licensed only to large corporate vendors.",
-              "open and royalty-free, with high compression efficiency per bit.",
-              "lossless-only formats, always preserving every original input pixel.",
-              "audio-only codecs designed primarily to compete with MP3 in music apps."
+              "Delete every response that is not spelled exactly \"California\".",
+              "Clean the data by replacing each version with the same word.",
+              "Count each spelling separately, since each was typed differently.",
+              "Collect more responses so that the different spellings even out."
             ],
             correctAnswer: 1,
-            explanation: "AV1/AVIF emphasize openness and efficiency."
+            explanation: "Cleaning makes the data uniform without changing meaning; deleting or splitting the responses would distort the counts."
           },
           {
-            question: "Modern video calls use codecs that perform best when ___",
+            question: "Which is an example of invalid data, rather than incomplete data?",
             options: [
-              "the camera moves rapidly and the frame content changes constantly between frames.",
-              "the scene is mostly still, so few pixels change from one frame to the next.",
-              "all incoming frames consist of pure random noise rather than recognizable scene content.",
-              "the network connection is encrypted by TLS rather than running in plaintext."
+              "A blank phone number field in a school roster",
+              "An age of 150 recorded in a high school roster",
+              "Two spellings of the same street in an address list",
+              "A class roster that is split across two separate files"
             ],
             correctAnswer: 1,
-            explanation: "Static scenes maximize inter-frame compression efficiency."
+            explanation: "An impossible value is invalid. A blank field is incomplete, different spellings need cleaning, and split files must be combined."
           }
         ]
       }
@@ -59,28 +64,26 @@ export const cspDataCompressionAnalysisPart5Data = {
       id: "cspdca5-content",
       type: 'text' as const,
       content: `
-## Codec Generations Roughly Halve File Sizes
+## Bias in Data
 
-| Codec | Era | Relative size for same quality |
-|-------|-----|-------------------------------|
-| MPEG-2 | 1990s | 1× |
-| H.264 | 2000s | ~0.5× |
-| H.265 | 2010s | ~0.3× |
-| AV1 | 2020s | ~0.2× |
+Problems of **bias** are often created by the **type or source** of data being collected. If a survey about public transit is posted only on a car-owners' forum, its results will be skewed no matter how many people answer.
 
-This is why streaming 4K to a phone became feasible.
+> 🔑 Bias is **not** eliminated by simply collecting more data. More data from the same biased source is still biased.
 
-## Open vs. Proprietary Codecs
+## Size Matters
 
-Many great codecs (H.264, H.265) are encumbered by patents — companies pay licensing fees. AV1 / Opus / AVIF emerged as open alternatives, accepted by major browsers and platforms.
+- The **size** of a data set affects how much information can be extracted from it. A survey of 10 people reveals far less than a survey of 10,000.
+- **Large data sets are difficult to process with a single computer** and may require **parallel systems** (many processors or computers working at the same time).
+- **Scalability**, a system's capacity to change in size and scale to meet new demands, is an important consideration: the computing capacity of a system affects how data sets can be processed and stored.
 
-## ML-Era Compression
+## Worked Example
 
-Modern research uses neural networks to learn compression strategies for specific domains (medical imaging, faces, speech). These can sometimes outperform hand-designed codecs but raise new questions about model bias and reproducibility.
+A city collects 5 years of bike-share trips: 40 million rows.
 
-## Compression And Storage Cost
-
-Even as storage gets cheaper, compression remains crucial because **bandwidth** scales differently. A user's phone might have 1 TB of storage but only a few hundred MB of monthly mobile data.
+1. **Clean**: station names were typed several ways; replace each with one standard name.
+2. **Check validity**: remove trips that end before they start.
+3. **Note incompleteness**: some trips lack an end station; decide how to treat them and say so.
+4. **Scale**: the full analysis is split across several computers working in parallel.
       `
     },
     {
@@ -89,19 +92,19 @@ Even as storage gets cheaper, compression remains crucial because **bandwidth** 
       content: `
 **Applied Recall** ✍️
 
-1) An open, royalty-free modern video codec is _______.
+1) Making data uniform without changing their meaning is called _______ the data.
 
-2) A modern still-image format derived from AV1 is _______.
+2) A survey field that was left blank is an example of _______ data.
 
-3) Compression matters most when _______ is constrained, even if storage is cheap.
+3) A system's capacity to change in size and scale to meet new demands is called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["AV1", "AVIF", "bandwidth"],
-        hint1: "Three letters.",
-        hint2: "AV1 + image.",
-        hint3: "Network capacity.",
-        explanation: "AV1 = video codec. AVIF = AV1-derived image format. Bandwidth, not storage, often constrains."
+        correctAnswers: ["cleaning", "incomplete", "scalability"],
+        hint1: "Tidying up spellings and abbreviations.",
+        hint2: "Something is missing.",
+        hint3: "Can the system scale?",
+        explanation: "Cleaning makes data uniform. A blank field is incomplete. Scalability is the ability to grow to meet demand."
       }
     },
     {
@@ -113,34 +116,35 @@ Even as storage gets cheaper, compression remains crucial because **bandwidth** 
       exercise: {
         dropdowns: [
           {
-            label: "Each generation of video codec has roughly ___ size for the same visual quality",
-            options: ["halved", "doubled", "tripled", "kept identical"]
+            label: "Collecting more data from the same biased source ___ the bias",
+            options: ["does not remove", "removes", "reverses", "cuts in half"]
           },
           {
-            label: "Open-codec adoption matters because ___",
-            options: ["it avoids licensing fees and lock-in", "it guarantees better quality than paid codecs", "it makes every codec lossless by default", "it removes the need for compression altogether"]
+            label: "A data set too large for one computer to process in a reasonable time may require ___",
+            options: ["parallel systems", "lossy compression", "less metadata", "fewer columns"]
           },
           {
-            label: "A neural-net learned codec for medical images may ___",
-            options: ["outperform general-purpose codecs but raises bias / reproducibility questions", "outperform every codec on every image type, with no added risk to diagnosis", "guarantee lossless results, because a neural network learns the exact image", "perform worse than JPEG, since neural nets cannot learn images"]
+            label: "Replacing \"Calif.\" and \"CA\" with \"California\" is an example of ___",
+            options: ["cleaning data", "filtering data", "compressing data", "encrypting data"]
           }
         ],
-        correctAnswers: ["halved", "it avoids licensing fees and lock-in", "outperform general-purpose codecs but raises bias / reproducibility questions"],
-        hint1: "~2× efficiency per generation.",
-        hint2: "Open = no fees.",
-        hint3: "Domain-specific gains.",
-        explanation: "Codecs roughly halve sizes per generation. Open codecs avoid lock-in. ML codecs can win — with caveats."
+        correctAnswers: ["does not remove", "parallel systems", "cleaning data"],
+        hint1: "The source is still the problem.",
+        hint2: "Many processors at once.",
+        hint3: "Uniform without changing meaning.",
+        explanation: "Bias comes from the type or source of data, so more of the same data keeps it. Large data sets may need parallel systems. Standardizing spellings is cleaning."
       }
     },
     {
       id: "cspdca5-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: Compression Evolution
+## AP Exam Strategy: Data Challenges
 
-- "Why is streaming HD over a phone feasible?" → modern lossy codecs + CDNs + adaptive bitrate.
-- "Open vs. proprietary codec" → openness avoids licensing and lock-in.
-- ML compression is real but raises bias / reproducibility concerns.
+- Know the four challenges: data need cleaning, incomplete data, invalid data, combining sources.
+- Cleaning = uniform without changing meaning.
+- Bias comes from the type or source of data; more data does not fix it.
+- Big data sets → parallel systems and scalability.
       `
     },
     {
@@ -152,26 +156,26 @@ Even as storage gets cheaper, compression remains crucial because **bandwidth** 
       exercise: {
         questions: [
           {
-            question: "A video platform must serve the same movie to a 4G phone and a 4K TV. The most appropriate strategy is ___",
+            question: "A company builds a hiring tool from 20 years of records from a period when few women were hired. Engineers propose fixing any bias by adding 20 more years of the same kind of records. Which is the best evaluation?",
             options: [
-              "serve only one fixed quality level to every viewer regardless of device or network.",
-              "precompute multiple bitrates and resolutions and use adaptive streaming for the best fit.",
-              "serve a lossless original to every viewer and let each device discard what it cannot use.",
-              "switch the streaming pipeline to use no compression at all and rely on raw bandwidth."
+              "Adding data always removes bias, so the plan will fix the tool.",
+              "More data from the same biased source will not remove the bias.",
+              "Bias only comes from the code, so the records do not matter.",
+              "The plan works as long as the records are stored losslessly."
             ],
             correctAnswer: 1,
-            explanation: "Adaptive bitrate is the modern delivery standard."
+            explanation: "Bias is created by the type or source of the data and is not eliminated by collecting more of the same data."
           },
           {
-            question: "A research team uses an ML model to compress chest X-rays. The most appropriate validation is ___",
+            question: "A research team's data set grows from 1 GB to 50 TB, and analysis on one computer would take months. Which is the most appropriate approach?",
             options: [
-              "ship the model with no validation since the compression ratio is the only metric.",
-              "compare diagnostic accuracy on decompressed images vs. originals across diverse demographics.",
-              "check only the resulting file size and treat any reduction as an acceptable result.",
-              "check only that the encrypted output of the model is roughly the same length each time."
+              "Delete most of the rows so that one computer can finish sooner.",
+              "Split the processing across many computers working in parallel.",
+              "Store the data with lossy compression and analyze the result.",
+              "Keep using one computer, since data size does not affect time."
             ],
             correctAnswer: 1,
-            explanation: "Domain-specific compression must be validated for the domain's outcomes — and across demographics."
+            explanation: "Large data sets may require parallel systems; deleting rows or using lossy storage would lose information."
           }
         ]
       }

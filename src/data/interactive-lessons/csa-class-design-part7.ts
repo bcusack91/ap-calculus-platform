@@ -63,7 +63,7 @@ public class Club {
         return members;
     }
 
-    public String toString() {
+    public String getInfo() {
         return name + " " + dues;
     }
 }
@@ -74,7 +74,7 @@ Club x = new Club("Art", 50);
 Club y = new Club("Band", 30);
 x.pay(20);
 x.merge(y);
-System.out.println(x + " | " + y + " | " + Club.getMembers());
+System.out.println(x.getInfo() + " | " + y.getInfo() + " | " + Club.getMembers());
 \`\`\`
 
 **Step 1 — Constructors.** \`this.name = name;\` stores the name. \`dues = dues;\` assigns the parameter to itself, so the **field** dues stays 0 for both clubs. members becomes 2.
@@ -103,7 +103,7 @@ Use the Club class above, with the constructor bug still present.
       exercise: {
         questions: [
           {
-            question: 'What is printed by: Club p = new Club("Chess", 40); p.pay(5); System.out.println(p);',
+            question: 'What is printed by: Club p = new Club("Chess", 40); p.pay(5); System.out.println(p.getInfo());',
             options: [
               'Chess -5',
               'Chess 35',

@@ -58,16 +58,17 @@ export const cspCreativeDevelopmentPart4Data = {
       id: "cspcd4-content",
       type: 'text' as const,
       content: `
-## Programs Are Built On Algorithms And Data
+## Requirements, Specifications, and Design
 
-Every program embodies algorithm + data choices. Choosing well saves rework.
+Every program is built to meet **requirements** that come from investigation (surveys, user testing, interviews, direct observation).
 
-| Choice | Question |
-|--------|----------|
-| Data structure | Will I append, search, sort, or update most? |
-| Algorithm | Is the input small or huge? |
-| Storage | Memory only? Disk? Cloud? |
-| Network | Online-only? Offline-capable? Real-time? |
+| Term | Meaning |
+|------|---------|
+| **Requirements** | How the program must function, including the user interactions it must provide. |
+| **Specification** | The document that defines the program's requirements. |
+| **Design phase** | Outlines how to meet the specification: brainstorming, planning and storyboarding, organizing the program into modules, diagramming the user interface, and planning how to test it. |
+
+Choosing algorithms and data well during design saves rework later.
 
 ## Errors And Debugging
 
@@ -76,7 +77,7 @@ Every program embodies algorithm + data choices. Choosing well saves rework.
 | **Syntax** | Missing parenthesis. | At parse / compile time. |
 | **Runtime** | Divide by zero. | At execution. |
 | **Logic** | Returns wrong answer. | Only via testing. |
-| **Overflow** | Number too large for storage. | Sometimes silent. |
+| **Overflow** | A number outside the range that can be represented. | When the value is computed. |
 
 Logic errors are most insidious — the program runs but produces wrong output.
       `

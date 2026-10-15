@@ -7,18 +7,19 @@ export const cspSafeComputingPart4Data = {
       content: `
 # 🔐 Safe Computing
 
-**Part 4 of 7 — Connections & Interactions**
+**Part 4 of 7 — Connections & Interactions: Viruses, Malware, and Keyloggers**
 
 ---
 
-## Safe Computing Connects Across CSP
+## Malicious Software
 
-| Connection | Why |
+| Term | Meaning |
 |-----------|-----|
-| Safe computing ↔ Security | Personal practice is part of defense in depth. |
-| Safe computing ↔ Networks | Most attacks reach you over a network. |
-| Safe computing ↔ Data | Your data is what attackers want. |
-| Safe computing ↔ Impact | Bad practice harms others (forwarded malware, stolen contacts). |
+| **Malware** | Software intended to damage a computing system or to take partial control over its operation. |
+| **Computer virus** | A malicious program that can copy itself and gain access to a computer in an unauthorized way. Viruses often attach themselves to legitimate programs and start running independently. |
+| **Keylogging** | The use of a program to record every keystroke a user makes, to gain fraudulent access to passwords and other confidential information. |
+
+Safe computing connects to the rest of the course: malware spreads over networks, steals data, and one person's infected computer can harm the people connected to them.
       `
     },
     {
@@ -38,18 +39,18 @@ export const cspSafeComputingPart4Data = {
               "the email provider alone is responsible, since users cannot affect others' security."
             ],
             correctAnswer: 1,
-            explanation: "One person's lapse can harm many."
+            explanation: "Unsolicited messages can come from known senders whose security has been compromised, so one person's lapse can harm many."
           },
           {
             question: "A user installs random browser extensions for novelty. The most direct risk is ___",
             options: [
               "no risk, since browser extensions run inside a fully isolated sandbox by default everywhere.",
-              "extensions can read browsing data and steal credentials, so their permissions need vetting.",
+              "extensions can read browsing data and steal passwords, so their permissions need checking.",
               "only slower page loads, since extensions mainly use extra memory while the browser runs.",
               "only extra ads, since extensions can change how pages look but cannot read what you type."
             ],
             correctAnswer: 1,
-            explanation: "Browser extensions are powerful and abusable."
+            explanation: "Untrustworthy downloads can contain malware, and users should review the permissions programs have to collect information."
           }
         ]
       }
@@ -58,26 +59,23 @@ export const cspSafeComputingPart4Data = {
       id: "cspsc4-content",
       type: 'text' as const,
       content: `
-## Defense In Depth For Individuals
+## Protecting a Device
 
-| Layer | Personal practice |
+| Protection | What the CED says |
 |-------|------------------|
-| Identity | Unique passwords + MFA. |
-| Devices | Updates + lock screens + encryption-at-rest (FileVault / BitLocker). |
-| Apps | Install from trusted stores; review permissions. |
-| Network | Trusted networks; HTTPS; trusted VPN when needed. |
-| Backups | Off-device backups (cloud or external drive). |
-| Awareness | Recognize phishing; healthy skepticism. |
+| Virus and malware scanning software | Can help protect a computing system against infection. |
+| Regular software updates | All real-world systems have errors or design flaws that can be exploited; updates help fix them. |
+| Reviewing permissions | Users can control the permissions programs have for collecting user information and should review them to protect their privacy. |
+| Trustworthy sources | Untrustworthy (often free) downloads from freeware or shareware sites can contain malware. |
 
-## Threat Modeling For Yourself
+## How a Keylogger Steals a Password
 
-Different people face different threats:
+1. A user downloads a "free" game from an unfamiliar site.
+2. Hidden inside is a keylogging program that starts running in the background.
+3. The user later types a bank password, and the program records every keystroke.
+4. The attacker receives the recording and logs in to the account.
 
-- **General public**: opportunistic phishing, scams.
-- **High-profile**: targeted phishing, account takeover.
-- **Activists / journalists**: state-level adversaries; need stronger ops.
-
-Match your defenses to your realistic threat model.
+Multifactor authentication would have stopped step 4: the password alone would not have been enough.
       `
     },
     {
@@ -86,19 +84,19 @@ Match your defenses to your realistic threat model.
       content: `
 **Applied Recall** ✍️
 
-1) Personal full-disk encryption on macOS / Windows is provided by _______ / BitLocker.
+1) Software intended to damage a computing system or take partial control of it is called _______.
 
-2) A useful exercise to identify YOUR specific risks is personal _______ modeling.
+2) A program that records every keystroke to capture passwords is used for _______.
 
-3) Restoring a lost laptop's data depends on having _______ off the device.
+3) A malicious program that copies itself, often by attaching to legitimate programs, is a computer _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["FileVault", "threat", "backups"],
-        hint1: "Apple disk encryption.",
-        hint2: "Adversary thinking.",
-        hint3: "Off-device.",
-        explanation: "FileVault / BitLocker, threat modeling, backups."
+        correctAnswers: ["malware", "keylogging", "virus"],
+        hint1: "Mal- means bad.",
+        hint2: "Key + logging.",
+        hint3: "It spreads like an illness.",
+        explanation: "Malware / keylogging / computer virus."
       }
     },
     {
@@ -110,34 +108,35 @@ Match your defenses to your realistic threat model.
       exercise: {
         dropdowns: [
           {
-            label: "Locking your screen when leaving a device ___",
-            options: ["blocks casual physical access to your accounts", "encrypts all network traffic sent from the device", "stops remote phishing attacks against your accounts", "removes any malware already installed on the device"]
+            label: "Virus and malware scanning software ___",
+            options: ["can help protect a system against infection", "guarantees a system can never be infected", "replaces the need for software updates", "encrypts every file on the device"]
           },
           {
-            label: "A backup that lives only on the same device ___",
-            options: ["does not protect against device loss / theft / ransomware", "fully protects against device loss / theft / ransomware", "is safer than cloud / external / offline backups", "replaces the need for encryption / passwords / MFA"]
+            label: "A free program from an unfamiliar sharing site ___",
+            options: ["may contain malware", "is checked by the Internet", "cannot contain a virus", "is safer than a paid one"]
           },
           {
             label: "Trusted browser extensions should be ___",
             options: ["installed only from reputable stores with reviewed permissions", "installed from any site, since browsers sandbox all extensions", "granted every permission they request so they work correctly", "installed freely, as extensions cannot read page contents"]
           }
         ],
-        correctAnswers: ["blocks casual physical access to your accounts", "does not protect against device loss / theft / ransomware", "installed only from reputable stores with reviewed permissions"],
-        hint1: "Lock screens block casual access.",
-        hint2: "Off-device matters.",
+        correctAnswers: ["can help protect a system against infection", "may contain malware", "installed only from reputable stores with reviewed permissions"],
+        hint1: "Helpful, not perfect.",
+        hint2: "Untrustworthy downloads.",
         hint3: "Permissions review.",
-        explanation: "Lock screens, off-device backups, vet extensions."
+        explanation: "Scanning software helps but is not a guarantee; untrustworthy downloads can carry malware; review permissions before installing."
       }
     },
     {
       id: "cspsc4-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: Personal Defense In Depth
+## AP Exam Strategy: Malware
 
-- Layer defenses: identity + device + app + network + backups + awareness.
-- Match defenses to your real threat model.
-- Personal lapses can harm your network of contacts.
+- Malware = software meant to damage or control a system. A virus copies itself, often attached to a legitimate program.
+- Keylogging records keystrokes to steal passwords; MFA limits the damage.
+- Protections: scanning software, regular updates, reviewing permissions, avoiding untrustworthy downloads.
+- One person's compromised account can be used to attack their contacts.
       `
     },
     {
@@ -149,26 +148,26 @@ Match your defenses to your realistic threat model.
       exercise: {
         questions: [
           {
-            question: "A high-profile journalist's threat model includes targeted state-level adversaries. The most appropriate baseline is ___",
+            question: "A student's laptop has a keylogging program on it. Which additional measure would best keep the student's email account safe even though the password has been captured?",
             options: [
-              "just a strong password and nothing else added on top of it for the journalist's accounts.",
-              "hardware-key MFA, full-disk encryption, vetted apps, OPSEC training, and a response plan.",
-              "just SMS codes, a strong password, and a screen lock, with no other defenses on the accounts.",
-              "just a VPN on the journalist's devices, with no other defenses added to the accounts."
+              "Choosing a longer password that the keylogger will also record.",
+              "Turning on multifactor authentication for that login.",
+              "Typing the password more slowly so fewer keys are recorded.",
+              "Clearing the browser's history after every time they log in."
             ],
             correctAnswer: 1,
-            explanation: "High-risk targets need stronger defenses, including hardware MFA."
+            explanation: "With MFA, a captured password alone is not enough; the attacker would also need the second factor."
           },
           {
-            question: "A teenager streams video games and shares their schedule publicly. The most accurate concern is ___",
+            question: "A teenager streams video games and shares their schedule and town publicly. The most accurate concern is ___",
             options: [
               "no measurable concern, since publicly shared streaming schedules are normal among gamers.",
-              "predictable times and visible patterns may enable harassment or real-world risks like swatting.",
+              "predictable times and personal details could help someone stalk or harass them in real life.",
               "the main risk is copyright strikes, since posting schedules can reveal unlicensed content.",
               "the risk is limited to online trolling, since viewers cannot learn anything offline."
             ],
             correctAnswer: 1,
-            explanation: "Public exposure of patterns enables real-world risks."
+            explanation: "Personal information placed online can be used to stalk a person, and combined details reveal more than any one alone."
           }
         ]
       }

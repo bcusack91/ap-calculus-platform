@@ -64,13 +64,11 @@ Data is **information represented in a form a computer can store and process**. 
 
 | Structure | Example |
 |-----------|---------|
-| **Scalar** | A single value: 7, "Alex". |
-| **List / array** | Ordered values: [3, 1, 4, 1, 5]. |
+| **Single value** (variable or constant) | 7, "Alex". |
+| **List** | Ordered values: [3, 1, 4, 1, 5]. |
 | **Table** (rows × columns) | A spreadsheet. |
-| **Tree** | A folder with subfolders. |
-| **Graph** | A social network. |
 
-Choosing the right structure makes algorithms simpler and faster.
+Data values can be stored in variables, lists, or standalone constants, and can be passed as input to (or output from) procedures.
 
 ## Metadata Is Data About Data
 
@@ -125,7 +123,7 @@ A useful analysis depends on clean input. Garbage in → garbage out.
         dropdowns: [
           {
             label: "A spreadsheet with rows = people and columns = attributes is a ___",
-            options: ["table / structured dataset", "graph / network of nodes", "tree / hierarchy", "key-value list / dictionary"]
+            options: ["table / structured dataset", "single value / constant", "procedure / algorithm", "protocol / set of rules"]
           },
           {
             label: "Heart rate of 500 bpm in a dataset is most likely ___",
@@ -149,7 +147,7 @@ A useful analysis depends on clean input. Garbage in → garbage out.
       content: `
 ## AP Exam Strategy: Data Basics
 
-- "What kind of data is this?" — answer in terms of structure: scalar, list, table, tree, graph.
+- "What kind of data is this?" — answer in terms of structure: single value, list, or table.
 - "Garbage in, garbage out" — emphasize cleaning before analysis.
 - Metadata can be as revealing as the data itself — mention this for privacy questions.
       `
@@ -179,10 +177,10 @@ A useful analysis depends on clean input. Garbage in → garbage out.
               "stripping names from the routes is enough to make any later use safe.",
               "GPS routes can re-identify users by linking patterns back to home or work.",
               "no metadata is actually being collected by the fitness app in this scenario.",
-              "transport-layer encryption automatically protects metadata once it has shipped."
+              "encrypting the app's network traffic makes the shared routes anonymous."
             ],
             correctAnswer: 1,
-            explanation: "GPS routes are powerful quasi-identifiers — anonymity is fragile."
+            explanation: "Location data can be combined with other information to identify a person, so removing names does not make the data anonymous."
           }
         ]
       }

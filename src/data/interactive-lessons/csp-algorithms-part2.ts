@@ -84,13 +84,23 @@ DISPLAY shows **10**.
 
 ## Selection With Compound Conditions
 
-    IF (score ≥ 90 AND attendance ≥ 0.8) {
-      grade ← "A"
-    } ELSE IF (score ≥ 80 OR bonus = true) {
-      grade ← "B"
-    } ELSE {
-      grade ← "C"
-    }
+\`\`\`
+IF ((score ≥ 90) AND (attendance ≥ 0.8))
+{
+    grade ← "A"
+}
+ELSE
+{
+    IF ((score ≥ 80) OR bonus)
+    {
+        grade ← "B"
+    }
+    ELSE
+    {
+        grade ← "C"
+    }
+}
+\`\`\`
 
 **AND** requires both; **OR** requires at least one. **NOT** flips a Boolean.
       `

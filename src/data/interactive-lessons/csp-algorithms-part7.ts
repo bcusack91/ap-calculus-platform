@@ -57,7 +57,7 @@ Cheat sheet for exam day. Match each construct to its AP-pseudocode shape and th
 
 | Construct | Looks like | Common bug |
 |-----------|-----------|------------|
-| Sequence | a; b; c | None — just trace top-down. |
+| Sequence | statements one after another | None — just trace top-down. |
 | IF/ELSE | IF (c) {…} ELSE {…} | Wrong comparison (> vs ≥). |
 | REPEAT N TIMES | block runs exactly N times | Modifying N inside changes nothing. |
 | REPEAT UNTIL | checks cond before each pass, exits when cond true | Assuming the block always runs once (it can run zero times). |
@@ -74,8 +74,8 @@ Cheat sheet for exam day. Match each construct to its AP-pseudocode shape and th
 ## Quick-Reference: Efficiency
 
 - Polynomial = reasonable. Exponential = unreasonable.
-- Linear search: O(n). Binary search (sorted): O(log n).
-- Doubling input on $O(n^{2})$ → 4×; on O(log n) → +1 step.
+- Linear search: up to n checks. Binary search (sorted data only): about $\\log_{2}(n)$ checks.
+- Doubling the input of an algorithm whose steps grow like $n^{2}$ → about 4× the steps; for binary search → about 1 more check.
       `
     },
     {
@@ -109,7 +109,7 @@ Cheat sheet for exam day. Match each construct to its AP-pseudocode shape and th
         dropdowns: [
           {
             label: "Sorted list + need-to-find-one-value → use ___",
-            options: ["binary search", "linear search", "sort first", "selection sort"]
+            options: ["binary search", "linear search", "sort first", "compare every pair"]
           },
           {
             label: "Two algorithms with identical output but different running times — choose the ___ one",
@@ -149,18 +149,18 @@ Cheat sheet for exam day. Match each construct to its AP-pseudocode shape and th
       exercise: {
         questions: [
           {
-            question: "A learning app records millions of student responses and must repeatedly answer \"how many responses contain word W?\". Which design improves both correctness and efficiency?",
+            question: "A program must check whether a student ID appears in a list of 50,000 IDs that is kept in sorted order. Which approach examines the fewest elements in the worst case?",
             options: [
-              "Linearly scan every stored response on every incoming query.",
-              "Maintain a frequency map that is updated as responses arrive, so each query is one lookup.",
-              "Sort all of the recorded student responses alphabetically and then run a binary search on every query.",
-              "Compress the entire response dataset on disk and decompress the whole archive on every individual query."
+              "A linear search, checking about 50,000 elements",
+              "Binary search, checking about 16 elements",
+              "Checking every pair of IDs, about 1.25 billion checks",
+              "Checking only the first and last IDs in the list"
             ],
             correctAnswer: 1,
-            explanation: "A maintained index turns each query into O(1)."
+            explanation: "The list is sorted, so binary search can halve it each step; $2^{16}$ = 65,536 is more than 50,000, so about 16 checks are enough. Checking only the ends is fast but would miss most IDs."
           },
           {
-            question: "A class debates which algorithm is \"best\". A is correct and runs in $O(n^{2})$. B is faster (O(n log n)) but produces wrong results on lists with duplicates. The dataset has many duplicates. Which choice is best supported?",
+            question: "A class debates which algorithm is \"best\". A is correct, and its steps grow like $n^{2}$. B needs far fewer steps but produces wrong results on lists with duplicates. The dataset has many duplicates. Which choice is best supported?",
             options: [
               "Choose B, because faster is always better.",
               "Choose A, because correctness must come before efficiency.",

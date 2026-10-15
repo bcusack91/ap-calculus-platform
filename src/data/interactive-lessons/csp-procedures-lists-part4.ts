@@ -7,18 +7,29 @@ export const cspProceduresListsPart4Data = {
       content: `
 # 📋 Procedures & Lists
 
-**Part 4 of 7 — Connections & Interactions**
+**Part 4 of 7 — Data Abstraction and Procedural Abstraction**
 
 ---
 
-## Procedures & Lists Connect Across CSP
+## Lists Are Data Abstractions
 
-| Connection | Why |
-|-----------|-----|
-| Procedures ↔ Algorithms | Algorithms are usually packaged as procedures. |
-| Lists ↔ Data | Lists are the simplest structured data. |
-| Procedures ↔ Collaboration | Reusable named procedures help teams divide work. |
-| Procedures ↔ Testing | Procedures are testable units. |
+**Data abstraction** manages complexity by giving a collection of data one name, without referring to the details of how it is stored. Compare:
+
+\`\`\`
+score1 ← 88
+score2 ← 92
+score3 ← 75
+\`\`\`
+
+\`\`\`
+scores ← [88, 92, 75]
+\`\`\`
+
+With the list, one loop processes every score, and adding a fourth score changes the data, not the code. Data abstractions make a program **easier to develop and maintain**. A list can also hold different types of elements.
+
+## Assigning One List to Another
+
+The reference sheet says **aList ← bList** assigns a **copy** of bList to aList. After the copy, changing one list does not change the other.
       `
     },
     {
@@ -30,26 +41,26 @@ export const cspProceduresListsPart4Data = {
       exercise: {
         questions: [
           {
-            question: "A unit test typically tests ___",
+            question: "A program stores 30 quiz scores in variables s1 through s30. What is the main benefit of replacing them with one list?",
             options: [
-              "the entire program end-to-end with a single integration scenario.",
-              "a single procedure, using known inputs and their expected outputs.",
-              "the program's speed on the largest input it will ever receive.",
-              "every procedure at once, with random inputs and no expected outputs."
+              "The scores no longer take up any memory once they are in a list.",
+              "The program no longer needs conditionals or loops of any kind.",
+              "One loop can process every score, and adding one needs no new code.",
+              "Each score can be read later without using an index or a loop."
             ],
-            correctAnswer: 1,
-            explanation: "Unit tests target single procedures."
+            correctAnswer: 2,
+            explanation: "A list lets many related values be treated as a single value, so one traversal handles them all and the code does not change when the number of scores changes."
           },
           {
-            question: "Two teammates can build different features in parallel most easily when ___",
+            question: "bList ← [20, 40, 60]\naList ← bList\nAPPEND(bList, 80)\nDISPLAY(LENGTH(aList))\n\nWhat is displayed?",
             options: [
-              "everyone shares one giant function and edits the same lines simultaneously.",
-              "features are split into well-defined procedures with clear inputs and outputs.",
-              "no procedures exist and every feature is one continuous top-to-bottom script.",
-              "one teammate writes all procedures and the other only reviews the code."
+              "4",
+              "3",
+              "80",
+              "60"
             ],
             correctAnswer: 1,
-            explanation: "Procedures are the unit of parallel work."
+            explanation: "aList ← bList assigns a copy of [20, 40, 60]. APPEND changes only bList, so aList still has 3 elements."
           }
         ]
       }
@@ -58,29 +69,40 @@ export const cspProceduresListsPart4Data = {
       id: "csppl4-content",
       type: 'text' as const,
       content: `
-## Lists Are Often Procedure Inputs / Outputs
+## Procedural Abstraction
 
-Most non-trivial procedures take or return lists:
+**Procedural abstraction** names a process so it can be used knowing only **what** it does, not **how**.
 
-    PROCEDURE topThree(scores)
-      sorted ← SORT(scores, descending)
-      RETURN [sorted[1], sorted[2], sorted[3]]
+- **Modularity:** a program is divided into separate subprograms, and the solution to a large problem is built from solutions to smaller subproblems.
+- **Parameters generalize** a procedure, so it can be reused with a range of input values.
+- **Internals can change** (to be faster or clearer) without telling callers, as long as what the procedure does stays the same.
 
-## Mutability Caution
+\`\`\`
+PROCEDURE countAbove(nums, cutoff)
+{
+    count ← 0
+    FOR EACH n IN nums
+    {
+        IF (n > cutoff)
+        {
+            count ← count + 1
+        }
+    }
+    RETURN(count)
+}
+\`\`\`
 
-When a procedure receives a list, modifying it may modify the caller's list (depending on language). To stay safe, document whether your procedure mutates inputs or returns a fresh list.
+countAbove(scores, 90) and countAbove(temperatures, 30) reuse one procedure instead of two nearly identical ones.
 
-## Pure Functions Are Easier To Test
+## Testing a Procedure
 
-A pure function (no side effects, output depends only on inputs) can be tested with simple input → expected-output pairs:
+Testing uses defined inputs with expected outputs. Good test inputs include values at or just beyond the extremes of the input data.
 
-| Input | Expected output |
-|-------|----------------|
-| [3, 1, 2] | 2.0 |
-| [10, 10, 10] | 10.0 |
-| [] | 0.0 (or special handling) |
-
-This is why pure functions are encouraged in modern code.
+| Call | Expected result | What it tests |
+|------|-----------------|---------------|
+| countAbove([95, 80, 91], 90) | 2 | a typical case |
+| countAbove([90, 90], 90) | 0 | values equal to the cutoff |
+| countAbove([], 90) | 0 | an empty list |
       `
     },
     {
@@ -89,19 +111,19 @@ This is why pure functions are encouraged in modern code.
       content: `
 **Applied Recall** ✍️
 
-1) A function whose output depends only on its inputs (and has no side effects) is called _______.
+1) Giving a collection of data one name, without referring to how it is stored, is called data _______.
 
-2) A test that verifies a single procedure's behavior is called a _______ test.
+2) Dividing a computer program into separate subprograms is called _______.
 
-3) When a procedure changes the caller's list, we say it _______ the input.
+3) countAbove([12, 45, 30, 45], 30) returns _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["pure", "unit", "mutates"],
-        hint1: "No side effects.",
-        hint2: "Smallest test.",
-        hint3: "Modifies in place.",
-        explanation: "Pure / unit test / mutates are core vocabulary."
+        correctAnswers: ["abstraction", "modularity", "2"],
+        hint1: "The same word as in procedural abstraction.",
+        hint2: "Built from modules.",
+        hint3: "Strictly greater than 30.",
+        explanation: "Lists are data abstractions. Subdividing a program into subprograms is modularity. Only the two 45s are greater than 30; 30 itself is not."
       }
     },
     {
@@ -113,34 +135,35 @@ This is why pure functions are encouraged in modern code.
       exercise: {
         dropdowns: [
           {
-            label: "A pure function is easier to ___",
-            options: ["test and reason about because outputs depend only on inputs", "change at runtime because it can modify global variables", "speed up because it skips checking its parameter values", "reuse because it displays results instead of returning them"]
+            label: "The parameter cutoff lets countAbove be ___",
+            options: ["reused with a range of values", "called without any arguments", "run without a loop", "stored inside a list"]
           },
           {
-            label: "A procedure that returns a NEW list (without modifying the input) is ___",
-            options: ["safer to compose with other procedures", "unable to be called more than one time", "riskier because it changes the caller's list", "required to store results in a global variable"]
+            label: "The test countAbove([90, 90], 90) is useful because 90 is ___",
+            options: ["at the boundary of the condition", "the largest possible score", "a value that causes an error", "greater than the cutoff"]
           },
           {
-            label: "Splitting a feature into 4 named procedures helps ___",
-            options: ["teammates work in parallel and test each piece in isolation", "the program run faster because there are fewer total steps", "the program avoid needing any parameters or return values", "teammates skip testing since each part is small and simple"]
+            label: "If countAbove's loop is rewritten but every result stays the same, the code that calls it must ___",
+            options: ["change nothing", "pass extra arguments", "rename the procedure", "copy the new loop"]
           }
         ],
-        correctAnswers: ["test and reason about because outputs depend only on inputs", "safer to compose with other procedures", "teammates work in parallel and test each piece in isolation"],
-        hint1: "Predictable.",
-        hint2: "No surprises.",
-        hint3: "Parallel work.",
-        explanation: "Pure → testable; non-mutating → composable; small procedures → parallel teamwork."
+        correctAnswers: ["reused with a range of values", "at the boundary of the condition", "change nothing"],
+        hint1: "Parameters generalize procedures.",
+        hint2: "Equal values sit right on the > test.",
+        hint3: "Callers depend on what, not how.",
+        explanation: "Parameters let one procedure handle many inputs. Values equal to the cutoff test the boundary of n > cutoff. Procedural abstraction lets the inside change without affecting callers."
       }
     },
     {
       id: "csppl4-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: Cross-Topic Procedures/Lists
+## AP Exam Strategy: Abstraction
 
-- Procedures = the unit of reuse, abstraction, testing, and team-coordination.
-- Lists = the most common structured data passed between procedures.
-- Pure functions are easier to test, parallelize, and reason about.
+- "Manages complexity" with a list → one name for many values, one loop instead of repeated code, no code change when the amount of data changes.
+- "Manages complexity" with a procedure → reuse instead of duplication, parameters for generalization, readability, and one place to fix bugs.
+- aList ← bList makes a copy.
+- Pick test inputs that include typical values, boundary values, and an empty list.
       `
     },
     {
@@ -152,26 +175,26 @@ This is why pure functions are encouraged in modern code.
       exercise: {
         questions: [
           {
-            question: "A team has one 500-line function. Refactoring it into 6 named procedures most directly improves ___",
+            question: "A program keeps its five high scores in variables top1, top2, top3, top4, and top5. Which change best uses data abstraction?",
             options: [
-              "the speed of the program, since procedure calls run faster than inline code.",
-              "readability, testability, and how easily teammates can work in parallel.",
-              "the memory the program needs, since procedures share one set of variables.",
-              "correctness, security, and speed, since procedures can never contain errors."
+              "Rename the variables first, second, third, fourth, and fifth.",
+              "Add a comment above the five variables explaining each one.",
+              "Store the five scores in one list and traverse it with a loop.",
+              "Store only the sum of the five scores in a single variable."
             ],
-            correctAnswer: 1,
-            explanation: "Decomposition into procedures is one of the most universally beneficial refactors."
+            correctAnswer: 2,
+            explanation: "A list gives the scores one name and lets one loop process them; renaming or commenting keeps five separate variables, and a sum loses the individual scores."
           },
           {
-            question: "A procedure **shuffleInPlace(list)** reorders the caller's list. The most CSP-aligned best practice is ___",
+            question: "A teammate rewrites the inside of countAbove to use an index loop instead of FOR EACH. It returns the same result for every input. What is the effect on the rest of the program?",
             options: [
-              "leave it; the caller will eventually figure out that the list has been modified.",
-              "document that the input is mutated, or return a new shuffled list.",
-              "rename it to shuffle so that callers assume it returns a brand-new list.",
-              "make the list a global variable so every procedure can see the change."
+              "Every call to countAbove must be rewritten to pass an index",
+              "Nothing changes for the code that calls it",
+              "Each caller must now pass the length of the list as well",
+              "The lists passed in must first be converted to another type"
             ],
             correctAnswer: 1,
-            explanation: "Make mutation explicit; or return a fresh value."
+            explanation: "Procedural abstraction lets the internals change without affecting callers, as long as what the procedure does is preserved."
           }
         ]
       }

@@ -15,14 +15,14 @@ export const cspAlgorithmsProgrammingPart1Data = {
 
 **Abstraction** means hiding complex details and exposing only what is necessary. It simplifies programs by managing complexity.
 
-| Level | Example |
-|-------|---------|
-| **Low-level** | Binary code (0110 1001) |
-| **Assembly** | MOV AX, 5 |
-| **High-level language** | x = 5 |
-| **Library/API** | sort(myList) |
+| Abstraction | What it hides |
+|-------------|---------------|
+| **Variable** | Where and how a value is stored in memory |
+| **List** | Many related values managed under one name |
+| **Procedure** | The steps that carry out a task |
+| **Library / API** | Code someone else wrote and documented |
 
-> 🔑 Abstraction allows programmers to use complex features without understanding their internal implementation. You use \`sort()\` without knowing the sorting algorithm inside.
+> 🔑 Abstraction allows programmers to use complex features without understanding their internal implementation. You can call a library procedure that sorts a list without knowing which steps it uses inside.
 
 ---
 
@@ -68,13 +68,13 @@ greet("Bob")      // Output: Hello, Bob
               'To catch logic errors before the program runs'
             ],
             correctAnswer: 1,
-            explanation: 'Abstraction manages complexity. When you call sort(), you do not need to know whether it uses merge sort or quicksort internally. This lets you focus on WHAT you want to do, not HOW it works internally.'
+            explanation: 'Abstraction manages complexity. When you call a library procedure that sorts a list, you do not need to know which steps it uses internally. This lets you focus on WHAT you want to do, not HOW it works.'
           },
           {
             question: 'A procedure is called three times in a program. How many times is the procedure code written?',
             options: [
               'Three times, once for each place it is called',
-              'Once, since it is defined once and called three times',
+              'Once, since it is defined in one place',
               'Zero times, if the procedure is built into the language',
               'It depends on which programming language is used'
             ],
@@ -93,7 +93,7 @@ greet("Bob")      // Output: Hello, Bob
 \`\`\`
 PROCEDURE square(n)
 {
-    RETURN n * n
+    RETURN(n * n)
 }
 
 result ← square(5)     // result = 25
@@ -157,12 +157,12 @@ Programs that model real-world processes. Simulations use:
       exercise: {
         dropdowns: [
           {
-            label: 'Using sort(myList) without knowing the internal algorithm demonstrates ___',
+            label: 'Calling a library procedure that sorts a list, without knowing its internal steps, demonstrates ___',
             options: ['Abstraction', 'Iteration', 'Decomposition', 'Sequencing']
           },
           {
             label: 'In PROCEDURE add(a, b), a and b are ___',
-            options: ['Parameters', 'Arguments', 'Return values', 'Global variables']
+            options: ['Parameters', 'Arguments', 'Return values', 'Procedure names']
           },
           {
             label: 'A program that models traffic flow using random events is a ___',
@@ -182,7 +182,7 @@ Programs that model real-world processes. Simulations use:
       content: `
 ## AP Exam Strategy: Algorithms & Programming
 
-- **Abstraction** reduces complexity — know examples at every level (binary to APIs)
+- **Abstraction** reduces complexity — know examples: variables, lists, procedures, libraries, and APIs
 - Know the difference: **parameter** (in definition) vs **argument** (in call)
 - Procedures that RETURN values vs procedures that just DISPLAY — the AP exam distinguishes these
 - **RANDOM(a, b)** returns an integer from a to b inclusive — used in simulations
@@ -199,7 +199,7 @@ Programs that model real-world processes. Simulations use:
       exercise: {
         questions: [
           {
-            question: 'PROCEDURE mystery(a, b)\n{\n    RETURN a + b\n}\nx ← mystery(3, mystery(1, 2))\nWhat is the value of x?',
+            question: 'PROCEDURE mystery(a, b)\n{\n    RETURN(a + b)\n}\nx ← mystery(3, mystery(1, 2))\nWhat is the value of x?',
             options: [
               '3',
               '5',

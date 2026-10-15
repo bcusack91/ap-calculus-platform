@@ -151,8 +151,8 @@ A "best in class" web service is meaningless to users who can't afford service o
 
 - Always weigh **both** a benefit and a harm — the best answer choice usually accounts for both.
 - Look for **second-order** effects (e.g., displaced jobs, behavioral changes).
-- Mention specific affected populations (rural users, low-income users, users with disabilities, minors, etc.).
-- Don't just say "good" or "bad" — explain WHO is affected and HOW.
+- Prefer answer choices that name a specific affected group (rural users, low-income users, users with disabilities, minors, etc.).
+- Eliminate choices that call a technology purely "good" or purely "bad"; the best choice says WHO is affected and HOW.
       `
     },
     {

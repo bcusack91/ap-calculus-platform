@@ -11,39 +11,27 @@ export const cspInternetProtocolsPart1Data = {
 
 ---
 
-## The Protocol Stack
+## The Internet Runs on Open Protocols
 
-The Internet uses layered protocols, each handling a specific job:
+The **Internet** is a computer network made of interconnected networks that use **standardized, open (nonproprietary) communication protocols**. A **protocol** is an agreed-upon set of rules that specify the behavior of a system. Because the Internet's protocols are open, anyone can connect a new device by following them.
 
-| Layer | Protocol | Purpose |
-|-------|----------|---------|
-| **Application** | HTTP, HTTPS, SMTP, FTP | Formats data for user applications |
-| **Transport** | TCP, UDP | Ensures reliable delivery (TCP) or fast delivery (UDP) |
-| **Internet** | IP | Addresses and routes packets across networks |
-| **Network Access** | Ethernet, WiFi | Physical connection and data framing |
+| Protocol | Job |
+|----------|-----|
+| **IP** (Internet Protocol) | Gives each device an address and routes packets across networks |
+| **TCP** (Transmission Control Protocol) | Makes sure all packets arrive, asks for lost ones to be resent, and puts the data back in order |
+| **UDP** (User Datagram Protocol) | Sends packets without checking that they arrive or keeping them in order; less waiting, but some data may be lost |
+| **HTTP** (HyperText Transfer Protocol) | The protocol the World Wide Web uses to request and deliver pages |
 
-> 🔑 Each layer adds its own header to the data (encapsulation). The receiving end removes headers layer by layer.
+> 🔑 IP, TCP, and UDP are common protocols on the Internet. HTTP is a protocol used by the World Wide Web, which runs on top of the Internet.
 
 ---
 
-## Key Protocols
+## IP Addresses and Scalability
 
-### IP (Internet Protocol)
-- Assigns a unique address to every device
-- **IPv4**: 32-bit addresses (e.g., 192.168.1.1) — about 4.3 billion addresses
-- **IPv6**: 128-bit addresses (e.g., 2001:0db8::1) — virtually unlimited addresses
-- IPv6 was created because IPv4 addresses are running out
-
-### TCP (Transmission Control Protocol)
-- Guarantees reliable, ordered delivery
-- Breaks data into packets, numbers them, and reassembles at destination
-- Requests retransmission of lost packets
-- Used for: web pages, email, file transfers
-
-### HTTP / HTTPS
-- **HTTP**: HyperText Transfer Protocol — how web browsers request and receive web pages
-- **HTTPS**: HTTP Secure — adds encryption using TLS/SSL
-- HTTPS prevents eavesdropping on the data in transit
+Every device on the Internet needs an address, and an address is just a group of bits.
+- **IPv4** uses 32-bit addresses: $2^{32}$, about 4.3 billion addresses
+- **IPv6** uses 128-bit addresses: $2^{128}$, vastly more
+- IPv6 was created because the Internet keeps growing and IPv4 addresses are running out; the Internet was **designed to be scalable**
       `
     },
     {
@@ -63,7 +51,7 @@ The Internet uses layered protocols, each handling a specific job:
               'IPv4 could not carry video or other streaming media'
             ],
             correctAnswer: 2,
-            explanation: 'IPv4 has 32-bit addresses (about 4.3 billion unique addresses). With smartphones, IoT devices, and global growth, this is not enough. IPv6 uses 128-bit addresses, providing virtually unlimited addresses.'
+            explanation: 'IPv4 has 32-bit addresses (about 4.3 billion unique addresses). With so many more devices online, that is not enough. IPv6 uses 128-bit addresses, which provide vastly more.'
           },
           {
             question: 'What does TCP guarantee that IP alone does not?',
@@ -74,7 +62,7 @@ The Internet uses layered protocols, each handling a specific job:
               'A unique address for each device on the network'
             ],
             correctAnswer: 1,
-            explanation: 'IP only handles addressing and routing — packets may arrive out of order, be duplicated, or be lost. TCP adds reliability: sequence numbers, acknowledgments, and retransmission of lost packets.'
+            explanation: 'IP handles addressing and routing, but packets may arrive out of order or not at all. TCP adds reliability by having lost packets resent and putting the data back in order.'
           }
         ]
       }
@@ -83,32 +71,31 @@ The Internet uses layered protocols, each handling a specific job:
       id: 'cspip1-content',
       type: 'text' as const,
       content: `
-## How a Web Request Works
+## How a Web Page Reaches You
 
-When you type a URL in your browser:
+When you open a web page:
 
-1. **DNS lookup**: Browser asks DNS server to translate domain name to IP address
-2. **TCP connection**: Browser establishes a connection to the web server
-3. **HTTP request**: Browser sends a request for the specific page
-4. **Server response**: Server sends back HTML, CSS, JavaScript, images as packets
-5. **Rendering**: Browser assembles and displays the page
+1. **HTTP request**: your browser sends a request for the page to the web server
+2. **Packets**: the server's response is split into chunks of data, each wrapped in a packet with metadata
+3. **Routing**: IP routes each packet across the Internet; different packets may take different paths
+4. **Reassembly**: TCP checks that every packet arrived, asks for missing ones again, and puts the data in order
+5. **Display**: the browser shows the page
 
-## Protocols Comparison
+## TCP vs. UDP
 
-| Protocol | Reliable? | Ordered? | Speed | Use Case |
-|----------|-----------|---------|-------|----------|
-| **TCP** | Yes | Yes | Slower (overhead) | Web, email, file transfer |
-| **UDP** | No | No guarantee (packets may arrive in any order) | Faster (less overhead) | Video streaming, gaming, VoIP |
+| Protocol | Every packet arrives? | Kept in order? | Typical use |
+|----------|----------------------|----------------|-------------|
+| **TCP** | Yes, lost packets are resent | Yes | Web pages, email, file transfer |
+| **UDP** | No guarantee | No guarantee (packets may arrive in any order) | Live video and voice calls, online games |
 
 ### Why UDP Sometimes?
-- Video calls: a few dropped frames are better than waiting for retransmission
-- Gaming: outdated position data is useless even if reliably delivered
-- Streaming: better to skip ahead than pause for missing data
+- Video calls: a few dropped frames are better than waiting for missing data to be resent
+- Games: an old position update is useless even if it arrives
 
-## Certificate Authorities and HTTPS
-- A **Certificate Authority (CA)** verifies website identity
-- HTTPS uses certificates to prove the server is who it claims to be
-- The lock icon in your browser means the connection is encrypted AND the server identity was verified
+## Encryption and Certificate Authorities
+- Web traffic sent with plain HTTP can be read by anyone who intercepts it; **HTTPS** encrypts it
+- **Certificate authorities** issue digital certificates that validate the ownership of the encryption keys used in secure communications
+- The lock icon in your browser means the connection is encrypted and the site's certificate was validated
       `
     },
     {
@@ -117,19 +104,19 @@ When you type a URL in your browser:
       content: `
 **Applied Recall** ✍️
 
-1) The protocol that translates domain names to IP addresses is _______.
+1) An agreed-upon set of rules that specify the behavior of a system is called a _______.
 
-2) TCP guarantees reliable delivery; _______ trades reliability for speed and is used in video streaming.
+2) TCP guarantees reliable delivery; _______ makes no such guarantee and is used for live video calls.
 
-3) HTTPS adds _______ to HTTP, preventing eavesdropping on data in transit.
+3) HTTPS adds _______ to HTTP, so intercepted data cannot be read.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['DNS', 'UDP', 'encryption'],
-        hint1: 'Domain Name System.',
+        correctAnswers: ['protocol', 'UDP', 'encryption'],
+        hint1: 'IP, TCP, UDP, and HTTP are all examples.',
         hint2: 'User Datagram Protocol.',
-        hint3: 'Scrambles data so only the intended recipient can read it.',
-        explanation: 'DNS resolves names. UDP = fast but unreliable. HTTPS adds encryption.'
+        hint3: 'Encoding data to prevent unauthorized access.',
+        explanation: 'Protocols are agreed-upon rules. UDP does not guarantee delivery. HTTPS adds encryption.'
       }
     },
     {
@@ -142,22 +129,22 @@ When you type a URL in your browser:
         dropdowns: [
           {
             label: 'Downloading a file that must arrive complete and in order should use ___',
-            options: ['TCP', 'UDP', 'DNS', 'IP only']
+            options: ['TCP', 'UDP', 'HTTP only', 'IP only']
           },
           {
             label: 'IPv4 uses ___ bits for addresses, providing about 4.3 billion unique addresses',
             options: ['32 bits', '64 bits', '128 bits', '16 bits']
           },
           {
-            label: 'The "S" in HTTPS stands for ___',
-            options: ['Secure', 'Simple', 'Standard', 'Server']
+            label: 'The protocol used by the World Wide Web is ___',
+            options: ['HTTP', 'UDP', 'TCP', 'IP']
           }
         ],
-        correctAnswers: ['TCP', '32 bits', 'Secure'],
+        correctAnswers: ['TCP', '32 bits', 'HTTP'],
         hint1: 'Needs reliability and ordering.',
         hint2: '2^32 = about 4.3 billion.',
-        hint3: 'HTTP Secure.',
-        explanation: 'File download needs TCP. IPv4 = 32-bit. HTTPS = HTTP Secure.'
+        hint3: 'HyperText Transfer Protocol.',
+        explanation: 'A file download needs TCP. IPv4 = 32-bit addresses. The Web uses HTTP.'
       }
     },
     {
@@ -166,12 +153,11 @@ When you type a URL in your browser:
       content: `
 ## AP Exam Strategy: Internet Protocols
 
-- Know the protocol layers: Application (HTTP), Transport (TCP/UDP), Internet (IP), Network Access
-- **TCP** = reliable + ordered (web, email). **UDP** = fast + unreliable (video, gaming)
-- **IPv4** (32-bit) vs **IPv6** (128-bit) — know WHY IPv6 was needed
-- DNS = domain name to IP address translation
-- HTTPS = HTTP + encryption — the lock icon means encrypted AND authenticated
-- Know the 5 steps of a web request: DNS → TCP → HTTP request → response → render
+- A protocol is an agreed-upon set of rules; the Internet's protocols are **open**
+- **TCP** = every packet arrives and data are put in order. **UDP** = no such guarantee, less waiting
+- **IP** addresses and routes packets; **HTTP** is the Web's protocol
+- **IPv4** (32-bit) vs **IPv6** (128-bit): more bits, more addresses, so the Internet can keep scaling
+- Encryption protects data in transit; certificate authorities validate encryption keys
       `
     },
     {
@@ -191,7 +177,7 @@ When you type a URL in your browser:
               'The user cannot log in to any account on the website'
             ],
             correctAnswer: 1,
-            explanation: 'HTTP sends data in plaintext. Anyone on the same network (e.g., public WiFi) could intercept and read the data, including passwords and personal information. HTTPS encrypts data in transit.'
+            explanation: 'Data sent over public networks can be intercepted. Without encryption, anyone who intercepts the data (for example, on public Wi-Fi) can read it, including passwords.'
           },
           {
             question: 'Which protocol would be BEST for a live video call?',
@@ -199,10 +185,10 @@ When you type a URL in your browser:
               'TCP — because every frame must arrive reliably',
               'UDP — because low delay matters more than reliability',
               'HTTP — because it is the protocol used for web content',
-              'DNS — because it resolves the address of the other caller'
+              'IP alone — because it guarantees that frames stay in order'
             ],
             correctAnswer: 1,
-            explanation: 'Live video calls prioritize low latency. A few dropped frames are acceptable, but waiting for retransmission would cause unacceptable delays. UDP provides the speed needed.'
+            explanation: 'A few dropped frames are acceptable in a live call, but waiting for lost data to be resent would cause delays, so UDP fits.'
           }
         ]
       }

@@ -248,10 +248,10 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'data',
-    question: 'In ASCII, the character "A" is represented by the decimal number 65. What is this value as an 8-bit binary number?',
+    question: 'A program stores the character "A" as the decimal number 65. What is this value as an 8-bit binary number?',
     options: ['01000101', '11000001', '01000001', '01100001'],
     correctAnswer: 2,
-    explanation: '65 = 64 + 1, so only the 64s place and the 1s place are on: 01000001. The pattern 01100001 is 97, the code for lowercase "a."',
+    explanation: '65 = 64 + 1, so only the 64s place and the 1s place are on: 01000001. The pattern 01100001 is 97, 01000101 is 69, and 11000001 is 193.',
   },
   {
     type: 'mcq',

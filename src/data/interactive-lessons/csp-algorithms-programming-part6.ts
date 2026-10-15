@@ -13,7 +13,7 @@ export const cspAlgorithmsProgrammingPart6Data = {
 
 ## Programming Workshop
 
-End-to-end FRQ-style problems combining variables, conditionals, loops, lists, and procedures.
+End-to-end problems that combine variables, conditionals, loops, lists, and procedures, written in exam reference sheet pseudocode.
       `
     },
     {
@@ -27,24 +27,24 @@ End-to-end FRQ-style problems combining variables, conditionals, loops, lists, a
           {
             question: "You are asked to \"return the index of the first element in list that is greater than threshold, or -1 if none exists\". Which structure is correct?",
             options: [
-              "Loop with early RETURN i on the first match; RETURN -1 after the loop completes with no match.",
+              "Loop with an early RETURN(i) on the first match; RETURN(-1) after the loop completes with no match.",
               "Loop that overwrites a result variable on every iteration; RETURN that variable after the loop ends.",
-              "Sort the list in ascending order, then return list[1] as the first element greater than threshold.",
+              "Loop that counts the elements greater than threshold, then RETURN that count after the loop ends.",
               "Compute LENGTH(list) and divide by threshold to obtain the index of the first matching element."
             ],
             correctAnswer: 0,
-            explanation: "First-match patterns demand early RETURN. The post-loop RETURN -1 handles \"none exists\"."
+            explanation: "First-match patterns need an early RETURN. The RETURN(-1) after the loop handles \"none exists\". A count tells how many match, not where the first one is."
           },
           {
-            question: "You need to compute the median of a list of test scores. Which two-step plan is most appropriate?",
+            question: "A list of test scores is already sorted from lowest to highest and has an odd length. Which plan finds the median score?",
             options: [
-              "Sort the list and return the middle element, or the mean of the two middle ones for an even length.",
-              "Return list[1] directly, since the first element of a sorted-by-entry list is treated as the median value.",
-              "Sum every element of the list and divide the sum by the length to obtain the median test-score value.",
-              "Return the most common (modal) value in the list, since the modal score serves as the median in practice."
+              "Return scores[(LENGTH(scores) + 1) / 2].",
+              "Use scores[1], the first element of the sorted list.",
+              "Sum every element and divide the sum by LENGTH(scores).",
+              "Find the value that appears most often in the list."
             ],
             correctAnswer: 0,
-            explanation: "Median = middle of sorted data. (Sum/length is mean, not median.)"
+            explanation: "In a sorted list with an odd length, the median is the middle element. With 1-indexing, the middle of 5 elements is index (5 + 1) / 2 = 3. Sum divided by length is the mean, not the median."
           }
         ]
       }
@@ -55,59 +55,76 @@ End-to-end FRQ-style problems combining variables, conditionals, loops, lists, a
       content: `
 ## Worked Problem 1: First Index Greater Than Threshold
 
-    PROCEDURE firstGreater(list, threshold) {
-      i ← 1
-      REPEAT UNTIL (i > LENGTH(list)) {
-        IF (list[i] > threshold) { RETURN i }
-        i ← i + 1
-      }
-      RETURN −1
-    }
+\`\`\`
+PROCEDURE firstGreater(list, threshold)
+{
+    i ← 1
+    REPEAT UNTIL (i > LENGTH(list))
+    {
+        IF (list[i] > threshold)
+        {
+            RETURN(i)
+        }
+        i ← i + 1
+    }
+    RETURN(-1)
+}
+\`\`\`
 
 **Trace [10, 25, 18, 30] with threshold 20:**
 
 | i | list[i] | > 20? | Action |
 |---|---------|-------|--------|
 | 1 | 10 | no | continue |
-| 2 | 25 | yes | RETURN 2 |
+| 2 | 25 | yes | RETURN(2) |
 
-## Worked Problem 2: Average Of Top-N
+## Worked Problem 2: Average of the Top n
 
-Goal: average the largest n values in list.
+Goal: the list is **already sorted from largest to smallest**; average its first n values.
 
-    PROCEDURE avgTopN(list, n) {
-      sorted ← descendingSort(list)
-      total ← 0
-      i ← 1
-      REPEAT n TIMES {
-        total ← total + sorted[i]
-        i ← i + 1
-      }
-      RETURN total / n
-    }
+\`\`\`
+PROCEDURE avgTopN(sortedList, n)
+{
+    total ← 0
+    i ← 1
+    REPEAT n TIMES
+    {
+        total ← total + sortedList[i]
+        i ← i + 1
+    }
+    RETURN(total / n)
+}
+\`\`\`
 
 **Edge cases to ask about on the exam:**
 
-- What if n > LENGTH(list)? (Should clamp n.)
-- What if n = 0? (Divide-by-zero — guard.)
-- What if list contains non-numbers? (Type check.)
+- What if n > LENGTH(sortedList)? sortedList[i] would be outside the list, which is an error.
+- What if n = 0? The loop runs zero times, and total / n divides by zero.
 
 ## Worked Problem 3: Detect Duplicates
 
-    PROCEDURE hasDuplicate(list) {
-      i ← 1
-      REPEAT UNTIL (i ≥ LENGTH(list)) {
-        j ← i + 1
-        REPEAT UNTIL (j > LENGTH(list)) {
-          IF (list[i] = list[j]) { RETURN TRUE }
-          j ← j + 1
-        }
-        i ← i + 1
-      }
-      RETURN FALSE
-    }
+\`\`\`
+PROCEDURE hasDuplicate(list)
+{
+    i ← 1
+    REPEAT UNTIL (i ≥ LENGTH(list))
+    {
+        j ← i + 1
+        REPEAT UNTIL (j > LENGTH(list))
+        {
+            IF (list[i] = list[j])
+            {
+                RETURN(true)
+            }
+            j ← j + 1
+        }
+        i ← i + 1
+    }
+    RETURN(false)
+}
+\`\`\`
 
-**Efficiency note:** this is $O(n^{2})$. With a hash/dictionary it can become O(n) — a common AP exam upgrade question.
+**Counting steps:** each element is compared with every element after it. For 4 elements that is 3 + 2 + 1 = 6 comparisons; for n elements it is about n × n ÷ 2. That grows like a square, which is still a **reasonable** (polynomial) amount of time.
       `
     },
     {
@@ -116,19 +133,19 @@ Goal: average the largest n values in list.
       content: `
 **Applied Recall** ✍️
 
-1) For "first occurrence" problems, the loop body should _______ on first match.
+1) For "first occurrence" problems, the loop body should _______ on the first match.
 
-2) For $O(n^{2})$ duplicate detection, an upgrade to O(n) uses a _______ to remember seen values.
+2) In the worst case, how many times does hasDuplicate compare list[i] = list[j] for a list of 5 elements? _______
 
 3) When dividing by n, you must guard against n equal to _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["return", "dictionary", "0"],
-        hint1: "Exit immediately.",
-        hint2: "Hash map / set.",
-        hint3: "Divide-by-this is undefined.",
-        explanation: "Early return for first-match. Use a set/dictionary for O(n) duplicate detection. Always guard divisor."
+        correctAnswers: ["return", "10", "0"],
+        hint1: "Exit the procedure immediately.",
+        hint2: "4 + 3 + 2 + 1.",
+        hint3: "Dividing by this is undefined.",
+        explanation: "An early RETURN handles first-match problems. With 5 elements, the first is compared with 4 others, the second with 3, and so on: 4 + 3 + 2 + 1 = 10. Always guard a divisor that could be 0."
       }
     },
     {
@@ -140,36 +157,36 @@ Goal: average the largest n values in list.
       exercise: {
         dropdowns: [
           {
-            label: "firstGreater on [10,25,18,30] with threshold = 30 returns ___",
-            options: ["−1", "4", "0", "30"]
+            label: "firstGreater([10, 25, 18, 30], 30) returns ___",
+            options: ["-1", "4", "0", "30"]
           },
           {
-            label: "firstGreater on [10,25,18,30] with threshold = 5 returns ___",
-            options: ["1", "4", "0", "−1"]
+            label: "firstGreater([10, 25, 18, 30], 5) returns ___",
+            options: ["1", "4", "0", "-1"]
           },
           {
-            label: "avgTopN([100, 50, 80, 90], 2) returns ___",
+            label: "avgTopN([100, 90, 80, 50], 2) returns ___",
             options: ["95", "80", "50", "90"]
           }
         ],
-        correctAnswers: ["−1", "1", "95"],
+        correctAnswers: ["-1", "1", "95"],
         hint1: "Strict >; 30 > 30 is false.",
-        hint2: "First element already passes.",
+        hint2: "The first element already passes.",
         hint3: "(100 + 90) / 2.",
-        explanation: "Strict comparisons exclude equality. The first match in [10,…] when threshold = 5 is index 1. Top 2 of {100,50,80,90} are 100 and 90."
+        explanation: "Strict comparisons exclude equality, so no element is greater than 30. The first element, 10, is already greater than 5, so index 1 is returned. The top two values are 100 and 90, which average to 95."
       }
     },
     {
       id: "cspap6-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: FRQ Problem-Solving
+## AP Exam Strategy: Problem-Solving
 
-1. Read the problem twice; underline what is RETURNED.
-2. Identify the **pattern** (first-match? for-all? accumulator? sort-then-pick?).
-3. Sketch a 4-row trace table on the smallest example.
+1. Read the problem twice; underline what is RETURNed.
+2. Identify the **pattern** (first match? for-all? accumulator? every pair?).
+3. Sketch a short trace table on the smallest example.
 4. Write the procedure header first; the body fills in around RETURN.
-5. Check at least one **edge case** before finalizing.
+5. Check at least one **edge case** (empty list, n = 0, no match) before finalizing.
       `
     },
     {
@@ -181,26 +198,26 @@ Goal: average the largest n values in list.
       exercise: {
         questions: [
           {
-            question: "Procedure twoSum(list, target) should return TRUE if any two distinct elements sum to target. Which structure is most appropriate AND most efficient?",
+            question: "Procedure twoSum(list, target) should return true if the values at any two different positions in list add up to target. Which approach is correct?",
             options: [
-              "In one pass, check if target − x was already seen and then record x.",
-              "Sort the list, then check whether any adjacent pair sums to target.",
-              "Check every 3-element combination with a triple-nested loop.",
-              "Add each element to the next one and compare that sum to target."
+              "Compare each element only with the element right after it.",
+              "Add up the whole list and compare that total with target.",
+              "Check every pair of elements and stop at the first pair that works.",
+              "Check whether the value target appears somewhere in the list."
             ],
-            correctAnswer: 0,
-            explanation: "Remembering the values already seen lets one pass find a pair: for each x, if target − x was seen earlier, a pair exists. That is far faster than checking every pair with nested loops."
+            correctAnswer: 2,
+            explanation: "The two values can be anywhere in the list, so every pair of positions must be checked (a nested loop like hasDuplicate). Checking only neighbors misses pairs that are far apart."
           },
           {
-            question: "A procedure mostFrequent(list) returns the element that appears most often. The student writes a doubly-nested loop that for every element counts its occurrences, tracking the max. This is $O(n^{2})$. For n = 100,000 it times out. The most appropriate fix is to ___",
+            question: "hasDuplicate is run on a list of 1,000 values that contains no duplicates. About how many comparisons does it make?",
             options: [
-              "build a frequency table in one pass, then scan it once for the max.",
-              "rerun the same doubly-nested loop on a computer with a faster clock.",
-              "sort the list and guess the most frequent element from the output.",
-              "remove half the input list before running the doubly-nested loop."
+              "About 1,000",
+              "About 2,000",
+              "About 500,000",
+              "About 10"
             ],
-            correctAnswer: 0,
-            explanation: "Two linear passes (build the frequency table, then scan it for the largest count) replace the $O(n^{2})$ nested loop."
+            correctAnswer: 2,
+            explanation: "Each value is compared with every value after it: 999 + 998 + … + 1, which is about 1,000 × 1,000 ÷ 2 = 500,000. That square growth is still a reasonable (polynomial) running time."
           }
         ]
       }

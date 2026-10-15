@@ -7,23 +7,28 @@ export const cspComputingSystemsNetworksPart2Data = {
       content: `
 # 🖥️ Computing Systems & Networks
 
-**Part 2 of 7 — Key Processes**
+**Part 2 of 7 — Key Processes: Paths and Routing**
 
 ---
 
-## A Computing System Is A Stack Of Layers
+## Reading a Network
 
-Every modern device — phone, laptop, server, smart thermostat — is built from layered components, each abstracting the one below.
+AP questions often describe a network as a list of direct connections. Here is one:
 
-| Layer | Examples |
-|-------|---------|
-| **Hardware** | CPU, RAM, storage, network card. |
-| **Firmware** | BIOS / UEFI, embedded controllers. |
-| **OS kernel** | Memory + process + I/O management. |
-| **System libraries** | Standard runtimes, drivers. |
-| **Applications** | Browsers, games, your code. |
+| Device | Directly connected to |
+|--------|----------------------|
+| A | B, C |
+| B | A, D |
+| C | A, D |
+| D | B, C, E |
+| E | D |
 
-Each layer **abstracts** the messy details below, letting the next layer up be simpler.
+A **path** from A to E is a sequence of directly connected devices that starts at A and ends at E. This network has two paths that do not repeat a device:
+
+- A → B → D → E
+- A → C → D → E
+
+**Routing** is finding one of these paths. On the Internet, routing is usually **dynamic**: it is not specified in advance, so if B fails, data can be sent through C instead.
       `
     },
     {
@@ -35,26 +40,26 @@ Each layer **abstracts** the messy details below, letting the next layer up be s
       exercise: {
         questions: [
           {
-            question: "A web browser does NOT need to know which brand of network card the device uses. The mechanism that hides this detail is ___",
+            question: "In the network above, which single device, if it failed, would leave A with no path to E?",
             options: [
-              "encryption between the browser and the network card before any send",
-              "abstraction provided by the operating system and its drivers",
-              "a standard that requires every network card to work the same way inside",
-              "the browser itself, which contains code for every brand of card"
+              "B",
+              "C",
+              "D",
+              "none of them"
             ],
-            correctAnswer: 1,
-            explanation: "OS + drivers abstract hardware specifics."
+            correctAnswer: 2,
+            explanation: "Both paths from A to E pass through D, so D's failure cuts A off. If B or C fails, the other path still works."
           },
           {
-            question: "A \"system\" in CSP terminology means ___",
+            question: "Which statement about routing on the Internet is accurate?",
             options: [
-              "only the central processing unit — the chip that runs instructions.",
-              "a collection of components that interact to provide some function.",
-              "only software applications running on top of the operating system.",
-              "only physical hardware components inside the device's case."
+              "Each route is fixed in advance by the sender before data is sent.",
+              "Routes are found as data is sent rather than fixed beforehand.",
+              "All the packets of one message usually follow exactly the same route.",
+              "Routing is only needed in networks that contain one single device."
             ],
             correctAnswer: 1,
-            explanation: "A system = interacting components, hardware + software."
+            explanation: "Routing on the Internet is usually dynamic, which lets data go around failed or busy devices."
           }
         ]
       }
@@ -63,39 +68,23 @@ Each layer **abstracts** the messy details below, letting the next layer up be s
       id: "cspcsn2-content",
       type: 'text' as const,
       content: `
-## A Network Is A System Of Systems
+## Bandwidth in Practice
 
-A **network** is itself a computing system whose components are other computing systems plus the links between them. Each device:
+**Bandwidth** is the maximum amount of data a network can send in a fixed amount of time, usually measured in **bits per second**. Remember that 1 byte = 8 bits.
 
-- Has an address.
-- Sends and receives data via a protocol.
-- Cooperates with neighbors to forward traffic.
+| Bandwidth | Data sent in 1 second |
+|-----------|----------------------|
+| 8 bits per second | 1 byte |
+| 10 megabits per second | 10 megabits = 1.25 megabytes |
+| 100 megabits per second | 100 megabits = 12.5 megabytes |
 
-| Network type | Scale |
-|-------------|-------|
-| **PAN** (personal) | Bluetooth around one user. |
-| **LAN** (local) | Home / classroom network. |
-| **WAN** (wide) | Across cities / countries. |
-| **Internet** | Network of networks. |
+To estimate transfer time, divide the amount of data (in bits) by the bandwidth (in bits per second). A 40-megabit file over a 10-megabit-per-second connection takes about 4 seconds.
 
-## Client-Server Vs. Peer-To-Peer
+## Systems Hide Their Details
 
-| Model | Behavior |
-|-------|----------|
-| **Client-server** | One central server; many clients request from it (web browsing, email). |
-| **Peer-to-peer** | Each node is both client and server (BitTorrent, some video calls). |
+A **computing system** is a group of computing devices and programs working together for a common purpose. A school's grading system, for example, includes servers, teachers' laptops, and the grading program itself.
 
-Client-server is easier to administer; P2P is more fault-tolerant and scales differently.
-
-## Throughput, Latency, Bandwidth
-
-| Term | Meaning | Analogy |
-|------|---------|---------|
-| **Bandwidth** | Capacity (bits / second). | Width of a pipe. |
-| **Throughput** | Actual rate achieved. | Water flowing right now. |
-| **Latency** | Time for data to travel from sender to receiver (a ping reports the round trip). | Time for first drop to arrive. |
-
-A high-bandwidth, high-latency link (satellite) can move lots of data — slowly.
+The Internet uses **abstractions for routing and transmitting data**: a person sending a message does not need to know which path the packets take or which devices they pass through.
       `
     },
     {
@@ -104,19 +93,19 @@ A high-bandwidth, high-latency link (satellite) can move lots of data — slowly
       content: `
 **Applied Recall** ✍️
 
-1) A network spanning a single building or home is called a _______.
+1) Bandwidth is usually measured in _______ per second.
 
-2) A model where each node acts as both client and server is called _______-to-_______.
+2) Because routing on the Internet is not specified in advance, it is called _______ routing.
 
-3) The time it takes data to travel from sender to receiver is called _______.
+3) A 40-megabit file sent over a 10-megabit-per-second connection takes about _______ seconds.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["LAN", "peer/peer", "latency"],
-        hint1: "Local area.",
-        hint2: "P2P.",
-        hint3: "It is a delay, not a rate.",
-        explanation: "LAN; peer-to-peer; latency."
+        correctAnswers: ["bits", "dynamic", "4"],
+        hint1: "The smallest unit of data.",
+        hint2: "The opposite of fixed or static.",
+        hint3: "40 ÷ 10.",
+        explanation: "Bandwidth is in bits per second. Internet routing is dynamic. 40 megabits ÷ 10 megabits per second = 4 seconds."
       }
     },
     {
@@ -128,34 +117,35 @@ A high-bandwidth, high-latency link (satellite) can move lots of data — slowly
       exercise: {
         dropdowns: [
           {
-            label: "A satellite link with high bandwidth but high latency is best for ___",
-            options: ["bulk file transfers, NOT real-time interactive use", "real-time gaming, since high bandwidth means fast replies", "live video calls, since bandwidth matters more than delay", "remote control of robots, NOT bulk file transfers"]
+            label: "If device B in the network above fails, A can still reach E through ___",
+            options: ["C and D", "B and D", "B only", "no other path"]
           },
           {
-            label: "A client-server architecture centralizes ___",
-            options: ["control and data on the server", "storage across every client device", "all decisions on the client devices", "routing on each individual peer"]
+            label: "Doubling a connection's bandwidth lets it send ___ data in the same amount of time",
+            options: ["twice as much", "half as much", "the same amount of", "four times as much"]
           },
           {
-            label: "A P2P system continues working when ___",
-            options: ["individual nodes leave or join, since no single point is required", "the central server stays online, since every peer depends on it", "all peers stay connected at once, since data lives on one node", "every peer holds a full copy, since partial copies cannot be shared"]
+            label: "A school's grading system, made of servers, laptops, and a grading program, is an example of a ___",
+            options: ["computing system", "single computing device", "protocol", "packet"]
           }
         ],
-        correctAnswers: ["bulk file transfers, NOT real-time interactive use", "control and data on the server", "individual nodes leave or join, since no single point is required"],
-        hint1: "Bandwidth ≠ low latency.",
-        hint2: "Server-centric.",
-        hint3: "No central node.",
-        explanation: "Sat = bulk; client-server centralizes; P2P resists individual failures."
+        correctAnswers: ["C and D", "twice as much", "computing system"],
+        hint1: "Use the second path.",
+        hint2: "Bandwidth is data per unit of time.",
+        hint3: "Devices and programs working together.",
+        explanation: "The path A → C → D → E avoids B. Twice the bandwidth moves twice the data per second. Devices plus programs working together form a computing system."
       }
     },
     {
       id: "cspcsn2-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: Systems & Networks
+## AP Exam Strategy: Paths and Routing
 
-- Distinguish bandwidth, throughput, and latency.
-- Client-server vs. P2P trade-offs.
-- A "system" is interacting components — abstraction is the unifying idea.
+- List every path from sender to receiver without repeating a device.
+- A device or connection that appears on **every** path is a single point of failure.
+- Internet routing is dynamic: data goes around failures when another path exists.
+- Transfer time ≈ data size in bits ÷ bandwidth in bits per second.
       `
     },
     {
@@ -167,26 +157,26 @@ A high-bandwidth, high-latency link (satellite) can move lots of data — slowly
       exercise: {
         questions: [
           {
-            question: "A school provides a Wi-Fi network with 1 Gbps total bandwidth shared among 500 simultaneous users. Per-user effective throughput depends on ___",
+            question: "Devices P, Q, R, and S are connected as P–Q, Q–R, Q–S, and R–S. Which single device, if it failed, would stop P from communicating with S?",
             options: [
-              "only the link's rated bandwidth, no matter how busy the network is.",
-              "how many people are active and how the capacity is split between them.",
-              "only the encryption protocol that each person's apps happen to use.",
-              "only the distance between each device and the nearest wireless access point."
-            ],
-            correctAnswer: 1,
-            explanation: "Shared bandwidth = per-user throughput depends on contention."
-          },
-          {
-            question: "A live online game cares more about ___ than bulk download speed.",
-            options: [
-              "low latency between every player and the central game server",
-              "high bandwidth on the link from the central server out to each player",
-              "a large disk cache so that the game's files load quickly at launch",
-              "a high download speed for patches that are installed at the start"
+              "Q",
+              "R",
+              "either Q or R",
+              "no single device"
             ],
             correctAnswer: 0,
-            explanation: "Real-time interactive needs low latency."
+            explanation: "P's only connection is to Q, so every path from P to S passes through Q. If R fails, the direct Q–S connection still works."
+          },
+          {
+            question: "An 800-megabit video file is sent over a connection with a bandwidth of 100 megabits per second. Ignoring other delays, about how long does the transfer take?",
+            options: [
+              "0.8 seconds",
+              "8 seconds",
+              "80 seconds",
+              "100 seconds"
+            ],
+            correctAnswer: 1,
+            explanation: "800 megabits ÷ 100 megabits per second = 8 seconds."
           }
         ]
       }

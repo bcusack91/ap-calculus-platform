@@ -7,21 +7,21 @@ export const cspAlgorithmsProgrammingPart5Data = {
       content: `
 # 💻 Algorithms & Programming
 
-**Part 5 of 7 — Change Over Time**
+**Part 5 of 7 — Libraries, APIs, and Random Values**
 
 ---
 
-## How Programming Has Changed Over Time
+## Reusing Code: Libraries and APIs
 
-Programming evolved from machine code → assembly → high-level languages → today's mix of cloud, AI-assisted, and visual block-based environments. Each shift trades a different concern.
+A **software library** contains procedures that may be used in creating new programs. Existing code segments can come from inside your own project (code you or a teammate wrote earlier) or from outside sources such as libraries.
 
-| Era | Trade |
-|-----|-------|
-| Machine code (1950s) | Total control, zero portability. |
-| High-level languages (1960s+) | Portability, readability — at the cost of some control. |
-| Object-oriented (1980s+) | Manageable scale via abstraction. |
-| Open source / libraries (2000s+) | Don't reinvent — reuse. |
-| AI-assisted (2020s+) | Faster generation, new questions about authorship and safety. |
+| Term | Meaning |
+|------|---------|
+| **Library** | A collection of procedures that can be used in new programs |
+| **API** (application program interface) | A specification for how the procedures in a library behave and how they can be used |
+| **Documentation** | Describes what each procedure does, what its parameters mean, and what it returns |
+
+Using a library simplifies the task of creating a complex program. Its procedures have already been tested, so you can write programs more quickly and with more confidence. Documentation is what lets you use them correctly without reading their code.
       `
     },
     {
@@ -33,26 +33,26 @@ Programming evolved from machine code → assembly → high-level languages → 
       exercise: {
         questions: [
           {
-            question: "A modern programmer who needs a date-formatting function will most often ___",
+            question: "A programmer wants to call a library procedure named drawCircle but does not know what its parameters mean. What should the programmer consult first?",
             options: [
-              "write the date-formatting function from scratch in machine code on every new project they start.",
-              "use a well-tested standard-library or built-in date-formatting function instead of writing one.",
-              "avoid date formatting entirely in their programs by always asking the user to format dates first.",
-              "design and ship a brand new programming language whose built-in primitives include date formatting."
+              "The library's documentation for drawCircle",
+              "The source code of every procedure in the library, line by line",
+              "A list of the other programs that already call drawCircle",
+              "The names and contact details of the library's authors"
             ],
-            correctAnswer: 1,
-            explanation: "Reuse over reinvention is the modern norm; libraries are tested and documented."
+            correctAnswer: 0,
+            explanation: "API and library documentation describes what each procedure does and how to use it, so it answers the question without reading the library's code."
           },
           {
-            question: "When AI-assisted code completion is used, who is ultimately responsible for verifying the code is correct?",
+            question: "Which statement about using a well-tested library procedure in a new program is most accurate?",
             options: [
-              "The AI tool itself is solely responsible for the correctness of every suggestion the tool generates.",
-              "The programmer and team who accept and deploy the suggestion remain responsible.",
-              "The end user of the running program is solely responsible for verifying the code that produced it.",
-              "Nobody actually needs to verify AI-suggested code, since the AI has already statistically validated it."
+              "It guarantees that the whole program will be free of errors.",
+              "It saves time by reusing code that others have already checked.",
+              "It requires the programmer to understand every line inside it.",
+              "It always runs faster than code the programmer could write."
             ],
             correctAnswer: 1,
-            explanation: "Accepted code becomes the developer's code; correctness, security, and ethical review remain a human responsibility."
+            explanation: "Libraries simplify building complex programs by reusing tested procedures. The rest of the program can still contain errors, and the programmer only needs to know what the procedure does, not how."
           }
         ]
       }
@@ -61,31 +61,44 @@ Programming evolved from machine code → assembly → high-level languages → 
       id: "cspap5-content",
       type: 'text' as const,
       content: `
-## Reuse Over Reinvention
+## Random Values
 
-Modern languages ship with **libraries**: large collections of well-tested procedures.
+The exam reference sheet provides **RANDOM(a, b)**, which returns a random integer from a to b, **including both a and b**. Each result is equally likely.
 
-| Need | Modern approach |
-|------|-----------------|
-| Sort a list | Call the language's built-in sort. |
-| Make a network request | Call a library function with the URL. |
-| Display a chart | Use a charting library. |
+\`\`\`
+roll ← RANDOM(1, 6)      // 1, 2, 3, 4, 5, or 6
+coin ← RANDOM(0, 1)      // 0 or 1
+\`\`\`
 
-Re-implementing these by hand introduces bugs and wastes time. The CSP CED explicitly values **using existing code** as a development practice.
+Using random numbers means each run of a program may produce a different result.
 
-## Programs Have Become More Collaborative
+### Evaluating Random Expressions
 
-Most non-trivial software today is built by **teams**:
+| Expression | Possible values |
+|------------|-----------------|
+| RANDOM(1, 6) | 1 through 6 (6 values) |
+| RANDOM(1, 6) + RANDOM(1, 6) | 2 through 12 |
+| RANDOM(0, 4) * 2 | 0, 2, 4, 6, or 8 |
+| RANDOM(1, 10) ≤ 3 | true (3 of the 10 values) or false |
 
-- Version control (e.g., Git) tracks every change.
-- Code review catches bugs before deployment.
-- Continuous integration runs tests automatically.
+### Simulating a Chance Event
 
-This connects directly to Big Idea 1 (Creative & Collaborative Development).
+\`\`\`
+IF (RANDOM(1, 100) ≤ 30)
+{
+    DISPLAY("rain")
+}
+ELSE
+{
+    DISPLAY("dry")
+}
+\`\`\`
 
-## AI in the Loop
+This displays "rain" about 30% of the time, because 30 of the 100 equally likely values make the condition true.
 
-AI-assisted programming (autocomplete, chat-based coding) accelerates writing code but requires the same verification habits: read every suggested line, test on edge cases, and check for security/privacy implications. Tools speed you up; they do not absolve you of correctness.
+## Simulations
+
+A **simulation** is an abstraction of a more complex phenomenon. Developing one means removing specific details or simplifying how things work. Random numbers model the variability of the real world. Simulations are most useful when a real experiment would be too big, too small, too fast, too slow, too expensive, or too dangerous. Because developers choose which real-world elements to include or leave out, a simulation can contain **bias**.
       `
     },
     {
@@ -94,19 +107,19 @@ AI-assisted programming (autocomplete, chat-based coding) accelerates writing co
       content: `
 **Applied Recall** ✍️
 
-1) A pre-built collection of reusable procedures is called a _______.
+1) How many different values can RANDOM(3, 7) return? _______
 
-2) A system that records every change to a codebase is called _______ control.
+2) The largest value RANDOM(1, 6) + RANDOM(1, 6) can produce is _______.
 
-3) When AI autocompletes code, the human who accepts the suggestion remains responsible for its _______.
+3) A specification of how the procedures in a library behave and can be used is called an _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["library", "version", "correctness"],
-        hint1: "Programmers IMPORT or include them.",
-        hint2: "Tools include Git.",
-        hint3: "Human review is non-negotiable.",
-        explanation: "Libraries reuse code. Version control preserves history. Humans verify AI output."
+        correctAnswers: ["5", "12", "API"],
+        hint1: "Both ends are included: 3, 4, 5, 6, 7.",
+        hint2: "Each call can be at most 6.",
+        hint3: "Three letters: application program interface.",
+        explanation: "RANDOM(3, 7) can return 3, 4, 5, 6, or 7. Two calls of at most 6 add to at most 12. An API specifies how a library's procedures behave and are used."
       }
     },
     {
@@ -118,35 +131,36 @@ AI-assisted programming (autocomplete, chat-based coding) accelerates writing co
       exercise: {
         dropdowns: [
           {
-            label: "Using a well-tested library instead of writing the same code yourself usually ___",
-            options: ["reduces bugs and saves time", "slows the program down noticeably", "removes the need to test your code", "makes the code harder to maintain"]
+            label: "RANDOM(2, 5) * 10 could evaluate to ___",
+            options: ["50", "10", "55", "0"]
           },
           {
-            label: "Code review primarily improves ___",
-            options: ["quality and shared understanding", "compile speed and build times", "runtime performance on user devices", "the program's memory footprint"]
+            label: "A traffic simulation leaves out pedestrians. Its results may contain ___",
+            options: ["bias from what was left out", "a syntax error in the code", "the exact real-world outcome", "no variability at all"]
           },
           {
-            label: "AI-generated code that introduces a security flaw is the responsibility of ___",
-            options: ["the developer who accepts and deploys it", "the company that built the AI model alone", "the end users who choose to run the program", "no one, since no human wrote the code"]
+            label: "Crash-testing a car design by simulation is useful mainly because a real crash test is ___",
+            options: ["expensive and dangerous", "impossible to measure", "less accurate than any model", "not allowed by law"]
           }
         ],
-        correctAnswers: ["reduces bugs and saves time", "quality and shared understanding", "the developer who accepts and deploys it"],
-        hint1: "Libraries are battle-tested.",
-        hint2: "Reviewers spread knowledge.",
-        hint3: "Acceptance = ownership.",
-        explanation: "Libraries beat reinvention. Code review spreads knowledge. Whoever ships the code owns the consequences."
+        correctAnswers: ["50", "bias from what was left out", "expensive and dangerous"],
+        hint1: "RANDOM(2, 5) is 2, 3, 4, or 5.",
+        hint2: "Choices about what to include can skew a model.",
+        hint3: "Simulations help when real experiments are costly or unsafe.",
+        explanation: "RANDOM(2, 5) * 10 is 20, 30, 40, or 50. Leaving out real-world elements can bias a simulation. Simulations are most useful when real experiments are too expensive or too dangerous."
       }
     },
     {
       id: "cspap5-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: "Change Over Time" Questions
+## AP Exam Strategy: Libraries, RANDOM, and Simulations
 
-- "Modern programmers often…" → reach for reuse, abstraction, libraries, version control, collaboration.
-- "Trade-off" questions almost always have a "more X but less Y" structure (faster but less control, easier but less customizable, etc.).
-- AI-related questions: the human team retains responsibility.
-- Look for the word "appropriate" — the right answer balances efficiency, correctness, ethics, AND maintainability.
+- RANDOM(a, b) includes both ends, so it can return b − a + 1 different values.
+- To estimate how often a condition is true, count the values that make it true and divide by the total number of values.
+- One run of a program that uses RANDOM proves little; reason about **every** value RANDOM could return.
+- Use documentation to learn what a library procedure does; acknowledge any code you did not write.
+- Simulations are cheaper and safer than real experiments, but they are only as good as their simplifying assumptions, and they can contain bias.
       `
     },
     {
@@ -158,26 +172,26 @@ AI-assisted programming (autocomplete, chat-based coding) accelerates writing co
       exercise: {
         questions: [
           {
-            question: "A startup must ship a calendar app in 4 weeks. Which approach is most appropriate?",
+            question: "Which code segment displays true about 25% of the time it runs?",
             options: [
-              "Design a new programming language built around calendar logic.",
-              "Use existing libraries for dates and storage, writing only app-specific code.",
-              "Implement every component in machine code to maximize speed.",
-              "Skip testing so that every remaining week goes to features."
+              "DISPLAY(RANDOM(1, 4) ≤ 2)",
+              "DISPLAY(RANDOM(0, 4) = 0)",
+              "DISPLAY(RANDOM(1, 4) = 1)",
+              "DISPLAY(RANDOM(1, 25) = 1)"
             ],
-            correctAnswer: 1,
-            explanation: "Composing libraries is the standard modern path; bespoke implementations of well-solved problems waste time."
+            correctAnswer: 2,
+            explanation: "RANDOM(1, 4) returns 1, 2, 3, or 4 with equal chance, so it equals 1 one time in four. RANDOM(0, 4) has five values, so = 0 is true one time in five, and ≤ 2 on RANDOM(1, 4) is true half the time."
           },
           {
-            question: "A developer accepts AI-suggested code that constructs a database query by string concatenation with user input. The code passes a quick visual review and ships. A month later, a security incident traces to SQL injection in this code. What is the best characterization?",
+            question: "A city uses a simulation to choose a location for a new bus stop. The model assumes that every rider walks at the same speed. Which statement is best supported?",
             options: [
-              "The AI tool is solely responsible, since it wrote the vulnerable query.",
-              "The team is responsible, since code it deploys is its own to check.",
-              "The attacker alone is responsible, since the code worked as intended.",
-              "No one is responsible, since injection attacks cannot be prevented."
+              "The results are exact, since a computer does not make arithmetic mistakes.",
+              "The model is useless, since a simulation must include every real detail.",
+              "The model cannot use random values, since walking speed is a fixed number.",
+              "Its predictions can help, but the simplified walking speeds may skew some."
             ],
-            correctAnswer: 1,
-            explanation: "Accepting AI output without security review does not transfer responsibility; the team owns deployed code."
+            correctAnswer: 3,
+            explanation: "Simulations remove details to stay manageable, so they can still inform a decision, but each simplifying assumption can make some predictions inaccurate."
           }
         ]
       }

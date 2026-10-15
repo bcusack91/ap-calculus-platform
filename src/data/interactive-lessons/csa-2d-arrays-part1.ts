@@ -204,7 +204,7 @@ for (int r = 0; r < matrix.length; r++) {
 ## AP Exam Strategy: 2D Array Algorithms
 
 - **Row processing** = fix row, vary column. **Column processing** = fix column, vary row
-- Use \`matrix[r].length\` (not \`matrix[0].length\`) in the inner loop — handles jagged arrays
+- Use \`matrix.length\` for the number of rows and \`matrix[0].length\` for the number of columns; every 2D array on the AP exam is rectangular, so each row has the same length
 - Searching a 2D array is just nested linear search
 - Know how to find: sum, average, max, min for the whole array, a specific row, or a specific column
 - Diagonal, border, and neighbor-checking are common FRQ patterns

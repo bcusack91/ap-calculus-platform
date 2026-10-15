@@ -13,15 +13,15 @@ export const cspFaultToleranceSecurityPart2Data = {
 
 ## Fault Tolerance: Working Despite Failures
 
-A **fault-tolerant** system continues operating correctly when a component fails. The key idea: **redundancy** plus a way to detect and recover from failures.
+When a system can support failures and still continue to function, it is **fault-tolerant**. The key idea is **redundancy**: the inclusion of extra components that can be used to mitigate failure if other components fail.
 
-| Technique | How it tolerates faults |
+| Redundant component | How it tolerates faults |
 |-----------|------------------------|
-| **Redundancy** | Multiple copies of data or compute. |
-| **Replication** | Same data in many locations. |
-| **Failover** | Automatic switch to a backup. |
-| **Retries** | Try again when a request fails. |
-| **Graceful degradation** | Reduce functionality instead of crashing. |
+| **Extra paths** | If one connection fails, data take another route. |
+| **Extra servers** | If one server crashes, another keeps the service running. |
+| **Extra copies of data** | If one drive fails, a backup copy on another device survives. |
+
+Redundancy usually **requires additional resources** (more devices, more connections, more cost), but it provides the benefit of fault tolerance.
       `
     },
     {
@@ -33,26 +33,26 @@ A **fault-tolerant** system continues operating correctly when a component fails
       exercise: {
         questions: [
           {
-            question: "A web service runs on 3 servers behind a load balancer. One server crashes; users keep working. This demonstrates ___",
+            question: "A web service runs on 3 servers. One server crashes, and users keep working without noticing. This demonstrates ___",
             options: [
-              "load balancing that makes each server faster, with no redundancy involved",
-              "fault tolerance via redundancy and automatic failover to healthy servers",
-              "data replication, which copies the crashed server's files onto a backup disk",
-              "encryption, which keeps the crashed server's sessions hidden from attackers"
+              "faster processing, since three servers run each request three times as fast",
+              "fault tolerance, since redundant servers keep everything running",
+              "encryption, since the crashed server's data is hidden from attackers",
+              "compression, since the crashed server's files are stored in fewer bits"
             ],
             correctAnswer: 1,
-            explanation: "Redundancy + failover = classic fault tolerance."
+            explanation: "Redundant servers mean the failure of one does not stop the service, which is fault tolerance."
           },
           {
-            question: "When a sensor returns an obviously wrong value, the most defensive approach is ___",
+            question: "Why does adding redundancy to a system usually cost more?",
             options: [
-              "use the obviously wrong value anyway and propagate it into downstream calculations.",
-              "detect the anomaly, then flag or skip that reading and keep using the valid data.",
-              "crash the entire program so that no further sensor reading can ever be processed.",
-              "shut off all sensors connected to the program until a human operator intervenes."
+              "It requires additional components, such as extra devices or connections.",
+              "It requires every device in the system to be replaced by a new model.",
+              "It slows every request down, so the system must buy more bandwidth.",
+              "It prevents the system from using open protocols, so licenses are needed."
             ],
-            correctAnswer: 1,
-            explanation: "Defensive handling of bad inputs."
+            correctAnswer: 0,
+            explanation: "Redundancy means extra components, which use additional resources; the benefit is fault tolerance."
           }
         ]
       }
@@ -63,34 +63,25 @@ A **fault-tolerant** system continues operating correctly when a component fails
       content: `
 ## Why The Internet Survives Failures
 
-The original Internet design (1960s ARPANET) assumed parts of the network would fail. Packet switching + dynamic routing means traffic can flow around broken links automatically.
+The Internet has been **engineered to be fault-tolerant**, with abstractions for routing and transmitting data. Elements of complex systems fail at unexpected times, often **in groups** (a storm can knock out several connections at once), and fault tolerance lets users keep using the network.
 
-| Failure | Mitigation |
+| Failure | What the redundancy does |
 |---------|-----------|
-| Cable cut | Routers find alternate paths. |
-| Server crash | Load balancer routes to a healthy peer. |
-| Region outage | Multi-region deployment. |
-| Disk failure | RAID + offsite backup. |
+| A cable is cut | Data are sent along a different route, if one exists. |
+| A server crashes | Another server handles the requests. |
+| A disk fails | A backup copy on another device is used. |
 
-## Backups Are Different From Replication
+The redundancy of routing options between two points also **increases the reliability of the Internet** and helps it **scale** to more devices and more people.
 
-| Concept | Purpose |
-|---------|---------|
-| **Replication** | Live copies for high availability. |
-| **Backup** | Snapshot in time for recovery from corruption / mistake. |
+## Identifying Vulnerabilities
 
-If a bug DELETES data and replicates the deletion to all replicas, only a backup saves you.
+To find where a system can fail, look for a component that **everything depends on**.
 
-## A Tiny Example: Retries With Backoff
+Network: Lab–Hub, Library–Hub, Office–Hub, Hub–Internet.
 
-    attempt ← 1
-    REPEAT WHILE attempt ≤ 5:
-      result ← TRY_REQUEST()
-      IF result.success THEN STOP
-      WAIT(2 ^ attempt seconds)   // exponential backoff
-      attempt ← attempt + 1
-
-Exponential backoff prevents retry storms from overwhelming a recovering service.
+- Every device reaches the Internet through **Hub**, so Hub is a single point of failure.
+- The Hub–Internet connection is also a single point of failure.
+- Adding a second connection from the Library straight to the Internet gives the Library a path that does not depend on the Hub.
       `
     },
     {
@@ -99,19 +90,19 @@ Exponential backoff prevents retry storms from overwhelming a recovering service
       content: `
 **Applied Recall** ✍️
 
-1) Tolerating component failure typically requires _______ — extra capacity / copies.
+1) Including extra components so a system keeps working when others fail is called _______.
 
-2) A system that reduces functionality instead of crashing during partial failure is showing _______ degradation.
+2) A component that every path depends on is called a single point of _______.
 
-3) A disk-failure-resistant arrangement of multiple disks is called _______.
+3) A system that can support failures and still function is called fault-_______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["redundancy", "graceful", "RAID"],
+        correctAnswers: ["redundancy", "failure", "tolerant"],
         hint1: "Backup parts.",
-        hint2: "Soft fail.",
-        hint3: "Disk redundancy acronym.",
-        explanation: "Redundancy / graceful degradation / RAID."
+        hint2: "If it breaks, everything breaks.",
+        hint3: "It tolerates faults.",
+        explanation: "Redundancy provides backups. A component on every path is a single point of failure. Systems that survive failures are fault-tolerant."
       }
     },
     {
@@ -123,23 +114,23 @@ Exponential backoff prevents retry storms from overwhelming a recovering service
       exercise: {
         dropdowns: [
           {
-            label: "Replication alone does NOT protect against ___",
-            options: ["a buggy delete that propagates to every replica", "a disk failure on one storage server", "the crash of one server while others stay up", "a hardware fault confined to a single machine in the cluster"]
+            label: "Parts of complex systems often fail ___",
+            options: ["at unexpected times, often in groups", "one at a time, on a predictable schedule", "never, as long as they are new", "only when a user makes a mistake"]
           },
           {
-            label: "Exponential backoff exists to ___",
-            options: ["avoid hammering a recovering service with retry storms", "retry failed requests as fast as possible until they succeed", "guarantee every request succeeds on its very first attempt", "send each request to several servers at the same instant"]
+            label: "Adding a second path between two routers ___",
+            options: ["adds redundancy at extra cost", "removes the need for routing", "lowers the network's fault tolerance", "costs nothing and changes nothing"]
           },
           {
-            label: "A multi-region deployment protects against ___",
-            options: ["region-level outages and natural disasters", "a bug shipped to every region at once", "a stolen admin password", "phishing emails sent to the company's employees"]
+            label: "If a connection on the Internet fails, later data are ___",
+            options: ["sent along a different route if possible", "lost until the connection is repaired", "returned to the sender to try later", "held at the failed connection forever"]
           }
         ],
-        correctAnswers: ["a buggy delete that propagates to every replica", "avoid hammering a recovering service with retry storms", "region-level outages and natural disasters"],
-        hint1: "Replication ≠ backup.",
-        hint2: "Backoff = patience.",
-        hint3: "Region resilience.",
-        explanation: "Replication doesn't cover deletes; backoff prevents storms; multi-region survives outages."
+        correctAnswers: ["at unexpected times, often in groups", "adds redundancy at extra cost", "sent along a different route if possible"],
+        hint1: "Failures are hard to predict.",
+        hint2: "Extra components are not free.",
+        hint3: "Routing is dynamic.",
+        explanation: "Failures are unpredictable and often come in groups. Extra paths add redundancy but cost resources. The Internet reroutes around failures when it can."
       }
     },
     {
@@ -148,8 +139,9 @@ Exponential backoff prevents retry storms from overwhelming a recovering service
       content: `
 ## AP Exam Strategy: Fault Tolerance
 
-- Redundancy + failover = canonical fault-tolerance answer.
-- Distinguish replication (live) from backups (point-in-time).
+- Redundancy (extra components) = the canonical fault-tolerance answer.
+- Redundancy costs additional resources; its benefit is fault tolerance.
+- To identify a vulnerability, find a component that every path or process depends on.
 - The Internet itself is a giant fault-tolerant system.
       `
     },
@@ -162,26 +154,26 @@ Exponential backoff prevents retry storms from overwhelming a recovering service
       exercise: {
         questions: [
           {
-            question: "A team replicates their database across 3 servers but takes no backups. A bug deletes a critical table. The most accurate framing is ___",
+            question: "A school network connects the Lab, Library, and Office to one Hub, and the Hub has the school's only connection to the Internet. Which change most improves fault tolerance?",
             options: [
-              "replication is enough — three live copies work just as well as a backup would.",
-              "the delete was copied to every replica, so only a backup could recover the table.",
-              "replication with a short sync delay would have kept at least one replica free of the delete.",
-              "the deleted table can be recovered by reading it back from whichever replica is the primary."
+              "Replace the Hub with a newer model with a faster Internet connection.",
+              "Add a second Internet connection that does not go through the Hub.",
+              "Disconnect the Lab so that the Hub carries less traffic each day.",
+              "Run a longer cable between the Lab and the Hub than the current one."
             ],
             correctAnswer: 1,
-            explanation: "Replication ≠ backup."
+            explanation: "A second path that bypasses the Hub removes the single point of failure; a faster Hub can still fail."
           },
           {
-            question: "A flaky network causes occasional request failures. The most CSP-aligned client behavior is ___",
+            question: "Which is the best example of a vulnerability to failure in a system?",
             options: [
-              "immediately retry forever, as fast as the client can produce new outbound requests.",
-              "retry a small bounded number of times with exponential backoff, then surface a clear error.",
-              "crash the application on the first failure so the user knows to restart it and try again later.",
-              "silently ignore the failure and proceed as if the request had completed successfully."
+              "Two separate cables connect the same two school buildings.",
+              "Every path from the school to the Internet passes through one router.",
+              "Files are copied each night to a backup drive in another room.",
+              "Each classroom connects to two different switches in the building."
             ],
             correctAnswer: 1,
-            explanation: "Bounded retries with backoff is the standard pattern."
+            explanation: "A router on every path is a single point of failure; the other choices describe redundancy."
           }
         ]
       }

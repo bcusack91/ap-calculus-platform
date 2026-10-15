@@ -7,20 +7,20 @@ export const cspComputingSystemsNetworksPart3Data = {
       content: `
 # 🖥️ Computing Systems & Networks
 
-**Part 3 of 7 — Patterns & Examples**
+**Part 3 of 7 — Patterns & Examples: Packets and Protocols**
 
 ---
 
-## How The Internet Routes Data
+## How The Internet Moves Data
 
-The Internet is a **packet-switched** network: data is split into packets, each of which finds its own way through routers to the destination.
+Data is split into packets, and each packet finds its own way through the network to the destination.
 
 | Concept | Effect |
 |---------|--------|
-| **Packet** | A chunk of data with source + destination addresses. |
-| **Router** | Forwards packets toward their destination. |
+| **Packet** | A chunk of data plus metadata for routing and reassembly. |
+| **Router** | A computing device that forwards packets toward their destination. |
 | **Path** | Packets may take different routes to the same destination. |
-| **Protocol** | Rules for how packets are formatted and exchanged. |
+| **Protocol** | Agreed-upon rules for how data is formatted and exchanged. |
       `
     },
     {
@@ -40,18 +40,18 @@ The Internet is a **packet-switched** network: data is split into packets, each 
               "only the path chosen by the sender, in the order the sender picks for them."
             ],
             correctAnswer: 1,
-            explanation: "Packet switching allows independent routing."
+            explanation: "Each packet is routed on its own, so packets can take different paths and arrive out of order."
           },
           {
-            question: "A router decides where to forward a packet based on ___",
+            question: "A router decides where to forward a packet based mainly on ___",
             options: [
-              "the packet's payload content, by inspecting the application-layer body in detail.",
-              "the destination address and the router's current routing table.",
-              "the original sender's preference about which neighboring router to forward through.",
+              "the chunk of data inside, after reading the message the packet carries.",
+              "the destination information stored in the packet's metadata.",
+              "the sender's choice of which neighboring router should be used next.",
               "the size of the packet, sending larger packets along faster links."
             ],
             correctAnswer: 1,
-            explanation: "Routers use destination addresses + routing tables."
+            explanation: "Packets carry metadata, including the destination, that devices use to route them."
           }
         ]
       }
@@ -60,29 +60,26 @@ The Internet is a **packet-switched** network: data is split into packets, each 
       id: "cspcsn3-content",
       type: 'text' as const,
       content: `
-## Layered Network Stack
+## Common Internet Protocols
 
-| Layer | Role | Example |
-|-------|------|---------|
-| Application | What the program means | HTTP, DNS, SMTP |
-| Transport | Reliable / unreliable streams between processes | TCP, UDP |
-| Network | Routing between hosts | IP |
-| Link | One hop between physical devices | Ethernet, Wi-Fi |
+The CED names **IP**, **TCP**, and **UDP** as common protocols on the Internet, and **HTTP** as the protocol of the World Wide Web.
 
-Each layer offers a service to the layer above and consumes services from the layer below.
+| Protocol | Job |
+|----------|-----|
+| **IP** | Addresses packets and routes them between networks. |
+| **TCP** | Makes sure every packet arrives, asks for missing ones to be resent, and puts the data back in order. |
+| **UDP** | Sends packets without checking that they arrive and without guaranteeing order; quicker, but some data may be lost. |
+| **HTTP** | Requests and delivers Web pages and files. |
 
-## TCP vs UDP
+Because these protocols are **open** (nonproprietary), anyone can build a device or program that connects to the Internet.
 
-| Feature | TCP | UDP |
-|---------|-----|-----|
-| Reliable? | Yes (retransmits lost) | No |
-| In-order? | Yes | No |
-| Overhead | Higher | Lower |
-| Use case | Web, email, files | Video calls, games, DNS |
+## The Internet vs. the World Wide Web
 
-## DNS Translates Names To Addresses
-
-When you type **example.com**, DNS resolves the name to an IP address. DNS is itself a globally distributed system; failures cascade visibly when it breaks.
+| | Internet | World Wide Web |
+|---|----------|----------------|
+| What it is | A network of interconnected networks | A system of linked pages, programs, and files |
+| Relationship | Carries data for many uses (email, video calls, games, the Web) | **Uses** the Internet |
+| Protocol | IP, TCP, UDP | HTTP |
       `
     },
     {
@@ -91,19 +88,19 @@ When you type **example.com**, DNS resolves the name to an IP address. DNS is it
       content: `
 **Applied Recall** ✍️
 
-1) The Internet is a _______-switched network.
+1) Packets contain a chunk of data plus _______ used for routing and reassembly.
 
-2) A reliable, in-order transport protocol is _______.
+2) The protocol that makes sure every packet arrives and puts the data back in order is _______.
 
-3) Translating "example.com" to an IP address is the job of _______.
+3) The protocol used by the World Wide Web is _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["packet", "TCP", "DNS"],
-        hint1: "Independently routed chunks.",
-        hint2: "Reliable transport.",
-        hint3: "Domain Name System.",
-        explanation: "Packet switching, TCP, DNS."
+        correctAnswers: ["metadata", "TCP", "HTTP"],
+        hint1: "Data about the data.",
+        hint2: "The reliable one of TCP and UDP.",
+        hint3: "Hypertext Transfer Protocol.",
+        explanation: "Packets carry metadata. TCP provides reliable, in-order delivery. HTTP is the Web's protocol."
       }
     },
     {
@@ -115,34 +112,35 @@ When you type **example.com**, DNS resolves the name to an IP address. DNS is it
       exercise: {
         dropdowns: [
           {
-            label: "For a video call where occasional dropped frames are tolerable, the right protocol is ___",
-            options: ["UDP-based (low latency, no retransmission)", "TCP-based (reliable, resends lost frames)", "DNS-based (a name lookup for each frame)", "HTTP-based (one request per video frame)"]
+            label: "For a live video call where a few lost packets are acceptable, a reasonable protocol is ___",
+            options: ["UDP, which does not resend lost packets", "TCP, which waits to resend each lost packet", "HTTP, which links Web pages to each other", "IP alone, which ignores each destination"]
           },
           {
             label: "For downloading a software update, the right protocol is ___",
-            options: ["TCP (reliable, in-order)", "UDP (fast, no resends)", "DNS (name-based lookup)", "IP alone (best-effort)"]
+            options: ["TCP (reliable, in order)", "UDP (fast, no resends)", "HTTP (Web pages only)", "none (packets are optional)"]
           },
           {
-            label: "When DNS fails for a site, users see ___",
-            options: ["the site appears unreachable, even though servers are healthy", "the site loads normally, since DNS is only used once", "the browser shows an expired TLS certificate warning", "the site loads slowly, since packets take longer routes"]
+            label: "The World Wide Web is ___",
+            options: ["a system of linked pages, programs, and files", "another name for the entire Internet", "the cables and routers that connect networks", "a protocol used to route packets"]
           }
         ],
-        correctAnswers: ["UDP-based (low latency, no retransmission)", "TCP (reliable, in-order)", "the site appears unreachable, even though servers are healthy"],
-        hint1: "Real-time → UDP.",
-        hint2: "Reliability → TCP.",
-        hint3: "Name resolution failure.",
-        explanation: "UDP for real-time; TCP for reliability; DNS failure makes sites unreachable."
+        correctAnswers: ["UDP, which does not resend lost packets", "TCP (reliable, in order)", "a system of linked pages, programs, and files"],
+        hint1: "Speed matters more than every frame.",
+        hint2: "Every byte must arrive.",
+        hint3: "It runs on the Internet.",
+        explanation: "UDP suits real-time data where a little loss is fine. TCP suits files that must arrive complete. The Web is linked pages, programs, and files that use the Internet."
       }
     },
     {
       id: "cspcsn3-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: Internet Routing
+## AP Exam Strategy: Packets and Protocols
 
-- Packets travel independently and may reorder.
-- TCP = reliable + ordered; UDP = unreliable + low-overhead.
-- DNS = name → address translation.
+- Packets travel independently and may arrive in order, out of order, or not at all.
+- IP, TCP, and UDP are common Internet protocols; HTTP is the Web's protocol.
+- The Web uses the Internet; they are not the same thing.
+- Open protocols make it easy to connect new devices.
       `
     },
     {
@@ -154,15 +152,15 @@ When you type **example.com**, DNS resolves the name to an IP address. DNS is it
       exercise: {
         questions: [
           {
-            question: "A user notices \"ERR_NAME_NOT_RESOLVED\" when visiting a site. The most likely root cause is ___",
+            question: "A student says, \"The Internet and the World Wide Web are the same thing.\" Which is the best correction?",
             options: [
-              "the site's origin server has crashed and is no longer responding to TCP connections.",
-              "the DNS lookup failed, so the domain could not be turned into an IP address.",
-              "the user's router blocked outgoing traffic on the port the website uses.",
-              "the site's TLS certificate is misconfigured and the browser is refusing to connect."
+              "The Web is the network of networks, and the Internet runs on it.",
+              "The Web is a system of linked pages that uses the Internet.",
+              "The Web is the set of cables and routers inside the Internet.",
+              "The Internet only carries data for the Web and nothing else."
             ],
             correctAnswer: 1,
-            explanation: "Name-not-resolved = DNS failure."
+            explanation: "The Web is a system of linked pages, programs, and files that runs on the Internet using HTTP; the Internet also carries email, games, and more."
           },
           {
             question: "A real-time multiplayer game uses ___ for game-state updates and ___ for chat history.",
@@ -173,7 +171,7 @@ When you type **example.com**, DNS resolves the name to an IP address. DNS is it
               "TCP for both, since UDP cannot carry data between players in a multiplayer game."
             ],
             correctAnswer: 0,
-            explanation: "Game state = low-latency UDP; chat history = reliable TCP."
+            explanation: "Game state changes constantly, so a lost update can be skipped; chat history must arrive complete."
           }
         ]
       }

@@ -7,18 +7,23 @@ export const cspFaultToleranceSecurityPart5Data = {
       content: `
 # 🛡️ Fault Tolerance & Security
 
-**Part 5 of 7 — Change Over Time**
+**Part 5 of 7 — Speedup and the Limits of Parallelism**
 
 ---
 
-## How Security & Fault Tolerance Have Evolved
+## Measuring Speedup
 
-| Era | Defining shift |
-|-----|----------------|
-| 1990s | Anti-virus, basic firewalls. |
-| 2000s | TLS adoption; widespread cyberattacks. |
-| 2010s | Cloud-scale DDoS, ransomware, MFA mainstream. |
-| 2020s | Supply-chain attacks, AI-assisted phishing, post-quantum prep. |
+The **speedup** of a parallel solution is measured as:
+
+**speedup = time to complete the task sequentially ÷ time to complete the task in parallel**
+
+| Sequential time | Parallel time | Speedup |
+|----------------|---------------|---------|
+| 60 s | 30 s | 2 |
+| 90 s | 30 s | 3 |
+| 100 s | 80 s | 1.25 |
+
+A parallel computing solution consists of a **parallel portion** and a **sequential portion**. Only the parallel portion gets faster when you add processors.
       `
     },
     {
@@ -30,26 +35,26 @@ export const cspFaultToleranceSecurityPart5Data = {
       exercise: {
         questions: [
           {
-            question: "A \"supply-chain attack\" compromises ___",
+            question: "A task takes 120 seconds sequentially and 40 seconds with a parallel solution. What is the speedup?",
             options: [
-              "only individual end users' phones, with no impact on the broader software ecosystem.",
-              "a tool or library many systems depend on, multiplying the impact across all users.",
-              "only firewalls at the network perimeter, leaving applications inside untouched.",
-              "a single website's login page, which attackers copy to collect user passwords."
+              "1/3",
+              "3",
+              "80",
+              "160"
             ],
             correctAnswer: 1,
-            explanation: "Supply chain = trusted dependency compromise."
+            explanation: "Speedup = sequential time ÷ parallel time = 120 ÷ 40 = 3."
           },
           {
-            question: "Post-quantum cryptography research aims to ___",
+            question: "Why does the speedup of a parallel solution eventually level off as more processors are added?",
             options: [
-              "speed up classical encryption algorithms by using more efficient mathematical primitives.",
-              "design algorithms that resist attacks from future large quantum computers.",
-              "use quantum computers to encrypt everyday web traffic in place of current algorithms.",
-              "prove that today's public-key algorithms are already safe against quantum attacks."
+              "Each added processor slows down all of the other processors.",
+              "The sequential portion still has to run one step at a time.",
+              "Parallel solutions cannot use more than two processors at once.",
+              "Adding processors increases the amount of input data to process."
             ],
             correctAnswer: 1,
-            explanation: "Post-quantum = quantum-resistant designs."
+            explanation: "Efficiency is limited by the sequential portion, so at some point adding parallel portions no longer meaningfully increases efficiency."
           }
         ]
       }
@@ -58,19 +63,27 @@ export const cspFaultToleranceSecurityPart5Data = {
       id: "cspfts5-content",
       type: 'text' as const,
       content: `
-## Notable Modern Shifts
+## Worked Example: The Sequential Portion Sets a Floor
 
-| Shift | Effect |
-|-------|--------|
-| Cloud everywhere | Big providers handle base infra; devs share responsibility. |
-| Zero trust | Don't trust any network; verify every request. |
-| Ransomware | Backups + segmentation + plan = recoverability. |
-| AI-assisted attacks | Phishing/spam quality is rising. |
-| Open-source dependencies | Strong upside; supply-chain risk. |
+A program has a **30-second sequential portion** and **60 seconds of work** that can be split evenly across processors.
 
-## "Security Through Obscurity" Doesn't Work
+| Processors | Time | Speedup |
+|-----------|------|---------|
+| 1 | 30 + 60 = 90 s | 1 |
+| 2 | 30 + 30 = 60 s | 1.5 |
+| 3 | 30 + 20 = 50 s | 1.8 |
+| 6 | 30 + 10 = 40 s | 2.25 |
+| 60 | 30 + 1 = 31 s | about 2.9 |
 
-Hiding the algorithm isn't a substitute for sound design. Strong cryptography is **public** — its security depends on the key, not the secrecy of the method.
+No matter how many processors are added, the program can never finish in less than **30 seconds**, so the speedup can never reach 90 ÷ 30 = 3. When increasing the use of parallel computing, **the efficiency of the solution is still limited by the sequential portion**.
+
+## Choosing a Model
+
+| Situation | Good fit |
+|-----------|----------|
+| A small task with steps that depend on each other | Sequential |
+| Many independent tasks of similar size | Parallel |
+| A problem too slow or too large for one computer | Distributed |
       `
     },
     {
@@ -79,19 +92,19 @@ Hiding the algorithm isn't a substitute for sound design. Strong cryptography is
       content: `
 **Applied Recall** ✍️
 
-1) A model that does NOT trust any network and verifies every request is called _______ trust.
+1) In the worked example, the speedup with 2 processors is _______.
 
-2) An attack on a popular library to compromise its many downstream users is a _______-chain attack.
+2) No matter how many processors are added, the worked example can never finish in less than _______ seconds.
 
-3) Cryptography designed to resist future quantum-computer attacks is called _______-quantum.
+3) Speedup equals the sequential time divided by the _______ time.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["zero", "supply", "post"],
-        hint1: "Trust nothing.",
-        hint2: "Dependency-chain.",
-        hint3: "After-quantum.",
-        explanation: "Zero trust / supply chain / post-quantum."
+        correctAnswers: ["1.5", "30", "parallel"],
+        hint1: "90 ÷ 60.",
+        hint2: "The sequential portion.",
+        hint3: "The time when tasks run at the same time.",
+        explanation: "90 ÷ 60 = 1.5. The 30-second sequential portion can never be split. Speedup = sequential ÷ parallel."
       }
     },
     {
@@ -103,34 +116,35 @@ Hiding the algorithm isn't a substitute for sound design. Strong cryptography is
       exercise: {
         dropdowns: [
           {
-            label: "\"Security through obscurity\" alone ___",
-            options: ["is widely considered insufficient — open-design + strong keys is preferred", "is widely considered sufficient — secret designs + short keys are enough", "is the strongest defense — hidden code + no public review is preferred", "replaces encryption — attackers cannot break what they cannot see"]
+            label: "Speedup is calculated as ___",
+            options: ["sequential time ÷ parallel time", "parallel time ÷ sequential time", "sequential time − parallel time", "processors × parallel time"]
           },
           {
-            label: "Ransomware's greatest defense is ___",
-            options: ["regular tested backups + network segmentation + a plan", "paying the ransom promptly + asking for the decryption key", "full-disk encryption + longer passwords + a VPN", "a single antivirus tool + a perimeter firewall alone"]
+            label: "A task that is entirely sequential gets a speedup of ___ from extra processors",
+            options: ["1, meaning no improvement", "2, for every added processor", "the number of processors", "0, meaning it stops"]
           },
           {
-            label: "AI-assisted phishing is harder to detect because ___",
-            options: ["it produces grammatically clean, personalized messages at scale", "it encrypts every message so spam filters cannot read its content", "it always comes from the real company's verified email servers", "it is sent only through text messages rather than through email"]
+            label: "As more processors are added, a parallel solution's efficiency is still limited by ___",
+            options: ["its sequential portion", "the number of packets", "the file's metadata", "its encryption key"]
           }
         ],
-        correctAnswers: ["is widely considered insufficient — open-design + strong keys is preferred", "regular tested backups + network segmentation + a plan", "it produces grammatically clean, personalized messages at scale"],
-        hint1: "Open + strong > obscure.",
-        hint2: "Recoverability.",
-        hint3: "Quality boost.",
-        explanation: "Open design + strong keys; backups + segmentation; AI-quality phishing."
+        correctAnswers: ["sequential time ÷ parallel time", "1, meaning no improvement", "its sequential portion"],
+        hint1: "Old time over new time.",
+        hint2: "Nothing can run at the same time.",
+        hint3: "The part that can't be split.",
+        explanation: "Speedup = sequential ÷ parallel. A fully sequential task takes the same time however many processors there are. The sequential portion limits efficiency."
       }
     },
     {
       id: "cspfts5-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: Security Evolution
+## AP Exam Strategy: Speedup
 
-- Modern attackers exploit supply chain, not always users directly.
-- Zero trust is the dominant new architecture.
-- AI changes the threat landscape (phishing quality up).
+- Speedup = sequential time ÷ parallel time (bigger is better; 1 means no gain).
+- Parallel time = sequential portion + longest parallel task.
+- The sequential portion sets a floor on the time and a ceiling on the speedup.
+- "Will doubling the processors double the speed?" → only if there is no sequential portion and the work splits evenly.
       `
     },
     {
@@ -142,26 +156,26 @@ Hiding the algorithm isn't a substitute for sound design. Strong cryptography is
       exercise: {
         questions: [
           {
-            question: "A company's build pipeline is compromised — every customer download contains malware. The most accurate framing is ___",
+            question: "A program runs a 10-second sequential setup, then 8 independent tasks that take 5 seconds each. With 4 processors sharing the tasks evenly, how long does the program take?",
             options: [
-              "phishing of individual customers via emails sent from the compromised build server.",
-              "a supply-chain attack: a trusted artifact source was compromised, multiplying impact.",
-              "a DDoS attack: the download server was flooded until it served corrupted files.",
-              "a man-in-the-middle attack: each customer's connection was intercepted separately."
+              "15 seconds",
+              "20 seconds",
+              "30 seconds",
+              "50 seconds"
             ],
             correctAnswer: 1,
-            explanation: "Build pipeline compromise = canonical supply-chain attack."
+            explanation: "Each processor runs 2 tasks (10 seconds) after the 10-second setup: 10 + 10 = 20 seconds. Sequentially it would take 10 + 40 = 50 seconds."
           },
           {
-            question: "A school is hit by ransomware. The single most useful preparation BEFORE the attack would have been ___",
+            question: "A programmer says, \"If I double the number of processors, my program will always run twice as fast.\" Which is the best response?",
             options: [
-              "no preparation, since ransomware response is purely reactive",
-              "tested offline backups, network segmentation, and a written response plan.",
-              "antivirus, firewalls, and spam filters, with no backups needed",
-              "cyber insurance, which restores files once the ransom is paid"
+              "Yes; the speedup always equals the number of processors used.",
+              "Not always; the sequential portion does not speed up at all.",
+              "No; adding processors always makes a program run more slowly.",
+              "Sometimes; it depends only on how fast each processor runs."
             ],
             correctAnswer: 1,
-            explanation: "Backups + segmentation + plan = ransomware resilience."
+            explanation: "Only the parallel portion benefits from more processors, so the sequential portion limits the speedup."
           }
         ]
       }

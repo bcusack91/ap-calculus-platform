@@ -657,9 +657,9 @@ Because \`fib\` calls itself **twice**, the calls form a **tree**, and the same 
 fib(1) fib(0)
 \`\`\`
 
-Count the calls: \`fib(4)\` triggers **9** total calls to \`fib\` (1 + 2 + 2 + 2 + 2... count the nodes: fib(4), two children, etc. — there are 9 nodes). Notice \`fib(2)\` is computed **twice** and \`fib(1)\` **three** times — wasted work.
+Count the calls by counting the nodes in the tree: \`fib(4)\` makes **9** calls to \`fib\` in total. Notice \`fib(2)\` is computed **twice** and \`fib(1)\` **three** times — wasted work.
 
-> ⚠️ This naïve Fibonacci is **exponentially** slow ($O(2^n)$-ish). It is correct and great for *learning* recursion, but in practice you'd use iteration or "memoization" to avoid recomputing. On the AP exam, you mainly need to **trace** it and **count calls**.`,
+> ⚠️ The number of calls grows very quickly: \`fib(5)\` makes 15 calls and \`fib(6)\` makes 25. A loop that keeps the last two values computes the same numbers with one pass. On the AP exam, you **trace** methods like this and **count calls**; you are not asked to write recursive code.`,
       },
       {
         id: 'rec5-q-tree',

@@ -7,18 +7,19 @@ export const cspFaultToleranceSecurityPart4Data = {
       content: `
 # 🛡️ Fault Tolerance & Security
 
-**Part 4 of 7 — Connections & Interactions**
+**Part 4 of 7 — Connections: Parallel and Distributed Computing**
 
 ---
 
-## Security & Fault Tolerance Connect Across CSP
+## Many Computers, One Problem
 
-| Connection | Why |
-|-----------|-----|
-| Security ↔ Networks | Most attacks come over the network. |
-| Fault tolerance ↔ Systems | Systems fail; designs must adapt. |
-| Security ↔ Data | Data must be protected throughout its lifecycle. |
-| Security ↔ Impact | Breaches have human consequences. |
+Fault tolerance uses extra devices so a system survives failures. The same idea of **many devices working together** also makes computing faster and lets us solve bigger problems.
+
+| Model | Meaning |
+|-------|---------|
+| **Sequential computing** | Operations are performed in order, one at a time. |
+| **Parallel computing** | The program is broken into multiple smaller sequential operations, some of which are performed at the same time. |
+| **Distributed computing** | Multiple devices are used to run a program. |
       `
     },
     {
@@ -38,7 +39,7 @@ export const cspFaultToleranceSecurityPart4Data = {
               "little lasting effect, since children's data changes as they grow older."
             ],
             correctAnswer: 1,
-            explanation: "Breaches harm real people."
+            explanation: "Personally identifiable information can be used to stalk or steal the identity of a person, so breaches harm real people."
           },
           {
             question: "A system that crashes whenever any single component fails is the OPPOSITE of ___",
@@ -49,7 +50,7 @@ export const cspFaultToleranceSecurityPart4Data = {
               "efficient — finishing tasks using as little time and memory as possible"
             ],
             correctAnswer: 1,
-            explanation: "Fault tolerance = survives failures."
+            explanation: "A fault-tolerant system supports failures and still continues to function."
           }
         ]
       }
@@ -58,29 +59,27 @@ export const cspFaultToleranceSecurityPart4Data = {
       id: "cspfts4-content",
       type: 'text' as const,
       content: `
-## Defense In Depth
+## How Long Does Each Solution Take?
 
-No single defense is enough. Layer them:
+We compare the efficiency of solutions by comparing the **time** they take to perform the same task.
 
-| Layer | Defense |
-|-------|---------|
-| Perimeter | Firewall, DDoS scrubbing. |
-| Network | TLS, segmentation. |
-| Host | Patching, hardening. |
-| App | Input validation, least privilege. |
-| Data | Encryption-at-rest, backups. |
-| Identity | MFA, strong auth. |
-| Process | Code review, secure SDLC. |
+- A **sequential** solution takes as long as the **sum** of all its steps.
+- A **parallel** solution takes as long as its **sequential tasks plus the longest of its parallel tasks**.
 
-If one layer fails, others still hold.
+**Example:** a teacher's grading program must load a class list (2 minutes, sequential), then grade three sections that take 4, 7, and 5 minutes.
 
-## Threat Modeling
+| Solution | Time |
+|---------|------|
+| Sequential | 2 + 4 + 7 + 5 = 18 minutes |
+| Parallel (three processors, one section each) | 2 + 7 = 9 minutes |
 
-Ask: who would attack this, why, and how? Common categories: nation-states, organized crime, opportunistic attackers, disgruntled insiders, accidental damage.
+## Why Distributed Computing Matters
 
-## Security Is A Process, Not A Product
+- Distributed computing allows problems to be solved that **could not be solved on a single computer**, because of either the processing time or the storage needed.
+- It also allows much larger problems to be solved **more quickly** than a single computer could.
+- Solutions that use parallel computing can **scale more effectively** than sequential solutions.
 
-Tools alone don't make a system secure. Patching, monitoring, and incident response matter as much as initial design.
+Examples: a weather model split across thousands of computers; a science project that sends small pieces of a huge data set to volunteers' computers.
       `
     },
     {
@@ -89,19 +88,19 @@ Tools alone don't make a system secure. Patching, monitoring, and incident respo
       content: `
 **Applied Recall** ✍️
 
-1) Layering multiple security defenses is called defense in _______.
+1) Performing operations in order, one at a time, is called _______ computing.
 
-2) A formal exercise to ask "who would attack this and how" is called _______ modeling.
+2) Using multiple devices to run a program is called _______ computing.
 
-3) A system's ability to keep responding during partial failure is _______ tolerance.
+3) Independent tasks of 4, 7, and 5 minutes run sequentially take _______ minutes.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["depth", "threat", "fault"],
-        hint1: "Layered defenses.",
-        hint2: "Adversary thinking.",
-        hint3: "Survival.",
-        explanation: "Depth, threat modeling, fault tolerance."
+        correctAnswers: ["sequential", "distributed", "16"],
+        hint1: "In sequence.",
+        hint2: "The work is spread out across devices.",
+        hint3: "Add them up.",
+        explanation: "One at a time = sequential. Many devices = distributed. 4 + 7 + 5 = 16 minutes."
       }
     },
     {
@@ -113,34 +112,35 @@ Tools alone don't make a system secure. Patching, monitoring, and incident respo
       exercise: {
         dropdowns: [
           {
-            label: "Security is best treated as ___",
-            options: ["an ongoing process: patch, monitor, respond", "a one-time setup: install, configure, done", "a product purchase: buy antivirus, then forget", "a launch checklist: audit once before release"]
+            label: "A parallel solution takes as long as its sequential tasks plus ___",
+            options: ["its longest parallel task", "its shortest parallel task", "all its parallel tasks added", "one second per processor"]
           },
           {
-            label: "Defense in depth means ___",
-            options: ["layering multiple defenses so a single failure does not breach the system", "relying on one very strong firewall so attackers never get past the perimeter", "hiding the system's design so attackers cannot learn how it works", "encrypting all data once so no other defenses are needed"]
+            label: "Distributed computing can solve problems a single computer cannot because of their ___",
+            options: ["processing time or storage needs", "need for encryption keys", "use of open protocols", "number of packets"]
           },
           {
-            label: "A breach plan that includes detection + response is part of ___",
-            options: ["incident-response readiness", "firewall configuration", "password-strength policy", "encryption key management"]
+            label: "Compared with sequential solutions, parallel solutions can ___",
+            options: ["scale more effectively", "never finish sooner", "only run on one device", "skip every sequential step"]
           }
         ],
-        correctAnswers: ["an ongoing process: patch, monitor, respond", "layering multiple defenses so a single failure does not breach the system", "incident-response readiness"],
-        hint1: "Process, not product.",
-        hint2: "Layered defense.",
-        hint3: "Detection + response.",
-        explanation: "Process / depth / response are core."
+        correctAnswers: ["its longest parallel task", "processing time or storage needs", "scale more effectively"],
+        hint1: "Parallel tasks finish when the slowest one does.",
+        hint2: "Too slow or too big for one machine.",
+        hint3: "More processors can share growing work.",
+        explanation: "Parallel time = sequential part + longest parallel task. Distributed computing handles problems too slow or too large for one computer. Parallel solutions scale better."
       }
     },
     {
       id: "cspfts4-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: Cross-Topic Security
+## AP Exam Strategy: Parallel and Distributed
 
-- Defense in depth — layered defenses.
-- Threat modeling identifies WHO and HOW.
-- Backups + replication + monitoring + response = comprehensive resilience.
+- Sequential time = sum of all steps.
+- Parallel time = sequential tasks + the longest parallel task.
+- Distributed computing = many devices; it handles problems too slow or too large for one computer.
+- Read carefully: which steps MUST run in order, and which can run at the same time?
       `
     },
     {
@@ -152,26 +152,26 @@ Tools alone don't make a system secure. Patching, monitoring, and incident respo
       exercise: {
         questions: [
           {
-            question: "A startup fixes a critical bug but never deploys patches automatically. Six months later, an unpatched server is breached. The most CSP-aligned lesson is ___",
+            question: "Four independent tasks take 10, 20, 30, and 40 seconds. They run on two processors, and each task must stay on one processor. What is the minimum time to finish all four?",
             options: [
-              "patches are optional once the original code has been initially reviewed and tested.",
-              "security is ongoing, so updates must reach every server promptly and be monitored.",
-              "a strong firewall in front of the server would have made applying the patch unnecessary.",
-              "the original code review should have caught the bug, so the breach was an unavoidable fluke."
+              "40 seconds",
+              "50 seconds",
+              "60 seconds",
+              "100 seconds"
             ],
             correctAnswer: 1,
-            explanation: "Process matters more than one-time fixes."
+            explanation: "Pair 40 with 10 and 30 with 20: each processor works 50 seconds. No split can do better, since the total is 100 seconds across two processors."
           },
           {
-            question: "A health app that stores patient records would benefit MOST from ___",
+            question: "A weather agency's simulation needs more memory than any single computer it owns. Which approach makes running it possible?",
             options: [
-              "one very strong firewall, since a single solid barrier keeps all attackers out.",
-              "defense in depth, layering encryption, MFA, audit logs, and backups",
-              "encryption in transit alone, since stored records are already safe on the server.",
-              "strong passwords alone, since MFA, logs, and backups add cost without protection."
+              "Sequential computing on the agency's fastest computer.",
+              "Distributed computing across many computers at once.",
+              "Lossy compression of the simulation's program code.",
+              "Running the simulation twice on one computer to check it."
             ],
             correctAnswer: 1,
-            explanation: "Sensitive data needs layered defenses."
+            explanation: "Distributed computing allows problems to be solved that could not be solved on a single computer because of storage needs."
           }
         ]
       }

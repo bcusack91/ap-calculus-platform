@@ -7,18 +7,21 @@ export const cspSocialEthicalImpactsPart5Data = {
       content: `
 # ⚖️ Social & Ethical Impacts
 
-**Part 5 of 7 — Change Over Time**
+**Part 5 of 7 — Legal and Ethical Concerns**
 
 ---
 
-## How Computing's Impact Has Evolved
+## When Computing Raises Legal and Ethical Questions
 
-| Era | Defining shift |
+As with any technology or medium, **using computing to harm individuals or groups** raises legal and ethical concerns. The AP framework gives three examples of computing innovations that raise such concerns:
+
+| Innovation | Concern |
 |-----|----------------|
-| 1990s | Email + web democratize publishing. |
-| 2000s | Social media; Wikipedia; smartphones. |
-| 2010s | Algorithmic feeds; gig economy; ML decisions. |
-| 2020s | Generative AI; deepfakes; LLM-mediated information. |
+| Software that allows access to digital media downloads and streaming | Copies of music, movies, and games can be shared without the creators' permission (intellectual property). |
+| Algorithms that include bias | Decisions about loans, jobs, or policing can treat groups unfairly. |
+| Computing devices that continuously monitor activities and collect and analyze data | Smart speakers, cameras, and location trackers raise privacy concerns. |
+
+Computing also plays a role in **social and political issues**, which often raises further legal and ethical concerns, and the **digital divide** raises ethical concerns about who gets access at all.
       `
     },
     {
@@ -38,18 +41,18 @@ export const cspSocialEthicalImpactsPart5Data = {
               "how routers forward packets, since AI responses travel across the internet like any other data stream"
             ],
             correctAnswer: 1,
-            explanation: "Generative AI surfaces all of these social concerns."
+            explanation: "Material created by people is their intellectual property, so learning from it without permission raises questions of authorship, credit, and consent."
           },
           {
-            question: "A deepfake video of a politician saying things they never said most directly threatens ___",
+            question: "A free app lets users download copies of movies that other users share without the studios' permission. Which concern does this most directly raise?",
             options: [
-              "the copyright of the video's background music, which the creator did not license",
-              "public trust in media and elections, since viewers can no longer believe what they see",
-              "the bandwidth of streaming sites, since synthetic videos are larger than real ones",
-              "the politician's device security, since making a deepfake requires hacking the person's phone"
+              "intellectual property concerns about ownership and use",
+              "fault tolerance concerns about redundant network paths",
+              "data compression concerns about lossy movie formats",
+              "routing concerns about which path each packet takes"
             ],
-            correctAnswer: 1,
-            explanation: "Deepfakes erode trust in media."
+            correctAnswer: 0,
+            explanation: "Software that allows access to digital media downloads raises legal and ethical concerns about intellectual property."
           }
         ]
       }
@@ -58,24 +61,21 @@ export const cspSocialEthicalImpactsPart5Data = {
       id: "cspsei5-content",
       type: 'text' as const,
       content: `
-## Generative AI Stakes
+## Intellectual Property in Practice
 
-| Concern | Example |
+| Situation | Legal and ethical? |
 |---------|---------|
-| Authorship | Whose work is in the training data? |
-| Consent | Did sources agree? |
-| Bias | What populations are over / under represented? |
-| Hallucination | Confident but wrong outputs. |
-| Labor | Displacement of certain creative / knowledge work. |
-| Energy | Training large models is energy-intensive. |
+| Using a photo shared under a Creative Commons license and crediting the photographer | Yes |
+| Modifying and sharing an open-source program | Yes |
+| Reading a research article published with open access | Yes |
+| Copying a classmate's code and submitting it as your own | No — plagiarism |
+| Downloading a paid movie that someone shared without permission | No — violates the creator's intellectual property |
 
-## Platform Power And Regulation
+## Monitoring and Bias
 
-A handful of platforms now mediate much of public discourse, commerce, and labor. Regulators worldwide are responding (data-protection laws, antitrust, age-verification debates). CSP framing: **technology design embeds policy**, so policy must engage with design.
-
-## Long-Term Sustainability
-
-Compute uses electricity, water (cooling), rare materials. Decisions about which problems are worth computing on (and at what scale) have environmental impact.
+- Devices that **continuously monitor** people (smart speakers, fitness trackers, cameras) collect data that can be analyzed, combined, and used in ways the user never expected.
+- **Biased algorithms** used for important decisions can harm whole groups, even when no one intended it.
+- Responsible programmers try to consider these harmful uses before they release an innovation.
       `
     },
     {
@@ -84,19 +84,19 @@ Compute uses electricity, water (cooling), rare materials. Decisions about which
       content: `
 **Applied Recall** ✍️
 
-1) Confident but factually wrong AI outputs are called _______.
+1) Software that lets people download others' media without permission raises _______ property concerns.
 
-2) AI-generated synthetic videos of real people are called _______.
+2) Devices that continuously monitor activities and collect data raise concerns about _______.
 
-3) Computing's electricity, water, and materials use raises questions about its environmental _______.
+3) Material created by someone else should always be _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["hallucinations", "deepfakes", "sustainability"],
-        hint1: "\"Made-up\" outputs.",
-        hint2: "Synthetic video.",
-        hint3: "Environmental footprint.",
-        explanation: "Hallucinations / deepfakes / sustainability."
+        correctAnswers: ["intellectual", "privacy", "cited"],
+        hint1: "Creations of the mind.",
+        hint2: "Keeping personal information to yourself.",
+        hint3: "Give the source credit.",
+        explanation: "Intellectual property / privacy / always cite others' work."
       }
     },
     {
@@ -112,30 +112,30 @@ Compute uses electricity, water (cooling), rare materials. Decisions about which
             options: ["consent and attribution", "network speed and latency", "file format and compression", "hardware cost and cooling"]
           },
           {
-            label: "Energy use of large model training is ___",
-            options: ["significant and a growing sustainability concern", "negligible compared with everyday web browsing", "fully offset because data centers produce no emissions", "limited to the moment a user types a prompt"]
+            label: "A smart speaker that is always listening is an example of ___",
+            options: ["a device that continuously monitors activities", "a citizen science research project", "an open access research publication", "a crowdfunding campaign for a cause"]
           },
           {
-            label: "A small handful of platforms mediating public discourse raises ___",
-            options: ["questions about platform power, governance, and accountability", "no concerns, because market competition prevents abuse", "questions only about server uptime, latency, and bandwidth", "concerns only for the platforms' own shareholders and investors"]
+            label: "Using computing to harm individuals or groups of people raises ___",
+            options: ["legal and ethical concerns", "only technical concerns", "only financial concerns", "no concerns if it is legal"]
           }
         ],
-        correctAnswers: ["consent and attribution", "significant and a growing sustainability concern", "questions about platform power, governance, and accountability"],
-        hint1: "Source ethics.",
-        hint2: "Real footprint.",
-        hint3: "Concentrated influence.",
-        explanation: "AI ethics / sustainability / platform power."
+        correctAnswers: ["consent and attribution", "a device that continuously monitors activities", "legal and ethical concerns"],
+        hint1: "Whose work was used, and did they agree?",
+        hint2: "It collects data all the time.",
+        hint3: "Both the law and right and wrong.",
+        explanation: "AI training data raise consent and attribution concerns. Always-listening devices continuously monitor. Harmful uses of computing raise legal and ethical concerns."
       }
     },
     {
       id: "cspsei5-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: Modern Impact
+## AP Exam Strategy: Legal and Ethical Concerns
 
-- Generative AI raises authorship, consent, bias, hallucination, labor, and energy concerns.
-- Platforms shape public life; their design choices are policy.
-- Sustainability matters as compute scales.
+- Know the three named examples: media download/streaming software, biased algorithms, continuous-monitoring devices.
+- Legal reuse: Creative Commons, open source, open access, with citation. Passing off others' work: plagiarism.
+- Computing plays a role in social and political issues; the digital divide is also an ethical concern.
       `
     },
     {
@@ -147,26 +147,26 @@ Compute uses electricity, water (cooling), rare materials. Decisions about which
       exercise: {
         questions: [
           {
-            question: "A user submits a school essay generated by an LLM as their own work. The most CSP-aligned framing is ___",
+            question: "A user submits a school essay generated by an AI tool as their own work. The most CSP-aligned framing is ___",
             options: [
-              "no measurable concern, since the LLM's output is technically the property of whoever prompted it.",
-              "an academic-integrity issue that also raises authorship questions, so AI-use rules must be clear.",
+              "no measurable concern, since the tool's output is technically the property of whoever prompted it.",
+              "presenting work you did not create as your own is plagiarism, so rules for AI use must be clear.",
               "a plagiarism issue only if the essay copies a published source word for word.",
-              "a copyright issue for the LLM company, which legally owns every essay the model writes."
+              "a copyright issue for the AI company, which legally owns every essay the tool writes."
             ],
             correctAnswer: 1,
-            explanation: "Academic integrity + clear AI-use norms."
+            explanation: "Presenting material you did not create as your own is plagiarism and may have consequences."
           },
           {
-            question: "An AI chatbot confidently states a wrong historical fact a student then cites. The CSP-aligned response is ___",
+            question: "A city installs sensors that continuously record the locations of residents' phones to study traffic. Which concern is most directly raised?",
             options: [
-              "always trust the AI chatbot's output, on the grounds that confident answers are usually correct.",
-              "verify claims against authoritative sources, since AI tools can give false facts in a sure tone.",
-              "cite the chatbot as the source, since quoting it accurately moves the responsibility to the AI.",
-              "ask the chatbot whether it was correct, since it will reliably catch its own earlier errors."
+              "The sensors will slow down every resident's phone connection.",
+              "Tracking where people go puts their personal privacy at risk.",
+              "The traffic data will be too small to show any useful patterns.",
+              "Phone locations cannot be stored as data, so the plan cannot work."
             ],
             correctAnswer: 1,
-            explanation: "AI hallucinations require verification."
+            explanation: "Devices that continuously monitor activities and collect data raise legal and ethical concerns, especially about privacy."
           }
         ]
       }

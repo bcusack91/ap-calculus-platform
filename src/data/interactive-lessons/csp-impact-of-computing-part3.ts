@@ -66,13 +66,13 @@ Recurring categories of impact you'll be asked to recognize.
 
 **Personally Identifiable Information (PII)** = any data that can identify a specific person on its own or combined with other data.
 
-| Direct PII | Indirect / quasi PII |
+| Identifies a person directly | Identifies a person when combined |
 |-----------|---------------------|
-| Name, SSN, email | ZIP + birth date + gender (often unique!) |
-| Home address | Browsing history |
-| Phone number | Geolocation traces |
+| Name, Social Security number, email | ZIP code + birth date + gender |
+| Home address | Browsing history and cookies |
+| Phone number | Location history |
 
-A surprising number of "anonymous" datasets can be **re-identified** by linking quasi-identifiers across sources.
+Disparate personal data, such as geolocation, cookies, and browsing history, can be **aggregated** to create knowledge about an individual, so a surprising number of "anonymous" datasets can be traced back to real people.
 
 ## Algorithmic Bias
 
@@ -97,11 +97,12 @@ Pros: scale, diversity, cost. Cons: quality control, vandalism, governance.
 
 ## Intellectual Property In A Digital World
 
-A digital file is trivially copyable. This collides with traditional IP law (copyright, patents). Modern responses include:
+Material created on a computer is the **intellectual property** of its creator or an organization. A digital file is trivially copyable, which raises concerns about ownership, value, and use. Legal ways to use someone else's material include:
 
-- **Open licenses**: Creative Commons, MIT, GPL — explicit grants of permission.
-- **DRM** (Digital Rights Management): technical restrictions on copying.
-- **Attribution**: even open work usually requires credit.
+- **Creative Commons**: a public copyright license that lets creators give others the right to share, use, and build on their work.
+- **Open source**: programs that are made freely available and may be redistributed and modified.
+- **Open access**: online research output free of restrictions on access and of many restrictions on use.
+- **Citation**: material created by someone else should always be cited. Using it without permission and presenting it as your own is **plagiarism**.
       `
     },
     {
@@ -134,23 +135,23 @@ A digital file is trivially copyable. This collides with traditional IP law (cop
       exercise: {
         dropdowns: [
           {
-            label: "A \"Creative Commons BY-SA\" license requires ___",
-            options: ["attribution and that derivatives use the same license", "attribution and that derivatives are never sold commercially", "attribution and that the work is never modified at all", "a license fee paid to the creator for every copy shared"]
+            label: "A Creative Commons license lets a creator ___",
+            options: ["give others the right to share, use, and build on a work", "keep anyone else from ever viewing or sharing the work", "collect a fee every time someone opens the work online", "transfer ownership of the work to whoever copies it first"]
           },
           {
-            label: "An \"anonymized\" dataset of medical records combined with public voter rolls might allow ___",
-            options: ["re-identification of specific individuals", "permanent deletion of the original records", "stronger encryption of the medical records", "guaranteed anonymity for every patient listed"]
+            label: "An \"anonymized\" dataset of medical records combined with public voter lists might allow ___",
+            options: ["identification of specific individuals", "permanent deletion of the original records", "stronger encryption of the medical records", "guaranteed anonymity for every patient listed"]
           },
           {
             label: "Open-source software is most clearly an example of ___",
             options: ["crowdsourcing applied to code", "centralized corporate development", "proprietary licensing of code", "closed-source vendor software"]
           }
         ],
-        correctAnswers: ["attribution and that derivatives use the same license", "re-identification of specific individuals", "crowdsourcing applied to code"],
-        hint1: "BY=attribution, SA=share alike.",
-        hint2: "Cross-linked datasets defeat anonymization.",
+        correctAnswers: ["give others the right to share, use, and build on a work", "identification of specific individuals", "crowdsourcing applied to code"],
+        hint1: "It is used when a creator WANTS others to reuse the work.",
+        hint2: "Combined data can reveal identities.",
         hint3: "Many contributors, shared code.",
-        explanation: "CC BY-SA = attribution + share alike. Linkage attacks defeat naive anonymization. Open source = crowdsourced code."
+        explanation: "Creative Commons grants others rights to share and build on a work. Aggregating data sources can identify people. Open source = crowdsourced code."
       }
     },
     {
@@ -161,7 +162,7 @@ A digital file is trivially copyable. This collides with traditional IP law (cop
 
 - For privacy questions, identify what data is collected and what could go wrong if it leaks or is combined.
 - For bias questions, look at the training data, not just the model.
-- For IP questions, think about copying, remixing, and attribution.
+- For IP questions, think about ownership, permission (Creative Commons, open source, open access), citation, and plagiarism.
 - For crowdsourcing, weigh scale benefits against quality / vandalism risks.
       `
     },

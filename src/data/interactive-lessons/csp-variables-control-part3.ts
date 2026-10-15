@@ -13,13 +13,13 @@ export const cspVariablesControlPart3Data = {
 
 ## Common Control-Flow Patterns
 
-| Pattern | Skeleton |
+| Pattern | Skeleton (reference sheet pseudocode) |
 |---------|---------|
-| **Counter** | i ← 0; REPEAT n TIMES: i ← i + 1 |
-| **Accumulator** | total ← 0; FOR EACH x: total ← total + x |
-| **Search** | found ← false; FOR EACH x: IF x = target THEN found ← true |
-| **Filter** | result ← []; FOR EACH x: IF condition(x) THEN APPEND(result, x) |
-| **Max / min** | best ← list[1]; FOR EACH x: IF x > best THEN best ← x |
+| **Counter** | count ← 0, then in the loop: IF (condition) { count ← count + 1 } |
+| **Accumulator** | total ← 0, then in the loop: total ← total + x |
+| **Search** | found ← false, then in the loop: IF (x = target) { found ← true } |
+| **Filter** | result ← [], then in the loop: IF (condition) { APPEND(result, x) } |
+| **Max / min** | best ← list[1], then in the loop: IF (x > best) { best ← x } |
       `
     },
     {
@@ -63,30 +63,32 @@ export const cspVariablesControlPart3Data = {
 
 | Pattern | When |
 |---------|------|
+| **IF** | Do something only when a condition is true. |
 | **IF / ELSE** | Two branches. |
-| **IF / ELSE IF / ELSE** | Multiple ranked conditions. |
-| **Guard** | Early return on edge case. |
-| **Lookup** | Map a value to an action via a table. |
+| **IF nested inside ELSE** | Several ranked conditions, checked in order. |
+| **Guard** | RETURN early on an edge case. |
 
 ## Iteration Patterns
 
 | Pattern | Use |
 |---------|-----|
-| **Counted loop** | Known number of iterations. |
-| **Conditional loop** | Stop when a condition becomes true / false. |
-| **List traversal** | Process each item. |
-| **Nested loop** | Process pairs (or grid). |
+| **REPEAT n TIMES** | Known number of iterations. |
+| **REPEAT UNTIL (condition)** | Stop when a condition becomes true. |
+| **FOR EACH item IN list** | Process each item. |
+| **Nested loop** | Process every pair of items. |
 
 ## Mini-walkthrough: Find Maximum
 
-    best ← scoreList[1]
-    FOR EACH score IN scoreList
-    {
-      IF (score > best)
-      {
-        best ← score
-      }
-    }
+\`\`\`
+best ← scoreList[1]
+FOR EACH score IN scoreList
+{
+    IF (score > best)
+    {
+        best ← score
+    }
+}
+\`\`\`
 
 Initialize, then update on each item — the canonical pattern for "best so far".
       `
@@ -121,11 +123,11 @@ Initialize, then update on each item — the canonical pattern for "best so far"
       exercise: {
         dropdowns: [
           {
-            label: "A loop that visits every (i, j) pair in a grid uses ___",
+            label: "A procedure that compares every element of a list with every other element uses ___",
             options: ["nested loops", "a single loop", "an IF statement", "a REPEAT UNTIL loop"]
           },
           {
-            label: "IF / ELSE IF / ELSE is most appropriate when ___",
+            label: "An IF placed inside the ELSE block of another IF is most appropriate when ___",
             options: ["multiple ranked conditions partition the cases", "every condition must be checked independently", "the same block must run a fixed number of times", "there is only one condition with no alternative"]
           },
           {
@@ -134,10 +136,10 @@ Initialize, then update on each item — the canonical pattern for "best so far"
           }
         ],
         correctAnswers: ["nested loops", "multiple ranked conditions partition the cases", "edge cases early so the main logic stays clean"],
-        hint1: "Pairs / grid.",
+        hint1: "Pairs need one loop inside another.",
         hint2: "Multi-way branching.",
         hint3: "Early exit.",
-        explanation: "Nested loops = pairs. Else-if chain = multi-way. Guards handle edges first."
+        explanation: "Nested loops visit pairs. An IF nested in an ELSE checks ranked conditions in order. Guards handle edge cases first."
       }
     },
     {
@@ -146,9 +148,9 @@ Initialize, then update on each item — the canonical pattern for "best so far"
       content: `
 ## AP Exam Strategy: Patterns
 
-- Recognize the loop pattern from the body: total += → accumulator; result.APPEND → filter; if x > best → max.
-- Match selection style to # of branches.
-- Nested loops handle 2D / pairs.
+- Recognize the loop pattern from the body: total ← total + x → accumulator; APPEND(result, x) inside an IF → filter; IF (x > best) { best ← x } → max.
+- Match the selection structure to the number of branches; ranked choices use an IF nested inside an ELSE.
+- Nested loops handle pairs of elements.
       `
     },
     {
@@ -163,7 +165,7 @@ Initialize, then update on each item — the canonical pattern for "best so far"
             question: "A program counts how many items in a list are negative. The right pattern is ___",
             options: [
               "a conditional counter that adds 1 for each element below 0",
-              "no loop, since the count can be read from any single element",
+              "no loop, since the count can be read from any one element",
               "sorting the list, then reporting the position of its first element",
               "an accumulator that adds every element's value to a running total"
             ],

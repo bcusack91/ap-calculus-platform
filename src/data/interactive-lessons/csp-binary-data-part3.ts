@@ -13,16 +13,16 @@ export const cspBinaryDataPart3Data = {
 
 ## Patterns of Encoding
 
-Computers use **conventions** to encode data types. Understanding the convention is half the work.
+Bits are grouped to represent **abstractions** such as numbers, characters, and colors. A program and its users agree on a **convention**, and understanding the convention is half the work.
 
-| Convention | Pattern |
+| Data | Pattern |
 |-----------|---------|
-| **Unsigned integer** | Plain place-value binary. |
-| **Signed integer** | Reserves one bit for sign (e.g., two's complement). |
-| **Text (ASCII)** | 7-bit code; "A" = 65, "a" = 97. |
-| **Text (Unicode)** | Variable-length; supports every script. |
+| **Whole number** | Place-value binary: 1, 2, 4, 8, 16, … |
+| **Text** | Each character is an agreed-upon bit pattern. |
 | **RGB color** | Three 8-bit channels: 0–255 red, green, blue. |
-| **Sample (audio)** | Integer amplitude, repeated at sample rate. |
+| **Sound sample** | A measured value, repeated at regular intervals. |
+
+The **same sequence of bits** can represent different types of data in different contexts. The meaning comes from the program that reads the bits.
       `
     },
     {
@@ -34,15 +34,15 @@ Computers use **conventions** to encode data types. Understanding the convention
       exercise: {
         questions: [
           {
-            question: "In ASCII the letter \"A\" is 65. The letter \"B\" is ___",
+            question: "A file contains the byte 01000001. Which statement about this byte is accurate?",
             options: [
-              "64",
-              "65",
-              "66",
-              "97"
+              "It always represents the whole number 65.",
+              "Its meaning depends on the program reading it.",
+              "It can only represent a single text character.",
+              "It must be one color channel of an image."
             ],
-            correctAnswer: 2,
-            explanation: "ASCII assigns consecutive code points to letters in order."
+            correctAnswer: 1,
+            explanation: "The same bits can represent a number, a character, or part of a color; the context set by the program decides which."
           },
           {
             question: "A pure red pixel in 24-bit RGB has the byte values ___",
@@ -62,15 +62,15 @@ Computers use **conventions** to encode data types. Understanding the convention
       id: "cspbd3-content",
       type: 'text' as const,
       content: `
-## Worked Example: Decoding Text
+## Worked Example: Same Bits, Different Meaning
 
-Bytes: 72, 73, 33
+The byte 01001000 could be:
 
-- 72 = "H"
-- 73 = "I"
-- 33 = "!"
+- the whole number 72 (64 + 8),
+- one character of a text message, under the code the program uses,
+- the brightness of one color channel in a pixel.
 
-Output: **HI!** Since text is just numbers under an agreed mapping, *any* file is bytes — the difference is only how the program *interprets* them.
+Since text, numbers, and colors are all bit patterns, *any* file is just bits; the difference is only how the program *interprets* them.
 
 ## Worked Example: Building a Color
 
@@ -82,17 +82,19 @@ A pixel is three bytes. To make a strong purple:
 | G | 0 |
 | B | 128 |
 
-In hex (the form you see in CSS): **#800080**. Each pair of hex digits = one byte (0x80 = 128).
+Each channel is one byte, so the pixel takes 3 bytes (24 bits). Since 128 = 10000000 in binary, the pixel's bits are 10000000 00000000 10000000.
 
-## Worked Example: Interpreting Audio
+## Worked Example: Analog to Digital
 
-A WAV-style audio file stores **samples** of air-pressure amplitude:
+**Analog data** change smoothly over time rather than in discrete steps: the pitch and volume of music, the colors of a painting, the position of a sprinter. A computer approximates analog data with **sampling**: it measures the signal at regular intervals (**samples**) and stores each sample in bits. Using digital data to approximate analog data is an example of **abstraction**.
+
+An audio file stores samples of the sound wave:
 
 - **Sample rate**: how many samples per second (e.g., 44,100 Hz for CD quality).
 - **Bit depth**: bits per sample (e.g., 16 bits → 65,536 possible amplitudes).
 - **Channels**: 1 (mono) or 2 (stereo).
 
-A 60-second 16-bit stereo CD-quality clip = 60 × 44,100 × 2 (bytes/sample) × 2 (channels) = **10.6 MB**.
+A 60-second 16-bit stereo CD-quality clip = 60 × 44,100 × 2 (bytes/sample) × 2 (channels) = **10.6 MB**. Taking samples more often gives a closer approximation of the original sound, but it needs more bits.
       `
     },
     {
@@ -101,7 +103,7 @@ A 60-second 16-bit stereo CD-quality clip = 60 × 44,100 × 2 (bytes/sample) × 
       content: `
 **Applied Recall** ✍️
 
-1) In ASCII the letters A and a have code points 65 and _______.
+1) Data whose values change smoothly over time, rather than in discrete steps, are called _______ data.
 
 2) A 24-bit RGB pixel uses _______ bytes.
 
@@ -109,11 +111,11 @@ A 60-second 16-bit stereo CD-quality clip = 60 × 44,100 × 2 (bytes/sample) × 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["97", "3", "samples"],
-        hint1: "Lowercase is 32 above uppercase.",
+        correctAnswers: ["analog", "3", "samples"],
+        hint1: "The opposite of digital.",
         hint2: "One per channel.",
         hint3: "Discrete time slices.",
-        explanation: "ASCII a = 97 (A + 32). 24 bits = 3 bytes. Audio = sequence of amplitude samples."
+        explanation: "Analog data change smoothly. 24 bits = 3 bytes. Audio = sequence of amplitude samples."
       }
     },
     {
@@ -150,10 +152,10 @@ A 60-second 16-bit stereo CD-quality clip = 60 × 44,100 × 2 (bytes/sample) × 
       content: `
 ## AP Exam Strategy: Encoding Conventions
 
-- "How many bytes for a pixel?" → 3 bytes for 24-bit RGB; 4 bytes if there's an alpha channel.
+- "How many bytes for a pixel?" → 3 bytes for 24-bit RGB (one byte per channel).
 - "How many bytes per second of audio?" → sampleRate × bytesPerSample × channels.
-- ASCII letter math: subtract 65 to get the alphabetical position of an uppercase letter.
-- Hex pairs = bytes. #FF0000 = 255-0-0 = bright red.
+- "What does this bit pattern mean?" → it depends on the context; the same bits can be a number, a character, or a color.
+- Sampling analog data is an abstraction: more frequent samples = closer approximation = more bits.
       `
     },
     {

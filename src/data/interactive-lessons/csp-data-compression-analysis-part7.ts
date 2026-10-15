@@ -57,23 +57,24 @@ Final review.
 
 | Term | Definition |
 |------|-----------|
-| Lossless | Decoded data = original. |
-| Lossy | Decoded ≈ original. |
-| Entropy | Information-theoretic minimum size for lossless coding. |
-| RLE | Run-length encoding. |
-| Dictionary coding | LZ-family; replace repeated substrings with references. |
-| Huffman coding | Common symbols → short codes. |
-| DCT | Discrete cosine transform; basis of JPEG / MP3. |
-| Differential encoding | Encode deltas (used in video). |
-| Adaptive bitrate | Multiple quality levels for streaming. |
+| Lossless | Reduces bits while guaranteeing the original can be rebuilt exactly. |
+| Lossy | Reduces bits much more, but only an approximation can be rebuilt. |
+| Redundancy | Repetition in data; more redundancy allows more compression. |
+| Information | Facts and patterns extracted from data. |
+| Metadata | Data about data; changing it does not change the primary data. |
+| Correlation | Two variables change together; this does not prove causation. |
+| Cleaning | Making data uniform without changing their meaning. |
+| Bias | Created by the type or source of data; more data does not remove it. |
+| Filtering / transforming | Keeping only matching elements / changing every element. |
+| Scalability | A system's capacity to grow to meet new demands. |
 
 ## Common Pitfalls
 
 - Saying "compression makes data smaller" without distinguishing lossless vs lossy.
-- Encrypting before compressing.
-- Treating storage as the only constraint (bandwidth often matters more).
-- Using lossy formats for archival or medical records.
-- Ignoring openness / licensing of codecs.
+- Thinking fewer bits always means less information.
+- Treating a correlation as proof of cause.
+- Believing more data from the same source will remove bias.
+- Using lossy formats where exact reconstruction matters (source code, legal or medical records).
       `
     },
     {
@@ -86,15 +87,15 @@ Final review.
 
 2) PNG is _______ compression.
 
-3) Encrypting before compressing usually makes the result _______.
+3) Data about data, such as the date a photo was taken, are called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["lossy", "lossless", "larger"],
+        correctAnswers: ["lossy", "lossless", "metadata"],
         hint1: "Photos.",
         hint2: "Web graphics.",
-        hint3: "No patterns to exploit.",
-        explanation: "JPEG = lossy, PNG = lossless. Encrypted data has no compressible patterns."
+        hint3: "\"Meta\" means about.",
+        explanation: "JPEG = lossy, PNG = lossless. Metadata describe other data."
       }
     },
     {
@@ -106,23 +107,23 @@ Final review.
       exercise: {
         dropdowns: [
           {
-            label: "A 10× size reduction with imperceptible quality loss describes ___",
-            options: ["typical JPEG vs raw RGB", "lossless PNG vs raw RGB", "ZIP on random data", "ZIP on an encrypted file"]
+            label: "Compared with lossless compression, lossy compression can usually reduce file size ___",
+            options: ["more", "less", "by the same amount", "only for text"]
           },
           {
-            label: "Adaptive bitrate streaming relies on ___",
-            options: ["precomputing multiple lossy renditions and serving the best fit per viewer", "sending one lossless master file and letting each device downscale it", "encoding each video once at the highest bitrate the server supports", "re-encoding the video losslessly for each viewer on request"]
+            label: "A survey has some blank answers. Those responses are ___",
+            options: ["incomplete data", "invalid data", "metadata", "biased data"]
           },
           {
-            label: "A truly random file ___",
-            options: ["cannot be losslessly compressed below its entropy bound", "compresses well with run-length encoding", "can be losslessly compressed to about half its size", "compresses to a fixed fraction of its size with ZIP"]
+            label: "Collecting much more data from the same biased source ___",
+            options: ["leaves the bias in place", "removes the bias entirely", "turns correlation into causation", "makes the data uniform"]
           }
         ],
-        correctAnswers: ["typical JPEG vs raw RGB", "precomputing multiple lossy renditions and serving the best fit per viewer", "cannot be losslessly compressed below its entropy bound"],
-        hint1: "Photo savings.",
-        hint2: "Multiple bitrates.",
-        hint3: "Entropy bound.",
-        explanation: "JPEG ≈ 10× over raw. Adaptive streaming = many bitrates. Random data resists lossless compression."
+        correctAnswers: ["more", "incomplete data", "leaves the bias in place"],
+        hint1: "Lossy keeps only an approximation.",
+        hint2: "Something is missing.",
+        hint3: "The source is still the problem.",
+        explanation: "Lossy compression usually shrinks data more than lossless. Blank answers are incomplete data. Bias is not eliminated by collecting more data."
       }
     },
     {
@@ -131,10 +132,11 @@ Final review.
       content: `
 ## Final Exam Tips
 
-- Lossless vs lossy is the #1 distinction.
-- Compress THEN encrypt.
-- Different uses → different formats. Memorize: PNG/ZIP/FLAC = lossless; JPEG/MP3/MP4 = lossy.
-- Adaptive bitrate is the answer to "how does streaming work for everyone".
+- Lossless vs lossy is the #1 compression distinction; pick based on the situation.
+- Correlation ≠ causation, and one data source is often not enough.
+- Metadata help find, organize, and manage data.
+- Data challenges: cleaning, incomplete, invalid, combining sources; bias needs a better source, not more data.
+- Programs extract information by transforming, filtering, combining, and visualizing data.
       `
     },
     {
@@ -146,26 +148,26 @@ Final review.
       exercise: {
         questions: [
           {
-            question: "A user worries that JPEG-saving a photo, opening it, and re-saving it causes \"generation loss\". The most accurate explanation is ___",
+            question: "A user worries that saving a photo as a JPEG, opening it, and saving it again as a JPEG lowers its quality each time. The most accurate response is ___",
             options: [
-              "no — JPEG is a lossless format and round-tripping always preserves the original.",
-              "yes — each lossy re-encode discards more detail, so edit losslessly and export once.",
-              "yes — JPEG actually adds random visual noise on purpose every time the file is saved.",
-              "no — file extensions are immutable so the data inside the JPEG never changes either."
+              "no — JPEG is a lossless format and repeated saving always preserves the original.",
+              "yes — each lossy save discards more detail, so edit a lossless copy and export once.",
+              "yes — JPEG adds random visual noise on purpose every time the file is saved again.",
+              "no — a file's name never changes, so the data inside the JPEG never changes either."
             ],
             correctAnswer: 1,
-            explanation: "Repeated lossy re-encoding accumulates artifacts; edit lossless, export lossy."
+            explanation: "Each lossy compression keeps only an approximation, so repeated saves lose more detail; keeping a lossless original avoids this."
           },
           {
             question: "A team needs to send 10 TB of mostly-text logs from a remote site to a data center. The most reasonable plan is ___",
             options: [
               "ship the logs as-is, wait out the multi-day transfer, and spot-check a few files.",
-              "compress with gzip or zstd, send over a reliable channel, and verify checksums.",
-              "encrypt the logs first and then compress, accepting that the compressed output is barely smaller.",
-              "switch the transport from TCP to UDP without compression to use less server-side memory."
+              "compress losslessly, since repetitive text shrinks a lot and every line can be rebuilt.",
+              "compress with a lossy method, since the smallest possible file always matters most.",
+              "delete half of the log lines at random so the transfer takes only half as long."
             ],
             correctAnswer: 1,
-            explanation: "Compress text first, ship reliably, verify integrity."
+            explanation: "Repetitive text has lots of redundancy, so lossless compression shrinks it a great deal while guaranteeing every log line can be rebuilt."
           },
 
         ]

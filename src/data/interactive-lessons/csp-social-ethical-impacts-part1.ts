@@ -59,15 +59,15 @@ There is no single right answer — this is an ongoing societal debate.
             explanation: 'Free services (social media, email, search) are funded by advertising. Companies collect user data to target ads. Users trade privacy and personal data for free access to the service.'
           },
           {
-            question: 'What is a "chilling effect" in the context of surveillance?',
+            question: 'A search engine records each user\'s search history. Which use of that history does the AP framework describe?',
             options: [
-              'Monitored computers slow down because of the extra logging they are forced to do',
-              'People self-censor lawful speech because they know they are being watched',
-              'Watched users become more careful with their passwords and so are safer online',
-              'Governments pause surveillance programs after the public complains about them'
+              'Making each later search run faster by skipping the routing step',
+              'Suggesting websites and targeting ads based on past searches',
+              'Encrypting each new search so that no one else can ever read it',
+              'Deleting the history automatically once the user closes the browser'
             ],
             correctAnswer: 1,
-            explanation: 'When people know they are being surveilled, they may avoid expressing controversial opinions, organizing protests, or engaging in lawful but sensitive activities. This self-censorship is the chilling effect.'
+            explanation: 'Search engines can record and keep a history of searches and use it to suggest websites or for targeted marketing.'
           }
         ]
       }
@@ -78,22 +78,18 @@ There is no single right answer — this is an ongoing societal debate.
       content: `
 ## Intellectual Property
 
-**Intellectual property (IP)** refers to creations of the mind protected by law.
+Material created on a computer is the **intellectual property** of the creator or an organization. Easy access to and distribution of digital files raise concerns about ownership, value, and use, so measures should be taken to safeguard intellectual property. Creative works such as books, music, code, and art are protected by **copyright**.
 
-| Protection | What It Covers | Duration |
-|-----------|---------------|----------|
-| **Copyright** | Creative works (books, music, code, art) | Life of author + 70 years |
-| **Patent** | Inventions and processes | 20 years |
-| **Trademark** | Brands, logos, slogans | Indefinite (if maintained) |
+### Legal Ways to Use Others' Work
 
-### Software Licensing
-
-| License Type | Permissions |
+| Option | What it allows |
 |-------------|------------|
-| **Proprietary** | Cannot view, modify, or distribute source code |
-| **Open source** | Can view, modify, and distribute source code |
-| **Creative Commons** | Flexible: author chooses what is allowed (share, modify, commercial use) |
-| **Public domain** | No restrictions — free for any use |
+| **Creative Commons** | A public copyright license: the creator gives others the right to share, use, and build on the work |
+| **Open source** | Programs made freely available that may be redistributed and modified |
+| **Open access** | Online research output free of restrictions on access and of many restrictions on use |
+| **Proprietary** (for contrast) | All rights reserved; the code cannot be viewed, modified, or shared |
+
+Material created by someone else should always be **cited**. Using it without permission and presenting it as your own is **plagiarism** and may have legal consequences.
 
 ## Responsibility in Computing
 
@@ -141,23 +137,23 @@ There is no single right answer — this is an ongoing societal debate.
       exercise: {
         dropdowns: [
           {
-            label: 'A unique invention for a new type of battery is protected by a ___',
-            options: ['Patent', 'Copyright', 'Trademark', 'Creative Commons']
+            label: 'Online research output that anyone can read free of access restrictions is called ___',
+            options: ['Open access', 'Plagiarism', 'Proprietary', 'Crowdfunding']
           },
           {
-            label: 'A logo and brand name (like the Nike swoosh) is protected by a ___',
-            options: ['Trademark', 'Patent', 'Copyright', 'Public domain']
+            label: 'Copying a classmate\'s program and submitting it as your own is ___',
+            options: ['Plagiarism', 'Open source', 'Open access', 'Citizen science']
           },
           {
             label: 'An author releases a book that anyone can share but not sell commercially. This uses ___',
-            options: ['Creative Commons license', 'Public domain dedication', 'All-rights-reserved copyright', 'Utility patent']
+            options: ['Creative Commons license', 'Proprietary license', 'All-rights-reserved copyright', 'Open access journal']
           }
         ],
-        correctAnswers: ['Patent', 'Trademark', 'Creative Commons license'],
-        hint1: 'Inventions get patents.',
-        hint2: 'Brand identity protection.',
+        correctAnswers: ['Open access', 'Plagiarism', 'Creative Commons license'],
+        hint1: 'Open to anyone who wants to read it.',
+        hint2: 'Presenting someone else\'s work as your own.',
         hint3: 'Flexible licensing with specific conditions.',
-        explanation: 'Inventions = patent. Brands = trademark. Selective sharing = Creative Commons.'
+        explanation: 'Freely readable research = open access. Passing off others\' work = plagiarism. Selective sharing = Creative Commons.'
       }
     },
     {
@@ -167,11 +163,11 @@ There is no single right answer — this is an ongoing societal debate.
 ## AP Exam Strategy: Social & Ethical Impacts
 
 - Know the **privacy vs convenience** trade-off — free services collect data for targeted ads
-- Be able to argue BOTH sides of surveillance vs privacy debates
-- **Copyright** (creative works), **Patent** (inventions), **Trademark** (brands) — know the differences
-- Know software license types: proprietary, open source, Creative Commons, public domain
-- Ethical questions often have no single "right" answer — show you understand BOTH sides
-- The AP exam tests whether you can identify stakeholders and impacts, not whether you pick a "correct" side
+- Recognize the arguments on BOTH sides of surveillance vs privacy debates
+- Material created on a computer is the creator's intellectual property; cite others' work, and know that passing it off as your own is plagiarism
+- Know the legal ways to use others' work: Creative Commons, open source, open access
+- Ethical questions often have no single "right" answer — the best choice usually recognizes BOTH sides
+- The AP exam tests whether you can identify who is affected and how, not whether you pick a "correct" side
       `
     },
     {

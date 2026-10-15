@@ -74,10 +74,32 @@ Final sum = 10.
 
 ## Worked: Conditions
 
-    IF (score ≥ 90) { grade ← "A" }
-    ELSE IF (score ≥ 80) { grade ← "B" }
-    ELSE IF (score ≥ 70) { grade ← "C" }
-    ELSE { grade ← "F" }
+The reference sheet has only IF and IF / ELSE, so ranked grade bands nest each IF inside the previous ELSE:
+
+\`\`\`
+IF (score ≥ 90)
+{
+    grade ← "A"
+}
+ELSE
+{
+    IF (score ≥ 80)
+    {
+        grade ← "B"
+    }
+    ELSE
+    {
+        IF (score ≥ 70)
+        {
+            grade ← "C"
+        }
+        ELSE
+        {
+            grade ← "F"
+        }
+    }
+}
+\`\`\`
 
 For score = 85 → grade = "B".
 
@@ -86,7 +108,7 @@ For score = 85 → grade = "B".
     i ← 1
     REPEAT UNTIL (i > LENGTH(list))
     {
-      PROCESS(list[i])
+      DISPLAY(list[i])
       i ← i + 1
     }
 

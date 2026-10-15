@@ -69,11 +69,11 @@ Final cheat sheet of the binary and data-representation facts most tested on the
 - "Binary uses 0 and 1 because computers think in numbers." (No — because hardware reliably represents two voltage levels.)
 - "Lossy compression destroys the file." (No — it produces a smaller approximation; original can be saved separately.)
 - "More bits is always better." (No — wasted bits = wasted storage / bandwidth. Use the minimum sufficient.)
-- "Encryption shrinks data." (No — it transforms data; size stays roughly the same.)
+- "Overflow can't happen in AP pseudocode, so it doesn't matter." (No — the exam asks about overflow in languages that store integers in a fixed number of bits.)
 
 ## Common Calculations
 
-- Min bits for N values: ⌈$\\log_{2}$ N⌉.
+- Min bits for N values: the smallest n with $2^{n}$ ≥ N.
 - Image bytes: W × H × bytesPerPixel.
 - Audio bytes/sec: sampleRate × bytesPerSample × channels.
 - Total storage of M items × k bytes each: M·k.
@@ -117,15 +117,15 @@ Final cheat sheet of the binary and data-representation facts most tested on the
             options: ["lossy", "lossless", "vector", "uncompressed"]
           },
           {
-            label: "Encrypting a file changes its ___",
-            options: ["byte values, not size (roughly)", "size (roughly doubling it)", "file extension (not its bytes)", "metadata only, not its contents"]
+            label: "Storing 0.1 + 0.2 as 0.30000000000000004 is an example of ___",
+            options: ["round-off error", "overflow error", "lossy compression", "data cleaning"]
           }
         ],
-        correctAnswers: ["lossless", "lossy", "byte values, not size (roughly)"],
+        correctAnswers: ["lossless", "lossy", "round-off error"],
         hint1: "PNG round-trips perfectly.",
         hint2: "JPEG sacrifices fidelity for size.",
-        hint3: "Same byte count, scrambled byte values.",
-        explanation: "PNG = lossless, JPEG = lossy. Encryption preserves roughly the same byte count."
+        hint3: "Real numbers are stored as approximations.",
+        explanation: "PNG = lossless, JPEG = lossy. A fixed number of bits can only approximate many real numbers, which causes round-off error."
       }
     },
     {
@@ -134,9 +134,9 @@ Final cheat sheet of the binary and data-representation facts most tested on the
       content: `
 ## Final Exam Tips
 
-- "Smallest number of bits to represent N values" → ⌈$\\log_{2}$ N⌉. Always.
+- "Smallest number of bits to represent N values" → the smallest n with $2^{n}$ ≥ N. Always.
 - Distinguish lossless (perfectly reversible) from lossy (approximate).
-- Encryption ≠ compression: encryption preserves size, compression shrinks it.
+- Overflow (integer too big for its bits) ≠ round-off (real number stored approximately).
 - Different file types are just different conventions for interpreting the SAME underlying bits.
 - For storage estimates, multiply: items × bytes-per-item.
       `
@@ -152,10 +152,10 @@ Final cheat sheet of the binary and data-representation facts most tested on the
           {
             question: "A government agency must archive scanned legal documents and ensure they can be read decades from now. The most appropriate format choice is ___",
             options: [
-              "A widely supported lossless format such as PDF/A, or TIFF with lossless compression.",
-              "A high-compression lossy JPEG format optimized for the smallest file size that the human eye still tolerates.",
-              "A proprietary single-vendor format whose specification is not publicly documented or supported by other tools.",
-              "A plain ASCII text representation of each document, with no embedded image data preserved from the original scan."
+              "A widely supported lossless format, so every detail of each scan can be reconstructed exactly.",
+              "A high-compression lossy format tuned for the smallest file size that the human eye still tolerates.",
+              "A single-vendor format whose details are not published or supported by any other software tools.",
+              "A plain text version of each document typed by hand, with none of the scanned image data kept."
             ],
             correctAnswer: 0,
             explanation: "Lossless + open/standardized formats best support long-term archival fidelity."

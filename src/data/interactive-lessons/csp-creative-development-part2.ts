@@ -63,24 +63,25 @@ You revisit any phase at any time — that's what makes it iterative.
       id: "cspcd2-content",
       type: 'text' as const,
       content: `
-## Why Iteration Beats "Big Design Up Front"
+## Why Iterate?
 
-A waterfall approach (design everything, then build, then test) fails when:
+Planning everything up front and testing only at the end runs into trouble when:
 
 - Requirements are unclear or change.
 - Users discover what they want only after seeing something.
-- Technical risks aren't obvious until prototypes hit reality.
+- Problems aren't obvious until a prototype is tested.
 
-Iterative development reduces risk by **shortening feedback loops**.
+An **iterative** process reduces this risk by shortening feedback loops: refine and revise based on feedback, testing, or reflection, revisiting earlier phases when needed. An **incremental** process breaks the problem into smaller pieces and makes sure each piece works before adding it to the whole.
 
 ## Documentation Is Part Of Development
 
 | Documentation | Purpose |
 |---------------|---------|
-| **Comments** in code | Explain WHY (not just what). |
-| **README** | Describe purpose, setup, usage. |
-| **Change log** | Record what changed, when, why. |
-| **User guide** | Help end users accomplish tasks. |
+| **Comments** | Written into the program for people to read; they do not affect how the program runs. |
+| **Program documentation** | Describes what a code segment, event, procedure, or program does and how it was developed. |
+| **Acknowledgments** | Credit code written by someone else, naming its origin or original author. |
+
+Document **throughout** development, not just at the end. Some programming environments do not support comments, so other forms of documentation are needed.
 
 ## User-Centered Design
 
@@ -117,23 +118,23 @@ Programs are for **users**, not coders. Identify the user, their goal, and test 
       exercise: {
         dropdowns: [
           {
-            label: "A README primarily exists to ___",
-            options: ["help others (or future you) understand and use the program", "list each variable's type (and scope) for the interpreter", "replace code comments, which are then unnecessary", "store the test cases the program runs before each release"]
+            label: "Program documentation primarily exists to ___",
+            options: ["help people (including future you) understand and maintain the program", "list the type of each variable so the computer can check it", "replace code comments, which are then unnecessary", "change how the program behaves when it runs"]
           },
           {
             label: "Testing with real users primarily helps ___",
-            options: ["reveal usability issues the developer never noticed", "prove the program is free of logic errors before it ships", "measure the program's running time on the largest possible inputs", "replace the developer's own unit tests for each procedure"]
+            options: ["reveal usability issues the developer never noticed", "prove the program is free of logic errors before it ships", "measure the program's running time on the largest possible inputs", "replace testing with defined inputs and expected outputs"]
           },
           {
             label: "Iterative development reduces risk by ___",
             options: ["shortening feedback loops between assumption and reality", "locking the full specification before coding", "testing only once the complete program has been finished", "shipping every planned feature together in one release"]
           }
         ],
-        correctAnswers: ["help others (or future you) understand and use the program", "reveal usability issues the developer never noticed", "shortening feedback loops between assumption and reality"],
-        hint1: "Onboarding doc.",
+        correctAnswers: ["help people (including future you) understand and maintain the program", "reveal usability issues the developer never noticed", "shortening feedback loops between assumption and reality"],
+        hint1: "It is written for people, not the computer.",
         hint2: "Users surface what creators miss.",
         hint3: "Frequent feedback = lower risk.",
-        explanation: "READMEs help collaborators. User testing exposes blind spots. Short feedback loops lower risk."
+        explanation: "Documentation helps people understand and maintain programs. User testing exposes blind spots. Short feedback loops lower risk."
       }
     },
     {

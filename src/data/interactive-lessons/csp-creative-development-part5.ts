@@ -7,19 +7,34 @@ export const cspCreativeDevelopmentPart5Data = {
       content: `
 # 🎨 Creative Development
 
-**Part 5 of 7 — Change Over Time**
+**Part 5 of 7 — Documentation and Acknowledging Code**
 
 ---
 
-## How Development Practices Have Evolved
+## Program Documentation
 
-| Era | Dominant practice |
-|-----|------------------|
-| 1970s | Waterfall: design, build, ship. |
-| 1990s | Object-oriented + early agile. |
-| 2000s | Agile / Scrum: short iterations, frequent releases. |
-| 2010s | Continuous integration / continuous deployment (CI/CD). |
-| 2020s | AI-assisted coding; LLM prototyping. |
+**Program documentation** is a written description of what a code segment, event, procedure, or program does and how it was developed. **Comments** are documentation written into the program itself: people read them, and they do not affect how the program runs.
+
+\`\`\`
+// Returns how many values in nums are greater than cutoff.
+// Written with my partner, Sam R.
+PROCEDURE countAbove(nums, cutoff)
+{
+    count ← 0
+    FOR EACH n IN nums
+    {
+        IF (n > cutoff)
+        {
+            count ← count + 1
+        }
+    }
+    RETURN(count)
+}
+\`\`\`
+
+- Document **throughout** development, not only at the end.
+- Documentation helps when developing and maintaining correct programs, whether you work alone or with a team.
+- Not every programming environment supports comments, so documentation sometimes goes in a separate document.
       `
     },
     {
@@ -31,26 +46,26 @@ export const cspCreativeDevelopmentPart5Data = {
       exercise: {
         questions: [
           {
-            question: "CI/CD primarily aims to ___",
+            question: "Which statement about comments in a program is accurate?",
             options: [
-              "archive old commits so the repository stays small.",
-              "merge and deploy small changes often, verified by automated tests.",
-              "remove human code review from the process entirely.",
-              "bundle months of changes into one large release."
+              "The computer runs them to check the code for errors.",
+              "They make the program run faster by explaining each step.",
+              "People read them, and they do not change how the program runs.",
+              "They are needed only after the program has been finished."
             ],
-            correctAnswer: 1,
-            explanation: "CI/CD shortens the loop from change to production with automation."
+            correctAnswer: 2,
+            explanation: "Comments are a form of documentation written for people. The computer ignores them, so they do not affect how the program runs."
           },
           {
-            question: "AI coding assistants change the developer's role mostly by ___",
+            question: "When should a programmer write program documentation?",
             options: [
-              "automating routine code so humans focus more on design and review.",
-              "writing complete, bug-free programs so human review is no longer needed.",
-              "removing the need to test code, as generated code is already verified.",
-              "replacing human developers entirely within the next year or two."
+              "Only after the final version has been fully tested",
+              "Only when another programmer asks for an explanation",
+              "Throughout development, as the program changes",
+              "Only in programming languages that support comments"
             ],
-            correctAnswer: 0,
-            explanation: "AI accelerates routine tasks; humans still design, judge, and review."
+            correctAnswer: 2,
+            explanation: "Programs should be documented throughout development. Waiting until the end loses details, and environments without comments can use separate documents."
           }
         ]
       }
@@ -59,22 +74,20 @@ export const cspCreativeDevelopmentPart5Data = {
       id: "cspcd5-content",
       type: 'text' as const,
       content: `
-## Modern Tooling
+## Acknowledging Code From Other Sources
 
-| Tool | Job |
-|------|-----|
-| **Version control** (Git) | Track changes; collaborate. |
-| **CI / CD** | Auto-test and auto-deploy. |
-| **Issue tracker** | Coordinate work and bugs. |
-| **Code review** | Inspect each other's work. |
-| **AI assistants** | Suggest code, explain code, draft tests. |
+Acknowledge any code that was developed collaboratively or by another source. The acknowledgment can go in the program documentation and should include the code's origin or the original author's name. The Create performance task guidelines suggest comments like these:
 
-## Generative AI Cautions
+| Source of the code | Example acknowledgment |
+|--------------------|------------------------|
+| Teacher's starter code | This code was provided as starter code by my teacher. |
+| An API or open-source code | This code was made freely available by [source of code]. |
+| A generative AI tool | This code was generated using [AI tool name]. |
+| A collaborator | This procedure was written with [partner's name]. |
 
-- AI-generated code may be subtly wrong.
-- Pasting proprietary code into public AI tools may leak it.
-- Generated code may resemble licensed training data.
-- Skill atrophy if used as a crutch instead of a tutor.
+## Code Written With Generative AI
+
+Generative AI tools can produce incomplete code, code with errors, inefficient code, code that introduces bias, or code too complicated to explain. You are responsible for reviewing and understanding any code co-written with an AI tool, testing that it works, and being able to explain it in detail.
       `
     },
     {
@@ -83,19 +96,19 @@ export const cspCreativeDevelopmentPart5Data = {
       content: `
 **Applied Recall** ✍️
 
-1) A short development cycle of plan-build-test-review-release is called a _______.
+1) Notes written into a program for people to read, which do not affect how it runs, are called _______.
 
-2) A practice of automatically running tests on every code change is part of CI / _______ delivery / deployment.
+2) An acknowledgment of borrowed code should include its origin or the original author's _______.
 
-3) A tool that tracks every change and supports many contributors is called _______ control.
+3) Program documentation should be written _______ development, not only at the end.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["sprint", "continuous", "version"],
-        hint1: "Agile term.",
-        hint2: "CI / CD.",
-        hint3: "Git is one.",
-        explanation: "Sprints are agile units. CI/CD = continuous. Git = version control."
+        correctAnswers: ["comments", "name", "throughout"],
+        hint1: "They often start with // or #.",
+        hint2: "Who wrote it?",
+        hint3: "From start to finish.",
+        explanation: "Comments are in-program documentation. Acknowledgments name the source or author. Documentation should happen throughout development."
       }
     },
     {
@@ -107,35 +120,35 @@ export const cspCreativeDevelopmentPart5Data = {
       exercise: {
         dropdowns: [
           {
-            label: "AI-generated code should be ___ before being trusted",
-            options: ["reviewed and tested", "run once on sample input", "checked only for syntax errors", "copied into the program as-is"]
+            label: "Code produced with help from a generative AI tool should be ___",
+            options: ["acknowledged, reviewed, and understood", "used as is, with no comment", "described as entirely your own", "deleted before the program is shared"]
           },
           {
-            label: "A pull request enables ___",
-            options: ["code review by other team members before changes are merged", "downloading the latest shared code from a server", "automatic deployment of every commit straight to users", "a teammate to overwrite the main branch without a merge"]
+            label: "In a programming environment that does not support comments, documentation can ___",
+            options: ["be written in a separate document", "be left out entirely", "be stored in variable names only", "be given only out loud"]
           },
           {
-            label: "CI / CD's main benefit is ___",
-            options: ["rapid, low-risk deployment of small changes", "removing the need for manual or automated tests", "bundling many features into fewer, larger releases", "replacing code review with an automated style checker"]
+            label: "A procedure that a teammate wrote and that you use in your program should be ___",
+            options: ["acknowledged in the documentation", "renamed so it looks like yours", "copied with no note of its source", "removed before you share the program"]
           }
         ],
-        correctAnswers: ["reviewed and tested", "code review by other team members before changes are merged", "rapid, low-risk deployment of small changes"],
-        hint1: "Trust but verify.",
-        hint2: "Code review is the point.",
-        hint3: "Small + frequent = lower risk.",
-        explanation: "AI output needs review. PRs enable review. CI/CD trades big releases for small frequent ones."
+        correctAnswers: ["acknowledged, reviewed, and understood", "be written in a separate document", "acknowledged in the documentation"],
+        hint1: "You are responsible for code you use.",
+        hint2: "Documentation does not have to live inside the code.",
+        hint3: "Credit collaborators.",
+        explanation: "AI-assisted code must be acknowledged and understood. Documentation can live outside the program. Code from collaborators or other sources is acknowledged in the documentation."
       }
     },
     {
       id: "cspcd5-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: Modern Development
+## AP Exam Strategy: Documentation
 
-- "Frequent small releases with automated tests" = CI/CD.
-- "Track every change, multiple contributors" = version control.
-- AI assistants: helpful but require review and care about privacy/licensing.
-- Agile = short iterative cycles, not "no planning".
+- Comments are for people; they never change what a program does.
+- "Why document?" → it helps you and others develop and maintain correct programs, alone or in a team.
+- "Code from somewhere else?" → acknowledge it, naming its origin or author.
+- "Code from an AI tool?" → acknowledge it, test it, and make sure you can explain it.
       `
     },
     {
@@ -147,26 +160,26 @@ export const cspCreativeDevelopmentPart5Data = {
       exercise: {
         questions: [
           {
-            question: "A 100-developer team needs to coordinate changes to one codebase without overwriting each other's work. The most appropriate tool category is ___",
+            question: "A student uses a procedure from an open-source library in a program. Which is the most appropriate way to handle it?",
             options: [
-              "emailing patched files around as attachments after each person edits",
-              "a version-control system such as Git, with branches and merge reviews",
-              "a shared network drive where everyone edits the same files in place",
-              "a shared spreadsheet that records who is allowed to edit each file that day"
+              "Rename the procedure so it matches the student's own style",
+              "Leave it unmarked, since open-source code is free to use",
+              "Add a comment that credits where the code came from",
+              "Rewrite each line so that no acknowledgment is needed"
             ],
-            correctAnswer: 1,
-            explanation: "Git enables parallel work with explicit merge points."
+            correctAnswer: 2,
+            explanation: "Code from another source is acknowledged in the documentation, naming its origin or author. Being free to use does not remove the need to credit it."
           },
           {
-            question: "A developer pastes the company's internal authentication code into a public AI assistant for help. The most relevant CSP concern is ___",
+            question: "A generative AI tool writes a procedure for a student's program. It seems to work on two test inputs. What should the student do next?",
             options: [
-              "the AI tool may rewrite the code in a less efficient style that runs slower.",
-              "sensitive code may be stored or exposed by the outside service.",
-              "the AI tool may flag the code as unreadable and refuse to answer the question.",
-              "public AI tools always strip comments and formatting before processing code."
+              "Submit it, since AI tools produce correct and efficient code.",
+              "Delete the two tests, since the tool has already checked it.",
+              "Try it on boundary values and learn how it works before relying on it.",
+              "Rename its variables so the code looks student-written."
             ],
-            correctAnswer: 1,
-            explanation: "Pasting sensitive code into public AI tools risks confidentiality breaches."
+            correctAnswer: 2,
+            explanation: "AI tools can produce code with errors or hidden problems. The student is responsible for testing the code, understanding it, and acknowledging the tool."
           }
         ]
       }

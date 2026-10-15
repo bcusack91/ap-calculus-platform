@@ -11,15 +11,16 @@ export const cspDataCompressionAnalysisPart3Data = {
 
 ---
 
-## Common Compression Patterns
+## The Lossless Pattern: Replace Repeats With Short Codes
 
-| Pattern | Where used |
-|---------|-----------|
-| **Run-length encoding** | Simple lossless; runs of repeats. |
-| **Dictionary coding** (LZ77, LZW) | ZIP, GIF, PNG — replace repeated substrings with references. |
-| **Huffman coding** | Common values get short codes; rare values get long codes. |
-| **Frequency-domain transforms** (DCT) | JPEG, MP3 — keep big frequency components, discard small. |
-| **Differential encoding** | Video — encode changes between frames. |
+Most lossless compression works by finding **redundancy** (repeated patterns) and replacing each repeat with something shorter. A **key** records what each short code stands for, so the original can be rebuilt exactly.
+
+| Original | Key | Compressed |
+|----------|-----|-----------|
+| AAAAABBB | run-length: count + letter | 5A3B |
+| the cat sat on the mat | # = "at" | the c# s# on the m# |
+
+The compressed version uses fewer characters (fewer bits), but **no information is lost**: anyone with the key can decode it back to the original.
       `
     },
     {
@@ -31,26 +32,26 @@ export const cspDataCompressionAnalysisPart3Data = {
       exercise: {
         questions: [
           {
-            question: "Why does Huffman coding give shorter codes to common values?",
+            question: "A text was compressed with the key # = \"ing\". What does \"s#er br#s\" decode to?",
             options: [
-              "Short codes are faster for the decoder to look up, so top symbols get them.",
-              "Total bits shrink most when the most frequent values get the shortest codes.",
-              "Rare values are unimportant and can therefore be dropped without affecting the result.",
-              "It encrypts the data so that common symbols become unreadable to outside observers."
+              "sings brings",
+              "singer brings",
+              "singer brigs",
+              "sing brings"
             ],
             correctAnswer: 1,
-            explanation: "Information-theoretic optimum: short codes for common, long for rare."
+            explanation: "Replace each # with \"ing\": s + ing + er = singer, br + ing + s = brings."
           },
           {
-            question: "Why does video compression rely on differential encoding between frames?",
+            question: "Why can replacing repeated patterns with short codes make a file smaller without losing information?",
             options: [
-              "Adjacent video frames are bit-for-bit identical and only the first one needs to be stored.",
-              "Adjacent frames tend to be similar, so storing only the changes takes far fewer bits.",
-              "It encrypts the video stream so that intermediate frames cannot be intercepted.",
-              "It is simply easier to write a decoder for differential encoding than for any other scheme."
+              "A key records what each code stands for, so decoding rebuilds the original.",
+              "The decoder guesses any missing letters from the words around them in the text.",
+              "The least common letters are removed, because readers can usually infer them.",
+              "Each character's code is rounded to a nearby value that needs fewer bits."
             ],
-            correctAnswer: 1,
-            explanation: "Inter-frame redundancy is the key win."
+            correctAnswer: 0,
+            explanation: "The key preserves exactly what each code means, so decoding rebuilds the original; the saving comes from the redundancy in the data."
           }
         ]
       }
@@ -59,42 +60,26 @@ export const cspDataCompressionAnalysisPart3Data = {
       id: "cspdca3-content",
       type: 'text' as const,
       content: `
-## Dictionary Coding: A Mini-Walkthrough
+## Worked Example: Counting the Savings
 
-Imagine encoding "the cat sat on the mat":
+Original: **the cat sat on the mat** (22 characters, counting spaces).
 
-- Build a dictionary as you go.
-- Replace repeated phrases with references.
+Using the key # = "at", the compressed text is **the c# s# on the m#** (19 characters). Each of the three "at" pairs became one character, saving 3 characters.
 
-After processing once, "the " might be code 0; "at" might be code 1. The compressed stream uses these short codes for repeated phrases.
+Add a second code, @ = "the ": the text becomes **@c# s# on @m#** (13 characters). More redundancy removed means more savings, but data with few repeats (like a random string) leaves almost nothing to replace.
 
-This is the core idea behind ZIP, GZIP, PNG, and most modern lossless coders.
+## Choosing Lossless or Lossy
 
-## Huffman Coding In One Picture
+The AP exam asks you to compare compression options and pick the best one **for a particular situation**:
 
-If a text uses A 50%, B 25%, C 12.5%, D 12.5%:
+| Situation | Better choice | Why |
+|-----------|---------------|-----|
+| A program's source code, a contract, a bank record | Lossless | The original must be rebuilt exactly. |
+| A medical scan used for diagnosis | Lossless | Quality is maximally important. |
+| A photo for a social media post | Lossy | Size matters more than tiny detail. |
+| A video streamed to a phone on a slow connection | Lossy | Minimizing transmission time matters most. |
 
-| Symbol | Code |
-|--------|------|
-| A | 0 |
-| B | 10 |
-| C | 110 |
-| D | 111 |
-
-Average bits per symbol: 0.5(1) + 0.25(2) + 0.125(3) + 0.125(3) = 1.75. Far less than 2 bits per symbol used by naive encoding.
-
-## Lossy Frequency-Domain Coding
-
-JPEG and MP3 use a math transform (DCT) that turns blocks of pixels (or audio samples) into **frequency components**. Big components matter to perception; small ones can be quantized away. Decompression rebuilds an approximation.
-
-## Compression Vs. Encryption
-
-| | Compression | Encryption |
-|---|------------|-----------|
-| Goal | Smaller | Confidential |
-| Reverses with | Decompressor | Key |
-| Output size | Smaller (or equal) | Roughly the same |
-| Order | Compress THEN encrypt | (Don't reverse — encrypted data won't compress) |
+> 🔑 Lossy algorithms can usually shrink data **more** than lossless ones. Choose lossless when quality or exact reconstruction is maximally important; choose lossy when minimizing size or transmission time is maximally important.
       `
     },
     {
@@ -103,19 +88,19 @@ JPEG and MP3 use a math transform (DCT) that turns blocks of pixels (or audio sa
       content: `
 **Applied Recall** ✍️
 
-1) Replacing repeated substrings with references to a built-up dictionary is called _______ coding.
+1) When the original data must be rebuilt exactly, choose _______ compression.
 
-2) Giving short bit-codes to common symbols and long codes to rare ones is _______ coding.
+2) When minimizing file size or transmission time matters most, choose _______ compression.
 
-3) Encoding only the difference between adjacent frames in a video is _______ encoding.
+3) Using the key # = "at", the compressed word "c#" decodes to _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["dictionary", "Huffman", "differential"],
-        hint1: "ZIP-style.",
-        hint2: "Optimal symbol coding.",
-        hint3: "Frame deltas.",
-        explanation: "Dictionary coding (LZ-family), Huffman coding, differential encoding."
+        correctAnswers: ["lossless", "lossy", "cat"],
+        hint1: "Nothing is lost.",
+        hint2: "Some detail is given up.",
+        hint3: "Replace # with \"at\".",
+        explanation: "Exact reconstruction → lossless. Smallest size or fastest transfer → lossy. c + at = cat."
       }
     },
     {
@@ -127,23 +112,23 @@ JPEG and MP3 use a math transform (DCT) that turns blocks of pixels (or audio sa
       exercise: {
         dropdowns: [
           {
-            label: "PNG primarily relies on ___",
-            options: ["lossless dictionary coding (deflate)", "lossy frequency coding (DCT)", "lossy color reduction (quantization)", "lossless run-length coding (RLE only)"]
+            label: "A program's source code emailed to a teammate should be compressed with ___",
+            options: ["lossless compression", "lossy compression", "lossy, at low quality", "lossy, at high quality"]
           },
           {
-            label: "JPEG primarily relies on ___",
-            options: ["lossy frequency-domain (DCT) coding", "lossless dictionary (deflate) coding", "lossless run-length (RLE) coding", "lossy color-palette (8-bit) reduction"]
+            label: "Compared with data that has few repeats, data with many repeated patterns usually compresses ___",
+            options: ["more", "less", "the same amount", "not at all"]
           },
           {
-            label: "For best results, you should ___",
-            options: ["compress, then encrypt", "encrypt, then compress", "apply only one of the two", "do both at once in one step"]
+            label: "Decompressing a photo that was saved with lossy compression gives ___",
+            options: ["an approximation of the original", "the exact original, bit for bit", "a file larger than the original", "only the photo's metadata"]
           }
         ],
-        correctAnswers: ["lossless dictionary coding (deflate)", "lossy frequency-domain (DCT) coding", "compress, then encrypt"],
-        hint1: "PNG = lossless.",
-        hint2: "JPEG = lossy + DCT.",
-        hint3: "Compress first.",
-        explanation: "PNG uses deflate (lossless). JPEG uses DCT (lossy). Compress before encrypting."
+        correctAnswers: ["lossless compression", "more", "an approximation of the original"],
+        hint1: "One changed character can break a program.",
+        hint2: "More redundancy, more to replace.",
+        hint3: "Lossy discards detail for good.",
+        explanation: "Code must be rebuilt exactly, so lossless. More redundancy allows more size reduction. Lossy compression can only rebuild an approximation."
       }
     },
     {
@@ -152,10 +137,10 @@ JPEG and MP3 use a math transform (DCT) that turns blocks of pixels (or audio sa
       content: `
 ## AP Exam Strategy: Compression Patterns
 
-- "PNG / ZIP / GIF / FLAC" → lossless.
-- "JPEG / MP3 / MP4 / streaming video" → lossy.
-- Differential encoding is the secret of video compression.
-- Don't encrypt before compressing — it ruins the compression.
+- Lossless = find repeats, replace with shorter codes, keep a key. Nothing is lost.
+- Savings depend on the data's redundancy and on the algorithm applied.
+- Fewer bits does not necessarily mean less information.
+- "Which algorithm is best?" always depends on the context: exact reconstruction → lossless; smallest size / fastest transfer → lossy.
       `
     },
     {
@@ -167,26 +152,26 @@ JPEG and MP3 use a math transform (DCT) that turns blocks of pixels (or audio sa
       exercise: {
         questions: [
           {
-            question: "A team encrypts files THEN tries to ZIP them. The compressed size is barely smaller than the encrypted size. The most accurate explanation is ___",
+            question: "Algorithm X shrinks a video by 40% and allows exact reconstruction. Algorithm Y shrinks it by 90% but allows only an approximation. A news site wants viewers on slow connections to start watching quickly. Which choice is better, and why?",
             options: [
-              "ZIP is broken on encrypted input and the team should switch compressors.",
-              "encryption produces nearly random output that has no patterns for ZIP to exploit.",
-              "the underlying files are simply too large for the ZIP algorithm to handle well.",
-              "the underlying files are simply too small for any compression to be worthwhile."
+              "X, because exact reconstruction always matters more than size.",
+              "Y, because minimizing transmission time matters most here.",
+              "X, because lossless methods always produce the smaller files.",
+              "Y, because lossy methods let viewers rebuild the exact original."
             ],
             correctAnswer: 1,
-            explanation: "Compress-before-encrypt is the standard order."
+            explanation: "When transmission time is maximally important, the lossy algorithm's much larger size reduction is worth the small loss of quality."
           },
           {
-            question: "A streaming service serves the same movie to viewers worldwide. The largest single saving in storage / bandwidth comes from ___",
+            question: "A student compresses a 1,000-character essay with a lossless algorithm and gets a 600-character file. Which statement must be true?",
             options: [
-              "serving the raw uncompressed video file to every viewer.",
-              "lossy video codecs such as H.264 that encode only changes between frames",
-              "serving a lossless ZIP of the raw video to every viewer.",
-              "no compression at all; relying on faster viewer CPUs."
+              "The compressed file holds less information than the essay.",
+              "Decompressing it will reproduce the original essay exactly.",
+              "Compressing it a second time will shrink it to 360 characters.",
+              "Some rarely used words were removed to save space in the file."
             ],
             correctAnswer: 1,
-            explanation: "Modern lossy video codecs deliver dramatic savings vs. raw or lossless."
+            explanation: "Lossless compression guarantees complete reconstruction; fewer bits does not mean less information."
           }
         ]
       }

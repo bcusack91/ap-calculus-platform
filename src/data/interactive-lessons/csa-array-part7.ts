@@ -25,7 +25,7 @@ This part ties the topic together: creating arrays and the references they live 
 | In-place updates (Part 3) | later passes see earlier changes | tracing every pass from the original array |
 | Enhanced for (Part 4) | the variable is a copy; object elements can still be mutated | \`v = 0\` to change an int element |
 | Data (Part 5) | check how data was collected and clean invalid values | averaging a "missing" code as real data |
-| Files (Part 5) | \`throws IOException\`; tokens vs lines; parse String pieces | \`nextLine\` right after \`nextInt\` |
+| Files (Part 5) | \`throws IOException\`; tokens vs lines; parse String pieces | adding \`parts[1] + 1\` before parsing, which joins Strings |
       `
     },
     {

@@ -28,8 +28,7 @@ export const cspDataPart1Data = {
 ### Sources of Data
 - **Surveys and forms**: Directly asking people
 - **Sensors**: Temperature, GPS, accelerometer
-- **Web scraping**: Extracting data from websites
-- **APIs**: Accessing data programmatically from services
+- **Websites and apps**: Search history, pages viewed, location
 - **Transaction logs**: Purchases, login records
 
 ### Metadata

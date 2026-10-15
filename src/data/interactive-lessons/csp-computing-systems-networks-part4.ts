@@ -7,7 +7,7 @@ export const cspComputingSystemsNetworksPart4Data = {
       content: `
 # 🖥️ Computing Systems & Networks
 
-**Part 4 of 7 — Connections & Interactions**
+**Part 4 of 7 — Connections & Interactions: Fault Tolerance and Access**
 
 ---
 
@@ -15,10 +15,10 @@ export const cspComputingSystemsNetworksPart4Data = {
 
 | Connection | Why |
 |-----------|-----|
-| Systems ↔ Algorithms | OS schedulers, routing all use algorithms. |
-| Networks ↔ Internet | The Internet is the largest network. |
-| Systems ↔ Security | Each layer is a potential attack surface. |
-| Networks ↔ Impact | Connectivity (or lack of) shapes equality of access. |
+| Networks ↔ Reliability | Redundant paths keep the Internet running when parts fail. |
+| Networks ↔ Data | Large data sets may need many computers working in parallel. |
+| Networks ↔ Security | Data sent over public networks can be intercepted. |
+| Networks ↔ Impact | Who can connect, and who cannot, shapes access and opportunity. |
       `
     },
     {
@@ -30,15 +30,15 @@ export const cspComputingSystemsNetworksPart4Data = {
       exercise: {
         questions: [
           {
-            question: "An OS scheduler that decides which process runs next is fundamentally implementing an ___",
+            question: "Which statement best describes a fault-tolerant system?",
             options: [
-              "algorithm that picks among ready tasks according to a ranking policy",
-              "data structure that stores each task's memory until it ends",
-              "network protocol the kernel uses to message each task",
-              "hardware circuit that maps each task to a fixed core"
+              "It is built so that none of its components ever fail.",
+              "It keeps working even when some of its components fail.",
+              "It shuts down safely as soon as any one component fails.",
+              "It has exactly one path between any two of its devices."
             ],
-            correctAnswer: 0,
-            explanation: "Schedulers are algorithms."
+            correctAnswer: 1,
+            explanation: "A fault-tolerant system can support failures and still continue to function."
           },
           {
             question: "A region with no broadband access faces ___",
@@ -49,7 +49,7 @@ export const cspComputingSystemsNetworksPart4Data = {
               "faster internet once it arrives, since newer networks skip old equipment."
             ],
             correctAnswer: 1,
-            explanation: "Digital-divide framing."
+            explanation: "Differing access to computing devices and the Internet based on geography is part of the digital divide."
           }
         ]
       }
@@ -58,28 +58,25 @@ export const cspComputingSystemsNetworksPart4Data = {
       id: "cspcsn4-content",
       type: 'text' as const,
       content: `
-## Each System Layer Adds Trust Decisions
+## Fault Tolerance and Redundancy
 
-| Layer | Trust questions |
-|-------|----------------|
-| Hardware | Is firmware genuine? |
-| OS | Are processes isolated? |
-| App | Does the user trust this code? |
-| Network | Is this connection encrypted? |
-| Cloud | Do we trust the provider? |
+- **Redundancy** is the inclusion of extra components that can be used to mitigate failure if other components fail.
+- One way to build network redundancy is to have **more than one path** between any two connected devices.
+- If a device or connection on the Internet fails, later data are sent along a **different route**, if one exists.
+- A system that can support failures and still function is **fault-tolerant**. This matters because parts of complex systems fail at unexpected times, often in groups.
+- Redundancy usually **requires additional resources** (more devices, more connections, more cost), but it provides the benefit of fault tolerance.
+- Redundant routing options also help the Internet **scale** to more devices and more people.
 
-A vulnerability at any layer can compromise the whole stack.
+## The Digital Divide
 
-## Mobile And IoT Are Networks Too
+The **digital divide** is differing access to computing devices and the Internet based on **socioeconomic, geographic, or demographic** characteristics.
 
-| Device | Network role |
-|--------|-------------|
-| Smartphone | Multi-radio (cellular + Wi-Fi + Bluetooth). |
-| Smart speaker | Always-listening client of cloud APIs. |
-| Sensor | Often constrained — low power, tiny memory. |
-| Smart car | Edge-to-cloud telemetry. |
-
-These add scale and security challenges (lots of devices, many never patched).
+| Fact | Example |
+|------|---------|
+| Access varies within and between countries | Rural areas often have slower or no broadband. |
+| It affects groups and individuals | A whole town, or one family that cannot afford a device. |
+| It raises issues of equity, access, and influence | Students without home Internet struggle with online homework. |
+| It is affected by individuals, organizations, and governments | A library lends hotspots; a government funds rural broadband. |
       `
     },
     {
@@ -88,19 +85,19 @@ These add scale and security challenges (lots of devices, many never patched).
       content: `
 **Applied Recall** ✍️
 
-1) A vulnerability at any layer of a system can compromise the _______ stack.
+1) Including extra components so a system can keep working when others fail is called _______.
 
-2) Lack of broadband access in some regions is part of the digital _______.
+2) Differing access to computing devices and the Internet is called the digital _______.
 
-3) Tiny low-power sensors are typical of the _______ category of devices.
+3) A system that can support failures and still function is called fault-_______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["whole", "divide", "IoT"],
-        hint1: "Layers stack.",
-        hint2: "Equity issue.",
-        hint3: "Internet of Things.",
-        explanation: "Layered trust; digital divide; IoT."
+        correctAnswers: ["redundancy", "divide", "tolerant"],
+        hint1: "Extra, backup components.",
+        hint2: "An equity gap.",
+        hint3: "It tolerates faults.",
+        explanation: "Redundancy provides backups. Unequal access is the digital divide. Systems that survive failures are fault-tolerant."
       }
     },
     {
@@ -112,34 +109,35 @@ These add scale and security challenges (lots of devices, many never patched).
       exercise: {
         dropdowns: [
           {
-            label: "A trusted hardware module that protects keys even from the OS is part of ___",
-            options: ["layered system trust", "application-level security", "open-source transparency", "network firewall rules"]
+            label: "Adding redundant connections to a network usually ___",
+            options: ["costs more but improves fault tolerance", "saves money and improves fault tolerance", "costs more and lowers fault tolerance", "has no effect on fault tolerance"]
           },
           {
-            label: "IoT devices that ship without security updates create ___",
-            options: ["large attack surfaces over time", "stronger security as they age", "fewer targets for attackers", "no new risk once installed"]
+            label: "If one connection on the Internet fails, later data are usually ___",
+            options: ["sent along a different route", "lost for good", "held until it is repaired", "returned to the sender"]
           },
           {
             label: "A school in an area with poor connectivity faces ___",
             options: ["educational disadvantages tied to the digital divide", "no effect, since most lessons can be printed out", "advantages, since students face fewer distractions online", "lower costs that fully offset the slower access"]
           }
         ],
-        correctAnswers: ["layered system trust", "large attack surfaces over time", "educational disadvantages tied to the digital divide"],
-        hint1: "Hardware roots of trust.",
-        hint2: "Unpatched IoT.",
+        correctAnswers: ["costs more but improves fault tolerance", "sent along a different route", "educational disadvantages tied to the digital divide"],
+        hint1: "Extra parts are not free.",
+        hint2: "Routing is dynamic.",
         hint3: "Equity gap.",
-        explanation: "Trust per layer, unpatched IoT risk, digital divide impact."
+        explanation: "Redundancy costs resources but adds fault tolerance. Internet data are rerouted around failures when possible. Poor connectivity is part of the digital divide."
       }
     },
     {
       id: "cspcsn4-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: Cross-Topic Systems
+## AP Exam Strategy: Fault Tolerance and Access
 
-- "Why does my browser work on different network cards?" → OS abstraction.
-- "Lack of broadband impact?" → digital divide.
-- "Why is this IoT device dangerous?" → never patched, large attack surface.
+- Fault-tolerant = keeps working despite failures. Redundancy = extra components that make that possible.
+- More than one path between devices → no single connection failure stops communication.
+- Redundancy costs resources; the benefit is reliability and scalability.
+- Digital divide: access differs by socioeconomic, geographic, and demographic factors.
       `
     },
     {
@@ -151,15 +149,15 @@ These add scale and security challenges (lots of devices, many never patched).
       exercise: {
         questions: [
           {
-            question: "A smart-home device hasn't received updates in 5 years. The most accurate concern is ___",
+            question: "A company links its two offices with one cable. When the cable is cut, the offices cannot communicate at all. Which change best improves fault tolerance?",
             options: [
-              "no concern — unpatched IoT devices on a home network are essentially harmless.",
-              "known vulnerabilities pile up, and the device may be hijacked into a botnet.",
-              "the device's encryption keys expire after five years, so it stops working.",
-              "the device will slow down, since older firmware runs less efficiently."
+              "Increase the bandwidth of the single existing cable.",
+              "Add a second, separate connection between the offices.",
+              "Send smaller packets over the single existing cable.",
+              "Let only one office send data at any given moment."
             ],
             correctAnswer: 1,
-            explanation: "Unpatched IoT = compounding risk."
+            explanation: "A second path is redundancy: if one connection fails, data can still travel along the other."
           },
           {
             question: "A community center in a low-connectivity area provides public Wi-Fi for students. The most CSP-aligned framing is ___",
@@ -170,7 +168,7 @@ These add scale and security challenges (lots of devices, many never patched).
               "a security risk, since public Wi-Fi networks are always unsafe for every student."
             ],
             correctAnswer: 1,
-            explanation: "Public Wi-Fi as a digital-divide intervention."
+            explanation: "The actions of organizations can narrow the digital divide by giving people access they would not otherwise have."
           }
         ]
       }

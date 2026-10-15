@@ -34,24 +34,24 @@ Once you can translate algorithms into programs, you'll notice the same shapes r
           {
             question: "A procedure should return 0 immediately if its input list is empty. Which structure is best?",
             options: [
-              "IF (LENGTH(list) = 0) { RETURN 0 } as the first statement of the procedure",
-              "IF (LENGTH(list) = 1) { RETURN 0 } as the first statement of the procedure",
+              "IF (LENGTH(list) = 0) { RETURN(0) } as the first statement of the procedure",
+              "IF (LENGTH(list) = 1) { RETURN(0) } as the first statement of the procedure",
               "No check at all, letting the main loop fail on the empty input",
-              "IF (LENGTH(list) > 0) { RETURN 0 } as the first statement of the procedure"
+              "IF (LENGTH(list) > 0) { RETURN(0) } as the first statement of the procedure"
             ],
             correctAnswer: 0,
-            explanation: "A guard clause at the top, IF (LENGTH(list) = 0) { RETURN 0 }, rejects the empty list before any other work, so the main code can assume valid data. Testing = 1 or > 0 would return 0 for the wrong lists."
+            explanation: "A guard clause at the top, IF (LENGTH(list) = 0) { RETURN(0) }, rejects the empty list before any other work, so the main code can assume valid data. Testing = 1 or > 0 would return 0 for the wrong lists."
           },
           {
-            question: "A loop should set a flag found ← TRUE the first time list[i] = target. Which approach guarantees correctness AND avoids unnecessary work?",
+            question: "A loop should set a flag found ← true the first time list[i] = target. Which approach guarantees correctness AND avoids unnecessary work?",
             options: [
-              "Set found ← TRUE inside the IF and continue iterating through the rest of the list anyway.",
-              "Set found ← TRUE inside the IF and RETURN right away once the first match is found.",
-              "Initialize found ← TRUE before the loop even starts and let the loop body verify each element.",
+              "Set found ← true inside the IF and continue iterating through the rest of the list anyway.",
+              "Set found ← true inside the IF and RETURN right away once the first match is found.",
+              "Initialize found ← true before the loop even starts and let the loop body verify each element.",
               "Set found ← list[i] when found, so the variable holds the matching value rather than a Boolean."
             ],
             correctAnswer: 1,
-            explanation: "Returning on first match is both correct and efficient (best case O(1))."
+            explanation: "Returning on the first match is correct, and it skips the rest of the list, so the loop does fewer steps when a match appears early."
           }
         ]
       }
@@ -64,23 +64,23 @@ Once you can translate algorithms into programs, you'll notice the same shapes r
 
     PROCEDURE allPositive(nums) {
       FOR EACH n IN nums {
-        IF (n ≤ 0) { RETURN FALSE }
+        IF (n ≤ 0) { RETURN(false) }
       }
-      RETURN TRUE
+      RETURN(true)
     }
 
-**Trick:** instead of a Boolean variable, the procedure RETURNs early on the first counter-example. RETURN TRUE at the end runs only when no counter-example was found. This is the cleanest "for-all" pattern.
+**Trick:** instead of a Boolean variable, the procedure RETURNs early on the first counter-example. RETURN(true) at the end runs only when no counter-example was found. This is the cleanest "for-all" pattern.
 
 ## Worked Pattern: Helper Procedure
 
 A complicated task becomes readable when split:
 
     PROCEDURE isWeekend(day) {
-      RETURN day = "Sat" OR day = "Sun"
+      RETURN((day = "Sat") OR (day = "Sun"))
     }
     PROCEDURE shouldOpenStore(day, isHoliday) {
-      IF (isHoliday) { RETURN FALSE }
-      RETURN NOT isWeekend(day)
+      IF (isHoliday) { RETURN(false) }
+      RETURN(NOT isWeekend(day))
     }
 
 The shouldOpenStore reader doesn't have to think about what "weekend" means — it's been **abstracted** behind a name.
@@ -92,7 +92,7 @@ The shouldOpenStore reader doesn't have to think about what "weekend" means — 
       FOR EACH n IN nums {
         IF (n > 0) { total ← total + n }
       }
-      RETURN total
+      RETURN(total)
     }
 
 The IF inside the loop is the **filter**; total is the **accumulator**. Together they implement "sum of positive elements".
@@ -108,7 +108,7 @@ The IF inside the loop is the **filter**; total is the **accumulator**. Together
 
 2) A small named procedure that does one sub-task and is called by other procedures is called a _______.
 
-3) A "for-all" check is implemented by RETURNing FALSE on the first _______-example.
+3) A "for-all" check is implemented by RETURNing false on the first _______-example.
       `,
       exercise: {
         boxes: 3,
@@ -128,7 +128,7 @@ The IF inside the loop is the **filter**; total is the **accumulator**. Together
       exercise: {
         dropdowns: [
           {
-            label: "A \"there exists\" check is implemented by RETURNing TRUE on the first ___",
+            label: "A \"there exists\" check is implemented by RETURNing true on the first ___",
             options: ["match", "non-match", "counter-example", "comparison"]
           },
           {
@@ -153,8 +153,8 @@ The IF inside the loop is the **filter**; total is the **accumulator**. Together
       content: `
 ## AP Exam Strategy: Recognizing Patterns
 
-- "Returns TRUE if every X is Y" → for-all → early RETURN FALSE on counter-example.
-- "Returns TRUE if some X is Y" → exists → early RETURN TRUE on first match.
+- "Returns true if every X is Y" → for-all → early RETURN(false) on a counter-example.
+- "Returns true if some X is Y" → exists → early RETURN(true) on the first match.
 - "Returns the count / sum / product / list of Y" → accumulator with appropriate identity.
 - Spotting the pattern in the first 5 seconds saves all the time you'd waste line-tracing a 20-line procedure.
       `
@@ -168,15 +168,15 @@ The IF inside the loop is the **filter**; total is the **accumulator**. Together
       exercise: {
         questions: [
           {
-            question: "A procedure should return TRUE if any element of list is negative. The student writes:\n\nresult ← FALSE\nFOR EACH x IN list { IF (x < 0) { result ← TRUE } ELSE { result ← FALSE } }\nRETURN result\n\nWhat is the bug?",
+            question: "A procedure should return true if any element of list is negative. The student writes:\n\nresult ← false\nFOR EACH x IN list { IF (x < 0) { result ← true } ELSE { result ← false } }\nRETURN(result)\n\nWhat is the bug?",
             options: [
               "Nothing is wrong; result correctly reports any negative element.",
               "The ELSE resets result, so only the last element decides the answer.",
-              "result should start as TRUE, since the loop only sets it to FALSE.",
+              "result should start as true, since the loop only sets it to false.",
               "FOR EACH gives elements, not indexes, so x < 0 never runs."
             ],
             correctAnswer: 1,
-            explanation: "The ELSE clobbers prior matches. Either remove the ELSE, or RETURN TRUE on first match."
+            explanation: "The ELSE clobbers prior matches. Either remove the ELSE, or RETURN(true) on the first match."
           },
           {
             question: "A team has six places in their codebase that compute \"is this a weekend day?\". Each implements the check inline. They later need to add Friday to the weekend (cultural calendar). Which design choice would have prevented the multi-place fix?",

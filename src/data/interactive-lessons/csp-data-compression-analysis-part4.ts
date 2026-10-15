@@ -7,18 +7,20 @@ export const cspDataCompressionAnalysisPart4Data = {
       content: `
 # 🗜️ Data Compression & Analysis
 
-**Part 4 of 7 — Connections & Interactions**
+**Part 4 of 7 — Extracting Information and Metadata**
 
 ---
 
-## Compression Connects To Other Topics
+## From Data to Information
 
-| Connection | Why |
-|-----------|-----|
-| Compression ↔ Internet | Smaller files = faster downloads. |
-| Compression ↔ Algorithms | Each codec is an algorithm. |
-| Compression ↔ Data | Compression decisions affect what analysis is possible. |
-| Compression ↔ Impact | Compression enables global media — and surveillance archives. |
+**Information** is the collection of facts and patterns extracted from data. Data give us chances to identify trends, make connections, and address problems.
+
+Two cautions the AP exam returns to again and again:
+
+| Idea | What it means |
+|------|---------------|
+| **Correlation is not causation** | Processed data may show that two variables change together. That does not prove one causes the other; more research is needed to understand the relationship. |
+| **One source is often not enough** | A single data source may not contain everything needed to draw a conclusion. Combining data from several sources is often necessary. |
       `
     },
     {
@@ -30,26 +32,26 @@ export const cspDataCompressionAnalysisPart4Data = {
       exercise: {
         questions: [
           {
-            question: "Why does loading an image-heavy webpage feel faster on modern sites than 10 years ago?",
+            question: "A data set shows that students who eat breakfast tend to have higher test scores. Which conclusion is best supported by the data alone?",
             options: [
-              "Modern sites send uncompressed images that browsers can skip decoding.",
-              "Newer lossy image formats deliver smaller files at the same visual quality.",
-              "Modern image files are stored as plain-text RGB tables that browsers render directly.",
-              "Browsers stopped using TCP for images and now fetch them over a faster ad-hoc protocol."
+              "Eating breakfast causes students to earn higher test scores.",
+              "The two are correlated, but a cause has not been shown.",
+              "Earning higher test scores causes students to eat breakfast.",
+              "The data must contain errors, since the two are not related."
             ],
             correctAnswer: 1,
-            explanation: "Better codecs + CDN delivery = faster perceived loads."
+            explanation: "The data show a correlation. A correlation does not establish which variable, if either, causes the other."
           },
           {
-            question: "A program needs to compute the average over a 10 GB JSON log. The most appropriate algorithmic approach is ___",
+            question: "A city wants to know whether a new bus route reduced traffic downtown. The bus ridership data alone cannot answer this. What would help most?",
             options: [
-              "load the entire 10 GB file into memory and then iterate over it twice in place.",
-              "stream through the file once, keeping only a running sum and count.",
-              "sort the file in place first and then compute the average from the sorted output.",
-              "compress the file first so the whole log fits into memory for one pass."
+              "Collecting the same ridership data again over a longer time.",
+              "Combining ridership data with traffic counts from that period.",
+              "Deleting days with low ridership so the traffic trend is clearer.",
+              "Replacing the ridership data with the data file's metadata."
             ],
             correctAnswer: 1,
-            explanation: "A single streaming pass needs only a running sum and a count, so memory use stays small no matter how large the file is."
+            explanation: "A single source rarely holds everything needed; combining ridership with traffic data lets the city look for the relationship it cares about."
           }
         ]
       }
@@ -58,36 +60,27 @@ export const cspDataCompressionAnalysisPart4Data = {
       id: "cspdca4-content",
       type: 'text' as const,
       content: `
-## Big Files Demand Streaming Algorithms
+## Metadata: Data About Data
 
-When a file doesn't fit in memory, you need algorithms that process data in **a single pass** with constant or sub-linear memory:
+**Metadata** are data that describe other data. If the data is an image, the metadata might include the date it was created, the location, or the file size.
 
-| Task | Streaming approach |
-|------|-------------------|
-| Sum / mean | Running total; divide at the end. |
-| Min / max | Compare each value to running extreme. |
-| Count distinct (approximate) | HyperLogLog. |
-| Top-K | Heap of size K. |
+| Data | Metadata |
+|------|----------|
+| A photo | Date taken, location, file size |
+| A song | Artist, album, length |
+| A document | Author, date last edited, number of pages |
 
-This connects compression-era data sizes to algorithm design.
+What metadata do:
 
-## Compression And The Internet
+- **Find, organize, and manage information.** Searching a photo library by date or sorting songs by artist uses metadata.
+- **Add useful context**, which increases the effective use of the data.
+- **Give data structure**, so large collections can be organized.
 
-| Layer | Compression role |
-|-------|-----------------|
-| Image | JPEG / WebP / AVIF. |
-| Video | H.264 / H.265 / AV1. |
-| Web responses | gzip / Brotli on text (HTML, JS, CSS, JSON). |
-| Streaming | Adaptive bitrate (multiple quality levels). |
+> 🔑 Changing or deleting metadata does **not** change the primary data. Editing a photo's date tag leaves every pixel exactly as it was.
 
-A modern webpage may be 10× larger uncompressed.
+## Worked Example
 
-## Compression-Aware Privacy
-
-Two warnings:
-
-1. Compression timing/size attacks (CRIME / BREACH) leaked info from HTTPS responses; mitigation involves disabling certain compressions over TLS.
-2. "Anonymized" datasets that are then compressed don't become more anonymous — compression doesn't help privacy.
+A teacher has 2,000 class photos. She adds a tag for the event (field trip, science fair, graduation) to each photo's metadata. Now a search for "science fair" pulls up the right photos in seconds, and none of the images themselves were changed.
       `
     },
     {
@@ -96,19 +89,19 @@ Two warnings:
       content: `
 **Applied Recall** ✍️
 
-1) An algorithm that processes data in a single pass without loading it all is called a _______ algorithm.
+1) Data that describe other data, such as a photo's file size, are called _______.
 
-2) Modern web responses commonly compress text with _______ or Brotli.
+2) When two variables change together, the relationship is called a _______.
 
-3) Modern still-image formats designed to beat JPEG include WebP and _______.
+3) The facts and patterns extracted from data are called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["streaming", "gzip", "AVIF"],
-        hint1: "One-pass.",
-        hint2: "Common HTTP compression.",
-        hint3: "AV1 image format.",
-        explanation: "Streaming algorithms handle huge data. gzip / Brotli compress web text. WebP / AVIF outperform JPEG."
+        correctAnswers: ["metadata", "correlation", "information"],
+        hint1: "\"Meta\" means about.",
+        hint2: "Not necessarily causation.",
+        hint3: "What data become after processing.",
+        explanation: "Metadata describe data. Variables that change together are correlated. Information is what we extract from data."
       }
     },
     {
@@ -120,34 +113,35 @@ Two warnings:
       exercise: {
         dropdowns: [
           {
-            label: "A 10 GB log is best summarized with ___",
-            options: ["a streaming algorithm with O(1) extra memory", "loading the entire file into memory first", "sorting the full file before any processing", "an exponential-time search over all lines"]
+            label: "Changing the date stored in a photo's metadata ___ the photo's pixels",
+            options: ["does not change", "also changes", "permanently erases", "compresses"]
           },
           {
-            label: "Web servers commonly compress responses with ___",
-            options: ["gzip / Brotli", "TLS / HTTPS", "JPEG / PNG", "H.264 / AV1 video"]
+            label: "Sorting a music library by artist name relies on ___",
+            options: ["the songs' metadata", "the songs' audio samples", "lossy compression", "a higher sample rate"]
           },
           {
-            label: "Compression and encryption ___",
-            options: ["serve different goals; both can be applied (compress THEN encrypt)", "serve the same goal of hiding data, so applying both is redundant", "serve different goals; both can be applied (encrypt THEN compress)", "both reduce file size, so combining them doubles the savings"]
+            label: "Finding that two variables are correlated shows that ___",
+            options: ["they change together, but a cause is not shown", "the first variable causes changes in the second", "the data set must contain a mistake somewhere", "both variables are measured in the same units"]
           }
         ],
-        correctAnswers: ["a streaming algorithm with O(1) extra memory", "gzip / Brotli", "serve different goals; both can be applied (compress THEN encrypt)"],
-        hint1: "Memory budget matters.",
-        hint2: "HTTP-layer compression.",
-        hint3: "Different concerns.",
-        explanation: "Streaming = constant memory. gzip / Brotli on web. Compress then encrypt."
+        correctAnswers: ["does not change", "the songs' metadata", "they change together, but a cause is not shown"],
+        hint1: "Metadata and primary data are separate.",
+        hint2: "Artist name describes the song.",
+        hint3: "Correlation is not causation.",
+        explanation: "Edits to metadata leave the primary data alone. Artist names are metadata used to organize data. Correlation shows variables change together, not why."
       }
     },
     {
       id: "cspdca4-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: Cross-Topic Compression
+## AP Exam Strategy: Information and Metadata
 
-- "File too big for memory" → streaming algorithm.
-- "Why is web fast now?" → better codecs + CDNs.
-- "Order of compress / encrypt" → compress, then encrypt.
+- "Does this prove X causes Y?" → No; a correlation needs more research to explain.
+- "Why combine data sets?" → a single source often lacks what is needed for a conclusion.
+- Metadata = data about data. They help find, organize, and manage data.
+- Changing metadata does not change the primary data.
       `
     },
     {
@@ -159,26 +153,26 @@ Two warnings:
       exercise: {
         questions: [
           {
-            question: "A streaming service uses adaptive bitrate so users with slow connections get a lower-quality version of the same video. The technique that makes this practical is ___",
+            question: "A school's data show that absences rise in weeks with more rainy days. The principal concludes that rain causes absences. Which is the best critique?",
             options: [
-              "lossless compression of every video, served at the same quality to every viewer.",
-              "precomputing several lossy renditions at different quality levels and serving the best fit.",
-              "serving the original raw uncompressed video stream to every viewer regardless of bandwidth.",
-              "switching the network layer from IPv4 to IPv6 so packets can self-prioritize the right quality."
+              "The data prove that rain causes absences, so no critique is needed.",
+              "A correlation alone does not show that rain is the actual cause.",
+              "Attendance records are metadata, so they cannot show any kind of trend.",
+              "Rainfall is analog data, so it cannot be compared with attendance."
             ],
             correctAnswer: 1,
-            explanation: "Adaptive bitrate streaming serves multiple lossy renditions."
+            explanation: "The data show the two change together; more research (for example, about illness season or transportation) is needed before claiming a cause."
           },
           {
-            question: "A team plans to encrypt every log line BEFORE shipping it to a server, then ZIP the resulting archive nightly. The compressed nightly archive is barely smaller than the raw daily lines. The most direct fix is ___",
+            question: "A photographer adds a keyword such as \"beach\" or \"wedding\" to each photo's metadata. What is the most likely benefit?",
             options: [
-              "ignore it, since encrypted archives are always about the same size as the raw logs.",
-              "reverse the order so logs are zipped first and encrypted afterward.",
-              "switch the log shipping protocol from TCP to UDP for faster nightly transfers.",
-              "switch the archival format from ZIP to a lossy video codec like H.265 instead."
+              "Each photo's image quality improves because the tag adds detail.",
+              "Photos become easier to find and organize by searching the tags.",
+              "Each photo file shrinks because the tag replaces some pixel data.",
+              "The original image can no longer be edited by anyone else."
             ],
             correctAnswer: 1,
-            explanation: "Compress before encrypt; encrypted output has no patterns."
+            explanation: "Metadata are used for finding, organizing, and managing information; adding them does not change the image itself."
           }
         ]
       }

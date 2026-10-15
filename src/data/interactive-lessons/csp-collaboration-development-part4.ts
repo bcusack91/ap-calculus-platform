@@ -7,18 +7,20 @@ export const cspCollaborationDevelopmentPart4Data = {
       content: `
 # 🤝 Collaboration in Development
 
-**Part 4 of 7 — Connections & Interactions**
+**Part 4 of 7 — Gathering Input From Users**
 
 ---
 
-## Collaboration Connects Across The Course
+## Users Are Collaborators Too
 
-| Cross-link | Why |
-|-----------|-----|
-| Collab ↔ Internet | Tools enable global teams. |
-| Collab ↔ Algorithms | Diff / merge algorithms power version control. |
-| Collab ↔ Security | Credential management and access control. |
-| Collab ↔ Impact | Diverse teams build more inclusive products. |
+Consultation and communication with users are an important part of developing computing innovations. **Investigation** identifies a program's constraints and the concerns and interests of the people who will use it.
+
+| Investigation method | Example |
+|----------------------|---------|
+| **Surveys** | A form asks 200 students which features they want. |
+| **User testing** | Students try a prototype while the team notes problems. |
+| **Interviews** | The team talks one-on-one with the school librarian. |
+| **Direct observation** | The team watches how students check out books today. |
       `
     },
     {
@@ -30,26 +32,26 @@ export const cspCollaborationDevelopmentPart4Data = {
       exercise: {
         questions: [
           {
-            question: "Two developers in different countries co-edit the same file. The technology that prevents their changes from clobbering each other is ___",
+            question: "A team watches students use the school's current library checkout system, without asking them any questions. Which investigation method is this?",
             options: [
-              "faster local hardware so each save completes before the other starts.",
-              "a version-control system such as Git that merges edits.",
-              "a real-time chat app that notifies each developer when the file is touched.",
-              "a network protocol upgrade such as IPv6 that orders concurrent writes."
+              "A survey",
+              "An interview",
+              "Direct observation",
+              "Pair programming"
             ],
-            correctAnswer: 1,
-            explanation: "Version control merges changes; without it concurrent edits would overwrite."
+            correctAnswer: 2,
+            explanation: "Watching how people actually behave, without questioning them, is direct observation. Surveys and interviews ask questions."
           },
           {
-            question: "When new contributors join a project, the most efficient way for them to get up to speed is usually ___",
+            question: "Why should a team gather information from potential users before designing a program?",
             options: [
-              "start coding immediately and figure things out by trial and error.",
-              "read the docs and recent PRs, then make a small reviewed change.",
-              "rewrite the whole codebase in their own style to learn how it works.",
-              "avoid asking the rest of the team any questions during onboarding."
+              "It guarantees that the finished program will contain no errors.",
+              "It shows the team the program's purpose from many points of view.",
+              "It removes the need to test the program once it has been built.",
+              "It lets the team skip writing a specification for the program."
             ],
             correctAnswer: 1,
-            explanation: "Docs + PR history + small reviewed contribution."
+            explanation: "Information from potential users helps a team understand the program's purpose from diverse perspectives and build a program that meets their needs."
           }
         ]
       }
@@ -58,23 +60,22 @@ export const cspCollaborationDevelopmentPart4Data = {
       id: "cspcoll4-content",
       type: 'text' as const,
       content: `
-## Tools That Make Collaboration Possible
+## From User Input to Requirements
 
-| Tool | Purpose |
-|------|---------|
-| Git / GitHub | Version control + PRs + issue tracking. |
-| Chat (Slack, Discord) | Async + real-time team communication. |
-| Video conferencing | Sync conversation, demos, pair programming. |
-| Docs (wikis, Notion) | Long-lived shared knowledge. |
-| Issue trackers | Plan and triage work. |
+What a team learns from users becomes the program's **requirements**: how the program must function, including the user interactions it must provide. The requirements are collected in a **specification**. Requirements also tell testers which inputs to try.
 
-## Permissions And Access
+## Choosing a Method
 
-Collaboration introduces access decisions:
+| If you need… | Try… |
+|--------------|------|
+| Answers from many people quickly | a survey |
+| Detailed reasons from a few people | interviews |
+| To see what people really do, not what they say | direct observation |
+| To find problems in a design | user testing with a prototype |
 
-- Who can read / write / merge / deploy / delete?
+## Watch Who You Ask
 
-Principle: grant the **least privilege** needed. Review access regularly. Revoke when teammates leave.
+If only one group of users is consulted, the program may not meet other users' needs, and it can carry that group's bias. Seek out a diverse set of users, especially the ones least like the development team.
       `
     },
     {
@@ -83,19 +84,19 @@ Principle: grant the **least privilege** needed. Review access regularly. Revoke
       content: `
 **Applied Recall** ✍️
 
-1) A version-control system that powers most modern open-source collaboration is _______.
+1) Watching people use a system without interrupting them is called direct _______.
 
-2) The principle of granting only the access a teammate actually needs is called _______ privilege.
+2) The document that defines a program's requirements is its _______.
 
-3) A real-time document editor that merges concurrent edits enables _______ editing.
+3) Having people try a prototype while the team notes problems is called user _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["Git", "least", "concurrent"],
-        hint1: "Three letters.",
-        hint2: "Minimum access.",
-        hint3: "Many at once.",
-        explanation: "Git = dominant VCS. Least privilege = security best practice. Concurrent editing supports many simultaneously."
+        correctAnswers: ["observation", "specification", "testing"],
+        hint1: "You observe.",
+        hint2: "It specifies the requirements.",
+        hint3: "Users test it.",
+        explanation: "Direct observation, specifications, and user testing are all part of investigating and designing a program."
       }
     },
     {
@@ -107,34 +108,35 @@ Principle: grant the **least privilege** needed. Review access regularly. Revoke
       exercise: {
         dropdowns: [
           {
-            label: "When a teammate leaves the team, their access should be ___",
-            options: ["revoked immediately", "kept active until the project ends", "transferred to their replacement", "reduced to read-only access"]
+            label: "To learn which of 10 features 500 students want most, the best method is ___",
+            options: ["a survey", "one interview", "watching one student", "pair programming"]
           },
           {
-            label: "A version-control merge conflict happens when ___",
-            options: ["two people edited the same lines in different ways", "two people committed to the same repository on the same day", "a teammate pushes code that fails to compile", "one person edits a file another person has open"]
+            label: "Users cannot find the Save button in a prototype. This problem was most likely found by ___",
+            options: ["user testing", "a syntax check", "a survey of programmers", "adding comments"]
           },
           {
-            label: "A team that loses internet access ___",
-            options: ["can still work locally with Git, then sync later", "must stop committing until the connection returns", "loses every commit not yet pushed to the shared server", "must email changed files to each other to keep working"]
+            label: "Asking only seniors about an app meant for the whole school risks ___",
+            options: ["missing other students' needs", "a syntax error", "an overflow error", "faster development"]
           }
         ],
-        correctAnswers: ["revoked immediately", "two people edited the same lines in different ways", "can still work locally with Git, then sync later"],
-        hint1: "Stale access = risk.",
-        hint2: "Same lines, different edits.",
-        hint3: "Git is distributed.",
-        explanation: "Revoke departing teammates' access. Conflicts = same lines edited. Git allows offline work."
+        correctAnswers: ["a survey", "user testing", "missing other students' needs"],
+        hint1: "Many people, quick answers.",
+        hint2: "Real users trying a prototype.",
+        hint3: "Who was left out?",
+        explanation: "Surveys reach many people quickly. User testing reveals usability problems. Consulting one group can miss everyone else's needs."
       }
     },
     {
       id: "cspcoll4-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: Collaboration Tools
+## AP Exam Strategy: Investigating Users
 
-- "Two people edit the same file" → version control with merging.
-- "Teammate leaves" → revoke access, rotate credentials.
-- "Distributed team" → async written communication + version control + occasional sync calls.
+- Know the four investigation methods: surveys, user testing, interviews, and direct observation.
+- Match the method to the need: many people → survey; deep reasons → interviews; real behavior → observation; design problems → user testing.
+- User input becomes requirements; requirements form the specification and guide testing.
+- Consulting a narrow group can build bias into a program.
       `
     },
     {
@@ -146,26 +148,26 @@ Principle: grant the **least privilege** needed. Review access regularly. Revoke
       exercise: {
         questions: [
           {
-            question: "A team uses a shared admin account where everyone knows the password. The biggest CSP-aligned concerns are ___",
+            question: "A team building a homework-tracker app for a whole school interviews only students in one advanced class. Which concern is most directly raised?",
             options: [
-              "shared admin accounts are convenient and have no real downside.",
-              "no audit trail of who did what, and no way to revoke one person's access.",
-              "the password is too long for everyone on the team to remember.",
-              "shared accounts force the team to use slower transport-layer protocols."
+              "The interviews will cause syntax errors in the app's code.",
+              "Interviews are not a valid way to investigate requirements.",
+              "Fewer test cases will be needed than for other apps.",
+              "The app may not fit the needs of others it is meant for."
             ],
-            correctAnswer: 1,
-            explanation: "Shared accounts break least privilege and audit trails."
+            correctAnswer: 3,
+            explanation: "Consulting a narrow group can leave out other users' needs and build that group's bias into the program."
           },
           {
-            question: "A junior developer makes their first PR with a small bug. A healthy team response is ___",
+            question: "During user testing, several people type their birth date in a format the program rejects. What is the most appropriate next step?",
             options: [
-              "publicly call out the developer in chat so others avoid the same mistake.",
-              "leave constructive review comments and approve once the fix is in.",
-              "silently revert the commits without explaining what was wrong with them.",
-              "block the developer from submitting any further pull requests this quarter."
+              "Tell the users to read the documentation more carefully",
+              "Remove the birth-date field without asking anyone",
+              "Revise the program to accept those entries, then test it again",
+              "Release the program now and plan to fix it next year"
             ],
-            correctAnswer: 1,
-            explanation: "Constructive code review centers the work."
+            correctAnswer: 2,
+            explanation: "User testing feeds the iterative process: revise the program based on what users actually do, then test it again."
           }
         ]
       }

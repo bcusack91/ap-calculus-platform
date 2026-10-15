@@ -7,23 +7,22 @@ export const cspCollaborationDevelopmentPart1Data = {
       content: `
 # 🤝 Collaboration & Program Development
 
-**Part 1 of 7 — Version Control, Testing Strategies, and Program Correctness**
+**Part 1 of 7 — Collaboration Tools, Testing Strategies, and Program Correctness**
 
 ---
 
-## Version Control and Collaborative Tools
+## Collaborating With Online Tools
 
-Version control systems track changes to code over time, allowing teams to work simultaneously without overwriting each other.
+Online tools support collaboration by letting programmers share code and documents and give feedback on each other's ideas. Common models such as **pair programming** also help teams work together.
 
-| Feature | Description |
-|---------|-----------|
-| **Commit** | Save a snapshot of your code at a point in time |
-| **Branch** | Independent line of development (experiment without affecting main code) |
-| **Merge** | Combine changes from different branches |
-| **Conflict** | When two people edit the same line; must be resolved manually |
-| **History** | Log of all changes — can revert to any previous version |
+| Collaboration practice | What it does |
+|------------------------|--------------|
+| **Shared documents and code editors** | Several people view and edit the same work and leave comments |
+| **Online feedback tools** | Teammates respond to ideas, designs, and code |
+| **Pair programming** | A driver writes code while a navigator reviews and plans; they switch roles |
+| **Consulting users** | Feedback from the people who will use the program shapes its design |
 
-> 🔑 Version control lets teams work on different features simultaneously and merge their work together safely.
+> 🔑 Collaboration that includes diverse perspectives helps a team catch problems and avoid bias in what it builds.
 
 ---
 
@@ -71,7 +70,7 @@ Testing EVERY possible input is usually impossible. Good testers focus on:
               'Age = 300 or Age = 999'
             ],
             correctAnswer: 1,
-            explanation: 'Boundary cases test the limits of valid input. For ages 0-120, the boundaries are exactly 0 and 120. Many bugs occur at boundaries where conditions use < vs <=.'
+            explanation: 'Boundary cases test the limits of valid input. For ages 0-120, the boundaries are exactly 0 and 120. Many bugs occur at boundaries where conditions use < instead of ≤.'
           }
         ]
       }
@@ -87,14 +86,14 @@ Testing EVERY possible input is usually impossible. Good testers focus on:
 | **Syntax error** | Before running (compile/parse time) | Missing parenthesis, misspelled keyword |
 | **Runtime error** | During execution | Division by zero, accessing invalid index |
 | **Logic error** | Produces wrong output | Using + instead of -, off-by-one error |
-| **Overflow error** | When a value exceeds storage capacity | Storing 999999999999 in a 32-bit integer |
+| **Overflow error** | When a value is outside the range that can be represented | A total too large for the fixed number of bits used to store it |
 
-### Debugging Strategies
-1. **Add print/display statements** to trace variable values
-2. **Use a debugger** to step through code line by line
-3. **Rubber duck debugging** — explain the code out loud to find the flaw
-4. **Binary search debugging** — comment out half the code to isolate the bug
-5. **Check recent changes** — the bug is likely in code you just modified
+### Ways to Find and Correct Errors
+1. **Test cases**: compare expected and actual results for defined inputs
+2. **Hand tracing**: step through the code on paper, tracking variable values
+3. **Visualizations**: show data or program state as a picture
+4. **Debuggers**: pause the program and inspect values line by line
+5. **Extra output statements**: DISPLAY values to see what the program is doing
 
 ## Incremental Development
 Build your program in small pieces, testing each piece before adding more. This approach:
@@ -113,15 +112,15 @@ Build your program in small pieces, testing each piece before adding more. This 
 
 2) An error where the program runs but produces the wrong output is called a _______ error.
 
-3) A version control feature that lets you experiment without affecting the main codebase is called a _______.
+3) In pair programming, the partner who reviews each line and plans ahead is called the _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['syntax', 'logic', 'branch'],
+        correctAnswers: ['syntax', 'logic', 'navigator'],
         hint1: 'Related to the structure/grammar of the code.',
         hint2: 'The logic of the program is flawed.',
-        hint3: 'Like a branch of a tree — a separate path.',
-        explanation: 'Syntax = grammar mistakes. Logic = wrong results. Branch = independent development line.'
+        hint3: 'The partner who is not typing guides the way.',
+        explanation: 'Syntax = broken language rules. Logic = wrong results. The navigator reviews and plans while the driver types.'
       }
     },
     {
@@ -163,7 +162,7 @@ Build your program in small pieces, testing each piece before adding more. This 
 - Testing should include normal, boundary, and invalid cases
 - You CANNOT test every possible input — focus on representative and edge cases
 - Incremental development with frequent testing is the recommended approach
-- Version control terminology (commit, branch, merge) appears in conceptual questions
+- Know the five ways to find errors: test cases, hand tracing, visualizations, debuggers, and extra output statements
       `
     },
     {
@@ -186,15 +185,15 @@ Build your program in small pieces, testing each piece before adding more. This 
             explanation: 'An empty list has 0 elements. Dividing the sum by 0 causes a runtime error. This is why testing with empty/boundary inputs is essential.'
           },
           {
-            question: 'Two programmers edit the same line of code in different branches and try to merge. What happens?',
+            question: 'Two students are asked to use pair programming. Which arrangement follows that model?',
             options: [
-              'Git silently keeps whichever change was committed last',
-              'A merge conflict arises that a person must resolve',
-              'Both edits are merged side by side on the same line',
-              'The program crashes the next time it is compiled'
+              'Each student writes half of the program at a separate computer',
+              'A driver types while a navigator reviews, then they swap',
+              'One student writes all of the code while the other watches',
+              'Both students type into the same file at once without talking'
             ],
             correctAnswer: 1,
-            explanation: 'When two branches modify the same line, a merge conflict occurs. The version control system cannot automatically decide which change to keep, so a human must resolve it.'
+            explanation: 'In pair programming, one partner (the driver) writes code while the other (the navigator) reviews and plans, and the partners switch roles regularly.'
           }
         ]
       }

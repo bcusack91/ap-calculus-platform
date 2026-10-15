@@ -11,17 +11,17 @@ export const cspInternetProtocolsPart3Data = {
 
 ---
 
-## Common Internet Patterns
+## The Internet vs. the World Wide Web
 
-The same shapes recur across services.
+People often use the two names as if they meant the same thing. They do not.
 
-| Pattern | Example |
-|---------|---------|
-| **Client / server** | Browser ↔ web server. |
-| **Peer-to-peer (P2P)** | BitTorrent file sharing; some video calls. |
-| **Request / response** | HTTP GET → 200 OK. |
-| **Streaming** | Video and audio data delivered as a continuous flow. |
-| **Publish / subscribe** | Notifications, social feeds. |
+| | Internet | World Wide Web |
+|---|----------|----------------|
+| What it is | A computer network of interconnected networks | A system of linked pages, programs, and files |
+| Protocols | IP, TCP, UDP | HTTP |
+| Relationship | Carries data for many uses | **Uses** the Internet |
+
+Email apps, video-call apps, and online games all use the Internet. Only some of what happens on the Internet is the Web.
       `
     },
     {
@@ -33,26 +33,26 @@ The same shapes recur across services.
       exercise: {
         questions: [
           {
-            question: "In a client/server architecture, the role of the server is to ___",
+            question: "Which statement correctly describes the World Wide Web?",
             options: [
-              "initiate connections to each client.",
-              "wait for client requests and respond.",
-              "route packets between pairs of clients.",
-              "store a copy of every client's files."
+              "Another name for the Internet's network of interconnected networks",
+              "A system of linked pages, programs, and files that uses the Internet",
+              "The set of protocols, such as IP and TCP, that route each packet",
+              "A private network that only devices with web browsers can join"
             ],
             correctAnswer: 1,
-            explanation: "Servers wait; clients initiate."
+            explanation: "The Web is a system of linked pages, programs, and files; it uses the Internet and the HTTP protocol."
           },
           {
-            question: "Which service most clearly fits the peer-to-peer pattern?",
+            question: "Which activity uses the Internet but not necessarily the World Wide Web?",
             options: [
-              "Email between two users sent through Gmail's servers.",
-              "A web search answered by a search engine's data centers.",
-              "BitTorrent, where each downloader also uploads to others.",
-              "A bank login page served from the bank's own servers."
+              "Reading a page linked from a list of search results",
+              "A voice call made in a dedicated calling app",
+              "Clicking a link from one web page to another",
+              "Loading the home page of an online newspaper"
             ],
-            correctAnswer: 2,
-            explanation: "BitTorrent peers exchange data with each other directly, not through a central server."
+            correctAnswer: 1,
+            explanation: "A calling app sends its data over the Internet without using linked web pages; the other choices are all browsing the Web."
           }
         ]
       }
@@ -61,36 +61,23 @@ The same shapes recur across services.
       id: "cspip3-content",
       type: 'text' as const,
       content: `
-## Client / Server vs. Peer-to-Peer
+## Patterns in Packet Delivery
 
-| Aspect | Client / Server | Peer-to-Peer |
-|--------|-----------------|--------------|
-| Initiator | Client. | Any peer. |
-| Coordination | Centralized server. | Distributed among peers. |
-| Failure | Server outage = service down. | Some peers can vanish; service continues. |
-| Examples | Web, email. | BitTorrent, some video calls. |
+Packets may arrive at the destination **in order, out of order, or not at all**.
 
-## Request / Response Anatomy
+| What happens | With TCP | With UDP |
+|-------------|----------|----------|
+| All packets arrive in order | Data delivered as is | Data delivered as is |
+| Packets arrive out of order | Put back in order using metadata | No guarantee of order |
+| A packet never arrives | It is requested again | That data is lost |
 
-An HTTP request:
+## A Single Server Is a Weak Point
 
-    GET /api/student/42 HTTP/1.1
-    Host: example.com
-    Authorization: Bearer eyJ…
+If a service runs on **one** server, that server is a single point of failure: when it goes down, the service is gone. Adding **redundant** servers, so that another can take over, makes the service **fault-tolerant**. The Internet itself follows the same idea with redundant paths between devices.
 
-An HTTP response:
+## Scalability in Action
 
-    HTTP/1.1 200 OK
-    Content-Type: application/json
-    Content-Length: 142
-    
-    {"id": 42, "name": "Alex", …}
-
-Status codes: **2xx** = OK, **3xx** = redirect, **4xx** = client error (e.g., 404 not found), **5xx** = server error.
-
-## Streaming As A Pattern
-
-Video streams break the file into small chunks; the player buffers a few seconds ahead. If the network slows, the player switches to a lower-bitrate version (adaptive bitrate). The connection remains open while the stream plays.
+The Internet grew from a few thousand connected devices to billions without being redesigned, because it was built to **scale**: open protocols let anyone add devices, and routing finds paths through whatever networks are connected.
       `
     },
     {
@@ -99,19 +86,19 @@ Video streams break the file into small chunks; the player buffers a few seconds
       content: `
 **Applied Recall** ✍️
 
-1) In client/server, the _______ initiates the connection.
+1) The World Wide Web uses the _______ protocol.
 
-2) In a P2P network, peers can both _______ and serve data.
+2) A web browser and an email app both send their data over the _______.
 
-3) An HTTP status of 404 means the requested resource was not _______.
+3) Packets may arrive in order, out of order, or not at _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["client", "request", "found"],
-        hint1: "Browser, app, etc.",
-        hint2: "Two roles in one node.",
-        hint3: "The \"Not Found\" code.",
-        explanation: "Clients initiate. P2P peers both consume and serve. 404 = Not Found."
+        correctAnswers: ["HTTP", "Internet", "all"],
+        hint1: "HyperText Transfer Protocol.",
+        hint2: "The network of networks.",
+        hint3: "Some packets are lost.",
+        explanation: "The Web uses HTTP. Many applications, the Web among them, run over the Internet. Packets can be lost entirely."
       }
     },
     {
@@ -123,35 +110,35 @@ Video streams break the file into small chunks; the player buffers a few seconds
       exercise: {
         dropdowns: [
           {
-            label: "A 500-series HTTP status indicates ___",
-            options: ["a server-side error", "a client-side error", "a redirect", "a successful response"]
+            label: "Loading a web page in a browser uses ___",
+            options: ["both the Web and the Internet", "the Web but not the Internet", "the Internet but not the Web", "neither the Web nor the Internet"]
           },
           {
-            label: "A push-notification service most closely resembles the ___ pattern",
-            options: ["publish / subscribe", "request / response", "P2P file sharing", "polling by the client"]
+            label: "Packets that arrive out of order are put back in order using their ___",
+            options: ["metadata", "bandwidth", "encryption key", "file extension"]
           },
           {
             label: "For a service that must remain available if any single server fails, a ___ design helps",
             options: ["distributed / redundant", "single powerful server", "centralized database", "client-side only"]
           }
         ],
-        correctAnswers: ["a server-side error", "publish / subscribe", "distributed / redundant"],
-        hint1: "5xx is server's fault.",
-        hint2: "Subscribers receive when publishers post.",
-        hint3: "Redundancy beats single point of failure.",
-        explanation: "5xx = server error. Pub/sub fits notifications. Distributed/redundant designs survive single-server failures."
+        correctAnswers: ["both the Web and the Internet", "metadata", "distributed / redundant"],
+        hint1: "The Web runs on the Internet.",
+        hint2: "Data about the data.",
+        hint3: "Redundancy beats a single point of failure.",
+        explanation: "The Web uses the Internet. Metadata guide reassembly. Redundant designs survive single-server failures."
       }
     },
     {
       id: "cspip3-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: Architecture Questions
+## AP Exam Strategy: Patterns
 
-- "Single point of failure" almost always means client/server with no redundancy.
-- "Some peers can drop without taking the system down" → P2P or distributed.
-- "Long-lived connection delivering continuous data" → streaming.
-- HTTP status codes: 200 OK, 301/302 redirect, 404 not found, 500 server error. Recognize these on sight.
+- Internet = network of networks (IP, TCP, UDP). Web = linked pages, programs, files (HTTP). The Web uses the Internet.
+- Packets: in order, out of order, or not at all. TCP repairs order and loss; UDP does not.
+- "Single point of failure" → add redundancy.
+- "How did the Internet grow so large?" → it was designed to be scalable, with open protocols.
       `
     },
     {
@@ -163,26 +150,26 @@ Video streams break the file into small chunks; the player buffers a few seconds
       exercise: {
         questions: [
           {
-            question: "A school deploys a single attendance server. When that server is down, no one can mark attendance. Which design change most directly addresses this?",
+            question: "A school runs attendance on a single server. When that server is down, no one can mark attendance. Which design change most directly addresses this?",
             options: [
-              "Use redundant servers behind a load balancer so any one server can fail without service interruption.",
-              "Add explanatory comments throughout the existing single attendance server's codebase to document what fails.",
+              "Add redundant servers that can take over the work if any one server fails.",
+              "Add explanatory comments throughout the existing single attendance server's code to document what fails.",
               "Switch all attendance traffic from TCP to UDP so requests will arrive faster than they currently do.",
-              "Change the school's Wi-Fi network password to a stronger value to prevent future server outage events."
+              "Change the school's Wi-Fi network password to a stronger value to prevent future server outages."
             ],
             correctAnswer: 0,
-            explanation: "Redundancy + load balancing eliminates the single point of failure."
+            explanation: "Redundancy removes the single point of failure, making the service fault-tolerant."
           },
           {
-            question: "A music service is redesigning to allow listeners to share locally-cached songs with nearby listeners on the same Wi-Fi network. Which architecture is most appropriate?",
+            question: "A web page's packets arrive at a laptop out of order, and two packets are lost along the way. The page still displays correctly. Which is the best explanation?",
             options: [
-              "Peer-to-peer between nearby listeners on the same Wi-Fi, with a central server for catalog metadata.",
-              "Strict client/server only, in which every song must be re-downloaded from a central server every time.",
-              "Email-based file delivery, where each listener emails the song file to nearby listeners on demand.",
-              "DNS-based file lookup, where each listener resolves song names through the Domain Name System."
+              "IP guarantees every packet arrives in the order it was sent.",
+              "TCP had the lost packets resent and used metadata to order them.",
+              "The browser guessed the missing content from the rest of the page.",
+              "UDP resent the missing packets and then sorted all of them by size."
             ],
-            correctAnswer: 0,
-            explanation: "Hybrid: P2P for the bulk data, centralized server for coordination/metadata."
+            correctAnswer: 1,
+            explanation: "TCP provides reliable, ordered delivery: it asks for lost packets again and reassembles the data using packet metadata."
           }
         ]
       }

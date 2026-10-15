@@ -15,9 +15,9 @@ export const cspDataPart4Data = {
 
 | Connection | Why |
 |-----------|-----|
-| Data ↔ Algorithms | Algorithms operate on data. |
-| Data ↔ Internet | Data flows over networks. |
-| Data ↔ Security | Data must be protected at rest and in transit. |
+| Data ↔ Programs | Data are stored in variables and lists and passed to and from procedures. |
+| Data ↔ Internet | Data flow over networks in packets. |
+| Data ↔ Security | Data must be protected from unauthorized access. |
 | Data ↔ Impact | Decisions about data collection affect privacy, fairness, and trust. |
       `
     },
@@ -30,15 +30,15 @@ export const cspDataPart4Data = {
       exercise: {
         questions: [
           {
-            question: "Choosing between a list and a hash table for a lookup task is primarily an ___ decision.",
+            question: "A program stores 30 students' test scores so it can compute the class average. Which is the most appropriate way to store them?",
             options: [
-              "encryption decision driven by how sensitive the data is",
-              "algorithm and data-structure decision driven by performance",
-              "network decision driven by the link's bandwidth limits",
-              "compression decision driven by the available storage budget"
+              "In 30 separately named variables, one for each score",
+              "In one list, so a single loop can process every score",
+              "In the file's metadata, since the scores describe the file",
+              "In one variable that is overwritten by each new score"
             ],
             correctAnswer: 1,
-            explanation: "Data structure choice impacts algorithm performance."
+            explanation: "A list groups related values so a FOR EACH loop can process all of them, however many there are."
           },
           {
             question: "A medical study collects identifying data; a researcher loses a laptop with the dataset. The most accurate framing is ___",
@@ -58,36 +58,33 @@ export const cspDataPart4Data = {
       id: "cspdata4-content",
       type: 'text' as const,
       content: `
-## Data Structures Affect Algorithms
+## Data in Programs
 
-| Task | Bad choice | Better choice |
-|------|-----------|---------------|
-| Look up by ID | Linear scan of a list | Hash table (O(1) avg) |
-| Sorted access | Unsorted list | Sorted array / balanced tree |
-| "Top K" repeatedly | Resort each time | Heap |
-| Network of relations | Pairs of IDs in a list | Graph |
+A list lets one loop handle any amount of data:
 
-## Encryption At Rest vs. In Transit
+\`\`\`
+total ← 0
+FOR EACH s IN scores
+{
+    total ← total + s
+}
+average ← total / LENGTH(scores)
+\`\`\`
 
-| Phase | Protection |
-|-------|-----------|
-| **At rest** (storage) | Disk-level or field-level encryption. |
-| **In transit** (network) | TLS / HTTPS. |
-| **In use** (memory) | Hardest; emerging tech (TEE, FHE). |
+The same code works for 5 scores or 5,000, which is why programs store related data in lists.
 
-A complete data-protection plan addresses all three.
+## Personal Data and Privacy
 
-## Data Lifecycles
+**Personally identifiable information (PII)** is information about an individual that identifies, links, relates, or describes them: a Social Security number, age, race, phone number, medical or financial information, biometric data.
 
-Real datasets have a lifecycle: collect → process → store → share → archive → **delete**. The "delete" stage is often skipped — and that's a security/privacy failure waiting to happen.
+| Risk | Example |
+|------|---------|
+| Combining data | Separate pieces such as location, cookies, and browsing history can be aggregated to create knowledge about one person. |
+| Hard to delete | Once information is placed online, it is difficult to delete. |
+| Misuse | PII can be used to stalk or steal the identity of a person or to plan other crimes. |
+| Unintended use | An email can be forwarded and a post can be seen by a future employer. |
 
-| Lifecycle stage | Question |
-|----------------|----------|
-| Collect | Do we really need this? |
-| Store | Encrypted? Minimal access? |
-| Share | With whom, under what terms? |
-| Archive | How long? Why? |
-| Delete | When does this go away? |
+PII also has benefits: stored payment details simplify online purchases, and personal data can improve a user's online experience. Collecting only the data a program actually needs, and encrypting what it keeps, reduces the risk.
       `
     },
     {
@@ -96,19 +93,19 @@ Real datasets have a lifecycle: collect → process → store → share → arch
       content: `
 **Applied Recall** ✍️
 
-1) Encrypting files on a hard drive is "encryption at _______".
+1) Information that identifies, links, relates, or describes a person is abbreviated _______.
 
-2) TLS / HTTPS provides encryption "in _______".
+2) A program that processes 30 scores with one loop should store them in a _______.
 
-3) A complete data lifecycle ends with a _______ stage.
+3) Once information is placed online, it is difficult to _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["rest", "transit", "delete"],
-        hint1: "Static storage.",
-        hint2: "Moving over network.",
-        hint3: "Lifecycle endpoint.",
-        explanation: "At rest = stored; in transit = on the wire; deletion ends the lifecycle."
+        correctAnswers: ["PII", "list", "delete"],
+        hint1: "Personally identifiable information.",
+        hint2: "An ordered collection of values.",
+        hint3: "Removing it for good is hard.",
+        explanation: "PII = personally identifiable information. Lists hold related values for loops. Online information is hard to delete."
       }
     },
     {
@@ -120,23 +117,23 @@ Real datasets have a lifecycle: collect → process → store → share → arch
       exercise: {
         dropdowns: [
           {
-            label: "A program that needs O(1) average lookup by ID should use ___",
-            options: ["a hash table", "a linear list", "a linked list", "a sorted array"]
+            label: "A student's phone number and home address are examples of ___",
+            options: ["PII", "metadata", "lossy data", "redundancy"]
           },
           {
-            label: "Encryption-in-transit is provided by ___",
-            options: ["TLS / HTTPS", "full-disk encryption", "gzip / Brotli", "DNS / IP"]
+            label: "Combining a person's location history, cookies, and browsing history can ___",
+            options: ["create knowledge about that person", "make that person fully anonymous", "remove the need for any encryption", "reveal only the device's model"]
           },
           {
-            label: "A \"data minimization\" principle says ___",
-            options: ["collect only the data actually needed", "compress data to use minimal storage", "anonymize everything that is collected", "collect everything, then delete what is unused"]
+            label: "Encrypting a stored data set mainly helps prevent ___",
+            options: ["unauthorized access to the data", "the data from being backed up", "errors during data collection", "bias in the collected data"]
           }
         ],
-        correctAnswers: ["a hash table", "TLS / HTTPS", "collect only the data actually needed"],
-        hint1: "Hash = constant time.",
-        hint2: "Network encryption.",
-        hint3: "Less = safer.",
-        explanation: "Hash tables = O(1) avg lookups. TLS = transit encryption. Data minimization = collect less."
+        correctAnswers: ["PII", "create knowledge about that person", "unauthorized access to the data"],
+        hint1: "It identifies a specific person.",
+        hint2: "Disparate data can be aggregated.",
+        hint3: "Encryption encodes data so others can't read it.",
+        explanation: "Phone numbers and addresses are PII. Aggregated personal data reveal a lot about an individual. Encryption prevents unauthorized access."
       }
     },
     {
@@ -145,10 +142,10 @@ Real datasets have a lifecycle: collect → process → store → share → arch
       content: `
 ## AP Exam Strategy: Cross-Topic Data
 
-- Match data structure to algorithm need.
-- Cite both at-rest and in-transit encryption for full protection.
-- "Data minimization" is the big-picture privacy principle.
-- Always include "delete" in the lifecycle.
+- Related values belong in a list so one loop can process them.
+- Know what counts as PII and why combining data raises privacy risk.
+- Online information is hard to delete; collecting less data lowers the risk.
+- Encryption protects stored or transmitted data from unauthorized access.
       `
     },
     {
@@ -164,22 +161,22 @@ Real datasets have a lifecycle: collect → process → store → share → arch
             options: [
               "storage is cheap, so keeping click logs forever is fine.",
               "keeping behavioral data that long creates privacy and breach risk.",
-              "encryption at rest alone removes all of the risk.",
+              "encrypting the logs alone removes all of the risk.",
               "click logs are anonymous, so keeping them carries no risk."
             ],
             correctAnswer: 1,
-            explanation: "Indefinite retention multiplies risk; minimization + sunset is the answer."
+            explanation: "Years of behavior can be combined to learn a great deal about each user, and the longer it is kept, the more there is to expose."
           },
           {
-            question: "A program needs to repeatedly find \"the highest priority task\" from a large set. The most appropriate data structure is ___",
+            question: "A school app stores each student's name, birth date, and home address. Which is the most accurate description of the risk?",
             options: [
-              "a priority queue that supports efficient removal of the maximum",
-              "a singly linked list scanned linearly on each priority request",
-              "a binary file written sequentially with no in-memory index built",
-              "a hash table keyed by task ID with no ordering by priority"
+              "The data carry no risk, since they are stored on a school server.",
+              "This PII could be used to steal identities if the data were exposed.",
+              "Only the birth dates are PII, so the other fields carry no real risk.",
+              "The only risk is that the file may become too large to store easily."
             ],
-            correctAnswer: 0,
-            explanation: "Heaps support efficient repeated extraction of max/min."
+            correctAnswer: 1,
+            explanation: "Names, birth dates, and addresses are PII, which can be used to steal an identity or aid other crimes."
           }
         ]
       }

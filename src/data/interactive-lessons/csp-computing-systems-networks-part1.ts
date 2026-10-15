@@ -7,45 +7,35 @@ export const cspComputingSystemsNetworksPart1Data = {
       content: `
 # 🌐 Computing Systems & Networks
 
-**Part 1 of 7 — Hardware, Software, and Network Fundamentals**
+**Part 1 of 7 — Devices, Networks, and the Internet**
 
 ---
 
-## Computing Systems
+## The Vocabulary of Big Idea 4
 
-A computing system processes data using:
+| Term | Meaning | Examples |
+|------|---------|----------|
+| **Computing device** | A physical artifact that can run a program | Computers, tablets, servers, routers, smart sensors |
+| **Computing system** | A group of computing devices and programs working together for a common purpose | A school's grading system |
+| **Computer network** | A group of interconnected computing devices capable of sending or receiving data | A home Wi-Fi network |
 
-| Component | Role | Examples |
-|-----------|------|---------|
-| **Input** | Receives data from users/environment | Keyboard, mouse, microphone, sensor |
-| **Processing** | Executes instructions on data | CPU (Central Processing Unit) |
-| **Storage / memory** | Storage keeps data long-term; memory (RAM) holds data and instructions temporarily while programs run | Hard drive, SSD (storage); RAM (memory) |
-| **Output** | Presents results | Monitor, speakers, printer |
-
-### Software Types
-| Type | Description | Examples |
-|------|-----------|---------|
-| **System software** | Manages hardware resources | Operating system (Windows, macOS, Linux) |
-| **Application software** | Performs tasks for users | Web browser, word processor, game |
-
-> 🔑 Software is a set of instructions. Hardware is the physical equipment. Software runs ON hardware.
+A computer network is a **type of computing system**.
 
 ---
 
-## Networks
+## Paths, Routing, and Bandwidth
 
-A **network** connects computing devices to share resources and communicate.
+- A **path** between a sender and a receiver is a sequence of directly connected computing devices that begins at the sender and ends at the receiver.
+- **Routing** is the process of finding a path from sender to receiver.
+- **Bandwidth** is the maximum amount of data that can be sent in a fixed amount of time, usually measured in **bits per second**.
 
-| Network Type | Scale | Example |
-|-------------|-------|---------|
-| **LAN** | Local Area Network (building/room) | School WiFi |
-| **WAN** | Wide Area Network (large geographic area) | The Internet |
+## How Data Travels
 
-### How Data Travels
-Data is broken into **packets** — small chunks sent independently across the network. Each packet contains:
-- **Header**: Source address, destination address, packet number
-- **Payload**: The actual data being sent
-- **Trailer**: Error-checking information
+Information passes through the Internet as a **data stream**. The stream is split into chunks of data, and each chunk is wrapped in a **packet**. A packet contains:
+- **A chunk of the data** being sent
+- **Metadata** used to route the packet from origin to destination and to reassemble the data at the end
+
+Packets may arrive **in order, out of order, or not at all**.
       `
     },
     {
@@ -65,18 +55,18 @@ Data is broken into **packets** — small chunks sent independently across the n
               'Packets are encrypted automatically, but whole files are not'
             ],
             correctAnswer: 1,
-            explanation: 'Packet switching allows different packets to take different routes to the destination. If one path is congested or fails, packets reroute automatically. They are reassembled at the destination.'
+            explanation: 'Each packet is routed on its own, so packets can take different paths to the destination. If one path is congested or fails, later packets can go another way, and they are reassembled at the destination.'
           },
           {
-            question: 'What is the role of the CPU in a computing system?',
+            question: 'Which of the following is a computing device, as the AP framework defines the term?',
             options: [
-              'Stores data and programs permanently',
-              'Displays processed information on the screen',
-              'Processes instructions and performs calculations',
-              'Connects the computer to other devices on the internet'
+              'A smart sensor that runs a program to report temperature',
+              'The set of rules that two computers follow to exchange data',
+              'A path of directly connected devices from sender to receiver',
+              'The maximum amount of data a network can send per second'
             ],
-            correctAnswer: 2,
-            explanation: 'The CPU (Central Processing Unit) is the "brain" of the computer. It fetches, decodes, and executes instructions. Storage is handled by drives, display by monitors, and networking by NICs.'
+            correctAnswer: 0,
+            explanation: 'A computing device is a physical artifact that can run a program, such as a computer, router, or smart sensor. The others describe a protocol, a path, and bandwidth.'
           }
         ]
       }
@@ -87,31 +77,24 @@ Data is broken into **packets** — small chunks sent independently across the n
       content: `
 ## The Internet
 
-The Internet is a global network of networks — a **WAN** connecting millions of smaller networks worldwide.
+The **Internet** is a computer network made of interconnected networks that use **standardized, open (nonproprietary) communication protocols**.
 
-### Key Internet Infrastructure
+| Idea | What the CED says |
+|------|-------------------|
+| **Protocol** | An agreed-upon set of rules that specify the behavior of a system |
+| **Open protocols** | Let anyone easily connect additional devices to the Internet |
+| **Access** | Depends on the ability to connect a device to an Internet-connected device |
+| **Dynamic routing** | Routing on the Internet is usually not specified in advance |
+| **Scalability** | The capacity of a system to change in size and scale to meet new demands; the Internet was designed to be scalable |
 
-| Component | Purpose |
-|-----------|---------|
-| **Router** | Forwards packets between networks, choosing the best path |
-| **DNS** | Domain Name System — translates names (google.com) to IP addresses |
-| **IP Address** | Unique numerical address for each device on the network |
-| **Bandwidth** | Maximum data transfer rate (bits per second) |
-| **Latency** | Time delay for data to travel from source to destination |
-
-### Scalability
-The Internet was designed to scale. Key design principles:
-- **Open standards**: Anyone can connect using standard protocols
-- **Redundancy**: Multiple paths between any two points
-- **Decentralized**: No single point of control
-- **Packet switching**: Efficient use of shared connections
+Common Internet protocols: **IP**, **TCP**, and **UDP**. The **World Wide Web** is a system of linked pages, programs, and files; it uses the Internet, and **HTTP** is a protocol used by the Web.
 
 ## Parallel and Distributed Computing
-- **Sequential**: Tasks done one after another
-- **Parallel**: Multiple tasks done simultaneously on multiple processors
-- **Distributed**: Tasks split across multiple computers on a network
+- **Sequential**: operations are performed in order, one at a time
+- **Parallel**: the program is broken into smaller sequential operations, some of which run at the same time
+- **Distributed**: multiple devices are used to run a program
 
-> 🔑 Parallel computing can speed up tasks but has limits — some tasks have dependencies that prevent parallelization.
+> 🔑 Parallel computing can speed up a task, but the sequential portion that cannot be split limits how much faster it can get.
       `
     },
     {
@@ -120,19 +103,19 @@ The Internet was designed to scale. Key design principles:
       content: `
 **Applied Recall** ✍️
 
-1) The system that translates domain names (like google.com) to IP addresses is called _______.
+1) The process of finding a path from sender to receiver is called _______.
 
-2) Data is split into smaller chunks called _______ before being sent across a network.
+2) Data is split into smaller chunks called _______ before being sent across the Internet.
 
-3) A device that forwards data between networks, choosing the best path, is a _______.
+3) An agreed-upon set of rules that specify the behavior of a system is a _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['DNS', 'packets', 'router'],
-        hint1: 'Domain Name System.',
+        correctAnswers: ['routing', 'packets', 'protocol'],
+        hint1: 'Finding the route.',
         hint2: 'Small pieces of data sent independently.',
-        hint3: 'It routes traffic between networks.',
-        explanation: 'DNS = name to IP. Packets = data chunks. Router = forwards between networks.'
+        hint3: 'IP, TCP, UDP, and HTTP are examples.',
+        explanation: 'Routing finds a path. Packets carry chunks of data. Protocols are agreed-upon rules.'
       }
     },
     {
@@ -144,23 +127,23 @@ The Internet was designed to scale. Key design principles:
       exercise: {
         dropdowns: [
           {
-            label: 'A school WiFi network covering one building is a ___',
-            options: ['LAN (Local Area Network)', 'WAN (Wide Area Network)', 'PAN (Personal Area Network)', 'MAN (Metropolitan Area Network)']
+            label: 'A group of interconnected computing devices that can send or receive data is a ___',
+            options: ['computer network', 'computing device', 'protocol', 'packet']
           },
           {
-            label: 'The maximum data transfer rate of a connection is called ___',
-            options: ['Bandwidth', 'Latency', 'Round-trip time', 'Packet size']
+            label: 'The maximum amount of data that can be sent in a fixed amount of time is called ___',
+            options: ['Bandwidth', 'Routing', 'Redundancy', 'Scalability']
           },
           {
-            label: 'The Internet uses ___ switching, which breaks data into small independent chunks',
-            options: ['Packet switching', 'Circuit switching', 'Message switching', 'Cell switching']
+            label: 'The World Wide Web ___ the Internet',
+            options: ['uses', 'is the same as', 'replaced', 'is older than']
           }
         ],
-        correctAnswers: ['LAN (Local Area Network)', 'Bandwidth', 'Packet switching'],
-        hint1: 'Local to one building.',
-        hint2: 'Maximum rate, measured in bits per second.',
-        hint3: 'Data broken into packets.',
-        explanation: 'School WiFi = LAN. Max rate = bandwidth. Internet uses packet switching.'
+        correctAnswers: ['computer network', 'Bandwidth', 'uses'],
+        hint1: 'Devices connected together.',
+        hint2: 'Measured in bits per second.',
+        hint3: 'The Web is a system of linked pages that runs on top of the network.',
+        explanation: 'Connected devices form a network. Bandwidth is the maximum data rate. The Web uses the Internet, with HTTP as its protocol.'
       }
     },
     {
@@ -169,12 +152,12 @@ The Internet was designed to scale. Key design principles:
       content: `
 ## AP Exam Strategy: Computing Systems & Networks
 
-- Know the four components: input, processing, storage, output
-- **DNS** translates human-readable names to IP addresses — tested frequently
-- **Packets** contain header (addresses), payload (data), and can take different routes
-- **Redundancy** in the Internet means multiple paths exist — no single point of failure
-- Bandwidth = max speed. Latency = delay. Know the difference
-- Parallel computing has speedup limits due to task dependencies (sequential bottleneck)
+- Know the definitions: computing device, computing system, network, path, routing, bandwidth
+- **Packets** carry a chunk of data plus metadata for routing and reassembly, and can arrive out of order or not at all
+- The Internet uses **open protocols** (IP, TCP, UDP); the Web uses **HTTP** and runs on the Internet
+- **Redundancy** in the Internet means multiple paths exist, so a single failure rarely stops communication
+- Bandwidth = maximum data per unit of time, in bits per second
+- A parallel solution takes as long as its sequential tasks plus its longest parallel task
       `
     },
     {
@@ -189,15 +172,15 @@ The Internet was designed to scale. Key design principles:
             question: 'Two packets from the same email arrive at the destination in different order. What happens?',
             options: [
               'The email is discarded, and the sender is notified of the error',
-              'The receiver uses sequence numbers to put the packets back in order',
+              'The receiver uses the packets\' metadata to put them back in order',
               'The email is displayed with its content scrambled out of order',
               'The sender must resend every packet of the email in order'
             ],
             correctAnswer: 1,
-            explanation: 'Each packet has a sequence number in its header. The destination computer uses these numbers to reassemble packets in the correct order, regardless of arrival order.'
+            explanation: 'Packets carry metadata used for reassembly, so the receiving computer can rebuild the message in the correct order regardless of arrival order.'
           },
           {
-            question: 'A task takes 60 seconds sequentially. With 4 processors running in parallel (assuming perfect parallelization), the minimum time is:',
+            question: 'A task takes 60 seconds when run sequentially. It is split into 4 equal parts that run in parallel on 4 processors, with no sequential portion. What is the minimum time?',
             options: [
               '60 seconds',
               '15 seconds',
@@ -205,7 +188,7 @@ The Internet was designed to scale. Key design principles:
               '4 seconds'
             ],
             correctAnswer: 1,
-            explanation: 'With perfect parallelization, 4 processors divide the work equally: 60/4 = 15 seconds. In practice, overhead and dependencies often prevent perfect speedup.'
+            explanation: 'Four equal parallel parts of 15 seconds each finish together, so the task takes 60 / 4 = 15 seconds. Any sequential portion would add to that time.'
           }
         ]
       }

@@ -7,21 +7,20 @@ export const cspInternetProtocolsPart5Data = {
       content: `
 # 🌐 The Internet & Protocols
 
-**Part 5 of 7 — Change Over Time**
+**Part 5 of 7 — Scalability and Growth**
 
 ---
 
-## How The Internet Has Scaled
+## Built to Scale
 
-The Internet has grown from a few thousand devices to tens of billions. The principles that enabled this scale.
+The **scalability** of a system is its capacity to change in size and scale to meet new demands. The Internet was **designed to be scalable**, and it has grown from a few thousand devices to billions.
 
-| Era | Devices | Notable change |
-|-----|---------|---------------|
-| 1980s | thousands | Birth of TCP/IP. |
-| 1990s | millions | Web browsers; HTML/HTTP. |
-| 2000s | hundreds of millions | Broadband; CDNs; cloud. |
-| 2010s | billions | Mobile-first; HTTPS by default. |
-| 2020s | tens of billions | IoT; IPv6 deployment widens. |
+| Design feature | How it helps the Internet grow |
+|---------------|-------------------------------|
+| **Open protocols** | Anyone can connect new devices by following the rules. |
+| **Dynamic routing** | Paths are found as data travel, so new networks can join at any time. |
+| **Redundant paths** | Extra routing options increase reliability and help the Internet scale to more devices and more people. |
+| **Packets** | Many conversations share the same connections at once. |
       `
     },
     {
@@ -38,21 +37,21 @@ The Internet has grown from a few thousand devices to tens of billions. The prin
               "IPv5",
               "IPv6",
               "TCP/2",
-              "DNS+"
+              "HTTP/2"
             ],
             correctAnswer: 1,
             explanation: "IPv6 uses 128-bit addresses (~$3.4 \\times 10^{38}$), enough for every device for the foreseeable future."
           },
           {
-            question: "A Content Delivery Network (CDN) reduces page-load times by ___",
+            question: "The Internet grew from thousands of devices to billions. Which design feature most directly made this possible?",
             options: [
-              "compressing every byte of traffic at the origin server before it leaves the data center.",
-              "serving cached copies from locations geographically near each requesting user.",
-              "using only peer-to-peer connections between every requesting user and every other one nearby.",
-              "rewriting every requested URL to point at the geographically nearest origin data center directly."
+              "One central computer approves and routes every packet that is sent.",
+              "It was built to be scalable, with open protocols anyone can use.",
+              "Every device has a fixed, permanent path to every other connected device.",
+              "Each new network must invent and use its own private set of protocols."
             ],
             correctAnswer: 1,
-            explanation: "CDNs cache content close to users, reducing latency."
+            explanation: "Open protocols and a scalable design let new devices and networks join without redesigning the Internet."
           }
         ]
       }
@@ -61,27 +60,24 @@ The Internet has grown from a few thousand devices to tens of billions. The prin
       id: "cspip5-content",
       type: 'text' as const,
       content: `
-## Address Exhaustion And IPv6
+## Addresses Are Bits
 
-IPv4 addresses are 32 bits → $2^{32}$ ≈ 4.3 billion. With smartphones, IoT, and rapid global growth, this isn't enough. **IPv6** uses 128-bit addresses → vastly more than the number of atoms on Earth's surface.
+An address is a group of bits, so the number of possible addresses is $2^{n}$ for n-bit addresses.
 
-Workarounds during transition: NAT (Network Address Translation) lets one public IP serve many devices behind a router.
+| Version | Bits | Possible addresses |
+|---------|------|--------------------|
+| IPv4 | 32 | $2^{32}$ ≈ 4.3 billion |
+| IPv6 | 128 | $2^{128}$ ≈ $3.4 \\times 10^{38}$ |
 
-## Cloud And CDNs Changed The Picture
+Each extra bit doubles the number of addresses, so going from 32 to 128 bits multiplies the count by $2^{96}$. Moving to longer addresses is one way the Internet scales to meet new demand.
 
-- **Cloud computing**: applications run on shared, on-demand infrastructure rather than self-hosted servers.
-- **CDNs**: replicate content geographically so users connect to a nearby server.
-- **Edge computing**: even more local processing — close to the user / device.
+## More Devices, More to Protect
 
-These reduce latency, increase reliability, and absorb traffic spikes.
+Smart sensors, cameras, and thermostats are computing devices too. Every real-world system has errors or design flaws that can be exploited, and **regular software updates** help fix them. A network with thousands of connected devices needs every one of them kept up to date.
 
-## Encrypted-By-Default
+## Encryption Everywhere
 
-In 2015 most web traffic was HTTP. By the 2020s the majority is HTTPS. Browsers now warn users on plain HTTP. This shift was driven by free certificate authorities (Let's Encrypt) and pressure from browser vendors.
-
-## IoT And The Surface Of The Internet
-
-"Things" — thermostats, cameras, doorbells — now connect to the Internet. This expands the **attack surface** dramatically. Every connected device is a potential entry point.
+As more personal information travels over the Internet, more of it is **encrypted**. Data sent over public networks can be intercepted, so web sites now commonly use HTTPS, with digital certificates issued by **certificate authorities**.
       `
     },
     {
@@ -94,15 +90,15 @@ In 2015 most web traffic was HTTP. By the 2020s the majority is HTTPS. Browsers 
 
 2) The successor with 128-bit addresses is _______.
 
-3) A geographically distributed system that caches content close to users is called a _______.
+3) A system's capacity to change in size and scale to meet new demands is called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["32", "IPv6", "CDN"],
+        correctAnswers: ["32", "IPv6", "scalability"],
         hint1: "~4.3 billion addresses.",
         hint2: "After v4.",
-        hint3: "Content Delivery Network.",
-        explanation: "IPv4 = 32 bits. IPv6 = 128 bits. CDN = cached content geographically distributed."
+        hint3: "Can the system scale?",
+        explanation: "IPv4 = 32 bits. IPv6 = 128 bits. Scalability = capacity to grow to meet demand."
       }
     },
     {
@@ -115,34 +111,34 @@ In 2015 most web traffic was HTTP. By the 2020s the majority is HTTPS. Browsers 
         dropdowns: [
           {
             label: "IPv6 was created primarily to address ___",
-            options: ["IPv4 address exhaustion", "slow routing between continents", "lack of encryption", "too many DNS servers"]
+            options: ["IPv4 address exhaustion", "slow routing between continents", "lack of encryption", "too many web pages"]
           },
           {
-            label: "Adding many IoT devices to a network primarily increases ___",
-            options: ["the attack surface", "available IP addresses", "overall network security", "the bandwidth supply"]
+            label: "Regular software updates for connected devices help ___",
+            options: ["fix flaws that could be exploited", "increase the network's bandwidth", "add more IP addresses", "make the protocols proprietary"]
           },
           {
-            label: "A CDN reduces page-load latency by ___",
-            options: ["serving from a nearby cache", "upgrading users' bandwidth", "skipping the DNS lookup", "encrypting each request"]
+            label: "Redundant routing options help the Internet ___",
+            options: ["scale to more devices and people", "use fewer protocols overall", "avoid using packets entirely", "fix every path in advance"]
           }
         ],
-        correctAnswers: ["IPv4 address exhaustion", "the attack surface", "serving from a nearby cache"],
+        correctAnswers: ["IPv4 address exhaustion", "fix flaws that could be exploited", "scale to more devices and people"],
         hint1: "Need more addresses.",
-        hint2: "More endpoints = more risk.",
-        hint3: "Closer = faster.",
-        explanation: "IPv6 = address space. IoT = larger attack surface. CDN = geographic caching."
+        hint2: "All real systems have flaws.",
+        hint3: "Redundancy supports growth.",
+        explanation: "IPv6 = more address space. Updates fix exploitable flaws. Redundant routing increases reliability and helps the Internet scale."
       }
     },
     {
       id: "cspip5-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: Internet Evolution
+## AP Exam Strategy: Internet Growth
 
-- "Out of IP addresses" → IPv6 (or NAT as a stopgap).
-- "Faster page loads worldwide" → CDN.
-- "More devices = more attack opportunities" = a Big Idea 5/security tie-in.
-- "Encrypted by default" describes the modern web.
+- The Internet was designed to be scalable; open protocols and dynamic routing let it grow.
+- n-bit addresses → $2^{n}$ addresses; each extra bit doubles the count.
+- Redundant paths improve reliability AND help the Internet scale.
+- More connected devices means more systems that need regular updates.
       `
     },
     {
@@ -154,26 +150,26 @@ In 2015 most web traffic was HTTP. By the 2020s the majority is HTTPS. Browsers 
       exercise: {
         questions: [
           {
-            question: "A streaming service sees viewers in 80 countries. Page load time is poor for users far from its main data center. The most appropriate scaling response is ___",
+            question: "IPv4 addresses use 32 bits and IPv6 addresses use 128 bits. How many times as many possible addresses does IPv6 provide?",
             options: [
-              "build one bigger data center near the company's headquarters",
-              "use a CDN with edge servers in many regions",
-              "switch all video traffic from TCP to UDP to cut delays",
-              "move every server from IPv6 back to IPv4 for faster routing"
+              "4",
+              "96",
+              "$2^{96}$",
+              "$2^{128}$"
             ],
-            correctAnswer: 1,
-            explanation: "CDNs reduce latency by serving cached content from regional edge locations."
+            correctAnswer: 2,
+            explanation: "$2^{128}$ ÷ $2^{32}$ = $2^{96}$. Each of the 96 extra bits doubles the number of addresses; 128 ÷ 32 = 4 compares bit counts, not addresses."
           },
           {
-            question: "An organization adds 2,000 IoT sensors (cameras, thermostats) to its network. The most pressing CSP-aligned concern is ___",
+            question: "An organization adds 2,000 smart sensors (cameras, thermostats) to its network. The most pressing CSP-aligned concern is ___",
             options: [
               "the network needs no changes to handle 2,000 more devices safely.",
-              "every connected device widens the attack surface and must be patched.",
+              "each device may have flaws attackers can exploit, so each needs updates.",
               "IPv6 addressing cannot work with sensors the way it does with PCs.",
               "TCP cannot carry sensor data the way it carries ordinary traffic."
             ],
             correctAnswer: 1,
-            explanation: "IoT devices commonly ship with weak defaults; managing them is a top security concern."
+            explanation: "All real-world systems have errors or design flaws that can be exploited; regular software updates help fix them."
           }
         ]
       }

@@ -25,26 +25,26 @@ The protocol facts and architectural ideas most likely to appear on the exam.
       exercise: {
         questions: [
           {
-            question: "The Internet uses ___-switched delivery, not circuit-switched.",
+            question: "Data sent through the Internet are broken into ___ that may take different paths.",
             options: [
-              "packet",
-              "circuit",
-              "frame",
-              "message"
+              "packets",
+              "circuits",
+              "protocols",
+              "addresses"
             ],
             correctAnswer: 0,
-            explanation: "Packet switching is foundational to the Internet (vs. dedicated circuits in old phone systems)."
+            explanation: "Data streams are split into chunks carried in packets, and each packet is routed on its own."
           },
           {
-            question: "A protocol that provides reliable, ordered, error-checked delivery between two endpoints is ___",
+            question: "A protocol that makes sure every packet arrives and puts the data back in order is ___",
             options: [
               "UDP",
               "IP",
               "TCP",
-              "DNS"
+              "HTTP"
             ],
             correctAnswer: 2,
-            explanation: "TCP's defining job."
+            explanation: "TCP provides reliable, ordered delivery; UDP and IP do not guarantee it, and HTTP is the Web's protocol."
           }
         ]
       }
@@ -58,24 +58,23 @@ The protocol facts and architectural ideas most likely to appear on the exam.
 | Term | Definition |
 |------|-----------|
 | Protocol | An agreed set of rules for communication. |
-| Packet | A unit of data with headers (source, destination, etc.) plus payload. |
-| IP | Routes packets to destination addresses (best-effort). |
-| TCP | Adds reliable, ordered, error-checked delivery on top of IP. |
-| UDP | Connectionless, faster, no delivery guarantee. |
-| HTTP | Application-layer request/response for the web. |
-| HTTPS | HTTP over TLS — encrypted and authenticated. |
-| DNS | Domain → IP resolution. |
-| TLS | Encrypts a TCP connection; authenticates server via certificate. |
+| Packet | A chunk of data plus metadata used for routing and reassembly. |
+| IP | Addresses packets and routes them across networks. |
+| TCP | Adds reliable, ordered delivery: lost packets are resent. |
+| UDP | No guarantee of delivery or order; less waiting. |
+| HTTP | The protocol of the World Wide Web. |
+| HTTPS | HTTP with encryption, using a certificate from a certificate authority. |
+| World Wide Web | A system of linked pages, programs, and files that uses the Internet. |
 | Router | A device that forwards packets toward their destination. |
-| CDN | Geographically distributed caching of content. |
+| Scalability | The capacity to change in size and scale to meet new demands. |
 | IPv6 | Successor to IPv4 with 128-bit addresses. |
 
 ## Common Exam Pitfalls
 
-- "TCP and IP are the same protocol." (No — TCP is transport, IP is routing.)
-- "UDP is unreliable, so it's bad." (No — it's a deliberate trade-off for low latency.)
-- "HTTPS protects me from any threat." (No — it protects in transit, not from phishing or compromised servers.)
-- "DNS encrypts traffic." (No — DNS resolves names; encryption is TLS's job.)
+- "TCP and IP are the same protocol." (No — TCP makes delivery reliable, IP routes packets.)
+- "UDP is unreliable, so it's bad." (No — it's a deliberate trade-off for low delay.)
+- "HTTPS protects me from any threat." (No — it protects data in transit, not from phishing or compromised servers.)
+- "The Internet and the Web are the same thing." (No — the Web uses the Internet.)
       `
     },
     {
@@ -84,19 +83,19 @@ The protocol facts and architectural ideas most likely to appear on the exam.
       content: `
 **Applied Recall** ✍️
 
-1) The protocol that resolves human names to IP addresses is _______.
+1) The protocol used by the World Wide Web is _______.
 
 2) The transport protocol that guarantees ordered, reliable delivery is _______.
 
-3) The transport protocol used for real-time apps that prefer low latency over retransmission is _______.
+3) The protocol used for real-time apps that prefer low delay over resending lost data is _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["DNS", "TCP", "UDP"],
-        hint1: "Domain Name System.",
+        correctAnswers: ["HTTP", "TCP", "UDP"],
+        hint1: "HyperText Transfer Protocol.",
         hint2: "Three-letter, starts with T.",
         hint3: "Three-letter, starts with U.",
-        explanation: "DNS for naming, TCP for reliability, UDP for speed."
+        explanation: "HTTP for the Web, TCP for reliability, UDP for speed."
       }
     },
     {
@@ -109,22 +108,22 @@ The protocol facts and architectural ideas most likely to appear on the exam.
         dropdowns: [
           {
             label: "The padlock icon in a browser indicates ___",
-            options: ["HTTPS / TLS is in use", "the site is owned by a bank", "the page cannot be hacked", "no cookies are stored"]
+            options: ["HTTPS encryption is in use", "the site is owned by a bank", "the page cannot be hacked", "no cookies are stored"]
           },
           {
-            label: "A 404 status means ___",
-            options: ["the requested resource was not found", "the server is temporarily overloaded or down", "the user is not authorized to view it", "the request was permanently moved to a new URL"]
+            label: "Packets sent across the Internet may arrive ___",
+            options: ["in order, out of order, or not at all", "only in the exact order they were sent", "only after every router approves them", "only over one fixed path per message"]
           },
           {
             label: "Routing decisions on the Internet are made by ___",
-            options: ["routers running routing algorithms", "DNS servers that look up each hop", "web browsers choosing each path", "a central Internet control server"]
+            options: ["routers running routing algorithms", "web servers that look up each hop", "web browsers choosing each path", "a central Internet control server"]
           }
         ],
-        correctAnswers: ["HTTPS / TLS is in use", "the requested resource was not found", "routers running routing algorithms"],
+        correctAnswers: ["HTTPS encryption is in use", "in order, out of order, or not at all", "routers running routing algorithms"],
         hint1: "Lock = encryption.",
-        hint2: "404 is the famous code.",
+        hint2: "No ordering or delivery guarantee from IP.",
         hint3: "Routers route.",
-        explanation: "Padlock = TLS. 404 = not found. Routers handle routing."
+        explanation: "Padlock = encrypted connection. Packets may arrive in any order or be lost. Routers handle routing."
       }
     },
     {
@@ -133,11 +132,10 @@ The protocol facts and architectural ideas most likely to appear on the exam.
       content: `
 ## Final Exam Tips
 
-- Be ready to identify: TCP vs UDP, IP vs HTTP, HTTPS vs HTTP, DNS's job.
-- Know the layered model: change at one layer doesn't require changes at others.
-- Know that the Internet provides best-effort packet delivery; reliability is added by TCP on top.
-- Recognize architecture trade-offs: client/server vs P2P, centralized vs distributed.
-- HTTPS protects in transit; it does not solve phishing, social engineering, or server-side breaches.
+- Be ready to identify: TCP vs UDP, IP vs HTTP, HTTPS vs HTTP, the Internet vs the Web.
+- Packets carry data + metadata and may arrive in order, out of order, or not at all; TCP adds reliability.
+- Open protocols and a scalable design let the Internet grow; redundant paths make it fault-tolerant.
+- HTTPS protects data in transit; it does not stop phishing or a compromised server.
       `
     },
     {

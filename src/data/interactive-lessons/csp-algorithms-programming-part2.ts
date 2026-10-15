@@ -65,7 +65,7 @@ An **algorithm** is a step-by-step plan; a **program** is that plan written in a
 **Pseudocode**
 
     PROCEDURE areaOfRect(w, h) {
-      RETURN w * h
+      RETURN(w * h)
     }
 
 **Equivalent ideas in any language**
@@ -128,10 +128,10 @@ The call evaluates each argument **before** entering the procedure. Inside the p
           },
           {
             label: "In PROCEDURE areaOfRect(w, h), the names w and h are ___",
-            options: ["parameters", "arguments", "returns", "globals"]
+            options: ["parameters", "arguments", "returns", "calls"]
           },
           {
-            label: "After RETURN x, the procedure ___",
+            label: "After RETURN(x), the procedure ___",
             options: ["exits immediately and sends x back", "finishes its loop, then sends x back", "displays x and keeps running", "stores x and continues to the next line"]
           }
         ],
@@ -151,7 +151,7 @@ The call evaluates each argument **before** entering the procedure. Inside the p
 - The exam will give you BOTH a block-style and a text-style version of pseudocode. They mean the same thing — pick whichever you read faster.
 - A procedure CALL replaces the call site with the procedure's RETURN value.
 - Parameters are **local**: changing a parameter inside doesn't change the caller's variable.
-- Watch the difference: DISPLAY(x) shows x but doesn't return it; RETURN x yields a value but doesn't print.
+- Watch the difference: DISPLAY(x) shows x but doesn't return it; RETURN(x) yields a value but doesn't print.
       `
     },
     {

@@ -218,7 +218,7 @@ System.out.println(letters + digits);
 ## Where Strings Go Next
 
 - **Selection and iteration (Unit 2):** the traversal patterns from Part 5 are the standard String algorithms of the course: counting, filtering, reversing, and finding substrings with a property.
-- **Writing classes:** a class you write can define \`toString\`, and Java calls it automatically whenever an object of that class is concatenated with a String.
+- **Writing classes:** a method that builds and returns a String from an object's fields uses the same concatenation rules from Part 2, including left-to-right evaluation.
 - **Data collections:** arrays and lists of Strings are searched with equals and ordered with compareTo, using exactly the conditions from Part 4.
 
 ### Final Self-Check

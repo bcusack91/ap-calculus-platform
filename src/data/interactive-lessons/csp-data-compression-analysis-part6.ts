@@ -7,13 +7,35 @@ export const cspDataCompressionAnalysisPart6Data = {
       content: `
 # 🗜️ Data Compression & Analysis
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — Problem-Solving Workshop: Using Programs With Data**
 
 ---
 
-## Compression Workshop
+## Four Ways Programs Extract Information
 
-Apply compression vocabulary to estimation and design problems.
+| Process | Example |
+|---------|---------|
+| **Transform** every element | Double every number in a list; add a parent's email to every student record. |
+| **Filter** the data set | Keep only the positive numbers; keep only students who signed up for band. |
+| **Combine or compare** | Add up a list of numbers; find the student with the highest GPA. |
+| **Visualize** | Show the data as a chart, graph, or other visual. |
+
+Tools such as **spreadsheets**, **search tools**, and **data filtering systems** help people organize data, find information efficiently, and recognize patterns. Programs are used **iteratively and interactively**: you run a program, look at the result, adjust, and run it again.
+
+A filter in AP pseudocode:
+
+\`\`\`
+scores ← [72, 95, 88, 60, 91]
+high ← []
+FOR EACH s IN scores
+{
+    IF (s ≥ 90)
+    {
+        APPEND(high, s)
+    }
+}
+DISPLAY(high)
+\`\`\`
       `
     },
     {
@@ -25,26 +47,26 @@ Apply compression vocabulary to estimation and design problems.
       exercise: {
         questions: [
           {
-            question: "A 1024×1024 24-bit raw image is ~3 MB. After JPEG it's about ___",
+            question: "What does the filter program above display?",
             options: [
-              "3 KB",
-              "300 KB",
-              "3 MB",
-              "30 MB"
+              "[95, 88, 91]",
+              "[95, 91]",
+              "[72, 60]",
+              "[91, 95]"
             ],
             correctAnswer: 1,
-            explanation: "JPEG typically yields ~10× compression with imperceptible loss."
+            explanation: "Only 95 and 91 are at least 90, and APPEND adds them in the order the loop reaches them."
           },
           {
-            question: "A 60-second 16-bit stereo CD-quality audio file is ~10 MB raw. After MP3 (192 kbps) it's about ___",
+            question: "A teacher wants a new list in which every quiz score is increased by 5. Which process is this?",
             options: [
-              "1.4 MB",
-              "14 MB",
-              "140 MB",
-              "1.4 KB"
+              "filtering by one condition",
+              "transforming each element",
+              "combining two data sources",
+              "cleaning the abbreviations"
             ],
-            correctAnswer: 0,
-            explanation: "192 kbps × 60 s / 8 = 1,440,000 bytes ≈ 1.4 MB."
+            correctAnswer: 1,
+            explanation: "Changing every element of a data set in the same way is a transformation."
           }
         ]
       }
@@ -53,34 +75,38 @@ Apply compression vocabulary to estimation and design problems.
       id: "cspdca6-content",
       type: 'text' as const,
       content: `
-## Worked: Image Sizing
+## Worked: Transform
 
-| Format | 1024×1024 24-bit |
-|--------|-----------------|
-| Raw RGB | 3 MB |
-| PNG (lossless) | 1–2 MB (depends on content) |
-| JPEG (high quality) | ~300 KB |
-| WebP / AVIF | ~150–200 KB |
+\`\`\`
+prices ← [4, 10, 7]
+doubled ← []
+FOR EACH p IN prices
+{
+    APPEND(doubled, p * 2)
+}
+\`\`\`
 
-## Worked: Audio Sizing
+After the loop, doubled is [8, 20, 14].
 
-| Format | 60 s stereo |
-|--------|-------------|
-| Raw 16-bit 44.1 kHz | ~10 MB |
-| FLAC (lossless) | ~5–7 MB |
-| MP3 192 kbps | ~1.4 MB |
-| Opus 64 kbps | ~480 KB |
+## Worked: Combine or Compare
 
-## Worked: Choosing A Format
+Find the highest GPA in a list (lists on the AP exam start at index 1):
 
-| Use case | Best format |
-|---------|-------------|
-| Legal contract scan | PDF/A or PNG (lossless) |
-| Casual photo | JPEG (or WebP) |
-| Music distribution | AAC / Opus / MP3 |
-| Streaming video | H.264 / AV1 |
-| Medical image | DICOM (often with lossless option) |
-| ZIP backup | gzip / 7z (lossless) |
+\`\`\`
+best ← gpas[1]
+FOR EACH g IN gpas
+{
+    IF (g > best)
+    {
+        best ← g
+    }
+}
+DISPLAY(best)
+\`\`\`
+
+## Worked: Patterns Emerge
+
+Combining data sources, **clustering** data (grouping similar items, such as customers with similar buying habits), and **classifying** data (sorting items into categories) are all parts of using programs to gain insight. Patterns often appear only **after** the data are transformed, for example after converting raw timestamps into "hour of the day" and counting trips per hour.
       `
     },
     {
@@ -89,19 +115,19 @@ Apply compression vocabulary to estimation and design problems.
       content: `
 **Applied Recall** ✍️
 
-1) A 1024×1024 24-bit image as raw RGB is about _______ MB.
+1) Keeping only the elements of a data set that meet a condition is called _______.
 
-2) JPEG vs raw typically achieves ~_______ × compression for typical photos.
+2) After the transform code runs on [4, 10, 7], the second element of doubled is _______.
 
-3) For uncompressed CD-quality stereo audio, 1 second is roughly _______ KB.
+3) After the filter program at the top of this part runs, LENGTH(high) is _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["3", "10", "176"],
-        hint1: "1024 × 1024 × 3.",
-        hint2: "Order of magnitude.",
-        hint3: "44,100 × 2 × 2 / 1000.",
-        explanation: "Raw image = 3 MB. JPEG ≈ 10× smaller. CD audio ≈ 176 KB/s stereo."
+        correctAnswers: ["filtering", "20", "2"],
+        hint1: "Like a coffee filter, it lets only some things through.",
+        hint2: "10 × 2.",
+        hint3: "Count the scores that are at least 90.",
+        explanation: "Filtering keeps matching elements. doubled = [8, 20, 14], so its second element is 20. high = [95, 91] has length 2."
       }
     },
     {
@@ -113,34 +139,35 @@ Apply compression vocabulary to estimation and design problems.
       exercise: {
         dropdowns: [
           {
-            label: "For a music streaming service prioritizing low data cost, the right choice is ___",
-            options: ["Opus or AAC at moderate bitrate", "uncompressed WAV at CD quality", "lossless FLAC for every listener on every plan", "MP3 at the highest bitrate"]
+            label: "Finding the student with the highest GPA is an example of ___",
+            options: ["combining or comparing data", "transforming every element", "filtering the data set", "cleaning the data set"]
           },
           {
-            label: "For an archival scan that must remain identical decades from now, the right choice is ___",
-            options: ["lossless format (PDF/A, TIFF lossless, PNG)", "lossy format (JPEG, WebP, HEIC)", "lossy format at maximum quality (JPEG 100)", "proprietary format (the scanner's own)"]
+            label: "A spreadsheet that sorts and charts sales by month mainly helps users ___",
+            options: ["find trends in the information", "compress the data losslessly", "remove bias from the data", "encrypt the sales records"]
           },
           {
-            label: "For a streaming video service, the right choice is ___",
-            options: ["lossy codec (H.264 / H.265 / AV1) with adaptive bitrate", "lossless codec (FFV1 / HuffYUV) at a fixed bitrate", "lossy codec (H.264) at one fixed high bitrate", "uncompressed video (raw RGB frames) for best quality"]
+            label: "Grouping customers with similar buying habits is called ___ the data",
+            options: ["clustering", "cleaning", "compressing", "encrypting"]
           }
         ],
-        correctAnswers: ["Opus or AAC at moderate bitrate", "lossless format (PDF/A, TIFF lossless, PNG)", "lossy codec (H.264 / H.265 / AV1) with adaptive bitrate"],
-        hint1: "Efficient lossy audio.",
-        hint2: "Archive = lossless.",
-        hint3: "Streaming = lossy + adaptive.",
-        explanation: "Opus/AAC for streaming audio. Lossless for archives. Lossy + adaptive for video."
+        correctAnswers: ["combining or comparing data", "find trends in the information", "clustering"],
+        hint1: "One answer comes from comparing every element.",
+        hint2: "Spreadsheets organize and reveal trends.",
+        hint3: "Similar items end up in the same cluster.",
+        explanation: "Finding a maximum compares elements. Spreadsheets help organize and find trends. Grouping similar items is clustering."
       }
     },
     {
       id: "cspdca6-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: Workshop
+## AP Exam Strategy: Programs and Data
 
-- Memorize raw sizes: 24-bit image = W × H × 3 bytes. CD stereo = ~176 KB/s.
-- Match format to use case: archive → lossless; consumer media → lossy.
-- "Adaptive bitrate" is the right answer for variable-bandwidth video delivery.
+- Name the process: transform, filter, combine/compare, or visualize.
+- A filter = FOR EACH + IF + APPEND into a new list. A transform = FOR EACH + APPEND of a changed value.
+- Trace code carefully: lists start at index 1, and APPEND adds to the end.
+- Programs are used iteratively and interactively; insight comes from running, inspecting, and adjusting.
       `
     },
     {
@@ -148,30 +175,45 @@ Apply compression vocabulary to estimation and design problems.
       type: 'multiple-choice' as const,
       content: `
 **AP-Style Application 🎯**
+
+Use this program for the first question.
+
+\`\`\`
+temps ← [50, 68, 75, 59]
+warm ← 0
+FOR EACH t IN temps
+{
+    IF (t > 60)
+    {
+        warm ← warm + 1
+    }
+}
+DISPLAY(warm)
+\`\`\`
       `,
       exercise: {
         questions: [
           {
-            question: "A startup serves user photos. Storage is fine but mobile users complain about data usage. The single highest-leverage change is ___",
+            question: "What does the program display?",
             options: [
-              "serve the full-resolution originals and let phones shrink them on screen.",
-              "serve compressed, device-sized versions in modern formats like WebP.",
-              "serve every photo as a lossless PNG so quality never drops on phones.",
-              "serve photos over UDP instead of TCP to cut the bytes users download."
+              "1",
+              "2",
+              "3",
+              "4"
             ],
             correctAnswer: 1,
-            explanation: "Serving smaller modern image formats reduces bandwidth dramatically."
+            explanation: "Only 68 and 75 are greater than 60, so warm is increased twice."
           },
           {
-            question: "A school board wants to archive 50 years of student records. The most appropriate combination is ___",
+            question: "A researcher runs a program on a data set, notices an odd pattern in the output, changes the filter condition, and runs it again. This best illustrates that ___",
             options: [
-              "lossy JPEG scans of every record, chosen to minimize storage costs.",
-              "lossless, standardized formats with checksums and a plan to migrate them.",
-              "plain text files only, with no metadata describing what each field means.",
-              "one large encrypted archive whose format and key are left undocumented."
+              "a program must be correct on its first run to be useful",
+              "programs are used iteratively and interactively to gain insight",
+              "filtering a data set always removes any bias it contains",
+              "data must be compressed before a program can process them"
             ],
             correctAnswer: 1,
-            explanation: "Long-term archival = lossless + standards + checksums + migration plan."
+            explanation: "Processing data is an iterative, interactive process: each run can suggest the next question to ask."
           }
         ]
       }

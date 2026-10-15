@@ -7,7 +7,7 @@ export const cspCollaborationDevelopmentPart3Data = {
       content: `
 # 🤝 Collaboration in Development
 
-**Part 3 of 7 — Patterns & Examples**
+**Part 3 of 7 — Pair Programming, Online Tools, and Crowdsourcing**
 
 ---
 
@@ -15,11 +15,10 @@ export const cspCollaborationDevelopmentPart3Data = {
 
 | Pattern | Description |
 |---------|-------------|
-| **Pair programming** | Two devs at one keyboard. |
-| **Code review** | Async review before merge. |
-| **Mob / ensemble** | Whole team works on one problem. |
-| **Open source** | Public project; anyone can contribute. |
-| **Crowdsourcing** | Many small contributors → big shared output. |
+| **Pair programming** | Two programmers at one workstation: a driver and a navigator. |
+| **Shared online tools** | Teammates edit the same documents and code and leave feedback. |
+| **Crowdsourcing** | Getting input or information from a large number of people via the Internet. |
+| **Open source** | Code that is shared publicly so others can use and build on it, with credit. |
       `
     },
     {
@@ -39,7 +38,7 @@ export const cspCollaborationDevelopmentPart3Data = {
               "monitors network traffic to make sure the driver stays online."
             ],
             correctAnswer: 1,
-            explanation: "Driver types tactical code; navigator thinks strategically."
+            explanation: "The driver types; the navigator reviews each line and thinks ahead. Partners switch roles regularly."
           },
           {
             question: "Wikipedia is most accurately described as ___",
@@ -50,7 +49,7 @@ export const cspCollaborationDevelopmentPart3Data = {
               "a closed-source proprietary program licensed to participating schools."
             ],
             correctAnswer: 1,
-            explanation: "Wikipedia is the canonical crowdsourcing example."
+            explanation: "Wikipedia gathers its content from a very large number of people over the Internet, which is crowdsourcing."
           }
         ]
       }
@@ -61,18 +60,16 @@ export const cspCollaborationDevelopmentPart3Data = {
       content: `
 ## Pair Programming
 
-Two developers, one workstation: **driver** writes, **navigator** reviews live, they swap roles regularly. Catches errors instantly, transfers skills, decisions get challenged in real time.
+Two programmers share one workstation. The **driver** writes code while the **navigator** reviews each line and thinks ahead, and they **swap roles** regularly. Errors are caught as they are typed, skills spread between partners, and both people understand the code.
 
-## Code Review
+## Online Collaboration Tools
 
-The dominant collaboration pattern in modern teams. A developer opens a **pull request**; teammates review the diff, leave inline comments, approve or request changes. Good review checks: correctness, tests, readability, edge cases, security/privacy.
+Online tools support collaboration by letting programmers share ideas, documents, and code and give feedback, even when teammates are in different places. Shared documents, shared code editors, and comment threads are common examples.
 
-## Open Source And Crowdsourcing
+## Crowdsourcing and Open Source
 
-- **Open source**: source is public; anyone can fork and propose changes.
-- **Crowdsourcing**: many people contribute small pieces (Wikipedia, OpenStreetMap).
-
-Both rely on **clear contribution guidelines** and **maintainers** who curate quality.
+- **Crowdsourcing** is obtaining input or information from a large number of people via the Internet: an online encyclopedia, drivers reporting road closures to a map app, or volunteers contributing data to citizen science. It also offers new models for collaboration, such as connecting a cause with funding from many people.
+- **Open source** code is publicly available for others to use and build on. Code you use from an open-source project still has to be acknowledged in your program.
       `
     },
     {
@@ -83,17 +80,17 @@ Both rely on **clear contribution guidelines** and **maintainers** who curate qu
 
 1) In pair programming, the person typing is called the _______.
 
-2) A proposed change submitted for review is often packaged as a _______ request.
+2) Obtaining input or information from a large number of people via the Internet is called _______.
 
-3) A project whose source code is publicly readable is called _______ source.
+3) Code that is shared publicly so others can use and build on it is called _______ source code.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["driver", "pull", "open"],
-        hint1: "Tactical role.",
-        hint2: "Common Git term.",
-        hint3: "Public + readable.",
-        explanation: "Driver/navigator pair pattern. Pull request opens review. Open source = public."
+        correctAnswers: ["driver", "crowdsourcing", "open"],
+        hint1: "They drive the keyboard.",
+        hint2: "Sourcing from the crowd.",
+        hint3: "The opposite of closed.",
+        explanation: "The driver types while the navigator reviews. Crowdsourcing gathers input from many people online. Open-source code is publicly available."
       }
     },
     {
@@ -105,23 +102,23 @@ Both rely on **clear contribution guidelines** and **maintainers** who curate qu
       exercise: {
         dropdowns: [
           {
-            label: "Code review is most useful for ___",
-            options: ["catching issues early and sharing knowledge across the team", "guaranteeing the merged code contains no bugs at all", "letting senior developers rewrite junior developers' code", "measuring how many lines each team member writes"]
+            label: "Shared online documents and code editors most directly help a team ___",
+            options: ["share work and give feedback from anywhere", "make the finished program run faster", "skip testing the program", "keep code hidden from teammates"]
           },
           {
-            label: "Crowdsourcing relies on ___",
-            options: ["clear guidelines and maintainers to curate quality", "a single expert writing and approving every contribution", "contributors who are paid employees of the project owner", "keeping the source code closed to outsiders"]
+            label: "A map app that lets drivers report road closures is using ___",
+            options: ["crowdsourcing", "pair programming", "encryption", "a heuristic"]
           },
           {
             label: "A pair programming pair should ___",
             options: ["swap driver / navigator roles regularly", "keep the stronger coder as driver throughout", "split the code and write separate halves", "let the navigator type while the driver reviews"]
           }
         ],
-        correctAnswers: ["catching issues early and sharing knowledge across the team", "clear guidelines and maintainers to curate quality", "swap driver / navigator roles regularly"],
-        hint1: "Two birds, one stone.",
-        hint2: "Open ≠ unmoderated.",
-        hint3: "Avoid one-sided fatigue.",
-        explanation: "Code review = catch + learn. Crowdsourcing needs governance. Pair programming swaps roles."
+        correctAnswers: ["share work and give feedback from anywhere", "crowdsourcing", "swap driver / navigator roles regularly"],
+        hint1: "Online tools support sharing and feedback.",
+        hint2: "Input from many people via the Internet.",
+        hint3: "Both partners should do both jobs.",
+        explanation: "Online tools let teammates share and give feedback. Collecting reports from many drivers is crowdsourcing. Pair programmers switch roles."
       }
     },
     {
@@ -130,10 +127,10 @@ Both rely on **clear contribution guidelines** and **maintainers** who curate qu
       content: `
 ## AP Exam Strategy: Collaboration Patterns
 
-- Pair / mob = synchronous, intense, fast feedback.
-- Code review = async, scalable, durable record.
-- Open source = public participation; needs maintainers.
-- Crowdsourcing = many small contributions; needs quality controls.
+- Pair programming = driver + navigator, switching roles.
+- Online tools = sharing and feedback on ideas, documents, and code.
+- Crowdsourcing = input from many people via the Internet; it can enhance what people accomplish together.
+- Open-source code is free to use but still must be acknowledged.
       `
     },
     {
@@ -145,26 +142,26 @@ Both rely on **clear contribution guidelines** and **maintainers** who curate qu
       exercise: {
         questions: [
           {
-            question: "A team adds 5 new developers in one month. Knowledge transfer becomes painful. The most appropriate practice to add is ___",
+            question: "A team adds 5 new programmers in one month, and the newcomers struggle to understand the existing code. Which practice would help most?",
             options: [
-              "silent solo work so each new developer learns by doing alone.",
-              "pair programming and code review so expertise spreads as work happens.",
-              "longer one-shot onboarding lectures from senior staff at month's end.",
-              "larger less-frequent commits so reviewers see fewer separate changes."
+              "silent solo work, so each newcomer learns by doing everything alone.",
+              "pair programming, so expertise spreads as the work happens.",
+              "one long lecture from a senior programmer at the end of the month.",
+              "a separate module for each newcomer, with no contact with the team."
             ],
             correctAnswer: 1,
-            explanation: "Pair programming and code review spread knowledge organically."
+            explanation: "Pairing a newcomer with an experienced programmer spreads knowledge while real work gets done."
           },
           {
-            question: "An open-source project receives a wave of low-quality PRs. The most CSP-aligned response is ___",
+            question: "A student's program uses a procedure copied from an open-source project. Which statement is accurate?",
             options: [
-              "close the project to outsiders, archive it, and keep it strictly internal.",
-              "add contribution guidelines, automated checks, and active maintainer review.",
-              "merge every incoming pull request and thank all contributors.",
-              "reject all pull requests for the next 90 days regardless of their quality."
+              "Open-source code may be used without any acknowledgment.",
+              "Open-source code cannot be used in a student's program at all.",
+              "Pasting the procedure in makes it the student's own work.",
+              "The procedure must be acknowledged, naming its source."
             ],
-            correctAnswer: 1,
-            explanation: "Crowdsourcing scales only with governance."
+            correctAnswer: 3,
+            explanation: "Open-source code may be used, but code from another source must be acknowledged, naming its origin or author."
           }
         ]
       }

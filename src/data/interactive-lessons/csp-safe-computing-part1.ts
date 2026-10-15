@@ -92,17 +92,13 @@ Companies collect this data for targeted advertising, product improvement, and a
 ### Multi-Factor Authentication (MFA)
 Using TWO OR MORE different factors together. Example: password (know) + phone code (have).
 
-### Strong Password Practices
-- Use long, unique passwords for each account
-- Combine uppercase, lowercase, numbers, and symbols
-- NEVER reuse passwords across sites
-- Use a password manager to store them securely
+Each step of MFA adds a new layer of security that must be broken to gain unauthorized access.
 
-## Authorization vs Authentication
-| Concept | Question Answered |
-|---------|-----------------|
-| **Authentication** | "Who are you?" (Verify identity) |
-| **Authorization** | "What are you allowed to do?" (Verify permissions) |
+### Strong Password Practices
+A **strong password** is easy for the user to remember but difficult for someone else to guess based on knowledge of that user.
+- Use long, unique passwords for each account
+- Avoid names, birthdays, and other facts people could learn about you
+- NEVER reuse passwords across sites
 
 ## Digital Footprint
 Everything you do online creates a **digital footprint** — a trail of data including:
@@ -148,19 +144,19 @@ Everything you do online creates a **digital footprint** — a trail of data inc
             options: ['Something you ARE (biometric)', 'Something you HAVE (a device)', 'Something you KNOW (a password)', 'Multi-factor (two factors in one)']
           },
           {
-            label: 'Checking if a logged-in user has permission to delete files is ___',
-            options: ['Authorization', 'Authentication', 'Encryption', 'Hashing']
+            label: 'Requiring a password plus a code sent to your phone is ___',
+            options: ['Multifactor authentication', 'Single-factor authentication', 'Encryption', 'Keylogging']
           },
           {
             label: 'Using the same password on every website is dangerous because ___',
             options: ['If one site is breached, all accounts are compromised', 'Passwords expire faster when used on several sites', 'Websites detect and lock out reused passwords', 'Reused passwords are stored without encryption']
           }
         ],
-        correctAnswers: ['Something you ARE (biometric)', 'Authorization', 'If one site is breached, all accounts are compromised'],
+        correctAnswers: ['Something you ARE (biometric)', 'Multifactor authentication', 'If one site is breached, all accounts are compromised'],
         hint1: 'Biometrics = body-based identification.',
-        hint2: 'Already logged in — now checking permissions.',
+        hint2: 'Two different categories of evidence.',
         hint3: 'One breach unlocks everything.',
-        explanation: 'Fingerprint = biometric. Permission check = authorization. Password reuse = cascade risk.'
+        explanation: 'Fingerprint = biometric. Password + phone code = multifactor. Password reuse = cascade risk.'
       }
     },
     {
@@ -172,7 +168,7 @@ Everything you do online creates a **digital footprint** — a trail of data inc
 - Know what **PII** is — and that INDIRECT PII combined can identify someone
 - Three auth factors: know (password), have (phone), are (fingerprint)
 - **Multi-factor** = two DIFFERENT factors (password + password is NOT multi-factor)
-- **Authentication** (who are you?) vs **Authorization** (what can you do?) — know the difference
+- A **strong password** is easy for you to remember but hard for others to guess
 - Digital footprint is largely permanent — even deleted content may persist
 - Cookies track behavior; Terms of Service often grant data collection rights
       `
@@ -190,22 +186,22 @@ Everything you do online creates a **digital footprint** — a trail of data inc
             options: [
               'Single-factor authentication',
               'Multi-factor authentication',
-              'Role-based authorization',
+              'Role-based permission',
               'Public-key encryption'
             ],
             correctAnswer: 1,
             explanation: 'Password = something you know. Fingerprint = something you are. Using two DIFFERENT factors = multi-factor authentication. This is much more secure than a password alone.'
           },
           {
-            question: 'A data breach exposes millions of users email addresses and hashed passwords. Users who reused that password on other sites are at risk because:',
+            question: 'A data breach exposes millions of users\' email addresses and passwords. Users who reused that password on other sites are at risk because:',
             options: [
               'The breach spreads directly to every site using that email',
-              'Attackers can try those stolen credentials on other services',
+              'Attackers can try those stolen passwords on other services',
               'Their email address stops working on other sites',
-              'The hashed passwords cannot be reversed by attackers'
+              'The stolen passwords expire on every other site at once'
             ],
             correctAnswer: 1,
-            explanation: 'If stolen credentials work on other sites (because the user reused the password), attackers gain access to multiple accounts. This is called credential stuffing and is why password reuse is dangerous.'
+            explanation: 'If the stolen email and password work on other sites (because the user reused the password), attackers gain access to multiple accounts. This is why password reuse is dangerous.'
           }
         ]
       }

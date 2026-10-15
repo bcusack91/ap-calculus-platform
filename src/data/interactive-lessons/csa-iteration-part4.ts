@@ -96,7 +96,7 @@ for (int k = 1; k <= 10; k++) {
 | Does \`d\` divide \`n\`? | \`n % d == 0\` |
 | Is \`n\` divisible by 3 but not by 9? | \`n % 3 == 0 && n % 9 != 0\` |
 
-Write the odd test as \`n % 2 != 0\`, not \`n % 2 == 1\`. In Java the remainder takes the sign of the left operand, so \`-3 % 2\` is -1, and the \`== 1\` version wrongly reports that -3 is not odd.
+For the nonnegative values the AP course uses with %, \`n % 2 == 1\` and \`n % 2 != 0\` are both correct odd tests. Remainders with a negative left operand are outside the course.
 
 > 🎯 **AP Connection:** A test such as \`n % d == 0\` throws an \`ArithmeticException\` when \`d\` is 0. AP problems state preconditions such as "d > 0" so that you do not need to guard against it.
       `

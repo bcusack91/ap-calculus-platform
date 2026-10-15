@@ -28,23 +28,23 @@ Cheat sheet of the patterns most likely to appear on exam day.
             question: "A procedure parameter named n receives a copy of the caller's argument. Modifying n inside the procedure ___",
             options: [
               "changes the caller's variable as well.",
-              "does NOT change the caller's variable.",
+              "does not affect the caller.",
               "causes an error when the procedure ends.",
               "requires a RETURN to take effect."
             ],
             correctAnswer: 1,
-            explanation: "Parameters in AP pseudocode are local; the caller's variable is unaffected."
+            explanation: "In AP pseudocode, a parameter holds a copy of the argument's value; the caller's variable is unaffected."
           },
           {
-            question: "A program reads list ← INPUT() and the user provides nothing. After the FOR EACH loop, the accumulator total equals ___",
+            question: "A procedure receives an empty list. After its FOR EACH loop, the accumulator total, which started at 0, equals ___",
             options: [
               "its initial value, 0",
               "1",
               "undefined",
-              "the number of inputs requested"
+              "the length of a typical list"
             ],
             correctAnswer: 0,
-            explanation: "FOR EACH on an empty list runs the body zero times; the initial value is preserved."
+            explanation: "FOR EACH on an empty list runs the body zero times, so the initial value is kept."
           }
         ]
       }
@@ -57,29 +57,27 @@ Cheat sheet of the patterns most likely to appear on exam day.
 
 | Goal | Pattern shape |
 |------|---------------|
-| First match | Loop with early RETURN; default RETURN after. |
-| For-all | Loop with early RETURN FALSE; RETURN TRUE after. |
-| Exists | Loop with early RETURN TRUE; RETURN FALSE after. |
-| Count / Sum | Initialize to identity, accumulate inside loop. |
-| Min / Max | Initialize from list[1], compare each element. |
-| Filter | Build new list with APPEND inside IF. |
-| Map | Build new list with APPEND of f(element). |
-| Group | Build a dictionary keyed by group. |
+| First match | Loop with an early RETURN; a default RETURN after the loop. |
+| For-all | Loop with an early RETURN(false); RETURN(true) after. |
+| Exists | Loop with an early RETURN(true); RETURN(false) after. |
+| Count / Sum | Start at 0, add inside the loop. |
+| Min / Max | Start from list[1], compare each element. |
+| Keep some elements | Start with result ← [], then APPEND(result, x) inside an IF. |
+| Every pair | Nested loops; the inner loop starts one past the outer index. |
 
 ## Common Bugs
 
-- **Off-by-one** (1 vs LENGTH(list), or pair-loop ending at LENGTH instead of LENGTH−1).
+- **Off-by-one** (stopping at LENGTH(list) − 1 instead of LENGTH(list), or a pair loop reading past the end).
 - **Strict vs. non-strict** (> vs ≥) — always re-read the problem statement.
-- **Overwriting first match** — missing early RETURN.
+- **Overwriting the first match** — missing early RETURN.
 - **Empty input not handled** — guard before dividing.
-- **Mutating a parameter and expecting the caller to see it** — they will not.
+- **Expecting a parameter change to reach the caller** — it will not.
 
 ## Efficiency Quick Hits
 
-- Replace nested loops with a single pass + dictionary ($O(n^{2})$ → O(n)).
-- Pre-sort once, then linear scan, instead of repeated max searches.
-- Cache repeated computations.
-- Pick the right data structure: list for ordered, set for membership, dictionary for keyed lookup.
+- Count the steps as the input grows: one pass over n items takes about n steps; checking every pair takes about n × n ÷ 2.
+- Both of those are polynomial, so both run in **reasonable** time. Trying every possible subset or ordering is exponential or factorial: **unreasonable** for large n.
+- When two procedures give the same result, prefer the one that needs fewer steps.
       `
     },
     {
@@ -90,17 +88,17 @@ Cheat sheet of the patterns most likely to appear on exam day.
 
 1) Modifying a parameter inside a procedure does NOT affect the _______.
 
-2) A doubly-nested loop where each element is compared to every other element runs in O(_______).
+2) A nested loop that compares each of 10 elements with every element after it makes _______ comparisons.
 
 3) For first-match patterns, you should _______ as soon as the match is found.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["caller", "n²", "return"],
-        hint1: "Parameters are local copies.",
-        hint2: "n times n.",
+        correctAnswers: ["caller", "45", "return"],
+        hint1: "Parameters hold copies of the arguments.",
+        hint2: "9 + 8 + 7 + … + 1.",
         hint3: "Don't keep iterating.",
-        explanation: "Parameters are local. Doubly-nested = quadratic. Early RETURN gives correctness AND efficiency."
+        explanation: "Parameters are local copies. 9 + 8 + … + 1 = 45 pair comparisons. An early RETURN gives correctness AND saves steps."
       }
     },
     {
@@ -112,23 +110,23 @@ Cheat sheet of the patterns most likely to appear on exam day.
       exercise: {
         dropdowns: [
           {
-            label: "For \"list contains target\" the most efficient structure once n is large is a ___",
-            options: ["set / hash", "sorted list with linear scan", "unsorted list with linear scan", "linked list"]
+            label: "Checking whether an UNSORTED list contains a target requires ___",
+            options: ["checking elements one by one (linear search)", "binary search on the list as it is", "looking only at the first and last elements", "comparing every pair of elements"]
           },
           {
-            label: "A procedure that uses a Boolean flag updated every iteration but no early RETURN is usually ___",
+            label: "A procedure that sets a Boolean flag every iteration but has no early RETURN is usually ___",
             options: ["vulnerable to being overwritten by later iterations", "guaranteed to stop at the first matching element", "faster because it skips the RETURN statement", "equivalent to an early-RETURN version in all cases"]
           },
           {
-            label: "For pair-comparison loops over LENGTH n, the outer loop should iterate from 1 to ___",
+            label: "In a pair-comparison loop over a list of LENGTH n, the outer index should stop after ___",
             options: ["n − 1", "n", "n + 1", "0"]
           }
         ],
-        correctAnswers: ["set / hash", "vulnerable to being overwritten by later iterations", "n − 1"],
-        hint1: "O(1) lookup.",
+        correctAnswers: ["checking elements one by one (linear search)", "vulnerable to being overwritten by later iterations", "n − 1"],
+        hint1: "Binary search needs sorted data.",
         hint2: "No early RETURN means later iterations decide.",
-        hint3: "Inner loop indexes i+1.",
-        explanation: "Sets give O(1) membership. Without early return, last iteration decides. Pair loops end one short."
+        hint3: "The inner loop starts at the outer index + 1.",
+        explanation: "Without sorted data, only a linear search works. Without an early RETURN, the last iteration decides. Pair loops end the outer index one short so the inner index stays in range."
       }
     },
     {
@@ -138,11 +136,11 @@ Cheat sheet of the patterns most likely to appear on exam day.
 ## Final Programming Tips
 
 - Always **trace** with a small example before answering loop questions.
-- "Same output, faster" → choose the lower growth rate.
+- "Same output, fewer steps" → choose the one whose step count grows more slowly.
 - "Easier maintenance / single fix point" → extract a procedure.
 - "Affects users by group at scale" → think Big Idea 5.
-- Library/built-in beats hand-rolled for well-solved problems.
-- Accept-the-AI-suggestion does NOT transfer responsibility.
+- Use a tested library procedure, with its documentation, instead of rewriting a well-solved task.
+- Code you did not write (including AI-generated code) must be acknowledged, and you remain responsible for checking it.
       `
     },
     {
@@ -154,26 +152,26 @@ Cheat sheet of the patterns most likely to appear on exam day.
       exercise: {
         questions: [
           {
-            question: "A team supports a global service. A procedure formatPhoneNumber(s) is duplicated in 14 places, each with slightly different rules. Which refactor is most appropriate?",
+            question: "A program has a procedure formatPhoneNumber(s) duplicated in 14 places, each copy with slightly different rules for different regions. Which change is most appropriate?",
             options: [
-              "Add explanatory comments to all 14 duplicate places without changing any of the underlying duplicate code itself.",
-              "Write one well-tested shared version with a region parameter and call it from all 14 places.",
-              "Delete 13 of the 14 duplicates and leave just one of them, regardless of the behavior differences between them.",
-              "Convert all 14 of the duplicates into inline machine code so that each call site has its own optimized assembly."
+              "Add explanatory comments to all 14 copies without changing any of the code.",
+              "Write one tested version with a parameter for the differences and call it everywhere.",
+              "Delete 13 of the copies and keep one, whatever the differences between them.",
+              "Rename each copy so that the 14 versions are easier to tell apart."
             ],
             correctAnswer: 1,
-            explanation: "Consolidate to a single procedure with parameters; preserve behavior differences via parameters."
+            explanation: "One procedure with a parameter keeps the regional differences while giving a single place to fix bugs. Parameters let one procedure be reused across a range of inputs."
           },
           {
-            question: "For a stream of 10 million events you must answer the query \"how many distinct user IDs have appeared so far?\". Which design is most appropriate?",
+            question: "A program must report how many different user IDs appear in a list of n IDs. It keeps a second list, seen, and APPENDs each ID only if a linear search of seen does not find it. How does the number of steps grow as n grows?",
             options: [
-              "Maintain a set of seen IDs as events arrive, and report the size of that set.",
-              "Re-scan the entire stream from the start each time the query is asked.",
-              "Sort the whole stream after every new event, then count distinct runs.",
-              "Divide the total number of events by 2 to estimate the distinct IDs."
+              "The same number of steps for any n",
+              "At most about n × n steps, a reasonable time",
+              "Twice as many steps for each ID that is added",
+              "About n! steps, an unreasonable time"
             ],
-            correctAnswer: 0,
-            explanation: "Keeping a running collection of the IDs seen so far makes each query a lookup of its size, instead of re-processing millions of events."
+            correctAnswer: 1,
+            explanation: "Each of the n IDs may be compared with up to n stored IDs, so the work is at most about n × n steps. Square growth is polynomial, which the CED calls reasonable time."
           }
         ]
       }

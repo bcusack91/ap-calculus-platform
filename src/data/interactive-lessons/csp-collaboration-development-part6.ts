@@ -13,7 +13,7 @@ export const cspCollaborationDevelopmentPart6Data = {
 
 ## Collaboration Workshop
 
-Apply collaboration vocabulary to scenarios.
+Apply interpersonal skills, collaboration models, and testing practices to AP-style team scenarios.
       `
     },
     {
@@ -28,23 +28,23 @@ Apply collaboration vocabulary to scenarios.
             question: "A team has weekly meetings where one person dominates. The most appropriate adjustment is ___",
             options: [
               "cancel all team meetings and rely entirely on private messaging instead.",
-              "use facilitated turn-taking and written agendas to draw out quieter voices.",
+              "use turn-taking so quieter voices are heard.",
               "remove the dominant person from the team to restore balance.",
               "shorten meetings so the dominant person has less time to speak."
             ],
             correctAnswer: 1,
-            explanation: "Facilitation + async patterns elevate quieter voices."
+            explanation: "Effective collaboration includes every member's voice. Turn-taking and shared agendas support communication without pushing anyone out."
           },
           {
-            question: "A code review is taking 2 weeks because the PR is huge. The best fix is ___",
+            question: "Two teammates disagree about whether their game should have a timer. Which response best shows conflict resolution?",
             options: [
-              "skip the review entirely so the team can move on to the next change.",
-              "split the PR into smaller focused changes that can each be reviewed quickly.",
-              "approve the PR with a quick \"looks good\" without reading the diff carefully.",
-              "rewrite the PR in a different programming language to make it shorter."
+              "Let whoever has more experience decide without discussion",
+              "Build the game twice and never combine the two versions",
+              "Hear both sides and try each version with users before deciding",
+              "Drop the feature so that no one has to compromise at all"
             ],
-            correctAnswer: 1,
-            explanation: "Small PRs get fast, useful review."
+            correctAnswer: 2,
+            explanation: "Conflict resolution settles a disagreement by focusing on the work: each side is heard, evidence from users is gathered, and the team decides together."
           }
         ]
       }
@@ -53,21 +53,28 @@ Apply collaboration vocabulary to scenarios.
       id: "cspcoll6-content",
       type: 'text' as const,
       content: `
-## Worked: Sizing A Pull Request
+## Worked: Resolving a Team Disagreement
 
-| PR size | Likely review experience |
-|---------|-------------------------|
-| < 50 lines | Reviewed in minutes. Specific feedback. |
-| 200 lines | Manageable. Some context-loading. |
-| 1000+ lines | "LGTM" with little real review. |
-| 10,000 lines | Effectively unreviewable. |
+1. **Communicate:** each teammate explains their idea and the reason behind it.
+2. **Negotiate:** look for a compromise, such as an optional timer.
+3. **Build consensus:** agree on a decision the whole team can support.
+4. **Document** the decision so everyone, including future teammates, knows what was chosen and why.
 
-## Worked: Onboarding A New Teammate
+## Worked: Splitting Work Into Procedures
 
-Day 1: setup environment, read README + contribution guide.
-Week 1: shadow a teammate; review small PRs.
-Week 2: pick a "first issue"; pair with mentor; submit a tiny PR.
-Month 1: handle a small feature end-to-end with code review.
+A team divides a quiz app into procedures: **loadQuestions**, **showQuestion**, **checkAnswer**, and **showScore**. Before coding, they agree on each procedure's name, parameters, and return value. Each member tests their own procedure, and the team adds the pieces to the program one at a time, an **incremental** process.
+
+## Worked: Testing a Teammate's Procedure
+
+checkAnswer(given, correct) should return true when the two answers match.
+
+| Test call | Expected result | Why test it |
+|-----------|-----------------|-------------|
+| checkAnswer("B", "B") | true | a typical correct answer |
+| checkAnswer("C", "B") | false | a typical wrong answer |
+| checkAnswer("", "B") | false | an empty answer |
+
+Give specific feedback: the failing input, the expected result, and the actual result.
       `
     },
     {
@@ -76,19 +83,19 @@ Month 1: handle a small feature end-to-end with code review.
       content: `
 **Applied Recall** ✍️
 
-1) Sharing the agenda before a meeting helps people _______ in advance.
+1) Agreeing on a compromise between two different feature requests is called _______.
 
-2) A pull request with a small number of changed lines tends to receive _______ review feedback.
+2) Testing each teammate's piece and adding pieces to the program one at a time is _______ development.
 
-3) A new teammate's first task should be _______ in scope, not a major feature.
+3) Good test cases pair each input with its expected _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["prepare", "better", "small"],
-        hint1: "Reading time.",
-        hint2: "Quality of feedback.",
-        hint3: "Build confidence.",
-        explanation: "Pre-shared agendas help preparation. Small PRs get better review. Small first tasks build confidence."
+        correctAnswers: ["negotiation", "incremental", "output"],
+        hint1: "One of the four interpersonal skills.",
+        hint2: "Small increments, each one working.",
+        hint3: "What the program should produce.",
+        explanation: "Negotiation finds a compromise. Incremental development adds working pieces one at a time. Test cases compare actual results with expected outputs."
       }
     },
     {
@@ -100,23 +107,23 @@ Month 1: handle a small feature end-to-end with code review.
       exercise: {
         dropdowns: [
           {
-            label: "A \"first issue\" labeled in a project is for ___",
-            options: ["new contributors to find an approachable starting task", "the most urgent bug the maintainers must fix next", "the oldest open issue in the project's tracker", "issues only the project's founder may work on"]
+            label: "A teammate keeps interrupting others in planning meetings. The team should first ___",
+            options: ["talk about it and agree on meeting norms", "remove the teammate from the project", "stop holding meetings at all", "ignore the problem and move on"]
           },
           {
-            label: "Silent brainstorming primarily helps ___",
-            options: ["quieter teammates contribute on equal footing with louder ones", "the team reach a decision without discussing ideas", "the leader pick the best idea without input", "eliminate weak ideas before anyone shares them"]
+            label: "Before combining their procedures, teammates should agree on each procedure's ___",
+            options: ["name, parameters, and return value", "font and color scheme", "number of comments", "length in lines"]
           },
           {
-            label: "A 5,000-line PR most likely gets ___",
-            options: ["superficial review", "rigorous line-by-line review", "no review at all", "rejected for size only"]
+            label: "A teammate's procedure returns the wrong value for an empty list. The most helpful feedback is ___",
+            options: ["the failing input and the expected result", "a note saying the code is bad", "nothing, so no one feels criticized", "a silent rewrite of their code"]
           }
         ],
-        correctAnswers: ["new contributors to find an approachable starting task", "quieter teammates contribute on equal footing with louder ones", "superficial review"],
-        hint1: "Onboarding-friendly.",
-        hint2: "Equalizes voices.",
-        hint3: "Too big = skim.",
-        explanation: "\"First issue\" = friendly starter. Silent brainstorm = inclusion. Huge PRs = surface-level review."
+        correctAnswers: ["talk about it and agree on meeting norms", "name, parameters, and return value", "the failing input and the expected result"],
+        hint1: "Communication comes first.",
+        hint2: "What callers need to know to use a procedure.",
+        hint3: "Specific and about the work.",
+        explanation: "Communicating and agreeing on norms addresses the problem respectfully. Agreed names, parameters, and return values let separately written procedures fit together. Specific, work-focused feedback helps a teammate fix the bug."
       }
     },
     {
@@ -125,8 +132,9 @@ Month 1: handle a small feature end-to-end with code review.
       content: `
 ## AP Exam Strategy: Workshop Style
 
-- "Inclusive collaboration" = facilitation + async records + small PRs + onboarding paths.
-- "What should the team change?" → smaller PRs, written records, more inclusive meeting practices.
+- "What should the team do?" → communicate, include every voice, negotiate, and build consensus.
+- Split work into procedures with agreed names, parameters, and return values; test each before combining.
+- Feedback should be specific and about the work, not the person.
       `
     },
     {
@@ -138,26 +146,26 @@ Month 1: handle a small feature end-to-end with code review.
       exercise: {
         questions: [
           {
-            question: "A team merges all changes directly to main with no review. They suffer frequent regressions. The single highest-leverage change is ___",
+            question: "A four-person team writes four procedures separately and combines them only on the last day. The program fails, and no one can tell which part is wrong. Which practice would have helped most?",
             options: [
-              "stop writing automated tests so the team can move faster overall.",
-              "require a pull-request approval on every change before it reaches main.",
-              "remove the staging environment and ship directly to production every time.",
-              "merge changes only on Fridays so all regressions surface on the same day."
+              "Writing all four procedures as one long procedure",
+              "Testing each procedure, then adding them one at a time",
+              "Giving every procedure to the strongest programmer",
+              "Waiting for users to report which part is wrong"
             ],
             correctAnswer: 1,
-            explanation: "Mandatory code review catches regressions."
+            explanation: "An incremental process makes sure each piece works before it is added to the whole, so a failure points to the newest piece."
           },
           {
             question: "A class project group has skills imbalances: one student knows the language, three are beginners. The most CSP-aligned approach is ___",
             options: [
               "have the experienced student write all the code while the others observe.",
-              "use pair programming and review so beginners learn while writing real code.",
+              "use pair programming so beginners learn while writing real code.",
               "restrict the beginners to writing only documentation and never any code.",
               "have the beginners hand-copy code that the experienced student wrote first."
             ],
             correctAnswer: 1,
-            explanation: "Pair + review spreads skill while everyone contributes."
+            explanation: "Pair programming spreads skill while everyone contributes; the driver and navigator switch roles."
           }
         ]
       }

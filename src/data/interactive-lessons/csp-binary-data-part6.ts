@@ -147,7 +147,7 @@ Practice the calculations and design choices the AP exam asks under a time crunc
 - For "storage of M items, each k bits" → M·k / 8 bytes.
 - For audio: bytes/sec = sampleRate × bytesPerSample × channels.
 - For images: bytes = width × height × bytesPerPixel.
-- Don't worry about hex on the AP — it's rarely tested. Decimal/binary conversions and $2^{n}$ values are the core.
+- Hexadecimal is not on the AP exam. Decimal/binary conversions and $2^{n}$ values are the core.
       `
     },
     {

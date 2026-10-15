@@ -53,13 +53,13 @@ public class Lamp {
         watts = w;
     }
 
-    public String toString() {
+    public String describe() {
         return room + " " + watts + "W " + on + " " + hoursUsed;
     }
 }
 \`\`\`
 
-The constructor never assigns \`on\` or \`hoursUsed\`, so they keep their defaults. \`System.out.println(new Lamp("den", 60));\` prints \`den 60W false 0.0\`.
+The constructor never assigns \`on\` or \`hoursUsed\`, so they keep their defaults. \`System.out.println(new Lamp("den", 60).describe());\` prints \`den 60W false 0.0\`.
 
 > 🔑 **Key Concept:** Only **instance variables** get default values. A **local variable** inside a method or constructor has no value until it is assigned, and using it first is a compile error. Good style still assigns every field in the constructor, so a reader never has to remember the defaults.
       `
@@ -73,7 +73,7 @@ The constructor never assigns \`on\` or \`hoursUsed\`, so they keep their defaul
       exercise: {
         questions: [
           {
-            question: 'Using the Lamp class above, what is printed by System.out.println(new Lamp("hall", 40));?',
+            question: 'Using the Lamp class above, what is printed by System.out.println(new Lamp("hall", 40).describe());?',
             options: [
               'hall 40W false 0.0',
               'hall 40W false 0',
@@ -84,7 +84,7 @@ The constructor never assigns \`on\` or \`hoursUsed\`, so they keep their defaul
             explanation: 'on was never assigned, so it holds the boolean default false, and hoursUsed holds the double default 0.0, which prints with its decimal point. Only reference fields default to null.'
           },
           {
-            question: 'A second constructor public Lamp() { } with an empty body is added. What does toString() return for new Lamp()?',
+            question: 'A second constructor public Lamp() { } with an empty body is added. What does describe() return for new Lamp()?',
             options: [
               'null 0W false 0.0',
               '0W false 0.0',

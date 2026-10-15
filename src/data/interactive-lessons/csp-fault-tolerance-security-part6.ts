@@ -12,6 +12,8 @@ export const cspFaultToleranceSecurityPart6Data = {
 ---
 
 ## Fault Tolerance & Security Workshop
+
+Practice the three kinds of reasoning this topic asks for: spotting weak points and adding redundancy, timing parallel solutions, and recognizing how attackers gain access.
       `
     },
     {
@@ -31,18 +33,18 @@ export const cspFaultToleranceSecurityPart6Data = {
               "a phishing attempt, since banks never send codes through apps"
             ],
             correctAnswer: 1,
-            explanation: "A second factor = MFA."
+            explanation: "The code proves possession of the phone, a second factor alongside the password."
           },
           {
-            question: "A web service auto-restarts crashed worker processes. The general technique is ___",
+            question: "Devices are connected as A–B, B–C, C–D, and A–D. Which single connection, if added, would give A a second path to C that avoids both B and D?",
             options: [
-              "failover or self-healing — automated recovery from a worker process crash",
-              "load balancing — spreading incoming requests evenly across all the workers",
-              "encryption — hiding each crashed worker's memory contents from other workers",
-              "caching of the worker's most recent output so future requests can skip it entirely"
+              "A–C",
+              "B–D",
+              "A–B",
+              "C–D"
             ],
             correctAnswer: 0,
-            explanation: "Auto-restart = a self-healing fault-tolerance pattern."
+            explanation: "A direct A–C connection is a new path that uses neither B nor D. B–D connects two devices A already reaches."
           }
         ]
       }
@@ -51,33 +53,35 @@ export const cspFaultToleranceSecurityPart6Data = {
       id: "cspfts6-content",
       type: 'text' as const,
       content: `
-## Worked: Designing An Outage-Resistant Service
+## Worked: Making a Service Survive Failures
 
-| Layer | Plan |
+A school's homework site runs on one server in one building with one Internet connection.
+
+| Weak point | Redundancy that fixes it |
 |-------|------|
-| Servers | Multiple instances behind a load balancer. |
-| Region | Multi-region with automatic DNS failover. |
-| Data | Replicated DB + nightly backups + retention plan. |
-| Code | Blue/green or canary deploys to enable rollback. |
-| Monitoring | Alerts on errors, latency, saturation. |
-| People | On-call rotation + runbooks + post-incident review. |
+| One server | A second server that can take over |
+| One Internet connection | A second connection from a different provider |
+| One copy of the data | A backup copy kept on another device |
 
-## Worked: A Phishing Triage
+Each fix costs more, but each removes a single point of failure.
 
-1. **Don't click**.
-2. Check sender domain (often misspelled).
-3. Hover URLs to see the actual destination.
-4. Verify out-of-band (call the company at a known number).
-5. Report to IT / mark as phishing.
+## Worked: Phishing Triage
 
-## Worked: Choosing Authentication
+Phishing tries to trick a user into providing personal information, which can then be used to access accounts. Malicious links can be disguised in a web page or email, and unsolicited emails can come from unknown senders or from known senders whose accounts were compromised.
 
-| Use case | Recommendation |
-|---------|---------------|
-| School portal | Username + password + MFA |
-| API for partners | OAuth / API key + rate limits |
-| Internal admin | SSO + hardware-key MFA + role-based access |
-| Public read-only | No auth, rate-limit only |
+1. **Don't click** links or open attachments you did not expect.
+2. Check the sender's address for look-alike spellings.
+3. Check where a link actually leads before following it.
+4. Verify by contacting the company at a phone number or website you already trust.
+5. Report the message as phishing.
+
+## Worked: Timing a Parallel Job
+
+A job has a 6-second sequential step, then three independent tasks of 9, 4, and 7 seconds.
+
+- Sequential: 6 + 9 + 4 + 7 = 26 seconds.
+- Parallel on three processors: 6 + 9 = 15 seconds.
+- Speedup: 26 ÷ 15 ≈ 1.7.
       `
     },
     {
@@ -86,19 +90,19 @@ export const cspFaultToleranceSecurityPart6Data = {
       content: `
 **Applied Recall** ✍️
 
-1) A deployment style that gradually rolls out to a small fraction first is called a _______ release.
+1) A technique that tricks a user into giving away personal information is called _______.
 
-2) A document teammates follow during an outage is called a _______.
+2) In the timing example, the parallel job takes _______ seconds.
 
-3) After an incident, the team usually runs a _______-mortem to learn from it.
+3) In the timing example, the job takes _______ seconds when run sequentially.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["canary", "runbook", "post"],
-        hint1: "Bird name.",
-        hint2: "Step-by-step doc.",
-        hint3: "After-action.",
-        explanation: "Canary / runbook / postmortem."
+        correctAnswers: ["phishing", "15", "26"],
+        hint1: "Fishing for information.",
+        hint2: "Sequential step + longest parallel task.",
+        hint3: "Add every step.",
+        explanation: "Phishing tricks users. Parallel: 6 + 9 = 15 seconds. Sequential: 6 + 9 + 4 + 7 = 26 seconds."
       }
     },
     {
@@ -111,22 +115,22 @@ export const cspFaultToleranceSecurityPart6Data = {
         dropdowns: [
           {
             label: "Email from \"support@bnk-of-anytown.com\" warning your account is locked is most likely ___",
-            options: ["phishing — typo-squatted domain", "legitimate — official bank domain", "a DDoS attack — flooded mail server", "a keylogger — malware on your device"]
+            options: ["phishing — look-alike domain", "legitimate — official bank domain", "a computer virus — copying itself", "keylogging — malware on your device"]
           },
           {
-            label: "A canary release ___",
-            options: ["routes a small fraction of traffic to the new version first to detect regressions", "switches all traffic to the new version at once and rolls back only if users complain", "runs the old and new versions side by side forever so neither can ever fail", "tests the new version only on developer laptops before shipping it to everyone"]
+            label: "A free program downloaded from an unknown sharing site ___",
+            options: ["may contain malware", "is always safe to run", "cannot be a virus", "is checked by the Internet"]
           },
           {
-            label: "Tabletop exercises (drills) help teams ___",
-            options: ["practice incident response BEFORE a real outage", "assign personal blame AFTER a real outage", "replace automated monitoring DURING production", "eliminate the need for backups and redundancy"]
+            label: "Keeping a backup copy of files on a second device is an example of ___",
+            options: ["redundancy", "encryption", "phishing", "routing"]
           }
         ],
-        correctAnswers: ["phishing — typo-squatted domain", "routes a small fraction of traffic to the new version first to detect regressions", "practice incident response BEFORE a real outage"],
-        hint1: "Look-alike domain.",
-        hint2: "Gradual rollout.",
-        hint3: "Drills work.",
-        explanation: "Phishing typo / canary / drills."
+        correctAnswers: ["phishing — look-alike domain", "may contain malware", "redundancy"],
+        hint1: "Look closely at the spelling.",
+        hint2: "Untrustworthy downloads.",
+        hint3: "An extra component.",
+        explanation: "A misspelled bank domain signals phishing. Untrustworthy (often free) downloads can contain malware. A backup copy is redundancy."
       }
     },
     {
@@ -135,9 +139,9 @@ export const cspFaultToleranceSecurityPart6Data = {
       content: `
 ## AP Exam Strategy: Workshop
 
-- Plan for failure: redundancy + monitoring + runbooks + drills.
-- Layered authentication based on use case.
-- Canary releases reduce blast radius of bad changes.
+- Find the single point of failure, then add a redundant component that bypasses it.
+- Parallel time = sequential part + longest parallel task; speedup = sequential ÷ parallel.
+- Phishing, malicious links, unsolicited attachments, untrustworthy downloads, keylogging, and rogue access points are how unauthorized access is gained.
       `
     },
     {
@@ -149,15 +153,15 @@ export const cspFaultToleranceSecurityPart6Data = {
       exercise: {
         questions: [
           {
-            question: "A team deploys a buggy change directly to all users. Errors spike. The most CSP-aligned post-mortem recommendation is ___",
+            question: "A company stores all customer orders on one server in one building. Which plan most improves the system's fault tolerance?",
             options: [
-              "publicly punish the engineer responsible for writing the change that caused the spike.",
-              "add staged rollouts, automatic rollback on error spikes, and blameless reviews.",
-              "freeze all future deploys indefinitely so that no new change can ever cause another error spike.",
-              "add more servers, bigger caches, and faster disks so the next spike is absorbed quietly."
+              "Buy a faster server to replace the one in the same building.",
+              "Keep a second server with a copy of the data in another building.",
+              "Ask employees to restart the existing server once every evening.",
+              "Encrypt the order data stored on the existing server with a new key."
             ],
             correctAnswer: 1,
-            explanation: "Process improvements + blameless post-mortems beat blame."
+            explanation: "A second server with a copy of the data, in a separate location, is redundancy: one failure (even of the whole building) no longer stops the service."
           },
           {
             question: "A user reports an email from \"amaz0n-security@example.com\". The most accurate response is ___",
@@ -168,7 +172,7 @@ export const cspFaultToleranceSecurityPart6Data = {
               "forward the email to all colleagues so they can each click and investigate independently."
             ],
             correctAnswer: 1,
-            explanation: "Don't-click + verify + report is the standard."
+            explanation: "A look-alike sender address is a sign of phishing; don't click, verify, and report."
           }
         ]
       }

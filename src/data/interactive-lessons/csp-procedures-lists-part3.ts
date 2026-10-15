@@ -7,27 +7,21 @@ export const cspProceduresListsPart3Data = {
       content: `
 # 📋 Procedures & Lists
 
-**Part 3 of 7 — Patterns & Examples**
+**Part 3 of 7 — List Traversal Algorithms**
 
 ---
 
-## Procedure Patterns
+## Complete and Partial Traversals
 
-| Pattern | Use |
-|---------|-----|
-| **Pure function** | Inputs → output, no side effects. |
-| **Predicate** | Returns true / false. |
-| **Constructor** | Builds a structured value. |
-| **Action** | Performs a side effect (print, save). |
-| **Higher-order** | Takes another procedure as a parameter. |
+**Traversing** a list means using iteration to access its elements. A **complete traversal** accesses every element; a **partial traversal** accesses only some of them, for example by RETURNing at the first match.
 
-## List Patterns
+| Traversal | Code shape |
+|-----------|-----------|
+| Complete, by value | FOR EACH item IN aList { … } |
+| Complete, by index | i ← 1, then REPEAT UNTIL (i > LENGTH(aList)) { … i ← i + 1 } |
+| Partial | The same loop, with an early RETURN or a smaller stopping index |
 
-| Pattern | Skeleton |
-|---------|---------|
-| **Map** | new = []; FOR EACH x IN list: APPEND(new, f(x)) |
-| **Filter** | new = []; FOR EACH x IN list: IF p(x) THEN APPEND(new, x) |
-| **Reduce / fold** | acc = init; FOR EACH x IN list: acc = combine(acc, x) |
+FOR EACH assigns item the value of each element in order, from the first element to the last.
       `
     },
     {
@@ -39,26 +33,26 @@ export const cspProceduresListsPart3Data = {
       exercise: {
         questions: [
           {
-            question: "A procedure **isEven(n)** that returns true / false is a ___",
+            question: "A procedure checks the elements of [4, 0, 7, 9] in order and RETURNs as soon as it finds the value 0. This is an example of ___",
             options: [
-              "constructor — a procedure that builds and returns a structured value",
-              "action — a procedure whose primary purpose is producing a side effect",
-              "predicate — a procedure that returns a boolean true / false answer",
-              "reducer — a procedure that collapses a whole list into one summary value"
-            ],
-            correctAnswer: 2,
-            explanation: "A boolean-returning procedure is a predicate."
-          },
-          {
-            question: "Building a new list where each element is **f(originalElement)** is the ___ pattern.",
-            options: [
-              "filter — keeping only elements that satisfy a predicate",
-              "map — applying a transformation to each element of the list",
-              "reduce — collapsing the list into a single value",
-              "sort — rearranging elements into ascending order"
+              "a complete traversal, since the loop is able to visit every element",
+              "a partial traversal, since only some of the elements are accessed",
+              "a binary search, since the loop ends before the last element",
+              "a parallel traversal, since two values are compared at once"
             ],
             correctAnswer: 1,
-            explanation: "Map applies f to each element."
+            explanation: "The loop stops after the second element, so only part of the list is accessed. Binary search needs sorted data and starts in the middle."
+          },
+          {
+            question: "Which description matches a linear (sequential) search?",
+            options: [
+              "Start in the middle of sorted data and discard half each step",
+              "Add every element and divide by the number of elements",
+              "Compare each element with the largest value found so far",
+              "Check each element in order until the target is found or none remain"
+            ],
+            correctAnswer: 3,
+            explanation: "A linear search checks each element in order until it finds the value or has checked them all. Halving sorted data is binary search; the other two compute an average and a maximum."
           }
         ]
       }
@@ -67,36 +61,79 @@ export const cspProceduresListsPart3Data = {
       id: "csppl3-content",
       type: 'text' as const,
       content: `
-## Map / Filter / Reduce In Pseudocode
+## Existing List Algorithms
 
-    doubled ← []                 // map
-    FOR EACH n IN nums:
-      APPEND(doubled, n * 2)
+Knowing these existing algorithms helps you build new ones.
 
-    evens ← []                   // filter
-    FOR EACH n IN nums:
-      IF n MOD 2 = 0 THEN APPEND(evens, n)
+### Sum and Average
 
-    total ← 0                    // reduce (sum)
-    FOR EACH n IN nums:
-      total ← total + n
+\`\`\`
+PROCEDURE average(nums)
+{
+    total ← 0
+    FOR EACH n IN nums
+    {
+        total ← total + n
+    }
+    RETURN(total / LENGTH(nums))
+}
+\`\`\`
 
-These three patterns underlie almost all list processing.
+### Minimum
 
-## 2D Lists (Lists Of Lists)
+\`\`\`
+PROCEDURE minimum(nums)
+{
+    smallest ← nums[1]
+    FOR EACH n IN nums
+    {
+        IF (n < smallest)
+        {
+            smallest ← n
+        }
+    }
+    RETURN(smallest)
+}
+\`\`\`
 
-    grid ← [[1, 2, 3],
-         [4, 5, 6],
-         [7, 8, 9]]
-    grid[2][3] = 6   (row 2, column 3 — 1-indexed)
+### Keeping Only Some Elements
 
-To process every cell:
+\`\`\`
+PROCEDURE evensOnly(nums)
+{
+    result ← []
+    FOR EACH n IN nums
+    {
+        IF (n MOD 2 = 0)
+        {
+            APPEND(result, n)
+        }
+    }
+    RETURN(result)
+}
+\`\`\`
 
-    FOR EACH row IN grid:
-      FOR EACH cell IN row:
-        PROCESS(cell)
+To build a new list from **every** element, APPEND without an IF: APPEND(doubled, n * 2).
 
-This is a **nested loop**.
+### Linear Search
+
+\`\`\`
+PROCEDURE indexOf(aList, target)
+{
+    i ← 1
+    REPEAT UNTIL (i > LENGTH(aList))
+    {
+        IF (aList[i] = target)
+        {
+            RETURN(i)
+        }
+        i ← i + 1
+    }
+    RETURN(-1)
+}
+\`\`\`
+
+Traversing two lists at the same time with one shared index is not on the exam; exam questions traverse one list at a time.
       `
     },
     {
@@ -105,19 +142,19 @@ This is a **nested loop**.
       content: `
 **Applied Recall** ✍️
 
-1) A pattern that produces a NEW list where each element is f(x) is called _______.
+1) minimum([7, 3, 9, 3]) returns _______.
 
-2) A pattern that combines all elements into a single value is called _______.
+2) evensOnly([5, 8, 2, 7]) returns a list of length _______.
 
-3) A list of lists, like a grid, is a _______-dimensional list.
+3) indexOf(["a", "b", "c"], "c") returns _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["map", "reduce", "two"],
-        hint1: "Transform each.",
-        hint2: "Roll-up.",
-        hint3: "2D.",
-        explanation: "Map / reduce / filter; 2D lists are lists of lists."
+        correctAnswers: ["3", "2", "3"],
+        hint1: "Track the smallest value seen so far.",
+        hint2: "Which of 5, 8, 2, 7 are even?",
+        hint3: "AP lists start at index 1.",
+        explanation: "The smallest value is 3. Only 8 and 2 are even, so the new list has 2 elements. \"c\" is the third element, so its index is 3."
       }
     },
     {
@@ -129,34 +166,35 @@ This is a **nested loop**.
       exercise: {
         dropdowns: [
           {
-            label: "A predicate function returns ___",
-            options: ["true or false", "a numeric count", "a filtered list", "a string label"]
+            label: "A traversal that RETURNs at the first match is a ___ traversal",
+            options: ["partial", "complete", "parallel", "binary"]
           },
           {
-            label: "A higher-order procedure takes ___",
-            options: ["another procedure as a parameter", "a list of numbers as a parameter", "no parameters and returns nothing", "only global variables as input"]
+            label: "In evensOnly, APPEND runs once for each element that ___",
+            options: ["passes the IF test", "is the smallest so far", "is at an odd index", "is the first element"]
           },
           {
-            label: "To touch every cell in a 2D list, you typically use ___",
-            options: ["a nested loop", "a single FOR EACH loop", "one REPEAT n TIMES loop", "an IF / ELSE chain"]
+            label: "indexOf([4, 6, 8], 5) returns ___",
+            options: ["-1", "0", "2", "3"]
           }
         ],
-        correctAnswers: ["true or false", "another procedure as a parameter", "a nested loop"],
-        hint1: "Boolean.",
-        hint2: "Procedure as data.",
-        hint3: "Loops within loops.",
-        explanation: "Predicates return booleans. HOFs take procedures. Nested loops traverse 2D."
+        correctAnswers: ["partial", "passes the IF test", "-1"],
+        hint1: "It may stop before the end.",
+        hint2: "APPEND is inside the IF.",
+        hint3: "5 is not in the list.",
+        explanation: "Stopping early makes a traversal partial. APPEND inside the IF adds only matching elements. When the target is missing, the loop finishes and RETURN(-1) runs."
       }
     },
     {
       id: "csppl3-strategy",
       type: 'text' as const,
       content: `
-## AP Exam Strategy: Procedures & List Patterns
+## AP Exam Strategy: List Traversals
 
-- Map / filter / reduce: recognize the pattern → name it.
-- 2D lists need nested loops.
-- Predicates return true / false; pair them with filter.
+- Name the algorithm from its shape: running total → sum/average; best-so-far → min/max; APPEND inside IF → keep some elements; early RETURN of an index → linear search.
+- Start a min/max tracker from list[1], not from 0, so a list of all negative (or all large) values still works.
+- FOR EACH gives values, not indexes; use an index loop when the position matters.
+- Check the empty list: FOR EACH runs zero times, and LENGTH(list) is 0.
       `
     },
     {
@@ -168,26 +206,26 @@ This is a **nested loop**.
       exercise: {
         questions: [
           {
-            question: "A program needs squares of all numbers in a list. The pattern is ___",
+            question: "nums ← [3, 8, 1, 6]\nresult ← []\nFOR EACH n IN nums\n{\n    IF (n > 2)\n    {\n        APPEND(result, n * 10)\n    }\n}\nDISPLAY(LENGTH(result))\n\nWhat is displayed?",
             options: [
-              "filter — selecting only some of the numbers from the original list",
-              "map — replacing each number with n × n in a new list",
-              "reduce — collapsing the entire list into one summary value",
-              "sort — rearranging the original numbers in ascending order"
+              "4",
+              "3",
+              "1",
+              "30"
             ],
             correctAnswer: 1,
-            explanation: "Map transforms each element."
+            explanation: "3, 8, and 6 are greater than 2, so three values (30, 80, 60) are appended. The 1 is skipped."
           },
           {
-            question: "A program needs the sum of squares of even numbers in a list. The most natural composition is ___",
+            question: "A student writes minimum but starts with smallest ← 0 instead of smallest ← nums[1]. For which list does the procedure return a wrong answer?",
             options: [
-              "filter the evens, map each to n × n, then reduce by adding.",
-              "map each to n × n, reduce by adding, then filter the evens.",
-              "reduce by adding first, then multiply the total by itself.",
-              "keep only the odds, map each to n × n, then reduce by adding."
+              "[-2, 4, 1]",
+              "[0, 3, 8]",
+              "[5, 9, 7]",
+              "[-5, -1, -9]"
             ],
-            correctAnswer: 0,
-            explanation: "Keep the evens (filter), square each one (map), then add them up (reduce). Reducing first leaves a single number, so there is nothing left to filter or square, and filtering the odds keeps the wrong values."
+            correctAnswer: 2,
+            explanation: "No element of [5, 9, 7] is less than 0, so smallest stays 0, which is not in the list. Lists that contain 0 or a negative value still give the right minimum."
           }
         ]
       }

@@ -13,7 +13,7 @@ export const cspAlgorithmsProgrammingPart4Data = {
 
 ## How Code Connects Across the Course
 
-Programming sits at the center of CSP. Procedures connect to **abstraction** (Big Idea 1), accumulators to **data** (BI 2), client/server programs to **internet** (BI 4), and design choices to **impact** (BI 5).
+Programming sits at the center of CSP. Procedures and lists are **abstractions** (Big Idea 3: Algorithms and Programming), the values they process are **data** (Big Idea 2), programs that send and receive data use the **Internet** (Big Idea 4), and design choices have an **impact** on people (Big Idea 5).
 
 | Connection | Example |
 |-----------|---------|
@@ -35,7 +35,7 @@ Programming sits at the center of CSP. Procedures connect to **abstraction** (Bi
             question: "Wrapping a 30-line algorithm inside a named PROCEDURE primarily helps because it ___",
             options: [
               "makes the steps run faster, since procedure calls are optimized.",
-              "lets callers use it without knowing its internal steps.",
+              "lets callers use it without knowing its steps.",
               "reduces the memory the 30 lines take up while running.",
               "guarantees the steps are correct, since procedures are tested."
             ],
@@ -66,13 +66,12 @@ A procedure header **isWeekend(day)** is a contract:
 
 - Inputs: a day (string).
 - Output: a Boolean.
-- Side effects: none.
 
 Callers can rely on this contract without reading the body. If you later switch the implementation (e.g., add Friday), you change one place and all callers update.
 
 ## Lists as the Data Bridge
 
-Programs almost always operate on **lists** (BI 2 calls them collections). The connection:
+Programs almost always operate on **lists**. A list is a **data abstraction**: many related values are managed under one name, so the code does not change when the number of values changes. The connection:
 
 - INPUT brings raw values in.
 - A loop transforms or filters the list.
@@ -91,19 +90,19 @@ A scheduling program that uses ZIP code as a tiebreaker for hospital appointment
       content: `
 **Applied Recall** ✍️
 
-1) Hiding implementation details behind a procedure name is called _______.
+1) Hiding implementation details behind a procedure name is called procedural _______.
 
-2) A series of input → transform → output stages on data is called a _______.
+2) Using one list name to manage many related values is called _______ abstraction.
 
 3) When a program's design decision affects a group of users systematically, this raises a question of algorithmic _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["abstraction", "pipeline", "bias"],
-        hint1: "CED Big Idea 1 vocabulary.",
-        hint2: "Like an assembly line.",
+        correctAnswers: ["abstraction", "data", "bias"],
+        hint1: "Big Idea 3 vocabulary: hiding the how.",
+        hint2: "The kind of abstraction a list provides.",
         hint3: "Systematic skew in outcomes.",
-        explanation: "Abstraction names ideas. Pipelines move data. Bias arises when design choices affect groups unevenly."
+        explanation: "A procedure is procedural abstraction; a list is data abstraction. Bias arises when design choices affect groups unevenly."
       }
     },
     {
@@ -115,23 +114,23 @@ A scheduling program that uses ZIP code as a tiebreaker for hospital appointment
       exercise: {
         dropdowns: [
           {
-            label: "A procedure that does one well-defined thing is best described as having ___",
-            options: ["high cohesion", "low cohesion", "tight coupling", "many parameters"]
+            label: "A procedure's internal steps are rewritten, but its name, parameters, and returned result stay the same. The code that calls it must ___",
+            options: ["change nothing", "rename its variables", "rewrite every call", "pass new arguments"]
           },
           {
-            label: "Two procedures that share no state and could be developed independently are ___",
-            options: ["loosely coupled", "tightly coupled", "mutually dependent", "overloaded"]
+            label: "One procedure handles many similar cases by receiving different arguments. This generalization comes from its ___",
+            options: ["parameters", "comments", "RETURN statement", "name"]
           },
           {
             label: "A program whose decisions affect millions of users should be evaluated for ___",
             options: ["unintended impact on subgroups", "speed on the developer's own machine", "number of features shipped", "consistency of its code style"]
           }
         ],
-        correctAnswers: ["high cohesion", "loosely coupled", "unintended impact on subgroups"],
-        hint1: "Single, focused purpose.",
-        hint2: "Few shared dependencies.",
+        correctAnswers: ["change nothing", "parameters", "unintended impact on subgroups"],
+        hint1: "Callers rely only on what the procedure does, not how.",
+        hint2: "The inputs named in the procedure header.",
         hint3: "Scale amplifies design choices.",
-        explanation: "Good design favors high-cohesion, loose-coupling procedures. At scale, programmers must consider subgroup impact."
+        explanation: "Procedural abstraction lets the inside of a procedure change without affecting callers, and parameters let one procedure generalize to many cases. At scale, programmers must consider subgroup impact."
       }
     },
     {
@@ -163,7 +162,7 @@ A scheduling program that uses ZIP code as a tiebreaker for hospital appointment
               "Faster response when the program is used over the Internet."
             ],
             correctAnswer: 1,
-            explanation: "Extracting a procedure does not change time complexity; it improves readability and centralizes the rule."
+            explanation: "Extracting a procedure does not change how many steps the program runs; it improves readability and keeps the rule in one place."
           },
           {
             question: "A loan-decision program denies applicants whose monthly income is below a threshold. After deployment, the team discovers the threshold disproportionately denies applicants from a specific region with lower median wages but equal repayment history. The most defensible response is to ___",

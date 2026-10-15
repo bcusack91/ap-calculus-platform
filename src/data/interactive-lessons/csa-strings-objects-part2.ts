@@ -87,7 +87,7 @@ Three rules decide what + does:
 Two more facts:
 
 - \`"Total: " + 3 - 4\` does **not compile**. The left part becomes the String "Total: 3", and you cannot subtract an int from a String.
-- When an **object** is concatenated, Java calls its \`toString()\` method for you. For a String that is just its own text; for a class you write, it is whatever that class's toString returns.
+- When an **object** is concatenated, Java calls its \`toString()\` method for you. For a String that is just its own text. Writing your own toString for a class is not on the AP exam.
 
 ### Worked Example: Reading a Mixed Expression
 

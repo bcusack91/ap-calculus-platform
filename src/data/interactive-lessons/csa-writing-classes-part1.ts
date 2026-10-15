@@ -37,8 +37,8 @@ public class Student {
         grade = newGrade;
     }
 
-    // toString method
-    public String toString() {
+    // Method that builds a description from the fields
+    public String getSummary() {
         return name + " (Grade " + grade + ", GPA: " + gpa + ")";
     }
 }
@@ -122,15 +122,17 @@ public Student(String name, int grade, double gpa) {
 - If you write NO constructors, Java provides a default no-arg constructor
 - If you write ANY constructor, Java does NOT provide the default
 
-## The toString() Method
-- Automatically called when an object is printed or concatenated with a String
-- Should return a meaningful String representation of the object
+## Methods That Return a String
+- A method can build a String from the object's instance variables and **return** it; the caller decides whether to print it
+- Concatenation does the work: numbers and booleans in the expression are converted to text
 
 \`\`\`java
 Student s = new Student("Alex", 11, 3.8);
-System.out.println(s);  // Calls s.toString() automatically
+System.out.println(s.getSummary());
 // Output: Alex (Grade 11, GPA: 3.8)
 \`\`\`
+
+Writing your own \`toString\` method is not on the AP exam, so classes on the exam return descriptions from ordinary methods like \`getSummary\`.
       `
     },
     {
@@ -191,7 +193,7 @@ System.out.println(s);  // Calls s.toString() automatically
 - **Encapsulation** is tested in every FRQ — always make instance variables private
 - Know the difference between accessor and mutator methods
 - Constructor questions often test: what happens if you write a parameterized constructor but no no-arg constructor? (Answer: \`new ClassName()\` will NOT compile)
-- toString() is automatically called by \`System.out.println()\` — know this for tracing output
+- A method that **returns** a String is different from one that **prints** it — FRQ 2 specifications say which one they want
 - The \`this\` keyword resolves parameter/field name conflicts
 - Practice writing complete classes from scratch — FRQ 2 is always a class design question
       `
@@ -216,15 +218,15 @@ System.out.println(s);  // Calls s.toString() automatically
             explanation: 'Since a parameterized constructor exists, Java does NOT provide a default no-arg constructor. new Dog() has no matching constructor, so it fails to compile.'
           },
           {
-            question: 'What is printed?\npublic class Point {\n    private int x, y;\n    public Point(int x, int y) { this.x = x; this.y = y; }\n    public String toString() { return "(" + x + "," + y + ")"; }\n}\nPoint p = new Point(3, 7);\nSystem.out.println("Location: " + p);',
+            question: 'What is printed?\npublic class Point {\n    private int x, y;\n    public Point(int x, int y) { this.x = x; this.y = y; }\n    public String getLabel() { return "(" + x + "," + y + ")"; }\n}\nPoint p = new Point(3, 7);\nSystem.out.println("Location: " + p.getLabel());',
             options: [
               'Location: (3,7)',
-              'Location: Point@abc123',
+              'Location: (7,3)',
               'Compile error',
               'Location: (x,y)'
             ],
             correctAnswer: 0,
-            explanation: 'String concatenation with an object calls toString() automatically. The toString() method returns "(3,7)", so the output is "Location: (3,7)". toString() builds the String from the values stored in x and y, not from the variable names.'
+            explanation: 'getLabel builds the String from the values stored in x and y, in that order, so it returns "(3,7)" and the output is "Location: (3,7)". Swapping the values reverses the field order, and the method uses the stored numbers, not the variable names.'
           }
         ]
       }

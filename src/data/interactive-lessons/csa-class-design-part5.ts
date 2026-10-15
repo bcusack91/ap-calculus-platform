@@ -175,7 +175,7 @@ A program is **reliable** when it performs its tasks as expected under the state
 | boundary values, on and next to each cutoff | 90.0, 89.9, 80.0, 70.0, 69.9 |
 | extreme or unusual values | 0.0, 100.0, and what happens if possible is 0 |
 
-The last row exposes a real gap in \`Course\`: \`new Course(0, 0).report()\` divides 0.0 by 0. Double division does not throw an exception, so the percent is the special value NaN and the report is \`"NaN% F"\`. The specification should say what to do in that case.
+The last row exposes a real gap in \`Course\`: \`new Course(0, 0).report()\` asks for a percent of a total of 0, which has no sensible value. The specification should say what to do in that case (for example, a precondition that \`possible\` is positive, or a rule to report 0%), and the code should follow it.
 
 ### Intellectual Property and Licensing
 

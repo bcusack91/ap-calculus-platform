@@ -25,7 +25,7 @@ This part ties the topic together: how \`while\` and \`for\` loops execute, how 
 | Pass counts (Part 3) | (last - first) / step + 1 | \`<\` vs. \`<=\` at the boundary |
 | Scope (Part 3) | a header variable does not exist after the loop | printing \`i\` after a \`for\` loop |
 | Sum, product, average (Part 4) | start at 0 (1 for products); cast before dividing | int division in the average |
-| Frequency and divisibility (Part 4) | \`count++\` inside the \`if\`; \`a % b == 0\` | \`n % 2 == 1\` misses negative odd numbers |
+| Frequency and divisibility (Part 4) | \`count++\` inside the \`if\`; \`a % b == 0\` | \`count++\` placed outside the \`if\` counts every value |
 | Early-return search (Part 4) | return false inside, true after the loop | \`else return true\` inside the loop |
 | Digits (Part 5) | \`% 10\` gets the last digit; \`/ 10\` removes it | 0 has one digit, but the loop runs 0 times |
 | Min and max (Part 5) | start at the first value or an extreme constant | starting at 0 |

@@ -27,7 +27,7 @@ Apply data vocabulary to AP-style scenarios.
           {
             question: "A spreadsheet has 1000 rows. 50 are duplicates. The right first step is ___",
             options: [
-              "merge duplicates by primary key, deciding how to combine fields.",
+              "merge duplicate records using a unique ID, deciding how to combine fields.",
               "delete the spreadsheet entirely and ask for a fresh export from the source.",
               "keep every row, since duplicates do not change totals.",
               "sort the rows alphabetically, which removes duplicate entries automatically."
@@ -63,9 +63,9 @@ Apply data vocabulary to AP-style scenarios.
 
 Steps:
 
-1. Dedupe on email.
-2. Coerce age to integer; drop or flag invalid.
-3. Decide how to handle missing ages (drop / impute / flag).
+1. Remove duplicate responses (the same email twice).
+2. Check that each age is a valid number; drop or flag invalid entries like "fish".
+3. Decide how to handle incomplete responses with missing ages (drop, fill in, or flag).
 4. Document each choice in a notes file.
 
 ## Worked: Choosing A Chart
@@ -86,7 +86,7 @@ To find average grade per period:
 3. Count students within each group.
 4. Divide.
 
-This is the standard "group by + aggregate" pattern of data analysis.
+This "group, then combine" pattern turns raw rows into information.
       `
     },
     {
@@ -95,19 +95,19 @@ This is the standard "group by + aggregate" pattern of data analysis.
       content: `
 **Applied Recall** ✍️
 
-1) Removing exact-duplicate rows from a dataset is called _______.
+1) Making data uniform without changing their meaning is called _______ the data.
 
-2) Replacing missing values with a calculated estimate is called _______.
+2) A survey answer that was left blank is an example of _______ data.
 
-3) A "group by + aggregate" pattern is the basis of most _______ analyses.
+3) An age entered as "fish" is an example of _______ data.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["deduplication", "imputation", "data"],
-        hint1: "No duplicates.",
-        hint2: "Filling gaps.",
-        hint3: "Common analysis pattern.",
-        explanation: "Deduplication, imputation, and group-by aggregation are core data techniques."
+        correctAnswers: ["cleaning", "incomplete", "invalid"],
+        hint1: "Tidying the data.",
+        hint2: "Something is missing.",
+        hint3: "The value cannot be right.",
+        explanation: "Cleaning makes data uniform. Missing values are incomplete data. Impossible values are invalid data."
       }
     },
     {
@@ -124,18 +124,18 @@ This is the standard "group by + aggregate" pattern of data analysis.
           },
           {
             label: "When you need to combine \"students\" and \"grades\" tables, you ___",
-            options: ["join on student ID", "join on student name", "concatenate file contents", "sort both by grade"]
+            options: ["combine on student ID", "combine on student name", "paste one file after the other", "sort both by grade"]
           },
           {
             label: "Documenting cleaning decisions matters because ___",
             options: ["it makes the analysis reproducible", "it removes the need to keep raw data", "it proves the cleaned data is unbiased", "it lets the analysis run on less hardware"]
           }
         ],
-        correctAnswers: ["showing the distribution of one numeric variable", "join on student ID", "it makes the analysis reproducible"],
+        correctAnswers: ["showing the distribution of one numeric variable", "combine on student ID", "it makes the analysis reproducible"],
         hint1: "One variable, distribution.",
-        hint2: "Join key.",
+        hint2: "Names can repeat; IDs cannot.",
         hint3: "Reproducibility.",
-        explanation: "Histograms = distribution of one variable. Joins use shared keys. Documentation enables reproducibility."
+        explanation: "Histograms = distribution of one variable. Combine data sets on a unique shared ID. Documentation enables reproducibility."
       }
     },
     {
@@ -146,7 +146,7 @@ This is the standard "group by + aggregate" pattern of data analysis.
 
 - Match the chart to the question.
 - Always document cleaning choices.
-- "Group by then aggregate" is the most common analysis pattern.
+- Know the challenges: cleaning, incomplete data, invalid data, combining sources.
 - Use IDs, not names, to distinguish records.
       `
     },
@@ -178,7 +178,7 @@ This is the standard "group by + aggregate" pattern of data analysis.
               "researchers cannot use exports that contain no names, so the data is useless."
             ],
             correctAnswer: 1,
-            explanation: "Combined behavioral patterns are powerful quasi-identifiers."
+            explanation: "Combining separate pieces of personal data can reveal who a person is, even without a name."
           }
         ]
       }

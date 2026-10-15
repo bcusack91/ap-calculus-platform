@@ -63,18 +63,16 @@ Final review.
 | Sequencing | Steps in order. |
 | Selection | IF / ELSE. |
 | Iteration | Loop. |
-| Scope | Where a variable is visible. |
-| Local / global | Inside a procedure / whole program. |
-| Constant | Variable that never changes. |
+| Nested conditional | An IF inside another IF or ELSE. |
+| MOD | Remainder after division; same precedence as * and /. |
 | Off-by-one | A common bug at loop boundaries. |
-| Side effect | Change to state outside the local scope. |
 
 ## Common Pitfalls
 
-- Reading **=** as equality when it's assignment (or vice versa).
+- Reading **←** as a comparison, or **=** as an assignment (← assigns; = compares).
 - Off-by-one errors in loops.
 - Infinite loops (condition never becomes the exit condition).
-- Modifying global state from many places, creating bugs.
+- Forgetting that MOD is evaluated before + and −.
 - Forgetting that AP pseudocode is 1-indexed.
       `
     },
@@ -108,7 +106,7 @@ Final review.
       exercise: {
         dropdowns: [
           {
-            label: "IF / ELSE IF / ELSE chains are best when ___",
+            label: "An IF nested inside an ELSE is best when ___",
             options: ["cases partition into ranked conditions", "every condition must be tested on its own", "an action repeats a set number of times", "only a single yes-or-no check is needed"]
           },
           {
@@ -116,15 +114,15 @@ Final review.
             options: ["the standard technique for predicting program output", "only useful after the program has been compiled", "a substitute for testing the program on real inputs", "a technique that only works for loop-free programs"]
           },
           {
-            label: "A pure function without side effects is ___",
-            options: ["easier to test and reason about", "harder to test since it has no effects", "unable to be reused in other programs", "only able to work with global variables"]
+            label: "NOT (x ≥ 10) is equivalent to ___",
+            options: ["x < 10", "x > 10", "x ≤ 10", "x ≠ 10"]
           }
         ],
-        correctAnswers: ["cases partition into ranked conditions", "the standard technique for predicting program output", "easier to test and reason about"],
+        correctAnswers: ["cases partition into ranked conditions", "the standard technique for predicting program output", "x < 10"],
         hint1: "Multi-way.",
         hint2: "Trace tables.",
-        hint3: "Predictability.",
-        explanation: "Else-if for ranked cases. Tracing predicts output. Pure functions are testable."
+        hint3: "The opposite of \"at least 10\".",
+        explanation: "Nest an IF inside an ELSE for ranked cases. Tracing predicts output. The opposite of x ≥ 10 is x < 10."
       }
     },
     {
@@ -136,7 +134,7 @@ Final review.
 - Trace tables are your friend.
 - Distinguish counter / accumulator / search / filter / max patterns.
 - Watch for off-by-one and infinite loops.
-- Local + constant + pure = modern good practice.
+- Rewrite NOT applied to AND / OR with De Morgan's laws, then check a boundary value.
       `
     },
     {
@@ -159,15 +157,15 @@ Final review.
             explanation: "Single-pass with two trackers — also acceptable: sort then take element 2 from end."
           },
           {
-            question: "A counter variable is incremented from event handlers AND from a timer. Without coordination, the count is sometimes wrong. The most accurate diagnosis is ___",
+            question: "A program should display \"pass\" when score is at least 60 and \"fail\" otherwise. Which condition completes IF (condition) { DISPLAY(\"pass\") } ELSE { DISPLAY(\"fail\") }?",
             options: [
-              "no issue, since concurrent increments to one counter always interleave safely.",
-              "a race condition on shared state that needs synchronization or a redesign.",
-              "an overflow error that occurs whenever two increments happen at once.",
-              "a logic error in the timer, which fires more often than it should."
+              "score > 60",
+              "score ≤ 60",
+              "NOT (score ≥ 59)",
+              "score ≥ 60"
             ],
-            correctAnswer: 1,
-            explanation: "Concurrent updates to shared state cause race conditions."
+            correctAnswer: 3,
+            explanation: "\"At least 60\" includes 60, so the test is score ≥ 60. score > 60 would fail a score of exactly 60, and NOT (score ≥ 59) is true only for scores below 59."
           }
         ]
       }

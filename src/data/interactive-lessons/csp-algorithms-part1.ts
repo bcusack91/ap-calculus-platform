@@ -33,7 +33,7 @@ Not all algorithms solve a problem equally fast. Efficiency measures how the num
 |-----------|------------------|---------------|
 | **Linear search** | Up to n steps | Reasonable |
 | **Binary search** | Up to log2(n) steps | Reasonable |
-| **Bubble sort** | Up to n x n steps | Reasonable (but slow) |
+| **Comparing every pair of items** | About n x n steps | Reasonable |
 | **Checking all subsets** | 2^n steps | Unreasonable |
 | **Checking all orderings** | n! steps | Unreasonable |
 
@@ -89,38 +89,26 @@ PROCEDURE linearSearch(list, target)
     {
         IF (item = target)
         {
-            RETURN true
+            RETURN(true)
         }
     }
-    RETURN false
+    RETURN(false)
 }
 \`\`\`
 - Works on **any** list (sorted or unsorted)
 - Worst case: check all n items
 
 ### Binary Search
-Repeatedly divide a SORTED list in half.
-\`\`\`
-PROCEDURE binarySearch(sortedList, target)
-{
-    low ← 1
-    high ← LENGTH(sortedList)
-    REPEAT UNTIL (low > high)
-    {
-        mid ← (low + high) / 2
-        IF (sortedList[mid] = target)
-            RETURN mid
-        ELSE IF (target < sortedList[mid])
-            high ← mid - 1
-        ELSE
-            low ← mid + 1
-    }
-    RETURN -1
-}
-\`\`\`
+Works only on **sorted** data. Start at the middle element. If it is not the target, eliminate the half that cannot contain the target, and repeat on the half that remains until the value is found or no elements remain.
+
+| Elements left to search | 16 | 8 | 4 | 2 | 1 |
+|-------------------------|----|---|---|---|---|
+| Check number | 1 | 2 | 3 | 4 | 5 |
+
 - Requires a **sorted** list
-- Each step eliminates half the remaining items
-- Much faster for large datasets
+- Each check eliminates about half of the remaining items
+- Usually much faster than linear search on large sorted data
+- The exam asks you to count checks and explain the sorted-data requirement; you will not be asked to write a specific binary search implementation
 
 ## Decidable vs Undecidable Problems
 - **Decidable**: An algorithm exists that always produces a correct yes/no answer
@@ -198,7 +186,7 @@ PROCEDURE binarySearch(sortedList, target)
       exercise: {
         questions: [
           {
-            question: 'A list has 1024 sorted elements. How many comparisons does binary search need in the worst case?',
+            question: 'A sorted list has 1,024 elements. Which is closest to the maximum number of elements a binary search examines?',
             options: [
               '1024',
               '512',
@@ -206,7 +194,7 @@ PROCEDURE binarySearch(sortedList, target)
               '100'
             ],
             correctAnswer: 2,
-            explanation: 'log2(1024) = 10. Binary search halves the list each step: 1024 -> 512 -> 256 -> 128 -> 64 -> 32 -> 16 -> 8 -> 4 -> 2 -> 1. That is 10 steps.'
+            explanation: 'Binary search halves the remaining elements each step: 1024 -> 512 -> 256 -> 128 -> 64 -> 32 -> 16 -> 8 -> 4 -> 2 -> 1 is 10 halvings, since log2(1024) = 10. About 10 elements are examined, far fewer than the 1,024 a linear search may check.'
           },
           {
             question: 'Which problem is undecidable?',

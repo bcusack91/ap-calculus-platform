@@ -56,15 +56,13 @@ export const cspSocialEthicalImpactsPart7Data = {
 | Term | Definition |
 |------|-----------|
 | Beneficial / harmful effects | Both come with most innovations. |
-| Stakeholders | Anyone affected, directly or indirectly. |
-| Bias | Systematic outcome disparities. |
-| Mis / dis / mal information | False or misleading information by intent. |
-| Network effects | Value scales with users. |
-| Algorithmic amplification | Optimizers boost what gets engagement. |
-| Digital divide | Unequal access to computing. |
-| Transparency / accountability / recourse | Three ethical-design properties. |
-| Contextual integrity | Data should flow as the original context expected. |
-| Open vs. closed | Modify-friendly vs. controlled platforms. |
+| Unintended use | Innovations are often used in ways their creators did not plan. |
+| Bias | Unfair outcomes from biased algorithms or biased data. |
+| Digital divide | Differing access based on socioeconomic, geographic, or demographic factors. |
+| Crowdsourcing / citizen science | Input from many people via the Internet / research with volunteer-contributed data. |
+| Intellectual property | Material created on a computer belongs to its creator. |
+| Creative Commons / open source / open access | Legal ways to share and reuse work. |
+| Plagiarism | Presenting someone else's work as your own. |
 
 ## Common Pitfalls
 
@@ -72,8 +70,8 @@ export const cspSocialEthicalImpactsPart7Data = {
 - Forgetting indirect stakeholders.
 - "It wasn't intentional" treated as exoneration.
 - Treating algorithm output as objective truth.
-- Ignoring environmental and labor impacts.
-- Over-trusting AI / hallucinations.
+- Forgetting to cite material created by someone else.
+- Assuming more data will remove bias.
       `
     },
     {
@@ -84,17 +82,17 @@ export const cspSocialEthicalImpactsPart7Data = {
 
 1) Inequality of access to computing and connectivity is called the digital _______.
 
-2) The principle that data should flow consistently with original-context norms is called contextual _______.
+2) Research in which volunteers contribute data with their own devices is called _______ science.
 
-3) AI outputs that are confident but factually wrong are called _______.
+3) Using someone else's work without permission and presenting it as your own is called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["divide", "integrity", "hallucinations"],
+        correctAnswers: ["divide", "citizen", "plagiarism"],
         hint1: "Access gap.",
-        hint2: "Norm-respecting flow.",
-        hint3: "Confident-wrong AI.",
-        explanation: "Digital divide / contextual integrity / hallucinations."
+        hint2: "Ordinary citizens help.",
+        hint3: "It may have legal consequences.",
+        explanation: "Digital divide / citizen science / plagiarism."
       }
     },
     {
@@ -106,23 +104,23 @@ export const cspSocialEthicalImpactsPart7Data = {
       exercise: {
         dropdowns: [
           {
-            label: "A high-stakes algorithmic decision should provide ___",
-            options: ["transparency, accountability, and recourse", "only the final result, with no explanation", "secrecy, speed, and finality without appeal", "full automation, no logs, and no appeals"]
+            label: "The digital divide is affected by the actions of ___",
+            options: ["individuals, organizations, and governments", "only the companies that build computers", "only students and their teachers", "no one, since access cannot change"]
           },
           {
-            label: "AI training-data ethics centers on ___",
-            options: ["provenance, consent, attribution, and bias", "model speed, accuracy, cost, and latency", "hardware, cooling, bandwidth, and uptime", "dataset size alone, regardless of its source"]
+            label: "Biases can be embedded in software development ___",
+            options: ["at all levels", "only in the training data", "only in the user interface", "never, since code is neutral"]
           },
           {
             label: "Computing innovations' impacts are typically ___",
             options: ["unevenly distributed across groups", "evenly distributed across all groups", "limited to the people who build them", "identical for every user everywhere"]
           }
         ],
-        correctAnswers: ["transparency, accountability, and recourse", "provenance, consent, attribution, and bias", "unevenly distributed across groups"],
-        hint1: "Three properties.",
-        hint2: "AI ethics.",
+        correctAnswers: ["individuals, organizations, and governments", "at all levels", "unevenly distributed across groups"],
+        hint1: "Many different actors.",
+        hint2: "Anywhere along the way.",
         hint3: "Equity matters.",
-        explanation: "Three ethical properties, AI training ethics, unequal impact."
+        explanation: "Individuals, organizations, and governments all affect the digital divide; bias can enter at every level; impacts fall unevenly."
       }
     },
     {
@@ -131,11 +129,11 @@ export const cspSocialEthicalImpactsPart7Data = {
       content: `
 ## Final Exam Tips
 
-- Stakeholder + benefit + harm framing for every impact question.
-- Bias is real; audit and address.
-- Algorithm choices are policy choices; design transparency, accountability, and recourse in.
+- Who benefits + who is harmed framing for every impact question.
+- Bias is real; programmers should act to reduce it.
+- Innovations get used in unintended ways; not every effect can be anticipated.
 - Digital divide framing for access questions.
-- AI raises new authorship, consent, and accuracy concerns.
+- Intellectual property: Creative Commons, open source, open access, citation, plagiarism.
       `
     },
     {
@@ -150,23 +148,23 @@ export const cspSocialEthicalImpactsPart7Data = {
             question: "A new translation app makes communication easier across languages but reinforces stereotypes through gendered defaults. The most CSP-aligned response is ___",
             options: [
               "ignore the stereotypes on the grounds that the underlying translation accuracy is statistically high overall.",
-              "audit outputs for each demographic group, document the issue, fix gendered defaults, and offer overrides.",
+              "check outputs for each group, fix the gendered defaults, and let users choose other wording.",
               "remove the app, its data, and its models from circulation rather than fix the defaults.",
               "warn users about the stereotypes but leave the gendered defaults unchanged for now."
             ],
             correctAnswer: 1,
-            explanation: "Audit + fix + user agency."
+            explanation: "Programmers should take action to reduce bias in their innovations."
           },
           {
             question: "A school district deploys an algorithm to allocate counseling resources. The MOST important guardrails are ___",
             options: [
               "no specific guardrails, on the grounds that any algorithm that ships in production has already been reviewed.",
-              "transparent criteria, human review of high-stakes decisions, bias audits, and an appeal path.",
+              "clear criteria, human review of major decisions, and checks for bias across groups.",
               "keeping the criteria secret, so families cannot game the algorithm's allocation process.",
               "letting the algorithm decide alone, with no reviews, audits, or appeals, to avoid human bias."
             ],
             correctAnswer: 1,
-            explanation: "Full ethical-design framing for high-stakes algorithms."
+            explanation: "Clear criteria, human review, and checking results across groups help reduce bias in important decisions."
           }
         ]
       }

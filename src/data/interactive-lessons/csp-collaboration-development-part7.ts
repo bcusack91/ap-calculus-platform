@@ -13,7 +13,7 @@ export const cspCollaborationDevelopmentPart7Data = {
 
 ## AP Exam Recap — Collaboration in Development
 
-The collaboration concepts the AP exam tests most.
+The collaboration and program-correctness concepts the AP exam tests most.
       `
     },
     {
@@ -25,7 +25,7 @@ The collaboration concepts the AP exam tests most.
       exercise: {
         questions: [
           {
-            question: "AP CSP's definition of collaboration includes ___",
+            question: "AP CSP's description of effective collaboration includes ___",
             options: [
               "silent solo work, where each person codes, tests, and documents alone.",
               "drawing on many voices, sharing knowledge, and giving constructive feedback.",
@@ -33,18 +33,18 @@ The collaboration concepts the AP exam tests most.
               "always working remotely, since in-person work is treated as a failure mode."
             ],
             correctAnswer: 1,
-            explanation: "Collaboration = inclusion + shared knowledge + constructive feedback."
+            explanation: "Effective collaboration includes diverse perspectives, shared knowledge, and feedback, supported by interpersonal skills."
           },
           {
-            question: "A pull-request workflow primarily supports ___",
+            question: "Which list names the interpersonal skills the CED says effective collaborative teams practice?",
             options: [
-              "encrypting source code so only project maintainers can read it.",
-              "asynchronous code review by teammates before changes are merged.",
-              "compressing commit history so the repository takes less disk space.",
-              "locking files so only one teammate can edit the code at a time."
+              "Speed, memorization, and working alone",
+              "Communication, consensus building, conflict resolution, and negotiation",
+              "Debugging, compiling, and documenting",
+              "Hand tracing, visualizations, and debuggers"
             ],
             correctAnswer: 1,
-            explanation: "PRs = mechanism for async code review."
+            explanation: "The CED lists communication, consensus building, conflict resolution, and negotiation. Hand tracing and debuggers are ways to find errors, not interpersonal skills."
           }
         ]
       }
@@ -57,24 +57,21 @@ The collaboration concepts the AP exam tests most.
 
 | Term | Definition |
 |------|-----------|
-| Collaboration | Multiple people working together with shared goals + practices. |
-| Pair programming | Two devs at one keyboard. |
-| Code review | Inspecting proposed changes before merge. |
-| Pull request (PR) | A proposed change submitted for review. |
-| Open source | Source code publicly available. |
-| Crowdsourcing | Many small contributions to a shared output. |
-| Bus factor | Number of teammates whose loss would block work. |
-| Least privilege | Grant only the access actually needed. |
-| Async-first | Default to written, time-zone-friendly communication. |
+| Collaboration | People working together, drawing on diverse talents and perspectives. |
+| Pair programming | A driver writes code while a navigator reviews; they switch roles. |
+| Online collaboration tools | Let programmers share ideas, documents, and code and give feedback. |
+| Crowdsourcing | Obtaining input or information from many people via the Internet. |
+| Investigation | Surveys, user testing, interviews, and direct observation. |
+| Syntax / run-time / logic / overflow error | The four error types the exam names. |
+| Test case | A defined input with its expected output. |
 
 ## Common Pitfalls
 
 - Mistaking "many people in a room" for collaboration.
-- Centralizing knowledge in one person (low bus factor).
-- Skipping code review "because we trust each other".
-- Ignoring quieter voices.
-- Using a shared admin account.
-- Pasting sensitive code into public AI tools.
+- Letting one voice make every decision.
+- Consulting only one kind of user, which can build bias into a program.
+- Testing only typical inputs and skipping boundary values.
+- Using code from someone else (or an AI tool) without acknowledging it.
       `
     },
     {
@@ -83,19 +80,19 @@ The collaboration concepts the AP exam tests most.
       content: `
 **Applied Recall** ✍️
 
-1) A proposed change submitted for review is called a _______ request.
+1) In pair programming, the partner who types is the driver, and the partner who reviews is the _______.
 
-2) The number of teammates whose loss would block the team is the _______ factor.
+2) An error that stops a program while it is running, such as dividing by zero, is a _______ error.
 
-3) Granting only the access actually needed is called _______ privilege.
+3) Getting input from a large number of people via the Internet is called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["pull", "bus", "least"],
-        hint1: "Git terminology.",
-        hint2: "\"Hit by a bus\".",
-        hint3: "Minimum access.",
-        explanation: "PR = pull request. Bus factor = knowledge concentration. Least privilege = minimal access."
+        correctAnswers: ["navigator", "run-time", "crowdsourcing"],
+        hint1: "They guide the way.",
+        hint2: "It happens during execution.",
+        hint3: "Sourcing from the crowd.",
+        explanation: "Driver and navigator are the pair programming roles. Errors during execution are run-time errors. Crowdsourcing gathers input from many people online."
       }
     },
     {
@@ -107,23 +104,23 @@ The collaboration concepts the AP exam tests most.
       exercise: {
         dropdowns: [
           {
-            label: "A team's knowledge stays distributed when it ___",
-            options: ["documents decisions and uses code review", "centralizes everything in one person's head", "assigns each module to one expert who owns it alone", "keeps decisions in private chats between pairs"]
+            label: "A team's knowledge stays shared when it ___",
+            options: ["documents decisions and works in pairs", "keeps everything in one person's head", "assigns each module to one person alone", "keeps decisions in private messages"]
           },
           {
-            label: "A PR description should answer ___",
-            options: ["\"what changed and why\" so reviewers have context", "\"how long it took\" so managers can track effort", "\"every line changed\" so reviewers skip the diff", "\"who wrote it\" so blame can be assigned later"]
+            label: "An input must be from 1 to 10. The best boundary tests include ___",
+            options: ["0, 1, 10, and 11", "5 only", "1 only", "2, 4, and 6"]
           },
           {
-            label: "When AI suggests code, the team should ___",
-            options: ["review it as carefully as any other change", "merge it once it passes the automated test suite", "trust it, since AI tools are trained on correct code", "ban it from every part of the codebase"]
+            label: "When AI suggests code for a team's program, the team should ___",
+            options: ["acknowledge, test, and understand it", "use it without any review", "trust it, since AI code is always correct", "ban all code that came from outside"]
           }
         ],
-        correctAnswers: ["documents decisions and uses code review", "\"what changed and why\" so reviewers have context", "review it as carefully as any other change"],
+        correctAnswers: ["documents decisions and works in pairs", "0, 1, 10, and 11", "acknowledge, test, and understand it"],
         hint1: "Spread knowledge.",
-        hint2: "Context = better review.",
-        hint3: "Trust but verify.",
-        explanation: "Docs + review distribute knowledge. Good PRs explain what + why. AI output gets human review."
+        hint2: "At and just beyond each extreme.",
+        hint3: "You are responsible for code you use.",
+        explanation: "Documentation and pairing spread knowledge. Boundary tests sit at and just beyond the minimum and maximum. AI-generated code must be acknowledged, tested, and understood."
       }
     },
     {
@@ -132,10 +129,11 @@ The collaboration concepts the AP exam tests most.
       content: `
 ## Final Exam Tips
 
-- AP collaboration questions reward inclusivity, knowledge sharing, and feedback culture.
-- Pair programming, code review, and version control are the three workhorses.
-- Bus factor and least privilege are the two big risk-management ideas.
-- Open source and crowdsourcing harness scale but require governance.
+- AP collaboration questions reward diverse perspectives, inclusive participation, and constructive feedback.
+- Know pair programming (driver and navigator) and that online tools support sharing and feedback.
+- Know the interpersonal skills: communication, consensus building, conflict resolution, negotiation.
+- Investigate users with surveys, user testing, interviews, and direct observation.
+- Classify errors (syntax, run-time, logic, overflow) and test at the boundaries.
       `
     },
     {
@@ -147,26 +145,26 @@ The collaboration concepts the AP exam tests most.
       exercise: {
         questions: [
           {
-            question: "A school project team is told to \"use collaboration tools\". The most AP-aligned interpretation is ___",
+            question: "A school project team is told to \"use online collaboration tools\". Which is the most appropriate interpretation?",
             options: [
               "email each member's changes around at the end of every working day.",
-              "use a shared version-controlled repo and review each other's changes.",
+              "keep the code and documents in a shared space where teammates edit them and leave feedback.",
               "have one student do all the coding while the others handle non-technical tasks.",
-              "share a single account whose credentials are posted in the team chat channel."
+              "share a single account whose password is posted in the team chat channel."
             ],
             correctAnswer: 1,
-            explanation: "AP-style \"collaboration tools\" = VCS + code review + shared docs + small reviewable changes."
+            explanation: "Online tools support collaboration by letting programmers share ideas, documents, and code and give each other feedback."
           },
           {
-            question: "A team's only senior engineer takes vacation. Work stalls because no one else understands the deployment process. The CSP-aligned long-term fix is ___",
+            question: "A team's only experienced programmer is away for a week. Work stalls because no one else understands how the program's scoring procedure works. Which long-term fix is most appropriate?",
             options: [
-              "discourage vacations so the senior engineer is always available on demand.",
-              "document the deployment process and cross-train teammates to raise the bus factor.",
-              "replace the senior engineer with someone less central to the deployment process.",
-              "switch deployment platforms so the existing tribal knowledge no longer matters."
+              "Discourage the programmer from ever being away from the project.",
+              "Document it and have teammates pair on it.",
+              "Replace the experienced programmer with someone less involved in scoring.",
+              "Delete the scoring procedure so no special knowledge is needed."
             ],
             correctAnswer: 1,
-            explanation: "Documentation + cross-training raises the bus factor."
+            explanation: "Documentation and pair programming spread knowledge across the team, so work does not depend on one person."
           }
         ]
       }

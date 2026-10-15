@@ -149,7 +149,7 @@ double f3 = c * 9 / 5 + 32;     // 225 / 5 = 45, then 45 + 32 = 77, stored as 77
       content: `
 ## Dividing by Zero
 
-Dividing an int by zero, or taking \`% 0\`, throws an **\`ArithmeticException\`** at run time:
+Dividing an int by the int zero throws an **\`ArithmeticException\`** at run time:
 
 \`\`\`java
 int students = 0;
