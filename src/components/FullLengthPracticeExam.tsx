@@ -103,7 +103,8 @@ export interface DBQItem {
 
 export interface LEQItem {
   type: 'leq'
-  promptOptions: { label: string; prompt: string }[]   // student picks one
+  title?: string                                  // heading; defaults to "Long Essay Question"
+  promptOptions: { label: string; prompt: string }[]   // student picks one (a single entry = no choice)
   rubric: RubricPoint[]
   sampleResponses?: { promptLabel: string; response: string }[]
   topic: string
@@ -774,7 +775,10 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
         <div className="container"><div className="mx-auto max-w-3xl">
           {header}
           <div className="mb-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-            <h3 className="mb-2 text-lg font-bold text-gray-900 dark:text-white">Long Essay Question</h3>
+            <h3 className="mb-2 text-lg font-bold text-gray-900 dark:text-white">{item.title ?? 'Long Essay Question'}</h3>
+            {item.promptOptions.length === 1 ? (
+              <div className="text-sm text-gray-700 dark:text-gray-300"><RichText text={item.promptOptions[0].prompt} /></div>
+            ) : (<>
             <p className="mb-3 text-sm text-gray-700 dark:text-gray-300">Choose <strong>one</strong> of the following prompts:</p>
             <div className="space-y-2">
               {item.promptOptions.map((opt, i) => (
@@ -786,14 +790,15 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
                 </button>
               ))}
             </div>
+            </>)}
           </div>
           <div className="mb-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-            <p className="mb-2 text-sm font-semibold text-gray-900 dark:text-gray-100">Your essay (Option {chosenPrompt.label}):</p>
+            <p className="mb-2 text-sm font-semibold text-gray-900 dark:text-gray-100">{item.promptOptions.length === 1 ? 'Your essay:' : `Your essay (Option ${chosenPrompt.label}):`}</p>
             <textarea
               value={ans.response}
               onChange={e => updateAnswer(a => a.type === 'leq' ? { ...a, response: e.target.value } : a)}
               disabled={ans.submitted}
-              placeholder="Write your LEQ essay. Aim for a clear defensible thesis, contextualization, specific historical evidence, complex reasoning, and a complex argument."
+              placeholder={item.title ? 'Write your essay. Aim for a clear, defensible claim, specific evidence, and reasoning that ties them together.' : 'Write your LEQ essay. Aim for a clear defensible thesis, contextualization, specific historical evidence, complex reasoning, and a complex argument.'}
               className="min-h-[300px] w-full rounded-lg border border-gray-300 bg-white p-3 text-sm text-gray-800 focus:border-amber-400 focus:outline-none disabled:bg-gray-50 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-200"
             />
             <p className="mt-1 text-xs text-gray-500">{ans.response.split(/\s+/).filter(Boolean).length} words</p>
