@@ -3,6 +3,7 @@
 import { Suspense, useEffect, useState, useCallback } from 'react'
 import { useParams, useSearchParams } from 'next/navigation'
 import { renderRichText } from '@/lib/render-rich-text'
+import { escapeTagOpeners } from '@/lib/user-flashcard-ids'
 import { formatFlashcardContent } from '@/lib/format-flashcard-content'
 import { preloadKatex } from '@/lib/katex-lazy'
 
@@ -104,7 +105,8 @@ function FlashcardSetViewerInner() {
   // flashcard surfaces (normalize, then render) instead of being printed raw.
   void katexReady // re-render dependency: KaTeX loads after first paint
   const card = set.cards[index]
-  const cardHtml = renderRichText(formatFlashcardContent(flipped ? card.back : card.front))
+  // Teacher-written text: escape tag openers so it can't inject markup into students' pages.
+  const cardHtml = renderRichText(formatFlashcardContent(escapeTagOpeners(flipped ? card.back : card.front)))
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-12 px-4">
