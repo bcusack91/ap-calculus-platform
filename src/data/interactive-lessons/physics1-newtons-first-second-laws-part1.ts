@@ -114,13 +114,13 @@ In a non-inertial frame, objects appear to accelerate without any real force. Fo
           {
             question: 'A book sits on a table with no net force acting on it. According to Newton\'s First Law, the book will:',
             options: [
-              'Eventually slide off the table',
-              'Remain at rest indefinitely',
-              'Start moving in a random direction',
-              'Slowly decelerate'
+              'Begin sliding slowly under its own weight',
+              'Remain at rest',
+              'Gradually gain speed in some direction',
+              'Slowly lose its inertia over time'
             ],
             correctAnswer: 1,
-            explanation: 'Newton\'s First Law states that an object at rest stays at rest when the net force is zero. The book will remain at rest indefinitely unless an unbalanced force acts on it.'
+            explanation: 'Newton\'s First Law states that an object at rest stays at rest when the net force is zero. The book will remain at rest indefinitely unless an unbalanced force acts on it. Its weight is balanced by the normal force, and inertia (set by mass) does not wear off.'
           },
           {
             question: 'A spaceship in deep space (far from any stars or planets) shuts off its engines. The spaceship will:',
@@ -180,7 +180,7 @@ In a non-inertial frame, objects appear to accelerate without any real force. Fo
         dropdowns: [
           {
             label: 'Newton\'s First Law is also called the Law of:',
-            options: ['Acceleration', 'Inertia', 'Gravity', 'Action-Reaction'],
+            options: ['Acceleration', 'Inertia', 'Momentum', 'Action-Reaction'],
             correctIndex: 1,
             explanation: 'Newton\'s First Law is the Law of Inertia — it describes how objects resist changes in their state of motion.'
           },
@@ -216,7 +216,7 @@ In a non-inertial frame, objects appear to accelerate without any real force. Fo
           {
             question: 'A passenger in a car is wearing a seatbelt. When the car suddenly stops, the seatbelt exerts a force on the passenger. Which best explains why the seatbelt is necessary?',
             options: [
-              'The passenger\'s weight increases during braking',
+              'Braking increases the passenger\'s weight',
               'The passenger\'s inertia tends to keep them moving forward',
               'The car pushes the passenger forward',
               'Gravity pulls the passenger toward the dashboard'

@@ -56,8 +56,7 @@ A stone is thrown horizontally at 15 m/s from the roof of a 45 m tall building. 
 3) Final speed at impact (in m/s, round to nearest whole number)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['3', '45', '34'],
+        questions: [{ question: '1) Time to hit the ground (s)', answer: '3', acceptableAnswers: ['3'] }, { question: '2) Horizontal distance from the building (m)', answer: '45', acceptableAnswers: ['45'] }, { question: '3) Final speed at impact (m/s, nearest whole number)', answer: '34', acceptableAnswers: ['34', '33.5', '33.54'] }],
         hint1: 'Use $h = \\frac{1}{2}gt^2$ and solve for $t$.',
         hint2: 'Horizontal distance: $\\Delta x = v_{0x} \\cdot t$. Also find $v_y$ using $v_y = gt$.',
         hint3: 'Combine $v_x$ and $v_y$ using $v = \\sqrt{v_x^2 + v_y^2}$, then round to the nearest whole number.',
@@ -113,13 +112,13 @@ A soccer ball is kicked from ground level at 40 m/s at 53° above horizontal. Us
           {
             question: 'A ball launched from a 100 m cliff at 37° ($v_{0y} = 30$ m/s, $v_{0x} = 40$ m/s) takes longer to land than a ball launched at the same speed from flat ground because:',
             options: [
-              'It has more horizontal velocity',
-              'Gravity is weaker at higher altitudes',
-              'It must fall an extra 100 m after returning to launch height',
-              'The launch angle is different'
+              'It has a larger horizontal velocity, so it travels farther',
+              'Gravity is weaker at the cliff top, so it falls more slowly',
+              'It falls 100 m farther after passing launch height',
+              'The cliff launch gives it a larger vertical launch speed'
             ],
             correctAnswer: 2,
-            explanation: 'After the symmetric part (returning to launch height), the ball must still fall the extra 100 m of the cliff, adding more time to the flight.'
+            explanation: 'After the symmetric part (returning to launch height), the ball must still fall the extra 100 m of the cliff, adding more time to the flight. The launch velocity components are the same as on flat ground, and $g$ is essentially unchanged 100 m up.'
           }
         ]
       }
@@ -134,21 +133,21 @@ A soccer ball is kicked from ground level at 40 m/s at 53° above horizontal. Us
         dropdowns: [
           {
             label: 'A ball is thrown at 20 m/s at 53° ($v_{0y} = 16$ m/s). At $t = 1$ s, $v_y$ is (use $g = 10$ $m/s^{2}$):',
-            options: ['16 m/s', '6 m/s', '0 m/s', '-4 m/s'],
+            options: ['16 m/s', '6 m/s', '26 m/s', '6.2 m/s'],
             correctIndex: 1,
-            explanation: '$v_y = v_{0y} - gt = 16 - 10(1) = 6$ m/s. Still moving upward.'
+            explanation: '$v_y = v_{0y} - gt = 16 - 10(1) = 6$ m/s. Still moving upward. Adding $gt$ instead of subtracting gives 26 m/s, and 6.2 m/s uses $g = 9.8$ instead of the given $g = 10$ $m/s^{2}$.'
           },
           {
             label: 'At $t = 1.6$ s, $v_y$ is:',
-            options: ['6 m/s', '1.6 m/s', '0 m/s', '-6 m/s'],
+            options: ['32 m/s', '-16 m/s', '0 m/s', '-6 m/s'],
             correctIndex: 2,
-            explanation: '$v_y = 16 - 10(1.6) = 16 - 16 = 0$ m/s. This is the maximum height!'
+            explanation: '$v_y = 16 - 10(1.6) = 16 - 16 = 0$ m/s. This is the maximum height! Adding $gt$ gives 32 m/s, and $-16$ m/s is the vertical velocity at landing ($t = 3.2$ s), not at the peak.'
           },
           {
             label: 'At $t = 2.2$ s, $v_y$ is:',
-            options: ['6 m/s', '0 m/s', '-6 m/s', '-22 m/s'],
+            options: ['6 m/s', '0 m/s', '-6 m/s', '38 m/s'],
             correctIndex: 2,
-            explanation: '$v_y = 16 - 10(2.2) = 16 - 22 = -6$ m/s. Now falling — and by symmetry, this has the same magnitude as at $t = 1$ s.'
+            explanation: '$v_y = 16 - 10(2.2) = 16 - 22 = -6$ m/s. Now falling, and by symmetry this has the same magnitude as at $t = 1$ s. Adding $gt$ instead of subtracting gives 38 m/s.'
           }
         ]
       }
@@ -199,10 +198,10 @@ A ball is thrown at 30 m/s horizontally from the top of a 125 m cliff. Use $g = 
               '30 m/s',
               '40 m/s',
               '50 m/s',
-              '60 m/s'
+              '70 m/s'
             ],
             correctAnswer: 2,
-            explanation: 'By symmetry, the landing speed equals the launch speed: $v = v_0 = 50$ m/s.'
+            explanation: 'By symmetry, the landing speed equals the launch speed: $v = v_0 = 50$ m/s. 30 m/s and 40 m/s are the single components; 70 m/s adds the components instead of combining them as $\\sqrt{40^2 + 30^2}$.'
           }
         ]
       }

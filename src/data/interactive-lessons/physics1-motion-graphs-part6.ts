@@ -106,13 +106,13 @@ The initial velocity is $v_0 = 2$ m/s.
           {
             question: 'For the same object, the displacement from $t = 0$ to $t = 6$ s is:',
             options: [
-              '4 m',
-              '8 m',
+              '16 m',
+              '20 m',
               '12 m',
-              '24 m'
+              '36 m'
             ],
             correctAnswer: 2,
-            explanation: 'Area = trapezoid: $\\frac{1}{2}(v_i + v_f) \\times t = \\frac{1}{2}(-4 + 8)(6) = \\frac{1}{2}(4)(6) = 12$ m.'
+            explanation: 'The line crosses zero at $t = 2$ s. Negative triangle (0–2 s): $\\frac{1}{2}(2)(4) = 4$ m. Positive triangle (2–6 s): $\\frac{1}{2}(4)(8) = 16$ m. Net displacement $= 16 - 4 = 12$ m, which matches the trapezoid formula $\\frac{1}{2}(v_i + v_f)t = \\frac{1}{2}(-4 + 8)(6) = 12$ m. The positive part alone is 16 m, adding both areas gives the distance, 20 m, and treating $-4$ as $+4$ gives 36 m.'
           }
         ]
       }
@@ -129,7 +129,7 @@ A car starts from rest. Its $v$-$t$ graph is a straight line reaching 20 m/s at 
 
 2) What is the average velocity for the entire trip? (in m/s)
 
-3) What is the deceleration magnitude in the braking phase? $(in m/s^{2})$
+3) What is the deceleration magnitude in the braking phase? (in $m/s^{2}$)
       `,
       exercise: {
         boxes: 3,
@@ -151,16 +151,16 @@ A car starts from rest. Its $v$-$t$ graph is a straight line reaching 20 m/s at 
           {
             question: 'Two objects have the same $v$-$t$ graph from $t = 0$ to $t = 5$ s, but Object A starts at $x = 0$ and Object B starts at $x = 10$ m. Their $x$-$t$ graphs will be:',
             options: [
-              'Identical',
-              'Parallel (same shape, shifted vertically by 10 m)',
-              'Mirror images',
-              'Completely different shapes'
+              'Identical, since the motion is the same',
+              'Same shape, shifted up by 10 m',
+              'Same shape, shifted right by 10 s',
+              'Different shapes, since they start apart'
             ],
             correctAnswer: 1,
-            explanation: 'Same $v$-$t$ graph means the same changes in position. But Object B starts 10 m ahead, so its $x$-$t$ graph is shifted up by 10 m — parallel to Object A\'s.'
+            explanation: 'Same $v$-$t$ graph means the same changes in position at every instant. But Object B starts 10 m ahead, so its $x$-$t$ graph is the same shape shifted up by 10 m — parallel to Object A\'s, not shifted in time.'
           },
           {
-            question: 'A $v$-$t$ graph shows $v = 10 - 2t$ (m/s). When is the object farthest from its starting position?',
+            question: 'A $v$-$t$ graph shows $v = 10 - 2t$ (m/s) for $0 \\le t \\le 10$ s. When during this interval is the object farthest from its starting position?',
             options: [
               '$t = 0$ s',
               '$t = 5$ s',
@@ -168,7 +168,7 @@ A car starts from rest. Its $v$-$t$ graph is a straight line reaching 20 m/s at 
               'Cannot be determined'
             ],
             correctAnswer: 1,
-            explanation: 'The object is farthest when it reverses direction, which occurs when $v = 0$: $0 = 10 - 2t \\Rightarrow t = 5$ s. After this, the object moves back toward the start.'
+            explanation: 'The object is farthest when it reverses direction, which occurs when $v = 0$: $0 = 10 - 2t \\Rightarrow t = 5$ s, where its displacement is $\\frac{1}{2}(5)(10) = 25$ m. After this, the object moves back toward the start and is back at $x = 0$ at $t = 10$ s.'
           }
         ]
       }

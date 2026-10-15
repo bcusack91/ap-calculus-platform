@@ -130,8 +130,8 @@ Unlike total energy, kinetic energy alone is **not necessarily conserved**. It c
             options: [
               'Negative, because it moves in the negative direction',
               'Zero, because leftward is negative',
-              'Positive: $\\frac{1}{2}mv^2$',
-              'Depends on the reference frame'
+              'Positive, equal to $\\frac{1}{2}mv^2$',
+              'Smaller than if it moved to the right'
             ],
             correctAnswer: 2,
             explanation: 'KE is a scalar and always non-negative. $KE = \\frac{1}{2}mv^2$ depends on speed (magnitude of velocity), not direction.'
@@ -152,8 +152,7 @@ Unlike total energy, kinetic energy alone is **not necessarily conserved**. It c
 3) A 0.5 kg object moving at 10 m/s has its speed tripled. What is the new kinetic energy (in J)?
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['36', '16', '225'],
+        questions: [{ question: '1)', answer: '36', acceptableAnswers: ['36'] }, { question: '2)', answer: '16', acceptableAnswers: ['16', '15.8', '15.81'] }, { question: '3)', answer: '225', acceptableAnswers: ['225'] }],
         hint1: '$KE = \\frac{1}{2}mv^2 = \\frac{1}{2}(2)(6)^2$.',
         hint2: '$v = \\sqrt{2 \\cdot KE / m} = \\sqrt{2(150{,}000)/1200}$.',
         hint3: 'New speed = $3 \\times 10 = 30$ m/s. $KE = \\frac{1}{2}(0.5)(30)^2$.',
@@ -176,9 +175,9 @@ Unlike total energy, kinetic energy alone is **not necessarily conserved**. It c
           },
           {
             label: 'You triple the mass and halve the speed. The new KE compared to the original is:',
-            options: ['3/4 as much', '3/2 as much', '6 times as much', '3/4 as much'],
+            options: ['3/4 as much', '3/2 as much', '6 times as much', '12 times as much'],
             correctIndex: 0,
-            explanation: 'New KE $= \\frac{1}{2}(3m)(v/2)^2 = \\frac{1}{2}(3m)(v^2/4) = \\frac{3}{4} \\cdot \\frac{1}{2}mv^2$. It\'s 3/4 of the original.'
+            explanation: 'New KE $= \\frac{1}{2}(3m)(v/2)^2 = \\frac{1}{2}(3m)(v^2/4) = \\frac{3}{4} \\cdot \\frac{1}{2}mv^2$, so it is 3/4 of the original. Forgetting to square the half gives 3/2, and squaring a doubled speed instead of a halved one gives 12.'
           },
           {
             label: 'Two objects have the same KE. Object A has 4× the mass. Its speed compared to B is:',
@@ -188,9 +187,9 @@ Unlike total energy, kinetic energy alone is **not necessarily conserved**. It c
           },
           {
             label: 'The SI unit of kinetic energy is the Joule, which equals:',
-            options: ['kg·m/s', '$kg\\cdot m^{2}/s^{2}$', 'N·s', '$kg\\cdot m/s^{2}$'],
+            options: ['$kg\\cdot m/s$', '$kg\\cdot m^{2}/s^{2}$', '$kg\\cdot m^{2}/s$', '$kg\\cdot m/s^{2}$'],
             correctIndex: 1,
-            explanation: '$[KE] = \\text{kg} \\cdot (\\text{m/s})^2 = \\text{kg} \\cdot \\text{m}^2/\\text{s}^2 = $ J.'
+            explanation: '$[KE] = \\text{kg} \\cdot (\\text{m/s})^2 = \\text{kg} \\cdot \\text{m}^2/\\text{s}^2 = $ J. The units kg·m/s (momentum), kg·m²/s (angular momentum) and kg·m/s² (force) come from dropping a square or a time factor.'
           }
         ]
       }
@@ -207,12 +206,12 @@ Unlike total energy, kinetic energy alone is **not necessarily conserved**. It c
             question: 'A 60 kg runner at 5 m/s speeds up to 10 m/s. The change in kinetic energy is:',
             options: [
               '750 J',
-              '1500 J',
+              '4500 J',
               '2250 J',
               '3000 J'
             ],
             correctAnswer: 2,
-            explanation: '$\\Delta KE = \\frac{1}{2}(60)(10^2) - \\frac{1}{2}(60)(5^2) = 3000 - 750 = 2250$ J.'
+            explanation: '$\\Delta KE = \\frac{1}{2}(60)(10^2) - \\frac{1}{2}(60)(5^2) = 3000 - 750 = 2250$ J. The values 750 J and 3000 J are the initial and final KE alone, and 4500 J leaves out the $\\frac{1}{2}$.'
           },
           {
             question: 'If the speed of every molecule in a gas is doubled, the total kinetic energy of the gas:',

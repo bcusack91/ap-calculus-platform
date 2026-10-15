@@ -124,9 +124,9 @@ This means pulling at about 22° above horizontal requires the **least force** t
             question: 'You pull a sled with a rope at 45° above horizontal. Compared to pulling horizontally, the friction force is:',
             options: [
               'Greater',
-              'The same',
+              'The same, since $\\mu$ is unchanged',
               'Less',
-              'Zero'
+              'Zero, since the rope lifts the sled'
             ],
             correctAnswer: 2,
             explanation: 'Pulling upward at 45° reduces the normal force ($N = mg - F\\sin 45°$), which reduces friction ($f = \\mu N$).'
@@ -135,9 +135,9 @@ This means pulling at about 22° above horizontal requires the **least force** t
             question: 'You push a box at 30° below horizontal with force $F$. The normal force is:',
             options: [
               '$mg$',
-              '$mg - F\\\\sin 30°$',
-              '$mg + F\\\\sin 30°$',
-              '$mg + F\\\\cos 30°$'
+              '$mg - F\\sin 30°$',
+              '$mg + F\\sin 30°$',
+              '$mg + F\\cos 30°$'
             ],
             correctAnswer: 2,
             explanation: 'Pushing downward adds a vertical component: $N = mg + F\\sin 30°$. The normal force increases.'
@@ -203,9 +203,9 @@ A 10 kg block on a rough surface ($\\mu_k = 0.40$) is pulled with 50 N. Use $g =
           },
           {
             label: 'To minimize the force needed to pull a box at constant velocity, pull at:',
-            options: ['0° (horizontal)', '$\\\\tan^{-1}(\\\\mu_k)$ above horizontal', '45° above horizontal', '90° (straight up)'],
+            options: ['0°, pulling straight along the floor', '$\\tan^{-1}(\\mu_k)$', '45°, splitting the pull evenly', '$\\tan^{-1}(1/\\mu_k)$ above horizontal'],
             correctIndex: 1,
-            explanation: 'The optimal angle is $\\theta = \\tan^{-1}(\\mu_k)$, which balances the benefit of reduced normal force against the cost of reduced horizontal force component.'
+            explanation: 'The optimal angle above horizontal is $\\theta = \\tan^{-1}(\\mu_k)$, which balances the benefit of a reduced normal force against the cost of a smaller horizontal component. A steeper angle such as $\\tan^{-1}(1/\\mu_k)$ gives up too much horizontal pull.'
           }
         ]
       }
@@ -224,21 +224,21 @@ A 10 kg block on a rough surface ($\\mu_k = 0.40$) is pulled with 50 N. Use $g =
               '120 N',
               '200 N',
               '280 N',
-              '380 N'
+              '260 N'
             ],
             correctAnswer: 2,
-            explanation: '$N = mg + F\\sin 53° = 200 + 100(0.80) = 200 + 80 = 280$ N.'
+            explanation: '$N = mg + F\\sin 53° = 200 + 100(0.80) = 280$ N. Subtracting the component gives 120 N, ignoring the push gives 200 N, and using $\\cos 53° = 0.60$ instead of $\\sin 53°$ gives 260 N.'
           },
           {
             question: 'A 15 kg box is pulled at 37° above horizontal with 60 N across a rough floor ($\\mu_k = 0.25$, $g = 10$ $m/s^{2}$, $\\sin 37° = 0.60$, $\\cos 37° = 0.80$). The acceleration is:',
             options: [
-              '0.5 $m/s^{2}$',
-              '1.4 $m/s^{2}$',
-              '2.0 $m/s^{2}$',
+              '0.7 $m/s^{2}$',
+              '1.3 $m/s^{2}$',
+              '2.1 $m/s^{2}$',
               '3.2 $m/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$N = mg - F\\sin 37° = 150 - 36 = 114$ N. $f_k = 0.25 \\times 114 = 28.5$ N. $F_x = 60\\cos 37° = 48$ N. $a = (48 - 28.5)/15 = 19.5/15 = 1.3$ $m/s^{2}$ $\\approx 1.4$ $m/s^{2}$.'
+            explanation: '$N = mg - F\\sin 37° = 150 - 36 = 114$ N. $f_k = 0.25 \\times 114 = 28.5$ N. $F_x = 60\\cos 37° = 48$ N. $a = (48 - 28.5)/15 = 19.5/15 = 1.3$ $m/s^{2}$. Keeping $N = mg$ gives 0.7, using the whole 60 N as the horizontal pull gives 2.1, and ignoring friction gives 3.2.'
           }
         ]
       }

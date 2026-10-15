@@ -103,35 +103,35 @@ For a curved graph, the **instantaneous velocity** at any moment is the slope of
           {
             question: 'On a position-time graph, a horizontal line represents:',
             options: [
-              'Constant positive velocity',
+              'Motion at a constant nonzero speed',
               'Constant acceleration',
-              'Zero velocity (at rest)',
-              'Infinite velocity'
+              'The object at rest',
+              'Motion along a horizontal path'
             ],
             correctAnswer: 2,
-            explanation: 'A horizontal line has zero slope, meaning $v = \\Delta x / \\Delta t = 0$. The object is at rest — its position is not changing.'
+            explanation: 'A horizontal line has zero slope, meaning $v = \\Delta x / \\Delta t = 0$. The object is at rest — its position is not changing. The graph is not a picture of the path: a horizontal line does not mean the object travels horizontally.'
           },
           {
             question: 'On a position-time graph, a straight line with negative slope means the object is:',
             options: [
-              'Slowing down',
-              'Moving at constant velocity in the negative direction',
-              'Accelerating',
-              'At rest'
+              'Slowing down at a steady rate until it stops',
+              'Moving at constant negative velocity',
+              'Speeding up in the negative direction',
+              'Moving downhill and losing height steadily'
             ],
             correctAnswer: 1,
-            explanation: 'A straight line = constant velocity. Negative slope = velocity is negative (moving in − direction). The object is moving at constant speed in the negative direction.'
+            explanation: 'A straight line = constant slope = constant velocity, so the object is neither speeding up nor slowing down. Negative slope = velocity is negative (moving in the − direction). The graph shows position, not height, so it does not mean the object moves downhill.'
           },
           {
             question: 'On a position-time graph, the instantaneous velocity at a point is given by:',
             options: [
-              'The y-coordinate at that point',
-              'The area under the curve',
+              'The position value read off at that point',
+              'The area under the curve up to that point',
               'The slope of the tangent line at that point',
-              'The x-coordinate at that point'
+              'The slope of the line from the origin'
             ],
             correctAnswer: 2,
-            explanation: 'Instantaneous velocity is the derivative of position with respect to time, which geometrically is the slope of the tangent line on the $x$-$t$ graph.'
+            explanation: 'Instantaneous velocity is the slope of the tangent line to the $x$-$t$ graph at that instant. A line drawn from the origin to the point gives only an average velocity (and only if the object started at $x = 0$), and the position value itself is not a rate.'
           }
         ]
       }
@@ -169,21 +169,21 @@ A position-time graph shows a straight line passing through the points $(t=0, x=
         dropdowns: [
           {
             label: 'A steeper line on an $x$-$t$ graph means:',
-            options: ['greater acceleration', 'greater velocity', 'greater position', 'longer time'],
+            options: ['greater acceleration', 'greater speed', 'a greater position', 'a longer elapsed time'],
             correctIndex: 1,
-            explanation: 'The slope of an $x$-$t$ graph is velocity. A steeper slope means a larger velocity (faster motion).'
+            explanation: 'The slope of an $x$-$t$ graph is velocity. A steeper line, whether it slopes up or down, means a larger speed (faster motion).'
           },
           {
             label: 'A parabolic curve on an $x$-$t$ graph indicates:',
-            options: ['constant velocity', 'constant acceleration', 'zero acceleration', 'instantaneous rest'],
+            options: ['constant velocity', 'constant acceleration', 'zero acceleration', 'growing acceleration'],
             correctIndex: 1,
             explanation: 'When $x = x_0 + v_0t + \\frac{1}{2}at^2$ with constant $a$, the graph is a parabola.'
           },
           {
             label: 'Two lines on the same $x$-$t$ graph that cross indicate that the objects:',
-            options: ['have the same velocity', 'are at the same position at that time', 'have the same acceleration', 'started at the same position'],
+            options: ['have the same velocity at that moment', 'are at the same position', 'have the same acceleration there', 'started from the same position'],
             correctIndex: 1,
-            explanation: 'When two position-time curves intersect, the objects are at the same position at that moment in time.'
+            explanation: 'When two position-time curves intersect, the objects are at the same position at that moment in time. Their slopes (velocities) at the crossing are generally different.'
           }
         ]
       }
@@ -210,9 +210,9 @@ A position-time graph shows a straight line passing through the points $(t=0, x=
           {
             question: 'Object A has a steeper positive slope on an $x$-$t$ graph than Object B. Which statement is true?',
             options: [
-              'A has greater acceleration',
+              'A accelerates more',
               'A has greater velocity',
-              'A is farther from the origin',
+              'A is farther away',
               'A started earlier'
             ],
             correctAnswer: 1,

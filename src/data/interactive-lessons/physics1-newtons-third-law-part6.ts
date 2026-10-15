@@ -89,34 +89,34 @@ $$T = 3(3.92) = 11.76 \\text{ N}$$
             question: 'Three blocks (2 kg, 3 kg, 5 kg) are pushed on a frictionless surface by a 50 N force on the 2 kg block. The contact force between the 3 kg and 5 kg blocks is:',
             options: [
               '10 N',
-              '20 N',
+              '15 N',
               '25 N',
               '40 N'
             ],
             correctAnswer: 2,
-            explanation: '$a = 50/10 = 5$ $m/s^{2}$. The contact force between the 3 kg and 5 kg blocks must accelerate only the 5 kg block: $F = 5 \\times 5 = 25$ N.'
+            explanation: '$a = 50/10 = 5$ $m/s^{2}$. The contact force between the 3 kg and 5 kg blocks must accelerate only the 5 kg block: $F = 5 \\times 5 = 25$ N. 40 N is the contact between the first two blocks (it accelerates 8 kg), 15 N uses the 3 kg block, and 10 N uses the 2 kg block.'
           },
           {
             question: 'In a modified Atwood machine (1 kg on table, 4 kg hanging, frictionless), the acceleration is closest to ($g = 10$ $m/s^{2}$):',
             options: [
-              '2 $m/s^{2}$',
+              '6 $m/s^{2}$',
               '4 $m/s^{2}$',
               '8 $m/s^{2}$',
               '10 $m/s^{2}$'
             ],
             correctAnswer: 2,
-            explanation: '$a = m_2 g/(m_1 + m_2) = 4(10)/5 = 40/5 = 8$ $m/s^{2}$.'
+            explanation: '$a = m_2 g/(m_1 + m_2) = 4(10)/5 = 40/5 = 8$ $m/s^{2}$. 6 $m/s^{2}$ wrongly uses the Atwood formula $(m_2 - m_1)g/(m_1 + m_2)$; the table block\'s weight is balanced by the table, so it does not oppose the motion.'
           },
           {
             question: 'Two boxes are connected by a rope. A pulls B across a frictionless floor with force $F$. The tension in the rope connecting them is less than $F$ because:',
             options: [
-              'Some force is lost to friction',
-              'The rope stretches',
-              'Part of $F$ accelerates the front block (A) itself',
-              'Newton\'s Third Law reduces it'
+              'Some of $F$ is lost to friction on the floor',
+              'The rope stretches and absorbs part of $F$',
+              'Part of $F$ must also accelerate front block A',
+              'Newton\'s Third Law cancels part of $F$'
             ],
             correctAnswer: 2,
-            explanation: 'The applied force must accelerate BOTH blocks. The tension only needs to accelerate block B. Since block A also needs to be accelerated, the tension is less than $F$.'
+            explanation: 'The applied force must accelerate BOTH blocks. The tension only needs to accelerate block B. Since block A also needs to be accelerated, the tension is less than $F$. The floor is frictionless and an ideal rope does not absorb force.'
           }
         ]
       }
@@ -129,7 +129,7 @@ $$T = 3(3.92) = 11.76 \\text{ N}$$
 
 An Atwood machine has $m_1 = 5$ kg and $m_2 = 15$ kg. Use $g = 10$ $m/s^{2}$.
 
-1) What is the acceleration $(in m/s^{2})$?
+1) What is the acceleration (in $m/s^{2}$)?
 
 2) What is the tension in the string (in N)?
 
@@ -160,15 +160,15 @@ An Atwood machine has $m_1 = 5$ kg and $m_2 = 15$ kg. Use $g = 10$ $m/s^{2}$.
           },
           {
             label: 'Adding more mass to the heavier side of an Atwood machine:',
-            options: ['Decreases acceleration', 'Increases acceleration', 'Doesn\'t change acceleration', 'Stops the system'],
+            options: ['Decreases acceleration, since inertia grows', 'Increases acceleration', 'Doesn\'t change acceleration', 'Brings the system to equilibrium'],
             correctIndex: 1,
             explanation: 'More mass on the heavy side increases $(m_2 - m_1)$ faster than $(m_1 + m_2)$, increasing the acceleration.'
           },
           {
             label: 'In a three-block push problem, the contact force closest to the applied force is the one between:',
-            options: ['The first and second blocks', 'The second and third blocks', 'All contacts are equal', 'None — they\'re all less than F'],
+            options: ['The first and second blocks', 'The last two blocks', 'All contacts are equal', 'The lightest pair'],
             correctIndex: 0,
-            explanation: 'The first contact must accelerate blocks 2 and 3 (more mass), so it has the larger contact force. The last contact only accelerates the final block.'
+            explanation: 'The first contact must accelerate blocks 2 and 3 (more mass), so it has the larger contact force. The last contact only accelerates the final block. The contact forces are not equal, and which pair is lightest does not matter: what matters is how much mass lies beyond each contact.'
           }
         ]
       }
@@ -187,21 +187,21 @@ An Atwood machine has $m_1 = 5$ kg and $m_2 = 15$ kg. Use $g = 10$ $m/s^{2}$.
               '12 N',
               '18 N',
               '30 N',
-              '24 N'
+              '15 N'
             ],
             correctAnswer: 0,
-            explanation: '$a = 30/(6+4) = 3$ $m/s^{2}$. Tension accelerates B only: $T = m_B a = 4 \\times 3 = 12$ N.'
+            explanation: '$a = 30/(6+4) = 3$ $m/s^{2}$. Tension accelerates B only: $T = m_B a = 4 \\times 3 = 12$ N. 18 N uses A\'s mass, and 15 N assumes the force splits evenly between the blocks.'
           },
           {
             question: 'An Atwood machine with $m_1 = 2$ kg and $m_2 = 8$ kg is released. After 1 second, the speed of each mass is ($g = 10$ $m/s^{2}$):',
             options: [
-              '2 m/s',
+              '10 m/s',
               '4 m/s',
               '6 m/s',
               '8 m/s'
             ],
             correctAnswer: 2,
-            explanation: '$a = (8-2)(10)/(8+2) = 60/10 = 6$ $m/s^{2}$. $v = at = 6 \\times 1 = 6$ m/s.'
+            explanation: '$a = (8-2)(10)/(8+2) = 60/10 = 6$ $m/s^{2}$. $v = at = 6 \\times 1 = 6$ m/s. 8 m/s uses the table-pulley formula $m_2 g/(m_1 + m_2)$, and 10 m/s assumes free fall.'
           }
         ]
       }

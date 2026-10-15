@@ -51,13 +51,13 @@ $$\\text{Force} \\rightarrow \\text{FBD} \\rightarrow F_{\\text{net}} = ma$$
           {
             question: 'A box sits on a table. You push it horizontally with increasing force. The friction force:',
             options: [
-              'Stays at $\\mu_s mg$ until the box moves',
-              'Equals your push until it reaches $\\mu_s N$, then the box moves',
+              'Stays at $\\mu_s mg$ the whole time until the box moves',
+              'Equals the push until it reaches $\\mu_s N$',
               'Is zero until the box moves, then equals $\\mu_k N$',
-              'Increases proportionally to the push forever'
+              'Increases in proportion to the push without limit'
             ],
             correctAnswer: 1,
-            explanation: 'Static friction matches the applied force up to its maximum value $f_{s,\\max} = \\mu_s N$. Once exceeded, the object starts moving and friction drops to $f_k = \\mu_k N$.'
+            explanation: 'Static friction matches the applied force up to its maximum value $f_{s,\\max} = \\mu_s N$. Once the push exceeds that, the box starts moving and friction drops to $f_k = \\mu_k N$.'
           },
           {
             question: 'Two identical blocks, one flat and one on its side, are slid across the same surface. The friction force is:',
@@ -73,10 +73,10 @@ $$\\text{Force} \\rightarrow \\text{FBD} \\rightarrow F_{\\text{net}} = ma$$
           {
             question: 'You pull a block at angle $\\theta$ above horizontal. Increasing $\\theta$ (while keeping $F$ constant):',
             options: [
-              'Increases both the horizontal pull and friction',
-              'Decreases horizontal pull but also decreases friction',
-              'Increases horizontal pull and decreases friction',
-              'Has no effect on friction'
+              'Raises both the horizontal pull and the friction',
+              'Lowers both the horizontal pull and friction',
+              'Raises the horizontal pull and lowers the friction',
+              'Leaves friction unchanged, since $\\mu$ is fixed'
             ],
             correctAnswer: 1,
             explanation: 'Increasing $\\theta$ reduces $F\\cos\\theta$ (less horizontal pull) and reduces $N = mg - F\\sin\\theta$ (less normal force), which reduces friction.'
@@ -117,19 +117,19 @@ $$\\text{Force} \\rightarrow \\text{FBD} \\rightarrow F_{\\text{net}} = ma$$
         dropdowns: [
           {
             label: 'A car brakes on a wet road vs. a dry road. The stopping distance on the wet road is _____ because:',
-            options: ['Shorter — water lubricates', 'Longer — lower μ gives less friction', 'The same — mass cancels out', 'Shorter — tires grip better when wet'],
+            options: ['The same, because mass cancels out', 'Longer, because a lower $\\mu_k$ means less friction', 'Shorter, because wet tires grip better', 'Longer, because water adds mass'],
             correctIndex: 1,
             explanation: 'Wet surfaces have lower $\\mu_k$. Since $d = v_0^2 / (2\\mu_k g)$, smaller $\\mu_k$ means larger stopping distance.'
           },
           {
             label: 'If you double the mass of a sliding block (same surface, same initial speed), the stopping distance:',
-            options: ['Doubles', 'Stays the same', 'Halves', 'Quadruples'],
+            options: ['Doubles, since there is more inertia', 'Stays the same, since $a = \\mu_k g$ either way', 'Halves, since friction is doubled', 'Quadruples, since KE and inertia both double'],
             correctIndex: 1,
             explanation: '$d = v_0^2/(2\\mu_k g)$. Mass cancels! Doubling $m$ doubles friction but also doubles inertia. The deceleration $\\mu_k g$ is mass-independent.'
           },
           {
             label: 'Static friction is a "reactive" force, meaning it:',
-            options: ['Always equals $\\mu_{s}N$', 'Adjusts its magnitude to prevent motion', 'Only acts when objects are moving', 'Is always greater than kinetic friction'],
+            options: ['Always equals $\\mu_{s}N$', 'Adjusts its magnitude to prevent motion', 'Only acts when objects are moving', 'Always exceeds kinetic friction'],
             correctIndex: 1,
             explanation: 'Static friction adjusts from 0 up to $\\mu_s N$ to match the applied force and prevent sliding. It\'s reactive — it only provides as much force as needed.'
           }
@@ -160,11 +160,11 @@ $$\\text{Force} \\rightarrow \\text{FBD} \\rightarrow F_{\\text{net}} = ma$$
             options: [
               '$F = \\mu_k mg$',
               '$F(0.80) = \\mu_k(mg - 0.60F)$',
-              '$F(0.60) = \\mu_k(mg + 0.80F)$',
+              '$F(0.60) = \\mu_k(mg - 0.80F)$',
               '$F(0.80) = \\mu_k(mg + 0.60F)$'
             ],
             correctAnswer: 1,
-            explanation: 'Horizontal: $F\\cos 37° = \\mu_k N$. Vertical: $N = mg - F\\sin 37°$. Combining: $F(0.80) = \\mu_k(mg - 0.60F)$.'
+            explanation: 'Horizontal: $F\\cos 37° = \\mu_k N$. Vertical: $N = mg - F\\sin 37°$, because the upward pull lifts some of the weight. Combining: $F(0.80) = \\mu_k(mg - 0.60F)$. Swapping sine and cosine, or adding the vertical component to $mg$, gives the wrong equations.'
           }
         ]
       }

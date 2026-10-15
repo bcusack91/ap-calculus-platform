@@ -98,13 +98,13 @@ $$\\Delta v = \\text{area of triangle} = \\frac{1}{2}(4)(6) = 12 \\text{ m/s}$$
           {
             question: 'What does the area under an $a$-$t$ graph represent?',
             options: [
-              'Displacement',
-              'Position',
+              'Displacement over the interval',
+              'Final velocity of the object',
               'Change in velocity',
-              'Total distance'
+              'Total distance traveled'
             ],
             correctAnswer: 2,
-            explanation: 'The area under an $a$-$t$ graph equals $\\int a \\, dt = \\Delta v$ (the change in velocity).'
+            explanation: 'The area under an $a$-$t$ graph equals acceleration × time $= \\Delta v$ (the change in velocity). It equals the final velocity only if the object started from rest.'
           },
           {
             question: 'An $a$-$t$ graph shows a constant value of $-2$ $m/s^{2}$ for 5 s. If $v_0 = +10$ m/s, what is the final velocity?',
@@ -121,7 +121,7 @@ $$\\Delta v = \\text{area of triangle} = \\frac{1}{2}(4)(6) = 12 \\text{ m/s}$$
             question: 'For an object in free fall (upward positive), the $a$-$t$ graph is:',
             options: [
               'A line sloping downward',
-              'A horizontal line at $a = +9.8$ $m/s^{2}$',
+              'A horizontal line at $a = 9.8$ $m/s^{2}$',
               'A horizontal line at $a = -9.8$ $m/s^{2}$',
               'A parabola'
             ],
@@ -164,7 +164,7 @@ An $a$-$t$ graph shows acceleration increasing linearly from $a = 0$ at $t = 0$ 
         dropdowns: [
           {
             label: 'If the $a$-$t$ graph is a horizontal line at $a = 0$, the object has:',
-            options: ['zero velocity', 'constant velocity', 'increasing velocity', 'zero position'],
+            options: ['zero velocity', 'constant velocity', 'rising velocity', 'falling velocity'],
             correctIndex: 1,
             explanation: 'Zero acceleration means the velocity is not changing — the object moves at constant velocity (which could be zero).'
           },
@@ -176,9 +176,9 @@ An $a$-$t$ graph shows acceleration increasing linearly from $a = 0$ at $t = 0$ 
           },
           {
             label: 'To find displacement from an $a$-$t$ graph, you need to first find:',
-            options: ['the slope', 'the velocity function (then integrate again)', 'the area squared', 'nothing — displacement is read directly'],
+            options: ['the slope of the $a$-$t$ graph', 'the $v$-$t$ graph, built from the areas', 'the total area under the $a$-$t$ graph', 'nothing — read it off directly'],
             correctIndex: 1,
-            explanation: 'From $a$-$t$ you get $\\Delta v$ (area). You need the velocity as a function of time, then integrate velocity to get displacement. It\'s a two-step process.'
+            explanation: 'From the $a$-$t$ graph you get $\\Delta v$ (the area). Use those changes, starting from $v_0$, to build the $v$-$t$ graph; the area under the $v$-$t$ graph then gives displacement. The area under the $a$-$t$ graph alone is a change in velocity, not a displacement. It\'s a two-step process.'
           }
         ]
       }
@@ -211,7 +211,7 @@ An $a$-$t$ graph shows acceleration increasing linearly from $a = 0$ at $t = 0$ 
               'Whether acceleration is positive or negative'
             ],
             correctAnswer: 2,
-            explanation: 'Position cannot be directly obtained from an $a$-$t$ graph. You would need to integrate twice (first to get velocity, then to get position) and know both initial velocity and initial position.'
+            explanation: 'Position cannot be directly obtained from an $a$-$t$ graph. You would need two steps (areas give velocity changes, then areas under the resulting $v$-$t$ graph give displacement) and you would also need the initial velocity and initial position.'
           }
         ]
       }

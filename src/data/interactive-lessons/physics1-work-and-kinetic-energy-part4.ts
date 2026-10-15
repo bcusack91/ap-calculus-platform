@@ -100,9 +100,9 @@ When an object moves along an incline at angle $\\phi$:
           {
             question: 'A box is pulled across a rough floor. Which forces do nonzero work on the box?',
             options: [
-              'Applied force and friction only',
-              'Applied force, friction, and gravity',
-              'Applied force, friction, gravity, and normal force',
+              'The applied force and friction only',
+              'All except the normal force',
+              'All four forces, including gravity',
               'Only the applied force'
             ],
             correctAnswer: 0,
@@ -122,10 +122,10 @@ When an object moves along an incline at angle $\\phi$:
           {
             question: 'Pulling a box at an angle above horizontal (compared to pulling horizontally) results in:',
             options: [
-              'More friction because the normal force increases',
+              'More friction because $N$ increases',
               'Less friction because the normal force decreases',
               'The same friction regardless of angle',
-              'Zero friction'
+              'Zero friction once any lift is applied'
             ],
             correctAnswer: 1,
             explanation: 'Pulling upward reduces the normal force ($N = mg - F\\sin\\theta$), which reduces the kinetic friction force $f_k = \\mu_k N$. This is why pulling at an angle can be advantageous.'
@@ -148,12 +148,11 @@ Use $g = 10$ $m/s^{2}$.
 3) In problem 2, starting from rest, what is the block\'s speed at the bottom (in m/s, to 3 significant figures)?
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['80', '50', '7.1'],
+        questions: [{ question: '1)', answer: '80', acceptableAnswers: ['80'] }, { question: '2)', answer: '50', acceptableAnswers: ['50'] }, { question: '3)', answer: '7.07', acceptableAnswers: ['7.07', '7.1', '7.071'] }],
         hint1: '$W_{\\text{net}} = W_{\\text{push}} + W_{\\text{friction}} = 30(4) + (-10)(4)$.',
         hint2: '$W_{\\text{gravity}} = mgd\\sin\\theta = 2(10)(5)\\sin(30°) = 100 \\times 0.5$.',
         hint3: '$W_{\\text{net}} = \\Delta KE \\Rightarrow 50 = \\frac{1}{2}(2)v^2 \\Rightarrow v = \\sqrt{50}$.',
-        explanation: '1) $W_{\\text{net}} = 120 - 40 = 80$ J. 2) $W_g = 2(10)(5)(0.5) = 50$ J. 3) $v = \\sqrt{2(50)/2} = \\sqrt{50} \\approx 7.07 \\approx 7.1$ m/s.'
+        explanation: '1) $W_{\\text{net}} = 120 - 40 = 80$ J. 2) $W_g = 2(10)(5)(0.5) = 50$ J. 3) $v = \\sqrt{2(50)/2} = \\sqrt{50} \\approx 7.07$ m/s.'
       }
     },
     {
@@ -203,12 +202,12 @@ Use $g = 10$ $m/s^{2}$.
             question: 'A 4 kg block is pushed 3 m up a frictionless $30°$ incline by a force of 40 N parallel to the incline. The net work done is ($g = 10$ $m/s^{2}$):',
             options: [
               '60 J',
-              '80 J',
+              '16 J',
               '120 J',
               '180 J'
             ],
             correctAnswer: 0,
-            explanation: '$W_{\\text{push}} = 40 \\times 3 = 120$ J. $W_{\\text{gravity}} = -mgd\\sin(30°) = -4(10)(3)(0.5) = -60$ J. $W_{\\text{normal}} = 0$. $W_{\\text{net}} = 120 - 60 = 60$ J.'
+            explanation: '$W_{\\text{push}} = 40 \\times 3 = 120$ J. $W_{\\text{gravity}} = -mgd\\sin(30°) = -4(10)(3)(0.5) = -60$ J. $W_{\\text{normal}} = 0$. $W_{\\text{net}} = 120 - 60 = 60$ J. Ignoring gravity gives 120 J, adding gravity\'s work gives 180 J, and using $\\cos 30°$ gives about 16 J.'
           },
           {
             question: 'An 8 kg block starts from rest and is pulled 5 m across a surface by a net force of 16 N. Its final speed is:',
@@ -216,10 +215,10 @@ Use $g = 10$ $m/s^{2}$.
               '2 m/s',
               '$\\sqrt{10}$ m/s',
               '$\\sqrt{20}$ m/s',
-              '4 m/s'
+              '20 m/s'
             ],
             correctAnswer: 2,
-            explanation: '$W_{\\text{net}} = 16 \\times 5 = 80$ J. From $W = \\frac{1}{2}mv^2$: $80 = \\frac{1}{2}(8)v^2 \\Rightarrow v^2 = 20 \\Rightarrow v = \\sqrt{20}$ m/s $\\approx 4.47$ m/s.'
+            explanation: '$W_{\\text{net}} = 16 \\times 5 = 80$ J. From $W = \\frac{1}{2}mv^2$: $80 = \\frac{1}{2}(8)v^2 \\Rightarrow v^2 = 20 \\Rightarrow v = \\sqrt{20}$ m/s $\\approx 4.47$ m/s. Leaving out the $\\frac{1}{2}$ gives $\\sqrt{10}$, forgetting the square root gives 20, and 2 m/s is the acceleration\'s value, not a speed.'
           }
         ]
       }

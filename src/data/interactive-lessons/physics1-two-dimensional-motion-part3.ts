@@ -94,12 +94,12 @@ $$v_{BG} = \\sqrt{v_{BW}^2 + v_{WG}^2} = \\sqrt{16 + 9} = 5 \\text{ m/s}$$
             question: 'A boat can travel at 5 m/s in still water. It tries to cross a river flowing at 5 m/s. If the boat aims straight across, the boat\'s speed relative to the ground is:',
             options: [
               '0 m/s',
-              '5 m/s',
-              '$5\\sqrt{2} \\approx 7.1$ m/s',
+              '5.0 m/s',
+              '7.1 m/s',
               '10 m/s'
             ],
             correctAnswer: 2,
-            explanation: 'The boat velocity and river current are perpendicular: $v = \\sqrt{5^2 + 5^2} = \\sqrt{50} = 5\\sqrt{2} \\approx 7.1$ m/s.'
+            explanation: 'The boat velocity and river current are perpendicular: $v = \\sqrt{5^2 + 5^2} = \\sqrt{50} = 5\\sqrt{2} \\approx 7.1$ m/s. Adding the speeds (10 m/s) or subtracting them (0 m/s) would be right only if the two velocities were parallel.'
           },
           {
             question: 'If $\\vec{v}_{AB} = 3$ m/s east, then $\\vec{v}_{BA}$ is:',
@@ -158,7 +158,7 @@ $$v_{BG} = \\sqrt{v_{BW}^2 + v_{WG}^2} = \\sqrt{16 + 9} = 5 \\text{ m/s}$$
           },
           {
             label: 'The velocity of A relative to B is the negative of:',
-            options: ['the velocity of A relative to the ground', 'the velocity of B relative to A', 'the acceleration of A', 'the displacement of B'],
+            options: ['the ground velocity of A', 'the velocity of B relative to A', 'the acceleration of A', 'the displacement of B'],
             correctIndex: 1,
             explanation: '$\\vec{v}_{AB} = -\\vec{v}_{BA}$. If A sees B moving east, B sees A moving west.'
           }

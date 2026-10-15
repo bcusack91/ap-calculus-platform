@@ -111,10 +111,10 @@ Distance equals the magnitude of displacement **only** when the object moves in 
               '400 m',
               '200 m',
               '0 m',
-              '800 m'
+              '127 m'
             ],
             correctAnswer: 2,
-            explanation: 'Displacement depends only on the initial and final positions. Since the jogger returns to the starting point, $\\Delta x = x_f - x_i = 0$ m. The distance traveled is 400 m, but the displacement is zero.'
+            explanation: 'Displacement depends only on the initial and final positions. Since the jogger returns to the starting point, $\\Delta x = x_f - x_i = 0$ m. The distance traveled is 400 m, but the displacement is zero. (127 m is the track\'s diameter, the largest displacement, reached halfway around.)'
           },
           {
             question: 'An object moves from $x = -5$ m to $x = +3$ m. What is the displacement?',
@@ -130,13 +130,13 @@ Distance equals the magnitude of displacement **only** when the object moves in 
           {
             question: 'Which statement about distance and displacement is always true?',
             options: [
-              'Distance equals displacement',
-              'Distance is always greater than displacement',
-              'Distance is always greater than or equal to the magnitude of displacement',
-              'Displacement is always positive'
+              'Distance always equals the magnitude of displacement, for any path',
+              'Distance is always strictly greater than the magnitude of displacement',
+              'Distance is never less than the magnitude of displacement',
+              'Displacement is never negative because it is measured from the start'
             ],
             correctAnswer: 2,
-            explanation: 'Distance (total path length) is always ≥ |displacement|. They are equal only when an object moves in one direction without turning around. Distance can never be less than the magnitude of displacement.'
+            explanation: 'Distance (total path length) is always ≥ |displacement|. They are equal when an object moves in one direction without turning around, so "strictly greater" fails, and they differ whenever it reverses, so "always equal" fails. Displacement is negative whenever the object ends up on the negative side of where it started.'
           }
         ]
       }
@@ -172,13 +172,13 @@ Distance equals the magnitude of displacement **only** when the object moves in 
         dropdowns: [
           {
             label: 'Displacement is a:',
-            options: ['scalar quantity', 'vector quantity', 'dimensionless number', 'unit of measurement'],
+            options: ['scalar value', 'vector quantity', 'pure number', 'unit of length'],
             correctIndex: 1,
             explanation: 'Displacement has both magnitude and direction, making it a vector quantity.'
           },
           {
             label: 'Distance is always:',
-            options: ['negative', 'zero', 'positive or zero', 'equal to displacement'],
+            options: ['greater than zero', 'positive or negative', 'positive or zero', 'equal to displacement'],
             correctIndex: 2,
             explanation: 'Distance is the total path length and can never be negative. It can be zero if the object hasn\'t moved.'
           },

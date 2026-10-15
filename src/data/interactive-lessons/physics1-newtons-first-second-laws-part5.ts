@@ -129,7 +129,7 @@ This is why they float — not because there\'s no gravity, but because there\'s
             question: 'Why do astronauts on the ISS appear weightless?',
             options: [
               'There is no gravity in space',
-              'They are too far from Earth for gravity to act',
+              'Gravity cannot reach that far from Earth',
               'They are in free fall, so the normal force is zero',
               'The ISS shields them from gravity'
             ],
@@ -181,7 +181,7 @@ This is why they float — not because there\'s no gravity, but because there\'s
         dropdowns: [
           {
             label: 'An object rests on a 30° incline. The normal force equals:',
-            options: ['$mg$', '$mg\\\\sin 30°$', '$mg\\\\cos 30°$', '$mg\\\\tan 30°$'],
+            options: ['$mg$', '$mg\\sin 30°$', '$mg\\cos 30°$', '$mg\\tan 30°$'],
             correctIndex: 2,
             explanation: 'On an incline, the normal force equals the component of weight perpendicular to the surface: $N = mg\\cos\\theta$.'
           },
@@ -193,9 +193,9 @@ This is why they float — not because there\'s no gravity, but because there\'s
           },
           {
             label: 'A box sits on the floor with nothing else touching it. The normal force:',
-            options: ['Is less than mg', 'Equals mg', 'Is greater than mg', 'Is zero'],
+            options: ['Is less than mg', 'Equals mg', 'Is greater than mg', 'Is zero; only weight acts on the box'],
             correctIndex: 1,
-            explanation: 'With no other vertical forces and no vertical acceleration: $N = mg$.'
+            explanation: 'With no other vertical forces and no vertical acceleration: $N = mg$. The floor does push up; if only weight acted, the box would accelerate downward through the floor.'
           },
           {
             label: 'When an elevator decelerates while moving upward, the apparent weight is:',
@@ -231,7 +231,7 @@ This is why they float — not because there\'s no gravity, but because there\'s
               'Falls to the floor quickly',
               'Floats motionless',
               'Flies to the ceiling',
-              'Moves sideways'
+              'Falls slowly toward the floor'
             ],
             correctAnswer: 1,
             explanation: 'Both the elevator and ball are in free fall with the same acceleration $g$. Relative to the elevator, the ball appears to float — this is the equivalence principle in action.'

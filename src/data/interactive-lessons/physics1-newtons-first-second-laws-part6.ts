@@ -82,13 +82,13 @@ $$T_1 = T_2 + m_Ag = 19.6 + 3(9.8) = 19.6 + 29.4 = 49 \\text{ N}$$
           {
             question: 'A 4 kg block is pushed across a frictionless surface by a 28 N horizontal force. After 3 seconds starting from rest, how far has it traveled?',
             options: [
-              '7 m',
+              '63 m',
               '10.5 m',
               '21 m',
               '31.5 m'
             ],
             correctAnswer: 3,
-            explanation: 'First: $a = F/m = 28/4 = 7$ $m/s^{2}$. Then: $d = \\frac{1}{2}at^2 = \\frac{1}{2}(7)(3)^2 = \\frac{1}{2}(7)(9) = 31.5$ m.'
+            explanation: 'First: $a = F/m = 28/4 = 7$ $m/s^{2}$. Then: $d = \\frac{1}{2}at^2 = \\frac{1}{2}(7)(3)^2 = \\frac{1}{2}(7)(9) = 31.5$ m. Forgetting the $\\frac{1}{2}$ gives 63 m, forgetting to square $t$ gives 10.5 m, and 21 m is the final speed $at$ in m/s, not a distance.'
           },
           {
             question: 'Three blocks (1 kg, 2 kg, 3 kg) hang vertically in a chain from the ceiling. The tension in the top string is:',
@@ -107,10 +107,10 @@ $$T_1 = T_2 + m_Ag = 19.6 + 3(9.8) = 19.6 + 29.4 = 49 \\text{ N}$$
               '147 N',
               '67 N',
               '227 N',
-              '80 N'
+              '87 N'
             ],
             correctAnswer: 1,
-            explanation: '$N = mg - T\\sin 53° = 15(9.8) - 100(0.80) = 147 - 80 = 67$ N.'
+            explanation: '$N = mg - T\\sin 53° = 15(9.8) - 100(0.80) = 147 - 80 = 67$ N. Using $\\cos 53° = 0.60$ instead gives 87 N, ignoring the rope gives 147 N, and adding the rope\'s vertical component gives 227 N.'
           }
         ]
       }
@@ -121,7 +121,7 @@ $$T_1 = T_2 + m_Ag = 19.6 + 3(9.8) = 19.6 + 29.4 = 49 \\text{ N}$$
       content: `
 **Workshop Calculations** 🧮
 
-1) A 8 kg block on a frictionless floor is pushed with 56 N horizontally. What is the acceleration $(in m/s^{2})$?
+1) A 8 kg block on a frictionless floor is pushed with 56 N horizontally. What is the acceleration (in $m/s^{2}$)?
 
 2) The same block from #1 starts from rest. What is its speed (in m/s) after 4 seconds?
 
@@ -196,10 +196,10 @@ $$T_1 = T_2 + m_Ag = 19.6 + 3(9.8) = 19.6 + 29.4 = 49 \\text{ N}$$
               '6.25 $m/s^{2}$',
               '10.8 $m/s^{2}$',
               '12.5 $m/s^{2}$',
-              '7.5 $m/s^{2}$'
+              '1.10 $m/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$F_x = 500\\cos 30° = 500 \\times 0.866 = 433$ N. $a = F_x/m = 433/40 = 10.8$ $m/s^{2}$.'
+            explanation: '$F_x = 500\\cos 30° = 500 \\times 0.866 = 433$ N. $a = F_x/m = 433/40 = 10.8$ $m/s^{2}$. Using $\\sin 30°$ gives 6.25, ignoring the angle gives 12.5, and dividing by the weight (392 N) instead of the mass gives 1.10.'
           }
         ]
       }

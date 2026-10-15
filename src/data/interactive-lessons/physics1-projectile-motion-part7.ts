@@ -62,10 +62,10 @@ This is the final lesson of the Projectile Motion unit. We'll review **everythin
           {
             question: 'A projectile is at the top of its arc. Its velocity and acceleration are:',
             options: [
-              'Both zero',
-              'Velocity is zero, acceleration is $g$ down',
-              'Velocity is horizontal, acceleration is $g$ down',
-              'Velocity is horizontal, acceleration is zero'
+              'Velocity zero, acceleration zero',
+              'Velocity zero, acceleration $g$ down',
+              'Velocity horizontal, acceleration $g$ down',
+              'Velocity horizontal, acceleration zero'
             ],
             correctAnswer: 2,
             explanation: 'At the top: $v_y = 0$ but $v_x \\neq 0$, so velocity is horizontal. Acceleration is always $g$ downward throughout the flight.'
@@ -154,7 +154,7 @@ A projectile is launched from ground level at 100 m/s at 53° above horizontal. 
               'The bullet passes above the monkey',
               'The bullet passes below the monkey',
               'The bullet hits the monkey',
-              'It depends on the distance'
+              'It depends on the distance to the monkey'
             ],
             correctAnswer: 2,
             explanation: 'Both the bullet and monkey experience the same gravitational acceleration. The bullet falls below its straight-line path by the same amount the monkey falls. They meet! This is the famous "monkey and hunter" problem demonstrating independence of motion.'
@@ -164,11 +164,11 @@ A projectile is launched from ground level at 100 m/s at 53° above horizontal. 
             options: [
               '1.6 times Earth\'s range',
               '6.25 times Earth\'s range',
-              'Equal to Earth\'s range',
+              '0.16 times Earth\'s range',
               '10 times Earth\'s range'
             ],
             correctAnswer: 1,
-            explanation: '$R = v_0^2\\sin 2\\theta / g$. $R_{Moon}/R_{Earth} = g_{Earth}/g_{Moon} = 10/1.6 = 6.25$. Less gravity means much greater range!'
+            explanation: '$R = v_0^2\\sin 2\\theta / g$. $R_{Moon}/R_{Earth} = g_{Earth}/g_{Moon} = 10/1.6 = 6.25$. Less gravity means much greater range! 0.16 is the ratio inverted, and 1.6 uses the Moon\'s $g$ directly as the factor.'
           }
         ]
       }
@@ -179,7 +179,7 @@ A projectile is launched from ground level at 100 m/s at 53° above horizontal. 
       content: `
 **AP Free-Response Style** 📝
 
-A stunt driver launches a car horizontally off a 20 m high ramp at 25 m/s, aiming to clear a 50 m wide canyon. Use $g = 10$ $m/s^{2}$.
+A stunt driver launches a car horizontally off a 20 m high ramp at 25 m/s, aiming to clear a 45 m wide canyon. Use $g = 10$ $m/s^{2}$.
 
 1) Time to fall 20 m (in seconds)
 
@@ -188,12 +188,11 @@ A stunt driver launches a car horizontally off a 20 m high ramp at 25 m/s, aimin
 3) Does the car clear the canyon? (enter yes or no)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['2', '50', 'yes'],
+        questions: [{ question: '1) Time to fall 20 m (s)', answer: '2', acceptableAnswers: ['2'] }, { question: '2) Horizontal distance traveled (m)', answer: '50', acceptableAnswers: ['50'] }, { question: '3) Does the car clear the canyon? (yes or no)', answer: 'yes', acceptableAnswers: ['yes', 'y', 'yes, it clears', 'it clears', 'clears'] }],
         hint1: '$20 = \\frac{1}{2}(10)t^2 = 5t^2$',
         hint2: '$t = 2$ s. $\\Delta x = 25(2)$',
-        hint3: 'Compare $\\Delta x$ with 50 m.',
-        explanation: '1) $t = 2$ s. 2) $\\Delta x = 25(2) = 50$ m. 3) The car travels exactly 50 m — it just barely clears the canyon! (In reality, you\'d want a safety margin.)'
+        hint3: 'Compare $\\Delta x$ with the 45 m canyon width.',
+        explanation: '1) $t = 2$ s. 2) $\\Delta x = 25(2) = 50$ m. 3) Yes. The car travels 50 m horizontally while falling 20 m, so it lands 5 m past the 45 m canyon.'
       }
     },
     {
@@ -210,32 +209,32 @@ A stunt driver launches a car horizontally off a 20 m high ramp at 25 m/s, aimin
               '20 m',
               '40 m',
               '80 m',
-              '200 m'
+              '28.3 m'
             ],
             correctAnswer: 1,
-            explanation: '$R = \\frac{v_0^2\\sin 2\\theta}{g} = \\frac{400 \\cdot \\sin 90°}{10} = \\frac{400}{10} = 40$ m.'
+            explanation: '$R = \\frac{v_0^2\\sin 2\\theta}{g} = \\frac{400 \\cdot \\sin 90°}{10} = \\frac{400}{10} = 40$ m. 28.3 m uses $\\sin 45°$ instead of $\\sin 2\\theta = \\sin 90°$; 20 m divides by $2g$ (the max-height formula) and 80 m doubles the result.'
           },
           {
             question: 'A projectile launched at 60 m/s at 37° ($\\sin 37° = 0.6$) has a max height of (use $g = 10$ $m/s^{2}$):',
             options: [
-              '32.4 m',
+              '115.2 m',
               '64.8 m',
-              '108 m',
+              '129.6 m',
               '180 m'
             ],
             correctAnswer: 1,
-            explanation: '$v_{0y} = 60(0.6) = 36$ m/s. $h = \\frac{36^2}{2(10)} = \\frac{1296}{20} = 64.8$ m.'
+            explanation: '$v_{0y} = 60(0.6) = 36$ m/s. $h = \\frac{36^2}{2(10)} = \\frac{1296}{20} = 64.8$ m. Using $\\cos 37°$ gives $48^2/20 = 115.2$ m, forgetting the 2 gives 129.6 m, and using the full 60 m/s gives 180 m.'
           },
           {
             question: 'The total kinetic energy of a projectile at the peak compared to the launch is:',
             options: [
-              'Zero',
+              'Zero, because the ball stops at the peak',
               'Less than at launch',
-              'Equal to launch',
+              'Equal to launch, since energy is conserved',
               'Greater than at launch'
             ],
             correctAnswer: 1,
-            explanation: 'At the peak, $v_y = 0$ but $v_x$ remains. Speed at peak ($v_{0x}$) is less than launch speed ($v_0$), so KE is less (but not zero!).'
+            explanation: 'At the peak, $v_y = 0$ but $v_x$ remains. Speed at peak ($v_{0x}$) is less than launch speed ($v_0$), so KE is less (but not zero!). Total mechanical energy is conserved, but some of the kinetic energy has become gravitational potential energy.'
           }
         ]
       }

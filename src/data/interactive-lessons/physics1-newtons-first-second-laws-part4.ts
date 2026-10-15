@@ -164,9 +164,9 @@ $$N = mg - F\\sin\\theta = 15(9.8) - 40\\sin 30° = 147 - 20 = 127 \\text{ N}$$
 
 1) A 60 kg person stands on a scale in an elevator accelerating downward at 3 $m/s^{2}$. What does the scale read (in N)? Use $g = 9.8$ $m/s^{2}$.
 
-2) A horizontal force of 50 N pushes a 10 kg box across a frictionless floor. What is the acceleration $(in m/s^{2})$?
+2) A horizontal force of 50 N pushes a 10 kg box across a frictionless floor. What is the acceleration (in $m/s^{2}$)?
 
-3) A person pulls a box with 100 N at 37° above horizontal (frictionless surface). The box has mass 25 kg. What is the horizontal acceleration $(in m/s^{2})$? Use $\\cos 37° = 0.80$.
+3) A person pulls a box with 100 N at 37° above horizontal (frictionless surface). The box has mass 25 kg. What is the horizontal acceleration (in $m/s^{2}$)? Use $\\cos 37° = 0.80$.
 
 *Round all answers to 3 significant figures.*
       `,
@@ -195,9 +195,9 @@ $$N = mg - F\\sin\\theta = 15(9.8) - 40\\sin 30° = 147 - 20 = 127 \\text{ N}$$
           },
           {
             label: 'Pushing a box downward at an angle increases the:',
-            options: ['Weight', 'Normal force', 'Mass', 'Gravitational acceleration'],
+            options: ['Weight of the box', 'Normal force from the floor', 'Mass of the box', 'Horizontal acceleration'],
             correctIndex: 1,
-            explanation: 'Pushing down adds a downward component to the forces. To maintain vertical equilibrium, the normal force must increase: $N = mg + F\\sin\\theta$.'
+            explanation: 'Pushing down adds a downward component to the forces. To maintain vertical equilibrium, the normal force must increase: $N = mg + F\\sin\\theta$. The box\'s mass and weight are unchanged, and only the horizontal component $F\\cos\\theta$ accelerates it sideways.'
           },
           {
             label: 'If the only horizontal force on an object is 30 N and the object has mass 6 kg, it accelerates at:',
@@ -233,10 +233,10 @@ $$N = mg - F\\sin\\theta = 15(9.8) - 40\\sin 30° = 147 - 20 = 127 \\text{ N}$$
               '2.5 $m/s^{2}$',
               '4.3 $m/s^{2}$',
               '5.0 $m/s^{2}$',
-              '10 $m/s^{2}$'
+              '25 $m/s^{2}$'
             ],
             correctAnswer: 0,
-            explanation: '$F_x = 50\\cos 60° = 50 \\times 0.50 = 25$ N. $a = F_x/m = 25/10 = 2.5$ $m/s^{2}$.'
+            explanation: '$F_x = 50\\cos 60° = 50 \\times 0.50 = 25$ N. $a = F_x/m = 25/10 = 2.5$ $m/s^{2}$. Using $\\sin 60°$ gives 4.3, ignoring the angle gives 5.0, and 25 is the horizontal force itself, not yet divided by the mass.'
           }
         ]
       }

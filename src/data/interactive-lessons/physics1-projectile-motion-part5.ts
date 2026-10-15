@@ -93,10 +93,10 @@ Consider a projectile launched at speed $v_0$ at angle $\\theta$:
           {
             question: 'At maximum height, the speed of the projectile is:',
             options: [
-              'Zero',
-              'Equal to $v_0$',
+              'Zero, because the ball momentarily stops',
+              'Equal to $v_0$, the launch speed',
               'Equal to $v_{0x}$',
-              'Equal to $v_{0y}$'
+              'Equal to $v_{0y}$, the initial vertical speed'
             ],
             correctAnswer: 2,
             explanation: 'At max height, $v_y = 0$, so $v = \\sqrt{v_x^2 + 0} = v_x = v_{0x}$. This is the minimum speed during the flight.'
@@ -141,21 +141,21 @@ A ball is launched from the ground at 20 m/s at 30° above horizontal. Use $g = 
         dropdowns: [
           {
             label: 'The horizontal distance from launch to max height equals:',
-            options: ['the range', 'half the range', 'twice the range', 'zero'],
+            options: ['the entire range', 'half the range', 'twice the range', 'a quarter of the range'],
             correctIndex: 1,
             explanation: 'By symmetry, the peak occurs at the midpoint of the trajectory. The horizontal distance to the peak is half the total range.'
           },
           {
             label: 'If a projectile takes 2 s to reach max height, the total flight time is:',
-            options: ['2 s', '3 s', '4 s', '8 s'],
+            options: ['2 s', '1 s', '4 s', '8 s'],
             correctIndex: 2,
-            explanation: 'By symmetry, $t_{flight} = 2 \\times t_{up} = 2 \\times 2 = 4$ s.'
+            explanation: 'By symmetry, $t_{flight} = 2 \\times t_{up} = 2 \\times 2 = 4$ s. Halving instead of doubling gives 1 s, and 8 s squares the rise time.'
           },
           {
             label: 'A ball launched at 37° with speed $v_0$ has the same range as a ball launched at:',
-            options: ['37°', '43°', '53°', '74°'],
+            options: ['37°', '143°', '53°', '74°'],
             correctIndex: 2,
-            explanation: 'Complementary angles give equal range: $90° - 37° = 53°$.'
+            explanation: 'Complementary angles give equal range: $90° - 37° = 53°$. 143° is the supplementary angle (a launch pointed backward), and 74° doubles the angle instead of complementing it.'
           }
         ]
       }

@@ -125,10 +125,10 @@ $$\\Delta x = 144/5.88 = 24.5 \\text{ m}$$
           {
             question: 'A block slides to the right across a rough floor. The friction force points:',
             options: [
-              'To the right (same as motion)',
-              'To the left (opposing motion)',
-              'Upward',
-              'It depends on the applied force'
+              'To the right, in the direction of motion',
+              'To the left',
+              'Straight down, adding to the block\'s weight',
+              'It depends on the direction of the applied force'
             ],
             correctAnswer: 1,
             explanation: 'Kinetic friction always opposes the direction of sliding. Since the block slides right, friction points left.'
@@ -136,10 +136,10 @@ $$\\Delta x = 144/5.88 = 24.5 \\text{ m}$$
           {
             question: 'A crate sits on the flatbed of a truck accelerating forward. The static friction on the crate points:',
             options: [
-              'Backward (opposing truck\'s motion)',
-              'Forward (same as truck\'s acceleration)',
-              'Upward',
-              'There is no friction since the crate isn\'t sliding'
+              'Backward, opposing the motion',
+              'Forward, in the direction the bed speeds up',
+              'Forward only once it slides',
+              'There is no friction on it'
             ],
             correctAnswer: 1,
             explanation: 'Without friction, the crate would slide backward relative to the truck. Static friction prevents this by pointing forward — it\'s what accelerates the crate along with the truck.'
@@ -149,11 +149,11 @@ $$\\Delta x = 144/5.88 = 24.5 \\text{ m}$$
             options: [
               '0.05 $m/s^{2}$',
               '0.5 $m/s^{2}$',
-              '5 $m/s^{2}$',
+              '0.005 $m/s^{2}$',
               '10 $m/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$a = \\mu_k g = 0.05 \\times 10 = 0.5$ $m/s^{2}$ (deceleration). This is independent of the puck\'s mass.'
+            explanation: '$a = \\mu_k g = 0.05 \\times 10 = 0.5$ $m/s^{2}$ (deceleration), independent of the puck\'s mass. Forgetting $g$ gives 0.05, dividing $\\mu_k$ by $g$ gives 0.005, and dropping $\\mu_k$ gives 10 $m/s^{2}$.'
           }
         ]
       }
@@ -191,9 +191,9 @@ $$\\Delta x = 144/5.88 = 24.5 \\text{ m}$$
         dropdowns: [
           {
             label: 'A box is pushed to the left and slides to the left. Friction points:',
-            options: ['Left', 'Right', 'Up', 'Down'],
+            options: ['Left, the same way as the push', 'Right', 'Zero, if the push is large enough', 'Right only if the push is weaker than friction'],
             correctIndex: 1,
-            explanation: 'Kinetic friction opposes sliding. The box slides left, so friction points right.'
+            explanation: 'Kinetic friction opposes sliding. The box slides left, so friction points right, whatever the size of the push.'
           },
           {
             label: 'A book sits on a tilted surface and doesn\'t slide. Friction points:',
@@ -203,13 +203,13 @@ $$\\Delta x = 144/5.88 = 24.5 \\text{ m}$$
           },
           {
             label: 'An object sliding on a rough surface with no applied force will:',
-            options: ['Speed up', 'Move at constant velocity', 'Slow down and stop', 'Immediately stop'],
+            options: ['Speed up, since friction does positive work', 'Move at constant velocity', 'Slow down and stop', 'Stop at once, since nothing pushes it'],
             correctIndex: 2,
             explanation: 'Kinetic friction opposes motion, causing deceleration ($a = -\\mu_k g$). The object gradually slows and stops.'
           },
           {
             label: 'Deceleration due to friction on a horizontal surface is $\\mu_k g$, which means it does NOT depend on:',
-            options: ['The coefficient of friction', 'Gravitational acceleration', 'The mass of the object', 'The surface material'],
+            options: ['The coefficient of friction', 'Gravitational acceleration', 'The mass of the object', 'The materials of the two surfaces'],
             correctIndex: 2,
             explanation: '$a = \\mu_k g$ — mass cancels out! A heavy object and a light object on the same surface decelerate at the same rate.'
           }
@@ -229,11 +229,11 @@ $$\\Delta x = 144/5.88 = 24.5 \\text{ m}$$
             options: [
               '42 N right',
               '30 N right',
-              '12 N right',
+              '54 N right',
               '12 N left'
             ],
             correctAnswer: 1,
-            explanation: '$f_k = \\mu_k mg = 0.20 \\times 60 = 12$ N left. $F_{\\text{net}} = 42 - 12 = 30$ N right.'
+            explanation: '$f_k = \\mu_k mg = 0.20 \\times 60 = 12$ N left. $F_{\\text{net}} = 42 - 12 = 30$ N right. Ignoring friction gives 42 N, adding friction instead of subtracting gives 54 N, and the friction alone is 12 N left.'
           },
           {
             question: 'A sliding block decelerates at 3 $m/s^{2}$ on a horizontal surface. What is $\\mu_k$? ($g = 10$ $m/s^{2}$)',

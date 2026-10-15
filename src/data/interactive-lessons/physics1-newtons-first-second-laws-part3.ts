@@ -155,7 +155,7 @@ Consider a 5 kg block resting on a horizontal surface.
 
 2) The block is in equilibrium on the surface. What is the magnitude of the normal force (in N)?
 
-3) A person pushes the block to the right with 20 N on a frictionless surface. What is the acceleration $(in m/s^{2})$?
+3) A person pushes the block to the right with 20 N on a frictionless surface. What is the acceleration (in $m/s^{2}$)?
       `,
       exercise: {
         boxes: 3,
@@ -188,13 +188,13 @@ Consider a 5 kg block resting on a horizontal surface.
           },
           {
             label: 'Tension in a rope pulls the attached object:',
-            options: ['Away from the rope', 'Perpendicular to the rope', 'Along the rope, toward the rope', 'Downward always'],
+            options: ['Away from the rope', 'Perpendicular to the rope', 'Along the rope, toward the rope', 'Straight downward, like weight'],
             correctIndex: 2,
             explanation: 'Tension pulls the object along the rope, toward the other end. A rope can only pull, never push.'
           },
           {
             label: 'On an FBD, you should draw forces that act:',
-            options: ['On the object by other objects', 'By the object on other objects', 'Both on and by the object', 'Internal to the object'],
+            options: ['On the object by other objects', 'By the object on everything it touches', 'Both on the object and by the object', 'Internal forces between the object\'s parts'],
             correctIndex: 0,
             explanation: 'An FBD shows only the forces that act ON the object you\'re analyzing, not forces the object exerts on others.'
           }
@@ -225,11 +225,11 @@ Consider a 5 kg block resting on a horizontal surface.
             options: [
               'Weight, normal force, and a forward force',
               'Weight and normal force only',
-              'Weight only',
+              'Weight only, since the ice is frictionless',
               'No forces (it\'s on frictionless ice)'
             ],
             correctAnswer: 1,
-            explanation: 'The puck touches the ice surface (normal force up) and has weight (down). No friction (frictionless ice) and no applied force (slides freely). Two forces that cancel: $N = W$.'
+            explanation: 'The puck touches the ice surface (normal force up) and has weight (down). Frictionless ice removes friction, not the normal force, and no applied force acts once the puck slides freely. Two forces that cancel: $N = W$.'
           }
         ]
       }

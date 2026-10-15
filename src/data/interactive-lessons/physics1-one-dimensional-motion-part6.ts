@@ -70,7 +70,7 @@ This lesson is all about **practice**. We'll work through a variety of 1D kinema
       content: `
 **Multi-Step Problems** 🧮
 
-1) A car accelerates from 10 m/s to 30 m/s over 200 m. What is the acceleration? $(in m/s^{2})$
+1) A car accelerates from 10 m/s to 30 m/s over 200 m. What is the acceleration? (in $m/s^{2}$)
 
 2) A ball is thrown downward from a 50 m building at 5 m/s. How long until it hits the ground? (in seconds, round to 3 significant figures; use $g = 10$ $m/s^{2}$)
 
@@ -126,14 +126,14 @@ This lesson is all about **practice**. We'll work through a variety of 1D kinema
 
 1) Two cars start from rest at the same point. Car A accelerates at 2 $m/s^{2}$ and Car B accelerates at 3 $m/s^{2}$. After 10 s, how much farther has Car B traveled than Car A? (in meters)
 
-2) A ball is dropped from 80 m. At the same instant, a ball is thrown upward from the ground at 20 m/s. At what height do they meet? (in meters, use $g = 10$ $m/s^{2}$; round to 3 significant figures)
+2) A ball is dropped from 80 m. At the same instant, a ball is thrown upward from the ground at 40 m/s. At what height do they meet? (in meters, use $g = 10$ $m/s^{2}$)
       `,
       exercise: {
         boxes: 2,
-        correctAnswers: ['50', '60.5'],
+        correctAnswers: ['50', '60'],
         hint1: '$\\Delta x_A = \\frac{1}{2}(2)(100) = 100$ m, $\\Delta x_B = \\frac{1}{2}(3)(100) = 150$ m.',
-        hint2: 'Dropped ball: $y_1 = 80 - \\frac{1}{2}(10)t^2$. Thrown ball: $y_2 = 20t - \\frac{1}{2}(10)t^2$. Set $y_1 = y_2$.',
-        explanation: '1) $x_B - x_A = 150 - 100 = 50$ m. 2) $80 - 5t^2 = 20t - 5t^2$, so $80 = 20t$, $t = 4$ s. Height: $y = 80 - 5(16) = 80 - 80 = 0$... Wait, let me recalculate: $y_2 = 20(4) - 5(16) = 80 - 80 = 0$. Actually at $t = 4$, $y_1 = 80 - 5(16) = 0$. They meet at $t = 4$ s at the ground. Let me re-solve: Setting equal: $80 - 5t^2 = 20t - 5t^2 \\Rightarrow 80 = 20t \\Rightarrow t = 4$ s. $y = 80 - 5(16) = 0$ m. Hmm — they meet at ground level. Using $g = 9.8$: $80 - 4.9t^2 = 20t - 4.9t^2 \\Rightarrow t = 4$, $y = 80 - 4.9(16) = 80 - 78.4 = 1.6$ m. With $g = 10$, they meet at ground. Let me adjust: with the problem as stated using $g = 10$, $y = 80 - 5(16) = 0$ m. The answer is 0 m — they meet at ground level.'
+        hint2: 'Dropped ball: $y_1 = 80 - \\frac{1}{2}(10)t^2$. Thrown ball: $y_2 = 40t - \\frac{1}{2}(10)t^2$. Set $y_1 = y_2$.',
+        explanation: '1) $x_B - x_A = 150 - 100 = 50$ m. 2) $80 - 5t^2 = 40t - 5t^2$, so $80 = 40t$ and $t = 2$ s. Height: $y = 80 - 5(2)^2 = 80 - 20 = 60$ m. Check with the thrown ball: $y_2 = 40(2) - 5(4) = 60$ m.'
       }
     },
     {
@@ -159,12 +159,12 @@ This lesson is all about **practice**. We'll work through a variety of 1D kinema
             question: 'A car travels at 15 m/s and then brakes to a stop. If the braking acceleration is $-5$ $m/s^{2}$, what is the stopping distance?',
             options: [
               '22.5 m',
-              '45 m',
-              '75 m',
-              '150 m'
+              '45.0 m',
+              '1.5 m',
+              '67.5 m'
             ],
             correctAnswer: 0,
-            explanation: '$v^2 = v_0^2 + 2a\\Delta x$: $0 = 15^2 + 2(-5)\\Delta x$, so $\\Delta x = 225/10 = 22.5$ m.'
+            explanation: '$v^2 = v_0^2 + 2a\\Delta x$: $0 = 15^2 + 2(-5)\\Delta x$, so $\\Delta x = 225/10 = 22.5$ m. Dropping the factor of 2 gives 45.0 m, forgetting to square $v_0$ gives 1.5 m, and flipping the sign of $a$ in $\\Delta x = v_0t + \\frac{1}{2}at^2$ (with $t = 3$ s) gives 67.5 m.'
           }
         ]
       }

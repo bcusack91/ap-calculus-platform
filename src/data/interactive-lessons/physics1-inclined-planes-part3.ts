@@ -91,10 +91,10 @@ Friction reduced the acceleration by $\\mu_k g\\cos 37° = 2$ $m/s^{2}$.
           {
             question: 'A block slides UP a rough incline and then slides back DOWN. The magnitude of deceleration going up compared to acceleration going down is:',
             options: [
-              'Smaller',
-              'Equal',
-              'Larger',
-              'Cannot be compared'
+              'Smaller, since friction helps it going up',
+              'Equal, since friction has the same size',
+              'Larger, since friction adds to gravity\'s pull',
+              'Cannot be compared without $\\mu_k$'
             ],
             correctAnswer: 2,
             explanation: 'Going up: $a_{\\text{up}} = g(\\sin\\theta + \\mu_k\\cos\\theta)$. Going down: $a_{\\text{down}} = g(\\sin\\theta - \\mu_k\\cos\\theta)$. The deceleration going up is always larger.'
@@ -184,10 +184,10 @@ If $\\mu_s = 0.577$, the critical angle is $\\tan^{-1}(0.577) = 30°$. Any steep
               '3.3 $m/s^{2}$',
               '5.0 $m/s^{2}$',
               '6.7 $m/s^{2}$',
-              '8.5 $m/s^{2}$'
+              '7.0 $m/s^{2}$'
             ],
             correctAnswer: 2,
-            explanation: 'Going up, both gravity and friction oppose motion: $a = g(\\sin 30° + \\mu_k \\cos 30°) = 10(0.50 + 0.20 \\times 0.866) = 10(0.50 + 0.173) = 6.73 \\approx 6.7$ $m/s^{2}$.'
+            explanation: 'Going up, both gravity and friction oppose motion: $a = g(\\sin 30° + \\mu_k \\cos 30°) = 10(0.50 + 0.20 \\times 0.866) = 10(0.673) \\approx 6.7$ $m/s^{2}$. Subtracting friction gives 3.3, ignoring friction gives 5.0, and leaving out $\\cos 30°$ in the friction term gives 7.0.'
           }
         ]
       }

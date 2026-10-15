@@ -101,24 +101,24 @@ When the $v$-$t$ graph crosses the time axis ($v = 0$):
           {
             question: 'On a $v$-$t$ graph, what does a horizontal line at $v = -3$ m/s represent?',
             options: [
-              'An object decelerating',
-              'An object at rest',
-              'An object moving at constant velocity in the negative direction',
-              'An object with negative acceleration'
+              'An object slowing down steadily at a rate of 3 $m/s^{2}$',
+              'An object sitting at rest 3 m to the negative side of the origin',
+              'An object moving steadily in the negative direction',
+              'An object with a constant negative acceleration of 3 $m/s^{2}$'
             ],
             correctAnswer: 2,
-            explanation: 'A horizontal line on a $v$-$t$ graph means constant velocity (zero slope = zero acceleration). The value $v = -3$ m/s means it\'s moving at 3 m/s in the negative direction.'
+            explanation: 'A horizontal line on a $v$-$t$ graph means constant velocity (zero slope = zero acceleration). The value $v = -3$ m/s means it\'s moving at 3 m/s in the negative direction. The graph gives velocity, not position, so it does not place the object 3 m from the origin.'
           },
           {
             question: 'The area under a $v$-$t$ graph that lies below the time axis represents:',
             options: [
-              'Positive displacement',
+              'Forward displacement',
               'Negative displacement',
-              'Speed',
-              'Acceleration'
+              'Deceleration',
+              'Total distance'
             ],
             correctAnswer: 1,
-            explanation: 'Area below the time axis represents negative velocity, contributing negative displacement. The object moves in the negative direction during that time interval.'
+            explanation: 'Area below the time axis represents negative velocity, contributing negative displacement. The object moves in the negative direction during that time interval. Distance would count that area as positive.'
           },
           {
             question: 'A $v$-$t$ graph shows a straight line from $v = 10$ m/s at $t = 0$ to $v = 0$ at $t = 5$ s. What is the displacement?',
@@ -144,7 +144,7 @@ A velocity-time graph shows:
 - From $t = 0$ to $t = 4$ s: velocity increases linearly from 0 to 12 m/s
 - From $t = 4$ to $t = 8$ s: velocity stays constant at 12 m/s
 
-1) What is the acceleration during the first 4 seconds? $(in m/s^{2})$
+1) What is the acceleration during the first 4 seconds? (in $m/s^{2}$)
 
 2) What is the displacement from $t = 0$ to $t = 4$ s? (in meters)
 
@@ -169,7 +169,7 @@ A velocity-time graph shows:
         dropdowns: [
           {
             label: 'The slope of a $v$-$t$ graph gives:',
-            options: ['velocity', 'displacement', 'acceleration', 'position'],
+            options: ['velocity', 'distance', 'acceleration', 'position'],
             correctIndex: 2,
             explanation: 'Slope = $\\Delta v / \\Delta t = a$ (acceleration).'
           },
@@ -177,13 +177,13 @@ A velocity-time graph shows:
             label: 'The area under a $v$-$t$ graph gives:',
             options: ['velocity', 'displacement', 'acceleration', 'speed'],
             correctIndex: 1,
-            explanation: 'Area = $\\int v \\, dt = \\Delta x$ (displacement).'
+            explanation: 'Area = velocity × time = $\\Delta x$ (displacement).'
           },
           {
             label: 'When a $v$-$t$ line crosses the time axis, the object:',
-            options: ['stops permanently', 'reverses direction', 'has maximum acceleration', 'has maximum displacement'],
+            options: ['stops permanently', 'reverses direction', 'has maximum acceleration', 'is back where it started'],
             correctIndex: 1,
-            explanation: 'Crossing $v = 0$ means the object momentarily stops, then reverses direction (velocity changes sign).'
+            explanation: 'Crossing $v = 0$ means the object momentarily stops, then reverses direction (velocity changes sign). It is at a turning point, which is generally not where it started.'
           }
         ]
       }
@@ -200,23 +200,23 @@ A velocity-time graph shows:
             question: 'A $v$-$t$ graph shows velocity going from $+8$ m/s to $-4$ m/s over 6 s in a straight line. What is the displacement?',
             options: [
               '12 m',
-              '24 m',
+              '20 m',
               '36 m',
-              '6 m'
+              '24 m'
             ],
             correctAnswer: 0,
-            explanation: 'The area is a trapezoid (but crosses zero). The $v$-$t$ line crosses zero at $t = 4$ s (since $v = 8 - 2t$, $v=0$ when $t=4$). Positive triangle: $\\frac{1}{2}(4)(8) = 16$ m. Negative triangle: $\\frac{1}{2}(2)(4) = 4$ m. Net displacement $= 16 - 4 = 12$ m.'
+            explanation: 'The $v$-$t$ line crosses zero at $t = 4$ s (since $v = 8 - 2t$, $v = 0$ when $t = 4$). Positive triangle: $\\frac{1}{2}(4)(8) = 16$ m. Negative triangle: $\\frac{1}{2}(2)(4) = 4$ m. Net displacement $= 16 - 4 = 12$ m. Adding the two areas gives the distance, 20 m; treating $-4$ as $+4$ in the trapezoid formula gives 36 m; and $\\frac{1}{2}(8)(6) = 24$ m ignores where the line crosses zero.'
           },
           {
             question: 'On a $v$-$t$ graph, the acceleration at $t = 3$ s for a curved line is found by:',
             options: [
-              'Reading the $v$ value at $t = 3$ s',
-              'Finding the area under the curve up to $t = 3$ s',
-              'Drawing the tangent line at $t = 3$ s and finding its slope',
-              'Averaging the velocity values'
+              'Reading the $v$ value at $t = 3$ s and dividing by 3 s',
+              'Finding the area under the curve from $t = 0$ to $t = 3$ s',
+              'Finding the slope of the tangent line at $t = 3$ s',
+              'Finding the slope of the straight line from $t = 0$ to $t = 3$ s'
             ],
             correctAnswer: 2,
-            explanation: 'For a curved $v$-$t$ graph, the instantaneous acceleration is the slope of the tangent line at that point, just as instantaneous velocity is the slope of the tangent on an $x$-$t$ graph.'
+            explanation: 'For a curved $v$-$t$ graph, the instantaneous acceleration is the slope of the tangent line at that point, just as instantaneous velocity is the slope of the tangent on an $x$-$t$ graph. The straight line from $t = 0$ to $t = 3$ s gives only the average acceleration over that interval, and the area gives displacement.'
           }
         ]
       }

@@ -57,10 +57,10 @@ $$a = \\frac{m_{\\text{hang}}g - m_{\\text{incline}}g\\sin\\theta}{m_{\\text{han
           {
             question: 'On a frictionless incline, doubling the mass of the block:',
             options: [
-              'Doubles the acceleration',
-              'Halves the acceleration',
+              'Doubles the acceleration, since the weight doubles',
+              'Halves the acceleration, since inertia doubles',
               'Doesn\'t change the acceleration',
-              'Doubles the time to slide down'
+              'Halves the time to slide down the incline'
             ],
             correctAnswer: 2,
             explanation: '$a = g\\sin\\theta$ is independent of mass. Doubling $m$ doubles both the gravitational force AND the inertia — they cancel.'
@@ -85,7 +85,7 @@ $$a = \\frac{m_{\\text{hang}}g - m_{\\text{incline}}g\\sin\\theta}{m_{\\text{han
               'Cannot be determined'
             ],
             correctAnswer: 0,
-            explanation: 'The steeper incline has greater acceleration ($g\\sin\\theta$) and a shorter distance ($h/\\sin\\theta$). Despite the shorter path, the key factor is that the steeper incline gives a larger acceleration. The steeper incline wins.'
+            explanation: 'The incline length is $L = h/\\sin\\theta$ and the acceleration is $g\\sin\\theta$, so $L = \\frac{1}{2}at^2$ gives $t = \\frac{1}{\\sin\\theta}\\sqrt{2h/g}$. A larger $\\theta$ makes $\\sin\\theta$ larger and the time shorter: the steeper incline wins, even though both blocks reach the same final speed.'
           }
         ]
       }
@@ -121,7 +121,7 @@ $$a = \\frac{m_{\\text{hang}}g - m_{\\text{incline}}g\\sin\\theta}{m_{\\text{han
         dropdowns: [
           {
             label: 'On a rough incline, a block can remain stationary because:',
-            options: ['Normal force holds it', 'Gravity is weaker on the incline', 'Static friction balances the gravitational component along the slope', 'The block has no acceleration component'],
+            options: ['The normal force holds it in place', 'Gravity is weaker on the incline', 'Static friction balances $mg\\sin\\theta$ along the slope', 'The block has no acceleration component'],
             correctIndex: 2,
             explanation: 'The normal force is perpendicular to the slope — it can\'t prevent sliding. Static friction acts parallel to the surface, opposing the tendency to slide down.'
           },
@@ -181,23 +181,23 @@ Weight decomposition + friction + kinematics. The ultimate application of all dy
             question: 'A 2 kg block on a 53° frictionless incline is connected to a 3 kg hanging mass ($g = 10$ $m/s^{2}$, $\\sin 53° = 0.80$). What is the tension in the string?',
             options: [
               '16 N',
-              '20.8 N',
-              '22 N',
+              '38.4 N',
+              '21.6 N',
               '30 N'
             ],
             correctAnswer: 2,
-            explanation: '$a = (m_2 g - m_1 g\\sin 53°)/(m_1 + m_2) = (30 - 16)/5 = 14/5 = 2.8$ $m/s^{2}$. $T = m_2(g - a) = 3(10 - 2.8) = 3(7.2) = 21.6 \\approx 22$ N.'
+            explanation: '$a = (m_2 g - m_1 g\\sin 53°)/(m_1 + m_2) = (30 - 16)/5 = 2.8$ $m/s^{2}$. $T = m_2(g - a) = 3(10 - 2.8) = 21.6$ N. The 16 N and 30 N values are the two weight terms, and 38.4 N comes from $m_2(g + a)$, a sign slip.'
           },
           {
             question: 'A block launched at 10 m/s up a 30° incline ($\\mu_k = 0.30$, $g = 10$ $m/s^{2}$) travels up the slope. What is the deceleration? ($\\cos 30° = 0.866$)',
             options: [
               '5.0 $m/s^{2}$',
-              '6.3 $m/s^{2}$',
+              '2.4 $m/s^{2}$',
               '7.6 $m/s^{2}$',
-              '10.0 $m/s^{2}$'
+              '8.0 $m/s^{2}$'
             ],
             correctAnswer: 2,
-            explanation: '$a = g(\\sin 30° + \\mu_k\\cos 30°) = 10(0.50 + 0.30 \\times 0.866) = 10(0.50 + 0.26) = 7.6$ $m/s^{2}$.'
+            explanation: '$a = g(\\sin 30° + \\mu_k\\cos 30°) = 10(0.50 + 0.30 \\times 0.866) = 10(0.76) = 7.6$ $m/s^{2}$. Ignoring friction gives 5.0, subtracting friction gives 2.4, and leaving out $\\cos 30°$ gives 8.0.'
           }
         ]
       }

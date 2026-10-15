@@ -86,10 +86,10 @@ $$t = v_0/a = 10/7.17 = 1.39 \\text{ s}$$
           {
             question: 'A block is launched up a rough incline and returns to its starting point. The return speed is:',
             options: [
-              'Equal to the launch speed',
-              'Greater than the launch speed',
+              'Equal to the launch speed, as energy is conserved',
+              'Greater, since gravity speeds it up on the way down',
               'Less than the launch speed',
-              'Zero'
+              'Half the launch speed, whatever the friction'
             ],
             correctAnswer: 2,
             explanation: 'Friction removes kinetic energy on both the way up AND the way down. The block returns with less speed than it started with.'
@@ -110,7 +110,7 @@ $$t = v_0/a = 10/7.17 = 1.39 \\text{ s}$$
             options: [
               '$t_1 > t_2$ (friction slows it down)',
               '$t_1 < t_2$ (friction speeds it up)',
-              '$t_1 = t_2$',
+              '$t_1 = t_2$ (same distance)',
               'Cannot be determined'
             ],
             correctAnswer: 0,
@@ -131,17 +131,16 @@ A block starts from rest and slides 4 m down a 37° incline with $\\mu_k = 0.25$
 
 2) What is the speed at the bottom (in m/s)?
 
-3) How long does it take to reach the bottom (in s, to one decimal)?
+3) How long does it take to reach the bottom (in s)?
 
 *Round all answers to 3 significant figures.*
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['4', '5.66', '1.4'],
+        questions: [{ question: '1)', answer: '4', acceptableAnswers: ['4', '4.00'] }, { question: '2)', answer: '5.66', acceptableAnswers: ['5.66', '5.657'] }, { question: '3)', answer: '1.41', acceptableAnswers: ['1.41', '1.4', '1.414'] }],
         hint1: '$a = g(\\sin 37° - \\mu_k\\cos 37°) = 10(0.60 - 0.20)$.',
         hint2: '$v^2 = 2(4)(4) = 32$. $v = \\sqrt{32}$.',
         hint3: '$t = v/a = 5.66/4$. Or $t = \\sqrt{2d/a} = \\sqrt{8/4} = \\sqrt{2}$.',
-        explanation: '1) $a = 10(0.60 - 0.25 \\times 0.80) = 10(0.40) = 4$ $m/s^{2}$. 2) $v = \\sqrt{32} \\approx 5.66$ m/s. 3) $t = \\sqrt{2} \\approx 1.4$ s.'
+        explanation: '1) $a = 10(0.60 - 0.25 \\times 0.80) = 10(0.40) = 4$ $m/s^{2}$. 2) $v = \\sqrt{32} \\approx 5.66$ m/s. 3) $t = \\sqrt{2} \\approx 1.41$ s.'
       }
     },
     {
@@ -160,7 +159,7 @@ A block starts from rest and slides 4 m down a 37° incline with $\\mu_k = 0.25$
           },
           {
             label: 'Two blocks on the same frictionless incline: one has mass $m$, the other $2m$. Released from rest, after the same time:',
-            options: ['The heavier block is moving faster', 'The lighter block is moving faster', 'Both have the same speed', 'Cannot determine'],
+            options: ['The heavier block is moving faster', 'The lighter block is moving faster', 'Their speeds are equal', 'Cannot tell without the angle'],
             correctIndex: 2,
             explanation: '$a = g\\sin\\theta$ is mass-independent. Same acceleration for the same time = same speed.'
           }
@@ -180,22 +179,22 @@ A block starts from rest and slides 4 m down a 37° incline with $\\mu_k = 0.25$
             options: [
               '7.2 m',
               '14.4 m',
-              '24 m',
+              '8.3 m',
               '28.8 m'
             ],
             correctAnswer: 1,
-            explanation: '$a = g\\sin 30° = 5$ $m/s^{2}$. $0 = 144 - 2(5)d$. $d = 144/10 = 14.4$ m.'
+            explanation: '$a = g\\sin 30° = 5$ $m/s^{2}$. $0 = 144 - 2(5)d$, so $d = 144/10 = 14.4$ m. Ignoring the tilt gives 7.2 m, dropping the 2 gives 28.8 m, and using $\\cos 30°$ gives 8.3 m.'
           },
           {
             question: 'A block slides from rest down a 53° incline ($\\mu_k = 0.40$, $g = 10$ $m/s^{2}$, $\\sin 53° = 0.80$, $\\cos 53° = 0.60$). After sliding 5 m, its speed is:',
             options: [
-              '4.5 m/s',
+              '5.3 m/s',
               '6.3 m/s',
               '7.5 m/s',
               '8.9 m/s'
             ],
             correctAnswer: 2,
-            explanation: '$a = 10(0.80 - 0.40 \\times 0.60) = 10(0.80 - 0.24) = 5.6$ $m/s^{2}$. $v^2 = 2(5.6)(5) = 56$. $v = \\sqrt{56} \\approx 7.5$ m/s.'
+            explanation: '$a = 10(0.80 - 0.40 \\times 0.60) = 10(0.56) = 5.6$ $m/s^{2}$. $v^2 = 2(5.6)(5) = 56$, so $v = \\sqrt{56} \\approx 7.5$ m/s. Ignoring friction gives 8.9, leaving $\\cos 53°$ out of the friction term gives 6.3, and dropping the 2 gives 5.3 m/s.'
           }
         ]
       }

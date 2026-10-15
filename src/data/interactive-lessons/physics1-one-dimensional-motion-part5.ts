@@ -124,7 +124,7 @@ A ball is thrown upward at 19.6 m/s:
               '0 $m/s^{2}$',
               '9.8 $m/s^{2}$ upward',
               '9.8 $m/s^{2}$ downward',
-              'Changing from upward to downward'
+              'Reversing direction'
             ],
             correctAnswer: 2,
             explanation: 'Acceleration due to gravity is ALWAYS 9.8 $m/s^{2}$ downward during free fall — even at the top. The velocity is zero at the top, but the acceleration never changes.'
@@ -132,13 +132,13 @@ A ball is thrown upward at 19.6 m/s:
           {
             question: 'Two balls are dropped from the same height — one has mass 1 kg, the other 5 kg. Ignoring air resistance, which hits the ground first?',
             options: [
-              'The 1 kg ball',
-              'The 5 kg ball',
-              'They hit at the same time',
-              'It depends on their size'
+              'The 1 kg ball, since it has less inertia',
+              'The 5 kg ball, since gravity pulls on it harder',
+              'They land at the same time',
+              'It depends on their size and shape'
             ],
             correctAnswer: 2,
-            explanation: 'In free fall (no air resistance), all objects fall with the same acceleration $g = 9.8$ $m/s^{2}$, regardless of mass. This was Galileo\'s great insight.'
+            explanation: 'In free fall (no air resistance), all objects fall with the same acceleration $g = 9.8$ $m/s^{2}$, regardless of mass. The 5 kg ball does feel a larger gravitational force, but it also has five times the inertia, so $a = F/m = g$ for both. Size and shape matter only through air resistance, which is ignored here.'
           },
           {
             question: 'A ball is thrown upward at 30 m/s. How fast is it moving when it returns to the same height? (Ignore air resistance)',
@@ -195,15 +195,15 @@ Use $g = 9.8$ $m/s^{2}$.
           },
           {
             label: 'During free fall, the acceleration is:',
-            options: ['zero at the top', 'always 9.8 $m/s^{2}$ downward', 'depends on mass', 'increasing'],
+            options: ['zero at the highest point of the path', 'always 9.8 $m/s^{2}$ downward', 'greater for objects with more mass', 'upward while the ball is still rising'],
             correctIndex: 1,
             explanation: 'Acceleration due to gravity is constant at 9.8 $m/s^{2}$ downward throughout the entire free fall, including at the top.'
           },
           {
             label: 'The time for a ball to go up equals the time to come down when:',
-            options: ['always', 'the ball is caught at launch height', 'the ball is heavy', 'acceleration changes'],
+            options: ['it lands on a ledge below the launch point', 'the ball is caught at launch height', 'air resistance acts on it throughout', 'it lands at any height, above or below'],
             correctIndex: 1,
-            explanation: 'Symmetry of free fall applies when the ball returns to the same height from which it was launched.'
+            explanation: 'Symmetry of free fall applies when the ball returns to the same height from which it was launched. If it lands lower, the trip down takes longer than the trip up, and air resistance also breaks the symmetry.'
           }
         ]
       }

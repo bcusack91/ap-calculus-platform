@@ -58,12 +58,12 @@ This final lesson brings together everything from the unit: the definition of wo
             question: 'Two identical cars start from rest. Car A reaches 30 m/s while Car B reaches 60 m/s. The ratio of net work on Car B to Car A is:',
             options: [
               '2:1',
-              '3:1',
+              '1:4',
               '4:1',
-              '9:1'
+              '8:1'
             ],
             correctAnswer: 2,
-            explanation: '$W = \\Delta KE = \\frac{1}{2}mv^2$ (starting from rest). $W_B/W_A = v_B^2/v_A^2 = 3600/900 = 4$.'
+            explanation: '$W = \\Delta KE = \\frac{1}{2}mv^2$ (starting from rest). $W_B/W_A = v_B^2/v_A^2 = 3600/900 = 4$, so the ratio is 4:1. Treating work as proportional to speed gives 2:1, inverting the ratio gives 1:4, and cubing the speed ratio gives 8:1.'
           },
           {
             question: 'A ball is thrown vertically upward. At the highest point, which statement about work done by gravity during the upward trip is correct?',
@@ -112,25 +112,25 @@ Use $g = 10$ $m/s^{2}$.
         dropdowns: [
           {
             label: 'A force that is always perpendicular to velocity can change the speed of an object.',
-            options: ['True', 'False'],
+            options: ['True, since a large enough force can do it', 'False, since it does zero work on the object'],
             correctIndex: 1,
             explanation: 'A perpendicular force does zero work ($\\cos 90° = 0$), so $\\Delta KE = 0$ and speed cannot change. It only changes direction.'
           },
           {
             label: 'If the net work on an object is zero, the object must be at rest.',
-            options: ['True', 'False'],
+            options: ['True, since zero work means zero motion', 'False, since only its speed stays fixed'],
             correctIndex: 1,
             explanation: 'Zero net work means $\\Delta KE = 0$, so speed is unchanged. The object could be moving at constant speed (like constant velocity).'
           },
           {
             label: 'The normal force never does work on an object.',
-            options: ['True', 'False'],
+            options: ['True, since it is always perpendicular to the surface', 'False, since in a rising elevator it does work'],
             correctIndex: 1,
             explanation: 'The normal force CAN do work — for example, in an elevator, the floor\'s normal force pushes you upward as you move upward, doing positive work. It does zero work only when perpendicular to displacement.'
           },
           {
             label: 'Kinetic energy can be negative.',
-            options: ['True', 'False'],
+            options: ['True, since velocity can be negative', 'False, since mass is positive and $v^2$ is never negative'],
             correctIndex: 1,
             explanation: '$KE = \\frac{1}{2}mv^2 \\geq 0$ always. Mass is positive and $v^2$ is non-negative.'
           }
@@ -148,24 +148,24 @@ Use $g = 10$ $m/s^{2}$.
           {
             question: 'A 3 kg block is pushed 5 m up a frictionless $37°$ incline from rest. The push force is 50 N parallel to the incline ($g = 10$ $m/s^{2}$). The block\'s speed at the top is:',
             options: [
-              '$\\sqrt{30}$ m/s',
-              '$\\sqrt{46.7}$ m/s',
-              '$\\sqrt{60}$ m/s',
-              '$\\sqrt{106.7}$ m/s'
+              '$\\sqrt{53.3}$ m/s',
+              '$\\sqrt{86.7}$ m/s',
+              '$\\sqrt{106.7}$ m/s',
+              '$\\sqrt{166.7}$ m/s'
             ],
             correctAnswer: 2,
-            explanation: '$W_{\\text{push}} = 50(5) = 250$ J. $W_g = -mg d\\sin(37°) = -3(10)(5)(0.6) = -90$ J. $W_{\\text{net}} = 250 - 90 = 160$ J. Hmm, let me recalculate. $W_{\\text{net}} = \\frac{1}{2}(3)v^2 \\Rightarrow v^2 = 320/3 ≈ 106.7$. Actually the answer is $\\sqrt{106.7}$ m/s. Let me recheck: $W_{push} = 250$, $W_g = -90$, $W_{net} = 160$, $v^2 = 2(160)/3 ≈ 106.7$. So the answer is $\\sqrt{106.7}$ m/s.'
+            explanation: '$W_{\\text{push}} = 50(5) = 250$ J. $W_g = -mgd\\sin(37°) = -3(10)(5)(0.6) = -90$ J. $W_{\\text{net}} = 250 - 90 = 160$ J. Then $160 = \\frac{1}{2}(3)v^2$, so $v^2 = 320/3 \\approx 106.7$ and $v = \\sqrt{106.7} \\approx 10.3$ m/s. Ignoring gravity gives $\\sqrt{166.7}$, using $\\cos 37°$ for the gravity term gives $\\sqrt{86.7}$, and leaving out the $\\frac{1}{2}$ gives $\\sqrt{53.3}$.'
           },
           {
             question: 'A 2000 kg truck and a 1000 kg car both have 100 kJ of kinetic energy. Compared to the car, the truck\'s speed is:',
             options: [
-              'The same',
+              '$\\sqrt{2}$ times as fast',
               'Half as fast',
               '$1/\\sqrt{2}$ times as fast',
               'Twice as fast'
             ],
             correctAnswer: 2,
-            explanation: '$\\frac{1}{2}m_T v_T^2 = \\frac{1}{2}m_C v_C^2 \\Rightarrow v_T^2/v_C^2 = m_C/m_T = 1000/2000 = 1/2 \\Rightarrow v_T/v_C = 1/\\sqrt{2}$.'
+            explanation: '$\\frac{1}{2}m_T v_T^2 = \\frac{1}{2}m_C v_C^2 \\Rightarrow v_T^2/v_C^2 = m_C/m_T = 1000/2000 = 1/2 \\Rightarrow v_T/v_C = 1/\\sqrt{2}$. Half as fast would follow if speed scaled with $1/m$, and $\\sqrt{2}$ or twice as fast inverts the relationship.'
           }
         ]
       }

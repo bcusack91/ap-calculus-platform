@@ -61,10 +61,10 @@ $$\\vec{F}_{\\text{net}} = m\\vec{a}$$
           {
             question: 'A constant net force acts on an object. The object can NOT:',
             options: [
-              'Speed up',
-              'Slow down',
-              'Change direction',
-              'Move at constant velocity'
+              'Speed up steadily',
+              'Slow down gradually',
+              'Change its direction',
+              'Move with unchanging velocity'
             ],
             correctAnswer: 3,
             explanation: 'A constant net force means constant acceleration ($a = F/m$). Constant velocity means $a = 0$, which contradicts having a net force.'
@@ -83,13 +83,13 @@ $$\\vec{F}_{\\text{net}} = m\\vec{a}$$
           {
             question: 'A block is on a horizontal surface. A rope attached at 30° above horizontal pulls with tension $T$. Compared to having no rope, the normal force:',
             options: [
-              'Increases by $T$',
-              'Decreases by $T\\\\sin 30°$',
+              'Increases by $T\\sin 30°$',
+              'Decreases by $T\\sin 30°$',
               'Stays the same',
-              'Decreases by $T\\\\cos 30°$'
+              'Decreases by $T\\cos 30°$'
             ],
             correctAnswer: 1,
-            explanation: 'The vertical component of tension is $T\\sin 30°$ upward, which partially supports the block: $N = mg - T\\sin 30°$. The normal force decreases by $T\\sin 30°$.'
+            explanation: 'The vertical component of tension is $T\\sin 30°$ upward, which partially supports the block: $N = mg - T\\sin 30°$. The normal force decreases by $T\\sin 30°$. It does not increase, because the rope pulls up, and $T\\cos 30°$ is the horizontal component.'
           }
         ]
       }
@@ -102,19 +102,18 @@ $$\\vec{F}_{\\text{net}} = m\\vec{a}$$
 
 A 3 kg block sits on a frictionless table. A string runs horizontally from the block, over a frictionless pulley at the table\'s edge, and down to a hanging 2 kg block.
 
-1) What is the acceleration of the system $(in m/s^{2})$? Round to 3 significant figures. Use $g = 9.8$ $m/s^{2}$.
+1) What is the acceleration of the system (in $m/s^{2}$)? Round to 3 significant figures. Use $g = 9.8$ $m/s^{2}$.
 
 2) What is the tension in the string (in N)? Round to 3 significant figures.
 
 3) How far does the 2 kg block fall from rest in 2 seconds (in m)? Round to 3 significant figures.
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['3.9', '11.8', '7.8'],
+        questions: [{ question: '1) Acceleration of the system ($m/s^{2}$)', answer: '3.92', acceptableAnswers: ['3.92', '3.9'] }, { question: '2) Tension in the string (N)', answer: '11.8', acceptableAnswers: ['11.8', '11.76'] }, { question: '3) Distance the 2 kg block falls in 2 s (m)', answer: '7.84', acceptableAnswers: ['7.84', '7.8'] }],
         hint1: 'System: $F_{\\text{net}} = m_2 g$, total mass $= m_1 + m_2 = 5$ kg.',
         hint2: 'For the hanging block: $m_2 g - T = m_2 a$, so $T = m_2(g - a)$.',
         hint3: '$d = \\frac{1}{2}at^2 = \\frac{1}{2}(3.92)(4)$.',
-        explanation: '1) $a = m_2 g/(m_1 + m_2) = 2(9.8)/5 = 19.6/5 = 3.9$ $m/s^{2}$. 2) $T = m_2(g - a) = 2(9.8 - 3.92) = 2(5.88) = 11.8$ N. 3) $d = \\frac{1}{2}(3.92)(4) = 7.84 \\approx 7.8$ m.'
+        explanation: '1) $a = m_2 g/(m_1 + m_2) = 2(9.8)/5 = 19.6/5 = 3.92$ $m/s^{2}$. 2) $T = m_2(g - a) = 2(9.8 - 3.92) = 2(5.88) = 11.8$ N. 3) $d = \\frac{1}{2}(3.92)(4) = 7.84$ m.'
       }
     },
     {
@@ -127,21 +126,21 @@ A 3 kg block sits on a frictionless table. A string runs horizontally from the b
         dropdowns: [
           {
             label: 'Newton\'s First Law is a special case of the Second Law when:',
-            options: ['$m = 0$', '$a = 0$', '$F = ma$', '$m = \\\\infty$'],
+            options: ['$v = 0$ only', '$a = 0$', '$a$ is constant but nonzero', '$m$ is very large'],
             correctIndex: 1,
-            explanation: 'When $a = 0$: $F_{\\text{net}} = m(0) = 0$. This recovers the First Law — zero net force means no acceleration.'
+            explanation: 'When $a = 0$: $F_{\\text{net}} = m(0) = 0$. This recovers the First Law: zero net force means no acceleration. It covers constant velocity, not only $v = 0$, and it holds for any mass.'
           },
           {
             label: 'A heavy truck and a small car collide. The acceleration of the car is _____ the truck\'s acceleration.',
-            options: ['Less than', 'Equal to', 'Greater than', 'Unrelated to'],
+            options: ['Less than', 'Equal to', 'Greater than', 'Half of'],
             correctIndex: 2,
-            explanation: 'By Newton\'s Third Law (preview!), both experience equal forces. Since $a = F/m$ and the car has less mass, its acceleration is greater.'
+            explanation: 'By Newton\'s Third Law (preview!), both experience equal forces. Since $a = F/m$ and the car has less mass, its acceleration is greater, not less or equal.'
           },
           {
             label: 'An object in free fall near Earth\'s surface has acceleration:',
-            options: ['0', '$g$ upward', '$g$ downward', 'Depends on mass'],
+            options: ['Zero at the peak, $g$ downward elsewhere', '$g$ directed opposite to its velocity', '$g$ downward', 'Larger for heavier objects'],
             correctIndex: 2,
-            explanation: 'In free fall, the only force is gravity: $a = F/m = mg/m = g$ downward. It doesn\'t depend on mass!'
+            explanation: 'In free fall, the only force is gravity: $a = F/m = mg/m = g$ downward, at every point including the peak, and whether the object is rising or falling. It doesn\'t depend on mass!'
           }
         ]
       }
@@ -160,7 +159,7 @@ A 3 kg block sits on a frictionless table. A string runs horizontally from the b
               'Zero — it\'s moving at roughly constant velocity',
               'In the direction of motion',
               'Opposite to the direction of motion',
-              'Upward'
+              'Downward, because its weight beats the normal force'
             ],
             correctAnswer: 2,
             explanation: 'The box is decelerating (slowing down), so the net force must be opposite to the direction of motion. This net force is friction.'
@@ -201,13 +200,13 @@ A 3 kg block sits on a frictionless table. A string runs horizontally from the b
           {
             question: 'A 2000 kg car brakes from 20 m/s to rest in 5 seconds. What is the magnitude of the braking force?',
             options: [
-              '2000 N',
+              '40000 N',
               '4000 N',
               '8000 N',
-              '10000 N'
+              '19600 N'
             ],
             correctAnswer: 2,
-            explanation: '$a = \\Delta v/\\Delta t = (0 - 20)/5 = -4$ $m/s^{2}$. $F = ma = 2000 \\times 4 = 8000$ N.'
+            explanation: '$a = \\Delta v/\\Delta t = (0 - 20)/5 = -4$ $m/s^{2}$. $F = ma = 2000 \\times 4 = 8000$ N. Using the average speed (10 m/s) instead of the change gives 4000 N, multiplying mass by speed gives 40000 N, and 19600 N is the car\'s weight.'
           }
         ]
       }

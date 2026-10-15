@@ -105,7 +105,7 @@ $$a = \\frac{m_2 g - m_1 g\\sin\\theta - \\mu_k m_1 g\\cos\\theta}{m_1 + m_2}$$
           {
             question: 'Adding friction to the incline (where $m_1$ is sliding down):',
             options: [
-              'Increases the acceleration',
+              'Increases the acceleration of both masses',
               'Decreases the acceleration',
               'Has no effect since friction is perpendicular to the string',
               'Reverses the direction of motion'
@@ -126,19 +126,18 @@ $m_1 = 6$ kg on a frictionless 30° incline, connected over a pulley to $m_2 = 5
 
 1) What is the net driving force of the system (in N)?
 
-2) What is the acceleration (in $m/s^{2}$, to one decimal)?
+2) What is the acceleration (in $m/s^{2}$)?
 
-3) What is the tension in the string (in N, to one decimal)?
+3) What is the tension in the string (in N)?
 
 *Round all answers to 3 significant figures.*
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['20', '1.8', '41.0'],
+        questions: [{ question: '1)', answer: '20', acceptableAnswers: ['20', '20.0'] }, { question: '2)', answer: '1.82', acceptableAnswers: ['1.82', '1.8', '1.818'] }, { question: '3)', answer: '40.9', acceptableAnswers: ['40.9', '41', '41.0', '40.91'] }],
         hint1: 'Net force = $m_2 g - m_1 g\\sin 30° = 50 - 30$.',
         hint2: '$a = 20/(6 + 5) = 20/11$.',
         hint3: '$T = m_2(g - a) = 5(10 - 1.818)$. Or $T = m_1 g\\sin 30° + m_1 a = 30 + 6(1.818) = 30 + 10.9 = 40.9$.',
-        explanation: '1) $50 - 30 = 20$ N. 2) $a = 20/11 \\approx 1.8$ $m/s^{2}$. 3) $T = 5(10 - 1.8) = 41.0$ N.'
+        explanation: '1) $50 - 30 = 20$ N. 2) $a = 20/11 \\approx 1.82$ $m/s^{2}$. 3) $T = 5(10 - 1.818) = 40.9$ N.'
       }
     },
     {
@@ -151,13 +150,13 @@ $m_1 = 6$ kg on a frictionless 30° incline, connected over a pulley to $m_2 = 5
         dropdowns: [
           {
             label: 'In a connected incline-pulley system, if you increase the incline angle (all else equal), the tension in the string:',
-            options: ['Increases', 'Decreases', 'Stays the same', 'Could go either way'],
-            correctIndex: 3,
-            explanation: 'It depends on which mass is accelerating which direction. Increasing $\\theta$ increases $m_1 g\\sin\\theta$. If $m_2$ was driving the system, increased angle reduces $a$ and changes $T$. The effect on tension is nuanced.'
+            options: ['Increases', 'Decreases if $m_2$ is the heavier mass', 'Stays the same, since $m_2$ is unchanged', 'Could go either way, depending on which mass wins'],
+            correctIndex: 0,
+            explanation: 'Solving the two Newton\'s second law equations gives $T = \\frac{m_1 m_2 g(1 + \\sin\\theta)}{m_1 + m_2}$, and the same result holds whichever way the system accelerates. Since $\\sin\\theta$ grows with $\\theta$, the tension increases.'
           },
           {
             label: 'The string in a connected system has the same tension on both sides because:',
-            options: ['Newton\'s First Law', 'Newton\'s Third Law', 'The string is massless and the pulley is frictionless', 'The masses are equal'],
+            options: ['Newton\'s Third Law pairs the two string forces', 'Both masses have the same acceleration', 'The string is massless and the pulley frictionless', 'The pulley turns at constant speed'],
             correctIndex: 2,
             explanation: 'A massless string transmits force without "using up" any net force to accelerate itself. A frictionless pulley redirects the string without changing the tension.'
           },
@@ -181,24 +180,24 @@ $m_1 = 6$ kg on a frictionless 30° incline, connected over a pulley to $m_2 = 5
           {
             question: 'A 3 kg block on a frictionless 53° incline is connected to a 4 kg hanging mass ($g = 10$ $m/s^{2}$, $\\sin 53° = 0.80$). What is the acceleration?',
             options: [
-              '1.0 $m/s^{2}$',
+              '3.1 $m/s^{2}$',
               '2.3 $m/s^{2}$',
               '4.0 $m/s^{2}$',
               '5.7 $m/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: 'Net force = $m_2 g - m_1 g\\sin 53° = 40 - 24 = 16$ N. $a = 16/7 \\approx 2.3$ $m/s^{2}$.'
+            explanation: 'Net force = $m_2 g - m_1 g\\sin 53° = 40 - 24 = 16$ N. $a = 16/7 \\approx 2.3$ $m/s^{2}$. Dividing by the hanging mass alone gives 4.0, ignoring the incline block\'s weight component gives 5.7, and using $\\cos 53°$ gives 3.1.'
           },
           {
             question: 'For the system above, the tension in the string is approximately:',
             options: [
               '24 N',
-              '30.8 N',
+              '30.9 N',
               '40 N',
-              '64 N'
+              '49.1 N'
             ],
             correctAnswer: 1,
-            explanation: '$T = m_2(g - a) = 4(10 - 2.3) = 4(7.7) = 30.8$ N.'
+            explanation: '$T = m_2(g - a) = 4(10 - 2.29) \\approx 30.9$ N. Check: $T = m_1 g\\sin 53° + m_1 a = 24 + 3(2.29) \\approx 30.9$ N. The 24 N and 40 N values are the two weight terms, and 49.1 N comes from $m_2(g + a)$, a sign slip.'
           }
         ]
       }

@@ -54,9 +54,9 @@ Let's consolidate everything about motion graphs. This review covers all three g
             question: 'An object starts from rest and its $a$-$t$ graph shows constant $a = 5$ $m/s^{2}$ for 4 s. What shape is the $x$-$t$ graph?',
             options: [
               'Horizontal line',
-              'Straight line with positive slope',
+              'Rising straight line',
               'Upward-opening parabola',
-              'Downward-opening parabola'
+              'Downward parabola'
             ],
             correctAnswer: 2,
             explanation: 'Constant acceleration + starting from rest: $x = \\frac{1}{2}at^2$, which is a parabola opening upward (since $a > 0$).'
@@ -67,7 +67,7 @@ Let's consolidate everything about motion graphs. This review covers all three g
               'At rest and speeding up in the + direction',
               'At its maximum position and about to reverse',
               'At rest and has zero acceleration',
-              'At its minimum position'
+              'At its minimum position, about to reverse'
             ],
             correctAnswer: 1,
             explanation: 'Horizontal tangent → $v = 0$ (momentarily at rest). Concave down → negative acceleration. The object is at a maximum of its $x$-$t$ graph and is about to reverse direction.'
@@ -75,13 +75,13 @@ Let's consolidate everything about motion graphs. This review covers all three g
           {
             question: 'Two $v$-$t$ graphs have the same area from $t = 0$ to $t = 5$ s. This means the objects have the same:',
             options: [
-              'Average velocity',
+              'Initial velocity',
               'Final velocity',
               'Displacement',
               'Acceleration'
             ],
             correctAnswer: 2,
-            explanation: 'The area under a $v$-$t$ graph equals displacement. Equal areas mean equal displacements, but the velocities and accelerations at any given time may differ.'
+            explanation: 'The area under a $v$-$t$ graph equals displacement. Equal areas mean equal displacements (and so equal average velocities over the same interval), but the velocities and accelerations at any given time may differ.'
           }
         ]
       }
@@ -97,7 +97,7 @@ A $v$-$t$ graph shows the following:
 - $t = 2$ to $t = 6$ s: $v$ is constant at 6 m/s
 - $t = 6$ to $t = 10$ s: $v$ decreases linearly from 6 m/s to $-2$ m/s
 
-1) What is the acceleration during the interval $t = 6$ to $t = 10$ s? $(in m/s^{2})$
+1) What is the acceleration during the interval $t = 6$ to $t = 10$ s? (in $m/s^{2}$)
 
 2) At what time does the object reverse direction? (in seconds)
 
@@ -105,11 +105,11 @@ A $v$-$t$ graph shows the following:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-2', '9', '39'],
+        correctAnswers: ['-2', '9', '38'],
         hint1: '$a = (-2 - 6)/(10 - 6) = -8/4$',
         hint2: 'The velocity is zero when $v = 6 + (-2)(t - 6) = 0$. Solve: $6 - 2(t-6) = 0$.',
         hint3: 'Sum areas: triangle (0-2) + rectangle (2-6) + trapezoid (6-10). The trapezoid from 6-10 has positive and negative parts.',
-        explanation: '1) $a = -8/4 = -2$ $m/s^{2}$. 2) $v = 6 - 2(t-6) = 0 \\Rightarrow t = 9$ s. 3) Phase 1: $\\frac{1}{2}(2)(6) = 6$ m. Phase 2: $6(4) = 24$ m. Phase 3 (6-9 s, positive): $\\frac{1}{2}(3)(6) = 9$ m. Phase 3 (9-10 s, negative): $\\frac{1}{2}(1)(2) = -1$ m. Total = $6 + 24 + 9 - 1 = 38$... Actually let me recalculate Phase 3 as trapezoid: $\\frac{1}{2}(6 + (-2))(4) = \\frac{1}{2}(4)(4) = 8$. Total = $6 + 24 + 8 = 38$... Hmm. Let me be careful: Phase 3 trapezoid area = $\\frac{1}{2}(v_1 + v_2)(\\Delta t) = \\frac{1}{2}(6+(-2))(4) = \\frac{1}{2}(4)(4) = 8$. Total = $6+24+8 = 38$ m. But by splitting: positive triangle (6-9): $\\frac{1}{2}(3)(6) = 9$. Negative triangle (9-10): $\\frac{1}{2}(1)(2) = 1$. Net from 6-10: $9-1 = 8$. Total = $6+24+8 = 38$ m. Let me fix the answer to 38.'
+        explanation: '1) $a = (-2 - 6)/4 = -8/4 = -2$ $m/s^{2}$. 2) $v = 6 - 2(t - 6) = 0 \\Rightarrow t = 9$ s. 3) Phase 1 (0–2 s): $\\frac{1}{2}(2)(6) = 6$ m. Phase 2 (2–6 s): $6(4) = 24$ m. Phase 3 (6–9 s, positive): $\\frac{1}{2}(3)(6) = 9$ m. Phase 3 (9–10 s, negative): $-\\frac{1}{2}(1)(2) = -1$ m. Total $= 6 + 24 + 9 - 1 = 38$ m. (Check: the 6–10 s trapezoid is $\\frac{1}{2}(6 + (-2))(4) = 8$ m, and $6 + 24 + 8 = 38$ m.)'
       }
     },
     {
@@ -128,21 +128,21 @@ A $v$-$t$ graph shows the following:
           },
           {
             label: 'The instantaneous velocity at a point on the $x$-$t$ graph is found from the:',
-            options: ['area under the curve', 'secant line slope', 'tangent line slope', 'y-intercept'],
+            options: ['area under it', 'secant line slope', 'tangent line slope', 'y-intercept'],
             correctIndex: 2,
             explanation: 'Instantaneous velocity is the slope of the tangent line to the $x$-$t$ graph at that point.'
           },
           {
             label: 'If two objects have the same $a$-$t$ graph but different initial velocities, their $v$-$t$ graphs are:',
-            options: ['identical', 'parallel (vertically shifted)', 'mirror images', 'unrelated'],
+            options: ['identical, since $a$ is the same', 'vertically shifted copies', 'mirror images of each other', 'shifted sideways along the time axis'],
             correctIndex: 1,
             explanation: 'Same acceleration means the same rate of velocity change. Different $v_0$ shifts the $v$-$t$ graph up or down.'
           },
           {
             label: 'The total distance traveled is the area under the:',
-            options: ['$v$-$t$ graph (net area)', '$|v|$-$t$ graph (absolute value of velocity)', '$a$-$t$ graph', '$x$-$t$ graph'],
+            options: ['$v$-$t$ graph, counting net area', 'speed-time graph', '$a$-$t$ graph over the interval', '$x$-$t$ graph over the interval'],
             correctIndex: 1,
-            explanation: 'Total distance = $\\int |v| \\, dt$, which is the area under the speed-time graph (treating all areas as positive).'
+            explanation: 'Total distance is the area under the speed-time ($|v|$-$t$) graph, where every region counts as positive. The net area under the $v$-$t$ graph gives displacement instead.'
           }
         ]
       }

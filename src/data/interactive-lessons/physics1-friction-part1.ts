@@ -110,7 +110,7 @@ When surfaces are stationary relative to each other, microscopic bonds form betw
           {
             question: 'You push a heavy box with 30 N and it doesn\'t move. The static friction force is:',
             options: [
-              '0 N',
+              '0 N, since nothing is sliding',
               'Less than 30 N',
               'Exactly 30 N',
               'Greater than 30 N'
@@ -121,24 +121,24 @@ When surfaces are stationary relative to each other, microscopic bonds form betw
           {
             question: 'The maximum static friction force is 50 N. You push with 60 N. What happens?',
             options: [
-              'The box stays still with $f_s = 60$ N',
-              'The box accelerates because the applied force exceeds $f_{s,\\max}$',
-              'The box moves at constant velocity',
-              'The friction force increases to 60 N'
+              'It stays still; static friction rises to 60 N',
+              'It starts to slide and speeds up',
+              'It slides at constant velocity once it starts',
+              'It stays still because friction matches the push'
             ],
             correctAnswer: 1,
-            explanation: 'Since 60 N > $f_{s,\\max} = 50$ N, static friction can no longer hold the box. The box begins to move, and kinetic friction ($f_k < f_{s,\\max}$) takes over.'
+            explanation: 'Since 60 N > $f_{s,\\max} = 50$ N, static friction can no longer hold the box, so it starts to slide. Kinetic friction ($f_k < f_{s,\\max}$) then takes over, and with 60 N still applied the net force is forward, so the box speeds up.'
           },
           {
             question: 'A sliding box has $\\mu_k = 0.3$ and a normal force of 100 N. The kinetic friction force is:',
             options: [
-              '3 N',
+              '70 N',
               '30 N',
-              '33 N',
-              '300 N'
+              '300 N',
+              '333 N'
             ],
             correctAnswer: 1,
-            explanation: '$f_k = \\mu_k N = 0.3 \\times 100 = 30$ N.'
+            explanation: '$f_k = \\mu_k N = 0.3 \\times 100 = 30$ N. Subtracting ($100 - 30 = 70$ N), dividing ($100/0.3 \\approx 333$ N), or multiplying by $g$ again ($0.3 \\times 100 \\times 10 = 300$ N) are common slips; the normal force is already a force.'
           }
         ]
       }
@@ -188,13 +188,13 @@ A 20 kg box sits on a horizontal surface. $\\mu_s = 0.50$, $\\mu_k = 0.40$, $g =
           },
           {
             label: 'The tires of a car driving at constant speed on dry road experience:',
-            options: ['Kinetic friction', 'Static friction', 'No friction', 'Both types'],
+            options: ['Kinetic friction, since the tires are moving', 'Static friction, since the contact patch doesn\'t slip', 'No friction, since the speed is constant', 'Static and kinetic friction at the same time'],
             correctIndex: 1,
             explanation: 'The bottom of a rolling tire is momentarily at rest relative to the road. The tire doesn\'t slide, so it\'s static friction. This is why tires grip the road.'
           },
           {
             label: 'Generally, $\\mu_s$ compared to $\\mu_k$ is:',
-            options: ['Smaller', 'Equal', 'Larger', 'Unrelated'],
+            options: ['Smaller', 'Equal to it', 'Larger', 'Unrelated'],
             correctIndex: 2,
             explanation: '$\\mu_s > \\mu_k$ for the same pair of surfaces. It takes more force to START an object sliding than to KEEP it sliding.'
           }
@@ -213,20 +213,20 @@ A 20 kg box sits on a horizontal surface. $\\mu_s = 0.50$, $\\mu_k = 0.40$, $g =
             question: 'A 10 kg block on a surface has $\\mu_s = 0.6$ and $\\mu_k = 0.4$. You gradually increase the force you apply. The block just begins to slide when the force reaches ($g = 10$ $m/s^{2}$):',
             options: [
               '40 N',
-              '50 N',
+              '6 N',
               '60 N',
               '100 N'
             ],
             correctAnswer: 2,
-            explanation: 'The block slides when the applied force exceeds $f_{s,\\max} = \\mu_s mg = 0.6 \\times 10 \\times 10 = 60$ N.'
+            explanation: 'The block slides when the applied force exceeds $f_{s,\\max} = \\mu_s mg = 0.6 \\times 10 \\times 10 = 60$ N. Using $\\mu_k$ gives 40 N, forgetting $g$ gives 6 N, and the full weight is 100 N.'
           },
           {
             question: 'Once the block from the previous question starts sliding, if you maintain 60 N, the block:',
             options: [
               'Moves at constant velocity',
-              'Accelerates because $f_k < f_s$',
+              'Accelerates, since $f_k = 40$ N is less than 60 N',
               'Decelerates because friction is strong',
-              'Stops immediately'
+              'Stops, since the push equals $\\mu_s mg$'
             ],
             correctAnswer: 1,
             explanation: 'Once sliding, friction drops to $f_k = \\mu_k mg = 0.4 \\times 100 = 40$ N. With 60 N applied and only 40 N friction, $F_{\\text{net}} = 20$ N, so the block accelerates.'

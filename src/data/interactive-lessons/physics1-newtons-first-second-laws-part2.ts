@@ -166,7 +166,7 @@ $$a' = \\frac{3F}{2m} = \\frac{3}{2} \\cdot \\frac{F}{m} = \\frac{3}{2} \\cdot 4
 
 1) What net force (in N) is needed to accelerate a 1200 kg car at 2.5 $m/s^{2}$?
 
-2) A 0.50 kg ball experiences a net force of 4.0 N. What is its acceleration $(in m/s^{2})$?
+2) A 0.50 kg ball experiences a net force of 4.0 N. What is its acceleration (in $m/s^{2}$)?
 
 3) An object accelerates at 6 $m/s^{2}$ under a net force of 18 N. What is its mass (in kg)?
       `,
@@ -195,7 +195,7 @@ $$a' = \\frac{3F}{2m} = \\frac{3}{2} \\cdot \\frac{F}{m} = \\frac{3}{2} \\cdot 4
           },
           {
             label: 'If both force and mass are tripled, acceleration:',
-            options: ['Triples', 'Stays the same', 'Is divided by 3', 'Is multiplied by 9'],
+            options: ['Triples', 'Stays the same', 'Drops to 1/3', 'Rises 9-fold'],
             correctIndex: 1,
             explanation: '$a = F/m$. If both $F$ and $m$ triple: $a\' = 3F/(3m) = F/m = a$. No change.'
           },

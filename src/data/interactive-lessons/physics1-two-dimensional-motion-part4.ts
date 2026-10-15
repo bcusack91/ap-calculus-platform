@@ -88,7 +88,7 @@ The horizontal motion of Ball B is completely separate from its vertical free fa
               'The dropped ball',
               'The thrown ball',
               'They hit at the same time',
-              'It depends on how fast the ball is thrown'
+              'Depends on throw speed'
             ],
             correctAnswer: 2,
             explanation: 'Both have the same initial vertical velocity ($v_{0y} = 0$) and the same vertical acceleration ($-g$). The horizontal velocity of the thrown ball doesn\'t affect its vertical fall time.'
@@ -96,9 +96,9 @@ The horizontal motion of Ball B is completely separate from its vertical free fa
           {
             question: 'For a projectile, the time to hit the ground depends on:',
             options: [
-              'The horizontal velocity only',
+              'Horizontal speed only',
               'The vertical motion only',
-              'Both horizontal and vertical components equally',
+              'Both components equally',
               'The total speed'
             ],
             correctAnswer: 1,

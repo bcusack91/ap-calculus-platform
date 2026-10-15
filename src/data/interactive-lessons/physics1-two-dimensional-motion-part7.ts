@@ -56,7 +56,7 @@ Congratulations on completing the Two-Dimensional Motion unit! This final lesson
               'Both velocity and acceleration are zero',
               'Velocity is zero but acceleration is $g$ downward',
               'Velocity is horizontal and acceleration is $g$ downward',
-              'Velocity is horizontal and acceleration is zero'
+              'Velocity is horizontal; acceleration is zero'
             ],
             correctAnswer: 2,
             explanation: 'At the top, $v_y = 0$ but $v_x$ is still non-zero, so velocity is horizontal. Acceleration due to gravity is always $g$ downward, regardless of position.'
@@ -66,8 +66,8 @@ Congratulations on completing the Two-Dimensional Motion unit! This final lesson
             options: [
               'The 30° launch',
               'The 60° launch',
-              'They have equal range',
-              'Cannot determine without knowing the speed'
+              'They land equally far away',
+              'Depends on the speed'
             ],
             correctAnswer: 2,
             explanation: 'Complementary angles ($\\theta$ and $90° - \\theta$) give the same range because $\\sin 2(30°) = \\sin 60°$ and $\\sin 2(60°) = \\sin 120° = \\sin 60°$. The range formula gives the same result.'
@@ -75,13 +75,13 @@ Congratulations on completing the Two-Dimensional Motion unit! This final lesson
           {
             question: 'A ball is thrown horizontally from a building. Which graph best represents the horizontal velocity ($v_x$) vs. time?',
             options: [
-              'A horizontal line (constant)',
+              'A horizontal line',
               'A line with positive slope',
               'A line with negative slope',
-              'A parabola'
+              'A downward-opening parabola'
             ],
             correctAnswer: 0,
-            explanation: 'Since $a_x = 0$, the horizontal velocity remains constant. The $v_x$ vs. $t$ graph is a horizontal line.'
+            explanation: 'Since $a_x = 0$, the horizontal velocity remains constant. The $v_x$ vs. $t$ graph is a horizontal line. (It is the vertical velocity $v_y$ whose graph is a sloped line.)'
           }
         ]
       }
@@ -129,7 +129,7 @@ A cannon fires a shell at 50 m/s at 53° above horizontal from ground level. Use
           },
           {
             label: 'A projectile\'s speed is minimum at:',
-            options: ['launch', 'maximum height', 'just before landing', 'halfway up'],
+            options: ['launch', 'maximum height', 'impact', 'halfway up'],
             correctIndex: 1,
             explanation: 'At maximum height, $v_y = 0$ so $v = \\sqrt{v_x^2 + 0} = v_x$. This is the minimum speed since the total speed at any other point includes a non-zero $v_y$.'
           },

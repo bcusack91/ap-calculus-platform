@@ -100,13 +100,13 @@ A runner goes 100 m east in 10 s, then 60 m west in 6 s:
           {
             question: 'If an object has a negative average velocity, it means:',
             options: [
-              'It is slowing down',
-              'It is speeding up',
-              'Its displacement is in the negative direction',
-              'It is not moving'
+              'It is slowing down during the interval',
+              'Its acceleration points in the negative direction',
+              'Its net displacement is negative',
+              'It moved only in the negative direction the whole time'
             ],
             correctAnswer: 2,
-            explanation: 'Negative average velocity means $\\Delta x < 0$: the object\'s net displacement is in the negative direction. It says nothing about whether the object is speeding up or slowing down.'
+            explanation: 'Negative average velocity means $\\Delta x < 0$: the object\'s net displacement is in the negative direction. It says nothing about whether the object is speeding up or slowing down or about the sign of its acceleration, and the object may have moved in the positive direction for part of the interval.'
           }
         ]
       }
@@ -142,21 +142,21 @@ A runner goes 100 m east in 10 s, then 60 m west in 6 s:
         dropdowns: [
           {
             label: 'Average velocity uses _____ in the numerator.',
-            options: ['distance', 'displacement', 'acceleration', 'speed'],
+            options: ['distance', 'displacement', 'total time', 'speed'],
             correctIndex: 1,
-            explanation: 'Average velocity = displacement / time. It uses the net change in position (displacement).'
+            explanation: 'Average velocity = displacement / time. It uses the net change in position (displacement) in the numerator; time goes in the denominator.'
           },
           {
             label: 'If an object completes a round trip, its average velocity is:',
-            options: ['maximum', 'equal to average speed', 'zero', 'undefined'],
+            options: ['negative', 'equal to average speed', 'zero', 'undefined'],
             correctIndex: 2,
             explanation: 'A round trip means the object returns to its starting point, so displacement = 0 and average velocity = 0.'
           },
           {
             label: 'Average speed is always _____ the magnitude of average velocity.',
-            options: ['less than', 'equal to', 'greater than or equal to', 'unrelated to'],
+            options: ['less than or equal to', 'exactly equal to', 'greater than or equal to', 'strictly greater than'],
             correctIndex: 2,
-            explanation: 'Since distance ≥ |displacement|, average speed ≥ |average velocity|. They are equal only when the object doesn\'t reverse direction.'
+            explanation: 'Since distance ≥ |displacement|, average speed ≥ |average velocity|. They are equal when the object doesn\'t reverse direction, so "strictly greater than" fails, and they differ whenever it does reverse, so "exactly equal to" fails.'
           }
         ]
       }

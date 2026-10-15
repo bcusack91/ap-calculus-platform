@@ -123,9 +123,9 @@ Let's bring together everything from this unit: position, displacement, velocity
         dropdowns: [
           {
             label: 'An object\'s velocity is zero. Its acceleration must be:',
-            options: ['zero', 'positive', 'negative', 'any value — it depends on the situation'],
+            options: ['zero, since the object is not moving', 'nonzero, or it could never start moving', 'equal to $g$, directed downward', 'any value, zero or not'],
             correctIndex: 3,
-            explanation: 'Zero velocity does not imply zero acceleration. A ball at the top of its arc has $v = 0$ but $a = -g$.'
+            explanation: 'Zero velocity does not imply zero acceleration. A ball at the top of its arc has $v = 0$ but $a = -g$, while a book resting on a table has $v = 0$ and $a = 0$.'
           },
           {
             label: 'If velocity and acceleration point in opposite directions, the object is:',
@@ -141,7 +141,7 @@ Let's bring together everything from this unit: position, displacement, velocity
           },
           {
             label: 'The kinematic equations require:',
-            options: ['zero initial velocity', 'constant velocity', 'constant acceleration', 'motion in the positive direction'],
+            options: ['starting from rest', 'constant velocity', 'constant acceleration', 'one-way motion only'],
             correctIndex: 2,
             explanation: 'The kinematic equations are valid only when acceleration is constant.'
           }
@@ -168,15 +168,15 @@ Let's bring together everything from this unit: position, displacement, velocity
             explanation: 'Phase 1 (engine): $v = 20(5) = 100$ m/s, $h_1 = \\frac{1}{2}(20)(25) = 250$ m. Phase 2 (free fall up): $v^2 = v_0^2 - 2g\\Delta h \\Rightarrow 0 = 100^2 - 2(10)\\Delta h \\Rightarrow \\Delta h = 500$ m. Total = $250 + 500 = 750$ m.'
           },
           {
-            question: 'A stone is thrown downward from a 100 m cliff at 10 m/s. How long does it take to reach the ground? (Use $g = 10$ $m/s^{2}$)',
+            question: 'A stone is thrown downward from a 120 m cliff at 10 m/s. How long does it take to reach the ground? (Use $g = 10$ $m/s^{2}$)',
             options: [
-              '2 s',
               '3 s',
+              '6 s',
               '4 s',
-              '5 s'
+              '4.9 s'
             ],
             correctAnswer: 2,
-            explanation: 'Taking downward as positive: $100 = 10t + \\frac{1}{2}(10)t^2 = 10t + 5t^2$. So $5t^2 + 10t - 100 = 0 \\Rightarrow t^2 + 2t - 20 = 0$. $t = (-2 + \\sqrt{4+80})/2 = (-2 + \\sqrt{84})/2$. Wait: $t^2 + 2t - 20 = 0 \\Rightarrow t = (-2 \\pm \\sqrt{4+80})/2 = (-2 + \\sqrt{84})/2 \\approx (-2+9.17)/2 \\approx 3.58$ s. Hmm, that\'s not exactly 4. Let me recheck with cleaner numbers: $100 = 10t + 5t^2$, i.e., $t^2 + 2t - 20 = 0$. $t = (-2+\\sqrt{84})/2 \\approx 3.58$ s ≈ 4 s (closest answer).'
+            explanation: 'Taking downward as positive: $120 = 10t + \\frac{1}{2}(10)t^2 = 10t + 5t^2$, so $t^2 + 2t - 24 = 0$, which factors as $(t + 6)(t - 4) = 0$. The positive root is $t = 4$ s. Ignoring the initial speed gives $\\sqrt{24} \\approx 4.9$ s, treating the throw as upward gives 6 s, and dropping the $\\frac{1}{2}$ gives 3 s.'
           }
         ]
       }

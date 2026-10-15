@@ -63,8 +63,8 @@ $$t_{up} = \\frac{t_{flight}}{2}$$
           {
             question: 'The acceleration at the maximum height is:',
             options: [
-              '0 (velocity is momentarily zero)',
-              '$g$ upward',
+              '0, since the velocity is momentarily zero',
+              'Less than $g$, since vertical motion stops',
               '$g$ downward',
               'Depends on the launch angle'
             ],
@@ -126,15 +126,15 @@ All launches are at the same speed $v_0$.
           },
           {
             label: 'What is the ratio $h_{60°}/h_{30°}$ (same speed)?',
-            options: ['1', '2', '3', '4'],
+            options: ['1', '$\\sqrt{3}$', '3', '4'],
             correctIndex: 2,
-            explanation: '$h \\propto \\sin^2\\theta$. $\\frac{h_{60}}{h_{30}} = \\frac{\\sin^2 60°}{\\sin^2 30°} = \\frac{(\\sqrt{3}/2)^2}{(1/2)^2} = \\frac{3/4}{1/4} = 3$.'
+            explanation: '$h \\propto \\sin^2\\theta$. $\\frac{h_{60}}{h_{30}} = \\frac{\\sin^2 60°}{\\sin^2 30°} = \\frac{(\\sqrt{3}/2)^2}{(1/2)^2} = \\frac{3/4}{1/4} = 3$. $\\sqrt{3}$ is the ratio of the sines with the square forgotten.'
           },
           {
             label: 'If the maximum height is 20 m, the initial vertical velocity was (use $g = 10$ $m/s^{2}$):',
-            options: ['10 m/s', '20 m/s', '30 m/s', '40 m/s'],
+            options: ['14.1 m/s', '20 m/s', '400 m/s', '2.0 m/s'],
             correctIndex: 1,
-            explanation: '$h = \\frac{v_{0y}^2}{2g}$, so $v_{0y} = \\sqrt{2gh} = \\sqrt{2(10)(20)} = \\sqrt{400} = 20$ m/s.'
+            explanation: '$h = \\frac{v_{0y}^2}{2g}$, so $v_{0y} = \\sqrt{2gh} = \\sqrt{2(10)(20)} = \\sqrt{400} = 20$ m/s. Dropping the 2 gives 14.1 m/s, forgetting the square root gives 400 m/s, and $\\sqrt{2h/g} = 2.0$ is the fall time, not a velocity.'
           }
         ]
       }
@@ -175,13 +175,13 @@ A ball is launched from ground level and reaches a maximum height of 31.25 m. Th
           {
             question: 'A projectile reaches a max height of 80 m. Using $g = 10$ $m/s^{2}$, what was $v_{0y}$?',
             options: [
-              '20 m/s',
-              '30 m/s',
+              '28.3 m/s',
+              '4.0 m/s',
               '40 m/s',
-              '80 m/s'
+              '1600 m/s'
             ],
             correctAnswer: 2,
-            explanation: '$v_{0y} = \\sqrt{2gh} = \\sqrt{2(10)(80)} = \\sqrt{1600} = 40$ m/s.'
+            explanation: '$v_{0y} = \\sqrt{2gh} = \\sqrt{2(10)(80)} = \\sqrt{1600} = 40$ m/s. Dropping the 2 gives 28.3 m/s, $\\sqrt{2h/g} = 4.0$ is the time to fall from the peak, and 1600 m/s forgets the square root.'
           },
           {
             question: 'Two balls are launched at the same speed. Ball A at 37° ($\\sin 37° = 0.6$) and Ball B at 53° ($\\sin 53° = 0.8$). The ratio $h_B/h_A$ is:',

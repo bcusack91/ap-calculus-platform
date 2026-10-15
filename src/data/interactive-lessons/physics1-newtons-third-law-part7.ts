@@ -59,7 +59,7 @@ $$\\vec{F}_{A \\text{ on } B} = -\\vec{F}_{B \\text{ on } A}$$
               'The girl exerts more force because she initiated the push',
               'The boy exerts more force because he has more mass',
               'They exert equal forces on each other',
-              'Only the girl exerts a force'
+              'Only the girl exerts a force, since she pushes'
             ],
             correctAnswer: 2,
             explanation: 'Newton\'s Third Law: the forces are always equal regardless of who initiates the push or the masses involved. The girl accelerates more because she has less mass.'
@@ -97,7 +97,7 @@ $$\\vec{F}_{A \\text{ on } B} = -\\vec{F}_{B \\text{ on } A}$$
 
 A modified Atwood machine: $m_1 = 8$ kg on a frictionless table, connected to $m_2 = 2$ kg hanging off the edge. Use $g = 10$ $m/s^{2}$.
 
-1) Find the acceleration of the system $(in m/s^{2})$.
+1) Find the acceleration of the system (in $m/s^{2}$).
 
 2) Find the tension in the string (in N).
 
@@ -155,10 +155,10 @@ A modified Atwood machine: $m_1 = 8$ kg on a frictionless table, connected to $m
               '$F/4$',
               '$F/3$',
               '$3F/4$',
-              '$F$'
+              '$4F/3$'
             ],
             correctAnswer: 2,
-            explanation: '$a = F/(m + 3m) = F/(4m)$. Contact force = $3m \\times F/(4m) = 3F/4$.'
+            explanation: '$a = F/(m + 3m) = F/(4m)$. Contact force = $3m \\times F/(4m) = 3F/4$. $F/4$ is the force needed for the pushed block itself, $F/3$ uses the mass ratio instead of the fraction of total mass, and $4F/3$ inverts the fraction.'
           },
           {
             question: 'A string connects a 4 kg block (on a frictionless table) to a 1 kg hanging block. The tension in the string is ($g = 10$ $m/s^{2}$):',
@@ -185,10 +185,10 @@ A modified Atwood machine: $m_1 = 8$ kg on a frictionless table, connected to $m
           {
             question: 'A person of mass 70 kg stands on a scale in an elevator. The scale reads 560 N. What is the elevator doing? ($g = 9.8$ $m/s^{2}$, $mg = 686$ N)',
             options: [
-              'Accelerating upward',
+              'Accelerating upward at 1.8 $m/s^{2}$',
               'Moving upward at constant velocity',
               'Accelerating downward',
-              'In free fall'
+              'In free fall with a broken cable'
             ],
             correctAnswer: 2,
             explanation: '$N = 560 < mg = 686$, so apparent weight is less than true weight. This means the elevator is accelerating downward. $a = g - N/m = 9.8 - 560/70 = 9.8 - 8 = 1.8$ $m/s^{2}$ downward.'
@@ -199,10 +199,10 @@ A modified Atwood machine: $m_1 = 8$ kg on a frictionless table, connected to $m
               '$mg$',
               '$\\frac{8}{5}mg$',
               '$2mg$',
-              '$4mg$'
+              '$\\frac{4}{5}mg$'
             ],
             correctAnswer: 1,
-            explanation: '$T = 2m_1 m_2 g/(m_1 + m_2) = 2(m)(4m)g/(m + 4m) = 8m^2 g/(5m) = \\frac{8}{5}mg$.'
+            explanation: '$T = 2m_1 m_2 g/(m_1 + m_2) = 2(m)(4m)g/(m + 4m) = 8m^2 g/(5m) = \\frac{8}{5}mg$. $\\frac{4}{5}mg$ drops the factor of 2 (that is the table-pulley result), and $mg$ and $4mg$ are the two weights, which bracket the tension.'
           }
         ]
       }

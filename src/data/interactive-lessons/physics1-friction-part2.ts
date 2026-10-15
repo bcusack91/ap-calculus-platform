@@ -134,12 +134,12 @@ $$a = \\frac{60 - 30}{10} = \\frac{30}{10} = 3 \\text{ m/s}^2$$
             question: 'A sliding 8 kg block has $\\mu_k = 0.25$ on a horizontal surface. What force is needed to keep it moving at constant velocity? ($g = 10$ $m/s^{2}$)',
             options: [
               '2 N',
-              '10 N',
+              '320 N',
               '20 N',
               '80 N'
             ],
             correctAnswer: 2,
-            explanation: 'Constant velocity means $F = f_k = \\mu_k mg = 0.25 \\times 80 = 20$ N.'
+            explanation: 'Constant velocity means $F = f_k = \\mu_k mg = 0.25 \\times 80 = 20$ N. Forgetting $g$ gives 2 N, using the full weight gives 80 N, and dividing by $\\mu_k$ gives 320 N.'
           },
           {
             question: 'Pulling a box upward at an angle reduces friction because:',
@@ -147,7 +147,7 @@ $$a = \\frac{60 - 30}{10} = \\frac{30}{10} = 3 \\text{ m/s}^2$$
               'The coefficient of friction decreases',
               'The mass of the box decreases',
               'The normal force decreases',
-              'Gravity becomes weaker'
+              'Gravity on the box becomes weaker'
             ],
             correctAnswer: 2,
             explanation: 'Pulling up reduces the normal force ($N = mg - F\\sin\\theta$). Since $f = \\mu N$, less normal force means less friction.'
@@ -190,19 +190,19 @@ Use $g = 10$ $m/s^{2}$ for all problems.
         dropdowns: [
           {
             label: 'When an object is on the verge of moving, the correct friction equation is:',
-            options: ['$f_k = \\mu_k N$', '$f_s = \\mu_s N$', '$f_s < \\mu_s N$', '$f = 0$'],
+            options: ['$f_k = \\mu_k N$', '$f_s = \\mu_s N$', '$f_s < \\mu_s N$', '$f_s = \\mu_k N$'],
             correctIndex: 1,
             explanation: 'On the verge of moving means static friction is at its maximum: $f_s = \\mu_s N$.'
           },
           {
             label: 'When an object slides at constant velocity, the net force is:',
-            options: ['$F - f_k = ma$', '$F = f_k$ (net force = 0)', '$F > f_k$', '$f_k > F$'],
+            options: ['$F - f_k = ma$, with $a > 0$', '$F = f_k$', '$F > f_k$ by a constant amount', '$f_k > F$, but the block keeps sliding'],
             correctIndex: 1,
             explanation: 'Constant velocity means $a = 0$, so $F_{\\text{net}} = 0$ and the applied force equals kinetic friction.'
           },
           {
             label: 'Doubling the normal force on a surface:',
-            options: ['Doubles the coefficient of friction', 'Doubles the friction force', 'Halves the friction force', 'Has no effect on friction'],
+            options: ['Doubles $\\mu$', 'Doubles the friction force', 'Halves the friction force', 'Has no effect on friction'],
             correctIndex: 1,
             explanation: '$f = \\mu N$. Since $\\mu$ is constant for given surfaces, doubling $N$ doubles $f$.'
           }
@@ -223,17 +223,17 @@ Use $g = 10$ $m/s^{2}$ for all problems.
               '0.25',
               '0.50',
               '0.75',
-              '1.00'
+              '5.0'
             ],
             correctAnswer: 1,
-            explanation: '$F - f_k = ma \\Rightarrow 30 - f_k = 4(2.5) = 10 \\Rightarrow f_k = 20$ N. $\\mu_k = f_k/N = 20/(4 \\times 10) = 20/40 = 0.50$.'
+            explanation: '$F - f_k = ma \\Rightarrow 30 - f_k = 4(2.5) = 10 \\Rightarrow f_k = 20$ N. $\\mu_k = f_k/N = 20/(4 \\times 10) = 0.50$. Using $30/40$ ignores the $ma$ term (0.75), using $10/40$ treats $ma$ as the friction (0.25), and dividing by the mass instead of the weight gives 5.0.'
           },
           {
             question: 'A block is on a horizontal surface. You double both the mass of the block and the applied horizontal force. The acceleration:',
             options: [
-              'Doubles',
-              'Stays the same',
-              'Halves',
+              'Doubles, since the force doubled',
+              'Stays the same, since net force and mass both double',
+              'Halves, since the mass doubled',
               'Cannot be determined without knowing $\\mu$'
             ],
             correctAnswer: 1,

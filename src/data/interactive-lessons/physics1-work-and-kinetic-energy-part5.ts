@@ -115,8 +115,8 @@ $$\\text{efficiency} = \\frac{800}{1000} \\times 100\\% = 80\\%$$
             question: 'A car travels at constant velocity on a flat road against a drag force. If the car doubles its speed, the power required:',
             options: [
               'Stays the same',
-              'Doubles',
-              'Quadruples',
+              'Twice as much',
+              'Four times as much',
               'Depends on the mass'
             ],
             correctAnswer: 1,
@@ -175,13 +175,13 @@ Use $g = 10$ $m/s^{2}$.
           },
           {
             label: 'Unit of energy commonly used in electricity bills:',
-            options: ['Watt', 'Kilowatt', 'Kilowatt-hour', 'Joule per second'],
+            options: ['Watt', 'Kilowatt', 'Kilowatt-hour', 'Megawatt'],
             correctIndex: 2,
             explanation: 'kWh = power × time = energy. 1 kWh = $3.6 \\times 10^{6}$ J. Watts and kilowatts are units of power.'
           },
           {
             label: 'At constant power, as a car accelerates, the force from the engine:',
-            options: ['Increases', 'Decreases', 'Stays the same', 'Drops to zero'],
+            options: ['Increases with speed', 'Decreases as the speed rises', 'Stays constant', 'Drops to zero at once'],
             correctIndex: 1,
             explanation: '$P = Fv \\Rightarrow F = P/v$. As $v$ increases at constant $P$, $F$ must decrease.'
           },
@@ -205,24 +205,24 @@ Use $g = 10$ $m/s^{2}$.
           {
             question: 'A 70 kg person runs up a 5 m staircase in 4 s. Their average power output is approximately ($g = 10$ $m/s^{2}$):',
             options: [
-              '350 W',
-              '700 W',
+              '87.5 W',
+              '3500 W',
               '875 W',
-              '1400 W'
+              '14000 W'
             ],
             correctAnswer: 2,
-            explanation: '$W = mgh = 70(10)(5) = 3500$ J. $P = W/t = 3500/4 = 875$ W.'
+            explanation: '$W = mgh = 70(10)(5) = 3500$ J. $P = W/t = 3500/4 = 875$ W. Forgetting $g$ gives 87.5 W, not dividing by the time gives 3500, and multiplying by the time gives 14,000.'
           },
           {
             question: 'A 2000 kg car accelerates on a flat road. At the instant the car moves at 20 m/s with an engine force of 3000 N, the instantaneous power is:',
             options: [
               '30 kW',
               '60 kW',
-              '120 kW',
-              '150 kW'
+              '0.15 kW',
+              '400 kW'
             ],
             correctAnswer: 1,
-            explanation: '$P = Fv = 3000 \\times 20 = 60{,}000$ W $= 60$ kW.'
+            explanation: '$P = Fv = 3000 \\times 20 = 60{,}000$ W $= 60$ kW. Dividing instead ($F/v$) gives 0.15 kW, a stray $\\frac{1}{2}$ gives 30 kW, and $\\frac{1}{2}mv^2 = 400$ kJ is the kinetic energy, not a power.'
           }
         ]
       }

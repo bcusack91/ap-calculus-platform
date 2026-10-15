@@ -97,7 +97,7 @@ Both velocity and acceleration are negative → the car is **speeding up** (goin
               'Speeding up in the negative direction',
               'Slowing down in the negative direction',
               'Speeding up in the positive direction',
-              'At rest'
+              'Moving at a constant negative velocity'
             ],
             correctAnswer: 0,
             explanation: 'When velocity and acceleration have the same sign (both negative here), the object speeds up. It\'s moving in the negative direction and getting faster.'
@@ -122,7 +122,7 @@ Both velocity and acceleration are negative → the car is **speeding up** (goin
       content: `
 **Acceleration Calculations** 🧮
 
-1) A train accelerates from rest to 36 m/s in 12 s. What is the average acceleration? $(in m/s^{2})$
+1) A train accelerates from rest to 36 m/s in 12 s. What is the average acceleration? (in $m/s^{2}$)
 
 2) A ball rolling at 14 m/s comes to rest in 7 s. What is the average acceleration? (in $m/s^{2}$, include the sign)
 
@@ -153,13 +153,13 @@ Both velocity and acceleration are negative → the car is **speeding up** (goin
           },
           {
             label: 'The SI unit of acceleration is:',
-            options: ['m/s', '$m/s^{2}$', 'km/h', 'N'],
+            options: ['$m/s$', '$m/s^{2}$', '$m^{2}/s$', '$m \\cdot s^{2}$'],
             correctIndex: 1,
             explanation: 'Acceleration = change in velocity / time = (m/s)/s = $m/s^{2}$.'
           },
           {
             label: 'If acceleration is zero, the object must be:',
-            options: ['at rest', 'speeding up', 'moving at constant velocity', 'slowing down'],
+            options: ['necessarily at rest', 'speeding up steadily', 'moving at constant velocity', 'slowing down to a stop'],
             correctIndex: 2,
             explanation: 'Zero acceleration means velocity is not changing — the object moves at constant velocity (which could be zero, i.e., at rest, but "at rest" is a special case of constant velocity).'
           }
@@ -178,12 +178,12 @@ Both velocity and acceleration are negative → the car is **speeding up** (goin
             question: 'A bicycle goes from 2 m/s to 8 m/s in 3 s, then from 8 m/s to 5 m/s in 2 s. What is the average acceleration over the entire 5 s?',
             options: [
               '0.6 $m/s^{2}$',
-              '1.0 $m/s^{2}$',
+              '1.8 $m/s^{2}$',
               '2.0 $m/s^{2}$',
               '3.0 $m/s^{2}$'
             ],
             correctAnswer: 0,
-            explanation: 'For the entire interval: $a_{\\text{avg}} = (v_f - v_i)/\\Delta t = (5 - 2)/5 = 3/5 = 0.6$ $m/s^{2}$. Only the initial and final velocities and total time matter for the overall average.'
+            explanation: 'For the entire interval: $a_{\\text{avg}} = (v_f - v_i)/\\Delta t = (5 - 2)/5 = 3/5 = 0.6$ $m/s^{2}$. Only the initial and final velocities and total time matter for the overall average. Adding the sizes of the two changes ($6 + 3 = 9$, over 5 s) gives 1.8, using only the first leg gives 2.0, and forgetting to divide by time gives 3.0.'
           },
           {
             question: 'A car is moving at $-15$ m/s. It has an acceleration of $+3$ $m/s^{2}$. After 5 seconds, the car will be:',

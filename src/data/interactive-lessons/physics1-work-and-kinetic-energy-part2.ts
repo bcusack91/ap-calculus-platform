@@ -114,10 +114,10 @@ The Work-Energy Theorem is especially powerful when you don\'t need to find acce
           {
             question: 'A car accelerates from 10 m/s to 20 m/s. The net work done on the car is:',
             options: [
-              'Equal to the car\'s final kinetic energy',
+              'Equal to the car\'s final KE',
               'Equal to the change in kinetic energy',
-              'Equal to the force times the distance',
-              'Zero because the car has constant mass'
+              'Equal to the car\'s momentum change',
+              'Zero, since the mass is constant'
             ],
             correctAnswer: 1,
             explanation: 'The Work-Energy Theorem states $W_{\\text{net}} = \\Delta KE = KE_f - KE_i$. It\'s the CHANGE, not the final value.'
@@ -125,10 +125,10 @@ The Work-Energy Theorem is especially powerful when you don\'t need to find acce
           {
             question: 'A moving object has zero net work done on it. This means:',
             options: [
-              'The object is stationary',
-              'No forces act on the object',
-              'The object\'s speed is unchanged',
-              'The object\'s velocity is unchanged'
+              'It must be stationary',
+              'No forces act on it',
+              'Its speed stays the same',
+              'Its velocity stays constant'
             ],
             correctAnswer: 2,
             explanation: '$W_{\\text{net}} = 0 \\Rightarrow \\Delta KE = 0 \\Rightarrow$ speed doesn\'t change. The direction could change (e.g., uniform circular motion), so velocity could change.'
@@ -196,7 +196,7 @@ The Work-Energy Theorem is especially powerful when you don\'t need to find acce
           },
           {
             label: 'If you double the speed of a car, the work needed to stop it:',
-            options: ['Doubles', 'Triples', 'Quadruples', 'Stays the same'],
+            options: ['Doubles, since speed doubles', 'Stays the same for the same car', 'Quadruples, since KE depends on $v^2$', 'Halves, since fast cars brake hard'],
             correctIndex: 2,
             explanation: '$W = \\Delta KE = \\frac{1}{2}mv^2$. Doubling $v$ quadruples $v^2$, so the work (and stopping distance) quadruples.'
           }

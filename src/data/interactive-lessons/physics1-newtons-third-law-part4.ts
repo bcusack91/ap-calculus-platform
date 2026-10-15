@@ -121,10 +121,10 @@ $$\\boxed{T = \\frac{m_1 m_2}{m_1 + m_2} g}$$
           {
             question: 'In an Atwood machine with $m_1 = 3$ kg and $m_2 = 5$ kg, the tension in the string is:',
             options: [
-              'Equal to $m_1 g = 29.4$ N',
-              'Equal to $m_2 g = 49$ N',
+              'Equal to $m_1 g$',
+              'Equal to $m_2 g$',
               'Between $m_1 g$ and $m_2 g$',
-              'Equal to $(m_1 + m_2)g = 78.4$ N'
+              'Equal to $(m_1 + m_2)g$'
             ],
             correctAnswer: 2,
             explanation: 'The tension must be greater than $m_1 g$ (to accelerate $m_1$ upward) and less than $m_2 g$ (to allow $m_2$ to accelerate downward). So $m_1 g < T < m_2 g$.'
@@ -134,11 +134,11 @@ $$\\boxed{T = \\frac{m_1 m_2}{m_1 + m_2} g}$$
             options: [
               'Accelerates at $g$',
               'Accelerates at $g/2$',
-              'Remains in equilibrium ($a = 0$)',
+              'Remains in equilibrium',
               'Cannot be determined'
             ],
             correctAnswer: 2,
-            explanation: '$a = (m_2 - m_1)g/(m_1 + m_2) = 0$ when $m_1 = m_2$. The system is in equilibrium.'
+            explanation: '$a = (m_2 - m_1)g/(m_1 + m_2) = 0$ when $m_1 = m_2$. The net force is zero, so the system is in equilibrium ($a = 0$).'
           },
           {
             question: 'A 2 kg block on a frictionless table is connected to a 3 kg hanging block. The acceleration of the system is ($g = 10$ $m/s^{2}$):',
@@ -162,7 +162,7 @@ $$\\boxed{T = \\frac{m_1 m_2}{m_1 + m_2} g}$$
 
 An Atwood machine has $m_1 = 4$ kg and $m_2 = 6$ kg. Use $g = 10$ $m/s^{2}$.
 
-1) What is the acceleration of the system $(in m/s^{2})$?
+1) What is the acceleration of the system (in $m/s^{2}$)?
 
 2) What is the tension in the string (in N)?
 
@@ -187,7 +187,7 @@ An Atwood machine has $m_1 = 4$ kg and $m_2 = 6$ kg. Use $g = 10$ $m/s^{2}$.
         dropdowns: [
           {
             label: 'In an ideal Atwood machine, the tension throughout the string is:',
-            options: ['Different at each point', 'The same everywhere', 'Zero', 'Equal to the weight of the heavier mass'],
+            options: ['Different at each point', 'The same everywhere', 'Largest at the top of the pulley', 'Equal to the weight of the heavier mass'],
             correctIndex: 1,
             explanation: 'With a massless string and frictionless pulley, tension is uniform throughout the string.'
           },
@@ -223,18 +223,18 @@ An Atwood machine has $m_1 = 4$ kg and $m_2 = 6$ kg. Use $g = 10$ $m/s^{2}$.
               '100 N'
             ],
             correctAnswer: 0,
-            explanation: '$a = m_2 g/(m_1 + m_2) = 5(10)/10 = 5$ $m/s^{2}$. $T = m_1 a = 5(5) = 25$ N. Or: $T = m_1 m_2 g/(m_1 + m_2) = 25(10)/10 = 25$ N.'
+            explanation: '$a = m_2 g/(m_1 + m_2) = 5(10)/10 = 5$ $m/s^{2}$. $T = m_1 a = 5(5) = 25$ N. Or: $T = m_1 m_2 g/(m_1 + m_2) = 25(10)/10 = 25$ N. 50 N assumes the tension equals the hanging weight, 100 N uses the total weight, and 75 N comes from a sign slip, $m_2(g + a)$.'
           },
           {
             question: 'An Atwood machine has $m_1 = 1$ kg and $m_2 = 9$ kg. The acceleration is closest to ($g = 10$ $m/s^{2}$):',
             options: [
-              '2 $m/s^{2}$',
+              '9 $m/s^{2}$',
               '5 $m/s^{2}$',
               '8 $m/s^{2}$',
               '10 $m/s^{2}$'
             ],
             correctAnswer: 2,
-            explanation: '$a = (9-1)(10)/(9+1) = 80/10 = 8$ $m/s^{2}$. Since $m_2 \\gg m_1$, the acceleration is close to $g$.'
+            explanation: '$a = (9-1)(10)/(9+1) = 80/10 = 8$ $m/s^{2}$. Since $m_2 \\gg m_1$, the acceleration is close to $g$. 9 $m/s^{2}$ drops the $m_1$ term from the numerator (the table-pulley formula), and 10 $m/s^{2}$ is free fall.'
           }
         ]
       }

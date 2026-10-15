@@ -90,10 +90,10 @@ If $v$-$t$ is a **straight line** with slope $-3$ $m/s^{2}$:
           {
             question: 'If the $v$-$t$ graph is a straight line with slope $-4$ $m/s^{2}$, the $a$-$t$ graph is:',
             options: [
-              'A straight line with negative slope',
+              'A line with slope $-4$ $m/s^{2}$',
               'A horizontal line at $a = -4$ $m/s^{2}$',
-              'A parabola',
-              'A straight line with positive slope'
+              'A horizontal line at $a = 4$ $m/s^{2}$',
+              'A downward-opening parabola'
             ],
             correctAnswer: 1,
             explanation: 'The slope of the $v$-$t$ graph is the acceleration. A constant slope of $-4$ $m/s^{2}$ means constant acceleration, so the $a$-$t$ graph is a horizontal line at $-4$ $m/s^{2}$.'
@@ -103,8 +103,8 @@ If $v$-$t$ is a **straight line** with slope $-3$ $m/s^{2}$:
             options: [
               'A horizontal line at 2 m/s',
               'A straight line starting at 0 with slope 2',
-              'A parabola',
-              'A horizontal line at 0'
+              'An upward-opening parabola starting at 0',
+              'A line starting at 2 m/s with slope 2'
             ],
             correctAnswer: 1,
             explanation: 'Constant acceleration means velocity changes linearly. Starting from $v_0 = 0$ with $a = 2$ $m/s^{2}$, the $v$-$t$ graph is $v = 2t$, a straight line through the origin with slope 2.'
@@ -124,7 +124,7 @@ If $v$-$t$ is a **straight line** with slope $-3$ $m/s^{2}$:
             label: '$x$-$t$ graph is a parabola → $v$-$t$ graph is a:',
             options: ['horizontal line', 'straight line', 'parabola', 'vertical line'],
             correctIndex: 1,
-            explanation: 'The derivative of a quadratic (parabola) is linear (straight line).'
+            explanation: 'A parabola\'s slope changes at a steady rate, so the velocity changes linearly: the $v$-$t$ graph is a straight line.'
           },
           {
             label: '$v$-$t$ graph is a horizontal line → $x$-$t$ graph is a:',
@@ -134,13 +134,13 @@ If $v$-$t$ is a **straight line** with slope $-3$ $m/s^{2}$:
           },
           {
             label: '$a$-$t$ graph is a horizontal line at $a > 0$ → $v$-$t$ graph is:',
-            options: ['a horizontal line', 'a straight line with positive slope', 'a parabola', 'a straight line with negative slope'],
+            options: ['a horizontal line', 'a straight line with positive slope', 'a parabola', 'a line with negative slope'],
             correctIndex: 1,
             explanation: 'Constant positive acceleration means velocity increases linearly over time.'
           },
           {
             label: 'To go from $v$-$t$ to $x$-$t$, you calculate the:',
-            options: ['slope of $v$-$t$', 'area under $v$-$t$', 'slope of $x$-$t$', 'area under $a$-$t$'],
+            options: ['slope of $v$-$t$', 'area under $v$-$t$', 'slope of $x$-$t$', 'slope of $a$-$t$'],
             correctIndex: 1,
             explanation: 'Area under the $v$-$t$ curve gives displacement, which (combined with $x_0$) gives the $x$-$t$ graph.'
           }
@@ -155,7 +155,7 @@ If $v$-$t$ is a **straight line** with slope $-3$ $m/s^{2}$:
 
 A $v$-$t$ graph shows a straight line from $v = 0$ at $t = 0$ to $v = 20$ m/s at $t = 5$ s, then constant at $v = 20$ m/s from $t = 5$ to $t = 10$ s.
 
-1) What is the acceleration from $t = 0$ to $t = 5$ s? $(in m/s^{2})$
+1) What is the acceleration from $t = 0$ to $t = 5$ s? (in $m/s^{2}$)
 
 2) What is the displacement from $t = 0$ to $t = 5$ s? (in meters)
 
@@ -192,10 +192,10 @@ A $v$-$t$ graph shows a straight line from $v = 0$ at $t = 0$ to $v = 20$ m/s at
           {
             question: 'An object\'s $v$-$t$ graph crosses the time axis. At that moment, the $x$-$t$ graph has:',
             options: [
-              'A discontinuity',
-              'A maximum or minimum (turning point)',
+              'A jump in position',
+              'A local maximum or minimum',
               'An inflection point',
-              'A vertical tangent'
+              'A vertical tangent line'
             ],
             correctAnswer: 1,
             explanation: 'When $v = 0$, the slope of the $x$-$t$ graph is zero. This means the $x$-$t$ graph has a horizontal tangent — a maximum or minimum — corresponding to the object reversing direction.'

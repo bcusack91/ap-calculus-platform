@@ -69,11 +69,11 @@ The **time to fall** depends only on the **height**, not on how fast the object 
             options: [
               '0.25 s',
               '0.5 s',
-              '1.0 s',
-              '1.25 s'
+              '0.35 s',
+              '0.125 s'
             ],
             correctAnswer: 1,
-            explanation: '$1.25 = \\frac{1}{2}(10)t^2 = 5t^2$, so $t^2 = 0.25$, $t = 0.5$ s. The horizontal speed of the marble doesn\'t matter!'
+            explanation: '$1.25 = \\frac{1}{2}(10)t^2 = 5t^2$, so $t^2 = 0.25$, $t = 0.5$ s. The horizontal speed of the marble doesn\'t matter! (0.25 s is $t^2$ with the square root forgotten; 0.35 s comes from dropping the $\\frac{1}{2}$; 0.125 s is $h/g$.)'
           },
           {
             question: 'During a horizontal launch, the horizontal velocity:',
@@ -89,13 +89,13 @@ The **time to fall** depends only on the **height**, not on how fast the object 
           {
             question: 'The path of a horizontally launched projectile is:',
             options: [
-              'A straight line',
-              'A circle',
+              'A straight line sloping down',
+              'A circular arc',
               'A parabola',
-              'An ellipse'
+              'An exponential decay curve'
             ],
             correctAnswer: 2,
-            explanation: 'Since $x = v_0t$ and $y = -\\frac{1}{2}gt^2$, eliminating $t$ gives $y = -\\frac{g}{2v_0^2}x^2$, which is a parabola.'
+            explanation: 'Since $x = v_0t$ and $y = -\\frac{1}{2}gt^2$, eliminating $t$ gives $y = -\\frac{g}{2v_0^2}x^2$, which is a parabola. The path curves more steeply as the vertical speed grows, so it is not a straight line, and its curvature changes, so it is not a circular arc.'
           }
         ]
       }
@@ -117,8 +117,7 @@ A ball is launched horizontally at 10 m/s from the top of a 20 m cliff. Use $g =
 4) Total speed at impact (in m/s, round to nearest whole number)
       `,
       exercise: {
-        boxes: 4,
-        correctAnswers: ['2', '20', '20', '22'],
+        questions: [{ question: '1) Time to reach the ground (s)', answer: '2', acceptableAnswers: ['2'] }, { question: '2) Horizontal distance from the cliff base (m)', answer: '20', acceptableAnswers: ['20'] }, { question: '3) Vertical velocity at impact, magnitude (m/s)', answer: '20', acceptableAnswers: ['20'] }, { question: '4) Total speed at impact (m/s, nearest whole number)', answer: '22', acceptableAnswers: ['22', '22.4', '22.36'] }],
         hint1: '$20 = \\frac{1}{2}(10)t^2 = 5t^2$',
         hint2: '$t = 2$ s. $x = 10(2) = 20$ m. $v_y = 10(2) = 20$ m/s.',
         hint3: '$v = \\sqrt{10^2 + 20^2} = \\sqrt{500} \\approx 22.4$, round to 22.',
@@ -147,9 +146,9 @@ A ball is launched horizontally at 10 m/s from the top of a 20 m cliff. Use $g =
           },
           {
             label: 'If the launch speed is doubled (horizontal launch from the same height), the range:',
-            options: ['stays the same', 'doubles', 'quadruples', 'halves'],
+            options: ['stays the same', 'doubles', 'quadruples', 'grows by a factor of $\\sqrt{2}$'],
             correctIndex: 1,
-            explanation: 'Range $= v_0 \\cdot t$. Since $t$ depends only on height (unchanged), doubling $v_0$ doubles the range.'
+            explanation: 'Range $= v_0 \\cdot t$. Since $t$ depends only on height (unchanged), doubling $v_0$ doubles the range. It does not quadruple: the $R \\propto v_0^2$ rule is for ground-to-ground angled launches, where the flight time also grows with $v_0$.'
           }
         ]
       }
@@ -168,21 +167,21 @@ A ball is launched horizontally at 10 m/s from the top of a 20 m cliff. Use $g =
               '500 m',
               '1000 m',
               '5000 m',
-              '2500 m'
+              '707 m'
             ],
             correctAnswer: 1,
-            explanation: 'Fall time: $500 = 5t^2$, $t = 10$ s. Range: $x = 100(10) = 1000$ m.'
+            explanation: 'Fall time: $500 = 5t^2$, $t = 10$ s. Range: $x = 100(10) = 1000$ m. Dropping the $\\frac{1}{2}$ gives $t \\approx 7.07$ s and 707 m; using $t = h/v$ gives 500 m; using $t = h/g = 50$ s gives 5000 m.'
           },
           {
             question: 'In the problem above, the horizontal velocity of the package just before it hits the ground is:',
             options: [
               '0 m/s',
-              '50 m/s',
+              '141 m/s',
               '100 m/s',
               '200 m/s'
             ],
             correctAnswer: 2,
-            explanation: 'The horizontal velocity remains constant at 100 m/s throughout the fall since $a_x = 0$.'
+            explanation: 'The horizontal velocity remains constant at 100 m/s throughout the fall since $a_x = 0$. The 141 m/s figure is the total speed $\\sqrt{100^2 + 100^2}$, which includes the vertical component; 200 m/s adds the components instead of keeping them separate.'
           }
         ]
       }

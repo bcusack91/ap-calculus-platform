@@ -120,8 +120,8 @@ $24^2 = 0 + 2(3)(96) = 576$ ✓
             options: [
               'Velocity is constant',
               'Acceleration is constant',
-              'The object starts from rest',
-              'Motion is in the positive direction'
+              'It starts from rest',
+              'All motion is positive'
             ],
             correctAnswer: 1,
             explanation: 'The kinematic equations are derived assuming constant (uniform) acceleration. They do NOT require the object to start from rest or to move in the positive direction.'
@@ -166,9 +166,9 @@ $24^2 = 0 + 2(3)(96) = 576$ ✓
           },
           {
             label: 'To find displacement without knowing the final velocity, use:',
-            options: ['$v = v_0 + at$', '$x = x_0 + v_0t + \\frac{1}{2}at^2$', '$v^2 = v_0^2 + 2a\\Delta x$', '$x = vt$'],
+            options: ['$v = v_0 + at$', '$\\Delta x = v_0t + \\frac{1}{2}at^2$', '$v^2 = v_0^2 + 2a\\Delta x$', '$\\Delta x = \\frac{1}{2}(v_0 + v)t$'],
             correctIndex: 1,
-            explanation: '$x = x_0 + v_0t + \\frac{1}{2}at^2$ relates displacement to initial velocity, acceleration, and time — no final velocity needed.'
+            explanation: '$\\Delta x = v_0t + \\frac{1}{2}at^2$ relates displacement to initial velocity, acceleration, and time — no final velocity needed. The average-velocity form $\\Delta x = \\frac{1}{2}(v_0 + v)t$ needs the final velocity $v$.'
           },
           {
             label: 'The equation $v^2 = v_0^2 + 2a\\Delta x$ is especially useful when _____ is unknown.',

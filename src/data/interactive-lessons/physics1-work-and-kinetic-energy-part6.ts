@@ -87,23 +87,23 @@ $$390 = \\frac{1}{2}(12)v_f^2 \\Rightarrow v_f = \\sqrt{\\frac{780}{12}} = \\sqr
             question: 'A 1200 kg car brakes from 30 m/s to 10 m/s over 50 m. The average braking force magnitude is:',
             options: [
               '4800 N',
-              '6400 N',
+              '19200 N',
               '9600 N',
-              '12800 N'
+              '10800 N'
             ],
             correctAnswer: 2,
-            explanation: '$\\Delta KE = \\frac{1}{2}(1200)(100) - \\frac{1}{2}(1200)(900) = 60{,}000 - 540{,}000 = -480{,}000$ J. $W = -Fd \\Rightarrow -F(50) = -480{,}000 \\Rightarrow F = 9600$ N.'
+            explanation: '$\\Delta KE = \\frac{1}{2}(1200)(100) - \\frac{1}{2}(1200)(900) = 60{,}000 - 540{,}000 = -480{,}000$ J. $W = -Fd \\Rightarrow F = 480{,}000/50 = 9600$ N. Using $(\\Delta v)^2$ gives 4800 N, using only the initial KE gives 10,800 N, and leaving out the $\\frac{1}{2}$ gives 19,200 N.'
           },
           {
             question: 'A 2 kg ball is thrown straight up at 15 m/s. Using work-energy, the maximum height is ($g = 10$ $m/s^{2}$):',
             options: [
               '5.625 m',
-              '7.5 m',
+              '1.5 m',
               '11.25 m',
               '22.5 m'
             ],
             correctAnswer: 2,
-            explanation: '$W_g = -mgh = \\Delta KE = 0 - \\frac{1}{2}(2)(15)^2 = -225$ J. $mgh = 225 \\Rightarrow h = 225/(2 \\times 10) = 11.25$ m.'
+            explanation: '$W_g = -mgh = \\Delta KE = 0 - \\frac{1}{2}(2)(15)^2 = -225$ J. $mgh = 225 \\Rightarrow h = 225/(2 \\times 10) = 11.25$ m. Leaving out the $\\frac{1}{2}$ gives 22.5 m, dividing by the mass a second time gives 5.625 m, and using $v$ instead of $v^2$ gives 1.5 m.'
           }
         ]
       }
@@ -141,13 +141,13 @@ Use $g = 10$ $m/s^{2}$. Use $\\cos(37°) = 0.8$, $\\sin(37°) = 0.6$.
         dropdowns: [
           {
             label: 'Finding the speed of a ball after falling 10 m (no air resistance). Best approach:',
-            options: ['Newton\'s 2nd Law + kinematics', 'Work-Energy Theorem', 'Both work equally well', 'Neither'],
+            options: ['Newton\'s 2nd Law with kinematics only', 'The Work-Energy Theorem only', 'Either method works equally well', 'Neither; this needs impulse-momentum'],
             correctIndex: 2,
             explanation: 'Both methods work well. Kinematics: $v^2 = 2gh$. Work-Energy: $mgh = \\frac{1}{2}mv^2$. They give the same answer.'
           },
           {
             label: 'Finding the acceleration of a block on a rough incline. Best approach:',
-            options: ['Work-Energy Theorem', 'Newton\'s 2nd Law', 'Power equation', 'Conservation of energy'],
+            options: ['Work-Energy Theorem', 'Newton\'s 2nd Law with an FBD', 'Power equation', 'Conservation of energy'],
             correctIndex: 1,
             explanation: 'Newton\'s 2nd Law directly gives acceleration: $ma = mg\\sin\\theta - \\mu_k mg\\cos\\theta$.'
           },
@@ -178,23 +178,23 @@ Use $g = 10$ $m/s^{2}$. Use $\\cos(37°) = 0.8$, $\\sin(37°) = 0.6$.
             question: 'A 1000 kg car traveling at 20 m/s brakes with a friction force of 5000 N. The stopping distance is:',
             options: [
               '20 m',
-              '30 m',
+              '80 m',
               '40 m',
-              '50 m'
+              '4 m'
             ],
             correctAnswer: 2,
-            explanation: '$\\Delta KE = -\\frac{1}{2}(1000)(400) = -200{,}000$ J. $W_f = -5000d = -200{,}000 \\Rightarrow d = 40$ m.'
+            explanation: '$\\Delta KE = -\\frac{1}{2}(1000)(400) = -200{,}000$ J. $W_f = -5000d = -200{,}000 \\Rightarrow d = 40$ m. Leaving out the $\\frac{1}{2}$ gives 80 m, using the $\\frac{1}{2}$ twice gives 20 m, and $v/a = 4$ is the stopping time in seconds, not a distance.'
           },
           {
             question: 'An engine with 30 kW power pulls a 2000 kg car up a $5°$ incline at constant speed. Neglecting friction, the car\'s speed is approximately ($g = 10$ $m/s^{2}$, $\\sin 5° \\approx 0.087$):',
             options: [
-              '8.6 m/s',
-              '15 m/s',
+              '1.5 m/s',
+              '172 m/s',
               '17.2 m/s',
-              '30 m/s'
+              '8.6 m/s'
             ],
             correctAnswer: 2,
-            explanation: 'At constant speed, engine force = gravity component = $mg\\sin(5°) = 2000(10)(0.087) = 1740$ N. $P = Fv \\Rightarrow v = 30{,}000/1740 \\approx 17.2$ m/s.'
+            explanation: 'At constant speed, engine force = gravity component = $mg\\sin(5°) = 2000(10)(0.087) = 1740$ N. $P = Fv \\Rightarrow v = 30{,}000/1740 \\approx 17.2$ m/s. Using the full weight gives 1.5 m/s, forgetting $g$ gives 172 m/s, and a stray $\\frac{1}{2}$ gives 8.6 m/s.'
           }
         ]
       }

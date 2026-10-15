@@ -122,13 +122,13 @@ Plot $a$ vs. $F/m$:
           {
             question: 'A block just begins to slide on a ramp at 31°. What is $\\mu_s$? ($\\tan 31° = 0.60$)',
             options: [
-              '0.31',
+              '1.67',
               '0.52',
               '0.60',
               '0.85'
             ],
             correctAnswer: 2,
-            explanation: '$\\mu_s = \\tan\\theta_c = \\tan 31° = 0.60$. The mass doesn\'t matter!'
+            explanation: '$\\mu_s = \\tan\\theta_c = \\tan 31° = 0.60$, and the mass doesn\'t matter. $\\sin 31° \\approx 0.52$ and $\\cos 31° \\approx 0.86$ are the wrong ratios, and 1.67 is $1/\\tan 31°$.'
           },
           {
             question: 'In a friction experiment, you plot $f_k$ vs. $N$ and get a straight line through the origin with slope 0.35. What is $\\mu_k$?',
@@ -136,10 +136,10 @@ Plot $a$ vs. $F/m$:
               '0.175',
               '0.35',
               '0.70',
-              '3.5'
+              '2.86'
             ],
             correctAnswer: 1,
-            explanation: 'Since $f_k = \\mu_k N$, the slope of the $f$ vs. $N$ graph is $\\mu_k = 0.35$.'
+            explanation: 'Since $f_k = \\mu_k N$, the slope of the $f$ vs. $N$ graph is $\\mu_k = 0.35$. Halving or doubling the slope has no basis, and 2.86 is $1/0.35$, the result of reading the axes the wrong way round.'
           },
           {
             question: 'Which method of measuring $\\mu_s$ does NOT require knowing the mass of the object?',
@@ -168,12 +168,11 @@ Plot $a$ vs. $F/m$:
 3) In an experiment, doubling the mass of a block doubles the measured friction force. This confirms that friction is proportional to what variable?
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['0.4', '0.36', 'normal force'],
+        questions: [{ question: '1)', answer: '0.4', acceptableAnswers: ['0.4', '0.40'] }, { question: '2)', answer: '0.364', acceptableAnswers: ['0.364', '0.36'] }, { question: '3)', answer: 'normal force', acceptableAnswers: ['normal force', 'normal', 'the normal force', 'N', 'normal force N', 'normal force (N)', 'normal-force', 'the normal'] }],
         hint1: '$\\mu_s = f_{s,\\max}/N = 12/(3 \\times 10) = 12/30$.',
         hint2: '$\\mu_k = \\tan\\theta = \\tan 20°$.',
         hint3: 'Doubling mass doubles the normal force. Since friction doubled too, $f \\propto N$.',
-        explanation: '1) $\\mu_s = 12/30 = 0.40$. 2) $\\mu_k = \\tan 20° = 0.364 \\approx 0.36$. 3) Normal force. Doubling mass doubles $N = mg$, and if friction doubles too, this confirms $f = \\mu N$.'
+        explanation: '1) $\\mu_s = 12/30 = 0.40$. 2) $\\mu_k = \\tan 20° = 0.364$. 3) Normal force. Doubling mass doubles $N = mg$, and if friction doubles too, this confirms $f = \\mu N$.'
       }
     },
     {
@@ -186,7 +185,7 @@ Plot $a$ vs. $F/m$:
         dropdowns: [
           {
             label: 'The critical angle for sliding is independent of:',
-            options: ['The surface material', 'The mass of the block', 'The angle of the ramp', 'The coefficient of friction'],
+            options: ['The materials in contact', 'The mass of the block', 'Whether the surfaces are dry or wet', 'The coefficient of friction'],
             correctIndex: 1,
             explanation: '$\\mu_s = \\tan\\theta_c$ — mass cancels out. The critical angle depends only on the surface materials (which determine $\\mu_s$).'
           },
@@ -198,9 +197,9 @@ Plot $a$ vs. $F/m$:
           },
           {
             label: 'To get the most accurate value of $\\mu_k$, you should:',
-            options: ['Make one careful measurement', 'Take multiple measurements and find the slope of $f$ vs. $N$', 'Use the largest mass possible', 'Pull as fast as possible'],
+            options: ['Make one careful measurement with the heaviest block', 'Graph $f$ vs. $N$ and use the slope', 'Average several trials at a single normal force', 'Pull as fast as possible so friction is fully kinetic'],
             correctIndex: 1,
-            explanation: 'Multiple measurements with varying $N$ and a best-fit line give the most reliable $\\mu_k$.'
+            explanation: 'Measuring friction at several different normal forces and taking the slope of the best-fit $f$ vs. $N$ line gives the most reliable $\\mu_k$; it averages out random error and checks that $f \\propto N$. Repeating at one normal force cannot do the second job.'
           }
         ]
       }
@@ -216,10 +215,10 @@ Plot $a$ vs. $F/m$:
           {
             question: 'Two students measure the critical angle for the same block and surface. Student A uses a 1 kg block, Student B uses a 3 kg block. Their critical angles should be:',
             options: [
-              'A\'s angle is larger (lighter block slides easier)',
-              'B\'s angle is larger (heavier block needs steeper ramp)',
-              'The same (mass doesn\'t affect the critical angle)',
-              'Cannot determine without more information'
+              'A\'s is larger, since a lighter block slides more easily',
+              'B\'s is larger, since a heavier block needs a steeper ramp',
+              'The same for both blocks',
+              'Cannot tell without knowing $\\mu_s$'
             ],
             correctAnswer: 2,
             explanation: '$\\mu_s = \\tan\\theta_c$ depends only on the surfaces, not the mass. Both students should get the same critical angle.'
@@ -227,13 +226,13 @@ Plot $a$ vs. $F/m$:
           {
             question: 'A block slides down a ramp at constant velocity when $\\theta = 27°$. What is $\\mu_k$? ($\\tan 27° \\approx 0.51$)',
             options: [
-              '0.27',
+              '1.96',
               '0.45',
               '0.51',
-              '0.85'
+              '0.89'
             ],
             correctAnswer: 2,
-            explanation: 'At constant velocity on the ramp: $mg\\sin\\theta = \\mu_k mg\\cos\\theta$, giving $\\mu_k = \\tan\\theta = \\tan 27° \\approx 0.51$.'
+            explanation: 'At constant velocity on the ramp: $mg\\sin\\theta = \\mu_k mg\\cos\\theta$, giving $\\mu_k = \\tan\\theta = \\tan 27° \\approx 0.51$. $\\sin 27° \\approx 0.45$ and $\\cos 27° \\approx 0.89$ are the wrong ratios, and 1.96 is the inverted ratio.'
           }
         ]
       }

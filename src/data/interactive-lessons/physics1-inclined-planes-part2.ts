@@ -84,21 +84,21 @@ $$\\Delta x = 36/10 = 3.6 \\text{ m}$$
           {
             question: 'On a frictionless 45° incline, a 2 kg block accelerates at ($g = 10$ $m/s^{2}$, $\\sin 45° \\approx 0.707$):',
             options: [
-              '5.0 $m/s^{2}$',
+              '3.54 $m/s^{2}$',
               '7.07 $m/s^{2}$',
               '10.0 $m/s^{2}$',
               '14.1 $m/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$a = g\\sin 45° = 10 \\times 0.707 = 7.07$ $m/s^{2}$. Mass doesn\'t matter!'
+            explanation: '$a = g\\sin 45° = 10 \\times 0.707 = 7.07$ $m/s^{2}$, and mass doesn\'t matter. Dividing by the 2 kg mass gives 3.54, ignoring the tilt gives 10.0, and dividing $g$ by $\\sin 45°$ gives 14.1 $m/s^{2}$.'
           },
           {
             question: 'A block slides down a frictionless incline. If you double the mass, the acceleration:',
             options: [
-              'Doubles',
-              'Halves',
+              'Doubles, since the gravitational force doubles',
+              'Halves, since there is more inertia',
               'Stays the same',
-              'Quadruples'
+              'Increases, but by less than double'
             ],
             correctAnswer: 2,
             explanation: '$a = g\\sin\\theta$ — mass cancels. The acceleration is independent of mass on a frictionless incline.'
@@ -106,9 +106,9 @@ $$\\Delta x = 36/10 = 3.6 \\text{ m}$$
           {
             question: 'A ball is launched up a frictionless incline. At the highest point, its acceleration is:',
             options: [
-              'Zero (momentarily stopped)',
-              '$g$ downward',
-              '$g\\sin\\theta$ down the slope',
+              'Zero, since it is momentarily stopped',
+              '$g$ straight downward',
+              '$g\\sin\\theta$ down the slope, as on the way up',
               'Changing direction'
             ],
             correctAnswer: 2,
@@ -183,10 +183,10 @@ $$\\Delta x = 36/10 = 3.6 \\text{ m}$$
           {
             question: 'Two frictionless inclines have angles 20° and 40°. A block released from rest slides the same distance $d$ on each. Which block is moving faster at the bottom?',
             options: [
-              'The block on the 20° incline',
-              'The block on the 40° incline',
-              'They have the same speed',
-              'Cannot be determined'
+              'The 20° block, which slides for longer',
+              'The 40° block',
+              'Each one reaches the same speed',
+              'Cannot be determined without the mass'
             ],
             correctAnswer: 1,
             explanation: '$v^2 = 2g\\sin\\theta \\cdot d$. Since $\\sin 40° > \\sin 20°$, the 40° block has greater speed.'

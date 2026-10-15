@@ -119,7 +119,7 @@ To find the reaction to any force:
             question: 'A hammer strikes a nail. Compared to the force the hammer exerts on the nail, the force the nail exerts on the hammer is:',
             options: [
               'Smaller, because the hammer is moving',
-              'Larger, because the nail has more resistance',
+              'Larger, since the nail resists',
               'Equal in magnitude, opposite in direction',
               'Zero, because the nail doesn\'t move much'
             ],
@@ -141,9 +141,9 @@ To find the reaction to any force:
             question: 'Which of the following is a valid action-reaction pair?',
             options: [
               'Weight of a box and the normal force on the box',
-              'Tension in a rope pulling a block and friction on the block',
+              'Tension on a block and friction on that block',
               'Earth\'s gravity on a ball and the ball\'s gravity on Earth',
-              'A person\'s push on a wall and friction on the person\'s feet'
+              'A person\'s push on a wall and friction on their feet'
             ],
             correctAnswer: 2,
             explanation: 'Action-reaction pairs must involve the same two objects and the same type of force. "Earth pulls ball" and "ball pulls Earth" satisfy both conditions. The other options involve different types of forces or different objects.'
@@ -184,21 +184,21 @@ To find the reaction to any force:
         dropdowns: [
           {
             label: 'Action-reaction forces act on:',
-            options: ['The same object', 'Different objects', 'Only one object', 'Neither object'],
+            options: ['The same object', 'Different objects', 'Only one object', 'The heavier one'],
             correctIndex: 1,
             explanation: 'This is the defining feature: action-reaction pairs always act on two different objects.'
           },
           {
             label: 'A bullet exits a gun. The reaction force acts on:',
-            options: ['The bullet', 'The gun', 'The air', 'The target'],
+            options: ['The bullet', 'The gun', 'The surrounding air', 'The target'],
             correctIndex: 1,
             explanation: 'The gun pushes the bullet forward; the reaction is the bullet pushing the gun backward (recoil).'
           },
           {
             label: 'Can an action-reaction pair ever cancel each other out?',
-            options: ['Yes, when the forces are equal', 'Yes, when objects are at rest', 'No, because they act on different objects', 'No, because they are different types of force'],
+            options: ['Yes, because the forces are equal', 'Yes, when both objects are at rest', 'No, because they act on different objects', 'No, because they are always unequal'],
             correctIndex: 2,
-            explanation: 'Forces can only cancel when they act on the SAME object. Since action-reaction pairs act on different objects, they never cancel.'
+            explanation: 'Forces can only cancel when they act on the SAME object. Since action-reaction pairs act on different objects, they never cancel, even though they are always equal in size.'
           },
           {
             label: 'When you walk, the force that moves you forward is:',
@@ -220,10 +220,10 @@ To find the reaction to any force:
           {
             question: 'A horse pulls a cart. The cart pulls back on the horse with an equal force. How is the horse able to accelerate the cart?',
             options: [
-              'The horse actually pulls harder than the cart pulls back',
-              'The action-reaction forces are on different objects — the cart accelerates because the horse\'s pull is the only horizontal force on the cart',
-              'Newton\'s Third Law doesn\'t apply to moving objects',
-              'Friction cancels the reaction force'
+              'The horse actually pulls harder on the cart than the cart pulls back',
+              'The two forces act on different objects, so they can\'t cancel each other',
+              'Newton\'s Third Law doesn\'t apply once objects are moving',
+              'Friction on the cart cancels the reaction force on the horse'
             ],
             correctAnswer: 1,
             explanation: 'The horse\'s pull on the cart and the cart\'s pull on the horse are on DIFFERENT objects. For the cart\'s motion, we only look at forces on the cart. The horse pulls the cart forward, and if that exceeds friction on the cart, the cart accelerates.'
@@ -231,7 +231,7 @@ To find the reaction to any force:
           {
             question: 'Two ice skaters push off each other. Skater A has mass 80 kg and skater B has mass 40 kg. How do their accelerations compare?',
             options: [
-              'A accelerates twice as much as B',
+              'A accelerates more than B',
               'Both accelerate equally',
               'B accelerates twice as much as A',
               'Neither accelerates'

@@ -116,13 +116,13 @@ $$N_{\\text{table}} = W_B + N_{AB} = 49 + 19.6 = 68.6 \\text{ N}$$
           {
             question: 'A person stands on the floor. The Third Law reaction to the floor\'s normal force pushing up on the person is:',
             options: [
-              'The person\'s weight (gravity pulling them down)',
+              'Gravity pulling the person downward',
               'The person pushing down on the floor',
-              'The floor\'s weight',
-              'Earth\'s gravitational pull on the floor'
+              'The floor\'s own weight',
+              'Earth\'s pull on the floor'
             ],
             correctAnswer: 1,
-            explanation: 'The normal force pair: floor pushes person up ↔ person pushes floor down. These involve the same two objects (person and floor) and the same type of force (contact/normal).'
+            explanation: 'The normal force pair: floor pushes person up ↔ person pushes floor down. These involve the same two objects (person and floor) and the same type of force (contact/normal). The person\'s weight is a gravitational force from Earth, so it pairs with the person pulling up on Earth.'
           },
           {
             question: 'A block sits on a table. How many Third Law pairs involve the block?',
@@ -130,7 +130,7 @@ $$N_{\\text{table}} = W_B + N_{AB} = 49 + 19.6 = 68.6 \\text{ N}$$
               '1 (just the weight pair)',
               '2 (weight pair + normal pair)',
               '3 (weight pair + normal pair + friction pair)',
-              '4'
+              '0 (balanced forces form no pairs)'
             ],
             correctAnswer: 1,
             explanation: 'Two pairs: (1) Earth pulls block ↔ block pulls Earth, (2) table pushes block ↔ block pushes table. No friction pair since the block isn\'t sliding.'
@@ -140,8 +140,8 @@ $$N_{\\text{table}} = W_B + N_{AB} = 49 + 19.6 = 68.6 \\text{ N}$$
             options: [
               '0 — there\'s no contact',
               '1 — only the gravitational pair',
-              '2',
-              '3'
+              '2 — gravity plus the throw',
+              '3 — gravity, throw, and air'
             ],
             correctAnswer: 1,
             explanation: 'Only one pair: Earth pulls ball down ↔ ball pulls Earth up. There are no contact forces since the ball isn\'t touching anything.'
@@ -190,7 +190,7 @@ Block A (3 kg) sits on top of Block B (7 kg), which sits on a table. Use $g = 9.
           },
           {
             label: 'Weight of a book and the normal force from the table are:',
-            options: ['A Third Law pair', 'Not a Third Law pair', 'A Third Law pair only at rest', 'Always equal'],
+            options: ['A Third Law pair in every case', 'Not a Third Law pair', 'A Third Law pair only at rest', 'Always equal, so they form a pair'],
             correctIndex: 1,
             explanation: 'They involve different objects (Earth-book vs. table-book) and are different types of force (gravitational vs. contact). NOT a Third Law pair. They happen to be equal when the book is in equilibrium, but that\'s Newton\'s Second Law, not Third.'
           },

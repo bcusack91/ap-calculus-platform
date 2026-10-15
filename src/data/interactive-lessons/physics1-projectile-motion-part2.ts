@@ -83,10 +83,10 @@ For AP Physics problems, you should know these common values:
               '34.6 m/s',
               '20 m/s',
               '28.3 m/s',
-              '40 m/s'
+              '-39.5 m/s'
             ],
             correctAnswer: 1,
-            explanation: '$v_{0y} = 40\\sin 30° = 40(0.5) = 20$ m/s.'
+            explanation: '$v_{0y} = 40\\sin 30° = 40(0.5) = 20$ m/s. 34.6 m/s uses cosine instead of sine, 28.3 m/s uses 45°, and $-39.5$ m/s comes from a calculator left in radian mode.'
           },
           {
             question: 'Which launch angle gives the largest $v_{0y}$ for a given launch speed?',
@@ -137,7 +137,7 @@ A football is kicked at 25 m/s at 53° above horizontal from ground level. Use $
         dropdowns: [
           {
             label: 'Increasing the launch angle (with the same speed) will increase:',
-            options: ['$v_{0x}$', '$v_{0y}$', 'both $v_{0x}$ and $v_{0y}$', 'neither'],
+            options: ['$v_{0x}$, while $v_{0y}$ decreases', '$v_{0y}$, while $v_{0x}$ decreases', 'both $v_{0x}$ and $v_{0y}$', 'neither component'],
             correctIndex: 1,
             explanation: 'Increasing $\\theta$ increases $\\sin\\theta$ (up to 90°), so $v_{0y} = v_0\\sin\\theta$ increases. But $\\cos\\theta$ decreases, so $v_{0x}$ decreases.'
           },

@@ -149,10 +149,10 @@ If the applied force produces an acceleration greater than $\\mu_s g$, block A s
               '8 N',
               '32 N',
               '40 N',
-              '80 N'
+              '100 N'
             ],
             correctAnswer: 2,
-            explanation: '$a_{\\max} = \\mu_s g = 0.40 \\times 10 = 4$ $m/s^{2}$. $F_{\\max} = (m_A + m_B) \\times a_{\\max} = 10 \\times 4 = 40$ N.'
+            explanation: '$a_{\\max} = \\mu_s g = 0.40 \\times 10 = 4$ $m/s^{2}$. $F_{\\max} = (m_A + m_B) \\times a_{\\max} = 10 \\times 4 = 40$ N. 8 N is the maximum friction on A alone, 32 N uses only B\'s mass, and 100 N is the total weight with $\\mu_s$ left out.'
           }
         ]
       }
@@ -165,7 +165,7 @@ If the applied force produces an acceleration greater than $\\mu_s g$, block A s
 
 Two blocks are in contact on a frictionless surface: $m_1 = 4$ kg and $m_2 = 6$ kg. A force of 30 N is applied horizontally to $m_1$.
 
-1) What is the acceleration of the system $(in m/s^{2})$?
+1) What is the acceleration of the system (in $m/s^{2}$)?
 
 2) What is the contact force between the blocks (in N)?
 
@@ -202,15 +202,15 @@ Two blocks are in contact on a frictionless surface: $m_1 = 4$ kg and $m_2 = 6$ 
           },
           {
             label: 'For stacked blocks, the force that accelerates the top block horizontally is:',
-            options: ['The applied force', 'Gravity', 'Static friction from the bottom block', 'Normal force'],
+            options: ['The applied force', 'Gravity on the top block', 'Static friction from the bottom block', 'Normal force from the bottom block'],
             correctIndex: 2,
             explanation: 'The only horizontal force on the top block is friction from the bottom block. This friction force is what carries the top block along.'
           },
           {
             label: 'If the applied force is too large, stacked blocks will:',
-            options: ['Both stop', 'Move at different accelerations (top block slides)', 'Both accelerate the same', 'Break the surface'],
+            options: ['Both stop, since friction locks them together', 'Slide relative to each other', 'Still accelerate together at the same rate', 'Move together while the top block tips over'],
             correctIndex: 1,
-            explanation: 'When the required friction exceeds $\\mu_s N$, the blocks can no longer move together. The top block slides relative to the bottom block.'
+            explanation: 'When the required friction exceeds $\\mu_s N$, the blocks can no longer move together. The top block slides relative to the bottom block, so the two blocks have different accelerations.'
           }
         ]
       }
@@ -237,13 +237,13 @@ Two blocks are in contact on a frictionless surface: $m_1 = 4$ kg and $m_2 = 6$ 
           {
             question: 'A 3 kg block sits on a 5 kg block on a frictionless floor. $\\mu_s = 0.50$ between blocks. The maximum acceleration without sliding is ($g = 10$ $m/s^{2}$):',
             options: [
-              '2 $m/s^{2}$',
+              '1.9 $m/s^{2}$',
               '5 $m/s^{2}$',
-              '8 $m/s^{2}$',
+              '3 $m/s^{2}$',
               '10 $m/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$a_{\\max} = \\mu_s g = 0.50 \\times 10 = 5$ $m/s^{2}$. If the system accelerates faster than this, the friction can\'t keep the top block in place.'
+            explanation: '$a_{\\max} = \\mu_s g = 0.50 \\times 10 = 5$ $m/s^{2}$. If the system accelerates faster than this, the friction can\'t keep the top block in place. The top block\'s mass cancels: $\\mu_s m g / m = \\mu_s g$. Dividing the 15 N friction by the 5 kg block gives 3, and by the 8 kg total gives 1.9.'
           }
         ]
       }

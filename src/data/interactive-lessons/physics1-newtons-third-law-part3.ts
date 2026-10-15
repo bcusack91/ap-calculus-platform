@@ -63,18 +63,18 @@ When analyzing multiple objects as a **system**:
 
 ### Example: Person Pushing a Box
 
-Person (60 kg) pushes box (20 kg) with 100 N on a frictionless floor.
+A person (60 kg) stands on a frictionless floor with a box (20 kg) held against their hands. The person pushes backward on a wall behind them, so the wall pushes the person forward with 100 N. The person and box then move forward together.
 
 **System approach (person + box):**
-- External forces: only friction from ground on person\'s feet = 100 N forward
-- Wait — on a frictionless floor, the person pushes the box and the floor provides no traction. Let\'s say the person can push off a wall.
-- The person pushes the wall with force $F$; the wall pushes back on the person with $F$
+- The person–box contact forces are internal (a Third Law pair inside the system), so they cancel
+- The only horizontal external force is the wall\'s 100 N push on the person
 - System mass: $60 + 20 = 80$ kg
-- If the person exerts 100 N: $a = 100/80 = 1.25$ $m/s^{2}$ for the whole system
+- $a = 100/80 = 1.25$ $m/s^{2}$ for the whole system
 
 **Individual analysis (box only):**
-- Person pushes box: 100 N... but wait, we need to find the *actual* contact force
-- If $a = 1.25$ $m/s^{2}$: $F_{\\text{on box}} = m_{\\text{box}} \\times a = 20 \\times 1.25 = 25$ N
+- The only horizontal force on the box is the person\'s contact push
+- $F_{\\text{on box}} = m_{\\text{box}} \\times a = 20 \\times 1.25 = 25$ N
+- By the Third Law, the box pushes back on the person with 25 N, so the net force on the person is $100 - 25 = 75$ N $= 60 \\times 1.25$ ✓
       `
     },
     {
@@ -117,10 +117,10 @@ In every case, the object accelerates because the **net external force on that o
           {
             question: 'A tow truck pulls a car. The truck accelerates. How is this possible if the car pulls back on the truck with an equal force?',
             options: [
-              'The truck\'s engine overcomes the reaction force',
-              'The pull-back force on the truck is less than the ground\'s forward push on the truck',
+              'The truck\'s engine force overcomes the car\'s reaction force',
+              'The ground\'s forward push on the truck exceeds the car\'s pull back',
               'Newton\'s Third Law doesn\'t apply to accelerating objects',
-              'The reaction force acts with a time delay'
+              'The reaction force acts on the truck after a short delay'
             ],
             correctAnswer: 1,
             explanation: 'The truck accelerates because the total forces on the TRUCK give a net forward force. The ground\'s friction on the truck\'s tires (forward) exceeds the car\'s pull (backward). The Third Law pair is between truck and car, but the truck also interacts with the ground.'
@@ -128,9 +128,9 @@ In every case, the object accelerates because the **net external force on that o
           {
             question: 'Two astronauts in space push off each other. Astronaut A (90 kg) and Astronaut B (60 kg). Which accelerates more?',
             options: [
-              'A, because they have more mass',
+              'A, because more mass means a bigger push',
               'B, because they have less mass',
-              'Both accelerate equally',
+              'Both accelerate equally, since the forces match',
               'Neither accelerates — the forces cancel'
             ],
             correctAnswer: 1,
@@ -141,7 +141,7 @@ In every case, the object accelerates because the **net external force on that o
             options: [
               'They aren\'t really equal',
               'One is always slightly delayed',
-              'They act on different objects',
+              'They act on two different objects',
               'Only the larger force matters'
             ],
             correctAnswer: 2,
@@ -183,19 +183,19 @@ A person (80 kg) pushes a cart (40 kg) on a frictionless surface. The system acc
         dropdowns: [
           {
             label: 'To determine if an object accelerates, you should examine:',
-            options: ['All forces in the universe', 'Only forces on that object', 'Only action-reaction pairs', 'Only the largest force'],
+            options: ['All forces in the system, internal and external', 'Only forces on that object', 'Only its action-reaction pairs', 'Only the largest single force on it'],
             correctIndex: 1,
             explanation: 'An object\'s acceleration depends on the net force on THAT object only. Forces on other objects are irrelevant for determining its acceleration.'
           },
           {
             label: 'Internal forces within a system:',
-            options: ['Add to the net force', 'Cancel out (Third Law pairs)', 'Only act on one object', 'Are always zero'],
+            options: ['Add to the net force', 'Cancel in Third Law pairs', 'Only act on one object', 'Are always zero'],
             correctIndex: 1,
             explanation: 'Internal forces come in Third Law pairs that cancel when summing forces for the system. Only external forces affect the system\'s acceleration.'
           },
           {
             label: 'A rocket in space (no gravity, no air) can accelerate because:',
-            options: ['It pushes against the air', 'The exhaust pushes the rocket forward', 'Fuel burns inside', 'It needs something to push against'],
+            options: ['It pushes against the air', 'The exhaust pushes the rocket forward', 'Burning fuel releases energy', 'It pushes against empty space'],
             correctIndex: 1,
             explanation: 'The rocket pushes exhaust backward; the exhaust pushes the rocket forward. No medium is needed — Newton\'s Third Law works in a vacuum.'
           }
@@ -215,7 +215,7 @@ A person (80 kg) pushes a cart (40 kg) on a frictionless surface. The system acc
             options: [
               'The truck exerts a larger force on the car',
               'The car exerts a larger force on the truck',
-              'Both exert equal forces on each other',
+              'Each exerts an equal force on the other',
               'The forces depend on which is moving faster'
             ],
             correctAnswer: 2,
@@ -224,10 +224,10 @@ A person (80 kg) pushes a cart (40 kg) on a frictionless surface. The system acc
           {
             question: 'A person stands on a skateboard and throws a heavy ball forward. The person and skateboard move backward. This is best explained by:',
             options: [
-              'Conservation of energy',
-              'Newton\'s First Law',
-              'Newton\'s Third Law — the person pushes the ball forward, the ball pushes the person backward',
-              'Air resistance pushing the person backward'
+              'Conservation of energy: energy from the throw pushes them back',
+              'Newton\'s First Law: inertia carries the person backward',
+              'Newton\'s Third Law: the ball pushes the person backward',
+              'Air resistance: the air the ball displaces pushes them back'
             ],
             correctAnswer: 2,
             explanation: 'The person exerts a forward force on the ball; by Newton\'s Third Law, the ball exerts an equal backward force on the person, causing them to roll backward on the skateboard.'

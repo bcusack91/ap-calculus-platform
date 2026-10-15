@@ -120,13 +120,13 @@ This is vector subtraction — you can't just subtract the magnitudes if the dir
           {
             question: 'Can the resultant of two vectors ever be smaller than either individual vector?',
             options: [
-              'No, never',
-              'Yes, when they are in opposite directions',
+              'No, it is always at least the larger one',
+              'Yes, when the angle between them is large enough',
               'Yes, but only when they are perpendicular',
-              'Yes, but only when they have equal magnitude'
+              'Yes, but only when their sizes are equal'
             ],
             correctAnswer: 1,
-            explanation: 'When two vectors partially or fully oppose each other, their resultant can be smaller than either one. For example, vectors of 5 N and 4 N in opposite directions give a resultant of 1 N.'
+            explanation: 'When two vectors largely oppose each other (a large angle between them), their resultant can be smaller than either one. For example, vectors of 5 N and 4 N in opposite directions give a resultant of 1 N. Perpendicular vectors always give a resultant larger than either one, and the magnitudes need not be equal.'
           }
         ]
       }
@@ -174,9 +174,9 @@ This is vector subtraction — you can't just subtract the magnitudes if the dir
           },
           {
             label: 'The component method of vector addition adds the _____ separately.',
-            options: ['magnitudes', 'angles', 'x- and y-components', 'directions'],
+            options: ['magnitudes and angles', 'angles from the x-axis', 'x- and y-components', 'head-to-tail lengths'],
             correctIndex: 2,
-            explanation: 'The component method adds x-components together and y-components together independently.'
+            explanation: 'The component method adds x-components together and y-components together independently. Magnitudes and angles cannot be added directly unless the vectors are parallel.'
           }
         ]
       }
@@ -203,13 +203,13 @@ This is vector subtraction — you can't just subtract the magnitudes if the dir
           {
             question: 'A 10 N force acts at $60°$ and a 10 N force acts at $120°$ (both from positive x-axis). The magnitude of the resultant is:',
             options: [
-              '0 N',
+              '8.7 N',
               '10 N',
               '17.3 N',
               '20 N'
             ],
-            correctAnswer: 1,
-            explanation: '$R_x = 10\\cos60° + 10\\cos120° = 5 + (-5) = 0$. $R_y = 10\\sin60° + 10\\sin120° = 8.66 + 8.66 = 17.32$. Wait, $R = \\sqrt{0 + 17.32^2} = 17.3$ N. Actually this is 17.3 N. The angle between the vectors is $120° - 60° = 60°$, so $R = \\sqrt{10^2 + 10^2 + 2(10)(10)\\cos60°} = \\sqrt{100+100+100} = \\sqrt{300} = 17.3$ N.'
+            correctAnswer: 2,
+            explanation: '$R_x = 10\\cos60° + 10\\cos120° = 5 + (-5) = 0$. $R_y = 10\\sin60° + 10\\sin120° = 8.66 + 8.66 = 17.3$. So $R = \\sqrt{0^2 + 17.3^2} = 17.3$ N, pointing straight up the y-axis. Adding the magnitudes (20 N) ignores the 60° between the forces, using the law of cosines with the wrong sign gives 10 N, and 8.7 N is the y-component of only one force.'
           }
         ]
       }

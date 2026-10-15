@@ -122,12 +122,12 @@ Direction: $\\theta = \\tan^{-1}(4/3) = 53.1°$ above the $+x$ axis
             question: 'Which of the following is a vector quantity?',
             options: [
               'Mass',
-              'Temperature',
+              'Energy',
               'Speed',
               'Acceleration'
             ],
             correctAnswer: 3,
-            explanation: 'Acceleration has both magnitude and direction, making it a vector. Mass, temperature, and speed are scalars.'
+            explanation: 'Acceleration has both magnitude and direction, making it a vector. Mass, energy, and speed are scalars: energy has no direction.'
           }
         ]
       }

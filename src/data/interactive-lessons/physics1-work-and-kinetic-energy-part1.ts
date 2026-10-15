@@ -131,7 +131,7 @@ $$W = Fd\\cos\\theta$$
               'Added 30 J of energy to the object',
               'Removed 30 J of energy from the object',
               'Did no work on the object',
-              'Moved the object 30 m'
+              'Exerted a force of 30 N on the object'
             ],
             correctAnswer: 1,
             explanation: 'Negative work means the force removes energy from the object. Friction always does negative work on a sliding object because it opposes the direction of motion ($\\theta = 180°$).'
@@ -211,21 +211,21 @@ Use $g = 10$ $m/s^{2}$ where needed.
               '300 J',
               '400 J',
               '500 J',
-              '600 J'
+              '625 J'
             ],
             correctAnswer: 1,
-            explanation: '$W = Fd\\cos\\theta = 100 \\times 5 \\times \\cos(37°) = 500 \\times 0.8 = 400$ J. (Using $\\cos(37°) \\approx 0.8$.)'
+            explanation: '$W = Fd\\cos\\theta = 100 \\times 5 \\times \\cos(37°) = 500 \\times 0.8 = 400$ J. Using $\\sin 37°$ gives 300 J, leaving out the angle gives 500 J, and dividing by $\\cos 37°$ gives 625 J.'
           },
           {
             question: 'Which of the following forces NEVER does work on an object?',
             options: [
-              'Gravity',
-              'Friction',
+              'The normal force',
+              'Kinetic friction',
               'Centripetal force',
               'Tension'
             ],
             correctAnswer: 2,
-            explanation: 'The centripetal force is always perpendicular to velocity ($\\theta = 90°$), so $\\cos(90°) = 0$ and it never does work. It only changes direction, not speed.'
+            explanation: 'The centripetal force is always perpendicular to velocity ($\\theta = 90°$), so $\\cos(90°) = 0$ and it never does work. It only changes direction, not speed. The normal force, kinetic friction and tension can all do work, for example the floor of a rising elevator or a rope that drags a sled.'
           }
         ]
       }

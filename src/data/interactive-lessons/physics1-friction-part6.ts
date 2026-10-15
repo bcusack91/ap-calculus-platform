@@ -101,11 +101,11 @@ $$F = 66.4 \\text{ N}$$
             options: [
               '0.25 $m/s^{2}$',
               '2.5 $m/s^{2}$',
-              '25 $m/s^{2}$',
+              '10 $m/s^{2}$',
               '40 $m/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: 'On a horizontal surface with no applied force: $a = \\mu_k g = 0.25 \\times 10 = 2.5$ $m/s^{2}$ (deceleration).'
+            explanation: 'On a horizontal surface with no applied force: $a = \\mu_k g = 0.25 \\times 10 = 2.5$ $m/s^{2}$ (deceleration). Forgetting $g$ gives 0.25, dropping $\\mu_k$ gives 10, and dividing $g$ by $\\mu_k$ gives 40 $m/s^{2}$.'
           },
           {
             question: 'A block is pushed at 45° below horizontal with 80 N on a surface ($\\mu_k = 0.20$). The normal force on the 10 kg block is ($g = 10$ $m/s^{2}$, $\\sin 45° \\approx 0.707$):',
@@ -184,24 +184,24 @@ $$F = 66.4 \\text{ N}$$
           {
             question: 'A 12 kg block is pushed horizontally with 90 N across a rough surface ($\\mu_k = 0.40$, $g = 10$ $m/s^{2}$). What is the acceleration?',
             options: [
-              '2.5 $m/s^{2}$',
+              '4.0 $m/s^{2}$',
               '3.5 $m/s^{2}$',
               '4.5 $m/s^{2}$',
-              '5.5 $m/s^{2}$'
+              '7.5 $m/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$N = mg = 120$ N. $f_k = 0.40 \\times 120 = 48$ N. $a = (90 - 48)/12 = 42/12 = 3.5$ $m/s^{2}$.'
+            explanation: '$N = mg = 120$ N. $f_k = 0.40 \\times 120 = 48$ N. $a = (90 - 48)/12 = 42/12 = 3.5$ $m/s^{2}$. Ignoring friction gives 7.5, taking friction as $0.40 \\times 90$ gives 4.5, and $48/12 = 4.0$ is the friction\'s deceleration alone.'
           },
           {
             question: 'A 4 kg block on a horizontal surface ($\\mu_k = 0.50$) is given an initial push of 8 m/s. How far does it slide before stopping? ($g = 10$ $m/s^{2}$)',
             options: [
               '3.2 m',
               '6.4 m',
-              '8.0 m',
+              '0.8 m',
               '12.8 m'
             ],
             correctAnswer: 1,
-            explanation: '$a = \\mu_k g = 0.50 \\times 10 = 5$ $m/s^{2}$. $v^2 = v_0^2 + 2a\\Delta x$. $0 = 64 - 10\\Delta x$. $\\Delta x = 64/10 = 6.4$ m.'
+            explanation: '$a = \\mu_k g = 0.50 \\times 10 = 5$ $m/s^{2}$. $v^2 = v_0^2 + 2a\\Delta x$: $0 = 64 - 10\\Delta x$, so $\\Delta x = 6.4$ m. Dropping the 2 gives 12.8 m, using $g$ instead of $\\mu_k g$ gives 3.2 m, and using $v_0$ instead of $v_0^2$ gives 0.8 m.'
           }
         ]
       }

@@ -160,13 +160,13 @@ A soccer ball is kicked at 25 m/s at 53° above horizontal from ground level. Us
           {
             question: 'A ball is launched at 30 m/s at 30° above horizontal. Use $g = 10$ $m/s^{2}$, $\\sin 30° = 0.5$, $\\cos 30° \\approx 0.866$. What is the maximum height?',
             options: [
-              '5.0 m',
-              '7.5 m',
-              '11.25 m',
-              '15.0 m'
+              '22.5 m',
+              '33.8 m',
+              '11.3 m',
+              '45.0 m'
             ],
             correctAnswer: 2,
-            explanation: '$v_{0y} = 30\\sin 30° = 15$ m/s. At max height: $0 = v_{0y}^2 - 2g h$, so $h = \\frac{v_{0y}^2}{2g} = \\frac{225}{20} = 11.25$ m.'
+            explanation: '$v_{0y} = 30\\sin 30° = 15$ m/s. At max height: $0 = v_{0y}^2 - 2gh$, so $h = \\frac{v_{0y}^2}{2g} = \\frac{225}{20} = 11.25 \\approx 11.3$ m. Dropping the 2 gives 22.5 m, using $v_{0x} = 26$ m/s gives 33.8 m, and using the full 30 m/s gives 45.0 m.'
           },
           {
             question: 'A plane flying at 200 m/s horizontally drops a package from 500 m. Using $g = 10$ $m/s^{2}$, how far ahead of the drop point does the package land?',

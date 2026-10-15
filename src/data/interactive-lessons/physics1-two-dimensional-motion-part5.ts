@@ -58,8 +58,7 @@ A basketball is thrown horizontally at 8 m/s from a window 5 m above the ground.
 3) Final speed just before hitting the ground (in m/s)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['1', '8', '~12.8'],
+        questions: [{ question: '(1)', answer: '1', acceptableAnswers: ['1'] }, { question: '(2)', answer: '8', acceptableAnswers: ['8'] }, { question: '(3)', answer: '12.8', acceptableAnswers: ['12.8', '~12.8', '12.81', 'sqrt(164)', '√164'] }],
         hint1: 'Use $\\Delta y = \\frac{1}{2}gt^2$ with $\\Delta y = 5$ m',
         hint2: '$5 = 5t^2$, so $t = 1$ s. Then $x = 8(1) = 8$ m.',
         hint3: '$v_y = 10(1) = 10$ m/s. $v = \\sqrt{8^2 + 10^2}$',
@@ -77,24 +76,24 @@ A basketball is thrown horizontally at 8 m/s from a window 5 m above the ground.
           {
             question: 'A boat moves at 5 m/s north while a river current pushes it 3 m/s east. What is the magnitude of the boat\'s resultant velocity?',
             options: [
-              '2 m/s',
-              '4 m/s',
-              '$\\sqrt{34}$ ≈ 5.83 m/s',
-              '8 m/s'
+              '2.0 m/s',
+              '4.0 m/s',
+              '5.8 m/s',
+              '8.0 m/s'
             ],
             correctAnswer: 2,
-            explanation: '$v = \\sqrt{5^2 + 3^2} = \\sqrt{25 + 9} = \\sqrt{34} \\approx 5.83$ m/s. Since the velocities are perpendicular, we use the Pythagorean theorem.'
+            explanation: '$v = \\sqrt{5^2 + 3^2} = \\sqrt{25 + 9} = \\sqrt{34} \\approx 5.8$ m/s. Since the velocities are perpendicular, we use the Pythagorean theorem. Subtracting or adding the speeds (2.0 or 8.0 m/s) treats them as parallel, and $\\sqrt{5^2 - 3^2} = 4.0$ m/s subtracts the squares.'
           },
           {
             question: 'A ball is launched at 30° above the horizontal with speed 20 m/s. What is $v_{0x}$? (Use $\\cos 30° \\approx 0.866$)',
             options: [
-              '10 m/s',
+              '10.0 m/s',
               '17.3 m/s',
-              '20 m/s',
-              '15 m/s'
+              '20.0 m/s',
+              '23.1 m/s'
             ],
             correctAnswer: 1,
-            explanation: '$v_{0x} = v_0\\cos\\theta = 20\\cos 30° = 20(0.866) = 17.3$ m/s.'
+            explanation: '$v_{0x} = v_0\\cos\\theta = 20\\cos 30° = 20(0.866) = 17.3$ m/s. Using sine gives 10.0 m/s, and dividing by the cosine instead of multiplying gives 23.1 m/s.'
           }
         ]
       }
@@ -132,15 +131,15 @@ Use $\\cos 53° \\approx 0.6$ and $\\sin 53° \\approx 0.8$.
         dropdowns: [
           {
             label: 'A car drives east at 20 m/s while rain falls vertically at 10 m/s. To a passenger in the car, the rain appears to come from:',
-            options: ['directly above', 'the east', 'the west', 'an angle in front'],
+            options: ['directly above the car', 'from behind, at an angle', 'straight ahead, horizontally', 'above and in front'],
             correctIndex: 3,
-            explanation: 'Relative to the car, the rain has a horizontal component (from the front, since the car moves forward) and a vertical component. This makes it appear to come from an angle in front.'
+            explanation: 'Relative to the car, the rain has a horizontal component directed toward the back of the car (because the car moves forward into it) and a vertical component downward. So it appears to come from above and in front, at an angle.'
           },
           {
             label: 'The apparent speed of the rain to the car passenger is:',
-            options: ['10 m/s', '20 m/s', '$\\sqrt{500}$ ≈ 22.4 m/s', '30 m/s'],
+            options: ['10.0 m/s', '17.3 m/s', '22.4 m/s', '30.0 m/s'],
             correctIndex: 2,
-            explanation: 'The apparent velocity combines the vertical rain speed and the car\'s horizontal speed: $v = \\sqrt{20^2 + 10^2} = \\sqrt{500} \\approx 22.4$ m/s.'
+            explanation: 'The apparent velocity combines the vertical rain speed and the car\'s horizontal speed: $v = \\sqrt{20^2 + 10^2} = \\sqrt{500} \\approx 22.4$ m/s. Adding the speeds gives 30.0 m/s, and $\\sqrt{20^2 - 10^2} \\approx 17.3$ m/s subtracts the squares.'
           }
         ]
       }

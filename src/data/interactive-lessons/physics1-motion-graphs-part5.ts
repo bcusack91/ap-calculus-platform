@@ -85,21 +85,21 @@ Total displacement = sum of areas under each phase of the $v$-$t$ graph.
           {
             question: 'During the interval where velocity is positive but decreasing, the $x$-$t$ graph is:',
             options: [
-              'Concave up (curving upward)',
-              'Concave down (curving downward) but still rising',
-              'A straight line with positive slope',
-              'Decreasing'
+              'Rising and concave up',
+              'Rising and concave down',
+              'A rising straight line',
+              'Falling and concave up'
             ],
             correctAnswer: 1,
-            explanation: 'Positive velocity → position is increasing (graph rises). But decreasing velocity → the rate of rise is slowing → the curve is concave down. The position increases but at a decreasing rate.'
+            explanation: 'Positive velocity → position is increasing (graph rises). But decreasing velocity → the rate of rise is slowing → the curve is concave down (curving downward). The position increases but at a decreasing rate.'
           },
           {
             question: 'The total distance traveled by an object whose $v$-$t$ graph crosses the time axis is found by:',
             options: [
-              'Taking the net area under the curve',
+              'Taking the net area under the whole curve',
               'Taking the absolute value of the net area',
-              'Adding the absolute values of each area segment',
-              'Multiplying speed by total time'
+              'Adding the magnitudes of each area',
+              'Multiplying the average velocity by the total time'
             ],
             correctAnswer: 2,
             explanation: 'Total distance = sum of |area| above the axis + |area| below the axis. You must add the magnitudes of each segment separately because distance doesn\'t cancel.'
@@ -122,7 +122,7 @@ A $v$-$t$ graph shows:
 
 2) What is the total displacement for the entire trip? (in meters)
 
-3) What is the acceleration during Phase 3? $(in m/s^{2})$
+3) What is the acceleration during Phase 3? (in $m/s^{2}$)
       `,
       exercise: {
         boxes: 3,
@@ -149,15 +149,15 @@ A $v$-$t$ graph shows:
           },
           {
             label: 'On a $v$-$t$ graph, when velocity is negative and becoming less negative (closer to zero), the object is:',
-            options: ['speeding up in the − direction', 'slowing down (moving in − direction)', 'at rest', 'speeding up in the + direction'],
+            options: ['speeding up in the − direction', 'slowing down in the − direction', 'moving in the + direction', 'speeding up in the + direction'],
             correctIndex: 1,
             explanation: 'Negative velocity = moving in − direction. Becoming less negative = speed is decreasing. The object is slowing down while still moving in the − direction.'
           },
           {
             label: 'The displacement during a reversal is best found by computing:',
-            options: ['net area under the $v$-$t$ graph', 'slope of $x$-$t$ graph', 'area under $a$-$t$ graph', 'average acceleration times time'],
+            options: ['net area under the $v$-$t$ graph', 'area under the $|v|$-$t$ graph', 'area under $a$-$t$ graph', 'average acceleration times time'],
             correctIndex: 0,
-            explanation: 'Displacement is always the net area under the $v$-$t$ graph, accounting for positive and negative regions.'
+            explanation: 'Displacement is always the net area under the $v$-$t$ graph, accounting for positive and negative regions. The area under the $|v|$-$t$ graph counts every region as positive, so it gives distance.'
           }
         ]
       }
@@ -182,15 +182,15 @@ A $v$-$t$ graph shows:
             explanation: 'Distance = |$area_{1}$| + |$area_{2}$| = |6 × 4| + |-3 × 6| = 24 + 18 = 42 m. (Net displacement would be $24 - 18 = 6$ m.)'
           },
           {
-            question: 'An object\'s $x$-$t$ graph is concave up. The object\'s speed is:',
+            question: 'An object\'s $x$-$t$ graph is rising and concave up. The object\'s speed is:',
             options: [
               'Constant',
               'Increasing',
               'Decreasing',
-              'Zero'
+              'Momentarily zero'
             ],
             correctAnswer: 1,
-            explanation: 'Concave up on $x$-$t$ means the slope (velocity) is increasing. If velocity is positive and increasing, speed is increasing. This corresponds to positive acceleration.'
+            explanation: 'Rising means the velocity is positive, and concave up means the slope (velocity) is increasing. A positive velocity that is increasing means the speed is increasing. (If the graph were falling and concave up, the velocity would be negative and becoming less negative, so the speed would be decreasing.)'
           }
         ]
       }

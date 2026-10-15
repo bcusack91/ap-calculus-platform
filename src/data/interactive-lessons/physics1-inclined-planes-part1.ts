@@ -177,10 +177,10 @@ A 20 kg block sits on a 37° incline ($g = 10$ $m/s^{2}$, $\\sin 37° = 0.60$, $
               '30 N',
               '40 N',
               '50 N',
-              '80 N'
+              '83 N'
             ],
             correctAnswer: 0,
-            explanation: '$N = mg\\cos 53° = 50 \\times 0.60 = 30$ N.'
+            explanation: '$N = mg\\cos 53° = 50 \\times 0.60 = 30$ N. Using $\\sin 53°$ gives 40 N, ignoring the tilt gives 50 N, and dividing by $\\cos 53°$ instead of multiplying gives about 83 N.'
           },
           {
             question: 'For the same object, the net force along the slope (if frictionless) is:',
@@ -188,10 +188,10 @@ A 20 kg block sits on a 37° incline ($g = 10$ $m/s^{2}$, $\\sin 37° = 0.60$, $
               '30 N',
               '40 N',
               '50 N',
-              '80 N'
+              '62.5 N'
             ],
             correctAnswer: 1,
-            explanation: '$F_{\\text{net}} = mg\\sin 53° = 50 \\times 0.80 = 40$ N down the slope.'
+            explanation: '$F_{\\text{net}} = mg\\sin 53° = 50 \\times 0.80 = 40$ N down the slope. Using $\\cos 53°$ gives 30 N, ignoring the tilt gives 50 N, and dividing by $\\sin 53°$ gives 62.5 N.'
           }
         ]
       }
