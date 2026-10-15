@@ -14,8 +14,7 @@ Voltage dividers and current dividers are essential building blocks in electroni
 In this part you'll learn:
 - The voltage divider formula and when to use it
 - The current divider formula and when to use it
-- How potentiometers work as adjustable voltage dividers
-- Practical applications in circuit design
+- How a variable resistor shifts the division of potential difference
       `
     },
     {
@@ -77,29 +76,28 @@ $$V_{\\text{out}} = 9 \\times \\frac{6}{3 + 6} = 9 \\times \\frac{6}{9} = 6 \\te
       id: 'sp4-potentiometer',
       type: 'text' as const,
       content: `
-## Potentiometers
+## Variable Resistors in a Divider
 
-A **potentiometer** (or "pot") is an adjustable voltage divider. It's a single resistor with a sliding contact (wiper) that divides it into two parts.
+A **variable resistor** is drawn as the ordinary resistor symbol with a diagonal arrow through it. Changing its resistance changes how the potential difference divides.
 
-### How It Works
+### Example: Make $R_1$ Variable
 
-Total resistance: $R_{\\text{total}}$
+In the divider above, $V_{\\text{out}} = V_{\\text{in}} \\cdot \\frac{R_2}{R_1 + R_2}$. If $R_1$ is a variable resistor:
 
-The wiper position determines the split:
-- Upper portion: $R_1 = (1-x) \\cdot R_{\\text{total}}$
-- Lower portion: $R_2 = x \\cdot R_{\\text{total}}$
+- **Increase $R_1$**: the total resistance rises, so the current falls. $R_1$ now takes a larger share of $V_{\\text{in}}$, so $V_{\\text{out}}$ across $R_2$ **decreases**.
+- **Decrease $R_1$ toward zero**: $R_1$ takes almost none of $V_{\\text{in}}$, so $V_{\\text{out}}$ rises toward $V_{\\text{in}}$.
 
-where $x$ is the fractional position (0 to 1) of the wiper from bottom to top.
+### Numbers
 
-$$V_{\\text{out}} = V_{\\text{in}} \\cdot \\frac{x \\cdot R_{\\text{total}}}{R_{\\text{total}}} = x \\cdot V_{\\text{in}}$$
+$V_{\\text{in}} = 12$ V and $R_2 = 4 \\; \\Omega$:
 
-So a potentiometer gives you a **continuously adjustable output** from 0 to $V_{\\text{in}}$.
+| $R_1$ | Current | $V_{\\text{out}}$ across $R_2$ |
+|-------|---------|-------------------------------|
+| $2 \\; \\Omega$ | $2.0$ A | $8.0$ V |
+| $4 \\; \\Omega$ | $1.5$ A | $6.0$ V |
+| $8 \\; \\Omega$ | $1.0$ A | $4.0$ V |
 
-### Applications
-- **Volume knobs** on audio equipment
-- **Dimmer switches** for lights
-- **Joysticks** in game controllers
-- **Sensor readout** circuits (thermistors, photoresistors)
+> 💡 In series, the potential differences always add to $V_{\\text{in}}$, so whatever share one resistor gains, the other loses.
       `
     },
     {

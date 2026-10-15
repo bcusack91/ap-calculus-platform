@@ -103,9 +103,9 @@ $$\\frac{E_b}{A} = \\text{binding energy per nucleon}$$
 
 This tells us how tightly bound each nucleon is:
 
-- **Iron-56** ($^{56}\\text{Fe}$) has the highest binding energy per nucleon (~8.8 MeV/nucleon) — the most stable nucleus
-- Lighter nuclei: can **fuse** to move toward iron → releases energy
-- Heavier nuclei: can **fission** to move toward iron → releases energy
+- Medium-mass nuclei are the most tightly bound (highest binding energy per nucleon); you will not need specific values
+- Light nuclei can **fuse** into more tightly bound nuclei → releases energy
+- Very heavy nuclei can **fission** into more tightly bound medium-mass nuclei → releases energy
 
 ### Useful Conversion
 $$1 \\text{ u} = 931.5 \\text{ MeV/c}^2$$
@@ -202,26 +202,15 @@ The mass of $^{4}_{2}\\text{He}$ is 4.0026 u. Use $m_p = 1.0073$ u, $m_n = 1.008
       exercise: {
         questions: [
           {
-            question: 'Which nucleus is the most stable (highest binding energy per nucleon)?',
+            question: 'Splitting a very heavy nucleus into two medium-mass nuclei releases energy because:',
             options: [
-              'Hydrogen-1',
-              'Helium-4',
-              'Iron-56',
-              'Uranium-238'
+              'They are more tightly bound and have less total mass',
+              'The products have more total mass than the original nucleus',
+              'Some neutrons are destroyed and turned into energy',
+              'The atom\'s electrons are released as photons'
             ],
-            correctAnswer: 2,
-            explanation: 'Iron-56 has the highest binding energy per nucleon (~8.8 MeV/nucleon), making it the most tightly bound and most stable nucleus. Both lighter and heavier nuclei have lower binding energy per nucleon.'
-          },
-          {
-            question: 'Why do heavier nuclei (beyond iron) tend to be less stable?',
-            options: [
-              'Their many electrons pull the nucleus apart',
-              'Proton repulsion outgrows the short-range strong force',
-              'Gravity between nucleons becomes significant',
-              'Neutrons begin repelling each other at large size'
-            ],
-            correctAnswer: 1,
-            explanation: 'The strong nuclear force is short-range. In large nuclei, protons on opposite sides of the nucleus experience Coulomb repulsion but are too far apart for the strong force to compensate, leading to instability.'
+            correctAnswer: 0,
+            explanation: 'Medium-mass nuclei have more binding energy per nucleon, so the products have less total mass than the original nucleus; that mass difference is released as energy ($E = mc^2$). Nucleon number is conserved, so no neutrons are destroyed.'
           }
         ]
       }

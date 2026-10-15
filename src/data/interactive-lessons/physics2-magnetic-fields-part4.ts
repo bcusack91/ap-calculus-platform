@@ -9,7 +9,7 @@ export const physics2MagneticFieldsPart4Data = {
 
 **Part 4 of 7 — From Single Charges to Wires**
 
-A current is simply a flow of charges. Since each moving charge experiences a magnetic force, a current-carrying wire in a magnetic field experiences a net force. This is the principle behind electric motors, loudspeakers, and galvanometers.
+A current is simply a flow of charges. Since each moving charge experiences a magnetic force, a current-carrying wire in a magnetic field experiences a net force. This is the principle behind loudspeakers, and it explains why two current-carrying wires push or pull on each other.
       `
     },
     {

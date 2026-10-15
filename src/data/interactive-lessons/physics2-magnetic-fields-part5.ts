@@ -7,9 +7,32 @@ export const physics2MagneticFieldsPart5Data = {
       content: `
 # 🔄 Magnetic Field from Currents
 
-**Part 5 of 7 — Biot-Savart, Ampère's Law, and Solenoids**
+**Part 5 of 7 — Magnetic Fields Made by Currents and Moving Charges**
 
-So far we've studied the **force** that a magnetic field exerts on charges and wires. Now we turn to the **source** question: how do currents create magnetic fields? Two powerful laws — the Biot-Savart law and Ampère's law — give the answer.
+So far we've studied the **force** that a magnetic field exerts on charges and wires. Now we turn to the **source** question: how do moving charges and currents create magnetic fields in the first place? We'll build from a single moving charge, to a long straight wire, to several wires at once, and finally to a loop of wire.
+      `
+    },
+    {
+      id: 'mf5-moving-charge',
+      type: 'text' as const,
+      content: `
+## The Field of a Single Moving Charge
+
+A charge at rest makes only an electric field. Set it moving, and it also makes a **magnetic field**.
+
+### What the Field Depends On
+
+- **Speed** — a faster charge makes a stronger field
+- **Distance** — the field weakens as you move away from the charge
+- **Direction to the point** — the field is **strongest** at points where the line from the charge to the point is perpendicular to $\\vec{v}$, and it is **zero** at points directly ahead of or behind the charge
+
+### Direction
+
+At any point, $\\vec{B}$ is **perpendicular to both** the velocity $\\vec{v}$ and the line from the charge to that point. Use the right-hand rule: point your right thumb along $\\vec{v}$ (for a positive charge); your fingers curl in the direction of $\\vec{B}$, wrapping in circles around the line of motion. For a negative charge, reverse the direction.
+
+### From One Charge to a Current
+
+A current is an enormous number of charges drifting along a wire. Each contributes a little circular field around the wire's line, and together they produce the steady field of a current-carrying wire.
       `
     },
     {
@@ -18,96 +41,103 @@ So far we've studied the **force** that a magnetic field exerts on charges and w
       content: `
 ## Magnetic Field of a Long Straight Wire
 
-The most important result: a long straight wire carrying current $I$ creates a magnetic field at perpendicular distance $r$:
+A long straight wire carrying current $I$ creates a magnetic field at perpendicular distance $r$:
 
 $$\\boxed{B = \\frac{\\mu_0 I}{2\\pi r}}$$
 
-where $\\mu_0 = 4\\pi \\times 10^{-7}$ T·m/A.
+where $\\mu_0 = 4\\pi \\times 10^{-7}$ T·m/A. A handy shortcut: $\\dfrac{\\mu_0}{2\\pi} = 2 \\times 10^{-7}$ T·m/A, so $B = (2 \\times 10^{-7})\\,I/r$.
 
 ### Direction: Right-Hand Rule for Wires
 
 Point your **right thumb** in the direction of the current. Your **fingers curl** in the direction of $\\vec{B}$.
 
-- Current flowing up → $\\vec{B}$ circles counterclockwise (viewed from above)
-- Current flowing toward you → $\\vec{B}$ circles counterclockwise
+- Current flowing toward you (out of the page) → $\\vec{B}$ circles **counterclockwise**
+- Current flowing away from you (into the page) → $\\vec{B}$ circles **clockwise**
+- Current flowing up the page → $\\vec{B}$ points **into the page** on the wire's right side and **out of the page** on its left side
 
 ### Key Features
 
 - $B \\propto I$ — double the current, double the field
 - $B \\propto 1/r$ — field decreases with distance (but only as $1/r$, not $1/r^2$)
 - Field lines are **concentric circles** centered on the wire
-- Field is **tangent** to these circles at every point
+- The field is **tangent** to these circles at every point — it has no component toward, away from, or along the wire
       `
     },
     {
-      id: 'mf5-ampere-law',
-      type: 'text' as const,
+      id: 'mf5-concept-check',
+      type: 'multiple-choice' as const,
       content: `
-## Ampère's Law
-
-Ampère's law is the magnetic analog of Gauss's law — it relates the magnetic field around a closed loop to the current passing through the loop:
-
-$$\\boxed{\\oint \\vec{B} \\cdot d\\vec{l} = \\mu_0 I_{\\text{enc}}}$$
-
-where $I_{\\text{enc}}$ is the total current enclosed by the Amperian loop.
-
-### When to Use Ampère's Law
-
-Ampère's law is most useful when the geometry has high **symmetry**:
-
-- **Long straight wire** — use a circular Amperian loop centered on the wire
-- **Solenoid** — use a rectangular loop
-- **Toroid** — use a circular loop inside the toroid
-
-### Deriving the Wire Field
-
-For a long straight wire, choose a circular Amperian loop of radius $r$:
-
-$$\\oint B \\, dl = B(2\\pi r) = \\mu_0 I$$
-
-$$B = \\frac{\\mu_0 I}{2\\pi r} \\checkmark$$
-
-The same result we stated above — Ampère's law confirms it elegantly.
-      `
+**Concept Check — Fields from Moving Charges and Wires**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'At twice the distance from a long straight wire, the magnetic field is:',
+            options: [
+              'Twice as strong',
+              'Half as strong',
+              'One-quarter as strong',
+              'Four times as strong'
+            ],
+            correctAnswer: 1,
+            explanation: '$B \\propto 1/r$, so doubling $r$ halves $B$. One-quarter as strong would follow a $1/r^2$ law like the field of a point charge, which does not apply to a long wire.'
+          },
+          {
+            question: 'A long wire in the plane of the page carries current up the page. At a point just to the right of the wire, the magnetic field points:',
+            options: [
+              'Out of the page',
+              'Into the page',
+              'Toward the wire',
+              'Up the page'
+            ],
+            correctAnswer: 1,
+            explanation: 'With the right thumb pointing up the page, the fingers curl into the page on the right side of the wire. The field circles the wire, so it never points toward the wire or along the current.'
+          },
+          {
+            question: 'A proton moves east. At which point is the magnetic field produced by the proton equal to zero?',
+            options: [
+              'A point directly north of it',
+              'A point directly east of it',
+              'A point directly above it',
+              'A point directly south of it'
+            ],
+            correctAnswer: 1,
+            explanation: 'A moving charge produces no magnetic field at points along its line of motion, so a point directly ahead (east) gets zero field. Points north, south, or above lie off that line, and the field there is strongest because they are perpendicular to the velocity.'
+          }
+        ]
+      }
     },
     {
-      id: 'mf5-solenoid',
+      id: 'mf5-superposition',
       type: 'text' as const,
       content: `
-## Solenoids
+## Superposition: Several Wires at Once
 
-A **solenoid** is a tightly wound coil of wire. It produces a nearly **uniform** magnetic field inside and nearly zero field outside.
+Magnetic fields are vectors. Near two or more wires, find each wire's field separately and then **add them as vectors**.
 
-### Field Inside an Ideal Solenoid
+### Worked Example
 
-$$\\boxed{B = \\mu_0 n I}$$
+Wire A carries **6.0 A** and wire B carries **2.0 A**, both **out of the page**. They are 10 cm apart, with A on the left. Find the field at the midpoint.
 
-where:
-- $n = N/L$ is the number of turns per unit length
-- $N$ = total number of turns
-- $L$ = length of the solenoid
-- $I$ = current
+**Step 1 — magnitudes.** Each wire is 0.050 m from the midpoint:
 
-### Derivation (Ampère's Law)
+$$B_A = \\frac{(2 \\times 10^{-7})(6.0)}{0.050} = 2.4 \\times 10^{-5} \\text{ T}, \\qquad B_B = \\frac{(2 \\times 10^{-7})(2.0)}{0.050} = 8.0 \\times 10^{-6} \\text{ T}$$
 
-Choose a rectangular Amperian loop with one side inside and one outside the solenoid:
+**Step 2 — directions.** Both currents point out of the page, so both fields circle counterclockwise. The midpoint is to the right of A, where A's field points **up** the page; it is to the left of B, where B's field points **down** the page.
 
-- Inside side (length $l$): $B \\cdot l$ (field is uniform and parallel)
-- Outside side: 0 (field is negligible)
-- Two short sides: 0 (perpendicular to $\\vec{B}$)
+**Step 3 — add.** The fields oppose each other:
 
-Current enclosed: $I_{\\text{enc}} = nlI$ (there are $nl$ turns through the loop)
+$$B_{\\text{net}} = 2.4 \\times 10^{-5} - 0.80 \\times 10^{-5} = 1.6 \\times 10^{-5} \\text{ T, up the page}$$
 
-$$Bl = \\mu_0 nlI$$
+**What if B's current is reversed (into the page)?** B's field at the midpoint now points up as well, so the fields add: $B_{\\text{net}} = 3.2 \\times 10^{-5}$ T, up the page.
 
-$$B = \\mu_0 nI \\checkmark$$
+### Where Is the Field Zero?
 
-### Key Properties
+For same-direction currents, the fields cancel somewhere **between** the wires, closer to the **smaller** current. Setting the magnitudes equal, with $x$ measured from A:
 
-- Field inside is **uniform** (constant everywhere inside)
-- Field outside is approximately **zero**
-- Field strength depends on turns per length ($n$) and current ($I$), **not** the total length
-- A solenoid is essentially a **magnetic dipole** — its field pattern outside resembles a bar magnet
+$$\\frac{6.0}{x} = \\frac{2.0}{0.10 - x} \\quad \\Rightarrow \\quad x = 0.075 \\text{ m}$$
+
+The field is zero 7.5 cm from A (2.5 cm from B). For opposite currents, the fields between the wires always add, so there is no zero there.
       `
     },
     {
@@ -120,51 +150,40 @@ Use $\\mu_0 = 4\\pi \\times 10^{-7}$ T·m/A.
 
 1) A long wire carries 15 A. What is $B$ at a distance of 3.0 cm from the wire? (in T, use scientific notation like 1.0e-4)
 
-2) A solenoid is 0.40 m long, has 800 turns, and carries 2.0 A. What is $B$ inside? (in T, to 3 significant figures)
+2) Two long parallel wires 8.0 cm apart each carry 4.0 A, in **opposite** directions. What is the magnitude of $B$ at the midpoint? (in T, use scientific notation like 2.0e-5)
 
-3) How far from a 20 A wire is the field equal to $1.0 \\times 10^{-4}$ T? (in m, to 3 significant figures)
+3) Two long parallel wires 12 cm apart carry 9.0 A and 3.0 A in the **same** direction. How far from the 9.0 A wire, between the wires, is the net field zero? (in cm)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.0e-4', '0.0050', '0.04'],
-        hint1: '$B = \\mu_0 I/(2\\pi r) = (4\\pi \\times 10^{-7})(15)/(2\\pi \\times 0.03)$.',
-        hint2: '$n = 800/0.40 = 2000$ turns/m. $B = \\mu_0 n I = (4\\pi \\times 10^{-7})(2000)(2.0)$.',
-        hint3: 'Rearrange: $r = \\mu_0 I/(2\\pi B) = (4\\pi \\times 10^{-7})(20)/(2\\pi \\times 10^{-4})$.',
-        explanation: '(1) $B = (4\\pi \\times 10^{-7})(15)/(2\\pi \\times 0.03) = (2 \\times 10^{-7})(15)/(0.03) = 1.0 \\times 10^{-4}$ T. (2) $n = 2000$, $B = (4\\pi \\times 10^{-7})(2000)(2) = 16\\pi \\times 10^{-4} \\approx 0.00503$ T ≈ 0.0050 T. (3) $r = (4\\pi \\times 10^{-7})(20)/(2\\pi \\times 10^{-4}) = (2 \\times 10^{-7})(20)/(10^{-4}) = 0.04$ m.'
+        correctAnswers: ['1.0e-4', '4.0e-5', '9.0'],
+        hint1: '$B = \\mu_0 I/(2\\pi r) = (2 \\times 10^{-7})(15)/(0.030)$.',
+        hint2: 'Each wire is 0.040 m from the midpoint. With opposite currents, the two fields at the midpoint point the same way, so add them.',
+        hint3: 'Set $9.0/x = 3.0/(12 - x)$ with $x$ in cm and solve.',
+        explanation: '(1) $B = (2 \\times 10^{-7})(15)/(0.030) = 1.0 \\times 10^{-4}$ T. (2) Each wire gives $(2 \\times 10^{-7})(4.0)/(0.040) = 2.0 \\times 10^{-5}$ T in the same direction, so $B = 4.0 \\times 10^{-5}$ T. (3) $9.0(12 - x) = 3.0x$ gives $108 = 12x$, so $x = 9.0$ cm from the 9.0 A wire.'
       }
     },
     {
-      id: 'mf5-concept-check',
-      type: 'multiple-choice' as const,
+      id: 'mf5-loop-center',
+      type: 'text' as const,
       content: `
-**Concept Check — Fields from Currents**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'The magnetic field inside a solenoid depends on:',
-            options: [
-              'The total number of turns, regardless of length',
-              'The length of the solenoid, regardless of turns',
-              'The turns per unit length and the current',
-              'The radius of the solenoid and its total length'
-            ],
-            correctAnswer: 2,
-            explanation: '$B = \\mu_0 n I$ where $n = N/L$. The field depends on turns per unit length and current, not on the radius or the total length independently.'
-          },
-          {
-            question: 'At twice the distance from a long straight wire, the magnetic field is:',
-            options: [
-              'Twice as strong',
-              'Half as strong',
-              'One-quarter as strong',
-              'Four times as strong'
-            ],
-            correctAnswer: 1,
-            explanation: '$B \\propto 1/r$. Doubling $r$ halves $B$. Note: this is $1/r$, not $1/r^2$ like Coulomb\'s law!'
-          }
-        ]
-      }
+## The Field at the Center of a Current Loop
+
+Bend a wire into a circular loop and every small piece of it makes a field that circles that piece. At the **center** of the loop, all of those contributions point the same way — **along the loop's axis**, perpendicular to the plane of the loop.
+
+### Finding the Direction
+
+Curl the fingers of your right hand in the direction of the current around the loop. Your **thumb** points in the direction of $\\vec{B}$ at the center.
+
+- Loop in the page, current **counterclockwise** → $\\vec{B}$ at the center points **out of the page**
+- Loop in the page, current **clockwise** → $\\vec{B}$ at the center points **into the page**
+
+### A Loop Is a Small Magnet
+
+Outside the loop, the field lines bend around and close on themselves, just like the field of a short bar magnet. The face the field lines leave acts as a **north pole**; the other face acts as a **south pole**. This is why circulating charges — including electrons in atoms — make magnetic dipoles (Part 6).
+
+On the AP Physics 2 exam you only need the **direction** of the field at a loop's center; formulas for the field strength of loops and coils are not tested.
+      `
     },
     {
       id: 'mf5-exit-quiz',
@@ -175,27 +194,27 @@ Use $\\mu_0 = 4\\pi \\times 10^{-7}$ T·m/A.
       exercise: {
         dropdowns: [
           {
-            label: 'B field of a long wire varies as:',
+            label: 'B field of a long wire varies with distance as:',
             options: ['$1/r^{2}$', '1/r', 'constant', 'r']
           },
           {
-            label: 'B field inside a solenoid is:',
-            options: ['zero', 'uniform', 'varies as 1/r', 'varies as $r^{2}$']
+            label: 'Field lines around a long straight wire are:',
+            options: ['radial lines', 'concentric circles', 'parallel lines', 'lines along the wire']
           },
           {
-            label: 'Ampère\'s law relates the line integral of B to:',
-            options: ['total charge', 'enclosed current', 'electric flux', 'magnetic flux']
+            label: 'Current runs counterclockwise around a loop in the page. B at its center points:',
+            options: ['into the page', 'out of the page', 'toward the top', 'nowhere (B = 0)']
           },
           {
-            label: 'Doubling both n and I in a solenoid makes B:',
-            options: ['2× larger', '4× larger', '8× larger', 'unchanged']
+            label: 'Two parallel wires carry equal currents in the same direction. B at the midpoint is:',
+            options: ['zero', 'twice one wire\'s field', 'equal to one wire\'s field', 'half of one wire\'s field']
           }
         ],
-        correctAnswers: ['1/r', 'uniform', 'enclosed current', '4× larger'],
+        correctAnswers: ['1/r', 'concentric circles', 'out of the page', 'zero'],
         hint1: '$B = \\mu_0 I/(2\\pi r)$ — inversely proportional to distance.',
-        hint2: '$B = \\mu_0 n I$ inside a solenoid — constant throughout.',
-        hint3: 'Doubling both $n$ and $I$: $B \\propto nI \\to (2n)(2I) = 4nI$.',
-        explanation: 'Wire field falls as $1/r$. Solenoid field is uniform inside. Ampère\'s law: $\\oint B \\cdot dl = \\mu_0 I_{enc}$. Doubling both $n$ and $I$ gives $B_{new} = \\mu_0(2n)(2I) = 4\\mu_0 nI = 4B$.'
+        hint2: 'Curl your right fingers with the current around the loop; your thumb gives $\\vec{B}$ at the center.',
+        hint3: 'Between two same-direction currents, the two fields point in opposite directions.',
+        explanation: 'A long wire\'s field falls as $1/r$ and circles the wire in concentric circles. Counterclockwise current in a loop gives a field out of the page at the center. Equal same-direction currents produce equal and opposite fields at the midpoint, so they cancel to zero.'
       }
     }
   ]

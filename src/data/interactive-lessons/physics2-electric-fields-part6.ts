@@ -45,9 +45,9 @@ An **equipotential surface** is a surface where every point has the same potenti
 
 The electric field points in the direction of **decreasing** potential:
 
-$$E = -\\frac{dV}{dr}$$
+$$E = -\\frac{\\Delta V}{\\Delta r}$$
 
-For a **uniform field** (like between parallel plates):
+This gives the average field between two points a distance $\\Delta r$ apart. For a **uniform field** (like between parallel plates):
 
 $$E = \\frac{\\Delta V}{d}$$
 
@@ -118,7 +118,7 @@ This is the simplest and most important field configuration in AP Physics 2.
               'Zero on the right'
             ],
             correctAnswer: 0,
-            explanation: 'Closely-spaced equipotentials = large $dV/dr$ = strong field. Widely-spaced = weak field. Just like steep vs. gentle slopes on a topographic map.'
+            explanation: 'Closely-spaced equipotentials = large $\\Delta V/\\Delta r$ = strong field. Widely-spaced = weak field. Just like steep vs. gentle slopes on a topographic map.'
           },
           {
             question: 'The potential at point A is +400 V and at point B (2 cm away) is +100 V. If the field is uniform, its magnitude is:',
@@ -176,7 +176,7 @@ Two parallel plates are separated by $d = 5.0$ mm. The top plate is at $+600$ V 
               '$E = 0$ and $V$ varies inside'
             ],
             correctAnswer: 1,
-            explanation: 'Inside a conductor at equilibrium: $E = 0$ everywhere. Since $E = -dV/dr = 0$, the potential must be constant throughout — equal to the value at the surface.'
+            explanation: 'Inside a conductor at equilibrium: $E = 0$ everywhere. Since $E = -\\Delta V/\\Delta r = 0$, the potential must be constant throughout — equal to the value at the surface.'
           },
           {
             question: 'An electron is placed between parallel plates and released from rest near the negative plate. It will:',

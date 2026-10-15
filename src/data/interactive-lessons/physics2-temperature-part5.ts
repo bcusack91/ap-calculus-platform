@@ -7,136 +7,141 @@ export const physics2TemperaturePart5Data = {
       content: `
 # 🔧 Problem-Solving Workshop
 
-**Part 5 of 7 — Multi-Step Thermal Expansion Problems**
+**Part 5 of 7 — Gas Graphs and Finding Absolute Zero**
 
-Now that you know the linear and volume expansion formulas, let's tackle the classic problem types that appear on the AP Physics 2 exam: gap problems, ring-on-rod problems, and compound expansion problems.
+AP Physics 2 often gives gas data as a graph or a table and asks you to describe the gas, find an unknown, or design the experiment. This workshop shows how to read the standard gas graphs and how a simple experiment locates absolute zero.
       `
     },
     {
-      id: 'te5-strategies',
+      id: 'te5-graphs',
       type: 'text' as const,
       content: `
-## Problem-Solving Strategy
+## Reading Gas Graphs
 
-### Step-by-Step Approach
-1. **Identify** what is expanding (length, area, or volume?)
-2. **List** known quantities: $L_0$ (or $V_0$), $\\alpha$ (or $\\beta$), $T_i$, $T_f$
-3. **Calculate** $\\Delta T = T_f - T_i$
-4. **Apply** the appropriate formula: $\\Delta L = \\alpha L_0 \\Delta T$ or $\\Delta V = \\beta V_0 \\Delta T$
-5. **Check units** and reasonableness of answer
+### Pressure vs. Temperature (Constant Volume)
 
-### Gap Problems
+From $PV = nRT$ with $V$ and $n$ fixed:
 
-A gap between two rails or slabs must accommodate the expansion of one or both pieces. If two rails each of length $L_0$ share a gap:
+$$P = \\left(\\frac{nR}{V}\\right)T$$
 
-$$\\text{Minimum gap} = 2 \\times \\alpha L_0 \\Delta T$$
+- Plotted against $T$ in **kelvins**, the graph is a straight line through the origin.
+- The slope is $\\frac{nR}{V}$, so a steeper line means more gas or a smaller container.
 
-(Each rail expands toward the gap from its end.)
+### Pressure vs. Volume (Constant Temperature)
 
-### Ring-on-Rod Problems
+$$P = \\frac{nRT}{V}$$
 
-**Goal:** Slip a ring over a rod (or shaft) by heating the ring or cooling the rod.
+- $P$ vs. $V$ is a curve (a hyperbola), called an **isotherm**.
+- A hotter isotherm lies farther from the origin.
+- To get a straight line, plot $P$ vs. $\\frac{1}{V}$: the slope is $nRT$.
 
-**Ring (hole) expansion:** The inner diameter of a ring expands just like a solid piece of the same material:
+### Volume vs. Temperature (Constant Pressure)
 
-$$d_{\\text{ring}} = d_0(1 + \\alpha_{\\text{ring}} \\Delta T)$$
+$$V = \\left(\\frac{nR}{P}\\right)T$$
 
-**Rod expansion:**
+A straight line through the origin when $T$ is in kelvins.
 
-$$d_{\\text{rod}} = d_0'(1 + \\alpha_{\\text{rod}} \\Delta T)$$
+## Finding Absolute Zero
 
-**Condition for fit:** $d_{\\text{ring}} \\geq d_{\\text{rod}}$ (ring hole must be at least as large as the rod diameter).
+If you measure the pressure of a sealed, constant-volume bulb of gas at several **Celsius** temperatures, the points still fall on a straight line, but it does not pass through the origin. Extend (extrapolate) the line down to $P = 0$. It crosses the temperature axis near $-273°\\text{C}$, no matter which gas you use or how much of it.
 
-### Compound Problems
-
-When a liquid is inside an expanding container, the **apparent** volume change of the liquid is:
-
-$$\\Delta V_{\\text{apparent}} = (\\beta_{\\text{liquid}} - \\beta_{\\text{container}}) V_0 \\Delta T$$
-
-The liquid's true expansion minus the container's expansion gives the observable overflow or level change.
+That temperature, where an ideal gas would exert zero pressure, is **absolute zero**: $0$ K. The kelvin scale simply shifts the zero of the Celsius scale to that point.
       `
     },
     {
-      id: 'te5-worked-examples',
-      type: 'text' as const,
-      content: `
-## Worked Example: Ring on a Rod
-
-A brass ring has an inner diameter of 4.000 cm at 20°C. A steel rod has a diameter of 4.010 cm at 20°C. To what temperature must you heat the ring so it slips over the rod?
-
-**Given:** $\\alpha_{\\text{brass}} = 19 \\times 10^{-6}$ /°C, $d_{\\text{ring}} = 4.000$ cm, $d_{\\text{rod}} = 4.010$ cm
-
-**Need:** Find $T$ where $d_{\\text{ring}}(T) = d_{\\text{rod}}$ (rod stays at 20°C)
-
-$$d_{\\text{ring}}(T) = d_0(1 + \\alpha \\Delta T) = d_{\\text{rod}}$$
-
-$$4.000(1 + 19 \\times 10^{-6} \\cdot \\Delta T) = 4.010$$
-
-$$1 + 19 \\times 10^{-6} \\cdot \\Delta T = \\frac{4.010}{4.000} = 1.0025$$
-
-$$19 \\times 10^{-6} \\cdot \\Delta T = 0.0025$$
-
-$$\\Delta T = \\frac{0.0025}{19 \\times 10^{-6}} = 131.6°\\text{C}$$
-
-$$T = 20 + 131.6 = 151.6°\\text{C} \\approx 152°\\text{C}$$
-
-You must heat the brass ring to about **152°C** for it to slip over the steel rod.
-      `
-    },
-    {
-      id: 'te5-concept-quiz',
+      id: 'te5-graphs-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Problem-Solving Concepts Quiz** 🧠
+**Graph Reading Check** 📈
       `,
       exercise: {
         questions: [
           {
-            question: 'Two identical steel rails (each 12.0 m long) are laid end-to-end, with their far ends fixed and a gap at their junction. If the temperature can increase by 40°C, the minimum gap needed to prevent buckling is: (α_steel = $12 \\times 10^{-6}$ /°C)',
+            question: 'A student graphs the pressure of a fixed amount of gas against its volume at constant temperature and wants a straight line. She should plot pressure against:',
             options: [
-              '5.76 mm (only one rail expands into the gap)',
-              '11.52 mm (both rails expand toward the gap)',
-              '2.88 mm (half of one rail\'s expansion)',
-              '23.04 mm (double-counting both rails)'
+              '$1/V$',
+              '$V^2$',
+              '$\\sqrt{V}$',
+              '$V$'
             ],
-            correctAnswer: 1,
-            explanation: 'Each rail expands: $\\Delta L = (12 \\times 10^{-6})(12.0)(40) = 5.76 \\times 10^{-3}$ m = 5.76 mm. With the far ends fixed, both rails grow toward the junction, so the total gap needed is $2 \\times 5.76 = 11.52$ mm.'
+            correctAnswer: 0,
+            explanation: 'At constant $T$, $P = nRT \\cdot (1/V)$, so $P$ is proportional to $1/V$ and that graph is a line with slope $nRT$. Plotting against $V$ itself gives a curve.'
           },
           {
-            question: 'To remove a tight metal lid from a glass jar, you should:',
+            question: 'Two constant-volume gas bulbs give straight $P$ vs. $T$ (kelvin) lines through the origin. Bulb 1 has the steeper line. Which conclusion is supported?',
             options: [
-              'Cool both the lid and the jar together',
-              'Heat the glass jar only, leaving the lid cool',
-              'Run hot water over the metal lid',
-              'Cool the metal lid so it contracts and loosens'
+              'Bulb 1 has more moles of gas per cubic meter',
+              'Bulb 1 contains a heavier gas than bulb 2',
+              'Bulb 1 is at a higher temperature than bulb 2',
+              'Bulb 1 holds a gas that is less ideal'
             ],
-            correctAnswer: 2,
-            explanation: 'Metals typically have a higher $\\alpha$ than glass. Heating the metal lid causes it to expand more than the glass, loosening its grip. Cooling the lid would make it contract and grip tighter, and heating only the jar expands the glass into the lid. Running hot water over the lid is the classic kitchen trick!'
+            correctAnswer: 0,
+            explanation: 'The slope of $P$ vs. $T$ is $nR/V$, so a steeper line means more moles per unit volume. The slope does not depend on the type of gas, and both bulbs were measured over the same range of temperatures.'
+          },
+          {
+            question: 'A constant-volume bulb is measured at several Celsius temperatures, and the best-fit line is extended to zero pressure. The line crosses the temperature axis at about:',
+            options: [
+              '$-273°\\text{C}$',
+              '$0°\\text{C}$',
+              '$-100°\\text{C}$',
+              '$-460°\\text{C}$'
+            ],
+            correctAnswer: 0,
+            explanation: 'Extrapolating to $P = 0$ gives absolute zero, about $-273°\\text{C}$, for any ideal gas. Zero degrees Celsius is only the freezing point of water, where the gas still has plenty of pressure.'
           }
         ]
       }
     },
     {
-      id: 'te5-problem-drill',
+      id: 'te5-worked',
+      type: 'text' as const,
+      content: `
+## Worked Example: Analyzing Lab Data
+
+A sealed $1.00 \\times 10^{-3} \\text{ m}^3$ bulb of gas is placed in water baths, and its pressure is recorded:
+
+| $T$ (°C) | 0 | 25 | 50 | 75 | 100 |
+|---|---|---|---|---|---|
+| $P$ (kPa) | 91.0 | 99.3 | 107.7 | 116.0 | 124.3 |
+
+**Step 1 — Slope.** Each 25°C step raises $P$ by about 8.33 kPa, so the slope is
+
+$$\\frac{\\Delta P}{\\Delta T} = \\frac{124.3 - 91.0}{100 - 0} = 0.333 \\text{ kPa/°C} = 333 \\text{ Pa/K}$$
+
+(A change of 1°C is the same size as a change of 1 K.)
+
+**Step 2 — Extrapolate to $P = 0$.** Starting from 91.0 kPa at 0°C and dropping 0.333 kPa per degree:
+
+$$T_{P=0} = 0 - \\frac{91.0}{0.333} \\approx -273°\\text{C}$$
+
+**Step 3 — Moles of gas.** The slope equals $\\frac{nR}{V}$, so
+
+$$n = \\frac{(\\text{slope})V}{R} = \\frac{(333)(1.00 \\times 10^{-3})}{8.31} \\approx 0.040 \\text{ mol}$$
+
+**Step 4 — Sources of error.** If part of the tube connecting the bulb to the gauge sits outside the bath, some gas is not at the bath temperature, and the measured pressures rise less than they should. A careful procedure keeps the whole gas sample in the bath and waits for thermal equilibrium before each reading.
+      `
+    },
+    {
+      id: 'te5-lab-drill',
       type: 'input-boxes' as const,
       content: `
-**Multi-Step Problem Drill** 🔧
+**Lab Analysis Drill** 🧪
 
-1) A steel rod has diameter 2.000 cm at 25°C. A copper ring has inner diameter 1.990 cm at 25°C. To what temperature (°C) must the copper ring be heated to just fit over the rod? ($\\alpha_{\\text{Cu}} = 17 \\times 10^{-6}$ /°C, assume rod stays at 25°C.) Round to the nearest °C.
+A different sealed bulb of volume $2.00 \\times 10^{-3} \\text{ m}^3$ reads $60.0$ kPa at $0°\\text{C}$ and $82.0$ kPa at $100°\\text{C}$. Assume the graph of $P$ vs. $T$ is a straight line.
 
-2) A concrete sidewalk slab is 5.00 m long at 5°C. What gap (in mm) is needed between slabs if the maximum temperature is 45°C? ($\\alpha_{\\text{concrete}} = 12 \\times 10^{-6}$ /°C)
+1) Slope of the line, in Pa/K (3 significant figures)
 
-3) A glass flask ($\\beta = 27 \\times 10^{-6}$ /°C) holds exactly 500.0 mL of mercury ($\\beta = 182 \\times 10^{-6}$ /°C) at 20°C. How many mL of mercury overflow when heated to 100°C?
+2) Temperature, in °C, where the line reaches $P = 0$ (round to the nearest whole number)
 
-*Round all answers to 3 significant figures.*
+3) Moles of gas in the bulb (2 significant figures). Use $R = 8.31$ J/(mol·K).
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['321', '2.4', '6.2'],
-        hint1: '$d_{\\text{Cu}}(1 + \\alpha_{\\text{Cu}} \\Delta T) = d_{\\text{rod}}$. Solve for $\\Delta T$, then add to 25°C.',
-        hint2: '$\\Delta L = \\alpha L_0 \\Delta T = (12 \\times 10^{-6})(5.00)(40)$. Convert to mm.',
-        hint3: '$\\Delta V_{\\text{overflow}} = (\\beta_{\\text{Hg}} - \\beta_{\\text{glass}}) V_0 \\Delta T$.',
-        explanation: '1) $1.990(1 + 17 \\times 10^{-6} \\cdot \\Delta T) = 2.000$. $1 + 17 \\times 10^{-6} \\cdot \\Delta T = 1.005025$. $\\Delta T = 0.005025 / (17 \\times 10^{-6}) = 295.6$°C. $T = 25 + 296 \\approx 321$°C. 2) $\\Delta L = (12 \\times 10^{-6})(5.00)(40) = 2.4 \\times 10^{-3}$ m $= 2.4$ mm. 3) $\\Delta V = (182 - 27) \\times 10^{-6} \\times 500.0 \\times 80 = 155 \\times 10^{-6} \\times 40{,}000 = 6.2$ mL.'
+        correctAnswers: ['220', '-273', '0.053'],
+        hint1: 'Slope $= (82.0 - 60.0)$ kPa $/ (100 - 0)$ K. Convert kPa to Pa.',
+        hint2: 'Drop from 60,000 Pa at 0°C to zero at a rate of 220 Pa per degree: $T = -60{,}000/220$.',
+        hint3: 'Slope $= nR/V$, so $n = (\\text{slope})V/R = (220)(2.00 \\times 10^{-3})/8.31$.',
+        explanation: '1) $(22{,}000 \\text{ Pa})/(100 \\text{ K}) = 220$ Pa/K. 2) $-60{,}000/220 \\approx -273°\\text{C}$. 3) $n = (220)(2.00 \\times 10^{-3})/8.31 \\approx 0.053$ mol.'
       }
     },
     {
@@ -148,26 +153,26 @@ You must heat the brass ring to about **152°C** for it to slip over the steel r
       exercise: {
         questions: [
           {
-            question: 'A brass ring at 20°C is too small to fit over an aluminum cylinder at 20°C. Both are heated together. As temperature increases:',
+            question: 'On one set of axes, two isotherms ($P$ vs. $V$) are drawn for the same sample of gas. Isotherm A lies everywhere farther from the origin than isotherm B. Which is true?',
             options: [
-              'The ring fits eventually, because brass expands faster than aluminum',
-              'The ring never fits because aluminum expands faster than brass',
-              'The ring fits right away at any higher temperature',
-              'Whether it fits depends only on the initial size difference'
+              'A is at the higher temperature',
+              'A is at the lower temperature',
+              'A and B are at the same temperature',
+              'A holds fewer moles of gas than B'
             ],
-            correctAnswer: 1,
-            explanation: 'Since $\\alpha_{\\text{Al}} = 23 \\times 10^{-6} > \\alpha_{\\text{brass}} = 19 \\times 10^{-6}$, the aluminum cylinder diameter grows faster than the brass ring hole. If heated together, the fit gets **worse**, not better. You would need to heat only the ring or cool only the cylinder.'
+            correctAnswer: 0,
+            explanation: 'For the same sample, $PV = nRT$, so a larger product $PV$ at every point means a higher temperature. Both curves describe the same number of moles.'
           },
           {
-            question: 'A steel tape measure gives accurate readings at 20°C. If you use it on a hot day at 40°C, your measurements of a building will read:',
+            question: 'A student repeats the absolute-zero experiment with twice as much gas in the same bulb. Compared with the first trial, the new $P$ vs. $T$ (°C) line has:',
             options: [
-              'Correct, since thermal effects cancel out on the tape',
-              'Too small, since each expanded mark spans over 1 cm',
-              'The same, because the tape and building expand equally',
-              'Too large, because the building itself has expanded'
+              'Twice the slope and the same $T$-intercept near $-273°\\text{C}$',
+              'The same slope and a $T$-intercept twice as far below zero',
+              'Twice the slope and a $T$-intercept closer to $0°\\text{C}$',
+              'Half the slope and the same $T$-intercept near $-273°\\text{C}$'
             ],
-            correctAnswer: 1,
-            explanation: 'The tape expands, so each "centimeter" mark is now slightly longer than a true centimeter. The tape reads fewer centimeters than the actual length — the reading is **smaller** than the true value. The actual building dimension is **larger** than what the expanded tape reads.'
+            correctAnswer: 0,
+            explanation: 'The slope $nR/V$ doubles when $n$ doubles, but every line still extrapolates to zero pressure at absolute zero. That shared intercept is why absolute zero is a property of temperature, not of a particular sample.'
           }
         ]
       }

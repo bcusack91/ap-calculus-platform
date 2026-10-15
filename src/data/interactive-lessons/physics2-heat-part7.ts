@@ -19,7 +19,7 @@ You've learned the core concepts of heat and specific heat. Now it's time to int
 - **Calorimetry** → conservation of energy: $\\sum Q_i = 0$
 - **Conduction** → $Q/t = kA\\Delta T/L$ → through solids
 - **Convection** → bulk fluid motion → natural or forced
-- **Radiation** → $P = \\sigma \\varepsilon A T^4$ → no medium needed
+- **Radiation** → $P = \\sigma A T^4$ → no medium needed
       `
     },
     {
@@ -35,7 +35,7 @@ You've learned the core concepts of heat and specific heat. Now it's time to int
 Heat is a **process** (energy in transit), not a property of an object.
 
 ### Mistake 2: Forgetting to Convert Units
-- Temperature: use **K** for radiation problems ($P = \\sigma \\varepsilon A T^4$)
+- Temperature: use **K** for radiation problems ($P = \\sigma A T^4$)
 - Temperature: °C or K both work for $\\Delta T$ in $Q = mc\\Delta T$ (the *change* is the same)
 - Length: convert cm or mm to **m** for conduction ($Q/t = kA\\Delta T/L$)
 
@@ -45,12 +45,12 @@ The equation $\\sum Q_i = 0$ handles signs automatically IF you use $\\Delta T =
 - Cold object: $T_f > T_i$ → $\\Delta T > 0$ → $Q > 0$ ✅
 
 ### Mistake 4: Using °C in Stefan-Boltzmann
-$P = \\sigma \\varepsilon A T^4$ requires **absolute temperature in kelvins**.
+$P = \\sigma A T^4$ requires **absolute temperature in kelvins**.
 - 20°C → 293 K ✅
 - Using $T = 20$ → catastrophically wrong answer ❌
 
-### Mistake 5: Thinking "Adding Heat Always Raises Temperature"
-During a phase change (melting, boiling), temperature stays constant while heat is absorbed. The energy goes into breaking molecular bonds (latent heat), not increasing KE.
+### Mistake 5: Thinking a Temperature Rise Always Means Heating
+Work can also raise a system's internal energy. Compressing a gas in an insulated cylinder warms it with no heating at all. Always ask whether energy crossed the boundary by heating, by work, or both.
       `
     },
     {
@@ -73,15 +73,15 @@ During a phase change (melting, boiling), temperature stays constant while heat 
             explanation: '$mc_A = (2)(500) = 1{,}000$ J/°C. $mc_B = (1)(2{,}000) = 2{,}000$ J/°C. B has the larger thermal mass, so the equilibrium temperature will be closer to B\'s initial temperature.'
           },
           {
-            question: 'A black asphalt road ($\\varepsilon = 0.95$) and a white concrete sidewalk ($\\varepsilon = 0.30$) are side by side in sunlight. After several hours, the asphalt is much hotter. On the AP exam, this is best explained by:',
+            question: 'A black asphalt road and a white concrete sidewalk are side by side in sunlight. After several hours, the asphalt is much hotter. On the AP exam, this is best explained by:',
             options: [
               'Asphalt has a higher specific heat',
-              'Asphalt\'s higher absorptivity means it takes in more sunlight',
+              'Asphalt\'s dark surface absorbs more of the incoming light',
               'Concrete conducts heat into the ground faster',
               'Asphalt undergoes convection more readily'
             ],
             correctAnswer: 1,
-            explanation: 'By Kirchhoff\'s law, good emitters are also good absorbers. Asphalt with $\\varepsilon = 0.95$ absorbs 95% of incident radiation, while concrete with $\\varepsilon = 0.30$ absorbs only 30%. The extra absorbed energy raises asphalt\'s temperature more.'
+            explanation: 'Dark surfaces absorb most of the sunlight that falls on them, while white surfaces reflect much of it. The asphalt takes in more energy each second, so its temperature rises more; specific heat, conduction and convection do not explain the color difference.'
           },
           {
             question: 'A composite wall has Layer 1 ($R_1 = 0.5$ $m^{2}\\cdot K/W$) and Layer 2 ($R_2 = 2.0$ $m^{2}\\cdot K/W$) in series. If the total temperature difference is 25°C and the wall area is 10 $m^{2}$, the rate of heat flow is:',
@@ -158,7 +158,7 @@ A 0.25 kg iron block ($c = 450$ J/(kg·°C)) at 350°C is dropped into 0.80 kg o
       exercise: {
         questions: [
           {
-            question: 'A student calculates the power radiated by a lightbulb filament at 2,500°C using $P = \\sigma \\varepsilon A T^4$. If she accidentally uses $T = 2{,}500$ instead of converting to kelvins (2,773 K), her answer will be:',
+            question: 'A student calculates the power radiated by a lightbulb filament at 2,500°C using $P = \\sigma A T^4$. If she accidentally uses $T = 2{,}500$ instead of converting to kelvins (2,773 K), her answer will be:',
             options: [
               'Slightly too low (about 10% low)',
               'Too high (by about 51%)',

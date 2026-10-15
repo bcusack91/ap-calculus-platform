@@ -7,84 +7,70 @@ export const physics2KirchhoffPart4Data = {
       content: `
 # 🔗 Multi-Loop Circuits
 
-**Part 4 of 7 — Simultaneous Equations for Two-Loop Problems**
+**Part 4 of 7 — Junction and Loop Rules Together**
 
-When a circuit has multiple loops that share branches, a single KVL equation isn't enough. You need to combine KCL (junction rule) and KVL (loop rule) to build a system of simultaneous equations.
+When a circuit splits into branches, one loop equation is no longer enough. Each branch can carry a different current, so you combine the junction rule (charge) with the loop rule (energy) to find them all. On AP Physics 2, these circuits are driven by a single battery, and the same two rules explain every current and potential difference.
       `
     },
     {
       id: 'kl4-strategy',
       type: 'text' as const,
       content: `
-## Systematic Approach for Multi-Loop Circuits
+## A Method for Multi-Loop Circuits
 
-### Step-by-Step Method
+### Step-by-Step
 
-1. **Identify nodes and branches**: Count junctions and separate paths
+1. **Label a current in every branch**: draw an arrow for each one ($I_1, I_2, I_3, \\ldots$). A branch is a path between two junctions; everything in one branch is in series and shares one current.
 
-2. **Assign current variables**: One variable per branch, with an assumed direction (arrow)
+2. **Apply the junction rule** where branches meet: current in = current out.
 
-3. **Write KCL equations**: At $N - 1$ nodes (where $N$ is the number of nodes)
+3. **Apply the loop rule** around closed paths. Pick loops that each pass through at least one branch you have not used yet.
 
-4. **Write KVL equations**: For $B - N + 1$ independent loops
+4. **Solve** by substitution, then check that every junction and every loop balances.
 
-5. **Solve the system**: Substitution or elimination
+5. **Cross-check** with equivalent resistance when the circuit reduces to series and parallel pieces.
 
-### Counting Check
+### Why Bother, If $R_{\\text{eq}}$ Works?
 
-Total unknowns = number of branches $B$
+Equivalent resistance gives the battery current quickly, but free-response questions often ask you to **write the loop equation for a specific loop** or to **justify** a current with a named physical principle. Writing the junction and loop equations is that justification.
 
-Total equations = $(N-1) + (B - N + 1) = B$ ✓
-
-You always have exactly enough equations!
+> 📝 Circuits with two batteries of different emf connected in parallel are not assessed on AP Physics 2, so every multi-loop circuit in this part has a single battery.
       `
     },
     {
       id: 'kl4-two-loop-example',
       type: 'text' as const,
       content: `
-## Classic Two-Loop Problem
+## Worked Example: One Battery, Two Branches
 
-Consider a circuit with:
-- Left loop: $\\varepsilon_1 = 10$ V, $R_1 = 2\\;\\Omega$
-- Right loop: $\\varepsilon_2 = 6$ V, $R_3 = 4\\;\\Omega$
-- Shared middle branch: $R_2 = 3\\;\\Omega$
+An $18$ V battery is in series with $R_1 = 3\\;\\Omega$. After $R_1$, the wire splits at junction A into two parallel branches, $R_2 = 6\\;\\Omega$ and $R_3 = 3\\;\\Omega$, which rejoin at junction B.
 
 ### Step 1: Label Currents
-- $I_1$: through $\\varepsilon_1$ and $R_1$ (left branch, downward)
-- $I_2$: through $R_2$ (middle branch, downward)
-- $I_3$: through $\\varepsilon_2$ and $R_3$ (right branch, downward)
+- $I_1$: through the battery and $R_1$
+- $I_2$: through $R_2$
+- $I_3$: through $R_3$
 
-### Step 2: KCL at top node
+### Step 2: Junction Rule at A
 $$I_1 = I_2 + I_3 \\quad \\text{...(1)}$$
 
-### Step 3: KVL — Left Loop (clockwise)
-$$+\\varepsilon_1 - I_1 R_1 - I_2 R_2 = 0$$
-$$10 - 2I_1 - 3I_2 = 0 \\quad \\text{...(2)}$$
+### Step 3: Loop Rule
+**Loop through the battery, $R_1$, and $R_2$:**
+$$18 - 3I_1 - 6I_2 = 0 \\quad \\text{...(2)}$$
 
-### Step 4: KVL — Right Loop (clockwise)
-$$+I_2 R_2 - I_3 R_3 - \\varepsilon_2 = 0$$
-$$3I_2 - 4I_3 - 6 = 0 \\quad \\text{...(3)}$$
+**Loop through the battery, $R_1$, and $R_3$:**
+$$18 - 3I_1 - 3I_3 = 0 \\quad \\text{...(3)}$$
 
-### Step 5: Solve
-Substitute (1) into (2): $10 - 2(I_2 + I_3) - 3I_2 = 0 \\Rightarrow 10 - 5I_2 - 2I_3 = 0$ ...(2')
+### Step 4: Solve
+Comparing (2) and (3): $6I_2 = 3I_3$, so $I_3 = 2I_2$. Then (1) gives $I_1 = 3I_2$.
 
-From (3): $3I_2 - 4I_3 = 6$ ...(3)
+Substitute into (2): $18 - 9I_2 - 6I_2 = 0 \\Rightarrow I_2 = 1.2$ A
 
-From (2'): $5I_2 + 2I_3 = 10$ ...(2')
+So $I_3 = 2.4$ A and $I_1 = 3.6$ A.
 
-Multiply (2') by 2: $10I_2 + 4I_3 = 20$
+### Step 5: Cross-Check
+$R_{\\text{parallel}} = \\frac{(6)(3)}{6 + 3} = 2\\;\\Omega$, so $R_{\\text{eq}} = 3 + 2 = 5\\;\\Omega$ and $I_1 = 18/5 = 3.6$ A ✓
 
-Add to (3): $13I_2 = 26 \\Rightarrow I_2 = 2$ A
-
-From (3): $3(2) - 4I_3 = 6 \\Rightarrow I_3 = 0$ A
-
-From (1): $I_1 = 2 + 0 = 2$ A
-
-### Interpretation
-- $I_1 = 2$ A (left branch)
-- $I_2 = 2$ A (middle branch)
-- $I_3 = 0$ A (right branch — no current through the right battery!)
+Potential differences: $V_1 = (3.6)(3) = 10.8$ V and $V_2 = V_3 = 7.2$ V, which add to 18 V around either loop ✓
       `
     },
     {
@@ -96,15 +82,15 @@ From (1): $I_1 = 2 + 0 = 2$ A
       exercise: {
         questions: [
           {
-            question: 'A two-loop circuit has 2 nodes and 3 branches. How many independent equations do you need?',
+            question: 'A battery of emf $\\varepsilon$ is in series with $R_1$, which feeds two parallel resistors $R_2$ and $R_3$. Which equation is correct for the loop through the battery, $R_1$, and $R_3$?',
             options: [
-              '2',
-              '3',
-              '4',
-              '5'
+              '$\\varepsilon - I_1R_1 - I_2R_2 - I_3R_3 = 0$',
+              '$\\varepsilon - I_3R_1 - I_3R_3 = 0$',
+              '$\\varepsilon - I_1R_1 - I_3R_3 = 0$',
+              '$\\varepsilon + I_1R_1 - I_3R_3 = 0$'
             ],
-            correctAnswer: 1,
-            explanation: 'You need $B = 3$ equations (one per unknown current). These come from $N-1 = 1$ KCL equation and $B - N + 1 = 2$ KVL equations.'
+            correctAnswer: 2,
+            explanation: 'The loop crosses the battery, then $R_1$ carrying $I_1$, then $R_3$ carrying $I_3$, with a drop across each resistor. Including the $R_2$ term adds a branch the loop never enters, using $I_3$ in $R_1$ ignores the junction where the current splits, and the plus sign on $I_1R_1$ treats a drop as a rise.'
           },
           {
             question: 'At a junction, $I_1$ flows in while $I_2$ and $I_3$ flow out. Which equation is correct?',
@@ -115,77 +101,91 @@ From (1): $I_1 = 2 + 0 = 2$ A
               '$I_1 - I_2 + I_3 = 0$'
             ],
             correctAnswer: 1,
-            explanation: 'KCL: current in = current out. $I_1 = I_2 + I_3$.'
+            explanation: 'Current in equals current out, so $I_1 = I_2 + I_3$. Writing all three as a zero sum treats every current as an inflow, and the other two forms put $I_2$ on the incoming side.'
           }
         ]
       }
     },
     {
+      id: 'kl4-symbolic',
+      type: 'text' as const,
+      content: `
+## AP-Style Symbolic Setup
+
+Free-response questions often give resistances in terms of $R$ and ask for currents in terms of $\\varepsilon$ and $R$.
+
+**Circuit**: A battery of emf $\\varepsilon$ is in series with a resistor $R$. The current then splits into a branch with resistance $R$ (current $I_2$) and a branch with resistance $2R$ (current $I_3$).
+
+**Junction rule**: $I_1 = I_2 + I_3$
+
+**Loop rule, both loops**:
+$$\\varepsilon - I_1R - I_2R = 0 \\qquad \\varepsilon - I_1R - I_3(2R) = 0$$
+
+Subtracting the two loop equations gives $I_2R = 2I_3R$, so $I_2 = 2I_3$ and $I_1 = 3I_3$. Then
+
+$$\\varepsilon = 3I_3R + 2I_3R = 5I_3R$$
+
+$$I_3 = \\frac{\\varepsilon}{5R}, \\quad I_2 = \\frac{2\\varepsilon}{5R}, \\quad I_1 = \\frac{3\\varepsilon}{5R}$$
+
+### What If the $2R$ Branch Is Removed?
+
+Opening a switch in the $2R$ branch leaves a single loop with $2R$ total:
+
+- $I_1$ **decreases** from $\\frac{3\\varepsilon}{5R}$ to $\\frac{\\varepsilon}{2R}$ (fewer paths, larger $R_{\\text{eq}}$)
+- The potential difference across the first resistor **decreases**, so the potential difference across the remaining branch **increases**
+- The current in the remaining $R$ branch **increases** from $\\frac{2\\varepsilon}{5R}$ to $\\frac{\\varepsilon}{2R}$
+
+> 💡 This kind of "what happens when…" reasoning is a favorite AP question. Follow the chain: paths → $R_{\\text{eq}}$ → battery current → drop across the series resistor → potential difference across the branch.
+      `
+    },
+    {
       id: 'kl4-drill',
       type: 'input-boxes' as const,
       content: `
-**Two-Loop Problem Drill**
+**Multi-Loop Drill**
 
-A two-loop circuit has:
-- Left loop: $\\varepsilon_1 = 12$ V battery, $R_1 = 2\\;\\Omega$ resistor
-- Shared middle branch: $R_2 = 4\\;\\Omega$ resistor
-- Right loop: $\\varepsilon_2 = 8$ V battery, $R_3 = 4\\;\\Omega$ resistor
+A $24$ V battery is in series with $R_1 = 2\\;\\Omega$. The current then splits into two branches that rejoin before returning to the battery:
+- Branch A: $R_2 = 24\\;\\Omega$
+- Branch B: $R_3 = 6\\;\\Omega$ in series with $R_4 = 2\\;\\Omega$
 
-Currents: $I_1$ (left branch, down), $I_2$ (middle, down), $I_3$ (right branch, down).
+1) Current $I_1$ through the battery (in A):
 
-KCL at top node: $I_1 = I_2 + I_3$
+2) Current $I_2$ through $R_2$ (in A):
 
-KVL Left (clockwise): $12 - 2I_1 - 4I_2 = 0$
+3) Current $I_3$ through branch B (in A):
 
-KVL Right (clockwise): $4I_2 - 4I_3 - 8 = 0$
-
-Solve:
-
-1) $I_2$ (in A):
-
-2) $I_3$ (in A):
-
-3) $I_1$ (in A):
+4) Potential difference across $R_4$ (in V):
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['2', '0', '2'],
-        hint1: 'Substitute $I_1 = I_2 + I_3$ into the left loop: $12 - 2(I_2 + I_3) - 4I_2 = 0 \\Rightarrow 12 - 6I_2 - 2I_3 = 0$.',
-        hint2: 'From the right loop: $4I_2 - 4I_3 = 8 \\Rightarrow I_2 - I_3 = 2 \\Rightarrow I_3 = I_2 - 2$.',
-        hint3: 'Substitute into the modified left loop: $12 - 6I_2 - 2(I_2 - 2) = 0 \\Rightarrow 16 - 8I_2 = 0 \\Rightarrow I_2 = 2$ A.',
-        explanation: 'From right loop: $I_3 = I_2 - 2$. Substituting into left loop: $16 - 8I_2 = 0$, so $I_2 = 2$ A. Then $I_3 = 2 - 2 = 0$ A and $I_1 = 2 + 0 = 2$ A. Verify: Left loop $12 - 4 - 8 = 0$ ✓. Right loop $8 - 0 - 8 = 0$ ✓.'
+        boxes: 4,
+        correctAnswers: ['3', '0.75', '2.25', '4.5'],
+        hint1: 'Branch B is $6 + 2 = 8\\;\\Omega$. In parallel with $24\\;\\Omega$: $\\frac{(24)(8)}{24 + 8} = 6\\;\\Omega$. Add $R_1$: $R_{\\text{eq}} = 8\\;\\Omega$, so $I_1 = 24/8$.',
+        hint2: 'Loop through the battery, $R_1$, and $R_2$: $24 - 2I_1 - 24I_2 = 0$ with $I_1 = 3$ A.',
+        hint3: 'Junction rule: $I_3 = I_1 - I_2$. Then $V_4 = I_3R_4$.',
+        explanation: '$R_{\\text{eq}} = 2 + 6 = 8\\;\\Omega$, so $I_1 = 3$ A. The loop through $R_2$ gives $24 - 6 - 24I_2 = 0$, so $I_2 = 0.75$ A. The junction rule gives $I_3 = 3 - 0.75 = 2.25$ A, and $V_4 = (2.25)(2) = 4.5$ V.'
       }
     },
     {
       id: 'kl4-clean-drill',
       type: 'input-boxes' as const,
       content: `
-**Two-Loop Problem #2**
+**Symbolic Circuit, Numbers Plugged In**
 
-Two-loop circuit:
-- Left loop: $\\varepsilon_1 = 14$ V, $R_1 = 4\\;\\Omega$
-- Shared branch: $R_2 = 6\\;\\Omega$
-- Right loop: $\\varepsilon_2 = 4$ V, $R_3 = 2\\;\\Omega$
+Use the AP-style circuit above with $\\varepsilon = 15$ V and $R = 5\\;\\Omega$ (so the branches are $5\\;\\Omega$ and $10\\;\\Omega$, after a $5\\;\\Omega$ series resistor).
 
-KCL: $I_1 = I_2 + I_3$
+1) Battery current $I_1$ with both branches connected (in A):
 
-Left loop (clockwise): $14 - 4I_1 - 6I_2 = 0$
+2) Current $I_3$ in the $2R$ branch (in A):
 
-Right loop (clockwise): $6I_2 - 2I_3 - 4 = 0$
-
-1) Solve for $I_1$ (in A):
-
-2) Solve for $I_2$ (in A):
-
-3) Solve for $I_3$ (in A):
+3) Battery current after the $2R$ branch is disconnected (in A):
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '1', '1'],
-        hint1: 'Substitute $I_1 = I_2 + I_3$ into the left loop: $14 - 4(I_2 + I_3) - 6I_2 = 0 \\Rightarrow 14 - 10I_2 - 4I_3 = 0$.',
-        hint2: 'From the right loop: $6I_2 - 2I_3 = 4 \\Rightarrow I_3 = 3I_2 - 2$.',
-        hint3: 'Substitute: $14 - 10I_2 - 4(3I_2 - 2) = 0 \\Rightarrow 14 - 10I_2 - 12I_2 + 8 = 0 \\Rightarrow 22 = 22I_2 \\Rightarrow I_2 = 1$ A.',
-        explanation: 'From right loop: $I_3 = 3I_2 - 2$. Substituting into left loop: $22 - 22I_2 = 0$, so $I_2 = 1$ A. Then $I_3 = 3(1) - 2 = 1$ A and $I_1 = 1 + 1 = 2$ A. Verify: Left $14 - 8 - 6 = 0$ ✓. Right $6 - 2 - 4 = 0$ ✓.'
+        correctAnswers: ['1.8', '0.6', '1.5'],
+        hint1: '$I_1 = \\frac{3\\varepsilon}{5R} = \\frac{3(15)}{5(5)}$.',
+        hint2: '$I_3 = \\frac{\\varepsilon}{5R} = \\frac{15}{25}$.',
+        hint3: 'With one branch left, the loop has $R + R = 10\\;\\Omega$: $I_1 = 15/10$.',
+        explanation: '$I_1 = 45/25 = 1.8$ A and $I_3 = 15/25 = 0.6$ A (so $I_2 = 1.2$ A, and $1.2 + 0.6 = 1.8$ ✓). With the $2R$ branch removed, $I_1 = 15/10 = 1.5$ A, smaller than before.'
       }
     },
     {
@@ -208,15 +208,15 @@ Right loop (clockwise): $6I_2 - 2I_3 - 4 = 0$
             explanation: 'A negative current value simply means the actual current direction is opposite to what you assumed. The magnitude is still 2 A.'
           },
           {
-            question: 'Which combination of rules is sufficient to solve any DC circuit?',
+            question: 'A battery is in series with $R_1$, which feeds two parallel resistors. A third resistor is added in parallel with those two. What happens to the current in $R_1$ and the potential difference across the parallel group?',
             options: [
-              'KCL only',
-              'KVL only',
-              'KCL + KVL together',
-              'Ohm\'s Law only'
+              '$R_1$ current decreases; parallel potential difference decreases',
+              '$R_1$ current increases; parallel potential difference increases',
+              '$R_1$ current increases; parallel potential difference decreases',
+              '$R_1$ current is unchanged; parallel potential difference is unchanged'
             ],
             correctAnswer: 2,
-            explanation: 'KCL (junction rule) and KVL (loop rule) together provide enough equations to solve for all unknown currents in any DC circuit. Ohm\'s Law ($V = IR$) is used within the KVL equations.'
+            explanation: 'Another parallel path lowers $R_{\\text{eq}}$, so the battery current through $R_1$ increases. A larger drop across $R_1$ leaves less of the emf for the parallel group, so its potential difference decreases.'
           }
         ]
       }

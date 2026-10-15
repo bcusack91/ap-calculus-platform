@@ -60,13 +60,9 @@ $$\\Delta y = \\frac{\\lambda L}{d}$$
 | Increase $L$ (move screen farther) | Fringes spread apart |
 | Increase $d$ (slits farther apart) | Fringes get closer together |
 
-### Intensity Pattern
+### Equal Spacing
 
-The intensity at angle $\\theta$ is:
-
-$$I = 4I_0 \\cos^2\\left(\\frac{\\pi d \\sin\\theta}{\\lambda}\\right)$$
-
-This produces equally spaced bright and dark fringes — the hallmark of double-slit interference.
+Considering interference alone, the bright and dark fringes are **equally spaced** — the hallmark of double-slit interference. (Part 6 shows how the width of each slit makes the fringes fade in and out across the screen.)
 
 ### Order Number $m$
 

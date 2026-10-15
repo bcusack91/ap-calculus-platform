@@ -9,7 +9,7 @@ export const physics2MagneticFieldsPart7Data = {
 
 **Part 7 of 7 — Right-Hand Rule Mastery, Common Mistakes, and AP FRQ Preview**
 
-You've learned the core of magnetism: fields from sources, forces on charges and wires, circular motion, and torque on loops. This final part ties everything together and prepares you for AP-level problems.
+You've learned the core of magnetism: fields from magnets, moving charges, and currents; forces on charges and wires; circular motion; magnetic materials; and the Hall effect. This final part ties everything together and prepares you for AP-level problems.
       `
     },
     {
@@ -30,9 +30,9 @@ You've learned the core of magnetism: fields from sources, forces on charges and
 
 | Source | Formula |
 |--------|---------|
-| Long straight wire | $B = \\mu_0 I/(2\\pi r)$ |
-| Solenoid (inside) | $B = \\mu_0 nI$ |
-| Ampère's law | $\\oint \\vec{B} \\cdot d\\vec{l} = \\mu_0 I_{\\text{enc}}$ |
+| Long straight wire | $B = \\mu_0 I/(2\\pi r)$, circles the wire (right-hand rule) |
+| Several wires | Add each wire's $\\vec{B}$ as vectors |
+| Center of a current loop | Direction only: along the axis, by the right-hand rule |
 
 ### Circular Motion
 
@@ -43,13 +43,14 @@ You've learned the core of magnetism: fields from sources, forces on charges and
 | Cyclotron frequency | $f = qB/(2\\pi m)$ |
 | Velocity selector | $v = E/B$ |
 
-### Torque and Dipoles
+### Materials and the Hall Effect
 
-| Quantity | Formula |
-|----------|---------|
-| Dipole moment | $\\mu = NIA$ |
-| Torque | $\\tau = NIAB\\sin\\phi$ |
-| Potential energy | $U = -\\mu B\\cos\\phi$ |
+| Idea | Key fact |
+|------|----------|
+| Ferromagnetic (Fe, Ni, Co) | Domains align strongly; can stay magnetized |
+| Paramagnetic (Al, Ti, Mg) | Weak alignment; lost when the field is removed |
+| Diamagnetic (all materials) | Weak alignment opposite the field |
+| Hall effect | At balance $qE = qvB$; Hall voltage $\\Delta V = vBw$ |
 
 ### Constants
 
@@ -152,7 +153,7 @@ A proton is launched horizontally into a region of uniform magnetic field pointi
 
 **(c)** If the proton is replaced by an alpha particle ($q = 2e$, $m = 4m_p$) with the same speed, how does the radius change?
 
-*Answer: $r_{\\alpha}/r_p = (4m_p \\cdot qB)/(2e \\cdot m_p B) \\cdot (v/v) = 4m_p/(2m_p) \\cdot (e/(e)) = 2$. The alpha particle has twice the radius.*
+*Answer: $r = mv/(qB)$, so with the same $v$ and $B$, $r \\propto m/q$. Then $r_{\\alpha}/r_p = (4m_p/2e)/(m_p/e) = 2$. The alpha particle has twice the radius.*
 
 **(d)** Does the magnetic field do work on the proton? Justify.
 
@@ -220,15 +221,15 @@ An electron ($m = 9.11 \\times 10^{-31}$ kg, $q = 1.6 \\times 10^{-19}$ C) is ac
             explanation: '$v = qBr/m = (1.6 \\times 10^{-19})(0.20)(0.05)/(1.67 \\times 10^{-27}) = 1.6 \\times 10^{-21}/(1.67 \\times 10^{-27}) = 9.58 \\times 10^5 \\approx 9.6 \\times 10^5$ m/s. $1.9 \\times 10^6$ m/s uses the 10 cm diameter as the radius, $9.6 \\times 10^7$ m/s leaves $r$ in centimeters, and $1.8 \\times 10^9$ m/s uses the electron\'s mass.'
           },
           {
-            question: 'The magnetic field inside a solenoid with 1000 turns/m carrying 3.0 A is:',
+            question: 'Two long parallel wires 10 cm apart each carry 5.0 A, in opposite directions. The magnitude of the magnetic field at the midpoint between them is:',
             options: [
-              '$1.20 \\times 10^{-3}$ T',
-              '$3.77 \\times 10^{-3}$ T',
-              '$1.88 \\times 10^{-3}$ T',
-              '$6.00 \\times 10^{-4}$ T'
+              '$2.0 \\times 10^{-5}$ T',
+              '$4.0 \\times 10^{-5}$ T',
+              '$1.0 \\times 10^{-5}$ T',
+              'zero'
             ],
             correctAnswer: 1,
-            explanation: '$B = \\mu_0 nI = (4\\pi \\times 10^{-7})(1000)(3.0) = 12\\pi \\times 10^{-4} = 3.77 \\times 10^{-3}$ T. $1.20 \\times 10^{-3}$ T drops the $\\pi$, $1.88 \\times 10^{-3}$ T has a stray factor of 1/2, and $6.00 \\times 10^{-4}$ T uses $\\mu_0/(2\\pi)$ from the long-wire formula.'
+            explanation: 'Each wire is 0.050 m away and gives $(2 \\times 10^{-7})(5.0)/(0.050) = 2.0 \\times 10^{-5}$ T, and with opposite currents both fields point the same way between the wires, so they add to $4.0 \\times 10^{-5}$ T. Zero is the result for same-direction currents, $2.0 \\times 10^{-5}$ T counts only one wire, and $1.0 \\times 10^{-5}$ T uses the full 10 cm separation as the distance.'
           },
           {
             question: 'A velocity selector has $E = 3.0 \\times 10^5$ V/m and $B = 0.060$ T. The selected speed is:',

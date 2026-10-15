@@ -9,7 +9,7 @@ export const physics2ThermoLawsPart5Data = {
 
 **Part 5 of 7 — Nature's Arrow of Time**
 
-The Second Law of Thermodynamics tells us which processes can happen spontaneously and which cannot. It introduces **entropy**, a measure of disorder that always increases in the universe.
+The first law says energy is conserved. It does not say which way energy will move. A hot pan cools in a cold kitchen; the kitchen never spontaneously heats the pan. The Second Law of Thermodynamics explains this one-way behavior using a quantity called **entropy**. AP Physics 2 treats entropy qualitatively: you reason about whether it increases, decreases, or stays the same, rather than calculating it.
       `
     },
     {
@@ -18,58 +18,17 @@ The Second Law of Thermodynamics tells us which processes can happen spontaneous
       content: `
 ## The Second Law of Thermodynamics
 
-There are several equivalent statements of the Second Law:
+> The total entropy of an **isolated system** can never decrease. It stays constant only if every process the system undergoes is reversible.
 
-### Clausius Statement
-> Heat cannot spontaneously flow from a cold object to a hot object without external work being done.
+$$\\Delta S_{\\text{isolated}} \\geq 0$$
 
-### Kelvin-Planck Statement
-> No cyclic process can convert heat entirely into work (there must always be waste heat).
+### What It Predicts About Heating
 
-### Entropy Statement
-> The total entropy of an isolated system can never decrease; it can only increase or remain the same.
+Energy transfers by thermal processes **spontaneously** from a higher-temperature system to a lower-temperature system, never the reverse. Moving energy from cold to hot is possible, but only if something else does work (as a refrigerator's compressor does).
 
-$$\\Delta S_{\\text{universe}} \\geq 0$$
+### Why, at the Molecular Level
 
-All three statements are equivalent — if one is violated, all are violated.
-      `
-    },
-    {
-      id: 'tl5-entropy',
-      type: 'text' as const,
-      content: `
-## Entropy ($S$)
-
-Entropy is a measure of the **number of microscopic arrangements** (microstates) consistent with the macroscopic state. More microstates → higher entropy → more "disorder."
-
-### Entropy Change
-
-For a reversible process at constant temperature:
-
-$$\\Delta S = \\frac{Q}{T}$$
-
-where $T$ is in Kelvin and $Q$ is the heat transferred.
-
-### Key Properties
-
-- Entropy is a **state variable** (path-independent for the system)
-- Units: J/K
-- Adding heat to a system **increases** its entropy
-- Removing heat **decreases** its entropy
-- Spontaneous processes always **increase** the total entropy of the universe
-
-### Reversible vs. Irreversible Processes
-
-| Type | $\\Delta S_{\\text{universe}}$ | Example |
-|------|--------------------------|---------|
-| **Reversible** | $= 0$ | Ideal Carnot cycle |
-| **Irreversible** | $> 0$ | Friction, free expansion, heat conduction across $\\Delta T$ |
-
-All real processes are irreversible → entropy of the universe always increases.
-
-### Heat Death of the Universe
-
-If entropy always increases, the universe will eventually reach a state of **maximum entropy** — uniform temperature everywhere, no energy gradients, no ability to do work. This is called the "heat death" of the universe.
+When atoms of two systems collide, energy is most likely to pass from the **higher-energy** atom to the **lower-energy** atom. After many collisions, the most probable state by far is the one in which both systems have the **same temperature**. Energy flowing from cold to hot is not forbidden by any single collision; it is just overwhelmingly improbable for the whole system.
       `
     },
     {
@@ -81,84 +40,127 @@ If entropy always increases, the universe will eventually reach a state of **max
       exercise: {
         questions: [
           {
-            question: 'Which process violates the Second Law of Thermodynamics?',
+            question: 'Which process would violate the Second Law of Thermodynamics?',
             options: [
-              'An ice cube melting in warm water',
-              'Heat spontaneously flowing from a cold object to a hot object',
-              'A refrigerator moving heat from cold to hot using electricity',
-              'A ball rolling downhill and heating up due to friction'
+              'An ice cube warming up in a glass of warm water',
+              'Energy flowing on its own from a cold object to a hot object',
+              'A refrigerator moving energy from cold to hot using electricity',
+              'A sliding box warming up as friction slows it to a stop'
             ],
             correctAnswer: 1,
-            explanation: 'Heat flowing spontaneously from cold to hot violates the Clausius statement of the Second Law. A refrigerator can move heat from cold to hot, but it requires work input — that does not violate the law.'
+            explanation: 'Spontaneous energy transfer from cold to hot would decrease the total entropy of an isolated system. A refrigerator moves energy from cold to hot only because its compressor does work, and friction converting kinetic energy to internal energy increases entropy.'
           },
           {
             question: 'The entropy of a system can decrease when:',
             options: [
-              'Never — entropy can only increase',
-              'Heat leaves the system and the surroundings gain more entropy',
-              'The system is perfectly insulated',
-              'The system does work on its surroundings'
+              'Energy leaves it and the surroundings gain at least as much',
+              'The system is perfectly isolated from its surroundings',
+              'The system is left alone long enough to reach equilibrium',
+              'The atoms in the system collide with one another'
             ],
-            correctAnswer: 1,
-            explanation: 'A system\'s entropy can decrease (e.g., freezing water), but the surroundings must gain at least as much entropy. The total entropy of system + surroundings (the universe) never decreases.'
+            correctAnswer: 0,
+            explanation: 'A closed system can lose entropy when energy is transferred out of it, for example a gas cooled by its surroundings, but the surroundings gain at least as much. An isolated system can never lose entropy, and reaching equilibrium maximizes it.'
           }
         ]
       }
     },
     {
+      id: 'tl5-entropy',
+      type: 'text' as const,
+      content: `
+## What Entropy Describes
+
+Entropy can be described in two equivalent ways:
+
+1. **The tendency of energy to spread out.** Energy that starts concentrated in one place (a hot spot, a fast-moving object) tends to disperse among more atoms and more locations.
+2. **The unavailability of energy to do work.** Once energy has spread out evenly, there is no temperature difference left to drive a useful process, even though the total energy is unchanged.
+
+### Key Properties
+
+| Property | What it means |
+|---|---|
+| State function | Entropy depends only on the current state of a system, not on how it got there |
+| Maximum at equilibrium | An isolated system has its greatest entropy once it reaches thermodynamic equilibrium |
+| Isolated systems | Move spontaneously toward equilibrium, so their entropy rises (or, ideally, stays the same) |
+| Closed systems | Can lose entropy if energy is transferred out, but the surroundings then gain at least as much |
+
+### Reversible vs. Irreversible
+
+A **reversible** process is an idealization that could run backward with no change to the rest of the universe; the total entropy stays constant. Every real process is **irreversible** and increases the total entropy. Examples:
+
+- A hot block and a cold block reaching a common temperature
+- A gas rushing into an empty chamber when a valve opens
+- Friction turning kinetic energy into internal energy
+- A drop of dye spreading through a glass of water
+
+> AP Physics 2 asks for qualitative reasoning about entropy only. Calculations such as $\\Delta S = Q/T$ are not tested.
+      `
+    },
+    {
       id: 'tl5-entropy-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Entropy Calculations** 📐
+**Entropy Reasoning** 🧠
       `,
       exercise: {
         questions: [
           {
-            question: '500 J of heat flows from a reservoir at 500 K to a reservoir at 250 K. The total entropy change of the universe is:',
+            question: 'A hot block and a cold block touch inside a sealed, insulated box. As they approach a common temperature, the entropy of the two-block system:',
             options: [
-              '0 J/K',
-              '1 J/K',
-              '2 J/K',
-              '−1 J/K'
+              'Increases, reaching its maximum at thermal equilibrium',
+              'Decreases, because the temperatures become more uniform',
+              'Stays constant, because no energy leaves the insulated box',
+              'Increases only until half of the energy has transferred'
             ],
-            correctAnswer: 1,
-            explanation: '$\\Delta S_{\\text{hot}} = -Q/T_H = -500/500 = -1$ J/K. $\\Delta S_{\\text{cold}} = +Q/T_C = 500/250 = +2$ J/K. Total: $\\Delta S = -1 + 2 = +1$ J/K > 0, as expected.'
+            correctAnswer: 0,
+            explanation: 'The box is an isolated system, so its entropy can only increase as energy spreads from the hot block to the cold one, and it peaks at equilibrium. Uniform temperature corresponds to high entropy, not low, and constant total energy does not mean constant entropy.'
           },
           {
-            question: 'A reversible Carnot engine absorbs 1000 J at 400 K and rejects heat at 200 K. The total entropy change per cycle is:',
+            question: 'Entropy is a state function. This means that:',
             options: [
-              '+2.5 J/K',
-              '+5.0 J/K',
-              '0 J/K',
-              '−2.5 J/K'
+              'It depends only on the present state',
+              'Its change depends on the path between states',
+              'It can change only when work is done on the system',
+              'It is the same for every system at the same temperature'
             ],
-            correctAnswer: 2,
-            explanation: 'A Carnot engine is reversible, so $\\Delta S_{\\text{universe}} = 0$ per cycle. Check: $Q_C = Q_H(T_C/T_H) = 1000(200/400) = 500$ J. $\\Delta S = -1000/400 + 500/200 = -2.5 + 2.5 = 0$.'
+            correctAnswer: 0,
+            explanation: 'Like internal energy, entropy depends only on the present state (for a gas, values such as $P$, $V$ and $T$), not on the history. Heat and work are the quantities that depend on the path.'
           }
         ]
       }
     },
     {
       id: 'tl5-entropy-drill',
-      type: 'input-boxes' as const,
+      type: 'dropdown-select' as const,
       content: `
-**Entropy Change Drill** 🔧
+**Entropy Direction Drill** 🔧
 
-Use $\\Delta S = Q/T$ (with $T$ in Kelvin).
-
-1) 600 J of heat is added to a reservoir at 300 K. What is $\\Delta S$ of the reservoir (in J/K)?
-
-2) 800 J of heat flows from a 400 K reservoir to a 200 K reservoir. What is $\\Delta S_{\\text{universe}}$ (in J/K)?
-
-3) A Carnot engine absorbs 2000 J at 500 K and rejects heat at 250 K. How much heat is rejected $Q_C$ (in J)?
+For each situation, choose what happens to the entropy named.
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['2', '2', '1000'],
-        hint1: '$\\Delta S = Q/T = 600/300 = 2$ J/K.',
-        hint2: '$\\Delta S = -Q/T_H + Q/T_C = -800/400 + 800/200 = -2 + 4 = 2$ J/K.',
-        hint3: 'Carnot is reversible: $\\Delta S = 0$. So $Q_H/T_H = Q_C/T_C$. $Q_C = Q_H(T_C/T_H) = 2000(250/500) = 1000$ J.',
-        explanation: 'For entropy changes, heat gained gives positive $\\Delta S$ and heat lost gives negative $\\Delta S$. For Carnot engines, $Q_H/T_H = Q_C/T_C$.'
+        dropdowns: [
+          {
+            label: 'A gas in an insulated container expands into an empty second chamber when a valve opens. The entropy of the gas',
+            options: ['increases', 'decreases', 'stays the same', 'drops to zero']
+          },
+          {
+            label: 'A cup of hot coffee cools to room temperature. The entropy of the coffee alone',
+            options: ['increases', 'decreases', 'stays the same', 'drops to zero']
+          },
+          {
+            label: 'For the same cooling coffee, the entropy of the coffee plus the room',
+            options: ['increases', 'decreases', 'stays the same', 'drops to zero']
+          },
+          {
+            label: 'An ideal gas goes through one complete cycle and returns exactly to its starting state. Its entropy change for the cycle',
+            options: ['is positive', 'is negative', 'is zero', 'cannot be known']
+          }
+        ],
+        correctAnswers: ['increases', 'decreases', 'increases', 'is zero'],
+        hint1: 'In an isolated system, energy spreading into more space increases entropy.',
+        hint2: 'A closed system that loses energy to cooler surroundings can lose entropy, but the total for system plus surroundings cannot decrease.',
+        hint3: 'Entropy is a state function, so returning to the same state means returning to the same entropy.',
+        explanation: 'Free expansion spreads the gas into more space, raising its entropy. The coffee loses energy, so its own entropy drops, but the room gains more, so the total rises. After a full cycle the gas is back in its original state, so its entropy change is zero.'
       }
     }
   ]

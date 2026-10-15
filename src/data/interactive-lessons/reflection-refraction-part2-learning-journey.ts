@@ -48,8 +48,8 @@ The master equation for predicting how light bends
 **Part 7:** Total Internal Reflection 💎  
 When light can't escape (fiber optics & diamonds!)
 
-**Part 8:** Dispersion & Rainbows 🌈  
-Why white light splits into colors
+**Part 8:** Refraction Through Several Surfaces 🧊  
+Glass blocks, layered materials, and measuring $n$ in the lab
 
 ## Time Investment:
 
@@ -85,14 +85,14 @@ Students who draw clear diagrams solve problems 3x faster than those who don't.
       content: `
 # Success Tip #2: Master Sign Conventions 📏
 
-The Cartesian sign convention (Part 3) is the **single most important** concept in this entire lesson.
+The AP "real is positive" sign convention (Part 3) is the **single most important** concept in this entire lesson.
 
 ## Why It Matters:
 
 **Get this right →** Everything else becomes easy  
 **Skip this →** You'll struggle with every single problem
 
-We've created interactive animations and quizzes to make this concept crystal clear.
+Part 3 walks through worked mirror and lens examples and sign practice to make it crystal clear.
 
 **Take your time on Part 3.** It's worth it!
       `
@@ -151,7 +151,7 @@ This is where the real magic begins. You're about to learn the coordinate system
         questions: [
           {
             question: 'Which part of this course deserves the most careful attention?',
-            options: ['Part 1 (Introduction)', 'Part 3 (Sign Convention)', 'Part 6 (Snell\'s Law)', 'Part 8 (Dispersion)'],
+            options: ['Part 1 (Introduction)', 'Part 3 (Sign Convention)', 'Part 6 (Snell\'s Law)', 'Part 8 (Several Surfaces)'],
             correctAnswer: 1,
             explanation: 'Part 3 (Sign Convention) is the foundation for every calculation that follows. Take your time with it!'
           },
@@ -165,7 +165,7 @@ This is where the real magic begins. You're about to learn the coordinate system
             question: 'A classmate says they will skip sign convention and just use positive numbers everywhere. What\'s the risk?',
             options: [
               'No risk — signs don\'t matter in optics',
-              'They\'ll often get wrong conclusions about image side or bending direction',
+              'They will place images on the wrong side of the mirror',
               'It only matters for prism problems',
               'Sign convention is optional for AP exams'
             ],

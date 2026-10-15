@@ -167,7 +167,7 @@ A hydrogen atom transitions from the $n = 5$ level to the $n = 2$ level.
         hint1: '$E_5 = -13.6/25 = -0.544$ eV.',
         hint2: '$E_2 = -13.6/4 = -3.40$ eV. $\\Delta E = E_5 - E_2$.',
         hint3: '$\\lambda = 1240/\\Delta E$.',
-        explanation: '$E_5 = -0.544$ eV, $E_2 = -3.40$ eV. $\\Delta E = -0.544 - (-3.40) = 2.856 \\approx 2.86$ eV. $\\lambda = 1240/2.86 = 433.6 \\approx 434$ nm (blue-violet light — part of the Balmer series).'
+        explanation: '$E_5 = -0.544$ eV, $E_2 = -3.40$ eV. $\\Delta E = -0.544 - (-3.40) = 2.856 \\approx 2.86$ eV. $\\lambda = 1240/2.86 = 433.6 \\approx 434$ nm (blue-violet visible light).'
       }
     },
     {

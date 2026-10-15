@@ -38,10 +38,10 @@ This says: the voltage drop across a resistor equals the current through it time
 - Their $I$-$V$ graph is a **straight line** through the origin
 
 **Non-ohmic materials** have resistance that changes:
-- Light bulbs (filament heats up → $R$ increases)
-- Diodes (current flows in only one direction)
-- Semiconductors
+- A glowing light bulb filament (it heats up, so $R$ increases)
 - Their $I$-$V$ graph is **curved**
+
+> 📝 On the AP exam, resistors and lightbulbs are treated as ohmic unless a question says otherwise.
 
 ### Reading $I$-$V$ Curves
 

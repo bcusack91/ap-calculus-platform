@@ -5,151 +5,158 @@ export const physics2TemperaturePart4Data = {
       id: 'te4-intro',
       type: 'text' as const,
       content: `
-# 📦 Volume & Area Thermal Expansion
+# 🎈 The Ideal Gas Law
 
-**Part 4 of 7 — Expansion in Two and Three Dimensions**
+**Part 4 of 7 — Pressure, Volume, Amount, and Temperature in One Equation**
 
-A solid expands in **all** directions when heated. For flat objects (plates, sheets), we care about **area expansion**. For bulk objects (tanks, spheres, liquids), we care about **volume expansion**.
+Part 3 explained pressure with collisions. Now we connect pressure to the other measurable properties of a gas — volume, the amount of gas, and temperature — using the model of an **ideal gas**.
       `
     },
     {
-      id: 'te4-area-volume',
+      id: 'te4-model',
       type: 'text' as const,
       content: `
-## Area Expansion
+## The Ideal Gas Model
 
-For a flat surface of original area $A_0$:
+The classical ideal gas model makes four assumptions about the atoms:
 
-$$\\Delta A = 2\\alpha \\, A_0 \\, \\Delta T$$
-
-$$A = A_0(1 + 2\\alpha \\, \\Delta T)$$
-
-The factor of **2** arises because a surface has two linear dimensions, and each expands by factor $\\alpha$.
-
-## Volume Expansion
-
-For a solid or liquid of original volume $V_0$:
-
-$$\\Delta V = \\beta \\, V_0 \\, \\Delta T$$
-
-$$V = V_0(1 + \\beta \\, \\Delta T)$$
-
-where $\\beta$ is the **coefficient of volume expansion**.
-
-### The Key Relationship
-
-For isotropic solids:
-
-$$\\boxed{\\beta \\approx 3\\alpha}$$
-
-This is because a volume has three linear dimensions. Each expands by $\\alpha$, giving:
-
-$(1 + \\alpha \\Delta T)^3 \\approx 1 + 3\\alpha \\Delta T$ for small $\\alpha \\Delta T$.
-
-### Volume Expansion Coefficients
-
-| Material | $\\beta$ (× $10^{-6}$ /°C) |
+| Assumption | What it means |
 |---|---|
-| Aluminum | 69 |
-| Steel | 36 |
-| Glass (ordinary) | 27 |
-| Mercury | 182 |
-| Water (at 20°C) | 207 |
-| Ethanol | 1,120 |
-| Gasoline | 950 |
+| Random motion | At any instant, atom velocities point in random directions |
+| Negligible volume | The atoms themselves take up almost none of the container's volume |
+| Elastic collisions | Kinetic energy is conserved when atoms collide with each other or the walls |
+| No forces except during collisions | Atoms do not attract or repel each other between collisions |
 
-> 🔑 Liquids generally have much larger $\\beta$ values than solids. This is why a full gasoline tank can overflow on a hot day!
-      `
-    },
-    {
-      id: 'te4-water-anomaly',
-      type: 'text' as const,
-      content: `
-## The Anomalous Expansion of Water 🌊
+Real gases behave almost ideally when they are **not too dense** and **not too cold**, because then the atoms are far apart and moving fast enough that attractions hardly matter. On the AP exam, gases are treated as ideal (and monatomic) unless a problem says otherwise.
 
-Water is one of the most unusual substances in nature. Most materials contract when cooled and expand when heated. Water does this **above 4°C**, but between **0°C and 4°C, water expands as it cools**.
+## The Ideal Gas Law
 
-### Key Facts
-- Water has its **maximum density at 4°C** ($\\rho = 1{,}000.0$ $kg/m^{3}$)
-- From 4°C → 0°C, water **expands** (density decreases)
-- Ice at 0°C is about **9% less dense** than liquid water at 0°C
+$$\\boxed{PV = nRT = Nk_BT}$$
 
-### Why This Matters for Life on Earth
+| Symbol | Meaning | SI unit |
+|---|---|---|
+| $P$ | absolute pressure | Pa |
+| $V$ | volume | $\\text{m}^3$ |
+| $n$ | number of moles | mol |
+| $N$ | number of atoms | (none) |
+| $T$ | absolute temperature | K |
+| $R$ | gas constant, $8.31$ J/(mol·K) | |
+| $k_B$ | Boltzmann's constant, $1.38 \\times 10^{-23}$ J/K | |
 
-1. **Lakes freeze from the top down**: In winter, surface water cools below 4°C and becomes less dense, so it stays on top. The densest water (4°C) sinks to the bottom.
+The two forms are the same law: $N = nN_A$ and $R = N_A k_B$. Use $n$ and $R$ when you know moles; use $N$ and $k_B$ when you count atoms.
 
-2. **Ice floats**: Since ice is less dense than liquid water, it forms an insulating layer on the surface, protecting aquatic life below.
-
-3. **Deep lakes maintain ~4°C at the bottom**: Even when the surface freezes, the bottom stays at 4°C, allowing fish and other organisms to survive winter.
-
-### Practical Consequence
-
-If water behaved like a "normal" liquid (contracting all the way to freezing), lakes would freeze from the **bottom up**, likely killing all aquatic life in cold climates. Water's anomalous expansion is crucial for life on Earth!
+### Unit Traps
+- $T$ must be in **kelvins**: $T_K = T_C + 273$.
+- $V$ must be in **cubic meters**: $1 \\text{ L} = 10^{-3} \\text{ m}^3$.
+- $P$ must be in **pascals**: $1 \\text{ kPa} = 10^3$ Pa.
       `
     },
     {
       id: 'te4-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Volume Expansion Quiz** 🧠
+**Ideal Gas Model Check** 🧠
       `,
       exercise: {
         questions: [
           {
-            question: 'The coefficient of volume expansion $\\beta$ is related to the coefficient of linear expansion $\\alpha$ by:',
+            question: 'Which assumption is part of the classical ideal gas model?',
             options: [
-              'β = α',
-              'β = 2α',
-              'β ≈ 3α',
-              'β = $\\alpha^{2}$'
+              'Forces act only during collisions',
+              'Atoms attract each other weakly at all distances',
+              'Atoms lose some kinetic energy in every collision',
+              'Atoms fill a large fraction of the container volume'
             ],
-            correctAnswer: 2,
-            explanation: 'A volume has three linear dimensions. Each expands by factor $\\alpha$, so $\\beta \\approx 3\\alpha$. This comes from expanding $(1 + \\alpha \\Delta T)^3 \\approx 1 + 3\\alpha \\Delta T$.'
+            correctAnswer: 0,
+            explanation: 'In the ideal gas model the only appreciable forces act during collisions, and those collisions are elastic. Attractions between atoms, energy loss in collisions, and a large atomic volume are all features of real gases that the model ignores.'
           },
           {
-            question: 'Water has its maximum density at:',
+            question: 'A sealed, rigid tank of gas is warmed from $27°\\text{C}$ to $327°\\text{C}$. The pressure becomes:',
             options: [
-              '0°C',
-              '4°C',
-              '20°C',
-              '100°C'
+              'Twice the original',
+              'About 12 times the original',
+              'Unchanged',
+              'Half the original'
             ],
-            correctAnswer: 1,
-            explanation: 'Water reaches its maximum density of $1{,}000.0$ $kg/m^{3}$ at 4°C. Below 4°C, water anomalously expands as it cools, making it less dense.'
+            correctAnswer: 0,
+            explanation: 'With $V$ and $n$ fixed, $P \\propto T$ in kelvins: $T$ goes from 300 K to 600 K, so $P$ doubles. The ratio $327/27 \\approx 12$ wrongly uses Celsius temperatures.'
           },
           {
-            question: 'A steel tank is completely filled with gasoline at 15°C. On a hot day (40°C), the gasoline will:',
+            question: 'At constant temperature, a fixed amount of ideal gas is squeezed to one-third of its volume. Its pressure:',
             options: [
-              'Stay at the same level (both expand equally)',
-              'Drop below the rim (tank expands more than gasoline)',
-              'Overflow (gasoline expands much more than the steel tank)',
-              'Shrink as it warms, like water just above 0°C'
+              'Triples',
+              'Drops to one-third',
+              'Increases by a factor of nine',
+              'Stays the same'
             ],
-            correctAnswer: 2,
-            explanation: 'Gasoline has $\\beta = 950 \\times 10^{-6}$ /°C while steel has $\\beta = 36 \\times 10^{-6}$ /°C. The gasoline expands about 26 times more than the tank, so it overflows.'
+            correctAnswer: 0,
+            explanation: 'With $n$ and $T$ fixed, $PV$ is constant, so $P \\propto 1/V$: one-third the volume gives three times the pressure. A factor of nine would come from wrongly squaring the volume ratio.'
           }
         ]
       }
     },
     {
-      id: 'te4-calculation-drill',
+      id: 'te4-worked',
+      type: 'text' as const,
+      content: `
+## Worked Examples
+
+### Example 1 — How Many Moles?
+
+A $2.0$ L flask holds helium at $150$ kPa and $27°\\text{C}$. How many moles of helium are inside?
+
+Convert first: $V = 2.0 \\times 10^{-3} \\text{ m}^3$, $P = 1.5 \\times 10^5$ Pa, $T = 300$ K.
+
+$$n = \\frac{PV}{RT} = \\frac{(1.5 \\times 10^5)(2.0 \\times 10^{-3})}{(8.31)(300)} = \\frac{300}{2493} \\approx 0.12 \\text{ mol}$$
+
+### Example 2 — How Many Atoms?
+
+Using the same flask, the number of atoms is
+
+$$N = \\frac{PV}{k_BT} = \\frac{300}{(1.38 \\times 10^{-23})(300)} \\approx 7.2 \\times 10^{22} \\text{ atoms}$$
+
+### Example 3 — Two States of the Same Gas
+
+For a fixed amount of gas, $\\frac{PV}{T}$ stays constant, so
+
+$$\\frac{P_1V_1}{T_1} = \\frac{P_2V_2}{T_2}$$
+
+A balloon holds $3.0$ L of air at $100$ kPa and $300$ K. It rises to where the pressure is $75$ kPa and the temperature is $270$ K. New volume:
+
+$$V_2 = V_1 \\cdot \\frac{P_1}{P_2} \\cdot \\frac{T_2}{T_1} = 3.0 \\cdot \\frac{100}{75} \\cdot \\frac{270}{300} = 3.6 \\text{ L}$$
+
+Ratios let you keep liters and kilopascals here, because the units cancel. Temperature must still be in kelvins.
+
+## Special Cases at a Glance
+
+| Held constant | Relationship | Graph shape |
+|---|---|---|
+| $T$ (isothermal) | $P \\propto 1/V$ | $P$ vs. $V$ is a hyperbola |
+| $P$ (isobaric) | $V \\propto T$ | $V$ vs. $T$ is a line through the origin (in K) |
+| $V$ (isovolumetric) | $P \\propto T$ | $P$ vs. $T$ is a line through the origin (in K) |
+      `
+    },
+    {
+      id: 'te4-drill',
       type: 'input-boxes' as const,
       content: `
-**Volume Expansion Drill** 📦
+**Ideal Gas Law Drill** 🎈
 
-1) A steel container holds 50.0 L of gasoline at 10°C. How much gasoline (in mL) overflows when heated to 35°C? Use $\\beta_{\\text{gas}} = 950 \\times 10^{-6}$ /°C and $\\beta_{\\text{steel}} = 36 \\times 10^{-6}$ /°C. (Answer = ΔV_gas − ΔV_tank)
+Use $R = 8.31$ J/(mol·K) and $k_B = 1.38 \\times 10^{-23}$ J/K.
 
-2) A glass flask ($\\beta = 27 \\times 10^{-6}$ /°C) has a volume of 200.0 $cm^{3}$ at 20°C. Find its volume increase $\\Delta V$ $(in cm^{3})$ when heated to 120°C. Round to 3 significant figures.
+1) A $0.50$ mol sample of gas fills a $10.0$ L container at $400$ K. Find the pressure in kPa (3 significant figures).
 
-3) An aluminum cube ($\\alpha = 23 \\times 10^{-6}$ /°C) has a side of 10.0 cm at 20°C. Find the increase in its volume $\\Delta V$ $(in cm^{3})$ when heated to 220°C. Use $\\beta = 3\\alpha$. Round to 3 significant figures.
+2) A $5.0 \\times 10^{-3} \\text{ m}^3$ container holds gas at $2.0 \\times 10^5$ Pa and $350$ K. Find the number of atoms, in units of $10^{23}$ (2 significant figures).
+
+3) A gas at $200$ kPa and $300$ K is heated at constant volume until the pressure is $260$ kPa. Find the final temperature in K.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1143', '0.54', '13.8'],
-        hint1: '$\\Delta V_{\\text{overflow}} = (\\beta_{\\text{gas}} - \\beta_{\\text{steel}}) V_0 \\Delta T = (950 - 36) \\times 10^{-6} \\times 50.0 \\times 25$. Convert L to mL.',
-        hint2: '$\\Delta V = \\beta V_0 \\Delta T = (27 \\times 10^{-6})(200.0)(100)$.',
-        hint3: '$V_0 = (10.0)^3 = 1000$ $cm^{3}$. $\\beta = 3(23 \\times 10^{-6}) = 69 \\times 10^{-6}$. $\\Delta V = (69 \\times 10^{-6})(1000)(200)$.',
-        explanation: '1) $\\Delta V = (914 \\times 10^{-6})(50.0)(25) = 1.1425$ L $= 1{,}143$ mL. 2) $\\Delta V = (27 \\times 10^{-6})(200.0)(100) = 0.54$ $cm^{3}$. 3) $V_0 = 1{,}000$ $cm^{3}$, $\\beta = 69 \\times 10^{-6}$ /°C, $\\Delta T = 200$°C. $\\Delta V = (69 \\times 10^{-6})(1{,}000)(200) = 13.8$ $cm^{3}$.'
+        correctAnswers: ['166', '2.1', '390'],
+        hint1: '$P = nRT/V$ with $V = 10.0 \\times 10^{-3} \\text{ m}^3$. Divide pascals by 1,000 for kPa.',
+        hint2: '$N = PV/(k_BT) = (2.0 \\times 10^5)(5.0 \\times 10^{-3}) / [(1.38 \\times 10^{-23})(350)]$.',
+        hint3: 'At constant volume $P/T$ is constant: $T_2 = T_1 (P_2/P_1)$.',
+        explanation: '1) $P = (0.50)(8.31)(400)/(0.0100) = 1.66 \\times 10^5$ Pa $= 166$ kPa. 2) $N = 1000 / (4.83 \\times 10^{-21}) \\approx 2.1 \\times 10^{23}$. 3) $T_2 = 300 \\times 260/200 = 390$ K.'
       }
     },
     {
@@ -161,26 +168,26 @@ If water behaved like a "normal" liquid (contracting all the way to freezing), l
       exercise: {
         questions: [
           {
-            question: 'Lakes freeze from the top down because:',
+            question: 'A gas is held at constant pressure while its absolute temperature doubles. Its volume:',
             options: [
-              'Ice is a good thermal insulator for the water beneath it',
-              'Water below 4°C is less dense, so the coldest water stays on top',
-              'Sunlight warms the bottom of the lake more than the top',
-              'Wind cools only the surface layer of the lake'
+              'Becomes half as large',
+              'Becomes twice as large',
+              'Stays the same',
+              'Becomes four times as large'
             ],
             correctAnswer: 1,
-            explanation: 'Water is densest at 4°C. As surface water cools below 4°C, it becomes less dense and stays on top, eventually freezing. The 4°C water sinks to the bottom, keeping it liquid and habitable for aquatic life.'
+            explanation: 'At constant $P$ and $n$, $V \\propto T$ (in kelvins), so doubling $T$ doubles $V$. The volume would halve only if the pressure doubled at constant temperature.'
           },
           {
-            question: 'A mercury thermometer works because mercury has a much larger $\\beta$ than glass. If $\\beta_{\\text{Hg}} = \\beta_{\\text{glass}}$, the thermometer would:',
+            question: 'Two containers have equal volume and equal temperature. Container X holds twice as many moles of gas as container Y. Which is true?',
             options: [
-              'Work the same way, just more slowly',
-              'Show no change in mercury level',
-              'Read about twice the true temperature change',
-              'Crack from thermal stress at high temperatures'
+              'X has double the pressure, because pressure is proportional to $n$',
+              'X and Y have equal pressure, because they share $V$ and $T$',
+              'X has four times the pressure, because both the hits and their force double',
+              'X has half the pressure, because its atoms crowd each other'
             ],
-            correctAnswer: 1,
-            explanation: 'A mercury thermometer shows the **difference** between mercury expansion and glass expansion. If both expanded at the same rate, the mercury level would not change relative to the glass tube, and the thermometer would be useless.'
+            correctAnswer: 0,
+            explanation: 'With $V$ and $T$ equal, $P = nRT/V$ is proportional to $n$, so X has twice the pressure. Doubling the moles doubles the collision rate but not the momentum per collision, so the pressure does not quadruple.'
           }
         ]
       }

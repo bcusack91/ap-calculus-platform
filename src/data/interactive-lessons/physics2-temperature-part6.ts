@@ -76,17 +76,16 @@ $$\\frac{v_1}{v_2} = \\sqrt{\\frac{m_2}{m_1}} = \\sqrt{\\frac{M_2}{M_1}}$$
 
 **Lighter molecules move faster.** Helium ($M = 4$) moves $\\sqrt{28/4} = \\sqrt{7} \\approx 2.65$ times faster than nitrogen ($M = 28$) at the same temperature.
 
-## Maxwell-Boltzmann Distribution
+## The Maxwell–Boltzmann Distribution
 
-Not all molecules in a gas move at the same speed. The **Maxwell-Boltzmann distribution** describes the spread:
+Not all molecules in a gas move at the same speed. The **Maxwell–Boltzmann distribution** is a graph of how many molecules have each speed (or energy) at a given temperature:
 
-- Most molecules cluster near a **most probable speed** $v_p = \\sqrt{\\frac{2k_BT}{m}}$
-- The **average speed** $\\bar{v} = \\sqrt{\\frac{8k_BT}{\\pi m}}$ is slightly higher
-- The **rms speed** $v_{\\text{rms}} = \\sqrt{\\frac{3k_BT}{m}}$ is highest of the three
+- The curve starts at zero, rises to a peak, and has a long tail toward high speeds.
+- The rms speed sits a little to the right of the peak, because the fast tail pulls it up.
+- At a **higher temperature**, the curve shifts to the right and spreads out, and its peak gets lower. The area under the curve (the total number of molecules) stays the same.
+- At the same temperature, a **lighter** gas has a curve shifted to higher speeds than a heavier gas.
 
-$$v_p < \\bar{v} < v_{\\text{rms}}$$
-
-At higher temperatures, the distribution **flattens and shifts right** — more molecules move faster, and the spread of speeds increases.
+You will not be asked for the equation of this curve, but you should be able to compare curves for different temperatures and explain what each feature means.
       `
     },
     {
@@ -120,15 +119,15 @@ At higher temperatures, the distribution **flattens and shifts right** — more 
             explanation: '$v_{\\text{rms}} = \\sqrt{3RT/M}$. Since $v_{\\text{rms}} \\propto \\sqrt{T}$, doubling $T$ increases $v_{\\text{rms}}$ by a factor of $\\sqrt{2} \\approx 1.41$. Note: $KE_{\\text{avg}}$ doubles, but speed only increases by $\\sqrt{2}$ because $KE \\propto v^2$.'
           },
           {
-            question: 'The three characteristic speeds of a Maxwell-Boltzmann distribution, from smallest to largest, are:',
+            question: 'Two Maxwell–Boltzmann speed curves are drawn for the same gas. Curve 2 peaks at a higher speed and is lower and broader than curve 1. Which statement is supported?',
             options: [
-              '$v_{\\text{rms}} < \\bar{v} < v_p$',
-              '$v_p < v_{\\text{rms}} < \\bar{v}$',
-              '$v_p < \\bar{v} < v_{\\text{rms}}$',
-              '$\\bar{v} < v_p < v_{\\text{rms}}$'
+              'Curve 2 is hotter than curve 1',
+              'Curve 2 contains fewer molecules than curve 1',
+              'Curve 2 is for a heavier gas at the same temperature',
+              'Curve 2 is at a lower temperature than curve 1'
             ],
-            correctAnswer: 2,
-            explanation: 'The ordering is always $v_p < \\bar{v} < v_{\\text{rms}}$. The most probable speed $v_p$ is at the peak of the distribution. The average and rms speeds are progressively higher because the distribution has a long tail to the right.'
+            correctAnswer: 0,
+            explanation: 'Heating shifts the distribution toward higher speeds and spreads it out, so its peak drops while the area (the number of molecules) stays the same. A heavier gas would shift the curve toward lower speeds, not higher ones.'
           }
         ]
       }

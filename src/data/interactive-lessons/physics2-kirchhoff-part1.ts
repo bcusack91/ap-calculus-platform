@@ -116,27 +116,31 @@ $$I_4 = 3 \\text{ A (out)}$$
       id: 'kl1-complex-nodes',
       type: 'text' as const,
       content: `
-## Multiple Junctions in a Circuit
+## Junctions in a Parallel Circuit
 
-Real circuits have **many** junctions. KCL applies at **each one independently**.
+Real circuits have **many** junctions, and the junction rule applies at **each one independently**.
 
-### Example: Two-Node Circuit
+### Example: Current Splitting and Rejoining
 
-Consider a circuit with two nodes (A and B) and three branches:
+A battery sends a current $I_1$ to junction A, where the wire splits into two parallel branches carrying $I_2$ and $I_3$. The branches rejoin at junction B and return to the battery.
 
-**Node A:**
+**Junction A** (split):
 $$I_1 = I_2 + I_3$$
 
-**Node B:**
+**Junction B** (rejoin):
 $$I_2 + I_3 = I_1$$
 
-Notice that the equation at node B gives the **same information** as node A — this is always the case. For a circuit with $N$ nodes, KCL gives only $N - 1$ independent equations.
+If $I_2 = 1.5$ A and $I_3 = 2.5$ A, the battery current is $I_1 = 4.0$ A, both leaving the battery and returning to it. Charge is not used up by the branches; it only divides among them.
 
-### Practical Rule
+### Junction Rule in Terms of Charge
 
-> 📝 **In a circuit with $N$ nodes, you get $N - 1$ independent KCL equations.**
+The rule is really a statement about charge per unit time:
 
-This is important when setting up systems of equations for complex circuits — you'll need additional equations from the loop rule (Part 2) to solve for all unknowns.
+$$\\frac{\\Delta q_{\\text{in}}}{\\Delta t} = \\frac{\\Delta q_{\\text{out}}}{\\Delta t}$$
+
+If 12 C enters a junction in 3 s, then 12 C must leave it in those same 3 s, a total outgoing current of 4 A.
+
+> 💡 **Exam habit**: When a free-response question asks you to justify a current, name the junction rule and conservation of charge explicitly.
       `
     },
     {
@@ -189,15 +193,15 @@ A circuit node has five branches connected to it. The currents are:
             explanation: 'A negative current simply means your assumed direction was wrong. The actual current is 3 A flowing opposite to the direction you drew. This is perfectly normal and expected in circuit analysis.'
           },
           {
-            question: 'A circuit has 4 nodes. How many independent KCL equations can you write?',
+            question: 'In 2.0 s, 10 C of charge enters a junction through one wire. A second wire carries 3.0 A out of the junction. What is the current in the third wire, which also leaves the junction?',
             options: [
-              '2',
-              '3',
-              '4',
-              '5'
+              '2.0 A',
+              '5.0 A',
+              '8.0 A',
+              '13 A'
             ],
-            correctAnswer: 1,
-            explanation: 'For $N$ nodes, you get $N - 1$ independent equations. With 4 nodes: $4 - 1 = 3$ independent KCL equations.'
+            correctAnswer: 0,
+            explanation: 'The incoming current is $10/2.0 = 5.0$ A, and charge in per second equals charge out per second, so $5.0 = 3.0 + I_3$ and $I_3 = 2.0$ A. 5.0 A is the incoming current itself, 8.0 A adds the 3.0 A instead of subtracting it, and 13 A adds 10 C to 3.0 A without dividing by the time.'
           }
         ]
       }

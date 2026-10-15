@@ -41,39 +41,8 @@ $$d = \\frac{1}{N}$$
 | Number of slits | 2 | Thousands |
 | Bright fringes | Broad, fuzzy | **Very sharp, narrow** |
 | Dim between maxima | Gradual | Nearly completely dark |
-| Resolution | Low | **Very high** |
 
-With $N$ slits, each principal maximum is $N$ times as narrow as the double-slit maximum. More slits → sharper peaks.
-      `
-    },
-    {
-      id: 'id4-spectral-analysis',
-      type: 'text' as const,
-      content: `
-## Spectral Analysis with Gratings
-
-### Separating Colors
-
-When white light hits a grating, each wavelength diffracts at a different angle:
-
-$$\\sin\\theta = \\frac{m\\lambda}{d}$$
-
-Longer wavelengths (red) diffract more than shorter wavelengths (violet). This creates a **spectrum** at each order $m$.
-
-### Rainbow Pattern for Each Order
-- $m = 0$: central white maximum (all colors overlap)
-- $m = \\pm 1$: first-order spectrum (violet closest to center, red farthest)
-- $m = \\pm 2$: second-order spectrum (wider spread, may overlap with other orders)
-
-### Resolving Power
-
-The ability to distinguish two close wavelengths is the **resolving power**:
-
-$$R = \\frac{\\lambda}{\\Delta\\lambda} = mN$$
-
-where $N$ is the total number of slits and $m$ is the order.
-
-Higher orders and more slits → better resolution of closely spaced spectral lines.
+The bright maxima appear at the **same angles** as for a double slit with the same $d$, but the many overlapping patterns make each one much **sharper and brighter**, with near-darkness in between. More slits → sharper peaks.
 
 ### Maximum Order
 
@@ -81,39 +50,6 @@ The highest observable order is limited by $\\sin\\theta \\leq 1$:
 
 $$m_{\\max} = \\left\\lfloor \\frac{d}{\\lambda} \\right\\rfloor$$
       `
-    },
-    {
-      id: 'id4-concept-quiz',
-      type: 'multiple-choice' as const,
-      content: `
-**Grating Concepts Quiz** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A diffraction grating has 600 lines/mm. The slit spacing $d$ is:',
-            options: [
-              '$6.0 \\times 10^{-4}$ m',
-              '$1.67 \\times 10^{-6}$ m',
-              '$6.0 \\times 10^{-7}$ m',
-              '$1.67 \\times 10^{-3}$ m'
-            ],
-            correctAnswer: 1,
-            explanation: '$d = 1/N = 1/(600\\text{ lines/mm}) = 1/(600{,}000\\text{ lines/m}) = 1.67 \\times 10^{-6}$ m.'
-          },
-          {
-            question: 'Compared to a double-slit pattern, a diffraction grating with 5000 slits produces maxima that are:',
-            options: [
-              'Broader and dimmer',
-              'The same width',
-              'Much sharper and brighter',
-              'Shifted to new angles'
-            ],
-            correctAnswer: 2,
-            explanation: 'More slits means the constructive interference condition must be satisfied more precisely, producing much sharper (narrower) and brighter maxima. The angles remain the same — they depend only on $d$ and $\\lambda$.'
-          }
-        ]
-      }
     },
     {
       id: 'id4-calculation-drill',
@@ -139,23 +75,48 @@ A diffraction grating has 800 lines/mm. Monochromatic light of $\\lambda = 550$ 
       }
     },
     {
-      id: 'id4-resolving-drill',
+      id: 'id4-spectral-analysis',
+      type: 'text' as const,
+      content: `
+## Spectral Analysis with Gratings
+
+### Separating Colors
+
+When white light hits a grating, each wavelength diffracts at a different angle:
+
+$$\\sin\\theta = \\frac{m\\lambda}{d}$$
+
+Longer wavelengths (red) diffract more than shorter wavelengths (violet). This creates a **spectrum** at each order $m$.
+
+### Rainbow Pattern for Each Order
+- $m = 0$: central white maximum (all colors overlap)
+- $m = \\pm 1$: first-order spectrum (violet closest to center, red farthest)
+- $m = \\pm 2$: second-order spectrum (wider spread, may overlap with other orders)
+
+Because the maxima are so sharp, each color lands as a distinct line — which is how a grating identifies the wavelengths present in a light source.
+      `
+    },
+    {
+      id: 'id4-spectrum-drill',
       type: 'input-boxes' as const,
       content: `
-**Resolving Power Drill** 🔬
+**White-Light Spectrum Drill** 🌈
 
-A grating has 5000 total slits.
+White light containing wavelengths from 400 nm (violet) to 700 nm (red) falls on a grating with 500 lines/mm.
 
-1) What is the resolving power in the 2nd order?
+1) Angle of the 1st-order maximum for 400 nm light (in degrees, to 3 significant figures)
 
-2) In the 2nd order, what is the minimum wavelength difference $\\Delta\\lambda$ that can be resolved near $\\lambda = 589$ nm? (in nm, to 3 significant figures)
+2) Angle of the 1st-order maximum for 700 nm light (in degrees, to 3 significant figures)
+
+3) Angular width of the 1st-order spectrum, from violet to red (in degrees, to 3 significant figures)
       `,
       exercise: {
-        boxes: 2,
-        correctAnswers: ['10000', '0.06'],
-        hint1: '$R = mN = (2)(5000)$.',
-        hint2: '$\\Delta\\lambda = \\lambda / R = 589 / 10000$.',
-        explanation: '$R = mN = 2 \\times 5000 = 10{,}000$. $\\Delta\\lambda = 589/10{,}000 = 0.0589 \\approx 0.06$ nm. This grating can resolve the sodium doublet (589.0 nm and 589.6 nm) in 2nd order.'
+        boxes: 3,
+        correctAnswers: ['11.5', '20.5', '8.95'],
+        hint1: '$d = 1/500$ mm $= 2.0\\;\\mu$m, so $\\sin\\theta = \\lambda/d = 400/2000$ for violet.',
+        hint2: 'For red, $\\sin\\theta = 700/2000 = 0.35$.',
+        hint3: 'Subtract the violet angle from the red angle (use unrounded values).',
+        explanation: '$d = 2.0\\;\\mu$m. Violet: $\\sin\\theta = 0.200$, $\\theta = 11.54° \\approx 11.5°$. Red: $\\sin\\theta = 0.350$, $\\theta = 20.49° \\approx 20.5°$. The first-order spectrum spans $20.49° - 11.54° = 8.95°$, with violet nearest the white central maximum.'
       }
     },
     {
@@ -166,6 +127,28 @@ A grating has 5000 total slits.
       `,
       exercise: {
         questions: [
+          {
+            question: 'A diffraction grating has 600 lines/mm. The slit spacing $d$ is:',
+            options: [
+              '$6.0 \\times 10^{-4}$ m',
+              '$1.67 \\times 10^{-6}$ m',
+              '$6.0 \\times 10^{-7}$ m',
+              '$1.67 \\times 10^{-3}$ m'
+            ],
+            correctAnswer: 1,
+            explanation: '$d = 1/N = 1/(600\\text{ lines/mm}) = 1/(600{,}000\\text{ lines/m}) = 1.67 \\times 10^{-6}$ m.'
+          },
+          {
+            question: 'Compared to a double-slit pattern, a diffraction grating with 5000 slits produces maxima that are:',
+            options: [
+              'Broader and dimmer',
+              'The same width',
+              'Much sharper and brighter',
+              'Shifted to new angles'
+            ],
+            correctAnswer: 2,
+            explanation: 'More slits means the constructive interference condition must be satisfied more precisely, producing much sharper (narrower) and brighter maxima. The angles remain the same — they depend only on $d$ and $\\lambda$.'
+          },
           {
             question: 'When white light passes through a diffraction grating, the $m = 1$ spectrum appears with:',
             options: [
@@ -178,15 +161,15 @@ A grating has 5000 total slits.
             explanation: '$\\sin\\theta = m\\lambda/d$. Longer wavelength → larger angle. So violet (short λ) is closest to center and red (long λ) is farthest.'
           },
           {
-            question: 'To increase the resolving power of a diffraction grating, you should:',
+            question: 'A grating with more lines per millimeter replaces the original grating. The first-order spectrum of white light now:',
             options: [
-              'Use fewer slits across the beam',
-              'Use a lower diffraction order',
-              'Use more slits or a higher diffraction order',
-              'Use a longer wavelength of light'
+              'Spreads over smaller angles, closer to the center',
+              'Spreads over larger angles, farther from the center',
+              'Spreads over the same angles, only dimmer',
+              'Merges into the white central maximum'
             ],
-            correctAnswer: 2,
-            explanation: '$R = mN$. Resolving power increases with more illuminated slits $N$ and higher order $m$. Fewer slits or a lower order reduce it, and $R$ does not depend on the wavelength used.'
+            correctAnswer: 1,
+            explanation: 'More lines per millimeter means a smaller spacing $d$, and $\\sin\\theta = m\\lambda/d$ grows as $d$ shrinks, so every color moves to a larger angle and the spectrum spreads out. The angles depend on $d$, so they cannot stay the same.'
           }
         ]
       }

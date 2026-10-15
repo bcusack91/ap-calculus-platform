@@ -123,7 +123,7 @@ The difference is just whether the surface is smooth (specular) or rough (diffus
       content: `
 # Plane Mirror Sign Convention
 
-Let's apply the **Cartesian sign convention** to **plane mirrors** (flat mirrors with specular reflection).
+Let's apply the AP sign convention to **plane mirrors** (flat mirrors with specular reflection).
 
 ## Ray Tracing Animation
 
@@ -131,30 +131,26 @@ Watch how we locate the virtual image using ray tracing:
 
 <iframe src="/optics/plane-mirror-animation.html" width="100%" height="700" frameborder="0" style="border-radius: 10px; margin: 20px 0;"></iframe>
 
-## Applying the Sign Convention:
+## Applying the Sign Convention
 
-Remember from Part 2: Light travels from left to right, making **right positive (+)** and **left negative (−)**.
+Use the AP "real is positive" convention from Part 3.
 
-For a plane mirror positioned vertically:
+**Object in front of the mirror** (where light comes from):
+- Object distance $s_o$ is **positive**, as it is for every real object.
 
-**Object on the left** (where light comes from):
-- Object distance: $d_o$ = **negative** (−) because it's on the left side
-- The object is in the negative region of our coordinate system
+**Image behind the mirror**:
+- No light actually travels behind the mirror; the reflected rays only *appear* to come from there.
+- So the image is **virtual**, and its image distance $s_i$ is **negative**.
 
-**Image on the right** (behind the mirror):
-- Image distance: $d_i$ = **positive** (+) because it's on the right side  
-- Virtual image forms in the positive direction, behind the mirror
+## The Relationship
 
-## The Relationship:
+A plane mirror is flat, so its focal point is infinitely far away and $\\frac{1}{f} = 0$. The mirror equation then gives
 
-For a plane mirror, the magnitudes are equal but signs follow our Cartesian convention:
-$$|d_o| = |d_i|$$
+$$\\frac{1}{s_i} + \\frac{1}{s_o} = 0 \\quad\\Rightarrow\\quad s_i = -s_o$$
 
-Since the object and image are equidistant from the mirror but on opposite sides, and considering our coordinate system where light travels left-to-right (negative to positive):
+The image is exactly as far behind the mirror as the object is in front, and $|M| = |s_i/s_o| = 1$: same size and upright.
 
-$$d_i = -d_o$$
-
-**Key Point**: The signs follow the Cartesian convention we established in Part 2. Left side = negative, right side = positive. The image appears behind the mirror in the positive direction!
+**Key Point**: The minus sign does not mean "to the left." It means the image is virtual.
       `
     },
     {
@@ -190,15 +186,15 @@ Test your understanding of reflection concepts!
             explanation: "In specular reflection (smooth surface), parallel incident rays stay parallel after reflection. This is because all points on the smooth surface have the same orientation, so all normals point in the same direction."
           },
           {
-            question: "For a plane mirror with an object on the left side, using Cartesian sign convention where light travels left to right, what are the correct signs?",
+            question: "An object stands 40 cm in front of a plane mirror. Using the AP sign convention, what is the image distance $s_i$?",
             options: [
-              "Object distance is positive, image distance is negative",
-              "Object distance is negative, image distance is positive",
-              "Both distances are positive",
-              "Both distances are negative"
+              "$-40$ cm, a virtual image behind the mirror",
+              "$+40$ cm, a real image in front of the mirror",
+              "$-20$ cm, a virtual image halfway to the mirror",
+              "$+80$ cm, a real image twice as far away"
             ],
-            correctAnswer: 1,
-            explanation: "With Cartesian convention where light travels left-to-right (negative to positive), the object on the left has negative distance ($d_{o}$ < 0) and the virtual image behind the mirror on the right has positive distance (dᵢ > 0). Remember: dᵢ = $-d_{o}$"
+            correctAnswer: 0,
+            explanation: "For a plane mirror $1/f = 0$, so $s_i = -s_o = -40$ cm. The negative sign marks a virtual image: it sits 40 cm behind the mirror, where reflected light only appears to come from."
           }
         ]
       }

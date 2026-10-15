@@ -87,7 +87,6 @@ By Lenz's Law, eddy currents always create forces that **oppose the relative mot
 - **Magnetic braking** (used in roller coasters and trains)
 - **Metal detectors**
 - **Induction cooktops** (eddy currents generate heat)
-- **Electromagnetic damping** in galvanometers
       `
     },
     {
@@ -142,7 +141,7 @@ For each scenario, determine the direction of the induced current (as viewed fro
             options: ['To the left', 'To the right', 'Upward']
           },
           {
-            label: 'A bar magnet with its N pole is pushed INTO a solenoid from the left. The current in the solenoid (viewed from the left) flows:',
+            label: 'A bar magnet with its N pole is pushed INTO a coil from the left. The current in the coil (viewed from the left) flows:',
             options: ['Clockwise', 'Counterclockwise', 'No current flows']
           },
           {

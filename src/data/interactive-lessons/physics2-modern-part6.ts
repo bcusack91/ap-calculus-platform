@@ -32,25 +32,25 @@ $$^{A}_{Z}X \\to ^{A-4}_{Z-2}Y + ^{4}_{2}\\text{He}$$
 
 A neutron converts to a proton, emitting an **electron** and an **antineutrino**:
 
-$$n \\to p + e^{-} + \\bar{\\nu}_e$$
+$$n \\to p + e^{-} + \\bar{\\nu}$$
 
-$$^{A}_{Z}X \\to ^{A}_{Z+1}Y + ^{\\;\\;0}_{-1}e + \\bar{\\nu}_e$$
+$$^{A}_{Z}X \\to ^{A}_{Z+1}Y + ^{\\;\\;0}_{-1}e + \\bar{\\nu}$$
 
 - $Z$ increases by 1, $A$ stays the same
 - Occurs in neutron-rich nuclei
-- Example: $^{14}_{6}\\text{C} \\to ^{14}_{7}\\text{N} + ^{\\;\\;0}_{-1}e + \\bar{\\nu}_e$
+- Example: $^{14}_{6}\\text{C} \\to ^{14}_{7}\\text{N} + ^{\\;\\;0}_{-1}e + \\bar{\\nu}$
 
 ### Beta-Plus Decay ($\\beta^{+}$)
 
 A proton converts to a neutron, emitting a **positron** and a **neutrino**:
 
-$$p \\to n + e^{+} + \\nu_e$$
+$$p \\to n + e^{+} + \\nu$$
 
-$$^{A}_{Z}X \\to ^{A}_{Z-1}Y + ^{\\;0}_{+1}e + \\nu_e$$
+$$^{A}_{Z}X \\to ^{A}_{Z-1}Y + ^{\\;0}_{+1}e + \\nu$$
 
 - $Z$ decreases by 1, $A$ stays the same
 - Occurs in proton-rich nuclei
-- Example: $^{11}_{6}\\text{C} \\to ^{11}_{5}\\text{B} + ^{\\;0}_{+1}e + \\nu_e$
+- Example: $^{11}_{6}\\text{C} \\to ^{11}_{5}\\text{B} + ^{\\;0}_{+1}e + \\nu$
 
 ### Gamma Decay ($\\gamma$)
 
@@ -84,12 +84,12 @@ Total charge (atomic number) is conserved.
 
 ### 3. Conservation of Lepton Number
 
-- Electron ($e^-$) and neutrino ($\\nu_e$): lepton number = $+1$
-- Positron ($e^+$) and antineutrino ($\\bar{\\nu}_e$): lepton number = $-1$
+- Electron ($e^-$) and neutrino ($\\nu$): lepton number = $+1$
+- Positron ($e^+$) and antineutrino ($\\bar{\\nu}$): lepton number = $-1$
 
 In beta decay, lepton number is conserved (starts at 0, products sum to 0):
-- $\\beta^-$: $e^-$ (+1) and $\\bar{\\nu}_e$ (−1) → total = 0 ✓
-- $\\beta^+$: $e^+$ (−1) and $\\nu_e$ (+1) → total = 0 ✓
+- $\\beta^-$: $e^-$ (+1) and $\\bar{\\nu}$ (−1) → total = 0 ✓
+- $\\beta^+$: $e^+$ (−1) and $\\nu$ (+1) → total = 0 ✓
 
 ### 4. Conservation of Energy and Momentum
 
@@ -124,7 +124,7 @@ The total mass-energy and momentum of the system are conserved. The kinetic ener
               'A proton + electron + neutrino'
             ],
             correctAnswer: 1,
-            explanation: '$n \\to p + e^{-} + \\bar{\\nu}_e$. The neutron converts to a proton, and an electron and antineutrino are emitted to conserve charge and lepton number. A positron would break charge conservation here, and an ordinary neutrino would break lepton-number conservation.'
+            explanation: '$n \\to p + e^{-} + \\bar{\\nu}$. The neutron converts to a proton, and an electron and antineutrino are emitted to conserve charge and lepton number. A positron would break charge conservation here, and an ordinary neutrino would break lepton-number conservation.'
           },
           {
             question: 'After gamma decay, the nucleus has:',

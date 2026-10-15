@@ -41,17 +41,13 @@ People use "heat" and "temperature" interchangeably in everyday language — but
 The joule is the standard SI unit of energy:
 $$1 \\text{ J} = 1 \\text{ kg} \\cdot \\text{m}^2/\\text{s}^2$$
 
-### Calorie (cal)
-Originally defined as the energy needed to raise 1 gram of water by 1°C:
-$$1 \\text{ cal} = 4.186 \\text{ J}$$
+Older units such as the calorie and the BTU still appear on food labels and furnaces, but AP Physics 2 works only in joules.
 
-### Kilocalorie (kcal) / Food Calorie (Cal)
-The "Calorie" on food labels (capital C) is actually a kilocalorie:
-$$1 \\text{ kcal} = 1 \\text{ Cal} = 1{,}000 \\text{ cal} = 4{,}186 \\text{ J}$$
+### Heating and Cooling
+- **Heating** is the transfer of energy **into** a system by thermal processes.
+- **Cooling** is the transfer of energy **out of** a system by thermal processes.
 
-### British Thermal Unit (BTU)
-Used in heating/cooling systems in the US:
-$$1 \\text{ BTU} = 1{,}055 \\text{ J}$$
+The thermal processes are **conduction**, **convection**, and **radiation** (Part 4 covers each one).
 
 ### Sign Convention for Heat
 
@@ -87,7 +83,7 @@ This is the principle behind thermometers! The thermometer (C) reaches equilibri
 | Direction | N/A | High $T$ → Low $T$ |
 
 ### Common Misconception
-"Adding heat always raises temperature." **FALSE!** During a phase change (like melting ice at 0°C), you add heat but the temperature stays constant. The energy goes into breaking molecular bonds instead.
+"A temperature rise always means the system was heated." **FALSE!** Work can also change a system's internal energy. Rapidly compressing a gas in an insulated cylinder warms it even though no energy is transferred by heating, because the piston does work on the gas. Temperature tells you about the state of a system; heating and work are two different ways that state can change.
       `
     },
     {
@@ -135,26 +131,26 @@ This is the principle behind thermometers! The thermometer (C) reaches equilibri
       }
     },
     {
-      id: 'ht1-unit-drill',
+      id: 'ht1-energy-drill',
       type: 'input-boxes' as const,
       content: `
-**Unit Conversion Drill** 🔢
+**Energy Bookkeeping Drill** 🔢
 
-Convert between heat energy units. Round to the nearest whole number.
+A hot metal block is placed in a cup of cool water inside a perfectly insulated box. By the time they reach thermal equilibrium, the block has transferred 1,200 J of energy to the water. Use the sign convention $Q > 0$ for energy into a system.
 
-1) 500 calories = ___ joules (use 1 cal = 4.186 J)
+1) $Q$ for the block, in J
 
-2) 8,372 J = ___ kilocalories
+2) $Q$ for the water, in J
 
-3) 3 food Calories (kcal) = ___ joules
+3) $Q$ for the block-plus-water system from the outside world, in J
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2093', '2', '12558'],
-        hint1: 'Multiply: $500 \\times 4.186$.',
-        hint2: 'Divide by 4,186: $8{,}372 / 4{,}186$.',
-        hint3: '3 kcal = 3,000 cal. Then multiply by 4.186.',
-        explanation: '1) $500 \\times 4.186 = 2{,}093$ J. 2) $8{,}372 / 4{,}186 = 2$ kcal. 3) $3 \\times 4{,}186 = 12{,}558$ J.'
+        correctAnswers: ['-1200', '1200', '0'],
+        hint1: 'The block loses energy, so its $Q$ is negative.',
+        hint2: 'The water gains exactly the energy the block loses.',
+        hint3: 'The box is insulated, so nothing crosses the boundary of the combined system.',
+        explanation: '1) The block is cooled: $Q = -1{,}200$ J. 2) The water is heated: $Q = +1{,}200$ J. 3) The transfer happens inside the combined system, and the insulated box lets nothing in or out, so $Q = 0$.'
       }
     },
     {
@@ -177,15 +173,15 @@ Convert between heat energy units. Round to the nearest whole number.
             explanation: 'Energy transferred as heat from the higher-temperature soup to the lower-temperature spoon. "Cold" doesn\'t flow — heat flows from hot to cold. Temperature is a property, not something that flows.'
           },
           {
-            question: 'Ice is melting at exactly 0°C. As heat is added to the ice, what happens?',
+            question: 'Two blocks of different materials and masses sit in thermal contact inside an insulated box until nothing more changes. Which statement must be true?',
             options: [
-              'The temperature of the ice increases above 0°C',
-              'The temperature stays at 0°C while the ice changes phase',
-              'The temperature decreases because melting absorbs energy',
-              'Nothing — you cannot add heat to something at 0°C'
+              'They have the same temperature, and no net energy transfers between them',
+              'They have the same internal energy, and no net energy transfers between them',
+              'They have the same specific heat, and energy keeps flowing to the smaller block',
+              'They have the same thermal energy per kilogram, whatever their materials'
             ],
-            correctAnswer: 1,
-            explanation: 'During a phase change, added heat goes into breaking intermolecular bonds rather than increasing kinetic energy. The temperature remains constant at 0°C until all the ice has melted.'
+            correctAnswer: 0,
+            explanation: 'Thermal equilibrium means equal temperatures, so the net energy transfer by heating stops. Their internal energies and energy per kilogram can still differ, because those depend on mass and material.'
           }
         ]
       }

@@ -39,6 +39,8 @@ where $\\theta$ is the angle between $\\vec{v}$ and $\\vec{B}$.
 4. **Maximum force when $\\vec{v} \\perp \\vec{B}$** — when $\\theta = 90°$, $F = qvB$
 
 5. **The magnetic force does no work** — since $\\vec{F} \\perp \\vec{v}$, the force changes direction but not speed
+
+On the AP Physics 2 exam, calculations of $F$ use only $\\theta = 0°$, $90°$, or $180°$; for other angles you only need to reason qualitatively (a smaller perpendicular component of $\\vec{v}$ means a smaller force).
       `
     },
     {

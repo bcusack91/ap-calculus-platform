@@ -7,7 +7,7 @@ export const physics2HeatPart5Data = {
       content: `
 # 🧱 Conduction Problem Solving
 
-**Part 5 of 7 — Thermal Resistance and Composite Walls**
+**Part 5 of 7 — Conduction Rates and Composite Walls**
 
 Now that you know the conduction equation, let's master the calculations. We'll work through single-layer problems, then build up to composite (multi-layer) walls — a favorite AP topic.
       `
@@ -36,54 +36,41 @@ That's nearly 4 kilowatts — through a single window! This is why insulation ma
       `
     },
     {
-      id: 'ht5-thermal-resistance',
+      id: 'ht5-composite',
       type: 'text' as const,
       content: `
-## Thermal Resistance (R-Value)
+## Two Layers in a Row (Composite Walls)
 
-Just like electrical resistance opposes current flow, **thermal resistance** opposes heat flow.
+Real walls are often made of layers, such as brick on the outside and foam insulation on the inside. In **steady state**, the temperature at every point stops changing, so energy cannot pile up at the boundary between layers:
 
-### Defining R-Value
+$$\\left(\\frac{Q}{t}\\right)_{\\text{layer 1}} = \\left(\\frac{Q}{t}\\right)_{\\text{layer 2}}$$
 
-$$R = \\frac{L}{k}$$
+The temperature drops across the two layers must also add up to the total difference:
 
-Where:
-- $R$ = thermal resistance per unit area $(m^{2}\\cdot K/W)$
-- $L$ = thickness (m)
-- $k$ = thermal conductivity (W/(m·K))
+$$\\Delta T_1 + \\Delta T_2 = \\Delta T_{\\text{total}}$$
 
-The conduction equation becomes:
+Those two facts, plus $\\frac{Q}{t} = \\frac{kA\\Delta T}{L}$ for each layer, are all you need.
 
-$$\\frac{Q}{t} = \\frac{A \\Delta T}{R}$$
+### Example: Brick Plus Insulation
 
-### Composite Walls — Series
+A 12 $\\text{m}^2$ wall has 10 cm of brick ($k = 0.60$ W/(m·K)) and 5.0 cm of insulation ($k = 0.040$ W/(m·K)). Inside is at 22°C, outside at $-8$°C. Let $T_i$ be the temperature where the layers meet.
 
-For layers in **series** (heat passes through one layer after another):
+**Brick:** $\\frac{Q}{t} = \\frac{(0.60)(12)(22 - T_i)}{0.10} = 72(22 - T_i)$
 
-$$R_{\\text{total}} = R_1 + R_2 + R_3 + \\cdots$$
+**Insulation:** $\\frac{Q}{t} = \\frac{(0.040)(12)(T_i + 8)}{0.050} = 9.6(T_i + 8)$
 
-This is exactly like resistors in series in electric circuits!
+**Set them equal:** $72(22 - T_i) = 9.6(T_i + 8) \\Rightarrow 1584 - 76.8 = 81.6\\,T_i \\Rightarrow T_i \\approx 18.5$°C
 
-$$\\frac{Q}{t} = \\frac{A \\Delta T_{\\text{total}}}{R_{\\text{total}}}$$
+**Rate:** $\\frac{Q}{t} = 72(22 - 18.5) \\approx 254$ W
 
-### Example: Double-Pane Window
-
-A double-pane window has two glass panes ($k = 0.84$, $L = 4$ mm each) with an air gap ($k = 0.024$, $L = 10$ mm) between them.
-
-$$R_{\\text{glass}} = \\frac{0.004}{0.84} = 0.00476 \\text{ m}^2\\text{}\\cdot\\text{K/W each}$$
-
-$$R_{\\text{air}} = \\frac{0.010}{0.024} = 0.417 \\text{ m}^2\\text{}\\cdot\\text{K/W}$$
-
-$$R_{\\text{total}} = 0.00476 + 0.417 + 0.00476 = 0.426 \\text{ m}^2\\text{}\\cdot\\text{K/W}$$
-
-The air gap provides about **98%** of the total thermal resistance, despite being only slightly thicker than the glass! This demonstrates why trapped air is such an effective insulator.
+The insulation carries about 26.5 of the 30 degrees of temperature drop. The layer that conducts poorly gets most of the temperature difference, because it needs a large $\\Delta T$ to pass the same energy per second.
       `
     },
     {
       id: 'ht5-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Conduction & R-Value Quiz** 🧠
+**Conduction Rate Quiz** 🧠
       `,
       exercise: {
         questions: [
@@ -118,21 +105,21 @@ The air gap provides about **98%** of the total thermal resistance, despite bein
       content: `
 **Conduction Calculation Drill** 🔢
 
-A Styrofoam cooler wall ($k = 0.033$ W/(m·K)) is 3.0 cm thick and has a total surface area of 0.80 $m^{2}$. The inside is at 2°C and the outside is at 32°C.
+A Styrofoam cooler wall ($k = 0.033$ W/(m·K)) is 3.0 cm thick and has a total surface area of 0.80 $\\text{m}^2$. The inside is at 2°C and the outside is at 32°C.
 
-1) What is the thermal resistance $R = L/k$ of the wall? ($m^{2}\\cdot K/W$, round to 3 significant figures)
+1) What is the rate of energy flow into the cooler? (in watts, 3 significant figures)
 
-2) What is the rate of heat flow into the cooler? (in watts, round to 3 significant figures)
+2) How much energy enters the cooler in 6 hours? (in kJ, round to the nearest ten)
 
-3) How much heat enters the cooler in 6 hours? (in kJ, round to nearest whole number)
+3) If the wall were made twice as thick, what would the rate be? (in watts, 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.91', '26.4', '570'],
-        hint1: '$R = L/k = 0.030 / 0.033$.',
-        hint2: '$Q/t = A \\Delta T / R = (0.80)(30) / 0.91$.',
-        hint3: 'Total heat = power × time. Convert 6 hours to seconds: $6 \\times 3{,}600 = 21{,}600$ s. Then convert J to kJ.',
-        explanation: '1) $R = 0.030/0.033 = 0.909 \\approx 0.91$ $m^{2}\\cdot K/W$. 2) $Q/t = (0.80)(30)/0.91 = 26.4$ W. 3) $Q = (26.4)(21{,}600) = 570{,}240$ J $\\approx 570$ kJ.'
+        correctAnswers: ['26.4', '570', '13.2'],
+        hint1: '$\\frac{Q}{t} = \\frac{kA\\Delta T}{L} = \\frac{(0.033)(0.80)(30)}{0.030}$.',
+        hint2: 'Energy = rate × time. Six hours is $6 \\times 3600 = 21{,}600$ s. Divide joules by 1,000 for kJ.',
+        hint3: 'The rate is inversely proportional to the thickness $L$.',
+        explanation: '1) $\\frac{(0.033)(0.80)(30)}{0.030} = 26.4$ W. 2) $Q = (26.4)(21{,}600) \\approx 570{,}000$ J $\\approx 570$ kJ. 3) Doubling $L$ halves the rate: $13.2$ W.'
       }
     },
     {
@@ -141,21 +128,21 @@ A Styrofoam cooler wall ($k = 0.033$ W/(m·K)) is 3.0 cm thick and has a total s
       content: `
 **Composite Wall Drill** 🔢
 
-A wall consists of 10 cm of brick ($k = 0.60$ W/(m·K)) and 5 cm of insulation ($k = 0.040$ W/(m·K)) in series. The wall area is 12 $m^{2}$. The inside temperature is 22°C and the outside is $-8$°C.
+A 10 $\\text{m}^2$ wall has 2.0 cm of wood ($k = 0.12$ W/(m·K)) on the inside and 3.0 cm of foam ($k = 0.030$ W/(m·K)) on the outside. Inside is at 20°C and outside is at 0°C. The wall is in steady state.
 
-1) $R_{\\text{brick}}$ in $m^{2}\\cdot K/W$ (round to 3 significant figures)
+1) Temperature where the wood meets the foam, in °C (3 significant figures)
 
-2) $R_{\\text{insulation}}$ in $m^{2}\\cdot K/W$ (round to 3 significant figures)
+2) Rate of energy flow through the wall, in watts (3 significant figures)
 
-3) Total rate of heat loss through the wall in watts (round to nearest whole number)
+3) Temperature drop across the wood, in °C (2 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.167', '1.25', '254'],
-        hint1: '$R_{\\text{brick}} = L/k = 0.10/0.60$.',
-        hint2: '$R_{\\text{insulation}} = L/k = 0.05/0.040$.',
-        hint3: '$R_{\\text{total}} = R_{\\text{brick}} + R_{\\text{insulation}}$. Then $Q/t = A \\Delta T / R_{\\text{total}} = (12)(30)/R_{\\text{total}}$.',
-        explanation: '1) $R_{\\text{brick}} = 0.10/0.60 = 0.167$ $m^{2}\\cdot K/W$. 2) $R_{\\text{insulation}} = 0.05/0.04 = 1.25$ $m^{2}\\cdot K/W$. 3) $R_{\\text{total}} = 0.167 + 1.25 = 1.42$ $m^{2}\\cdot K/W$. $Q/t = (12)(30)/1.42 = 254$ W. Note the insulation provides 88% of the total resistance!'
+        correctAnswers: ['17.1', '171', '2.9'],
+        hint1: 'Wood: $\\frac{Q}{t} = \\frac{(0.12)(10)(20 - T_i)}{0.020} = 60(20 - T_i)$. Foam: $\\frac{Q}{t} = \\frac{(0.030)(10)(T_i - 0)}{0.030} = 10\\,T_i$.',
+        hint2: 'Set the two rates equal and solve for $T_i$, then substitute back into either rate.',
+        hint3: 'The drop across the wood is $20 - T_i$.',
+        explanation: '1) $60(20 - T_i) = 10\\,T_i \\Rightarrow T_i = 1200/70 \\approx 17.1$°C. 2) $\\frac{Q}{t} = 10(17.14) \\approx 171$ W. 3) $20 - 17.1 \\approx 2.9$°C; the poorly conducting foam takes most of the drop.'
       }
     },
     {
@@ -167,26 +154,15 @@ A wall consists of 10 cm of brick ($k = 0.60$ W/(m·K)) and 5 cm of insulation (
       exercise: {
         questions: [
           {
-            question: 'Adding a 2 cm layer of Styrofoam insulation ($k = 0.033$ W/(m·K)) to a 10 cm brick wall ($k = 0.60$ W/(m·K)). The insulation\'s R-value relative to the brick\'s R-value is approximately:',
+            question: 'A wall has a thin inner layer of metal and a thick outer layer of foam. In steady state, most of the temperature difference across the wall occurs across:',
             options: [
-              'Much smaller — the insulation barely helps',
-              'About the same — each layer adds equal resistance',
-              'About 3.6 times larger — the insulation dominates',
-              'About 18 times larger — from the $k$ values alone'
+              'The foam layer, which conducts energy poorly',
+              'The metal layer, which conducts energy well',
+              'Both layers equally, since the same rate passes through each',
+              'Neither layer, since the wall has reached steady state'
             ],
-            correctAnswer: 2,
-            explanation: '$R_{\\text{foam}} = 0.02/0.033 = 0.606$ $m^{2}\\cdot K/W$. $R_{\\text{brick}} = 0.10/0.60 = 0.167$ $m^{2}\\cdot K/W$. Ratio: $0.606/0.167 \\approx 3.6$. Comparing only the conductivities ($0.60/0.033 \\approx 18$) ignores that the brick is five times thicker. A thin layer of good insulation beats a thick wall of brick!'
-          },
-          {
-            question: 'In steady-state conduction through a composite wall, which quantity is the SAME through every layer?',
-            options: [
-              'Temperature gradient ($\\Delta T / L$)',
-              'Rate of heat flow ($Q/t$)',
-              'Thermal conductivity ($k$)',
-              'Temperature difference across the layer'
-            ],
-            correctAnswer: 1,
-            explanation: 'In steady state, the same amount of heat flows through each layer per unit time — otherwise energy would accumulate at an interface. The temperature drop across each layer differs depending on that layer\'s R-value.'
+            correctAnswer: 0,
+            explanation: 'The same rate of energy flow passes through both layers. A poor conductor needs a large temperature difference to pass that rate, so the foam carries most of the drop. Equal rates do not mean equal temperature drops, because $k$ and $L$ differ.'
           }
         ]
       }

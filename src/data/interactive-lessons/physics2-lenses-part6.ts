@@ -5,172 +5,147 @@ export const physics2LensesPart6Data = {
       id: 'ln6-intro',
       type: 'text' as const,
       content: `
-# 👓 Lens Aberrations & Corrective Lenses
+# 🔬 Experimental Design: Finding a Focal Length
 
-**Part 6 of 7 — Real-World Optics**
+**Part 6 of 7 — Measuring, Graphing, and Uncertainty**
 
-Ideal thin lenses produce perfect images, but real lenses have imperfections called **aberrations**. Understanding these flaws — and how to correct them — is essential for AP Physics 2 and connects optics to everyday life.
+The lab question on the AP Physics 2 exam asks you to design a procedure, choose what to graph, and pull a physical quantity out of the graph. For lenses, the classic task is finding an unknown focal length from object and image distances. In this part you will plan the measurements, linearize the thin-lens equation, and reduce experimental uncertainty.
       `
     },
     {
-      id: 'ln6-spherical-aberration',
+      id: 'ln6-procedure',
       type: 'text' as const,
       content: `
-## Spherical Aberration
+## The Procedure
 
-Rays hitting the **edges** of a spherical lens are refracted more strongly than rays near the center. The result: edge rays focus at a slightly different point than central rays, creating a **blurry image**.
+### Equipment
+A bright object (such as an illuminated arrow), the converging lens, a white screen, and a meterstick or optical bench.
 
-### Cause
-- Spherical lens surfaces are not the ideal shape for perfect focusing
-- The paraxial (near-axis) approximation breaks down for wide lenses
+### Steps
+1. Place the object a measured distance $s_o$ from the lens, with $s_o$ greater than the focal length so the image is real.
+2. Move the screen until the image is as sharp as possible, then measure $s_i$ from the lens to the screen.
+3. Repeat for several object distances spread over a wide range.
 
-### Corrections
-- Use a **lens stop** (aperture) to block edge rays — reduces light but sharpens image
-- Use **aspherical lenses** with precisely shaped non-spherical surfaces
-- Use a combination of lenses that compensate for each other's aberration
+### Why a Screen Works Only for Real Images
+A screen shows an image only where light rays actually meet. Real images form where the refracted rays converge, so they appear on the screen. A virtual image is where rays only *appear* to come from, so no screen position will show it. This is also why the method needs a converging lens with the object outside $f$: a diverging lens never forms a real image of a real object.
+
+### A Quick Estimate
+For a very distant object, $\\frac{1}{s_o} \\approx 0$, so $s_i \\approx f$. Focusing the image of a far-away window onto the screen gives a rough value of $f$ to check your graph against.
       `
     },
     {
-      id: 'ln6-chromatic-aberration',
+      id: 'ln6-linearizing',
       type: 'text' as const,
       content: `
-## Chromatic Aberration
+## Linearizing the Thin-Lens Equation
 
-Different wavelengths (colors) of light refract by different amounts — a phenomenon called **dispersion**. This means a lens has a slightly different focal length for each color:
+A graph of $s_i$ versus $s_o$ is a curve, and a curve is hard to read a constant from. Rearrange the thin-lens equation into straight-line form $y = mx + b$:
 
-- **Violet light**: refracted most → shorter focal length
-- **Red light**: refracted least → longer focal length
+$$\\frac{1}{s_i} = -\\frac{1}{s_o} + \\frac{1}{f}$$
 
-The result: colored fringes around the image, especially noticeable at high magnification.
+Plot $y = \\frac{1}{s_i}$ against $x = \\frac{1}{s_o}$:
+- **Slope** $= -1$ (a built-in check on your data)
+- **Vertical intercept** $= \\frac{1}{f}$, and the horizontal intercept is also $\\frac{1}{f}$
 
-### Correction: Achromatic Doublet
+### Example Data
 
-An **achromatic lens** (or doublet) combines:
-- A **converging lens** made of crown glass (low dispersion)
-- A **diverging lens** made of flint glass (high dispersion)
+| $s_o$ (cm) | 15 | 20 | 30 | 40 | 60 |
+|-----------|----|----|----|----|----|
+| $s_i$ (cm) | 30.0 | 20.0 | 15.0 | 13.3 | 12.0 |
+| $1/s_o$ (cm$^{-1}$) | 0.067 | 0.050 | 0.033 | 0.025 | 0.017 |
+| $1/s_i$ (cm$^{-1}$) | 0.033 | 0.050 | 0.067 | 0.075 | 0.083 |
 
-The diverging lens cancels the chromatic spread of the converging lens without fully canceling its focusing power. The result is a lens system that brings two wavelengths to the same focus.
-      `
-    },
-    {
-      id: 'ln6-corrective-lenses',
-      type: 'text' as const,
-      content: `
-## Corrective Lenses for Vision
+The best-fit line has slope $-1.0$ and vertical intercept $0.100$ cm$^{-1}$, so $f = \\frac{1}{0.100} = 10$ cm.
 
-The human eye uses a converging lens (the crystalline lens) to focus images on the retina. Vision defects occur when the image doesn't fall exactly on the retina.
-
-### Myopia (Nearsightedness)
-
-- **Problem**: Eye focuses distant objects **in front of** the retina (eyeball too long or lens too strong)
-- **Correction**: **Diverging (concave) lens** — spreads rays slightly before they enter the eye
-- Focal length: **negative**
-
-### Hyperopia (Farsightedness)
-
-- **Problem**: Eye focuses nearby objects **behind** the retina (eyeball too short or lens too weak)
-- **Correction**: **Converging (convex) lens** — converges rays slightly before they enter the eye
-- Focal length: **positive**
-
-### Lens Power
-
-$$P = \\frac{1}{f}$$
-
-| Quantity | Unit |
-|:---:|:---:|
-| $P$ (power) | **Diopters** (D) = $m^{-1}$ |
-| $f$ (focal length) | **meters** |
-
-- Converging lens: $P > 0$ (positive diopters)
-- Diverging lens: $P < 0$ (negative diopters)
-
-**Example**: A lens with $f = +0.50$ m has $P = +2.0$ D. A lens with $f = -0.25$ m has $P = -4.0$ D.
+### Another Straight-Line Choice
+Multiplying the thin-lens equation by $s_i$ gives $\\frac{s_i}{s_o} = \\frac{1}{f}s_i - 1$. Since the size of the magnification is $\\frac{s_i}{s_o}$, a graph of magnification versus $s_i$ is a straight line with slope $\\frac{1}{f}$ and vertical intercept $-1$.
       `
     },
     {
       id: 'ln6-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Aberrations & Vision Quiz** 👓
+**Lab Design Check**
       `,
       exercise: {
         questions: [
           {
-            question: 'Chromatic aberration occurs because:',
+            question: 'Why do students graph $1/s_i$ versus $1/s_o$ instead of $s_i$ versus $s_o$ to find a focal length?',
             options: [
-              'Thick glass absorbs some colors more than others',
-              'Refractive index varies with wavelength',
-              'Rays far from the axis focus closer to the lens',
-              'Some light reflects inside the lens before exiting'
+              'The reciprocals have smaller uncertainties than the distances',
+              'The reciprocal graph is a straight line whose intercept gives $1/f$',
+              'The distance graph would need a diverging lens to make sense',
+              'The reciprocal graph passes through the origin with slope $f$'
             ],
             correctAnswer: 1,
-            explanation: 'Chromatic aberration is caused by dispersion: the refractive index of glass depends on wavelength, so each color refracts at a slightly different angle and has a slightly different focal length. Edge rays focusing closer to the lens describes spherical aberration, a different defect that occurs even with one color.'
+            explanation: 'The thin-lens equation is linear in the reciprocals, so that graph is a straight line with slope $-1$ and intercept $1/f$. It does not pass through the origin, taking reciprocals does not shrink the uncertainty, and the curved $s_i$ versus $s_o$ graph still describes a converging lens.'
           },
           {
-            question: 'A person who can see distant objects clearly but struggles to read a book up close has:',
+            question: 'A best-fit line on a graph of $1/s_i$ (vertical) versus $1/s_o$ (horizontal) has a vertical intercept of $0.050$ cm$^{-1}$. The focal length of the lens is:',
             options: [
-              'Myopia — corrected with a diverging lens',
-              'Hyperopia — corrected with a diverging lens',
-              'Myopia — corrected with a converging lens',
-              'Hyperopia — corrected with a converging lens'
+              '0.050 cm',
+              '5.0 cm',
+              '20 cm',
+              '50 cm'
             ],
-            correctAnswer: 3,
-            explanation: 'Difficulty seeing nearby objects = hyperopia (farsightedness). The image forms behind the retina. A converging lens adds focusing power to bring the image forward onto the retina.'
-          },
-          {
-            question: 'A corrective lens has a power of $-3.0$ D. Its focal length is:',
-            options: [
-              '$+0.33$ m (converging)',
-              '$-0.33$ m (diverging)',
-              '$+3.0$ m (converging)',
-              '$-3.0$ m (diverging)'
-            ],
-            correctAnswer: 1,
-            explanation: '$f = 1/P = 1/(-3.0) = -0.33$ m. Negative focal length → diverging lens. This corrects myopia.'
+            correctAnswer: 2,
+            explanation: 'The intercept equals $1/f$, so $f = 1/0.050 = 20$ cm. Reading the intercept as $f$ gives 0.050 cm, and 5.0 cm and 50 cm misplace the decimal point when inverting.'
           }
         ]
       }
     },
     {
+      id: 'ln6-uncertainty',
+      type: 'text' as const,
+      content: `
+## Reducing Uncertainty
+
+| Source of uncertainty | How to reduce it |
+|----------------------|------------------|
+| Judging the sharpest image | Approach the sharp position from both sides and average the two screen positions |
+| Measuring from the wrong point on the lens | Measure both distances from the center (midline) of the lens |
+| Too few or bunched-up data points | Take many trials over a wide range of $s_o$ |
+| Random scatter | Repeat each trial and use the slope and intercept of a best-fit line |
+
+### Checking the Result
+- The slope of the $1/s_i$ versus $1/s_o$ graph should be close to $-1$. A slope far from $-1$ signals a systematic error, such as measuring from the edge of the lens holder instead of the lens.
+- The value of $f$ from the graph should agree with the distant-object estimate.
+
+### Making a Claim
+A complete lab answer states the claim ($f = 10$ cm), the evidence (the intercept of the best-fit line), and the reasoning (the intercept equals $1/f$ because of the thin-lens equation).
+      `
+    },
+    {
       id: 'ln6-dropdown-drill',
       type: 'dropdown-select' as const,
       content: `
-**Match the Condition** 🎯
+**Lab Analysis Check** 🎯
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Myopia is corrected with',
-            options: ['Converging (convex) lens', 'Diverging (concave) lens']
+            label: 'To find $f$ with a screen, the object must be placed',
+            options: ['outside the focal length', 'inside the focal length', 'exactly at the focal point', 'anywhere on the axis']
           },
           {
-            label: 'Hyperopia is corrected with',
-            options: ['Converging (convex) lens', 'Diverging (concave) lens']
+            label: 'The slope of a graph of $1/s_i$ versus $1/s_o$ should be',
+            options: ['+1', '−1', 'f', '1/f']
           },
           {
-            label: 'Edge rays focus at a different point than center rays',
-            options: ['Spherical aberration', 'Chromatic aberration']
+            label: 'The vertical intercept of that graph equals',
+            options: ['f', '1/f', '−1', 'zero']
           },
           {
-            label: 'Different colors focus at different distances',
-            options: ['Spherical aberration', 'Chromatic aberration']
-          },
-          {
-            label: 'A lens with $P = +4.0$ D is a',
-            options: ['Converging (convex) lens', 'Diverging (concave) lens']
+            label: 'For a very distant object, the image distance is approximately',
+            options: ['zero', 'the focal length', 'twice the focal length', 'infinite']
           }
         ],
-        correctAnswers: [
-          'Diverging (concave) lens',
-          'Converging (convex) lens',
-          'Spherical aberration',
-          'Chromatic aberration',
-          'Converging (convex) lens'
-        ],
-        hint1: 'Myopia = too much converging → need to diverge. Hyperopia = not enough converging → need more convergence.',
-        hint2: 'Spherical aberration is about lens shape; chromatic aberration is about color/wavelength.',
-        hint3: 'Positive power → positive focal length → converging.',
-        explanation: 'Myopia → concave (diverging) correction. Hyperopia → convex (converging) correction. Spherical aberration = edge vs center rays. Chromatic = color-dependent focusing. Positive $P$ → converging.'
+        correctAnswers: ['outside the focal length', '−1', '1/f', 'the focal length'],
+        hint1: 'Only real images appear on a screen, and a converging lens forms real images only when $s_o > f$.',
+        hint2: 'Rearrange: $\\frac{1}{s_i} = -\\frac{1}{s_o} + \\frac{1}{f}$.',
+        hint3: 'Set $\\frac{1}{s_o} = 0$ in the rearranged equation.',
+        hint4: 'A distant object has $\\frac{1}{s_o} \\approx 0$.',
+        explanation: 'Real images need $s_o > f$. The linearized thin-lens equation has slope $-1$ and intercept $1/f$, and a distant object focuses at about $s_i = f$.'
       }
     },
     {
@@ -182,26 +157,26 @@ $$P = \\frac{1}{f}$$
       exercise: {
         questions: [
           {
-            question: 'An optometrist prescribes a lens with power $+2.5$ D. The focal length is:',
+            question: 'With an object 30 cm from a lens, a student finds the sharpest image on a screen 15 cm behind the lens. The focal length is:',
             options: [
-              '$0.40$ m',
-              '$-0.40$ m',
-              '$2.5$ m',
-              '$-2.5$ m'
+              '10 cm',
+              '15 cm',
+              '30 cm',
+              '45 cm'
             ],
             correctAnswer: 0,
-            explanation: '$f = 1/P = 1/2.5 = 0.40$ m. Positive → converging lens. This prescription corrects hyperopia (farsightedness).'
+            explanation: '$\\frac{1}{f} = \\frac{1}{30} + \\frac{1}{15} = \\frac{3}{30}$, so $f = 10$ cm. 30 cm subtracts the reciprocals, 15 cm takes the image distance as $f$, and 45 cm adds the distances.'
           },
           {
-            question: 'An achromatic doublet corrects chromatic aberration by combining:',
+            question: 'A student repeats the screen method with a diverging lens and finds no screen position that shows an image. The best explanation is that the diverging lens:',
             options: [
-              'Two converging lenses of the same glass',
-              'A converging and diverging lens of different glass types',
-              'A converging and a diverging lens of the same glass',
-              'Two diverging lenses of different glass types'
+              'Forms an image too dim to see on an ordinary screen',
+              'Forms only virtual images of real objects',
+              'Forms an image that is always beyond the screen',
+              'Forms an image only when the object is inside $f$'
             ],
             correctAnswer: 1,
-            explanation: 'An achromatic doublet uses a converging lens (crown glass, low dispersion) and a diverging lens (flint glass, high dispersion). The diverging lens cancels the color spread without fully canceling the convergence. With the same glass, canceling the color spread would also cancel the focusing, and two diverging lenses could not bring light to a real focus.'
+            explanation: 'A diverging lens spreads the rays apart, so they never meet on the far side; its images are virtual and cannot be projected at any object distance. Brightness and screen distance are not the issue.'
           }
         ]
       }

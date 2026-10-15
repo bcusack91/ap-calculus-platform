@@ -114,32 +114,36 @@ At the center of the pattern ($m = 0$), the path difference is zero — both wav
       }
     },
     {
-      id: 'id1-intensity',
+      id: 'id1-two-source',
       type: 'text' as const,
       content: `
-## Intensity and Interference
+## Two-Source Patterns: Loud Spots and Quiet Spots
 
-For two coherent waves of equal amplitude $E_0$, the resultant intensity depends on the phase difference $\\phi$:
+Path difference works for **any** waves — light, water, or sound. Two loudspeakers driven by the same signal are coherent sources you can walk around in.
 
-$$I = 4I_0 \\cos^2\\left(\\frac{\\phi}{2}\\right)$$
+### Worked Example
 
-where $I_0$ is the intensity of each individual wave.
+Two speakers 3.0 m apart emit the same tone **in phase** with wavelength $\\lambda = 1.0$ m.
 
-### Phase Difference and Path Difference
+**Point P** is 4.0 m from speaker A and 5.0 m from speaker B:
 
-The phase difference $\\phi$ is related to the path difference $\\Delta r$:
+$$\\Delta r = 5.0 - 4.0 = 1.0 \\text{ m} = 1\\lambda \\quad \\Rightarrow \\quad \\text{constructive: loud}$$
 
-$$\\phi = \\frac{2\\pi}{\\lambda} \\Delta r$$
+**Point Q** is 4.0 m from A and 5.5 m from B:
 
-| Condition | Phase Difference | Intensity |
-|-----------|-----------------|-----------|
-| Constructive | $\\phi = 0, 2\\pi, 4\\pi, \\ldots$ | $4I_0$ (maximum) |
-| Destructive | $\\phi = \\pi, 3\\pi, 5\\pi, \\ldots$ | $0$ (minimum) |
-| In between | Other values | Between $0$ and $4I_0$ |
+$$\\Delta r = 5.5 - 4.0 = 1.5 \\text{ m} = 1.5\\lambda \\quad \\Rightarrow \\quad \\text{destructive: quiet}$$
 
-### Energy Conservation
+**Any point on the center line** between the speakers is equally far from both, so $\\Delta r = 0$ and it is always loud.
 
-Interference doesn't create or destroy energy — it **redistributes** it. The extra intensity at bright spots comes at the expense of dark spots. The average intensity over the full pattern is $2I_0$, the same as without interference.
+### The Whole Pattern
+
+- Walking sideways across the room, you pass through **alternating loud and quiet regions**: $\\Delta r = 0, \\tfrac{1}{2}\\lambda, \\lambda, \\tfrac{3}{2}\\lambda, \\ldots$
+- In a ripple tank with two in-phase dippers, the quiet regions show up as **nodal lines** of calm water fanning out between lines of large waves
+- A **shorter wavelength** packs the loud and quiet regions closer together; sources **farther apart** do the same
+
+### Sources Out of Phase
+
+If one speaker is wired backward, the waves leave **half a cycle apart**. Every condition swaps: $\\Delta r = 0$ on the center line now gives a **quiet** spot, and $\\Delta r = \\tfrac{1}{2}\\lambda$ gives a loud one.
       `
     },
     {
@@ -163,15 +167,15 @@ Interference doesn't create or destroy energy — it **redistributes** it. The e
             options: ['λ', 'λ/2', 'zero', '2λ']
           },
           {
-            label: 'Maximum intensity from two equal sources is',
-            options: ['$I_{0}$', '$2I_{0}$', '$3I_{0}$', '$4I_{0}$']
+            label: 'Two in-phase speakers emit λ = 0.80 m. A listener 2.0 m farther from one speaker hears',
+            options: ['a loud spot', 'a quiet spot', 'an average loudness', 'a rising pitch']
           }
         ],
-        correctAnswers: ['destructive interference', 'constant phase relationship', 'zero', '$4I_{0}$'],
+        correctAnswers: ['destructive interference', 'constant phase relationship', 'zero', 'a quiet spot'],
         hint1: '2.5λ = (2 + ½)λ — that is a half-integer multiple.',
         hint2: 'Coherent sources must have the same frequency AND a fixed phase difference.',
-        hint3: 'At the center, both waves travel the same distance.',
-        explanation: '2.5λ is half-integer → destructive. Coherence requires constant phase. Central max: Δr = 0. Two equal waves constructively combine: $I = 4I_0$.'
+        hint3: 'At the center, both waves travel the same distance. For the speakers, divide the path difference by the wavelength.',
+        explanation: '2.5λ is half-integer → destructive. Coherence requires constant phase. Central max: Δr = 0. For the speakers, 2.0 m ÷ 0.80 m = 2.5 wavelengths → destructive → quiet.'
       }
     },
     {
@@ -194,15 +198,15 @@ Interference doesn't create or destroy energy — it **redistributes** it. The e
             explanation: '$750/500 = 1.5 = (1 + \\frac{1}{2})$. This is a half-integer, so destructive interference occurs.'
           },
           {
-            question: 'If the intensity of each source is $I_0$, the intensity at a point of constructive interference from two coherent sources is:',
+            question: 'Two speakers driven in phase emit sound of wavelength 0.50 m. A listener stands 3.00 m from one speaker and 4.00 m from the other. What does the listener hear?',
             options: [
-              '$I_0$',
-              '$2I_0$',
-              '$3I_0$',
-              '$4I_0$'
+              'A quiet spot, from destructive interference',
+              'A loud spot, from constructive interference',
+              'Loudness halfway between loud and quiet',
+              'A loudness that beats up and down'
             ],
-            correctAnswer: 3,
-            explanation: 'At constructive interference, the amplitudes add: $E = 2E_0$. Since $I \\propto E^2$, $I = 4I_0$.'
+            correctAnswer: 1,
+            explanation: 'The path difference is 1.00 m = 2.0 wavelengths, a whole number, so the waves arrive in phase and the spot is loud. A quiet spot would need a half-integer number of wavelengths, and beats require two different frequencies.'
           }
         ]
       }

@@ -38,10 +38,10 @@ Let's bring everything together: compare the key phenomena, review common AP mis
 | Single-slit minima | $a\\sin\\theta = m\\lambda$ |
 | Central max width (single slit) | $w = 2\\lambda L / a$ |
 | Grating maxima | $d\\sin\\theta = m\\lambda$, $d = 1/N$ |
-| Resolving power | $R = mN$ |
+| Double-slit pattern | Fringes inside the single-slit envelope; $m = d/a$ missing |
 | Thin film (one phase shift, constructive) | $2nt = (m + \\frac{1}{2})\\lambda$ |
 | Thin film (one phase shift, destructive) | $2nt = m\\lambda$ |
-| Rayleigh criterion | $\\theta_{\\min} = 1.22\\lambda / D$ |
+| Anti-reflection coating (minimum) | $t = \\lambda/(4n)$ |
       `
     },
     {
@@ -71,10 +71,10 @@ Let's bring everything together: compare the key phenomena, review common AP mis
 - Increasing slit width $a$ → **narrower** central max (less diffraction)
 - Students often get the direction wrong!
 
-### Mistake 5: Rayleigh Criterion Units
-- The formula gives $\\theta$ in **radians**
-- Convert to degrees, arcminutes, or arcseconds as needed
-- Larger aperture = better (smaller) resolution angle
+### Mistake 5: Using the Small-Angle Shortcut Where It Fails
+- $y = m\\lambda L/d$ relies on $\\sin\\theta \\approx \\tan\\theta$, which holds only for small angles (under about 10°)
+- Grating maxima are usually at **large** angles: find $\\theta$ from $d\\sin\\theta = m\\lambda$, then use $y = L\\tan\\theta$ if you need a position
+- Always check the angle before using the shortcut
       `
     },
     {
@@ -93,32 +93,32 @@ Match each situation to the correct formula or result:
           },
           {
             label: 'asinθ = mλ in a SINGLE-SLIT experiment gives',
-            options: ['positions of bright fringes', 'positions of dark fringes', 'resolving power', 'fringe spacing']
+            options: ['positions of bright fringes', 'positions of dark fringes', 'grating maxima', 'fringe spacing']
           },
           {
-            label: 'θ_min = 1.22λ/D describes',
-            options: ['diffraction grating resolution', 'single-slit central max', 'Rayleigh criterion for circular aperture', 'thin-film condition']
+            label: 'The brightness of double-slit fringes rises and falls across the screen because of',
+            options: ['the single-slit envelope', 'thin-film interference', 'a loss of coherence', 'polarization']
           },
           {
             label: '2nt = (m+½)λ with one phase shift gives',
             options: ['destructive thin-film interference', 'constructive thin-film interference', 'single-slit minima', 'grating maxima']
           },
           {
-            label: 'R = mN describes',
-            options: ['Rayleigh criterion', 'resolving power of a grating', 'reflection coefficient', 'refraction index']
+            label: 't = λ/(4n) describes',
+            options: ['single-slit minima', 'the thinnest anti-reflection coating', 'grating maxima', 'fringe spacing']
           }
         ],
         correctAnswers: [
           'positions of bright fringes',
           'positions of dark fringes',
-          'Rayleigh criterion for circular aperture',
+          'the single-slit envelope',
           'constructive thin-film interference',
-          'resolving power of a grating'
+          'the thinnest anti-reflection coating'
         ],
         hint1: 'Double-slit $d\\sin\\theta = m\\lambda$: constructive → bright maxima.',
         hint2: 'Single-slit $a\\sin\\theta = m\\lambda$: these are the minima, not maxima.',
-        hint3: 'The 1.22 factor is specific to circular apertures (Rayleigh criterion).',
-        explanation: 'Double-slit formula → bright fringes. Single-slit formula → dark minima. 1.22λ/D → Rayleigh criterion. 2nt = (m+½)λ with one shift → constructive. R = mN → grating resolving power.'
+        hint3: 'Each slit has a width, so each slit diffracts. A quarter-wave coating cancels reflected light.',
+        explanation: 'Double-slit formula → bright fringes. Single-slit formula → dark minima. Fringe brightness follows the single-slit envelope. 2nt = (m+½)λ with one shift → constructive. t = λ/(4n) → minimum anti-reflection coating thickness.'
       }
     },
     {
@@ -155,7 +155,7 @@ A student performs a double-slit experiment with $\\lambda = 632.8$ nm (He-Ne la
           {
             question: 'In a double-slit experiment, the pattern observed on the screen is actually a combination of:',
             options: [
-              'Two-slit interference alone, with equally bright fringes',
+              'Interference between the slits alone, with equal fringes',
               'Single-slit diffraction alone, since the slits have width',
               'Two-slit fringes inside a single-slit diffraction envelope',
               'Two separate single-slit patterns with no fringes'
@@ -186,15 +186,15 @@ A student performs a double-slit experiment with $\\lambda = 632.8$ nm (He-Ne la
             explanation: 'Overlap occurs when $m_1 \\lambda_1 = m_2 \\lambda_2$. So $2(700) = 3\\lambda_2 \\Rightarrow \\lambda_2 = 1400/3 = 467$ nm (blue-violet light).'
           },
           {
-            question: 'The minimum resolvable angle for a circular aperture is $\\theta_{\\min} = 1.22\\lambda/D$. If both $\\lambda$ and $D$ are doubled:',
+            question: 'A double-slit apparatus is moved from air into water ($n = 1.33$) with the same laser. The spacing between bright fringes on the screen:',
             options: [
-              '$\\theta_{\\min}$ doubles',
-              '$\\theta_{\\min}$ halves',
-              '$\\theta_{\\min}$ is unchanged',
-              '$\\theta_{\\min}$ quadruples'
+              'Increases, since light travels slower in water',
+              'Decreases, since the wavelength in water is shorter',
+              'Stays the same, since the frequency does not change',
+              'Increases, since water makes the slits look narrower'
             ],
-            correctAnswer: 2,
-            explanation: '$\\theta_{\\min} = 1.22\\lambda/D$. If $\\lambda \\to 2\\lambda$ and $D \\to 2D$: $\\theta_{\\min} = 1.22(2\\lambda)/(2D) = 1.22\\lambda/D$. The ratio is unchanged.'
+            correctAnswer: 1,
+            explanation: 'In water the wavelength becomes $\\lambda/n$, and $\\Delta y = \\lambda L/d$, so the fringes move closer together. The frequency is indeed unchanged, but the spacing depends on wavelength, and the slit dimensions do not change.'
           }
         ]
       }

@@ -44,7 +44,7 @@ This equation works for **both** converging and diverging lenses — the sign of
 | Quantity | Positive (+) | Negative (−) |
 |:---:|:---:|:---:|
 | $f$ | Converging lens | Diverging lens |
-| $d_o$ | Object on incoming-light side (real object) | Virtual object (rare) |
+| $d_o$ | Object on incoming-light side (real object) | Not used: single-lens problems always have a real object |
 | $d_i$ | Image on opposite side from object (**real**) | Image on same side as object (**virtual**) |
 | $m$ | Image is **upright** | Image is **inverted** |
 

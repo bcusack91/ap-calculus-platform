@@ -93,7 +93,7 @@ Electrostatics isn't just theory — it's everywhere:
 
 🚗 **Spray painting** — charged paint droplets are attracted to grounded car bodies for even coating
 
-🧪 **Particle accelerators** — use electric forces to accelerate charged particles to near light speed
+🧪 **Particle accelerators** — use electric forces to accelerate charged particles to very high speeds
 
 📱 **Touchscreens** — detect changes in electric field when your charged finger approaches
 

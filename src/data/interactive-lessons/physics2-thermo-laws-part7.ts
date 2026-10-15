@@ -25,7 +25,7 @@ All entries use the AP form $\\Delta U = Q + W$, where $W$ is the work done **on
 | **Isobaric** | $P$ | $-P\\Delta V$ | $Q + W$ | $\\Delta U - W$ | Horizontal line |
 | **Isochoric** | $V$ | $0$ | $Q$ | $\\Delta U$ | Vertical line |
 | **Isothermal** | $T$ | $-Q$ | $0$ | $-W$ | Hyperbola ($PV = \\text{const}$) |
-| **Adiabatic** | $Q = 0$ | $\\Delta U$ | $W$ | $0$ | Steep curve ($PV^\\gamma = \\text{const}$) |
+| **Adiabatic** | $Q = 0$ | $\\Delta U$ | $W$ | $0$ | Steeper than an isotherm |
 
 ### Quick Decision Guide
 
@@ -45,8 +45,8 @@ For any complete cycle: $\\Delta U = 0$, so $Q_{\\text{net}} = -W_{\\text{net}}$
       content: `
 ## Common AP Mistakes to Avoid
 
-### ❌ Mistake 1: Using °C in Carnot efficiency
-Carnot efficiency requires **Kelvin**: $e = 1 - T_C/T_H$. Always convert: $T(K) = T(°C) + 273$.
+### ❌ Mistake 1: Using °C where absolute temperature is needed
+$PV = nRT$ and $U = \\frac{3}{2}nRT$ require **kelvins**: $T(\\text{K}) = T(°\\text{C}) + 273$. (A temperature *change* is the same in °C and K.)
 
 ### ❌ Mistake 2: Confusing $W$ sign conventions
 Many chemistry and engineering texts use $\\Delta U = Q - W$ with $W$ done BY the gas. The physics is the same; the AP Physics 2 equation sheet uses $W$ done ON the gas ($\\Delta U = Q + W$, with $W = -P\\Delta V$). If a question asks for the work done BY the gas, that quantity is $-W$.
@@ -57,11 +57,11 @@ For an **ideal gas**, $\\Delta U = 0 \\Leftrightarrow \\Delta T = 0$ (true). But
 ### ❌ Mistake 4: Assuming adiabatic = isothermal
 Adiabatic ($Q = 0$) means no heat exchange. Isothermal ($\\Delta T = 0$) means constant temperature. An adiabatic expansion causes temperature to DROP.
 
-### ❌ Mistake 5: Forgetting that COP > 1 is normal
-Unlike efficiency (always < 1), COP of a refrigerator or heat pump can exceed 1. A COP of 5 does not violate any law.
+### ❌ Mistake 5: Treating $Q$ and $W$ like state functions
+Only $\\Delta U$ is fixed by the endpoints. Two paths between the same states can involve very different work and heating.
 
-### ❌ Mistake 6: Confusing engine efficiency with refrigerator COP
-Engine: $e = |W|/Q_H < 1$. Fridge: $\\text{COP} = Q_C/|W|$ (can be > 1). They measure different things.
+### ❌ Mistake 6: Saying a system's entropy can never decrease
+That rule is for **isolated** systems. A closed system that loses energy to its surroundings can lose entropy, as long as the surroundings gain at least as much.
       `
     },
     {
@@ -117,15 +117,15 @@ Engine: $e = |W|/Q_H < 1$. Fridge: $\\text{COP} = Q_C/|W|$ (can be > 1). They me
             explanation: 'In a clockwise rectangular cycle the net work done by the gas = enclosed area = $\\Delta P \\times \\Delta V > 0$ (so the net work done ON the gas, $W_{\\text{net}}$, is negative). This is a heat engine. The expansion occurs at higher pressure than the compression, so expansion work exceeds compression work.'
           },
           {
-            question: 'A Carnot engine operates between a hot reservoir at 127°C and a cold reservoir at 27°C. It absorbs 2000 J per cycle. The work output per cycle is:',
+            question: 'A monatomic ideal gas expands at a constant pressure of 200 kPa from 3.0 L to 5.0 L. How much energy is transferred to the gas by heating?',
             options: [
-              '500 J',
               '1000 J',
-              '1500 J',
-              '2000 J'
+              '600 J',
+              '400 J',
+              '200 J'
             ],
             correctAnswer: 0,
-            explanation: 'Convert to Kelvin: $T_H = 400$ K, $T_C = 300$ K. $e = 1 - 300/400 = 0.25$. $W = eQ_H = 0.25 \\times 2000 = 500$ J.'
+            explanation: '$W = -P\\Delta V = -(200)(2.0) = -400$ J and $\\Delta U = \\frac{3}{2}P\\Delta V = 600$ J, so $Q = \\Delta U - W = 1000$ J. The gas needs energy both to warm up and to push back its surroundings; 600 J counts only the warming, and 200 J comes from a sign error on $W$.'
           }
         ]
       }
@@ -170,19 +170,21 @@ For each scenario, identify the correct result.
       content: `
 **Final Mastery Drill** 🏆
 
-1) A Carnot engine operates between 600 K and 300 K with $Q_H = 1200$ J. Find the work output, the work done BY the engine (in J).
+Use $R = 8.31$ J/(mol·K).
 
-2) A refrigerator has COP = 4 and does 150 J of work per cycle. How much heat is removed from the cold reservoir $Q_C$ (in J)?
+1) A gas is compressed at constant temperature while 300 J of work is done on it. Find $Q$, the energy transferred to the gas by heating (in J, with sign).
 
-3) 900 J of heat flows irreversibly from a 450 K reservoir to a 300 K reservoir. Find $\\Delta S_{\\text{universe}}$ (in J/K).
+2) Two moles of a monatomic ideal gas are heated at constant volume from 300 K to 400 K. Find $\\Delta U$ (in J, nearest whole number).
+
+3) A gas goes once around a clockwise cycle that encloses an area of 350 J on its PV diagram. Find the net energy transferred to the gas by heating (in J).
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['600', '600', '1'],
-        hint1: '$e = 1 - T_C/T_H = 1 - 300/600 = 0.5$. $W = eQ_H = 0.5 \\times 1200 = 600$ J.',
-        hint2: '$\\text{COP} = Q_C/W$, so $Q_C = \\text{COP} \\times W = 4 \\times 150 = 600$ J.',
-        hint3: '$\\Delta S = -Q/T_H + Q/T_C = -900/450 + 900/300 = -2 + 3 = 1$ J/K.',
-        explanation: 'Carnot: $e = 1 - T_C/T_H$, then $W = eQ_H$. Fridge COP: $Q_C = \\text{COP} \\times W$. Entropy: sum $\\Delta S$ for each reservoir (negative for heat lost, positive for heat gained).'
+        correctAnswers: ['-300', '2493', '350'],
+        hint1: 'Isothermal means $\\Delta U = 0$, so $Q = -W$.',
+        hint2: '$\\Delta U = \\frac{3}{2}nR\\Delta T = \\frac{3}{2}(2)(8.31)(100)$.',
+        hint3: 'For a cycle $\\Delta U = 0$, so $Q_{\\text{net}} = -W_{\\text{net}}$, and clockwise means the gas does net work equal to the enclosed area.',
+        explanation: '1) $Q = -W = -300$ J: the gas must give off the energy that the work puts in. 2) $\\Delta U = \\frac{3}{2}(2)(8.31)(100) \\approx 2493$ J. 3) $W_{\\text{net}} = -350$ J, so $Q_{\\text{net}} = +350$ J.'
       }
     }
   ]

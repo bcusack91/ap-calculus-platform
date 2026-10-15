@@ -5,214 +5,208 @@ export const physics2EmInductionPart5Data = {
       id: 'ei5-intro',
       type: 'text' as const,
       content: `
-# 🔌 Generators and Transformers
+# 🔲 Loops Crossing a Field Boundary
 
-**Part 5 of 7 — Turning Motion into Electricity (and Vice Versa)**
+**Part 5 of 7 — Loops Entering and Leaving a Field: Flux and EMF Graphs**
 
-The generator is arguably humanity's most important invention. By spinning a coil in a magnetic field, we convert mechanical energy into electrical energy. Transformers then allow us to transmit that power efficiently across vast distances.
+One of the most common AP Physics 2 induction setups is a conducting loop that moves at constant speed into a region of magnetic field, through it, and back out. It combines everything so far: flux, Faraday's law, Lenz's law, and motional EMF. It is also the classic place where the exam asks you to **sketch graphs** of flux, EMF, and current versus time.
       `
     },
     {
-      id: 'ei5-ac-generator',
+      id: 'ei5-three-stages',
       type: 'text' as const,
       content: `
-## The AC Generator
+## The Setup and the Three Stages
 
-### How It Works
+A square loop of side $s$ and resistance $R$ moves to the right at constant speed $v$. Ahead of it is a region of uniform field $B$ pointing **into the page**, wider than the loop. Outside the region, $B = 0$.
 
-A coil with $N$ turns and area $A$ rotates at angular frequency $\\omega$ in a uniform field $\\vec{B}$.
+### Stage 1 — Entering
 
-As the coil rotates, the angle $\\theta = \\omega t$, and the flux through the coil changes:
+Only part of the loop is in the field, and that part **grows** at a steady rate: each second, an area $s \\cdot v$ enters the field.
 
-$$\\Phi_B = NBA\\cos(\\omega t)$$
+$$|\\varepsilon| = \\frac{\\Delta\\Phi}{\\Delta t} = \\frac{B(s\\,v\\,\\Delta t)}{\\Delta t} = Bsv$$
 
-### The Generator EMF
+This is the same as the rod-on-rails result $\\varepsilon = B\\ell v$: the leading edge is the "rod." Into-page flux is **increasing**, so the induced current makes an out-of-page field inside the loop → **counterclockwise** current.
 
-Applying Faraday's Law:
+### Stage 2 — Fully Inside
 
-$$\\varepsilon = -\\frac{d\\Phi_B}{dt} = NBA\\omega\\sin(\\omega t)$$
+The whole loop is in the uniform field. As it moves, $B$, $A$, and the angle all stay the same, so the flux is **constant**:
 
-The **peak EMF** is:
+$$\\varepsilon = 0, \\qquad I = 0$$
 
-$$\\varepsilon_0 = NBA\\omega$$
+Moving through a field is not enough — the flux has to **change**.
 
-So the output voltage oscillates sinusoidally:
+### Stage 3 — Leaving
 
-$$\\varepsilon(t) = \\varepsilon_0 \\sin(\\omega t)$$
-
-### Key Features
-
-- The output is **alternating current (AC)** — it reverses direction every half-cycle
-- The frequency of the AC equals the rotation frequency: $f = \\omega / (2\\pi)$
-- In the US, power plants produce AC at $f = 60$ Hz, so $\\omega = 120\\pi$ rad/s
-- Peak EMF increases with $N$, $B$, $A$, and $\\omega$
+The area still in the field **shrinks** at the same rate $s \\cdot v$, so $|\\varepsilon| = Bsv$ again. Now the into-page flux is **decreasing**, so the induced current adds into-page field inside the loop → **clockwise** current, opposite to Stage 1.
       `
     },
     {
-      id: 'ei5-generator-quiz',
+      id: 'ei5-graphs',
+      type: 'text' as const,
+      content: `
+## Graphing Flux, EMF, and Current
+
+Call into-page flux positive and counterclockwise current positive.
+
+| Stage | Flux $\\Phi$ | EMF and current |
+|-------|--------------|-----------------|
+| Before entering | 0 | 0 |
+| Entering | Rises in a straight line from 0 to $Bs^2$ | Constant, $Bsv$; counterclockwise |
+| Fully inside | Flat at $Bs^2$ | 0 |
+| Leaving | Falls in a straight line from $Bs^2$ to 0 | Constant, $Bsv$; clockwise |
+| After leaving | 0 | 0 |
+
+### The Rule That Connects the Graphs
+
+The EMF at any instant is set by the **slope** of the flux-versus-time graph ($\\varepsilon = -\\Delta\\Phi/\\Delta t$):
+
+- **Steady rise in flux** → constant EMF of one sign
+- **Flat flux** (even if it is large) → zero EMF
+- **Steady fall in flux** → constant EMF of the opposite sign
+
+So the EMF graph is a set of **flat steps**: a step on one side of zero, a gap at zero, and an equal step on the other side. The current graph has the same shape, scaled by $1/R$.
+
+### What Changes the Picture
+
+- **Faster loop** → each step is taller (larger $v$) and narrower (less time to enter), but the total flux change is the same
+- **Stronger field** → taller steps and a higher flux plateau
+- **Field region narrower than the loop** (width $w < s$) → the loop is never fully inside; the leading edge leaves the region before the trailing edge reaches it, so the flux levels off at $Bws$ and the EMF is zero while the loop straddles the region
+      `
+    },
+    {
+      id: 'ei5-graph-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Generator Concept Check** 🧠
+**Stages and Graphs Check** 📈
       `,
       exercise: {
         questions: [
           {
-            question: 'In an AC generator, the EMF is maximum when:',
+            question: 'A square loop moves at constant speed into, through, and out of a region of uniform field that is wider than the loop. During which stage is there no induced current?',
             options: [
-              'The coil is perpendicular to $\\vec{B}$ (max flux)',
-              'The coil is parallel to $\\vec{B}$ (flux is zero)',
-              'The coil is at 45° to $\\vec{B}$',
-              'The coil has stopped rotating'
+              'While the loop is entering the field',
+              'While the loop is fully inside the field',
+              'While the loop is leaving the field',
+              'At no stage; current flows the whole time'
             ],
             correctAnswer: 1,
-            explanation: 'EMF $= NBA\\omega\\sin(\\omega t)$. This is max when $\\sin(\\omega t) = 1$, i.e., when the coil plane is parallel to $\\vec{B}$. At that instant, the flux is zero but is changing most rapidly — and it\'s the **rate of change** of flux that determines EMF.'
+            explanation: 'Fully inside a uniform field, the flux through the loop stays constant, so there is no EMF and no current. Entering and leaving both change the flux, so current flows in those stages.'
           },
           {
-            question: 'A generator coil has 100 turns, area 0.04 $m^{2}$, in a 0.5 T field, rotating at 60 Hz. The peak EMF is:',
+            question: 'For that loop, the flux-versus-time graph rises in a straight line, stays flat, then falls in a straight line. Which describes the EMF-versus-time graph?',
             options: [
-              '12 V',
-              '120 V',
-              '377 V',
-              '754 V'
+              'A straight rising line, then flat, then a falling line',
+              'Constant, then zero, then constant with the opposite sign',
+              'Constant with the same sign through all three stages',
+              'Zero, then a constant value, then zero again'
             ],
-            correctAnswer: 3,
-            explanation: '$\\omega = 2\\pi f = 2\\pi(60) = 120\\pi$ rad/s. $\\varepsilon_0 = NBA\\omega = (100)(0.5)(0.04)(120\\pi) = 2 \\times 120\\pi = 240\\pi \\approx 754$ V.'
+            correctAnswer: 1,
+            explanation: 'EMF follows the slope of the flux graph: a steady positive slope, then zero slope, then a steady negative slope. Copying the shape of the flux graph confuses the flux with its rate of change.'
+          },
+          {
+            question: 'The same loop is pushed through the field twice as fast. While it is entering, the induced EMF:',
+            options: [
+              'Doubles, since the flux changes in half the time',
+              'Stays the same, since the total flux change is the same',
+              'Halves, since the loop spends half as long entering',
+              'Quadruples, since the speed and the area both double'
+            ],
+            correctAnswer: 0,
+            explanation: '$\\varepsilon = Bsv$, so doubling $v$ doubles the EMF; the same flux change now happens in half the time. The area of the loop does not change, and a shorter entry time makes the EMF larger, not smaller.'
           }
         ]
       }
     },
     {
-      id: 'ei5-transformers',
+      id: 'ei5-forces-energy',
       type: 'text' as const,
       content: `
-## Transformers
+## Forces and Energy on the Loop
 
-A **transformer** transfers AC electrical energy between two coils using electromagnetic induction. It consists of:
+### Worked Example
 
-- **Primary coil**: $N_1$ turns, connected to the AC source
-- **Secondary coil**: $N_2$ turns, connected to the load
-- **Iron core**: channels the magnetic flux so nearly all flux through the primary also passes through the secondary
+The loop has side $s = 0.10$ m and resistance $R = 0.50\\;\\Omega$. It moves at $v = 2.0$ m/s into a field of $B = 0.40$ T (into the page).
 
-### The Transformer Equation
+**EMF while entering:**
+$$\\varepsilon = Bsv = (0.40)(0.10)(2.0) = 0.080 \\text{ V}$$
 
-Since both coils share the same changing flux:
+**Current:**
+$$I = \\frac{\\varepsilon}{R} = \\frac{0.080}{0.50} = 0.16 \\text{ A (counterclockwise)}$$
 
-$$\\frac{V_2}{V_1} = \\frac{N_2}{N_1}$$
+**Force on the leading edge** (the only side fully crossing the field lines; the forces on the top and bottom edges are equal and opposite and cancel):
+$$F = IsB = (0.16)(0.10)(0.40) = 6.4 \\times 10^{-3} \\text{ N}$$
 
-### Types of Transformers
+With counterclockwise current, the leading (right) edge carries current **up** the page; up × into the page gives a force to the **left** — opposite the velocity, as Lenz's law requires.
 
-| Type | Turns Ratio | Voltage | Current |
-|------|------------|---------|---------|
-| **Step-Up** | $N_2 > N_1$ | $V_2 > V_1$ | $I_2 < I_1$ |
-| **Step-Down** | $N_2 < N_1$ | $V_2 < V_1$ | $I_2 > I_1$ |
+**Power:** to keep the speed constant, an outside force must supply
+$$P = Fv = (6.4 \\times 10^{-3})(2.0) = 0.0128 \\text{ W}$$
+which matches the power dissipated in the loop: $I^2R = (0.16)^2(0.50) = 0.0128$ W. ✓
 
-### Power Conservation
+### The Whole Trip
 
-For an **ideal transformer** (no energy loss):
+- **Entering:** braking force opposite $\\vec{v}$; work done by the outside force becomes thermal energy in the loop
+- **Fully inside:** no current, no magnetic force — the loop coasts with no push needed
+- **Leaving:** the current reverses, but now the **trailing** edge is in the field, so the force **still** points opposite $\\vec{v}$
 
-$$P_1 = P_2 \\implies V_1 I_1 = V_2 I_2$$
-
-Combining with the voltage equation:
-
-$$\\frac{I_1}{I_2} = \\frac{N_2}{N_1}$$
-
-If you step up the voltage, you step down the current — and vice versa. **You cannot get more power out than you put in!**
-
-### Why Transformers Matter
-
-Power lines use **high voltage** ($\\sim$500 kV) to reduce current, which reduces $I^2R$ resistive losses in the wires. Without step-up/step-down transformers, long-distance power transmission would be impractical.
+If nothing pushes the loop, it **slows down** while entering and while leaving, and its lost kinetic energy shows up as thermal energy.
       `
     },
     {
-      id: 'ei5-transformer-drill',
+      id: 'ei5-calculation-drill',
       type: 'input-boxes' as const,
       content: `
-**Transformer Calculation Drill** 📐
+**Loop-Entering Calculation Drill** 📐
 
-A step-up transformer has 200 turns on the primary and 5000 turns on the secondary. The primary is connected to a 120 V AC source supplying 10 A.
+A square loop 0.20 m on a side, with resistance 2.0 Ω, moves at a constant 5.0 m/s into a region where $B = 0.50$ T is perpendicular to the loop.
 
-1) Secondary voltage $V_2$ (in V)
+1) Induced EMF while the loop is entering (in V)
 
-2) Secondary current $I_2$ (in A)
+2) Induced current while the loop is entering (in A)
 
-3) Power delivered to the load (in W)
-
-*Round all answers to 3 significant figures.*
+3) Magnitude of the magnetic force on the loop while it is entering (in N)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3000', '0.4', '1200'],
-        hint1: '$V_2 = V_1 \\times N_2/N_1 = 120 \\times 5000/200$.',
-        hint2: '$I_2 = I_1 \\times N_1/N_2 = 10 \\times 200/5000$.',
-        hint3: '$P = V_2 I_2$ or $P = V_1 I_1 = 120 \\times 10$. Both must be equal for an ideal transformer.',
-        explanation: '$V_2 = 120 \\times (5000/200) = 120 \\times 25 = 3000$ V. $I_2 = 10 \\times (200/5000) = 10 \\times 0.04 = 0.4$ A. $P = 3000 \\times 0.4 = 1200$ W = $120 \\times 10 = 1200$ W. ✓'
+        correctAnswers: ['0.50', '0.25', '0.025'],
+        hint1: '$\\varepsilon = Bsv = (0.50)(0.20)(5.0)$.',
+        hint2: '$I = \\varepsilon/R$.',
+        hint3: 'Only the leading edge contributes a net force: $F = IsB$.',
+        explanation: '$\\varepsilon = (0.50)(0.20)(5.0) = 0.50$ V. $I = 0.50/2.0 = 0.25$ A. $F = IsB = (0.25)(0.20)(0.50) = 0.025$ N, directed opposite the loop\'s velocity.'
       }
     },
     {
-      id: 'ei5-power-transmission',
-      type: 'text' as const,
-      content: `
-## Power Transmission — Why High Voltage?
-
-### The Problem
-
-A power plant generates 1 MW of power. The transmission lines have total resistance $R = 10\\;\\Omega$.
-
-### At Low Voltage (1000 V)
-
-$$I = \\frac{P}{V} = \\frac{10^6}{1000} = 1000 \\text{ A}$$
-
-$$P_{\\text{lost}} = I^2 R = (1000)^2(10) = 10{,}000{,}000 \\text{ W} = 10 \\text{ MW!}$$
-
-That's **10× more** than the power being transmitted! Totally impractical.
-
-### At High Voltage (500,000 V)
-
-$$I = \\frac{P}{V} = \\frac{10^6}{500{,}000} = 2 \\text{ A}$$
-
-$$P_{\\text{lost}} = I^2 R = (2)^2(10) = 40 \\text{ W}$$
-
-Only **0.004%** lost! This is why we use high-voltage power lines.
-
-### The Full System
-
-1. Generator produces AC at moderate voltage
-2. **Step-up transformer** raises voltage to ~500 kV for transmission
-3. Long-distance power lines carry small current
-4. **Step-down transformer** reduces voltage to 120/240 V for homes
-      `
-    },
-    {
       id: 'ei5-exit-quiz',
-      type: 'multiple-choice' as const,
+      type: 'dropdown-select' as const,
       content: `
-**Exit Quiz — Generators & Transformers** ✅
+**Exit Check — Loops and Field Boundaries** ✅
+
+A loop moves to the right at constant speed into, through, and out of a field region where $\\vec{B}$ points into the page.
       `,
       exercise: {
-        questions: [
+        dropdowns: [
           {
-            question: 'A step-down transformer has $N_1 = 1000$ and $N_2 = 50$. If the input is 2400 V AC, the output voltage is:',
-            options: [
-              '120 V',
-              '240 V',
-              '48,000 V',
-              '12 V'
-            ],
-            correctAnswer: 0,
-            explanation: '$V_2 = V_1 (N_2/N_1) = 2400 \\times (50/1000) = 2400 \\times 0.05 = 120$ V.'
+            label: 'While entering, the induced current flows:',
+            options: ['clockwise', 'counterclockwise', 'not at all']
           },
           {
-            question: 'Transformers work with AC but NOT with DC because:',
-            options: [
-              'DC has too much current',
-              'DC gives a constant flux, so no EMF is induced in the secondary',
-              'DC would melt the iron core',
-              'DC cannot flow through a coil'
-            ],
-            correctAnswer: 1,
-            explanation: 'Transformers rely on a **changing** flux to induce an EMF in the secondary coil. DC produces a constant current → constant $B$ → constant flux → $d\\Phi/dt = 0$ → no induced EMF. This is why the power grid uses AC.'
+            label: 'While fully inside, the induced current flows:',
+            options: ['clockwise', 'counterclockwise', 'not at all']
+          },
+          {
+            label: 'While leaving, the induced current flows:',
+            options: ['clockwise', 'counterclockwise', 'not at all']
+          },
+          {
+            label: 'While leaving, the magnetic force on the loop points:',
+            options: ['to the left', 'to the right', 'into the page', 'nowhere (F = 0)']
           }
-        ]
+        ],
+        correctAnswers: ['counterclockwise', 'not at all', 'clockwise', 'to the left'],
+        hint1: 'Entering: into-page flux increases, so the induced field points out of the page inside the loop.',
+        hint2: 'Fully inside a uniform field, the flux does not change.',
+        hint3: 'Lenz\'s law: the magnetic force always opposes the motion that changes the flux.',
+        explanation: 'Entering, the increasing into-page flux drives counterclockwise current; fully inside, the flux is constant and no current flows; leaving, the decreasing flux drives clockwise current. In both the entering and leaving stages the magnetic force points left, opposing the loop\'s motion.'
       }
     }
   ]

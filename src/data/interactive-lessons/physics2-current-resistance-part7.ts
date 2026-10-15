@@ -9,7 +9,7 @@ export const physics2CurrentResistancePart7Data = {
 
 **Part 7 of 7 — Putting It All Together**
 
-You've learned about current, resistance, resistivity, Ohm's Law, power, and real-world applications. Now let's connect everything and prepare for the AP exam.
+You've learned about current, resistance, resistivity, Ohm's Law, power and energy, graph-based experiments, and real batteries. Now let's connect everything and prepare for the AP exam.
       `
     },
     {
@@ -23,21 +23,20 @@ You've learned about current, resistance, resistivity, Ohm's Law, power, and rea
 | Equation | What It Describes |
 |----------|-------------------|
 | $I = \\Delta Q / \\Delta t$ | Current = charge flow rate |
-| $I = nAv_d e$ | Current from drift velocity |
 | $R = \\rho L / A$ | Resistance from geometry & material |
-| $\\rho = \\rho_0(1 + \\alpha \\Delta T)$ | Resistivity vs. temperature |
+| Slope of $I$ vs. $V$ $= 1/R$ | Resistance from a graph |
 | $V = IR$ | Ohm's Law |
 | $P = IV = I^2R = V^2/R$ | Electrical power |
-| $E = Pt$ | Energy consumed |
+| $\\Delta E = P\\Delta t$ | Energy transferred |
 | $V = \\varepsilon - Ir$ | Battery terminal voltage |
 
 ### How They Connect
 
 1. A **battery** ($\\varepsilon$) drives current through a circuit
 2. **Current** ($I$) depends on total resistance: $I = \\varepsilon / (R + r)$
-3. **Resistance** ($R$) depends on material ($\\rho$), length ($L$), area ($A$), and temperature
+3. **Resistance** ($R$) depends on material ($\\rho$), length ($L$), and area ($A$); a conductor's resistivity typically rises with temperature
 4. **Power** dissipated in each element: $P = I^2R$
-5. **Energy** over time: $E = Pt$
+5. **Energy** over time: $\\Delta E = P\\Delta t$, and the battery's output $\\varepsilon I$ equals the total power dissipated
 
 ### Common Mistakes to Avoid
 
@@ -46,9 +45,9 @@ You've learned about current, resistance, resistivity, Ohm's Law, power, and rea
 | Forgetting internal resistance | Total $R$ = $R_{\\text{ext}} + r$ |
 | Using wrong power formula | Match formula to known quantities |
 | Confusing $\\rho$ (resistivity) with $R$ (resistance) | $\\rho$ is a material property; $R$ depends on geometry too |
-| Thinking drift velocity = signal speed | Drift velocity is $\\sim 10^{-4}$ m/s; signal propagates at $\\sim c$ |
+| Reading the slope of an $I$-$V$ graph as $R$ | The slope of $I$ vs. $V$ is $1/R$ |
 | Mixing up conventional current and electron flow | Conventional: + to −. Electrons: − to + |
-| Forgetting units on $\\alpha$ | $\\alpha$ has units of °$C^{-1}$ $(or K^{-1})$ |
+| Treating a bulb as non-ohmic by default | On the exam, bulbs are ohmic unless stated |
       `
     },
     {
@@ -71,15 +70,15 @@ You've learned about current, resistance, resistivity, Ohm's Law, power, and rea
             explanation: '$R = \\rho L/A$. New wire: $R_2 = \\rho(2L)/(\\pi(2r)^2) = \\rho(2L)/(4\\pi r^2) = (2/4) \\cdot \\rho L/(\\pi r^2) = R/2$. Ignoring the length change gives $R/4$; ignoring the area change gives $2R$.'
           },
           {
-            question: 'A battery with $\\varepsilon = 10$ V and $r = 1.0\\;\\Omega$ is connected to a variable resistor. For maximum power transfer to the external resistor, $R$ should be:',
+            question: 'A battery with $\\varepsilon = 10$ V and $r = 1.0\\;\\Omega$ is connected to a $4.0\\;\\Omega$ resistor. The terminal voltage of the battery is:',
             options: [
-              '$0\\;\\Omega$',
-              '$0.5\\;\\Omega$',
-              '$1.0\\;\\Omega$',
-              'As large as possible'
+              '$2.0$ V',
+              '$8.0$ V',
+              '$10$ V',
+              '$12$ V'
             ],
-            correctAnswer: 2,
-            explanation: 'Maximum power transfer theorem: power delivered to the load is maximized when $R = r = 1.0\\;\\Omega$. At this point, half the total power goes to the load and half is wasted internally. $R = 0$ maximizes the current but delivers no power to the load, and a very large R delivers almost no current.'
+            correctAnswer: 1,
+            explanation: '$I = \\varepsilon/(R + r) = 10/5.0 = 2.0$ A, so $V_{\\text{terminal}} = 10 - (2.0)(1.0) = 8.0$ V. 10 V ignores the internal drop, 12 V adds it, and 2.0 V is the current in amperes rather than a voltage.'
           },
           {
             question: 'Which graph correctly shows the $I$-$V$ relationship for an ohmic resistor?',
@@ -87,7 +86,7 @@ You've learned about current, resistance, resistivity, Ohm's Law, power, and rea
               'A straight line through the origin',
               'An upward parabola through the origin',
               'A horizontal line at constant current',
-              'An exponential curve, like a diode\'s'
+              'A curve that bends toward the $V$ axis'
             ],
             correctAnswer: 0,
             explanation: 'For an ohmic material, $V = IR$ with constant $R$. On an $I$ vs $V$ graph, this is $I = V/R$, a straight line through the origin with slope $1/R$.'
@@ -140,13 +139,15 @@ On the AP Physics 2 exam, you'll encounter free-response questions that combine 
 - **Slope**: $-r$ → gives internal resistance
 - **x-intercept** ($V = 0$): $I = \\varepsilon/r$ → gives short-circuit current
 
-**Part (b):** The student wants to maximize the power delivered to the external resistor. What value of $R$ should she use?
+**Part (b):** Her voltmeter breaks. Using only the ammeter and the known resistors, what should she graph to find $\\varepsilon$ and $r$?
 
-**Key insight:** $P_R = I^2 R = [\\varepsilon/(R+r)]^2 R$. Taking the derivative and setting it to zero gives $R = r$ (maximum power transfer theorem).
+**Key insight:** Rearrange $I = \\varepsilon/(R + r)$ into a straight-line form: $\\frac{1}{I} = \\frac{1}{\\varepsilon}R + \\frac{r}{\\varepsilon}$. Graph $\\frac{1}{I}$ versus $R$:
+- **Slope** $= \\frac{1}{\\varepsilon}$, so $\\varepsilon = \\frac{1}{\\text{slope}}$
+- **Vertical intercept** $= \\frac{r}{\\varepsilon}$, so $r = \\varepsilon \\times \\text{intercept}$
 
-**Part (c):** Why is the "efficiency" (fraction of power delivered externally) only 50% at maximum power transfer?
+**Part (c):** Explain why the terminal voltage is less than $\\varepsilon$ whenever there is current in the battery.
 
-**Key insight:** When $R = r$, the current is $I = \\varepsilon/2r$. Power to load: $I^2R = \\varepsilon^2/4r$. Total power: $\\varepsilon I = \\varepsilon^2/2r$. Efficiency = 50%.
+**Key insight:** By the loop rule, the emf must account for the drop $Ir$ across the internal resistance as well as the drop across the external resistor. Only the remainder, $\\varepsilon - Ir$, appears across the terminals.
 
 ### AP Exam Tips
 
@@ -166,26 +167,26 @@ On the AP Physics 2 exam, you'll encounter free-response questions that combine 
       exercise: {
         questions: [
           {
-            question: 'A copper wire carries 3.0 A. The wire has $n = 8.5 \\times 10^{28}$ $electrons/m^{3}$ and cross-sectional area $2.0 \\times 10^{-6}$ $m^{2}$. The drift velocity is closest to:',
+            question: 'A wire carries a steady current of 0.80 A. How many electrons pass a point in the wire in 2.0 s?',
             options: [
-              '$1.1 \\times 10^{-4}$ m/s',
-              '$2.2 \\times 10^{-4}$ m/s',
-              '$1.1 \\times 10^{-2}$ m/s',
-              '$3.0$ m/s'
+              '$1.0 \\times 10^{19}$',
+              '$5.0 \\times 10^{18}$',
+              '$2.6 \\times 10^{-19}$',
+              '$1.3 \\times 10^{-19}$'
             ],
             correctAnswer: 0,
-            explanation: '$v_d = I/(nAe) = 3.0/(8.5 \\times 10^{28} \\times 2.0 \\times 10^{-6} \\times 1.6 \\times 10^{-19}) = 3.0/(2.72 \\times 10^{4}) = 1.1 \\times 10^{-4}$ m/s.'
+            explanation: '$Q = It = (0.80)(2.0) = 1.6$ C, and $N = Q/e = 1.6/(1.6 \\times 10^{-19}) = 1.0 \\times 10^{19}$. $5.0 \\times 10^{18}$ uses only one second, and the two tiny values multiply by $e$ instead of dividing.'
           },
           {
-            question: 'A tungsten filament ($\\alpha = 4.5 \\times 10^{-3}$ °$C^{-1}$) has resistance 15 $\\Omega$ at 20°C. At operating temperature, its resistance is 180 $\\Omega$. The operating temperature is closest to:',
+            question: 'A lightbulb filament\'s resistance is measured at room temperature and again while the bulb is glowing. Compared with the room-temperature value, the glowing filament\'s resistance is:',
             options: [
-              '500°C',
-              '1200°C',
-              '2460°C',
-              '3000°C'
+              'Smaller, because hot metal frees more charge carriers',
+              'Larger, as hotter metal has higher resistivity',
+              'The same, because resistivity is a fixed property',
+              'Smaller, because the hot filament expands and thickens'
             ],
-            correctAnswer: 2,
-            explanation: '$180 = 15(1 + 0.0045 \\Delta T)$ → $12 = 1 + 0.0045 \\Delta T$ → $\\Delta T = 11/0.0045 = 2444$ °C → $T = 20 + 2444 = 2464 \\approx 2460$ °C.'
+            correctAnswer: 1,
+            explanation: 'The resistivity of a conductor typically increases with temperature, so the hot filament has more resistance. Resistivity is a material property but still depends on temperature, and thermal expansion changes the dimensions only slightly.'
           },
           {
             question: 'A battery ($\\varepsilon = 6.0$ V, $r = 0.50\\;\\Omega$) is connected to a $2.5\\;\\Omega$ resistor. The power dissipated in the external resistor is:',
@@ -199,15 +200,15 @@ On the AP Physics 2 exam, you'll encounter free-response questions that combine 
             explanation: '$I = \\varepsilon/(R + r) = 6.0/(2.5 + 0.5) = 6.0/3.0 = 2.0$ A. $P = I^2R = (2.0)^2(2.5) = 4 \\times 2.5 = 10.0$ W.'
           },
           {
-            question: 'A household uses 900 kWh per month at \\$0.12/kWh. The monthly bill is:',
+            question: 'A 12 V battery supplies 0.50 A to a resistor for 5.0 minutes. How much energy does the resistor convert to thermal energy?',
             options: [
-              '\\$10.80',
-              '\\$75.00',
-              '\\$108.00',
-              '\\$1080.00'
+              '30 J',
+              '360 J',
+              '1800 J',
+              '3600 J'
             ],
             correctAnswer: 2,
-            explanation: 'Cost = $900 \\times 0.12 = \\$108.00$.'
+            explanation: '$P = I\\Delta V = (0.50)(12) = 6.0$ W, and $\\Delta E = P\\Delta t = (6.0)(300) = 1800$ J. 30 J uses 5.0 s instead of 300 s, 360 J uses 60 s, and 3600 J leaves out the current.'
           },
           {
             question: 'Which combination correctly describes electron flow vs. conventional current in a circuit with a battery?',

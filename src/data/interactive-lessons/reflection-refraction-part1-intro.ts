@@ -14,7 +14,7 @@ Before we dive into equations, we need to understand *what light actually does* 
 By the end of this part you'll be able to explain, in plain language:
 - Why light bends at boundaries
 - How fiber optics carry the internet
-- What makes rainbows form
+- Why a straw looks bent in a glass of water
 
 No math yet — just the big picture. Ready?
       `
@@ -23,20 +23,20 @@ No math yet — just the big picture. Ready?
       id: 'welcome-hook',
       type: 'text' as const,
       content: `
-# 🌈 Why Can You See a Rainbow?
+# 🥤 Why Does a Straw Look Bent?
 
-Have you ever wondered why rainbows form perfect arcs after a storm? Or how your phone's camera focuses light to capture a photo? Or why fiber optic cables can send internet signals thousands of miles without losing data?
+Have you ever noticed that a straw in a glass of water looks broken at the surface? Or that you can see your own reflection in a window at night? Or wondered why fiber optic cables can send internet signals thousands of miles without losing data?
 
 **The answer lies in how light behaves.**
 
-When light travels through different materials — air, water, glass, diamond — it doesn't just pass through unchanged. It **bends**, **bounces**, and **splits** into colors.
+When light travels through different materials — air, water, glass, diamond — it doesn't just pass through unchanged. It **bends** and **bounces**.
 
 Understanding these behaviors unlocks the secrets behind:
-- 📸 Every camera lens and telescope
+- 🪞 Mirrors and clear reflections
 - 💎 Why diamonds sparkle
 - 🌐 The entire internet (fiber optics!)
-- 👓 Prescription glasses and contacts
-- 🌈 Rainbows and natural phenomena
+- 🏊 Why pools look shallower than they are
+- 🪟 Why windows act like mirrors at night
 
 **In this lesson, you'll master the physics that powers our modern visual world.**
       `
@@ -93,7 +93,7 @@ Light is an **electromagnetic wave** that travels through space at incredible sp
 > - **Red light** → ~700 nm (longer wavelength)
 > - **Blue light** → ~450 nm (shorter wavelength)
 >
-> 💡 **Key Insight:** White light is actually a mixture of all colors combined! When you split white light through a prism, you see all the individual colors that were mixed together.
+> 💡 **Key Insight:** White light is actually a mixture of all the visible colors combined, from red (longest wavelength) to violet (shortest).
 
 ---
       `
@@ -155,26 +155,26 @@ Let's make sure you've mastered the basics before moving forward!
             explanation: "Light travels in straight lines called rays when moving through a uniform medium. This is why shadows have sharp edges!"
           },
           {
-            question: "What happens when light hits a boundary between two materials?",
+            question: "What usually happens when light hits a boundary between two transparent materials?",
             options: [
               "It only reflects",
               "It only refracts",
-              "It can reflect, refract, or do both",
+              "It reflects and refracts at the same time",
               "It always stops completely"
             ],
             correctAnswer: 2,
-            explanation: "When light hits a boundary, it can reflect (bounce back), refract (bend), or most commonly, do both! Some light reflects while some refracts into the new material."
+            explanation: "At a boundary between transparent materials, some light usually reflects (bounces back) while the rest refracts (bends) into the new material. Reflection alone happens only in special cases such as total internal reflection, covered in Part 7."
           },
           {
-            question: "What causes white light to split into different colors?",
+            question: "What makes red light different from blue light?",
             options: [
-              "All colors have the same wavelength",
-              "Different colors have different wavelengths",
-              "Light creates colors when it slows down",
-              "Colors only exist in water"
+              "Red light travels faster in a vacuum",
+              "Red light has a longer wavelength",
+              "Red light is a different kind of wave",
+              "Red light has a higher frequency"
             ],
             correctAnswer: 1,
-            explanation: "White light is a mixture of all colors, each with a different wavelength. Red light has longer wavelengths (~700 nm) while blue light has shorter wavelengths (~450 nm)."
+            explanation: "Colors of light differ in wavelength: red has a longer wavelength (~700 nm) than blue (~450 nm). All colors travel at the same speed c in a vacuum, so the longer wavelength of red means a lower frequency, not a higher one."
           }
         ]
       }
@@ -236,7 +236,7 @@ Let's make sure you've mastered the basics before moving forward!
 > - Light bends dramatically when entering
 > - Very small critical angle (only 24.4°)
 > - Light bounces around inside repeatedly
-> - Creates the famous "fire" and brilliance
+> - Creates the famous brilliance
 
 &nbsp;
 
@@ -276,42 +276,37 @@ Let's make sure you've mastered the basics before moving forward!
 
 > ## 📊 What You'll Learn
 >
-> How to calculate exactly where objects **appear** versus where they **actually are**.
+> How Snell's law predicts which way light bends at the surface — and why that makes underwater objects look **shifted** from where they **actually are**.
 >
 > This same principle explains why pools look shallower than they really are!
       `
     },
     {
-      id: 'rainbows',
+      id: 'window-reflection',
       type: 'text' as const,
       content: `
-# Real-World Example #4: Rainbow Formation 🌈
+# Real-World Example #4: Windows That Act Like Mirrors 🪟
 
-<div style="text-align: center; margin: 2rem 0;">
-  <img loading="lazy" src="/optics/rainbow-formation-example.png" alt="Rainbow formation through refraction and reflection in raindrops" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-</div>
-
-> ## ✨ The Magic
+> ## 👀 Ever Noticed?
 >
-> Sunlight + raindrops = perfect circular arc of colors!
+> In daytime you look straight through a window. At night, with the lights on inside, the same window shows your reflection!
 
 &nbsp;
 
 > ## 🔬 The Physics
 >
-> A beautiful combination of **three phenomena**:
+> **Light at a boundary partly reflects and partly transmits — all the time.**
 >
-> 1. **Refraction entering the drop** → Disperses white light into colors
-> 2. **Reflection at the back** → Bounces light back toward you  
-> 3. **Refraction exiting** → Further separates the colors
+> - A few percent of the light hitting glass reflects; most passes through
+> - In daytime, bright light from outside passing through the glass swamps the faint reflection of the room
+> - At night, little light comes in from outside, so the weak reflection of the bright room is easy to see
+> - The glass didn't change — only which light is brighter
 
 &nbsp;
 
 > ## 📊 What You'll Learn
 >
-> Why red is always on the outside and violet is always on the inside of a rainbow!
->
-> You'll understand the complete physics behind one of nature's most beautiful displays.
+> The law of reflection, and how to predict the direction of the light that **does** pass into the new material.
       `
     },
     {
@@ -328,7 +323,7 @@ Great progress! Let's verify you understand these real-world applications.
             question: "How does fiber optic internet work?",
             options: [
               "Light escapes the fiber and travels through air",
-              "Light bounces off the fiber walls via total internal reflection",
+              "Light keeps reflecting totally off the fiber walls",
               "Electricity flows through the glass fiber",
               "Radio waves travel through the fiber"
             ],
@@ -340,17 +335,17 @@ Great progress! Let's verify you understand these real-world applications.
             options: [
               "They are perfectly smooth",
               "They absorb more light",
-              "They have a very high index of refraction (n = 2.42)",
+              "They have a very high index of refraction",
               "They are naturally colorful"
             ],
             correctAnswer: 2,
-            explanation: "Diamonds have an extremely high index of refraction (n = 2.42), causing light to bend dramatically and bounce around inside, creating the famous sparkle and 'fire' effect!"
+            explanation: "Diamonds have an extremely high index of refraction (n = 2.42), causing light to bend dramatically and bounce around inside, creating the famous sparkle!"
           },
           {
             question: "Why do objects underwater appear closer than they really are?",
             options: [
               "Water magnifies everything",
-              "Light bends (refracts) when exiting water",
+              "Light bends as it leaves the water",
               "The water is always moving",
               "Our eyes work differently underwater"
             ],
@@ -358,15 +353,15 @@ Great progress! Let's verify you understand these real-world applications.
             explanation: "Light refracts (bends) when exiting water into air. Your brain assumes light travels in straight lines, so this bending creates an optical illusion making objects appear closer to the surface than they actually are!"
           },
           {
-            question: "What three phenomena combine to create a rainbow?",
+            question: "Why can you see your reflection in a window at night but not during the day?",
             options: [
-              "Reflection, absorption, and emission",
-              "Refraction entering, reflection at back, and refraction exiting",
-              "Diffraction, interference, and polarization",
-              "Only refraction at different angles"
+              "Glass only reflects light once it is dark outside",
+              "The glass always reflects a little, but daylight outshines it",
+              "Cold night air makes the glass turn into a mirror",
+              "Daylight passes through glass but lamp light does not"
             ],
             correctAnswer: 1,
-            explanation: "Rainbows form through: (1) refraction entering the raindrop that disperses colors, (2) reflection at the back of the drop, and (3) refraction exiting that further separates the colors - creating the perfect arc!"
+            explanation: "A small fraction of light reflects from glass at all times. In daytime the bright light coming in from outside hides that faint reflection; at night the outside is dark, so the reflection of the lit room stands out."
           }
         ]
       }
@@ -402,18 +397,18 @@ This single habit will prevent most mistakes in the parts ahead.
             question: 'Which of these statements about white light is FALSE?',
             options: [
               'White light is a mixture of many colors',
-              'All colors in white light have exactly the same wavelength',
-              'Different colors refract by different amounts',
-              'A prism can separate white light into its colors'
+              'Every color in white light has the same wavelength',
+              'Red light has a longer wavelength than violet light',
+              'Light of each color travels at speed c in a vacuum'
             ],
             correctAnswer: 1,
-            explanation: 'White light contains many wavelengths — that\'s why a prism can split it into a rainbow of colors.'
+            explanation: 'White light is a mixture of colors with different wavelengths, from red (longest) to violet (shortest), so they cannot all share one wavelength. In a vacuum every color travels at the same speed c.'
           },
           {
             question: 'What is the difference between reflection and refraction?',
             options: [
               'They are the same thing',
-              'Reflection is bouncing back; refraction is bending into a new medium',
+              'Reflection bounces light back, refraction bends it into a new medium',
               'Reflection only happens in water',
               'Refraction only happens with mirrors'
             ],

@@ -55,20 +55,19 @@ All thermometers exploit some **thermometric property** — a physical quantity 
 
 | Thermometer Type | Thermometric Property |
 |---|---|
-| Mercury/alcohol | Volume of liquid (thermal expansion) |
-| Thermocouple | Voltage across a junction |
-| Resistance (RTD) | Electrical resistance of metal |
+| Liquid-in-glass | Volume of a liquid column |
+| Thermocouple | Voltage across a junction of two metals |
+| Resistance thermometer | Electrical resistance of a metal |
 | Infrared | Intensity of emitted radiation |
-| Gas (constant volume) | Pressure of a gas |
-| Bimetallic strip | Differential expansion of two metals |
+| Constant-volume gas | Pressure of a fixed amount of gas |
 
 ### The Constant-Volume Gas Thermometer
 
-This is the most fundamental thermometer. It measures the pressure of a fixed amount of gas at constant volume:
+This is the most fundamental thermometer. A fixed amount of gas is sealed in a bulb whose volume does not change, and its **pressure** is measured. For an ideal gas at constant volume, pressure is directly proportional to absolute temperature:
 
-$$T = (273.16 \\text{ K}) \\frac{P}{P_{\\text{triple}}}$$
+$$\\frac{P_1}{T_1} = \\frac{P_2}{T_2}$$
 
-where $P_{\\text{triple}}$ is the pressure at the triple point of water (273.16 K by definition). As the amount of gas is reduced toward zero, all gases give the same reading — this defines the **ideal gas temperature scale**, which is identical to the Kelvin scale.
+Every gas, in any amount, gives a pressure-vs-temperature line that extrapolates to zero pressure at the same temperature, about $-273°\\text{C}$. That shared point defines **absolute zero** and the kelvin scale. You will analyze this experiment in Part 5.
       `
     },
     {

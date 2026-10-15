@@ -11,7 +11,7 @@ export const reflectionRefractionPart6Data = {
 
 What happens when light tries to leave a dense material and the angle is too steep? It can't escape — it reflects completely back inside. This is **total internal reflection** (TIR).
 
-TIR powers fiber optic internet, makes diamonds sparkle, and explains mirages on hot roads. Let's see how it works.
+TIR powers fiber optic internet and makes diamonds sparkle. Let's see how it works.
       `
     },
     {
@@ -70,7 +70,7 @@ $$\\theta_c = \\sin^{-1}\\left(\\frac{n_2}{n_1}\\right)$$
 
 If $n_1 < n_2$, then $\\frac{n_2}{n_1} > 1$ → no solution! (sin can't exceed 1)
 
-## Sign Convention Note:
+## What Happens at Total Internal Reflection
 
 When total internal reflection occurs:
 - No refracted ray (it's reflected instead)
@@ -146,13 +146,7 @@ $$\\theta_c = \\sin^{-1}\\left(\\frac{1.0}{2.42}\\right) = 24.4°$$
 - 100% reflection (mirrors are ~95%)
 - No degradation over time
 
-## 4. Mirages 🏜️
-
-On hot days, light from sky bends gradually in air layers:
-- Hot air near ground has slightly lower $n$
-- Light bends away from normal (going to lower $n$)
-- Eventually reaches critical angle → TIR!
-- We see sky reflected, looks like water!
+**Why it works:** glass has $n = 1.5$, so its critical angle with air is $\\sin^{-1}(1/1.5) = 41.8°$. Light striking the long face of the prism at 45° exceeds that, so it is totally reflected.
       `
     },
     {
@@ -212,10 +206,10 @@ Test your understanding of TIR!
           {
             question: "Light in glass (n=1.5) hits the glass-air boundary at 45°. The critical angle is 41.8°. What is the refraction angle?",
             options: [
-              "There is no refraction angle - TIR occurs",
-              "The angle is 45°",
-              "The angle is 70°",
-              "The angle is 30°"
+              "No refracted ray exists at all",
+              "The refracted ray is at 45°",
+              "The refracted ray is at 70°",
+              "The refracted ray is at 30°"
             ],
             correctAnswer: 0,
             explanation: "Since the incident angle (45°) is greater than the critical angle (41.8°), total internal reflection occurs. There is no refracted ray - all the light reflects back into the glass!"

@@ -33,9 +33,6 @@ Materials where electrons are **locked in place** — charge stays where you put
 - Charge can be deposited locally and stays put
 - Electric field can exist inside an insulator
 
-### Semiconductors
-In between — conductivity can be controlled. Think silicon chips. (Not heavily tested on AP Physics 2, but good to know.)
-
 ### The Key Insight
 
 > In a conductor, excess charge always migrates to the **outer surface** and distributes itself to minimize repulsion. Inside, $E = 0$.

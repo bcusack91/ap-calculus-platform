@@ -9,7 +9,7 @@ export const physics2KirchhoffPart7Data = {
 
 **Part 7 of 7 — Complete Circuit Analysis Strategy**
 
-You now have all the tools: KCL, KVL, single-loop analysis, multi-loop systems, and RC circuits. This final part brings everything together with a complete analysis strategy, common mistakes to avoid, and AP-style problems.
+You now have all the tools: the junction rule, the loop rule, single-loop analysis, multi-loop circuits, potential maps and meters, and RC circuits. This final part brings everything together with a complete analysis strategy, common mistakes to avoid, and AP-style problems.
       `
     },
     {
@@ -21,29 +21,28 @@ You now have all the tools: KCL, KVL, single-loop analysis, multi-loop systems, 
 ### Master Checklist
 
 1. **Identify the circuit type**
-   - Single loop → KVL alone is sufficient
-   - Multi-loop → Need both KCL and KVL
-   - Contains capacitors → Consider time-dependent (RC) behavior
+   - Single loop → the loop rule alone is sufficient
+   - Multi-loop → combine the junction rule and the loop rule
+   - Contains capacitors → analyze the initial state (capacitor = wire) and the final state (capacitor = break)
 
 2. **Label everything**
-   - Assign current variables with directions to each branch
-   - Label nodes (junctions) with letters
-   - Identify independent loops
+   - Assign a current with a direction to each branch
+   - Label junctions and any points whose potential you need
+   - Pick a reference point at $0$ V if potentials are asked for
 
 3. **Write equations**
-   - KCL at $N - 1$ nodes
-   - KVL around $B - N + 1$ loops
-   - Verify: total equations = total unknowns
+   - Junction rule wherever branches meet
+   - Loop rule around closed paths, each through at least one new branch
+   - Name the principle: junction rule = conservation of charge, loop rule = conservation of energy
 
-4. **Solve the system**
-   - For 2 unknowns: substitution or elimination
-   - For 3+ unknowns: systematic elimination or matrices
-   - Negative answers → current flows opposite to assumed direction
+4. **Solve**
+   - Substitution or elimination for two or three unknowns
+   - Negative answers → current flows opposite to the assumed direction
 
 5. **Check your answer**
-   - Do the currents satisfy KCL at every node?
-   - Does KVL hold for every loop?
-   - Are the signs and magnitudes physically reasonable?
+   - Do the currents satisfy the junction rule at every junction?
+   - Does the loop rule hold for every loop?
+   - Does the battery current match $\\varepsilon / R_{\\text{eq}}$?
 
 ### Common Shortcuts
 
@@ -63,16 +62,16 @@ You now have all the tools: KCL, KVL, single-loop analysis, multi-loop systems, 
 ### ❌ Mistake 1: Wrong Sign Convention
 Going through a battery from + to − is $-\\varepsilon$, not $+\\varepsilon$. Going through a resistor **with** the current is $-IR$.
 
-### ❌ Mistake 2: Forgetting a Branch
-Every branch needs a current variable. If you miss one, your system is underdetermined and you'll get infinite solutions or contradictions.
+### ❌ Mistake 2: Using One Current for Different Branches
+After a junction, the current divides. A loop equation that uses the battery current for a resistor in a parallel branch double-counts charge.
 
-### ❌ Mistake 3: Inconsistent Current Directions at Nodes
-Make sure the same current ($I_k$) flowing into a node in your KCL equation is the same one that appears in the KVL equation for any loop containing that branch.
+### ❌ Mistake 3: Inconsistent Current Directions
+Make sure the same current ($I_k$) flowing into a junction in your junction equation is the same one, with the same direction, that appears in every loop equation through that branch.
 
-### ❌ Mistake 4: RC Circuit Mix-ups
-- **Charging**: $V_C = \\varepsilon(1 - e^{-t/RC})$ — starts at 0, rises to $\\varepsilon$
-- **Discharging**: $V_C = V_0 e^{-t/RC}$ — starts at $V_0$, falls to 0
-- Don't confuse the two!
+### ❌ Mistake 4: RC Snapshot Mix-ups
+- **Uncharged capacitor, just after closing**: acts like a wire; current is maximum
+- **After a long time**: acts like a break; no current in its branch, and $V_C$ equals the potential difference of whatever it is in parallel with
+- **One time constant**: about 63% of the final charge (charging) or 37% of the initial charge (discharging)
 
 ### ❌ Mistake 5: Unit Errors in RC
 - $R$ in ohms, $C$ in farads → $\\tau$ in seconds
@@ -80,7 +79,7 @@ Make sure the same current ($I_k$) flowing into a node in your KCL equation is t
 - Always convert to base SI units first!
 
 ### ✅ Pro Tip for AP FRQs
-Show your work clearly: state which rule you're applying (KCL or KVL), write the equation, then solve. Graders give partial credit for correct setups even if the algebra goes wrong.
+Show your work clearly: state which rule you are applying (junction or loop), write the equation, then solve. Graders give partial credit for correct setups even if the algebra goes wrong.
       `
     },
     {
@@ -89,18 +88,13 @@ Show your work clearly: state which rule you're applying (KCL or KVL), write the
       content: `
 **AP-Style FRQ: Multi-Loop Circuit**
 
-A circuit has two loops sharing a middle branch:
-- Left loop: $\\varepsilon_1 = 24$ V, $R_1 = 4\\;\\Omega$ (left branch)
-- Middle branch: $R_2 = 6\\;\\Omega$
-- Right loop: $\\varepsilon_2 = 6$ V, $R_3 = 6\\;\\Omega$ (right branch)
+A $24$ V battery is in series with $R_1 = 4\\;\\Omega$. The current $I_1$ then splits at a junction into $I_2$ through $R_2 = 6\\;\\Omega$ and $I_3$ through $R_3 = 12\\;\\Omega$, which are in parallel.
 
-Assume $I_1$ flows down through the left branch, $I_2$ flows down through the middle, $I_3$ flows down through the right branch.
+Junction rule: $I_1 = I_2 + I_3$
 
-KCL: $I_1 = I_2 + I_3$
+Loop through $R_2$: $24 - 4I_1 - 6I_2 = 0$
 
-Left loop (CW): $24 - 4I_1 - 6I_2 = 0$
-
-Right loop (CW): $6I_2 - 6I_3 - 6 = 0$
+Loop through $R_3$: $24 - 4I_1 - 12I_3 = 0$
 
 1) Find $I_1$ (in A):
 
@@ -113,10 +107,10 @@ Right loop (CW): $6I_2 - 6I_3 - 6 = 0$
       exercise: {
         boxes: 4,
         correctAnswers: ['3', '2', '1', '24'],
-        hint1: 'Substitute $I_1 = I_2 + I_3$ into the left loop: $24 - 4(I_2 + I_3) - 6I_2 = 0 \\Rightarrow 24 - 10I_2 - 4I_3 = 0$.',
-        hint2: 'From right loop: $6I_2 - 6I_3 = 6 \\Rightarrow I_2 - I_3 = 1 \\Rightarrow I_2 = I_3 + 1$.',
-        hint3: 'Substitute: $24 - 10(I_3 + 1) - 4I_3 = 0 \\Rightarrow 14 - 14I_3 = 0 \\Rightarrow I_3 = 1$ A.',
-        explanation: 'From right loop: $I_2 = I_3 + 1$. Substituting into left loop: $24 - 10(I_3+1) - 4I_3 = 0 \\Rightarrow 14 = 14I_3 \\Rightarrow I_3 = 1$ A. Then $I_2 = 2$ A and $I_1 = 3$ A. Verify: Left $24 - 12 - 12 = 0$ ✓. Right $12 - 6 - 6 = 0$ ✓. $P_{R_2} = I_2^2 R_2 = (2)^2(6) = 24$ W.'
+        hint1: 'Subtracting the loop equations gives $6I_2 = 12I_3$, so $I_2 = 2I_3$ and $I_1 = 3I_3$.',
+        hint2: 'Substitute into the loop through $R_3$: $24 - 12I_3 - 12I_3 = 0$.',
+        hint3: 'Check with $R_{\\text{eq}} = 4 + \\frac{(6)(12)}{6 + 12} = 8\\;\\Omega$. Then $P_{R_2} = I_2^2R_2$.',
+        explanation: '$24 = 24I_3$ gives $I_3 = 1$ A, so $I_2 = 2$ A and $I_1 = 3$ A, matching $24/8 = 3$ A. Verify the loop through $R_2$: $24 - 12 - 12 = 0$ ✓. $P_{R_2} = (2)^2(6) = 24$ W.'
       }
     },
     {
@@ -131,17 +125,17 @@ A $30\\;\\text{V}$ battery is connected in series with a $200\\;\\Omega$ resisto
 
 2) Maximum current $I_0$ (in A):
 
-3) Current at $t = 0.2$ s (in A, to three decimal places):
+3) Charge on the capacitor after a long time (in mC):
 
-4) Voltage across the capacitor at $t = 0.1$ s (in V, to one decimal place):
+4) Energy stored in the capacitor after a long time (in J):
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['0.1', '0.15', '0.020', '19.0'],
-        hint1: '$\\tau = RC = (200)(500 \\times 10^{-6}) = 0.1$ s.',
-        hint2: '$I_0 = \\varepsilon / R = 30/200 = 0.15$ A.',
-        hint3: '$I(0.2) = 0.15 \\cdot e^{-0.2/0.1} = 0.15 \\cdot e^{-2} = 0.15 \\times 0.1353 = 0.0203 \\approx 0.020$ A.',
-        explanation: '$\\tau = 0.1$ s. $I_0 = 0.15$ A. $I(0.2) = 0.15 e^{-2} = 0.020$ A. $V_C(0.1) = 30(1 - e^{-1}) = 30(0.632) = 19.0$ V.'
+        correctAnswers: ['0.1', '0.15', '15', '0.225'],
+        hint1: '$\\tau = RC = (200)(500 \\times 10^{-6})$.',
+        hint2: 'The current is largest just after closing, when the capacitor acts like a wire: $I_0 = \\varepsilon / R$.',
+        hint3: 'After a long time $V_C = \\varepsilon$: $Q = C\\varepsilon$ and $U_C = \\tfrac{1}{2}C\\varepsilon^2$.',
+        explanation: '$\\tau = 0.1$ s. $I_0 = 30/200 = 0.15$ A. $Q = (500 \\times 10^{-6})(30) = 0.015$ C $= 15$ mC. $U_C = \\tfrac{1}{2}(500 \\times 10^{-6})(30)^2 = 0.225$ J.'
       }
     },
     {
@@ -164,26 +158,26 @@ A $30\\;\\text{V}$ battery is connected in series with a $200\\;\\Omega$ resisto
             explanation: 'KCL (junction rule) = conservation of charge. KVL (loop rule) = conservation of energy.'
           },
           {
-            question: 'A circuit has 3 nodes and 5 branches. How many KCL and KVL equations do you write?',
+            question: 'A single battery feeds two parallel branches with unequal resistances. Which statement must be true?',
             options: [
-              '2 KCL + 3 KVL',
-              '3 KCL + 2 KVL',
-              '2 KCL + 2 KVL',
-              '3 KCL + 3 KVL'
+              'Each branch carries the same current',
+              'Branch currents add to the total',
+              'More resistance means more branch current',
+              'The branch potential differences sum to the emf'
             ],
-            correctAnswer: 0,
-            explanation: 'KCL: $N - 1 = 3 - 1 = 2$ equations. KVL: $B - N + 1 = 5 - 3 + 1 = 3$ equations. Total: 5 = number of unknowns ✓.'
+            correctAnswer: 1,
+            explanation: 'The junction rule (conservation of charge) requires the branch currents to sum to the current leaving the battery. Unequal resistances give unequal currents, the larger resistance carries the smaller current, and parallel branches share one potential difference rather than adding.'
           },
           {
-            question: 'In an RC charging circuit, after $5\\tau$ the capacitor voltage is approximately:',
+            question: 'In an RC charging circuit, after one time constant the charge on the capacitor is approximately:',
             options: [
-              '50% of $\\varepsilon$',
-              '63% of $\\varepsilon$',
-              '95% of $\\varepsilon$',
-              '99% of $\\varepsilon$'
+              '37% of its final value',
+              '50% of its final value',
+              '63% of its final value',
+              '100% of its final value'
             ],
-            correctAnswer: 3,
-            explanation: '$V_C(5\\tau) = \\varepsilon(1 - e^{-5}) = \\varepsilon(1 - 0.0067) = 0.993\\varepsilon \\approx 99.3\\%$ of $\\varepsilon$.'
+            correctAnswer: 2,
+            explanation: 'One time constant brings a charging capacitor to about 63% of its final charge. 37% is what remains after one time constant of discharging, 50% is a common guess, and the full value is approached only after many time constants.'
           },
           {
             question: 'A fully charged capacitor in a DC circuit behaves like:',
@@ -197,15 +191,15 @@ A $30\\;\\text{V}$ battery is connected in series with a $200\\;\\Omega$ resisto
             explanation: 'A fully charged capacitor has $V_C = \\varepsilon$ and $I = 0$. No current flows — it acts like an open circuit (a break in the wire).'
           },
           {
-            question: 'You traverse a loop and write: $+12 - 3I_1 + 5I_2 - 8 = 0$. This loop contains:',
+            question: 'You traverse a single loop and write: $+12 - 3I - 8 - 5I = 0$. This loop contains:',
             options: [
-              'One battery and one resistor',
-              'Two batteries and two resistors',
-              'Two batteries and one resistor',
-              'One battery and two resistors'
+              'It has one battery and one resistor',
+              'It has two batteries and two resistors',
+              'It has two batteries and one resistor',
+              'It has one battery and two resistors'
             ],
             correctAnswer: 1,
-            explanation: 'The $+12$ and $-8$ terms are EMFs (two batteries). The $-3I_1$ and $+5I_2$ terms are resistor voltage changes (two resistors, traversed in opposite relative directions to their currents).'
+            explanation: 'The $+12$ and $-8$ terms are EMFs (two batteries). The $-3I$ and $-5I$ terms are drops across two resistors that carry the same loop current; the 8 V battery is crossed from + to −, so it opposes the 12 V battery.'
           }
         ]
       }

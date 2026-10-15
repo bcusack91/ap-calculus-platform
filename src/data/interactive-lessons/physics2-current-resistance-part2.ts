@@ -78,7 +78,7 @@ $$R = \\frac{\\rho L}{A}$$
 ### Conductors vs. Insulators vs. Semiconductors
 
 - **Conductors** ($\\rho \\sim 10^{-8}$): many free electrons, very low resistance
-- **Semiconductors** ($\\rho \\sim 10^{-1}$ to $10^{3}$): few free carriers at room temp; resistance decreases with temperature
+- **Semiconductors** ($\\rho \\sim 10^{-1}$ to $10^{3}$): few free carriers, so resistivity falls between conductors and insulators
 - **Insulators** ($\\rho > 10^{8}$): almost no free carriers, extremely high resistance
       `
     },
@@ -175,15 +175,15 @@ Use $\\rho_{\\text{Cu}} = 1.68 \\times 10^{-8}$ $\\Omega\\cdot$m.
       exercise: {
         questions: [
           {
-            question: 'The resistance of a semiconductor (like silicon) as temperature increases will:',
+            question: 'As a copper wire gets hotter, its resistivity typically:',
             options: [
-              'Increase, since the atoms vibrate and collide more',
-              'Decrease, since more charge carriers are freed',
-              'Stay the same, since the number of carriers is fixed',
-              'Drop to zero once it passes a critical temperature'
+              'Decreases, since the electrons gain more energy',
+              'Increases, since the atoms vibrate and collide more',
+              'Stays the same, since it depends only on the metal',
+              'Grows, since the wire lengthens as it expands'
             ],
             correctAnswer: 1,
-            explanation: 'In semiconductors, higher temperature frees more charge carriers from the lattice. The increase in carriers outweighs the increase in collisions, so resistance decreases.'
+            explanation: 'The resistivity of a conductor typically increases with temperature because the more strongly vibrating atoms interrupt the motion of the charge carriers more often. Thermal expansion changes the length and area only slightly and does not change the resistivity, which is a material property.'
           },
           {
             question: 'Two wires of the same material have the same resistance. Wire A is twice as long as Wire B. The ratio of their diameters $d_A / d_B$ is:',

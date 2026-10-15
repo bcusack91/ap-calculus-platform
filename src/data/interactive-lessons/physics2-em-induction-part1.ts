@@ -93,7 +93,7 @@ Each turn contributes the same flux, so we multiply by $N$.
             options: [
               'Tesla (T)',
               'Weber (Wb)',
-              'Henry (H)',
+              'Newton per ampere (N/A)',
               'Tesla-meter (T·m)'
             ],
             correctAnswer: 1,
@@ -141,8 +141,7 @@ Since $\\Phi_B = BA\\cos\\theta$, the flux changes if **any** of the three facto
 - Pull a loop out of the field region
 
 ### 3. Change $\\theta$ (angle between $\\vec{B}$ and $\\hat{n}$)
-- Rotate the loop in the field
-- This is how **generators** work!
+- Rotate the loop in the field, so the component of $\\vec{B}$ perpendicular to the loop changes
 
 ### Why This Matters
 

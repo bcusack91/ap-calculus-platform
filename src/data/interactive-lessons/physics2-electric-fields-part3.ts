@@ -73,14 +73,11 @@ Conductors at electrostatic equilibrium have special properties:
 
 1. **$E = 0$ inside the conductor** — no field lines penetrate the interior
 2. **Field lines are perpendicular to the surface** — if they weren't, the surface component would push charges along the surface until equilibrium
-3. **All excess charge resides on the surface** — Gauss's Law proves this
-4. **Field is strongest at points/sharp edges** — lines crowd together at sharp features
+3. **All excess charge resides on the surface** — the excess charges repel one another and spread out as far as they can
 
 ### Why Perpendicular?
 
 If a field line were at an angle to a conductor surface, it would have a component *along* the surface. This would push free electrons, which would redistribute until the tangential component vanishes. At equilibrium, only the perpendicular component remains.
-
-This is why lightning rods work — charge concentrates at the sharp tip, creating an intense local field.
       `
     },
     {

@@ -5,215 +5,221 @@ export const physics2MagneticFieldsPart6Data = {
       id: 'mf6-intro',
       type: 'text' as const,
       content: `
-# ⚙️ Torque on Current Loops
+# 🧭 Magnetic Materials and the Hall Effect
 
-**Part 6 of 7 — Magnetic Dipoles, Motors, and Galvanometers**
+**Part 6 of 7 — Magnetic Materials, Dipoles, and the Hall Effect**
 
-A current loop in a magnetic field doesn't just experience a net force — it experiences a **torque** that tends to rotate it. This is the operating principle behind electric motors, galvanometers, and many other devices.
+Why does a refrigerator magnet stick to steel but not to aluminum? Why does a compass swing to line up with a field? And how can a magnetic field reveal whether the charges moving in a wire are positive or negative? This part connects magnetism to what is happening inside matter.
       `
     },
     {
-      id: 'mf6-torque-derivation',
+      id: 'mf6-dipoles',
       type: 'text' as const,
       content: `
-## Torque on a Rectangular Current Loop
+## Magnetic Dipoles
 
-Consider a rectangular loop (sides $a$ and $b$) carrying current $I$ in a uniform field $\\vec{B}$.
+A **magnetic dipole** is anything with a north pole and a south pole: a bar magnet, a compass needle, a current loop (Part 5), or a single atom.
 
-### Forces on the Sides
+### Where Dipoles Come From
 
-- **Sides parallel to $\\vec{B}$**: No force ($\\theta = 0°$)
-- **Sides perpendicular to $\\vec{B}$**: Force $F = BIa$ on each, but in **opposite directions**
+Magnetic dipoles result from the **circular or rotational motion of electric charges**. In magnetic materials, that motion is the motion of **electrons** — their orbits and their spin. Each atom can act as a tiny magnet.
 
-These opposite forces create a **couple** — a net torque with zero net force.
+### Rules for Dipoles
 
-### The Torque
+- **No monopoles.** A north pole is never found without a south pole. Break a bar magnet in half and you get **two smaller magnets**, each with its own north and south pole.
+- **Like poles repel; opposite poles attract.**
+- **The field weakens with distance** from the dipole.
+- **Dipoles align with fields.** A compass needle placed in a magnetic field tends to rotate until it points along the field, with its north end pointing in the direction of $\\vec{B}$. That is exactly how a compass maps field lines.
 
-The perpendicular distance between the two force lines (the lever arm) depends on the angle $\\phi$ between the loop's normal and $\\vec{B}$:
+### Earth as a Dipole
 
-$$\\tau = F \\cdot b\\sin\\phi = BIa \\cdot b\\sin\\phi = BIA\\sin\\phi$$
-
-where $A = ab$ is the area of the loop.
-
-For a coil with $N$ turns:
-
-$$\\boxed{\\tau = NIAB\\sin\\phi}$$
-
-where $\\phi$ is the angle between the **magnetic dipole moment** $\\vec{\\mu}$ (normal to the loop) and $\\vec{B}$.
+Earth's field can be approximated as the field of a single huge dipole. A compass needle aligns with Earth's field, and since its north end points toward geographic north, the pole of Earth's "magnet" near geographic north must be a **magnetic south pole**.
       `
     },
     {
-      id: 'mf6-dipole-moment',
+      id: 'mf6-materials',
       type: 'text' as const,
       content: `
-## Magnetic Dipole Moment
+## How Materials Respond to a Magnetic Field
 
-The **magnetic dipole moment** of a current loop is:
+A material's **composition** determines how its atomic dipoles behave in an external field.
 
-$$\\boxed{\\vec{\\mu} = NI\\vec{A}}$$
+### Ferromagnetic Materials — iron, nickel, cobalt
 
-where:
-- $N$ = number of turns
-- $I$ = current
-- $\\vec{A}$ = area vector (perpendicular to the loop, direction from right-hand rule: curl fingers in direction of current, thumb = $\\vec{A}$)
+The atomic dipoles line up with their neighbors in regions called **magnetic domains**. In an unmagnetized piece of iron, the domains point in random directions and their fields cancel. An external field makes the domains aligned with it grow and others rotate, so the iron becomes strongly magnetized.
 
-The magnitude is:
+- **Induced magnetism:** an unmagnetized iron nail is attracted to **either** pole of a magnet, because the magnet's field aligns the nail's domains so that the nail's nearby end becomes the opposite pole.
+- **Permanent magnetism:** a strong enough field can leave the domains aligned after the field is removed, producing a permanent magnet.
 
-$$\\mu = NIA$$
+### Paramagnetic Materials — aluminum, titanium, magnesium
 
-### Torque in Terms of $\\vec{\\mu}$
+The atomic dipoles align **weakly** with an external field, producing a weak attraction. When the field is removed, thermal motion scrambles the dipoles again, so the material **does not stay magnetized**.
 
-$$\\vec{\\tau} = \\vec{\\mu} \\times \\vec{B}$$
+### Diamagnetism — every material
 
-$$|\\tau| = \\mu B \\sin\\phi$$
+**All** materials are diamagnetic: their electrons respond to an external field by producing a usually weak alignment **opposite** to the field, so the material is weakly repelled. In iron or aluminum, the stronger ferromagnetic or paramagnetic effect hides it; in water, wood, or copper it is the main effect.
 
-### Equilibrium Positions
-
-- **$\\phi = 0°$**: $\\vec{\\mu} \\parallel \\vec{B}$ → $\\tau = 0$ → **stable equilibrium** (lowest energy)
-- **$\\phi = 180°$**: $\\vec{\\mu}$ antiparallel to $\\vec{B}$ → $\\tau = 0$ → **unstable equilibrium** (highest energy)
-- **$\\phi = 90°$**: maximum torque
-
-### Potential Energy
-
-$$U = -\\vec{\\mu} \\cdot \\vec{B} = -\\mu B \\cos\\phi$$
-
-- Minimum energy at $\\phi = 0°$: $U = -\\mu B$
-- Maximum energy at $\\phi = 180°$: $U = +\\mu B$
-      `
-    },
-    {
-      id: 'mf6-motors',
-      type: 'text' as const,
-      content: `
-## Applications
-
-### Electric Motor
-
-A motor uses the torque on a current loop to create continuous rotation:
-
-1. Current flows through a coil in a magnetic field → torque rotates the coil
-2. A **commutator** (split ring) reverses the current direction every half turn
-3. This ensures the torque always acts in the same rotational direction
-4. The coil spins continuously!
-
-Without the commutator, the coil would just oscillate back and forth around the equilibrium position ($\\vec{\\mu} \\parallel \\vec{B}$).
-
-### Galvanometer
-
-A galvanometer measures small currents:
-
-1. Current flows through a coil suspended in a magnetic field
-2. The magnetic torque $\\tau = NIAB\\sin\\phi$ is opposed by a spring
-3. The coil rotates until $\\tau_{\\text{magnetic}} = \\tau_{\\text{spring}}$
-4. Greater current → greater deflection → read on a scale
-
-The deflection angle is proportional to the current, making it a useful measuring device.
-
-### Key Difference
-
-- **Motor**: commutator allows continuous rotation
-- **Galvanometer**: spring limits rotation to a measurable deflection
+| Type | Alignment with external field | Stays magnetized? | Examples |
+|------|-------------------------------|-------------------|----------|
+| Ferromagnetic | Strong, same direction | Can, yes | Iron, nickel, cobalt |
+| Paramagnetic | Weak, same direction | No | Aluminum, titanium, magnesium |
+| Diamagnetic | Weak, opposite direction | No | All materials (dominant in water, copper) |
       `
     },
     {
       id: 'mf6-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Torque Concept Quiz** ⚙️
+**Magnetic Materials Concept Quiz** 🧲
       `,
       exercise: {
         questions: [
           {
-            question: 'The torque on a current loop in a magnetic field is maximum when the angle between $\\vec{\\mu}$ and $\\vec{B}$ is:',
+            question: 'A bar magnet is snapped in half at its middle. Which describes the two pieces?',
             options: [
-              '0°',
-              '45°',
-              '90°',
-              '180°'
+              'Each piece has both a north and a south pole',
+              'One piece is all north, the other all south',
+              'Neither piece is magnetic any longer',
+              'Both pieces keep only the pole at their outer end'
             ],
-            correctAnswer: 2,
-            explanation: '$\\tau = \\mu B \\sin\\phi$. Maximum when $\\sin\\phi = 1$, i.e., $\\phi = 90°$. At $0°$ and $180°$, the torque is zero.'
+            correctAnswer: 0,
+            explanation: 'Magnetism comes from aligned atomic dipoles, and each piece still contains aligned dipoles, so each piece is a complete dipole with two poles. Isolated north or south poles (monopoles) have never been observed.'
           },
           {
-            question: 'A current loop is in stable equilibrium when:',
+            question: 'An unmagnetized iron nail is attracted to the north pole of a magnet and also to its south pole. Why?',
             options: [
-              '$\\vec{\\mu}$ is perpendicular to $\\vec{B}$',
-              '$\\vec{\\mu}$ points in the same direction as $\\vec{B}$',
-              '$\\vec{\\mu}$ points opposite to $\\vec{B}$',
-              '$\\vec{\\mu}$ makes a 45° angle with $\\vec{B}$'
+              'The nail carries a net charge that both poles attract',
+              'The magnet\'s field aligns the domains in the nail',
+              'The nail is diamagnetic, so its dipoles oppose the field',
+              'Iron is a permanent magnet whose poles keep flipping'
             ],
             correctAnswer: 1,
-            explanation: 'Stable equilibrium occurs at minimum potential energy: $U = -\\mu B \\cos\\phi$ is minimized when $\\phi = 0°$ ($\\vec{\\mu} \\parallel \\vec{B}$). The antiparallel orientation also has zero torque, but it is unstable because $U$ is a maximum there; at 45° or 90° the torque is not zero.'
+            explanation: 'Iron is ferromagnetic: either pole\'s field aligns the nail\'s domains so the near end of the nail becomes the opposite pole, and opposite poles attract. A diamagnetic response would make the nail repelled, and a net charge does not interact with a static magnet.'
           },
           {
-            question: 'What is the function of the commutator in a DC motor?',
+            question: 'An aluminum rod is placed in a strong magnetic field and then removed. What happens to the alignment of its atomic dipoles?',
             options: [
-              'It increases the current through the coil',
-              'It creates the field that turns the coil',
-              'It reverses the coil\'s current every half turn',
-              'It converts the AC supply to DC'
+              'It stays aligned, leaving a permanent magnet',
+              'It reverses to point opposite the old field',
+              'It returns to random orientations',
+              'It stays aligned along the rod\'s length only'
             ],
             correctAnswer: 2,
-            explanation: 'The commutator reverses the current direction every half revolution, ensuring the torque always acts in the same rotational direction for continuous spinning. The motor runs on a DC supply, and the field comes from the magnets, not the commutator.'
+            explanation: 'Aluminum is paramagnetic: its dipoles align only weakly while the field is present and become randomly oriented again once it is removed. Staying aligned after the field is gone is ferromagnetic behavior.'
           }
         ]
       }
     },
     {
-      id: 'mf6-calculation-drill',
+      id: 'mf6-permeability',
+      type: 'text' as const,
+      content: `
+## Magnetic Permeability
+
+**Magnetic permeability** measures how much a material becomes magnetized in response to an external magnetic field.
+
+- **Free space** has a constant permeability, the **vacuum permeability** $\\mu_0 = 4\\pi \\times 10^{-7}$ T·m/A. It is the constant that appears in equations such as $B = \\dfrac{\\mu_0 I}{2\\pi r}$.
+- **Matter** has a permeability different from $\\mu_0$, set by the material's composition and arrangement.
+- A material's permeability is **not a constant**: it changes with temperature, with orientation, and with the strength of the external field.
+
+### Comparing Materials
+
+- **Ferromagnetic** materials have permeabilities far greater than $\\mu_0$. This is why wrapping a current-carrying coil around an **iron core** makes a much stronger electromagnet: the aligned domains add their own field to the field of the current.
+- **Paramagnetic** materials have permeabilities slightly greater than $\\mu_0$.
+- **Diamagnetic** materials have permeabilities slightly less than $\\mu_0$.
+
+Heating a ferromagnet scrambles its domains and lowers its permeability — a hot enough magnet loses its magnetism.
+      `
+    },
+    {
+      id: 'mf6-hall-effect',
+      type: 'text' as const,
+      content: `
+## The Hall Effect
+
+Send a current through a flat conducting strip that sits in a magnetic field perpendicular to the strip. The moving charges feel a sideways magnetic force and pile up along one edge, leaving the opposite edge with the opposite charge. The result is a **potential difference across the width of the strip** — the **Hall voltage**.
+
+### Reaching Balance
+
+The separated charge creates an electric field $E$ across the strip. Charges keep drifting sideways until the electric force balances the magnetic force (the two fields exert independent forces):
+
+$$qE = qvB \\quad \\Rightarrow \\quad E = vB$$
+
+For a strip of width $w$, the uniform field gives a Hall voltage $\\Delta V = Ew = vBw$.
+
+### Worked Example
+
+A semiconductor strip 1.0 cm wide lies in the page and carries current to the right. A 0.40 T field points into the page, and the charge carriers drift at 5.0 m/s.
+
+**Size:** $E = vB = (5.0)(0.40) = 2.0$ V/m, so $\\Delta V = (2.0)(0.010) = 0.020$ V = 20 mV.
+
+**Direction:** If the carriers are **positive**, they move right; right × into the page gives a force **up** the page. Positive charge collects on the top edge, so the **top edge is at the higher potential**.
+
+If the carriers are **electrons**, they move **left**. For a negative charge moving left, the force is also **up** the page, so electrons collect on the top edge and the **top edge is at the lower potential**.
+
+### Why It Matters
+
+- The **sign** of the Hall voltage reveals whether the moving charges are positive or negative — evidence that the current in most metals is carried by negative charges.
+- The Hall voltage grows with $B$, so **Hall sensors** measure magnetic fields and detect nearby magnets (for example, the sensor that notices a laptop lid closing).
+      `
+    },
+    {
+      id: 'mf6-hall-drill',
       type: 'input-boxes' as const,
       content: `
-**Torque Calculation Drill** 🔢
+**Hall Effect Drill** 🔢
 
-A rectangular coil has 50 turns, dimensions 8.0 cm × 5.0 cm, carries 2.0 A, and sits in a 0.30 T uniform magnetic field.
+A conducting strip 2.0 cm wide carries current in a 0.50 T magnetic field perpendicular to the strip. The charge carriers drift at 3.0 m/s.
 
-1) Magnetic dipole moment $\\mu$ $(in A\\cdot m^{2})$
+1) Electric field across the strip once the sideways forces balance (in V/m)
 
-2) Maximum torque on the coil (in N·m)
+2) Hall voltage across the strip (in V)
 
-3) Torque when $\\vec{\\mu}$ makes a 30° angle with $\\vec{B}$ (in N·m)
-
-*Round all answers to 3 significant figures.*
+3) Hall voltage if the magnetic field is doubled to 1.0 T, with the same drift speed (in V)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.40', '0.12', '0.06'],
-        hint1: '$\\mu = NIA = (50)(2.0)(0.08 \\times 0.05)$.',
-        hint2: '$\\tau_{max} = \\mu B = (0.40)(0.30)$, occurring when $\\phi = 90°$.',
-        hint3: '$\\tau = \\mu B \\sin 30° = (0.40)(0.30)(0.5)$.',
-        explanation: '(1) $A = 0.08 \\times 0.05 = 0.004$ $m^{2}$. $\\mu = (50)(2.0)(0.004) = 0.40$ $A\\cdot m^{2}$. (2) $\\tau_{max} = \\mu B = (0.40)(0.30) = 0.12$ N·m. (3) $\\tau = (0.40)(0.30)\\sin 30° = 0.12 \\times 0.5 = 0.06$ N·m.'
+        correctAnswers: ['1.5', '0.030', '0.060'],
+        hint1: 'At balance $qE = qvB$, so $E = vB$.',
+        hint2: '$\\Delta V = Ew$ with $w = 0.020$ m.',
+        hint3: '$\\Delta V = vBw$ is proportional to $B$.',
+        explanation: '(1) $E = vB = (3.0)(0.50) = 1.5$ V/m. (2) $\\Delta V = Ew = (1.5)(0.020) = 0.030$ V. (3) Doubling $B$ doubles the Hall voltage to 0.060 V.'
       }
     },
     {
       id: 'mf6-exit-quiz',
       type: 'dropdown-select' as const,
       content: `
-**Exit Check — Torque and Dipoles** ✅
+**Exit Check — Materials and the Hall Effect** ✅
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Magnetic dipole moment μ = NIA has units of:',
-            options: ['T·m', '$A\\cdot m^{2}$', 'N/m', 'Wb']
+            label: 'Ferromagnetic materials include:',
+            options: ['aluminum and titanium', 'iron, nickel, and cobalt', 'copper and gold', 'glass and wood']
           },
           {
-            label: 'Torque is zero when μ and B are:',
-            options: ['perpendicular', 'at 45°', 'parallel or antiparallel', 'never zero']
+            label: 'The magnetic property that every material has is:',
+            options: ['ferromagnetism', 'paramagnetism', 'diamagnetism', 'permanent magnetism']
           },
           {
-            label: 'A motor uses a _____ to reverse current each half-turn:',
-            options: ['transformer', 'capacitor', 'commutator', 'resistor']
+            label: 'A compass placed in a magnetic field tends to:',
+            options: ['align with the field', 'point opposite the field', 'point perpendicular to the field', 'stay in any orientation']
           },
           {
-            label: 'Potential energy U = −μBcosφ is minimum when φ =',
-            options: ['0°', '45°', '90°', '180°']
+            label: 'Compared with $\\mu_0$, the permeability of iron is:',
+            options: ['far greater', 'slightly less', 'exactly equal', 'zero']
+          },
+          {
+            label: 'The Hall voltage forms across a strip in the direction:',
+            options: ['along the current', 'perpendicular to both I and B', 'parallel to B', 'opposite the current']
           }
         ],
-        correctAnswers: ['$A\\cdot m^{2}$', 'parallel or antiparallel', 'commutator', '0°'],
-        hint1: '$\\mu = NIA$ → $(turns)(amps)(m^{2})$ = $A\\cdot m^{2}$.',
-        hint2: '$\\tau = \\mu B \\sin\\phi = 0$ when $\\phi = 0°$ or $180°$.',
-        hint3: 'Minimum of $-\\cos\\phi$ occurs at $\\phi = 0°$.',
-        explanation: 'μ has units $A\\cdot m^{2}$. Torque vanishes when μ ∥ B or μ antiparallel to B (sin = 0). A commutator reverses current for continuous rotation. Energy is minimum at φ = 0° (stable equilibrium).'
+        correctAnswers: ['iron, nickel, and cobalt', 'diamagnetism', 'align with the field', 'far greater', 'perpendicular to both I and B'],
+        hint1: 'Ferromagnetic metals are the ones a refrigerator magnet sticks to.',
+        hint2: 'All materials weakly oppose an applied field; in many it is hidden by a stronger effect.',
+        hint3: 'The magnetic force on the carriers is perpendicular to both their velocity and $\\vec{B}$.',
+        explanation: 'Iron, nickel, and cobalt are ferromagnetic, with permeabilities far greater than $\\mu_0$. Diamagnetism is present in every material. A compass, like any dipole, tends to align with the field. The Hall voltage appears across the strip, perpendicular to both the current and the field, because that is the direction of the magnetic force on the carriers.'
       }
     }
   ]

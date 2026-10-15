@@ -9,7 +9,7 @@ export const physics2LensesPart1Data = {
 
 **Part 1 of 7 — Converging vs Diverging**
 
-Lenses are transparent optical elements that refract light to form images. Every camera, microscope, telescope, and pair of eyeglasses relies on lenses. In this part, you'll learn to distinguish the two fundamental lens types and trace the principal rays through each.
+Lenses are transparent optical elements that refract light to form images. Cameras, projectors, and magnifying glasses all rely on a single lens forming an image. In this part, you'll learn to distinguish the two fundamental lens types and trace the principal rays through each.
       `
     },
     {

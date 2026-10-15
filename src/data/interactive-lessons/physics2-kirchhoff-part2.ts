@@ -141,13 +141,15 @@ Follow these steps for every KVL problem:
    - Resistor with current: $-IR$
    - Resistor against current: $+IR$
 
-### How Many Loops?
+### Any Closed Path Is a Loop
 
-For a circuit with $B$ branches and $N$ nodes:
+A single circuit element can belong to several loops at once. Consider a 12 V battery connected to two resistors, $R_2$ and $R_3$, that are in parallel with each other. Three closed paths exist:
 
-$$\\text{Independent loops} = B - N + 1$$
+- **Left loop** (battery and $R_2$): $+12 - I_2R_2 = 0$, so $V_2 = 12$ V
+- **Outer loop** (battery and $R_3$): $+12 - I_3R_3 = 0$, so $V_3 = 12$ V
+- **Inner loop** ($R_2$ and $R_3$ only, no battery): $+I_2R_2 - I_3R_3 = 0$, so $V_2 = V_3$
 
-This is the number of KVL equations you can write. Combined with $N - 1$ KCL equations, you get $B$ equations total — exactly enough to solve for all $B$ unknown currents!
+The loop rule is the reason parallel branches share the same potential difference: any closed path through two parallel elements must have a net change of zero.
       `
     },
     {
@@ -170,15 +172,15 @@ This is the number of KVL equations you can write. Combined with $N - 1$ KCL equ
             explanation: 'KVL: $\\varepsilon - IR_1 - IR_2 = 0 \\Rightarrow 10 = I(4+6) = 10I \\Rightarrow I = 1.0$ A. 2.5 A and 1.7 A each use only one resistor, and 4.2 A treats the two resistors as if they were in parallel.'
           },
           {
-            question: 'A circuit has 5 branches and 3 nodes. How many independent loop equations can you write?',
+            question: 'A 9 V battery is connected to a 3 Ω resistor and a 6 Ω resistor that are in parallel with each other. Using the loop that contains only the battery and the 6 Ω resistor, the current in the 6 Ω resistor is:',
             options: [
-              '2',
-              '3',
-              '4',
-              '5'
+              '1.0 A',
+              '1.5 A',
+              '3.0 A',
+              '4.5 A'
             ],
             correctAnswer: 1,
-            explanation: 'Independent loops $= B - N + 1 = 5 - 3 + 1 = 3$.'
+            explanation: 'That loop gives $+9 - I(6) = 0$, so $I = 1.5$ A. 1.0 A splits the 9 V between the resistors as if they were in series, 3.0 A uses the 3 Ω resistor, and 4.5 A is the total battery current through both branches.'
           }
         ]
       }

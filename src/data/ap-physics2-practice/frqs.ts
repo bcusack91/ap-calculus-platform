@@ -79,10 +79,10 @@ An ideal monatomic gas is taken through the cycle A → B → C → A:
         ],
       },
       {
-        prompt: '**(c)** Calculate the heat absorbed by the gas during the A → B step. (Hint: for isobaric, $Q = nC_P\\Delta T$ and $C_P = \\tfrac{5}{2}R$ for monatomic.)',
+        prompt: '**(c)** Calculate the energy transferred to the gas by heating during the A → B step. (For a monatomic ideal gas, $U = \\tfrac{3}{2}nRT$.)',
         rubric: [
           { id: 'c1', label: '1 pt — Relates $nR\\Delta T$ to $P\\Delta V$', description: 'At constant pressure the ideal gas law gives $nR\\Delta T = P\\Delta V = 400$ J.' },
-          { id: 'c2', label: '1 pt — Heat expression', description: '$Q = \\tfrac{5}{2}nR\\Delta T = \\tfrac{5}{2}P\\Delta V$ (or first law: $\\Delta U = \\tfrac{3}{2}P\\Delta V = 600$ J and $Q = \\Delta U - W$ with $W = -400$ J on the gas).' },
+          { id: 'c2', label: '1 pt — First law', description: '$\\Delta U = \\tfrac{3}{2}nR\\Delta T = \\tfrac{3}{2}P\\Delta V = 600$ J, and $Q = \\Delta U - W$ with $W = -400$ J on the gas.' },
           { id: 'c3', label: '1 pt — Answer with units', description: '$Q_{A \\to B} = 1000$ J.' },
         ],
       },

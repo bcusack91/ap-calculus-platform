@@ -9,7 +9,7 @@ export const physics2EmInductionPart2Data = {
 
 **Part 2 of 7 — EMF from Changing Flux**
 
-Michael Faraday's greatest discovery: a **changing magnetic flux** through a loop induces an electromotive force (EMF). This single law is the basis of generators, transformers, and most of the electrical power grid.
+Michael Faraday's greatest discovery: a **changing magnetic flux** through a loop induces an electromotive force (EMF). This single law explains how moving magnets, changing currents, and moving wires can all drive currents without any battery.
       `
     },
     {
@@ -58,7 +58,7 @@ Push a magnet toward a coil: $B$ increases at the coil → $\\Phi$ increases →
 
 $$|\\varepsilon| = NA\\cos\\theta \\cdot \\frac{|\\Delta B|}{\\Delta t}$$
 
-**Example:** A solenoid's field increases from 0 to 0.5 T in 0.1 s through a 100-turn coil of area 0.02 $m^{2}$ ($\\theta = 0°$):
+**Example:** An electromagnet's field increases from 0 to 0.5 T in 0.1 s through a 100-turn coil of area 0.02 $m^{2}$ ($\\theta = 0°$):
 
 $$|\\varepsilon| = (100)(0.02)(1)\\frac{0.5}{0.1} = 10 \\text{ V}$$
 
@@ -72,7 +72,7 @@ $$|\\varepsilon| = NB\\cos\\theta \\cdot \\frac{|\\Delta A|}{\\Delta t}$$
 
 Rotate the loop in the field: $\\theta$ changes → $\\cos\\theta$ changes → $\\Phi$ changes → EMF induced.
 
-This is exactly how an **AC generator** works (covered in Part 5).
+Even with $B$ and $A$ fixed, tilting the loop changes how much of the field passes through it.
       `
     },
     {
@@ -108,10 +108,10 @@ This is exactly how an **AC generator** works (covered in Part 5).
           {
             question: 'Doubling the number of turns in a coil while keeping everything else the same will:',
             options: [
-              'More flux per turn',
-              'Double the induced EMF',
-              'Halve the induced EMF',
-              'No effect on EMF'
+              'The EMF is four times as large',
+              'The EMF is twice as large',
+              'The EMF is half as large',
+              'The EMF is unchanged'
             ],
             correctAnswer: 1,
             explanation: '$\\varepsilon = -N(d\\Phi_B/dt)$. Doubling $N$ doubles the EMF. The flux through each individual turn remains the same.'

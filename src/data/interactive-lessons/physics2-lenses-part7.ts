@@ -24,15 +24,14 @@ This final part ties together everything about lenses: the thin lens equation, s
 |:---:|:---:|
 | $\\frac{1}{f} = \\frac{1}{d_o} + \\frac{1}{d_i}$ | Thin lens equation — relates focal length, object distance, and image distance |
 | $m = -\\frac{d_i}{d_o} = \\frac{h_i}{h_o}$ | Magnification — relates distances and heights |
-| $P = \\frac{1}{f}$ | Lens power in diopters ($f$ in meters) |
-| $m_{\\text{total}} = m_1 \\times m_2$ | Total magnification for multi-lens systems |
+| $h_i = m h_o$ | Image height (negative means inverted) |
 
 ### Sign Convention Summary
 
 | Quantity | Positive | Negative |
 |:---:|:---:|:---:|
 | $f$ | Converging | Diverging |
-| $d_o$ | Real object | Virtual object |
+| $d_o$ | Real object | Not used for a single lens |
 | $d_i$ | Real image (opposite side) | Virtual image (same side) |
 | $m$ | Upright | Inverted |
 | $h_i$ | Upright | Inverted |
@@ -45,7 +44,7 @@ This final part ties together everything about lenses: the thin lens equation, s
 | 2 | Using positive $f$ for diverging lenses | Diverging → $f < 0$, always |
 | 3 | Saying diverging lenses make real images | Diverging lenses always make virtual images (for real objects) |
 | 4 | Confusing $d_i < 0$ with "no image" | $d_i < 0$ means a virtual image exists on the same side as the object |
-| 5 | Forgetting to convert $f$ to meters for diopters | $P = 1/f$ requires $f$ in meters |
+| 5 | Reading the intercept of a $1/d_i$ versus $1/d_o$ graph as $f$ | The intercept is $1/f$; invert it to get $f$ |
       `
     },
     {
@@ -79,26 +78,26 @@ This final part ties together everything about lenses: the thin lens equation, s
             explanation: '$\\frac{1}{d_i} = \\frac{1}{-20} - \\frac{1}{60} = \\frac{-3-1}{60} = \\frac{-4}{60} = -\\frac{1}{15}$, so $d_i = -15$ cm. $m = -(-15)/60 = +0.25$. Positive → upright, $|m| < 1$ → reduced.'
           },
           {
-            question: 'A person with myopia wears glasses with $P = -2.0$ D. The focal length of each lens is:',
+            question: 'An object 15 cm from a lens forms a real image 30 cm from the lens. The focal length of the lens is:',
             options: [
-              '$+0.50$ m',
-              '$-0.50$ m',
-              '$+2.0$ m',
-              '$-2.0$ m'
-            ],
-            correctAnswer: 1,
-            explanation: '$f = 1/P = 1/(-2.0) = -0.50$ m. Negative → diverging lens, which is correct for myopia.'
-          },
-          {
-            question: 'Two thin lenses ($f_1 = +20$ cm, $f_2 = +10$ cm) are in contact. The combined focal length is:',
-            options: [
-              '$+6.67$ cm',
-              '$+15$ cm',
-              '$+30$ cm',
-              '$+20$ cm'
+              '10 cm',
+              '15 cm',
+              '30 cm',
+              '45 cm'
             ],
             correctAnswer: 0,
-            explanation: 'For lenses in contact: $\\frac{1}{f_{\\text{combo}}} = \\frac{1}{f_1} + \\frac{1}{f_2} = \\frac{1}{20} + \\frac{1}{10} = \\frac{1+2}{20} = \\frac{3}{20}$, so $f_{\\text{combo}} = 20/3 \\approx 6.67$ cm. Adding the focal lengths gives 30 cm, averaging them gives 15 cm, and subtracting the reciprocals gives 20 cm; the combination is always stronger (shorter $f$) than either lens alone.'
+            explanation: '$\\frac{1}{f} = \\frac{1}{15} + \\frac{1}{30} = \\frac{3}{30}$, so $f = 10$ cm, a converging lens. Subtracting the reciprocals gives 30 cm, 45 cm adds the two distances, and 15 cm takes the object distance as $f$.'
+          },
+          {
+            question: 'A converging lens forms a sharp image on a screen. An opaque card is then placed over the top half of the lens. The image on the screen:',
+            options: [
+              'Loses its top half but keeps its brightness',
+              'Loses its bottom half but keeps its brightness',
+              'Stays complete but becomes dimmer',
+              'Disappears because the rays are blocked'
+            ],
+            correctAnswer: 2,
+            explanation: 'Every point on the object sends rays through every part of the lens, so the uncovered half still brings rays from every object point to their image points. Half as much light arrives, so the whole image remains but is dimmer.'
           }
         ]
       }
@@ -161,7 +160,7 @@ Determine the sign of each quantity:
             options: ['Positive', 'Negative']
           },
           {
-            label: 'Power of a lens that corrects myopia',
+            label: 'Image distance for an image that appears on a screen',
             options: ['Positive', 'Negative']
           }
         ],
@@ -171,12 +170,12 @@ Determine the sign of each quantity:
           'Negative',
           'Positive',
           'Positive',
-          'Negative'
+          'Positive'
         ],
         hint1: 'Diverging → $f < 0$. Virtual image → $d_i < 0$.',
         hint2: 'Inverted → $m < 0$. At $d_o = 2f$, $d_i = 2f > 0$ (real image).',
-        hint3: 'Inside $f$: virtual image, $d_i < 0$, so $m = -d_i/d_o > 0$ (upright). Myopia correction → diverging lens → $P < 0$.',
-        explanation: 'Diverging: $f < 0$. Virtual: $d_i < 0$. Inverted: $m < 0$. At $2f$: real image so $d_i > 0$. Inside $f$: virtual and upright so $m > 0$. Myopia → diverging → $P < 0$.'
+        hint3: 'Inside $f$: virtual image, $d_i < 0$, so $m = -d_i/d_o > 0$ (upright). An image on a screen is real, so $d_i > 0$.',
+        explanation: 'Diverging: $f < 0$. Virtual: $d_i < 0$. Inverted: $m < 0$. At $2f$: real image so $d_i > 0$. Inside $f$: virtual and upright so $m > 0$. Screen image: real, so $d_i > 0$.'
       }
     },
     {
@@ -191,9 +190,9 @@ Determine the sign of each quantity:
 
 **Part (b)**: Use the thin lens equation to calculate $d_i$ and $m$. State whether the image is real or virtual, upright or inverted, enlarged or reduced.
 
-**Part (c)**: A second lens is placed at a specified distance. Find the final image position and total magnification.
+**Part (c)**: Lab design: describe how to measure object and image distances and what to graph to find $f$ (for example, $1/d_i$ versus $1/d_o$, with intercept $1/f$).
 
-**Part (d)**: Explain a real-world application (microscope, telescope, corrective lens) using your results.
+**Part (d)**: Predict how the image changes when the object moves or the lens is swapped, and justify the prediction with the thin-lens equation or a ray diagram.
 
 ### Strategy Tips
 
@@ -201,7 +200,7 @@ Determine the sign of each quantity:
 2. **Show all algebra** — don't skip steps in the thin lens equation
 3. **Check your answer** against the ray diagram — they must agree
 4. **State the image characteristics** explicitly: real/virtual, upright/inverted, enlarged/reduced
-5. **Watch units** — if the problem gives cm, work in cm; convert to meters only for diopters
+5. **Watch units** — if the problem gives cm, work in cm; keep every distance in the same unit
       `
     },
     {
@@ -246,15 +245,15 @@ Determine the sign of each quantity:
             explanation: 'Moving from $d_o = 50 = 2f$ to $d_o = 30$ cm (between $f$ and $2f$) transitions from Case 2 to Case 3. The image stays real and inverted but becomes **enlarged** ($|m| > 1$), and it moves farther from the lens. $\\frac{1}{d_i} = \\frac{1}{25} - \\frac{1}{30} = \\frac{6-5}{150} = \\frac{1}{150}$, so $d_i = 150$ cm. $m = -150/30 = -5$. The image would only turn virtual if the object moved inside $f = 25$ cm.'
           },
           {
-            question: 'Which combination correctly fixes hyperopia?',
+            question: 'Looking through a lens at an object 12 cm away, a student sees an upright image three times the object\'s height. What are the lens type and focal length?',
             options: [
-              'Concave lens with $P < 0$',
-              'Convex lens with $P > 0$',
-              'Concave lens with $P > 0$',
-              'Convex lens with $P < 0$'
+              '$f = +9.0$ cm, a converging lens',
+              '$f = +18$ cm, a converging lens',
+              '$f = -18$ cm, a diverging lens',
+              '$f = -9.0$ cm, a diverging lens'
             ],
             correctAnswer: 1,
-            explanation: 'Hyperopia (farsightedness) is corrected with a converging (convex) lens, which has positive power ($P > 0$). The lens adds convergence so the image focuses on the retina instead of behind it.'
+            explanation: 'Upright means virtual, so $m = +3$ and $d_i = -36$ cm. Then $\\frac{1}{f} = \\frac{1}{12} - \\frac{1}{36} = \\frac{2}{36}$, giving $f = +18$ cm, a converging lens. $+9.0$ cm treats the image as real, and a diverging lens cannot enlarge.'
           }
         ]
       }

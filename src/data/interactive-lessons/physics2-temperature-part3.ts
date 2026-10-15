@@ -5,147 +5,144 @@ export const physics2TemperaturePart3Data = {
       id: 'te3-intro',
       type: 'text' as const,
       content: `
-# 📏 Linear Thermal Expansion
+# 💨 Gas Pressure from Molecular Collisions
 
-**Part 3 of 7 — Why Bridges Have Gaps**
+**Part 3 of 7 — Where Pressure Comes From**
 
-When you heat a solid, its atoms vibrate with greater amplitude around their equilibrium positions. This causes the material to **expand** in all directions. For long, thin objects, the most noticeable change is in **length** — this is linear thermal expansion.
+A gas pushes on every wall of its container, yet no single molecule pushes steadily. Pressure is what you get when an enormous number of tiny, brief collisions are averaged together. AP Physics 2 asks you to explain pressure in exactly these terms: atoms, collisions, momentum, and force per area.
       `
     },
     {
-      id: 'te3-linear-expansion',
+      id: 'te3-collisions',
       type: 'text' as const,
       content: `
-## The Linear Expansion Formula
+## Pressure Is Many Tiny Impulses
 
-$$\\Delta L = \\alpha L_0 \\Delta T$$
+### One Collision
 
-where:
-- $\\Delta L$ = change in length (m)
-- $\\alpha$ = **coefficient of linear expansion** (1/°C or 1/K)
-- $L_0$ = original length at the initial temperature (m)
-- $\\Delta T = T_f - T_i$ = change in temperature (°C or K)
+Picture one atom of mass $m$ moving straight toward a wall with speed $v$. It bounces off elastically, so it leaves with the same speed in the opposite direction. Its momentum changes from $+mv$ to $-mv$:
 
-The new length is:
+$$|\\Delta p| = mv - (-mv) = 2mv$$
 
-$$L = L_0 + \\Delta L = L_0(1 + \\alpha \\Delta T)$$
+By Newton's third law, the wall receives an impulse of the same size, directed outward. If the atom hits at an angle, only the velocity component **perpendicular** to the wall reverses, so only that component contributes to the push on the wall.
 
-### Coefficients of Linear Expansion
+### Many Collisions
 
-| Material | $\\alpha$ (× $10^{-6}$ /°C) |
-|---|---|
-| Aluminum | 23 |
-| Brass | 19 |
-| Copper | 17 |
-| Steel/Iron | 12 |
-| Glass (ordinary) | 9 |
-| Glass (Pyrex) | 3.2 |
-| Concrete | 12 |
-| Invar (Ni-Fe alloy) | 0.9 |
+Each impulse lasts a tiny time, but trillions of atoms strike every square centimeter each nanosecond. The average force on a wall is the momentum delivered per second:
 
-> 🔑 **Invar** has an extremely low $\\alpha$, making it ideal for precision instruments, clock pendulums, and scientific equipment where dimensional stability matters.
+$$F_{\\text{avg}} = (\\text{collisions per second}) \\times (\\text{momentum change per collision})$$
 
-### Important Notes
-- $\\Delta T$ is the same whether in °C or K (same size degree)
-- The formula is valid for moderate temperature changes
-- $\\alpha$ is approximately constant over typical temperature ranges
-- Expansion occurs in **all** directions, but for thin rods or rails, the length change dominates
-      `
-    },
-    {
-      id: 'te3-applications',
-      type: 'text' as const,
-      content: `
-## Engineering Applications
+Pressure is that perpendicular force spread over the area:
 
-### Expansion Joints in Bridges
-Bridges have **gaps** (expansion joints) at regular intervals to allow the roadway to expand in summer and contract in winter without buckling or cracking.
+$$P = \\frac{F_\\perp}{A}$$
 
-**Example:** A 500 m steel bridge warms from 0°C to 40°C:
+The SI unit is the pascal: $1 \\text{ Pa} = 1 \\text{ N/m}^2$. Atmospheric pressure is about $1.0 \\times 10^5$ Pa.
 
-$$\\Delta L = (12 \\times 10^{-6})(500)(40) = 0.24 \\text{ m} = 24 \\text{ cm}$$
+### Pressure Exists Inside the Gas, Too
 
-That's nearly a foot of expansion! Without joints, the bridge would buckle.
+Atoms collide with **each other**, not just with the walls. A small pressure sensor placed anywhere inside the gas is struck from all sides and reads the same pressure as the wall. Pressure is a property of the whole gas, not only of its boundary.
 
-### Railroad Tracks
-Old-style railroad tracks were laid with gaps between sections to allow expansion. Modern **continuously welded rail** is pre-stressed so that it can handle thermal expansion without buckling (up to about 60°C above the stress-free temperature).
+### Collisions Between Atoms
 
-### Bimetallic Strips
-Two metals with **different** $\\alpha$ values are bonded together. When heated, the metal with the higher $\\alpha$ expands more, causing the strip to **bend** toward the lower-$\\alpha$ side.
-
-**Applications:** thermostats, circuit breakers, oven thermometers
-
-### Shrink Fitting
-A metal ring is heated so its inner diameter expands. It's slipped over a shaft, then cooled. As it contracts, it grips the shaft with enormous force — no bolts or welds needed!
+Two atoms that collide obey conservation of momentum, and for an ideal gas the collisions are elastic, so kinetic energy is conserved too. For example, when two identical atoms collide head-on, they simply exchange velocities. Faster atoms tend to give energy to slower atoms, which is why a gas settles into a stable spread of speeds.
       `
     },
     {
       id: 'te3-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Linear Expansion Quiz** 🧠
+**Collisions and Pressure Check** 🧠
       `,
       exercise: {
         questions: [
           {
-            question: 'A steel rod and an aluminum rod have the same length and undergo the same temperature increase. Which rod expands more?',
+            question: 'An atom of mass $m$ moving at speed $v$ strikes a wall head-on and rebounds elastically. The magnitude of its change in momentum is:',
             options: [
-              'Steel (α = $12 \\times 10^{-6}$ /°C)',
-              'Aluminum (α = $23 \\times 10^{-6}$ /°C)',
-              'They expand equally',
-              'It depends on the cross-sectional area'
+              '$mv$',
+              '$2mv$',
+              '$\\frac{1}{2}mv$',
+              '$0$'
             ],
             correctAnswer: 1,
-            explanation: 'Since $\\Delta L = \\alpha L_0 \\Delta T$, and both rods have the same $L_0$ and $\\Delta T$, the rod with the larger $\\alpha$ expands more. Aluminum ($\\alpha = 23 \\times 10^{-6}$) > Steel ($\\alpha = 12 \\times 10^{-6}$).'
+            explanation: 'The momentum goes from $+mv$ to $-mv$, a change of $2mv$. A change of $mv$ would describe an atom that stops at the wall, and zero would ignore that momentum is a vector whose direction reversed.'
           },
           {
-            question: 'A bimetallic strip is made of brass (α = $19 \\times 10^{-6}$ /°C) bonded to steel (α = $12 \\times 10^{-6}$ /°C). When heated, the strip bends:',
+            question: 'Why does a small sensor placed in the middle of a gas, far from any wall, still measure a pressure?',
             options: [
-              'Toward the brass side',
-              'Toward the steel side',
-              'It stays straight',
-              'It depends on the thickness ratio'
+              'Atoms strike it from every side',
+              'The walls transmit their pressure to the center through gravity',
+              'Atoms are pulled toward the center by their mutual attraction',
+              'The sensor reads zero until it is moved against a wall'
             ],
-            correctAnswer: 1,
-            explanation: 'Brass has a larger $\\alpha$, so it expands more than steel. The brass side becomes longer, forcing the strip to curve with brass on the outside and steel on the inside — the strip bends toward the steel side.'
+            correctAnswer: 0,
+            explanation: 'Atoms move randomly everywhere in the gas, so they strike the sensor from all directions and produce a pressure there. Gravity and intermolecular attraction are negligible in the ideal gas model, and pressure is not limited to the boundary.'
           },
           {
-            question: 'If a metal rod with a hole in the middle is heated, the hole:',
+            question: 'A gas in a rigid, sealed container is heated. Which change at the molecular level explains why the pressure rises?',
             options: [
-              'Gets smaller (metal expands inward)',
-              'Gets larger (everything expands, including the hole)',
-              'Stays the same size',
-              'Gets smaller for metals, larger for non-metals'
+              'Atoms hit the walls more often and harder',
+              'Atoms grow larger and take up more of the volume',
+              'Atoms attract the walls more strongly when hot',
+              'Heating adds more atoms to the sealed container'
             ],
-            correctAnswer: 1,
-            explanation: 'Thermal expansion scales the entire object uniformly. Think of a photocopy enlargement — everything gets proportionally bigger, including any holes. The hole expands as if it were filled with the same material.'
+            correctAnswer: 0,
+            explanation: 'Higher temperature means faster atoms. Faster atoms strike the walls more often and deliver a larger momentum change each time, so the average force per area grows. Atom size and number do not change in a sealed rigid container.'
           }
         ]
       }
     },
     {
-      id: 'te3-calculation-drill',
+      id: 'te3-worked-example',
+      type: 'text' as const,
+      content: `
+## Worked Example: From Impulses to Pressure
+
+Nitrogen molecules ($m = 4.7 \\times 10^{-26}$ kg) move at $500$ m/s perpendicular to a wall of area $1.0 \\text{ m}^2$. Suppose $2.0 \\times 10^{27}$ molecules strike the wall each second, each rebounding elastically.
+
+**Step 1 — Momentum change per collision:**
+$$|\\Delta p| = 2mv = 2(4.7 \\times 10^{-26})(500) = 4.7 \\times 10^{-23} \\text{ kg}\\cdot\\text{m/s}$$
+
+**Step 2 — Average force (momentum delivered per second):**
+$$F = (2.0 \\times 10^{27})(4.7 \\times 10^{-23}) = 9.4 \\times 10^{4} \\text{ N}$$
+
+**Step 3 — Pressure:**
+$$P = \\frac{F}{A} = \\frac{9.4 \\times 10^{4}}{1.0} = 9.4 \\times 10^{4} \\text{ Pa} \\approx 94 \\text{ kPa}$$
+
+That is close to atmospheric pressure, which shows how a huge number of tiny impulses adds up to a large, steady push.
+
+## What Raises the Pressure?
+
+| Change | Effect on collisions | Effect on $P$ |
+|---|---|---|
+| Faster atoms (higher $T$) | More hits per second **and** more momentum per hit | Increases |
+| More atoms in the same volume | More hits per second | Increases |
+| Same atoms squeezed into less volume | More hits per second on each square meter | Increases |
+| Heavier atoms at the same $T$ | Fewer hits per second, more momentum per hit | No change |
+
+The last row surprises many students. At the same temperature, heavier atoms move more slowly, so they hit less often, but each hit carries more momentum. The two effects cancel, because both depend on the same average kinetic energy.
+      `
+    },
+    {
+      id: 'te3-impulse-drill',
       type: 'input-boxes' as const,
       content: `
-**Linear Expansion Drill** 📏
+**Collision-to-Pressure Drill** 📐
 
-Use $\\alpha_{\\text{steel}} = 12 \\times 10^{-6}$ /°C and $\\alpha_{\\text{Al}} = 23 \\times 10^{-6}$ /°C.
+Argon atoms ($m = 6.6 \\times 10^{-26}$ kg) move at $400$ m/s perpendicular to a wall of area $0.50 \\text{ m}^2$ and rebound elastically. Each second, $1.5 \\times 10^{27}$ atoms strike the wall.
 
-1) A steel bridge is 200 m long at 10°C. Find $\\Delta L$ in cm when it heats to 40°C.
+1) Momentum change per collision, in units of $10^{-23}$ kg·m/s (2 significant figures)
 
-2) An aluminum rod is 3.0 m at 20°C. Find $\\Delta L$ in mm when it heats to 120°C.
+2) Average force on the wall, in units of $10^{4}$ N (2 significant figures)
 
-3) A steel rail is 25.0 m long at 15°C. What gap (in mm) must be left between rails to prevent buckling if temperature can reach 50°C?
-
-*Round all answers to 3 significant figures.*
+3) Pressure on the wall, in kPa (2 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['7.2', '6.9', '10.5'],
-        hint1: '$\\Delta L = \\alpha L_0 \\Delta T = (12 \\times 10^{-6})(200)(30)$. Convert m to cm.',
-        hint2: '$\\Delta L = (23 \\times 10^{-6})(3.0)(100)$. Convert m to mm.',
-        hint3: '$\\Delta L = (12 \\times 10^{-6})(25.0)(35)$. Convert m to mm.',
-        explanation: '1) $\\Delta L = (12 \\times 10^{-6})(200)(30) = 0.072$ m $= 7.2$ cm. 2) $\\Delta L = (23 \\times 10^{-6})(3.0)(100) = 6.9 \\times 10^{-3}$ m $= 6.9$ mm. 3) $\\Delta L = (12 \\times 10^{-6})(25.0)(35) = 0.0105$ m $= 10.5$ mm.'
+        correctAnswers: ['5.3', '7.9', '160'],
+        hint1: '$|\\Delta p| = 2mv = 2(6.6 \\times 10^{-26})(400)$.',
+        hint2: 'Force = (collisions per second) × (momentum change per collision) $= (1.5 \\times 10^{27})(5.28 \\times 10^{-23})$.',
+        hint3: '$P = F/A$, then divide by 1,000 to convert Pa to kPa.',
+        explanation: '1) $2(6.6 \\times 10^{-26})(400) = 5.28 \\times 10^{-23} \\approx 5.3 \\times 10^{-23}$ kg·m/s. 2) $F = (1.5 \\times 10^{27})(5.28 \\times 10^{-23}) = 7.92 \\times 10^4 \\approx 7.9 \\times 10^4$ N. 3) $P = 7.92 \\times 10^4 / 0.50 = 1.58 \\times 10^5$ Pa $\\approx 160$ kPa.'
       }
     },
     {
@@ -157,26 +154,26 @@ Use $\\alpha_{\\text{steel}} = 12 \\times 10^{-6}$ /°C and $\\alpha_{\\text{Al}
       exercise: {
         questions: [
           {
-            question: 'Doubling the original length $L_0$ while keeping $\\alpha$ and $\\Delta T$ the same will:',
+            question: 'The number of gas atoms in a sealed, rigid container is doubled while the temperature is held constant. The pressure:',
             options: [
-              'Double the change in length $\\Delta L$',
-              'Quadruple $\\Delta L$, as with an area change',
-              'Leave $\\Delta L$ unchanged, since $\\alpha$ is fixed',
-              'Halve $\\Delta L$, since longer rods stretch less per meter'
+              'Becomes twice as large',
+              'Becomes half as large',
+              'Becomes four times as large',
+              'Stays the same'
             ],
             correctAnswer: 0,
-            explanation: '$\\Delta L = \\alpha L_0 \\Delta T$. Since $\\Delta L$ is directly proportional to $L_0$, doubling $L_0$ doubles $\\Delta L$. The fractional change $\\Delta L / L_0 = \\alpha \\Delta T$ stays the same, so each meter stretches by the same amount.'
+            explanation: 'At the same temperature each collision delivers the same average momentum, but twice as many atoms means twice as many collisions per second, so the pressure doubles. It would quadruple only if the speed also doubled.'
           },
           {
-            question: 'Pyrex glass (α = $3.2 \\times 10^{-6}$ /°C) is preferred for laboratory glassware because:',
+            question: 'Two identical containers at the same temperature hold equal numbers of atoms: helium in one and argon (ten times the mass) in the other. Compared with the helium, the argon pressure is:',
             options: [
-              'It costs less to produce than ordinary soda-lime glass',
-              'Its low α means less expansion and less thermal-stress cracking',
-              'It has a much higher melting point, so it never softens on burners',
-              'It is more transparent, so samples are easier to observe'
+              'The same, since each particle has the same average kinetic energy',
+              'Ten times larger, since each argon impact carries more momentum',
+              'Smaller, since the heavier argon atoms move more slowly',
+              'About three times larger, from the square root of the masses'
             ],
-            correctAnswer: 1,
-            explanation: 'Pyrex has $\\alpha = 3.2 \\times 10^{-6}$ /°C vs. $9 \\times 10^{-6}$ /°C for ordinary glass. Less expansion means less thermal stress, so Pyrex is far less likely to crack when exposed to rapid temperature changes.'
+            correctAnswer: 0,
+            explanation: 'Argon atoms move more slowly, so they hit the walls less often, but each hit carries more momentum. The two effects cancel exactly because pressure depends on the average kinetic energy, which is set by temperature alone.'
           }
         ]
       }

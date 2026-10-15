@@ -32,7 +32,7 @@ A thermos is brilliantly designed to block ALL three heat transfer mechanisms:
 
 ### Radiation → Reduced by Silvered Walls
 - The inner walls are coated with reflective silver
-- Shiny surfaces have low emissivity ($\\varepsilon \\approx 0.02$)
+- Shiny surfaces are poor emitters and poor absorbers of thermal radiation
 - Most infrared radiation is reflected back rather than absorbed/emitted
 - This reduces radiative loss by ~98%
 
@@ -46,11 +46,9 @@ A good thermos can keep coffee hot for 12+ hours because all three pathways are 
       content: `
 ## Physics of Cooking
 
-### Boiling Water
-- Water boils at 100°C (at 1 atm) — no matter how high you turn the flame
-- A rolling boil doesn't cook food faster than a gentle boil (same temperature!)
-- Adding a lid reduces convective heat loss, so water boils faster
-- At high altitude, lower pressure → lower boiling point → food takes longer to cook
+### Pot Lids
+- A lid traps the warm, rising air and water vapor above the pot, cutting convective losses
+- Less energy escapes each second, so the water heats up faster with the same burner
 
 ### Metal vs. Wooden Spoon
 - Both are at the same temperature in a hot kitchen
@@ -99,7 +97,7 @@ Human activities (burning fossil fuels, deforestation) increase $CO_{2}$ concent
 ### The Stefan-Boltzmann Connection
 
 Earth must radiate energy at the same rate it absorbs solar energy (equilibrium). If more energy is trapped:
-- Temperature rises until $P_{\\text{out}} = \\sigma \\varepsilon A T^4$ matches the new energy input
+- Temperature rises until $P_{\\text{out}} = \\sigma A T^4$ matches the new energy input
 - Since $P \\propto T^4$, even small changes in trapped energy cause measurable temperature changes
 
 ### Water's Role in Climate
@@ -198,15 +196,15 @@ Water's high specific heat means oceans absorb enormous amounts of energy with s
             explanation: 'Water\'s high specific heat ($c = 4{,}186$ J/(kg·°C)) means oceans absorb and release large amounts of energy with small temperature changes. This thermal buffering keeps nearby coastal air cooler in summer and warmer in winter. Sea breezes and currents vary from place to place and could not explain warmer winters everywhere.'
           },
           {
-            question: 'At high altitude (like Denver or La Paz), water boils at a temperature below 100°C. As a practical consequence:',
+            question: 'A metal spoon and a wooden spoon have both sat in a 20°C kitchen all day. The metal spoon feels colder when you pick it up because:',
             options: [
-              'Food cooks faster because the water reaches a boil sooner',
-              'Food takes longer, since the water boils below 100°C',
-              'There is no difference, since the water is boiling either way',
-              'Food can\'t be cooked in boiling water at high altitude'
+              'Metal conducts energy out of your hand faster',
+              'Metal is at a lower temperature than the wood',
+              'Metal has a higher specific heat than the wood',
+              'Metal transfers cold into your hand by radiation'
             ],
-            correctAnswer: 1,
-            explanation: 'Lower atmospheric pressure at altitude lowers the boiling point. Boiling water at 95°C (for example) cooks food more slowly than at 100°C because the rate of chemical reactions in cooking depends on temperature. This is why pressure cookers are popular at high altitude.'
+            correctAnswer: 0,
+            explanation: 'Both spoons are at the same temperature, 20°C. Metal has a much higher thermal conductivity, so it carries energy away from your warmer hand quickly, and your skin senses that rate of energy loss as cold. Cold is not a quantity that flows.'
           }
         ]
       }

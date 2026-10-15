@@ -14,7 +14,7 @@ So far in electrostatics, charges have been sitting still. Now we let them **mov
 In this part you'll learn:
 - What electric current is and how it's measured
 - The difference between conventional current and electron flow
-- What drift velocity means (and why it's shockingly slow)
+- What the charges are doing when the current is zero
 - How to calculate current from charge and time
       `
     },
@@ -45,8 +45,6 @@ One ampere means **one coulomb of charge passes a point every second**.
 In **metals**, the charge carriers are **free electrons** (conduction electrons). Each carries charge $e = 1.6 \\times 10^{-19}$ C.
 
 In **electrolytes** (salt water, batteries), both positive and negative ions can carry current.
-
-In **semiconductors**, both electrons and "holes" (missing electrons) carry current.
       `
     },
     {
@@ -71,26 +69,13 @@ In a metal wire, **electrons** actually flow from **− to +** (opposite to conv
 - The math doesn't care which sign you pick — as long as you're consistent
 - AP Physics uses conventional current unless stated otherwise
 
-### Drift Velocity
+### Current Has a Direction, but It Is Not a Vector
 
-When a voltage is applied, electrons don't race through the wire. They drift slowly, bumping into atoms along the way.
+Current is drawn with an arrow along the wire, but it does not point in a direction in space the way a force does. At a junction, currents add as plain numbers (in = out), no matter what angles the wires make. If a wire bends around a corner, the current in it does not change.
 
-The **drift velocity** $v_d$ is typically $\\sim 10^{-4}$ m/s — about 0.1 mm/s!
+### Zero Current Does Not Mean Motionless Charges
 
-So why does a light turn on instantly? The **electric field** propagates at nearly the speed of light. Every electron in the wire starts moving almost simultaneously.
-
-### Current in Terms of Drift Velocity
-
-$$I = nAv_d e$$
-
-| Symbol | Meaning |
-|--------|---------|
-| $n$ | Number density of charge carriers $(electrons/m^{3})$ |
-| $A$ | Cross-sectional area of the wire |
-| $v_d$ | Drift velocity |
-| $e$ | Charge per carrier ($1.6 \\times 10^{-19}$ C) |
-
-For copper: $n \\approx 8.5 \\times 10^{28}$ $electrons/m^{3}$
+Even in a wire with no current, the free electrons move rapidly in random directions. Equal numbers cross any cross section in each direction, so the **net** motion of charge is zero and $I = 0$. A potential difference across the wire adds a small net motion in one direction on top of this random motion, and that net flow is the current.
       `
     },
     {
@@ -124,15 +109,15 @@ For copper: $n \\approx 8.5 \\times 10^{28}$ $electrons/m^{3}$
             explanation: 'In metals, free electrons are the charge carriers. They move from the negative terminal toward the positive terminal — opposite to conventional current direction.'
           },
           {
-            question: 'The drift velocity of electrons in a typical household wire is approximately:',
+            question: 'A copper wire is not connected to anything, so it carries no current. Which statement best describes its free electrons?',
             options: [
-              '$3 \\times 10^{8}$ m/s',
-              '$340$ m/s',
-              '$10^{-4}$ m/s',
-              '$1$ m/s'
+              'They are at rest because no potential difference exists',
+              'They drift steadily toward one end of the wire',
+              'They move randomly with no net flow',
+              'They are bound tightly to individual copper atoms'
             ],
             correctAnswer: 2,
-            explanation: 'Drift velocity is very slow — typically about $10^{-4}$ m/s, a tenth of a millimeter per second. The electric field signal, however, propagates at nearly the speed of light ($3 \\times 10^{8}$ m/s), which is why the light turns on instantly. 340 m/s is the speed of sound, which has nothing to do with charge flow.'
+            explanation: 'Zero current means zero net motion of charge, not motionless charges: free electrons keep moving randomly, and equal numbers cross each cross section in both directions. A steady drift toward one end would be a current, and electrons bound to atoms would make copper an insulator.'
           }
         ]
       }
@@ -147,17 +132,17 @@ For copper: $n \\approx 8.5 \\times 10^{28}$ $electrons/m^{3}$
 
 2) A lightning bolt transfers 5.0 C of charge in $2.0 \\times 10^{-3}$ s. What is the average current? (in A)
 
-3) A copper wire (cross-section $1.0 \\times 10^{-6}$ $m^{2}$, $n = 8.5 \\times 10^{28}$ $m^{-3}$) carries 2.0 A. What is the drift velocity? (in m/s, use scientific notation like 1.5e-4)
+3) A wire carries 0.80 A for 2.0 minutes. How many electrons pass a point in the wire? (use scientific notation like 1.5e20)
 
 *Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['7200', '2500', '1.5e-4'],
+        correctAnswers: ['7200', '2500', '6.0e20'],
         hint1: '$Q = I \\cdot t$. Convert 1 hour to seconds: $1 \\times 3600 = 3600$ s.',
         hint2: '$I = Q / t = 5.0 / (2.0 \\times 10^{-3})$.',
-        hint3: '$v_d = I / (nAe) = 2.0 / (8.5 \\times 10^{28} \\times 1.0 \\times 10^{-6} \\times 1.6 \\times 10^{-19})$.',
-        explanation: '1) $Q = 2.0 \\times 3600 = 7200$ C. 2) $I = 5.0 / 0.002 = 2500$ A. 3) $v_d = 2.0 / (8.5 \\times 10^{28} \\times 10^{-6} \\times 1.6 \\times 10^{-19}) = 2.0 / (1.36 \\times 10^{4}) \\approx 1.5 \\times 10^{-4}$ m/s.'
+        hint3: 'First find the charge, $Q = It = (0.80)(120)$, then divide by $e = 1.6 \\times 10^{-19}$ C per electron.',
+        explanation: '1) $Q = 2.0 \\times 3600 = 7200$ C. 2) $I = 5.0 / 0.002 = 2500$ A. 3) $Q = 0.80 \\times 120 = 96$ C, so $N = 96 / (1.6 \\times 10^{-19}) = 6.0 \\times 10^{20}$ electrons.'
       }
     },
     {
@@ -180,15 +165,15 @@ For copper: $n \\approx 8.5 \\times 10^{28}$ $electrons/m^{3}$
             explanation: '$I = Q/t$ so $Q = It = 4.0 \\times 1 = 4.0$ C per second. Number of electrons = $Q/e = 4.0 / (1.6 \\times 10^{-19}) = 2.5 \\times 10^{19}$.'
           },
           {
-            question: 'If you double the cross-sectional area of a wire while keeping the current the same, the drift velocity:',
+            question: 'A wire carries 2.0 A for 3.0 s and then 1.0 A for the next 2.0 s. How much charge passes a point in the wire during the full 5.0 s?',
             options: [
-              'Doubles',
-              'Stays the same',
-              'Halves',
-              'Quadruples'
+              '3.0 C',
+              '6.0 C',
+              '8.0 C',
+              '15 C'
             ],
             correctAnswer: 2,
-            explanation: '$I = nAv_d e$. If $A$ doubles and $I$ stays constant, then $v_d$ must halve to keep the product the same.'
+            explanation: 'Charge is current times time for each interval: $(2.0)(3.0) + (1.0)(2.0) = 8.0$ C, the area under the current-time graph. 6.0 C leaves out the second interval, 3.0 C adds the currents and ignores time, and 15 C multiplies the summed currents by the total time.'
           }
         ]
       }

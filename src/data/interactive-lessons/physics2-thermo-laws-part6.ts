@@ -5,159 +5,156 @@ export const physics2ThermoLawsPart6Data = {
       id: 'tl6-intro',
       type: 'text' as const,
       content: `
-# ❄️ Refrigerators & Heat Pumps
+# 🛤️ Same Endpoints, Different Paths
 
-**Part 6 of 7 — Running a Heat Engine in Reverse**
+**Part 6 of 7 — State Functions vs. Path-Dependent Energy Transfers**
 
-A refrigerator is essentially a heat engine running backward: instead of using heat to produce work, it uses work to move heat from cold to hot. Heat pumps use the same principle to heat buildings efficiently.
+Internal energy belongs to a **state**; heating and work belong to a **process**. That difference explains a classic AP question: a gas goes from state A to state B along two different paths — which quantities are the same, and which are not?
       `
     },
     {
-      id: 'tl6-refrigerator',
+      id: 'tl6-paths',
       type: 'text' as const,
       content: `
-## How a Refrigerator Works
+## Two Paths Between the Same States
 
-A refrigerator uses **work input** to extract heat from a cold reservoir (inside the fridge) and dump it into a hot reservoir (the kitchen):
+A monatomic ideal gas starts at state A ($2.0$ L, $300$ kPa) and ends at state B ($6.0$ L, $100$ kPa). Notice that $PV = 600$ J at both states, so A and B are at the **same temperature**.
 
-1. **Cold reservoir** ($T_C$): heat $Q_C$ is absorbed from the cold interior
-2. **Work input** ($W$): electrical energy drives the compressor
-3. **Hot reservoir** ($T_H$): heat $Q_H$ is released into the room
+**Path 1:** expand at constant pressure (300 kPa) from 2.0 L to 6.0 L, then cool at constant volume down to 100 kPa.
 
-### Energy Conservation
+**Path 2:** cool at constant volume from 300 kPa to 100 kPa, then expand at constant pressure (100 kPa) to 6.0 L.
 
-$$Q_H = Q_C + W$$
+| Quantity | Path 1 | Path 2 | Same or different? |
+|---|---|---|---|
+| $W$ (on gas) | $-(300)(4.0) = -1200$ J | $-(100)(4.0) = -400$ J | Different |
+| $\\Delta U = \\frac{3}{2}\\Delta(PV)$ | $0$ | $0$ | Same |
+| $Q = \\Delta U - W$ | $+1200$ J | $+400$ J | Different |
 
-The heat expelled into the room is MORE than the heat removed from inside — that's why the back of your fridge feels warm!
+### The Lesson
 
-### Coefficient of Performance (COP) — Refrigerator
-
-For a refrigerator, we want to **maximize cooling per unit of work**:
-
-$$\\text{COP}_{\\text{fridge}} = \\frac{Q_C}{W} = \\frac{Q_C}{Q_H - Q_C}$$
-
-Note: COP can be greater than 1 (unlike efficiency). A typical fridge has COP ≈ 3–5, meaning each joule of work removes 3–5 joules of heat.
-
-### Maximum COP (Carnot Refrigerator)
-
-$$\\text{COP}_{\\text{Carnot, fridge}} = \\frac{T_C}{T_H - T_C}$$
+- **$\\Delta U$ depends only on the endpoints**, because internal energy is a function of state (for an ideal gas, of temperature alone).
+- **$W$ and $Q$ depend on the path**, because they describe how energy crossed the boundary along the way. A path at higher pressure means more area under the curve, so more work.
+- A third path, the smooth isotherm from A to B, would have $|W|$ between 400 J and 1200 J, because its curve lies between the two paths.
       `
     },
     {
-      id: 'tl6-heat-pump',
-      type: 'text' as const,
-      content: `
-## Heat Pumps
-
-A **heat pump** is the same device as a refrigerator, but the goal is reversed: we want to **heat** the hot reservoir (the building) by extracting heat from the cold reservoir (outside air).
-
-### COP — Heat Pump
-
-$$\\text{COP}_{\\text{heat pump}} = \\frac{Q_H}{W} = \\frac{Q_H}{Q_H - Q_C}$$
-
-### Maximum COP (Carnot Heat Pump)
-
-$$\\text{COP}_{\\text{Carnot, HP}} = \\frac{T_H}{T_H - T_C}$$
-
-### Useful Relationship
-
-$$\\text{COP}_{\\text{heat pump}} = \\text{COP}_{\\text{fridge}} + 1$$
-
-This makes sense: $Q_H/W = Q_C/W + W/W = Q_C/W + 1$.
-
-### Real-World Applications
-
-- **Air conditioners**: refrigerators that cool indoor air
-- **Heat pumps**: heat buildings by extracting heat from outdoor air (even cold air has thermal energy!)
-- **Geothermal heat pumps**: use the stable ground temperature as a reservoir — very efficient
-- A heat pump with COP = 4 delivers 4 kW of heating for every 1 kW of electricity — far better than a space heater (COP = 1)
-      `
-    },
-    {
-      id: 'tl6-concept-quiz',
+      id: 'tl6-path-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Refrigerator & Heat Pump Concepts** 🔍
+**Path Reasoning Check** 🧠
       `,
       exercise: {
         questions: [
           {
-            question: 'A refrigerator removes 400 J from the cold reservoir and the compressor does 100 J of work. The heat exhausted to the hot reservoir is:',
+            question: 'A gas is taken from state A to state B along two different paths on a PV diagram. Which quantity must be the same for both paths?',
             options: [
-              '300 J',
-              '400 J',
-              '500 J',
-              '100 J'
+              'The change in internal energy',
+              'The work done on the gas',
+              'The energy added by heating',
+              'The area under the path'
             ],
-            correctAnswer: 2,
-            explanation: '$Q_H = Q_C + W = 400 + 100 = 500$ J. The room receives more heat than was removed from the fridge because the work input also becomes heat.'
+            correctAnswer: 0,
+            explanation: 'Internal energy is a state function, so its change depends only on the starting and ending states. Work equals the area under each path, which differs, and heating then differs too because $Q = \\Delta U - W$.'
           },
           {
-            question: 'A heat pump with COP = 5 uses 200 J of work. How much heat does it deliver to the building?',
+            question: 'Two paths connect the same initial and final states of a gas that expands. Path 1 runs at higher pressure than path 2 throughout. Compared with path 2, path 1 requires:',
             options: [
-              '40 J',
-              '200 J',
-              '800 J',
-              '1000 J'
+              'More energy added by heating',
+              'Less energy added by heating',
+              'The same energy added by heating',
+              'No energy added by heating'
             ],
-            correctAnswer: 3,
-            explanation: '$\\text{COP}_{\\text{HP}} = Q_H/W$, so $Q_H = \\text{COP} \\times W = 5 \\times 200 = 1000$ J. This is why heat pumps are so much more efficient than electric heaters.'
+            correctAnswer: 0,
+            explanation: 'Path 1 has more area under its curve, so the gas does more work. Both paths share the same $\\Delta U$, so by $Q = \\Delta U - W$, path 1 must take in more energy by heating to supply the extra work.'
           }
         ]
       }
     },
     {
-      id: 'tl6-comparison-quiz',
+      id: 'tl6-special',
+      type: 'text' as const,
+      content: `
+## Reasoning Without Numbers
+
+Many AP questions give no numbers at all. Decide each sign from the physical situation, then let the first law fill in the last one.
+
+| Situation | $W$ (on gas) | $Q$ | $\\Delta U$ and $T$ |
+|---|---|---|---|
+| A bicycle pump is pushed in quickly (no time for heating) | $+$ (compression) | $0$ (adiabatic) | $\\Delta U > 0$, gas warms |
+| Gas in an insulated cylinder pushes a piston out | $-$ (expansion) | $0$ (adiabatic) | $\\Delta U < 0$, gas cools |
+| Gas is compressed slowly in a cylinder sitting in an ice bath | $+$ | $-$ (must lose energy) | $0$, isothermal |
+| A valve opens and gas rushes into an empty, insulated chamber | $0$ (pushes on nothing) | $0$ | $0$, temperature unchanged |
+
+### Two Facts About Internal Energy
+- An ideal gas has **no internal potential energy**, because its atoms do not interact except during collisions. Its internal energy is the total kinetic energy of the atoms, $U = \\frac{3}{2}nRT$ for a monatomic gas.
+- Internal energy does **not** include the motion of the container. A sealed tank of gas on a moving truck has the same internal energy as the same tank at rest, because the truck's motion moves the center of mass of the gas without changing the random motion of its atoms.
+      `
+    },
+    {
+      id: 'tl6-reasoning-drill',
+      type: 'dropdown-select' as const,
+      content: `
+**Sign Reasoning Drill** 🎯
+
+Choose the sign of the named quantity for each process of an ideal gas.
+      `,
+      exercise: {
+        dropdowns: [
+          {
+            label: 'A gas is compressed quickly in an insulated cylinder. The change in its internal energy is',
+            options: ['positive', 'negative', 'zero', 'undetermined']
+          },
+          {
+            label: 'A gas is compressed slowly at constant temperature. The energy it gains by heating, Q, is',
+            options: ['positive', 'negative', 'zero', 'undetermined']
+          },
+          {
+            label: 'A gas in an insulated box spreads into an evacuated second chamber. The work done on the gas is',
+            options: ['positive', 'negative', 'zero', 'undetermined']
+          },
+          {
+            label: 'A gas is heated at constant volume. The work done on the gas is',
+            options: ['positive', 'negative', 'zero', 'undetermined']
+          }
+        ],
+        correctAnswers: ['positive', 'negative', 'zero', 'zero'],
+        hint1: 'Adiabatic means $Q = 0$, so $\\Delta U = W$.',
+        hint2: 'Constant temperature means $\\Delta U = 0$, so $Q = -W$.',
+        hint3: 'Work requires a moving boundary pushing against something; an empty chamber pushes back with no pressure, and a rigid container does not move.',
+        explanation: 'Quick compression with no heating: $\\Delta U = W > 0$. Isothermal compression: $\\Delta U = 0$ and $W > 0$, so $Q < 0$. Free expansion: nothing pushes back, so $W = 0$. Constant volume: no boundary moves, so $W = 0$.'
+      }
+    },
+    {
+      id: 'tl6-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Engine vs. Refrigerator** ⚖️
+**Exit Quiz**
       `,
       exercise: {
         questions: [
           {
-            question: 'The key difference between a heat engine and a refrigerator is:',
+            question: 'Air in a bicycle pump is compressed so quickly that essentially no energy is exchanged by heating. The temperature of the air:',
             options: [
-              'A heat engine violates the Second Law; a refrigerator does not',
-              'A heat engine produces net work output; a refrigerator requires net work input',
-              'A heat engine operates between two temperatures; a refrigerator operates at one temperature',
-              'A heat engine uses gas; a refrigerator uses liquid'
+              'Rises, because work done on it raises its internal energy',
+              'Stays the same, because no energy is added by heating',
+              'Falls, because compressed air has less room to move',
+              'Stays the same, because the process is too fast to matter'
             ],
-            correctAnswer: 1,
-            explanation: 'Both operate between two thermal reservoirs. A heat engine runs clockwise on a PV diagram (net work out), while a refrigerator runs counterclockwise (net work in). Neither violates the Second Law.'
+            correctAnswer: 0,
+            explanation: 'With $Q = 0$, the first law gives $\\Delta U = W$, and compression makes $W$ positive, so the internal energy and temperature rise. Heating is only one way to change internal energy; work is the other.'
           },
           {
-            question: 'Why can COP be greater than 1, while engine efficiency cannot?',
+            question: 'A sealed tank of ideal gas sits on a truck that speeds up from rest to 20 m/s. The gas temperature stays the same. The internal energy of the gas:',
             options: [
-              'COP breaks energy conservation, which only engines must obey',
-              'It measures heat moved per unit of work, not energy converted',
-              'COP is in different units, so it isn\'t a true fraction of input',
-              'Electric motors convert all their energy, unlike heat engines'
+              'Is unchanged',
+              'Increases by the kinetic energy of the tank',
+              'Decreases as the gas is pressed backward',
+              'Increases because the atoms move faster on average'
             ],
-            correctAnswer: 1,
-            explanation: 'COP is not an energy conversion efficiency — it measures how much heat is moved per unit of work. Since heat is being moved (not created), you can move more heat energy than the work you put in.'
+            correctAnswer: 0,
+            explanation: 'Internal energy depends on the random motion of the atoms relative to the center of mass, which is set by temperature. Moving the whole tank adds kinetic energy of the center of mass, not internal energy, so with the temperature unchanged $U$ is unchanged.'
           }
         ]
-      }
-    },
-    {
-      id: 'tl6-cop-drill',
-      type: 'input-boxes' as const,
-      content: `
-**COP Calculation Drill** 🔧
-
-1) A refrigerator removes 600 J from the cold reservoir using 200 J of work. What is its COP?
-
-2) What is the maximum COP of a refrigerator operating between $T_C = 250$ K and $T_H = 300$ K?
-
-3) A Carnot heat pump operates between $T_C = 270$ K and $T_H = 300$ K. What is its COP?
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['3', '5', '10'],
-        hint1: '$\\text{COP}_{\\text{fridge}} = Q_C/W = 600/200 = 3$.',
-        hint2: '$\\text{COP}_{\\text{Carnot, fridge}} = T_C/(T_H - T_C) = 250/(300 - 250) = 250/50 = 5$.',
-        hint3: '$\\text{COP}_{\\text{Carnot, HP}} = T_H/(T_H - T_C) = 300/(300 - 270) = 300/30 = 10$. Or use $\\text{COP}_{\\text{HP}} = \\text{COP}_{\\text{fridge}} + 1 = 9 + 1 = 10$.',
-        explanation: 'Refrigerator COP $= Q_C/W$. Heat pump COP $= Q_H/W$. Carnot versions use temperature ratios. Heat pump COP is always one more than fridge COP for the same temperatures.'
       }
     }
   ]

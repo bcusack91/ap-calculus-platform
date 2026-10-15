@@ -5,11 +5,11 @@ export const physics2ModernPart4Data = {
       id: 'mp4-intro',
       type: 'text' as const,
       content: `
-# 🌈 Atomic Transitions & Spectral Series
+# 🌈 Atomic Transitions & Spectral Lines
 
 **Part 4 of 7 — Reading the Light**
 
-Every element produces a unique set of spectral lines. By understanding **energy level diagrams** and the **spectral series** of hydrogen, you can predict and calculate the wavelengths of emitted or absorbed light.
+Every element produces a unique set of spectral lines. By understanding **energy level diagrams** and the patterns in hydrogen's spectral lines, you can predict and calculate the wavelengths of emitted or absorbed light.
       `
     },
     {
@@ -45,29 +45,29 @@ A transition from $n = 3 \\to n = 1$ releases $\\Delta E = 13.6 - 1.51 = 12.09$ 
       id: 'mp4-spectral-series',
       type: 'text' as const,
       content: `
-## Hydrogen Spectral Series
+## Grouping Transitions by Final Level
 
-Transitions are grouped by their **final (lower) level**:
+It helps to group hydrogen's transitions by their **final (lower) level**. Visible light spans roughly 400 nm to 700 nm (a question will give you this range when it matters).
 
-### Lyman Series (to $n = 1$) — Ultraviolet
-All transitions ending at the ground state:
+### Transitions Ending on $n = 1$ — Ultraviolet
+All transitions ending at the ground state release large energies:
 - $2 \\to 1$: $\\Delta E = 10.2$ eV, $\\lambda = 122$ nm
 - $3 \\to 1$: $\\Delta E = 12.1$ eV, $\\lambda = 103$ nm
 - $4 \\to 1$: $\\Delta E = 12.75$ eV, $\\lambda = 97.3$ nm
 
-### Balmer Series (to $n = 2$) — Visible Light!
-The only series in the visible range:
-- $3 \\to 2$: $\\Delta E = 1.89$ eV, $\\lambda = 656$ nm (red, H-alpha)
+### Transitions Ending on $n = 2$ — Visible Light!
+The only group with lines in the visible range:
+- $3 \\to 2$: $\\Delta E = 1.89$ eV, $\\lambda = 656$ nm (red)
 - $4 \\to 2$: $\\Delta E = 2.55$ eV, $\\lambda = 486$ nm (blue-green)
 - $5 \\to 2$: $\\Delta E = 2.86$ eV, $\\lambda = 434$ nm (violet)
 - $6 \\to 2$: $\\Delta E = 3.02$ eV, $\\lambda = 410$ nm (violet)
 
-### Paschen Series (to $n = 3$) — Infrared
+### Transitions Ending on $n = 3$ — Infrared
 - $4 \\to 3$: $\\Delta E = 0.66$ eV, $\\lambda = 1875$ nm
 - $5 \\to 3$: $\\Delta E = 0.97$ eV, $\\lambda = 1282$ nm
 
-### AP Exam Tip
-The Balmer series is the most commonly tested because it falls in the visible spectrum. Remember: **Balmer → n = 2 → Visible**.
+### The Pattern
+The farther apart two levels are, the larger $\\Delta E$ and the shorter $\\lambda$. Because the levels crowd together near the top, jumps to $n = 1$ are all large (ultraviolet), jumps to $n = 2$ are moderate (visible), and jumps to $n = 3$ are small (infrared).
       `
     },
     {
@@ -90,7 +90,7 @@ The Balmer series is the most commonly tested because it falls in the visible sp
             explanation: 'An emission spectrum shows discrete bright lines on a dark background. Each line corresponds to a specific electron transition in the excited gas.'
           },
           {
-            question: 'The longest wavelength photon in the Lyman series is produced by which transition?',
+            question: 'Of the hydrogen transitions that end on $n = 1$, which one emits the longest-wavelength photon?',
             options: [
               '$n = \\infty \\to n = 1$',
               '$n = 2 \\to n = 1$',
@@ -98,7 +98,7 @@ The Balmer series is the most commonly tested because it falls in the visible sp
               '$n = 1 \\to n = 2$'
             ],
             correctAnswer: 1,
-            explanation: 'Longest wavelength = smallest energy difference. The smallest gap in the Lyman series is $n = 2 \\to n = 1$ ($\\Delta E = 10.2$ eV). Higher starting levels give larger $\\Delta E$ and shorter $\\lambda$.'
+            explanation: 'Longest wavelength = smallest energy difference. The smallest gap ending on $n = 1$ is $n = 2 \\to n = 1$ ($\\Delta E = 10.2$ eV). Higher starting levels give larger $\\Delta E$ and shorter $\\lambda$.'
           },
           {
             question: 'An absorption spectrum and an emission spectrum of the same gas have:',
@@ -130,15 +130,15 @@ Use $E_n = -13.6/n^2$ eV and $\\lambda = 1240/\\Delta E$ (nm).
 
 4) Wavelength of that photon (in nm, 1 decimal place)
 
-5) Is the $4 \\to 1$ photon UV, visible, or IR? (type: UV)
+5) Visible light spans about 400 nm to 700 nm. Is the $4 \\to 1$ photon UV, visible, or IR? (type: UV)
       `,
       exercise: {
         boxes: 5,
         correctAnswers: ['1.89', '656', '12.75', '97.3', 'UV'],
         hint1: '$E_3 = -1.51$ eV, $E_2 = -3.40$ eV. $\\Delta E = -1.51 - (-3.40)$.',
         hint2: '$\\lambda = 1240/1.89$. For $4 \\to 1$: $E_4 = -0.85$ eV, $E_1 = -13.6$ eV.',
-        hint3: '$\\Delta E = -0.85 - (-13.6) = 12.75$ eV. $\\lambda = 1240/12.75$. Visible range: 380–700 nm.',
-        explanation: '$3 \\to 2$: $\\Delta E = -1.51 - (-3.40) = 1.89$ eV. $\\lambda = 1240/1.89 = 656$ nm (red, visible — the famous H-alpha line). $4 \\to 1$: $\\Delta E = -0.85 - (-13.6) = 12.75$ eV. $\\lambda = 1240/12.75 = 97.3$ nm (UV — Lyman series).'
+        hint3: '$\\Delta E = -0.85 - (-13.6) = 12.75$ eV. $\\lambda = 1240/12.75$. Compare with the 400–700 nm visible range.',
+        explanation: '$3 \\to 2$: $\\Delta E = -1.51 - (-3.40) = 1.89$ eV. $\\lambda = 1240/1.89 = 656$ nm (red, visible). $4 \\to 1$: $\\Delta E = -0.85 - (-13.6) = 12.75$ eV. $\\lambda = 1240/12.75 = 97.3$ nm (ultraviolet, shorter than 400 nm).'
       }
     },
     {
@@ -173,7 +173,7 @@ A hydrogen atom in the $n = 4$ state can transition to several lower levels.
       exercise: {
         questions: [
           {
-            question: 'The Balmer series (transitions to $n = 2$) produces light in which region of the electromagnetic spectrum?',
+            question: 'Hydrogen transitions from $n = 3, 4, 5,$ and $6$ down to $n = 2$ emit photons of 656, 486, 434, and 410 nm. The human eye detects wavelengths from about 400 nm to 700 nm. These photons are in which region of the electromagnetic spectrum?',
             options: [
               'Ultraviolet',
               'Visible',
@@ -181,10 +181,10 @@ A hydrogen atom in the $n = 4$ state can transition to several lower levels.
               'X-ray'
             ],
             correctAnswer: 1,
-            explanation: 'The Balmer series produces wavelengths from about 365 nm to 656 nm, which falls in the visible light range. The Lyman series is UV and the Paschen series is IR.'
+            explanation: 'All four wavelengths fall between 400 nm and 700 nm, so they are visible light. Transitions ending on $n = 1$ release more energy (ultraviolet), and those ending on $n = 3$ release less (infrared).'
           },
           {
-            question: 'As $n_i$ increases for transitions in the Lyman series ($n_i \\to 1$), the emitted wavelengths:',
+            question: 'For hydrogen transitions that end on $n = 1$, as the starting level $n_i$ increases, the emitted wavelengths:',
             options: [
               'Increase, approaching a limit of 656 nm',
               'Decrease toward a fixed limit',
@@ -192,7 +192,7 @@ A hydrogen atom in the $n = 4$ state can transition to several lower levels.
               'Decrease steadily, approaching zero'
             ],
             correctAnswer: 1,
-            explanation: 'As $n_i \\to \\infty$, $\\Delta E \\to 13.6$ eV, so $\\lambda \\to 1240/13.6 = 91.2$ nm. The wavelengths decrease but converge to this series limit instead of falling to zero. (656 nm is the longest Balmer line, not a Lyman limit.)'
+            explanation: 'As $n_i \\to \\infty$, $\\Delta E \\to 13.6$ eV, so $\\lambda \\to 1240/13.6 = 91.2$ nm. The wavelengths decrease but approach this limit instead of falling to zero. (656 nm is the $3 \\to 2$ wavelength, not a limit for transitions to $n = 1$.)'
           }
         ]
       }

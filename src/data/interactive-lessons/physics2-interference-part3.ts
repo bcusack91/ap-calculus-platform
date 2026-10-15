@@ -52,18 +52,16 @@ The central maximum is **twice as wide** as any other bright fringe.
       id: 'id3-intensity',
       type: 'text' as const,
       content: `
-## Intensity Pattern
-
-The intensity for single-slit diffraction is:
-
-$$I = I_0 \\left(\\frac{\\sin\\beta}{\\beta}\\right)^2$$
-
-where $\\beta = \\frac{\\pi a \\sin\\theta}{\\lambda}$.
+## Brightness Across the Pattern
 
 ### Key Features
-- **Central maximum**: the brightest and widest peak
-- **Secondary maxima**: much dimmer — the first secondary maximum is only about **4.7%** of the central peak intensity
-- **Minima**: exactly zero intensity at $a\\sin\\theta = m\\lambda$
+- **Central maximum**: the brightest and widest band
+- **Secondary maxima**: much dimmer, and each one farther out is dimmer still
+- **Minima**: dark bands at $a\\sin\\theta = m\\lambda$
+
+### Why the Minima Appear
+
+Split the slit into a top half and a bottom half. At the angle where $a\\sin\\theta = \\lambda$, each wavelet from the top half has a partner in the bottom half that travels exactly $\\lambda/2$ farther. Every pair cancels, so that direction is dark.
 
 ### Width and Slit Size
 
@@ -76,6 +74,10 @@ The relationship between slit width $a$ and the diffraction pattern:
 | $a < \\lambda$ | Light spreads in all directions |
 
 The narrower the slit, the **wider** the diffraction pattern — this is an inverse relationship!
+
+### Shape of the Opening
+
+The pattern depends on the shape of the opening. A long, narrow slit spreads light **perpendicular** to its length, into a row of bands; a small **circular** hole spreads light in every direction, into a bright central spot surrounded by faint rings.
       `
     },
     {
@@ -109,15 +111,15 @@ The narrower the slit, the **wider** the diffraction pattern — this is an inve
             explanation: 'Central max width $= 2\\lambda L / a$. Halving $a$ doubles the width. Narrower slit → wider diffraction pattern.'
           },
           {
-            question: 'The central maximum in a single-slit pattern compared to the first secondary maximum is:',
+            question: 'Water waves pass through a gap in a harbor wall. In which case do the waves spread out the most beyond the gap?',
             options: [
-              'Roughly the same brightness',
-              'About twice as bright',
-              'About 20 times as bright',
-              'Exactly 4 times as bright'
+              'Gap much wider than the wavelength',
+              'Gap about equal to the wavelength',
+              'Gap twice as wide as the wavelength',
+              'Gap ten times as wide as the wavelength'
             ],
-            correctAnswer: 2,
-            explanation: 'The first secondary maximum has intensity $\\approx 0.047 I_0$, which is only about 4.7% of the central peak. So the central maximum is roughly 21 times brighter.'
+            correctAnswer: 1,
+            explanation: 'Diffraction is most pronounced when the opening is comparable to the wavelength. As the gap grows larger than the wavelength, the waves pass through more like a straight beam with only slight spreading at the edges.'
           }
         ]
       }
@@ -174,7 +176,7 @@ Light of wavelength 600 nm passes through a single slit of width $a = 0.15$ mm. 
         hint1: 'Double-slit: $d\\sin\\theta = m\\lambda$ gives bright fringes (constructive interference).',
         hint2: 'Single-slit: $a\\sin\\theta = m\\lambda$ gives dark fringes (destructive interference by division of wavefront).',
         hint3: 'Width ∝ 1/a — smaller slit means wider pattern.',
-        explanation: 'Double-slit gives maxima; single-slit gives minima. Narrower slit → wider pattern. Secondary maxima are much dimmer (first one is ~4.7% of central peak).'
+        explanation: 'Double-slit gives maxima; single-slit gives minima. Narrower slit → wider pattern. Secondary maxima are much dimmer than the central maximum.'
       }
     },
     {

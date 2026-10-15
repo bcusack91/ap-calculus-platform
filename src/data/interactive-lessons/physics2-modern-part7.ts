@@ -27,7 +27,7 @@ $$^{235}_{92}\\text{U} + ^{1}_{0}n \\to ^{141}_{56}\\text{Ba} + ^{92}_{36}\\text
 ### Key Features
 - Triggered by absorbing a slow (thermal) neutron
 - Releases ~200 MeV per fission event
-- Products move toward iron on the binding energy curve → more tightly bound → energy released
+- Products are medium-mass nuclei, which are more tightly bound → energy released
 - Released neutrons can trigger more fissions → **chain reaction**
 
 ### Conservation Check
@@ -52,7 +52,7 @@ $$^{235}_{92}\\text{U} + ^{1}_{0}n \\to ^{141}_{56}\\text{Ba} + ^{92}_{36}\\text
 $$^{2}_{1}\\text{H} + ^{3}_{1}\\text{H} \\to ^{4}_{2}\\text{He} + ^{1}_{0}n + 17.6 \\text{ MeV}$$
 
 ### Key Features
-- Products move toward iron on the binding energy curve → energy released
+- Products are more tightly bound than the reactants → energy released
 - Requires extremely high temperatures (~$10^7$ K) to overcome Coulomb repulsion between positive nuclei
 - Powers the Sun and all main-sequence stars
 - Releases more energy per nucleon than fission
@@ -88,7 +88,7 @@ $$^{2}_{1}\\text{H} + ^{3}_{1}\\text{H} \\to ^{4}_{2}\\text{He} + ^{1}_{0}n + 17
               'Electrons are released from the atom'
             ],
             correctAnswer: 1,
-            explanation: 'The fission products (medium-mass nuclei near iron) have HIGHER binding energy per nucleon than the heavy parent nucleus. The increase in binding energy is released as kinetic energy of the products.'
+            explanation: 'The fission products (medium-mass nuclei) have HIGHER binding energy per nucleon than the heavy parent nucleus. The increase in binding energy is released as kinetic energy of the products.'
           },
           {
             question: 'Why does nuclear fusion require extremely high temperatures?',
@@ -205,7 +205,7 @@ Light of wavelength 200 nm strikes a metal surface with work function $\\phi = 4
               '434 nm (violet)'
             ],
             correctAnswer: 0,
-            explanation: '$\\Delta E = 13.6(1/1 - 1/4) = 13.6(3/4) = 10.2$ eV. $\\lambda = 1240/10.2 = 121.6 \\approx 122$ nm (Lyman series, UV).'
+            explanation: '$\\Delta E = 13.6(1/1 - 1/4) = 13.6(3/4) = 10.2$ eV. $\\lambda = 1240/10.2 = 121.6 \\approx 122$ nm (ultraviolet).'
           },
           {
             question: '$^{210}_{84}\\text{Po}$ undergoes alpha decay followed by beta-minus decay. The final nucleus has:',
@@ -230,15 +230,15 @@ Light of wavelength 200 nm strikes a metal surface with work function $\\phi = 4
             explanation: '$n = 30/10 = 3$ half-lives. Fraction remaining $= (1/2)^3 = 1/8$.'
           },
           {
-            question: 'Which process releases energy: fusing two iron-56 nuclei or splitting iron-56?',
+            question: 'In a nuclear reaction, the total mass of the products is 0.0020 u less than the total mass of the reactants. Using $1 \\text{ u} = 931.5 \\text{ MeV}/c^2$, about how much energy is released?',
             options: [
-              'Fusing iron-56, as with lighter nuclei',
-              'Splitting iron-56, as with uranium',
-              'Both, since any nuclear reaction releases energy',
-              'Neither, as iron-56 is at the peak of the binding-energy curve'
+              '1.9 MeV',
+              '0.0020 MeV',
+              '931.5 MeV',
+              '3.7 MeV'
             ],
-            correctAnswer: 3,
-            explanation: 'Iron-56 has the highest binding energy per nucleon. Moving away from iron in either direction (fusion of iron or fission of iron) requires energy input rather than releasing energy.'
+            correctAnswer: 0,
+            explanation: '$E = \\Delta m c^2 = (0.0020)(931.5 \\text{ MeV}) \\approx 1.9$ MeV. Using 931.5 MeV alone ignores the size of the mass difference, and 3.7 MeV doubles it.'
           }
         ]
       }

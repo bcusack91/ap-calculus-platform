@@ -5,218 +5,196 @@ export const physics2EmInductionPart6Data = {
       id: 'ei6-intro',
       type: 'text' as const,
       content: `
-# 🧲 Inductance
+# 📉 Changing Fields and Magnetic Braking
 
-**Part 6 of 7 — Self-Induction and Energy Storage**
+**Part 6 of 7 — Changing Fields: Graphs, Nearby Currents, and Magnetic Braking**
 
-A changing current in a coil produces a changing magnetic field, which produces a changing flux — through the **same coil**. By Faraday's Law, this induces an EMF that opposes the current change. This phenomenon is called **self-inductance**, and it gives coils a kind of electrical "inertia."
+In Part 5 the loop moved and the field stayed put. Now we hold the loop still and let the **field** change — because a magnet's strength changes, because the field reverses, or because the current that makes the field changes. We finish with magnetic braking, where Lenz's law slows a falling magnet.
       `
     },
     {
-      id: 'ei6-self-inductance',
+      id: 'ei6-b-graphs',
       type: 'text' as const,
       content: `
-## Self-Inductance
+## Reading a Field-versus-Time Graph
 
-### Definition
+For a stationary loop of area $A$ with the field perpendicular to it, $\\Phi = BA$, so
 
-The **self-inductance** $L$ of a coil relates the flux through the coil to the current producing it:
+$$|\\varepsilon| = A\\,\\frac{|\\Delta B|}{\\Delta t} = A \\times |\\text{slope of the } B\\text{–}t \\text{ graph}|$$
 
-$$N\\Phi_B = LI$$
+- **Flat segment** → zero EMF, however large $B$ is
+- **Steeper segment** → larger EMF
+- **Slope changes sign** → EMF and current reverse direction
 
-The SI unit of inductance is the **Henry (H)**:
+### The Sign of the Flux
 
-$$1 \\text{ H} = 1 \\frac{\\text{Wb}}{\\text{A}} = 1 \\frac{\\text{V} \\cdot \\text{s}}{\\text{A}}$$
+Flux has a sign: it is positive when $\\vec{B}$ points along the chosen area vector and **negative** when it points the opposite way. When a field **reverses**, the flux passes through zero and changes sign.
 
-### Induced EMF Due to Self-Inductance
+### Worked Example
 
-Taking the time derivative of $N\\Phi_B = LI$:
+A loop of area $0.050 \\text{ m}^2$ lies in the page. Take into-page field as positive.
 
-$$\\varepsilon = -L\\frac{dI}{dt}$$
+| Interval | What $B$ does | EMF magnitude | Current |
+|----------|---------------|------------------|---------|
+| 0–2 s | 0 → 0.30 T (into page) | $(0.050)(0.30/2) = 7.5 \\times 10^{-3}$ V | Counterclockwise |
+| 2–4 s | steady at 0.30 T | 0 | None |
+| 4–5 s | 0.30 T into → 0.30 T out of page | $(0.050)(0.60/1) = 0.030$ V | Clockwise |
 
-This says: the faster the current changes, the larger the induced EMF opposing the change.
+**0–2 s:** into-page flux increases, so the induced field points out of the page → counterclockwise.
 
-### Key Properties
-
-- $L$ depends only on the **geometry** of the coil (number of turns, area, length, core material) — not on the current
-- The negative sign means the induced EMF always **opposes** the change in current (Lenz's Law)
-- An inductor resists **changes** in current, just as a capacitor resists changes in voltage
-
-### Inductance of a Solenoid
-
-For an ideal solenoid with $N$ turns, length $\\ell$, cross-sectional area $A$, and core permeability $\\mu$:
-
-$$L = \\frac{\\mu N^2 A}{\\ell}$$
-
-More turns, larger area, shorter length → higher inductance.
+**4–5 s:** the into-page flux decreases, then out-of-page flux increases. **Both** changes call for an induced field into the page, so the current is clockwise the **whole** interval — including the instant when $B = 0$. Zero flux does not mean zero EMF; what matters is how fast the flux is changing. Note that the change in $B$ is $0.60$ T, not $0.30$ T.
       `
     },
     {
-      id: 'ei6-inductance-quiz',
+      id: 'ei6-graph-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Inductance Concept Check** 🧠
+**Changing-Field Graph Check** 📈
       `,
       exercise: {
         questions: [
           {
-            question: 'The SI unit of inductance is the:',
+            question: 'The field through a stationary loop rises steadily from 0 to 0.2 T over 4 s, holds at 0.2 T for 2 s, then falls steadily to 0 over 1 s. When is the induced EMF largest?',
             options: [
-              'Weber (Wb)',
-              'Tesla (T)',
-              'Henry (H)',
-              'Farad (F)'
+              'During the first 4 s',
+              'During the middle 2 s',
+              'During the last 1 s',
+              'Equally during all three intervals'
             ],
             correctAnswer: 2,
-            explanation: 'Inductance is measured in Henrys (H). 1 H = 1 V·s/A = 1 Wb/A.'
+            explanation: 'EMF follows the steepness of the $B$–$t$ graph: 0.05 T/s while rising, zero while steady, and 0.2 T/s while falling. The holding interval has the largest field but no change, so it has no EMF.'
           },
           {
-            question: 'A 0.5 H inductor carries a current that increases at 4 A/s. The magnitude of the self-induced EMF is:',
+            question: 'The field through a loop decreases steadily, passes through zero, and then grows in the opposite direction at the same steady rate. At the instant the field is zero, the induced EMF is:',
             options: [
-              '0.5 V',
-              '2 V',
-              '4 V',
-              '8 V'
+              'Zero, because there is no flux at that instant',
+              'The same as just before and just after',
+              'At its maximum, larger than at other times',
+              'Reversed compared with just before'
             ],
             correctAnswer: 1,
-            explanation: '$|\\varepsilon| = L|dI/dt| = (0.5)(4) = 2$ V.'
+            explanation: 'The flux changes at one steady rate throughout, so the EMF is constant and does not reverse; it depends on the rate of change of flux, not on the flux itself. Zero flux at one instant tells you nothing about the EMF.'
           },
           {
-            question: 'If you double the number of turns in a solenoid (keeping length and area the same), the inductance:',
+            question: 'A long straight wire in the page carries current up the page, and a conducting loop lies to its right in the page. The current in the wire increases. Which describes the induced current in the loop and the force on the loop?',
             options: [
-              'Doubles',
-              'Quadruples',
-              'Unchanged',
-              'Halves'
+              'Counterclockwise; pushed away from the wire',
+              'Clockwise; pulled toward the wire',
+              'Counterclockwise; pulled toward the wire',
+              'Clockwise; pushed away from the wire'
             ],
-            correctAnswer: 1,
-            explanation: '$L = \\mu N^2 A / \\ell$. Doubling $N$ gives $L \\propto (2N)^2 = 4N^2$, so the inductance quadruples.'
+            correctAnswer: 0,
+            explanation: 'The wire\'s field points into the page at the loop and grows, so the induced current makes an out-of-page field: counterclockwise. The loop\'s near side then carries current opposite the wire\'s current and is repelled more strongly than the far side is attracted, so the loop is pushed away, opposing the increase in flux.'
           }
         ]
       }
     },
     {
-      id: 'ei6-energy',
+      id: 'ei6-nearby-wire',
       type: 'text' as const,
       content: `
-## Energy Stored in an Inductor
+## Induction from a Nearby Current
 
-Building up current in an inductor requires work against the self-induced EMF. This work is stored as energy in the magnetic field:
+A long straight wire makes a field $B = \\dfrac{\\mu_0 I}{2\\pi r}$ that circles the wire and weakens with distance. A loop beside the wire can have its flux changed in several ways.
 
-$$U = \\frac{1}{2}LI^2$$
+**Setup:** the wire carries current $I$ up the page; a rectangular loop lies to the right of it, in the page. There, the wire's field points **into the page**, strongest at the loop's near side.
 
-### Comparison with a Capacitor
+| What happens | Into-page flux | Induced current | Force on the loop |
+|--------------|----------------|-----------------|-------------------|
+| $I$ increases | Increases | Counterclockwise | Pushed away from the wire |
+| $I$ decreases | Decreases | Clockwise | Pulled toward the wire |
+| Loop moves away (steady $I$) | Decreases (weaker field) | Clockwise | Pulled toward the wire |
+| Loop moves toward the wire | Increases | Counterclockwise | Pushed away from the wire |
+| Loop slides parallel to the wire | Unchanged | None | None |
 
-| Quantity | Capacitor | Inductor |
-|----------|-----------|----------|
-| Stores energy in | Electric field | Magnetic field |
-| Energy formula | $U = \\frac{1}{2}CV^2$ | $U = \\frac{1}{2}LI^2$ |
-| Opposes changes in | Voltage | Current |
-| "Inertia" analogy | — | Like mass resisting acceleration |
+### Why the Forces Point That Way
 
-### Energy Density
+The two long sides of the loop carry opposite currents. The **near** side sits in the stronger field, so it wins:
 
-The energy per unit volume stored in a magnetic field:
+- Near side's current **antiparallel** to the wire's → repelled → loop pushed away
+- Near side's current **parallel** to the wire's → attracted → loop pulled in
 
-$$u_B = \\frac{B^2}{2\\mu_0}$$
-
-This is the magnetic counterpart to the electric field energy density $u_E = \\frac{1}{2}\\varepsilon_0 E^2$.
-      `
-    },
-    {
-      id: 'ei6-rl-circuits',
-      type: 'text' as const,
-      content: `
-## RL Circuits
-
-An **RL circuit** contains a resistor $R$ and inductor $L$ in series.
-
-### Charging (Switch Closed, Current Growing)
-
-When you connect a battery of EMF $\\varepsilon_0$ to an RL circuit:
-
-$$I(t) = \\frac{\\varepsilon_0}{R}\\left(1 - e^{-t/\\tau}\\right)$$
-
-where the **time constant** is:
-
-$$\\tau = \\frac{L}{R}$$
-
-### Key Behavior
-
-- At $t = 0$: $I = 0$ (inductor blocks sudden current change)
-- At $t = \\tau$: $I = 0.632 \\times \\varepsilon_0/R$ (63.2% of max)
-- At $t \\to \\infty$: $I = \\varepsilon_0/R$ (inductor acts like a wire)
-
-### Discharging (Battery Removed, Current Decaying)
-
-$$I(t) = I_0 e^{-t/\\tau}$$
-
-The current decays exponentially with the same time constant $\\tau = L/R$.
-
-### Analogy to RC Circuits
-
-| | RC Circuit | RL Circuit |
-|---|-----------|-----------|
-| Time constant | $\\tau = RC$ | $\\tau = L/R$ |
-| Charges/grows | Voltage on capacitor | Current through inductor |
-| Reaches ~63% in | One $\\tau$ | One $\\tau$ |
-| Reaches ~99% in | Five $\\tau$ | Five $\\tau$ |
+Every row obeys Lenz's law: the force always opposes the change in flux — pushing the loop away when its flux grows and pulling it back when its flux shrinks.
       `
     },
     {
       id: 'ei6-calculation-drill',
       type: 'input-boxes' as const,
       content: `
-**Inductance & RL Circuit Drill** 📐
+**Changing-Field Calculation Drill** 📐
 
-An RL circuit has $L = 0.2$ H and $R = 10\\;\\Omega$, connected to a 20 V battery.
+A stationary loop of area 0.020 $m^{2}$ and resistance 0.40 Ω sits in a perpendicular field that increases steadily from 0.10 T to 0.30 T in 0.50 s.
 
-1) Time constant $\\tau$ (in s)
+1) Change in flux through the loop (in Wb)
 
-2) Maximum (steady-state) current (in A)
+2) Magnitude of the induced EMF (in V)
 
-3) Energy stored in the inductor at steady state (in J)
-
-*Round all answers to 3 significant figures.*
+3) Induced current (in A)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.02', '2', '0.4'],
-        hint1: '$\\tau = L/R = 0.2/10$.',
-        hint2: '$I_{\\max} = \\varepsilon_0/R = 20/10$.',
-        hint3: '$U = \\frac{1}{2}LI^2 = \\frac{1}{2}(0.2)(2)^2$.',
-        explanation: '$\\tau = 0.2/10 = 0.02$ s. $I_{\\max} = 20/10 = 2$ A. $U = \\frac{1}{2}(0.2)(4) = 0.4$ J.'
+        correctAnswers: ['0.0040', '0.0080', '0.020'],
+        hint1: '$\\Delta\\Phi = A\\,\\Delta B = (0.020)(0.30 - 0.10)$.',
+        hint2: '$|\\varepsilon| = |\\Delta\\Phi|/\\Delta t$ with $\\Delta t = 0.50$ s.',
+        hint3: '$I = \\varepsilon/R$.',
+        explanation: '$\\Delta\\Phi = (0.020)(0.20) = 0.0040$ Wb. $|\\varepsilon| = 0.0040/0.50 = 0.0080$ V. $I = 0.0080/0.40 = 0.020$ A.'
       }
+    },
+    {
+      id: 'ei6-braking',
+      type: 'text' as const,
+      content: `
+## Magnetic Braking
+
+Lenz's law means induced currents always **oppose the relative motion** that causes them. That turns moving magnets and moving conductors into brakes.
+
+### A Magnet Falling Through a Ring
+
+Drop a bar magnet, north pole down, through a horizontal copper ring.
+
+- **Approaching the ring:** downward flux through the ring increases → the induced current makes an upward field → the ring's top face acts as a north pole → it **repels** the magnet (force **up** on the magnet)
+- **Leaving the ring below:** downward flux decreases → the induced current makes a downward field → the ring's bottom face acts as a north pole and attracts the magnet's south end above it → force **up** on the magnet again
+
+Both times the force on the magnet is upward, so it falls with acceleration **less than $g$** near the ring.
+
+### A Magnet Falling Down a Copper Pipe
+
+A pipe is a stack of rings. Currents circulate around the pipe both above and below the magnet, and the braking force grows with the magnet's speed. The magnet speeds up until the braking force equals its weight, then falls at a steady **terminal speed**. Copper is not attracted to a magnet at all — the force comes entirely from induced currents.
+
+### Where the Energy Goes
+
+At terminal speed the magnet's kinetic energy is constant, so the gravitational potential energy it loses becomes **thermal energy** in the pipe, carried there by the induced currents ($P = I^2R$).
+      `
     },
     {
       id: 'ei6-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Exit Quiz — Inductance** ✅
+**Exit Quiz — Changing Fields and Braking** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'In an RL circuit, immediately after the switch is closed, the inductor behaves like:',
+            question: 'A strong magnet is dropped down a long vertical copper pipe. While it is in the pipe, how does it fall?',
             options: [
-              'A short circuit (zero resistance)',
-              'An open circuit (infinite resistance)',
-              'A battery',
-              'A capacitor'
+              'With an acceleration less than g',
+              'With an acceleration equal to g',
+              'With an acceleration greater than g',
+              'At g, since copper is not attracted to magnets'
             ],
-            correctAnswer: 1,
-            explanation: 'At $t = 0$, the inductor opposes any change from $I = 0$, so it effectively blocks current — acting like an open circuit. Over time ($t \\gg \\tau$), it allows full current to flow and acts like a simple wire.'
+            correctAnswer: 0,
+            explanation: 'The moving magnet changes the flux through the pipe, and the induced currents exert an upward force that opposes its motion, so its acceleration is less than g. Copper is not attracted to a magnet at rest, but induced currents still act on a moving one.'
           },
           {
-            question: 'An inductor stores 2 J of energy when carrying 4 A. Its inductance is:',
+            question: 'Once the magnet reaches terminal speed in the pipe, the gravitational potential energy it loses is converted mainly into:',
             options: [
-              '0.125 H',
-              '0.25 H',
-              '0.5 H',
-              '1.0 H'
+              'Kinetic energy of the falling magnet',
+              'Thermal energy in the walls of the pipe',
+              'Energy stored in the copper\'s magnetization',
+              'Electric potential energy of the magnet'
             ],
             correctAnswer: 1,
-            explanation: '$U = \\frac{1}{2}LI^2 \\Rightarrow L = \\frac{2U}{I^2} = \\frac{2(2)}{(4)^2} = \\frac{4}{16} = 0.25$ H.'
+            explanation: 'At terminal speed the kinetic energy is constant, so the lost potential energy goes into the induced currents and is dissipated as thermal energy in the copper. Copper does not become magnetized, so no energy is stored that way.'
           }
         ]
       }

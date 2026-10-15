@@ -152,12 +152,12 @@ Use $e = 1.6 \\times 10^{-19}$ C.
             question: 'A physicist claims to measure a charge of $2.5e$. Is this possible?',
             options: [
               'Yes — charge can take any value, like mass can',
-              'No — free charges must be integer multiples of e',
-              'Yes — free quarks carry fractional charges like this',
+              'No — charge comes in whole multiples of e',
+              'Yes — if the object lost two and a half electrons',
               'Yes — but only in ions at extremely high temperatures'
             ],
             correctAnswer: 1,
-            explanation: 'Free, observable charges are always integer multiples of e. Quarks have fractional charges (⅓e, ⅔e) but they are always confined inside particles — you can never isolate a fractional charge.'
+            explanation: 'The elementary charge e is the smallest indivisible amount of charge, so any net charge is a whole-number multiple of e. An object cannot lose half an electron, and the value of e does not depend on temperature or on the kind of object.'
           }
         ]
       }

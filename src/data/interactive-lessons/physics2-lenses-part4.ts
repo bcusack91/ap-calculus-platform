@@ -176,7 +176,7 @@ An object is placed 20 cm from a lens. Calculate $d_i$ for each lens:
               'Yes, if the object is at twice the focal length'
             ],
             correctAnswer: 2,
-            explanation: 'A single diverging lens can never produce a real image of a real object. The math always gives $d_i < 0$ wherever the object is placed. (A diverging lens can produce a real image of a virtual object in multi-lens systems, but that is a special case.)'
+            explanation: 'A single diverging lens can never produce a real image of a real object. The math always gives $d_i < 0$ wherever the object is placed.'
           }
         ]
       }

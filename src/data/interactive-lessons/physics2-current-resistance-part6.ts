@@ -5,11 +5,11 @@ export const physics2CurrentResistancePart6Data = {
       id: 'cr6-intro',
       type: 'text' as const,
       content: `
-# 🔋 Real-World Applications
+# 🔋 Real Batteries
 
-**Part 6 of 7 — Batteries, Bulbs, and Safety**
+**Part 6 of 7 — EMF, Internal Resistance, and Measuring a Battery**
 
-Real circuits aren't ideal. Batteries have internal resistance, wires have finite conductivity, and too much current can be dangerous. Let's see how the theory connects to the real world.
+Real circuits aren't ideal. A real battery has internal resistance, so the potential difference it delivers depends on how much current it supplies. In this part you will model a real battery, then use measurements and graphs to find its emf and internal resistance.
       `
     },
     {
@@ -38,7 +38,7 @@ The internal resistance causes a voltage drop **inside** the battery, so the vol
 | No current ($I = 0$) | $V = \\varepsilon$ (full EMF) |
 | Small current | $V \\approx \\varepsilon$ (small drop) |
 | Large current | $V \\ll \\varepsilon$ (significant drop) |
-| Short circuit ($R_{\\text{ext}} = 0$) | $I = \\varepsilon / r$ (maximum current, dangerous!) |
+| Short circuit ($R_{\\text{ext}} = 0$) | $V = 0$ and $I = \\varepsilon / r$ (maximum current) |
 
 ### Current in the Full Circuit
 
@@ -54,48 +54,6 @@ $$P_{\\text{total}} = \\varepsilon I = I^2R + I^2r$$
 
 - $I^2R$: useful power delivered to external circuit
 - $I^2r$: wasted as heat inside the battery
-      `
-    },
-    {
-      id: 'cr6-safety',
-      type: 'text' as const,
-      content: `
-## Circuit Safety Devices
-
-### Fuses
-
-A fuse contains a thin wire that **melts** when current exceeds its rating, breaking the circuit.
-
-- **One-time use** — must be replaced after blowing
-- Rated by current (e.g., 15 A, 20 A)
-- The thin wire has high resistance → heats up quickly at high current
-
-### Circuit Breakers
-
-A circuit breaker uses a bimetallic strip or electromagnet to **trip** (open) the circuit when current is too high.
-
-- **Resettable** — just flip the switch
-- Standard in modern homes
-- Also rated by current
-
-### Ground Fault Circuit Interrupter (GFCI)
-
-A GFCI detects when current flowing out differs from current flowing back (meaning some current is leaking through a person or water).
-
-- Trips in milliseconds
-- Required near water: bathrooms, kitchens, outdoors
-- Can detect leakage as small as 5 mA
-
-### Why These Matter
-
-| Current through body | Effect |
-|---------------------|--------|
-| 1 mA | Barely perceptible |
-| 10 mA | Painful shock |
-| 100 mA | Can be fatal (ventricular fibrillation) |
-| 1 A | Severe burns, likely fatal |
-
-Safety devices prevent dangerous currents from flowing through the circuit — and through you.
       `
     },
     {
@@ -118,15 +76,15 @@ Safety devices prevent dangerous currents from flowing through the circuit — a
             explanation: '$I = \\varepsilon/(R + r) = 9.0/(4.0 + 0.50) = 9.0/4.5 = 2.0$ A. $V = \\varepsilon - Ir = 9.0 - (2.0)(0.50) = 9.0 - 1.0 = 8.0$ V. Ignoring r gives 9.0 V, 1.0 V is only the internal drop $Ir$, and using $I = \\varepsilon/R = 2.25$ A gives 7.9 V.'
           },
           {
-            question: 'As a battery ages, its internal resistance typically:',
+            question: 'A real battery is connected to an external resistor, and the resistor is replaced with one of smaller resistance. The battery\'s terminal voltage:',
             options: [
-              'Decreases as the battery wears in',
-              'Stays the same over its life',
-              'Increases as its chemistry degrades',
-              'Drops to zero once it is drained'
+              'Increases, since less resistance means less drop',
+              'Stays equal to the emf, since the battery is unchanged',
+              'Decreases, since a larger $I$ raises $Ir$',
+              'Drops to zero, since the battery is shorted'
             ],
             correctAnswer: 2,
-            explanation: 'As a battery ages, chemical degradation increases internal resistance. This is why old batteries can still show nearly full EMF on a voltmeter (no current flowing) but can\'t deliver much current.'
+            explanation: 'Smaller external resistance gives a larger current $I = \\varepsilon/(R + r)$, so the internal drop $Ir$ grows and $V_{\\text{terminal}} = \\varepsilon - Ir$ falls. It equals the emf only with zero current, and it reaches zero only for a true short circuit.'
           },
           {
             question: 'A battery with EMF 12 V and internal resistance 1.0 $\\Omega$ is short-circuited. The short-circuit current is:',
@@ -143,69 +101,64 @@ Safety devices prevent dangerous currents from flowing through the circuit — a
       }
     },
     {
-      id: 'cr6-safety-quiz',
-      type: 'multiple-choice' as const,
+      id: 'cr6-measuring',
+      type: 'text' as const,
       content: `
-**Safety Concepts Quiz**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A GFCI outlet protects you by:',
-            options: [
-              'Lowering the outlet voltage to a safe level',
-              'Tripping when outgoing and returning currents differ',
-              'Tripping whenever total current exceeds 15 A',
-              'Adding resistance in series with the user'
-            ],
-            correctAnswer: 1,
-            explanation: 'A GFCI compares the current leaving the hot wire to the current returning on the neutral wire. If they differ (meaning current is leaking through an unintended path, like a person), it trips in milliseconds. Tripping on total overcurrent is the job of a fuse or breaker, not a GFCI.'
-          },
-          {
-            question: 'The difference between a fuse and a circuit breaker is:',
-            options: [
-              'Fuses protect against shock; breakers against fire',
-              'Breakers can be reset; fuses must be replaced',
-              'Fuses work with AC; circuit breakers work with DC',
-              'Breakers trip on high voltage; fuses on high current'
-            ],
-            correctAnswer: 1,
-            explanation: 'Both interrupt the circuit when current is too high, and both work on AC or DC. The key difference: a fuse melts and must be replaced, while a circuit breaker can be reset by flipping a switch.'
-          }
-        ]
-      }
+## Measuring EMF and Internal Resistance
+
+### Method 1: Open-Circuit Reading
+An ideal voltmeter connected directly across a battery with nothing else attached draws no current, so $Ir = 0$ and the reading equals the emf. This is why the emf is defined as the potential difference across the terminals when there is no current in the battery.
+
+### Method 2: Graph Terminal Voltage Versus Current
+Connect the battery to different external resistors and measure $V_{\\text{terminal}}$ and $I$ each time. Since
+
+$$V_{\\text{terminal}} = \\varepsilon - Ir$$
+
+a graph of $V_{\\text{terminal}}$ (vertical) versus $I$ (horizontal) is a straight line:
+- **Vertical intercept** ($I = 0$): $\\varepsilon$
+- **Slope**: $-r$
+
+**Example**: A best-fit line has vertical intercept $1.50$ V and passes through $(0.60\\text{ A},\\ 1.20\\text{ V})$. Slope $= \\frac{1.20 - 1.50}{0.60} = -0.50\\;\\Omega$, so $\\varepsilon = 1.50$ V and $r = 0.50\\;\\Omega$.
+
+### Method 3: Ammeter Only
+With an ammeter and several known resistors $R$, measure $I$ for each. Rearranging $I = \\frac{\\varepsilon}{R + r}$:
+
+$$\\frac{1}{I} = \\frac{1}{\\varepsilon}R + \\frac{r}{\\varepsilon}$$
+
+A graph of $\\frac{1}{I}$ (vertical) versus $R$ (horizontal) is a straight line with slope $\\frac{1}{\\varepsilon}$ and vertical intercept $\\frac{r}{\\varepsilon}$.
+      `
     },
     {
       id: 'cr6-application-drill',
       type: 'dropdown-select' as const,
       content: `
-**Real-World Application Check** 🎯
+**Real Battery Check** 🎯
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'A flashlight gets dimmer as batteries age because',
-            options: ['EMF decreases only', 'Internal resistance increases', 'External resistance increases', 'The bulb wears out']
+            label: 'When a real battery supplies more current, its terminal voltage',
+            options: ['increases', 'decreases', 'stays equal to the emf', 'becomes negative']
           },
           {
-            label: 'Near a swimming pool, the required safety device is',
-            options: ['A standard fuse', 'A regular circuit breaker', 'A GFCI outlet', 'A surge protector']
+            label: 'On a graph of terminal voltage versus current, the vertical intercept equals',
+            options: ['the emf', 'the internal resistance', 'the short-circuit current', 'zero']
           },
           {
-            label: 'To maximize power delivered to an external load, internal resistance should be',
-            options: ['Equal to load resistance', 'As large as possible', 'As small as possible', 'Exactly zero']
+            label: 'On that same graph, the slope equals',
+            options: ['the internal resistance', 'the negative of the internal resistance', 'the emf', 'the external resistance']
           },
           {
-            label: 'A car battery (12 V, low internal resistance) can deliver very high current, making short circuits',
-            options: ['Harmless', 'Slightly warm', 'Extremely dangerous', 'Impossible']
+            label: 'Connecting a wire of negligible resistance across a real battery produces a current equal to',
+            options: ['zero', 'the emf divided by r', 'the emf times r', 'an infinite value']
           }
         ],
-        correctAnswers: ['Internal resistance increases', 'A GFCI outlet', 'As small as possible', 'Extremely dangerous'],
-        hint1: 'Aging batteries develop higher internal resistance, dropping the terminal voltage under load.',
-        hint2: 'GFCIs are required anywhere near water to protect against electric shock.',
-        hint3: 'Less internal resistance means less power wasted inside the battery.',
-        hint4: 'Low internal resistance means a short circuit produces enormous current ($I = \\varepsilon/r$), causing rapid heating.',
-        explanation: 'Internal resistance increases with age; GFCIs protect near water; minimal internal resistance maximizes useful power; low $r$ makes short circuits extremely dangerous.'
+        correctAnswers: ['decreases', 'the emf', 'the negative of the internal resistance', 'the emf divided by r'],
+        hint1: '$V_{\\text{terminal}} = \\varepsilon - Ir$: more current means a larger internal drop.',
+        hint2: 'At $I = 0$ there is no internal drop.',
+        hint3: 'Compare $V_{\\text{terminal}} = \\varepsilon - rI$ with $y = b + mx$.',
+        hint4: 'With $R = 0$, only the internal resistance limits the current: $I = \\varepsilon/r$.',
+        explanation: 'Terminal voltage falls as current rises; the graph of $V_{\\text{terminal}}$ versus $I$ has intercept $\\varepsilon$ and slope $-r$; a short circuit gives $I = \\varepsilon/r$, large when $r$ is small.'
       }
     },
     {
@@ -226,6 +179,28 @@ Safety devices prevent dangerous currents from flowing through the circuit — a
             ],
             correctAnswer: 2,
             explanation: 'Fraction = $R/(R + r) = 2.8/(2.8 + 0.2) = 2.8/3.0 = 0.933 = 93\\%$. The remaining 7% is wasted as heat inside the battery — that is $r/(R + r)$, not the delivered fraction. 50% applies only when $R = r$.'
+          },
+          {
+            question: 'An ideal voltmeter connected directly across an isolated battery, with nothing else attached, reads 9.0 V. This reading equals:',
+            options: [
+              'The internal drop $Ir$, since current flows inside the battery',
+              'The terminal voltage under load, since the meter draws current',
+              'The battery\'s emf, since no current flows in the battery',
+              'The emf minus the internal drop, since the meter has resistance'
+            ],
+            correctAnswer: 2,
+            explanation: 'An ideal voltmeter draws no current, so the internal drop $Ir$ is zero and the terminal reading equals the emf. The internal drop is zero here rather than 9.0 V, and a reading below the emf happens only when the battery supplies current to a load.'
+          },
+          {
+            question: 'A graph of terminal voltage (vertical) versus current (horizontal) for a battery is a straight line with vertical intercept $1.5$ V and slope $-0.25\\;\\Omega$. The internal resistance is:',
+            options: [
+              '$0.25\\;\\Omega$',
+              '$1.5\\;\\Omega$',
+              '$6.0\\;\\Omega$',
+              '$0.38\\;\\Omega$'
+            ],
+            correctAnswer: 0,
+            explanation: 'From $V_{\\text{terminal}} = \\varepsilon - Ir$, the slope is $-r$, so $r = 0.25\\;\\Omega$. 1.5 is the emf in volts, 6.0 divides the intercept by the slope (that is the short-circuit current in amperes), and 0.38 multiplies them.'
           }
         ]
       }

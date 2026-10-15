@@ -9,17 +9,19 @@ export const physics2TemperaturePart7Data = {
 
 **Part 7 of 7 — Putting It All Together**
 
-This final part connects all the concepts from the topic — temperature scales, thermal equilibrium, linear and volume expansion, and kinetic theory — into a unified review with AP-style problems.
+This final part connects the whole topic — temperature scales, thermal equilibrium, pressure from collisions, the ideal gas law, gas graphs, and kinetic theory — into one review with AP-style problems.
 
 ## Concept Map
 
-$$\\text{Temperature} \\xrightarrow{\\text{measures}} KE_{\\text{avg}} = \\frac{3}{2}k_BT$$
+$$\\text{Temperature} \\xrightarrow{\\text{measures}} KE_{\\text{avg}} = \\frac{3}{2}k_BT = \\frac{1}{2}mv_{\\text{rms}}^2$$
 
-$$\\text{Temperature change} \\xrightarrow{\\text{causes}} \\begin{cases} \\Delta L = \\alpha L_0 \\Delta T & \\text{(linear)} \\\\ \\Delta A = 2\\alpha A_0 \\Delta T & \\text{(area)} \\\\ \\Delta V = \\beta V_0 \\Delta T & \\text{(volume, } \\beta \\approx 3\\alpha\\text{)} \\end{cases}$$
+$$\\text{Molecular collisions} \\xrightarrow{\\text{produce}} P = \\frac{F_\\perp}{A}$$
 
-$$\\text{Zeroth Law} \\xrightarrow{\\text{enables}} \\text{Temperature measurement (thermometers)}$$
+$$\\text{Ideal gas model} \\xrightarrow{\\text{gives}} PV = nRT = Nk_BT$$
 
-$$v_{\\text{rms}} = \\sqrt{\\frac{3k_BT}{m}} = \\sqrt{\\frac{3RT}{M}}$$
+$$\\text{Thermal equilibrium} \\xrightarrow{\\text{enables}} \\text{temperature measurement (thermometers)}$$
+
+$$P \\text{ vs. } T \\text{ at constant } V \\xrightarrow{\\text{extrapolates to}} P = 0 \\text{ at } 0 \\text{ K} \\approx -273°\\text{C}$$
       `
     },
     {
@@ -28,27 +30,27 @@ $$v_{\\text{rms}} = \\sqrt{\\frac{3k_BT}{m}} = \\sqrt{\\frac{3RT}{M}}$$
       content: `
 ## Common AP Mistakes to Avoid ⚠️
 
-### 1. Using °C in Kinetic Theory Equations
-$KE_{\\text{avg}} = \\frac{3}{2}k_BT$ and $v_{\\text{rms}} = \\sqrt{3RT/M}$ require $T$ in **Kelvin**. Using Celsius gives a completely wrong answer.
+### 1. Using °C in Gas and Kinetic Theory Equations
+$PV = nRT$, $KE_{\\text{avg}} = \\frac{3}{2}k_BT$ and $v_{\\text{rms}} = \\sqrt{3k_BT/m}$ all require $T$ in **kelvins**. A ratio of Celsius temperatures (like $327/27$) is meaningless.
 
-### 2. Confusing Temperature and Heat
-- **Temperature** = average KE per molecule (intensive property)
-- **Heat** = energy transferred due to temperature difference (not a property of a system)
+### 2. Forgetting to Convert Volume and Pressure
+Liters and kilopascals cancel in a ratio such as $\\frac{P_1V_1}{T_1} = \\frac{P_2V_2}{T_2}$, but $PV = nRT$ with $R = 8.31$ J/(mol·K) needs $\\text{m}^3$ and Pa.
 
-### 3. Thinking Holes Shrink When Heated
-A hole in a heated plate expands as if it were filled with the same material. The hole gets **larger**, not smaller.
+### 3. Confusing Temperature and Heat
+- **Temperature** describes the average kinetic energy of the particles in a system.
+- **Heat** (heating or cooling) is energy transferred because of a temperature difference. A system does not "contain" heat.
 
-### 4. Forgetting That $\\beta \\approx 3\\alpha$
-If given $\\alpha$ and asked about volume expansion, you need $\\beta = 3\\alpha$. Many students use $\\alpha$ directly for volume problems.
+### 4. Saying Heavier Atoms Have More Kinetic Energy
+At the same temperature, all ideal gas atoms have the same average kinetic energy. Heavier atoms simply move more slowly.
 
-### 5. Ignoring Container Expansion
-When a liquid heats up in a container, the **apparent** expansion is $(\\beta_{\\text{liquid}} - \\beta_{\\text{container}})V_0 \\Delta T$, not $\\beta_{\\text{liquid}} V_0 \\Delta T$.
+### 5. Doubling Speed When Temperature Doubles
+$KE_{\\text{avg}} \\propto T$, but $v_{\\text{rms}} \\propto \\sqrt{T}$. Doubling $T$ multiplies the rms speed by $\\sqrt{2}$.
 
-### 6. Assuming All Molecules Move at the Same Speed
-The Maxwell-Boltzmann distribution shows a **range** of speeds. The rms speed is a statistical measure, not the speed of every molecule.
+### 6. Treating Pressure as a Wall-Only Effect
+Pressure exists throughout the gas, because atoms collide with each other and with anything placed inside the gas.
 
-### 7. Confusing $v_p$, $\\bar{v}$, and $v_{\\text{rms}}$
-Always: $v_p < \\bar{v} < v_{\\text{rms}}$. The rms speed is the one that appears in $KE = \\frac{1}{2}mv_{\\text{rms}}^2$.
+### 7. Assuming All Molecules Move at the Same Speed
+The Maxwell–Boltzmann distribution shows a **range** of speeds. The rms speed is a statistical measure, not the speed of every molecule.
       `
     },
     {
@@ -60,37 +62,37 @@ Always: $v_p < \\bar{v} < v_{\\text{rms}}$. The rms speed is the one that appear
       exercise: {
         questions: [
           {
-            question: 'A copper plate has a circular hole of diameter 5.00 cm at 20°C. When heated to 220°C, the diameter of the hole (α_Cu = $17 \\times 10^{-6}$ /°C):',
+            question: 'A rigid container of ideal gas is heated from 300 K to 450 K. By what factor does the pressure change?',
             options: [
-              'Decreases because the surrounding copper expands inward',
-              'Stays exactly the same',
-              'Increases to about 5.017 cm',
-              'Increases to about 5.034 cm'
+              '1.5',
+              '2.25',
+              '1.22',
+              '0.67'
             ],
-            correctAnswer: 2,
-            explanation: 'The hole expands like a solid disk of the same material. $\\Delta d = \\alpha d_0 \\Delta T = (17 \\times 10^{-6})(5.00)(200) = 0.017$ cm. New diameter = $5.00 + 0.017 = 5.017$ cm.'
+            correctAnswer: 0,
+            explanation: 'At constant volume $P \\propto T$, so the pressure is multiplied by $450/300 = 1.5$. The factor 1.22 is the change in rms speed ($\\sqrt{1.5}$), and 2.25 wrongly squares the temperature ratio.'
           },
           {
             question: 'Two identical containers hold equal volumes of gas at the same temperature. Container A holds helium and container B holds oxygen. Which statement is correct?',
             options: [
-              'Helium molecules have greater average KE',
-              'Oxygen molecules have greater average KE',
-              'Both have the same average KE per molecule, and helium moves faster',
-              'Both have the same rms speed at equal temperature'
+              'Helium atoms have the greater average kinetic energy',
+              'Oxygen molecules have the greater average kinetic energy',
+              'Equal average energy, but helium atoms move faster',
+              'Their rms speeds are equal, since their temperature is equal'
             ],
             correctAnswer: 2,
-            explanation: '$KE_{\\text{avg}} = \\frac{3}{2}k_BT$ depends only on temperature, so both gases have the same average KE. Since helium is lighter ($M = 4$ vs $M = 32$), it must move faster to have the same KE: $v_{\\text{He}}/v_{\\text{O}_2} = \\sqrt{32/4} = 2\\sqrt{2} \\approx 2.83$.'
+            explanation: '$KE_{\\text{avg}} = \\frac{3}{2}k_BT$ depends only on temperature, so both gases have the same average kinetic energy. Helium is lighter, so it must move faster: $v_{\\text{He}}/v_{\\text{O}_2} = \\sqrt{32/4} \\approx 2.8$.'
           },
           {
-            question: 'A mercury thermometer is placed in warm water. As the thermometer first enters the water, the mercury level briefly dips before rising. This is because:',
+            question: 'In a sealed piston, a gas is compressed to half its volume while its absolute temperature doubles. The pressure becomes:',
             options: [
-              'Mercury contracts briefly when it is first heated',
-              'The glass bulb heats and expands before the mercury does',
-              'Water pressure squeezes the bulb and pushes mercury down',
-              'It doesn\'t happen; the level only ever rises'
+              'Four times the original',
+              'Twice the original',
+              'The same as the original',
+              'Half the original'
             ],
-            correctAnswer: 1,
-            explanation: 'The glass bulb is in direct contact with the warm water and heats first. The bulb expands, increasing its internal volume, so the mercury level drops briefly. Once heat conducts through to the mercury, the mercury expands much more than the glass ($\\beta_{\\text{Hg}} \\gg \\beta_{\\text{glass}}$) and the level rises.'
+            correctAnswer: 0,
+            explanation: 'From $P = nRT/V$, doubling $T$ doubles $P$ and halving $V$ doubles it again, for a factor of four. Treating the two changes as canceling ignores that both raise the pressure.'
           }
         ]
       }
@@ -99,21 +101,23 @@ Always: $v_p < \\bar{v} < v_{\\text{rms}}$. The rms speed is the one that appear
       id: 'te7-mixed-drill',
       type: 'input-boxes' as const,
       content: `
-**Mixed Review Drill** 🎯
+**Mixed Review Drill** 🔢
 
-1) Convert 350 K to °F. Round to the nearest whole number.
+Use $R = 8.31$ J/(mol·K) and $k_B = 1.38 \\times 10^{-23}$ J/K.
 
-2) An iron rod ($\\alpha = 12 \\times 10^{-6}$ /°C) is 1.500 m at 20°C. A brass rod ($\\alpha = 19 \\times 10^{-6}$ /°C) is 1.500 m at 20°C. Both are heated to 120°C. Find the difference in their lengths $|L_{\\text{brass}} - L_{\\text{iron}}|$ in mm.
+1) Find the average kinetic energy of a helium atom at $600$ K, in units of $10^{-21}$ J (3 significant figures).
 
-3) Find the rms speed (in m/s) of helium atoms ($M = 4.0 \\times 10^{-3}$ kg/mol) at 200 K. Use $R = 8.314$ J/(mol·K). Round to the nearest whole number.
+2) A $4.0$ L tank holds $0.20$ mol of gas at $27°\\text{C}$. Find the pressure in kPa (3 significant figures).
+
+3) The rms speed of a gas is $400$ m/s at $200$ K. Find its rms speed at $800$ K, in m/s.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['171', '1.05', '1117'],
-        hint1: 'First convert K to °C: $T_C = 350 - 273 = 77$°C. Then $T_F = \\frac{9}{5}(77) + 32$.',
-        hint2: '$\\Delta L_{\\text{diff}} = (\\alpha_{\\text{brass}} - \\alpha_{\\text{iron}}) L_0 \\Delta T = (19 - 12) \\times 10^{-6} \\times 1.500 \\times 100$.',
-        hint3: '$v_{\\text{rms}} = \\sqrt{3RT/M} = \\sqrt{3(8.314)(200)/(4.0 \\times 10^{-3})}$.',
-        explanation: '1) $T_C = 350 - 273 = 77$°C. $T_F = \\frac{9}{5}(77) + 32 = 138.6 + 32 = 170.6 \\approx 171$°F. 2) $\\Delta L_{\\text{diff}} = (7 \\times 10^{-6})(1.500)(100) = 1.05 \\times 10^{-3}$ m $= 1.05$ mm. 3) $v_{\\text{rms}} = \\sqrt{\\frac{3(8.314)(200)}{0.004}} = \\sqrt{\\frac{4{,}988}{0.004}} = \\sqrt{1{,}247{,}100} \\approx 1{,}117$ m/s.'
+        correctAnswers: ['12.4', '125', '800'],
+        hint1: '$KE_{\\text{avg}} = \\frac{3}{2}k_BT = \\frac{3}{2}(1.38 \\times 10^{-23})(600)$.',
+        hint2: 'Convert: $V = 4.0 \\times 10^{-3} \\text{ m}^3$, $T = 300$ K. Then $P = nRT/V$.',
+        hint3: '$v_{\\text{rms}} \\propto \\sqrt{T}$. The temperature is multiplied by 4.',
+        explanation: '1) $\\frac{3}{2}(1.38 \\times 10^{-23})(600) = 1.24 \\times 10^{-20}$ J $= 12.4 \\times 10^{-21}$ J. 2) $P = (0.20)(8.31)(300)/(4.0 \\times 10^{-3}) = 1.25 \\times 10^5$ Pa $= 125$ kPa. 3) Four times the temperature gives $\\sqrt{4} = 2$ times the speed: $800$ m/s.'
       }
     },
     {
@@ -122,30 +126,27 @@ Always: $v_p < \\bar{v} < v_{\\text{rms}}$. The rms speed is the one that appear
       content: `
 ## AP-Style Free Response Preview 📝
 
-Here is the type of multi-part question you might see on the AP Physics 2 exam:
+Here is the kind of multi-part question you might see on the AP Physics 2 exam:
 
 ---
 
-**A steel railroad rail is 25.0 m long at 20.0°C. The coefficient of linear expansion for steel is $\\alpha = 12.0 \\times 10^{-6}$ /°C.**
+**A sealed cylinder with a movable, frictionless piston contains $0.050$ mol of a monatomic ideal gas at $300$ K and $1.0 \\times 10^5$ Pa.**
 
-**(a)** Calculate the change in length of the rail when the temperature increases to 50.0°C.
+**(a)** Calculate the volume of the gas.
 
-> $\\Delta L = \\alpha L_0 \\Delta T = (12.0 \\times 10^{-6})(25.0)(30.0) = 9.00 \\times 10^{-3}$ m $= 9.00$ mm
+> $V = \\frac{nRT}{P} = \\frac{(0.050)(8.31)(300)}{1.0 \\times 10^5} = 1.2 \\times 10^{-3} \\text{ m}^3$
 
-**(b)** If no expansion gap is provided, describe what happens to the rail and explain using physics principles.
+**(b)** The gas is heated slowly at constant pressure until its volume doubles. Determine the new temperature.
 
-> Without a gap, the rail cannot expand freely. The constraint produces a compressive thermal stress. If the stress exceeds the yield strength of steel, the rail buckles — it bends laterally out of alignment. This is an application of $\\sigma = Y \\alpha \\Delta T$, where $Y$ is Young's modulus.
+> At constant $P$, $V \\propto T$, so $T$ doubles: $600$ K.
 
-**(c)** A train wheel is a steel ring with inner diameter 0.8500 m at 20.0°C. The axle has diameter 0.8510 m. To what minimum temperature must the wheel be heated to slip onto the axle?
+**(c)** Explain, in terms of the motion of the gas atoms, how the gas can keep the same pressure even though its temperature has doubled.
 
-> $d(1 + \\alpha \\Delta T) = 0.8510$
-> $0.8500(1 + 12.0 \\times 10^{-6} \\cdot \\Delta T) = 0.8510$
-> $\\Delta T = \\frac{0.8510/0.8500 - 1}{12.0 \\times 10^{-6}} = \\frac{0.001176}{12.0 \\times 10^{-6}} = 98.0$°C
-> $T = 20.0 + 98.0 = 118.0$°C
+> The atoms now move faster, so each collision with the walls delivers more momentum. But the volume has doubled, so the atoms are spread out and strike each square meter of wall less often. The decrease in collision rate exactly offsets the larger momentum per collision, so the average force per area is unchanged.
 
-**(d)** Once the wheel cools back to 20°C on the axle, explain the microscopic reason it grips the axle tightly.
+**(d)** Sketch how a graph of the gas's volume vs. absolute temperature would look for this process.
 
-> As the wheel cools, its atoms lose kinetic energy and vibrate with smaller amplitudes. The average interatomic spacing decreases, causing the ring to contract. Since it cannot contract past the axle diameter, internal stresses develop that create a strong compressive fit (interference fit).
+> A straight line that, if extended, would pass through the origin, because $V = \\left(\\frac{nR}{P}\\right)T$ with $P$ constant.
       `
     },
     {
@@ -157,48 +158,37 @@ Here is the type of multi-part question you might see on the AP Physics 2 exam:
       exercise: {
         questions: [
           {
-            question: 'The temperature −40 is the same value on which two scales?',
+            question: 'A gas is at 300 K. Its atoms have an average kinetic energy of $6.21 \\times 10^{-21}$ J. If the temperature is raised to 600 K, the new average kinetic energy and rms speed are:',
             options: [
-              'Celsius and Kelvin',
-              'Fahrenheit and Kelvin',
-              'Celsius and Fahrenheit',
-              'No two scales share a common temperature'
-            ],
-            correctAnswer: 2,
-            explanation: '$T_F = \\frac{9}{5}T_C + 32$. Setting $T_F = T_C$: $T = \\frac{9}{5}T + 32 \\Rightarrow -\\frac{4}{5}T = 32 \\Rightarrow T = -40$. So $-40$°C $= -40$°F.'
-          },
-          {
-            question: 'A gas is at 300 K. Its molecules have average KE of $6.21 \\times 10^{-21}$ J. If the temperature is raised to 600 K, the new average KE and new rms speed are:',
-            options: [
-              'KE doubles to $12.42 \\times 10^{-21}$ J; speed doubles',
-              'KE doubles to $12.42 \\times 10^{-21}$ J; speed increases by factor $\\sqrt{2}$',
-              'KE increases by $\\sqrt{2}$; speed doubles',
-              'Both KE and speed increase by $\\sqrt{2}$'
+              'KE doubles to $12.4 \\times 10^{-21}$ J; speed doubles',
+              'KE doubles to $12.4 \\times 10^{-21}$ J; speed rises by $\\sqrt{2}$',
+              'KE rises by $\\sqrt{2}$ to $8.78 \\times 10^{-21}$ J; speed doubles',
+              'KE rises by $\\sqrt{2}$ to $8.78 \\times 10^{-21}$ J; speed rises by $\\sqrt{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$KE \\propto T$, so doubling $T$ doubles KE to $12.42 \\times 10^{-21}$ J. But $v_{\\text{rms}} \\propto \\sqrt{T}$, so doubling $T$ increases speed by only $\\sqrt{2} \\approx 1.41$.'
+            explanation: '$KE_{\\text{avg}} \\propto T$, so doubling $T$ doubles the kinetic energy to $12.4 \\times 10^{-21}$ J. Because $v_{\\text{rms}} \\propto \\sqrt{T}$, the speed increases by only $\\sqrt{2} \\approx 1.41$.'
           },
           {
-            question: 'An engineer needs a material for a precision measuring device that must maintain its dimensions across a wide temperature range. The best choice is:',
+            question: 'Why do real gases behave most like ideal gases at low density and high temperature?',
             options: [
-              'Aluminum (α = $23 \\times 10^{-6}$ /°C)',
-              'Brass (α = $19 \\times 10^{-6}$ /°C)',
-              'Steel (α = $12 \\times 10^{-6}$ /°C)',
-              'Invar (α = $0.9 \\times 10^{-6}$ /°C)'
+              'The atoms are far apart and fast, so attractions and atomic volume matter little',
+              'The atoms collide with the walls less often, so the pressure becomes negligible',
+              'The atoms move more slowly, so their collisions become perfectly elastic',
+              'The atoms become lighter at high temperature, so they act like point particles'
             ],
-            correctAnswer: 3,
-            explanation: 'Invar has the smallest coefficient of linear expansion ($\\alpha = 0.9 \\times 10^{-6}$ /°C), meaning it changes dimensions the least with temperature. Invar was specifically engineered for precision instruments, clock pendulums, and scientific equipment.'
+            correctAnswer: 0,
+            explanation: 'The ideal gas model ignores attractions between atoms and the volume of the atoms. Both are negligible when the atoms are far apart (low density) and moving fast (high temperature). Atom mass does not change with temperature.'
           },
           {
-            question: 'An aluminum ring (α = $23 \\times 10^{-6}$ /°C) is heated and placed around a glass rod (α = $9 \\times 10^{-6}$ /°C). As the system cools back to room temperature:',
+            question: 'A student measures a constant-volume gas bulb at several Celsius temperatures. Which graph should she make to find absolute zero, and what should she read from it?',
             options: [
-              'The ring loosens because aluminum contracts more than glass',
-              'The ring tightens because aluminum contracts more than glass, gripping the rod',
-              'Nothing happens, since both contract by the same amount',
-              'The glass rod cracks because it contracts less'
+              'Pressure vs. temperature; the temperature where the line reaches zero pressure',
+              'Pressure vs. temperature; the pressure where the line crosses zero degrees',
+              'Volume vs. temperature; the temperature at which the line reaches zero volume',
+              'Pressure vs. volume; the volume where the curve reaches zero pressure'
             ],
-            correctAnswer: 1,
-            explanation: 'Aluminum has a larger $\\alpha$ than glass. As both cool, the aluminum ring contracts more than the glass rod. The ring shrinks around the rod, creating a tight grip — this is the principle behind shrink fitting.'
+            correctAnswer: 0,
+            explanation: 'At constant volume, pressure is linear in temperature, and extrapolating that line to zero pressure gives absolute zero. The pressure at 0°C is just one data point, and the volume of a sealed bulb does not change.'
           }
         ]
       }

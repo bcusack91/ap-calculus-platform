@@ -9,7 +9,7 @@ export const physics2EmInductionPart7Data = {
 
 **Part 7 of 7 — Putting It All Together**
 
-This final part combines Faraday's Law, Lenz's Law, motional EMF, generators, transformers, and inductance into comprehensive problems. We'll also highlight the most common AP mistakes and preview the types of free-response questions you'll encounter.
+This final part combines flux, Faraday's Law, Lenz's Law, motional EMF, loops crossing field boundaries, changing fields, and magnetic braking into comprehensive problems. We'll also highlight the most common AP mistakes and preview the types of free-response questions you'll encounter.
       `
     },
     {
@@ -25,16 +25,13 @@ This final part combines Faraday's Law, Lenz's Law, motional EMF, generators, tr
 | Average EMF | $\\|\\varepsilon\\| = N\\frac{\\|\\Delta\\Phi\\|}{\\Delta t}$ | Flux changes over a time interval |
 | Motional EMF | $\\varepsilon = BLv$ | Rod/wire moving in a field |
 | Magnetic braking force | $F = \\frac{B^2L^2v}{R}$ | Force on moving conductor |
-| Generator EMF | $\\varepsilon = NBA\\omega\\sin(\\omega t)$ | Rotating coil in a field |
-| Transformer | $\\frac{V_2}{V_1} = \\frac{N_2}{N_1}$ | Transformer voltage ratio |
-| Transformer power | $V_1I_1 = V_2I_2$ | Ideal transformer |
-| Self-inductance EMF | $\\varepsilon = -L\\frac{dI}{dt}$ | Inductor opposing current change |
-| Inductor energy | $U = \\frac{1}{2}LI^2$ | Energy stored in inductor |
-| RL time constant | $\\tau = \\frac{L}{R}$ | RL circuit timing |
+| Loop entering or leaving a field | $\\varepsilon = Bsv$ | Leading or trailing edge crossing the boundary |
+| Stationary loop, changing field | $\\varepsilon = A\\frac{\\Delta B}{\\Delta t}$ (magnitude) | Slope of a $B$–$t$ graph |
+| Power dissipated | $P = I^2R = \\frac{\\varepsilon^2}{R}$ | Energy per second turned into heat |
 
 ### The Big Picture
 
-All of electromagnetic induction flows from one principle: **a changing magnetic flux induces an EMF**. Lenz's Law gives the direction. Everything else (motional EMF, generators, transformers, inductors) is a specific application of this idea.
+All of electromagnetic induction flows from one principle: **a changing magnetic flux induces an EMF**. Lenz's Law gives the direction. Everything else (motional EMF, loops entering fields, induction graphs, magnetic braking) is a specific application of this idea.
       `
     },
     {
@@ -63,10 +60,10 @@ All of electromagnetic induction flows from one principle: **a changing magnetic
 - To find current, you need: $I = \\varepsilon / R$
 - An open-circuit loop has induced EMF but zero current
 
-### Mistake 5: Transformers and DC
-- Transformers only work with **AC** (need changing flux)
-- $V_2/V_1 = N_2/N_1$ applies to **AC amplitudes or RMS values**
-- Power is conserved: stepping up voltage steps down current
+### Mistake 5: Reading the flux graph instead of its slope
+- The EMF depends on the **slope** of the flux–time graph, not its height
+- A large, steady flux gives **zero** EMF
+- At an instant when the flux passes through zero while still changing, the EMF is **not** zero
       `
     },
     {
@@ -100,15 +97,15 @@ All of electromagnetic induction flows from one principle: **a changing magnetic
             explanation: '$\\varepsilon = BLv = (0.5)(0.4)(3) = 0.6$ V. $I = 0.6/2 = 0.3$ A. $P = I^2R = (0.3)^2(2) = 0.18$ W. Or: $P = \\varepsilon^2/R = 0.36/2 = 0.18$ W.'
           },
           {
-            question: 'A transformer steps 240 V down to 12 V. If the primary has 4000 turns, the secondary has:',
+            question: 'A square loop 0.10 m on a side moves at 4.0 m/s into a region where a uniform 0.50 T field is perpendicular to the loop. While the loop is entering, the induced EMF is:',
             options: [
-              '200 turns',
-              '80,000 turns',
-              '48 turns',
-              '1000 turns'
+              '0.020 V',
+              '0.80 V',
+              '0.20 V',
+              '0 V'
             ],
-            correctAnswer: 0,
-            explanation: '$N_2/N_1 = V_2/V_1 \\Rightarrow N_2 = N_1(V_2/V_1) = 4000 \\times (12/240) = 4000 \\times 0.05 = 200$ turns.'
+            correctAnswer: 2,
+            explanation: 'Only the leading edge crosses into the field, so $\\varepsilon = Bsv = (0.50)(0.10)(4.0) = 0.20$ V. 0.020 V uses the loop\'s area in place of its side length, 0.80 V uses its perimeter, and 0 V treats the field as unchanging even though the flux through the loop is growing.'
           }
         ]
       }
@@ -159,27 +156,27 @@ Test your understanding of the entire electromagnetic induction unit.
             options: ['Clockwise (to support the field)', 'Counterclockwise (to oppose the field)', 'No current flows']
           },
           {
-            label: 'A transformer has more turns on the secondary than the primary. It is a:',
-            options: ['Step-up transformer', 'Step-down transformer', 'Isolation transformer']
+            label: 'A loop moves at constant velocity while entirely inside a uniform field. The induced EMF is:',
+            options: ['Zero', 'Constant and nonzero', 'Steadily increasing']
           },
           {
-            label: 'An inductor in a DC circuit at steady state acts like:',
-            options: ['An open circuit', 'A short circuit (wire)', 'A battery', 'A capacitor']
+            label: 'On a graph of flux versus time, the induced EMF is given by the graph\'s:',
+            options: ['Slope', 'Height', 'Area under the curve']
           },
           {
-            label: 'The peak EMF of a generator can be increased by:',
-            options: ['Spinning the coil slower', 'Using fewer turns', 'Using a stronger magnetic field', 'Using a smaller coil area']
+            label: 'A magnet falls through a vertical copper pipe. Its acceleration is:',
+            options: ['Less than g', 'Equal to g', 'Greater than g']
           },
           {
-            label: 'Energy stored in an inductor is proportional to:',
-            options: ['$I$', '$I^2$', '$1/I$', '$I^3$']
+            label: 'A loop is pulled out of a field region. The magnetic force on the loop points:',
+            options: ['Opposite its velocity', 'Along its velocity', 'Nowhere (F = 0)']
           }
         ],
-        correctAnswers: ['Clockwise (to support the field)', 'Step-up transformer', 'A short circuit (wire)', 'Using a stronger magnetic field', '$I^2$'],
+        correctAnswers: ['Clockwise (to support the field)', 'Zero', 'Slope', 'Less than g', 'Opposite its velocity'],
         hint1: 'Flux into page is decreasing → induced field must support (also into page) → clockwise by right-hand rule.',
-        hint2: '$N_2 > N_1 \\Rightarrow V_2 > V_1$: step-up. At DC steady state, $dI/dt = 0$, so inductor EMF = 0 → acts like a wire.',
-        hint3: '$\\varepsilon_0 = NBA\\omega$: increase $N$, $B$, $A$, or $\\omega$. Energy: $U = \\frac{1}{2}LI^2 \\propto I^2$.',
-        explanation: '(1) Decreasing into-page flux → induced $B$ supports → into page → CW. (2) $N_2 > N_1$ → step-up. (3) Steady-state DC: $dI/dt = 0$, so no back-EMF → inductor = wire. (4) $\\varepsilon_0 = NBA\\omega$ → stronger $B$ increases peak EMF. (5) $U = \\frac{1}{2}LI^2 \\propto I^2$.'
+        hint2: 'No change in $B$, $A$, or angle means no change in flux. EMF is the rate of change of flux.',
+        hint3: 'Lenz\'s law: induced currents push back against whatever motion changes the flux.',
+        explanation: '(1) Decreasing into-page flux → induced $B$ supports → into page → CW. (2) Inside a uniform field the flux is constant, so the EMF is zero. (3) EMF equals the slope of the flux–time graph (with a minus sign). (4) Induced currents in the pipe push up on the falling magnet, so its acceleration is less than g. (5) The force on a loop leaving a field opposes its motion.'
       }
     },
     {
@@ -202,26 +199,26 @@ Test your understanding of the entire electromagnetic induction unit.
             explanation: '$A = \\pi(0.1)^2 = 0.0314$ $m^{2}$. $|\\varepsilon| = A \\cdot dB/dt = (0.0314)(0.2) = 6.28 \\times 10^{-3}$ V. $I = \\varepsilon/R = 6.28 \\times 10^{-3}/5 = 1.26 \\times 10^{-3}$ A = 1.26 mA.'
           },
           {
-            question: 'An RL circuit has $L = 50$ mH and $R = 100\\;\\Omega$. How long does it take the current to reach approximately 63% of its maximum value?',
+            question: 'A long straight wire carries a steady current up the page. A conducting loop to the right of the wire is moved directly away from it. The induced current in the loop is:',
             options: [
-              '0.5 ms',
-              '5 ms',
-              '50 ms',
-              '500 ms'
+              'Counterclockwise',
+              'Clockwise',
+              'Zero, since the current is steady',
+              'Clockwise, then counterclockwise'
             ],
-            correctAnswer: 0,
-            explanation: '$\\tau = L/R = 0.050/100 = 5 \\times 10^{-4}$ s = 0.5 ms. The current reaches 63.2% of its maximum in one time constant.'
+            correctAnswer: 1,
+            explanation: 'The wire\'s field points into the page at the loop and weakens with distance, so the into-page flux decreases; the induced current adds into-page field, which is clockwise. A steady current still gives a changing flux when the loop moves through the nonuniform field.'
           },
           {
-            question: 'A 60 Hz generator produces a peak voltage of 170 V. The voltage at $t = 1/240$ s is:',
+            question: 'The field through a stationary loop of area 0.040 $m^{2}$ changes steadily from 0.50 T in one direction to 0.50 T in the opposite direction in 0.20 s. The magnitude of the average induced EMF is:',
             options: [
               '0 V',
-              '85 V',
-              '120 V',
-              '170 V'
+              '0.10 V',
+              '0.20 V',
+              '0.0080 V'
             ],
-            correctAnswer: 3,
-            explanation: '$\\varepsilon = 170\\sin(2\\pi \\cdot 60 \\cdot t) = 170\\sin(120\\pi \\cdot 1/240) = 170\\sin(\\pi/2) = 170 \\times 1 = 170$ V. At this instant the voltage is at its peak.'
+            correctAnswer: 2,
+            explanation: 'The flux goes from $+0.020$ Wb to $-0.020$ Wb, a change of 0.040 Wb, so $|\\varepsilon| = 0.040/0.20 = 0.20$ V. 0.10 V counts only a 0.50 T change, 0 V compares the equal magnitudes and ignores the reversal, and 0.0080 V multiplies by the time instead of dividing.'
           },
           {
             question: 'Which of the following is NOT a valid way to induce an EMF in a loop?',

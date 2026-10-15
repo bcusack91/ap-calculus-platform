@@ -97,25 +97,19 @@ In convection, energy is physically carried by moving fluid parcels — much fas
 
 The power radiated by an object:
 
-$$P = \\sigma \\varepsilon A T^4$$
+$$P = \\sigma A T^4$$
 
 Where:
 - $P$ = radiated power (W)
 - $\\sigma = 5.67 \\times 10^{-8}$ $W/(m^{2}\\cdot K^{4})$ — Stefan-Boltzmann constant
-- $\\varepsilon$ = emissivity (0 to 1, dimensionless)
 - $A$ = surface area $(m^{2})$
 - $T$ = absolute temperature (K — must use kelvins!)
 
-### Emissivity
-- $\\varepsilon = 1$: **perfect blackbody** (absorbs and emits all radiation)
-- $\\varepsilon = 0$: perfect reflector (emits no radiation)
-- Dark, rough surfaces: $\\varepsilon$ close to 1
-- Shiny, polished surfaces: $\\varepsilon$ close to 0
+This form describes an ideal **blackbody**, an object that absorbs all radiation that falls on it (Unit 15 returns to blackbodies). Real surfaces follow the same pattern: dark, rough surfaces are good absorbers and good emitters, while shiny surfaces absorb and emit poorly.
 
 ### Key Features
 - Radiation intensity depends on $T^4$ — doubling the temperature increases radiated power by $2^4 = 16$ times!
 - All objects above 0 K emit thermal radiation
-- Net radiation: $P_{\\text{net}} = \\sigma \\varepsilon A (T_{\\text{object}}^4 - T_{\\text{surroundings}}^4)$
 - Hotter objects radiate at shorter wavelengths (Wien's law)
       `
     },
