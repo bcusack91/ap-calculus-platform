@@ -104,13 +104,13 @@ $$\\boxed{K_{sp} = [\\text{M}^{b+}]^a[\\text{X}^{a-}]^b}$$
           {
             question: 'Why is the solid excluded from the $K_{sp}$ expression?',
             options: [
-              'Solids have zero concentration',
-              'Pure solids have constant concentration (activity = 1) and are incorporated into K',
-              'Solids don\'t participate in equilibrium',
-              'The solid has already dissolved'
+              'A solid has zero concentration in the solution',
+              'A pure solid\'s concentration is constant, so it is folded into K',
+              'Solids do not take part in the dissolution equilibrium',
+              'The solid has fully dissolved by the time equilibrium is reached'
             ],
             correctAnswer: 1,
-            explanation: 'Pure solids have an activity of 1 (constant "concentration"), so they are incorporated into the equilibrium constant and don\'t appear in the expression.'
+            explanation: 'Pure solids have an activity of 1 (constant "concentration"), so they are incorporated into the equilibrium constant and don\'t appear in the expression. The solid is still present and still part of the equilibrium — ions keep leaving and rejoining it — but its "concentration" never changes.'
           },
           {
             question: 'What is the $K_{sp}$ expression for $\\text{Ag}_2\\text{CrO}_4(s) \\rightleftharpoons 2\\,\\text{Ag}^+(aq) + \\text{CrO}_4^{2-}(aq)$?',
@@ -170,11 +170,11 @@ Write the $K_{sp}$ expression for each compound. Count the total number of ion c
         dropdowns: [
           {
             label: 'K_sp applies only to',
-            options: ['all ionic compounds', 'slightly soluble ionic compounds at saturation', 'covalent compounds', 'gases']
+            options: ['all ionic compounds, including very soluble ones', 'slightly soluble ionic compounds at saturation', 'molecular compounds that dissolve without ionizing', 'gases dissolving in water at a fixed partial pressure']
           },
           {
             label: 'The solid in a dissolution equilibrium is',
-            options: ['included in K_sp', 'excluded from K_sp', 'equal to K_sp', 'always absent']
+            options: ['included in K_sp', 'excluded from K_sp', 'equal to K_sp', 'absent at equilibrium']
           },
           {
             label: 'Coefficients in the balanced dissolution become',
@@ -219,10 +219,10 @@ Write the $K_{sp}$ expression for each compound. Count the total number of ion c
           {
             question: 'Which statement about $K_{sp}$ is FALSE?',
             options: [
-              '$K_{sp}$ depends on temperature',
+              '$K_{sp}$ for a given salt changes with temperature',
               '$K_{sp}$ includes the solid in its expression',
               'Larger $K_{sp}$ generally means greater solubility',
-              '$K_{sp}$ applies to saturated solutions'
+              '$K_{sp}$ describes a saturated solution at equilibrium'
             ],
             correctAnswer: 1,
             explanation: '$K_{sp}$ does NOT include the solid — pure solids are excluded from equilibrium expressions. The other statements are all true.'

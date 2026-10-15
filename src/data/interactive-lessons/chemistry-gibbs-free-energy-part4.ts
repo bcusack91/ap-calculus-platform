@@ -129,8 +129,8 @@ So: $\\Delta G° = -2.303 RT \\log K$
             question: 'A large negative ΔG° means:',
             options: [
               'K << 1 (reactants favored)',
-              'K ≈ 1 (neither favored)',
-              'K >> 1 (products strongly favored)',
+              'K ≈ 1 (neither side favored)',
+              'K >> 1 (products favored)',
               'The reaction is at equilibrium'
             ],
             correctAnswer: 2,
@@ -165,12 +165,11 @@ Use $R = 8.314$ J/(mol·K), $T = 298$ K
 **3)** If $\\Delta G° = +10.0$ kJ/mol, is $K$ greater than or less than 1? (type "greater" or "less")
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['1000', '-28.5', 'less'],
-        hint1: '$K = e^{17100/(8.314 \\times 298)} = e^{6.91}$',
+        questions: [{ question: '1)', answer: '994', acceptableAnswers: ['994', '1000'] }, { question: '2)', answer: '-28.5', acceptableAnswers: ['-28.5'] }, { question: '3)', answer: 'less', acceptableAnswers: ['less'] }],
+        hint1: '$K = e^{17100/(8.314 \\times 298)} = e^{6.902}$',
         hint2: '$\\Delta G° = -(8.314)(298)\\ln(10^5) = -(2477.6)(11.51)$. Convert to kJ.',
         hint3: 'Positive ΔG° means $\\ln K < 0$, so $K < 1$.',
-        explanation: '1) $K = e^{17100/2477.6} = e^{6.90} = 993 \\approx 1000$. 2) $\\Delta G° = -(8.314)(298)(11.513) = -28{,}528$ J $= -28.5$ kJ/mol. 3) Positive ΔG° → K < 1 (reactants favored).'
+        explanation: '1) $K = e^{17100/2477.6} = e^{6.902} \\approx 994$. 2) $\\Delta G° = -(8.314)(298)(11.513) = -28{,}528$ J $= -28.5$ kJ/mol. 3) Positive ΔG° → K < 1 (reactants favored).'
       }
     },
     {
@@ -195,10 +194,10 @@ Use $R = 8.314$ J/(mol·K), $T = 298$ K
           },
           {
             label: 'ΔG° tells you about equilibrium, while ΔG tells you about',
-            options: ['the same thing', 'the direction the reaction proceeds from current conditions', 'the rate of reaction', 'the activation energy']
+            options: ['the same thing, at any temperature', 'direction under the actual conditions', 'how fast the reaction will proceed now', 'the activation energy barrier']
           }
         ],
-        correctAnswers: ['zero', 'large negative', '8.314 J/(mol·K)', 'the direction the reaction proceeds from current conditions'],
+        correctAnswers: ['zero', 'large negative', '8.314 J/(mol·K)', 'direction under the actual conditions'],
         hint1: '$\\Delta G° = -RT\\ln 1 = -RT(0) = 0$.',
         hint2: 'Large K → products very favored → very negative ΔG°.',
         hint3: 'ΔG° is in J/mol, so R must be in J/(mol·K).',
@@ -229,11 +228,11 @@ Use $R = 8.314$ J/(mol·K), $T = 298$ K
             options: [
               '−17.1 kJ/mol',
               '+17.1 kJ/mol',
-              '−7.1 kJ/mol',
-              '+7.1 kJ/mol'
+              '+7.4 kJ/mol',
+              '+17,113 kJ/mol'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta G° = -RT\\ln K = -(8.314)(298)\\ln(10^{-3}) = -(2477.6)(-6.908) = +17{,}113$ J $\\approx +17.1$ kJ/mol. K < 1 → positive ΔG°.'
+            explanation: '$\\Delta G° = -RT\\ln K = -(8.314)(298)\\ln(10^{-3}) = -(2477.6)(-6.908) = +17{,}113$ J $\\approx +17.1$ kJ/mol. K < 1 → positive ΔG°. Dropping the minus sign gives −17.1 kJ/mol, using $\\log$ instead of $\\ln$ gives +7.4 kJ/mol, and reporting the joule value as kilojoules gives +17,113 kJ/mol.'
           }
         ]
       }

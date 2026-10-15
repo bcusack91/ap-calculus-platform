@@ -155,7 +155,7 @@ The reaction $2\\,\\text{SO}_3(g) \\rightleftharpoons 2\\,\\text{SO}_2(g) + \\te
 
 **1)** Is this reaction product-favored or reactant-favored at 900 K? (Enter "reactant-favored")
 
-**2)** What is $K_c$ for $\\text{SO}_2(g) + \\frac{1}{2}\\text{O}_2(g) \\rightleftharpoons \\text{SO}_3(g)$? (Enter in scientific notation, e.g. 7.9e4)
+**2)** What is $K_c$ for $\\text{SO}_2(g) + \\frac{1}{2}\\text{O}_2(g) \\rightleftharpoons \\text{SO}_3(g)$? (Enter in scientific notation, e.g. 3.2e5)
 
 **3)** The decomposition of $SO_{3}$ is endothermic. If temperature increases, does $K_c$ for the decomposition increase or decrease? (Enter "increase")
 
@@ -184,7 +184,7 @@ The reaction $2\\,\\text{SO}_3(g) \\rightleftharpoons 2\\,\\text{SO}_2(g) + \\te
           },
           {
             label: 'Pure solids are excluded from K expressions because their',
-            options: ['concentration is zero', 'activity is 1 (constant)', 'mass changes', 'pressure varies']
+            options: ['concentration is zero', 'activity is 1', 'mass keeps changing', 'pressure varies']
           },
           {
             label: 'When two reactions are added, their K values are',
@@ -192,12 +192,12 @@ The reaction $2\\,\\text{SO}_3(g) \\rightleftharpoons 2\\,\\text{SO}_2(g) + \\te
           },
           {
             label: 'A very large K means equilibrium lies',
-            options: ['far to the left', 'far to the right', 'in the middle', 'nowhere']
+            options: ['far to the left', 'far to the right', 'in the middle', 'where Q = 0']
           }
         ],
         correctAnswers: [
           'zero',
-          'activity is 1 (constant)',
+          'activity is 1',
           'multiplied',
           'far to the right'
         ],
@@ -218,10 +218,10 @@ The reaction $2\\,\\text{SO}_3(g) \\rightleftharpoons 2\\,\\text{SO}_2(g) + \\te
           {
             question: 'A student claims that at equilibrium, no reactions are occurring. This is:',
             options: [
-              'Correct — equilibrium means the reaction stopped',
-              'Incorrect — both forward and reverse reactions continue at equal rates',
-              'Correct — only for exothermic reactions',
-              'Incorrect — only the forward reaction continues'
+              'Correct — at equilibrium the reaction has stopped',
+              'Incorrect — both reactions continue at equal rates',
+              'Correct, but only for reactions with very large K',
+              'Incorrect — only the forward reaction keeps going'
             ],
             correctAnswer: 1,
             explanation: 'Dynamic equilibrium means both reactions continue. The rates are equal, so there is no net change — but molecular-level reactions never stop.'
@@ -229,13 +229,13 @@ The reaction $2\\,\\text{SO}_3(g) \\rightleftharpoons 2\\,\\text{SO}_2(g) + \\te
           {
             question: 'For $\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$, $K_c = 0.36$ at 100°C. If 1.00 mol $N_{2}O_{4}$ is placed in a 1.00 L flask at 100°C, at equilibrium there will be:',
             options: [
-              'Only $N_{2}O_{4}$ present',
-              'Only $NO_{2}$ present',
-              'More $N_{2}O_{4}$ than $NO_{2}$ by concentration',
-              'Cannot be determined without solving the ICE table'
+              'Only $N_{2}O_{4}$, since $K < 1$ means no reaction',
+              'More $NO_{2}$ than $N_{2}O_{4}$, by concentration',
+              'Equal concentrations of the two gases',
+              'More $N_{2}O_{4}$ than $NO_{2}$, by concentration'
             ],
             correctAnswer: 3,
-            explanation: 'While $K < 1$ suggests reactants are somewhat favored, the exact equilibrium concentrations depend on solving the ICE table (covered in a later topic). We cannot determine the exact amounts without calculation.'
+            explanation: '$K < 1$ suggests reactants are somewhat favored, and solving the ICE table (covered in a later topic) confirms it: $0.36 = \\frac{(2x)^2}{1.00 - x}$ gives $4x^2 + 0.36x - 0.36 = 0$, so $x \\approx 0.258$. At equilibrium $[\\text{N}_2\\text{O}_4] \\approx 0.74$ M and $[\\text{NO}_2] \\approx 0.52$ M — both gases are present, with more $N_{2}O_{4}$. A $K$ below 1 does not mean no reaction; it means the mixture leans toward reactants.'
           }
         ]
       }

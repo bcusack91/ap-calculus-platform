@@ -78,7 +78,7 @@ $$\\boxed{K_b(C_6H_5COO^-) = \\frac{K_w}{K_a} = \\frac{1.0 \\times 10^{-14}}{6.3
 
 Perform the same analysis for 0.15 M $HNO_2$ ($K_a = 4.5 \\times 10^{-4}$):
 
-**1)** What is $[H^+]$? (Enter in scientific notation, e.g. 8.2e-3)
+**1)** What is $[H^+]$? (Enter in scientific notation, e.g. 3.6e-4)
 
 **2)** What is the pH? (2 decimal places)
 
@@ -171,19 +171,18 @@ $$pOH = 5.68 \\qquad pH = 14 - 5.68 = 8.32$$
 
 A 0.25 M solution of an unknown weak acid has a pH of 2.72.
 
-**1)** What is $[H^+]$? (Enter in scientific notation, e.g. 1.9e-3)
+**1)** What is $[H^+]$? (Enter in scientific notation, e.g. 6.3e-4)
 
-**2)** What is the $K_a$ of the acid? (Enter in scientific notation, e.g. 1.5e-5)
+**2)** What is the $K_a$ of the acid? (Enter in scientific notation, e.g. 2.2e-6)
 
 **3)** What is the $pK_a$? (2 decimal places)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['1.9e-3', '1.5e-5', '4.83'],
+        questions: [{ question: '1)', answer: '1.9e-3', acceptableAnswers: ['1.9e-3', '1.91e-3'] }, { question: '2)', answer: '1.5e-5', acceptableAnswers: ['1.5e-5', '1.45e-5', '1.46e-5'] }, { question: '3)', answer: '4.84', acceptableAnswers: ['4.84', '4.83'] }],
         hint1: '$[H^+] = 10^{-pH} = 10^{-2.72}$.',
         hint2: '$K_a = [H^+]^2/C$ (using the approximation).',
         hint3: '$pK_a = -\\log K_a$.',
-        explanation: '1) $[H^+] = 10^{-2.72} = 1.91 \\times 10^{-3} \\approx 1.9 \\times 10^{-3}$ M. 2) $K_a = (1.91 \\times 10^{-3})^2/0.25 = 3.65 \\times 10^{-6}/0.25 = 1.46 \\times 10^{-5} \\approx 1.5 \\times 10^{-5}$. 3) $pK_a = -\\log(1.46 \\times 10^{-5}) = 4.84 \\approx 4.83$.'
+        explanation: '1) $[H^+] = 10^{-2.72} = 1.91 \\times 10^{-3} \\approx 1.9 \\times 10^{-3}$ M. 2) $K_a = (1.91 \\times 10^{-3})^2/0.25 = 3.65 \\times 10^{-6}/0.25 = 1.46 \\times 10^{-5} \\approx 1.5 \\times 10^{-5}$. 3) $pK_a = -\\log(1.46 \\times 10^{-5}) = 4.84$.'
       }
     },
     {
@@ -196,18 +195,18 @@ A 0.25 M solution of an unknown weak acid has a pH of 2.72.
         dropdowns: [
           {
             label: 'To find pH of a salt of weak acid + strong base, you need',
-            options: ['$K_{a}$ of the weak acid (to find K_b of conjugate base)', '$K_{a}$ of the salt', 'only the salt concentration', 'K_w only']
+            options: ['$K_{a}$ of the parent weak acid', '$K_{b}$ of the strong base', 'only the salt concentration', '$K_{w}$ only']
           },
           {
             label: 'If the 5% approximation gives exactly 5.5% ionization, your answer is',
-            options: ['exactly correct', 'close but slightly off — consider quadratic', 'completely wrong', 'impossible']
+            options: ['still exactly correct as calculated', 'slightly off; use the quadratic', 'completely wrong and must be discarded', 'impossible, since ionization stays under 5%']
           },
           {
             label: 'A weak acid with smaller $K_a$ at the same concentration will have',
             options: ['lower pH', 'higher pH', 'the same pH', 'pH = 7']
           }
         ],
-        correctAnswers: ['$K_{a}$ of the weak acid (to find K_b of conjugate base)', 'close but slightly off — consider quadratic', 'higher pH'],
+        correctAnswers: ['$K_{a}$ of the parent weak acid', 'slightly off; use the quadratic', 'higher pH'],
         hint1: '$K_b = K_w/K_a$ for the conjugate base.',
         hint2: '5.5% is slightly above the 5% threshold.',
         hint3: 'Smaller $K_a$ → less $[H^+]$ → higher pH.',
@@ -225,24 +224,24 @@ A 0.25 M solution of an unknown weak acid has a pH of 2.72.
           {
             question: 'A weak acid has $K_a = 2.0 \\times 10^{-6}$ and pH = 3.85 in solution. What is the initial concentration?',
             options: [
+              '$1.4 \\times 10^{-4}$ M',
               '0.010 M',
-              '0.050 M',
               '0.10 M',
-              '0.50 M'
+              '0.25 M'
             ],
             correctAnswer: 1,
-            explanation: '$[H^+] = 10^{-3.85} = 1.41 \\times 10^{-4}$ M. $K_a = [H^+]^2/C$, so $C = [H^+]^2/K_a = (1.41 \\times 10^{-4})^2/(2.0 \\times 10^{-6}) = 1.99 \\times 10^{-8}/(2.0 \\times 10^{-6}) = 0.010$ M. Hmm, let me recheck: $(1.41 \\times 10^{-4})^2 = 1.99 \\times 10^{-8}$; $C = 1.99 \\times 10^{-8}/2.0 \\times 10^{-6} = 0.010$ M.'
+            explanation: '$[H^+] = 10^{-3.85} = 1.41 \\times 10^{-4}$ M. Assuming $C - x \\approx C$, $K_a = [H^+]^2/C$, so $C = [H^+]^2/K_a = (1.41 \\times 10^{-4})^2/(2.0 \\times 10^{-6}) = (1.99 \\times 10^{-8})/(2.0 \\times 10^{-6}) = 0.010$ M. (Ionization is only about 1.4%, so the approximation holds.) $1.4 \\times 10^{-4}$ M treats the weak acid as if it ionized completely; 0.10 M comes from an exponent slip when squaring ($1.99 \\times 10^{-7}$); 0.25 M comes from evaluating $10^{-3.85}$ as $7.1 \\times 10^{-4}$.'
           },
           {
             question: 'The pH of 0.10 M $Na_2CO_3$ is best calculated by:',
             options: [
-              'Using $K_{a1}$ of $H_2CO_3$',
-              'Using $K_b$ of $CO_3^{2-}$ (which is $K_w/K_{a2}$)',
-              'Assuming neutral pH',
-              'Using $K_w$ alone'
+              'Using $K_{a1}$ of $H_2CO_3$, the parent acid',
+              'Using $K_b = K_w/K_{a2}$ for $CO_3^{2-}$',
+              'Assuming neutral pH, since it is a salt',
+              'Using $K_b = K_w/K_{a1}$ for $CO_3^{2-}$'
             ],
             correctAnswer: 1,
-            explanation: '$CO_3^{2-}$ is the conjugate base of $HCO_3^-$, which has $K_a = K_{a2}$. So $K_b(CO_3^{2-}) = K_w/K_{a2}$. Use this with an ICE table to find $[OH^-]$ and then pH.'
+            explanation: '$CO_3^{2-}$ is the conjugate base of $HCO_3^-$, which has $K_a = K_{a2}$. So $K_b(CO_3^{2-}) = K_w/K_{a2}$. Use this with an ICE table to find $[OH^-]$ and then pH. Dividing $K_w$ by $K_{a1}$ instead gives $K_b$ for $HCO_3^-$, not for $CO_3^{2-}$, and a salt of a weak acid is not neutral.'
           }
         ]
       }

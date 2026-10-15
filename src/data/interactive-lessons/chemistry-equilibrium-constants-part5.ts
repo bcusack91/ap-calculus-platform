@@ -85,12 +85,12 @@ $$\\boxed{K_{\\text{overall}} = K_1 \\times K_2}$$
             question: 'If $K = 2.5 \\times 10^4$ for $\\text{A}(g) \\rightleftharpoons 2\\,\\text{B}(g)$, what is $K$ for the reverse reaction $2\\,\\text{B}(g) \\rightleftharpoons \\text{A}(g)$?',
             options: [
               '$2.5 \\times 10^4$',
-              '$-2.5 \\times 10^4$',
+              '$2.5 \\times 10^{-4}$',
               '$4.0 \\times 10^{-5}$',
-              '$6.25 \\times 10^8$'
+              '$6.3 \\times 10^{-3}$'
             ],
             correctAnswer: 2,
-            explanation: 'Reversing a reaction gives $K^{\\prime} = 1/K = 1/(2.5 \\times 10^4) = 4.0 \\times 10^{-5}$.'
+            explanation: 'Reversing a reaction gives $K^{\\prime} = 1/K = 1/(2.5 \\times 10^4) = 4.0 \\times 10^{-5}$. Flipping only the sign of the exponent gives $2.5 \\times 10^{-4}$, which is not the reciprocal; taking the square root of $1/K$ (treating the coefficient 2 as a root) gives $6.3 \\times 10^{-3}$.'
           },
           {
             question: 'If $K = 9.0$ for $\\text{X}(g) \\rightleftharpoons 2\\,\\text{Y}(g)$, what is $K$ for $2\\,\\text{X}(g) \\rightleftharpoons 4\\,\\text{Y}(g)$?',

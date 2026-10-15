@@ -84,7 +84,7 @@ At equilibrium: $[\\text{PCl}_5] = 0.20$ M, $[\\text{PCl}_3] = 0.30$ M, $[\\text
 
 **2)** Is the reaction product-favored or reactant-favored? (Enter "product-favored" or "reactant-favored")
 
-**3)** What is $\\Delta n$ for this reaction? (Enter as an integer with sign, e.g. +1)
+**3)** What is $\\Delta n$ for this reaction? (Enter as an integer with sign, e.g. +2)
       `,
       exercise: {
         boxes: 3,
@@ -135,12 +135,12 @@ Step 3: Multiply by 2: $K = (K_{\\text{rev}})^2 = (7.7 \\times 10^{-7})^2 = 5.9 
             question: 'Given: $\\text{N}_2 + \\text{O}_2 \\rightleftharpoons 2\\,\\text{NO}$, $K = 4.7 \\times 10^{-31}$. What is K for $\\text{NO} \\rightleftharpoons \\frac{1}{2}\\text{N}_2 + \\frac{1}{2}\\text{O}_2$?',
             options: [
               '$\\sqrt{4.7 \\times 10^{-31}}$',
-              '$\\frac{1}{\\sqrt{4.7 \\times 10^{-31}}}$',
+              '$(4.7 \\times 10^{-31})^{-1/2}$',
               '$\\frac{1}{4.7 \\times 10^{-31}}$',
               '$(4.7 \\times 10^{-31})^2$'
             ],
             correctAnswer: 1,
-            explanation: 'The target is the reverse of the original divided by 2. Reverse: $K\' = 1/K$. Multiply by 1/2: $K\'\' = (1/K)^{1/2} = 1/\\sqrt{K}$.'
+            explanation: 'The target is the reverse of the original divided by 2. Reverse: $K\' = 1/K$. Multiply by 1/2: $K\'\' = (1/K)^{1/2} = 1/\\sqrt{K} = K^{-1/2}$.'
           }
         ]
       }
@@ -179,13 +179,13 @@ For $2\\,\\text{SO}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\,\\text{SO}_3(g
           {
             question: 'At equilibrium for $\\text{COCl}_2(g) \\rightleftharpoons \\text{CO}(g) + \\text{Cl}_2(g)$: $[\\text{COCl}_2] = 0.50$, $[\\text{CO}] = 0.050$, $[\\text{Cl}_2] = 0.050$ M. What is $K_c$?',
             options: [
-              '$0.005$',
-              '$0.50$',
-              '$5.0 \\times 10^{-3}$',
-              '$0.005$ and $5.0 \\times 10^{-3}$ are both correct'
+              '$2.0 \\times 10^{2}$',
+              '$1.0 \\times 10^{-1}$',
+              '$2.0 \\times 10^{-1}$',
+              '$5.0 \\times 10^{-3}$'
             ],
             correctAnswer: 3,
-            explanation: '$K_c = \\frac{(0.050)(0.050)}{0.50} = \\frac{0.0025}{0.50} = 0.005 = 5.0 \\times 10^{-3}$. Both representations are equivalent.'
+            explanation: '$K_c = \\frac{(0.050)(0.050)}{0.50} = \\frac{0.0025}{0.50} = 5.0 \\times 10^{-3}$. Inverting the expression (reactants over products) gives $2.0 \\times 10^{2}$, using only one product term gives $0.050/0.50 = 1.0 \\times 10^{-1}$, and adding the product concentrations instead of multiplying gives $0.10/0.50 = 2.0 \\times 10^{-1}$.'
           },
           {
             question: 'For $2\\,\\text{A}(g) \\rightleftharpoons \\text{B}(g)$, $K_c = 100$ at 500 K. What is $K_p$?',

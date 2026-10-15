@@ -94,13 +94,13 @@ $$\\boxed{K_c = \\frac{(0.40)(0.40)}{0.60}} = \\frac{0.16}{0.60} = 0.267 \\appro
           {
             question: 'If you know all equilibrium concentrations, to find K you should:',
             options: [
-              'Set up a full ICE table and solve for x',
+              'Set up a full ICE table and solve for x first',
               'Directly substitute into the K expression',
-              'Use the quadratic formula',
-              'Calculate Q first'
+              'Use the quadratic formula to find x, then find K',
+              'Calculate Q first, then compare it with K to find the shift'
             ],
             correctAnswer: 1,
-            explanation: 'When all equilibrium concentrations are known, simply plug them into the K expression. No ICE table or algebra is needed.'
+            explanation: 'When all equilibrium concentrations are known, simply plug them into the K expression. No ICE table, no x and no quadratic are needed. Because the concentrations are already equilibrium values, the quotient you compute is K itself, so there is no Q-versus-K comparison to make.'
           },
           {
             question: 'Given initial $[\\text{A}] = 2.00$ M and equilibrium $[\\text{A}] = 1.40$ M for $\\text{A} \\rightleftharpoons \\text{B}$, what is $x$?',
@@ -157,12 +157,11 @@ At equilibrium: $[\\text{NO}_2] = 0.40$ M
 **3)** Calculate $K_c$. (Enter to 3 significant figures)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['0.20', '0.60', '0.27'],
+        questions: [{ question: '1)', answer: '0.20', acceptableAnswers: ['0.20'] }, { question: '2)', answer: '0.60', acceptableAnswers: ['0.60'] }, { question: '3)', answer: '0.267', acceptableAnswers: ['0.267', '0.27'] }],
         hint1: '$[\\text{NO}_2]_{eq} = 2x = 0.40 \\implies x = 0.20$',
         hint2: '$[\\text{N}_2\\text{O}_4]_{eq} = 0.80 - x = 0.80 - 0.20 = 0.60$',
         hint3: '$K_c = \\frac{(0.40)^2}{0.60} = \\frac{0.16}{0.60}$',
-        explanation: '1) $2x = 0.40 \\implies x = 0.20$. 2) $[\\text{N}_2\\text{O}_4] = 0.80 - 0.20 = 0.60$ M. 3) $K_c = (0.40)^2/0.60 = 0.16/0.60 = 0.267 \\approx 0.27$.'
+        explanation: '1) $2x = 0.40 \\implies x = 0.20$. 2) $[\\text{N}_2\\text{O}_4] = 0.80 - 0.20 = 0.60$ M. 3) $K_c = (0.40)^2/0.60 = 0.16/0.60 = 0.267$.'
       }
     },
     {
@@ -175,7 +174,7 @@ At equilibrium: $[\\text{NO}_2] = 0.40$ M
         dropdowns: [
           {
             label: 'When all equilibrium concentrations are given, you',
-            options: ['need an ICE table', 'need the quadratic formula', 'directly plug into the K expression', 'cannot find K']
+            options: ['still need to set up a full ICE table', 'need the quadratic formula to find x', 'plug them into the K expression', 'cannot find K without initial values']
           },
           {
             label: 'To find x when given initial and one equilibrium concentration, use',
@@ -186,7 +185,7 @@ At equilibrium: $[\\text{NO}_2] = 0.40$ M
             options: ['0.70', '0.30', '1.70', '1.00']
           }
         ],
-        correctAnswers: ['directly plug into the K expression', 'the relationship E = I + C', '0.30', '0.300', '0.3'],
+        correctAnswers: ['plug them into the K expression', 'the relationship E = I + C', '0.30', '0.300', '0.3'],
         hint1: 'All equilibrium values known → just substitute.',
         hint2: 'E = I + C allows you to find x from one known equilibrium value.',
         hint3: '$x = [\\text{A}]_0 - [\\text{A}]_{eq} = 1.00 - 0.70 = 0.30$.',

@@ -124,10 +124,10 @@ Both methods give the same answer at 25°C.
           {
             question: 'If ΔG°_rxn is negative, this tells us:',
             options: [
-              'The reaction is fast',
-              'The reaction goes to completion',
+              'The reaction proceeds quickly once reactants mix',
+              'The reaction goes to completion, leaving no reactant',
               'The reaction is spontaneous under standard conditions',
-              'The reaction is exothermic'
+              'The reaction must release heat to the surroundings'
             ],
             correctAnswer: 2,
             explanation: '$\\Delta G° < 0$ means the reaction is spontaneous under standard conditions (1 atm, 1 M, 25°C). It says nothing about rate (that is kinetics) and does not necessarily mean the reaction is exothermic.'
@@ -215,7 +215,7 @@ Both methods give the same answer at 25°C.
           },
           {
             label: 'A compound with ΔG°_f > 0 is',
-            options: ['more stable than its elements', 'less stable than its elements', 'an element', 'always a gas']
+            options: ['more stable than its elements', 'less stable than its elements', 'an element', 'formed spontaneously from its elements']
           },
           {
             label: 'ΔG° includes the effects of both',
@@ -243,21 +243,21 @@ Both methods give the same answer at 25°C.
               '+4.7 kJ',
               '−4.7 kJ',
               '+149.2 kJ',
-              '−149.2 kJ'
+              '+46.6 kJ'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta G° = [97.9] - [2(51.3)] = 97.9 - 102.6 = -4.7$ kJ. The dimerization of $NO_{2}$ is slightly spontaneous under standard conditions.'
+            explanation: '$\\Delta G° = [97.9] - [2(51.3)] = 97.9 - 102.6 = -4.7$ kJ. The dimerization of $NO_{2}$ is slightly spontaneous under standard conditions. Subtracting in the wrong order gives +4.7 kJ, ignoring the coefficient 2 gives +46.6 kJ, and adding the values gives +149.2 kJ.'
           },
           {
             question: 'Why might ΔG°_rxn calculated from ΔG°_f values differ from ΔG at non-standard conditions?',
             options: [
-              'Because ΔG°_f values are approximate',
-              'Because the ° symbol means standard conditions (1 atm, 1M, 25°C)',
-              'Because temperature has no effect on ΔG',
-              'They are always the same'
+              'ΔG°f values are rough, so the two never agree',
+              'ΔG° assumes standard conditions, not the actual ones',
+              'Temperature changes ΔG but never ΔG°',
+              'ΔG is measured per gram but ΔG° per mole'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta G°$ applies at standard conditions only. At non-standard conditions, we need: $\\Delta G = \\Delta G° + RT\\ln Q$ (covered in Part 5).'
+            explanation: '$\\Delta G°$ applies at standard conditions only. At non-standard conditions, we need: $\\Delta G = \\Delta G° + RT\\ln Q$ (covered in Part 5). ΔG° itself also changes with temperature, through $\\Delta G° = \\Delta H° - T\\Delta S°$.'
           }
         ]
       }

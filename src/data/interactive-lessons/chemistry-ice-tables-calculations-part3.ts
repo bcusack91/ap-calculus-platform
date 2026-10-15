@@ -200,11 +200,11 @@ $$0.25 = \\frac{x \\cdot x}{1.00 - x} = \\frac{x^2}{1.00 - x}$$
         dropdowns: [
           {
             label: 'When the K expression is a perfect square, you can avoid the quadratic by',
-            options: ['multiplying both sides by K', 'taking the square root of both sides', 'ignoring x', 'setting K = 0']
+            options: ['cross-multiplying both sides by the denominator', 'taking the square root of both sides', 'taking the log of both sides', 'setting x equal to K']
           },
           {
             label: 'After solving for x, you should always',
-            options: ['assume x is correct', 'check by plugging back into K', 'round x to 1 digit', 'solve again']
+            options: ['accept x without further checking', 'check by plugging back into K', 'round x to one significant figure', 'solve the same equation a second time']
           },
           {
             label: 'If you get a negative value of x, it means',
@@ -244,13 +244,13 @@ $$0.25 = \\frac{x \\cdot x}{1.00 - x} = \\frac{x^2}{1.00 - x}$$
           {
             question: 'When you solve an ICE table and find $x > [\\text{A}]_0$, this means:',
             options: [
-              'The answer is physically reasonable',
+              'It is fine — x is a change, not a concentration',
               'You made an error or assumed the wrong direction of shift',
-              'K must be very large',
-              'The reaction goes to completion'
+              'K must be very large, so A is used up entirely',
+              'The reaction goes to completion and then stops'
             ],
             correctAnswer: 1,
-            explanation: 'If $x > [\\text{A}]_0$, then $[\\text{A}]_{eq} = [\\text{A}]_0 - x < 0$, which is impossible. This indicates an error in the setup or an incorrect assumption about the shift direction.'
+            explanation: 'If $x > [\\text{A}]_0$, then $[\\text{A}]_{eq} = [\\text{A}]_0 - x < 0$, which is impossible — no matter how large K is, a concentration cannot drop below zero. This indicates an error in the setup or an incorrect assumption about the shift direction.'
           }
         ]
       }

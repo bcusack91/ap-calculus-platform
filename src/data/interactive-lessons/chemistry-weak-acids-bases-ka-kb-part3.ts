@@ -196,7 +196,7 @@ This is why solutions of sodium acetate ($NaCH_3COO$) are **basic** — the acet
 
 **1)** Find the pH of 0.20 M methylamine ($CH_3NH_2$, $K_b = 4.4 \\times 10^{-4}$). (2 decimal places)
 
-**2)** Find $[OH^-]$ for 0.10 M pyridine ($C_5H_5N$, $K_b = 1.7 \\times 10^{-9}$). (Enter in scientific notation, e.g. 1.3e-5)
+**2)** Find $[OH^-]$ for 0.10 M pyridine ($C_5H_5N$, $K_b = 1.7 \\times 10^{-9}$). (Enter in scientific notation, e.g. 4.6e-7)
 
 **3)** A solution of 0.25 M $NaCH_3COO$ is basic. If $K_b$ for $CH_3COO^-$ is $5.6 \\times 10^{-10}$, find the pH. (2 decimal places)
       `,
@@ -223,11 +223,11 @@ This is why solutions of sodium acetate ($NaCH_3COO$) are **basic** — the acet
           },
           {
             label: 'The conjugate base of a strong acid is',
-            options: ['a strong base', 'a moderate base', 'negligibly weak', 'also strong']
+            options: ['a strong base, like $OH^{-}$', 'a moderately weak base', 'negligibly weak', 'an amphoteric species']
           },
           {
             label: 'To find pH of a weak base, you first calculate',
-            options: ['[$H^{+}$] directly', '[$OH^{-}$] from ICE table', '$K_{a}$ of the base', 'nothing — same as strong base']
+            options: ['[$H^{+}$] directly from $K_{b}$', '[$OH^{-}$] from ICE table', '$K_{a}$ of the base itself', 'nothing — same as strong base']
           }
         ],
         correctAnswers: ['acidic', 'negligibly weak', '[$OH^{-}$] from ICE table'],
@@ -248,13 +248,13 @@ This is why solutions of sodium acetate ($NaCH_3COO$) are **basic** — the acet
           {
             question: 'A 0.10 M solution of $NaF$ has a pH greater than 7 because:',
             options: [
-              '$Na^+$ is a strong base',
-              '$F^-$ is the conjugate base of the weak acid $HF$ and reacts with water',
-              '$NaF$ is a strong base',
-              '$F^-$ is a strong acid'
+              '$Na^+$ ions hydrolyze in water to produce excess $OH^-$',
+              '$F^-$ is a weak base that takes $H^+$ from water',
+              '$NaF$ is a strong base that releases $OH^-$ directly',
+              '$F^-$ is a strong base that converts completely to $HF$ in water'
             ],
             correctAnswer: 1,
-            explanation: '$F^-$ is the conjugate base of the weak acid $HF$. It reacts with water: $F^- + H_2O \\rightleftharpoons HF + OH^-$, producing $OH^-$ and making the solution basic.'
+            explanation: '$F^-$ is the conjugate base of the weak acid $HF$. It reacts with water: $F^- + H_2O \\rightleftharpoons HF + OH^-$, producing $OH^-$ and making the solution basic. The reaction is only slight because $F^-$ is a weak base; $Na^+$ is a spectator ion, and $NaF$ contains no $OH^-$ of its own.'
           },
           {
             question: 'Which solution has the highest pH?',

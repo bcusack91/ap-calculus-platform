@@ -143,18 +143,18 @@ Above 273 K: melting is spontaneous ($\\Delta G < 0$). Below 273 K: freezing is 
               'At equilibrium',
               'Nonspontaneous',
               'Spontaneous',
-              'Impossible'
+              'Necessarily exothermic'
             ],
             correctAnswer: 2,
-            explanation: '$\\Delta G < 0$ means the reaction is spontaneous (thermodynamically favorable). It will proceed in the forward direction without continuous external input.'
+            explanation: '$\\Delta G < 0$ means the reaction is spontaneous (thermodynamically favorable). It will proceed in the forward direction without continuous external input. It does not have to be exothermic: an endothermic reaction with a large enough $T\\Delta S$ term can also have $\\Delta G < 0$.'
           },
           {
             question: 'In the equation ΔG = ΔH − TΔS, what must be true about units?',
             options: [
-              'ΔH in kJ, ΔS in kJ/K, T in K',
-              'ΔH in J, ΔS in kJ/K, T in °C',
-              'ΔH in kJ, ΔS in J/K (convert one)',
-              'All units are interchangeable'
+              'ΔH in kJ and ΔS in J/K can be used as listed',
+              'T may be in °C as long as ΔS is in J/K',
+              'ΔH and TΔS must share one energy unit, with T in K',
+              'ΔS must be converted to J/mol before use'
             ],
             correctAnswer: 2,
             explanation: '$\\Delta H$ is typically in kJ and $\\Delta S$ in J/K. You must convert one before calculating: either divide $\\Delta S$ by 1000 to get kJ/K, or multiply $\\Delta H$ by 1000 to get J. Temperature must be in Kelvin.'
@@ -237,13 +237,13 @@ Above 273 K: melting is spontaneous ($\\Delta G < 0$). Below 273 K: freezing is 
           {
             question: 'The melting of ice has ΔH = +6.01 kJ/mol and ΔS = +22.0 J/(mol·K). At 260 K, is melting spontaneous?',
             options: [
-              'Yes, ΔG = −0.27 kJ',
+              'Yes, ΔG = −0.55 kJ',
               'No, ΔG = +0.29 kJ',
               'Yes, because ΔS > 0',
               'No, because ΔH > 0'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta G = 6.01 - (260)(0.0220) = 6.01 - 5.72 = +0.29$ kJ. Since $\\Delta G > 0$, melting is NOT spontaneous at 260 K (below the freezing point, as expected).'
+            explanation: '$\\Delta G = 6.01 - (260)(0.0220) = 6.01 - 5.72 = +0.29$ kJ. Since $\\Delta G > 0$, melting is NOT spontaneous at 260 K (below the freezing point, as expected). Plugging in 298 K instead of 260 K gives $-0.55$ kJ, and $\\Delta S > 0$ or $\\Delta H > 0$ alone cannot decide the sign of $\\Delta G$.'
           },
           {
             question: 'Which combination of ΔH and ΔS makes a reaction spontaneous at ALL temperatures?',

@@ -124,12 +124,11 @@ $$[H^+] = 10^{-pH} \\qquad [OH^-] = 10^{-pOH}$$
 **3)** What volume (mL) of 0.20 M $NaOH$ is needed to exactly neutralize 50.0 mL of 0.10 M $H_2SO_4$? (Enter as whole number)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['1.43', '3.2e-12', '50'],
+        questions: [{ question: '1)', answer: '1.67', acceptableAnswers: ['1.67'] }, { question: '2)', answer: '3.2e-12', acceptableAnswers: ['3.2e-12', '3.16e-12'] }, { question: '3)', answer: '50', acceptableAnswers: ['50'] }],
         hint1: 'Mol $H^+$ = $(0.100)(0.15)$; mol $OH^-$ = $(0.075)(0.15)$; excess $H^+$ in 175 mL.',
         hint2: '$[H^+] = 10^{-11.50}$.',
         hint3: '$H_2SO_4$ is diprotic: mol $H^+$ = $2(0.050)(0.10)$; set equal to mol $OH^-$ = $(V)(0.20)$.',
-        explanation: '1) Mol $H^+$ = 0.015; mol $OH^-$ = 0.01125; excess $H^+$ = 0.00375 in 0.175 L; $[H^+] = 0.0214$ M; $pH = 1.67$. 2) $[H^+] = 10^{-11.50} = 3.16 \\times 10^{-12} \\approx 3.2 \\times 10^{-12}$ M. 3) Mol $H^+$ = $2(0.050)(0.10) = 0.010$; $V = 0.010/0.20 = 0.050$ L = 50 mL.'
+        explanation: '1) Mol $H^+$ = 0.015; mol $OH^-$ = 0.01125; excess $H^+$ = 0.00375 in 0.175 L; $[H^+] = 0.0214$ M; $pH = -\\log(0.0214) = 1.67$. 2) $[H^+] = 10^{-11.50} = 3.16 \\times 10^{-12} \\approx 3.2 \\times 10^{-12}$ M. 3) Mol $H^+$ = $2(0.050)(0.10) = 0.010$; $V = 0.010/0.20 = 0.050$ L = 50 mL.'
       }
     },
     {

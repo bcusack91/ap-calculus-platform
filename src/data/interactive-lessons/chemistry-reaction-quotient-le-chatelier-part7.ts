@@ -98,7 +98,7 @@ $$\\boxed{Q < K \\to \\text{shift right} \\quad|\\quad Q > K \\to \\text{shift l
               'Shift right, producing more $CO_{2}$',
               'Shift left, consuming $CO_{2}$',
               'Have no effect — $CaCO_{3}$ is a solid',
-              'Increase K'
+              'Increase the value of K'
             ],
             correctAnswer: 2,
             explanation: '$CaCO_{3}$ is a solid. Solids don\'t appear in the Q expression. Adding more solid doesn\'t change Q and therefore doesn\'t shift the equilibrium.'
@@ -128,10 +128,10 @@ $$\\boxed{Q < K \\to \\text{shift right} \\quad|\\quad Q > K \\to \\text{shift l
           {
             question: 'For $\\text{A}(g) + \\text{B}(g) \\rightleftharpoons 2\\,\\text{C}(g)$, a catalyst is introduced to a system NOT yet at equilibrium. The catalyst will:',
             options: [
-              'Shift the system toward products',
-              'Shift the system toward reactants',
-              'Help the system reach equilibrium faster without changing the final position',
-              'Change the value of K'
+              'Shift the final mixture toward more product C',
+              'Speed only the forward reaction until Q = K',
+              'Speed the approach to the same equilibrium',
+              'Raise K so that more C forms at equilibrium'
             ],
             correctAnswer: 2,
             explanation: 'A catalyst speeds up both forward and reverse reactions. Whether or not the system is at equilibrium, the catalyst helps it reach the same equilibrium position faster — it doesn\'t change where equilibrium lies.'
@@ -214,10 +214,10 @@ Current concentrations: $[\\text{PCl}_5] = 0.50$, $[\\text{PCl}_3] = 0.10$, $[\\
           {
             question: 'A student states: "Adding a catalyst to a reaction at equilibrium shifts the equilibrium toward products because the catalyst speeds up the forward reaction." This is:',
             options: [
-              'Correct',
-              'Incorrect — the catalyst speeds up both forward AND reverse reactions equally',
+              'Correct — a faster forward rate means more product',
+              'Incorrect — it speeds both directions equally',
               'Incorrect — catalysts only affect the reverse reaction',
-              'Correct, but only for exothermic reactions'
+              'Correct, but only for endothermic reactions'
             ],
             correctAnswer: 1,
             explanation: 'Catalysts speed up both forward and reverse reactions equally by lowering the activation energy for both directions. There is no net shift in equilibrium position.'

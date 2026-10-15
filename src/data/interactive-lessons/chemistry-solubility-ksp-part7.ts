@@ -84,9 +84,9 @@ Add reagent slowly → ion with smallest $K_{sp}$ precipitates first → filter 
         questions: [
           {
             question: 'Which of the following changes will increase the molar solubility of $\\text{AgCl}(s)$ in water?',
-            options: ['Adding NaCl to the solution', 'Adding $AgNO_{3}$ to the solution', 'Removing some solid AgCl from the container', 'Adding $NH_{3}$ to the solution'],
+            options: ['Adding NaCl, which supplies extra chloride ions', 'Adding $AgNO_{3}$, which supplies extra silver ions', 'Removing some undissolved AgCl while some solid still remains', 'Heating the solution, since dissolving AgCl is endothermic'],
             correctAnswer: 3,
-            explanation: 'Adding NaCl or $AgNO_{3}$ introduces common ions, decreasing solubility. Removing solid doesn\'t change the equilibrium (as long as some solid remains). Adding $NH_{3}$ complexes $Ag^{+}$ (forming $\\text{Ag(NH}_3)_2^+$), removing it from solution and shifting equilibrium right, increasing solubility.'
+            explanation: 'Adding NaCl or $AgNO_{3}$ introduces common ions, decreasing solubility. Removing solid doesn\'t change the equilibrium (as long as some solid remains). Dissolving AgCl is endothermic ($\\Delta H^\\circ_{soln} \\approx +65$ kJ/mol), so raising the temperature increases $K_{sp}$ and shifts the dissolution equilibrium right, increasing the molar solubility.'
           },
           {
             question: '$K_{sp}(\\text{BaCO}_3) = 2.6 \\times 10^{-9}$ and $K_{sp}(\\text{SrCO}_3) = 5.6 \\times 10^{-10}$. Both are 1:1 salts. Which is more soluble in pure water?',
@@ -102,13 +102,13 @@ Add reagent slowly → ion with smallest $K_{sp}$ precipitates first → filter 
           {
             question: 'A saturated solution of $\\text{CaF}_2$ is at equilibrium. Which change will cause more $\\text{CaF}_2$ to dissolve?',
             options: [
-              'Adding solid $CaF_{2}$',
-              'Adding NaF',
-              'Adding HCl (which reacts with $F^{-}$ to form HF)',
-              'Adding $CaCl_{2}$'
+              'Adding more solid $CaF_{2}$ to the saturated solution',
+              'Adding NaF so there is more fluoride to pair with $Ca^{2+}$',
+              'Adding HCl, which converts $F^{-}$ into HF',
+              'Adding $CaCl_{2}$, which raises the concentration of $Ca^{2+}$'
             ],
             correctAnswer: 2,
-            explanation: 'HCl reacts with $F^{-}$: $\\text{H}^+ + \\text{F}^- \\rightarrow \\text{HF}$. This removes $F^{-}$ from solution, shifting the dissolution equilibrium right, causing more $CaF_{2}$ to dissolve. Adding NaF or $CaCl_{2}$ would introduce common ions and decrease solubility.'
+            explanation: 'HCl reacts with $F^{-}$: $\\text{H}^+ + \\text{F}^- \\rightarrow \\text{HF}$. This removes $F^{-}$ from solution, shifting the dissolution equilibrium right, causing more $CaF_{2}$ to dissolve. Adding NaF or $CaCl_{2}$ would introduce common ions and decrease solubility, and adding more solid to an already saturated solution does not change the ion concentrations.'
           }
         ]
       }
@@ -121,19 +121,18 @@ Add reagent slowly → ion with smallest $K_{sp}$ precipitates first → filter 
 
 $\\text{Mg(OH)}_2(s) \\rightleftharpoons \\text{Mg}^{2+}(aq) + 2\\,\\text{OH}^-(aq)$, $K_{sp} = 5.6 \\times 10^{-12}$
 
-**1)** Calculate the molar solubility of $\\text{Mg(OH)}_2$ in pure water. ($K_{sp} = 4s^3$) (Enter in scientific notation, e.g. 1.1e-4)
+**1)** Calculate the molar solubility of $\\text{Mg(OH)}_2$ in pure water. ($K_{sp} = 4s^3$) (Enter in scientific notation, e.g. 3.0e-5)
 
-**2)** Calculate the molar solubility in a solution buffered at pH = 12.0 ($[\\text{OH}^-] = 0.010$ M). (Enter in scientific notation, e.g. 5.6e-8)
+**2)** Calculate the molar solubility in a solution buffered at pH = 12.0 ($[\\text{OH}^-] = 0.010$ M). (Enter in scientific notation, e.g. 2.5e-9)
 
 **3)** At pH = 12.0, what fraction of the pure-water solubility remains? (Enter as a percentage, e.g. 0.005)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['1.1e-4', '5.6e-8', '0.05'],
+        questions: [{ question: '1)', answer: '1.12e-4', acceptableAnswers: ['1.12e-4', '1.1e-4'] }, { question: '2)', answer: '5.6e-8', acceptableAnswers: ['5.6e-8'] }, { question: '3)', answer: '0.050', acceptableAnswers: ['0.050', '0.051'] }],
         hint1: '$s = \\sqrt[3]{K_{sp}/4} = \\sqrt[3]{5.6 \\times 10^{-12}/4}$',
         hint2: '$K_{sp} = (s)(0.010)^2 \\implies s = 5.6 \\times 10^{-12}/(1.0 \\times 10^{-4})$',
         hint3: 'Fraction = $s_{\\text{pH 12}}/s_{\\text{pure}} \\times 100\\%$',
-        explanation: '1) $s = \\sqrt[3]{1.4 \\times 10^{-12}} = 1.12 \\times 10^{-4} \\approx 1.1 \\times 10^{-4}$ M. 2) $s = 5.6 \\times 10^{-12}/(0.010)^2 = 5.6 \\times 10^{-12}/10^{-4} = 5.6 \\times 10^{-8}$ M. 3) $(5.6 \\times 10^{-8})/(1.1 \\times 10^{-4}) \\times 100\\% = 0.051\\% \\approx 0.05\\%$.'
+        explanation: '1) $s = \\sqrt[3]{1.4 \\times 10^{-12}} = 1.12 \\times 10^{-4}$ M. 2) $s = 5.6 \\times 10^{-12}/(0.010)^2 = 5.6 \\times 10^{-12}/10^{-4} = 5.6 \\times 10^{-8}$ M. 3) $(5.6 \\times 10^{-8})/(1.12 \\times 10^{-4}) \\times 100\\% = 0.050\\%$.'
       }
     },
     {
@@ -150,7 +149,7 @@ $\\text{Mg(OH)}_2(s) \\rightleftharpoons \\text{Mg}^{2+}(aq) + 2\\,\\text{OH}^-(
           },
           {
             label: 'The common ion effect decreases solubility by',
-            options: ['changing K_sp', 'shifting equilibrium toward the solid (reactant)', 'increasing temperature', 'removing the solid']
+            options: ['lowering the value of K_sp at that temperature', 'shifting the equilibrium toward the solid', 'raising the temperature of the saturated solution', 'removing some of the undissolved solid from the beaker']
           },
           {
             label: 'Precipitation occurs when',
@@ -163,7 +162,7 @@ $\\text{Mg(OH)}_2(s) \\rightleftharpoons \\text{Mg}^{2+}(aq) + 2\\,\\text{OH}^-(
         ],
         correctAnswers: [
           'pure solids have activity = 1',
-          'shifting equilibrium toward the solid (reactant)',
+          'shifting the equilibrium toward the solid',
           'Q_sp > K_sp',
           'precipitates first'
         ],
@@ -195,10 +194,10 @@ $\\text{Mg(OH)}_2(s) \\rightleftharpoons \\text{Mg}^{2+}(aq) + 2\\,\\text{OH}^-(
           {
             question: 'Which of the following correctly describes the relationship between $K_{sp}$ and solubility?',
             options: [
-              '$K_{sp}$ is always equal to the molar solubility',
-              '$K_{sp}$ is the product of ion concentrations at equilibrium, and molar solubility is the concentration of salt that dissolves',
-              '$K_{sp}$ changes with the amount of solid added',
-              'Molar solubility and $K_{sp}$ are independent of each other'
+              '$K_{sp}$ always equals the molar solubility of the salt',
+              '$K_{sp}$ is the ion product at equilibrium; $s$ is moles of salt dissolved per liter',
+              '$K_{sp}$ grows as more solid is added to the container',
+              'Molar solubility and $K_{sp}$ are independent; neither can be calculated from the other'
             ],
             correctAnswer: 1,
             explanation: '$K_{sp}$ is the product of equilibrium ion concentrations (raised to stoichiometric powers). Molar solubility ($s$) is the moles of salt per liter that dissolve. They are related through the stoichiometry: e.g., $K_{sp} = s^2$ for 1:1, $K_{sp} = 4s^3$ for 1:2.'

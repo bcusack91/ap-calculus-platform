@@ -145,11 +145,11 @@ $$K_c = \\frac{0.040}{(0.50)(0.027)} = \\frac{0.040}{0.0135} = 2.96$$
         dropdowns: [
           {
             label: 'A large $K$ value means the equilibrium mixture is mostly',
-            options: ['reactants', 'products', 'solvent', 'catalyst']
+            options: ['reactants', 'products', 'equal parts of each', 'intermediates']
           },
           {
             label: 'If $K = 1$, the equilibrium contains',
-            options: ['only products', 'only reactants', 'comparable amounts of products and reactants', 'no molecules at all']
+            options: ['mostly products, little reactant', 'mostly reactants, little product', 'comparable amounts of both', 'exactly equal moles of every species']
           },
           {
             label: '$K$ provides information about a reaction\u2019s',
@@ -160,7 +160,7 @@ $$K_c = \\frac{0.040}{(0.50)(0.027)} = \\frac{0.040}{0.0135} = 2.96$$
             options: ['exothermic', 'endothermic', 'not affected by temperature', 'at equilibrium']
           }
         ],
-        correctAnswers: ['products', 'comparable amounts of products and reactants', 'equilibrium position', 'endothermic'],
+        correctAnswers: ['products', 'comparable amounts of both', 'equilibrium position', 'endothermic'],
         hint1: 'Products are in the numerator of K.',
         hint2: 'K = 1 means the numerator equals the denominator.',
         hint3: 'Think about Le Chatelier\u2019s principle — heat acts like a reactant or product.',
@@ -182,8 +182,7 @@ For $\\text{A}(g) \\rightleftharpoons 2\\,\\text{B}(g)$, the equilibrium concent
 **3)** If the equation is reversed to $2\\,\\text{B}(g) \\rightleftharpoons \\text{A}(g)$, what is the new $K_c$? (Enter a number with two decimal places)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['1.6', 'products', '0.63'],
+        questions: [{ question: '1)', answer: '1.6', acceptableAnswers: ['1.6'] }, { question: '2)', answer: 'products', acceptableAnswers: ['products'] }, { question: '3)', answer: '0.63', acceptableAnswers: ['0.63', '0.625'] }],
         hint1: '$K_c = \\frac{[\\text{B}]^2}{[\\text{A}]} = \\frac{(0.80)^2}{0.40}$.',
         hint2: 'Is $K_c$ greater than or less than 1?',
         hint3: 'When you reverse a reaction, the new $K$ is $1/K_{\\text{original}}$.',
@@ -202,9 +201,9 @@ For $\\text{A}(g) \\rightleftharpoons 2\\,\\text{B}(g)$, the equilibrium concent
             question: 'At a certain temperature, two reactions have $K_1 = 3.8 \\times 10^5$ and $K_2 = 7.2 \\times 10^{-6}$. Which statement is correct?',
             options: [
               'Reaction 1 is faster than Reaction 2',
-              'Reaction 2 produces more products at equilibrium',
+              'Reaction 2 forms more products at equilibrium',
               'Reaction 1 produces more products at equilibrium',
-              'Both reactions produce the same amount of products'
+              'Both reactions form the same amount of product'
             ],
             correctAnswer: 2,
             explanation: '$K_1 \\gg K_2$, so Reaction 1 has a much larger ratio of products to reactants at equilibrium. Remember, $K$ tells us about equilibrium position, not rate.'

@@ -116,33 +116,33 @@ $x = 0.50$
             options: [
               'Identify $a = 1$, $b = 0.30$, $c = -0.40$',
               'Take the square root of both sides',
-              'Factor the polynomial',
-              'Set $x = 0$'
+              'Factor it into two binomials',
+              'Drop the $0.30x$ term since x is small'
             ],
             correctAnswer: 0,
-            explanation: 'First identify the coefficients: $a = 1$, $b = 0.30$, $c = -0.40$. Then apply the quadratic formula.'
+            explanation: 'First identify the coefficients: $a = 1$, $b = 0.30$, $c = -0.40$. Then apply the quadratic formula. This equation does not factor neatly, and the $0.30x$ term cannot be dropped — the small-x approximation applies to $[\\text{A}]_0 - x$, not to terms in an already-written quadratic.'
           },
           {
             question: 'You solve the quadratic and get $x = 0.35$ and $x = -0.65$. You should:',
             options: [
-              'Average the two values',
-              'Use $x = 0.35$ (positive, physically meaningful)',
-              'Use $x = -0.65$',
-              'Solve again — two roots means an error'
+              'Average the two roots and use $x = -0.15$ instead',
+              'Use $x = 0.35$, the physically meaningful root',
+              'Use $x = -0.65$, since its magnitude is the larger one',
+              'Solve again, since a correct setup gives only one root'
             ],
             correctAnswer: 1,
-            explanation: 'Concentrations cannot be negative. Reject $x = -0.65$ and use $x = 0.35$.'
+            explanation: 'Concentrations cannot be negative, so reject the root that leads to an impossible concentration ($x = -0.65$ here) and use $x = 0.35$. Every quadratic has two roots, so getting two is expected, and averaging them has no chemical meaning.'
           },
           {
             question: 'After finding x, you calculate $[\\text{A}]_{eq} = 1.00 - x = -0.20$ M. This means:',
             options: [
-              'The answer is correct — concentrations can be negative',
-              'You selected the wrong root of the quadratic',
-              'K is too large for this problem',
-              'You need to re-derive the ICE table — likely the reaction shifts the other direction'
+              'The answer is correct, since concentrations can be negative',
+              'A is completely used up, so report $[\\text{A}] = 0$ M',
+              'K is too large for an ICE table to apply here',
+              'Something is wrong — recheck the root, the shift direction, and the math'
             ],
             correctAnswer: 3,
-            explanation: 'A negative concentration is impossible. This suggests an error in the ICE table setup — perhaps the assumed direction of shift was wrong, or there\'s an arithmetic error.'
+            explanation: 'A negative concentration is impossible, so the setup or the solution contains an error. Check whether the other root of the quadratic gives sensible concentrations, whether the assumed direction of shift was wrong, and whether there is an arithmetic slip. Reporting zero just hides the error, and ICE tables work for any value of K.'
           }
         ]
       }
@@ -168,12 +168,11 @@ Using the quadratic formula:
 **3)** What is $[\\text{NO}_2]$ at equilibrium? (Round to 3 significant figures)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['3.0096', '0.19', '0.38'],
+        questions: [{ question: '1)', answer: '3.01', acceptableAnswers: ['3.01', '3.0096'] }, { question: '2)', answer: '0.172', acceptableAnswers: ['0.172'] }, { question: '3)', answer: '0.344', acceptableAnswers: ['0.344'] }],
         hint1: '$b^2 - 4ac = (0.36)^2 - 4(4)(-0.18) = 0.1296 + 2.88$',
         hint2: '$x = \\frac{-0.36 + \\sqrt{3.0096}}{8} = \\frac{-0.36 + 1.735}{8}$',
         hint3: '$[\\text{NO}_2] = 2x$',
-        explanation: '1) $b^2 - 4ac = 0.1296 + 2.88 = 3.0096$. 2) $x = \\frac{-0.36 + 1.735}{8} = \\frac{1.375}{8} = 0.172 \\approx 0.19$. Wait, let me recalculate: $\\sqrt{3.0096} = 1.7348$. $x = (-0.36 + 1.7348)/8 = 1.3748/8 = 0.1719 \\approx 0.17$. Hmm. Let me recheck: $0.36 = \\frac{(2x)^2}{0.50 - x} = \\frac{4x^2}{0.50-x}$. $0.36(0.50-x) = 4x^2$. $0.18 - 0.36x = 4x^2$. $4x^2 + 0.36x - 0.18 = 0$. $x = \\frac{-0.36 + \\sqrt{0.1296 + 2.88}}{8} = \\frac{-0.36+1.735}{8} = 0.172$. So $x \\approx 0.17$. $[\\text{NO}_2] = 2(0.17) = 0.34$. Approximation: the answer 0.19 should be 0.17. 3) $[\\text{NO}_2] = 2(0.17) = 0.34$.'
+        explanation: '1) $b^2 - 4ac = 0.1296 + 2.88 = 3.0096 \\approx 3.01$. 2) $\\sqrt{3.0096} = 1.7348$, so $x = \\frac{-0.36 + 1.7348}{8} = \\frac{1.3748}{8} = 0.172$ (the negative root gives a negative $x$, which would make $[\\text{NO}_2]$ negative). 3) $[\\text{NO}_2] = 2x = 2(0.172) = 0.344$ M. Check: $\\frac{(0.344)^2}{0.50 - 0.172} = \\frac{0.118}{0.328} = 0.36$ ✓'
       }
     },
     {
@@ -186,11 +185,11 @@ Using the quadratic formula:
         dropdowns: [
           {
             label: 'The quadratic formula is needed when',
-            options: ['K is very small', 'K is not small relative to initial concentrations', 'K is zero', 'always']
+            options: ['K is very small, so x is negligible', 'K is not small relative to initial concentrations', 'the 5% test passes on the first try', 'the reaction is exothermic']
           },
           {
             label: 'Of the two quadratic roots, you keep the one that',
-            options: ['is larger', 'is smaller', 'gives positive concentrations', 'is negative']
+            options: ['has the larger magnitude', 'is closer to zero', 'gives positive concentrations', 'is the negative one']
           },
           {
             label: 'If the 5% test fails after using the approximation',
@@ -230,13 +229,13 @@ Using the quadratic formula:
           {
             question: 'A student uses the approximation and finds $x = 0.20$ for $[\\text{A}]_0 = 0.50$ M. The 5% test gives $40\\%$. The student should:',
             options: [
-              'Accept the answer — it\'s close enough',
+              'Accept the answer, since x is still smaller than $[\\text{A}]_0$',
               'Reject the approximation and solve the full quadratic',
-              'Double the initial concentration',
-              'Use a different K value'
+              'Keep the approximation but subtract x once at the end',
+              'Report $x = 0.20$ M and note that it is approximate'
             ],
             correctAnswer: 1,
-            explanation: '$40\\%$ far exceeds the 5% threshold. The approximation is invalid, and the student must solve the full quadratic equation for an accurate answer.'
+            explanation: '$40\\%$ far exceeds the 5% threshold. The approximation is invalid, and the student must solve the full quadratic equation for an accurate answer. Being smaller than $[\\text{A}]_0$ is not the test — $x$ must be under 5% of it.'
           }
         ]
       }

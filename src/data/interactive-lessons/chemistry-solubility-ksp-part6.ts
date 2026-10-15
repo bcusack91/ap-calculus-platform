@@ -50,11 +50,11 @@ The molar solubility of $\\text{Ag}_2\\text{CO}_3$ is $1.3 \\times 10^{-4}$ M.
 
 $\\text{Ag}_2\\text{CO}_3(s) \\rightleftharpoons 2\\,\\text{Ag}^+(aq) + \\text{CO}_3^{2-}(aq)$
 
-**1)** What is $[\\text{Ag}^+]$? (Enter in scientific notation, e.g. 2.6e-4)
+**1)** What is $[\\text{Ag}^+]$? (Enter in scientific notation, e.g. 4.0e-5)
 
-**2)** What is $[\\text{CO}_3^{2-}]$? (Enter in scientific notation, e.g. 1.3e-4)
+**2)** What is $[\\text{CO}_3^{2-}]$? (Enter in scientific notation, e.g. 7.5e-6)
 
-**3)** What is $K_{sp}$? (Enter in scientific notation, e.g. 8.8e-12)
+**3)** What is $K_{sp}$? (Enter in scientific notation, e.g. 2.1e-15)
 
 *Round all answers to 3 significant figures.*
       `,
@@ -79,18 +79,17 @@ $\\text{SrF}_2(s) \\rightleftharpoons \\text{Sr}^{2+}(aq) + 2\\,\\text{F}^-(aq)$
 
 $K_{sp} = (s)(0.10 + 2s)^2 \\approx (s)(0.10)^2$
 
-**1)** What is the molar solubility in 0.10 M NaF? (Enter in scientific notation, e.g. 4.3e-7)
+**1)** What is the molar solubility in 0.10 M NaF? (Enter in scientific notation, e.g. 2.0e-6)
 
-**2)** What is the molar solubility in pure water? ($K_{sp} = 4s^3$) (Enter in scientific notation, e.g. 1.0e-3)
+**2)** What is the molar solubility in pure water? ($K_{sp} = 4s^3$) (Enter in scientific notation, e.g. 5.5e-4)
 
 *Round all answers to 3 significant figures.*
       `,
       exercise: {
-        boxes: 2,
-        correctAnswers: ['4.3e-7', '1.0e-3'],
+        questions: [{ question: '1)', answer: '4.3e-7', acceptableAnswers: ['4.3e-7'] }, { question: '2)', answer: '1.02e-3', acceptableAnswers: ['1.02e-3', '1.0e-3'] }],
         hint1: '$s = K_{sp}/(0.10)^2 = 4.3 \\times 10^{-9}/0.010$',
         hint2: '$s = \\sqrt[3]{K_{sp}/4} = \\sqrt[3]{4.3 \\times 10^{-9}/4}$',
-        explanation: '1) $s = 4.3 \\times 10^{-9}/0.010 = 4.3 \\times 10^{-7}$ M. 2) $s = \\sqrt[3]{1.075 \\times 10^{-9}} = 1.02 \\times 10^{-3} \\approx 1.0 \\times 10^{-3}$ M. The common ion reduced solubility by a factor of about 2,300.'
+        explanation: '1) $s = 4.3 \\times 10^{-9}/0.010 = 4.3 \\times 10^{-7}$ M. 2) $s = \\sqrt[3]{1.075 \\times 10^{-9}} = 1.02 \\times 10^{-3}$ M. The common ion reduced solubility by a factor of about 2,300.'
       }
     },
     {
@@ -117,11 +116,11 @@ $K_{sp} = (s)(0.10 + 2s)^2 \\approx (s)(0.10)^2$
             options: [
               '$[\\text{Ca}^{2+}] = 3.9 \\times 10^{-11}/(0.020)^2 = 9.8 \\times 10^{-8}$ M',
               '$[\\text{Ca}^{2+}] = 3.9 \\times 10^{-11}/0.020 = 2.0 \\times 10^{-9}$ M',
-              '$[\\text{Ca}^{2+}] = \\sqrt{3.9 \\times 10^{-11}} = 6.2 \\times 10^{-6}$ M',
-              '$[\\text{Ca}^{2+}] = 3.9 \\times 10^{-11}$ M'
+              '$[\\text{Ca}^{2+}] = \\sqrt[3]{3.9 \\times 10^{-11}/4} = 2.1 \\times 10^{-4}$ M',
+              '$[\\text{Ca}^{2+}] = 3.9 \\times 10^{-11}/(2 \\times 0.020)^2 = 2.4 \\times 10^{-8}$ M'
             ],
             correctAnswer: 0,
-            explanation: 'Precipitation begins when $Q_{sp} = K_{sp}$: $[\\text{Ca}^{2+}][\\text{F}^-]^2 = 3.9 \\times 10^{-11}$. $[\\text{Ca}^{2+}] = 3.9 \\times 10^{-11}/(0.020)^2 = 3.9 \\times 10^{-11}/(4.0 \\times 10^{-4}) = 9.75 \\times 10^{-8} \\approx 9.8 \\times 10^{-8}$ M.'
+            explanation: 'Precipitation begins when $Q_{sp} = K_{sp}$: $[\\text{Ca}^{2+}][\\text{F}^-]^2 = 3.9 \\times 10^{-11}$. $[\\text{Ca}^{2+}] = 3.9 \\times 10^{-11}/(0.020)^2 = 3.9 \\times 10^{-11}/(4.0 \\times 10^{-4}) = 9.75 \\times 10^{-8} \\approx 9.8 \\times 10^{-8}$ M. Forgetting to square $[\\text{F}^-]$ gives $2.0 \\times 10^{-9}$ M; doubling the 0.020 M (it is already the fluoride concentration) gives $2.4 \\times 10^{-8}$ M; and $\\sqrt[3]{K_{sp}/4}$ is the solubility of $CaF_{2}$ in pure water, which ignores the fluoride already present.'
           }
         ]
       }
@@ -175,23 +174,23 @@ $K_{sp} = (s)(0.10 + 2s)^2 \\approx (s)(0.10)^2$
             question: 'The molar solubility of $\\text{PbI}_2$ is $1.3 \\times 10^{-3}$ M. $K_{sp}$ is:',
             options: [
               '$(1.3 \\times 10^{-3})^2 = 1.7 \\times 10^{-6}$',
-              '$(1.3 \\times 10^{-3})(2.6 \\times 10^{-3})^2 = 8.8 \\times 10^{-9}$',
+              '$(1.3 \\times 10^{-3})(2.6 \\times 10^{-3}) = 3.4 \\times 10^{-6}$',
               '$(1.3 \\times 10^{-3})^3 = 2.2 \\times 10^{-9}$',
               '$4(1.3 \\times 10^{-3})^3 = 8.8 \\times 10^{-9}$'
             ],
             correctAnswer: 3,
-            explanation: '$\\text{PbI}_2 \\rightleftharpoons \\text{Pb}^{2+} + 2\\,\\text{I}^-$. $K_{sp} = (s)(2s)^2 = 4s^3 = 4(1.3 \\times 10^{-3})^3 = 4(2.197 \\times 10^{-9}) = 8.79 \\times 10^{-9} \\approx 8.8 \\times 10^{-9}$.'
+            explanation: '$\\text{PbI}_2 \\rightleftharpoons \\text{Pb}^{2+} + 2\\,\\text{I}^-$. $K_{sp} = (s)(2s)^2 = 4s^3 = 4(1.3 \\times 10^{-3})^3 = 4(2.197 \\times 10^{-9}) = 8.79 \\times 10^{-9} \\approx 8.8 \\times 10^{-9}$. Leaving off the square on $[\\text{I}^-]$ gives $3.4 \\times 10^{-6}$; $s^3$ forgets the factor of 4 from $(2s)^2$; and $s^2$ treats $\\text{PbI}_2$ as a 1:1 salt.'
           },
           {
             question: 'Which factor does NOT affect the molar solubility of a sparingly soluble salt?',
             options: [
-              'Temperature',
-              'Presence of a common ion',
-              'Adding an inert salt like $NaNO_{3}$ (at low concentrations)',
-              'Changing $K_{sp}$'
+              'Raising or lowering the temperature of the saturated solution',
+              'Adding a soluble salt that shares an ion with the dissolving salt',
+              'Adding a little $NaNO_{3}$, which shares no ion with it',
+              'Adding acid when the salt\'s anion is a weak base, such as $F^{-}$'
             ],
             correctAnswer: 2,
-            explanation: 'An inert salt (one that doesn\'t share ions with the dissolving compound) has minimal effect on solubility at low concentrations. Temperature changes $K_{sp}$ itself. Common ions reduce solubility via Le Chatelier\'s principle.'
+            explanation: 'An inert salt such as $NaNO_{3}$ shares no ions with the dissolving compound and does not react with them, so at low concentrations it has negligible effect on solubility. Temperature changes $K_{sp}$ itself, a common ion lowers solubility by Le Chatelier\'s principle, and acid raises the solubility of a salt with a basic anion by converting the anion to its conjugate acid ($F^{-}$ to HF).'
           }
         ]
       }

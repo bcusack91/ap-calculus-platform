@@ -131,13 +131,13 @@ $$\\boxed{s = \\sqrt[3]{\\frac{1.7 \\times 10^{-5}}{4}} = \\sqrt[3]{4.25 \\times
           {
             question: 'Can you determine which is more soluble just by comparing $K_{sp}$: $\\text{AgCl}$ ($K_{sp} = 1.8 \\times 10^{-10}$) vs $\\text{Ag}_2\\text{CrO}_4$ ($K_{sp} = 1.1 \\times 10^{-12}$)?',
             options: [
-              'Yes — AgCl has larger $K_{sp}$ so it\'s more soluble',
-              'No — they have different formula types, so you must compare molar solubilities',
-              'Yes — $Ag_{2}CrO_{4}$ is always more soluble',
-              'No — you need temperature data'
+              'Yes — AgCl has the larger $K_{sp}$, so AgCl must be more soluble',
+              'No — the formula types differ, so compare molar solubilities instead',
+              'Yes — $Ag_{2}CrO_{4}$ gives three ions per formula unit, so it is more soluble',
+              'No — you would also need each salt\'s molar mass'
             ],
             correctAnswer: 1,
-            explanation: 'AgCl is 1:1 ($K_{sp} = s^2$) and $Ag_{2}CrO_{4}$ is 2:1 ($K_{sp} = 4s^3$). Different formula types require calculating and comparing actual molar solubilities.'
+            explanation: 'AgCl is 1:1 ($K_{sp} = s^2$) and $Ag_{2}CrO_{4}$ is 2:1 ($K_{sp} = 4s^3$). Different formula types require calculating and comparing actual molar solubilities. Doing so shows $Ag_{2}CrO_{4}$ ($s = 6.5 \\times 10^{-5}$ M) is actually more soluble than AgCl ($s = 1.3 \\times 10^{-5}$ M) despite its smaller $K_{sp}$ — but you only know that after the calculation, not from the number of ions. Molar mass is not needed to compare molar solubilities.'
           }
         ]
       }
@@ -148,19 +148,18 @@ $$\\boxed{s = \\sqrt[3]{\\frac{1.7 \\times 10^{-5}}{4}} = \\sqrt[3]{4.25 \\times
       content: `
 **Practice: Molar Solubility Calculations** 🧮
 
-**1)** $\\text{BaSO}_4$, $K_{sp} = 1.1 \\times 10^{-10}$. (1:1 salt) What is the molar solubility? (Enter in scientific notation, e.g. 1.0e-5)
+**1)** $\\text{BaSO}_4$, $K_{sp} = 1.1 \\times 10^{-10}$. (1:1 salt) What is the molar solubility? (Enter in scientific notation, e.g. 3.4e-7)
 
-**2)** $\\text{Ca(OH)}_2$, $K_{sp} = 5.0 \\times 10^{-6}$. ($K_{sp} = 4s^3$) What is the molar solubility? (Round to 3 significant figures, e.g. 0.01)
+**2)** $\\text{Ca(OH)}_2$, $K_{sp} = 5.0 \\times 10^{-6}$. ($K_{sp} = 4s^3$) What is the molar solubility? (Round to 3 significant figures, e.g. 0.0250)
 
 **3)** For the $BaSO_{4}$ solution above, what is $[\\text{Ba}^{2+}]$? (Enter in same format as answer 1)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['1.0e-5', '0.01', '1.0e-5'],
+        questions: [{ question: '1)', answer: '1.05e-5', acceptableAnswers: ['1.05e-5', '1.0e-5', '1.1e-5'] }, { question: '2)', answer: '0.0108', acceptableAnswers: ['0.0108', '0.011'] }, { question: '3)', answer: '1.05e-5', acceptableAnswers: ['1.05e-5', '1.0e-5', '1.1e-5'] }],
         hint1: '$s = \\sqrt{1.1 \\times 10^{-10}} = 1.05 \\times 10^{-5}$',
         hint2: '$s = \\sqrt[3]{5.0 \\times 10^{-6}/4} = \\sqrt[3]{1.25 \\times 10^{-6}}$',
         hint3: 'For a 1:1 salt, $[\\text{Ba}^{2+}] = s$.',
-        explanation: '1) $s = \\sqrt{1.1 \\times 10^{-10}} = 1.05 \\times 10^{-5} \\approx 1.0 \\times 10^{-5}$ M. 2) $s = \\sqrt[3]{1.25 \\times 10^{-6}} = 1.08 \\times 10^{-2} \\approx 0.01$ M. 3) For $BaSO_{4}$, $[\\text{Ba}^{2+}] = s = 1.0 \\times 10^{-5}$ M.'
+        explanation: '1) $s = \\sqrt{1.1 \\times 10^{-10}} = 1.05 \\times 10^{-5}$ M. 2) $s = \\sqrt[3]{1.25 \\times 10^{-6}} = 1.08 \\times 10^{-2} = 0.0108$ M. 3) For $BaSO_{4}$, $[\\text{Ba}^{2+}] = s = 1.05 \\times 10^{-5}$ M.'
       }
     },
     {
@@ -181,7 +180,7 @@ $$\\boxed{s = \\sqrt[3]{\\frac{1.7 \\times 10^{-5}}{4}} = \\sqrt[3]{4.25 \\times
           },
           {
             label: 'Molar solubility is defined as',
-            options: ['mass dissolved per liter', 'moles dissolved per liter in a saturated solution', 'K_sp itself', 'the density of the solution']
+            options: ['grams of solute dissolved per liter of saturated solution', 'moles dissolved per liter in a saturated solution', 'the same as K_sp, in moles per liter, for every salt', 'moles of ions (all kinds) per liter of saturated solution']
           },
           {
             label: 'Comparing K_sp directly to rank solubility works only for',
@@ -213,11 +212,11 @@ $$\\boxed{s = \\sqrt[3]{\\frac{1.7 \\times 10^{-5}}{4}} = \\sqrt[3]{4.25 \\times
             options: [
               '$s = \\sqrt{1.1 \\times 10^{-12}} = 1.05 \\times 10^{-6}$ M',
               '$s = \\sqrt[3]{\\frac{1.1 \\times 10^{-12}}{4}} = 6.5 \\times 10^{-5}$ M',
-              '$s = 1.1 \\times 10^{-12}$ M',
+              '$s = K_{sp}/4 = 2.8 \\times 10^{-13}$ M',
               '$s = \\sqrt[3]{1.1 \\times 10^{-12}} = 1.03 \\times 10^{-4}$ M'
             ],
             correctAnswer: 1,
-            explanation: '$\\text{Ag}_2\\text{CrO}_4 \\rightleftharpoons 2\\,\\text{Ag}^+ + \\text{CrO}_4^{2-}$. $K_{sp} = (2s)^2(s) = 4s^3$. $s = \\sqrt[3]{K_{sp}/4} = \\sqrt[3]{2.75 \\times 10^{-13}} = 6.5 \\times 10^{-5}$ M.'
+            explanation: '$\\text{Ag}_2\\text{CrO}_4 \\rightleftharpoons 2\\,\\text{Ag}^+ + \\text{CrO}_4^{2-}$. $K_{sp} = (2s)^2(s) = 4s^3$. $s = \\sqrt[3]{K_{sp}/4} = \\sqrt[3]{2.75 \\times 10^{-13}} = 6.5 \\times 10^{-5}$ M. Stopping at $K_{sp}/4$ forgets the cube root, $\\sqrt{K_{sp}}$ treats the salt as 1:1, and $\\sqrt[3]{K_{sp}}$ forgets the factor of 4 from $(2s)^2$.'
           },
           {
             question: 'The molar solubility of $\\text{CaF}_2$ ($K_{sp} = 3.9 \\times 10^{-11}$) in pure water is $2.1 \\times 10^{-4}$ M. What is $[\\text{F}^-]$?',

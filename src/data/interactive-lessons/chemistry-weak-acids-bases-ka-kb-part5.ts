@@ -126,12 +126,12 @@ Each successive dissociation is **much weaker** because it\'s harder to remove $
             question: 'If you dilute a 0.10 M weak acid solution to 0.010 M, the percent ionization will:',
             options: [
               'Decrease by a factor of 10',
-              'Stay the same (only $K_a$ matters)',
+              'Stay the same; $K_a$ is fixed',
               'Increase by a factor of about 3.2',
               'Increase by a factor of 10'
             ],
             correctAnswer: 2,
-            explanation: 'Percent ionization $\\propto 1/\\sqrt{C}$. Decreasing $C$ by 10× increases percent ionization by $\\sqrt{10} \\approx 3.2\\times$.'
+            explanation: 'Percent ionization $\\propto 1/\\sqrt{C}$. Decreasing $C$ by 10× increases percent ionization by $\\sqrt{10} \\approx 3.2\\times$. $K_a$ does stay the same, but the fraction ionized does not; a factor of 10 forgets the square root.'
           },
           {
             question: 'For the triprotic acid $H_3PO_4$, the pH of a solution is determined primarily by:',
@@ -147,13 +147,13 @@ Each successive dissociation is **much weaker** because it\'s harder to remove $
           {
             question: 'For $H_2CO_3$, why is $K_{a2} \\ll K_{a1}$?',
             options: [
-              'The molecule gets bigger',
-              'It\'s harder to remove $H^+$ from the negatively charged $HCO_3^-$',
-              '$K_{a2}$ includes water',
-              'The temperature changes'
+              'The ion $HCO_3^-$ is larger, so its O–H bond is stronger',
+              'Removing $H^+$ from the anion $HCO_3^-$ is harder',
+              '$K_{a2}$ includes $[H_2O]$ while $K_{a1}$ does not',
+              '$H^+$ from the first step pushes the second one backward'
             ],
             correctAnswer: 1,
-            explanation: 'Removing a positive $H^+$ from a negatively charged $HCO_3^-$ requires overcoming electrostatic attraction, making the second dissociation much less favorable.'
+            explanation: 'Removing a positive $H^+$ from a negatively charged $HCO_3^-$ requires overcoming electrostatic attraction, making the second dissociation much less favorable. $H^+$ from the first step does suppress how far the second step goes (common-ion effect), but it does not change the constant $K_{a2}$; water never appears in either $K_a$ expression.'
           }
         ]
       }
@@ -168,15 +168,14 @@ Each successive dissociation is **much weaker** because it\'s harder to remove $
 
 **2)** Find the pH of 0.10 M $H_3PO_4$ ($K_{a1} = 7.5 \\times 10^{-3}$). Use only the first dissociation. (2 decimal places)
 
-**3)** For $H_2CO_3$ ($K_{a1} = 4.3 \\times 10^{-7}$, $K_{a2} = 4.7 \\times 10^{-11}$), what is $[CO_3^{2-}]$ in a 0.10 M solution? (Enter in scientific notation, e.g. 4.7e-11)
+**3)** For $H_2CO_3$ ($K_{a1} = 4.3 \\times 10^{-7}$, $K_{a2} = 4.7 \\times 10^{-11}$), what is $[CO_3^{2-}]$ in a 0.10 M solution? (Enter in scientific notation, e.g. 2.0e-9)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['11.4', '1.62', '4.7e-11'],
+        questions: [{ question: '1)', answer: '11.0', acceptableAnswers: ['11.0'] }, { question: '2)', answer: '1.62', acceptableAnswers: ['1.62'] }, { question: '3)', answer: '4.7e-11', acceptableAnswers: ['4.7e-11'] }],
         hint1: '$[H^+] = \\sqrt{K_a \\cdot C}$, then divide by $C$ and multiply by 100.',
         hint2: '$[H^+] = \\sqrt{(7.5 \\times 10^{-3})(0.10)}$. Check 5% rule — may need quadratic.',
         hint3: 'For diprotic acids, $[\\text{second anion}] \\approx K_{a2}$ regardless of initial concentration!',
-        explanation: '1) $[H^+] = \\sqrt{(6.8 \\times 10^{-4})(0.050)} = 5.83 \\times 10^{-3}$; $\\% = (5.83 \\times 10^{-3}/0.050) \\times 100 = 11.7\\%$. Since >5%, use quadratic: $x = 5.7 \\times 10^{-3}$; $\\% = 11.4\\%$. 2) $x = \\sqrt{7.5 \\times 10^{-4}} = 0.0274$. Check: $27.4\\%$ > 5%, use quadratic: $x = 0.024$; $pH = 1.62$. 3) For any diprotic acid, $[\\text{second anion}] = K_{a2} = 4.7 \\times 10^{-11}$ M.'
+        explanation: '1) $[H^+] = \\sqrt{(6.8 \\times 10^{-4})(0.050)} = 5.83 \\times 10^{-3}$; $\\% = (5.83 \\times 10^{-3}/0.050) \\times 100 = 11.7\\%$. Since >5%, use the quadratic $x^2 + (6.8 \\times 10^{-4})x - 3.4 \\times 10^{-5} = 0$: $x = 5.50 \\times 10^{-3}$; $\\% = 11.0\\%$. 2) $x = \\sqrt{7.5 \\times 10^{-4}} = 0.0274$. Check: $27.4\\%$ > 5%, use quadratic: $x = 0.024$; $pH = 1.62$. 3) For any diprotic acid, $[\\text{second anion}] = K_{a2} = 4.7 \\times 10^{-11}$ M.'
       }
     },
     {
@@ -197,7 +196,7 @@ Each successive dissociation is **much weaker** because it\'s harder to remove $
           },
           {
             label: 'The $K_a$ of $HSO_4^-$ is the same as',
-            options: ['$K_{a1}$ of $H_{2}SO_{4}$', '$K_{a2}$ of $H_{2}SO_{4}$', 'K_b of $SO_{4}^{2-}$', 'K_w']
+            options: ['$K_{a1}$ of $H_{2}SO_{4}$', '$K_{a2}$ of $H_{2}SO_{4}$', '$K_{b}$ of $SO_{4}^{2-}$', '$K_{a1}$ × $K_{a2}$ of $H_{2}SO_{4}$']
           }
         ],
         correctAnswers: ['increases', '$K_{a2}$', '$K_{a2}$ of $H_{2}SO_{4}$'],
@@ -219,20 +218,20 @@ Each successive dissociation is **much weaker** because it\'s harder to remove $
             question: 'At what concentration does the 5% approximation begin to fail for acetic acid ($K_a = 1.8 \\times 10^{-5}$)?',
             options: [
               'Below about 0.0072 M',
-              'Above 1.0 M',
-              'At exactly 0.10 M',
+              'Above about 0.0072 M',
+              'Below about 0.00036 M',
               'It never fails'
             ],
             correctAnswer: 0,
-            explanation: 'The approximation fails when $C/K_a < 400$: $C < 400 \\times 1.8 \\times 10^{-5} = 0.0072$ M. Below this concentration, use the quadratic formula.'
+            explanation: 'The approximation fails when $C/K_a < 400$: $C < 400 \\times 1.8 \\times 10^{-5} = 0.0072$ M. Below this concentration, use the quadratic formula. "Above" reverses the direction (more concentrated solutions ionize less, so the approximation improves), and 0.00036 M comes from using $C/K_a > 20$ — forgetting to square 0.05.'
           },
           {
             question: 'For a 0.10 M solution of $H_2SO_3$ ($K_{a1} = 1.5 \\times 10^{-2}$), the pH should be calculated using:',
             options: [
-              'Both $K_{a1}$ and $K_{a2}$',
-              'Only $K_{a1}$ (and possibly the quadratic formula)',
-              'Only $K_{a2}$',
-              'The average of $K_{a1}$ and $K_{a2}$'
+              'Both $K_{a1}$ and $K_{a2}$, added together',
+              'Only $K_{a1}$, maybe via the quadratic',
+              'Only $K_{a2}$, with the 5% approximation',
+              'The average of $K_{a1}$ and $K_{a2}$ values'
             ],
             correctAnswer: 1,
             explanation: 'pH depends primarily on $K_{a1}$. Since $K_{a1} = 1.5 \\times 10^{-2}$ is relatively large and $C/K_{a1} = 6.7 < 400$, you\'ll need the quadratic formula, but only $K_{a1}$ matters for pH.'

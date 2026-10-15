@@ -149,7 +149,7 @@ $$\\boxed{K_w = [H^+][OH^-] = 1.0 \\times 10^{-14} \\text{ at 25°C}}$$
           {
             question: 'The Arrhenius model is limited because it:',
             options: [
-              'Cannot explain neutralization reactions',
+              'Cannot explain neutralization',
               'Only applies to aqueous solutions',
               'Does not recognize strong acids',
               'Cannot predict pH values'
@@ -162,11 +162,11 @@ $$\\boxed{K_w = [H^+][OH^-] = 1.0 \\times 10^{-14} \\text{ at 25°C}}$$
             options: [
               '$1.0 \\times 10^{-14}$ M',
               '$1.0 \\times 10^{-7}$ M',
-              '$1.0$ M',
+              '$1.0 \\times 10^{7}$ M',
               '$7.0$ M'
             ],
             correctAnswer: 1,
-            explanation: '$K_w = [H^+][OH^-] = 1.0 \\times 10^{-14}$. In pure water, $[H^+] = [OH^-]$, so $[H^+]^2 = 1.0 \\times 10^{-14}$, giving $[H^+] = 1.0 \\times 10^{-7}$ M.'
+            explanation: '$K_w = [H^+][OH^-] = 1.0 \\times 10^{-14}$. In pure water, $[H^+] = [OH^-]$, so $[H^+]^2 = 1.0 \\times 10^{-14}$, giving $[H^+] = 1.0 \\times 10^{-7}$ M. $1.0 \\times 10^{-14}$ M is $K_w$ itself, $1.0 \\times 10^{7}$ M drops the negative sign on the exponent, and 7.0 M mistakes the pH value for a concentration.'
           }
         ]
       }

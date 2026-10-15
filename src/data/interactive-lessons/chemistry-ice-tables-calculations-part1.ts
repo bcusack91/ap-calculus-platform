@@ -113,13 +113,13 @@ $$7.07 = 9.07x \\implies x = 0.780$$
           {
             question: 'In an ICE table, what does the "C" row represent?',
             options: [
-              'Concentration at equilibrium',
-              'The change in concentration as the system reaches equilibrium',
-              'The catalyst concentration',
-              'The constant temperature'
+              'The concentration of each species once equilibrium is reached',
+              'The change in each concentration on the way to equilibrium',
+              'The concentration of any catalyst, which stays constant throughout',
+              'The equilibrium constant, written as a ratio of concentrations'
             ],
             correctAnswer: 1,
-            explanation: 'C stands for Change — it represents how much each concentration changes from the initial state to the equilibrium state. Changes are expressed in terms of the variable $x$.'
+            explanation: 'C stands for Change — how much each concentration rises or falls between the initial state and equilibrium, written in terms of $x$. Equilibrium concentrations belong in the E row, a catalyst never appears in the table, and K is not a row at all.'
           },
           {
             question: 'For $A \\rightleftharpoons 3B$, if the change in [A] is $-x$, the change in [B] is:',
@@ -137,11 +137,11 @@ $$7.07 = 9.07x \\implies x = 0.780$$
             options: [
               'Reactants always increase, products always decrease',
               'It depends on which direction the reaction shifts',
-              'All changes are positive',
-              'It depends on the value of K only'
+              'All changes are positive, because x is always a positive number',
+              'It depends only on whether K is greater or less than 1'
             ],
             correctAnswer: 1,
-            explanation: 'The sign depends on the direction of shift. If $Q < K$, the reaction shifts right (reactants decrease, products increase). If $Q > K$, the reaction shifts left (reactants increase, products decrease).'
+            explanation: 'The sign depends on the direction of shift, which you find by comparing Q with K. If $Q < K$, the reaction shifts right (reactants decrease, products increase). If $Q > K$, the reaction shifts left (reactants increase, products decrease). Whether K is above or below 1 does not by itself set the direction.'
           }
         ]
       }
@@ -156,11 +156,11 @@ For: $\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$
 
 Initial concentrations: $[\\text{N}_2\\text{O}_4] = 0.50$ M, $[\\text{NO}_2] = 0$ M
 
-**1)** If the change in $[\\text{N}_2\\text{O}_4]$ is $-x$, what is the change in $[\\text{NO}_2]$? (Enter with sign, e.g., "+2x")
+**1)** If the change in $[\\text{N}_2\\text{O}_4]$ is $-x$, what is the change in $[\\text{NO}_2]$? (Enter with sign, e.g., "+3x")
 
-**2)** What is the equilibrium expression for $[\\text{N}_2\\text{O}_4]$ in terms of x? (Enter, e.g., "0.50 - x")
+**2)** What is the equilibrium expression for $[\\text{N}_2\\text{O}_4]$ in terms of x? (Enter, e.g., "1.20 - 2x")
 
-**3)** What is the equilibrium expression for $[\\text{NO}_2]$ in terms of x? (Enter, e.g., "2x")
+**3)** What is the equilibrium expression for $[\\text{NO}_2]$ in terms of x? (Enter, e.g., "3x")
       `,
       exercise: {
         boxes: 3,
@@ -185,7 +185,7 @@ Initial concentrations: $[\\text{N}_2\\text{O}_4] = 0.50$ M, $[\\text{NO}_2] = 0
           },
           {
             label: 'In the C row, reactant changes are',
-            options: ['always positive', 'always negative when shifting right', 'always zero', 'equal to K']
+            options: ['always positive, since x is positive', 'negative for a shift to the right', 'zero, since only the products change', 'equal to K times the initial value']
           },
           {
             label: 'The stoichiometric coefficients appear in the C row as',
@@ -198,7 +198,7 @@ Initial concentrations: $[\\text{N}_2\\text{O}_4] = 0.50$ M, $[\\text{NO}_2] = 0
         ],
         correctAnswers: [
           'initial concentrations',
-          'always negative when shifting right',
+          'negative for a shift to the right',
           'multipliers of x',
           'I + C'
         ],

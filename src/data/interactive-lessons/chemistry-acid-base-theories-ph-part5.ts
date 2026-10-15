@@ -155,12 +155,12 @@ $$pH = 14 - 2.00 = 12.00$$
             question: 'What is the pH of $5.0 \\times 10^{-3}$ M $KOH$?',
             options: [
               '2.30',
-              '5.00',
-              '9.00',
+              '10.30',
+              '12.00',
               '11.70'
             ],
             correctAnswer: 3,
-            explanation: '$KOH$ is a strong base: $[OH^-] = 5.0 \\times 10^{-3}$ M. $pOH = -\\log(5.0 \\times 10^{-3}) = 2.30$. $pH = 14 - 2.30 = 11.70$.'
+            explanation: '$KOH$ is a strong base: $[OH^-] = 5.0 \\times 10^{-3}$ M. $pOH = -\\log(5.0 \\times 10^{-3}) = 2.30$. $pH = 14 - 2.30 = 11.70$. Reporting 2.30 stops at the pOH; 10.30 comes from adding $\\log 5$ instead of subtracting it (pOH = 3.70); 12.00 doubles $[OH^-]$ as if $KOH$ released two hydroxide ions.'
           },
           {
             question: 'What is $[OH^-]$ in a solution of 0.020 M $Ca(OH)_2$?',
@@ -226,7 +226,7 @@ $$pH = -\\log(0.025) = 1.60$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.70', '13.00', '1.22'],
+        correctAnswers: ['2.70', '13.00', '1.30'],
         hint1: '$HClO_4$ is a strong acid: $pH = -\\log(0.0020)$.',
         hint2: '$Ba(OH)_2$: $[OH^-] = 2(0.050) = 0.10$ M.',
         hint3: 'Find excess $H^+$: mol $H^+$ = $(0.040)(0.15)$, mol $OH^-$ = $(0.020)(0.15)$; divide excess by total volume.',
@@ -243,11 +243,11 @@ $$pH = -\\log(0.025) = 1.60$$
         dropdowns: [
           {
             label: 'The pH of a strong acid can be calculated directly from its concentration because',
-            options: ['it partially dissociates', 'it completely dissociates', 'it doesn\'t ionize', 'K_a is needed']
+            options: ['it partially dissociates', 'it completely dissociates', 'it doesn\'t ionize', 'its $K_a$ is very small']
           },
           {
             label: 'Adding water to a strong acid solution will cause the pH to',
-            options: ['decrease', 'increase (toward 7)', 'stay the same', 'become exactly 7']
+            options: ['decrease', 'increase toward 7', 'stay the same', 'become exactly 7']
           },
           {
             label: 'Which has the lowest pH?',
@@ -258,7 +258,7 @@ $$pH = -\\log(0.025) = 1.60$$
             options: ['0.050 M', '0.10 M', '0.20 M', '0.40 M']
           }
         ],
-        correctAnswers: ['it completely dissociates', 'increase (toward 7)', '0.10 M HCl', '0.20 M'],
+        correctAnswers: ['it completely dissociates', 'increase toward 7', '0.10 M HCl', '0.20 M'],
         hint1: 'Strong acids dissociate 100%.',
         hint2: 'Dilution lowers $[H^+]$, moving pH toward neutral.',
         hint3: '$HCl$ is acidic (low pH), $NaOH$ is basic (high pH).',
@@ -288,12 +288,12 @@ $$pH = -\\log(0.025) = 1.60$$
             question: 'The pH of $2.0 \\times 10^{-8}$ M $HCl$ is approximately:',
             options: [
               '8.0',
-              '7.6',
+              '7.7',
               '6.9',
               '7.0'
             ],
             correctAnswer: 2,
-            explanation: 'At this very low concentration, the autoionization of water ($[H^+] = 10^{-7}$) contributes significantly. Total $[H^+] \\approx 1.0 \\times 10^{-7} + 2.0 \\times 10^{-8} = 1.2 \\times 10^{-7}$ M. $pH \\approx 6.9$. The pH cannot be above 7 for an acid solution!'
+            explanation: 'Ignoring water gives $pH = -\\log(2.0 \\times 10^{-8}) = 7.7$ — a basic pH for an acid, which is impossible (8.0 also drops the 2.0 coefficient). At this very low concentration, water\'s own $[H^+]$ ($1.0 \\times 10^{-7}$ M) dominates. Adding the two contributions gives $[H^+] \\approx 1.2 \\times 10^{-7}$ M, so $pH \\approx 6.9$ (an exact treatment gives 6.96). Answering 7.0 ignores the acid\'s contribution entirely. The pH of an acid solution cannot be above 7.'
           }
         ]
       }

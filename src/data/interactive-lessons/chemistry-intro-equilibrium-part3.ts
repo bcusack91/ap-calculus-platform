@@ -228,10 +228,10 @@ For each species, determine whether it appears in the equilibrium expression.
           {
             question: 'Adding more solid $CaCO_{3}$ to the equilibrium $CaCO_{3}(s)$ ⇌ CaO(s) + $CO_{2}(g)$ will:',
             options: [
-              'Increase $P_{\\text{CO}_2}$',
+              'Increase $P_{\\text{CO}_2}$ by shifting right',
               'Decrease $P_{\\text{CO}_2}$',
               'Have no effect on $P_{\\text{CO}_2}$',
-              'Increase $K_p$'
+              'Increase $K_p$ and $P_{\\text{CO}_2}$'
             ],
             correctAnswer: 2,
             explanation: 'Solids do not appear in the equilibrium expression. Adding more solid does not change any concentrations or pressures at equilibrium. $K_p = P_{\\text{CO}_2}$ remains the same.'
@@ -239,10 +239,10 @@ For each species, determine whether it appears in the equilibrium expression.
           {
             question: 'Pure liquids and solids are excluded from equilibrium expressions because:',
             options: [
-              'They do not participate in the reaction',
-              'Their concentrations are constant and incorporated into K',
-              'They have zero concentration',
-              'They are always in excess'
+              'They take no part in the reaction',
+              'Their concentrations are constant, absorbed into K',
+              'Their concentrations are zero, so the terms drop out',
+              'They are always present in large excess'
             ],
             correctAnswer: 1,
             explanation: 'The concentration (density/molar mass) of a pure solid or liquid is constant — it does not change as the reaction proceeds. This constant value is incorporated into the equilibrium constant K.'

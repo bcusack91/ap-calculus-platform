@@ -77,11 +77,11 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             options: [
               '−85.1 kJ',
               '−114.9 kJ',
-              '−50 kJ',
-              '+14.9 kJ'
+              '−100.0 kJ',
+              '−15,000 kJ'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta G° = -100 - (298)(0.050) = -100 - 14.9 = -114.9$ kJ.'
+            explanation: '$\\Delta G° = -100 - (298)(0.050) = -100 - 14.9 = -114.9$ kJ. Adding the $T\\Delta S$ term gives −85.1 kJ, ignoring entropy gives −100.0 kJ, and leaving ΔS in J/K gives −15,000 kJ.'
           },
           {
             question: 'The equilibrium constant K for a reaction with ΔG° = 0 is:',
@@ -99,7 +99,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             options: [
               'ΔG° applies at any conditions; ΔG only at standard',
               'ΔG° applies at standard conditions; ΔG at any conditions',
-              'They are always equal',
+              'ΔG is per gram of reactant; ΔG° is per mole',
               'ΔG includes only enthalpy; ΔG° includes entropy too'
             ],
             correctAnswer: 1,
@@ -118,15 +118,14 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 
 **2)** At 298 K, $\\Delta G° = -57.1$ kJ/mol. What is $K$? (use $e^{23.0} \\approx 10^{10}$; express as a power of 10)
 
-**3)** A reaction has $\\Delta G° = +5.0$ kJ/mol. At what value of $Q$ does $\\Delta G = 0$ at 298 K? (i.e., what is $K$? Round to nearest tenth; use $e^{-2.02} \\approx 0.1$)
+**3)** A reaction has $\\Delta G° = +5.0$ kJ/mol. At what value of $Q$ does $\\Delta G = 0$ at 298 K? (i.e., what is $K$? Round to 2 significant figures.)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['720', '10^10', '0.1'],
+        questions: [{ question: '1)', answer: '720', acceptableAnswers: ['720'] }, { question: '2)', answer: '10^10', acceptableAnswers: ['10^10', '1e10', '1.0e10', '1x10^10', '1×10^10'] }, { question: '3)', answer: '0.13', acceptableAnswers: ['0.13', '0.133'] }],
         hint1: '$T = \\Delta H/\\Delta S = -180{,}000/(-250)$',
         hint2: '$K = e^{57100/(8.314 \\times 298)} = e^{23.0}$',
         hint3: 'At $\\Delta G = 0$: $Q = K = e^{-\\Delta G°/(RT)} = e^{-5000/2478}$',
-        explanation: '1) $T = 180{,}000/250 = 720$ K. 2) $K = e^{23.0} \\approx 10^{10}$. 3) $K = e^{-5000/2478} = e^{-2.02} \\approx 0.13 \\approx 0.1$.'
+        explanation: '1) $T = 180{,}000/250 = 720$ K. 2) $K = e^{23.0} \\approx 10^{10}$. 3) $K = e^{-5000/2478} = e^{-2.02} \\approx 0.13$.'
       }
     },
     {
@@ -139,7 +138,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
         dropdowns: [
           {
             label: 'ΔG represents the maximum',
-            options: ['heat released', 'useful work the system can do', 'entropy created', 'kinetic energy']
+            options: ['heat the system can release', 'useful work the system can do', 'entropy the system can create', 'kinetic energy of the products']
           },
           {
             label: 'A negative ΔG° means K is',
@@ -174,8 +173,8 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             options: [
               'No — ΔG° > 0 means the reaction never proceeds forward',
               'Yes — with Q ≈ 0, RT ln Q is very negative, making ΔG < 0',
-              'Only if a catalyst is added',
-              'Only at higher temperatures'
+              'No — it must be heated until ΔG° turns negative',
+              'Only if a catalyst first lowers ΔG° below zero'
             ],
             correctAnswer: 1,
             explanation: '$\\Delta G = \\Delta G° + RT\\ln Q$. When $Q \\approx 0$, $\\ln Q \\rightarrow -\\infty$, so $\\Delta G \\ll 0$. The reaction proceeds forward until $Q = K$ (equilibrium). Even reactions with positive ΔG° proceed forward from pure reactants!'

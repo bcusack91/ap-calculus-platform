@@ -259,10 +259,10 @@ Identify the conjugate partners:
           {
             question: 'A strong acid has a conjugate base that is:',
             options: [
-              'Also strong',
+              'Also strong, like the parent acid',
               'Moderate in strength',
               'Negligibly weak',
-              'Amphoteric'
+              'Amphoteric, able to gain or lose a proton'
             ],
             correctAnswer: 2,
             explanation: 'The stronger the acid, the weaker its conjugate base. Strong acids like $HCl$ have conjugate bases ($Cl^-$) that are so weak they essentially never accept protons.'

@@ -145,7 +145,7 @@ This is how we derived the $\\Delta G°$–$K$ relationship!
             question: 'A reaction has ΔG° = +20 kJ/mol. Under what conditions can it still proceed forward?',
             options: [
               'Never — positive ΔG° means it is always nonspontaneous',
-              'When Q is very small (much less than K)',
+              'When Q is much smaller than K',
               'Only at very high temperatures',
               'When a catalyst is added'
             ],
@@ -201,7 +201,7 @@ For a reaction with $\\Delta G° = -10.0$ kJ/mol at $T = 298$ K:
         dropdowns: [
           {
             label: 'When Q = K, the system is',
-            options: ['far from equilibrium', 'at equilibrium', 'at standard conditions', 'at absolute zero']
+            options: ['far from equilibrium', 'at equilibrium', 'at standard conditions', 'at its fastest rate']
           },
           {
             label: 'When Q = 1, ΔG equals',
@@ -237,21 +237,21 @@ For a reaction with $\\Delta G° = -10.0$ kJ/mol at $T = 298$ K:
               '−30 kJ/mol',
               '+4.2 kJ/mol',
               '−64.2 kJ/mol',
-              '0 kJ/mol'
+              '−15.1 kJ/mol'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta G = -30{,}000 + (8.314)(298)\\ln(10^6) = -30{,}000 + (2478)(13.82) = -30{,}000 + 34{,}246 = +4{,}246$ J $\\approx +4.2$ kJ/mol. Even though ΔG° < 0, Q is so large (past equilibrium) that ΔG > 0.'
+            explanation: '$\\Delta G = -30{,}000 + (8.314)(298)\\ln(10^6) = -30{,}000 + (2478)(13.82) = -30{,}000 + 34{,}246 = +4{,}246$ J $\\approx +4.2$ kJ/mol. Even though ΔG° < 0, Q is so large (past equilibrium) that ΔG > 0. Using $\\log Q$ instead of $\\ln Q$ gives −15.1 kJ/mol, subtracting the $RT\\ln Q$ term gives −64.2 kJ/mol, and ignoring Q leaves −30 kJ/mol.'
           },
           {
             question: 'The equation ΔG = ΔG° + RT ln Q reduces to ΔG° = −RT ln K when:',
             options: [
               'T = 298 K',
-              'Q = 1',
-              'Q = K (at equilibrium)',
+              'Q = 1 (all at standard state)',
+              'Q = K',
               'ΔG° = 0'
             ],
             correctAnswer: 2,
-            explanation: 'At equilibrium: $\\Delta G = 0$ and $Q = K$. Substituting: $0 = \\Delta G° + RT\\ln K$, giving $\\Delta G° = -RT\\ln K$.'
+            explanation: 'At equilibrium: $\\Delta G = 0$ and $Q = K$. Substituting: $0 = \\Delta G° + RT\\ln K$, giving $\\Delta G° = -RT\\ln K$. When $Q = 1$ the equation gives $\\Delta G = \\Delta G°$, which is a different statement.'
           }
         ]
       }

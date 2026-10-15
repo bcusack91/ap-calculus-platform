@@ -77,7 +77,7 @@ At equilibrium, $[\\text{NH}_3]$ might be much larger or much smaller than $[\\t
               'The forward rate is greater',
               'The reverse rate is greater',
               'Both rates are equal',
-              'Both rates are zero'
+              'Both rates have dropped to zero'
             ],
             correctAnswer: 2,
             explanation: 'By definition, dynamic equilibrium is when the forward and reverse reaction rates are equal, so there is no net change in concentrations.'
@@ -85,10 +85,10 @@ At equilibrium, $[\\text{NH}_3]$ might be much larger or much smaller than $[\\t
           {
             question: 'At equilibrium, the concentrations of reactants and products are:',
             options: [
-              'Always equal to each other',
-              'Constant but not necessarily equal',
-              'Continuously increasing',
-              'Always zero'
+              'Always equal to each other in molarity',
+              'Constant, not necessarily equal',
+              'Still rising for products, falling for reactants',
+              'Zero for whichever reactant is limiting'
             ],
             correctAnswer: 1,
             explanation: 'Concentrations are constant at equilibrium but are generally NOT equal. Their ratio is determined by the equilibrium constant $K$.'
@@ -96,10 +96,10 @@ At equilibrium, $[\\text{NH}_3]$ might be much larger or much smaller than $[\\t
           {
             question: 'Which condition is required for a system to be at equilibrium?',
             options: [
-              'An open container',
+              'An open container so gases can escape',
               'A closed system at constant temperature',
-              'All reactants consumed',
-              'A catalyst must be present'
+              'Full use of the limiting reactant',
+              'A catalyst for the reverse reaction'
             ],
             correctAnswer: 1,
             explanation: 'Equilibrium requires a closed system (no matter in or out) and constant temperature. A catalyst speeds up the approach to equilibrium but does not change the position.'
@@ -163,7 +163,7 @@ $$\\boxed{K_c = \\frac{[\\text{C}]^c[\\text{D}]^d}{[\\text{A}]^a[\\text{B}]^b}}$
           },
           {
             label: 'When $K \\gg 1$, the equilibrium favors',
-            options: ['reactants', 'products', 'neither — the reaction has stopped', 'the catalyst']
+            options: ['reactants', 'products', 'neither side', 'the faster direction']
           },
           {
             label: 'Adding a catalyst to a system at equilibrium will',
@@ -211,10 +211,10 @@ Answer the following about equilibrium constants:
           {
             question: 'Which statement about chemical equilibrium is correct?',
             options: [
-              'At equilibrium, all reactions have stopped',
-              'Equilibrium can only be reached with a catalyst',
-              'At equilibrium, concentrations are constant because forward and reverse rates are equal',
-              'Equilibrium requires that product and reactant concentrations be equal'
+              'All reactions have stopped, so concentrations stay fixed',
+              'Equilibrium can be reached only with a catalyst present',
+              'Concentrations stay constant because the two rates are equal',
+              'Product and reactant concentrations must become equal'
             ],
             correctAnswer: 2,
             explanation: 'At dynamic equilibrium, forward and reverse rates are equal, so concentrations remain constant. Reactions continue — they have not stopped. A catalyst is not required, and concentrations need not be equal.'
@@ -223,7 +223,7 @@ Answer the following about equilibrium constants:
             question: 'For $\\text{H}_2(g) + \\text{I}_2(g) \\rightleftharpoons 2\\,\\text{HI}(g)$, $K_c = 54$ at 425°C. This tells us that at equilibrium:',
             options: [
               'Very little HI is present',
-              'Products (HI) are favored',
+              'Products are favored',
               'The reaction does not occur',
               'Reactants are favored'
             ],

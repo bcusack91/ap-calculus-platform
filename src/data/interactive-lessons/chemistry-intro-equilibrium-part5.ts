@@ -137,10 +137,10 @@ When $K \\approx 1$ (roughly $10^{-3} < K < 10^3$):
           {
             question: 'If $K = 1.0$ for a reaction, then at equilibrium:',
             options: [
-              'There are no products',
-              'There are no reactants',
-              'The concentrations of products and reactants are comparable',
-              'The reaction is irreversible'
+              'Only products are present at equilibrium',
+              'Only reactants are present at equilibrium',
+              'Neither side is strongly favored',
+              'The reaction runs to completion and stops'
             ],
             correctAnswer: 2,
             explanation: 'When $K = 1$, the numerator (products) and denominator (reactants) of the equilibrium expression are equal, meaning comparable amounts of both are present.'
@@ -257,8 +257,8 @@ Think of heat as a "reactant" (endothermic) or "product" (exothermic).
             options: [
               'Increase K and shift right',
               'Decrease K and shift left',
-              'Not change K',
-              'Increase K and shift left'
+              'Leave K unchanged but shift left',
+              'Increase K and shift to the left'
             ],
             correctAnswer: 1,
             explanation: 'Endothermic: heat is a "reactant." Cooling removes heat, shifting left and decreasing K.'
@@ -269,7 +269,7 @@ Think of heat as a "reactant" (endothermic) or "product" (exothermic).
               'K changes when concentration changes',
               'K changes when a catalyst is added',
               'K changes only with temperature',
-              'K changes when pressure changes'
+              'K changes when the pressure changes'
             ],
             correctAnswer: 2,
             explanation: 'The equilibrium constant K depends ONLY on temperature. Concentration, pressure, volume, and catalyst changes do not affect K.'

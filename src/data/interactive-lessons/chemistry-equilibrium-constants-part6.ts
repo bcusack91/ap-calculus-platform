@@ -74,10 +74,10 @@ This looks exactly like $K_c$ — but the concentrations plugged in are the **cu
           {
             question: 'If $Q = 0$ for a reaction, what does this tell us?',
             options: [
-              'The system is at equilibrium',
-              'No products are present yet — the reaction will proceed forward',
-              'The reaction is complete',
-              'The reaction cannot occur'
+              'The system is at equilibrium, since nothing is changing',
+              'No products are present, so it will shift right',
+              'All reactants are used up, so the reaction is complete',
+              'The reaction cannot occur because K must also be zero'
             ],
             correctAnswer: 1,
             explanation: '$Q = 0$ means the numerator (products) is zero — no products have formed yet. Since $Q < K$ (for any $K > 0$), the reaction will shift right to form products.'
@@ -138,7 +138,7 @@ Since $Q < K$, the reaction shifts **right** (forward) to produce more $CO_{2}$ 
           },
           {
             label: 'When $Q < K$, the net reaction proceeds in the _______ direction',
-            options: ['forward', 'reverse', 'no', 'random']
+            options: ['forward', 'reverse', 'neither', 'exothermic']
           },
           {
             label: 'When $Q > K$, we need to _______ $Q$ to reach equilibrium',
@@ -192,10 +192,10 @@ Current concentrations: $[\\text{H}_2] = 0.10\\;\\text{M}$, $[\\text{I}_2] = 0.2
           {
             question: 'The key difference between $Q$ and $K$ is that:',
             options: [
-              '$Q$ uses partial pressures and $K$ uses concentrations',
-              '$Q$ can be calculated at any point, while $K$ is only for equilibrium',
-              '$Q$ is always larger than $K$',
-              '$Q$ applies only to gas-phase reactions'
+              '$Q$ uses partial pressures, while $K$ uses concentrations',
+              '$Q$ can be found at any moment, while $K$ is only for equilibrium',
+              '$Q$ includes pure solids and liquids, but $K$ omits them',
+              '$Q$ applies only to reactions between gases'
             ],
             correctAnswer: 1,
             explanation: '$Q$ and $K$ have the same mathematical form, but $Q$ uses concentrations at any moment in time, while $K$ uses specifically the equilibrium concentrations. Both can be expressed in terms of concentrations or pressures.'

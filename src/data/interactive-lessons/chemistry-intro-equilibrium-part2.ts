@@ -218,7 +218,7 @@ $$K_p = 0.500 \\times 9.28 \\times 10^{-4} = 4.64 \\times 10^{-4}$$
           },
           {
             label: 'When $\\Delta n > 0$, $K_p$ is',
-            options: ['greater than K_c', 'less than K_c', 'equal to K_c', 'undefined']
+            options: ['greater than $K_c$', 'less than $K_c$', 'equal to $K_c$', 'undefined']
           },
           {
             label: 'Stoichiometric coefficients appear in the $K$ expression as',
@@ -262,10 +262,10 @@ $$K_p = 0.500 \\times 9.28 \\times 10^{-4} = 4.64 \\times 10^{-4}$$
               '$1.0 \\times 10^9$',
               '$6.0 \\times 10^5$',
               '$3.6 \\times 10^2$',
-              '$4.5 \\times 10^{-1}$'
+              '$2.5 \\times 10^{7}$'
             ],
             correctAnswer: 0,
-            explanation: '$K_p = K_c(RT)^{\\Delta n} = 6.0 \\times 10^5 \\times (0.08206 \\times 500)^2 = 6.0 \\times 10^5 \\times (41.03)^2 = 6.0 \\times 10^5 \\times 1684 \\approx 1.0 \\times 10^9$.'
+            explanation: '$K_p = K_c(RT)^{\\Delta n} = 6.0 \\times 10^5 \\times (0.08206 \\times 500)^2 = 6.0 \\times 10^5 \\times (41.03)^2 = 6.0 \\times 10^5 \\times 1684 \\approx 1.0 \\times 10^9$. Ignoring the $(RT)^{\\Delta n}$ factor leaves $6.0 \\times 10^5$, dividing instead of multiplying gives $3.6 \\times 10^2$, and forgetting to square $RT$ gives $2.5 \\times 10^7$.'
           }
         ]
       }

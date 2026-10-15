@@ -145,7 +145,7 @@ A student mixes 25.0 mL of 0.080 M $HNO_3$ with 15.0 mL of 0.080 M $KOH$.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8.0e-4', '0.040', '1.30'],
+        correctAnswers: ['8.0e-4', '0.040', '1.70'],
         hint1: 'Moles $H^+$ = $(0.025)(0.080)$; Moles $OH^-$ = $(0.015)(0.080)$; subtract.',
         hint2: 'Total volume = $25.0 + 15.0 = 40.0$ mL = 0.040 L.',
         hint3: '$[H^+] = \\frac{\\text{excess mol}}{\\text{total vol}}$, then $pH = -\\log[H^+]$.',
@@ -186,21 +186,21 @@ $$pH = -\\log(1.1 \\times 10^{-7}) = 6.96$$
           {
             question: 'The pH of $1.0 \\times 10^{-9}$ M $HCl$ is closest to:',
             options: [
-              '9.0',
-              '7.0',
+              '9.000',
+              '7.000',
               '6.998',
-              '5.0'
+              '5.000'
             ],
             correctAnswer: 2,
-            explanation: '$[H^+]_{total} \\approx 10^{-7} + 10^{-9} = 1.01 \\times 10^{-7}$ M. $pH = -\\log(1.01 \\times 10^{-7}) = 6.996 \\approx 6.998$. The acid barely shifts pH below 7 because the autoionization of water dominates.'
+            explanation: 'Water\'s autoionization supplies about $1.0 \\times 10^{-7}$ M $H^+$, a hundred times more than the acid. Solving exactly gives $[H^+] \\approx 1.005 \\times 10^{-7}$ M, so $pH = -\\log(1.005 \\times 10^{-7}) \\approx 6.998$ — just below 7. Reporting 9.000 ignores water (a basic pH for an acid), 5.000 treats 9 as the pOH, and 7.000 ignores the acid\'s small contribution. The acid barely shifts pH below 7 because the autoionization of water dominates.'
           },
           {
             question: 'Why can\'t a strong acid solution have a pH greater than 7?',
             options: [
-              'Strong acids always have high concentrations',
-              'Adding $H^+$ to water can only increase $[H^+]$ above $10^{-7}$ M',
-              'The pH scale only goes to 7',
-              'Strong acids don\'t dissociate at low concentrations'
+              'Strong acids are always present at high concentrations',
+              'Any added $H^+$ raises $[H^+]$ above $10^{-7}$ M',
+              'The pH scale for acids is defined only from 0 to 7',
+              'Strong acids stop dissociating at very low concentrations'
             ],
             correctAnswer: 1,
             explanation: 'Adding any amount of $H^+$ (even a tiny amount) to water increases $[H^+]$ above the neutral value of $10^{-7}$ M, keeping $pH < 7$.'
@@ -218,7 +218,7 @@ $$pH = -\\log(1.1 \\times 10^{-7}) = 6.96$$
         dropdowns: [
           {
             label: 'To find pH of a strong acid, you need to know the acid\'s',
-            options: ['$K_{a}$ value', 'initial concentration only', 'molecular weight', 'conjugate base strength']
+            options: ['$K_{a}$ and percent ionization', 'concentration', 'molecular weight', 'conjugate base strength']
           },
           {
             label: 'When mixing strong acid and strong base, the solution is acidic if',
@@ -226,10 +226,10 @@ $$pH = -\\log(1.1 \\times 10^{-7}) = 6.96$$
           },
           {
             label: 'The "p" in pH stands for',
-            options: ['power', 'negative logarithm', 'positive', 'potential']
+            options: ['natural logarithm', 'negative logarithm', 'reciprocal', 'potential']
           }
         ],
-        correctAnswers: ['initial concentration only', 'moles acid > moles base', 'negative logarithm'],
+        correctAnswers: ['concentration', 'moles acid > moles base', 'negative logarithm'],
         hint1: 'Strong acids dissociate completely — no $K_a$ needed.',
         hint2: 'Compare total moles, not volumes or concentrations alone.',
         hint3: '$pX = -\\log X$.',

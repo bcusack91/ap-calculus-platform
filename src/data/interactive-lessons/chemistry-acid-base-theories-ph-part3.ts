@@ -127,7 +127,7 @@ This shows how the Lewis definition encompasses the Brønsted-Lowry definition.
             options: [
               'A positive charge',
               'A lone pair of electrons',
-              'A hydrogen atom to donate',
+              'A proton to donate',
               'An incomplete octet'
             ],
             correctAnswer: 1,
@@ -136,7 +136,7 @@ This shows how the Lewis definition encompasses the Brønsted-Lowry definition.
           {
             question: 'Which of these is a Lewis acid but NOT a Brønsted-Lowry acid?',
             options: [
-              '$HCl$',
+              '$HClO_4$',
               '$H_2SO_4$',
               '$BF_3$',
               '$HNO_3$'
@@ -195,7 +195,7 @@ $$Fe^{3+} + 6CN^- \\rightarrow [Fe(CN)_6]^{3-}$$
           },
           {
             label: '$BF_3$ acts as a Lewis acid because boron has',
-            options: ['extra electrons', 'an incomplete octet', 'a full octet', 'high electronegativity']
+            options: ['extra lone-pair electrons', 'an incomplete octet', 'a full octet of electrons', 'high electronegativity']
           },
           {
             label: 'A coordinate covalent bond forms when',
@@ -246,10 +246,10 @@ For each species, identify which acid-base theory can explain its behavior as an
               '$Zn^{2+}$',
               '$OH^-$',
               '$[Zn(OH)_4]^{2-}$',
-              'Water'
+              '$Zn(OH)_2$'
             ],
             correctAnswer: 1,
-            explanation: '$OH^-$ donates lone pairs to $Zn^{2+}$, making $OH^-$ the Lewis base and $Zn^{2+}$ the Lewis acid.'
+            explanation: '$OH^-$ donates lone pairs to $Zn^{2+}$, making $OH^-$ the Lewis base and $Zn^{2+}$ the Lewis acid. The complex ion is the product of that bonding, and $Zn(OH)_2$ is a neutral hydroxide, not the electron-pair donor here.'
           },
           {
             question: 'Which acid-base definition is required to explain why $CO_2$ reacts with $OH^-$?',

@@ -127,21 +127,21 @@ $$\\underbrace{Q = 0}_{\\text{pure reactants}} \\quad \\xleftarrow{\\text{shift 
           {
             question: 'A reaction mixture has $Q = 0.001$ and $K = 0.001$. What happens?',
             options: [
-              'Shifts right',
-              'Shifts left',
-              'Nothing — the system is at equilibrium',
-              'The reaction reverses'
+              'It shifts left, because K is much less than 1',
+              'It shifts right, because Q is small enough to grow',
+              'No net shift; the system is at equilibrium',
+              'The reverse reaction dominates until Q falls below K'
             ],
             correctAnswer: 2,
-            explanation: '$Q = K$, so the system is at equilibrium. No net change occurs, regardless of the numerical value.'
+            explanation: '$Q = K$, so the system is at equilibrium. No net change occurs, regardless of the numerical value. A small $K$ tells you the equilibrium mixture is mostly reactants; it does not by itself cause a shift.'
           },
           {
             question: 'Starting with only reactants (no products) for a reaction with $K = 10^6$:',
             options: [
               'Q = K, so the system is already at equilibrium',
-              'Q = 0 < K, so the reaction shifts right (strongly)',
+              'Q = 0 < K, so the reaction shifts strongly right',
               'Q > K, so the reaction shifts left',
-              'The reaction will not proceed'
+              'Q is undefined, so no prediction is possible'
             ],
             correctAnswer: 1,
             explanation: 'With no products, $Q = 0$. Since $Q < K$, the system shifts right. With $K = 10^6$, the reaction will shift strongly to the right, producing mostly products.'
@@ -190,7 +190,7 @@ Current state: $[\\text{N}_2\\text{O}_4] = 0.50$ M, $[\\text{NO}_2] = 0.20$ M
           },
           {
             label: 'When $Q > K$, Q must _____ to reach equilibrium',
-            options: ['increase', 'decrease', 'stay the same', 'become negative']
+            options: ['increase', 'decrease', 'stay the same', 'reach zero']
           },
           {
             label: 'Adding more product to a system at equilibrium makes Q',

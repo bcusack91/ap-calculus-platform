@@ -154,8 +154,8 @@ Compare: 0.10 M $HCl$ has $pH = 1.00$. Same concentration, but the weak acid has
             options: [
               'The initial concentration of the acid',
               'The amount of acid that dissociates',
-              'The $K_a$ value',
-              'The pH of the solution'
+              'The equilibrium constant $K_a$ for the acid',
+              'The pH of the solution at equilibrium'
             ],
             correctAnswer: 1,
             explanation: '$x$ represents the change in concentration — the amount of $HA$ that dissociates to form $H^+$ and $A^-$. At equilibrium, $[H^+] = [A^-] = x$.'
@@ -166,7 +166,7 @@ Compare: 0.10 M $HCl$ has $pH = 1.00$. Same concentration, but the weak acid has
               '$K_a$ is very large',
               '$C/K_a > 400$',
               'The acid is strong',
-              '$x > 0.05C$'
+              '$x$ is more than $0.05C$'
             ],
             correctAnswer: 1,
             explanation: 'When $C/K_a > 400$, the percent dissociation is less than 5%, and we can approximate $C - x \\approx C$. This works when the acid is weak and/or the concentration is not too dilute.'
@@ -193,17 +193,16 @@ Compare: 0.10 M $HCl$ has $pH = 1.00$. Same concentration, but the weak acid has
 
 **1)** Find the pH of 0.25 M $HF$ ($K_a = 6.8 \\times 10^{-4}$). (2 decimal places)
 
-**2)** Find $[H^+]$ for 0.050 M $HCN$ ($K_a = 6.2 \\times 10^{-10}$). (Enter in scientific notation, e.g. 5.6e-6)
+**2)** Find $[H^+]$ for 0.050 M $HCN$ ($K_a = 6.2 \\times 10^{-10}$). (Enter in scientific notation, e.g. 2.4e-7)
 
 **3)** What is the percent ionization of 0.10 M acetic acid ($[H^+] = 1.34 \\times 10^{-3}$ M)? (1 decimal place, enter number only)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['1.88', '5.6e-6', '1.3'],
+        questions: [{ question: '1)', answer: '1.88', acceptableAnswers: ['1.88', '1.89'] }, { question: '2)', answer: '5.6e-6', acceptableAnswers: ['5.6e-6', '5.57e-6'] }, { question: '3)', answer: '1.3', acceptableAnswers: ['1.3', '1.34'] }],
         hint1: '$[H^+] = \\sqrt{(6.8 \\times 10^{-4})(0.25)}$, then $pH = -\\log[H^+]$.',
         hint2: '$[H^+] = \\sqrt{(6.2 \\times 10^{-10})(0.050)}$.',
         hint3: 'Percent ionization = $([H^+]/C) \\times 100\\%$.',
-        explanation: '1) $[H^+] = \\sqrt{(6.8 \\times 10^{-4})(0.25)} = \\sqrt{1.7 \\times 10^{-4}} = 0.013$ M; $pH = -\\log(0.013) = 1.89$. 2) $[H^+] = \\sqrt{(6.2 \\times 10^{-10})(0.050)} = \\sqrt{3.1 \\times 10^{-11}} = 5.57 \\times 10^{-6}$ M. 3) $(1.34 \\times 10^{-3}/0.10) \\times 100 = 1.3\\%$.'
+        explanation: '1) $[H^+] = \\sqrt{(6.8 \\times 10^{-4})(0.25)} = \\sqrt{1.7 \\times 10^{-4}} = 0.0130$ M; $pH = -\\log(0.0130) = 1.88$. 2) $[H^+] = \\sqrt{(6.2 \\times 10^{-10})(0.050)} = \\sqrt{3.1 \\times 10^{-11}} = 5.57 \\times 10^{-6}$ M. 3) $(1.34 \\times 10^{-3}/0.10) \\times 100 = 1.3\\%$.'
       }
     },
     {
@@ -220,7 +219,7 @@ Compare: 0.10 M $HCl$ has $pH = 1.00$. Same concentration, but the weak acid has
           },
           {
             label: 'If the 5% approximation fails, you must',
-            options: ['assume 100% dissociation', 'use the quadratic formula', 'use a different acid', 'ignore the result']
+            options: ['assume 100% dissociation', 'use the quadratic formula', 'keep dropping $x$', 'use $K_{w}$ instead']
           },
           {
             label: 'Increasing the initial concentration of a weak acid will',
@@ -245,13 +244,13 @@ Compare: 0.10 M $HCl$ has $pH = 1.00$. Same concentration, but the weak acid has
           {
             question: 'For a weak acid, doubling the concentration will cause the pH to:',
             options: [
-              'Decrease by exactly 1',
-              'Decrease by about 0.15',
+              'Increase by about 0.15',
               'Decrease by about 0.30',
+              'Decrease by about 0.15',
               'Stay the same'
             ],
             correctAnswer: 2,
-            explanation: '$[H^+] = \\sqrt{K_a \\cdot C}$. Doubling $C$ multiplies $[H^+]$ by $\\sqrt{2} = 1.414$. Change in pH $= -\\log(\\sqrt{2}) = -0.15$. Wait — that\'s 0.15 decrease. Actually $\\Delta pH = -\\log(\\sqrt{2}) \\approx -0.15$, so pH decreases by about 0.15.'
+            explanation: '$[H^+] = \\sqrt{K_a \\cdot C}$, so doubling $C$ multiplies $[H^+]$ by $\\sqrt{2} \\approx 1.41$. The pH changes by $-\\log(\\sqrt{2}) \\approx -0.15$: it decreases by about 0.15. A drop of 0.30 ($\\log 2$) is what a strong acid would show — it forgets the square root. A more concentrated acid cannot have a higher pH, so an increase is a sign error.'
           },
           {
             question: 'A weak acid solution has $[H^+] = 2.0 \\times 10^{-3}$ M and initial concentration 0.50 M. The percent ionization is:',

@@ -175,12 +175,12 @@ $$\\text{H}_2\\text{O}(s) \\rightarrow \\text{H}_2\\text{O}(l)$$
             question: 'For a reaction with ΔH = +80 kJ and ΔS = +200 J/K, the crossover temperature is:',
             options: [
               '400 K',
-              '250 K',
-              '160 K',
-              '0.4 K'
+              '127 K',
+              '0.4 K',
+              '0.0025 K'
             ],
             correctAnswer: 0,
-            explanation: '$T = \\Delta H/\\Delta S = 80{,}000/200 = 400$ K. Above 400 K: spontaneous. Below 400 K: nonspontaneous.'
+            explanation: '$T = \\Delta H/\\Delta S = 80{,}000/200 = 400$ K. Above 400 K: spontaneous. Below 400 K: nonspontaneous. Forgetting to convert kJ to J gives 0.4 K, dividing ΔS by ΔH gives 0.0025 K, and subtracting 273 reports the Celsius value (127) as if it were kelvins.'
           }
         ]
       }
@@ -230,7 +230,7 @@ For each combination, type "always", "never", "low T", or "high T" for when the 
           },
           {
             label: 'At the crossover temperature, the system is at',
-            options: ['maximum entropy', 'minimum energy', 'equilibrium', 'absolute zero']
+            options: ['maximum entropy', 'minimum energy', 'equilibrium', 'zero enthalpy']
           }
         ],
         correctAnswers: ['ΔH < 0 dominates at low T', 'ΔH and ΔS have the same sign', 'high temperatures', 'equilibrium'],
@@ -251,24 +251,24 @@ For each combination, type "always", "never", "low T", or "high T" for when the 
           {
             question: 'The decomposition of $CaCO_{3}(s)$ has ΔH° = +178 kJ and ΔS° = +161 J/K. At what temperature does decomposition become spontaneous?',
             options: [
-              '554 K',
-              '835 K',
+              '833 K',
+              '1.11 K',
               '1106 K',
-              '1780 K'
+              '0.904 K'
             ],
             correctAnswer: 2,
-            explanation: '$T = \\Delta H/\\Delta S = 178{,}000/161 = 1106$ K (about 833°C). Above this temperature, the entropy term overcomes the enthalpy cost, and the reaction becomes spontaneous.'
+            explanation: '$T = \\Delta H/\\Delta S = 178{,}000/161 = 1106$ K (about 833°C). Above this temperature, the entropy term overcomes the enthalpy cost, and the reaction becomes spontaneous. Writing the Celsius value as kelvins gives 833 K, skipping the kJ-to-J conversion gives 1.11 K, and inverting the ratio without converting gives 0.904 K.'
           },
           {
             question: 'A reaction with ΔH = −50 kJ and ΔS = −100 J/K becomes nonspontaneous above:',
             options: [
               '500 K',
-              '200 K',
-              '50 K',
-              '5000 K'
+              '227 K',
+              '0.5 K',
+              '0.002 K'
             ],
             correctAnswer: 0,
-            explanation: '$T = \\Delta H/\\Delta S = -50{,}000/(-100) = 500$ K. Below 500 K: $|\\Delta H| > |T\\Delta S|$, so ΔG < 0 (spontaneous). Above 500 K: ΔG > 0 (nonspontaneous).'
+            explanation: '$T = \\Delta H/\\Delta S = -50{,}000/(-100) = 500$ K. Below 500 K: $|\\Delta H| > |T\\Delta S|$, so ΔG < 0 (spontaneous). Above 500 K: ΔG > 0 (nonspontaneous). Leaving ΔH in kJ gives 0.5 K, inverting the ratio gives 0.002 K, and 227 is the Celsius value, not the kelvin value.'
           }
         ]
       }

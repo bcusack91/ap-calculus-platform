@@ -113,8 +113,8 @@ If we add more $NH_{3}$:
             options: [
               'Shift the reaction right, producing more D',
               'Shift the reaction left, producing more A and B',
-              'Have no effect on the equilibrium',
-              'Change the value of K'
+              'Have no effect, since C is already a product',
+              'Raise K, since more product is present'
             ],
             correctAnswer: 1,
             explanation: 'Adding a product increases the numerator of Q, making $Q > K$. The system shifts left to consume the excess product, producing more A and B.'
@@ -133,10 +133,10 @@ If we add more $NH_{3}$:
           {
             question: 'After adding extra reactant to a system at equilibrium, the system reaches a new equilibrium. At the new equilibrium:',
             options: [
-              'K has increased',
+              'K has increased to absorb the added reactant',
               'The concentrations are identical to before',
-              'K is the same but the equilibrium position has shifted',
-              'K has decreased'
+              'K is unchanged; the position has shifted',
+              'K has decreased because Q dropped below K'
             ],
             correctAnswer: 2,
             explanation: 'K does not change (temperature is constant). The equilibrium position (actual concentrations) shifts to partially offset the disturbance, but K remains the same value.'
@@ -156,7 +156,7 @@ For: $\\text{H}_2(g) + \\text{Cl}_2(g) \\rightleftharpoons 2\\,\\text{HCl}(g)$ a
 
 **2)** If HCl is removed, the reaction shifts which direction? (Enter "right" or "left")
 
-**3)** If $\\text{H}_2$ is removed and $\\text{Cl}_2$ is simultaneously added, the reaction shifts which direction? (Enter "right" or "left")
+**3)** If HCl is removed and $\\text{Cl}_2$ is simultaneously added, the reaction shifts which direction? (Enter "right" or "left")
       `,
       exercise: {
         boxes: 3,
@@ -164,7 +164,7 @@ For: $\\text{H}_2(g) + \\text{Cl}_2(g) \\rightleftharpoons 2\\,\\text{HCl}(g)$ a
         hint1: 'Adding a reactant: Q decreases, system shifts right.',
         hint2: 'Removing a product: Q decreases, system shifts right.',
         hint3: 'Both stresses favor shifting right (adding reactant AND removing product both decrease Q).',
-        explanation: '1) Adding $Cl_{2}$ (reactant) → Q decreases → shift right. 2) Removing HCl (product) → Q decreases → shift right. 3) Removing $H_{2}$ alone would shift left, but adding $Cl_{2}$ and removing a product both shift right — wait, removing $H_{2}$ is a reactant removal. However, the net effect of adding $Cl_{2}$ AND removing $H_{2}$ depends on magnitudes. In general, adding a reactant and removing $H_{2}$ work in opposite directions... Actually: adding $Cl_{2}$ decreases Q; removing $H_{2}$ increases Q. The question says both happen — the result depends on magnitudes but typically the combination of adding one reactant while removing another is ambiguous. However, the answer "right" assumes the $Cl_{2}$ addition dominates or we note that removing $H_{2}$ doesn\'t appear. Correction: Both adding $Cl_{2}$ (shift right) and removing HCl would both shift right, so the answer is right.'
+        explanation: '1) Adding $Cl_{2}$ (reactant) → Q decreases → shift right. 2) Removing HCl (product) → Q decreases → shift right. 3) Adding $Cl_{2}$ and removing HCl both decrease Q, so the two stresses reinforce each other → shift right.'
       }
     },
     {
@@ -215,10 +215,10 @@ For: $\\text{H}_2(g) + \\text{Cl}_2(g) \\rightleftharpoons 2\\,\\text{HCl}(g)$ a
           {
             question: 'For the Haber process $\\text{N}_2 + 3\\,\\text{H}_2 \\rightleftharpoons 2\\,\\text{NH}_3$, removing $NH_{3}$ as it forms will:',
             options: [
-              'Shift equilibrium left',
-              'Shift equilibrium right, increasing yield',
-              'Have no effect on equilibrium',
-              'Change the value of K'
+              'Shift left to replace the removed $NH_{3}$',
+              'Shift right, increasing yield',
+              'Have no effect on the equilibrium position',
+              'Raise K, so more $NH_{3}$ forms'
             ],
             correctAnswer: 1,
             explanation: 'Removing a product $(NH_{3})$ decreases Q below K, shifting the reaction right. This is actually used industrially — $NH_{3}$ is continuously removed to drive the reaction forward and maximize yield.'

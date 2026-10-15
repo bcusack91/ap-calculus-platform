@@ -110,13 +110,13 @@ $Q_{sp} < K_{sp}$ → **No precipitate forms.**
           {
             question: 'If $Q_{sp} > K_{sp}$, what happens?',
             options: [
-              'More solid dissolves',
-              'Nothing — the solution is at equilibrium',
+              'More of the solid dissolves until $Q_{sp} = K_{sp}$',
+              'Nothing, because the solution is already at equilibrium',
               'A precipitate forms until $Q_{sp} = K_{sp}$',
-              '$K_{sp}$ increases to match $Q_{sp}$'
+              '$K_{sp}$ increases until it matches the new $Q_{sp}$'
             ],
             correctAnswer: 2,
-            explanation: 'When $Q_{sp} > K_{sp}$, the solution is supersaturated. Ions combine to form a precipitate, reducing ion concentrations until $Q_{sp}$ equals $K_{sp}$.'
+            explanation: 'When $Q_{sp} > K_{sp}$, the solution is supersaturated. Ions combine to form a precipitate, reducing ion concentrations until $Q_{sp}$ equals $K_{sp}$. Dissolving more solid would push $Q_{sp}$ even higher, and $K_{sp}$ is fixed at a given temperature.'
           },
           {
             question: 'A student forgets to account for dilution when mixing solutions. Their $Q_{sp}$ will be:',
@@ -142,21 +142,20 @@ $Q_{sp} < K_{sp}$ → **No precipitate forms.**
 
 $K_{sp}(\\text{AgCl}) = 1.8 \\times 10^{-10}$
 
-**1)** What is $[\\text{Ag}^+]$ after mixing? (Enter in scientific notation, e.g. 2.5e-4)
+**1)** What is $[\\text{Ag}^+]$ after mixing? (Enter in scientific notation, e.g. 6.0e-5)
 
-**2)** What is $[\\text{Cl}^-]$ after mixing? (Enter in scientific notation, e.g. 1.5e-3)
+**2)** What is $[\\text{Cl}^-]$ after mixing? (Enter in scientific notation, e.g. 4.0e-2)
 
-**3)** What is $Q_{sp}$? (Enter in scientific notation, e.g. 3.8e-7)
+**3)** What is $Q_{sp}$? (Enter in scientific notation, e.g. 7.25e-9)
 
 *Round all answers to 3 significant figures.*
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['2.5e-4', '1.5e-3', '3.8e-7'],
+        questions: [{ question: '1)', answer: '2.5e-4', acceptableAnswers: ['2.5e-4'] }, { question: '2)', answer: '1.5e-3', acceptableAnswers: ['1.5e-3'] }, { question: '3)', answer: '3.75e-7', acceptableAnswers: ['3.75e-7', '3.8e-7'] }],
         hint1: '$[\\text{Ag}^+] = (0.0010)(25.0)/(100.0)$',
         hint2: '$[\\text{Cl}^-] = (0.0020)(75.0)/(100.0)$',
         hint3: '$Q_{sp} = [\\text{Ag}^+][\\text{Cl}^-] = (2.5 \\times 10^{-4})(1.5 \\times 10^{-3})$',
-        explanation: '1) $[\\text{Ag}^+] = (0.0010)(25.0)/100.0 = 2.5 \\times 10^{-4}$ M. 2) $[\\text{Cl}^-] = (0.0020)(75.0)/100.0 = 1.5 \\times 10^{-3}$ M. 3) $Q_{sp} = (2.5 \\times 10^{-4})(1.5 \\times 10^{-3}) = 3.75 \\times 10^{-7} \\approx 3.8 \\times 10^{-7}$. Since $Q_{sp} = 3.8 \\times 10^{-7} \\gg K_{sp} = 1.8 \\times 10^{-10}$, a precipitate FORMS.'
+        explanation: '1) $[\\text{Ag}^+] = (0.0010)(25.0)/100.0 = 2.5 \\times 10^{-4}$ M. 2) $[\\text{Cl}^-] = (0.0020)(75.0)/100.0 = 1.5 \\times 10^{-3}$ M. 3) $Q_{sp} = (2.5 \\times 10^{-4})(1.5 \\times 10^{-3}) = 3.75 \\times 10^{-7}$. Since $Q_{sp} = 3.75 \\times 10^{-7} \\gg K_{sp} = 1.8 \\times 10^{-10}$, a precipitate FORMS.'
       }
     },
     {
@@ -169,15 +168,15 @@ $K_{sp}(\\text{AgCl}) = 1.8 \\times 10^{-10}$
         dropdowns: [
           {
             label: 'Q_sp is calculated using',
-            options: ['equilibrium concentrations', 'actual ion concentrations in solution', 'initial solid mass', 'K_sp values']
+            options: ['equilibrium concentrations', 'actual ion concentrations in solution', 'the mass of solid initially added', 'the K_sp value itself']
           },
           {
             label: 'When mixing solutions, you must account for',
-            options: ['temperature change only', 'dilution of both solutions', 'color change', 'molar mass']
+            options: ['the temperature change on mixing', 'dilution of both solutions', 'the molar masses of the salts', 'the color of the precipitate']
           },
           {
             label: 'If Q_sp < K_sp, the solution is',
-            options: ['supersaturated', 'unsaturated — more can dissolve', 'at equilibrium', 'contaminated']
+            options: ['supersaturated — a precipitate forms', 'unsaturated — more can dissolve', 'at equilibrium with the solid', 'saturated — no more can dissolve']
           },
           {
             label: 'Precipitation continues until',
@@ -207,24 +206,24 @@ $K_{sp}(\\text{AgCl}) = 1.8 \\times 10^{-10}$
           {
             question: 'Equal volumes of $1.0 \\times 10^{-3}$ M $BaCl_{2}$ and $1.0 \\times 10^{-3}$ M $Na_{2}SO_{4}$ are mixed. $K_{sp}(\\text{BaSO}_4) = 1.1 \\times 10^{-10}$. Does $BaSO_{4}$ precipitate?',
             options: [
-              'No — $Q_{sp} < K_{sp}$',
+              'No — $Q_{sp}$ is less than $K_{sp}$ after dilution',
               'Yes — $Q_{sp} = (5.0 \\times 10^{-4})^2 = 2.5 \\times 10^{-7} > K_{sp}$',
               'Cannot determine without knowing the exact volume',
-              'No — $BaSO_{4}$ is soluble'
+              'No — sulfates are soluble, so $BaSO_{4}$ stays dissolved'
             ],
             correctAnswer: 1,
-            explanation: 'After mixing equal volumes, each ion is diluted by half: $[\\text{Ba}^{2+}] = [\\text{SO}_4^{2-}] = 5.0 \\times 10^{-4}$ M. $Q_{sp} = (5.0 \\times 10^{-4})^2 = 2.5 \\times 10^{-7} \\gg 1.1 \\times 10^{-10} = K_{sp}$. Yes, $BaSO_{4}$ precipitates.'
+            explanation: 'After mixing equal volumes, each ion is diluted by half: $[\\text{Ba}^{2+}] = [\\text{SO}_4^{2-}] = 5.0 \\times 10^{-4}$ M. $Q_{sp} = (5.0 \\times 10^{-4})^2 = 2.5 \\times 10^{-7} \\gg 1.1 \\times 10^{-10} = K_{sp}$. Yes, $BaSO_{4}$ precipitates — it is one of the exceptions to the rule that sulfates are soluble. The exact volume doesn\'t matter, only that the volumes are equal.'
           },
           {
             question: 'To a solution with $[\\text{Ag}^+] = 1.0 \\times 10^{-5}$ M, NaCl is slowly added. At what $[\\text{Cl}^-]$ does AgCl begin to precipitate? ($K_{sp} = 1.8 \\times 10^{-10}$)',
             options: [
-              '$[\\text{Cl}^-] = 1.8 \\times 10^{-5}$ M',
-              '$[\\text{Cl}^-] = 1.8 \\times 10^{-10}$ M',
-              '$[\\text{Cl}^-] = 1.8 \\times 10^{-5}$ M',
+              '$[\\text{Cl}^-] = \\sqrt{K_{sp}} = 1.3 \\times 10^{-5}$ M',
+              '$[\\text{Cl}^-] = K_{sp} \\times [\\text{Ag}^+] = 1.8 \\times 10^{-15}$ M',
+              '$[\\text{Cl}^-] = [\\text{Ag}^+]/K_{sp} = 5.6 \\times 10^{4}$ M',
               '$[\\text{Cl}^-] = K_{sp}/[\\text{Ag}^+] = 1.8 \\times 10^{-5}$ M'
             ],
             correctAnswer: 3,
-            explanation: 'Precipitation begins when $Q_{sp} = K_{sp}$: $[\\text{Ag}^+][\\text{Cl}^-] = 1.8 \\times 10^{-10}$. $[\\text{Cl}^-] = 1.8 \\times 10^{-10}/(1.0 \\times 10^{-5}) = 1.8 \\times 10^{-5}$ M.'
+            explanation: 'Precipitation begins when $Q_{sp} = K_{sp}$: $[\\text{Ag}^+][\\text{Cl}^-] = 1.8 \\times 10^{-10}$. $[\\text{Cl}^-] = 1.8 \\times 10^{-10}/(1.0 \\times 10^{-5}) = 1.8 \\times 10^{-5}$ M. Multiplying instead of dividing gives $1.8 \\times 10^{-15}$ M, dividing the wrong way gives an impossible $5.6 \\times 10^{4}$ M, and $\\sqrt{K_{sp}}$ is the solubility of AgCl in pure water, which ignores the $Ag^{+}$ already present.'
           }
         ]
       }

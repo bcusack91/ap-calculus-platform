@@ -220,14 +220,14 @@ Given: $\\text{A}(g) \\rightleftharpoons 2\\,\\text{B}(g)$, $K_c = 25$
           },
           {
             label: 'Halving all coefficients does what to K?',
-            options: ['Halves K', 'Takes the square root of K', 'Squares K', 'No change']
+            options: ['Halves K', 'Takes the square root', 'Squares K', 'Takes the reciprocal']
           }
         ],
         correctAnswers: [
           'Takes the reciprocal',
           'Squares K',
           'Multiplies them',
-          'Takes the square root of K'
+          'Takes the square root'
         ],
         hint1: 'Reverse → $1/K$. Multiply by n → $K^n$.',
         hint2: 'Doubling all coefficients means $n = 2$, so $K\' = K^2$.',
@@ -249,21 +249,21 @@ Given: $\\text{A}(g) \\rightleftharpoons 2\\,\\text{B}(g)$, $K_c = 25$
               '$12$',
               '$1/12$',
               '$1/7$',
-              '$7$'
+              '$3/4$'
             ],
             correctAnswer: 1,
-            explanation: 'A ⇌ C has $K = K_1 \\times K_2 = 3.0 \\times 4.0 = 12$. Reversing to get C ⇌ A: $K = 1/12$.'
+            explanation: 'A ⇌ C has $K = K_1 \\times K_2 = 3.0 \\times 4.0 = 12$. Reversing to get C ⇌ A: $K = 1/12$. Forgetting to reverse leaves 12, adding the constants before reversing gives 1/7, and dividing $K_1$ by $K_2$ gives 3/4.'
           },
           {
             question: 'If $K = 64$ for $A \\rightleftharpoons 3B$, what is $K$ for $\\frac{1}{3}A \\rightleftharpoons B$?',
             options: [
               '$4$',
-              '$64/3$',
-              '$\\sqrt[3]{64} = 4$',
-              '$64^3$'
+              '$21.3$',
+              '$8$',
+              '$0.25$'
             ],
             correctAnswer: 0,
-            explanation: 'Multiplying the equation by 1/3 gives $K\' = K^{1/3} = 64^{1/3} = 4$.'
+            explanation: 'Multiplying the equation by 1/3 gives $K\' = K^{1/3} = \\sqrt[3]{64} = 4$. Dividing $K$ by 3 gives 21.3, taking a square root instead of a cube root gives 8, and 0.25 is $1/4$, the value for the reverse reaction.'
           }
         ]
       }

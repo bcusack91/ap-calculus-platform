@@ -88,13 +88,13 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
           {
             question: 'At 500 K, $K_c = 6.0$ for a reaction with $\\Delta n = -2$. Given $R = 0.08206$, which is closest to $K_p$?',
             options: [
-              '$K_p = 6.0$',
+              '$K_p = 1.5 \\times 10^{-1}$',
               '$K_p = 3.6 \\times 10^{-3}$',
               '$K_p = 1.0 \\times 10^4$',
-              '$K_p = 246$'
+              '$K_p = 3.5 \\times 10^{-7}$'
             ],
             correctAnswer: 1,
-            explanation: '$K_p = K_c(RT)^{\\Delta n} = 6.0 \\times (0.08206 \\times 500)^{-2} = 6.0 \\times (41.03)^{-2} = 6.0 \\times (1/1683.5) = 6.0 \\times 5.94 \\times 10^{-4} \\approx 3.6 \\times 10^{-3}$.'
+            explanation: '$K_p = K_c(RT)^{\\Delta n} = 6.0 \\times (0.08206 \\times 500)^{-2} = 6.0 \\times (41.03)^{-2} = 6.0 \\times (1/1683.5) = 6.0 \\times 5.94 \\times 10^{-4} \\approx 3.6 \\times 10^{-3}$. Using $\\Delta n = +2$ gives $1.0 \\times 10^4$, using $\\Delta n = -1$ gives $0.15$, and using $R = 8.314$ (the J-based value) instead of 0.08206 gives $3.5 \\times 10^{-7}$.'
           },
           {
             question: 'For $\\text{SO}_2\\text{Cl}_2(g) \\rightleftharpoons \\text{SO}_2(g) + \\text{Cl}_2(g)$, $K_c = 2.99 \\times 10^{-7}$ at 227°C. This reaction at equilibrium contains mostly:',
@@ -132,7 +132,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
           },
           {
             label: 'When $Q < K$ and the system shifts right, $Q$ will _______ until $Q = K$',
-            options: ['decrease', 'increase', 'stay the same', 'fluctuate randomly']
+            options: ['decrease', 'increase', 'stay the same', 'overshoot K']
           }
         ],
         correctAnswers: ['only gaseous species', '$K^3$', 'temperature', 'increase'],
@@ -178,10 +178,10 @@ At equilibrium at 700 K: $[\\text{SO}_2] = 0.10\\;\\text{M}$, $[\\text{O}_2] = 0
           {
             question: 'At 25°C, the decomposition of $\\text{N}_2\\text{O}_5$ has $K_c = 3.4 \\times 10^{18}$. At 35°C, $K_c = 1.2 \\times 10^{19}$. What can you conclude?',
             options: [
-              'The reaction is exothermic because $K$ increases with temperature',
-              'The reaction is endothermic because $K$ increases with temperature',
-              'Temperature does not affect this reaction',
-              'The reaction must be very fast'
+              'It is exothermic, since $K$ rises with temperature',
+              'It is endothermic, since $K$ rises with temperature',
+              'It is exothermic, since $K$ is far above 1',
+              'It must be fast, since $K$ is so large'
             ],
             correctAnswer: 1,
             explanation: 'When temperature increases and $K$ increases, the forward reaction is favored by heat input, meaning it is endothermic. For an endothermic reaction, heat is like a reactant — adding it shifts equilibrium right, increasing $K$.'

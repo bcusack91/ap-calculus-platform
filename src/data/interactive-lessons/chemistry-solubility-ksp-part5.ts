@@ -118,13 +118,13 @@ This is essentially zero compared to the initial 0.010 M — virtually **all** $
           {
             question: 'When slowly adding a precipitating agent to a mixture of ions, which ion precipitates first?',
             options: [
-              'The ion with the largest $K_{sp}$',
-              'The ion that reaches $Q_{sp} = K_{sp}$ at the lowest reagent concentration',
-              'The ion with the highest concentration',
-              'All ions precipitate simultaneously'
+              'The ion whose salt has the largest $K_{sp}$, since it forms most easily',
+              'The ion needing the least reagent to reach $Q_{sp} = K_{sp}$',
+              'The ion present at the highest starting concentration in the mixture',
+              'All of the ions together, once any $Q_{sp}$ exceeds its $K_{sp}$'
             ],
             correctAnswer: 1,
-            explanation: 'The ion that reaches $Q_{sp} = K_{sp}$ at the lowest reagent concentration precipitates first. This is generally the one whose salt has the smallest $K_{sp}$.'
+            explanation: 'The ion that reaches $Q_{sp} = K_{sp}$ at the lowest reagent concentration precipitates first. For salts of the same formula type at similar concentrations, this is the one with the smallest $K_{sp}$ — not the largest. Concentration matters too, which is why the comparison is made through the reagent concentration each ion needs rather than through $K_{sp}$ or concentration alone.'
           },
           {
             question: 'For effective separation by selective precipitation, the $K_{sp}$ values should be:',
@@ -153,21 +153,20 @@ $K_{sp}(\\text{BaSO}_4) = 1.1 \\times 10^{-10}$
 
 Both salts are 1:1 type: $K_{sp} = [\\text{M}^{2+}][\\text{SO}_4^{2-}]$
 
-**1)** $[\\text{SO}_4^{2-}]$ needed to start precipitating $BaSO_{4}$? (Enter in scientific notation, e.g. 5.5e-9)
+**1)** $[\\text{SO}_4^{2-}]$ needed to start precipitating $BaSO_{4}$? (Enter in scientific notation, e.g. 3.0e-7)
 
-**2)** $[\\text{SO}_4^{2-}]$ needed to start precipitating $CaSO_{4}$? (Enter in scientific notation, e.g. 2.5e-3)
+**2)** $[\\text{SO}_4^{2-}]$ needed to start precipitating $CaSO_{4}$? (Enter in scientific notation, e.g. 1.2e-4)
 
 **3)** Which precipitates first? (Enter "BaSO4" or "CaSO4")
 
 *Round all answers to 3 significant figures.*
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['5.5e-9', '2.5e-3', 'BaSO4'],
+        questions: [{ question: '1)', answer: '5.5e-9', acceptableAnswers: ['5.5e-9'] }, { question: '2)', answer: '2.45e-3', acceptableAnswers: ['2.45e-3', '2.5e-3'] }, { question: '3)', answer: 'BaSO4', acceptableAnswers: ['BaSO4', 'BaSO₄'] }],
         hint1: '$[\\text{SO}_4^{2-}] = K_{sp}/[\\text{Ba}^{2+}] = 1.1 \\times 10^{-10}/0.020$',
         hint2: '$[\\text{SO}_4^{2-}] = K_{sp}/[\\text{Ca}^{2+}] = 4.9 \\times 10^{-5}/0.020$',
         hint3: 'The one requiring less $SO_{4}^{2-}$ precipitates first.',
-        explanation: '1) $[\\text{SO}_4^{2-}] = 1.1 \\times 10^{-10}/0.020 = 5.5 \\times 10^{-9}$ M. 2) $[\\text{SO}_4^{2-}] = 4.9 \\times 10^{-5}/0.020 = 2.45 \\times 10^{-3} \\approx 2.5 \\times 10^{-3}$ M. 3) $BaSO_{4}$ precipitates first (requires far less $SO_{4}^{2-}$).'
+        explanation: '1) $[\\text{SO}_4^{2-}] = 1.1 \\times 10^{-10}/0.020 = 5.5 \\times 10^{-9}$ M. 2) $[\\text{SO}_4^{2-}] = 4.9 \\times 10^{-5}/0.020 = 2.45 \\times 10^{-3}$ M. 3) $BaSO_{4}$ precipitates first (requires far less $SO_{4}^{2-}$).'
       }
     },
     {
@@ -184,7 +183,7 @@ Both salts are 1:1 type: $K_{sp} = [\\text{M}^{2+}][\\text{SO}_4^{2-}]$
           },
           {
             label: 'Selective precipitation works best when K_sp values are',
-            options: ['identical', 'very different (orders of magnitude apart)', 'both very large', 'unknown']
+            options: ['within a factor of two of each other', 'orders of magnitude apart', 'both very large', 'larger than the ion concentrations']
           },
           {
             label: 'After the first ion is fully precipitated, you can separate it by',
@@ -193,7 +192,7 @@ Both salts are 1:1 type: $K_{sp} = [\\text{M}^{2+}][\\text{SO}_4^{2-}]$
         ],
         correctAnswers: [
           'first',
-          'very different (orders of magnitude apart)',
+          'orders of magnitude apart',
           'filtration'
         ],
         hint1: 'Smaller $K_{sp}$ → reaches saturation at lower reagent concentration → precipitates first.',
@@ -213,21 +212,21 @@ Both salts are 1:1 type: $K_{sp} = [\\text{M}^{2+}][\\text{SO}_4^{2-}]$
           {
             question: 'A solution has $[\\text{I}^-] = 0.10$ M and $[\\text{Cl}^-] = 0.10$ M. $AgNO_{3}$ is added. $K_{sp}(\\text{AgI}) = 8.5 \\times 10^{-17}$, $K_{sp}(\\text{AgCl}) = 1.8 \\times 10^{-10}$. Which precipitates first?',
             options: [
-              'AgCl — it is more common',
+              'AgCl — its $K_{sp}$ is larger, so it forms more readily',
               'AgI — it has the smaller $K_{sp}$ and reaches saturation first',
-              'Both precipitate simultaneously',
-              'Neither precipitates'
+              'Both at once, since the two anion concentrations are equal',
+              'Neither, since $AgNO_{3}$ is a soluble salt'
             ],
             correctAnswer: 1,
-            explanation: '$[\\text{Ag}^+]$ needed for AgI: $8.5 \\times 10^{-17}/0.10 = 8.5 \\times 10^{-16}$ M. For AgCl: $1.8 \\times 10^{-10}/0.10 = 1.8 \\times 10^{-9}$ M. AgI precipitates first at a much lower $[\\text{Ag}^+]$.'
+            explanation: '$[\\text{Ag}^+]$ needed for AgI: $8.5 \\times 10^{-17}/0.10 = 8.5 \\times 10^{-16}$ M. For AgCl: $1.8 \\times 10^{-10}/0.10 = 1.8 \\times 10^{-9}$ M. AgI precipitates first at a much lower $[\\text{Ag}^+]$. Equal anion concentrations do not mean equal onset points, because the two $K_{sp}$ values differ by a factor of about two million.'
           },
           {
             question: 'For the above problem, when AgCl just begins to precipitate ($[\\text{Ag}^+] = 1.8 \\times 10^{-9}$ M), what fraction of $I^{-}$ remains in solution?',
             options: [
-              'About 50%',
+              'About 50% — half has precipitated before AgCl starts',
               'About 100% — none has precipitated',
               'Essentially 0% — virtually all $I^{-}$ has precipitated',
-              'About 10%'
+              'About 10% of the original iodide is left'
             ],
             correctAnswer: 2,
             explanation: 'When $[\\text{Ag}^+] = 1.8 \\times 10^{-9}$: $[\\text{I}^-] = K_{sp}(\\text{AgI})/[\\text{Ag}^+] = 8.5 \\times 10^{-17}/(1.8 \\times 10^{-9}) = 4.7 \\times 10^{-8}$ M. This is $4.7 \\times 10^{-5}\\%$ of the original 0.10 M — essentially all $I^{-}$ has been removed.'

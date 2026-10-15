@@ -112,20 +112,20 @@ The common ion reduced solubility by a factor of about **7,000**!
           {
             question: 'Adding NaCl to a saturated solution of AgCl will:',
             options: [
-              'Increase the solubility of AgCl',
-              'Decrease the solubility of AgCl (precipitate more AgCl)',
-              'Have no effect on AgCl solubility',
-              'Increase $K_{sp}$'
+              'Increase the solubility of AgCl, since more ions are present',
+              'Decrease AgCl\'s solubility, so more AgCl precipitates',
+              'Have no effect on AgCl, because $Na^{+}$ is a spectator ion',
+              'Increase $K_{sp}$ for AgCl because $[\\text{Cl}^-]$ has gone up'
             ],
             correctAnswer: 1,
-            explanation: 'The added $Cl^{-}$ (common ion) shifts the equilibrium left, causing more AgCl to precipitate and decreasing its solubility. $K_{sp}$ itself doesn\'t change — only the solubility does.'
+            explanation: 'The added $Cl^{-}$ (common ion) shifts the equilibrium left, causing more AgCl to precipitate and decreasing its solubility. $Na^{+}$ is a spectator, but the $Cl^{-}$ that comes with it is not. $K_{sp}$ itself doesn\'t change — only the solubility does.'
           },
           {
             question: 'The common ion effect is an application of:',
             options: [
-              'Hess\'s Law',
+              'Hess\'s Law of heat summation',
               'Le Chatelier\'s Principle',
-              'The Ideal Gas Law',
+              'Dalton\'s Law of partial pressures',
               'Conservation of Mass'
             ],
             correctAnswer: 1,
@@ -159,21 +159,20 @@ $[\\text{SO}_4^{2-}]$ from $Na_{2}SO_{4}$ = 0.050 M
 
 $K_{sp} = (s)(0.050 + s) \\approx (s)(0.050)$
 
-**1)** What is the molar solubility $s$? (Enter in scientific notation, e.g. 2.2e-9)
+**1)** What is the molar solubility $s$? (Enter in scientific notation, e.g. 6.3e-8)
 
-**2)** What is the molar solubility in pure water? (Enter in scientific notation, e.g. 1.0e-5)
+**2)** What is the molar solubility in pure water? (Enter in scientific notation, e.g. 3.4e-7)
 
 **3)** By what factor did the common ion reduce solubility? (Enter as a whole number, approximately)
 
 *Round all answers to 3 significant figures.*
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['2.2e-9', '1.0e-5', '5000'],
+        questions: [{ question: '1)', answer: '2.2e-9', acceptableAnswers: ['2.2e-9'] }, { question: '2)', answer: '1.05e-5', acceptableAnswers: ['1.05e-5', '1.0e-5'] }, { question: '3)', answer: '4770', acceptableAnswers: ['4770', '4800', '4545', '4500', '5000'] }],
         hint1: '$s = K_{sp}/0.050 = 1.1 \\times 10^{-10}/0.050$',
         hint2: 'In pure water: $s = \\sqrt{K_{sp}} = \\sqrt{1.1 \\times 10^{-10}}$',
         hint3: 'Factor = $s_{\\text{pure}}/s_{\\text{common ion}}$',
-        explanation: '1) $s = 1.1 \\times 10^{-10}/0.050 = 2.2 \\times 10^{-9}$ M. 2) $s = \\sqrt{1.1 \\times 10^{-10}} = 1.05 \\times 10^{-5} \\approx 1.0 \\times 10^{-5}$ M. 3) Factor $= 1.0 \\times 10^{-5}/(2.2 \\times 10^{-9}) \\approx 4{,}500 \\approx 5{,}000$.'
+        explanation: '1) $s = 1.1 \\times 10^{-10}/0.050 = 2.2 \\times 10^{-9}$ M. 2) $s = \\sqrt{1.1 \\times 10^{-10}} = 1.05 \\times 10^{-5}$ M. 3) Factor $= 1.05 \\times 10^{-5}/(2.2 \\times 10^{-9}) \\approx 4{,}770$, so the common ion cuts the solubility by a factor of roughly 5,000.'
       }
     },
     {
@@ -186,7 +185,7 @@ $K_{sp} = (s)(0.050 + s) \\approx (s)(0.050)$
         dropdowns: [
           {
             label: 'A common ion is one that',
-            options: ['is present in the original solid only', 'appears in both the solution and the dissolving salt', 'is always a cation', 'changes K_sp']
+            options: ['is present in the original solid only', 'appears in both the solution and the dissolving salt', 'is always a cation, never an anion', 'lowers K_sp for the dissolving salt']
           },
           {
             label: 'The common ion effect always',
@@ -194,13 +193,13 @@ $K_{sp} = (s)(0.050 + s) \\approx (s)(0.050)$
           },
           {
             label: 'When using the approximation with a common ion, we assume',
-            options: ['s is large', 's is negligible compared to the common ion concentration', 'K_sp changes', 'the solid disappears']
+            options: ['s is large compared with the common-ion concentration', 's is tiny next to the common-ion concentration', 'K_sp drops in proportion to the added common ion', 'the common-ion concentration is negligible next to s']
           }
         ],
         correctAnswers: [
           'appears in both the solution and the dissolving salt',
           'decreases solubility',
-          's is negligible compared to the common ion concentration'
+          's is tiny next to the common-ion concentration'
         ],
         hint1: 'A common ion is shared between the dissolving salt and the solution.',
         hint2: 'More of one ion → equilibrium shifts toward solid → less dissolves.',
@@ -219,7 +218,7 @@ $K_{sp} = (s)(0.050 + s) \\approx (s)(0.050)$
           {
             question: 'The solubility of $\\text{CaF}_2$ ($K_{sp} = 3.9 \\times 10^{-11}$) in 0.10 M NaF compared to pure water is:',
             options: [
-              'Higher — NaF helps dissolution',
+              'Higher — the extra ions help $CaF_{2}$ dissolve',
               'Lower — $F^{-}$ is a common ion that shifts equilibrium left',
               'The same — NaF doesn\'t affect $CaF_{2}$',
               'Zero — $CaF_{2}$ won\'t dissolve at all'
@@ -231,12 +230,12 @@ $K_{sp} = (s)(0.050 + s) \\approx (s)(0.050)$
             question: 'For $\\text{PbI}_2$ ($K_{sp} = 9.8 \\times 10^{-9}$) in 0.10 M KI, the molar solubility is approximately:',
             options: [
               '$s = K_{sp}/(0.10)^2 = 9.8 \\times 10^{-7}$ M',
-              '$s = \\sqrt{K_{sp}} = 9.9 \\times 10^{-5}$ M',
-              '$s = K_{sp}/0.10 = 9.8 \\times 10^{-8}$ M',
-              '$s = K_{sp} = 9.8 \\times 10^{-9}$ M'
+              '$s = \\sqrt[3]{K_{sp}/4} = 1.3 \\times 10^{-3}$ M',
+              '$s = K_{sp}/(2 \\times 0.10)^2 = 2.5 \\times 10^{-7}$ M',
+              '$s = K_{sp}/[\\text{I}^-] = 9.8 \\times 10^{-8}$ M'
             ],
             correctAnswer: 0,
-            explanation: '$\\text{PbI}_2 \\rightleftharpoons \\text{Pb}^{2+} + 2\\,\\text{I}^-$. $K_{sp} = (s)(0.10 + 2s)^2 \\approx (s)(0.10)^2 = 0.010s$. $s = 9.8 \\times 10^{-9}/0.010 = 9.8 \\times 10^{-7}$ M.'
+            explanation: '$\\text{PbI}_2 \\rightleftharpoons \\text{Pb}^{2+} + 2\\,\\text{I}^-$. $K_{sp} = (s)(0.10 + 2s)^2 \\approx (s)(0.10)^2 = 0.010s$. $s = 9.8 \\times 10^{-9}/0.010 = 9.8 \\times 10^{-7}$ M. The 0.10 M of $I^{-}$ already comes from KI, so it is not doubled; dividing by $[\\text{I}^-]$ without squaring gives $9.8 \\times 10^{-8}$ M; and $\\sqrt[3]{K_{sp}/4}$ is the solubility in pure water, which ignores the common ion.'
           }
         ]
       }

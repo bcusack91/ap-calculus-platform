@@ -139,9 +139,9 @@ Adding inert gas at constant pressure:
             question: 'A catalyst is added to a system at equilibrium. Which statement is true?',
             options: [
               'The equilibrium shifts right',
-              'The equilibrium shifts left',
-              'K increases',
-              'The equilibrium position is unchanged'
+              'The equilibrium shifts to the left',
+              'K increases, favoring products',
+              'The position is unchanged'
             ],
             correctAnswer: 3,
             explanation: 'Catalysts speed up both forward and reverse reactions equally. The equilibrium position and K value are both unchanged.'
@@ -149,21 +149,21 @@ Adding inert gas at constant pressure:
           {
             question: 'Adding helium gas to a sealed rigid container at equilibrium will:',
             options: [
-              'Shift the equilibrium right',
-              'Shift the equilibrium left',
+              'Shift toward the side with fewer gas moles',
+              'Shift toward the side with more gas moles',
               'Have no effect on the equilibrium',
-              'Change the value of K'
+              'Increase K as the total pressure rises'
             ],
             correctAnswer: 2,
-            explanation: 'At constant volume, adding an inert gas increases total pressure but does not change the partial pressures or concentrations of any reactant or product. Q is unchanged, so no shift occurs.'
+            explanation: 'At constant volume, adding an inert gas increases total pressure but does not change the partial pressures or concentrations of any reactant or product. Q is unchanged, so no shift occurs, and K (which depends only on temperature) is unchanged too.'
           },
           {
             question: 'A catalyst makes a reaction reach equilibrium faster by:',
             options: [
-              'Increasing only the forward rate',
-              'Increasing only the reverse rate',
+              'Raising only the forward rate',
+              'Lowering only the forward activation energy',
               'Lowering the activation energy for both directions',
-              'Changing the equilibrium constant'
+              'Raising K so equilibrium lies further right'
             ],
             correctAnswer: 2,
             explanation: 'A catalyst provides an alternative reaction pathway with lower activation energy. This affects both the forward and reverse reactions equally, speeding up both without changing K.'
@@ -263,10 +263,10 @@ Adding inert gas at constant pressure:
           {
             question: 'Why is a catalyst useful in the Haber process even though it doesn\'t increase yield?',
             options: [
-              'It allows the reaction to reach equilibrium at a practical rate',
-              'It increases K',
-              'It shifts equilibrium toward products',
-              'It eliminates the need for high pressure'
+              'It lets equilibrium be reached at a practical rate',
+              'It raises K at moderate temperature',
+              'It shifts the equilibrium toward ammonia',
+              'It removes the need for high pressure'
             ],
             correctAnswer: 0,
             explanation: 'The catalyst (iron) allows the Haber process to reach equilibrium quickly at moderate temperatures. Without it, the reaction would be too slow to be industrially practical. The catalyst doesn\'t change K or the equilibrium position.'

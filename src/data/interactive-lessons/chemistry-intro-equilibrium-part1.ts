@@ -100,10 +100,10 @@ $$\\boxed{\\text{Rate}_{\\text{forward}} = \\text{Rate}_{\\text{reverse}}}$$
           {
             question: 'At dynamic equilibrium, which statement is true?',
             options: [
-              'The forward reaction has stopped',
+              'The forward reaction has stopped completely',
               'The concentrations of reactants and products are equal',
-              'The rates of the forward and reverse reactions are equal',
-              'Only the reverse reaction is occurring'
+              'Forward and reverse rates are equal',
+              'Only the reverse reaction is still occurring'
             ],
             correctAnswer: 2,
             explanation: 'At dynamic equilibrium, both reactions continue to occur but at the same rate, resulting in no net change in concentrations. The concentrations are constant but NOT necessarily equal.'
@@ -117,10 +117,10 @@ $$\\boxed{\\text{Rate}_{\\text{forward}} = \\text{Rate}_{\\text{reverse}}}$$
           {
             question: 'A sealed container holds $N_{2}O_{4}$ and $NO_{2}$ at equilibrium. If you could tag individual molecules, you would observe:',
             options: [
-              'No molecules changing identity',
-              'Only $N_{2}O_{4}$ breaking apart',
-              'Only $NO_{2}$ combining',
-              'Both $N_{2}O_{4}$ breaking apart and $NO_{2}$ combining at equal rates'
+              'No molecules changing identity once equilibrium is reached',
+              'Only $N_{2}O_{4}$ splitting, faster than it re-forms',
+              'Only $NO_{2}$ combining, since splitting has ended',
+              '$N_{2}O_{4}$ splitting and $NO_{2}$ combining at equal rates'
             ],
             correctAnswer: 3,
             explanation: 'Dynamic equilibrium means both forward ($N_{2}O_{4}$ → 2 $NO_{2}$) and reverse (2 $NO_{2}$ → $N_{2}O_{4}$) reactions continue. Individual molecules constantly interconvert, but the overall amounts stay the same.'
@@ -185,15 +185,15 @@ You know a system is at equilibrium when:
         dropdowns: [
           {
             label: 'At equilibrium, the concentrations of reactants and products are',
-            options: ['always equal', 'constant but not necessarily equal', 'always zero', 'continuously increasing']
+            options: ['always equal to each other', 'constant, not always equal', 'zero for the limiting reactant', 'still steadily increasing']
           },
           {
             label: 'A system at equilibrium requires a',
-            options: ['closed system', 'open system', 'vacuum', 'catalyst']
+            options: ['closed system', 'open system', 'constant pressure', 'catalyst']
           },
           {
             label: 'The word "dynamic" in dynamic equilibrium means',
-            options: ['the reaction has stopped', 'concentrations are changing', 'reactions are still occurring in both directions', 'energy is being released']
+            options: ['the reaction has stopped', 'concentrations keep changing', 'both reactions still occur', 'energy is still being released']
           },
           {
             label: 'If you open a container of a gaseous equilibrium to the atmosphere, the system',
@@ -201,9 +201,9 @@ You know a system is at equilibrium when:
           }
         ],
         correctAnswers: [
-          'constant but not necessarily equal',
+          'constant, not always equal',
           'closed system',
-          'reactions are still occurring in both directions',
+          'both reactions still occur',
           'is no longer at equilibrium'
         ],
         hint1: 'Equilibrium means no net change, not that amounts are the same.',
@@ -230,7 +230,7 @@ At a certain temperature, the following data are collected at equilibrium:
 
 **1)** What is the rate of the forward reaction compared to the reverse reaction at equilibrium? (Enter "equal")
 
-**2)** If the forward reaction rate is $2.0 \\times 10^{-3}$ M/s, what is the reverse reaction rate in M/s? (Enter as a decimal, e.g. 0.002)
+**2)** If the forward reaction rate is $2.0 \\times 10^{-3}$ M/s, what is the reverse reaction rate in M/s? (Enter as a decimal, e.g. 0.035)
 
 **3)** Is the concentration of HI changing at equilibrium? (Enter "no")
 
@@ -258,8 +258,8 @@ At a certain temperature, the following data are collected at equilibrium:
             options: [
               'The amounts of reactants and products must be equal',
               'The forward reaction rate exceeds the reverse rate',
-              'Both forward and reverse reactions continue at equal rates',
-              'All chemical change has ceased'
+              'Both reactions continue at equal rates',
+              'All chemical change has ceased at the molecular level'
             ],
             correctAnswer: 2,
             explanation: 'At equilibrium, forward rate = reverse rate. Both reactions continue (dynamic), but there is no net change in concentrations.'
@@ -267,9 +267,9 @@ At a certain temperature, the following data are collected at equilibrium:
           {
             question: 'Which of the following is NOT a requirement for chemical equilibrium?',
             options: [
-              'The system must be closed',
+              'The system must be closed to matter',
               'The reaction must be reversible',
-              'The concentrations of products and reactants must be equal',
+              'Reactant and product concentrations must be equal',
               'The temperature must be constant'
             ],
             correctAnswer: 2,

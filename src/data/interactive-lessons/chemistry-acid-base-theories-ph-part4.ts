@@ -163,12 +163,12 @@ So $pK_a = -\\log K_a$, $pK_b = -\\log K_b$, $pK_w = -\\log K_w = 14$
             question: 'A solution with $pH = 2$ has an $[H^+]$ that is how many times greater than a solution with $pH = 5$?',
             options: [
               '3 times',
-              '30 times',
-              '300 times',
+              '2.5 times',
+              '0.001 times',
               '1000 times'
             ],
             correctAnswer: 3,
-            explanation: 'Each pH unit represents a factor of 10. A difference of 3 pH units means $10^3 = 1000$ times the $[H^+]$. $pH = 2: [H^+] = 10^{-2}$; $pH = 5: [H^+] = 10^{-5}$; ratio $= 10^{-2}/10^{-5} = 10^3 = 1000$.'
+            explanation: 'Each pH unit represents a factor of 10. A difference of 3 pH units means $10^3 = 1000$ times the $[H^+]$. $pH = 2: [H^+] = 10^{-2}$; $pH = 5: [H^+] = 10^{-5}$; ratio $= 10^{-2}/10^{-5} = 10^3 = 1000$. Answering 3 times subtracts the pH values, 2.5 times divides them, and 0.001 times inverts the ratio (the lower pH has MORE $H^+$).'
           }
         ]
       }
@@ -232,7 +232,7 @@ An important AP Chemistry rule:
           },
           {
             label: 'Lowering pH by 2 units means $[H^+]$ increases by a factor of',
-            options: ['2', '20', '100', '200']
+            options: ['2', '20', '100', '0.01']
           },
           {
             label: 'If pH + pOH = 14, and pH = 12, then pOH =',
@@ -240,7 +240,7 @@ An important AP Chemistry rule:
           },
           {
             label: 'The pH of $1.0 \\times 10^{-7}$ M HCl is closest to',
-            options: ['7.0', 'slightly less than 7', '0', '14']
+            options: ['exactly 7.0', 'slightly less than 7', 'much less than 7', 'more than 7']
           }
         ],
         correctAnswers: ['acidic', '100', '2', 'slightly less than 7'],

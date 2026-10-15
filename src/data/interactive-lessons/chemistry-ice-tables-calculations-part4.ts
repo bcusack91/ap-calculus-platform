@@ -104,35 +104,35 @@ $$x^2 = 1.6 \\times 10^{-5} \\implies x = 4.0 \\times 10^{-3}$$
           {
             question: 'The small-x approximation is valid when:',
             options: [
-              'K is very large',
+              'K is very large, so the reaction goes nearly to completion',
               'K is very small relative to initial concentrations',
-              'K equals 1',
-              'The reaction is exothermic'
+              'K is close to 1, so reactants and products are balanced',
+              'The initial concentration is small compared with the value of K'
             ],
             correctAnswer: 1,
-            explanation: 'When K is very small (typically $< 10^{-3}$) relative to initial concentrations, very little product forms and $x$ is negligible.'
+            explanation: 'When K is very small (typically $< 10^{-3}$) relative to initial concentrations, very little product forms and $x$ is negligible. Note the direction of the comparison: K must be small relative to the initial concentration, not the other way around. A large K or a K near 1 means $x$ is a sizable fraction of the starting amount.'
           },
           {
             question: 'After using the approximation, you find $x = 0.15$ and $[\\text{A}]_0 = 1.00$ M. Is the approximation valid?',
             options: [
-              'Yes — 15% is close enough',
+              'Yes — 15% is within a 20% margin',
               'No — 15% exceeds the 5% threshold',
-              'Yes — any value of x is fine',
-              'No — x must be exactly zero'
+              'Yes — x is less than 1.00 M',
+              'No — x must be under 0.010 M'
             ],
             correctAnswer: 1,
-            explanation: '$\\frac{0.15}{1.00} \\times 100\\% = 15\\%$, which exceeds 5%. The approximation is NOT valid. You must solve the full quadratic.'
+            explanation: '$\\frac{0.15}{1.00} \\times 100\\% = 15\\%$, which exceeds 5%. The approximation is NOT valid. You must solve the full quadratic. The test is the percentage of the initial concentration (5%), not an absolute cutoff for $x$, and $x < [\\text{A}]_0$ only guarantees a positive concentration, not a valid approximation.'
           },
           {
             question: 'Which simplification does the small-x approximation make?',
             options: [
-              '$K \\approx 0$',
+              '$K \\approx [\\text{initial}]$',
               '$[\\text{initial}] - x \\approx [\\text{initial}]$',
               '$x \\approx [\\text{initial}]$',
-              '$K \\approx 1$'
+              '$x^2 \\approx 0$ in the numerator'
             ],
             correctAnswer: 1,
-            explanation: 'The approximation says that $x$ is so small that subtracting it from the initial concentration doesn\'t significantly change the value: $[\\text{A}]_0 - x \\approx [\\text{A}]_0$.'
+            explanation: 'The approximation says that $x$ is so small that subtracting it from the initial concentration doesn\'t significantly change the value: $[\\text{A}]_0 - x \\approx [\\text{A}]_0$. The $x^2$ in the numerator is kept — dropping it would leave nothing to solve for.'
           }
         ]
       }
@@ -151,19 +151,18 @@ Using the approximation $0.50 - x \\approx 0.50$:
 
 $$1.0 \\times 10^{-6} = \\frac{x^2}{0.50}$$
 
-**1)** Solve for $x$. (Enter in scientific notation, e.g. 7.1e-4)
+**1)** Solve for $x$. (Enter in scientific notation, e.g. 3.5e-6)
 
-**2)** What percent of the initial [A] is $x$? (Enter as a percentage to 3 significant figures, e.g. 0.14)
+**2)** What percent of the initial [A] is $x$? (Enter as a percentage to 3 significant figures, e.g. 2.50)
 
 **3)** Is the approximation valid? (Enter "yes" or "no")
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['7.1e-4', '0.14', 'yes'],
+        questions: [{ question: '1)', answer: '7.07e-4', acceptableAnswers: ['7.07e-4', '7.1e-4'] }, { question: '2)', answer: '0.141', acceptableAnswers: ['0.141', '0.14', '0.142'] }, { question: '3)', answer: 'yes', acceptableAnswers: ['yes'] }],
         hint1: '$x^2 = (1.0 \\times 10^{-6})(0.50) = 5.0 \\times 10^{-7}$. $x = \\sqrt{5.0 \\times 10^{-7}}$',
-        hint2: '$\\frac{7.1 \\times 10^{-4}}{0.50} \\times 100\\%$',
+        hint2: '$\\frac{7.07 \\times 10^{-4}}{0.50} \\times 100\\%$',
         hint3: 'Less than 5% means the approximation is valid.',
-        explanation: '1) $x = \\sqrt{5.0 \\times 10^{-7}} = 7.07 \\times 10^{-4} \\approx 7.1 \\times 10^{-4}$. 2) $\\frac{7.1 \\times 10^{-4}}{0.50} \\times 100\\% = 0.14\\%$. 3) $0.14\\% < 5\\%$, so yes, the approximation is valid.'
+        explanation: '1) $x = \\sqrt{5.0 \\times 10^{-7}} = 7.07 \\times 10^{-4} \\approx 7.1 \\times 10^{-4}$. 2) $\\frac{7.07 \\times 10^{-4}}{0.50} \\times 100\\% = 0.141\\%$. 3) $0.141\\% < 5\\%$, so yes, the approximation is valid.'
       }
     },
     {
@@ -176,25 +175,25 @@ $$1.0 \\times 10^{-6} = \\frac{x^2}{0.50}$$
         dropdowns: [
           {
             label: 'The approximation is most useful when K is',
-            options: ['very large', 'very small', 'equal to 1', 'negative']
+            options: ['very large', 'very small', 'equal to 1', 'greater than 1']
           },
           {
             label: 'The 5% test checks whether',
-            options: ['K is valid', 'x is small enough relative to initial concentrations', 'the reaction reached equilibrium', 'temperature is constant']
+            options: ['K is large enough to trust the answer', 'x is small enough relative to initial concentrations', 'the reaction has actually reached equilibrium', 'the temperature stayed constant throughout']
           },
           {
             label: 'If the 5% test fails, you must',
-            options: ['use a different K', 'solve the full quadratic equation', 'ignore the result', 'add more reactant']
+            options: ['use a different value of K', 'solve the full quadratic', 'keep the approximate x anyway', 'double the initial concentration']
           },
           {
             label: 'The approximation converts a quadratic equation into a',
-            options: ['cubic equation', 'simple algebra problem', 'differential equation', 'linear equation with no solution']
+            options: ['cubic equation', 'simple algebra problem', 'differential equation', 'system of two equations']
           }
         ],
         correctAnswers: [
           'very small',
           'x is small enough relative to initial concentrations',
-          'solve the full quadratic equation',
+          'solve the full quadratic',
           'simple algebra problem'
         ],
         hint1: 'Small K means the reaction barely proceeds → x is small.',
@@ -215,12 +214,12 @@ $$1.0 \\times 10^{-6} = \\frac{x^2}{0.50}$$
             question: 'For $\\text{HA}(aq) \\rightleftharpoons \\text{H}^+(aq) + \\text{A}^-(aq)$, $K_a = 1.8 \\times 10^{-5}$, $[\\text{HA}]_0 = 0.10$ M. Is the approximation likely valid?',
             options: [
               'Yes — $0.10 / (1.8 \\times 10^{-5}) = 5556 > 100$',
-              'No — K is too large',
-              'No — the concentration is too low',
-              'Cannot determine'
+              'No — $1.8 \\times 10^{-5} / 0.10 = 1.8 \\times 10^{-4} < 100$',
+              'No — 0.10 M is too dilute for x to be considered negligible',
+              'Cannot determine without first solving the quadratic'
             ],
             correctAnswer: 0,
-            explanation: '$[\\text{initial}]/K = 0.10/(1.8 \\times 10^{-5}) = 5556 \\gg 100$. The ratio is far greater than 100, so the approximation will be valid.'
+            explanation: '$[\\text{initial}]/K = 0.10/(1.8 \\times 10^{-5}) = 5556 \\gg 100$. The ratio is far greater than 100, so the approximation will be valid. Dividing K by the concentration (instead of the concentration by K) flips the ratio and the conclusion. No quadratic is needed to make this check — that is the point of it.'
           },
           {
             question: 'Using the approximation for the problem above, $x \\approx$:',

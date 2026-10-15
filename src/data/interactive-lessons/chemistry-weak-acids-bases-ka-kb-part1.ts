@@ -116,7 +116,7 @@ $$\\boxed{K_a = 10^{-pK_a} \\qquad pK_a = -\\log K_a}$$
             options: [
               'Stronger because its $K_a$ is smaller',
               'Weaker because its $K_a$ is smaller',
-              'Equal in strength',
+              'Equal in strength, since both are weak acids',
               'Impossible to compare without knowing concentration'
             ],
             correctAnswer: 1,
@@ -136,7 +136,7 @@ $$\\boxed{K_a = 10^{-pK_a} \\qquad pK_a = -\\log K_a}$$
           {
             question: 'An acid with $pK_a = 3.2$ compared to one with $pK_a = 7.8$ is:',
             options: [
-              'Weaker',
+              'Much weaker',
               'Stronger',
               'The same strength',
               'Cannot be determined'
@@ -184,7 +184,7 @@ But 0.10 M $CH_3COOH$: $pH = 2.87$ (we\'ll calculate this in Part 2)
         dropdowns: [
           {
             label: 'A weak acid in water reaches',
-            options: ['complete dissociation', 'equilibrium with partial dissociation', 'no dissociation', 'complete neutralization']
+            options: ['complete dissociation to $H^+$ and $A^-$', 'equilibrium, partly dissociated', 'no dissociation, staying as HA molecules', 'complete neutralization by water']
           },
           {
             label: 'The $K_a$ of a strong acid like $HCl$ is',
@@ -196,10 +196,10 @@ But 0.10 M $CH_3COOH$: $pH = 2.87$ (we\'ll calculate this in Part 2)
           },
           {
             label: 'For weak acids, $[H^+]$ is always',
-            options: ['equal to initial acid concentration', 'greater than initial acid concentration', 'less than initial acid concentration', 'zero']
+            options: ['equal to initial acid concentration', 'greater than initial acid concentration', 'less than initial acid concentration', 'equal to $K_{a}$ of the acid']
           }
         ],
-        correctAnswers: ['equilibrium with partial dissociation', 'very large', '5', 'less than initial acid concentration'],
+        correctAnswers: ['equilibrium, partly dissociated', 'very large', '5', 'less than initial acid concentration'],
         hint1: 'Weak acids do not fully dissociate.',
         hint2: 'Strong acids dissociate completely, meaning $K_a$ is extremely large.',
         hint3: '$pK_a = -\\log(1.0 \\times 10^{-5}) = 5$.',
@@ -214,13 +214,12 @@ But 0.10 M $CH_3COOH$: $pH = 2.87$ (we\'ll calculate this in Part 2)
 
 **1)** Convert $K_a = 1.8 \\times 10^{-5}$ to $pK_a$ (3 significant figures)
 
-**2)** Convert $pK_a = 9.21$ to $K_a$ (Enter in scientific notation, e.g. 6.2e-10)
+**2)** Convert $pK_a = 9.21$ to $K_a$ (Enter in scientific notation, e.g. 3.9e-8)
 
 **3)** Rank by acid strength (enter strongest): Acid A ($pK_a = 2.1$), Acid B ($pK_a = 6.5$), Acid C ($pK_a = 4.3$). Enter A, B, or C.
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['4.74', '6.2e-10', 'A'],
+        questions: [{ question: '1)', answer: '4.74', acceptableAnswers: ['4.74'] }, { question: '2)', answer: '6.2e-10', acceptableAnswers: ['6.2e-10', '6.17e-10'] }, { question: '3)', answer: 'A', acceptableAnswers: ['A'] }],
         hint1: '$pK_a = -\\log(1.8 \\times 10^{-5})$.',
         hint2: '$K_a = 10^{-9.21}$.',
         hint3: 'Lowest $pK_a$ = strongest acid.',
@@ -241,10 +240,10 @@ But 0.10 M $CH_3COOH$: $pH = 2.87$ (we\'ll calculate this in Part 2)
               '$[H^+] = 0.10$ M',
               '$[H^+] \\ll 0.10$ M',
               '$[H^+] > 0.10$ M',
-              '$[H^+] = 0$ M'
+              '$[H^+] = 0.050$ M'
             ],
             correctAnswer: 1,
-            explanation: 'With such a small $K_a$, very little $HCN$ dissociates. $[H^+]$ will be much less than 0.10 M. We\'ll calculate the exact value using an ICE table in Part 2.'
+            explanation: 'With such a small $K_a$, very little $HCN$ dissociates, so $[H^+]$ will be much less than 0.10 M. $[H^+] = 0.10$ M would mean complete ionization, and 0.050 M would mean half the acid ionized — both far too much for such a small $K_a$. We\'ll calculate the exact value using an ICE table in Part 2.'
           },
           {
             question: 'The $K_a$ expression for $H_2CO_3$ (first dissociation) is:',

@@ -107,10 +107,10 @@ $$\\boxed{\\frac{x}{[\\text{initial}]} \\times 100\\% < 5\\% \\quad \\text{(vali
           {
             question: 'In an ICE table for $\\text{A} \\rightleftharpoons \\text{B} + \\text{C}$, the change row shows $-x$, $+x$, $+x$. This assumes the reaction shifts:',
             options: [
-              'Left',
-              'Right',
-              'Neither direction',
-              'Both directions equally'
+              'Left, toward reactant A',
+              'Right, toward B and C',
+              'Neither; the system is already at equilibrium',
+              'Both directions equally, so x cancels out'
             ],
             correctAnswer: 1,
             explanation: 'Reactant A decreases ($-x$) and products B, C increase ($+x$). This corresponds to a rightward shift (forward reaction).'
@@ -118,10 +118,10 @@ $$\\boxed{\\frac{x}{[\\text{initial}]} \\times 100\\% < 5\\% \\quad \\text{(vali
           {
             question: 'After solving an ICE problem, a student gets $[\\text{B}] = -0.10$ M. What should the student do?',
             options: [
-              'Report -0.10 M as the answer',
-              'Take the absolute value to get 0.10 M',
-              'Re-examine the problem — likely used the wrong quadratic root or assumed wrong shift direction',
-              'Assume the reaction doesn\'t occur'
+              'Report −0.10 M; the sign shows B is being consumed',
+              'Take the absolute value and report 0.10 M',
+              'Recheck the work — likely the wrong quadratic root or the wrong shift direction',
+              'Set [B] = 0 M, since the reaction must not occur'
             ],
             correctAnswer: 2,
             explanation: 'A negative concentration is physically impossible. The student should check: (1) Did they pick the correct root of the quadratic? (2) Did they assume the correct direction of shift? (3) Is there an arithmetic error?'
@@ -137,11 +137,11 @@ $$\\boxed{\\frac{x}{[\\text{initial}]} \\times 100\\% < 5\\% \\quad \\text{(vali
 
 > **Problem:** For $\\text{CO}(g) + \\text{Cl}_2(g) \\rightleftharpoons \\text{COCl}_2(g)$ with $K_c = 255$ at 100°C, a 1.00 L flask is charged with 0.400 mol CO and 0.400 mol $Cl_{2}$. No $COCl_{2}$ is initially present.
 
-**1)** Write the K expression and set up the ICE table. What is $[\\text{COCl}_2]$ at equilibrium in terms of x? (Enter, e.g., "x")
+**1)** Write the K expression and set up the ICE table. What is $[\\text{COCl}_2]$ at equilibrium in terms of x? (Enter an expression in x, e.g., "0.400 - x")
 
-**2)** The K expression becomes $255 = \\frac{x}{(0.400-x)^2}$. Using the approximation ($0.400/255$ is small... actually $0.400/255 = 0.00157 < 100$). Should you use the quadratic? (Enter "yes" or "no")
+**2)** The K expression becomes $255 = \\frac{x}{(0.400-x)^2}$. Because $K$ is large, $x$ is NOT small compared with 0.400. Must you avoid the small-x approximation $0.400 - x \\approx 0.400$ here (using the quadratic or a completion-and-back-calculate approach instead)? (Enter "yes" or "no")
 
-**3)** Actually, $[\\text{init}]/K = 0.400/255 = 0.00157$, which is much LESS than 100. This means K is LARGE relative to the initial concentration, meaning the reaction goes nearly to completion. The limiting approach here is to assume the reaction goes to completion, then back-calculate. If the reaction goes to completion, what is the limiting reagent amount of $COCl_{2}$ formed? (Enter in mol)
+**3)** Because $K$ is large, the reaction goes nearly to completion, so a useful approach is to let it go to completion first and then back-calculate. If the reaction goes to completion, how many moles of $COCl_{2}$ form? (Enter in mol)
 
 *Round all answers to 3 significant figures.*
       `,
@@ -149,7 +149,7 @@ $$\\boxed{\\frac{x}{[\\text{initial}]} \\times 100\\% < 5\\% \\quad \\text{(vali
         boxes: 3,
         correctAnswers: ['x', 'yes', '0.400'],
         hint1: '$COCl_{2}$ starts at 0 and gains $+x$.',
-        hint2: 'The ratio $[\\text{init}]/K < 100$ means the approximation fails (but for large K, not small K).',
+        hint2: 'With $K = 255$, the reaction goes far to the right, so $x$ ends up close to 0.400 — not small.',
         hint3: 'CO and $Cl_{2}$ are in a 1:1 ratio, both at 0.400 mol. They are equally limiting → 0.400 mol $COCl_{2}$.',
         explanation: '1) $[\\text{COCl}_2]_{eq} = x$. 2) Yes — when K is very large, the standard small-x approximation doesn\'t apply either; a quadratic or limiting-reagent approach is needed. 3) Both CO and $Cl_{2}$ start at 0.400 mol with 1:1 stoichiometry, so 0.400 mol $COCl_{2}$ can form at completion.'
       }
@@ -168,20 +168,20 @@ $$\\boxed{\\frac{x}{[\\text{initial}]} \\times 100\\% < 5\\% \\quad \\text{(vali
           },
           {
             label: 'The 5% approximation works best when K is',
-            options: ['very large', 'very small relative to initial concentration', 'equal to 1', 'negative']
+            options: ['very large relative to initial concentration', 'small next to the initial concentration', 'close to 1, with reactants and products balanced', 'larger than the initial concentration of reactant']
           },
           {
             label: 'After solving for x, you should always',
-            options: ['stop', 'check by substituting back into K', 'assume x is wrong', 'round to the nearest integer']
+            options: ['stop once x is found', 'check by substituting back into K', 'assume x is wrong and redo it', 'round x to a whole number']
           },
           {
             label: 'Stoichiometric coefficients in the C row appear as',
-            options: ['exponents', 'multipliers of x', 'additions', 'K values']
+            options: ['exponents on x', 'multipliers of x', 'added terms', 'powers of K']
           }
         ],
         correctAnswers: [
           'I + C',
-          'very small relative to initial concentration',
+          'small next to the initial concentration',
           'check by substituting back into K',
           'multipliers of x'
         ],
@@ -203,20 +203,20 @@ $$\\boxed{\\frac{x}{[\\text{initial}]} \\times 100\\% < 5\\% \\quad \\text{(vali
             question: 'For $\\text{HA}(aq) \\rightleftharpoons \\text{H}^+(aq) + \\text{A}^-(aq)$, $K_a = 6.8 \\times 10^{-4}$, $[\\text{HA}]_0 = 0.10$ M. Using the approximation, $[\\text{H}^+]$ is:',
             options: [
               '$\\sqrt{(6.8 \\times 10^{-4})(0.10)} = 8.2 \\times 10^{-3}$ M',
-              '$6.8 \\times 10^{-4}$ M',
-              '$0.10$ M',
+              '$(6.8 \\times 10^{-4})(0.10) = 6.8 \\times 10^{-5}$ M',
+              '$[\\text{HA}]_0 = 0.10$ M (complete ionization)',
               '$\\sqrt{6.8 \\times 10^{-4}} = 0.026$ M'
             ],
             correctAnswer: 0,
-            explanation: '$K_a = x^2/[\\text{HA}]_0 \\implies x = \\sqrt{K_a \\times [\\text{HA}]_0} = \\sqrt{(6.8 \\times 10^{-4})(0.10)} = \\sqrt{6.8 \\times 10^{-5}} = 8.2 \\times 10^{-3}$ M. 5% check: $8.2 \\times 10^{-3}/0.10 = 8.2\\%$ — this slightly exceeds 5%, so the quadratic would be more accurate.'
+            explanation: '$K_a = x^2/[\\text{HA}]_0 \\implies x = \\sqrt{K_a \\times [\\text{HA}]_0} = \\sqrt{(6.8 \\times 10^{-4})(0.10)} = \\sqrt{6.8 \\times 10^{-5}} = 8.2 \\times 10^{-3}$ M. Forgetting the square root leaves $6.8 \\times 10^{-5}$ M, leaving out $[\\text{HA}]_0$ gives $\\sqrt{K_a} = 0.026$ M, and 0.10 M treats the weak acid as fully ionized. 5% check: $8.2 \\times 10^{-3}/0.10 = 8.2\\%$ — this slightly exceeds 5%, so the quadratic would be more accurate.'
           },
           {
             question: 'An ICE table will always give you:',
             options: [
-              'The rate of the reaction',
+              'The rate at which the system approaches equilibrium',
               'The equilibrium concentrations of all species',
-              'The activation energy',
-              'The enthalpy of reaction'
+              'The activation energy of the forward reaction step',
+              'The enthalpy change for the reaction as it is written'
             ],
             correctAnswer: 1,
             explanation: 'ICE tables are designed to find equilibrium concentrations. They track how concentrations change from initial to equilibrium values. They do not provide kinetic information (rates, activation energy) or thermodynamic quantities like enthalpy.'

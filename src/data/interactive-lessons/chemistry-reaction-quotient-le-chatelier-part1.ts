@@ -99,10 +99,10 @@ $$\\boxed{Q_p = \\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b}} \\quad \\text{(using cur
           {
             question: 'The reaction quotient Q differs from K in that:',
             options: [
-              'Q uses different exponents than K',
+              'Q uses coefficients as multipliers, not exponents',
               'Q uses current concentrations, not equilibrium ones',
-              'Q excludes gases but K includes them',
-              'Q can only be calculated for gaseous reactions'
+              'Q includes pure solids, but K leaves them out',
+              'Q can be calculated only for gas-phase reactions'
             ],
             correctAnswer: 1,
             explanation: 'Q and K have the identical mathematical expression. The only difference is that K uses equilibrium concentrations while Q uses whatever concentrations exist at any given moment.'
@@ -124,7 +124,7 @@ $$\\boxed{Q_p = \\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b}} \\quad \\text{(using cur
               'Shifting to the right',
               'Shifting to the left',
               'At equilibrium',
-              'Not reacting'
+              'No longer reacting at all'
             ],
             correctAnswer: 2,
             explanation: 'By definition, when the reaction quotient equals the equilibrium constant ($Q = K$), the system is at equilibrium and no net change occurs.'
@@ -167,11 +167,11 @@ Current concentrations: $[\\text{H}_2] = 0.10$ M, $[\\text{I}_2] = 0.10$ M, $[\\
         dropdowns: [
           {
             label: 'Q is calculated using',
-            options: ['equilibrium concentrations', 'initial concentrations only', 'current concentrations at any time', 'standard concentrations']
+            options: ['equilibrium concentrations', 'initial concentrations only', 'current concentrations', 'standard concentrations']
           },
           {
             label: 'Q has the same mathematical form as',
-            options: ['the rate law', 'the equilibrium constant K', 'the enthalpy change', 'the activation energy']
+            options: ['the rate law expression', 'the K expression', 'the enthalpy expression', 'the Arrhenius equation']
           },
           {
             label: 'If a system is at equilibrium and you calculate Q, you will find',
@@ -183,8 +183,8 @@ Current concentrations: $[\\text{H}_2] = 0.10$ M, $[\\text{I}_2] = 0.10$ M, $[\\
           }
         ],
         correctAnswers: [
-          'current concentrations at any time',
-          'the equilibrium constant K',
+          'current concentrations',
+          'the K expression',
           'Q = K',
           'excluded'
         ],
@@ -216,10 +216,10 @@ Current concentrations: $[\\text{H}_2] = 0.10$ M, $[\\text{I}_2] = 0.10$ M, $[\\
           {
             question: 'Q can change over time because:',
             options: [
-              'Temperature is changing',
+              'The temperature drifts as the reaction runs',
               'Concentrations change as the reaction progresses',
-              'The stoichiometric coefficients change',
-              'The equilibrium expression changes'
+              'The coefficients in the expression change',
+              'The form of the Q expression changes'
             ],
             correctAnswer: 1,
             explanation: 'Q changes because the concentrations of reactants and products change as the reaction proceeds. The expression itself stays the same; only the values plugged in change.'

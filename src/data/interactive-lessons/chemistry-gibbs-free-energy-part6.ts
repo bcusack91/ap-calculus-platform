@@ -68,33 +68,33 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
             options: [
               '−229.8 kJ',
               '−170.2 kJ',
-              '−100 kJ',
+              '−200.0 kJ',
               '+29,600 kJ'
             ],
             correctAnswer: 0,
-            explanation: '$\\Delta G° = \\Delta H° - T\\Delta S° = -200 - (298)(0.100) = -200 - 29.8 = -229.8$ kJ. Remember to convert ΔS to kJ/K!'
+            explanation: '$\\Delta G° = \\Delta H° - T\\Delta S° = -200 - (298)(0.100) = -200 - 29.8 = -229.8$ kJ. Remember to convert ΔS to kJ/K! Adding the $T\\Delta S$ term gives −170.2 kJ, ignoring entropy gives −200.0 kJ, and leaving ΔS in J/K gives +29,600 kJ.'
           },
           {
             question: 'A reaction has K = $2.5 \\times 10^{-4}$ at 298 K. ΔG° is:',
             options: [
               '−20.5 kJ',
               '+20.5 kJ',
-              '−8.3 kJ',
-              '+8.3 kJ'
+              '+8.9 kJ',
+              '+20,553 kJ'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta G° = -RT\\ln K = -(8.314)(298)\\ln(2.5 \\times 10^{-4}) = -(2478)(-8.294) = +20{,}553$ J $= +20.5$ kJ.'
+            explanation: '$\\Delta G° = -RT\\ln K = -(8.314)(298)\\ln(2.5 \\times 10^{-4}) = -(2478)(-8.294) = +20{,}553$ J $= +20.5$ kJ. Dropping the minus sign gives −20.5 kJ, using $\\log$ instead of $\\ln$ gives +8.9 kJ, and reporting the joule value as kilojoules gives +20,553 kJ.'
           },
           {
             question: 'A reaction has ΔG° = −15 kJ at 300 K. Q = 100. Is the forward reaction spontaneous?',
             options: [
-              'Yes — ΔG = −15 kJ (Q doesn\'t matter)',
+              'Yes — ΔG = −10.0 kJ',
               'Yes — ΔG = −3.5 kJ',
-              'No — ΔG = +8.5 kJ',
-              'No — ΔG = −26.5 kJ'
+              'No — ΔG = +11,471 kJ',
+              'Yes — ΔG = −26.5 kJ'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta G = -15{,}000 + (8.314)(300)\\ln(100) = -15{,}000 + (2494)(4.605) = -15{,}000 + 11{,}483 = -3{,}517$ J $= -3.5$ kJ. Still spontaneous, but less so.'
+            explanation: '$\\Delta G = -15{,}000 + (8.314)(300)\\ln(100) = -15{,}000 + (2494)(4.605) = -15{,}000 + 11{,}483 = -3{,}517$ J $= -3.5$ kJ. Still spontaneous, but less so. Using $\\log$ instead of $\\ln$ gives −10.0 kJ, subtracting the $RT\\ln Q$ term gives −26.5 kJ, and adding 11,483 J to −15 kJ without converting units gives +11,471 kJ.'
           }
         ]
       }
@@ -112,12 +112,11 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 **3)** A reaction has $\\Delta G° = -20$ kJ/mol. What is $K$ at 298 K? (round to nearest thousand; use $e^{8.07} \\approx 3200$)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['-10', '20', '3000'],
+        questions: [{ question: '1)', answer: '-10', acceptableAnswers: ['-10'] }, { question: '2)', answer: '20', acceptableAnswers: ['20', '20.2'] }, { question: '3)', answer: '3000', acceptableAnswers: ['3000', '3200', '3.2e3'] }],
         hint1: '$\\Delta G° = 50 - (400)(0.150)$',
         hint2: '$K = e^{-\\Delta G°/(RT)} = e^{10000/(8.314 \\times 400)}$',
         hint3: '$K = e^{20000/(8.314 \\times 298)} = e^{8.07}$',
-        explanation: '1) $\\Delta G° = 50 - 60 = -10$ kJ. 2) $K = e^{10000/(3326)} = e^{3.01} \\approx 20$. 3) $K = e^{20000/2478} = e^{8.07} \\approx 3200 \\approx 3000$.'
+        explanation: '1) $\\Delta G° = 50 - 60 = -10$ kJ. 2) $K = e^{10000/(3326)} = e^{3.01} \\approx 20$. 3) $K = e^{20000/2478} = e^{8.07} \\approx 3200$, which rounds to 3000 to the nearest thousand.'
       }
     },
     {
@@ -163,10 +162,10 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
           {
             question: 'A student calculates ΔG° = −20 kJ/mol at 298 K but finds Q = $10^{8}$. The forward reaction is:',
             options: [
-              'Still spontaneous because ΔG° < 0',
-              'Nonspontaneous because Q is very large (past equilibrium)',
-              'At equilibrium',
-              'Impossible to determine'
+              'Spontaneous, because ΔG° < 0 sets the direction',
+              'Nonspontaneous, because Q is far greater than K',
+              'At equilibrium, since both Q and K are very large',
+              'Spontaneous, because a large Q pushes it forward'
             ],
             correctAnswer: 1,
             explanation: '$K = e^{20000/2478} = e^{8.07} \\approx 3200$. Since $Q = 10^8 \\gg K \\approx 3200$, the system is past equilibrium. $\\Delta G > 0$, so the reverse reaction is spontaneous.'
@@ -174,13 +173,13 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
           {
             question: 'Which of these will NOT change the value of ΔG° for a reaction?',
             options: [
-              'Changing the temperature',
+              'Changing the temperature of the system',
               'Changing the concentrations of reactants',
-              'Neither — both change ΔG°',
-              'Both — neither changes ΔG°'
+              'Reversing the direction of the reaction',
+              'Doubling all of the coefficients'
             ],
             correctAnswer: 1,
-            explanation: 'ΔG° is defined at standard conditions (1 atm, 1 M) and depends on temperature (via ΔG° = ΔH° − TΔS°). Changing concentrations changes Q and therefore ΔG, but not ΔG°.'
+            explanation: 'ΔG° is defined at standard conditions (1 atm, 1 M) and depends on temperature (via ΔG° = ΔH° − TΔS°). Reversing the reaction flips the sign of ΔG°, and doubling the coefficients doubles it. Changing concentrations changes Q and therefore ΔG, but not ΔG°.'
           }
         ]
       }

@@ -115,10 +115,10 @@ $pK_b = 14 - 4.74 = 9.26$
               '$6.2 \\times 10^{-10}$',
               '$1.6 \\times 10^{-5}$',
               '$1.0 \\times 10^{-14}$',
-              '$6.2 \\times 10^{-4}$'
+              '$6.2 \\times 10^{-24}$'
             ],
             correctAnswer: 1,
-            explanation: '$K_b = K_w/K_a = (1.0 \\times 10^{-14})/(6.2 \\times 10^{-10}) = 1.6 \\times 10^{-5}$. Note that $CN^-$ is a moderately strong base because $HCN$ is a very weak acid.'
+            explanation: '$K_b = K_w/K_a = (1.0 \\times 10^{-14})/(6.2 \\times 10^{-10}) = 1.6 \\times 10^{-5}$. Reusing $6.2 \\times 10^{-10}$ treats $K_a$ as $K_b$, and $6.2 \\times 10^{-24}$ multiplies $K_a$ by $K_w$ instead of dividing. Note that $CN^-$ is a fairly strong weak base because $HCN$ is a very weak acid.'
           },
           {
             question: 'For any conjugate acid-base pair at 25°C, $pK_a + pK_b$ always equals:',
@@ -137,10 +137,10 @@ $pK_b = 14 - 4.74 = 9.26$
               '$10^{-3}$',
               '$10^{-11}$',
               '$10^{-7}$',
-              '$10^{3}$'
+              '$10^{11}$'
             ],
             correctAnswer: 1,
-            explanation: '$K_b = K_w/K_a = 10^{-14}/10^{-3} = 10^{-11}$.'
+            explanation: '$K_b = K_w/K_a = 10^{-14}/10^{-3} = 10^{-11}$. $10^{11}$ comes from dividing $K_a$ by $K_w$ (the ratio inverted), $10^{-3}$ reuses $K_a$, and $10^{-7}$ is just the $[H^+]$ of pure water.'
           }
         ]
       }
@@ -151,15 +151,14 @@ $pK_b = 14 - 4.74 = 9.26$
       content: `
 **$K_a$/$K_b$ Conversion Drill** 🧮
 
-**1)** $HF$ has $K_a = 6.8 \\times 10^{-4}$. Find $K_b$ for $F^-$. (Enter in scientific notation, e.g. 1.5e-11)
+**1)** $HF$ has $K_a = 6.8 \\times 10^{-4}$. Find $K_b$ for $F^-$. (Enter in scientific notation, e.g. 2.0e-9)
 
-**2)** $NH_3$ has $K_b = 1.8 \\times 10^{-5}$. Find $K_a$ for $NH_4^+$. (Enter in scientific notation, e.g. 5.6e-10)
+**2)** $NH_3$ has $K_b = 1.8 \\times 10^{-5}$. Find $K_a$ for $NH_4^+$. (Enter in scientific notation, e.g. 7.7e-12)
 
 **3)** A weak acid has $pK_a = 3.75$. Find $pK_b$ for its conjugate base. (3 significant figures)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['1.5e-11', '5.6e-10', '10.25'],
+        questions: [{ question: '1)', answer: '1.5e-11', acceptableAnswers: ['1.5e-11', '1.47e-11'] }, { question: '2)', answer: '5.6e-10', acceptableAnswers: ['5.6e-10', '5.56e-10'] }, { question: '3)', answer: '10.25', acceptableAnswers: ['10.25'] }],
         hint1: '$K_b = K_w/K_a = 1.0 \\times 10^{-14}/(6.8 \\times 10^{-4})$.',
         hint2: '$K_a = K_w/K_b = 1.0 \\times 10^{-14}/(1.8 \\times 10^{-5})$.',
         hint3: '$pK_b = 14 - pK_a$.',
@@ -205,7 +204,7 @@ $$pOH = 2.74 \\qquad pH = 11.26$$
           },
           {
             label: '$K_a \\times K_b = K_w$ applies to',
-            options: ['strong acids only', 'weak acids only', 'any conjugate pair', 'only at high temperature']
+            options: ['strong acid–base pairs only', 'weak acids, not weak bases', 'any conjugate pair', 'only at high temperature']
           },
           {
             label: 'A solution of $KNO_2$ (where $HNO_2$ is a weak acid) is',

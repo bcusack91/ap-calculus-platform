@@ -82,12 +82,11 @@ $$\\boxed{x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}} \\quad \\text{(quadratic fo
 **3)** What is $K_c$? (Enter to 3 significant figures)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['0.10', '0.10', '0.016'],
+        questions: [{ question: '1)', answer: '0.10', acceptableAnswers: ['0.10'] }, { question: '2)', answer: '0.10', acceptableAnswers: ['0.10'] }, { question: '3)', answer: '0.0156', acceptableAnswers: ['0.0156', '0.016'] }],
         hint1: '$[\\text{HI}]_{eq} = 1.00 - 2x = 0.80 \\implies 2x = 0.20 \\implies x = 0.10$',
         hint2: '$[\\text{H}_2] = x = 0.10$ M',
         hint3: '$K_c = \\frac{[\\text{H}_2][\\text{I}_2]}{[\\text{HI}]^2} = \\frac{(0.10)(0.10)}{(0.80)^2}$',
-        explanation: '1) $2x = 1.00 - 0.80 = 0.20$, so $x = 0.10$. 2) $[\\text{H}_2] = x = 0.10$ M. 3) $K_c = \\frac{(0.10)(0.10)}{(0.80)^2} = \\frac{0.010}{0.64} = 0.01563 \\approx 0.016$.'
+        explanation: '1) $2x = 1.00 - 0.80 = 0.20$, so $x = 0.10$. 2) $[\\text{H}_2] = x = 0.10$ M. 3) $K_c = \\frac{(0.10)(0.10)}{(0.80)^2} = \\frac{0.010}{0.64} = 0.0156$.'
       }
     },
     {
@@ -100,7 +99,7 @@ $$\\boxed{x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}} \\quad \\text{(quadratic fo
 
 Using the approximation $0.50 - x \\approx 0.50$:
 
-**1)** Solve: $x = \\sqrt{K_c \\times 0.50}$. What is $x$? (Enter in scientific notation, e.g. 1.0e-5)
+**1)** Solve: $x = \\sqrt{K_c \\times 0.50}$. What is $x$? (Enter in scientific notation, e.g. 4.2e-7)
 
 **2)** Does the 5% test pass? (Enter "yes" or "no")
 
@@ -109,12 +108,11 @@ Using the approximation $0.50 - x \\approx 0.50$:
 *Round all answers to 3 significant figures.*
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['1.0e-5', 'yes', '1.0e-5'],
+        questions: [{ question: '1)', answer: '1.05e-5', acceptableAnswers: ['1.05e-5', '1.0e-5'] }, { question: '2)', answer: 'yes', acceptableAnswers: ['yes'] }, { question: '3)', answer: '1.05e-5', acceptableAnswers: ['1.05e-5', '1.0e-5'] }],
         hint1: '$x = \\sqrt{(2.2 \\times 10^{-10})(0.50)} = \\sqrt{1.1 \\times 10^{-10}}$',
         hint2: '$\\frac{x}{0.50} \\times 100\\% \\ll 5\\%$',
         hint3: '$[\\text{CO}] = x$',
-        explanation: '1) $x = \\sqrt{1.1 \\times 10^{-10}} = 1.05 \\times 10^{-5} \\approx 1.0 \\times 10^{-5}$. 2) $\\frac{1.0 \\times 10^{-5}}{0.50} \\times 100\\% = 0.002\\% \\ll 5\\%$, so yes. 3) $[\\text{CO}] = x = 1.0 \\times 10^{-5}$ M.'
+        explanation: '1) $x = \\sqrt{1.1 \\times 10^{-10}} = 1.05 \\times 10^{-5}$. 2) $\\frac{1.05 \\times 10^{-5}}{0.50} \\times 100\\% = 0.0021\\% \\ll 5\\%$, so yes. 3) $[\\text{CO}] = x = 1.05 \\times 10^{-5}$ M.'
       }
     },
     {
@@ -130,18 +128,18 @@ Using the approximation $0.50 - x \\approx 0.50$:
             options: [
               'Small-x approximation (ratio > 100)',
               'Quadratic formula (ratio < 100)',
-              'Either method works',
-              'Cannot be solved'
+              'Either method works, since both give the same x',
+              'Neither; x cannot be found when K > $[\\text{A}]_0$'
             ],
             correctAnswer: 1,
-            explanation: '$[\\text{initial}]/K = 0.40 \\ll 100$. The ratio is far below 100, so the approximation is NOT valid. Use the quadratic formula.'
+            explanation: '$[\\text{initial}]/K = 0.40 \\ll 100$. The ratio is far below 100, so the approximation is NOT valid and would give a noticeably different x. Use the quadratic formula, which works for any K.'
           },
           {
             question: '$K_c = 1.8 \\times 10^{-5}$, $[\\text{HA}]_0 = 0.50$ M. Which method?',
             options: [
               'Quadratic formula',
               'Small-x approximation',
-              'Cannot be solved',
+              'Plug directly into K',
               'Need more information'
             ],
             correctAnswer: 1,
@@ -186,21 +184,21 @@ Using the approximation $0.50 - x \\approx 0.50$:
           {
             question: 'A student sets up an ICE table and gets $x = 0.60$ for $[\\text{A}]_0 = 0.50$. What went wrong?',
             options: [
-              'Nothing — x can exceed the initial concentration',
-              'The concentration would be negative; the student likely made an arithmetic error or assumed the wrong shift direction',
-              'K must be recalculated',
-              'The reaction doesn\'t reach equilibrium'
+              'Nothing, since x is a change and can exceed $[\\text{A}]_0$',
+              '$[\\text{A}]$ would be negative; recheck the math and shift direction',
+              'The K value is wrong and must be recalculated first',
+              'The reaction goes all the way to completion, so x is capped at 0.50 M'
             ],
             correctAnswer: 1,
-            explanation: '$[\\text{A}]_{eq} = 0.50 - 0.60 = -0.10$, which is impossible. The student either made a calculation error or assumed the wrong direction of shift.'
+            explanation: '$[\\text{A}]_{eq} = 0.50 - 0.60 = -0.10$, which is impossible. The student either made a calculation error or assumed the wrong direction of shift. Capping x at 0.50 just hides the error; K is given data and is not the problem.'
           },
           {
             question: 'Which is the correct order of steps for an ICE table problem?',
             options: [
               'Find x → Set up ICE → Write K expression → Check',
               'Write K expression → Set up ICE → Substitute → Solve for x → Check',
-              'Guess x → Check → Adjust',
-              'Calculate Q → Set K = Q → Done'
+              'Guess x → Substitute into K → Adjust until it fits',
+              'Calculate Q → Set Q equal to K → Solve for x → Check'
             ],
             correctAnswer: 1,
             explanation: 'Systematic approach: write the K expression, set up ICE with initial values and changes in terms of x, substitute equilibrium values into K, solve for x, then verify.'

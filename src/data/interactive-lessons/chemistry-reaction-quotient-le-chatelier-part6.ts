@@ -86,7 +86,7 @@ Current: $[\\text{N}_2\\text{O}_4] = 0.500$ M, $[\\text{NO}_2] = 0.100$ M
 
 **1)** Calculate Q. (Enter as a decimal to 2 places)
 
-**2)** Is $Q > K$, $Q < K$, or $Q = K$? (Enter exactly, e.g. "Q > K")
+**2)** Is $Q > K$, $Q < K$, or $Q = K$? (Enter exactly: "Q > K", "Q < K", or "Q = K")
 
 **3)** Which direction does the reaction shift? (Enter "right" or "left")
 
@@ -144,19 +144,18 @@ $2\\,\\text{SO}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\,\\text{SO}_3(g)$, 
 
 For: $\\text{A}(g) + 2\\,\\text{B}(g) \\rightleftharpoons 3\\,\\text{C}(g)$, $\\Delta H = +150$ kJ, $K = 0.25$ at 500 K
 
-**1)** If the volume is halved, which direction does the reaction shift? (Enter "right" or "left")
+**1)** If the volume is halved, which direction does the reaction shift? (Enter "right", "left", or "no shift")
 
 **2)** If temperature is increased to 600 K, does K increase or decrease? (Enter "increase" or "decrease")
 
 **3)** How many moles of gas are on each side? Enter as "left:N, right:M" (e.g., "left:3, right:2")
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['left', 'increase', 'left:3, right:3'],
-        hint1: 'Count moles: left = 1 + 2 = 3, right = 3. Equal moles means... actually it\'s equal so no shift? Wait — $\\Delta n = 3 - 3 = 0$.',
+        questions: [{ question: '1)', answer: 'no shift', acceptableAnswers: ['no shift', 'none', 'no change', 'neither'] }, { question: '2)', answer: 'increase', acceptableAnswers: ['increase'] }, { question: '3)', answer: 'left:3, right:3', acceptableAnswers: ['left:3, right:3', '3, 3', '3 and 3'] }],
+        hint1: 'Count moles of gas: left = 1 + 2 = 3, right = 3, so $\\Delta n = 3 - 3 = 0$.',
         hint2: 'Endothermic reaction + increase T → K increases.',
         hint3: 'Left: A (1 mol) + 2B (2 mol) = 3 mol. Right: 3C = 3 mol.',
-        explanation: '1) $\\Delta n = 3 - 3 = 0$. Equal moles on both sides → no shift from volume change. Actually, with $\\Delta n = 0$, halving volume doesn\'t shift. The answer should be "no shift." However, the closest option: since $\\Delta n = 0$, volume changes have no effect. 2) Endothermic + increase T → K increases. 3) Left: 1 + 2 = 3 mol gas. Right: 3 mol gas.'
+        explanation: '1) $\\Delta n = 3 - 3 = 0$. With equal moles of gas on both sides, halving the volume raises every partial pressure by the same factor and leaves Q unchanged, so there is no shift. 2) Endothermic + increase T → K increases. 3) Left: 1 + 2 = 3 mol gas. Right: 3 mol gas.'
       }
     },
     {
@@ -218,13 +217,13 @@ For: $\\text{A}(g) + 2\\,\\text{B}(g) \\rightleftharpoons 3\\,\\text{C}(g)$, $\\
           {
             question: 'For the Contact Process ($2\\,\\text{SO}_2 + \\text{O}_2 \\rightleftharpoons 2\\,\\text{SO}_3$, $\\Delta H < 0$), industry uses ~450°C and $V_{2}O_{5}$ catalyst. The moderate temperature is a compromise between:',
             options: [
-              'High yield (low T favors products) and reasonable rate (higher T needed for speed)',
-              'High K (high T) and low pressure',
-              'Low pressure and high catalyst loading',
-              'High yield (high T) and low cost'
+              'Yield (favored by low T) and rate (favored by high T)',
+              'K (favored by high T) and pressure (favored by low T)',
+              'Rate (favored by low T) and yield (favored by high T)',
+              'Yield (favored by high T) and energy cost (low T)'
             ],
             correctAnswer: 0,
-            explanation: 'Low T favors products (exothermic), but the reaction is too slow at low T. The catalyst helps but doesn\'t eliminate the need for reasonable temperature. ~450°C is a compromise between acceptable yield and practical reaction rate.'
+            explanation: 'The reaction is exothermic, so low T favors products (higher K), but the reaction is too slow at low T. The catalyst helps but doesn\'t eliminate the need for a reasonable temperature. ~450°C is a compromise between acceptable yield and practical reaction rate. Raising T lowers K for an exothermic reaction, so high T never favors yield here.'
           }
         ]
       }

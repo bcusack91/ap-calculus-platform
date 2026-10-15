@@ -135,8 +135,8 @@ $$\\text{N}_2 + 3\\,\\text{H}_2 \\rightleftharpoons 2\\,\\text{NH}_3 + \\text{he
             options: [
               'Shift left (more moles of gas on the left)',
               'Shift right (fewer moles of gas on the right)',
-              'Have no effect (equal moles)',
-              'Change K'
+              'Have no effect, since K is fixed',
+              'Raise K by raising the pressure'
             ],
             correctAnswer: 1,
             explanation: 'Left side: 2 + 1 = 3 moles of gas. Right side: 2 moles. Decreasing volume (increasing pressure) shifts toward fewer moles → shift right.'
@@ -155,10 +155,10 @@ $$\\text{N}_2 + 3\\,\\text{H}_2 \\rightleftharpoons 2\\,\\text{NH}_3 + \\text{he
           {
             question: 'For $\\text{H}_2(g) + \\text{I}_2(g) \\rightleftharpoons 2\\,\\text{HI}(g)$, doubling the volume will:',
             options: [
-              'Shift right',
-              'Shift left',
-              'Have no effect on equilibrium position',
-              'Decrease K'
+              'Shift right, since the pressure drops',
+              'Shift left, toward the reactant side',
+              'Have no effect on the position',
+              'Decrease K, since concentrations fall'
             ],
             correctAnswer: 2,
             explanation: '$\\Delta n = 2 - 2 = 0$. Equal moles of gas on both sides. Volume/pressure changes have no effect when $\\Delta n = 0$.'

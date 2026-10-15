@@ -79,13 +79,13 @@ $$\\boxed{[H^+] = \\sqrt{K_a \\cdot C}} \\qquad \\boxed{K_a \\times K_b = K_w} \
           {
             question: 'A 0.50 M $KCH_3COO$ solution has pH > 7 because:',
             options: [
-              '$K^+$ reacts with water',
-              '$CH_3COO^-$ is the conjugate base of weak acid $CH_3COOH$ and hydrolyzes',
-              '$KCH_3COO$ is a weak acid',
-              'The solution is concentrated'
+              '$K^+$ ions react with water to release excess $OH^-$ ions',
+              '$CH_3COO^-$ is a weak base that takes $H^+$ from water',
+              '$KCH_3COO$ releases $OH^-$ directly when it dissolves in water',
+              '$CH_3COO^-$ is a strong base that fully converts to $CH_3COOH$'
             ],
             correctAnswer: 1,
-            explanation: '$CH_3COO^-$ is the conjugate base of the weak acid $CH_3COOH$. It reacts with water: $CH_3COO^- + H_2O \\rightleftharpoons CH_3COOH + OH^-$, producing $OH^-$ and making the solution basic.'
+            explanation: '$CH_3COO^-$ is the conjugate base of the weak acid $CH_3COOH$. It reacts with water: $CH_3COO^- + H_2O \\rightleftharpoons CH_3COOH + OH^-$, producing $OH^-$ and making the solution basic. Only a small fraction reacts because acetate is a weak base; $K^+$ is a spectator ion, and the salt contains no $OH^-$ of its own.'
           },
           {
             question: 'Which statement about polyprotic acids is FALSE?',
@@ -109,7 +109,7 @@ $$\\boxed{[H^+] = \\sqrt{K_a \\cdot C}} \\qquad \\boxed{K_a \\times K_b = K_w} \
 
 **1)** Calculate the pH of 0.35 M $NH_3$ ($K_b = 1.8 \\times 10^{-5}$). (2 decimal places)
 
-**2)** What is $K_a$ for $NH_4^+$? (Enter in scientific notation, e.g. 5.6e-10)
+**2)** What is $K_a$ for $NH_4^+$? (Enter in scientific notation, e.g. 2.4e-9)
 
 **3)** A solution of 0.10 M $NH_4Cl$ has what pH? (2 decimal places)
       `,
@@ -135,11 +135,11 @@ $$\\boxed{[H^+] = \\sqrt{K_a \\cdot C}} \\qquad \\boxed{K_a \\times K_b = K_w} \
             options: [
               '$2.0 \\times 10^{-4}$',
               '$1.0 \\times 10^{-4}$',
-              '$4.0 \\times 10^{-5}$',
+              '$4.0 \\times 10^{-4}$',
               '$2.0 \\times 10^{-2}$'
             ],
             correctAnswer: 0,
-            explanation: '$[H^+] = 0.020 \\times 0.50 = 0.010$ M. $K_a = [H^+]^2/(C - [H^+]) = (0.010)^2/(0.50 - 0.010) = 1.0 \\times 10^{-4}/0.49 = 2.04 \\times 10^{-4} \\approx 2.0 \\times 10^{-4}$.'
+            explanation: '$[H^+] = 0.020 \\times 0.50 = 0.010$ M. $K_a = [H^+]^2/(C - [H^+]) = (0.010)^2/(0.50 - 0.010) = 1.0 \\times 10^{-4}/0.49 = 2.04 \\times 10^{-4} \\approx 2.0 \\times 10^{-4}$. $1.0 \\times 10^{-4}$ is $[H^+]^2$ without dividing by the concentration, $4.0 \\times 10^{-4}$ squares the fraction ionized (0.020) without multiplying by $C$, and $2.0 \\times 10^{-2}$ is just the fraction ionized.'
           },
           {
             question: 'Rank these 0.10 M solutions from lowest to highest pH: (I) $HCl$, (II) $CH_3COOH$, (III) $NaCl$, (IV) $NaCH_3COO$',
@@ -173,14 +173,14 @@ $$\\boxed{[H^+] = \\sqrt{K_a \\cdot C}} \\qquad \\boxed{K_a \\times K_b = K_w} \
           },
           {
             label: 'The 5% approximation is invalid when $C/K_a$ is',
-            options: ['greater than 400', 'less than 400', 'equal to 1', 'equal to K_w']
+            options: ['greater than 400', 'less than 400', 'less than 0.05', 'greater than 0.05']
           },
           {
             label: 'For $Na_2SO_4$ in water, the pH is approximately',
-            options: ['acidic', 'basic', 'neutral (7)', 'cannot determine']
+            options: ['acidic', 'basic', 'neutral', 'cannot determine']
           }
         ],
-        correctAnswers: ['temperature', 'higher pH', 'less than 400', 'neutral (7)'],
+        correctAnswers: ['temperature', 'higher pH', 'less than 400', 'neutral'],
         hint1: '$K_a$ is an equilibrium constant — only temperature changes it.',
         hint2: 'Less dissociation = less $[H^+]$ = higher pH.',
         hint3: 'Below 400, the approximation error exceeds 5%.',
@@ -198,24 +198,24 @@ $$\\boxed{[H^+] = \\sqrt{K_a \\cdot C}} \\qquad \\boxed{K_a \\times K_b = K_w} \
           {
             question: 'An unknown monoprotic acid (0.10 M) has pH = 2.50. Its $K_a$ is:',
             options: [
-              '$1.1 \\times 10^{-4}$',
+              '$1.0 \\times 10^{-4}$',
               '$3.2 \\times 10^{-3}$',
               '$1.0 \\times 10^{-5}$',
-              '$5.0 \\times 10^{-3}$'
+              '$3.2 \\times 10^{-2}$'
             ],
             correctAnswer: 0,
-            explanation: '$[H^+] = 10^{-2.50} = 3.16 \\times 10^{-3}$ M. $K_a = (3.16 \\times 10^{-3})^2/(0.10 - 3.16 \\times 10^{-3}) = 9.99 \\times 10^{-6}/0.0968 = 1.03 \\times 10^{-4} \\approx 1.1 \\times 10^{-4}$.'
+            explanation: '$[H^+] = 10^{-2.50} = 3.16 \\times 10^{-3}$ M. $K_a = x^2/(C - x) = (3.16 \\times 10^{-3})^2/(0.10 - 0.00316) = (1.00 \\times 10^{-5})/0.0968 = 1.03 \\times 10^{-4} \\approx 1.0 \\times 10^{-4}$. $3.2 \\times 10^{-3}$ is $[H^+]$ itself, $1.0 \\times 10^{-5}$ is $x^2$ without dividing by the concentration, and $3.2 \\times 10^{-2}$ is the fraction ionized ($x/C$).'
           },
           {
             question: 'The pH of 0.25 M $NaCN$ ($K_a$ of $HCN = 6.2 \\times 10^{-10}$) is closest to:',
             options: [
-              '7.0',
-              '9.3',
-              '11.5',
-              '5.2'
+              '2.70',
+              '9.10',
+              '11.30',
+              '8.60'
             ],
             correctAnswer: 2,
-            explanation: '$K_b(CN^-) = K_w/K_a = 1.0 \\times 10^{-14}/(6.2 \\times 10^{-10}) = 1.61 \\times 10^{-5}$. $[OH^-] = \\sqrt{(1.61 \\times 10^{-5})(0.25)} = 2.01 \\times 10^{-3}$. $pOH = 2.70$; $pH = 11.30 \\approx 11.5$.'
+            explanation: '$K_b(CN^-) = K_w/K_a = (1.0 \\times 10^{-14})/(6.2 \\times 10^{-10}) = 1.61 \\times 10^{-5}$. $[OH^-] = \\sqrt{(1.61 \\times 10^{-5})(0.25)} = 2.01 \\times 10^{-3}$ M, so $pOH = 2.70$ and $pH = 14.00 - 2.70 = 11.30$. Reporting 2.70 stops at the pOH; 9.10 uses $K_a$ in place of $K_b$; 8.60 forgets the square root and treats $K_b C$ as $[OH^-]$.'
           }
         ]
       }
