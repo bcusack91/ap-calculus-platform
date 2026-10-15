@@ -101,9 +101,9 @@ Average speed = total distance / time (always ≥ 0)
           },
           {
             question: 'Negative velocity means:',
-            options: ['Slowing down', 'Moving in negative direction', 'Stopped', 'Accelerating'],
+            options: ['The speed is decreasing over time', 'Moving in negative direction', 'The position $s(t)$ is negative', 'The acceleration must be negative'],
             correctAnswer: 1,
-            explanation: 'Negative velocity = moving in the negative direction (left/down).'
+            explanation: 'Negative velocity = moving in the negative direction (left/down). It says nothing about whether the position itself is negative, and the object can be speeding up or slowing down.'
           },
           {
             question: 'If $v(t)=0$ and $a(t)<0$, the ball is at a:',
@@ -145,17 +145,17 @@ For $s(t) = -16t^2 + 48t$:
         dropdowns: [
           {
             label: 'Speed is:',
-            options: ['Velocity', 'Absolute value of velocity', 'Acceleration', 'Position'],
+            options: ['$v(t)$', '$|v(t)|$', '$|a(t)|$', '$|s(t)|$'],
             correctAnswer: 1
           },
           {
             label: 'Displacement can be:',
-            options: ['Only positive', 'Only negative', 'Positive, negative, or zero', 'Only zero'],
+            options: ['Positive or zero only', 'Positive or negative only', 'Positive, negative, or zero', 'Only negative or zero'],
             correctAnswer: 2
           },
           {
             label: 'Object moving right then left with same distance:',
-            options: ['Displacement = 0, distance > 0', 'Both = 0', 'Displacement > 0', 'Distance = 0'],
+            options: ['Displacement = 0, distance > 0', 'Displacement = 0, distance = 0', 'Displacement > 0, distance > 0', 'Displacement > 0, distance = 0'],
             correctAnswer: 0
           },
           {
@@ -164,7 +164,7 @@ For $s(t) = -16t^2 + 48t$:
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['Absolute value of velocity', 'Positive, negative, or zero', 'Displacement = 0, distance > 0', '$v = 0$'],
+        correctAnswers: ['$|v(t)|$', 'Positive, negative, or zero', 'Displacement = 0, distance > 0', '$v = 0$'],
         hint1: 'Speed = how fast, regardless of direction.',
         hint2: 'You can end where you started (0) or anywhere.',
         hint3: 'Round trip: displacement cancels, distance doesn\'t.',

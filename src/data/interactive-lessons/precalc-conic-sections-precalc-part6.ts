@@ -90,9 +90,9 @@ Used in **Cassegrain telescopes**: the secondary mirror is hyperbolic, redirecti
           },
           {
             question: 'Why are satellite dishes parabolic?',
-            options: ['They are cheapest to manufacture', 'Parallel signals focus to the receiver at the focus', 'They look professional', 'They withstand wind better'],
+            options: ['They are the cheapest curved shape to build', 'Parallel signals focus to the receiver at the focus', 'Signals bounce off and collect at the vertex', 'Their curve resists wind better than a flat dish'],
             correctAnswer: 1,
-            explanation: 'Parabolic reflectors concentrate parallel incoming waves at the focus, where the receiver is placed.'
+            explanation: 'Parabolic reflectors concentrate parallel incoming waves at the focus, where the receiver is placed. The vertex is the deepest point of the dish, not where the reflected signals meet.'
           },
           {
             question: 'In a whispering gallery, the special acoustic points are the:',
@@ -134,12 +134,12 @@ Used in **Cassegrain telescopes**: the secondary mirror is hyperbolic, redirecti
         dropdowns: [
           {
             label: 'Cooling towers at power plants are shaped like:',
-            options: ['Ellipses', 'Parabolas', 'Hyperboloids', 'Cylinders'],
+            options: ['Ellipsoids', 'Paraboloids', 'Hyperboloids', 'Cylinders'],
             correctAnswer: 2
           },
           {
             label: 'LORAN navigation is based on:',
-            options: ['Ellipses (sum of distances)', 'Hyperbolas (difference of distances)', 'Parabolas (equal distances)', 'Circles (fixed distance)'],
+            options: ['Ellipses (constant sum of the two distances)', 'Hyperbolas (difference of distances)', 'Parabolas (equal distance to a point and a line)', 'Circles (fixed distance from one station)'],
             correctAnswer: 1
           },
           {
@@ -170,15 +170,15 @@ Used in **Cassegrain telescopes**: the secondary mirror is hyperbolic, redirecti
         questions: [
           {
             question: 'An asteroid approaches the Sun on a hyperbolic path. It will:',
-            options: ['Enter a stable orbit', 'Crash into the Sun', 'Pass by and never return', 'Become a satellite'],
+            options: ['Settle into a stable elliptical orbit', 'Spiral inward and crash into the Sun', 'Pass by and never return', 'Be captured as a periodic comet'],
             correctAnswer: 2,
             explanation: '$e > 1$ means hyperbolic — the asteroid has enough energy to escape. It passes by once.'
           },
           {
             question: 'A reflecting telescope uses a parabolic primary mirror because:',
-            options: ['It is the cheapest shape', 'All parallel rays converge to one focal point', 'It magnifies more', 'It has no aberration at any angle'],
+            options: ['It is the cheapest mirror shape to grind', 'All parallel rays converge to one focal point', 'It magnifies more than a spherical mirror', 'It is free of aberration at every angle'],
             correctAnswer: 1,
-            explanation: 'The parabolic reflective property ensures all incoming light focuses at a single point.'
+            explanation: 'The parabolic reflective property ensures all incoming parallel light focuses at a single point. Off-axis light still shows aberration (coma), so the shape is not aberration-free at every angle.'
           }
         ]
       }

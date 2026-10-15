@@ -139,7 +139,7 @@ For $a_1=3, a_n=a_{n-1}^2-2$:
         dropdowns: [
           {
             label: 'The Fibonacci sequence is defined:',
-            options: ['Explicitly', 'Recursively', 'Both equivalently'],
+            options: ['Explicitly', 'Recursively', 'By a ratio'],
             correctAnswer: 1
           },
           {
@@ -149,16 +149,16 @@ For $a_1=3, a_n=a_{n-1}^2-2$:
           },
           {
             label: 'The harmonic series $\\sum 1/n$:',
-            options: ['Converges to 1', 'Converges to $\\pi$', 'Diverges'],
+            options: ['Converges to 1', 'Converges to 2', 'Diverges'],
             correctAnswer: 2
           },
           {
             label: 'An arithmetic sequence can always be defined:',
-            options: ['Only recursively', 'Only explicitly', 'Both recursively and explicitly'],
+            options: ['Only recursively', 'Either way, if $d > 0$', 'Either way'],
             correctAnswer: 2
           }
         ],
-        correctAnswers: ['Recursively', '$1.618$', 'Diverges', 'Both recursively and explicitly'],
+        correctAnswers: ['Recursively', '$1.618$', 'Diverges', 'Either way'],
         hint1: 'Fibonacci: $F_n = F_{n-1}+F_{n-2}$ — defined using previous terms.',
         hint2: '$\\phi = (1+\\sqrt{5})/2 \\approx 1.618$.',
         hint3: 'The harmonic series diverges despite terms approaching 0.',

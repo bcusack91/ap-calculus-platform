@@ -111,15 +111,15 @@ $$h(x) = |x|/x$$
           },
           {
             question: 'A limit can exist at $x=c$ even if:',
-            options: ['$f(c)$ is undefined at that point', 'The left and right limits differ', '$f$ is unbounded near $c$', '$f$ oscillates infinitely near $c$'],
+            options: ['$f(c)$ is undefined at that point', 'The left and right limits are different', '$f$ grows without bound as $x \\to c$', '$f$ oscillates infinitely often near $c$'],
             correctAnswer: 0,
             explanation: 'The limit only cares about what $f$ does NEAR $c$, not AT $c$.'
           },
           {
             question: '$\\lim_{x \\to 0^-} |x|/x = ?$',
-            options: ['$1$', '$-1$', '$0$', 'DNE'],
+            options: ['$1$', '$-1$', '$-\\infty$', 'DNE'],
             correctAnswer: 1,
-            explanation: 'For $x < 0$: $|x| = -x$, so $|x|/x = -1$.'
+            explanation: 'For $x < 0$: $|x| = -x$, so $|x|/x = -1$ for every $x$ left of 0. The denominator shrinks, but so does the numerator, so nothing blows up to $-\\infty$.'
           }
         ]
       }
@@ -155,7 +155,7 @@ $$h(x) = |x|/x$$
         dropdowns: [
           {
             label: 'A limit describes what $f(x)$:',
-            options: ['Equals at $c$', 'Approaches near $c$', 'Is defined at', 'Maximizes at'],
+            options: ['Equals exactly at $c$', 'Approaches near $c$', 'Is defined to be at $c$', 'Reaches as a maximum near $c$'],
             correctAnswer: 1
           },
           {
@@ -165,12 +165,12 @@ $$h(x) = |x|/x$$
           },
           {
             label: '$\\lim_{x \\to c^+}$ means $x$ approaches from:',
-            options: ['The left', 'The right', 'Both sides', 'Above on $y$-axis'],
+            options: ['The left', 'The right', 'Both sides', 'Above (larger $y$)'],
             correctAnswer: 1
           },
           {
             label: '$0/0$ at $x=c$ means:',
-            options: ['Limit is 0', 'Limit is undefined', 'Must investigate further', 'Limit DNE'],
+            options: ['The limit must be exactly 0', 'The limit is automatically undefined', 'Must investigate further', 'The limit definitely does not exist'],
             correctAnswer: 2
           }
         ],
@@ -191,9 +191,9 @@ $$h(x) = |x|/x$$
         questions: [
           {
             question: '$f(x) = \\frac{x^2-4}{x-2}$. $\\lim_{x \\to 2} f(x) = ?$',
-            options: ['$4$', '$0$', 'DNE', '$2$'],
+            options: ['$4$', '$\\frac{0}{0}$', 'DNE', '$2$'],
             correctAnswer: 0,
-            explanation: '$\\frac{(x-2)(x+2)}{x-2} = x+2 \\to 4$.'
+            explanation: 'Direct substitution gives the form $\\frac{0}{0}$, which is not an answer. Factor: $\\frac{(x-2)(x+2)}{x-2} = x+2 \\to 4$.'
           },
           {
             question: 'If $\\lim_{x \\to 5^-} f(x) = 3$ and $\\lim_{x \\to 5^+} f(x) = 3$, then $\\lim_{x \\to 5} f(x) = ?$',

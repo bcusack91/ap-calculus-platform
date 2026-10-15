@@ -147,7 +147,7 @@ For $\\frac{x^2}{36}+\\frac{y^2}{4}=1$:
           },
           {
             label: 'The relationship $c^2 = a^2 - b^2$ gives:',
-            options: ['$c < a$ always', '$c < b$ always', '$c$ could be larger than $b$'],
+            options: ['$c$ can exceed $a$ when $b$ is small', '$c$ must always be less than $b$', '$c$ could be larger than $b$'],
             correctAnswer: 2
           },
           {
@@ -157,7 +157,7 @@ For $\\frac{x^2}{36}+\\frac{y^2}{4}=1$:
           },
           {
             label: 'Whispering galleries work because:',
-            options: ['Sound from one focus reflects to the other focus', 'The ceiling is a parabola', 'Sound travels in circles'],
+            options: ['Sound from one focus reflects to the other focus', 'The ceiling is a parabola, which sends sound to its vertex', 'Sound waves cling to the curved wall and circle the room'],
             correctAnswer: 0
           }
         ],
@@ -184,9 +184,9 @@ For $\\frac{x^2}{36}+\\frac{y^2}{4}=1$:
           },
           {
             question: 'An ellipse has foci at $(\\pm 3, 0)$ and vertices at $(\\pm 5, 0)$. Then $b =$',
-            options: ['$2$', '$4$', '$\\sqrt{34}$', '$8$'],
+            options: ['$16$', '$4$', '$\\sqrt{34}$', '$8$'],
             correctAnswer: 1,
-            explanation: '$a = 5, c = 3$. $b^2 = a^2-c^2 = 25-9 = 16$. $b = 4$.'
+            explanation: '$a = 5, c = 3$. $b^2 = a^2-c^2 = 25-9 = 16$, so $b = 4$. $16$ is $b^2$ (the square root was skipped), $8$ is the full minor-axis length $2b$, and $\\sqrt{34}$ comes from adding $a^2+c^2$.'
           }
         ]
       }

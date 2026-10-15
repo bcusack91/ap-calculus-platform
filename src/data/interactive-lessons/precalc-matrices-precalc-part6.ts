@@ -102,9 +102,9 @@ $$T = R_{45°} \\cdot \\begin{bmatrix} 2 & 0 \\\\ 0 & 2 \\end{bmatrix} = \\begin
           },
           {
             question: 'The matrix $\\begin{bmatrix} -1 & 0 \\\\ 0 & -1 \\end{bmatrix}$ represents:',
-            options: ['$90°$ rotation', '$180°$ rotation', 'Reflection over $x$-axis', 'Scale by $-1$'],
+            options: ['$90°$ rotation', '$180°$ rotation', 'Reflection over $x$-axis', 'Reflection over $y$-axis'],
             correctAnswer: 1,
-            explanation: '$(x,y) \\to (-x,-y)$: rotation by $180°$ (also equals point reflection through origin).'
+            explanation: '$(x,y) \\to (-x,-y)$: rotation by $180°$ (the same as a point reflection through the origin, or scaling by $-1$). A reflection over one axis flips only one coordinate.'
           },
           {
             question: 'To apply $T_{1}$ then $T_{2}$: the combined matrix is:',
@@ -158,7 +158,7 @@ Reflect $(5, -3)$ over the $y$-axis using $\\begin{bmatrix} -1 & 0 \\\\ 0 & 1 \\
           },
           {
             label: '$\\begin{bmatrix} 3 & 0 \\\\ 0 & 3 \\end{bmatrix}$ is a:',
-            options: ['Rotation', 'Reflection', 'Dilation (scale)', 'Shear'],
+            options: ['Rotation', 'Reflection', 'Dilation', 'Shear'],
             correctAnswer: 2
           },
           {
@@ -167,7 +167,7 @@ Reflect $(5, -3)$ over the $y$-axis using $\\begin{bmatrix} -1 & 0 \\\\ 0 & 1 \\
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['$1$', '$-1$', 'Dilation (scale)', '$1$'],
+        correctAnswers: ['$1$', '$-1$', 'Dilation', '$1$'],
         hint1: '$\\cos^2+\\sin^2=1$.',
         hint2: 'Reflections reverse orientation.',
         hint3: 'Same scale in both directions.',

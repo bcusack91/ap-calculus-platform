@@ -105,15 +105,15 @@ Precalc matrices → Linear algebra → Abstract algebra → Modern math!
           },
           {
             question: 'Which method ALWAYS reveals the type of solution?',
-            options: ['Cramer\'s Rule', 'Inverse method', 'Gaussian elimination', 'Substitution'],
+            options: ['Computing $\\det(A)$', 'The inverse method', 'Gaussian elimination', 'Substitution'],
             correctAnswer: 2,
-            explanation: 'Gauss-Jordan: unique ($I$), infinite (free variables), none ($0=c$).'
+            explanation: 'Gauss-Jordan: unique ($I$), infinite (free variables), none ($0=c$). A determinant of $0$ (which also blocks Cramer and the inverse method) cannot tell "none" from "infinitely many".'
           },
           {
             question: '$A = \\begin{bmatrix} 2 & 0 \\\\ 0 & 5 \\end{bmatrix}$. $A^{-1}$?',
-            options: ['$\\begin{bmatrix} 1/2 & 0 \\\\ 0 & 1/5 \\end{bmatrix}$', '$\\begin{bmatrix} 5 & 0 \\\\ 0 & 2 \\end{bmatrix}$', '$\\begin{bmatrix} 2 & 0 \\\\ 0 & 5 \\end{bmatrix}$', 'Does not exist'],
+            options: ['$\\begin{bmatrix} 1/2 & 0 \\\\ 0 & 1/5 \\end{bmatrix}$', '$\\begin{bmatrix} 5 & 0 \\\\ 0 & 2 \\end{bmatrix}$', '$\\begin{bmatrix} -2 & 0 \\\\ 0 & -5 \\end{bmatrix}$', 'Does not exist'],
             correctAnswer: 0,
-            explanation: 'Diagonal inverse: reciprocal of each diagonal entry. $\\det=10\\neq 0$.'
+            explanation: 'Diagonal inverse: reciprocal of each diagonal entry, kept in place. $\\det=10\\neq 0$. Swapping the diagonal without dividing by the determinant gives $\\begin{bmatrix} 5 & 0 \\\\ 0 & 2 \\end{bmatrix}$, and negating the entries gives the additive inverse, not the multiplicative one.'
           }
         ]
       }
@@ -149,17 +149,17 @@ Precalc matrices → Linear algebra → Abstract algebra → Modern math!
         dropdowns: [
           {
             label: 'Matrix multiplication order matters because:',
-            options: ['Not commutative', 'Not associative', 'Not defined', 'Always gives zero'],
+            options: ['Not commutative', 'Not associative', 'Not defined', 'Has no inverse'],
             correctAnswer: 0
           },
           {
             label: 'The identity matrix $I$ satisfies:',
-            options: ['$AI = A$', '$IA = A$', '$AI = IA = A$', '$I = 0$'],
+            options: ['$AI = A$ only', '$IA = A$ only', '$AI = IA = A$', '$AI = IA = I$'],
             correctAnswer: 2
           },
           {
             label: '$\\det(AB) = ?$',
-            options: ['$\\det(A)+\\det(B)$', '$\\det(A) \\cdot \\det(B)$', '$\\det(A+B)$', '$\\det(A)/\\det(B)$'],
+            options: ['$\\det A + \\det B$', '$\\det A \\det B$', '$\\det(A+B)$', '$\\det A / \\det B$'],
             correctAnswer: 1
           },
           {
@@ -168,7 +168,7 @@ Precalc matrices → Linear algebra → Abstract algebra → Modern math!
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['Not commutative', '$AI = IA = A$', '$\\det(A) \\cdot \\det(B)$', 'All 1'],
+        correctAnswers: ['Not commutative', '$AI = IA = A$', '$\\det A \\det B$', 'All 1'],
         hint1: '$AB \\neq BA$ generally.',
         hint2: 'Identity works on both sides.',
         hint3: 'Determinant is multiplicative.',
@@ -185,9 +185,9 @@ Precalc matrices → Linear algebra → Abstract algebra → Modern math!
         questions: [
           {
             question: 'Best method for a 5×5 system?',
-            options: ['Cramer\'s Rule', 'Substitution', 'Gaussian elimination / RREF', 'Graphing'],
+            options: ['Cramer\'s Rule with determinants', 'Substitution, one variable at a time', 'Row reduction to RREF', 'Graphing each equation'],
             correctAnswer: 2,
-            explanation: 'For large systems, Gaussian elimination (especially with technology) is by far the best.'
+            explanation: 'For large systems, row reduction (Gaussian elimination), especially with technology, is by far the best. Cramer\'s Rule needs six $5 \\times 5$ determinants, and substitution and graphing become unmanageable.'
           },
           {
             question: '$A^2 = I$ (involution). Then $A^{-1} = ?$',

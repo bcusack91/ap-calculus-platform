@@ -116,14 +116,14 @@ Concave up when $t > 0$, concave down when $t < 0$.
 
 **2)** $x = e^t, \\; y = e^{-t}$. $\\frac{dy}{dx}$ at $t = 0$ = ?
 
-**3)** $x = t + \\sin t, \\; y = 1 - \\cos t$. $\\frac{dy}{dx}$ at $t = \\frac{\\pi}{2}$ = ? (Enter as a fraction)
+**3)** $x = t + \\sin t, \\; y = 1 - \\cos t$. $\\frac{dy}{dx}$ at $t = \\frac{\\pi}{2}$ = ? (Enter as a fraction or whole number)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '-1', '1/2'],
+        correctAnswers: ['2', '-1', '1'],
         hint1: '$\\frac{dy}{dx} = \\frac{2t}{3} = \\frac{2(3)}{3} = 2$.',
         hint2: '$\\frac{dy}{dx} = \\frac{-e^{-t}}{e^t} = -e^{-2t}$. At $t = 0$: $-e^0 = -1$.',
-        hint3: '$\\frac{dy}{dx} = \\frac{\\sin t}{1+\\cos t} = \\frac{1}{1+0} = 1$... Wait: at $t = \\frac{\\pi}{2}$: $\\frac{\\sin(\\pi/2)}{1+\\cos(\\pi/2)} = \\frac{1}{1+0} = 1$. Hmm, let me recheck. Actually $\\frac{\\pi}{2}$: $\\sin = 1, \\cos = 0$, so $\\frac{1}{1+0} = 1$. Actually answer should be $\\frac{1}{2}$. Let me recalculate: $\\frac{dx}{dt} = 1 + \\cos t = 1 + 0 = 1$, $\\frac{dy}{dt} = \\sin t = 1$. So $\\frac{dy}{dx} = \\frac{1}{1} = 1$.',
+        hint3: '$\\frac{dx}{dt} = 1 + \\cos t$ and $\\frac{dy}{dt} = \\sin t$, so $\\frac{dy}{dx} = \\frac{\\sin t}{1+\\cos t}$. At $t = \\frac{\\pi}{2}$: $\\frac{1}{1+0} = 1$.',
         explanation: '1) $\\frac{2t}{3} = 2$. 2) $-e^{-2t} = -1$. 3) $\\frac{\\sin t}{1+\\cos t} = 1$.'
       }
     },
@@ -152,7 +152,7 @@ Concave up when $t > 0$, concave down when $t < 0$.
           },
           {
             label: 'If $\\frac{d^2y}{dx^2} > 0$, the curve is:',
-            options: ['Concave up', 'Concave down', 'Linear'],
+            options: ['Concave up', 'Concave down', 'A straight line'],
             correctAnswer: 0
           }
         ],

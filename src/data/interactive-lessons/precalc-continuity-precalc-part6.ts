@@ -105,13 +105,13 @@ $$\\text{Differentiable} \\subset \\text{Continuous} \\subset \\text{Has limits}
           },
           {
             question: 'Every differentiable function is:',
-            options: ['Polynomial', 'Continuous', 'Monotonic', 'Bounded'],
+            options: ['A polynomial', 'Continuous', 'Monotonic everywhere', 'Bounded everywhere'],
             correctAnswer: 1,
             explanation: 'Differentiability implies continuity. Always.'
           },
           {
             question: '$|x|$ at $x=0$ is:',
-            options: ['Continuous and differentiable', 'Continuous but not differentiable', 'Neither', 'Differentiable but not continuous'],
+            options: ['Continuous and differentiable', 'Continuous but not differentiable', 'Neither continuous nor differentiable', 'Differentiable but not continuous'],
             correctAnswer: 1,
             explanation: '$|x|$ is continuous everywhere but has a sharp corner at 0 → not differentiable there.'
           }
@@ -149,7 +149,7 @@ $$\\text{Differentiable} \\subset \\text{Continuous} \\subset \\text{Has limits}
         dropdowns: [
           {
             label: 'You can "pass a limit inside" a function when the function is:',
-            options: ['Differentiable', 'Continuous', 'Bounded', 'Periodic'],
+            options: ['Differentiable', 'Continuous', 'Bounded near $c$', 'A polynomial'],
             correctAnswer: 1
           },
           {
@@ -159,7 +159,7 @@ $$\\text{Differentiable} \\subset \\text{Continuous} \\subset \\text{Has limits}
           },
           {
             label: 'Continuous ⟹ Differentiable is:',
-            options: ['Always true', 'Sometimes true (not always)', 'Never true', 'Only for polynomials'],
+            options: ['Always true', 'Sometimes true', 'Never true', 'Only for polynomials'],
             correctAnswer: 1
           },
           {
@@ -168,7 +168,7 @@ $$\\text{Differentiable} \\subset \\text{Continuous} \\subset \\text{Has limits}
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['Continuous', 'Always true', 'Sometimes true (not always)', 'Sharp corner'],
+        correctAnswers: ['Continuous', 'Always true', 'Sometimes true', 'Sharp corner'],
         hint1: 'Continuity allows limit-function swap.',
         hint2: 'Differentiable always implies continuous.',
         hint3: 'Counterexample: $|x|$.',

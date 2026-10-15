@@ -113,16 +113,16 @@ This matches the experimentally measured **first ionization energy of hydrogen**
           },
           {
             question: 'A hydrogen atom in $n = 3$ relaxes to $n = 2$. What region of the EM spectrum is the emitted photon in?',
-            options: ['Radio', 'Infrared', 'Visible (red)', 'Ultraviolet'],
+            options: ['Infrared (Paschen)', 'Ultraviolet (Lyman)', 'Visible (Balmer)', 'Far infrared (Brackett)'],
             correctAnswer: 2,
-            explanation: 'This is the H-alpha line at 656 nm — the bright red line in hydrogen\'s visible spectrum.'
+            explanation: 'This is the H-alpha line of the Balmer series ($n_f = 2$) at 656 nm — the bright red line in hydrogen\'s visible spectrum. Lyman lines end at $n = 1$ (UV); Paschen and Brackett lines end at $n = 3$ and $n = 4$ (IR).'
           },
           {
             question: 'Energy levels closer to ionization (large $n$) are:',
             options: [
-              'farther apart in energy',
+              'spaced farther apart in energy',
               'closer together in energy',
-              'evenly spaced',
+              'spaced evenly, like rungs on a ladder',
               'only present in heavier atoms'
             ],
             correctAnswer: 1,
@@ -163,7 +163,7 @@ Use $E_n = -2.18 \\times 10^{-18}/n^2 \\; \\text{J}$.
           { label: 'A hydrogen atom in its ground state has $n =$', options: ['0', '1', '∞', '−13.6'] },
           { label: 'The energy of an electron at $n = \\infty$ is', options: ['$-2.18 \\times 10^{-18}$ J', '$+2.18 \\times 10^{-18}$ J', '$0$', '$-13.6$ J'] },
           { label: 'A photon is **absorbed** when an electron moves from', options: ['$n=1$ to $n=3$', '$n=3$ to $n=1$', '$n=4$ to $n=2$', '$n=2$ to $n=1$'] },
-          { label: 'In hydrogen, transitions ending at $n=1$ produce', options: ['IR photons', 'visible photons', 'UV photons (Lyman series)', 'microwaves'] }
+          { label: 'In hydrogen, transitions ending at $n=1$ produce', options: ['IR photons (Paschen series)', 'visible photons (Balmer series)', 'UV photons (Lyman series)', 'IR photons (Brackett series)'] }
         ],
         correctAnswers: ['1', '$0$', '$n=1$ to $n=3$', 'UV photons (Lyman series)'],
         hint1: 'The lowest, most stable level is the ground state.',
@@ -182,16 +182,16 @@ Use $E_n = -2.18 \\times 10^{-18}/n^2 \\; \\text{J}$.
             question: 'Which is the most important success of the Bohr model?',
             options: [
               'It correctly predicts the spectra of all elements',
-              'It correctly predicts the wavelengths of hydrogen\'s line spectrum',
-              'It explains chemical bonding',
-              'It accounts for the orbital shapes (s, p, d, f)'
+              'It predicts hydrogen\'s spectral line wavelengths',
+              'It explains why atoms form covalent and ionic bonds',
+              'It accounts for the shapes of s, p, d, and f orbitals'
             ],
             correctAnswer: 1,
             explanation: 'The Bohr model accurately predicts hydrogen\'s spectral lines but fails for multi-electron atoms — those required the quantum mechanical model.'
           },
           {
             question: 'If a hydrogen atom in $n = 5$ emits a photon and ends up in $n = 2$, the emitted wavelength is in which series?',
-            options: ['Lyman (UV)', 'Balmer (visible)', 'Paschen (IR)', 'Brackett (far IR)'],
+            options: ['Lyman (UV)', 'Balmer (visible)', 'Paschen (IR)', 'Brackett (infrared)'],
             correctAnswer: 1,
             explanation: 'Transitions ending at $n = 2$ form the Balmer series — visible light.'
           }

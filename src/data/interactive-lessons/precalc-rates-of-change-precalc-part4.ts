@@ -105,7 +105,7 @@ The IROC itself is increasing — **accelerating growth**.
           },
           {
             question: 'How do shrinking intervals approximate IROC?',
-            options: ['AROC values approach IROC', 'Secant slopes diverge', 'No connection', 'IROC = average of AROCs'],
+            options: ['AROC values approach IROC', 'Secant slopes diverge', 'AROC stays fixed', 'IROC = average of AROCs'],
             correctAnswer: 0,
             explanation: 'As the interval shrinks to zero width, AROC converges to IROC.'
           }
@@ -153,7 +153,7 @@ The IROC itself is increasing — **accelerating growth**.
           },
           {
             label: 'Instantaneous velocity is IROC of:',
-            options: ['Acceleration', 'Position', 'Speed', 'Force'],
+            options: ['Acceleration', 'Position', 'Distance traveled', 'Average velocity'],
             correctAnswer: 1
           },
           {
@@ -185,7 +185,7 @@ The IROC itself is increasing — **accelerating growth**.
           },
           {
             question: 'The relationship between AROC and IROC:',
-            options: ['AROC = IROC always', 'IROC = limit of AROC as interval → 0', 'They are unrelated', 'AROC > IROC always'],
+            options: ['AROC = IROC on every interval', 'IROC = limit of AROC as interval → 0', 'They are unrelated', 'AROC > IROC on every interval'],
             correctAnswer: 1,
             explanation: 'IROC is the limit of AROC as the interval width shrinks to zero.'
           }

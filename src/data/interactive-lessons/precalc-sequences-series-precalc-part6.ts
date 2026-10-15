@@ -98,9 +98,9 @@ This is why each entry in Pascal's triangle is the sum of the two above it!
           },
           {
             question: 'The coefficient of $x^3$ in $(x+1)^5$ is:',
-            options: ['$5$', '$10$', '$20$', '$1$'],
+            options: ['$5$', '$10$', '$3$', '$1$'],
             correctAnswer: 1,
-            explanation: '$\\binom{5}{2}x^3(1)^2 = 10x^3$. Coefficient: $10$.'
+            explanation: '$\\binom{5}{2}x^3(1)^2 = 10x^3$. Coefficient: $10$. The exponent $3$ is not the coefficient, $5 = \\binom{5}{1}$ belongs to $x^4$, and $1$ belongs to $x^5$.'
           },
           {
             question: 'How many terms in the expansion of $(a+b)^{10}$?',

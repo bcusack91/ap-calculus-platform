@@ -159,12 +159,12 @@ $A + B = \\begin{bmatrix} ? & ? \\\\ ? & ? \\end{bmatrix}$
           },
           {
             label: 'The identity matrix has:',
-            options: ['All 1s', '1s on diagonal, 0s elsewhere', 'All 0s', '0s on diagonal'],
+            options: ['1s in every entry', '1s on diagonal, 0s elsewhere', '0s on diagonal, 1s off it', '1s in row 1, 0s elsewhere'],
             correctAnswer: 1
           },
           {
             label: 'An augmented matrix represents:',
-            options: ['A single equation', 'A system of equations', 'A determinant', 'An inverse'],
+            options: ['A single equation in two unknowns', 'A system of equations', 'The determinant of the coefficients', 'The inverse of the coefficient matrix'],
             correctAnswer: 1
           }
         ],

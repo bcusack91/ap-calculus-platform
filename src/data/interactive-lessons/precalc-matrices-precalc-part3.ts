@@ -104,7 +104,7 @@ $D_y = 3(1)-8(1) = -5$, so $y = -5/-5 = 1$
           },
           {
             question: 'In Cramer\'s Rule, $D_x$ replaces which column?',
-            options: ['The $x$-column with constants', 'The $y$-column with constants', 'The constant column with $x$', 'No column'],
+            options: ['The $x$-column with constants', 'The $y$-column with constants', 'The constant column with $x$', 'The $x$-row with constants'],
             correctAnswer: 0,
             explanation: 'To find $x$: replace the $x$-coefficient column with the constants.'
           }
@@ -142,12 +142,12 @@ $D_y = 3(1)-8(1) = -5$, so $y = -5/-5 = 1$
         dropdowns: [
           {
             label: '$|\\det|$ geometrically represents:',
-            options: ['Length', 'Area (2D) or Volume (3D)', 'Angle', 'Slope'],
+            options: ['Length (2D) or Area (3D)', 'Area (2D) or Volume (3D)', 'Angle between the row vectors', 'Slope of the column vectors'],
             correctAnswer: 1
           },
           {
             label: 'Cramer\'s Rule requires:',
-            options: ['$D = 0$', '$D \\neq 0$', 'Only 2×2 systems', 'Augmented matrices'],
+            options: ['$D = 0$', '$D \\neq 0$', '$D > 0$', '$D = 1$'],
             correctAnswer: 1
           },
           {
@@ -157,7 +157,7 @@ $D_y = 3(1)-8(1) = -5$, so $y = -5/-5 = 1$
           },
           {
             label: 'Swapping two rows of a matrix:',
-            options: ['Doubles the det', 'Changes sign of det', 'Keeps det same', 'Makes det 0'],
+            options: ['Doubles the value of det', 'Changes sign of det', 'Keeps the det unchanged', 'Makes the det equal 0'],
             correctAnswer: 1
           }
         ],
@@ -178,9 +178,9 @@ $D_y = 3(1)-8(1) = -5$, so $y = -5/-5 = 1$
         questions: [
           {
             question: 'Use Cramer: $\\begin{cases} 2x+y=5 \\\\ x-3y=4 \\end{cases}$. $x = ?$',
-            options: ['$\\frac{19}{7}$', '$\\frac{-19}{7}$', '$3$', '$\\frac{5}{7}$'],
+            options: ['$\\frac{19}{7}$', '$\\frac{-19}{7}$', '$-\\frac{3}{7}$', '$\\frac{7}{19}$'],
             correctAnswer: 0,
-            explanation: '$D = -6-1=-7$. $D_x = -15-4=-19$. $x = -19/-7 = 19/7$.'
+            explanation: '$D = 2(-3)-1(1)=-7$. $D_x = 5(-3)-1(4)=-19$. $x = -19/-7 = 19/7$. Dropping a sign gives $-19/7$, inverting the ratio gives $7/19$, and $-3/7$ is the value of $y$.'
           },
           {
             question: '$\\det \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix} = ?$',

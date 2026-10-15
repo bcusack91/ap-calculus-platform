@@ -149,12 +149,12 @@ Sequence: $2, 5, 8, 11, 14$.
           },
           {
             label: 'The sum formula $S_n = \\frac{n}{2}(a_1+a_n)$ averages:',
-            options: ['First and last terms, multiplied by $n$', 'All terms individually', 'Only the middle term'],
+            options: ['First and last terms', 'Every term, one at a time', 'The first term and $d$'],
             correctAnswer: 0
           },
           {
             label: 'If $d < 0$, the sequence is:',
-            options: ['Increasing', 'Decreasing', 'Constant'],
+            options: ['Growing', 'Decreasing', 'Constant'],
             correctAnswer: 1
           },
           {
@@ -163,7 +163,7 @@ Sequence: $2, 5, 8, 11, 14$.
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['Common difference', 'First and last terms, multiplied by $n$', 'Decreasing', '$1000$'],
+        correctAnswers: ['Common difference', 'First and last terms', 'Decreasing', '$1000$'],
         hint1: 'Arithmetic = constant difference between terms.',
         hint2: 'Average of first and last, times number of terms.',
         hint3: 'Negative $d$ means each term is smaller.',

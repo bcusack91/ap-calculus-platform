@@ -99,7 +99,7 @@ Like multiplying by 1 in regular arithmetic!
           },
           {
             question: 'Can a $(3 \\times 2)$ matrix multiply a $(3 \\times 2)$ matrix?',
-            options: ['Yes, result is $3 \\times 2$', 'Yes, result is $2 \\times 3$', 'No', 'Yes, result is $3 \\times 3$'],
+            options: ['Yes, result is $3 \\times 2$', 'Yes, result is $2 \\times 2$', 'No, inner dimensions differ', 'Yes, result is $3 \\times 3$'],
             correctAnswer: 2,
             explanation: 'Inner dimensions: $2 \\neq 3$. Cannot multiply.'
           },
@@ -145,7 +145,7 @@ $\\begin{bmatrix} 2 & 3 \\\\ 1 & 0 \\end{bmatrix} \\begin{bmatrix} 1 & 4 \\\\ 2 
         dropdowns: [
           {
             label: 'Matrix multiplication is:',
-            options: ['Commutative', 'Not commutative', 'Always undefined', 'Same as addition'],
+            options: ['Commutative', 'Not commutative', 'Always defined', 'Entrywise'],
             correctAnswer: 1
           },
           {
@@ -181,9 +181,9 @@ $\\begin{bmatrix} 2 & 3 \\\\ 1 & 0 \\end{bmatrix} \\begin{bmatrix} 1 & 4 \\\\ 2 
         questions: [
           {
             question: '$\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}^2$: entry $(2,2)$?',
-            options: ['$22$', '$16$', '$50$', '$20$'],
+            options: ['$22$', '$16$', '$10$', '$15$'],
             correctAnswer: 0,
-            explanation: '$A^2 = AA$. Row 2 · Col 2: $3(2)+4(4) = 6+16 = 22$.'
+            explanation: '$A^2 = AA$. Row 2 · Col 2: $3(2)+4(4) = 6+16 = 22$. Squaring the entry alone gives $16$; $10$ and $15$ are the $(1,2)$ and $(2,1)$ entries of $A^2$.'
           },
           {
             question: 'If $A$ is $4 \\times 2$ and $B$ is $2 \\times 7$, what is $AB$?',

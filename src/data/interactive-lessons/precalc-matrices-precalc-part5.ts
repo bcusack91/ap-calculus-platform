@@ -90,15 +90,15 @@ Back-substitute: $z=0, y=2, x=4$.
         questions: [
           {
             question: 'Which is NOT a valid row operation?',
-            options: ['$R_1 + 2R_2 \\to R_1$', '$3R_1 \\to R_1$', '$R_1 \\cdot R_2 \\to R_1$', '$R_1 \\leftrightarrow R_3$'],
+            options: ['$R_1 + 2R_2 \\to R_1$', '$3R_1 \\to R_1$', '$R_1 \\cdot R_2 \\to R_1$', '$R_1 - R_2 \\to R_1$'],
             correctAnswer: 2,
-            explanation: 'Multiplying two rows together is not a valid elementary row operation.'
+            explanation: 'Multiplying two rows together is not a valid elementary row operation. Adding or subtracting a multiple of another row and scaling a row by a nonzero constant are both allowed.'
           },
           {
             question: 'RREF has:',
-            options: ['Leading 1s only, zeros above and below', 'Zeros everywhere', 'No restrictions', 'Only integers'],
+            options: ['Leading 1s, zeros above and below', 'Leading 1s, with zeros below them only', 'Any leading entries, zeros below them', 'Leading 1s on every diagonal entry'],
             correctAnswer: 0,
-            explanation: 'RREF: leading 1s with all zeros in their column (above AND below).'
+            explanation: 'RREF: leading 1s with all zeros in their column (above AND below). Zeros only below is row echelon form, and RREF does not require a pivot in every diagonal position.'
           },
           {
             question: 'If row reduction gives $\\begin{bmatrix} 1 & 0 & | & 3 \\\\ 0 & 0 & | & 5 \\end{bmatrix}$:',
@@ -149,21 +149,21 @@ After $\\frac{1}{2}R_1$: first row becomes $\\begin{bmatrix} 1 & ? & | & ? \\end
           },
           {
             label: 'RREF has zeros:',
-            options: ['Only below', 'Only above', 'Above and below leading 1s', 'Nowhere'],
+            options: ['Only below the leading 1s', 'Only above the leading 1s', 'Above and below leading 1s', 'Only to the left of leading 1s'],
             correctAnswer: 2
           },
           {
-            label: 'A row of all zeros indicates:',
-            options: ['No solution', 'Free variable (infinite solutions)', 'Unique solution', 'Error'],
+            label: 'In a square, consistent system, a zero row means:',
+            options: ['No solution exists', 'A free variable', 'A unique solution', 'An arithmetic error'],
             correctAnswer: 1
           },
           {
             label: 'Gaussian elimination uses:',
-            options: ['Only swaps', 'Only scaling', 'All three row operations', 'Determinants'],
+            options: ['Only row swaps and scaling', 'Only row replacement steps', 'All three row operations', 'All row and column operations'],
             correctAnswer: 2
           }
         ],
-        correctAnswers: ['Below leading 1s', 'Above and below leading 1s', 'Free variable (infinite solutions)', 'All three row operations'],
+        correctAnswers: ['Below leading 1s', 'Above and below leading 1s', 'A free variable', 'All three row operations'],
         hint1: 'REF: staircase down.',
         hint2: 'RREF: complete elimination.',
         hint3: 'Zero row = one less equation = free variable.',
@@ -186,9 +186,9 @@ After $\\frac{1}{2}R_1$: first row becomes $\\begin{bmatrix} 1 & ? & | & ? \\end
           },
           {
             question: 'How many solutions if RREF is $\\left[\\begin{array}{ccc|c} 1 & 0 & 2 & 5 \\\\ 0 & 1 & -1 & 3 \\\\ 0 & 0 & 0 & 0 \\end{array}\\right]$?',
-            options: ['One', 'None', 'Infinitely many', 'Three'],
+            options: ['Exactly one: $(5, 3, 0)$', 'None, since a row is all zeros', 'Infinitely many', 'Three, one per variable'],
             correctAnswer: 2,
-            explanation: 'Third row all zeros → $z$ is free → infinitely many solutions.'
+            explanation: 'Third row all zeros → $z$ is free → infinitely many solutions. Setting $z = 0$ gives just one of them, and a zero row signals a free variable, not a contradiction.'
           }
         ]
       }

@@ -94,7 +94,7 @@ The shape depends on the frequency ratio $a:b$ and phase shift $\\delta$.
           },
           {
             question: 'A projectile launched at $60°$ and one at $30°$ (same $v_0$, level ground) have:',
-            options: ['Same range, same max height', 'Same range, different max heights', 'Different range, same max height', 'Both different'],
+            options: ['Same range, same max height', 'Same range, different max heights', 'Different range, same max height', 'Different range and max height'],
             correctAnswer: 1,
             explanation: '$\\sin(2 \\cdot 60°) = \\sin(120°) = \\sin(60°) = \\sin(2 \\cdot 30°)$. Same range, but $60°$ goes higher.'
           },
@@ -155,7 +155,7 @@ A ball is launched at $v_0 = 80$ ft/s at $\\alpha = 45°$ from ground level ($h_
           },
           {
             label: 'The range formula $R = \\frac{v_0^2\\sin 2\\alpha}{g}$ assumes:',
-            options: ['Any launch height', 'Launch and land at same height', 'No gravity', 'Constant speed'],
+            options: ['Any launch height above the ground', 'Launch and land at same height', 'Air resistance proportional to speed', 'A launch angle no greater than $45°$'],
             correctAnswer: 1
           }
         ],

@@ -66,13 +66,13 @@ export const precalcParametricPart7Data = {
           },
           {
             question: 'The curve $x = 2+t, \\; y = 1+t^2$ is:',
-            options: ['A line', 'A parabola opening up', 'A parabola opening right', 'A circle'],
+            options: ['A straight line through $(2, 1)$', 'A parabola opening up', 'A parabola opening right', 'A circle centered at $(2, 1)$'],
             correctAnswer: 1,
             explanation: '$t = x-2$, so $y = 1+(x-2)^2$. Parabola opening upward with vertex at $(2, 1)$.'
           },
           {
             question: 'Arc length of $x = 3\\cos t, \\; y = 4\\sin t$ from $t=0$ to $t=2\\pi$ is computed as:',
-            options: ['$2\\pi \\cdot 3 = 6\\pi$', '$2\\pi \\cdot 4 = 8\\pi$', '$2\\pi \\cdot 5 = 10\\pi$', 'An elliptic integral (no simple formula)'],
+            options: ['$2\\pi \\cdot 3 = 6\\pi$', '$2\\pi \\cdot 4 = 8\\pi$', '$2\\pi \\cdot 5 = 10\\pi$', 'An elliptic integral'],
             correctAnswer: 3,
             explanation: 'This is an ellipse ($a \\neq b$). Its perimeter requires an elliptic integral — there is no closed form.'
           }
@@ -120,20 +120,20 @@ export const precalcParametricPart7Data = {
           },
           {
             label: 'A curve with $dx/dt = 0$ and $dy/dt = 0$ at $t_0$ has:',
-            options: ['A horizontal tangent', 'A vertical tangent', 'A cusp, node, or other singularity'],
+            options: ['A horizontal tangent, since $dy/dt = 0$', 'A vertical tangent, since $dx/dt = 0$', 'An indeterminate slope that needs more analysis'],
             correctAnswer: 2
           },
           {
             label: 'To find where two parametric curves intersect:',
-            options: ['Set $x_1=x_2$ and $y_1=y_2$ (parameters may differ)', 'Set $t$ equal in both', 'Eliminate $t$ from both and solve'],
+            options: ['Solve $x_1(s)=x_2(t)$ and $y_1(s)=y_2(t)$', 'Solve $x_1(t)=x_2(t)$ and $y_1(t)=y_2(t)$', 'Set the slopes $\\frac{dy}{dx}$ of both curves equal'],
             correctAnswer: 0
           }
         ],
-        correctAnswers: ['Same line, different speeds', '$\\frac{(d/dt)(y\'/x\')}{x\'(t)}$', 'A cusp, node, or other singularity', 'Set $x_1=x_2$ and $y_1=y_2$ (parameters may differ)'],
+        correctAnswers: ['Same line, different speeds', '$\\frac{(d/dt)(y\'/x\')}{x\'(t)}$', 'An indeterminate slope that needs more analysis', 'Solve $x_1(s)=x_2(t)$ and $y_1(s)=y_2(t)$'],
         hint1: 'Both give $y = x$, but $(t^3)$ moves slower near $t = 0$.',
         hint2: 'Chain rule: $\\frac{d}{dx}(dy/dx) = \\frac{(d/dt)(dy/dx)}{dx/dt}$.',
-        hint3: 'Both rates zero → indeterminate; could be cusp or self-intersection.',
-        explanation: 'Same curve, different parametrization speed. Use chain rule formula. Both zero: singular point. Intersection: set coordinates equal (with possibly different parameter values).'
+        hint3: 'Both rates zero → the slope is the indeterminate form $\\frac{0}{0}$; the point could be a cusp or even a smooth point, so analyze further.',
+        explanation: 'Same curve, different parametrization speed. Use chain rule formula. Both zero: indeterminate slope that needs more analysis. Intersection: solve $x_1(s)=x_2(t)$, $y_1(s)=y_2(t)$ (the parameter values may differ).'
       }
     },
     {
@@ -146,9 +146,9 @@ export const precalcParametricPart7Data = {
         questions: [
           {
             question: 'For $x = e^t, y = e^{-t}$, eliminating $t$ gives:',
-            options: ['$y = \\frac{1}{x}$ for $x > 0$', '$y = -x$', '$xy = 0$', '$y = e^{-x}$'],
+            options: ['$y = \\frac{1}{x}$ for $x > 0$', '$y = -x$ for $x > 0$', '$xy = 0$ for $x > 0$', '$y = e^{-x}$ for $x > 0$'],
             correctAnswer: 0,
-            explanation: '$xy = e^t \\cdot e^{-t} = 1$, so $y = \\frac{1}{x}$. Since $x = e^t > 0$: right branch of hyperbola.'
+            explanation: '$xy = e^t \\cdot e^{-t} = e^0 = 1$, so $y = \\frac{1}{x}$. Since $x = e^t > 0$: right branch of hyperbola. Treating $e^{-t}$ as $-e^t$ gives $y = -x$, and taking $e^0$ as $0$ gives $xy = 0$.'
           },
           {
             question: 'The speed of a particle with $x = 4\\cos(3t), y = 4\\sin(3t)$ is:',

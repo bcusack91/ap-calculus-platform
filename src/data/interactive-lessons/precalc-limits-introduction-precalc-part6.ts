@@ -89,9 +89,9 @@ IVT is used to prove the **Extreme Value Theorem** and the **Mean Value Theorem*
         questions: [
           {
             question: 'In the epsilon-delta definition, $\\varepsilon$ represents:',
-            options: ['Closeness of $x$ to $c$', 'Closeness of $f(x)$ to $L$', 'The limit itself', 'The function value'],
+            options: ['How close $x$ must be to $c$', 'Closeness of $f(x)$ to $L$', 'The limit value $L$ that $f$ nears', 'The value $f(c)$ at the point'],
             correctAnswer: 1,
-            explanation: '$\\varepsilon$ is the tolerance for the OUTPUT — how close $f(x)$ must be to $L$.'
+            explanation: '$\\varepsilon$ is the tolerance for the OUTPUT — how close $f(x)$ must be to $L$. The input tolerance (how close $x$ is to $c$) is $\\delta$.'
           },
           {
             question: 'For $\\lim_{x\\to 3}(2x+1) = 7$, what $\\delta$ works for $\\varepsilon = 0.01$?',
@@ -101,9 +101,9 @@ IVT is used to prove the **Extreme Value Theorem** and the **Mean Value Theorem*
           },
           {
             question: 'IVT requires the function to be:',
-            options: ['Differentiable', 'Continuous on $[a,b]$', 'Monotonic', 'Polynomial'],
+            options: ['Differentiable on $(a,b)$', 'Continuous on $[a,b]$', 'Increasing throughout $[a,b]$', 'A polynomial on $[a,b]$'],
             correctAnswer: 1,
-            explanation: 'IVT needs continuity on the closed interval. Differentiability is not required.'
+            explanation: 'IVT needs continuity on the closed interval. Differentiability, monotonicity, and being a polynomial are not required (polynomials happen to be continuous, but so are many other functions).'
           }
         ]
       }
@@ -144,21 +144,21 @@ IVT is used to prove the **Extreme Value Theorem** and the **Mean Value Theorem*
           },
           {
             label: 'Finding $\\delta$ for a linear function $mx+b$:',
-            options: ['$\\delta = \\varepsilon$', '$\\delta = \\varepsilon/|m|$', '$\\delta = m\\varepsilon$', '$\\delta = \\varepsilon^2$'],
+            options: ['$\\delta = \\varepsilon$', '$\\delta = \\varepsilon/|m|$', '$\\delta = |m|\\varepsilon$', '$\\delta = \\varepsilon/|b|$'],
             correctAnswer: 1
           },
           {
             label: 'IVT guarantees:',
-            options: ['A maximum', 'A minimum', 'An intermediate value is achieved', 'The derivative exists'],
+            options: ['A maximum and a minimum on $[a,b]$', 'A horizontal tangent somewhere', 'Every intermediate value is hit', 'The derivative exists on $(a,b)$'],
             correctAnswer: 2
           },
           {
             label: 'For Sign Change Rootfinding, we need $f(a)$ and $f(b)$:',
-            options: ['Both positive', 'Both negative', 'Opposite signs', 'Both zero'],
+            options: ['Both positive', 'Both negative', 'Opposite signs', 'Both equal to zero'],
             correctAnswer: 2
           }
         ],
-        correctAnswers: ['$x \\neq c$', '$\\delta = \\varepsilon/|m|$', 'An intermediate value is achieved', 'Opposite signs'],
+        correctAnswers: ['$x \\neq c$', '$\\delta = \\varepsilon/|m|$', 'Every intermediate value is hit', 'Opposite signs'],
         hint1: 'The strict inequality excludes $x=c$.',
         hint2: 'Linear: $|f(x)-L| = |m||x-c|$.',
         hint3: 'Intermediate = between $f(a)$ and $f(b)$.',
@@ -175,15 +175,15 @@ IVT is used to prove the **Extreme Value Theorem** and the **Mean Value Theorem*
         questions: [
           {
             question: 'The epsilon-delta definition says $\\delta$ depends on:',
-            options: ['Only $c$', 'Only $\\varepsilon$', '$\\varepsilon$ (and sometimes $c$)', 'Nothing'],
+            options: ['Only $c$, not on $\\varepsilon$ at all', 'Only $\\varepsilon$, never on $c$', '$\\varepsilon$, and sometimes $c$', 'Neither; $\\delta$ is a fixed constant'],
             correctAnswer: 2,
             explanation: '$\\delta$ always depends on $\\varepsilon$, and for nonlinear functions also on the point $c$.'
           },
           {
             question: 'If $f(0)=-3, f(5)=8$ and $f$ is continuous, which value is guaranteed to be achieved?',
-            options: ['$-5$', '$10$', '$4$', '$9$'],
+            options: ['$-5$', '$10$', '$4$', '$-4$'],
             correctAnswer: 2,
-            explanation: 'IVT: any value between $-3$ and $8$ must be hit. Only $4$ is in $(-3,8)$.'
+            explanation: 'IVT: any value between $-3$ and $8$ must be hit. Only $4$ is in $(-3,8)$; $-5$ and $-4$ fall below $-3$, and $10$ is above $8$.'
           }
         ]
       }

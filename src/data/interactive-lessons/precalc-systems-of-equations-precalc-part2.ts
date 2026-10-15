@@ -108,9 +108,9 @@ Solving: $a=1, b=2, c=3 \\implies y=x^2+2x+3$.
           },
           {
             question: 'A 3×3 system with 2 identical equations has:',
-            options: ['One solution', 'No solution', 'Infinitely many', 'Need more info'],
+            options: ['Exactly one solution', 'Always no solution', 'Always infinitely many', 'Infinitely many or none'],
             correctAnswer: 3,
-            explanation: 'Depends on the third equation — could be a unique point, a line, or inconsistent.'
+            explanation: 'The two identical equations act as one, leaving two distinct equations in three unknowns. That is never enough for a single point: the planes meet in a line (infinitely many) or not at all (none).'
           }
         ]
       }
@@ -148,7 +148,7 @@ $\\begin{cases} x+y+z=10 \\\\ x-y+z=4 \\\\ x+y-z=2 \\end{cases}$
         dropdowns: [
           {
             label: 'Three planes can intersect at:',
-            options: ['Only a point', 'A point, line, or plane', 'Only a line', 'Exactly two points'],
+            options: ['Only a single point', 'A point, line, or plane', 'A point, two points, or a line', 'Exactly two points'],
             correctAnswer: 1
           },
           {
@@ -190,9 +190,9 @@ $\\begin{cases} x+y+z=10 \\\\ x-y+z=4 \\\\ x+y-z=2 \\end{cases}$
           },
           {
             question: '$\\begin{cases} 2x+y+z=7 \\\\ x+2y+z=8 \\\\ x+y+2z=9 \\end{cases}$: by symmetry, what is $x$?',
-            options: ['$1$', '$2$', '$3$', '$4$'],
+            options: ['$1$', '$2$', '$3$', '$6$'],
             correctAnswer: 0,
-            explanation: 'Add all: $4(x+y+z)=24 \\implies x+y+z=6$. Eq1: $x+(x+y+z-x)+z=7$... Actually: $(x+y+z)+x=7 \\implies x=1$.'
+            explanation: 'Add all: $4(x+y+z)=24 \\implies x+y+z=6$. Eq1 is $(x+y+z)+x=7$, so $x=1$. ($y=2$ and $z=3$ by the same step; $6$ is the sum, not $x$.)'
           }
         ]
       }

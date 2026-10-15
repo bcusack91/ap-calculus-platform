@@ -108,21 +108,21 @@ The rate itself is increasing — the function curves upward faster and faster.
         questions: [
           {
             question: 'AROC of $f(x)=x^2$ on $[2,5]$:',
-            options: ['$5$', '$7$', '$3$', '$21$'],
+            options: ['$29/3$', '$7$', '$-7$', '$21$'],
             correctAnswer: 1,
-            explanation: '$\\frac{25- 4}{5-2} = \\frac{21}{3} = 7$.'
+            explanation: '$\\frac{25- 4}{5-2} = \\frac{21}{3} = 7$. Adding the outputs instead of subtracting gives $29/3$, subtracting in the wrong order only on top gives $-7$, and forgetting to divide by $3$ leaves $21$.'
           },
           {
             question: 'The average rate of change is the slope of:',
-            options: ['Tangent line', 'Secant line', 'Normal line', 'Horizontal line'],
+            options: ['Tangent line at the left endpoint', 'Secant line', 'Normal line to the curve', 'Horizontal line'],
             correctAnswer: 1,
-            explanation: 'AROC = slope of secant line connecting two points on the curve.'
+            explanation: 'AROC = slope of secant line connecting two points on the curve. A tangent line at one endpoint gives the instantaneous rate there, not the average.'
           },
           {
             question: 'For a linear function, the AROC on any interval is:',
-            options: ['Zero', 'Varies', 'Constant (= slope)', 'Undefined'],
+            options: ['Zero on every interval', 'Different on each interval', 'The slope $m$', 'The $y$-intercept $b$'],
             correctAnswer: 2,
-            explanation: 'Linear functions have constant rate of change equal to the slope $m$.'
+            explanation: 'Linear functions have constant rate of change equal to the slope $m$, so every interval gives the same AROC. The $y$-intercept tells where the line starts, not how fast it rises.'
           }
         ]
       }
@@ -158,7 +158,7 @@ The rate itself is increasing — the function curves upward faster and faster.
         dropdowns: [
           {
             label: 'Negative AROC means the function is:',
-            options: ['Increasing', 'Decreasing on that interval', 'Constant', 'Undefined'],
+            options: ['Increasing on average', 'Decreasing on average', 'Decreasing at every point', 'Constant on that interval'],
             correctAnswer: 1
           },
           {
@@ -177,11 +177,11 @@ The rate itself is increasing — the function curves upward faster and faster.
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['Decreasing on that interval', '$1$', 'Miles per hour', 'Position vs time'],
+        correctAnswers: ['Decreasing on average', '$1$', 'Miles per hour', 'Position vs time'],
         hint1: 'Negative slope = going down.',
         hint2: '$\\frac{1-(-1)}{1-(-1)} = 2/2$.',
         hint3: 'Rate = output units / input units.',
-        explanation: 'Negative AROC: decreasing. $x^3$: $(1-(-1))/(1-(-1))=1$. Distance/time=speed. AROC of position=velocity.'
+        explanation: 'Negative AROC: decreasing on average (ends lower than it starts). $x^3$: $(1-(-1))/(1-(-1))=1$. Distance/time=speed. AROC of position=velocity.'
       }
     },
     {
@@ -200,7 +200,7 @@ The rate itself is increasing — the function curves upward faster and faster.
           },
           {
             question: 'If AROC = 0, it means:',
-            options: ['$f$ is constant everywhere', '$f(a) = f(b)$ (same start/end)', 'Function is always zero', 'No secant line exists'],
+            options: ['$f$ is constant everywhere', '$f(a) = f(b)$', '$f(x) = 0$ on all of $[a,b]$', 'No secant line can be drawn'],
             correctAnswer: 1,
             explanation: 'AROC = 0 means $f(b) = f(a)$ — same height at endpoints. Function may vary between.'
           }

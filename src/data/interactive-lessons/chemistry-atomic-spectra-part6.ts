@@ -89,28 +89,28 @@ This matches $|E_1| = 2.18 \\times 10^{-18}$ J $= 13.6$ eV exactly — H's groun
         questions: [
           {
             question: 'A spectral line at 1094 nm in hydrogen belongs to the Paschen series. What is $n_i$?',
-            options: ['4', '5', '6', '7'],
+            options: ['5', '6', '4', '7'],
             correctAnswer: 1,
-            explanation: '$1/\\lambda = R_H(1/9 - 1/n_i^2)$. With $\\lambda = 1.094 \\times 10^{-6}$ m: $1/\\lambda = 9.14 \\times 10^5$. Solve: $1/9 - 1/n_i^2 = 0.0833$ → $1/n_i^2 = 0.0278$ → $n_i^2 = 36$ → $n_i = 6$. Wait — recheck: $9.14\\times 10^5 / 1.097 \\times 10^7 = 0.0833$, so $1/n_i^2 = 1/9 - 0.0833 = 0.0278$, giving $n_i = 6$. Closest standard answer is $n_i = 5$ for the 1282 nm Pa-β; for 1094 nm (Pa-γ) use $n_i = 5$? Actually 1094 nm is Pa-γ ($n=5$). Recompute carefully: $1/\\lambda = 1/(1.094 \\times 10^{-6}) = 9.14 \\times 10^5$. Hmm — answer key uses $n_i = 5$ giving $\\lambda = 1282$ nm; $n_i = 6$ gives $\\lambda = 1094$ nm. So 1094 nm corresponds to $n_i = 6$.'
+            explanation: '$1/\\lambda = R_H(1/9 - 1/n_i^2)$. With $\\lambda = 1.094 \\times 10^{-6}$ m: $1/\\lambda = 9.14 \\times 10^5$ m$^{-1}$, and $9.14 \\times 10^5 / 1.097 \\times 10^7 = 0.0833$. So $1/n_i^2 = 1/9 - 0.0833 = 0.0278$, giving $n_i^2 = 36$ and $n_i = 6$ (Pa-γ). $n_i = 5$ gives 1282 nm and $n_i = 4$ gives 1875 nm.'
           },
           {
             question: 'A photon has frequency $7.50 \\times 10^{14}$ Hz. What is its energy?',
             options: [
-              '$5.0 \\times 10^{-19}$ J',
-              '$3.0 \\times 10^{-19}$ J',
+              '$4.97 \\times 10^{-20}$ J',
+              '$8.83 \\times 10^{-49}$ J',
               '$4.97 \\times 10^{-19}$ J',
-              '$7.5 \\times 10^{-19}$ J'
+              '$2.65 \\times 10^{-40}$ J'
             ],
             correctAnswer: 2,
-            explanation: '$E = h\\nu = (6.626 \\times 10^{-34})(7.50 \\times 10^{14}) = 4.97 \\times 10^{-19}$ J.'
+            explanation: '$E = h\\nu = (6.626 \\times 10^{-34})(7.50 \\times 10^{14}) = 49.7 \\times 10^{-20} = 4.97 \\times 10^{-19}$ J. Writing $4.97 \\times 10^{-20}$ forgets to adjust the exponent when moving the decimal, $8.83 \\times 10^{-49}$ divides $h$ by $\\nu$, and $2.65 \\times 10^{-40}$ uses $hc/\\nu$ as if $\\nu$ were a wavelength.'
           },
           {
             question: 'Light of 200 nm wavelength is shone on hydrogen atoms in their ground state. Will the atom absorb this photon?',
             options: [
-              'Yes — all photons can be absorbed',
-              'No — the photon energy doesn\'t match any allowed transition from $n=1$',
-              'Yes — it ionizes the atom',
-              'Only if many photons strike at once'
+              'Yes — any photon with enough energy is absorbed',
+              'No — its energy matches no allowed jump from $n=1$',
+              'Yes — it carries enough energy to ionize the atom',
+              'Only if several photons strike at once'
             ],
             correctAnswer: 1,
             explanation: '$E_{200\\;\\text{nm}} = 9.94 \\times 10^{-19}$ J. From $n=1$, allowed jumps require specific energies (e.g., $n=1\\to 2$ needs $1.63 \\times 10^{-18}$ J). 200 nm is too low to ionize and doesn\'t match $n=1\\to n$ for any integer $n$, so it is not absorbed.'

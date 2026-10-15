@@ -84,15 +84,15 @@ Subtract: $2a = 13 \\Rightarrow a = 6.5, b = -4.5$
         questions: [
           {
             question: 'To check piecewise continuity at $x=c$, compare:',
-            options: ['Only left and right limits', 'Left limit, right limit, and $f(c)$', 'Only $f(c)$', 'The derivatives'],
+            options: ['Only the left and right limits', 'Left limit, right limit, and $f(c)$', 'Only $f(c)$ and one side\'s limit', 'The slopes of the two pieces'],
             correctAnswer: 1,
             explanation: 'All three must match: $\\lim^- = \\lim^+ = f(c)$.'
           },
           {
             question: '$f(x) = \\begin{cases} x+1 & x < 0 \\\\ 2 & x \\geq 0 \\end{cases}$. At $x=0$:',
-            options: ['Continuous', 'Jump', 'Removable', 'Infinite'],
+            options: ['Jump', 'Continuous', 'Removable', 'Infinite'],
             correctAnswer: 0,
-            explanation: 'Left: $0+1=1$... wait: Left: $\\lim 0^- = 1$, Right/value: $2$. $1 \\neq 2$, so jump. Actually let me recalculate: left $= 0+1 = 1$, $f(0) = 2$, $1 \\neq 2$ → jump discontinuity.'
+            explanation: 'Left limit: $0+1 = 1$. Right limit and value: $f(0) = 2$. Since $1 \\neq 2$, the one-sided limits differ, so $x=0$ is a jump discontinuity.'
           },
           {
             question: 'Find $k$: $\\begin{cases} kx & x \\leq 3 \\\\ x+6 & x > 3 \\end{cases}$ is continuous at $x=3$.',
@@ -134,12 +134,12 @@ Subtract: $2a = 13 \\Rightarrow a = 6.5, b = -4.5$
         dropdowns: [
           {
             label: 'At a piecewise boundary, the potential issue is:',
-            options: ['The pieces are wrong', 'The pieces may not connect', 'Domain is empty', 'Function is linear'],
+            options: ['Both formulas apply there', 'The pieces may not connect', 'The domain may have a gap', 'The slope must be zero'],
             correctAnswer: 1
           },
           {
             label: 'To find $k$ for continuity, you set:',
-            options: ['$f(c) = 0$', 'Left limit = right limit', '$k = c$', 'Derivative = 0'],
+            options: ['Each piece equal to 0 at $c$', 'Left limit = right limit', '$k$ equal to the boundary $c$', 'Both slopes equal to each other'],
             correctAnswer: 1
           },
           {

@@ -135,7 +135,7 @@ Parabolas have a remarkable property: any ray parallel to the axis reflects off 
         dropdowns: [
           {
             label: 'The equation $y^2 = 4px$ represents a parabola opening:',
-            options: ['Up', 'Down', 'Right (if $p>0$)', 'Left (if $p>0$)'],
+            options: ['Up (if $p>0$)', 'Down (if $p>0$)', 'Right (if $p>0$)', 'Left (if $p>0$)'],
             correctAnswer: 2
           },
           {
@@ -150,7 +150,7 @@ Parabolas have a remarkable property: any ray parallel to the axis reflects off 
           },
           {
             label: 'A satellite dish uses a parabolic shape because:',
-            options: ['It looks nice', 'Signals reflect to the focus', 'It minimizes weight', 'It is easy to manufacture'],
+            options: ['Its vertex gathers signals', 'Signals reflect to the focus', 'It minimizes the weight', 'It is easy to manufacture'],
             correctAnswer: 1
           }
         ],

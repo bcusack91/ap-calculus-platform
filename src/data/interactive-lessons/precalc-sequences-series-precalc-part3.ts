@@ -89,14 +89,14 @@ Long-term level = $\\frac{200}{1-0.6} = 500$ mg (steady state)
             explanation: '$a_1 = 1, r = 1/3$. $S = \\frac{1}{1-1/3} = \\frac{1}{2/3} = 3/2$.'
           },
           {
-            question: 'Does $\\sum 2(-0.5)^n$ converge?',
-            options: ['Yes, to $\\frac{4}{3}$', 'Yes, to $4$', 'No, it diverges', 'Yes, to $1$'],
+            question: 'Does $\\sum_{n=0}^{\\infty} 2(-0.5)^n$ converge?',
+            options: ['Yes, to $\\frac{4}{3}$', 'Yes, to $-\\frac{2}{3}$', 'No, it diverges', 'Yes, to $4$'],
             correctAnswer: 0,
-            explanation: '$|r|=0.5<1$. $S=\\frac{2}{1-(-0.5)}=\\frac{2}{1.5}=\\frac{4}{3}$.'
+            explanation: '$|r|=0.5<1$. $S=\\frac{2}{1-(-0.5)}=\\frac{2}{1.5}=\\frac{4}{3}$. Using $1-0.5$ in the denominator gives $4$; starting the sum at $n=1$ (first term $-1$) gives $-\\frac{2}{3}$.'
           },
           {
             question: '$0.\\overline{9} = 0.999\\ldots$ equals:',
-            options: ['Less than 1', 'Exactly 1', 'Undefined', 'Approximately 1'],
+            options: ['Less than 1', 'Exactly 1', 'Not a real number', 'Approximately 1'],
             correctAnswer: 1,
             explanation: '$\\frac{0.9}{1-0.1} = \\frac{0.9}{0.9} = 1$ exactly.'
           }
@@ -134,7 +134,7 @@ Long-term level = $\\frac{200}{1-0.6} = 500$ mg (steady state)
         dropdowns: [
           {
             label: 'A geometric series converges when:',
-            options: ['$r > 0$', '$|r| < 1$', '$|r| > 1$', '$r = 1$'],
+            options: ['$r > 0$', '$|r| < 1$', '$r < 1$', '$r = 1$'],
             correctAnswer: 1
           },
           {
@@ -149,11 +149,11 @@ Long-term level = $\\frac{200}{1-0.6} = 500$ mg (steady state)
           },
           {
             label: 'A repeating decimal is always:',
-            options: ['Irrational', 'Rational (fraction)', 'Transcendental'],
+            options: ['Irrational', 'Rational', 'Transcendental'],
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['$|r| < 1$', 'Oscillate but converge', '$|r| < 1$', 'Rational (fraction)'],
+        correctAnswers: ['$|r| < 1$', 'Oscillate but converge', '$|r| < 1$', 'Rational'],
         hint1: 'Convergence requires $|r| < 1$.',
         hint2: 'Negative $r$ causes alternating overshoot/undershoot.',
         hint3: 'The formula is only valid for convergent series.',

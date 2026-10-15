@@ -147,7 +147,7 @@ Some functions (like $\\arctan x$) have **two** horizontal asymptotes:
         dropdowns: [
           {
             label: 'A removable discontinuity has:',
-            options: ['No limit', 'Limit exists but ≠ f(c)', 'Limit = f(c)', 'Infinite limit'],
+            options: ['One-sided limits that differ', 'Limit exists but ≠ f(c)', 'Limit equal to f(c)', 'Limit is infinite at c'],
             correctAnswer: 1
           },
           {
@@ -157,7 +157,7 @@ Some functions (like $\\arctan x$) have **two** horizontal asymptotes:
           },
           {
             label: 'To find $\\lim_{x \\to \\infty} f(x)$ from a graph:',
-            options: ['Look at $f(0)$', 'Look at the right end behavior', 'Look at vertical asymptotes', 'Find the maximum'],
+            options: ['Read the $y$-intercept $f(0)$', 'Look at the right end behavior', 'Look at vertical asymptotes', 'Find the highest point'],
             correctAnswer: 1
           },
           {
@@ -183,7 +183,7 @@ Some functions (like $\\arctan x$) have **two** horizontal asymptotes:
         questions: [
           {
             question: 'If graph shows $f$ approaching $y=6$ from left and $y=6$ from right at $x=4$, but $f(4)$ is undefined:',
-            options: ['$\\lim_{x \\to 4} f(x) = 6$', 'Limit DNE', 'Limit = undefined', 'Need more info'],
+            options: ['$\\lim_{x \\to 4} f(x) = 6$', 'Limit DNE since $f(4)$ is undefined', '$\\lim_{x \\to 4} f(x)$ is undefined', 'Need $f(4)$ to find the limit'],
             correctAnswer: 0,
             explanation: 'Both one-sided limits = 6, so the limit is 6, regardless of $f(4)$ being undefined.'
           },

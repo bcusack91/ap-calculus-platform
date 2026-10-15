@@ -108,13 +108,13 @@ In the far ultraviolet — invisible to the eye, but the strongest line in the S
           {
             question: 'In the Rydberg formula, what determines whether the emitted photon is UV, visible, or IR?',
             options: [
-              'Only $n_i$',
-              'Only $n_f$',
-              'The value of $n_f$ primarily — Lyman ($n_f=1$) is UV, Balmer ($n_f=2$) is visible, Paschen ($n_f=3$) is IR',
-              'The temperature of the gas'
+              'Mainly $n_i$, the level where the electron starts',
+              'The sum $n_i + n_f$ of the starting and final levels',
+              'Mainly $n_f$, the level where the electron lands',
+              'The temperature of the hot gas that emits the light'
             ],
             correctAnswer: 2,
-            explanation: 'The series (i.e., the value of $n_f$) sets the wavelength range; $n_i$ determines the specific line within that series.'
+            explanation: 'The series (the value of $n_f$) sets the wavelength range — Lyman ($n_f=1$) is UV, Balmer ($n_f=2$) is visible, Paschen ($n_f=3$) is IR — while $n_i$ picks the specific line within that series. Temperature changes how many atoms are excited, not the wavelengths.'
           },
           {
             question: 'Which transition produces the LONGEST-wavelength photon?',
@@ -155,8 +155,8 @@ Use $R_H = 1.097 \\times 10^{7}$ $m^{-1}$.
       exercise: {
         dropdowns: [
           { label: 'A line at 122 nm in hydrogen belongs to the', options: ['Lyman series', 'Balmer series', 'Paschen series', 'Brackett series'] },
-          { label: 'A line at 656 nm in hydrogen belongs to the', options: ['Lyman series', 'Balmer series', 'Paschen series', 'visible Lyman'] },
-          { label: 'A line at 1875 nm in hydrogen belongs to the', options: ['Lyman series', 'Balmer series', 'Paschen series', 'far UV series'] },
+          { label: 'A line at 656 nm in hydrogen belongs to the', options: ['Lyman series', 'Balmer series', 'Paschen series', 'Brackett series'] },
+          { label: 'A line at 1875 nm in hydrogen belongs to the', options: ['Lyman series', 'Balmer series', 'Paschen series', 'Brackett series'] },
           { label: 'The shortest possible Balmer wavelength corresponds to $n_i \\to n_f =$', options: ['$2 \\to 1$', '$\\infty \\to 2$', '$3 \\to 2$', '$\\infty \\to 1$'] }
         ],
         correctAnswers: ['Lyman series', 'Balmer series', 'Paschen series', '$\\infty \\to 2$'],
@@ -181,13 +181,13 @@ Use $R_H = 1.097 \\times 10^{7}$ $m^{-1}$.
           {
             question: 'How does the $He^{+}$ ion compare to hydrogen in its line spectrum?',
             options: [
-              'Identical pattern',
-              'No spectral lines (no electron)',
-              'Similar pattern but at SHORTER wavelengths (factor of 4 shift)',
-              'Similar pattern but at LONGER wavelengths'
+              'Identical lines at hydrogen\'s wavelengths',
+              'Same pattern at wavelengths one-half as long',
+              'Same pattern at wavelengths one-fourth as long',
+              'Same pattern at wavelengths four times longer'
             ],
             correctAnswer: 2,
-            explanation: '$He^{+}$ is a "hydrogenic" one-electron ion. Its energies scale as $Z^2 = 4$, so transitions release 4× the energy and lines appear at 1/4 the wavelength.'
+            explanation: '$He^{+}$ is a "hydrogenic" one-electron ion. Its energies scale as $Z^2 = 4$ (not $Z = 2$), so transitions release 4× the energy and lines appear at 1/4 the wavelength.'
           }
         ]
       }

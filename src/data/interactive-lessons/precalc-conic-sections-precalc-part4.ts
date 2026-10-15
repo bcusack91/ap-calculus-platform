@@ -140,7 +140,7 @@ For $\\frac{y^2}{36}-\\frac{x^2}{64}=1$:
           },
           {
             label: 'A rectangular hyperbola ($a = b$) has eccentricity:',
-            options: ['$1$', '$\\sqrt{2}$', '$2$', '$\\pi$'],
+            options: ['$1$', '$\\sqrt{2}$', '$2$', '$0$'],
             correctAnswer: 1
           },
           {
@@ -150,11 +150,11 @@ For $\\frac{y^2}{36}-\\frac{x^2}{64}=1$:
           },
           {
             label: 'Hyperbolas appear in:',
-            options: ['Sonic booms (shock cones)', 'Circular orbits', 'Uniform motion'],
+            options: ['The ground footprint of a sonic boom', 'A planet\'s repeating orbit around the Sun', 'The path of a baseball thrown in the air'],
             correctAnswer: 0
           }
         ],
-        correctAnswers: ['Greater than $a$', '$\\sqrt{2}$', 'Vertical, length $2b$', 'Sonic booms (shock cones)'],
+        correctAnswers: ['Greater than $a$', '$\\sqrt{2}$', 'Vertical, length $2b$', 'The ground footprint of a sonic boom'],
         hint1: '$c^2 = a^2 + b^2 > a^2$.',
         hint2: '$a = b$: $c^2 = 2a^2$, $e = c/a = \\sqrt{2}$.',
         hint3: 'Transverse axis connects vertices; conjugate axis is perpendicular.',

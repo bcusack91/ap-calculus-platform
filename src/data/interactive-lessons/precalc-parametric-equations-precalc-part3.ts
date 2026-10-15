@@ -138,26 +138,26 @@ At $t = 0$: speed $= \\sqrt{v_0^2 + v_0^2} = v_0\\sqrt{2}$
         dropdowns: [
           {
             label: 'Arc length is always:',
-            options: ['Positive', 'Non-negative', 'Depends on direction', 'Zero for closed curves'],
+            options: ['Strictly positive', 'Non-negative', 'Depends on direction', 'Zero for closed curves'],
             correctAnswer: 1
           },
           {
             label: 'Doubling the speed parameter ($t \\to 2t$) does what to the curve?',
-            options: ['Doubles the length', 'Same curve, traced faster', 'Different curve entirely'],
+            options: ['Same curve, but twice as long', 'Same curve, traced faster', 'Different curve, scaled by 2'],
             correctAnswer: 1
           },
           {
             label: 'The arc length of $x = a\\cos t, y = b\\sin t$ ($a \\neq b$) requires:',
-            options: ['Elementary integration', 'Elliptic integrals (no closed form)', 'Numerical methods only'],
+            options: ['Only elementary antiderivatives', 'A non-elementary elliptic integral', 'The area formula $\\pi ab$'],
             correctAnswer: 1
           },
           {
             label: 'If speed $= 0$ at some $t_0$, the curve has a potential:',
-            options: ['Maximum', 'Cusp or stationary point', 'Inflection point'],
+            options: ['Vertical tangent line', 'Cusp or stationary point', 'Horizontal tangent line'],
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['Non-negative', 'Same curve, traced faster', 'Elliptic integrals (no closed form)', 'Cusp or stationary point'],
+        correctAnswers: ['Non-negative', 'Same curve, traced faster', 'A non-elementary elliptic integral', 'Cusp or stationary point'],
         hint1: 'Arc length $\\geq 0$ (it is $0$ if start = end with no movement).',
         hint2: 'Reparametrizing changes speed but not the geometric curve.',
         hint3: 'Ellipse arc length is a famous example requiring elliptic integrals.',

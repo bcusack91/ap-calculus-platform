@@ -134,12 +134,12 @@ $$\\lim_{x \\to 0} \\frac{\\sin(5x)}{\\sin(3x)} = \\lim \\frac{\\sin(5x)}{5x} \\
         dropdowns: [
           {
             label: '$\\frac{0}{0}$ means:',
-            options: ['Limit is 0', 'Limit is undefined', 'Indeterminate — investigate', 'Limit DNE'],
+            options: ['The limit is automatically 0', 'The limit is always undefined', 'Indeterminate — investigate', 'The limit definitely does not exist'],
             correctAnswer: 2
           },
           {
             label: 'Best technique for $\\frac{\\sqrt{x+1}-1}{x}$:',
-            options: ['Factor', 'Rationalize', 'L\'Hôpital', 'Direct sub'],
+            options: ['Factor and cancel', 'Rationalize', 'Squeeze Theorem', 'Direct substitution'],
             correctAnswer: 1
           },
           {
@@ -149,11 +149,11 @@ $$\\lim_{x \\to 0} \\frac{\\sin(5x)}{\\sin(3x)} = \\lim \\frac{\\sin(5x)}{5x} \\
           },
           {
             label: '$\\frac{5}{0}$ as a limit result suggests:',
-            options: ['Limit is 5', 'Limit is 0', 'Vertical asymptote ($\\pm\\infty$)', 'Indeterminate'],
+            options: ['The limit equals 5', 'The limit equals 0', 'A vertical asymptote', 'Indeterminate form'],
             correctAnswer: 2
           }
         ],
-        correctAnswers: ['Indeterminate — investigate', 'Rationalize', '$1$', 'Vertical asymptote ($\\pm\\infty$)'],
+        correctAnswers: ['Indeterminate — investigate', 'Rationalize', '$1$', 'A vertical asymptote'],
         hint1: '$0/0$ needs more work.',
         hint2: 'Conjugate removes the radical.',
         hint3: 'Fundamental trig limit.',
@@ -170,9 +170,9 @@ $$\\lim_{x \\to 0} \\frac{\\sin(5x)}{\\sin(3x)} = \\lim \\frac{\\sin(5x)}{5x} \\
         questions: [
           {
             question: '$\\lim_{x \\to 0} \\frac{\\sqrt{1+x}-1}{x} = ?$',
-            options: ['$1/2$', '$1$', '$0$', '$2$'],
+            options: ['$1/2$', '$1$', '$\\infty$', '$2$'],
             correctAnswer: 0,
-            explanation: 'Rationalize: $\\frac{x}{x(\\sqrt{1+x}+1)} = \\frac{1}{\\sqrt{1+x}+1} \\to \\frac{1}{2}$.'
+            explanation: 'Rationalize: $\\frac{x}{x(\\sqrt{1+x}+1)} = \\frac{1}{\\sqrt{1+x}+1} \\to \\frac{1}{2}$. Multiplying by $\\sqrt{1+x}-1$ instead of the conjugate leaves a zero in the denominator, which is how $\\infty$ shows up by mistake.'
           },
           {
             question: '$\\lim_{x \\to 0} \\frac{\\tan(3x)}{\\sin(2x)} = ?$',

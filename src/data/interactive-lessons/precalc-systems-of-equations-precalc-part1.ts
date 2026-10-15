@@ -119,7 +119,7 @@ Add: $x = 2$. Then $y = 1$.
           },
           {
             question: 'If two lines have the same slope but different $y$-intercepts, the system is:',
-            options: ['Independent', 'Dependent', 'Inconsistent', 'Underdetermined'],
+            options: ['Independent', 'Dependent', 'Inconsistent', 'Coincident'],
             correctAnswer: 2,
             explanation: 'Same slope, different intercepts → parallel → no intersection → inconsistent.'
           },
@@ -165,12 +165,12 @@ $\\begin{cases} 2x+y=10 \\\\ x-y=2 \\end{cases}$
         dropdowns: [
           {
             label: 'Two identical equations give:',
-            options: ['One solution', 'No solution', 'Infinitely many solutions', 'Undefined'],
+            options: ['Exactly one solution', 'No common solution', 'Infinitely many', 'Exactly two solutions'],
             correctAnswer: 2
           },
           {
             label: 'Substitution requires:',
-            options: ['Matching coefficients', 'Isolating a variable', 'Graphing both lines', 'Using matrices'],
+            options: ['Equal coefficients', 'Isolating a variable', 'Graphing both lines', 'Using matrices'],
             correctAnswer: 1
           },
           {
@@ -180,11 +180,11 @@ $\\begin{cases} 2x+y=10 \\\\ x-y=2 \\end{cases}$
           },
           {
             label: 'Elimination works by:',
-            options: ['Isolating a variable', 'Adding/subtracting equations', 'Factoring', 'Graphing'],
+            options: ['Isolating one variable first', 'Adding/subtracting equations', 'Multiplying the two equations', 'Graphing both equations'],
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['Infinitely many solutions', 'Isolating a variable', 'Dependent', 'Adding/subtracting equations'],
+        correctAnswers: ['Infinitely many', 'Isolating a variable', 'Dependent', 'Adding/subtracting equations'],
         hint1: 'Same line → all points are solutions.',
         hint2: 'Solve for $x$ or $y$ first.',
         hint3: 'Second equation = 2 × first.',

@@ -155,7 +155,7 @@ You now have the conceptual foundation for ALL of calculus!
         dropdowns: [
           {
             label: 'AROC is to secant as IROC is to:',
-            options: ['Chord', 'Tangent', 'Normal', 'Axis'],
+            options: ['Chord', 'Tangent', 'Normal', 'Asymptote'],
             correctAnswer: 1
           },
           {
@@ -165,12 +165,12 @@ You now have the conceptual foundation for ALL of calculus!
           },
           {
             label: 'The derivative of a constant is:',
-            options: ['The constant', '$1$', '$0$', 'Undefined'],
+            options: ['The constant', 'The constant times $x$', '$0$', 'Undefined'],
             correctAnswer: 2
           },
           {
             label: 'The precalculus foundation for calculus is:',
-            options: ['Geometry', 'Limits and rates of change', 'Statistics', 'Number theory'],
+            options: ['Geometry and proof', 'Limits and rates of change', 'Statistics and data', 'Number theory'],
             correctAnswer: 1
           }
         ],
@@ -197,7 +197,7 @@ You now have the conceptual foundation for ALL of calculus!
           },
           {
             question: 'The single most important idea bridging precalculus to calculus:',
-            options: ['Factoring', 'The limit', 'Quadratic formula', 'Unit circle'],
+            options: ['Factoring polynomials', 'The limit', 'Quadratic formula', 'Unit circle'],
             correctAnswer: 1,
             explanation: 'The limit is THE bridge. Derivatives = limits. Integrals = limits. Continuity = limits. It all starts here.'
           }

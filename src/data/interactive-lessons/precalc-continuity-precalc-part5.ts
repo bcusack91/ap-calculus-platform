@@ -98,15 +98,15 @@ Each step **halves** the interval. After $n$ steps, error $< \\frac{b-a}{2^n}$.
           },
           {
             question: 'IVT requires:',
-            options: ['Differentiability', 'Continuity on $[a,b]$', 'Monotonicity', '$f(a) = f(b)$'],
+            options: ['Differentiability on $(a,b)$', 'Continuity on $[a,b]$', 'Monotonicity on $[a,b]$', '$f(a)$ and $f(b)$ to be equal'],
             correctAnswer: 1,
-            explanation: 'IVT needs continuity on a closed interval. Nothing else.'
+            explanation: 'IVT needs continuity on a closed interval. Nothing else: no differentiability, no monotonicity, and no matching endpoint values (that last one is Rolle\'s Theorem).'
           },
           {
             question: 'Bisection halves the interval each step. After 10 steps on $[0,1]$:',
-            options: ['Error < 0.01', 'Error < 0.001', 'Error < 0.0001', 'Error < 0.00001'],
+            options: ['Error $< 10^{-10}$', 'Error < 0.001', 'Error < 0.0001', 'Error < 0.00001'],
             correctAnswer: 1,
-            explanation: 'Error $< 1/2^{10} = 1/1024 \\approx 0.00098 < 0.001$.'
+            explanation: 'Each step halves the bracket, so after 10 steps its width is $1/2^{10} = 1/1024 \\approx 0.00098 < 0.001$. The bound does not shrink by a factor of 10 per step, so $10^{-10}$, $0.0001$, and $0.00001$ are not guaranteed.'
           }
         ]
       }
@@ -142,17 +142,17 @@ Each step **halves** the interval. After $n$ steps, error $< \\frac{b-a}{2^n}$.
         dropdowns: [
           {
             label: 'IVT says "at least one $c$" — it doesn\'t say:',
-            options: ['$c$ exists', 'How many $c$ values', '$f$ is continuous', '$N$ is between $f(a)$ and $f(b)$'],
+            options: ['$c$ exists', 'How many $c$ values', '$f(c) = N$', '$c$ lies between $a$ and $b$'],
             correctAnswer: 1
           },
           {
             label: 'First step in an IVT proof:',
-            options: ['Find the root', 'Verify continuity on $[a,b]$', 'Take the derivative', 'Graph the function'],
+            options: ['Solve for the root', 'Verify continuity on $[a,b]$', 'Take the derivative', 'Graph the function'],
             correctAnswer: 1
           },
           {
             label: 'Bisection method is based on:',
-            options: ['Newton\'s method', 'IVT (sign change)', 'Taylor series', 'L\'Hôpital\'s Rule'],
+            options: ['Newton\'s method', 'The IVT', 'Taylor series', 'The Squeeze Theorem'],
             correctAnswer: 1
           },
           {
@@ -161,7 +161,7 @@ Each step **halves** the interval. After $n$ steps, error $< \\frac{b-a}{2^n}$.
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['How many $c$ values', 'Verify continuity on $[a,b]$', 'IVT (sign change)', 'Temp = 85°F'],
+        correctAnswers: ['How many $c$ values', 'Verify continuity on $[a,b]$', 'The IVT', 'Temp = 85°F'],
         hint1: 'IVT doesn\'t guarantee uniqueness.',
         hint2: 'Always check the hypothesis first.',
         hint3: 'Bisection relies on sign change → IVT.',
@@ -184,9 +184,9 @@ Each step **halves** the interval. After $n$ steps, error $< \\frac{b-a}{2^n}$.
           },
           {
             question: 'A discontinuous function on $[0,1]$: can we apply IVT?',
-            options: ['Yes, always', 'No — IVT requires continuity', 'Only if it\'s monotonic', 'Only at endpoints'],
+            options: ['Yes — IVT works on any function', 'No — IVT requires continuity', 'Yes, if it\'s monotonic on $[0,1]$', 'Yes, but only at the endpoints'],
             correctAnswer: 1,
-            explanation: 'IVT cannot be applied without continuity — it\'s a required hypothesis.'
+            explanation: 'IVT cannot be applied without continuity — it\'s a required hypothesis. Even a monotonic function can jump over values if it is discontinuous.'
           }
         ]
       }

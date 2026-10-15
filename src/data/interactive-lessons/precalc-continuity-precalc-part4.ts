@@ -101,7 +101,7 @@ $f(x) = \\begin{cases} 1 & x = 0 \\\\ 0 & x \\neq 0 \\end{cases}$ on $[-1,1]$
           },
           {
             question: 'EVT requires continuity on:',
-            options: ['Open interval', 'Closed interval', 'Half-open interval', 'Any set'],
+            options: ['An open interval', 'Closed interval', 'Half-open interval', 'Any interval at all'],
             correctAnswer: 1,
             explanation: 'EVT needs a closed interval $[a,b]$ and continuity throughout.'
           },
@@ -150,21 +150,21 @@ $f(x) = \\begin{cases} 1 & x = 0 \\\\ 0 & x \\neq 0 \\end{cases}$ on $[-1,1]$
           },
           {
             label: '$\\tan x$ is continuous except at:',
-            options: ['$x = n\\pi$', '$x = \\pi/2 + n\\pi$', '$x = 0$', 'All $x$'],
+            options: ['$x = n\\pi$', '$x = \\pi/2 + n\\pi$', '$x = 2n\\pi$', '$x = n\\pi/2$'],
             correctAnswer: 1
           },
           {
             label: 'IVT guarantees:',
-            options: ['Maximum exists', 'Intermediate values achieved', 'Function is differentiable', 'Limit exists'],
+            options: ['Maximum and minimum exist', 'Intermediate values achieved', 'Function is differentiable', 'A root exists in $(a,b)$'],
             correctAnswer: 1
           },
           {
             label: 'A polynomial on $[a,b]$ satisfies EVT because:',
-            options: ['It is periodic', 'It is continuous on closed interval', 'It has degree > 0', 'It is monotonic'],
+            options: ['It has a vertex', 'It is continuous on $[a,b]$', 'It has a real root', 'It is monotonic'],
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['One-sided continuity', '$x = \\pi/2 + n\\pi$', 'Intermediate values achieved', 'It is continuous on closed interval'],
+        correctAnswers: ['One-sided continuity', '$x = \\pi/2 + n\\pi$', 'Intermediate values achieved', 'It is continuous on $[a,b]$'],
         hint1: 'Endpoints only have one side.',
         hint2: '$\\cos x = 0$ at odd multiples of $\\pi/2$.',
         hint3: 'IVT is about hitting intermediate $y$-values.',

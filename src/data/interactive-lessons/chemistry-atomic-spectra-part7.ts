@@ -20,7 +20,7 @@ export const chemAtomicSpectraPart7Data = {
 | 🔑 Common pitfalls |
 | Final mastery quiz |
 
-> 🎯 **AP CED alignment:** This topic is **AP Chemistry Topic 1.5 — Atomic Structure & Electron Configuration / Photoelectron Spectroscopy**. Expect FRQs that ask you to:
+> 🎯 **AP CED alignment:** This topic draws on **AP Chemistry Topics 1.5 (Atomic Structure & Electron Configuration), 1.6 (Photoelectron Spectroscopy), and 3.11 (Spectroscopy & the Electromagnetic Spectrum)**. Expect FRQs that ask you to:
 > • Calculate photon energy or wavelength from a transition
 > • Sketch or interpret an emission/PES spectrum
 > • Justify the magnitude of $Z_{\\text{eff}}$ for a labeled peak
@@ -47,7 +47,7 @@ export const chemAtomicSpectraPart7Data = {
 
 - **Electron configuration (Topic 1.5):** Order of subshell filling reflects the same energy ordering seen in PES peaks.
 - **Periodic trends (Topic 1.7):** $Z_{\\text{eff}}$ explains both trends and PES binding-energy shifts.
-- **Light & matter (Topic 3.12 in AP Physics):** Same photon-energy framework underlies the photoelectric effect.
+- **Photoelectric effect (AP Chemistry Topic 3.12):** Same photon-energy framework underlies the photoelectric effect.
       `
     },
     {
@@ -73,30 +73,30 @@ export const chemAtomicSpectraPart7Data = {
           {
             question: 'Which observation provided the clearest experimental support for the **quantization** of electron energy levels in atoms?',
             options: [
-              'The continuous spectrum of a hot solid',
-              'The discrete bright lines in the emission spectrum of hydrogen',
-              'The bending of light in a prism',
-              'The emission of X-rays by a cathode tube'
+              'The continuous spectrum glowing from a hot solid',
+              'The discrete bright lines in hydrogen\'s emission spectrum',
+              'The bending of white light into colors by a prism',
+              'The emission of X-rays by a cathode-ray tube'
             ],
             correctAnswer: 1,
             explanation: 'A continuous spectrum would imply any energy is possible. The discrete *line* pattern of H proves that only specific energy gaps exist — quantization.'
           },
           {
-            question: 'In a photoelectron spectrum of an unknown atom, the highest binding-energy peak is at 1,090 eV with relative height 2. The next peak is at 63 eV (height 2), then 9 eV (height 5). The atom is most likely:',
-            options: ['Carbon (Z=6)', 'Nitrogen (Z=7)', 'Phosphorus (Z=15)', 'Sulfur (Z=16)'],
+            question: 'In a photoelectron spectrum of an unknown atom, the highest binding-energy peak is at 696 eV with relative height 2. The next peak is at 40 eV (height 2), then 17 eV (height 5). The atom is most likely:',
+            options: ['Oxygen (Z=8)', 'Neon (Z=10)', 'Fluorine (Z=9)', 'Chlorine (Z=17)'],
             correctAnswer: 2,
-            explanation: 'Heights 2 : 2 : 5 = 9 total electrons in 3 subshells ($1s^{2}$ $2s^{2}$ 2p... wait, 2p only holds 6). Reread: 2 + 2 + 5 = 9. Hmm — but the peaks should be 1s, 2s, 2p, 3s, 3p... Actually this is P: $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{3}$ → peaks at $1s^{2}$ (2), $2s^{2}$ (2), $2p^{6}$ (6), $3s^{2}$ (2), $3p^{3}$ (3). Heights given here (2:2:5) represent a simplified 3-peak summary; for AP-CED P (Z=15) is the closest fit when considering simplified PES. (Note: the AP exam typically draws all 5 P peaks.)'
+            explanation: 'Heights 2 : 2 : 5 give 9 electrons in three subshells: $1s^{2}$ $2s^{2}$ $2p^{5}$, which is fluorine (Z = 9). The very large 1s binding energy marks the core peak. Neon would show $2p^{6}$ (height 6) and oxygen $2p^{4}$ (height 4); chlorine ends in $3s^{2}$ $3p^{5}$ but would show five peaks, including $2p^{6}$.'
           },
           {
             question: 'The Bohr model correctly predicts the Lyman series wavelengths of hydrogen but FAILS to predict the spectrum of helium. The most fundamental reason is:',
             options: [
-              'Helium has more protons than hydrogen',
-              'Helium has two electrons that interact with each other (electron–electron repulsion)',
+              'Helium\'s nucleus has two protons instead of one',
+              'Helium\'s two electrons repel and shield each other',
               'The Rydberg constant is different for helium',
-              'Helium is a noble gas and emits no light'
+              'Helium is a noble gas, so it emits no light'
             ],
             correctAnswer: 1,
-            explanation: 'The Bohr model assumes a single electron orbiting a nucleus. Once a second electron is present, electron–electron repulsion (and shielding) breaks the simple $1/n^2$ pattern.'
+            explanation: 'The Bohr model assumes a single electron orbiting a nucleus, and it handles a larger nuclear charge fine (it works for $He^{+}$). Once a second electron is present, electron–electron repulsion (and shielding) breaks the simple $1/n^2$ pattern.'
           }
         ]
       }
@@ -153,13 +153,13 @@ export const chemAtomicSpectraPart7Data = {
           {
             question: 'On an exam, you see a question: "Why do hydrogen and helium produce different emission spectra?" The BEST answer is:',
             options: [
-              'They have different numbers of neutrons',
-              'They have different sets of allowed quantized energy levels because of different nuclear charges and electron–electron interactions',
-              'Helium is heavier so its photons are slower',
-              'Hydrogen is colorless'
+              'Helium\'s extra neutrons shift every energy level',
+              'Each has its own set of quantized energy levels',
+              'Helium is heavier, so its photons travel more slowly',
+              'Only hydrogen\'s energy levels are quantized'
             ],
             correctAnswer: 1,
-            explanation: 'Each atom has its own unique set of allowed energy levels — set by the nuclear charge and (for ≥2 electrons) electron–electron interactions. Hence each element has a unique spectral fingerprint.'
+            explanation: 'Each atom has its own unique set of allowed energy levels — set by the nuclear charge and (for ≥2 electrons) electron–electron interactions. Hence each element has a unique spectral fingerprint. Neutrons have almost no effect on the levels, and all photons travel at $c$.'
           },
           {
             question: 'Which combination correctly describes the Balmer-α (H-α) transition in hydrogen?',

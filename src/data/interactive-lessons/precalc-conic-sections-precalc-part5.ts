@@ -145,12 +145,12 @@ Calculate $\\Delta = B^2-4AC$ for each:
         dropdowns: [
           {
             label: 'The discriminant $B^2-4AC$ is invariant under:',
-            options: ['Translation only', 'Rotation only', 'Both translation and rotation'],
+            options: ['Translation only, not rotation', 'Rotation only, not translation', 'Both translation and rotation'],
             correctAnswer: 2
           },
           {
             label: 'If $B=0$ in $Ax^2+Bxy+Cy^2+Dx+Ey+F=0$, the conic axes are:',
-            options: ['Rotated $45°$', 'Aligned with coordinate axes', 'Cannot determine'],
+            options: ['Rotated $45°$ from the coordinate axes', 'Aligned with coordinate axes', 'Tilted at an angle set by $A - C$'],
             correctAnswer: 1
           },
           {
@@ -160,7 +160,7 @@ Calculate $\\Delta = B^2-4AC$ for each:
           },
           {
             label: '$x^2+y^2=r^2$ is a special case of an ellipse where:',
-            options: ['$a = b$, $e = 0$', '$a > b$, $e = 1$', '$B = 1$'],
+            options: ['$a = b$, $e = 0$', '$a > b$, $e = 1$', '$a = b$, $e = 1$'],
             correctAnswer: 0
           }
         ],

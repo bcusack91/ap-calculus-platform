@@ -148,7 +148,7 @@ $$\\sum_{k=1}^{99}\\left(\\frac{1}{k}-\\frac{1}{k+1}\\right) = 1 - \\frac{1}{100
           },
           {
             label: 'Changing index from $\\sum_{k=1}^n$ to $\\sum_{j=0}^{n-1}$ via $j=k-1$:',
-            options: ['Changes the sum value', 'Does not change the sum value', 'Only works for arithmetic'],
+            options: ['Shifts the sum by one term', 'Leaves the sum unchanged', 'Only works for arithmetic sums'],
             correctAnswer: 1
           },
           {
@@ -157,7 +157,7 @@ $$\\sum_{k=1}^{99}\\left(\\frac{1}{k}-\\frac{1}{k+1}\\right) = 1 - \\frac{1}{100
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['$k$', '$cn$', 'Does not change the sum value', 'Cancel'],
+        correctAnswers: ['$k$', '$cn$', 'Leaves the sum unchanged', 'Cancel'],
         hint1: '$k$ is the index/dummy variable.',
         hint2: 'Sum of a constant $c$ repeated $n$ times: $cn$.',
         hint3: 'Re-indexing is just a substitution; the sum is the same.',

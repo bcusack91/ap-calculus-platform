@@ -84,9 +84,9 @@ Set $A = B = 1, \\delta = \\frac{\\pi}{2}$, and increment the ratio $a:b$. The c
         questions: [
           {
             question: 'The cycloid has cusps at:',
-            options: ['The top of each arch', 'The bottom where it touches the baseline', 'The midpoints', 'There are no cusps'],
+            options: ['The top of each arch, where $y$ is greatest', 'The bottom where it touches the baseline', 'Midway up each arch, at the inflection points', 'Nowhere, since the curve is smooth everywhere'],
             correctAnswer: 1,
-            explanation: 'At $t = 0, 2\\pi, 4\\pi, ...$, the point touches the ground and both $dx/dt$ and $dy/dt$ equal $0$ — cusps.'
+            explanation: 'At $t = 0, 2\\pi, 4\\pi, ...$, the point touches the ground and both $dx/dt$ and $dy/dt$ equal $0$ — cusps. The tops of the arches are smooth maxima, and each arch is concave down throughout, so it has no inflection points.'
           },
           {
             question: 'The astroid $x = a\\cos^3 t, \\; y = a\\sin^3 t$ has the Cartesian equation:',
@@ -144,7 +144,7 @@ Set $A = B = 1, \\delta = \\frac{\\pi}{2}$, and increment the ratio $a:b$. The c
           },
           {
             label: 'Lissajous figures with irrational frequency ratio:',
-            options: ['Close after one period', 'Never close (fill a region)', 'Are always circles'],
+            options: ['Close after exactly one full period', 'Never close, filling a region', 'Close after a very large number of periods'],
             correctAnswer: 1
           },
           {
@@ -153,7 +153,7 @@ Set $A = B = 1, \\delta = \\frac{\\pi}{2}$, and increment the ratio $a:b$. The c
             correctAnswer: 2
           }
         ],
-        correctAnswers: ['Cycloid', 'Both', 'Never close (fill a region)', 'Both'],
+        correctAnswers: ['Cycloid', 'Both', 'Never close, filling a region', 'Both'],
         hint1: 'Point on the rim of a rolling wheel → cycloid.',
         hint2: 'Astroid touches $x = \\pm a, y = \\pm a$, fitting in both.',
         hint3: 'Irrational ratio means the curve never exactly repeats.',

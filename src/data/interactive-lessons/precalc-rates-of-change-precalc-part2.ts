@@ -142,12 +142,12 @@ After simplifying, $h$ **must** cancel from the denominator. If it doesn't, you 
         dropdowns: [
           {
             label: 'The first step in computing a DQ is:',
-            options: ['Take the limit', 'Find $f(x+h)$', 'Factor', 'Set $h=0$'],
+            options: ['Take the limit', 'Find $f(x+h)$', 'Factor out $h$', 'Substitute $h = 0$'],
             correctAnswer: 1
           },
           {
             label: 'If $h$ doesn\'t cancel, you should:',
-            options: ['Set $h=0$', 'Check algebra for errors', 'Conclude limit DNE', 'Skip the problem'],
+            options: ['Set $h=0$ and evaluate anyway', 'Check algebra for errors', 'Conclude that the limit DNE', 'Conclude the rate is zero'],
             correctAnswer: 1
           },
           {
@@ -157,7 +157,7 @@ After simplifying, $h$ **must** cancel from the denominator. If it doesn't, you 
           },
           {
             label: 'The limit of the DQ as $h \\to 0$ gives:',
-            options: ['Average velocity', 'Instantaneous rate of change', 'Total change', 'Acceleration'],
+            options: ['Average rate of change', 'Instantaneous rate of change', 'Total change in $f$', 'Acceleration'],
             correctAnswer: 1
           }
         ],

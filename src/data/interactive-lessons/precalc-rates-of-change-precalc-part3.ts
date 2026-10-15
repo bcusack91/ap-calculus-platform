@@ -96,7 +96,7 @@ This is why **instantaneous** rates beat **average** rates for local estimation.
         questions: [
           {
             question: 'The tangent line at $x=a$ is the limit of:',
-            options: ['Horizontal lines', 'Vertical lines', 'Secant lines as second point → $a$', 'Normal lines'],
+            options: ['Horizontal lines at $a$', 'Vertical lines', 'Secant lines as second point → $a$', 'Normal lines at nearby points'],
             correctAnswer: 2,
             explanation: 'As the second point approaches $a$, the secant becomes the tangent.'
           },
@@ -146,7 +146,7 @@ This is why **instantaneous** rates beat **average** rates for local estimation.
         dropdowns: [
           {
             label: 'Tangent line touches the curve at:',
-            options: ['Two points', 'Exactly one point (locally)', 'No points', 'All points'],
+            options: ['Two nearby points', 'One point, locally', 'No points at all', 'All points'],
             correctAnswer: 1
           },
           {
@@ -156,7 +156,7 @@ This is why **instantaneous** rates beat **average** rates for local estimation.
           },
           {
             label: 'Linear approximation is most accurate:',
-            options: ['Far from the point', 'Close to the tangent point', 'At infinity', 'At discontinuities'],
+            options: ['Far away from the tangent point', 'Close to the tangent point', 'Where the curve is steepest', 'Near a discontinuity of $f$'],
             correctAnswer: 1
           },
           {
@@ -165,7 +165,7 @@ This is why **instantaneous** rates beat **average** rates for local estimation.
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['Exactly one point (locally)', 'Increasing', 'Close to the tangent point', 'The function itself'],
+        correctAnswers: ['One point, locally', 'Increasing', 'Close to the tangent point', 'The function itself'],
         hint1: 'Locally, the tangent just "touches."',
         hint2: 'Positive slope = going up.',
         hint3: 'Tangent approximation degrades with distance.',
@@ -188,9 +188,9 @@ This is why **instantaneous** rates beat **average** rates for local estimation.
           },
           {
             question: 'What does a steeper tangent line indicate?',
-            options: ['Slower change', 'Faster rate of change', 'No change', 'Discontinuity'],
+            options: ['Slower change', 'Faster rate of change', 'A larger $y$-value', 'A discontinuity'],
             correctAnswer: 1,
-            explanation: 'Steeper tangent = larger |slope| = faster instantaneous rate of change.'
+            explanation: 'Steeper tangent = larger |slope| = faster instantaneous rate of change. Steepness describes the slope, not the height of the graph.'
           }
         ]
       }

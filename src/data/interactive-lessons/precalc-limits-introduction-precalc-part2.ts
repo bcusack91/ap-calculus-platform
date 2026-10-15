@@ -108,9 +108,9 @@ $$\\lim_{x \\to 0} x^2 \\sin(1/x) = 0$$
           },
           {
             question: 'The Squeeze Theorem requires:',
-            options: ['$f$ between $g$ and $h$, with $g,h$ having same limit', '$f = g = h$', 'All three limits exist separately', 'Only one bound'],
+            options: ['$g \\le f \\le h$ near $c$, with $\\lim g = \\lim h$', '$f$, $g$, and $h$ equal near $c$', '$g$ and $h$ to have limits that may differ', '$f$ bounded by a single function $h$'],
             correctAnswer: 0,
-            explanation: 'Squeeze = sandwiched between two converging bounds.'
+            explanation: 'Squeeze = $f$ sandwiched between two bounds that converge to the SAME limit $L$; then $\\lim f = L$ too. Two bounds with different limits, or a single bound, pin down nothing.'
           }
         ]
       }
@@ -151,12 +151,12 @@ $$\\lim_{x \\to 0} x^2 \\sin(1/x) = 0$$
           },
           {
             label: 'Direct substitution works for:',
-            options: ['All functions', 'Only polynomials', 'Continuous functions at that point', 'Only rational functions'],
+            options: ['Every function at every point', 'Polynomials only, never rationals', 'Functions continuous at $c$', 'Any rational function, even at holes'],
             correctAnswer: 2
           },
           {
             label: 'Quotient law requires:',
-            options: ['Numerator limit ≠ 0', 'Denominator limit ≠ 0', 'Both limits equal', 'Both limits ≠ 0'],
+            options: ['Numerator limit to be nonzero', 'Denominator limit ≠ 0', 'Both limits to be equal', 'Both limits to be nonzero'],
             correctAnswer: 1
           },
           {
@@ -165,7 +165,7 @@ $$\\lim_{x \\to 0} x^2 \\sin(1/x) = 0$$
             correctAnswer: 2
           }
         ],
-        correctAnswers: ['$\\lim f + \\lim g$', 'Continuous functions at that point', 'Denominator limit ≠ 0', '$k$'],
+        correctAnswers: ['$\\lim f + \\lim g$', 'Functions continuous at $c$', 'Denominator limit ≠ 0', '$k$'],
         hint1: 'Sum of limits = limit of sum.',
         hint2: 'Continuity = limit equals value.',
         hint3: 'Can\'t divide by 0.',

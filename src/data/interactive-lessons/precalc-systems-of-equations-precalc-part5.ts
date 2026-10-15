@@ -114,7 +114,7 @@ $$= \\frac{1}{x-1}+\\frac{-1}{x^2+x+1}$$
           },
           {
             question: 'Irreducible quadratic $x^2+4$ gets numerator:',
-            options: ['$A$', '$Ax+B$', '$Ax^2+B$', '$A/x$'],
+            options: ['$A$', '$Ax+B$', '$Ax$', '$A/x$'],
             correctAnswer: 1,
             explanation: 'Quadratic denominator → linear numerator $Ax+B$.'
           }
@@ -154,26 +154,26 @@ $\\frac{7x+1}{(x+1)(x-2)} = \\frac{A}{x+1}+\\frac{B}{x-2}$
         dropdowns: [
           {
             label: 'Before decomposing, ensure:',
-            options: ['Numerator is factored', 'Denominator has no repeated factors', 'Proper fraction and factored denominator', 'No preparation is needed'],
+            options: ['Numerator is fully factored first', 'Denominator has only distinct linear factors', 'Proper fraction, factored denominator', 'No preparation is needed'],
             correctAnswer: 2
           },
           {
             label: 'If degree(num) ≥ degree(den):',
-            options: ['Cannot decompose', 'Do long division first', 'Factor numerator', 'Multiply by -1'],
+            options: ['It cannot be decomposed', 'Do long division first', 'Factor the numerator first', 'Use repeated-factor terms'],
             correctAnswer: 1
           },
           {
             label: 'The "cover-up" method uses:',
-            options: ['Coefficient matching', 'Strategic substitution', 'Graphing', 'Elimination'],
+            options: ['Matching all the coefficients', 'Strategic substitution', 'Long division of the fraction', 'Solving a system for $A$ and $B$'],
             correctAnswer: 1
           },
           {
             label: 'Partial fractions are most useful in:',
-            options: ['Graphing', 'Integration (calculus)', 'Factoring', 'Statistics'],
+            options: ['Graphing', 'Integration', 'Factoring', 'Geometry'],
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['Proper fraction and factored denominator', 'Do long division first', 'Strategic substitution', 'Integration (calculus)'],
+        correctAnswers: ['Proper fraction, factored denominator', 'Do long division first', 'Strategic substitution', 'Integration'],
         hint1: 'Must be proper fraction with factored denominator.',
         hint2: 'Long division makes it a proper fraction.',
         hint3: 'Plug in roots of the denominator.',
@@ -196,9 +196,9 @@ $\\frac{7x+1}{(x+1)(x-2)} = \\frac{A}{x+1}+\\frac{B}{x-2}$
           },
           {
             question: '$\\frac{x+5}{(x-3)(x+2)} = \\frac{A}{x-3}+\\frac{B}{x+2}$. $A+B$ = ?',
-            options: ['$1$', '$2$', '$\\frac{8}{5}+\\frac{-3}{5}$', '$\\frac{8}{5}+\\frac{3}{5}$'],
+            options: ['$1$', '$\\frac{11}{5}$', '$-\\frac{11}{5}$', '$-1$'],
             correctAnswer: 0,
-            explanation: '$x=3$: $8=5A \\implies A=8/5$. $x=-2$: $3=-5B \\implies B=-3/5$. $A+B=1$ (always equals leading coeff ratio).'
+            explanation: '$x=3$: $8=5A \\implies A=8/5$. $x=-2$: $3=-5B \\implies B=-3/5$. $A+B=1$ (matching $x$-coefficients in $x+5 = A(x+2)+B(x-3)$ also gives $A+B=1$). Losing the sign of $B$ gives $\\frac{11}{5}$; flipping both signs gives $-1$.'
           }
         ]
       }

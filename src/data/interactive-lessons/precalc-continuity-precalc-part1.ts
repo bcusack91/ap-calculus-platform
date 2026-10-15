@@ -112,7 +112,7 @@ This means you rarely need the three-step check for "nice" functions — just ve
           },
           {
             question: 'Polynomials are continuous:',
-            options: ['Only at integers', 'Only on $[0,\\infty)$', 'Everywhere', 'Nowhere'],
+            options: ['Only at integers', 'Only on $[0,\\infty)$', 'Everywhere', 'Only between their roots'],
             correctAnswer: 2,
             explanation: 'Polynomials are continuous on all of $\\mathbb{R}$ — no holes, jumps, or asymptotes.'
           }
@@ -150,17 +150,17 @@ This means you rarely need the three-step check for "nice" functions — just ve
         dropdowns: [
           {
             label: '"Draw without lifting your pen" means:',
-            options: ['Differentiable', 'Continuous', 'Periodic', 'Bounded'],
+            options: ['Differentiable', 'Continuous', 'Defined everywhere', 'Bounded on its domain'],
             correctAnswer: 1
           },
           {
             label: 'If $\\lim_{x \\to c} f(x) \\neq f(c)$, there is a:',
-            options: ['Jump', 'Removable discontinuity', 'Vertical asymptote', 'No discontinuity'],
+            options: ['Jump discontinuity', 'Removable discontinuity', 'Infinite discontinuity', 'No discontinuity'],
             correctAnswer: 1
           },
           {
             label: '$\\sin x$ is continuous on:',
-            options: ['$(0, \\pi)$', '$[-1, 1]$', '$(-\\infty, \\infty)$', 'Only integers'],
+            options: ['$(0, \\pi)$', '$[-1, 1]$', '$(-\\infty, \\infty)$', '$[0, 2\\pi]$'],
             correctAnswer: 2
           },
           {
@@ -186,13 +186,13 @@ This means you rarely need the three-step check for "nice" functions — just ve
         questions: [
           {
             question: 'Which condition distinguishes a "removable" from a "jump" discontinuity?',
-            options: ['Whether $f(c)$ is defined', 'Whether the limit exists', 'Whether $f$ is polynomial', 'Whether $x > 0$'],
+            options: ['Whether $f(c)$ is defined', 'Whether the limit exists', 'Whether $f$ is polynomial', 'Whether $f$ has a vertical asymptote'],
             correctAnswer: 1,
-            explanation: 'Removable: limit exists (but ≠ value). Jump: limit DNE (one-sided limits differ).'
+            explanation: 'Removable: limit exists (but ≠ value). Jump: limit DNE (one-sided limits differ). Whether $f(c)$ is defined does not separate them, and a vertical asymptote signals an infinite discontinuity, a third type.'
           },
           {
             question: 'If $f$ and $g$ are continuous at $c$, then $f+g$ at $c$ is:',
-            options: ['Always continuous', 'Sometimes continuous', 'Never continuous', 'Undefined'],
+            options: ['Always continuous', 'Sometimes continuous', 'Never continuous at $c$', 'Continuous only if $f(c)=g(c)$'],
             correctAnswer: 0,
             explanation: 'Sum of continuous functions is continuous — this is a theorem about limits.'
           }

@@ -84,9 +84,9 @@ $S_{50} = \\frac{50}{2}(1+99) = 2500$.
         questions: [
           {
             question: '$3, 7, 11, 15, \\ldots$ is:',
-            options: ['Arithmetic, $d=4$', 'Geometric, $r=4$', 'Neither', 'Fibonacci'],
+            options: ['Arithmetic, $d=4$', 'Geometric, $r=\\frac{7}{3}$', 'Arithmetic, $d=-4$', 'Neither, it is quadratic'],
             correctAnswer: 0,
-            explanation: 'Constant difference $d = 4$ → arithmetic.'
+            explanation: 'Constant difference $7-3 = 4$ → arithmetic with $d = 4$ (subtracting in the wrong order gives $-4$). The ratios $7/3$ and $11/7$ differ, so it is not geometric.'
           },
           {
             question: '$\\sum_{n=0}^{\\infty} (-0.8)^n$ equals:',
@@ -134,7 +134,7 @@ $S_{50} = \\frac{50}{2}(1+99) = 2500$.
         dropdowns: [
           {
             label: '$1, 4, 9, 16, 25, \\ldots$ is:',
-            options: ['Arithmetic', 'Geometric', 'Neither (quadratic/square numbers)'],
+            options: ['Arithmetic', 'Geometric', 'Neither'],
             correctAnswer: 2
           },
           {
@@ -153,7 +153,7 @@ $S_{50} = \\frac{50}{2}(1+99) = 2500$.
             correctAnswer: 2
           }
         ],
-        correctAnswers: ['Neither (quadratic/square numbers)', 'Diverges', '$1/7$', '$2^n$'],
+        correctAnswers: ['Neither', 'Diverges', '$1/7$', '$2^n$'],
         hint1: 'Differences are $3,5,7,9\\ldots$ — not constant, so not arithmetic.',
         hint2: 'Arithmetic sums grow without bound.',
         hint3: '$142857/999999 = 1/7$.',

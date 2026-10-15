@@ -97,9 +97,9 @@ Only $x = 1, y = 1$. The line is **tangent** to the parabola.
         questions: [
           {
             question: 'How many solutions can a line and circle have?',
-            options: ['0, 1, or 2', 'Always 2', 'Always 1', '0 or 2 only'],
+            options: ['At most 2', 'Exactly 2', 'At most 1', 'At most 4'],
             correctAnswer: 0,
-            explanation: 'The line can miss (0), be tangent (1), or cross through (2).'
+            explanation: 'At most 2: the line can miss (0), be tangent (1), or cross through (2). Substituting the line into the circle gives a quadratic, which has no more than two roots.'
           },
           {
             question: '$\\begin{cases} y = x^2 \\\\ y = -x^2+8 \\end{cases}$: how many solutions?',
@@ -154,7 +154,7 @@ $\\begin{cases} y = x^2 - 1 \\\\ y = 3x - 1 \\end{cases}$
           },
           {
             label: 'A discriminant of 0 in the resulting quadratic means:',
-            options: ['No solution', 'One solution (tangent)', 'Two solutions', 'Infinite solutions'],
+            options: ['No solution', 'One solution', 'Two solutions', 'Infinite solutions'],
             correctAnswer: 1
           },
           {
@@ -168,7 +168,7 @@ $\\begin{cases} y = x^2 - 1 \\\\ y = 3x - 1 \\end{cases}$
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['Substitution', 'One solution (tangent)', '4 points', 'Circle + hyperbola'],
+        correctAnswers: ['Substitution', 'One solution', '4 points', 'Circle + hyperbola'],
         hint1: 'Elimination rarely works with nonlinear terms.',
         hint2: 'Discriminant 0 → repeated root → tangent.',
         hint3: 'Degree 2 × degree 2 = up to 4 intersections.',

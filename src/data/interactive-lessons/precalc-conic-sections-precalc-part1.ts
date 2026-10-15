@@ -102,9 +102,9 @@ Eccentricity of a circle: $e = 0$.
           },
           {
             question: '$x^2+y^2+2x-8y+1 = 0$: the radius is:',
-            options: ['$1$', '$4$', '$\\sqrt{18}$', '$16$'],
+            options: ['$\\sqrt{17}$', '$4$', '$\\sqrt{18}$', '$16$'],
             correctAnswer: 1,
-            explanation: '$(x+1)^2+(y-4)^2 = -1+1+16 = 16$. Radius $= 4$.'
+            explanation: '$(x+1)^2+(y-4)^2 = -1+1+16 = 16$, so the radius is $\\sqrt{16} = 4$. $16$ is $r^2$, not $r$; $\\sqrt{17}$ comes from forgetting to move the constant $+1$ to the right side, and $\\sqrt{18}$ from adding it instead of subtracting.'
           }
         ]
       }
@@ -155,7 +155,7 @@ Eccentricity of a circle: $e = 0$.
           },
           {
             label: 'A degenerate conic can be:',
-            options: ['A point, line, or pair of lines', 'Only a point', 'Only a line', 'Never occurs'],
+            options: ['A point, line, or pair of lines', 'Only a point, where the radius shrinks to zero', 'Only a line, where the cutting plane is tangent', 'Never, since every plane slice gives a true curve'],
             correctAnswer: 0
           }
         ],

@@ -131,11 +131,11 @@ That is the energy delivered by **one photon**. A typical 1-mW laser emits rough
             options: [
               'longer wavelength and lower energy',
               'shorter wavelength and higher energy',
-              'the same energy but greater intensity',
-              'no wave properties'
+              'higher intensity at the same energy',
+              'shorter wavelength but lower energy'
             ],
             correctAnswer: 1,
-            explanation: 'UV (10–400 nm) is shorter wavelength than visible (400–700 nm), so each UV photon carries more energy.'
+            explanation: 'UV (10–400 nm) is shorter wavelength than visible (400–700 nm), so each UV photon carries more energy. Shorter wavelength always means higher energy per photon ($E = hc/\\lambda$), and intensity describes how many photons arrive, not the energy of each.'
           }
         ]
       }
@@ -171,7 +171,7 @@ That is the energy delivered by **one photon**. A typical 1-mW laser emits rough
         dropdowns: [
           { label: 'Wavelength of 600 nm lies in the', options: ['radio region', 'visible region', 'X-ray region', 'microwave region'] },
           { label: 'Of the four, the photon with the highest energy has wavelength', options: ['1 m', '500 nm', '50 nm', '700 nm'] },
-          { label: 'Frequency and wavelength are', options: ['directly proportional', 'inversely proportional', 'unrelated', 'always equal'] },
+          { label: 'Frequency and wavelength are', options: ['directly proportional', 'inversely proportional', 'unrelated', 'both set by the intensity'] },
           { label: 'Planck\'s constant has units of', options: ['J', 'J·s', 'J/s', 'm/s'] }
         ],
         correctAnswers: ['visible region', '50 nm', 'inversely proportional', 'J·s'],

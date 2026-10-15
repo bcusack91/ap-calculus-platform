@@ -95,9 +95,9 @@ The domain of $t$ controls which **portion** of the curve is drawn:
         questions: [
           {
             question: 'What curve does $x = 3\\cos t, \\; y = 3\\sin t$ trace?',
-            options: ['A circle of radius 3', 'An ellipse', 'A line', 'A parabola'],
+            options: ['A circle of radius 3', 'A circle of radius 9', 'A sine wave of amplitude 3', 'A line segment along $y = x$'],
             correctAnswer: 0,
-            explanation: '$x^2 + y^2 = 9\\cos^2 t + 9\\sin^2 t = 9$. Circle of radius 3.'
+            explanation: '$x^2 + y^2 = 9\\cos^2 t + 9\\sin^2 t = 9$, so $r^2 = 9$ and the curve is a circle of radius 3 (not 9). Neither coordinate is a function of the other alone, so it is not a sine wave, and $x \\neq y$ in general, so it is not the line $y = x$.'
           },
           {
             question: 'For $x = t^2, \\; y = t^3$, at $t = -1$ the point is:',

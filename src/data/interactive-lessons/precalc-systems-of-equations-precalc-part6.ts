@@ -145,7 +145,7 @@ Time together: $\\frac{12}{5} = 2.4$ hours.
         dropdowns: [
           {
             label: 'Mixture problems always have:',
-            options: ['A total amount equation', 'A concentration equation', 'Both', 'Neither'],
+            options: ['Only a total-amount equation', 'Only a concentration equation', 'Both kinds of equations', 'Both, plus a rate equation'],
             correctAnswer: 2
           },
           {
@@ -155,16 +155,16 @@ Time together: $\\frac{12}{5} = 2.4$ hours.
           },
           {
             label: 'First step in any word problem:',
-            options: ['Solve the equation', 'Define variables', 'Graph the system', 'Use matrices'],
+            options: ['Solve for $x$', 'Define variables', 'Draw a graph', 'Use matrices'],
             correctAnswer: 1
           },
           {
             label: 'Work rate formula: combined rate =',
-            options: ['$r_1 + r_2$', '$r_1 \\times r_2$', '$1/(r_1 + r_2)$', '$r_1 - r_2$'],
+            options: ['$r_1 + r_2$', '$r_1 \\times r_2$', '$1/(r_1 + r_2)$', '$(r_1 + r_2)/2$'],
             correctAnswer: 0
           }
         ],
-        correctAnswers: ['Both', 'Boat - current', 'Define variables', '$r_1 + r_2$'],
+        correctAnswers: ['Both kinds of equations', 'Boat - current', 'Define variables', '$r_1 + r_2$'],
         hint1: 'Total volume AND total solute.',
         hint2: 'Current opposes: subtract.',
         hint3: 'Can\'t write equations without knowing what $x$ and $y$ represent.',

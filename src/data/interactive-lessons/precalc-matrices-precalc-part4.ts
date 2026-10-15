@@ -96,9 +96,9 @@ Start with identity augmented, reduce left side to identity → right side becom
         questions: [
           {
             question: '$A = \\begin{bmatrix} 2 & 1 \\\\ 4 & 2 \\end{bmatrix}$. Does $A^{-1}$ exist?',
-            options: ['Yes', 'No', 'Only for some vectors', 'Need more info'],
+            options: ['Yes, its determinant is 8', 'No, its determinant is 0', 'Yes, since no entry is zero', 'Yes, its determinant is 4'],
             correctAnswer: 1,
-            explanation: '$\\det = 2(2)-1(4) = 0$. Singular → no inverse.'
+            explanation: '$\\det = 2(2)-1(4) = 0$. Singular → no inverse. Adding instead of subtracting gives $8$; using only $ad$ gives $4$; nonzero entries do not guarantee an inverse.'
           },
           {
             question: '$A^{-1} = \\begin{bmatrix} 2 & -1 \\\\ -3 & 2 \\end{bmatrix}$. Solve $A\\vec{x}=\\begin{bmatrix} 1 \\\\ 3 \\end{bmatrix}$:',
@@ -153,7 +153,7 @@ $A = \\begin{bmatrix} 4 & 3 \\\\ 1 & 1 \\end{bmatrix}$, $\\det = ?$
           },
           {
             label: 'The 2×2 inverse formula requires:',
-            options: ['$\\det = 0$', '$\\det \\neq 0$', 'Symmetric matrix', 'Diagonal matrix'],
+            options: ['$\\det = 0$', '$\\det \\neq 0$', '$\\det > 0$', '$\\det = 1$'],
             correctAnswer: 1
           },
           {
@@ -163,7 +163,7 @@ $A = \\begin{bmatrix} 4 & 3 \\\\ 1 & 1 \\end{bmatrix}$, $\\det = ?$
           },
           {
             label: '$\\det(A^{-1})$ equals:',
-            options: ['$\\det(A)$', '$-\\det(A)$', '$1/\\det(A)$', '$0$'],
+            options: ['$\\det(A)$', '$-\\det(A)$', '$1/\\det(A)$', '$-1/\\det(A)$'],
             correctAnswer: 2
           }
         ],
@@ -190,9 +190,9 @@ $A = \\begin{bmatrix} 4 & 3 \\\\ 1 & 1 \\end{bmatrix}$, $\\det = ?$
           },
           {
             question: 'If $A$ is $3\\times 3$ with $\\det(A)=5$, then $\\det(A^{-1})$?',
-            options: ['$5$', '$1/5$', '$-5$', '$25$'],
+            options: ['$5$', '$\\frac{1}{5}$', '$-\\frac{1}{5}$', '$\\frac{1}{125}$'],
             correctAnswer: 1,
-            explanation: '$\\det(A^{-1}) = 1/\\det(A) = 1/5$.'
+            explanation: '$\\det(A^{-1}) = 1/\\det(A) = 1/5$. The size of the matrix does not matter here, so cubing to get $1/125$ is wrong, and the inverse does not flip the sign.'
           }
         ]
       }

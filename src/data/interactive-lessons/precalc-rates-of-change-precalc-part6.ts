@@ -103,21 +103,21 @@ If $A = \\pi r^2$ and $r$ changes over time, then $A$ also changes. The rate $dA
         questions: [
           {
             question: 'If $C(x) = 500 + 3x + 0.01x^2$ and AROC from $x=100$ to $x=101$ is $\\$5.01$, this represents:',
-            options: ['Total cost', 'Approximate cost of 101st item', 'Profit', 'Revenue'],
+            options: ['Total cost of 101 items', 'Approximate cost of 101st item', 'Profit on the 101st item', 'Average cost per item'],
             correctAnswer: 1,
-            explanation: 'The AROC of cost for one additional unit ≈ marginal cost = cost of the next item.'
+            explanation: '$C(101) - C(100) = 3 + 0.01(10201 - 10000) = 5.01$. The AROC of cost for one additional unit ≈ marginal cost = cost of the next item, not the total or average cost, and cost alone says nothing about profit.'
           },
           {
             question: 'Rate units for temperature (°F) vs time (min):',
-            options: ['°F', 'min', '°F/min', '°F·min'],
+            options: ['min/°F', 'min', '°F/min', '°F·min'],
             correctAnswer: 2,
             explanation: 'Rate = output/input = °F/min.'
           },
           {
             question: 'Negative rate of change for population means:',
-            options: ['Growing', 'Declining', 'Stable', 'Infinite'],
+            options: ['Growing', 'Declining', 'Stable', 'Negative'],
             correctAnswer: 1,
-            explanation: 'Negative rate = quantity decreasing = population declining.'
+            explanation: 'Negative rate = quantity decreasing = population declining. The population itself stays positive; only its change is negative.'
           }
         ]
       }
@@ -153,17 +153,17 @@ If $A = \\pi r^2$ and $r$ changes over time, then $A$ also changes. The rate $dA
         dropdowns: [
           {
             label: 'Marginal cost is approximately:',
-            options: ['Total cost', 'Average cost', 'Cost of next item (IROC of cost)', 'Fixed cost'],
+            options: ['Total cost of all items', 'Average cost of all items', 'Cost of the next item', 'Fixed cost of production'],
             correctAnswer: 2
           },
           {
             label: 'Newton\'s Law of Cooling has rate proportional to:',
-            options: ['Temperature', 'Temperature difference from environment', 'Time', 'Mass'],
+            options: ['The object\'s own temperature', 'Its difference from room temp', 'Time since cooling began', 'The room\'s temperature alone'],
             correctAnswer: 1
           },
           {
             label: 'If a population doubles every 3 hours, its rate is:',
-            options: ['Constant', 'Increasing (exponential)', 'Decreasing', 'Zero'],
+            options: ['Constant, as for a line', 'Increasing', 'Decreasing over time', 'Zero between doublings'],
             correctAnswer: 1
           },
           {
@@ -172,11 +172,11 @@ If $A = \\pi r^2$ and $r$ changes over time, then $A$ also changes. The rate $dA
             correctAnswer: 2
           }
         ],
-        correctAnswers: ['Cost of next item (IROC of cost)', 'Temperature difference from environment', 'Increasing (exponential)', 'Number, units, and context'],
+        correctAnswers: ['Cost of the next item', 'Its difference from room temp', 'Increasing', 'Number, units, and context'],
         hint1: 'Marginal = rate = derivative of cost.',
         hint2: 'Cooling is faster when temp difference is larger.',
         hint3: 'Doubling = exponential growth → increasing rate.',
-        explanation: 'Marginal cost ≈ C\'(x). Cooling ∝ ΔT. Doubling → exponential rate. Include value + units + context.'
+        explanation: 'Marginal cost ≈ C\'(x). Cooling ∝ ΔT. Doubling → the rate keeps increasing (exponential). Include value + units + context.'
       }
     },
     {
@@ -189,13 +189,13 @@ If $A = \\pi r^2$ and $r$ changes over time, then $A$ also changes. The rate $dA
         questions: [
           {
             question: '$P(t)=200(1.05)^t$. AROC from $t=0$ to $t=2$:',
-            options: ['$10.25$', '$20.50$', '$10.125$', '$5.125$'],
+            options: ['$10.25$', '$20.50$', '$10$', '$110.25$'],
             correctAnswer: 0,
-            explanation: '$P(0)=200, P(2)=200(1.1025)=220.5$. $\\frac{220.5-200}{2}=10.25$.'
+            explanation: '$P(0)=200, P(2)=200(1.1025)=220.5$. $\\frac{220.5-200}{2}=10.25$. Treating the growth as simple interest ($5\\%$ of $200$ per year) gives $10$, and forgetting to subtract $P(0)$ gives $220.5/2 = 110.25$.'
           },
           {
             question: 'When a rate decreases toward zero, the function is:',
-            options: ['Leveling off', 'Increasing faster', 'Becoming negative', 'Oscillating'],
+            options: ['Leveling off', 'Increasing faster', 'Becoming negative', 'Starting to decrease'],
             correctAnswer: 0,
             explanation: 'Decreasing positive rate → function still increasing but slowing down → leveling off.'
           }

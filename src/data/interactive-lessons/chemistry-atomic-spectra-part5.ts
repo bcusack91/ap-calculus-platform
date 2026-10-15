@@ -113,32 +113,32 @@ The full **quantum-mechanical model** (Schrödinger, 1926) replaces orbits with 
           {
             question: 'Why does sodium\'s emission spectrum show many more lines than hydrogen\'s?',
             options: [
-              'Sodium has more isotopes',
-              'Sodium has multiple electrons and split subshells, allowing many more transitions',
-              'Sodium emits only visible light',
-              'Sodium\'s nucleus is unstable'
+              'Its several isotopes each emit their own set of lines',
+              'Its 11 electrons and split subshells allow many more transitions',
+              'It emits only visible light, which shows more lines',
+              'Its unstable nucleus adds extra gamma-ray lines'
             ],
             correctAnswer: 1,
-            explanation: 'Multi-electron atoms have subshell splitting and many possible transitions, giving rich line spectra.'
+            explanation: 'Multi-electron atoms have subshell splitting and many possible transitions, giving rich line spectra. Isotopes shift lines only very slightly, and sodium-23 is a stable nucleus.'
           },
           {
             question: 'In a PES spectrum, the peak corresponding to a 1s electron in carbon is at much higher binding energy than the 2s peak. Why?',
             options: [
-              'The 1s electron is farther from the nucleus',
-              'The 1s electron experiences a much larger $Z_{\\text{eff}}$ (no shielding)',
+              'The 1s electron is farther from the nucleus than 2s',
+              'The 1s electron is closer and feels a larger $Z_{\\text{eff}}$',
               'The 1s electron has more orbital angular momentum',
-              'The 1s shell has more electrons'
+              'The 1s subshell holds more electrons than 2s'
             ],
             correctAnswer: 1,
-            explanation: '1s electrons are closest to the nucleus and experience nearly the full nuclear charge — the largest binding energy.'
+            explanation: '1s electrons are closest to the nucleus and are barely shielded, so they experience nearly the full nuclear charge — the largest binding energy. In carbon ($1s^{2}$ $2s^{2}$ $2p^{2}$) the 1s and 2s subshells each hold 2 electrons.'
           },
           {
             question: 'Which is a major limitation of the Bohr model?',
             options: [
-              'It treats the electron as a wave',
-              'It cannot predict hydrogen\'s spectrum',
+              'It treats the electron only as a spread-out standing wave',
+              'It cannot predict the wavelengths of hydrogen\'s spectrum',
               'It cannot accurately describe multi-electron atoms',
-              'It violates conservation of energy'
+              'It violates conservation of energy during transitions'
             ],
             correctAnswer: 2,
             explanation: 'The Bohr model only works well for hydrogen and other one-electron systems ($He^{+}$, $Li^{2+}$, etc.).'
@@ -174,9 +174,9 @@ The full **quantum-mechanical model** (Schrödinger, 1926) replaces orbits with 
       exercise: {
         dropdowns: [
           { label: 'Within a given shell, the subshell with the LOWEST energy is', options: ['$f$', '$d$', '$p$', '$s$'] },
-          { label: 'Effective nuclear charge $Z_{\\text{eff}}$ on a valence electron generally ______ across a period', options: ['decreases', 'stays constant', 'increases', 'changes randomly'] },
+          { label: 'Effective nuclear charge $Z_{\\text{eff}}$ on a valence electron generally ______ across a period', options: ['decreases', 'stays constant', 'increases', 'rises, then falls'] },
           { label: 'The number of peaks in a PES spectrum equals the number of', options: ['electrons', 'occupied subshells', 'protons', 'shells'] },
-          { label: 'PES peak height is proportional to the number of', options: ['protons', 'neutrons', 'electrons in that subshell', 'allowed transitions'] }
+          { label: 'PES peak height is proportional to the number of', options: ['protons in the nucleus', 'energy levels in that shell', 'electrons in that subshell', 'photons striking the sample'] }
         ],
         correctAnswers: ['$s$', 'increases', 'occupied subshells', 'electrons in that subshell'],
         hint1: '$s$ orbitals penetrate closest to the nucleus.',
@@ -200,13 +200,13 @@ The full **quantum-mechanical model** (Schrödinger, 1926) replaces orbits with 
           {
             question: 'Why doesn\'t the Rydberg formula predict the wavelengths of sodium\'s emission lines?',
             options: [
-              'Sodium has the wrong charge',
-              'The Rydberg formula assumes a one-electron system; sodium has 11 electrons with shielding and subshell splitting',
-              'Sodium emits only continuous radiation',
-              'Sodium does not absorb light'
+              'It works only for gases, and sodium is a solid metal',
+              'It assumes one electron; sodium\'s 11 electrons shield each other',
+              'Sodium vapor emits a continuous spectrum, not lines',
+              'Sodium\'s lines come from its nucleus, not its electrons'
             ],
             correctAnswer: 1,
-            explanation: 'The Rydberg formula is exact only for one-electron systems. Real multi-electron atoms have shielding, penetration, and subshell splitting that change the energies.'
+            explanation: 'The Rydberg formula is exact only for one-electron systems. Real multi-electron atoms like sodium have shielding, penetration, and subshell splitting that change the energies. Sodium vapor (as in a sodium lamp) does give a line spectrum.'
           }
         ]
       }

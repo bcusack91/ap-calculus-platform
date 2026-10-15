@@ -101,15 +101,15 @@ $$\\begin{cases} x+y \\leq 5 \\\\ 2x+y \\leq 8 \\\\ x \\geq 0, y \\geq 0 \\end{c
         questions: [
           {
             question: 'The boundary for $y > 2x+1$ is:',
-            options: ['Dashed line', 'Solid line', 'No boundary', 'Dotted line'],
+            options: ['Dashed line', 'Solid line', 'No boundary', 'Solid bold line'],
             correctAnswer: 0,
             explanation: 'Strict inequality ($>$, not $\\geq$) → dashed line (boundary not included).'
           },
           {
             question: 'Where does max/min of a linear objective function occur?',
-            options: ['Center of region', 'At a corner point', 'On any edge', 'Cannot determine'],
+            options: ['At the center of the region', 'At a corner point', 'At any point on an edge', 'At the origin, always'],
             correctAnswer: 1,
-            explanation: 'Fundamental theorem: optimal value occurs at a vertex of the feasible region.'
+            explanation: 'Fundamental theorem: optimal value occurs at a vertex of the feasible region. The center is never special, an interior edge point can only tie a vertex, and the origin is a candidate only when it is a corner.'
           },
           {
             question: 'The feasible region for $x \\geq 0, y \\geq 0, x+y \\leq 4$ has how many corners?',
@@ -153,26 +153,26 @@ Maximize $P = 5x+4y$ with corners $(0,0), (3,0), (2,3), (0,4)$.
         dropdowns: [
           {
             label: '$y \\leq 3$ shades:',
-            options: ['Above $y=3$', 'Below $y=3$ (including)', 'Left of $y=3$', 'Right of $y=3$'],
+            options: ['On and above $y=3$', 'On and below $y=3$', 'Strictly below $y=3$', 'Right of $y=3$'],
             correctAnswer: 1
           },
           {
             label: 'A feasible region with finite area is called:',
-            options: ['Bounded', 'Unbounded', 'Infeasible', 'Optimal'],
+            options: ['Bounded', 'Unbounded', 'Infeasible', 'Feasible'],
             correctAnswer: 0
           },
           {
             label: 'If no region satisfies all constraints:',
-            options: ['Max is 0', 'System is infeasible', 'Use unbounded region', 'Ignore one constraint'],
+            options: ['The maximum is 0', 'System is infeasible', 'Region is unbounded', 'Drop one constraint'],
             correctAnswer: 1
           },
           {
             label: 'The overlap of two half-planes is:',
-            options: ['Always empty', 'A polygon', 'A region (possibly unbounded)', 'A line'],
+            options: ['Always a single point', 'Always a bounded polygon', 'A region, possibly unbounded', 'Only the shared boundary line'],
             correctAnswer: 2
           }
         ],
-        correctAnswers: ['Below $y=3$ (including)', 'Bounded', 'System is infeasible', 'A region (possibly unbounded)'],
+        correctAnswers: ['On and below $y=3$', 'Bounded', 'System is infeasible', 'A region, possibly unbounded'],
         hint1: '$y \\leq 3$ means $y$ values at or below 3.',
         hint2: 'Bounded = enclosed.',
         hint3: 'No overlap = no feasible solution.',

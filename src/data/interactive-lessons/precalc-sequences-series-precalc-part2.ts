@@ -88,15 +88,15 @@ Geometric sequences grow by **multiplication** → exponential growth (or decay 
           },
           {
             question: 'The common ratio of $64, 32, 16, 8, \\ldots$ is:',
-            options: ['$2$', '$-2$', '$\\frac{1}{2}$', '$-\\frac{1}{2}$'],
+            options: ['$2$', '$-2$', '$\\frac{1}{2}$', '$-32$'],
             correctAnswer: 2,
-            explanation: '$r = 32/64 = 1/2$.'
+            explanation: '$r = 32/64 = 1/2$. Subtracting ($32 - 64 = -32$) gives a common difference, not a ratio, and $2$ is the ratio upside down.'
           },
           {
             question: '$S_5$ for $a_1=1, r=-2$:',
-            options: ['$11$', '$-11$', '$31$', '$-31$'],
+            options: ['$11$', '$-11$', '$-33$', '$-\\frac{31}{3}$'],
             correctAnswer: 0,
-            explanation: '$S_5=1\\cdot\\frac{1-(-2)^5}{1-(-2)}=\\frac{1+32}{3}=\\frac{33}{3}=11$.'
+            explanation: '$S_5=1\\cdot\\frac{1-(-2)^5}{1-(-2)}=\\frac{1+32}{3}=\\frac{33}{3}=11$. Treating $(-2)^5$ as $+32$ gives $-\\frac{31}{3}$; writing the denominator as $1-2$ gives $-33$.'
           }
         ]
       }
@@ -132,17 +132,17 @@ Geometric sequences grow by **multiplication** → exponential growth (or decay 
         dropdowns: [
           {
             label: 'If $|r|>1$, the geometric sequence:',
-            options: ['Converges to 0', 'Grows without bound', 'Stays constant'],
+            options: ['Shrinks toward 0 each step', 'Grows without bound', 'Levels off at a fixed value'],
             correctAnswer: 1
           },
           {
             label: 'The geometric mean of 3 and 27 is:',
-            options: ['$15$', '$9$', '$12$', '$\\sqrt{30}$'],
+            options: ['$15$', '$9$', '$81$', '$\\sqrt{30}$'],
             correctAnswer: 1
           },
           {
             label: 'A negative common ratio $r<0$ causes terms to:',
-            options: ['All be negative', 'Alternate in sign', 'Decrease steadily'],
+            options: ['All be negative', 'Alternate in sign', 'Shrink to zero'],
             correctAnswer: 1
           },
           {
@@ -168,9 +168,9 @@ Geometric sequences grow by **multiplication** → exponential growth (or decay 
         questions: [
           {
             question: 'A ball bounces to $\\frac{3}{4}$ of its height each time. Starting at 16 ft, what height after 3 bounces?',
-            options: ['$9$ ft', '$6.75$ ft', '$5.0625$ ft', '$12$ ft'],
+            options: ['$9$ ft', '$6.75$ ft', '$4$ ft', '$12$ ft'],
             correctAnswer: 1,
-            explanation: '$16 \\cdot (3/4)^3 = 16 \\cdot 27/64 = 6.75$ ft.'
+            explanation: '$16 \\cdot (3/4)^3 = 16 \\cdot 27/64 = 6.75$ ft. Two bounces gives $9$ ft, one gives $12$ ft, and subtracting a fixed $4$ ft per bounce treats the decay as arithmetic.'
           },
           {
             question: 'If $a_3=12$ and $a_6=96$ in a geometric sequence, find $r$:',

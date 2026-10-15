@@ -147,7 +147,7 @@ Direction: $(3, 4)$. So $x = 2 + 3t, \\; y = 3 + 4t$ with $t \\in [0, 1]$ for th
           },
           {
             label: 'Different parametrizations of the same curve always give:',
-            options: ['Same direction', 'Same speed', 'Same geometric shape', 'Same starting point'],
+            options: ['Same direction of travel', 'Same speed at every point', 'Same geometric shape', 'Same starting and ending point'],
             correctAnswer: 2
           }
         ],

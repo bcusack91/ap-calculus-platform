@@ -98,17 +98,17 @@ For a given element, the **emission lines** and the **absorption lines** appear 
           {
             question: 'Why don\'t hot solid metals (like a glowing iron rod) show a line spectrum?',
             options: [
-              'Solids cannot emit light',
-              'Atoms in solids have so many overlapping energy levels that emission appears continuous',
-              'Solids only emit infrared',
-              'Solids produce only absorption lines'
+              'Atoms locked in a solid cannot be excited by heat',
+              'Packed atoms\' overlapping energy levels make emission continuous',
+              'The lines are emitted but are too faint for the eye to see',
+              'Hot solids produce only absorption lines, never emission'
             ],
             correctAnswer: 1,
-            explanation: 'In a solid, atoms are densely packed and their energy levels broaden into bands — the emitted radiation forms a continuous spectrum (blackbody radiation).'
+            explanation: 'In a solid, atoms are densely packed and their energy levels overlap and broaden into bands — the emitted radiation forms a continuous spectrum (blackbody radiation). A glowing rod is clearly excited by heat and is bright, not faint.'
           },
           {
             question: 'For a given element, the wavelengths of emission lines compared to absorption lines are:',
-            options: ['always longer', 'always shorter', 'identical', 'unrelated'],
+            options: ['always longer', 'always shorter', 'identical', 'unrelated to each other'],
             correctAnswer: 2,
             explanation: 'Both emission and absorption involve the same set of allowed energy gaps — the wavelengths match exactly.'
           }
@@ -142,10 +142,10 @@ For a given element, the **emission lines** and the **absorption lines** appear 
       content: `**Match Each Source to Its Spectrum** 🔽`,
       exercise: {
         dropdowns: [
-          { label: 'Glowing tungsten filament in a light bulb produces a', options: ['line emission spectrum', 'line absorption spectrum', 'continuous spectrum', 'no spectrum'] },
+          { label: 'Glowing tungsten filament in a light bulb produces a', options: ['line emission spectrum', 'line absorption spectrum', 'continuous spectrum', 'continuous absorption spectrum'] },
           { label: 'Light from the Sun passing through a cool atmosphere produces a', options: ['line emission spectrum', 'continuous absorption spectrum', 'line absorption spectrum', 'continuous emission spectrum'] },
-          { label: 'A neon sign (excited Ne gas) produces a', options: ['continuous spectrum', 'line emission spectrum', 'line absorption spectrum', 'rainbow'] },
-          { label: 'The presence of element-specific lines in a star\'s spectrum tells us about its', options: ['mass', 'rotational speed only', 'chemical composition', 'magnetic field'] }
+          { label: 'A neon sign (excited Ne gas) produces a', options: ['continuous spectrum', 'line emission spectrum', 'line absorption spectrum', 'continuous absorption spectrum'] },
+          { label: 'The presence of element-specific lines in a star\'s spectrum tells us about its', options: ['mass', 'distance from Earth', 'chemical composition', 'diameter'] }
         ],
         correctAnswers: ['continuous spectrum', 'line absorption spectrum', 'line emission spectrum', 'chemical composition'],
         hint1: 'Hot solids → continuous; hot gases → line emission.',

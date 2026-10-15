@@ -111,15 +111,15 @@ This leads to **matrices** — our next topic!
           },
           {
             question: 'Best approach: $\\begin{cases} y = x^2-3 \\\\ y = 2x+1 \\end{cases}$',
-            options: ['Elimination', 'Set equal: $x^2-3=2x+1$', 'Matrix method', 'Graphing only'],
+            options: ['Add the equations to drop $y$', 'Set $x^2-3$ equal to $2x+1$', 'Use an inverse matrix', 'Graph only, no algebra'],
             correctAnswer: 1,
-            explanation: 'Both solved for $y$: set them equal and solve the quadratic.'
+            explanation: 'Both are solved for $y$, so set them equal and solve the quadratic $x^2-2x-4=0$. Adding the equations does not remove $y$, and an inverse matrix only works for linear systems.'
           },
           {
             question: '$\\begin{cases} x+y+z = 12 \\\\ x-y+z = 4 \\end{cases}$: what can we determine?',
-            options: ['All three variables', 'Only $y = 4$', '$x + z = 8$ and $y = 4$', 'Nothing'],
+            options: ['All three: $x=y=z=4$', 'Only that $y = 4$', '$x+z=8$ and $y=4$', 'Only $x + z = 16$'],
             correctAnswer: 2,
-            explanation: 'Add: $2x+2z=16 \\implies x+z=8$. Subtract: $2y=8 \\implies y=4$. $x,z$ need another eq.'
+            explanation: 'Add: $2x+2z=16 \\implies x+z=8$. Subtract: $2y=8 \\implies y=4$. $x$ and $z$ individually need another equation; $16$ is $x+z$ before halving.'
           }
         ]
       }
@@ -155,26 +155,26 @@ This leads to **matrices** — our next topic!
         dropdowns: [
           {
             label: '2 equations, 3 unknowns typically gives:',
-            options: ['Unique solution', 'No solution', 'Infinitely many', 'Undefined'],
+            options: ['One solution', 'No solution', 'Infinitely many', 'Undefined'],
             correctAnswer: 2
           },
           {
             label: 'Partial fractions require the fraction to be:',
-            options: ['Improper', 'Proper', 'Unit', 'Complex'],
+            options: ['Improper', 'Proper', 'Reduced', 'Complex'],
             correctAnswer: 1
           },
           {
             label: '$0 = 0$ after elimination means:',
-            options: ['No solution', 'Unique solution', 'Dependent (infinite)', 'Error'],
+            options: ['No solution', 'Unique solution', 'Dependent system', 'A mistake'],
             correctAnswer: 2
           },
           {
             label: 'Nonlinear systems can have:',
-            options: ['At most 2 solutions', 'Any number of solutions', 'Only odd numbers of solutions', 'At most 1 solution'],
+            options: ['At most 2 solutions', 'Any number of solutions', 'Exactly 2 solutions', 'At most 1 solution'],
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['Infinitely many', 'Proper', 'Dependent (infinite)', 'Any number of solutions'],
+        correctAnswers: ['Infinitely many', 'Proper', 'Dependent system', 'Any number of solutions'],
         hint1: 'Under-determined system.',
         hint2: 'degree(num) < degree(den).',
         hint3: '$0=0$ is always true: no new info.',

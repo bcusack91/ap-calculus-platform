@@ -97,7 +97,7 @@ $f(x) = \\sin(1/x)$ at $x = 0$:
         questions: [
           {
             question: '$f(x)=\\frac{x^2-1}{x-1}$ at $x=1$ has a:',
-            options: ['Jump', 'Removable discontinuity', 'Infinite discontinuity', 'No discontinuity'],
+            options: ['Jump discontinuity', 'Removable discontinuity', 'Infinite discontinuity', 'No discontinuity'],
             correctAnswer: 1,
             explanation: 'Limit = 2 (factor/cancel), but $f(1)$ undefined. Removable — define $f(1)=2$.'
           },

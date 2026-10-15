@@ -110,9 +110,9 @@ The Intermediate Value Theorem (IVT) leads to the Mean Value Theorem (MVT), whic
           },
           {
             question: 'The derivative $f\'(a)$ is defined as:',
-            options: ['$f(a+h)$', '$\\lim_{h \\to 0}\\frac{f(a+h)-f(a)}{h}$', '$f(a)/a$', '$\\lim_{x \\to \\infty} f(x)$'],
+            options: ['$\\lim_{h \\to \\infty}\\frac{f(a+h)-f(a)}{h}$', '$\\lim_{h \\to 0}\\frac{f(a+h)-f(a)}{h}$', '$\\frac{f(a+h)-f(a)}{h}$ at $h = 0$', '$\\lim_{h \\to 0}\\frac{f(a)-f(a+h)}{h}$'],
             correctAnswer: 1,
-            explanation: 'The derivative is the limit of the difference quotient as $h \\to 0$.'
+            explanation: 'The derivative is the limit of the difference quotient as $h \\to 0$. Plugging in $h = 0$ gives $\\frac{0}{0}$, reversing the numerator flips the sign, and $h \\to \\infty$ is the wrong target.'
           }
         ]
       }
@@ -148,12 +148,12 @@ The Intermediate Value Theorem (IVT) leads to the Mean Value Theorem (MVT), whic
         dropdowns: [
           {
             label: '$\\lim_{x \\to 2}\\frac{x^2 - 4}{x^2 - 5x + 6}$:',
-            options: ['$-4$', '$4$', '$0$', 'DNE'],
+            options: ['$-4$', '$4$', '$4/5$', 'DNE'],
             correctAnswer: 0
           },
           {
             label: '$\\lim_{x \\to 0^+} \\ln x$:',
-            options: ['$0$', '$1$', '$-\\infty$', '$\\infty$'],
+            options: ['$0$', '$1$', '$-\\infty$', '$+\\infty$'],
             correctAnswer: 2
           },
           {
@@ -163,11 +163,11 @@ The Intermediate Value Theorem (IVT) leads to the Mean Value Theorem (MVT), whic
           },
           {
             label: 'Which theorem guarantees a root when $f$ changes sign?',
-            options: ['Mean Value', 'Intermediate Value', 'Extreme Value', 'Squeeze'],
+            options: ['Mean Value Theorem', 'Intermediate Value Theorem', 'Extreme Value Theorem', 'Rolle\'s Theorem'],
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['$-4$', '$-\\infty$', '$0$', 'Intermediate Value'],
+        correctAnswers: ['$-4$', '$-\\infty$', '$0$', 'Intermediate Value Theorem'],
         hint1: 'Factor both: $\\frac{(x-2)(x+2)}{(x-2)(x-3)} = \\frac{x+2}{x-3}$. At $x=2$: $\\frac{4}{-1}$.',
         hint2: 'As $x \\to 0^+$, $\\ln x$ goes to $-\\infty$.',
         hint3: 'Exponentials grow faster than polynomials.',

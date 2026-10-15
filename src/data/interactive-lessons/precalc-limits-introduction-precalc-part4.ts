@@ -156,7 +156,7 @@ $$g(x) = \\frac{1}{x-3}$$
           },
           {
             label: 'Vertical asymptote occurs where:',
-            options: ['Numerator = 0', 'Denominator = 0 (not canceled)', 'Both = 0', 'Neither = 0'],
+            options: ['Numerator = 0 (not canceled)', 'Denominator = 0 (not canceled)', 'Both = 0 at a shared factor', 'Denominator degree is higher'],
             correctAnswer: 1
           },
           {
@@ -166,11 +166,11 @@ $$g(x) = \\frac{1}{x-3}$$
           },
           {
             label: 'A polynomial has a horizontal asymptote:',
-            options: ['Always', 'Only if degree ≤ 1', 'Never (unless constant)', 'Only even degree'],
+            options: ['Always, along $y = 0$', 'Only when degree ≤ 1', 'Never, unless constant', 'Only for even degree'],
             correctAnswer: 2
           }
         ],
-        correctAnswers: ['num degree ≤ den degree', 'Denominator = 0 (not canceled)', '$0$', 'Never (unless constant)'],
+        correctAnswers: ['num degree ≤ den degree', 'Denominator = 0 (not canceled)', '$0$', 'Never, unless constant'],
         hint1: 'HA when degree allows finite limit.',
         hint2: 'VA: zero in denominator that doesn\'t cancel.',
         hint3: '$e^{-x} \\to 0$ as $x \\to \\infty$.',
@@ -193,9 +193,9 @@ $$g(x) = \\frac{1}{x-3}$$
           },
           {
             question: 'How many horizontal asymptotes can a rational function have?',
-            options: ['At most 1', 'At most 2', 'Unlimited', 'Exactly 1'],
+            options: ['At most 1', 'At most 2, one per end', 'As many as its degree', 'Exactly 1, always'],
             correctAnswer: 0,
-            explanation: 'For rationals, $\\lim_{x\\to\\infty}$ and $\\lim_{x\\to-\\infty}$ give the same value. At most 1 HA.'
+            explanation: 'For rationals, $\\lim_{x\\to\\infty}$ and $\\lim_{x\\to-\\infty}$ give the same value, so both ends share one HA. At most 1 HA, and none at all when the numerator\'s degree is larger.'
           }
         ]
       }
