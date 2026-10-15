@@ -32,7 +32,7 @@ export const apesFossilFuelsNuclearPart1Data = {
 | **Hydraulic fracturing (fracking)** | Natural gas/oil | Water contamination, induced earthquakes, methane leaks |
 | **Offshore drilling** | Oil/gas | Oil spill risk (Deepwater Horizon 2010) |
 
-> 🔑 **Natural gas burns cleaner than coal** (less $CO_{2}$, no $SO_{2}$, less PM) but methane leaks during extraction reduce this advantage. Methane is 80x more potent as a GHG than $CO_{2}$ over 20 years.
+> 🔑 **Natural gas burns cleaner than coal** (less $CO_{2}$, very little $SO_{2}$ because sulfur is removed during processing, less PM) but methane leaks during extraction reduce this advantage. Per kilogram, methane traps about 80 times as much heat as $CO_{2}$ over 20 years (about 30 times over 100 years).
       `
     },
     {
@@ -78,7 +78,7 @@ export const apesFossilFuelsNuclearPart1Data = {
 |--------|--------|
 | **Fuel** | Uranium-235 (U-235) |
 | **Process** | Nuclear fission: splitting atoms releases enormous energy |
-| **Electricity share** | ~10% of global electricity; ~20% in the US |
+| **Electricity share** | About 9% of global electricity; about 19% in the US (2024) |
 | **$CO_{2}$ emissions** | Near-zero during operation |
 | **Waste** | Highly radioactive; remains dangerous for thousands of years |
 | **Accidents** | Chernobyl (1986), Fukushima (2011), Three Mile Island (1979) |

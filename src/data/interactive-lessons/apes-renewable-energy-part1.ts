@@ -13,14 +13,16 @@ export const apesRenewableEnergyPart1Data = {
 
 ## Renewable Energy Sources
 
-| Source | How It Works | Share of Global Electricity |
+| Source | How It Works | Share of Global Electricity (2024) |
 |--------|------------|----------------------------|
-| **Solar PV** | Photovoltaic cells convert sunlight directly to electricity | ~4% (fastest growing) |
-| **Wind** | Turbines convert kinetic energy of wind to electricity | ~7% |
-| **Hydroelectric** | Falling water spins turbines in dams | ~16% (largest renewable source) |
-| **Biomass** | Burning organic material (wood, crops, waste) | ~2% |
-| **Geothermal** | Heat from Earth interior drives steam turbines | ~0.3% |
-| **Hydrogen fuel cells** | $H_{2}$ + $O_{2}$ → electricity + $H_{2}O$ | Emerging technology |
+| **Solar PV** | Photovoltaic cells convert sunlight directly to electricity | About 7% (fastest growing) |
+| **Wind** | Turbines convert kinetic energy of wind to electricity | About 8% |
+| **Hydroelectric** | Falling water spins turbines in dams | About 14% (largest renewable source) |
+| **Biomass** | Burning organic material (wood, crops, waste) | About 2% |
+| **Geothermal** | Heat from Earth interior drives steam turbines | Well under 1% |
+| **Hydrogen fuel cells** | $2H_{2}$ + $O_{2}$ → $2H_{2}O$ + electricity | Emerging technology |
+
+Shares are for 2024 (Ember, *Global Electricity Review 2025*) and are rounded. They change every year as solar and wind grow.
 
 ---
 
@@ -52,7 +54,7 @@ export const apesRenewableEnergyPart1Data = {
               'Geothermal'
             ],
             correctAnswer: 2,
-            explanation: 'Hydroelectric power generates ~16% of global electricity, making it the largest renewable source. However, solar and wind are growing much faster and will likely surpass hydro in coming decades.'
+            explanation: 'Hydroelectric power generated about 14% of global electricity in 2024, more than any other single renewable source. Solar and wind are growing much faster: in 2024 they supplied about 7% and 8%.'
           },
           {
             question: 'A key advantage of renewable energy sources over fossil fuels is:',
@@ -163,7 +165,7 @@ export const apesRenewableEnergyPart1Data = {
 - **Hydroelectric** is the largest current renewable but has significant ecosystem impacts
 - Solar and wind are intermittent — know the storage solutions (batteries, pumped hydro)
 - Understand that "renewable" does not mean "zero impact" — all sources have trade-offs
-- **Geothermal** is only feasible in geologically active areas (Iceland, western US)
+- **Geothermal power plants** are practical mainly in geologically active areas (Iceland, western US); ground-source heat pumps work almost anywhere
 - Hydrogen fuel cells produce only water as a byproduct — but hydrogen must be produced first
       `
     },

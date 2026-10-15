@@ -5,19 +5,59 @@ export const apesFossilFuelsNuclearPart3Data = {
       id: 'apesfoss3-intro',
       type: 'text' as const,
       content: `
-# 🌿 Fossil Fuels & Nuclear Energy
+# 🛢️ Fossil Fuels & Nuclear Energy
 
-**Part 3 of 7 — Patterns & Examples**
+**Part 3 of 7 — Oil, Natural Gas and Unconventional Sources**
 
-This part examines specific patterns and real-world examples related to Fossil Fuels & Nuclear Energy. Case studies help illustrate abstract concepts.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Where Oil and Gas Collect |
+| Refining Crude Oil |
+| Tar Sands |
+| Hydraulic Fracturing Step by Step |
+| Natural Gas: Cleaner to Burn, Leaky to Produce |
+| Oil and Gas Calculations |
 
-| Concept | Description |
-|---------|-------------|
-| **Spatial pattern** | The geographic distribution related to Fossil Fuels & Nuclear Energy |
-| **Case study** | A specific real-world example that illustrates Fossil Fuels & Nuclear Energy |
-| **Comparison** | Analyzing similarities and differences across examples of Fossil Fuels & Nuclear Energy |
+> 🔑 **Key Concept:** Oil and natural gas supply most of the world's transportation fuel and much of its heat and electricity. This part explains how they are found, refined and extracted, including the unconventional sources (tar sands and shale) that now supply a large share of North American production (CED 6.3 and 6.5).
+      `
+    },
+    {
+      id: 'apesfoss3-oil',
+      type: 'text' as const,
+      content: `
+## 📖 Where Oil and Gas Collect
+
+Oil and gas form from buried marine organisms (Part 1), then slowly migrate upward through porous rock because they are less dense than water. They collect where an **impermeable cap rock** (such as shale or salt) blocks their rise, forming a **reservoir** in porous sandstone or limestone. Natural gas, the lightest, sits on top, then oil, then water.
+
+**Conventional drilling** taps such a reservoir. At first, natural pressure pushes oil up the well; later, pumps and injected water or $CO_{2}$ help push out more.
+
+## Refining Crude Oil
+
+**Crude oil** is a mixture of many hydrocarbons. A refinery separates it by **fractional distillation**: the crude is heated until most of it vaporizes, and the vapor rises up a tall column that is hottest at the bottom and coolest at the top. Each fraction condenses at the level that matches its boiling point.
+
+| Level in the column | Fraction | Use |
+|---|---|---|
+| Top (coolest) | Refinery gases: propane, butane | Bottled gas for heating and cooking |
+| Upper | **Gasoline** | Cars |
+| Middle | Kerosene | Jet fuel |
+| Lower middle | **Diesel** | Trucks, trains, ships, farm machinery |
+| Lower | Heavy fuel oil | Ships, industrial boilers |
+| Bottom (hottest) | Asphalt and tar | Roads and roofing |
+
+This is what the CED means by making fossil fuels into **specific fuel types for specialized uses**. Crude oil also supplies the feedstock for plastics, fertilizers and many other petrochemicals.
+
+## Tar Sands
+
+**Tar sands** (oil sands) are a combination of **clay, sand, water and bitumen**, a thick, tar-like hydrocarbon. The largest deposits are in Alberta, Canada.
+
+| Extraction method | How it works | Impact |
+|---|---|---|
+| Surface mining | Forest and soil are stripped, and the sand is dug up and washed with hot water to separate the bitumen | Clears boreal forest and wetlands; huge **tailings ponds** of toxic wastewater |
+| In-place (steam) extraction | Steam is injected underground to make deep bitumen flow to wells | Large natural-gas use to make the steam; habitat fragmentation from well pads and roads |
+
+Both methods use large amounts of water and energy, so oil from tar sands releases **more greenhouse gas per barrel** over its life cycle than most conventional crude.
       `
     },
     {
@@ -29,147 +69,222 @@ This part examines specific patterns and real-world examples related to Fossil F
       exercise: {
         questions: [
           {
-            question: 'Why do geographers/analysts use case studies?',
+            question: 'In fractional distillation, why does asphalt collect at the bottom of the column while propane leaves at the top?',
             options: [
-              'They are easier than analysis',
-              'They provide concrete examples that illustrate abstract concepts',
-              'They replace all other methods',
-              'They are required by law'
+              'Asphalt has a far higher boiling point, so it does not rise as vapor',
+              'Asphalt is added at the bottom, and propane is added at the top',
+              'Propane reacts with oxygen at the top and turns into a gas there',
+              'Asphalt is the lightest fraction, so it sinks through the vapor'
             ],
-            correctAnswer: 1,
-            explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
+            correctAnswer: 0,
+            explanation: 'Fractions separate by boiling point. Heavy, high-boiling asphalt stays liquid at the hot bottom, while propane, with a very low boiling point, stays a gas even at the cool top.'
           },
           {
-            question: 'Comparing examples of Fossil Fuels & Nuclear Energy across regions helps:',
+            question: 'Why does oil from tar sands have higher life-cycle greenhouse gas emissions than most conventional crude?',
             options: [
-              'Nothing',
-              'Identify universal patterns and unique local variations',
-              'Confuse students',
-              'Waste time'
+              'Separating bitumen takes much energy',
+              'Bitumen burns with more oxygen',
+              'Tar sands lie under deep ocean',
+              'Bitumen contains no hydrogen'
             ],
-            correctAnswer: 1,
-            explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).'
+            correctAnswer: 0,
+            explanation: 'Bitumen must be mined and washed or melted out with steam, usually generated by burning natural gas. That extra energy adds emissions before the fuel is ever used.'
+          },
+          {
+            question: 'What keeps oil and gas trapped in a conventional reservoir instead of seeping to the surface?',
+            options: [
+              'An impermeable cap rock above the porous rock holding them',
+              'The weight of the seawater that lies above the oil field',
+              'A layer of frozen soil that seals the top of the deposit',
+              'Bacteria that consume the oil as soon as it starts to rise'
+            ],
+            correctAnswer: 0,
+            explanation: 'Oil and gas rise through porous rock until a layer they cannot pass through, such as shale or salt, stops them. Wells drilled through the cap rock release the trapped fuel.'
           }
         ]
       }
     },
     {
-      id: 'apesfoss3-content',
+      id: 'apesfoss3-fracking',
       type: 'text' as const,
       content: `
-## Patterns & Examples — Deeper Dive
+## Hydraulic Fracturing Step by Step
 
-### Spatial pattern
-The geographic distribution related to Fossil Fuels & Nuclear Energy. Understanding this concept is essential for mastering Fossil Fuels & Nuclear Energy in AP Environmental Science.
+Much of the natural gas and oil in North America is locked in **shale**, a rock with tiny, poorly connected pores. Fluids cannot flow through it to a well on their own. **Hydraulic fracturing (fracking)** creates the pathways.
 
-### Case study
-A specific real-world example that illustrates Fossil Fuels & Nuclear Energy. This builds on the previous concept and connects to broader themes in the course.
+1. **Drill down, then sideways:** a well is drilled vertically, often 2 km or more, then turned to run **horizontally** through the thin shale layer for a kilometer or more.
+2. **Case the well:** steel pipe and cement line the well to isolate it from the aquifers it passes through.
+3. **Fracture:** a fluid that is mostly **water**, with **sand** and a small share of **chemicals**, is pumped down at very high pressure. It cracks the shale; the sand props the cracks open.
+4. **Flowback:** part of the fluid returns to the surface, along with salty, sometimes radioactive water from deep in the rock.
+5. **Production:** gas and oil flow through the propped cracks into the well.
 
-### Comparison
-Analyzing similarities and differences across examples of Fossil Fuels & Nuclear Energy. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Concern | How it happens |
+|---|---|
+| **Groundwater contamination** | Faulty casing or cement lets gas or fluid escape into aquifers; surface spills of chemicals and wastewater |
+| **Release of volatile organic compounds (VOCs)** | VOCs escape from wells, wastewater pits and equipment, contributing to smog |
+| Methane leaks | Gas escapes from wells, pipelines and compressors |
+| **Induced earthquakes** | Wastewater injected deep underground for disposal raises pressure on faults |
+| Water use | Millions of liters per well, often in dry regions |
+| Habitat fragmentation | Well pads, roads and pipelines divide forest and grassland |
+
+The CED names groundwater contamination and VOC release as consequences of fracking. Fracking's benefits are a large, domestic supply of natural gas that has replaced much coal in U.S. electricity generation.
+
+## Natural Gas: Cleaner to Burn, Leaky to Produce
+
+Natural gas is mostly **methane** ($CH_{4}$) and is the **cleanest-burning fossil fuel**: about half the $CO_{2}$ of coal per kWh, very little $SO_{2}$, little particulate matter and no ash. But unburned methane is a powerful greenhouse gas. Per kilogram, it traps about 80 times as much heat as $CO_{2}$ over 20 years and about 30 times over 100 years, so leaks along the supply chain cut into the advantage.
+
+### Oil spills
+
+Drilling and transport can spill oil, as in the 2010 **Deepwater Horizon** blowout in the Gulf of Mexico, which released oil for 87 days, and the 1989 **Exxon Valdez** tanker spill in Alaska. (The ecological effects of spills and how they are cleaned up are covered in the Water Resources lessons.)
+      `
+    },
+    {
+      id: 'apesfoss3-dropdown',
+      type: 'dropdown-select' as const,
+      content: `
+**Match the Process** 🔍
+      `,
+      exercise: {
+        dropdowns: [
+          {
+            label: 'Sand in fracking fluid serves to ___',
+            options: ['hold the new cracks open', 'absorb the escaping gas', 'seal the well from aquifers', 'dissolve the shale rock']
+          },
+          {
+            label: 'Earthquakes in some gas-producing regions are linked mainly to ___',
+            options: ['deep injection of wastewater', 'the weight of drilling rigs', 'cement curing in the casing', 'burning gas at the well head']
+          },
+          {
+            label: 'A mixture of clay, sand, water and thick bitumen is ___',
+            options: ['tar sands', 'oil shale', 'coal ash', 'crude oil']
+          }
+        ],
+        correctAnswers: ['hold the new cracks open', 'deep injection of wastewater', 'tar sands'],
+        hint1: 'The sand is called a "proppant."',
+        hint2: 'It is the disposal step, not the fracturing itself, that causes most of these quakes.',
+        hint3: 'The CED definition lists four components.',
+        explanation: 'Sand props the fractures open so gas can flow. Most induced earthquakes come from wastewater disposal wells. Clay, sand, water and bitumen make up tar sands.'
+      }
+    },
+    {
+      id: 'apesfoss3-calcs',
+      type: 'text' as const,
+      content: `
+## Oil and Gas Calculations
+
+### Worked Example 1: Barrels and Liters
+
+A barrel of oil is **42 U.S. gallons**, about **159 L**. A refinery processes **200,000 barrels** per day.
+
+$$200{,}000 \\times 159\\ \\text{L} = 31{,}800{,}000\\ \\text{L} = 3.18 \\times 10^{7}\\ \\text{L per day}$$
+
+### Worked Example 2: Switching From Coal to Gas (illustrative data)
+
+A country replaces **40 billion kWh** per year of coal electricity (1.0 kg $CO_{2}$/kWh) with natural gas (0.49 kg $CO_{2}$/kWh).
+
+$$\\text{Savings per kWh} = 1.0 - 0.49 = 0.51\\ \\text{kg}$$
+$$4.0 \\times 10^{10}\\ \\text{kWh} \\times 0.51\\ \\text{kg} = 2.04 \\times 10^{10}\\ \\text{kg} = 2.04 \\times 10^{7}\\ \\text{t of } CO_{2}$$
+
+### Worked Example 3: What a Leak Does to the Advantage (illustrative data)
+
+Burning methane produces $CO_{2}$ in the mass ratio 44 : 16, so burning **100 t** of methane releases
+
+$$100 \\times \\frac{44}{16} = 275\\ \\text{t of } CO_{2}$$
+
+Suppose **3 t** of methane leaked on the way to the plant for every 100 t burned.
+
+| Time horizon | Warming factor per kg of methane | Leaked methane as $CO_{2}$-equivalent | Added to the 275 t from burning |
+|---|---|---|---|
+| 20 years | about 80 | $3 \\times 80 = 240$ t | Nearly doubles the climate impact |
+| 100 years | about 30 | $3 \\times 30 = 90$ t | Adds about one-third |
+
+A few percent leakage can erase much of natural gas's short-term advantage over coal, which is why finding and sealing leaks matters.
       `
     },
     {
       id: 'apesfoss3-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Calculate It** 🧮
 
-1) What term refers to the geographic distribution related to Fossil Fuels & Nuclear Energy?
+Enter numbers only. (Illustrative data.)
 
-2) What concept describes a specific real-world example that illustrates Fossil Fuels & Nuclear Energy?
+1) How many liters are in 5,000 barrels of oil? (1 barrel = 159 L)
 
-3) Name the term for analyzing similarities and differences across examples of Fossil Fuels & Nuclear Energy.
+2) A plant burns 400 t of methane. How many tonnes of $CO_{2}$ does it release? (Use 44/16.)
 
-Use the exact term from this part.
+3) Using a 20-year warming factor of 80, how many tonnes of $CO_{2}$-equivalent do 2 t of leaked methane represent?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Spatial pattern (The geographic distribution related to Fossil Fuels & Nuclear Energy), Case study (A specific real-world example that illustrates Fossil Fuels & Nuclear Energy), and Comparison (Analyzing similarities and differences across examples of Fossil Fuels & Nuclear Energy).'
+        correctAnswers: ['795000', '1100', '160'],
+        hint1: '5,000 × 159.',
+        hint2: '400 × 44 ÷ 16.',
+        hint3: 'Multiply the leaked mass by the warming factor.',
+        explanation: '1) 5,000 × 159 = 795,000 L. 2) 400 × 2.75 = 1,100 t of carbon dioxide. 3) 2 × 80 = 160 t of carbon dioxide equivalent.'
       }
-    },
-    {
-      id: 'apesfoss3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'The geographic distribution related to Fossil Fuels & Nuclear Energy is called ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'None of these']
-          },
-          {
-            label: 'A specific real-world example that illustrates Fossil Fuels & Nuclear Energy describes ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'All of these']
-          },
-          {
-            label: 'Analyzing similarities and differences across examples of Fossil Fuels & Nuclear Energy is known as ___',
-            options: ['Comparison', 'Spatial pattern', 'Case study', 'None of these']
-          }
-        ],
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Spatial pattern — The geographic distribution related to Fossil Fuels & Nuclear Energy. Case study — A specific real-world example that illustrates Fossil Fuels & Nuclear Energy. Comparison — Analyzing similarities and differences across examples of Fossil Fuels & Nuclear Energy.'
-      }
-    },
-    {
-      id: 'apesfoss3-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'t confuse **Spatial pattern** with **Case study** — while related, they address different aspects of Fossil Fuels & Nuclear Energy.
-- **Comparison** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about patterns & examples, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect patterns & examples to broader themes in AP Environmental Science for higher scores.
-      `
     },
     {
       id: 'apesfoss3-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks you to provide TWO examples of Fossil Fuels & Nuclear Energy. The strongest response would:',
+            question: 'Residents near a new gas field report methane bubbling from their well water. Which failure would most directly explain this?',
             options: [
-              'Use two examples from the same place',
-              'Use examples from different regions to show the concept operates across contexts',
-              'Make up fictional examples',
-              'Provide only one example'
+              'Cracked cement around the well casing',
+              'Sand settling at the bottom of the shale cracks',
+              'Refinery gases escaping at the top of a distillation column',
+              'Coal ash leaking from a storage pond'
             ],
-            correctAnswer: 1,
-            explanation: 'Using examples from different regions demonstrates broader understanding and the universality of the concept.'
+            correctAnswer: 0,
+            explanation: 'The casing and cement are meant to isolate the well from the aquifers it passes through. If the cement fails, gas can migrate up along the well into groundwater.'
           },
           {
-            question: 'A pattern observed in Fossil Fuels & Nuclear Energy is consistent across multiple world regions. This suggests:',
+            question: 'A state that switched most of its electricity from coal to natural gas saw its $CO_{2}$ emissions fall, yet some scientists say the climate benefit was smaller than the $CO_{2}$ data suggest. Why?',
             options: [
-              'Coincidence',
-              'An underlying process that operates at a global scale',
-              'The data is wrong',
-              'Local factors only'
+              'Methane leaked during production adds warming not counted in $CO_{2}$ data',
+              'Natural gas releases more $CO_{2}$ per kWh than coal when burned in a plant',
+              'Natural gas plants release large amounts of $SO_{2}$ that cause warming',
+              'Gas plants are less efficient, so they burn twice as much fuel as coal'
             ],
-            correctAnswer: 1,
-            explanation: 'Consistent patterns across regions suggest a systematic process rather than coincidence.'
+            correctAnswer: 0,
+            explanation: 'Leaked methane is a potent greenhouse gas that does not appear in smokestack carbon dioxide totals. Per kWh, burning gas releases about half the carbon dioxide of coal.'
+          },
+          {
+            question: 'Which pairing correctly matches a fuel source with an impact specific to how it is extracted?',
+            options: [
+              'Tar sands with large ponds of toxic tailings water',
+              'Fracking with mountaintop removal and valley fill',
+              'Offshore oil with black lung disease among workers',
+              'Conventional gas with acid mine drainage from spoil'
+            ],
+            correctAnswer: 0,
+            explanation: 'Washing bitumen out of mined tar sands leaves vast tailings ponds. Mountaintop removal, black lung and acid mine drainage all belong to coal mining.'
           }
         ]
       }
+    },
+    {
+      id: 'apesfoss3-summary',
+      type: 'text' as const,
+      content: `
+## Part 3 Summary
+
+| Idea | Key fact |
+|---|---|
+| Reservoirs | Oil and gas rise through porous rock until stopped by impermeable cap rock |
+| Refining | Fractional distillation separates crude by boiling point: gases on top, asphalt at the bottom |
+| Tar sands | Clay, sand, water and bitumen; mining or steam; tailings ponds; more emissions per barrel |
+| Fracking | Horizontal drilling + high-pressure water, sand and chemicals; groundwater contamination, VOCs, methane, induced quakes |
+| Natural gas | Cleanest-burning fossil fuel, about half of coal's $CO_{2}$ per kWh; leaks erode the advantage |
+| Calculations | 1 barrel ≈ 159 L; $CH_{4}$ → $CO_{2}$ × 44/16; leaked methane × warming factor |
+
+**Next:** Part 4 opens the reactor: how fission makes heat, what happens to the waste, and how to calculate radioactive decay with half-lives.
+      `
     }
   ]
-}
+};
