@@ -4350,10 +4350,12 @@ function InputBoxExercise({
   //   — a single free-response question. Many lessons use this; without handling
   //   it the question never rendered and the learner saw just a blank box.
   const singleQ = exercise as LessonExercise & { question?: string; correctAnswer?: string; acceptableAnswers?: string[] }
-  // Format D: { questions: [{ question, answer|correctAnswer, acceptableAnswers }] }
+  // Format D: { questions: [{ question|prompt, answer|correctAnswer, acceptableAnswers }] }
   //   — used by many bio/chem lessons; like Format B but with per-question
   //   acceptable-answer alternatives. Normalized into the inputs shape below.
-  const questionsFmt = (exercise as { questions?: Array<{ question?: string; answer?: string; correctAnswer?: string; acceptableAnswers?: string[]; explanation?: string }> }).questions
+  //   AP Gov and APUSH lessons label the item `prompt`; without the alias the
+  //   label rendered blank.
+  const questionsFmt = (exercise as { questions?: Array<{ question?: string; prompt?: string; answer?: string; correctAnswer?: string; acceptableAnswers?: string[]; explanation?: string }> }).questions
   const hasQuestionsArray = Array.isArray(questionsFmt) && questionsFmt.length > 0
   const isSingleQuestionFormat =
     (!exercise.inputs || exercise.inputs.length === 0) &&
@@ -4366,7 +4368,7 @@ function InputBoxExercise({
   const exerciseInputs: ExerciseInput[] = (exercise.inputs && exercise.inputs.length > 0)
     ? exercise.inputs
     : hasQuestionsArray
-      ? questionsFmt!.map((q) => ({ label: q.question ?? '', correctAnswer: q.answer ?? q.correctAnswer ?? '', explanation: q.explanation }))
+      ? questionsFmt!.map((q) => ({ label: q.question ?? q.prompt ?? '', correctAnswer: q.answer ?? q.correctAnswer ?? '', explanation: q.explanation }))
       : isSingleQuestionFormat
         ? [{ label: singleQ.question ?? '', correctAnswer: singleQ.correctAnswer ?? '', explanation: exercise.explanation }]
         : []
