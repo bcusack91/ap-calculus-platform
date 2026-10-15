@@ -72,18 +72,20 @@ Let's try a different example where trade IS beneficial:
 
 For trade to benefit BOTH countries, the exchange rate (terms of trade) must fall **between** the two countries' opportunity costs.
 
-### From Our Example
+### Worked Example: Cars and Computers
 
-| | OC of 1 Computer |
-|---|---|
-| Country X | 2 cars |
-| Country Y | 0.5 cars |
+| | Cars (per day) | Computers (per day) | OC of 1 Computer |
+|---|---|---|---|
+| **Country X** | 60 | 30 | 60 ÷ 30 = 2 cars |
+| **Country Y** | 20 | 40 | 20 ÷ 40 = 0.5 cars |
+
+Country Y has the comparative advantage in computers (0.5 cars < 2 cars), so Y exports computers and X exports cars.
 
 **Acceptable terms of trade for 1 computer:** Between **0.5 cars** and **2 cars**
 
 - If trade price = 1 car per computer:
-  - Country Y gains: sells a computer for 1 car instead of making the car itself (which would cost 2 computers' worth of resources to make 1 car domestically)
-  - Country X gains: gets a computer for 1 car instead of giving up 2 cars' worth of production
+  - Country Y gains: it gives up only 0.5 cars of production to make a computer, but each computer it exports brings back 1 full car (making 1 car at home would cost Y 2 computers)
+  - Country X gains: it gets a computer for 1 car instead of giving up 2 cars to make the computer at home
 
 ### Key Rules
 1. Terms of trade must be between the two countries' opportunity costs
@@ -102,7 +104,7 @@ For trade to benefit BOTH countries, the exchange rate (terms of trade) must fal
 > 🔑 **AP Connection:** An FRQ will often ask: "Determine the range of exchange rates at which trade would be mutually beneficial." Answer: between the two opportunity costs. If OC of Good X is 2Y for Country A and 0.5Y for Country B, terms of trade must be between 0.5Y and 2Y per unit of X.
 `},
     {id:'macrocomp1-quiz2',type:'multiple-choice' as const,content:`**Check Your Understanding** 🎯`,exercise:{questions:[
-      {question:'Country A\'s opportunity cost of 1 bushel of wheat is 3 yards of cloth. Country B\'s opportunity cost of 1 bushel of wheat is 1 yard of cloth. For trade in wheat to benefit both countries, the terms of trade for 1 bushel of wheat must be:',options:['Exactly 2 yards of cloth — the midpoint between the two opportunity costs','Between 1 and 3 yards of cloth — within the range of the two countries\' opportunity costs','More than 3 yards of cloth — to ensure Country A benefits from exporting wheat','Less than 1 yard of cloth — to ensure Country B benefits from importing wheat'],correctAnswer:1,explanation:'For trade to benefit both countries, the price must fall between their opportunity costs. Country B (OC = 1 cloth/wheat) would only buy wheat if it costs LESS than 1 cloth (it can make wheat domestically for 1 cloth). Wait — Country B has the comparative advantage in wheat (lower OC), so Country B EXPORTS wheat. For B to benefit: trade price > 1 cloth. For A to benefit: trade price < 3 cloth. Terms of trade: between 1 and 3 yards of cloth per bushel of wheat.'},
+      {question:'Country A\'s opportunity cost of 1 bushel of wheat is 3 yards of cloth. Country B\'s opportunity cost of 1 bushel of wheat is 1 yard of cloth. For trade in wheat to benefit both countries, the terms of trade for 1 bushel of wheat must be:',options:['Exactly 2 yards of cloth — the midpoint between the two opportunity costs','Between 1 and 3 yards of cloth — within the range of the two countries\' opportunity costs','More than 3 yards of cloth — to ensure Country A benefits from exporting wheat','Less than 1 yard of cloth — to ensure Country B benefits from importing wheat'],correctAnswer:1,explanation:'For trade to benefit both countries, the price must fall between their opportunity costs. Country B has the lower opportunity cost of wheat (1 cloth), so B exports wheat and gains only if each bushel sells for MORE than 1 yard of cloth. Country A imports wheat and gains only if a bushel costs LESS than the 3 yards of cloth it would give up to grow wheat at home. Terms of trade: between 1 and 3 yards of cloth per bushel of wheat.'},
       {question:'When two countries specialize according to comparative advantage and trade, what happens to total world output?',options:['Total output stays the same — trade only redistributes existing production between countries','Total output decreases because specialization makes countries dependent on each other','Total output increases because resources are allocated more efficiently — each country produces what it\'s relatively best at','Total output increases only for the country with absolute advantage; the other country\'s output falls'],correctAnswer:2,explanation:'Specialization based on comparative advantage increases total world output because each country focuses resources on the good it produces at the lowest opportunity cost. When Country X makes only cars (its comparative advantage) and Country Y makes only computers (its comparative advantage), total combined production of cars AND computers exceeds what both countries could produce independently. This is the mutual gain from trade.'}
     ]}}
   ]
