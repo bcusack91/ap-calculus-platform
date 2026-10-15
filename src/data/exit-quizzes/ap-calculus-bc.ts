@@ -485,15 +485,15 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     formSet: 'both',
   },
   {
-    question: 'Which comparison would show $\\displaystyle\\int_1^{\\infty}\\frac{1}{x^3+1}\\,dx$ converges?',
+    question: '$\\displaystyle\\int_0^{\\infty}\\frac{1}{(x+1)^2}\\,dx = $',
     options: [
-      'Compare with $\\frac{1}{x^3}$ which converges ($p = 3 > 1$)',
-      'Compare with $\\frac{1}{x}$ which diverges',
-      'Use the alternating series test',
-      'No comparison works; use partial fractions'
+      '$1$, since $\\lim_{t \\to \\infty}\\left(1 - \\frac{1}{t+1}\\right) = 1$',
+      'It diverges, since the integrand is never $0$',
+      '$-1$, from evaluating $-\\frac{1}{x+1}$ at $0$ only',
+      '$\\frac{1}{2}$, the value of the integrand at $x = 1$'
     ],
     correctAnswer: 0,
-    explanation: 'For x ≥ 1, $1/(x^{3}+1)$ ≤ $1/x^{3}$. Since $\\int_{1}^{\\infty}$ $1/x^{3}$ dx converges (p = 3 > 1), by comparison the given integral converges.',
+    explanation: '$\\int_0^t (x+1)^{-2}\\,dx = \\left[-\\frac{1}{x+1}\\right]_0^t = 1 - \\frac{1}{t+1} \\to 1$. A positive integrand can still have finite total area, the lower-limit term enters with a minus sign, and the integrand value at one point is not the integral.',
     difficulty: 'medium',
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
@@ -2662,7 +2662,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     options: [
       '$dP/dt < 0$ (population decreases)',
       '$dP/dt > 0$ (population increases)',
-      '$dP/dt = 0$ (population is stable)',
+      '$dP/dt = 0$ (population is constant)',
       'The model breaks down'
     ],
     correctAnswer: 0,
@@ -2903,20 +2903,20 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     formSet: 'both',
   },
   {
-    question: '$y = 3$ is a _____ equilibrium for $dy/dx = y(3 - y)$:',
-    options: ['Stable', 'Unstable', 'Semi-stable', 'Neutral'],
+    question: 'For $dy/dx = y(3 - y)$ with $y(0) = 5$, what is $\\lim_{x \\to \\infty} y(x)$?',
+    options: ['$3$', '$5$', '$0$', '$\\infty$'],
     correctAnswer: 0,
-    explanation: 'If P < 3, dP/dt > 0 (P increases toward 3). If P > 3, dP/dt < 0 (P decreases toward 3). So y = 3 is stable.',
+    explanation: 'At $y = 5$, $dy/dx = 5(-2) < 0$, so the solution decreases, and it cannot cross the constant solution $y = 3$, so it levels off at $3$. The value $5$ is only the start, $0$ would require crossing $y = 3$, and a negative slope rules out unbounded growth.',
     difficulty: 'medium',
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
   },
   {
-    question: '$y = 0$ is a _____ equilibrium for $dy/dx = y(3 - y)$ when $y > 0$:',
-    options: ['Stable', 'Unstable', 'Semi-stable', 'Not an equilibrium'],
+    question: 'For $dy/dx = y(3 - y)$ with $y(0) = 1$, the solution is:',
+    options: ['Decreasing toward $0$', 'Increasing toward $3$', 'Constant at $1$', 'Increasing without bound'],
     correctAnswer: 1,
-    explanation: 'For y slightly above 0, dy/dx = y(3−y) > 0, so solutions move away from 0. Unstable.',
+    explanation: 'At $y = 1$, $dy/dx = 1(2) = 2 > 0$, so the solution increases, and it levels off toward the constant solution $y = 3$, which it cannot cross. A decreasing solution would need a negative slope, $y = 1$ is not an equilibrium, and the solution is bounded above by $3$.',
     difficulty: 'medium',
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',

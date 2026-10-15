@@ -22,8 +22,7 @@ This final part reviews every concept from the improper integrals unit. Treat it
 | Type II (interior) | Split at discontinuity | Both halves converge |
 | $p$-test (Type I) | $\\int_1^{\\infty} x^{-p}\\,dx = \\frac{1}{p-1}$ | $p > 1$ |
 | $p$-test (Type II) | $\\int_0^1 x^{-p}\\,dx = \\frac{1}{1-p}$ | $p < 1$ |
-| Direct Comparison | $0 \\le f \\le g$ | Converges if $g$ converges |
-| Limit Comparison | $\\lim f/g = L \\in (0,\\infty)$ | Same behavior as $g$ |
+| Two-sided | Split at a point | Both halves converge |
 | Exponential | $\\int_0^{\\infty} e^{-kx}\\,dx = 1/k$ | Always ($k > 0$) |
 
 $$\\boxed{\\text{Type I: } p > 1 \\text{ converges} \\qquad \\text{Type II: } p < 1 \\text{ converges}}$$`
@@ -52,15 +51,10 @@ $$\\boxed{\\text{Type I: } p > 1 \\text{ converges} \\qquad \\text{Type II: } p 
             explanation: '$\\frac{1}{x}$ is discontinuous at $x = 0 \\in (-1,1)$, so split: $\\int_{-1}^0 \\frac{1}{x}\\,dx + \\int_0^1 \\frac{1}{x}\\,dx$. Each half is a Type II integral with $p = 1$, and $p = 1$ diverges, so the whole integral diverges. Odd symmetry and the FTC both require the integral to exist first; you cannot cancel $+\\infty$ and $-\\infty$.'
           },
           {
-            question: '$\\int_0^{\\infty} \\frac{x^2}{x^4 + 1}\\,dx$ converges because:',
-            options: [
-              'LCT with $\\frac{1}{x^2}$ gives $L = 1$, and $p = 2 > 1$',
-              'DCT with $\\frac{1}{x}$, which bounds the integrand',
-              'The integrand is bounded by $\\frac{1}{2}$',
-              'The antiderivative is $\\arctan(x^2)$'
-            ],
+            question: '$\\int_0^{\\infty} \\frac{x}{(1+x^2)^2}\\,dx = $',
+            options: ['$\\frac{1}{2}$', '$1$', '$\\infty$', '$\\frac{1}{4}$'],
             correctAnswer: 0,
-            explanation: 'For large $x$: $\\frac{x^2}{x^4+1} \\approx \\frac{1}{x^2}$. LCT: $\\lim \\frac{x^2/(x^4+1)}{1/x^2} = \\lim \\frac{x^4}{x^4+1} = 1$. Since $\\int_1^\\infty \\frac{1}{x^2}\\,dx$ converges, so does the original (the piece on $[0,1]$ is a proper integral). Bounding by $\\frac{1}{x}$ proves nothing because $\\int_1^\\infty \\frac{1}{x}\\,dx$ diverges, a bounded integrand can still have infinite area on $[0,\\infty)$, and $\\arctan(x^2)$ is the antiderivative of $\\frac{2x}{1+x^4}$, not of this integrand.'
+            explanation: 'With $u = 1 + x^2$, an antiderivative is $-\\frac{1}{2(1+x^2)}$, so the limit is $0 - \\left(-\\frac{1}{2}\\right) = \\frac{1}{2}$. Dropping the $\\frac{1}{2}$ from $du = 2x\\,dx$ gives $1$, $\\frac{1}{4}$ halves twice, and the integrand decays like $\\frac{1}{x^3}$, so it converges.'
           }
         ]
       }
@@ -79,18 +73,18 @@ $$\\boxed{\\text{Type I: } p > 1 \\text{ converges} \\qquad \\text{Type II: } p 
             explanation: 'Discontinuity at $x = 1$ (interior), so it is Type II. Split at $x = 1$ and evaluate each half. Since the exponent $p = 1/3 < 1$, both halves converge.'
           },
           {
-            label: '$\\int_1^{\\infty} \\frac{x+\\sin x}{x^3}\\,dx$: Convergence?',
-            options: ['Converges (like $1/x^2$)', 'Diverges (like $1/x$)', 'Cannot determine', 'Converges to $1$'],
-            correctAnswers: ['Converges (like $1/x^2$)'],
-            hints: ['$\\frac{x + \\sin x}{x^3} = \\frac{1}{x^2} + \\frac{\\sin x}{x^3}$. Both converge.'],
-            explanation: 'Split: $\\frac{x}{x^3} = \\frac{1}{x^2}$ converges ($p=2>1$), and $|\\frac{\\sin x}{x^3}| \\le \\frac{1}{x^3}$ converges by DCT. Sum converges. The value is not exactly $1$, since the $\\frac{\\sin x}{x^3}$ part adds a nonzero amount.'
+            label: '$\\int_1^{\\infty} \\frac{x+1}{x^3}\\,dx$: Result?',
+            options: ['Converges to $1$', 'Diverges (like $1/x$)', 'Converges to $\\frac{3}{2}$', 'Converges to $\\frac{1}{2}$'],
+            correctAnswers: ['Converges to $\\frac{3}{2}$'],
+            hints: ['$\\frac{x + 1}{x^3} = \\frac{1}{x^2} + \\frac{1}{x^3}$.'],
+            explanation: 'Split into $\\int_1^{\\infty} x^{-2}\\,dx + \\int_1^{\\infty} x^{-3}\\,dx = 1 + \\frac{1}{2} = \\frac{3}{2}$. Keeping only one term gives $1$ or $\\frac{1}{2}$, and the integrand behaves like $\\frac{1}{x^2}$, not $\\frac{1}{x}$.'
           },
           {
-            label: '$\\int_0^{\\infty} \\frac{1}{\\sqrt{x}\\,e^x}\\,dx$: Convergence?',
-            options: ['Converges', 'Diverges at $x = 0$', 'Diverges at infinity', 'Cannot determine'],
-            correctAnswers: ['Converges'],
-            hints: ['Split at $1$. Near $0$: like $1/\\sqrt{x}$ ($p=1/2<1$, converges). Near $\\infty$: $e^{-x}$ dominates.'],
-            explanation: 'Both halves converge. $\\int_0^1$: $\\frac{1}{\\sqrt{x}e^x} \\le \\frac{1}{\\sqrt{x}}$, converges ($p = 1/2 < 1$). $\\int_1^{\\infty}$: $\\frac{1}{\\sqrt{x}e^x} \\le e^{-x}$, converges by DCT.'
+            label: '$\\int_0^{\\infty} x e^{-x}\\,dx$: Result?',
+            options: ['Diverges at infinity', 'Converges to $1$', 'Converges to $0$', 'Converges to $e$'],
+            correctAnswers: ['Converges to $1$'],
+            hints: ['Integration by parts: $u = x$, $dv = e^{-x}\\,dx$.'],
+            explanation: 'An antiderivative is $-(x+1)e^{-x}$, and $(t+1)e^{-t} \\to 0$ as $t \\to \\infty$, so the integral is $0 - (-1) = 1$. Exponential decay beats the factor $x$, so it does not diverge; $0$ forgets the lower-limit term and $e$ is not a value of the antiderivative here.'
           }
         ]
       }
@@ -133,14 +127,14 @@ $$V = \\pi\\int_1^{\\infty} \\frac{1}{x^4}\\,dx = \\pi \\cdot \\frac{1}{3} = \\f
 - Type I: infinite bounds \u2192 replace with limit
 - Type II: discontinuous integrand \u2192 one-sided limit
 - $p$-test: the fundamental convergence criterion
-- Comparison tests: extend $p$-test to harder integrals
+- Two-sided integrals: split, and both halves must converge
 - Key results: $e^{-kx}$, $\\arctan$, finite volume from an infinite area ($y = 1/x$)
 
 **AP Exam Checklist:**
 - Can you identify improper integrals?
 - Can you set up and evaluate both types?
 - Do you know both $p$-test directions?
-- Can you apply DCT and LCT?
+- Can you split two-sided integrals and substitute with limits?
 - Can you handle FRQ area/volume problems?
 
 > **Congratulations!** You have mastered improper integrals for AP Calculus BC.`

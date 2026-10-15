@@ -59,8 +59,8 @@ Classify each integral before computing:
 
 $$\\text{Is the interval infinite?} \\xrightarrow{\\text{Yes}} \\text{Type I}$$
 $$\\text{Is }f\\text{ undefined at any point in }[a,b]\\text{?} \\xrightarrow{\\text{Yes}} \\text{Type II}$$
-$$\\text{Can you find the antiderivative?} \\xrightarrow{\\text{Yes}} \\text{Compute directly}$$
-$$\\xrightarrow{\\text{No}} \\text{Use Comparison (DCT or LCT)}$$
+$$\\text{Infinite on both ends?} \\xrightarrow{\\text{Yes}} \\text{Split; both halves must converge}$$
+$$\\text{Then: find the antiderivative and take the limit}$$
 
 **Direct Computation Steps:**
 1. Replace the problematic bound with a limit variable
@@ -75,11 +75,11 @@ $$\\xrightarrow{\\text{No}} \\text{Use Comparison (DCT or LCT)}$$
       exercise: {
         dropdowns: [
           {
-            label: '$\\int_0^{\\infty} \\frac{1}{e^x + 1}\\,dx$:',
-            options: ['Converges by DCT with $e^{-x}$', 'Diverges by LCT with $1/x$', 'Converges to $1$', 'Cannot determine'],
-            correctAnswers: ['Converges by DCT with $e^{-x}$'],
-            hints: ['$e^x + 1 > e^x$, so $\\frac{1}{e^x+1} < \\frac{1}{e^x} = e^{-x}$.'],
-            explanation: '$\\frac{1}{e^x+1} < e^{-x}$ and $\\int_0^{\\infty} e^{-x}\\,dx = 1$ converges. By DCT, the original converges. DCT gives only an upper bound, not the value: the exact value is $\\ln 2$, not $1$. LCT with $1/x$ gives a limit of $0$, which proves nothing about divergence.'
+            label: '$\\int_0^{\\infty} \\frac{e^{-x}}{1 + e^{-x}}\\,dx$:',
+            options: ['Converges to $1$', 'Diverges', 'Converges to $\\ln 2$', 'Converges to $\\frac{1}{2}$'],
+            correctAnswers: ['Converges to $\\ln 2$'],
+            hints: ['Let $u = 1 + e^{-x}$, so $du = -e^{-x}\\,dx$.', 'An antiderivative is $-\\ln(1 + e^{-x})$.'],
+            explanation: '$\\lim_{t \\to \\infty}\\left[-\\ln(1 + e^{-x})\\right]_0^t = -\\ln 1 + \\ln 2 = \\ln 2$. The value $1$ is $\\int_0^{\\infty} e^{-x}\\,dx$, which ignores the denominator; $\\frac{1}{2}$ is the integrand at $x = 0$; and the integrand decays like $e^{-x}$, so it does not diverge.'
           },
           {
             label: '$\\int_0^{\\infty} \\frac{\\arctan x}{1+x^2}\\,dx$:',
@@ -89,11 +89,11 @@ $$\\xrightarrow{\\text{No}} \\text{Use Comparison (DCT or LCT)}$$
             explanation: '$\\int_0^{\\pi/2} u\\,du = [\\frac{u^2}{2}]_0^{\\pi/2} = \\frac{\\pi^2}{8}$.'
           },
           {
-            label: '$\\int_1^{\\infty} \\frac{\\sin^2 x}{x^3}\\,dx$:',
-            options: ['Converges by DCT', 'Diverges', 'Converges to $1$', 'Oscillates'],
-            correctAnswers: ['Converges by DCT'],
-            hints: ['$0 \\le \\sin^2 x \\le 1$, so $\\frac{\\sin^2 x}{x^3} \\le \\frac{1}{x^3}$.'],
-            explanation: '$\\frac{\\sin^2 x}{x^3} \\le \\frac{1}{x^3}$ and $\\int_1^{\\infty} x^{-3}\\,dx$ converges ($p=3>1$). By DCT, converges.'
+            label: '$\\int_1^{\\infty} \\left(\\frac{1}{x^2} + \\frac{1}{x^3}\\right)dx$:',
+            options: ['Converges to $\\frac{3}{2}$', 'Diverges', 'Converges to $1$', 'Converges to $\\frac{1}{2}$'],
+            correctAnswers: ['Converges to $\\frac{3}{2}$'],
+            hints: ['Integrate each term: $\\int_1^{\\infty} x^{-p}\\,dx = \\frac{1}{p-1}$ for $p > 1$.'],
+            explanation: '$\\int_1^{\\infty} x^{-2}\\,dx = 1$ and $\\int_1^{\\infty} x^{-3}\\,dx = \\frac{1}{2}$, so the total is $\\frac{3}{2}$. Each answer of $1$ or $\\frac{1}{2}$ keeps only one term, and both exponents exceed $1$, so nothing diverges.'
           }
         ]
       }
@@ -139,7 +139,7 @@ Full integral converges. (Its exact value is $\\pi$, via the substitution $u = \
 **Common Mistakes to Avoid:**
 1. Forgetting to check for interior discontinuities before integrating
 2. Confusing Type I and Type II $p$-test directions
-3. Applying comparison tests with the wrong inequality direction
+3. Letting the two halves of $\\int_{-\\infty}^{\\infty}$ cancel instead of checking each one
 4. Not splitting integrals that have both Type I and Type II issues
 
 > **Coming Up:** Part 7 is a **Comprehensive Review** covering all improper integral concepts.`

@@ -14,7 +14,7 @@ export const calcabExpModelsPart1Data = {
 |:---:|:---:|
 | **1** | **Exponential Growth & Decay** |
 | 2 | Newton\u2019s Law of Cooling |
-| 3 | Compound Interest & Continuous Growth |
+| 3 | Finding $k$: Doubling Time and Half-Life |
 | 4 | Derivatives & Integrals of Exponentials |
 | 5 | Writing and Solving Rate Models |
 | 6 | Problem-Solving Workshop |
@@ -60,7 +60,7 @@ $$\\boxed{t_{\\text{double}} = \\frac{\\ln 2}{k}} \\qquad \\boxed{t_{\\text{half
 | Triple time | $\\frac{\\ln 3}{k}$ | N/A |
 | $n$ half-lives | N/A | $y_0 \\cdot (\\tfrac{1}{2})^n$ remains |
 
-> **AP Tip:** The Rule of 70: doubling time $\\approx \\frac{70}{\\text{percent rate}}$. E.g., 7% growth $\\Rightarrow$ doubles in $\\approx 10$ years.`
+> **AP Tip:** Doubling time is $\\frac{\\ln 2}{k}$. E.g., $k = 0.07$ per year $\\Rightarrow$ doubles in $\\frac{\\ln 2}{0.07} \\approx 9.90$ years.`
     },
     {
       id: 'exp1-quiz1',

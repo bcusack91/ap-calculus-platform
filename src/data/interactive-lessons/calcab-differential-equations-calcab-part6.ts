@@ -15,7 +15,7 @@ export const calcabDiffEqPart6Data = {
 | "Find the particular solution" | Separate, integrate, apply IC, solve for $y$ |
 | "Sketch solution on slope field" | Follow slope segments smoothly from given point |
 | "Find equilibrium solutions" | Set $dy/dx = 0$, solve for $y$ |
-| "Determine stability" | Check sign of $dy/dx$ near equilibrium |
+| "Describe the solution through a point" | Sign of $dy/dx$ at that point; it cannot cross an equilibrium |
 | "Rate proportional to..." | Set up $dy/dt = ky$ or variant |
 | "Approximate $f(1.2)$" | Tangent line at the known point, slope from the DE |
 | "Is it an over- or underestimate?" | Sign of $d^2y/dx^2$, found from the DE |`

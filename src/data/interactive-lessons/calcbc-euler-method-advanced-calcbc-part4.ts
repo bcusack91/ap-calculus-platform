@@ -58,13 +58,13 @@ For $dy/dx = y(2-y)$:
 
 Euler starting at $y(0) = 1$:
 - $f(0, 1) = 1(1) = 1$: slope = 1, step moves up
-- Solution approaches $y = 2$ (stable equilibrium)
+- Solution increases and levels off toward the constant solution $y = 2$
 
 ### Equilibrium Behavior
 
-$$\\boxed{\\text{Euler's method approaches stable equilibria, just like exact solutions}}$$
+$$\\boxed{\\text{Euler steps follow the same slope signs as the exact solution}}$$
 
-But it may oscillate around unstable equilibria if $\\Delta x$ is too large.`
+Starting between $y = 0$ and $y = 2$, the Euler slopes are positive, so with a small step size the approximations rise toward $y = 2$, just as the slope field predicts.`
     },
     {
       id: 'euler4-mc1',

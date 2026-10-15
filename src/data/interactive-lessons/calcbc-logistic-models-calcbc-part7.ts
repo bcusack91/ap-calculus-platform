@@ -123,7 +123,7 @@ $$\\boxed{P(t) = \\frac{L}{1 + \\frac{L - P_0}{P_0}e^{-kt}}}$$`
 You've mastered:
 - The logistic DE and its solution via separation of variables
 - Identifying $k$, $L$, and $A$ from any form
-- Inflection points, concavity, and phase line analysis
+- Inflection points, concavity, and long-run behavior
 - Real-world applications and AP exam strategies
 
 $$\\boxed{\\frac{dP}{dt} = kP\\left(1 - \\frac{P}{L}\\right) \\quad \\Rightarrow \\quad P(t) = \\frac{L}{1 + Ae^{-kt}}}$$`

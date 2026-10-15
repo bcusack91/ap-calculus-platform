@@ -15,8 +15,8 @@ An improper integral has either an infinite limit of integration or an integrand
 | **1** | **Infinite Limits (Type I)** |
 | 2 | Discontinuous Integrands (Type II) |
 | 3 | Convergence vs. Divergence |
-| 4 | Comparison Tests |
-| 5 | The p-Integral Test |
+| 4 | Two-Sided Integrals & Substitution |
+| 5 | Special Results & AP Exam Patterns |
 | 6 | Problem-Solving Workshop |
 | 7 | Comprehensive Review |`
     },

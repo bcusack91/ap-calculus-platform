@@ -56,7 +56,7 @@ export const calcbcReviewPart3Data = {
             question: 'The logistic equation $dP/dt = 0.3P(1 - P/500)$ has equilibria at:',
             options: ['$P = 0$ and $P = 500$', '$P = 0$ only', '$P = 500$ only', '$P = 0.3$ and $P = 500$'],
             correctAnswer: 0,
-            explanation: 'Set $dP/dt = 0$: $P = 0$ or $1 - P/500 = 0 \\Rightarrow P = 500$. Two equilibria: $P = 0$ (unstable) and $P = 500$ (stable).'
+            explanation: 'Set $dP/dt = 0$: $P = 0$ or $1 - P/500 = 0 \\Rightarrow P = 500$. Two equilibrium solutions: $P = 0$ and $P = 500$, and any positive starting population tends to $500$.'
           }
         ]
       }

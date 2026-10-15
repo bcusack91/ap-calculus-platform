@@ -90,20 +90,21 @@ For $\\frac{dy}{dx} = x + y$, the isocline where slope $= k$ is the line $x + y 
 | Curve must be smooth (no corners) | Solutions to these DEs are differentiable |
 | Follow the "flow" of the field | Solutions are carried along like water |
 
-### Stability of Equilibria
+### Equilibrium Solutions and Nearby Behavior
 
-For an autonomous DE $\\frac{dy}{dx} = g(y)$:
+For $\\frac{dy}{dx} = g(y)$, every value $c$ with $g(c) = 0$ gives a **constant solution** $y = c$: its slope segments are horizontal all the way across the slope field.
 
-| Equilibrium Type | Slope Field Behavior | Stability |
-|:---:|:---:|:---:|
-| **Stable** | Arrows point TOWARD equilibrium | Solutions approach it |
-| **Unstable** | Arrows point AWAY from equilibrium | Solutions diverge |
-| **Semi-stable** | Arrows point toward on one side, away on other | Mixed behavior |
+A solution that starts at another height follows the sign of $g(y)$:
 
-**Example:** $\\frac{dy}{dx} = y(2-y)$
+- $g(y) > 0$ at the starting height: the solution **increases**
+- $g(y) < 0$ at the starting height: the solution **decreases**
+- It cannot cross a constant solution, so it stays between the equilibrium lines on either side of it
 
-- $y = 0$: unstable (slopes point away for $y < 0$ and toward for $y > 0$... actually for $y < 0$, $g(y) = y(2-y) < 0$ pushes $y$ more negative → **unstable**)
-- $y = 2$: stable (solutions above and below approach $y = 2$)`
+**Example:** $\\frac{dy}{dx} = y(2-y)$ has constant solutions $y = 0$ and $y = 2$.
+
+- Start at $y(0) = 1$: $g(1) = 1 > 0$, so the solution increases and levels off toward $y = 2$.
+- Start at $y(0) = 3$: $g(3) = -3 < 0$, so the solution decreases toward $y = 2$.
+- Start at $y(0) = -1$: $g(-1) = -3 < 0$, so the solution decreases, moving away from $y = 0$.`
     },
     {
       id: 'de3-dropdown',
@@ -112,18 +113,18 @@ For an autonomous DE $\\frac{dy}{dx} = g(y)$:
       exercise: {
         dropdowns: [
           {
-            label: 'For $\\frac{dy}{dx} = y^2 - 1$, the equilibrium $y = 1$ is:',
-            options: ['Stable', 'Unstable', 'Semi-stable', 'Not an equilibrium'],
-            correctAnswers: ['Unstable'],
-            hints: ['Check signs: for $y$ slightly above $1$, $y^2-1 > 0$ (moving up). For $y$ slightly below $1$, $y^2-1 < 0$ (moving down).'],
-            explanation: 'Slopes push away from $y = 1$ in both directions → unstable.'
+            label: 'For $\\frac{dy}{dx} = y^2 - 1$, the solution with $y(0) = 0$ is:',
+            options: ['Increasing', 'Constant', 'Decreasing', 'Undefined at $x = 0$'],
+            correctAnswers: ['Decreasing'],
+            hints: ['Evaluate $\\frac{dy}{dx}$ at the starting height $y = 0$.'],
+            explanation: 'At $y = 0$, $\\frac{dy}{dx} = 0^2 - 1 = -1 < 0$, so the solution decreases (toward $y = -1$). It is not constant because $y = 0$ is not an equilibrium value, and the slope is defined everywhere.'
           },
           {
-            label: 'For $\\frac{dy}{dx} = y^2 - 1$, the equilibrium $y = -1$ is:',
-            options: ['Stable', 'Unstable', 'Semi-stable', 'Not an equilibrium'],
-            correctAnswers: ['Stable'],
-            hints: ['For $y$ slightly above $-1$ (like $y=-0.5$): $y^2-1 = -0.75 < 0$ (moving down toward $-1$).'],
-            explanation: 'Slopes push toward $y = -1$ from both sides → stable.'
+            label: 'The constant (equilibrium) solutions of $\\frac{dy}{dx} = y^2 - 1$ are:',
+            options: ['$y = 1$ only', '$y = 1$ and $y = -1$', '$y = 0$', '$x = 1$ and $x = -1$'],
+            correctAnswers: ['$y = 1$ and $y = -1$'],
+            hints: ['Set $\\frac{dy}{dx} = 0$ and solve for $y$.'],
+            explanation: '$y^2 - 1 = 0$ gives $y = \\pm 1$, and each constant function makes both sides of the equation $0$. Dropping the negative root misses $y = -1$, $y = 0$ is where the slope is $-1$, and equilibrium solutions are horizontal lines in $y$, not vertical lines in $x$.'
           },
           {
             label: 'A slope field with identical slopes along lines $y - x = c$ corresponds to:',
@@ -161,7 +162,7 @@ For an autonomous DE $\\frac{dy}{dx} = g(y)$:
 | Matching DEs | Evaluate $dy/dx$ at test points |
 | Solution curves | Must be tangent to segments, smooth, non-crossing |
 | Equilibrium | Where $dy/dx = 0$ |
-| Stable/Unstable | Do nearby solutions approach or diverge? |
+| Nearby solutions | Rise where $dy/dx > 0$, fall where $dy/dx < 0$; never cross an equilibrium |
 
 > **Up Next:** Part 4 — Exponential Growth & Decay.`
     }

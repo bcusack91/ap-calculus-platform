@@ -149,7 +149,7 @@ $$\\boxed{\\text{Exponential decay} \\gg \\text{polynomial decay} \\gg \\text{lo
 | Type II $p$-test | $\\int_0^1 x^{-p}\\,dx$ | Converges iff $p < 1$ |
 | Exponential | $\\int_0^{\\infty} e^{-kx}\\,dx$ | Always converges ($k > 0$) |
 
-> **Coming Up:** Part 4 introduces the **Comparison Test** \u2014 compare unknown integrals to known ones.`
+> **Coming Up:** Part 4 covers **integrals over $(-\\infty, \\infty)$** and improper integrals that need a substitution.`
     }
   ]
 };

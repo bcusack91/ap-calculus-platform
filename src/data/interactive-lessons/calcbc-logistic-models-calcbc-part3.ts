@@ -6,7 +6,7 @@ export const calcbcLogisticPart3Data = {
       type: 'text' as const,
       content: `# Logistic Curve Analysis
 
-**Part 3 of 7 — Inflection Points, Concavity, and Phase Lines**
+**Part 3 of 7 — Inflection Points, Concavity, and Long-Run Behavior**
 
 ### Inflection Point of the Logistic Curve
 
@@ -28,14 +28,14 @@ $$1 - \\frac{2P}{L} = 0 \\quad \\Rightarrow \\quad \\boxed{P = \\frac{L}{2}}$$
 | $P = L/2$ | $= 0$ | Inflection | Growth rate maximum |
 | $L/2 < P < L$ | $< 0$ | Concave DOWN | Growth decelerating |
 
-### Phase Line Analysis
+### Long-Run Behavior (FUN-7.H.3)
 
-For $dP/dt = kP(1 - P/L)$:
+For $dP/dt = kP(1 - P/L)$ the equilibrium (constant) solutions are $P = 0$ and $P = L$.
 
-| Equilibrium | Stability | Type |
+| Initial value | Sign of $dP/dt$ | Long-run behavior |
 |------------|-----------|------|
-| $P = 0$ | Unstable | Repelling |
-| $P = L$ | Stable | Attracting |
+| $0 < P_0 < L$ | positive | increases toward $L$ |
+| $P_0 > L$ | negative | decreases toward $L$ |
 
 Any initial $P_0 > 0$ → $P(t) \\to L$ as $t \\to \\infty$.
 
@@ -90,10 +90,10 @@ At $t \\approx 6.93$, the population is growing fastest: $dP/dt = kL/4 = 0.2(500
             explanation: 'Above $L/2$ but below $L$: $dP/dt > 0$ (growing) and $d^2P/dt^2 < 0$ (concave down, decelerating).'
           },
           {
-            question: 'The equilibrium $P = 0$ is unstable because:',
-            options: ['A small positive $P$ grows away from 0', 'A small positive $P$ decays back toward 0', '$dP/dt = 0$ at $P = 0$, and every equilibrium is unstable', '$P = 0$ is where $dP/dt$ reaches its maximum'],
+            question: 'For $\\frac{dP}{dt} = 0.4P\\left(1 - \\frac{P}{500}\\right)$ with $P(0) = 650$, what is $\\lim_{t \\to \\infty} P(t)$?',
+            options: ['$500$', '$650$', '$250$', '$\\infty$'],
             correctAnswer: 0,
-            explanation: 'If $P$ is slightly positive, $dP/dt = kP(1 - P/L) > 0$, so $P$ increases away from 0. $dP/dt = 0$ at every equilibrium, including the stable one at $P = L$, so a zero slope alone does not decide stability.'
+            explanation: 'At $P = 650 > 500$, $\\frac{dP}{dt} < 0$, so the population decreases toward the carrying capacity $500$ and cannot cross it. The starting value $650$ is not an equilibrium, $250 = L/2$ is where growth is fastest, and the negative rate rules out unbounded growth.'
           }
         ]
       }
@@ -140,7 +140,7 @@ At $t \\approx 6.93$, the population is growing fastest: $dP/dt = kL/4 = 0.2(500
 
 - Inflection at $P = L/2$, time $t = \\ln(A)/k$
 - Below $L/2$: concave up (accelerating); above: concave down (decelerating)
-- Equilibria: $P = 0$ (unstable), $P = L$ (stable)
+- Equilibrium solutions $P = 0$ and $P = L$; every $P_0 > 0$ gives $P \\to L$
 - S-shaped (sigmoid) curve
 
 > **Next:** Part 4 — Logistic Models in Context (AP Applications).`

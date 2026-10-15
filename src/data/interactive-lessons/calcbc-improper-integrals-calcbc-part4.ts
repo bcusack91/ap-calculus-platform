@@ -6,98 +6,67 @@ export const calcbcImproperPart4Data = {
       type: 'text' as const,
       content: `# Improper Integrals
 
-**Part 4 of 7 \u2014 Comparison Tests**
+**Part 4 of 7 — Two-Sided Integrals and Substitution**
 
-When you can\u2019t find an antiderivative, comparison tests let you determine convergence by comparing to a simpler integral whose behavior you already know.`
+On the AP exam every improper integral is decided the same way: **replace the problem bound with a variable, evaluate the definite integral, and take the limit** (LIM-6.A.2). This part applies that method to two harder situations: integrals over the whole real line, and integrals that need a substitution first.
+
+### Integrals over $(-\\infty, \\infty)$
+
+Split at any convenient point $c$ (usually $0$):
+
+$$\\boxed{\\int_{-\\infty}^{\\infty} f(x)\\,dx = \\int_{-\\infty}^{c} f(x)\\,dx + \\int_{c}^{\\infty} f(x)\\,dx}$$
+
+The integral converges **only if both pieces converge**. If either piece diverges, the whole integral diverges.
+
+> **Key Fact:** You may not take one symmetric limit $\\lim_{t \\to \\infty}\\int_{-t}^{t} f(x)\\,dx$. For $f(x) = x$ that limit is $0$, yet $\\int_{-\\infty}^{\\infty} x\\,dx$ diverges because each half is infinite.`
     },
     {
-      id: 'imp4-direct',
+      id: 'imp4-examples',
       type: 'text' as const,
-      content: `### Direct Comparison Test (DCT)
+      content: `### Worked Example 1: $\\int_{-\\infty}^{\\infty} \\frac{1}{1+x^2}\\,dx$
 
-For $f(x) \\ge 0$ and $g(x) \\ge 0$ on $[a, \\infty)$:
+Split at $0$. For the right half,
 
-$$\\boxed{\\text{If } 0 \\le f(x) \\le g(x) \\text{ and } \\int_a^{\\infty} g(x)\\,dx \\text{ converges, then } \\int_a^{\\infty} f(x)\\,dx \\text{ converges.}}$$
+$$\\int_0^{\\infty} \\frac{dx}{1+x^2} = \\lim_{t \\to \\infty} \\left[\\arctan x\\right]_0^t = \\lim_{t \\to \\infty} \\arctan t = \\frac{\\pi}{2}$$
 
-$$\\boxed{\\text{If } f(x) \\ge g(x) \\ge 0 \\text{ and } \\int_a^{\\infty} g(x)\\,dx \\text{ diverges, then } \\int_a^{\\infty} f(x)\\,dx \\text{ diverges.}}$$
+By symmetry the left half is also $\\frac{\\pi}{2}$, so the integral converges to $\\pi$.
 
-**Think of it as:**
-- Smaller than a convergent \u2192 convergent (\u201ctrapped below a ceiling\u201d)
-- Bigger than a divergent \u2192 divergent (\u201cpushed above a floor\u201d)
+### Worked Example 2 (substitution): $\\int_0^{\\infty} x e^{-x^2}\\,dx$
 
-| To Show | You Need | Compare To |
-|:---:|:---:|:---:|
-| Convergence | $f(x) \\le g(x)$ | $g$ that converges |
-| Divergence | $f(x) \\ge g(x)$ | $g$ that diverges |`
-    },
-    {
-      id: 'imp4-dctex',
-      type: 'text' as const,
-      content: `### Example: $\\int_1^{\\infty} \\frac{1}{x^2 + 1}\\,dx$
+Let $u = x^2$, $du = 2x\\,dx$. Change the bounds with the limit: $x = 0 \\Rightarrow u = 0$ and $x = t \\Rightarrow u = t^2$.
 
-We know $x^2 + 1 > x^2$ for all $x$, so:
-$$\\frac{1}{x^2 + 1} < \\frac{1}{x^2}$$
+$$\\lim_{t \\to \\infty} \\int_0^{t^2} \\frac{1}{2}e^{-u}\\,du = \\lim_{t \\to \\infty} \\frac{1}{2}\\left(1 - e^{-t^2}\\right) = \\frac{1}{2}$$
 
-Since $\\int_1^{\\infty} \\frac{1}{x^2}\\,dx$ converges ($p = 2 > 1$):
+### Worked Example 3 (substitution, Type I): $\\int_e^{\\infty} \\frac{1}{x(\\ln x)^2}\\,dx$
 
-$$\\int_1^{\\infty} \\frac{1}{x^2 + 1}\\,dx \\quad \\text{converges by DCT.}$$
+Let $u = \\ln x$, so the bounds become $u = 1$ to $u \\to \\infty$:
 
-### Example: $\\int_1^{\\infty} \\frac{1}{\\sqrt{x} - 0.5}\\,dx$
+$$\\int_1^{\\infty} u^{-2}\\,du = \\lim_{t \\to \\infty}\\left[-\\frac{1}{u}\\right]_1^t = 1$$
 
-For $x \\ge 1$: $\\sqrt{x} - 0.5 \\le \\sqrt{x}$, so $\\frac{1}{\\sqrt{x} - 0.5} \\ge \\frac{1}{\\sqrt{x}}$.
-
-Since $\\int_1^{\\infty} \\frac{1}{\\sqrt{x}}\\,dx$ diverges ($p = 1/2 \\le 1$):
-
-$$\\int_1^{\\infty} \\frac{1}{\\sqrt{x} - 0.5}\\,dx \\quad \\text{diverges by DCT.}$$`
-    },
-    {
-      id: 'imp4-lct',
-      type: 'text' as const,
-      content: `### Limit Comparison Test (LCT)
-
-When direct inequality is hard to establish, use:
-
-$$\\boxed{\\text{If } \\lim_{x \\to \\infty} \\frac{f(x)}{g(x)} = L, \\quad 0 < L < \\infty, \\text{ then } \\int f \\text{ and } \\int g \\text{ both converge or both diverge.}}$$
-
-**Why this works:** If the ratio approaches a finite nonzero constant, the functions decay at the same rate.
-
-### Example: $\\int_1^{\\infty} \\frac{x}{x^3 + 5}\\,dx$
-
-Compare with $g(x) = \\frac{1}{x^2}$ (since $\\frac{x}{x^3} = \\frac{1}{x^2}$ for large $x$):
-
-$$\\lim_{x \\to \\infty} \\frac{x/(x^3+5)}{1/x^2} = \\lim_{x \\to \\infty} \\frac{x^3}{x^3 + 5} = 1$$
-
-Since $L = 1 \\in (0, \\infty)$ and $\\int_1^{\\infty} \\frac{1}{x^2}\\,dx$ converges, so does $\\int_1^{\\infty} \\frac{x}{x^3+5}\\,dx$.
-
-> **AP Tip:** The LCT is often the fastest approach on the AP exam. Identify the dominant terms and compare to $1/x^p$.`
+The new integral is a $p$-integral with $p = 2 > 1$, which is why it converges.`
     },
     {
       id: 'imp4-mc1',
       type: 'multiple-choice' as const,
-      content: '**Comparison Test Practice**',
+      content: '**Evaluating by Limits**',
       exercise: {
         questions: [
           {
-            question: 'To show $\\int_1^{\\infty} \\frac{\\sin^2 x}{x^2}\\,dx$ converges using DCT, the best comparison is:',
+            question: 'What is true about $\\int_{-\\infty}^{\\infty} \\frac{x}{1+x^2}\\,dx$?',
             options: [
-              '$\\frac{\\sin^2 x}{x^2} \\le \\frac{1}{x^2}$, which converges',
-              '$\\frac{\\sin^2 x}{x^2} \\le \\frac{1}{x}$, which diverges',
-              '$\\frac{\\sin^2 x}{x^2} \\ge \\frac{1}{x^3}$, which converges',
-              'DCT cannot be applied here'
+              'It converges to $0$, because the integrand is odd',
+              'It diverges, since each half is infinite',
+              'It converges to $\\ln 2$, from the substitution $u = 1 + x^2$',
+              'It converges to $\\pi$, the same value as for $\\frac{1}{1+x^2}$'
             ],
-            correctAnswer: 0,
-            explanation: 'Since $0 \\le \\sin^2 x \\le 1$, we have $\\frac{\\sin^2 x}{x^2} \\le \\frac{1}{x^2}$. Since $\\int_1^{\\infty} \\frac{1}{x^2}\\,dx$ converges ($p=2>1$), so does the original.'
+            correctAnswer: 1,
+            explanation: 'On $[0, t]$ the integral is $\\frac{1}{2}\\ln(1+t^2) \\to \\infty$, so the right half diverges and so does the whole integral. Odd symmetry cannot cancel two infinite halves, $\\ln 2$ comes from stopping the substitution at $t = 1$, and $\\pi$ belongs to $\\frac{1}{1+x^2}$, a different integrand.'
           },
           {
-            question: 'Using LCT, $\\int_1^{\\infty} \\frac{3x^2 + 1}{x^4 - 2}\\,dx$ should be compared to:',
-            options: [
-              '$\\int_1^{\\infty} \\frac{1}{x^2}\\,dx$ (converges)',
-              '$\\int_1^{\\infty} \\frac{1}{x}\\,dx$ (diverges)',
-              '$\\int_1^{\\infty} \\frac{1}{x^4}\\,dx$ (converges)',
-              '$\\int_1^{\\infty} \\frac{1}{x^3}\\,dx$ (converges)'
-            ],
-            correctAnswer: 0,
-            explanation: 'Dominant terms: $\\frac{3x^2}{x^4} = \\frac{3}{x^2}$. So compare to $1/x^2$. The limit ratio is $3 \\in (0,\\infty)$, confirming convergence.'
+            question: '$\\int_0^{\\infty} x e^{-x^2}\\,dx = $',
+            options: ['$\\frac{1}{4}$', '$\\infty$', '$\\frac{1}{2}$', '$2$'],
+            correctAnswer: 2,
+            explanation: 'With $u = x^2$ the integral becomes $\\frac{1}{2}\\int_0^{\\infty} e^{-u}\\,du = \\frac{1}{2}$. Using $\\frac{1}{2}$ twice gives $\\frac{1}{4}$, multiplying by $2$ instead of $\\frac{1}{2}$ gives $2$, and the integrand decays fast enough that the integral does not diverge.'
           }
         ]
       }
@@ -105,22 +74,22 @@ Since $L = 1 \\in (0, \\infty)$ and $\\int_1^{\\infty} \\frac{1}{x^2}\\,dx$ conv
     {
       id: 'imp4-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Choose the Right Test**',
+      content: '**Set Up and Evaluate**',
       exercise: {
         dropdowns: [
           {
-            label: '$\\int_1^{\\infty} \\frac{e^{-x}}{x}\\,dx$: Best approach?',
-            options: ['DCT with $e^{-x}$', 'LCT with $\\frac{1}{x}$', '$p$-test with $p = 1$', 'Direct antiderivative'],
-            correctAnswers: ['DCT with $e^{-x}$'],
-            hints: ['For $x \\ge 1$: $\\frac{1}{x} \\le 1$, so $\\frac{e^{-x}}{x} \\le e^{-x}$.'],
-            explanation: '$\\frac{e^{-x}}{x} \\le e^{-x}$ for $x \\ge 1$, and $\\int_1^{\\infty} e^{-x}\\,dx = e^{-1}$ converges. By DCT, the original converges.'
+            label: '$\\int_{-\\infty}^{0} e^{x}\\,dx$ equals',
+            options: ['$e$', '$\\infty$', '$0$', '$1$'],
+            correctAnswers: ['$1$'],
+            hints: ['Write it as $\\lim_{t \\to -\\infty} \\int_t^0 e^x\\,dx$.'],
+            explanation: '$\\lim_{t \\to -\\infty}\\left[e^x\\right]_t^0 = \\lim_{t \\to -\\infty}(1 - e^t) = 1$, because $e^t \\to 0$ as $t \\to -\\infty$. The value $e$ comes from evaluating at $x = 1$, $0$ forgets the upper limit, and the integrand shrinks toward $0$ on the left, so it does not diverge.'
           },
           {
-            label: '$\\int_1^{\\infty} \\frac{2x+3}{x^2+x}\\,dx$: Converges or diverges?',
-            options: ['Diverges (behaves like $1/x$)', 'Converges (behaves like $1/x^2$)', 'Converges by DCT', 'Cannot determine'],
-            correctAnswers: ['Diverges (behaves like $1/x$)'],
-            hints: ['$\\frac{2x+3}{x^2+x} \\approx \\frac{2x}{x^2} = \\frac{2}{x}$ for large $x$.'],
-            explanation: 'LCT with $1/x$: $\\lim \\frac{(2x+3)/(x^2+x)}{1/x} = \\lim \\frac{(2x+3)x}{x^2+x} = \\lim \\frac{2x^2+3x}{x^2+x} = 2$. Since $\\int 1/x$ diverges, so does this.'
+            label: 'The correct first step for $\\int_{-\\infty}^{\\infty} f(x)\\,dx$ is to',
+            options: ['take $\\lim_{t \\to \\infty}\\int_{-t}^{t} f(x)\\,dx$', 'split it into two integrals at a point', 'check whether $f$ is an odd function', 'evaluate $f(x)$ as $x \\to \\pm\\infty$'],
+            correctAnswers: ['split it into two integrals at a point'],
+            hints: ['Each infinite bound needs its own limit.'],
+            explanation: 'Each infinite bound gets its own limit, so split at a point and require both halves to converge. A single symmetric limit can hide divergence, odd symmetry only helps after convergence is known, and $f \\to 0$ at the ends does not guarantee convergence.'
           }
         ]
       }
@@ -128,28 +97,29 @@ Since $L = 1 \\in (0, \\infty)$ and $\\int_1^{\\infty} \\frac{1}{x^2}\\,dx$ conv
     {
       id: 'imp4-input',
       type: 'input-box' as const,
-      content: '**Limit Comparison Computation**',
+      content: '**Computation**',
       exercise: {
-        question: 'Use LCT to analyze $\\int_1^{\\infty} \\frac{5x}{2x^3 - 1}\\,dx$ by comparing to $\\frac{1}{x^2}$. Compute $L = \\lim_{x \\to \\infty} \\frac{5x/(2x^3-1)}{1/x^2}$. What is $L$?',
-        correctAnswer: '5/2',
-        acceptableAnswers: ['5/2', '2.5', '2.50'],
-        hints: ['$\\frac{5x/(2x^3-1)}{1/x^2} = \\frac{5x \\cdot x^2}{2x^3 - 1} = \\frac{5x^3}{2x^3 - 1}$.', 'Divide numerator and denominator by $x^3$: $\\frac{5}{2 - 1/x^3} \\to \\frac{5}{2}$.'],
-        explanation: '$L = \\lim_{x \\to \\infty} \\frac{5x^3}{2x^3 - 1} = \\frac{5}{2}$. Since $0 < \\frac{5}{2} < \\infty$ and $\\int_1^{\\infty} 1/x^2$ converges, the original converges.'
+        question: 'Evaluate $\\int_1^{\\infty} \\frac{6}{x^4}\\,dx$.',
+        correctAnswer: '2',
+        acceptableAnswers: ['2', '2.0'],
+        hints: ['$\\int_1^t 6x^{-4}\\,dx = \\left[-2x^{-3}\\right]_1^t$.', 'Let $t \\to \\infty$.'],
+        explanation: '$\\lim_{t \\to \\infty}\\left(-\\frac{2}{t^3} + 2\\right) = 2$. This matches the $p$-integral result $\\int_1^{\\infty} x^{-p}\\,dx = \\frac{1}{p-1}$ with $p = 4$: $6 \\cdot \\frac{1}{3} = 2$.'
       }
     },
     {
       id: 'imp4-summary',
       type: 'text' as const,
-      content: `### Key Takeaways \u2014 Part 4
+      content: `### Key Takeaways — Part 4
 
-| Test | When to Use | Key Requirement |
-|------|------------|-----------------|
-| Direct (DCT) | Clear inequality | $0 \\le f \\le g$ (or $f \\ge g \\ge 0$) |
-| Limit (LCT) | Dominant-term comparison | $\\lim f/g = L$, $0 < L < \\infty$ |
+| Situation | Method |
+|------|------------|
+| $\\int_{-\\infty}^{\\infty}$ | Split at a point; both halves must converge |
+| Substitution needed | Change the bounds, keeping the limit variable |
+| New integral is $\\int_1^{\\infty} u^{-p}\\,du$ | Converges exactly when $p > 1$ |
 
-**Strategy:** Identify the dominant terms as $x \\to \\infty$, form $\\frac{1}{x^p}$, and apply LCT. If $p > 1$, converges. If $p \\le 1$, diverges.
+Convergence on the AP exam is shown by **evaluating the limit**: if it is a finite number, the integral converges to that number; otherwise it diverges.
 
-> **Coming Up:** Part 5 covers **special convergence results** and the interplay between $p$-integrals and comparison tests on the AP exam.`
+> **Coming Up:** Part 5 covers **special results** and the way improper integrals appear on the AP exam.`
     }
   ]
 };

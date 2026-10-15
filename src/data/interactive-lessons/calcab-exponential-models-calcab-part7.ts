@@ -48,10 +48,10 @@ export const calcabExpModelsPart7Data = {
             explanation: '$5 = e^{0.02t}$. $t = \\frac{\\ln 5}{0.02} \\approx 80.47$ min. $\\frac{5}{0.02}$ forgets the logarithm; $\\frac{\\ln 2}{0.02}$ is the doubling time, not the time to grow fivefold; using $2$ instead of $0.02$ for the rate gives under a minute.'
           },
           {
-            question: 'With continuous compounding at 6%, the effective annual rate is:',
-            options: ['$6\\%$', '$e^{0.06}-1 \\approx 6.18\\%$', '$(1.03)^2 - 1 \\approx 6.09\\%$', '$1 - e^{-0.06} \\approx 5.82\\%$'],
+            question: 'A drug amount satisfies $\\frac{dA}{dt} = kA$ and has a half-life of $4$ hours. Then $k =$',
+            options: ['$\\frac{\\ln 2}{4}$', '$-\\frac{\\ln 2}{4}$', '$-\\frac{1}{8}$', '$-4\\ln 2$'],
             correctAnswer: 1,
-            explanation: 'Effective rate $= e^r - 1 = e^{0.06} - 1 \\approx 6.18\\%$. The nominal $6\\%$ ignores compounding; $(1.03)^2 - 1$ is semiannual compounding; $1 - e^{-0.06}$ uses the wrong sign in the exponent.'
+            explanation: '$\\frac{1}{2} = e^{4k}$ gives $k = \\frac{\\ln(1/2)}{4} = -\\frac{\\ln 2}{4} \\approx -0.173$ per hour. The positive value describes growth, $-\\frac{1}{8}$ skips the logarithm, and $-4\\ln 2$ multiplies by the half-life instead of dividing.'
           }
         ]
       }
@@ -146,7 +146,7 @@ You\u2019ve mastered:
 |:---:|:---:|
 | 1 | Exponential growth & decay |
 | 2 | Newton\u2019s Law of Cooling |
-| 3 | Compound interest & continuous growth |
+| 3 | Doubling time and half-life |
 | 4 | Derivatives & integrals of exponentials |
 | 5 | Writing and solving rate models |
 | 6 | Problem-solving workshop |

@@ -64,10 +64,10 @@ export const calcabDiffEqPart7Data = {
       exercise: {
         questions: [
           {
-            question: 'For $\\frac{dy}{dx} = (y-1)(y-3)$, which equilibrium is stable?',
-            options: ['$y = 1$ only', '$y = 3$ only', 'Both', 'Neither'],
+            question: 'For $\\frac{dy}{dx} = (y-1)(y-3)$ with $y(0) = 2$, what happens to $y$ as $x$ increases?',
+            options: ['$y$ decreases toward $1$', '$y$ increases up toward $3$', '$y$ remains at $2$ for all $x$', '$y$ decreases without bound'],
             correctAnswer: 0,
-            explanation: 'At $y=2$ (between equilibria): $(1)(-1) < 0$ → decreasing toward $y=1$. At $y=4$: $(3)(1) > 0$ → increasing away from $y=3$. So $y=1$ is stable, $y=3$ is unstable.'
+            explanation: 'At $y = 2$, $\\frac{dy}{dx} = (1)(-1) = -1 < 0$, so $y$ decreases, and it cannot cross the constant solution $y = 1$, so it levels off toward $1$. It would rise only where the product is positive, $y = 2$ is not an equilibrium, and the solution is trapped above $y = 1$.'
           },
           {
             question: 'The general solution of $\\frac{dy}{dx} = \\frac{2y}{x}$ is:',
@@ -143,7 +143,7 @@ export const calcabDiffEqPart7Data = {
 | Exponential growth/decay | ✅ |
 | Newton's cooling | ✅ |
 | Tangent-line estimates & concavity of solutions | ✅ |
-| Equilibrium & stability | ✅ |
+| Equilibrium solutions | ✅ |
 | Particular solutions & domains | ✅ |
 
 > **Congratulations!** You've mastered differential equations for AP Calculus AB.`

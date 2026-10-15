@@ -136,7 +136,7 @@ $t = \\frac{\\ln(3/13)}{k} = \\frac{\\ln(3/13)}{\\frac{1}{10}\\ln(8/13)} \\appro
 | Long-term behavior | $T \\to T_s$ |
 | Warming variant | Same formula when $T_0 < T_s$ |
 
-> **Up Next:** Part 3 \u2014 Compound Interest & Continuous Growth.`
+> **Up Next:** Part 3 \u2014 Finding $k$: Doubling Time and Half-Life.`
     }
   ]
 };
