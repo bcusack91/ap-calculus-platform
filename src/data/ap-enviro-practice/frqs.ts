@@ -4,8 +4,10 @@ import type { SAQItem } from '@/components/FullLengthPracticeExam'
  * AP Environmental Science — Section II Free-Response.
  * 3 long FRQs, 10 points each, 70 minutes total (~23 min each):
  *   Q1 — Design an Investigation
- *   Q2 — Analyze an Environmental Problem and Propose a Solution
- *   Q3 — Analyze an Environmental Problem and Propose a Solution Doing Calculations
+ *   Q2 — Analyze and Interpret Quantitative Data (data in a table, chart or graph; Practice 5)
+ *   Q3 — Analyze an Environmental Problem Doing Calculations (Practice 6)
+ * Titles follow the 2026–27 CED clarifications (first used on the May 2027 exam).
+ * Q2 and Q3 also ask students to propose solutions, as the official descriptions say.
  */
 
 export const FRQS: SAQItem[] = [
@@ -48,11 +50,55 @@ You have been asked to design a controlled experiment to test the second part of
     ],
   },
 
-  /* ====== Q2 — ANALYZE ENVIRONMENTAL PROBLEM + DESIGN SOLUTION + MATH (10 pts) ====== */
+  /* ====== Q2 — ANALYZE AND INTERPRET QUANTITATIVE DATA (10 pts) ====== */
   {
     type: 'saq',
-    topic: 'frq-analyze-and-propose-solution',
-    stimulus: `**Energy Choices for a Mid-Sized City**
+    topic: 'frq-analyze-interpret-quantitative-data',
+    stimulus: `**Analyze and Interpret Quantitative Data — Mercury Contamination in a Reservoir**
+
+A reservoir downstream from a coal-fired power plant has elevated mercury (Hg) concentrations in its water and sediments. State health officials have issued a fish-consumption advisory after sampling fish from the reservoir:
+
+| Trophic Level | Organism            | Mean Hg concentration (ppm) |
+|---------------|--------------------|-----------------------------|
+| Producer      | Phytoplankton      | 0.0001 |
+| Primary       | Zooplankton        | 0.001  |
+| Secondary     | Bluegill (small fish) | 0.05  |
+| Tertiary      | Largemouth bass    | 0.5    |
+
+The U.S. EPA recommends that fish tissue not exceed **0.3 ppm methylmercury** for unrestricted consumption.`,
+    parts: [
+      {
+        prompt: '**(a) Identify** the source of the mercury entering this reservoir from the coal-fired power plant, and describe how it ultimately ends up in the fish tissue.',
+        rubric: 'Source: trace mercury in coal is volatilized during combustion and emitted from the smokestack as gaseous Hg. Pathway: atmospheric Hg deposits onto water/land via wet or dry deposition → enters reservoir → anaerobic bacteria in sediments methylate inorganic Hg into methylmercury $(CH_{3}Hg^{+})$ → methylmercury is taken up by phytoplankton → biomagnifies through the food web (explained in part c).',
+      },
+      {
+        prompt: '**(b) Describe** the trend in mean mercury concentration shown in the table, and **identify** which organisms in the table have a mean concentration above the EPA recommendation for unrestricted consumption.',
+        rubric: 'Trend: mean Hg concentration increases with each step up the food chain, by a factor of about 10 to 50 at each trophic level (0.0001 → 0.001 → 0.05 → 0.5 ppm), so the tertiary consumers have the highest concentration. Only the largemouth bass (0.5 ppm) exceeds the 0.3 ppm recommendation; bluegill (0.05 ppm) is below it. (Both the trend and the correct organism are needed for the point.)',
+      },
+      {
+        prompt: '**(c) Explain** the biological process responsible for the pattern in the data, and use the data to **explain** why the advisory targets bass rather than bluegill.',
+        rubric: 'BIOMAGNIFICATION: persistent toxins (Hg, DDT, PCBs) are not metabolized or excreted readily. As predators eat many prey items, they accumulate the combined Hg burden of all those prey. Concentrations therefore INCREASE at higher trophic levels. (Mention bioaccumulation = within an individual over time, biomagnification = across trophic levels.) The bass is a tertiary consumer that feeds on fish such as bluegill, so it carries about 10 times the bluegill concentration and is the only species in the table above 0.3 ppm.',
+      },
+      {
+        prompt: '**(d) Describe** ONE specific health effect of methylmercury exposure on humans.',
+        rubric: 'Acceptable: neurological damage (especially to developing fetus and young children) → developmental delay, reduced IQ, motor and cognitive impairment; tremors; vision/hearing impairment; cardiovascular effects in adults; kidney damage. (Minamata disease is a famous example.)',
+      },
+      {
+        prompt: '**(e) Identify and describe** ONE specific U.S. federal regulation that limits mercury emissions from power plants.',
+        rubric: 'Acceptable: EPA\'s Mercury and Air Toxics Standards (MATS) under the Clean Air Act, regulating Hg and other toxic pollutants from coal-fired plants; the Clean Air Act broadly; Minamata Convention (international, ratified by U.S.) on global Hg reduction. Must identify the regulation and describe how it limits Hg emissions (e.g., requires scrubbers, activated-carbon injection, fuel switching).',
+      },
+      {
+        prompt: '**(f) Propose and justify** one specific solution that the local community could implement to REDUCE human exposure to mercury from the reservoir while longer-term emission reductions take effect.',
+        rubric: 'Acceptable solutions with justification: (1) Issue and enforce fish-consumption advisories — particularly limiting consumption of long-lived top-predator fish (bass, walleye, pike) by pregnant women and children; (2) public education campaigns; (3) provide alternative protein sources to subsistence fishers; (4) post warning signs at fishing access points; (5) sediment remediation (capping or removal) in highly contaminated zones; (6) substitute species — encourage fishing for shorter-lived, lower-trophic species (bluegill); (7) work with the plant to install activated-carbon injection systems on existing units.',
+      },
+    ],
+  },
+
+  /* ====== Q3 — ANALYZE AN ENVIRONMENTAL PROBLEM DOING CALCULATIONS (10 pts) ====== */
+  {
+    type: 'saq',
+    topic: 'frq-analyze-problem-doing-calculations',
+    stimulus: `**Analyze an Environmental Problem Doing Calculations — Energy Choices for a Mid-Sized City**
 
 The city of Greenville is planning to replace its aging 200-megawatt (MW) coal-fired power plant. Officials are considering two options:
 
@@ -75,12 +121,12 @@ Approximate $CO_{2}$ emissions per kilowatt-hour (kWh) of electricity generated:
         rubric: 'Coal: $1.5 \\times 10^{9}$ kg. Natural gas: $1.5 \\times 10^{9}$ × 0.45 = $6.75 \\times 10^{8}$ kg. Reduction = $(1.5 \\times 10^{9} - 6.75 \\times 10^{8})$ / $1.5 \\times 10^{9}$ = 0.55 = 55% reduction. (Acceptable: any reasonable calculation showing 55% or equivalent fraction.)',
       },
       {
-        prompt: '**(c) Identify** ONE specific environmental DRAWBACK of natural gas as an electricity source (other than $CO_{2}$ emissions).',
-        rubric: 'Acceptable: methane leakage during extraction/transport ($CH_{4}$ has high GWP); hydraulic fracturing (fracking) causing groundwater contamination; induced seismicity from wastewater injection; large water consumption for fracking; habitat disruption from well pads and pipelines; air emissions of NOx and VOCs from drilling operations.',
+        prompt: '**(c) Calculate** the annual $CO_{2}$ emissions (in kilograms) under Option B if the solar facility supplies 25% of the city\'s electricity and the natural gas backup supplies the remaining 75%. Then **calculate** how many kilograms of $CO_{2}$ per year Option B would avoid compared with Option A. Show your work.',
+        rubric: 'Solar: $0.25 \\times 1.5 \\times 10^{9}$ kWh × 0.05 kg/kWh = $1.875 \\times 10^{7}$ kg. Gas: $0.75 \\times 1.5 \\times 10^{9}$ kWh × 0.45 kg/kWh = $5.0625 \\times 10^{8}$ kg. Option B total ≈ $5.25 \\times 10^{8}$ kg $CO_{2}/yr$. Option A (all gas) = $6.75 \\times 10^{8}$ kg, so Option B avoids about $1.5 \\times 10^{8}$ kg $CO_{2}$ per year. (Both values with work needed for the point.)',
       },
       {
-        prompt: '**(d) Describe** ONE advantage and ONE disadvantage of Option B (solar PV + natural gas backup) compared to Option A (natural gas only).',
-        rubric: 'Advantage: lower lifecycle $CO_{2}$ emissions; renewable solar reduces fossil fuel use; reduces local air pollutants when sun is generating; no fuel cost for solar portion; can be scaled with battery storage. Disadvantage: solar is intermittent (no power at night/cloudy days, requires backup); higher upfront capital cost; large land area required; some natural gas use continues; PV manufacturing has environmental footprint.',
+        prompt: '**(d) Describe** ONE advantage and ONE disadvantage of Option B (solar PV + natural gas backup) compared to Option A (natural gas only). Your advantage may use your result from part (c).',
+        rubric: 'Advantage: lower lifecycle $CO_{2}$ emissions (about $1.5 \\times 10^{8}$ kg less per year, from part (c)); natural gas extraction impacts such as methane leakage and fracking are reduced; renewable solar reduces fossil fuel use; reduces local air pollutants when sun is generating; no fuel cost for solar portion; can be scaled with battery storage. Disadvantage: solar is intermittent (no power at night/cloudy days, requires backup); higher upfront capital cost; large land area required; some natural gas use continues; PV manufacturing has environmental footprint.',
       },
       {
         prompt: '**(e) Explain** how energy CONSERVATION measures (such as building insulation upgrades or LED lighting) could reduce the size of the power plant the city needs to build, and identify ONE specific conservation measure.',
@@ -89,50 +135,6 @@ Approximate $CO_{2}$ emissions per kilowatt-hour (kWh) of electricity generated:
       {
         prompt: '**(f) Describe** ONE specific federal incentive or policy in the United States that encourages adoption of renewable energy.',
         rubric: 'Acceptable: federal Production Tax Credit (PTC) for wind; Investment Tax Credit (ITC) for solar; Inflation Reduction Act (2022) clean-energy tax credits; Renewable Portfolio Standards (state level); accelerated depreciation (MACRS) for renewable projects; net metering policies; DOE loan guarantee programs. Must name a specific policy and connect it to renewables.',
-      },
-    ],
-  },
-
-  /* ====== Q3 — ANALYZE ENVIRONMENTAL PROBLEM + MATH (10 pts) ====== */
-  {
-    type: 'saq',
-    topic: 'frq-analyze-environmental-problem',
-    stimulus: `**Mercury Contamination in a Reservoir**
-
-A reservoir downstream from a coal-fired power plant has elevated mercury (Hg) concentrations in its water and sediments. State health officials have issued a fish-consumption advisory after sampling fish from the reservoir:
-
-| Trophic Level | Organism            | Mean Hg concentration (ppm) |
-|---------------|--------------------|-----------------------------|
-| Producer      | Phytoplankton      | 0.0001 |
-| Primary       | Zooplankton        | 0.001  |
-| Secondary     | Bluegill (small fish) | 0.05  |
-| Tertiary      | Largemouth bass    | 0.5    |
-
-The U.S. EPA recommends that fish tissue not exceed **0.3 ppm methylmercury** for unrestricted consumption.`,
-    parts: [
-      {
-        prompt: '**(a) Identify** the source of the mercury entering this reservoir from the coal-fired power plant, and describe how it ultimately ends up in the fish tissue.',
-        rubric: 'Source: trace mercury in coal is volatilized during combustion and emitted from the smokestack as gaseous Hg. Pathway: atmospheric Hg deposits onto water/land via wet or dry deposition → enters reservoir → anaerobic bacteria in sediments methylate inorganic Hg into methylmercury $(CH_{3}Hg^{+})$ → methylmercury is taken up by phytoplankton → biomagnifies through the food web (described in part b).',
-      },
-      {
-        prompt: '**(b) Calculate** by what factor the mercury concentration increases from phytoplankton to largemouth bass. Show your work.',
-        rubric: 'Factor = 0.5 / 0.0001 = 5,000. Bass have 5,000 times more Hg than phytoplankton. (Setup with units 1 pt, correct answer 1 pt.)',
-      },
-      {
-        prompt: '**(c) Explain** the biological process responsible for the pattern of increasing mercury concentration shown in the table.',
-        rubric: 'BIOMAGNIFICATION: persistent toxins (Hg, DDT, PCBs) are not metabolized or excreted readily. As predators eat many prey items, they accumulate the combined Hg burden of all those prey. Concentrations therefore INCREASE at higher trophic levels. (Mention bioaccumulation = within an individual over time, biomagnification = across trophic levels.)',
-      },
-      {
-        prompt: '**(d) Describe** ONE specific health effect of methylmercury exposure on humans.',
-        rubric: 'Acceptable: neurological damage (especially to developing fetus and young children) → developmental delay, reduced IQ, motor and cognitive impairment; tremors; vision/hearing impairment; cardiovascular effects in adults; kidney damage. (Minamata disease is a famous example.)',
-      },
-      {
-        prompt: '**(e) Identify and describe** ONE specific U.S. federal regulation that limits mercury emissions from power plants.',
-        rubric: 'Acceptable: EPA\'s Mercury and Air Toxics Standards (MATS) under the Clean Air Act, regulating Hg and other toxic pollutants from coal-fired plants; the Clean Air Act broadly; Minamata Convention (international, ratified by U.S.) on global Hg reduction. Must identify the regulation and describe how it limits Hg emissions (e.g., requires scrubbers, activated-carbon injection, fuel switching).',
-      },
-      {
-        prompt: '**(f) Propose and justify** one specific solution that the local community could implement to REDUCE human exposure to mercury from the reservoir while longer-term emission reductions take effect.',
-        rubric: 'Acceptable solutions with justification: (1) Issue and enforce fish-consumption advisories — particularly limiting consumption of long-lived top-predator fish (bass, walleye, pike) by pregnant women and children; (2) public education campaigns; (3) provide alternative protein sources to subsistence fishers; (4) post warning signs at fishing access points; (5) sediment remediation (capping or removal) in highly contaminated zones; (6) substitute species — encourage fishing for shorter-lived, lower-trophic species (bluegill); (7) work with the plant to install activated-carbon injection systems on existing units.',
       },
     ],
   },

@@ -29,7 +29,7 @@ export const config: FullLengthExamConfig = {
       name: 'Section II',
       shortName: 'Free Response',
       description:
-        '3 long free-response questions (10 points each, ~23 min each): Q1 Design an Investigation, Q2 Analyze an Environmental Problem and Propose a Solution, Q3 Analyze an Environmental Problem and Propose a Solution Doing Calculations. Self-graded rubric checklist after each part.',
+        '3 long free-response questions (10 points each, ~23 min each), titled as in the 2026–27 course description: Q1 Design an Investigation, Q2 Analyze and Interpret Quantitative Data, Q3 Analyze an Environmental Problem Doing Calculations. Self-graded rubric checklist after each part.',
       timeLimitMinutes: 70,
       items: FRQS,
     },
@@ -43,9 +43,9 @@ export const config: FullLengthExamConfig = {
           'Section I: 80 MCQs (90 min, 60%)',
           'Section II: 3 FRQs (70 min, 40%)',
           '   • Q1 Design an Investigation (10 pts)',
-          '   • Q2 Analyze + Propose Solution w/ math (10 pts)',
-          '   • Q3 Analyze Environmental Problem w/ math (10 pts)',
-          'Total: 2 hours 40 minutes',
+          '   • Q2 Analyze and Interpret Quantitative Data (10 pts)',
+          '   • Q3 Analyze an Environmental Problem Doing Calculations (10 pts)',
+          'Total: 2 hours 40 minutes · Fully digital (Bluebook)',
         ],
       },
       {
