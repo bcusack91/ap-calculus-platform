@@ -837,48 +837,48 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Location & Place', loader: () => import('./hg-spatial-concepts-part1').then(m => m.hgSpatialConceptsPart1Data) },
-      { title: 'Spatial Patterns', loader: () => import('./hg-spatial-concepts-part2').then(m => m.hgSpatialConceptsPart2Data) },
-      { title: 'Map Types & Projections', loader: () => import('./hg-spatial-concepts-part3').then(m => m.hgSpatialConceptsPart3Data) },
-      { title: 'Geographic Data Sources', loader: () => import('./hg-spatial-concepts-part4').then(m => m.hgSpatialConceptsPart4Data) },
-      { title: 'Spatial Interaction Models', loader: () => import('./hg-spatial-concepts-part5').then(m => m.hgSpatialConceptsPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./hg-spatial-concepts-part6').then(m => m.hgSpatialConceptsPart6Data) },
-      { title: 'AP Review', loader: () => import('./hg-spatial-concepts-part7').then(m => m.hgSpatialConceptsPart7Data) }
+      { title: 'Location, Distance and Spatial Patterns', loader: () => import('./hg-spatial-concepts-part2').then(m => m.hgSpatialConceptsPart2Data) },
+      { title: 'Maps, Map Types and Projections', loader: () => import('./hg-spatial-concepts-part3').then(m => m.hgSpatialConceptsPart3Data) },
+      { title: 'Geographic Data and Its Power', loader: () => import('./hg-spatial-concepts-part4').then(m => m.hgSpatialConceptsPart4Data) },
+      { title: 'Scale of Analysis and Human-Environment Interaction', loader: () => import('./hg-spatial-concepts-part5').then(m => m.hgSpatialConceptsPart5Data) },
+      { title: 'AP Exam Practice: Maps, Data and Scale', loader: () => import('./hg-spatial-concepts-part6').then(m => m.hgSpatialConceptsPart6Data) },
+      { title: 'Synthesis Review: Thinking Spatially', loader: () => import('./hg-spatial-concepts-part7').then(m => m.hgSpatialConceptsPart7Data) }
     ],
   },
   'hg-population-distribution': {
     completionDestination: 'complete',
     parts: [
       { title: 'Population Distribution', loader: () => import('./hg-population-distribution-part1').then(m => m.hgPopulationDistributionPart1Data) },
-      { title: 'Population Composition', loader: () => import('./hg-population-distribution-part2').then(m => m.hgPopulationDistributionPart2Data) },
-      { title: 'Population Density Measures', loader: () => import('./hg-population-distribution-part3').then(m => m.hgPopulationDistributionPart3Data) },
-      { title: 'Factors Influencing Distribution', loader: () => import('./hg-population-distribution-part4').then(m => m.hgPopulationDistributionPart4Data) },
-      { title: 'World Population Clusters', loader: () => import('./hg-population-distribution-part5').then(m => m.hgPopulationDistributionPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./hg-population-distribution-part6').then(m => m.hgPopulationDistributionPart6Data) },
-      { title: 'AP Review', loader: () => import('./hg-population-distribution-part7').then(m => m.hgPopulationDistributionPart7Data) }
+      { title: 'Where People Live and Why', loader: () => import('./hg-population-distribution-part2').then(m => m.hgPopulationDistributionPart2Data) },
+      { title: 'Three Density Measures', loader: () => import('./hg-population-distribution-part3').then(m => m.hgPopulationDistributionPart3Data) },
+      { title: 'Consequences of Distribution and Density', loader: () => import('./hg-population-distribution-part4').then(m => m.hgPopulationDistributionPart4Data) },
+      { title: 'Population Composition and Pyramids', loader: () => import('./hg-population-distribution-part5').then(m => m.hgPopulationDistributionPart5Data) },
+      { title: 'AP Exam Practice: Density Data and Pyramids', loader: () => import('./hg-population-distribution-part6').then(m => m.hgPopulationDistributionPart6Data) },
+      { title: 'Synthesis Review: Where, How Dense, and Who', loader: () => import('./hg-population-distribution-part7').then(m => m.hgPopulationDistributionPart7Data) }
     ],
   },
   'hg-population-growth': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./hg-population-growth-part1').then(m => m.hgPopulationGrowthPart1Data) },
-      { title: 'Key Processes', loader: () => import('./hg-population-growth-part2').then(m => m.hgPopulationGrowthPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./hg-population-growth-part3').then(m => m.hgPopulationGrowthPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./hg-population-growth-part4').then(m => m.hgPopulationGrowthPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./hg-population-growth-part5').then(m => m.hgPopulationGrowthPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./hg-population-growth-part6').then(m => m.hgPopulationGrowthPart6Data) },
-      { title: 'AP Review', loader: () => import('./hg-population-growth-part7').then(m => m.hgPopulationGrowthPart7Data) }
+      { title: 'Population Dynamics: Measuring and Explaining Change', loader: () => import('./hg-population-growth-part2').then(m => m.hgPopulationGrowthPart2Data) },
+      { title: 'The Demographic and Epidemiological Transition Models', loader: () => import('./hg-population-growth-part3').then(m => m.hgPopulationGrowthPart3Data) },
+      { title: 'Malthus, His Critics, and the Data', loader: () => import('./hg-population-growth-part4').then(m => m.hgPopulationGrowthPart4Data) },
+      { title: 'Policies, Women and Aging', loader: () => import('./hg-population-growth-part5').then(m => m.hgPopulationGrowthPart5Data) },
+      { title: 'AP Exam Practice', loader: () => import('./hg-population-growth-part6').then(m => m.hgPopulationGrowthPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./hg-population-growth-part7').then(m => m.hgPopulationGrowthPart7Data) }
     ],
   },
   'hg-migration': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./hg-migration-part1').then(m => m.hgMigrationPart1Data) },
-      { title: 'Key Processes', loader: () => import('./hg-migration-part2').then(m => m.hgMigrationPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./hg-migration-part3').then(m => m.hgMigrationPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./hg-migration-part4').then(m => m.hgMigrationPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./hg-migration-part5').then(m => m.hgMigrationPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./hg-migration-part6').then(m => m.hgMigrationPart6Data) },
-      { title: 'AP Review', loader: () => import('./hg-migration-part7').then(m => m.hgMigrationPart7Data) }
+      { title: 'Causes of Migration in Depth', loader: () => import('./hg-migration-part2').then(m => m.hgMigrationPart2Data) },
+      { title: 'Forced and Voluntary Migration: Cases', loader: () => import('./hg-migration-part3').then(m => m.hgMigrationPart3Data) },
+      { title: 'Reading Migration Data and Flow Maps', loader: () => import('./hg-migration-part4').then(m => m.hgMigrationPart4Data) },
+      { title: 'Effects of Migration', loader: () => import('./hg-migration-part5').then(m => m.hgMigrationPart5Data) },
+      { title: 'AP Exam Practice', loader: () => import('./hg-migration-part6').then(m => m.hgMigrationPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./hg-migration-part7').then(m => m.hgMigrationPart7Data) }
     ],
   },
   'hg-culture-diffusion': {

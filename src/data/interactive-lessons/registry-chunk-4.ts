@@ -43,96 +43,96 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./macro-scarcity-opportunity-cost-part1').then(m => m.macroScarcityOpportunityCostPart1Data) },
-      { title: 'Key Processes', loader: () => import('./macro-scarcity-opportunity-cost-part2').then(m => m.macroScarcityOpportunityCostPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./macro-scarcity-opportunity-cost-part3').then(m => m.macroScarcityOpportunityCostPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./macro-scarcity-opportunity-cost-part4').then(m => m.macroScarcityOpportunityCostPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./macro-scarcity-opportunity-cost-part5').then(m => m.macroScarcityOpportunityCostPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./macro-scarcity-opportunity-cost-part6').then(m => m.macroScarcityOpportunityCostPart6Data) },
-      { title: 'AP Review', loader: () => import('./macro-scarcity-opportunity-cost-part7').then(m => m.macroScarcityOpportunityCostPart7Data) }
+      { title: 'Scarcity, Choice & Economic Systems', loader: () => import('./macro-scarcity-opportunity-cost-part2').then(m => m.macroScarcityOpportunityCostPart2Data) },
+      { title: 'Building the PPC & Increasing Opportunity Cost', loader: () => import('./macro-scarcity-opportunity-cost-part3').then(m => m.macroScarcityOpportunityCostPart3Data) },
+      { title: 'Reading PPC Graphs: Shifts, Pivots & Movements', loader: () => import('./macro-scarcity-opportunity-cost-part4').then(m => m.macroScarcityOpportunityCostPart4Data) },
+      { title: 'The PPC as a Macro Model & Common Misconceptions', loader: () => import('./macro-scarcity-opportunity-cost-part5').then(m => m.macroScarcityOpportunityCostPart5Data) },
+      { title: 'AP Exam Practice', loader: () => import('./macro-scarcity-opportunity-cost-part6').then(m => m.macroScarcityOpportunityCostPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./macro-scarcity-opportunity-cost-part7').then(m => m.macroScarcityOpportunityCostPart7Data) }
     ],
   },
   'macro-comparative-advantage': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./macro-comparative-advantage-part1').then(m => m.macroComparativeAdvantagePart1Data) },
-      { title: 'Key Processes', loader: () => import('./macro-comparative-advantage-part2').then(m => m.macroComparativeAdvantagePart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./macro-comparative-advantage-part3').then(m => m.macroComparativeAdvantagePart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./macro-comparative-advantage-part4').then(m => m.macroComparativeAdvantagePart4Data) },
-      { title: 'Change Over Time', loader: () => import('./macro-comparative-advantage-part5').then(m => m.macroComparativeAdvantagePart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./macro-comparative-advantage-part6').then(m => m.macroComparativeAdvantagePart6Data) },
-      { title: 'AP Review', loader: () => import('./macro-comparative-advantage-part7').then(m => m.macroComparativeAdvantagePart7Data) }
+      { title: 'Output vs. Input Problems', loader: () => import('./macro-comparative-advantage-part2').then(m => m.macroComparativeAdvantagePart2Data) },
+      { title: 'Specialization & Gains from Trade, by the Numbers', loader: () => import('./macro-comparative-advantage-part3').then(m => m.macroComparativeAdvantagePart3Data) },
+      { title: 'Comparative Advantage on PPC Graphs', loader: () => import('./macro-comparative-advantage-part4').then(m => m.macroComparativeAdvantagePart4Data) },
+      { title: 'Terms of Trade in Depth & Common Misconceptions', loader: () => import('./macro-comparative-advantage-part5').then(m => m.macroComparativeAdvantagePart5Data) },
+      { title: 'AP Exam Practice', loader: () => import('./macro-comparative-advantage-part6').then(m => m.macroComparativeAdvantagePart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./macro-comparative-advantage-part7').then(m => m.macroComparativeAdvantagePart7Data) }
     ],
   },
   'macro-gdp-growth': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./macro-gdp-growth-part1').then(m => m.macroGdpGrowthPart1Data) },
-      { title: 'Key Processes', loader: () => import('./macro-gdp-growth-part2').then(m => m.macroGdpGrowthPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./macro-gdp-growth-part3').then(m => m.macroGdpGrowthPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./macro-gdp-growth-part4').then(m => m.macroGdpGrowthPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./macro-gdp-growth-part5').then(m => m.macroGdpGrowthPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./macro-gdp-growth-part6').then(m => m.macroGdpGrowthPart6Data) },
-      { title: 'AP Review', loader: () => import('./macro-gdp-growth-part7').then(m => m.macroGdpGrowthPart7Data) }
+      { title: 'The Circular Flow & Three Ways to Measure GDP', loader: () => import('./macro-gdp-growth-part2').then(m => m.macroGdpGrowthPart2Data) },
+      { title: 'Classifying Transactions: What Counts and Where', loader: () => import('./macro-gdp-growth-part3').then(m => m.macroGdpGrowthPart3Data) },
+      { title: 'Real vs. Nominal GDP Calculations', loader: () => import('./macro-gdp-growth-part4').then(m => m.macroGdpGrowthPart4Data) },
+      { title: 'Limitations of GDP & the Business Cycle', loader: () => import('./macro-gdp-growth-part5').then(m => m.macroGdpGrowthPart5Data) },
+      { title: 'Economic Growth & Public Policy', loader: () => import('./macro-gdp-growth-part6').then(m => m.macroGdpGrowthPart6Data) },
+      { title: 'Synthesis Review & Exam Practice', loader: () => import('./macro-gdp-growth-part7').then(m => m.macroGdpGrowthPart7Data) }
     ],
   },
   'macro-unemployment-inflation': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./macro-unemployment-inflation-part1').then(m => m.macroUnemploymentInflationPart1Data) },
-      { title: 'Key Processes', loader: () => import('./macro-unemployment-inflation-part2').then(m => m.macroUnemploymentInflationPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./macro-unemployment-inflation-part3').then(m => m.macroUnemploymentInflationPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./macro-unemployment-inflation-part4').then(m => m.macroUnemploymentInflationPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./macro-unemployment-inflation-part5').then(m => m.macroUnemploymentInflationPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./macro-unemployment-inflation-part6').then(m => m.macroUnemploymentInflationPart6Data) },
-      { title: 'AP Review', loader: () => import('./macro-unemployment-inflation-part7').then(m => m.macroUnemploymentInflationPart7Data) }
+      { title: 'Measuring the Labor Market', loader: () => import('./macro-unemployment-inflation-part2').then(m => m.macroUnemploymentInflationPart2Data) },
+      { title: 'Natural Rate, Full Employment & Cyclical Unemployment', loader: () => import('./macro-unemployment-inflation-part3').then(m => m.macroUnemploymentInflationPart3Data) },
+      { title: 'Price Indices: Building and Using the CPI', loader: () => import('./macro-unemployment-inflation-part4').then(m => m.macroUnemploymentInflationPart4Data) },
+      { title: 'Costs of Inflation & Real Interest Rates', loader: () => import('./macro-unemployment-inflation-part5').then(m => m.macroUnemploymentInflationPart5Data) },
+      { title: 'AP Exam Practice', loader: () => import('./macro-unemployment-inflation-part6').then(m => m.macroUnemploymentInflationPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./macro-unemployment-inflation-part7').then(m => m.macroUnemploymentInflationPart7Data) }
     ],
   },
   'macro-ad-as': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./macro-ad-as-part1').then(m => m.macroAdAsPart1Data) },
-      { title: 'Key Processes', loader: () => import('./macro-ad-as-part2').then(m => m.macroAdAsPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./macro-ad-as-part3').then(m => m.macroAdAsPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./macro-ad-as-part4').then(m => m.macroAdAsPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./macro-ad-as-part5').then(m => m.macroAdAsPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./macro-ad-as-part6').then(m => m.macroAdAsPart6Data) },
-      { title: 'AP Review', loader: () => import('./macro-ad-as-part7').then(m => m.macroAdAsPart7Data) }
+      { title: 'SRAS and LRAS in Depth', loader: () => import('./macro-ad-as-part2').then(m => m.macroAdAsPart2Data) },
+      { title: 'Short-Run Shocks: Four Cases Worked', loader: () => import('./macro-ad-as-part3').then(m => m.macroAdAsPart3Data) },
+      { title: 'Reading AD-AS Graphs and Data', loader: () => import('./macro-ad-as-part4').then(m => m.macroAdAsPart4Data) },
+      { title: 'Long-Run Self-Adjustment and Common Misconceptions', loader: () => import('./macro-ad-as-part5').then(m => m.macroAdAsPart5Data) },
+      { title: 'AP Exam Practice', loader: () => import('./macro-ad-as-part6').then(m => m.macroAdAsPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./macro-ad-as-part7').then(m => m.macroAdAsPart7Data) }
     ],
   },
   'macro-multiplier-effect': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./macro-multiplier-effect-part1').then(m => m.macroMultiplierEffectPart1Data) },
-      { title: 'Key Processes', loader: () => import('./macro-multiplier-effect-part2').then(m => m.macroMultiplierEffectPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./macro-multiplier-effect-part3').then(m => m.macroMultiplierEffectPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./macro-multiplier-effect-part4').then(m => m.macroMultiplierEffectPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./macro-multiplier-effect-part5').then(m => m.macroMultiplierEffectPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./macro-multiplier-effect-part6').then(m => m.macroMultiplierEffectPart6Data) },
-      { title: 'AP Review', loader: () => import('./macro-multiplier-effect-part7').then(m => m.macroMultiplierEffectPart7Data) }
+      { title: 'Consumption, Saving and the MPC', loader: () => import('./macro-multiplier-effect-part2').then(m => m.macroMultiplierEffectPart2Data) },
+      { title: 'How the Multiplier Works, Round by Round', loader: () => import('./macro-multiplier-effect-part3').then(m => m.macroMultiplierEffectPart3Data) },
+      { title: 'Policy Calculations: Gaps, Taxes and the Balanced-Budget Multiplier', loader: () => import('./macro-multiplier-effect-part4').then(m => m.macroMultiplierEffectPart4Data) },
+      { title: 'Multipliers in the AD-AS Model and Common Misconceptions', loader: () => import('./macro-multiplier-effect-part5').then(m => m.macroMultiplierEffectPart5Data) },
+      { title: 'AP Exam Practice', loader: () => import('./macro-multiplier-effect-part6').then(m => m.macroMultiplierEffectPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./macro-multiplier-effect-part7').then(m => m.macroMultiplierEffectPart7Data) }
     ],
   },
   'macro-phillips-curve': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./macro-phillips-curve-part1').then(m => m.macroPhillipsCurvePart1Data) },
-      { title: 'Key Processes', loader: () => import('./macro-phillips-curve-part2').then(m => m.macroPhillipsCurvePart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./macro-phillips-curve-part3').then(m => m.macroPhillipsCurvePart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./macro-phillips-curve-part4').then(m => m.macroPhillipsCurvePart4Data) },
-      { title: 'Change Over Time', loader: () => import('./macro-phillips-curve-part5').then(m => m.macroPhillipsCurvePart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./macro-phillips-curve-part6').then(m => m.macroPhillipsCurvePart6Data) },
-      { title: 'AP Review', loader: () => import('./macro-phillips-curve-part7').then(m => m.macroPhillipsCurvePart7Data) }
+      { title: 'Linking the Phillips Curve to AD-AS', loader: () => import('./macro-phillips-curve-part2').then(m => m.macroPhillipsCurvePart2Data) },
+      { title: 'Expectations and Long-Run Adjustment, Worked Cases', loader: () => import('./macro-phillips-curve-part3').then(m => m.macroPhillipsCurvePart3Data) },
+      { title: 'Reading and Drawing Phillips Curve Graphs', loader: () => import('./macro-phillips-curve-part4').then(m => m.macroPhillipsCurvePart4Data) },
+      { title: 'Nuance and Common Misconceptions', loader: () => import('./macro-phillips-curve-part5').then(m => m.macroPhillipsCurvePart5Data) },
+      { title: 'AP Exam Practice', loader: () => import('./macro-phillips-curve-part6').then(m => m.macroPhillipsCurvePart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./macro-phillips-curve-part7').then(m => m.macroPhillipsCurvePart7Data) }
     ],
   },
   'macro-money-banking': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./macro-money-banking-part1').then(m => m.macroMoneyBankingPart1Data) },
-      { title: 'Key Processes', loader: () => import('./macro-money-banking-part2').then(m => m.macroMoneyBankingPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./macro-money-banking-part3').then(m => m.macroMoneyBankingPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./macro-money-banking-part4').then(m => m.macroMoneyBankingPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./macro-money-banking-part5').then(m => m.macroMoneyBankingPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./macro-money-banking-part6').then(m => m.macroMoneyBankingPart6Data) },
-      { title: 'AP Review', loader: () => import('./macro-money-banking-part7').then(m => m.macroMoneyBankingPart7Data) }
+      { title: 'Financial Assets: Money, Bonds and Stocks', loader: () => import('./macro-money-banking-part2').then(m => m.macroMoneyBankingPart2Data) },
+      { title: 'What Counts as Money', loader: () => import('./macro-money-banking-part3').then(m => m.macroMoneyBankingPart3Data) },
+      { title: 'Bank Balance Sheets (T-Accounts)', loader: () => import('./macro-money-banking-part4').then(m => m.macroMoneyBankingPart4Data) },
+      { title: 'Money Creation by the Banking System', loader: () => import('./macro-money-banking-part5').then(m => m.macroMoneyBankingPart5Data) },
+      { title: 'AP Exam Practice', loader: () => import('./macro-money-banking-part6').then(m => m.macroMoneyBankingPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./macro-money-banking-part7').then(m => m.macroMoneyBankingPart7Data) }
     ],
   },
   'macro-monetary-policy': {
@@ -199,96 +199,96 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./micro-scarcity-marginal-analysis-part1').then(m => m.microScarcityMarginalAnalysisPart1Data) },
-      { title: 'Key Processes', loader: () => import('./micro-scarcity-marginal-analysis-part2').then(m => m.microScarcityMarginalAnalysisPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./micro-scarcity-marginal-analysis-part3').then(m => m.microScarcityMarginalAnalysisPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./micro-scarcity-marginal-analysis-part4').then(m => m.microScarcityMarginalAnalysisPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./micro-scarcity-marginal-analysis-part5').then(m => m.microScarcityMarginalAnalysisPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./micro-scarcity-marginal-analysis-part6').then(m => m.microScarcityMarginalAnalysisPart6Data) },
-      { title: 'AP Review', loader: () => import('./micro-scarcity-marginal-analysis-part7').then(m => m.microScarcityMarginalAnalysisPart7Data) }
+      { title: 'Scarcity, Choice & Economic Systems', loader: () => import('./micro-scarcity-marginal-analysis-part2').then(m => m.microScarcityMarginalAnalysisPart2Data) },
+      { title: 'The Production Possibilities Curve', loader: () => import('./micro-scarcity-marginal-analysis-part3').then(m => m.microScarcityMarginalAnalysisPart3Data) },
+      { title: 'Comparative Advantage & Terms of Trade', loader: () => import('./micro-scarcity-marginal-analysis-part4').then(m => m.microScarcityMarginalAnalysisPart4Data) },
+      { title: 'Cost-Benefit Analysis & Marginal Decision Tables', loader: () => import('./micro-scarcity-marginal-analysis-part5').then(m => m.microScarcityMarginalAnalysisPart5Data) },
+      { title: 'AP Exam Practice', loader: () => import('./micro-scarcity-marginal-analysis-part6').then(m => m.microScarcityMarginalAnalysisPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./micro-scarcity-marginal-analysis-part7').then(m => m.microScarcityMarginalAnalysisPart7Data) }
     ],
   },
   'micro-supply-demand': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./micro-supply-demand-part1').then(m => m.microSupplyDemandPart1Data) },
-      { title: 'Key Processes', loader: () => import('./micro-supply-demand-part2').then(m => m.microSupplyDemandPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./micro-supply-demand-part3').then(m => m.microSupplyDemandPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./micro-supply-demand-part4').then(m => m.microSupplyDemandPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./micro-supply-demand-part5').then(m => m.microSupplyDemandPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./micro-supply-demand-part6').then(m => m.microSupplyDemandPart6Data) },
-      { title: 'AP Review', loader: () => import('./micro-supply-demand-part7').then(m => m.microSupplyDemandPart7Data) }
+      { title: 'Demand in Depth: Schedules, Market Demand, and Equations', loader: () => import('./micro-supply-demand-part2').then(m => m.microSupplyDemandPart2Data) },
+      { title: 'Supply in Depth: Costs, Determinants, and Equations', loader: () => import('./micro-supply-demand-part3').then(m => m.microSupplyDemandPart3Data) },
+      { title: 'Translating Events into Graphs', loader: () => import('./micro-supply-demand-part4').then(m => m.microSupplyDemandPart4Data) },
+      { title: 'Traps, Nuance, and Common Misconceptions', loader: () => import('./micro-supply-demand-part5').then(m => m.microSupplyDemandPart5Data) },
+      { title: 'AP Exam Practice: Chains Across Related Markets', loader: () => import('./micro-supply-demand-part6').then(m => m.microSupplyDemandPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./micro-supply-demand-part7').then(m => m.microSupplyDemandPart7Data) }
     ],
   },
   'micro-demand-supply-equilibrium': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./micro-demand-supply-equilibrium-part1').then(m => m.microDemandSupplyEquilibriumPart1Data) },
-      { title: 'Key Processes', loader: () => import('./micro-demand-supply-equilibrium-part2').then(m => m.microDemandSupplyEquilibriumPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./micro-demand-supply-equilibrium-part3').then(m => m.microDemandSupplyEquilibriumPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./micro-demand-supply-equilibrium-part4').then(m => m.microDemandSupplyEquilibriumPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./micro-demand-supply-equilibrium-part5').then(m => m.microDemandSupplyEquilibriumPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./micro-demand-supply-equilibrium-part6').then(m => m.microDemandSupplyEquilibriumPart6Data) },
-      { title: 'AP Review', loader: () => import('./micro-demand-supply-equilibrium-part7').then(m => m.microDemandSupplyEquilibriumPart7Data) }
+      { title: 'Solving for Equilibrium and Measuring Disequilibrium', loader: () => import('./micro-demand-supply-equilibrium-part2').then(m => m.microDemandSupplyEquilibriumPart2Data) },
+      { title: 'Calculating Consumer and Producer Surplus', loader: () => import('./micro-demand-supply-equilibrium-part3').then(m => m.microDemandSupplyEquilibriumPart3Data) },
+      { title: 'Reading Surplus and Deadweight Loss on a Lettered Graph', loader: () => import('./micro-demand-supply-equilibrium-part4').then(m => m.microDemandSupplyEquilibriumPart4Data) },
+      { title: 'Double Shifts with Magnitudes, and Misconceptions', loader: () => import('./micro-demand-supply-equilibrium-part5').then(m => m.microDemandSupplyEquilibriumPart5Data) },
+      { title: 'AP Exam Practice: A Full Equilibrium FRQ', loader: () => import('./micro-demand-supply-equilibrium-part6').then(m => m.microDemandSupplyEquilibriumPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./micro-demand-supply-equilibrium-part7').then(m => m.microDemandSupplyEquilibriumPart7Data) }
     ],
   },
   'micro-elasticity': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./micro-elasticity-part1').then(m => m.microElasticityPart1Data) },
-      { title: 'Key Processes', loader: () => import('./micro-elasticity-part2').then(m => m.microElasticityPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./micro-elasticity-part3').then(m => m.microElasticityPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./micro-elasticity-part4').then(m => m.microElasticityPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./micro-elasticity-part5').then(m => m.microElasticityPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./micro-elasticity-part6').then(m => m.microElasticityPart6Data) },
-      { title: 'AP Review', loader: () => import('./micro-elasticity-part7').then(m => m.microElasticityPart7Data) }
+      { title: 'Calculating Price Elasticity of Demand', loader: () => import('./micro-elasticity-part2').then(m => m.microElasticityPart2Data) },
+      { title: 'Elasticity and Total Revenue', loader: () => import('./micro-elasticity-part3').then(m => m.microElasticityPart3Data) },
+      { title: 'Price Elasticity of Supply', loader: () => import('./micro-elasticity-part4').then(m => m.microElasticityPart4Data) },
+      { title: 'Cross-Price and Income Elasticity with Data', loader: () => import('./micro-elasticity-part5').then(m => m.microElasticityPart5Data) },
+      { title: 'AP Exam Practice', loader: () => import('./micro-elasticity-part6').then(m => m.microElasticityPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./micro-elasticity-part7').then(m => m.microElasticityPart7Data) }
     ],
   },
   'micro-government-intervention': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./micro-government-intervention-part1').then(m => m.microGovernmentInterventionPart1Data) },
-      { title: 'Key Processes', loader: () => import('./micro-government-intervention-part2').then(m => m.microGovernmentInterventionPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./micro-government-intervention-part3').then(m => m.microGovernmentInterventionPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./micro-government-intervention-part4').then(m => m.microGovernmentInterventionPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./micro-government-intervention-part5').then(m => m.microGovernmentInterventionPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./micro-government-intervention-part6').then(m => m.microGovernmentInterventionPart6Data) },
-      { title: 'AP Review', loader: () => import('./micro-government-intervention-part7').then(m => m.microGovernmentInterventionPart7Data) }
+      { title: 'Price Ceilings and Floors with Numbers', loader: () => import('./micro-government-intervention-part2').then(m => m.microGovernmentInterventionPart2Data) },
+      { title: 'Excise Taxes: The Full Calculation', loader: () => import('./micro-government-intervention-part3').then(m => m.microGovernmentInterventionPart3Data) },
+      { title: 'Subsidies, Quotas and Lettered Graphs', loader: () => import('./micro-government-intervention-part4').then(m => m.microGovernmentInterventionPart4Data) },
+      { title: 'International Trade and Trade Policy', loader: () => import('./micro-government-intervention-part5').then(m => m.microGovernmentInterventionPart5Data) },
+      { title: 'AP Exam Practice', loader: () => import('./micro-government-intervention-part6').then(m => m.microGovernmentInterventionPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./micro-government-intervention-part7').then(m => m.microGovernmentInterventionPart7Data) }
     ],
   },
   'micro-production-costs': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./micro-production-costs-part1').then(m => m.microProductionCostsPart1Data) },
-      { title: 'Key Processes', loader: () => import('./micro-production-costs-part2').then(m => m.microProductionCostsPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./micro-production-costs-part3').then(m => m.microProductionCostsPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./micro-production-costs-part4').then(m => m.microProductionCostsPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./micro-production-costs-part5').then(m => m.microProductionCostsPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./micro-production-costs-part6').then(m => m.microProductionCostsPart6Data) },
-      { title: 'AP Review', loader: () => import('./micro-production-costs-part7').then(m => m.microProductionCostsPart7Data) }
+      { title: 'The Production Function in Depth', loader: () => import('./micro-production-costs-part2').then(m => m.microProductionCostsPart2Data) },
+      { title: 'Building a Cost Table', loader: () => import('./micro-production-costs-part3').then(m => m.microProductionCostsPart3Data) },
+      { title: 'Reading Cost-Curve Graphs', loader: () => import('./micro-production-costs-part4').then(m => m.microProductionCostsPart4Data) },
+      { title: 'Cost Shifters and Long-Run Cost', loader: () => import('./micro-production-costs-part5').then(m => m.microProductionCostsPart5Data) },
+      { title: 'AP Exam Practice', loader: () => import('./micro-production-costs-part6').then(m => m.microProductionCostsPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./micro-production-costs-part7').then(m => m.microProductionCostsPart7Data) }
     ],
   },
   'micro-perfect-competition': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./micro-perfect-competition-part1').then(m => m.microPerfectCompetitionPart1Data) },
-      { title: 'Key Processes', loader: () => import('./micro-perfect-competition-part2').then(m => m.microPerfectCompetitionPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./micro-perfect-competition-part3').then(m => m.microPerfectCompetitionPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./micro-perfect-competition-part4').then(m => m.microPerfectCompetitionPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./micro-perfect-competition-part5').then(m => m.microPerfectCompetitionPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./micro-perfect-competition-part6').then(m => m.microPerfectCompetitionPart6Data) },
-      { title: 'AP Review', loader: () => import('./micro-perfect-competition-part7').then(m => m.microPerfectCompetitionPart7Data) }
+      { title: 'Profit Maximization from Tables', loader: () => import('./micro-perfect-competition-part2').then(m => m.microPerfectCompetitionPart2Data) },
+      { title: 'The Side-by-Side Graph', loader: () => import('./micro-perfect-competition-part3').then(m => m.microPerfectCompetitionPart3Data) },
+      { title: 'Short-Run Decisions with Numbers', loader: () => import('./micro-perfect-competition-part4').then(m => m.microPerfectCompetitionPart4Data) },
+      { title: 'Long-Run Adjustment', loader: () => import('./micro-perfect-competition-part5').then(m => m.microPerfectCompetitionPart5Data) },
+      { title: 'AP Exam Practice', loader: () => import('./micro-perfect-competition-part6').then(m => m.microPerfectCompetitionPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./micro-perfect-competition-part7').then(m => m.microPerfectCompetitionPart7Data) }
     ],
   },
   'micro-monopoly': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./micro-monopoly-part1').then(m => m.microMonopolyPart1Data) },
-      { title: 'Key Processes', loader: () => import('./micro-monopoly-part2').then(m => m.microMonopolyPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./micro-monopoly-part3').then(m => m.microMonopolyPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./micro-monopoly-part4').then(m => m.microMonopolyPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./micro-monopoly-part5').then(m => m.microMonopolyPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./micro-monopoly-part6').then(m => m.microMonopolyPart6Data) },
-      { title: 'AP Review', loader: () => import('./micro-monopoly-part7').then(m => m.microMonopolyPart7Data) }
+      { title: 'Monopoly Revenue and Elasticity', loader: () => import('./micro-monopoly-part2').then(m => m.microMonopolyPart2Data) },
+      { title: 'Worked Monopoly Problems', loader: () => import('./micro-monopoly-part3').then(m => m.microMonopolyPart3Data) },
+      { title: 'Reading the Monopoly Graph', loader: () => import('./micro-monopoly-part4').then(m => m.microMonopolyPart4Data) },
+      { title: 'Price Discrimination', loader: () => import('./micro-monopoly-part5').then(m => m.microMonopolyPart5Data) },
+      { title: 'Government Policy Toward Monopoly', loader: () => import('./micro-monopoly-part6').then(m => m.microMonopolyPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./micro-monopoly-part7').then(m => m.microMonopolyPart7Data) }
     ],
   },
   'micro-monopolistic-oligopoly': {
@@ -751,10 +751,10 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englang-intro-rhetoric-part1').then(m => m.englangIntroRhetoricPart1Data) },
-      { title: 'Key Processes', loader: () => import('./englang-intro-rhetoric-part2').then(m => m.englangIntroRhetoricPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englang-intro-rhetoric-part3').then(m => m.englangIntroRhetoricPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englang-intro-rhetoric-part4').then(m => m.englangIntroRhetoricPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englang-intro-rhetoric-part5').then(m => m.englangIntroRhetoricPart5Data) },
+      { title: 'Rhetoric as a System of Strategic Choices', loader: () => import('./englang-intro-rhetoric-part2').then(m => m.englangIntroRhetoricPart2Data) },
+      { title: 'Close Reading Worked Example: The Gettysburg Address', loader: () => import('./englang-intro-rhetoric-part3').then(m => m.englangIntroRhetoricPart3Data) },
+      { title: 'Reading Like the Exam: Question Families and Irony', loader: () => import('./englang-intro-rhetoric-part4').then(m => m.englangIntroRhetoricPart4Data) },
+      { title: 'Misconceptions and Nuance: What Analysis Is Not', loader: () => import('./englang-intro-rhetoric-part5').then(m => m.englangIntroRhetoricPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./englang-intro-rhetoric-part6').then(m => m.englangIntroRhetoricPart6Data) },
       { title: 'AP Review', loader: () => import('./englang-intro-rhetoric-part7').then(m => m.englangIntroRhetoricPart7Data) }
     ],
@@ -775,8 +775,8 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englang-rhetorical-situation-writing-part1').then(m => m.englangRhetoricalSituationWritingPart1Data) },
-      { title: 'Key Processes', loader: () => import('./englang-rhetorical-situation-writing-part2').then(m => m.englangRhetoricalSituationWritingPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englang-rhetorical-situation-writing-part3').then(m => m.englangRhetoricalSituationWritingPart3Data) },
+      { title: 'Writing for an Audience: Beliefs, Values, and Needs', loader: () => import('./englang-rhetorical-situation-writing-part2').then(m => m.englangRhetoricalSituationWritingPart2Data) },
+      { title: 'Introductions and Conclusions That Fit the Situation', loader: () => import('./englang-rhetorical-situation-writing-part3').then(m => m.englangRhetoricalSituationWritingPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./englang-rhetorical-situation-writing-part4').then(m => m.englangRhetoricalSituationWritingPart4Data) },
       { title: 'Change Over Time', loader: () => import('./englang-rhetorical-situation-writing-part5').then(m => m.englangRhetoricalSituationWritingPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./englang-rhetorical-situation-writing-part6').then(m => m.englangRhetoricalSituationWritingPart6Data) },
@@ -787,7 +787,7 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englang-claims-evidence-part1').then(m => m.englangClaimsEvidencePart1Data) },
-      { title: 'Key Processes', loader: () => import('./englang-claims-evidence-part2').then(m => m.englangClaimsEvidencePart2Data) },
+      { title: 'Anatomy of an Argument: Thesis, Claims, Evidence, Commentary', loader: () => import('./englang-claims-evidence-part2').then(m => m.englangClaimsEvidencePart2Data) },
       { title: 'Patterns & Examples', loader: () => import('./englang-claims-evidence-part3').then(m => m.englangClaimsEvidencePart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./englang-claims-evidence-part4').then(m => m.englangClaimsEvidencePart4Data) },
       { title: 'Change Over Time', loader: () => import('./englang-claims-evidence-part5').then(m => m.englangClaimsEvidencePart5Data) },
@@ -979,60 +979,60 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./apes-ecosystem-structure-part1').then(m => m.apesEcosystemStructurePart1Data) },
-      { title: 'Key Processes', loader: () => import('./apes-ecosystem-structure-part2').then(m => m.apesEcosystemStructurePart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./apes-ecosystem-structure-part3').then(m => m.apesEcosystemStructurePart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./apes-ecosystem-structure-part4').then(m => m.apesEcosystemStructurePart4Data) },
-      { title: 'Change Over Time', loader: () => import('./apes-ecosystem-structure-part5').then(m => m.apesEcosystemStructurePart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./apes-ecosystem-structure-part6').then(m => m.apesEcosystemStructurePart6Data) },
-      { title: 'AP Review', loader: () => import('./apes-ecosystem-structure-part7').then(m => m.apesEcosystemStructurePart7Data) }
+      { title: 'Primary Productivity in Depth', loader: () => import('./apes-ecosystem-structure-part2').then(m => m.apesEcosystemStructurePart2Data) },
+      { title: 'Energy Transfer Calculations', loader: () => import('./apes-ecosystem-structure-part3').then(m => m.apesEcosystemStructurePart3Data) },
+      { title: 'Food Webs, Pyramids and Trophic Cascades', loader: () => import('./apes-ecosystem-structure-part4').then(m => m.apesEcosystemStructurePart4Data) },
+      { title: 'Species Interactions and Common Misconceptions', loader: () => import('./apes-ecosystem-structure-part5').then(m => m.apesEcosystemStructurePart5Data) },
+      { title: 'AP Exam Practice', loader: () => import('./apes-ecosystem-structure-part6').then(m => m.apesEcosystemStructurePart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./apes-ecosystem-structure-part7').then(m => m.apesEcosystemStructurePart7Data) }
     ],
   },
   'apes-biogeochemical-cycles': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./apes-biogeochemical-cycles-part1').then(m => m.apesBiogeochemicalCyclesPart1Data) },
-      { title: 'Key Processes', loader: () => import('./apes-biogeochemical-cycles-part2').then(m => m.apesBiogeochemicalCyclesPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./apes-biogeochemical-cycles-part3').then(m => m.apesBiogeochemicalCyclesPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./apes-biogeochemical-cycles-part4').then(m => m.apesBiogeochemicalCyclesPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./apes-biogeochemical-cycles-part5').then(m => m.apesBiogeochemicalCyclesPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./apes-biogeochemical-cycles-part6').then(m => m.apesBiogeochemicalCyclesPart6Data) },
-      { title: 'AP Review', loader: () => import('./apes-biogeochemical-cycles-part7').then(m => m.apesBiogeochemicalCyclesPart7Data) }
+      { title: 'The Carbon Cycle in Depth', loader: () => import('./apes-biogeochemical-cycles-part2').then(m => m.apesBiogeochemicalCyclesPart2Data) },
+      { title: 'The Nitrogen Cycle in Depth', loader: () => import('./apes-biogeochemical-cycles-part3').then(m => m.apesBiogeochemicalCyclesPart3Data) },
+      { title: 'The Phosphorus and Hydrologic Cycles', loader: () => import('./apes-biogeochemical-cycles-part4').then(m => m.apesBiogeochemicalCyclesPart4Data) },
+      { title: 'Reading Cycle Data and Avoiding Misconceptions', loader: () => import('./apes-biogeochemical-cycles-part5').then(m => m.apesBiogeochemicalCyclesPart5Data) },
+      { title: 'AP Exam Practice', loader: () => import('./apes-biogeochemical-cycles-part6').then(m => m.apesBiogeochemicalCyclesPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./apes-biogeochemical-cycles-part7').then(m => m.apesBiogeochemicalCyclesPart7Data) }
     ],
   },
   'apes-earth-systems': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./apes-earth-systems-part1').then(m => m.apesEarthSystemsPart1Data) },
-      { title: 'Key Processes', loader: () => import('./apes-earth-systems-part2').then(m => m.apesEarthSystemsPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./apes-earth-systems-part3').then(m => m.apesEarthSystemsPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./apes-earth-systems-part4').then(m => m.apesEarthSystemsPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./apes-earth-systems-part5').then(m => m.apesEarthSystemsPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./apes-earth-systems-part6').then(m => m.apesEarthSystemsPart6Data) },
-      { title: 'AP Review', loader: () => import('./apes-earth-systems-part7').then(m => m.apesEarthSystemsPart7Data) }
+      { title: 'Plate Tectonics, Soil Formation and Erosion', loader: () => import('./apes-earth-systems-part2').then(m => m.apesEarthSystemsPart2Data) },
+      { title: 'The Atmosphere and Global Wind Patterns', loader: () => import('./apes-earth-systems-part3').then(m => m.apesEarthSystemsPart3Data) },
+      { title: 'Solar Radiation, Seasons and Climate Geography', loader: () => import('./apes-earth-systems-part4').then(m => m.apesEarthSystemsPart4Data) },
+      { title: 'Watersheds and El Niño / La Niña', loader: () => import('./apes-earth-systems-part5').then(m => m.apesEarthSystemsPart5Data) },
+      { title: 'AP Exam Practice', loader: () => import('./apes-earth-systems-part6').then(m => m.apesEarthSystemsPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./apes-earth-systems-part7').then(m => m.apesEarthSystemsPart7Data) }
     ],
   },
   'apes-biodiversity': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./apes-biodiversity-part1').then(m => m.apesBiodiversityPart1Data) },
-      { title: 'Key Processes', loader: () => import('./apes-biodiversity-part2').then(m => m.apesBiodiversityPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./apes-biodiversity-part3').then(m => m.apesBiodiversityPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./apes-biodiversity-part4').then(m => m.apesBiodiversityPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./apes-biodiversity-part5').then(m => m.apesBiodiversityPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./apes-biodiversity-part6').then(m => m.apesBiodiversityPart6Data) },
-      { title: 'AP Review', loader: () => import('./apes-biodiversity-part7').then(m => m.apesBiodiversityPart7Data) }
+      { title: 'Genetic Diversity and Measuring Species Diversity', loader: () => import('./apes-biodiversity-part2').then(m => m.apesBiodiversityPart2Data) },
+      { title: 'Ecosystem Services and Their Value', loader: () => import('./apes-biodiversity-part3').then(m => m.apesBiodiversityPart3Data) },
+      { title: 'Island Biogeography and Habitat Fragmentation', loader: () => import('./apes-biodiversity-part4').then(m => m.apesBiodiversityPart4Data) },
+      { title: 'Ecological Tolerance, Natural Disruptions and Adaptation', loader: () => import('./apes-biodiversity-part5').then(m => m.apesBiodiversityPart5Data) },
+      { title: 'AP Exam Practice', loader: () => import('./apes-biodiversity-part6').then(m => m.apesBiodiversityPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./apes-biodiversity-part7').then(m => m.apesBiodiversityPart7Data) }
     ],
   },
   'apes-biodiversity-conservation': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./apes-biodiversity-conservation-part1').then(m => m.apesBiodiversityConservationPart1Data) },
-      { title: 'Key Processes', loader: () => import('./apes-biodiversity-conservation-part2').then(m => m.apesBiodiversityConservationPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./apes-biodiversity-conservation-part3').then(m => m.apesBiodiversityConservationPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./apes-biodiversity-conservation-part4').then(m => m.apesBiodiversityConservationPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./apes-biodiversity-conservation-part5').then(m => m.apesBiodiversityConservationPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./apes-biodiversity-conservation-part6').then(m => m.apesBiodiversityConservationPart6Data) },
-      { title: 'AP Review', loader: () => import('./apes-biodiversity-conservation-part7').then(m => m.apesBiodiversityConservationPart7Data) }
+      { title: 'Invasive Species in Depth', loader: () => import('./apes-biodiversity-conservation-part2').then(m => m.apesBiodiversityConservationPart2Data) },
+      { title: 'Endangered Species: Who Is at Risk and How Recovery Works', loader: () => import('./apes-biodiversity-conservation-part3').then(m => m.apesBiodiversityConservationPart3Data) },
+      { title: 'Monitoring Populations: Sampling and Data', loader: () => import('./apes-biodiversity-conservation-part4').then(m => m.apesBiodiversityConservationPart4Data) },
+      { title: 'Human Impacts, Solutions and Trade-offs', loader: () => import('./apes-biodiversity-conservation-part5').then(m => m.apesBiodiversityConservationPart5Data) },
+      { title: 'AP Exam Practice', loader: () => import('./apes-biodiversity-conservation-part6').then(m => m.apesBiodiversityConservationPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./apes-biodiversity-conservation-part7').then(m => m.apesBiodiversityConservationPart7Data) }
     ],
   },
   'apes-biomes-succession': {
@@ -1051,9 +1051,9 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./apes-population-ecology-part1').then(m => m.apesPopulationEcologyPart1Data) },
-      { title: 'Key Processes', loader: () => import('./apes-population-ecology-part2').then(m => m.apesPopulationEcologyPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./apes-population-ecology-part3').then(m => m.apesPopulationEcologyPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./apes-population-ecology-part4').then(m => m.apesPopulationEcologyPart4Data) },
+      { title: 'Generalists, Specialists and Reproductive Strategies', loader: () => import('./apes-population-ecology-part2').then(m => m.apesPopulationEcologyPart2Data) },
+      { title: 'Survivorship Curves', loader: () => import('./apes-population-ecology-part3').then(m => m.apesPopulationEcologyPart3Data) },
+      { title: 'Population Growth Calculations', loader: () => import('./apes-population-ecology-part4').then(m => m.apesPopulationEcologyPart4Data) },
       { title: 'Change Over Time', loader: () => import('./apes-population-ecology-part5').then(m => m.apesPopulationEcologyPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./apes-population-ecology-part6').then(m => m.apesPopulationEcologyPart6Data) },
       { title: 'AP Review', loader: () => import('./apes-population-ecology-part7').then(m => m.apesPopulationEcologyPart7Data) }
@@ -1063,12 +1063,12 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./apes-human-population-part1').then(m => m.apesHumanPopulationPart1Data) },
-      { title: 'Key Processes', loader: () => import('./apes-human-population-part2').then(m => m.apesHumanPopulationPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./apes-human-population-part3').then(m => m.apesHumanPopulationPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./apes-human-population-part4').then(m => m.apesHumanPopulationPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./apes-human-population-part5').then(m => m.apesHumanPopulationPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./apes-human-population-part6').then(m => m.apesHumanPopulationPart6Data) },
-      { title: 'AP Review', loader: () => import('./apes-human-population-part7').then(m => m.apesHumanPopulationPart7Data) }
+      { title: 'Reading Age Structure Diagrams', loader: () => import('./apes-human-population-part2').then(m => m.apesHumanPopulationPart2Data) },
+      { title: 'Fertility and Its Drivers', loader: () => import('./apes-human-population-part3').then(m => m.apesHumanPopulationPart3Data) },
+      { title: 'Population Dynamics and Calculations', loader: () => import('./apes-human-population-part4').then(m => m.apesHumanPopulationPart4Data) },
+      { title: 'The Demographic Transition in Depth', loader: () => import('./apes-human-population-part5').then(m => m.apesHumanPopulationPart5Data) },
+      { title: 'AP Exam Practice', loader: () => import('./apes-human-population-part6').then(m => m.apesHumanPopulationPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./apes-human-population-part7').then(m => m.apesHumanPopulationPart7Data) }
     ],
   },
   'apes-agriculture-land': {
@@ -1159,96 +1159,96 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./csa-variables-types-part1').then(m => m.csaVariablesTypesPart1Data) },
-      { title: 'Key Processes', loader: () => import('./csa-variables-types-part2').then(m => m.csaVariablesTypesPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./csa-variables-types-part3').then(m => m.csaVariablesTypesPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./csa-variables-types-part4').then(m => m.csaVariablesTypesPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csa-variables-types-part5').then(m => m.csaVariablesTypesPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./csa-variables-types-part6').then(m => m.csaVariablesTypesPart6Data) },
-      { title: 'AP Review', loader: () => import('./csa-variables-types-part7').then(m => m.csaVariablesTypesPart7Data) }
+      { title: 'Compiling, Errors, and What a Variable Holds', loader: () => import('./csa-variables-types-part2').then(m => m.csaVariablesTypesPart2Data) },
+      { title: 'Assignment Statements and Trace Tables', loader: () => import('./csa-variables-types-part3').then(m => m.csaVariablesTypesPart3Data) },
+      { title: 'Range, Overflow, Rounding, and Round-off', loader: () => import('./csa-variables-types-part4').then(m => m.csaVariablesTypesPart4Data) },
+      { title: 'Type Compatibility, Cast Placement, and Misconceptions', loader: () => import('./csa-variables-types-part5').then(m => m.csaVariablesTypesPart5Data) },
+      { title: 'AP-Style Practice: Tracing and Writing Declarations', loader: () => import('./csa-variables-types-part6').then(m => m.csaVariablesTypesPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./csa-variables-types-part7').then(m => m.csaVariablesTypesPart7Data) }
     ],
   },
   'csa-expressions-operators': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./csa-expressions-operators-part1').then(m => m.csaExpressionsOperatorsPart1Data) },
-      { title: 'Key Processes', loader: () => import('./csa-expressions-operators-part2').then(m => m.csaExpressionsOperatorsPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./csa-expressions-operators-part3').then(m => m.csaExpressionsOperatorsPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./csa-expressions-operators-part4').then(m => m.csaExpressionsOperatorsPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csa-expressions-operators-part5').then(m => m.csaExpressionsOperatorsPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./csa-expressions-operators-part6').then(m => m.csaExpressionsOperatorsPart6Data) },
-      { title: 'AP Review', loader: () => import('./csa-expressions-operators-part7').then(m => m.csaExpressionsOperatorsPart7Data) }
+      { title: 'Output with print and println', loader: () => import('./csa-expressions-operators-part2').then(m => m.csaExpressionsOperatorsPart2Data) },
+      { title: 'Precedence, Associativity, and Type Promotion', loader: () => import('./csa-expressions-operators-part3').then(m => m.csaExpressionsOperatorsPart3Data) },
+      { title: 'Integer Division and Modulus Patterns', loader: () => import('./csa-expressions-operators-part4').then(m => m.csaExpressionsOperatorsPart4Data) },
+      { title: 'Compound Assignment and Tracing Updates', loader: () => import('./csa-expressions-operators-part5').then(m => m.csaExpressionsOperatorsPart5Data) },
+      { title: 'AP-Style Practice: Tracing and Writing Expressions', loader: () => import('./csa-expressions-operators-part6').then(m => m.csaExpressionsOperatorsPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./csa-expressions-operators-part7').then(m => m.csaExpressionsOperatorsPart7Data) }
     ],
   },
   'csa-strings-objects': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./csa-strings-objects-part1').then(m => m.csaStringsObjectsPart1Data) },
-      { title: 'Key Processes', loader: () => import('./csa-strings-objects-part2').then(m => m.csaStringsObjectsPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./csa-strings-objects-part3').then(m => m.csaStringsObjectsPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./csa-strings-objects-part4').then(m => m.csaStringsObjectsPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csa-strings-objects-part5').then(m => m.csaStringsObjectsPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./csa-strings-objects-part6').then(m => m.csaStringsObjectsPart6Data) },
-      { title: 'AP Review', loader: () => import('./csa-strings-objects-part7').then(m => m.csaStringsObjectsPart7Data) }
+      { title: 'String Objects, Concatenation, and equals vs ==', loader: () => import('./csa-strings-objects-part2').then(m => m.csaStringsObjectsPart2Data) },
+      { title: 'Extracting Pieces with substring and indexOf', loader: () => import('./csa-strings-objects-part3').then(m => m.csaStringsObjectsPart3Data) },
+      { title: 'Ordering Strings with compareTo', loader: () => import('./csa-strings-objects-part4').then(m => m.csaStringsObjectsPart4Data) },
+      { title: 'String Traversal Algorithms', loader: () => import('./csa-strings-objects-part5').then(m => m.csaStringsObjectsPart5Data) },
+      { title: 'AP-Style Practice', loader: () => import('./csa-strings-objects-part6').then(m => m.csaStringsObjectsPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./csa-strings-objects-part7').then(m => m.csaStringsObjectsPart7Data) }
     ],
   },
   'csa-using-objects': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./csa-using-objects-part1').then(m => m.csaUsingObjectsPart1Data) },
-      { title: 'Key Processes', loader: () => import('./csa-using-objects-part2').then(m => m.csaUsingObjectsPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./csa-using-objects-part3').then(m => m.csaUsingObjectsPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./csa-using-objects-part4').then(m => m.csaUsingObjectsPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csa-using-objects-part5').then(m => m.csaUsingObjectsPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./csa-using-objects-part6').then(m => m.csaUsingObjectsPart6Data) },
-      { title: 'AP Review', loader: () => import('./csa-using-objects-part7').then(m => m.csaUsingObjectsPart7Data) }
+      { title: 'Classes, APIs, and Documentation', loader: () => import('./csa-using-objects-part2').then(m => m.csaUsingObjectsPart2Data) },
+      { title: 'Method Signatures, Parameters, and Return Values', loader: () => import('./csa-using-objects-part3').then(m => m.csaUsingObjectsPart3Data) },
+      { title: 'The Math Class and Random Ranges', loader: () => import('./csa-using-objects-part4').then(m => m.csaUsingObjectsPart4Data) },
+      { title: 'Constructors, Reference Diagrams, and null', loader: () => import('./csa-using-objects-part5').then(m => m.csaUsingObjectsPart5Data) },
+      { title: 'AP-Style Practice with a Provided Class', loader: () => import('./csa-using-objects-part6').then(m => m.csaUsingObjectsPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./csa-using-objects-part7').then(m => m.csaUsingObjectsPart7Data) }
     ],
   },
   'csa-boolean-if': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./csa-boolean-if-part1').then(m => m.csaBooleanIfPart1Data) },
-      { title: 'Key Processes', loader: () => import('./csa-boolean-if-part2').then(m => m.csaBooleanIfPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./csa-boolean-if-part3').then(m => m.csaBooleanIfPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./csa-boolean-if-part4').then(m => m.csaBooleanIfPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csa-boolean-if-part5').then(m => m.csaBooleanIfPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./csa-boolean-if-part6').then(m => m.csaBooleanIfPart6Data) },
-      { title: 'AP Review', loader: () => import('./csa-boolean-if-part7').then(m => m.csaBooleanIfPart7Data) }
+      { title: 'Algorithms, Flow of Control, and Boolean Values', loader: () => import('./csa-boolean-if-part2').then(m => m.csaBooleanIfPart2Data) },
+      { title: 'One-Way and Two-Way Selection, Traced', loader: () => import('./csa-boolean-if-part3').then(m => m.csaBooleanIfPart3Data) },
+      { title: 'Compound Conditions: Precedence and Short-Circuit Guards', loader: () => import('./csa-boolean-if-part4').then(m => m.csaBooleanIfPart4Data) },
+      { title: 'Pitfalls: Sequential ifs, Assignment vs. Equality, and Flags', loader: () => import('./csa-boolean-if-part5').then(m => m.csaBooleanIfPart5Data) },
+      { title: 'AP-Style Practice', loader: () => import('./csa-boolean-if-part6').then(m => m.csaBooleanIfPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./csa-boolean-if-part7').then(m => m.csaBooleanIfPart7Data) }
     ],
   },
   'csa-conditionals': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./csa-conditionals-part1').then(m => m.csaConditionalsPart1Data) },
-      { title: 'Key Processes', loader: () => import('./csa-conditionals-part2').then(m => m.csaConditionalsPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./csa-conditionals-part3').then(m => m.csaConditionalsPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./csa-conditionals-part4').then(m => m.csaConditionalsPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csa-conditionals-part5').then(m => m.csaConditionalsPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./csa-conditionals-part6').then(m => m.csaConditionalsPart6Data) },
-      { title: 'AP Review', loader: () => import('./csa-conditionals-part7').then(m => m.csaConditionalsPart7Data) }
+      { title: 'Multiway Selection: Ordering else-if Chains', loader: () => import('./csa-conditionals-part2').then(m => m.csaConditionalsPart2Data) },
+      { title: 'Nested Decisions and Their Compound Equivalents', loader: () => import('./csa-conditionals-part3').then(m => m.csaConditionalsPart3Data) },
+      { title: 'Truth Tables, De Morgan\'s Laws, and Equivalence', loader: () => import('./csa-conditionals-part4').then(m => m.csaConditionalsPart4Data) },
+      { title: 'Comparing Objects: Aliases, null, and equals', loader: () => import('./csa-conditionals-part5').then(m => m.csaConditionalsPart5Data) },
+      { title: 'AP-Style Practice', loader: () => import('./csa-conditionals-part6').then(m => m.csaConditionalsPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./csa-conditionals-part7').then(m => m.csaConditionalsPart7Data) }
     ],
   },
   'csa-iteration': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./csa-iteration-part1').then(m => m.csaIterationPart1Data) },
-      { title: 'Key Processes', loader: () => import('./csa-iteration-part2').then(m => m.csaIterationPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./csa-iteration-part3').then(m => m.csaIterationPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./csa-iteration-part4').then(m => m.csaIterationPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csa-iteration-part5').then(m => m.csaIterationPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./csa-iteration-part6').then(m => m.csaIterationPart6Data) },
-      { title: 'AP Review', loader: () => import('./csa-iteration-part7').then(m => m.csaIterationPart7Data) }
+      { title: 'while Loops and Trace Tables', loader: () => import('./csa-iteration-part2').then(m => m.csaIterationPart2Data) },
+      { title: 'for Loops: Counting Passes and Converting to while', loader: () => import('./csa-iteration-part3').then(m => m.csaIterationPart3Data) },
+      { title: 'Standard Algorithms I: Sum, Average, Frequency, Divisibility', loader: () => import('./csa-iteration-part4').then(m => m.csaIterationPart4Data) },
+      { title: 'Standard Algorithms II: Digits, Min/Max, and Loop Bugs', loader: () => import('./csa-iteration-part5').then(m => m.csaIterationPart5Data) },
+      { title: 'AP-Style Practice', loader: () => import('./csa-iteration-part6').then(m => m.csaIterationPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./csa-iteration-part7').then(m => m.csaIterationPart7Data) }
     ],
   },
   'csa-loops': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./csa-loops-part1').then(m => m.csaLoopsPart1Data) },
-      { title: 'Key Processes', loader: () => import('./csa-loops-part2').then(m => m.csaLoopsPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./csa-loops-part3').then(m => m.csaLoopsPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./csa-loops-part4').then(m => m.csaLoopsPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csa-loops-part5').then(m => m.csaLoopsPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./csa-loops-part6').then(m => m.csaLoopsPart6Data) },
-      { title: 'AP Review', loader: () => import('./csa-loops-part7').then(m => m.csaLoopsPart7Data) }
+      { title: 'Nested Loops: How the Inner Loop Restarts', loader: () => import('./csa-loops-part2').then(m => m.csaLoopsPart2Data) },
+      { title: 'Nested Loop Algorithms: Pairs, Tables, and Primes', loader: () => import('./csa-loops-part3').then(m => m.csaLoopsPart3Data) },
+      { title: 'Informal Run-Time Analysis: Counting Statement Executions', loader: () => import('./csa-loops-part4').then(m => m.csaLoopsPart4Data) },
+      { title: 'Comparing Algorithms and Nested-Loop Pitfalls', loader: () => import('./csa-loops-part5').then(m => m.csaLoopsPart5Data) },
+      { title: 'AP-Style Practice', loader: () => import('./csa-loops-part6').then(m => m.csaLoopsPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./csa-loops-part7').then(m => m.csaLoopsPart7Data) }
     ],
   },
   'csa-writing-classes': {
