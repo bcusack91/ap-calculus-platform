@@ -347,8 +347,8 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Government Intervention Across Market Structures', loader: () => import('./micro-market-failure-part3').then(m => m.microMarketFailurePart3Data) },
       { title: 'Measuring Inequality: The Lorenz Curve and the Gini Coefficient', loader: () => import('./micro-market-failure-part4').then(m => m.microMarketFailurePart4Data) },
       { title: 'Sources of Inequality and Redistribution', loader: () => import('./micro-market-failure-part5').then(m => m.microMarketFailurePart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./micro-market-failure-part6').then(m => m.microMarketFailurePart6Data) },
-      { title: 'AP Review', loader: () => import('./micro-market-failure-part7').then(m => m.microMarketFailurePart7Data) }
+      { title: 'Policy Evaluation and AP Exam Practice', loader: () => import('./micro-market-failure-part6').then(m => m.microMarketFailurePart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./micro-market-failure-part7').then(m => m.microMarketFailurePart7Data) }
     ],
   },
   'aas-african-kingdoms': {
@@ -801,17 +801,17 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Core Concepts', loader: () => import('./englang-claims-evidence-reading-part1').then(m => m.englangClaimsEvidenceReadingPart1Data) },
       { title: 'Finding the Thesis: Stated, Delayed and Implied', loader: () => import('./englang-claims-evidence-reading-part2').then(m => m.englangClaimsEvidenceReadingPart2Data) },
       { title: 'Evidence at Work: Johnson\'s Voting Rights Address, 1965', loader: () => import('./englang-claims-evidence-reading-part3').then(m => m.englangClaimsEvidenceReadingPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englang-claims-evidence-reading-part4').then(m => m.englangClaimsEvidenceReadingPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englang-claims-evidence-reading-part5').then(m => m.englangClaimsEvidenceReadingPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englang-claims-evidence-reading-part6').then(m => m.englangClaimsEvidenceReadingPart6Data) },
-      { title: 'AP Review', loader: () => import('./englang-claims-evidence-reading-part7').then(m => m.englangClaimsEvidenceReadingPart7Data) }
+      { title: 'Reading Qualification: Roosevelt\'s "The Man with the Muck-Rake," 1906', loader: () => import('./englang-claims-evidence-reading-part4').then(m => m.englangClaimsEvidenceReadingPart4Data) },
+      { title: 'Misreadings and Traps: Tone, Voiced Claims and Wrong Answers', loader: () => import('./englang-claims-evidence-reading-part5').then(m => m.englangClaimsEvidenceReadingPart5Data) },
+      { title: 'Exam Practice: A Du Bois Passage Set and a Scored Paragraph', loader: () => import('./englang-claims-evidence-reading-part6').then(m => m.englangClaimsEvidenceReadingPart6Data) },
+      { title: 'Review: Reading Any Argument for Its Claims', loader: () => import('./englang-claims-evidence-reading-part7').then(m => m.englangClaimsEvidenceReadingPart7Data) }
     ],
   },
   'englang-claims-evidence-writing': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englang-claims-evidence-writing-part1').then(m => m.englangClaimsEvidenceWritingPart1Data) },
-      { title: 'Key Processes', loader: () => import('./englang-claims-evidence-writing-part2').then(m => m.englangClaimsEvidenceWritingPart2Data) },
+      { title: 'A Thesis That Earns Row A, in All Three Essays', loader: () => import('./englang-claims-evidence-writing-part2').then(m => m.englangClaimsEvidenceWritingPart2Data) },
       { title: 'Patterns & Examples', loader: () => import('./englang-claims-evidence-writing-part3').then(m => m.englangClaimsEvidenceWritingPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./englang-claims-evidence-writing-part4').then(m => m.englangClaimsEvidenceWritingPart4Data) },
       { title: 'Change Over Time', loader: () => import('./englang-claims-evidence-writing-part5').then(m => m.englangClaimsEvidenceWritingPart5Data) },
@@ -824,11 +824,11 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'Core Concepts', loader: () => import('./englang-reasoning-org-reading-part1').then(m => m.englangReasoningOrgReadingPart1Data) },
       { title: 'Line of Reasoning in Depth: Federalist No. 10', loader: () => import('./englang-reasoning-org-reading-part2').then(m => m.englangReasoningOrgReadingPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englang-reasoning-org-reading-part3').then(m => m.englangReasoningOrgReadingPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englang-reasoning-org-reading-part4').then(m => m.englangReasoningOrgReadingPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englang-reasoning-org-reading-part5').then(m => m.englangReasoningOrgReadingPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englang-reasoning-org-reading-part6').then(m => m.englangReasoningOrgReadingPart6Data) },
-      { title: 'AP Review', loader: () => import('./englang-reasoning-org-reading-part7').then(m => m.englangReasoningOrgReadingPart7Data) }
+      { title: 'Methods of Development: Washington, Paine and Bacon', loader: () => import('./englang-reasoning-org-reading-part3').then(m => m.englangReasoningOrgReadingPart3Data) },
+      { title: 'Unity, Coherence and Transitions: Federalist No. 51 and Mill', loader: () => import('./englang-reasoning-org-reading-part4').then(m => m.englangReasoningOrgReadingPart4Data) },
+      { title: 'Nuance and Misconceptions: Patrick Henry, 1775', loader: () => import('./englang-reasoning-org-reading-part5').then(m => m.englangReasoningOrgReadingPart5Data) },
+      { title: 'Exam Practice: A Passage Set and a Model Analysis', loader: () => import('./englang-reasoning-org-reading-part6').then(m => m.englangReasoningOrgReadingPart6Data) },
+      { title: 'Review: Reading for Structure', loader: () => import('./englang-reasoning-org-reading-part7').then(m => m.englangReasoningOrgReadingPart7Data) }
     ],
   },
   'englang-reasoning-org-writing': {
@@ -836,11 +836,11 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'Core Concepts', loader: () => import('./englang-reasoning-org-writing-part1').then(m => m.englangReasoningOrgWritingPart1Data) },
       { title: 'Planning a Line of Reasoning', loader: () => import('./englang-reasoning-org-writing-part2').then(m => m.englangReasoningOrgWritingPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englang-reasoning-org-writing-part3').then(m => m.englangReasoningOrgWritingPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englang-reasoning-org-writing-part4').then(m => m.englangReasoningOrgWritingPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englang-reasoning-org-writing-part5').then(m => m.englangReasoningOrgWritingPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englang-reasoning-org-writing-part6').then(m => m.englangReasoningOrgWritingPart6Data) },
-      { title: 'AP Review', loader: () => import('./englang-reasoning-org-writing-part7').then(m => m.englangReasoningOrgWritingPart7Data) }
+      { title: 'Methods of Development in Your Essays', loader: () => import('./englang-reasoning-org-writing-part3').then(m => m.englangReasoningOrgWritingPart3Data) },
+      { title: 'Transitions and Coherence', loader: () => import('./englang-reasoning-org-writing-part4').then(m => m.englangReasoningOrgWritingPart4Data) },
+      { title: 'Commentary Across Paragraphs, Misconceptions, and Row C', loader: () => import('./englang-reasoning-org-writing-part5').then(m => m.englangReasoningOrgWritingPart5Data) },
+      { title: 'Exam Practice: Writing Questions and an Annotated Essay', loader: () => import('./englang-reasoning-org-writing-part6').then(m => m.englangReasoningOrgWritingPart6Data) },
+      { title: 'Review: Planning, Developing and Connecting an Argument', loader: () => import('./englang-reasoning-org-writing-part7').then(m => m.englangReasoningOrgWritingPart7Data) }
     ],
   },
   'englang-argument-structure': {
@@ -1101,10 +1101,10 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Core Concepts', loader: () => import('./apes-fossil-fuels-nuclear-part1').then(m => m.apesFossilFuelsNuclearPart1Data) },
       { title: 'Coal and How a Power Plant Makes Electricity', loader: () => import('./apes-fossil-fuels-nuclear-part2').then(m => m.apesFossilFuelsNuclearPart2Data) },
       { title: 'Oil, Natural Gas and Unconventional Sources', loader: () => import('./apes-fossil-fuels-nuclear-part3').then(m => m.apesFossilFuelsNuclearPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./apes-fossil-fuels-nuclear-part4').then(m => m.apesFossilFuelsNuclearPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./apes-fossil-fuels-nuclear-part5').then(m => m.apesFossilFuelsNuclearPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./apes-fossil-fuels-nuclear-part6').then(m => m.apesFossilFuelsNuclearPart6Data) },
-      { title: 'AP Review', loader: () => import('./apes-fossil-fuels-nuclear-part7').then(m => m.apesFossilFuelsNuclearPart7Data) }
+      { title: 'Nuclear Power in Depth', loader: () => import('./apes-fossil-fuels-nuclear-part4').then(m => m.apesFossilFuelsNuclearPart4Data) },
+      { title: 'Comparing Sources: Data, Calculations and Misconceptions', loader: () => import('./apes-fossil-fuels-nuclear-part5').then(m => m.apesFossilFuelsNuclearPart5Data) },
+      { title: 'AP Exam Practice', loader: () => import('./apes-fossil-fuels-nuclear-part6').then(m => m.apesFossilFuelsNuclearPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./apes-fossil-fuels-nuclear-part7').then(m => m.apesFossilFuelsNuclearPart7Data) }
     ],
   },
   'apes-renewable-energy': {
@@ -1327,7 +1327,7 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./csa-2d-array-part1').then(m => m.csa2dArrayPart1Data) },
-      { title: 'Key Processes', loader: () => import('./csa-2d-array-part2').then(m => m.csa2dArrayPart2Data) },
+      { title: 'Creating 2D Arrays: Arrays of Arrays', loader: () => import('./csa-2d-array-part2').then(m => m.csa2dArrayPart2Data) },
       { title: 'Patterns & Examples', loader: () => import('./csa-2d-array-part3').then(m => m.csa2dArrayPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./csa-2d-array-part4').then(m => m.csa2dArrayPart4Data) },
       { title: 'Change Over Time', loader: () => import('./csa-2d-array-part5').then(m => m.csa2dArrayPart5Data) },
@@ -1339,7 +1339,7 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./csa-2d-arrays-part1').then(m => m.csa2dArraysPart1Data) },
-      { title: 'Key Processes', loader: () => import('./csa-2d-arrays-part2').then(m => m.csa2dArraysPart2Data) },
+      { title: 'Whole-Grid Algorithms: Totals, Extremes, Counts, and Searches', loader: () => import('./csa-2d-arrays-part2').then(m => m.csa2dArraysPart2Data) },
       { title: 'Patterns & Examples', loader: () => import('./csa-2d-arrays-part3').then(m => m.csa2dArraysPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./csa-2d-arrays-part4').then(m => m.csa2dArraysPart4Data) },
       { title: 'Change Over Time', loader: () => import('./csa-2d-arrays-part5').then(m => m.csa2dArraysPart5Data) },

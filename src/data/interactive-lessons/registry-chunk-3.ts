@@ -945,10 +945,10 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./hg-agricultural-origins-part1').then(m => m.hgAgriculturalOriginsPart1Data) },
-      { title: 'Key Processes', loader: () => import('./hg-agricultural-origins-part2').then(m => m.hgAgriculturalOriginsPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./hg-agricultural-origins-part3').then(m => m.hgAgriculturalOriginsPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./hg-agricultural-origins-part4').then(m => m.hgAgriculturalOriginsPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./hg-agricultural-origins-part5').then(m => m.hgAgriculturalOriginsPart5Data) },
+      { title: 'Domestication and the Hearths in Depth', loader: () => import('./hg-agricultural-origins-part2').then(m => m.hgAgriculturalOriginsPart2Data) },
+      { title: 'How Agriculture Spread: Migration, Axes and the Columbian Exchange', loader: () => import('./hg-agricultural-origins-part3').then(m => m.hgAgriculturalOriginsPart3Data) },
+      { title: 'Rural Settlement Patterns: Why Farms and Villages Sit Where They Do', loader: () => import('./hg-agricultural-origins-part4').then(m => m.hgAgriculturalOriginsPart4Data) },
+      { title: 'The Second Agricultural Revolution', loader: () => import('./hg-agricultural-origins-part5').then(m => m.hgAgriculturalOriginsPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./hg-agricultural-origins-part6').then(m => m.hgAgriculturalOriginsPart6Data) },
       { title: 'AP Review', loader: () => import('./hg-agricultural-origins-part7').then(m => m.hgAgriculturalOriginsPart7Data) }
     ],
@@ -957,8 +957,8 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./hg-agricultural-practices-part1').then(m => m.hgAgriculturalPracticesPart1Data) },
-      { title: 'Key Processes', loader: () => import('./hg-agricultural-practices-part2').then(m => m.hgAgriculturalPracticesPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./hg-agricultural-practices-part3').then(m => m.hgAgriculturalPracticesPart3Data) },
+      { title: 'The Physical Environment, Intensity and Production Regions', loader: () => import('./hg-agricultural-practices-part2').then(m => m.hgAgriculturalPracticesPart2Data) },
+      { title: 'Von Thünen in Depth: Rent, Rings and Real Places', loader: () => import('./hg-agricultural-practices-part3').then(m => m.hgAgriculturalPracticesPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./hg-agricultural-practices-part4').then(m => m.hgAgriculturalPracticesPart4Data) },
       { title: 'Change Over Time', loader: () => import('./hg-agricultural-practices-part5').then(m => m.hgAgriculturalPracticesPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./hg-agricultural-practices-part6').then(m => m.hgAgriculturalPracticesPart6Data) },
@@ -969,9 +969,9 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./hg-urbanization-part1').then(m => m.hgUrbanizationPart1Data) },
-      { title: 'Key Processes', loader: () => import('./hg-urbanization-part2').then(m => m.hgUrbanizationPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./hg-urbanization-part3').then(m => m.hgUrbanizationPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./hg-urbanization-part4').then(m => m.hgUrbanizationPart4Data) },
+      { title: 'Site, Situation and the Origins of Cities', loader: () => import('./hg-urbanization-part2').then(m => m.hgUrbanizationPart2Data) },
+      { title: 'City Size and Spacing: Rank-Size, Primacy, Gravity and Central Places', loader: () => import('./hg-urbanization-part3').then(m => m.hgUrbanizationPart3Data) },
+      { title: 'Inside the City: Models of Urban Structure and Their Limits', loader: () => import('./hg-urbanization-part4').then(m => m.hgUrbanizationPart4Data) },
       { title: 'Change Over Time', loader: () => import('./hg-urbanization-part5').then(m => m.hgUrbanizationPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./hg-urbanization-part6').then(m => m.hgUrbanizationPart6Data) },
       { title: 'AP Review', loader: () => import('./hg-urbanization-part7').then(m => m.hgUrbanizationPart7Data) }
