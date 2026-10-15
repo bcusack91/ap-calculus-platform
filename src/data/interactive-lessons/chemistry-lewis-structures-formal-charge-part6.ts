@@ -39,9 +39,9 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
         questions: [
           {
             question: 'Which of the following molecules has an incomplete octet on its central atom?',
-            options: ['$CCl_{4}$', '$BeCl_{2}$', '$NF_{3}$', '$H_{2}O$'],
+            options: ['$CCl_{4}$', '$BeCl_{2}$', '$NF_{3}$', '$C_{2}H_{4}$'],
             correctAnswer: 1,
-            explanation: '$BeCl_{2}$ has an incomplete octet. Beryllium forms 2 bonds with Cl and has 0 lone pairs, giving it only 4 electrons around it. C, N, and O all achieve full octets in their respective molecules.'
+            explanation: '$BeCl_{2}$ has an incomplete octet. Beryllium forms 2 bonds with Cl and has 0 lone pairs, giving it only 4 electrons around it. In $CCl_{4}$, $NF_{3}$, and $C_{2}H_{4}$ (where the two carbons share a double bond), every C and N achieves a full octet.'
           }
         ]
       }

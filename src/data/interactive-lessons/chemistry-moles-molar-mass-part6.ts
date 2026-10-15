@@ -155,11 +155,11 @@ Or using percent composition: $\\%\\text{Ca} = 40.08/100.09 \\times 100 = 40.04\
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['55.85', '2.57', '2.409'],
+        correctAnswers: ['55.85', '2.58', '2.409'],
         hint1: '12.01 g of C = 1.000 mol of C. You need 1.000 mol of Fe.',
         hint2: 'Moles of NaCl = $25.0/58.44$. Each formula unit has 1 $Cl^{-}$, so multiply moles by $N_A$.',
         hint3: 'Moles of $H_{2}O$ = $36.04/18.02 = 2.00$ mol. Each molecule has 2 H atoms.',
-        explanation: '1) $12.01$ g C $= 1.000$ mol C $= 6.022 \\times 10^{23}$ atoms. We need the same number of Fe atoms, which is $1.000$ mol Fe $= 55.85$ g. 2) $n = 25.0/58.44 = 0.4278$ mol NaCl → $0.4278$ mol $Cl^{-}$. $N = 0.4278 \\times 6.022 \\times 10^{23} = 2.576 \\times 10^{23}$, so $a = 2.57$. 3) $2.00$ mol $H_{2}O$ $\\times 6.022 \\times 10^{23} = 1.2044 \\times 10^{24}$ molecules $\\times 2 = 2.409 \\times 10^{24}$ H atoms.'
+        explanation: '1) $12.01$ g C $= 1.000$ mol C $= 6.022 \\times 10^{23}$ atoms. We need the same number of Fe atoms, which is $1.000$ mol Fe $= 55.85$ g. 2) $n = 25.0/58.44 = 0.4278$ mol NaCl → $0.4278$ mol $Cl^{-}$. $N = 0.4278 \\times 6.022 \\times 10^{23} = 2.576 \\times 10^{23}$, so $a = 2.58$. 3) $2.00$ mol $H_{2}O$ $\\times 6.022 \\times 10^{23} = 1.2044 \\times 10^{24}$ molecules $\\times 2 = 2.409 \\times 10^{24}$ H atoms.'
       }
     },
     {
@@ -183,8 +183,8 @@ Or using percent composition: $\\%\\text{Ca} = 40.08/100.09 \\times 100 = 40.04\
             options: ['equal moles', 'more moles of Al', 'more moles of Fe', 'equal atoms']
           },
           {
-            label: 'The mass of one atom of carbon-12 in grams is $12.01 / N_A$, which is approximately',
-            options: ['$1.99 \\times 10^{-23}$ g', '$2.00 \\times 10^{-23}$ g', '$1.99 \\times 10^{-22}$ g', '$6.02 \\times 10^{-23}$ g']
+            label: 'The mass of one atom of carbon-12 in grams is $12.00 / N_A$, which is approximately',
+            options: ['$1.99 \\times 10^{-23}$ g', '$7.23 \\times 10^{24}$ g', '$1.99 \\times 10^{-22}$ g', '$6.02 \\times 10^{-23}$ g']
           }
         ],
         correctAnswers: ['grams → moles → particles', '7 × $6.022 \\times 10^{23}$', 'more moles of Al', '$1.99 \\times 10^{-23}$ g'],

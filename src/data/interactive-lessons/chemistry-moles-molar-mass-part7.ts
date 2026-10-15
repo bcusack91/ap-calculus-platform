@@ -189,7 +189,7 @@ A student analyzes a pure sample of hydrated copper(II) sulfate, $CuSO_{4}\\cdot
         dropdowns: [
           {
             label: 'The molar mass of a compound is determined by',
-            options: ['its physical state', 'summing atomic masses of all atoms in the formula', 'its density', 'its melting point']
+            options: ['the mass of whatever sample is weighed', 'summing atomic masses of all atoms in the formula', 'the sample\'s mass divided by its volume', 'averaging the atomic masses of the atoms in the formula']
           },
           {
             label: 'A mole ratio of 1.33 : 1 becomes the whole-number ratio',
@@ -197,7 +197,7 @@ A student analyzes a pure sample of hydrated copper(II) sulfate, $CuSO_{4}\\cdot
           },
           {
             label: 'The molecular formula is always a ______ of the empirical formula',
-            options: ['fraction', 'whole-number multiple', 'rearrangement', 'square root']
+            options: ['simplified version', 'whole-number multiple', 'rearrangement', 'fractional or decimal multiple']
           },
           {
             label: 'Two substances with the same percent composition must have the same',
@@ -235,7 +235,7 @@ A student analyzes a pure sample of hydrated copper(II) sulfate, $CuSO_{4}\\cdot
             explanation: '$n = 120.10/30.03 = 4.0$. Molecular formula = $C_{4}H_{8}O_{4}$. There are 4 carbon atoms per molecule.'
           },
           {
-            question: 'A 5.00 g sample of a compound contains $2.19 \\times 10^{22}$ molecules. If the compound is 40.0% C, 6.7% H, and 53.3% O by mass, what is its molecular formula?',
+            question: 'A 5.00 g sample of a compound contains $3.34 \\times 10^{22}$ molecules. If the compound is 40.0% C, 6.7% H, and 53.3% O by mass, what is its molecular formula?',
             options: [
               '$CH_{2}O$',
               '$C_{2}H_{4}O_{2}$',
@@ -243,7 +243,7 @@ A student analyzes a pure sample of hydrated copper(II) sulfate, $CuSO_{4}\\cdot
               '$C_{5}H_{10}O_{5}$'
             ],
             correctAnswer: 2,
-            explanation: 'First find molar mass: $n = 2.19 \\times 10^{22} / 6.022 \\times 10^{23} = 0.0364$ mol. $M = 5.00/0.0364 = 137$ g/mol. Empirical formula from composition (40.0% C, 6.7% H, 53.3% O) is $CH_{2}O$ ($M_{\\text{emp}} = 30.03$). But wait: $137/30.03 \\approx 4.6$, which is not a whole number. Let me recalculate: actually $n = 2.19 \\times 10^{22}/6.022 \\times 10^{23} = 0.03638$ mol. $M = 5.00/0.03638 = 137.4$ g/mol. Hmm, let me re-examine. If the answer is $C_{3}H_{6}O_{3}$ ($M = 90.08$), then $n = 5.00/90.08 = 0.0555$ mol and molecules $= 0.0555 \\times 6.022 \\times 10^{23} = 3.34 \\times 10^{22}$. For the answer to work with $2.19 \\times 10^{22}$ molecules: $M = 5.00/0.0364 = 137.4$. None of the answers give 137.4. The correct approach: the empirical formula $CH_{2}O$ has $M = 30.03$, and $n=3$ gives $C_{3}H_{6}O_{3}$ with $M = 90.08$. With $M = 90.08$: molecules = $(5.00/90.08) \\times 6.022 \\times 10^{23} = 3.34 \\times 10^{22}$. The answer is $C_{3}H_{6}O_{3}$.'
+            explanation: 'Moles: $n = 3.34 \\times 10^{22} / 6.022 \\times 10^{23} = 0.0555$ mol, so $M = 5.00/0.0555 = 90.1$ g/mol. The composition (40.0% C, 6.7% H, 53.3% O) gives the empirical formula $CH_{2}O$ ($M_{\\text{emp}} = 30.03$ g/mol). $n = 90.1/30.03 = 3$, so the molecular formula is $C_{3}H_{6}O_{3}$ ($M = 90.08$ g/mol). Stopping at the empirical formula gives $CH_{2}O$, and $n = 2$ or $n = 5$ would require molar masses of 60.05 or 150.13 g/mol.'
           }
         ]
       }

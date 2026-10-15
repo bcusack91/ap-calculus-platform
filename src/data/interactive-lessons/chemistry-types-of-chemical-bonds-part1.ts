@@ -75,9 +75,9 @@ Metals have **low ionization energies** (easy to remove electrons) and nonmetals
             question: 'In the formation of an ionic bond, electrons are:',
             options: [
               'Shared equally between atoms',
-              'Transferred from a nonmetal to a metal',
+              'Transferred from nonmetal to metal',
               'Transferred from a metal to a nonmetal',
-              'Destroyed and converted to energy'
+              'Shared unequally between atoms'
             ],
             correctAnswer: 2,
             explanation: 'In ionic bonding, a metal atom transfers one or more electrons to a nonmetal atom. The metal becomes a cation and the nonmetal becomes an anion.'
@@ -96,13 +96,13 @@ Metals have **low ionization energies** (easy to remove electrons) and nonmetals
           {
             question: 'Which pair of elements is most likely to form an ionic bond?',
             options: [
-              'Two nonmetals (N and O)',
-              'Two metals (Na and K)',
+              'Two nonmetals far apart in the table (H and F)',
+              'Two metals from different groups (Na and Mg)',
               'A metal and a nonmetal (K and Br)',
-              'Two noble gases (He and Ne)'
+              'A metalloid and a nonmetal (Si and O)'
             ],
             correctAnswer: 2,
-            explanation: 'Ionic bonds typically form between a metal (low ionization energy) and a nonmetal (high electron affinity). Potassium and bromine form KBr, a classic ionic compound.'
+            explanation: 'Ionic bonds typically form between a metal (low ionization energy) and a nonmetal (high electron affinity). Potassium and bromine form KBr, a classic ionic compound. H and F are both nonmetals, so even with a large electronegativity difference they share electrons (polar covalent); Na and Mg form metallic bonding; and Si and O form a covalent network.'
           }
         ]
       }
@@ -181,13 +181,13 @@ where:
           {
             question: 'MgO has a much higher lattice energy than NaCl because:',
             options: [
-              'Mg and O are lighter atoms',
-              'MgO has higher ion charges ($+2, -2$) and smaller ions',
-              'MgO is a gas at room temperature',
-              'Mg is more electronegative than Na'
+              'Mg and O are lighter atoms, so the lattice packs more tightly',
+              'MgO has ions with higher charges and smaller radii',
+              'MgO has covalent character, which adds bonds on top of the ionic ones',
+              'Mg is more electronegative than Na, so it holds its electrons more tightly'
             ],
             correctAnswer: 1,
-            explanation: 'MgO has ions with charges $+2$ and $-2$ (vs. $+1$ and $-1$ for NaCl), and both $\\text{Mg}^{2+}$ and $\\text{O}^{2-}$ are smaller than $\\text{Na}^+$ and $\\text{Cl}^-$. Both factors dramatically increase lattice energy.'
+            explanation: 'MgO has ions with charges $+2$ and $-2$ (vs. $+1$ and $-1$ for NaCl), and both $\\text{Mg}^{2+}$ and $\\text{O}^{2-}$ are smaller than $\\text{Na}^+$ and $\\text{Cl}^-$. Both factors dramatically increase lattice energy. Atomic mass and electronegativity do not set lattice energy, and MgO is an ionic solid, not a covalent one.'
           }
         ]
       }
@@ -224,25 +224,25 @@ When a force shifts one layer of the lattice, cations end up next to cations and
         dropdowns: [
           {
             label: 'Ionic compounds have high melting points because:',
-            options: ['ions are held by weak forces', 'strong electrostatic attractions must be overcome', 'they are molecular substances', 'they have low lattice energies'],
+            options: ['the covalent bonds in each molecule must break', 'strong electrostatic attractions must be overcome', 'strong forces hold separate molecules together', 'dense packing traps heat inside the lattice'],
             correctIndex: 1,
             explanation: 'The strong Coulombic attractions between oppositely charged ions in the crystal lattice require a large amount of energy to break, resulting in high melting points.'
           },
           {
             label: 'Solid NaCl does NOT conduct electricity because:',
-            options: ['it contains no ions', 'its ions are fixed in the lattice and cannot move', 'it has no electrons', 'it is a nonpolar substance'],
+            options: ['it is made of neutral NaCl molecules', 'its ions are fixed in the lattice and cannot move', 'its electrons are held in covalent bonds', 'it is nonpolar with no separated charge'],
             correctIndex: 1,
             explanation: 'Solid ionic compounds have ions locked in fixed positions in the crystal lattice. They cannot move to carry charge. When melted or dissolved, the ions become mobile and can conduct.'
           },
           {
             label: 'When an ionic crystal is struck with a hammer, it shatters because:',
-            options: ['the bonds are too weak', 'shifting layers causes like charges to align and repel', 'the crystal melts from the impact', 'electrons are knocked free'],
+            options: ['the ionic bonds are too weak to survive impact', 'shifting layers causes like charges to align and repel', 'the impact melts the crystal along a line', 'the hammer knocks electrons off the ions'],
             correctIndex: 1,
             explanation: 'When layers in the lattice shift, ions of the same charge are forced next to each other. The resulting electrostatic repulsion causes the crystal to fracture.'
           },
           {
             label: 'Ionic compounds dissolve in water because water molecules:',
-            options: ['are nonpolar', 'stabilize ions through ion-dipole interactions', 'form ionic bonds with the solute', 'share electrons with the ions'],
+            options: ['are nonpolar and slip between the ions', 'stabilize ions through ion-dipole interactions', 'form new ionic bonds with the ions', 'share electron pairs with the ions'],
             correctIndex: 1,
             explanation: 'Water is a polar solvent. The partial charges on water molecules interact with ions (ion-dipole forces), stabilizing them in solution and overcoming the lattice energy.'
           }

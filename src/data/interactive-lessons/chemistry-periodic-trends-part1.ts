@@ -63,7 +63,7 @@ The modern periodic table arranges elements by increasing **atomic number (Z)**.
             options: [
               'Number of electron shells',
               'Number of valence electrons',
-              'Atomic mass',
+              'Number of protons',
               'Number of neutrons'
             ],
             correctAnswer: 1,
@@ -72,13 +72,13 @@ The modern periodic table arranges elements by increasing **atomic number (Z)**.
           {
             question: 'Elements in the same period share the same:',
             options: [
-              'Number of valence electrons',
-              'Chemical reactivity',
-              'Number of electron shells (principal energy level)',
-              'Electronegativity'
+              'Number of valence electrons in the outer shell',
+              'Chemical reactivity toward water and oxygen',
+              'Highest occupied principal energy level',
+              'Electronegativity value on the Pauling scale'
             ],
             correctAnswer: 2,
-            explanation: 'A period is a horizontal row. All elements in Period 3 (Na through Ar), for example, have electrons filling the n = 3 shell.'
+            explanation: 'A period is a horizontal row, and its number is the highest principal energy level that holds electrons. All elements in Period 3 (Na through Ar), for example, have electrons filling the n = 3 shell, while their valence electron counts, reactivity, and electronegativity all change across the row.'
           }
         ]
       }
@@ -153,10 +153,10 @@ where:
           {
             question: 'Which of the following best explains why $Z_{eff}$ increases across a period?',
             options: [
-              'More electron shells are added',
-              'Protons are added but core electrons stay the same, so shielding does not increase',
-              'The number of neutrons increases',
-              'Valence electrons move farther from the nucleus'
+              'A new electron shell is added with each element, pulling the valence shell inward',
+              'Protons are added, but the number of core electrons stays the same',
+              'The number of neutrons rises, adding to the nucleus\'s pull on valence electrons',
+              'Valence electrons move farther from the nucleus, so the core shields them less'
             ],
             correctAnswer: 1,
             explanation: 'Across a period, protons are added to the nucleus and electrons are added to the same valence shell. Since same-shell electrons shield each other poorly, the core electron count stays roughly constant while $Z$ rises, so $Z_{eff}$ increases.'
@@ -229,13 +229,13 @@ Fill in the blanks to review the key ideas.`,
           },
           {
             label: 'Elements in the same group have similar chemical properties because they have the same number of:',
-            options: ['neutrons', 'core electrons', 'valence electrons', 'protons'],
+            options: ['electron shells', 'core electrons', 'valence electrons', 'protons'],
             correctIndex: 2,
             explanation: 'Valence electrons determine chemical behavior. Group members share the same valence electron count.'
           },
           {
             label: 'Down a group, $Z_{eff}$ felt by valence electrons:',
-            options: ['increases dramatically', 'remains roughly constant', 'decreases to zero'],
+            options: ['increases dramatically', 'remains roughly constant', 'decreases sharply'],
             correctIndex: 1,
             explanation: 'Going down a group, both $Z$ and $S$ increase by similar amounts (a full shell of core electrons is added), so $Z_{eff}$ stays roughly constant.'
           }

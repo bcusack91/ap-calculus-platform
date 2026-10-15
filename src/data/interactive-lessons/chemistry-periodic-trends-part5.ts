@@ -161,13 +161,13 @@ The dipole arrow points **toward** the more electronegative atom.`
           {
             question: 'Why does electronegativity decrease down a group?',
             options: [
-              'There are more protons pulling on bonding electrons',
-              'The atomic radius is smaller',
+              'Down a group, core electrons are removed, so shielding of bonding electrons falls',
+              'The atomic radius gets smaller, so bonding electrons are held less tightly',
               'Bonding electrons are farther from the nucleus and more shielded',
-              'Noble gases have increasing electronegativity'
+              'Effective nuclear charge drops by one unit per period, weakening the pull'
             ],
             correctAnswer: 2,
-            explanation: 'Down a group, each new shell places bonding electrons farther from the nucleus. The additional core electrons also increase shielding, reducing the effective attraction for bonding electrons.'
+            explanation: 'Down a group, each new shell places bonding electrons farther from the nucleus. The additional core electrons also increase shielding, so the attraction for bonding electrons weakens even though $Z_{eff}$ stays roughly constant and the atoms get larger, not smaller.'
           }
         ]
       }
@@ -219,8 +219,8 @@ Calculate the electronegativity difference ($\\Delta EN$) for each bond and clas
           {
             label: 'The bond H-F ($\\Delta EN = 1.9$) is classified as:',
             options: ['nonpolar covalent', 'polar covalent', 'ionic'],
-            correctIndex: 2,
-            explanation: '$\\Delta EN = 4.0 - 2.1 = 1.9 > 1.7$, which falls in the ionic range. However, H-F is often considered a very polar covalent bond. The boundary at 1.7 is approximate, and many sources classify H-F as polar covalent. The AP exam treats $\\Delta EN > 1.7$ as ionic.'
+            correctIndex: 1,
+            explanation: 'H and F are both nonmetals, so they share electrons in a covalent bond. With $\\Delta EN = 4.0 - 2.1 = 1.9$, the bond is very polar, with $\\delta^-$ on F, but HF exists as discrete molecules, not as a lattice of ions, so it is polar covalent. The 1.7 cutoff in the table is only a rough guide; AP Chemistry treats a bond between two nonmetals as covalent and a metal–nonmetal bond as ionic.'
           },
           {
             label: 'In a C-Cl bond, the partial negative charge is on:',
@@ -257,13 +257,13 @@ Calculate the electronegativity difference ($\\Delta EN$) for each bond and clas
           {
             question: 'Electronegativity and atomic radius have what relationship?',
             options: [
-              'They increase together',
-              'They are inversely related — as one increases, the other decreases',
-              'They are unrelated',
-              'Both decrease across a period'
+              'They increase together across a period',
+              'They are inversely related',
+              'They are unrelated, since one measures size and the other attraction',
+              'Both decrease from left to right across a period'
             ],
             correctAnswer: 1,
-            explanation: 'Electronegativity increases across a period and up a group, while atomic radius decreases across a period and up a group. They show opposite trends because smaller atoms with higher $Z_{eff}$ attract bonding electrons more strongly.'
+            explanation: 'Electronegativity increases across a period and up a group, while atomic radius decreases across a period and up a group. As one increases, the other decreases, because smaller atoms with higher $Z_{eff}$ attract bonding electrons more strongly.'
           }
         ]
       }

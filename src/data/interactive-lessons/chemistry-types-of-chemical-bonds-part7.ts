@@ -73,21 +73,21 @@ It's the **intermolecular forces** (not the covalent bonds) that determine melti
           {
             question: 'A student claims that "ionic bonds are always stronger than covalent bonds." Which observation best refutes this claim?',
             options: [
-              'NaCl dissolves in water',
-              'The N≡N bond energy (945 kJ/mol) is higher than the lattice energy of some ionic compounds',
-              'Metals are malleable',
-              '$CO_{2}$ is a gas at room temperature'
+              'NaCl dissolves in water, so its ionic bonds must be weaker than the O—H bonds in water molecules',
+              'The N≡N bond energy exceeds the lattice energy of some ionic compounds',
+              'Metals are malleable, which shows that some bonds can bend under stress instead of breaking',
+              '$CO_{2}$ is a gas at room temperature, so the covalent C=O bonds inside it must be very weak'
             ],
             correctAnswer: 1,
-            explanation: 'The N≡N triple bond (945 kJ/mol) is stronger than the lattice energy of some ionic compounds (e.g., CsCl at 657 kJ/mol). Bond strength depends on the specific bonds, not just the category.'
+            explanation: 'The N≡N triple bond (945 kJ/mol) is stronger than the lattice energy of some ionic compounds (e.g., CsCl at 657 kJ/mol). Bond strength depends on the specific bonds, not just the category. Dissolving NaCl and boiling $CO_{2}$ involve attractions between particles (ion-dipole forces and intermolecular forces), not a direct comparison of ionic and covalent bond strengths, and malleability concerns metallic bonding.'
           },
           {
             question: 'Why does diamond (a covalent compound) have an extremely high melting point?',
             options: [
-              'It has strong intermolecular forces between molecules',
-              'It has ionic bonds throughout its structure',
+              'Strong intermolecular forces hold its molecules together',
+              'Its carbon atoms form ionic bonds throughout the crystal',
               'It is a covalent network solid with continuous C—C bonds that must be broken',
-              'It has metallic bonding from delocalized electrons'
+              'Its delocalized electrons form strong metallic bonds'
             ],
             correctAnswer: 2,
             explanation: 'Diamond is a covalent network solid. There are no individual molecules — just a continuous 3D network of strong C—C covalent bonds. Melting requires breaking these bonds directly, which requires enormous energy.'
@@ -96,7 +96,7 @@ It's the **intermolecular forces** (not the covalent bonds) that determine melti
             question: 'The formula NaCl represents:',
             options: [
               'One molecule of sodium chloride',
-              'The simplest ratio of $Na^{+}$ to $Cl^{-}$ ions in the crystal lattice (a formula unit)',
+              'The simplest ratio of $Na^{+}$ to $Cl^{-}$ ions in the crystal lattice',
               'Two atoms bonded covalently',
               'A metallic alloy of sodium and chlorine'
             ],
@@ -158,13 +158,13 @@ Specify **which charges** and **which radii** you're comparing. The AP exam rewa
           {
             question: 'Which of the following best explains why the melting point of MgO (2852 °C) is much higher than that of NaCl (801 °C)?',
             options: [
-              'MgO has more atoms per formula unit',
-              'MgO has higher ion charges ($+2$ and $-2$) and smaller ionic radii, producing stronger Coulombic attractions',
-              'MgO forms covalent bonds while NaCl forms ionic bonds',
-              'MgO has a larger molar mass'
+              'MgO packs more atoms into each formula unit',
+              'MgO has higher ion charges and smaller ions, so its Coulombic attractions are stronger',
+              'MgO has covalent bonds, which are always stronger',
+              'MgO has a larger molar mass than NaCl'
             ],
             correctAnswer: 1,
-            explanation: 'Both are ionic. MgO has ions with charges $+2/-2$ (vs. $+1/-1$), and both $\\text{Mg}^{2+}$ and $\\text{O}^{2-}$ are smaller than $\\text{Na}^+$ and $\\text{Cl}^-$. By Coulomb\'s law, $F \\propto q_1 q_2/r^2$, the forces in MgO are much stronger → higher lattice energy → higher MP.'
+            explanation: 'Both are ionic. MgO has ions with charges $+2/-2$ (vs. $+1/-1$), and both $\\text{Mg}^{2+}$ and $\\text{O}^{2-}$ are smaller than $\\text{Na}^+$ and $\\text{Cl}^-$. By Coulomb\'s law, $F \\propto q_1 q_2/r^2$, the forces in MgO are much stronger → higher lattice energy → higher MP. Both compounds have two ions per formula unit, and MgO (40.30 g/mol) is actually lighter than NaCl (58.44 g/mol).'
           },
           {
             question: 'Substance X has a melting point of $-114$ °C and does not conduct electricity in any phase. Substance X is most likely:',
@@ -180,9 +180,9 @@ Specify **which charges** and **which radii** you're comparing. The AP exam rewa
           {
             question: 'In which of the following substances is there both ionic and covalent bonding?',
             options: [
-              '$\\text{CaCl}_2$',
+              '$\\text{CaO}$',
               '$\\text{KNO}_3$',
-              '$\\text{CCl}_4$',
+              '$\\text{CH}_4$',
               '$\\text{Fe}$'
             ],
             correctAnswer: 1,
@@ -211,10 +211,10 @@ Specify **which charges** and **which radii** you're comparing. The AP exam rewa
           {
             question: 'Graphite conducts electricity but diamond does not, even though both are pure carbon. The best explanation is:',
             options: [
-              'Graphite has ionic bonds between layers',
-              'Diamond has metallic bonding',
-              'In graphite, delocalized electrons between layers are free to move; in diamond, all electrons are localized in C—C bonds',
-              'Diamond has a higher melting point'
+              'Graphite\'s layers are held together by ionic bonds, and those ions are free to move and carry a current',
+              'Diamond\'s metallic bonds hold its electrons too tightly, while graphite\'s metallic bonds let them move',
+              'Graphite has delocalized electrons moving along its layers, while diamond\'s are locked in C—C bonds',
+              'Diamond has a higher melting point, and substances with higher melting points never conduct electricity'
             ],
             correctAnswer: 2,
             explanation: 'In graphite, each carbon is bonded to only 3 others (not 4), leaving one electron per carbon delocalized across the layers. These mobile electrons allow electrical conduction. In diamond, all 4 electrons per carbon are in localized C—C bonds — none are free to move.'

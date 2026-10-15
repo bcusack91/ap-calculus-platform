@@ -83,7 +83,7 @@ The shared pair of electrons is attracted to **both** nuclei simultaneously. Thi
           {
             question: 'Covalent bonds typically form between:',
             options: [
-              'Two metals',
+              'Two metal atoms',
               'A metal and a nonmetal',
               'Two nonmetals',
               'A metal and a noble gas'
@@ -256,7 +256,7 @@ More shared electron pairs means:
             options: [
               '$\\text{N}_2$ is highly reactive',
               '$\\text{N}_2$ easily decomposes',
-              '$\\text{N}_2$ is kinetically inert (unreactive) at room temperature',
+              '$\\text{N}_2$ is unreactive at room temperature',
               '$\\text{N}_2$ readily forms ionic bonds'
             ],
             correctAnswer: 2,

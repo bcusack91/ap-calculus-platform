@@ -75,7 +75,7 @@ Total electrons: 2 + 2 + 6 + 2 = 12 → **Magnesium (Mg)**
             text: 'Identify the element:',
             options: [
               'Nitrogen (N)',
-              'Phosphorus (P)',
+              'Sulfur (S)',
               'Chlorine (Cl)',
               'Bromine (Br)'
             ],
@@ -176,20 +176,20 @@ The binding energies of subshells follow predictable patterns:
       type: 'dropdown-select' as const,
       content: `### ✏️ Subshell Assignment
 
-An atom has the PES peaks: 2, 2, 6, 2, 6, 2, 1 (from highest to lowest binding energy).`,
+An atom has the PES peaks: 2, 2, 6, 2, 6, 1, 2 (from highest to lowest binding energy).`,
       exercise: {
         dropdowns: [
           {
-            text: 'What subshell does the 7th peak (height 1) correspond to?',
+            text: 'What subshell does the 6th peak (height 1) correspond to?',
             options: ['3p', '3d', '4s', '4p'],
             correctIndex: 1,
-            explanation: 'The seven peaks correspond to: $1s^{2}(2)$, $2s^{2}(2)$, $2p^{6}(6)$, $3s^{2}(2)$, $3p^{6}(6)$, $4s^{2}(2)$, $3d^{1}(1)$. After the 4s subshell fills, the next subshell to fill is 3d. Note: in PES, 3d appears after 4s because 3d has a higher binding energy position relative to 4s in transition metals — but the filling order puts 4s before 3d. On the PES spectrum for scandium, the 3d peak appears to the left of 4s because 3d electrons have higher binding energy.'
+            explanation: 'In order of decreasing binding energy, the peaks are $1s^{2}(2)$, $2s^{2}(2)$, $2p^{6}(6)$, $3s^{2}(2)$, $3p^{6}(6)$, $3d^{1}(1)$, $4s^{2}(2)$. The 4s subshell fills before 3d, but once scandium has a 3d electron, that electron is held more tightly than the 4s electrons. So the 3d peak sits just to the left of the 4s peak, and the 4s electrons (the rightmost peak) are the first ones removed when scandium ionizes.'
           },
           {
             text: 'What element is this?',
             options: ['Potassium (K)', 'Calcium (Ca)', 'Scandium (Sc)', 'Titanium (Ti)'],
             correctIndex: 2,
-            explanation: 'Total electrons = 2 + 2 + 6 + 2 + 6 + 2 + 1 = 21. This is scandium (Sc, Z = 21) with configuration $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ $4s^{2}$ $3d^{1}$.'
+            explanation: 'Total electrons = 2 + 2 + 6 + 2 + 6 + 1 + 2 = 21. This is scandium (Sc, Z = 21) with configuration $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ $4s^{2}$ $3d^{1}$.'
           }
         ]
       }

@@ -71,7 +71,7 @@ When given PES data and asked to identify an element, follow this systematic app
             text: 'Identify the element:',
             options: [
               'Sodium (Na, Z = 11)',
-              'Magnesium (Mg, Z = 12)',
+              'Argon (Ar, Z = 18)',
               'Potassium (K, Z = 19)',
               'Calcium (Ca, Z = 20)'
             ],
@@ -92,13 +92,13 @@ When given PES data and asked to identify an element, follow this systematic app
           {
             text: 'Al $(1s^{2} 2s^{2} 2p^{6} 3s^{2} 3p^{1})$ would show:',
             options: [
-              '3 peaks: 2, 8, 3',
+              '5 peaks: 2, 2, 6, 1, 2',
               '5 peaks: 2, 2, 6, 2, 1',
               '4 peaks: 2, 2, 6, 3',
               '4 peaks: 2, 8, 2, 1'
             ],
             correctAnswer: 1,
-            explanation: 'Aluminum has 5 occupied subshells: $1s^{2}$ (2), $2s^{2}$ (2), $2p^{6}$ (6), $3s^{2}$ (2), $3p^{1}$ (1). Each subshell produces one peak, giving 5 peaks with heights 2, 2, 6, 2, 1 from highest to lowest binding energy.'
+            explanation: 'Aluminum has 5 occupied subshells: $1s^{2}$ (2), $2s^{2}$ (2), $2p^{6}$ (6), $3s^{2}$ (2), $3p^{1}$ (1). Each subshell produces one peak, giving 5 peaks with heights 2, 2, 6, 2, 1 from highest to lowest binding energy. The 3p electron is the easiest to remove, so its peak (height 1) comes last, not before the 3s peak. Lumping 2s and 2p into a single peak of 8, or merging 3s and 3p into one peak of 3, hides peaks that PES resolves separately.'
           }
         ]
       }
@@ -139,15 +139,15 @@ When given PES data and asked to identify an element, follow this systematic app
         dropdowns: [
           {
             text: 'A student sees this spectrum and claims the total is 2+2+6+2+6+2+6 = 26. Is this spectrum complete for any real neutral atom?',
-            options: ['Yes — it represents iron (Fe, Z = 26)', 'No — the spectrum is missing a 3d peak and cannot represent a real element as shown', 'Yes — it represents krypton (Kr, Z = 36)', 'Yes — it represents argon (Ar, Z = 18)'],
+            options: ['Yes — it represents iron (Fe, Z = 26)', 'No — a 3d peak is missing, so no real element gives this spectrum', 'Yes — it represents krypton (Kr, Z = 36)', 'Yes — it represents zinc (Zn, Z = 30)'],
             correctIndex: 1,
             explanation: 'The peak pattern 2, 2, 6, 2, 6, 2, 6 implies subshells $1s^{2}$, $2s^{2}$, $2p^{6}$, $3s^{2}$, $3p^{6}$, $4s^{2}$, $4p^{6}$ — but this is not a valid ground-state configuration. The 3d subshell must fill (up to 10 electrons) before the 4p subshell. No neutral atom has electrons in 4p without first filling 3d. This spectrum is incomplete or erroneous — a 3d peak is missing.'
           },
           {
             text: 'What is missing from this PES spectrum if the element is supposed to have electrons in the 3d subshell?',
-            options: ['A peak of height 10 between the 3p and 4s peaks', 'A peak of height 6 after the 4p peak', 'Nothing is missing', 'A peak of height 2 before the 1s peak'],
+            options: ['A peak of height 10 between the 3p and 4s peaks', 'A peak of height 10 after the 4p peak, at the lowest binding energy', 'Nothing is missing; the 4p peak already includes the 3d electrons', 'A peak of height 10 placed between the 4s and 4p peaks'],
             correctIndex: 0,
-            explanation: 'If the element has electrons beyond the $3p^{6}$ subshell, the 3d subshell must fill before 4p. A complete spectrum for krypton would include a $3d^{10}$ peak (height 10) between the $3p^{6}$ and $4s^{2}$ peaks, giving total electrons: 2+2+6+2+6+10+2+6 = 36.'
+            explanation: 'If the element has electrons beyond the $3p^{6}$ subshell, the 3d subshell must fill before 4p. A complete spectrum for krypton would include a $3d^{10}$ peak (height 10) between the $3p^{6}$ and $4s^{2}$ peaks, giving total electrons: 2+2+6+2+6+10+2+6 = 36. Peaks appear in order of binding energy, and 3d electrons (n = 3) are held more tightly than any n = 4 electrons, so the 3d peak is not placed among or after the 4s and 4p peaks.'
           }
         ]
       }
@@ -165,8 +165,8 @@ When given PES data and asked to identify an element, follow this systematic app
           {
             text: 'Evaluate the student\'s claim:',
             options: [
-              'Correct — the element is sulfur (S) in Period 3',
-              'Correct — the element is silicon (Si) in Period 3',
+              'Correct — the element is sulfur in Period 3',
+              'Correct — it is chlorine in Period 3',
               'Incorrect — the element is in Period 2',
               'Incorrect — the element is in Period 4'
             ],

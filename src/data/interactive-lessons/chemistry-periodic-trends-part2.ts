@@ -166,10 +166,10 @@ Think: **"Down and to the left = bigger."**
               'O',
               'S',
               'Se',
-              'F'
+              'Cl'
             ],
             correctAnswer: 2,
-            explanation: 'O, S, and Se are all in Group 16. Radius increases down the group, so Se (Period 4) > S (Period 3) > O (Period 2). F (Period 2, Group 17) is even smaller than O.'
+            explanation: 'O, S, and Se are all in Group 16. Radius increases down the group, so Se (Period 4) > S (Period 3) > O (Period 2). Cl (Period 3, Group 17) is to the right of S in the same period, so it is smaller than S and much smaller than Se.'
           },
           {
             question: 'Which pair correctly shows the atom with the larger radius listed first?',
@@ -238,10 +238,10 @@ For each pair, type the chemical symbol of the atom with the **larger** atomic r
           {
             label: 'Atomic radius increases down a group because:',
             options: [
-              'Zeff increases dramatically',
+              '$Z_{eff}$ on the valence electrons drops sharply with each new period',
               'A new principal energy level is added each period',
-              'Electrons are removed from inner shells',
-              'The nucleus shrinks'
+              'Inner-shell electrons are removed, so outer electrons drift farther out',
+              'Extra neutrons in heavier nuclei take up more space inside the atom'
             ],
             correctIndex: 1,
             explanation: 'Each period adds a new electron shell. Although nuclear charge increases, the additional core electrons shield the new shell. The dominant effect is the increased distance from the nucleus.'

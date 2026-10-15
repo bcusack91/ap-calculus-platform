@@ -208,7 +208,7 @@ Which of the following electron configurations is INCORRECT?`,
             options: [
               'Li: $1s^{2}$ $2s^{1}$',
               'O: $1s^{2}$ $2s^{2}$ $2p^{4}$',
-              'Mg: $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$',
+              'Ca: $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ $4s^{2}$',
               'K: $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ $3d^{1}$'
             ],
             correctAnswer: 3,

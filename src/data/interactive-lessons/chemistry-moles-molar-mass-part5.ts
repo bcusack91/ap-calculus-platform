@@ -187,11 +187,11 @@ $$n = \\frac{M_{\\text{mol}}}{M_{\\text{emp}}} = \\frac{180.2 \\text{ g/mol}}{30
         dropdowns: [
           {
             label: 'The empirical formula represents the ______ ratio of atoms',
-            options: ['exact', 'simplest whole-number', 'mass', 'volume']
+            options: ['actual number-per-molecule', 'simplest whole-number', 'mass-to-mass', 'volume-to-volume']
           },
           {
             label: 'To find the molecular formula from the empirical formula, you also need the',
-            options: ['density', 'molar mass', 'boiling point', 'color']
+            options: ['density', 'molar mass', 'boiling point', 'percent composition']
           },
           {
             label: 'If a compound has empirical formula $CH_{2}$ and molar mass 42.08 g/mol, the value of n is',
@@ -234,10 +234,10 @@ $$n = \\frac{M_{\\text{mol}}}{M_{\\text{emp}}} = \\frac{180.2 \\text{ g/mol}}{30
               'HO',
               '$H_{2}O$',
               '$H_{2}O_{2}$',
-              '$H_{3}O_{3}$'
+              '$HO_{2}$'
             ],
             correctAnswer: 2,
-            explanation: '$M_{\\text{HO}} = 1.008 + 16.00 = 17.01$ g/mol. $n = 34.02/17.01 = 2$. Molecular formula = $H_{2}O_{2}$ (hydrogen peroxide).'
+            explanation: '$M_{\\text{HO}} = 1.008 + 16.00 = 17.01$ g/mol. $n = 34.02/17.01 = 2$. Molecular formula = $H_{2}O_{2}$ (hydrogen peroxide). The multiplier applies to every subscript, so doubling only the oxygen ($HO_{2}$) or only the hydrogen ($H_{2}O$) is not a whole-number multiple of HO.'
           }
         ]
       }

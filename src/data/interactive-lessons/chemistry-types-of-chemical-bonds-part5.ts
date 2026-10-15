@@ -69,7 +69,7 @@ export const chemTypesOfChemicalBondsPart5Data = {
             question: 'A substance has a high melting point, conducts electricity only when dissolved in water, and forms a brittle crystal. It is most likely:',
             options: [
               'A molecular compound',
-              'A metal',
+              'A metallic element',
               'An ionic compound',
               'A covalent network solid'
             ],
@@ -80,12 +80,12 @@ export const chemTypesOfChemicalBondsPart5Data = {
             question: 'Which substance would you expect to have the lowest melting point?',
             options: [
               'NaCl (ionic)',
-              'Fe (metallic)',
+              '$SiO_{2}$ (covalent network)',
               '$CH_{4}$ (molecular)',
               'MgO (ionic)'
             ],
             correctAnswer: 2,
-            explanation: 'Molecular compounds like $CH_{4}$ have weak intermolecular forces (London dispersion forces only). These require very little energy to overcome, resulting in very low melting points ($CH_{4}$ melts at $-182$ °C).'
+            explanation: 'Molecular compounds like $CH_{4}$ have weak intermolecular forces (London dispersion forces only). These require very little energy to overcome, resulting in very low melting points ($CH_{4}$ melts at $-182$ °C). NaCl and MgO must break strong ionic attractions, and $SiO_{2}$ must break covalent bonds throughout its network.'
           },
           {
             question: 'A solid conducts electricity and can be hammered into a thin sheet. It is most likely:',
@@ -93,7 +93,7 @@ export const chemTypesOfChemicalBondsPart5Data = {
               'An ionic compound',
               'A molecular compound',
               'A metallic element',
-              'A noble gas'
+              'A covalent network solid'
             ],
             correctAnswer: 2,
             explanation: 'Conductivity in the solid state and malleability are hallmarks of metals. The delocalized electron sea allows both electrical conduction and layer sliding without fracture.'
@@ -235,10 +235,10 @@ In a covalent network solid, atoms are connected by **continuous covalent bonds*
           {
             question: 'Diamond has an extremely high melting point (3550 °C) because:',
             options: [
-              'It has strong ionic bonds',
-              'It has strong metallic bonds',
-              'It is a covalent network solid with continuous C—C bonds throughout',
-              'It has strong intermolecular forces between molecules'
+              'Its carbon atoms are held by ionic bonds between alternating layers',
+              'Its delocalized electrons form very strong metallic bonds throughout',
+              'It is a covalent network solid with continuous C—C bonds',
+              'Its C molecules are held together by very strong intermolecular forces'
             ],
             correctAnswer: 2,
             explanation: 'Diamond is a covalent network solid. Every carbon atom is covalently bonded to 4 others in a continuous 3D network. Melting requires breaking these strong covalent bonds, not just intermolecular forces.'
@@ -248,7 +248,7 @@ In a covalent network solid, atoms are connected by **continuous covalent bonds*
             options: [
               'An ionic compound',
               'A metallic element',
-              'A molecular (covalent) compound',
+              'A molecular compound',
               'A covalent network solid'
             ],
             correctAnswer: 2,

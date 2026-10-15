@@ -94,7 +94,7 @@ The AP exam frequently tests these exceptions:
               'Halogen',
               'Noble gas',
               'Alkali metal',
-              'Nonmetal in Period 2'
+              'Metalloid'
             ],
             correctAnswer: 2,
             explanation: 'Large radius + low IE + low EN + near-zero EA = a metal in the bottom-left of the periodic table. This profile perfectly matches an alkali metal like Cs or K.'
@@ -113,10 +113,10 @@ The AP exam frequently tests these exceptions:
           {
             question: 'Sulfur ($Z = 16$) has a lower first ionization energy than phosphorus ($Z = 15$). The best explanation is:',
             options: [
-              'Sulfur has more protons pulling on its electrons',
+              'Sulfur\'s valence electrons are in the n = 4 shell, farther from the nucleus than phosphorus\'s n = 3 electrons',
               'Sulfur has a paired electron in one $3p$ orbital, and the extra repulsion makes it easier to remove',
-              'Phosphorus has a larger atomic radius',
-              'Sulfur has more shielding from its core electrons'
+              'Sulfur has more core electrons than phosphorus, so its 3p electrons are more strongly shielded from the nucleus',
+              'Sulfur\'s 3p subshell is half-filled, and half-filled subshells lose an electron more easily than others do'
             ],
             correctAnswer: 1,
             explanation: 'This parallels the O < N exception. P has a half-filled $3p^3$ configuration (extra stability). S has $3p^4$ with one paired electron. The electron-electron repulsion from pairing makes that fourth $3p$ electron easier to remove.'
@@ -173,10 +173,10 @@ On the AP exam, you often must **explain** a trend, not just state it. Here is a
           {
             label: 'Fluorine has a less negative electron affinity than chlorine because:',
             options: [
-              'Fluorine has fewer protons',
+              'Fluorine has fewer protons than chlorine',
               'Fluorine is too small and has strong electron repulsion in 2p',
-              'Chlorine has more shielding',
-              'Fluorine is a gas and chlorine is a gas too'
+              'Chlorine has a higher $Z_{eff}$ on its valence shell',
+              'Fluorine already has a full octet'
             ],
             correctIndex: 1,
             explanation: 'Fluorine\'s tiny $2p$ orbitals create strong electron-electron repulsion when an additional electron is added, partially offsetting the energy released. Chlorine\'s larger $3p$ orbitals accommodate the extra electron more comfortably.'
@@ -232,7 +232,7 @@ On the AP exam, you often must **explain** a trend, not just state it. Here is a
               'Atomic radius and ionization energy',
               'Ionization energy and electronegativity',
               'Atomic radius and electronegativity',
-              'Metallic character and ionization energy'
+              'Atomic radius and metallic character'
             ],
             correctAnswer: 1,
             explanation: 'Both ionization energy and electronegativity increase across a period due to increasing $Z_{eff}$. Atomic radius and metallic character decrease across a period.'
@@ -262,10 +262,10 @@ On the AP exam, you often must **explain** a trend, not just state it. Here is a
           {
             question: 'A student claims "atomic radius increases across a period because more electrons are added." What is wrong with this reasoning?',
             options: [
-              'More electrons are not added across a period',
-              'The additional electrons enter the same shell and do not effectively shield each other, so $Z_{eff}$ increases and the atom shrinks',
-              'Electrons have no effect on atomic size',
-              'Atomic radius actually stays constant across a period'
+              'No electrons are added across a period; only protons are added, so the atom shrinks as the atomic number $Z$ rises',
+              'Added electrons enter the same shell and shield each other poorly, so $Z_{eff}$ rises and the atom shrinks',
+              'Added electrons go into new, higher shells, but the extra protons pull those shells in even more tightly',
+              'Radius stays essentially constant across a period because the added electrons and protons cancel out'
             ],
             correctAnswer: 1,
             explanation: 'While electrons are added, they go into the same principal energy level. Same-shell electrons are poor shielders, so $Z_{eff}$ increases with each added proton. The increased $Z_{eff}$ pulls all electrons closer, causing the radius to decrease, not increase.'

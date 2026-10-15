@@ -143,7 +143,7 @@ $$M = 40.08 + 2(16.00 + 1.008) = 40.08 + 2(17.008) = 40.08 + 34.02 = 74.10 \\tex
           {
             question: 'The molar mass of an element can be found by looking at:',
             options: [
-              'Its atomic number on the periodic table',
+              'Its atomic number',
               'Its atomic mass on the periodic table',
               'Its electron configuration',
               'Its electronegativity'
@@ -154,24 +154,24 @@ $$M = 40.08 + 2(16.00 + 1.008) = 40.08 + 2(17.008) = 40.08 + 34.02 = 74.10 \\tex
           {
             question: 'What is the molar mass of sulfuric acid $(H_{2}SO_{4})$? (H = 1.008, S = 32.07, O = 16.00)',
             options: [
-              '49.08 g/mol',
-              '82.08 g/mol',
-              '98.08 g/mol',
-              '114.08 g/mol'
+              '50.09 g/mol',
+              '82.09 g/mol',
+              '98.09 g/mol',
+              '97.08 g/mol'
             ],
             correctAnswer: 2,
-            explanation: '$M = 2(1.008) + 32.07 + 4(16.00) = 2.016 + 32.07 + 64.00 = 98.09 \\approx 98.08$ g/mol.'
+            explanation: '$M = 2(1.008) + 32.07 + 4(16.00) = 2.016 + 32.07 + 64.00 = 98.09$ g/mol. Each wrong value comes from mishandling a subscript: ignoring the 4 on O gives 50.09, counting only three O atoms gives 82.09, and ignoring the 2 on H gives 97.08.'
           },
           {
             question: 'Which compound has the greatest molar mass?',
             options: [
-              '$H_{2}O$',
+              '$C_{2}H_{4}(OH)_{2}$',
               '$CO_{2}$',
               'NaCl',
               '$C_{6}H_{12}O_{6}$'
             ],
             correctAnswer: 3,
-            explanation: 'Glucose ($\\text{C}_6\\text{H}_{12}\\text{O}_6$) has the greatest molar mass at 180.16 g/mol because it contains the most atoms and includes heavy carbon and oxygen atoms.'
+            explanation: 'Glucose ($\\text{C}_6\\text{H}_{12}\\text{O}_6$) has the greatest molar mass at 180.16 g/mol. Ethylene glycol, $C_{2}H_{4}(OH)_{2}$, has the longest-looking formula of the others but is only 62.07 g/mol; NaCl is 58.44 g/mol and $CO_{2}$ is 44.01 g/mol.'
           }
         ]
       }
@@ -217,7 +217,7 @@ $$M = 40.08 + 2(16.00 + 1.008) = 40.08 + 2(17.008) = 40.08 + 34.02 = 74.10 \\tex
         dropdowns: [
           {
             label: 'The units of molar mass are',
-            options: ['g', 'mol', 'g/mol', 'amu']
+            options: ['g/atom', 'mol/g', 'g/mol', 'amu']
           },
           {
             label: 'One mole of carbon-12 has a mass of exactly',
@@ -250,13 +250,13 @@ $$M = 40.08 + 2(16.00 + 1.008) = 40.08 + 2(17.008) = 40.08 + 34.02 = 74.10 \\tex
           {
             question: 'What is the molar mass of aluminum sulfate, $Al_{2}(SO_{4})_{3}$? (Al = 26.98, S = 32.07, O = 16.00)',
             options: [
-              '150.17 g/mol',
+              '150.03 g/mol',
               '278.03 g/mol',
               '342.17 g/mol',
-              '214.10 g/mol'
+              '214.17 g/mol'
             ],
             correctAnswer: 2,
-            explanation: '$M = 2(26.98) + 3(32.07) + 12(16.00) = 53.96 + 96.21 + 192.00 = 342.17$ g/mol. Remember: the subscript 3 outside the parentheses multiplies everything inside — 3 S atoms and 12 O atoms total.'
+            explanation: '$M = 2(26.98) + 3(32.07) + 12(16.00) = 53.96 + 96.21 + 192.00 = 342.17$ g/mol. Remember: the subscript 3 outside the parentheses multiplies everything inside — 3 S atoms and 12 O atoms total. Ignoring that 3 gives 150.03, applying it only to S gives 214.17, and applying it only to O gives 278.03.'
           },
           {
             question: 'A substance has a molar mass of 44.01 g/mol. If you have exactly 1 mole, the sample weighs:',

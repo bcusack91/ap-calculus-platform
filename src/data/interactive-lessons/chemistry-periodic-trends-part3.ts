@@ -140,10 +140,10 @@ This explains why cesium is more reactive than lithium — its valence electron 
           {
             question: 'The first ionization energy of oxygen is slightly LESS than that of nitrogen because:',
             options: [
-              'Oxygen has fewer protons',
+              'Oxygen has fewer protons than nitrogen, so its nucleus attracts the 2p electrons less strongly',
               'Oxygen has a paired electron in one 2p orbital, increasing electron-electron repulsion',
-              'Nitrogen is a larger atom',
-              'Oxygen is a noble gas'
+              'Oxygen\'s 2p electrons occupy a higher shell than nitrogen\'s, placing them farther from the nucleus',
+              'Oxygen\'s 2p electrons feel more shielding because oxygen has more core electrons than nitrogen'
             ],
             correctAnswer: 1,
             explanation: 'Nitrogen has a half-filled $2p^3$ configuration ($\\uparrow$ $\\uparrow$ $\\uparrow$). Oxygen adds a fourth electron that must pair up ($\\uparrow\\!\\!\\downarrow$ $\\uparrow$ $\\uparrow$). The repulsion between paired electrons in the same orbital makes that electron easier to remove.'
@@ -224,10 +224,10 @@ If you see successive IE data, the **location of the big jump** tells you the **
               '$IE_1$ to $IE_2$',
               '$IE_2$ to $IE_3$',
               '$IE_3$ to $IE_4$',
-              '$IE_{10}$ to $IE_{11}$'
+              '$IE_4$ to $IE_5$'
             ],
             correctAnswer: 0,
-            explanation: 'Sodium has 1 valence electron. After removing it ($IE_1$), the next electron comes from the core ($2p$ subshell). The jump from $IE_1$ to $IE_2$ is the largest because it crosses from valence to core electrons.'
+            explanation: 'Sodium has 1 valence electron. After removing it ($IE_1$), the next electron comes from the core ($2p$ subshell). The jump from $IE_1$ to $IE_2$ is the largest because it crosses from valence to core electrons. The steps $IE_2$ → $IE_3$, $IE_3$ → $IE_4$, and $IE_4$ → $IE_5$ all remove electrons from the same $2p$ core subshell, so each rises more gradually.'
           }
         ]
       }

@@ -148,13 +148,13 @@ PES data can also help explain **successive ionization energies**. The large jum
           {
             text: 'The correct identification is:',
             options: [
-              'Lithium (Z = 3) because it has 3 peaks',
-              'Boron (Z = 5) because it has 2 + 2 + 3 = 7 electrons total',
-              'Nitrogen (Z = 7) because it has 2 + 2 + 3 = 7 electrons and configuration $1s^{2}$ $2s^{2}$ $2p^{3}$',
-              'Carbon (Z = 6) because the third peak has 3 electrons'
+              'Lithium (Z = 3), because the spectrum shows exactly 3 peaks',
+              'Phosphorus (Z = 15), because it has 3 electrons in its p peak',
+              'Nitrogen (Z = 7), because the peak heights sum to 7',
+              'Boron (Z = 5), because its outermost peak shows 3 electrons'
             ],
             correctAnswer: 2,
-            explanation: 'Total electrons = 2 + 2 + 3 = 7, which corresponds to nitrogen (Z = 7). The three peaks correspond to $1s^{2}$ (2 electrons, highest BE), $2s^{2}$ (2 electrons, middle BE), and $2p^{3}$ (3 electrons, lowest BE). This matches nitrogen\'s electron configuration of $1s^{2}$ $2s^{2}$ $2p^{3}$.'
+            explanation: 'Total electrons = 2 + 2 + 3 = 7, which corresponds to nitrogen (Z = 7). The three peaks correspond to $1s^{2}$ (2 electrons, highest BE), $2s^{2}$ (2 electrons, middle BE), and $2p^{3}$ (3 electrons, lowest BE). This matches nitrogen\'s electron configuration of $1s^{2}$ $2s^{2}$ $2p^{3}$. The number of peaks counts subshells, not electrons; phosphorus also has $p^{3}$ but would show five peaks; and boron\'s outermost peak would hold only 1 electron.'
           }
         ]
       }
@@ -168,11 +168,11 @@ PES data can also help explain **successive ionization energies**. The large jum
 >
 > | Peak | Binding Energy (MJ/mol) | Relative Height |
 > |------|------------------------|----------------|
-> | A | 200.2 | 2 |
-> | B | 23.4 | 2 |
-> | C | 18.7 | 6 |
-> | D | 2.45 | 2 |
-> | E | 1.09 | 2 |
+> | A | 178 | 2 |
+> | B | 15.0 | 2 |
+> | C | 10.1 | 6 |
+> | D | 1.40 | 2 |
+> | E | 0.786 | 2 |
 
 *Round all answers to 3 significant figures.*
       `,
@@ -185,8 +185,8 @@ PES data can also help explain **successive ionization energies**. The large jum
           },
           {
             label: 'What is the first ionization energy (in MJ/mol) based on the PES data?',
-            correctAnswer: '1.09',
-            explanation: 'The first ionization energy corresponds to the binding energy of the rightmost (outermost) peak, which is Peak E at 1.09 MJ/mol. This is the energy required to remove the most loosely bound electron.'
+            correctAnswer: '0.786',
+            explanation: 'The first ionization energy corresponds to the binding energy of the rightmost (outermost) peak, which is Peak E at 0.786 MJ/mol (786 kJ/mol). This is the energy required to remove the most loosely bound electron.'
           },
           {
             label: 'How many core electrons does this atom have?',
@@ -213,14 +213,14 @@ There is a large jump between $IE_{2}$ and $IE_{3}$.`,
               'It is a valence electron in the 3s subshell',
               'It is a core electron in the 2p subshell',
               'It is a paired electron experiencing extra repulsion',
-              'It indicates a change in orbital shape'
+              'It signals a change in the orbital\'s shape'
             ],
             correctIndex: 1,
             explanation: 'Magnesium has configuration $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$. The first two electrons removed are the $3s^{2}$ valence electrons $(IE_{1} and IE_{2})$. The third electron must come from the $2p^{6}$ core, which has a much higher binding energy. This large jump from ~1.45 to ~7.73 MJ/mol corresponds to crossing from valence to core electrons — clearly visible as the gap between the 3s and 2p peaks on a PES spectrum.'
           },
           {
             text: 'On a PES spectrum for Mg, which peak corresponds to the first ionization energy?',
-            options: ['The leftmost peak (1s)', 'The 2s peak', 'The 2p peak', 'The rightmost peak (3s)'],
+            options: ['The leftmost peak (1s)', 'The 2s peak', 'The tallest peak, from 2p', 'The rightmost peak (3s)'],
             correctIndex: 3,
             explanation: 'The first ionization energy always corresponds to the rightmost peak on the PES spectrum, which represents the outermost electrons with the lowest binding energy. For magnesium, this is the 3s peak.'
           }
@@ -232,19 +232,19 @@ There is a large jump between $IE_{2}$ and $IE_{3}$.`,
       type: 'multiple-choice' as const,
       content: `### ✏️ Final Challenge
 
-> **Problem:** An element has a PES spectrum with 7 peaks. The peak heights from left to right are: 2, 2, 6, 2, 6, 2, 10. What is this element, and what is special about it?`,
+> **Problem:** An element has a PES spectrum with 7 peaks. The peak heights from left to right are: 2, 2, 6, 2, 6, 10, 2. What is this element, and what is special about it?`,
       exercise: {
         questions: [
           {
             text: 'Identify the element and its significance:',
             options: [
               'Zinc (Zn) — it has a completely filled 3d subshell',
-              'Iron (Fe) — it is the most common transition metal',
-              'Copper (Cu) — it has an anomalous electron configuration',
-              'Nickel (Ni) — it is magnetic'
+              'Iron (Fe) — the most common transition metal',
+              'Copper (Cu) — it has an anomalous configuration',
+              'Nickel (Ni) — it has a partly filled 3d subshell'
             ],
             correctAnswer: 0,
-            explanation: 'Peaks: $1s^{2}(2)$, $2s^{2}(2)$, $2p^{6}(6)$, $3s^{2}(2)$, $3p^{6}(6)$, $4s^{2}(2)$, $3d^{10}(10)$. Total = 2 + 2 + 6 + 2 + 6 + 2 + 10 = 30 electrons → zinc (Zn, Z = 30). Zinc is notable for having a completely filled 3d subshell $(3d^{10})$, giving it unique stability among the transition metals.'
+            explanation: 'Peaks: $1s^{2}(2)$, $2s^{2}(2)$, $2p^{6}(6)$, $3s^{2}(2)$, $3p^{6}(6)$, $3d^{10}(10)$, $4s^{2}(2)$. The 3d electrons are held more tightly than the 4s electrons, so the 3d peak sits just left of the 4s peak. Total = 2 + 2 + 6 + 2 + 6 + 10 + 2 = 30 electrons → zinc (Zn, Z = 30). Zinc is notable for having a completely filled 3d subshell $(3d^{10})$, giving it unique stability among the transition metals.'
           }
         ]
       }

@@ -80,21 +80,21 @@ export const chemLewisStructuresFormalChargePart3Data = {
         dropdowns: [
           {
             id: 'ls-3-7-dd1',
-            label: '$N_{2}$ has a _______ (N≡N) to satisfy the octet rule for both nitrogen atoms',
+            label: '$N_{2}$ has a _______ to satisfy the octet rule for both nitrogen atoms',
             options: ['Single bond', 'Double bond', 'Triple bond'],
             correctIndex: 2,
             explanation: '$N_{2}$ has a triple bond (N≡N) to satisfy the octet rule for both nitrogen atoms.'
           },
           {
             id: 'ls-3-7-dd2',
-            label: '$O_{2}$ has a _______ (O=O) in its Lewis structure',
+            label: '$O_{2}$ has a _______ in its Lewis structure',
             options: ['Single bond', 'Double bond', 'Triple bond'],
             correctIndex: 1,
             explanation: '$O_{2}$ has a double bond (O=O) in its Lewis structure.'
           },
           {
             id: 'ls-3-7-dd3',
-            label: '$F_{2}$ has a _______ (F—F)',
+            label: '$F_{2}$ has a _______ between its two atoms',
             options: ['Single bond', 'Double bond', 'Triple bond'],
             correctIndex: 0,
             explanation: '$F_{2}$ has a single bond (F—F). Each fluorine has 7 valence electrons and only needs 1 more, so a single bond suffices.'

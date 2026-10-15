@@ -182,15 +182,15 @@ Match each element with its correct shorthand electron configuration.`,
         dropdowns: [
           {
             label: 'Potassium (K, Z = 19):',
-            options: ['[Ar] $3d^{1}$', '[Ar] $4s^{1}$', '[Ne] $3s^{2}$ $3p^{6}$ $4s^{1}$', '[Kr] $4s^{1}$'],
+            options: ['[Ar] $3d^{1}$', '[Ar] $4s^{1}$', '[Ne] $3s^{2}$ $3p^{6}$ $3d^{1}$', '[Kr] $4s^{1}$'],
             correctIndex: 1,
-            explanation: 'Potassium: [Ar] $4s^{1}$. After the argon core (18 electrons), the 19th electron goes into 4s, not 3d.'
+            explanation: 'Potassium: [Ar] $4s^{1}$. After the argon core (18 electrons), the 19th electron goes into 4s, not 3d. The shorthand uses the nearest preceding noble gas, so a [Ne] core with $3s^{2}$ $3p^{6}$ written out is not the shorthand, and [Kr] already holds 36 electrons.'
           },
           {
             label: 'Gallium (Ga, Z = 31):',
-            options: ['[Ar] $4s^{2}$ $3d^{10}$ $4p^{1}$', '[Kr] $4p^{1}$', '[Ar] $3d^{13}$', '[Ar] $4s^{2}$ $4p^{11}$'],
+            options: ['[Ar] $4s^{2}$ $3d^{10}$ $4p^{1}$', '[Kr] $4s^{2}$ $3d^{10}$ $4p^{1}$', '[Ar] $4s^{2}$ $4d^{10}$ $4p^{1}$', '[Ar] $3d^{10}$ $4p^{3}$'],
             correctIndex: 0,
-            explanation: 'Gallium: [Ar] $4s^{2}$ $3d^{10}$ $4p^{1}$. After argon (18), add $4s^{2}$ (20), $3d^{10}$ (30), $4p^{1}$ (31). Total = 31 ✓.'
+            explanation: 'Gallium: [Ar] $4s^{2}$ $3d^{10}$ $4p^{1}$. After argon (18), add $4s^{2}$ (20), $3d^{10}$ (30), $4p^{1}$ (31). Total = 31 ✓. A [Kr] core already holds 36 electrons, the d subshell that fills in period 4 is 3d (4d fills in period 5), and the 4s subshell fills before 4p rather than being skipped.'
           }
         ]
       }

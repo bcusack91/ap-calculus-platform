@@ -188,7 +188,7 @@ $$1.204 \\times 10^{24} + 6.022 \\times 10^{23} = 1.807 \\times 10^{24} \\text{ 
               'The same mass',
               'The same volume',
               'The same number of particles',
-              'The same number of electrons'
+              'The same number of protons'
             ],
             correctAnswer: 2,
             explanation: 'One mole always contains $6.022 \\times 10^{23}$ particles (atoms, molecules, ions, etc.), regardless of the substance. The mass and volume will differ.'
@@ -227,7 +227,7 @@ $$1.204 \\times 10^{24} + 6.022 \\times 10^{23} = 1.807 \\times 10^{24} \\text{ 
         dropdowns: [
           {
             label: 'A mole is a unit that measures',
-            options: ['mass', 'volume', 'amount of substance', 'temperature']
+            options: ['mass of a sample in grams', 'volume of a gas sample', 'amount of substance', 'concentration of a solution']
           },
           {
             label: 'The number $6.022 \\times 10^{23}$ is called',
@@ -235,7 +235,7 @@ $$1.204 \\times 10^{24} + 6.022 \\times 10^{23} = 1.807 \\times 10^{24} \\text{ 
           },
           {
             label: '2 mol of helium atoms contains ______ atoms than 2 mol of lead atoms',
-            options: ['more', 'fewer', 'the same number of', 'double the']
+            options: ['about 52 times more', 'fewer', 'the same number of', 'double the']
           },
           {
             label: 'If you have 0.5 mol of NaCl, you have ______ formula units',

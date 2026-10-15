@@ -151,9 +151,9 @@ Full $s$ subshell ($ns^2$). An added electron would go into a higher-energy $p$ 
             question: 'Why does nitrogen have a near-zero electron affinity?',
             options: [
               'Nitrogen is too small to hold another electron',
-              'Nitrogen already has a full octet',
+              'Nitrogen already has a full octet of valence electrons',
               'Adding an electron would disrupt the stable half-filled $2p^3$ configuration',
-              'Nitrogen has too many protons'
+              'Nitrogen\'s high ionization energy keeps it from gaining electrons'
             ],
             correctAnswer: 2,
             explanation: 'Nitrogen has the configuration $2p^3$ with one electron in each $2p$ orbital (half-filled). Adding a fourth $2p$ electron would force pairing, disrupting this extra stability. The energy released by gaining the electron is offset by the loss of exchange energy.'
@@ -199,10 +199,10 @@ Full $s$ subshell ($ns^2$). An added electron would go into a higher-energy $p$ 
           {
             label: 'Beryllium (Group 2) has a nearly zero EA because:',
             options: [
-              'Its nucleus is too small',
+              'Its +4 nuclear charge is too small to attract an electron',
               'Its 2s subshell is full, so the added electron would go to the higher-energy 2p',
-              'It has too many neutrons',
-              'It is a metal and metals always have zero EA'
+              'As a Group 2 metal, it already has a full octet',
+              'Metals always have electron affinities of about zero'
             ],
             correctIndex: 1,
             explanation: 'Beryllium has the configuration $1s^2\\,2s^2$. The $2s$ subshell is full, so an added electron would enter the $2p$ subshell, which is higher in energy. This makes the electron gain energetically unfavorable.'

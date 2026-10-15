@@ -141,10 +141,10 @@ If you know the percent composition, you can determine the **empirical formula**
           {
             question: 'When finding an empirical formula from percent composition, the first step is to:',
             options: [
-              'Find the molar mass',
+              'Find the molar mass of the compound',
               'Assume a 100 g sample',
-              'Balance the equation',
-              'Calculate the density'
+              'Balance the combustion equation',
+              'Calculate the density of the sample'
             ],
             correctAnswer: 1,
             explanation: 'Assuming a 100 g sample converts percentages directly to grams, making the calculation straightforward.'
@@ -179,11 +179,11 @@ If you know the percent composition, you can determine the **empirical formula**
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['82.2', '40.1', '2'],
+        correctAnswers: ['82.3', '40.1', '2'],
         hint1: '$\\%\\text{N} = \\frac{14.01}{17.03} \\times 100\\%$.',
         hint2: '$\\%\\text{S} = \\frac{32.07}{80.07} \\times 100\\%$.',
         hint3: 'Assume 100 g: 85.7 g C and 14.3 g H. Convert to moles and divide by the smallest value.',
-        explanation: '1) $\\%\\text{N} = 14.01/17.03 \\times 100 = 82.2\\%$. 2) $\\%\\text{S} = 32.07/80.07 \\times 100 = 40.1\\%$. 3) C: $85.7/12.01 = 7.14$ mol; H: $14.3/1.008 = 14.19$ mol. Ratio: $14.19/7.14 = 1.99 \\approx 2$. So the formula is $CH_{2}$ and the H-to-C ratio is 2.'
+        explanation: '1) $\\%\\text{N} = 14.01/17.03 \\times 100 = 82.3\\%$. 2) $\\%\\text{S} = 32.07/80.07 \\times 100 = 40.1\\%$. 3) C: $85.7/12.01 = 7.14$ mol; H: $14.3/1.008 = 14.19$ mol. Ratio: $14.19/7.14 = 1.99 \\approx 2$. So the formula is $CH_{2}$ and the H-to-C ratio is 2.'
       }
     },
     {
@@ -200,11 +200,11 @@ If you know the percent composition, you can determine the **empirical formula**
           },
           {
             label: 'If two compounds have the same empirical formula, they have the same',
-            options: ['molar mass', 'percent composition', 'molecular formula', 'density']
+            options: ['molar mass', 'percent composition', 'molecular formula', 'physical properties']
           },
           {
             label: 'A compound with a high percent of oxygen by mass will likely have',
-            options: ['many oxygen atoms relative to its total mass', 'a low molar mass', 'a high density', 'a high boiling point']
+            options: ['many oxygen atoms relative to its total mass', 'more oxygen atoms than any other kind of atom', 'a high density because oxygen is a heavy atom', 'a low molar mass, since oxygen is light']
           },
           {
             label: 'When dividing mole ratios gives 1.50, you should multiply all ratios by',
@@ -240,13 +240,13 @@ If you know the percent composition, you can determine the **empirical formula**
           {
             question: 'A compound is 52.2% C, 13.0% H, and 34.8% O. What is its empirical formula?',
             options: [
-              'CHO',
+              '$C_{2}H_{5}O$',
               '$CH_{2}O$',
               '$CH_{3}O$',
               '$C_{2}H_{6}O$'
             ],
             correctAnswer: 3,
-            explanation: 'Assume 100 g: C: $52.2/12.01 = 4.35$ mol, H: $13.0/1.008 = 12.90$ mol, O: $34.8/16.00 = 2.175$ mol. Divide by smallest (2.175): C = 2.00, H = 5.93 ≈ 6, O = 1.00. Ratio = 2:6:1 → empirical formula is $C_{2}H_{6}O$ (this is already the simplest ratio since the subscripts share no common factor greater than 1).'
+            explanation: 'Assume 100 g: C: $52.2/12.01 = 4.35$ mol, H: $13.0/1.008 = 12.90$ mol, O: $34.8/16.00 = 2.175$ mol. Divide by smallest (2.175): C = 2.00, H = 5.93 ≈ 6, O = 1.00. Ratio = 2:6:1 → empirical formula is $C_{2}H_{6}O$. Truncating 5.93 to 5 gives $C_{2}H_{5}O$, and dividing by the carbon moles instead of the smallest value gives $CH_{3}O$ with a leftover half oxygen.'
           }
         ]
       }

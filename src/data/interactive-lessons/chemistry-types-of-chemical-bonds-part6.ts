@@ -128,15 +128,15 @@ A substance is described. Identify its bond type.`,
               'MgO < KBr < NaCl'
             ],
             correctAnswer: 0,
-            explanation: 'Lattice energy: $E \\propto \\frac{q_+ \\times q_-}{r_+ + r_-}$. KBr has $+1/-1$ charges and large ions (lowest). NaCl has $+1/-1$ charges but smaller ions (middle). MgO has $+2/-2$ charges and small ions (highest: 3850 kJ/mol vs. 787 for NaCl vs. 657 for KBr).'
+            explanation: 'Lattice energy: $E \\propto \\frac{q_+ \\times q_-}{r_+ + r_-}$. KBr has $+1/-1$ charges and large ions (lowest). NaCl has $+1/-1$ charges but smaller ions (middle). MgO has $+2/-2$ charges and small ions (highest: about 3800 kJ/mol vs. 788 for NaCl vs. 671 for KBr).'
           },
           {
             question: 'Which of the following changes would INCREASE the lattice energy of an ionic compound?',
             options: [
-              'Replacing the cation with a larger one',
-              'Reducing the charges on both ions',
+              'Replacing the cation with a larger one of the same charge',
+              'Replacing both ions with ones that carry smaller charges',
               'Replacing the cation with one that has a higher charge',
-              'Increasing the distance between ions'
+              'Increasing the distance between the ion centers in the lattice'
             ],
             correctAnswer: 2,
             explanation: 'Lattice energy increases with higher ion charges and smaller ionic radii. Replacing a $+1$ cation with a $+2$ cation (keeping anion the same) increases the Coulombic attraction and thus the lattice energy.'
@@ -191,10 +191,10 @@ A substance is described. Identify its bond type.`,
               '$\\text{NaCl}$',
               '$\\text{H}_2\\text{O}$',
               '$\\text{Na}_2\\text{SO}_4$',
-              '$\\text{CH}_4$'
+              '$\\text{C}_2\\text{H}_5\\text{OH}$'
             ],
             correctAnswer: 2,
-            explanation: '$\\text{Na}_2\\text{SO}_4$ contains $\\text{Na}^+$ ions bonded ionically to $\\text{SO}_4^{2-}$. Within the sulfate ion, S and O are connected by covalent bonds. So the compound has both bond types.'
+            explanation: '$\\text{Na}_2\\text{SO}_4$ contains $\\text{Na}^+$ ions bonded ionically to $\\text{SO}_4^{2-}$. Within the sulfate ion, S and O are connected by covalent bonds. So the compound has both bond types. NaCl is purely ionic, and $\\text{H}_2\\text{O}$ and ethanol are purely covalent; the OH in ethanol is covalently bonded to carbon, not a hydroxide ion.'
           },
           {
             question: 'A triple bond compared to a single bond between the same two atoms has:',
@@ -210,10 +210,10 @@ A substance is described. Identify its bond type.`,
           {
             question: 'Which best explains why metals are malleable but ionic compounds are brittle?',
             options: [
-              'Metals have weaker bonds than ionic compounds',
-              'In metals, the non-directional electron sea accommodates layer shifts; in ionic compounds, shifted layers cause like-charge repulsion',
-              'Ionic compounds have higher melting points',
-              'Metals have directional bonds that bend easily'
+              'Metals have weaker bonds than ionic compounds, so their layers can slide apart without the whole solid breaking',
+              'The electron sea in metals adjusts when layers shift, but shifted ionic layers put like charges together',
+              'Ionic compounds have higher melting points, and substances with higher melting points are always more brittle',
+              'Metals have directional bonds that can bend, while ionic bonds are rigid and snap when the crystal is struck'
             ],
             correctAnswer: 1,
             explanation: 'When metal layers shift, the delocalized electron sea adjusts and continues bonding (malleable). When ionic layers shift, cations face cations and anions face anions — the repulsion shatters the crystal (brittle).'

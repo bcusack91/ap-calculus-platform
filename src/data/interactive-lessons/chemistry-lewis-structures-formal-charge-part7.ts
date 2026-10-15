@@ -40,13 +40,13 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
           {
             question: 'In $SOCl_{2}$, why is the structure with an S=O double bond preferred over the one with all single bonds?',
             options: [
-              'Double bonds are always stronger than single bonds',
+              'Double bonds are stronger than single bonds, so a structure should use as many as possible',
               'The double bond structure has all formal charges equal to zero',
-              'Sulfur cannot have a lone pair',
-              'Oxygen always forms double bonds'
+              'Sulfur cannot hold a lone pair once it is bonded to three other atoms',
+              'Oxygen must always form a double bond in order to complete its octet'
             ],
             correctAnswer: 1,
-            explanation: 'The S=O double bond structure is preferred because it gives all atoms a formal charge of 0. Sulfur can accommodate 10 electrons because it is in Period 3 and has empty d orbitals. The all-single-bond structure gives S = +1 and O = −1, which is less favorable.'
+            explanation: 'The S=O double bond structure is preferred because it gives all atoms a formal charge of 0. Sulfur can hold 10 electrons because it is in Period 3, where expanded octets are possible. The all-single-bond structure gives S = +1 and O = −1, which is less favorable. Bond strength alone does not decide which structure is best, and sulfur keeps one lone pair in both structures.'
           }
         ]
       }
@@ -95,15 +95,15 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
       exercise: {
         questions: [
           {
-            question: 'For $OCN^{-}$ (C is central, 16 total valence $e^{-}$), which structure is most favorable?\n\nA: [O=C=N]$ {}^{-}$ with FC: O = 0, C = 0, N = −1\nB: [O≡C—N]$ {}^{-}$ with FC: O = +1, C = 0, N = −2\nC: [O—C≡N]$ {}^{-}$ with FC: O = −2, C = 0, N = +1',
+            question: 'For $OCN^{-}$ (C is central, 16 total valence $e^{-}$), which structure is most favorable?\n\nA: [O=C=N]$ {}^{-}$ with FC: O = 0, C = 0, N = −1\nB: [O≡C—N]$ {}^{-}$ with FC: O = +1, C = 0, N = −2\nC: [O—C≡N]$ {}^{-}$ with FC: O = −1, C = 0, N = 0',
             options: [
-              'Structure A — minimal formal charges with −1 on nitrogen',
-              'Structure B — triple bond makes it strongest',
-              'Structure C — negative charge is on the most electronegative atom',
-              'All three are equally valid'
+              'Structure A — its −1 formal charge sits on nitrogen',
+              'Structure B — its triple bond makes it the strongest',
+              'Structure C — its −1 formal charge sits on oxygen',
+              'All three are equally valid, since each one totals −1'
             ],
-            correctAnswer: 0,
-            explanation: 'Structure A ([O=C=N]$ {}^{-}$) is best. It has the smallest formal charges (only one atom with a nonzero FC). While Structure C puts negative charge on O (more electronegative), it has charges of −2 and +1, which are much larger than Structure A\'s single −1. Minimizing formal charge magnitude is the top priority.'
+            correctAnswer: 2,
+            explanation: 'Structure C ([O—C≡N]$ {}^{-}$) is best. Structures A and C both minimize formal charge (one atom at −1 and the rest at 0), so the tie goes to the structure that puts the negative charge on the more electronegative atom, oxygen. Structure B is worst: its charges are larger (+1 and −2), and it puts the positive charge on oxygen. Check Structure C: O has 1 bond and 3 lone pairs, FC = 6 − 6 − 1 = −1; N has 3 bonds and 1 lone pair, FC = 5 − 2 − 3 = 0.'
           }
         ]
       }
@@ -125,14 +125,14 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
           {
             id: 'ls-7-7-dd2',
             label: 'What is the bond order of each O—O bond in $O_{3}$?',
-            options: ['Bond order = 1', 'Bond order = 1.5', 'Bond order = 2'],
+            options: ['Bond order = 1.0', 'Bond order = 1.5', 'Bond order = 2.0'],
             correctIndex: 1,
             explanation: 'In $O_{3}$, the two O—O bonds are equivalent in the resonance hybrid. Each is a blend of single and double bond character, giving bond order = (1 + 2)/2 = 1.5.'
           },
           {
             id: 'ls-7-7-dd3',
             label: '$BF_{3}$ acts as a Lewis _______ because boron has fewer than 8 electrons',
-            options: ['Lewis acid (electron acceptor)', 'Lewis base (electron donor)'],
+            options: ['Lewis acid (electron acceptor)', 'Lewis base (electron-pair donor)'],
             correctIndex: 0,
             explanation: '$BF_{3}$ has an incomplete octet (only 6 electrons on B). It readily accepts an electron pair from a Lewis base, making it a Lewis acid.'
           }
@@ -149,13 +149,13 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
           {
             question: 'The sulfate ion $(SO_{4}^{2-})$ has 32 total valence electrons. If all four S—O bonds are drawn as single bonds, sulfur has a formal charge of +2. By forming two S=O double bonds, sulfur\'s formal charge becomes 0. Why is this expanded octet structure acceptable?',
             options: [
-              'All atoms can expand their octets when needed',
-              'Sulfur is in Period 3 and has empty d orbitals available for bonding',
-              'The double bonds are shorter so the molecule is smaller',
-              'Formal charge rules override the octet rule for all elements'
+              'Any central atom can expand its octet whenever doing so lowers formal charges',
+              'Sulfur is in Period 3, and atoms in Period 3 or below can exceed an octet',
+              'Double bonds are shorter, so the ion is compact enough to fit extra electrons',
+              'Formal charge rules always override the octet rule, even for Period 2 atoms'
             ],
             correctAnswer: 1,
-            explanation: 'Sulfur is in Period 3, which means it has 3d orbitals available. These empty d orbitals allow sulfur to accommodate more than 8 electrons. The expanded octet structure with two double bonds is preferred because it minimizes formal charges. Period 2 elements (like C, N, O) cannot do this because they lack accessible d orbitals.'
+            explanation: 'Sulfur is in Period 3, and elements in Period 3 and beyond can hold more than 8 valence electrons, so an expanded octet is allowed. The structure with two S=O double bonds is favored by formal charge because it lowers sulfur\'s formal charge to 0. Period 2 elements (like C, N, O) can never exceed an octet, no matter what formal charge would favor, and bond length has nothing to do with how many electrons an atom can hold.'
           }
         ]
       }

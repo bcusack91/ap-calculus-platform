@@ -74,10 +74,10 @@ As you move from left to right across Period 3 (Na to Ar), what happens to the b
           {
             text: 'The 1s binding energy:',
             options: [
-              'Decreases because the 1s electrons get farther from the nucleus',
-              'Stays the same because the 1s subshell is full in all Period 3 elements',
+              'Decreases because the 1s electrons get farther from the nucleus as more shells are added',
+              'Stays the same because the 1s subshell is filled and shielded identically in every Period 3 element',
               'Increases because more protons in the nucleus attract the 1s electrons more strongly',
-              'Alternates due to electron pairing effects'
+              'Rises and falls in a zigzag pattern that tracks electron pairing in the outer 3p subshell'
             ],
             correctAnswer: 2,
             explanation: 'As you move across Period 3, each element has one more proton. The 1s electrons are very close to the nucleus and experience almost no shielding, so each additional proton increases the attractive force on them, increasing their binding energy.'
@@ -127,10 +127,10 @@ Which of the following correctly compares the PES spectra of fluorine (F, Z = 9)
           {
             text: 'Select the correct comparison:',
             options: [
-              'Ne has more peaks than F because it has more electrons',
-              'F has higher binding energies for all subshells than Ne',
+              'Ne shows one more peak than F because its extra electron starts a new subshell',
+              'F has higher binding energies for every subshell because F is more electronegative',
               'Ne has higher binding energies for all corresponding subshells than F',
-              'The 1s binding energies are identical for both elements'
+              'The 1s binding energies are identical because both atoms have a filled 1s subshell'
             ],
             correctAnswer: 2,
             explanation: 'Neon (Z = 10) has one more proton than fluorine (Z = 9). This additional proton increases the attractive force on all electrons, so the binding energies for all corresponding subshells are higher in Ne than in F. Both have the same number of peaks (1s, 2s, 2p), but Ne\'s 2p peak is taller (6 vs 5).'
@@ -176,10 +176,10 @@ Use your knowledge of periodic trends and effective nuclear charge to answer the
           {
             text: 'Why does boron (Z = 5) have a LOWER first ionization energy than beryllium (Z = 4)?',
             options: [
-              'Boron has fewer protons',
-              'Boron\'s outermost electron is in a 2p subshell, which is higher in energy and easier to remove than Be\'s 2s',
-              'Beryllium has more shielding electrons',
-              'Boron is a larger atom'
+              'Boron has fewer protons than beryllium, so its outermost electron feels a weaker pull from the nucleus',
+              'Boron\'s outermost electron is in 2p, which is higher in energy than Be\'s 2s and easier to remove',
+              'Beryllium\'s outer 2s electrons are shielded by more core electrons than boron\'s outermost electron is',
+              'Boron\'s outermost electron is paired in its orbital, so electron-electron repulsion makes it easier to remove'
             ],
             correctIndex: 1,
             explanation: 'Beryllium\'s electron configuration is $1s^{2}$ $2s^{2}$, while boron\'s is $1s^{2}$ $2s^{2}$ $2p^{1}$. The 2p subshell is higher in energy than 2s, so the outermost electron in boron is easier to remove. This causes the slight dip in ionization energy (and valence binding energy) from Be to B, which is visible on PES spectra.'

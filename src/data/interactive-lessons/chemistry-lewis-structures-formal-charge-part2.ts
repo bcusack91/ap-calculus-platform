@@ -29,7 +29,7 @@ export const chemLewisStructuresFormalChargePart2Data = {
         questions: [
           {
             question: 'In the molecule $SCl_{2}$, which atom should be the central atom?',
-            options: ['Cl, because it is more electronegative', 'S, because it is less electronegative', 'Either atom can be central', 'Cl, because there are more Cl atoms'],
+            options: ['Cl, as it is more electronegative', 'S, because it is less electronegative', 'Either atom can be central', 'Cl, because there are more Cl atoms'],
             correctAnswer: 1,
             explanation: 'The central atom is typically the least electronegative atom. Sulfur is less electronegative than chlorine, so S is the central atom. Hydrogen and fluorine are never central atoms.'
           }
@@ -87,7 +87,7 @@ export const chemLewisStructuresFormalChargePart2Data = {
         questions: [
           {
             question: 'After drawing single bonds in a Lewis structure, where do you place the remaining electrons first?',
-            options: ['On the central atom', 'On the most electronegative atom', 'On the outer (terminal) atoms', 'Between atoms as additional bonds'],
+            options: ['On the central atom, to fill it first', 'On the most electronegative atom', 'On the outer, terminal atoms', 'Between atoms as additional bonds'],
             correctAnswer: 2,
             explanation: 'Remaining electrons are placed on the outer (terminal) atoms first to complete their octets. Only after the outer atoms have octets do you place extra electrons on the central atom.'
           }

@@ -36,10 +36,10 @@ export const chemLewisStructuresFormalChargePart5Data = {
           {
             question: 'What does it mean when we draw resonance structures for a molecule?',
             options: [
-              'The molecule rapidly switches between the two structures',
-              'The true structure is an average (hybrid) of all resonance structures',
-              'One structure is correct and the other is wrong',
-              'The atoms rearrange between the two forms'
+              'The molecule rapidly flips between the structures',
+              'The true structure is a hybrid that averages all the resonance structures',
+              'Only one structure is real; the others are wrong',
+              'The atoms shift positions between the two forms'
             ],
             correctAnswer: 1,
             explanation: 'The molecule does NOT flip between structures. The actual structure is a resonance hybrid — a blend of all contributing structures. The electrons are delocalized across the molecule simultaneously. Atoms never move in resonance.'
@@ -59,20 +59,23 @@ export const chemLewisStructuresFormalChargePart5Data = {
       title: 'Practice: Resonance in $NO_{3}^{-}$',
       content: 'Answer questions about the nitrate ion resonance structures.',
       exercise: {
-        inputs: [
+        questions: [
           {
-            label: '**1.** How many equivalent resonance structures does $NO_{3}^{-}$ have?',
-            correctAnswer: '3',
+            question: '**1.** How many equivalent resonance structures does $NO_{3}^{-}$ have?',
+            answer: '3',
+            acceptableAnswers: ['3'],
             explanation: '$NO_{3}^{-}$ has 3 equivalent resonance structures. The double bond can be placed between N and any of the three oxygen atoms.'
           },
           {
-            label: '**2.** What is the bond order of each N—O bond in the resonance hybrid? (enter as a fraction like 4/3)',
-            correctAnswer: '4/3',
+            question: '**2.** What is the bond order of each N—O bond in the resonance hybrid? (enter a fraction or a decimal)',
+            answer: '4/3',
+            acceptableAnswers: ['4/3', '1.33', '1.333'],
             explanation: 'There are 4 total bonds (1 double + 2 single = 4 bond pairs) distributed over 3 equivalent positions. Bond order = 4/3 ≈ 1.33.'
           },
           {
-            label: '**3.** What is the formal charge on nitrogen in each resonance structure?',
-            correctAnswer: '+1',
+            question: '**3.** What is the formal charge on nitrogen in each resonance structure?',
+            answer: '+1',
+            acceptableAnswers: ['+1', '1'],
             explanation: 'FC on N = 5 − 0 − 8/2 = +1. Nitrogen has 4 bonds and 0 lone pairs in each resonance structure.'
           }
         ]
@@ -93,7 +96,7 @@ export const chemLewisStructuresFormalChargePart5Data = {
         dropdowns: [
           {
             id: 'ls-5-7-dd1',
-            label: '$CO_{3}^{2-}$ (carbonate) has 3 equivalent resonance structures',
+            label: 'Does $CO_{3}^{2-}$ (carbonate) have resonance?',
             options: ['Has resonance', 'No resonance'],
             correctIndex: 0,
             explanation: '$CO_{3}^{2-}$ (carbonate) has 3 equivalent resonance structures, with the double bond rotating among the three C—O positions.'
@@ -107,7 +110,7 @@ export const chemLewisStructuresFormalChargePart5Data = {
           },
           {
             id: 'ls-5-7-dd3',
-            label: '$NO_{2}^{-}$ (nitrite) has 2 resonance structures',
+            label: 'Does $NO_{2}^{-}$ (nitrite) have resonance?',
             options: ['Has resonance', 'No resonance'],
             correctIndex: 0,
             explanation: '$NO_{2}^{-}$ (nitrite) has 2 resonance structures. The double bond can be on either side of the nitrogen: O=N—$O^{-}$ ↔ $ {}^{-}O$—N=O.'
@@ -128,7 +131,7 @@ export const chemLewisStructuresFormalChargePart5Data = {
               'Carbonate has no resonance structures',
               'Only one resonance structure is correct',
               'Carbonate is best described as a resonance hybrid with identical bonds',
-              'The bonds alternate between single and double rapidly'
+              'The bonds flip rapidly between single and double'
             ],
             correctAnswer: 2,
             explanation: 'Equal bond lengths confirm that carbonate is a resonance hybrid. If one structure were "correct," we would see one shorter double bond and two longer single bonds. Instead, all three bonds are identical with bond order 4/3, proving electron delocalization.'

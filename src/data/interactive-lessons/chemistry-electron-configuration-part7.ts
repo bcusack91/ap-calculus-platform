@@ -65,13 +65,13 @@ The first ionization energy of oxygen (Z = 8) is **lower** than that of nitrogen
           {
             question: 'Why is the first IE of O lower than that of N?',
             options: [
-              'Oxygen has a larger atomic radius than nitrogen.',
-              'Oxygen has a paired electron in a 2p orbital that experiences greater electron-electron repulsion, making it easier to remove.',
-              'Nitrogen has more protons than oxygen.',
-              'Oxygen is more electronegative than nitrogen, so it holds its electrons less tightly.'
+              'Oxygen has a larger atomic radius, so its 2p electron is farther out.',
+              'Oxygen has a paired 2p electron, and the repulsion within that pair makes it easier to remove.',
+              'Oxygen\'s 2p electrons are shielded by more core electrons.',
+              'Oxygen\'s half-filled 2p subshell gives up an electron easily.'
             ],
             correctAnswer: 1,
-            explanation: 'Nitrogen has the configuration [He] $2s^{2}$ $2p^{3}$ — all three 2p electrons are unpaired (half-filled, extra stable). Oxygen is [He] $2s^{2}$ $2p^{4}$ — one 2p orbital now has a paired electron. The electron-electron repulsion from pairing makes that fourth 2p electron easier to remove, lowering the IE despite the higher nuclear charge.'
+            explanation: 'Nitrogen has the configuration [He] $2s^{2}$ $2p^{3}$ — all three 2p electrons are unpaired (half-filled, extra stable). Oxygen is [He] $2s^{2}$ $2p^{4}$ — one 2p orbital now has a paired electron. The electron-electron repulsion from pairing makes that fourth 2p electron easier to remove, lowering the IE despite the higher nuclear charge. Both atoms have the same $1s^{2}$ core, and oxygen is slightly smaller than nitrogen, so neither size nor shielding explains the dip.'
           }
         ]
       }
@@ -87,13 +87,13 @@ An element has the electron configuration [Kr] $4d^{10}$ $5s^{2}$ $5p^{4}$. Whic
           {
             question: 'Select the correct statement:',
             options: [
-              'It is a transition metal in the 4th period.',
-              'It is a metalloid in Group 14.',
-              'It is a chalcogen (Group 16) in the 5th period with 6 valence electrons.',
-              'It has 4 unpaired electrons.'
+              'It is a transition metal, since it has a filled 4d subshell.',
+              'It is a metalloid in Group 14 with 4 valence electrons.',
+              'It is in Group 16 and Period 5, with 6 valence electrons in its 5s and 5p subshells.',
+              'It has 4 unpaired electrons in its 5p subshell.'
             ],
             correctAnswer: 2,
-            explanation: 'Count total electrons: 36 (Kr) + 10 + 2 + 4 = 52 → Tellurium (Te). Te is in Period 5, Group 16 (chalcogens). Valence electrons = $5s^{2}$ $5p^{4}$ = 6. In the $5p^{4}$ configuration (by Hund\'s rule), there are 2 unpaired electrons, not 4.'
+            explanation: 'Count total electrons: 36 (Kr) + 10 + 2 + 4 = 52 → Tellurium (Te). Te is in Period 5, Group 16 (a chalcogen). Valence electrons = $5s^{2}$ $5p^{4}$ = 6. A filled 4d subshell does not make it a transition metal, because its outermost electrons are in 5p. The 5p subshell has only three orbitals, so four 5p electrons must include one pair: by Hund\'s rule there are 2 unpaired electrons, not 4.'
           }
         ]
       }
@@ -183,22 +183,22 @@ These questions connect electron configuration to other chemistry concepts.`,
       exercise: {
         dropdowns: [
           {
-            label: 'Which element has the highest first ionization energy: Na, Mg, Al, Si?',
-            options: ['Na', 'Mg', 'Al', 'Si'],
+            label: 'Which element has the highest first ionization energy: Na, Mg, Al, K?',
+            options: ['Na', 'Mg', 'Al', 'K'],
             correctIndex: 1,
-            explanation: 'Magnesium (Mg) has a higher IE than aluminum (Al) because Mg has a full $3s^{2}$ subshell, while Al must remove an electron from $3p^{1}$ (which is higher in energy and easier to remove). While IE generally increases across a period, the $s^{2}$ → $p^{1}$ transition causes a drop from Mg to Al. Si is higher than Al but lower than Mg.'
+            explanation: 'Magnesium (Mg, 738 kJ/mol) has the highest IE of these. Mg has a full $3s^{2}$ subshell, while Al must remove an electron from $3p^{1}$, which is higher in energy and easier to remove (578 kJ/mol), so IE drops from Mg to Al even though IE generally increases across a period. Na (496 kJ/mol) has a lower $Z_{eff}$, and K (419 kJ/mol) has its valence electron in n = 4, farther from the nucleus. (Past Al the rise resumes: Si, at 787 kJ/mol, is higher than Mg.)'
           },
           {
             label: 'Which species has the same electron configuration as Ne: $O^{2-}$, $F^{-}$, $Na^{+}$, or all of them?',
-            options: ['Only $O^{2-}$', 'Only $F^{-}$', 'Only $Na^{+}$', 'All three ions'],
+            options: ['Only $O^{2-}$', 'Only the two anions', 'Only $Na^{+}$', 'All three ions'],
             correctIndex: 3,
             explanation: 'Ne has 10 electrons: $1s^{2}$ $2s^{2}$ $2p^{6}$. $O^{2-}$ (8 + 2 = 10), $F^{-}$ (9 + 1 = 10), and $Na^{+}$ (11 − 1 = 10) all have 10 electrons. They are all isoelectronic with neon.'
           },
           {
             label: 'An atom has 3 unpaired electrons and the configuration [Ar] $4s^{2}$ $3d^{n}$. What is n?',
-            options: ['3', '5', '7', '8'],
+            options: ['3', '5', '6', '8'],
             correctIndex: 0,
-            explanation: 'With n = 3 (i.e., $3d^{3}$), the three d electrons each occupy a separate orbital by Hund\'s rule, giving 3 unpaired electrons. For n = 5: 5 unpaired; n = 7: 3 unpaired (but $4s^{2}3d^{7}$ gives 3 unpaired too — however $3d^{3}$ is the simplest answer with exactly 3 in the d subshell); n = 8: 2 unpaired.'
+            explanation: 'With n = 3 ($3d^{3}$), the three d electrons each occupy a separate orbital by Hund\'s rule, giving 3 unpaired electrons. $3d^{5}$ gives 5 unpaired, $3d^{6}$ gives 4 (the sixth electron pairs up in one orbital), and $3d^{8}$ gives 2.'
           }
         ]
       }

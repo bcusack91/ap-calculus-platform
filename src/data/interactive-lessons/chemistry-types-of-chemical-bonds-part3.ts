@@ -188,25 +188,25 @@ Metals are shiny because the delocalized electrons can absorb and re-emit photon
         dropdowns: [
           {
             label: 'Metals are good electrical conductors because their valence electrons are:',
-            options: ['fixed in place', 'delocalized and mobile', 'transferred to nonmetals', 'shared in covalent bonds'],
+            options: ['fixed in place', 'delocalized and mobile', 'held by single atoms', 'in covalent bonds'],
             correctIndex: 1,
             explanation: 'Delocalized (free) electrons can move in response to an applied voltage, allowing electric current to flow.'
           },
           {
             label: 'Metals are malleable because when layers slide, the electron sea:',
-            options: ['causes repulsion and shattering', 'adjusts and maintains bonding', 'evaporates', 'forms covalent bonds'],
+            options: ['causes repulsion and shattering', 'adjusts and maintains bonding', 'breaks into separate ion pairs', 'forms directional covalent bonds between cations'],
             correctIndex: 1,
             explanation: 'The non-directional electron sea adjusts around the shifted cations and continues to hold them together. This is why metals bend instead of shattering.'
           },
           {
             label: 'Compared to ionic solids, metals in the solid state:',
-            options: ['do not conduct electricity', 'conduct electricity', 'are brittle', 'have ions as charge carriers'],
+            options: ['do not conduct electricity', 'conduct electricity', 'are brittle and shatter easily', 'have ions as charge carriers'],
             correctIndex: 1,
             explanation: 'Metals conduct electricity even as solids because their delocalized electrons are mobile. Ionic solids have fixed ions and do not conduct.'
           },
           {
             label: 'Metallic luster (shininess) is due to:',
-            options: ['ion-dipole interactions', 'delocalized electrons absorbing and re-emitting light', 'high melting points', 'crystal lattice symmetry'],
+            options: ['ion-dipole interactions at the metal\'s surface', 'delocalized electrons absorbing and re-emitting light', 'light bouncing off the positive nuclei', 'the regular symmetry of the crystal lattice planes'],
             correctIndex: 1,
             explanation: 'The delocalized electron sea interacts with incoming photons, absorbing and re-emitting them across a broad spectrum — giving metals their characteristic shine.'
           }
@@ -255,10 +255,10 @@ In a pure metal, uniform layers slide easily. In an alloy, atoms of different si
           {
             question: 'Alloys are generally harder than pure metals because:',
             options: [
-              'They have fewer valence electrons',
+              'The added element adds delocalized electrons, strengthening every bond',
               'Different-sized atoms disrupt the regular lattice, preventing easy layer sliding',
-              'They form ionic bonds instead of metallic bonds',
-              'They have lower melting points'
+              'The two metals form ionic bonds that lock the layers',
+              'Alloys pack so tightly that the lattice cannot bend'
             ],
             correctAnswer: 1,
             explanation: 'In an alloy, atoms of different sizes break up the regular arrangement of the lattice. This makes it more difficult for layers to slide past each other, increasing hardness and strength.'

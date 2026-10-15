@@ -81,15 +81,15 @@ export const chemLewisStructuresFormalChargePart4Data = {
       exercise: {
         questions: [
           {
-            question: 'Consider two Lewis structures for SCO (carbon is central). Structure A: S=C=O (FC: all 0). Structure B: S≡C—O (FC: S = −1, C = 0, O = +1). Which is preferred?',
+            question: 'Consider two Lewis structures for SCO (carbon is central). Structure A: S=C=O (FC: all 0). Structure B: S≡C—O (FC: S = +1, C = 0, O = −1). Which is preferred?',
             options: [
-              'Structure B, because the triple bond is stronger',
+              'Structure B, because its triple bond is the stronger bond',
               'Structure A, because all formal charges are zero',
-              'Structure B, because S can handle a negative charge',
-              'Both are equally good'
+              'Structure B, because the −1 sits on the more electronegative O',
+              'Both are equally good, since the charges in each sum to zero'
             ],
             correctAnswer: 1,
-            explanation: 'Structure A is preferred because all formal charges are zero (Rule 1). In Structure B, the positive formal charge is on the more electronegative atom (O), which violates Rule 2.'
+            explanation: 'Structure A is preferred because all formal charges are zero (Rule 1). In Structure B, S (triple bond, one lone pair) has FC = 6 − 2 − 3 = +1 and O (single bond, three lone pairs) has FC = 6 − 6 − 1 = −1. Even though that −1 sits on the more electronegative atom, a structure with no formal charges beats one with separated charges, and a stronger triple bond does not override formal charge.'
           }
         ]
       }
@@ -136,8 +136,8 @@ export const chemLewisStructuresFormalChargePart4Data = {
             question: 'Two structures for $CNO^{-}$ differ only in which atom carries the −1 formal charge. Structure A places −1 on O. Structure B places −1 on C. Which is preferred?',
             options: [
               'Structure B, because carbon is the central atom',
-              'Structure A, because negative formal charge should be on the more electronegative atom',
-              'Both are equally valid',
+              'Structure A, because −1 belongs on the more electronegative atom',
+              'Both are equally valid, since each totals −1',
               'Structure B, because carbon needs more electrons'
             ],
             correctAnswer: 1,

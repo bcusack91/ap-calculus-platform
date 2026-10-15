@@ -62,7 +62,7 @@ In a PES spectrum, where do valence electrons appear?`,
           {
             text: 'Valence electrons appear:',
             options: [
-              'On the far left of the spectrum (highest binding energy)',
+              'On the far left (highest binding energy)',
               'In the middle of the spectrum',
               'On the far right of the spectrum (lowest binding energy)',
               'Valence electrons do not appear on PES spectra'

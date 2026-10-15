@@ -154,13 +154,13 @@ $$m = 2.50 \\; \\cancel{\\text{mol Fe}} \\times \\frac{55.85 \\text{ g Fe}}{1 \\
           {
             question: 'How many grams are in 3.00 mol of $CO_{2}$ ($M = 44.01$ g/mol)?',
             options: [
-              '14.67 g',
+              '0.0682 g',
               '44.01 g',
               '88.02 g',
               '132.03 g'
             ],
             correctAnswer: 3,
-            explanation: '$m = n \\times M = 3.00 \\times 44.01 = 132.03$ g.'
+            explanation: '$m = n \\times M = 3.00 \\times 44.01 = 132.03$ g. Dividing instead of multiplying gives $3.00/44.01 = 0.0682$ g; 44.01 g is the mass of only 1 mol.'
           },
           {
             question: 'To convert grams directly to number of particles, you need:',
@@ -168,7 +168,7 @@ $$m = 2.50 \\; \\cancel{\\text{mol Fe}} \\times \\frac{55.85 \\text{ g Fe}}{1 \\
               'Only the molar mass',
               'Only Avogadro\'s number',
               'Both the molar mass and Avogadro\'s number',
-              'The density of the substance'
+              'Both the density and the molar mass'
             ],
             correctAnswer: 2,
             explanation: 'Grams → moles (divide by $M$) → particles (multiply by $N_A$). Both conversion factors are needed.'
