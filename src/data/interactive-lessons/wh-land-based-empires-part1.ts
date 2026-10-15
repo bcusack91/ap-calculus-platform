@@ -40,7 +40,7 @@ export const whLandBasedEmpiresPart1Data = {
 | Feature | Details |
 |---|---|
 | **Founded** | 1368 by Zhu Yuanzhang (Hongwu Emperor) after overthrowing Mongol Yuan dynasty |
-| **Capital** | Beijing; constructed the **Forbidden City** |
+| **Capital** | Nanjing until 1421, then Beijing; constructed the **Forbidden City** |
 | **Government** | Centralized bureaucracy; reinstituted the **civil service exam** based on Confucian classics |
 | **Economy** | Silver-based economy; global trade in silk, porcelain, tea |
 | **Zheng He Voyages** | 1405–1433: massive naval expeditions across Indian Ocean; discontinued by later emperors |
@@ -69,10 +69,10 @@ export const whLandBasedEmpiresPart1Data = {
           {
             question: 'After the Qing Manchu conquered Ming China in 1644, how did they handle the existing Chinese governmental system?',
             options: [
-              'They largely maintained the Confucian civil service exam system while adding Manchu ethnic hierarchies and cultural requirements',
-              'They abolished all Chinese institutions and replaced them entirely with Manchu tribal governance structures',
-              'They created a fully democratic system granting equal rights to both Manchu and Han Chinese populations',
-              'They decentralized all authority and eliminated the role of the emperor in daily governance'
+              'They kept the Confucian exams and bureaucracy but imposed the queue and Manchu banner dominance',
+              'They abolished the Confucian exams and staffed every office with Manchu banner officers',
+              'They replaced the exam system with hereditary posts reserved for their Mongol and Manchu banner allies',
+              'They adopted Ming institutions wholesale and dropped distinctive Manchu customs at court'
             ],
             correctAnswer: 0,
             explanation: 'The Qing adopted a pragmatic approach: they kept the proven civil service exam and Confucian bureaucracy (continuity) but imposed Manchu customs like the queue hairstyle and maintained Manchu dominance through the banner system (change). This is a classic AP example of continuity and change in transitions of power.'
@@ -80,10 +80,10 @@ export const whLandBasedEmpiresPart1Data = {
           {
             question: 'What role did silver play in the Ming Chinese economy during the 15th–17th centuries?',
             options: [
-              'Silver was irrelevant because China relied on a barter economy for all transactions',
-              'China exported massive quantities of silver to Europe in exchange for manufactured goods',
-              'Silver flowed into China from the Americas and Japan, becoming the basis of the Chinese tax system and commercial economy',
-              'The Ming government banned silver entirely and used only copper coins for currency'
+              'China exported its own silver to Europe in exchange for woolens and firearms',
+              'Ming officials banned silver and required all taxes to be paid in copper coins',
+              'American and Japanese silver poured in and became the basis of Ming taxes',
+              'Silver mainly stayed in Ming vaults as a reserve backing the government\'s paper money'
             ],
             correctAnswer: 2,
             explanation: 'The Ming Single Whip Reform required taxes to be paid in silver, creating massive demand. Silver flowed into China from Spanish mines in the Americas (via the Manila galleon trade) and from Japan. This made China\'s economy dependent on global silver flows — when supplies declined in the early 1600s, it contributed to the Ming collapse.'
@@ -128,8 +128,8 @@ export const whLandBasedEmpiresPart1Data = {
             options: [
               'A genuine desire to improve literacy and living standards for Russian peasants',
               'Strengthening Russia\'s military and economic competitiveness with European powers',
-              'Converting Russia from Eastern Orthodoxy to Western Catholicism',
-              'Establishing democratic institutions modeled on the English Parliament'
+              'Converting Russia from Eastern Orthodoxy to Roman Catholicism under papal authority',
+              'Establishing a parliament modeled on England\'s to share power with the nobility'
             ],
             correctAnswer: 1,
             explanation: 'Peter\'s Westernization was primarily about **power and security**. After seeing Russia\'s military weaknesses firsthand (especially against the Ottomans and Swedes), he adopted Western military technology, shipbuilding, and administrative practices to make Russia a competitive European power. He had no interest in democracy or changing the Orthodox Church.'
@@ -137,10 +137,10 @@ export const whLandBasedEmpiresPart1Data = {
           {
             question: 'How did the Chinese tributary system differ from Russian methods of controlling conquered territories?',
             options: [
-              'China used a tribute system where neighboring states acknowledged Chinese cultural superiority in exchange for trade, while Russia imposed direct rule through military garrisons and serfdom',
-              'Both empires used identical methods of democratic local governance in all territories',
-              'Russia relied on cultural superiority claims while China used military force exclusively',
-              'Neither empire expanded beyond its original borders during this period'
+              'China let tributary neighbors keep autonomy in return for ritual submission, but Russia ruled new lands directly',
+              'China ruled its tributary states through garrisons and governors, but Russia relied on cultural prestige',
+              'Both empires used the same tributary model, letting conquered peoples govern themselves freely',
+              'China annexed its tributary neighbors outright, but Russia left Siberia to autonomous native khans'
             ],
             correctAnswer: 0,
             explanation: 'China\'s tributary system was based on cultural prestige — neighboring states maintained autonomy while performing rituals of submission. Russia, by contrast, imposed direct control through Cossack settlement, military outposts, and the extension of serfdom into conquered territories like Siberia.'

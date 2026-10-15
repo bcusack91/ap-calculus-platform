@@ -32,10 +32,10 @@ export const whDarAlIslamPart5Data = {
           {
             question: 'The dhimmi system in Islamic societies was significant because it:',
             options: [
-              'Provided a legal status for non-Muslim "People of the Book" (Jews, Christians, Zoroastrians) that allowed them to practice their religion and maintain their communities in exchange for paying a special tax (jizya) and accepting certain restrictions',
-              'Required all non-Muslims to convert to Islam within one year of conquest',
-              'Expelled all non-Muslims from Islamic territories',
-              'Gave non-Muslims identical rights to Muslim subjects'
+              'Let Jews, Christians and other non-Muslims keep their faith in return for the jizya tax',
+              'Required Jews, Christians and pagans alike to convert within a year of the conquest',
+              'Expelled non-Muslims from the cities and resettled them on frontier farmland under guard',
+              'Gave non-Muslims the same legal rights and tax status as Muslim subjects'
             ],
             correctAnswer: 0,
             explanation: 'The dhimmi system was neither full equality nor genocide — it was a pragmatic accommodation that allowed multi-religious societies to function under Islamic governance. Dhimmis could not build new houses of worship or hold the highest offices, but they could practice their religion, conduct commerce, and participate in intellectual life. Jewish and Christian scholars worked at the House of Wisdom alongside Muslims.'
@@ -43,10 +43,10 @@ export const whDarAlIslamPart5Data = {
           {
             question: 'Women\'s rights in classical Islamic law (Sharia) compared to contemporary European Christian societies were:',
             options: [
-              'In some respects more legally protective: the Quran guaranteed women inheritance rights (though typically half of men\'s), the right to own property, and limited divorce rights — rights that European women largely lacked under medieval Christian canon law',
-              'Identical to European women\'s rights in all respects',
-              'Far more restrictive in every legal category',
-              'Completely unrestricted — Islamic law granted women full equality in all areas'
+              'More protective in areas like inheritance and property, though still unequal to men\'s',
+              'Identical to European women\'s rights in nearly every legal respect, including inheritance',
+              'More restrictive in every legal category, including property ownership and marriage',
+              'Fully equal to men\'s rights, since the Quran abolished all gender distinctions in law'
             ],
             correctAnswer: 0,
             explanation: 'This comparison requires nuance: Islamic law gave women inheritance rights, property ownership, and *mahr* (bridal gift that belonged to the wife), which medieval European women largely lacked. However, both systems were fundamentally patriarchal — Islamic women had more legal protections in some areas, but faced restrictions in others (testimony, mobility, divorce initiation). AP rewards this kind of qualified comparison.'
@@ -77,7 +77,7 @@ Islamic societies were stratified, but differently from caste or feudal systems:
 Women's status varied significantly by class, region, and period:
 
 - **Quran's protections:** Inheritance rights (typically ½ of male relatives); property ownership; *mahr* (bridal gift to wife, not family); right to divorce in certain circumstances
-- **Restrictions:** Four witnesses required to prove rape; men could divorce more easily than women; purdah (seclusion) among elite women; women's testimony worth half a man\'s in some courts
+- **Restrictions:** Proving *zina* (unlawful intercourse) required four witnesses, a standard that made sexual violence hard to prosecute; men could divorce more easily than women; purdah (seclusion) among elite women; women's testimony worth half a man\'s in some courts
 - **Elite women's power:** Khadijah (Muhammad\'s first wife) was a successful merchant; Aisha (Muhammad\'s wife) was a political and religious authority; elite women endowed madrasas and mosques through waqf
 - **Regional variation:** Purdah was stricter in urban Middle East; rural and nomadic women had more freedom of movement
 
@@ -86,7 +86,7 @@ Women's status varied significantly by class, region, and period:
 Slavery was legal, widespread, and took distinctive forms in Dar al-Islam:
 
 - **Sources:** Trans-Saharan trade (enslaved sub-Saharan Africans); Central Asian warfare; Mediterranean piracy
-- **Functions:** Household service; concubinage; MILITARY (Mamluks, Janissaries); administration
+- **Functions:** Household service; concubinage; MILITARY (Mamluks; from the late 1300s, the Ottoman Janissaries); administration
 - **Mamluks:** Enslaved soldiers who rose to become one of the most powerful military forces in the medieval world — and eventually overthrew their masters to rule Egypt (1250–1517)
 - **Legal protections:** Masters prohibited from working enslaved people to death; children of Muslim men born to enslaved women were free; manumission (freeing enslaved people) was considered a virtuous act
 
@@ -107,21 +107,21 @@ Slavery was legal, widespread, and took distinctive forms in Dar al-Islam:
           {
             question: 'The Mamluk phenomenon — enslaved soldiers who overthrew their masters to rule Egypt — best illustrates:',
             options: [
-              'How military slavery in the Islamic world could create pathways to power that differed fundamentally from agricultural slavery, with enslaved soldiers sometimes accumulating enough military resources to seize political authority',
-              'That Islamic slavery was always benign and non-exploitative',
-              'That enslaved people in all societies routinely achieved political power through military service',
-              'That the Mamluks were free soldiers who chose to serve as bodyguards'
+              'How military slavery could open a path to power unlike plantation slavery',
+              'That slavery in the Islamic world was mild, voluntary and never exploitative in practice',
+              'That enslaved people in most societies rose to power through military service',
+              'That the Mamluks were free mercenaries hired from Europe to serve as palace guards'
             ],
             correctAnswer: 0,
-            explanation: 'The Mamluk paradox — enslaved people ruling one of the most powerful states in the Islamic world — is a uniquely Islamic phenomenon. Their military value gave them political leverage unavailable to agricultural enslaved people. The Mamluks\' 1260 victory over the Mongols at Ain Jalut saved Islamic civilization in the Middle East and stopped Mongol westward expansion.'
+            explanation: 'The Mamluk paradox — soldiers of slave origin ruling one of the most powerful states in the Islamic world — was distinctive to the Islamic world. Their military value gave them political leverage unavailable to agricultural enslaved people. The Mamluks\' 1260 victory over the Mongols at Ain Jalut stopped Mongol expansion toward Egypt.'
           },
           {
             question: 'A Muslim merchant woman in 13th-century Cairo had which COMBINATION of rights and restrictions?',
             options: [
-              'Could legally own property, enter contracts, and inherit assets (Quran-guaranteed), but faced social restrictions on public mobility (purdah among elites) and her testimony might be valued at half a male witness\'s in court',
-              'Had identical rights to Muslim men in all legal and social matters',
-              'Had no legal rights whatsoever under Islamic law',
-              'Could only own property if her husband granted permission in writing'
+              'She could own property and sign contracts, but faced limits on mobility and testimony',
+              'She held the same legal and social rights as Muslim men in every respect, including testimony',
+              'She had no legal rights at all under Islamic law, including over property',
+              'Her husband\'s written permission was needed each time she bought or sold property'
             ],
             correctAnswer: 0,
             explanation: 'This question captures the complexity of women\'s status in Islamic societies: genuine legal rights (property, contracts, inheritance) coexisted with genuine restrictions (purdah, testimony rules, easier male divorce). AP rewards nuanced analysis that neither romanticizes nor demonizes — but accurately describes the combination of rights and restrictions.'
@@ -129,10 +129,10 @@ Slavery was legal, widespread, and took distinctive forms in Dar al-Islam:
           {
             question: 'The dhimmi system\'s historical significance for AP World History is that it demonstrates:',
             options: [
-              'A distinctive Islamic approach to governing multi-religious societies through formal legal accommodation rather than forced conversion or expulsion — pragmatic multi-religious coexistence under Islamic political authority',
-              'That Islamic rulers uniformly persecuted all non-Muslims throughout history',
-              'That all non-Muslims were immediately enslaved upon conquest by Islamic armies',
-              'That Islamic societies were religiously homogeneous with no significant non-Muslim populations'
+              'Rule over diverse societies through legal accommodation, not forced conversion',
+              'Uniform persecution of non-Muslims by every Islamic ruler in every era of history',
+              'Enslavement of all non-Muslims as soon as Islamic armies conquered a new region',
+              'Religious uniformity in Islamic lands, which had very few non-Muslim residents'
             ],
             correctAnswer: 0,
             explanation: 'The dhimmi system is evidence of pragmatic multi-religious governance. AP questions often ask about how Islamic rulers managed religious diversity — the dhimmi system is the primary answer. It was neither equality nor persecution, but a legal framework for coexistence that varied in practice across time and region.'
@@ -181,21 +181,21 @@ Match each social structure concept to its correct description.
           {
             question: 'An AP prompt asks you to compare gender norms in Song China and the Islamic world c. 1200–1450. Which answer demonstrates the most historical sophistication?',
             options: [
-              'Both societies were patriarchal, but through different mechanisms: Song China\'s Neo-Confucian norms physically enforced female subordination through foot binding and restricted women\'s public roles, while Islamic law simultaneously restricted women (purdah, testimony rules) AND granted them legal rights (property, inheritance, contracts) largely absent in China',
-              'Women in both societies had identical rights',
-              'Islamic women had complete equality while Chinese women had none',
-              'Foot binding was practiced in both Song China and the Islamic world'
+              'Both were patriarchal, but Song China used foot binding while Islamic law paired limits with property rights',
+              'Both gave women identical legal rights, so their gender norms differed only in matters of dress and daily custom',
+              'Both enforced female subordination through foot binding, a practice that spread from Song China to Persia',
+              'Islamic women had full legal equality, while Song women had no legal rights of any kind at all'
             ],
             correctAnswer: 0,
-            explanation: 'This comparison earns complexity points by: (1) acknowledging the shared pattern (both patriarchal), (2) comparing mechanisms rather than just outcomes, (3) noting the contradiction within Islamic women\'s status (restrictions AND rights simultaneously), and (4) using specific evidence (foot binding, Quran-guaranteed inheritance). This is exactly the nuance AP readers reward.'
+            explanation: 'This comparison earns complexity points by: (1) acknowledging the shared pattern (both patriarchal), (2) comparing mechanisms rather than just outcomes, (3) noting the contradiction within Islamic women\'s status (restrictions AND legal rights simultaneously), and (4) using specific evidence (foot binding, Quran-guaranteed inheritance). Foot binding was a Chinese practice only.'
           },
           {
             question: 'How did pre-1450 Islamic slavery differ most fundamentally from post-1500 Atlantic plantation slavery?',
             options: [
-              'Islamic slavery was multi-functional (military, administrative, household), not racially codified as permanent hereditary status, and allowed greater possibilities for manumission and social mobility — fundamentally different from the racially defined, agriculturally organized, and largely hereditary Atlantic system',
-              'Islamic slavery and Atlantic slavery were identical in all respects',
-              'Islamic slavery was more economically significant than Atlantic slavery',
-              'Atlantic slavery was less violent than Islamic slavery'
+              'It served many roles and was not race-based, unlike the hereditary plantation system',
+              'It was identical to Atlantic slavery in its scale, functions and legal basis',
+              'It was larger and more economically central than the Atlantic system',
+              'It was harsher and deadlier than Atlantic slavery on the sugar plantations'
             ],
             correctAnswer: 0,
             explanation: 'This distinction is crucial for AP comparative analysis. The AP framework asks students to avoid anachronism — judging pre-1450 slavery by post-1500 Atlantic standards. The key differences: race as defining criterion (Atlantic: yes; Islamic: no), primary function (Atlantic: plantation agriculture; Islamic: multi-functional), hereditary nature (Atlantic: strongly hereditary; Islamic: weaker hereditary norm), and scale of forced migration.'

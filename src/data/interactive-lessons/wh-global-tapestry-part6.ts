@@ -32,10 +32,10 @@ export const whGlobalTapestryPart6Data = {
           {
             question: 'Champa rice, which fueled the Song Dynasty\'s population boom, is significant in AP World History because it demonstrates:',
             options: [
-              'How agricultural technology transfer through trade networks could transform demographic and economic patterns across entire civilizations',
-              'That China invented all agricultural innovations independently',
-              'That fast-growing rice only grew in China\'s climate',
-              'That Song Dynasty farmers were less productive than farmers in other civilizations'
+              'How crops moving along trade networks could transform demography and economies',
+              'How Mongol conquest carried Southeast Asian crops into northern China\'s wheat belt',
+              'How Song emperors used rice tribute to keep Vietnam a permanent Chinese province',
+              'How rice exports to the Islamic world became the Song Dynasty\'s main source of silver'
             ],
             correctAnswer: 0,
             explanation: 'Champa rice (imported from Vietnam/Southeast Asia) allowed double-cropping — two harvests per year in southern China\'s climate. This fueled China\'s population growth to over 100 million by the Song period. It\'s a model example of how contact through trade networks transferred agricultural technology with transformative demographic effects.'
@@ -43,13 +43,13 @@ export const whGlobalTapestryPart6Data = {
           {
             question: 'The Black Death (1347–1353), which killed ~30–50% of Europe\'s population, affected medieval European society most significantly by:',
             options: [
-              'Disrupting feudal labor relations as peasant survivors demanded better conditions, indirectly weakening the feudal system and accelerating social change',
-              'Having no long-term social or economic consequences',
-              'Strengthening the Catholic Church\'s authority by demonstrating God\'s power',
-              'Only affecting urban populations while leaving rural peasants unaffected'
+              'Raising surviving peasants\' bargaining power and weakening the hold of serfdom',
+              'Strengthening the Church\'s authority as frightened people turned to the clergy',
+              'Striking mainly the cities while leaving the countryside and its labor supply intact',
+              'Leaving labor markets unchanged because populations recovered within a decade'
             ],
             correctAnswer: 0,
-            explanation: 'The Black Death\'s massive population loss gave surviving peasants enormous leverage: lords competed for scarce labor, wages rose, serfdom declined in Western Europe, and peasant uprisings (like the English Peasants\' Revolt of 1381) challenged established hierarchies. The plague is a model example of how environmental/biological factors can accelerate social change.'
+            explanation: 'The Black Death\'s massive population loss gave surviving peasants enormous leverage: lords competed for scarce labor, wages rose, serfdom declined in Western Europe, and peasant uprisings (like the English Peasants\' Revolt of 1381) challenged established hierarchies. The Church\'s inability to stop the plague damaged rather than strengthened its prestige, and the countryside was hit as hard as the towns.'
           }
         ]
       }
@@ -110,10 +110,10 @@ Key transformations during this period:
           {
             question: 'What was the primary significance of Champa rice in Song Dynasty China?',
             options: [
-              'It enabled double-cropping (two harvests per year), fueling a massive population boom that made Song China the most populous civilization on earth',
-              'It was a luxury export traded along the Silk Road',
-              'It was only grown in northern China near the Mongol border',
-              'It replaced silk as China\'s primary export commodity'
+              'Its fast ripening allowed two harvests a year and a surge in population',
+              'It became a luxury export carried west along the Silk Roads to Persia',
+              'It grew only in northern China\'s cold, dry frontier provinces',
+              'It replaced silk as China\'s most valuable export to Europe'
             ],
             correctAnswer: 0,
             explanation: 'Champa rice\'s fast growing cycle allowed farmers in southern China to harvest twice per year. This agricultural revolution fueled China\'s population growth (some estimates suggest 100 million+ by the Song period) and supported the commercialized southern Chinese economy that made Song China the world\'s largest economy.'
@@ -121,10 +121,10 @@ Key transformations during this period:
           {
             question: 'Gunpowder technology\'s spread from China through the Islamic world to Europe by the 1300s demonstrates:',
             options: [
-              'How technological innovations spread along trade routes and through cross-cultural contact, eventually transforming warfare and power dynamics globally',
-              'That China intentionally shared military secrets with all civilizations',
-              'That gunpowder was independently invented in multiple locations simultaneously',
-              'That the Mongols prevented technology transfer between China and Europe'
+              'How technologies traveled along trade routes and through conflict, later transforming warfare',
+              'That China openly sold its military secrets to every neighboring state that could pay for them',
+              'That several societies invented gunpowder separately at roughly the same moment in history',
+              'That Mongol rule blocked the movement of technology from China to the Islamic world and Europe'
             ],
             correctAnswer: 0,
             explanation: 'Gunpowder\'s diffusion is a model example of technology transfer through trade routes: it moved along the Silk Road through the Islamic world before reaching European hands. By the 14th–15th centuries, gunpowder weapons were transforming warfare across Eurasia, demonstrating how trade routes transferred not just goods but world-changing technologies.'
@@ -132,10 +132,10 @@ Key transformations during this period:
           {
             question: 'For a CCOT essay about the period 1200–1450, which thesis structure is most effective?',
             options: [
-              'Identify specific transformations (e.g., Mongol conquests, Black Death) AND specific continuities (e.g., trans-Saharan trade, Confucian governance) to demonstrate complex historical understanding',
-              'Only discuss changes and ignore all continuities',
-              'Only discuss continuities and avoid mentioning changes',
-              'List as many facts as possible without connecting them to a thesis'
+              'Name specific changes and specific continuities, each with concrete evidence',
+              'Focus only on changes, since continuities cannot earn the thesis point on the rubric',
+              'Focus only on continuities, since the prompt already assumes that change happened',
+              'List as many facts as possible and let the reader work out the argument'
             ],
             correctAnswer: 0,
             explanation: 'CCOT essays earn the highest rubric scores when they address both change AND continuity with specific evidence. AP readers are specifically looking for both elements — a thesis that only addresses one earns partial credit.'
@@ -184,24 +184,24 @@ Match each technology with its correct origin and impact.
           {
             question: 'An AP question asks: "What was the most significant consequence of the Mongol Empire for Afro-Eurasian civilizations c. 1200–1400?" Which answer earns the most credit?',
             options: [
-              'The Mongol Empire had contradictory effects: its conquests (especially the 1258 destruction of Baghdad) disrupted existing states, while the Pax Mongolica simultaneously stimulated trade — and the connected networks inadvertently facilitated the catastrophic spread of the Black Death',
-              'The Mongol Empire only had positive effects by promoting trade',
-              'The Mongol Empire had no significant long-term consequences',
-              'The Mongol Empire exclusively destroyed civilizations without any constructive impacts'
+              'Its conquests wrecked states like Abbasid Baghdad, yet its peace revived trade and spread plague',
+              'Its rule brought only benefits, since Mongol trade policies harmed no existing state or city',
+              'Its rule left no lasting mark, since the khanates all collapsed within a generation',
+              'Its armies destroyed every state they met and built nothing that encouraged exchange'
             ],
             correctAnswer: 0,
-            explanation: 'This answer earns complexity points by acknowledging multiple contradictory effects rather than reducing the Mongol Empire to a single verdict. AP rewards nuanced analysis that acknowledges complexity within a period: destruction AND trade stimulation AND plague facilitation can all be true simultaneously.'
+            explanation: 'This answer earns complexity points by acknowledging multiple contradictory effects (the 1258 destruction of Baghdad, the trade revival of the Pax Mongolica, and the spread of the Black Death along connected routes) rather than reducing the Mongol Empire to a single verdict. AP rewards analysis that holds destruction AND exchange together.'
           },
           {
             question: 'For a CCOT essay about global trade c. 1200–1450, which statement demonstrates the strongest historical reasoning?',
             options: [
-              'While the specific goods, routes, and commercial powers evolved over this period (with the Mongol Pax temporarily restructuring Silk Road trade), the fundamental pattern of Indian Ocean and trans-Saharan commerce connecting distant civilizations through luxury goods and religious diffusion remained continuous',
-              'Trade completely changed in every way between 1200 and 1450',
-              'Nothing changed in global trade during this period',
-              'Trade was only significant after 1450 when Europeans entered the scene'
+              'Routes and goods shifted under the Mongols, but long-distance trade linking distant societies continued',
+              'Trade changed completely between 1200 and 1450, and no earlier pattern of exchange survived the period',
+              'Nothing important changed in trade, because the same merchant families ran every route throughout',
+              'Trade mattered only after 1450, when Europeans began to control the main sea routes to Asia'
             ],
             correctAnswer: 0,
-            explanation: 'This answer demonstrates CCOT mastery: it identifies specific change (Mongol restructuring) while arguing for fundamental continuity (the trade networks themselves persisting), producing a nuanced argument that addresses both dimensions of the question.'
+            explanation: 'This answer demonstrates CCOT reasoning: it identifies specific change (the Mongol restructuring of Silk Road trade) while arguing for fundamental continuity (Indian Ocean and trans-Saharan networks connecting distant civilizations persisted), producing a nuanced argument that addresses both dimensions of the question.'
           }
         ]
       }

@@ -11,7 +11,7 @@ export const whAmericasAfrica1200Part2Data = {
 
 ---
 
-> 🔑 **Key Concept:** The Aztec Empire (c. 1345-1521) was a tributary empire in Mesoamerica that controlled central Mexico through military conquest and tribute extraction. AP questions focus on how the Aztecs organized their empire, their religious practices, and the factors that enabled Spanish conquest.
+> 🔑 **Key Concept:** The Aztec Empire (c. 1325-1521) was a tributary empire in Mesoamerica that controlled central Mexico through military conquest and tribute extraction. AP questions focus on how the Aztecs organized their empire, their religious practices, and the factors that enabled Spanish conquest.
       `
     },
     {
@@ -23,10 +23,10 @@ export const whAmericasAfrica1200Part2Data = {
           {
             question: 'The Aztec tributary system was distinct from direct colonial rule because:',
             options: [
-              'Conquered peoples maintained their own rulers and paid tribute to Tenochtitlan rather than being directly administered by Aztec officials, reducing governance costs while extracting wealth',
-              'The Aztec Empire directly administered all territory',
-              'No tribute was extracted from conquered peoples',
-              'Conquered peoples became full Aztec citizens with equal rights',
+              'Conquered peoples kept their own rulers and paid tribute rather than being governed by Aztec officials',
+              'Aztec governors replaced every local ruler and collected tribute directly from each village',
+              'Subject peoples became full Aztec citizens with the same rights and duties as the Mexica',
+              'No goods were collected from conquered peoples, who owed only occasional military service to the Aztecs'
             ],
             correctAnswer: 0,
             explanation: 'The tributary model reduced administrative costs but had a key vulnerability: conquered peoples who resented tribute demands were potential allies for external enemies — a fact Hernán Cortés exploited by allying with the Tlaxcalans in 1519.'
@@ -34,10 +34,10 @@ export const whAmericasAfrica1200Part2Data = {
           {
             question: 'Tenochtitlan (the Aztec capital) was remarkable primarily because:',
             options: [
-              'Built on an island in Lake Texcoco, it housed 200,000+ people and was connected to the mainland by causeways — larger than any contemporary European city, with sophisticated urban infrastructure',
-              'It was the largest city in pre-Columbian North America with no urban infrastructure',
-              'It was a nomadic camp that moved seasonally',
-              'It had a larger population than all of Europe combined',
+              'Built on an island in Lake Texcoco, it held about 200,000 people and outgrew most European cities',
+              'Built on a hilltop in the Andes, it held about 20,000 people and served mainly as a religious shrine',
+              'Built as a seasonal camp of about 5,000 nomads, it moved around the Valley of Mexico every single year',
+              'Built on the Gulf Coast, it held over 2 million people, more than all of Europe\'s cities combined'
             ],
             correctAnswer: 0,
             explanation: 'Tenochtitlan\'s urban sophistication was comparable to contemporary European capitals: floating garden agriculture (chinampas), aqueducts, markets (tianguis), temples, palaces. Spanish conquistadors described it with awe. Its island location made it easily defended but also ultimately a trap during the 1521 siege.'
@@ -56,7 +56,7 @@ export const whAmericasAfrica1200Part2Data = {
 | Feature | Details |
 |---------|---------|
 | **Capital** | Tenochtitlan (modern Mexico City); built on island in Lake Texcoco |
-| **Founded** | c. 1345; Triple Alliance formed 1428 (Mexica + Texcoco + Tlacopan) |
+| **Founded** | c. 1325 (Tenochtitlan, traditional date); Triple Alliance formed 1428 (Mexica + Texcoco + Tlacopan) |
 | **Governance** | Tributary system — conquered peoples paid tribute; kept local rulers |
 | **Agriculture** | Chinampas (floating gardens) in Lake Texcoco; intensive maize cultivation |
 | **Trade** | Pochteca (long-distance merchant class); markets in Tlatelolco |
@@ -95,10 +95,10 @@ Why did ~500 Spaniards conquer an empire of millions?
           {
             question: 'The Aztec "Flower Wars" (ritual wars to capture enemies for sacrifice) were significant because they:',
             options: [
-              'Created a cycle where wars were fought to acquire sacrificial victims, which required more wars, while simultaneously training warriors — but at the political cost of keeping potential allies permanently hostile',
-              'Were purely ceremonial with no actual violence',
-              'Strengthened relationships between the Aztecs and their neighbors',
-              'Were the primary method of territory expansion',
+              'Supplied captives for sacrifice and trained warriors but kept neighbors like Tlaxcala permanently hostile',
+              'Were purely ceremonial contests in which no one was killed, wounded or captured for sacrifice',
+              'Built lasting alliances between the Aztecs and Tlaxcala, which later fought together against Cortés',
+              'Served as the main way the Aztecs conquered new territory and annexed whole provinces'
             ],
             correctAnswer: 0,
             explanation: 'The Flower War system was strategically counterproductive: it maintained permanent enmity with neighboring states (especially the Tlaxcalans, never conquered by the Aztecs despite centuries of warfare) who then became Cortés\'s most important allies. The religious system requiring ongoing sacrifice created the political conditions that enabled the empire\'s conquest.'
@@ -106,10 +106,10 @@ Why did ~500 Spaniards conquer an empire of millions?
           {
             question: 'Aztec chinampas (floating garden agriculture) demonstrated:',
             options: [
-              'How pre-Columbian peoples adapted agricultural technology to challenging wetland environments, producing remarkable food yields that supported the large urban population of Tenochtitlan without depleting soil fertility',
-              'That the Aztecs had no agricultural knowledge',
-              'That floating gardens were only possible with European technology',
-              'That Aztec agriculture was inferior to European farming in every respect',
+              'How Mesoamericans engineered wetland farming that fed Tenochtitlan\'s large population',
+              'That the Aztecs depended on imported European crops to feed their island capital',
+              'That Aztec farmers used iron plows and oxen to drain Lake Texcoco for wheat fields',
+              'That floating gardens failed so often that Tenochtitlan relied on famine relief from the Inca'
             ],
             correctAnswer: 0,
             explanation: 'Chinampas were sophisticated agricultural engineering: raised beds in the lake, fertilized by lake sediment and human waste, continuously productive without the soil depletion that plagued European slash-and-burn agriculture. They represent indigenous technological achievement comparable to any contemporary civilization.'
@@ -117,10 +117,10 @@ Why did ~500 Spaniards conquer an empire of millions?
           {
             question: 'Smallpox\'s role in the Spanish conquest of the Aztec Empire demonstrates which AP concept?',
             options: [
-              'That biological factors (disease) can decisively alter the outcomes of political and military conflicts — the 1520 epidemic killed more Aztec defenders than Spanish weapons and disrupted political leadership at the critical moment of the conquest',
-              'That disease had no role in the Spanish conquest',
-              'That the Spanish deliberately introduced smallpox as a weapon',
-              'That epidemics only affect non-European populations',
+              'That disease can decide military and political conflicts, as the 1520 epidemic hit Tenochtitlan\'s defenders',
+              'That illness played no real part, since Spanish steel and horses alone defeated the Aztec armies',
+              'That the Spanish deliberately spread smallpox as a planned biological weapon against Tenochtitlan\'s defenders',
+              'That epidemics strike only non-European peoples, who lack any capacity to develop immunity'
             ],
             correctAnswer: 0,
             explanation: 'Smallpox arrived in 1520 during a Spanish retreat, killing Aztec emperor Cuitláhuac and devastating the population defending Tenochtitlan. The convergence of disease + indigenous allies + Spanish military technology + political disruption (Moctezuma\'s capture) created a perfect storm that overwhelmed an otherwise formidable empire. No single factor explains the conquest — AP rewards multi-causal analysis.'
@@ -163,10 +163,10 @@ Why did ~500 Spaniards conquer an empire of millions?
           {
             question: 'An AP prompt asks: "What factors explain the Spanish conquest of the Aztec Empire?" Which answer best demonstrates historical complexity?',
             options: [
-              'The conquest resulted from multiple intersecting factors — Spanish military technology, indigenous allies (Tlaxcalans resentful of Aztec tribute demands), disease (smallpox 1520), and Aztec political disruption — with no single factor sufficient alone: thousands of Tlaxcalan warriors were more decisive than the few hundred Spanish soldiers',
-              'The conquest was inevitable because Aztec civilization was primitive',
-              'Spanish weapons alone explain the conquest',
-              'The Aztecs voluntarily surrendered without resistance',
+              'Tlaxcalan allies and smallpox mattered as much as Spanish arms, so no single factor accounts for the conquest',
+              'Spanish steel and horses were the decisive factor, since Aztec warriors could not adapt to them',
+              'The conquest was inevitable because Aztec civilization was less advanced than Spain\'s in every way',
+              'The Aztecs surrendered without resistance after mistaking Cortés for a returning god'
             ],
             correctAnswer: 0,
             explanation: 'Multi-causal explanation with appropriate weighting is the AP standard. Noting that indigenous allies were numerically more important than Spanish soldiers directly challenges the "superior European technology" narrative while still acknowledging technology\'s role. This type of nuanced, multi-factor analysis with appropriate emphasis is what earns AP complexity points.'
@@ -174,10 +174,10 @@ Why did ~500 Spaniards conquer an empire of millions?
           {
             question: 'Comparing the Aztec and Inca empires, which statement is most historically accurate?',
             options: [
-              'Both were large tributary empires that fell to Spanish conquest in the 1520s-1530s through similar combinations of indigenous allies, disease, and European technology, but the Inca had more direct administrative infrastructure (road network, mit\'a labor system, quipus for record-keeping) while the Aztec relied more heavily on tribute from semi-autonomous conquered states',
-              'The two empires had identical governance systems',
-              'The Inca were never conquered by Europeans',
-              'The Aztec had more sophisticated administrative infrastructure than the Inca',
+              'Both fell to Spain by the 1530s, but the Inca governed more directly via roads, mit\'a and quipus',
+              'Both used identical systems of government, ruling through appointed governors, paved roads and quipus',
+              'The Inca were never conquered by Europeans, surviving as a fully independent state into the 1700s',
+              'The Aztecs ruled more directly than the Inca, building a longer road network and a mit\'a-style labor draft'
             ],
             correctAnswer: 0,
             explanation: 'This comparison earns AP points by identifying both similarity (tributary empires, similar conquest vulnerabilities) and meaningful difference (degree of administrative integration). The Inca road system and mit\'a labor draft represented more direct imperial control than the Aztec tributary model — a difference that affected both how each empire functioned and how Spanish conquest proceeded (Pizarro vs. Cortés used different strategies).'

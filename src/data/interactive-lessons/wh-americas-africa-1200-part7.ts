@@ -23,10 +23,10 @@ export const whAmericasAfrica1200Part7Data = {
           {
             question: 'What was the primary source of Mali Empire\'s wealth?',
             options: [
-              'Control of trans-Saharan gold-salt trade routes, taxing the exchange of West African gold for North African salt — making Mali rulers among the wealthiest in the world c. 1300-1400',
-              'Agricultural production with no trade dimension',
-              'Maritime trade with China and India',
-              'Tribute extracted through military conquest alone',
+              'Taxing the trans-Saharan trade that exchanged West African gold for salt from the Sahara and North Africa',
+              'Exporting surplus millet and rice north across the Sahara to feed the cities of Egypt and the Maghreb',
+              'Maritime trade with China and India carried through Mali\'s own ports on the Indian Ocean coast',
+              'Tribute seized through military raids on the Swahili city-states and gold towns of East Africa'
             ],
             correctAnswer: 0,
             explanation: 'The gold-salt trade is the economic foundation of Mali and Songhai: West Africa had gold but needed salt (essential for food preservation); the Sahara had salt but needed gold. Controlling the exchange points made Mali and later Songhai extraordinarily wealthy rulers.'
@@ -34,10 +34,10 @@ export const whAmericasAfrica1200Part7Data = {
           {
             question: 'Mansa Musa\'s 1324 hajj (pilgrimage to Mecca) is historically significant for AP because:',
             options: [
-              'It demonstrated West African Islamic civilization\'s extraordinary wealth and sophistication to the broader Islamic world and eventually to European cartographers — placing Mali on European maps and stimulating interest in direct African trade',
-              'It had no impact outside Mali',
-              'It was the first hajj ever made by a sub-Saharan African',
-              'It caused the collapse of Egyptian trade',
+              'It displayed Mali\'s wealth to the Islamic world and put Mali on European maps as a land of gold',
+              'It was the first hajj ever made by a ruler from sub-Saharan Africa, opening Mecca to West Africans',
+              'It led Mali\'s rulers to abandon Islam after Musa returned disappointed from Cairo',
+              'It triggered a Mamluk invasion of Mali, since Egypt\'s sultan wanted to seize its gold fields'
             ],
             correctAnswer: 0,
             explanation: 'Mansa Musa\'s pilgrimage put West Africa on the global mental map: his gift-giving in Cairo was so lavish it depressed gold prices, and his retinue of 60,000 was unprecedented. European maps began marking Mali as a source of gold after 1324 — stimulating eventual Portuguese interest in finding sea routes to West African gold.'
@@ -95,10 +95,10 @@ export const whAmericasAfrica1200Part7Data = {
           {
             question: 'Timbuktu\'s University of Sankore demonstrates which historical principle?',
             options: [
-              'That Islamic learning and scholarship spread through trade networks — the same trans-Saharan routes that carried gold and salt also carried scholars, books, and Islamic intellectual traditions, making Timbuktu a center of Islamic scholarship comparable to Cairo or Baghdad',
-              'Timbuktu was primarily a military fortress with no educational function',
-              'Islamic scholarship only flourished in the Middle East',
-              'West African rulers had no interest in education or scholarship',
+              'That the trans-Saharan routes carrying gold and salt also carried Islamic scholars and books',
+              'That Timbuktu served mainly as a military fortress, with scholars confined to the royal court in Cairo',
+              'That Islamic scholarship flourished only in the Middle East, while West Africa imported finished legal rulings',
+              'That West African rulers ignored learning, leaving schools to be founded by European missionaries'
             ],
             correctAnswer: 0,
             explanation: 'Timbuktu shows the dual nature of Islamic trade networks: they transmitted both goods (gold, salt) and ideas (scholarship, religious practice, legal traditions). The University of Sankore\'s 25,000 students and its manuscripts on astronomy, law, and medicine demonstrate that sub-Saharan African Islamic civilization was fully integrated into the broader Islamic intellectual world.'
@@ -106,10 +106,10 @@ export const whAmericasAfrica1200Part7Data = {
           {
             question: 'Great Zimbabwe\'s most important significance for AP World History is:',
             options: [
-              'It demonstrates that sub-Saharan Africa had sophisticated urban civilizations with long-distance trade connections to the Indian Ocean network — challenging narratives of pre-European Africa as isolated and undeveloped',
-              'Great Zimbabwe was built by European or Middle Eastern peoples',
-              'It had no connection to any trade networks',
-              'It was smaller and less sophisticated than any other contemporary civilization',
+              'It shows that sub-Saharan Africa had urban states linked to Indian Ocean trade before Europeans arrived',
+              'It was built by Phoenician or Arab colonists, proving that outsiders brought stone building to the region',
+              'It was an isolated hilltop village with no ties to coastal trade or to any wider economic network',
+              'It was the capital of the Mali Empire, which ruled the gold fields of southern Africa'
             ],
             correctAnswer: 0,
             explanation: 'AP frequently tests the significance of Great Zimbabwe precisely because it challenges Eurocentric narratives. The stone architecture (no mortar, built entirely from stacked granite), the scale (housing 10,000+), and the imported Chinese porcelain (direct evidence of Indian Ocean connections) all demonstrate indigenous African urban and commercial sophistication.'
@@ -117,10 +117,10 @@ export const whAmericasAfrica1200Part7Data = {
           {
             question: 'The Swahili Coast city-states\' cultural character (blending Bantu African and Arab/Islamic elements) best demonstrates which AP concept?',
             options: [
-              'Cultural syncretism through trade contact — when trade networks bring together peoples with different cultural traditions, new hybrid cultures emerge that blend elements from multiple sources, as seen in Swahili language (Bantu grammar + Arabic vocabulary) and religious practice (Islamic faith + African communal traditions)',
-              'Cultural exchange always destroys local cultures',
-              'The Swahili cities adopted Arab culture while completely abandoning African traditions',
-              'Trade contact never produces cultural change',
+              'Cultural syncretism through trade, as seen in a Bantu-grammar language and Islam mixed with local custom',
+              'Cultural assimilation by conquest, as Arab armies imposed Islam and erased the Bantu languages',
+              'Cultural isolation, as Swahili towns kept Islam and outside customs away from their Bantu communities',
+              'Cultural diffusion from Europe, as Portuguese traders brought the coast its Christian and Latin elements'
             ],
             correctAnswer: 0,
             explanation: 'Swahili culture is a model AP example of trade-driven cultural synthesis: not "conquered" by Arab/Islamic culture but selectively incorporating Arabic vocabulary, Islamic religious practice, and stone architecture while maintaining Bantu linguistic structures and African communal social practices. This selective syncretism is characteristic of how trade-contact cultural exchange works.'
@@ -161,12 +161,12 @@ export const whAmericasAfrica1200Part7Data = {
       exercise: {
         questions: [
           {
-            question: 'An AP LEQ asks you to evaluate the significance of AP Review and Exam Mastery. Which thesis best demonstrates historical complexity?',
+            question: 'An AP LEQ asks you to evaluate the significance of empires in the Americas and Africa, c. 1200-1450. Which thesis best demonstrates historical complexity?',
             options: [
-              'While ap review and exam mastery involved both continuity and change, the most significant historical development was the way it both reflected and transformed existing power structures — creating new institutions that built on older patterns while responding to new challenges',
-              'The topic had no historical significance whatsoever',
-              'Everything changed immediately with no continuity',
-              'Only military factors explain historical change in this period',
+              'The Aztecs, Inca and Mali drew wealth from older tribute and trade systems but organized them on a new imperial scale',
+              'These empires had little significance, since each collapsed before it could shape later history in its region',
+              'These empires changed everything at once, leaving no continuity with the societies that came before them',
+              'Military force alone explains these empires, as trade, religion and labor systems played no real part at all in their rise'
             ],
             correctAnswer: 0,
             explanation: 'Strong AP theses acknowledge both change and continuity, explain mechanisms rather than just outcomes, and connect specific evidence to broader historical arguments. Recognizing complexity within apparent simplicity is the hallmark of high-scoring AP responses.'
@@ -174,10 +174,10 @@ export const whAmericasAfrica1200Part7Data = {
           {
             question: 'Which comparison best demonstrates AP historical reasoning about Americas & Africa (c. 1200–1450)?',
             options: [
-              'Comparing americas & africa (c. 1200–1450) to other contemporary civilizations reveals both universal patterns (all complex societies face similar administrative and legitimation challenges) and specific variations (different environmental, cultural, and economic contexts produce different institutional solutions)',
-              'All civilizations are completely identical',
-              'Comparison is never useful in historical analysis',
-              'Only differences matter in historical comparison — similarities are irrelevant',
+              'Mali and the Inca both built vast states, but Mali taxed trade while the Inca drafted labor',
+              'Mali and the Inca were identical states, since both depended on gold mined by drafted village laborers',
+              'Comparing Mali and the Inca is not useful, because societies with no contact share no common patterns at all',
+              'Mali and the Inca differed only in religion, so their economies and governments can be treated as the same'
             ],
             correctAnswer: 0,
             explanation: 'AP comparison questions reward arguments that identify both similarities and differences AND explain why those similarities and differences exist. Using comparison to generate broader principles about human societies — rather than just listing similarities and differences — earns the highest AP scores.'

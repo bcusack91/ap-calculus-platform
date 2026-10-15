@@ -32,10 +32,10 @@ export const whGlobalTapestryPart4Data = {
           {
             question: 'Neo-Confucianism, which blended Confucian ethics with Buddhist and Daoist ideas, primarily served which function in Song Dynasty China?',
             options: [
-              'Provided an ideological framework justifying social hierarchy, bureaucratic governance, and proper relationships within families and the state',
-              'Replaced all Buddhist and Daoist influence in Chinese society',
-              'Encouraged women to participate in government through equal exam access',
-              'Promoted individual freedom and resistance to authority'
+              'Gave an ideological basis for hierarchy in the family, the bureaucracy and the state',
+              'Replaced Buddhism and Daoism as the only faiths legally permitted anywhere in Song China',
+              'Encouraged women to sit the civil service examinations on fully equal terms with men',
+              'Justified popular rebellion against any emperor who broke Buddhist moral law'
             ],
             correctAnswer: 0,
             explanation: 'Neo-Confucianism was not just philosophy — it was administrative infrastructure. It justified the emperor\'s authority, the scholar-gentry\'s social dominance, and gender hierarchy (foot binding spread alongside Neo-Confucian norms of female subordination). AP prompts often ask students to explain how belief systems reinforced political and social structures.'
@@ -43,10 +43,10 @@ export const whGlobalTapestryPart4Data = {
           {
             question: 'Islam\'s rapid spread across Afro-Eurasia between 600–1450 was primarily driven by:',
             options: [
-              'A combination of military expansion, merchant trade networks, and Sufi missionary adaptation to local cultures',
-              'Exclusively military conquest by Arab armies',
-              'European missionaries converting people along trade routes',
-              'Natural disasters that destroyed other religions\' institutions'
+              'Military expansion, merchant networks and Sufi teachers adapting to local cultures',
+              'Arab conquest alone, with conversion demanded of every conquered population as policy',
+              'Abbasid court missionaries sent out under one single, centrally planned program of conversion',
+              'Persian merchants who spread it mainly by marrying into Chinese and Indian ruling families'
             ],
             correctAnswer: 0,
             explanation: 'No single mechanism explains Islamic spread. Military conquest was important in the Middle East and North Africa; trade networks carried Islam to coastal East Africa and Southeast Asia; Sufi missionaries\' flexibility and emphasis on inner devotion made Islam appealing in diverse cultural contexts. AP essays should acknowledge this complexity.'
@@ -111,10 +111,10 @@ In medieval Europe (c. 1200–1450), the Catholic Church was the dominant cultur
           {
             question: 'What was the primary social function of Neo-Confucianism in Song Dynasty China?',
             options: [
-              'Justify social hierarchy and centralized bureaucracy through a philosophical framework blending Confucian ethics with Buddhist and Daoist ideas',
-              'Promote equal rights for women in government',
-              'Replace Buddhism as the state religion of China',
-              'Encourage resistance to imperial authority'
+              'Justify hierarchy and bureaucratic rule with a blend of Confucian, Buddhist and Daoist ideas',
+              'Promote equal access for women to Confucian schooling and to the highest official government posts',
+              'Replace Buddhism as China\'s official state religion and close the Buddhist monasteries for good',
+              'Encourage scholars to resist any emperor who ignored local custom or long-standing village traditions'
             ],
             correctAnswer: 0,
             explanation: 'Neo-Confucianism served as ideological glue: it justified the emperor\'s supreme authority, the scholar-gentry\'s social position, gender hierarchy (including foot binding), and the entire meritocratic examination system.'
@@ -122,10 +122,10 @@ In medieval Europe (c. 1200–1450), the Catholic Church was the dominant cultur
           {
             question: 'What feature of Sufi Islam made it particularly effective at gaining converts in sub-Saharan Africa and Southeast Asia?',
             options: [
-              'Sufi missionaries accommodated local customs and emphasized inner spiritual experience rather than rigid legal compliance',
-              'Sufi armies conquered and forced mass conversions',
-              'Sufi missionaries required converts to abandon all local traditions immediately',
-              'Sufi missionaries only worked in the Arabian Peninsula'
+              'Sufis adapted to local customs and stressed inner devotion over strict legal rules',
+              'Sufi brotherhoods led armies that forced mass conversions in the lands they conquered',
+              'Sufis insisted that converts abandon local traditions and adopt Arab dress at once',
+              'Sufis worked mainly at royal courts and avoided contact with ordinary villagers'
             ],
             correctAnswer: 0,
             explanation: 'Sufi missionaries\' flexibility was key to their success. By participating in local customs, learning local languages, and emphasizing personal devotion over legal technicalities, Sufis made Islam accessible in diverse cultural settings where stricter forms of Islam might have been rejected.'
@@ -133,10 +133,10 @@ In medieval Europe (c. 1200–1450), the Catholic Church was the dominant cultur
           {
             question: 'The Catholic Church\'s most important political tool in medieval Europe was:',
             options: [
-              'Excommunication — the power to cut rulers off from the Christian community, which delegitimized their authority over their own subjects',
-              'Military conquest of rival kingdoms',
-              'Control of all international trade routes',
-              'The ability to elect or remove all European monarchs by direct vote'
+              'Excommunication — cutting a ruler off from the Church and freeing subjects from loyalty',
+              'Crusading armies — papal troops that conquered rival Christian kingdoms inside Europe',
+              'Trade monopolies — papal control over the Mediterranean spice and silk routes',
+              'Royal elections — Church councils chose which nobles would become Europe\'s kings'
             ],
             correctAnswer: 0,
             explanation: 'Excommunication was extraordinarily powerful in a society where most people believed salvation depended on church membership. If the Pope excommunicated a king, that king\'s subjects were released from their oaths of loyalty — this made excommunication a devastating political weapon.'
@@ -185,10 +185,10 @@ Match each religion/philosophy with its key mechanism for spreading or maintaini
           {
             question: 'An AP essay asks how belief systems reinforced political authority c. 1200–1450. Which example provides the STRONGEST argument?',
             options: [
-              'Neo-Confucianism justified the scholar-gentry\'s social dominance and the emperor\'s authority through a philosophical framework that made hierarchy appear natural and morally necessary',
-              'European monarchs had no connection to religious institutions',
-              'Islamic rulers never used religion to legitimize their authority',
-              'Buddhism had no political implications in East Asia'
+              'Neo-Confucianism presenting the emperor\'s rule and gentry dominance as natural and moral',
+              'European monarchs ruling with no ties at all to the Church or to any religious coronation ceremony',
+              'Buddhism discouraging East Asian rulers from claiming any religious legitimacy',
+              'Islamic rulers refusing to cite the Quran or sharia when justifying their power'
             ],
             correctAnswer: 0,
             explanation: 'Neo-Confucianism is the strongest AP example of belief reinforcing political structure: the entire civil service examination system, gender hierarchy, and imperial authority rested on Confucian philosophical justifications. The AP exam rewards specific, well-developed examples like this.'
@@ -196,13 +196,13 @@ Match each religion/philosophy with its key mechanism for spreading or maintaini
           {
             question: 'Which statement BEST explains why Islam spread more successfully than Christianity in sub-Saharan Africa and Southeast Asia c. 1200–1450?',
             options: [
-              'Islam\'s decentralized spread through merchants and flexible Sufi missionaries reached these regions more effectively than the more institutionally centralized Catholic Church, which lacked strong trade network connections to these areas',
-              'Christianity was prohibited from spreading outside of Europe by treaty',
-              'Africans and Southeast Asians preferred Islam because of its military superiority',
-              'The Catholic Church had no missionaries during this period'
+              'Muslim merchants and Sufis already traveled the trade networks linking these regions to the world',
+              'Christian missionaries were barred from leaving Europe by a treaty between the pope and the caliph',
+              'Rulers there converted mainly after Muslim armies defeated their forces in open battle',
+              'Christian Ethiopia and Nubia had been absorbed by Islamic caliphates well before 1200'
             ],
             correctAnswer: 0,
-            explanation: 'Islam\'s spread through merchant communities and Sufi missionaries gave it a decentralized, adaptable quality. The Catholic Church, while powerful in Europe, was more institutionally centralized and did not have the same commercial network connections to sub-Saharan Africa and coastal Southeast Asia that Muslim merchants had built over centuries.'
+            explanation: 'Islam\'s spread through merchant communities and Sufi missionaries gave it a decentralized, adaptable quality. The Catholic Church, while powerful in Europe, did not have the same commercial network connections to sub-Saharan Africa and coastal Southeast Asia that Muslim merchants had built over centuries. Conversion in these regions was mostly not by conquest, no treaty confined Christian missionaries, and Ethiopia remained a Christian kingdom throughout the period.'
           }
         ]
       }

@@ -32,21 +32,21 @@ export const whDarAlIslamPart7Data = {
           {
             question: 'An AP SAQ asks: "Identify and explain ONE way the Islamic world influenced intellectual developments in medieval Europe." Which response earns full credit?',
             options: [
-              'Islamic scholars translated Greek philosophical and scientific texts into Arabic and added original commentary; these Arabic texts were then translated into Latin in Spain and Sicily (c. 1100–1200), introducing Aristotelian logic, algebra, and Ibn Sina\'s medical knowledge to European universities and shaping scholastic philosophy',
-              'Islamic scholars fought against European intellectual development',
-              'European scholars independently rediscovered all Greek texts without Islamic intermediaries',
-              'The Islamic world had no contact with medieval Europe'
+              'Latin translations of Arabic texts made in Spain brought Aristotle and algebra into European universities',
+              'Muslim scholars introduced the printing press, which spread cheap books across the cities of medieval Europe',
+              'European scholars rediscovered Greek texts on their own, with no help from Arabic sources',
+              'Islamic rulers founded the first universities in Paris and Bologna to teach Islamic law'
             ],
             correctAnswer: 0,
-            explanation: 'This SAQ response earns full credit: specific Islamic contribution (translation + original scholarship), specific mechanism (Arabic → Latin translation in Spain/Sicily), specific impact on Europe (Aristotelian logic at universities, algebra, Ibn Sina\'s medicine), and implicit causation (the transmission chain). Three sentences, three elements: claim + evidence + reasoning.'
+            explanation: 'This SAQ response earns credit: a specific Islamic contribution (Arabic translations and scholarship), a specific mechanism (Arabic → Latin translation in Spain), and a specific impact on Europe (Aristotle and algebra in the universities). Printing with movable type in Europe came from Gutenberg, and Paris and Bologna were European foundations.'
           },
           {
             question: 'For an AP LEQ comparing Islam\'s political and cultural unity c. 1200–1450, what is the best complexity move?',
             options: [
-              'Acknowledge that while Dar al-Islam lacked political unity (competing caliphates, dynasties, Mongol fragmentation), it maintained cultural and commercial unity through non-political institutions — demonstrating that civilizational cohesion does not require political centralization',
-              'Argue that the Islamic world was perfectly unified politically throughout this period',
-              'Ignore political fragmentation entirely and focus only on cultural unity',
-              'Argue that no cultural unity existed in the Islamic world'
+              'Show that Dar al-Islam lacked political unity yet kept cultural and commercial ties',
+              'Argue that the Islamic world stayed politically unified under the caliphs throughout',
+              'Ignore the political fragmentation and focus only on cultural unity',
+              'Argue that no shared culture existed among the many Muslim states of the era'
             ],
             correctAnswer: 0,
             explanation: 'This complexity move earns points by identifying a contradiction within the argument (political fragmentation + cultural unity) and using that contradiction to articulate a broader principle (civilizational coherence ≠ political centralization). AP complexity points require more than additional facts — they require a move that qualifies, extends, or complicates the main argument.'
@@ -105,10 +105,10 @@ export const whDarAlIslamPart7Data = {
           {
             question: 'An AP MCQ asks which event BEST demonstrates Islamic civilization\'s resilience after the Mongol invasions. Which answer is correct?',
             options: [
-              'The Mamluk victory at Ain Jalut (1260) and Cairo\'s emergence as the new center of Islamic political and intellectual authority, preserving core Islamic institutions after Baghdad\'s destruction',
-              'The Mongol conversion to Islam before their invasions',
-              'The reconstruction of Baghdad as an even larger city within 10 years of 1258',
-              'The European Crusaders\' protection of Islamic scholars during the Mongol invasions'
+              'The Mamluk victory at Ain Jalut and Cairo\'s rise as a center of Islamic learning',
+              'The Mongols\' conversion to Islam before they launched their invasions of the Middle East',
+              'The rebuilding of Baghdad into an even larger capital within a decade of its sack in 1258',
+              'The protection that the Crusader states gave Islamic scholars fleeing from the Mongols'
             ],
             correctAnswer: 0,
             explanation: 'Ain Jalut + Cairo\'s rise is the strongest evidence pair for Islamic resilience: Ain Jalut showed military capacity to defeat the Mongols, while Cairo\'s cultural florescence showed that Islamic institutional life relocated and continued. Together, they demonstrate that Islamic civilization was not dependent on any single political center.'
@@ -116,10 +116,10 @@ export const whDarAlIslamPart7Data = {
           {
             question: 'Which best explains WHY Islamic trade networks were more commercially sophisticated than contemporary European trade c. 1200–1300?',
             options: [
-              'Islamic commercial law (mudaraba partnerships, suftaja credit instruments, waqf-funded infrastructure) provided a developed legal and financial framework for long-distance trade that European commercial law had not yet developed to the same extent',
-              'Islamic merchants had access to better ships than European merchants',
-              'The Quran specifically commanded Muslims to be merchants',
-              'European merchants were prohibited by the Catholic Church from all commercial activity'
+              'Muslim law offered partnership contracts and bills of exchange that Europe had not yet matched',
+              'Muslim merchants sailed larger, faster ships than any that were built in Europe during the period',
+              'The Quran commanded every Muslim to make a living through long-distance trade',
+              'The Church banned European merchants from commerce of every kind until about 1300'
             ],
             correctAnswer: 0,
             explanation: 'The sophistication of Islamic commerce was institutional: mudaraba partnerships financed voyages without usury; suftaja bills of exchange eliminated the need to carry gold; waqf-funded caravanserais provided commercial infrastructure along routes. European commercial sophistication would catch up — partly by learning from Islamic financial innovations through contact in Spain and the Crusades.'
@@ -127,10 +127,10 @@ export const whDarAlIslamPart7Data = {
           {
             question: 'For AP DBQ analysis, which primary source type is MOST useful for understanding Dar al-Islam\'s commercial networks c. 1200–1450?',
             options: [
-              'Travel accounts like Ibn Battuta\'s Rihla and merchant letters from the Cairo Geniza, which document commercial practices, prices, commodities, and the extent of Islamic trading communities across Afro-Eurasia',
-              'European Crusader chronicles, which describe the Islamic world from a hostile external perspective',
-              'Chinese imperial records, which focus exclusively on East Asian affairs',
-              'Archaeological evidence from mosques, which documents religious rather than commercial activity'
+              'Merchant letters from the Cairo Geniza and travel accounts like Ibn Battuta\'s Rihla',
+              'Crusader chronicles describing the Islamic world from a hostile outsider\'s point of view',
+              'Chinese imperial records, which focus mainly on affairs inside East Asia and the steppe',
+              'Mosque inscriptions, which record religious rather than commercial or legal activity'
             ],
             correctAnswer: 0,
             explanation: 'The Cairo Geniza (a storeroom of medieval Jewish merchant letters preserved in a Cairo synagogue) and Ibn Battuta\'s travel account are premier primary sources for Islamic commercial life. AP DBQ preparation should recognize that merchants\' own records provide unmediated evidence of commercial practices, routes, commodities, and the extent of trading networks.'
@@ -179,21 +179,21 @@ Match each AP vocabulary term to its correct definition.
           {
             question: 'An AP LEQ prompt asks: "Evaluate the extent to which Islam served as a unifying force across Dar al-Islam c. 1200–1450." What is the strongest thesis?',
             options: [
-              'Islam served as the primary unifying force across a politically fragmented Islamic world, as shared Arabic language, Islamic commercial law, and the hajj pilgrimage created cultural and commercial cohesion that transcended political divisions between competing caliphates and dynasties',
-              'Islam had no unifying effect on the Islamic world',
-              'Political unity was the primary unifying force, not religion',
-              'Islam only unified Arab populations, not Turks, Persians, or Africans'
+              'Islam unified a divided world, since shared law and the hajj outlasted rival dynasties',
+              'Islam had little unifying effect, since each dynasty followed its own separate religious law',
+              'Political unity, not religion, held Muslims together, since the caliphs still governed directly',
+              'Only Arab populations were unified by Islam, since Turks, Persians and Africans kept apart'
             ],
             correctAnswer: 0,
-            explanation: 'This thesis earns all three LEQ rubric points: (1) historically defensible claim, (2) specific line of reasoning (three non-political mechanisms), (3) names categories of evidence (Arabic language, commercial law, hajj). It also implicitly addresses the complexity problem: the political world WAS fragmented, but Islam unified through non-political channels. Strong setup for a sophisticated multi-paragraph essay.'
+            explanation: 'This thesis earns the thesis point and sets up the reasoning: it makes a historically defensible claim (Islam was the main unifier), names a line of reasoning (non-political mechanisms such as shared law and the hajj), and implicitly addresses complexity: the political world WAS fragmented, but Islam unified through non-political channels. Strong setup for a multi-paragraph essay.'
           },
           {
             question: 'An AP question asks you to evaluate a historical argument that "the Islamic world made no original intellectual contributions, only preserving Greek knowledge." How do you most effectively counter this argument?',
             options: [
-              'Al-Khwarizmi\'s development of algebra (a genuinely new mathematical field) and Ibn al-Haytham\'s optics (going far beyond Greek optics theory) demonstrate that Islamic scholars were actively generative, not merely archival — producing knowledge that exceeded Greek originals and shaped European scientific development',
-              'By agreeing that Islamic scholars only preserved, not created',
-              'By arguing that Greek knowledge was not preserved at all in the Islamic world',
-              'By focusing only on Islamic religious scholarship'
+              'Point to al-Khwarizmi\'s algebra and Ibn al-Haytham\'s optics as new work beyond the Greeks',
+              'Agree that Islamic scholars preserved but never created, then add more examples of preservation',
+              'Argue that the Islamic world preserved no Greek knowledge at all',
+              'Focus only on Islamic religious scholarship and legal commentary'
             ],
             correctAnswer: 0,
             explanation: 'Countering this argument requires specific evidence of original creation: algebra (Al-Khwarizmi), optics (Ibn al-Haytham), medical synthesis (Ibn Sina\'s Canon exceeded Galen). The word "algebra" derives from Al-Khwarizmi\'s work — making its Arabic origin linguistically traceable. AP rewards students who can deploy specific, named evidence to challenge reductive historical narratives.'

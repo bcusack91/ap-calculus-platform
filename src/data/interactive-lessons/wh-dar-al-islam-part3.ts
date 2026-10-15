@@ -32,10 +32,10 @@ export const whDarAlIslamPart3Data = {
           {
             question: 'Muslim merchants dominated Indian Ocean trade c. 700–1450 primarily because:',
             options: [
-              'They combined expertise in monsoon wind navigation, access to Arabic as a shared commercial language, and Islamic legal institutions (like contracts and credit) that facilitated long-distance trade across cultural boundaries',
-              'They were the only group with access to sailing vessels in this period',
-              'The Quran required all Muslims to become merchants',
-              'They conquered and militarily controlled all Indian Ocean port cities'
+              'They combined monsoon sailing skill, a shared language and Islamic contract law',
+              'They were the only group in the region with ships able to sail across the open ocean',
+              'The Quran required every Muslim man to work as a merchant for at least part of his life',
+              'Their states conquered and garrisoned the major port cities from Kilwa to Malacca'
             ],
             correctAnswer: 0,
             explanation: 'Muslim merchants\' dominance combined technological (navigation), linguistic (Arabic), legal (Islamic commercial law including contracts, partnerships, and credit instruments), and religious factors. Islam\'s prohibition on usury (interest) led to creative financial instruments like *suftaja* (bills of exchange) that facilitated long-distance commerce.'
@@ -43,10 +43,10 @@ export const whDarAlIslamPart3Data = {
           {
             question: 'The role of Arabic as a lingua franca across Dar al-Islam was significant for trade because:',
             options: [
-              'It provided a shared commercial and legal language that allowed Muslim merchants from Morocco to Southeast Asia to conduct business, write contracts, and resolve disputes using shared Islamic law',
-              'It forced all non-Arab Muslims to abandon their native languages entirely',
-              'Arabic was the only language spoken in the Islamic world',
-              'It was adopted by Chinese and European merchants as their primary trade language'
+              'It gave merchants from Morocco to Southeast Asia a common language for contracts and law',
+              'It forced non-Arab Muslims to give up Persian, Turkish and their other native tongues',
+              'It became the main trading language of Chinese and Venetian merchants in their own ports as well',
+              'It replaced local languages entirely in the port cities of East Africa and India'
             ],
             correctAnswer: 0,
             explanation: 'Arabic\'s role as the language of the Quran gave it religious authority, but its commercial role was equally significant: shared legal concepts, contract forms, and financial instruments allowed Muslim merchants across vast distances to trade with built-in trust mechanisms that non-Muslim merchants lacked.'
@@ -106,10 +106,10 @@ Arabic unified the Islamic commercial world through:
           {
             question: 'The mudaraba commercial partnership in Islamic law was significant for long-distance trade because:',
             options: [
-              'It allowed a capital provider and a traveling merchant to share risk and profit without violating Islam\'s prohibition on interest (riba), creating a legal framework for financing long-distance voyages',
-              'It gave the Islamic government direct control over all merchant profits',
-              'It was identical to European feudal contracts',
-              'It only applied to trade within the Arabian Peninsula'
+              'It let investors and traveling merchants share risk and profit without interest',
+              'It gave the caliph\'s treasury direct control over the profits of every trading voyage',
+              'It bound merchants to a lord for life in return for military protection, much like a fief',
+              'It applied only to trade inside the Arabian Peninsula and lapsed at the borders of Arabia'
             ],
             correctAnswer: 0,
             explanation: 'The mudaraba solved a key problem: how to finance long-distance trade without charging interest (prohibited by Islam). By structuring commerce as a profit-sharing partnership rather than a loan, Islamic law enabled sophisticated commercial finance that facilitated Indian Ocean and trans-Saharan trade.'
@@ -117,10 +117,10 @@ Arabic unified the Islamic commercial world through:
           {
             question: 'Timbuktu\'s significance in the trans-Saharan trade network c. 1200–1450 was that it:',
             options: [
-              'Served simultaneously as a major commercial hub for gold and salt trade AND as a center of Islamic scholarship, demonstrating the inseparability of commercial and intellectual life in Dar al-Islam',
-              'Was exclusively a military fortress with no commercial function',
-              'Was the capital of the Abbasid Caliphate relocated to West Africa',
-              'Was the origin point of Islam\'s expansion into sub-Saharan Africa through military conquest'
+              'Was both a hub for gold and salt and a center of Islamic scholarship',
+              'Was a military fortress built to defend Mali against raids from the Sahara',
+              'Was the seat of the Abbasid caliphs after they fled from Baghdad in 1258',
+              'Was the port where Portuguese ships first loaded West African gold for Lisbon'
             ],
             correctAnswer: 0,
             explanation: 'Timbuktu exemplifies how trade and scholarship co-existed in Islamic commercial cities. The Sankore Mosque and Timbuktu\'s university attracted scholars from across the Islamic world, funded by the wealth generated by trans-Saharan commerce. AP questions often use Timbuktu to demonstrate the cultural dimensions of trade networks.'
@@ -128,13 +128,13 @@ Arabic unified the Islamic commercial world through:
           {
             question: 'Mansa Musa\'s 1324–1325 hajj to Mecca is significant for AP World History because it:',
             options: [
-              'Demonstrated the integration of Mali Empire into the Islamic world, the extraordinary wealth of sub-Saharan African kingdoms, and the connectivity of trans-Saharan trade networks — while his gold spending destabilized Mediterranean economies for years',
-              'Was the first time any African ruler had traveled to the Middle East',
-              'Resulted in the Mali Empire converting from Christianity to Islam',
-              'Was primarily a military campaign disguised as a religious pilgrimage'
+              'It displayed Mali\'s ties to Dar al-Islam and the wealth of the trans-Saharan gold trade',
+              'It was the first journey by any African ruler to Mecca or to anywhere else in the Middle East',
+              'It marked Mali\'s conversion from Christianity to Islam under the influence of Egypt',
+              'It was a military campaign against the Mamluks disguised as a religious pilgrimage'
             ],
             correctAnswer: 0,
-            explanation: 'Mansa Musa\'s hajj serves multiple AP functions: evidence of Mali\'s integration into Dar al-Islam, evidence of sub-Saharan African economic power, and evidence of gold\'s role in trans-Saharan trade. His reportedly massive gold giveaways in Cairo caused inflation that affected Mediterranean gold prices for over a decade — concrete evidence of West African economic weight.'
+            explanation: 'Mansa Musa\'s hajj serves multiple AP functions: evidence of Mali\'s integration into Dar al-Islam, evidence of sub-Saharan African economic power, and evidence of gold\'s role in trans-Saharan trade. His reportedly lavish gold spending in Cairo depressed the value of gold there for years — concrete evidence of West African economic weight. Mali\'s rulers were already Muslim, and earlier West African rulers had made the pilgrimage before him.'
           }
         ]
       }
@@ -180,10 +180,10 @@ Match each trade concept to its correct definition.
           {
             question: 'An AP prompt asks: "Evaluate the role of religion in facilitating trade across Dar al-Islam c. 700–1450." Which argument is most historically sophisticated?',
             options: [
-              'Islam played a multifaceted role in facilitating trade: the shared Arabic language and legal framework (Islamic commercial law) reduced transaction costs across vast distances, while Muslim merchants\' religious networks provided trust mechanisms that non-Muslims lacked — making religion an active commercial infrastructure rather than merely a cultural backdrop',
-              'Religion had no impact on trade — merchants only cared about profits regardless of religion',
-              'Islam restricted trade by prohibiting commerce with non-Muslims',
-              'Trade occurred despite Islam\'s religious rules rather than because of them'
+              'Islam acted as commercial infrastructure, as shared law and language built trust over vast distances',
+              'Religion had no effect on trade, since merchants cared only about profit, whatever their faith',
+              'Islam restricted trade by banning commerce between Muslims and merchants of other faiths',
+              'Trade grew in spite of Islamic rules, which discouraged profit-making and lending of all kinds'
             ],
             correctAnswer: 0,
             explanation: 'This argument is sophisticated because it goes beyond "Muslims were merchants" to explain the MECHANISM: shared language → reduced communication costs; shared law → enforceable contracts across borders; shared religious identity → trust networks enabling credit. Religion was economic infrastructure, not just cultural context.'
@@ -191,10 +191,10 @@ Match each trade concept to its correct definition.
           {
             question: 'How did the trans-Saharan trade network under Islamic merchants differ from the Indian Ocean network?',
             options: [
-              'Trans-Saharan trade required animal transport (camels) across land, was primarily organized around gold-salt exchange, and relied on Berber intermediaries, while Indian Ocean trade used monsoon-driven ships and was more directly controlled by Arab and Indian Muslim merchant communities',
-              'The trans-Saharan network was larger and more economically significant than the Indian Ocean network',
-              'Both networks were identical in their use of sailing vessels and commodities',
-              'The Indian Ocean network was entirely controlled by Chinese merchants, not Muslims'
+              'Trans-Saharan trade moved gold and salt by camel caravan, while Indian Ocean trade relied on monsoon ships',
+              'Trans-Saharan trade was larger in volume, while Indian Ocean trade carried only luxury spices',
+              'Trans-Saharan trade used river ships on the Niger, while Indian Ocean trade used camels on the coast',
+              'Trans-Saharan trade was run by Muslims, while Indian Ocean trade was controlled by Chinese merchant houses'
             ],
             correctAnswer: 0,
             explanation: 'Contrasting the two networks is a classic AP comparison. Key differences: transport technology (camels vs. ships), primary commodities (gold/salt vs. spices/textiles), intermediary groups (Berber nomads vs. Arab/Indian merchants), and geographic scale. Both connected Islamic commercial civilization, but through very different mechanisms.'

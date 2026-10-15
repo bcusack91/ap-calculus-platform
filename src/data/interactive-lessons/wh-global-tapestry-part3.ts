@@ -32,10 +32,10 @@ export const whGlobalTapestryPart3Data = {
           {
             question: 'Islam spread most effectively to Southeast Asia and sub-Saharan Africa primarily through:',
             options: [
-              'Muslim merchant networks and Sufi missionaries who adapted Islamic teachings to local cultural contexts',
-              'Military conquest by Islamic armies that forced mass conversions',
-              'European Crusaders who carried Islam westward',
-              'A centralized Islamic government that sent missionaries worldwide'
+              'Muslim merchant networks and Sufi teachers who adapted Islam to local cultures',
+              'Arab armies that conquered the coasts and required conversion to Islam for trade',
+              'Ottoman naval expeditions that installed Muslim sultans in the major port cities',
+              'Caliphal missionaries dispatched from Baghdad under a centrally planned program'
             ],
             correctAnswer: 0,
             explanation: 'Merchants established Muslim communities along trade routes, and Sufi missionaries — who emphasized mystical experience and accommodation with local practices — proved far more effective than military force. Trade and religious flexibility, not conquest, drove most Islamic expansion in this period.'
@@ -43,10 +43,10 @@ export const whGlobalTapestryPart3Data = {
           {
             question: 'The Swahili Coast city-states (e.g., Kilwa, Mombasa) were historically significant because they:',
             options: [
-              'Served as cosmopolitan trading hubs connecting African interior gold and ivory to Indian Ocean merchants, creating a culture blending African and Islamic elements',
-              'Were powerful military empires that conquered most of East Africa',
-              'Were isolated from global trade and developed entirely independently',
-              'Were the primary origin point of Islam before the religion spread to Arabia'
+              'Linked interior gold and ivory to Indian Ocean merchants and blended African and Islamic culture',
+              'Formed a unified Swahili kingdom that conquered the East African interior to the Great Lakes',
+              'Served as the main ports for Portuguese convoys carrying enslaved Africans to the Americas',
+              'Stayed outside long-distance trade and developed a purely Bantu culture without Arab contact'
             ],
             correctAnswer: 0,
             explanation: 'Swahili Coast cities grew wealthy as intermediaries in Indian Ocean trade. Their culture — blending Bantu African languages with Arabic vocabulary, Islamic architecture with African traditions — is a textbook AP example of cultural synthesis through sustained trade contact.'
@@ -110,10 +110,10 @@ Overland routes connecting China to the Mediterranean through Central Asia and P
           {
             question: 'What geographic feature made the Indian Ocean trade system reliable and predictable for sailors?',
             options: [
-              'Monsoon winds that reversed direction seasonally, allowing ships to sail east in summer and west in winter',
-              'The absence of storms in the Indian Ocean year-round',
-              'A system of canals connecting all major port cities',
-              'Trade winds that always blew in one constant direction'
+              'Monsoon winds that reversed direction with the seasons',
+              'Steady westerly trade winds that blew the same way all year',
+              'A chain of Chinese-built canals linking the major port cities',
+              'Calm, storm-free waters sheltered by the long African coastline'
             ],
             correctAnswer: 0,
             explanation: 'The seasonal monsoon winds were the engine of Indian Ocean trade. Sailors had used them for over a millennium by 1200 CE, creating one of history\'s most sophisticated commercial networks across three continents.'
@@ -121,21 +121,21 @@ Overland routes connecting China to the Mediterranean through Central Asia and P
           {
             question: 'The Mali Empire\'s wealth and power was based primarily on:',
             options: [
-              'Controlling gold fields and taxing trans-Saharan trade passing through its territory',
-              'Manufacturing superior iron weapons sold throughout Africa',
-              'Conquering and taxing Indian Ocean port cities',
-              'Agricultural surpluses grown in the Sahara Desert'
+              'Control of gold fields and taxes on trans-Saharan trade',
+              'Iron weapons forged in Mali and sold across the Sahel',
+              'Salt mines in the Mali heartland that supplied Morocco',
+              'Customs duties at its ports on the Indian Ocean coast'
             ],
             correctAnswer: 0,
-            explanation: 'Mali sat astride the junction between West African gold-producing regions and Saharan trade routes leading to North Africa. By taxing this trade, Mali\'s rulers accumulated enormous wealth — most famously shown by Mansa Musa\'s 1324 hajj, during which his gold spending destabilized the Egyptian economy for years.'
+            explanation: 'Mali sat astride the junction between West African gold-producing regions and Saharan trade routes leading to North Africa. Salt flowed south into Mali from Saharan mines such as Taghaza rather than north out of it, and Mali had no Indian Ocean coast. By taxing the gold-salt trade, Mali\'s rulers accumulated enormous wealth — most famously shown by Mansa Musa\'s 1324 hajj.'
           },
           {
             question: 'The "Pax Mongolica" affected Silk Road trade by:',
             options: [
-              'Temporarily unifying Central Asian territory under Mongol rule, making trade safer — but also facilitating the spread of the Black Death',
-              'Permanently blocking all trade between China and the Mediterranean',
-              'Forcing all merchants to convert to Mongol religious practices',
-              'Eliminating the Indian Ocean trade routes as alternatives'
+              'Making overland routes safer under Mongol rule, but also helping the Black Death spread',
+              'Closing overland routes to foreign merchants, but sending trade through Mongol ports',
+              'Imposing a Mongol state religion on merchants, but exempting those who paid a special tax',
+              'Moving luxury trade from the Silk Roads to the Indian Ocean, but only for Chinese silk'
             ],
             correctAnswer: 0,
             explanation: 'The Mongol Empire\'s vast territorial control briefly made Silk Road travel safer. But this connectivity had a devastating side effect: the spread of bubonic plague (Black Death) along trade and military routes, killing tens of millions across Eurasia in the mid-14th century.'
@@ -184,10 +184,10 @@ Match each trade network feature to its correct description.
           {
             question: 'A historian argues that trade routes were more important than military conquest for spreading Islam c. 1200–1450. Which evidence BEST supports this claim?',
             options: [
-              'Islam spread to Southeast Asia primarily through Muslim merchants establishing trading communities, not through military campaigns',
-              'Islamic armies conquered all of Southeast Asia by 1300 CE',
-              'Islam only spread to regions that were militarily weak',
-              'The Mongol Empire converted to Islam before conquering new territories'
+              'Islam reached Southeast Asia mainly through merchant communities, not military campaigns',
+              'Islamic military forces conquered the Malay Peninsula and Java before merchants arrived',
+              'Mamluk forces imposed Islam on the Swahili Coast after defeating its city-states in battle',
+              'Islam spread fastest where Abbasid governors were sent to rule newly conquered lands'
             ],
             correctAnswer: 0,
             explanation: 'Southeast Asia was never conquered by Islamic armies — yet by 1500, much of coastal Southeast Asia was Muslim. Merchants established communities, built mosques, and integrated into local elites through intermarriage and trade. This peaceful commercial spread is a key AP distinction from military-conquest-based spread.'
@@ -195,10 +195,10 @@ Match each trade network feature to its correct description.
           {
             question: 'The Swahili Coast city-states of East Africa best illustrate which AP concept?',
             options: [
-              'Cultural synthesis — the blending of Bantu African, Arab, and Islamic elements through trade created a distinctive new culture',
-              'Cultural imperialism — Arab merchants forcibly replaced African culture with Islamic practices',
-              'Cultural isolation — the East African coast developed independently without outside influence',
-              'Economic collapse — trade contact always led to the destruction of indigenous cultures'
+              'Cultural synthesis — Bantu African, Arab and Islamic elements blended through trade',
+              'Cultural imperialism — Arab merchants replaced Bantu languages and customs by force',
+              'Cultural diffusion from Europe — Portuguese settlers brought Christianity and stone building',
+              'Cultural isolation — the East African coast developed with little outside influence'
             ],
             correctAnswer: 0,
             explanation: 'The Swahili language (Bantu grammar with Arabic vocabulary), Swahili architecture (blending African and Islamic styles), and Swahili trade networks demonstrate that cultural exchange through trade creates new hybrid cultures. This synthesis is a model AP Unit 1 example.'

@@ -32,10 +32,10 @@ export const whLandBasedEmpiresPart2Data = {
           {
             question: 'The Ottoman conquest of Constantinople (1453) was historically significant primarily because:',
             options: [
-              'It ended the Byzantine Empire and gave the Ottomans control of the strategic Bosphorus strait, making Istanbul (Constantinople) the center of a vast empire controlling eastern Mediterranean trade routes',
-              'It converted all Byzantine Christians to Islam within one year',
-              'It was the Ottoman Empire\'s first military victory of any kind',
-              'It had no impact on European commercial patterns'
+              'It ended the Byzantine Empire and gave the Ottomans control of the Bosphorus straits',
+              'It gave the Ottomans their first foothold in Europe, which they had never entered before',
+              'It reunited the Orthodox and Catholic churches under the protection of the Ottoman sultan',
+              'It ended Ottoman expansion, since the sultans had no further territorial ambitions in Europe'
             ],
             correctAnswer: 0,
             explanation: 'Constantinople\'s fall ended a 1,000-year empire and gave the Ottomans the most strategically located city in the world — bridging Europe and Asia, controlling the Black Sea entrance. The AP exam connects this to European sea-route exploration: Ottoman control of eastern trade routes motivated Portuguese and Spanish search for maritime alternatives.'
@@ -43,10 +43,10 @@ export const whLandBasedEmpiresPart2Data = {
           {
             question: 'The devshirme system (collecting Christian boys for Ottoman imperial service) was significant because it:',
             options: [
-              'Created a loyal administrative and military class (janissaries and bureaucrats) whose careers depended entirely on the sultan, bypassing the traditional Muslim nobility and creating unprecedented imperial centralization',
-              'Was a form of religious persecution with no administrative function',
-              'Only produced military soldiers with no civilian administrative role',
-              'Was identical to the Chinese civil service examination system'
+              'It produced janissaries and officials whose careers depended entirely on the sultan, bypassing the Muslim nobility',
+              'It was mainly a religious conversion campaign with no real role in staffing the army or government',
+              'It supplied cavalry officers who received hereditary land grants and passed their estates to their sons',
+              'It recruited the sons of prominent Turkish Muslim families, binding the old nobility more tightly to the sultan\'s court'
             ],
             correctAnswer: 0,
             explanation: 'The devshirme\'s genius was political: by recruiting from non-Muslim boys who had no family connections to Ottoman Muslim nobility, the sultan created officials whose loyalty was to him personally. They had no alternative power base, no family inheritance claims, no local noble allegiance — total imperial dependence was their defining characteristic.'
@@ -71,7 +71,7 @@ The Ottomans were a small Turkic principality in Anatolia c. 1299 that expanded 
 | **1453** | Conquest of Constantinople | Ended Byzantine Empire; gained Bosphorus control |
 | **1517** | Conquered Egypt | Added Mamluk wealth; claimed Caliphate |
 | **1529** | First Siege of Vienna | Maximum westward extent; repelled |
-| **1571** | Battle of Lepanto | Naval defeat by Spain; Mediterranean limits established |
+| **1571** | Battle of Lepanto | Naval defeat by the Holy League (Spain, Venice, the Papacy); Mediterranean limits established |
 
 > **Governance: Devshirme and Millet**
 
@@ -105,10 +105,10 @@ Ottoman administrative innovations enabled governing a diverse empire:
           {
             question: 'Janissaries (devshirme-trained infantry) gave the Ottomans a military advantage because they:',
             options: [
-              'Were trained professionals using gunpowder weapons who were loyal to the sultan personally, unlike traditional cavalry nobility who had independent power bases and less discipline',
-              'Were the first army in history to use any weapons at all',
-              'Were entirely cavalry with no infantry component',
-              'Were recruited from the Muslim nobility, ensuring religious loyalty'
+              'Were disciplined gunpowder troops loyal to the sultan personally, not to independent noble patrons',
+              'Were heavy cavalry archers drawn from the Turkish tribes that had founded the Ottoman state',
+              'Were recruited from Muslim noble families, giving them strong religious and dynastic loyalty',
+              'Were mercenaries hired from Venice and Genoa who brought Italian siege expertise with them'
             ],
             correctAnswer: 0,
             explanation: 'Janissaries combined professional training, gunpowder weaponry (early firearms and cannon), and personal loyalty to the sultan (their entire career and identity depended on imperial service). This made them more effective than the traditional Turkish cavalry (*sipahi*) whose loyalty was more conditional and whose tactics were less suited to siege warfare.'
@@ -116,10 +116,10 @@ Ottoman administrative innovations enabled governing a diverse empire:
           {
             question: 'The Ottoman millet system\'s most important function was:',
             options: [
-              'Enabling the governance of a religiously diverse empire by giving non-Muslim communities (Greek Orthodox, Armenian, Jewish) autonomy over internal affairs, reducing the administrative burden of imposing uniform Islamic law on millions of Christians and Jews',
-              'Forcibly converting all conquered peoples to Islam within one generation',
-              'Eliminating all non-Muslim populations from Ottoman territory',
-              'Creating a democratic system of representation for minority groups'
+              'Letting non-Muslim communities run their own internal affairs under their religious leaders',
+              'Requiring Christians and Jews to convert to Islam before they could own land or pay lower taxes',
+              'Organizing the empire\'s Muslim subjects into military districts that supplied janissary recruits',
+              'Giving each religious community elected seats in an imperial assembly that approved new taxes'
             ],
             correctAnswer: 0,
             explanation: 'The millet system was pragmatic imperial administration: the empire could not possibly govern millions of Christian and Jewish subjects using only Islamic legal institutions. By delegating internal governance to religious leaders (Greek Orthodox Patriarch, Armenian Patriarch, Chief Rabbi), the Ottomans maintained control through taxation and military service while reducing costly administrative complexity.'
@@ -127,10 +127,10 @@ Ottoman administrative innovations enabled governing a diverse empire:
           {
             question: 'The Ottoman Empire\'s control of Constantinople and eastern Mediterranean trade routes after 1453 most directly caused:',
             options: [
-              'European maritime powers (Portugal, Spain) to intensify their search for alternative sea routes to Asia, eventually leading to Portuguese circumnavigation of Africa and Spanish exploration of the Americas',
-              'An immediate end to all European trade with Asia',
-              'The Ottoman Empire to become the world\'s largest Christian kingdom',
-              'Chinese traders to begin sailing directly to Europe'
+              'Portugal and Spain to intensify their search for sea routes to Asia around Africa and across the Atlantic',
+              'Venice and Genoa to abandon Mediterranean commerce and shift to overland routes through Russia',
+              'Ming China to launch Zheng He\'s voyages in order to reopen direct sea routes to European ports',
+              'The Ottomans to close every eastern route to Christian merchants, ending European spice imports for a century'
             ],
             correctAnswer: 0,
             explanation: 'The AP causation chain: Ottoman control → higher tolls on eastern trade → European commercial disadvantage → motivation for sea routes → Portuguese Africa circumnavigation (1488, 1498) → Spanish Caribbean exploration (1492). This chain directly connects AP Unit 3 (land-based empires) to Unit 4 (exploration and Atlantic world).'
@@ -179,10 +179,10 @@ Match each Ottoman feature to its correct description.
           {
             question: 'An AP question asks how the Ottoman Empire used both coercive power and accommodation to maintain control. Which answer demonstrates the strongest reasoning?',
             options: [
-              'The Ottomans used coercive military power (janissary army, gunpowder weapons) to conquer territories, then employed administrative accommodation (millet system for religious minorities, devshirme creating loyal bureaucracy) to govern diverse populations at lower ongoing cost than pure military domination would require',
-              'The Ottomans only used military force with no administrative accommodation',
-              'The Ottomans only used accommodation with no coercive force',
-              'The Ottomans had no system for governing non-Muslim populations'
+              'Janissary armies conquered new lands, then millets and the devshirme made ruling them cheaper than constant force',
+              'The Ottomans relied on force alone, ruling non-Muslims through janissary garrisons in every province',
+              'Accommodation replaced force entirely, since the sultans disbanded their armies once a region was won',
+              'Conversion was the main tool, as millets existed to bring Christians and Jews into Islam over time'
             ],
             correctAnswer: 0,
             explanation: 'This argument demonstrates AP sophistication by showing HOW conquest and governance work differently: conquest requires overwhelming force, but ongoing governance requires accommodation to be sustainable. The Ottoman combination — gunpowder conquest + millet accommodation — is a model of imperial governance analysis that AP rewards.'
@@ -190,10 +190,10 @@ Match each Ottoman feature to its correct description.
           {
             question: 'Comparing the Ottoman devshirme to the Chinese civil service exam system, which statement is most historically accurate?',
             options: [
-              'Both created loyal administrative classes that reduced the power of traditional hereditary aristocracy, but through fundamentally different mechanisms: the devshirme through royal collection of non-Muslim outsiders, the exam system through competitive testing of educated insiders',
-              'Both systems were identical in every functional respect',
-              'The devshirme was only a military system with no administrative function',
-              'The exam system recruited from non-Chinese populations, like the devshirme'
+              'Both produced loyal officials who curbed hereditary aristocrats, one by drafting outsiders and one by testing insiders',
+              'Both recruited through competitive written exams, given in Turkish for one and Classical Chinese for the other',
+              'The devshirme drafted Muslim noble sons, just as the exams were open only to sons of the gentry',
+              'The exam system recruited mainly from conquered non-Chinese peoples, mirroring how the devshirme drew Christian outsiders'
             ],
             correctAnswer: 0,
             explanation: 'This comparison earns AP points by identifying the shared function (reducing aristocratic power, creating loyal bureaucrats) while specifying the different mechanisms (outside collection vs. inside testing). Both outcomes were similar; the processes differed fundamentally — demonstrating that similar problems (how to govern a large empire) can be solved through very different institutional innovations.'

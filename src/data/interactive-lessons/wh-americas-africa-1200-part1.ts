@@ -50,7 +50,7 @@ export const whAmericasAfrica1200Part1Data = {
 | **Communication** | **Quipu** — knotted strings for record-keeping (no written language) |
 | **Agriculture** | Terracing; freeze-drying potatoes; irrigation systems |
 
-> ⚠️ **AP Alert:** Compare Aztec and Inca systems: The Aztec Empire was a **tribute** system (conquered peoples paid goods), while the Inca used a **labor tax** (mit'a). Neither used currency — Aztecs used cacao, Incas used labor. Both lacked iron tools, wheeled vehicles, and draft animals.
+> ⚠️ **AP Alert:** Compare Aztec and Inca systems: The Aztec Empire was a **tribute** system (conquered peoples paid goods), while the Inca used a **labor tax** (mit'a). Neither used coined money — Aztecs used cacao beans and cotton cloth as media of exchange, while the Inca had no market currency and taxed labor. Both lacked iron tools, wheeled vehicles, and draft animals.
       `
     },
     {
@@ -64,10 +64,10 @@ export const whAmericasAfrica1200Part1Data = {
           {
             question: 'The Aztec and Inca Empires DIFFERED most significantly in their:',
             options: [
-              'Methods of extracting resources from conquered peoples — the Aztecs demanded tribute goods while the Incas required labor through the mit\'a system',
-              'Geographic location — the Aztecs were in South America while the Incas were in Mesoamerica',
-              'Use of iron tools and wheeled vehicles for agricultural production',
-              'Adoption of Christianity before European contact'
+              'Methods of extraction, as the Aztecs demanded tribute goods while the Inca drafted labor through the mit\'a',
+              'Geographic setting, as the Aztecs ruled in the Andes while the Inca ruled the Valley of Mexico',
+              'Farming technology, as the Aztecs plowed with oxen while the Inca relied on iron hoes',
+              'Religious practice, as the Aztecs had adopted Christianity while the Inca kept worshipping the Sun'
             ],
             correctAnswer: 0,
             explanation: 'The Aztec tributary system required conquered peoples to provide goods (gold, textiles, food, sacrificial victims) to Tenochtitlan. The Inca mit\'a system required labor service (building roads, farming state land, military service). This distinction in economic organization is a common AP comparison question.'
@@ -76,9 +76,9 @@ export const whAmericasAfrica1200Part1Data = {
             question: 'The Inca quipu system is historically significant because it demonstrates that:',
             options: [
               'Complex administrative record-keeping was possible without a traditional written language',
-              'The Incas had developed a written alphabet similar to European scripts',
-              'Record-keeping was unnecessary for managing a large empire',
-              'The Incas borrowed their writing system from the Aztecs'
+              'The Inca had developed a phonetic alphabet that scribes painted onto cloth and pottery records',
+              'Large empires like the Inca\'s could be governed without keeping any records of people or tribute',
+              'The Inca adopted the quipu from Aztec scribes who had used knotted cords in Tenochtitlan'
             ],
             correctAnswer: 0,
             explanation: 'The quipu — a system of knotted strings — allowed the Incas to record census data, tax obligations, and other administrative information without written language. This challenges assumptions that civilization requires writing and shows diverse paths to complex state organization.'
@@ -181,10 +181,10 @@ Use the exact historical term.
           {
             question: 'The Swahili Coast city-states are MOST useful for illustrating which AP World History theme?',
             options: [
-              'Cross-cultural interaction — trade networks created new cultural syntheses that blended African, Arab, and Indian Ocean traditions',
-              'Political consolidation — a single ruler unified all East African trade under one empire',
-              'Technological innovation — the Swahili invented new navigation tools that revolutionized Indian Ocean trade',
-              'Environmental determinism — geography alone explains all cultural development'
+              'Cross-cultural interaction, as trade blended African and Arab traditions into a new coastal culture',
+              'Political consolidation, as one Swahili king unified the whole East African coast under a single empire',
+              'Technological innovation, as Swahili shipbuilders invented the magnetic compass used across the ocean',
+              'Environmental determinism, as the coast\'s geography alone shaped every single feature of its culture and politics'
             ],
             correctAnswer: 0,
             explanation: 'The Swahili Coast perfectly illustrates cross-cultural exchange: the Swahili language itself (Bantu grammar + Arabic vocabulary) is a product of interaction. Islam arrived through trade rather than conquest, mosques incorporated African architectural elements, and the economy depended on connecting African resources to Indian Ocean markets. This is cultural synthesis in action.'
@@ -192,10 +192,10 @@ Use the exact historical term.
           {
             question: 'An AP essay asks you to compare state-building in the Americas and Afro-Eurasia. The MOST important similarity would be that:',
             options: [
-              'Both regions developed complex political organizations, labor systems, and monumental architecture despite having different technologies and no contact with each other',
-              'Both regions used iron tools and draft animals for agriculture',
-              'Both regions had extensive maritime trade networks connecting them to each other',
-              'State-building occurred only in Afro-Eurasia; the Americas had no complex societies'
+              'Both regions built complex states and monumental architecture despite different technologies and no contact',
+              'Both regions farmed with iron tools and draft animals, which spread across the Atlantic before 1450',
+              'Both regions were tied together by maritime trade networks that crossed the Atlantic regularly',
+              'Both regions built states only after borrowing political models from each other through early contact'
             ],
             correctAnswer: 0,
             explanation: 'The key AP insight is **parallel development**: the Aztec and Inca empires built sophisticated states, road systems, and monumental architecture without iron, the wheel (for transport), or draft animals — technologies available in Afro-Eurasia. This demonstrates that civilizational complexity can emerge through different paths.'

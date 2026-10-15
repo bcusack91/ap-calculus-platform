@@ -32,10 +32,10 @@ export const whSilkRoadsMongolsPart6Data = {
           {
             question: 'The primary factors causing the Mongol Empire\'s fragmentation in the 14th century were:',
             options: [
-              'Internal succession conflicts between competing khanates, the devastating demographic impact of the Black Death on both Mongol armies and subject populations, and the absorption of Mongol rulers into local cultures that weakened their distinct Mongol identity',
-              'A single decisive military defeat that ended all Mongol power simultaneously',
-              'European Crusaders successfully conquering all Mongol territories',
-              'Voluntary dissolution when Mongol leaders decided to become sedentary farmers'
+              'Succession rivalries among the khanates, plague losses and rulers\' absorption into local cultures',
+              'One decisive defeat at Ain Jalut in 1260 that ended Mongol power everywhere at virtually the same moment',
+              'Crusader armies from western Europe that conquered the khanates of Persia and Russia in turn',
+              'A decision by Mongol leaders to give up conquest and settle down voluntarily as farmers'
             ],
             correctAnswer: 0,
             explanation: 'No single factor explains Mongol decline — it was the convergence of: (1) succession crises (the ulus system created competing claims); (2) Black Death (depopulated the empire\'s tax base and armies); (3) cultural absorption (converted Mongol rulers\' Mongol identity weakened as they became Muslim or Chinese in culture). AP rewards multi-causal explanations over single-factor narratives.'
@@ -43,10 +43,10 @@ export const whSilkRoadsMongolsPart6Data = {
           {
             question: 'The Ottoman Empire\'s rise in Anatolia after Mongol decline is significant because it:',
             options: [
-              'Created a new Islamic state that would eventually control the western Silk Road\'s endpoints and serve as the commercial gateway between Asia and Europe — ultimately motivating European search for alternative sea routes to Asia',
-              'Ended all trade between Asia and Europe permanently',
-              'Immediately conquered all former Mongol territory and recreated the unified empire',
-              'Was established by former Mongol warriors who converted to Christianity'
+              'It created a state that came to control the western ends of the Asian trade routes',
+              'It ended all trade between Asia and Europe permanently by closing the overland routes',
+              'It quickly conquered every former Mongol land and rebuilt the empire under Turkish rule',
+              'It was founded by former Mongol cavalry commanders who converted to Orthodox Christianity'
             ],
             correctAnswer: 0,
             explanation: 'The Ottoman Empire controlling Constantinople (1453) and the eastern Mediterranean trade routes is the direct stimulus for European maritime exploration. Portuguese and Spanish rulers sought sea routes around Africa and across the Atlantic to bypass Ottoman-controlled overland routes — making the Ottoman rise a direct cause of the Age of Exploration. AP causation chains connect Mongol decline → Ottoman rise → European exploration.'
@@ -107,10 +107,10 @@ The Mongol period's legacy for Silk Road trade:
           {
             question: 'The Ming Dynasty\'s restoration of the Confucian civil service examination system after expelling the Mongols demonstrates:',
             options: [
-              'How deeply the exam system was embedded in Chinese political culture — the scholar-gentry class\'s resentment of its Yuan suspension contributed to Mongol overthrow, and its restoration was a signal of "Chinese" governance returning',
-              'That the Yuan Dynasty had successfully destroyed the exam system permanently',
-              'That the Ming Dynasty was founded by Mongol officials adapting Chinese practices',
-              'That the examination system was a Mongol invention adapted by Chinese rulers'
+              'How deeply exams were embedded in Chinese political culture and how they signaled native rule\'s return',
+              'That the Yuan had destroyed the exam system for good, so the Ming had to invent a new one',
+              'That the Ming dynasty was founded by former Yuan officials of Mongol descent who adopted Chinese practices',
+              'That the examination system was a Mongol invention that later Chinese rulers chose to keep'
             ],
             correctAnswer: 0,
             explanation: 'The exam restoration was politically symbolic: it signaled that "China" had returned by reinstating the meritocratic system associated with Chinese governance. The Ming founder (Zhu Yuanzhang, himself of peasant origin) used the exam system both to staff the government and to signal legitimacy to the scholar-gentry whose cooperation he needed.'
@@ -118,10 +118,10 @@ The Mongol period's legacy for Silk Road trade:
           {
             question: 'European desire to find sea routes to Asia in the 15th century was MOST directly caused by:',
             options: [
-              'Ottoman Empire control of eastern Mediterranean and overland trade routes to Asia, which imposed high tolls and made overland trade expensive — creating strong economic incentives for Portuguese and Spanish rulers to find alternative sea routes',
-              'A European desire to spread Christianity throughout Asia',
-              'Technological limitations that made overland trade impossible',
-              'Chinese restriction of all foreign merchants from their ports'
+              'Ottoman control of eastern Mediterranean and overland routes, whose tolls made Asian goods costly',
+              'A crusading drive to spread Catholicism across Asia that outweighed any commercial motive',
+              'Overland routes made physically impassable by the collapse of Mongol relay stations',
+              'A Chinese embargo on all silk exports to Europe imposed by the early Ming emperors'
             ],
             correctAnswer: 0,
             explanation: 'This is a critical AP causation chain: Mongol decline → Ottoman expansion → Ottoman control of Constantinople (1453) and Levantine trade routes → high tolls on Asian goods → European maritime exploration. Portugal began exploring the African coast before 1453, but Ottoman control accelerated the drive for alternatives. This chain connects Unit 1-2 to Unit 3-4 in AP World History.'
@@ -129,10 +129,10 @@ The Mongol period's legacy for Silk Road trade:
           {
             question: 'Which statement BEST describes the Silk Roads\' legacy for world history after the Mongol period?',
             options: [
-              'While the overland Silk Roads declined in relative importance compared to expanding sea routes after c. 1400, the Mongol period\'s technological diffusion (gunpowder, paper, compass) had already transferred the tools that would enable European maritime expansion and the new global connections of the 15th-16th centuries',
-              'The Silk Roads had no lasting impact after the Mongol Empire collapsed',
-              'Overland Silk Road trade increased significantly after Mongol decline',
-              'European explorers independently discovered all technologies associated with the Silk Roads'
+              'Overland trade waned, but the technologies it had carried enabled sea expansion',
+              'The Silk Roads left no lasting legacy once the Mongol Empire broke apart in the 1300s',
+              'Caravan trade grew sharply after Mongol decline as Ottoman tolls drove merchants inland',
+              'European explorers developed the compass and gunpowder independently of any Asian source'
             ],
             correctAnswer: 0,
             explanation: 'The Silk Roads\' greatest legacy was not the goods they moved but the technologies they diffused: gunpowder transformed European warfare; the compass enabled oceanic navigation; paper enabled printed books and Protestant Reformation pamphlets. These tools, originally Chinese, reached Europe via the Silk Road networks — and then powered the European global expansion that created the modern world.'
@@ -181,10 +181,10 @@ Match each post-Mongol development to its correct description.
           {
             question: 'A CCOT essay asks about Silk Road trade c. 1200–1500. Which thesis demonstrates the strongest historical analysis?',
             options: [
-              'While the Mongol period created unprecedented Silk Road commercial connectivity through the Pax Mongolica, the subsequent decline of Mongol unity and Ottoman control of western endpoints shifted the balance of Eurasian trade toward maritime routes — establishing a long-term continuity of east-west commercial exchange within a changed structural framework',
-              'Silk Road trade ended entirely after the Mongol Empire collapsed',
-              'Nothing changed in Silk Road trade between 1200 and 1500',
-              'The Silk Roads were more important in 1500 than at any previous time'
+              'Pax Mongolica connectivity gave way to fragmentation and a maritime shift, but east-west exchange continued',
+              'Silk Road commerce ended entirely after the Mongol collapse, and Eurasia never reconnected',
+              'Silk Road commerce remained unchanged from 1200 to 1500 in its routes, goods and merchants',
+              'The overland Silk Roads reached their greatest importance in 1500, just after the Ottomans took Constantinople'
             ],
             correctAnswer: 0,
             explanation: 'This thesis earns full CCOT points: it identifies specific change (Mongol Pax → fragmentation → maritime shift), specific continuity (east-west commercial exchange persisting), uses periodization correctly, and articulates a structural argument (the FORM of exchange changed while the FUNCTION continued). This is model CCOT thesis construction.'
@@ -192,10 +192,10 @@ Match each post-Mongol development to its correct description.
           {
             question: 'The connection between the Mongol Empire\'s decline, Ottoman rise, and European Age of Exploration demonstrates which AP skill?',
             options: [
-              'Historical causation across multiple periods: short-term effects of Mongol decline (fragmentation, Black Death, Ottoman rise) combined with long-term structural factors (European commercial desire for Asian goods) to produce the Age of Exploration — demonstrating that major historical changes typically involve multiple intersecting causes across time',
-              'That historical events are random and cannot be causally connected',
-              'That the Ottoman Empire directly funded European exploration',
-              'That Mongol expansion was the sole cause of the Age of Exploration'
+              'Multi-period causation, with short-term shocks and long-standing demand for Asian goods combining over time',
+              'Contingency, showing that the events were random and cannot be linked by any causal chain',
+              'Direct causation, since the Ottoman sultans funded Portuguese voyages in order to weaken Venice',
+              'Single-factor causation, with Mongol expansion acting as the sole cause of exploration'
             ],
             correctAnswer: 0,
             explanation: 'Multi-period causation is one of the most sophisticated AP skills: the Mongol → Ottoman → Exploration chain connects Units 1-2 to Units 3-4. AP essays that connect developments across units (by referencing this chain in the context paragraph of an exploration essay, or in the complexity move of a Mongol essay) earn higher scores than essays that treat each unit as isolated.'

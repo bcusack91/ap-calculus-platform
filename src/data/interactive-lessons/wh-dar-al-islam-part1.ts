@@ -73,10 +73,10 @@ The Islamic world preserved and expanded upon Greek, Persian, and Indian knowled
           {
             question: 'After the Mongol destruction of Baghdad in 1258, Islam continued to spread primarily through:',
             options: [
-              'Trade networks and Sufi missionaries who adapted Islamic teachings to local cultures',
-              'A new centralized caliphate that reconquered all lost territories',
-              'European Crusaders who converted to Islam and carried it westward',
-              'Chinese explorers who introduced Islam to Southeast Asia'
+              'Trade networks and Sufi teachers who adapted Islamic practice to local cultures',
+              'A restored caliphate in Cairo that sent armies to reconquer the lost eastern lands',
+              'Mongol khans who required their subjects across Eurasia to adopt Islam at once',
+              'Ottoman fleets that carried Islam to the ports of Southeast Asia and East Africa'
             ],
             correctAnswer: 0,
             explanation: 'Even without a unified caliphate, Islam spread through merchant communities along Indian Ocean and trans-Saharan trade routes, and through Sufi missionaries who emphasized mystical experience and accommodation with local traditions. This decentralized spread is a key AP concept — Islam\'s growth was not dependent on a single political authority.'
@@ -84,10 +84,10 @@ The Islamic world preserved and expanded upon Greek, Persian, and Indian knowled
           {
             question: 'The Islamic world\'s preservation and expansion of Greek, Persian, and Indian knowledge is historically significant because:',
             options: [
-              'It maintained intellectual traditions that later fueled the European Renaissance when these texts were transmitted westward',
-              'Islamic scholars rejected all non-Islamic sources of knowledge',
-              'European scholars had already preserved all Greek and Roman knowledge independently',
-              'The knowledge had no impact outside the Islamic world'
+              'It kept classical learning alive and later helped fuel European scholarship and the Renaissance',
+              'It replaced Greek learning with religious law, ending philosophy in the Islamic world',
+              'It reached Europe only after 1600, too late to influence European universities',
+              'It mattered mainly in China, where Muslim officials brought Greek texts to the Yuan court'
             ],
             correctAnswer: 0,
             explanation: 'Islamic scholars translated Greek works (Aristotle, Plato, Euclid) into Arabic, added their own advances in mathematics, medicine, and science, and these texts later reached Europe through Spain (Al-Andalus) and the Crusades. Without this Islamic preservation and enhancement, much of classical knowledge would have been lost.'
@@ -160,7 +160,7 @@ Use the exact historical term.
           },
           {
             label: 'The Islamic scholar whose Canon of Medicine was used as a standard medical text in Europe for centuries was ___',
-            options: ['Ibn Sina (Avicenna)', 'Al-Khwarizmi', 'Ibn Battuta', 'Ibn Rushd']
+            options: ['Ibn Sina (Avicenna)', 'Al-Khwarizmi', 'Ibn Battuta', 'Ibn Rushd (Averroes)']
           },
           {
             label: 'Islamic schools that spread standardized education across Dar al-Islam were called ___',
@@ -185,10 +185,10 @@ Use the exact historical term.
           {
             question: 'Which statement BEST explains why Dar al-Islam maintained cultural unity despite political fragmentation after 1258?',
             options: [
-              'Shared religious practices (hajj, Sharia), a common scholarly language (Arabic), and trade networks created cultural connections that did not depend on a single centralized government',
-              'A new caliphate immediately replaced Baghdad and reunified all Muslim territories',
-              'European Crusaders imposed political unity on the Islamic world',
-              'Islam declined rapidly after the fall of Baghdad and ceased to be a unifying force'
+              'Shared Arabic scholarship, Islamic law and the hajj linked Muslims across rival states',
+              'A new caliphate quickly replaced Baghdad and reunited the Muslim states under one ruler',
+              'Mongol khans enforced one Islamic legal code on every land they conquered',
+              'The Mamluk sultans in Cairo directly governed Persia, India and North Africa'
             ],
             correctAnswer: 0,
             explanation: 'This is a crucial AP concept: cultural systems can maintain unity even without political unity. Arabic as a scholarly lingua franca, shared legal traditions (Sharia), the hajj pilgrimage, madrasas, and merchant networks all kept the Islamic world connected despite being divided among Mamluks, Seljuks, regional sultanates, and other political entities.'
@@ -196,10 +196,10 @@ Use the exact historical term.
           {
             question: 'A student compares how Buddhism spread through East and Southeast Asia with how Islam spread through the Indian Ocean basin. The MOST accurate comparison would be:',
             options: [
-              'Both religions spread significantly through trade networks and adapted to local cultures, creating syncretic practices that blended with existing traditions',
-              'Both religions spread exclusively through military conquest',
-              'Buddhism spread through trade while Islam spread only through conquest',
-              'Neither religion adapted to local cultures; both demanded complete cultural replacement'
+              'Both spread largely along trade routes and blended with local traditions as they spread',
+              'Both moved mainly through military conquest by states that required conversion',
+              'Buddhism spread through trade, but Islam spread only through the conquests of Arab armies',
+              'Neither adapted to local cultures, since both demanded full cultural replacement'
             ],
             correctAnswer: 0,
             explanation: 'Both Buddhism and Islam spread extensively through merchant networks — Buddhist and Muslim traders carried their faiths along trade routes. Both also underwent syncretism: Buddhism blended with Confucianism and Daoism in East Asia, while Islam blended with Hinduism in Southeast Asia and animism in sub-Saharan Africa. This pattern of trade-based, syncretic religious spread is a key AP comparison.'

@@ -32,24 +32,24 @@ export const whGlobalTapestryPart7Data = {
           {
             question: 'An AP SAQ asks: "Identify ONE similarity between the political structures of Song Dynasty China and the Byzantine Empire c. 1200–1450." Which response earns full credit?',
             options: [
-              'Both Song China and the Byzantine Empire had centralized governments where the ruler claimed a mandate or divine authority over a bureaucratic state — China through the Mandate of Heaven and Confucian governance, Byzantium through the emperor\'s role as God\'s representative on earth',
-              'Both China and Byzantium had identical economic systems based on agricultural surpluses',
-              'Both states were conquered by the Mongols simultaneously in the same year',
-              'Both states had elected legislatures that checked imperial power'
+              'Both had centralized bureaucratic states led by emperors claiming divine or heavenly sanction',
+              'Both were governed by elected assemblies that limited the emperor\'s control over taxation',
+              'Both lost their capitals to Mongol armies in the same campaign of the 1250s',
+              'Both relied on hereditary feudal lords rather than salaried officials to run their provinces'
             ],
             correctAnswer: 0,
-            explanation: 'This SAQ response earns full credit because it identifies a specific similarity (centralized governance with divine/cosmological legitimation), names both civilizations, and provides specific evidence for each. AP SAQ responses need to be precise and evidence-based, not vague.'
+            explanation: 'This response earns credit because it identifies a specific similarity — centralized bureaucratic governance with divine or cosmic legitimation (the Mandate of Heaven in China, the emperor as God\'s representative in Byzantium). Neither state had elected assemblies or relied on feudal lords for provincial rule, and Byzantium never fell to the Mongols. AP SAQ responses need to be precise and evidence-based, not vague.'
           },
           {
             question: 'An AP LEQ prompt asks: "Evaluate the extent to which trade networks drove cultural change in Afro-Eurasia c. 1200–1450." What is the best thesis?',
             options: [
-              'Trade networks were the primary driver of cultural change in this period, as the spread of Islam, Buddhist philosophy, Chinese technologies, and artistic styles through the Indian Ocean, trans-Saharan, and Silk Road networks transformed societies from Southeast Asia to West Africa more thoroughly than political conquest alone',
-              'Trade had no cultural impact — it only moved physical goods',
-              'Political conquest was the only cause of cultural change in this period',
-              'Cultural change only occurred in Europe during this period'
+              'Trade routes did more than conquest to change cultures by carrying Islam and new technologies',
+              'Long-distance trade moved goods but had little cultural impact compared with migration and climate',
+              'Conquest was the main driver of cultural change, as Mongol armies spread Islam across West and East Africa',
+              'Cultural change occurred mainly in Europe, where long-distance trade reached its height in this period'
             ],
             correctAnswer: 0,
-            explanation: 'This thesis earns points for being historically defensible, making a specific claim about extent ("primary driver"), naming specific mechanisms (three trade routes), naming specific cultural changes (Islam, Buddhism, technologies), and naming specific regions. It sets up a multi-paragraph essay with clear evidence.'
+            explanation: 'This thesis earns points for being historically defensible, making a specific claim about extent (trade did more than conquest), and naming specific cultural changes (Islam, technologies, art) that can be traced along the Indian Ocean, trans-Saharan and Silk Road networks. The Mongols never conquered Africa, and cultural change was not confined to Europe.'
           }
         ]
       }
@@ -105,10 +105,10 @@ Most frequent Unit 1 question patterns:
           {
             question: 'An AP prompt says "briefly explain ONE reason why." How should you structure your answer?',
             options: [
-              'One specific, historically defensible claim + one piece of specific evidence + one sentence of historical reasoning connecting the evidence to the claim',
-              'A long list of all facts you know about the topic',
-              'A one-word answer naming the reason without any explanation',
-              'A general statement without specific historical evidence'
+              'A specific claim, one piece of evidence and a sentence linking the evidence to the claim',
+              'A long list of related facts so that the reader can pick out the one that earns credit',
+              'A single word naming the reason, since the prompt asks you to keep the answer brief',
+              'A general statement about the era that avoids naming any specific person or event at all'
             ],
             correctAnswer: 0,
             explanation: '"Briefly explain ONE reason" is a standard AP SAQ command. It requires: (1) a specific claim, (2) specific evidence (a named person, event, institution, or date), and (3) reasoning that connects evidence to the claim. Vague answers and fact lists without reasoning do not earn full credit.'
@@ -116,10 +116,10 @@ Most frequent Unit 1 question patterns:
           {
             question: 'Which of the following AP exam strategies is most effective for multiple-choice questions about Unit 1?',
             options: [
-              'Eliminate answers that are historically true but irrelevant to the specific question asked, especially when the question specifies a particular region, time period, or historical relationship',
-              'Always choose the answer with the most complex language',
-              'Guess randomly if you are unsure, as all answers are equally likely',
-              'Avoid answers that mention trade routes, since these are always wrong'
+              'Eliminate true statements that miss the prompt\'s specific region, period or relationship',
+              'Choose the option written in the most complex and academic language, since it sounds expert',
+              'Guess randomly when unsure, since every option is equally likely to be right',
+              'Rule out any option that mentions trade routes, which are usually traps'
             ],
             correctAnswer: 0,
             explanation: 'The most common mistake on AP MCQ is choosing an answer that is historically true but doesn\'t answer the specific question. Always check: Does this answer address the correct time period? The correct region? The specific relationship asked about? Eliminate anything that doesn\'t fit the question\'s parameters.'
@@ -127,10 +127,10 @@ Most frequent Unit 1 question patterns:
           {
             question: 'For an AP LEQ about Unit 1, what move earns "complexity" points on the rubric?',
             options: [
-              'Explaining a nuance, qualification, or contradiction within the argument, OR connecting the Unit 1 argument to developments in a different time period or region',
-              'Writing more than five pages',
-              'Memorizing and repeating the exact textbook definition of every term',
-              'Avoiding any qualifications or exceptions to your main argument'
+              'Explaining a nuance or contradiction, or linking the argument to another period or region',
+              'Writing more than five pages so that every topic in the whole unit is covered in full detail',
+              'Repeating the exact textbook definition of every single key term that you use in the essay',
+              'Avoiding all qualifications so that the main argument sounds confident and fully consistent'
             ],
             correctAnswer: 0,
             explanation: 'AP complexity points require demonstrating sophisticated historical understanding: acknowledging that historical patterns have exceptions, contradictions, or varying significance; or connecting evidence to a different time period/region to show how the argument resonates more broadly. Complexity is about nuance, not length.'
@@ -177,23 +177,23 @@ Match each AP term with its correct definition for Unit 1.
       exercise: {
         questions: [
           {
-            question: 'You have 15 minutes to write an AP SAQ about Unit 1. What is the most efficient strategy?',
+            question: 'You have about 13 minutes for each AP SAQ on Unit 1 (three SAQs in 40 minutes). What is the most efficient strategy?',
             options: [
-              'Spend 2 minutes identifying exactly what the prompt asks (causation? comparison? continuity?), 2 minutes planning specific evidence for each part, then write focused claim+evidence+reasoning sentences without introduction or conclusion',
-              'Write a long introduction summarizing everything you know about Unit 1',
-              'Skip the planning stage and write as much as possible immediately',
-              'Only answer the first part and skip the remaining parts to ensure quality'
+              'Briefly decode each task and plan evidence, then write focused answers to every part',
+              'Write a long introduction summarizing the whole unit before answering any of the parts',
+              'Skip the planning and write as much as possible about whatever you remember first',
+              'Answer only the first part well and leave the others blank to protect your quality'
             ],
             correctAnswer: 0,
-            explanation: 'SAQ efficiency requires targeting the exact question being asked. AP readers grade on specificity and reasoning, not length. A well-planned 3-sentence response (claim + evidence + reasoning) for each part earns more credit than a rambling paragraph that never directly addresses the question.'
+            explanation: 'SAQ efficiency requires targeting the exact question being asked (causation? comparison? continuity?). AP readers grade on specificity and reasoning, not length. A well-planned claim + evidence + reasoning response for each part earns more credit than a rambling paragraph, and a blank part earns nothing.'
           },
           {
             question: 'Which AP Unit 1 comparison earns the strongest argument for a comparison LEQ?',
             options: [
-              'Comparing Song Dynasty China and medieval Europe on political organization, because these two civilizations represent fundamentally different approaches (meritocratic centralization vs. hereditary feudal decentralization) with specific, well-documented evidence on both sides',
-              'Comparing Song Dynasty China and the Aztec Empire, because they are on different continents',
-              'Comparing Byzantine Empire and European feudalism, because they are very similar',
-              'Comparing any two civilizations without specific evidence'
+              'Song China and medieval Europe, since their contrasting political systems are well documented',
+              'The Aztec Empire and Song China, since civilizations on different continents always make a strong contrast',
+              'Byzantium and European feudalism, since nearly identical societies make the clearest comparison',
+              'Any two civilizations at all, since specific evidence matters less than a clear essay structure'
             ],
             correctAnswer: 0,
             explanation: 'Song China vs. medieval Europe is the strongest Unit 1 LEQ comparison because: (1) both are well-documented, (2) they represent meaningfully different political structures, (3) there is specific evidence for both, and (4) the comparison illuminates a significant historical pattern (meritocracy vs. hereditary aristocracy). The best AP comparisons maximize meaningful difference while keeping context constant.'

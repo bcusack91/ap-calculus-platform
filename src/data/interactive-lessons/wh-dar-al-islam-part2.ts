@@ -32,21 +32,21 @@ export const whDarAlIslamPart2Data = {
           {
             question: 'The House of Wisdom (Bayt al-Hikma) in Baghdad was significant primarily because:',
             options: [
-              'It served as the Abbasid Caliphate\'s primary institution for translating Greek, Persian, and Indian texts into Arabic and generating original Islamic scholarship in mathematics, astronomy, and medicine',
-              'It was a military academy training Abbasid armies',
-              'It was established by European Crusaders in Baghdad',
-              'It only preserved Islamic religious texts and had no interest in non-Muslim knowledge'
+              'It was the Abbasid center for translating Greek, Persian and Indian texts into Arabic',
+              'It was the Abbasid academy that trained officers for the caliph\'s frontier armies',
+              'It was a Fatimid library in Cairo that collected only Quranic commentary and law',
+              'It was a Byzantine school in Constantinople where Muslim scholars copied texts'
             ],
             correctAnswer: 0,
-            explanation: 'The House of Wisdom (c. 830 CE) represented the apex of the Translation Movement — a deliberate Abbasid project to acquire, translate, and build upon Aristotle, Plato, Euclid, Ptolemy, and Indian mathematicians. Scholars like Al-Khwarizmi (algebra), Ibn Sina (medicine), and Al-Biruni (natural history) transformed received knowledge into new discoveries.'
+            explanation: 'The House of Wisdom (c. 830 CE) represented the apex of the Translation Movement — a deliberate Abbasid project to acquire, translate, and build upon Aristotle, Plato, Euclid, Ptolemy, and Indian mathematicians. Scholars there such as Al-Khwarizmi (algebra) produced original work, and later scholars such as Ibn Sina (medicine) and Al-Biruni (natural history) built on the translations it produced.'
           },
           {
             question: 'What is the most historically significant legacy of the Islamic world\'s preservation of Greek philosophical texts c. 800–1200?',
             options: [
-              'Islamic scholars not only preserved Greek texts but added original commentary and synthesis, which later transmitted these works to medieval European universities through translation centers in Spain and Sicily',
-              'Islamic scholars destroyed all Greek texts to replace them with Islamic alternatives',
-              'Greek texts were only preserved in Byzantium and had no Islamic connection',
-              'European scholars obtained Greek texts directly from ancient Rome without Islamic intermediaries'
+              'Scholars added their own commentary, and the texts later reached Europe through Spain and Sicily',
+              'Scholars replaced the Greek texts with Islamic works, so very few of them ever reached Europe at all',
+              'The texts survived only in Byzantium, so the Islamic world played no part in passing them on',
+              'European scholars obtained the texts from Rome directly, with no Arabic translations involved'
             ],
             correctAnswer: 0,
             explanation: 'The pathway of Greek knowledge: Greece → Islamic world (via Arabic translation, c. 800–1000) → European universities (via Latin translation from Arabic, c. 1100–1200). Works like Aristotle\'s logic and Galen\'s medicine reached medieval European scholars primarily as Arabic translations with Islamic commentary. This transmission chain is a key AP causation example.'
@@ -109,21 +109,21 @@ Key contributions that shaped global intellectual history:
           {
             question: 'Al-Khwarizmi\'s most significant contributions to global intellectual history were:',
             options: [
-              'The development of algebra and the transmission of Hindu-Arabic numerals to the Islamic world, both of which later entered European mathematics through Latin translations',
-              'Developing the first accurate world map and circumnavigating Africa',
-              'Writing the Canon of Medicine used in European universities for 500 years',
-              'Translating the Bible into Arabic for Islamic scholars'
+              'Developing algebra and spreading Hindu-Arabic numerals, both later adopted in Europe',
+              'Writing the Canon of Medicine, used as a textbook in European universities for centuries',
+              'Producing the Book of Optics, which explained vision as light entering the eye',
+              'Drawing the world map for Roger II of Sicily that was copied for three centuries'
             ],
             correctAnswer: 0,
-            explanation: 'Al-Khwarizmi\'s *Kitab al-Mukhtasar fi Hisab al-Jabr* (c. 830 CE) created algebra. The word "algebra" comes from *al-jabr* in the title; "algorithm" comes from the Latinization of Al-Khwarizmi\'s name. His work was translated into Latin in the 12th century and transformed European mathematics.'
+            explanation: 'Al-Khwarizmi\'s *Kitab al-Mukhtasar fi Hisab al-Jabr* (c. 830 CE) created algebra. The word "algebra" comes from *al-jabr* in the title; "algorithm" comes from the Latinization of Al-Khwarizmi\'s name. His work was translated into Latin in the 12th century and transformed European mathematics. The Canon of Medicine was Ibn Sina\'s, the Book of Optics Ibn al-Haytham\'s, and the map for Roger II al-Idrisi\'s.'
           },
           {
             question: 'The waqf (Islamic charitable endowment) system was significant for intellectual life in Dar al-Islam because it:',
             options: [
-              'Provided stable, protected funding for madrasas and libraries that was insulated from political changes in caliphates and dynasties',
-              'Only funded military campaigns and had no connection to educational institutions',
-              'Was controlled by the central government, making it dependent on political stability',
-              'Exclusively funded mosques rather than schools'
+              'Gave madrasas and libraries secure funding that outlasted changes of ruler or dynasty',
+              'Paid for the caliph\'s military campaigns and had no link to schools or libraries',
+              'Was run by the central treasury, so schools lost funding whenever a dynasty fell',
+              'Funded only mosque construction, leaving scholars to depend on royal patrons'
             ],
             correctAnswer: 0,
             explanation: 'The waqf\'s protection from government seizure meant that intellectual institutions could survive caliphate collapses, dynastic changes, and even Mongol invasions (in some cases). This institutional stability supported sustained scholarship across centuries.'
@@ -131,10 +131,10 @@ Key contributions that shaped global intellectual history:
           {
             question: 'Ibn Battuta\'s *Rihla* (travel account) is valuable as an AP primary source primarily because it:',
             options: [
-              'Provides a first-hand account of Islamic societies, trade networks, and cultural practices across 44 modern countries, demonstrating the geographic reach and cultural unity of Dar al-Islam c. 1325–1354',
-              'Is the only surviving account of medieval Islamic civilization',
-              'Documents exclusively military campaigns and political history',
-              'Was written in Latin for European readers, not Arabic'
+              'It gives a first-hand view of Muslim societies from West Africa to China',
+              'It is the only surviving written account of a medieval Islamic society at all',
+              'It records military campaigns only, with little about trade or ordinary daily life',
+              'It was written in Latin for European merchants planning their trade with Asia'
             ],
             correctAnswer: 0,
             explanation: 'Ibn Battuta traveled more than 75,000 miles, visiting from Morocco to Mali to India to China. His detailed observations — of court life, economic practices, gender norms, and religious customs across the Islamic world — make the *Rihla* an invaluable primary source for understanding the diversity and connectivity of Dar al-Islam.'
@@ -158,7 +158,7 @@ Match each Islamic scholar or concept to their correct contribution.
           },
           {
             label: 'The Islamic physician whose Canon of Medicine was used in European universities until the 17th century was ___',
-            options: ['Ibn Sina (Avicenna)', 'Al-Khwarizmi', 'Ibn Battuta', 'Ibn al-Haytham']
+            options: ['Ibn Sina (Avicenna)', 'Al-Khwarizmi', 'Ibn Battuta', 'Ibn al-Haytham (Alhazen)']
           },
           {
             label: 'The Islamic institution that spread standardized religious and scientific education across the Islamic world was the ___',
@@ -183,10 +183,10 @@ Match each Islamic scholar or concept to their correct contribution.
           {
             question: 'An AP prompt asks: "Explain the role of the Islamic world in transmitting knowledge between ancient Greece and medieval Europe." Which answer earns full credit?',
             options: [
-              'Islamic scholars at institutions like the House of Wisdom translated Greek philosophical and scientific works into Arabic, added original commentary and new discoveries, and these Arabic texts were later translated into Latin in Spain and Sicily, becoming the foundation of medieval European university curricula',
-              'Islamic scholars rejected all Greek philosophy as incompatible with Islam and burned Greek texts',
-              'Medieval Europeans obtained Greek knowledge directly from Athens without any Islamic intermediary',
-              'The Islamic world had no contact with either ancient Greece or medieval Europe'
+              'Arabic translations of Greek works and their commentaries were put into Latin in Spain and shaped European universities',
+              'Scholars rejected Greek philosophy as un-Islamic, so Europe had to rediscover it much later from Byzantine copies alone',
+              'Europeans obtained Greek learning directly from Athens, so the Islamic world served as no intermediary at all',
+              'Persian translators rendered Greek works into Farsi, and Mongol envoys later carried them to the Italian city-states'
             ],
             correctAnswer: 0,
             explanation: 'This answer demonstrates the key transmission chain: Greek → Arabic (c. 800–1000) → Latin (c. 1100–1200) → European universities. AP rewards answers that show how historical knowledge moved through specific institutions and processes — not just that it happened, but HOW it happened.'
@@ -194,10 +194,10 @@ Match each Islamic scholar or concept to their correct contribution.
           {
             question: 'Which argument BEST demonstrates the complexity of Islamic intellectual contributions c. 750–1450?',
             options: [
-              'While Islamic scholars are often credited with "preserving" Greek knowledge, they actually transformed it — adding original discoveries in algebra, optics, and medicine that went far beyond the Greek originals, making the Islamic intellectual tradition generative rather than merely archival',
-              'Islamic scholars only copied texts without any original contribution',
-              'All Islamic intellectual achievements were derived entirely from China',
-              'Islamic intellectual life was entirely separate from Greek and Indian traditions'
+              'Scholars did not just preserve Greek learning but surpassed it in algebra, optics and medicine',
+              'Scholars only copied Greek texts faithfully and made no original contributions of their own',
+              'Islamic science was borrowed almost entirely from Chinese sources carried along the Silk Roads',
+              'Islamic learning developed in isolation from Greek and Indian traditions'
             ],
             correctAnswer: 0,
             explanation: 'This complexity argument earns AP points by challenging the reductive "preservation" narrative. Islamic scholars did preserve Greek texts — but calling them only "preservers" undersells Al-Khwarizmi\'s algebra, Ibn al-Haytham\'s optics, and Ibn Sina\'s medical synthesis, all of which exceeded Greek originals in significant ways.'

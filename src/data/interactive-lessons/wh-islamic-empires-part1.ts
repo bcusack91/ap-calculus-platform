@@ -71,10 +71,10 @@ The Ottomans built one of the most powerful and long-lasting empires in world hi
           {
             question: 'What was the primary purpose of the Ottoman devshirme system?',
             options: [
-              'To recruit and train Christian boys as elite soldiers and administrators loyal to the Sultan',
-              'To convert Muslim subjects to Christianity through forced education programs',
-              'To collect agricultural taxes from peasant farmers across the Balkans',
-              'To establish diplomatic embassies in European capitals for trade negotiations'
+              'To recruit Christian boys and train them as soldiers and officials loyal to the sultan',
+              'To collect a land tax in kind from Balkan peasants for the sultan\'s central treasury',
+              'To grant conquered lands to Turkish cavalrymen in return for military service in wartime',
+              'To settle Turkish nomads along the Balkan frontier as a buffer against Habsburg raids'
             ],
             correctAnswer: 0,
             explanation: 'The devshirme recruited Christian boys — primarily from the Balkans — who were converted to Islam, educated, and trained to serve as Janissary soldiers or government administrators. Their loyalty was directly to the Sultan since they had no local family ties.'
@@ -82,10 +82,10 @@ The Ottomans built one of the most powerful and long-lasting empires in world hi
           {
             question: 'Under the Ottoman millet system, how were non-Muslim religious communities governed?',
             options: [
-              'They were forced to convert or face execution under strict Sharia law',
-              'They could govern their own internal affairs (marriage, education, disputes) in exchange for paying special taxes',
-              'They had full political equality with Muslims and held seats in the imperial council',
-              'They were confined to specific urban quarters and banned from participating in trade'
+              'They had to convert or leave, since Sharia allowed no other faiths in Ottoman cities',
+              'They ran their own marriage, schooling and courts in return for paying special taxes',
+              'They had full political equality with Muslims and seats on the imperial council',
+              'They were confined to set urban quarters and barred from trading with Muslims'
             ],
             correctAnswer: 1,
             explanation: 'The millet system allowed religious communities (Greek Orthodox Christians, Armenian Christians, Jews) self-governance in personal matters like marriage, education, and civil disputes. In return, they paid the jizya (a tax on non-Muslims). This is an example of pragmatic religious tolerance as a governance strategy.'
@@ -171,21 +171,21 @@ The Mughals ruled the Indian subcontinent, governing a vast and religiously dive
           {
             question: 'How did Mughal Emperor Akbar\'s religious policies differ from those of Aurangzeb?',
             options: [
-              'Akbar promoted religious tolerance and abolished the jizya tax, while Aurangzeb reimposed it and enforced strict Islamic law',
-              'Akbar converted to Hinduism and banned Islam, while Aurangzeb promoted interfaith dialogue',
-              'Both rulers maintained identical policies of strict religious enforcement throughout their reigns',
-              'Akbar expanded the empire through military conquest, while Aurangzeb focused exclusively on domestic reforms'
+              'Akbar abolished the jizya and courted Hindu elites, while Aurangzeb restored it',
+              'Akbar converted to Hinduism and banned Islam, while Aurangzeb promoted dialogue among faiths',
+              'Akbar enforced strict Islamic law, while Aurangzeb abolished the jizya and appointed Rajputs',
+              'Akbar expanded the empire by conquest, while Aurangzeb gave up campaigning for domestic reform'
             ],
             correctAnswer: 0,
-            explanation: 'Akbar practiced sulh-i-kul (universal peace), abolished the jizya on non-Muslims, and appointed Hindus to high positions. Aurangzeb reversed these policies — reimposing the jizya, destroying Hindu temples, and enforcing strict Islamic law — which provoked rebellions and weakened the empire.'
+            explanation: 'Akbar practiced sulh-i-kul (universal peace), abolished the jizya on non-Muslims, and appointed Hindus to high positions. Aurangzeb reversed these policies — reimposing the jizya in 1679, destroying some Hindu temples, and enforcing strict Islamic law — which provoked rebellions and weakened the empire. Aurangzeb was also no stay-at-home reformer: he spent decades campaigning in the Deccan.'
           },
           {
             question: 'Which of the following BEST explains why the Safavid Empire is historically significant?',
             options: [
-              'It was the first empire to abolish slavery in the Middle East',
-              'It established Shi\'a Islam as Iran\'s state religion, creating a lasting sectarian identity',
+              'It was the first empire in the Middle East to abolish slavery and the slave trade',
+              'It made Shi\'a Islam Iran\'s state religion, creating a lasting sectarian identity',
               'It conquered Constantinople and ended the Byzantine Empire in 1453',
-              'It was the largest land-based empire in world history at its peak'
+              'It ruled the largest land empire of its time, stretching from Anatolia to Bengal'
             ],
             correctAnswer: 1,
             explanation: 'Shah Ismail I made Twelver Shi\'a Islam the state religion in 1501, forcibly converting the previously Sunni population of Persia. This created the Shi\'a identity of modern Iran and deepened the Sunni-Shi\'a divide that continues today.'
@@ -193,10 +193,10 @@ The Mughals ruled the Indian subcontinent, governing a vast and religiously dive
           {
             question: 'What common factor gave the Ottoman, Safavid, and Mughal empires their military advantage, earning them the label "Gunpowder Empires"?',
             options: [
-              'Their extensive use of cavalry from Central Asian steppe traditions',
-              'Their adoption of firearms and cannon technology, which enabled conquest of larger territories',
-              'Their alliance with European powers who supplied advanced weapons',
-              'Their invention of gunpowder through independent scientific research'
+              'Their reliance on mounted archers drawn from Central Asian steppe traditions',
+              'Their use of cannon and handguns to conquer cities and defeat rival armies',
+              'Their alliance with European powers who supplied them with advanced weapons',
+              'Their invention of gunpowder through independent scientific research at court'
             ],
             correctAnswer: 1,
             explanation: 'All three empires leveraged gunpowder weapons — cannons for sieges and firearms for infantry — to conquer and control vast territories. The Ottomans used massive cannons at Constantinople (1453), the Mughals used them at the Battle of Panipat (1526), and the Safavids adopted them after their defeat at Chaldiran (1514).'

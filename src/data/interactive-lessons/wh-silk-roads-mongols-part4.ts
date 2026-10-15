@@ -32,10 +32,10 @@ export const whSilkRoadsMongolsPart4Data = {
           {
             question: 'The Yuan Dynasty (Mongol China) is distinctive in Chinese history primarily because:',
             options: [
-              'Kublai Khan governed China through a modified Chinese administrative system while maintaining Mongol cultural privileges, creating a hybrid government that simultaneously used Chinese bureaucratic expertise and maintained Mongol ethnic stratification',
-              'It completely replaced Chinese culture with Mongol nomadic culture permanently',
-              'It was the only dynasty in Chinese history led by non-Chinese rulers',
-              'It abolished the civil service examination system and replaced it with hereditary Mongol rule at all levels'
+              'Kublai Khan ruled through a modified Chinese bureaucracy but kept Mongols above Chinese subjects',
+              'It replaced Chinese culture with Mongol steppe customs permanently across the whole country',
+              'It was the only dynasty in Chinese history to be led by rulers who were not Han Chinese',
+              'It made the civil service exams the sole path to office, even for Mongol princes and Central Asian allies'
             ],
             correctAnswer: 0,
             explanation: 'Yuan governance was a hybrid: Chinese administrators ran day-to-day bureaucracy (essential — Mongols couldn\'t govern 100 million Chinese without Chinese expertise), but Mongols held the highest positions and were exempt from Chinese laws. The exam system was suspended for much of the Yuan period, replaced by ethnic appointment at the top. This mix of adoption and dominance is a key AP governance pattern.'
@@ -43,10 +43,10 @@ export const whSilkRoadsMongolsPart4Data = {
           {
             question: 'The Golden Horde\'s rule over Russian principalities (c. 1240–1480) most directly shaped Russian political development by:',
             options: [
-              'Establishing a precedent for centralized autocratic rule that influenced the later development of the Muscovite principality\'s strong tsarist governance — a long-term political legacy of Mongol domination',
-              'Immediately converting all Russians to Islam',
-              'Creating a democratic system of governance in Russia that persisted for centuries',
-              'Having no long-term impact on Russian political culture'
+              'Setting a precedent for centralized autocracy that Muscovite tsars later built on',
+              'Converting the Russian princes and their subjects to Islam within a single generation',
+              'Creating an elected assembly that limited the power of Russian princes for centuries',
+              'Leaving no lasting mark, since the Mongols never interfered in Russian internal affairs'
             ],
             correctAnswer: 0,
             explanation: 'Historians debate how much Mongol rule shaped Russian political culture, but the AP framework recognizes the long-term authoritarian tendency that emerged in Muscovite Russia and later tsarism. Russian princes collected taxes for the Golden Horde, learning centralized revenue extraction; the Mongol model of autocratic rule left imprints on Russian political consciousness.'
@@ -106,10 +106,10 @@ The Il-Khanate's evolution from Islamic destroyers to Muslim rulers:
           {
             question: 'The Yuan Dynasty\'s suspension of Confucian civil service exams most directly affected which social group?',
             options: [
-              'The Chinese scholar-gentry class, whose path to government office was blocked, creating deep resentment that contributed to anti-Mongol sentiment and eventual support for the rebel movement that overthrew the Yuan in 1368',
-              'The Mongol military class, who depended on the exams for promotions',
-              'Chinese peasants, who had used the exams to avoid agricultural labor',
-              'Foreign merchants, who needed exam scores to trade in China'
+              'Chinese scholar-gentry, who lost their path to office and later backed the rebels against the Yuan',
+              'The Mongol military class, whose officers depended on exam rankings for promotion',
+              'Chinese peasants, who had relied on the exams as their main way to escape farm labor',
+              'Foreign merchants, who needed exam certificates in order to obtain licenses to trade'
             ],
             correctAnswer: 0,
             explanation: 'The exam system was the pathway to power for China\'s educated elite. Suspending it blocked the scholar-gentry from the governance roles they expected — while Mongols and foreigners (Central Asians, Marco Polo) received preference. This systematic exclusion was a key source of Chinese elite resentment of Mongol rule, contributing to the rebellions that ended the Yuan Dynasty.'
@@ -117,10 +117,10 @@ The Il-Khanate's evolution from Islamic destroyers to Muslim rulers:
           {
             question: 'Rashid al-Din\'s Jami\' al-Tawarikh (written under Il-Khanate patronage) demonstrates which AP concept?',
             options: [
-              'How Mongol rule created conditions for unprecedented cross-cultural intellectual exchange, with a Persian Muslim scholar writing the first comprehensive world history under the patronage of Mongol rulers who had recently destroyed the Islamic world\'s center',
-              'That the Il-Khanate destroyed all Persian intellectual life',
-              'That world histories were commonly written in all medieval civilizations',
-              'That Rashid al-Din was a Mongol scholar writing in a Mongol language'
+              'Mongol patronage let a Persian Muslim scholar write a world history drawing on many cultures',
+              'Il-Khanate patronage ended Persian scholarship and replaced it with Mongolian court poetry',
+              'World histories were a common genre in every medieval civilization from Song China to Capetian France',
+              'Rashid al-Din was a Mongol noble who wrote in Mongolian for an audience of steppe chiefs'
             ],
             correctAnswer: 0,
             explanation: 'The paradox: Hulagu destroyed Baghdad and its libraries in 1258; his descendants patronized Persian scholars writing world histories by 1307. This transformation from destroyer to cultural patron demonstrates the speed at which Mongol rulers adopted local civilizational values — within two generations, the Il-Khanate had converted to Islam and was funding Islamic/Persian scholarship.'
@@ -128,10 +128,10 @@ The Il-Khanate's evolution from Islamic destroyers to Muslim rulers:
           {
             question: 'The Golden Horde\'s relationship to Russian principalities c. 1240–1480 most significantly shaped Russian history by:',
             options: [
-              'Creating a long-term tributary relationship where Russian princes collected taxes for the Golden Horde, developing Russian administrative and fiscal infrastructure that the Muscovite state later inherited and adapted to serve Russian rather than Mongol interests',
-              'Permanently converting Russia to Islam',
-              'Destroying all Russian cities and ending Russian civilization entirely',
-              'Creating a democratic system in Russia by modeling Golden Horde tribal consensus decision-making'
+              'Russian princes collected tribute for the Horde, building fiscal skills that Moscow later used',
+              'Russia became permanently Muslim after the Horde required its princes and boyars to convert',
+              'The Horde razed every Russian city, and Russian civilization vanished for two full centuries',
+              'Moscow\'s princes copied the Horde\'s tribal councils to create a lasting elected national assembly'
             ],
             correctAnswer: 0,
             explanation: 'Russian princes\' role as Golden Horde tax collectors was transformative: it built Russian princes\' administrative capacity (knowing how to extract revenue systematically across large territories), positioned the most compliant princes for Mongol favor (Moscow rose to prominence partly through successful tribute collection), and created a model of centralized fiscal authority that Muscovite rulers later applied to their own empire-building.'
@@ -180,10 +180,10 @@ Match each khanate to its most distinctive feature.
           {
             question: 'The pattern of nomadic Mongol conquerors adopting the religion and culture of their subjects (Il-Khanate → Islam, Yuan → Buddhism/Confucianism, Golden Horde → Islam) best illustrates which AP historical principle?',
             options: [
-              'Civilizational depth and institutional sophistication can outlast political conquest — advanced sedentary civilizations with deep religious, philosophical, and administrative traditions often culturally absorb their nomadic conquerors within a few generations',
-              'Military victory always results in permanent cultural dominance of the victor',
-              'Nomadic peoples are culturally superior to sedentary peoples',
-              'Religious conversion always precedes military conquest in world history'
+              'Long-established societies can culturally absorb those who defeat them within a few generations',
+              'Military victory leads to the lasting cultural dominance of the victors over the people they rule',
+              'Nomadic cultures prove stronger than settled cultures whenever the two come into sustained contact',
+              'Religious conversion of a people usually comes before, and makes possible, its military conquest'
             ],
             correctAnswer: 0,
             explanation: 'This principle appears throughout AP World History: Germanic tribes converted to Christianity after conquering Rome; Manchu adopted Chinese culture after conquering the Ming; Mongols adopted Islam/Buddhism/Confucianism after conquering Islamic/Buddhist/Confucian populations. The pattern is consistent: institutional depth (written language, legal codes, religious infrastructure) outlasts military defeat.'
@@ -191,10 +191,10 @@ Match each khanate to its most distinctive feature.
           {
             question: 'For an AP comparison LEQ between the Yuan Dynasty and the Il-Khanate, which argument demonstrates the greatest historical sophistication?',
             options: [
-              'While both khanates adapted to local civilizations, the degree of adaptation differed significantly: the Yuan maintained clear Mongol ethnic stratification while adopting Chinese administrative systems, while the Il-Khanate underwent more thorough cultural assimilation through Islamic conversion and Persian cultural patronage, suggesting that religious conversion accelerates civilizational absorption more effectively than administrative adoption alone',
-              'The two khanates were identical in every respect',
-              'The Yuan Dynasty was entirely Chinese with no Mongol influence',
-              'The Il-Khanate never converted to Islam'
+              'Both adapted to local cultures, but the Il-Khanate assimilated further through Islam than the stratified Yuan',
+              'Both khanates followed the same path, adopting Chinese bureaucracy and Buddhism in equal measure',
+              'The Yuan assimilated fully into Chinese culture, while the Il-Khanate kept steppe customs intact',
+              'The Il-Khanate never converted to Islam, so it remained more Mongol than the Yuan Dynasty did'
             ],
             correctAnswer: 0,
             explanation: 'This argument earns complexity by: (1) acknowledging similarity (both adapted), (2) identifying meaningful difference (degree of adaptation), (3) proposing a causal explanation (religious conversion > administrative adoption in terms of cultural assimilation), and (4) deriving a principle applicable beyond these two cases. This is what AP complexity means: a nuanced argument that generates a broader historical insight.'

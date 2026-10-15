@@ -70,10 +70,10 @@ Merchants settled in foreign ports, creating **diasporic trading communities**:
           {
             question: 'Monsoon winds were critical to Indian Ocean trade because they:',
             options: [
-              'Provided predictable, seasonal wind patterns that allowed merchants to plan reliable round-trip voyages across the ocean',
-              'Prevented any commerce from taking place during most of the year',
-              'Only blew in one direction, making return voyages impossible',
-              'Were created artificially by Indian Ocean sailors using advanced technology'
+              'Reversed direction with the seasons, so merchants could plan reliable round trips across the ocean',
+              'Blew steadily from the east all year, so ships sailed west easily but rarely managed to return',
+              'Calmed the open ocean for most of the year, letting ships cross without depending on sails',
+              'Pushed ships along the coastline only, keeping every voyage short and close to the shore'
             ],
             correctAnswer: 0,
             explanation: 'The monsoon cycle was the engine of Indian Ocean trade. Southwest winds (summer) carried ships from Africa and Arabia to India and Southeast Asia, while northeast winds (winter) carried them back. Merchants planned their voyages around these seasons, often staying in foreign ports for months — which contributed to the formation of diasporic communities.'
@@ -81,10 +81,10 @@ Merchants settled in foreign ports, creating **diasporic trading communities**:
           {
             question: 'Diasporic trading communities in the Indian Ocean basin are historically significant because they:',
             options: [
-              'Created cross-cultural networks that facilitated trade, spread religions, and blended cultural traditions — without military conquest',
-              'Completely replaced local populations in every port city they settled',
-              'Refused to interact with local cultures and maintained total isolation',
-              'Were established exclusively by European colonial powers'
+              'Linked distant ports through trust networks that also carried religions and blended local cultures',
+              'Served mainly as military garrisons that secured foreign ports for the empires that had sent them out',
+              'Kept strictly apart from local people, so their influence stayed limited to commerce',
+              'Were founded mostly by European merchants who later became colonial port governors'
             ],
             correctAnswer: 0,
             explanation: 'Arab merchants in Swahili Africa, Indian traders in Southeast Asia, and Chinese merchants in port cities all formed communities that facilitated commerce through trust and shared practices. These diaspora communities also spread Islam, Hinduism, and Buddhism, created new syncretic cultures (like Swahili civilization), and demonstrate peaceful cross-cultural exchange.'
@@ -163,7 +163,7 @@ Use the exact historical term.
           },
           {
             label: 'Islam spread to Southeast Asia primarily through ___',
-            options: ['Muslim merchant networks and Sufi missionaries', 'Military conquest by Arab armies', 'European colonial missionaries', 'Chinese imperial decree']
+            options: ['Muslim merchant networks and Sufi missionaries', 'Military conquest by Arab and Turkish armies', 'Portuguese missionaries and colonial rule', 'Chinese imperial decrees and tribute missions']
           },
           {
             label: 'The Indian Ocean trade network carried more goods than the Silk Roads primarily because ___',
@@ -188,10 +188,10 @@ Use the exact historical term.
           {
             question: 'Which of the following BEST distinguishes Indian Ocean trade from later European colonial trade (post-1500)?',
             options: [
-              'Indian Ocean trade was decentralized with no single dominant power, while European colonial trade was controlled by imperial states that used military force to monopolize routes',
-              'Indian Ocean trade involved only luxury goods, while European trade involved only bulk commodities',
-              'European colonial trade was always peaceful while Indian Ocean trade was always violent',
-              'There were no significant differences between the two trade systems'
+              'Indian Ocean trade had no dominant power, while European trade used armed force to monopolize routes',
+              'Indian Ocean trade carried only luxury goods, while European trade carried only bulk staples such as grain',
+              'Indian Ocean trade was controlled by the Chinese state, while European trade was run by private merchants alone',
+              'Indian Ocean trade relied on barter without credit, while European trade introduced the first bills of exchange'
             ],
             correctAnswer: 0,
             explanation: 'Pre-1500 Indian Ocean trade was characterized by voluntary exchange, multiple participating cultures, and no single dominant power. After 1500, the Portuguese (and later Dutch, British, and French) used naval force to control chokepoints, establish monopolies, and impose colonial rule — fundamentally changing the nature of Indian Ocean commerce.'
@@ -199,10 +199,10 @@ Use the exact historical term.
           {
             question: 'An AP essay asks you to compare the effects of trade on TWO regions connected by the Indian Ocean network. The STRONGEST response would note that:',
             options: [
-              'Both the Swahili Coast and Southeast Asia experienced religious conversion (to Islam), cultural synthesis (blended languages and architecture), and economic transformation through participation in long-distance trade',
-              'Trade had no cultural impact on any region; it was purely economic',
-              'Only one region was affected by trade while the other remained completely isolated',
-              'Trade caused identical cultural changes in every region it reached'
+              'The Swahili Coast and Southeast Asia each adopted Islam through merchants and developed blended cultures',
+              'Swahili Coast towns converted to Christianity through Portuguese missionaries, unlike Muslim Southeast Asia',
+              'Southeast Asia changed culturally through trade, but the Swahili Coast stayed untouched by outside contact',
+              'The two regions changed in identical ways, adopting one shared language and one building style'
             ],
             correctAnswer: 0,
             explanation: 'The Swahili Coast and Southeast Asia both illustrate how trade creates cultural synthesis: Swahili blended Bantu and Arabic elements; Southeast Asian kingdoms blended Indian (Hindu/Buddhist) and later Islamic influences with local traditions. Both experienced religious conversion through merchant contact, and both were transformed economically by integration into the Indian Ocean network.'

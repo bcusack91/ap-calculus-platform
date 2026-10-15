@@ -23,10 +23,10 @@ export const whIndianOceanTradePart2Data = {
           {
             question: 'The monsoon wind system\'s significance for Indian Ocean trade was:',
             options: [
-              'Predictable seasonal wind reversals made regular, reliable navigation across the Indian Ocean possible without the advanced navigational technology Europeans developed for the Atlantic — merchants could plan voyages, contract goods, and build commercial relationships knowing ships would arrive and return on a regular seasonal schedule',
-              'Monsoon winds made Indian Ocean navigation impossible due to unpredictable storms',
-              'Only Chinese sailors understood monsoon navigation; other peoples could not use the winds',
-              'Monsoon winds only affected navigation in the Red Sea with no impact on the broader Indian Ocean',
+              'Predictable seasonal wind reversals let merchants schedule voyages, contracts and returns with confidence',
+              'Steady year-round winds let ships sail in any direction at any time without waiting for a season',
+              'Violent monsoon storms closed the ocean to shipping except during a short summer window each year',
+              'Monsoon winds mattered mainly in the Red Sea and had little effect on the wider Indian Ocean'
             ],
             correctAnswer: 0,
             explanation: 'The monsoon system is why the Indian Ocean was a commercially sophisticated network for centuries before European arrival. The predictability — not just the winds themselves — made commercial relationships possible: merchants could commit to contracts, build credit relationships, and establish permanent trading networks because they knew ships would arrive roughly on schedule. This reliability was as important as the wind direction itself.'
@@ -34,10 +34,10 @@ export const whIndianOceanTradePart2Data = {
           {
             question: 'The Indian Ocean\'s multi-civilizational character before European arrival demonstrates:',
             options: [
-              'That long-distance commerce was not a European invention — Arab, Indian, Malay, Chinese, and East African merchants had built sophisticated commercial networks spanning thousands of miles centuries before Vasco da Gama\'s arrival, challenging Eurocentric narratives that portray global trade as something Europeans created',
-              'The Indian Ocean was commercially isolated before European arrival in the late 15th century',
-              'Only Chinese merchants participated in Indian Ocean commerce before European arrival',
-              'Indian Ocean trade was primarily political rather than commercial before Europeans arrived',
+              'That long-distance commerce was not a European invention but was built by many Asian and African merchants',
+              'That the ocean\'s commerce stayed small and local until Portuguese ships finally connected its distant ports',
+              'That Chinese merchants alone carried the ocean\'s long-distance trade before European arrival',
+              'That Indian Ocean exchange was mainly political tribute rather than commerce before Europeans came'
             ],
             correctAnswer: 0,
             explanation: 'The pre-European Indian Ocean is one of AP\'s most important counter-narratives: da Gama didn\'t "open" Indian Ocean trade — he arrived at the edge of a sophisticated commercial network that had been operating for centuries. The goods he sought (spices, textiles) were already moving through established networks. European arrival disrupted but did not create these networks — a crucial distinction for accurate historical analysis.'
@@ -95,10 +95,10 @@ The Indian Ocean was a multi-civilizational commercial space before European arr
           {
             question: 'Why was the Malacca Strait strategically significant for Indian Ocean trade?',
             options: [
-              'The Malacca Strait was a narrow chokepoint between the Malay Peninsula and Sumatra through which virtually all maritime trade between the Indian Ocean and the South China Sea had to pass — controlling it meant controlling the flow of Southeast Asian spices (nutmeg, cloves, pepper) to both Indian and Chinese markets',
-              'Malacca was significant only as a military base with no commercial importance',
-              'The Malacca Strait was too shallow for commercial navigation until Europeans dredged it',
-              'Malacca\'s significance was primarily religious rather than commercial',
+              'It was the narrow passage that most shipping between the Indian Ocean and South China Sea had to use',
+              'It held the only deep-water harbor where ships from the Indian Ocean could repair their hulls before the monsoon',
+              'It was the region\'s main source of cloves and nutmeg, which were grown on plantations along both of its shores',
+              'It was a sacred pilgrimage site whose temples drew Hindu and Buddhist worshippers from across the Indian Ocean'
             ],
             correctAnswer: 0,
             explanation: 'Malacca\'s strategic importance explains why the Portuguese made it their first major Asian conquest (1511): controlling the strait meant inserting Portuguese military force into the single chokepoint through which Southeast Asian spice trade had to flow. The Sultanate of Malacca (founded c. 1400) had grown rich by providing services to passing merchants — safety, exchange facilities, translation. Portuguese conquest disrupted this multicultural commercial hub and pushed trade through alternative routes.'
@@ -106,10 +106,10 @@ The Indian Ocean was a multi-civilizational commercial space before European arr
           {
             question: 'The presence of Chinese porcelain in archaeological sites across the Indian Ocean world (East Africa, Southeast Asia, India) demonstrates:',
             options: [
-              'That Chinese manufactured goods were major commodities in the Indian Ocean trade network — Chinese porcelain was valued for its quality and durability throughout Asia and East Africa, and its distribution across multiple regions demonstrates the geographic reach of Chinese commercial networks before and during the early modern period',
-              'Chinese porcelain was only used in China with no export trade',
-              'Porcelain trade was unimportant compared to spice trade',
-              'Chinese porcelain reached East Africa only through European intermediaries',
+              'That Chinese manufactured goods traveled widely through Indian Ocean networks and were prized far from China',
+              'That colonists from China settled the East African coast and made porcelain locally for export',
+              'That European traders carried Chinese wares to Africa and India only after the Portuguese reached Calicut in 1498',
+              'That porcelain served as the standard currency used by merchants in every Indian Ocean port'
             ],
             correctAnswer: 0,
             explanation: 'Archaeological distribution of Chinese porcelain is one of history\'s most elegant proofs of long-distance trade connections: Chinese blue-and-white ceramics (distinctive manufacturing technique) found in coastal East Africa, South Asia, and Southeast Asia prove commercial contact that predated written records. At Great Zimbabwe (landlocked Zimbabwe), Chinese porcelain pieces demonstrate that the gold trade connected southern African interior to Indian Ocean coastal networks, which connected to Chinese manufacturing.'
@@ -117,10 +117,10 @@ The Indian Ocean was a multi-civilizational commercial space before European arr
           {
             question: 'Comparing the Indian Ocean and Silk Road trade networks reveals:',
             options: [
-              'Both were multi-civilizational networks transmitting goods, religions, technologies, and cultural practices across long distances, but the Indian Ocean moved higher volumes of bulkier goods (cotton textiles, spices, ceramics) by sea at lower cost per unit, while the Silk Road moved lower volumes of higher-value luxury goods overland with multiple intermediary markups',
-              'The two networks were completely separate with no connection points',
-              'The Silk Road carried higher volumes than the Indian Ocean due to its overland advantages',
-              'Both networks were operated exclusively by Chinese merchants',
+              'Both spread goods and faiths, but the sea carried bulky cargo far more cheaply than overland caravans',
+              'Both were run by Chinese state merchants, but the sea route carried mostly luxury silk and porcelain',
+              'The Silk Road carried larger volumes, since camel caravans could haul more cargo than ships on each trip',
+              'The two networks never connected, so religions and goods moving on one never reached the other'
             ],
             correctAnswer: 0,
             explanation: 'The comparison between Indian Ocean and Silk Road networks demonstrates that different technologies (maritime vs. overland) produce different commercial characteristics: sea transport is cheaper per unit for bulk goods; overland transport is only economically viable for goods with high value-to-weight ratios. Both networks transmitted religion and culture alongside commodities — Islam spread along both; Buddhism spread along the Silk Road; Hinduism and Islam spread along Indian Ocean routes — but their commercial profiles differed significantly.'
@@ -150,7 +150,7 @@ The Indian Ocean was a multi-civilizational commercial space before European arr
         correctAnswers: ['Monsoon winds', 'Swahili city-states', 'Zheng He'],
         hint1: 'Seasonal wind patterns — reversal twice per year — enabled regular navigation',
         hint2: 'East African ports — Kilwa, Mombasa — Islamic + Bantu cultural synthesis',
-        hint3: 'Chinese Muslim admiral — 62 ships — 7 expeditions — discontinued after 1433',
+        hint3: 'Chinese Muslim admiral — about 62 treasure ships in a fleet of ~250-317 — 7 expeditions — discontinued after 1433',
         explanation: 'Monsoon winds were the technological foundation of Indian Ocean commerce — they made regular, predictable navigation possible across enormous distances. The Swahili city-states are the model of how Indian Ocean trade produced cultural synthesis in East Africa. Zheng He\'s voyages demonstrate Chinese maritime capability and the political decision to discontinue it — one of history\'s most consequential non-events.'
       }
     },
@@ -163,10 +163,10 @@ The Indian Ocean was a multi-civilizational commercial space before European arr
           {
             question: 'An AP comparison of Indian Ocean trade and Atlantic triangle trade reveals which fundamental difference?',
             options: [
-              'The pre-European Indian Ocean trade was characterized by roughly voluntary commercial exchange among multiple roughly equal participants (Arab, Indian, Malay, Chinese, East African merchants) without a single dominant power imposing the terms of trade, while the Atlantic triangle trade was characterized by European military coercion and the forced transport of enslaved Africans — demonstrating that trade networks can be organized on very different principles',
-              'Both the Indian Ocean and Atlantic trade were equally coercive and exploitative',
-              'The Indian Ocean trade was more exploitative than the Atlantic trade',
-              'Atlantic trade was fully voluntary with no coercive elements',
+              'Indian Ocean exchange was polycentric and voluntary, while the Atlantic system rested on coercion and enslaved labor',
+              'Indian Ocean trade relied on enslaved labor, while the Atlantic system was run by free wage workers',
+              'Atlantic trade involved many equal partners, while the Indian Ocean was ruled by a single empire',
+              'Indian Ocean trade moved only luxury goods, while the Atlantic trade moved only raw materials and food'
             ],
             correctAnswer: 0,
             explanation: 'This comparison is AP-important because it challenges the assumption that "global trade" always involves European dominance. The pre-European Indian Ocean was genuinely polycentric — no single power dominated — and organized around roughly voluntary commercial relationships. European arrival (Portuguese cartaz system) introduced coercive elements into an existing voluntary system. The Atlantic trade was coercive from its origins. These different organizational principles produced different consequences for the peoples involved.'
@@ -174,10 +174,10 @@ The Indian Ocean was a multi-civilizational commercial space before European arr
           {
             question: 'The geographic distribution of Indian Ocean trade participants (Arab, Indian, Malay, Chinese, Swahili) demonstrates which AP principle?',
             options: [
-              'Geographic proximity to trading routes and production of valued commodities (not political power or cultural sophistication) determined who participated in pre-European Indian Ocean trade, demonstrating that long-distance commercial networks emerge organically from geographic and economic complementarities rather than requiring a single organizing state',
-              'Only politically powerful states could participate in Indian Ocean trade',
-              'Geographic proximity was irrelevant; only cultural sophistication determined participation',
-              'Indian Ocean trade required a single dominant power to organize and enforce commercial relations',
+              'Location near the routes and valuable products decided who took part, without any single organizing state',
+              'Only peoples ruled by large land empires could join, because long voyages needed imperial funding and protection',
+              'Cultural prestige rather than geography decided participation, so the most literate societies dominated the trade',
+              'The network functioned only because one dominant naval power organized and policed all of its main sea lanes'
             ],
             correctAnswer: 0,
             explanation: 'The absence of a single hegemonic power in the pre-European Indian Ocean is a key AP point: the network functioned without a Rome or a China imposing order. Instead, complementary specializations (Indian cotton + Southeast Asian spices + East African gold + Chinese manufactured goods) created mutual commercial interests that sustained the network. This self-organizing commercial polycentric model contrasts with the coercive European trading-post empire model that was later imposed.'

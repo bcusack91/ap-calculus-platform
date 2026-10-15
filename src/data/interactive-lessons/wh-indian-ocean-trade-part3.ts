@@ -23,10 +23,10 @@ export const whIndianOceanTradePart3Data = {
           {
             question: 'The spread of Islam throughout the Indian Ocean world (East Africa, Southeast Asia) demonstrates:',
             options: [
-              'How commercial networks transmit religious beliefs: Arab and Indian Muslim merchants brought Islamic practice to trading ports, local rulers adopted Islam to facilitate commercial relationships with Muslim merchant networks, and Islamic law (providing common legal framework for contracts across ethnic groups) offered practical commercial advantages alongside spiritual appeals',
-              'Islam spread through the Indian Ocean exclusively through military conquest',
-              'Only religious missionaries (not merchants) spread Islam through the Indian Ocean world',
-              'Islam spread in the Indian Ocean world with no connection to commercial networks',
+              'How merchants carried Islam to trading ports, where rulers converted to gain access to Muslim commercial networks',
+              'How Muslim armies conquered the East African and Malay coasts and imposed Islam on their rulers by force',
+              'How Sufi missionaries alone spread Islam, with merchants playing no part in bringing the faith to ports',
+              'How Islam reached these regions only after European colonizers opened routes from the Middle East'
             ],
             correctAnswer: 0,
             explanation: 'The commercial mechanism of Islamic spread is AP-essential: Indian Ocean Islam was "traders\' Islam" — it spread along commercial routes rather than through conquest. The Malay world adoption of Islam followed commercial logic: Muslim merchant networks offered access to credit, legal frameworks (Islamic commercial law), and trading partnerships unavailable to non-Muslim merchants. This commercial path of Islamization produced a different character of Islamic practice (more syncretic, less strictly sharia-based) than conquest Islamization.'
@@ -34,10 +34,10 @@ export const whIndianOceanTradePart3Data = {
           {
             question: 'The Indian Ocean\'s sophisticated commercial infrastructure (letters of credit, partnership contracts, diaspora communities) demonstrates:',
             options: [
-              'That medieval Asian commercial systems developed sophisticated financial instruments centuries before European capitalism — suftaja (letters of credit), mudaraba (partnership contracts), and hundi (bills of exchange) all enabled large-scale long-distance commerce without transporting physical currency, solving the same problems European banking would address later',
-              'Asian commercial systems were primitive and had no financial sophistication before European contact',
-              'Letters of credit and partnership contracts were European inventions adopted by Asian merchants',
-              'Indian Ocean commerce was conducted exclusively through barter with no financial instruments',
+              'That Asian merchants used credit and partnership tools centuries before European banking matured',
+              'That merchants in Asia borrowed letters of credit from Italian bankers who had settled in Indian ports',
+              'That Indian Ocean trade ran on barter alone, since merchants had no way to move value without coin',
+              'That partnership contracts were first introduced to the region by the Portuguese after 1500'
             ],
             correctAnswer: 0,
             explanation: 'Medieval Islamic and Indian commercial innovation is AP\'s counter-narrative to "European commercial superiority": suftaja (letters of credit enabling payment without cash transfer), mudaraba (silent partnership contracts enabling investment without direct involvement), and trading diaspora communities providing trust networks across cultures were all sophisticated solutions to the same commercial problems European banking later addressed. Understanding these non-European commercial innovations is essential for accurate AP World History.'
@@ -82,7 +82,7 @@ Southeast Asian maritime culture controlled the most valuable commodities:
 Chinese merchants and state-sponsored expeditions participated in Indian Ocean commerce:
 
 - Chinese junks traded across Southeast Asia to Indian Ocean
-- **Zheng He's voyages (1405-1433):** 7 expeditions; 62 ships; visited Persian Gulf, Arabian Peninsula, East Africa
+- **Zheng He's voyages (1405-1433):** 7 expeditions; first fleet of about 62 large treasure ships among roughly 250-317 vessels; visited Persian Gulf, Arabian Peninsula, East Africa
 - Discontinued after 1433 (political/Confucian opposition) — China retreated from maritime expansion
 - Chinese porcelain, silk exported; gold, spices, exotic animals imported
 
@@ -101,10 +101,10 @@ Chinese merchants and state-sponsored expeditions participated in Indian Ocean c
           {
             question: 'The Malacca Sultanate\'s adoption of Islam (c. 1400) was primarily motivated by:',
             options: [
-              'Commercial advantages — adoption of Islam by Malacca\'s ruler provided access to Muslim merchant networks (Arab, Indian) and the legal/commercial framework of Islamic law, enabling Malacca to become a more attractive entrepôt for the Muslim merchants who dominated Indian Ocean trade',
-              'Pure religious conviction with no commercial motivation',
-              'Military pressure from Arab Muslim armies requiring conversion',
-              'Islam was indigenous to Southeast Asia with no external influence needed',
+              'Commercial gain, as Islam linked Malacca to the Muslim merchant networks that dominated the ocean\'s trade',
+              'Military pressure from Arab caliphal armies that had occupied Malacca and demanded its ruler convert to Islam',
+              'A Chinese imperial order, since Zheng He required Malacca\'s ruler to adopt Islam as a condition of protection',
+              'Pressure from Portuguese crusaders, whose raids pushed Malacca\'s ruler to seek Ottoman Muslim allies against them'
             ],
             correctAnswer: 0,
             explanation: 'Malacca\'s conversion demonstrates that religious conversion in pre-modern world often had practical commercial dimensions: adopting Islam connected Malacca to the Muslim merchant networks (Arab and Indian Muslim merchants) that dominated Indian Ocean commerce, provided a common legal framework for commercial disputes, and made Muslim merchants more likely to choose Malacca as their trading hub. This doesn\'t mean the religious conversion was insincere — it means commercial incentives and religious change were not separate.'
@@ -112,10 +112,10 @@ Chinese merchants and state-sponsored expeditions participated in Indian Ocean c
           {
             question: 'Chinese junks trading in Southeast Asia and the Indian Ocean, combined with Chinese porcelain found in archaeological sites across the region, demonstrates:',
             options: [
-              'That China was a significant participant in Indian Ocean commerce through both state-sponsored expeditions (Zheng He) and private merchant trading networks — producing goods (porcelain, silk) that were valued throughout the Indian Ocean world and consuming goods (spices, exotic animals) that demonstrated Chinese involvement in long-distance commerce',
-              'China was isolated from Indian Ocean trade before European contact',
-              'Chinese participation in Indian Ocean trade was limited to Zheng He\'s official voyages',
-              'Chinese porcelain was only manufactured for domestic consumption',
+              'That China took part in Indian Ocean trade through both state fleets and private merchant networks',
+              'That the Ming state kept China isolated from Indian Ocean commerce until Portuguese traders reached Canton',
+              'That Chinese involvement was limited to Zheng He\'s state voyages and ended completely after 1433',
+              'That Chinese porcelain was made only for the imperial court and reached foreign ports as rare gifts'
             ],
             correctAnswer: 0,
             explanation: 'Chinese participation in Indian Ocean commerce had multiple dimensions: official state expeditions (Zheng He) represented imperial display of power; private Chinese merchant networks continued trading in Southeast Asia even after official expeditions were discontinued. The archaeological distribution of Chinese porcelain — from East Africa to Southeast Asia to India — demonstrates the geographic extent of Chinese commercial networks that existed independent of official imperial sponsorship.'
@@ -123,10 +123,10 @@ Chinese merchants and state-sponsored expeditions participated in Indian Ocean c
           {
             question: 'The contrast between China\'s discontinuation of Zheng He\'s voyages (1433) and Portugal\'s continuation of African coastal exploration at the same time demonstrates:',
             options: [
-              'That political decisions, not technological capability or commercial opportunity, determined which civilizations extended global reach — Chinese ships were technologically superior to Portuguese vessels; the commercial opportunities were real; but Chinese political decisions (Confucian opposition to maritime commerce, shift of imperial attention to northern threats) discontinued exploration while European political decisions sustained and intensified it',
-              'China discontinued exploration because its ships were technologically inferior to European vessels',
-              'China had no commercial interest in the Indian Ocean world',
-              'European exploration continued for purely religious rather than commercial reasons',
+              'That political decisions rather than ship technology determined which states extended their maritime reach',
+              'That China stopped because its junks could not match the speed, range and heavy armament of Portuguese caravels',
+              'That Portugal\'s kings funded voyages only to spread Christianity and had no interest in commerce',
+              'That China ended the voyages after confirming the Indian Ocean held nothing it wished to buy'
             ],
             correctAnswer: 0,
             explanation: 'This is AP World History\'s most important counterfactual: Chinese maritime capability exceeded European capability in 1433 when Zheng He\'s voyages ended. The Chinese decision to discontinue was political (Confucian bureaucratic opposition to maritime merchants, shift of imperial attention to Mongol threats in the north, cost of maintaining the fleet). The European decision to continue was also political (commercial competition between Portugal and Spain, royal patronage of exploration). Technology doesn\'t determine history — decisions do.'
@@ -156,7 +156,7 @@ Chinese merchants and state-sponsored expeditions participated in Indian Ocean c
         correctAnswers: ['Monsoon winds', 'Swahili city-states', 'Zheng He'],
         hint1: 'Seasonal wind patterns — reversal twice per year — enabled regular navigation',
         hint2: 'East African ports — Kilwa, Mombasa — Islamic + Bantu cultural synthesis',
-        hint3: 'Chinese Muslim admiral — 62 ships — 7 expeditions — discontinued after 1433',
+        hint3: 'Chinese Muslim admiral — about 62 treasure ships in a fleet of ~250-317 — 7 expeditions — discontinued after 1433',
         explanation: 'Monsoon winds were the technological foundation of Indian Ocean commerce — they made regular, predictable navigation possible across enormous distances. The Swahili city-states are the model of how Indian Ocean trade produced cultural synthesis in East Africa. Zheng He\'s voyages demonstrate Chinese maritime capability and the political decision to discontinue it — one of history\'s most consequential non-events.'
       }
     },
@@ -169,10 +169,10 @@ Chinese merchants and state-sponsored expeditions participated in Indian Ocean c
           {
             question: 'Comparing Arab merchant commercial practices (suftaja, mudaraba) to European merchant capitalism reveals:',
             options: [
-              'Arab commercial practices anticipated many features of European capitalism by several centuries — letters of credit, silent partnerships, and diaspora trading networks all solve the fundamental problems of long-distance commerce (trust across distances, capital pooling, risk sharing) — suggesting that commercial sophistication developed independently in multiple cultural contexts rather than being a distinctly European contribution',
-              'Arab commercial practices were primitive compared to European capitalism',
-              'European merchants borrowed all their commercial innovations directly from Arab merchants',
-              'Arab and European commercial systems were entirely independent with no connections',
+              'That similar tools for credit and shared risk developed independently in several cultures, not only in Europe',
+              'That Arab merchants used only cash and barter until Europeans brought partnership contracts east',
+              'That European merchants copied every one of their financial tools directly from Arab traders in Spain',
+              'That Arab and European commercial systems never interacted at any point before the 1500s began'
             ],
             correctAnswer: 0,
             explanation: 'This comparison demonstrates AP\'s importance of recognizing parallel commercial development: the problems of long-distance commerce (how to trust distant partners; how to transfer value without moving cash; how to pool capital) produced similar institutional solutions in multiple cultural contexts. Arab mudaraba partnerships and European commenda contracts were essentially the same institution developed independently. This demonstrates that "capitalism" is not distinctly European — complex commercial systems emerge wherever long-distance trade creates the demand for them.'
@@ -180,10 +180,10 @@ Chinese merchants and state-sponsored expeditions participated in Indian Ocean c
           {
             question: 'For AP, the most significant feature of the pre-European Indian Ocean trade network was:',
             options: [
-              'Its polycentric, voluntary character — multiple civilizations (Arab, Indian, Malay, Chinese, East African) participated as roughly equal commercial actors without a single dominant hegemon imposing terms, creating a resilient, self-organizing commercial network that functioned effectively for centuries without European organizational models or military enforcement',
-              'The pre-European Indian Ocean was dominated by a single hegemonic power controlling all trade',
-              'The network was primitive and commercially unsophisticated until European arrival',
-              'The Indian Ocean trade was conducted primarily through violence rather than voluntary exchange',
+              'Its polycentric and voluntary character, with many civilizations trading as rough equals',
+              'Its domination by a single Arab caliphate that set prices and licensed every merchant in the ocean',
+              'Its reliance on Chinese naval patrols, which kept pirates away from the major ports of the region',
+              'Its dependence on barter alone, since merchants there had developed no credit or banking tools'
             ],
             correctAnswer: 0,
             explanation: 'The polycentric Indian Ocean trade model is AP\'s alternative to the "trade requires hegemony" assumption. The network functioned — and functioned sophisticatedly — without a dominant power because complementary specializations (Indian cotton, Southeast Asian spices, East African gold, Chinese porcelain) created mutual dependence. European arrival (Portuguese cartaz system) tried to impose hegemonic control, partially succeeded, but never fully replaced the existing network — the complementarities that made the network work were stronger than any single power\'s ability to dominate it.'

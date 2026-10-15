@@ -69,10 +69,10 @@ Medieval Europe governed through decentralized **feudal contracts** rather than 
           {
             question: 'Song Dynasty China\'s civil service examination system is significant in AP World History primarily because it:',
             options: [
-              'Created a meritocratic pathway to government service based on knowledge of Confucian classics rather than hereditary birth',
-              'Was the world\'s first democratic election system',
-              'Allowed women equal access to government positions',
-              'Was copied directly from European feudal practices'
+              'Created a merit-based route into government through mastery of the Confucian classics',
+              'Opened government posts to Buddhist monks trained in the scriptures of the great monasteries',
+              'Let the emperor choose officials from the aristocratic clans that had dominated since the Han',
+              'Replaced the emperor\'s advisers with officials elected by village assemblies across the empire'
             ],
             correctAnswer: 0,
             explanation: 'The civil service exam is a key AP comparison point: China\'s government drew on meritocracy (knowledge-based), while European feudalism relied on hereditary land ownership and military service. This contrast shaped vastly different political cultures.'
@@ -80,10 +80,10 @@ Medieval Europe governed through decentralized **feudal contracts** rather than 
           {
             question: 'The key difference between the political systems of Song Dynasty China and medieval Europe was that:',
             options: [
-              'China had a centralized bureaucratic state staffed by educated officials, while Europe had decentralized feudal arrangements based on hereditary land control',
-              'Europe had stronger central monarchies than China during this period',
-              'Both systems were equally centralized but used different religious justifications',
-              'China\'s government was based on military conquest while Europe relied on scholarship'
+              'China had a centralized bureaucracy of educated officials, while Europe was divided among feudal lords',
+              'Europe had stronger central monarchies, while China\'s emperors were figureheads for regional warlords',
+              'China was governed by a hereditary warrior class, while Europe\'s kings ruled through trained scholars',
+              'China and Europe were equally centralized, but China justified rule through Buddhism instead'
             ],
             correctAnswer: 0,
             explanation: 'This is one of the most tested AP comparisons for Unit 1. Song China\'s bureaucratic efficiency contrasted sharply with Europe\'s fragmented feudal system — this difference had major consequences for economic development, stability, and technological spread.'
@@ -102,10 +102,10 @@ Medieval Europe governed through decentralized **feudal contracts** rather than 
           {
             question: 'What feature of Song Dynasty governance made it a meritocracy rather than an aristocracy?',
             options: [
-              'Officials were selected through competitive exams based on Confucian knowledge, not hereditary birth',
-              'The emperor was elected by popular vote',
-              'Military commanders automatically became government officials',
-              'All citizens had equal voting rights in choosing administrators'
+              'Officials won their posts through competitive exams on Confucian texts, not by birth',
+              'Monasteries nominated officials from among the boys they had taught to read and write',
+              'Commanders who won victories on the frontier were given civil offices automatically',
+              'Provincial governors passed their offices to their sons once the emperor confirmed them'
             ],
             correctAnswer: 0,
             explanation: 'The civil service examination system opened government positions (theoretically) to any man who could master Confucian texts — a stark contrast to Europe\'s hereditary aristocracy, where birth determined status.'
@@ -113,21 +113,21 @@ Medieval Europe governed through decentralized **feudal contracts** rather than 
           {
             question: 'In the Mali Empire, Islamic rulers maintained power over a largely non-Muslim population primarily by:',
             options: [
-              'Using Islam to legitimize trade connections while tolerating local religious traditions',
-              'Forcing all subjects to convert to Islam immediately upon conquest',
-              'Relying solely on military force to suppress all local resistance',
-              'Separating religion entirely from political governance'
+              'Promoting Islam at court and in trade but tolerating local religious traditions',
+              'Requiring conversion of all subjects and destroying the shrines of traditional faiths',
+              'Ruling through Arab governors appointed directly by the caliph in Cairo or Baghdad',
+              'Barring Islamic scholars from court so that local priests kept their political role'
             ],
             correctAnswer: 0,
-            explanation: 'Mansa Musa and other Mali rulers were Muslim and promoted Islam in government and trade, but local animist traditions persisted among most of the population. This selective integration of Islam is a classic AP example of religious-political accommodation.'
+            explanation: 'Mansa Musa and other Mali rulers were Muslim and promoted Islam in government and trade, but local traditional religions persisted among most of the population. Mali was an independent West African state, not a province governed by caliphal appointees, and its rulers patronized Muslim scholars rather than excluding them.'
           },
           {
             question: 'Which best explains why European feudalism produced weaker central governments than China\'s bureaucratic empire?',
             options: [
-              'Power in feudalism was fragmented among hereditary lords who owed personal loyalty to each other rather than to a centralized state',
-              'Europe had no interest in governance and allowed complete political chaos',
-              'European kings were always weaker militarily than their Chinese counterparts',
-              'Feudalism required professional bureaucrats who undermined royal authority'
+              'Power was split among hereditary lords whose loyalty was personal, not owed to a state',
+              'Kings collected so much in direct taxes that nobles rose in repeated revolts against them',
+              'The papacy appointed every king, so rulers could not act without approval from Rome',
+              'Feudal kings relied on salaried exam-trained officials who were loyal to their own guilds'
             ],
             correctAnswer: 0,
             explanation: 'Feudal obligations were personal (lord to vassal) rather than institutional (official to state). This dispersed power and made it difficult for European kings to command the centralized control that Chinese emperors exercised through their bureaucracy.'
@@ -176,21 +176,21 @@ Match each political system with its defining characteristic.
           {
             question: 'An AP prompt asks you to compare political organization in China and Europe c. 1200–1450. Which thesis is strongest?',
             options: [
-              'While both Song China and medieval Europe had powerful governments, China\'s meritocratic civil service produced stronger central authority than Europe\'s decentralized feudal system based on hereditary land control',
-              'China and Europe were very different from each other in many ways',
-              'Europe had better political organization than China because of Christianity',
-              'China\'s government was the same as all other Asian governments during this period'
+              'Song China\'s exam-staffed bureaucracy gave it stronger central authority than Europe\'s feudal order',
+              'Song China and Europe both had strong central rulers, so their political systems were basically alike',
+              'Europe\'s Christian kings governed more effectively than Song emperors because the Church unified them',
+              'Song China and Europe differed politically in many ways, which shows that each region was unique'
             ],
             correctAnswer: 0,
-            explanation: 'This thesis names a specific structural difference (meritocracy vs. hereditary feudalism), explains its consequence (strong vs. weak central authority), and sets up a concrete comparative argument — exactly what AP readers want.'
+            explanation: 'The strongest thesis names a specific structural difference (an exam-staffed bureaucracy vs. hereditary feudal decentralization), states its consequence (strong vs. weak central authority), and sets up a concrete comparative argument. "Different in many ways" is too vague to be defensible, and the other claims are historically inaccurate.'
           },
           {
             question: 'The Delhi Sultanate\'s use of Persian administrative models while ruling a Hindu majority population best illustrates which AP theme?',
             options: [
-              'Cultural interaction and adaptation — rulers adopted useful external administrative tools while navigating religious and cultural differences within their territories',
-              'State formation always requires religious uniformity',
-              'Islam was incompatible with Hindu culture and produced only conflict',
-              'Conquest inevitably leads to complete cultural replacement'
+              'Cultural interaction — Muslim rulers borrowed Persian institutions to govern Hindu subjects',
+              'Religious uniformity — rulers required conversion before granting any office or land',
+              'Cultural isolation — rulers kept Persian methods but barred all contact with Hindu elites',
+              'Economic decline — Persian tax methods ruined the Indian farming economy in a generation'
             ],
             correctAnswer: 0,
             explanation: 'The Delhi Sultanate is a prime example of cross-cultural governance: Islamic rulers using Persian administrative models, governing a Hindu majority, producing a syncretic cultural environment. This fits AP themes of cultural interaction and accommodation.'

@@ -84,10 +84,10 @@ export const whSilkRoadsMongolsPart1Data = {
           {
             question: 'The Pax Mongolica facilitated Silk Road trade MOST directly by:',
             options: [
-              'Providing political stability and military protection across the entire Eurasian landmass, making long-distance trade safer',
-              'Inventing new trade goods that did not exist before Mongol rule',
-              'Forcing all peoples under Mongol rule to convert to a single religion',
-              'Building a single continuous road from China to Europe'
+              'Imposing a single political authority that protected merchants and caravans from China to Persia',
+              'Introducing new goods like cotton and sugar that had been unknown in Eurasia before Mongol rule',
+              'Requiring every merchant in the empire to convert to Tengri worship to get travel passes',
+              'Paving a continuous stone highway from Beijing to the Black Sea for wheeled cargo wagons'
             ],
             correctAnswer: 0,
             explanation: 'The Pax Mongolica (c. 1250–1350) meant that for the first time, a single political authority controlled territory from China to Eastern Europe. Mongol rulers protected trade routes, punished banditry, established relay stations (yam system), and promoted commerce. This security made long-distance trade safer and more profitable than ever before.'
@@ -95,10 +95,10 @@ export const whSilkRoadsMongolsPart1Data = {
           {
             question: 'Genghis Khan\'s empire was distinctive in its use of:',
             options: [
-              'Meritocracy — promoting skilled individuals regardless of tribal origin — and religious tolerance for conquered peoples',
-              'A hereditary aristocracy with rigid social classes that excluded conquered peoples',
-              'Forced conversion of all subjects to Mongol shamanism',
-              'A parliamentary system of government with elected representatives'
+              'Promotion by merit regardless of tribal origin and tolerance of conquered peoples\' religions',
+              'A hereditary aristocracy whose rigid ranks kept conquered peoples out of all command posts',
+              'Forced conversion of conquered peoples to Tengri shamanism as a condition of their surrender',
+              'A written legal code copied from Song China that bound the khan to Confucian ministers'
             ],
             correctAnswer: 0,
             explanation: 'Genghis Khan promoted generals and administrators based on ability rather than birth — a remarkable practice for the era. He also practiced religious tolerance, allowing Christians, Muslims, Buddhists, and others to worship freely under Mongol rule. These policies helped him integrate diverse peoples into an effective empire.'
@@ -123,14 +123,14 @@ export const whSilkRoadsMongolsPart1Data = {
 
 - **Massive death toll:** Mongol conquests killed an estimated 5–10% of the world's population
 - **City destruction:** Baghdad, Kiev, and countless cities razed; centuries of cultural heritage destroyed
-- **Black Death:** The plague (*Yersinia pestis*) traveled along Mongol trade routes from Central Asia to Europe (1346–1353); killed ~30–60% of Europe's population
+- **Black Death:** The plague (*Yersinia pestis*) traveled along Mongol trade routes from Central Asia to Europe (1346–1353); killed roughly a third of Europe's population (about 25 million in Europe; estimates vary)
 - **Long-term political disruption:** Collapse of Mongol states led to new empires (Ming China, Ottoman, Timurid)
 
 ### The Black Death's Impact
 
 | Region | Effects |
 |--------|---------|
-| **Europe** | ~25–50 million dead; labor shortages ended feudalism; peasant revolts; questioning of Church authority |
+| **Europe** | Roughly a third of the population dead (about 25 million; estimates vary); labor shortages weakened serfdom and manorialism by raising labor's bargaining power; peasant revolts; questioning of Church authority |
 | **Islamic World** | Major population loss in Egypt, Syria, Iraq; disrupted Mamluk economy |
 | **China** | Plague combined with rebellion helped overthrow Yuan Dynasty → Ming Dynasty (1368) |
 
@@ -147,7 +147,7 @@ export const whSilkRoadsMongolsPart1Data = {
 
 2) What Mongol relay system of stations with fresh horses enabled rapid communication across the empire?
 
-3) What pandemic, spread along trade routes from Central Asia, killed 30–60% of Europe's population (1346–1353)?
+3) What pandemic, spread along trade routes from Central Asia, killed roughly a third of Europe's population (1346–1353)?
 
 Use the exact historical term.
       `,
@@ -199,10 +199,10 @@ Use the exact historical term.
           {
             question: 'The spread of the Black Death along Mongol trade routes BEST illustrates which historical concept?',
             options: [
-              'Increased interconnection creates vulnerability — the same networks that facilitate trade and cultural exchange can also transmit devastating diseases',
-              'Disease only spreads through military conquest, not trade',
-              'The Black Death had no connection to trade routes or interconnection',
-              'The Mongol Empire intentionally created the plague as a weapon'
+              'Networks that carry goods and ideas can also carry deadly disease between regions',
+              'Pandemics spread mainly through invading armies rather than through peaceful commerce',
+              'Long-distance exchange declined sharply once nomadic empires replaced sedentary kingdoms',
+              'Disease outbreaks were planned by conquerors as deliberate weapons of imperial expansion'
             ],
             correctAnswer: 0,
             explanation: 'This is a key AP pattern: connectivity is a double-edged sword. The Pax Mongolica revitalized trade and cultural exchange, but the same routes that carried silk and ideas also carried *Yersinia pestis*. This pattern repeats in the Columbian Exchange (1492+), when transatlantic connections spread smallpox and other diseases to the Americas.'
@@ -210,10 +210,10 @@ Use the exact historical term.
           {
             question: 'An AP essay asks: "Evaluate the extent to which the Mongol Empire facilitated cultural exchange across Eurasia." The STRONGEST supporting evidence would be:',
             options: [
-              'Gunpowder, the compass, and printing spread from China to Europe; Islam expanded into new regions; travelers like Marco Polo and Ibn Battuta recorded diverse cultures',
-              'The Mongol Empire prevented all cultural exchange by destroying conquered civilizations',
-              'Cultural exchange only occurred within the borders of China and never reached Europe',
-              'The Mongols had no impact on trade routes, technology transfer, or religious spread'
+              'Chinese gunpowder and the compass reached Europe, and travelers such as Marco Polo described distant courts',
+              'Mongol armies destroyed Baghdad\'s libraries, ending scholarly contact between Persia and China',
+              'Cultural exchange stayed inside Yuan China, and no Chinese technology reached Europe in this era',
+              'Mongol khans banned foreign religions, so missionaries and merchants stopped traveling across Central Asia for decades'
             ],
             correctAnswer: 0,
             explanation: 'The strongest evidence combines concrete examples: Chinese technologies (gunpowder, compass, printing) reached Europe via Mongol-protected trade routes. Religious traditions spread to new areas. Individual travelers like Marco Polo and Ibn Battuta documented the cultural diversity and connections of the Mongol world. Together, these show extensive cultural exchange.'

@@ -32,10 +32,10 @@ export const whLandBasedEmpiresPart3Data = {
           {
             question: 'The Safavid Empire\'s conversion of Persia to Shia Islam (c. 1501) had which most significant long-term consequence?',
             options: [
-              'It created a permanent religious divide between Sunni Ottoman and Shia Safavid empires, generating sustained military conflict and establishing Iran as a distinctively Shia Muslim country that persists to the present',
-              'It unified all Muslims under a single religious authority',
-              'It led the Ottoman Empire to also convert to Shia Islam',
-              'It had no political or military consequences'
+              'A lasting Sunni-Shia rivalry with the Ottomans and an enduring Shia identity for Iran',
+              'A reunion of Sunni and Shia Muslims under the religious authority of the Safavid shahs',
+              'An Ottoman-Safavid alliance against Portugal built on shared Shia religious loyalty',
+              'A rapid Safavid conversion to Sunni Islam after the defeat at Chaldiran in 1514'
             ],
             correctAnswer: 0,
             explanation: 'The Ottoman-Safavid conflict was one of the defining features of the 16th-17th century Islamic world. The Safavid forced conversion of Sunni Persians to Shia Islam — often violently — created a religious fault line that made Ottoman-Safavid warfare existential rather than merely territorial. This Sunni-Shia division persists in the modern Middle East.'
@@ -43,10 +43,10 @@ export const whLandBasedEmpiresPart3Data = {
           {
             question: 'Akbar\'s (r. 1556–1605) religious tolerance policy (Din-i-Ilahi) was primarily motivated by:',
             options: [
-              'The pragmatic need to govern a vast Hindu-majority empire as a Muslim minority ruler — religious tolerance reduced resistance, maintained Hindu administrative cooperation, and created ideological legitimacy across religious lines',
-              'A personal conversion from Islam to Hinduism',
-              'European missionary pressure to adopt universal tolerance',
-              'A Quranic requirement that all Muslim rulers must adopt inter-religious dialogue'
+              'The need to win the cooperation of a Hindu-majority population as a Muslim ruler',
+              'A personal conversion to Hinduism after his marriages to several Rajput princesses',
+              'Pressure from Jesuit missionaries at his court to adopt Christian ideas of toleration',
+              'A Quranic rule obliging every Muslim ruler to fund and protect the worship of other faiths'
             ],
             correctAnswer: 0,
             explanation: 'Akbar\'s tolerant policies were pragmatic genius: the Mughal Empire was maybe 20-25% Muslim governing 75-80% Hindus (plus Sikhs, Buddhists, Jains). Forced conversion was impossible; religious persecution would generate constant rebellion. By marrying Hindu Rajput princesses, eliminating the jizya tax on non-Muslims, and creating Din-i-Ilahi (a syncretic personal religious practice), Akbar made himself acceptable to all communities.'
@@ -109,21 +109,21 @@ Founded by Babur (descended from both Timur and Genghis Khan) in 1526:
           {
             question: 'Shah Abbas I\'s military reforms in the Safavid Empire were significant because they:',
             options: [
-              'Replaced the traditional tribal cavalry (which owed loyalty to tribal leaders) with a slave-soldier army loyal to the shah personally — mirroring the Ottoman devshirme solution to the problem of unreliable noble military loyalty',
-              'Eliminated all military forces and relied on diplomacy alone',
-              'Were identical to the Chinese examination-based recruitment system',
-              'Created the world\'s first democratic military with elected officers'
+              'They replaced Qizilbash tribal cavalry with slave soldiers loyal to the shah, much like the Ottoman janissaries',
+              'They disbanded the Qizilbash and relied on Portuguese mercenaries for firearms and artillery',
+              'They recruited officers through civil service exams modeled on the system used in Ming China',
+              'They gave the Qizilbash chiefs hereditary provinces in exchange for supplying cavalry in wartime'
             ],
             correctAnswer: 0,
-            explanation: 'Abbas\'s military reform solved the same problem as the Ottoman devshirme: how to create a military loyal to the ruler rather than to tribal or noble patrons. His solution — a slave-soldier army (ghulam) similar to the Mamluks and Janissaries — demonstrates a recurring pattern of Islamic rulers using enslaved soldiers to bypass unreliable traditional military aristocracies.'
+            explanation: 'Abbas\'s military reform solved the same problem as the Ottoman devshirme: how to create a military loyal to the ruler rather than to tribal or noble patrons. He reduced his dependence on the Qizilbash tribal cavalry by building a slave-soldier army (ghulam) similar to the Mamluks and Janissaries, a recurring pattern of Islamic rulers using enslaved soldiers to bypass unreliable traditional military aristocracies.'
           },
           {
             question: 'Aurangzeb\'s reimposition of the jizya tax on non-Muslims weakened the Mughal Empire primarily by:',
             options: [
-              'Alienating Hindu Rajput allies whose military cooperation had been essential to Mughal power, triggering Maratha Hindu resistance movements that fragmented imperial control of the Indian subcontinent',
-              'Making the Mughal Empire more prosperous through increased tax revenue',
-              'Converting all Hindus to Islam within a generation',
-              'Strengthening the empire by eliminating internal religious diversity'
+              'Alienating Rajput allies and fueling Maratha and other Hindu revolts that fragmented imperial control',
+              'Provoking a British invasion, since the East India Company objected to taxes on Hindu merchants',
+              'Triggering mass conversions that left too few Hindus to fill posts in the revenue administration',
+              'Uniting Sunni and Shia nobles against him, who saw the tax as an attack on their own landed privileges'
             ],
             correctAnswer: 0,
             explanation: 'Akbar had made the Mughal Empire work by incorporating Hindu Rajput princes as military allies and administrators. Aurangzeb\'s orthodox Islamic policies (jizya, temple destruction) broke this alliance. The Maratha Hindu confederation under Shivaji successfully resisted Mughal authority, creating the regional power competition that weakened central authority and made the Mughal Empire vulnerable to British penetration.'
@@ -131,10 +131,10 @@ Founded by Babur (descended from both Timur and Genghis Khan) in 1526:
           {
             question: 'The Taj Mahal (built by Shah Jahan, c. 1632–1653) represents which historical concept?',
             options: [
-              'The synthesis of Persian-Islamic and South Asian architectural traditions, demonstrating how the Mughal Empire blended Islamic artistic forms with Indian materials and craftsmanship to create a distinctively Indo-Islamic cultural heritage',
-              'Pure Islamic architecture with no South Asian elements',
-              'A purely Hindu temple that was later claimed by Muslim rulers',
-              'European Baroque architectural influence in Mughal India'
+              'A synthesis of Persian-Islamic design with Indian materials and craftsmanship',
+              'A purely Persian monument built by imported Iranian workers using no Indian materials',
+              'A Hindu temple complex that Mughal rulers later converted into an Islamic tomb',
+              'An early sign of European Baroque influence brought to Agra by Jesuit architects'
             ],
             correctAnswer: 0,
             explanation: 'The Taj Mahal is a model AP example of cultural synthesis: Persian-inspired minarets and dome, Quranic calligraphy, symmetrical gardens (all Islamic elements) combined with white Rajasthani marble, intricate jali (lattice) screens, and local craftsmen\'s geometric patterns (South Asian elements). It embodies the Indo-Islamic synthesis that was the Mughal Empire\'s cultural achievement.'
@@ -183,10 +183,10 @@ Match each Safavid/Mughal concept to its description.
           {
             question: 'An AP LEQ compares Akbar and Aurangzeb\'s governance. What is the strongest argument?',
             options: [
-              'Akbar\'s religious tolerance built Mughal strength by incorporating Hindu military allies and reducing sectarian conflict, while Aurangzeb\'s Islamic orthodoxy undermined this foundation — demonstrating that diverse empires require accommodation policies to remain politically coherent',
-              'Both rulers had identical governance approaches',
-              'Aurangzeb\'s policies strengthened the empire by creating religious unity',
-              'Akbar\'s tolerance was forced upon him rather than a deliberate policy'
+              'Akbar\'s toleration won Hindu allies that Aurangzeb\'s orthodoxy lost, showing diverse empires needed accommodation',
+              'Aurangzeb\'s orthodoxy strengthened the empire by unifying it, and Akbar\'s toleration had left it divided and weak',
+              'Akbar and Aurangzeb governed alike, since both relied on Persian administrators and kept religion out of policy',
+              'Akbar\'s toleration was forced on him by Rajput revolts, so it reveals weakness rather than a deliberate strategy'
             ],
             correctAnswer: 0,
             explanation: 'This argument demonstrates AP complexity by using the contrast between the two rulers to derive a general principle about imperial governance: diversity requires accommodation. The AP exam rewards arguments that use specific comparison to generate broader insights, not just describe two different rulers\'  policies.'
@@ -194,10 +194,10 @@ Match each Safavid/Mughal concept to its description.
           {
             question: 'What most distinguished the Safavid Empire from the Ottoman and Mughal empires?',
             options: [
-              'The Safavid Empire\'s Shia Islamic identity created a unique religious-political legitimacy claim that distinguished it from Sunni neighbors, made Ottoman-Safavid conflict ideologically existential rather than merely territorial, and established Iran as a distinctively Shia country with lasting consequences',
-              'The Safavid Empire was the only one to use gunpowder weapons',
-              'The Safavid Empire had a democratic government unlike the other two',
-              'The Safavid Empire was the largest of the three in territory'
+              'Its official Shia faith, setting it apart from its Sunni neighbors and making the Ottoman rivalry religious',
+              'Its reliance on gunpowder weapons, unlike the Ottoman and Mughal armies that fought with cavalry',
+              'Its larger territory and population than either the Ottoman or the Mughal realm at their peaks',
+              'Its rule by an elected council of Qizilbash chiefs instead of a hereditary dynasty of shahs'
             ],
             correctAnswer: 0,
             explanation: 'Shia identity was the Safavid Empire\'s defining feature — it distinguished Safavid from Ottoman legitimacy, made their rivalry religiously charged (not just political), and created the long-term reality of Iran as a Shia Muslim country. AP questions about the three Islamic empires frequently ask about this religious dimension as the key differentiating factor.'

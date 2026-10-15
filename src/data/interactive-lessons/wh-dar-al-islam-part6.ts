@@ -32,10 +32,10 @@ export const whDarAlIslamPart6Data = {
           {
             question: 'The Mongol sack of Baghdad in 1258 is considered a turning point in Islamic history primarily because:',
             options: [
-              'It destroyed the Abbasid Caliphate (the symbolic center of Islamic political authority), killed enormous numbers of scholars and civilians, and ended Baghdad\'s role as the world\'s premier intellectual and commercial center — though Islamic civilization recovered in other centers like Cairo and Tabriz',
-              'It permanently ended all Islamic scholarship and ended Dar al-Islam as a functioning civilization',
-              'It was the first military defeat ever suffered by Islamic forces',
-              'It caused the entire Islamic world to convert to Mongol religious beliefs'
+              'It ended the Abbasid Caliphate and Baghdad\'s role as the leading center of Islamic learning',
+              'It ended Islamic scholarship everywhere and broke Dar al-Islam apart into hostile camps for good',
+              'It was the first military defeat that any Islamic army had ever suffered in battle',
+              'It led Baghdad and the whole Islamic world to adopt the Mongols\' shamanist beliefs'
             ],
             correctAnswer: 0,
             explanation: 'The 1258 sack killed perhaps 200,000-800,000 people (estimates vary wildly), destroyed the House of Wisdom and its libraries, and killed the last Abbasid Caliph. But the story doesn\'t end there — Egypt\'s Mamluks stopped the Mongols at Ain Jalut (1260), and the Mongol Il-Khanate rulers converted to Islam within decades. Destruction and resilience must both be analyzed.'
@@ -43,10 +43,10 @@ export const whDarAlIslamPart6Data = {
           {
             question: 'The Battle of Ain Jalut (1260), where Egyptian Mamluk forces defeated the Mongols, was historically significant because:',
             options: [
-              'It was one of the first major military defeats of a Mongol army, stopping Mongol westward expansion into North Africa and the western Islamic world, and demonstrating that the Mongols were not invincible',
-              'It ended the Mongol Empire entirely and immediately',
-              'It was fought by Crusader forces, not Muslim armies',
-              'It had no strategic significance since the Mongols were already planning to retreat'
+              'It halted the Mongol advance on Egypt and showed Mongol armies could be beaten',
+              'It ended the Mongol Empire entirely and returned Baghdad to the rule of the Abbasids',
+              'It was won by Crusader knights fighting alongside their Byzantine and Armenian allies',
+              'It mattered little, since the Mongols had already conquered Egypt the year before'
             ],
             correctAnswer: 0,
             explanation: 'Ain Jalut is a major turning point: the Mongol army (accompanied by Christian Armenian and Georgian allies) was stopped by enslaved soldiers who had seized power in Egypt. This is both an AP example of Mamluk significance AND of the limits of Mongol expansion — the Mongols never conquered North Africa or the western Mediterranean.'
@@ -79,7 +79,7 @@ The Il-Khanate (1256–1335) governed Persia/Iraq under Mongol rule:
 - **Initially hostile to Islam:** Early Il-Khans patronized Buddhism and Christianity; Baghdad's sack
 - **Gradual conversion:** Ghazan Khan (r. 1295–1304) converted to Sunni Islam, declared Islam the state religion
 - **Cultural synthesis:** Under converted rulers, Persian-Islamic art, architecture, and scholarship flourished — the Il-Khanate became a center of Persian miniature painting and historical writing
-- **Rashid al-Din:** Il-Khanate's Persian vizier wrote *Jami\' al-Tawarikh* (Compendium of Chronicles) — the first world history written by a non-European
+- **Rashid al-Din:** Il-Khanate's Persian vizier wrote *Jami\' al-Tawarikh* (Compendium of Chronicles) — one of the first histories to attempt to cover the known world from China to Europe
 
 > **Islamic Recovery & Resilience**
 
@@ -107,21 +107,21 @@ The Islamic world's recovery demonstrated structural strengths:
           {
             question: 'Ghazan Khan\'s conversion to Islam (1295) is significant for AP World History because it demonstrates:',
             options: [
-              'The pattern of cultural absorption — conquerors (Mongols) adopting the religion and culture of the conquered (Islamic Persia) — showing that civilizational influence can outlast political defeat',
-              'That the Mongols had been secretly Muslim before their invasions of the Islamic world',
-              'That conversion to Islam was required by the Mamluk treaty ending the Battle of Ain Jalut',
-              'That Islamic forces militarily forced Ghazan\'s conversion'
+              'Conquerors adopting the religion and culture of the people they had conquered',
+              'Mongol rulers revealing a Muslim faith they had held in secret before invading',
+              'A conversion required under the peace treaty that followed Ain Jalut in 1260',
+              'A conversion forced on Ghazan by Mamluk armies that had captured Tabriz'
             ],
             correctAnswer: 0,
-            explanation: 'Ghazan\'s conversion exemplifies the "reverse acculturation" pattern: militarily dominant Mongols adopting the culture of their subjects. This pattern appears throughout AP World History (e.g., Germanic tribes adopting Roman Christianity; Manchu adopting Chinese culture). The conquered civilization\'s institutional depth — madrasas, waqf, trade networks — survived the conquest and absorbed the conquerors.'
+            explanation: 'Ghazan\'s conversion exemplifies a recurring pattern: militarily dominant conquerors adopting the culture of their subjects. The pattern appears throughout AP World History (e.g., the Yuan and later the Qing ruling through Chinese institutions). The conquered civilization\'s institutional depth — madrasas, waqf, trade networks — survived the conquest and absorbed the conquerors. No treaty or Mamluk victory forced the conversion.'
           },
           {
             question: 'How did the Pax Mongolica affect trade and communication across Eurasia in the 13th–14th centuries?',
             options: [
-              'The Mongol Empire\'s control of vast territory temporarily made overland trade safer and faster, enabling increased commerce and cultural exchange — but also creating the connected networks through which the Black Death spread catastrophically',
-              'The Pax Mongolica only affected trade within China and had no impact on Islamic or European commerce',
-              'The Mongol Empire completely stopped all Silk Road trade for centuries',
-              'The Pax Mongolica exclusively benefited Christian European merchants'
+              'It made overland trade safer and faster but also helped the Black Death spread to the Mediterranean',
+              'It affected trade only inside China and had no impact on Islamic or European merchants',
+              'It shut down the Silk Roads for a century by closing the steppe to foreign merchants',
+              'It mainly benefited European merchants, who were given a monopoly on the caravan routes'
             ],
             correctAnswer: 0,
             explanation: 'The Pax Mongolica had two faces: it created unprecedented Eurasian connectivity (Marco Polo\'s travels became possible; Ibn Battuta traveled freely across Mongol-controlled territory) AND it created the network that transmitted plague from Central Asia to the Mediterranean. AP rewards students who can explain both the benefits and catastrophic costs of this connectivity.'
@@ -129,10 +129,10 @@ The Islamic world's recovery demonstrated structural strengths:
           {
             question: 'Cairo\'s rise as the dominant center of Islamic political and intellectual life after 1258 best illustrates which AP principle?',
             options: [
-              'The geographic flexibility of Islamic civilization — when one center (Baghdad) was destroyed, institutional strengths (scholarship, trade networks, Islamic law) were replicated in another center (Cairo), demonstrating resilience through decentralization',
-              'That Islamic civilization was only ever concentrated in one city at a time',
-              'That the Mongols controlled Cairo and directed Islamic scholarship from there',
-              'That Egyptian culture was always superior to Mesopotamian culture'
+              'Resilience through decentralization, as institutions lost in Baghdad were rebuilt in Cairo',
+              'Dependence on one capital, since Islamic learning could only exist in one city at a single time',
+              'Mongol control of Cairo, from which the khans directed Islamic scholarship after 1258',
+              'Egyptian cultural superiority, which had always outshone the culture of Mesopotamia'
             ],
             correctAnswer: 0,
             explanation: 'Cairo\'s emergence demonstrates an AP key concept: Islamic civilization\'s strength came partly from its decentralized institutions. The waqf system, madrasas, Islamic commercial law, and Arabic scholarship were not dependent on Baghdad or any single political center — they could be recreated wherever Islamic communities existed, including Egypt under the Mamluks.'
@@ -181,21 +181,21 @@ Match each event or concept to its historical significance.
           {
             question: 'A CCOT essay asks: "Describe change and continuity in Dar al-Islam c. 1200–1400." Which thesis structure earns the highest score?',
             options: [
-              'While the Mongol invasions dramatically changed the political landscape (destroying Baghdad, ending the Abbasid Caliphate, shifting the center of Islamic political authority to Cairo), the fundamental institutions of Islamic civilization — Arabic scholarship, trade networks, madrasas funded by waqf — demonstrated remarkable continuity through and after this disruption',
-              'Everything about the Islamic world changed between 1200 and 1400',
-              'Nothing changed in the Islamic world between 1200 and 1400',
-              'The Mongols had no impact on the Islamic world'
+              'Mongol conquest moved power from Baghdad to Cairo, but Islamic scholarship and trade continued',
+              'Everything about the Islamic world changed between 1200 and 1400, so no real continuity can be found',
+              'Nothing changed in the Islamic world between 1200 and 1400, since the Mongols never even reached it',
+              'Islamic learning ended with the Mongol conquest, though trade continued unchanged across the region'
             ],
             correctAnswer: 0,
-            explanation: 'This thesis earns full CCOT rubric points: (1) specific change identified (Mongol destruction, caliphate end, Cairo\'s rise), (2) specific continuity identified (Islamic institutions), (3) both dimensions addressed in one defensible claim, (4) implies causation (why continuity persisted despite disruption). This is model CCOT structure.'
+            explanation: 'This thesis earns full CCOT credit: (1) specific change identified (Mongol destruction of Baghdad and the shift of power to Mamluk Cairo), (2) specific continuity identified (Islamic scholarship and trade networks, sustained by madrasas and waqf), (3) both dimensions addressed in one defensible claim. The other options deny change, deny continuity, or misstate what the Mongols ended.'
           },
           {
             question: 'The Mongol Empire\'s relationship to Islamic civilization is best described as:',
             options: [
-              'Contradictory and complex — the Mongols simultaneously destroyed Islamic political centers, transmitted plague, and facilitated trade (Pax Mongolica), while eventually being culturally absorbed into Islam, making simple "destructive" or "beneficial" verdicts historically inaccurate',
-              'Exclusively destructive with no positive dimensions',
-              'Exclusively beneficial because the Pax Mongolica stimulated commerce',
-              'Irrelevant to Islamic history since the Mongols never entered Islamic territory'
+              'Mixed, since the Mongols destroyed Islamic centers and spread plague but also revived trade and converted',
+              'Purely destructive, since the Mongols left nothing of value in the Islamic lands they ruled',
+              'Purely beneficial, since the Pax Mongolica revived commerce without serious costs',
+              'Mostly irrelevant, since the Mongols never ruled lands with large Muslim populations'
             ],
             correctAnswer: 0,
             explanation: 'The Mongol-Islamic relationship is the AP exam\'s favorite example of historical complexity in this period. Any single-verdict answer (all bad, all good) fails the complexity standard. The most sophisticated AP response holds contradictory truths simultaneously: the same empire that murdered hundreds of thousands also connected Eurasia and then converted to the religion it had tried to destroy.'

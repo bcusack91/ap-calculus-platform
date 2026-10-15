@@ -32,10 +32,10 @@ export const whDarAlIslamPart4Data = {
           {
             question: 'The Abbasid Caliphate\'s fragmentation after c. 900 CE is significant for AP World History because it demonstrates:',
             options: [
-              'That political unity was not necessary for cultural and commercial unity — despite multiple competing Islamic states, Dar al-Islam remained connected through shared religion, language, trade networks, and scholarly institutions',
-              'That the Islamic world ceased to exist politically after the Abbasids fell',
-              'That political fragmentation always leads to cultural and economic collapse',
-              'That the Mongol invasions caused the Abbasid Caliphate to fragment in the 10th century'
+              'That cultural and commercial unity could survive the loss of political unity',
+              'That the Islamic world ceased to exist as a meaningful idea once the Abbasids fell',
+              'That political fragmentation brought rapid economic collapse to every Muslim region',
+              'That the Mongol invasions broke up the Abbasid Caliphate in the tenth century'
             ],
             correctAnswer: 0,
             explanation: 'This is a key AP complexity point: the Islamic world\'s cultural and commercial unity did NOT depend on political unity. While the caliphate fragmented into regional dynasties (Fatimids in Egypt, Buyids in Persia, later Seljuks), Arabic scholarship, Islamic commercial networks, and Hajj pilgrimage continued to create shared identity. Political fragmentation ≠ civilizational collapse.'
@@ -43,13 +43,13 @@ export const whDarAlIslamPart4Data = {
           {
             question: 'The Delhi Sultanate (1206–1526) is significant in AP World History primarily because it:',
             options: [
-              'Established the first major Islamic political entity in South Asia, governing a Hindu majority population and demonstrating how Islamic rulers adapted to governing non-Muslim populations through a mix of accommodation and assertion',
-              'Conquered all of India and forcibly converted the entire population to Islam',
-              'Was established by the Mongol Empire as a vassal state',
-              'Had no lasting cultural impact on South Asian civilization'
+              'It brought lasting Muslim rule to northern India over a Hindu majority, mixing accommodation with force',
+              'It conquered the whole subcontinent and forced the entire population to convert to Islam within a generation',
+              'It was set up by the Mongol Empire as a vassal state and ruled by governors sent from Karakorum',
+              'It left little cultural mark, since its Persian court culture vanished entirely after the Mughal conquest'
             ],
             correctAnswer: 0,
-            explanation: 'The Delhi Sultanate governed a Hindu-majority India for over 300 years. Its strategies — maintaining Hindu administrators, using Persian as a court language, allowing Hindu temples in many areas while building mosques — demonstrate Islamic rulers\' adaptability. Its most famous ruler, Alauddin Khalji, successfully resisted Mongol invasions, protecting South Asian civilization.'
+            explanation: 'The Delhi Sultanate governed much of a Hindu-majority India for over 300 years. Its strategies — maintaining Hindu administrators, using Persian as a court language, allowing Hindu temples in many areas while building mosques — demonstrate Islamic rulers\' adaptability. Alauddin Khalji successfully resisted Mongol invasions, and the Sultanate\'s Indo-Persian culture shaped the later Mughal court.'
           }
         ]
       }
@@ -77,7 +77,7 @@ Central Asian Turks converted to Islam and became its military champions:
 | **Political role** | Seljuks became *sultans* (military rulers) while keeping Abbasid Caliph as nominal religious head |
 | **Cultural synthesis** | Blended Turkic military traditions with Persian administrative culture and Islamic religion |
 | **Legacy** | Created the Turkish-Islamic synthesis later inherited by the Ottoman Empire |
-| **Crusades** | Seljuk control of Jerusalem triggered the First Crusade (1095) |
+| **Crusades** | Seljuk victories in Anatolia led Byzantium to appeal for aid, which Pope Urban II answered by calling the First Crusade (1095) |
 
 > **The Delhi Sultanate: Islam in South Asia**
 
@@ -105,10 +105,10 @@ Five successive dynasties governed Muslim-ruled South Asia 1206–1526:
           {
             question: 'The Mongol destruction of Baghdad in 1258 affected the Islamic world primarily by:',
             options: [
-              'Destroying the Abbasid Caliphate as a political institution, ending the symbolic center of Islamic authority — but Islamic civilization survived and even flourished in Egypt, Persia, and India, where Mongol rulers eventually converted to Islam',
-              'Ending all Islamic scholarship and commerce permanently',
-              'Causing the entire Islamic world to fall under Mongol rule for centuries',
-              'Having no lasting impact because Baghdad was already irrelevant by 1258'
+              'Ending the Abbasid Caliphate, though Islamic culture continued to flourish in Cairo and Persia',
+              'Ending Islamic scholarship and long-distance commerce permanently across the region',
+              'Placing the whole Islamic world, including Egypt and India, under direct Mongol rule for centuries',
+              'Changing little, since Baghdad had already been abandoned as a capital by 1258'
             ],
             correctAnswer: 0,
             explanation: 'The sack of Baghdad was a trauma — the caliph was killed, the city\'s libraries burned, thousands killed. But the AP story continues: Egypt\'s Mamluks stopped the Mongols at Ain Jalut (1260), Persian Islamic culture absorbed Mongol rulers (Il-Khanate rulers converted to Islam within decades), and Islamic civilization adapted and continued.'
@@ -116,21 +116,21 @@ Five successive dynasties governed Muslim-ruled South Asia 1206–1526:
           {
             question: 'The Seljuk Turks\' political arrangement of keeping the Abbasid Caliph as nominal head while exercising actual power as sultans demonstrates:',
             options: [
-              'The separation of religious legitimacy (the Caliph as symbolic head of Islam) from military/political power (the Sultan as actual ruler) — a pattern that would recur throughout Islamic political history',
-              'That Seljuk Turks rejected Islamic religion while ruling Muslim populations',
-              'That the Abbasid Caliphate maintained full political control throughout the Seljuk period',
-              'That sultans and caliphs had identical, overlapping powers with no distinction'
+              'A split between the caliph\'s religious legitimacy and the sultan\'s real political power',
+              'That the Seljuks rejected Islam even while ruling over Muslim populations',
+              'That the Abbasid caliphs kept full political control throughout the Seljuk era',
+              'That sultans and caliphs held identical, overlapping powers with no real distinction'
             ],
             correctAnswer: 0,
-            explanation: 'The Caliph-Sultan arrangement is a key AP pattern: the caliph provided religious legitimacy (Friday prayers said in his name, coins minted with his image) while the sultan exercised actual military and political authority. This separation persisted throughout Islamic political history, including under later Ottoman sultans who claimed the caliphate.'
+            explanation: 'The Caliph-Sultan arrangement is a key AP pattern: the caliph provided religious legitimacy (Friday prayers said in his name, coins minted in his name) while the sultan exercised actual military and political authority. This separation persisted in Islamic political history, and later Ottoman sultans would claim the caliphal title themselves.'
           },
           {
             question: 'The Delhi Sultanate\'s governance of a Hindu-majority population under Muslim rulers best illustrates:',
             options: [
-              'How Islamic states adapted to governing religiously diverse populations by mixing coercive power with pragmatic accommodation of local religious and administrative traditions',
-              'That Islam always required forced conversion of all conquered peoples',
-              'That Hindu and Muslim populations had no cultural interaction in medieval India',
-              'That the Delhi Sultanate was exclusively populated by Arab Muslims with no local Indian influence'
+              'How Muslim rulers combined coercion with practical accommodation of Hindu subjects',
+              'That Islamic rulers always required the forced conversion of all conquered peoples',
+              'That Hindus and Muslims in medieval India had no cultural interaction at all',
+              'That the Sultanate\'s population was made up almost entirely of Arab settlers'
             ],
             correctAnswer: 0,
             explanation: 'The Delhi Sultanate developed the *dhimmi* system (protected non-Muslim subjects paying jizya tax) in South Asian form. Pragmatism often overcame ideological purity: Hindu administrators were needed for their knowledge of local conditions; outright forced conversion would have been administratively impossible and economically counterproductive.'
@@ -179,24 +179,24 @@ Match each political structure to its correct description.
           {
             question: 'An AP LEQ asks: "Evaluate the extent to which political fragmentation undermined Islamic civilization c. 900–1450." Which thesis earns the highest score?',
             options: [
-              'Despite significant political fragmentation — the Abbasid Caliphate\'s decline, competing dynasties, and Mongol conquests — Islamic civilization remained unified and even flourished through non-political institutions including Arabic scholarship, Islamic commercial networks, and Hajj pilgrimage, demonstrating that cultural and commercial cohesion does not require political unity',
-              'Political fragmentation completely destroyed Islamic civilization',
-              'Political unity was maintained throughout this period',
-              'The Islamic world had no political problems between 900 and 1450'
+              'Islamic civilization thrived despite fragmentation because scholarship, commerce and the hajj needed no single state',
+              'Political fragmentation destroyed Islamic civilization because no caliph could defend it after the Mongol sack of Baghdad',
+              'Islamic civilization stayed politically united because the Abbasid caliphs kept their authority until 1450',
+              'Islamic civilization declined steadily because Mongol rulers suppressed Arabic scholarship across the region'
             ],
             correctAnswer: 0,
-            explanation: 'This thesis earns points for: (1) acknowledging the reality of fragmentation (complexity), (2) arguing it did NOT undermine civilization (defensible claim), (3) providing specific counter-mechanisms (Arabic scholarship, commerce, Hajj), and (4) articulating a broader principle (cultural unity ≠ political unity). It sets up a nuanced essay rather than a simple narrative.'
+            explanation: 'This thesis earns points for: (1) acknowledging the reality of fragmentation (complexity), (2) arguing it did NOT undermine civilization (defensible claim), (3) providing specific counter-mechanisms (scholarship, commerce, the hajj), and (4) articulating a broader principle (cultural unity ≠ political unity). The other theses either deny the fragmentation or overstate the collapse.'
           },
           {
             question: 'What does the conversion of Mongol rulers in Persia and Central Asia to Islam (c. 1260–1295) demonstrate about Islamic civilization?',
             options: [
-              'Islamic civilization\'s cultural and institutional strength was powerful enough to absorb and convert its conquerors — the Mongols who destroyed Baghdad\'s political center ultimately adopted the civilization they had conquered',
-              'The Mongols converted to Islam before their invasions',
-              'Islam was forced upon Mongol rulers by surviving Abbasid leaders',
-              'Mongol conversion to Islam had no significant historical consequences'
+              'Its institutions were strong enough to absorb conquerors who had destroyed its political center',
+              'The Mongols had already converted to Islam before they invaded the Middle East',
+              'Surviving Abbasid leaders forced Islam on the Mongol khans as a condition of peace',
+              'Mongol conversion had little effect, since the khans kept ruling as before'
             ],
             correctAnswer: 0,
-            explanation: 'The Mongols\' conversion is a powerful AP example of civilizational resilience: a nomadic people who militarily conquered an advanced civilization were culturally absorbed by it. This pattern — where politically dominant groups adopt the culture of the politically subordinate — is called "reverse acculturation" and the AP exam rewards students who can identify and explain it.'
+            explanation: 'The Mongols\' conversion is a powerful AP example of civilizational resilience: a nomadic people who militarily conquered an advanced civilization were culturally absorbed by it. Conquerors adopting the culture of the people they rule is a recurring pattern (compare the Yuan and later the Qing adopting Chinese institutions), and the Il-Khans\' conversion reshaped Persian politics and culture.'
           }
         ]
       }

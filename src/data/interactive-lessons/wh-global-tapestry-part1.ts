@@ -65,24 +65,24 @@ Muslim rulers governing a predominantly Hindu population in South Asia:
           {
             question: 'Song Dynasty China is considered a model of economic and technological innovation primarily because it:',
             options: [
-              'Developed paper money, gunpowder, the compass, and movable-type printing while maintaining the world\'s largest economy',
-              'Conquered the largest empire in world history through military superiority',
-              'Established the first democratic government in Asia through popular elections',
-              'Completely isolated itself from foreign trade to protect domestic industries'
+              'Pioneered paper money, gunpowder weapons and movable type amid booming commerce',
+              'Sent treasure fleets that opened regular Song trade with East Africa and the Arabian ports',
+              'Abolished the examination system so that merchants could run the imperial government',
+              'Adopted Mongol administrative methods that united the steppe and the farming heartland'
             ],
             correctAnswer: 0,
-            explanation: 'The Song Dynasty was remarkable for its simultaneous advances in commerce (first paper money, advanced banking), technology (gunpowder, compass, printing), and urbanization (cities over 1 million people). These innovations spread along trade routes and eventually reached Europe, transforming global history.'
+            explanation: 'The Song Dynasty was remarkable for its simultaneous advances in commerce (first paper money, advanced banking), technology (gunpowder, compass, movable-type printing), and urbanization (cities of a million or more). The treasure fleets belong to the Ming (Zheng He, 1405–1433), the exams were expanded rather than abolished, and Mongol rule came only with the Yuan conquest.'
           },
           {
             question: 'The Delhi Sultanate is significant in AP World History primarily because it:',
             options: [
-              'Demonstrates how Islamic political rule and administration spread to South Asia while coexisting with Hindu culture and traditions',
-              'Was the first Hindu empire to conquer Central Asia',
-              'Established Buddhism as the dominant religion in India',
-              'Created a fully unified and stable government across all of South Asia'
+              'Shows Islamic rule and Persian-style administration spreading into South Asia alongside Hindu culture',
+              'Shows a Hindu dynasty from the Deccan uniting all of South Asia against Central Asian invaders',
+              'Shows Buddhist monasteries regaining royal patronage after centuries of decline in northern India',
+              'Shows Mongol khans ruling northern India directly as one more province of their Eurasian empire'
             ],
             correctAnswer: 0,
-            explanation: 'The Delhi Sultanate illustrates a key AP theme: cross-cultural interaction. Muslim rulers introduced Persian administrative practices and Islamic architecture, while the Hindu majority maintained their religious and social structures. This coexistence — sometimes peaceful, sometimes tense — shaped South Asian culture for centuries.'
+            explanation: 'The Delhi Sultanate illustrates a key AP theme: cross-cultural interaction. Muslim rulers introduced Persian administrative practices and Islamic architecture, while the Hindu majority maintained their religious and social structures. The Sultanate was a Muslim (not Hindu) state, it did not revive Buddhism, and it repeatedly repelled Mongol invasions rather than becoming a Mongol province.'
           }
         ]
       }
@@ -102,7 +102,7 @@ Muslim rulers governing a predominantly Hindu population in South Asia:
 | **Economy** | Trans-Saharan gold and salt trade; taxed trade passing through the empire |
 | **Religion** | Islam adopted by ruling class; blended with local animist traditions |
 | **Education** | **Timbuktu** — major center of Islamic learning; University of Sankore; attracted scholars from across the Muslim world |
-| **Decline** | Songhai Empire replaced Mali as dominant West African power by ~1450 |
+| **Decline** | Mali weakened in the 1400s; Songhai overtook it as the dominant West African power after c. 1464 (Sunni Ali) |
 
 ### The Byzantine Empire (330–1453)
 
@@ -183,10 +183,10 @@ Use the exact historical term.
           {
             question: 'Which comparison BEST illustrates a key difference between Song Dynasty China and medieval Europe during the period 1200–1450?',
             options: [
-              'China\'s centralized government selected officials through meritocratic exams, while European power was fragmented among feudal lords based on hereditary status',
-              'Europe was more technologically advanced than China in every field',
-              'China had no cities while Europe was highly urbanized',
-              'Both regions had identical political and economic structures'
+              'China selected officials through exams, while European power was split among hereditary feudal lords',
+              'China relied on hereditary nobles to govern, while European kings staffed offices through examinations',
+              'China\'s emperors shared power with elected councils, while European monarchs ruled as absolute autocrats',
+              'China\'s economy was mostly pastoral and nomadic, while Europe\'s rested on great commercial cities'
             ],
             correctAnswer: 0,
             explanation: 'This is a classic AP comparison: Song China had a centralized imperial bureaucracy staffed through competitive exams (merit-based), while Europe\'s feudal system distributed power among hereditary lords with weak central monarchies. This difference had profound effects on economic development, social mobility, and technological innovation.'
@@ -194,13 +194,13 @@ Use the exact historical term.
           {
             question: 'Mansa Musa\'s hajj (1324) is historically significant primarily because it:',
             options: [
-              'Demonstrated the wealth and sophistication of West African civilization to the broader Islamic world, challenging later European assumptions about Africa',
-              'Converted all of West Africa to Christianity',
-              'Established the first European trading posts in West Africa',
-              'Caused the permanent collapse of the Egyptian economy'
+              'Displayed Mali\'s gold wealth to the Islamic world and put West Africa on Mediterranean maps',
+              'Converted the Mali court to Islam for the first time and ended the region\'s ties with Egypt',
+              'Opened the first direct sea route from West Africa to Mecca around the Horn of Africa',
+              'Began the trans-Saharan slave trade by sending thousands of captives to Cairo\'s markets'
             ],
             correctAnswer: 0,
-            explanation: 'Mansa Musa\'s pilgrimage to Mecca — reportedly with 60,000 attendants and enormous quantities of gold — put Mali on European and Islamic maps. It demonstrated that sub-Saharan Africa had wealthy, complex states, and it strengthened trade and intellectual connections between West Africa and the broader Islamic world.'
+            explanation: 'Mansa Musa\'s pilgrimage to Mecca — reportedly with thousands of attendants and enormous quantities of gold — put Mali on European and Islamic maps (it appears on the 1375 Catalan Atlas). Mali\'s rulers were already Muslim, the journey went overland through Cairo rather than by sea, and trans-Saharan slave trading long predated him.'
           }
         ]
       }

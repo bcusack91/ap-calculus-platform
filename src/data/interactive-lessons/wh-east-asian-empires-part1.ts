@@ -5,7 +5,7 @@ export const whEastAsianEmpiresPart1Data = {
       id: 'wheae1-intro',
       type: 'text' as const,
       content: `
-# 🌍 East Asian Empires (c. 1200–1450)
+# 🌏 East Asian Empires: Background (c. 1200–1450)
 
 **Part 1 of 7 — China, Japan, Korea & Southeast Asia**
 
@@ -34,7 +34,7 @@ export const whEastAsianEmpiresPart1Data = {
 |------------|-------------|
 | **Neo-Confucianism** | Zhu Xi blended Confucianism with Buddhist/Daoist elements; emphasized self-cultivation, social harmony, and hierarchical relationships |
 | **Civil service exams** | Expanded access (theoretically open to all men); tested Confucian classics; created scholar-gentry elite |
-| **Economic revolution** | First paper money (*jiaozi*); joint-stock companies; massive iron/steel production |
+| **Economic revolution** | Early state-issued paper money (*jiaozi*, government notes from the 1020s); joint-stock companies; massive iron/steel production |
 | **Agriculture** | Champa rice (fast-growing variety from Vietnam); population boom; southern China became economic center |
 | **Women's status** | Foot binding spread among elites; Neo-Confucian emphasis on female subordination; women\'s property rights declined |
 
@@ -52,12 +52,12 @@ export const whEastAsianEmpiresPart1Data = {
 
 | Feature | Details |
 |---------|---------|
-| **Restoration** | Restored Chinese rule; revived Confucian traditions; rebuilt the Great Wall |
-| **Zheng He voyages** (1405–1433) | Massive treasure fleets (300+ ships) explored Indian Ocean; reached East Africa; demonstrated Chinese power |
-| **Ended exploration** | After 1433, Ming emperors ended voyages; turned inward; focused on internal threats (Mongols) |
+| **Restoration** | Restored Chinese rule; revived Confucian traditions; strengthened northern frontier defenses (most surviving Great Wall masonry dates from the 1500s) |
+| **Zheng He voyages** (1405–1433) | Massive treasure fleets (roughly 250–317 vessels on the first voyage) explored Indian Ocean; reached East Africa; demonstrated Chinese power |
+| **Ended exploration** | After 1433, Ming emperors ended the state voyages and restricted private sea trade (the ban was relaxed in 1567); focused on the northern frontier (Mongols) |
 | **Culture** | Porcelain production peaked; Forbidden City built in Beijing; Neo-Confucian orthodoxy |
 
-> ⚠️ **AP Alert:** Zheng He's voyages vs. European exploration is a classic AP comparison. Zheng He sailed earlier, with much larger ships, but China **chose to stop** exploring. Europe\'s fragmented, competitive states drove continued expansion. This contrast helps explain why Europe, not China, colonized the world.
+> ⚠️ **AP Alert:** Zheng He's voyages vs. European exploration is a classic AP comparison. Zheng He sailed earlier, with much larger ships, but the Ming court **chose to stop** the state voyages (private Chinese trade continued). Europe\'s fragmented, competitive states drove continued expansion. This contrast helps explain why Europe, not China, colonized the world.
       `
     },
     {
@@ -71,21 +71,21 @@ export const whEastAsianEmpiresPart1Data = {
           {
             question: 'The Ming Dynasty\'s decision to end Zheng He\'s voyages after 1433 is historically significant because it:',
             options: [
-              'Demonstrates how political decisions, not just capability, shaped global history — China voluntarily withdrew from maritime exploration that later defined European power',
-              'Proved that maritime exploration was economically unprofitable for all civilizations',
-              'Was caused by military defeat at the hands of European navies',
-              'Had no long-term consequences for global power dynamics'
+              'Shows that court politics rather than any lack of ability ended China\'s state voyages',
+              'Shows ocean voyages to be unprofitable for every state that attempted them in this era',
+              'Shows the effect of a naval defeat inflicted on the Ming fleet by Portuguese warships',
+              'Shows Mongol rulers abandoning the sea after their failed invasions of Japan'
             ],
             correctAnswer: 0,
-            explanation: 'China had the world\'s most advanced navy in 1433 — far larger and more sophisticated than anything in Europe. But Confucian officials saw the voyages as wasteful and the Ming court shifted resources to defending against Mongol threats. This voluntary withdrawal left the Indian Ocean open for Portuguese and then other European powers, fundamentally shaping the next 500 years of history.'
+            explanation: 'China had the world\'s largest navy in 1433 — far larger than anything in Europe. But Confucian officials saw the voyages as wasteful, and the Ming court shifted resources to the northern frontier against the Mongols. The state voyages ended, though private trade continued and the sea ban was relaxed in 1567. The Portuguese did not reach the Indian Ocean until 1498, and the failed invasions of Japan were the Yuan\'s, not the Ming\'s.'
           },
           {
             question: 'Under the Yuan Dynasty, Kublai Khan used non-Chinese administrators primarily because:',
             options: [
-              'He wanted to prevent ethnically Chinese officials from gaining enough power to organize resistance against Mongol rule',
-              'There were no educated Chinese people available for government service',
-              'Non-Chinese administrators were always more competent than Chinese scholars',
-              'The Confucian examination system had never existed before Mongol rule'
+              'To keep Chinese officials from gaining enough power to organize resistance to Mongol rule',
+              'Because few Chinese in the empire had the literacy needed for government service',
+              'Because Central Asian officials had passed the Confucian exams with higher marks',
+              'Because Chinese scholars had refused all office under every dynasty before the Yuan'
             ],
             correctAnswer: 0,
             explanation: 'The Mongols were a tiny minority ruling a vast Chinese population. By placing Central Asians and other non-Chinese in key positions, Kublai Khan reduced the risk of Chinese elites mobilizing against Mongol rule. He also suspended the civil service examinations for a time, further marginalizing the Chinese scholar-gentry class.'
@@ -106,7 +106,7 @@ export const whEastAsianEmpiresPart1Data = {
 | **Emperor** | Ceremonial figurehead; real power held by military rulers |
 | **Shogun** | Supreme military commander; ruled through a bakufu (military government) |
 | **Daimyo** | Regional lords who controlled territories; commanded samurai |
-| **Samurai** | Warrior class bound by **bushido** (code of honor: loyalty, martial skill, honor, ritual suicide — seppuku) |
+| **Samurai** | Warrior class with ideals of loyalty, martial skill and honor, including ritual suicide (seppuku); these were systematized as **bushido** mainly in the later Edo period |
 | **Peasants** | 80%+ of population; rice farmers; lowest status but economically essential |
 
 **Key comparison:** Japan's feudal system resembled European feudalism (decentralized, land-based, warrior elites) but developed independently.
@@ -115,14 +115,14 @@ export const whEastAsianEmpiresPart1Data = {
 
 | Feature | Details |
 |---------|---------|
-| **Koryo Dynasty** (918–1392) | Adopted Chinese civil service exams, Buddhism, Confucianism; invented **metal movable type** (before Gutenberg!) |
+| **Koryo Dynasty** (918–1392) | Adopted Chinese civil service exams, Buddhism, Confucianism; printed with **metal movable type** (the *Jikji*, 1377, is the oldest surviving such book, decades before Gutenberg) |
 | **Mongol influence** | Korea became a Mongol vassal state; maintained some autonomy |
 | **Choson Dynasty** (1392–1897) | Neo-Confucian reforms; **hangul** alphabet invented (1443) to increase literacy |
 
 > **AP Comparison Anchor**
 
 - **Khmer Empire** (Cambodia) — **Angkor Wat**; Hindu-Buddhist temple complex; massive hydraulic engineering (reservoirs)
-- **Srivijaya** (Indonesia) — Buddhist maritime empire controlling the Strait of Malacca; key to Indian Ocean trade
+- **Srivijaya** (Sumatra) — Buddhist maritime empire that controlled the Strait of Malacca (c. 650–1200s); faded in the 1200s as Majapahit and later Malacca rose
 - **Majapahit** (Java) — Hindu-Buddhist kingdom; controlled spice trade; later Islamized through merchant contact
 - **Dai Viet** (Vietnam) — Confucian governance adopted from China; resisted Chinese political control while accepting cultural influence
       `
@@ -147,7 +147,7 @@ export const whEastAsianEmpiresPart1Data = {
             explanation: 'Zheng He\'s voyages (1405–1433) demonstrated China\'s unmatched naval power before the Ming court chose to end exploration. Ming records describe treasure ships far larger than any European vessel of the time, though historians debate their exact size.'
           },
           {
-            question: 'What Japanese warrior code emphasized loyalty, honor, martial skill, and ritual suicide (seppuku)?',
+            question: 'What term, systematized mainly in the later Edo period, names the samurai ideal of loyalty, honor, martial skill and ritual suicide (seppuku)?',
             options: [
               'Bushido',
               'Shinto',
@@ -155,7 +155,7 @@ export const whEastAsianEmpiresPart1Data = {
               'Sakoku'
             ],
             correctAnswer: 0,
-            explanation: 'Bushido — "the way of the warrior" — shaped Japanese warrior culture for centuries and still influences Japanese society today.'
+            explanation: 'Bushido — "the way of the warrior" — names ideals rooted in medieval samurai culture, but the term and its systematic code were developed mainly in the peaceful Edo period (1600–1868), so it should not be read back as a fixed code for 1185–1600. Shinto is Japan\'s native religion, Neo-Confucianism a Chinese philosophy, and sakoku a later label for Tokugawa maritime restrictions.'
           },
           {
             question: 'What Korean alphabet, invented in 1443, was designed to increase literacy among common people?',
@@ -210,10 +210,10 @@ export const whEastAsianEmpiresPart1Data = {
           {
             question: 'Which comparison BEST captures the relationship between China and other East Asian societies during 1200–1450?',
             options: [
-              'Japan, Korea, and Vietnam selectively adopted Chinese cultural elements (Confucianism, writing, governance models) while maintaining distinct political structures and cultural identities',
-              'China militarily conquered and directly governed Japan, Korea, and Vietnam throughout this period',
-              'East Asian societies had no contact with China and developed entirely independently',
-              'Japan, Korea, and Vietnam completely replaced their own cultures with Chinese culture'
+              'Japan, Korea and Vietnam borrowed Chinese ideas selectively but kept their own states',
+              'China conquered and directly governed Japan, Korea and Vietnam for most of the period',
+              'Japan, Korea and Vietnam had little contact with China and developed on their own',
+              'Japan, Korea and Vietnam replaced their own cultures with Chinese culture entirely'
             ],
             correctAnswer: 0,
             explanation: 'The concept of the "Sinosphere" (Chinese cultural sphere) is key: Korea adopted civil service exams and Neo-Confucianism but also invented hangul. Japan borrowed Chinese writing and Buddhism but developed a feudal political system unlike China\'s centralized bureaucracy. Vietnam adopted Confucian governance while fiercely resisting Chinese political control. This pattern of selective borrowing is a crucial AP concept.'
@@ -221,13 +221,13 @@ export const whEastAsianEmpiresPart1Data = {
           {
             question: 'An AP question compares Japanese feudalism with European feudalism. The MOST accurate statement would be:',
             options: [
-              'Both developed decentralized systems with warrior elites (samurai/knights), regional lords (daimyo/lords), and peasant farmers, though they emerged independently with distinct cultural expressions',
-              'Japanese feudalism was directly borrowed from European feudalism through trade contacts',
-              'The two systems were completely dissimilar with no comparable features',
-              'Both systems were centralized monarchies with powerful kings controlling all territory'
+              'Both had decentralized warrior elites and lords but emerged independently',
+              'Japan borrowed its feudal order from Europe through Portuguese trade contacts',
+              'Both were centralized monarchies in which kings controlled all of the land',
+              'The two systems shared no features worth comparing in an AP essay'
             ],
             correctAnswer: 0,
-            explanation: 'Japanese and European feudalism are a classic AP comparison: both featured decentralized power, military aristocracies bound by codes of honor (bushido/chivalry), hereditary land control, and a large peasant class. However, they developed independently — demonstrating how similar political structures can emerge in different civilizations facing similar conditions (weak central government, need for local military defense).'
+            explanation: 'Japanese and European feudalism are a classic AP comparison: both featured decentralized power, military aristocracies with ideals of loyalty and honor, hereditary land control, and a large peasant class. However, they developed independently (the Portuguese did not reach Japan until 1543) — showing how similar political structures can emerge in different civilizations facing similar conditions (weak central government, need for local military defense).'
           }
         ]
       }

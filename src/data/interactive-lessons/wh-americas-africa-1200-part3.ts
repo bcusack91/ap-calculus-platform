@@ -23,10 +23,10 @@ export const whAmericasAfrica1200Part3Data = {
           {
             question: 'The Inca mit\'a labor system was significant because:',
             options: [
-              'It created a state labor draft requiring communities to contribute labor (not money) for state projects — building the road network, temples, and agricultural terraces that underpinned Inca power without requiring a monetary economy',
-              'It was a monetary taxation system identical to European feudal taxation',
-              'It only applied to Inca nobles, not conquered peoples',
-              'It was a voluntary charity system with no compulsory element',
+              'It drafted community labor instead of money to build the roads and terraces behind Inca power',
+              'It was a money tax on harvests, much like the coin dues paid by peasants on medieval European manors',
+              'It applied only to Inca nobles, who owed labor while conquered peoples paid no obligations at all',
+              'It was a voluntary charity in which families donated food to temples, with no state requirement at all'
             ],
             correctAnswer: 0,
             explanation: 'The mit\'a labor system is the Inca\'s key administrative innovation for AP. Rather than taxing money (which the Inca economy did not use), the state extracted labor: communities built roads, staffed armies, worked state farms. The roads built by mit\'a labor then enabled the rapid movement of armies and goods that maintained the empire.'
@@ -34,10 +34,10 @@ export const whAmericasAfrica1200Part3Data = {
           {
             question: 'The Inca quipu system (knotted string records) demonstrates:',
             options: [
-              'That sophisticated record-keeping and administrative organization is possible without written language — the Inca managed a 2,500-mile empire using knotted string records that encoded numerical and possibly narrative information',
-              'That the Inca had no administrative organization',
-              'That writing systems are universally required for state-level organization',
-              'That the Inca borrowed the quipu from Aztec civilization',
+              'That a large empire could keep detailed administrative records without a written language',
+              'That the Inca had no administrative organization and ruled through local chiefs alone',
+              'That writing is always required for states, so the quipu must have recorded a phonetic script',
+              'That the Inca borrowed the quipu from Aztec record-keepers during trade along the Pacific coast'
             ],
             correctAnswer: 0,
             explanation: 'The quipu challenges the assumption that writing is necessary for complex governance. Inca administrators (quipucamayocs) used knotted strings of different colors, knot types, and positions to record census data, tribute amounts, historical information, and possibly narrative content. The Inca empire\'s administrative sophistication was fully comparable to literate empires.'
@@ -100,10 +100,10 @@ Pizarro conquered a much larger Inca Empire with similar advantages:
           {
             question: 'The Inca road network\'s military significance was that it:',
             options: [
-              'Enabled rapid movement of armies from Cuzco to any point in the 2,500-mile empire within weeks rather than months, allowing the state to respond quickly to rebellions and project military force across vast Andean distances that would otherwise be impassable',
-              'Was only used for trade with no military applications',
-              'Was built by Inca nobility with no labor contribution from conquered peoples',
-              'Primarily served as a tourist attraction with no practical purpose',
+              'It let armies move quickly from Cuzco across the Andes to crush rebellions and project power far away',
+              'It was reserved for trade caravans, and Inca law banned soldiers from marching on the roads',
+              'It was built only by Inca nobles, with no labor required from any of the conquered peoples',
+              'It linked the Inca by land to the Aztec Empire, allowing joint campaigns against common rivals'
             ],
             correctAnswer: 0,
             explanation: 'The road network\'s military and administrative functions were inseparable: roads that moved trade goods also moved armies, and armies that built roads also depended on them for supply. The chasquis (relay runners) carried messages the length of the empire in days, enabling imperial governance of what would otherwise be impossibly large territory.'
@@ -111,10 +111,10 @@ Pizarro conquered a much larger Inca Empire with similar advantages:
           {
             question: 'The Spanish capture of Inca emperor Atahualpa at Cajamarca (1532) was strategically decisive because:',
             options: [
-              'In a system of divine kingship where the Sapa Inca was the living son of the Sun God with absolute authority, capturing the ruler paralyzed imperial decision-making — the army didn\'t know whether to attack (risking the emperor\'s execution) or surrender',
-              'The Inca army simply had no weapons',
-              'Atahualpa voluntarily surrendered because he admired Spanish culture',
-              'The capture had no significant impact on the Inca state',
+              'Under divine kingship, seizing the Sapa Inca paralyzed command of the empire\'s armies',
+              'The Inca army carried no weapons, so the small Spanish force met no armed resistance at all',
+              'Atahualpa surrendered willingly because he admired Spanish culture and wished to become Christian',
+              'It changed little, since the Inca state kept functioning normally under a newly chosen emperor'
             ],
             correctAnswer: 0,
             explanation: 'Cajamarca is one of history\'s most consequential ambushes: 168 Spaniards captured an emperor commanding 80,000+ soldiers by exploiting the political paralysis that came from divine kingship. The same centralized authority structure that made the Inca state efficient (one ruler with absolute authority) became its greatest vulnerability when that ruler was captured.'
@@ -122,10 +122,10 @@ Pizarro conquered a much larger Inca Empire with similar advantages:
           {
             question: 'Comparing Inca mit\'a labor to Aztec tribute, which statement best demonstrates AP analytical sophistication?',
             options: [
-              'Both systems extracted wealth from conquered peoples, but through different mechanisms reflecting different economic contexts: the Inca\'s labor draft (mit\'a) suited an Andean economy without money but with communal labor traditions, while the Aztec tribute system extracted goods and luxury items appropriate for a market-oriented Mesoamerican economy with long-distance commerce',
-              'The two systems were identical in every respect',
-              'The Inca system was inferior to the Aztec system',
-              'Neither empire extracted anything from conquered peoples',
+              'Both took wealth, but labor drafts fit a moneyless Andean economy and goods tribute fit Mesoamerican markets',
+              'Both systems were identical, since each empire collected goods and drafted labor in exactly the same way',
+              'The Inca system was simply inferior to the Aztec one, since tribute in goods was always a more advanced method',
+              'Neither empire took anything from conquered peoples, who governed and taxed themselves freely'
             ],
             correctAnswer: 0,
             explanation: 'This comparison demonstrates AP sophistication by explaining WHY the systems differed (different economic contexts: market vs. non-market) rather than just noting they were different. Recognizing that different societies develop different institutional forms based on their specific economic and environmental contexts is a high-level AP historical thinking skill.'
@@ -168,10 +168,10 @@ Pizarro conquered a much larger Inca Empire with similar advantages:
           {
             question: 'An AP LEQ compares the Aztec and Inca empires. Which thesis demonstrates the strongest historical analysis?',
             options: [
-              'While both the Aztec and Inca empires were large tributary states that fell to Spanish conquest, they employed fundamentally different administrative approaches reflecting their geographic and economic contexts: the Inca\'s direct administration through roads, mit\'a labor, and resettlement programs suited Andean geography, while the Aztec\'s tributary model with local autonomy suited Mesoamerica\'s more commercially integrated, urbanized economy',
-              'Both empires were identical in governance',
-              'The Aztec Empire was superior to the Inca in every respect',
-              'Geography had no impact on how these empires were organized',
+              'Although both fell to Spain, the Inca ruled directly through roads and mit\'a while the Aztecs took tribute from local rulers',
+              'Both empires governed in identical ways, while geography and economy played no part in shaping either of them',
+              'The Aztec Empire was superior to the Inca in every respect, while the Inca never built lasting institutions',
+              'Geography had no effect on either empire, since both ruled through the same tribute system of local rulers'
             ],
             correctAnswer: 0,
             explanation: 'This thesis earns full AP credit: acknowledges similarity (both tributary, both Spanish conquest), identifies meaningful difference (administrative approach), explains WHY they differed (geographic and economic contexts), and connects specific evidence (roads/mit\'a vs. local autonomy/tribute). AP rewards thesis statements that go beyond "they were similar and different" to explain the causes of the differences.'
@@ -179,10 +179,10 @@ Pizarro conquered a much larger Inca Empire with similar advantages:
           {
             question: 'For AP World History, the Inca and Aztec empires are most significant because they demonstrate that:',
             options: [
-              'Pre-Columbian Americas contained sophisticated, complex state societies with populations, urban centers, and administrative organizations comparable in scale to contemporary Asian and European civilizations — challenging Eurocentric assumptions about human development that portrayed the Americas as "uncivilized" before contact',
-              'Pre-Columbian Americans had no social organization beyond small bands',
-              'The Americas were isolated from global historical patterns entirely',
-              'Indigenous American civilizations were always inferior to European ones',
+              'The pre-Columbian Americas held complex states that rivaled Afro-Eurasian ones in scale and organization',
+              'Pre-Columbian Americans lived only in small bands without cities, states or organized religion',
+              'The Americas developed states only after Norse and Chinese voyagers introduced new political ideas',
+              'Indigenous American states were simple chiefdoms whose capitals held no more than a few thousand people each'
             ],
             correctAnswer: 0,
             explanation: 'This is the AP meta-point about the Americas: studying Aztec and Inca civilizations corrects the "empty continent" or "primitive peoples" narratives that justified European colonialism. Tenochtitlan with 200,000 people was larger than contemporary London; the Inca road network exceeded Rome\'s in total length. Understanding these achievements is essential for accurate AP World History analysis.'

@@ -32,10 +32,10 @@ export const whLandBasedEmpiresPart7Data = {
           {
             question: 'An AP SAQ asks: "Briefly explain ONE similarity in how two land-based empires maintained political power c. 1450-1750." Which response earns full credit?',
             options: [
-              'Both the Ottoman and Mughal empires created centralized administrative systems that bypassed traditional aristocracy: the Ottomans through the devshirme (collecting Christian boys for imperial service) and the Mughals through the mansabdar system (non-hereditary rank appointments), both producing loyal officials dependent on imperial favor rather than hereditary land rights',
-              'All land-based empires had identical governments',
-              'Neither empire had any systematic administrative structure',
-              'Only religious authority maintained political power in these empires'
+              'The Ottoman devshirme and Mughal mansabdar ranks both made officials depend on imperial favor, not inherited land',
+              'The Ottoman and Mughal empires both relied on hereditary nobles whose lands and offices passed from father to son',
+              'The Ottoman and Mughal empires both ruled through religious scholars who appointed each governor',
+              'The Ottoman and Safavid empires both drew officials from Chinese-style written exams held in the capital'
             ],
             correctAnswer: 0,
             explanation: 'This response earns full SAQ credit: names two specific empires, identifies a specific similarity (centralized administration bypassing aristocracy), provides specific evidence for each (devshirme and mansabdar), and explains the shared mechanism (imperial dependency). Three-part structure: claim + evidence for both + reasoning.'
@@ -43,10 +43,10 @@ export const whLandBasedEmpiresPart7Data = {
           {
             question: 'For an AP DBQ about land-based empires, a document showing a religious scholar praising an emperor\'s piety MOST directly supports which argument?',
             options: [
-              'That land-based empires systematically cultivated religious legitimation — using religious scholars\' public praise to construct ideological justifications for imperial authority that transcended mere military force',
-              'That land-based empires had no military power',
-              'That religious scholars controlled imperial policy',
-              'That military conquest was the only source of imperial legitimacy'
+              'That rulers cultivated religious endorsement to legitimize their authority beyond military force',
+              'That religious scholars, rather than emperors, actually set imperial policy in land-based empires',
+              'That the emperor was personally more pious than rival rulers, as the scholar reports',
+              'That military conquest was the sole source of imperial legitimacy in this period'
             ],
             correctAnswer: 0,
             explanation: 'Religious legitimation documents require careful AP sourcing: who wrote it (a religious scholar with incentive to praise the emperor), for what purpose (likely commissioned or expected), and what it shows (that emperors actively sought religious endorsement). AP DBQ analysis should use this document to support an argument about legitimation strategies rather than just accepting it as evidence of the emperor\'s actual piety.'
@@ -71,7 +71,7 @@ export const whLandBasedEmpiresPart7Data = {
 - **Shia Islam** — Branch of Islam; Safavid Empire made it state religion in Persia
 - **Queue** — Manchu hairstyle forced on Han Chinese; political submission symbol
 - **Dual appointments** — Qing system pairing Manchu and Han officials in each post
-- **Zamindar** — Mughal tax collectors (later became hereditary landowners under British rule)
+- **Zamindar** — Hereditary landholders who collected land tax for the Mughal state (not the ranked officials, who were mansabdars)
 
 > **Common AP Prompt Patterns**
 
@@ -103,21 +103,21 @@ export const whLandBasedEmpiresPart7Data = {
           {
             question: 'The best one-sentence definition of "gunpowder empires" for an AP essay is:',
             options: [
-              'The Ottoman, Safavid, and Mughal empires, which all used gunpowder military technology to conquer territory and centralize political power c. 1450-1750, though scholars note that gunpowder alone does not explain their rise — administrative innovation and religious legitimation were equally important',
-              'Any empire that ever used any gunpowder weapon',
-              'Empires that manufactured gunpowder for export as their primary economic activity',
-              'Exclusively European empires that used gunpowder to colonize non-European peoples'
+              'The Ottoman, Safavid and Mughal states that used firearms to conquer and centralize c. 1450-1750',
+              'Any state in any era that fielded gunpowder weapons, from Song China to Napoleon\'s France',
+              'States whose economies depended mainly on manufacturing gunpowder and saltpeter for export abroad',
+              'The European maritime empires that used cannon-armed ships to colonize Asia and the Americas after 1500'
             ],
             correctAnswer: 0,
-            explanation: 'This definition is AP-complete because it: (1) names the three specific empires, (2) specifies the mechanism (gunpowder for conquest and centralization), (3) provides the time period (1450-1750), AND (4) adds the critical qualification (gunpowder alone is insufficient — the term is somewhat reductive). AP essays earn complexity points when they demonstrate awareness of the limitations of common analytical categories.'
+            explanation: 'This definition is AP-ready because it names the three specific empires, specifies the mechanism (gunpowder for conquest and centralization) and gives the time period (1450-1750). A strong essay then adds the qualification that gunpowder alone does not explain their rise: administrative innovation and religious legitimation were equally important, so the term is somewhat reductive.'
           },
           {
             question: 'An AP LEQ compares how the Ottoman and Qing empires handled religious and ethnic diversity. What is the strongest thesis?',
             options: [
-              'Both empires used accommodation-based governance for non-dominant groups — the Ottomans through the millet system (religious community autonomy for Christians and Jews) and the Qing through cultural accommodation of Han Chinese (restoring Confucian exams while using dual appointments) — demonstrating that managing diversity through formal institutional accommodation was a common feature of successful large empire governance',
-              'Both empires practiced identical policies',
-              'Neither empire had any systematic approach to diversity',
-              'Religious persecution was the primary tool both empires used'
+              'Each accommodated subject groups through formal institutions, the Ottomans with millets and the Qing with shared posts',
+              'Each relied mainly on forced conversion, the Ottomans to Sunni Islam and the Qing to Tibetan Buddhism',
+              'The Ottomans tolerated religious minorities, but the Qing suppressed Han culture entirely after 1644',
+              'Neither empire had a systematic policy, leaving diversity to local officials and Ottoman governors'
             ],
             correctAnswer: 0,
             explanation: 'This thesis uses comparison to generate a principle: successful large empires developed formal institutional accommodations for non-dominant groups. It names specific mechanisms (millet vs. dual appointments/exam restoration), acknowledges the different forms (religious community autonomy vs. ethnic-administrative integration), and articulates a structural principle applicable beyond these two cases.'
@@ -125,10 +125,10 @@ export const whLandBasedEmpiresPart7Data = {
           {
             question: 'For an AP LEQ asking about religion\'s role in legitimating land-based empire authority, which complexity move earns the most credit?',
             options: [
-              'Acknowledging that while all major empires used religion for legitimation, they did so in contradictory ways — Akbar\'s multi-religious tolerance and Aurangzeb\'s Islamic orthodoxy both claimed religious legitimation for opposite policies, demonstrating that religion\'s role was politically flexible rather than doctrinally consistent',
-              'Arguing that religion had no role in imperial legitimation',
-              'Arguing that military force was the only legitimate source of imperial authority',
-              'Treating all religions as producing identical political consequences'
+              'Showing that Akbar\'s tolerance and Aurangzeb\'s orthodoxy both claimed religious legitimacy for opposite policies',
+              'Arguing that religion played no real role, since emperors ruled through military force and legitimacy came from victory',
+              'Treating all religions as producing the same political results, so religious legitimacy worked identically',
+              'Arguing that Aurangzeb\'s orthodoxy was the only true religious claim to legitimacy among the Mughals'
             ],
             correctAnswer: 0,
             explanation: 'This complexity move is excellent: it uses internal contradiction (Akbar and Aurangzeb both claiming legitimacy through religion despite opposite policies) to show that religion\'s role in legitimation was flexible and instrumentalized rather than fixed and principled. Showing that the same category (religion) could justify opposite behaviors demonstrates sophisticated historical thinking about how ideology functions in political power.'
@@ -177,10 +177,10 @@ Match each AP term to its correct definition.
           {
             question: 'An AP question asks: "How did the development of gunpowder empires in Asia compare to the development of European overseas empires c. 1450-1750?" Which answer earns the most complexity credit?',
             options: [
-              'While Asian land-based empires used gunpowder to conquer contiguous territory through overland expansion, European states used the same technology (plus maritime navigation) for overseas colonial expansion — both building powerful centralized states, but through different geographic strategies with different long-term consequences (land empire vs. maritime empire)',
-              'Asian and European empires were identical in every respect',
-              'European empires were superior because they used gunpowder and Asian empires did not',
-              'Asian empires never expanded territory; only European empires did'
+              'Asian empires used gunpowder to expand overland, while Europeans paired it with ships to expand overseas',
+              'Asian rulers never mastered gunpowder weapons, while European states used them to win overseas colonies everywhere',
+              'Asian and European empires followed identical paths, each using gunpowder to expand overland across Eurasia',
+              'European empires expanded overseas, while Asian gunpowder empires never added territory after their founding'
             ],
             correctAnswer: 0,
             explanation: 'This comparison earns complexity by: comparing similar technologies (gunpowder) applied through different strategies (land vs. maritime), identifying why the strategies differed (geographic context — Eurasia is conquerable by cavalry; oceans require ships), and noting different long-term consequences (overland vs. global reach). AP rewards comparisons that go beyond "they were different" to explain WHY they were different.'
@@ -188,10 +188,10 @@ Match each AP term to its correct definition.
           {
             question: 'Which of the following AP arguments most effectively uses land-based empire evidence to support a broader historical principle?',
             options: [
-              'The consistent pattern of all four major land-based empires using gunpowder military force for conquest but then requiring accommodation-based administration for governance suggests that the same tools cannot accomplish both objectives — force conquers, but sustained governance requires legitimation through institutional accommodation of diverse populations',
-              'Military force was sufficient for both conquest and governance in all cases',
-              'Administrative accommodation was only practiced in European empires',
-              'Religion was irrelevant to imperial governance in all land-based empires'
+              'Four empires conquered with gunpowder yet governed through accommodation, so force wins land but cannot hold it alone',
+              'Four empires conquered and governed by force alone, so military power was enough to sustain their rule for many centuries',
+              'Four empires ruled without religious legitimation, so ideology was irrelevant to governing large states',
+              'Only European empires practiced administrative accommodation, so Asian rulers depended on terror'
             ],
             correctAnswer: 0,
             explanation: 'This argument earns maximum complexity because it derives a general principle from specific evidence: conquest ≠ governance, and the same tools (military force) cannot accomplish both. This principle applies beyond the specific empires to a broader theory of state-building. AP essays that use specific historical evidence to derive broader principles demonstrate the highest level of historical thinking.'
