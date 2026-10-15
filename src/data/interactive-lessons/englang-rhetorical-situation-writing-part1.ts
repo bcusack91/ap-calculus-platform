@@ -56,10 +56,10 @@ Claim: "Cities should expand public transit."
           {
             question: 'What is the most important first step before drafting an AP argument essay?',
             options: [
-              'Choose advanced vocabulary words',
-              'Identify audience, purpose, and exigence',
-              'Write the conclusion first',
-              'Add as many rhetorical devices as possible'
+              'Choose the most sophisticated vocabulary to signal expertise',
+              'Identify your audience, purpose and exigence',
+              'Draft the conclusion first so the essay has a destination',
+              'Gather as many rhetorical devices as possible to deploy'
             ],
             correctAnswer: 1,
             explanation: 'Rhetorical planning comes first. If you do not know who you are addressing and why, your evidence, tone, and organization will be unfocused. Effective writing starts with situational awareness.'
@@ -67,10 +67,10 @@ Claim: "Cities should expand public transit."
           {
             question: 'A student keeps the same thesis but shifts examples when writing for a different audience. This is best described as:',
             options: [
-              'Inconsistency',
+              'Audience pandering',
               'Audience adaptation',
-              'Logical fallacy',
-              'Plagiarism'
+              'Thesis inconsistency',
+              'Equivocation'
             ],
             correctAnswer: 1,
             explanation: 'Audience adaptation means selecting framing and evidence that resonate with a specific audience while preserving the core claim. This is a hallmark of effective rhetoric, not inconsistency.'
@@ -149,18 +149,18 @@ This signals nuanced engagement with real-world context.
         dropdowns: [
           {
             label: 'Writing to budget-conscious voters, the strongest transit argument is ___',
-            options: ['Cost savings and reduced congestion', 'Only moral duty language', 'Technical engineering details only', 'No evidence needed']
+            options: ['Cost savings and reduced congestion', 'Moral duty to future generations', 'Detailed engineering specifications', 'Historical background on rail lines']
           },
           {
             label: 'If your audience is skeptical, an effective tone is often ___',
-            options: ['Measured and fair-minded', 'Mocking and dismissive', 'Overly dramatic', 'Purely sentimental']
+            options: ['Measured and fair-minded', 'Mocking and dismissive', 'Urgent and highly alarmed', 'Warm and sentimental']
           },
           {
             label: 'An essay with no discussion of why the issue matters now is weak in ___',
-            options: ['Exigence/context', 'Grammar', 'Word count', 'Citation style']
+            options: ['Exigence', 'Evidence', 'Organization', 'Diction']
           }
         ],
-        correctAnswers: ['Cost savings and reduced congestion', 'Measured and fair-minded', 'Exigence/context'],
+        correctAnswers: ['Cost savings and reduced congestion', 'Measured and fair-minded', 'Exigence'],
         hint1: 'Match argument to what voters prioritize.',
         hint2: 'Skeptics respond better to balance than mockery.',
         hint3: 'Why now? That is exigence.',
@@ -192,10 +192,10 @@ This signals nuanced engagement with real-world context.
           {
             question: 'A student writes an argument full of highly technical economic jargon for a general public audience. What is the biggest rhetorical issue?',
             options: [
-              'Too much logos',
-              'Audience mismatch undermining accessibility and persuasion',
-              'Too many transitions',
-              'Lack of thesis'
+              'An overreliance on logos that leaves no room for pathos',
+              'A mismatch between the diction and what the audience knows',
+              'A shortage of transitions linking the economic claims',
+              'Technical terms that make the audience doubt the writer\'s expertise'
             ],
             correctAnswer: 1,
             explanation: 'Even strong information fails if the audience cannot process it. Effective rhetoric requires matching diction and explanation level to audience knowledge and expectations.'
@@ -203,13 +203,13 @@ This signals nuanced engagement with real-world context.
           {
             question: 'Which opening best demonstrates awareness of exigence?',
             options: [
-              '"Pollution has existed for a long time."',
-              '"In the past month alone, two local water advisories have left 40,000 residents without safe tap water, making infrastructure reform urgent."',
-              '"This essay will discuss water."',
-              '"People have opinions about infrastructure."'
+              '"Clean water has been a concern for communities since the earliest cities were built."',
+              '"Two boil-water advisories this month have left 40,000 residents without safe tap water."',
+              '"Water infrastructure is an important topic that deserves careful discussion by all."',
+              '"Many experts have offered differing opinions about how to fund water infrastructure."'
             ],
             correctAnswer: 1,
-            explanation: 'This opening establishes immediate stakes, specific context, and urgency. It gives a clear reason the argument matters now, which is exactly what exigence does.'
+            explanation: 'This opening establishes immediate stakes with a specific, recent event and a concrete number of people affected. It gives a clear reason the argument matters now, which is exactly what exigence does. The other openings offer history, a general statement of importance, or a survey of opinion, none of which shows why the issue is urgent today.'
           }
         ]
       }

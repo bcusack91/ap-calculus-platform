@@ -50,21 +50,21 @@ The strong version is concrete, specific, and actionable.
           {
             question: 'Which sentence shows strongest AP writing style?',
             options: [
-              '"This thing is kind of bad in lots of ways for many reasons."',
+              '"Flooding is an extremely serious and important issue that really affects a lot of people in many different ways today."',
               '"Given rising flood risk and repeated infrastructure failures, the city should prioritize stormwater upgrades in vulnerable neighborhoods."',
-              '"There are issues and stuff to discuss."',
-              '"People have opinions about this topic."'
+              '"In conclusion, it is abundantly clear that something truly must be done about flooding and infrastructure before it is too late for everyone."',
+              '"The city\'s stormwater system, built decades ago, has experienced numerous failures, and many residents have complained about it."'
             ],
             correctAnswer: 1,
-            explanation: 'This sentence is specific, precise, and policy-oriented. It identifies conditions (flood risk, failures) and proposes action (prioritize upgrades), demonstrating rhetorical control and clarity.'
+            explanation: 'This sentence is specific, precise, and policy-oriented. It identifies conditions (flood risk, failures) and proposes action (prioritize upgrades), demonstrating rhetorical control and clarity. The others are vague, rely on empty intensifiers, or describe a problem without making any claim about it.'
           },
           {
             question: 'What is the best reason to vary sentence length in an AP essay?',
             options: [
-              'To appear sophisticated without changing meaning',
-              'To control pacing, emphasis, and reader attention',
-              'To avoid all short sentences',
-              'Because AP forbids simple sentences'
+              'To seem sophisticated without changing what is said',
+              'To control pacing and emphasis',
+              'To avoid short sentences, which readers see as simplistic',
+              'To meet a rule that AP essays include varied sentences'
             ],
             correctAnswer: 1,
             explanation: 'Sentence variation is a rhetorical tool. Longer sentences can develop nuance; shorter ones can emphasize key judgments. Variation should serve meaning, not decoration.'
@@ -141,18 +141,18 @@ Strong: "This pattern matters because it concentrates financial risk in communit
         dropdowns: [
           {
             label: 'Best replacement for "people are affected" in a transit essay:',
-            options: ['Low-income commuters face longer travel times and reduced job access', 'Stuff happens to everyone', 'People have feelings', 'Things are different now']
+            options: ['Low-income commuters lose access to jobs', 'Many residents are affected in various ways', 'Society as a whole feels the impact deeply', 'Transit users experience significant effects']
           },
           {
             label: 'A short sentence after two long sentences typically creates ___',
-            options: ['Emphasis and punch', 'Confusion only', 'Less clarity always', 'No effect']
+            options: ['Emphasis', 'Confusion', 'Monotony', 'Detachment']
           },
           {
             label: 'For AP argument writing, style should be ___',
-            options: ['Purposeful and audience-aware', 'Decorative and vague', 'Overly complex at all times', 'Emotionally flat']
+            options: ['Purposeful and audience-aware', 'Ornate enough to impress any reader', 'Complex in every sentence', 'Neutral and impersonal']
           }
         ],
-        correctAnswers: ['Low-income commuters face longer travel times and reduced job access', 'Emphasis and punch', 'Purposeful and audience-aware'],
+        correctAnswers: ['Low-income commuters lose access to jobs', 'Emphasis', 'Purposeful and audience-aware'],
         hint1: 'Specific stakeholders and impacts.',
         hint2: 'Length contrast highlights key point.',
         hint3: 'Style serves persuasion, not ornament.',
@@ -184,21 +184,21 @@ Strong: "This pattern matters because it concentrates financial risk in communit
           {
             question: 'A draft says: "There are many ways this is bad and people should fix it." Which revision best improves style and argument quality?',
             options: [
-              '"This is bad."',
-              '"Because repeated lead-pipe failures contaminate drinking water, the city should prioritize replacement in high-risk neighborhoods within a two-year timeline."',
-              '"People should think about this issue seriously."',
-              '"The issue has many sides and complexities and things."'
+              '"This is a bad problem because it is bad, and people really need to fix it as soon as they can."',
+              '"Because lead-pipe failures contaminate drinking water, the city should replace pipes in high-risk neighborhoods within two years."',
+              '"Many people believe that this serious issue deserves careful thought from everyone in the community."',
+              '"The issue is complex, with many sides, complexities, and different things for people to consider."'
             ],
             correctAnswer: 1,
-            explanation: 'This revision is specific, causal, and actionable. It names the mechanism (lead-pipe failures), consequence (contamination), and policy action (timeline-based replacement).'
+            explanation: 'This revision is specific, causal, and actionable. It names the mechanism (lead-pipe failures), the consequence (contamination), and a policy action with a timeline (replacement within two years). The other revisions stay vague, reason in a circle, or gesture at complexity without saying anything concrete.'
           },
           {
             question: 'Why does a controlled, precise style improve AP scores?',
             options: [
-              'It replaces the need for evidence',
-              'It helps readers follow reasoning and signals rhetorical competence',
-              'It guarantees sophistication automatically',
-              'It allows grammatical errors'
+              'It can stand in for evidence when the reasoning is already clear',
+              'It helps readers follow the reasoning and shows competence',
+              'It earns the sophistication point automatically on any essay',
+              'It matters more than the thesis in determining the score'
             ],
             correctAnswer: 1,
             explanation: 'Precise style clarifies claims and analysis. AP readers reward prose that communicates reasoning effectively and demonstrates intentional rhetorical choices.'

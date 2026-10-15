@@ -179,10 +179,10 @@ Your job: evaluate both rhetorical effectiveness and reasoning quality.
           {
             question: 'A speech claims: "Crime rose after bike lanes were installed, so bike lanes cause crime." Which evaluation is strongest?',
             options: [
-              'Valid causal claim due to chronological order',
-              'Post hoc fallacy: temporal sequence alone does not establish causation',
-              'Ad hominem fallacy',
-              'Appeal to popularity'
+              'A valid causal claim, since the crime rise came after the lanes',
+              'A post hoc fallacy, since sequence does not prove causation',
+              'An ad hominem fallacy, since it attacks cyclists rather than ideas',
+              'A slippery slope, since it predicts that crime will keep rising'
             ],
             correctAnswer: 1,
             explanation: 'The argument assumes causation from sequence only. Many confounding variables could explain crime changes. Without controlled evidence, causal inference is invalid.'
@@ -190,10 +190,10 @@ Your job: evaluate both rhetorical effectiveness and reasoning quality.
           {
             question: 'Which revision best fixes a false dilemma?',
             options: [
-              'Make language more emotional',
+              'Make the two options sound more emotionally vivid',
               'Acknowledge multiple alternatives and evaluate tradeoffs',
-              'Add a personal insult',
-              'Repeat the binary more strongly'
+              'Attack the credibility of people who disagree',
+              'Restate the two options more forcefully'
             ],
             correctAnswer: 1,
             explanation: 'False dilemmas collapse complexity into two options. Fixing them requires presenting plausible additional options and reasoning through comparative merits.'

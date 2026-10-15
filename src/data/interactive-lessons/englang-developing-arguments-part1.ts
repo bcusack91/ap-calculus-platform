@@ -60,10 +60,10 @@ Use 2-3 core reasons:
           {
             question: 'What most distinguishes a developed argument from a simple opinion?',
             options: [
-              'Longer sentences',
-              'Evidence, analysis, and qualification that build a coherent line of reasoning',
-              'Stronger emotional language only',
-              'More rhetorical questions'
+              'Longer sentences and more formal, academic-sounding vocabulary throughout',
+              'Evidence and analysis that build a coherent line of reasoning',
+              'Stronger emotional language that conveys conviction',
+              'A confident tone that avoids any qualification'
             ],
             correctAnswer: 1,
             explanation: 'Argument development requires support and reasoning progression: claim -> evidence -> analysis -> qualification. Opinion alone lacks this structure.'
@@ -71,10 +71,10 @@ Use 2-3 core reasons:
           {
             question: 'Why does qualification improve argument quality?',
             options: [
-              'It makes the thesis weaker by avoiding commitment',
+              'It weakens the thesis by letting the writer avoid commitment',
               'It acknowledges complexity and prevents overstatement',
-              'It removes need for evidence',
-              'It shifts focus away from audience'
+              'It removes the need to support the claim with evidence',
+              'It shifts the essay\'s focus from the claim to the audience'
             ],
             correctAnswer: 1,
             explanation: 'Qualification demonstrates intellectual honesty and nuance. It strengthens credibility by showing awareness of limits and exceptions rather than making absolute claims.'
@@ -149,18 +149,18 @@ Ask: If my argument is accepted, what follows?
         dropdowns: [
           {
             label: 'Best revision for "Testing is bad" thesis:',
-            options: ['Qualified claim balancing benefits and harms with policy direction', 'Add exclamation marks', 'Repeat "bad" three times', 'Remove thesis entirely']
+            options: ['A qualified claim with a policy direction', 'An absolute claim stated more forcefully', 'A rhetorical question about testing', 'A statement of how widespread testing is']
           },
           {
             label: 'If paragraph includes data but no explanation, the missing element is ___',
-            options: ['Commentary/analysis', 'Topic sentence', 'Grammar only', 'Audience']
+            options: ['Commentary', 'Topic sentence', 'Citation', 'Counterargument']
           },
           {
             label: 'A conclusion that projects policy and ethical consequences shows ___',
-            options: ['Argument development depth', 'Plot summary', 'Source paraphrase', 'Narrative exposition']
+            options: ['Depth of development', 'Restatement of thesis', 'Summary of evidence', 'Narrative exposition']
           }
         ],
-        correctAnswers: ['Qualified claim balancing benefits and harms with policy direction', 'Commentary/analysis', 'Argument development depth'],
+        correctAnswers: ['A qualified claim with a policy direction', 'Commentary', 'Depth of development'],
         hint1: 'Nuance + direction > blunt assertion.',
         hint2: 'Interpret what the data means.',
         hint3: 'Implications extend reasoning beyond recap.',
@@ -192,24 +192,24 @@ Ask: If my argument is accepted, what follows?
           {
             question: 'A student essay has clear thesis and examples but little analysis. Which revision most improves argument development?',
             options: [
-              'Add more examples without explanation',
-              'Insert commentary that explains how each example supports the thesis and acknowledges limitations',
-              'Use more emotional language',
-              'Cut the thesis'
+              'Add more examples so the thesis has broader support',
+              'Add commentary explaining how each example supports the thesis',
+              'Rewrite the thesis in more emotional, vivid language',
+              'Cut the thesis and let the examples speak for themselves'
             ],
             correctAnswer: 1,
-            explanation: 'The missing piece is analysis. Commentary and qualification turn examples into reasoning, which is essential for high-scoring development.'
+            explanation: 'The missing piece is analysis. Commentary that explains how each example supports the thesis turns examples into reasoning, which is essential for high-scoring development. More examples, a rewritten thesis, or no thesis at all would leave the same gap.'
           },
           {
             question: 'Which thesis is most development-ready?',
             options: [
-              '"Technology is bad."',
-              '"Although automation increases productivity in some sectors, labor policy must pair innovation with retraining protections to prevent concentrated worker displacement."',
-              '"Technology changes society."',
-              '"People disagree about automation."'
+              '"Technology is bad for society because it takes away jobs, ruins human connection, and makes everyone lazier than before."',
+              '"Although automation raises productivity in some sectors, labor policy must pair it with retraining to prevent worker displacement."',
+              '"Technology has changed society in many ways since the Industrial Revolution, and it will certainly keep changing society in many more ways in the future."',
+              '"People disagree about automation, with some seeing it as helpful and others seeing it as harmful to workers and their families."'
             ],
             correctAnswer: 1,
-            explanation: 'This thesis is specific, qualified, and policy-oriented. It contains built-in complexity, making it easier to develop with layered reasons and counterarguments.'
+            explanation: 'This thesis is specific, qualified, and policy-oriented. It contains built-in complexity, making it easier to develop with layered reasons and counterarguments. The others overgeneralize, state an undisputed fact, or report a disagreement without taking a side.'
           }
         ]
       }

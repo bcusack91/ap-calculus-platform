@@ -47,9 +47,9 @@ export const hgGlobalizationTradePart1Data = {
             question: 'According to Wallerstein World Systems Theory, periphery countries primarily:',
             options: [
               'Manufacture high-technology goods for export',
-              'Export raw materials to core countries at low prices',
-              'Control global financial institutions',
-              'Have the highest HDI scores'
+              'Export raw materials cheaply to core states',
+              'Control the major global financial institutions',
+              'Rank highest on the Human Development Index'
             ],
             correctAnswer: 1,
             explanation: 'Periphery countries are structurally disadvantaged: they export cheap raw materials to core countries, which add value through manufacturing and sell finished goods back at higher prices.'
@@ -138,10 +138,10 @@ export const hgGlobalizationTradePart1Data = {
           },
           {
             label: 'China building factories near ports with tax breaks for foreign companies has created ___',
-            options: ['Special Economic Zones (SEZs)', 'Free trade agreements', 'Commodity chains', 'Maquiladoras']
+            options: ['Special Economic Zones', 'Free trade agreements', 'Commodity chains', 'Maquiladoras']
           }
         ],
-        correctAnswers: ['Outsourcing', 'Neocolonialism', 'Special Economic Zones (SEZs)'],
+        correctAnswers: ['Outsourcing', 'Neocolonialism', 'Special Economic Zones'],
         hint1: 'Moving jobs to lower-cost countries.',
         hint2: 'Economic exploitation without formal political control.',
         hint3: 'Designated areas with relaxed regulations.',
@@ -172,10 +172,10 @@ export const hgGlobalizationTradePart1Data = {
           {
             question: 'Cocoa beans grown in Ghana are shipped to Switzerland, processed into chocolate, and sold worldwide at 20x the price Ghana received. This BEST illustrates:',
             options: [
-              'Fair trade practices benefiting producers',
-              'How commodity chains create unequal exchange between core and periphery',
-              'The success of free trade agreements',
-              'Ghana transitioning to a core country'
+              'Fair trade pricing that returns most value to growers',
+              'Unequal exchange along a core-periphery commodity chain',
+              'The success of free trade agreements for exporters',
+              'Ghana\'s transition from periphery to core status'
             ],
             correctAnswer: 1,
             explanation: 'The commodity chain adds most value during processing (in core countries), not during raw material extraction (in periphery countries). Ghana gets a tiny fraction of the final product value.'
@@ -183,10 +183,10 @@ export const hgGlobalizationTradePart1Data = {
           {
             question: 'China is often classified as a semi-periphery country because:',
             options: [
-              'It has a weak economy with no manufacturing',
+              'It has a weak economy with almost no manufacturing base',
               'It exports only raw materials like a periphery country',
-              'It has features of both core (manufacturing, technology) and periphery (cheap labor, exports)',
-              'It is a member of the EU'
+              'It has both core-like industry and periphery-like cheap labor',
+              'Its income per person already exceeds most core countries'
             ],
             correctAnswer: 2,
             explanation: 'Semi-periphery countries like China have characteristics of both: growing manufacturing and technology (core traits) alongside cheap labor and export-oriented production (periphery traits).'

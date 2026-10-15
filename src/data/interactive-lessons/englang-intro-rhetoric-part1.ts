@@ -55,10 +55,10 @@ A climate scientist writing a policy brief for Congress:
           {
             question: 'Which best defines rhetoric?',
             options: [
-              'Using complicated language to confuse an audience',
+              'Using ornate, complicated language to impress or confuse an audience',
               'The art of using language effectively to communicate and persuade',
-              'A type of formal debate with strict rules',
-              'The study of grammar and punctuation'
+              'A formal debate format in which speakers follow strict turn-taking rules',
+              'The study of grammar, punctuation, and correct sentence construction'
             ],
             correctAnswer: 1,
             explanation: 'Rhetoric is the study and practice of effective communication. It encompasses how speakers and writers make strategic choices about language, structure, and appeal to achieve their purpose with a specific audience.'
@@ -135,18 +135,18 @@ On the AP English Language exam, you will do BOTH.
         dropdowns: [
           {
             label: '"According to a Harvard study, students who read daily score 23% higher on standardized tests." This uses ___',
-            options: ['Logos (evidence and statistics)', 'Ethos (credibility)', 'Pathos (emotion)', 'Kairos (timeliness)']
+            options: ['Logos (data and statistics)', 'Ethos (speaker\'s character)', 'Pathos (shared feeling)', 'Kairos (timely moment)']
           },
           {
             label: '"As a board-certified physician with 15 years of experience..." This establishes ___',
-            options: ['Ethos (speaker credibility)', 'Logos (logical reasoning)', 'Pathos (emotional appeal)', 'Context']
+            options: ['Ethos (speaker credibility)', 'Logos (logical reasoning)', 'Pathos (emotional appeal)', 'Kairos (timely moment)']
           },
           {
             label: '"Every day, thousands of families face the heartbreaking choice between food and medicine." This uses ___',
-            options: ['Pathos (emotional appeal)', 'Logos (statistical evidence)', 'Ethos (authority)', 'Kairos (timely moment)']
+            options: ['Pathos (emotional appeal)', 'Logos (statistical evidence)', 'Ethos (speaker authority)', 'Kairos (timely moment)']
           }
         ],
-        correctAnswers: ['Logos (evidence and statistics)', 'Ethos (speaker credibility)', 'Pathos (emotional appeal)'],
+        correctAnswers: ['Logos (data and statistics)', 'Ethos (speaker credibility)', 'Pathos (emotional appeal)'],
         hint1: 'Statistics and study results = logic.',
         hint2: 'Credentials and experience = trust.',
         hint3: '"Heartbreaking" targets feelings.',
@@ -178,10 +178,10 @@ On the AP English Language exam, you will do BOTH.
           {
             question: 'A politician gives a speech at a veterans memorial on Memorial Day, citing her own military service and sharing stories of fallen soldiers. Which appeals is she PRIMARILY using?',
             options: [
-              'Logos only — she is presenting factual evidence',
-              'Ethos and pathos — her service establishes credibility while the stories evoke emotion',
-              'Pathos only — she is just making people cry',
-              'None — memorial speeches are not rhetorical'
+              'Logos from her service and ethos from the stories',
+              'Ethos from her own service and pathos from the soldiers\' stories',
+              'Pathos only, using both her service and the soldiers\' stories to stir grief',
+              'Kairos only, letting the holiday rather than her service or stories persuade'
             ],
             correctAnswer: 1,
             explanation: 'Her military service establishes ethos (she has firsthand credibility). Stories of fallen soldiers evoke pathos (grief, patriotism, gratitude). The Memorial Day context amplifies both appeals. Effective rhetoric layers multiple appeals.'
@@ -189,10 +189,10 @@ On the AP English Language exam, you will do BOTH.
           {
             question: 'Why is understanding the AUDIENCE essential to rhetorical analysis?',
             options: [
-              'The audience determines the word count',
-              'Writers make strategic choices based on the audience values, knowledge, and expectations',
-              'The audience writes the response',
-              'All audiences respond to rhetoric in the same way'
+              'The audience sets the length and format a writer is required to follow',
+              'Writers shape their choices to fit what that audience values and already knows',
+              'The audience\'s reaction is the only evidence of what a text means',
+              'Every audience responds to the same appeals in the same predictable way'
             ],
             correctAnswer: 1,
             explanation: 'Writers tailor their choices to their audience. A scientist writes differently for peer reviewers than for a general magazine. Understanding who the audience is reveals WHY the writer made specific rhetorical choices.'

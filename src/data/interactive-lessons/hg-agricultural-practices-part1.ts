@@ -56,8 +56,8 @@ export const hgAgriculturalPracticesPart1Data = {
             options: [
               'Humid tropical rainforests',
               'Arid and semi-arid grasslands',
-              'Dense urban areas',
-              'Temperate coastal regions'
+              'Densely farmed river deltas',
+              'Temperate coastal farming regions'
             ],
             correctAnswer: 1,
             explanation: 'Pastoral nomadism occurs in arid/semi-arid regions where farming is difficult — herders move livestock to follow water and grazing land (Sahel, Central Asia, Middle East).'
@@ -127,7 +127,7 @@ Johann von Thunen proposed that agricultural land use forms concentric rings aro
         dropdowns: [
           {
             label: 'In Von Thunen model, dairy farming is in ring 1 because ___',
-            options: ['Dairy products are perishable and expensive to transport', 'Cows need the most fertile soil', 'Dairy is the most profitable farming type', 'Government regulations require it']
+            options: ['Dairy products are perishable and costly to ship', 'Cows need the richest soil, found near the city', 'Milk keeps longer in transit than grain does', 'Dairy needs more land per farm than ranching']
           },
           {
             label: 'Wet rice intensive subsistence farming is primarily found in ___',
@@ -135,10 +135,10 @@ Johann von Thunen proposed that agricultural land use forms concentric rings aro
           },
           {
             label: 'Large-scale ranching occupies the outermost ring in Von Thunen model because ___',
-            options: ['Animals can walk to market and need lots of land', 'Ranching is the most profitable type', 'Ranchers prefer isolation', 'Government land grants are only available far from cities']
+            options: ['Animals can walk to market and need lots of land', 'Ranching earns the highest rent per acre of land', 'Cattle need the cooler climate of outer areas', 'Meat spoils more slowly than grain in transit']
           }
         ],
-        correctAnswers: ['Dairy products are perishable and expensive to transport', 'East and South Asia', 'Animals can walk to market and need lots of land'],
+        correctAnswers: ['Dairy products are perishable and costly to ship', 'East and South Asia', 'Animals can walk to market and need lots of land'],
         hint1: 'Think about what happens to milk in hot weather without refrigeration.',
         hint2: 'Where is rice the staple food crop?',
         hint3: 'Land is cheap far from the market.',
@@ -171,8 +171,8 @@ Johann von Thunen proposed that agricultural land use forms concentric rings aro
             options: [
               'Eliminating all agricultural activity near the highway',
               'Extending agricultural zones along the highway corridor',
-              'Having no effect on the spatial pattern',
-              'Reversing the order of the rings'
+              'Leaving the ring pattern unchanged because land is fixed',
+              'Reversing the order of the rings around the city'
             ],
             correctAnswer: 1,
             explanation: 'Highways reduce transportation costs, extending the distance that perishable goods can profitably travel. This stretches the rings along the transportation corridor, distorting the concentric pattern.'

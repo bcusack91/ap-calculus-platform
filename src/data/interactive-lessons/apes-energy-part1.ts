@@ -59,10 +59,10 @@ export const apesEnergyPart1Data = {
           {
             question: 'The Second Law of Thermodynamics states that:',
             options: [
-              'Energy can be created from nothing',
-              'Every energy transformation loses some energy as waste heat',
-              'Energy efficiency can reach 100%',
-              'Entropy decreases with each energy transfer'
+              'Energy can be created from nothing in a reaction',
+              'Every energy transformation loses some as waste heat',
+              'Energy efficiency can reach 100% with good design',
+              'Entropy decreases each time energy is transferred'
             ],
             correctAnswer: 1,
             explanation: 'The Second Law states that every energy transformation increases entropy — some useful energy is always converted to waste heat, making 100% efficiency impossible.'
@@ -138,18 +138,18 @@ export const apesEnergyPart1Data = {
         dropdowns: [
           {
             label: 'An incandescent bulb converts only ~5% of electricity to light. The rest is lost as heat. This illustrates ___',
-            options: ['Low energy efficiency and the Second Law of Thermodynamics', 'High energy efficiency', 'The First Law of Thermodynamics only', 'Cogeneration']
+            options: ['The Second Law of Thermodynamics', 'The law of conservation of mass', 'Cogeneration', 'Net energy gain']
           },
           {
             label: 'A coal plant near a low-income neighborhood causing disproportionate health impacts is an example of ___',
-            options: ['An environmental justice issue', 'Normal market economics', 'Energy efficiency', 'Net energy gain']
+            options: ['An environmental justice issue', 'A tragedy of the commons', 'An energy efficiency gain', 'A net energy surplus']
           },
           {
             label: 'EROI (Energy Return on Investment) measures ___',
-            options: ['How much energy you get out compared to how much you put in', 'The financial cost of energy', 'The pollution per unit of energy', 'The efficiency of light bulbs']
+            options: ['Energy output compared with energy input', 'Financial cost per unit of energy', 'Pollution per unit of energy', 'Efficiency of a single device']
           }
         ],
-        correctAnswers: ['Low energy efficiency and the Second Law of Thermodynamics', 'An environmental justice issue', 'How much energy you get out compared to how much you put in'],
+        correctAnswers: ['The Second Law of Thermodynamics', 'An environmental justice issue', 'Energy output compared with energy input'],
         hint1: '95% waste heat = very inefficient.',
         hint2: 'Pollution burden falls on vulnerable communities.',
         hint3: 'Output divided by input.',
@@ -181,10 +181,10 @@ export const apesEnergyPart1Data = {
           {
             question: 'Replacing all incandescent bulbs in a building with LEDs would:',
             options: [
-              'Increase energy use because LEDs cost more',
-              'Reduce energy use by 75-80% for lighting while providing the same light output',
-              'Have no effect on energy consumption',
-              'Eliminate all electricity needs for the building'
+              'Raise energy use, since LEDs draw more power per bulb',
+              'Reduce lighting energy use by 75-80% for the same light',
+              'Cut lighting energy use by only 5-10%, a minor saving',
+              'Eliminate the building\'s need for any electricity'
             ],
             correctAnswer: 1,
             explanation: 'LEDs are 20-30% efficient vs. 5% for incandescent bulbs. For the same light output, LEDs use roughly 75-80% less electricity, significantly reducing energy demand and costs.'
@@ -192,10 +192,10 @@ export const apesEnergyPart1Data = {
           {
             question: 'The most effective way to reduce total energy consumption in the United States would be:',
             options: [
-              'Building more coal power plants',
-              'Increasing energy efficiency in transportation and buildings',
-              'Increasing oil drilling in new locations',
-              'Extending daylight saving time'
+              'Building more coal plants to meet growing demand',
+              'Making vehicles and buildings more efficient',
+              'Drilling for more oil in new offshore locations',
+              'Extending daylight saving time to the whole year'
             ],
             correctAnswer: 1,
             explanation: 'Energy efficiency is the cheapest, fastest way to reduce consumption. Improving vehicle fuel economy, building insulation, and appliance efficiency can dramatically reduce demand without reducing quality of life.'

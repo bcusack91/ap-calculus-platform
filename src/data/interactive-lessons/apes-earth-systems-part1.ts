@@ -61,10 +61,10 @@ Soil formation depends on: **parent material, climate, organisms, topography, ti
           {
             question: 'Which set of factors determines soil formation?',
             options: [
-              'Temperature and precipitation only',
-              'Parent material, climate, organisms, topography, and time',
-              'Rock type and mineral content only',
-              'Latitude and altitude only'
+              'Temperature, rainfall, latitude and altitude only',
+              'Parent material, climate, organisms, topography and time',
+              'Rock type, mineral content, elevation and wind only',
+              'Latitude, altitude, day length and sunlight only'
             ],
             correctAnswer: 1,
             explanation: 'Soil formation (pedogenesis) depends on all five ClORPT factors: Climate, Organisms, Relief (topography), Parent material, and Time.'
@@ -171,9 +171,9 @@ Soil formation depends on: **parent material, climate, organisms, topography, ti
             question: 'A farmer notices poor crop growth in soil with very high clay content. The MOST likely cause is:',
             options: [
               'Too much drainage causing drought stress',
-              'Waterlogging due to low permeability of clay',
+              'Waterlogging from the low permeability of clay',
               'Insufficient mineral content in clay soils',
-              'Clay soil is too acidic for any crop growth'
+              'Clay soil is too acidic for nearly any crop to grow'
             ],
             correctAnswer: 1,
             explanation: 'Clay particles are very small with tiny pore spaces, resulting in low permeability. Water drains slowly, causing waterlogging that suffocates plant roots and inhibits growth.'

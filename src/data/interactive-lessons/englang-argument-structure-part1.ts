@@ -64,7 +64,7 @@ Every effective argument has a clear structure. Understanding structure helps yo
             options: [
               'Classical — lead with your strongest claims immediately',
               'Rogerian — find common ground before presenting your position',
-              'Problem-Solution — focus only on the problem',
+              'Problem-Solution — describe the crisis in vivid, alarming detail',
               'No structure needed — just state your opinion'
             ],
             correctAnswer: 1,
@@ -140,18 +140,18 @@ If the audience does not share the warrant, the argument fails — even if the e
         dropdowns: [
           {
             label: '"For high school students specifically, later start times improve outcomes." The phrase "for high school students specifically" is a ___',
-            options: ['Qualifier (limits the scope of the claim)', 'Warrant', 'Rebuttal', 'Evidence']
+            options: ['Qualifier', 'Warrant', 'Rebuttal', 'Concession']
           },
           {
             label: '"While earlier start times benefit working parents, research shows the academic gains for students far outweigh the scheduling inconvenience." This sentence is a ___',
-            options: ['Concession and rebuttal', 'Thesis statement', 'Narration', 'Evidence only']
+            options: ['Concession and rebuttal', 'Claim and evidence', 'Thesis and qualifier', 'Narration and confirmation']
           },
           {
             label: '"Therefore, the school board should implement a 9:00 AM start time beginning next fall." This sentence is a ___',
-            options: ['Policy claim / call to action', 'Evidence', 'Warrant', 'Narration']
+            options: ['Policy claim', 'Value claim', 'Factual claim', 'Warrant']
           }
         ],
-        correctAnswers: ['Qualifier (limits the scope of the claim)', 'Concession and rebuttal', 'Policy claim / call to action'],
+        correctAnswers: ['Qualifier', 'Concession and rebuttal', 'Policy claim'],
         hint1: '"Specifically" restricts the claim.',
         hint2: '"While...but" = concede then refute.',
         hint3: '"Should implement" = advocate action.',
@@ -183,10 +183,10 @@ If the audience does not share the warrant, the argument fails — even if the e
           {
             question: 'A student argues: "Electric cars reduce emissions (evidence). Therefore, everyone should buy one (claim)." What is the unstated warrant?',
             options: [
-              'Electric cars are expensive',
-              'Reducing emissions is important, and individual purchasing decisions can collectively address the problem',
-              'Electric cars are faster than gas cars',
-              'There is no warrant in this argument'
+              'Electric cars produce no emissions at all across their full manufacturing and driving life',
+              'Reducing emissions matters, and individual purchases can help achieve it',
+              'Electric cars reduce maintenance costs and outperform most comparable gasoline cars',
+              'No warrant is needed, because the evidence already states the claim directly and fully'
             ],
             correctAnswer: 1,
             explanation: 'The warrant is the unstated assumption bridging evidence to claim: that reducing emissions matters AND that consumer choices can meaningfully address the problem. Without these assumptions, the evidence does not logically lead to the claim.'
@@ -194,10 +194,10 @@ If the audience does not share the warrant, the argument fails — even if the e
           {
             question: 'A writer addressing gun control for a politically divided audience would most benefit from which structure?',
             options: [
-              'Classical — state the thesis immediately and argue forcefully',
-              'Rogerian — establish common ground (e.g., everyone wants safety) before introducing the position',
-              'No structure — just list statistics',
-              'Cause-effect only'
+              'Classical — state the thesis at once and argue it forcefully',
+              'Rogerian — open with shared values such as safety before stating a position',
+              'Problem-Solution — lead with the most alarming statistics',
+              'Cause-Effect — trace the history of gun laws step by step'
             ],
             correctAnswer: 1,
             explanation: 'With a divided or hostile audience, leading with common ground (Rogerian structure) reduces defensiveness. Starting with shared values (safety, protecting families) before introducing policy positions makes the audience more receptive.'

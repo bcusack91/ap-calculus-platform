@@ -56,10 +56,10 @@ You are not summarizing each source separately. You are:
           {
             question: 'What is the biggest difference between summary and synthesis on AP Lang?',
             options: [
-              'Summary uses quotations while synthesis does not',
-              'Synthesis organizes around your claim and combines source ideas to support reasoning',
-              'Summary is always longer than synthesis',
-              'Synthesis ignores sources'
+              'Summary uses direct quotations, while synthesis relies only on paraphrase',
+              'Synthesis builds your own claim by combining ideas from several sources',
+              'Summary covers more sources than synthesis does in the same essay',
+              'Synthesis ignores what sources say in favor of personal opinion'
             ],
             correctAnswer: 1,
             explanation: 'Synthesis is claim-driven. You use sources as evidence within your own argument structure, rather than reporting each source in isolation.'
@@ -67,13 +67,13 @@ You are not summarizing each source separately. You are:
           {
             question: 'Which sentence demonstrates true synthesis?',
             options: [
-              '"Source A is about schools. Source B is about money."',
-              '"Source A says homework helps. Source B says homework hurts."',
-              '"While Source A shows gains from structured homework, Source B indicates diminishing returns after 90 minutes, suggesting schools should cap nightly assignments."',
-              '"I agree with Source C because it sounds right."'
+              '"Source A is about homework and schools, and Source B is about how much time students spend on assignments."',
+              '"Source A says homework helps students learn. Source B says homework hurts students by taking up their time."',
+              '"Source A shows gains from structured homework, but Source B\'s finding of diminishing returns after 90 minutes suggests a nightly cap."',
+              '"I agree with Source C more than the others because its argument about homework sounds the most convincing."'
             ],
             correctAnswer: 2,
-            explanation: 'This sentence combines two sources, identifies relationship (qualification), and draws a policy inference. That is synthesis, not summary.'
+            explanation: 'This sentence combines two sources, identifies their relationship (one qualifies the other), and draws a policy inference. That is synthesis, not summary. The others describe sources one at a time, set them side by side without connecting them, or endorse a source without reasoning.'
           }
         ]
       }
@@ -144,18 +144,18 @@ AP synthesis requires use of at least **three** sources. Strong essays integrate
         dropdowns: [
           {
             label: 'Best paragraph strategy in synthesis essay:',
-            options: ['Reason-based paragraphs integrating multiple sources', 'One paragraph per source in source-letter order', 'Only summary of each source', 'No source attribution']
+            options: ['Paragraphs built around reasons', 'One paragraph per source, in order', 'A paragraph summarizing every source', 'Sources reserved for the conclusion']
           },
           {
             label: '"Source B supports Source A claim about costs, but Source F qualifies this by showing long-term savings." This is ___',
-            options: ['Corroboration plus qualification', 'Narrative sequencing', 'Pure summary', 'Ad hominem']
+            options: ['Corroboration and qualification', 'Contradiction and concession', 'Summary and paraphrase', 'Refutation of both earlier sources']
           },
           {
             label: 'After citing a source, strongest next step is ___',
-            options: ['Commentary explaining how evidence advances your thesis', 'Another quote immediately', 'A new unrelated claim', 'End the paragraph']
+            options: ['Commentary linking it to your thesis', 'A second quotation from that source', 'A transition to the next source', 'A citation in parentheses']
           }
         ],
-        correctAnswers: ['Reason-based paragraphs integrating multiple sources', 'Corroboration plus qualification', 'Commentary explaining how evidence advances your thesis'],
+        correctAnswers: ['Paragraphs built around reasons', 'Corroboration and qualification', 'Commentary linking it to your thesis'],
         hint1: 'Organize by your reasoning, not by source list.',
         hint2: 'One source supports, one adds condition.',
         hint3: 'Analysis is where AP points are earned.',
@@ -187,10 +187,10 @@ AP synthesis requires use of at least **three** sources. Strong essays integrate
           {
             question: 'A student uses five sources but spends most of essay summarizing each one. Why is this likely low-scoring?',
             options: [
-              'Using five sources is too many',
-              'Synthesis requires claim-driven integration and analysis, not source-by-source summary',
-              'AP prefers only one source',
-              'Summary is always penalized automatically'
+              'Using five sources is more than the rubric allows in one essay',
+              'Synthesis needs integration around a claim, not summary',
+              'The rubric rewards essays that rely closely on a single source',
+              'Readers automatically penalize any summary of a source, however brief'
             ],
             correctAnswer: 1,
             explanation: 'Source quantity does not guarantee quality. AP scoring prioritizes coherent argument and effective source integration with commentary.'
@@ -198,13 +198,13 @@ AP synthesis requires use of at least **three** sources. Strong essays integrate
           {
             question: 'Which thesis best fits synthesis expectations?',
             options: [
-              '"This topic has many opinions."',
-              '"Given evidence of short-term costs (Sources A, C) and long-term gains (Sources D, F), districts should adopt phased transit reform with equity safeguards."',
-              '"Source B is interesting."',
-              '"I will summarize all sources."'
+              '"Transit reform is a topic on which the sources offer many different and sometimes conflicting opinions."',
+              '"Given short-term costs shown in Sources A and C and long-term gains in Sources D and F, districts should phase in transit reform."',
+              '"Source B makes the most interesting and persuasive argument about transit, so this essay will focus mainly on its claims and evidence."',
+              '"This essay will summarize each of the six sources in order, since each offers useful information on transit."'
             ],
             correctAnswer: 1,
-            explanation: 'This thesis is specific, qualified, and source-aware. It signals an argumentative path that synthesizes evidence with nuance.'
+            explanation: 'This thesis is specific, qualified, and source-aware. It weighs costs against gains across several sources and commits to a position, signaling an argumentative path that synthesizes evidence with nuance. The others survey opinions, lean on a single source, or promise summary instead of argument.'
           }
         ]
       }

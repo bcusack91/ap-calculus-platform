@@ -46,10 +46,10 @@ export const apesAgricultureLandPart1Data = {
           {
             question: 'The Green Revolution increased crop yields primarily through:',
             options: [
-              'Organic farming methods and traditional seed saving',
-              'High-yield crop varieties, synthetic fertilizers, and pesticides',
-              'Genetically modified organisms only',
-              'Switching from agriculture to hunting and gathering'
+              'Organic methods and traditional seed saving',
+              'Improved seed varieties, synthetic fertilizer and pesticides',
+              'Genetically engineered crops introduced in the 1960s',
+              'Expanding farmland by clearing tropical forests'
             ],
             correctAnswer: 1,
             explanation: 'The Green Revolution (1960s-70s) used high-yield varieties (especially wheat and rice), synthetic fertilizers, pesticides, and irrigation to dramatically increase food production in developing nations.'
@@ -126,22 +126,22 @@ export const apesAgricultureLandPart1Data = {
         dropdowns: [
           {
             label: 'A farmer plants clover (a legume) between corn seasons to restore nitrogen. This is ___',
-            options: ['Using cover crops and crop rotation', 'Monoculture farming', 'Slash-and-burn agriculture', 'Hydroponics']
+            options: ['Cover cropping', 'Monoculture', 'Slash-and-burn', 'Hydroponics']
           },
           {
             label: 'DDT concentrating in bald eagle tissues at higher levels than in their fish prey is ___',
-            options: ['Bioaccumulation/biomagnification', 'Eutrophication', 'Salinization', 'Desertification']
+            options: ['Biomagnification', 'Eutrophication', 'Salinization', 'Desertification']
           },
           {
             label: 'Cutting flat terraces into steep hillsides to farm without erosion is ___',
-            options: ['Terracing', 'Contour plowing', 'No-till farming', 'Strip mining']
+            options: ['Terracing', 'Contour plowing', 'No-till farming', 'Strip cropping']
           }
         ],
-        correctAnswers: ['Using cover crops and crop rotation', 'Bioaccumulation/biomagnification', 'Terracing'],
+        correctAnswers: ['Cover cropping', 'Biomagnification', 'Terracing'],
         hint1: 'Legumes fix nitrogen; planting between seasons.',
         hint2: 'Toxins concentrate as you move up trophic levels.',
         hint3: 'Creating flat steps on slopes.',
-        explanation: 'Clover between corn = cover crop/rotation. DDT in eagles = bioaccumulation. Flat steps on hillsides = terracing.'
+        explanation: 'Clover between corn = cover crop/rotation. DDT reaching higher concentrations in eagles than in their fish prey = biomagnification (bioaccumulation is the build-up within one organism). Flat steps on hillsides = terracing.'
       }
     },
     {
@@ -179,10 +179,10 @@ export const apesAgricultureLandPart1Data = {
           {
             question: 'A farmer practicing IPM would FIRST:',
             options: [
-              'Apply broad-spectrum pesticides across all fields',
-              'Monitor pest populations and use biological controls before resorting to targeted pesticide application',
-              'Plant genetically identical monoculture crops',
-              'Eliminate all insects from the farm'
+              'Spray broad-spectrum pesticides across every field',
+              'Monitor pest levels and try biological controls',
+              'Plant a single genetically identical crop variety',
+              'Remove every insect from the farm with pesticides'
             ],
             correctAnswer: 1,
             explanation: 'IPM prioritizes monitoring and prevention: biological controls (natural predators), habitat manipulation, and resistant varieties before using targeted (not broad-spectrum) pesticides as a last resort.'

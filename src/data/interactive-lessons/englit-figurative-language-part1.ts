@@ -15,24 +15,24 @@ export const englitFigurativeLanguagePart1Data = {
             {
                   "question": "Which statement best reflects the role of Metaphor in literary analysis?",
                   "options": [
-                        "Metaphor is always decorative and has no analytical value.",
-                        "Metaphor can reveal how a speaker conceptualizes power, identity, or conflict.",
-                        "Metaphor means any word with two syllables.",
-                        "Metaphor only appears in poetry."
+                        "Metaphor is a comparison using like or as that makes a description more vivid.",
+                        "Metaphor reveals how a speaker conceives of a subject like power or loss.",
+                        "Metaphor is decorative language, so analysis should focus on its literal subject.",
+                        "Metaphor is a recurring object that stands for an abstract idea throughout a work."
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Metaphor helps readers interpret meaning and authorial choice, not just identify a feature."
+                  "explanation": "A metaphor equates two unlike things without \"like\" or \"as\", and the comparison reveals how the speaker thinks about the subject. A comparison using \"like\" or \"as\" is a simile, metaphors are analytical evidence rather than decoration, and an object that recurs and stands for an idea is a symbol or motif."
             },
             {
                   "question": "What is usually the strongest AP Lit analytical move?",
                   "options": [
-                        "Retell the plot in sequence",
-                        "Name literary devices without interpretation",
+                        "Summarize the events of the passage accurately",
+                        "Identify each figure of speech and classify it correctly",
                         "Connect textual details to a defensible interpretation about meaning",
-                        "Focus only on historical background"
+                        "Explain the historical background and the author's biography in detail"
                   ],
                   "correctAnswer": 2,
-                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+                  "explanation": "AP Lit scoring rewards a defensible claim supported by evidence and commentary. Accurate summary, classifying figures of speech and background detail earn credit only when they are tied to an interpretation of meaning."
             }
       ]
 }
@@ -69,27 +69,27 @@ export const englitFigurativeLanguagePart1Data = {
                   "label": "Metaphor in analysis usually refers to ___",
                   "options": [
                         "An implied comparison that reframes an idea",
-                        "A direct quotation without interpretation",
-                        "A chronological plot summary",
-                        "A dictionary entry"
+                        "A comparison that uses the word like or as",
+                        "A recurring object standing for an idea",
+                        "An exaggeration used for comic emphasis"
                   ]
             },
             {
                   "label": "The best AP paragraph usually includes ___",
                   "options": [
                         "Claim, evidence, and commentary",
-                        "Plot summary only",
-                        "Device name lists",
-                        "Vocabulary definitions only"
+                        "Quotation, device label, and summary",
+                        "Hook, context, and a moral",
+                        "Summary, quotation, and opinion"
                   ]
             },
             {
                   "label": "A defensible interpretation should be ___",
                   "options": [
                         "Text-supported and specific",
-                        "Purely personal with no evidence",
-                        "A broad moral lesson only",
-                        "A dictionary definition"
+                        "Universal and beyond dispute",
+                        "Personal and emotionally honest",
+                        "Broad enough to cover any text"
                   ]
             }
       ],
@@ -118,24 +118,24 @@ export const englitFigurativeLanguagePart1Data = {
             {
                   "question": "A student identifies imagery in a passage but does not explain effect. What is the best revision?",
                   "options": [
-                        "Add more plot details",
+                        "Add another vivid image from the passage",
                         "Explain how imagery shapes tone or theme in that moment",
-                        "Replace all quotes with summary",
-                        "Switch to biographical information only"
+                        "Explain which sense the imagery appeals to",
+                        "Paraphrase the quotation more clearly"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+                  "explanation": "The paragraph identifies imagery but never explains its effect. Explaining how the imagery shapes tone or theme supplies the commentary. Another image, the sense it appeals to or a paraphrase still leaves the effect unexplained."
             },
             {
                   "question": "Which thesis move is strongest for AP Lit?",
                   "options": [
-                        "Make an absolute claim with no nuance",
+                        "State what each symbol in the passage stands for, one by one",
                         "Advance a specific, defensible claim about how symbolism contributes to meaning",
-                        "Retell the plot in one sentence",
-                        "List three literary terms without argument"
+                        "Claim that the passage uses symbolism to make its writing more interesting",
+                        "Argue that the central symbol has one fixed meaning that every reader would recognize"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+                  "explanation": "A strong thesis makes a specific, arguable claim about how a choice in the text, here symbolism, creates meaning. Decoding symbols one by one, calling symbolism interesting or fixing one universal meaning does not argue how the symbolism works in this passage."
             }
       ]
 }

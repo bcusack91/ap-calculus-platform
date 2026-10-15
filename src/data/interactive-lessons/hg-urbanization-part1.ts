@@ -51,8 +51,8 @@ The AP exam frequently asks you to compare these models and apply them to real c
             question: 'The Burgess Concentric Zone Model suggests that cities grow:',
             options: [
               'In wedge-shaped sectors along highways',
-              'Outward in concentric rings from the CBD',
-              'Around multiple separate nuclei',
+              'Outward in successive rings from the CBD',
+              'Around several separate nuclei of activity',
               'Toward port areas and market zones'
             ],
             correctAnswer: 1,
@@ -61,10 +61,10 @@ The AP exam frequently asks you to compare these models and apply them to real c
           {
             question: 'A country with 25% of its population in cities but urban areas growing at 4% per year has:',
             options: [
-              'High urbanization, high urban growth',
-              'Low urbanization, high urban growth',
-              'High urbanization, low urban growth',
-              'Low urbanization, low urban growth'
+              'High urbanization and fast urban growth',
+              'Low urbanization but fast urban growth',
+              'Slow urban growth with high urbanization',
+              'Little urbanization and slow urban growth'
             ],
             correctAnswer: 1,
             explanation: '25% urban = low urbanization level. But 4% growth rate = rapid urban growth. This is typical of Stage 2-3 countries experiencing rapid rural-to-urban migration.'
@@ -131,14 +131,14 @@ The AP exam frequently asks you to compare these models and apply them to real c
           },
           {
             label: 'A city where zones extend outward in wedges along major transportation routes follows the ___',
-            options: ['Sector Model (Hoyt)', 'Concentric Zone Model', 'Galactic City Model', 'Southeast Asian Model']
+            options: ['Sector Model', 'Concentric Zone Model', 'Galactic City Model', 'Southeast Asian Model']
           },
           {
             label: 'A sprawling metro area with edge cities and suburbs around a declining CBD follows the ___',
             options: ['Galactic City Model', 'Concentric Zone Model', 'Latin American City Model', 'Sector Model']
           }
         ],
-        correctAnswers: ['Latin American City Model', 'Sector Model (Hoyt)', 'Galactic City Model'],
+        correctAnswers: ['Latin American City Model', 'Sector Model', 'Galactic City Model'],
         hint1: 'Think of cities like Sao Paulo or Mexico City.',
         hint2: 'Zones shaped by highways and rail lines.',
         hint3: 'Think of modern American metropolitan areas like Houston or Atlanta.',
@@ -176,7 +176,7 @@ The AP exam frequently asks you to compare these models and apply them to real c
             question: 'France largest city, Paris, has about 5 times the population of its second-largest city, Marseille. This pattern is best described by:',
             options: [
               'The rank-size rule',
-              'The primate city pattern',
+              'A primate city distribution',
               'The multiple nuclei model',
               'The gravity model'
             ],
@@ -186,10 +186,10 @@ The AP exam frequently asks you to compare these models and apply them to real c
           {
             question: 'Which factor most directly explains rapid urbanization in sub-Saharan Africa today?',
             options: [
-              'Gentrification of inner-city neighborhoods',
-              'Suburban sprawl driven by automobile ownership',
-              'Rural-to-urban migration driven by lack of rural economic opportunities',
-              'Government-planned new capital cities'
+              'Gentrification drawing investors into inner urban districts',
+              'Suburban sprawl driven by rising car ownership',
+              'Rural-to-urban migration driven by a lack of rural opportunity',
+              'Government-planned new capitals such as Abuja'
             ],
             correctAnswer: 2,
             explanation: 'Rural-to-urban migration is the primary driver. Rural push factors (lack of jobs, services) and urban pull factors (perceived opportunities) are driving millions to cities like Lagos, Nairobi, and Kinshasa.'

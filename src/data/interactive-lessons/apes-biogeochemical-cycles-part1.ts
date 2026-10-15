@@ -50,19 +50,19 @@ export const apesBiogeochemicalCyclesPart1Data = {
             options: [
               'Denitrification',
               'Nitrogen fixation',
-              'Nitrification',
+              'Nitrogen assimilation',
               'Ammonification'
             ],
             correctAnswer: 1,
-            explanation: 'Nitrogen fixation converts atmospheric $N_{2}$ into ammonia $(NH_{3})$, which can then be converted to nitrate $(NO_{3}^{-})$ by nitrifying bacteria and absorbed by plants.'
+            explanation: 'Nitrogen fixation converts atmospheric $N_{2}$ into ammonia $(NH_{3})$, which can then be converted to nitrate $(NO_{3}^{-})$ by nitrifying bacteria and absorbed by plants. Denitrification returns nitrogen to the air, ammonification releases ammonium from dead matter, and assimilation is plants taking up nitrogen that has already been fixed.'
           },
           {
             question: 'Burning fossil fuels affects the carbon cycle by:',
             options: [
-              'Removing carbon from the atmosphere',
-              'Releasing stored carbon from the lithosphere into the atmosphere',
-              'Converting $CO_{2}$ into oxygen',
-              'Increasing carbon fixation by plants'
+              'Pulling carbon out of the atmosphere into rock layers',
+              'Moving stored carbon from rock into the atmosphere',
+              'Converting $CO_{2}$ in the air into oxygen as fuel burns',
+              'Speeding up carbon fixation by land plants and algae'
             ],
             correctAnswer: 1,
             explanation: 'Fossil fuels are carbon stored in the lithosphere over millions of years. Combustion releases this ancient carbon as $CO_{2}$ into the atmosphere, increasing the greenhouse effect.'
@@ -142,10 +142,10 @@ export const apesBiogeochemicalCyclesPart1Data = {
           },
           {
             label: 'Excessive fertilizer runoff causing algal blooms and fish kills demonstrates ___',
-            options: ['Eutrophication from nitrogen and phosphorus pollution', 'Normal carbon cycling', 'Primary ecological succession', 'Bioaccumulation of heavy metals']
+            options: ['Eutrophication', 'Bioaccumulation', 'Primary succession', 'Acid deposition']
           }
         ],
-        correctAnswers: ['Photosynthesis', 'Denitrification', 'Eutrophication from nitrogen and phosphorus pollution'],
+        correctAnswers: ['Photosynthesis', 'Denitrification', 'Eutrophication'],
         hint1: '$CO_{2}$ + $H_{2}O$ + sunlight → glucose + $O_{2}$.',
         hint2: 'The reverse of nitrogen fixation.',
         hint3: 'Nutrient pollution in water.',
@@ -176,10 +176,10 @@ export const apesBiogeochemicalCyclesPart1Data = {
           {
             question: 'A farmer plants a cover crop of clover (a legume) between growing seasons. This practice helps because:',
             options: [
-              'Clover absorbs phosphorus from the atmosphere',
-              'Rhizobium bacteria in clover roots fix atmospheric nitrogen into the soil',
-              'Clover releases nitrogen gas back to the atmosphere',
-              'Clover prevents all water from entering the soil'
+              'Clover roots absorb phosphorus directly from the air',
+              'Root-nodule bacteria fix nitrogen from the air',
+              'Clover roots release nitrogen gas back to the atmosphere',
+              'Clover traps carbon dioxide and converts it to soil nitrate'
             ],
             correctAnswer: 1,
             explanation: 'Legumes like clover have symbiotic Rhizobium bacteria in their root nodules that fix atmospheric $N_{2}$ into ammonia $(NH_{3})$, naturally fertilizing the soil without synthetic fertilizer.'
@@ -187,10 +187,10 @@ export const apesBiogeochemicalCyclesPart1Data = {
           {
             question: 'A large dead zone forms in the Gulf of Mexico each summer. The MOST likely cause is:',
             options: [
-              'Oil spills from offshore drilling',
-              'Agricultural fertilizer runoff from the Mississippi River watershed causing eutrophication',
-              'Overfishing removing too many organisms',
-              'Natural volcanic activity on the ocean floor'
+              'Oil spills from offshore drilling platforms in the Gulf',
+              'Fertilizer runoff carried down the Mississippi River',
+              'Overfishing that strips the Gulf of its top predator fish',
+              'Heat and gases released by volcanic vents on the seafloor'
             ],
             correctAnswer: 1,
             explanation: 'Nitrogen and phosphorus fertilizer runoff flows down the Mississippi River into the Gulf, causing massive algal blooms. When algae decompose, they consume dissolved oxygen, creating a hypoxic dead zone.'

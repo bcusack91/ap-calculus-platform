@@ -54,10 +54,10 @@ Example:
           {
             question: 'Which feature most clearly indicates a coherent line of reasoning?',
             options: [
-              'Many rhetorical questions',
+              'Frequent rhetorical questions that keep readers engaged throughout',
               'Paragraphs that each connect back to and develop the thesis',
-              'Advanced vocabulary in every sentence',
-              'A very long introduction'
+              'Advanced vocabulary used consistently in every sentence',
+              'A long introduction that previews every point in detail'
             ],
             correctAnswer: 1,
             explanation: 'Coherence depends on logical development: each paragraph must perform a clear argumentative function connected to the thesis. Style alone cannot substitute for reasoning structure.'
@@ -65,10 +65,10 @@ Example:
           {
             question: 'What is the best role of a counterargument paragraph?',
             options: [
-              'Ignore opposing views to keep writing concise',
-              'Demonstrate awareness of complexity and strengthen your position through rebuttal or qualification',
-              'Replace the thesis with a new claim',
-              'Add unrelated examples'
+              'To demonstrate fairness by giving the opposing view the final word',
+              'To show awareness of complexity and strengthen your position',
+              'To introduce a second thesis that replaces the original claim',
+              'To list opposing examples without ever needing to respond to them'
             ],
             correctAnswer: 1,
             explanation: 'Addressing opposition shows maturity and strengthens credibility. Effective rebuttal demonstrates why your position remains stronger after considering alternatives.'
@@ -122,7 +122,7 @@ Restate thesis with nuance -> synthesize key reasons -> explain stakes/implicati
 
 1) A sentence that states the paragraph's reason and links it to the thesis is a _______ sentence.
 
-2) The transition "therefore" signals a logical _______.
+2) The transition "therefore" signals a cause-and-_______ relationship.
 
 3) A counterargument paragraph should include a _______ or qualification to strengthen your position.
       `,
@@ -145,18 +145,18 @@ Restate thesis with nuance -> synthesize key reasons -> explain stakes/implicati
         dropdowns: [
           {
             label: 'If paragraph 2 feels disconnected from thesis, the first fix is to revise the ___',
-            options: ['Topic sentence and claim link', 'Title only', 'Font size', 'Conclusion punctuation']
+            options: ['Topic sentence', 'Concluding paragraph', 'Supporting quotations', 'Introduction hook']
           },
           {
             label: '"Admittedly" followed by "however" typically signals ___',
-            options: ['Concession then rebuttal', 'Narrative flashback', 'Definition sequence', 'Cause-effect only']
+            options: ['Concession then rebuttal', 'Evidence then commentary', 'Cause then effect', 'Problem then solution']
           },
           {
             label: 'A strong conclusion should primarily ___',
-            options: ['Synthesize reasoning and explain stakes', 'Introduce new evidence', 'Repeat intro word-for-word', 'Add unrelated anecdotes']
+            options: ['Synthesize reasoning and stakes', 'Introduce the strongest new evidence', 'Restate the thesis word for word', 'Summarize each body paragraph in turn']
           }
         ],
-        correctAnswers: ['Topic sentence and claim link', 'Concession then rebuttal', 'Synthesize reasoning and explain stakes'],
+        correctAnswers: ['Topic sentence', 'Concession then rebuttal', 'Synthesize reasoning and stakes'],
         hint1: 'Paragraph focus starts there.',
         hint2: 'Acknowledge then respond.',
         hint3: 'Show why your argument matters.',
@@ -188,10 +188,10 @@ Restate thesis with nuance -> synthesize key reasons -> explain stakes/implicati
           {
             question: 'A student essay has strong evidence but reads like disconnected points. What revision would most improve line of reasoning?',
             options: [
-              'Add more quotations only',
-              'Insert clear topic sentences and transitions showing relationships among claims',
-              'Replace all short sentences with long ones',
-              'Use more advanced vocabulary'
+              'Add more quotations so each point has stronger support',
+              'Add topic sentences and transitions that show how the claims relate',
+              'Combine short sentences into longer, more complex ones',
+              'Replace plain words with more advanced vocabulary'
             ],
             correctAnswer: 1,
             explanation: 'The issue is coherence, not evidence quantity. Topic sentences and transitions make the argument\'s logical structure explicit and help readers follow the reasoning chain.'
@@ -199,13 +199,13 @@ Restate thesis with nuance -> synthesize key reasons -> explain stakes/implicati
           {
             question: 'Which paragraph order best supports a persuasive line of reasoning?',
             options: [
-              'Counterargument first, then random examples, then thesis',
-              'Thesis, reason 1, reason 2, counterargument/rebuttal, synthesis conclusion',
-              'Only one long paragraph with many ideas',
-              'Conclusion first, intro last'
+              'Counterargument → conclusion → reasons → thesis',
+              'Thesis → reasons → counterargument → conclusion',
+              'Thesis → conclusion → reasons → counterargument',
+              'Conclusion → thesis → counterargument → reasons'
             ],
             correctAnswer: 1,
-            explanation: 'This order creates progressive logic: state claim, develop support, test against opposition, and synthesize implications. It reflects coherent argumentative structure AP readers value.'
+            explanation: 'Stating the thesis first, developing it with reasons, then testing it against a counterargument (and rebutting it) before concluding creates progressive logic. The other orders bury the thesis, conclude before the support arrives, or end on the opposition, which breaks the line of reasoning AP readers value.'
           }
         ]
       }

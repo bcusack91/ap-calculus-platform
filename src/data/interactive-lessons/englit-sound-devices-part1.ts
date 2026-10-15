@@ -15,24 +15,24 @@ export const englitSoundDevicesPart1Data = {
             {
                   "question": "Which statement best reflects the role of Alliteration in literary analysis?",
                   "options": [
-                        "Alliteration is only decorative and meaningless.",
+                        "Alliteration is decorative sound play that rarely affects a poem's meaning.",
                         "Alliteration can foreground key concepts and create tonal pressure.",
-                        "Alliteration means any repeated letter visually.",
-                        "Alliteration appears only in nursery rhymes."
+                        "Alliteration is the repetition of vowel sounds within nearby words.",
+                        "Alliteration matters mainly in children's verse and comic poems."
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Alliteration helps readers interpret meaning and authorial choice, not just identify a feature."
+                  "explanation": "Alliteration, the repetition of initial consonant sounds, can link and emphasize key words and shape tone, for example when harsh repeated consonants build tension. It is more than decoration, repeated vowel sounds are assonance, and alliteration appears throughout serious poetry and prose."
             },
             {
                   "question": "What is usually the strongest AP Lit analytical move?",
                   "options": [
-                        "Retell the plot in sequence",
-                        "Name literary devices without interpretation",
+                        "Retell the plot carefully from start to finish",
+                        "Identify every device and give each one a label",
                         "Connect textual details to a defensible interpretation about meaning",
-                        "Focus only on historical background"
+                        "Explain the author's background and influences"
                   ],
                   "correctAnswer": 2,
-                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+                  "explanation": "AP Lit scoring rewards a defensible claim supported by evidence and commentary. Retelling, labeling devices and describing the author's background earn credit only when they are tied to an interpretation of meaning."
             }
       ]
 }
@@ -69,27 +69,27 @@ export const englitSoundDevicesPart1Data = {
                   "label": "Alliteration in analysis usually refers to ___",
                   "options": [
                         "Repetition of initial consonant sounds for effect",
-                        "Random punctuation",
-                        "Narrator reliability",
-                        "Plot chronology"
+                        "Repetition of vowel sounds within nearby stressed words",
+                        "Matching sounds at the ends of poetic lines",
+                        "A word that imitates the sound it names"
                   ]
             },
             {
                   "label": "The best AP paragraph usually includes ___",
                   "options": [
                         "Claim, evidence, and commentary",
-                        "Plot summary only",
-                        "Device name lists",
-                        "Vocabulary definitions only"
+                        "Quotation, summary, and paraphrase",
+                        "Thesis, devices, and conclusion",
+                        "Context, plot, and a quotation"
                   ]
             },
             {
                   "label": "A defensible interpretation should be ___",
                   "options": [
                         "Text-supported and specific",
-                        "Purely personal with no evidence",
-                        "A broad moral lesson only",
-                        "A dictionary definition"
+                        "Grounded in the author's biography",
+                        "Cautious enough to avoid a claim",
+                        "Obvious and agreed on by all"
                   ]
             }
       ],
@@ -118,24 +118,24 @@ export const englitSoundDevicesPart1Data = {
             {
                   "question": "A student identifies assonance in a passage but does not explain effect. What is the best revision?",
                   "options": [
-                        "Add more plot details",
+                        "Add another example of assonance from later in the same poem",
                         "Explain how assonance shapes tone or theme in that moment",
-                        "Replace all quotes with summary",
-                        "Switch to biographical information only"
+                        "Explain which vowel sound repeats and mark each place it appears",
+                        "Rename the device more precisely, since the student may mean rhyme"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+                  "explanation": "The paragraph identifies assonance but never explains its effect. Explaining how the assonance shapes tone or theme supplies the commentary. Another example, a map of the repeated vowel or a more precise label still leaves the effect unexplained."
             },
             {
                   "question": "Which thesis move is strongest for AP Lit?",
                   "options": [
-                        "Make an absolute claim with no nuance",
+                        "State the poem's meter and note where the rhythm becomes irregular",
                         "Advance a specific, defensible claim about how rhythm contributes to meaning",
-                        "Retell the plot in one sentence",
-                        "List three literary terms without argument"
+                        "Claim that the poem's rhythm makes it pleasant and musical to read aloud",
+                        "Summarize the poem's content and mention that it has a strong, steady rhythm"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+                  "explanation": "A strong thesis makes a specific, arguable claim about how a choice in the poem, here its rhythm, creates meaning. Scanning the meter, calling the rhythm musical or summarizing the content identifies the feature without arguing what it does."
             }
       ]
 }

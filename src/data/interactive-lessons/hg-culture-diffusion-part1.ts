@@ -48,10 +48,10 @@ export const hgCultureDiffusionPart1Data = {
           {
             question: 'McDonald serving teriyaki burgers in Japan is an example of:',
             options: [
-              'Stimulus diffusion — the concept was adopted but modified',
+              'Stimulus diffusion — the idea was adopted but modified',
               'Relocation diffusion — the restaurant physically moved',
               'Contagious diffusion — it spread to nearby locations',
-              'Acculturation of Japanese cuisine'
+              'Assimilation — Japan fully adopted American fast food'
             ],
             correctAnswer: 0,
             explanation: 'The core concept (fast food restaurant) was adopted, but the menu was modified to fit local tastes. This is stimulus diffusion — the idea spreads but is changed in the process.'
@@ -135,10 +135,10 @@ The **cultural landscape** (coined by Carl Sauer) is the visible imprint of huma
           },
           {
             label: 'An immigrant neighborhood keeping its original language and food traditions is an example of ___',
-            options: ['Ethnic enclave maintaining culture through relocation diffusion', 'Assimilation into dominant culture', 'Stimulus diffusion of cuisine', 'Hierarchical diffusion']
+            options: ['Relocation diffusion in an ethnic enclave', 'Assimilation into the dominant culture', 'Stimulus diffusion of a modified cuisine', 'Hierarchical diffusion from elites down']
           }
         ],
-        correctAnswers: ['Hierarchical diffusion', 'Contagious diffusion', 'Ethnic enclave maintaining culture through relocation diffusion'],
+        correctAnswers: ['Hierarchical diffusion', 'Contagious diffusion', 'Relocation diffusion in an ethnic enclave'],
         hint1: 'From influential people to their followers.',
         hint2: 'Spreads to nearby places first.',
         hint3: 'People who relocated brought their culture with them.',
@@ -181,9 +181,9 @@ The **cultural landscape** (coined by Carl Sauer) is the visible imprint of huma
             question: 'Which is the BEST example of popular culture diffusing through contagious diffusion?',
             options: [
               'A celebrity launching a fashion line that fans worldwide adopt',
-              'A viral TikTok dance spreading from person to person across a school',
+              'A viral dance spreading person to person across a school',
               'Traditional pottery-making techniques passed down in a village',
-              'A government mandating a national language'
+              'A government mandating one national language in schools'
             ],
             correctAnswer: 1,
             explanation: 'A viral trend spreading person-to-person (like a contagion) through direct contact/observation is contagious diffusion. Celebrity fashion = hierarchical. Pottery = folk tradition. Government mandate = forced.'

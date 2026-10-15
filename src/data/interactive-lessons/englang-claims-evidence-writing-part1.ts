@@ -54,21 +54,21 @@ Use a balanced evidence mix:
           {
             question: 'Which claim is most defensible for an AP argument essay?',
             options: [
-              '"All social media is evil and should be banned immediately everywhere."',
-              '"Social media has both benefits and risks, and schools should teach digital literacy to reduce harm."',
-              '"Social media exists."',
-              '"People use phones a lot."'
+              '"All social media is harmful to teenagers, and every platform should be banned for anyone under eighteen immediately."',
+              '"Social media has both benefits and risks, so schools should teach digital literacy to reduce harm."',
+              '"Billions of people worldwide now use platforms such as Instagram, TikTok, and YouTube every single day."',
+              '"In this essay I will discuss several of the many different ways that social media affects teenagers today."'
             ],
             correctAnswer: 1,
-            explanation: 'This claim is specific, debatable, and qualified. It recognizes complexity and proposes a concrete policy response, which supports nuanced development.'
+            explanation: 'This claim is specific, debatable, and qualified. It recognizes complexity and proposes a concrete policy response, which supports nuanced development. The others overstate with absolutes, state an undisputed fact, or announce a topic without taking a position.'
           },
           {
             question: 'What is the biggest problem with evidence "Everyone I know agrees with me"?',
             options: [
-              'It is too formal',
+              'It relies on pathos instead of logos',
               'It is anecdotal and unrepresentative',
-              'It uses a concession',
-              'It has too much data'
+              'It cites an authority without credentials',
+              'It is too formal for an argument essay'
             ],
             correctAnswer: 1,
             explanation: 'A personal social circle is a narrow sample and cannot support broad claims. AP arguments need representative examples, credible sources, or well-developed reasoning beyond personal consensus.'
@@ -150,18 +150,18 @@ Strong AP essays include an opposing view and response.
         dropdowns: [
           {
             label: 'Best evidence set for a policy essay on public transit:',
-            options: ['City ridership data + budget analysis + commuter case study', 'Only personal opinion', 'Only one anecdote', 'No evidence, just moral language']
+            options: ['Ridership figures and a commuter case study', 'Several vivid stories from a single commuter', 'Moral appeals about civic duty', 'Opinions from friends who ride the bus']
           },
           {
             label: 'After presenting evidence, the next strongest move is to add ___',
-            options: ['Commentary explaining significance', 'A random quote', 'A new unrelated claim', 'A rhetorical question only']
+            options: ['Commentary explaining significance', 'A second quotation on the same point', 'A new claim for the next paragraph', 'A summary restating the evidence']
           },
           {
             label: 'A claim that says "always" and "never" is often rhetorically ___',
-            options: ['Vulnerable/overstated', 'Sophisticated', 'Unquestionable', 'Ideal for every topic']
+            options: ['Overstated and vulnerable', 'Confident and persuasive', 'Precise and well qualified', 'Balanced and nuanced']
           }
         ],
-        correctAnswers: ['City ridership data + budget analysis + commuter case study', 'Commentary explaining significance', 'Vulnerable/overstated'],
+        correctAnswers: ['Ridership figures and a commuter case study', 'Commentary explaining significance', 'Overstated and vulnerable'],
         hint1: 'Blend quantitative and contextual evidence.',
         hint2: 'Interpretation is the key AP skill.',
         hint3: 'Absolute claims are easy to attack.',
@@ -193,10 +193,10 @@ Strong AP essays include an opposing view and response.
           {
             question: 'A student includes four statistics in one paragraph but only one sentence of explanation. Why is this weak?',
             options: [
-              'Statistics are never persuasive',
+              'Statistics persuade only when paired with an emotional anecdote',
               'Insufficient commentary leaves unclear how evidence supports the claim',
-              'Too much ethos',
-              'AP forbids numbers in essays'
+              'Four statistics in one paragraph is too many for AP readers',
+              'The paragraph needs a source citation after each number'
             ],
             correctAnswer: 1,
             explanation: 'AP readers value analysis. Without commentary, evidence becomes a list rather than an argument. The writer must explain significance, inference, and claim connection.'
@@ -204,13 +204,13 @@ Strong AP essays include an opposing view and response.
           {
             question: 'Which thesis is strongest?',
             options: [
-              '"Homework is bad."',
-              '"Because moderate practice can reinforce learning but excessive assignments harm sleep and equity, schools should cap nightly homework at grade-specific limits."',
-              '"Homework exists in many countries."',
-              '"Students and teachers disagree sometimes."'
+              '"Homework is harmful to every student because it destroys sleep, ruins family time, and teaches nothing of lasting value whatsoever."',
+              '"Because moderate practice reinforces learning but excess work harms sleep and equity, schools should cap nightly homework by grade."',
+              '"Homework has been assigned in schools for over a century, and students in many countries spend hours on it every night."',
+              '"This essay will explore whether homework helps or hurts students, since teachers and students sometimes disagree about it."'
             ],
             correctAnswer: 1,
-            explanation: 'This thesis is nuanced, qualified, and policy-oriented. It acknowledges tradeoffs while proposing a concrete, defensible action.'
+            explanation: 'This thesis is nuanced, qualified, and policy-oriented. It acknowledges tradeoffs while proposing a concrete, defensible action. The alternatives overstate with absolutes, report an undisputed fact, or announce a topic without arguing a position.'
           }
         ]
       }

@@ -15,24 +15,24 @@ export const englitPoetry2Part1Data = {
             {
                   "question": "Which statement best reflects the role of Syntax in literary analysis?",
                   "options": [
-                        "Syntax has no rhetorical effect in poetry.",
-                        "Syntax can accelerate, delay, or fracture meaning for emphasis.",
-                        "Syntax is only grammar correction.",
-                        "Syntax matters only in prose fiction."
+                        "Syntax refers to word choice, so analyzing it means examining connotation.",
+                        "Syntax shapes pacing and emphasis by speeding up, delaying or breaking a sentence's sense.",
+                        "Syntax matters in prose, but line breaks replace it as the key choice in poetry.",
+                        "Syntax is analyzed by checking whether each sentence is grammatically correct."
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Syntax helps readers interpret meaning and authorial choice, not just identify a feature."
+                  "explanation": "Syntax is the arrangement of words and clauses, and poets use it to control pace and emphasis, for example by delaying a main verb or stretching a sentence across several lines. Word choice is diction, syntax works together with lineation rather than being replaced by it, and the analytical question is effect, not grammatical correctness."
             },
             {
                   "question": "What is usually the strongest AP Lit analytical move?",
                   "options": [
-                        "Retell the plot in sequence",
-                        "Name literary devices without interpretation",
+                        "Retell the passage's events in the order they occur",
+                        "Identify the devices used and explain what each one is",
                         "Connect textual details to a defensible interpretation about meaning",
-                        "Focus only on historical background"
+                        "Judge whether the author's message is correct and explain why you agree"
                   ],
                   "correctAnswer": 2,
-                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+                  "explanation": "AP Lit scoring rewards a defensible claim supported by evidence and commentary. Retelling events, defining devices and agreeing or disagreeing with the author's message do not explain how the text creates meaning."
             }
       ]
 }
@@ -69,27 +69,27 @@ export const englitPoetry2Part1Data = {
                   "label": "Syntax in analysis usually refers to ___",
                   "options": [
                         "How sentence structure shapes pacing and emphasis",
-                        "How many rhymes appear",
-                        "The poem date only",
-                        "The speaker age"
+                        "How word choice shapes connotation and tone",
+                        "Whether each sentence is grammatically correct",
+                        "How line breaks divide a poem's sentences on the page"
                   ]
             },
             {
                   "label": "The best AP paragraph usually includes ___",
                   "options": [
                         "Claim, evidence, and commentary",
-                        "Plot summary only",
-                        "Device name lists",
-                        "Vocabulary definitions only"
+                        "Topic, quotation, and summary",
+                        "Device, definition, and example",
+                        "Background, summary, and a moral"
                   ]
             },
             {
                   "label": "A defensible interpretation should be ___",
                   "options": [
                         "Text-supported and specific",
-                        "Purely personal with no evidence",
-                        "A broad moral lesson only",
-                        "A dictionary definition"
+                        "Based on the reader's feelings",
+                        "Summarized in a single moral",
+                        "Focused on the author's intent"
                   ]
             }
       ],
@@ -118,24 +118,24 @@ export const englitPoetry2Part1Data = {
             {
                   "question": "A student identifies diction in a passage but does not explain effect. What is the best revision?",
                   "options": [
-                        "Add more plot details",
+                        "Add another quotation with similar diction",
                         "Explain how diction shapes tone or theme in that moment",
-                        "Replace all quotes with summary",
-                        "Switch to biographical information only"
+                        "Explain the dictionary meaning of each key word in the line",
+                        "Label the diction as formal or informal"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+                  "explanation": "The paragraph identifies diction but never explains its effect. Explaining how the diction shapes tone or theme supplies the commentary. Another quotation, dictionary definitions (denotation only) or a formal/informal label still leaves the effect unexplained."
             },
             {
                   "question": "Which thesis move is strongest for AP Lit?",
                   "options": [
-                        "Make an absolute claim with no nuance",
+                        "Argue that the poem has no single meaning, so its tensions cannot be resolved by readers",
                         "Advance a specific, defensible claim about how tension contributes to meaning",
-                        "Retell the plot in one sentence",
-                        "List three literary terms without argument"
+                        "Summarize the poem's conflict and state that the tension makes it interesting to read",
+                        "Name the three techniques that create tension and promise to discuss each one in turn"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+                  "explanation": "A strong thesis makes a specific, arguable claim about how a choice in the poem, here its tension, creates meaning. Declaring the tension unresolvable abandons the argument, calling it interesting is not a claim, and a three-technique list announces topics rather than an interpretation."
             }
       ]
 }

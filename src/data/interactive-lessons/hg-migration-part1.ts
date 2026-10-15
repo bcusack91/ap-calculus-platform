@@ -73,7 +73,7 @@ Ernst Ravenstein identified patterns that still apply today:
             options: [
               'Voluntary internal migration',
               'Forced international migration',
-              'Chain migration',
+              'Chain migration to join family',
               'Cyclic movement'
             ],
             correctAnswer: 1,
@@ -209,7 +209,7 @@ Ernst Ravenstein identified patterns that still apply today:
           {
             question: 'A refugee camp in Jordan houses 80,000 Syrian families who fled civil war. Which pair of push-pull factors best explains this?',
             options: [
-              'Push: economic opportunity; Pull: cultural similarity',
+              'Push: lack of economic opportunity; Pull: cultural similarity',
               'Push: armed conflict; Pull: proximity and relative safety',
               'Push: natural disaster; Pull: higher wages',
               'Push: overpopulation; Pull: available farmland'

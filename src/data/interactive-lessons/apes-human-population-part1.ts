@@ -60,7 +60,7 @@ export const apesHumanPopulationPart1Data = {
             question: 'Which stage of the demographic transition has the FASTEST population growth?',
             options: [
               'Stage 1 (pre-industrial)',
-              'Stage 2 (transitioning)',
+              'Stage 2 (developing)',
               'Stage 3 (industrial)',
               'Stage 4 (post-industrial)'
             ],
@@ -131,7 +131,7 @@ export const apesHumanPopulationPart1Data = {
         dropdowns: [
           {
             label: 'Japan has a TFR of 1.3 and an aging population. Its age structure diagram is ___',
-            options: ['Constrictive (narrow base)', 'Expansive (wide base)', 'Stationary (column)', 'Irregular']
+            options: ['Constrictive', 'Expansive', 'Stationary', 'Irregular']
           },
           {
             label: 'A country with high birth rates AND high death rates and slow growth is in Stage ___',
@@ -142,7 +142,7 @@ export const apesHumanPopulationPart1Data = {
             options: ['70 years', '35 years', '100 years', '10 years']
           }
         ],
-        correctAnswers: ['Constrictive (narrow base)', 'Stage 1 (pre-industrial)', '70 years'],
+        correctAnswers: ['Constrictive', 'Stage 1 (pre-industrial)', '70 years'],
         hint1: 'Below-replacement fertility = fewer young people.',
         hint2: 'Both rates are high, so growth is minimal.',
         hint3: '70 / 1 = ?',
@@ -174,10 +174,10 @@ export const apesHumanPopulationPart1Data = {
           {
             question: 'A developing country invests heavily in rural health clinics and childhood vaccinations. In the short term, this will MOST likely cause the country to move from:',
             options: [
-              'Stage 1 to Stage 2 (death rates drop while birth rates stay high)',
+              'Stage 1 to Stage 2 (falling death rates)',
               'Stage 2 to Stage 4 (immediate stabilization)',
               'Stage 4 to Stage 5 (population decline)',
-              'Stage 3 to Stage 1 (regression)'
+              'Stage 3 to Stage 1 (rising death rates)'
             ],
             correctAnswer: 0,
             explanation: 'Improving healthcare reduces death rates (especially infant mortality) while birth rates remain high in the short term, causing rapid population growth characteristic of Stage 2.'

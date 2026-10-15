@@ -31,10 +31,10 @@ Earth's population is unevenly distributed. Major concentrations exist in East A
           {
             question: 'The ecumene refers to:',
             options: [
-              'Uninhabited areas',
+              'The parts of Earth too harsh for permanent settlement',
               'The portion of Earth permanently inhabited by humans',
-              'Ocean areas',
-              'Areas with no vegetation'
+              'The share of Earth\'s land that is suitable for farming',
+              'The world\'s most densely populated urban regions'
             ],
             correctAnswer: 1,
             explanation: 'The ecumene is the habitable portion of Earth where humans have made permanent settlements.'
@@ -42,10 +42,10 @@ Earth's population is unevenly distributed. Major concentrations exist in East A
           {
             question: 'Arithmetic density is calculated by:',
             options: [
-              'Dividing population by arable land',
+              'Dividing the total population by arable land',
               'Dividing total population by total land area',
-              'Counting farmers per acre',
-              'Measuring urban population only'
+              'Dividing the number of farmers by arable land',
+              'Dividing urban population by total land area'
             ],
             correctAnswer: 1,
             explanation: 'Arithmetic density is the simplest measure: total population divided by total land area.'
@@ -57,16 +57,44 @@ Earth's population is unevenly distributed. Major concentrations exist in East A
       id: 'hgpopula1-content',
       type: 'text' as const,
       content: `
-## Population Distribution — Deeper Dive
+## 📖 Population Density: One Idea, Several Measures
 
-### Population density
-The number of people per unit of area. Understanding this concept is essential for mastering Population Distribution & Composition in AP Human Geography.
+**Population density** is the number of people per unit of area, usually per square kilometer or square mile. It is a family of measures, not a single number: what you divide by changes what the result reveals. The CED (Topic 2.1) expects you to calculate three of them and explain what each shows.
 
-### Ecumene
-The portion of Earth permanently inhabited by humans. This builds on the previous concept and connects to broader themes in the course.
+| Measure | Formula | Question it answers |
+|---|---|---|
+| **Arithmetic density** | Total population ÷ total land area | How many people per unit of land overall? |
+| **Physiological density** | Total population ÷ arable land | How much pressure do people put on the land that can grow crops? |
+| **Agricultural density** | Number of farmers ÷ arable land | How many farmers work each unit of farmland? |
 
-### Arithmetic density
-Total population divided by total land area. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+**Arable land** is land suitable for growing crops. All three measures can be compared across countries, but only if you keep straight what goes on top and what goes on the bottom.
+
+## The Ecumene
+
+The **ecumene** is the portion of Earth's surface where people live permanently. The rest is the **nonecumene**: ice sheets, the highest mountains and the driest deserts. Antarctica's research stations do not make it part of the ecumene, because the staff rotate in and out and no one lives there permanently.
+
+**Ecumene is not the same as "densely populated."** Australia's sheep and cattle stations and the grasslands of Mongolia hold very few people per km², but people live there year-round, so they are part of the ecumene. The ecumene tells you **where** people live permanently; density tells you **how many** live there.
+
+## Worked Calculation: Japan
+
+The figures are rounded for the early 2020s so the arithmetic is clear. Farmers means people employed in agriculture.
+
+| Population | Total land area | Arable land | Farmers |
+|---|---|---|---|
+| 124 million | 365,000 km² | 41,000 km² | about 2 million |
+
+1. **Arithmetic density** = 124,000,000 ÷ 365,000 ≈ **340 people per km²**
+2. **Physiological density** = 124,000,000 ÷ 41,000 ≈ **3,020 people per km² of arable land**
+3. **Agricultural density** = 2,000,000 ÷ 41,000 ≈ **49 farmers per km² of arable land**
+
+### What the Three Numbers Say Together
+- **Arithmetic (340):** Japan looks crowded, but the average spreads people evenly over the whole country. About two-thirds of Japan is forested mountain, and most people live on narrow coastal plains such as the Kanto Plain around Tokyo.
+- **Physiological (about 3,020):** this is nearly 9 times the arithmetic density (3,020 ÷ 340), because only about 11 percent of Japan's land is arable. Japan imports much of its food.
+- **Agricultural (about 49):** relatively few farmers work each km² of farmland, which points to mechanized farming rather than many people farming by hand.
+
+> ⚠️ **Common error:** arithmetic density divides by **all** land. Physiological density uses **all people**, while agricultural density uses **only farmers**; both of those divide by **arable** land, not total land.
+
+> 🔑 **AP Connection:** A large gap between physiological and arithmetic density means farmland is scarce. Part 3 uses the same three measures to compare several countries, and Part 2 explains the physical and human factors behind where the ecumene's people cluster.
       `
     },
     {
@@ -102,22 +130,22 @@ Use the exact term from this part.
         dropdowns: [
           {
             label: 'The number of people per unit of area is called ___',
-            options: ['Population density', 'Ecumene', 'Arithmetic density', 'None of these']
+            options: ['Population density', 'Ecumene', 'Population distribution', 'Carrying capacity']
           },
           {
             label: 'The portion of Earth permanently inhabited by humans describes ___',
-            options: ['Population density', 'Ecumene', 'Arithmetic density', 'All of these']
+            options: ['Population density', 'Ecumene', 'Arithmetic density', 'Nonecumene']
           },
           {
             label: 'Total population divided by total land area is known as ___',
-            options: ['Arithmetic density', 'Population density', 'Ecumene', 'None of these']
+            options: ['Arithmetic density', 'Physiological density', 'Agricultural density', 'Ecumene']
           }
         ],
         correctAnswers: ['Population density', 'Ecumene', 'Arithmetic density'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Population density — The number of people per unit of area. Ecumene — The portion of Earth permanently inhabited by humans. Arithmetic density — Total population divided by total land area.'
+        hint1: 'The general measure of people per km² or per square mile.',
+        hint2: 'Where people live year-round, however thinly.',
+        hint3: 'The bottom of the fraction is all land, not just arable land.',
+        explanation: 'Population density is the general idea of people per unit of area; distribution describes where people are spread, and carrying capacity is the population an area can support. The ecumene is the permanently inhabited land, and the nonecumene is the rest. Dividing total population by total land area is arithmetic density; physiological density divides by arable land, and agricultural density divides only farmers by arable land.'
       }
     },
     {
@@ -149,10 +177,10 @@ Use the exact term from this part.
           {
             question: 'Bangladesh has a high physiological density. This means:',
             options: [
-              'It has a large total area',
+              'It has many people relative to its total land area',
               'It has many people relative to its arable farmland',
-              'It has few people per square mile',
-              'It has extensive wilderness'
+              'It has few people for each square mile of its land',
+              'It has many farmers working each unit of farmland'
             ],
             correctAnswer: 1,
             explanation: 'High physiological density means a lot of people depend on limited farmland — indicating potential food supply pressure.'
@@ -160,13 +188,13 @@ Use the exact term from this part.
           {
             question: 'Most of Australia\'s population lives along the southeastern coast because:',
             options: [
-              'The interior has favorable climate',
-              'The coast offers better climate, ports, and resources',
-              'Government policy requires coastal settlement',
-              'The interior has more arable land'
+              'The interior is too humid and forested for farming',
+              'The coast is wetter, milder and better for trade',
+              'Federal law has required settlers to live near the coast',
+              'Mining leases cover most of the interior\'s farmland'
             ],
             correctAnswer: 1,
-            explanation: 'Australia\'s arid interior pushes population to the more hospitable coastal areas with better climate and economic opportunities.'
+            explanation: 'Australia\'s interior is arid, so people concentrate along the wetter, milder southeastern coast, where ports and the first colonial settlements also anchored growth.'
           }
         ]
       }

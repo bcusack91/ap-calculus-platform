@@ -60,10 +60,10 @@ export const apesAtmosphereClimatePart1Data = {
           {
             question: 'The greenhouse effect works by:',
             options: [
-              'Blocking all sunlight from reaching Earth',
-              'Trapping outgoing infrared (longwave) radiation in the atmosphere',
-              'Creating a physical barrier of clouds around Earth',
-              'Increasing the amount of UV radiation reaching the surface'
+              'Blocking most incoming sunlight before it reaches Earth',
+              'Absorbing outgoing infrared radiation from Earth\'s surface',
+              'Creating a solid barrier of clouds that holds heat in',
+              'Letting more UV radiation reach and heat the surface'
             ],
             correctAnswer: 1,
             explanation: 'Greenhouse gases are transparent to incoming shortwave solar radiation but absorb and re-emit outgoing longwave (infrared) radiation, trapping heat in the lower atmosphere.'
@@ -131,7 +131,7 @@ export const apesAtmosphereClimatePart1Data = {
         dropdowns: [
           {
             label: 'Melting Arctic ice exposes dark ocean → absorbs more heat → more ice melts. This is ___',
-            options: ['A positive feedback loop (ice-albedo)', 'A negative feedback loop', 'The ozone hole', 'The Coriolis effect']
+            options: ['A positive feedback loop', 'A negative feedback loop', 'The ozone hole', 'The Coriolis effect']
           },
           {
             label: 'The natural greenhouse effect keeps Earth at +15C instead of -18C. This is ___',
@@ -139,14 +139,14 @@ export const apesAtmosphereClimatePart1Data = {
           },
           {
             label: 'Sea level rise is caused by thermal expansion AND ___',
-            options: ['Melting of land-based ice (glaciers and ice sheets)', 'Increased ocean evaporation', 'Tectonic plate movement', 'Decreased volcanic activity']
+            options: ['Melting glaciers and ice sheets', 'Melting of floating sea ice', 'Increased ocean evaporation', 'Tectonic plate movement']
           }
         ],
-        correctAnswers: ['A positive feedback loop (ice-albedo)', 'Beneficial and necessary for life', 'Melting of land-based ice (glaciers and ice sheets)'],
+        correctAnswers: ['A positive feedback loop', 'Beneficial and necessary for life', 'Melting glaciers and ice sheets'],
         hint1: 'The change makes itself worse.',
         hint2: 'It existed before humans burned fossil fuels.',
         hint3: 'Think ice on land flowing into oceans.',
-        explanation: 'Ice-albedo = positive feedback. Natural greenhouse effect = essential. Sea level rise = thermal expansion + melting land ice.'
+        explanation: 'Ice-albedo = positive feedback. Natural greenhouse effect = essential. Sea level rise = thermal expansion + melting land ice; floating sea ice already displaces its own weight of water, so its melting barely changes sea level.'
       }
     },
     {
@@ -175,7 +175,7 @@ export const apesAtmosphereClimatePart1Data = {
             question: 'As Arctic permafrost thaws due to rising temperatures, trapped methane is released. This accelerates warming, which causes more permafrost to thaw. This scenario best illustrates:',
             options: [
               'A negative feedback loop that will stabilize climate',
-              'A positive feedback loop that amplifies climate change',
+              'A positive feedback loop that amplifies the change',
               'The natural carbon cycle functioning normally',
               'A decrease in greenhouse gas concentrations'
             ],
@@ -185,13 +185,13 @@ export const apesAtmosphereClimatePart1Data = {
           {
             question: 'Coral reef bleaching is linked to climate change because:',
             options: [
-              'Warmer water causes corals to expel symbiotic algae, and ocean acidification weakens coral skeletons',
-              'Corals thrive in warmer, more acidic water',
-              'Climate change increases the salinity of ocean water',
-              'Melting ice directly crushes coral reefs'
+              'Warmer water makes corals expel their symbiotic algae',
+              'Corals grow fastest in warmer, more acidic water',
+              'Climate change makes seawater too salty for corals',
+              'Rising seas leave reefs too deep to get sunlight'
             ],
             correctAnswer: 0,
-            explanation: 'Coral bleaching occurs when warmer water stresses corals, causing them to expel zooxanthellae (symbiotic algae). Additionally, ocean acidification (from dissolved $CO_{2}$) makes it harder for corals to build calcium carbonate skeletons.'
+            explanation: 'Coral bleaching occurs when warmer water stresses corals, causing them to expel zooxanthellae (symbiotic algae). Ocean acidification (from dissolved $CO_{2}$) adds a second threat by making it harder for corals to build calcium carbonate skeletons.'
           }
         ]
       }

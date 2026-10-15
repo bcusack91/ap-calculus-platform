@@ -46,10 +46,10 @@ export const apesFossilFuelsNuclearPart1Data = {
           {
             question: 'Fossil fuels are considered non-renewable because:',
             options: [
-              'They can never form again under any conditions',
-              'They form over millions of years, far slower than human consumption rates',
-              'There are no fossil fuels remaining on Earth',
-              'They are only found on other planets'
+              'They can never form again under any natural conditions',
+              'They form over millions of years, far slower than we use them',
+              'Nearly all known reserves have already been burned',
+              'Burning them destroys the carbon atoms they contain'
             ],
             correctAnswer: 1,
             explanation: 'Fossil fuels technically can form again, but the process takes tens to hundreds of millions of years — effectively non-renewable on human time scales.'
@@ -57,10 +57,10 @@ export const apesFossilFuelsNuclearPart1Data = {
           {
             question: 'A major environmental concern with hydraulic fracturing (fracking) is:',
             options: [
-              'It produces more $CO_{2}$ than coal mining',
-              'Potential groundwater contamination and induced seismic activity',
-              'It only works in tropical climates',
-              'It completely depletes all underground water'
+              'It releases more $CO_{2}$ per unit of energy than coal',
+              'Possible groundwater contamination and induced earthquakes',
+              'It permanently drains every aquifer it reaches',
+              'Radioactive fallout from the explosives it uses'
             ],
             correctAnswer: 1,
             explanation: 'Fracking injects high-pressure fluid underground to fracture rock and release gas/oil. Concerns include chemical contamination of groundwater, methane migration, and small earthquakes from injection wells.'
@@ -137,14 +137,14 @@ export const apesFossilFuelsNuclearPart1Data = {
           },
           {
             label: 'Injecting high-pressure fluid into rock to release trapped gas is ___',
-            options: ['Hydraulic fracturing (fracking)', 'Mountaintop removal', 'Surface mining', 'Offshore drilling']
+            options: ['Hydraulic fracturing', 'Mountaintop removal', 'Surface mining', 'Offshore drilling']
           },
           {
             label: 'Coal mining can cause acidic water to drain from mines into streams. This is called ___',
             options: ['Acid mine drainage', 'Eutrophication', 'Thermal pollution', 'Ocean acidification']
           }
         ],
-        correctAnswers: ['Nuclear fission', 'Hydraulic fracturing (fracking)', 'Acid mine drainage'],
+        correctAnswers: ['Nuclear fission', 'Hydraulic fracturing', 'Acid mine drainage'],
         hint1: 'Uranium-based, low carbon, waste concerns.',
         hint2: 'High-pressure fluid fractures underground rock.',
         hint3: 'Sulfuric acid from exposed minerals in mine sites.',

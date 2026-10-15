@@ -145,7 +145,7 @@ The dependency ratio measures the proportion of non-working-age population (unde
           },
           {
             label: 'A population pyramid with a very wide base tapering sharply indicates ___',
-            options: ['High birth rate with low life expectancy', 'Low birth rate with high life expectancy', 'Equal birth and death rates', 'An aging population']
+            options: ['High birth rate with low life expectancy', 'Low birth rate with high life expectancy', 'Stable birth and death rates over time', 'An aging population with few children']
           }
         ],
         correctAnswers: ['Stage 5', 'Stage 2', 'High birth rate with low life expectancy'],
@@ -188,10 +188,10 @@ The dependency ratio measures the proportion of non-working-age population (unde
           {
             question: 'Country X has a CBR of 12, CDR of 14, and a net immigration rate of 5 per 1,000. Country X total population is:',
             options: [
-              'Increasing, because immigration offsets natural decrease',
-              'Decreasing, because CDR exceeds CBR',
-              'Stable, because births equal deaths',
-              'Cannot be determined from this data'
+              'Increasing, because net migration offsets natural decrease',
+              'Decreasing, because the death rate exceeds the birth rate',
+              'Stable, because migration and natural change cancel out',
+              'Cannot be determined without the total population size'
             ],
             correctAnswer: 0,
             explanation: 'Natural change = CBR minus CDR = 12 minus 14 = negative 2 per 1,000. But net immigration = +5 per 1,000. Total change = negative 2 + 5 = +3 per 1,000. Population is increasing.'
@@ -200,7 +200,7 @@ The dependency ratio measures the proportion of non-working-age population (unde
             question: 'Ester Boserup would most likely respond to Malthus by arguing that:',
             options: [
               'Population growth will inevitably outpace food production',
-              'Population pressure stimulates innovation and intensification of agriculture',
+              'Population pressure pushes farmers to innovate and intensify farming',
               'Governments must limit population growth through strict policy',
               'Resource depletion is unavoidable regardless of technology'
             ],

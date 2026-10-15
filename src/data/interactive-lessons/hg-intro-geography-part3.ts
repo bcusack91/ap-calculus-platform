@@ -63,10 +63,10 @@ export const hgIntroGeographyPart3Data = {
           {
             question: "Which is the BEST example of a functional region?",
             options: [
-              "The U.S. Corn Belt",
-              "The circulation area of the Chicago Tribune newspaper",
-              "The American 'Bible Belt'",
-              "The European Union"
+              "The Corn Belt across the Midwestern states",
+              "The Chicago Tribune's circulation area",
+              "The 'Bible Belt' across the American South",
+              "The 27 member states of the European Union"
             ],
             correctAnswer: 1,
             explanation: "A functional region is organized around a node and weakens outward. A newspaper's circulation area weakens with distance from Chicago — the textbook nodal region. Corn Belt and EU are formal; Bible Belt is perceptual."
@@ -74,10 +74,10 @@ export const hgIntroGeographyPart3Data = {
           {
             question: "Two reporters draw the boundaries of 'the American South' and disagree about whether Maryland and Missouri are inside it. The disagreement is most consistent with:",
             options: [
-              "A formal region with measurable criteria",
-              "A functional region centered on Atlanta",
-              "A perceptual (vernacular) region built on shared imagination",
-              "A planning region defined by federal districts"
+              "A formal region set by measurable criteria such as income",
+              "A functional region organized around Atlanta as its node",
+              "A perceptual region built on shared regional identity",
+              "A planning region defined by federal administrative districts"
             ],
             correctAnswer: 2,
             explanation: "Perceptual regions are constructed from collective identity, dialect, and history — there is no single measurable variable, so reasonable observers disagree about borders."
@@ -143,7 +143,7 @@ Use the exact term from the lesson.
         dropdowns: [
           {
             label: "The 'Eurozone' (countries that use the euro currency). Region type: ___",
-            options: ["Formal", "Functional", "Perceptual", "Macro"]
+            options: ["Formal", "Functional", "Perceptual", "Vernacular"]
           },
           {
             label: "Hartsfield-Jackson Atlanta Airport's catchment of passengers within a 2-hour drive. Region type: ___",
@@ -191,10 +191,10 @@ Use the exact term from the lesson.
           {
             question: "Census data show that the 'Rust Belt' has lost 1.4 million manufacturing jobs since 2000. The 'Rust Belt' as commonly mapped is BEST classified as a:",
             options: [
-              "Functional region centered on Detroit",
-              "Formal region defined by a shared decline in manufacturing employment",
-              "Perceptual region only — there is no measurable definition",
-              "Vernacular region with no economic basis"
+              "A functional region organized around Detroit's auto plants",
+              "A formal region defined by a shared decline in factory jobs",
+              "A perceptual region only, with no measurable definition",
+              "A vernacular region with no economic basis at all"
             ],
             correctAnswer: 1,
             explanation: "The Rust Belt is defined by a measurable shared trait (manufacturing decline + heavy-industry legacy) across its area — the textbook formal region. It also has perceptual associations, but its analytical definition is formal."
@@ -202,13 +202,13 @@ Use the exact term from the lesson.
           {
             question: "Researchers find that at the *state* scale, Mississippi has the highest poverty rate. At the *county* scale within Mississippi, the Delta counties have rates double the state average. The disparity between scales is best explained by:",
             options: [
-              "Modifiable Areal Unit Problem (MAUP)",
-              "Distance decay",
-              "Site vs. situation",
-              "Time-space convergence"
+              "The modifiable areal unit problem",
+              "Distance decay from the state capital",
+              "The contrast between site and situation",
+              "Time-space convergence across the state"
             ],
             correctAnswer: 0,
-            explanation: "The same data tell different stories at different aggregation units — exactly the MAUP. State averages mask county-level concentrations of poverty."
+            explanation: "The same data tell different stories when they are grouped into different units, which is the modifiable areal unit problem (MAUP). State averages mask county-level concentrations of poverty."
           }
         ]
       }

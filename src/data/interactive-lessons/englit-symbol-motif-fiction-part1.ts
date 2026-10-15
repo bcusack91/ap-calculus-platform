@@ -15,24 +15,24 @@ export const englitSymbolMotifFictionPart1Data = {
             {
                   "question": "Which statement best reflects the role of Symbol in literary analysis?",
                   "options": [
-                        "A symbol has only one fixed universal meaning.",
-                        "Symbol meaning depends on textual context and can evolve over time.",
-                        "Motif appears only once.",
-                        "Symbol analysis is just personal opinion."
+                        "A symbol has one fixed meaning that readers can look up in a reference guide.",
+                        "A symbol's meaning depends on context and can develop across a text.",
+                        "A symbol is any concrete object described in vivid or detailed imagery.",
+                        "Symbol analysis is personal opinion, so any reading of it is equally valid."
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Symbol helps readers interpret meaning and authorial choice, not just identify a feature."
+                  "explanation": "Symbols gain meaning from their context, and that meaning can shift as the story develops. A symbol does not have a fixed dictionary meaning, vivid description alone does not make an object symbolic, and a symbolic reading must be supported by textual evidence rather than opinion."
             },
             {
                   "question": "What is usually the strongest AP Lit analytical move?",
                   "options": [
-                        "Retell the plot in sequence",
-                        "Name literary devices without interpretation",
+                        "Retell the story in order from beginning to end",
+                        "Point out each symbol and say what it represents",
                         "Connect textual details to a defensible interpretation about meaning",
-                        "Focus only on historical background"
+                        "Explain how the author's real life inspired the story's events and symbols"
                   ],
                   "correctAnswer": 2,
-                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+                  "explanation": "AP Lit scoring rewards a defensible claim supported by evidence and commentary. Retelling, decoding each symbol and biography earn credit only when they are tied to an interpretation of meaning."
             }
       ]
 }
@@ -68,33 +68,33 @@ export const englitSymbolMotifFictionPart1Data = {
             {
                   "label": "Symbol in analysis usually refers to ___",
                   "options": [
-                        "A concrete element that carries layered thematic meaning",
-                        "A random prop with no pattern",
-                        "A chapter title",
-                        "A narrator biography"
+                        "A concrete element carrying layered meaning",
+                        "An object with one fixed, universal meaning",
+                        "Any object the narrator describes vividly",
+                        "A personal association each reader brings"
                   ]
             },
             {
                   "label": "The best AP paragraph usually includes ___",
                   "options": [
                         "Claim, evidence, and commentary",
-                        "Plot summary only",
-                        "Device name lists",
-                        "Vocabulary definitions only"
+                        "Topic, quotation, and summary",
+                        "Device, definition, and example",
+                        "Background, summary, and a moral"
                   ]
             },
             {
                   "label": "A defensible interpretation should be ___",
                   "options": [
                         "Text-supported and specific",
-                        "Purely personal with no evidence",
-                        "A broad moral lesson only",
-                        "A dictionary definition"
+                        "Based on the reader's feelings",
+                        "Summarized in a single moral",
+                        "Focused on the author's intent"
                   ]
             }
       ],
       "correctAnswers": [
-            "A concrete element that carries layered thematic meaning",
+            "A concrete element carrying layered meaning",
             "Claim, evidence, and commentary",
             "Text-supported and specific"
       ],
@@ -118,24 +118,24 @@ export const englitSymbolMotifFictionPart1Data = {
             {
                   "question": "A student identifies motif in a passage but does not explain effect. What is the best revision?",
                   "options": [
-                        "Add more plot details",
-                        "Explain how motif shapes tone or theme in that moment",
-                        "Replace all quotes with summary",
-                        "Switch to biographical information only"
+                        "List every place the motif appears",
+                        "Explain how the motif shapes tone or theme in that moment",
+                        "Explain what the motif object is",
+                        "Add a quotation from a later scene"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+                  "explanation": "The paragraph identifies a motif but never explains its effect. Explaining how the motif shapes tone or theme supplies the commentary. Listing appearances, describing the object or adding a later quotation still leaves the effect unexplained."
             },
             {
                   "question": "Which thesis move is strongest for AP Lit?",
                   "options": [
-                        "Make an absolute claim with no nuance",
+                        "State that the story contains a pattern of repeated images and list where they appear",
                         "Advance a specific, defensible claim about how pattern development contributes to meaning",
-                        "Retell the plot in one sentence",
-                        "List three literary terms without argument"
+                        "Claim that the repeated image represents one fixed idea from start to finish",
+                        "Summarize the plot and point out that several objects show up more than once along the way"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+                  "explanation": "A strong thesis makes a specific, arguable claim about how a choice in the text, here a developing pattern, creates meaning. Listing where images repeat, fixing one unchanging meaning or noting that objects recur describes the pattern without arguing how its development matters."
             }
       ]
 }

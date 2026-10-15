@@ -48,7 +48,7 @@ Shares are for 2024 (Ember, *Global Electricity Review 2025*) and are rounded. T
           {
             question: 'Which renewable energy source currently generates the MOST electricity globally?',
             options: [
-              'Solar PV',
+              'Solar photovoltaics',
               'Wind',
               'Hydroelectric',
               'Geothermal'
@@ -59,10 +59,10 @@ Shares are for 2024 (Ember, *Global Electricity Review 2025*) and are rounded. T
           {
             question: 'A key advantage of renewable energy sources over fossil fuels is:',
             options: [
-              'They all work 24 hours a day regardless of conditions',
-              'They produce little to no greenhouse gas emissions during operation',
-              'They require no land whatsoever',
-              'They have unlimited energy storage built in'
+              'They all run 24 hours a day regardless of the weather',
+              'They emit little or no greenhouse gas during operation',
+              'They need far less land than fossil fuel plants',
+              'They store energy on their own with no batteries'
             ],
             correctAnswer: 1,
             explanation: 'Renewables produce little to no $CO_{2}$ during operation (some lifecycle emissions from manufacturing). However, intermittency (solar depends on sun, wind on wind) remains a challenge.'
@@ -180,10 +180,10 @@ Shares are for 2024 (Ember, *Global Electricity Review 2025*) and are rounded. T
           {
             question: 'A community wants to build a dam for hydroelectric power. Which environmental impact should they MOST consider?',
             options: [
-              'Increased air pollution from burning water',
-              'Disruption of river ecosystems, fish migration, and sediment transport',
-              'Radioactive waste from turbine operation',
-              'Depletion of water from the water cycle'
+              'Air pollution from burning fuel to spin the turbines',
+              'Blocked fish migration and trapped river sediment',
+              'Radioactive waste produced by the turbine generators',
+              'Permanent loss of water from the global water cycle'
             ],
             correctAnswer: 1,
             explanation: 'Dams fundamentally alter river ecosystems: they block fish migration (salmon), trap sediment (causing downstream erosion), flood habitats, and change downstream water temperature and flow.'
@@ -191,10 +191,10 @@ Shares are for 2024 (Ember, *Global Electricity Review 2025*) and are rounded. T
           {
             question: 'The biggest barrier to achieving 100% renewable electricity from solar and wind is:',
             options: [
-              'Solar and wind produce too much greenhouse gas',
-              'Intermittency — requiring energy storage or backup for when sun and wind are unavailable',
-              'They are too expensive compared to coal',
-              'There is not enough sunlight or wind on Earth'
+              'Solar and wind emit too much greenhouse gas overall',
+              'Intermittency that requires storage or backup power',
+              'Solar and wind cost far more than coal everywhere',
+              'Earth lacks enough sunlight and wind to meet demand'
             ],
             correctAnswer: 1,
             explanation: 'Solar and wind are intermittent — they only generate power when conditions allow. Grid-scale battery storage, pumped hydro, and geographic diversity are key solutions to this challenge.'

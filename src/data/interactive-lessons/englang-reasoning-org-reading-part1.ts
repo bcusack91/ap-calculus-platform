@@ -49,10 +49,10 @@ If any link is weak or missing, the argument becomes less persuasive.
           {
             question: 'A paragraph begins, "Although critics argue the policy is costly, long-term outcomes show clear savings." What is the paragraph doing?',
             options: [
-              'Introducing unrelated background',
+              'Introducing background that the rest of the paragraph explains',
               'Conceding and rebutting a counterargument',
-              'Providing narrative detail only',
-              'Defining a technical term'
+              'Narrating an example that illustrates the costs of the policy',
+              'Defining a key term before the main claim is presented'
             ],
             correctAnswer: 1,
             explanation: '"Although critics argue..." signals concession, and "long-term outcomes show..." signals rebuttal. The paragraph acknowledges opposition and then counters it with evidence.'
@@ -60,10 +60,10 @@ If any link is weak or missing, the argument becomes less persuasive.
           {
             question: 'Which best describes line of reasoning?',
             options: [
-              'The number of rhetorical devices in a passage',
-              'The sequence of claims and support that logically advances an argument',
-              'The emotional tone of the conclusion',
-              'The biography of the author'
+              'The number and variety of rhetorical devices used in a passage',
+              'The logical sequence of claims and support that advances an argument',
+              'The shift in emotional tone from the opening to the conclusion',
+              'The chronological order in which a writer recounts events from the past'
             ],
             correctAnswer: 1,
             explanation: 'Line of reasoning is the argument\'s logic in motion: how each idea builds toward the conclusion. AP scoring rewards clear, coherent reasoning rather than isolated points.'
@@ -140,18 +140,18 @@ Weak passages often:
         dropdowns: [
           {
             label: 'A passage opens with a broad statement about democracy, then analyzes one Supreme Court case. This is ___',
-            options: ['General to specific organization', 'Specific to general organization', 'Cause-effect only', 'Narrative sequence']
+            options: ['General to specific', 'Specific to general', 'Cause and effect', 'Chronological order']
           },
           {
             label: 'A writer presents three policy options and weighs pros/cons of each. This is primarily ___',
-            options: ['Compare-contrast organization', 'Problem-solution only', 'Chronological narration', 'Definition process']
+            options: ['Compare and contrast', 'Chronological order', 'Cause and effect', 'Extended definition']
           },
           {
             label: 'The sentence "Therefore, stricter disclosure laws are necessary" functions as ___',
-            options: ['Inference/conclusion from prior reasoning', 'Background context', 'Anecdotal evidence', 'Counterargument']
+            options: ['A conclusion from prior reasoning', 'Background context for the issue', 'Evidence supporting a later claim', 'A concession to the opposing side']
           }
         ],
-        correctAnswers: ['General to specific organization', 'Compare-contrast organization', 'Inference/conclusion from prior reasoning'],
+        correctAnswers: ['General to specific', 'Compare and contrast', 'A conclusion from prior reasoning'],
         hint1: 'Starts broad, then narrows to one case.',
         hint2: 'Multiple alternatives being weighed.',
         hint3: '"Therefore" marks logical conclusion.',
@@ -183,10 +183,10 @@ Weak passages often:
           {
             question: 'In a passage, paragraph 3 presents critics concerns, and paragraph 4 begins, "Yet these objections overlook the long-term savings." What is paragraph 4 doing?',
             options: [
-              'Introducing a new unrelated topic',
+              'Introducing a new topic unrelated to the critics\' concerns',
               'Rebutting the counterargument to restore the line of reasoning',
-              'Concluding the essay with a call to action',
-              'Providing neutral background'
+              'Concluding the essay with a call to action on savings',
+              'Conceding that the critics\' objections are mostly correct'
             ],
             correctAnswer: 1,
             explanation: 'The "Yet" transition signals a turn from counterargument to rebuttal. Paragraph 4 directly responds to paragraph 3 and restores the writer\'s main line of reasoning.'
@@ -194,10 +194,10 @@ Weak passages often:
           {
             question: 'Why is identifying paragraph function useful on AP Lang multiple-choice?',
             options: [
-              'It helps memorize quotes faster',
-              'It clarifies how each paragraph advances the author\'s purpose and argument',
-              'It replaces the need to read carefully',
-              'It only helps on poetry questions'
+              'It helps you memorize key quotations from each paragraph faster',
+              'It shows how each paragraph advances the author\'s purpose',
+              'It lets you skip close reading of each paragraph\'s sentences',
+              'It mainly helps with poetry passages'
             ],
             correctAnswer: 1,
             explanation: 'Many AP questions ask about rhetorical function. Knowing whether a paragraph provides evidence, concession, rebuttal, or transition helps you answer purpose and organization questions accurately.'

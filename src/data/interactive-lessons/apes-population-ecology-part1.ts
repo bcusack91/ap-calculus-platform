@@ -50,10 +50,10 @@ export const apesPopulationEcologyPart1Data = {
           {
             question: 'In logistic growth, population growth rate is HIGHEST when:',
             options: [
-              'The population is near zero',
-              'The population is at carrying capacity (K)',
-              'The population is at K/2 (half of carrying capacity)',
-              'Resources are completely depleted'
+              'The population is just above zero',
+              'The population has reached carrying capacity',
+              'The population is at K/2',
+              'The population has overshot carrying capacity'
             ],
             correctAnswer: 2,
             explanation: 'At N = K/2, the logistic equation produces maximum growth rate. Below K/2, population is too small for maximum growth. Above K/2, resources become limiting and growth slows.'
@@ -182,10 +182,10 @@ Two species competing for the **exact same niche** cannot coexist indefinitely â
           {
             question: 'An invasive species introduced to an island with no predators initially shows J-shaped exponential growth. What will MOST likely happen next?',
             options: [
-              'Growth will continue exponentially forever',
-              'The population will crash after overshooting carrying capacity due to resource depletion',
-              'The population will immediately stabilize at carrying capacity',
-              'The population will decline due to natural predators evolving'
+              'Growth will continue exponentially with no limit',
+              'It will overshoot carrying capacity and then crash',
+              'It will level off smoothly at carrying capacity',
+              'It will decline as native predators quickly evolve'
             ],
             correctAnswer: 1,
             explanation: 'Without predators, the population overshoots K, depletes resources, and then crashes. This boom-and-bust pattern is common for invasive species and can cause permanent ecosystem damage.'

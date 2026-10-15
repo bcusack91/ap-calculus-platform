@@ -45,10 +45,10 @@ export const apesAtmosphericPollutionPart1Data = {
           {
             question: 'Ground-level ozone is a secondary pollutant because:',
             options: [
-              'It is emitted directly from car exhaust pipes',
-              'It forms from chemical reactions between $NO_{x}$ and VOCs in the presence of sunlight',
-              'It is the same as stratospheric ozone',
-              'It comes from volcanic eruptions'
+              'It is emitted directly from vehicle tailpipes',
+              'It forms when $NO_{x}$ and VOCs react in sunlight',
+              'It drifts down from the stratospheric ozone layer',
+              'It is released directly by erupting volcanoes'
             ],
             correctAnswer: 1,
             explanation: 'Ground-level ozone is NOT emitted directly. It forms when nitrogen oxides $(NO_{x})$ react with volatile organic compounds (VOCs) in the presence of UV sunlight — making it a secondary pollutant.'
@@ -56,10 +56,10 @@ export const apesAtmosphericPollutionPart1Data = {
           {
             question: 'Which statement about ozone is correct?',
             options: [
-              'All ozone is harmful to human health',
-              'Ground-level ozone is harmful; stratospheric ozone protects against UV',
-              'Stratospheric ozone causes respiratory problems',
-              'Ground-level ozone protects against UV radiation'
+              'Ozone harms health both near the ground and up high',
+              'Ozone near the ground harms health, but ozone up high blocks UV',
+              'Ozone up high causes respiratory problems for people',
+              'Ground-level ozone shields people from UV radiation'
             ],
             correctAnswer: 1,
             explanation: 'Stratospheric ozone (good up high) filters harmful UV radiation. Ground-level ozone (bad nearby) is a component of smog that damages lungs and crops.'
@@ -176,10 +176,10 @@ export const apesAtmosphericPollutionPart1Data = {
           {
             question: 'A city surrounded by mountains experiences a thermal inversion during winter. Residents report increased respiratory problems. The primary reason is:',
             options: [
-              'Mountain winds are bringing in clean air from rural areas',
-              'Warm air aloft traps cold air and pollutants near the surface, preventing dispersion',
-              'The mountains block UV radiation needed to form ozone',
-              'Cold air naturally contains fewer oxygen molecules'
+              'Mountain winds carry clean rural air into the valley city',
+              'Warm air aloft traps cool air and pollutants below',
+              'The mountains block the UV light needed to form ozone',
+              'Cold winter air holds fewer oxygen molecules per breath'
             ],
             correctAnswer: 1,
             explanation: 'During a thermal inversion, warm air acts as a lid above cool surface air, trapping pollutants (CO, PM, $SO_{2}$) at ground level. Mountains worsen this by preventing horizontal air movement.'
@@ -187,10 +187,10 @@ export const apesAtmosphericPollutionPart1Data = {
           {
             question: 'The Montreal Protocol is considered one of the most successful environmental agreements because:',
             options: [
-              'It eliminated all air pollution worldwide',
-              'It successfully phased out CFCs, allowing the ozone layer to begin recovering',
-              'It ended all fossil fuel use',
-              'It reversed global warming completely'
+              'It eliminated nearly all urban air pollution worldwide',
+              'It phased out CFCs, so the ozone layer is now recovering',
+              'It set binding limits that ended coal use in rich nations',
+              'It halted the rise in global temperatures within a decade'
             ],
             correctAnswer: 1,
             explanation: 'The Montreal Protocol (1987) achieved near-universal ratification and successfully phased out CFC production. The ozone layer is now slowly recovering and is expected to return to pre-1980 levels by mid-century.'

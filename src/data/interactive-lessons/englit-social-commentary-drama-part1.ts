@@ -15,24 +15,24 @@ export const englitSocialCommentaryDramaPart1Data = {
             {
                   "question": "Which statement best reflects the role of Satire in literary analysis?",
                   "options": [
-                        "Satire means the play is not serious.",
+                        "Satire is comic relief that lightens a play's serious scenes.",
                         "Satire can deliver serious critique through comic or ironic methods.",
-                        "Satire never involves moral judgment.",
-                        "Satire is only parody without argument."
+                        "Satire is gentle humor about human quirks with no real target.",
+                        "Satire is an imitation of another work's style for fun."
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Satire helps readers interpret meaning and authorial choice, not just identify a feature."
+                  "explanation": "Satire uses humor, irony and exaggeration to expose and criticize real social targets, so its comedy carries a serious argument. Comic relief briefly eases tension without critique, satire has a target and a judgment, and parody imitates a style without necessarily making a social argument."
             },
             {
                   "question": "What is usually the strongest AP Lit analytical move?",
                   "options": [
-                        "Retell the plot in sequence",
-                        "Name literary devices without interpretation",
+                        "Retell the action of each scene in order",
+                        "Name the dramatic devices and define each term",
                         "Connect textual details to a defensible interpretation about meaning",
-                        "Focus only on historical background"
+                        "Explain the playwright's political views using sources outside the play"
                   ],
                   "correctAnswer": 2,
-                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+                  "explanation": "AP Lit scoring rewards a defensible claim supported by evidence and commentary. Retelling scenes, defining devices and outside evidence of the playwright's politics earn credit only when they are tied to an interpretation of the play."
             }
       ]
 }
@@ -68,33 +68,33 @@ export const englitSocialCommentaryDramaPart1Data = {
             {
                   "label": "Satire in analysis usually refers to ___",
                   "options": [
-                        "Critical exposure of social problems through irony or exaggeration",
-                        "A tragic ending only",
-                        "A setting description",
-                        "A stage direction list"
+                        "Social critique through irony or exaggeration",
+                        "Comic relief that eases a play's serious tension",
+                        "Gentle humor about quirks with no real target",
+                        "Imitation of another work's style purely for fun"
                   ]
             },
             {
                   "label": "The best AP paragraph usually includes ___",
                   "options": [
                         "Claim, evidence, and commentary",
-                        "Plot summary only",
-                        "Device name lists",
-                        "Vocabulary definitions only"
+                        "Quotation, summary, and paraphrase",
+                        "Thesis, devices, and conclusion",
+                        "Context, plot, and a quotation"
                   ]
             },
             {
                   "label": "A defensible interpretation should be ___",
                   "options": [
                         "Text-supported and specific",
-                        "Purely personal with no evidence",
-                        "A broad moral lesson only",
-                        "A dictionary definition"
+                        "Grounded in the author's biography",
+                        "Cautious enough to avoid a claim",
+                        "Obvious and agreed on by all"
                   ]
             }
       ],
       "correctAnswers": [
-            "Critical exposure of social problems through irony or exaggeration",
+            "Social critique through irony or exaggeration",
             "Claim, evidence, and commentary",
             "Text-supported and specific"
       ],
@@ -118,24 +118,24 @@ export const englitSocialCommentaryDramaPart1Data = {
             {
                   "question": "A student identifies power dynamics in a passage but does not explain effect. What is the best revision?",
                   "options": [
-                        "Add more plot details",
-                        "Explain how power dynamics shapes tone or theme in that moment",
-                        "Replace all quotes with summary",
-                        "Switch to biographical information only"
+                        "Identify which character holds more power in the scene",
+                        "Explain how the power dynamics shape tone or theme in that moment",
+                        "Explain the social history behind the power dynamics",
+                        "Quote another exchange in the play that shows the same power dynamics"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+                  "explanation": "The paragraph identifies power dynamics but never explains their effect. Explaining how they shape tone or theme supplies the commentary. Naming who holds power, giving social history or quoting another exchange still leaves the effect unexplained."
             },
             {
                   "question": "Which thesis move is strongest for AP Lit?",
                   "options": [
-                        "Make an absolute claim with no nuance",
-                        "Advance a specific, defensible claim about how public vs private contributes to meaning",
-                        "Retell the plot in one sentence",
-                        "List three literary terms without argument"
+                        "Describe each character's public and private behavior and list the scenes where each one appears",
+                        "Advance a specific, defensible claim about how the play contrasts public and private life",
+                        "Argue that the play shows that society is unjust, a lesson that applies to every era and audience",
+                        "Name three devices the playwright uses to show public and private life and promise to discuss each"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+                  "explanation": "A strong thesis makes a specific, arguable claim about how the play's contrast between public and private life creates meaning. Cataloguing behavior by scene, stating a universal lesson about injustice or listing devices does not argue what the contrast reveals."
             }
       ]
 }

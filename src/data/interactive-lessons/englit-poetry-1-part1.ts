@@ -15,24 +15,24 @@ export const englitPoetry1Part1Data = {
             {
                   "question": "Which statement best reflects the role of Speaker in literary analysis?",
                   "options": [
-                        "The speaker is always the poet.",
+                        "The speaker is the poet, describing his or her own experience directly.",
                         "The speaker is a textual persona that may differ from the poet.",
-                        "Speaker analysis is unnecessary in AP poetry.",
-                        "Speaker means only grammatical subject."
+                        "The speaker is whoever the poem is addressed to, its implied listener.",
+                        "The speaker exists only in narrative poems that tell a story."
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Speaker helps readers interpret meaning and authorial choice, not just identify a feature."
+                  "explanation": "The speaker is the voice the poem constructs, a persona that may or may not match the poet. Equating speaker and poet is the classic error, the addressee is the person spoken to rather than the voice speaking, and every poem, lyric or narrative, has a speaker."
             },
             {
                   "question": "What is usually the strongest AP Lit analytical move?",
                   "options": [
-                        "Retell the plot in sequence",
-                        "Name literary devices without interpretation",
+                        "Summarize what the passage says, line by line",
+                        "Identify each device and quote the line where it appears",
                         "Connect textual details to a defensible interpretation about meaning",
-                        "Focus only on historical background"
+                        "Explain how the passage reflects the author's personal life and historical era"
                   ],
                   "correctAnswer": 2,
-                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+                  "explanation": "AP Lit scoring rewards a defensible claim supported by evidence and commentary. Line-by-line summary, device spotting and biographical or historical background earn credit only when they are tied to an interpretation of meaning."
             }
       ]
 }
@@ -68,33 +68,33 @@ export const englitPoetry1Part1Data = {
             {
                   "label": "Speaker in analysis usually refers to ___",
                   "options": [
-                        "The poem internal voice or persona",
-                        "The poet legal name only",
-                        "A random character from another text",
-                        "The publication city"
+                        "The poem's internal voice or persona",
+                        "The poet speaking about personal experience",
+                        "The person the poem is addressed to",
+                        "The narrator of a poem that tells a story"
                   ]
             },
             {
                   "label": "The best AP paragraph usually includes ___",
                   "options": [
                         "Claim, evidence, and commentary",
-                        "Plot summary only",
-                        "Device name lists",
-                        "Vocabulary definitions only"
+                        "Quotation, summary, and paraphrase",
+                        "Thesis, devices, and conclusion",
+                        "Context, plot, and a quotation"
                   ]
             },
             {
                   "label": "A defensible interpretation should be ___",
                   "options": [
                         "Text-supported and specific",
-                        "Purely personal with no evidence",
-                        "A broad moral lesson only",
-                        "A dictionary definition"
+                        "Grounded in the author's biography",
+                        "Cautious enough to avoid a claim",
+                        "Obvious and agreed on by all"
                   ]
             }
       ],
       "correctAnswers": [
-            "The poem internal voice or persona",
+            "The poem's internal voice or persona",
             "Claim, evidence, and commentary",
             "Text-supported and specific"
       ],
@@ -118,24 +118,24 @@ export const englitPoetry1Part1Data = {
             {
                   "question": "A student identifies tone in a passage but does not explain effect. What is the best revision?",
                   "options": [
-                        "Add more plot details",
+                        "Add a second quotation that shows the same tone later in the poem",
                         "Explain how the tone shapes meaning or theme in that moment",
-                        "Replace all quotes with summary",
-                        "Switch to biographical information only"
+                        "Explain what the poem is about before turning to the quoted line",
+                        "Label the tone with a more precise adjective, such as wistful or bitter"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+                  "explanation": "The paragraph names the tone and quotes evidence but never explains its effect. Explaining how the tone shapes meaning or theme supplies the missing commentary. A second quotation, an overview of the poem or a sharper tone word still leaves the effect unexplained."
             },
             {
                   "question": "Which thesis move is strongest for AP Lit?",
                   "options": [
-                        "Make an absolute claim with no nuance",
+                        "Claim that the poem's imagery is beautiful and appeals to the senses",
                         "Advance a specific, defensible claim about how imagery contributes to meaning",
-                        "Retell the plot in one sentence",
-                        "List three literary terms without argument"
+                        "Summarize the poem's situation and say that it uses vivid imagery",
+                        "Name three image types in the poem and promise to discuss each"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+                  "explanation": "A strong thesis makes a specific, arguable claim about how a choice in the poem, here its imagery, creates meaning. Praising imagery as beautiful, summarizing the situation or listing image types identifies a feature without arguing what it does."
             }
       ]
 }

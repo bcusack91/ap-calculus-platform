@@ -60,10 +60,10 @@ Same event, different connotations.
           {
             question: 'What is the best definition of connotation?',
             options: [
-              'The dictionary definition of a word',
-              'The emotional/cultural associations a word carries beyond its literal meaning',
-              'The grammatical role of a word in a sentence',
-              'The number of syllables in a word'
+              'The dictionary definition a word has, apart from any context',
+              'The associations a word carries beyond its literal meaning',
+              'The grammatical role a word plays within a particular sentence',
+              'The historical origin of a word and how its spelling developed'
             ],
             correctAnswer: 1,
             explanation: 'Connotation refers to implied associations and emotional coloring beyond denotation. For example, "slim" and "skinny" may denote similar body size but carry different connotations.'
@@ -71,10 +71,10 @@ Same event, different connotations.
           {
             question: 'A writer uses three long explanatory sentences followed by "Enough." The final one-word sentence primarily creates:',
             options: [
-              'Confusion',
-              'Syntactic emphasis and abrupt rhetorical force',
-              'Technical precision',
-              'Narrative neutrality'
+              'Confusion about what the writer means',
+              'Emphasis through abrupt contrast in length',
+              'Technical precision and a detached, neutral tone',
+              'A shift from argument into narration'
             ],
             correctAnswer: 1,
             explanation: 'The sudden contraction from long syntax to a one-word sentence creates contrast and emphasis. It signals emotional intensity and decisiveness.'
@@ -150,18 +150,18 @@ Strong: "By pairing charged verbs ('exploit,' 'abandon') with clipped declarativ
         dropdowns: [
           {
             label: 'Replacing "asked" with "demanded" changes diction by adding ___',
-            options: ['More forceful, confrontational connotation', 'More neutrality', 'More technical precision', 'No rhetorical difference']
+            options: ['A more forceful connotation', 'A more neutral connotation', 'A more technical denotation', 'A more polite, formal register']
           },
           {
             label: 'A long sentence that postpones the main clause until the end is a ___ sentence',
-            options: ['Periodic', 'Fragmented', 'Run-on', 'Simple']
+            options: ['Periodic', 'Loose', 'Cumulative', 'Compound']
           },
           {
             label: 'Formal diction plus balanced syntax most often projects ___',
-            options: ['Authority and composure', 'Comic chaos', 'Childlike spontaneity', 'Randomness']
+            options: ['Authority and composure', 'Casual, conversational ease', 'Urgency and alarm', 'Irony and detachment']
           }
         ],
-        correctAnswers: ['More forceful, confrontational connotation', 'Periodic', 'Authority and composure'],
+        correctAnswers: ['A more forceful connotation', 'Periodic', 'Authority and composure'],
         hint1: 'Demanding is stronger than asking.',
         hint2: 'Main clause delayed.',
         hint3: 'Controlled language builds credibility.',
@@ -193,10 +193,10 @@ Strong: "By pairing charged verbs ('exploit,' 'abandon') with clipped declarativ
           {
             question: 'A writer describes pollution using words like "poisoned," "choked," and "scarred," then follows with short commands: "Look. Listen. Act." What is the combined rhetorical effect?',
             options: [
-              'Neutral description and detached tone',
-              'Loaded diction plus clipped syntax to create alarm and urgency',
-              'Technical precision for scientific objectivity',
-              'Humor and irony'
+              'Neutral diction and long sentences that create detachment',
+              'Charged diction and clipped imperatives that create urgency',
+              'Technical diction and precise syntax that signal objectivity',
+              'Ironic diction and playful fragments that create humor'
             ],
             correctAnswer: 1,
             explanation: 'The diction is emotionally charged and negative, framing pollution as active harm. The short imperative syntax accelerates pace and pushes readers toward immediate response.'
@@ -204,13 +204,13 @@ Strong: "By pairing charged verbs ('exploit,' 'abandon') with clipped declarativ
           {
             question: 'Which analysis best meets AP expectations?',
             options: [
-              '"The author uses words and sentences."',
-              '"The syntax is varied."',
-              '"Through formal diction and periodic syntax, the writer delays key claims to build anticipation, reinforcing a controlled, authoritative argument."',
-              '"The passage sounds good."'
+              '"The writer uses formal diction and periodic syntax, which are two common rhetorical devices in persuasive writing."',
+              '"The passage is very well written and persuasive because its words and sentences sound formal and important."',
+              '"Through formal diction and periodic syntax, the writer delays key claims to build anticipation and project authority."',
+              '"The writer uses many long sentences and big words to show that the topic is serious and complicated."'
             ],
             correctAnswer: 2,
-            explanation: 'This response names specific choices and explains how they produce rhetorical effect tied to argument control. It demonstrates the precision and linkage AP analysis requires.'
+            explanation: 'This response names specific choices and explains how they produce rhetorical effect tied to argument control. The others only label devices, praise the writing in vague terms, or describe sentence length without explaining an effect, so they fall short of the precision and linkage AP analysis requires.'
           }
         ]
       }

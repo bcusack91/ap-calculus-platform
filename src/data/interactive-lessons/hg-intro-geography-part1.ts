@@ -60,24 +60,24 @@ The discipline asks four signature questions every time:
           {
             question: "A researcher maps every Walmart in the U.S. and notes that openings move outward from a single Arkansas store along the interstate system. The strongest geographic concept at work is:",
             options: [
-              "Movement and the diffusion of an innovation from a hearth",
-              "The Five Themes' concept of 'place identity'",
-              "Absolute location of each store",
-              "Human-environment adaptation to climate"
+              "Movement: an innovation spreading from its original hearth",
+              "Place: the distinct identity each town gives its store",
+              "Location: the exact coordinates recorded for each store",
+              "Human-environment interaction: adapting stores to climate"
             ],
             correctAnswer: 0,
-            explanation: "Walmart spread outward from Bentonville, AR (the hearth) along transport corridors — a textbook contagious-then-hierarchical diffusion process, an example of the Movement theme."
+            explanation: "Walmart spread outward from its first store in Rogers, Arkansas, near its Bentonville headquarters, along transport corridors. That is diffusion from a hearth, which the Five Themes place under Movement. Local identity, coordinates and climate adaptation do not describe the spread."
           },
           {
             question: "Which statement gives the relative — not absolute — location of New Orleans?",
             options: [
-              "29.95° N, 90.07° W",
-              "A port city at the mouth of the Mississippi River, ~700 mi south of St. Louis",
-              "600 Decatur Street, French Quarter",
-              "Within UTM zone 15R"
+              "29.95° N, 90.07° W, measured from the Equator and Greenwich",
+              "About 600 miles south of St. Louis, near the Gulf",
+              "600 Decatur Street in the French Quarter of New Orleans",
+              "Grid zone 15R in the Universal Transverse Mercator system"
             ],
             correctAnswer: 1,
-            explanation: "Relative location describes a place in relation to other places (mouth of the Mississippi, distance from St. Louis). Latitude/longitude, street addresses, and UTM grids are all absolute."
+            explanation: "Relative location describes a place by its relation to other places, here its distance from St. Louis and its position near the Gulf of Mexico. Latitude and longitude, a street address and a UTM grid zone all fix an absolute position."
           }
         ]
       }
@@ -139,22 +139,22 @@ Use the exact term from the lesson.
         dropdowns: [
           {
             label: "Mumbai's Dharavi slum residents recycle 80% of the city's plastic, adapting to scarce land and waste services. Best-fit theme: ___",
-            options: ["Human-Environment Interaction", "Absolute Location", "Distance decay", "Friction of distance"]
+            options: ["Human-Environment Interaction", "Movement and diffusion of ideas", "Place and its local character", "Absolute and relative location"]
           },
           {
             label: "TikTok dances spread from Atlanta teens to Manila to São Paulo within 48 hours. Best-fit concept: ___",
-            options: ["Space-time compression", "Site", "Absolute location", "Tobler's law of decay"]
+            options: ["Time-space compression", "Distance decay", "Friction of distance", "Relocation diffusion"]
           },
           {
             label: "Singapore's deep-water harbor, equatorial rainfall, and lack of typhoons make it a natural port. Best-fit concept: ___",
             options: ["Site", "Situation", "Region", "Movement"]
           }
         ],
-        correctAnswers: ["Human-Environment Interaction", "Space-time compression", "Site"],
+        correctAnswers: ["Human-Environment Interaction", "Time-space compression", "Site"],
         hint1: "Residents are modifying and adapting to their environment.",
         hint2: "Coined by Harvey to describe the felt shrinking of the world.",
         hint3: "The internal physical traits of a place — not its relation to others.",
-        explanation: "Dharavi recycling = adaptation/modification = HEI. Global TikTok trends = space-time compression (Harvey). Singapore's harbor + climate = site characteristics, distinct from its situation as a Strait of Malacca chokepoint."
+        explanation: "Dharavi recycling = adaptation/modification = HEI. Global TikTok trends = time-space compression (Harvey). Singapore's harbor + climate = site characteristics, distinct from its situation as a Strait of Malacca chokepoint."
       }
     },
     {
@@ -186,10 +186,10 @@ Use the exact term from the lesson.
           {
             question: "Researchers find that childhood asthma rates are nearly identical on adjoining city blocks but vary widely between blocks 2 miles apart. Which geographic principle is most directly demonstrated?",
             options: [
-              "Spatial autocorrelation (Tobler's First Law)",
-              "Time-space convergence",
-              "Hierarchical diffusion",
-              "Absolute location"
+              "Spatial autocorrelation, as in Tobler's First Law",
+              "Time-space convergence through faster transit",
+              "Hierarchical diffusion from larger to smaller places",
+              "Absolute location of each city block"
             ],
             correctAnswer: 0,
             explanation: "Near things being more similar than far things — and the asthma rates clustering by block — is spatial autocorrelation, the formal expression of Tobler's First Law."
@@ -197,13 +197,13 @@ Use the exact term from the lesson.
           {
             question: "A start-up chooses Memphis, TN over Birmingham, AL because Memphis sits at the convergence of FedEx's overnight network, I-40/I-55, the Mississippi River, and major rail lines. The decision is best explained by:",
             options: [
-              "Memphis's superior site characteristics (soil, bedrock, climate)",
-              "Memphis's superior situation (relational location to transport networks)",
-              "Time-space compression",
-              "Distance decay from Birmingham"
+              "Memphis's site: its soil, bedrock and local climate",
+              "Memphis's situation relative to transport routes",
+              "Time-space compression, which shrinks every city's travel times",
+              "Distance decay, which weakens Birmingham's pull with distance"
             ],
             correctAnswer: 1,
-            explanation: "Site = local physical traits; situation = relation to other places and networks. Memphis's logistics advantage is purely relational — a textbook situation argument."
+            explanation: "Site means the local physical traits of a place; situation means its relation to other places and networks. Memphis's advantage comes entirely from its connections to FedEx's hub, the interstates, the river and rail lines, so it is a situation argument."
           }
         ]
       }

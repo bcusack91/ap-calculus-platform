@@ -50,10 +50,10 @@ export const englangStyleReadingPart1Data = {
           {
             question: 'Why does AP style analysis focus on diction and syntax?',
             options: [
-              'Because grammar rules are the only thing that matters',
-              'Because language choices shape tone, audience response, and rhetorical effectiveness',
-              'Because AP questions never ask about argument',
-              'Because style is independent from purpose'
+              'Because grammar and usage errors are what AP readers penalize most',
+              'Because language choices shape tone and audience response',
+              'Because AP questions test style in isolation from argument',
+              'Because a writer\'s style is independent of the writer\'s purpose'
             ],
             correctAnswer: 1,
             explanation: 'Diction and syntax are tools that create tone and emphasis, guide interpretation, and influence audience response. AP analysis requires explaining how those choices serve purpose.'
@@ -61,10 +61,10 @@ export const englangStyleReadingPart1Data = {
           {
             question: 'Which phrase is most clearly loaded diction?',
             options: [
-              '"The committee met at 3:00 PM."',
-              '"The committee reviewed three budget options."',
+              '"The committee approved the proposal by a vote of five to two."',
+              '"The committee reviewed three budget options during its long meeting."',
               '"The committee pushed through a reckless and dangerous proposal."',
-              '"The committee is composed of seven members."'
+              '"The committee is composed of seven members appointed by the mayor."'
             ],
             correctAnswer: 2,
             explanation: 'Words like "reckless" and "dangerous" carry strong emotional judgment. This is loaded diction, used to influence audience perception rather than neutrally report facts.'
@@ -138,18 +138,18 @@ Strong: "After a series of layered periodic sentences, the abrupt declaration 'W
         dropdowns: [
           {
             label: '"We will work in our schools, in our neighborhoods, in our courts." This primarily uses ___',
-            options: ['Parallelism', 'Hyperbole', 'Irony', 'Metonymy']
+            options: ['Parallelism', 'Hyperbole', 'Understatement', 'Metonymy']
           },
           {
             label: '"Only after years of warnings, failed negotiations, and public protest did the council act." This is a ___',
-            options: ['Periodic sentence', 'Loose sentence', 'Fragment', 'Run-on sentence']
+            options: ['Periodic sentence', 'Loose sentence', 'Cumulative sentence', 'Compound sentence']
           },
           {
             label: 'Words like "reckless," "outrageous," and "shameful" create ___',
-            options: ['Loaded diction and emotional tone', 'Neutral technical precision', 'Detached objectivity', 'Humorous irony']
+            options: ['Loaded diction and a judgmental tone', 'Formal diction and a detached tone', 'Technical diction and a neutral tone', 'Understated diction and a wry tone']
           }
         ],
-        correctAnswers: ['Parallelism', 'Periodic sentence', 'Loaded diction and emotional tone'],
+        correctAnswers: ['Parallelism', 'Periodic sentence', 'Loaded diction and a judgmental tone'],
         hint1: 'Repeated phrase structure.',
         hint2: 'Main clause delayed to the end.',
         hint3: 'Emotionally charged word choice.',
@@ -181,10 +181,10 @@ Strong: "After a series of layered periodic sentences, the abrupt declaration 'W
           {
             question: 'A writer uses three long, heavily qualified sentences to explain complexity, then ends with "Act now." What is the likely rhetorical effect?',
             options: [
-              'The final short sentence weakens credibility',
-              'The abrupt shift to brevity creates urgency and emphasis after sustained complexity',
-              'There is no meaningful effect',
-              'The pattern is accidental and irrelevant'
+              'The short final sentence undercuts the writer\'s credibility',
+              'The sudden brevity gives the closing command urgency and force',
+              'The change in length is accidental and has no clear effect',
+              'The command seems abrupt and confuses readers about the claim'
             ],
             correctAnswer: 1,
             explanation: 'The contrast in sentence length is deliberate. After nuanced explanation, the short imperative lands with force, making the call to action more memorable and urgent.'
@@ -192,13 +192,13 @@ Strong: "After a series of layered periodic sentences, the abrupt declaration 'W
           {
             question: 'Which AP analysis sentence is strongest?',
             options: [
-              '"The author uses diction."',
-              '"The language is powerful and effective."',
-              "\"By describing the policy as 'reckless' and 'dangerous,' the writer frames opponents as irresponsible, steering readers toward support for stricter regulation.\"",
-              '"The syntax is varied."'
+              '"The writer uses words like \'reckless\' and \'dangerous,\' which are clear examples of the loaded diction that appears throughout the passage."',
+              '"The language in this passage is very powerful and effective, and it makes readers feel strongly about the whole issue."',
+              "\"By calling the policy 'reckless' and 'dangerous,' the writer frames opponents as irresponsible and steers readers toward regulation.\"",
+              '"The writer\'s syntax is varied, with some long sentences and some short ones, which keeps the passage interesting to read."'
             ],
             correctAnswer: 2,
-            explanation: 'This option names specific language, explains connotation, and ties the effect to audience persuasion and purpose. It moves beyond identification to analysis, which AP rewards.'
+            explanation: 'This sentence names specific language, explains its connotation, and ties the effect to audience persuasion and purpose. It moves beyond identification to analysis, which AP rewards. The others only label the diction, praise the language vaguely, or describe syntax without connecting it to the writer\'s purpose.'
           }
         ]
       }

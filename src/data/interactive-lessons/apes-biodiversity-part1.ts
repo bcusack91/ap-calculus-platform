@@ -56,10 +56,10 @@ export const apesBiodiversityPart1Data = {
           {
             question: 'A forest with 20 tree species where each species makes up about 5% of the total has HIGH:',
             options: [
-              'Species richness only',
-              'Species evenness only',
-              'Both species richness and species evenness',
-              'Genetic diversity only'
+              'Richness but not evenness of species',
+              'Species evenness but not richness',
+              'Species richness and evenness',
+              'Genetic diversity within each species'
             ],
             correctAnswer: 2,
             explanation: 'With 20 species (high richness) each making up ~5% of the population (high evenness), this forest has both components of high species diversity.'
@@ -70,10 +70,10 @@ export const apesBiodiversityPart1Data = {
               'A provisioning ecosystem service',
               'A regulating ecosystem service',
               'A cultural ecosystem service',
-              'Genetic diversity'
+              'A supporting ecosystem service'
             ],
             correctAnswer: 1,
-            explanation: 'Water purification by wetlands is a regulating service — the ecosystem naturally regulates water quality by filtering sediment, nutrients, and pollutants.'
+            explanation: 'Water purification by wetlands is a regulating service — the ecosystem naturally regulates water quality by filtering sediment, nutrients, and pollutants. Provisioning services are products such as food and timber, cultural services are recreation and meaning, and supporting services are underlying processes such as nutrient cycling.'
           }
         ]
       }
@@ -175,10 +175,10 @@ export const apesBiodiversityPart1Data = {
           {
             question: 'A fragmented forest surrounded by agricultural fields functions ecologically similar to:',
             options: [
-              'A continent with unlimited resources',
-              'An island, where smaller and more isolated patches have fewer species',
-              'A biodiversity hotspot with high species richness',
-              'A corridor connecting two large habitats'
+              'A continent, where vast connected habitat supports many species',
+              'An island, where small isolated patches hold fewer species',
+              'A biodiversity hotspot, rich in species found nowhere else',
+              'A corridor that lets species move between large habitats'
             ],
             correctAnswer: 1,
             explanation: 'Island biogeography theory applies to habitat fragments: smaller, more isolated patches support fewer species, just as small, distant islands have lower species diversity.'
@@ -186,13 +186,13 @@ export const apesBiodiversityPart1Data = {
           {
             question: 'If a single crop disease wiped out all the bananas in commercial plantations (which are genetically identical clones), this would illustrate the danger of low:',
             options: [
-              'Ecosystem diversity',
-              'Species richness',
-              'Genetic diversity within a species',
-              'Species evenness'
+              'Diversity among ecosystems in the region',
+              'Species richness across the plantations',
+              'Diversity within one species',
+              'Evenness of species across the farms'
             ],
             correctAnswer: 2,
-            explanation: 'Clonal monocultures have virtually no genetic diversity. If one individual is susceptible to a disease, all are susceptible. Genetic diversity provides insurance against such threats.'
+            explanation: 'Clonal monocultures have virtually no genetic diversity, the variety of genes within one species. If one individual is susceptible to a disease, all are susceptible. Genetic diversity provides insurance against such threats.'
           }
         ]
       }

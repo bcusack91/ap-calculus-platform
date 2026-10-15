@@ -15,24 +15,24 @@ export const englitShortFiction1Part1Data = {
             {
                   "question": "Which statement best reflects the role of Compression in literary analysis?",
                   "options": [
-                        "Compression means the story is easy to summarize quickly.",
-                        "Compression means details are densely purposeful and often multi-layered.",
-                        "Compression removes need for analysis.",
-                        "Compression only refers to word count."
+                        "Compression means the story's brevity limits it to one simple, easily stated theme.",
+                        "Compression means that small, purposeful details carry concentrated and layered meaning.",
+                        "Compression means the narrative skips over time, so it is mainly a question of pacing.",
+                        "Compression means the author trims description, so setting matters less than plot does."
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Compression helps readers interpret meaning and authorial choice, not just identify a feature."
+                  "explanation": "In short fiction, compression means each detail does concentrated work, so a single gesture or image can carry several layers of meaning. Brevity does not limit a story to one simple theme, skipping over time is a pacing choice rather than compression itself, and trimmed description usually makes the remaining setting details more significant, not less."
             },
             {
                   "question": "What is usually the strongest AP Lit analytical move?",
                   "options": [
-                        "Retell the plot in sequence",
-                        "Name literary devices without interpretation",
+                        "Summarize the plot in order so the reader can follow each event clearly",
+                        "Identify each literary device in the passage and define it accurately",
                         "Connect textual details to a defensible interpretation about meaning",
-                        "Focus only on historical background"
+                        "Explain the historical context and author's life behind the passage"
                   ],
                   "correctAnswer": 2,
-                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+                  "explanation": "AP Lit scoring rewards a defensible claim supported by evidence and commentary. Plot summary, device definitions and historical or biographical background earn credit only when they are tied to an interpretation of meaning."
             }
       ]
 }
@@ -69,27 +69,27 @@ export const englitShortFiction1Part1Data = {
                   "label": "Compression in analysis usually refers to ___",
                   "options": [
                         "High interpretive density in limited space",
-                        "A short title",
-                        "A single long sentence",
-                        "A first-person narrator only"
+                        "A plot summary condensed into a few lines",
+                        "Skipping time between scenes to speed pacing",
+                        "Leaving out description to focus on action"
                   ]
             },
             {
                   "label": "The best AP paragraph usually includes ___",
                   "options": [
                         "Claim, evidence, and commentary",
-                        "Plot summary only",
-                        "Device name lists",
-                        "Vocabulary definitions only"
+                        "Quotation, summary, and paraphrase",
+                        "Thesis, devices, and conclusion",
+                        "Context, plot, and a quotation"
                   ]
             },
             {
                   "label": "A defensible interpretation should be ___",
                   "options": [
                         "Text-supported and specific",
-                        "Purely personal with no evidence",
-                        "A broad moral lesson only",
-                        "A dictionary definition"
+                        "Grounded in the author's biography",
+                        "Cautious enough to avoid a claim",
+                        "Obvious and agreed on by all"
                   ]
             }
       ],
@@ -118,24 +118,24 @@ export const englitShortFiction1Part1Data = {
             {
                   "question": "A student identifies character revelation in a passage but does not explain effect. What is the best revision?",
                   "options": [
-                        "Add more plot details",
+                        "Add a second quotation that shows the same character revelation later in the story",
                         "Explain how character revelation shapes tone or theme in that moment",
-                        "Replace all quotes with summary",
-                        "Switch to biographical information only"
+                        "Explain what happens in the plot just before and after the quoted line",
+                        "Define character revelation precisely and name the technique the author uses"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+                  "explanation": "The paragraph already has evidence and a label; what it lacks is commentary. Explaining how the character revelation shapes tone or theme supplies that. Another quotation, plot context or a sharper definition still leaves the effect unexplained."
             },
             {
                   "question": "Which thesis move is strongest for AP Lit?",
                   "options": [
-                        "Make an absolute claim with no nuance",
+                        "State that the story's ending teaches a universal lesson that applies to everyone",
                         "Advance a specific, defensible claim about how ending effect contributes to meaning",
-                        "Retell the plot in one sentence",
-                        "List three literary terms without argument"
+                        "Summarize how the story ends and assert that the ending is important to its meaning",
+                        "Name three devices the author uses in the ending and promise to analyze each one"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+                  "explanation": "A strong thesis makes a specific, arguable claim about how a choice in the text, here the ending, creates meaning. A universal lesson is too sweeping to defend, a summary plus \"it is important\" makes no arguable claim, and a three-device list announces topics rather than an interpretation."
             }
       ]
 }

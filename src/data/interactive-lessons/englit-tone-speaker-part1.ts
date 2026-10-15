@@ -15,24 +15,24 @@ export const englitToneSpeakerPart1Data = {
             {
                   "question": "Which statement best reflects the role of Tone in literary analysis?",
                   "options": [
-                        "Tone means the topic of the text.",
-                        "Tone is the speaker attitude toward subject or audience, conveyed by language choices.",
-                        "Tone never changes in a poem or passage.",
-                        "Tone can be inferred from title only."
+                        "Tone is the emotion the reader feels while reading the passage.",
+                        "Tone is the speaker's attitude toward subject or audience, conveyed by language choices.",
+                        "Tone is set in the opening lines and stays the same throughout.",
+                        "Tone is the subject or topic that a poem or passage discusses."
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Tone helps readers interpret meaning and authorial choice, not just identify a feature."
+                  "explanation": "Tone is the speaker's or narrator's attitude toward the subject or audience, built through diction, syntax and imagery. The reader's emotional response is mood, tone can shift within a passage (and shifts are often key evidence), and the topic is the subject rather than the attitude toward it."
             },
             {
                   "question": "What is usually the strongest AP Lit analytical move?",
                   "options": [
-                        "Retell the plot in sequence",
-                        "Name literary devices without interpretation",
+                        "Retell the passage's events closely and in the exact order they occur",
+                        "Identify each device and define the term so the reader knows what it means",
                         "Connect textual details to a defensible interpretation about meaning",
-                        "Focus only on historical background"
+                        "Explain how the passage reflects the beliefs of the time period it comes from"
                   ],
                   "correctAnswer": 2,
-                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+                  "explanation": "AP Lit scoring rewards a defensible claim supported by evidence and commentary. Close retelling, device definitions and period beliefs earn credit only when they are tied to an interpretation of meaning."
             }
       ]
 }
@@ -69,27 +69,27 @@ export const englitToneSpeakerPart1Data = {
                   "label": "Tone in analysis usually refers to ___",
                   "options": [
                         "The attitude conveyed through diction and syntax",
-                        "The genre label only",
-                        "The plot ending",
-                        "The publication date"
+                        "The emotion the reader feels while reading",
+                        "The subject or topic the passage addresses",
+                        "The genre the passage belongs to, such as elegy"
                   ]
             },
             {
                   "label": "The best AP paragraph usually includes ___",
                   "options": [
                         "Claim, evidence, and commentary",
-                        "Plot summary only",
-                        "Device name lists",
-                        "Vocabulary definitions only"
+                        "Quotation, summary, and paraphrase",
+                        "Thesis, devices, and conclusion",
+                        "Context, plot, and a quotation"
                   ]
             },
             {
                   "label": "A defensible interpretation should be ___",
                   "options": [
                         "Text-supported and specific",
-                        "Purely personal with no evidence",
-                        "A broad moral lesson only",
-                        "A dictionary definition"
+                        "Grounded in the author's biography",
+                        "Cautious enough to avoid a claim",
+                        "Obvious and agreed on by all"
                   ]
             }
       ],
@@ -118,24 +118,24 @@ export const englitToneSpeakerPart1Data = {
             {
                   "question": "A student identifies speaker position in a passage but does not explain effect. What is the best revision?",
                   "options": [
-                        "Add more plot details",
+                        "Describe where the speaker is physically positioned within the scene",
                         "Explain how speaker position shapes tone or theme in that moment",
-                        "Replace all quotes with summary",
-                        "Switch to biographical information only"
+                        "Explain who the speaker is talking to",
+                        "Quote another line spoken by the speaker"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+                  "explanation": "The paragraph identifies the speaker's position but never explains its effect. Explaining how that position shapes tone or theme supplies the commentary. The speaker's physical location, the listener's identity or another quotation still leaves the effect unexplained."
             },
             {
                   "question": "Which thesis move is strongest for AP Lit?",
                   "options": [
-                        "Make an absolute claim with no nuance",
-                        "Advance a specific, defensible claim about how shift contributes to meaning",
-                        "Retell the plot in one sentence",
-                        "List three literary terms without argument"
+                        "Identify where the tone changes and name the tone before and after",
+                        "Advance a specific, defensible claim about how the tonal shift contributes to meaning",
+                        "Claim that the passage moves from sad to happy, so its tone is positive",
+                        "Summarize the passage and then mention that the speaker's feelings change at one point"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+                  "explanation": "A strong thesis makes a specific, arguable claim about how a choice in the text, here a tonal shift, creates meaning. Locating and naming the tones, labeling the overall tone positive or noting that feelings change describes the shift without arguing what it does."
             }
       ]
 }

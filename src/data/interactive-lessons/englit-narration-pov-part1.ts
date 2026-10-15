@@ -15,24 +15,24 @@ export const englitNarrationPovPart1Data = {
             {
                   "question": "Which statement best reflects the role of Point of View in literary analysis?",
                   "options": [
-                        "Point of view means the author personal opinion.",
+                        "Point of view means the author's own opinion, which the narrator always speaks for.",
                         "Point of view is the narrative position that filters information and judgment.",
-                        "Point of view never changes interpretation.",
-                        "Point of view only matters in first-person texts."
+                        "Point of view is fixed at the start, so it cannot shape how a reader judges events.",
+                        "Point of view matters only in first-person texts, where the narrator is a character."
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Point of View helps readers interpret meaning and authorial choice, not just identify a feature."
+                  "explanation": "Point of view is the narrative position, such as first person, limited third person or omniscient, that controls what readers learn and how they judge it. It is not the author's own opinion, it shapes interpretation even when it stays constant, and third-person narration filters information too."
             },
             {
                   "question": "What is usually the strongest AP Lit analytical move?",
                   "options": [
-                        "Retell the plot in sequence",
-                        "Name literary devices without interpretation",
+                        "Restate the plot in the order it happens",
+                        "List the devices the author uses, with a definition for each",
                         "Connect textual details to a defensible interpretation about meaning",
-                        "Focus only on historical background"
+                        "Explain how the author's personal experiences match the narrator's story"
                   ],
                   "correctAnswer": 2,
-                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+                  "explanation": "AP Lit scoring rewards a defensible claim supported by evidence and commentary. Restating the plot, defining devices and matching the story to the author's life earn credit only when they are tied to an interpretation of meaning."
             }
       ]
 }
@@ -69,27 +69,27 @@ export const englitNarrationPovPart1Data = {
                   "label": "Point of View in analysis usually refers to ___",
                   "options": [
                         "The perspective filter shaping what readers know",
-                        "The number of paragraphs",
-                        "Whether the title is long",
-                        "The setting era only"
+                        "The author's personal opinion on the topic",
+                        "The time period and place in which the story is set",
+                        "The narrator's attitude toward the subject"
                   ]
             },
             {
                   "label": "The best AP paragraph usually includes ___",
                   "options": [
                         "Claim, evidence, and commentary",
-                        "Plot summary only",
-                        "Device name lists",
-                        "Vocabulary definitions only"
+                        "Quotation, device label, and summary",
+                        "Hook, context, and a moral",
+                        "Summary, quotation, and opinion"
                   ]
             },
             {
                   "label": "A defensible interpretation should be ___",
                   "options": [
                         "Text-supported and specific",
-                        "Purely personal with no evidence",
-                        "A broad moral lesson only",
-                        "A dictionary definition"
+                        "Universal and beyond dispute",
+                        "Personal and emotionally honest",
+                        "Broad enough to cover any text"
                   ]
             }
       ],
@@ -118,24 +118,24 @@ export const englitNarrationPovPart1Data = {
             {
                   "question": "A student identifies reliability in a passage but does not explain effect. What is the best revision?",
                   "options": [
-                        "Add more plot details",
-                        "Explain how reliability shapes tone or theme in that moment",
-                        "Replace all quotes with summary",
-                        "Switch to biographical information only"
+                        "Label the narrator as reliable or unreliable",
+                        "Explain how the narrator's reliability shapes tone or theme in that moment",
+                        "Explain whether the events really happened",
+                        "Add a quotation about the narrator's honesty"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+                  "explanation": "The paragraph raises the narrator's reliability but never explains its effect. Explaining how that reliability shapes tone or theme supplies the commentary. A label, a ruling on what really happened or another quotation still leaves the effect unexplained."
             },
             {
                   "question": "Which thesis move is strongest for AP Lit?",
                   "options": [
-                        "Make an absolute claim with no nuance",
+                        "State whether the narrator is close to or distant from the characters",
                         "Advance a specific, defensible claim about how distance contributes to meaning",
-                        "Retell the plot in one sentence",
-                        "List three literary terms without argument"
+                        "Identify the story's point of view and explain what that term means",
+                        "Argue that the narrator's distance makes the story harder to understand and enjoy"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+                  "explanation": "A strong thesis makes a specific, arguable claim about how a choice in the text, here narrative distance, creates meaning. Noting whether the narrator is close or distant, defining point of view or complaining that distance makes the story harder to enjoy does not argue what the distance does."
             }
       ]
 }

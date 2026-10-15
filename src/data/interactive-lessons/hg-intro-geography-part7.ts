@@ -71,10 +71,10 @@ export const hgIntroGeographyPart7Data = {
           {
             question: "Which COMBINATION of concepts BEST explains why Walmart distribution centers locate at rural interstate interchanges in Arkansas, Missouri, and Oklahoma?",
             options: [
-              "Site, perceptual region, and reverse hierarchical diffusion",
-              "Situation (highway access), accessibility, and low friction of distance for trucking",
-              "Cultural hearth, formal region, and stimulus diffusion",
-              "Cartograms, choropleth, and MAUP"
+              "Site, perceptual region and reverse hierarchical diffusion",
+              "Situation, accessibility and low friction of distance",
+              "Cultural hearth, formal region and stimulus diffusion",
+              "Time-space convergence, functional regions and the MAUP"
             ],
             correctAnswer: 1,
             explanation: "Locating at interstate interchanges is about *situation* (position relative to highways), *accessibility* (easy to reach), and *low friction of distance* (interstate speeds make trucking cheap)."
@@ -82,13 +82,13 @@ export const hgIntroGeographyPart7Data = {
           {
             question: "A researcher writes: 'At the global scale, sub-Saharan Africa appears uniformly poor; at the local scale, Lagos has both luxury enclaves and informal settlements.' This sentence demonstrates correct use of:",
             options: [
-              "Friction of distance",
-              "Scale of analysis (and an implicit MAUP critique)",
-              "Time-space convergence",
-              "Stimulus diffusion"
+              "Friction of distance between places",
+              "Changing the scale of analysis",
+              "Time-space convergence at every scale",
+              "Stimulus diffusion of luxury housing"
             ],
             correctAnswer: 1,
-            explanation: "Switching between global and local to reveal a pattern that aggregation hides is exactly the scale-of-analysis move (and implicitly invokes MAUP — different units, different stories)."
+            explanation: "Switching between the global and local scales to reveal a pattern that aggregation hides is the scale-of-analysis move, and it implicitly raises the MAUP: different units tell different stories."
           }
         ]
       }
@@ -206,24 +206,24 @@ export const hgIntroGeographyPart7Data = {
           {
             question: "Which Unit-1 framework would BEST help a researcher analyzing the global spread of TikTok between 2017 and 2024?",
             options: [
-              "Burgess Concentric Zone Model",
-              "A combination of hierarchical diffusion (large cities first), time-space convergence (instant cross-border data), and distance decay (regulatory barriers slow uptake in some markets)",
-              "Von Thünen's agricultural rings",
-              "Christaller's Central Place Theory"
+              "Burgess's concentric zones, applied to rings of app adoption",
+              "Hierarchical diffusion, time-space convergence and national bans",
+              "Von Thünen's land-use rings around a single central market",
+              "Christaller's central place theory of market thresholds"
             ],
             correctAnswer: 1,
-            explanation: "TikTok's adoption fits hierarchical diffusion (East Asia → global cities → smaller markets), time-space convergence (instant network effects), and distance decay (slow uptake where regulators or language create friction). The other three models address agriculture, retail hierarchy, and city structure."
+            explanation: "TikTok's adoption fits hierarchical diffusion (global cities and early-adopting markets first), time-space convergence (instant cross-border data) and barriers to diffusion where governments banned or restricted the app. Burgess, von Thünen and Christaller model city structure, farmland use and market areas, not the spread of an innovation."
           },
           {
             question: "Which sentence shows the BEST AP-style synthesis use of Unit 1 vocabulary?",
             options: [
-              "The Sun Belt is just where it is hot.",
-              "The Sun Belt is a formal region defined by warm climate, but at the local scale within the Sun Belt, Phoenix and rural Arizona reservations have very different physiological densities and accessibility to capital.",
-              "The Sun Belt has a lot of sun.",
-              "The Sun Belt is a perceptual region only."
+              "The Sun Belt is a functional region because warm weather draws retirees to one node.",
+              "The Sun Belt is formal by climate, yet locally Phoenix and rural reservations differ in density.",
+              "The Sun Belt is a perceptual region, so measured data such as density cannot describe it.",
+              "The Sun Belt has high arithmetic density everywhere, so the local scale adds nothing."
             ],
             correctAnswer: 1,
-            explanation: "The Phoenix and rural Arizona response layers region type (formal), scale switch (regional → local), density vocabulary (physiological density), and accessibility — exactly the kind of multi-concept synthesis APHG rubrics reward."
+            explanation: "The Phoenix and rural-reservation sentence layers a region type (formal, defined by climate), a change of scale (regional to local) and density vocabulary, the multi-concept synthesis AP rubrics reward. Each of the others misuses one term: a functional region needs a node, perceptual regions can still be studied with data, and density varies within the region."
           }
         ]
       }

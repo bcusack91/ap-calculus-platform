@@ -49,10 +49,10 @@ export const hgLanguageReligionPart1Data = {
           {
             question: 'Hinduism is classified as an ethnic religion because:',
             options: [
-              'It actively seeks converts worldwide',
-              'It originated recently through missionary work',
-              'It is closely tied to Indian culture and does not actively seek converts',
-              'It has more followers than any other religion'
+              'It actively seeks converts in every part of the world',
+              'It spread mainly through missionaries in recent centuries',
+              'It is bound to Indian culture and does not actively seek converts',
+              'It has more followers than any other world religion'
             ],
             correctAnswer: 2,
             explanation: 'Ethnic religions are closely tied to a particular people, ethnicity, or place. Hinduism is deeply connected to Indian culture and lacks the missionary tradition of universalizing religions.'
@@ -61,7 +61,7 @@ export const hgLanguageReligionPart1Data = {
             question: 'English, Spanish, Hindi, and Russian all belong to the same:',
             options: [
               'Language group',
-              'Language family (Indo-European)',
+              'Language family',
               'Language dialect',
               'Lingua franca zone'
             ],
@@ -128,7 +128,7 @@ export const hgLanguageReligionPart1Data = {
         dropdowns: [
           {
             label: 'Islam spread rapidly across North Africa and into Spain through conquest and trade. Its diffusion type is primarily ___',
-            options: ['Contagious and relocation diffusion', 'Hierarchical diffusion only', 'Stimulus diffusion', 'No diffusion — independent invention']
+            options: ['Contagious and relocation diffusion', 'Hierarchical diffusion only', 'Stimulus diffusion', 'Independent invention in each place']
           },
           {
             label: 'When Haitian Vodou blends Catholic saints with West African spirits, this is an example of ___',

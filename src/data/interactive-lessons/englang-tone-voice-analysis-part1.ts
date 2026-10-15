@@ -49,10 +49,10 @@ Voice reflects recurring stylistic identity:
           {
             question: 'Which statement best distinguishes tone from voice?',
             options: [
-              'Tone and voice are exact synonyms.',
+              'Tone and voice are synonyms; both name the writer\'s attitude.',
               "Tone is the writer's attitude; voice is the writer's stylistic persona.",
-              'Voice changes every paragraph, while tone stays fixed.',
-              'Tone only applies to fiction, voice only to nonfiction.'
+              'Voice is the writer\'s attitude; tone is the writer\'s persona.',
+              'Tone belongs only to fiction; voice belongs only to argumentative nonfiction.'
             ],
             correctAnswer: 1,
             explanation: 'Tone describes attitude (e.g., ironic, urgent, hopeful). Voice describes broader stylistic identity (e.g., formal, witty, authoritative). Tone can shift quickly; voice tends to persist across a text.'
@@ -60,10 +60,10 @@ Voice reflects recurring stylistic identity:
           {
             question: 'A speaker begins calm and measured, then becomes outraged after listing injustices. This is best described as:',
             options: [
-              'A voice collapse',
+              'A shift in voice from measured to casual',
               'A tone shift from measured to indignant',
-              'A logical fallacy',
-              'A change in audience'
+              'A logical fallacy known as an appeal to emotion',
+              'A change in audience partway through the speech'
             ],
             correctAnswer: 1,
             explanation: 'The speaker\'s attitude changes from measured to indignant, which is a tone shift. The underlying voice may remain the same (e.g., formal and authoritative) even as tone evolves.'
@@ -140,18 +140,18 @@ Do not just label tone. Explain progression:
         dropdowns: [
           {
             label: '"I once believed this system was fair. I no longer can." This likely signals a tone of ___',
-            options: ['Disillusionment / sober reconsideration', 'Celebratory optimism', 'Comic detachment', 'Technical neutrality']
+            options: ['Disillusionment', 'Nostalgia', 'Indifference', 'Defiant optimism']
           },
           {
             label: 'Consistent use of precise terms, balanced concessions, and formal syntax contributes most to ___',
-            options: ['An authoritative analytical voice', 'A chaotic voice', 'A playful comic tone only', 'No rhetorical effect']
+            options: ['An authoritative voice', 'A playful, ironic voice', 'An intimate, confessional voice', 'An indignant, combative voice']
           },
           {
             label: 'Replacing "angry" with "indignant" in analysis improves ___',
-            options: ['Precision of tone vocabulary', 'Sentence length', 'Plot summary', 'Grammar correctness only']
+            options: ['Precision of tone vocabulary', 'Identification of syntax', 'Accuracy of summary', 'Variety of sentence structure']
           }
         ],
-        correctAnswers: ['Disillusionment / sober reconsideration', 'An authoritative analytical voice', 'Precision of tone vocabulary'],
+        correctAnswers: ['Disillusionment', 'An authoritative voice', 'Precision of tone vocabulary'],
         hint1: 'The writer abandons prior trust.',
         hint2: 'Formal balance + precision = authority.',
         hint3: 'Specific tone words are stronger on AP.',
@@ -183,10 +183,10 @@ Do not just label tone. Explain progression:
           {
             question: 'A writer opens with neutral policy summary, then recounts victims stories, then ends with "Silence is complicity." What is the best description?',
             options: [
-              'Tone remains neutral throughout',
+              'Tone stays neutral throughout, since the facts speak for themselves',
               'Tone shifts from analytical to morally urgent, intensifying persuasive force',
-              'Voice disappears in the conclusion',
-              'The ending is irrelevant to tone'
+              'Voice disappears in the conclusion, replaced by a slogan',
+              'The tone moves from sympathetic to ironic, mocking the victims'
             ],
             correctAnswer: 1,
             explanation: 'The passage moves from detached analysis toward urgent moral judgment. This tonal escalation aligns with persuasive intent: inform first, then compel ethical response.'
@@ -194,13 +194,13 @@ Do not just label tone. Explain progression:
           {
             question: 'Which AP analysis sentence is strongest?',
             options: [
-              '"The tone is serious."',
-              '"The author has a voice."',
+              '"The tone of the passage is serious, and the speaker is clearly very upset about the injustices being described here."',
+              '"The speaker has a strong, distinctive, and memorable voice that keeps the audience engaged from the first sentence to the very last line of the speech."',
               '"Through clipped declaratives and charged verbs, the speaker adopts an indignant tone that culminates in a direct call for accountability."',
-              '"The tone is formal and informal."'
+              '"The speaker uses clipped declaratives and charged verbs, which are two rhetorical devices that appear across the passage."'
             ],
             correctAnswer: 2,
-            explanation: 'This choice identifies concrete language features, uses precise tone vocabulary, and links style to rhetorical effect. That is the depth AP analysis requires.'
+            explanation: 'This choice identifies concrete language features, uses precise tone vocabulary, and links style to rhetorical effect. That is the depth AP analysis requires. The others name a tone or a voice in general terms, or list devices without explaining what they accomplish.'
           }
         ]
       }

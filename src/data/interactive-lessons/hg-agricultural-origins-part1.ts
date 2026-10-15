@@ -50,10 +50,10 @@ Agriculture was independently invented in several locations. The CED names the *
           {
             question: 'The Fertile Crescent is located in modern-day:',
             options: [
-              'Southwest Asia (Iraq/Syria region)',
-              'Southeast Asia',
-              'Sub-Saharan Africa',
-              'Central America'
+              'Southwest Asia, mainly Iraq and Syria',
+              'Southeast Asia, mainly Thailand and Vietnam',
+              'Sub-Saharan Africa, mainly Ethiopia and Sudan',
+              'Central America, mainly Mexico and Guatemala'
             ],
             correctAnswer: 0,
             explanation: 'The Fertile Crescent spans parts of modern Iraq, Syria, Lebanon, and Turkey — it is in Southwest Asia, one of the earliest agricultural hearths.'
@@ -61,10 +61,10 @@ Agriculture was independently invented in several locations. The CED names the *
           {
             question: 'The First Agricultural Revolution is significant because it:',
             options: [
-              'Introduced mechanized farming equipment',
-              'Shifted humans from nomadic hunting to settled farming',
+              'Introduced mechanized plows and tractors to farming',
+              'Shifted people from foraging to settled farming',
               'Introduced genetically modified crops worldwide',
-              'Caused the Industrial Revolution directly'
+              'Directly set off the Industrial Revolution in Britain'
             ],
             correctAnswer: 1,
             explanation: 'The Neolithic (First Agricultural) Revolution ~10,000 BCE shifted human societies from nomadic hunter-gatherers to settled agricultural communities — the foundation of civilization.'
@@ -130,14 +130,14 @@ From each hearth, agricultural practices spread through **diffusion**:
           },
           {
             label: 'Wheat, barley, sheep, and goats were first domesticated in ___',
-            options: ['Fertile Crescent', 'Nile Valley', 'Mesoamerica', 'Andes']
+            options: ['Fertile Crescent', 'Yellow River valley', 'Mesoamerica', 'Andes']
           },
           {
             label: 'Potatoes, llamas, and alpacas were first domesticated in ___',
-            options: ['Andes (South America)', 'Indus Valley', 'Yellow River valley', 'Fertile Crescent']
+            options: ['Andes', 'Indus Valley', 'Yellow River valley', 'Fertile Crescent']
           }
         ],
-        correctAnswers: ['Mesoamerica', 'Fertile Crescent', 'Andes (South America)'],
+        correctAnswers: ['Mesoamerica', 'Fertile Crescent', 'Andes'],
         hint1: 'Central America and modern-day Mexico.',
         hint2: 'Southwest Asia between the Tigris and Euphrates.',
         hint3: 'High-altitude South America.',
@@ -168,9 +168,9 @@ From each hearth, agricultural practices spread through **diffusion**:
           {
             question: 'The fact that maize was domesticated in Mesoamerica and rice in East Asia demonstrates:',
             options: [
-              'Independent invention of agriculture in multiple hearths',
-              'That all agriculture originated from one source',
-              'Colonial diffusion of crop knowledge',
+              'Independent invention of farming in several hearths',
+              'That all farming spread from a single original hearth',
+              'Colonial diffusion of crop knowledge between continents',
               'That climate has no effect on crop domestication'
             ],
             correctAnswer: 0,
@@ -179,10 +179,10 @@ From each hearth, agricultural practices spread through **diffusion**:
           {
             question: 'The Green Revolution of the 1960s-1980s primarily increased food production through:',
             options: [
-              'Expansion of farmland through deforestation',
-              'High-yield crop varieties, chemical fertilizers, and irrigation',
-              'Return to traditional farming methods',
-              'Genetic modification and cloning'
+              'Clearing new farmland through deforestation',
+              'High-yield seeds, fertilizer and irrigation',
+              'A return to traditional, low-input farming methods',
+              'Genetically modified crops and cloned livestock'
             ],
             correctAnswer: 1,
             explanation: 'The Green Revolution (Third Agricultural Revolution) used scientific advances — especially high-yield varieties of wheat and rice, along with chemical inputs and irrigation — to dramatically increase yields in developing countries.'

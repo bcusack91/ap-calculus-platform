@@ -48,10 +48,10 @@ export const hgEthnicityIdentityPart1Data = {
           {
             question: 'The Kurds are considered a "nation without a state" because they:',
             options: [
-              'Have no shared cultural identity',
-              'Share cultural identity but lack an independent sovereign state',
-              'All live within the borders of one country',
-              'Have voluntarily given up claims to territory'
+              'Have no shared language, culture or sense of identity',
+              'Share a culture but lack a sovereign country',
+              'All live inside the borders of a single country',
+              'Have voluntarily given up all claims to territory'
             ],
             correctAnswer: 1,
             explanation: 'The Kurds share a common language, culture, and identity (they ARE a nation) but are divided across Turkey, Iraq, Iran, and Syria — they lack their own nation-state.'
@@ -59,10 +59,10 @@ export const hgEthnicityIdentityPart1Data = {
           {
             question: 'Ethnic enclaves like Chinatown in San Francisco primarily result from:',
             options: [
-              'Government-mandated residential zones',
-              'Chain migration and desire to maintain cultural connections',
-              'Random settlement patterns',
-              'Environmental factors like climate preferences'
+              'Suburban sprawl that pushed families downtown',
+              'Chain migration and shared cultural ties',
+              'Random choices made by each family on arrival',
+              'Climate preferences shared by the migrant group'
             ],
             correctAnswer: 1,
             explanation: 'Ethnic enclaves form through chain migration (following family/friends) and the desire to maintain cultural practices, language, food, and social support networks.'

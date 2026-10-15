@@ -15,24 +15,24 @@ export const englitDramaticStructurePart1Data = {
             {
                   "question": "Which statement best reflects the role of Exposition in literary analysis?",
                   "options": [
-                        "Exposition is where the most emotional moment always occurs.",
+                        "Exposition is where the play reaches its emotional peak and turning point.",
                         "Exposition establishes context and conflict conditions that later scenes complicate.",
-                        "Exposition is unnecessary in modern drama.",
-                        "Exposition only describes costumes."
+                        "Exposition is background a playwright delivers only through a narrator.",
+                        "Exposition is the closing section that resolves the play's conflicts."
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Exposition helps readers interpret meaning and authorial choice, not just identify a feature."
+                  "explanation": "Exposition introduces characters, situation and the pressures that drive the conflict, and later scenes complicate those conditions. The emotional peak is the climax, exposition in drama usually comes through dialogue and action rather than a narrator, and the closing section that settles conflicts is the resolution."
             },
             {
                   "question": "What is usually the strongest AP Lit analytical move?",
                   "options": [
-                        "Retell the plot in sequence",
-                        "Name literary devices without interpretation",
+                        "Retell the play's action scene by scene",
+                        "Label each dramatic device and explain what the term means",
                         "Connect textual details to a defensible interpretation about meaning",
-                        "Focus only on historical background"
+                        "Describe how the play was first staged and how its audiences received it"
                   ],
                   "correctAnswer": 2,
-                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+                  "explanation": "AP Lit scoring rewards a defensible claim supported by evidence and commentary. Scene-by-scene retelling, device definitions and stage history earn credit only when they are tied to an interpretation of meaning."
             }
       ]
 }
@@ -69,27 +69,27 @@ export const englitDramaticStructurePart1Data = {
                   "label": "Exposition in analysis usually refers to ___",
                   "options": [
                         "How opening information frames conflict",
-                        "Whether the play has many characters",
-                        "How long each line is",
-                        "Author biography only"
+                        "How the climax reaches the emotional peak",
+                        "How the final scenes resolve the conflict",
+                        "How a narrator summarizes off-stage events"
                   ]
             },
             {
                   "label": "The best AP paragraph usually includes ___",
                   "options": [
                         "Claim, evidence, and commentary",
-                        "Plot summary only",
-                        "Device name lists",
-                        "Vocabulary definitions only"
+                        "Quotation, summary, and paraphrase",
+                        "Thesis, devices, and conclusion",
+                        "Context, plot, and a quotation"
                   ]
             },
             {
                   "label": "A defensible interpretation should be ___",
                   "options": [
                         "Text-supported and specific",
-                        "Purely personal with no evidence",
-                        "A broad moral lesson only",
-                        "A dictionary definition"
+                        "Grounded in the author's biography",
+                        "Cautious enough to avoid a claim",
+                        "Obvious and agreed on by all"
                   ]
             }
       ],
@@ -118,24 +118,24 @@ export const englitDramaticStructurePart1Data = {
             {
                   "question": "A student identifies turning point in a passage but does not explain effect. What is the best revision?",
                   "options": [
-                        "Add more plot details",
-                        "Explain how turning point shapes tone or theme in that moment",
-                        "Replace all quotes with summary",
-                        "Switch to biographical information only"
+                        "Add a quotation showing the same turning point from another character's view",
+                        "Explain how the turning point shapes tone or theme in that moment",
+                        "Explain the full sequence of events that leads up to the turning point",
+                        "Label the turning point precisely as the climax of the play's structure"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+                  "explanation": "The paragraph locates the turning point but never explains its effect. Explaining how the turning point shapes tone or theme supplies the commentary. Another quotation, a recap of earlier events or a structural label still leaves the effect unexplained."
             },
             {
                   "question": "Which thesis move is strongest for AP Lit?",
                   "options": [
-                        "Make an absolute claim with no nuance",
+                        "Claim that the play ends happily, so its conflicts are fully resolved",
                         "Advance a specific, defensible claim about how resolution contributes to meaning",
-                        "Retell the plot in one sentence",
-                        "List three literary terms without argument"
+                        "Summarize how the play ends and state that the ending ties up its plot",
+                        "Outline the play's five-act structure and name the resolution as the final stage"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+                  "explanation": "A strong thesis makes a specific, arguable claim about how a choice in the play, here its resolution, creates meaning. Calling the ending happy, summarizing it or mapping it onto a five-act outline describes the resolution without arguing what it means."
             }
       ]
 }

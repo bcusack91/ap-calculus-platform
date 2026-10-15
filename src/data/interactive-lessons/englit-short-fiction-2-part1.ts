@@ -15,24 +15,24 @@ export const englitShortFiction2Part1Data = {
             {
                   "question": "Which statement best reflects the role of Irony in literary analysis?",
                   "options": [
-                        "Irony means anything surprising.",
-                        "Irony involves meaningful contrast between expectation, statement, or appearance and reality.",
-                        "Irony is always humorous.",
-                        "Irony has no thematic value."
+                        "Irony means any unexpected plot event, whether or not it creates a meaningful contrast.",
+                        "Irony is a meaningful gap between what is expected or said and what is true.",
+                        "Irony is a comic device, so it signals that the author is not making a serious point.",
+                        "Irony is the same as sarcasm, so it appears only when a character mocks someone."
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Irony helps readers interpret meaning and authorial choice, not just identify a feature."
+                  "explanation": "Irony depends on a meaningful gap between expectation or statement and reality, and that gap often sharpens a story's theme. Surprise alone is not irony, irony can be deeply serious, and sarcasm is only one narrow verbal form of it."
             },
             {
                   "question": "What is usually the strongest AP Lit analytical move?",
                   "options": [
-                        "Retell the plot in sequence",
-                        "Name literary devices without interpretation",
+                        "Retell the key events of the plot in careful sequence",
+                        "Name the literary devices and quote where each appears",
                         "Connect textual details to a defensible interpretation about meaning",
-                        "Focus only on historical background"
+                        "Explain how the passage reflects its historical era"
                   ],
                   "correctAnswer": 2,
-                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+                  "explanation": "AP Lit scoring rewards a defensible claim supported by evidence and commentary. Retelling events, naming devices and describing the historical era earn credit only when they are tied to an interpretation of meaning."
             }
       ]
 }
@@ -68,33 +68,33 @@ export const englitShortFiction2Part1Data = {
             {
                   "label": "Irony in analysis usually refers to ___",
                   "options": [
-                        "A meaningful gap between surface and underlying reality",
-                        "Any emotional sentence",
-                        "A rhyme pattern",
-                        "A plot climax only"
+                        "A meaningful gap between appearance and reality",
+                        "Any unexpected plot event, whether meaningful or not",
+                        "Mocking or sarcastic remarks by a character",
+                        "A comic tone that lightens a serious story"
                   ]
             },
             {
                   "label": "The best AP paragraph usually includes ___",
                   "options": [
                         "Claim, evidence, and commentary",
-                        "Plot summary only",
-                        "Device name lists",
-                        "Vocabulary definitions only"
+                        "Topic, quotation, and summary",
+                        "Device, definition, and example",
+                        "Background, summary, and a moral"
                   ]
             },
             {
                   "label": "A defensible interpretation should be ___",
                   "options": [
                         "Text-supported and specific",
-                        "Purely personal with no evidence",
-                        "A broad moral lesson only",
-                        "A dictionary definition"
+                        "Based on the reader's feelings",
+                        "Summarized in a single moral",
+                        "Focused on the author's intent"
                   ]
             }
       ],
       "correctAnswers": [
-            "A meaningful gap between surface and underlying reality",
+            "A meaningful gap between appearance and reality",
             "Claim, evidence, and commentary",
             "Text-supported and specific"
       ],
@@ -118,24 +118,24 @@ export const englitShortFiction2Part1Data = {
             {
                   "question": "A student identifies perspective in a passage but does not explain effect. What is the best revision?",
                   "options": [
-                        "Add more plot details",
+                        "Add another quotation that shows the same perspective",
                         "Explain how perspective shapes tone or theme in that moment",
-                        "Replace all quotes with summary",
-                        "Switch to biographical information only"
+                        "Explain the plot events surrounding the quoted line",
+                        "Identify whose perspective it is and label the narrator type"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+                  "explanation": "The student has evidence and a label but no commentary. Explaining how the perspective shapes tone or theme adds the missing analysis; another quotation, plot context or a narrator label still leaves the effect unexplained."
             },
             {
                   "question": "Which thesis move is strongest for AP Lit?",
                   "options": [
-                        "Make an absolute claim with no nuance",
+                        "Argue that the story's meaning is entirely open, so any reading of it is equally valid",
                         "Advance a specific, defensible claim about how implication contributes to meaning",
-                        "Retell the plot in one sentence",
-                        "List three literary terms without argument"
+                        "Retell what the characters do and note that the story leaves much unsaid",
+                        "Identify three examples of implication and promise to discuss each in order"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+                  "explanation": "A strong thesis takes a specific, arguable position on how a textual choice, here implication, creates meaning. Claiming every reading is equally valid gives up the argument, retelling events makes no claim, and listing examples announces evidence without an interpretation."
             }
       ]
 }

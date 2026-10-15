@@ -60,7 +60,7 @@ export const hgUrbanChallengesPart1Data = {
             options: [
               'Rapid population growth from immigration',
               'Loss of manufacturing jobs and population decline',
-              'Gentrification of all neighborhoods',
+              'Gentrification across all of its neighborhoods',
               'Increased demand for downtown housing'
             ],
             correctAnswer: 1,
@@ -120,18 +120,18 @@ export const hgUrbanChallengesPart1Data = {
         dropdowns: [
           {
             label: 'Curitiba, Brazil rapid bus transit system is an example of ___',
-            options: ['Transit-oriented development', 'Smart growth', 'Gentrification', 'Suburban sprawl']
+            options: ['Transit-oriented development', 'Edge city development', 'Gentrification', 'Suburban sprawl']
           },
           {
             label: 'Portland urban growth boundary is an example of ___',
-            options: ['Smart growth / greenbelt policy', 'New Urbanism', 'Gentrification', 'Edge city development']
+            options: ['Smart growth', 'New Urbanism', 'Gentrification', 'Edge city development']
           },
           {
             label: 'Converting an abandoned factory into apartments and shops is ___',
-            options: ['Brownfield redevelopment', 'Urban sprawl', 'Deindustrialization', 'Squatter settlement']
+            options: ['Brownfield redevelopment', 'Greenfield development', 'Deindustrialization', 'Squatter settlement']
           }
         ],
-        correctAnswers: ['Transit-oriented development', 'Smart growth / greenbelt policy', 'Brownfield redevelopment'],
+        correctAnswers: ['Transit-oriented development', 'Smart growth', 'Brownfield redevelopment'],
         hint1: 'Building around public transit.',
         hint2: 'A boundary limiting outward growth.',
         hint3: 'Reusing contaminated industrial land.',
@@ -164,9 +164,9 @@ When analyzing urban challenges on the AP exam:
             question: 'A city builds high-density apartments and stores within walking distance of a new metro station. This best illustrates:',
             options: [
               'Transit-oriented development',
-              'Suburban sprawl',
+              'Low-density suburban sprawl',
               'Counter-urbanization',
-              'Urban decay'
+              'Urban decay and disinvestment'
             ],
             correctAnswer: 0,
             explanation: 'Transit-oriented development concentrates dense, mixed-use development around public transit stations to reduce car dependency and promote walkability.'
@@ -174,9 +174,9 @@ When analyzing urban challenges on the AP exam:
           {
             question: 'Gentrification in a neighborhood is MOST likely to result in:',
             options: [
-              'Decreased property values and tax revenue',
-              'Displacement of lower-income residents due to rising costs',
-              'Increased availability of affordable housing',
+              'Falling property values and a shrinking local tax base',
+              'Displacement of lower-income residents as costs rise',
+              'More affordable housing for the existing residents',
               'A decrease in the neighborhood population'
             ],
             correctAnswer: 1,

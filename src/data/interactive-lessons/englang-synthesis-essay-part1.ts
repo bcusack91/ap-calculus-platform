@@ -54,10 +54,10 @@ Recommended 40-minute plan:
           {
             question: 'What is the best use of source material in a synthesis essay?',
             options: [
-              'Quote full paragraphs to prove you read carefully',
-              'Use concise source references and prioritize your commentary',
-              'Mention all sources once without analysis',
-              'Avoid attribution to save time'
+              'Quote full paragraphs to prove you read each source carefully',
+              'Use brief source references and prioritize your commentary',
+              'Mention every source once so the reader sees broad coverage',
+              'Skip attribution so more time remains for your own analysis'
             ],
             correctAnswer: 1,
             explanation: 'High-scoring essays use sources efficiently and devote most space to analysis. Long quotations reduce room for reasoning and often weaken control.'
@@ -65,10 +65,10 @@ Recommended 40-minute plan:
           {
             question: 'What is the biggest advantage of grouping sources before writing?',
             options: [
-              'It helps memorize source letters only',
+              'It helps you memorize which source letter matches which author',
               'It enables claim-centered organization and smoother synthesis',
-              'It guarantees sophistication automatically',
-              'It eliminates need for thesis'
+              'It earns the sophistication point automatically',
+              'It lets the source groups stand in for a thesis'
             ],
             correctAnswer: 1,
             explanation: 'Grouping by idea lets you integrate sources around argumentative reasons, avoiding source-by-source summary and producing stronger structure.'
@@ -146,18 +146,18 @@ Recommended 40-minute plan:
         dropdowns: [
           {
             label: 'Best paragraph sequence in synthesis:',
-            options: ['Claim -> Source evidence -> Commentary -> Additional source relation -> Commentary', 'Source A summary -> Source B summary -> Source C summary', 'Quotes only', 'Personal anecdote only']
+            options: ['Claim -> source -> commentary -> source -> commentary', 'Source A summary -> Source B summary -> Source C summary', 'Quotation -> quotation -> quotation -> claim', 'Anecdote -> claim -> conclusion -> source']
           },
           {
             label: '"Unlike Source D, Source B suggests..." is a move that ___',
-            options: ['Compares sources to deepen analysis', 'Avoids using sources', 'Summarizes without purpose', 'Introduces plagiarism']
+            options: ['Compares sources to deepen analysis', 'Summarizes one source in isolation', 'Concedes the opposing argument', 'Shows that one source is unreliable']
           },
           {
             label: 'Most effective revision in final 5 minutes is ___',
-            options: ['Fix thesis clarity and ensure commentary follows each source', 'Add extra long quotes', 'Rewrite entire intro from scratch', 'Change topic completely']
+            options: ['Sharpen the thesis and commentary', 'Add longer quotations as extra support', 'Rewrite the whole introduction', 'Add a fourth source to the essay']
           }
         ],
-        correctAnswers: ['Claim -> Source evidence -> Commentary -> Additional source relation -> Commentary', 'Compares sources to deepen analysis', 'Fix thesis clarity and ensure commentary follows each source'],
+        correctAnswers: ['Claim -> source -> commentary -> source -> commentary', 'Compares sources to deepen analysis', 'Sharpen the thesis and commentary'],
         hint1: 'Reasoning should lead, sources should support.',
         hint2: 'Comparison is core synthesis behavior.',
         hint3: 'Thesis + commentary quality drives score.',
@@ -189,10 +189,10 @@ Recommended 40-minute plan:
           {
             question: 'A student has 8 minutes left and has a full draft with weak commentary. Best use of remaining time?',
             options: [
-              'Add two more quotes from unused sources',
-              'Strengthen analysis after existing source references and sharpen thesis wording',
-              'Rewrite essay completely',
-              'Delete all source citations'
+              'Add two more quotations from sources you have not used',
+              'Strengthen commentary after existing evidence and sharpen the thesis',
+              'Start over and rewrite the whole essay with new commentary',
+              'Delete citations so the argument reads as your own'
             ],
             correctAnswer: 1,
             explanation: 'At this stage, improving commentary and thesis clarity yields the biggest rubric gain. More quotes without analysis rarely helps.'
@@ -200,13 +200,13 @@ Recommended 40-minute plan:
           {
             question: 'Which sentence best demonstrates synthesis sophistication?',
             options: [
-              '"Source A says one thing and Source B says another."',
-              '"Sources A and C support immediate reform, but Source F caution about implementation suggests a phased model that preserves urgency while reducing disruption."',
-              '"Many sources are interesting."',
-              '"I used four sources."'
+              '"Source A says one thing about reform and Source B says another, and both of them raise points worth considering."',
+              '"Sources A and C support immediate reform, but Source F\'s caution about implementation suggests a phased model that keeps urgency."',
+              '"Many of the sources are interesting, and each one offers a different and valuable perspective on reform that all readers should know about."',
+              '"I used four sources in this essay, Sources A, C, D, and F, because they were the most relevant to reform."'
             ],
             correctAnswer: 1,
-            explanation: 'This response integrates multiple sources, acknowledges tension, and resolves it through a qualified policy inference. That is sophisticated synthesis reasoning.'
+            explanation: 'This response integrates multiple sources, acknowledges the tension between them, and resolves it through a qualified policy inference. That is sophisticated synthesis reasoning. The others note disagreement without resolving it, praise the sources in general, or simply list which sources were used.'
           }
         ]
       }

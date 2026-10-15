@@ -60,10 +60,10 @@ Two settlements can have **the same density** but **different concentrations** â
           {
             question: "Egypt has an arithmetic density of about 100 people per $km^{2}$, but a physiological density above 2,500 per $km^{2}$. The gap is BEST explained by:",
             options: [
-              "Egypt's high birth rate concentrated in cities",
-              "Most of Egypt is desert; nearly all population and farmland are confined to the Nile valley",
-              "Government policy that requires farmers to live near Cairo",
-              "An overcounting of arable land in census records"
+              "A high birth rate that is concentrated in Egypt's largest cities",
+              "Desert covers most of Egypt, so its farmland is a thin Nile strip",
+              "A government rule requiring farm families to live near Cairo",
+              "Census records that overcount the amount of land being farmed"
             ],
             correctAnswer: 1,
             explanation: "Physiological density divides population by **arable** land. Egypt's arable land (the Nile valley + delta) is a tiny slice of national territory, so the ratio explodes even though arithmetic density is moderate."
@@ -71,13 +71,13 @@ Two settlements can have **the same density** but **different concentrations** â
           {
             question: "Country A has 5 farmers per arable $km^{2}$; Country B has 200 farmers per arable $km^{2}$. The MOST defensible inference is that:",
             options: [
-              "Country A has more fertile soil than Country B",
-              "Country A is more economically developed and more mechanized than Country B",
-              "Country B exports more grain than Country A",
+              "Country A has richer, more fertile soil than Country B",
+              "Country A's farming is more mechanized than Country B's",
+              "Country B exports more grain each year than Country A does",
               "Country A has a smaller total population than Country B"
             ],
             correctAnswer: 1,
-            explanation: "Low agricultural density signals mechanization and capital-intensive farming â€” features of more developed economies. We cannot infer soil fertility, exports, or total population from agricultural density alone."
+            explanation: "Low agricultural density means few farmers work each unit of farmland, which signals mechanized, capital-intensive farming, typical of more developed economies. Agricultural density alone says nothing about soil fertility, exports or total population."
           }
         ]
       }
@@ -203,7 +203,7 @@ Geographer **Yi-Fu Tuan (1977, _Space and Place_)** drew the formal distinction:
             options: [
               "Yi-Fu Tuan",
               "Edward Relph (placelessness)",
-              "David Harvey (time-space convergence)",
+              "David Harvey (time-space compression)",
               "Walter Christaller"
             ],
             correctAnswer: 1,

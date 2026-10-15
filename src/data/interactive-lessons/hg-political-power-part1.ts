@@ -173,9 +173,9 @@ export const hgPoliticalPowerPart1Data = {
           {
             question: 'Brexit — the UK leaving the European Union — represents a tension between:',
             options: [
-              'Devolution and federalism',
+              'Devolution and the rise of federalism',
               'National sovereignty and supranationalism',
-              'Unitary and federal governance',
+              'Unitary rule and federal systems of governance',
               'Gerrymandering and reapportionment'
             ],
             correctAnswer: 1,
@@ -187,7 +187,7 @@ export const hgPoliticalPowerPart1Data = {
               'Compact',
               'Elongated',
               'Fragmented',
-              'Prorupted'
+              'Perforated'
             ],
             correctAnswer: 2,
             explanation: 'Fragmented states (like Indonesia or the Philippines) face challenges in transportation, communication, national unity, and governance because their territory is not connected.'

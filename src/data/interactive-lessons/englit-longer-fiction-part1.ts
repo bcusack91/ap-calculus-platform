@@ -15,24 +15,24 @@ export const englitLongerFictionPart1Data = {
             {
                   "question": "Which statement best reflects the role of Character Arc in literary analysis?",
                   "options": [
-                        "Character arc means listing events in order.",
-                        "Character arc examines how values, choices, or self-understanding shift over the narrative.",
-                        "Character arc is irrelevant if the plot is exciting.",
-                        "Character arc is only physical movement between places."
+                        "Character arc is the sequence of major events a character takes part in, in order.",
+                        "Character arc traces how a character's values or self-understanding change.",
+                        "Character arc requires a protagonist to improve morally by the end of the novel.",
+                        "Character arc describes a character's physical journey from one setting to another."
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Character Arc helps readers interpret meaning and authorial choice, not just identify a feature."
+                  "explanation": "A character arc is internal change, or a meaningful failure to change, in values, beliefs or self-understanding across the narrative. It is not the list of events a character goes through, arcs can be negative or tragic rather than improving, and physical travel matters only when it maps onto inner change."
             },
             {
                   "question": "What is usually the strongest AP Lit analytical move?",
                   "options": [
-                        "Retell the plot in sequence",
-                        "Name literary devices without interpretation",
+                        "Summarize the novel's plot as completely as possible",
+                        "Identify each literary device and explain its definition",
                         "Connect textual details to a defensible interpretation about meaning",
-                        "Focus only on historical background"
+                        "Describe the social and historical background of the era the novel depicts"
                   ],
                   "correctAnswer": 2,
-                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+                  "explanation": "AP Lit scoring rewards a defensible claim supported by evidence and commentary. Complete summary, device definitions and historical background earn credit only when they are tied to an interpretation of meaning."
             }
       ]
 }
@@ -68,33 +68,33 @@ export const englitLongerFictionPart1Data = {
             {
                   "label": "Character Arc in analysis usually refers to ___",
                   "options": [
-                        "How development over time shapes meaning",
-                        "How many chapters a book has",
-                        "Only publication date facts",
-                        "A one-word moral"
+                        "How a character's inner change shapes meaning",
+                        "The sequence of events a character takes part in",
+                        "A character's journey from place to place",
+                        "A protagonist's guaranteed moral improvement"
                   ]
             },
             {
                   "label": "The best AP paragraph usually includes ___",
                   "options": [
                         "Claim, evidence, and commentary",
-                        "Plot summary only",
-                        "Device name lists",
-                        "Vocabulary definitions only"
+                        "Topic, quotation, and summary",
+                        "Device, definition, and example",
+                        "Background, summary, and a moral"
                   ]
             },
             {
                   "label": "A defensible interpretation should be ___",
                   "options": [
                         "Text-supported and specific",
-                        "Purely personal with no evidence",
-                        "A broad moral lesson only",
-                        "A dictionary definition"
+                        "Based on the reader's feelings",
+                        "Summarized in a single moral",
+                        "Focused on the author's intent"
                   ]
             }
       ],
       "correctAnswers": [
-            "How development over time shapes meaning",
+            "How a character's inner change shapes meaning",
             "Claim, evidence, and commentary",
             "Text-supported and specific"
       ],
@@ -118,24 +118,24 @@ export const englitLongerFictionPart1Data = {
             {
                   "question": "A student identifies structure in a passage but does not explain effect. What is the best revision?",
                   "options": [
-                        "Add more plot details",
+                        "Describe the novel's chapter structure",
                         "Explain how structure shapes tone or theme in that moment",
-                        "Replace all quotes with summary",
-                        "Switch to biographical information only"
+                        "Explain the plot events in that chapter",
+                        "Quote a longer section of the passage"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+                  "explanation": "The paragraph identifies a structural choice but never explains its effect. Explaining how the structure shapes tone or theme supplies the commentary. Describing chapters, explaining plot events or quoting more text still leaves the effect unexplained."
             },
             {
                   "question": "Which thesis move is strongest for AP Lit?",
                   "options": [
-                        "Make an absolute claim with no nuance",
-                        "Advance a specific, defensible claim about how theme contributes to meaning",
-                        "Retell the plot in one sentence",
-                        "List three literary terms without argument"
+                        "State the novel's theme as a single word, such as love or loss",
+                        "Advance a specific, defensible claim about how the novel develops its theme",
+                        "Summarize the novel's plot and then announce that it has an important theme",
+                        "Name three devices the novel uses and promise to discuss them"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+                  "explanation": "A strong thesis makes a specific, arguable claim about how the novel develops its theme. A one-word topic such as love is not a theme statement, a summary plus \"it has an important theme\" makes no claim, and a three-device list announces topics rather than an interpretation."
             }
       ]
 }

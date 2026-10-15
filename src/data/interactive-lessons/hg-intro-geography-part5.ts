@@ -69,7 +69,7 @@ export const hgIntroGeographyPart5Data = {
               "Contagious diffusion",
               "Hierarchical diffusion",
               "Reverse hierarchical diffusion",
-              "Relocation diffusion"
+              "Relocation diffusion by migrants"
             ],
             correctAnswer: 2,
             explanation: "Walmart spread *upward* from a small place (Bentonville/Rogers) to larger places — the textbook example of reverse hierarchical diffusion."
@@ -193,10 +193,10 @@ Diffusion does not spread perfectly — it weakens with distance and slows at ba
           {
             question: "Health officials map the spread of measles outbreaks from international air-travel hubs (London, Frankfurt, Atlanta) to mid-sized cities and finally to small rural counties. The cross-city pattern is BEST described as:",
             options: [
-              "Contagious diffusion across all places equally",
-              "Hierarchical diffusion through tiers of places linked by air travel",
+              "Contagious diffusion reaching all places at the same time",
+              "Hierarchical diffusion through tiers of places linked by air",
               "Reverse hierarchical diffusion from the countryside upward",
-              "Stimulus diffusion of vaccination practices"
+              "Stimulus diffusion of new vaccination practices"
             ],
             correctAnswer: 1,
             explanation: "Spread that jumps between large urban nodes before trickling down to smaller places is hierarchical diffusion. The air-travel network defines the hierarchy."
@@ -205,9 +205,9 @@ Diffusion does not spread perfectly — it weakens with distance and slows at ba
             question: "A geographer notes that a Skype call between London and Sydney in 2020 felt 'closer' than a steamship voyage in 1880. The single concept that BEST captures this perceived shrinking of the world is:",
             options: [
               "Distance decay",
-              "Time-space convergence (Janelle, 1969)",
+              "Time-space convergence",
               "Network density",
-              "Friction of distance"
+              "The friction of distance"
             ],
             correctAnswer: 1,
             explanation: "Time-space convergence is the concept Donald Janelle introduced in 1969 to describe places effectively becoming closer as transport and communication speed up."

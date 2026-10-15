@@ -69,10 +69,10 @@ A flat sheet cannot perfectly represent a sphere. Every projection sacrifices at
           {
             question: "An airline planning a great-circle route from Anchorage to Stockholm should use a:",
             options: [
-              "Mercator projection",
-              "Robinson projection",
-              "Polar (azimuthal) projection",
-              "Gall-Peters projection"
+              "Mercator projection with straight compass bearings",
+              "Robinson compromise projection of the whole world",
+              "Polar azimuthal projection centered on the pole",
+              "Gall-Peters equal-area projection of the globe"
             ],
             correctAnswer: 2,
             explanation: "Great-circle routes between high-latitude cities pass near the pole. A polar/azimuthal projection preserves true direction and distance from a central point — ideal for polar flight planning."
@@ -153,7 +153,7 @@ Use the exact term from the lesson.
         dropdowns: [
           {
             label: "John Deere tractors auto-steer rows 2 cm apart by combining satellite signals with on-board sensors. Core technology: ___",
-            options: ["GPS", "Choropleth", "Cartogram", "Mercator projection"]
+            options: ["GPS", "GIS", "Remote sensing", "Choropleth mapping"]
           },
           {
             label: "After Hurricane Maria, NASA's MODIS satellite measured pre/post nighttime light to estimate Puerto Rico's blackout extent. Core technology: ___",
@@ -161,7 +161,7 @@ Use the exact term from the lesson.
           },
           {
             label: "Detroit's Land Bank stacks foreclosure, vacancy, school-quality, and crime layers in ArcGIS to prioritize demolitions. Core technology: ___",
-            options: ["GIS", "GPS", "Cartogram", "Polar projection"]
+            options: ["GIS", "GPS", "Remote sensing", "Cartogram"]
           }
         ],
         correctAnswers: ["GPS", "Remote sensing", "GIS"],
@@ -202,7 +202,7 @@ Use the exact term from the lesson.
             question: "A public-health team wants to map daily PM2.5 air-pollution readings across Los Angeles County. The pollution varies smoothly across space. The most appropriate thematic map type is:",
             options: [
               "Choropleth shaded by ZIP code",
-              "Isoline (isopleth) map of equal pollution values",
+              "Isoline map joining points of equal value",
               "Cartogram with ZIP codes resized by population",
               "Dot density map with one dot per resident"
             ],

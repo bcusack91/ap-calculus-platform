@@ -15,24 +15,24 @@ export const englitNarrativePerspectivePart1Data = {
             {
                   "question": "Which statement best reflects the role of Focalization in literary analysis?",
                   "options": [
-                        "Focalization is the same as font choice.",
+                        "Focalization is the narrator's voice, the one who tells the story.",
                         "Focalization identifies whose perception organizes narrative detail.",
-                        "Focalization has no effect on tone.",
-                        "Focalization only appears in drama."
+                        "Focalization is the author's choice of which events to show in close detail.",
+                        "Focalization stays fixed for a whole work and cannot shift."
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Focalization helps readers interpret meaning and authorial choice, not just identify a feature."
+                  "explanation": "Focalization asks whose perception, whose eyes and mind, shapes what is described, and that can differ from who narrates. The narrator's voice is a separate question, choosing which events to dwell on is a matter of pacing or selection, and focalization can shift between characters within a work."
             },
             {
                   "question": "What is usually the strongest AP Lit analytical move?",
                   "options": [
-                        "Retell the plot in sequence",
-                        "Name literary devices without interpretation",
+                        "Retell the passage in your own words",
+                        "Point out each device and supply its definition",
                         "Connect textual details to a defensible interpretation about meaning",
-                        "Focus only on historical background"
+                        "Explain how the author's era and background shaped the passage's message"
                   ],
                   "correctAnswer": 2,
-                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+                  "explanation": "AP Lit scoring rewards a defensible claim supported by evidence and commentary. Paraphrase, device definitions and historical or biographical background earn credit only when they are tied to an interpretation of meaning."
             }
       ]
 }
@@ -69,27 +69,27 @@ export const englitNarrativePerspectivePart1Data = {
                   "label": "Focalization in analysis usually refers to ___",
                   "options": [
                         "The consciousness through which events are filtered",
-                        "A plot timeline",
-                        "A punctuation pattern",
-                        "A chapter heading"
+                        "The narrator's voice, the one telling the story",
+                        "The events the author chooses to show in close detail",
+                        "The single fixed viewpoint of an entire work"
                   ]
             },
             {
                   "label": "The best AP paragraph usually includes ___",
                   "options": [
                         "Claim, evidence, and commentary",
-                        "Plot summary only",
-                        "Device name lists",
-                        "Vocabulary definitions only"
+                        "Topic, quotation, and summary",
+                        "Device, definition, and example",
+                        "Background, summary, and a moral"
                   ]
             },
             {
                   "label": "A defensible interpretation should be ___",
                   "options": [
                         "Text-supported and specific",
-                        "Purely personal with no evidence",
-                        "A broad moral lesson only",
-                        "A dictionary definition"
+                        "Based on the reader's feelings",
+                        "Summarized in a single moral",
+                        "Focused on the author's intent"
                   ]
             }
       ],
@@ -118,24 +118,24 @@ export const englitNarrativePerspectivePart1Data = {
             {
                   "question": "A student identifies bias in a passage but does not explain effect. What is the best revision?",
                   "options": [
-                        "Add more plot details",
+                        "Prove that the narrator is biased with a second quotation",
                         "Explain how bias shapes tone or theme in that moment",
-                        "Replace all quotes with summary",
-                        "Switch to biographical information only"
+                        "Explain what really happened, correcting the narrator's account",
+                        "Label the narrator's bias using the term unreliable narration"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+                  "explanation": "The paragraph identifies the narrator's bias but never explains its effect. Explaining how the bias shapes tone or theme supplies the commentary. Another quotation, a corrected version of events or a technical label still leaves the effect unexplained."
             },
             {
                   "question": "Which thesis move is strongest for AP Lit?",
                   "options": [
-                        "Make an absolute claim with no nuance",
-                        "Advance a specific, defensible claim about how interpretive gap contributes to meaning",
-                        "Retell the plot in one sentence",
-                        "List three literary terms without argument"
+                        "Fill the interpretive gap by stating what the author really meant",
+                        "Advance a specific, defensible claim about how the interpretive gap contributes to meaning",
+                        "Summarize the events and note that some details are left unexplained",
+                        "Claim that the gaps make the passage confusing and less effective"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+                  "explanation": "A strong thesis makes a specific, arguable claim about how a choice in the text, here an interpretive gap, creates meaning. Filling the gap with the author's supposed intent, noting that details are unexplained or calling the gaps a flaw does not argue what the gap does."
             }
       ]
 }

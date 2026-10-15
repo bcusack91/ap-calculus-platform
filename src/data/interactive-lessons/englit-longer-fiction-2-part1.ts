@@ -15,24 +15,24 @@ export const englitLongerFiction2Part1Data = {
             {
                   "question": "Which statement best reflects the role of Subplot in literary analysis?",
                   "options": [
-                        "A subplot is irrelevant filler.",
+                        "A subplot is a digression that pauses the main plot for variety.",
                         "A subplot can deepen or challenge the central argument of the novel.",
-                        "A subplot must involve new main characters only.",
-                        "A subplot is the same as setting description."
+                        "A subplot is a story within a story, told by a separate narrator.",
+                        "A subplot is the main plot's backstory, revealed gradually through flashback."
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Subplot helps readers interpret meaning and authorial choice, not just identify a feature."
+                  "explanation": "A subplot is a secondary storyline that runs alongside the main plot and often mirrors, contrasts or complicates it, deepening the novel's central concerns. It is not mere filler, it differs from an embedded story told by another narrator, and backstory delivered by flashback belongs to the main plot itself."
             },
             {
                   "question": "What is usually the strongest AP Lit analytical move?",
                   "options": [
-                        "Retell the plot in sequence",
-                        "Name literary devices without interpretation",
+                        "Summarize the plot clearly so the reader understands exactly what happens",
+                        "Identify the literary devices in the passage and define each one carefully",
                         "Connect textual details to a defensible interpretation about meaning",
-                        "Focus only on historical background"
+                        "Explain the author's biography and how it inspired the passage's events"
                   ],
                   "correctAnswer": 2,
-                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+                  "explanation": "AP Lit scoring rewards a defensible claim supported by evidence and commentary. Clear summary, careful device definitions and biography earn credit only when they are tied to an interpretation of meaning."
             }
       ]
 }
@@ -68,33 +68,33 @@ export const englitLongerFiction2Part1Data = {
             {
                   "label": "Subplot in analysis usually refers to ___",
                   "options": [
-                        "A secondary storyline that interacts with main themes",
-                        "Any random scene",
-                        "The final sentence only",
-                        "A vocabulary list"
+                        "A secondary storyline linked to the main themes",
+                        "A story within a story told by another narrator",
+                        "Backstory revealed through a series of flashbacks",
+                        "A digression that pauses the main plot for variety"
                   ]
             },
             {
                   "label": "The best AP paragraph usually includes ___",
                   "options": [
                         "Claim, evidence, and commentary",
-                        "Plot summary only",
-                        "Device name lists",
-                        "Vocabulary definitions only"
+                        "Quotation, device label, and summary",
+                        "Hook, context, and a moral",
+                        "Summary, quotation, and opinion"
                   ]
             },
             {
                   "label": "A defensible interpretation should be ___",
                   "options": [
                         "Text-supported and specific",
-                        "Purely personal with no evidence",
-                        "A broad moral lesson only",
-                        "A dictionary definition"
+                        "Universal and beyond dispute",
+                        "Personal and emotionally honest",
+                        "Broad enough to cover any text"
                   ]
             }
       ],
       "correctAnswers": [
-            "A secondary storyline that interacts with main themes",
+            "A secondary storyline linked to the main themes",
             "Claim, evidence, and commentary",
             "Text-supported and specific"
       ],
@@ -118,24 +118,24 @@ export const englitLongerFiction2Part1Data = {
             {
                   "question": "A student identifies foreshadowing in a passage but does not explain effect. What is the best revision?",
                   "options": [
-                        "Add more plot details",
+                        "Add a quotation from the later scene that the foreshadowing predicts",
                         "Explain how foreshadowing shapes tone or theme in that moment",
-                        "Replace all quotes with summary",
-                        "Switch to biographical information only"
+                        "Explain what happens later in the novel",
+                        "Name the foreshadowing type as direct or indirect"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+                  "explanation": "The paragraph identifies foreshadowing but never explains its effect. Explaining how the foreshadowing shapes tone or theme in that moment supplies the commentary. Quoting the later scene, recounting what happens next or classifying the foreshadowing still leaves the effect unexplained."
             },
             {
                   "question": "Which thesis move is strongest for AP Lit?",
                   "options": [
-                        "Make an absolute claim with no nuance",
+                        "Claim that the novel builds suspense to keep readers turning pages",
                         "Advance a specific, defensible claim about how narrative tension contributes to meaning",
-                        "Retell the plot in one sentence",
-                        "List three literary terms without argument"
+                        "Summarize the main conflict and the events that lead to the climax",
+                        "Name three techniques that build tension and promise to discuss each"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+                  "explanation": "A strong thesis makes a specific, arguable claim about how a choice in the text, here narrative tension, creates meaning. Saying the novel is suspenseful, summarizing the conflict or listing techniques identifies the feature without arguing what it does."
             }
       ]
 }

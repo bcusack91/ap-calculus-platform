@@ -15,24 +15,24 @@ export const englitNarrativeComplexityPart1Data = {
             {
                   "question": "Which statement best reflects the role of Ambiguity in literary analysis?",
                   "options": [
-                        "Ambiguity means the text has no meaning.",
+                        "Ambiguity means the text is unclear, a flaw in the writing.",
                         "Ambiguity means multiple evidence-based interpretations remain plausible.",
-                        "Ambiguity should be ignored for AP essays.",
-                        "Ambiguity equals grammatical error."
+                        "Ambiguity means any interpretation is valid as long as it is sincere.",
+                        "Ambiguity means the author has hidden one secret meaning to decode."
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Ambiguity helps readers interpret meaning and authorial choice, not just identify a feature."
+                  "explanation": "Ambiguity is purposeful openness: the text supports more than one reading, and strong essays weigh the evidence for each. It is not a writing flaw, it does not make every sincere reading valid, and it differs from a single hidden meaning waiting to be decoded."
             },
             {
                   "question": "What is usually the strongest AP Lit analytical move?",
                   "options": [
-                        "Retell the plot in sequence",
-                        "Name literary devices without interpretation",
+                        "Summarize the passage's events fully before attempting any interpretation",
+                        "Identify every literary device present and explain what each term means",
                         "Connect textual details to a defensible interpretation about meaning",
-                        "Focus only on historical background"
+                        "Explain the author's intentions using interviews and biographical sources"
                   ],
                   "correctAnswer": 2,
-                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+                  "explanation": "AP Lit scoring rewards a defensible claim supported by evidence and commentary. Full summary, device definitions and outside evidence of the author's intentions earn credit only when they are tied to an interpretation of the text itself."
             }
       ]
 }
@@ -69,27 +69,27 @@ export const englitNarrativeComplexityPart1Data = {
                   "label": "Ambiguity in analysis usually refers to ___",
                   "options": [
                         "Interpretive openness grounded in textual evidence",
-                        "A summary gap",
-                        "A typo in the passage",
-                        "A biography detail"
+                        "Unclear writing that weakens the passage as a whole",
+                        "Freedom to accept any sincere personal reading",
+                        "A single hidden meaning the reader must decode"
                   ]
             },
             {
                   "label": "The best AP paragraph usually includes ___",
                   "options": [
                         "Claim, evidence, and commentary",
-                        "Plot summary only",
-                        "Device name lists",
-                        "Vocabulary definitions only"
+                        "Quotation, summary, and paraphrase",
+                        "Thesis, devices, and conclusion",
+                        "Context, plot, and a quotation"
                   ]
             },
             {
                   "label": "A defensible interpretation should be ___",
                   "options": [
                         "Text-supported and specific",
-                        "Purely personal with no evidence",
-                        "A broad moral lesson only",
-                        "A dictionary definition"
+                        "Grounded in the author's biography",
+                        "Cautious enough to avoid a claim",
+                        "Obvious and agreed on by all"
                   ]
             }
       ],
@@ -118,24 +118,24 @@ export const englitNarrativeComplexityPart1Data = {
             {
                   "question": "A student identifies contradiction in a passage but does not explain effect. What is the best revision?",
                   "options": [
-                        "Add more plot details",
+                        "Resolve the contradiction by choosing the more accurate statement",
                         "Explain how contradiction shapes tone or theme in that moment",
-                        "Replace all quotes with summary",
-                        "Switch to biographical information only"
+                        "Explain the contradiction as an error the author overlooked",
+                        "Quote both sides of the contradiction again"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+                  "explanation": "The paragraph identifies a contradiction but never explains its effect. Explaining how the contradiction shapes tone or theme supplies the commentary. Choosing one side, treating it as an authorial error or quoting it again still leaves the effect unexplained."
             },
             {
                   "question": "Which thesis move is strongest for AP Lit?",
                   "options": [
-                        "Make an absolute claim with no nuance",
-                        "Advance a specific, defensible claim about how layered meaning contributes to meaning",
-                        "Retell the plot in one sentence",
-                        "List three literary terms without argument"
+                        "Argue that the passage means whatever each reader decides it means",
+                        "Advance a specific, defensible claim about how the passage sustains layered meaning",
+                        "Summarize the passage and note that it can be read in more than one way",
+                        "Identify the passage's single hidden meaning and show how every detail points to it"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+                  "explanation": "A strong thesis makes a specific, arguable claim about how the passage sustains more than one layer of meaning. Saying it means whatever readers decide abandons the argument, noting that it can be read several ways makes no claim, and forcing every detail toward one hidden meaning flattens the complexity."
             }
       ]
 }

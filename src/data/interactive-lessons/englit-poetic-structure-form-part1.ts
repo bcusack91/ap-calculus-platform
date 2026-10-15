@@ -15,24 +15,24 @@ export const englitPoeticStructureFormPart1Data = {
             {
                   "question": "Which statement best reflects the role of Form in literary analysis?",
                   "options": [
-                        "Form is irrelevant to poetic meaning.",
-                        "Form creates expectations that poets can fulfill, disrupt, or complicate.",
-                        "Form means only rhyme labels.",
-                        "Form matters only in sonnets."
+                        "Form is the poem's fixed rhyme scheme, so analyzing it means labeling the pattern.",
+                        "Form sets up expectations that a poet can fulfill or disrupt.",
+                        "Form matters mainly in traditional poems; free verse has no form to analyze.",
+                        "Form is the poem's subject matter, the topic its stanzas describe and develop."
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Form helps readers interpret meaning and authorial choice, not just identify a feature."
+                  "explanation": "Form, including meter, rhyme, stanza and fixed patterns such as the sonnet, creates expectations, and meaning often comes from how a poet fulfills or breaks them. Rhyme labels are only one part of form, free verse makes formal choices too, and subject matter is content rather than form."
             },
             {
                   "question": "What is usually the strongest AP Lit analytical move?",
                   "options": [
-                        "Retell the plot in sequence",
-                        "Name literary devices without interpretation",
+                        "Retell what happens in the passage in sequence",
+                        "Name the literary devices and give a definition of each one",
                         "Connect textual details to a defensible interpretation about meaning",
-                        "Focus only on historical background"
+                        "Describe the historical period in which the author wrote the passage"
                   ],
                   "correctAnswer": 2,
-                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+                  "explanation": "AP Lit scoring rewards a defensible claim supported by evidence and commentary. Retelling, defining devices and describing the historical period earn credit only when they are tied to an interpretation of meaning."
             }
       ]
 }
@@ -69,27 +69,27 @@ export const englitPoeticStructureFormPart1Data = {
                   "label": "Form in analysis usually refers to ___",
                   "options": [
                         "The organizing pattern that shapes reading",
-                        "The historical period only",
-                        "The poet biography",
-                        "The poem title alone"
+                        "The poem's subject matter or central topic",
+                        "The rhyme scheme label, such as ABAB",
+                        "The historical period a poem comes from"
                   ]
             },
             {
                   "label": "The best AP paragraph usually includes ___",
                   "options": [
                         "Claim, evidence, and commentary",
-                        "Plot summary only",
-                        "Device name lists",
-                        "Vocabulary definitions only"
+                        "Quotation, device label, and summary",
+                        "Hook, context, and a moral",
+                        "Summary, quotation, and opinion"
                   ]
             },
             {
                   "label": "A defensible interpretation should be ___",
                   "options": [
                         "Text-supported and specific",
-                        "Purely personal with no evidence",
-                        "A broad moral lesson only",
-                        "A dictionary definition"
+                        "Universal and beyond dispute",
+                        "Personal and emotionally honest",
+                        "Broad enough to cover any text"
                   ]
             }
       ],
@@ -118,24 +118,24 @@ export const englitPoeticStructureFormPart1Data = {
             {
                   "question": "A student identifies volta in a passage but does not explain effect. What is the best revision?",
                   "options": [
-                        "Add more plot details",
-                        "Explain how volta shapes tone or theme in that moment",
-                        "Replace all quotes with summary",
-                        "Switch to biographical information only"
+                        "Point out the line number where the volta occurs",
+                        "Explain how the volta shapes tone or theme in that moment",
+                        "Explain the sonnet's rhyme scheme on either side of the turn",
+                        "Quote the volta again and underline the key word"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+                  "explanation": "Locating the volta is identification; the paragraph needs commentary. Explaining how the volta shapes tone or theme supplies it. A line number, a rhyme-scheme description or a repeated quotation still leaves the effect unexplained."
             },
             {
                   "question": "Which thesis move is strongest for AP Lit?",
                   "options": [
-                        "Make an absolute claim with no nuance",
+                        "State that the poem is written in free verse and has irregular line lengths",
                         "Advance a specific, defensible claim about how lineation contributes to meaning",
-                        "Retell the plot in one sentence",
-                        "List three literary terms without argument"
+                        "Claim that the line breaks make the poem more interesting to read",
+                        "List the poem's form, rhyme scheme and meter without an argument"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+                  "explanation": "A strong thesis makes a specific, arguable claim about how a formal choice, here lineation, creates meaning. Describing the verse form, calling line breaks interesting or listing formal features identifies choices without arguing what they do."
             }
       ]
 }

@@ -48,10 +48,10 @@ export const apesBiomesSuccessionPart1Data = {
           {
             question: 'The tundra biome is characterized by:',
             options: [
-              'Dense deciduous forest and moderate rainfall',
-              'Permafrost, no trees, and extremely cold temperatures',
-              'Hot temperatures and sparse rainfall',
-              'Coniferous trees and long cold winters'
+              'Dense deciduous forest, mild summers and moderate rain',
+              'Permafrost, no trees and extremely cold winters',
+              'Hot days, cool nights and very sparse yearly rainfall',
+              'Coniferous trees, acidic soil and long cold winters'
             ],
             correctAnswer: 1,
             explanation: 'Tundra has permanently frozen subsoil (permafrost), no trees (too cold and windy), extreme cold, and short growing seasons. Found in Arctic regions and high mountain tops.'
@@ -128,10 +128,10 @@ export const apesBiomesSuccessionPart1Data = {
           },
           {
             label: 'A biome with coniferous trees, cold winters, and acidic soils is the ___',
-            options: ['Boreal forest (taiga)', 'Temperate grassland', 'Tropical savanna', 'Tundra']
+            options: ['Boreal forest', 'Temperate deciduous forest', 'Tropical savanna', 'Tundra']
           }
         ],
-        correctAnswers: ['Secondary succession', 'Primary succession', 'Boreal forest (taiga)'],
+        correctAnswers: ['Secondary succession', 'Primary succession', 'Boreal forest'],
         hint1: 'Soil already exists under the pavement.',
         hint2: 'Starting from bare rock — no prior soil.',
         hint3: 'Think Canada and Russia — spruce and pine.',
@@ -162,10 +162,10 @@ export const apesBiomesSuccessionPart1Data = {
           {
             question: 'After a forest fire destroys the vegetation but leaves the soil intact, regrowth follows secondary succession. Which will likely appear FIRST?',
             options: [
-              'Mature oak and maple trees',
+              'Shade-tolerant oak and maple trees',
               'Fast-growing grasses and wildflowers',
-              'Lichens growing on rock surfaces',
-              'Dense shrub thickets'
+              'Lichens on bare rock surfaces',
+              'Dense thickets of woody shrubs'
             ],
             correctAnswer: 1,
             explanation: 'In secondary succession (soil present), fast-growing herbaceous plants (grasses, wildflowers) colonize first, followed by shrubs, then pioneer trees, then mature forest.'
@@ -173,10 +173,10 @@ export const apesBiomesSuccessionPart1Data = {
           {
             question: 'Climate change is causing permafrost in the tundra to thaw, releasing methane. This is a concern because:',
             options: [
-              'Methane cools the atmosphere and could cause an ice age',
-              'Methane is a potent greenhouse gas creating a positive feedback loop of more warming',
-              'Thawing permafrost increases tundra biodiversity',
-              'Methane has no effect on climate'
+              'Methane cools the atmosphere and could trigger an ice age',
+              'Methane is a potent greenhouse gas, so thawing feeds more warming',
+              'Thawing permafrost greatly raises tundra plant biodiversity',
+              'Methane destroys stratospheric ozone faster than CFCs do'
             ],
             correctAnswer: 1,
             explanation: 'Methane is a potent greenhouse gas. Warming thaws permafrost → releases methane → more warming → more thawing. This is a positive feedback loop that accelerates climate change.'

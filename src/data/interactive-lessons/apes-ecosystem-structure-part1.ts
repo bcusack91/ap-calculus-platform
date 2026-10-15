@@ -129,7 +129,7 @@ export const apesEcosystemStructurePart1Data = {
         dropdowns: [
           {
             label: 'Phytoplankton converting sunlight to chemical energy in the ocean are ___',
-            options: ['Producers (autotrophs)', 'Primary consumers', 'Decomposers', 'Secondary consumers']
+            options: ['Producers', 'Primary consumers', 'Decomposers', 'Secondary consumers']
           },
           {
             label: 'Fungi breaking down a fallen log and recycling nutrients are ___',
@@ -137,10 +137,10 @@ export const apesEcosystemStructurePart1Data = {
           },
           {
             label: 'A hawk eating a snake that ate a mouse that ate seeds represents a ___',
-            options: ['Tertiary consumer (4th trophic level)', 'Secondary consumer', 'Primary consumer', 'Producer']
+            options: ['Tertiary consumer', 'Secondary consumer', 'Primary consumer', 'Quaternary consumer']
           }
         ],
-        correctAnswers: ['Producers (autotrophs)', 'Decomposers', 'Tertiary consumer (4th trophic level)'],
+        correctAnswers: ['Producers', 'Decomposers', 'Tertiary consumer'],
         hint1: 'They make their own food from sunlight.',
         hint2: 'They break down dead matter.',
         hint3: 'Count the levels: seeds → mouse → snake → hawk.',
@@ -182,10 +182,10 @@ export const apesEcosystemStructurePart1Data = {
           {
             question: 'Why does eating lower on the food chain (e.g., grain instead of beef) require less land and energy?',
             options: [
-              'Grain has more calories per gram than beef',
-              'The 10% rule means feeding grain to cattle wastes ~90% of the energy at each transfer',
-              'Cattle do not eat grain, only grass',
-              'Lower trophic levels have fewer species'
+              'Grain has more calories per gram than beef has, so less is needed',
+              'Feeding grain to cattle adds a transfer that wastes ~90% of its calories',
+              'Cattle cannot digest grain and must graze on large grass pastures',
+              'Lower trophic levels contain fewer species that need to be fed'
             ],
             correctAnswer: 1,
             explanation: 'Due to the 10% rule, ~90% of energy is lost at each trophic level. Eating grain directly (1st trophic transfer) is far more efficient than feeding grain to cattle and then eating beef (2 transfers).'

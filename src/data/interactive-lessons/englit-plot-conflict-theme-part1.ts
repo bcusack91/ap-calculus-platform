@@ -15,24 +15,24 @@ export const englitPlotConflictThemePart1Data = {
             {
                   "question": "Which statement best reflects the role of Plot in literary analysis?",
                   "options": [
-                        "Plot is a list of random events.",
+                        "Plot is the order in which events happen, regardless of cause.",
                         "Plot is a causally connected structure that produces meaning.",
-                        "Plot is irrelevant if characters are interesting.",
-                        "Plot means the same as theme."
+                        "Plot is the story's main lesson or message about life.",
+                        "Plot is the main character's internal struggle against an opposing force."
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Plot helps readers interpret meaning and authorial choice, not just identify a feature."
+                  "explanation": "Plot is the arrangement of events linked by cause and consequence, and that arrangement shapes meaning. Chronology without causation is only a sequence of events, the lesson or message is theme, and a struggle between opposing forces is conflict, which drives plot but is not the same thing."
             },
             {
                   "question": "What is usually the strongest AP Lit analytical move?",
                   "options": [
-                        "Retell the plot in sequence",
-                        "Name literary devices without interpretation",
+                        "Retell the plot in careful sequence",
+                        "Identify the devices and define each one",
                         "Connect textual details to a defensible interpretation about meaning",
-                        "Focus only on historical background"
+                        "Focus on the author's historical context"
                   ],
                   "correctAnswer": 2,
-                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+                  "explanation": "AP Lit scoring rewards a defensible claim supported by evidence and commentary. Retelling, defining devices and historical context earn credit only when they are tied to an interpretation of meaning."
             }
       ]
 }
@@ -69,27 +69,27 @@ export const englitPlotConflictThemePart1Data = {
                   "label": "Plot in analysis usually refers to ___",
                   "options": [
                         "The causal arrangement of events and consequences",
-                        "The title font style",
-                        "A character name list",
-                        "An author interview"
+                        "The time order of events, regardless of cause",
+                        "The central lesson the story teaches about life",
+                        "The protagonist's struggle with an opposing force"
                   ]
             },
             {
                   "label": "The best AP paragraph usually includes ___",
                   "options": [
                         "Claim, evidence, and commentary",
-                        "Plot summary only",
-                        "Device name lists",
-                        "Vocabulary definitions only"
+                        "Quotation, device label, and summary",
+                        "Hook, context, and a moral",
+                        "Summary, quotation, and opinion"
                   ]
             },
             {
                   "label": "A defensible interpretation should be ___",
                   "options": [
                         "Text-supported and specific",
-                        "Purely personal with no evidence",
-                        "A broad moral lesson only",
-                        "A dictionary definition"
+                        "Universal and beyond dispute",
+                        "Personal and emotionally honest",
+                        "Broad enough to cover any text"
                   ]
             }
       ],
@@ -118,24 +118,24 @@ export const englitPlotConflictThemePart1Data = {
             {
                   "question": "A student identifies conflict in a passage but does not explain effect. What is the best revision?",
                   "options": [
-                        "Add more plot details",
+                        "Add a quotation showing a second conflict elsewhere in the story",
                         "Explain how conflict shapes tone or theme in that moment",
-                        "Replace all quotes with summary",
-                        "Switch to biographical information only"
+                        "Explain who wins the conflict and how it is resolved in the end",
+                        "Classify the conflict as internal or external, giving a reason"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+                  "explanation": "The paragraph identifies the conflict but never explains its effect. Explaining how the conflict shapes tone or theme supplies the commentary. A second example, the outcome or a classification still leaves the effect unexplained."
             },
             {
                   "question": "Which thesis move is strongest for AP Lit?",
                   "options": [
-                        "Make an absolute claim with no nuance",
-                        "Advance a specific, defensible claim about how theme contributes to meaning",
-                        "Retell the plot in one sentence",
-                        "List three literary terms without argument"
+                        "State the theme as a familiar moral, such as honesty pays off",
+                        "Advance a specific, defensible claim about how the conflict develops theme",
+                        "Summarize the story's main conflict and explain how it gets resolved",
+                        "Identify the type of conflict and name three devices the author uses to present it"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+                  "explanation": "A strong thesis makes a specific, arguable claim about how a choice in the text, here the conflict, develops theme. A familiar moral is too general to defend, summarizing the conflict makes no claim, and classifying it with a device list announces topics rather than an interpretation."
             }
       ]
 }

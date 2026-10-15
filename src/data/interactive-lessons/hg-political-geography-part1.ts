@@ -48,11 +48,11 @@ export const hgPoliticalGeographyPart1Data = {
       exercise: {
         questions: [
           {
-            question: 'Most borders in Africa are geometric because:',
+            question: 'Many borders in Africa are geometric because:',
             options: [
-              'African leaders preferred straight-line borders',
-              'European colonial powers drew borders with little regard for ethnic boundaries',
-              'The terrain in Africa is flat and featureless',
+              'African leaders chose straight lines after independence',
+              'European colonial powers drew them with little regard for ethnic groups',
+              'Africa\'s terrain is too flat and uniform for natural borders',
               'International law requires geometric borders for new states'
             ],
             correctAnswer: 1,
@@ -61,10 +61,10 @@ export const hgPoliticalGeographyPart1Data = {
           {
             question: 'The former border between East and West Berlin is best classified as a:',
             options: [
-              'Antecedent boundary',
-              'Superimposed boundary that became a relic boundary',
-              'Natural boundary',
-              'Geometric boundary'
+              'Antecedent boundary drawn before settlement',
+              'Superimposed boundary that is now a relic boundary',
+              'Natural boundary that follows a physical feature',
+              'Consequent boundary drawn along ethnic lines'
             ],
             correctAnswer: 1,
             explanation: 'The Berlin Wall was superimposed (imposed by Cold War powers) and is now a relic boundary (no longer functions as a border but physical traces and cultural impacts remain).'
@@ -135,7 +135,7 @@ export const hgPoliticalGeographyPart1Data = {
           },
           {
             label: 'The Rio Grande separating the US and Mexico is a ___ boundary',
-            options: ['Physical/natural', 'Geometric', 'Cultural', 'Relic']
+            options: ['Physical/natural', 'Geometric', 'Cultural/ethnographic', 'Relic']
           },
           {
             label: 'India and China disagreeing on the exact position of their border in the Himalayas is a ___ dispute',
@@ -176,7 +176,7 @@ export const hgPoliticalGeographyPart1Data = {
               'A definitional boundary dispute',
               'An allocational boundary dispute',
               'A locational boundary dispute',
-              'A superimposed boundary issue'
+              'A superimposed boundary conflict'
             ],
             correctAnswer: 1,
             explanation: 'Allocational disputes involve disagreements over how resources at or near the boundary are distributed. Water rights disputes between countries sharing rivers are a classic example.'
@@ -186,7 +186,7 @@ export const hgPoliticalGeographyPart1Data = {
             options: [
               'Contiguous zone for immigration enforcement',
               'Exclusive Economic Zone for resource extraction',
-              'Cultural influence in Southeast Asia',
+              'Cultural influence over its Southeast Asian neighbors',
               'Antecedent boundary claims'
             ],
             correctAnswer: 1,

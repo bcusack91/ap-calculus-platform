@@ -65,10 +65,10 @@ A **claim** is a statement that asserts something to be true. It is the foundati
           {
             question: 'Which type of evidence is generally considered weakest when used alone?',
             options: [
-              'Statistical data from peer-reviewed research',
-              'Expert testimony from a recognized authority',
-              'A single personal anecdote without supporting data',
-              'Historical evidence from documented events'
+              'Statistical data drawn from a large peer-reviewed study',
+              'Testimony from an expert recognized in the relevant field',
+              'A single personal anecdote with no supporting data',
+              'Historical evidence drawn from well-documented past events'
             ],
             correctAnswer: 2,
             explanation: 'A single anecdote is vivid and relatable but represents only one case. It does not demonstrate a broader pattern. Anecdotes are most effective when paired with statistics or expert testimony that confirm the pattern.'
@@ -140,18 +140,18 @@ Strong arguments **acknowledge and refute** opposing views:
         dropdowns: [
           {
             label: '"My cousin did not go to college and became a successful entrepreneur, so college is unnecessary." This evidence is weak because it is ___',
-            options: ['Not representative — one anecdote does not prove a general rule', 'Not relevant to the topic', 'Too formal', 'Based on expert opinion']
+            options: ['An unrepresentative single case', 'Irrelevant to the question of college', 'Too old to reflect current conditions', 'From a source with a financial bias']
           },
           {
             label: '"A 2023 Pew Research study of 10,000 adults found that 72% support the policy." This evidence is strong because it is ___',
-            options: ['Sufficient and representative — large sample from a credible source', 'Based on a single experience', 'An emotional anecdote', 'A personal opinion']
+            options: ['Sufficient and representative', 'Recent and therefore unquestionable', 'Emotionally vivid and memorable', 'A single expert\'s personal view']
           },
           {
             label: '"While opponents argue the policy is too expensive, the Congressional Budget Office projects it will save \\$50 billion over ten years." This sentence uses ___',
-            options: ['Concession and rebuttal', 'Only pathos', 'Only ethos', 'Only anecdote']
+            options: ['Concession and rebuttal', 'Definition and example', 'Anecdote and appeal to fear', 'Ad hominem and straw man']
           }
         ],
-        correctAnswers: ['Not representative — one anecdote does not prove a general rule', 'Sufficient and representative — large sample from a credible source', 'Concession and rebuttal'],
+        correctAnswers: ['An unrepresentative single case', 'Sufficient and representative', 'Concession and rebuttal'],
         hint1: 'One person is not everyone.',
         hint2: '10,000 people from Pew = solid data.',
         hint3: '"While opponents argue" = concession; CBO data = rebuttal.',
@@ -183,10 +183,10 @@ Strong arguments **acknowledge and refute** opposing views:
           {
             question: 'A student writes: "Homework should be eliminated because I hate doing it and my friends agree." What is the primary weakness of this argument?',
             options: [
-              'The claim is well-supported but needs formatting',
-              'The evidence is entirely personal and anecdotal, with no data, expert testimony, or representative examples',
-              'The grammar is incorrect',
-              'Homework cannot be discussed in academic writing'
+              'Its reasoning is sound, but the paragraph needs clearer organization',
+              'Its only evidence is personal feeling and a small, biased sample',
+              'Its use of first person is not allowed in persuasive writing',
+              'Its topic is too personal to be argued in academic writing'
             ],
             correctAnswer: 1,
             explanation: 'The argument relies solely on personal feelings and a small, unrepresentative sample (friends). A strong argument would include research data, educational expert opinions, and representative studies on homework effectiveness.'
@@ -194,13 +194,13 @@ Strong arguments **acknowledge and refute** opposing views:
           {
             question: 'Which of the following demonstrates effective use of concession and rebuttal?',
             options: [
-              '"My opponents are wrong about everything."',
+              '"Homework opponents claim it causes stress, but they are simply wrong, and anyone who has studied hard knows it pays off."',
               '"While some studies suggest moderate homework benefits younger students, the overwhelming evidence for high schoolers shows diminishing returns beyond 90 minutes."',
-              '"Homework is bad because students do not like it."',
-              '"I believe homework should be optional."'
+              '"Because research shows homework beyond 90 minutes yields diminishing returns for high schoolers, schools should cap it."',
+              '"Although some studies suggest homework helps younger students, others find that it helps high schoolers just as much."'
             ],
             correctAnswer: 1,
-            explanation: 'This sentence concedes that some evidence supports moderate homework ("While some studies suggest...") before rebutting with stronger evidence for the writer\'s position. This demonstrates sophistication and fair-mindedness.'
+            explanation: 'This sentence concedes that some evidence supports moderate homework ("While some studies suggest...") before rebutting with stronger evidence for the writer\'s position. The other sentences dismiss opponents without conceding anything, present evidence with no opposing view, or concede a point and then never answer it.'
           }
         ]
       }

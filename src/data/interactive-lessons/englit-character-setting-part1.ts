@@ -15,24 +15,24 @@ export const englitCharacterSettingPart1Data = {
             {
                   "question": "Which statement best reflects the role of Characterization in literary analysis?",
                   "options": [
-                        "Characterization means listing physical traits only.",
+                        "Characterization is mainly a list of a character's physical traits.",
                         "Characterization reveals values and motives through choices under pressure.",
-                        "Characterization is the same as plot summary.",
-                        "Characterization is only relevant in drama."
+                        "Characterization comes only from the narrator's direct description.",
+                        "Characterization is a summary of everything each character does in the plot."
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Characterization helps readers interpret meaning and authorial choice, not just identify a feature."
+                  "explanation": "Characterization reveals who a character is, especially values and motives, and choices under pressure are among the clearest evidence. Physical traits matter only as they suggest something deeper, authors characterize indirectly through action, speech and other characters' reactions as well as through direct description, and a summary of actions is not yet analysis."
             },
             {
                   "question": "What is usually the strongest AP Lit analytical move?",
                   "options": [
-                        "Retell the plot in sequence",
-                        "Name literary devices without interpretation",
+                        "Summarize what happens in the passage",
+                        "Label every device that appears in the text",
                         "Connect textual details to a defensible interpretation about meaning",
-                        "Focus only on historical background"
+                        "Discuss the author's life and how it shaped the text"
                   ],
                   "correctAnswer": 2,
-                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+                  "explanation": "AP Lit scoring rewards a defensible claim supported by evidence and commentary. Summary, device labels and biography earn credit only when they are tied to an interpretation of meaning."
             }
       ]
 }
@@ -69,27 +69,27 @@ export const englitCharacterSettingPart1Data = {
                   "label": "Characterization in analysis usually refers to ___",
                   "options": [
                         "How textual details construct motive and value",
-                        "A summary of setting facts only",
-                        "A list of unrelated adjectives",
-                        "The publication date"
+                        "A list of a character's physical features",
+                        "Only the narrator's direct labels for a character",
+                        "A summary of each character's actions in the plot"
                   ]
             },
             {
                   "label": "The best AP paragraph usually includes ___",
                   "options": [
                         "Claim, evidence, and commentary",
-                        "Plot summary only",
-                        "Device name lists",
-                        "Vocabulary definitions only"
+                        "Topic, quotation, and summary",
+                        "Device, definition, and example",
+                        "Background, summary, and a moral"
                   ]
             },
             {
                   "label": "A defensible interpretation should be ___",
                   "options": [
                         "Text-supported and specific",
-                        "Purely personal with no evidence",
-                        "A broad moral lesson only",
-                        "A dictionary definition"
+                        "Based on the reader's feelings",
+                        "Summarized in a single moral",
+                        "Focused on the author's intent"
                   ]
             }
       ],
@@ -118,24 +118,24 @@ export const englitCharacterSettingPart1Data = {
             {
                   "question": "A student identifies setting in a passage but does not explain effect. What is the best revision?",
                   "options": [
-                        "Add more plot details",
+                        "Describe the setting in more vivid detail",
                         "Explain how setting shapes tone or theme in that moment",
-                        "Replace all quotes with summary",
-                        "Switch to biographical information only"
+                        "Explain when and where the story takes place historically",
+                        "Add a quotation that describes the same setting"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+                  "explanation": "The paragraph identifies the setting but never explains its effect. Explaining how the setting shapes tone or theme supplies the commentary. More description, historical facts or another quotation still leaves the effect unexplained."
             },
             {
                   "question": "Which thesis move is strongest for AP Lit?",
                   "options": [
-                        "Make an absolute claim with no nuance",
+                        "State that the main character faces a conflict and then describe how it is resolved",
                         "Advance a specific, defensible claim about how conflict contributes to meaning",
-                        "Retell the plot in one sentence",
-                        "List three literary terms without argument"
+                        "Identify whether the conflict is internal or external and give an example of each",
+                        "Argue that the protagonist is right and the antagonist is wrong in their central conflict"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+                  "explanation": "A strong thesis makes a specific, arguable claim about how a choice in the text, here conflict, creates meaning. Describing the conflict, classifying it or taking a side in it does not argue what the conflict reveals."
             }
       ]
 }

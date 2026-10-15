@@ -15,24 +15,24 @@ export const englitShortFiction3Part1Data = {
             {
                   "question": "Which statement best reflects the role of Motif in literary analysis?",
                   "options": [
-                        "Motif is a one-time symbol with no pattern.",
+                        "Motif is a single striking image that appears at the story's climax.",
                         "Motif is a recurring element whose repetition builds meaning.",
-                        "Motif and theme are identical terms.",
-                        "Motif only appears in poetry."
+                        "Motif is another name for theme, the central message of a story.",
+                        "Motif is any repeated word, whether or not it adds meaning."
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Motif helps readers interpret meaning and authorial choice, not just identify a feature."
+                  "explanation": "A motif is defined by recurrence: an image, object or idea returns and gathers significance each time. A single climactic image is not a pattern, a motif is not the same as the theme it helps develop, and repetition counts as a motif only when it builds meaning."
             },
             {
                   "question": "What is usually the strongest AP Lit analytical move?",
                   "options": [
-                        "Retell the plot in sequence",
-                        "Name literary devices without interpretation",
+                        "Summarize the passage's events thoroughly before offering any interpretation",
+                        "Identify as many literary devices as possible and define each one correctly",
                         "Connect textual details to a defensible interpretation about meaning",
-                        "Focus only on historical background"
+                        "Explain how the author's biography and historical moment shaped the passage"
                   ],
                   "correctAnswer": 2,
-                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+                  "explanation": "AP Lit scoring rewards a defensible claim supported by evidence and commentary. Thorough summary, device definitions and biographical context earn credit only when they are tied to an interpretation of meaning."
             }
       ]
 }
@@ -68,33 +68,33 @@ export const englitShortFiction3Part1Data = {
             {
                   "label": "Motif in analysis usually refers to ___",
                   "options": [
-                        "A recurring element that accumulates significance",
-                        "A character nickname",
-                        "A chapter count",
-                        "A sentence fragment"
+                        "A recurring element that gathers significance",
+                        "A single image placed at the story's climax",
+                        "The central message or lesson of the story",
+                        "Any word or phrase the author happens to repeat"
                   ]
             },
             {
                   "label": "The best AP paragraph usually includes ___",
                   "options": [
                         "Claim, evidence, and commentary",
-                        "Plot summary only",
-                        "Device name lists",
-                        "Vocabulary definitions only"
+                        "Quotation, device label, and summary",
+                        "Hook, context, and a moral",
+                        "Summary, quotation, and opinion"
                   ]
             },
             {
                   "label": "A defensible interpretation should be ___",
                   "options": [
                         "Text-supported and specific",
-                        "Purely personal with no evidence",
-                        "A broad moral lesson only",
-                        "A dictionary definition"
+                        "Universal and beyond dispute",
+                        "Personal and emotionally honest",
+                        "Broad enough to cover any text"
                   ]
             }
       ],
       "correctAnswers": [
-            "A recurring element that accumulates significance",
+            "A recurring element that gathers significance",
             "Claim, evidence, and commentary",
             "Text-supported and specific"
       ],
@@ -118,24 +118,24 @@ export const englitShortFiction3Part1Data = {
             {
                   "question": "A student identifies shift in a passage but does not explain effect. What is the best revision?",
                   "options": [
-                        "Add more plot details",
-                        "Explain how shift shapes tone or theme in that moment",
-                        "Replace all quotes with summary",
-                        "Switch to biographical information only"
+                        "Quote another line that contains the shift",
+                        "Explain how the shift shapes tone or theme in that moment",
+                        "Explain what happens before the shift",
+                        "Name the type of shift more precisely"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+                  "explanation": "The paragraph already has evidence and a label; it is missing commentary. Explaining how the shift shapes tone or theme supplies it. Another quotation, plot context or a more precise label still leaves the effect unexplained."
             },
             {
                   "question": "Which thesis move is strongest for AP Lit?",
                   "options": [
-                        "Make an absolute claim with no nuance",
+                        "Claim that readers can infer whatever they like, since the text leaves gaps",
                         "Advance a specific, defensible claim about how inference contributes to meaning",
-                        "Retell the plot in one sentence",
-                        "List three literary terms without argument"
+                        "Summarize the passage and note that readers must infer much of its meaning",
+                        "Announce the three devices the author uses and promise to examine them in order"
                   ],
                   "correctAnswer": 1,
-                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+                  "explanation": "A strong thesis takes a specific, arguable position on how a textual choice, here what the reader must infer, creates meaning. Inference must stay anchored in the text, a summary makes no claim, and a three-device list announces topics rather than an interpretation."
             }
       ]
 }

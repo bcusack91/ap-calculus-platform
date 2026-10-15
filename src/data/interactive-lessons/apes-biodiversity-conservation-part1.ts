@@ -49,7 +49,7 @@ export const apesBiodiversityConservationPart1Data = {
             options: [
               'Climate change',
               'Overhunting',
-              'Habitat loss and fragmentation',
+              'Habitat loss',
               'Invasive species'
             ],
             correctAnswer: 2,
@@ -59,8 +59,8 @@ export const apesBiodiversityConservationPart1Data = {
             question: 'CITES is an international treaty that:',
             options: [
               'Sets carbon emission limits for countries',
-              'Regulates international trade of endangered species',
-              'Establishes national parks in developing countries',
+              'Regulates global trade in endangered species',
+              'Creates national parks in poor countries',
               'Funds renewable energy projects'
             ],
             correctAnswer: 1,
@@ -129,7 +129,7 @@ export const apesBiodiversityConservationPart1Data = {
         dropdowns: [
           {
             label: 'Breeding California condors in zoos and releasing them into the wild is ___',
-            options: ['Captive breeding and reintroduction', 'Biological control', 'Bioremediation', 'Habitat restoration']
+            options: ['Captive breeding', 'Biological control', 'Bioremediation', 'Habitat restoration']
           },
           {
             label: 'Burmese pythons in the Florida Everglades eating native wildlife represents the ___  threat in HIPPCO',
@@ -137,10 +137,10 @@ export const apesBiodiversityConservationPart1Data = {
           },
           {
             label: 'The Svalbard Global Seed Vault stores seeds to preserve ___',
-            options: ['Genetic diversity of crop and wild plants', 'Endangered animal species', 'Marine biodiversity', 'Soil microorganisms']
+            options: ['Crop genetic diversity', 'Endangered animal species', 'Marine biodiversity', 'Soil microorganisms']
           }
         ],
-        correctAnswers: ['Captive breeding and reintroduction', 'Invasive species (I)', 'Genetic diversity of crop and wild plants'],
+        correctAnswers: ['Captive breeding', 'Invasive species (I)', 'Crop genetic diversity'],
         hint1: 'Raising endangered species to boost wild populations.',
         hint2: 'Non-native predator in a new ecosystem.',
         hint3: 'Seeds contain the genetic information of plants.',
@@ -171,13 +171,13 @@ export const apesBiodiversityConservationPart1Data = {
           {
             question: 'A highway divides a forest, isolating two populations of deer. The BEST long-term solution to maintain genetic diversity is:',
             options: [
-              'Hunting deer on one side to reduce competition',
-              'Building a wildlife overpass or underpass to reconnect the habitat',
-              'Introducing deer from another continent',
-              'Paving over the remaining forest for development'
+              'Hunting deer on one side to reduce competition there',
+              'Building a wildlife crossing to reconnect the habitat',
+              'Bringing in deer from another continent',
+              'Fencing the highway so deer cannot reach the road'
             ],
             correctAnswer: 1,
-            explanation: 'A wildlife crossing (overpass/underpass) serves as a habitat corridor, allowing gene flow between the two isolated populations and maintaining genetic diversity.'
+            explanation: 'A wildlife crossing (overpass or underpass) serves as a habitat corridor, allowing gene flow between the two isolated populations and maintaining genetic diversity. Fencing alone would isolate the populations further, and introducing deer from another continent risks disease and invasion.'
           },
           {
             question: 'DDT, a pesticide, caused bald eagle populations to decline because it thinned their eggshells through bioaccumulation. This threat falls under which HIPPCO category?',

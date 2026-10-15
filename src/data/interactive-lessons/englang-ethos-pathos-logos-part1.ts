@@ -69,10 +69,10 @@ Pathos appeals to the audience's feelings to move them to action.
           {
             question: 'A writer with no prior expertise on a topic can still build ethos by:',
             options: [
-              'Using emotional stories exclusively',
-              'Demonstrating thorough research, fair-mindedness, and knowledgeable tone',
-              'Ignoring counterarguments',
-              'Using slang and informal language'
+              'Relying on emotional stories instead of facts or sources',
+              'Showing careful research and a fair, knowledgeable tone',
+              'Avoiding counterarguments so the case seems more certain',
+              'Using slang to seem relatable'
             ],
             correctAnswer: 1,
             explanation: 'Ethos can be constructed within the text itself. Through careful research, acknowledging opposing views, and writing with a knowledgeable and measured tone, a writer builds credibility even without prior reputation.'
@@ -80,10 +80,10 @@ Pathos appeals to the audience's feelings to move them to action.
           {
             question: 'Which of the following uses pathos?',
             options: [
-              '"The data clearly shows a 40% reduction in emissions."',
-              '"Picture a child sitting alone in an empty house, wondering when a parent will come home."',
-              '"Dr. Smith, a leading researcher at MIT, concluded..."',
-              '"The population of the city grew by 12% between 2010 and 2020."'
+              '"The data clearly shows a 40% reduction in emissions since the program began."',
+              '"Picture a child alone in an empty house, wondering when a parent will come home."',
+              '"Dr. Smith, a leading researcher at MIT, concluded that the program works."',
+              '"The city\'s population grew by 12% between 2010 and 2020, according to the census."'
             ],
             correctAnswer: 1,
             explanation: 'The vivid, emotionally charged image of a lonely child is designed to evoke sympathy and concern — this is pathos. The other options use statistics (logos) or expert authority (ethos).'
@@ -154,18 +154,18 @@ When you identify an appeal, always follow this pattern:
         dropdowns: [
           {
             label: '"When Finland reformed its education system, test scores rose 30% over a decade." This is ___',
-            options: ['Logos (historical evidence and data)', 'Pathos (emotional story)', 'Ethos (speaker credibility)', 'None']
+            options: ['Logos (data and precedent)', 'Pathos (emotional story)', 'Ethos (speaker credibility)', 'Kairos (timely moment)']
           },
           {
             label: '"I understand your concerns — like you, I have children in public school and want the best for them." This builds ___',
-            options: ['Ethos (shared values and common ground)', 'Logos (statistical evidence)', 'Pathos (fear)', 'None']
+            options: ['Ethos (common ground)', 'Logos (statistical evidence)', 'Pathos (fear of harm)', 'Kairos (timely moment)']
           },
           {
             label: '"Without immediate action, thousands more families will lose their homes this winter." This uses ___',
-            options: ['Pathos (fear and urgency)', 'Logos (data)', 'Ethos (credibility)', 'None']
+            options: ['Pathos (fear and urgency)', 'Logos (statistical proof)', 'Ethos (speaker expertise)', 'Concession (to critics)']
           }
         ],
-        correctAnswers: ['Logos (historical evidence and data)', 'Ethos (shared values and common ground)', 'Pathos (fear and urgency)'],
+        correctAnswers: ['Logos (data and precedent)', 'Ethos (common ground)', 'Pathos (fear and urgency)'],
         hint1: 'Historical precedent with statistics.',
         hint2: 'Finding common ground builds trust.',
         hint3: 'Urgency and consequences evoke fear.',
@@ -197,21 +197,21 @@ When you identify an appeal, always follow this pattern:
           {
             question: 'A writer argues for stricter food safety regulations. She opens by describing her experience as a former FDA inspector, shares the story of a toddler hospitalized from contaminated food, then cites CDC data showing a 35% increase in food-borne illnesses. This argument is effective because:',
             options: [
-              'It uses only logos, which is the strongest appeal',
-              'It layers all three appeals — ethos (FDA experience), pathos (sick toddler), and logos (CDC data) — to build a comprehensive case',
-              'The emotional story is the only persuasive element',
-              'Statistics are all that matter in policy arguments'
+              'It relies on logos alone, which is the strongest appeal in policy writing',
+              'It layers ethos, pathos and logos into one reinforcing case',
+              'Its emotional story is the only element that actually persuades readers',
+              'Its statistics carry the argument, and the other details are decoration'
             ],
             correctAnswer: 1,
-            explanation: 'The argument layers all three Aristotelian appeals: ethos (professional experience), pathos (emotional anecdote), and logos (statistical evidence). This multi-layered approach addresses different facets of persuasion and is strongest when woven together.'
+            explanation: 'The argument layers all three Aristotelian appeals: ethos (her experience as an FDA inspector), pathos (the hospitalized toddler), and logos (the CDC data). Each appeal reinforces the others, so the case does not rest on any single element.'
           },
           {
             question: 'On the AP rhetorical analysis essay, which approach will earn the highest score?',
             options: [
-              'Listing every rhetorical device you can find in the passage',
-              "Analyzing how specific rhetorical choices serve the writer's purpose for the intended audience",
-              'Stating your personal opinion on the topic',
-              'Summarizing the passage in your own words'
+              'Identifying and labeling every rhetorical device in the passage',
+              "Explaining how specific choices serve the writer's purpose and audience",
+              'Arguing your own position on the issue the passage raises',
+              'Summarizing the passage closely in your own words'
             ],
             correctAnswer: 1,
             explanation: 'The AP rubric rewards analysis of HOW and WHY, not just identification. Connecting specific choices to purpose and audience demonstrates deep rhetorical understanding — which is what earns top scores.'

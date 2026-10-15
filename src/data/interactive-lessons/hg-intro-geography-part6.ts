@@ -59,24 +59,24 @@ export const hgIntroGeographyPart6Data = {
           {
             question: "An FRQ stem says: 'Explain ONE reason that physiological density may better indicate population pressure than arithmetic density.' To earn the point, the answer MUST include:",
             options: [
-              "A definition of arithmetic density only",
-              "A cause-and-effect mechanism connecting arable-land scarcity to pressure on resources",
-              "A list of three countries with high arithmetic density",
-              "A choropleth map sketch"
+              "A precise definition of arithmetic density and its formula",
+              "A causal link from scarce farmland to strain on resources",
+              "A list of three countries with very high arithmetic density",
+              "A statement that physiological density is the larger number"
             ],
             correctAnswer: 1,
-            explanation: "'Explain' requires a cause→effect mechanism. The answer must connect arable-land scarcity to actual pressure (food, water, jobs) — not just define terms."
+            explanation: "'Explain' requires a cause-and-effect mechanism: scarce arable land concentrates demand for food, water and jobs on a small area. A definition, a list of examples or a bare comparison of the two numbers does not explain why."
           },
           {
             question: "An FRQ stem says: 'Describe the spatial pattern of Walmart store openings between 1962 and 1990 shown in the map.' To earn the point, the answer must:",
             options: [
-              "Use evidence from the map (e.g., 'stores cluster in the South-Central U.S., expanding outward from Arkansas')",
-              "Explain why Sam Walton chose Bentonville",
-              "Compare Walmart to Target's expansion",
-              "Identify the year Walmart became publicly traded"
+              "Cite the map, e.g. the chain spreading outward from Arkansas",
+              "Explain why Sam Walton chose Bentonville for headquarters",
+              "Compare Walmart's expansion with Target's over the same years",
+              "Identify the year Walmart first became a publicly traded firm"
             ],
             correctAnswer: 0,
-            explanation: "'Describe' a pattern means cite the stimulus — what is visible on the map. Explanation/comparison/identification are different verbs and earn different points."
+            explanation: "'Describe' a pattern means reporting what is visible in the stimulus, such as the chain spreading outward from Arkansas across the South-Central U.S. Explaining a cause, comparing with another company or identifying a date answer different task verbs."
           }
         ]
       }
@@ -150,7 +150,7 @@ When given any APHG map (choropleth, dot, isoline, flow-line, cartogram):
           },
           {
             label: "A choropleth of GDP per capita with North America + Western Europe in the highest bin → tie to which HG framework?",
-            options: ["Wallerstein's World-Systems Theory", "Borchert's Epochs", "Burgess Concentric Zone Model", "Rostow Stages of Development"]
+            options: ["Wallerstein's World-Systems Theory", "Borchert's Epochs of Transportation", "Burgess Concentric Zone Model", "Von Thünen's Agricultural Model"]
           }
         ],
         correctAnswers: ["Flow-line", "Demographic Transition Model", "Wallerstein's World-Systems Theory"],
@@ -190,24 +190,24 @@ Use that skeleton on every "explain" prompt.
           {
             question: "An FRQ provides a cartogram of the world resized by carbon emissions. The stem says: *Compare* carbon emissions between sub-Saharan Africa and East Asia at the global scale. The strongest 1-point answer would:",
             options: [
-              "State that carbon emissions are bad for the climate",
-              "Note that East Asia is much larger on the cartogram than sub-Saharan Africa, indicating substantially higher emissions, while both regions trail North America",
-              "Explain the Kyoto Protocol",
-              "Define cartogram"
+              "State that carbon emissions are harmful to the global climate",
+              "Note that East Asia is drawn far larger than sub-Saharan Africa",
+              "List the countries of East Asia and of sub-Saharan Africa",
+              "Define a cartogram as a map that resizes units by a variable"
             ],
             correctAnswer: 1,
-            explanation: "'Compare' demands at least one similarity AND one difference, citing the stimulus. The correct answer references the visible difference (East Asia >> sub-Saharan Africa) and a similarity (both below North America)."
+            explanation: "'Compare' asks for a similarity or difference drawn from the stimulus. East Asia's much larger size on the emissions cartogram shows far higher emissions than sub-Saharan Africa. A general claim about climate, a definition or a list of countries makes no comparison."
           },
           {
             question: "An FRQ asks: *Explain ONE reason* the U.S. has lower agricultural density than Vietnam. Which response would earn the point?",
             options: [
-              "The U.S. produces more food than Vietnam.",
-              "U.S. farms use heavy mechanization (combines, GPS-guided tractors), so fewer farmers are needed per arable $km^{2}$, while Vietnamese rice paddies remain labor-intensive.",
-              "Agricultural density measures farmers per arable land.",
-              "The U.S. has larger arable land than Vietnam."
+              "The U.S. produces far more total food each year than Vietnam does.",
+              "Machines replace labor on U.S. farms, but Vietnam's rice paddies need many hands.",
+              "Agricultural density measures the number of farmers per arable km².",
+              "The U.S. has a much larger total area of arable land than Vietnam."
             ],
             correctAnswer: 1,
-            explanation: "Only the mechanization response provides cause→effect: mechanization replaces labor → fewer farmers per arable $km^{2}$. Defining the term or stating a fact does not satisfy the *explain* verb."
+            explanation: "Only the mechanization response gives cause and effect: machines replace labor, so fewer farmers work each km² of U.S. farmland, while labor-intensive rice farming keeps Vietnam's agricultural density high. Total food output, a definition or total arable area does not explain the difference."
           }
         ]
       }

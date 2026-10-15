@@ -55,7 +55,7 @@ Ask:
               'Teenagers often get less sleep than adults.',
               'Schools that start later report fewer tardies.',
               'School start times should be moved to 8:30 AM or later.',
-              'Later start times are more common in urban districts.'
+              'Later start times are now most common in large urban districts.'
             ],
             correctAnswer: 2,
             explanation: 'Policy claims advocate action and are usually signaled by words like "should" or "must." "Schools should be moved..." explicitly proposes a change, making it a policy claim.'
@@ -63,10 +63,10 @@ Ask:
           {
             question: 'In rhetorical reading, what is the difference between topic and claim?',
             options: [
-              'They mean the same thing.',
-              'Topic is broad subject; claim is specific arguable assertion about that subject.',
-              'Topic is always emotional; claim is always factual.',
-              'Claim is broad; topic is narrow.'
+              'They are interchangeable names for a passage\'s main idea.',
+              'Topic is the broad subject; claim is an arguable position on it.',
+              'The topic is emotional; the claim is purely factual.',
+              'Claim is the broad subject; topic is the stance on it.'
             ],
             correctAnswer: 1,
             explanation: 'Topic names what the text is about (e.g., education policy). Claim states what the author argues about that topic (e.g., schools should start later). AP questions often test this distinction.'
@@ -143,18 +143,18 @@ This gives you a map of the argument before answering questions.
         dropdowns: [
           {
             label: '"My uncle quit social media and felt happier, so social media harms everyone." The weakness is ___',
-            options: ['Overgeneralization from anecdotal evidence', 'Lack of policy recommendation', 'Too many statistics', 'No emotional appeal']
+            options: ['Overgeneralization from one anecdote', 'Circular reasoning about happiness', 'A false dilemma between two extremes', 'An appeal to authority without credentials']
           },
           {
             label: '"A 2025 longitudinal study of 15,000 students found..." This is strongest as ___',
-            options: ['Data-based evidence with strong credibility potential', 'Anecdotal support only', 'Circular reasoning', 'Pathos only']
+            options: ['Data with strong credibility potential', 'Anecdotal support from a few students', 'An appeal to emotion through a story', 'Expert testimony from a single scholar']
           },
           {
             label: '"Because two variables rise together, one causes the other." This likely commits ___',
-            options: ['Correlation-causation error', 'Concession', 'Ethos appeal', 'Rogerian structure']
+            options: ['Correlation-causation error', 'Hasty generalization from data', 'Slippery slope prediction', 'Appeal to popular opinion']
           }
         ],
-        correctAnswers: ['Overgeneralization from anecdotal evidence', 'Data-based evidence with strong credibility potential', 'Correlation-causation error'],
+        correctAnswers: ['Overgeneralization from one anecdote', 'Data with strong credibility potential', 'Correlation-causation error'],
         hint1: 'One uncle is not everyone.',
         hint2: 'Large longitudinal sample is strong data.',
         hint3: 'Association is not automatic causation.',
@@ -186,10 +186,10 @@ This gives you a map of the argument before answering questions.
           {
             question: 'An author argues that urban parks reduce crime. She cites one neighborhood where crime fell after a park opened, but gives no broader data. Which evaluation is strongest?',
             options: [
-              'The evidence is conclusive because the example is vivid.',
-              'The evidence is suggestive but insufficient; one case cannot establish a general causal claim.',
-              'The argument is invalid because anecdotes are never allowed.',
-              'The claim is strong because it includes pathos.'
+              'Conclusive, because one vivid, well-chosen example is more memorable than any statistic',
+              'Suggestive but insufficient, since one case cannot show a general pattern',
+              'Invalid, since AP arguments may never use anecdotes as evidence',
+              'Strong, because the example appeals to readers\' emotions as well'
             ],
             correctAnswer: 1,
             explanation: 'A single case can illustrate a possibility but cannot prove a broad causal claim. Strong support would require wider data, controls, and repeated results across contexts.'
@@ -197,10 +197,10 @@ This gives you a map of the argument before answering questions.
           {
             question: 'A passage begins with a policy claim, then presents statistics, then acknowledges critics, then explains why the policy still stands. What is the best structural description?',
             options: [
-              'Narrative only',
+              'Anecdote → Claim → Supporting evidence → Conclusion',
               'Claim → Evidence → Concession → Rebuttal',
-              'Description → Definition → Anecdote',
-              'Counterclaim → Refutation → No thesis'
+              'Description → Definition → Claim → Example',
+              'Counterclaim → Refutation → Evidence → Claim'
             ],
             correctAnswer: 1,
             explanation: 'The sequence matches a standard argumentative progression: state claim, support it, acknowledge opposing views, and rebut them. Recognizing this structure helps answer rhetorical function questions.'

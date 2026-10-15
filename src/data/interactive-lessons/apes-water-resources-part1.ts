@@ -55,9 +55,9 @@ export const apesWaterResourcesPart1Data = {
           {
             question: 'Which sector uses the MOST fresh water globally?',
             options: [
-              'Domestic (household use)',
-              'Industrial (factories and power)',
-              'Agriculture (irrigation and livestock)',
+              'Households and cities',
+              'Industry and power plants',
+              'Agriculture',
               'Transportation'
             ],
             correctAnswer: 2,
@@ -66,7 +66,7 @@ export const apesWaterResourcesPart1Data = {
           {
             question: 'The Ogallala Aquifer is a concern because:',
             options: [
-              'It contains saltwater, not freshwater',
+              'It contains saltwater rather than usable freshwater',
               'It is being depleted faster than it can recharge',
               'It causes flooding in the Great Plains',
               'It is too deep to access with modern technology'
@@ -181,10 +181,10 @@ export const apesWaterResourcesPart1Data = {
           {
             question: 'A city downstream from agricultural land notices algal blooms in their water supply every spring. The MOST likely cause is:',
             options: [
-              'Thermal pollution from a local power plant',
-              'Non-point source runoff of nitrogen and phosphorus fertilizers from upstream farms',
-              'Point source pollution from a nearby factory',
-              'Natural seasonal algae growth unrelated to human activity'
+              'Thermal pollution released by a local power plant',
+              'Nonpoint fertilizer runoff from upstream farms',
+              'Point-source discharge from a single nearby factory',
+              'Natural seasonal algae growth unrelated to people'
             ],
             correctAnswer: 1,
             explanation: 'Seasonal fertilizer application on farms leads to nutrient runoff (N and P) during spring rains. This non-point source pollution causes eutrophication and algal blooms downstream.'

@@ -67,9 +67,9 @@ export const hgIndustrializationPart1Data = {
             question: 'Dependency theorists would argue that developing countries remain poor because:',
             options: [
               'They lack natural resources needed for industrialization',
-              'Structural exploitation by wealthy core countries prevents development',
-              'Their populations are growing too fast',
-              'They chose not to adopt Western economic models'
+              'Wealthy core states exploit them through unequal trade and debt',
+              'Their populations are growing faster than their economies',
+              'They chose not to follow Western models of economic growth'
             ],
             correctAnswer: 1,
             explanation: 'Dependency theory argues that the global economic system is structured to benefit core countries at the expense of the periphery — through unequal trade, debt, and historical colonialism.'
@@ -141,7 +141,7 @@ Alfred Weber argued that industries locate where **costs are minimized**:
         dropdowns: [
           {
             label: 'A copper smelter (heavy ore produces light metal) should locate near ___',
-            options: ['Raw materials (copper mine)', 'The consumer market', 'The cheapest labor', 'The government capital']
+            options: ['The copper mine', 'The consumer market', 'The cheapest labor', 'The company\'s headquarters']
           },
           {
             label: 'A soft drink bottling plant (adds heavy water to light syrup) should locate near ___',
@@ -152,7 +152,7 @@ Alfred Weber argued that industries locate where **costs are minimized**:
             options: ['Agglomeration', 'Deglomeration', 'Bulk-reducing industry', 'Dependency']
           }
         ],
-        correctAnswers: ['Raw materials (copper mine)', 'The consumer market', 'Agglomeration'],
+        correctAnswers: ['The copper mine', 'The consumer market', 'Agglomeration'],
         hint1: 'Bulk-reducing: raw materials are heavier than the product.',
         hint2: 'Bulk-gaining: the product is heavier than the inputs.',
         hint3: 'Benefits of clustering with related businesses.',
@@ -196,9 +196,9 @@ Alfred Weber argued that industries locate where **costs are minimized**:
             question: 'A factory moves from Detroit to rural Mississippi to reduce costs, while other factories move from the US to Vietnam. These both illustrate:',
             options: [
               'Agglomeration economies attracting industry',
-              'Deglomeration and the search for lower labor costs',
+              'Deglomeration in search of cheaper labor and land',
               'Bulk-reducing industry location decisions',
-              'Rostow Stage 5 development'
+              'Rostow\'s Stage 5, the age of mass consumption'
             ],
             correctAnswer: 1,
             explanation: 'Both moves represent deglomeration (leaving expensive clusters) and seeking cheaper labor — one at national scale (Detroit to Mississippi), one at global scale (US to Vietnam).'

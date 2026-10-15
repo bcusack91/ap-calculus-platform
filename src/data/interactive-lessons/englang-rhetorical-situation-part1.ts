@@ -47,10 +47,10 @@ The **rhetorical situation** is the set of circumstances that shapes a text. Eve
           {
             question: 'What is the "exigence" of a text?',
             options: [
-              'The author biography',
-              'The issue, event, or need that prompted the writer to communicate',
-              'The final paragraph of the text',
-              'The number of rhetorical devices used'
+              'The author\'s biography and the credentials that give the text authority',
+              'The issue or event that prompts the writer to respond',
+              'The closing paragraph, where the writer states what readers should do',
+              'The background on the topic that a writer summarizes before the thesis'
             ],
             correctAnswer: 1,
             explanation: 'Exigence is the specific trigger for writing — the problem, event, or situation that makes the writer feel compelled to respond. Without exigence, there is no reason for the text to exist.'
@@ -58,10 +58,10 @@ The **rhetorical situation** is the set of circumstances that shapes a text. Eve
           {
             question: 'A newspaper publishes an editorial the day after a school shooting, calling for new gun legislation. What is the exigence?',
             options: [
-              'The newspaper industry',
-              'The school shooting — the immediate event prompting the editorial',
-              'The editorial board',
-              'Gun legislation in general'
+              'The newspaper\'s long-standing editorial stance on school safety',
+              'The school shooting on the day before the editorial ran',
+              'The proposed gun legislation that the editorial calls for',
+              'The wider national debate over shootings in general'
             ],
             correctAnswer: 1,
             explanation: 'The school shooting is the specific event that prompted the editorial. It is the urgent issue that makes the writer feel compelled to act. This is the exigence — the trigger for the communication.'
@@ -140,18 +140,18 @@ Writers do not make choices in a vacuum. Every element of the rhetorical situati
         dropdowns: [
           {
             label: 'In "Letter from Birmingham Jail," the clergymen who criticized MLK are the ___',
-            options: ['Audience (the people he is addressing)', 'Exigence', 'Context', 'Purpose']
+            options: ['Audience (the people addressed)', 'Speaker (the person writing)', 'Context (the time and place)', 'Purpose (the goal of the letter)']
           },
           {
             label: 'The Civil Rights Movement of the 1960s is the ___ for many of MLK writings',
-            options: ['Context (historical/social circumstances)', 'Audience', 'Purpose', 'Tone']
+            options: ['Context (the historical moment)', 'Audience (the intended readers)', 'Purpose (the intended goal)', 'Speaker (the writer\'s persona)']
           },
           {
             label: 'A scientist writing for a general magazine would use ___ diction compared to a peer-reviewed journal',
-            options: ['More accessible, everyday', 'More technical, specialized', 'Identical', 'More formal and Latin-based']
+            options: ['More accessible and everyday', 'More technical and specialized', 'Equally technical and dense', 'More formal and Latinate']
           }
         ],
-        correctAnswers: ['Audience (the people he is addressing)', 'Context (historical/social circumstances)', 'More accessible, everyday'],
+        correctAnswers: ['Audience (the people addressed)', 'Context (the historical moment)', 'More accessible and everyday'],
         hint1: 'He is writing TO the clergymen.',
         hint2: 'The broader historical movement.',
         hint3: 'General readers need simpler language.',
@@ -185,7 +185,7 @@ Writers do not make choices in a vacuum. Every element of the rhetorical situati
             options: [
               'Douglass can turn a celebration of liberty into evidence against slavery',
               'Douglass can avoid political topics that the holiday would make awkward',
-              'Douglass can rely on the crowd\'s patriotism to praise the nation\'s record',
+              'Douglass can rely on the crowd\'s patriotism to soften his attack on slavery',
               'Douglass can speak briefly, since holiday audiences expect short remarks'
             ],
             correctAnswer: 0,
@@ -194,10 +194,10 @@ Writers do not make choices in a vacuum. Every element of the rhetorical situati
           {
             question: 'An author writes an opinion piece in the New York Times about income inequality. If the same author published the same argument in an academic economics journal, what would MOST likely change?',
             options: [
-              'The topic and thesis',
-              'The diction, tone, and level of technical detail — adjusted for a different audience',
-              'Nothing — good writing works for all audiences',
-              'Only the title'
+              'Its central thesis, which economists would expect to be bolder',
+              'Its diction and technical depth, adjusted for specialist readers',
+              'Very little, since a sound argument persuades any reader',
+              'Only its title and headings, to match the journal\'s house style'
             ],
             correctAnswer: 1,
             explanation: 'Different audiences require different approaches. A newspaper audience expects accessible language and concrete examples. An academic audience expects technical terminology, citations, and formal tone. The audience shapes the writer\'s choices.'
