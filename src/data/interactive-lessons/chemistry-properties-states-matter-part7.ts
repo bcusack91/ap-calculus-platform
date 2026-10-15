@@ -60,9 +60,9 @@ $$\\boxed{\\text{Molecular Structure} \\xrightarrow{\\text{determines}} \\text{I
           {
             question: 'The normal boiling point of $NH_{3}$ (−33°C) is much higher than that of $PH_{3}$ (−87°C), even though $PH_{3}$ has a higher molar mass. This is best explained by:',
             options: [
-              '$NH_{3}$ has stronger London Dispersion Forces',
+              '$NH_{3}$ has stronger London dispersion forces than $PH_{3}$',
               '$NH_{3}$ can form hydrogen bonds while $PH_{3}$ cannot',
-              '$PH_{3}$ is ionic while $NH_{3}$ is molecular',
+              '$PH_{3}$ is an ionic compound, while $NH_{3}$ is molecular',
               '$NH_{3}$ has a lower molar mass, so it boils at a higher temperature'
             ],
             correctAnswer: 1,
@@ -71,10 +71,10 @@ $$\\boxed{\\text{Molecular Structure} \\xrightarrow{\\text{determines}} \\text{I
           {
             question: 'Which of the following best explains why the vapor pressure of ethanol $(C_{2}H_{5}OH)$ is lower than that of dimethyl ether $(CH_{3}OCH_{3})$ at the same temperature, even though they have the same molar mass (46 g/mol)?',
             options: [
-              'Ethanol has weaker London Dispersion Forces',
-              'Dimethyl ether is ionic',
-              'Ethanol can form hydrogen bonds (O–H) while dimethyl ether cannot',
-              'Dimethyl ether has a higher molecular weight'
+              'Dimethyl ether has stronger dipole-dipole forces',
+              'Dimethyl ether is nonpolar, so it has only LDF',
+              'Only ethanol can hydrogen-bond between its molecules',
+              'Ethanol\'s O–H bond makes it heavier than the ether'
             ],
             correctAnswer: 2,
             explanation: 'Ethanol has an O–H group that enables hydrogen bonding between molecules. Dimethyl ether ($CH_{3}$–O–$CH_{3}$) has no O–H or N–H bonds, so it can only exhibit dipole-dipole forces (weaker). Stronger IMFs in ethanol → lower vapor pressure.'
@@ -82,10 +82,10 @@ $$\\boxed{\\text{Molecular Structure} \\xrightarrow{\\text{determines}} \\text{I
           {
             question: 'A student observes that $SiO_{2}$ (quartz) has a melting point of 1713°C while $CO_{2}$ (dry ice) sublimes at −78°C. Both contain elements from the same groups. The best explanation is:',
             options: [
-              '$SiO_{2}$ is a network covalent solid with strong covalent bonds throughout, while $CO_{2}$ is a molecular solid with weak LDF',
-              '$CO_{2}$ has stronger bonds than $SiO_{2}$',
-              '$SiO_{2}$ is an ionic solid while $CO_{2}$ is molecular',
-              '$CO_{2}$ has a higher molar mass'
+              '$SiO_{2}$ is a network covalent solid; $CO_{2}$ is molecular',
+              '$CO_{2}$ molecules have stronger IMFs than $SiO_{2}$ units',
+              '$SiO_{2}$ is an ionic solid, while $CO_{2}$ is molecular',
+              '$CO_{2}$ has a higher molar mass, so it sublimes'
             ],
             correctAnswer: 0,
             explanation: '$SiO_{2}$ forms a 3D network covalent solid — every Si is covalently bonded to 4 O atoms in a continuous network. Melting requires breaking strong covalent bonds. $CO_{2}$ exists as discrete O=C=O molecules with only weak LDF between them. This dramatic difference in bonding type explains the huge difference in thermal stability.'
@@ -115,7 +115,7 @@ $$\\boxed{\\text{Molecular Structure} \\xrightarrow{\\text{determines}} \\text{I
             question: 'A liquid has a high surface tension, high viscosity, low vapor pressure, and high boiling point. What can you conclude about its intermolecular forces?',
             options: [
               'The substance has very weak IMFs',
-              'The substance has only London Dispersion Forces',
+              'The substance has only London forces',
               'The substance has strong intermolecular forces',
               'The substance is a noble gas'
             ],
@@ -265,7 +265,7 @@ But the actual order is: $CH_{4}$ (−161) < $H_{2}S$ (−60) < HF (19.5) < $H_{
           {
             question: 'According to the Clausius-Clapeyron equation, a plot of $\\ln P$ vs. $1/T$ for a liquid gives a straight line with a slope equal to:',
             options: [
-              '$\\Delta H_{\\text{vap}}$',
+              '$+\\Delta H_{\\text{vap}} / R$',
               '$-\\Delta H_{\\text{vap}} / R$',
               '$R / \\Delta H_{\\text{vap}}$',
               '$\\Delta H_{\\text{fus}} / R$'
@@ -276,10 +276,10 @@ But the actual order is: $CH_{4}$ (−161) < $H_{2}S$ (−60) < HF (19.5) < $H_{
           {
             question: 'Ice floats in liquid water because:',
             options: [
-              'Ice has stronger intermolecular forces than liquid water',
-              'Ice forms an open hexagonal lattice due to hydrogen bonding, making it less dense than liquid water',
-              'Liquid water has stronger London Dispersion Forces',
-              'Ice has higher kinetic energy than liquid water'
+              'Ice has stronger hydrogen bonds than liquid water has',
+              'Hydrogen bonds hold ice in an open, less dense lattice',
+              'Liquid water has stronger London dispersion forces',
+              'Ice has more kinetic energy than liquid water'
             ],
             correctAnswer: 1,
             explanation: 'In ice, hydrogen bonding creates a rigid, open hexagonal crystal structure with significant empty space. When ice melts, some H-bonds break and molecules pack more closely together. This is why liquid water is denser than ice — a rare and critically important anomaly.'

@@ -49,8 +49,8 @@ export const chemTypesIntermolecularForcesPart4Data = {
             options: [
               'The oxygen (δ-) end',
               'The hydrogen (δ+) end',
-              'Neither — water ignores anions',
-              'The lone pairs on oxygen'
+              'Both ends, alternating as water rotates',
+              'The δ+ oxygen end'
             ],
             correctAnswer: 1,
             explanation: '$Cl^{-}$ is a negative ion, so it attracts the positive end of the water dipole. The δ+ hydrogen atoms of water orient toward the $Cl^{-}$ ion, forming ion-dipole attractions.'
@@ -75,7 +75,7 @@ export const chemTypesIntermolecularForcesPart4Data = {
           {
             id: 'id-anion',
             label: 'An anion ($-$) attracts which end of water?',
-            options: ['The δ+ hydrogen end', 'The δ- oxygen end', 'Neither end'],
+            options: ['The δ+ hydrogen end', 'The δ- oxygen end', 'Both ends to the same degree'],
             correctIndex: 0,
             explanation: 'Anions (negative ions like $Cl^{-}$, $Br^{-}$, $NO_{3}^{-}$) attract the δ+ hydrogen end of water because opposite charges attract.'
           }
@@ -110,7 +110,7 @@ export const chemTypesIntermolecularForcesPart4Data = {
             question: 'Among the alkali metal cations $Li^{+}$, $Na^{+}$, $K^{+}$, and $Rb^{+}$ (all +1 charge), which has the most exothermic hydration enthalpy?',
             options: [
               '$Rb^{+}$ — largest ion',
-              '$K^{+}$ — medium-large ion',
+              '$K^{+}$ — larger ion',
               '$Na^{+}$ — medium ion',
               '$Li^{+}$ — smallest ion'
             ],

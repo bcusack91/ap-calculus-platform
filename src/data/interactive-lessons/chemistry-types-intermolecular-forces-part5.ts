@@ -59,7 +59,7 @@ export const chemTypesIntermolecularForcesPart5Data = {
             question: 'What is the strongest intermolecular force experienced by $CCl_{4}$ (carbon tetrachloride)?',
             options: [
               'London Dispersion Forces only',
-              'Dipole-dipole forces',
+              'Dipole-dipole forces from C–Cl bonds',
               'Hydrogen bonding',
               'Ion-dipole forces'
             ],
@@ -79,7 +79,7 @@ export const chemTypesIntermolecularForcesPart5Data = {
           {
             id: 'rank-h2o',
             label: '$\\text{H}_2\\text{O}$',
-            options: ['LDF only', 'Dipole-dipole', 'Hydrogen bonding', 'Ion-dipole'],
+            options: ['LDF only', 'Dipole-dipole forces', 'Hydrogen bonding', 'Ion-dipole'],
             correctIndex: 2,
             explanation: '$H_{2}O$ has O–H bonds, so it exhibits hydrogen bonding — the strongest IMF between neutral molecules of this size.'
           },
@@ -93,7 +93,7 @@ export const chemTypesIntermolecularForcesPart5Data = {
           {
             id: 'rank-hf',
             label: 'HF',
-            options: ['LDF only', 'Dipole-dipole', 'Hydrogen bonding', 'Ion-dipole'],
+            options: ['LDF only', 'Dipole-dipole forces', 'Hydrogen bonding', 'Ion-dipole'],
             correctIndex: 2,
             explanation: 'HF has H bonded to F, one of the three atoms required for hydrogen bonding. HF exhibits hydrogen bonding.'
           },
@@ -124,7 +124,7 @@ export const chemTypesIntermolecularForcesPart5Data = {
             question: 'Which substance has the highest boiling point?',
             options: [
               'Ne (MW = 20, nonpolar)',
-              'HF (MW = 20, hydrogen bonding)',
+              'HF (MW = 20, H-bonding)',
               '$N_{2}$ (MW = 28, nonpolar)',
               'CO (MW = 28, polar)'
             ],
@@ -155,10 +155,10 @@ export const chemTypesIntermolecularForcesPart5Data = {
           {
             question: 'Octane ($C_{8}H_{18}$, MW = 114, nonpolar) boils at 126°C. Acetone ($CH_{3}COCH_{3}$, MW = 58, polar) boils at 56°C. Why does octane boil higher despite being nonpolar?',
             options: [
-              'Octane has hydrogen bonding',
-              'Octane has dipole-dipole forces',
-              'Octane\'s much larger size gives it very strong LDF that outweigh acetone\'s dipole-dipole advantage',
-              'Acetone is nonpolar, not polar'
+              'Octane forms hydrogen bonds through its C–H bonds',
+              'Octane has dipole-dipole forces that acetone lacks',
+              'Octane\'s far stronger LDF outweigh acetone\'s dipole forces',
+              'Acetone is actually nonpolar, so it has only weak LDF'
             ],
             correctAnswer: 2,
             explanation: 'Octane is nonpolar (LDF only) but has nearly twice the molar mass of acetone. Its very large electron cloud and long chain shape provide enormous surface area for LDF. These strong LDF outweigh the dipole-dipole forces in the smaller acetone molecule.'

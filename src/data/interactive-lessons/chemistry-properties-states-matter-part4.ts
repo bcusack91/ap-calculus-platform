@@ -67,7 +67,7 @@ For water: $\\Delta H_{\\text{fus}} = 6.01$ kJ/mol vs. $\\Delta H_{\\text{vap}} 
       exercise: {
         questions: [
           {
-            question: 'Dry ice $(solid CO_{2})$ converts directly to $CO_{2}$ gas at room temperature. This process is called:',
+            question: 'Dry ice (solid $CO_{2}$) converts directly to $CO_{2}$ gas at room temperature. This process is called:',
             options: [
               'Vaporization',
               'Deposition',
@@ -91,10 +91,10 @@ For water: $\\Delta H_{\\text{fus}} = 6.01$ kJ/mol vs. $\\Delta H_{\\text{vap}} 
           {
             question: 'Why is $\\Delta H_{\\text{vap}}$ always greater than $\\Delta H_{\\text{fus}}$ for the same substance?',
             options: [
-              'Vaporization involves breaking intramolecular bonds',
-              'Melting requires more energy because solids are harder to break apart',
-              'Vaporization completely separates particles, requiring more energy to overcome all IMFs',
-              'Fusion occurs at a higher temperature than vaporization'
+              'Vaporization breaks intramolecular covalent bonds',
+              'Boiling happens at a higher temperature, costing energy',
+              'Vaporization must overcome nearly all of the remaining IMFs',
+              'Liquids have stronger IMFs than solids of that substance'
             ],
             correctAnswer: 2,
             explanation: 'During vaporization, particles must be completely separated from the liquid — all remaining IMFs must be overcome. During melting, particles merely transition from fixed positions to sliding past each other, only partially disrupting IMFs.'
@@ -153,7 +153,7 @@ A **heating curve** plots **temperature vs. heat added** as a substance is heate
           {
             id: 'sm4-dd1',
             label: 'During a phase change (melting or boiling)',
-            options: ['increases', 'decreases', 'remains constant'],
+            options: ['increases steadily', 'decreases', 'remains constant'],
             correctIndex: 2,
             explanation: 'During a phase change (melting or boiling), all added energy goes into overcoming IMFs, not into increasing kinetic energy. Temperature remains constant.'
           },
@@ -264,8 +264,8 @@ A **cooling curve** is the reverse of a heating curve — it plots temperature v
             options: [
               'It is increasing the temperature of the liquid',
               'It is increasing the kinetic energy of the gas particles',
-              'It is overcoming the remaining IMFs to convert liquid to gas',
-              'It is breaking intramolecular covalent bonds'
+              'It is overcoming IMFs to turn liquid into gas',
+              'It is breaking the covalent bonds inside each molecule'
             ],
             correctAnswer: 2,
             explanation: 'During the boiling plateau, all added energy goes into overcoming the intermolecular forces holding liquid molecules together. Temperature remains constant because KE is not increasing — the energy is used for the phase transition.'

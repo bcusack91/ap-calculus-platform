@@ -169,10 +169,10 @@ For 0.10 m solutions in water ($K_f = 1.86$ °C/m):
           {
             question: 'Osmosis is the movement of:',
             options: [
-              'Solute from high to low concentration',
-              'Solvent from high to low solute concentration',
-              'Solute through a semipermeable membrane',
-              'Solvent from low to high solute concentration through a semipermeable membrane'
+              'Solute across a membrane toward the more dilute side',
+              'Solvent across a membrane toward the more dilute side',
+              'Solute across a membrane to the more concentrated side',
+              'Solvent across a membrane into the more concentrated side'
             ],
             correctAnswer: 3,
             explanation: 'Osmosis is specifically the movement of solvent (not solute) through a semipermeable membrane from the side with lower solute concentration (more solvent) to the side with higher solute concentration (less solvent).'
@@ -194,10 +194,10 @@ For 0.10 m solutions in water ($K_f = 1.86$ °C/m):
               '0.10 M glucose ($i = 1$)',
               '0.10 M NaCl ($i = 2$)',
               '0.050 M $CaCl_{2}$ ($i = 3$)',
-              '0.10 M $KNO_{3}$ ($i = 2$)'
+              '0.060 M $K_{2}SO_{4}$ ($i = 3$)'
             ],
             correctAnswer: 1,
-            explanation: '$\\Pi = iMRT$. Calculate $iM$ for each: glucose: $1(0.10) = 0.10$. NaCl: $2(0.10) = 0.20$. $CaCl_{2}$: $3(0.050) = 0.15$. $KNO_{3}$: $2(0.10) = 0.20$. NaCl and $KNO_{3}$ are tied. But NaCl appears first among the tied options.'
+            explanation: '$\\Pi = iMRT$, so compare $iM$ at the same temperature: glucose: $1(0.10) = 0.10$. NaCl: $2(0.10) = 0.20$. $CaCl_{2}$: $3(0.050) = 0.15$. $K_{2}SO_{4}$: $3(0.060) = 0.18$. NaCl has the largest $iM$, so it has the greatest osmotic pressure.'
           }
         ]
       }
@@ -217,12 +217,11 @@ For 0.10 m solutions in water ($K_f = 1.86$ °C/m):
 **3)** A protein solution has an osmotic pressure of 0.0821 atm at 25°C. What is the molarity of the protein? ($i = 1$; answer in M to 3 significant figures)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['5.1', '11.0', '0.0034'],
+        questions: [{ question: '1)', answer: '5.09', acceptableAnswers: ['5.09', '5.1'] }, { question: '2)', answer: '11.0', acceptableAnswers: ['11.0'] }, { question: '3)', answer: '0.00336', acceptableAnswers: ['0.00336', '0.0034', '3.36e-3'] }],
         hint1: '$T = 37 + 273 = 310$ K. $\\Pi = (1)(0.200)(0.08206)(310)$.',
         hint2: '$T = 298$ K. $\\Pi = (3)(0.150)(0.08206)(298)$.',
         hint3: '$M = \\Pi/(iRT) = 0.0821/((1)(0.08206)(298))$.',
-        explanation: '1) $\\Pi = (1)(0.200)(0.08206)(310) = 5.09 \\approx 5.1$ atm. 2) $\\Pi = (3)(0.150)(0.08206)(298) = 11.0$ atm. 3) $M = 0.0821/((1)(0.08206)(298)) = 0.0821/24.45 = 0.00336 \\approx 0.0034$ M.'
+        explanation: '1) $\\Pi = (1)(0.200)(0.08206)(310) = 5.09$ atm. 2) $\\Pi = (3)(0.150)(0.08206)(298) = 11.0$ atm. 3) $M = 0.0821/((1)(0.08206)(298)) = 0.0821/24.45 = 0.00336$ M (that is, $3.36 \\times 10^{-3}$ M).'
       }
     },
     {
@@ -309,9 +308,9 @@ If you apply pressure **greater** than the osmotic pressure to the concentrated 
           {
             question: 'Osmotic pressure measurements are often used to determine the molar mass of large molecules (like proteins) because:',
             options: [
-              'Proteins dissolve only in organic solvents',
-              'Even dilute protein solutions produce measurable osmotic pressures',
-              'Proteins are strong electrolytes',
+              'Proteins dissolve only in nonpolar organic solvents',
+              'Even very dilute solutions give a measurable pressure',
+              'Proteins are strong electrolytes with large i values',
               'Osmotic pressure does not depend on temperature'
             ],
             correctAnswer: 1,

@@ -231,10 +231,10 @@ This chart is essential for the AP exam — memorize it!
           {
             question: 'Which step in the VSEPR prediction process directly determines the electron domain geometry?',
             options: [
-              'Drawing the Lewis structure',
-              'Identifying the central atom',
+              'Drawing the Lewis structure first',
+              'Identifying which atom is central',
               'Calculating the steric number',
-              'Counting lone pairs only'
+              'Counting the lone pairs by themselves'
             ],
             correctAnswer: 2,
             explanation: 'The steric number (total electron domains) directly determines the electron domain geometry. The steric number maps to one of the five base geometries: linear, trigonal planar, tetrahedral, trigonal bipyramidal, or octahedral.'

@@ -73,10 +73,10 @@ If either condition fails, the molecule is polar.
           {
             question: 'Is $CCl_{4}$ polar or nonpolar?',
             options: [
-              'Polar — because C–Cl bonds are polar',
-              'Nonpolar — because the tetrahedral symmetry cancels all bond dipoles',
-              'Polar — because chlorine is very electronegative',
-              'Nonpolar — because there are no bond dipoles'
+              'Polar — each C–Cl bond is polar, so the molecule is too',
+              'Nonpolar — its four equal bond dipoles cancel by symmetry',
+              'Polar — electronegative chlorine creates a net dipole',
+              'Nonpolar — C and Cl have equal electronegativity'
             ],
             correctAnswer: 1,
             explanation: 'Although each C–Cl bond is polar, $CCl_{4}$ has a symmetric tetrahedral geometry with 4 identical Cl atoms. The 4 bond dipoles cancel exactly, making the molecule nonpolar.'
@@ -84,10 +84,10 @@ If either condition fails, the molecule is polar.
           {
             question: 'Is $H_{2}O$ polar or nonpolar?',
             options: [
-              'Nonpolar — the O–H bond dipoles cancel',
+              'Nonpolar — the two O–H bond dipoles cancel each other',
               'Polar — the bent geometry means bond dipoles don\'t cancel',
-              'Nonpolar — oxygen is not very electronegative',
-              'Polar — because it has lone pairs'
+              'Nonpolar — O and H have similar electronegativity',
+              'Polar — any molecule with lone pairs is polar'
             ],
             correctAnswer: 1,
             explanation: '$H_{2}O$ has a bent geometry (104.5°). The two O–H bond dipoles both point away from the oxygen, but because the molecule is bent (not linear), they don\'t cancel. The net dipole points toward oxygen.'
@@ -95,10 +95,10 @@ If either condition fails, the molecule is polar.
           {
             question: '$CH_{2}Cl_{2}$ has a tetrahedral geometry with 2 H and 2 Cl around carbon. Is it polar?',
             options: [
-              'Nonpolar — tetrahedral geometry always cancels dipoles',
-              'Polar — the C–H and C–Cl dipoles have different magnitudes and don\'t cancel',
+              'Nonpolar — tetrahedral shapes always cancel dipoles',
+              'Polar — C–Cl and C–H dipoles differ, so they don\'t cancel',
               'Nonpolar — H and Cl have the same electronegativity',
-              'Cannot be determined without more information'
+              'Nonpolar — the two C–Cl dipoles cancel each other out'
             ],
             correctAnswer: 1,
             explanation: 'Even though the geometry is tetrahedral, the surrounding atoms are NOT all the same. C–Cl dipoles are much stronger than C–H dipoles, so the net dipole does not cancel. $CH_{2}Cl_{2}$ is polar.'
@@ -255,7 +255,7 @@ The dramatic difference in boiling points is largely due to water\'s strong hydr
         questions: [
           {
             question: 'Which of the following molecules is nonpolar despite having polar bonds?',
-            options: ['$NH_{3}$', '$H_{2}O$', '$CCl_{4}$', 'HF'],
+            options: ['$NH_{3}$', '$H_{2}O$', '$CCl_{4}$', '$PCl_{3}$'],
             correctAnswer: 2,
             explanation: '$CCl_{4}$ has polar C–Cl bonds, but its symmetric tetrahedral geometry causes all bond dipoles to cancel, resulting in a nonpolar molecule.'
           },

@@ -41,7 +41,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
             question: 'Which has the higher boiling point: $CH_{3}OH$ (methanol) or $CH_{3}SH$ (methanethiol)?',
             options: [
               '$CH_{3}SH$ — sulfur is larger so LDF are stronger',
-              '$CH_{3}OH$ — it has hydrogen bonding while $CH_{3}SH$ does not',
+              '$CH_{3}OH$ — only it can form hydrogen bonds',
               'They are the same because they have similar structures',
               '$CH_{3}SH$ — S–H bonds are more polar than O–H bonds'
             ],
@@ -78,13 +78,13 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
           {
             question: 'Ethanol $(CH_{3}CH_{2}OH)$ has a LOWER vapor pressure than diethyl ether $(CH_{3}CH_{2}OCH_{2}CH_{3})$ at the same temperature. What explains this?',
             options: [
-              'Ethanol has weaker IMFs',
-              'Ethanol has hydrogen bonding, creating stronger IMFs that keep more molecules in the liquid phase',
-              'Diethyl ether has hydrogen bonding',
-              'Diethyl ether has a lower molar mass'
+              'Ethanol has weaker overall IMFs than diethyl ether',
+              'Ethanol\'s hydrogen bonds keep molecules in the liquid',
+              'Diethyl ether forms H-bonds through its oxygen',
+              'Diethyl ether has the lower molar mass of the two'
             ],
             correctAnswer: 1,
-            explanation: 'Ethanol has an O–H bond allowing hydrogen bonding, which creates stronger IMFs. Diethyl ether has no O–H, N–H, or F–H bond, so it cannot form hydrogen bonds (only dipole-dipole + LDF). Stronger IMFs in ethanol keep more molecules in the liquid phase, resulting in lower vapor pressure.'
+            explanation: 'Ethanol has an O–H bond allowing hydrogen bonding, which creates stronger IMFs. Diethyl ether has no O–H, N–H, or F–H bond, so it cannot form hydrogen bonds with itself (only dipole-dipole + LDF), even though its oxygen has lone pairs. Stronger IMFs in ethanol keep more molecules in the liquid phase, resulting in lower vapor pressure. Molar mass does not explain it: diethyl ether (74 g/mol) is heavier than ethanol (46 g/mol).'
           }
         ]
       }

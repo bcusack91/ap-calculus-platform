@@ -77,10 +77,10 @@ Each line represents conditions where **two phases coexist** in equilibrium:
           {
             question: 'At the triple point of a substance:',
             options: [
-              'Only the solid phase exists',
-              'Solid, liquid, and gas phases all coexist in equilibrium',
-              'The substance becomes a supercritical fluid',
-              'The substance cannot exist'
+              'Only the solid phase can exist at equilibrium',
+              'All three phases coexist in equilibrium',
+              'Liquid and gas merge into a supercritical fluid',
+              'The liquid boils at exactly 1 atm of pressure'
             ],
             correctAnswer: 1,
             explanation: 'The triple point is the unique temperature and pressure at which all three phases — solid, liquid, and gas — coexist in equilibrium. Every pure substance has exactly one triple point.'
@@ -88,10 +88,10 @@ Each line represents conditions where **two phases coexist** in equilibrium:
           {
             question: 'What happens above the critical temperature and critical pressure?',
             options: [
-              'The substance is always a solid',
-              'The substance is always a gas',
-              'The liquid and gas phases become indistinguishable (supercritical fluid)',
-              'The substance decomposes'
+              'The substance can exist only as a solid',
+              'The substance can exist only as a gas',
+              'Liquid and gas become one supercritical fluid',
+              'The substance breaks down into its elements'
             ],
             correctAnswer: 2,
             explanation: 'Above the critical point, the distinction between liquid and gas disappears. The substance forms a supercritical fluid that has properties of both phases — it fills a container like a gas but can dissolve substances like a liquid.'
@@ -102,7 +102,7 @@ Each line represents conditions where **two phases coexist** in equilibrium:
               'Only liquid exists',
               'Only gas exists',
               'Liquid and gas coexist in equilibrium',
-              'The substance is at its critical point'
+              'The substance becomes supercritical'
             ],
             correctAnswer: 2,
             explanation: 'Each boundary line on a phase diagram represents conditions where two phases coexist in equilibrium. The vaporization curve is the set of (T, P) points where liquid and gas are in equilibrium.'
@@ -228,10 +228,10 @@ Water\'s solid-liquid line slopes **to the left** (negative slope)! This means:
           {
             question: 'Why does the solid-liquid line in water\'s phase diagram slope to the LEFT?',
             options: [
-              'Because water has strong hydrogen bonds',
-              'Because ice is denser than liquid water',
-              'Because ice is LESS dense than liquid water, so increasing pressure favors the denser liquid',
-              'Because water has a very high critical temperature'
+              'Water\'s strong hydrogen bonds tilt the line',
+              'Ice is denser than liquid, so pressure favors ice',
+              'Ice is less dense, so added pressure favors the liquid',
+              'Water\'s very high critical temperature bends the line'
             ],
             correctAnswer: 2,
             explanation: 'The negative slope means increasing pressure at constant temperature converts solid to liquid — pressure favors the denser phase. Since liquid water is denser than ice, increasing pressure favors the liquid.'
@@ -239,9 +239,9 @@ Water\'s solid-liquid line slopes **to the left** (negative slope)! This means:
           {
             question: 'Why does $CO_{2}$ sublime at 1 atm instead of melting?',
             options: [
-              '$CO_{2}$ has very strong intermolecular forces',
-              '1 atm is below the triple point pressure of $CO_{2}$ (5.11 atm), so the liquid phase doesn\'t exist',
-              '$CO_{2}$ is a network covalent solid',
+              'Solid $CO_{2}$ is held by unusually strong intermolecular forces',
+              '1 atm is below the triple-point pressure of $CO_{2}$',
+              'Solid $CO_{2}$ is a network covalent solid like $SiO_{2}$',
               '$CO_{2}$ has a negative solid-liquid slope like water'
             ],
             correctAnswer: 1,
@@ -316,13 +316,13 @@ Because $CO_{2}$\'s critical point is relatively accessible ($T_c = 31.1°C$, $P
           {
             question: 'If you want to observe the liquid phase of $CO_{2}$, you need a minimum pressure of approximately:',
             options: [
-              '1 atm',
+              '1.00 atm',
               '5.11 atm',
               '73 atm',
               '218 atm'
             ],
             correctAnswer: 1,
-            explanation: 'The triple point of $CO_{2}$ is at 5.11 atm. The liquid phase only exists at or above the triple point pressure. Below 5.11 atm, $CO_{2}$ transitions directly between solid and gas (sublimation/deposition).'
+            explanation: 'The triple point of $CO_{2}$ is at 5.11 atm. The liquid phase only exists at or above the triple point pressure. Below 5.11 atm, $CO_{2}$ transitions directly between solid and gas (sublimation/deposition). About 73 atm is the critical pressure, the top end of the liquid region, not the minimum.'
           }
         ]
       }

@@ -85,10 +85,10 @@ Each additional lone pair compresses the bond angle by about 2–2.5°.
           {
             question: 'The bond angle in $NH_{3}$ (≈107°) is less than the ideal tetrahedral angle (109.5°) because:',
             options: [
-              'Nitrogen is smaller than carbon',
-              'Hydrogen atoms are too light',
-              'The lone pair repels bonding pairs more strongly, compressing the H–N–H angles',
-              '$NH_{3}$ has only 3 bonds instead of 4'
+              'Nitrogen is more electronegative than the carbon in $CH_{4}$',
+              'The N–H bonds are shorter, which pulls the H atoms together',
+              'Its lone pair repels the bonding pairs more strongly',
+              'It has only three bonds instead of the four in $CH_{4}$'
             ],
             correctAnswer: 2,
             explanation: 'Lone pair–bond pair repulsion is stronger than bond pair–bond pair repulsion. The lone pair pushes the bonding pairs closer together, reducing the bond angle from 109.5° to about 107°.'

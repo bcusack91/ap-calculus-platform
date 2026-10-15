@@ -35,7 +35,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             question: 'What is the molecular geometry of $OF_{2}$? (O has 6 valence $e^{-}$, 2 bonds to F, 2 lone pairs)',
             options: ['Linear', 'Bent', 'Trigonal planar', 'Tetrahedral'],
             correctAnswer: 1,
-            explanation: 'Oxygen has 2 bonds + 2 lone pairs = steric number 4 → tetrahedral ED geometry. With 2 lone pairs, molecular geometry = bent $(like H_{2}O)$.'
+            explanation: 'Oxygen has 2 bonds + 2 lone pairs = steric number 4 → tetrahedral ED geometry. With 2 lone pairs, molecular geometry = bent (like $H_{2}O$).'
           },
           {
             question: 'What is the molecular geometry of $NO_{3}^{-}$? (N is central with 3 resonance-equivalent bonds and 0 lone pairs)',
@@ -187,17 +187,17 @@ AP Chemistry FRQs often ask you to:
           },
           {
             question: 'Which of the following species has the smallest bond angle?',
-            options: ['$BF_{3}$ (120°)', '$CH_{4}$ (109.5°)', '$H_{2}O$ (≈104.5°)', '$CO_{2}$ (180°)'],
+            options: ['$BF_{3}$', '$CH_{4}$', '$H_{2}O$', '$CO_{2}$'],
             correctAnswer: 2,
-            explanation: '$H_{2}O$ has the smallest bond angle at approximately 104.5°. Starting from the tetrahedral angle of 109.5°, the 2 lone pairs on oxygen compress the H–O–H angle significantly.'
+            explanation: '$H_{2}O$ has the smallest bond angle at approximately 104.5°. $CH_{4}$ is 109.5°, $BF_{3}$ is 120°, and $CO_{2}$ is 180°. Starting from the tetrahedral angle of 109.5°, the 2 lone pairs on oxygen compress the H–O–H angle significantly.'
           },
           {
             question: 'The boiling point of $NF_{3}$ (−129°C) is significantly lower than that of $NH_{3}$ (−33°C), even though $NF_{3}$ has a greater molar mass. Which explanation is most consistent with this observation?',
             options: [
-              '$NF_{3}$ is nonpolar while $NH_{3}$ is polar',
-              '$NH_{3}$ can form hydrogen bonds (N–H); $NF_{3}$ cannot (no H atoms)',
-              '$NF_{3}$ has a trigonal planar geometry',
-              'N–F bonds are stronger than N–H bonds'
+              '$NF_{3}$ is nonpolar, so it has only London dispersion forces',
+              'Only $NH_{3}$ can hydrogen-bond between its molecules',
+              '$NF_{3}$ has a trigonal planar shape, which cancels its dipole',
+              'Boiling $NH_{3}$ breaks N–H bonds, which takes more energy'
             ],
             correctAnswer: 1,
             explanation: 'Both $NF_{3}$ and $NH_{3}$ are polar with trigonal pyramidal geometry. However, $NH_{3}$ has N–H bonds that allow hydrogen bonding (a strong intermolecular force). $NF_{3}$ has no H atoms, so it cannot form hydrogen bonds — only dipole–dipole and London forces. This explains $NH_{3}$\'s much higher boiling point.'
@@ -256,9 +256,9 @@ AP Chemistry FRQs often ask you to:
           {
             question: 'A student claims that $SF_{4}$ is nonpolar because sulfur has 4 identical S–F bonds. What is wrong with this reasoning?',
             options: [
-              'S–F bonds are not polar',
-              '$SF_{4}$ has a seesaw geometry (not tetrahedral), so the bond dipoles don\'t cancel',
-              '$SF_{4}$ actually has 6 bonds, not 4',
+              'S–F bonds are nonpolar because S and F share electrons equally',
+              'Its seesaw shape is asymmetric, so the dipoles don\'t cancel',
+              '$SF_{4}$ is tetrahedral, but its lone pair adds a net dipole',
               'Fluorine is not electronegative enough to create bond dipoles'
             ],
             correctAnswer: 1,
@@ -267,10 +267,10 @@ AP Chemistry FRQs often ask you to:
           {
             question: 'Which of the following is the best explanation for why $XeF_{4}$ is nonpolar despite having 2 lone pairs?',
             options: [
-              'Xe–F bonds are nonpolar',
-              'Lone pairs don\'t affect polarity',
-              'The 2 lone pairs are trans (180° apart) in the octahedral arrangement, creating a symmetric square planar shape',
-              '$XeF_{4}$ does not actually have lone pairs'
+              'Xe–F bonds are nonpolar, since xenon is a noble gas',
+              'Lone pairs never affect whether a molecule is polar',
+              'Its trans lone pairs give a symmetric square planar shape',
+              'Xenon uses all eight valence electrons in its Xe–F bonds'
             ],
             correctAnswer: 2,
             explanation: '$XeF_{4}$ has steric number 6 (octahedral ED). The 2 lone pairs sit in trans positions (opposite sides), and the 4 F atoms form a symmetric square planar arrangement. Because of this symmetry, all bond dipoles cancel, making the molecule nonpolar.'

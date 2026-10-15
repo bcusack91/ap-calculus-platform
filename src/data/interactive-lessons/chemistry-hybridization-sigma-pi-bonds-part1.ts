@@ -108,9 +108,9 @@ When one s orbital mixes with **three** p orbitals, four equivalent **$sp^{3}$ h
           },
           {
             question: 'What is the bond angle in a perfect $sp^{3}$ (tetrahedral) arrangement?',
-            options: ['90°', '109.5°', '120°', '180°'],
+            options: ['104.5°', '109.5°', '120°', '180°'],
             correctAnswer: 1,
-            explanation: 'The tetrahedral angle is 109.5°. This is the angle that maximizes the distance between four equivalent groups around a central atom.'
+            explanation: 'The tetrahedral angle is 109.5°. This is the angle that maximizes the distance between four equivalent groups around a central atom. The 104.5° value is the compressed angle in $H_{2}O$, where two lone pairs squeeze the bonds together.'
           },
           {
             question: 'The oxygen atom in $H_{2}O$ has 2 bonds and 2 lone pairs. What is its hybridization?',
@@ -121,13 +121,13 @@ When one s orbital mixes with **three** p orbitals, four equivalent **$sp^{3}$ h
           {
             question: 'Why does carbon need to hybridize in $CH_{4}$?',
             options: [
-              'To have enough electrons for 4 bonds',
+              'To gain the extra electrons needed for four bonds',
               'To make all four C–H bonds equivalent',
-              'To increase its atomic number',
-              'To become an ion'
+              'To let a lone pair spread over four orbitals',
+              'To give its C–H bonds partial ionic character'
             ],
             correctAnswer: 1,
-            explanation: 'Without hybridization, carbon\'s s and p orbitals have different energies and shapes, which would produce non-equivalent bonds. Hybridization creates four identical $sp^{3}$ orbitals that form four equivalent C–H bonds.'
+            explanation: 'Without hybridization, carbon\'s s and p orbitals have different energies and shapes, which would produce non-equivalent bonds. Hybridization creates four identical $sp^{3}$ orbitals that form four equivalent C–H bonds. Carbon already has 4 valence electrons and no lone pair in $CH_{4}$, and the C–H bonds are essentially nonpolar covalent.'
           }
         ]
       }
@@ -206,7 +206,7 @@ The large lobe of an $sp^{3}$ orbital extends **further from the nucleus** than 
           {
             id: 'hy-1-7-dd2',
             label: 'The ideal $sp^{3}$ tetrahedral bond angle is',
-            options: ['90°', '109.5°', '120°', '180°'],
+            options: ['104.5°', '109.5°', '120°', '180°'],
             correctIndex: 1,
             explanation: 'The ideal $sp^{3}$ tetrahedral bond angle is 109.5°.'
           },

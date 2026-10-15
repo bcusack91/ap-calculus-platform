@@ -31,9 +31,9 @@ export const chemTypesIntermolecularForcesPart3Data = {
             question: 'Which statement about hydrogen bonding is CORRECT?',
             options: [
               'A hydrogen bond is a covalent bond between H and O',
-              'A hydrogen bond is an intermolecular force, not a true chemical bond',
-              'Hydrogen bonds are weaker than London Dispersion Forces',
-              'Hydrogen bonds only occur in water'
+              'It is an intermolecular attraction, not a covalent bond',
+              'H-bonds form between H and any electronegative atom',
+              'Hydrogen bonds form only between water molecules'
             ],
             correctAnswer: 1,
             explanation: 'A hydrogen bond is an intermolecular force (IMF), NOT a chemical bond. It is an electrostatic attraction between a very δ+ hydrogen (bonded to N, O, or F) and a lone pair on a neighboring N, O, or F atom. It is much weaker than covalent or ionic bonds.'
@@ -68,10 +68,10 @@ export const chemTypesIntermolecularForcesPart3Data = {
           {
             question: 'HCl has a polar H–Cl bond, but it does NOT form hydrogen bonds. Why?',
             options: [
-              'HCl is not polar enough',
-              'Chlorine is not electronegative',
-              'Cl is not N, O, or F — hydrogen bonding requires H bonded to N, O, or F specifically',
-              'HCl is a gas, and gases cannot have hydrogen bonds'
+              'HCl molecules are linear, which blocks hydrogen bonding',
+              'Chlorine is less electronegative than hydrogen is',
+              'Hydrogen bonding requires H bonded to N, O, or F',
+              'HCl is a gas, and gases cannot form hydrogen bonds'
             ],
             correctAnswer: 2,
             explanation: 'Hydrogen bonding specifically requires H bonded to N, O, or F. While Cl is electronegative, it is not electronegative enough and its atomic radius is too large to create the exceptionally strong δ+ on H needed for hydrogen bonding. HCl only has dipole-dipole forces and LDF.'
@@ -133,10 +133,10 @@ export const chemTypesIntermolecularForcesPart3Data = {
           {
             question: 'Water ($H_{2}O$, MW = 18) has a much higher boiling point than $H_{2}S$ (MW = 34). What is the primary reason?',
             options: [
-              'Water has a higher molar mass',
-              'Water has stronger London Dispersion Forces',
+              'Water has a higher molar mass than $H_{2}S$',
+              'Water has stronger London dispersion forces',
               'Water has hydrogen bonding while $H_{2}S$ does not',
-              '$H_{2}S$ is a nonpolar molecule'
+              '$H_{2}S$ is nonpolar, with only dispersion forces'
             ],
             correctAnswer: 2,
             explanation: 'Water has O–H bonds that allow hydrogen bonding, giving it much stronger IMF than $H_{2}S$. Sulfur is not N, O, or F, so $H_{2}S$ cannot form hydrogen bonds — it only has dipole-dipole forces and LDF. Despite water\'s lower molar mass, its hydrogen bonding gives it a much higher boiling point.'

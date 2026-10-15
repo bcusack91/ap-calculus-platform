@@ -68,7 +68,7 @@ where $k_B = 1.38 \\times 10^{-23}$ J/K is Boltzmann\'s constant and $T$ is the 
           {
             question: 'According to KMT, what does temperature measure?',
             options: [
-              'The total energy of all particles in a sample',
+              'The total energy of all particles present',
               'The average kinetic energy of the particles',
               'The potential energy between particles',
               'The speed of the fastest particle'
@@ -247,7 +247,7 @@ Key features of the distribution curve:
               'It shifts left and becomes taller',
               'It shifts right and becomes broader and flatter',
               'It stays in the same position but gets taller',
-              'It shifts right and becomes taller and narrower'
+              'It shifts right and gets taller and narrower'
             ],
             correctAnswer: 1,
             explanation: 'Higher temperature means higher average KE and speed, so the curve shifts right. The total area must remain constant (same number of molecules), so as it broadens, it must also become flatter.'
@@ -266,7 +266,7 @@ Key features of the distribution curve:
           {
             question: 'At the same temperature, how do the Maxwell-Boltzmann distributions of He and Xe compare?',
             options: [
-              'He has a taller, narrower curve shifted left',
+              'He has a narrower curve shifted left',
               'Xe has a broader curve shifted to the right',
               'He has a broader curve shifted to the right',
               'Both have identical distributions'

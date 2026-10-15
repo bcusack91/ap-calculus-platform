@@ -107,7 +107,7 @@ Every triple bond consists of **one sigma bond** and **two pi bonds**.
         questions: [
           {
             question: 'In $C_{2}H_{4}$ (ethene), each carbon is:',
-            options: ['sp hybridized with 2 unhybridized p orbitals', '$sp^{2}$ hybridized with 1 unhybridized p orbital', '$sp^{3}$ hybridized with 0 unhybridized p orbitals', 'unhybridized'],
+            options: ['sp hybridized with 2 unhybridized p orbitals', '$sp^{2}$ hybridized with 1 unhybridized p orbital', '$sp^{3}$ hybridized, no unhybridized p orbitals', '$sp^{2}$ hybridized with 2 leftover p orbitals'],
             correctAnswer: 1,
             explanation: 'Each carbon in ethene has 3 electron domains → $sp^{2}$ hybridized. $sp^{2}$ uses 1s + 2p, leaving 1 unhybridized p orbital for the pi bond.'
           },
@@ -120,13 +120,13 @@ Every triple bond consists of **one sigma bond** and **two pi bonds**.
           {
             question: 'Why is ethene $(C_{2}H_{4})$ a flat, planar molecule?',
             options: [
-              'All atoms are $sp^{3}$ hybridized',
-              'The pi bond requires parallel p orbitals, forcing all atoms into one plane',
-              'The molecule is too small to be nonplanar',
-              'Hydrogen atoms always lie in the same plane'
+              'Every carbon is $sp^{3}$, which is a planar shape',
+              'Its pi bond needs parallel p orbitals on both carbons',
+              'It is too small a molecule to bend out of a plane',
+              'Its H atoms repel equally, pushing them into a plane'
             ],
             correctAnswer: 1,
-            explanation: 'The pi bond in $C_{2}H_{4}$ forms from side-by-side overlap of unhybridized p orbitals. These must remain parallel, which forces all 6 atoms into the same plane.'
+            explanation: 'The pi bond in $C_{2}H_{4}$ forms from side-by-side overlap of unhybridized p orbitals on the two carbons. These must remain parallel, which forces all 6 atoms into the same plane. Each carbon is $sp^{2}$; an $sp^{3}$ carbon is tetrahedral, not planar.'
           }
         ]
       }
@@ -218,7 +218,7 @@ $$E_{\\pi} \\approx E_{\\text{double}} - E_{\\text{single}} = 614 - 348 = 266 \\
           {
             id: 'hy-5-7-dd3',
             label: 'Triple bonds are the shortest',
-            options: ['C–C in ethane', 'C=C in ethene', 'C≡C in acetylene', 'All are equal'],
+            options: ['C–C in ethane', 'C=C in ethene', 'C≡C in acetylene', 'All three are equal'],
             correctIndex: 2,
             explanation: 'Triple bonds are the shortest. Higher bond order = more electron density pulling nuclei together = shorter bond.'
           },

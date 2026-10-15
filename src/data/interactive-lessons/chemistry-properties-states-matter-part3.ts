@@ -78,9 +78,9 @@ This net inward pull causes the surface to **contract** to the smallest possible
           {
             question: 'Why do molecules at the surface of a liquid experience a net inward force?',
             options: [
-              'They are repelled by air molecules above',
-              'They are attracted to molecules below and beside them, but not above',
-              'Gravity pulls them downward',
+              'Air molecules above push them down into the liquid',
+              'They are pulled sideways and down, but not up',
+              'Gravity pulls surface molecules down more strongly',
               'They have more kinetic energy than interior molecules'
             ],
             correctAnswer: 1,
@@ -91,7 +91,7 @@ This net inward pull causes the surface to **contract** to the smallest possible
             options: [
               'Hexane $(C_{6}H_{14})$ — nonpolar, LDF only',
               'Acetone $(CH_{3}COCH_{3})$ — dipole-dipole forces',
-              'Glycerol $(C_{3}H_{8}O_{3})$ — three OH groups, extensive H-bonding',
+              'Glycerol $(C_{3}H_{8}O_{3})$ — extensive H-bonding',
               'Diethyl ether $(C_{2}H_{5}OC_{2}H_{5})$ — weak dipole'
             ],
             correctAnswer: 2,
@@ -214,10 +214,10 @@ The height a liquid rises in a capillary tube depends on:
           {
             question: 'Water forms a concave meniscus in a glass tube because:',
             options: [
-              'Cohesive forces between water molecules are stronger than adhesive forces with glass',
-              'Adhesive forces between water and glass are stronger than cohesive forces between water molecules',
-              'Water is repelled by the glass surface',
-              'Gravity pulls the center of the water down'
+              'Water\'s cohesion is stronger than adhesion to glass',
+              'Water\'s adhesion to glass is stronger than its cohesion',
+              'Glass is nonpolar, so water avoids its surface',
+              'Gravity pulls the center of the water downward'
             ],
             correctAnswer: 1,
             explanation: 'Water is attracted to the polar $SiO_{2}$ surface of glass (adhesion) more strongly than water molecules are attracted to each other (cohesion). This causes water to climb the walls, forming a concave meniscus.'
@@ -282,10 +282,10 @@ $$\\boxed{\\ln\\frac{P_2}{P_1} = -\\frac{\\Delta H_{\\text{vap}}}{R}\\left(\\fra
           {
             question: 'Which liquid has the highest vapor pressure at 25°C?',
             options: [
-              'Water $(H_{2}O)$ — strong H-bonding',
+              'Water $(H_{2}O)$ — strong, extensive H-bonding',
               'Ethanol $(C_{2}H_{5}OH)$ — moderate H-bonding',
-              'Diethyl ether $(C_{2}H_{5}OC_{2}H_{5})$ — weak dipole-dipole',
-              'Glycerol $(C_{3}H_{8}O_{3})$ — extensive H-bonding'
+              'Diethyl ether $(C_{2}H_{5}OC_{2}H_{5})$ — weak dipole',
+              'Glycerol $(C_{3}H_{8}O_{3})$ — three O–H groups, H-bonding'
             ],
             correctAnswer: 2,
             explanation: 'Diethyl ether has the weakest IMFs of the four, so its molecules escape to the gas phase most easily, giving it the highest vapor pressure. Glycerol has the strongest (most extensive H-bonding) and thus the lowest vapor pressure.'
@@ -293,10 +293,10 @@ $$\\boxed{\\ln\\frac{P_2}{P_1} = -\\frac{\\Delta H_{\\text{vap}}}{R}\\left(\\fra
           {
             question: 'Water boils at a lower temperature at high altitude because:',
             options: [
-              'The water is colder at altitude',
-              'IMFs are weaker at altitude',
-              'Atmospheric pressure is lower, so less vapor pressure is needed to boil',
-              'Gravity is weaker at altitude'
+              'Colder air at altitude lowers water\'s boiling point',
+              'Water\'s hydrogen bonds weaken at high altitude',
+              'Its vapor pressure reaches the lower air pressure sooner',
+              'Weaker gravity lets water molecules escape more easily'
             ],
             correctAnswer: 2,
             explanation: 'Boiling occurs when vapor pressure equals external pressure. At high altitude, atmospheric pressure is lower, so the vapor pressure needed to boil is lower, which is reached at a lower temperature.'
@@ -313,8 +313,8 @@ $$\\boxed{\\ln\\frac{P_2}{P_1} = -\\frac{\\Delta H_{\\text{vap}}}{R}\\left(\\fra
         inputs: [
           {
             label: 'Water has a vapor pressure of 23.8 torr at 25°C (298 K) and 760 torr at 100°C (373 K). Calculate ΔH_vap in kJ/mol (round to 1 decimal place)',
-            correctAnswer: '42.1',
-            explanation: '$\\ln(760/23.8) = -(\\Delta H_{\\text{vap}}/8.314)(1/373 - 1/298)$. $\\ln(31.93) = 3.463$. $(1/373 - 1/298) = (0.002681 - 0.003356) = -6.75 \\times 10^{-4}$. $3.463 = -(\\Delta H_{\\text{vap}}/8.314)(-6.75 \\times 10^{-4})$. $\\Delta H_{\\text{vap}} = 3.463 \\times 8.314 / (6.75 \\times 10^{-4}) = 42{,}640$ J/mol $\\approx 42.6$ kJ/mol. (The accepted value is ~40.7 kJ/mol; slight variation from the two-point method is expected. Accept 42.1 or nearby values.)'
+            correctAnswer: '42.7',
+            explanation: '$\\ln(760/23.8) = -(\\Delta H_{\\text{vap}}/8.314)(1/373 - 1/298)$. $\\ln(31.93) = 3.4636$. $(1/373 - 1/298) = (0.0026810 - 0.0033557) = -6.747 \\times 10^{-4}$ K$^{-1}$. $3.4636 = -(\\Delta H_{\\text{vap}}/8.314)(-6.747 \\times 10^{-4})$. $\\Delta H_{\\text{vap}} = 3.4636 \\times 8.314 / (6.747 \\times 10^{-4}) = 42{,}680$ J/mol $\\approx 42.7$ kJ/mol. (The value at the normal boiling point is 40.7 kJ/mol; the two-point method gives an average over 25–100°C, which is a little higher.)'
           }
         ]
       }

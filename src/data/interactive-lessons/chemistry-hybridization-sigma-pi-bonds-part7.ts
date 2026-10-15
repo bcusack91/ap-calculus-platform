@@ -111,10 +111,10 @@ A common AP question: *"Explain why $CO_{2}$ is nonpolar but $SO_{2}$ is polar."
           {
             question: 'A student claims that "$sp^{2}$ hybridization always results in a trigonal planar molecular geometry." This claim is:',
             options: [
-              'Correct — $sp^{2}$ always gives trigonal planar',
-              'Incorrect — $sp^{2}$ gives trigonal planar electron geometry, but the molecular geometry can be bent if lone pairs are present',
-              'Incorrect — $sp^{2}$ gives tetrahedral geometry',
-              'Incorrect — hybridization does not affect geometry'
+              'Correct — every $sp^{2}$ atom has a trigonal planar shape',
+              'Incorrect — an $sp^{2}$ atom with a lone pair is bent',
+              'Incorrect — $sp^{2}$ hybridization gives a tetrahedral shape',
+              'Incorrect — hybridization has no effect on molecular shape'
             ],
             correctAnswer: 1,
             explanation: '$sp^{2}$ hybridization gives a trigonal planar electron domain geometry. But if one of the three domains is a lone pair (like in $SO_{2}$), the molecular geometry is bent, not trigonal planar.'
@@ -212,10 +212,10 @@ A common AP question: *"Explain why $CO_{2}$ is nonpolar but $SO_{2}$ is polar."
           {
             question: 'In the molecule below, which carbon has different hybridization from the others?\n\n$CH_{3}$–CH=CH–$CH_{3}$ (2-butene)',
             options: [
-              '$C_{1}$ ($CH_{3}$ on left)',
-              '$C_{2}$ (CH= in middle-left)',
-              '$C_{1}$ and $C_{4}$ are different from $C_{2}$ and $C_{3}$',
-              'All carbons have the same hybridization'
+              'Only $C_{1}$, the left-hand methyl carbon',
+              'Only $C_{2}$, the left-hand alkene carbon',
+              '$C_{1}$ and $C_{4}$ differ from $C_{2}$ and $C_{3}$',
+              'None of them; all four carbons are $sp^{2}$'
             ],
             correctAnswer: 2,
             explanation: '$C_{1}$ and $C_{4}$ each have 4 electron domains (3 H + 1 C) → $sp^{3}$. $C_{2}$ and $C_{3}$ each have 3 electron domains (1 H + 1 C single + 1 C=C double) → $sp^{2}$. So $C_{1}$ and $C_{4}$ $(sp^{3})$ differ from $C_{2}$ and $C_{3}$ $(sp^{2})$.'
@@ -224,15 +224,15 @@ A common AP question: *"Explain why $CO_{2}$ is nonpolar but $SO_{2}$ is polar."
             question: 'How many total sigma (σ) and pi (π) bonds are in the molecule $CH_{2}$=CH–C≡CH (vinylacetylene)?',
             options: ['5σ + 3π', '6σ + 3π', '7σ + 3π', '7σ + 2π'],
             correctAnswer: 2,
-            explanation: 'Count all bonds: 1 $CH_{2}$= has 2 C–H (2σ); C=C double bond (1σ+1π); middle C–H (1σ); C–C single bond... Let us recount: $CH_{2}$=CH–C≡CH. Bonds: 2 C–H on left (2σ), 1 C=C (1σ+1π), 1 C–H middle (1σ), 1 C–C single (1σ), 1 C≡C (1σ+2π), 1 C–H right (1σ). Total: 7σ + 3π.'
+            explanation: 'Count all bonds in $CH_{2}$=CH–C≡CH: 2 C–H on the left carbon (2σ), 1 C=C (1σ + 1π), 1 C–H on the second carbon (1σ), 1 C–C single bond (1σ), 1 C≡C (1σ + 2π), and 1 C–H on the right carbon (1σ). Total: 7σ + 3π. Check: 8 atoms in an open chain always need 7 sigma bonds.'
           },
           {
             question: 'Which statement best explains why a C=C double bond is stronger but less than twice as strong as a C–C single bond?',
             options: [
-              'The double bond has more electrons, which repel each other',
-              'The sigma bond is strong (good overlap) but the pi bond is weaker (less overlap), so the total is less than 2× the sigma',
-              'Double bonds are always exactly twice as strong',
-              'The extra electrons shield the nuclear charge'
+              'The double bond\'s extra electrons repel each other',
+              'Its pi bond has weaker sideways overlap than its sigma bond',
+              'Its second bond is also sigma but is longer and weaker',
+              'The extra electrons shield the nuclei from each other'
             ],
             correctAnswer: 1,
             explanation: 'A C=C double bond = 1σ + 1π. The sigma bond (~348 kJ/mol) has strong head-on overlap, but the pi bond (~266 kJ/mol) has weaker lateral overlap. Total (~614) is strong but less than 2 × 348 = 696 kJ/mol.'

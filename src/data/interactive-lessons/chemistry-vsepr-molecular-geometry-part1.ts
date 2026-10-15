@@ -203,10 +203,10 @@ All three have the same electron domain geometry (tetrahedral), but the molecula
           {
             question: 'When are the electron domain geometry and molecular geometry of a molecule identical?',
             options: [
-              'When there are no bonds to the central atom',
+              'When each bond to the central atom is single',
               'When there are no lone pairs on the central atom',
-              'When all atoms are the same element',
-              'They are always identical'
+              'When all outer atoms are the same element',
+              'When the central atom has an exact octet'
             ],
             correctAnswer: 1,
             explanation: 'The two geometries are identical when there are no lone pairs on the central atom. Lone pairs are part of the electron domain geometry but invisible in the molecular geometry.'
@@ -215,12 +215,12 @@ All three have the same electron domain geometry (tetrahedral), but the molecula
             question: 'A molecule has a steric number of 4 and 1 lone pair on the central atom. What is its molecular geometry?',
             options: [
               'Tetrahedral',
-              'Trigonal planar',
+              'Trigonal bipyramidal',
               'Trigonal pyramidal',
               'Bent'
             ],
             correctAnswer: 2,
-            explanation: 'Steric number 4 → tetrahedral electron domain geometry. With 1 lone pair and 3 bonding pairs, the molecular geometry is trigonal pyramidal $(like NH_{3})$.'
+            explanation: 'Steric number 4 → tetrahedral electron domain geometry. With 1 lone pair and 3 bonding pairs, the molecular geometry is trigonal pyramidal (like $NH_{3}$).'
           }
         ]
       }
@@ -249,9 +249,9 @@ All three have the same electron domain geometry (tetrahedral), but the molecula
           {
             id: 'vg-1-8-dd3',
             label: 'An electron domain can be a bond (single, double, or triple) or a lone pair',
-            options: ['Bond only', 'Lone pair only', 'Both bonds and lone pairs', 'Neither'],
+            options: ['Bonds only, not lone pairs', 'Lone pairs only, not bonds', 'Bonds or lone pairs', 'Single bonds only'],
             correctIndex: 2,
-            explanation: 'An electron domain can be a bond (single, double, or triple) or a lone pair. Both count.'
+            explanation: 'An electron domain can be a bond (single, double, or triple) or a lone pair. Both kinds count, and a multiple bond counts as one domain.'
           }
         ]
       }

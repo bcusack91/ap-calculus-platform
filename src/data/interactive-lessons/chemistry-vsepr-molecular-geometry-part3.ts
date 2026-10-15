@@ -90,10 +90,10 @@ Phosphorus pentachloride has 5 bonding pairs and 0 lone pairs:
           {
             question: 'Why do lone pairs prefer equatorial positions in a trigonal bipyramid?',
             options: [
-              'Equatorial positions are closer to the nucleus',
-              'Equatorial positions have more space (only two 90° neighbors vs. three)',
-              'Axial positions don\'t exist for lone pairs',
-              'Lone pairs are always in the lowest energy orbital'
+              'Equatorial sites lie closer to the central atom\'s nucleus',
+              'An equatorial site has fewer 90° neighbors than an axial one',
+              'Axial sites are 180° apart, which lone pairs can\'t tolerate',
+              'Lone pairs repel less than bonds, so take crowded sites'
             ],
             correctAnswer: 1,
             explanation: 'An equatorial position has only 2 neighbors at 90° (the axial positions), while an axial position has 3 neighbors at 90° (all equatorial). Since lone pairs need more room, they prefer equatorial spots with fewer close-range repulsions.'
@@ -245,19 +245,19 @@ $$\\boxed{180° \\to 120° \\to 109.5° \\to 90°}$$
           {
             question: 'Why can phosphorus form $PCl_{5}$ but nitrogen cannot form $NCl_{5}$?',
             options: [
-              'Nitrogen is too electronegative',
-              'Phosphorus has accessible d orbitals; nitrogen does not',
-              '$NCl_{5}$ would be too large a molecule',
-              'Nitrogen already has a full octet and cannot bond more'
+              'Nitrogen is too electronegative to bond to five Cl atoms',
+              'Period 3 P can exceed an octet; Period 2 N cannot',
+              'Nitrogen has fewer valence electrons than phosphorus has',
+              'Nitrogen has no lone pair left to bond two more Cl atoms'
             ],
             correctAnswer: 1,
-            explanation: 'Phosphorus is in Period 3 and has empty 3d orbitals available for bonding. Nitrogen is in Period 2 with no accessible d orbitals, so it cannot expand beyond an octet.'
+            explanation: 'Phosphorus is a larger Period 3 atom that can hold more than eight valence electrons (an expanded octet), so it can form five P–Cl bonds. Nitrogen is in Period 2 and is limited to an octet, so $NCl_{5}$ does not exist. Both atoms have 5 valence electrons, so the difference is not the electron count. (Older texts credit empty 3d orbitals; the AP exam does not assess d-orbital arguments.)'
           },
           {
             question: 'How many total bond angles of 90° exist between adjacent atoms in an octahedral molecule like $SF_{6}$?',
-            options: ['4', '6', '8', '12'],
+            options: ['4', '6', '24', '12'],
             correctAnswer: 3,
-            explanation: 'Each of the 6 positions has 4 neighbors at 90°, giving 6 × 4 = 24, but each angle is shared between 2 atoms, so 24/2 = 12 unique 90° angles.'
+            explanation: 'Each of the 6 positions has 4 neighbors at 90°, giving 6 × 4 = 24, but each angle is shared between 2 atoms, so 24/2 = 12 unique 90° angles. Answering 24 counts every angle twice; answering 4 counts the neighbors of only one atom.'
           }
         ]
       }

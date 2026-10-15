@@ -41,9 +41,9 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             question: 'Which of the following best explains why the boiling point of HF (20°C) is higher than the boiling point of HCl (-85°C)?',
             options: [
               'HF has a higher molar mass than HCl',
-              'HF molecules experience hydrogen bonding, while HCl molecules do not',
-              'HCl is nonpolar, so it only has London Dispersion Forces',
-              'HF has stronger London Dispersion Forces than HCl'
+              'Only HF molecules can hydrogen-bond to each other',
+              'HCl is nonpolar and has only London forces',
+              'HF has stronger London forces than HCl'
             ],
             correctAnswer: 1,
             explanation: 'HF has hydrogen bonding (H bonded to F), while HCl only has dipole-dipole forces (Cl is not N, O, or F). Hydrogen bonding is stronger than dipole-dipole forces, giving HF a higher boiling point. Note: HF actually has a LOWER molar mass than HCl, making the higher-molar-mass option incorrect.'
@@ -61,10 +61,10 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
           {
             question: 'The boiling points of the hydrogen halides are: HF = 20°C, HCl = -85°C, HBr = -67°C, HI = -35°C. Which statement best explains the trend from HCl to HI?',
             options: [
-              'Hydrogen bonding increases from HCl to HI',
-              'Dipole-dipole forces increase from HCl to HI',
-              'London Dispersion Forces increase from HCl to HI due to increasing molar mass and electron count',
-              'Electronegativity increases from Cl to I'
+              'Hydrogen bonding grows stronger from HCl to HI',
+              'Dipole-dipole forces grow stronger from HCl to HI',
+              'LDF grow stronger as electron count rises from HCl to HI',
+              'Electronegativity increases from Cl to I, raising polarity'
             ],
             correctAnswer: 2,
             explanation: 'From HCl to HI, molar mass increases significantly. The increasing number of electrons leads to stronger LDF. Even though the polarity decreases (Cl is more electronegative than I), the much stronger LDF in HBr and HI dominate, causing the boiling point to increase. HF is an outlier due to hydrogen bonding.'
@@ -73,9 +73,9 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             question: 'A student claims that $CH_{3}CH_{2}CH_{2}CH_{3}$ (butane) should have a higher boiling point than $CH_{3}OH$ (methanol) because butane has a higher molar mass. Is this correct?',
             options: [
               'Yes — higher molar mass always means higher boiling point',
-              'No — methanol has hydrogen bonding, which is stronger than the LDF in butane, giving methanol a higher BP despite its lower molar mass',
-              'No — butane has hydrogen bonding too',
-              'Yes — butane is polar with stronger dipole-dipole forces'
+              'No — methanol\'s hydrogen bonds outweigh butane\'s larger LDF',
+              'No — butane can hydrogen-bond through its C–H bonds too',
+              'Yes — butane is polar, with stronger dipole-dipole forces'
             ],
             correctAnswer: 1,
             explanation: 'The student is wrong. While butane (MW = 58) has a higher molar mass than methanol (MW = 32), methanol\'s O–H group allows hydrogen bonding. Hydrogen bonding is so much stronger than LDF that methanol (BP = 65°C) boils higher than butane (BP = -1°C) despite its lower molar mass.'
@@ -93,10 +93,10 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
           {
             question: 'NaCl dissolves readily in water but not in hexane $(C_{6}H_{14})$. Which explanation is most accurate?',
             options: [
-              'Hexane is too small to dissolve NaCl',
-              'Water forms ion-dipole forces with $Na^{+}$ and $Cl^{-}$ that compensate for breaking the ionic lattice; hexane is nonpolar and cannot form these forces',
-              'NaCl forms covalent bonds with water',
-              'Hexane has stronger IMFs than water'
+              'Hexane molecules are too small to surround ions',
+              'Only water can form ion-dipole forces with the ions',
+              'NaCl forms covalent bonds with water molecules',
+              'Hexane\'s IMFs are stronger than water\'s H-bonds'
             ],
             correctAnswer: 1,
             explanation: 'Water is polar and forms strong ion-dipole forces with $Na^{+}$ and $Cl^{-}$ ions. These ion-dipole forces provide enough energy to compensate for breaking the ionic lattice. Hexane is nonpolar and cannot form ion-dipole forces with ions, so it cannot stabilize the separated ions.'
@@ -121,7 +121,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
           {
             id: 'ap-nh3',
             label: '$\\text{NH}_3$',
-            options: ['LDF only', 'Dipole-dipole', 'Hydrogen bonding', 'Ion-dipole'],
+            options: ['LDF only', 'Dipole-dipole forces', 'Hydrogen bonding', 'Ion-dipole'],
             correctIndex: 2,
             explanation: '$NH_{3}$ has N–H bonds (H bonded to N), so it exhibits hydrogen bonding.'
           },
@@ -160,9 +160,9 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             question: '$CH_{3}F$ (fluoromethane) contains fluorine. Does it exhibit hydrogen bonding?',
             options: [
               'Yes — it contains fluorine, one of the FON atoms',
-              'No — the hydrogen atoms are bonded to carbon, not fluorine. H must be bonded DIRECTLY to N, O, or F for hydrogen bonding',
-              'Yes — all molecules with F have hydrogen bonding',
-              'No — fluorine cannot participate in hydrogen bonding'
+              'No — its H atoms are bonded to carbon, not to fluorine',
+              'Yes — any molecule containing F can hydrogen-bond',
+              'No — fluorine is too small to accept a hydrogen bond'
             ],
             correctAnswer: 1,
             explanation: 'This is a classic AP trap! $CH_{3}F$ has fluorine, but the H atoms are bonded to C, not to F. Hydrogen bonding requires H bonded DIRECTLY to N, O, or F. Since $CH_{3}F$ has C–H bonds (not F–H bonds), it does NOT form hydrogen bonds. It only has dipole-dipole forces + LDF.'
@@ -170,9 +170,9 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
           {
             question: 'When comparing $CH_{3}OCH_{3}$ (dimethyl ether, MW = 46) and $CH_{3}CH_{2}OH$ (ethanol, MW = 46), which has the higher boiling point?',
             options: [
-              '$CH_{3}OCH_{3}$ — it has more oxygen lone pairs',
-              'They have the same boiling point because they have the same molar mass and formula',
-              '$CH_{3}CH_{2}OH$ — it has an O–H bond allowing hydrogen bonding; dimethyl ether cannot hydrogen bond with itself',
+              '$CH_{3}OCH_{3}$ — it has more lone pairs on its oxygen',
+              'Neither — same formula and molar mass means same bp',
+              '$CH_{3}CH_{2}OH$ — its O–H bonds allow H-bonding',
               '$CH_{3}OCH_{3}$ — ethers always boil higher than alcohols'
             ],
             correctAnswer: 2,

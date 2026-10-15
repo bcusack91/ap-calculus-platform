@@ -68,10 +68,10 @@ export const chemPropertiesStatesMatterPart2Data = {
           {
             question: 'Which property is characteristic of an amorphous solid?',
             options: [
-              'A sharp, well-defined melting point',
-              'A regular, repeating crystal lattice',
-              'Gradual softening over a temperature range instead of a sharp melting point',
-              'Flat crystal faces visible to the naked eye'
+              'A sharp melting point at one temperature',
+              'A regular, repeating 3-D crystal lattice',
+              'Gradual softening over a range of temperatures',
+              'Flat crystal faces that meet at fixed angles'
             ],
             correctAnswer: 2,
             explanation: 'Amorphous solids lack long-range order, so different regions of the solid break down at different temperatures, resulting in gradual softening rather than a sharp melting point.'

@@ -134,7 +134,7 @@ The amount of solute that dissolves depends on the **solubility** of that solute
           {
             question: 'Which statement about gas solubility is correct?',
             options: [
-              'Gas solubility increases with increasing temperature',
+              'Gas solubility rises with increasing temperature',
               'Gas solubility decreases with increasing temperature',
               'Gas solubility is not affected by temperature',
               'Gas solubility increases with decreasing pressure'
@@ -284,12 +284,12 @@ For the AP exam, you need to know which ionic compounds are soluble in water:
             question: 'Which compound is SOLUBLE in water?',
             options: [
               '$BaSO_{4}$',
-              '$PbCl_{2}$',
+              '$Ag_{2}CO_{3}$',
               '$CaCO_{3}$',
               '$Na_{2}CO_{3}$'
             ],
             correctAnswer: 3,
-            explanation: 'Carbonates are generally insoluble, EXCEPT with $Na^{+}$, $K^{+}$, and $NH_{4}^{+}$. $Na_{2}CO_{3}$ is soluble because sodium salts are always soluble.'
+            explanation: 'Carbonates are generally insoluble, EXCEPT with $Na^{+}$, $K^{+}$, and $NH_{4}^{+}$. $Na_{2}CO_{3}$ is soluble because sodium salts are always soluble. $Ag_{2}CO_{3}$, $CaCO_{3}$, $BaSO_{4}$ and $PbCl_{2}$ are all classic precipitates.'
           },
           {
             question: 'When solutions of $Pb(NO_{3})_{2}$ and KI are mixed, a yellow precipitate forms. The precipitate is:',

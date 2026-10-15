@@ -110,9 +110,9 @@ $$V_1 = \\frac{M_2V_2}{M_1} = \\frac{(0.100)(500.0)}{12.0} = 4.17 \\text{ mL}$$
             question: 'When a solution is diluted, which quantity remains constant?',
             options: [
               'Molarity',
-              'Volume',
+              'Total volume',
               'Moles of solute',
-              'Concentration'
+              'Mass of solution'
             ],
             correctAnswer: 2,
             explanation: 'Dilution only adds solvent — the moles of solute remain unchanged. This is why $M_1V_1 = M_2V_2$: both sides equal the moles of solute.'
@@ -249,7 +249,7 @@ Pipette 25.0 mL of stock into a 100 mL volumetric flask and add water to the mar
           },
           {
             label: 'A volumetric flask is used to',
-            options: ['Measure mass accurately', 'Prepare a solution of exact volume', 'Heat solutions', 'Filter precipitates']
+            options: ['Weigh out the solid solute accurately', 'Prepare a solution of exact volume', 'Heat a solution to dissolve a solid', 'Filter a precipitate from a solution']
           },
           {
             label: 'In $M_1V_1 = M_2V_2$, if $V_2$ doubles while $M_1$ and $V_1$ stay the same, then $M_2$',

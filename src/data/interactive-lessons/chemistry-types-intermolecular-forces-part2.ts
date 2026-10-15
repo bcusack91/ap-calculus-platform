@@ -42,9 +42,9 @@ export const chemTypesIntermolecularForcesPart2Data = {
             question: 'Why does $CO_{2}$ NOT experience dipole-dipole forces despite having polar C=O bonds?',
             options: [
               'Carbon and oxygen have the same electronegativity',
-              'The linear geometry causes the bond dipoles to cancel, making the molecule nonpolar',
-              '$CO_{2}$ is an ionic compound',
-              'Double bonds cannot be polar'
+              'Its linear shape makes the two bond dipoles cancel',
+              '$CO_{2}$ is held together by ionic bonds',
+              'Double bonds share their electrons equally'
             ],
             correctAnswer: 1,
             explanation: '$CO_{2}$ has two polar C=O bonds, but the linear geometry (180°) causes the two bond dipoles to point in exactly opposite directions, canceling each other out. The molecule has no net dipole moment, so it is nonpolar.'
@@ -82,7 +82,7 @@ export const chemTypesIntermolecularForcesPart2Data = {
           {
             id: 'dd-strength',
             label: 'For similar-sized molecules, dipole-dipole forces are _____ LDF',
-            options: ['weaker than', 'stronger than', 'equal to'],
+            options: ['weaker than', 'stronger than', 'about equal to'],
             correctIndex: 1,
             explanation: 'For molecules of similar size, dipole-dipole forces are generally stronger than LDF because permanent dipoles provide a more consistent attractive interaction.'
           }
@@ -116,13 +116,13 @@ export const chemTypesIntermolecularForcesPart2Data = {
           {
             question: 'A polar molecule like $CHCl_{3}$ experiences which types of intermolecular forces?',
             options: [
-              'Only dipole-dipole forces',
-              'Only London Dispersion Forces',
-              'Both dipole-dipole forces AND London Dispersion Forces',
-              'Neither — it forms ionic bonds'
+              'Dipole-dipole forces only, since it is polar',
+              'London dispersion forces only',
+              'Dipole-dipole forces and London dispersion forces',
+              'H-bonding, dipole-dipole and dispersion forces'
             ],
             correctAnswer: 2,
-            explanation: 'Polar molecules experience BOTH dipole-dipole forces (from their permanent dipoles) AND London Dispersion Forces (which are present in ALL molecules). The total IMF strength is the sum of both contributions.'
+            explanation: 'Polar molecules experience BOTH dipole-dipole forces (from their permanent dipoles) AND London Dispersion Forces (which are present in ALL molecules). The total IMF strength is the sum of both contributions. $CHCl_{3}$ cannot hydrogen-bond because its only H atom is bonded to carbon, not to N, O, or F.'
           }
         ]
       }
@@ -137,13 +137,13 @@ export const chemTypesIntermolecularForcesPart2Data = {
           {
             question: 'Propane ($C_{3}H_{8}$, MW = 44) boils at -42°C. Acetaldehyde ($CH_{3}CHO$, MW = 44) boils at 20°C. Both have similar molar masses. What explains the higher boiling point of acetaldehyde?',
             options: [
-              'Acetaldehyde has more electrons',
-              'Propane has stronger hydrogen bonds',
-              'Acetaldehyde is polar and has dipole-dipole forces in addition to LDF',
-              'Propane has a higher molar mass'
+              'Acetaldehyde has more electrons, so its LDF are stronger',
+              'Acetaldehyde forms hydrogen bonds through its C=O group',
+              'Only acetaldehyde adds dipole-dipole forces to its LDF',
+              'Propane\'s C–H bonds are nonpolar, so it has no LDF at all'
             ],
             correctAnswer: 2,
-            explanation: 'Both molecules have similar molar masses (similar LDF), but acetaldehyde is polar due to its C=O group. It experiences dipole-dipole forces in addition to LDF, giving it stronger total IMF and a higher boiling point.'
+            explanation: 'Both molecules have similar molar masses and electron counts (similar LDF), but acetaldehyde is polar due to its C=O group. It experiences dipole-dipole forces in addition to LDF, giving it stronger total IMF and a higher boiling point. It cannot hydrogen-bond with itself because it has no O–H bond, and propane, like every molecule, does have LDF.'
           }
         ]
       }

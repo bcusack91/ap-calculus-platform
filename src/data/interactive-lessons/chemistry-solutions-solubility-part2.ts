@@ -258,7 +258,7 @@ $$\\chi_{\\text{eth}} = \\frac{0.9985}{0.9985 + 3.996} = \\frac{0.9985}{4.995} =
           },
           {
             label: 'A 10.0% by mass glucose solution contains 10.0 g glucose per',
-            options: ['100 g solution', '100 g water', '1 L solution', '1 kg water']
+            options: ['100 g solution', '100 g water', '100 mL solution', '1 kg water']
           }
         ],
         correctAnswers: ['ppm or ppb', '0.90', 'liter of solution', '100 g solution', '0.900', '0.9'],
@@ -281,11 +281,11 @@ $$\\chi_{\\text{eth}} = \\frac{0.9985}{0.9985 + 3.996} = \\frac{0.9985}{4.995} =
             options: [
               '0.500 m',
               '0.999 m',
-              '1.00 m',
+              '0.847 m',
               '1.80 m'
             ],
             correctAnswer: 1,
-            explanation: '$n = 90.0/180.16 = 0.4996$ mol. $m = 0.4996/0.5000 = 0.999$ m ≈ $1.00$ m. The answer with proper sig figs is 0.999 m.'
+            explanation: '$n = 90.0/180.16 = 0.4996$ mol. Molality divides by the mass of the solvent in kg: $m = 0.4996/0.5000 = 0.999$ m. Dividing by the total solution mass (0.5900 kg) instead gives 0.847 m, which is a common error.'
           },
           {
             question: 'How many grams of KOH ($M = 56.11$ g/mol) are needed to prepare 2.00 L of 0.500 M solution?',

@@ -201,7 +201,7 @@ $$\\boxed{\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}}$$
             question: 'An $sp^{3}$-hybridized atom with 2 bonds and 2 lone pairs has what molecular geometry?',
             options: ['Linear', 'Bent', 'Trigonal planar', 'Tetrahedral'],
             correctAnswer: 1,
-            explanation: 'Steric number 4 → $sp^{3}$ → electron geometry is tetrahedral, but with 2 lone pairs, the molecular geometry is bent $(like H_{2}O)$.'
+            explanation: 'Steric number 4 → $sp^{3}$ → electron geometry is tetrahedral, but with 2 lone pairs, the molecular geometry is bent (like $H_{2}O$).'
           },
           {
             question: 'An $sp^{2}$-hybridized atom with 2 bonds and 1 lone pair has what molecular geometry?',
@@ -212,8 +212,8 @@ $$\\boxed{\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}}$$
           {
             question: 'In HCOOH (formic acid: H–C(=O)–O–H), how many total sigma bonds are present?',
             options: ['3', '4', '5', '6'],
-            correctAnswer: 2,
-            explanation: 'Count: 1 C–H (1σ) + 1 C=O (1σ) + 1 C–O (1σ) + 1 O–H (1σ) = 4σ... Wait — the full structure has a fifth sigma bond. HCOOH: H bonded to C, C double bonded to one O, C single bonded to another O, that O bonded to H. That is: 1 C–H + 1 C=O (1σ+1π) + 1 C–O + 1 O–H = 4σ + 1π. Actually checking: 5 total bonds between atoms, 4 are single (4σ) + the double bond adds 1σ + 1π = 5σ + 1π. Answer: 5.'
+            correctAnswer: 1,
+            explanation: 'HCOOH has 5 atoms joined by 4 connections: 1 C–H, 1 C=O, 1 C–O and 1 O–H. Each connection contains exactly one sigma bond, so there are 4σ in total. The C=O double bond adds 1π, which is not a sigma bond. Answering 5 counts the pi bond as a sigma bond.'
           }
         ]
       }

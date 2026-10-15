@@ -68,9 +68,9 @@ From **weakest to strongest**:
             question: '$CH_{4}$ (molar mass 16 g/mol) is a gas at room temperature while $H_{2}O$ (molar mass 18 g/mol) is a liquid, even though they have similar molar masses. Why?',
             options: [
               '$CH_{4}$ has stronger LDF because carbon is larger',
-              '$H_{2}O$ has hydrogen bonding, which is much stronger than the LDF in nonpolar $CH_{4}$',
-              '$CH_{4}$ is ionic and $H_{2}O$ is molecular',
-              '$H_{2}O$ has a higher molar mass'
+              'Only $H_{2}O$ has hydrogen bonds, far stronger than LDF',
+              '$CH_{4}$ is ionic, while $H_{2}O$ is molecular',
+              '$H_{2}O$ has the higher molar mass, so its LDF win'
             ],
             correctAnswer: 1,
             explanation: '$CH_{4}$ is nonpolar (tetrahedral, symmetric) and only has weak LDF. $H_{2}O$ is polar with strong hydrogen bonding (O–H···O). The much stronger H-bonds in water give it a much higher boiling point (100°C vs. −161°C), so water is liquid while methane is gas at 25°C.'
@@ -78,9 +78,9 @@ From **weakest to strongest**:
           {
             question: 'Predict the order of boiling points: HF, HCl, HBr, HI.',
             options: [
-              'HF < HCl < HBr < HI (increasing molar mass)',
-              'HI < HBr < HCl < HF (decreasing molar mass)',
-              'HCl < HBr < HI < HF (HF highest due to H-bonding; rest follow LDF trend)',
+              'HF < HCl < HBr < HI',
+              'HI < HBr < HCl < HF',
+              'HCl < HBr < HI < HF',
               'HF < HI < HBr < HCl'
             ],
             correctAnswer: 2,
@@ -89,13 +89,13 @@ From **weakest to strongest**:
           {
             question: 'NaCl is a solid at room temperature, but ethanol $(C_{2}H_{5}OH)$ is a liquid. What best explains this?',
             options: [
-              'Ethanol has weaker IMFs (H-bonding) than the strong ionic bonds in NaCl',
-              'NaCl has a lower molar mass',
-              'Ethanol is nonpolar',
-              'NaCl has London Dispersion Forces only'
+              'Ethanol\'s H-bonds are much weaker than ionic bonds',
+              'Ethanol has a higher molar mass and stronger LDF',
+              'Ethanol is nonpolar, so it has only weak LDF',
+              'NaCl ions share electrons in covalent bonds'
             ],
             correctAnswer: 0,
-            explanation: 'NaCl is an ionic solid held together by very strong electrostatic forces between $Na^{+}$ and $Cl^{-}$ ions (mp 801°C). Ethanol is a molecular substance with hydrogen bonding — much weaker than ionic bonds — so it\'s a liquid at room temperature (bp 78°C).'
+            explanation: 'NaCl is an ionic solid held together by very strong electrostatic forces between $Na^{+}$ and $Cl^{-}$ ions (mp 801°C). Ethanol is a polar molecular substance with hydrogen bonding — much weaker than ionic bonds — so it\'s a liquid at room temperature (bp 78°C). Ethanol (46 g/mol) is also lighter than NaCl (58.4 g/mol), so molar mass does not explain it.'
           }
         ]
       }
@@ -154,9 +154,9 @@ From **weakest to strongest**:
           {
             question: 'Which substance has the highest boiling point?',
             options: [
-              'Ne (molar mass 20)',
-              '$O_{2}$ (molar mass 32)',
-              '$Cl_{2}$ (molar mass 71)',
+              'Ne (molar mass 20.2)',
+              '$O_{2}$ (molar mass 32.0)',
+              '$Cl_{2}$ (molar mass 70.9)',
               '$Br_{2}$ (molar mass 160)'
             ],
             correctAnswer: 3,
@@ -209,7 +209,7 @@ From **weakest to strongest**:
               'Hexane $(C_{6}H_{14})$ — LDF only',
               'Acetone $(CH_{3}COCH_{3})$ — dipole-dipole',
               'Ethanol $(C_{2}H_{5}OH)$ — H-bonding',
-              'Water $(H_{2}O)$ — strong, extensive H-bonding network'
+              'Water $(H_{2}O)$ — extensive H-bonding'
             ],
             correctAnswer: 3,
             explanation: 'Water has the highest surface tension among common molecular liquids (72.8 mN/m at 20°C) due to its extensive hydrogen bonding network. Each water molecule can form up to 4 hydrogen bonds.'
@@ -217,9 +217,9 @@ From **weakest to strongest**:
           {
             question: 'Glycerol ($C_{3}H_{8}O_{3}$, with 3 OH groups) is much more viscous than ethanol ($C_{2}H_{5}OH$, with 1 OH group). Why?',
             options: [
-              'Glycerol is nonpolar',
-              'Glycerol has 3 OH groups enabling a more extensive H-bonding network, creating greater resistance to flow',
-              'Ethanol has stronger IMFs than glycerol',
+              'Glycerol is nonpolar, so its molecules tangle',
+              'Its three OH groups form a wider H-bonding network',
+              'Ethanol has stronger IMFs than glycerol does',
               'Glycerol has a lower molar mass than ethanol'
             ],
             correctAnswer: 1,

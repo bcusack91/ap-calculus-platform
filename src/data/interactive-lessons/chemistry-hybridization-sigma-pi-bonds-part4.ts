@@ -202,7 +202,7 @@ $$\\boxed{\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}}$$
           {
             id: 'hy-4-7-dd1',
             label: '$sp^{3}$ hybridization gives an ideal bond angle of',
-            options: ['109.5°', '120°', '180°', '90°'],
+            options: ['109.5°', '120°', '180°', '104.5°'],
             correctIndex: 0,
             explanation: '$sp^{3}$ hybridization gives an ideal bond angle of 109.5° (tetrahedral geometry).'
           },
@@ -216,7 +216,7 @@ $$\\boxed{\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}}$$
           {
             id: 'hy-4-7-dd3',
             label: 'Steric number 3 with 0 lone pairs → $sp^{2}$ → _______ electron and molecular',
-            options: ['Linear', 'Trigonal planar', 'Tetrahedral', 'Bent'],
+            options: ['Linear', 'Trigonal planar', 'Tetrahedral', 'Trigonal pyramidal'],
             correctIndex: 1,
             explanation: 'Steric number 3 with 0 lone pairs → $sp^{2}$ → trigonal planar electron and molecular geometry.'
           },

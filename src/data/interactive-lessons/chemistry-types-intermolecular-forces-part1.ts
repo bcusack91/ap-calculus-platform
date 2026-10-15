@@ -32,7 +32,7 @@ export const chemTypesIntermolecularForcesPart1Data = {
             options: [
               'They only exist in nonpolar molecules',
               'They are present in ALL molecules and atoms',
-              'They only exist between ions and polar molecules',
+              'They exist only between ions and dipoles',
               'They require permanent dipoles to occur'
             ],
             correctAnswer: 1,
@@ -87,9 +87,9 @@ export const chemTypesIntermolecularForcesPart1Data = {
           {
             question: 'Which noble gas has the STRONGEST London Dispersion Forces?',
             options: [
-              'He (molar mass 4 g/mol)',
-              'Ne (molar mass 20 g/mol)',
-              'Ar (molar mass 40 g/mol)',
+              'He (molar mass 4.00 g/mol)',
+              'Ne (molar mass 20.2 g/mol)',
+              'Ar (molar mass 39.9 g/mol)',
               'Xe (molar mass 131 g/mol)'
             ],
             correctAnswer: 3,
@@ -117,12 +117,12 @@ export const chemTypesIntermolecularForcesPart1Data = {
       exercise: {
         questions: [
           {
-            question: 'n-Pentane (straight chain $C_{5}H_{12}$) boils at 36°C while neopentane $(compact/spherical C_{5}H_{12})$ boils at 10°C. What explains this difference?',
+            question: 'n-Pentane (straight chain $C_{5}H_{12}$) boils at 36°C while neopentane (compact, spherical $C_{5}H_{12}$) boils at 10°C. What explains this difference?',
             options: [
-              'n-Pentane has more electrons than neopentane',
-              'n-Pentane is polar while neopentane is nonpolar',
-              'n-Pentane has greater surface area, allowing more contact for LDF',
-              'Neopentane has hydrogen bonding that lowers its boiling point'
+              'n-Pentane has more electrons than neopentane does',
+              'n-Pentane is polar, while neopentane is nonpolar',
+              'n-Pentane\'s longer shape gives more surface contact for LDF',
+              'Neopentane\'s branching weakens its C–H bonds'
             ],
             correctAnswer: 2,
             explanation: 'Both molecules have the same molecular formula (same number of electrons), so they have the same polarizability per molecule. However, n-pentane\'s elongated shape provides more surface area for intermolecular contact, resulting in stronger cumulative LDF and a higher boiling point.'

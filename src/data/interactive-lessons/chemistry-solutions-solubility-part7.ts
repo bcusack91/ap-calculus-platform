@@ -82,12 +82,12 @@ $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \
             question: 'A student dissolves a solid in water and the resulting solution does not conduct electricity. Which of the following could be the solute?',
             options: [
               'NaCl',
-              '$KNO_{3}$',
-              '$C_{6}H_{12}O_{6}$ (glucose)',
+              '$Al_{2}(SO_{4})_{3}$',
+              '$C_{6}H_{12}O_{6}$',
               'HCl'
             ],
             correctAnswer: 2,
-            explanation: 'A solution that does not conduct electricity contains no ions — the solute is a nonelectrolyte. Glucose dissolves as intact molecules and does not ionize. NaCl, $KNO_{3}$, and HCl all produce ions in water.'
+            explanation: 'A solution that does not conduct electricity contains no ions — the solute is a nonelectrolyte. Glucose $(C_{6}H_{12}O_{6})$ dissolves as intact molecules and does not ionize. NaCl, $Al_{2}(SO_{4})_{3}$, and HCl all produce ions in water.'
           },
           {
             question: 'When $Ba(NO_{3})_{2}(aq)$ is mixed with $Na_{2}SO_{4}(aq)$, a precipitate forms. The precipitate is:',
@@ -163,11 +163,11 @@ $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-2.79', '25.0', '3.0'],
+        correctAnswers: ['-2.79', '25.0', '2.99'],
         hint1: '$n = 9.52/95.21 = 0.1000$ mol. $m = 0.1000/0.200 = 0.500$ m. $\\Delta T_f = 3(1.86)(0.500)$.',
         hint2: '$V_1 = M_2V_2/M_1 = (0.600)(500.0)/(12.0)$.',
         hint3: '$i = \\Pi/(MRT) = 1.83/((0.0250)(0.08206)(298))$.',
-        explanation: '1) $n = 0.1000$ mol. $m = 0.500$ m. $\\Delta T_f = 3(1.86)(0.500) = 2.79$ °C. $T_f = 0.00 - 2.79 = -2.79$ °C. 2) $V_1 = (0.600)(500.0)/(12.0) = 25.0$ mL. 3) $i = 1.83/((0.0250)(0.08206)(298)) = 1.83/(0.6114) = 2.99 \\approx 3.0$.'
+        explanation: '1) $n = 0.1000$ mol. $m = 0.500$ m. $\\Delta T_f = 3(1.86)(0.500) = 2.79$ °C. $T_f = 0.00 - 2.79 = -2.79$ °C. 2) $V_1 = (0.600)(500.0)/(12.0) = 25.0$ mL. 3) $i = 1.83/((0.0250)(0.08206)(298)) = 1.83/(0.6114) = 2.99$, so $i \\approx 3$ (three ions per formula unit).'
       }
     },
     {
@@ -196,7 +196,7 @@ $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \
           },
           {
             label: 'For a 1.0 m NaCl solution, the measured freezing point depression is slightly less than 3.72°C because',
-            options: ['NaCl does not fully dissolve', 'Ion pairing reduces the effective i', 'K_f changes with concentration', 'Water evaporates']
+            options: ['NaCl does not fully dissolve at 1.0 m', 'Ion pairing reduces the effective i', 'K_f changes with concentration', 'NaCl is a weak electrolyte in water']
           }
         ],
         correctAnswers: ['Always soluble', 'Osmotic pressure', 'Quadruples', '$K^{+}$ and $NO_{3}^{-}$', 'Ion pairing reduces the effective i'],
@@ -259,13 +259,13 @@ $$m = \\frac{0.744}{(2)(1.86)} = 0.200 \\; m, \\quad n = 0.200 \\times 0.0500 = 
           {
             question: 'When preparing a standard solution using a volumetric flask, the meniscus of the solution should be:',
             options: [
-              'Above the calibration mark',
-              'At the calibration mark (bottom of meniscus)',
-              'Below the calibration mark',
-              'It does not matter'
+              'With its top edge level with the calibration mark',
+              'With its bottom level with the calibration mark',
+              'Just below the calibration mark, to allow mixing',
+              'Just above the calibration mark, to allow for loss'
             ],
             correctAnswer: 1,
-            explanation: 'For accurate solution preparation, the bottom of the meniscus must be aligned with the calibration mark on the volumetric flask. Reading above or below introduces systematic error in concentration.'
+            explanation: 'For accurate solution preparation, the bottom of the meniscus must be aligned with the calibration mark on the volumetric flask. Lining up the top edge, or stopping above or below the mark, introduces a systematic error in concentration.'
           },
           {
             question: 'A 0.100 M $Al(NO_{3})_{3}$ solution ($i = 4$) at 25°C has an osmotic pressure closest to:',

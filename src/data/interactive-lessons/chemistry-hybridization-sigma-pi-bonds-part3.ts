@@ -95,8 +95,8 @@ Imagine two p orbitals overlapping side-by-side. If you rotate one atom 90°, th
             options: [
               'Side-by-side (lateral) overlap',
               'Head-on (end-to-end) overlap',
-              'No overlap — electrons are shared ionically',
-              'Overlap only in d orbitals'
+              'Overlap above and below the bond axis',
+              'Overlap of two s orbitals only'
             ],
             correctAnswer: 1,
             explanation: 'Sigma bonds form by head-on overlap of orbitals, concentrating electron density along the bond axis.'
@@ -231,7 +231,7 @@ $$\\boxed{\\text{Triple bond} = 1\\sigma + 2\\pi}$$
           {
             id: 'hy-3-7-dd3',
             label: 'The effect of a pi bond on rotation around the bond axis:',
-            options: ['Allows free rotation', 'Prevents free rotation', 'Has no effect on rotation', 'Increases rotation speed'],
+            options: ['Allows free rotation', 'Prevents free rotation', 'No effect at all', 'Speeds up rotation'],
             correctIndex: 1,
             explanation: 'Pi bonds prevent free rotation because rotating would break the side-by-side orbital overlap.'
           },
@@ -266,13 +266,13 @@ $$\\boxed{\\text{Triple bond} = 1\\sigma + 2\\pi}$$
           {
             question: 'Ethene $(C_{2}H_{4})$ is a planar molecule because:',
             options: [
-              'All bonds are sigma bonds',
-              'The pi bond prevents rotation, locking atoms in a plane',
-              'The molecule is too small to be nonplanar',
-              'Hydrogen atoms are very light'
+              'Its C–H bonds repel equally, flattening the molecule',
+              'Its pi bond locks the atoms into one plane',
+              'Each carbon is $sp^{3}$, with its bonds in one plane',
+              'Its six atoms are too small to twist out of a plane'
             ],
             correctAnswer: 1,
-            explanation: 'The C=C double bond includes a pi bond formed by side-by-side p orbital overlap. This overlap requires all atoms to stay in the same plane — rotation would break the pi bond.'
+            explanation: 'The C=C double bond includes a pi bond formed by side-by-side p orbital overlap. This overlap requires all atoms to stay in the same plane — rotation would break the pi bond. Each carbon is $sp^{2}$, not $sp^{3}$.'
           }
         ]
       }

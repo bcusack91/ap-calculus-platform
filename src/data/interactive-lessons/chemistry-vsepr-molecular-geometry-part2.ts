@@ -81,9 +81,9 @@ Boron (B) commonly forms only 3 bonds and has **no lone pairs**, making it natur
           },
           {
             question: 'In $BF_{3}$, boron has only 6 electrons in its valence shell. What geometry does $BF_{3}$ adopt?',
-            options: ['Linear', 'Trigonal planar', 'Tetrahedral', 'Bent'],
+            options: ['Linear', 'Trigonal planar', 'Tetrahedral', 'Trigonal pyramidal'],
             correctAnswer: 1,
-            explanation: '$BF_{3}$ has 3 bonding electron domains and 0 lone pairs on boron. With a steric number of 3, it adopts trigonal planar geometry with 120° bond angles.'
+            explanation: '$BF_{3}$ has 3 bonding electron domains and 0 lone pairs on boron. With a steric number of 3, it adopts trigonal planar geometry with 120° bond angles. Trigonal pyramidal would require a lone pair on the central atom, as in $NH_{3}$.'
           }
         ]
       }
@@ -240,7 +240,7 @@ This connection between VSEPR geometry and orbital hybridization is fundamental 
             question: 'A molecule has the formula $AX_{3}$ with no lone pairs on atom A. What is its electron domain geometry?',
             options: [
               'Linear',
-              'Bent',
+              'Trigonal pyramidal',
               'Trigonal planar',
               'Tetrahedral'
             ],

@@ -112,7 +112,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
               'Only the molar mass of the solute',
               'The density of the solution',
               'The vapor pressure of the solution',
-              'The temperature only'
+              'The temperature of the solution only'
             ],
             correctAnswer: 1,
             explanation: 'Molality uses mass of solvent, while molarity uses volume of solution. To convert between them, you need the density of the solution to relate mass to volume.'
@@ -122,7 +122,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
             options: [
               'Molarity and mole fraction',
               'Molality and mass percent',
-              'Molarity and molality (approximately)',
+              'Molarity and molality',
               'Mass percent and ppm'
             ],
             correctAnswer: 2,
@@ -131,13 +131,13 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
           {
             question: 'A 5.00% by mass NaCl solution has a density of 1.034 g/mL. What is its molarity? ($M_{\\text{NaCl}} = 58.44$ g/mol)',
             options: [
-              '0.855 M',
+              '0.856 M',
               '0.885 M',
               '1.034 M',
               '0.500 M'
             ],
             correctAnswer: 1,
-            explanation: 'In 1.000 L of solution: mass = $1034$ g. Mass NaCl = $0.0500 \\times 1034 = 51.7$ g. Moles = $51.7/58.44 = 0.885$ mol. $M = 0.885$ M.'
+            explanation: 'In 1.000 L of solution: mass = $1034$ g. Mass NaCl = $0.0500 \\times 1034 = 51.7$ g. Moles = $51.7/58.44 = 0.885$ mol. $M = 0.885$ M. Ignoring the density (assuming 1000 g per liter) gives 0.856 M.'
           }
         ]
       }
@@ -157,12 +157,11 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 **3)** What is the osmotic pressure (atm) of a 0.0500 M KBr ($i = 2$) solution at 25°C? (to 3 significant figures)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['-0.37', '100.51', '2.45'],
+        questions: [{ question: '1)', answer: '-0.372', acceptableAnswers: ['-0.372', '-0.37'] }, { question: '2)', answer: '100.51', acceptableAnswers: ['100.51', '100.5', '101'] }, { question: '3)', answer: '2.45', acceptableAnswers: ['2.45'] }],
         hint1: '$n = 9.00/180.16 = 0.04996$ mol. $m = 0.04996/0.250 = 0.200$ m. $\\Delta T_f = (1)(1.86)(0.200)$.',
         hint2: '$n = 14.6/58.44 = 0.2498$ mol. $m = 0.2498/0.500 = 0.500$ m. $\\Delta T_b = (2)(0.512)(0.500)$.',
         hint3: '$\\Pi = iMRT = (2)(0.0500)(0.08206)(298)$.',
-        explanation: '1) $m = 0.04996/0.250 = 0.200$ m. $\\Delta T_f = (1)(1.86)(0.200) = 0.372$ °C. $T_f = 0.00 - 0.372 = -0.37$ °C. 2) $m = 0.2498/0.500 = 0.500$ m. $\\Delta T_b = 2(0.512)(0.500) = 0.512$ °C. $T_b = 100.00 + 0.512 = 100.51$ °C. 3) $\\Pi = (2)(0.0500)(0.08206)(298) = 2.45$ atm.'
+        explanation: '1) $m = 0.04996/0.250 = 0.200$ m. $\\Delta T_f = (1)(1.86)(0.200) = 0.372$ °C. $T_f = 0.00 - 0.372 = -0.372$ °C. 2) $m = 0.2498/0.500 = 0.500$ m. $\\Delta T_b = 2(0.512)(0.500) = 0.512$ °C. $T_b = 100.00 + 0.512 = 100.51$ °C. 3) $\\Pi = (2)(0.0500)(0.08206)(298) = 2.45$ atm.'
       }
     },
     {
@@ -211,11 +210,11 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['70.0', '1335', '3.0'],
+        correctAnswers: ['70.0', '1335', '2.99'],
         hint1: '$\\Delta T_f = 1.86$ °C. $m = \\Delta T_f/(iK_f) = 1.86/(1 \\times 1.86) = 1.00$ m. Then $n = m \\times \\text{kg solvent}$.',
         hint2: '$\\Delta T_f = 10.0$ °C. $m = 10.0/(1 \\times 1.86) = 5.376$ m. Moles = $m \\times 4.00$. Mass = moles $\\times 62.07$.',
         hint3: '$i = \\Pi/(MRT) = 14.6/((0.200)(0.08206)(298))$.',
-        explanation: '1) $m = 1.86/(1 \\times 1.86) = 1.00$ m. $n = 1.00 \\times 0.0500 = 0.0500$ mol. $M = 3.50/0.0500 = 70.0$ g/mol. 2) $m = 10.0/1.86 = 5.376$ m. Moles = $5.376 \\times 4.00 = 21.51$ mol. Mass = $21.51 \\times 62.07 = 1335$ g. 3) $i = 14.6/((0.200)(0.08206)(298)) = 14.6/4.889 = 2.99 \\approx 3.0$.'
+        explanation: '1) $m = 1.86/(1 \\times 1.86) = 1.00$ m. $n = 1.00 \\times 0.0500 = 0.0500$ mol. $M = 3.50/0.0500 = 70.0$ g/mol. 2) $m = 10.0/1.86 = 5.376$ m. Moles = $5.376 \\times 4.00 = 21.51$ mol. Mass = $21.51 \\times 62.07 = 1335$ g. 3) $i = 14.6/((0.200)(0.08206)(298)) = 14.6/4.889 = 2.99$, so $i \\approx 3$ (three ions per formula unit).'
       }
     },
     {
@@ -228,22 +227,22 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
         dropdowns: [
           {
             label: 'To determine the molar mass of an unknown using freezing point depression, you need to know',
-            options: ['Only the freezing point change', 'The freezing point change, mass of solute, and mass of solvent', 'Only the molarity', 'The vapor pressure']
+            options: ['$\\Delta T_f$ and the solute mass only', '$\\Delta T_f$, solute mass, and solvent mass', 'The solution\'s molarity and volume', '$\\Delta T_f$ and the solution\'s vapor pressure']
           },
           {
             label: 'If a solution has a larger $\\Delta T_f$ than predicted for a nonelectrolyte, the solute is likely',
-            options: ['A nonelectrolyte', 'An electrolyte that dissociates', 'Insoluble', 'A gas']
+            options: ['A nonelectrolyte with a high molar mass', 'An electrolyte that dissociates', 'A solute that only partly dissolves', 'A volatile solute that evaporates']
           },
           {
             label: 'The formula $\\Pi = iMRT$ uses molarity instead of molality because',
-            options: ['Molarity is more accurate', 'Osmotic pressure is measured at constant temperature', 'The derivation comes from the ideal gas law (PV = nRT)', 'There is no particular reason']
+            options: ['Molarity is more accurate than molality', 'Osmotic pressure is measured at constant temperature', 'It is derived from the ideal gas law, $PV = nRT$', 'Molality cannot be used for aqueous solutions']
           },
           {
             label: 'For a dilute aqueous solution, molarity and molality are approximately equal because',
-            options: ['They use the same units', 'The density of dilute solution ≈ 1.00 g/mL, so 1 L ≈ 1 kg', 'Moles cancel out', 'Temperature has no effect']
+            options: ['Both units divide moles by the solvent mass', 'Dilute solutions are ~1 g/mL, so 1 L ≈ 1 kg', 'The moles of solute cancel out in both', 'Temperature does not affect either unit']
           }
         ],
-        correctAnswers: ['The freezing point change, mass of solute, and mass of solvent', 'An electrolyte that dissociates', 'The derivation comes from the ideal gas law (PV = nRT)', 'The density of dilute solution ≈ 1.00 g/mL, so 1 L ≈ 1 kg'],
+        correctAnswers: ['$\\Delta T_f$, solute mass, and solvent mass', 'An electrolyte that dissociates', 'It is derived from the ideal gas law, $PV = nRT$', 'Dilute solutions are ~1 g/mL, so 1 L ≈ 1 kg'],
         hint1: 'You need $\\Delta T_f$ to find molality, mass of solvent to find moles, and mass of solute to find molar mass.',
         hint2: 'A larger $\\Delta T_f$ means more particles ($i > 1$), which implies dissociation.',
         hint3: 'The osmotic pressure equation is derived from the ideal gas law, which uses volume.',
@@ -274,7 +273,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
             options: [
               'Boiling point elevation',
               'Freezing point depression',
-              'Osmotic pressure measurement',
+              'Osmotic pressure',
               'Mass percent analysis'
             ],
             correctAnswer: 2,

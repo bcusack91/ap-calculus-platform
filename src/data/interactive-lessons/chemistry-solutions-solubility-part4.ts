@@ -209,7 +209,7 @@ For AP calculations, use the **theoretical** (ideal) $i$ unless told otherwise.
             question: 'Which aqueous solution has the highest boiling point?',
             options: [
               '0.10 m glucose ($i = 1$)',
-              '0.10 m NaCl ($i = 2$)',
+              '0.10 m $NH_{4}NO_{3}$ ($i = 2$)',
               '0.10 m $CaCl_{2}$ ($i = 3$)',
               '0.10 m $K_{3}PO_{4}$ ($i = 4$)'
             ],
@@ -230,10 +230,10 @@ For AP calculations, use the **theoretical** (ideal) $i$ unless told otherwise.
           {
             question: 'Road salt (NaCl) works to melt ice because:',
             options: [
-              'It raises the freezing point of water',
-              'It lowers the freezing point of water below the ambient temperature',
-              'It is an exothermic reaction with ice',
-              'It absorbs moisture from the air'
+              'It raises the freezing point of water above 0°C',
+              'It lowers the freezing point below the air temperature',
+              'It reacts exothermically with ice, releasing heat',
+              'It absorbs water vapor from the air, drying the ice'
             ],
             correctAnswer: 1,
             explanation: 'NaCl dissolves in the thin water layer on ice and depresses the freezing point. If the new freezing point is below the current temperature, the ice melts.'
@@ -278,18 +278,18 @@ For AP calculations, use the **theoretical** (ideal) $i$ unless told otherwise.
           },
           {
             label: 'Adding a solute to a pure solvent causes the boiling point to',
-            options: ['Increase', 'Decrease', 'Stay the same', 'Become unpredictable']
+            options: ['Increase', 'Decrease', 'Stay the same', 'Increase only for ionic solutes']
           },
           {
             label: '$CaCl_{2}$ ($i = 3$) is more effective than NaCl ($i = 2$) as a road deicer because',
-            options: ['$CaCl_{2}$ is cheaper', '$CaCl_{2}$ produces more particles per formula unit', '$CaCl_{2}$ has a higher molar mass', '$CaCl_{2}$ is more soluble in organic solvents']
+            options: ['$CaCl_{2}$ is cheaper per kilogram than NaCl', '$CaCl_{2}$ gives more particles per formula unit', '$CaCl_{2}$ has the higher molar mass of the two', '$CaCl_{2}$ raises the freezing point of the water']
           },
           {
             label: 'The colligative property formulas use molality instead of molarity because molality',
-            options: ['Is easier to measure', 'Does not change with temperature', 'Is always larger', 'Uses grams instead of moles']
+            options: ['Is easier to measure in the lab', 'Does not change with temperature', 'Is always larger than molarity', 'Counts solute in grams, not moles']
           }
         ],
-        correctAnswers: ['number of solute particles', 'Increase', '$CaCl_{2}$ produces more particles per formula unit', 'Does not change with temperature'],
+        correctAnswers: ['number of solute particles', 'Increase', '$CaCl_{2}$ gives more particles per formula unit', 'Does not change with temperature'],
         hint1: 'The word "colligative" relates to the collective effect of particles.',
         hint2: 'Solute particles disrupt the solvent structure, requiring more energy to boil.',
         hint3: 'More particles per formula unit → greater freezing point depression.',
@@ -308,12 +308,12 @@ For AP calculations, use the **theoretical** (ideal) $i$ unless told otherwise.
             question: 'A 0.40 m solution of a nonelectrolyte in water has a freezing point of $-0.74$ °C. What is $K_f$ for water based on this data?',
             options: [
               '0.512 °C/m',
-              '1.86 °C/m',
+              '0.54 °C/m',
               '1.85 °C/m',
               '0.74 °C/m'
             ],
             correctAnswer: 2,
-            explanation: '$\\Delta T_f = 0.74$ °C (the magnitude of the depression). $K_f = \\Delta T_f / (im) = 0.74 / (1 \\times 0.40) = 1.85$ °C/m, which is consistent with the known $K_f = 1.86$ °C/m (rounding differences).'
+            explanation: '$\\Delta T_f = 0.74$ °C (the magnitude of the depression). $K_f = \\Delta T_f / (im) = 0.74 / (1 \\times 0.40) = 1.85$ °C/m, which agrees with the accepted $K_f$ for water within the precision of the data. Dividing the other way ($0.40/0.74 = 0.54$) inverts the ratio, and 0.512 °C/m is $K_b$, not $K_f$.'
           },
           {
             question: 'Which of the following 0.10 m aqueous solutions would have the highest boiling point?',
