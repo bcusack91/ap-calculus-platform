@@ -79,7 +79,7 @@ export const hgUrbanChallengesPart1Data = {
 |----------|-------------|---------|
 | **Smart growth** | Compact, walkable, mixed-use development | Portland, Oregon urban growth boundary |
 | **New Urbanism** | Designing walkable neighborhoods with diverse housing | Seaside, Florida; Celebration, Florida |
-| **Greenbelts** | Protected open space around cities limiting sprawl | London Green Belt (established 1947) |
+| **Greenbelts** | Protected open space around cities limiting sprawl | London Green Belt (enabled by the 1947 planning act, formally set in the 1950s) |
 | **Transit-oriented development** | Building dense housing near public transit stations | Curitiba, Brazil BRT system |
 | **Mixed-use zoning** | Combining residential, commercial, and retail in one area | Many European city centers |
 

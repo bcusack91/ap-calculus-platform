@@ -182,15 +182,15 @@ Alfred Weber argued that industries locate where **costs are minimized**:
       exercise: {
         questions: [
           {
-            question: 'A developing country has 60% of workers in agriculture, 20% in manufacturing, and 20% in services. According to Rostow, this country is MOST likely in:',
+            question: 'For about twenty years, a country\'s factory output grows rapidly, led by a few export industries such as textiles, while its cities fill with rural migrants. In Rostow\'s model, this period is MOST likely:',
             options: [
               'Stage 1 (Traditional society)',
               'Stage 3 (Takeoff)',
               'Stage 4 (Drive to maturity)',
               'Stage 5 (Age of mass consumption)'
             ],
-            correctAnswer: 0,
-            explanation: 'A country with 60% of workers in agriculture (primary sector) is characteristic of Rostow Stage 1 — a traditional society with limited industrialization and subsistence agriculture.'
+            correctAnswer: 1,
+            explanation: 'Rostow described takeoff as a short burst of rapid growth concentrated in a few leading industries, with fast urbanization. A traditional society has little manufacturing, the drive to maturity spreads growth across many industries, and mass consumption centers on consumer goods and services.'
           },
           {
             question: 'A factory moves from Detroit to rural Mississippi to reduce costs, while other factories move from the US to Vietnam. These both illustrate:',
