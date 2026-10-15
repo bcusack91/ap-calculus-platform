@@ -23,10 +23,10 @@ export const whIndustrialRevolutionPart3Data = {
           {
             question: 'The most fundamental change the factory system made to work was:',
             options: [
-              'Converting workers from producers who owned the means of production and controlled their labor process (artisans) to wage laborers who sold their time to factory owners who controlled the pace, schedule, and organization of production — fundamentally changing workers\' relationship to their own labor',
-              'Factory work was less dangerous than artisan work',
-              'Factory workers earned significantly more than artisan workers',
-              'Factory work preserved artisan skill levels while adding efficiency',
+              'Artisans who owned tools and set their own pace became wage laborers working on the owner\'s schedule',
+              'Workers kept control of their tools but moved them into shared buildings rented from merchants',
+              'Factory jobs paid far more than craft work, so most artisans happily abandoned their workshops',
+              'Skilled artisans became factory supervisors, preserving their craft while directing unskilled helpers',
             ],
             correctAnswer: 0,
             explanation: 'Marx\'s "alienation of labor" concept captures this AP-essential change: the artisan owned tools, controlled process, and produced a complete product; the factory worker owned nothing, controlled nothing, and produced a fragment of a product as part of a mechanized process controlled by capital. This relationship change — from producer to wage laborer — is the defining feature of industrial capitalism and the foundation of 19th-century labor politics.'
@@ -34,10 +34,10 @@ export const whIndustrialRevolutionPart3Data = {
           {
             question: 'Child labor in early industrial Britain was primarily driven by:',
             options: [
-              'Economic necessity and factory owners\' profit calculation — working-class families needed children\'s wages to survive on industrial wages; factory owners preferred child workers for lower wages, physical size (useful in narrow mine passages and under machinery), and perceived docility compared to adult workers who might organize',
-              'Child labor was a traditional practice in all societies with no industrial dimension',
-              'Factory owners were required by law to employ children',
-              'Child workers were paid equally to adult workers',
+              'Families needing children\'s wages to survive, and owners who valued children as cheap, small, and compliant workers',
+              'A labor shortage after the Napoleonic Wars, when owners had no adult workers left to hire at any wage',
+              'Traditional farm customs carried into mills unchanged, with children paid the same wages as adults',
+              'Factory owners\' preference for children\'s technical skills, education, and experience over adult labor',
             ],
             correctAnswer: 0,
             explanation: 'Child labor had both supply-side (families needed income) and demand-side (owners preferred cheap, small, docile workers) drivers. The AP sophistication is recognizing both: reformers who focused only on "unscrupulous factory owners" missed that working-class families often depended on children\'s wages to survive; factory acts that banned child labor without providing alternative income could actually harm the families they meant to protect. This complexity explains why labor reform was slow and contested.'
@@ -102,10 +102,10 @@ Political responses to industrial conditions:
           {
             question: 'The Luddite movement (1811-1816) demonstrated:',
             options: [
-              'Working-class resistance to deskilling — skilled textile artisans (framework knitters, hand-loom weavers) destroyed factory machinery not because they opposed all technology but because specific machines replaced skilled craft labor with unskilled factory labor, destroying the artisan way of life that was both economically and culturally central to their identity',
-              'Luddites were opposed to all technology and progress generally',
-              'Luddites were middle-class reformers opposed to factory conditions',
-              'The Luddite movement successfully stopped textile mechanization',
+              'Skilled textile workers smashing machines that replaced their craft, not a rejection of technology itself',
+              'Middle-class reformers breaking machines to protest the hours and conditions imposed on child workers',
+              'Factory owners destroying rivals\' machines to slow down competitors during the postwar trade slump of 1815',
+              'Workers opposing all mechanization, a campaign that halted textile machinery until the 1830s',
             ],
             correctAnswer: 0,
             explanation: 'The AP correction for "Luddites = anti-technology": the Luddites were skilled workers defending skilled work, not opponents of progress generally. They targeted specific machines (the stocking frame, the power loom) that destroyed specific skills (framework knitting, hand weaving), not technology as a whole. Their argument was that technology was being deployed to transfer income from skilled workers to factory owners — a labor-market analysis, not a reactionary anti-progress position. This nuance is important for AP analysis of industrial resistance.'
@@ -113,10 +113,10 @@ Political responses to industrial conditions:
           {
             question: 'The Factory Acts (Britain, 1830s-1850s) demonstrated:',
             options: [
-              'That industrial capitalism generated both exploitation and democratic reform responses — the same political system that enabled factory owners to employ children 12 hours a day could be pressured through parliamentary reform, investigative commissions, and public opinion to regulate those practices, demonstrating that industrial society contained reform mechanisms alongside exploitation',
-              'Factory Acts completely solved all labor exploitation problems immediately',
-              'Factory Acts were never passed due to factory owners\' complete political control',
-              'Labor reform was impossible under capitalist systems',
+              'That public pressure and Parliamentary inquiries could push the state to regulate factory abuses',
+              'That factory owners controlled Parliament so completely that no limits on child labor passed before 1900',
+              'That one sweeping law in 1833 ended child labor and long working hours in every British mill within a decade',
+              'That only a working-class revolution could change factory conditions, since Parliament refused every reform',
             ],
             correctAnswer: 0,
             explanation: 'Factory Acts demonstrate AP\'s theme of reform within capitalist industrial systems: parliamentary investigative commissions produced horrifying evidence of child labor conditions; Evangelical reformers (Shaftesbury) organized public pressure; eventually Parliament responded with regulation. The reform was incomplete and contested, but demonstrated that representative political systems could be used to regulate industrial capitalism — a different trajectory from revolutionary challenge to the system itself.'
@@ -124,10 +124,10 @@ Political responses to industrial conditions:
           {
             question: 'Urban industrial slum conditions (overcrowding, disease, pollution) demonstrate which AP principle?',
             options: [
-              'Industrial development\'s benefits and costs were unequally distributed — factory owners and middle class gained from industrial production while working-class communities bore the concentrated costs (disease, pollution, dangerous work) of industrial production in their neighborhoods and bodies, demonstrating that market systems distribute costs differently from benefits',
-              'Urban conditions improved uniformly for all classes during industrialization',
-              'Slum conditions affected all social classes equally',
-              'Urban conditions during industrialization were no worse than pre-industrial rural conditions',
+              'Industry\'s gains went to owners and the middle class while workers\' districts bore its disease and pollution',
+              'Industrial growth raised living standards evenly, as sanitation improved at the same pace across all classes',
+              'Disease and pollution struck rich and poor equally, since wealthy families lived beside the factories too',
+              'Urban slums were no worse than village life, because rural cottages had the same crowding and disease',
             ],
             correctAnswer: 0,
             explanation: 'The unequal distribution of industrial costs and benefits is AP\'s framework for understanding 19th-century labor politics: factory owners lived in suburban villas away from factory smoke; working-class communities lived next to factories, breathed the pollution, and endured the epidemics (1832 cholera epidemic killed disproportionately in working-class neighborhoods). This geographic and social unequal distribution of industrial costs explains why labor politics became so contentious — the people bearing the costs (workers) and the people receiving the profits (owners) were different people.'
@@ -189,10 +189,10 @@ Political responses to industrial conditions:
           {
             question: 'The emergence of a professional middle class (factory managers, accountants, lawyers, doctors) during industrialization demonstrates:',
             options: [
-              'Industrial capitalism created new social positions that required education and professional skills, expanding the social structure beyond aristocracy/peasantry toward a more complex hierarchy that included a professional class positioned between factory owners and factory workers — this new middle class had different interests from both working class and aristocracy and became the political force supporting liberal reform',
-              'The middle class was unchanged by industrialization',
-              'Industrial capitalism produced only two classes: factory owners and factory workers',
-              'The professional middle class supported working-class labor movements',
+              'Industry created educated professional jobs, forming a class between owners and workers that backed liberal reform',
+              'The middle class stayed the same size, since professionals had existed in similar numbers before factories',
+              'Industry produced only two classes, owners and workers, leaving no room for a professional middle stratum',
+              'Professionals sided with factory workers, leading the trade unions and Chartist marches of the 1840s',
             ],
             correctAnswer: 0,
             explanation: 'The expanding middle class is AP\'s mechanism connecting industrialization to political change: the professional-managerial middle class (factory managers, bankers, lawyers, doctors, engineers) created by industrial capitalism became the social constituency for parliamentary reform (1832 Reform Act expanded their voting rights), liberal economics (free trade), and moderate labor regulation. Their political interests (legal protections, contract enforcement, regulated markets) differed from both working-class interests (higher wages, union rights) and aristocratic interests (land, privilege) — creating the three-cornered political competition of 19th-century Britain.'
@@ -200,10 +200,10 @@ Political responses to industrial conditions:
           {
             question: 'For AP, the factory system\'s most significant long-term social consequence was:',
             options: [
-              'The creation of a permanent industrial working class (proletariat) with shared economic conditions, shared urban neighborhoods, and shared vulnerability to industrial fluctuations — creating the social basis for trade unionism, labor parties, and socialist movements that would reshape 19th-20th century politics by organizing people who shared factory labor conditions',
-              'The factory system destroyed all social classes and created equality',
-              'The working class was too divided to organize any political movements',
-              'Industrial capitalism eliminated poverty for the working class within one generation',
+              'A permanent urban working class with shared conditions, which became the base for unions and labor parties',
+              'A society without classes, which emerged as factory wages leveled differences between owners and workers',
+              'A working class too scattered across rural workshops to ever form any unions or political parties before 1900',
+              'The end of working-class poverty within a generation, as factory wages rose faster than food prices',
             ],
             correctAnswer: 0,
             explanation: 'The industrial working class as a political entity is the long-term social consequence: before factories, workers were dispersed (domestic production, agricultural labor, artisan workshops); factories concentrated them in urban neighborhoods with shared conditions. This concentration created the social basis for collective organization: workers who lived near each other, worked together, and faced the same conditions could organize collectively in ways that dispersed rural workers could not. This is the foundation of the labor movement and, by extension, the welfare state.'

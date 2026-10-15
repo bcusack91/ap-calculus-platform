@@ -23,24 +23,24 @@ export const whExplorationColumbianExchangePart7Data = {
           {
             question: 'An AP SAQ asks: "Briefly explain ONE cause of European maritime exploration c. 1450-1550." Which response earns full credit?',
             options: [
-              'European merchants\' desire to access Asian spice and luxury goods markets without paying Ottoman tolls on overland routes motivated Portuguese investment in African coastal exploration (seeking an ocean route to India via the Cape of Good Hope) — demonstrating that commercial motivation was a primary driver of systematic exploration',
-              'Listing all possible causes without explaining any single one in depth',
-              'Arguing only religious motivation explains European exploration without connecting to commercial factors',
-              'Describing exploration outcomes without explaining what caused the exploration to occur',
+              'Merchants wanted spices without paying Ottoman middlemen, so Portugal funded voyages around Africa',
+              'Europeans wanted Asian spices and luxury goods, which included silk, pepper, cloves and porcelain',
+              'Merchants, monarchs, missionaries, scientists and adventurers all had many reasons to explore',
+              'Merchants in Lisbon grew wealthy after 1500 once da Gama\'s voyages brought back Indian pepper',
             ],
             correctAnswer: 0,
-            explanation: 'Full SAQ credit requires: claim (desire to bypass Ottoman tolls) + evidence (Portuguese Cape route exploration) + reasoning (commercial motivation drove systematic state investment). The response answers ONE cause specifically rather than trying to list everything — focused, evidenced, reasoned. SAQ responses that try to cover everything typically earn less credit than those that develop ONE cause thoroughly.'
+            explanation: 'Full SAQ credit requires: claim (desire to bypass Ottoman tolls) + evidence (Portuguese Cape route exploration) + reasoning (commercial motivation drove systematic state investment). The other responses only list goods, list causes without explaining one, or describe an outcome rather than a cause. SAQ responses that try to cover everything typically earn less credit than those that develop ONE cause thoroughly.'
           },
           {
             question: 'For an AP LEQ about the Columbian Exchange\'s consequences, which complexity argument earns the highest score?',
             options: [
-              'The Columbian Exchange had fundamentally different consequences for different peoples simultaneously: while New World crops were beginning to increase Old World food security and population, disease was catastrophically reducing Native American populations by 50-90% — demonstrating that historical processes have uneven and contradictory effects on different groups at the same time',
-              'The exchange was uniformly beneficial for all peoples who participated in it',
-              'The exchange was uniformly catastrophic for all peoples who encountered it',
-              'Only one type of consequence (crop exchange OR disease) was significant',
+              'The exchange helped Old World populations even as it devastated American ones, so its effects were uneven',
+              'The exchange helped every population it reached, since new crops more than offset disease losses',
+              'The exchange harmed every population it reached, since disease losses outweighed any benefit from new crops',
+              'The exchange mattered only through crops, since disease losses in the Americas recovered within decades',
             ],
             correctAnswer: 0,
-            explanation: 'AP complexity is not about being artificially "balanced" — it\'s about accurately representing historical reality. The same Columbian Exchange → potatoes feeding European peasants AND smallpox killing Native Americans simultaneously. Identifying these contradictory, simultaneous effects on different groups demonstrates that you understand how historical processes actually work: unevenly, with winners and losers, and with consequences that vary dramatically depending on where you are standing.'
+            explanation: 'AP complexity is not about being artificially "balanced" — it\'s about accurately representing historical reality. The same Columbian Exchange → potatoes feeding European peasants AND smallpox reducing Native American populations by 50-90% simultaneously. Identifying these contradictory, simultaneous effects on different groups demonstrates that you understand how historical processes actually work: unevenly, with winners and losers, and with consequences that vary dramatically depending on where you are standing.'
           }
         ]
       }
@@ -74,7 +74,7 @@ export const whExplorationColumbianExchangePart7Data = {
 
 > **AP Causal Chain to Memorize**
 
-Ottoman trade route control → European commercial motivation → caravel technology + state sponsorship → Portuguese African coast exploration → Vasco da Gama India 1498 → Columbus Americas 1492 → Columbian Exchange → disease + indigenous collapse → labor shortage → enslaved African labor → Atlantic slave trade → global commodity economy (silver, sugar, tobacco) → Manila Galleon → Chinese demand for silver → first global economy c. 1600
+Ottoman trade route control → European commercial motivation → caravel technology + state sponsorship → Portuguese African coast exploration → Columbus Americas 1492 + Vasco da Gama India 1498 → Columbian Exchange → disease + indigenous collapse → labor shortage → enslaved African labor → Atlantic slave trade → global commodity economy (silver, sugar, tobacco) → Manila Galleon → Chinese demand for silver → first global economy c. 1600
 
 > **AP Comparison Table**
 
@@ -96,35 +96,35 @@ Ottoman trade route control → European commercial motivation → caravel techn
           {
             question: 'An AP DBQ includes a document from a Spanish Dominican friar describing indigenous suffering under the encomienda. The most sophisticated sourcing analysis would:',
             options: [
-              'Note that the friar\'s religious vocation gave him direct access to indigenous communities (credibility from proximity) while his reform agenda (advocating for New Laws limiting encomienda) shaped his emphasis on suffering rather than other aspects of the system — making the document both valuable evidence of conditions and a product of a specific advocacy purpose',
-              'Dismiss the document entirely because the friar had a religious agenda',
-              'Accept the document as completely objective because friars were neutral observers',
-              'Ignore the author\'s purpose and focus only on the document\'s factual content',
+              'Note that his access gave him firsthand knowledge, but his reform aims shaped what he chose to stress',
+              'Dismiss the account as unreliable, since a friar with a religious agenda had reason to invent abuses',
+              'Accept the account as fully objective, since friars stood outside colonial politics and profit',
+              'Set aside the author and purpose, and judge the account only by how many details it contains',
             ],
             correctAnswer: 0,
-            explanation: 'Sophisticated AP sourcing holds two truths simultaneously: the document has real evidentiary value (the friar witnessed conditions others didn\'t document) AND its content reflects a specific agenda (advocacy for indigenous protection). "Having an agenda" doesn\'t mean "making things up" — it means the document\'s framing, emphasis, and selection reflect the author\'s purpose. Both the value and the limitation are worth noting. AP DBQ sourcing earns credit by explaining HOW the source\'s context affects what it tells us and what it omits.'
+            explanation: 'Sophisticated AP sourcing holds two truths simultaneously: the document has real evidentiary value (the friar\'s vocation gave him direct access to indigenous communities, and he witnessed conditions others didn\'t document) AND its content reflects a specific agenda (advocacy for the New Laws limiting the encomienda). "Having an agenda" doesn\'t mean "making things up" — it means the document\'s framing, emphasis, and selection reflect the author\'s purpose. AP DBQ sourcing earns credit by explaining HOW the source\'s context affects what it tells us and what it omits.'
           },
           {
             question: 'An AP question asks you to compare the Columbian Exchange to the Black Death as historical demographic events. Which argument is most sophisticated?',
             options: [
-              'Both demonstrate how disease transmission via exchange networks produces catastrophic demographic consequences, but in opposite regional directions: the Black Death reduced Old World populations by 30-50%; the Columbian Exchange simultaneously reduced New World populations by 50-90% while beginning to increase Old World populations via new food crops — the same mechanism (disease via exchange) produced regionally opposite outcomes',
-              'The two events are too different chronologically to compare meaningfully',
-              'Only the Black Death involved significant disease transmission via trade networks',
-              'The Columbian Exchange and Black Death had identical global demographic consequences',
+              'Both spread disease through exchange networks, with opposite effects on Old World and New World populations',
+              'Both spread disease through exchange networks, but neither had a lasting effect on population totals',
+              'They are too far apart in time to compare, since one occurred in the medieval era and one in the modern era',
+              'Both spread disease, but only the Black Death moved along trade routes while smallpox arrived by chance',
             ],
             correctAnswer: 0,
-            explanation: 'This cross-period comparison demonstrates analytical sophistication: same mechanism (disease via exchange networks) + different contexts (immunologically naive Americas; new food crops flowing to Old World simultaneously) = regionally opposite demographic outcomes. AP rewards arguments that use comparison to generate a broader principle (how exchange networks transmit disease) and then show how the same principle operates differently in different historical contexts.'
+            explanation: 'This cross-period comparison demonstrates analytical sophistication: the Black Death reduced Old World populations by roughly 30-50%; the Columbian Exchange reduced New World populations by 50-90% while new food crops began to increase Old World populations. Same mechanism (disease via exchange networks) + different contexts = regionally opposite demographic outcomes. AP rewards arguments that use comparison to generate a broader principle and then show how it operates differently in different contexts.'
           },
           {
             question: 'What is the most significant AP skill demonstrated by analyzing how American silver connected Peru, Spain, and China in a single economic circuit?',
             options: [
-              'Tracing global commodity chains across regional boundaries demonstrates that "world history" by 1600 involved genuine global economic integration — a Peruvian indigenous miner\'s forced labor, a Spanish merchant\'s commercial calculation, and a Chinese official\'s tax policy were all parts of a single interconnected system, not three separate regional stories',
-              'This analysis only demonstrates knowledge of Spanish colonial history',
-              'Global economic connections are only relevant for modern (post-1900) history',
-              'Analyzing commodity chains requires only economic knowledge with no social dimension',
+              'Tracing a commodity chain, showing one system linked distant miners and officials',
+              'Tracing a single empire\'s history, showing that silver mattered mainly to Spain\'s royal finances',
+              'Tracing a local economy over time, showing how Potosí\'s mines changed from 1545 to 1650',
+              'Tracing a cultural diffusion, showing how Chinese art styles spread to Spanish colonial churches',
             ],
             correctAnswer: 0,
-            explanation: 'The Potosí-Manila-China silver circuit is AP\'s proof that global history existed before the 20th century. Understanding this requires crossing the boundaries between Latin American history, European colonial history, and Chinese institutional history — which is exactly what AP World History\'s "world" framing demands. The ability to trace connections across regions, periods, and social groups is the core AP World History analytical skill.'
+            explanation: 'The Potosí-Manila-China silver circuit is AP\'s proof that global history existed before the 20th century: a Peruvian indigenous miner\'s forced labor, a Spanish merchant\'s calculation, and a Chinese official\'s tax policy were parts of a single system, not three separate regional stories. Understanding this requires crossing the boundaries between Latin American, European colonial, and Chinese institutional history — which is exactly what AP World History\'s "world" framing demands.'
           }
         ]
       }
@@ -145,7 +145,7 @@ Ottoman trade route control → European commercial motivation → caravel techn
           },
           {
             label: 'The Pacific trade route connecting American silver to Chinese silk markets was the ___',
-            options: ['Manila Galleon trade', 'Triangle trade', 'Indian Ocean trade', 'Silk Road']
+            options: ['Manila Galleon trade', 'Triangle trade', 'Indian Ocean trade', 'Trans-Saharan caravan trade']
           }
         ],
         correctAnswers: ['Caravel', 'Encomienda', 'Manila Galleon trade'],
@@ -164,24 +164,24 @@ Ottoman trade route control → European commercial motivation → caravel techn
           {
             question: 'For an AP comparison between indigenous labor systems and African slavery in colonial Americas, which argument best demonstrates complexity?',
             options: [
-              'Both were coercive labor systems serving colonial extraction, but they differed in their legal status (enslaved Africans were chattel with no legal personhood; indigenous workers under mita/encomienda had theoretically defined legal rights, however violated in practice), racial basis (African slavery was increasingly racial; indigenous labor was political-tributary), and demographic trajectory (indigenous populations declined; African populations in the Americas grew)',
-              'Indigenous labor systems and African slavery were identical in every respect',
-              'African slavery was always more brutal than any form of indigenous coerced labor',
-              'Both systems had equal legal protections for workers',
+              'Both were coercive, but they differed in legal status, racial basis and demographic trends',
+              'Both were coercive, but native workers were paid wages while enslaved Africans were not',
+              'Both were coercive, and they shared the same legal status, racial basis and demographic trends',
+              'Neither was coercive in law, and differences arose only from local customs on each estate',
             ],
             correctAnswer: 0,
-            explanation: 'This comparison earns complexity credit by identifying meaningful structural differences within a broader similarity (both were coercive): the legal distinction (chattel vs. tributary); the racial basis (African slavery became increasingly racial while indigenous coercion maintained political-tributary framing); and the demographic difference (indigenous decline vs. African growth in the Americas). These structural differences had different long-term consequences — and AP rewards recognizing that.'
+            explanation: 'This comparison earns complexity credit by identifying meaningful structural differences within a broader similarity (both were coercive): the legal distinction (enslaved Africans were chattel; indigenous workers under mita/encomienda had theoretically defined legal rights, however violated in practice); the racial basis (African slavery became increasingly racial while indigenous coercion kept a political-tributary framing); and the demographic difference (indigenous decline vs. African growth in the Americas). Mita workers received token wages, but that does not mark the core difference.'
           },
           {
             question: 'The most important AP lesson from studying European exploration and the Columbian Exchange is:',
             options: [
-              'That the same historical process (European commercial expansion) simultaneously created European wealth, devastated indigenous American populations, built African diaspora communities through forced migration, and transformed Old World agriculture — demonstrating that major historical transformations are never simple stories of progress or decline but involve multiple simultaneous, contradictory outcomes for different peoples',
-              'European exploration was a simple story of European progress and civilization-spreading',
-              'The Columbian Exchange was purely negative with no beneficial consequences for anyone',
-              'World history after 1492 is too complex to analyze with the AP framework',
+              'One process enriched Europe, devastated native peoples, created a diaspora and changed Old World farming',
+              'One process enriched Europe, spread its religion, civilized other peoples and brought progress everywhere',
+              'One process brought decline to every region it touched, leaving no group better off than before 1492',
+              'One process mattered mainly in Europe, while other regions changed little until the nineteenth century',
             ],
             correctAnswer: 0,
-            explanation: 'The meta-lesson of the Age of Exploration for AP is that the same historical process has radically different meanings depending on where you\'re standing: European commercial prosperity; Native American demographic catastrophe; African diaspora creation; Old World agricultural transformation. This multi-perspective framing — asking "beneficial for whom? catastrophic for whom?" — is the analytical stance AP World History rewards across all periods and topics.'
+            explanation: 'The meta-lesson of the Age of Exploration for AP is that the same historical process (European commercial expansion) has radically different meanings depending on where you\'re standing: European commercial prosperity; Native American demographic catastrophe; African diaspora creation through forced migration; Old World agricultural transformation. This multi-perspective framing — asking "beneficial for whom? catastrophic for whom?" — is the analytical stance AP World History rewards across all periods and topics.'
           }
         ]
       }

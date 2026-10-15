@@ -23,10 +23,10 @@ export const whIndustrialRevolutionPart5Data = {
           {
             question: 'The pace of British urbanization (17% to 75% urban, 1750-1900) was historically unprecedented because:',
             options: [
-              'No previous society had urbanized at this speed or to this degree — the combination of rural displacement (enclosure) and industrial employment pull created population concentration that outpaced any ability to plan, build sanitation, or develop public health infrastructure, explaining why early industrial cities had catastrophic disease rates',
-              'Roman empire cities had similarly rapid urbanization',
-              'British urbanization was slow compared to other industrializing nations',
-              'Urbanization had no connection to industrial employment',
+              'No earlier society urbanized so fast, and city growth outran any effort to build sanitation or plan housing',
+              'Roman and Chinese cities had grown just as fast, so British urbanization repeated an older pattern',
+              'Britain urbanized slowly compared with France and Germany, so its cities had ample time to plan sewers and sanitation',
+              'Most new city dwellers came from overseas immigration, which had no connection to factory employment',
             ],
             correctAnswer: 0,
             explanation: 'The speed and scale of industrialization-driven urbanization is AP\'s framework for understanding urban public health crises: pre-industrial cities grew slowly enough for incremental sanitation development; industrial cities grew faster than any infrastructure could follow. The 1832 cholera epidemic (32,000 deaths in Britain) was the consequence: overcrowded, unsanitated working-class urban neighborhoods provided perfect disease vectors. The epidemic ultimately prompted public health reform (1848 Public Health Act) — another demonstration that industrial problems generated reform responses.'
@@ -34,10 +34,10 @@ export const whIndustrialRevolutionPart5Data = {
           {
             question: 'Chartism (1838-1848) demonstrated which AP principle?',
             options: [
-              'Working-class political consciousness developed in response to industrial conditions — Chartism was the first mass working-class political movement demanding democratic reform (universal male suffrage, secret ballot) as the mechanism for achieving economic justice, demonstrating that industrial workers developed political agency alongside their economic organization',
-              'Chartism was a middle-class reform movement with no working-class participation',
-              'Chartism successfully achieved all its demands by 1848',
-              'Working-class people had no capacity for political organization during industrialization',
+              'Workers turned to democratic demands like universal male suffrage as a path to economic justice',
+              'Chartism was a middle-class campaign for free trade that working people neither joined nor supported',
+              'The Chartists won all six of their demands from Parliament by 1848, ending the movement in total triumph',
+              'Industrial workers proved unable to organize politically and left reform entirely to the aristocracy',
             ],
             correctAnswer: 0,
             explanation: 'Chartism is AP\'s example of early working-class political mobilization: the movement\'s 6 demands (universal male suffrage, secret ballot, annual Parliaments, paid MPs, abolition of property requirements, equal electoral districts) were all eventually adopted (over the next century) because the logic was sound. Chartism failed in the short term but demonstrated that the working class could develop sophisticated political demands and organize mass movements — the foundation of the labour movement that followed.'
@@ -101,10 +101,10 @@ Industrial capitalism changed women's economic roles with contradictory effects:
           {
             question: 'The difference between Marx\'s "scientific socialism" and Owen\'s "utopian socialism" was:',
             options: [
-              'Owen believed industrial capitalism could be reformed by enlightened industrialists building better factory communities; Marx argued that capitalism\'s class structure made reform impossible and that proletarian revolution was the only path to worker emancipation — a fundamental difference between reformist and revolutionary strategies for addressing industrial inequality',
-              'Both Marx and Owen advocated identical revolutionary overthrow of capitalism',
-              'Owen was more radical than Marx in his opposition to industrial capitalism',
-              'Both reformist and revolutionary socialism had no actual working-class followers',
+              'Owen hoped model factories could reform capitalism, while Marx saw revolution as the only way to end it',
+              'Owen and Marx both called for violent revolution, differing only on whether peasants or workers should lead',
+              'Owen was the more radical, demanding immediate revolution, while Marx favored gradual factory reform',
+              'Marx relied on enlightened factory owners, while Owen trusted organized workers to seize the state',
             ],
             correctAnswer: 0,
             explanation: 'This distinction is AP\'s framework for 19th-20th century political alternatives to industrial capitalism: reformist socialism (can capitalism be made more just through reform?) vs. revolutionary socialism (must capitalism be replaced entirely?). Owen\'s New Lanark demonstrated that better factory conditions were possible within capitalism; Marx argued this was exceptional and that capitalism\'s structural dynamics would systematically re-exploit labor. This debate between reform and revolution defined Western politics through the 20th century.'
@@ -112,10 +112,10 @@ Industrial capitalism changed women's economic roles with contradictory effects:
           {
             question: 'The "separate spheres" ideology (public = male, private = female) that emerged during industrialization demonstrates:',
             options: [
-              'Industrialization changed gender ideology alongside gender economics — as middle-class women were removed from productive economic activity (which moved into factories), a compensatory ideology developed idealizing women\'s domestic "sphere" as separate from but complementary to the male public sphere, providing ideological justification for women\'s exclusion from public life',
-              'Separate spheres ideology predated industrialization with no industrial connection',
-              'Working-class women were covered by separate spheres ideology identically to middle-class women',
-              'Separate spheres ideology was universally rejected and had no social impact',
+              'As production left the home, middle-class ideology idealized women\'s domestic role and kept them out of public life',
+              'The ideology long predated factories and owed nothing to the shift of production out of the household',
+              'Working-class women lived out the ideology fully, since factory wages let their families keep them at home',
+              'The ideology was rejected by Victorian society and had little effect on women\'s public or legal status',
             ],
             correctAnswer: 0,
             explanation: 'Separate spheres is AP\'s analysis of how ideology accompanies economic change: as industrialization moved production from household to factory, middle-class women were left in households that no longer produced economically. The "domestic sphere" ideology compensated for this economic displacement by elevating domestic management and child-rearing as morally superior to the commercial public sphere. This ideology later became the target of the first feminist movements, which demanded women\'s access to the public sphere the ideology had constructed as male.'
@@ -123,10 +123,10 @@ Industrial capitalism changed women's economic roles with contradictory effects:
           {
             question: 'Trade unions\' political significance during industrialization was that they:',
             options: [
-              'Created an organizational infrastructure for working-class collective action that extended beyond individual workplaces — trade union organization built workers\' capacity for sustained collective negotiation and eventually political mobilization, forming the organizational foundation for labor parties, minimum wage legislation, and welfare state development',
-              'Trade unions were primarily social clubs with no political significance',
-              'Trade unions only represented skilled workers with no broader labor movement connections',
-              'Trade union organization undermined rather than strengthened working-class political power',
+              'They built lasting groups for collective action that grew into labor parties and pushed welfare laws',
+              'They were mainly social clubs for skilled men, with no role in strikes, bargaining, or politics',
+              'They represented only skilled craftsmen and never linked up with broader labor or political movements',
+              'They weakened workers politically by splitting them into rival trades that could not cooperate',
             ],
             correctAnswer: 0,
             explanation: 'The organizational significance of trade unions is AP\'s mechanism connecting individual worker grievances to collective political action: individual workers are powerless against employers; organized workers in trade unions can strike and collectively bargain; multiple trade unions coordinating politically can demand legislation (Factory Acts, minimum wage); trade unions funding labor parties can achieve parliamentary representation. The organizational form — union → labor party → parliamentary representation — is the mechanism through which industrial workers achieved political power.'
@@ -188,10 +188,10 @@ Industrial capitalism changed women's economic roles with contradictory effects:
           {
             question: 'The new middle class created by industrialization (factory owners, managers, professionals) was politically significant because:',
             options: [
-              'The industrial middle class became the constituency for liberal democratic reform — they had economic power (business ownership, professional income) without political representation (aristocratic Parliament didn\'t represent them), creating the political pressure for parliamentary reform (1832 Reform Act) and liberalism as an ideology of rule by merit rather than birth',
-              'The middle class aligned politically with the working class in labor movements',
-              'The middle class supported aristocratic rule and opposed parliamentary reform',
-              'The middle class had no distinctive political interests during industrialization',
+              'With wealth but few votes, it pressed for parliamentary reform such as the 1832 Reform Act',
+              'It joined working-class unions and Chartists, uniting with them to demand higher wages after 1838',
+              'It sided with the aristocracy to block parliamentary reform, opposing the Reform Act of 1832 as too radical',
+              'It had no distinct political interests and split its votes evenly between the parties after 1832',
             ],
             correctAnswer: 0,
             explanation: 'Middle-class liberalism is AP\'s connection between industrialization and democratic reform: the emerging industrial middle class (manufacturers, merchants, professionals) created by capitalism had economic power but not political power in aristocratic parliamentary systems. Their political movement — liberalism (meritocracy, constitutional government, free trade, rule of law) — aimed to align political power with economic power. The 1832 Reform Act expanded suffrage to the middle class, fundamentally changing British politics. This is the mechanism connecting industrialization to democratization.'
@@ -199,10 +199,10 @@ Industrial capitalism changed women's economic roles with contradictory effects:
           {
             question: 'For AP, the most significant social consequence of industrialization was:',
             options: [
-              'The creation of a modern class structure — industrial bourgeoisie (capital owners) and industrial proletariat (wage workers) — whose structural conflict over wages, hours, and working conditions generated the political movements (trade unions, labor parties, socialism) that shaped 19th-20th century political history across the industrialized world',
-              'Industrialization eliminated class differences by creating equal wages',
-              'The most significant consequence was improved living standards with no social conflict',
-              'Industrialization had no significant impact on social structure',
+              'A class structure of bourgeoisie and proletariat whose conflict spawned unions, labor parties, and socialism',
+              'The end of class differences, as factory wages became equal for managers, clerks, and machine operators',
+              'Steadily rising living standards for every worker, which quickly removed social conflict over wages and hours',
+              'Very little social change, since most workers stayed in the same villages and trades as their parents',
             ],
             correctAnswer: 0,
             explanation: 'The class structure created by industrialization is the foundation of modern political history: the bourgeoisie-proletariat conflict Marx analyzed in 1848 structured political competition for the next century. Labor parties, welfare states, minimum wages, social insurance — all are political responses to the structural conflict between capital and labor that industrialization created. Understanding industrialization\'s social consequences is therefore understanding the origins of modern political institutions.'

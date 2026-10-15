@@ -62,10 +62,10 @@ By 1600, the world was connected by several major maritime trade routes:
           {
             question: 'What was the primary function of the Manila Galleon trade route (1565–1815)?',
             options: [
-              'It transported enslaved Africans from the Philippines to Spanish colonies in South America',
-              'It carried Spanish American silver to Manila, where it was exchanged for Chinese silk, porcelain, and spices',
-              'It connected British India with the Australian colonies for wool and textile trade',
-              'It was a military supply route used by Spain to reinforce its Caribbean fortifications'
+              'It shipped enslaved East Africans across the Pacific to labor in the silver mines of Potosí',
+              'It carried American silver west to Manila, where it bought Chinese silk and porcelain for Spain\'s colonies',
+              'It linked Manila with British India and Australia through a regular wool and cotton exchange',
+              'It supplied Spanish forts in the Caribbean with troops and cannon cast in Philippine foundries'
             ],
             correctAnswer: 1,
             explanation: 'The Manila Galleon made annual voyages between Acapulco and Manila from 1565 to 1815. Silver from Mexican and Peruvian mines was carried westward to the Philippines, where Chinese and Southeast Asian merchants exchanged it for luxury goods. This was the first regular transpacific trade route and made the global economy truly interconnected.'
@@ -73,10 +73,10 @@ By 1600, the world was connected by several major maritime trade routes:
           {
             question: 'Why was China the ultimate destination for much of the silver mined in the Americas?',
             options: [
-              'Chinese emperors collected silver as personal treasure and banned it from circulation in the economy',
-              'The Ming dynasty required tax payments in silver, creating enormous demand that the domestic supply could not meet',
-              'China had no silver deposits of its own and needed it exclusively for making jewelry and decorative objects',
-              'European merchants were legally required by the Pope to send all precious metals to China'
+              'Ming emperors hoarded silver in palace treasuries and banned its use in ordinary trade',
+              'Ming tax reforms required payment in silver, creating demand that domestic mines could not meet',
+              'China lacked silver deposits and needed imported metal mainly for jewelry and temple ornaments',
+              'Papal decrees required Catholic merchants to send their American silver to the Jesuit missions in China'
             ],
             correctAnswer: 1,
             explanation: 'The Ming Single Whip Reform consolidated various taxes into a single payment required in silver. Since China\'s domestic silver production was insufficient, Chinese merchants eagerly traded silk, porcelain, and tea for foreign silver — driving global demand that drew American silver eastward through European and Asian trade networks.'
@@ -120,10 +120,10 @@ Indigenous and enslaved peoples resisted colonial domination through multiple st
           {
             question: 'Which of the following is the BEST example of cultural syncretism in colonial Latin America?',
             options: [
-              'The Spanish crown\'s establishment of the Inquisition to enforce Catholic orthodoxy in Mexico',
-              'The celebration of Día de los Muertos, which blends Catholic All Saints\' Day with pre-Columbian Aztec death rituals',
-              'The construction of European-style cathedrals that completely replaced all indigenous temples',
-              'The Spanish encomienda system that organized indigenous labor for mining operations'
+              'The Spanish crown\'s creation of the Inquisition in Mexico to enforce Catholic orthodoxy among converts',
+              'Día de los Muertos, blending Catholic All Saints\' Day with Aztec rites honoring the dead',
+              'The missionary burning of Aztec codices and the Spanish ban on books written in the Nahuatl language',
+              'The encomienda system, which assigned indigenous laborers to Spanish settlers for tribute and work'
             ],
             correctAnswer: 1,
             explanation: 'Día de los Muertos is a textbook example of syncretism — it combines the Catholic observance of All Saints\' Day with Aztec beliefs about death and ancestor veneration. The result is a uniquely Mexican tradition that is neither purely Catholic nor purely indigenous.'
@@ -131,10 +131,10 @@ Indigenous and enslaved peoples resisted colonial domination through multiple st
           {
             question: 'How did Maroon communities in the Americas represent resistance to colonial rule?',
             options: [
-              'They were communities of European settlers who rejected their home country\'s authority',
-              'They were communities of escaped enslaved Africans who established independent settlements beyond colonial control',
-              'They were indigenous trading posts that exclusively served French colonial merchants',
-              'They were religious orders of monks who lived in isolation from colonial society by choice'
+              'They were settlements of European colonists who broke away from royal authority in the backcountry',
+              'They were settlements of escaped enslaved Africans who governed themselves beyond colonial control',
+              'They were indigenous trading posts that supplied furs and hides only to French colonial merchants',
+              'They were mission towns where Jesuits gathered converted Africans and Native Americans away from planters'
             ],
             correctAnswer: 1,
             explanation: 'Maroon communities (from the Spanish "cimarrón" meaning wild/untamed) were formed by enslaved Africans who escaped plantations and created self-governing communities in remote areas. Major examples include Palmares in Brazil and the Jamaican Maroons, who fought and won treaties with the British.'

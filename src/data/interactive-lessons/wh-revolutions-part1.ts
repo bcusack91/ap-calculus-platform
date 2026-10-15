@@ -60,10 +60,10 @@ Multiple factors converged in the early 1800s:
           {
             question: 'Which social group led most Latin American independence movements in the early 1800s?',
             options: [
-              'Peninsulares — European-born Spaniards who held all colonial government positions',
-              'Creoles — American-born people of European descent who were wealthy but excluded from political power',
-              'Indigenous peoples who sought to restore pre-Columbian empires and political systems',
-              'Enslaved Africans following the model of the Haitian Revolution'
+              'Peninsulares, Spanish-born officials who held the top posts in colonial government and the church',
+              'Creoles, American-born people of European descent who were wealthy but shut out of top political offices',
+              'Indigenous peoples, who sought to restore Inca and Aztec rule over the lands taken by Spain',
+              'Enslaved Africans, who followed the Haitian model and led most mainland Latin American revolts'
             ],
             correctAnswer: 1,
             explanation: 'Creoles led most independence movements because they had the wealth, education, and social connections to organize revolts, but resented being excluded from top government positions (reserved for peninsulares). Simón Bolívar and José de San Martín were both creoles.'
@@ -71,10 +71,10 @@ Multiple factors converged in the early 1800s:
           {
             question: 'How did Napoleon\'s invasion of Spain in 1808 contribute to Latin American independence movements?',
             options: [
-              'Napoleon sent French armies to Latin America to enforce colonial control more strictly',
-              'It removed the Spanish king from power, creating a legitimacy crisis and power vacuum that colonial leaders exploited',
-              'Napoleon freed all enslaved people in Spanish colonies, inspiring loyalty to France',
-              'It had no effect — Latin American independence movements began centuries earlier'
+              'Napoleon sent French troops to the Americas to tighten control over Spain\'s colonies',
+              'It removed the Spanish king, creating a legitimacy crisis that colonial leaders exploited',
+              'Napoleon abolished slavery in the Spanish colonies, winning colonists\' loyalty to France',
+              'It cut off Spanish trade with the colonies, so creoles revolted mainly to restore their lost commerce'
             ],
             correctAnswer: 1,
             explanation: 'When Napoleon deposed the Spanish king Ferdinand VII and placed his brother on the throne, colonists questioned whether they owed loyalty to a French-imposed ruler. This legitimacy crisis provided the opening for creole leaders to declare independence while claiming to act in the name of the rightful king.'
@@ -95,7 +95,7 @@ Multiple factors converged in the early 1800s:
 - Famous "Jamaica Letter" (1815) analyzed why Latin American unity was difficult
 
 ### José de San Martín (1778–1850)
-- Argentine general who liberated **Argentina, Chile, and Peru**
+- Argentine general who liberated **Argentina and Chile**, then took Lima and declared **Peru's** independence (1821); Bolívar and Sucre completed Peru's liberation (1824)
 - Famous crossing of the Andes Mountains (1817) to liberate Chile
 - Met Bolívar in Guayaquil (1822) — ceded leadership and retired
 
@@ -120,10 +120,10 @@ Multiple factors converged in the early 1800s:
           {
             question: 'How did Brazil\'s path to independence differ from most other Latin American nations?',
             options: [
-              'Brazil achieved independence through a prolonged guerrilla war lasting over 20 years',
-              'Brazil\'s independence was relatively peaceful — the Portuguese prince declared independence and became emperor without a major war',
-              'Brazil was the only Latin American nation to remain a colony until the 20th century',
-              'Brazil\'s independence was led by indigenous peoples rather than creole elites'
+              'Brazil won independence through a guerrilla war lasting more than twenty years against Portugal',
+              'It was relatively peaceful, as Portugal\'s own prince declared independence and became emperor',
+              'Brazil remained a Portuguese colony until the 1900s, long after its Spanish-speaking neighbors',
+              'Brazil\'s independence was led by Indigenous peoples and runaway slaves rather than creole elites'
             ],
             correctAnswer: 1,
             explanation: 'Unlike the violent revolutions elsewhere in Latin America, Brazil\'s independence was largely peaceful. When King João VI returned to Portugal in 1821, his son Pedro stayed in Brazil and declared independence in 1822, becoming Emperor Pedro I. Brazil remained a monarchy until 1889.'
@@ -131,10 +131,10 @@ Multiple factors converged in the early 1800s:
           {
             question: 'What was the main reason Bolívar\'s dream of a united South American republic (Gran Colombia) failed?',
             options: [
-              'Spain reconquered the territory immediately after Bolívar\'s death in 1830',
-              'Regional rivalries, geographic barriers, and competing interests among local elites led to fragmentation',
-              'The United States invaded Gran Colombia to prevent a rival power from emerging',
-              'Bolívar voluntarily dissolved the union to create smaller, more democratic nations'
+              'Spain reconquered most of its territory in the years right after Bolívar\'s death in 1830',
+              'Regional rivalries, geographic barriers, and competing local elites pulled the union apart',
+              'The United States invaded Gran Colombia to keep a rival power from emerging in the Americas',
+              'Bolívar dissolved the union himself, splitting it into Venezuela, Colombia, and Ecuador by decree'
             ],
             correctAnswer: 1,
             explanation: 'Gran Colombia (Venezuela, Colombia, Ecuador) dissolved due to regional rivalries, geographic distances, and competing interests among local creole elites who preferred governing their own territories. The Andes and Amazon created natural divisions, and local caudillos (strongmen) carved out independent power bases.'

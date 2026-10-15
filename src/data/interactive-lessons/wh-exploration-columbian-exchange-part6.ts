@@ -23,24 +23,24 @@ export const whExplorationColumbianExchangePart6Data = {
           {
             question: 'Religious syncretism in colonial Latin America (Our Lady of Guadalupe, Santería) demonstrates:',
             options: [
-              'Indigenous and African peoples actively negotiated cultural change by incorporating their own spiritual traditions within acceptable Catholic forms — neither completely resisting nor completely accepting European religious imposition, but creating hybrid practices that preserved indigenous meaning while using Catholic symbols as protective camouflage',
-              'Colonized peoples passively accepted all Catholic teaching with no resistance',
-              'Syncretism represents the complete replacement of indigenous beliefs by Catholicism',
-              'The Catholic Church actively designed and encouraged syncretic practices',
+              'Native and African peoples kept older beliefs alive inside Catholic saints and rituals',
+              'Native and African peoples rejected Catholicism outright and practiced their faiths only in secret',
+              'Native and African peoples dropped their own beliefs once baptized, adopting Catholic practice unchanged',
+              'Church leaders designed blended rituals on purpose, inviting converts to keep their former gods',
             ],
             correctAnswer: 0,
-            explanation: 'Syncretism is AP\'s key concept for understanding cultural change under colonialism. The Our Lady of Guadalupe apparition (1531, just 10 years after the conquest) at the site of an Aztec goddess\'s temple demonstrates that indigenous peoples found ways to maintain spiritual connections to their own traditions within Catholic frameworks. This was neither pure resistance nor pure acceptance — it was creative adaptation under conditions of coercion.'
+            explanation: 'Syncretism is AP\'s key concept for understanding cultural change under colonialism. The Our Lady of Guadalupe apparition (1531, just 10 years after the conquest) at the site of an Aztec goddess\'s temple demonstrates that indigenous peoples found ways to maintain spiritual connections to their own traditions within Catholic frameworks. This was neither pure resistance nor pure acceptance — it was creative adaptation under conditions of coercion, and the Church did not design it.'
           },
           {
             question: 'Maroon communities (escaped enslaved peoples in Jamaica, Brazil, Suriname) were historically significant because:',
             options: [
-              'They demonstrated that enslaved peoples could and did resist and escape colonial bondage, establishing free communities that preserved African cultural traditions, negotiated for legal recognition, and served as a constant challenge to the ideological claim that enslavement was natural or accepted',
-              'Maroon communities were small and had no impact on colonial society',
-              'Maroon communities maintained friendly relations with slave-holding colonies',
-              'No enslaved peoples ever successfully escaped colonial labor systems',
+              'They showed enslaved people could break free and build settlements that kept African traditions',
+              'They showed enslaved people mostly fled to Europe, where courts freed them under English law',
+              'They showed planters could tolerate small free settlements as long as they paid taxes in sugar',
+              'They showed native peoples and colonists jointly ran frontier towns that sheltered free settlers',
             ],
             correctAnswer: 0,
-            explanation: 'Maroon communities are AP\'s evidence that enslaved peoples were not passive victims but active resisters. Quilombo dos Palmares in Brazil lasted nearly a century (1605-1694) with 20,000+ inhabitants; Jamaican Maroons negotiated treaties with the British (1739) giving them legal autonomy in exchange for no longer sheltering newly escaped slaves. These communities demonstrate both the possibility of resistance and its limits within colonial power structures.'
+            explanation: 'Maroon communities are AP\'s evidence that enslaved peoples were not passive victims but active resisters. Quilombo dos Palmares in Brazil lasted nearly a century (1605-1694) with 20,000+ inhabitants; Jamaican Maroons negotiated treaties with the British (1739) giving them legal autonomy in exchange for no longer sheltering newly escaped slaves. These communities challenged the claim that enslavement was natural or accepted, and they show both the possibility of resistance and its limits within colonial power structures.'
           }
         ]
       }
@@ -55,7 +55,7 @@ export const whExplorationColumbianExchangePart6Data = {
 
 Spanish and Portuguese colonialism was explicitly tied to religious conversion:
 
-- **Papal donation (1494, Tordesillas):** Pope divided non-Christian world between Spain and Portugal
+- **Papal bull (1493) and Treaty of Tordesillas (1494):** a papal line, then a Spain–Portugal treaty, divided the non-Christian world between Spain and Portugal
 - **Mission system:** Franciscan, Dominican, and Jesuit missionaries established missions
 - **Forced conversion:** Baptism required; indigenous religious practices suppressed (publicly)
 - **Cultural destruction:** Aztec codices burned; Mayan texts destroyed; indigenous oral traditions disrupted
@@ -94,10 +94,10 @@ Colonized peoples resisted through multiple strategies:
           {
             question: 'The Catholic mission system\'s dual role in Spanish colonial governance was:',
             options: [
-              'Missions served both religious purposes (converting indigenous peoples, satisfying papal mandate, providing moral justification for colonialism) and political ones (concentrating dispersed indigenous populations in supervised communities where labor could be extracted and compliance with Spanish authority enforced)',
-              'Missions were purely religious with no political function',
-              'Missions protected indigenous peoples from colonial exploitation',
-              'Missions were established for purely economic rather than religious purposes',
+              'They converted native peoples and also gathered them into supervised towns that served colonial rule',
+              'They converted native peoples but stayed outside politics, refusing any role in colonial labor systems',
+              'They converted native peoples only rarely, sheltering them from settlers and ending forced labor',
+              'They served as military forts staffed by soldiers, with conversion left to independent preachers',
             ],
             correctAnswer: 0,
             explanation: 'The mission system\'s political function is key: missions reduced the cost of controlling dispersed indigenous populations by concentrating them in supervised communities where priests enforced compliance with Spanish authority without military salary costs. The religious and political functions were inseparable — conversion created subjects; concentration enabled control; labor obligations funded the mission and colonial economy. This dual function explains why both the Crown and the Church supported the mission system.'
@@ -105,10 +105,10 @@ Colonized peoples resisted through multiple strategies:
           {
             question: 'The destruction of Aztec codices and Mayan texts by Spanish missionaries demonstrates:',
             options: [
-              'Colonial cultural domination required active destruction of indigenous knowledge systems — burning codices was not incidental vandalism but deliberate policy to eliminate the intellectual foundations of indigenous religion, history, and governance, making cultural resistance more difficult by destroying the sources of indigenous historical memory',
-              'Spanish missionaries preserved all indigenous texts for scholarly study',
-              'The destruction of codices had no impact on indigenous cultural continuity',
-              'Only military conquest, not cultural destruction, characterized Spanish colonialism',
+              'Colonizers deliberately destroyed native records to weaken the religion and memory behind resistance',
+              'Colonizers destroyed native records by accident, mostly in fires during the siege of Tenochtitlan',
+              'Colonizers preserved most native records, which survive today in large archives in Spain and Mexico',
+              'Colonizers ignored native records, since Mesoamerican peoples had no system of writing to destroy',
             ],
             correctAnswer: 0,
             explanation: 'The deliberate destruction of indigenous written records is an important AP point about the scope of colonial cultural violence: the few surviving Aztec and Mayan texts (the codices that weren\'t burned) are among the most valuable historical documents in existence precisely because colonial policy systematically destroyed the rest. Bishop Diego de Landa burned dozens of Mayan codices in 1562 — later writing a detailed account of Mayan culture he had helped destroy.'
@@ -116,13 +116,13 @@ Colonized peoples resisted through multiple strategies:
           {
             question: 'An AP question asks: "Evaluate the extent to which colonized peoples maintained cultural autonomy under European colonialism c. 1500-1750." Which response demonstrates the best reasoning?',
             options: [
-              'While European colonialism used both coercion (forced conversion, cultural destruction) and structural power (legal systems, mission concentration) to suppress indigenous and African cultures, colonized peoples maintained significant cultural autonomy through syncretism (preserving beliefs within Catholic forms), language retention, oral tradition, and physical resistance (maroon communities) — suggesting substantial continuity underneath apparent cultural transformation',
-              'Colonized peoples maintained complete cultural autonomy with no changes under colonialism',
-              'Colonized peoples lost all cultural distinctiveness within one generation of European contact',
-              'Only military resistance counts as meaningful cultural preservation',
+              'Despite coercion, colonized peoples kept real autonomy through syncretism and maroon resistance',
+              'Colonized peoples kept complete autonomy, since colonial rule never reached into religion or daily life',
+              'Colonized peoples lost all distinct culture within a generation, since conversion erased older beliefs',
+              'Colonized peoples kept autonomy only through armed revolt, since cultural blending meant surrender',
             ],
             correctAnswer: 0,
-            explanation: 'This response earns full AP credit by acknowledging both dimensions: the real power of colonial cultural coercion AND the real agency of colonized peoples in maintaining cultural practices. "Cultural autonomy" was never complete (colonial power was real and coercive) and was never entirely lost (syncretism, language retention, and maroon communities demonstrate continuous resistance). The nuanced position — partial preservation through active resistance — is the historically accurate and AP-rewarded answer.'
+            explanation: 'This response earns full AP credit by acknowledging both dimensions: the real power of colonial cultural coercion (forced conversion, cultural destruction, legal systems, mission concentration) AND the real agency of colonized peoples in maintaining cultural practices. "Cultural autonomy" was never complete and was never entirely lost (syncretism, language retention, oral tradition, and maroon communities demonstrate continuous resistance). The nuanced position — partial preservation through active resistance — is the historically accurate and AP-rewarded answer.'
           }
         ]
       }
@@ -143,7 +143,7 @@ Colonized peoples resisted through multiple strategies:
           },
           {
             label: 'The Pacific trade route connecting American silver to Chinese silk markets was the ___',
-            options: ['Manila Galleon trade', 'Triangle trade', 'Indian Ocean trade', 'Silk Road']
+            options: ['Manila Galleon trade', 'Triangle trade', 'Indian Ocean trade', 'Trans-Saharan caravan trade']
           }
         ],
         correctAnswers: ['Caravel', 'Encomienda', 'Manila Galleon trade'],
@@ -162,24 +162,24 @@ Colonized peoples resisted through multiple strategies:
           {
             question: 'Comparing the cultural consequences of Spanish colonialism in Mesoamerica to Portuguese colonialism in Brazil reveals:',
             options: [
-              'Both colonial systems imposed Catholicism and European culture through missions and legal coercion, but different demographic balances (large surviving indigenous population in Mesoamerica; indigenous collapse + African majority in Brazil) produced different syncretic traditions: Mesoamerican syncretism blended Catholic and indigenous traditions; Brazilian syncretism blended Catholic and West African traditions',
-              'Spanish and Portuguese colonial systems had identical cultural consequences',
-              'Syncretic traditions developed only in Mesoamerica and not in Brazil',
-              'Colonial cultural imposition was always complete with no indigenous or African cultural survival',
+              'Different demographics produced different blends: native-Catholic in Mesoamerica, African-Catholic in Brazil',
+              'Demographic differences produced different blends: African-Catholic in Mesoamerica, native-Catholic in Brazil',
+              'Similar demographics produced identical results, with Catholic practice replacing all other faiths',
+              'Different colonizers produced different results, with Portugal banning missions in Brazil entirely',
             ],
             correctAnswer: 0,
-            explanation: 'This comparison demonstrates AP sophistication by connecting structural conditions (different demographic balances) to cultural outcomes (different syncretic traditions). The demographic reason for the difference: Mesoamerica retained larger surviving indigenous populations who could maintain and transmit indigenous traditions; Brazil\'s indigenous population largely collapsed, and the enslaved African majority created a demographic foundation for African-derived rather than indigenous-derived syncretic practices. Explaining WHY differences exist is always more valuable in AP analysis than just noting them.'
+            explanation: 'This comparison demonstrates AP sophistication by connecting structural conditions (different demographic balances) to cultural outcomes (different syncretic traditions). Both colonial systems imposed Catholicism through missions and legal coercion. Mesoamerica retained larger surviving indigenous populations who could maintain and transmit indigenous traditions; Brazil\'s indigenous population largely collapsed, and the enslaved African majority created a foundation for African-derived syncretic practices (Candomblé). Explaining WHY differences exist is always more valuable in AP analysis than just noting them.'
           },
           {
             question: 'What does the emergence of Creole identities (criollos) in Spanish colonial Americas demonstrate about cultural change under colonialism?',
             options: [
-              'Colonialism produced new cultural identities that were neither simply "European" nor "indigenous" but distinctly colonial — criollos (American-born Spaniards) developed loyalties to their birth continent that distinguished them from peninsular Spaniards, eventually providing the social foundation for Latin American independence movements in the early 19th century',
-              'Criollos had identical identities and interests to peninsular Spaniards in Spain',
-              'Colonial-born Europeans never developed distinct cultural identities separate from European-born colonists',
-              'Cultural identity in colonial Americas was fixed and unchanging throughout the colonial period',
+              'It produced a new American-born elite whose grievances against peninsulares later fueled independence',
+              'It produced a new mestizo elite who replaced the peninsulares in the viceroyalties before 1700',
+              'It produced a new indigenous nobility who led the independence wars as allies of the Spanish crown',
+              'It produced no new identities, since American-born Spaniards shared the outlook of those born in Spain',
             ],
             correctAnswer: 0,
-            explanation: 'The emergence of criollo identity is AP\'s bridge between colonial culture and Latin American independence: criollos born in the Americas developed attachments to their birth regions, resentment of peninsular Spaniards\' political privileges, and eventually a sense of "American" identity distinct from Spanish identity. Simón Bolívar and other independence leaders were criollos — their colonial identities were essential to their revolutionary nationalism. Understanding how colonialism created new hybrid identities is essential for AP analysis of both the colonial and independence periods.'
+            explanation: 'The emergence of criollo identity is AP\'s bridge between colonial culture and Latin American independence: criollos (American-born people of Spanish descent) developed attachments to their birth regions, resentment of peninsular Spaniards\' political privileges, and eventually a sense of "American" identity distinct from Spanish identity. Simón Bolívar and other independence leaders were criollos — their colonial identities were essential to their revolutionary nationalism in the early 19th century.'
           }
         ]
       }

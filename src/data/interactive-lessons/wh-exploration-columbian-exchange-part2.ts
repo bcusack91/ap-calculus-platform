@@ -23,24 +23,24 @@ export const whExplorationColumbianExchangePart2Data = {
           {
             question: 'What was the primary commercial motivation for European maritime exploration c. 1450-1520?',
             options: [
-              'Desire for direct sea routes to Asian spice and luxury goods markets, bypassing Ottoman-controlled overland routes where high tolls reduced European merchant profit margins',
-              'Pure curiosity with no commercial dimension',
-              'A desire to spread European culture to other continents',
-              'Military strategy to attack Asian civilizations from the sea',
+              'A desire for direct sea routes to Asian spices, bypassing the Ottoman and Venetian middlemen who marked up overland goods',
+              'A desire to find new farmland for Europe\'s growing peasant population after the end of the Black Death',
+              'A desire to recruit Asian allies for a joint crusade to retake Jerusalem from the Ottoman Turks',
+              'A desire to export surplus European wool and grain to new markets in Africa and Asia',
             ],
             correctAnswer: 0,
-            explanation: 'The commercial motivation for exploration is essential AP knowledge. Spices (pepper, cinnamon, nutmeg) were enormously valuable in Europe — preserving food and demonstrating wealth. Vasco da Gama\'s first Indian voyage returned with spices worth 60x the expedition cost. This extraordinary profit potential drove continued state investment in exploration.'
+            explanation: 'The commercial motivation for exploration is essential AP knowledge. Spices (pepper, cinnamon, nutmeg) were enormously valuable in Europe, and Ottoman and Venetian middlemen marked up goods on the overland routes. Vasco da Gama\'s first Indian voyage returned with spices that sold for many times the expedition\'s cost. This profit potential drove continued state investment in exploration. Crusading hopes (the Prester John legend) were a real but secondary motive.'
           },
           {
             question: 'The caravel\'s most important innovation for exploration was:',
             options: [
-              'Its lateen (triangular) sails that allowed sailing into the wind, enabling Portuguese ships to explore the African coast and return home against prevailing winds — something older square-rigged ships could not do',
-              'Its enormous size that could carry more cargo than any previous ship',
-              'Its steam-powered engines that replaced reliance on wind',
-              'Its military weaponry that allowed defeating all opposing navies',
+              'Its lateen sails, which let ships tack into the wind and return home along the African coast',
+              'Its deep cargo holds, which carried more freight than the Chinese treasure ships of Zheng He',
+              'Its iron-plated hull, which protected crews from Ottoman galleys in the Mediterranean',
+              'Its heavy deck cannon, which let small crews conquer the coastal cities of West Africa',
             ],
             correctAnswer: 0,
-            explanation: 'The caravel\'s lateen sail is the key technological innovation enabling Atlantic exploration. Square-rigged ships could sail with the wind but not against it — making return voyages along the African coast impossible with existing technology. The caravel transformed coastal exploration from a one-way trip to a round trip, enabling systematic accumulation of geographic knowledge.'
+            explanation: 'The caravel\'s lateen (triangular) sail is the key technological innovation enabling Atlantic exploration. Square-rigged ships could sail with the wind but not against it — making return voyages along the African coast impossible with existing technology. The caravel was small (far smaller than Zheng He\'s treasure ships), and it transformed coastal exploration from a one-way trip to a round trip, enabling systematic accumulation of geographic knowledge.'
           }
         ]
       }
@@ -93,35 +93,35 @@ export const whExplorationColumbianExchangePart2Data = {
           {
             question: 'Portugal\'s systematic annual exploration of the African coast (c. 1415-1488) demonstrates:',
             options: [
-              'How state-sponsored, systematic accumulation of geographic knowledge — each voyage building on the previous one — eventually solved the problem of finding a sea route to Asia that individual merchant ventures could not have solved alone',
-              'Portuguese exploration was entirely accidental with no systematic planning',
-              'Portugal reached India without any prior African coastal exploration',
-              'State sponsorship had no impact on the pace of exploration',
+              'How state-sponsored voyages, each building on the last, solved what no lone merchant could',
+              'How private Genoese bankers, not the crown, financed and directed the voyages down the African coast',
+              'How a single lucky voyage, not a long program, carried Portugal from Morocco to the Indian Ocean',
+              'How Portugal reached India first by an overland route and only later mapped the African coastline',
             ],
             correctAnswer: 0,
-            explanation: 'Portugal\'s institutional approach to exploration is uniquely significant: Prince Henry organized an exploration school, accumulated geographic knowledge across decades, and sponsored annual voyages that incrementally extended knowledge of the African coast. This systematic approach — not individual genius — explains why Portugal solved the Cape route problem.'
+            explanation: 'Portugal\'s institutional approach to exploration is uniquely significant: Prince Henry organized an exploration effort, accumulated geographic knowledge across decades, and sponsored voyages that incrementally extended knowledge of the African coast. This systematic, state-sponsored approach — not individual genius or a single lucky voyage — explains why Portugal solved the Cape route problem by 1488.'
           },
           {
             question: 'The comparison between Zheng He\'s voyages (1405-1433) and European exploration demonstrates:',
             options: [
-              'Both demonstrated remarkable maritime capability, but China\'s decision to discontinue exploration after 1433 (due to Confucian bureaucratic opposition to maritime trade and shifting imperial priorities to northern land threats) while European states continued shows that technology alone does not determine historical outcomes — political and institutional decisions matter equally',
-              'Zheng He\'s ships were inferior to European vessels in every respect',
-              'China had no interest in foreign peoples or goods',
-              'European and Chinese exploration were identical in their goals and consequences',
+              'Ming court politics rather than any lack of technology ended voyages that Europeans kept funding',
+              'Chinese ships were smaller and less seaworthy than European ones, so China could not sustain long voyages',
+              'China\'s voyages aimed at conquest and settlement, so they ended once the Ming lost interest in new colonies',
+              'European states and Ming China shared the same aims, so their different results came down to chance',
             ],
             correctAnswer: 0,
-            explanation: 'The Zheng He vs. European exploration comparison is one of AP World History\'s most important questions: Chinese ships were LARGER and more sophisticated; Zheng He reached Africa 70 years before da Gama. The DIFFERENCE is what each civilization did with this capability. China discontinued; Europe continued to colonization. This demonstrates that political/institutional factors (not just technology) determine which civilizations extend their power globally.'
+            explanation: 'The Zheng He vs. European exploration comparison is one of AP World History\'s most important questions: Chinese ships were LARGER and more sophisticated; Zheng He reached East Africa decades before da Gama. China discontinued the voyages after 1433 (Confucian court opposition and priorities shifting to northern land threats); Europe continued to colonization. The voyages were tribute diplomacy, not conquest. This demonstrates that political/institutional factors (not just technology) determine which civilizations extend their power globally.'
           },
           {
             question: 'Bartolomeu Dias\'s 1488 rounding of the Cape of Good Hope was historically significant because:',
             options: [
-              'It proved that a sea route from Europe to the Indian Ocean was possible, transforming African coastal exploration from incremental progress to a specific achievable goal — directly enabling Vasco da Gama\'s 1498 voyage to India that initiated direct European participation in Indian Ocean trade',
-              'Dias was the first European to reach India',
-              'The Cape of Good Hope had no significance for trade routes',
-              'Dias\'s voyage preceded any Portuguese exploration of the African coast',
+              'It proved a sea route to the Indian Ocean existed, opening the way for da Gama\'s 1498 voyage to India',
+              'It made Dias the first European to reach India, opening Portugal\'s direct trade in Indian pepper',
+              'It opened Portugal\'s first trading posts in West Africa, beginning its gold trade along the Guinea coast',
+              'It gave Portugal control of the Strait of Malacca, opening its direct trade with the Spice Islands',
             ],
             correctAnswer: 0,
-            explanation: 'Dias\'s voyage is the "proof of concept" that unlocked the Indian Ocean route: before 1488, Portuguese explorers didn\'t know if Africa ended or extended infinitely south. After 1488, the question was no longer "can we get there?" but "who will complete the route?" Da Gama\'s 1498 voyage followed the path Dias proved was possible.'
+            explanation: 'Dias\'s voyage is the "proof of concept" that unlocked the Indian Ocean route: before 1488, Portuguese explorers didn\'t know whether Africa could be rounded. After 1488, the question was no longer "can we get there?" but "who will complete the route?" Dias turned back before reaching India; da Gama\'s 1498 voyage followed the path Dias proved was possible. Portugal\'s West African posts (Elmina, 1482) came earlier, and Malacca was taken only in 1511.'
           }
         ]
       }
@@ -142,7 +142,7 @@ export const whExplorationColumbianExchangePart2Data = {
           },
           {
             label: 'The Pacific trade route connecting American silver to Chinese silk markets was the ___',
-            options: ['Manila Galleon trade', 'Triangle trade', 'Indian Ocean trade', 'Silk Road']
+            options: ['Manila Galleon trade', 'Triangle trade', 'Indian Ocean trade', 'Trans-Saharan caravan trade']
           }
         ],
         correctAnswers: ['Caravel', 'Encomienda', 'Manila Galleon trade'],
@@ -161,24 +161,24 @@ export const whExplorationColumbianExchangePart2Data = {
           {
             question: 'An AP comparison between Portuguese and Spanish exploration strategies best supports which argument?',
             options: [
-              'Portugal focused on establishing trading post networks along existing sea routes (Indian Ocean, African coast) to redirect existing Asian trade through Portuguese-controlled ports, while Spain focused on conquering and colonizing new territories in the Americas — different strategies reflecting different geographic starting points and commercial opportunities',
-              'Portugal and Spain had identical exploration strategies',
-              'Spain established trading posts while Portugal colonized territories',
-              'Neither Portugal nor Spain had any strategic plan for exploration',
+              'Portugal fortified ports to tax existing Asian sea trade, while Spain conquered and settled American land',
+              'Spain built fortified ports to tax existing Asian sea trade, while Portugal conquered vast American land',
+              'Portugal and Spain both conquered large inland empires, while leaving coastal trade to local merchants',
+              'Portugal relied on missionaries to win over Asian rulers, while Spain relied on alliances with Aztec rulers',
             ],
             correctAnswer: 0,
-            explanation: 'This distinction is AP-important: Portuguese Estado da India worked by inserting Portuguese military force into existing Indian Ocean commercial networks, charging protection fees. Spanish colonialism worked by controlling land and indigenous/enslaved labor in the Americas. Both were extractive, but through fundamentally different mechanisms — trading-post empire vs. territorial colonialism — reflecting different resource environments.'
+            explanation: 'This distinction is AP-important: the Portuguese Estado da India worked by inserting Portuguese military force into existing Indian Ocean commercial networks (the African coast and Indian Ocean ports), charging protection fees. Spanish colonialism worked by controlling land and indigenous/enslaved labor in the Americas. Both were extractive, but through fundamentally different mechanisms — trading-post empire vs. territorial colonialism — reflecting different geographic starting points and commercial opportunities.'
           },
           {
             question: 'For AP purposes, the Treaty of Tordesillas (1494) dividing the non-European world between Spain and Portugal most significantly demonstrates:',
             options: [
-              'European states\' claim of authority to divide the world based on papal sanction — treating non-Christian peoples as without legitimate sovereignty over their own territories, establishing the ideological framework that justified colonial appropriation globally',
-              'The Treaty required consultation with indigenous peoples before land claims',
-              'Papal authority over non-Christian lands was recognized under existing international law',
-              'The treaty had no real consequences for either Spanish or Portuguese exploration',
+              'Iberian crowns\' papal-backed claim to carve up lands whose non-Christian peoples were denied sovereignty',
+              'Iberian crowns\' promise to consult indigenous rulers before claiming land on either side of the line',
+              'Iberian crowns\' recognition of Ottoman and Ming claims to the seas east of the line of demarcation',
+              'Iberian crowns\' acceptance that the English and French had equal rights to settle any unclaimed coast',
             ],
             correctAnswer: 0,
-            explanation: 'The Tordesillas ideology is the foundation of the "Doctrine of Discovery" — the legal fiction that non-Christian peoples lacked legitimate sovereignty. This ideology, not just military force, was the intellectual basis for European colonial land claims. AP questions about colonialism\'s ideological foundations require understanding that colonial appropriation was justified by a coherent (if morally reprehensible) legal and theological framework.'
+            explanation: 'The Tordesillas ideology is the foundation of the "Doctrine of Discovery" — the legal fiction that non-Christian peoples lacked legitimate sovereignty. The treaty was a bilateral Spain–Portugal agreement that moved the line drawn in a 1493 papal bull; the pope later confirmed it. This ideology, not just military force, was the intellectual basis for European colonial land claims. England and France rejected the division. AP questions about colonialism\'s ideological foundations require understanding that colonial appropriation was justified by a coherent (if morally reprehensible) legal and theological framework.'
           }
         ]
       }

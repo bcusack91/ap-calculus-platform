@@ -23,10 +23,10 @@ export const whIndustrialRevolutionPart4Data = {
           {
             question: 'German industrialization\'s state-directed model differed from British industrialization in that:',
             options: [
-              'Germany deliberately used state power (Zollverein customs union, railroad investment, protectionist tariffs, technical education) to accelerate and direct industrialization, while British industrialization was primarily market-driven by private entrepreneurs — demonstrating that industrialization can be achieved through either market or state-directed mechanisms',
-              'German industrialization followed identical market-based methods to British industrialization',
-              'Germany industrialized before Britain due to superior state capacity',
-              'State-directed industrialization was always less effective than market-driven industrialization',
+              'German states used customs unions, railways, tariffs, and technical schools, while Britain relied on private firms',
+              'Germany copied Britain\'s market-led path exactly, while the state stayed out of railways, tariffs, and schools',
+              'Germany industrialized before Britain because Prussian officials had built coal mines, ironworks, and canals by 1750',
+              'German industry grew more slowly than Britain\'s in every sector, since state planning always stifled private investment',
             ],
             correctAnswer: 0,
             explanation: 'The Britain vs. Germany comparison is AP\'s clearest example of multiple paths to industrialization: British "first industrial revolution" was largely unplanned, driven by private entrepreneurs responding to commercial incentives; German industrialization was deliberately organized by state actors (Prussian bureaucracy, Zollverein administrators, university administrators) who identified industrial development as a state goal and used state resources to achieve it. Both succeeded — but through different mechanisms.'
@@ -34,10 +34,10 @@ export const whIndustrialRevolutionPart4Data = {
           {
             question: 'Japanese Meiji industrialization\'s goal of "avoiding Western colonialism" demonstrates:',
             options: [
-              'That industrialization and military power became survival requirements in a world where European industrial powers colonized non-industrial states — Japan observed the colonization of China (Opium Wars), India (British East India Company), and Southeast Asia and concluded that only rapid industrialization and military modernization could preserve Japanese sovereignty',
-              'Japan industrialized to spread Japanese culture globally',
-              'Japan had no awareness of Western colonialism when it began industrialization',
-              'Japan\'s industrialization was motivated purely by commercial profit with no defensive dimension',
+              'That industrial and military power became a survival need once Japan saw Western domination of China and India',
+              'That Japan industrialized mainly to spread Japanese culture and Shinto belief across the Pacific world',
+              'That Japan began industrializing before contact with the West and knew little about Western colonial expansion',
+              'That Meiji leaders saw industry purely as a source of private profit with no connection to national defense',
             ],
             correctAnswer: 0,
             explanation: 'The Meiji industrialization\'s geopolitical motivation is AP-essential: Japan didn\'t industrialize because of commercial incentive (British model) or nationalist economic competition (German model) but because the evidence of Western colonization of Asia demonstrated that non-industrial states were colonized. The "shock" of Commodore Perry\'s black ships (1853) forcing Japan to open trade demonstrated that Japan\'s pre-industrial military couldn\'t resist Western power. Industrialization was therefore an explicit survival strategy.'
@@ -104,10 +104,10 @@ American industrialization had unique characteristics:
           {
             question: 'American industrialization\'s "high land-to-labor ratio" driving labor-saving technology adoption demonstrates:',
             options: [
-              'Resource endowment shapes the direction of technological innovation — when labor is scarce and expensive relative to land, innovators have strong incentives to develop labor-saving machinery; when labor is abundant and cheap, the incentive to mechanize is weaker; American industrialization therefore developed different technological emphases than British industrialization',
-              'American technological innovation was independent of resource availability',
-              'Labor-saving technology was uniquely American with no parallels elsewhere',
-              'High land-to-labor ratio made American industrialization impossible',
+              'Scarce, costly labor pushed Americans toward labor-saving machines, so resource endowments steered innovation',
+              'American inventors worked independently of resource conditions, so labor costs had little effect on design',
+              'Labor-saving machinery was a purely American idea with no parallel developments in Britain or Germany',
+              'Abundant land, cheap labor, and few cities kept the United States a farm economy until the 1900s',
             ],
             correctAnswer: 0,
             explanation: 'This demonstrates AP\'s resource endowment analysis: the American reaper (McCormick, 1831), which mechanized grain harvesting, was economically viable in America (labor scarce, large farms) but not in Britain (labor abundant, small farms). The direction of innovation is shaped by what factors are expensive — American innovation emphasized substituting capital (machines) for labor; British and European innovation emphasized organizing labor more efficiently. Different resource endowments produce different technological priorities.'
@@ -115,10 +115,10 @@ American industrialization had unique characteristics:
           {
             question: 'The Zollverein (German customs union, 1834) contributed to industrialization by:',
             options: [
-              'Eliminating internal tariffs between German states to create a large integrated market — larger markets enable economies of scale in production, justify investment in mass production technology, and create sufficient demand to support specialized industrial production that would be uneconomical in smaller fragmented markets',
-              'The Zollverein was primarily a military alliance with no economic significance',
-              'The Zollverein raised tariffs between German states to protect local industries',
-              'Economic integration had no significant impact on industrialization rates',
+              'Removing tariffs among member German states, creating a large single market that rewarded mass production',
+              'Forming a military alliance of German states against Austria, with trade issues left to each member state',
+              'Raising tariffs between German states so each one could protect its own young industries from competition',
+              'Adopting British free-trade policy toward all nations, which flooded German markets with British goods',
             ],
             correctAnswer: 0,
             explanation: 'Market size is AP\'s explanation for why economic integration accelerated industrialization: a factory producing for 30 million consumers (unified Germany) can achieve economies of scale impossible when producing for 1 million consumers (Prussia alone). The Zollverein preceded full German political unification by 37 years but created the economic integration that made German industrial development possible. This demonstrates that economic integration can precede and enable political unification.'
@@ -126,10 +126,10 @@ American industrialization had unique characteristics:
           {
             question: 'The spread of industrialization from Britain to Continental Europe and Japan demonstrates which AP principle?',
             options: [
-              'Technology and industrial methods can be deliberately transferred and adapted across cultures and national contexts, but the specific path and social consequences of industrialization vary based on initial conditions (resource endowment, existing social structure, state capacity) — there is no single industrial "model" but multiple variations sharing core features',
-              'Industrial technology could not be transferred — each nation had to independently reinvent it',
-              'All nations industrialized identically to the British model',
-              'Only nations with identical conditions to Britain could industrialize',
+              'Industrial methods could be transferred abroad, but local conditions shaped each country\'s path',
+              'Industrial technology could not be transferred, so each nation had to reinvent the machines on its own',
+              'Every country followed the British model exactly, producing identical factories and class structures',
+              'Only nations with coal, colonies, and a parliament like Britain\'s were ever able to industrialize at all',
             ],
             correctAnswer: 0,
             explanation: 'Technology transfer with adaptation is AP\'s meta-lesson about industrialization spread: British technology (steam engines, spinning machinery) was studied, copied, and adapted by German, French, American, and Japanese industrializers — but the social context (different labor conditions, state capacities, resource endowments, cultural values) shaped different industrial trajectories. Germany emphasized chemicals and electrical industry (where state technical education gave advantages); Japan emphasizes textiles then heavy industry; America emphasizes scale and mechanization. Same core technology, different industrial configurations.'
@@ -191,10 +191,10 @@ American industrialization had unique characteristics:
           {
             question: 'Japan\'s state-built model factories, subsequently sold to private industrial conglomerates (zaibatsu), represented:',
             options: [
-              'A deliberate state strategy to absorb technological risk during industrialization\'s most uncertain early phase, then transfer functioning enterprises to private capital — the state subsidized the learning cost of new industrial methods (accepting losses on model factories) and then sold proved enterprises to private investors who could operate them at commercial scale',
-              'Japanese government nationalized all industry permanently during Meiji period',
-              'Zaibatsu built Japanese industry without any government involvement',
-              'State-built factories were economically irrational and slowed Japanese industrialization',
+              'A state strategy of absorbing the early risks of new industries, then selling working firms to private owners',
+              'A permanent nationalization of industry, as the Meiji state kept ownership of every factory it built into the 1900s',
+              'A purely private effort, as zaibatsu families built Japan\'s industry without any government support',
+              'A costly policy failure that slowed industrial growth until foreign firms bought the factories',
             ],
             correctAnswer: 0,
             explanation: 'The state-private sequence in Japanese industrialization is AP\'s example of developmental state theory: governments can absorb the learning and risk costs of industrial development that private investors are unwilling to bear, then transition to private ownership once industrial viability is proved. The zaibatsu (Mitsui, Mitsubishi, Sumitomo) that bought Meiji government model factories became the industrial conglomerates that powered Japanese industrial development through the 20th century.'
@@ -202,10 +202,10 @@ American industrialization had unique characteristics:
           {
             question: 'For AP, the most significant difference between British and all later industrializers was:',
             options: [
-              'British industrialization was unplanned and market-driven because there was no existing model to follow; all subsequent industrializers (Germany, France, USA, Japan) could observe and deliberately adopt British methods, state-directing technology transfer rather than organically developing industrial technology — making later industrialization deliberately accelerated compared to Britain\'s organic but slower path',
-              'Later industrializers had no advantages over Britain — they followed identical paths',
-              'All nations industrialized at the same speed regardless of when they started',
-              'Later industrializers deliberately rejected British methods and developed entirely new approaches',
+              'Britain industrialized without a model to follow, while later states could study and deliberately copy British methods',
+              'Later industrializers enjoyed no advantages, since each had to follow the same slow path Britain took',
+              'Every industrializing nation moved at the same speed, regardless of when it started building factories',
+              'Later industrializers rejected British methods and invented entirely new kinds of machines from scratch',
             ],
             correctAnswer: 0,
             explanation: 'The "advantage of backwardness" concept is AP\'s framework for later industrialization: countries that industrialized after Britain could observe British successes and failures, deliberately adopt proven technologies, and avoid some developmental dead-ends. German technical universities were deliberately designed to produce industrial chemists Britain lacked; Japan deliberately sent observers to study British, American, and German models. The first industrializer creates the model; subsequent industrializers can improve on the model through deliberate adoption.'

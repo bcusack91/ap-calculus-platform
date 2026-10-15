@@ -23,24 +23,24 @@ export const whExplorationColumbianExchangePart4Data = {
           {
             question: 'The Spanish encomienda system\'s most significant feature was:',
             options: [
-              'It granted individual Spanish colonists the right to extract labor and tribute from indigenous peoples, creating a system of coercive extraction that was functionally similar to slavery despite its legal framing as mutual obligation — the colonist owed Christianization and protection; indigenous workers owed labor',
-              'It gave indigenous peoples equal legal rights with Spanish colonists',
-              'It was a purely voluntary labor market with wage compensation',
-              'It had no connection to the Catholic Church or religious conversion',
+              'It gave colonists rights to native labor and tribute in return for Christian instruction and protection',
+              'It gave native nobles authority over Spanish settlers in return for Christian baptism and tribute',
+              'It hired native workers for cash wages set by the crown in return for a promise of Christian instruction',
+              'It sold native captives to Caribbean planters in return for silver paid to the Spanish crown',
             ],
             correctAnswer: 0,
-            explanation: 'The encomienda\'s legal fiction mattered to the Church (which could intervene on behalf of indigenous people as "commended" to Spanish care — the basis for Las Casas\'s advocacy) but not to the daily reality of forced labor. Understanding the gap between legal form and lived reality is essential for AP analysis of colonial labor systems.'
+            explanation: 'The encomienda granted individual Spanish colonists the right to extract labor and tribute from indigenous peoples; the colonist owed Christianization and protection, and in practice the system was coercive extraction functionally similar to slavery despite its legal framing as mutual obligation. The legal fiction mattered to the Church (which could intervene on behalf of indigenous people as "commended" to Spanish care — the basis for Las Casas\'s advocacy) but not to the daily reality of forced labor.'
           },
           {
             question: 'Potosí silver\'s most significant global consequence was:',
             options: [
-              'The massive influx of New World silver caused European price inflation (the "price revolution") while simultaneously flowing to China to pay for luxury goods — demonstrating that colonial extraction in one region (Peru) could destabilize monetary systems in another (Europe) and fuel commodity trade with a third (China)',
-              'Potosí silver only circulated within the Spanish Empire with no global impact',
-              'Silver caused deflation in Europe by increasing the money supply appropriately',
-              'Chinese demand for silver was insignificant compared to European consumption',
+              'It fueled inflation in Europe and flowed on to China, tying three continents together',
+              'It caused deflation in Europe as Spain hoarded silver bullion in royal treasuries at Seville',
+              'It stayed inside the Spanish Empire, paying colonial officials and never reaching Asian markets',
+              'It funded Portugal\'s spice trade in the Indian Ocean, while China refused silver as payment',
             ],
             correctAnswer: 0,
-            explanation: 'The Potosí-to-China silver circuit is a model AP global commerce example: Spanish colonial extraction → European money supply inflation → silver flows east to China (where Single Whip Tax Reform required silver tax payment) → Chinese state receives tax revenue; Chinese silk and porcelain flow west. This demonstrates that "global economy" was already a reality by 1600, not just a 20th-century phenomenon.'
+            explanation: 'The Potosí-to-China silver circuit is a model AP global commerce example: Spanish colonial extraction → European money supply inflation (the "price revolution") → silver flows east to China (where Single Whip Tax Reform required silver tax payment) → Chinese silk and porcelain flow west. Colonial extraction in one region (Peru) destabilized prices in another (Europe) and fueled trade with a third (China). This demonstrates that "global economy" was already a reality by 1600.'
           }
         ]
       }
@@ -94,35 +94,35 @@ Spanish colonial society organized legally by race:
           {
             question: 'The casta system\'s significance for AP analysis is that it:',
             options: [
-              'Created a legally codified racial hierarchy assigning social status, legal rights, and economic opportunities based on perceived racial identity — establishing race as a primary organizing principle of colonial societies that would shape Latin American social stratification for centuries after independence',
-              'The casta system was immediately dismantled after Spanish colonial rule ended',
-              'Race had no legal significance in Spanish colonial society',
-              'The casta system gave indigenous people equal legal standing to Spanish colonists',
+              'It created a legal hierarchy based on ancestry that shaped Latin American society long after independence',
+              'It created a legal hierarchy based on religion that disappeared once indigenous peoples were baptized',
+              'It created a legal hierarchy based on wealth that let any family buy Spanish status with silver',
+              'It created a legal hierarchy based on occupation that ended with the Bourbon Reforms of the 1700s',
             ],
             correctAnswer: 0,
-            explanation: 'The casta system\'s longevity is its key AP significance: racial categories established in the 16th century shaped Latin American social stratification into the 20th century and beyond. The system also produced constant social negotiation — racial categories blurred in practice, documents were falsified, and people sought to "pass" as higher categories. Understanding the casta system is essential for understanding Latin American social history.'
+            explanation: 'The casta system\'s longevity is its key AP significance: racial categories assigning status, legal rights, and economic opportunities were established in the 16th century and shaped Latin American social stratification into the 20th century and beyond. The system also produced constant social negotiation — racial categories blurred in practice, documents were falsified, and people sought to "pass" as higher categories. Understanding the casta system is essential for understanding Latin American social history.'
           },
           {
             question: 'The transition from encomienda to plantation slavery in the Americas demonstrates:',
             options: [
-              'How colonial labor systems adapted to changing conditions: indigenous population collapse reduced encomienda viability, while expanding sugar/tobacco/cotton demand created incentive for a more reliable, legally unprotected labor force — leading to systematic expansion of African chattel slavery',
-              'The transition occurred because indigenous peoples voluntarily left the encomienda system',
-              'Plantation slavery predated the encomienda in the Americas',
-              'Legal reforms eliminated all forced labor in colonial Americas by 1600',
+              'Labor systems adapted when native populations collapsed and new cash crops needed enslaved workers',
+              'Labor systems changed when native peoples won wage contracts and left encomiendas to work on farms',
+              'Labor systems changed when the crown banned all forced labor in its American colonies by 1600',
+              'Labor systems changed when European convicts and servants arrived in numbers to work sugar estates',
             ],
             correctAnswer: 0,
-            explanation: 'The labor system transition follows a clear causal chain: disease → indigenous population decline → labor shortage → encomienda insufficient for expanding plantation crops → African enslavement as the "solution." This chain explains how the Atlantic slave trade went from an existing but limited practice to a massive, industrialized system of human trafficking. Understanding the structural causes is more AP-useful than moral condemnation alone.'
+            explanation: 'The labor system transition follows a clear causal chain: disease → indigenous population decline → labor shortage → encomienda insufficient for expanding sugar/tobacco/cotton plantations → African enslavement as the "solution." The New Laws (1542) limited the encomienda but did not end forced labor (the mita continued). This chain explains how the Atlantic slave trade went from an existing but limited practice to a massive system of human trafficking.'
           },
           {
             question: 'Bartolomé de las Casas\'s advocacy against indigenous exploitation demonstrates which AP complexity?',
             options: [
-              'Colonial systems could produce internal critics who challenged the system\'s moral foundations — Las Casas opposed indigenous exploitation using Christian moral arguments — while still operating within colonial logic: he initially suggested enslaved Africans as a labor alternative, demonstrating that reformers often reproduce systemic inequalities while challenging specific manifestations',
-              'Las Casas fully rejected all forms of coerced labor from the beginning',
-              'No one within the colonial system ever criticized indigenous exploitation',
-              'Las Casas was primarily an economic administrator with no humanitarian concerns',
+              'Las Casas attacked native abuse on Christian grounds but at first urged African slavery as a substitute',
+              'Las Casas rejected every form of coerced labor from the start, including African slavery in the Caribbean',
+              'Las Casas defended the encomienda as Christian charity and opposed the New Laws that limited it',
+              'Las Casas criticized colonial abuse on economic grounds alone, arguing native labor was being wasted',
             ],
             correctAnswer: 0,
-            explanation: 'Las Casas is AP\'s model of "internal critique within a colonial system." He opposed indigenous exploitation using the same Christian theology the colonial system used to justify itself — demonstrating that ideological frameworks can produce internal contradictions. His initial suggestion of African enslavement as an alternative (later recanted) shows that reformers operate within historical contexts that limit their imagination even while pushing its boundaries.'
+            explanation: 'Las Casas is AP\'s model of "internal critique within a colonial system." He opposed indigenous exploitation using the same Christian theology the colonial system used to justify itself — demonstrating that ideological frameworks can produce internal contradictions. His initial suggestion of African enslavement as an alternative (later recanted) shows that reformers often reproduce systemic inequalities while challenging specific manifestations. He supported the New Laws of 1542.'
           }
         ]
       }
@@ -143,7 +143,7 @@ Spanish colonial society organized legally by race:
           },
           {
             label: 'The Pacific trade route connecting American silver to Chinese silk markets was the ___',
-            options: ['Manila Galleon trade', 'Triangle trade', 'Indian Ocean trade', 'Silk Road']
+            options: ['Manila Galleon trade', 'Triangle trade', 'Indian Ocean trade', 'Trans-Saharan caravan trade']
           }
         ],
         correctAnswers: ['Caravel', 'Encomienda', 'Manila Galleon trade'],
@@ -162,24 +162,24 @@ Spanish colonial society organized legally by race:
           {
             question: 'An AP comparison between Spanish encomienda and Aztec tributary systems best reveals:',
             options: [
-              'While both extracted labor and goods from subordinate peoples, the Aztec system maintained local rulers and extracted tribute through established political channels, while the encomienda gave individual Spanish colonists direct rights to indigenous workers — the Spanish system was more personally exploitative and less politically mediated than the Aztec model it replaced',
-              'Both systems were identical in their exploitation of subject peoples',
-              'The Aztec system was more exploitative than the encomienda',
-              'Neither system involved any coercion of subject peoples',
+              'Aztec tribute passed through local rulers, but the encomienda gave settlers direct claims on labor',
+              'Aztec tribute went straight to Tenochtitlan, but the encomienda sent all native labor to the crown',
+              'Aztec tribute was voluntary and unforced, but the encomienda introduced coercion to Mesoamerica',
+              'Aztec tribute was paid in silver coin, but the encomienda collected only maize, cloth and cacao',
             ],
             correctAnswer: 0,
-            explanation: 'This comparison demonstrates AP analytical sophistication by going beyond "both extracted resources" to identify the structural difference: Aztec tribute maintained political intermediaries (local rulers) with established relationships; encomienda gave individual Spaniards direct, personal exploitation rights over indigenous workers without political intermediation. This made the encomienda more arbitrary and personally brutal in practice.'
+            explanation: 'This comparison demonstrates AP analytical sophistication by going beyond "both extracted resources" to identify the structural difference: Aztec tribute maintained political intermediaries (local rulers) with established relationships and was collected in goods such as maize, cloth and cacao; encomienda gave individual Spaniards direct, personal exploitation rights over indigenous workers without political intermediation. This made the encomienda more arbitrary and personally brutal in practice.'
           },
           {
             question: 'For AP purposes, which statement best characterizes the role of race in constructing colonial labor systems?',
             options: [
-              'Colonial labor systems were increasingly racialized over time: early Spanish exploitation used existing political categories (tributary relationships), but as those broke down and African slavery expanded, racial categories (casta system) were elaborated to legally encode exploitation — race became the mechanism for determining who was subject to which forms of coercive labor',
-              'Race played no role in determining who was subjected to colonial labor exploitation',
-              'Colonial labor systems were purely economic with no racial dimension',
-              'Racial categories in colonial Americas were established before European contact',
+              'They grew more racialized over time, as legal categories of descent decided who faced coercion',
+              'They grew less racialized over time, as the casta categories faded and coercion rested on debt alone',
+              'They began fully racialized in 1492, as Spain applied its existing color categories from day one',
+              'They grew tied to religion over time, as baptized Africans and natives were freed from coerced labor',
             ],
             correctAnswer: 0,
-            explanation: 'The racialization of colonial labor is an AP meta-theme: early colonial exploitation used indigenous political structures (encomienda built on existing tributary relationships); as those eroded, legal racial categories (casta system) were developed to formalize who could be enslaved, who was subject to labor drafts, and who had legal protections. Understanding this process of racialization — how race was constructed to justify exploitation — is essential for AP analysis of colonial societies.'
+            explanation: 'The racialization of colonial labor is an AP meta-theme: early colonial exploitation used indigenous political structures (encomienda built on existing tributary relationships); as those eroded and African slavery expanded, legal racial categories (casta system) were developed to formalize who could be enslaved, who was subject to labor drafts, and who had legal protections. Baptism did not bring freedom. Understanding this process of racialization — how race was constructed to justify exploitation — is essential for AP analysis of colonial societies.'
           }
         ]
       }

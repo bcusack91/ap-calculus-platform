@@ -23,10 +23,10 @@ export const whEnlightenmentPoliticalRevolutionsPart7Data = {
           {
             question: 'An AP SAQ asks: "Briefly explain ONE similarity between the American and French Revolutions." Which response earns full credit?',
             options: [
-              'Both the American and French Revolutions were shaped by Enlightenment ideas about natural rights and social contract: the American Declaration of Independence invoked Locke\'s natural rights theory to justify revolution against British authority; the French Declaration of Rights of Man proclaimed liberty, equality, and fraternity as natural rights — demonstrating that both revolutions legitimated themselves through the same Enlightenment intellectual framework',
-              'Both revolutions were identical in their social radicalism and outcomes',
-              'Both extended full political rights to all people in their societies',
-              'Both were caused primarily by economic factors with no ideological dimension',
+              'Both invoked natural rights theory, seen in the Declaration of Independence and the Declaration of the Rights of Man',
+              'Both were equally radical, abolishing noble privilege and slavery and producing the same social outcomes',
+              'Both extended full political rights to every adult in their societies, including women and enslaved people, from the start',
+              'Both were caused by economic hardship alone, with ideas about rights playing no real part in either one',
             ],
             correctAnswer: 0,
             explanation: 'Full SAQ credit: specific similarity (Enlightenment natural rights framework) + evidence from both revolutions (American Declaration/Locke; French Declaration of Rights of Man) + reasoning (both legitimated themselves through the same intellectual framework). The response compares rather than describing each revolution separately, using specific documents as evidence and explaining why the similarity is historically significant.'
@@ -34,13 +34,13 @@ export const whEnlightenmentPoliticalRevolutionsPart7Data = {
           {
             question: 'For an AP LEQ comparing the Haitian Revolution to the American Revolution, which thesis is most analytical?',
             options: [
-              'While both the American and Haitian Revolutions invoked Enlightenment principles of natural rights and liberty, the Haitian Revolution was more consistent in applying those principles — Americans applied them only to white propertied men while enslaving hundreds of thousands; Haitians demanded and achieved inclusion of the population most violently denied natural rights, demonstrating that revolutions vary fundamentally in the breadth of liberation they achieve',
-              'Both revolutions were equal in extending rights to all people in their societies',
-              'The American Revolution was more progressive than the Haitian Revolution',
-              'The two revolutions had completely different causes with no intellectual overlap',
+              'Both invoked natural rights, but the Haitian Revolution applied them more consistently by extending them to the enslaved',
+              'Both revolutions were equally inclusive, extending natural rights to all people living in their societies',
+              'The American Revolution was more progressive than the Haitian Revolution in extending rights to all',
+              'The two revolutions had entirely different causes, with no shared intellectual roots in the Enlightenment',
             ],
             correctAnswer: 0,
-            explanation: 'This thesis earns full AP credit: acknowledges both similarity (Enlightenment principles) and meaningful difference (selective vs. consistent application), uses specific evidence (Americans enslaved people while claiming rights; Haitians included enslaved people), provides the analytical claim (revolutions vary in breadth of liberation), and avoids simplification. The sophistication is measuring both revolutions against the same standard (consistent application of universal rights).'
+            explanation: 'This thesis earns full AP credit: it acknowledges both similarity (Enlightenment natural rights) and meaningful difference (selective vs. consistent application), makes a specific comparative claim (Haitian revolutionaries extended those rights to enslaved people, the group American revolutionaries kept enslaved), and avoids simplification. The sophistication is measuring both revolutions against the same standard (consistent application of universal rights).'
           }
         ]
       }
@@ -58,8 +58,8 @@ export const whEnlightenmentPoliticalRevolutionsPart7Data = {
 - **Separation of powers** — Division of government into branches to prevent tyranny (Montesquieu)
 - **Popular sovereignty** — Political authority derived from the people, not from kings or God
 - **Bourgeoisie** — Middle class; property owners; primary beneficiaries of American and French revolutions
-- **Declaration of Rights of Man (1789)** — French revolutionary rights document; "liberty, equality, fraternity"
-- **Reign of Terror** — Radical phase of French Revolution; 40,000 executed; Robespierre's Committee of Public Safety
+- **Declaration of Rights of Man (1789)** — French revolutionary rights document; men "are born and remain free and equal in rights"
+- **Reign of Terror** — Radical phase of French Revolution; ~17,000 official executions (perhaps 35,000–40,000 deaths in all); Robespierre's Committee of Public Safety
 - **Toussaint L'Ouverture** — Haitian revolution leader; military genius; captured and imprisoned by Napoleon
 - **Creole** — American-born Spanish colonist; primary leaders of Latin American independence
 - **El Libertador** — Title for Simón Bolívar; liberated northern South America
@@ -90,10 +90,10 @@ export const whEnlightenmentPoliticalRevolutionsPart7Data = {
           {
             question: 'A DBQ document from a Latin American creole leader (c. 1810) argues for independence using Enlightenment language. What is the most sophisticated sourcing?',
             options: [
-              'A creole leader writing to argue for independence was using Enlightenment language instrumentally — the natural rights rhetoric served his class interests (independence from Spain would give creoles political power) without necessarily committing him to extending those rights to indigenous peoples or enslaved people; the document reveals both genuine Enlightenment influence AND selective application serving creole class interests',
-              'Creole independence leaders were sincere Enlightenment universalists with no class interests',
-              'The document is worthless evidence because all political arguments are self-interested',
-              'Sourcing analysis is unnecessary because the content speaks for itself',
+              'The author likely held Enlightenment views sincerely but used them to serve creole class interests',
+              'Creole leaders were sincere universalists, so the document reflects no class interest and can be taken at face value',
+              'The document is worthless as evidence, since every Enlightenment argument for independence is self-interested',
+              'Sourcing is unnecessary here, since the document\'s content and argument speak clearly for themselves',
             ],
             correctAnswer: 0,
             explanation: 'Sophisticated sourcing identifies point of view + purpose: creole leaders were genuinely influenced by Enlightenment ideas (most were educated in Enlightenment philosophy) AND had specific class interests in independence (political power, economic autonomy from Spanish mercantilism). Both are true simultaneously — the rhetorical Enlightenment language and the class-interest motivation are not mutually exclusive. AP sourcing rewards recognizing this complexity rather than choosing between "sincere" and "hypocritical."'
@@ -101,10 +101,10 @@ export const whEnlightenmentPoliticalRevolutionsPart7Data = {
           {
             question: 'The Reign of Terror\'s significance for AP analysis of revolutions is that it:',
             options: [
-              'Demonstrates how revolutions can use their own principles against their own people — the same "liberty" and "rights" the Revolution proclaimed were suspended when Robespierre\'s Committee of Public Safety determined that revolutionary security required eliminating "enemies," demonstrating the recurring revolutionary logic that exceptional circumstances justify exceptional measures including the suspension of the rights being fought for',
-              'The Terror was a minor aberration with no significance for understanding revolutionary dynamics',
-              'The Terror proves that all revolutions inevitably produce similar violence',
-              'The Terror was caused entirely by external forces with no internal revolutionary dynamics',
+              'Shows how leaders can suspend proclaimed rights by claiming the revolution is in danger',
+              'Was a minor aberration that tells historians little about how later revolutions have unfolded over time',
+              'Proves that every revolution must inevitably produce violence on the same scale as France did in 1793-94',
+              'Was caused entirely by foreign invasion and royalist plots, with no internal revolutionary dynamics',
             ],
             correctAnswer: 0,
             explanation: 'The revolutionary logic of the Terror is AP\'s reusable analytical framework: "the revolution is in danger; therefore extraordinary measures are justified; therefore the very rights we proclaimed can be suspended to protect them." This logic recurs in the Jacobin Terror, Stalinist purges, and Maoist Cultural Revolution — different times, same dynamic. AP rewards recognizing these recurring patterns and explaining the mechanism (threat perception → emergency powers → terror) rather than treating each case as unique.'
@@ -112,10 +112,10 @@ export const whEnlightenmentPoliticalRevolutionsPart7Data = {
           {
             question: 'Napoleon\'s historical significance for the Enlightenment-to-revolution narrative is that he:',
             options: [
-              'Simultaneously preserved and distorted the Revolution\'s legacy — the Napoleonic Code codified Enlightenment social principles (legal equality, religious tolerance, property rights) and spread them across Europe through conquest, while Napoleon\'s authoritarian rule ended the political democracy the Revolution had begun, demonstrating the tension between Enlightenment social goals and democratic political methods',
-              'Napoleon completely reversed all Enlightenment and revolutionary achievements',
-              'Napoleon faithfully implemented all aspects of Enlightenment political thought',
-              'Napoleon\'s significance was purely military with no ideological dimension',
+              'Spread Enlightenment social principles through his law code but ended the Revolution\'s political democracy',
+              'Reversed every Enlightenment and revolutionary achievement, restoring the Old Regime in full',
+              'Carried out every aspect of Enlightenment political thought faithfully, including free elections and an uncensored press',
+              'Mattered only as a military commander, leaving no lasting ideological or legal influence on Europe',
             ],
             correctAnswer: 0,
             explanation: 'The Napoleon-Enlightenment complexity is AP\'s synthesis point: he is the greatest exporter of Enlightenment social principles (the Napoleonic Code was adopted or influenced law in much of Europe, Latin America, and beyond) AND the destroyer of the political democracy those principles implied. This is not a contradiction but a feature of "revolution from above" — using state power to implement social reforms without popular political participation. AP rewards the "both/and" analysis over the "either/or."'
@@ -130,7 +130,7 @@ export const whEnlightenmentPoliticalRevolutionsPart7Data = {
       exercise: {
         dropdowns: [
           {
-            label: 'The French document that proclaimed "liberty, equality, fraternity" as natural rights (1789) was ___',
+            label: 'The French document (1789) declaring that men "are born and remain free and equal in rights" was ___',
             options: [
             'The Declaration of Rights of Man',
             'The Declaration of Independence',
@@ -153,7 +153,7 @@ export const whEnlightenmentPoliticalRevolutionsPart7Data = {
             'The Napoleonic Code',
             'The Declaration of Rights of Man',
             'The Constitution of the Year III',
-            'The Civil Code',
+            'The Concordat of 1801',
             ]
           }
         ],
@@ -162,7 +162,7 @@ export const whEnlightenmentPoliticalRevolutionsPart7Data = {
           'Lafayette',
           'The Napoleonic Code',
         ],
-        hint1: 'French 1789 — natural rights — liberté égalité fraternité — influenced by American Declaration',
+        hint1: 'French 1789 — natural rights — "free and equal in rights" — influenced by American Declaration',
         hint2: 'French aristocrat — fought at Valley Forge — returned to France — led National Guard',
         hint3: 'Napoleon 1804 — legal equality — religious tolerance — exported across Europe through conquest',
         explanation: 'The Declaration of Rights of Man articulates the French Revolution\'s ideals; Lafayette embodies the personal connection between American and French revolutions; and the Napoleonic Code represents the revolutionary legacy that persisted and spread even after Napoleon\'s defeat — three essential elements for AP synthesis of Enlightenment-to-revolution history.'
@@ -177,21 +177,21 @@ export const whEnlightenmentPoliticalRevolutionsPart7Data = {
           {
             question: 'Comparing all four Atlantic revolutions reveals which overarching AP principle?',
             options: [
-              'The history of Enlightenment-inspired revolution is the history of an expanding, contested, and incomplete argument about who qualifies as a rights-bearing person — each revolution extended rights more broadly than existing practice while excluding significant populations, and each exclusion generated demands for inclusion that drove subsequent waves of struggle',
-              'Enlightenment revolutions uniformly achieved complete equality for all people',
-              'The four revolutions were too different to reveal any common pattern',
-              'Revolutionary rights expansion moved in a straight line from least to most inclusive',
+              'Revolutionary rights expanded unevenly, as each revolution\'s exclusions sparked new demands for inclusion',
+              'Enlightenment revolutions achieved complete equality for all people in the societies they changed',
+              'The four revolutions differed too much in causes and leaders to reveal any common pattern',
+              'Rights expanded in a straight line, with each revolution more inclusive than the one before',
             ],
             correctAnswer: 0,
-            explanation: 'The meta-pattern of Atlantic revolutions is AP\'s synthesis lesson: rights expansion was real but contested and incomplete. American Revolution expanded rights for colonial elites but excluded enslaved people → Haitian Revolution applied rights to enslaved people → French Revolution applied rights to all male citizens → Latin American Revolution applied rights to creoles → each step both expanded and left gaps that generated further struggle. AP rewards identifying this contested expansion pattern rather than treating each revolution in isolation.'
+            explanation: 'The meta-pattern of Atlantic revolutions is AP\'s synthesis lesson: rights expansion was real but contested and incomplete. American Revolution (1775-83) expanded rights for colonial elites but excluded enslaved people → French Revolution (1789-99) extended rights to male citizens (briefly to all adult men) → Haitian Revolution (1791-1804) applied rights to enslaved people → Latin American revolutions (1808-26) won power for creoles → each step both expanded and left gaps that generated further struggle. AP rewards identifying this contested expansion pattern rather than treating each revolution in isolation.'
           },
           {
             question: 'For AP, the most important analytical skill when studying Enlightenment and political revolutions is:',
             options: [
-              'Evaluating the gap between revolutionary ideals and revolutionary practice — every revolution proclaimed principles (natural rights, liberty, equality) that it failed to implement consistently, and analyzing who was included and excluded from those principles, and why, reveals the class, race, and gender interests that shaped revolutionary outcomes more than the proclaimed ideals did',
-              'Memorizing dates and leaders is the primary skill for AP revolutionary content',
-              'Accepting revolutionary leaders\' own descriptions of their goals at face value',
-              'Treating revolutionary ideals and revolutionary practice as identical',
+              'Evaluating the gap between proclaimed ideals and practice, and asking who was included or excluded and why',
+              'Memorizing the dates of each revolution and the names of its leaders as the primary skill',
+              'Accepting revolutionary leaders\' own accounts of their goals at face value as the most reliable evidence',
+              'Treating revolutionary ideals and revolutionary practice as one and the same thing in every revolution studied',
             ],
             correctAnswer: 0,
             explanation: 'The ideals-practice gap is AP\'s fundamental analytical skill for revolutionary history: revolutionary documents (Declaration of Independence, Declaration of Rights of Man) proclaim ideals; revolutionary outcomes (Constitution protecting slavery, Terror\'s executions, creole social hierarchy preservation) reveal whose interests actually shaped events. The analysis asks: who benefited? who was excluded? why did the gap between ideals and practice exist? Answering these questions distinguishes AP-level analysis from surface-level description.'

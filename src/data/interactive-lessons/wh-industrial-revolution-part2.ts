@@ -23,10 +23,10 @@ export const whIndustrialRevolutionPart2Data = {
           {
             question: 'The enclosure movement\'s role in British industrialization was primarily to:',
             options: [
-              'Displace rural agricultural workers by consolidating common lands into private estates, forcing former peasants and tenant farmers to migrate to urban areas where they became the factory labor force — the enclosure movement was the social mechanism that created an industrial working class by destroying the agricultural subsistence base',
-              'Increase agricultural productivity with no impact on industrial labor supply',
-              'Prevent rural workers from moving to cities',
-              'Expand common lands available to small farmers',
+              'Push rural families off consolidated common lands, turning displaced farmers into a mobile labor supply for urban factories',
+              'Raise farm productivity on enclosed estates while keeping most rural laborers employed in the countryside',
+              'Keep rural workers in their villages by guaranteeing tenants long leases on the newly enclosed farms',
+              'Expand common grazing land for small farmers so that they could supply wool to cottage spinners',
             ],
             correctAnswer: 0,
             explanation: 'Enclosure is AP\'s mechanism connecting agricultural change to industrial labor supply: when Parliament authorized landowners to enclose common lands (1750-1850), they eliminated the subsistence farming that had sustained rural communities. Displaced farmers with no land had two options — poverty or factory work. This "push" factor (land loss) combined with the "pull" factor (factory wages) to create the British industrial labor force. Without enclosure, the factory system would have had no workers.'
@@ -34,13 +34,13 @@ export const whIndustrialRevolutionPart2Data = {
           {
             question: 'Britain\'s colonial empire contributed to industrialization primarily by:',
             options: [
-              'Providing both raw materials (especially Indian cotton for textile mills) and protected markets for British manufactured goods — colonies supplied the inputs and absorbed the outputs of British industry, creating a self-reinforcing loop where industry expanded to meet colonial demand and colonialism expanded to supply industrial needs',
-              'Colonies provided no economic benefit to British industrialization',
-              'Colonies supplied labor that worked in British factories',
-              'Colonial markets were irrelevant because British industry only sold to domestic consumers',
+              'Supplying raw cotton and other inputs while providing protected markets for British manufactured goods',
+              'Supplying most of the coal and iron ore that British mines could not produce in large enough quantities',
+              'Sending colonial laborers to staff British textile mills during the labor shortages of the 1780s',
+              'Buying British machinery while colonies built their own factories to compete in world markets',
             ],
             correctAnswer: 0,
-            explanation: 'The empire-industrialization connection is an AP complexity point: cotton textiles (Britain\'s first industrialized sector) required Indian cotton (raw material) and had to overcome Indian competition in global markets (by using imperial policy to destroy Indian textile manufacturing and create demand for British-made goods). The infamous destruction of Indian textile manufacturing (Dacca muslin) by British import policy demonstrates how colonialism and industrialization were mutually reinforcing rather than separate phenomena.'
+            explanation: 'The empire-industrialization connection is an AP complexity point: cotton textiles (Britain\'s first industrialized sector) depended on imported raw cotton (mostly grown by enslaved people in the American South, with more from India later) and had to overcome Indian competition in global markets. The collapse of Indian textile manufacturing (Dacca muslin), driven by cheap British machine-made cloth, British tariffs on Indian cloth, and colonial free-trade policy, demonstrates how colonialism and industrialization were mutually reinforcing rather than separate phenomena.'
           }
         ]
       }
@@ -73,9 +73,9 @@ Britain's physical geography created key preconditions:
 
 > **Key Inventions and Their Significance**
 
-- **James Watt's steam engine (1769):** Converted heat into mechanical power; could be placed anywhere; not dependent on water location
-- **Spinning jenny (1764) / water frame (1768):** Mechanized textile production; dramatically increased output per worker
-- **Power loom (1784):** Completed textile mechanization; converted weavers from artisans to factory workers
+- **James Watt's steam engine (patent 1769; engines from 1776):** Converted heat into mechanical power; could be placed anywhere; not dependent on water location
+- **Spinning jenny (c. 1764) / water frame (1769):** Mechanized textile production; dramatically increased output per worker
+- **Power loom (1785):** Completed textile mechanization; converted weavers from artisans to factory workers
 - **Puddling process (1784):** Mass-produced wrought iron for machinery and construction
 
 > **AP Comparison Anchor**
@@ -93,10 +93,10 @@ Britain's physical geography created key preconditions:
           {
             question: 'James Watt\'s steam engine\'s most transformative feature was:',
             options: [
-              'Its fuel-powered mobility — unlike water mills (which required location on fast-moving rivers) or windmills (which required wind), the steam engine could be placed anywhere coal was available, allowing factories to concentrate in cities near labor and markets rather than dispersing along rivers, fundamentally changing the geography of production',
-              'Steam engines were less powerful than water mills and only gradually replaced them',
-              'Steam engines required proximity to large rivers and were geographically constrained',
-              'The steam engine\'s main contribution was to agriculture rather than manufacturing',
+              'It freed factories from riverbanks so they could cluster in cities near coal fields and workers',
+              'It doubled the power of water mills, so factories stayed on fast rivers but produced far more cloth',
+              'It ran on wood rather than coal, letting factories operate in forested regions far from the coalfields',
+              'It was first used to drive farm machinery, mechanizing harvests long before it reached any textile mill',
             ],
             correctAnswer: 0,
             explanation: 'The geographic liberation created by steam power is the key mechanism: water-powered mills had to be located where rivers ran fast (geographically constrained, distant from labor pools); steam-powered mills could be located near coal deposits, labor, and transportation networks. This enabled the concentration of factories in urban areas, which enabled the division of labor, which enabled economies of scale. Steam power is the foundation of the "factory system" in its urban industrial form.'
@@ -104,10 +104,10 @@ Britain's physical geography created key preconditions:
           {
             question: 'Patent law\'s role in British industrialization was to:',
             options: [
-              'Protect inventors\' profits from their innovations for a fixed period, creating economic incentives to invest in research and invention — without patent protection, competitors could immediately copy any successful invention, eliminating the profit that motivated the original investment, so patent law was the institutional mechanism that sustained the innovation cycle',
-              'Patent law prevented foreign inventors from patenting in Britain',
-              'Patents were used exclusively by the government to control technology development',
-              'Patent law had no significant impact on British innovation rates',
+              'Give inventors a temporary monopoly on their designs, so investing in invention could pay off',
+              'Give the Crown ownership of new machines so that the state could license them to chosen firms',
+              'Bar foreign inventors from British markets so that domestic machine makers faced no competition',
+              'Require inventors to share designs freely, spreading new machines quickly to every manufacturer',
             ],
             correctAnswer: 0,
             explanation: 'Patent law is AP\'s example of how institutions shape economic behavior: the British patent system (dating from 1624 Statute of Monopolies) created a time-limited monopoly on innovations, allowing inventors to profit from their inventions before competition was allowed. This institutional incentive explains why Britain produced so many commercial innovations in the 18th century — the reward structure made invention commercially rational. France had similar inventors but less effective institutional incentive mechanisms.'
@@ -115,10 +115,10 @@ Britain's physical geography created key preconditions:
           {
             question: 'Comparing British industrialization to why China did not industrialize first despite its proto-industrial production reveals:',
             options: [
-              'China had comparable or superior proto-industrial capabilities (silk, ceramics, iron production) but lacked key institutional features: patent law protecting inventors\' profits, state policies prioritizing commercial innovation over agricultural stability, and available investment capital from commercial banking — demonstrating that industrialization requires institutional innovation alongside technological capability',
-              'China lacked all the natural resources required for industrialization',
-              'China had no proto-industrial production before European industrialization',
-              'China deliberately chose not to industrialize for religious reasons',
+              'China matched Britain in proto-industry but lacked institutions like patents, merchant-friendly policy, and investment banks',
+              'China lacked the coal, iron, and navigable rivers needed for industry, so it could never mechanize its production',
+              'China had little proto-industrial production, so it had no artisan base on which to build factories',
+              'Confucian scholars banned machinery for religious reasons, so the Qing state deliberately rejected industry',
             ],
             correctAnswer: 0,
             explanation: 'The China comparison is AP\'s most sophisticated "why Britain?" analysis: China had proto-industrialization (coal production in Shanxi was larger than Britain\'s in 1700; Chinese iron production was substantial), but Confucian state policies prioritized agricultural stability over commercial development, suppressed merchant activities, and didn\'t develop institutional incentives (patent law) for continuous innovation. This demonstrates that industrialization was not inevitable for the most technologically sophisticated society — it required specific institutional conditions.'
@@ -180,10 +180,10 @@ Britain's physical geography created key preconditions:
           {
             question: 'An AP prompt asks: "Why did Britain industrialize before France?" Which argument is most analytical?',
             options: [
-              'Britain industrialized first not because of superior natural resources or technology (France had coal and sophisticated manufacturing) but because of a combination of institutional factors: patent law rewarded innovation; parliamentary enclosure created an industrial labor force; banking systems provided capital; and colonial markets provided raw materials and product demand — while France\'s revolutionary disruption (1789-1815) and larger agricultural sector delayed the same transition',
-              'Britain had no geographic or institutional advantages over France — industrialization was random',
-              'Britain simply had more coal than France, making industrialization inevitable',
-              'France was culturally inferior and therefore unable to industrialize effectively',
+              'Patents, enclosure, banking, and colonial markets worked together, while upheaval in 1789-1815 delayed France',
+              'Britain simply had more coal than France, which made earlier industrialization inevitable whatever its institutions',
+              'Britain had a larger population, cheaper labor, and lower wages than France, so its mills were cheaper to run',
+              'France lacked coal and skilled craftsmen entirely, so it could not begin industrializing until after 1900',
             ],
             correctAnswer: 0,
             explanation: 'Multi-causal analysis earns AP credit: the comparison identifies multiple factors (institutional: patent law, banking; social: enclosure; commercial: colonial markets) and explains the French counterfactual (revolutionary disruption + larger agricultural sector = different timing). Single-cause explanations ("more coal") are insufficient — AP rewards recognizing that industrialization required a configuration of conditions, not any single determining factor.'
@@ -191,10 +191,10 @@ Britain's physical geography created key preconditions:
           {
             question: 'The "agricultural revolution" preceding British industrialization demonstrates which AP causal relationship?',
             options: [
-              'Agricultural improvement (crop rotation, selective breeding, drainage improvements) increased food productivity, supporting a larger urban population, while the enclosure movement simultaneously displaced rural labor — together creating both the food supply (urban workers could be fed) and labor supply (displaced farmers became urban workers) that factory industrialization required',
-              'The agricultural revolution had no connection to industrialization — the two were separate processes',
-              'The agricultural revolution reduced food production, forcing people into factories for survival',
-              'Agricultural improvements only affected rural areas with no urban industrial consequences',
+              'Higher farm output fed growing cities while enclosure pushed displaced rural workers into factory jobs',
+              'Farm productivity collapsed under enclosure, so hungry rural families were forced into factories to avoid starvation',
+              'New farm machinery came first, and the factories that built it then grew into Britain\'s main manufacturing sector',
+              'Better farming kept rural laborers busy year-round while cities grew mainly through immigration from Ireland and Europe',
             ],
             correctAnswer: 0,
             explanation: 'The agricultural-industrial connection demonstrates AP\'s attention to causal sequences: agricultural revolution (increased productivity) enabled urbanization (more urban workers could be fed at lower cost); enclosure (land consolidation) created the urban labor force. Both were necessary. Without the agricultural productivity improvements, urban populations couldn\'t be fed; without enclosure, rural workers wouldn\'t have moved to cities. Industrialization required both a supply of labor AND a way to feed that labor — both provided by agricultural transformation.'

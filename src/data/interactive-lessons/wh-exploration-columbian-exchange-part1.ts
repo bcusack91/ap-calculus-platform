@@ -47,7 +47,7 @@ Several factors converged to make European maritime exploration possible and des
 
 ### Spanish Exploration
 - **Christopher Columbus** (1492) — reached the Caribbean believing he had found Asia
-- **Treaty of Tordesillas** (1494) — divided the New World between Spain and Portugal (papal mediation)
+- **Treaty of Tordesillas** (1494) — divided the New World between Spain and Portugal (a bilateral treaty that moved the line drawn by a 1493 papal bull)
 - **Hernán Cortés** (1519–21) — conquered the Aztec Empire with indigenous allies, gunpowder, and disease
 - **Francisco Pizarro** (1532) — conquered the Inca Empire using similar advantages
 
@@ -63,10 +63,10 @@ Several factors converged to make European maritime exploration possible and des
           {
             question: 'Which factor BEST explains why Portugal was the first European nation to establish an overseas trading empire in the 15th century?',
             options: [
-              'Portugal had the largest population and military in Europe at the time',
-              'Its geographic position on the Atlantic coast, combined with state-sponsored investment in naval technology and the desire to access Asian trade routes',
-              'Portuguese merchants had already controlled the Mediterranean spice trade for centuries',
-              'The Pope mandated that Portugal lead all Christian exploration efforts worldwide'
+              'Its large population and standing army, which let it outman every rival kingdom at sea',
+              'Its Atlantic position and royal sponsorship of navigation aimed at reaching African gold and Asian goods',
+              'Its merchants\' long control of the Mediterranean spice trade through partnerships with Venice',
+              'Its early use of joint-stock companies that pooled private capital to finance long voyages'
             ],
             correctAnswer: 1,
             explanation: 'Portugal\'s Atlantic location gave it natural access to exploration routes. Prince Henry the Navigator invested in naval technology (caravel ships, navigation instruments), and the crown sought direct access to African gold and Asian spices to bypass expensive overland routes controlled by Ottoman and Italian middlemen.'
@@ -74,10 +74,10 @@ Several factors converged to make European maritime exploration possible and des
           {
             question: 'How did Portuguese colonial strategy in Asia primarily differ from Spanish colonial strategy in the Americas?',
             options: [
-              'Portugal established small, fortified trading posts along coasts, while Spain conquered and directly governed large territorial empires',
-              'Portugal focused on spreading Christianity, while Spain was solely interested in economic exploitation',
-              'Spain relied on naval power, while Portugal preferred overland conquest',
-              'Both nations used identical strategies of trading-post empires throughout their colonial territories'
+              'Portugal built fortified trading posts on coasts, while Spain conquered and ruled large territories',
+              'Portugal focused on converting Asian rulers to Christianity, while Spain avoided missionary work in its colonies',
+              'Spain relied on naval patrols of the sea lanes, while Portugal marched armies inland to conquer Asian kingdoms and rule them directly',
+              'Both crowns built chains of coastal forts and trading posts, while leaving inland government to local rulers'
             ],
             correctAnswer: 0,
             explanation: 'Portugal lacked the manpower for large-scale territorial conquest, so it built a network of coastal trading posts (Goa, Malacca, Macau) to control maritime trade routes. Spain, facing weakened Aztec and Inca empires (due to disease and internal conflict), pursued direct territorial conquest and settler colonialism.'
@@ -125,10 +125,10 @@ The **Columbian Exchange** refers to the massive transfer of plants, animals, di
           {
             question: 'Which consequence of the Columbian Exchange had the most significant impact on the indigenous population of the Americas?',
             options: [
-              'The introduction of European legal systems that restricted indigenous land ownership rights',
-              'The introduction of Old World diseases like smallpox, which killed an estimated 50–90% of the indigenous population',
-              'The introduction of horses, which disrupted traditional hunting practices among all native groups',
-              'The introduction of Christianity, which replaced all indigenous religious practices within one generation'
+              'The introduction of European legal systems, which stripped indigenous communities of their land titles',
+              'The introduction of Old World diseases like smallpox, which killed most indigenous people',
+              'The introduction of horses, which disrupted traditional hunting practices among nearly all native groups',
+              'The introduction of Christianity, which replaced indigenous religious practices within one generation'
             ],
             correctAnswer: 1,
             explanation: 'Old World diseases — especially smallpox, measles, and influenza — devastated indigenous populations who had no prior exposure and therefore no immunological resistance. This demographic catastrophe was far more destructive than any military campaign and fundamentally enabled European conquest. Horses actually empowered some groups (like Plains peoples).'
@@ -136,21 +136,21 @@ The **Columbian Exchange** refers to the massive transfer of plants, animals, di
           {
             question: 'How did silver from the Americas affect the global economy in the 16th and 17th centuries?',
             options: [
-              'It had minimal impact since silver was only used locally in Spanish colonial markets',
-              'It caused deflation in Europe and reduced trade with Asia due to overproduction',
-              'It created a truly global trade network — flowing from American mines through Spain to markets in China, where it was used to pay for silk, porcelain, and tea',
-              'It was primarily used to fund religious crusades and had no commercial significance'
+              'It stayed mostly inside Spanish American markets, where it was minted into coins for local use',
+              'It caused deflation in Europe and reduced trade with Asia, where demand for silver was weak',
+              'It linked American mines and Manila to China, where silver paid for silk and porcelain',
+              'It mainly paid for Spain\'s wars against the Ottomans and was spent before it could reach Asian markets'
             ],
             correctAnswer: 2,
-            explanation: 'American silver (particularly from Potosí) became the world\'s most important trade commodity. Spain used it to purchase Asian goods; silver flowed to China via the Manila galleon trade because China\'s silver-based tax system (Single Whip Reform) created massive demand. This connected the Americas, Europe, and Asia in the first truly global economy.'
+            explanation: 'American silver (particularly from Potosí) became the world\'s most important trade commodity, and it raised European prices rather than lowering them. Spain used it to purchase Asian goods (silk, porcelain, tea); silver flowed to China via the Manila galleon trade because China\'s silver-based tax system (Single Whip Reform) created massive demand. This connected the Americas, Europe, and Asia in the first truly global economy.'
           },
           {
             question: 'Which connection between the Columbian Exchange and the Atlantic slave trade is MOST historically accurate?',
             options: [
-              'European demand for sugar (an Old World crop grown on New World plantations) created massive labor demand that was filled by enslaved Africans',
-              'Indigenous Americans voluntarily migrated to Africa, creating the need for replacement labor in the Americas',
-              'The Atlantic slave trade existed for centuries before the Columbian Exchange and was unrelated to it',
-              'Enslaved Africans were primarily brought to the Americas to work in silver mines controlled by Portugal'
+              'Planting Old World sugarcane in the Americas created a labor demand that planters filled with enslaved Africans',
+              'Enslaved Africans were sent mainly to Portuguese-run silver mines in Peru to replace indigenous mita workers',
+              'The Atlantic slave trade began only after 1700, once cotton replaced sugar as the leading plantation crop',
+              'American crops carried to Africa caused famines that pushed African states to sell captives to Europeans'
             ],
             correctAnswer: 0,
             explanation: 'Sugar cane (transferred from the Old World to the Americas) required intensive labor for cultivation and processing. The catastrophic decline of indigenous populations from disease made European colonizers turn to enslaved African labor. The sugar-slavery connection drove the Atlantic slave trade for over 300 years.'

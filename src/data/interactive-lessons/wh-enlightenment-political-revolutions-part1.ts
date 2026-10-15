@@ -59,10 +59,10 @@ The Enlightenment (c. 1650–1800) was an intellectual movement that applied **r
           {
             question: 'Which Enlightenment thinker\'s ideas about natural rights and the right to revolution most directly influenced Thomas Jefferson\'s Declaration of Independence?',
             options: [
-              'Voltaire, who argued for religious tolerance and free speech',
-              'John Locke, who argued that people have natural rights to life, liberty, and property, and may overthrow governments that violate those rights',
-              'Adam Smith, who advocated for free-market economics and limited government intervention',
-              'Montesquieu, who proposed the separation of governmental powers into three branches'
+              'Voltaire, who argued that natural rights required religious tolerance and freedom of speech',
+              'John Locke, who held that governments exist to protect natural rights and may be overthrown when they violate them',
+              'Adam Smith, who argued that free markets and limited government would best secure natural liberty',
+              'Montesquieu, who held that dividing government into three branches would prevent revolution and tyranny'
             ],
             correctAnswer: 1,
             explanation: 'Jefferson\'s Declaration of Independence closely mirrors Locke\'s Second Treatise of Government — Locke argued that humans have natural rights (life, liberty, property) and that government derives authority from consent of the governed. When government violates those rights, the people have a right to revolution. Jefferson changed "property" to "pursuit of happiness."'
@@ -70,10 +70,10 @@ The Enlightenment (c. 1650–1800) was an intellectual movement that applied **r
           {
             question: 'Which Enlightenment principle BEST describes the idea that government authority comes from the people rather than from God or hereditary monarchy?',
             options: [
-              'Mercantilism — the belief that economic policy should maximize exports over imports',
+              'Mercantilism — the belief that a state grows rich by maximizing exports and hoarding bullion',
               'Popular sovereignty — the principle that political power originates from and belongs to the people',
-              'Divine right — the idea that monarchs rule by God\'s direct appointment and are accountable only to God',
-              'Absolutism — the theory that a single ruler should hold unlimited and unchecked governmental power'
+              'Divine right — the principle that monarchs rule by God\'s direct appointment and answer only to God',
+              'Absolutism — the theory that a single ruler should hold unlimited power over the people and the law'
             ],
             correctAnswer: 1,
             explanation: 'Popular sovereignty, championed by Rousseau and Locke, holds that government\'s legitimacy comes from the consent of the governed — not from divine appointment or hereditary succession. This idea directly challenged the divine right of kings and became the philosophical foundation for democratic revolutions.'
@@ -96,8 +96,8 @@ Enlightenment ideas fueled a wave of revolutions across the Atlantic world, each
 
 ### French Revolution (1789–1799)
 - **Cause:** Financial crisis, social inequality (Three Estates), Enlightenment ideals
-- **Key document:** Declaration of the Rights of Man and Citizen (1789) — liberty, equality, fraternity
-- **Stages:** Moderate reform → Radical phase (Reign of Terror under Robespierre, ~17,000 executed) → Napoleon's rise (1799)
+- **Key document:** Declaration of the Rights of Man and Citizen (1789) — natural rights and equality before the law ("liberty, equality, fraternity" was a revolutionary slogan, not part of the Declaration's text)
+- **Stages:** Moderate reform → Radical phase (Reign of Terror under Robespierre, ~17,000 official executions) → Napoleon's rise (1799)
 - **Outcome:** Abolished feudalism and monarchy (temporarily), but led to dictatorship under Napoleon
 
 ### Haitian Revolution (1791–1804)
@@ -118,10 +118,10 @@ Enlightenment ideas fueled a wave of revolutions across the Atlantic world, each
           {
             question: 'Why is the Haitian Revolution (1791–1804) considered unique among Atlantic world revolutions?',
             options: [
-              'It was the only revolution fought exclusively between two European colonial powers',
-              'It was the only successful large-scale revolution led by enslaved people, resulting in the abolition of slavery and the creation of an independent Black republic',
-              'It resulted in the establishment of a constitutional monarchy that lasted for over 200 years',
-              'It was the only revolution that did not involve any influence from Enlightenment ideas or philosophy'
+              'It was the only revolution fought mainly between two European colonial powers for control of a Caribbean colony',
+              'It was the only successful mass revolt of enslaved people, ending slavery and creating a Black-led state',
+              'It produced a constitutional monarchy under Toussaint Louverture that ruled the island for more than a century',
+              'It was the only Atlantic revolution that drew no inspiration at all from Enlightenment ideas about natural rights'
             ],
             correctAnswer: 1,
             explanation: 'The Haitian Revolution is unique because it was the only successful revolution where enslaved people overthrew their enslavers and established an independent nation. Led by Toussaint Louverture and completed by Dessalines, Haiti declared independence in 1804 — becoming the first Black republic and striking fear into slave-holding societies globally.'
@@ -129,10 +129,10 @@ Enlightenment ideas fueled a wave of revolutions across the Atlantic world, each
           {
             question: 'A key difference between the American and French Revolutions was that:',
             options: [
-              'The American Revolution was influenced by Enlightenment ideas while the French Revolution was not',
-              'The American Revolution built on existing colonial self-governance traditions, while the French Revolution attempted to completely restructure a society with deep class divisions and no democratic tradition',
-              'The French Revolution succeeded in creating lasting democratic institutions immediately, while the American Revolution failed',
-              'Only the French Revolution involved armed conflict; the American Revolution was entirely peaceful'
+              'Only the American Revolution drew on Enlightenment ideas, while the French Revolution rejected them entirely',
+              'The American Revolution built on colonial self-government, while the French one tried to remake a rigidly hierarchical society',
+              'The French Revolution created lasting democratic institutions at once, while the American Revolution collapsed into military dictatorship',
+              'Only the French Revolution involved armed conflict, while the American Revolution was won through peaceful petitions'
             ],
             correctAnswer: 1,
             explanation: 'American colonists had over 150 years of experience with self-governing assemblies, making the transition to a republic more manageable. France had an absolute monarchy, rigid social hierarchy (Three Estates), and massive inequality — making revolutionary change far more disruptive and violent (Reign of Terror). Both were influenced by Enlightenment ideas.'

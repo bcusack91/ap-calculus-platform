@@ -23,24 +23,24 @@ export const whMaritimeEmpiresLaborPart6Data = {
           {
             question: 'The Haitian Revolution (1791-1804) was historically significant because:',
             options: [
-              'It was the only successful large-scale slave revolt in the Americas — creating the first Black republic and first Caribbean independent nation — while also demonstrating that enslaved peoples were capable of sophisticated political and military organization that could defeat European armies, transforming how slaveholders and abolitionists across the Americas understood the risks and possibilities of slavery',
-              'The Haitian Revolution had no impact on slavery elsewhere in the Americas',
-              'Haiti achieved independence through peaceful negotiation rather than armed revolt',
-              'The revolution was led by free people of color with no enslaved people involvement',
+              'It was the only large-scale slave revolt to found a state, alarming slaveholders and inspiring the enslaved',
+              'It was a peaceful transfer of power, negotiated by free people of color with the French National Assembly',
+              'It was a revolt led by white planters, who broke from France to protect slavery from abolition decrees',
+              'It was a short uprising that France crushed in 1802, restoring slavery on the island for decades',
             ],
             correctAnswer: 0,
-            explanation: 'The Haitian Revolution\'s dual significance: (1) it terrified slaveholders across the Americas into tightening control (US strengthened slave codes after 1804); (2) it inspired enslaved peoples and abolitionists by demonstrating that freedom could be won by force. The revolution\'s leader, Toussaint L\'Ouverture, was a former enslaved person who defeated Spanish, British, and French armies — a fact that fundamentally challenged European assumptions about African peoples\' capabilities.'
+            explanation: 'The Haitian Revolution (1791-1804) created the first Black republic and the first independent nation in the Caribbean. Its dual significance: (1) it terrified slaveholders across the Americas into tightening control (the US South strengthened slave codes); (2) it inspired enslaved peoples and abolitionists by demonstrating that freedom could be won by force. Toussaint L\'Ouverture, a formerly enslaved man, defeated Spanish and British forces; after the French captured him in 1802, Jean-Jacques Dessalines defeated Napoleon\'s army and declared independence in 1804.'
           },
           {
             question: 'Olaudah Equiano\'s firsthand account of his enslavement (*The Interesting Narrative*, 1789) contributed to British abolition primarily because:',
             options: [
-              'It provided British readers with a specific, human narrative of the slave trade\'s brutality from the perspective of an enslaved person with intellectual authority — making the abstract suffering of distant enslaved Africans personally real to British audiences and undermining the dehumanizing representations that slave traders used to justify the trade',
-              'Equiano\'s account was ignored by British audiences and had no impact on abolition',
-              'British abolition was driven entirely by economic arguments with no humanitarian dimension',
-              'Firsthand accounts from enslaved people were not considered credible by British readers',
+              'It gave British readers a personal story from a man who had lived through the trade, countering dehumanizing images',
+              'It gave British readers economic data on plantation profits, persuading investors that slavery had become unprofitable',
+              'It gave British readers a legal brief that Parliament adopted word for word as the 1807 abolition act',
+              'It gave British readers a planter\'s view of slavery, which abolitionists then quoted to expose its cruelty',
             ],
             correctAnswer: 0,
-            explanation: 'Equiano\'s narrative demonstrates the power of testimony: abstract arguments about "natural rights" were less persuasive to 18th-century British audiences than a specific, articulate account from an enslaved person who had experienced the trade firsthand. The narrative was a bestseller that went through 9 editions in Equiano\'s lifetime — demonstrating that humanitarian abolitionism required emotional as well as intellectual persuasion. This is also why slave owners worked to suppress similar accounts and deny enslaved people literacy.'
+            explanation: 'Equiano\'s narrative demonstrates the power of testimony: abstract arguments about "natural rights" were less persuasive to 18th-century British audiences than a specific, articulate account from a formerly enslaved man who had experienced the trade firsthand. The narrative was a bestseller that went through 9 editions in Equiano\'s lifetime — demonstrating that humanitarian abolitionism required emotional as well as intellectual persuasion, and undermining the dehumanizing representations slave traders used.'
           }
         ]
       }
@@ -75,7 +75,8 @@ Abolition resulted from converging factors:
 The only successful large-scale slave revolt:
 
 - Triggered by French Revolution's rhetoric of liberty
-- Toussaint L'Ouverture: former enslaved person; military genius; declared Haiti independent 1804
+- Toussaint L'Ouverture: former enslaved person; military genius; captured by the French in 1802 (died 1803)
+- Jean-Jacques Dessalines: defeated Napoleon's army and declared Haiti independent in 1804
 - Haiti became the first Black republic and first Caribbean nation to achieve independence
 - Deeply frightened slaveholders across the Americas; contributed to heightened slave codes in US South
 
@@ -94,35 +95,35 @@ The only successful large-scale slave revolt:
           {
             question: 'The distinction between banning the slave trade (Britain 1807) and abolishing slavery (Britain 1833) demonstrates:',
             options: [
-              'Abolition was a gradual political process in which different constituencies supported different reforms: merchants and humanitarian reformers could agree on ending the TRADE (which also protected existing enslaved property values) while agreeing on abolishing SLAVERY required dealing with plantation owners\' compensation claims and the economic disruption of emancipation',
-              'Banning the slave trade automatically abolished slavery in the same legislation',
-              'British abolition was a single decisive legislative act with no gradual dimension',
-              'The distinction between the trade and slavery itself had no political significance',
+              'Abolition came in political stages, since ending the trade was easier than freeing people and paying owners',
+              'Abolition came in a single act, since the 1807 law ended the trade and freed enslaved people together',
+              'Abolition came first to slavery itself, since Parliament freed enslaved people before banning the trade',
+              'Abolition came from the colonies, since Caribbean assemblies freed enslaved people before Parliament ever acted',
             ],
             correctAnswer: 0,
-            explanation: 'The gradual character of British abolition demonstrates that even moral reform operates within political constraints: the 1807 abolition of the trade kept existing enslaved populations enslaved while ending new importation; the 1833 Emancipation Act freed enslaved people but provided £20 million compensation to slaveholders (not to enslaved people) and required a "apprenticeship" period of continued unpaid labor until 1838. Understanding abolition as a political process with competing interests is more historically accurate than treating it as a moral triumph.'
+            explanation: 'The gradual character of British abolition demonstrates that even moral reform operates within political constraints: the 1807 act ended new importation but kept existing enslaved populations enslaved (it also protected the value of enslaved "property"); the 1833 Emancipation Act freed enslaved people but provided £20 million compensation to slaveholders (not to enslaved people) and required an "apprenticeship" period of continued unpaid labor until 1838. Understanding abolition as a political process with competing interests is more historically accurate than treating it as a single moral triumph.'
           },
           {
             question: 'The economic argument against slavery (Adam Smith\'s claim that free labor is more productive) was historically significant because:',
             options: [
-              'It added an economic rationale to moral/humanitarian arguments for abolition, making abolitionism appealing to British manufacturing interests who needed consumers with purchasing power rather than enslaved workers with no wages — demonstrating that abolition was a convergence of moral and material interests, not purely moral reform',
-              'The economic argument for abolition was irrelevant because abolition was purely moral',
-              'Adam Smith argued that slavery was economically beneficial and should be maintained',
-              'British manufacturers had no interest in whether slavery continued or ended',
+              'It joined material interest to moral argument, winning over manufacturers seeking consumers',
+              'It replaced moral argument entirely, so religious abolitionists lost influence after Smith wrote',
+              'It defended slavery as efficient, so planters cited Smith\'s work to block abolition in Parliament',
+              'It persuaded planters to free their workers voluntarily, so no law was needed in most colonies',
             ],
             correctAnswer: 0,
-            explanation: 'The economic argument for abolition demonstrates AP complexity: moral reform and economic interest aligned in early 19th-century Britain. British industrialists producing manufactured goods needed consumers with purchasing power; enslaved workers had no wages to spend on British goods. Free labor — even poorly paid — created a consumer class that slavery could not. This doesn\'t mean abolition was purely economic (moral arguments were real and powerful), but it does mean that abolition became more politically viable when economic and moral interests converged.'
+            explanation: 'The economic argument for abolition demonstrates AP complexity: moral reform and economic interest aligned in early 19th-century Britain. British industrialists producing manufactured goods needed consumers with purchasing power; enslaved workers had no wages to spend on British goods. This doesn\'t mean abolition was purely economic (moral and religious arguments were real and powerful), but it does mean that abolition became more politically viable when economic and moral interests converged.'
           },
           {
             question: 'Why did Brazilian slavery persist until 1888 — decades after British and US abolition?',
             options: [
-              'Brazil\'s plantation economy was more thoroughly dependent on enslaved labor (46% of all Atlantic slave trade arrivals went to Brazil) and lacked the political forces that drove British and American abolition: no strong evangelical abolition movement, no civil war, and coffee/sugar production continued to demand cheap labor until the late 19th century',
-              'Brazil abolished slavery before Britain and the United States',
-              'Brazilian slavery persisted because Brazilian enslaved people accepted their condition without resistance',
-              'Brazil\'s small enslaved population made abolition less economically significant than in other regions',
+              'Its economy depended heavily on slavery, and it lacked Britain\'s mass movement and a civil war',
+              'Its enslaved population was small, so abolition seemed economically unimportant to Brazil\'s leaders',
+              'Its enslaved population rarely resisted, so slaveholders faced little pressure to end the system',
+              'Its government had already banned slavery in 1822, but the courts refused to enforce the law',
             ],
             correctAnswer: 0,
-            explanation: 'Brazilian abolition\'s lateness demonstrates that the pace of abolition was driven by structural economic and political factors, not moral progress alone. Brazil received more enslaved Africans than any other destination (46% of the total trade); its coffee and sugar plantations were the most valuable in the world; and it lacked the strong abolitionist movement and civil war that forced emancipation in Britain and the US. The Golden Law (1888) came only when both demographic change (gradual mortality of enslaved generation) and political pressure (including from recently freed people joining abolitionist cause) made it unavoidable.'
+            explanation: 'Brazilian abolition\'s lateness demonstrates that the pace of abolition was driven by structural economic and political factors, not moral progress alone. Brazil received more enslaved Africans than any other destination (roughly 45% of the total trade); its coffee and sugar plantations continued to demand cheap labor; and it lacked the strong evangelical abolitionist movement and civil war that forced emancipation in Britain and the US. Independence in 1822 kept slavery intact. The Golden Law (1888) came only when demographic change and political pressure, including mass flight by enslaved people, made it unavoidable.'
           }
         ]
       }
@@ -162,24 +163,24 @@ The only successful large-scale slave revolt:
           {
             question: 'Comparing the causes of British abolition and American abolition reveals:',
             options: [
-              'Both resulted from converging moral arguments, enslaved peoples\' resistance, and changing economic conditions, but different political structures produced different paths: British parliamentary reform through lobbying and humanitarian coalitions; American abolition required a civil war because slaveholder political power was embedded in the Constitution (3/5 compromise, Senate representation) in ways that blocked parliamentary reform',
-              'British and American abolition had identical causes and processes',
-              'American abolition preceded British abolition',
-              'Political structure had no impact on the pace or method of abolition',
+              'Similar forces were at work, but Britain reformed in Parliament while US slaveholders forced a war',
+              'Comparable forces were at work, but the US reformed through Congress while British planter power required a war',
+              'Different forces were at work, since British abolition was purely economic and US abolition purely moral',
+              'Different forces were at work, since US abolition came first and British reformers copied its methods',
             ],
             correctAnswer: 0,
-            explanation: 'This comparison demonstrates that the same underlying forces (moral arguments + enslaved resistance + economic change) produced different political outcomes because of different institutional contexts. Britain\'s parliamentary system allowed a moral coalition to build legislative majorities. The US Constitution\'s compromises gave slaveholding states political power disproportionate to their population, blocking reform until the balance of power was broken by secession and civil war. Institutional context shapes how structural forces play out politically.'
+            explanation: 'This comparison demonstrates that the same underlying forces (moral arguments + enslaved resistance + economic change) produced different political outcomes because of different institutional contexts. Britain\'s parliamentary system allowed a moral coalition to build legislative majorities. The US Constitution\'s compromises (the three-fifths clause, equal Senate representation) gave slaveholding states disproportionate political power, blocking reform until secession and civil war. British abolition (1833) came three decades before US emancipation (1863-65).'
           },
           {
             question: 'For AP, the abolition of slavery is most accurately characterized as:',
             options: [
-              'A global, multi-generational process driven by converging forces — enslaved peoples\' resistance, humanitarian and Enlightenment ideologies, changing economic interests, and political reform movements — that unfolded at different paces in different societies depending on each society\'s specific economic dependence on slave labor and political structure',
-              'A sudden moral awakening that happened simultaneously in all Western societies',
-              'A purely economic reform with no moral or humanitarian dimension',
-              'An event that occurred only once, in Britain in 1833, with no global context',
+              'A long global process with many causes, unfolding at different speeds in different societies',
+              'A sudden moral awakening that swept all Western societies at the same time around 1800',
+              'A purely economic reform, carried out once slavery stopped producing profits for planters',
+              'A single British reform of 1833, which other nations then copied within a few years',
             ],
             correctAnswer: 0,
-            explanation: 'The AP meta-lesson on abolition: it was not a single event but a global process lasting from the late 18th century to the late 19th century, driven by multiple converging forces, and unfolding at different paces in different societies. This multi-causal, comparative perspective — rather than a simple "good triumphed over evil" narrative — is what AP World History rewards. Understanding the structural conditions that accelerated or delayed abolition in different contexts is the analytical task.'
+            explanation: 'The AP meta-lesson on abolition: it was not a single event but a global process lasting from the late 18th century to the late 19th century, driven by converging forces (enslaved peoples\' resistance, humanitarian and Enlightenment ideologies, changing economic interests, political reform movements), and unfolding at different paces depending on each society\'s economic dependence on slave labor and political structure. Brazil abolished slavery only in 1888.'
           }
         ]
       }

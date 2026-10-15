@@ -23,24 +23,24 @@ export const whMaritimeEmpiresLaborPart2Data = {
           {
             question: 'The Portuguese Estado da India differed from the Spanish American empire primarily in that:',
             options: [
-              'Portugal built a network of fortified trading posts at key Indian Ocean chokepoints, extracting revenue by charging protection fees to existing merchants, rather than conquering and settling large territories as Spain did in the Americas',
-              'Portugal conquered large territorial empires throughout Asia while Spain built trading posts',
-              'The two empires had identical approaches to colonial governance',
-              'Portugal relied primarily on indigenous labor while Spain used enslaved Africans',
+              'Portugal fortified ocean chokepoints to tax existing trade, while Spain conquered and settled vast lands',
+              'Portugal conquered large inland territories across Asia, while Spain built coastal posts to tax American trade',
+              'Portugal relied on Christian native allies to rule Asia, while Spain ruled its colonies only through viceroys',
+              'Portugal let private companies run its empire, while Spain governed every colony directly from Seville',
             ],
             correctAnswer: 0,
-            explanation: 'The trading-post vs. territorial distinction is the key AP comparison between Portuguese and Spanish empires. Estado da India was efficient for a small country (Portugal had ~1-2 million people): it extracted revenue from existing commerce without the enormous cost of territorial administration. Spain\'s territorial model required much larger investments in governance but also generated greater long-term economic control.'
+            explanation: 'The trading-post vs. territorial distinction is the key AP comparison between Portuguese and Spanish empires. Estado da India built fortified posts at chokepoints (Goa, Hormuz, Malacca) and charged protection fees to existing merchants; it was efficient for a small country (Portugal had ~1-2 million people). Spain\'s territorial model required much larger investments in governance but also generated greater long-term economic control.'
           },
           {
             question: 'The Portuguese cartaz system (requiring Indian Ocean merchants to purchase protection passes) demonstrates:',
             options: [
-              'How superior naval technology could be used to impose protection fees on existing commercial networks — the cartaz system was essentially organized extortion backed by Portuguese cannon power, redirecting some profit from Indian Ocean trade into Portuguese coffers without replacing the underlying commercial system',
-              'The cartaz system was a voluntary insurance program welcomed by Indian Ocean merchants',
-              'Portuguese naval power eliminated all competition in the Indian Ocean',
-              'The cartaz system benefited Indian Ocean merchants by reducing piracy',
+              'How naval power could force fees on an existing trade network without replacing it',
+              'How Portuguese convoys could win the trust of Gujarati and Arab merchants by offering cheap insurance',
+              'How Portuguese cannon could end Asian merchants\' role in the spice trade and replace them by 1520',
+              'How an Indian Ocean treaty system could set common rules that Asian and European traders accepted',
             ],
             correctAnswer: 0,
-            explanation: 'The cartaz is a model AP example of how power asymmetry (military technology advantage) can extract profit from existing economic systems without creating new ones. Indian Ocean merchants continued to trade — they simply had to pay Portuguese protection fees or face attack. Portuguese disruption of Indian Ocean commerce was real but partial: the existing commercial networks (Arab, Indian, Malay) survived and adapted, ultimately reasserting themselves as Portuguese power declined.'
+            explanation: 'The cartaz is a model AP example of how power asymmetry (military technology advantage) can extract profit from existing economic systems without creating new ones. It was essentially organized extortion backed by Portuguese cannon. Indian Ocean merchants continued to trade — they simply had to pay Portuguese protection fees or face attack. Portuguese disruption was real but partial: the existing commercial networks (Arab, Indian, Malay) survived and adapted.'
           }
         ]
       }
@@ -93,35 +93,35 @@ Spain built the first large territorial empire outside Europe:
           {
             question: 'Why did Portugal choose the trading-post model while Spain built territorial colonies?',
             options: [
-              'Different geographic circumstances produced different strategies: Portugal encountered densely populated, commercially sophisticated Asian civilizations with existing trade networks that could not be easily conquered; Spain encountered American civilizations already weakened by disease that could be conquered and administered as territories',
-              'Portugal\'s military was stronger than Spain\'s, allowing it to avoid territorial conquest',
-              'Spain chose territorial empire because it was more profitable in all circumstances',
-              'The two empires made identical strategic choices for identical reasons',
+              'Portugal met strong commercial Asian states, while Spain met American empires weakened by disease',
+              'Portugal had a larger army than Spain, while Spain lacked the warships needed for long Asian voyages',
+              'Portugal was barred by papal decree from conquest, while Spain received papal approval to conquer land',
+              'Portugal sought converts rather than profit, while Spain sought profit rather than converts',
             ],
             correctAnswer: 0,
-            explanation: 'This explanation demonstrates AP analytical sophistication: neither empire simply "chose" its model — they responded rationally to their specific circumstances. The Mughal Empire was militarily formidable; Portugal lacked the manpower to conquer India. The Aztec and Inca empires were devastated by disease and could be conquered by small Spanish forces. Geographic and demographic contexts shaped imperial strategies.'
+            explanation: 'This explanation demonstrates AP analytical sophistication: neither empire simply "chose" its model — they responded to their specific circumstances. The Mughal Empire and other Asian states were militarily formidable and commercially sophisticated; Portugal lacked the manpower to conquer them. The Aztec and Inca empires were devastated by disease and could be conquered by small Spanish forces allied with indigenous enemies of the Aztecs. Geographic and demographic contexts shaped imperial strategies.'
           },
           {
             question: 'Spanish governance of the Americas through viceroys and audiencias demonstrates:',
             options: [
-              'A layered colonial administration where the Crown attempted to maintain direct control by appointing peninsular Spaniards as viceroys, while audiencias (courts) served both administrative and legal functions — but the system\'s remoteness from Spain and the power of local landholders (criollos) meant that royal authority was often diluted in practice',
-              'Spanish colonial governance gave complete autonomy to local populations',
-              'The viceroyalty system gave colonial administrators absolute power with no oversight from Spain',
-              'Spanish governance was identical to indigenous governance systems it replaced',
+              'A layered royal system whose authority was often diluted by distance and the power of local elites',
+              'A layered royal system that left local rule to native nobles, who answered directly to the pope in Rome',
+              'A layered royal system run by criollo viceroys, who were elected by town councils in the Americas',
+              'A layered royal system whose viceroys held absolute power, with no courts or reviews from Spain',
             ],
             correctAnswer: 0,
-            explanation: 'The gap between formal colonial governance structures and actual power is an AP meta-theme: on paper, viceroys represented the Crown\'s absolute authority; in practice, the enormous distances, communication delays (months for messages to travel from Spain), and entrenched power of local elites meant that colonial governance was always a negotiation between Crown authority and local interest. This gap helps explain why criollo elites could eventually lead independence movements.'
+            explanation: 'The gap between formal colonial governance structures and actual power is an AP meta-theme: on paper, viceroys (usually peninsular Spaniards appointed by the Crown) represented royal authority, and audiencias (royal courts) checked them and reviewed their conduct; in practice, the enormous distances, communication delays (months for messages to travel from Spain), and entrenched power of local elites meant that colonial governance was always a negotiation. This gap helps explain why criollo elites could eventually lead independence movements.'
           },
           {
             question: 'Comparing Portuguese Estado da India to the later British East India Company reveals:',
             options: [
-              'Both operated as armed trading organizations extracting profit from Asian commerce, but the British East India Company eventually evolved from trading-post empire to territorial control (especially after 1757 Battle of Plassey) while the Portuguese remained primarily a trading-post empire — demonstrating different trajectories even within similar imperial forms',
-              'The British East India Company and Estado da India were identical in every respect',
-              'The British East India Company was entirely different with no similarities to Portuguese empire',
-              'Neither organization ever exercised military power in their commercial activities',
+              'Both began as armed traders, but only the English firm went on to rule large territories after Plassey',
+              'Both began as armed traders, but only the Portuguese moved on to rule large Indian territories after Goa',
+              'Both began as territorial empires, but each shrank into a few coastal trading posts by the 1700s',
+              'Both began as unarmed merchants, and neither used military force against Asian rulers at any point',
             ],
             correctAnswer: 0,
-            explanation: 'Comparing Portuguese and British Indian Ocean empire demonstrates how similar institutional forms can evolve in different directions. Both started as armed trading organizations; the Portuguese remained primarily coastal and commercial; the British Company expanded inland to become a territorial empire that eventually governed all of India. The difference reflects changing power balances: Britain\'s greater industrial/military power in the 18th-19th centuries enabled what Portugal\'s 16th-17th century power could not.'
+            explanation: 'Comparing Portuguese and British Indian Ocean empire demonstrates how similar institutional forms can evolve in different directions. Both started as armed trading organizations; the Portuguese remained primarily coastal and commercial (Goa stayed a small enclave); the British Company expanded inland after the Battle of Plassey (1757) to become a territorial power that eventually governed most of India. Britain\'s greater military and financial power in the 18th-19th centuries enabled what Portugal\'s 16th-17th century power could not.'
           }
         ]
       }
@@ -161,24 +161,24 @@ Spain built the first large territorial empire outside Europe:
           {
             question: 'An AP comparison of Portuguese and Spanish colonial systems would most accurately conclude:',
             options: [
-              'Both empires extracted wealth from colonized regions through combinations of commercial coercion and forced labor, but their different methods (Portuguese trading-post extraction vs. Spanish territorial extraction via encomienda/mita) reflected different opportunities and produced different long-term social structures in their respective colonial zones',
-              'Portuguese colonialism was entirely beneficial while Spanish was entirely exploitative',
-              'Both empires had identical labor systems and governance structures',
-              'The Portuguese empire was more extensive and powerful than the Spanish in every respect',
+              'Both extracted wealth by coercion, but by different methods that left different societies',
+              'Both extracted wealth through territorial conquest, and both built the same mita and encomienda systems',
+              'Both extracted wealth mainly through voluntary trade, and neither empire used forced labor in its colonies',
+              'Portugal built the larger and wealthier empire, while Spain\'s colonies remained small coastal posts',
             ],
             correctAnswer: 0,
-            explanation: 'This comparison earns AP credit by: (1) acknowledging similarity (both extracted wealth through coercion), (2) identifying meaningful difference (methods of extraction), (3) explaining why they differed (different opportunities/contexts), and (4) connecting to consequences (different social structures). AP comparison analysis should always explain WHY differences exist, not just describe them.'
+            explanation: 'This comparison earns AP credit by: (1) acknowledging similarity (both extracted wealth through coercion), (2) identifying meaningful difference (Portuguese trading-post extraction vs. Spanish territorial extraction via encomienda/mita), (3) explaining why they differed (different opportunities/contexts), and (4) connecting to consequences (different long-term social structures). AP comparison analysis should always explain WHY differences exist, not just describe them.'
           },
           {
             question: 'The Treaty of Tordesillas (1494) dividing the world between Spain and Portugal demonstrates the limits of European colonial power because:',
             options: [
-              'Spain and Portugal could divide the non-European world between themselves on paper, but other European powers (England, France, Netherlands) simply ignored the treaty — demonstrating that claims of sovereignty require enforcement capability to be meaningful, and that early modern colonial power was always contested and provisional',
-              'The treaty successfully prevented all other European powers from colonial expansion',
-              'All European powers respected the Tordesillas line throughout the colonial period',
-              'The treaty demonstrated that European nations worked cooperatively on colonial governance',
+              'Rival states such as England, France and the Netherlands ignored the line it drew',
+              'Iberian monarchs abandoned the line within a decade and shared all colonies with their rivals',
+              'Indigenous rulers took the treaty to papal courts and won back most of the land it divided',
+              'The Ottoman navy enforced its own line in the Atlantic and kept Iberian ships out of Africa',
             ],
             correctAnswer: 0,
-            explanation: 'The Tordesillas treaty illustrates the gap between claimed and actual colonial authority. England, France, and the Netherlands all established colonies in violation of the Tordesillas line (English settlements in North America; French Caribbean islands; Dutch East India Company). The treaty reveals that colonial sovereignty was a legal claim backed by force — and when the force was insufficient, the claim was meaningless.'
+            explanation: 'The Tordesillas treaty illustrates the gap between claimed and actual colonial authority. England, France, and the Netherlands all established colonies in violation of the Tordesillas line (English settlements in North America; French Caribbean islands; Dutch posts in Asia and the Americas). The treaty reveals that claims of sovereignty require enforcement capability: colonial sovereignty was a legal claim backed by force, and when the force was insufficient, the claim was contested.'
           }
         ]
       }

@@ -23,10 +23,10 @@ export const whEnlightenmentPoliticalRevolutionsPart3Data = {
           {
             question: 'The Declaration of Independence\'s argument that all men are created equal was primarily significant because:',
             options: [
-              'It articulated a universal principle of natural rights that exceeded what its authors were willing to implement, creating a permanent standard of democratic aspiration that could be used by excluded groups (enslaved people, women, later colonial peoples) to demand inclusion — making the Declaration\'s significance continue beyond the immediate revolutionary context',
-              'The Declaration immediately ended all forms of inequality in American society',
-              'The Declaration was primarily a commercial document with no philosophical significance',
-              'The Declaration\'s equality claims were limited to European-descended American men with no broader aspirational value',
+              'It set a standard of equality beyond its authors\' own practice, and excluded groups later invoked it to demand inclusion',
+              'It immediately ended legal inequality in the new nation, including slavery and property limits on voting',
+              'It was chiefly a commercial document, written to reopen trade, with little philosophical significance',
+              'Its equality claims applied only to European-descended men and offered no aspiration that later reform movements could use',
             ],
             correctAnswer: 0,
             explanation: 'The "standard beyond practice" is the Declaration\'s enduring AP significance: Lincoln invoked it for the Civil War; suffragettes used it for women\'s rights; civil rights activists used it for racial equality; anti-colonial movements globally used it for independence. The document\'s greatness is not that it implemented equality but that it articulated an equality standard so compelling that subsequent generations could use it to demand the implementation its authors refused.'
@@ -34,10 +34,10 @@ export const whEnlightenmentPoliticalRevolutionsPart3Data = {
           {
             question: 'The American Revolution\'s protection of slavery in the Constitution demonstrates:',
             options: [
-              'That the Revolution was a conservative revolution for propertied white men — it transferred political power from British to American elites while explicitly protecting the property interests (including enslaved people) of the slaveholder class, demonstrating that revolutions can simultaneously proclaim universal rights and limit those rights to specific social groups',
-              'The Constitution abolished slavery immediately after ratification',
-              'Slavery protection had no connection to property rights arguments in the Constitution',
-              'The Constitution treated enslaved people as full citizens with all rights protected',
+              'A movement can proclaim universal rights yet shield elite property in enslaved people from those very rights',
+              'The Constitution set slavery on a path to immediate abolition through the three-fifths compromise',
+              'Slavery\'s protection had no link to the property rights arguments that framers used against Britain',
+              'The Constitution recognized enslaved people as citizens whose rights the new government would protect',
             ],
             correctAnswer: 0,
             explanation: 'The conservative dimension of the American Revolution is AP\'s complexity point: property rights were central to Locke\'s natural rights theory; enslaved people were property under American law; therefore the same property rights framework that justified the Revolution against British "tyranny" justified protecting slavery. The 3/5 compromise (counting enslaved people as 3/5 of a person for congressional representation) and the 20-year protection of the slave trade were specific constitutional choices that privileged slaveholder property interests over universal rights.'
@@ -91,10 +91,10 @@ The American Revolution demonstrated that Enlightenment ideas could be translate
           {
             question: 'The American Revolution\'s influence on the French Revolution was primarily through:',
             options: [
-              'Demonstrating that Enlightenment political theory could be successfully implemented in an actual republic — American independence showed that a government based on natural rights, popular sovereignty, and separation of powers could function, giving French reformers and revolutionaries evidence that their theoretical ideals were practically achievable',
-              'France directly copied the American Constitution in creating its revolutionary government',
-              'The American Revolution had no influence on the French Revolution',
-              'American influence on France was primarily military rather than ideological',
+              'Showing that a republic built on natural rights and popular sovereignty could actually work in practice',
+              'France copying the US Constitution nearly word for word when it drafted its own constitution of 1791',
+              'Supplying French radicals with American money and troops to overthrow Louis XVI',
+              'Its military example alone, as returning French officers copied American battlefield tactics rather than ideas',
             ],
             correctAnswer: 0,
             explanation: 'The demonstration effect is AP\'s mechanism connecting the American to the French Revolution: theory (Enlightenment ideas) → practice (American republic) → inspiration (French revolutionaries saw that theory could work). Many French officers who served in the American Revolution (Lafayette most famously) returned to France with firsthand experience of republican government. The American experience didn\'t cause the French Revolution — French social and financial crises did — but it shaped the revolutionary alternative French revolutionaries envisioned.'
@@ -102,10 +102,10 @@ The American Revolution demonstrated that Enlightenment ideas could be translate
           {
             question: 'Comparing the American Revolution to later Latin American independence movements reveals:',
             options: [
-              'Both were led by colonial elites seeking independence from European power while limiting the revolution\'s benefits primarily to the creole/propertied class — American colonists and Latin American creoles were similarly unwilling to extend the revolution\'s proclaimed principles of equality and natural rights to enslaved people, indigenous populations, and lower classes',
-              'Latin American revolutions were more radical than the American Revolution in extending rights',
-              'American and Latin American revolutions had completely different social bases and goals',
-              'The American Revolution extended full rights to all social groups while Latin American did not',
+              'Both were led by colonial elites who won independence but denied equality to enslaved and indigenous people',
+              'Both were mass social revolutions that redistributed land from colonial elites to indigenous and enslaved people',
+              'Both were led by poor farmers and artisans, who pushed aside colonial elites to take control of the new states',
+              'Latin American revolutions extended rights far more broadly, freeing enslaved people everywhere at independence',
             ],
             correctAnswer: 0,
             explanation: 'The elite-led revolution pattern is AP\'s comparative framework connecting American and Latin American independence: both were led by prosperous colonial elites (American slaveholder-planters; Latin American creoles) who wanted political self-determination while maintaining their social and economic dominance. The "revolution" changed colonial governors to national governments without fundamentally redistributing social power — a conservative revolution transferring power between elite groups rather than a social revolution transforming the social order.'
@@ -113,10 +113,10 @@ The American Revolution demonstrated that Enlightenment ideas could be translate
           {
             question: 'The American Constitution\'s Bill of Rights (1791) represented which Enlightenment principle most directly?',
             options: [
-              'The principle of limited government — that governments derive authority from specific grants of power and have no authority over rights retained by individuals, requiring explicit constitutional enumeration of rights (speech, religion, press, assembly) as protections against government overreach',
-              'The Bill of Rights represented the principle of absolute government authority',
-              'Bills of Rights were unknown before 1791 with no Enlightenment intellectual precedent',
-              'The Bill of Rights was primarily a religious document protecting church authority',
+              'Limited government: individuals keep rights that no grant of power allows the state to infringe',
+              'Absolute sovereignty: the state may suspend any right when the public good requires it',
+              'Established religion: the federal government protects the authority of one official national church',
+              'Enlightened despotism: a strong executive grants liberties as favors that it may later revoke',
             ],
             correctAnswer: 0,
             explanation: 'Limited government is Locke\'s social contract theory institutionalized: if government is a contract created by rational individuals to protect their pre-existing natural rights, government has no authority over those rights — they were not surrendered in the contract. The Bill of Rights lists specific rights government cannot infringe, reflecting the Lockean principle that individuals enter the social contract retaining rights that precede and supersede government authority. This is the intellectual foundation of constitutional rights theory.'
@@ -178,10 +178,10 @@ The American Revolution demonstrated that Enlightenment ideas could be translate
           {
             question: 'The American Revolution\'s most significant contribution to world history was:',
             options: [
-              'It demonstrated that Enlightenment political principles could be institutionalized in a functioning state — the Constitution showed that natural rights, separation of powers, and representative government were not just theoretical ideals but practical governing arrangements, inspiring subsequent revolutionaries globally by proving that alternatives to monarchy were not only philosophically justified but operationally workable',
-              'The American Revolution was primarily significant for its military tactics',
-              'The Revolution had no significant influence outside North America',
-              'The Revolution\'s significance was purely economic — establishing American commercial independence',
+              'Proving that Enlightenment principles could govern a working state, giving later revolutionaries a model to cite',
+              'Its military tactics, which European armies and later revolutionaries copied over the next half century',
+              'Its effect on North American borders, with little influence on politics elsewhere in the world',
+              'Its economic legacy, chiefly winning American commercial independence from British mercantile rules',
             ],
             correctAnswer: 0,
             explanation: 'The "proof of concept" role is the American Revolution\'s global historical significance: before 1776, natural rights republics were theoretical; after 1776, they were historical fact. This demonstration effect was enormously powerful — it gave reformers and revolutionaries everywhere a real example to point to when arguing that monarchy was not the only viable form of government. The French, Latin American, and Haitian revolutionary leaders all studied the American example explicitly.'
@@ -189,10 +189,10 @@ The American Revolution demonstrated that Enlightenment ideas could be translate
           {
             question: 'AP analysis of the American Revolution should emphasize which complexity?',
             options: [
-              'The Revolution was simultaneously a genuine liberation struggle (against British political domination of colonists) and a deeply limited revolution (protecting slavery, excluding women and Native Americans from rights) — acknowledging both dimensions is necessary for accurate AP historical analysis that neither romanticizes the Revolution nor dismisses its real contributions to democratic political development',
-              'The Revolution was purely progressive with no significant limitations',
-              'The Revolution\'s limitations are so significant that its contributions to democratic development should be dismissed',
-              'The Revolution was primarily economically motivated with no genuine ideological dimension',
+              'It was a genuine liberation struggle and also a limited one that protected slavery and excluded women',
+              'It was purely progressive, extending liberty to all Americans without significant limitations',
+              'Its limits were so severe that its contributions to later democratic government should be dismissed outright',
+              'It was motivated by economic grievance alone, with no genuine ideological commitment behind it',
             ],
             correctAnswer: 0,
             explanation: 'Holding both dimensions simultaneously is AP\'s analytical standard: the Revolution was a genuine philosophical advance (articulating natural rights, establishing limited government, creating the institutional precedent for constitutional democracy) AND a deeply limited social revolution (protecting slavery, excluding women, marginalizing Native Americans). AP rewards analysis that can acknowledge both without collapsing into either pure celebration or pure condemnation.'

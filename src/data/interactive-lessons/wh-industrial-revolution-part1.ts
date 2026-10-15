@@ -55,10 +55,10 @@ Several unique factors converged in late 18th-century Britain:
           {
             question: 'Which factor is MOST important in explaining why the Industrial Revolution began in Britain rather than in China or the Ottoman Empire?',
             options: [
-              'Britain had a larger population than any other country in the world by 1750',
-              'A combination of abundant coal/iron, capital from colonial trade, agricultural surplus, and a government that protected property rights and innovation',
-              'Britain was the only country in the world with access to navigable rivers for transportation',
-              'British workers were inherently more skilled and educated than workers elsewhere in the world'
+              'Britain had the largest population in Europe by 1750, giving it a bigger workforce than any rival state',
+              'A combination of coal and iron deposits, colonial trade capital, farm surpluses, and laws protecting property and invention',
+              'Britain alone had navigable rivers and canals, so it could move goods more cheaply than any other society',
+              'British workers were inherently more inventive, disciplined, and skilled than workers in China or the Ottoman Empire'
             ],
             correctAnswer: 1,
             explanation: 'No single factor explains Britain\'s lead — it was the convergence of natural resources (coal, iron), investment capital (from colonial and slave trade profits), surplus labor (from agricultural enclosure), and institutional support (patent laws, property rights, stable government) that made Britain uniquely positioned for industrialization.'
@@ -66,10 +66,10 @@ Several unique factors converged in late 18th-century Britain:
           {
             question: 'How did the enclosure movement contribute to industrialization in Britain?',
             options: [
-              'It provided factory owners with free land to build manufacturing facilities in rural areas',
-              'It displaced small farmers from common lands, creating a migrant labor force for urban factories while increasing agricultural output',
-              'It prevented urbanization by keeping the entire population tied to agricultural work on enclosed lands',
-              'It had no significant connection to industrialization and was purely an agricultural policy'
+              'It transferred common lands to the Crown, which leased them to manufacturers as sites for new mills',
+              'It pushed small farmers off common lands, supplying urban factory labor while raising farm output',
+              'It tied laborers to enclosed estates as tenants, slowing their migration to the cities until the 1850s',
+              'It broke up large estates into family plots, letting small farmers sell surplus grain to towns'
             ],
             correctAnswer: 1,
             explanation: 'Enclosure consolidated common lands into privately owned, commercially farmed plots. This increased agricultural efficiency (more food to feed growing cities) but displaced small farmers and landless laborers, who migrated to cities where they became the factory labor force that powered industrialization.'
@@ -87,15 +87,15 @@ Several unique factors converged in late 18th-century Britain:
 
 | Invention | Inventor | Year | Impact |
 |---|---|---|---|
-| **Spinning Jenny** | James Hargreaves | 1764 | Multi-spindle spinning frame; increased thread output |
+| **Spinning Jenny** | James Hargreaves | c. 1764 (patent 1770) | Multi-spindle spinning frame; increased thread output |
 | **Water Frame** | Richard Arkwright | 1769 | Water-powered spinning machine; moved production to factories |
 | **Power Loom** | Edmund Cartwright | 1785 | Mechanized weaving; completed the factory transition |
 | **Cotton Gin** | Eli Whitney | 1793 | Made cotton processing efficient; **increased demand for enslaved labor** in the American South |
 
 ### Steam Power
-- **James Watt** improved the steam engine (1769) → freed factories from waterpower locations
+- **James Watt** improved the steam engine (separate-condenser patent 1769; Boulton & Watt engines from 1776) → freed factories from waterpower locations
 - Applied to **mining** (pumping water), **manufacturing** (powering machines), and **transport** (steam locomotives, steamships)
-- **George Stephenson's Rocket** (1829) — first practical steam locomotive; Liverpool-Manchester Railway (1830)
+- **Early locomotives:** Trevithick's locomotive (1804); Stephenson's Locomotion No. 1 on the Stockton & Darlington (1825); Stephenson's **Rocket** won the Rainhill Trials (1829) for the Liverpool-Manchester Railway (1830)
 
 ### Iron & Steel
 - **Henry Bessemer** (1856) — Bessemer process for cheap mass-produced steel
@@ -119,10 +119,10 @@ Several unique factors converged in late 18th-century Britain:
           {
             question: 'How did the invention of the cotton gin (1793) paradoxically affect slavery in the American South?',
             options: [
-              'It eliminated the need for enslaved labor by fully automating cotton production from planting to shipping',
-              'It made cotton processing more efficient, dramatically increasing cotton\'s profitability and therefore increasing demand for enslaved labor to grow more cotton',
-              'It had no effect on slavery because cotton was not a major crop in the American South',
-              'It directly caused the abolition of slavery by making manual labor economically unnecessary'
+              'It mechanized both planting and picking, so plantations needed fewer enslaved workers after the 1790s',
+              'It made short-staple cotton profitable, expanding plantations and demand for enslaved labor',
+              'It shifted Southern planters from cotton to tobacco and rice, reducing the size of the enslaved workforce',
+              'It let small free farmers process cotton at home, so planters freed many enslaved workers in the 1800s'
             ],
             correctAnswer: 1,
             explanation: 'The cotton gin removed seeds from cotton 50x faster than by hand, making short-staple cotton enormously profitable. This drove massive expansion of cotton plantations across the Deep South and dramatically increased demand for enslaved labor — the enslaved population roughly doubled between 1790 and 1830.'
@@ -130,10 +130,10 @@ Several unique factors converged in late 18th-century Britain:
           {
             question: 'What was the most significant social consequence of factory-based industrialization in 19th-century Britain?',
             options: [
-              'The disappearance of the upper class as factory owners replaced the aristocracy entirely',
-              'Rapid urbanization, the emergence of a new industrial working class, and harsh labor conditions including widespread child labor',
-              'The complete elimination of agriculture as all workers moved to factories within a single generation',
-              'Universal access to education and healthcare provided by factory owners to all workers'
+              'The decline of the aristocracy, as factory owners bought up estates and replaced landed nobles in Parliament',
+              'Rapid urbanization and a new urban working class facing long hours, crowded housing, and child labor',
+              'A sharp fall in farm employment, as nearly all rural laborers moved into factory towns within one generation',
+              'Rising literacy and public health, as mill owners funded schools, clinics, and pensions for their workers'
             ],
             correctAnswer: 1,
             explanation: 'Industrialization triggered massive urbanization (Manchester grew 12x in 80 years), created a new working class living in overcrowded conditions, and relied heavily on child labor. These conditions eventually sparked reform movements, labor unions, and new political ideologies like socialism and Marxism.'

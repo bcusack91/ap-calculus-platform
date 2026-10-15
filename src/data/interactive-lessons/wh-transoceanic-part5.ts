@@ -23,10 +23,10 @@ export const whTransoceanicPart5Data = {
           {
             question: 'The cotton commodity chain connecting Egyptian and Indian cotton fields to Lancashire mills demonstrates:',
             options: [
-              'Industrial capitalism created global economic integration by connecting raw material producers in agricultural peripheries to processing industries in industrial cores through transportation and commercial networks — but this integration was hierarchical rather than equal, with value-added processing concentrated in the industrial core while raw material producers received prices set by core-country commodity markets, distributing the benefits of global trade unequally',
-              'The cotton commodity chain was an equal partnership with benefits equally distributed between producing and processing regions',
-              'Lancashire mills sourced cotton exclusively from within Britain with no global commodity chain',
-              'Cotton prices were determined by producing regions with no influence from industrial-country commodity markets',
+              'Industrial capitalism linked cotton growers to Lancashire mills, but mills captured most value while growers took Liverpool prices',
+              'The cotton chain was an equal partnership, with profits from spinning, weaving, and finishing shared evenly between growers and mills',
+              'Lancashire mills bought mainly from American planters, so Egyptian and Indian cotton barely reached Britain',
+              'Growing regions set world cotton prices, since mills had to accept whatever growers asked',
             ],
             correctAnswer: 0,
             explanation: 'Hierarchical integration in commodity chains is AP\'s world-systems analysis: the cotton commodity chain was global but asymmetrically structured. Egyptian farmers grew long-staple cotton under pressure from British-influenced Egyptian government policy; prices were set in Liverpool cotton exchange; Egyptian farmers received whatever the market price was (they had no market power); Lancashire mills bought cheap raw cotton and sold expensive textiles. The value added in the chain (spinning, weaving, dyeing, finishing) occurred in Lancashire; the raw cotton production occurred in Egypt and India. This geographic distribution of value-added activity is what made industrial nations rich and cotton-producing nations poor — even though both participated in the same global commodity system.'
@@ -34,10 +34,10 @@ export const whTransoceanicPart5Data = {
           {
             question: 'Mono-culture dependency (one-commodity export economies) in colonial regions created economic vulnerability because:',
             options: [
-              'Single-commodity economies were exposed to global price volatility with no economic buffer — when global rubber prices collapsed (1912-1913, as plantation rubber replaced wild rubber), the Amazon rubber boom ended catastrophically; when Cuban sugar prices fell, Cuban planters were ruined; when Chilean nitrate prices collapsed (synthetic nitrates, 1913), the Chilean economy contracted — demonstrating that diversification is the key to economic resilience and that mono-culture structures colonial economies for boom-bust cycles',
-              'Single-commodity economies were more resilient than diversified economies because they could specialize efficiently',
-              'Commodity price collapses were rare and had minimal economic impact on producing regions',
-              'Colonial governments prevented economic harm from commodity price volatility through effective regulation',
+              'Single-crop exporters had no cushion when prices fell, as the Amazon rubber bust showed',
+              'One-crop economies were more resilient than diversified ones, since specializing let them weather any downturn',
+              'Commodity price collapses were rare in this era and caused only brief, minor losses for producing regions',
+              'Colonial governments shielded export economies from price swings through effective price-support boards',
             ],
             correctAnswer: 0,
             explanation: 'Mono-culture vulnerability is AP\'s development economics framework: the Amazon rubber boom (1850s-1912) transformed Manaus into an improbably wealthy jungle city (famous opera house, imported Italian marble) through rubber exports to global tire and industrial markets. British plantations in Malaya (started from Amazon seeds) produced rubber more cheaply than wild Amazon rubber by 1912 — Amazon boom ended within years; Manaus\'s wealth evaporated; workers who had migrated to the Amazon for rubber jobs were stranded. The boom-bust cycle was structural, not accidental: mono-culture economies have no alternative economic activity when their single export becomes unprofitable. Colonial structures created mono-culture; post-colonial development economists identified it as a cause of underdevelopment.'
@@ -113,10 +113,10 @@ The global commodity system was not a free market of equals:
           {
             question: 'The creation of tea production in British India (1840s onwards, displacing Chinese tea dominance) demonstrates:',
             options: [
-              'Imperial power could deliberately reshape global commodity chains to serve metropolitan economic interests — Britain imported Chinese tea (paying with silver or opium), creating a trade deficit problem; when British botanists stole tea plants from China and established Assam and Ceylon plantations, Britain created a tea supply it controlled, could expand or contract, and profited from at multiple levels (plantation ownership; shipping; retail) — demonstrating that commodity chain creation was an exercise of imperial economic power',
-              'Indian tea production arose spontaneously without British imperial intervention',
-              'The British government had no interest in controlling tea supply — it was purely a private commercial development',
-              'Chinese tea remained dominant throughout the 19th century — Indian tea never competed effectively',
+              'Imperial power could remake a commodity chain, as Britain took tea plants from China and set up its own supply in India',
+              'Indian tea arose on its own among local farmers, without British planters, capital, or colonial policy',
+              'The British state took no interest in tea supply, which grew out of private trade between Calcutta merchants and Chinese growers',
+              'Chinese tea stayed dominant through 1900, since Indian tea never matched it on price or quality',
             ],
             correctAnswer: 0,
             explanation: 'Imperial commodity chain creation is AP\'s analysis: the East India Company\'s trade with China required purchasing Chinese tea (China set prices; refused most European goods). The only acceptable Chinese payment was silver or opium (producing the Opium Wars). Robert Fortune (botanist) disguised himself as a Chinese merchant (1848-1851) and illegally exported Chinese tea plants and manufacturing knowledge. British planters established Assam tea gardens using indentured Indian labor; within decades, Indian tea competed with Chinese tea on price and quality. By 1900, Indian tea exports exceeded Chinese. Britain had remade the global tea commodity chain to serve British imperial economic interests.'
@@ -124,10 +124,10 @@ The global commodity system was not a free market of equals:
           {
             question: 'The terms of trade consistently favoring industrial exporters over agricultural/raw material exporters demonstrates:',
             options: [
-              'The prices of manufactured goods relative to raw materials systematically increased over the late 19th century — a ton of cotton textiles could buy progressively more raw cotton, more wheat, more rubber over time; this means that raw material producers had to export increasing quantities of their commodities to purchase the same quantity of manufactured goods, representing a structural transfer of purchasing power from periphery to core that compounded over decades',
-              'Terms of trade were neutral — raw material and manufactured good prices moved together with no systematic advantage',
-              'Terms of trade favored agricultural producers because food was more essential than manufactured goods',
-              'The concept of terms of trade is irrelevant to 19th-century global economic history',
+              'Exporters of raw materials had to ship ever larger quantities to buy the same amount of manufactured goods',
+              'Raw-material and manufactured goods prices rose and fell together, giving neither side an edge',
+              'Food exporters gained the advantage, since buyers paid a premium for essentials over factory goods',
+              'Terms of trade did not yet matter, because most nineteenth-century trade was settled in barter',
             ],
             correctAnswer: 0,
             explanation: 'Terms of trade as mechanism of wealth transfer is AP\'s economics analysis: the Prebisch-Singer thesis (developed 1950) argued that raw material prices decline relative to manufactured goods prices over time, systematically transferring income from commodity-producing periphery to industrial core. Even if a developing country exports more copper each year, if copper prices are falling and manufactured import prices are rising, the country grows poorer in real purchasing power terms. 19th-century data generally supports this: British terms of trade improved significantly 1870-1914 (British manufactured exports could buy more imported food and raw materials over time). The Prebisch-Singer thesis became the economic foundation for 20th-century development economics and argues that the global trade system structurally disadvantages commodity producers.'
@@ -135,10 +135,10 @@ The global commodity system was not a free market of equals:
           {
             question: 'The rubber commodity chain from the Congo Free State (Leopold II, 1885-1908) demonstrates an extreme case of which economic pattern?',
             options: [
-              'Resource extraction through forced labor and terror can produce short-term commodity surpluses for export but destroys the human capital, social organization, and political stability required for long-term development — Congo\'s rubber was extracted through systematic violence (hostage-taking, hand-cutting, massacre) that killed an estimated 10 million Congolese; while Leopold II accumulated personal wealth, Congo\'s population, agriculture, and social structures were devastated, producing long-term underdevelopment',
-              'The Congo rubber system was comparable in its labor conditions to other colonial rubber production systems',
-              'Congo rubber extraction was voluntary and Congolese workers benefited economically from participating',
-              'The Congo system produced positive long-term development outcomes for the Congolese population',
+              'Forced labor and terror yielded rubber for export but devastated the population and society needed for later growth',
+              'Congo labor conditions closely resembled those on other colonial rubber estates, differing little in violence or in scale',
+              'Congolese villagers chose to gather rubber for wages and gained lasting income from the trade',
+              'Leopold\'s system brought schools and railways that left the Congo better placed for growth after 1908',
             ],
             correctAnswer: 0,
             explanation: 'Extreme extraction destroying development capacity is AP\'s analysis of Congo atrocities: Leopold II\'s Congo Free State was nominally a humanitarian project (the Berlin Conference 1884 authorized it as a "civilization mission"). In practice it was systematic organized looting: Congolese men were forced to meet rubber quotas; failure to meet quotas resulted in severing of hands, killing of family members, or hostage-taking. Roger Casement\'s 1904 report and E.D. Morel\'s Congo Reform Association campaign created international pressure that forced Leopold to transfer Congo to Belgian state control (1908). The Congo case is AP\'s extreme example of extraction without development — pure exploitation that destroyed human capital while extracting commodities.'
@@ -200,10 +200,10 @@ The global commodity system was not a free market of equals:
           {
             question: 'Comparing the organization of sugar production in Cuba (plantation-based, enslaved/wage labor) and wheat production in Argentina (small family farms, immigrant labor) reveals:',
             options: [
-              'The same position in the global commodity chain (agricultural raw material exporter) can generate very different social structures depending on the crop\'s technical requirements — sugar requires large-scale plantation organization because it must be processed immediately after harvest (requiring on-site mills); wheat can be produced efficiently on small family farms because it stores and can be transported to centralized mills; these technical differences shaped whether immigrant-populated family farm economies or enslaved/indentured plantation economies developed',
-              'Sugar and wheat production used identical labor systems in all contexts',
-              'Climate was the only factor determining social structure in agricultural production',
-              'Both crops were equally amenable to small-farm and plantation production',
+              'A crop\'s technical needs shaped society: cane needed on-site mills and estates, but storable wheat did not',
+              'Sugar and wheat were grown with the same labor systems everywhere, so the crops cannot explain any difference',
+              'Climate alone decided social structure: hot lowlands produced big estates, and cool plains produced small farms',
+              'Both crops suited small farms and big estates equally, and immigration patterns alone explain the difference',
             ],
             correctAnswer: 0,
             explanation: 'Technical crop requirements shaping social structure is AP\'s comparative agricultural economics: the Caribbean and Brazilian sugar plantation system was determined by more than racial ideology or simple exploitation. Sugar cane must be crushed and processed within 24-48 hours of cutting before fermentation destroys sucrose content. This required co-location of cane fields and sugar mills, which required large capital investment, which required large-scale production, which required concentrated labor. The plantation system was technically optimal for sugar. Wheat, by contrast, can be stored for months and transported to distant mills — small family farms are economically competitive. Argentine and American wheat farming developed on family farms; Caribbean sugar farming developed on plantations. Technical requirements shaped labor systems.'
@@ -211,10 +211,10 @@ The global commodity system was not a free market of equals:
           {
             question: 'For AP, the late 19th-century emergence of global commodity chains\'s most significant long-term consequence was:',
             options: [
-              'Creating the economic structural dependencies between developed and developing worlds that persist into the 21st century — regions organized as raw material exporters for industrial-core processing developed economic structures (mono-culture agriculture; extraction industries; weak manufacturing) that were resistant to transformation even after political independence, because the infrastructure, capital, skills, and market relationships all pointed toward continued commodity export rather than industrial development',
-              'Global commodity chains produced uniform economic development across all world regions',
-              'The commodity chain structure was temporary — all regions quickly developed industrial manufacturing',
-              'The legacy of global commodity chains was only economic with no social or political dimensions',
+              'It created export dependencies that outlasted independence, as infrastructure and capital stayed geared to commodity exports',
+              'It produced even economic development across regions, as every exporter gained a share of industrial growth',
+              'Its structure was short-lived, since most commodity-export regions had built strong factory sectors by 1914',
+              'Its legacy was purely economic, leaving no lasting mark on the politics, class structure, or social life of newly independent states',
             ],
             correctAnswer: 0,
             explanation: 'Path dependency of colonial economic structures is AP\'s long-term analysis: when Ghana became independent (1957), its economy still depended overwhelmingly on cocoa exports — infrastructure (roads, ports), capital (cocoa marketing boards), skills (cocoa farming), and market relationships (to British and Dutch chocolate companies) all pointed toward continued cocoa export. Kwame Nkrumah\'s industrialization attempts (Volta River hydroelectric project) were expensive and limited in success because 60 years of colonial cocoa-export orientation had created path-dependent economic structures difficult to transform. The same pattern applies to rubber in Malaysia, copper in Zambia, nitrates in Chile. Commodity chain creation by colonialism created long-lasting structural economic legacies.'

@@ -11,7 +11,7 @@ export const whMaritimeEmpiresLaborPart4Data = {
 
 ---
 
-> 🔑 **Key Concept:** The transatlantic slave trade (c. 1500-1888) transported approximately 12.5 million enslaved Africans from West and Central Africa to the Americas, with ~2 million dying during the Middle Passage. AP questions focus on the scale, causes, African dimensions of the trade, resistance, and long-term consequences for Africa, the Americas, and global commerce.
+> 🔑 **Key Concept:** The transatlantic slave trade (c. 1500-1888) transported approximately 12.5 million enslaved Africans from West and Central Africa to the Americas, with ~1.8 million (roughly 12-15%) dying during the Middle Passage. AP questions focus on the scale, causes, African dimensions of the trade, resistance, and long-term consequences for Africa, the Americas, and global commerce.
       `
     },
     {
@@ -23,24 +23,24 @@ export const whMaritimeEmpiresLaborPart4Data = {
           {
             question: 'The Atlantic slave trade\'s most historically significant feature for AP analysis was:',
             options: [
-              'Its extraordinary scale (12.5 million people over four centuries) combined with its systematic racialization (African descent = enslaved) created a new form of slavery categorically different from earlier historical slavery — the foundation of racial hierarchy in the Americas that persisted long after legal emancipation',
-              'The slave trade was historically insignificant because it ended in the 19th century',
-              'The Atlantic slave trade was identical in character to ancient Mediterranean slavery',
-              'Slavery had always been racial before the Atlantic trade began',
+              'Its vast scale and racial definition of slavery, which laid the base for lasting racial hierarchy in the Americas',
+              'Its brief duration and small scale, which limited its effects mainly to a few Caribbean islands',
+              'Its religious basis, which enslaved non-Christians of every origin and freed anyone who was baptized',
+              'Its reliance on European captives, who outnumbered Africans on Atlantic slave ships before 1700',
             ],
             correctAnswer: 0,
-            explanation: 'The Atlantic slave trade\'s novelty is not slavery itself (which existed in many societies) but its racialization and scale. Ancient Mediterranean, Islamic, and African slavery all included people of many ethnic backgrounds; American chattel slavery progressively defined "enslaved" as synonymous with "African-descended." This racial definition — and its legal institutionalization — created uniquely lasting consequences.'
+            explanation: 'The Atlantic slave trade\'s novelty is not slavery itself (which existed in many societies) but its racialization and scale: about 12.5 million people over four centuries. Ancient Mediterranean, Islamic, and African slavery all included people of many ethnic backgrounds; American chattel slavery progressively defined "enslaved" as synonymous with "African-descended," and baptism did not bring freedom. This racial definition — and its legal institutionalization — created consequences that persisted long after legal emancipation.'
           },
           {
             question: 'African kingdoms\' participation in the Atlantic slave trade demonstrates which AP complexity?',
             options: [
-              'The slave trade was a product of African-European commercial relationships in which some African political elites (Dahomey, Ashanti, Oyo) profited by selling captives to European traders, while the majority of African peoples bore the costs as victims of increased warfare and enslavement — demonstrating that colonial economic systems created internal divisions within colonized/traded societies',
-              'African peoples unanimously resisted the slave trade without any African participation',
-              'African kingdom participation means the slave trade was mutually beneficial and non-coercive',
-              'European traders had no African partners and simply raided African coasts for enslaved people',
+              'Some African elites profited by selling captives, while most Africans bore the costs of raids and war',
+              'African states refused all contact with European traders, so Europeans seized captives only by raiding',
+              'African participation shows the trade was mutually beneficial, since African societies gained overall',
+              'African kingdoms were drained only by European conquest, since few Africans took part in the trade',
             ],
             correctAnswer: 0,
-            explanation: 'The African dimension of the slave trade is a model AP complexity point: it challenges both the "innocent victims only" narrative (some African elites did profit) and the "mutual benefit" narrative (ordinary African people did not benefit; they were the victims). Understanding how the slave trade created internal African divisions — elites profiting while others suffered — is essential for understanding both the trade\'s operation and its long-term consequences for African society.'
+            explanation: 'The African dimension of the slave trade is a model AP complexity point: it challenges both the "innocent victims only" narrative (some African elites — in Dahomey, Asante, Oyo — did profit by selling captives) and the "mutual benefit" narrative (ordinary African people did not benefit; they were the victims of increased warfare and enslavement). Understanding how the slave trade created internal African divisions is essential for understanding both the trade\'s operation and its long-term consequences for African society.'
           }
         ]
       }
@@ -56,7 +56,7 @@ export const whMaritimeEmpiresLaborPart4Data = {
 | Feature | Details |
 |---------|---------|
 | **Total enslaved** | ~12.5 million transported, 1500-1900 |
-| **Deaths in transit** | ~2 million (15-20% Middle Passage mortality) |
+| **Deaths in transit** | ~1.8 million (roughly 12-15% Middle Passage mortality, higher in the early centuries) |
 | **Peak period** | 18th century; ~6 million transported in 1700s |
 | **Destinations** | Brazil 46%, Caribbean 43%, North America 4%, other 7% |
 | **Origins** | West Africa (Senegambia, Gold Coast, Bight of Benin, Bight of Biafra), Central Africa (Kongo) |
@@ -104,35 +104,35 @@ Enslaved peoples resisted at every stage:
           {
             question: 'The Zong massacre (1781) — in which enslaved Africans were thrown overboard so their enslaver could collect insurance — is historically significant for AP because:',
             options: [
-              'It revealed the logical extreme of chattel slavery\'s legal framework: if enslaved people were property, they could be destroyed to collect insurance like any other cargo — a revelation that strengthened abolitionist arguments by demonstrating the moral bankruptcy of the system\'s own legal logic',
-              'The Zong massacre was a minor incident with no historical significance',
-              'The massacre demonstrated that enslaved people had legal rights that were violated',
-              'Insurance companies supported the massacre as a standard business practice',
+              'It exposed slavery\'s legal logic, as treating people as cargo made killing them an insurable loss',
+              'It showed that British courts protected enslaved Africans and punished the ship\'s crew for murder',
+              'It showed that insurers routinely paid such claims, and it drew little attention from the public',
+              'It led Parliament to abolish slavery throughout the British Empire within the following year',
             ],
             correctAnswer: 0,
-            explanation: 'The Zong case became an abolitionist cause célèbre because it forced British courts and public opinion to confront the legal logic of chattel slavery: if enslaved people were property, the captain\'s action was legally defensible. British abolitionist Granville Sharp used the case to argue that the slave trade was incompatible with any legal system treating enslaved people as human. The case demonstrates how extreme cases can illuminate the systemic logic of unjust institutions.'
+            explanation: 'The Zong case became an abolitionist cause célèbre because it forced British courts and public opinion to confront the legal logic of chattel slavery: the case was argued as an insurance dispute, and no one was prosecuted for murder. British abolitionist Granville Sharp used the case to argue that the slave trade was incompatible with any legal system treating enslaved people as human. Britain banned the trade only in 1807 and slavery in 1833. The case demonstrates how extreme cases can illuminate the systemic logic of unjust institutions.'
           },
           {
             question: 'Resistance to the Atlantic slave trade (shipboard revolts, maroon communities, daily resistance) demonstrates:',
             options: [
-              'Enslaved peoples were not passive victims but active agents who resisted enslavement in every available form — from spectacular shipboard revolts to everyday sabotage — demonstrating that the system required constant violence and surveillance to maintain, not just initial coercion',
-              'Enslaved peoples generally accepted their condition without significant resistance',
-              'Only armed rebellion counts as meaningful resistance to slavery',
-              'Maroon communities were too small to have any historical significance',
+              'Enslaved people resisted in every available form, so the system needed constant violence to survive',
+              'Enslaved people resisted mainly through armed revolt, so everyday forms of resistance were rare',
+              'Enslaved people rarely resisted once they reached the Americas, so planters needed little force',
+              'Enslaved people resisted mainly through lawsuits, so colonial courts became the main battleground',
             ],
             correctAnswer: 0,
-            explanation: 'The spectrum of resistance is AP\'s corrective to the "passive victim" narrative: individual survival strategies (feigning illness, working slowly), cultural retention (preserving African music and religious practices within slavery), maroon community formation, and armed revolt all represent forms of resistance across a spectrum of danger and effectiveness. The fact that plantation owners invested enormous resources in surveillance, pass systems, and brutal punishment demonstrates that they understood resistance was constant.'
+            explanation: 'The spectrum of resistance is AP\'s corrective to the "passive victim" narrative: shipboard revolts, individual survival strategies (feigning illness, working slowly), cultural retention (preserving African music and religious practices), maroon community formation, and armed revolt all represent forms of resistance. The fact that plantation owners invested enormous resources in surveillance, pass systems, and brutal punishment demonstrates that the system required constant violence and that resistance was constant.'
           },
           {
             question: 'The long-term consequences of the Atlantic slave trade for West and Central Africa included:',
             options: [
-              'Demographic loss (millions of mostly young adults removed from the population), political destabilization (warfare to generate enslaved captives disrupted state structures), economic distortion (economies oriented toward slave-trading rather than production), and increased vulnerability to 19th-century European colonialism resulting from weakened political and demographic capacity',
-              'The slave trade had no lasting impact on African societies',
-              'West African societies became stronger and more unified as a result of the slave trade',
-              'Demographic loss had no political or economic consequences for African states',
+              'Lost young adults, war-driven instability and economies skewed to captive trading',
+              'Rapid population growth, as American crops more than offset every loss to the trade',
+              'Stronger, more unified states, as profits from the trade paid for centralized bureaucracies',
+              'Early industrial growth, as profits from the trade funded textile mills along the Gold Coast',
             ],
             correctAnswer: 0,
-            explanation: 'The long-term consequences for Africa are often underemphasized in AP but are essential for understanding 19th-century African colonialism: the Atlantic slave trade over four centuries removed millions of mostly young adults (the most productive demographic), distorted African political economies toward slave-raiding rather than agricultural production, introduced European firearms that intensified internal warfare, and left many West African states weakened at precisely the moment when European colonial ambitions expanded.'
+            explanation: 'The long-term consequences for Africa are essential for understanding 19th-century African colonialism: the Atlantic slave trade over four centuries removed millions of mostly young adults, distorted many political economies toward slave-raiding rather than agricultural production, introduced European firearms that intensified internal warfare, and left many West African states weakened at precisely the moment when European colonial ambitions expanded. A few states (Dahomey, Asante) grew powerful from the trade, but the region as a whole was weakened.'
           }
         ]
       }
@@ -172,24 +172,24 @@ Enslaved peoples resisted at every stage:
           {
             question: 'Comparing the Atlantic slave trade to the Indian Ocean slave trade reveals:',
             options: [
-              'Both moved enslaved people across long distances, but the Atlantic trade was far larger in scale (~12.5 million vs. ~3 million for Indian Ocean over comparable periods), more systematically racialized (African descent = enslaved in Atlantic; Indian Ocean slavery included diverse ethnic groups), and more destructive of origin societies',
-              'The Indian Ocean slave trade was larger than the Atlantic trade',
-              'Both slave trades were identical in their racial basis and scale',
-              'The Indian Ocean trade was more racially defined than the Atlantic trade',
+              'The Atlantic trade was larger, more sharply racialized and more destructive of the societies it drew from',
+              'The Indian Ocean trade was larger, more sharply racialized and more destructive of the societies it drew from',
+              'The two trades were similar in scale and racial basis, differing mainly in the ships and routes they used',
+              'The Indian Ocean trade ended first, and the Atlantic trade grew mainly to replace its lost supply',
             ],
             correctAnswer: 0,
-            explanation: 'The comparison reveals what was unique about the Atlantic trade: its industrialized scale and systematic racialization. Indian Ocean slavery existed within a broader commercial context and included enslaved people from many ethnic backgrounds (East Africans, Central Asians, South Asians) without creating a single racial category. The Atlantic trade\'s specific racialization — and its legal institutionalization through slave codes — was a distinctive feature of American colonial capitalism.'
+            explanation: 'The comparison reveals what was unique about the Atlantic trade: its scale (~12.5 million people, far more than the Indian Ocean trade over comparable centuries; estimates for the latter vary) and systematic racialization. Indian Ocean slavery included enslaved people from many ethnic backgrounds (East Africans, Central Asians, South Asians) without creating a single racial category, and it continued into the 19th and 20th centuries. The Atlantic trade\'s specific racialization — and its legal institutionalization through slave codes — was a distinctive feature of American colonial economies.'
           },
           {
             question: 'An AP LEQ asks: "Evaluate the extent to which economic factors explain the development and expansion of the Atlantic slave trade." Which argument earns the highest score?',
             options: [
-              'Economic factors were primary but not sole drivers of the Atlantic slave trade: plantation profitability (sugar, tobacco, cotton demand) created the economic incentive; the legal construction of racial slavery reduced costs by making slavery heritable; and African political economies contributed to the trade by supplying captives — but ideological factors (racial hierarchy, Christian mission justifications) also enabled a system that pure economic rationality alone would not explain, since exploiting free labor is rarely actually economically "rational" — the profitability depended on the prior construction of a legal system denying enslaved people\'s humanity',
-              'Economic factors alone explain the slave trade with no ideological dimension',
-              'The slave trade had no economic rationale and was purely ideological',
-              'Economic factors are irrelevant to understanding the slave trade',
+              'Economic factors were primary but not sole causes, as profits depended on laws denying enslaved people\'s humanity',
+              'Economic factors were the sole cause, since planters acted on profit and racial ideas came only after abolition',
+              'Economic factors were minor causes, since the trade lost money and continued for religious reasons alone',
+              'Economic factors were primary, since sugar prices alone set the volume of the trade in every decade',
             ],
             correctAnswer: 0,
-            explanation: 'This argument earns full AP complexity by: (1) affirming economic factors as primary, (2) complicating the economic argument (profitability depended on prior legal construction of slavery), (3) identifying non-economic factors (racial ideology, Christian justifications), and (4) demonstrating that the two dimensions were intertwined (economic incentive + ideological enablement = the actual historical system). AP rewards arguments that transcend simple monocausal explanations.'
+            explanation: 'This argument earns full AP complexity by: (1) affirming economic factors (plantation profitability from sugar, tobacco and cotton) as primary, (2) complicating the economic argument (profitability depended on the prior legal construction of heritable racial slavery and on African states supplying captives), (3) identifying non-economic factors (racial ideology, Christian justifications), and (4) demonstrating that the two dimensions were intertwined. AP rewards arguments that transcend simple monocausal explanations.'
           }
         ]
       }

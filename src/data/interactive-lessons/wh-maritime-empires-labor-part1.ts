@@ -55,10 +55,10 @@ The **Atlantic triangular trade** connected three continents:
           {
             question: 'Which of the following correctly describes the "triangular trade" across the Atlantic?',
             options: [
-              'Manufactured goods from Europe were traded for enslaved Africans, who were shipped to the Americas to produce raw materials exported back to Europe',
-              'Raw materials flowed from Europe to Africa, manufactured goods from Africa to the Americas, and enslaved people from the Americas to Europe',
-              'All three legs of the trade exclusively involved the exchange of agricultural products between continents',
-              'The triangular trade operated primarily between the Americas, Asia, and Australia'
+              'European manufactured goods bought enslaved Africans, whose labor in the Americas produced raw materials for Europe',
+              'European raw materials went to Africa, African manufactured goods went to the Americas, and American captives went to Europe',
+              'American silver bought Asian silk and spices, which Europeans resold in Africa in exchange for gold dust and ivory',
+              'African gold paid for European textiles, which were shipped to the Americas and exchanged for indigenous labor'
             ],
             correctAnswer: 0,
             explanation: 'The triangular trade followed a specific pattern: European manufactured goods (guns, textiles, metal) → Africa, where they were exchanged for enslaved people → Americas (Middle Passage), where enslaved labor produced raw materials (sugar, tobacco, cotton) → Europe for processing and consumption.'
@@ -66,13 +66,13 @@ The **Atlantic triangular trade** connected three continents:
           {
             question: 'Why did the Dutch East India Company (VOC) become one of the most powerful organizations of the 17th century?',
             options: [
-              'It was the world\'s first multinational corporation, granted government powers including the right to wage war, negotiate treaties, and establish colonies',
-              'It was a charitable religious organization funded by the Dutch Reformed Church to spread Christianity globally',
-              'It exclusively controlled all European agriculture and had a monopoly on food production within the Netherlands',
-              'It was a military alliance between the Netherlands and Spain that jointly administered colonial territories'
+              'It was a chartered joint-stock firm that the Dutch state let wage war, sign treaties and found colonies',
+              'It was a missionary society funded by the Dutch Reformed Church to spread Calvinism across Asian port cities',
+              'It was a royal navy department run directly by the Dutch king to patrol trade routes to Asia',
+              'It was a merchant guild of Amsterdam families who shared ships but kept their profits separate'
             ],
             correctAnswer: 0,
-            explanation: 'The VOC (founded 1602) was the world\'s first joint-stock company and first to issue stock. The Dutch government granted it quasi-governmental powers — it could raise armies, negotiate treaties, establish colonies, and even coin money. It monopolized the spice trade from the East Indies.'
+            explanation: 'The VOC (founded 1602) was the world\'s first publicly traded joint-stock company and often called the first multinational corporation. The Dutch Republic (which had no king until 1806) granted it quasi-governmental powers — it could raise armies, negotiate treaties, establish colonies, and even coin money. It monopolized the spice trade from the East Indies.'
           }
         ]
       }
@@ -112,24 +112,24 @@ European colonial economies depended on **coercive labor systems** to extract we
           {
             question: 'How did chattel slavery in the Americas differ from the Spanish encomienda system?',
             options: [
-              'Under chattel slavery, enslaved people were legally defined as property with a hereditary status based on race; the encomienda granted control over indigenous labor but did not make workers property',
-              'The encomienda system was harsher than chattel slavery because it had no legal protections for laborers whatsoever',
-              'Both systems were functionally identical — they used the same legal framework and applied to the same racial groups',
-              'Chattel slavery was voluntary and temporary, while the encomienda was permanent and involuntary'
+              'Chattel slavery made people hereditary property by race, while the encomienda claimed native labor without owning workers',
+              'Chattel slavery claimed native labor without owning workers, while the encomienda made people hereditary property by race',
+              'Chattel slavery bound workers for fixed terms of four to seven years, while the encomienda bound them for life',
+              'Chattel slavery applied only to war captives, while the encomienda applied to anyone convicted of a crime'
             ],
             correctAnswer: 0,
-            explanation: 'Chattel slavery was unique in treating humans as inheritable property with a permanent, race-based status. The encomienda was a labor grant — the Spanish crown assigned indigenous people to colonists for labor, but workers were technically not "property" and the grant was not hereditary (though in practice it was brutal and exploitative).'
+            explanation: 'Chattel slavery was unique in treating humans as inheritable property with a permanent, race-based status. The encomienda was a labor grant — the Spanish crown assigned indigenous people to colonists for labor and tribute, but workers were technically not "property" and the grant was not hereditary (though in practice it was brutal and exploitative). Fixed terms of four to seven years describe indentured servitude, not either system.'
           },
           {
             question: 'Which destination received the largest proportion of enslaved Africans during the Atlantic slave trade?',
             options: [
-              'The British colonies of North America (modern United States)',
-              'Brazil and the Caribbean — primarily for sugar plantation labor',
-              'Spanish silver mines in Mexico and Peru',
-              'European factory cities for industrial manufacturing'
+              'The British colonies of mainland North America',
+              'Brazil and the sugar islands of the Caribbean',
+              'The silver-mining regions of Spanish Mexico and Peru',
+              'The Atlantic sugar islands of Madeira and São Tomé'
             ],
             correctAnswer: 1,
-            explanation: 'Approximately 40% of all enslaved Africans went to Brazil and another 40% to the Caribbean — both driven by the labor demands of sugar production. Only about 5% went to North America. Sugar cultivation was extraordinarily labor-intensive and deadly, requiring constant importation of new workers.'
+            explanation: 'Approximately 40-45% of all enslaved Africans went to Brazil and roughly another 40% to the Caribbean — both driven by the labor demands of sugar production. Only about 4-5% went to North America. Madeira and São Tomé pioneered the sugar plantation model before 1500 but received far fewer captives. Sugar cultivation was extraordinarily labor-intensive and deadly, requiring constant importation of new workers.'
           }
         ]
       }

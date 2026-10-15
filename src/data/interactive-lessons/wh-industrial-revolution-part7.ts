@@ -23,21 +23,21 @@ export const whIndustrialRevolutionPart7Data = {
           {
             question: 'An AP SAQ asks: "Briefly explain ONE cause of British industrialization." Which response earns full credit?',
             options: [
-              'The enclosure movement (1750-1850) was a critical cause of British industrialization because it displaced rural agricultural workers by consolidating common lands into private farms, creating an urban industrial labor force — without this social mechanism producing workers willing to accept factory wages, the machinery of industrialization would have had no operators',
-              'Naming the cause without explaining its specific mechanism',
-              'Describing Britain\'s geography without connecting it to industrialization causation',
-              'Listing multiple causes without developing any single one with specific evidence and reasoning',
+              'Enclosure pushed rural families off common lands after 1750, creating the urban labor force that new factories needed',
+              'Britain had coal, rivers, and colonies, and its people were inventive, so the Industrial Revolution started there',
+              'One cause of British industrialization was the enclosure movement, which was a very important event in British history',
+              'The French Revolution caused British industrialization by sending skilled French weavers to Manchester after 1789',
             ],
             correctAnswer: 0,
-            explanation: 'Full SAQ credit: specific cause (enclosure movement) + specific evidence (consolidated common lands, 1750-1850) + mechanism (displaced rural workers → urban labor force) + connection to industrialization (machinery needed operators). AP SAQs require claim + evidence + reasoning in one developed point, not a list of possible causes.'
+            explanation: 'Full SAQ credit: a specific cause (the enclosure movement) + specific evidence (common lands enclosed after 1750) + the mechanism (displaced rural families became an urban labor force) + the connection to industrialization (new factories needed workers). Merely naming a cause, or listing several causes without developing one, does not earn the point; AP SAQs require claim + evidence + reasoning in one developed point.'
           },
           {
             question: 'For an AP LEQ on British industrialization\'s social consequences, which thesis demonstrates the highest analytical sophistication?',
             options: [
-              'Industrialization restructured British society by creating a new class configuration — industrial bourgeoisie and urban proletariat — whose structural conflict over wages and working conditions generated the reform movements (Factory Acts, Chartism, trade unionism) that transformed British political institutions, demonstrating that economic transformation drives political transformation through the mechanism of class formation and conflict',
-              'Industrialization had both positive and negative social consequences',
-              'The factory system changed working conditions significantly',
-              'Industrialization created a middle class that was important for political reform',
+              'Industrialization created a bourgeoisie and an urban proletariat whose conflict drove the Factory Acts, Chartism, and unions',
+              'Industrialization created both positive and negative social consequences for the people of Britain in the 1800s',
+              'The factory system changed hours, wages, and working conditions significantly as people moved from farms to mills',
+              'Industrialization created a new middle class, which was important for later political reform in Britain',
             ],
             correctAnswer: 0,
             explanation: 'This thesis earns full AP credit: identifies specific social change (class configuration), uses specific evidence (bourgeoisie, proletariat), explains the mechanism (structural conflict → reform movements), uses specific evidence for reform (Factory Acts, Chartism, trade unions), and provides the AP-level analytical claim (economic transformation → political transformation through class conflict). The sophistication is the causal chain: economy → class structure → political conflict → institutional reform.'
@@ -93,10 +93,10 @@ export const whIndustrialRevolutionPart7Data = {
           {
             question: 'A DBQ document from a British factory owner (1835) argues that factory conditions are good for workers. What is the most sophisticated sourcing?',
             options: [
-              'A factory owner writing in 1835 had direct knowledge of factory operations and specific commercial incentives: claiming good conditions reduced political pressure for regulatory legislation (Factory Acts were being debated) and labor unrest; his perspective represents capital\'s interests in the class conflict over factory conditions — the document reveals both his operational knowledge and his defensive political purposes',
-              'Factory owners are completely objective observers with no interests in the debate',
-              'The document is worthless as evidence because factory owners are always biased',
-              'Sourcing analysis is unnecessary for 19th-century industrial documents',
+              'He knew the mills firsthand, but with Factory Acts under debate he had reason to downplay abuses and block regulation',
+              'As an owner he had direct knowledge of mills, so his account can be trusted as an objective description',
+              'Factory owners were always biased, so the document should be set aside as worthless historical evidence',
+              'The document needs no sourcing at all, since 19th-century business records are reliable and objective statistical sources',
             ],
             correctAnswer: 0,
             explanation: 'Sophisticated sourcing addresses specific historical context: 1835 is precisely when Factory Act reform was being debated in Parliament; a factory owner writing then had specific political motivation to argue good conditions. The sourcing doesn\'t dismiss the document (factory owners do know factories) but explains why it argues what it argues: defending against reform legislation. Point of view + historical situation + purpose = full AP sourcing credit.'
@@ -104,10 +104,10 @@ export const whIndustrialRevolutionPart7Data = {
           {
             question: 'Comparing Luddism (skill-based resistance to industrialization) to Chartism (democratic political demands) demonstrates:',
             options: [
-              'Working-class responses to industrialization evolved from direct economic action (destroying machinery that threatened skilled work) toward democratic political demands (universal suffrage to achieve economic justice through legislation) — demonstrating that workers developed political sophistication over time as direct economic action proved insufficient',
-              'Luddism and Chartism had identical goals and methods',
-              'Chartism preceded Luddism and was the more radical movement',
-              'Working-class movements had no evolution — responses remained constant throughout industrialization',
+              'Workers shifted from smashing machines toward organized campaigns for the vote',
+              'Luddites and Chartists shared identical goals and methods, both relying mainly on smashing machinery',
+              'Chartism came first and was more radical, and Luddism was its later and more moderate offshoot',
+              'Working-class tactics never changed, since the same groups used the same methods from 1811 to 1848',
             ],
             correctAnswer: 0,
             explanation: 'The Luddism-to-Chartism evolution demonstrates AP\'s theme of working-class political development: direct action (destroying machines) was the initial response when workers had no political channels; as it proved ineffective (government used military to suppress Luddism), working-class organizing shifted toward political demands (Chartism) that could achieve legislative change. This evolution from economic action to political action is the story of how the working class became a political actor rather than simply an economic one.'
@@ -115,10 +115,10 @@ export const whIndustrialRevolutionPart7Data = {
           {
             question: 'The comparison between Japanese Meiji industrialization and European industrialization reveals:',
             options: [
-              'Both used industrial technology for national power, but Europe industrialized within the existing colonial system it was creating; Japan industrialized explicitly to avoid being colonized, demonstrating that the same industrial technology and methods could be adopted for opposite geopolitical purposes — expanding colonial power or resisting colonial domination',
-              'Japanese and European industrialization had identical purposes and outcomes',
-              'Japan failed to industrialize effectively and remained a colonial subject',
-              'European industrial nations deliberately helped Japan industrialize',
+              'Europe industrialized while building empires, but Japan industrialized to avoid being colonized by them',
+              'Japan and Europe industrialized for the same commercial reasons and reached identical outcomes by about 1900',
+              'Japan failed to industrialize and was colonized by Britain, while Europe\'s industry grew steadily',
+              'European powers deliberately helped Japan industrialize so that it could serve as their ally in Asia',
             ],
             correctAnswer: 0,
             explanation: 'The geopolitical dimension of industrialization is AP\'s most sophisticated comparative point: European industrial states used industrial military advantage to colonize others; Japan used industrial development to prevent being colonized. Same industrial methods, opposite geopolitical purposes. Japan\'s success (defeating Russia in 1905) demonstrated that industrialization could neutralize the power differential that made European colonization of non-industrial societies possible — a lesson noted across Asia and Africa.'
@@ -180,10 +180,10 @@ export const whIndustrialRevolutionPart7Data = {
           {
             question: 'An AP CCOT on industrial-era global economic change should identify which as the most significant development?',
             options: [
-              'The most significant change was the creation of a structural global economic inequality between industrialized "core" nations (accumulating capital, technology, and economic complexity) and non-industrialized "periphery" regions (reorganized as raw material suppliers) — a division reinforced by colonial coercion that created dependencies persisting into the contemporary global economy',
-              'Industrialization eliminated global economic inequality by spreading prosperity universally',
-              'The most significant change was the introduction of new commodities with no structural inequality dimension',
-              'Industrial-era economic organization was temporary and reversed itself within a generation',
+              'A lasting divide between an industrial core and raw-material peripheries, reinforced by colonial power into the present',
+              'The spread of prosperity to every region, as industrial trade erased the gap between rich and poor nations',
+              'The arrival of new consumer goods like tea and sugar, with no lasting effect on global economic structure',
+              'A brief reorganization of world trade that had reversed itself within a single generation after 1900',
             ],
             correctAnswer: 0,
             explanation: 'CCOT requires identifying the most historically significant change: not just "factories were built" but the structural reorganization of the global economy into industrial and non-industrial zones with different accumulation trajectories. The continuity is that this structure, once created by industrialization and reinforced by colonialism, did not disappear when colonialism formally ended — contemporary "developing world" economic challenges are the continuity from industrial-era structural inequality. AP rewards analysis that identifies structural rather than surface-level changes.'
@@ -191,10 +191,10 @@ export const whIndustrialRevolutionPart7Data = {
           {
             question: 'For AP, the most important analytical skill in studying the Industrial Revolution is:',
             options: [
-              'Distinguishing between the unequal distribution of industrialization\'s benefits (higher productivity, eventually rising living standards) and costs (working conditions, pollution, global inequality) — AP analysis requires recognizing that the same industrial transformation produced very different experiences for factory owners vs. factory workers, for British manufacturers vs. Indian weavers, for the 19th century vs. future generations',
-              'Memorizing dates and inventions is the most important skill for AP Industrial Revolution questions',
-              'Understanding industrialization requires only European history with no global context',
-              'AP Industrial Revolution questions can be answered without distinguishing different groups\' experiences',
+              'Tracing how industrialization\'s benefits and costs fell unequally on owners, workers, colonies, and later generations',
+              'Memorizing inventors, dates, and machines, since AP questions mainly test recall of specific inventions',
+              'Focusing on Britain and Europe alone, since global connections are outside the scope of this period',
+              'Measuring total industrial output growth alone, without separating the very different experiences of groups in society',
             ],
             correctAnswer: 0,
             explanation: 'Distributional analysis is AP\'s most valued skill: the same industrial transformation that increased British national wealth simultaneously destroyed Indian textile manufacturing, created child labor, produced cholera epidemics in working-class neighborhoods, and released the carbon now driving climate change. AP rewards analysis that asks "who benefited?" and "who paid the cost?" rather than just "did production increase?" This distributional perspective is the foundation of both contemporary economic analysis and AP historical analysis.'

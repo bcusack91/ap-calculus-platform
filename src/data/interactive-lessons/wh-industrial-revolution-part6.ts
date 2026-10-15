@@ -21,26 +21,26 @@ export const whIndustrialRevolutionPart6Data = {
       exercise: {
         questions: [
           {
-            question: 'The transformation of the Thames River (London) from a living river to a biologically dead river by the 1850s demonstrates:',
+            question: 'The pollution of the Thames River (London) that culminated in the "Great Stink" of 1858 demonstrates:',
             options: [
-              'Industrial-scale pollution exceeded natural systems\' capacity for self-purification — pre-industrial human and animal waste was biodegradable and at scales rivers could process; industrial chemical and organic waste at industrial concentrations overwhelmed river biology, demonstrating that industrialization created qualitatively new environmental problems not just larger versions of existing ones',
-              'River pollution was a pre-industrial problem that industrialization had no significant impact on',
-              'Industrial pollution affected air but not water systems',
-              'The Thames was always biologically dead with no pre-industrial aquatic life',
+              'Industrial and urban waste overwhelmed the river\'s natural capacity to clean itself, creating a new scale of pollution',
+              'River pollution was a pre-industrial problem that industrial growth in London did not noticeably worsen',
+              'Industrial pollution damaged London\'s air but left its rivers and water supply largely untouched',
+              'The Thames had carried little aquatic life even before 1700, so industry changed its condition very little',
             ],
             correctAnswer: 0,
-            explanation: 'The qualitative distinction in industrial pollution is AP\'s environmental history point: pre-industrial cities produced biodegradable organic waste that rivers could process at human-population scales; industrial cities produced concentrated chemical waste (dye works, tanneries, gas works) alongside massive organic waste that biological systems couldn\'t process. The 1858 "Great Stink" (Thames\' biological death in summer heat) finally forced London to build the sewage system that became the model for modern urban sanitation — another demonstration that industrial problems generated reform responses.'
+            explanation: 'The qualitative distinction in industrial pollution is AP\'s environmental history point: pre-industrial cities produced biodegradable organic waste that rivers could process at human-population scales; industrial cities produced concentrated chemical waste (dye works, tanneries, gas works) alongside massive organic waste that biological systems couldn\'t process. The 1858 "Great Stink" (raw sewage rotting in the river during a hot summer) finally forced London to build the sewage system that became the model for modern urban sanitation — another demonstration that industrial problems generated reform responses. (The Thames was later declared biologically dead in 1957.)'
           },
           {
-            question: 'The destruction of Indian textile manufacturing by British import tariff policies during industrialization demonstrates:',
+            question: 'The collapse of Indian textile manufacturing during British industrialization demonstrates:',
             options: [
-              'Industrial advantages were enforced through political and legal power, not just market competition — British manufacturers used political power (control of Indian colonial government) to impose tariffs eliminating Indian competition in Indian markets while British goods entered India tariff-free, deliberately destroying the world\'s most sophisticated pre-industrial textile industry to create captive markets for British factory goods',
-              'Indian textiles were technically inferior to British machine-made textiles in all respects',
-              'British manufacturers outcompeted Indian textiles purely through market forces without political intervention',
-              'Indian textile industry was unimportant before British industrialization',
+              'Cheap British machine cloth and colonial trade policy, not market competition alone, ruined India\'s weavers',
+              'Indian cloth was inferior in quality, durability, and design, so buyers abandoned it once British machine goods arrived',
+              'British mills won purely through cheaper production, with no colonial tariffs or trade policy involved',
+              'India\'s textile industry was small and unimportant before 1750, so its decline had little economic effect',
             ],
             correctAnswer: 0,
-            explanation: 'The destruction of Indian textiles is AP\'s most important example of how industrialization and colonialism were mutually reinforcing: Indian muslin (Dacca) was the highest quality cotton textile in the world — European aristocrats preferred it; British factories couldn\'t initially compete on quality. British policy solved this not through better products but through colonial power: imposing tariffs on Indian exports to Britain, allowing British goods into India duty-free. This political coercion of markets was as important to British industrial success as the steam engine.'
+            explanation: 'Deindustrialization in India had several causes working together: cheap British machine-made cloth flooded Indian markets, British tariffs restricted Indian cloth entering Britain, and colonial free-trade policy let British goods into India nearly duty-free. Indian muslin (Dacca) had been the finest cotton cloth in the world, so its collapse shows that colonial power, not just better technology, decided who won — industrialization and colonialism were mutually reinforcing.'
           }
         ]
       }
@@ -56,7 +56,7 @@ export const whIndustrialRevolutionPart6Data = {
 Industrial production transformed the natural environment:
 
 - **Air pollution:** Coal burning produced smoke, sulfur dioxide, particulates; London "pea-souper" fogs; respiratory disease
-- **Water pollution:** Industrial waste discharged into rivers; Thames River biological death by 1850s
+- **Water pollution:** Industrial waste and raw sewage discharged into rivers; the Thames's "Great Stink" (1858) forced London to build sewers (the river was later declared biologically dead in 1957)
 - **Land use change:** Strip mining, deforestation for timber and charcoal, habitat destruction
 - **Scale:** Industrial pollution was qualitatively different from agricultural pollution — concentrated, chemical, unprecedented
 
@@ -79,7 +79,7 @@ Industrialization reorganized the global economy into industrial and non-industr
 | **Periphery** | Raw material supply; market for manufactured goods | India (cotton), Egypt (cotton), West Africa (palm oil), South America (nitrates) |
 
 This reorganization was often coercive:
-- British tariff policies destroyed Indian textile manufacturing to create market for British goods
+- Cheap British machine-made cloth, British tariffs on Indian cloth, and colonial free-trade policy together destroyed Indian textile manufacturing and created a market for British goods
 - Egyptian cotton monoculture created dependency on world cotton prices
 - Latin American economies oriented toward raw material export for European industrial markets
 
@@ -98,10 +98,10 @@ This reorganization was often coercive:
           {
             question: 'The creation of an industrial "core" and non-industrial "periphery" in the global economy demonstrates:',
             options: [
-              'Industrialization did not benefit all regions equally — it created structural inequality between industrialized regions (which accumulated capital, technological capacity, and economic complexity) and non-industrialized regions that were reorganized as raw material suppliers for industrial economies, producing dependency relationships that persisted long after the industrial period',
-              'Industrialization benefited all regions equally through market mechanisms',
-              'The core-periphery distinction disappeared when industrialization spread globally',
-              'Non-industrial regions voluntarily chose to be raw material suppliers',
+              'Industrial regions accumulated capital and technology while others became dependent raw-material suppliers',
+              'Industrialization spread wealth evenly across regions, as world markets rewarded every exporter in equal measure',
+              'The core-periphery divide vanished by 1900, because industry spread quickly to Asia, Africa, and Latin America',
+              'Non-industrial regions freely chose raw-material exports because they earned more than manufacturing would have',
             ],
             correctAnswer: 0,
             explanation: 'The core-periphery model is AP\'s framework for understanding industrial-era global inequality: when British industry required cotton, Egyptian agriculture was reorganized toward cotton monoculture (under British financial and political pressure); this reorganization concentrated Egyptian agricultural resources in one crop tied to British industrial demand, creating structural vulnerability. This dependency didn\'t disappear when British hegemony ended — the infrastructure, economic relationships, and reduced agricultural diversity persisted. Contemporary development economics addresses the consequences of this industrial-era reorganization.'
@@ -109,10 +109,10 @@ This reorganization was often coercive:
           {
             question: 'Industrial military technology (gunboats, rifles, machine guns) and colonialism were related in that:',
             options: [
-              'Industrial production of weapons created overwhelming military advantage for industrialized states over non-industrial ones — the same factories producing cotton and steel also produced superior weapons at industrial scale, enabling relatively small European forces to conquer and administer territories vastly larger than Europe\'s own population would have made possible through pre-industrial military methods',
-              'Military technology had no significant impact on colonial conquest — diplomacy was the primary mechanism',
-              'Non-industrial societies had equal military capabilities to industrial states',
-              'Industrial military advantage was irrelevant because colonial conquest was voluntary',
+              'Factory-made weapons let small European forces conquer and govern territories far larger than Europe itself',
+              'Diplomacy and treaties, not weapons, were the main means by which Europeans acquired African territory',
+              'African and Asian armies had weapons equal to Europe\'s, so European conquests depended mainly on disease and luck',
+              'Military technology mattered little, since most colonized peoples welcomed European rule voluntarily',
             ],
             correctAnswer: 0,
             explanation: 'The military-industrial connection is AP\'s explanation for the acceleration of European colonialism in the 19th century: maxim gun (1884), breech-loading rifles, and steam-powered gunboats gave European forces such overwhelming advantage that colonial conquest became militarily feasible at continental scale. The Berlin Conference (1884-85) dividing Africa among European powers was possible because industrial weapons made African resistance militarily futile (with notable exceptions like Ethiopia). Industrial production thus directly enabled colonial expansion.'
@@ -120,10 +120,10 @@ This reorganization was often coercive:
           {
             question: 'The fossil fuel basis of industrial capitalism demonstrates which long-term consequence?',
             options: [
-              'Industrial-era decisions about energy systems created path dependencies that persist into the present — infrastructure, technology, and economic interests built around fossil fuel combustion from 1750 onward generated the accumulated atmospheric carbon that drives contemporary climate change, demonstrating that industrial-era choices have multi-generational consequences',
-              'Fossil fuel use during industrialization had no environmental consequences',
-              'Industrial-era carbon emissions were too small to have any atmospheric effects',
-              'Renewable energy sources were available during industrialization but deliberately rejected',
+              'Energy systems built on coal from 1750 onward created path dependencies and emissions that drive climate change today',
+              'Early industrial coal burning caused no lasting environmental harm, since smoke cleared once factories closed',
+              'Industrial-era emissions were too small to affect the atmosphere, so climate change began only after 1950',
+              'Industrialists rejected cheap solar and wind power that was widely available, choosing coal for political reasons',
             ],
             correctAnswer: 0,
             explanation: 'Path dependency in energy systems is AP\'s connection between industrial history and contemporary environmental politics: industrial capitalism was built on coal; the infrastructure (railroads, steam engines, factories), economic interests (coal mining companies, railroad companies), and technologies (internal combustion engine, petrochemical industry) created around fossil fuels generated powerful resistance to transition to alternative energy. The CO2 accumulated from 1750 onward is the physical record of these historical decisions.'
@@ -138,7 +138,7 @@ This reorganization was often coercive:
       exercise: {
         dropdowns: [
           {
-            label: 'The British policy that destroyed Indian textile manufacturing to create captive markets for British factories was ___',
+            label: 'Alongside cheap machine-made cloth, the British policy that shut Indian textiles out of British markets was ___',
             options: [
             'Protective tariff policy',
             'The Navigation Acts',
@@ -170,10 +170,10 @@ This reorganization was often coercive:
           'The core-periphery system',
           'The machine gun (maxim gun)',
         ],
-        hint1: 'British colonial power — tariffs on Indian exports — British goods duty-free in India — destroyed Dacca muslin industry',
+        hint1: 'Cheap British machine cloth + tariffs on Indian cloth entering Britain + British goods nearly duty-free in India — together destroyed the Dacca muslin industry',
         hint2: 'Global inequality — industrial core accumulates capital — periphery supplies raw materials — structural dependency',
         hint3: 'Hiram Maxim 1884 — first automatic machine gun — colonial conquest — Scramble for Africa',
-        explanation: 'Protective tariff policy demonstrates how colonialism enforced industrial market advantages; the core-periphery system describes the global economic inequality industrialization created; and the machine gun demonstrates how industrial weapons enabled colonial conquest — all three are dimensions of how industrialization transformed global power relationships.'
+        explanation: 'Protective tariff policy (working alongside cheap machine-made cloth and colonial free trade) demonstrates how colonialism enforced industrial market advantages; the core-periphery system describes the global economic inequality industrialization created; and the machine gun demonstrates how industrial weapons enabled colonial conquest — all three are dimensions of how industrialization transformed global power relationships.'
       }
     },
     {
@@ -185,10 +185,10 @@ This reorganization was often coercive:
           {
             question: 'Comparing industrialization\'s environmental consequences to its economic consequences reveals:',
             options: [
-              'Economic benefits (increased production, rising living standards for industrial workers over time, capital accumulation) and environmental costs (pollution, resource depletion, atmospheric carbon accumulation) were distributed across different populations and different time periods — industrial workers and factory owners in the 19th century benefited economically while future generations globally bear the environmental costs',
-              'Industrialization produced equal environmental and economic benefits for all populations',
-              'Economic and environmental consequences of industrialization were experienced identically by all groups',
-              'Environmental consequences of industrialization were limited to the industrial period with no lasting effects',
+              'Economic gains went to 19th-century owners and workers, while environmental costs fell on later generations worldwide',
+              'Economic benefits and environmental costs fell equally on every population, in every region and in every single generation',
+              'Environmental damage ended with the industrial period, while its economic gains continue to be felt today',
+              'Workers bore the economic losses of industry, while owners suffered most of its environmental damage',
             ],
             correctAnswer: 0,
             explanation: 'Distributional inequality across time and space is AP\'s most sophisticated environmental analysis: 19th-century British factory owners received economic profits; 19th-century workers eventually received rising wages; future generations globally receive accumulated atmospheric carbon. The beneficiaries and cost-bearers of industrialization are different people in different times and places — this temporal and geographic mismatch is why industrial-era environmental decisions were made without accounting for full costs. AP rewards recognizing this distributional dimension of industrial environmental history.'
@@ -196,10 +196,10 @@ This reorganization was often coercive:
           {
             question: 'For AP, the global economic reorganization created by industrialization is significant because:',
             options: [
-              'Industrialization created the contemporary pattern of global economic inequality — industrialized nations accumulated capital, technological complexity, and economic diversity while non-industrialized regions were reorganized as raw material suppliers, creating structural dependencies that contemporary development economics still attempts to address and that define North-South economic relationships today',
-              'Industrial-era economic organization was temporary and has no contemporary relevance',
-              'Global economic inequality existed before industrialization and was not significantly changed by it',
-              'All nations benefited equally from global economic reorganization during industrialization',
+              'It built lasting divides between industrial nations and raw-material exporters that persist today',
+              'It was a temporary arrangement that dissolved after 1914 and has little relevance to today\'s global economy',
+              'It left global inequality unchanged, since the gap between rich and poor regions was as wide before 1750',
+              'It benefited all nations equally, as rising world trade spread industrial production to every continent by 1900',
             ],
             correctAnswer: 0,
             explanation: 'Contemporary relevance is AP\'s deepest lesson about industrialization: the patterns of global inequality that "development economics" addresses today — why are tropical commodity-exporting nations poor while temperate manufacturing nations are rich? — were largely constructed during the industrial era through the combination of colonial coercion, market reorganization, and military advantage. Understanding industrialization is understanding the origins of the contemporary world economic order.'

@@ -23,24 +23,24 @@ export const whMaritimeEmpiresLaborPart3Data = {
           {
             question: 'The progressive racialization of chattel slavery in colonial Americas (African descent = enslaved status) was significant because:',
             options: [
-              'It transformed slavery from a legal category (anyone could be enslaved) into a racial category (only African-descended people could be enslaved), creating a permanent, heritable status that was independent of individual conduct or circumstance — making race the primary determinant of legal standing in colonial societies',
-              'Chattel slavery in the Americas was always racial from the very beginning with no evolution',
-              'The racialization of slavery had no impact on colonial legal systems',
-              'African slavery was identical in its racial basis to slavery in ancient Rome',
+              'It made slavery a permanent, inherited status tied to African ancestry rather than to capture or debt',
+              'It made slavery a temporary status tied to religion, ending once enslaved Africans were baptized',
+              'It made slavery a legal category open to any group, applied equally to Europeans and Africans',
+              'It made slavery a matter of private custom, with colonial courts refusing to define who could be enslaved',
             ],
             correctAnswer: 0,
-            explanation: 'The racialization of slavery in the Americas was a specific historical development, not a timeless feature of slavery. Early colonial Spanish law enslaved both indigenous peoples and Africans; over time, legal reforms extended protections to indigenous peoples while simultaneously stripping Africans of all legal personhood. The development of racial slave codes (Virginia 1705: enslaved status heritable through the mother) created the legal infrastructure of racial hierarchy that would persist after emancipation.'
+            explanation: 'The racialization of slavery in the Americas was a specific historical development, not a timeless feature of slavery: it turned a legal category into a racial one, creating a permanent, heritable status that made race the primary determinant of legal standing. Early colonial Spanish law enslaved both indigenous peoples and Africans; over time, legal reforms extended protections to indigenous peoples while stripping Africans of legal personhood. Laws such as Virginia\'s 1662 statute (enslaved status heritable through the mother, later built into the 1705 slave codes) and the rule that baptism did not bring freedom created the legal infrastructure of racial hierarchy that would persist after emancipation.'
           },
           {
             question: 'Indentured servitude (replacing chattel slavery after British emancipation 1833) was significant because:',
             options: [
-              'It demonstrated that formally "free" contract labor could be structured to be nearly as coercive as chattel slavery — fixed-term contracts, deceptive recruitment, brutal conditions, and rarely honored promises of land showed that colonial economies could adapt to abolition while maintaining exploitative labor extraction',
-              'Indentured servitude was a humane alternative that genuinely improved workers\' conditions',
-              'Indentured contracts were always honored completely and transparently',
-              'Indentured servitude had no racial or ethnic dimension in British colonial practice',
+              'Nominally free contract labor could be made nearly as coercive as the system before it',
+              'Contract labor brought fair wages and land to most workers once their terms of service ended',
+              'Contract labor drew mainly on European migrants, as Asian workers were barred from British colonies',
+              'Contract labor ended within a decade of 1833, as planters switched to machines for cane cutting',
             ],
             correctAnswer: 0,
-            explanation: 'Indentured servitude after emancipation is an AP-important continuity: when slavery ended, the same plantation economies that had used enslaved labor needed a replacement. Indentured servitude provided it — same basic coercion, different legal form. AP analysis should recognize that abolishing one legal form of coercion doesn\'t necessarily end exploitation; it often produces new institutional forms that serve the same economic function.'
+            explanation: 'Indentured servitude after emancipation is an AP-important continuity: fixed-term contracts, deceptive recruitment, brutal conditions, and rarely honored promises of land showed that colonial economies could adapt to abolition while maintaining exploitative labor extraction. Indenture to the Caribbean, Mauritius, Fiji and elsewhere lasted into the early 20th century (Indian indenture ended in 1917). Abolishing one legal form of coercion doesn\'t necessarily end exploitation; it often produces new institutional forms that serve the same economic function.'
           }
         ]
       }
@@ -68,8 +68,8 @@ Chattel slavery in the Americas was progressively racialized:
 - Early colonial period: both indigenous peoples and Africans were enslaved
 - By 17th century: indigenous peoples' legal status improved (New Laws 1542); African slavery expanded
 - Race as justification: African descent became legally synonymous with enslavement in many colonial codes
-- "Slave codes" (e.g., Virginia 1705): defined enslaved status as heritable through the mother
-- One drop rule emerged: any African ancestry = enslaved status in many jurisdictions
+- "Slave codes" (e.g., Virginia's 1662 law, later built into the 1705 code): defined enslaved status as heritable through the mother
+- Racial lines hardened: African descent became presumptive evidence of enslaved status in many jurisdictions (the later US "one drop rule," which classed anyone with any African ancestry as Black, came only in the 19th–20th centuries)
 
 > **Indentured Servitude**
 
@@ -94,37 +94,37 @@ After British emancipation (1833), indentured servitude replaced slave labor on 
       exercise: {
         questions: [
           {
-            question: 'The Virginia Slave Codes (1705) defining enslaved status as heritable through the mother demonstrates:',
+            question: 'Virginia\'s 1662 law defining enslaved status as heritable through the mother (later built into the 1705 Slave Codes) demonstrates:',
             options: [
-              'How colonial legislatures deliberately constructed legal categories to maximize exploitation: by making enslaved status heritable through the mother (partus sequitur ventrem), children of enslaved women were automatically enslaved regardless of their father\'s status — ensuring that sexual exploitation of enslaved women by enslavers generated more enslaved people rather than free mixed-race children',
-              'The Virginia Slave Codes primarily addressed the rights of free people of color',
-              'Heritable slave status through the mother followed Roman legal tradition and had no specific colonial motivation',
-              'The codes were primarily intended to protect enslaved people\'s legal rights',
+              'How colonial lawmakers designed the law so enslaved women\'s children stayed enslaved regardless of their fathers',
+              'How colonial lawmakers copied English common law, under which a child took the father\'s status',
+              'How colonial lawmakers mainly sought to protect enslaved families by keeping enslaved mothers and children together',
+              'How colonial lawmakers mainly addressed free people of color, defining their rights to own property',
             ],
             correctAnswer: 0,
-            explanation: 'The "partus sequitur ventrem" rule (status follows the womb) is a deliberate legal construction that maximized the value of enslaved women to enslavers: every child born of an enslaved mother increased the enslaver\'s property regardless of the father. This replaced Roman law (which followed the father\'s status) specifically to prevent the children of enslaver-enslaved relationships from being free. Understanding this as deliberate legal engineering — not natural custom — is key AP analysis.'
+            explanation: 'The "partus sequitur ventrem" rule (status follows the womb) was a deliberate legal construction that maximized the value of enslaved women to enslavers: every child born of an enslaved mother became the enslaver\'s property regardless of the father. Virginia borrowed the principle from Roman slave law and broke with English common law (under which a child took the father\'s status), specifically to prevent the children of enslaver-enslaved relationships from being free. Understanding this as deliberate legal engineering — not natural custom — is key AP analysis.'
           },
           {
             question: 'Comparing colonial debt peonage to feudal serfdom reveals:',
             options: [
-              'Both systems bound workers to land or employers through mechanisms that made escape nearly impossible (feudal peasants were legally bound to the land; peons were bound by debts impossible to repay), but debt peonage emerged in a nominally free labor context as a way to recreate coercion after formal serfdom/slavery was legally abolished',
-              'Debt peonage and feudal serfdom were identical institutions with no meaningful differences',
-              'Debt peonage was strictly voluntary while feudal serfdom was coercive',
-              'Neither system restricted workers\' freedom of movement in any way',
+              'Both tied workers down, but peonage used unpayable debt where labor was nominally free',
+              'Both tied workers down, and both rested on the same legal codes inherited from medieval Spanish law',
+              'Both tied workers down only loosely, and differed mainly in the crops grown and the size of the estates',
+              'Peonage was strictly voluntary, while serfdom was imposed by law and enforced by royal armies',
             ],
             correctAnswer: 0,
-            explanation: 'The comparison between feudal serfdom and debt peonage demonstrates an AP pattern: when formal coercive labor systems are abolished, new institutional forms often emerge to serve the same economic function. Debt peonage was the hacienda system\'s solution to indigenous peoples\' nominal legal freedom after encomienda was abolished — advancing wages, goods, or tools against future labor, then manipulating accounts to ensure the debt could never be repaid.'
+            explanation: 'The comparison between feudal serfdom and debt peonage demonstrates an AP pattern: feudal peasants were legally bound to the land, while peons were bound by debts impossible to repay. When formal coercive labor systems are abolished, new institutional forms often emerge to serve the same economic function. Debt peonage was the hacienda system\'s solution to indigenous peoples\' nominal legal freedom after the encomienda declined — advancing wages, goods, or tools against future labor, then manipulating accounts to ensure the debt could never be repaid.'
           },
           {
             question: 'What do the multiple forms of coerced colonial labor (slavery, encomienda, mita, debt peonage, indentured servitude) collectively demonstrate?',
             options: [
-              'That colonial economies were fundamentally dependent on non-market labor coercion — they could not function with fully free labor markets because the wages necessary to attract voluntary workers would eliminate the profit margins that made colonial commodity production profitable; coercion was structural, not incidental',
-              'Coerced labor was only used occasionally when voluntary workers were unavailable',
-              'Colonial economies were primarily based on free market labor with no coercive elements',
-              'Different forms of coerced labor represented progressive improvement in workers\' conditions',
+              'That colonial export economies depended on coercion, as wages that could attract free workers would erase profits',
+              'That colonial export economies used coercion only briefly, during labor shortages after epidemics',
+              'That colonial export economies grew more humane over time, as each new labor system improved the workers\' conditions',
+              'That colonial export economies ran mainly on free wage labor, with coercion limited to a few mines',
             ],
             correctAnswer: 0,
-            explanation: 'This structural point is essential for AP: colonial plantation and mining economies were not accidentally exploitative — they were structurally dependent on coercion. The profit margins on sugar, tobacco, cotton, and silver depended on paying workers as little as possible, which required legal mechanisms to prevent workers from leaving for better conditions. When one coercive mechanism was abolished, another was invented. This structural dependency on coercion is why abolition required political struggle rather than just moral persuasion.'
+            explanation: 'This structural point is essential for AP: colonial plantation and mining economies were not accidentally exploitative — they were structurally dependent on coercion. The profit margins on sugar, tobacco, cotton, and silver depended on paying workers as little as possible, which required legal mechanisms to prevent workers from leaving for better conditions. When one coercive mechanism was abolished, another was invented. Coercion was structural, not incidental — which is why abolition required political struggle rather than just moral persuasion.'
           }
         ]
       }
@@ -164,24 +164,24 @@ After British emancipation (1833), indentured servitude replaced slave labor on 
           {
             question: 'An AP comparison between European colonial labor systems and pre-colonial indigenous labor extraction (e.g., Aztec tribute, Inca mit\'a) reveals:',
             options: [
-              'While both pre-colonial and colonial systems extracted labor from subject peoples, colonial labor systems were often more brutal and arbitrary because they lacked the cultural legitimacy and reciprocal obligations (Aztec tribute included state redistribution; Inca mit\'a included state feeding of workers) that pre-colonial tributary systems embedded in social relationships',
-              'Pre-colonial and colonial labor systems were identical in their coercive character',
-              'Pre-colonial labor systems were always more brutal than colonial systems',
-              'Colonial labor systems were always more efficient than pre-colonial equivalents',
+              'Colonial systems kept the burdens but dropped many reciprocal duties of earlier tribute',
+              'Colonial systems kept the reciprocal duties of earlier tribute and added wages, making labor less coercive',
+              'Colonial systems replaced tribute with free markets, so forced labor ended soon after the conquest',
+              'Colonial systems copied Aztec and Inca rules exactly, so workers saw no change in their burdens',
             ],
             correctAnswer: 0,
-            explanation: 'This comparison demonstrates AP sophistication by recognizing gradations of coercion: Aztec tribute and Inca mit\'a involved real extraction from subject peoples, but within cultural frameworks that included reciprocal obligations (redistribution, ceremony, state feeding of workers). Spanish encomienda stripped these reciprocal elements while maintaining (and intensifying) the extraction. This doesn\'t romanticize pre-colonial systems — but it does recognize that colonial labor often represented a qualitative worsening of existing exploitation.'
+            explanation: 'This comparison demonstrates AP sophistication by recognizing gradations of coercion: Aztec tribute and Inca mit\'a involved real extraction from subject peoples, but within cultural frameworks that included reciprocal obligations (redistribution, ceremony, state feeding of workers). Spanish encomienda and mita stripped many of these reciprocal elements while maintaining (and intensifying) the extraction. This doesn\'t romanticize pre-colonial systems — but it does recognize that colonial labor often represented a qualitative worsening of existing exploitation.'
           },
           {
             question: 'For AP analysis, why is it historically important to distinguish between different forms of coerced labor (chattel slavery vs. indentured servitude vs. debt peonage)?',
             options: [
-              'Because different legal forms of coercion produced different long-term social outcomes: chattel slavery\'s racialization created heritable racial stigmas; debt peonage maintained class-based exploitation within nominally free labor markets; indentured servitude created new ethnic diaspora communities — understanding these distinctions reveals how exploitation adapted to different legal contexts',
-              'All forms of coerced labor are legally identical with no meaningful distinctions',
-              'Distinguishing between labor forms is only relevant for legal history, not AP World History',
-              'The differences between labor forms are too minor to affect historical analysis',
+              'Different legal forms of coercion left different legacies, from racial stigma to new diasporas',
+              'Different legal forms of coercion were identical in practice, so the labels matter little',
+              'Different legal forms of coercion matter only to legal historians, not to social history',
+              'Different legal forms of coercion all ended at the same time, with the abolition acts of the 1830s',
             ],
             correctAnswer: 0,
-            explanation: 'AP rewards the analytical move of asking "why does this distinction matter?" Different legal forms of coercion matter because they produced different demographic consequences (racial categories, diaspora communities), different political legacies (anti-slavery vs. anti-colonial movements), and different post-colonial social structures. Treating all coercion as identical erases these distinctions — and AP historical analysis requires precision about how specific institutional forms shaped specific historical outcomes.'
+            explanation: 'AP rewards the analytical move of asking "why does this distinction matter?" Chattel slavery\'s racialization created heritable racial stigmas; debt peonage maintained class-based exploitation within nominally free labor markets; indentured servitude created new ethnic diaspora communities. These forms also ended at very different times (peonage and indenture outlasted British abolition by decades). Treating all coercion as identical erases these distinctions — and AP historical analysis requires precision about how specific institutional forms shaped specific historical outcomes.'
           }
         ]
       }

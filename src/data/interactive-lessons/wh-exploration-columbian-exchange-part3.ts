@@ -23,24 +23,24 @@ export const whExplorationColumbianExchangePart3Data = {
           {
             question: 'The most devastating consequence of the Columbian Exchange for Native American populations was:',
             options: [
-              'Catastrophic mortality from Old World diseases (smallpox, measles) against populations with no acquired immunity — reducing some indigenous populations by 50-90% within a century of European contact, the largest demographic catastrophe in human history',
-              'A rapid increase in Native American populations due to new food sources from the Old World',
-              'Disease affected only small isolated communities with minimal impact on large empires',
-              'Population decline was equally severe in Europe as in the Americas',
+              'Epidemics of smallpox and measles that killed half or more of many native peoples',
+              'Warfare with Spanish armies that killed most native fighters before epidemics could spread inland',
+              'Famine from European crops and livestock that displaced maize, beans and squash across the Americas',
+              'Forced migration to Caribbean sugar islands that emptied the highland empires of Mexico and Peru',
             ],
             correctAnswer: 0,
-            explanation: 'Native American demographic collapse is perhaps the most important demographic event in world history: 50-90% mortality in a century represents a loss of life unprecedented in scale. Mexico\'s population fell from ~25 million in 1519 to ~1 million by 1600. This created the labor shortage that drove demand for enslaved Africans and fundamentally altered the demographic composition of the Americas.'
+            explanation: 'Native American demographic collapse is perhaps the most important demographic event in world history: Old World diseases (smallpox, measles) struck populations with no acquired immunity, with 50-90% mortality in a century in many regions. Mexico\'s population fell from an estimated ~25 million in 1519 to ~1 million by 1600. Warfare and forced labor added to the toll but killed far fewer than disease. This created the labor shortage that drove demand for enslaved Africans.'
           },
           {
             question: 'New World crops (potatoes, maize) transformed Old World populations primarily because:',
             options: [
-              'They grew in soils and climates unsuitable for traditional European grains, expanding the total food-producing land area and caloric output — enabling population growth in previously marginal agricultural regions of Europe, Africa, and Asia',
-              'New World crops were immediately adopted as luxury foods for the wealthy only',
-              'Old World populations declined because they preferred New World crops over traditional foods',
-              'Only tomatoes had any lasting impact on Old World diets',
+              'They thrived in soils and climates where wheat and rye failed, raising calories from marginal land',
+              'They replaced rice and wheat entirely within a generation, ending Old World dependence on native grains',
+              'They spread first as luxury foods for elites, raising population only after the year 1800 in most regions',
+              'They required large irrigation works that only centralized states such as Qing China could build',
             ],
             correctAnswer: 0,
-            explanation: 'The demographic consequence of New World crops reaching the Old World is as important as the collapse in the Americas, just in the opposite direction. The potato\'s ability to grow in rocky Irish, Polish, and Andean-style soils enabled population doubling in previously food-insecure regions. Maize spread across Africa, enabling population growth. These agricultural changes drove Old World demographic expansion.'
+            explanation: 'The demographic consequence of New World crops reaching the Old World is as important as the collapse in the Americas, just in the opposite direction. The potato\'s ability to grow in rocky Irish and Polish soils (and maize and sweet potato on Chinese hillsides) raised calorie output from marginal land without irrigation. Maize and cassava spread across Africa. These crops supplemented rather than replaced existing staples, and they drove Old World demographic expansion from the 1600s on.'
           }
         ]
       }
@@ -92,35 +92,35 @@ New World crops transformed Old World agriculture:
           {
             question: 'The causal chain connecting the Columbian Exchange to the Atlantic slave trade demonstrates which AP skill?',
             options: [
-              'Historical causation: disease caused indigenous labor shortage → colonial demand for replacement labor → existing African slave-trading networks → enslaved Africans as the "solution" → Atlantic slave trade expansion from hundreds to millions per century',
-              'The Columbian Exchange and slave trade were completely unrelated phenomena',
-              'Enslaved Africans were brought to the Americas before indigenous populations declined',
-              'Disease had no connection to labor demand in colonial Americas',
+              'Comparison, setting colonial labor shortages in the Americas beside serfdom in Russia',
+              'Causation, tracing disease to labor shortage to demand for enslaved Africans',
+              'Periodization, dating the start of the slave trade to Columbus\'s first voyage in 1492',
+              'Contextualization, placing the slave trade within the European Reformation and its wars',
             ],
             correctAnswer: 0,
-            explanation: 'The causal chain is essential AP knowledge: (1) European diseases arrive → (2) indigenous populations collapse → (3) colonial labor shortage → (4) demand for replacement labor → (5) existing African slave trade networks → (6) Atlantic slave trade expands. AP questions about causation reward tracing these chains rather than treating the slave trade as simply "caused by European greed" without structural explanation.'
+            explanation: 'The causal chain is essential AP knowledge: (1) European diseases arrive → (2) indigenous populations collapse → (3) colonial labor shortage → (4) demand for replacement labor → (5) existing African slave-trading networks → (6) Atlantic slave trade expands from hundreds to millions per century. AP questions about causation reward tracing these chains rather than treating the slave trade as simply "caused by European greed" without structural explanation.'
           },
           {
             question: 'Why did Old World peoples have more devastating diseases to transmit to the Americas than vice versa?',
             options: [
-              'Eurasia\'s longer history of dense agricultural settlement with domesticated animals (cattle, pigs, horses, chickens) created a larger disease pool — many human epidemics (smallpox, measles, influenza) evolved from animal diseases; the Americas had fewer domesticated animals and therefore a smaller disease reservoir',
-              'European peoples were biologically superior and thus naturally more disease-resistant',
-              'The Americas had no diseases because their populations were too small to sustain epidemics',
-              'Disease transmission was equally devastating in both directions',
+              'Eurasia\'s long contact with herd animals bred more crowd diseases, and the Americas had few such animals',
+              'Eurasia\'s cold winters killed off American pathogens, so diseases carried east died out at sea',
+              'Eurasia\'s people carried inherited racial immunity, so American diseases rarely infected them at all',
+              'Eurasia\'s doctors already had vaccines for smallpox and measles, so Europeans were protected on contact',
             ],
             correctAnswer: 0,
-            explanation: 'The biological explanation for asymmetric disease impact is crucial for AP: most devastating human diseases evolved from domesticated animal diseases (zoonotic diseases). Eurasia\'s longer history with cattle, pigs, and chickens meant more evolved human pathogens. The Americas had fewer large domesticated animals (llamas, dogs, turkeys) and therefore a smaller disease evolutionary reservoir. This structural difference, not racial superiority, explains the asymmetric mortality.'
+            explanation: 'The biological explanation for asymmetric disease impact is crucial for AP: most devastating human diseases (smallpox, measles, influenza) evolved from domesticated animal diseases (zoonotic diseases). Eurasia\'s longer history of dense farming settlement with cattle, pigs, horses, and chickens meant more evolved human pathogens. The Americas had fewer large domesticated animals (llamas, dogs, turkeys) and therefore a smaller disease reservoir. This structural difference, not race or medicine (vaccination came only in 1796), explains the asymmetric mortality.'
           },
           {
             question: 'What does the Columbian Exchange demonstrate about "unintended consequences" in historical analysis?',
             options: [
-              'Columbus\'s 1492 voyage was intended to find a sea route to Asia; the exchange of crops, animals, and diseases that reshaped global demographics was an unintended byproduct of commercial motivation, demonstrating that major historical transformations frequently result from the unforeseen consequences of intentional actions',
-              'The Columbian Exchange was planned in advance with full knowledge of its consequences',
-              'Historical actors always anticipate the consequences of their actions accurately',
-              'Unintended consequences are never historically significant',
+              'That voyages aimed at an Asian sea route produced a biological exchange no one planned or foresaw',
+              'That Columbus planned the crop and animal transfers in advance to make Spanish colonies self-supporting',
+              'That the exchange began only after 1600, once governments set out to move crops between continents',
+              'That Iberian physicians predicted the coming epidemics and warned the crown against further voyages',
             ],
             correctAnswer: 0,
-            explanation: 'The Columbian Exchange is the AP\'s premier example of unintended consequences: Columbus died believing he had reached Asia. The consequences — indigenous death, potato-fed European population growth, Atlantic slave trade — were orders of magnitude more significant than his original commercial goal. AP complexity points come from recognizing when historical significance was unintended and from tracing the non-linear paths from cause to consequence.'
+            explanation: 'The Columbian Exchange is the AP\'s premier example of unintended consequences: Columbus\'s 1492 voyage sought a sea route to Asia, and he died believing he had reached it. The consequences — indigenous death, potato-fed European population growth, Atlantic slave trade — were orders of magnitude more significant than his original commercial goal. Major historical transformations frequently result from the unforeseen consequences of intentional actions.'
           }
         ]
       }
@@ -141,7 +141,7 @@ New World crops transformed Old World agriculture:
           },
           {
             label: 'The Pacific trade route connecting American silver to Chinese silk markets was the ___',
-            options: ['Manila Galleon trade', 'Triangle trade', 'Indian Ocean trade', 'Silk Road']
+            options: ['Manila Galleon trade', 'Triangle trade', 'Indian Ocean trade', 'Trans-Saharan caravan trade']
           }
         ],
         correctAnswers: ['Caravel', 'Encomienda', 'Manila Galleon trade'],
@@ -160,24 +160,24 @@ New World crops transformed Old World agriculture:
           {
             question: 'For an AP LEQ evaluating the Columbian Exchange\'s consequences, which complexity argument earns the highest score?',
             options: [
-              'The Columbian Exchange had fundamentally different consequences for different peoples simultaneously: while New World crops were beginning to increase Old World food security and population, disease was catastrophically reducing Native American populations by 50-90% — the same exchange was catastrophic for some and ultimately beneficial for others, demonstrating that historical processes have uneven and sometimes contradictory effects',
-              'The exchange was uniformly beneficial for all peoples who participated in it',
-              'The exchange was uniformly catastrophic for all peoples who encountered it',
-              'Only the crop transfer mattered; disease effects were too small to be historically significant',
+              'The exchange fed Old World populations even as it collapsed American ones, so its effects were uneven',
+              'The exchange hurt every group it touched because disease outweighed every benefit of new crops and animals',
+              'The exchange benefited every group it touched because new crops and animals outweighed disease losses',
+              'The exchange mattered mainly for Europe, since crops and diseases rarely reached Africa or Asia',
             ],
             correctAnswer: 0,
-            explanation: 'Complexity means accurately representing that historical events have different effects on different groups simultaneously. The same Columbian Exchange → potatoes feeding European peasants AND smallpox killing Native Americans at the same time. AP complexity is not about being "balanced" artificially — it\'s about accurately representing historical reality, which is almost always uneven and contradictory across different groups.'
+            explanation: 'Complexity means accurately representing that historical events have different effects on different groups simultaneously: New World crops were beginning to increase Old World food security while disease was reducing Native American populations by 50-90%. Maize and cassava did reach Africa, and maize and sweet potatoes reached China. AP complexity is not about being "balanced" artificially — it\'s about accurately representing historical reality, which is almost always uneven and contradictory across different groups.'
           },
           {
             question: 'Comparing the Columbian Exchange to the Black Death (1347-1353), which analysis is most sophisticated?',
             options: [
-              'Both demonstrate how disease transmission via exchange networks produces catastrophic demographic consequences, but in opposite regional directions: the Black Death reduced Old World populations by 30-50%; the Columbian Exchange reduced New World populations by 50-90% while beginning to increase Old World populations through new food crops — the same mechanism (disease via exchange networks) produced regionally opposite demographic outcomes',
-              'The two events were too different to compare meaningfully',
-              'Only the Black Death involved significant disease transmission via trade networks',
-              'The Columbian Exchange and Black Death had identical consequences globally',
+              'Each spread disease along exchange routes, but one emptied Eurasia and the other emptied the Americas',
+              'Each spread disease along exchange routes, but neither changed population totals for more than a decade',
+              'Each spread disease along trade routes, but only the Black Death reached densely populated regions',
+              'Each began in the Americas and moved east, but only the Columbian Exchange reached Asia and Africa',
             ],
             correctAnswer: 0,
-            explanation: 'This cross-period comparison demonstrates analytical sophistication: same mechanism (disease via trade/exchange networks) + different contexts (Old World disease pool hitting immunologically naive Americas; new crops flowing to Old World) = regionally opposite demographic outcomes. AP rewards arguments that use comparison to generate broader principles about how historical mechanisms play out differently in different contexts.'
+            explanation: 'This cross-period comparison demonstrates analytical sophistication: the Black Death reduced Old World populations by roughly 30-50%; the Columbian Exchange reduced New World populations by 50-90% while new food crops began to increase Old World populations. Same mechanism (disease via exchange networks) + different contexts = regionally opposite demographic outcomes. AP rewards arguments that use comparison to generate broader principles about how historical mechanisms play out differently in different contexts.'
           }
         ]
       }
