@@ -7,7 +7,7 @@ export const apesBiomesSuccessionPart1Data = {
       content: `
 # 🌍 Biomes & Ecological Succession
 
-**Part 1 of 7 — Terrestrial and Aquatic Biomes**
+**Part 1 of 7 — Terrestrial Biomes and Succession Basics**
 
 ---
 
