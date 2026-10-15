@@ -5,7 +5,7 @@ import { FRQS } from './frqs'
 export const config: FullLengthExamConfig = {
   subject: 'AP Physics 2',
   description:
-    'Full-length practice exam modeled on the official College Board AP Physics 2: Algebra-Based exam. 40 multiple-choice questions across all 7 units (waves & sound, thermodynamics, E&M, optics, modern physics), plus 4 free-response questions. Calculator allowed throughout.',
+    'Full-length practice exam modeled on the official College Board AP Physics 2: Algebra-Based exam. 40 multiple-choice questions across all 7 units of the 2024+ course (thermodynamics, electric force/field/potential, circuits, magnetism and induction, geometric optics, waves/sound/physical optics, modern physics), plus 4 free-response questions. Calculator allowed throughout.',
   backLink: { href: '/ap-physics-2', label: 'AP Physics 2' },
   ctaLinks: [
     { href: '/physics2-diagnostic', label: 'Diagnostic Test' },
@@ -20,7 +20,7 @@ export const config: FullLengthExamConfig = {
       name: 'Section I',
       shortName: 'Multiple Choice',
       description:
-        '40 multiple-choice questions across all 7 units (Waves & Sound, Thermodynamics, Electric Forces/Fields/Potential, DC Circuits, Magnetism & Induction, Geometric & Physical Optics, Modern Physics). Calculator allowed.',
+        '40 multiple-choice questions across all 7 units (Thermodynamics; Electric Force, Field, and Potential; Electric Circuits; Magnetism and Electromagnetism; Geometric Optics; Waves, Sound, and Physical Optics; Modern Physics). Calculator allowed.',
       timeLimitMinutes: 80,
       items: MCQS,
     },
@@ -52,13 +52,13 @@ export const config: FullLengthExamConfig = {
       {
         heading: 'Unit Weighting',
         items: [
-          'U1 Fluids (10–12%)',
-          'U2 Thermodynamics (12–18%)',
-          'U3 Electric Forces, Fields, Potential (18–22%)',
-          'U4 Electric Circuits (15–18%)',
-          'U5 Magnetism & EM Induction (12–15%)',
-          'U6 Geometric Optics & Waves (12–15%)',
-          'U7 Modern / Quantum Physics (10–12%)',
+          'U9 Thermodynamics (15–18%)',
+          'U10 Electric Force, Field, and Potential (15–18%)',
+          'U11 Electric Circuits (15–18%)',
+          'U12 Magnetism and Electromagnetism (12–15%)',
+          'U13 Geometric Optics (12–15%)',
+          'U14 Waves, Sound, and Physical Optics (12–15%)',
+          'U15 Modern Physics (12–15%)',
         ],
       },
     ],

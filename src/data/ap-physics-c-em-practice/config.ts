@@ -52,11 +52,12 @@ export const config: FullLengthExamConfig = {
       {
         heading: 'Topic Weighting',
         items: [
-          'Electrostatics (Coulomb, fields, Gauss) (~26–34%)',
-          'Conductors, Capacitors, Dielectrics (~14–17%)',
-          'Electric Circuits (~14–17%)',
-          'Magnetic Fields & Forces (~17–23%)',
-          'Electromagnetic Induction (~17–23%)',
+          'U8 Electric Charges, Fields, and Gauss\'s Law (15–25%)',
+          'U9 Electric Potential (10–20%)',
+          'U10 Conductors and Capacitors (10–15%)',
+          'U11 Electric Circuits (15–25%)',
+          'U12 Magnetic Fields and Electromagnetism (10–20%)',
+          'U13 Electromagnetic Induction (10–20%)',
         ],
       },
     ],

@@ -5,7 +5,7 @@ import { FRQS } from './frqs'
 export const config: FullLengthExamConfig = {
   subject: 'AP Precalculus',
   description:
-    'Full-length practice exam modeled on the official College Board AP Precalculus exam: 40 multiple-choice questions (Section I, 120 min) covering polynomial, rational, exponential, logarithmic, trigonometric, polar, sequence, vector, and matrix functions, plus 4 free-response questions (Section II, 60 min) on function concepts, modeling, and symbolic manipulation.',
+    'Full-length practice exam modeled on the official College Board AP Precalculus exam: 40 multiple-choice questions (Section I, 120 min) covering polynomial, rational, exponential, logarithmic, trigonometric, and polar functions and sequences (Units 1–3, the units the AP exam assesses), plus 4 free-response questions (Section II, 60 min) on function concepts, modeling, and symbolic manipulation.',
   backLink: { href: '/ap-precalculus', label: 'AP Precalculus' },
   ctaLinks: [
     { href: '/ap-precalculus-diagnostic', label: 'Diagnostic Test' },
@@ -20,7 +20,7 @@ export const config: FullLengthExamConfig = {
       name: 'Section I',
       shortName: 'Multiple Choice',
       description:
-        '40 MCQs covering Units 1–4. Part A (Q1–Q28) is no calculator (80 min); Part B (Q29–Q40) is calculator-allowed (40 min). Reference formulas provided.',
+        '40 MCQs covering Units 1–3. Part A (Q1–Q28) is no calculator (80 min); Part B (Q29–Q40) requires a graphing calculator (40 min).',
       timeLimitMinutes: 120,
       items: MCQS,
     },
@@ -42,7 +42,7 @@ export const config: FullLengthExamConfig = {
         items: [
           'Section I: 40 MCQs (120 min, 62.5%)',
           '   • Part A: 28 no-calc (80 min)',
-          '   • Part B: 12 calc-allowed (40 min)',
+          '   • Part B: 12 graphing calculator required (40 min)',
           'Section II: 4 FRQs (60 min, 37.5%)',
           '   • Q1 Function Concepts (calc, 6 pts)',
           '   • Q2 Modeling (calc, 6 pts)',
@@ -54,10 +54,10 @@ export const config: FullLengthExamConfig = {
       {
         heading: 'Unit Weighting',
         items: [
-          'Unit 1 — Polynomial & Rational Functions (~30%)',
-          'Unit 2 — Exponential & Logarithmic Functions (~30%)',
-          'Unit 3 — Trigonometric & Polar Functions (~30%)',
-          'Unit 4 — Functions, Sequences, Vectors, Matrices (~10%, not assessed on the AP exam itself but may appear in MCQ practice)',
+          'Unit 1 — Polynomial & Rational Functions (30–40%)',
+          'Unit 2 — Exponential & Logarithmic Functions (27–40%)',
+          'Unit 3 — Trigonometric & Polar Functions (30–35%)',
+          'Unit 4 — Parameters, Vectors & Matrices (taught, but not assessed on the AP exam)',
         ],
       },
     ],
