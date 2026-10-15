@@ -933,12 +933,12 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./hg-political-power-part1').then(m => m.hgPoliticalPowerPart1Data) },
-      { title: 'Key Processes', loader: () => import('./hg-political-power-part2').then(m => m.hgPoliticalPowerPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./hg-political-power-part3').then(m => m.hgPoliticalPowerPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./hg-political-power-part4').then(m => m.hgPoliticalPowerPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./hg-political-power-part5').then(m => m.hgPoliticalPowerPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./hg-political-power-part6').then(m => m.hgPoliticalPowerPart6Data) },
-      { title: 'AP Review', loader: () => import('./hg-political-power-part7').then(m => m.hgPoliticalPowerPart7Data) }
+      { title: 'How States Divide Power: Four Cases on the Spectrum', loader: () => import('./hg-political-power-part2').then(m => m.hgPoliticalPowerPart2Data) },
+      { title: 'Centripetal and Centrifugal Forces: Weighing the Balance', loader: () => import('./hg-political-power-part3').then(m => m.hgPoliticalPowerPart3Data) },
+      { title: 'State Shape and Access: Reading the Data and the Limits', loader: () => import('./hg-political-power-part4').then(m => m.hgPoliticalPowerPart4Data) },
+      { title: 'Challenges to Sovereignty in a Connected World', loader: () => import('./hg-political-power-part5').then(m => m.hgPoliticalPowerPart5Data) },
+      { title: 'AP Exam Practice: Nigeria\'s Federal Map', loader: () => import('./hg-political-power-part6').then(m => m.hgPoliticalPowerPart6Data) },
+      { title: 'Synthesis Review: Power, Shape and Balance', loader: () => import('./hg-political-power-part7').then(m => m.hgPoliticalPowerPart7Data) }
     ],
   },
   'hg-agricultural-origins': {
@@ -949,8 +949,8 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
       { title: 'How Agriculture Spread: Migration, Axes and the Columbian Exchange', loader: () => import('./hg-agricultural-origins-part3').then(m => m.hgAgriculturalOriginsPart3Data) },
       { title: 'Rural Settlement Patterns: Why Farms and Villages Sit Where They Do', loader: () => import('./hg-agricultural-origins-part4').then(m => m.hgAgriculturalOriginsPart4Data) },
       { title: 'The Second Agricultural Revolution', loader: () => import('./hg-agricultural-origins-part5').then(m => m.hgAgriculturalOriginsPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./hg-agricultural-origins-part6').then(m => m.hgAgriculturalOriginsPart6Data) },
-      { title: 'AP Review', loader: () => import('./hg-agricultural-origins-part7').then(m => m.hgAgriculturalOriginsPart7Data) }
+      { title: 'The Green Revolution: Data and AP Practice', loader: () => import('./hg-agricultural-origins-part6').then(m => m.hgAgriculturalOriginsPart6Data) },
+      { title: 'Synthesis Review: From Hearths to High-Yield Seeds', loader: () => import('./hg-agricultural-origins-part7').then(m => m.hgAgriculturalOriginsPart7Data) }
     ],
   },
   'hg-agricultural-practices': {
@@ -959,10 +959,10 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
       { title: 'Core Concepts', loader: () => import('./hg-agricultural-practices-part1').then(m => m.hgAgriculturalPracticesPart1Data) },
       { title: 'The Physical Environment, Intensity and Production Regions', loader: () => import('./hg-agricultural-practices-part2').then(m => m.hgAgriculturalPracticesPart2Data) },
       { title: 'Von Thünen in Depth: Rent, Rings and Real Places', loader: () => import('./hg-agricultural-practices-part3').then(m => m.hgAgriculturalPracticesPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./hg-agricultural-practices-part4').then(m => m.hgAgriculturalPracticesPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./hg-agricultural-practices-part5').then(m => m.hgAgriculturalPracticesPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./hg-agricultural-practices-part6').then(m => m.hgAgriculturalPracticesPart6Data) },
-      { title: 'AP Review', loader: () => import('./hg-agricultural-practices-part7').then(m => m.hgAgriculturalPracticesPart7Data) }
+      { title: 'Agribusiness, Commodity Chains and the Global Food System', loader: () => import('./hg-agricultural-practices-part4').then(m => m.hgAgriculturalPracticesPart4Data) },
+      { title: 'Environmental Consequences and Conservation', loader: () => import('./hg-agricultural-practices-part5').then(m => m.hgAgriculturalPracticesPart5Data) },
+      { title: 'Food Challenges and Women in Agriculture: Stimulus Practice', loader: () => import('./hg-agricultural-practices-part6').then(m => m.hgAgriculturalPracticesPart6Data) },
+      { title: 'Synthesis Review: From Field to Global Market', loader: () => import('./hg-agricultural-practices-part7').then(m => m.hgAgriculturalPracticesPart7Data) }
     ],
   },
   'hg-urbanization': {
@@ -972,9 +972,9 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
       { title: 'Site, Situation and the Origins of Cities', loader: () => import('./hg-urbanization-part2').then(m => m.hgUrbanizationPart2Data) },
       { title: 'City Size and Spacing: Rank-Size, Primacy, Gravity and Central Places', loader: () => import('./hg-urbanization-part3').then(m => m.hgUrbanizationPart3Data) },
       { title: 'Inside the City: Models of Urban Structure and Their Limits', loader: () => import('./hg-urbanization-part4').then(m => m.hgUrbanizationPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./hg-urbanization-part5').then(m => m.hgUrbanizationPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./hg-urbanization-part6').then(m => m.hgUrbanizationPart6Data) },
-      { title: 'AP Review', loader: () => import('./hg-urbanization-part7').then(m => m.hgUrbanizationPart7Data) }
+      { title: 'Cities in a Global System: Megacities, World Cities and New Suburbs', loader: () => import('./hg-urbanization-part5').then(m => m.hgUrbanizationPart5Data) },
+      { title: 'Urban Data and AP Exam Practice', loader: () => import('./hg-urbanization-part6').then(m => m.hgUrbanizationPart6Data) },
+      { title: 'Synthesis Review: Cities from Site to System', loader: () => import('./hg-urbanization-part7').then(m => m.hgUrbanizationPart7Data) }
     ],
   },
   'hg-urban-challenges': {
