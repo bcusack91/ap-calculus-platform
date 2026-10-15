@@ -851,16 +851,16 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Toulmin Analysis: Franklin\'s Closing Speech to the Constitutional Convention, 1787', loader: () => import('./englang-argument-structure-part3').then(m => m.englangArgumentStructurePart3Data) },
       { title: 'Common Ground and Rogerian Structure: Jane Addams, "Why Women Should Vote," 1910', loader: () => import('./englang-argument-structure-part4').then(m => m.englangArgumentStructurePart4Data) },
       { title: 'Problem-Solution Structure, Hybrids, and Misconceptions: Theodore Roosevelt, 1908', loader: () => import('./englang-argument-structure-part5').then(m => m.englangArgumentStructurePart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englang-argument-structure-part6').then(m => m.englangArgumentStructurePart6Data) },
-      { title: 'AP Review', loader: () => import('./englang-argument-structure-part7').then(m => m.englangArgumentStructurePart7Data) }
+      { title: 'Exam Practice: A Section I Passage Set and a Structured Argument Essay', loader: () => import('./englang-argument-structure-part6').then(m => m.englangArgumentStructurePart6Data) },
+      { title: 'Review: Choosing, Reading, and Building Structures', loader: () => import('./englang-argument-structure-part7').then(m => m.englangArgumentStructurePart7Data) }
     ],
   },
   'englang-diction-syntax': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englang-diction-syntax-part1').then(m => m.englangDictionSyntaxPart1Data) },
-      { title: 'Key Processes', loader: () => import('./englang-diction-syntax-part2').then(m => m.englangDictionSyntaxPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englang-diction-syntax-part3').then(m => m.englangDictionSyntaxPart3Data) },
+      { title: 'Diction in Depth: Roosevelt\'s Revisions to the War Message, December 1941', loader: () => import('./englang-diction-syntax-part2').then(m => m.englangDictionSyntaxPart2Data) },
+      { title: 'Syntax in Depth: Clauses, Balance, and Johnson\'s Letter to Lord Chesterfield, 1755', loader: () => import('./englang-diction-syntax-part3').then(m => m.englangDictionSyntaxPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./englang-diction-syntax-part4').then(m => m.englangDictionSyntaxPart4Data) },
       { title: 'Change Over Time', loader: () => import('./englang-diction-syntax-part5').then(m => m.englangDictionSyntaxPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./englang-diction-syntax-part6').then(m => m.englangDictionSyntaxPart6Data) },
@@ -874,9 +874,9 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'From Choices to Tone', loader: () => import('./englang-style-reading-part2').then(m => m.englangStyleReadingPart2Data) },
       { title: 'Comparisons That Carry Meaning: Edwards, 1741', loader: () => import('./englang-style-reading-part3').then(m => m.englangStyleReadingPart3Data) },
       { title: 'Imagery and Selected Detail: London\'s East End, 1902', loader: () => import('./englang-style-reading-part4').then(m => m.englangStyleReadingPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englang-style-reading-part5').then(m => m.englangStyleReadingPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englang-style-reading-part6').then(m => m.englangStyleReadingPart6Data) },
-      { title: 'AP Review', loader: () => import('./englang-style-reading-part7').then(m => m.englangStyleReadingPart7Data) }
+      { title: 'Shifts, Irony, and Understatement: Zitkala-Ša, 1900', loader: () => import('./englang-style-reading-part5').then(m => m.englangStyleReadingPart5Data) },
+      { title: 'Exam Practice: Section I Style Questions and a Q2 Paragraph', loader: () => import('./englang-style-reading-part6').then(m => m.englangStyleReadingPart6Data) },
+      { title: 'Review: Reading Style at Passage Scale', loader: () => import('./englang-style-reading-part7').then(m => m.englangStyleReadingPart7Data) }
     ],
   },
   'englang-style-writing': {
@@ -884,9 +884,9 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'Core Concepts', loader: () => import('./englang-style-writing-part1').then(m => m.englangStyleWritingPart1Data) },
       { title: 'Precise Diction in Your Own Writing', loader: () => import('./englang-style-writing-part2').then(m => m.englangStyleWritingPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englang-style-writing-part3').then(m => m.englangStyleWritingPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englang-style-writing-part4').then(m => m.englangStyleWritingPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englang-style-writing-part5').then(m => m.englangStyleWritingPart5Data) },
+      { title: 'Building Clear Sentences: Coordination and Subordination', loader: () => import('./englang-style-writing-part3').then(m => m.englangStyleWritingPart3Data) },
+      { title: 'Concision, Emphasis, and Variety', loader: () => import('./englang-style-writing-part4').then(m => m.englangStyleWritingPart4Data) },
+      { title: 'Conventions as Rhetoric, and Common Misconceptions', loader: () => import('./englang-style-writing-part5').then(m => m.englangStyleWritingPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./englang-style-writing-part6').then(m => m.englangStyleWritingPart6Data) },
       { title: 'AP Review', loader: () => import('./englang-style-writing-part7').then(m => m.englangStyleWritingPart7Data) }
     ],

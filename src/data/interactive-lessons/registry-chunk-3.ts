@@ -985,8 +985,8 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
       { title: 'Infrastructure and Transportation', loader: () => import('./hg-urban-challenges-part3').then(m => m.hgUrbanChallengesPart3Data) },
       { title: 'Housing, Inequality and Neighborhood Change', loader: () => import('./hg-urban-challenges-part4').then(m => m.hgUrbanChallengesPart4Data) },
       { title: 'Environmental Challenges and Sustainable Responses', loader: () => import('./hg-urban-challenges-part5').then(m => m.hgUrbanChallengesPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./hg-urban-challenges-part6').then(m => m.hgUrbanChallengesPart6Data) },
-      { title: 'AP Review', loader: () => import('./hg-urban-challenges-part7').then(m => m.hgUrbanChallengesPart7Data) }
+      { title: 'AP Exam Practice: Growth Policy in Two Counties', loader: () => import('./hg-urban-challenges-part6').then(m => m.hgUrbanChallengesPart6Data) },
+      { title: 'Synthesis Review: Challenges, Responses and Trade-offs', loader: () => import('./hg-urban-challenges-part7').then(m => m.hgUrbanChallengesPart7Data) }
     ],
   },
   'hg-industrialization': {
@@ -1020,9 +1020,9 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
       { title: 'Why Countries Trade: Complementarity, Comparative Advantage and Trade Agreements', loader: () => import('./hg-globalization-trade-part2').then(m => m.hgGlobalizationTradePart2Data) },
       { title: 'Global Finance, Debt and Interdependence', loader: () => import('./hg-globalization-trade-part3').then(m => m.hgGlobalizationTradePart3Data) },
       { title: 'Restructuring the World Economy: New Ways and New Places to Make Things', loader: () => import('./hg-globalization-trade-part4').then(m => m.hgGlobalizationTradePart4Data) },
-      { title: 'Change Over Time', loader: () => import('./hg-globalization-trade-part5').then(m => m.hgGlobalizationTradePart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./hg-globalization-trade-part6').then(m => m.hgGlobalizationTradePart6Data) },
-      { title: 'AP Review', loader: () => import('./hg-globalization-trade-part7').then(m => m.hgGlobalizationTradePart7Data) }
+      { title: 'Sustainable Development', loader: () => import('./hg-globalization-trade-part5').then(m => m.hgGlobalizationTradePart5Data) },
+      { title: 'AP Exam Practice: Reading a Country\'s Path into the World Economy', loader: () => import('./hg-globalization-trade-part6').then(m => m.hgGlobalizationTradePart6Data) },
+      { title: 'Synthesis Review: How the World Economy Fits Together', loader: () => import('./hg-globalization-trade-part7').then(m => m.hgGlobalizationTradePart7Data) }
     ],
   },
   'gov-constitutional-foundations': {
@@ -1294,20 +1294,20 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./wh-islamic-empires-part1').then(m => m.whIslamicEmpiresPart1Data) },
-      { title: 'Key Processes', loader: () => import('./wh-islamic-empires-part2').then(m => m.whIslamicEmpiresPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./wh-islamic-empires-part3').then(m => m.whIslamicEmpiresPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./wh-islamic-empires-part4').then(m => m.whIslamicEmpiresPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./wh-islamic-empires-part5').then(m => m.whIslamicEmpiresPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./wh-islamic-empires-part6').then(m => m.whIslamicEmpiresPart6Data) },
-      { title: 'AP Review', loader: () => import('./wh-islamic-empires-part7').then(m => m.whIslamicEmpiresPart7Data) }
+      { title: 'Expansion: Gunpowder, Steppe Heritage & Conquest', loader: () => import('./wh-islamic-empires-part2').then(m => m.whIslamicEmpiresPart2Data) },
+      { title: 'Ruling an Empire: Legitimacy and Administration', loader: () => import('./wh-islamic-empires-part3').then(m => m.whIslamicEmpiresPart3Data) },
+      { title: 'Religion, Rivalry and New Faiths', loader: () => import('./wh-islamic-empires-part4').then(m => m.whIslamicEmpiresPart4Data) },
+      { title: 'Challenges and Change, c. 1600–1750', loader: () => import('./wh-islamic-empires-part5').then(m => m.whIslamicEmpiresPart5Data) },
+      { title: 'Exam Workshop: Sources, SAQs and the LEQ', loader: () => import('./wh-islamic-empires-part6').then(m => m.whIslamicEmpiresPart6Data) },
+      { title: 'Synthesis: Comparing the Three Empires', loader: () => import('./wh-islamic-empires-part7').then(m => m.whIslamicEmpiresPart7Data) }
     ],
   },
   'wh-east-asian-empires': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./wh-east-asian-empires-part1').then(m => m.whEastAsianEmpiresPart1Data) },
-      { title: 'Key Processes', loader: () => import('./wh-east-asian-empires-part2').then(m => m.whEastAsianEmpiresPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./wh-east-asian-empires-part3').then(m => m.whEastAsianEmpiresPart3Data) },
+      { title: 'Ming China (1368–1644): Autocracy, Silver and Collapse', loader: () => import('./wh-east-asian-empires-part2').then(m => m.whEastAsianEmpiresPart2Data) },
+      { title: 'Qing China (1644–c. 1750): A Conquest Dynasty Rules', loader: () => import('./wh-east-asian-empires-part3').then(m => m.whEastAsianEmpiresPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./wh-east-asian-empires-part4').then(m => m.whEastAsianEmpiresPart4Data) },
       { title: 'Change Over Time', loader: () => import('./wh-east-asian-empires-part5').then(m => m.whEastAsianEmpiresPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./wh-east-asian-empires-part6').then(m => m.whEastAsianEmpiresPart6Data) },
@@ -1498,10 +1498,10 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./apush-native-societies-exploration-part1').then(m => m.apushNativeSocietiesExplorationPart1Data) },
-      { title: 'Key Processes', loader: () => import('./apush-native-societies-exploration-part2').then(m => m.apushNativeSocietiesExplorationPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./apush-native-societies-exploration-part3').then(m => m.apushNativeSocietiesExplorationPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./apush-native-societies-exploration-part4').then(m => m.apushNativeSocietiesExplorationPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./apush-native-societies-exploration-part5').then(m => m.apushNativeSocietiesExplorationPart5Data) },
+      { title: 'Environment, Maize and Native Societies', loader: () => import('./apush-native-societies-exploration-part2').then(m => m.apushNativeSocietiesExplorationPart2Data) },
+      { title: 'Conquest and the Spanish Colonial System', loader: () => import('./apush-native-societies-exploration-part3').then(m => m.apushNativeSocietiesExplorationPart3Data) },
+      { title: 'The Columbian Exchange: Data and Causation', loader: () => import('./apush-native-societies-exploration-part4').then(m => m.apushNativeSocietiesExplorationPart4Data) },
+      { title: 'Cultural Interaction, Resistance and Contextualization', loader: () => import('./apush-native-societies-exploration-part5').then(m => m.apushNativeSocietiesExplorationPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./apush-native-societies-exploration-part6').then(m => m.apushNativeSocietiesExplorationPart6Data) },
       { title: 'AP Review', loader: () => import('./apush-native-societies-exploration-part7').then(m => m.apushNativeSocietiesExplorationPart7Data) }
     ],
@@ -1510,7 +1510,7 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./apush-colonial-america-part1').then(m => m.apushColonialAmericaPart1Data) },
-      { title: 'Key Processes', loader: () => import('./apush-colonial-america-part2').then(m => m.apushColonialAmericaPart2Data) },
+      { title: 'Why the Regions Diverged: Land, Motives and Labor', loader: () => import('./apush-colonial-america-part2').then(m => m.apushColonialAmericaPart2Data) },
       { title: 'Patterns & Examples', loader: () => import('./apush-colonial-america-part3').then(m => m.apushColonialAmericaPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./apush-colonial-america-part4').then(m => m.apushColonialAmericaPart4Data) },
       { title: 'Change Over Time', loader: () => import('./apush-colonial-america-part5').then(m => m.apushColonialAmericaPart5Data) },
