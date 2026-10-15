@@ -7,7 +7,8 @@ import type { LessonData } from '../registry'
  * teach (text) → interactive check (multiple-choice / dropdown-select / input-boxes) →
  * worked rhetorical analysis → Exit Quiz. Non-math humanities topic, so concept checks
  * favor multiple-choice and dropdown-select, with short-answer input-boxes used for
- * device-naming drills. No LaTeX needed; any bare dollar signs in prose are escaped as \\$.
+ * function and recall checks (never for naming schemes or tropes: the Lang CED's
+ * "Use of Rhetorical Terminology" note keeps device names in the teacher's vernacular). No LaTeX needed; any bare dollar signs in prose are escaped as \\$.
  * Every device, definition, and example below was verified before writing.
  */
 export const parts: LessonData[] = [
@@ -47,14 +48,14 @@ export const parts: LessonData[] = [
 
 A device that works for one audience can fail for another. A solemn metaphor that moves mourners at a funeral would feel absurd in a stand-up routine. So we always read a device **in context**.
 
-> 💡 **The AP move:** Devices are *tools*, not trophies. Spotting "anaphora" earns nothing; explaining that the repeated opening builds *rhythm and urgency that hammer the audience toward agreement* earns the point.`,
+> 💡 **The AP move:** Devices are *tools*, not trophies. Spotting a repeated opening and naming it earns nothing; explaining that the repetition builds *rhythm and urgency that hammer the audience toward agreement* earns the point.`,
       },
       {
         id: 'erd1-soapstone',
         type: 'text' as const,
         content: `## The Rhetorical Situation: SOAPSTone
 
-Before naming devices, map the **rhetorical situation**. A handy acronym is **SOAPSTone**:
+Before analyzing any choice, map the **rhetorical situation**. A handy acronym is **SOAPSTone**:
 
 | Letter | Element | Question it answers |
 |--------|---------|---------------------|
@@ -103,13 +104,13 @@ A device's *effect* depends on every one of these. "I have a dream" lands as it 
 The rest of this lesson moves from the *big strategy* of persuasion down to the *small machinery* of individual devices:
 
 - **Part 2 — Ethos, Pathos, Logos:** the three classical appeals.
-- **Part 3 — Schemes:** devices of *word order and arrangement* (repetition, parallelism, antithesis).
-- **Part 4 — Tropes:** devices of *meaning* (metaphor, irony, hyperbole, understatement).
+- **Part 3 — Arrangement Choices:** repetition, parallel structure, contrast, and where emphasis falls.
+- **Part 4 — Figurative Choices:** comparison, exaggeration, understatement, and irony.
 - **Part 5 — Diction, Tone, and Syntax:** how word choice and sentence shape create effect.
 - **Part 6 — Putting It Together:** analyzing a full passage like an AP reader.
 - **Part 7 — Mastery Check & Exit Quiz.**
 
-> ⚠️ **Don’t memorize a glossary.** A student who knows ten devices *deeply* — what each one does and why a writer would reach for it — outscores a student who can recite fifty names.`,
+> ⚠️ **Don’t memorize a glossary.** The exam never asks you to name a scheme or trope. A student who understands ten choices *deeply* — what each one does and why a writer would reach for it — outscores a student who can recite fifty names.`,
       },
       {
         id: 'erd1-check-situation',
@@ -200,7 +201,7 @@ Fill in the missing SOAPSTone elements. Type each word in lowercase, exactly as 
             },
             {
               question: '"As someone who lost a brother to this disease, I beg you to listen." The phrase "As someone who lost a brother" primarily builds:',
-              options: ['Logos', 'Ethos', 'Antithesis', 'Hyperbole'],
+              options: ['Logos', 'Ethos', 'Irony', 'Exaggeration'],
               correctAnswer: 1,
               explanation: 'Personal experience establishes the speaker’s standing to speak — ethos. (The loss also stirs pathos, but the clause "as someone who…" is doing credibility work.)',
             },
@@ -268,27 +269,27 @@ Type the single appeal each sentence relies on most. Use exactly one of: **ethos
         type: 'text' as const,
         content: `# 🗣️ Rhetorical Devices
 
-**Part 3 of 7 — Schemes: Devices of Arrangement**
+**Part 3 of 7 — Arrangement Choices: Repetition, Parallel Structure, and Contrast**
 
 ---
 
-> 🔑 **The Idea:** A **scheme** is a device that changes the *order or arrangement* of words without changing their literal meaning. Schemes work on the *ear* — through repetition, balance, and rhythm — to make ideas memorable and forceful.`,
+> 🔑 **The Idea:** Writers do not only choose words; they **arrange** them. Repeating a phrase, matching the structure of two clauses, setting opposites side by side, or adding and dropping "and" all change what a sentence stresses and how its ideas relate. The CED says so directly: "Repetition, synonyms, pronoun references, and parallel structure may indicate or develop a relationship between elements of a text" (REO-1.O), and "The arrangement of clauses, phrases, and words in a sentence can emphasize ideas" (STL-1.L).`,
       },
       {
         id: 'erd3-schemes',
         type: 'text' as const,
-        content: `## The Core Schemes
+        content: `## Six Arrangement Choices and What They Do
 
-| Scheme | What it does | Example |
-|--------|-------------|---------|
-| **Anaphora** | repeats the *same opening words* across clauses | "We shall fight on the beaches, we shall fight on the landing grounds…" |
-| **Epistrophe** | repeats the *same ending words* | "…of the people, by the people, for the people." |
-| **Parallelism** | matches grammatical *structure* across items | "to err is human; to forgive, divine" |
-| **Antithesis** | balances *opposing* ideas in parallel form | "That’s one small step for man, one giant leap for mankind." |
-| **Asyndeton** | omits conjunctions for speed | "I came, I saw, I conquered." |
-| **Polysyndeton** | piles on conjunctions for weight | "and the rain… and the wind… and the cold." |
+| Choice | Example | What it can do in an argument |
+|--------|---------|-------------------------------|
+| **Repeating the opening words** of successive clauses | "We shall fight on the beaches, we shall fight on the landing grounds…" (Churchill, 1940) | Holds one commitment steady while the details change, building momentum and resolve |
+| **Repeating the closing words** | "…government of the people, by the people, for the people…" (Lincoln, 1863) | Makes one idea the place every phrase lands, so it becomes the point the audience remembers |
+| **Parallel structure**: the same grammatical form across items | "To err is human; to forgive, divine." (Pope) | Presents ideas as equal or related, so the reader compares them |
+| **Contrast in parallel form**: opposed ideas in matching frames | "That’s one small step for man, one giant leap for mankind." (Armstrong, 1969) | Sharpens a difference, because the matching frame isolates the words that change |
+| **Dropping the conjunctions** from a list | "I came, I saw, I conquered." (Caesar, in the traditional translation) | Speeds the list, so the actions feel swift, easy, or relentless |
+| **Adding extra conjunctions** | "And the rain descended, and the floods came, and the winds blew, and beat upon that house" (Matthew 7:25, King James Version) | Slows the list and gives each item its own weight, so the blows pile up |
 
-> 💡 **Effect, not label:** Anaphora doesn’t just "repeat words" — the drumbeat opening builds **rhythm and emotional momentum**, pulling the audience along clause by clause toward the speaker’s conclusion.`,
+> 💡 **Effect, not label:** Textbooks give these patterns Greek names, but the exam never asks for them; it asks what the arrangement does. The repeated "We shall" does not just "repeat words": it keeps the vow fixed while the battlefield moves, so every clause renews the same promise.`,
       },
       {
         id: 'erd3-check-schemes',
@@ -297,16 +298,26 @@ Type the single appeal each sentence relies on most. Use exactly one of: **ethos
         exercise: {
           questions: [
             {
-              question: 'Lincoln’s "government of the people, by the people, for the people" repeats "the people" at the *end* of each phrase. This scheme is:',
-              options: ['Anaphora', 'Epistrophe', 'Asyndeton', 'Antithesis'],
+              question: 'Lincoln’s "government of the people, by the people, for the people" ends each phrase with "the people." What does that repeated ending mainly do?',
+              options: [
+                'It sets the people against the government that rules over them',
+                'It makes "the people" the fixed point where each phrase lands',
+                'It slows the sentence by adding a conjunction between every phrase',
+                'It shifts attention from the nation to the speaker’s own authority',
+              ],
               correctAnswer: 1,
-              explanation: 'Epistrophe is repetition at the *end* of successive phrases (epi- = "upon," strophe = "turning back"). Anaphora would be repetition at the *beginning*.',
+              explanation: 'Each phrase changes its preposition (of, by, for) but ends on the same words, so "the people" becomes the fixed point the sentence keeps returning to. The phrases do not oppose the people to the government, contain no added conjunctions, and say nothing about Lincoln’s authority.',
             },
             {
-              question: 'Which device is illustrated by Caesar’s "I came, I saw, I conquered" (no "and")?',
-              options: ['Polysyndeton', 'Asyndeton', 'Anaphora', 'Antithesis'],
-              correctAnswer: 1,
-              explanation: 'Asyndeton omits conjunctions, creating a clipped, accelerating rhythm that conveys swift, decisive action.',
+              question: 'Caesar’s "I came, I saw, I conquered" leaves out "and." The effect of dropping the conjunction is to',
+              options: [
+                'give each action separate weight and slow the pace',
+                'contrast the ease of arriving with the struggle to win',
+                'make the victory seem swift and almost effortless',
+                'suggest the actions happened in no clear order',
+              ],
+              correctAnswer: 2,
+              explanation: 'With no "and" to pause on, the three clauses arrive in quick succession, so conquering sounds as easy as arriving. Slowing the pace is the effect of adding conjunctions; the clauses do not contrast arriving with struggling; and their order (came, saw, conquered) is clear.',
             },
           ],
         },
@@ -314,54 +325,62 @@ Type the single appeal each sentence relies on most. Use exactly one of: **ethos
       {
         id: 'erd3-antithesis',
         type: 'text' as const,
-        content: `## A Closer Look: Antithesis and Parallelism
+        content: `## A Closer Look: Contrast Inside Parallel Structure
 
-**Parallelism** is the backbone scheme: it sets matching grammatical structures side by side so ideas feel balanced and complete. "Easy come, easy go" pairs two two-word clauses.
+**Parallel structure** sets matching grammatical forms side by side so ideas feel balanced and related. "Easy come, easy go" pairs two two-word clauses.
 
-**Antithesis** is parallelism *put in service of contrast*. The parallel frame makes the opposition land harder:
+When the matching halves carry **opposed** ideas, the frame makes the contrast land harder:
 
-> "Ask not what your country can do for you — ask what you can do for your country." (Kennedy)
+> "And so, my fellow Americans: ask not what your country can do for you—ask what you can do for your country." (Kennedy, 1961)
 
-The two halves share an identical structure ("ask… what… can do for…"), and that mirror makes the *reversal* — from receiving to giving — unforgettable.
+The two halves share one structure ("ask… what… can do for…"); only the positions of "your country" and "you" swap. That small reversal inside an otherwise identical frame carries the whole argument: citizenship means giving, not receiving.
 
-> 🔑 **Key Idea:** Antithesis = **parallel structure + opposing ideas.** The balance is what gives the contrast its snap.`,
+## Order and Emphasis
+
+Arrangement also decides **where the weight of a sentence falls** (STL-1.H, STL-1.L).
+
+- **The end of a sentence is a position of emphasis.** "Close it, and you do not save money—you spend it" ends on the reversal the speaker wants remembered.
+- **Coordination presents ideas as equals** (STL-1.J). "The plan is costly, and it will save lives" gives the cost and the lives equal standing.
+- **Subordination ranks ideas** (STL-1.K). Put one idea in an "although" or "because" clause and it becomes secondary. "Although the plan is costly, it will save lives" stresses the lives; "Although it will save lives, the plan is costly" stresses the cost.
+
+> 🔑 **Key Idea:** When you analyze arrangement, ask two questions: **what is being linked to, or set against, what?** and **where does the emphasis fall?** Then explain how the answer serves the writer’s purpose.`,
       },
       {
         id: 'erd3-check-asyn',
         type: 'dropdown-select' as const,
-        content: `**Schemes in Action** 🔽
+        content: `**Arrangement in Action** 🔽
 
-Classify each underlined construction.`,
+Choose what each arrangement mainly does.`,
         exercise: {
           dropdowns: [
-            { label: '"Every day, every hour, every minute, we hope."', options: ['anaphora', 'antithesis', 'asyndeton'] },
-            { label: '"It was the best of times, it was the worst of times."', options: ['epistrophe', 'antithesis', 'polysyndeton'] },
-            { label: '"We lived and laughed and loved and left."', options: ['asyndeton', 'anaphora', 'polysyndeton'] },
+            { label: '"Every day, every hour, every minute, we hope." The repeated "every" mainly:', options: ['contrasts hope with despair', 'stresses how constant the hope is', 'slows the list with added conjunctions'] },
+            { label: '"It was the best of times, it was the worst of times." (Dickens) The matched clauses mainly:', options: ['exaggerate how good the times were', 'repeat one idea to build a single mood', 'present two opposed judgments as both true'] },
+            { label: '"We lived and laughed and loved and left." The extra "and"s mainly:', options: ['give each action its own weight', 'speed the actions into a blur', 'contrast the speaker with the listener'] },
           ],
-          correctAnswers: ['anaphora', 'antithesis', 'polysyndeton'],
-          hint1: 'Repeating the *same opening word* ("every…") across phrases is anaphora.',
-          hint2: 'Balancing opposite ideas ("best… worst") in matching structure is antithesis.',
-          hint3: 'Piling on "and… and… and" to slow the rhythm and add weight is polysyndeton.',
-          explanation: '"Every… every… every" repeats the opening = anaphora. "Best… worst" in mirrored form = antithesis. "and… and… and" multiplies conjunctions = polysyndeton (note: asyndeton would *omit* them).',
+          correctAnswers: ['stresses how constant the hope is', 'present two opposed judgments as both true', 'give each action its own weight'],
+          hint1: 'Each repetition shrinks the unit of time, but the hoping never stops.',
+          hint2: '"Best" and "worst" sit in identical frames, and neither cancels the other.',
+          hint3: 'Each "and" makes the reader pause on one more action.',
+          explanation: 'The repeated "every" narrows from days to minutes while the hope continues, so it stresses constancy. Dickens’s matched clauses hold two opposite verdicts side by side as both true of the same era. The extra conjunctions slow the list, so each action (living, laughing, loving, leaving) gets its own beat; dropping them would speed it up instead.',
         },
       },
       {
         id: 'erd3-name-scheme',
         type: 'input-boxes' as const,
-        content: `**Name the Scheme** ✍️
+        content: `**Arrangement Check** ✍️
 
-Type the scheme each sentence uses (lowercase, one word).
+Type one word (lowercase) for each blank.
 
-**1)** "We shall not flag or fail. We shall go on to the end. We shall fight in France…" (each sentence opens "We shall")
-**2)** "I came, I saw, I conquered." (no conjunctions)
-**3)** "Float like a butterfly, sting like a bee." (matched grammatical structure)`,
+**1)** "I came, I saw, I conquered" leaves out the word \\_\\_\\_\\_\\_\\_\\_ between the actions, which speeds the list.
+**2)** "Float like a butterfly, sting like a bee" repeats the same grammatical \\_\\_\\_\\_\\_\\_\\_ in both halves.
+**3)** In "Although the plan is costly, it will save lives," the idea that gets the emphasis is that the plan will save \\_\\_\\_\\_\\_\\_\\_.`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['anaphora', 'asyndeton', 'parallelism'],
-          hint1: 'Repetition at the *start* of clauses is anaphora.',
-          hint2: 'Dropping "and" between items is asyndeton.',
-          hint3: 'Matching "[verb] like a [noun]" twice is parallelism.',
-          explanation: '1) anaphora (repeated "We shall" openings). 2) asyndeton (conjunctions omitted). 3) parallelism ("Float like a butterfly, sting like a bee" repeats the verb-like-a-noun structure).',
+          correctAnswers: ['and', 'structure', 'lives'],
+          hint1: 'The most common conjunction in English.',
+          hint2: 'Both halves follow "[verb] like a [noun]": the same parallel ___.',
+          hint3: 'The idea in the "although" clause is the secondary one.',
+          explanation: '1) The missing "and" is what makes the actions feel swift. 2) Both halves share the structure "[verb] like a [noun]," which invites the reader to compare the two actions. 3) The cost sits in the subordinate "although" clause, so the main clause, about saving lives, carries the emphasis.',
         },
       },
     ],
@@ -376,29 +395,31 @@ Type the scheme each sentence uses (lowercase, one word).
         type: 'text' as const,
         content: `# 🗣️ Rhetorical Devices
 
-**Part 4 of 7 — Tropes: Devices of Meaning**
+**Part 4 of 7 — Figurative Choices: Comparison, Exaggeration, and Irony**
 
 ---
 
-> 🔑 **The Idea:** A **trope** is a device that changes the *meaning* of words — it makes a word or phrase mean something other than its literal sense. Where schemes rearrange words, tropes *turn* them (Greek *tropos* = "a turn"). Metaphor, irony, and hyperbole are tropes.`,
+> 🔑 **The Idea:** Sometimes a writer means more than, or other than, what the words literally say. A comparison carries the qualities of one thing over to another; an exaggeration or an understatement signals feeling; irony opens a gap between what is said and what is meant. The CED treats these as choices aimed at an audience: "Writers may make comparisons (e.g., similes, metaphors, analogies, or anecdotes) in an attempt to relate to an audience. Effective comparisons must be shared and understood by the audience to advance the writer’s purpose" (RHS-1.K), and "Writers may signal a complex or ironic perspective through stylistic choices" (STL-1.R).`,
       },
       {
         id: 'erd4-tropes',
         type: 'text' as const,
-        content: `## The Core Tropes
+        content: `## Figurative Choices and What They Do
 
-| Trope | What it does | Example |
+| Choice | Example | What it can do in an argument |
 |-------|-------------|---------|
-| **Metaphor** | calls one thing *another* (no "like/as") | "Time is a thief." |
-| **Simile** | compares with "like" or "as" | "as busy as a bee" |
-| **Personification** | gives human traits to non-human things | "the wind whispered" |
-| **Hyperbole** | deliberate *exaggeration* | "I’ve told you a million times." |
-| **Understatement** | deliberately *downplays* | (of a hurricane) "a bit breezy" |
-| **Irony (verbal)** | says the *opposite* of what is meant | "Lovely weather," in a downpour |
-| **Metonymy** | names a thing by a closely related one | "The **crown** declared war." |
-| **Synecdoche** | names a thing by a *part* of it | "All hands on deck." |
+| **Comparison** (simile, metaphor, analogy) | "Time is a thief." / "as busy as a bee" | Carries the qualities of something familiar onto the subject: time becomes something that takes from us without asking |
+| **Giving human qualities to things** | "the wind whispered" | Makes a force or object seem to act with intent, so it feels close, gentle, or threatening |
+| **Exaggeration** | "I’ve told you a million times." | Conveys feeling (here, exasperation) rather than a count; signals how much something matters to the speaker |
+| **Understatement** | (of a hurricane) "a bit breezy" | Creates dry humor or restraint and leaves the reader to supply the seriousness, which can make it hit harder |
+| **Irony** | "Lovely weather," in a downpour | Says the opposite of what is meant, inviting the audience to share the speaker’s judgment |
+| **A symbol standing in for the thing** | "The crown declared war." | Makes an abstraction (royal power) concrete and lends it the authority the symbol carries |
 
-> 💡 **Effect, not label:** Hyperbole isn’t just "exaggeration." Saying you’ve repeated something "a million times" conveys *exasperation* — the figure communicates the speaker’s emotional state, not a literal count.`,
+The exam will not ask you to name a figure; it asks what the figure does for the writer’s purpose.
+
+## Comparisons Must Be Shared
+
+A comparison persuades only if the audience knows the familiar thing and feels about it the way the writer expects. "The classroom was a zoo" works for readers who picture a zoo as loud and chaotic. An analogy fails the same test when the two things differ in the very feature the argument depends on. When you analyze a comparison, ask: **which qualities carry over, and why would this audience accept them?**`,
       },
       {
         id: 'erd4-check-tropes',
@@ -407,16 +428,26 @@ Type the scheme each sentence uses (lowercase, one word).
         exercise: {
           questions: [
             {
-              question: '"The pen is mightier than the sword." Here "the pen" stands for writing and "the sword" for force. This device — naming something by a closely associated object — is:',
-              options: ['Metonymy', 'Simile', 'Personification', 'Understatement'],
-              correctAnswer: 0,
-              explanation: 'Metonymy substitutes a closely associated thing for the concept itself (pen → writing/diplomacy; sword → military force). It is not a part-for-whole (that would be synecdoche), but an associated-thing-for-concept.',
+              question: '"The pen is mightier than the sword." By letting a pen and a sword stand for writing and military force, the sentence mainly',
+              options: [
+                'exaggerates the danger of writing in order to warn readers away from it',
+                'makes an abstract contrast concrete with objects anyone can picture',
+                'understates the power of armies so that it can mock the soldiers in them',
+                'compares two famous writers whose styles the audience already knows',
+              ],
+              correctAnswer: 1,
+              explanation: 'Writing and force are abstractions; a pen and a sword are objects anyone can picture, so the claim about their relative power becomes vivid and easy to remember. The line praises writing rather than warning against it, mocks no one, and names no writers.',
             },
             {
-              question: 'After surviving a serious car crash, a driver says, "Well, that was inconvenient." This is an example of:',
-              options: ['Hyperbole', 'Understatement', 'Metaphor', 'Anaphora'],
-              correctAnswer: 1,
-              explanation: 'Calling a life-threatening crash merely "inconvenient" deliberately downplays its severity — understatement — often for dry humor or stoic effect.',
+              question: 'After surviving a serious car crash, a driver says, "Well, that was inconvenient." The remark’s effect comes mainly from',
+              options: [
+                'the gap between the mild word and the real danger',
+                'an exaggeration that makes the crash sound worse than it was',
+                'a comparison that likens the crash to a daily annoyance',
+                'a literal report that the crash caused only short delays',
+              ],
+              correctAnswer: 0,
+              explanation: 'Calling a life-threatening crash merely "inconvenient" deliberately downplays it, and the distance between the word and the danger creates dry humor or stoic calm. The remark shrinks the crash rather than enlarging it, makes no comparison, and is not meant literally.',
             },
           ],
         },
@@ -424,52 +455,52 @@ Type the scheme each sentence uses (lowercase, one word).
       {
         id: 'erd4-irony',
         type: 'text' as const,
-        content: `## A Closer Look: The Three Ironies
+        content: `## A Closer Look: Irony in Arguments
 
-"Irony" is one word for three different effects. AP passages most often use **verbal irony**, but you should know all three:
+Irony opens a gap between what is said and what is meant, and the audience is expected to notice it.
 
-- **Verbal irony** — a speaker says the *opposite* of what they mean. "What a brilliant idea," said about a clearly terrible one. (Sarcasm is pointed, mocking verbal irony.)
-- **Situational irony** — an outcome is the *opposite* of what is expected. A fire station burns down.
-- **Dramatic irony** — the *audience* knows something a character does not. We see the villain hiding while the hero walks in calmly.
+- **Saying the opposite of what is meant.** "What a brilliant idea," said about a clearly terrible one. Sarcasm is the pointed, mocking version.
+- **A gap between an argument and the reader’s values.** The CED notes that irony "may emerge from the differences between an argument and the readers’ expectations or values" (STL-1.R). Jonathan Swift’s *A Modest Proposal* (1729) calmly recommends that the children of Ireland’s poor be sold as food for the rich. Readers recoil, and the recoil is the point: Swift’s real target is a society that already treats the poor as disposable.
+- **An outcome opposite to what was expected.** A fire station burns down. In arguments, writers point to such outcomes to show that a policy has defeated its own aim.
 
-> ⚠️ **Common trap:** Verbal irony is **not** the same as a lie. A liar wants to be believed; an ironist *wants* the audience to catch the gap between the words and the truth. The gap is the point.`,
+> ⚠️ **Common trap:** Irony is **not** the same as a lie. A liar wants to be believed; an ironist *wants* the audience to catch the gap between the words and the truth. The gap is the point, so the first question to ask of an ironic passage is: **what does the writer actually believe?**`,
       },
       {
         id: 'erd4-check-irony',
         type: 'dropdown-select' as const,
-        content: `**Classify the Trope** 🔽
+        content: `**What Does Each Figure Do?** 🔽
 
-Identify each figure.`,
+Choose the main effect of each figure.`,
         exercise: {
           dropdowns: [
-            { label: '"The classroom was a zoo."', options: ['metaphor', 'simile', 'hyperbole'] },
-            { label: '"This bag weighs a ton!" (about a backpack)', options: ['understatement', 'hyperbole', 'metonymy'] },
-            { label: '"Friendly fire" used to describe being shot by your own side', options: ['situational irony', 'verbal irony', 'synecdoche'] },
+            { label: '"The classroom was a zoo." The comparison suggests:', options: ['careful supervision', 'noise and disorder', 'a love of animals'] },
+            { label: '"This bag weighs a ton!" (about a backpack) The exaggeration conveys:', options: ['the bag’s measured weight', 'the speaker’s calm', 'the speaker’s frustration'] },
+            { label: '"Friendly fire," used for being shot by your own side. The mild-sounding word:', options: ['softens a grim event', 'praises the soldiers’ loyalty', 'exaggerates how often it happens'] },
           ],
-          correctAnswers: ['metaphor', 'hyperbole', 'verbal irony'],
-          hint1: 'Calling the classroom "a zoo" *directly* (no "like/as") is a metaphor.',
-          hint2: 'A backpack cannot weigh a literal ton — the exaggeration is hyperbole.',
-          hint3: '"Friendly" applied to gunfire that harms your own side says the opposite of the truth — verbal irony.',
-          explanation: 'Direct comparison with no "like/as" = metaphor. Obvious exaggeration = hyperbole. A term whose literal sense contradicts the grim reality ("friendly" fire) = verbal irony.',
+          correctAnswers: ['noise and disorder', 'the speaker’s frustration', 'softens a grim event'],
+          hint1: 'What qualities of a zoo would carry over to a room full of students?',
+          hint2: 'No backpack weighs a literal ton, so the figure is about feeling, not weight.',
+          hint3: '"Friendly" sits uneasily next to being shot.',
+          explanation: 'Calling a classroom a zoo carries over a zoo’s noise and chaos. The impossible "ton" signals frustration rather than a measurement. "Friendly" puts a mild, even pleasant word on a deadly mistake, softening it, and the gap between word and event is what makes the phrase grimly ironic.',
         },
       },
       {
         id: 'erd4-name-trope',
         type: 'input-boxes' as const,
-        content: `**Name the Trope** ✍️
+        content: `**Figurative Language Check** ✍️
 
-Type the device (lowercase, one word).
+Type one word (lowercase) for each blank.
 
-**1)** "Her smile was like sunshine after rain." (uses "like")
-**2)** "The lonely lighthouse kept watch over the harbor." (the lighthouse "keeps watch")
-**3)** "I have a thousand things to do before noon." (deliberate exaggeration)`,
+**1)** "I have a thousand things to do before noon" is not meant \\_\\_\\_\\_\\_\\_\\_; it conveys stress, not a count.
+**2)** An ironist, unlike a liar, wants the audience to notice the \\_\\_\\_\\_\\_\\_\\_ between the words and the meaning.
+**3)** The CED says effective comparisons must be shared and \\_\\_\\_\\_\\_\\_\\_ by the audience.`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['simile', 'personification', 'hyperbole'],
-          hint1: 'A comparison using "like" or "as" is a simile.',
-          hint2: 'Giving a human action ("kept watch") to an object is personification.',
-          hint3: 'An obvious overstatement for emphasis is hyperbole.',
-          explanation: '1) simile (comparison with "like"). 2) personification ("kept watch" is a human action given to a lighthouse). 3) hyperbole (a deliberate, non-literal exaggeration).',
+          correctAnswers: ['literally', 'gap', 'understood'],
+          hint1: 'The opposite of "figuratively."',
+          hint2: 'The lesson calls it "the point" of irony: the distance between what is said and what is meant.',
+          hint3: 'An audience must grasp the comparison: "shared and ___."',
+          explanation: '1) The exaggeration is not meant literally; it signals how stressed the speaker feels. 2) Irony depends on the audience catching the gap between words and meaning, which is what separates it from a lie. 3) RHS-1.K: a comparison advances the purpose only when it is shared and understood by the audience.',
         },
       },
     ],
@@ -521,7 +552,7 @@ Diction also ranges on a scale of **formality**: *formal* ("commence," "purchase
             },
             {
               question: 'The difference between a word’s strict dictionary meaning and the associations it carries is the difference between:',
-              options: ['syntax and diction', 'denotation and connotation', 'ethos and pathos', 'scheme and trope'],
+              options: ['syntax and diction', 'denotation and connotation', 'ethos and pathos', 'tone and purpose'],
               correctAnswer: 1,
               explanation: 'Denotation = the literal dictionary definition; connotation = the emotional and cultural associations layered on top. Writers exploit connotation to steer tone.',
             },
@@ -538,7 +569,7 @@ Diction also ranges on a scale of **formality**: *formal* ("commence," "purchase
 - **Short, clipped sentences** create urgency, tension, or finality. *"He ran. He fell. It was over."*
 - **Long, flowing sentences** can build momentum, layer detail, or mimic a wandering mind.
 - A **rhetorical question** ("Have we no shame?") asks not for an answer but to provoke reflection and steer the audience toward an obvious conclusion.
-- A **periodic sentence** withholds the main clause until the end, building suspense; a **loose sentence** states the main idea first, then adds detail.
+- A sentence that **holds its main clause until the end** builds suspense and lands hard on its final words; one that **states the main idea first and then adds detail** feels relaxed and cumulative.
 
 **Tone** is the *attitude* a passage takes toward its subject or audience — solemn, ironic, indignant, nostalgic. Tone is the *product* of diction, syntax, and devices working together.
 
@@ -552,15 +583,15 @@ Diction also ranges on a scale of **formality**: *formal* ("commence," "purchase
 Make each analytical choice.`,
         exercise: {
           dropdowns: [
-            { label: '"Are we really going to stand by and do nothing?" is a:', options: ['rhetorical question', 'periodic sentence', 'simile'] },
+            { label: '"Are we really going to stand by and do nothing?" mainly works to:', options: ['request information', 'push listeners toward an obvious answer', 'compare inaction to an image'] },
             { label: 'Choosing "home" over "residence" makes the diction more:', options: ['formal and distant', 'warm and personal', 'technical'] },
             { label: 'A string of three two-word sentences mainly creates a tone of:', options: ['leisurely calm', 'urgency or finality', 'confusion'] },
           ],
-          correctAnswers: ['rhetorical question', 'warm and personal', 'urgency or finality'],
-          hint1: 'A question asked for effect, not for information, is rhetorical.',
+          correctAnswers: ['push listeners toward an obvious answer', 'warm and personal', 'urgency or finality'],
+          hint1: 'The speaker is not waiting for a reply; the answer is supposed to be obvious.',
           hint2: '"Home" carries warmer connotations than the clinical "residence."',
           hint3: 'Short, clipped sentences speed the rhythm and signal urgency or a sense of finality.',
-          explanation: 'The question seeks no real answer (rhetorical question). "Home" connotes warmth/belonging vs. the cold "residence." Clipped short sentences accelerate rhythm, creating urgency or finality.',
+          explanation: 'The question seeks no real answer; it steers listeners to the conclusion that they must act. "Home" connotes warmth/belonging vs. the cold "residence." Clipped short sentences accelerate rhythm, creating urgency or finality.',
         },
       },
       {
@@ -616,18 +647,18 @@ Before reading on, notice how *many* moves are packed into four sentences.`,
         type: 'text' as const,
         content: `## Walking the Passage Like an AP Reader
 
-| Device | Where | Effect / how it serves the purpose |
+| Choice | Where | Effect / how it serves the purpose |
 |--------|-------|-----------------------------------|
-| **Antithesis** | "not just a building. It is the room where…" | reframes the issue from *cost* to *human value* |
-| **Anaphora** | "where my daughter… where a jobless veteran… where a lonely widow…" | repetition builds emotional momentum and breadth |
+| **Contrast** ("not X — it is Y") | "not just a building. It is the room where…" | reframes the issue from *cost* to *human value* |
+| **Repeated opening** | "where my daughter… where a jobless veteran… where a lonely widow…" | repetition builds emotional momentum and breadth |
 | **Pathos** | the daughter, veteran, widow | concrete sympathetic figures make the stakes feel human |
-| **Antithesis** | "you do not save money — you spend it" | flips the council’s own logic against them |
-| **Asyndeton + parallelism** | "in dropouts, in despair, in a…" | clipped triple accelerates and intensifies the cost |
-| **Rhetorical question** | "what kind of city…?" | forces the council to judge themselves; no answer needed |
+| **Reversal in parallel form** | "you do not save money — you spend it" | flips the council’s own logic against them |
+| **Parallel list with no "and"** | "in dropouts, in despair, in a…" | clipped triple accelerates and intensifies the cost |
+| **Question asked for effect** | "what kind of city…?" | forces the council to judge themselves; no answer needed |
 
-Notice the *braid*: anaphora (a scheme) carries three pathos appeals; antithesis (a scheme) reframes a logos claim about money. The devices don’t sit in isolation — they cooperate toward one purpose: **persuading the council the library is worth funding.**
+Notice the *braid*: the repeated "where" carries three pathos appeals; the save/spend reversal turns a logos claim about money. The choices don’t sit in isolation — they cooperate toward one purpose: **persuading the council the library is worth funding.**
 
-> 💡 **The model sentence:** "The speaker’s anaphora — ‘where… where… where’ — accumulates concrete human examples, so that by the final clause the audience feels the library’s value as personal rather than abstract." That sentence *names, locates, and explains.* Do that, and you earn the point.`,
+> 💡 **The model sentence:** "The speaker’s repeated ‘where… where… where’ accumulates concrete human examples, so that by the final clause the audience feels the library’s value as personal rather than abstract." That sentence *quotes, locates, and explains* without needing a technical term. Do that, and you earn the point.`,
       },
       {
         id: 'erd6-check-passage',
@@ -636,7 +667,7 @@ Notice the *braid*: anaphora (a scheme) carries three pathos appeals; antithesis
         exercise: {
           questions: [
             {
-              question: 'What is the primary effect of the anaphora "where my daughter… where a jobless veteran… where a lonely widow…"?',
+              question: 'What is the primary effect of the repeated "where my daughter… where a jobless veteran… where a lonely widow…"?',
               options: [
                 'It supplies statistical proof that the library saves the city money',
                 'It stacks concrete human examples so the library’s value feels personal',
@@ -644,18 +675,18 @@ Notice the *braid*: anaphora (a scheme) carries three pathos appeals; antithesis
                 'It changes the literal meaning of "where" from a place to a time',
               ],
               correctAnswer: 1,
-              explanation: 'The repeated "where" stacks three vivid, sympathetic users of the library. The repetition (a scheme) carries the pathos, so the value feels personal and wide-reaching — exactly what the persuasive purpose needs.',
+              explanation: 'The repeated "where" stacks three vivid, sympathetic users of the library. The repetition carries the pathos, so the value feels personal and wide-reaching — exactly what the persuasive purpose needs. It offers no statistics, keeps a plain register, and leaves "where" meaning a place.',
             },
             {
               question: '"You do not save money — you spend it" works mainly by:',
               options: [
-                'Using a simile that compares spending money to wasting time',
-                'Using antithesis to turn the council’s cost logic against it',
+                'Comparing the act of spending money to wasting an afternoon',
+                'Reversing the council’s own cost logic in a balanced contrast',
                 'Understating how serious the closure will be for the city',
                 'Citing budget data showing closure costs more than it saves',
               ],
               correctAnswer: 1,
-              explanation: 'The balanced opposition "save… / spend…" is antithesis. It takes the council’s framing (closing saves money) and reverses it (closing actually costs more), turning their own logic into the speaker’s argument.',
+              explanation: 'The balanced opposition "save… / spend…" takes the council’s framing (closing saves money) and reverses it (closing actually costs more), turning their own logic into the speaker’s argument. The line makes no comparison, does not downplay the harm, and cites no figures.',
             },
           ],
         },
@@ -663,20 +694,20 @@ Notice the *braid*: anaphora (a scheme) carries three pathos appeals; antithesis
       {
         id: 'erd6-check-integrate',
         type: 'dropdown-select' as const,
-        content: `**Name the Move** 🔽
+        content: `**What Does Each Choice Do?** 🔽
 
-Map each quoted phrase to its device.`,
+Choose the main effect of each quoted phrase.`,
         exercise: {
           dropdowns: [
-            { label: '"in dropouts, in despair, in a community…" (no "and")', options: ['asyndeton', 'polysyndeton', 'simile'] },
-            { label: '"what kind of city balances its budget on the backs of its children?"', options: ['metaphor only', 'rhetorical question', 'understatement'] },
-            { label: '"This is not just a building."', options: ['antithesis', 'epistrophe', 'logos statistic'] },
+            { label: '"in dropouts, in despair, in a community…" (no "and")', options: ['slows the list to a calm pace', 'piles up costs relentlessly', 'compares the library to a school'] },
+            { label: '"what kind of city balances its budget on the backs of its children?"', options: ['asks for budget figures', 'understates the harm of closing', 'makes the council judge itself'] },
+            { label: '"This is not just a building."', options: ['reframes cost as human value', 'agrees with the council’s view', 'supplies a usage statistic'] },
           ],
-          correctAnswers: ['asyndeton', 'rhetorical question', 'antithesis'],
-          hint1: 'A list with the conjunctions dropped is asyndeton.',
-          hint2: 'A question posed for effect, expecting no literal answer, is rhetorical.',
-          hint3: '"Not just a building — [but] the room where…" sets up a contrast that reframes the issue: antithesis.',
-          explanation: '"in dropouts, in despair, in a…" omits "and" = asyndeton. "What kind of city…?" is a rhetorical question. "This is not just a building" reframes by contrast = antithesis. (The phrase "on the backs of its children" is also a metaphor — strong passages layer devices.)',
+          correctAnswers: ['piles up costs relentlessly', 'makes the council judge itself', 'reframes cost as human value'],
+          hint1: 'Without "and," the costs arrive one after another with no pause.',
+          hint2: 'The speaker expects no literal answer; the question points back at the listeners.',
+          hint3: '"Not just a building — [but] the room where…" shifts what the library is said to be.',
+          explanation: 'Dropping "and" makes the costs arrive in a rapid, relentless series. "What kind of city…?" expects no literal answer and makes the council judge its own choice. "This is not just a building" uses contrast to move the debate from cost to human value. (The phrase "on the backs of its children" is also a metaphor — strong passages layer choices.)',
         },
       },
       {
@@ -687,7 +718,7 @@ Map each quoted phrase to its device.`,
 The difference between a low and high AP analysis essay is almost never the *number* of devices spotted. It is whether you:
 
 1. **Quote** the specific text,
-2. **Name** the device accurately, and
+2. **Describe** the choice precisely (a technical name is optional), and
 3. **Explain** how it acts on the audience to serve the writer’s purpose.
 
 > ⚠️ A list of labels ("there is anaphora, pathos, and a rhetorical question") with no *because* is a glossary, not an analysis. The points live in the *because*.`,
@@ -695,20 +726,20 @@ The difference between a low and high AP analysis essay is almost never the *num
       {
         id: 'erd6-name-from-passage',
         type: 'input-boxes' as const,
-        content: `**Name the Device** ✍️
+        content: `**Read the Choices** ✍️
 
-Using the library passage, name the device behind each phrase (lowercase, one word).
+Using the library passage, type one word (lowercase) for each blank.
 
-**1)** "where my daughter… where a jobless veteran… where a lonely widow…" (repeated opening)
-**2)** "in dropouts, in despair, in a community…" (no "and" between items)
-**3)** "what kind of city balances its budget on the backs of its children?" (asked for effect, not an answer) — type the two-word phrase`,
+**1)** The repeated "where my daughter… where a jobless veteran… where a lonely widow…" stacks three concrete human \\_\\_\\_\\_\\_\\_\\_ of the library’s value.
+**2)** "in dropouts, in despair, in a community…" drops the word \\_\\_\\_\\_\\_\\_\\_ between items, so the costs pile up quickly.
+**3)** "What kind of city balances its budget on the backs of its children?" expects no literal \\_\\_\\_\\_\\_\\_\\_; it asks the council to judge itself.`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['anaphora', 'asyndeton', 'rhetorical question'],
-          hint1: 'Repetition at the *start* of clauses is anaphora.',
-          hint2: 'A list with the conjunctions dropped is asyndeton.',
-          hint3: 'A question posed for effect, not for a literal answer, is a rhetorical question.',
-          explanation: '1) anaphora (the repeated "where" openings). 2) asyndeton (the "and" is dropped from the list). 3) rhetorical question (it indicts the council rather than seeking an answer).',
+          correctAnswers: ['examples', 'and', 'answer'],
+          hint1: 'The walkthrough says the repetition "accumulates concrete human ___."',
+          hint2: 'The most common conjunction in English.',
+          hint3: 'The question is asked for effect, not for a reply.',
+          explanation: '1) The repeated "where" stacks examples (a daughter, a veteran, a widow) so the value feels personal. 2) Dropping "and" makes the costs arrive in a rapid series. 3) The question expects no answer; it turns the council’s attention on its own choice.',
         },
       },
     ],
@@ -727,25 +758,26 @@ Using the library passage, name the device behind each phrase (lowercase, one wo
 
 ---
 
-You can now (1) read the rhetorical situation, (2) identify the three appeals, (3) tell schemes from tropes, (4) analyze diction, tone, and syntax, and (5) integrate it all into real analysis. Let’s consolidate.`,
+You can now (1) read the rhetorical situation, (2) identify the three appeals, (3) explain what arrangement choices and figurative choices do, (4) analyze diction, tone, and syntax, and (5) integrate it all into real analysis. Let’s consolidate.`,
       },
       {
         id: 'erd7-reference',
         type: 'text' as const,
         content: `## Quick Reference
 
-| You see… | It’s likely… | Because… |
+| You see… | It often… | Ask… |
 |----------|--------------|----------|
-| repetition at the *start* of clauses | **anaphora** | same opening words build rhythm |
-| repetition at the *end* of clauses | **epistrophe** | same closing words hammer a point home |
-| balanced *opposite* ideas | **antithesis** | parallel form sharpens the contrast |
-| a list with no "and" | **asyndeton** | dropped conjunctions speed it up |
-| a direct "X is Y" comparison | **metaphor** | one thing is called another |
-| obvious exaggeration | **hyperbole** | overstatement conveys feeling, not fact |
-| saying the opposite of the truth | **verbal irony** | the gap between words and meaning *is* the point |
-| a question with no expected answer | **rhetorical question** | it provokes thought and steers the audience |
+| repetition at the *start* of clauses | builds rhythm and holds one commitment steady | what stays fixed while the details change? |
+| repetition at the *end* of clauses | makes one idea the point everything lands on | why does the writer keep returning to this word? |
+| opposite ideas in matching structure | sharpens a contrast | what exactly is being set against what? |
+| a list with no "and" | speeds the list | does the speed suggest ease, urgency, or relentlessness? |
+| a list with extra "and"s | slows the list and gives each item weight | why should each item count separately? |
+| a comparison ("X is Y," "like," an analogy) | carries qualities from a familiar thing to the subject | which qualities carry over, and does this audience share them? |
+| obvious exaggeration or understatement | conveys feeling, not fact | what attitude does the distortion reveal? |
+| saying the opposite of what is meant | creates irony | what does the writer actually believe? |
+| a question with no expected answer | steers the audience to a conclusion | what answer is the audience supposed to supply? |
 
-> 🔑 **Master rule:** Scheme = arrangement (the *ear*); trope = meaning (the *mind*); appeal = ethos/pathos/logos (the *strategy*). Always end on *effect*.`,
+> 🔑 **Master rule:** Arrangement shapes emphasis and relationships; figurative language shapes meaning and feeling; the appeals (ethos, pathos, logos) are the strategy. Always end on *effect*.`,
       },
       {
         id: 'erd7-mixed',
@@ -754,21 +786,26 @@ You can now (1) read the rhetorical situation, (2) identify the three appeals, (
         exercise: {
           questions: [
             {
-              question: 'Which statement correctly distinguishes a scheme from a trope?',
+              question: 'A school board member says, "We will rebuild our gym, we will reopen our library, we will restore our music program." How does the parallel structure most help her argument?',
               options: [
-                'A scheme changes word *meaning*; a trope changes word *order*',
-                'A scheme changes word *order*; a trope changes word *meaning*',
-                'Schemes appeal to emotion; tropes appeal to logic and reason',
-                'There is no difference — the two terms are synonyms',
+                'It changes the literal meaning of each promise so listeners must decode it',
+                'It presents the three promises as equal parts of one commitment',
+                'It replaces the evidence she would otherwise need for her plan',
+                'It slows her delivery so the audience has time to take notes',
               ],
               correctAnswer: 1,
-              explanation: 'A scheme (e.g., anaphora, antithesis) alters arrangement without changing literal meaning. A trope (e.g., metaphor, irony) turns the meaning of words themselves.',
+              explanation: 'Matching structure ("we will [verb] our [noun]") signals that the three promises belong together and carry equal weight, so they read as one plan (REO-1.O). Parallel structure does not change literal meaning, cannot substitute for evidence, and here speeds rather than slows the delivery.',
             },
             {
-              question: '"My backpack weighs a thousand pounds" and "I’ve asked you a million times" are both examples of:',
-              options: ['Litotes', 'Hyperbole', 'Metonymy', 'Epistrophe'],
-              correctAnswer: 1,
-              explanation: 'Both deliberately exaggerate for emphasis or emotional effect — hyperbole — and neither is meant to be taken literally.',
+              question: '"My backpack weighs a thousand pounds" and "I’ve asked you a million times" both work by',
+              options: [
+                'downplaying a problem so the speaker sounds calm',
+                'making literal claims that a listener could check',
+                'comparing an object to something unlike it',
+                'conveying feeling through obvious exaggeration',
+              ],
+              correctAnswer: 3,
+              explanation: 'Both deliberately exaggerate, and neither is meant literally: the impossible numbers express the speaker’s strain or exasperation. They overstate rather than downplay, and neither compares one thing to another.',
             },
           ],
         },
@@ -778,18 +815,18 @@ You can now (1) read the rhetorical situation, (2) identify the three appeals, (
         type: 'dropdown-select' as const,
         content: `**One More Pass** 🔽
 
-Match each example to its device.`,
+Choose what each choice mainly does.`,
         exercise: {
           dropdowns: [
-            { label: '"The White House announced the policy today."', options: ['metonymy', 'simile', 'antithesis'] },
-            { label: '"Give me liberty, or give me death!" (each clause opens "Give me")', options: ['anaphora', 'understatement', 'metaphor'] },
-            { label: '"I think we did okay," after winning by 50 points', options: ['hyperbole', 'understatement', 'personification'] },
+            { label: '"The White House announced the policy today." Naming the building instead of the officials:', options: ['exaggerates the policy’s scope', 'presents it as the institution’s act', 'contrasts two branches of government'] },
+            { label: '"Give me liberty or give me death!" The repeated "give me" sets up:', options: ['a long list of equal options', 'a joke at the speaker’s expense', 'a stark choice between two fates'] },
+            { label: '"I think we did okay," after winning by 50 points. The understatement:', options: ['signals modesty or dry humor', 'complains about the margin', 'exaggerates the victory'] },
           ],
-          correctAnswers: ['metonymy', 'anaphora', 'understatement'],
-          hint1: '"The White House" stands in for the administration — an associated thing for the concept.',
-          hint2: 'Both clauses begin "Give me" — repetition at the start.',
-          hint3: 'Calling a 50-point blowout merely "okay" downplays the result.',
-          explanation: '"The White House" = metonymy (a place names the administration). "Give me… / Give me…" = anaphora (repeated opening). "We did okay" after a blowout = understatement (deliberate downplaying).',
+          correctAnswers: ['presents it as the institution’s act', 'a stark choice between two fates', 'signals modesty or dry humor'],
+          hint1: 'The building stands for the whole administration, not for one person.',
+          hint2: 'The same two words open both halves, and only the object changes.',
+          hint3: 'Calling a 50-point blowout merely "okay" downplays the result on purpose.',
+          explanation: 'Using "The White House" makes the announcement the act of the institution, with its authority, rather than of particular officials. The repeated "give me" frames two outcomes in identical form, so the choice between liberty and death feels absolute. Calling a blowout "okay" downplays it, which reads as modesty or dry humor.',
         },
       },
       {
@@ -802,26 +839,31 @@ Answer all three to finish the lesson.`,
           questions: [
             {
               question: 'A speaker says, "Studies show that for every dollar invested in early education, society saves seven." Which appeal is primarily at work?',
-              options: ['Pathos', 'Logos', 'Ethos', 'Anaphora'],
+              options: ['Pathos', 'Logos', 'Ethos', 'None of the three'],
               correctAnswer: 1,
               explanation: 'A measurable, evidence-based claim ("for every dollar… society saves seven") is an appeal to logos — persuasion through reason and data.',
             },
             {
-              question: '"Ask not what your country can do for you — ask what you can do for your country" relies most on which device?',
-              options: ['Hyperbole', 'Antithesis', 'Metonymy', 'Situational irony'],
+              question: '"Ask not what your country can do for you — ask what you can do for your country" is memorable mainly because',
+              options: [
+                'it exaggerates what the country can do for its citizens',
+                'its matching halves reverse who gives and who receives',
+                'it lets a symbol stand in for the government as a whole',
+                'its outcome is the opposite of what listeners expected',
+              ],
               correctAnswer: 1,
-              explanation: 'The line places two opposed ideas (receiving from vs. giving to your country) in mirror-image parallel structure — antithesis — which makes the reversal memorable.',
+              explanation: 'The two halves share one structure, and only the positions of "your country" and "you" swap, so the reversal from receiving to giving stands out sharply. The line exaggerates nothing, uses no symbol for the government, and describes no unexpected outcome.',
             },
             {
               question: 'On the AP English Language exam, a complete analysis of a device must do all of the following EXCEPT:',
               options: [
                 'Quote or point to the specific text',
-                'Name the device accurately',
-                'Explain the device’s effect on the audience and link it to purpose',
-                'Count the total number of devices in the passage',
+                'Explain the choice’s effect on the audience',
+                'Link that effect to the writer’s purpose',
+                'Supply the technical Greek or Latin name for each choice',
               ],
               correctAnswer: 3,
-              explanation: 'Quoting, naming, and explaining the effect/purpose are the three essentials. Tallying how many devices appear earns nothing — analysis lives in the *because*, not the count.',
+              explanation: 'Quoting the text, explaining the effect, and linking it to purpose are the essentials. The exam never requires a technical name for a device: a precise plain-language description earns the same credit, because the analysis lives in the *because*, not the label.',
             },
           ],
         },

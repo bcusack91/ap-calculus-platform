@@ -67,7 +67,7 @@ Notice the dashes in Roosevelt's opening from Part 2: "Yesterday, December 7th, 
             explanation: 'A colon tells the reader that what follows delivers what was promised, here the "one conclusion." The clauses do not contrast, nothing is made parenthetical, and the colon sharpens the claim rather than softening it.'
           },
           {
-            question: 'Which revision uses polysyndeton?',
+            question: 'Which revision makes the trip feel long and tiring by giving every step its own weight?',
             options: [
               'We packed, we drove, we arrived.',
               'We packed and drove and waited and arrived.',
@@ -75,7 +75,7 @@ Notice the dashes in Roosevelt's opening from Part 2: "Yesterday, December 7th, 
               'We packed the car before driving to the coast.'
             ],
             correctAnswer: 1,
-            explanation: 'Polysyndeton repeats conjunctions between every item, as "and... and... and" does here. The version with no conjunctions is asyndeton, the semicolon version separates clauses with transitions, and the last is a single clause with a phrase.'
+            explanation: 'Repeating "and" between every item (polysyndeton) slows the list and piles the steps up, so the trip feels long. The version with no conjunctions speeds the steps along, the semicolon version spaces them out with transitions, and the last version folds the trip into one quick clause.'
           }
         ]
       }
@@ -124,15 +124,15 @@ Here, **form enacts content**. Thoreau writes a cluttered sentence about clutter
 
 2) The punctuation mark that signals that what follows will explain or deliver what was promised is the _______.
 
-3) Repeating the same words at the start of successive sentences, as in "Last night Japanese forces attacked...," is called _______.
+3) Repeating the same words at the start of successive sentences, as in "Last night Japanese forces attacked...," builds momentum and _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['semicolon', 'colon', 'anaphora'],
+        correctAnswers: ['semicolon', 'colon', 'emphasis'],
         hint1: 'Thoreau uses it in "We do not ride on the railroad; it rides upon us."',
         hint2: 'Two dots, one above the other.',
-        hint3: 'From the Greek for "carrying back"; repetition at the beginning.',
-        explanation: 'A semicolon joins balanced independent clauses, a colon introduces an explanation, and repetition at the start of successive sentences is anaphora.'
+        hint3: 'Each repetition presses the same point harder.',
+        explanation: 'A semicolon joins balanced independent clauses, a colon introduces an explanation, and repetition at the start of successive sentences builds momentum and emphasis.'
       }
     },
     {

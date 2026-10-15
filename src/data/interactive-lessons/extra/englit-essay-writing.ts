@@ -757,7 +757,7 @@ For a fiction passage, analyze the tools of **narrative**:
         type: 'text' as const,
         content: `## The Literary Argument (Q3)
 
-Q3 gives a **thematic prompt** and asks you to argue a thesis about a **novel or play of literary merit** that you choose from memory.
+Q3 gives a **thematic prompt** and asks you to choose a **work of fiction** (a novel or a play), either from your own reading or from the list printed with the prompt, and argue how one element of it contributes to an interpretation of the work as a whole. You write from memory.
 
 To do Q3 well:
 - **Prepare 3–4 works** in advance. Know characters, key scenes, the arc, and central themes cold.
@@ -765,7 +765,7 @@ To do Q3 well:
 - **Use specific evidence from memory** — name characters, moments, and turning points (you won't have the text, so precision of recall is your "quotation").
 - **Avoid plot summary.** Q3 fails most often when it retells the story instead of arguing a claim.
 
-> ⚠️ "Literary merit" matters: choose complex, widely taught works (e.g., *Beloved*, *Hamlet*, *The Great Gatsby*, *Their Eyes Were Watching God*). Avoid thin or purely commercial books that give you little to analyze.`,
+> ⚠️ Choose works with enough complexity to sustain an interpretation (e.g., *Beloved*, *Hamlet*, *The Great Gatsby*, *Their Eyes Were Watching God*). Thin or purely commercial books give you little to analyze, and the prompt asks about the work **as a whole**.`,
       },
       {
         id: 'lit6-q3-input',
@@ -818,7 +818,7 @@ Match each demand to the essay it describes.`,
         content: `## Recap
 
 - **Q2 prose:** analyze point of view, characterization, tone, detail/syntax, and irony.
-- **Q3 argument:** prepare 3–4 works of **literary merit**, answer the real prompt, evidence from memory, **no plot summary.**
+- **Q3 argument:** prepare 3–4 complex **works of fiction** you know well, answer the real prompt, evidence from memory, **no plot summary.**
 - Same engine throughout: defensible **thesis** → specific **evidence** → linked **commentary.**
 
 > 💡 You can now reach a solid 5/6 on all three. Part 7 chases the final point — **Sophistication** — and locks in timing and structure.`,
@@ -973,7 +973,7 @@ Answer all three to finish the lesson.`,
                 'You summarize the plot of a novel you choose and explain why it is worth reading',
               ],
               correctAnswer: 0,
-              explanation: 'Q3 provides only a thematic prompt; you supply a work of literary merit from memory and argue a defensible thesis — not a plot summary. Analyzing a printed poem is Q1, and a printed prose passage is Q2.',
+              explanation: 'Q3 provides only a thematic prompt; you supply a work of fiction from memory and argue a defensible thesis — not a plot summary. Analyzing a printed poem is Q1, and a printed prose passage is Q2.',
             },
           ],
         },

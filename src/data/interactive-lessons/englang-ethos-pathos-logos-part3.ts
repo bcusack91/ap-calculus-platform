@@ -160,7 +160,7 @@ The speech does not try to make anyone feel **more** grief. It accepts the grief
       content: `
 **Applied Recall** ✍️
 
-1) In "The future doesn't belong to the fainthearted; it belongs to the brave," contrasting ideas set in parallel form create _______.
+1) In "The future doesn't belong to the fainthearted; it belongs to the brave," two parallel clauses set opposite ideas side by side. That opposition is a _______.
 
 2) A reference to a well-known text, such as Reagan's quotation from the poem "High Flight," is called an _______.
 
@@ -168,11 +168,11 @@ The speech does not try to make anyone feel **more** grief. It accepts the grief
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['antithesis', 'allusion', 'connotation'],
-        hint1: 'Greek for "setting against."',
+        correctAnswers: ['contrast', 'allusion', 'connotation'],
+        hint1: 'Fainthearted against brave: the clauses are built to be compared.',
         hint2: 'It sounds like "illusion" but means a reference.',
         hint3: 'The opposite of denotation.',
-        explanation: 'Parallel contrast is antithesis, a reference to another text is an allusion, and the associations a word carries beyond its literal meaning are its connotation.'
+        explanation: 'Setting fainthearted against brave in matching clauses creates a contrast that makes courage the only choice, a reference to another text is an allusion, and the associations a word carries beyond its literal meaning are its connotation.'
       }
     },
     {

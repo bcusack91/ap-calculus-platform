@@ -115,17 +115,17 @@ Strong: "After a series of layered periodic sentences, the abrupt declaration 'W
 
 1) Repetition of grammatical structure to create emphasis and rhythm is called _______.
 
-2) When a sentence delays its main clause until the end, it is a _______ sentence.
+2) When a sentence delays its main clause until the end, its final words receive the most _______.
 
 3) AP style analysis should always connect language choices to rhetorical _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['parallelism', 'periodic', 'purpose'],
+        correctAnswers: ['parallelism', 'emphasis', 'purpose'],
         hint1: 'Parallel grammatical form.',
-        hint2: 'Main point arrives late.',
+        hint2: 'What the reader is left holding when the point arrives last.',
         hint3: 'Why the author made the choice.',
-        explanation: 'Parallelism repeats structure. Periodic sentences delay the main clause. Analysis must connect style to purpose.'
+        explanation: 'Parallelism repeats structure. Delaying the main clause builds suspense and puts the emphasis on the final words. Analysis must connect style to purpose.'
       }
     },
     {

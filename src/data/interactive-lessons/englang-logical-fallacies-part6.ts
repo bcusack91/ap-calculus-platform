@@ -16,7 +16,7 @@ export const englangLogicalFallaciesPart6Data = {
 | 📖 Passage: Franklin, "On the Slave Trade" (1790) |
 | Passage Set, Questions 1–4 |
 | Section I Writing: Fixing Faulty Reasoning in a Draft |
-| Avoiding Fallacies in Your Own Argument (Question 3) |
+| Avoiding Flawed Reasoning in Your Own Argument (Question 3) |
 | An Annotated Model Mapped to the Rubric |
 
 > 🔑 **Key Concept:** Reasoning is tested in both halves of the exam. Section I reading questions ask you to evaluate a writer's line of reasoning; Section I writing questions ask you to revise a student's flawed sentence; and the argument essay (Question 3) is scored on whether your own reasoning holds. This part practices all three.
@@ -125,7 +125,7 @@ Section I writing questions often present a student's draft and ask which revisi
 |---|---|---|
 | "Ever since the city added a curfew, vandalism has dropped, so the curfew worked." | Sequence taken as cause | "Vandalism dropped after the curfew began, though the city also added street lighting that year, so the curfew's share of the change is unclear." |
 | "Scientists agree that homework is pointless." | Overgeneralization and vague authority | "Several studies of elementary students have found little link between homework and achievement." |
-| "Either we ban junk food in schools or childhood obesity will keep rising." | False dilemma | "Limiting junk food in schools is one of several steps, along with more physical activity, that could slow the rise in childhood obesity." |
+| "Either we ban junk food in schools or childhood obesity will keep rising." | Only two options offered | "Limiting junk food in schools is one of several steps, along with more physical activity, that could slow the rise in childhood obesity." |
 | "Opponents of the plan are just afraid of change." | Attack on motives | "Opponents of the plan worry about its cost, a concern the budget figures answer." |
 
 ### The Over-Hedging Trap
@@ -170,20 +170,20 @@ The fix for an overgeneralization is a **precise** claim, not a timid one. "Some
       id: 'englangl6-essay',
       type: 'text' as const,
       content: `
-## Avoiding Fallacies in Your Own Argument (Question 3)
+## Avoiding Flawed Reasoning in Your Own Argument (Question 3)
 
 **Practice prompt.** In 1790, Benjamin Franklin suggested that "men's interests operate, and are operated on, with surprising similarity, in all countries and climates." Write an essay that argues your position on the extent to which self-interest shapes people's moral judgments.
 
 ### A Pre-Writing Check for Your Own Reasoning
 
-| Before you write a claim, ask... | The fallacy it prevents |
+| Before you write a claim, ask... | The flaw it prevents |
 |---|---|
-| Does my evidence cover the whole group my claim names? | Hasty generalization |
-| Have I shown **how** one thing caused another, not just that it came first? | Post hoc |
-| Am I answering the strongest version of the other side? | Straw man |
-| Am I criticizing ideas, or the people who hold them? | Ad hominem |
-| Are there really only two options? | False dilemma |
-| Does each body paragraph add support, or restate the thesis? | Circular reasoning |
+| Does my evidence cover the whole group my claim names? | Generalizing from too few cases |
+| Have I shown **how** one thing caused another, not just that it came first? | Treating "after" as "because" |
+| Am I answering the strongest version of the other side? | Refuting a weaker version of the opposing view |
+| Am I criticizing ideas, or the people who hold them? | Attacking people instead of arguments |
+| Are there really only two options? | Ignoring options between two extremes |
+| Does each body paragraph add support, or restate the thesis? | Circular reasoning that adds no support |
 
 ### A Thesis That Leaves Room for Complexity (Row A)
 

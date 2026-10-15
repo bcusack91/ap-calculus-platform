@@ -11,30 +11,34 @@ export const englangLogicalFallaciesPart1Data = {
 
 ---
 
-## What Is a Logical Fallacy?
+## What Is Flawed Reasoning?
 
-A **logical fallacy** is an error in reasoning that weakens an argument, even if the claim itself might be true.
+Every argument promises that its **support** gives you a reason to accept its **claim**. Reasoning is flawed when that promise breaks: the support may be true, and the claim may even be true, but the step from one to the other does not hold. The CED puts it this way: "Flaws in a line of reasoning may render an argument specious or illogical" (REO-1.F).
 
-Fallacy detection is crucial for AP reading and writing:
-- In reading: evaluate argument quality
-- In writing: avoid weak reasoning in your own essays
+Spotting flawed reasoning matters in both halves of the exam:
+- In reading: evaluate how well a writer's support reaches the claim
+- In writing: keep your own line of reasoning sound
+
+> The exam never asks you to name a fallacy. It asks what is wrong with a line of reasoning and which revision would fix it, so learn to describe each flaw in plain words.
 
 ---
 
-## Common AP Fallacies
+## Common Ways Reasoning Breaks
 
-| Fallacy | Definition | Example |
+| What goes wrong | Example | The question that exposes it |
 |--------|------------|---------|
-| **Ad hominem** | Attacks person instead of argument | "Do not trust her climate plan; she is not even from this town." |
-| **Straw man** | Misrepresents opponent's view to make it easier to attack | "My opponent wants bike lanes, so he wants to ban cars entirely." |
-| **False dilemma** | Presents only two options when more exist | "Either cut all taxes or destroy the economy." |
-| **Hasty generalization** | Draws broad conclusion from too little evidence | "Two students cheated, so the school has no integrity." |
-| **Slippery slope** | Claims one step inevitably leads to extreme outcome | "If we allow late work, soon no deadlines will exist." |
-| **Post hoc** | Assumes sequence implies causation | "I wore lucky socks and we won, so socks caused victory." |
-| **Circular reasoning** | Claim is "proven" by restating itself | "The law is fair because it is just." |
-| **Appeal to popularity** | Claims true/good because many people believe it | "Millions use it, so it must be safe." |
+| **Attacks the person instead of the argument** | "Do not trust her climate plan; she is not even from this town." | Does the point about the person bear on the claim? |
+| **Misstates the opponent's view to make it easier to attack** | "My opponent wants bike lanes, so he wants to ban cars entirely." | Would the opponent accept this summary of their view? |
+| **Offers only two options when more exist** | "Either cut all taxes or destroy the economy." | What other options are there? |
+| **Generalizes from too few cases** | "Two students cheated, so the school has no integrity." | How many cases, and are they typical? |
+| **Predicts an extreme chain of results without supporting each step** | "If we allow late work, soon no deadlines will exist." | Is each link in the chain supported? |
+| **Assumes that what came first caused what came next** | "I wore lucky socks and we won, so socks caused victory." | What else could explain the result? |
+| **Uses the claim as its own support** | "The law is fair because it is just." | Does the support say anything the claim does not? |
+| **Treats popularity as proof** | "Millions use it, so it must be safe." | Is the question what people believe, or what is true? |
 
-> 🔑 Identifying a fallacy does not automatically disprove the entire claim, but it DOES expose weakness in the argument's logic.
+Many of these flaws have traditional names (ad hominem, straw man, false dilemma, post hoc) that you may meet in your reading; the right-hand column is what you actually use.
+
+> 🔑 Exposing a flaw does not automatically disprove the claim, but it DOES show that this support fails to establish it.
       `
     },
     {
@@ -46,26 +50,26 @@ Fallacy detection is crucial for AP reading and writing:
       exercise: {
         questions: [
           {
-            question: '"Either we ban phones in schools or students will never learn anything." Which fallacy is this?',
+            question: '"Either we ban phones in schools or students will never learn anything." What is the main flaw in this reasoning?',
             options: [
-              'Ad hominem',
-              'False dilemma',
-              'Post hoc',
-              'Circular reasoning'
+              'It attacks the people who oppose a phone ban instead of their reasons',
+              'It offers only two outcomes when other phone policies are possible',
+              'It assumes phones caused a decline in learning because they came first',
+              'It supports the claim about phones by simply restating that claim'
             ],
             correctAnswer: 1,
-            explanation: 'This statement presents only two extreme options and ignores possible middle-ground solutions (limited use policies, structured classroom rules, etc.). That is a false dilemma.'
+            explanation: 'The statement presents only two extreme outcomes and ignores middle-ground policies such as limited use or classroom rules. It does not attack opponents, make a before-and-after causal argument, or restate its own claim as support.'
           },
           {
-            question: "\"My opponent's education policy is wrong because he failed algebra in high school.\" This is:",
+            question: '"My opponent\'s education policy is wrong because he failed algebra in high school." The reasoning is weak chiefly because it',
             options: [
-              'Straw man',
-              'Ad hominem',
-              'Appeal to popularity',
-              'Hasty generalization'
+              'misstates the policy so that it is easier to reject',
+              'judges the policy by the man\'s past, not its merits',
+              'predicts that the policy will lead to a disaster',
+              'treats the policy\'s low popularity as proof'
             ],
             correctAnswer: 1,
-            explanation: 'The statement attacks the person\'s character/history instead of addressing the policy argument itself. That is ad hominem reasoning.'
+            explanation: 'A high-school grade says nothing about whether the policy would work, so the speaker has turned from the argument to the person. The statement does not describe the policy at all, predicts no chain of results, and says nothing about popularity.'
           }
         ]
       }
@@ -74,30 +78,32 @@ Fallacy detection is crucial for AP reading and writing:
       id: 'ellf1-content',
       type: 'text' as const,
       content: `
-## Fallacies in AP Passages
+## Flawed Reasoning in AP Passages
 
-### Why Writers Use Fallacies
+### Why Writers Use Flawed Reasoning
 - Emotional impact may distract from weak evidence
 - Simplified framing can persuade quickly
 - Audience bias may reward familiar but faulty logic
 
-### How to Analyze Fallacies Effectively
+### How to Analyze Flawed Reasoning Effectively
 
 | Weak Analysis | Strong Analysis |
 |--------------|-----------------|
-| "The author uses a fallacy." | "By framing the issue as only two options, the writer creates a false dilemma that ignores viable compromises, weakening logical credibility." |
-| "This is bad logic." | "The ad hominem attack shifts focus from policy evidence to personal insult, which may energize supporters but undermines rational persuasion." |
+| "The author uses a fallacy." | "By framing the issue as only two options, the writer ignores workable compromises, which weakens the argument's logical credibility." |
+| "This is bad logic." | "Turning from the policy evidence to a personal insult may energize supporters, but it leaves the policy argument unanswered." |
+
+Notice that the strong versions never depend on a label. Each one says **what** the writer does and **why** that move fails to support the claim.
 
 ### Distinguish Rhetorical Force from Logical Validity
 A passage may be rhetorically powerful and logically flawed at the same time.
 
 Example:
 - Powerful emotional appeal to protect children
-- But uses hasty generalization from one isolated incident
+- But a broad conclusion drawn from one isolated incident
 
 Your job: evaluate both rhetorical effectiveness and reasoning quality.
 
-## Avoiding Fallacies in Your Writing
+## Avoiding Flawed Reasoning in Your Writing
 1. Represent opposing views accurately
 2. Avoid absolute binaries unless truly exhaustive
 3. Differentiate correlation from causation
@@ -111,61 +117,61 @@ Your job: evaluate both rhetorical effectiveness and reasoning quality.
       content: `
 **Applied Recall** ✍️
 
-1) Attacking a person instead of addressing their argument is _______ hominem.
+1) "I wore my lucky socks and we won." The reasoning assumes that because one event came first, it _______ the second.
 
-2) Assuming that because one event follows another, the first caused the second is a _______ hoc fallacy.
+2) "Either cut all taxes or destroy the economy" offers only _______ options when others exist.
 
-3) Presenting only two extreme options when others exist is a false _______.
+3) "Two students cheated, so the school has no integrity" draws a broad conclusion from too _______ cases.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['ad', 'post', 'dilemma'],
-        hint1: 'Latin phrase starts with "ad."',
-        hint2: 'Latin phrase starts with "post."',
-        hint3: 'Two choices only, falsely.',
-        explanation: 'Ad hominem attacks person. Post hoc confuses sequence with causation. False dilemma reduces options to extremes.'
+        correctAnswers: ['caused', 'two', 'few'],
+        hint1: 'Coming first is being treated as making something happen.',
+        hint2: 'Count the choices the speaker allows.',
+        hint3: 'The opposite of "many."',
+        explanation: 'The socks argument treats "came before" as "caused." The tax argument offers two options when many policies are possible. The cheating argument judges a whole school by too few cases.'
       }
     },
     {
       id: 'ellf1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Identify the Fallacy** 🔍
+**What Is Wrong With This Reasoning?** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: '"If we allow one extension, deadlines will disappear forever."',
-            options: ['Slippery slope', 'Circular reasoning', 'Appeal to popularity', 'Ad hominem']
+            options: ['It uses its own claim as the support for that claim', 'It treats the popularity of an idea as proof', 'It jumps to an extreme result without support', 'It attacks a person instead of the argument']
           },
           {
             label: '"Three athletes from that city were rude; everyone there is rude."',
-            options: ['Hasty generalization', 'False dilemma', 'Post hoc', 'Straw man']
+            options: ['It offers only two options when more exist', 'It assumes the earlier event caused the later one', 'It generalizes about a group from too few cases', 'It misstates what an opponent actually said']
           },
           {
             label: '"You want to regulate social media ads, so you want to censor all speech."',
-            options: ['Straw man', 'Ad hominem', 'Appeal to authority', 'Circular reasoning']
+            options: ['It attacks the person instead of the argument', 'It misstates the opponent\'s view to attack it', 'It cites someone outside their expertise', 'It uses its own claim as the support for that claim']
           }
         ],
-        correctAnswers: ['Slippery slope', 'Hasty generalization', 'Straw man'],
-        hint1: 'Predicts extreme chain reaction.',
-        hint2: 'Too few examples for broad claim.',
-        hint3: 'Distorts opponent position.',
-        explanation: 'Extreme inevitability = slippery slope. Few examples to broad claim = hasty generalization. Misrepresentation = straw man.'
+        correctAnswers: ['It jumps to an extreme result without support', 'It generalizes about a group from too few cases', 'It misstates the opponent\'s view to attack it'],
+        hint1: 'One extension leads straight to "forever." What is missing between those points?',
+        hint2: 'Three people are used to judge a whole city.',
+        hint3: 'Regulating ads is not the same as censoring all speech.',
+        explanation: 'The extension argument jumps to an extreme outcome with no support for the steps between. The city argument judges everyone from three cases. The ad argument replaces the opponent\'s actual position with a far more extreme one that is easier to reject.'
       }
     },
     {
       id: 'ellf1-strategy',
       type: 'text' as const,
       content: `
-## AP Exam Strategy: Logical Fallacies
+## AP Exam Strategy: Flawed Reasoning
 
-- Name the fallacy and explain the specific reasoning flaw
-- Connect flaw to argumentative consequence (credibility, logic, fairness)
-- Do not over-label: ensure the fallacy truly fits
-- In essays, avoid fallacies in your own reasoning chain
+- Describe the specific flaw: what the support is, what the claim is, and why the step between them fails
+- Connect the flaw to its argumentative consequence (credibility, logic, fairness)
+- Do not over-diagnose: make sure the flaw is really there before you point to it
+- In essays, check your own reasoning chain for the same flaws
 - Differentiate rhetorical intensity from logical validity
-- Fallacy-aware analysis can raise sophistication in rhetorical commentary
+- Precise evaluation of reasoning can raise the sophistication of your rhetorical commentary
       `
     },
     {
@@ -179,24 +185,24 @@ Your job: evaluate both rhetorical effectiveness and reasoning quality.
           {
             question: 'A speech claims: "Crime rose after bike lanes were installed, so bike lanes cause crime." Which evaluation is strongest?',
             options: [
-              'A valid causal claim, since the crime rise came after the lanes',
-              'A post hoc fallacy, since sequence does not prove causation',
-              'An ad hominem fallacy, since it attacks cyclists rather than ideas',
-              'A slippery slope, since it predicts that crime will keep rising'
+              'A sound causal claim, since the rise in crime came after the lanes',
+              'A weak causal claim, since coming first does not prove causing',
+              'A personal attack, since it targets cyclists rather than their ideas',
+              'An extreme prediction, since it says crime will keep rising for good'
             ],
             correctAnswer: 1,
-            explanation: 'The argument assumes causation from sequence only. Many confounding variables could explain crime changes. Without controlled evidence, causal inference is invalid.'
+            explanation: 'The argument infers causation from sequence alone; many other changes could explain the rise in crime, and none has been ruled out. The speech attacks no person and predicts nothing about the future, and coming after the lanes is exactly what fails to prove a cause.'
           },
           {
-            question: 'Which revision best fixes a false dilemma?',
+            question: 'A writer argues that the town must choose between closing the pool and raising taxes, though other options exist. Which revision best fixes this reasoning?',
             options: [
               'Make the two options sound more emotionally vivid',
-              'Acknowledge multiple alternatives and evaluate tradeoffs',
+              'Acknowledge other options and weigh their tradeoffs',
               'Attack the credibility of people who disagree',
               'Restate the two options more forcefully'
             ],
             correctAnswer: 1,
-            explanation: 'False dilemmas collapse complexity into two options. Fixing them requires presenting plausible additional options and reasoning through comparative merits.'
+            explanation: 'The flaw is forcing a complex choice into two options. Fixing it means presenting the plausible alternatives (cutting other costs, raising fees, seeking grants) and reasoning through their merits. Vivid language, attacks, and forceful restatement leave the two-option frame in place.'
           }
         ]
       }

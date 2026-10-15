@@ -121,8 +121,8 @@ The sentences grow shorter as the passage goes on. The long, measured sentence a
       exercise: {
         dropdowns: [
           {
-            label: '"The sunlight that brought life and healing to you, has brought stripes and death to me" uses ___',
-            options: ['antithesis', 'understatement', 'anecdote', 'concession']
+            label: '"The sunlight that brought life and healing to you, has brought stripes and death to me" sets up a ___',
+            options: ['contrast in balanced clauses', 'deliberate understatement', 'brief personal anecdote', 'concession to the audience']
           },
           {
             label: '"What have I, or those I represent, to do with your national independence?" is a ___',
@@ -133,11 +133,11 @@ The sentences grow shorter as the passage goes on. The long, measured sentence a
             options: ['common ground', 'an ironic persona', 'a counterargument', 'a statistical base']
           }
         ],
-        correctAnswers: ['antithesis', 'rhetorical question', 'common ground'],
+        correctAnswers: ['contrast in balanced clauses', 'rhetorical question', 'common ground'],
         hint1: 'The same sunlight produces opposite outcomes in balanced clauses.',
         hint2: 'The answer is implied, not expected aloud.',
         hint3: 'He begins where his audience already agrees.',
-        explanation: 'The balanced opposites are antithesis. The question implies its answer, so it is rhetorical. Praising the founders starts from shared ground before the turn.'
+        explanation: 'Two balanced clauses set the same sunlight\'s opposite results for the audience and for Douglass side by side, exposing the gap between them. The question implies its answer, so it is rhetorical. Praising the founders starts from shared ground before the turn.'
       }
     },
     {

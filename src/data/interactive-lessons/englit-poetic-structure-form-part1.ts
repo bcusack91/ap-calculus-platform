@@ -45,18 +45,29 @@ export const englitPoeticStructureFormPart1Data = {
     {
       id: "englitpo1-input",
       type: 'input-boxes' as const,
-      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
+      content: "**Vocabulary Recall**\n\nType one word from the table above for each description.",
       exercise: {
-      "boxes": 3,
-      "correctAnswers": [
-            "form",
-            "volta",
-            "lineation"
+      "questions": [
+            {
+                  "question": "The organizing pattern of a poem, which sets up expectations a poet can fulfill or disrupt",
+                  "answer": "form",
+                  "acceptableAnswers": ["the form"]
+            },
+            {
+                  "question": "A turn in a poem's argument or feeling",
+                  "answer": "volta",
+                  "acceptableAnswers": ["turn", "the volta", "shift"]
+            },
+            {
+                  "question": "The arrangement of a poem into lines, line breaks and stanzas",
+                  "answer": "lineation",
+                  "acceptableAnswers": ["the lineation"]
+            }
       ],
-      "hint1": "Concept 1: Form",
-      "hint2": "Concept 2: Volta",
-      "hint3": "Concept 3: Lineation",
-      "explanation": "Form, Volta, and Lineation are core vocabulary for this unit."
+      "hint1": "Concept 1: the organizing pattern.",
+      "hint2": "Concept 2: the turn (an Italian word).",
+      "hint3": "Concept 3: how the lines are laid out.",
+      "explanation": "Form, volta (turn) and lineation are core vocabulary for this unit; each matters only for what it does to meaning."
 }
     },
     {

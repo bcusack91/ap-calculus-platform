@@ -114,19 +114,19 @@ On Question 3 and in Section I writing questions, you are the one who must persu
       content: `
 **Applied Recall** ✍️
 
-1) A deductive argument with one premise left unstated is called an _______.
+1) An argument that leaves one of its steps unstated trusts the audience to supply the missing _______.
 
-2) The Greek term for the opportune moment, or the fitness of a choice to its occasion, is _______.
+2) Speaking when listeners are already thinking about the issue fits an argument to its _______.
 
 3) Credibility transferred from a trusted person, such as Douglass's letter printed in Wells's pamphlet, is called _______ ethos.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['enthymeme', 'kairos', 'borrowed'],
-        hint1: 'Aristotle called it a "rhetorical syllogism."',
-        hint2: 'It begins with "k" and contrasts with chronos, clock time.',
+        correctAnswers: ['premise', 'occasion', 'borrowed'],
+        hint1: 'The unstated step is one of the statements the conclusion rests on.',
+        hint2: 'The event or moment that prompts the speech.',
         hint3: 'The writer does not own this credibility; it is lent.',
-        explanation: 'An enthymeme leaves a premise for the audience to supply, kairos is the opportune moment, and an endorsement creates borrowed ethos.'
+        explanation: 'An argument with an unstated premise lets the audience complete the reasoning themselves, timing a speech to its occasion meets listeners when they already care, and an endorsement creates borrowed ethos.'
       }
     },
     {

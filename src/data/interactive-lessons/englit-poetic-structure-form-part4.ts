@@ -7,41 +7,38 @@ export const englitPoeticStructureFormPart4Data = {
       content: `
 # 📐 Poetic Structure and Form
 
-**Part 4 of 7 — Fixed Forms: Two Sonnets and the Villanelle**
+**Part 4 of 7 — Closed Forms at Work: Turns and Refrains**
 
 ---
 
 | Section |
 |---------|
-| 📖 Petrarchan vs. Shakespearean |
-| The Petrarchan Sonnet: Wordsworth |
-| The Shakespearean Sonnet: Sonnet 29 |
-| The Villanelle: Robinson's "The House on the Hill" |
-| Other Named Forms |
+| 📖 How a Sonnet Divides Its Argument |
+| An Eight-and-Six Sonnet: Wordsworth |
+| A Four-Part Sonnet: Sonnet 29 |
+| Refrains at Work: Robinson's "The House on the Hill" |
+| What Closed Forms Do |
 
-> 🔑 **Key Concept:** A **fixed form** prescribes the number of lines, the meter, the rhyme scheme, and sometimes repeated lines. Each form carries built-in expectations: where the argument will turn, which lines will return. Skill **3.C** asks what the structure does; with a fixed form, ask how the poem uses the form's expectations.
+> 🔑 **Key Concept:** A **closed form** repeats predictable patterns of line, stanza, rhythm and rhyme, and those patterns "develop relationships among ideas in the poem" (CED STR-1.U). Each pattern carries built-in expectations: where the argument will turn, which lines will return. Skill **3.C** asks what the structure does; with a closed form, ask how the poem uses, delays or breaks those expectations.
 `
     },
     {
       id: 'englitpo4-sonnets',
       type: 'text' as const,
       content: `
-## 📖 Petrarchan vs. Shakespearean
+## 📖 How a Sonnet Divides Its Argument
 
-Both sonnet types have 14 lines, usually in iambic pentameter. They divide those lines differently, and the division shapes the argument.
+A sonnet has 14 lines, usually with five beats each. Its rhymes group those lines into parts, and the grouping shapes the argument: it tells the reader where a **turn** (a shift in argument or feeling, sometimes called the *volta*) is likely to come.
 
-| | Petrarchan (Italian) | Shakespearean (English) |
+| | Grouped 8 + 6 | Grouped 4 + 4 + 4 + 2 |
 |---|---|---|
-| Named for | Petrarch, 14th-century Italian poet | Shakespeare, whose 154 sonnets were published in 1609 |
-| Divisions | **Octave** (8 lines) + **sestet** (6 lines) | Three **quatrains** (4 lines each) + a **couplet** |
-| Rhyme scheme | ABBAABBA + CDECDE or CDCDCD (sestet varies) | ABAB CDCD EFEF GG |
-| Where the turn (volta) usually falls | Line 9, start of the sestet | Line 9, or held back to the couplet |
+| Parts | An **octave** (8 lines) bound by a few shared rhyme sounds, then a **sestet** (6 lines) | Three **quatrains** (4 lines each), then a rhymed **couplet** |
+| Where the turn usually falls | Line 9, at the start of the sestet | Line 9, or held back to the couplet |
 | Typical logic | Problem, then response; observation, then reflection | Three variations on an idea, then a summing-up or twist |
-| Rhyme demand | Needs four words on each octave sound, harder in English | New rhymes in each quatrain, easier in English |
 
-Poetry Analysis I traced the narrowing quatrains of Sonnet 73. Here are one sonnet of each type.
+Your teacher may call these the Petrarchan and Shakespearean sonnets; the exam will not ask you to name a form, only to explain what its parts and turn do. Poetry Analysis I traced the narrowing quatrains of Sonnet 73. Here is one sonnet of each shape.
 
-## The Petrarchan Sonnet: Wordsworth
+## An Eight-and-Six Sonnet: Wordsworth
 
 > The World is too much with us; late and soon,
 > Getting and spending, we lay waste our powers;
@@ -62,11 +59,11 @@ Poetry Analysis I traced the narrowing quatrains of Sonnet 73. Here are one sonn
 
 ### A Worked Reading of the Form
 
-**Octave (lines 1-8), ABBAABBA.** soon / powers / ours / boon / moon / hours / flowers / tune. Only two rhyme sounds for eight lines: the octave is tightly bound, a single complaint. "We" are so busy "Getting and spending" that Nature no longer moves us. The sea and winds are beautiful, yet "we are out of tune."
+**Octave (lines 1-8).** soon / powers / ours / boon / moon / hours / flowers / tune. Only two rhyme sounds for eight lines: the octave is tightly bound, a single complaint. "We" are so busy "Getting and spending" that Nature no longer moves us. The sea and winds are beautiful, yet "we are out of tune."
 
-**The volta.** It arrives *inside* line 9: "It moves us not." Then a break (the dash) and an outburst: "Great God! I'd rather be / A Pagan." The turn is marked by a sudden change of syntax, from long descriptive clauses to a short blunt sentence and an exclamation. Wordsworth places the volta right where the Petrarchan form expects it, but makes it erupt mid-line.
+**The volta.** It arrives *inside* line 9: "It moves us not." Then a break (the dash) and an outburst: "Great God! I'd rather be / A Pagan." The turn is marked by a sudden change of syntax, from long descriptive clauses to a short blunt sentence and an exclamation. Wordsworth places the turn right where an eight-and-six sonnet leads us to expect it, but makes it erupt mid-line.
 
-**Sestet (lines 9-14), CDCDCD.** be / outworn / lea / forlorn / sea / horn. The response: the speaker would rather hold an outdated pagan faith that sees gods in nature (Proteus, a shape-shifting sea god; Triton, who blows a conch-shell horn) than live with modern indifference.
+**Sestet (lines 9-14).** be / outworn / lea / forlorn / sea / horn: two new sounds alternate. The response: the speaker would rather hold an outdated pagan faith that sees gods in nature (Proteus, a shape-shifting sea god; Triton, who blows a conch-shell horn) than live with modern indifference.
 
 | Section | Function |
 |---|---|
@@ -84,7 +81,7 @@ Poetry Analysis I traced the narrowing quatrains of Sonnet 73. Here are one sonn
       exercise: {
         questions: [
           {
-            question: `The octave of Wordsworth's sonnet rhymes ABBAABBA. This tight scheme most directly suits the octave's`,
+            question: `The octave of Wordsworth's sonnet binds eight lines with only two rhyme sounds. This tight pattern most directly suits the octave's`,
             options: [
               `single, sustained complaint about modern life`,
               `rapid shifts between several unrelated topics`,
@@ -103,7 +100,7 @@ Poetry Analysis I traced the narrowing quatrains of Sonnet 73. Here are one sonn
               `a shift from the present to the distant past`
             ],
             correctAnswer: 0,
-            explanation: `"It moves us not." is followed by a dash and "Great God!", a break in syntax and tone right at line 9. The speaker stays in the first person, a Petrarchan sestet has no closing couplet, and the wish for pagan vision is in the conditional present, not a narrative of the past.`
+            explanation: `"It moves us not." is followed by a dash and "Great God!", a break in syntax and tone right at line 9. The speaker stays in the first person, this sonnet's last six lines have no closing couplet, and the wish for pagan vision is in the conditional present, not a narrative of the past.`
           },
           {
             question: `The allusions to Proteus and Triton function primarily to`,
@@ -123,7 +120,7 @@ Poetry Analysis I traced the narrowing quatrains of Sonnet 73. Here are one sonn
       id: 'englitpo4-sonnet29',
       type: 'text' as const,
       content: `
-## The Shakespearean Sonnet: Sonnet 29
+## A Four-Part Sonnet: Sonnet 29
 
 > When in disgrace with fortune and men's eyes
 > I all alone beweep my outcast state,
@@ -146,34 +143,25 @@ Poetry Analysis I traced the narrowing quatrains of Sonnet 73. Here are one sonn
 
 | Unit | Lines | Rhymes | What happens |
 |---|---|---|---|
-| Quatrain 1 | 1-4 | eyes / state / cries / fate (ABAB) | Despair: outcast, unheard ("deaf heaven," "bootless," meaning useless, cries) |
-| Quatrain 2 | 5-8 | hope / possess'd / scope / least (CDCD) | Envy: wishing for other men's looks, friends, talent |
-| Quatrain 3 | 9-12 | despising / state / arising / gate (EFEF) | The turn: "Haply" (by chance) he thinks of the beloved, and his mood rises like a lark |
-| Couplet | 13-14 | brings / kings (GG) | The conclusion: love makes him richer than kings |
+| Quatrain 1 | 1-4 | eyes / state / cries / fate | Despair: outcast, unheard ("deaf heaven," "bootless," meaning useless, cries) |
+| Quatrain 2 | 5-8 | hope / possess'd / scope / least | Envy: wishing for other men's looks, friends, talent |
+| Quatrain 3 | 9-12 | despising / state / arising / gate | The turn: "Haply" (by chance) he thinks of the beloved, and his mood rises like a lark |
+| Couplet | 13-14 | brings / kings | The conclusion: love makes him richer than kings |
 
-**Syntax and form together.** Lines 1-8 are a long string of subordinate clauses ("When ... I ... beweep," "Wishing," "Desiring"), as heavy as the speaker's mood. The volta comes at line 9 ("Yet"), exactly where both sonnet types expect it, and the main movement of the poem lifts with the lark.
+**Syntax and form together.** Lines 1-8 are a long string of subordinate clauses ("When ... I ... beweep," "Wishing," "Desiring"), as heavy as the speaker's mood. The turn comes at line 9 ("Yet"), exactly where the sonnet's grouping leads us to expect it, and the main movement of the poem lifts with the lark.
 
 **The repeated rhyme word.** "State" appears three times: "my outcast state" (line 2), "my state ... sings hymns" (line 10), "change my state with kings" (line 14). The same word means misery, then a soaring condition, then a royal rank he scorns. The form lets one word carry the poem's whole change.
 
-**Feminine rhyme at the turn.** "Despising / arising" are the poem's only two-syllable rhymes. The extra syllable gives these lines a lifting, unfinished sound at the moment the mood begins to rise.
+**Two-syllable rhymes at the turn.** "Despising / arising" are the poem's only rhymes that end on a light extra syllable. That soft extra beat gives these lines a lifting, unfinished sound at the moment the mood begins to rise.
 `
     },
     {
       id: 'englitpo4-villanelle',
       type: 'text' as const,
       content: `
-## The Villanelle: Robinson's "The House on the Hill"
+## Refrains at Work: Robinson's "The House on the Hill"
 
-The **villanelle** has 19 lines: five tercets and a closing quatrain, on only two rhyme sounds. Two lines from the first stanza, the **refrains**, return in turn as the last line of each tercet and come together as the final two lines of the poem.
-
-| Stanza | Rhyme | Refrain that closes it |
-|---|---|---|
-| Tercet 1 | A1 b A2 | (sets up both refrains: lines 1 and 3) |
-| Tercet 2 | a b A1 | Refrain 1 |
-| Tercet 3 | a b A2 | Refrain 2 |
-| Tercet 4 | a b A1 | Refrain 1 |
-| Tercet 5 | a b A2 | Refrain 2 |
-| Quatrain | a b A1 A2 | Both refrains |
+A **refrain** is a line that returns at set points in a poem. Robinson's poem is built on two of them. Its first and third lines, "They are all gone away" and "There is nothing more to say," take turns closing each three-line stanza and come together as the last two lines of the poem. Every line ends on one of only two rhyme sounds. (This closed form is traditionally called a villanelle.) Watch what the returns do to the meaning.
 
 > They are all gone away,
 > The House is shut and still,
@@ -207,63 +195,64 @@ The **villanelle** has 19 lines: five tercets and a closing quatrain, on only tw
 - **Refrains as obsession.** The two refrains keep returning however the middle lines vary, like thoughts the speaker cannot stop thinking. Loss is not something one gets over; it recurs.
 - **Irony in the second refrain.** "There is nothing more to say" is said four times. The form contradicts the claim: the speakers keep circling back, just as they "stray / Around that sunken sill."
 - **Two rhyme sounds.** Every line ends on an "-ay" sound or an "-ill" sound. The narrow sound world matches the narrow, shut house.
-- **Short lines.** Robinson uses three-stress lines rather than the more common pentameter, so the poem sounds clipped and bare, like the "broken walls."
+- **Short lines.** Robinson uses lines of three beats rather than the five-beat lines of most sonnets, so the poem sounds clipped and bare, like the "broken walls."
 
-Two famous twentieth-century villanelles, still under copyright, are Dylan Thomas's "Do not go gentle into that good night" (1951) and Elizabeth Bishop's "One Art" (1976). In both, the refrains carry an emotion the speaker struggles to control, as in Robinson.
+Two famous twentieth-century poems built the same way, still under copyright, are Dylan Thomas's "Do not go gentle into that good night" (1951) and Elizabeth Bishop's "One Art" (1976). In both, the refrains carry an emotion the speaker struggles to control, as in Robinson.
 `
     },
     {
       id: 'englitpo4-input',
       type: 'input-boxes' as const,
       content: `
-**Name the Part** ✍️
+**Key Words** ✍️
 
-Type one standard term for each description.
+Type one word for each description.
       `,
       exercise: {
         questions: [
           {
-            question: `The first eight lines of a Petrarchan sonnet`,
-            answer: 'octave',
-            acceptableAnswers: ['the octave', 'octet']
+            question: `The point where a poem's argument or feeling shifts, as at "Yet" in line 9 of Sonnet 29`,
+            answer: 'turn',
+            acceptableAnswers: ['the turn', 'volta', 'shift']
           },
           {
-            question: `A line that repeats at set points in a poem, as in a villanelle`,
+            question: `A line that returns at set points in a poem, gathering new meaning each time, as in "The House on the Hill"`,
             answer: 'refrain',
             acceptableAnswers: ['a refrain', 'refrains']
           },
           {
-            question: `The two-line unit that ends a Shakespearean sonnet`,
-            answer: 'couplet',
-            acceptableAnswers: ['the couplet', 'heroic couplet', 'final couplet']
+            question: `The word Shakespeare repeats three times in Sonnet 29 to trace the speaker's change from misery to joy`,
+            answer: 'state',
+            acceptableAnswers: ['"state"']
           }
         ],
-        hint1: 'From the Latin for "eight."',
+        hint1: 'The plain English word for where an argument changes direction.',
         hint2: 'Songs have one too: the part that comes back.',
-        hint3: 'Two rhymed lines.',
-        explanation: 'A Petrarchan sonnet divides into octave and sestet, a villanelle is built on two refrains, and a Shakespearean sonnet closes with a couplet.'
+        hint3: '"my outcast ___" ... "change my ___ with kings."',
+        explanation: 'The turn is where the argument shifts, a refrain is a returning line whose meaning changes with its context, and "state" carries Sonnet 29 from an "outcast state" to a state the speaker would not trade with kings.'
       }
     },
     {
       id: 'englitpo4-forms',
       type: 'text' as const,
       content: `
-## Other Named Forms
+## What Closed Forms Do
 
-| Form | Defining features | Example |
+Every pattern in a closed form creates a relationship among the poem's ideas. The three poems in this part show the main ones.
+
+| Pattern | Relationship it can create | Example |
 |---|---|---|
-| **Ode** | A serious, elevated lyric, often addressing its subject | Shelley's "Ode to the West Wind" (1820), Keats's "To Autumn" (1820) |
-| **Elegy** | A lament for the dead or for something lost, often moving from grief to consolation | Thomas Gray's "Elegy Written in a Country Churchyard" (1751) |
-| **Ballad** | A narrative song, usually in ballad stanzas, often with dialogue and refrain | Coleridge's "Rime of the Ancyent Marinere" (1798) |
-| **Dramatic monologue** | One character speaks to a silent listener | Browning's "My Last Duchess" (1842) |
-| **Sestina** | Six stanzas of six lines that rotate the same six end-words, plus a three-line close | Developed by medieval Provençal poets |
-| **Haiku** | A Japanese form; in English usually three short lines (often 5-7-5 syllables) built on a single image | Matsuo Bashō (17th century) |
+| Lines grouped 8 + 6 | Problem and response; the second part answers, reverses or escapes the first | Wordsworth's complaint, then his wish |
+| Three quatrains and a couplet | Variations building toward a summing-up, a twist or a collapse | Sonnet 29's despair and envy, then the lark, then the couplet |
+| Few rhyme sounds | Confinement, obsession, a single sustained mood | Wordsworth's octave; Robinson's "-ay" and "-ill" |
+| A repeated word | One word whose meaning changes as the poem moves | "state" in Sonnet 29 |
+| Returning refrains | A thought that cannot be escaped; a claim the poem tests by repeating it | "There is nothing more to say" |
 
 ### Common Misconceptions
 
-- **"Identifying the form is enough."** "This is a Petrarchan sonnet" is a label. "The volta erupts mid-line, so the speaker's restraint breaks at the very point the form expects a turn" is analysis.
+- **"Identifying the form is enough."** "This is a sonnet" is a label. "The volta erupts mid-line, so the speaker's restraint breaks at the very point the form expects a turn" is analysis.
 - **"A sonnet's turn is always at line 9."** It is often there, but it can come early, late, or only in the couplet. Find where the argument actually shifts.
-- **"Repetition in a villanelle is filler."** The refrains change meaning as their context changes, and that change is the poem's argument.
+- **"Repeated refrains are filler."** The refrains change meaning as their context changes, and that change is the poem's argument.
 
 > 🔑 **AP Connection:** When a Section I question asks about "the structure of the poem as a whole," map the parts first (octave/sestet, quatrains/couplet, refrains). Then ask how each part's job differs. Correct answers often describe a movement, such as "from despair to consolation."
 `

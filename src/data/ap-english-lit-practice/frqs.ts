@@ -5,7 +5,7 @@ import type { SAQItem } from '@/components/FullLengthPracticeExam'
  *
  *   Q1 Poetry Analysis    — analyze how poetic elements convey complex meaning
  *   Q2 Prose Fiction Analysis — analyze how literary techniques convey complex meaning
- *   Q3 Literary Argument  — choose a work of literary merit and develop a defensible interpretation
+ *   Q3 Literary Argument  — choose a work of fiction and develop a defensible interpretation of the work as a whole
  *
  * Each essay is scored out of 6 on the official analytic rubric: Row A Thesis (1 point),
  * Row B Evidence & Commentary (4 cumulative checkboxes mirroring the official level
@@ -44,7 +44,7 @@ Read the following poem carefully. Then, in a well-constructed essay, analyze ho
 > and look, and find I cannot say exactly why.
 
 In your response you should do the following:
-- Respond to the prompt with a defensible thesis that presents an interpretation.
+- Respond to the prompt with a thesis that presents a defensible interpretation.
 - Select and use evidence to support your line of reasoning.
 - Explain how the evidence supports your line of reasoning.
 - Use appropriate grammar and punctuation in communicating your argument.`,
@@ -108,7 +108,7 @@ Read the following passage carefully. Then, in a well-constructed essay, analyze
 > Ruth closed her eyes for a moment. When she opened them she said, in a tone that was not quite an apology and not quite anything else, "I made coffee. It\'s in the carafe. There\'s a clean cup on the table." Then she went back into the dining room, and after a moment Annie heard her unzipping a suitcase, and the soft, methodical sound of someone unpacking very slowly so as not to seem to be hovering.
 
 In your response you should do the following:
-- Respond to the prompt with a defensible thesis that presents an interpretation.
+- Respond to the prompt with a thesis that presents a defensible interpretation.
 - Select and use evidence to support your line of reasoning.
 - Explain how the evidence supports your line of reasoning.
 - Use appropriate grammar and punctuation in communicating your argument.`,
@@ -141,9 +141,7 @@ In your response you should do the following:
 
 In many works of literature, a character makes a journey — physical, emotional, or both — that ends not with arrival at a destination but with a transformed understanding of where the character began.
 
-Either from your own reading or from the following list, select a novel or play in which a central character undertakes such a journey. Then, in a well-written essay, analyze how the journey contributes to an interpretation of the work as a whole. **Do not merely summarize the plot.**
-
-You may select a work from the list below or another work of comparable literary merit:
+Either from your own reading or from the following list, choose a work of fiction in which a central character undertakes such a journey. Then, in a well-written essay, analyze how the journey contributes to an interpretation of the work as a whole. **Do not merely summarize the plot.**
 
 - *Beloved* by Toni Morrison
 - *Their Eyes Were Watching God* by Zora Neale Hurston
@@ -156,13 +154,19 @@ You may select a work from the list below or another work of comparable literary
 - *Wuthering Heights* by Emily Brontë
 - *The Brief Wondrous Life of Oscar Wao* by Junot Díaz
 - *Native Son* by Richard Wright
-- *Their Eyes Were Watching God* by Zora Neale Hurston
+- *Jane Eyre* by Charlotte Brontë
 - *A Streetcar Named Desire* by Tennessee Williams
 - *Death of a Salesman* by Arthur Miller
-- *Beloved* by Toni Morrison
+- *Invisible Man* by Ralph Ellison
 - *The Sympathizer* by Viet Thanh Nguyen
 - *Pachinko* by Min Jin Lee
-- *Things Fall Apart* by Chinua Achebe`,
+- *Things Fall Apart* by Chinua Achebe
+
+In your response you should do the following:
+- Respond to the prompt with a thesis that presents a defensible interpretation.
+- Provide evidence to support your line of reasoning.
+- Explain how the evidence supports your line of reasoning.
+- Use appropriate grammar and punctuation in communicating your argument.`,
     parts: [
       {
         prompt: '**Thesis (1 point):** State a defensible interpretation of the work as a whole that connects the character\'s journey to the broader meaning of the work.',

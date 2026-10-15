@@ -221,7 +221,7 @@ The distance passage reasons from a physical fact ("Three thousand miles of ocea
           {
             question: 'Burke\'s sentence "conciliation failing, force remains; but, force failing, no further hope of reconciliation is left" is persuasive chiefly because',
             options: [
-              'its chiasmus makes audible the point that the two options cannot be reversed',
+              'its mirrored word order makes audible the point that the two options cannot be reversed',
               'it offers statistical proof that conciliation succeeds more often than force',
               'it appeals to the audience\'s fear of the colonists\' military strength',
               'it relies on Burke\'s reputation as an expert in colonial administration'

@@ -70,15 +70,15 @@ Asking "Which appeal is this?" would force a single answer and miss most of the 
             explanation: 'The sentence establishes credibility, creates fear, and offers evidence and a reframing at the same time. Treating it as a single appeal misses most of its work, and logos does not require statistics.'
           },
           {
-            question: 'A senator delivers a speech about veterans\' health care on Veterans Day. The choice of date is best explained by the concept of',
+            question: 'A senator delivers a speech about veterans\' health care on Veterans Day. The choice of date strengthens the speech chiefly because it',
             options: [
-              'kairos',
-              'logos',
-              'syllogism',
-              'concession'
+              'supplies statistical support for the proposed policy',
+              'ties the argument to a moment when listeners already care',
+              'lets the senator concede a point to the opposing party',
+              'proves that the senator once served in the military'
             ],
-            correctAnswer: 0,
-            explanation: 'Choosing an occasion when the audience is already thinking about veterans is kairos, the use of the opportune moment. The date itself is not a form of reasoning, a syllogism, or a concession.'
+            correctAnswer: 1,
+            explanation: 'Speaking when the audience is already thinking about veterans fits the argument to its occasion (the timing rhetoricians call kairos), so listeners arrive ready to care. A date supplies no statistics, concedes nothing to opponents, and says nothing about the senator\'s own service.'
           }
         ]
       }

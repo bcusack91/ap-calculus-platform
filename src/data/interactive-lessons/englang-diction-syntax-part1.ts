@@ -153,19 +153,19 @@ Strong: "By pairing charged verbs ('exploit,' 'abandon') with clipped declarativ
             options: ['A more forceful connotation', 'A more neutral connotation', 'A more technical denotation', 'A more polite, formal register']
           },
           {
-            label: 'A long sentence that postpones the main clause until the end is a ___ sentence',
-            options: ['Periodic', 'Loose', 'Cumulative', 'Compound']
+            label: 'A long sentence that postpones the main clause until the end mainly ___',
+            options: ['Builds suspense toward its point', 'Signals the writer is unsure', 'Softens the claim it makes', 'Speeds the reader along']
           },
           {
             label: 'Formal diction plus balanced syntax most often projects ___',
             options: ['Authority and composure', 'Casual, conversational ease', 'Urgency and alarm', 'Irony and detachment']
           }
         ],
-        correctAnswers: ['A more forceful connotation', 'Periodic', 'Authority and composure'],
+        correctAnswers: ['A more forceful connotation', 'Builds suspense toward its point', 'Authority and composure'],
         hint1: 'Demanding is stronger than asking.',
-        hint2: 'Main clause delayed.',
+        hint2: 'The reader waits for the main clause, so it lands last.',
         hint3: 'Controlled language builds credibility.',
-        explanation: '"Demanded" intensifies connotation. Delayed main clause = periodic. Formal balance projects authority.'
+        explanation: '"Demanded" intensifies connotation. Delaying the main clause builds suspense and puts the point last. Formal balance projects authority.'
       }
     },
     {
@@ -177,7 +177,7 @@ Strong: "By pairing charged verbs ('exploit,' 'abandon') with clipped declarativ
 - Pair diction and syntax in your analysis; they are strongest together
 - Quote short, high-impact words rather than long blocks
 - Note sentence-length contrasts for pacing/emphasis analysis
-- Use precise terms: periodic, parallelism, anaphora, loaded diction, concrete imagery
+- Describe the choice precisely ("the sentence holds its main clause until the end," "each sentence opens with the same words"); a device name is optional, and the exam never asks you to supply one
 - Explain effect on audience and purpose every time
 - Quality beats quantity: 2 strong analyses > 8 vague device labels
       `

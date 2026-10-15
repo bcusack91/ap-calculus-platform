@@ -150,17 +150,17 @@ A solemn sermon telling readers to enjoy their troubles would sound smug. By per
 
 1) Deliberate exaggeration for effect, as in "the most beautiful of human localities," is called _______.
 
-2) The figure in "An adventure is only an inconvenience rightly considered. An inconvenience is only an adventure wrongly considered," which repeats terms in reverse order, is called _______.
+2) In "An adventure is only an inconvenience rightly considered. An inconvenience is only an adventure wrongly considered," Chesterton reverses the two terms to show that the difference lies only in how each is _______ (use his word).
 
 3) A form of irony intended to wound or ridicule a target is called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['hyperbole', 'chiasmus', 'sarcasm'],
+        correctAnswers: ['hyperbole', 'considered', 'sarcasm'],
         hint1: 'From the Greek for "throwing beyond"; the opposite of understatement.',
-        hint2: 'Named for the Greek letter chi (X), whose shape crosses over.',
+        hint2: 'The word appears in both sentences, modified first by "rightly" and then by "wrongly."',
         hint3: 'From a Greek verb meaning "to tear flesh."',
-        explanation: 'Deliberate exaggeration is hyperbole, the A-B / B-A pattern is chiasmus, and irony meant to wound is sarcasm.'
+        explanation: 'Deliberate exaggeration is hyperbole, the reversed terms show that attitude, how a thing is considered, turns one experience into the other, and irony meant to wound is sarcasm.'
       }
     },
     {

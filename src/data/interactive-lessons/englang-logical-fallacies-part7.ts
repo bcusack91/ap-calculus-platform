@@ -20,7 +20,7 @@ export const englangLogicalFallaciesPart7Data = {
 | Exam-Day Traps and a Stem Bank |
 | Mixed Practice 2 |
 
-> 🔑 **Key Concept:** Across this topic you have moved from **naming** fallacies (Part 1) to **explaining** how support fails to reach a claim (Part 2), watching writers expose bad reasoning (Parts 3 and 6), evaluating a line of reasoning step by step (Part 4), and using the vocabulary with care (Part 5). This review ties those skills together for both sections of the exam.
+> 🔑 **Key Concept:** Across this topic you have moved from **spotting** common ways reasoning breaks (Part 1) to **explaining** how support fails to reach a claim (Part 2), watching writers expose bad reasoning (Parts 3 and 6), evaluating a line of reasoning step by step (Part 4), and judging reasoning with care (Part 5). This review ties those skills together for both sections of the exam.
 `
     },
     {
@@ -38,7 +38,7 @@ export const englangLogicalFallaciesPart7Data = {
 | "After" or "alongside" is treated as "because" | Causal link | "The writer assumes [A] caused [B] without ruling out [C]." |
 | Only two options, or a chain of ever-worse results | Structure | "The argument ignores [option] / does not support the step from [B] to [C]." |
 | The premise already contains the conclusion, or a key word shifts meaning | Presumption | "The argument assumes what it sets out to prove by [loaded word / shift in meaning]." |
-| An analogy | Possible false analogy | "The two cases differ in [feature], which is the feature the conclusion depends on." |
+| An analogy | Possible weak analogy | "The two cases differ in [feature], which is the feature the conclusion depends on." |
 
 ### The Five-Question Routine (Part 4)
 
@@ -48,8 +48,8 @@ export const englangLogicalFallaciesPart7Data = {
 
 | Caution | In one line |
 |---|---|
-| Do not over-label | A suspicious move is a fallacy only if it fails the look-alike test |
-| Avoid the fallacy fallacy | A flawed argument means "not shown," not "shown false" |
+| Do not over-diagnose | A suspicious move is flawed only if it fails the look-alike test |
+| Do not confuse "not shown" with "shown false" | A flawed argument leaves its claim unsupported, not disproved |
 | Separate effective from sound | Persuading an audience and justifying a claim are different achievements |
 
 ## What Each Model Text Teaches
@@ -102,7 +102,7 @@ export const englangLogicalFallaciesPart7Data = {
               'Mill writes with irony, while Schopenhauer means each of his tricks literally'
             ],
             correctAnswer: 1,
-            explanation: 'Mill grants that a widespread practice can be "a strong presumption" when it rests on experience, while Schopenhauer says universal opinion is "not even a probability." The first option reverses the two writers, Mill makes no personal attacks, and Schopenhauer is the one writing with irony.'
+            explanation: 'Mill grants that a widespread practice can be "a strong presumption" when it rests on experience, while Schopenhauer says universal opinion is "not even a probability." Saying that Mill rejects every appeal to custom reverses the two writers, Mill makes no personal attacks, and Schopenhauer is the one writing with irony.'
           }
         ]
       }
@@ -119,16 +119,15 @@ export const englangLogicalFallaciesPart7Data = {
 | **Warrant** | The often unstated link explaining why the support leads to the claim |
 | **Unstated assumption** | Something that must be true for the argument to work but is never said |
 | **Negation test** | Deny a possible assumption; if the argument collapses, the argument depends on it |
-| **Relevance failure** | Support that does not bear on the claim (ad hominem, tu quoque, popularity, red herring) |
-| **Sufficiency failure** | Relevant support that is too thin or unrepresentative (hasty generalization, biased sample) |
-| **Post hoc** | Treating "after" as "because" |
-| **Correlation as cause** | Treating "together" as "because," ignoring a possible third factor |
-| **Begging the question** | A premise that already assumes the conclusion |
-| **Equivocation** | A key word that shifts meaning partway through an argument |
-| **False analogy** | A comparison that fails in the feature the conclusion depends on |
-| **Reductio ad absurdum** | Following an opponent's premise to a conclusion the opponent must reject |
+| **Relevance failure** | Support that does not bear on the claim (an attack on the person, a charge of hypocrisy, an appeal to popularity, a change of subject) |
+| **Sufficiency failure** | Relevant support that is too thin or unrepresentative (too few cases, a skewed sample) |
+| **Causal leap** | Treating "after" or "together" as "because" without ruling out other causes or a third factor |
+| **Assuming the conclusion** | A premise that already contains what the argument sets out to prove |
+| **Shifting term** | A key word that changes meaning partway through an argument |
+| **Weak analogy** | A comparison that fails in the feature the conclusion depends on |
+| **Applying a rule consistently** | Following an opponent's premise to a conclusion the opponent must reject (Lincoln) |
 | **Proves too much** | Said of a rule that would justify far more than its user intends |
-| **Fallacy fallacy** | Concluding a claim is false because an argument for it is flawed |
+| **Not shown vs. shown false** | A flawed argument leaves its claim unsupported; it does not prove the claim false |
 | **Sound** | Said of reasoning whose support genuinely justifies its claim |
 | **Qualification** | Limiting a claim's scope or certainty to match the evidence (skill 3.C, 4.C) |
 `
@@ -190,7 +189,7 @@ export const englangLogicalFallaciesPart7Data = {
       exercise: {
         questions: [
           {
-            question: 'Which thesis for an argument essay about school start times best avoids a false dilemma?',
+            question: 'Which thesis for an argument essay about school start times best avoids reducing the issue to two options?',
             options: [
               'Either schools start later or students will keep failing their morning classes for good.',
               'Schools should start later, and anyone who disagrees has forgotten being a teenager.',

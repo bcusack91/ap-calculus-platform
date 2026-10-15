@@ -7,61 +7,58 @@ export const englitPoeticStructureFormPart2Data = {
       content: `
 # 📐 Poetic Structure and Form
 
-**Part 2 of 7 — Meter: Feet, Line Length and Scansion**
+**Part 2 of 7 — Rhythm and the Line: Pattern, Line Breaks and Emphasis**
 
 ---
 
 | Section |
 |---------|
-| 📖 Stress: The Raw Material of Meter |
-| The Five Feet You Need |
-| Naming Line Length |
-| Scanning Four Famous Lines |
-| When the Pattern Bends: Substitution |
+| 📖 Rhythm as a Pattern |
+| Breaking the Pattern for Emphasis |
+| Line Length |
+| Line Breaks: End-Stopped, Enjambed, Interrupted |
+| Common Misconceptions |
 
-> 🔑 **Key Concept:** Skill **3.C** asks you to explain the function of structure in a text, and in poetry structure begins with the line. **Meter** is a regular pattern of stressed and unstressed syllables within lines. Knowing the names lets you describe a rhythm precisely. What earns credit is explaining what the rhythm, and especially a break in it, does.
+> 🔑 **Key Concept:** Skill **3.C** asks you to explain the function of structure in a text, and in poetry structure begins with the line. A closed form sets up "predictable patterns in the structure of lines, stanzas, meter, and rhyme" that "develop relationships among ideas in the poem" (CED STR-1.U), and "line and stanza breaks contribute to the development and relationship of ideas" (STR-1.D). Your job is to hear the pattern, notice where it breaks, and explain what the break does.
 `
     },
     {
-      id: 'englitpo2-feet',
+      id: 'englitpo2-rhythm',
       type: 'text' as const,
       content: `
-## 📖 Stress: The Raw Material of Meter
+## 📖 Rhythm as a Pattern
 
-Every English word of more than one syllable has a stressed syllable: be-**LIEVE**, **GAR**-den, un-der-**STAND**. In a sentence, important words (nouns, verbs, adjectives) usually take stress, and small words (the, a, of, and) usually do not. Meter organizes these natural stresses into a pattern.
+Every English word of more than one syllable has a stressed syllable: be-**LIEVE**, **GAR**-den, un-der-**STAND**. In a sentence, important words (nouns, verbs, adjectives) usually take stress, and small words (the, a, of, and) usually do not. Many poems arrange these natural stresses into a **regular rhythm**, a beat the ear learns to expect. In this part, capital letters mark the stressed syllables.
 
-Notation: **x** marks an unstressed syllable and **/** a stressed one. A **foot** is the basic unit of the pattern.
+> Shall I compare thee to a summer's day?
+>
+> — William Shakespeare, Sonnet 18, 1609
 
-## The Five Feet You Need
+Read aloud, the line alternates light and heavy syllables: shall i com-**PARE** thee **TO** a **SUM**-mer's **DAY**. Five beats, evenly spaced, close to the rhythm of ordinary speech. Because the pattern is so steady, the reader settles into it, and that is exactly what makes a break in it noticeable.
 
-| Foot | Pattern | Sounds like | Example word or phrase | Movement |
-|---|---|---|---|---|
-| **Iamb** (iambic) | x / | da-DUM | be-LIEVE, the SUN | Rising; closest to ordinary English speech |
-| **Trochee** (trochaic) | / x | DUM-da | TI-ger, GAR-den | Falling; insistent, chant-like |
-| **Anapest** (anapestic) | x x / | da-da-DUM | in-ter-VENE, on the FOLD | Rising; galloping, quick |
-| **Dactyl** (dactylic) | / x x | DUM-da-da | MUR-mur-ing, HAP-pi-ly | Falling; rolling, sometimes mournful |
-| **Spondee** (spondaic) | / / | DUM-DUM | HEART-BREAK, ROUGH WINDS | Heavy; slows the line; usually a substitute foot, not a whole meter |
+Rhythms differ in speed and weight, and the difference can carry meaning:
 
-**Rising** meters (iambic, anapestic) end each foot on a stress. **Falling** meters (trochaic, dactylic) begin each foot on a stress.
+> The Assyrian came down like the wolf on the fold,
+> And his cohorts were gleaming in purple and gold;
+>
+> — Lord Byron, "The Destruction of Sennacherib," 1815
 
-## Naming Line Length
+Here two light syllables run before every stress: and his **CO**-horts were **GLEAM**-ing in **PUR**-ple and **GOLD**. The line gallops. The poem describes an army sweeping down on Jerusalem, and the rhythm supplies the hoofbeats.
 
-| Feet per line | Name | Example meter |
+> Tiger, tiger, burning bright
+> In the forests of the night,
+>
+> — William Blake, "The Tiger," *Songs of Experience*, 1794 (Blake spelled it "Tyger"; this edition modernizes)
+
+Blake's lines start and end on a stress: **TI**-ger, **TI**-ger, **BURN**-ing **BRIGHT**. Seven syllables, four heavy beats, and nothing soft at the line's end. The rhythm sounds like a chant, or a hammer, which suits a poem full of a blacksmith's tools ("What the hammer? what the chain?").
+
+| What you hear | Example | What it can do (context decides) |
 |---|---|---|
-| 3 | trimeter | iambic trimeter |
-| 4 | tetrameter | trochaic tetrameter, anapestic tetrameter |
-| 5 | pentameter | iambic pentameter (the sonnet's line, Shakespeare's verse) |
-| 6 | hexameter | dactylic hexameter (Homer's line, imitated in English) |
+| A steady, speech-like alternation | Sonnet 18, line 1 | Sets a calm norm that later lines can break |
+| Two light syllables before each stress | Byron | Speed, momentum, a gallop |
+| Lines that begin and end on a stress | Blake | Insistence, a chant, a hammer blow |
 
-A full name combines the two: **iambic pentameter** means five iambs per line, about ten syllables.
-
-### How to Scan a Line
-
-1. Read the line aloud naturally. Do not force a beat.
-2. Mark the stressed syllable in each word of two or more syllables.
-3. Decide on one-syllable words by importance: "SUN" is stressed, "the" is not.
-4. Look for the dominant pattern, then divide the line into feet.
-5. Note where the line departs from the pattern. That is usually what is worth writing about.
+Poets and teachers have traditional names for these patterns, but the AP exam will not ask you to name a meter; it asks what the rhythm does at a particular moment.
 `
     },
     {
@@ -73,148 +70,143 @@ A full name combines the two: **iambic pentameter** means five iambs per line, a
       exercise: {
         questions: [
           {
-            question: `A line of iambic pentameter contains`,
+            question: `In Byron's "And his cohorts were gleaming in purple and gold," the two light syllables before each stress chiefly create`,
             options: [
-              `five feet, each an unstressed syllable then a stressed one`,
-              `five syllables, each one carrying an equal stress`,
-              `five trochees, each a stressed syllable then an unstressed one`,
-              `five stressed syllables followed by five unstressed ones`
-            ],
-            correctAnswer: 0,
-            explanation: `"Penta-" means five and an iamb is unstressed-stressed (da-DUM), so the line has five da-DUM feet, about ten syllables. Stressed-unstressed is a trochee, and meter alternates stresses rather than grouping them.`
-          },
-          {
-            question: `Which word, spoken naturally, forms a dactyl?`,
-            options: [
-              `"tomorrow"`,
-              `"murmuring"`,
-              `"understand"`,
-              `"forgive"`
+              `a slow, mournful pace that suits a funeral`,
+              `a galloping speed that matches the army's charge`,
+              `a hesitant rhythm that suggests the soldiers' fear`,
+              `a conversational ease that makes the scene seem ordinary`
             ],
             correctAnswer: 1,
-            explanation: `"MUR-mur-ing" is stressed-unstressed-unstressed, a dactyl. "to-MOR-row" puts the stress in the middle, "un-der-STAND" is an anapest, and "for-GIVE" is an iamb.`
+            explanation: `Light syllables hurry the reader from stress to stress, so the line moves like horses at a gallop, matching an army that "came down like the wolf on the fold." Nothing in the line slows it to a funeral pace, the cohorts "gleaming in purple and gold" are confident rather than afraid, and the rush of the rhythm is far from casual talk.`
+          },
+          {
+            question: `Why does a poem's regular rhythm matter to an analysis of its meaning?`,
+            options: [
+              `It proves the poem was written to be set to music.`,
+              `It sets an expectation, so a break in the beat draws attention.`,
+              `It shows that every line in the poem carries equal weight.`,
+              `It reveals to the reader which historical period produced the poem.`
+            ],
+            correctAnswer: 1,
+            explanation: `A steady beat teaches the ear what to expect, so the moments that depart from it stand out and invite interpretation. A regular rhythm does not prove a poem was meant for music, regularity is what makes some lines weigh more than others when they break it, and rhythm alone cannot date a poem.`
           }
         ]
       }
     },
     {
-      id: 'englitpo2-scan',
+      id: 'englitpo2-departures',
       type: 'text' as const,
       content: `
-## Scanning Four Famous Lines
+## Breaking the Pattern for Emphasis
 
-### 1. Iambic pentameter
+Once a rhythm is established, the most meaningful moments are often the places where a line refuses it.
 
-> Shall I compare thee to a summer's day?
+### A Heavy Start: Shakespeare
+
+> Rough winds do shake the darling buds of May,
 >
 > — William Shakespeare, Sonnet 18, 1609
 
-| Foot | 1 | 2 | 3 | 4 | 5 |
-|---|---|---|---|---|---|
-| Syllables | shall I | com-PARE | thee TO | a SUM | mer's DAY |
+The sonnet's lines usually begin with a light syllable. This one cannot: "Rough" is too strong a word to leave unstressed, and "winds" is stressed too. **ROUGH WINDS** do **SHAKE** the **DAR**-ling **BUDS** of **MAY**. Two heavy stresses side by side make the line feel buffeted before it settles back into its usual alternation. The roughness of the weather is in the rhythm.
 
-Ten syllables, five feet. Some readers stress "I" in the first foot; that flexibility is normal. A line does not have to be mechanically perfect to be iambic. The meter is the pattern the line keeps returning to.
+### Words That Labor: Pope
 
-### 2. Trochaic tetrameter
-
-> Tiger, tiger, burning bright
-> In the forests of the night,
+> When Ajax strives some rock's vast weight to throw,
+> The line too labours, and the words move slow;
 >
-> — William Blake, "The Tiger," *Songs of Experience*, 1794 (Blake spelled it "Tyger"; this edition modernizes)
+> — Alexander Pope, *An Essay on Criticism*, 1711
 
-| Foot | 1 | 2 | 3 | 4 |
-|---|---|---|---|---|
-| Syllables | TI-ger | TI-ger | BURN-ing | BRIGHT |
+Pope describes the effect while he produces it. "Rock's vast weight" crowds three heavy one-syllable words together, so the voice has to push through them, just as Ajax strains to lift the rock. The second line says so outright: "The line too labours, and the words move slow."
 
-Four stresses, but only seven syllables: the last foot is missing its unstressed syllable. Ending on a stress makes each line land hard. Combined with the falling trochees, the rhythm sounds like a chant, or a hammer. That suits a poem full of a blacksmith's tools ("What the hammer? what the chain?").
+| Kind of break | What happens to the reader | Example |
+|---|---|---|
+| Two or more stresses in a row | The line slows and gains weight | "Rough winds," "rock's vast weight" |
+| A stress where a light syllable was expected, at the start of a line | A jolt of emphasis on the first word | "Rough" |
+| A run of light syllables | The line speeds up and lightens | Byron's gallop |
+| A line that ends on a strong stress | A clipped, emphatic close | Blake's "bright" and "night" |
 
-### 3. Anapestic tetrameter
-
-> And his cohorts were gleaming in purple and gold;
->
-> — Lord Byron, "The Destruction of Sennacherib," 1815
-
-| Foot | 1 | 2 | 3 | 4 |
-|---|---|---|---|---|
-| Syllables | and his CO | horts were GLEAM | ing in PUR | ple and GOLD |
-
-Two light syllables before every stress create a galloping speed. The poem describes an army sweeping down on Jerusalem, and the meter supplies the hoofbeats.
-
-### 4. Dactylic hexameter
-
-> This is the forest primeval. The murmuring pines and the hemlocks,
->
-> — Henry Wadsworth Longfellow, *Evangeline*, 1847
-
-| Foot | 1 | 2 | 3 | 4 | 5 | 6 |
-|---|---|---|---|---|---|---|
-| Syllables | THIS is the | FOR-est pri | ME-val. The | MUR-mur-ing | PINES and the | HEM-locks |
-
-Five dactyls and a final two-syllable foot: the long, rolling line of Greek and Latin epic. Longfellow chose it for an epic of the Acadians' exile, and its falling, wave-like motion suits the poem's mood of loss.
+The same kind of break can do different work in different poems. Always tie the effect to what the words are saying at that moment.
 `
     },
     {
       id: 'englitpo2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Name the Meter** 🔍
+**What Does the Rhythm Do?** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: `"TI-ger, TI-ger, BURN-ing BRIGHT" is mainly ___`,
-            options: ['trochaic tetrameter', 'iambic tetrameter', 'anapestic trimeter', 'dactylic hexameter']
+            label: `The two heavy stresses that open "Rough winds do shake the darling buds of May" make the line feel ___`,
+            options: ['buffeted, as if by the gusts', 'hurried, as if racing toward summer', 'gentle, as if the buds were safe', 'hesitant, as if the speaker were unsure']
           },
           {
-            label: `"and his CO / horts were GLEAM / ing in PUR / ple and GOLD" is ___`,
-            options: ['anapestic tetrameter', 'dactylic tetrameter', 'iambic pentameter', 'trochaic tetrameter']
+            label: `Pope's line about Ajax moves slowly because ___`,
+            options: ['heavy stressed words pile up', 'the line asks a question', 'the line has no verbs at all', 'every word in it rhymes']
           },
           {
-            label: `A line with five da-DUM feet is ___`,
-            options: ['iambic pentameter', 'trochaic pentameter', 'iambic hexameter', 'anapestic pentameter']
+            label: `Blake's lines, which begin and end on a stress, sound most like ___`,
+            options: ['hammer blows in a forge', 'a whispered lullaby', 'a relaxed conversation', 'waves lapping on sand']
           }
         ],
-        correctAnswers: ['trochaic tetrameter', 'anapestic tetrameter', 'iambic pentameter'],
-        hint1: 'Stressed-unstressed feet, four stresses.',
-        hint2: 'Two light syllables, then a stress, four times.',
-        hint3: 'Unstressed-stressed, five times.',
-        explanation: 'Blake\'s line falls in four trochees (the last one shortened), Byron\'s gallops in four anapests, and five iambs make iambic pentameter.'
+        correctAnswers: ['buffeted, as if by the gusts', 'heavy stressed words pile up', 'hammer blows in a forge'],
+        hint1: 'Two stresses side by side add weight and force.',
+        hint2: 'Say "rock\'s vast weight" aloud and notice how hard it is to hurry.',
+        hint3: 'A line that lands on a strong beat lands hard.',
+        explanation: 'Shakespeare\'s opening stresses enact the gusts, Pope\'s crowded stressed words make the line labor as Ajax does, and Blake\'s lines land on strong beats like a smith\'s hammer.'
       }
     },
     {
-      id: 'englitpo2-substitution',
+      id: 'englitpo2-lines',
       type: 'text' as const,
       content: `
-## When the Pattern Bends: Substitution
+## Line Length
 
-Meter sets up an expectation, and the most meaningful moments come when a line breaks it. A **substitution** replaces the expected foot with a different one.
+A poem's lines need not all be the same length, and a sudden change in length is itself a break in the pattern. Short lines slow reading down: each one ends quickly, and the white space after it forces a pause. Long lines can sweep a reader along or make a thought feel crowded.
 
-> Rough winds do shake the darling buds of May,
+> Break, break, break,
+> On thy cold gray stones, O Sea!
+> And I would that my tongue could utter
+> The thoughts that arise in me.
 >
-> — William Shakespeare, Sonnet 18, 1609
+> — Alfred, Lord Tennyson, "Break, Break, Break," 1842
 
-| Foot | 1 | 2 | 3 | 4 | 5 |
-|---|---|---|---|---|---|
-| Expected (iamb) | x / | x / | x / | x / | x / |
-| Actual | ROUGH WINDS | do SHAKE | the DAR | ling BUDS | of MAY |
+The first line is only three words, all stressed. Each "break" is a wave hitting the rocks, and the reader cannot hurry past any of them. The longer lines that follow, with their many light syllables, sound like speech straining to come out, which is just what the speaker says he cannot manage: he wishes his tongue "could utter / The thoughts that arise in me."
 
-The line opens with a **spondee**: "Rough" is too strong a word to leave unstressed. Two heavy stresses in a row make the line itself feel buffeted before it settles back into iambs. The roughness of the weather is in the rhythm.
+## Line Breaks: End-Stopped, Enjambed, Interrupted
 
-| Common variation | Pattern | Typical effect (context decides) |
+| Term | What happens | Effect to look for |
 |---|---|---|
-| **Trochaic inversion** at the start of an iambic line | / x instead of x / | A jolt of emphasis on the first word |
-| **Spondee** | / / | Weight, slowness, force |
-| **Pyrrhic** (two unstressed) | x x | Speed, lightness, then a stronger next stress |
-| **Feminine ending** (extra unstressed syllable at line end) | ... x / x | A softer, falling close |
-| **Catalexis** (a missing final syllable) | ... / | A clipped, emphatic ending, as in Blake |
+| **End-stopped line** | The line ends where a phrase or sentence ends, usually at punctuation | Firmness, completion, a settled thought |
+| **Enjambment** | The sentence runs past the end of the line without a pause | Momentum, suspense, a word left hanging at the line's edge |
+| **Caesura** | A strong pause inside a line, usually at punctuation | A break in thought; weight on the words before or after it |
 
-### Common Misconceptions
+A line break always makes the reader pause slightly, even in the middle of a sentence. Poets use that pause to isolate words.
 
-- **"Every line must scan perfectly."** No real poem does. Meter is a norm that lines vary.
-- **"A meter has a fixed emotional meaning."** Trochees are not always angry, and anapests are not always cheerful. Byron's galloping anapests describe a slaughter.
-- **"Naming the meter is analysis."** "The poem is in iambic pentameter" earns nothing on its own. Explain what a regularity or a break does at a specific moment.
+> so much depends
+> upon
+>
+> a red wheel
+> barrow
+>
+> glazed with rain
+> water
+>
+> beside the white
+> chickens
+>
+> — William Carlos Williams, "The Red Wheelbarrow," *Spring and All*, 1923
 
-> 🔑 **AP Connection:** Section I questions rarely ask you to name a meter. They ask about the *effect* of rhythm, such as why a line slows or why an ending feels emphatic. In an essay, one precise sentence on a substitution at a key moment is worth more than a paragraph labeling feet.
+Every line break interrupts a phrase, and two split ordinary compound words: "wheel / barrow," "rain / water." Separated, "wheel," "barrow," "rain" and "water" each become things to look at on their own. The breaks slow the reader to the pace of someone looking closely, which is the poem's point: so much "depends / upon" seeing ordinary things clearly.
+
+## Common Misconceptions
+
+- **"Every line must follow the beat perfectly."** No real poem does. A regular rhythm is a norm that lines vary, and the variations are where meaning gathers.
+- **"A rhythm has a fixed emotional meaning."** A gallop is not always cheerful: Byron's galloping lines describe a slaughter. Read the rhythm against the words.
+- **"Naming the pattern is analysis."** Calling a line "regular" or "fast" earns nothing on its own. Explain what the regularity, or the break in it, does at a specific moment.
+
+> 🔑 **AP Connection:** Section I questions about rhythm and lines ask about *effect*: why a line slows, why an ending feels emphatic, what a line break emphasizes. In an essay, one precise sentence on a break in rhythm at a key moment is worth more than a paragraph describing the poem's beat.
 `
     },
     {
@@ -226,18 +218,18 @@ The line opens with a **spondee**: "Rough" is too strong a word to leave unstres
       exercise: {
         questions: [
           {
-            question: `The opening spondee of "Rough winds do shake the darling buds of May" primarily serves to`,
+            question: `In "The Red Wheelbarrow," splitting "wheel / barrow" and "rain / water" across line breaks primarily serves to`,
             options: [
-              `slow the line with weight, enacting the gusts' force`,
-              `quicken the line to suggest the speed of a summer day`,
-              `signal that the sonnet is about to change its rhyme scheme`,
-              `soften the image so the buds seem safe from all harm`
+              `make the reader look at each ordinary word as a thing in itself`,
+              `hide the poem's subject until the final line is reached`,
+              `imitate the sound of rain falling on the farmyard`,
+              `show that the speaker is uncertain how to spell such ordinary words`
             ],
             correctAnswer: 0,
-            explanation: `Two stressed syllables in a row give the line a heavy, buffeted start that matches "Rough winds." Stacked stresses slow rather than quicken a line, the rhyme scheme does not change, and the image threatens the buds rather than protecting them.`
+            explanation: `Breaking the compounds isolates "wheel," "barrow," "rain" and "water," slowing the reader to the pace of close looking that the poem values. The wheelbarrow is named by the fourth line, the breaks create pauses rather than a rain sound, and nothing suggests the speaker cannot spell.`
           },
           {
-            question: `In Blake's "Tiger, tiger, burning bright," the missing final unstressed syllable of each line chiefly creates`,
+            question: `In Blake's "Tiger, tiger, burning bright," ending each line on a strong stress chiefly creates`,
             options: [
               `a hesitant, trailing close`,
               `a hammering, emphatic close`,
@@ -245,18 +237,18 @@ The line opens with a **spondee**: "Rough" is too strong a word to leave unstres
               `a smooth link into the next line`
             ],
             correctAnswer: 1,
-            explanation: `Ending on a stress ("BRIGHT," "NIGHT") makes each line land hard, like a hammer blow, which suits the poem's forge imagery. A trailing close needs an unstressed ending, the chant is far from casual, and the stressed end-stop separates rather than links the lines.`
+            explanation: `Ending on a stress ("BRIGHT," "NIGHT") makes each line land hard, like a hammer blow, which suits the poem's forge imagery. A trailing close needs a soft final syllable, the chant is far from casual, and the stressed close separates rather than links the lines.`
           },
           {
-            question: `A student writes, "Byron uses anapestic tetrameter." The best revision would`,
+            question: `A student writes, "Byron's poem has a fast rhythm." The best revision would`,
             options: [
-              `replace the term with a simpler word such as "rhythm"`,
-              `explain how the galloping meter conveys the army's onrush`,
-              `add the number of syllables in every line of the poem`,
-              `argue that anapests always express a cheerful mood`
+              `explain how the galloping rhythm conveys the army's onrush`,
+              `replace "fast" with a more formal word such as "rapid"`,
+              `add the number of syllables found in each line`,
+              `argue that a fast rhythm always signals a cheerful, lighthearted mood`
             ],
-            correctAnswer: 1,
-            explanation: `Naming the meter is only a start; the analysis lies in connecting its speed to the charging army. A vaguer word, a syllable count, or a false rule about anapests would not add interpretation.`
+            correctAnswer: 0,
+            explanation: `Describing the rhythm is only a start; the analysis lies in connecting its speed to the charging army. A more formal synonym, a syllable count or a false rule that fast rhythms are cheerful would add no interpretation.`
           }
         ]
       }

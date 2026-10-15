@@ -6,10 +6,12 @@ import type { LessonData } from '../registry'
  * 7 parts, gold-standard structure modeled on the algebra1-completing-the-square pilot:
  * teach (text) → interactive check (multiple-choice / dropdown-select / input-boxes) →
  * close reading / worked applications → Exit Quiz. Concept-forward (non-math topic), so
- * checks favor multiple-choice + dropdown, with a few short-answer input-boxes (scansion
- * counts, term recall, rhyme-scheme letters). Poem excerpts are public domain except one short fair-use line (Dylan Thomas) in the forms table.
- * LaTeX uses DOUBLED backslashes (template-literal strings). Scansion marks use ˘ (unstressed)
- * and ´ (stressed) Unicode glyphs to render reliably in markdown.
+ * checks favor multiple-choice + dropdown, with a few short-answer input-boxes (single words
+ * drawn from the passages and the teaching). Poem excerpts are public domain except one short
+ * fair-use title reference (Dylan Thomas) in the closed-forms table.
+ * LaTeX uses DOUBLED backslashes (template-literal strings). Stressed syllables are marked
+ * with capitals or bold; per the AP Lit CED (STR-1.U note) no item asks students to name a
+ * meter, a rhyme scheme or a fixed form.
  */
 export const parts: LessonData[] = [
   // ───────────────────────── PART 1 ─────────────────────────
@@ -47,7 +49,7 @@ Skilled readers pass through three levels, in order. Skipping a level is the mos
 |-------|--------------------|--------------|
 | **1. Literal (paraphrase)** | What is literally happening, line by line? | "The speaker is looking at a stopped clock." |
 | **2. Inferential (connotation)** | What is implied — tone, attitude, situation? | "The stopped clock suggests grief has frozen time." |
-| **3. Interpretive (claim)** | What does the poem *mean*, and how does form prove it? | "The poem uses a broken meter to enact the speaker's broken sense of time." |
+| **3. Interpretive (claim)** | What does the poem *mean*, and how does form prove it? | "The poem breaks its steady rhythm to enact the speaker's broken sense of time." |
 
 > 💡 **You must earn level 3.** A claim about meaning is only persuasive if it is grounded in level-1 accuracy. If you misread the literal situation, every "deep" reading built on top of it collapses. Always paraphrase first — even silently — before you interpret.`,
       },
@@ -167,130 +169,151 @@ $$\\text{technique} \\;+\\; \\boxed{?_1} \\;+\\; \\boxed{?_2}$$
         type: 'text' as const,
         content: `# 🥁 Complex Poetic Analysis
 
-**Part 2 of 7 — Meter & Scansion**
+**Part 2 of 7 — Rhythm & Emphasis: Where the Beat Breaks**
 
 ---
 
-> 🔑 **The Idea:** Meter is the pattern of stressed and unstressed syllables in a line. **Scansion** is the act of marking that pattern. Meter matters because *departures* from it create emphasis — and emphasis is meaning. We mark **˘** for an unstressed syllable and **´** for a stressed one.`,
+### Topics in This Part
+
+| Section |
+|---------|
+| Hearing the Beat |
+| Where the Beat Breaks |
+| Line Length, Pauses & Repetition |
+
+> 🔑 **The Idea:** Rhythm is the pattern of stressed and unstressed syllables in a line. In a closed form, a steady rhythm is one of the "predictable patterns" that "develop relationships among ideas in the poem" (CED STR-1.U). A steady beat sets up an expectation, so a *departure* from it creates emphasis, and emphasis is meaning. In this part, capital letters mark stressed syllables. The AP exam will not ask you to name a meter or count its feet; it asks what the rhythm does.`,
       },
       {
-        id: 'cpa2-feet',
+        id: 'cpa2-beat',
         type: 'text' as const,
-        content: `## The Common Feet
+        content: `## Hearing the Beat
 
-A **foot** is a small unit of stressed/unstressed syllables. The four you must know cold:
+Every English word of more than one syllable has a stressed syllable: a-**BOVE**, **GAR**-den, re-**MEM**-ber. In a sentence, important words (nouns, verbs, adjectives) usually take the stress, and small words (the, a, of, to) usually do not.
 
-| Foot | Pattern | Stress sketch | Example word/phrase |
-|------|---------|---------------|---------------------|
-| **Iamb** | unstressed–stressed | ˘ ´ | a·**bove**, the **sun** |
-| **Trochee** | stressed–unstressed | ´ ˘ | **gar**·den, **ti**·ger |
-| **Anapest** | unstressed–unstressed–stressed | ˘ ˘ ´ | in·ter·**rupt**, on the **road** |
-| **Dactyl** | stressed–unstressed–unstressed | ´ ˘ ˘ | **mer**·ri·ly, **el**·e·phant |
+Ordinary English speech tends to alternate light and heavy syllables ("to-**DAY**," "i **WENT**," "the **DOG**"), and many poems build that alternation into a steady beat:
 
-The **iamb** is the natural rhythm of English — most ordinary phrases ("today," "I went," "the dog") are iambic. That is why deviations *stand out*.
+> "Shall I com**pare** thee **to** a **sum**mer's **day**?" — Shakespeare, Sonnet 18
 
-> 💡 **Quick test:** Say the word naturally and notice where your voice rises in volume/pitch. "GAR-den" stresses the first syllable → trochee. "a-BOVE" stresses the second → iamb.`,
+Five evenly spaced beats, close to natural speech. Because the pattern is so familiar, a line that breaks it *stands out*.
+
+| Listen for | Question to ask |
+|------------|-----------------|
+| A steady beat | Is there a norm the poem keeps returning to? |
+| Stresses crowded together | Where does a line slow down or gain force? |
+| A run of light syllables | Where does a line speed up or lighten? |
+| A change in line length | Where does a line suddenly shrink or stretch? |
+
+> 💡 **Quick test:** Say the line aloud at a natural pace and notice where your voice rises in volume and pitch. Don't force a beat the words won't carry.`,
       },
       {
-        id: 'cpa2-q-feet',
+        id: 'cpa2-q-beat',
         type: 'multiple-choice' as const,
-        content: `**Identify the Foot** 🎯`,
+        content: `**Concept Check** 🎯`,
         exercise: {
           questions: [
             {
-              question: 'The natural stress of the word "remember" (re·MEM·ber) follows which pattern?',
-              options: ['˘ ´ ˘ (amphibrach)', '´ ˘ ˘ (dactyl)', '˘ ˘ ´ (anapest)', '´ ˘ (trochee)'],
-              correctAnswer: 0,
-              explanation: 're-MEM-ber is unstressed–stressed–unstressed (˘ ´ ˘), an amphibrach. The point: hear the stress on the middle syllable. The dactyl would be STRESSED first (MEM is not first).',
+              question: 'Why does it matter for analysis that so much English speech falls into a light-heavy alternation?',
+              options: [
+                'Poems that keep the pattern are always calm and orderly in tone.',
+                'Such a pattern proves that a poem was written to be sung aloud.',
+                'The pattern is familiar, so a line that breaks it stands out.',
+                'A line that keeps the pattern has no stresses worth analyzing.',
+              ],
+              correctAnswer: 2,
+              explanation: 'A familiar beat creates an expectation, so a departure draws the reader\'s attention to exactly that spot. A steady rhythm can carry any tone, it proves nothing about music, and every line has stresses whose placement can matter.',
             },
             {
-              question: 'Which phrase is naturally **trochaic** (´ ˘)?',
-              options: ['"Tiger, tiger"', '"the road ahead"', '"to be or not"', '"in the deep"'],
+              question: 'A poem moving in a steady, gentle beat suddenly has a line that begins "Stop! Look! Wait!" The most likely purpose of the crowded stresses is to —',
+              options: [
+                'Halt the reader with urgency at that moment',
+                'Show that the poet has lost control of the rhythm',
+                'Make the line flow more smoothly into the next',
+                'Signal that the poem has switched to a new form',
+              ],
               correctAnswer: 0,
-              explanation: '"TI-ger, TI-ger" stresses the first syllable of each word: ´ ˘ ´ ˘ — trochaic (the modernized spelling of the opening of Blake\'s "The Tyger": "Tyger Tyger, burning bright"). "the road aHEAD" and "to BE or NOT" are iambic; "in the DEEP" is anapestic.',
+              explanation: 'Three stressed words, each followed by a hard stop, break the gentle norm and force the reader to halt, which is the urgency the words demand. A deliberate break is a choice, not a loss of control; the stops interrupt rather than smooth the flow; and one emphatic line does not change the poem\'s form.',
             },
           ],
         },
       },
       {
-        id: 'cpa2-meter-names',
+        id: 'cpa2-departure',
         type: 'text' as const,
-        content: `## Naming a Meter: Foot × Count
+        content: `## Where the Beat Breaks
 
-A meter's full name is the **foot** plus the **number of feet per line**:
+Poets rarely keep a rhythm perfectly. A line that swaps a light syllable for a heavy one, or piles stresses together, draws the ear to exactly that spot.
 
-| Feet per line | Name |
-|---------------|------|
-| 1 | monometer |
-| 2 | dimeter |
-| 3 | trimeter |
-| 4 | tetrameter |
-| 5 | pentameter |
-| 6 | hexameter |
+> "Batter my heart, three-person'd God, for you
+> As yet but knock, breathe, shine, and seek to mend;"
+>
+> — John Donne, Holy Sonnet 14 (modernized spelling)
 
-So **iambic pentameter** = five iambs per line (10 syllables, ˘ ´ × 5) — the meter of Shakespeare's sonnets and most English blank verse.
+The sonnet's lines usually open on a light syllable. This one opens on a heavy one: **BAT**-ter my **HEART**. Donne literally *batters* the rhythm with a stress on "Batter," enacting the violence he begs for. In the next line, "knock, breathe, shine," three stressed one-syllable verbs, each cut off by a comma, describe God's gentle efforts so far. Later the speaker demands harsher ones: "Your force to break, blow, burn, and make me new." The stresses crowd together as the verbs grow violent.
 
-### Worked Scansion
+> "Break, break, break,
+> On thy cold gray stones, O Sea!"
+>
+> — Alfred, Lord Tennyson, "Break, Break, Break," 1842
 
-Shakespeare, Sonnet 18, line 1:
+Tennyson's first line has no light syllables at all: three stressed words, three waves hitting the rocks. The reader cannot hurry past any of them.
 
-> "Shall **I** com·**pare** thee **to** a **sum**·mer's **day**?"
-
-Marking it:  ˘ ´ | ˘ ´ | ˘ ´ | ˘ ´ | ˘ ´  — five iambs → **iambic pentameter**.
-
-> 🔑 **Count syllables first.** Ten syllables in a regular line almost always means pentameter; eight often means tetrameter. Then determine which syllables are stressed to name the foot.`,
+> ⚠️ **Don't just describe — interpret the break.** "The line has an unusual rhythm" earns nothing on its own. The points come from connecting the jolt to the poem's meaning (here, Donne's plea to be forcibly remade, or the relentless sea against which Tennyson's speaker grieves).`,
       },
       {
-        id: 'cpa2-input-count',
+        id: 'cpa2-input-rhythm',
         type: 'input-boxes' as const,
-        content: `**Count the Feet** 🧮
+        content: `**Find the Emphasis** ✍️
 
-Answer with a whole number.
-
-**1)** A line of **iambic pentameter** contains how many *feet*?
-**2)** That same line contains how many *syllables*?
-**3)** A line of **trochaic tetrameter** contains how many *syllables*?`,
+One word each, lowercase.`,
         exercise: {
-          boxes: 3,
-          correctAnswers: ['5', '10', '8'],
-          hint1: 'The prefix tells the count: penta- = 5, tetra- = 4.',
-          hint2: 'An iamb has 2 syllables; a trochee has 2 syllables. Multiply feet × syllables-per-foot.',
-          hint3: 'Pentameter = 5 feet. 5 iambs × 2 = 10 syllables. Tetrameter = 4 feet; 4 trochees × 2 = 8 syllables.',
-          explanation: '1) 5 feet (penta = 5).  2) 5 iambs × 2 syllables = 10.  3) 4 trochees × 2 syllables = 8. Counting syllables is your fastest first check on a meter.',
+          questions: [
+            { question: 'The first word of Donne\'s line, whose heavy opening stress enacts the violence the speaker asks for', answer: 'batter', acceptableAnswers: ['"batter"'] },
+            { question: 'The word Tennyson repeats three times in his short opening line', answer: 'break', acceptableAnswers: ['"break"'] },
+            { question: 'A steady beat sets up an ___ that a break in the rhythm can surprise', answer: 'expectation', acceptableAnswers: ['expectations'] },
+          ],
+          hint1: 'Donne wants God to strike his heart like a battering ram.',
+          hint2: 'The same word is in the poem\'s title, three times.',
+          hint3: 'What a reader comes to expect from a pattern is an ex________.',
+          explanation: '1) "Batter" lands a stress where the line would normally start light. 2) "Break" three times, all stressed, pounds like waves. 3) A steady beat creates an expectation, and a break in it creates emphasis.',
         },
       },
       {
-        id: 'cpa2-substitution',
+        id: 'cpa2-lines',
         type: 'text' as const,
-        content: `## Why Meter Matters: The Meaningful Deviation
+        content: `## Line Length, Pauses & Repetition
 
-Poets rarely keep a meter perfectly. A **substitution** (swapping one foot for another) draws the ear to exactly that spot.
+**Line length.** Short lines slow reading: each ends quickly and the white space forces a pause. Tennyson's three-word opening line is a pause after every word. Longer lines can sweep the reader along or make a thought feel crowded.
 
-The most common is the **trochaic substitution at the start of an iambic line** — a stressed first syllable that jolts the reader awake:
+**Pauses inside the line.** Commas, colons and dashes interrupt the beat. Donne's "knock, breathe, shine" stops three times in four words, so each verb gets its own weight.
 
-> "**Bat**·ter my **heart**, three-**per**·soned **God**" — John Donne
+**Repetition in a steady beat.** When a rhythm stays perfectly even, repetition can make it almost hypnotic:
 
-The line is iambic pentameter, but the first foot is reversed (**BAT**-ter = ´ ˘). Donne literally *batters* the meter with a stress on "Batter," enacting the violence he begs for.
+> "The woods are lovely, dark and deep,
+> But I have promises to keep,
+> And miles to go before I sleep,
+> And miles to go before I sleep."
+>
+> — Robert Frost, "Stopping by Woods on a Snowy Evening," 1923
 
-> ⚠️ **Don't just label — interpret the break.** Naming "trochaic substitution" earns nothing on its own. The points come from connecting the metrical jolt to the poem's meaning (here, the speaker's plea to be forcibly remade).`,
+The last line is repeated word for word, in the same even rhythm. The first time, "sleep" means a night's rest at the end of a journey. Said again, slowly, in the drowsy beat of a poem about dark woods, the line invites a weightier reading: the long work of a life, and the rest that ends it.
+
+> 🔑 **Rhythm questions on the exam are effect questions.** Ask: *Where does the beat change, and what is happening in the words at that exact moment?*`,
       },
       {
-        id: 'cpa2-dd-meter',
+        id: 'cpa2-dd-rhythm',
         type: 'dropdown-select' as const,
-        content: `**Name the Meter** 🔽
-
-Combine the **foot** with the **line length** to name each meter.`,
+        content: `**What Does the Rhythm Do?** 🔽`,
         exercise: {
           dropdowns: [
-            { label: 'Five iambs per line (˘ ´ ×5):', options: ['Iambic pentameter', 'Iambic tetrameter', 'Trochaic pentameter', 'Dactylic hexameter'] },
-            { label: 'Four trochees per line (´ ˘ ×4):', options: ['Trochaic tetrameter', 'Iambic tetrameter', 'Trochaic pentameter', 'Anapestic trimeter'] },
-            { label: 'Three anapests per line (˘ ˘ ´ ×3):', options: ['Anapestic trimeter', 'Iambic trimeter', 'Dactylic trimeter', 'Anapestic tetrameter'] },
+            { label: 'Donne\'s stressed opening, "Batter my heart," ___', options: ['enacts the violence the speaker asks for', 'softens the speaker\'s plea to God', 'slows the line to a gentle prayer', 'hides the line\'s meaning from readers'] },
+            { label: 'Tennyson\'s "Break, break, break," with no light syllables, sounds like ___', options: ['waves pounding on stones', 'a calm and gentle tide', 'a lively folk dance', 'a polite conversation'] },
+            { label: 'Frost\'s repeated last line, in an unchanged even beat, invites the reader to hear "sleep" as ___', options: ['more than a night\'s rest', 'a cheerful promise to wake', 'proof the journey is over', 'the name of a nearby village'] },
           ],
-          correctAnswers: ['Iambic pentameter', 'Trochaic tetrameter', 'Anapestic trimeter'],
-          hint1: 'Name = foot type + line-length word (penta = 5, tetra = 4, tri = 3).',
-          hint2: 'The foot tells the first word (iambic/trochaic/anapestic); the count tells the second.',
-          hint3: 'Five iambs = iambic pentameter; four trochees = trochaic tetrameter; three anapests = anapestic trimeter.',
-          explanation: 'A meter is named foot + count: 5 iambs → iambic pentameter, 4 trochees → trochaic tetrameter, 3 anapests → anapestic trimeter. Watch the foot word AND the length word — mixing them up is a common slip.',
+          correctAnswers: ['enacts the violence the speaker asks for', 'waves pounding on stones', 'more than a night\'s rest'],
+          hint1: 'What does the speaker want God to do to his heart?',
+          hint2: 'Three heavy words, each like a blow.',
+          hint3: 'Why say the same line twice?',
+          explanation: 'Donne\'s opening stress batters the line as he asks God to batter his heart; Tennyson\'s three stressed words pound like waves; and Frost\'s repetition lets "sleep" carry a second, heavier meaning beyond a night\'s rest.',
         },
       },
     ],
@@ -314,47 +337,52 @@ Combine the **foot** with the **line length** to name each meter.`,
       {
         id: 'cpa3-rhyme-scheme',
         type: 'text' as const,
-        content: `## Rhyme Scheme Notation
+        content: `## Rhyme: Linking Sounds and Ideas
 
-A **rhyme scheme** labels line-end sounds with letters: the first sound is **A**, the next new sound **B**, and so on; repeats reuse the earlier letter.
+Rhyme is a link. Lines that end on the same sound are heard as belonging together, and a returning sound tells the ear that a unit is complete. In a closed form, these "predictable patterns" of rhyme "develop relationships among ideas in the poem" (CED STR-1.U). The exam will not ask you to label a rhyme scheme; it asks what the pattern, or a particular rhyme pair, does.
 
-Take this quatrain (Frost, "Stopping by Woods..."):
+Take the first two stanzas of Frost's "Stopping by Woods on a Snowy Evening" (1923):
 
-> "Whose woods these are I think I know. **(A)**
-> His house is in the village though; **(A)**
-> He will not see me stopping here **(B)**
-> To watch his woods fill up with snow. **(A)**"
+> "Whose woods these are I think I know.
+> His house is in the village though;
+> He will not see me stopping here
+> To watch his woods fill up with snow.
+>
+> My little horse must think it queer
+> To stop without a farmhouse near
+> Between the woods and frozen lake
+> The darkest evening of the year."
 
-So the scheme is **A A B A**.
+Three lines of the first stanza share a sound (know / though / snow). The odd one out, "here," does not stay unpaired: its sound becomes the main rhyme of the next stanza (queer / near / year), whose own odd word, "lake," is picked up in turn by the third. Each stanza hands a sound forward, so the poem moves like the traveler, one stop leading on to the next. In the last stanza all four lines rhyme (deep / keep / sleep / sleep), and the chain stops: the pattern itself signals the ending.
 
-### Types of Rhyme
+### Kinds of Rhyme
 
 | Type | Definition | Example |
 |------|------------|---------|
 | **End rhyme** | rhyme at line ends | know / though |
 | **Internal rhyme** | rhyme *within* a line | "I bring fresh **showers** for the thirsting **flowers**" |
+| **Exact rhyme** | the sounds match fully | night / light |
 | **Slant (near) rhyme** | approximate, imperfect rhyme | "**eyes** / **Paradise**" or "**soul** / **all**" |
-| **Eye rhyme** | looks like it should rhyme, but doesn't aloud | "love / move," "cough / bough" |
 
 > 💡 **Slant rhyme** is an analysis goldmine: when a poet *almost* rhymes, the friction can signal something unresolved or "off" in the poem's world (think of Emily Dickinson's deliberate near-rhymes).`,
       },
       {
         id: 'cpa3-dd-rhyme',
         type: 'dropdown-select' as const,
-        content: `**Label the Rhyme** 🔽
+        content: `**Hear the Rhyme** 🔽
 
-Classify each described rhyme.`,
+Say each pair aloud, then answer.`,
         exercise: {
           dropdowns: [
-            { label: '"flood" rhymed with "blood":', options: ['Perfect (true) rhyme', 'Slant rhyme', 'Eye rhyme'] },
-            { label: '"prove" rhymed with "love":', options: ['Perfect (true) rhyme', 'Slant rhyme', 'Eye rhyme'] },
-            { label: '"hall" rhymed with "soul":', options: ['Perfect (true) rhyme', 'Slant rhyme', 'Eye rhyme'] },
+            { label: '"flood" rhymed with "blood":', options: ['Exact rhyme', 'Slant rhyme', 'No rhyme'] },
+            { label: '"hall" rhymed with "soul":', options: ['Exact rhyme', 'Slant rhyme', 'No rhyme'] },
+            { label: 'A slant rhyme on a poem\'s final lines tends to leave the ending feeling:', options: ['Unsettled', 'Resolved', 'Comic'] },
           ],
-          correctAnswers: ['Perfect (true) rhyme', 'Eye rhyme', 'Slant rhyme'],
-          hint1: 'Say each pair aloud. Do the stressed vowel sounds match exactly, approximately, or only on the page?',
-          hint2: '"flood/blood" truly rhyme aloud. "prove/love" look alike but sound different — that is eye rhyme.',
-          hint3: '"hall/soul" share consonants but the vowels differ — an approximate, slant rhyme.',
-          explanation: 'flood/blood = perfect (matching sound). prove/love = eye rhyme (matching spelling, mismatched sound). hall/soul = slant rhyme (close but imperfect sound). Reading aloud is the only reliable test.',
+          correctAnswers: ['Exact rhyme', 'Slant rhyme', 'Unsettled'],
+          hint1: 'Say each pair aloud. Do the stressed vowel sounds match exactly or only approximately?',
+          hint2: '"flood/blood" truly rhyme aloud; "hall/soul" share the final "l" but the vowels differ.',
+          hint3: 'A near miss denies the ear the full chime it expects.',
+          explanation: 'flood/blood = exact rhyme (matching sound). hall/soul = slant rhyme (close but imperfect sound). A slant rhyme at the close withholds the full chime of an exact rhyme, so the ending tends to feel unresolved, which a poet can use to signal that something remains "off."',
         },
       },
       {
@@ -387,9 +415,9 @@ Classify each described rhyme.`,
             },
             {
               question: 'A line packed with hard *k*, *t*, and *g* sounds describing a battlefield best illustrates —',
-              options: ['Cacophony echoing violence', 'Euphony that softens the violence', 'Assonance that slows the whole line', 'Eye rhyme linking the line endings'],
+              options: ['Cacophony echoing violence', 'Euphony that softens the violence', 'Assonance that slows the whole line', 'Slant rhyme linking the line endings'],
               correctAnswer: 0,
-              explanation: 'Clustered harsh stop-consonants create cacophony; pairing that grating texture with a violent subject is "sound echoing sense." Euphony would be the opposite (smooth, pleasing), assonance is repeated vowel sounds, and eye rhyme concerns spelling at line ends.',
+              explanation: 'Clustered harsh stop-consonants create cacophony; pairing that grating texture with a violent subject is "sound echoing sense." Euphony would be the opposite (smooth, pleasing), assonance is repeated vowel sounds, and slant rhyme concerns near-matching sounds at line ends.',
             },
           ],
         },
@@ -397,23 +425,25 @@ Classify each described rhyme.`,
       {
         id: 'cpa3-input-scheme',
         type: 'input-boxes' as const,
-        content: `**Write the Scheme** 🔤
+        content: `**Follow the Rhyme** 🔤
 
-Read this stanza and give the rhyme scheme as **four capital letters, no spaces** (e.g. \`ABAB\`). The first new sound is A, the next new sound B.
+Read this stanza, then answer with one word each, lowercase.
 
 > "I wandered lonely as a **cloud**
 > That floats on high o'er vales and **hills**,
 > When all at once I saw a **crowd**,
 > A host, of golden **daffodils**;"
-
-**1)** Rhyme scheme of the stanza = ?  *(four letters)*`,
+>
+> — William Wordsworth, "I wandered lonely as a cloud," 1807`,
         exercise: {
-          boxes: 1,
-          correctAnswers: ['ABAB'],
-          hint1: 'Label line 1 "A." Then ask whether line 2 rhymes with it — if not, it becomes "B."',
-          hint2: 'cloud/crowd rhyme; hills/daffodils rhyme. The rhyming lines should share a letter.',
-          hint3: 'Lines 1 and 3 (cloud/crowd) = A; lines 2 and 4 (hills/daffodils) = B → A,B,A,B.',
-          explanation: 'cloud = A, hills = B, crowd = A, daffodils = B → ABAB, an alternating/cross rhyme. This is the opening of Wordsworth\'s "I Wandered Lonely as a Cloud."',
+          questions: [
+            { question: 'The lonely "cloud" of line 1 is answered by a rhyme in line 3. The rhyming word is', answer: 'crowd', acceptableAnswers: ['"crowd"'] },
+            { question: 'The stanza\'s last rhyme holds back its subject until the final word. That word, the flowers the poem is about, is', answer: 'daffodils', acceptableAnswers: ['"daffodils"', 'daffodil'] },
+          ],
+          hint1: 'Which end word sounds like "cloud"?',
+          hint2: 'Which end word sounds like "hills"?',
+          hint3: 'cloud / crowd; hills / daffodils.',
+          explanation: 'The rhyme links the solitary "cloud" to the "crowd" that ends its loneliness, so the sound pattern carries the stanza\'s change from isolation to company. The second rhyme saves "daffodils" for the stanza\'s last word, so the subject arrives as the stanza closes.',
         },
       },
     ],
@@ -548,41 +578,46 @@ Type the single best term (one word, lowercase) for the figure of speech in each
 
 ---
 
-> 🔑 **The Idea:** *Form* is the container (sonnet, ode, free verse); *structure* is how the argument moves through the poem (the turn, the stanza breaks); *syntax* is how sentences are built across the lines. All three are meaning-bearing, not decoration.`,
+> 🔑 **The Idea:** *Form* is the container, closed (built on predictable patterns, like a sonnet) or open; *structure* is how the argument moves through the poem (the turn, the stanza breaks); *syntax* is how sentences are built across the lines. All three are meaning-bearing, not decoration.`,
       },
       {
         id: 'cpa5-forms',
         type: 'text' as const,
-        content: `## Fixed Forms to Recognize
+        content: `## Closed and Open Forms
 
-| Form | Key features |
-|------|--------------|
-| **Shakespearean (English) sonnet** | 14 lines, iambic pentameter, **ABAB CDCD EFEF GG**; turn often at the closing couplet |
-| **Petrarchan (Italian) sonnet** | 14 lines; **octave (ABBAABBA)** poses a problem, **sestet (CDECDE/CDCDCD)** resolves it; turn (volta) at line 9 |
-| **Villanelle** | 19 lines, two refrains repeating in a fixed pattern (e.g. "Do not go gentle into that good night") |
-| **Ode** | long lyric of praise/serious meditation on a subject |
-| **Elegy** | a poem of mourning for the dead |
-| **Free verse** | no fixed meter or rhyme — but line breaks and rhythm are still deliberate |
-| **Blank verse** | unrhymed **iambic pentameter** (Milton, much of Shakespeare's dialogue) |
+The CED sorts poems by how predictable their patterns are. The exam will not ask you to name a form; it asks what the form's patterns do.
 
-> 💡 **The volta (turn)** is the most testable structural feature of a sonnet. It is the pivot where the argument shifts — a "but," "yet," or change of direction. In a Shakespearean sonnet it often lands at the final couplet; in a Petrarchan one, near line 9.`,
+| | What it is | What its patterns can do |
+|------|------------|--------------|
+| **Closed form** | Predictable patterns of line, stanza, rhythm and rhyme (STR-1.U), e.g. a sonnet, or a poem built on returning refrains such as "Do not go gentle into that good night" | Set up expectations: where the argument will turn, which line will return, when the poem will close |
+| **Open form** | No predictable pattern of lines or stanzas, "but they may still have structures that develop relationships between ideas" (STR-1.V) | Line breaks, white space, syntax and repetition take over the shaping |
+
+### What closed-form patterns do
+
+| Pattern | Relationship it can create |
+|---------|----------------------------|
+| Fourteen lines grouped 8 + 6 | Problem in the first eight lines, response in the last six |
+| Three groups of four lines, then two | Variations on an idea, then a summing-up or twist in the closing couplet |
+| A refrain that returns in new contexts | Obsession; a line whose meaning shifts each time it returns |
+| A steady beat without rhyme | Speech-like thinking aloud, with line breaks and pauses doing the shaping |
+
+> 💡 **The turn** is the structural feature to look for in any sonnet. It is the pivot where the argument shifts — a "but," "yet," or change of direction (sometimes called the *volta*). It often comes near line 9, but it can be held back to the closing couplet.`,
       },
       {
         id: 'cpa5-dd-form',
         type: 'dropdown-select' as const,
-        content: `**Match the Form** 🔽`,
+        content: `**What Does the Form Do?** 🔽`,
         exercise: {
           dropdowns: [
-            { label: '14 lines ending in a rhymed couplet (…EFEF GG):', options: ['Shakespearean sonnet', 'Villanelle', 'Free verse', 'Elegy'] },
-            { label: 'Unrhymed iambic pentameter:', options: ['Blank verse', 'Petrarchan sonnet', 'Ode', 'Free verse'] },
-            { label: 'A poem mourning someone\'s death:', options: ['Elegy', 'Ode', 'Sonnet', 'Villanelle'] },
-            { label: 'No regular meter or rhyme scheme at all:', options: ['Free verse', 'Blank verse', 'Sonnet', 'Villanelle'] },
+            { label: 'A sonnet whose last two lines form a rhymed couplet often uses them to:', options: ['Sum up or twist the argument', 'Introduce a brand-new speaker', 'Repeat the poem\'s opening line', 'List new images at random'] },
+            { label: 'In a closed form, a refrain that returns in new contexts tends to:', options: ['Gather new meaning each time', 'Keep exactly the same meaning', 'Replace the need for a turn', 'Mark only the poem\'s ending'] },
+            { label: 'An open-form poem with no steady beat or rhyme still shapes meaning through:', options: ['Line breaks and white space', 'Its fixed rhyme pattern', 'Its regular beat', 'Its required refrains'] },
           ],
-          correctAnswers: ['Shakespearean sonnet', 'Blank verse', 'Elegy', 'Free verse'],
-          hint1: 'Watch the two traps: "blank verse" rhymes nothing but IS metered; "free verse" has neither meter nor rhyme.',
-          hint2: 'A closing couplet "GG" after three quatrains is the Shakespearean signature.',
-          hint3: 'Elegy = mourning the dead; ode = praise. Blank verse = metered-but-unrhymed; free verse = neither.',
-          explanation: 'The closing GG couplet marks a Shakespearean sonnet. Unrhymed iambic pentameter = blank verse. A mourning poem = elegy. No meter AND no rhyme = free verse. The blank-verse/free-verse distinction (metered vs. unmetered) is a classic exam trap.',
+          correctAnswers: ['Sum up or twist the argument', 'Gather new meaning each time', 'Line breaks and white space'],
+          hint1: 'Two rhymed lines at the very end are a natural place for closure — or a surprise.',
+          hint2: 'The words stay the same; what changes around them?',
+          hint3: 'Without beat or rhyme, what is left to shape the poem on the page?',
+          explanation: 'A closing couplet tends to sum up or twist what came before. A refrain\'s words stay fixed while its context changes, so its meaning shifts. An open form gives up a steady beat and rhyme but still shapes meaning through line breaks, white space, syntax and repetition (CED STR-1.V).',
         },
       },
       {
@@ -616,10 +651,10 @@ Read line 1 alone — "I am not yet so old" — and it sounds like a confident c
         exercise: {
           questions: [
             {
-              question: 'A Petrarchan sonnet poses a question across its octave, then begins line 9 with "Yet—". This "Yet" most likely marks the —',
-              options: ['Volta, the turn from problem to response', 'Caesura, a pause in the middle of a line', 'Refrain, a line repeated from the octave', 'Couplet, the closing pair of rhymed lines'],
-              correctAnswer: 0,
-              explanation: 'In a Petrarchan sonnet the volta (turn) characteristically falls around line 9, opening the sestet; a pivot word like "Yet" signals the shift from the octave\'s problem to the sestet\'s response. A Petrarchan sonnet has no refrain and does not close on a rhymed couplet.',
+              question: 'A sonnet poses a question across its first eight lines, then begins line 9 with "Yet—". The most defensible reading of this "Yet" is that it —',
+              options: ['Signals that the speaker has abandoned the question', 'Signals a shift from the problem toward a response', 'Signals that a second speaker now begins to talk', 'Signals that the poem will restate its question'],
+              correctAnswer: 1,
+              explanation: 'In a sonnet grouped eight and six, the turn often falls at line 9, and a pivot word like "Yet" signals the move from the problem posed in the first eight lines to a response in the last six. "Yet" introduces a qualification or answer, not a retreat from the question, a new speaker or a mere restatement.',
             },
             {
               question: 'A poet enjambs a line so that "she let it / go" splits the verb across the break. The most defensible reading is that the break —',
@@ -812,7 +847,7 @@ One-word, lowercase answers.
 
 ---
 
-You now command the whole toolkit: levels of reading, meter, sound, figurative language, form/structure/syntax, and speaker/tone. In this final part we **assemble** them into a single argument and finish with a mastery check.`,
+You now command the whole toolkit: levels of reading, rhythm, sound, figurative language, form/structure/syntax, and speaker/tone. In this final part we **assemble** them into a single argument and finish with a mastery check.`,
       },
       {
         id: 'cpa7-method',
@@ -824,7 +859,7 @@ You now command the whole toolkit: levels of reading, meter, sound, figurative l
 | **1. Paraphrase** | Get the literal situation right (level 1). Who speaks, to whom, about what? |
 | **2. Identify the turn** | Where does the poem shift — argument, tone, or image? Mark the volta/break. |
 | **3. Read the diction** | Find the loaded words; build a precise tone from connotation. |
-| **4. Map the devices** | Note sound, figures, meter *only where they do work*. |
+| **4. Map the devices** | Note sound, figures, rhythm *only where they do work*. |
 | **5. Connect form to meaning** | How do structure/syntax/line breaks reinforce the idea? |
 | **6. State a complex thesis** | technique + effect + meaning, accounting for any ambiguity. |
 
@@ -844,7 +879,7 @@ You now command the whole toolkit: levels of reading, meter, sound, figurative l
 
 **Diction & imagery:** "yellow leaves, or none, or few" — the hesitant, self-correcting list (leaves → none → few) gropes toward bareness, the wavering revisions enacting a mind reluctant to settle on so few. "Bare ruined choirs" is a **metaphor**: the empty branches become the roofless ruins of a church where birds (a choir) once sang — fusing autumn, death, and lost music.
 
-**Form:** Shakespearean sonnet, iambic pentameter. The quatrain piles one image of decline on another; the regular meter lends a calm, almost accepting cadence.
+**Form:** the opening quatrain of a sonnet. It piles one image of decline on another; the steady, regular beat lends a calm, almost accepting cadence.
 
 **Tone:** not panic but **resigned, tender melancholy** — the beauty of the imagery makes the coming loss poignant rather than terrifying.
 
@@ -886,20 +921,19 @@ You now command the whole toolkit: levels of reading, meter, sound, figurative l
       {
         id: 'cpa7-input-final',
         type: 'input-boxes' as const,
-        content: `**Term Recall** ✍️
+        content: `**Close-Reading Recall** ✍️
 
-Single-word, lowercase answers.
-
-**1)** The pivot/turn in a sonnet, where the argument shifts, is the ?  *(Italian-derived term)*
-**2)** A comparison stating one thing *is* another, with no "like" or "as," is a ?
-**3)** When a sentence runs past the line break with no pause, that is ?`,
+Single-word, lowercase answers.`,
         exercise: {
-          boxes: 3,
-          correctAnswers: ['volta', 'metaphor', 'enjambment'],
-          hint1: 'The sonnet "turn" is an Italian word meaning, literally, "turn."',
+          questions: [
+            { question: 'In Sonnet 73, the bare boughs become "ruined choirs": the empty branches are pictured as the ruins of a', answer: 'church', acceptableAnswers: ['chapel', 'cathedral', 'abbey'] },
+            { question: 'A comparison stating one thing *is* another, with no "like" or "as," is a', answer: 'metaphor', acceptableAnswers: ['a metaphor'] },
+            { question: 'When a sentence runs past the line break with no pause, that is', answer: 'enjambment', acceptableAnswers: ['enjambement', 'enjambed'] },
+          ],
+          hint1: 'Choirs once sang inside this building; now it stands roofless.',
           hint2: '"Hope IS the thing with feathers" — direct identity, no "like/as."',
           hint3: 'A line break crossed without a pause, carrying the sense forward, is en-________.',
-          explanation: '1) volta — the structural turn (≈ line 9 in a Petrarchan sonnet; the couplet in a Shakespearean one). 2) metaphor — a direct, unsignaled comparison. 3) enjambment — running the sense past the line break.',
+          explanation: '1) church — the leafless boughs become a roofless church where the birds, its former choir, once sang. 2) metaphor — a direct, unsignaled comparison. 3) enjambment — running the sense past the line break.',
         },
       },
       {
@@ -911,15 +945,15 @@ Answer all three to finish the lesson.`,
         exercise: {
           questions: [
             {
-              question: 'A line of poetry reads: "and MILES to GO be-FORE I SLEEP." Counting the stresses, this line is closest to —',
+              question: 'In Sonnet 73\'s "When yellow leaves, or none, or few, do hang," the commas that break up the list chiefly —',
               options: [
-                'Iambic tetrameter',
-                'Trochaic tetrameter',
-                'Iambic pentameter',
-                'Anapestic trimeter',
+                'Speed the line toward its final image of the singing birds',
+                'Enact a mind hesitating to admit how bare the boughs are',
+                'Show that the speaker cannot remember what season it is',
+                'Separate three different trees the speaker is describing',
               ],
-              correctAnswer: 0,
-              explanation: '"and MILES | to GO | be-FORE | I SLEEP" = four unstressed–stressed feet (˘ ´ ˘ ´ ˘ ´ ˘ ´) → iambic tetrameter (Frost\'s famous closing lines). Eight syllables in four iambs; pentameter would need ten.',
+              correctAnswer: 1,
+              explanation: 'Each comma is a pause in which the speaker revises the count, from "yellow leaves" to "none" to "few," so the line gropes toward bareness the way a mind reluctant to face decline would. The pauses slow rather than speed the line, the season is clearly late autumn, and the list describes one set of boughs, not three trees.',
             },
             {
               question: 'A poem\'s tone is "wistful" in its first three stanzas but turns "defiant" in the last. The most useful analytical move is to —',

@@ -103,6 +103,8 @@ The end of a sentence is its position of greatest emphasis. Writers often place 
 | **Inversion** | Normal word order reversed | "Such treatment I did not expect" (object before subject) |
 
 Balance suggests control and judgment. A writer who weighs one clause against another sounds as if he has weighed the ideas themselves. That impression of control is part of the writer's ethos.
+
+> 💡 The names in these tables are shorthand. The AP exam will not ask you to supply them; it asks what a sentence's structure does for the writer's purpose.
 `
     },
     {
@@ -170,17 +172,17 @@ Each "till" clause is built the same way, so the reader hears the pattern and wa
 
 1) A clause that cannot stand alone as a sentence is a _______ clause.
 
-2) A series of three parallel elements, such as "one act of assistance, one word of encouragement, or one smile of favour," is a _______.
+2) In "one act of assistance, one word of encouragement, or one smile of favour," the repeated "one" and each smaller item shrink Johnson's request to almost _______.
 
-3) A sentence that holds its main clause or point until the end is a _______ sentence.
+3) A sentence that holds its main clause until the end places its greatest _______ on the final words.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['dependent', 'tricolon', 'periodic'],
+        correctAnswers: ['dependent', 'nothing', 'emphasis'],
         hint1: 'Also called subordinate.',
-        hint2: 'From the Greek for "three limbs."',
-        hint3: 'The opposite of loose or cumulative.',
-        explanation: 'A dependent clause cannot stand alone, three parallel parts form a tricolon, and a sentence that saves its main point for the end is periodic.'
+        hint2: 'An act, then a word, then only a smile: the request keeps shrinking.',
+        hint3: 'The end of a sentence is its position of greatest ___.',
+        explanation: 'A dependent clause cannot stand alone; Johnson\'s shrinking three-part series reduces the kindness he asked for to almost nothing, which sharpens the charge against Chesterfield; and a sentence that saves its main clause for the end puts its emphasis on the final words.'
       }
     },
     {

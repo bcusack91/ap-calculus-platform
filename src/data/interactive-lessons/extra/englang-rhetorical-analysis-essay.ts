@@ -291,14 +291,14 @@ Read the closing of a graduation speech:
       {
         id: 'rae3-device-id',
         type: 'multiple-choice' as const,
-        content: `**Identify the Device** 🎯`,
+        content: `**What the Choice Does** 🎯`,
         exercise: {
           questions: [
             {
-              question: '"We had everything before us, we had nothing before us." This pairing of opposites is an example of:',
-              options: ['Juxtaposition', 'Anaphora', 'Analogy', 'Understatement'],
+              question: '"We had everything before us, we had nothing before us." Setting these opposite clauses side by side chiefly serves to:',
+              options: ['Capture an age that held hope and despair at once', 'Show that the speaker has changed his mind mid-sentence', 'Signal that the speaker exaggerates for comic effect', 'Prove with evidence that the age was a prosperous one'],
               correctAnswer: 0,
-              explanation: 'Placing "everything" directly against "nothing" sets contrasts side by side, sharpening the sense of a contradictory age — that is **juxtaposition.** (The repeated "we had" is also anaphora, but the *contrast* is the dominant move asked about.)',
+              explanation: 'Placing "everything" directly against "nothing" in matching clauses (juxtaposition) sharpens the sense of an age that was both promising and hopeless. The two clauses are a deliberate pairing rather than a change of mind, the tone is not comic, and the sentence offers no evidence of prosperity.',
             },
             {
               question: '"Is it not time, at long last, that we acted?" The speaker asks this to:',

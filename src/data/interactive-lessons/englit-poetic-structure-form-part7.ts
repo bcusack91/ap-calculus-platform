@@ -19,7 +19,7 @@ export const englitPoeticStructureFormPart7Data = {
 | From Structure to Thesis |
 | Mixed Review |
 
-> 🔑 **Key Concept:** Meter, rhyme, stanza, fixed form and line-level choices never work alone. This part reads one sonnet through every structural lens from Parts 2-6, then turns the observations into an argument.
+> 🔑 **Key Concept:** Rhythm, rhyme, stanza, closed form and line-level choices never work alone. This part reads one sonnet through every structural lens from Parts 2-6, then turns the observations into an argument.
 `
     },
     {
@@ -30,16 +30,16 @@ export const englitPoeticStructureFormPart7Data = {
 
 | Part | Tool | Question to ask |
 |---|---|---|
-| 2 | Meter and substitution | What is the base rhythm, and where does a line break it? |
-| 3 | Rhyme and stanza | What does the rhyme scheme group together? Which rhyme pairs comment on each other? |
-| 4 | Fixed forms | What does this form lead a reader to expect, especially about the turn? |
-| 5 | Blank verse, free verse, line-level choices | Where do enjambment, caesura and end-stops fall, and why there? |
+| 2 | Rhythm and the line | What is the base rhythm, and where does a line break it? |
+| 3 | Rhyme and stanza | What do the rhymes group together? Which rhyme pairs comment on each other? |
+| 4 | Closed forms: turns and refrains | What does the pattern lead a reader to expect, especially about the turn? |
+| 5 | Closed and open forms, line-level choices | Where do enjambment, caesura and end-stops fall, and why there? |
 | 6 | Writing about form | How does each structural fact serve the interpretation? |
 
 ### A Structural Reading Sequence
 
-1. Count lines and stanzas; identify the form, if any.
-2. Mark the rhyme scheme and listen for the base meter.
+1. Count lines and stanzas; notice whether the poem follows a predictable pattern (closed form) or not (open form).
+2. Notice which lines rhyme and listen for a steady beat, and for where it breaks.
 3. Find where the sentences end. Note enjambment and strong caesuras.
 4. Locate the turn and compare what comes before and after it.
 5. Look for repeated words or lines and track how their meaning changes.
@@ -78,9 +78,9 @@ export const englitPoeticStructureFormPart7Data = {
       content: `
 ## Reading the Structure Layer by Layer
 
-**Layer 1: Form.** Fourteen lines of iambic pentameter, rhyming ABBAABBA CDDECE. This is a **Petrarchan sonnet**: an octave on two rhyme sounds (away / land / hand / stay / day / planned / understand / pray), then a sestet.
+**Layer 1: Form.** Fourteen five-beat lines grouped 8 + 6: an octave bound by only two rhyme sounds (away / land / hand / stay / day / planned / understand / pray), then a sestet whose rhymes come in looser, more scattered pairings (while / grieve / leave / had / smile / sad). The tightly bound octave holds on; the sestet lets go.
 
-**Layer 2: The turn.** Line 9 opens with "Yet," exactly where the Petrarchan form expects it. The octave asks again and again to be remembered. The sestet reverses the request: if remembering would make the beloved sad, it is "Better by far" to "forget and smile."
+**Layer 2: The turn.** Line 9 opens with "Yet," exactly where an eight-and-six sonnet leads us to expect a turn. The octave asks again and again to be remembered. The sestet reverses the request: if remembering would make the beloved sad, it is "Better by far" to "forget and smile."
 
 **Layer 3: Repetition across the turn.** Track one word:
 
@@ -94,7 +94,7 @@ export const englitPoeticStructureFormPart7Data = {
 
 The poem's structure is a slow release. The octave's imperatives soften into the sestet's conditional "if," and the final couplet places "forget" and "remember" in balanced, opposed lines.
 
-**Layer 4: Meter and substitution.** The meter is regular enough that departures stand out. Line 2 opens with two heavy stresses, "**Gone far** away," a spondee that stretches the distance of death. Line 4, "Nor I half turn to go yet turning stay," packs the hesitation of a parting into its rhythm: "turn ... turning" repeats the motion the lovers make at the door.
+**Layer 4: Rhythm and its breaks.** The beat is regular enough that departures stand out. Line 2 opens with two heavy stresses side by side, "**Gone far** away," which slow the line and stretch the distance of death. Line 4, "Nor I half turn to go yet turning stay," packs the hesitation of a parting into its rhythm: "turn ... turning" repeats the motion the lovers make at the door.
 
 **Layer 5: Line-level choices.** Lines 7-8 run over ("you understand / It will be late"), so the warning that it will be too late arrives at the start of a new line with a jolt. Lines 11-12 are enjambed as well ("leave / A vestige"), and "leave" hangs at the line end, the very word for what remains of the dead.
 
@@ -102,9 +102,9 @@ The poem's structure is a slow release. The octave's imperatives soften into the
 
 | Structural feature | Key evidence | Function |
 |---|---|---|
-| Petrarchan octave/sestet | "Yet" at line 9 | Request reversed into release |
+| Octave/sestet division | "Yet" at line 9 | Request reversed into release |
 | Repetition | "Remember me" x 3, then "forget" | Shows the speaker letting go |
-| Substitution | "Gone far away" | Weight on the distance of death |
+| Break in the rhythm | "Gone far away" | Weight on the distance of death |
 | Enjambment | "you understand / It will be late" | The finality of death lands with force |
 | Balanced final couplet | "forget and smile / ... remember and be sad" | Love expressed as wanting the beloved's happiness more than memory |
 `
@@ -159,7 +159,7 @@ The poem's structure is a slow release. The octave's imperatives soften into the
       content: `
 ## From Structure to Thesis
 
-**Thesis.** "Rossetti uses the Petrarchan sonnet's turn to stage a change of heart: the octave's repeated plea, 'Remember me,' gives way in the sestet to a love generous enough to prefer being forgotten, so that the poem's structure itself becomes an act of letting go."
+**Thesis.** "Rossetti uses the sonnet's turn to stage a change of heart: the octave's repeated plea, 'Remember me,' gives way in the sestet to a love generous enough to prefer being forgotten, so that the poem's structure itself becomes an act of letting go."
 
 **Line of reasoning.**
 1. The octave's repetitions and its enjambed warning ("you understand / It will be late") make memory seem urgent and fragile.
@@ -181,32 +181,32 @@ The poem's structure is a slow release. The octave's imperatives soften into the
       id: 'englitpo7-input',
       type: 'input-boxes' as const,
       content: `
-**Structure Terms** ✍️
+**Structure Words** ✍️
 
-Type one standard term for each description.
+Type one word for each description.
       `,
       exercise: {
         questions: [
           {
-            question: `The turn in a sonnet's argument, often at line 9`,
-            answer: 'volta',
-            acceptableAnswers: ['the volta', 'turn']
+            question: `The one-word signal that opens line 9 of "Remember" and marks its turn`,
+            answer: 'yet',
+            acceptableAnswers: ['"yet"']
           },
           {
-            question: `The final six lines of a Petrarchan sonnet`,
-            answer: 'sestet',
-            acceptableAnswers: ['the sestet', 'sextet']
+            question: `The running of a sentence past a line end without a pause, as in "you understand / It will be late"`,
+            answer: 'enjambment',
+            acceptableAnswers: ['enjambement', 'enjambed', 'run-on']
           },
           {
-            question: `A heavy foot of two stressed syllables, as in "Gone far"`,
-            answer: 'spondee',
-            acceptableAnswers: ['a spondee', 'spondaic']
+            question: `What the speaker finally says it is "Better by far" for the beloved to do, rather than remember and be sad`,
+            answer: 'forget',
+            acceptableAnswers: ['forget and smile', 'to forget']
           }
         ],
-        hint1: 'Italian for "turn."',
-        hint2: 'From the Latin for "six."',
-        hint3: 'DUM-DUM.',
-        explanation: 'The volta marks the sonnet\'s turn, the sestet completes a Petrarchan sonnet, and a spondee places two stresses side by side.'
+        hint1: 'A small word of contrast, like "but."',
+        hint2: 'The opposite of an end-stopped line.',
+        hint3: '"Better by far you should ___ and smile."',
+        explanation: '"Yet" opens the sestet and turns the poem, the warning "you understand / It will be late" is enjambed so its finality lands on a new line, and the speaker ends by preferring that the beloved forget and smile.'
       }
     },
     {
@@ -218,32 +218,32 @@ Type one standard term for each description.
       exercise: {
         questions: [
           {
-            question: `Which pairing of poem and form is accurate?`,
+            question: `Which pairing of poem and structural effect is accurate?`,
             options: [
-              `"Ulysses": blank verse`,
-              `"The House on the Hill": terza rima`,
-              `"Ode to the West Wind": villanelle`,
-              `"In the desert": heroic couplets`
+              `"Ulysses": enjambed lines pull toward a horizon that keeps receding`,
+              `"The House on the Hill": interlocking rhymes drive the poem restlessly forward`,
+              `"Ode to the West Wind": returning refrains circle back to a loss`,
+              `"In the desert": closed couplets make the claims sound like settled wisdom`
             ],
             correctAnswer: 0,
-            explanation: `Tennyson's monologue is unrhymed iambic pentameter. Robinson's poem is a villanelle, Shelley's ode uses terza rima, and Crane writes free verse.`
+            explanation: `Tennyson's sentences pour over line ends toward a world "whose margin fades." The other pairings swap effects among poems: Robinson's refrains circle back to the loss, Shelley's interlocking rhymes drive the ode forward, and settled closed couplets belong to Pope, not to Crane's open-form lines.`
           },
           {
-            question: `Both Wordsworth's "The world is too much with us" and Rossetti's "Remember" are Petrarchan sonnets. They differ chiefly in that`,
+            question: `Both Wordsworth's "The world is too much with us" and Rossetti's "Remember" divide fourteen lines into eight and six. They differ chiefly in that`,
             options: [
               `Wordsworth's turn erupts mid-line, while Rossetti's begins a line`,
               `Wordsworth rhymes his octave, while Rossetti leaves hers unrhymed`,
               `Wordsworth closes with a couplet, while Rossetti closes with a quatrain`,
-              `Wordsworth writes in trimeter, while Rossetti writes in pentameter`
+              `Wordsworth writes short, clipped lines, while Rossetti's lines are long`
             ],
             correctAnswer: 0,
-            explanation: `Wordsworth's volta bursts out after "It moves us not." in the middle of line 9, while Rossetti's "Yet" opens line 9. Both octaves rhyme ABBAABBA, neither sonnet ends with a separate couplet or quatrain, and both are in pentameter.`
+            explanation: `Wordsworth's volta bursts out after "It moves us not." in the middle of line 9, while Rossetti's "Yet" opens line 9. Both octaves are bound by two rhyme sounds, neither sonnet ends with a separate couplet or quatrain, and both use the same five-beat line.`
           },
           {
             question: `A student claims that Keats's "When I have fears" and Rossetti's "Remember" both treat death as something that cuts love short. Which structural observation best supports a comparison of how differently they respond?`,
             options: [
               `Keats's sentence sinks, but Rossetti's turn releases`,
-              `Both poems contain exactly fourteen lines of iambic pentameter verse`,
+              `Both poems contain exactly fourteen lines with five beats in each`,
               `Both poems were published in the nineteenth century by English poets`,
               `Keats rhymes "think" with "sink," while Rossetti rhymes "had" with "sad"`
             ],

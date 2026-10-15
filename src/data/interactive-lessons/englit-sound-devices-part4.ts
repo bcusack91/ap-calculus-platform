@@ -39,7 +39,7 @@ export const englitSoundDevicesPart4Data = {
 | **Short, clipped vowels** ("skims," "flick") | They take little time |
 | **Internal rhyme and alliteration that link words** | Each word seems to pull the next one along |
 
-You do not need to scan meter to hear pace. (Scansion is taught in the Poetic Structure and Form lesson.) Read the line aloud twice, once naturally and once as slowly as you can, and notice where your mouth has to work.
+You do not need to scan meter or name it to hear pace, and the AP exam will not ask you to. Read the line aloud twice, once naturally and once as slowly as you can, and notice where your mouth has to work.
 `
     },
     {

@@ -66,7 +66,7 @@ Lincoln's first sentence states the principle the rest of the note applies: a so
 | 2 | Intellect: the whites are "intellectually the superiors" | Apply it to "the first man you meet with an intellect superior to your own" | The rule depends on a ranking that would place many defenders below someone else |
 | 3 | Interest: "if you make it your interest you have the right" | "if he can make it his interest he has the right to enslave you" | The rule reduces "right" to whatever a person wants, so it protects no one |
 
-This method is called **reductio ad absurdum** (reduction to absurdity): accept the opponent's premise for the sake of argument, follow it consistently, and arrive at a conclusion the opponent must reject. A rule that justifies far more than its user intends is said to **prove too much**.
+The method is simple to describe: **accept the opponent's premise for the sake of argument, apply it consistently, and arrive at a conclusion the opponent must reject.** (Logicians call this reducing an argument to absurdity.) A rule that justifies far more than its user intends is said to **prove too much**.
 
 ### Small Words Doing Large Work
 
@@ -105,7 +105,7 @@ This method is called **reductio ad absurdum** (reduction to absurdity): accept 
               'predicting a chain of events that will follow if the opponent\'s view wins'
             ],
             correctAnswer: 1,
-            explanation: 'Each "By this rule" sentence applies the opponent\'s principle consistently, and the result is a conclusion he must reject. It is not a threat, a citation of precedent, or a slippery-slope prediction; it is the logical consequence of the rule itself.'
+            explanation: 'Each "By this rule" sentence applies the opponent\'s principle consistently, and the result is a conclusion he must reject. It is not a threat, a citation of precedent, or a prediction of escalating events; it is the logical consequence of the rule itself.'
           },
           {
             question: 'Compared with the first two paragraphs, the third paragraph is notable for',
@@ -179,7 +179,7 @@ Later, Euthyphro's newest answer (piety is what pleases the gods) brings him bac
 
 | Move | What Socrates does | The reasoning problem it exposes |
 |---|---|---|
-| 1 | Rejects "doing as I am doing" | An **example is not a definition**. One case cannot supply the standard that judges all cases, which is the problem behind hasty generalization. |
+| 1 | Rejects "doing as I am doing" | An **example is not a definition**. One case cannot supply the standard that judges all cases, the same problem as generalizing from too few cases. |
 | 2 | Asks whether the holy is loved because it is holy, or holy because it is loved | The definition names an **effect** of holiness (the gods' love), not what makes a thing holy |
 | 3 | Shows the final answer returning to "dear to the gods" | The reasoning ends where it began, so it has added **no support**: this is what "circular" means |
 | 4 | States the dilemma: "either we were wrong... or... we are wrong now" | Euthyphro holds two claims that cannot both be true, so at least one must be given up |
@@ -192,7 +192,7 @@ Socrates lets Euthyphro reach each problem through his own answers ("I quite rem
 
 "I make no doubt that you will prove the truth of your words" is ironic: Socrates does doubt it, and the dialogue proves him right. Euthyphro's "Of course" shows a confidence that the rest of the dialogue tests and finds unearned. The irony is not decoration. It sets up the gap between how certain Euthyphro is and how well he can support his certainty.
 
-> 🔑 **AP Connection:** Euthyphro is prosecuting his own father on the strength of a term he cannot define. That is the lesson for your own argument essay: when your thesis rests on a contested word (*fair*, *freedom*, *success*), say what you mean by it. An undefined key term is where circular reasoning and equivocation hide.
+> 🔑 **AP Connection:** Euthyphro is prosecuting his own father on the strength of a term he cannot define. That is the lesson for your own argument essay: when your thesis rests on a contested word (*fair*, *freedom*, *success*), say what you mean by it. An undefined key term is where circular reasoning and shifting meanings hide.
 `
     },
     {
@@ -201,7 +201,7 @@ Socrates lets Euthyphro reach each problem through his own answers ("I quite rem
       content: `
 **Applied Recall** ✍️
 
-1) Following an opponent's premise until it reaches a conclusion the opponent must reject is called reductio ad _______.
+1) Lincoln exposes each of the defender's rules by applying it _______, to the defender as well as to others.
 
 2) Socrates objects that "doing as I am doing" is an _______, not a definition.
 
@@ -209,11 +209,11 @@ Socrates lets Euthyphro reach each problem through his own answers ("I quite rem
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['absurdum', 'example', 'circular'],
-        hint1: 'Latin: "reduction to the ___."',
+        correctAnswers: ['consistently', 'example', 'circular'],
+        hint1: 'The opposite of applying a rule only when it suits you: the same way every time.',
         hint2: 'Socrates says he did not ask for "two or three" of these.',
         hint3: 'Socrates says the argument goes "round in a ___."',
-        explanation: 'Lincoln uses reductio ad absurdum, Socrates rejects an example offered as a definition, and an argument that returns to its starting point is circular because it adds no support.'
+        explanation: 'Lincoln applies each rule consistently until it condemns its own defender, Socrates rejects an example offered as a definition, and an argument that returns to its starting point is circular because it adds no support.'
       }
     },
     {

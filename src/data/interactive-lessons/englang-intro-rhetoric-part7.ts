@@ -114,7 +114,7 @@ Note how the qualifier "**foolish** consistency" matters: Emerson does not rejec
       id: 'englangi7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Name the Choice in Emerson** 🔍
+**What Each Choice Does in Emerson** 🔍
       `,
       exercise: {
         dropdowns: [
@@ -123,8 +123,8 @@ Note how the qualifier "**foolish** consistency" matters: Emerson does not rejec
             options: ['rhetorical question', 'concession', 'antithesis', 'statistic']
           },
           {
-            label: '"and Socrates, and Jesus, and Luther, and Copernicus" uses ___',
-            options: ['antimetabole', 'polysyndeton', 'understatement', 'persona']
+            label: 'Repeating "and" in "and Socrates, and Jesus, and Luther, and Copernicus" makes the list feel ___',
+            options: ['hesitant', 'piled up', 'ironic', 'casual']
           },
           {
             label: 'The list of misunderstood thinkers functions as ___',
@@ -135,11 +135,11 @@ Note how the qualifier "**foolish** consistency" matters: Emerson does not rejec
             options: ['an opening question', 'a concluding maxim', 'a counterargument', 'a statement of fact']
           }
         ],
-        correctAnswers: ['rhetorical question', 'polysyndeton', 'evidence for a claim', 'a concluding maxim'],
+        correctAnswers: ['rhetorical question', 'piled up', 'evidence for a claim', 'a concluding maxim'],
         hint1: 'The question expects the reader to supply the answer.',
-        hint2: 'The repeated conjunction is the clue.',
+        hint2: 'Each "and" gives one more name its own weight.',
         hint3: 'The examples support a generalization, which the last sentence then states as a rule.',
-        explanation: 'The question voices the reader\'s doubt. Repeating "and" between items is polysyndeton. The thinkers are examples offered as evidence, and the final sentence compresses them into a maxim that concludes the reasoning.'
+        explanation: 'The question voices the reader\'s doubt. Repeating "and" between items gives each name its own weight, so the examples pile up until the pattern feels undeniable. The thinkers are examples offered as evidence, and the final sentence compresses them into a maxim that concludes the reasoning.'
       }
     },
     {

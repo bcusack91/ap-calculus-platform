@@ -7,7 +7,7 @@ export const englangLogicalFallaciesPart5Data = {
       content: `
 # ⚠️ Logical Fallacies
 
-**Part 5 of 7 — Nuance and Misconceptions: Over-Labeling, the Fallacy Fallacy, and Schopenhauer's *Art of Controversy***
+**Part 5 of 7 — Nuance and Misconceptions: Over-Diagnosing, "Not Shown" vs. "Shown False," and Schopenhauer's *Art of Controversy***
 
 ---
 
@@ -19,7 +19,7 @@ export const englangLogicalFallaciesPart5Data = {
 | Effective Is Not the Same as Sound |
 | When Emotion, Authority, and Tradition Are Legitimate |
 
-> 🔑 **Key Concept:** Fallacy vocabulary is a sharp tool, and sharp tools cut both ways. Students who have just learned the names often find fallacies everywhere, call every emotional appeal manipulative, and treat a flawed argument as proof that its conclusion is false. Each of these is itself a reasoning error. This part teaches you to use the vocabulary with the care the AP rubric rewards.
+> 🔑 **Key Concept:** Spotting flawed reasoning is a sharp tool, and sharp tools cut both ways. Students who have just learned to look for flaws often find them everywhere, call every emotional appeal manipulative, and treat a flawed argument as proof that its conclusion is false. Each of these is itself a reasoning error. This part teaches you to judge reasoning with the care the AP rubric rewards.
 `
     },
     {
@@ -28,15 +28,15 @@ export const englangLogicalFallaciesPart5Data = {
       content: `
 ## Misconception 1: Every Suspicious Move Is a Fallacy
 
-| Over-label | Why it is too quick | The better question |
+| Too-quick verdict | Why it is too quick | The better question |
 |---|---|---|
-| "Any mention of the speaker is ad hominem." | A speaker's expertise, record, or stake can be relevant when the claim depends on trusting them | Does the point about the person bear on the claim? |
-| "Any prediction of consequences is a slippery slope." | Arguing from consequences is a normal, often strong, form of reasoning | Is each link in the chain supported? |
+| "Any mention of the speaker is a personal attack." | A speaker's expertise, record, or stake can be relevant when the claim depends on trusting them | Does the point about the person bear on the claim? |
+| "Any prediction of consequences is an unsupported chain." | Arguing from consequences is a normal, often strong, form of reasoning | Is each link in the chain supported? |
 | "Any citation of an expert is an appeal to authority." | Citing real experts within their field is how most evidence reaches us | Is this person an authority **on this question**? |
 | "Any generalization is hasty." | All inductive reasoning generalizes | Are the cases enough and representative, and is the claim qualified? |
 | "Any emotional appeal is a fallacy." | Emotion is often a fitting response to real facts | Is the emotion proportionate and connected to the claim? |
 
-An AP reader rewards **accuracy**. Calling Lincoln's "Take care" an appeal to fear, or Mill's historical examples a hasty generalization, misreads both passages and costs credibility.
+An AP reader rewards **accuracy**. Calling Lincoln's "Take care" an appeal to fear, or Mill's historical examples too few to generalize from, misreads both passages and costs credibility.
 
 ## Misconception 2: A Bad Argument Means a False Conclusion
 
@@ -93,15 +93,13 @@ The correct verdict on a flawed argument is "**not shown**," not "**shown false*
 
 | Passage | Lesson |
 |---|---|
-| Introduction and Stratagem XXXVII | The fallacy fallacy, described as a winning trick: defeat a weak proof and claim you have defeated the position. "Bad advocates lose a good case" when they defend a true claim badly. |
+| Introduction and Stratagem XXXVII | The "shown false" mistake, described as a winning trick: defeat a weak proof and claim you have defeated the position. "Bad advocates lose a good case" when they defend a true claim badly. |
 | Stratagem XXX | Wide agreement is not proof. But notice that Schopenhauer **overstates**: "not even a probability" ignores that agreement among informed, independent experts is real evidence. A fallacy-hunter can overreach too. |
 | Stratagem XXXVIII | The insult is the "last trick," used when the arguer is losing. Turning from the subject to the person is a **sign** that the subject is going badly. |
 
-### Names Shift; Explanations Do Not
+### Why Explanations Beat Labels
 
-Schopenhauer uses *argumentum ad hominem* in an older sense: arguing from **what the opponent has already admitted** (also called *ex concessis*). The personal insult that most textbooks today call ad hominem, he calls *ad personam*. The same Latin label points to two different moves depending on the writer and the century.
-
-That is one more reason the AP exam asks you to **explain** rather than to label. "The writer shifts from the evidence to insulting her opponent's intelligence" is clear in any vocabulary. "Ad hominem" alone could mean two different things.
+Notice that Schopenhauer's own Latin labels do not match the ones in modern textbooks: the label most textbooks now use for a personal insult, he uses for arguing from what the opponent has already admitted. Labels shift with the writer and the century. An explanation does not: "the writer shifts from the evidence to insulting her opponent's intelligence" is clear to any reader, which is why the AP exam asks you to **explain** a move rather than to label it.
 
 > 🔑 **AP Connection:** Schopenhauer's irony is a useful model for rhetorical analysis. He writes as a coach for dishonest debaters, but every trick he lists is also a warning. When a Section I question asks about a writer's **purpose** in a text that appears to recommend something bad, consider whether the recommendation is ironic.
 `
@@ -137,15 +135,15 @@ That is one more reason the AP exam asks you to **explain** rather than to label
             explanation: 'Popularity alone is not proof, but "not even a probability" goes further than the evidence allows, because independent experts agreeing is a real reason for confidence. The claim is not too cautious, does not assume its conclusion, and the treatise is about disputes in general.'
           },
           {
-            question: 'In Schopenhauer\'s usage, *argumentum ad hominem* means',
+            question: 'According to Stratagem XXXVIII, an arguer is most likely to turn personal and insulting when he',
             options: [
-              'insulting an opponent once the argument has been lost',
-              'arguing from the statements an opponent has already made',
-              'appealing to the authority of a widely respected expert',
-              'repeating a claim until the bystanders come to accept it'
+              'has already won the dispute and wants to humiliate the loser',
+              'senses that he is losing on the subject itself',
+              'sees the bystanders beginning to take his side against his opponent',
+              'has been insulted first and feels he must answer in kind'
             ],
             correctAnswer: 1,
-            explanation: 'Schopenhauer defines ad hominem as passing to "the statements or admissions which your opponent has made," and reserves *ad personam* for the insult. The difference from modern usage is why an explanation is clearer than a label.'
+            explanation: 'Schopenhauer calls the insult the "last trick," used "as soon as you perceive that your opponent has the upper hand, and that you are going to come off worst." He presents it as the move of someone losing, not winning, and says nothing about bystanders taking sides or about answering an earlier insult.'
           }
         ]
       }
@@ -182,19 +180,19 @@ On the rhetorical analysis essay, your job is mainly to explain **effectiveness*
       content: `
 **Applied Recall** ✍️
 
-1) Schopenhauer calls the insult used when an arguer is losing argumentum ad _______.
+1) Schopenhauer says an arguer turns personal and rude once he sees he is going to come off _______.
 
-2) Concluding that a claim is false because the argument for it is flawed is sometimes called the _______ fallacy.
+2) A flawed argument leaves its claim "not shown," not "shown _______."
 
 3) An argument whose support genuinely justifies its claim is logically _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['personam', 'fallacy', 'sound'],
-        hint1: 'Latin for "to the person"; Schopenhauer keeps "ad hominem" for something else.',
-        hint2: 'The name repeats itself: the ___ fallacy.',
+        correctAnswers: ['worst', 'false', 'sound'],
+        hint1: 'The last word of Schopenhauer\'s sentence: "you are going to come off ___."',
+        hint2: 'The opposite of "true."',
         hint3: 'The opposite of unsound.',
-        explanation: 'Schopenhauer separates ad personam (the insult) from ad hominem (arguing from the opponent\'s admissions); the fallacy fallacy mistakes "not shown" for "shown false"; and a sound argument is one whose support reaches its claim.'
+        explanation: 'Schopenhauer presents the insult as the move of someone who is losing; exposing a flaw shows a claim is "not shown," never that it is "shown false"; and a sound argument is one whose support reaches its claim.'
       }
     },
     {
@@ -225,7 +223,7 @@ On the rhetorical analysis essay, your job is mainly to explain **effectiveness*
               'Any newer survey will reach the opposite result.'
             ],
             correctAnswer: 0,
-            explanation: 'Exposing weak evidence shows only that the claim has not been established. Treating it as disproof is the fallacy fallacy, and nothing shows the opponent was dishonest or predicts what a new survey would find.'
+            explanation: 'Exposing weak evidence shows only that the claim has not been established. Treating it as disproof mistakes "not shown" for "shown false," and nothing shows the opponent was dishonest or predicts what a new survey would find.'
           },
           {
             question: 'Which statement best distinguishes rhetorical effectiveness from logical soundness?',

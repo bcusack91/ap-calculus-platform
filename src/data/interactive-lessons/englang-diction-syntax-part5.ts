@@ -110,7 +110,7 @@ Notice the model never says "diction" or "syntax." It quotes, describes the choi
       id: 'englangd5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Name the Choice** 🔍
+**What the Choice Does** 🔍
       `,
       exercise: {
         dropdowns: [
@@ -119,19 +119,19 @@ Notice the model never says "diction" or "syntax." It quotes, describes the choi
             options: ['dealings', 'arguments', 'marriages', 'travel']
           },
           {
-            label: 'Roosevelt, 1941: "our people, our territory and our interests." The repeated "our" in a series of three forms a ___',
-            options: ['chiasmus', 'tricolon', 'fragment', 'inversion']
+            label: 'Roosevelt, 1941: "our people, our territory and our interests." Repeating "our" across the series chiefly ___',
+            options: ['includes every listener', 'blames the listeners', 'narrows the danger', 'softens the threat']
           },
           {
             label: 'Roosevelt, 1941: the dashes around "with the unbounding determination of our people" chiefly ___',
             options: ['hold back the main clause', 'show the speaker is unsure', 'mark a quotation', 'cut the sentence short']
           }
         ],
-        correctAnswers: ['dealings', 'tricolon', 'hold back the main clause'],
+        correctAnswers: ['dealings', 'includes every listener', 'hold back the main clause'],
         hint1: 'Lincoln means the trade and communication two neighbors cannot avoid.',
-        hint2: 'Three parallel elements.',
+        hint2: 'Whose people, territory and interests are in danger?',
         hint3: 'The main clause, "we will gain the inevitable triumph," comes after them.',
-        explanation: '"Intercourse" here means dealings, the repeated "our" builds a tricolon, and the dashes delay the main clause so the promise lands last.'
+        explanation: '"Intercourse" here means dealings, the repeated "our" includes every listener in what is endangered, and the dashes delay the main clause so the promise lands last.'
       }
     },
     {
@@ -147,7 +147,7 @@ Notice the model never says "diction" or "syntax." It quotes, describes the choi
 | **3. "A word's connotation is fixed."** | "Mean," "want," and "address" changed meaning over time; "simultaneously" and "suddenly" differ only in context. | Read the sentence and the argument before deciding what a word suggests. |
 | **4. "Naming the device is analysis."** | "Johnson uses parallelism" is true of thousands of texts. | Explain what this parallel structure does here: the "till" clauses name a later and larger loss each time. |
 | **5. "Formal language is always more persuasive."** | Roosevelt's homely "There is no blinking at the fact" reaches listeners at home. | Match register to audience and moment. |
-| **6. "Every repetition is anaphora."** | "Simplicity, simplicity, simplicity!" repeats a word back to back (epizeuxis); "ride on the railroad; it rides upon us" reverses order (antimetabole). | Name the pattern accurately, but spend most words on its effect. |
+| **6. "All repetition works the same way."** | "Simplicity, simplicity, simplicity!" hammers one word back to back, while "ride on the railroad; it rides upon us" reverses the order of its terms to flip who is master. | Describe the specific pattern and what it does here; the exam asks for the effect, not a device name. |
 | **7. "The effect is on 'the reader.'"** | Every text in this topic had a specific audience: Congress, a nobleman, readers in industrial America. | Name the audience and explain why the effect matters to **them**. |
 
 > 🔑 **AP Connection:** Many wrong answers in Section I are **true about the passage but not about the question**. A choice that says "the short sentence creates urgency" may describe a short sentence correctly in general but miss what this one does. Always check the choice against the specific lines.
@@ -161,17 +161,17 @@ Notice the model never says "diction" or "syntax." It quotes, describes the choi
 
 1) In Thoreau's sentence "Still we live meanly, like ants," "meanly" carries its older sense of living in a low and _______ way.
 
-2) Repeating the same word immediately, as in "Simplicity, simplicity, simplicity!", is called _______.
+2) Thoreau's "Simplicity, simplicity, simplicity!" repeats one word with nothing between, so the sentence is as _______ as its subject.
 
 3) Roosevelt's two-word sentence "Hostilities exist" uses a Latin-derived noun, which places it in a _______ register.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['petty', 'epizeuxis', 'formal'],
+        correctAnswers: ['petty', 'simple', 'formal'],
         hint1: 'Trivial, small-minded; the word starts with p.',
-        hint2: 'From the Greek for "fastening together"; repetition with nothing between.',
+        hint2: 'The form of the sentence matches the quality it praises.',
         hint3: 'The opposite of informal or colloquial.',
-        explanation: 'Thoreau\'s "meanly" means pettily, back-to-back repetition is epizeuxis, and "Hostilities" belongs to a formal register.'
+        explanation: 'Thoreau\'s "meanly" means pettily, the bare, back-to-back repetition makes the sentence as simple as the life it recommends, and "Hostilities" belongs to a formal register.'
       }
     },
     {

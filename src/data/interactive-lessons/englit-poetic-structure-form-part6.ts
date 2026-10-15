@@ -68,12 +68,12 @@ Correct answers in this category almost always describe a **movement** or **rela
 
 | Unit | Rhyme | Opening word | Fear |
 |---|---|---|---|
-| Quatrain 1 (1-4) | be / brain / charact'ry / grain (ABAB) | "When" | Dying before writing all his poems; harvest metaphor (pen gleaning the brain, books as granaries) |
-| Quatrain 2 (5-8) | face / romance / trace / chance (CDCD) | "When" | Dying before capturing the grand visions he sees in the night sky |
-| Quatrain 3 (9-12) | hour / more / power / shore (EFEF) | "And when" | Losing a beloved, the "fair Creature of an hour" |
-| Couplet (13-14) | think / sink (GG) | (no new clause) | All ambitions sink to "nothingness" |
+| Quatrain 1 (1-4) | be / brain / charact'ry / grain | "When" | Dying before writing all his poems; harvest metaphor (pen gleaning the brain, books as granaries) |
+| Quatrain 2 (5-8) | face / romance / trace / chance | "When" | Dying before capturing the grand visions he sees in the night sky |
+| Quatrain 3 (9-12) | hour / more / power / shore | "And when" | Losing a beloved, the "fair Creature of an hour" |
+| Couplet (13-14) | think / sink | (no new clause) | All ambitions sink to "nothingness" |
 
-**The key structural fact.** The whole poem is one sentence. Three "When" clauses, one per quatrain, pile up fears; the main clause does not arrive until the dash in **line 12**: "then on the shore / Of the wide world I stand alone, and think." The Shakespearean form leads us to expect a turn at line 9 and a separate closing couplet. Keats delays the turn to the middle of line 12 and runs the sentence straight across the boundary into the couplet. The couplet does not stand apart to resolve the poem; it completes the sinking.
+**The key structural fact.** The whole poem is one sentence. Three "When" clauses, one per quatrain, pile up fears; the main clause does not arrive until the dash in **line 12**: "then on the shore / Of the wide world I stand alone, and think." The sonnet's grouping into three quatrains and a couplet leads us to expect a turn at line 9 and a separate closing couplet. Keats delays the turn to the middle of line 12 and runs the sentence straight across the boundary into the couplet. The couplet does not stand apart to resolve the poem; it completes the sinking.
 `
     },
     {
@@ -107,15 +107,15 @@ Correct answers in this category almost always describe a **movement** or **rela
             explanation: `After three "When" clauses of fear, the dash brings the main clause: the speaker stands "alone" on the shore and thinks until ambition sinks. The poem never celebrates fame, the beloved (not the stars) is addressed, and the tense stays present.`
           },
           {
-            question: `The final couplet differs from that of a typical Shakespearean sonnet chiefly because it`,
+            question: `Unlike the closing couplet of many sonnets, Keats's final couplet is distinctive chiefly because it`,
             options: [
               `continues the sentence begun in line 1 rather than standing apart`,
-              `abandons iambic pentameter for a shorter, freer line`,
+              `abandons the poem's steady beat for a shorter, freer line`,
               `introduces a new rhyme sound not found elsewhere`,
               `reverses the poem's argument with a hopeful twist`
             ],
             correctAnswer: 0,
-            explanation: `The couplet is the end of the poem's single sentence, so it completes the turn rather than delivering a separate summary. It keeps the meter, every Shakespearean couplet introduces a new rhyme, and its "nothingness" offers no hopeful reversal.`
+            explanation: `The couplet is the end of the poem's single sentence, so it completes the turn rather than delivering a separate summary. It keeps the poem's five-beat line, a closing couplet normally brings a new rhyme sound, and its "nothingness" offers no hopeful reversal.`
           }
         ]
       }
@@ -151,12 +151,12 @@ Climb every rung, quickly. Skipping straight to interpretation without describin
       exercise: {
         dropdowns: [
           {
-            label: `"The rhyme scheme is ABAB CDCD EFEF GG." This sentence is ___`,
+            label: `"The poem is a sonnet that ends with a rhymed couplet." This sentence is ___`,
             options: ['a label or description', 'a function', 'an interpretation', 'a thesis']
           },
           {
             label: `"Each 'When' clause adds another fear before any resolution can come." This sentence explains a ___`,
-            options: ['function', 'label', 'rhyme scheme', 'meter']
+            options: ['function', 'label', 'summary', 'context']
           },
           {
             label: `"Keats withholds the volta so long that the sonnet's promised resolution collapses into 'nothingness.'" This sentence is ___`,
@@ -167,7 +167,7 @@ Climb every rung, quickly. Skipping straight to interpretation without describin
         hint1: 'It reports a fact without saying what the fact does.',
         hint2: 'It says what the repetition does, but not yet what it means for the whole poem.',
         hint3: 'It links a structural choice to the poem\'s overall meaning.',
-        explanation: 'Writing out the rhyme scheme only describes; saying what the repeated "When" does is function; and tying the delayed turn to the poem\'s collapse into "nothingness" is interpretation.'
+        explanation: 'Naming the form only describes; saying what the repeated "When" does is function; and tying the delayed turn to the poem\'s collapse into "nothingness" is interpretation.'
       }
     },
     {
@@ -178,7 +178,7 @@ Climb every rung, quickly. Skipping straight to interpretation without describin
 
 *Prompt (practice, in the AP format): analyze how Keats uses literary elements and techniques to convey the speaker's complex response to the possibility of an early death.*
 
-> **(1)** Keats builds the sonnet as a single sentence that cannot reach its conclusion, so the reader feels the speaker's fears accumulate faster than he can master them. **(2)** Each quatrain opens with "When," and each "When" adds a new loss: unwritten books, unrecorded visions of "a high romance," and a "fair Creature of an hour." **(3)** Because these are subordinate clauses, the sentence keeps postponing its main verb; the speaker, like the grammar, is suspended in dread. **(4)** The Shakespearean form leads a reader to expect a turn at line 9 and a couplet that resolves the argument, but Keats delays the turn until the dash in line 12. **(5)** When it finally comes, "then on the shore / Of the wide world I stand alone," the main clause offers no answer, only isolation. **(6)** The sentence then runs straight into the couplet, where "Love and Fame to nothingness do sink," so the place a sonnet usually reserves for resolution becomes the place where everything the speaker desires goes under. **(7)** The structure thus makes the poem's response complex: the speaker does not defeat his fear, yet by standing and thinking he reaches a stark calm in which ambition no longer matters.
+> **(1)** Keats builds the sonnet as a single sentence that cannot reach its conclusion, so the reader feels the speaker's fears accumulate faster than he can master them. **(2)** Each quatrain opens with "When," and each "When" adds a new loss: unwritten books, unrecorded visions of "a high romance," and a "fair Creature of an hour." **(3)** Because these are subordinate clauses, the sentence keeps postponing its main verb; the speaker, like the grammar, is suspended in dread. **(4)** The sonnet's four-part shape leads a reader to expect a turn at line 9 and a couplet that resolves the argument, but Keats delays the turn until the dash in line 12. **(5)** When it finally comes, "then on the shore / Of the wide world I stand alone," the main clause offers no answer, only isolation. **(6)** The sentence then runs straight into the couplet, where "Love and Fame to nothingness do sink," so the place a sonnet usually reserves for resolution becomes the place where everything the speaker desires goes under. **(7)** The structure thus makes the poem's response complex: the speaker does not defeat his fear, yet by standing and thinking he reaches a stark calm in which ambition no longer matters.
 
 | Sentence | Job | Rubric link |
 |---|---|---|
@@ -209,13 +209,13 @@ A strong Q1 thesis names a structural choice alongside other techniques, in serv
           {
             question: `Which sentence about Keats's sonnet would add the most to an essay's commentary?`,
             options: [
-              `"The poem follows the ABAB CDCD EFEF GG rhyme scheme."`,
+              `"The poem follows the usual rhyme pattern of an English sonnet."`,
               `"Keats wrote this sonnet in 1818, three years before his death."`,
               `"Withholding the main clause leaves the speaker suspended in dread."`,
-              `"The poem has fourteen lines and is written in iambic pentameter."`
+              `"The poem has fourteen lines, and each line has five beats."`
             ],
             correctAnswer: 2,
-            explanation: `Only this sentence explains what a structural feature does for meaning. The rhyme scheme and line count are labels, and the biographical date is context that still needs to be tied to the text.`
+            explanation: `Only this sentence explains what a structural feature does for meaning. The rhyme pattern and line count are labels, and the biographical date is context that still needs to be tied to the text.`
           },
           {
             question: `A student's essay has one paragraph on "form," one on "imagery" and one on "diction." The best advice is to`,

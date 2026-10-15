@@ -30,7 +30,7 @@ export const config: FullLengthExamConfig = {
       name: 'Section II',
       shortName: 'Free Response',
       description:
-        '3 essays: Q1 Poetry Analysis, Q2 Prose Fiction Analysis, Q3 Literary Argument (open question on a work of literary merit). Suggested 40 minutes per essay. Each essay is scored on a 6-point AP rubric: Thesis (0–1), Evidence & Commentary (0–4), Sophistication (0–1).',
+        '3 essays: Q1 Poetry Analysis, Q2 Prose Fiction Analysis, Q3 Literary Argument (a work of fiction you choose). Suggested 40 minutes per essay. Each essay is scored on a 6-point AP rubric: Thesis (0–1), Evidence & Commentary (0–4), Sophistication (0–1).',
       timeLimitMinutes: 120,
       weight: 55, // May 2027: Section II is 55%
       items: FRQS,

@@ -109,28 +109,28 @@ export const englangDictionSyntaxPart7Data = {
       id: 'englangd7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Identify the Choice** 🔍
+**What the Choice Does** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Johnson: "without one act of assistance, one word of encouragement, or one smile of favour" is a ___',
-            options: ['tricolon', 'chiasmus', 'fragment', 'inversion']
+            label: 'Johnson: "without one act of assistance, one word of encouragement, or one smile of favour" shrinks his request to ___',
+            options: ['almost nothing', 'a formal demand', 'a long grievance', 'a polite question']
           },
           {
-            label: 'Thoreau: "We do not ride on the railroad; it rides upon us" reverses its terms, an example of ___',
-            options: ['anaphora', 'antimetabole', 'asyndeton', 'epistrophe']
+            label: 'Thoreau: "We do not ride on the railroad; it rides upon us" reverses its terms to show that ___',
+            options: ['the tool now masters its users', 'railroads are unsafe to ride', 'travel has become too slow', 'people prefer walking to riding']
           },
           {
             label: 'Roosevelt: "a date which will live in infamy" replaced "world history" chiefly to change the phrase\'s ___',
             options: ['rhythm', 'connotation', 'grammar', 'length']
           }
         ],
-        correctAnswers: ['tricolon', 'antimetabole', 'connotation'],
-        hint1: 'Three parallel phrases built on "one."',
-        hint2: 'The same words return in reverse order.',
+        correctAnswers: ['almost nothing', 'the tool now masters its users', 'connotation'],
+        hint1: 'An act, then a word, then only a smile, and he received none of them.',
+        hint2: 'Who carries whom after the semicolon?',
         hint3: '"Infamy" adds disgrace that "world history" lacked.',
-        explanation: 'Johnson builds a tricolon, Thoreau uses antimetabole, and Roosevelt\'s revision changes connotation from neutral to disgraceful.'
+        explanation: 'Johnson\'s shrinking three-part series reduces his request to almost nothing, Thoreau\'s reversal turns the railroad from servant into master, and Roosevelt\'s revision changes connotation from neutral to disgraceful.'
       }
     },
     {
@@ -163,7 +163,7 @@ export const englangDictionSyntaxPart7Data = {
       content: `
 **Applied Recall** ✍️
 
-1) A sentence that places its main clause first and adds details after it is a loose or _______ sentence.
+1) A sentence that places its main clause first and adds details after it usually sounds natural and _______.
 
 2) Joining two ideas of equal weight with "and," "but," or a semicolon is called _______.
 
@@ -171,11 +171,11 @@ export const englangDictionSyntaxPart7Data = {
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['cumulative', 'coordination', 'ellipsis'],
-        hint1: 'Details accumulate after the main clause.',
+        correctAnswers: ['conversational', 'coordination', 'ellipsis'],
+        hint1: 'It adds detail as it goes, the way people talk.',
         hint2: 'The partner term to subordination.',
         hint3: 'The same word names the three-dot mark for omitted words in a quotation.',
-        explanation: 'A loose sentence is also called cumulative, equal joining is coordination, and omitting understood words is ellipsis.'
+        explanation: 'A sentence that states its main clause first and then adds detail reads like natural, conversational speech, equal joining is coordination, and omitting understood words is ellipsis.'
       }
     },
     {

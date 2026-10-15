@@ -36,20 +36,17 @@ export const englitPoetry1Part2Data = {
 | **End-stopped line** | A line that ends with a pause, usually marked by punctuation |
 | **Enjambment** | A sentence that runs past the end of a line without a pause |
 | **Caesura** | A strong pause within a line |
-| **Rhyme scheme** | The pattern of end rhymes, marked with letters (ABAB) |
-| **Meter** | A regular pattern of stressed and unstressed syllables; **iambic pentameter** has five unstressed-stressed pairs per line |
+| **Rhyme** | Matching sounds at line ends that link words and ideas, and set up an expectation |
+| **Rhythm** | The beat of a line; a regular beat (meter) creates a pattern, and a break in it draws attention |
 
 ### Closed and Open Forms
 
-- A **closed form** follows a set pattern of lines, rhyme or meter. The sonnet is the best-known example: 14 lines, usually in iambic pentameter.
-- An **open form** (often called **free verse**) has no fixed pattern of rhyme or meter. Open does not mean shapeless: free-verse poets still choose every line break.
+- A **closed form** follows a set pattern of lines, stanzas, rhyme or rhythm. The sonnet is the best-known example: 14 lines, often built as three quatrains and a couplet, or as an octave and a sestet.
+- An **open form** (often called **free verse**) has no fixed pattern of rhyme or rhythm. Open does not mean shapeless: free-verse poets still choose every line break.
 
-| Sonnet type | Shape | Typical rhyme scheme | Where the turn usually comes |
-|---|---|---|---|
-| **Shakespearean (English)** | Three quatrains + a couplet | ABAB CDCD EFEF GG | At line 9 or in the final couplet |
-| **Petrarchan (Italian)** | An octave + a sestet | ABBAABBA, then a varied sestet | At line 9, where the sestet begins |
+In a closed form, the predictable pattern develops relationships among ideas (CED STR-1.U): parallel units build a case, and the place where the pattern shifts or breaks is where the poem asks for attention. The **turn**, or **volta**, is a shift in thought, tone or direction, and in a sonnet it often comes at line 9 or in the final couplet.
 
-The **turn**, or **volta**, is a shift in thought, tone or direction.
+> 💡 The AP exam will not ask you to name a rhyme scheme, a meter or a form. It asks what a pattern, or a break in it, *does* for the poem's meaning.
 `
     },
     {
@@ -147,10 +144,10 @@ The couplet then **turns** from the speaker to the listener. After twelve lines 
 
 *Glossary:* the "realms of gold" are the world of poetry; George Chapman published English translations of Homer in the early 1600s; "demesne" means domain; "ken" means range of sight.
 
-| Part | Rhyme | What happens |
+| Part | What happens | How the sound holds it together |
 |---|---|---|
-| **Octave** (lines 1–8) | ABBAABBA | The speaker has read widely but only *heard of* Homer, until Chapman's translation |
-| **Sestet** (lines 9–14) | CDCDCD | "Then felt I": two comparisons to discoverers seeing something new |
+| **Octave** (lines 1–8) | The speaker has read widely but only *heard of* Homer, until Chapman's translation | Two rhyme sounds only ("gold / hold / told / bold" and "seen / been / demesne / serene"), so the eight lines of report feel like one closed unit |
+| **Sestet** (lines 9–14) | "Then felt I": two comparisons to discoverers seeing something new | New rhyme sounds arrive ("skies / eyes / surmise"), matching the arrival of something new |
 
 The octave is about **travel and report**; the sestet is about **sudden discovery**. The volta at "Then felt I" is where reading turns into wonder. Notice the enjambment late in the sestet: "with eagle eyes / He star'd at the Pacific—and all his men / Look'd at each other." The sentence spills over the line ends like a view opening up, and then the last line ends in stillness: "Silent, upon a peak in Darien."
 `
@@ -159,28 +156,28 @@ The octave is about **travel and report**; the sestet is about **sudden discover
       id: 'englitpo2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Name the Structure** 🔍
+**What the Structure Does** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: `The last two lines of Sonnet 73, which rhyme with each other, form a ___`,
-            options: ['couplet', 'quatrain', 'sestet', 'caesura']
+            label: `In Sonnet 73, each quatrain's image covers a ___ span of time than the one before`,
+            options: ['shorter', 'longer', 'wider', 'fuller']
           },
           {
             label: `In Keats's "with eagle eyes / He star'd at the Pacific," the sentence running past the line end is ___`,
             options: ['enjambment', 'end-stopping', 'a refrain', 'a caesura']
           },
           {
-            label: `A poem with no fixed rhyme scheme or meter is usually called ___`,
-            options: ['free verse', 'a sonnet', 'blank verse', 'a ballad']
+            label: `Whitman's open form still shapes meaning through ___`,
+            options: ['line length and one long sentence', 'a rhyme that links every line end', 'four stanzas of equal length', 'a refrain closing each stanza']
           }
         ],
-        correctAnswers: ['couplet', 'enjambment', 'free verse'],
-        hint1: 'Two lines.',
+        correctAnswers: ['shorter', 'enjambment', 'line length and one long sentence'],
+        hint1: 'A season, then an evening, then a dying fire.',
         hint2: 'The thought "strides" over the line break.',
-        hint3: 'Careful: blank verse has meter but no rhyme.',
-        explanation: 'A rhymed pair of lines is a couplet; a sentence that continues across a line break is enjambment; and verse without fixed rhyme or meter is free verse (blank verse is unrhymed iambic pentameter).'
+        hint3: 'Look at how the lines grow and at where the poem\'s only sentence ends.',
+        explanation: 'Each quatrain shrinks the time left (a season, an evening, a fire\'s last glow); a sentence that continues across a line break is enjambment; and Whitman\'s open form works through lines that lengthen and one long sentence that ends in a short, quiet line. The poem has no rhyme scheme, no regular stanzas and no refrain.'
       }
     },
     {
