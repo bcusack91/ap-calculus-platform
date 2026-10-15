@@ -5,171 +5,204 @@ export const microSupplyDemandPart6Data = {
       id: 'microsup6-intro',
       type: 'text' as const,
       content: `
-# 💰 Supply & Demand
+# 📈 Supply & Demand
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — AP Exam Practice: Chains Across Related Markets**
 
-Apply Supply & Demand concepts to data interpretation and analytical scenarios. Practice the types of questions seen on the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 How the AP Exam Links Markets |
+| Model FRQ: Peanuts, Jelly, and Almond Butter |
+| Practice: Multi-Step Chains |
+| Writing "Explain" Answers That Score |
 
-| Concept | Description |
-|---------|-------------|
-| **Data interpretation** | Analyzing maps, graphs, and tables related to Supply & Demand |
-| **Argumentation** | Making evidence-based claims about Supply & Demand |
-| **Spatial reasoning** | Using geographic thinking to analyze Supply & Demand |
-      `
+> 🔑 **Key Concept:** AP questions rarely stop at one market. A shock in one market changes a **price**, and that price is a **determinant** in the next market. Follow the chain one link at a time: shift, new price, next market's determinant, next shift.
+`
+    },
+    {
+      id: 'microsup6-links',
+      type: 'text' as const,
+      content: `
+## 📖 How the AP Exam Links Markets
+
+| Link between goods | Price in market 1 rises → effect in market 2 |
+|---|---|
+| Substitutes in consumption | Demand in market 2 **increases** |
+| Complements in consumption | Demand in market 2 **decreases** |
+| Market 1 good is an **input** for market 2 | Supply in market 2 **decreases** |
+| Substitutes in production | Supply in market 2 **decreases** |
+| Joint products (complements in production) | Supply in market 2 **increases** |
+
+### Worked Chain: Coffee Rust
+A fungus wipes out part of Central America's coffee harvest.
+
+1. **Coffee market:** supply shifts left. Price of coffee **rises**, quantity falls.
+2. **Tea market (substitute):** the higher coffee price raises demand for tea. Tea price and quantity **rise**.
+3. **Coffee creamer market (complement):** less coffee is consumed, so demand for creamer falls. Creamer price and quantity **fall**.
+4. **Café drinks market (coffee is an input):** cafés' costs rise, so supply of café lattes shifts left. Latte price **rises**, quantity falls.
+
+Each link uses **one** shift, and the direction comes from the table above.
+`
+    },
+    {
+      id: 'microsup6-frq',
+      type: 'text' as const,
+      content: `
+## 📖 Model FRQ: Peanuts, Jelly, and Almond Butter
+
+> **Prompt (adapted, AP style).** Assume all markets are perfectly competitive.
+> (a) A drought sharply reduces the U.S. peanut harvest. Draw a correctly labeled graph of the market for peanut butter and show the effect on equilibrium price and quantity, labeled P₂ and Q₂.
+> (b) Peanut butter and jelly are complements. What happens to the equilibrium quantity of jelly? Explain.
+> (c) Almond butter is a substitute for peanut butter. What happens to the equilibrium price of almond butter? Explain.
+
+### Model Answer
+**(a)** Peanuts are the key input for peanut butter, so the drought raises producers' costs. Graph: price on the vertical axis, quantity on the horizontal axis, downward-sloping D, upward-sloping S₁ crossing D at P₁ and Q₁. S₂ is drawn to the left of S₁. The new intersection gives P₂ above P₁ and Q₂ below Q₁.
+
+**(b)** The quantity of jelly **decreases**. Because peanut butter's price rose, consumers buy less peanut butter, and since jelly is used with it, demand for jelly shifts left at every jelly price, lowering jelly's equilibrium quantity.
+
+**(c)** The price of almond butter **increases**. The higher price of peanut butter leads some consumers to switch to almond butter, so demand for almond butter shifts right, raising its equilibrium price.
+
+### What Earned the Points
+| Part | Graders look for |
+|---|---|
+| (a) | Labeled axes, D and S, **S shifts left**, P₂ higher and Q₂ lower shown on the axes |
+| (b) | Direction (decreases) **plus** the link: higher peanut butter price → demand for jelly decreases |
+| (c) | Direction (increases) **plus** the link: substitute's price rose → demand for almond butter increases |
+
+> 🔑 **AP Connection:** In (b) and (c) the explanation must name the **curve that shifts in that market**. "People buy less jelly" restates the answer. "Demand for jelly decreases because its complement became more expensive" explains it.
+`
     },
     {
       id: 'microsup6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: `**Concept Check** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'When interpreting data about Supply & Demand, the first step is:',
+            question: 'Printers and ink cartridges are complements. A shortage of a chip used only in printers raises the cost of making printers. What happens to the equilibrium quantity of ink cartridges?',
             options: [
-              'Jump to conclusions',
-              'Identify what the data shows and note any patterns or trends',
-              'Ignore the data',
-              'Only look at the title'
+              'It falls as demand for ink decreases',
+              'It falls as supply of ink decreases',
+              'It rises as demand for ink increases',
+              'It does not change since ink uses no chips'
             ],
-            correctAnswer: 1,
-            explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.'
+            correctAnswer: 0,
+            explanation: 'The chip shortage decreases printer supply and raises printer prices, so fewer printers are bought. Demand for the complement, ink, shifts left and ink quantity falls. Ink producers\' costs are unchanged, so the effect on ink runs through demand, not supply.'
           },
           {
-            question: 'An evidence-based argument about Supply & Demand requires:',
+            question: 'Which written explanation would earn the point for this prompt: "Gasoline prices rise. What happens to the equilibrium price of bus passes? Explain."',
             options: [
-              'Just opinions',
-              'A clear claim supported by specific evidence and reasoning',
-              'No evidence',
-              'Only emotional appeals'
+              'Bus pass price rises as demand for this substitute increases',
+              'Bus pass price rises as more people will ride the city buses',
+              'Bus pass price rises as bus companies pay more to run buses',
+              'Bus pass price falls as fewer drivers are left to take buses'
             ],
-            correctAnswer: 1,
-            explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).'
+            correctAnswer: 0,
+            explanation: 'The scoring explanation names the shift in the bus-pass market and the reason: bus passes are a substitute for driving, so demand increases. "More people will ride" restates the outcome without the curve, and the fuel-cost story is a supply effect the prompt did not set up.'
           }
         ]
-      }
-    },
-    {
-      id: 'microsup6-content',
-      type: 'text' as const,
-      content: `
-## Problem-Solving Workshop — Deeper Dive
-
-### Data interpretation
-Analyzing maps, graphs, and tables related to Supply & Demand. Understanding this concept is essential for mastering Supply & Demand in AP Microeconomics.
-
-### Argumentation
-Making evidence-based claims about Supply & Demand. This builds on the previous concept and connects to broader themes in the course.
-
-### Spatial reasoning
-Using geographic thinking to analyze Supply & Demand. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'microsup6-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to analyzing maps, graphs, and tables related to Supply & Demand?
-
-2) What concept describes making evidence-based claims about Supply & Demand?
-
-3) Name the term for using geographic thinking to analyze Supply & Demand.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'Starts with: D',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: Data interpretation (Analyzing maps, graphs, and tables related to Supply & Demand), Argumentation (Making evidence-based claims about Supply & Demand), and Spatial reasoning (Using geographic thinking to analyze Supply & Demand).'
       }
     },
     {
       id: 'microsup6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Follow the Chain** 🔍
+
+A new technology cuts the cost of producing solar panels.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Analyzing maps, graphs, and tables related to Supply & Demand is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
+            label: 'In the solar panel market, the equilibrium price ___',
+            options: ['falls', 'rises', 'is unchanged', 'is indeterminate']
           },
           {
-            label: 'Making evidence-based claims about Supply & Demand describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
+            label: 'Solar panels and home batteries are complements. Demand for home batteries ___',
+            options: ['increases', 'decreases', 'is unchanged', 'is indeterminate']
           },
           {
-            label: 'Using geographic thinking to analyze Supply & Demand is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
+            label: 'Rooftop solar is a substitute for electricity from the power grid. Demand for grid electricity ___',
+            options: ['decreases', 'increases', 'is unchanged', 'is indeterminate']
           }
         ],
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Data interpretation — Analyzing maps, graphs, and tables related to Supply & Demand. Argumentation — Making evidence-based claims about Supply & Demand. Spatial reasoning — Using geographic thinking to analyze Supply & Demand.'
+        correctAnswers: ['falls', 'increases', 'decreases'],
+        hint1: 'Lower costs shift supply right.',
+        hint2: 'Cheaper panels mean more panel buyers, who need batteries.',
+        hint3: 'Cheaper solar draws some households away from the grid.',
+        explanation: 'Lower costs increase solar panel supply, lowering their price. A cheaper complement raises demand for home batteries, and a cheaper substitute lowers demand for grid electricity.'
       }
     },
     {
-      id: 'microsup6-strategy',
+      id: 'microsup6-writing',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## 📖 Writing "Explain" Answers That Score
 
-### Misconceptions to Avoid
-- Don\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of Supply & Demand.
-- **Spatial reasoning** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+AP free-response task verbs have specific meanings:
 
-### AP Strategy Moves
-- When you see questions about problem-solving workshop, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect problem-solving workshop to broader themes in AP Microeconomics for higher scores.
-      `
+| Task verb | What you must write | Example |
+|---|---|---|
+| **Identify** | The answer only | "Increase." |
+| **Explain** | The answer **and** the economic reason, naming the curve that shifts | "Increase, because the price of a substitute rose, so demand for X increases." |
+| **Show** (on a graph) | The correct shift and new equilibrium labeled on your graph | S₂ left of S₁, with P₂ and Q₂ marked |
+| **Calculate** | The number, with work shown | "TR = \\$4 × 20 = \\$80." |
+
+### A Reliable Sentence Pattern
+> "[Outcome] because [event] is a [determinant] for this good, so [curve] shifts [direction]."
+
+Example: "The equilibrium price of tea **rises** because the higher price of coffee, a substitute, causes the **demand** for tea to **increase**."
+
+### Common Point-Losers
+- Explaining with the result ("price rises because quantity demanded is higher than before").
+- Naming the wrong curve ("supply of tea increases because coffee is more expensive").
+- Shifting both curves in a single-event part.
+- Leaving off P₂ and Q₂ when the prompt asks you to show them.
+`
     },
     {
-      id: 'microsup6-applied',
+      id: 'microsup6-quiz2',
       type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
+      content: `**Check Your Understanding** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'You are given a data table about Supply & Demand and asked to identify a trend. You should:',
+            question: 'A disease cuts the number of dairy cows. Cheese and butter are both made from milk. What happens to the equilibrium price of butter?',
             options: [
-              'Pick random numbers',
-              'Look for consistent increases, decreases, or patterns across the data',
-              'Ignore the table',
-              'Only read the first row'
+              'It rises, since a key input has become more costly',
+              'It falls, since cheese buyers switch to butter',
+              'It rises, since demand for butter has increased',
+              'It falls, since dairy farms now produce less milk'
             ],
-            correctAnswer: 1,
-            explanation: 'Trend identification requires examining the entire dataset for consistent patterns of change.'
+            correctAnswer: 0,
+            explanation: 'Fewer cows means less milk and a higher milk price. Milk is an input for butter, so butter supply shifts left and its price rises. Buyers switching from cheese would raise, not lower, butter demand, and less milk lowers butter supply rather than its price.'
           },
           {
-            question: 'A free-response question asks you to use evidence to support an argument about Supply & Demand. The best approach is:',
+            question: 'A prompt asks you to "identify" what happens to the equilibrium quantity of jelly. Which response is sufficient?',
             options: [
-              'State your opinion without evidence',
-              'Make a clear claim, cite specific data or examples, and explain how they support your argument',
-              'Copy the question',
-              'Write about a different topic'
+              'Decreases',
+              'Decreases, with a graph of the jelly market',
+              'Decreases, with a reason naming the shift',
+              'Decreases, with a calculation of the change'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response answers require a clear thesis, specific supporting evidence, and explanation of how evidence supports the argument.'
+            correctAnswer: 0,
+            explanation: 'An "identify" task needs only the answer. A reason is required for "explain," a graph for "show" or "draw," and a number for "calculate." Extra correct work does not hurt, but it is not required.'
+          },
+          {
+            question: 'Corn is the main feed for chickens. If a corn subsidy lowers corn prices, what happens to the equilibrium price and quantity of chicken?',
+            options: [
+              'Price falls and quantity rises',
+              'Price rises and quantity falls',
+              'Price and quantity both rise',
+              'Price and quantity both fall'
+            ],
+            correctAnswer: 0,
+            explanation: 'Cheaper feed lowers chicken producers\' costs, so chicken supply shifts right. Along the unchanged demand curve, price falls and quantity rises.'
           }
         ]
       }
     }
   ]
-}
+};

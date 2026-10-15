@@ -13,7 +13,7 @@ export const microScarcityMarginalAnalysisPart1Data = {
 | 📖 Scarcity & Opportunity Cost |
 | Marginal Analysis |
 | Utility Maximization |
-| The Production Possibilities Curve |
+| Sunk Costs |
 
 > 🔑 **Key Concept:** Economics is built on **marginal analysis** — decisions are made by comparing the **marginal benefit** (MB) of an action with its **marginal cost** (MC). The optimal decision is where **MB = MC**.
 `},
@@ -48,13 +48,13 @@ At some point, the extra points from another hour of studying aren't worth the e
 ### Sunk Costs
 - **Sunk cost:** A cost that has already been incurred and cannot be recovered
 - Rational decision-makers should **ignore sunk costs** — only marginal costs and benefits matter for future decisions
-- Example: You paid $50 for a non-refundable concert ticket but feel sick. The $50 is sunk — the rational decision depends only on whether attending provides more benefit than staying home, NOT on the $50 already spent
+- Example: You paid \\$50 for a non-refundable concert ticket but feel sick. The \\$50 is sunk — the rational decision depends only on whether attending provides more benefit than staying home, NOT on the \\$50 already spent
 
 > 🔑 **AP Connection:** The AP exam tests marginal analysis in MANY contexts: consumer decisions, firm production, government policy. The rule **MB = MC** appears throughout the entire course.
 `},
     {id:'microscar1-quiz1',type:'multiple-choice' as const,content:`**Concept Check** 🎯`,exercise:{questions:[
       {question:'A firm should continue producing additional units of output as long as:',options:['Total revenue exceeds total cost by the maximum possible amount','Marginal benefit (revenue from one more unit) is greater than or equal to the marginal cost of producing that unit','Average total cost is decreasing with each additional unit produced','The firm has not yet reached its maximum production capacity'],correctAnswer:1,explanation:'Firms maximize profit by producing where MR = MC (marginal revenue = marginal cost). As long as MR > MC, producing one more unit adds more to revenue than to costs, increasing profit. When MR < MC, producing one more unit costs more than it brings in. The optimal quantity is exactly where MR = MC.'},
-      {question:'You paid \\$200 for a non-refundable ski trip but wake up sick on the day of the trip. From an economic perspective, the \\$200 should:',options:['Be considered in your decision — you should go because you already paid $200 and would waste the money otherwise','Be ignored in your decision — it is a sunk cost that cannot be recovered, so only the marginal benefit of skiing vs. the marginal cost (discomfort of skiing while sick) should matter','Be recovered by demanding a refund from the ski resort, regardless of the non-refundable policy','Be subtracted from any future purchases to account for the financial loss incurred'],correctAnswer:1,explanation:'The \\$200 is a sunk cost — it\'s gone whether you go or stay home. Rational decision-making ignores sunk costs and focuses only on marginal analysis: Does the benefit of skiing today (while sick) exceed the cost (feeling worse, risk of injury, miserable experience)? Probably not — so the rational choice is to stay home, despite having paid \\$200. This is counterintuitive but economically correct.'}
+      {question:'You paid \\$200 for a non-refundable ski trip but wake up sick on the day of the trip. From an economic perspective, the \\$200 should:',options:['Be considered in your decision — you should go because you already paid \\$200 and would waste the money otherwise','Be ignored in your decision — it is a sunk cost that cannot be recovered, so only the marginal benefit of skiing vs. the marginal cost (discomfort of skiing while sick) should matter','Be recovered by demanding a refund from the ski resort, regardless of the non-refundable policy','Be subtracted from any future purchases to account for the financial loss incurred'],correctAnswer:1,explanation:'The \\$200 is a sunk cost — it\'s gone whether you go or stay home. Rational decision-making ignores sunk costs and focuses only on marginal analysis: Does the benefit of skiing today (while sick) exceed the cost (feeling worse, risk of injury, miserable experience)? Probably not — so the rational choice is to stay home, despite having paid \\$200. This is counterintuitive but economically correct.'}
     ]}},
     {id:'microscar1-utility',type:'text' as const,content:`
 ## 📖 Utility Maximization
@@ -75,17 +75,17 @@ To maximize total satisfaction, a consumer should allocate their budget so that:
 
 ### Example
 
-| Good | MU of Last Unit | Price | MU/$ |
+| Good | MU of Last Unit | Price | MU/\\$ |
 |---|---|---|---|
-| Pizza | 20 | $5 | 4 |
-| Soda | 6 | $2 | 3 |
-| Fries | 8 | $2 | 4 |
+| Pizza | 20 | \\$5 | 4 |
+| Soda | 6 | \\$2 | 3 |
+| Fries | 8 | \\$2 | 4 |
 
 - Pizza and Fries give the same MU per dollar (4) ✅
 - Soda gives less MU per dollar (3) — the consumer should buy **less soda** (its MU will rise) or more pizza/fries (their MU will fall) until all ratios are equal
 
 ### Why This Works
-If MU per dollar is higher for one good, you get more satisfaction per dollar from that good → shift spending toward it. As you consume more, diminishing marginal utility reduces MU → MU/$ falls. Eventually, all goods provide equal MU per dollar → you can't do better.
+If MU per dollar is higher for one good, you get more satisfaction per dollar from that good → shift spending toward it. As you consume more, diminishing marginal utility reduces MU → MU/\\$ falls. Eventually, all goods provide equal MU per dollar → you can't do better.
 
 > 🔑 **AP Connection:** The utility-maximizing rule (MU/P equal across goods) is tested frequently. If $MU_{a}/P_{a}$ > MUᵦ/Pᵦ, the consumer should buy **more of A** and **less of B**.
 `},

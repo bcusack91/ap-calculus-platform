@@ -5,171 +5,200 @@ export const microDemandSupplyEquilibriumPart5Data = {
       id: 'microdem5-intro',
       type: 'text' as const,
       content: `
-# 💰 Market Equilibrium
+# ⚖️ Market Equilibrium & Applications
 
-**Part 5 of 7 — Change Over Time**
+**Part 5 of 7 — Double Shifts with Magnitudes, and Misconceptions**
 
-Market Equilibrium has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Why One Variable Is Indeterminate |
+| Settling It with Numbers |
+| Reading "Larger Than" Prompts |
+| Misconceptions About Equilibrium |
 
-| Concept | Description |
-|---------|-------------|
-| **Continuity** | Aspects of Market Equilibrium that have remained stable over time |
-| **Change** | How Market Equilibrium has transformed due to new forces and conditions |
-| **Trend** | The direction of change in Market Equilibrium over time |
-      `
+> 🔑 **Key Concept:** Part 1 showed that when both curves shift, one of price or quantity is **indeterminate**. That word means "it depends on the sizes of the shifts," not "nothing happens." When a question gives you the sizes, the indeterminate variable becomes determinate.
+`
     },
     {
-      id: 'microdem5-quiz1',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Studying change over time in Market Equilibrium helps:',
-            options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
-          },
-          {
-            question: 'Continuity in Market Equilibrium means:',
-            options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
-            ],
-            correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'microdem5-content',
+      id: 'microdem5-why',
       type: 'text' as const,
       content: `
-## Change Over Time — Deeper Dive
+## 📖 Why One Variable Is Indeterminate
 
-### Continuity
-Aspects of Market Equilibrium that have remained stable over time. Understanding this concept is essential for mastering Market Equilibrium in AP Microeconomics.
+Take demand increasing **and** supply increasing. Analyze each shift alone, then combine.
 
-### Change
-How Market Equilibrium has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+| Shift alone | Effect on P | Effect on Q |
+|---|---|---|
+| Demand right | ↑ | ↑ |
+| Supply right | ↓ | ↑ |
+| **Combined** | **? (opposite pushes)** | **↑ (same push)** |
 
-### Trend
-The direction of change in Market Equilibrium over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
+Quantity rises for sure because both shifts push it up. Price gets pushed **up** by demand and **down** by supply, so the net direction depends on which push is stronger.
+
+### The Rule of Thumb
+1. Write the P and Q arrows for each shift separately.
+2. The variable whose arrows **agree** is determinate.
+3. The variable whose arrows **disagree** is indeterminate **unless** you know relative sizes.
+
+> 🔑 **AP Connection:** On a double-shift graph, draw the shifts so that the indeterminate variable ends up unchanged, or say explicitly that its direction depends on the size of the shifts. Graders accept "indeterminate," "ambiguous," or "cannot be determined" for that variable.
+`
+    },
+    {
+      id: 'microdem5-numbers',
+      type: 'text' as const,
+      content: `
+## 📖 Settling It with Numbers
+
+Start with the T-shirt market: $Q_d = 120 - 10P$ and $Q_s = 20P - 60$. Equilibrium is \\$6 and 60 shirts.
+
+### Case 1: Demand +30, Supply +60 (at every price)
+- $Q_d = 150 - 10P$, $Q_s = 20P$
+- $150 - 10P = 20P$, so $P = 5$ and $Q = 100$.
+- **Price fell** from \\$6 to \\$5: the supply increase was strong enough to win.
+
+### Case 2: Demand +30, Supply +30
+- $Q_d = 150 - 10P$, $Q_s = 20P - 30$
+- $150 - 10P = 20P - 30$, so $P = 6$ and $Q = 90$.
+- **Price unchanged.** Equal horizontal shifts cancel out on price.
+
+### Case 3: Demand +60, Supply +30
+- $Q_d = 180 - 10P$, $Q_s = 20P - 30$
+- $180 - 10P = 20P - 30$, so $P = 7$ and $Q = 110$.
+- **Price rose:** the demand increase won.
+
+| Case | Price | Quantity |
+|---|---|---|
+| D +30, S +60 | ↓ to \\$5 | ↑ to 100 |
+| D +30, S +30 | unchanged at \\$6 | ↑ to 90 |
+| D +60, S +30 | ↑ to \\$7 | ↑ to 110 |
+
+In every case, quantity rose: that was the determinate variable. Only price depended on the sizes.
+`
     },
     {
       id: 'microdem5-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Run Your Own Double Shift** ✍️
 
-1) What term refers to aspects of Market Equilibrium that have remained stable over time?
+Start from $Q_d = 120 - 10P$ and $Q_s = 20P - 60$. A fall in incomes (normal good) reduces demand by 30 at every price, and a new factory raises supply by 30 at every price.
 
-2) What concept describes how Market Equilibrium has transformed due to new forces and conditions?
+1) Write the new equations and solve. What is the new equilibrium price in dollars?
 
-3) Name the term for the direction of change in Market Equilibrium over time.
+2) What is the new equilibrium quantity?
 
-Use the exact term from this part.
+3) By how many shirts did equilibrium quantity change? (Enter the size of the change as a positive number.)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of Market Equilibrium that have remained stable over time), Change (How Market Equilibrium has transformed due to new forces and conditions), and Trend (The direction of change in Market Equilibrium over time).'
+        correctAnswers: ['4', '50', '10'],
+        hint1: 'New demand: Qd = 90 − 10P. New supply: Qs = 20P − 30.',
+        hint2: '90 − 10P = 20P − 30 gives 120 = 30P.',
+        hint3: 'Compare the new quantity with the original 60 shirts.',
+        explanation: '1) 90 − 10P = 20P − 30, so 120 = 30P and P = \\$4. 2) Q = 90 − 40 = 50, and supply gives 80 − 30 = 50 ✓. 3) Quantity fell by 10. Both shifts pushed price down, so the price fall was certain; quantity was the indeterminate variable, and with these sizes the demand decrease won.'
       }
     },
     {
-      id: 'microdem5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Aspects of Market Equilibrium that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'None of these']
-          },
-          {
-            label: 'How Market Equilibrium has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'All of these']
-          },
-          {
-            label: 'The direction of change in Market Equilibrium over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'None of these']
-          }
-        ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of Market Equilibrium that have remained stable over time. Change — How Market Equilibrium has transformed due to new forces and conditions. Trend — The direction of change in Market Equilibrium over time.'
-      }
-    },
-    {
-      id: 'microdem5-strategy',
+      id: 'microdem5-larger',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## 📖 Reading "Larger Than" Prompts
 
-### Misconceptions to Avoid
-- Don\'t confuse **Continuity** with **Change** — while related, they address different aspects of Market Equilibrium.
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+AP questions often supply the magnitude in words. Translate the words into the arrow that wins.
 
-### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP Microeconomics for higher scores.
-      `
+| Prompt wording | Shifts | Determinate | Settled by the wording |
+|---|---|---|---|
+| "Demand increases by more than supply increases" | D↑ big, S↑ small | Q ↑ | P ↑ (demand wins) |
+| "Supply decreases by more than demand increases" | D↑ small, S↓ big | P ↑ | Q ↓ (supply wins) |
+| "Demand falls by more than supply rises" | D↓ big, S↑ small | P ↓ | Q ↓ (demand wins) |
+| "Supply rises by more than demand rises" | D↑ small, S↑ big | Q ↑ | P ↓ (supply wins) |
+
+"More than" here means the **horizontal** shift (the change in quantity at each price) is larger, assuming the curves have similar slopes. On the AP exam, a question that wants you to settle the ambiguity will describe the shifts this way.
+
+> 🔑 **AP Connection:** Do not invent a magnitude the question did not give. If the prompt says only "demand increases and supply increases," the correct answer for price is "indeterminate," even if one effect seems bigger in real life.
+`
     },
     {
-      id: 'microdem5-applied',
+      id: 'microdem5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
+      content: `**Concept Check** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks how Market Equilibrium has changed in the last 50 years. A strong answer would:',
+            question: 'In the market for strawberries, a bumper harvest increases supply by more than a health study increases demand. What happens to equilibrium price and quantity?',
             options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
+              'Price falls and quantity rises',
+              'Price rises and quantity rises',
+              'Quantity rises and price is indeterminate',
+              'Quantity is indeterminate and price falls'
             ],
-            correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
+            correctAnswer: 0,
+            explanation: 'Both shifts raise quantity. Demand pushes price up and supply pushes it down, and because the supply increase is larger, price falls. The magnitude information settles the variable that would otherwise be indeterminate.'
           },
           {
-            question: 'A trend in Market Equilibrium shows acceleration in recent decades. The most likely explanation is:',
+            question: 'Demand for a good decreases while supply decreases, and the prompt gives no information about the sizes of the shifts. Which conclusion is correct?',
             options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
+              'Quantity falls, and the price change is indeterminate',
+              'Price falls, and the quantity change is indeterminate',
+              'Both price and quantity fall by the same proportion',
+              'Neither price nor quantity can be predicted at all'
             ],
-            correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
+            correctAnswer: 0,
+            explanation: 'Both shifts push quantity down, so quantity definitely falls. A demand decrease pushes price down while a supply decrease pushes it up, so without magnitudes the price change is indeterminate.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'microdem5-misconceptions',
+      type: 'text' as const,
+      content: `
+## 📖 Misconceptions About Equilibrium
+
+| Misconception | Correction |
+|---|---|
+| "A **surplus** at a high price means sellers are doing well." | A surplus of **goods** is unsold inventory. It is different from producer **surplus**, the dollar gain from trade. Check which one a question means. |
+| "A **shortage** is the same as **scarcity**." | Scarcity is permanent: wants exceed resources at every price. A shortage is temporary: quantity demanded exceeds quantity supplied **at a particular price**, and a higher price removes it. |
+| "Equilibrium is the **fair** price." | Equilibrium is the price where plans match and total surplus is maximized. It says nothing about fairness or how surplus is distributed. |
+| "Equilibrium price is where price is **lowest**." | Prices below equilibrium create shortages. Equilibrium balances buyers and sellers; it does not favor either side. |
+| "When both curves shift, **both** P and Q are indeterminate." | Only one is indeterminate. The variable whose arrows agree always moves in a known direction. |
+| "Markets are **always** at equilibrium." | Markets move **toward** equilibrium. After a shock, a shortage or surplus exists until the price adjusts, and price controls can hold it away indefinitely. |
+
+> 🔑 **AP Connection:** Multiple-choice distractors are often built from these exact misconceptions. If an answer choice says both variables are indeterminate, or calls a shortage "scarcity," it is almost certainly wrong.
+`
+    },
+    {
+      id: 'microdem5-quiz2',
+      type: 'multiple-choice' as const,
+      content: `**Check Your Understanding** 🎯`,
+      exercise: {
+        questions: [
+          {
+            question: 'Concert tickets are priced at \\$40, and fans line up for hours because quantity demanded exceeds quantity supplied. An economist would call this:',
+            options: [
+              'a shortage at a price below equilibrium',
+              'scarcity that no price change can remove',
+              'a surplus at a price above equilibrium',
+              'a fall in demand caused by the long line'
+            ],
+            correctAnswer: 0,
+            explanation: 'Excess demand at the posted price is a shortage, and it means \\$40 is below the equilibrium price. Raising the price would ration tickets and remove the line. Scarcity, by contrast, exists at every price.'
+          },
+          {
+            question: 'Which statement about market equilibrium is accurate?',
+            options: [
+              'It maximizes total surplus but does not decide how that surplus is divided',
+              'It gives buyers and sellers equal shares of the total surplus',
+              'It is the price at which sellers earn the largest producer surplus',
+              'It is the lowest price at which every buyer can get the good'
+            ],
+            correctAnswer: 0,
+            explanation: 'Equilibrium maximizes the sum of consumer and producer surplus, but the split depends on the shapes of the curves. Sellers alone would prefer a higher price, and at lower prices some buyers who want the good cannot get it.'
           }
         ]
       }
     }
   ]
-}
+};
