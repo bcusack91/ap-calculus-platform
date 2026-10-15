@@ -73,13 +73,13 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
   'apes-air-pollution': {
     completionDestination: 'competitive',
     parts: [
-      { title: '🏭 Pollutants, Sources & Primary vs. Secondary', loader: () => import('./extra/apes-air-pollution').then((m) => m.parts[0]) },
-      { title: 'Photochemical Smog', loader: () => import('./extra/apes-air-pollution').then((m) => m.parts[1]) },
-      { title: 'Industrial Smog & Acid Deposition', loader: () => import('./extra/apes-air-pollution').then((m) => m.parts[2]) },
-      { title: 'Thermal Inversions & the Role of Weather', loader: () => import('./extra/apes-air-pollution').then((m) => m.parts[3]) },
-      { title: 'Health Effects & the Air Quality Index', loader: () => import('./extra/apes-air-pollution').then((m) => m.parts[4]) },
-      { title: 'Indoor Air Pollution', loader: () => import('./extra/apes-air-pollution').then((m) => m.parts[5]) },
-      { title: 'Control Technology, Policy & Mastery Check', loader: () => import('./extra/apes-air-pollution').then((m) => m.parts[6]) },
+      { title: 'Pollutants, Sources and How They Form', loader: () => import('./extra/apes-air-pollution').then((m) => m.parts[0]) },
+      { title: 'Two Kinds of Smog: London and Los Angeles', loader: () => import('./extra/apes-air-pollution').then((m) => m.parts[1]) },
+      { title: 'Weather, Terrain and Pollution Episodes', loader: () => import('./extra/apes-air-pollution').then((m) => m.parts[2]) },
+      { title: 'Acid Deposition: Long-Term Records and Slow Recovery', loader: () => import('./extra/apes-air-pollution').then((m) => m.parts[3]) },
+      { title: 'Reducing Air Pollution and Noise: Tools and Trade-offs', loader: () => import('./extra/apes-air-pollution').then((m) => m.parts[4]) },
+      { title: 'AP Exam Practice', loader: () => import('./extra/apes-air-pollution').then((m) => m.parts[5]) },
+      { title: 'Synthesis Review', loader: () => import('./extra/apes-air-pollution').then((m) => m.parts[6]) },
     ],
   },
   'act-conflicting-viewpoints': {
@@ -1405,13 +1405,13 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
   'apes-climate-change': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Weather vs. Climate & the Natural Greenhouse Effect', loader: () => import('./extra/apes-climate-change').then((m) => m.parts[0]) },
-      { title: 'The Greenhouse Gases & Global Warming Potential', loader: () => import('./extra/apes-climate-change').then((m) => m.parts[1]) },
-      { title: 'Evidence, the Carbon Cycle & Natural Drivers', loader: () => import('./extra/apes-climate-change').then((m) => m.parts[2]) },
-      { title: 'Feedback Loops & Tipping Points', loader: () => import('./extra/apes-climate-change').then((m) => m.parts[3]) },
-      { title: 'Impacts on Ecosystems, Oceans & People', loader: () => import('./extra/apes-climate-change').then((m) => m.parts[4]) },
-      { title: 'Solutions: Mitigation, Adaptation & Policy', loader: () => import('./extra/apes-climate-change').then((m) => m.parts[5]) },
-      { title: 'Synthesis, Mixed Practice & Exit Quiz', loader: () => import('./extra/apes-climate-change').then((m) => m.parts[6]) },
+      { title: 'Weather, Climate and the Natural Greenhouse Effect', loader: () => import('./extra/apes-climate-change').then((m) => m.parts[0]) },
+      { title: 'Where Emissions Come From', loader: () => import('./extra/apes-climate-change').then((m) => m.parts[1]) },
+      { title: 'Multiple Lines of Evidence', loader: () => import('./extra/apes-climate-change').then((m) => m.parts[2]) },
+      { title: 'Feedbacks and Tipping Points', loader: () => import('./extra/apes-climate-change').then((m) => m.parts[3]) },
+      { title: 'Ocean Warming, Acidification and Sea-Level Rise: Case Studies', loader: () => import('./extra/apes-climate-change').then((m) => m.parts[4]) },
+      { title: 'Mitigation and Adaptation: Comparing Strategies', loader: () => import('./extra/apes-climate-change').then((m) => m.parts[5]) },
+      { title: 'AP Exam Practice and Synthesis', loader: () => import('./extra/apes-climate-change').then((m) => m.parts[6]) },
     ],
   },
   'apes-geology-soil': {
@@ -1429,13 +1429,13 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
   'apes-ozone-indoor-air': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'The Ozone Layer: Earth\'s UV Shield', loader: () => import('./extra/apes-ozone-indoor-air').then((m) => m.parts[0]) },
-      { title: 'CFCs and the Chemistry of Depletion', loader: () => import('./extra/apes-ozone-indoor-air').then((m) => m.parts[1]) },
-      { title: 'The Antarctic Ozone Hole', loader: () => import('./extra/apes-ozone-indoor-air').then((m) => m.parts[2]) },
-      { title: 'The Montreal Protocol: A Policy Success Story', loader: () => import('./extra/apes-ozone-indoor-air').then((m) => m.parts[3]) },
-      { title: 'Indoor Air Quality: The Pollutants', loader: () => import('./extra/apes-ozone-indoor-air').then((m) => m.parts[4]) },
-      { title: 'Why Indoor Air Builds Up, and How to Fix It', loader: () => import('./extra/apes-ozone-indoor-air').then((m) => m.parts[5]) },
-      { title: 'Synthesis & Mastery Check', loader: () => import('./extra/apes-ozone-indoor-air').then((m) => m.parts[6]) },
+      { title: 'The Ozone Layer and the UV That Reaches You', loader: () => import('./extra/apes-ozone-indoor-air').then((m) => m.parts[0]) },
+      { title: 'How Scientists Found the Problem', loader: () => import('./extra/apes-ozone-indoor-air').then((m) => m.parts[1]) },
+      { title: 'Ozone-Depleting Substances and Their Replacements', loader: () => import('./extra/apes-ozone-indoor-air').then((m) => m.parts[2]) },
+      { title: 'The Montreal Protocol: Why It Worked', loader: () => import('./extra/apes-ozone-indoor-air').then((m) => m.parts[3]) },
+      { title: 'Indoor Air Pollutants: Sources and Mechanisms', loader: () => import('./extra/apes-ozone-indoor-air').then((m) => m.parts[4]) },
+      { title: 'Ventilation, Sick Buildings and Cleaner Stoves', loader: () => import('./extra/apes-ozone-indoor-air').then((m) => m.parts[5]) },
+      { title: 'AP Exam Practice and Synthesis', loader: () => import('./extra/apes-ozone-indoor-air').then((m) => m.parts[6]) },
     ],
   },
   'apes-solid-hazardous-waste': {
@@ -1465,13 +1465,13 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
   'apes-water-pollution': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Sources, Categories & the Point/Nonpoint Distinction', loader: () => import('./extra/apes-water-pollution').then((m) => m.parts[0]) },
-      { title: 'Nutrient Pollution & Eutrophication', loader: () => import('./extra/apes-water-pollution').then((m) => m.parts[1]) },
-      { title: 'Pathogens, Sewage & Wastewater Treatment', loader: () => import('./extra/apes-water-pollution').then((m) => m.parts[2]) },
-      { title: 'Toxic Pollution, Bioaccumulation & Biomagnification', loader: () => import('./extra/apes-water-pollution').then((m) => m.parts[3]) },
-      { title: 'Oil, Plastic, Sediment & Thermal Pollution', loader: () => import('./extra/apes-water-pollution').then((m) => m.parts[4]) },
-      { title: 'Groundwater & Drinking Water', loader: () => import('./extra/apes-water-pollution').then((m) => m.parts[5]) },
-      { title: 'Laws, Cleanup & Mastery Check', loader: () => import('./extra/apes-water-pollution').then((m) => m.parts[6]) },
+      { title: 'Sources and Measures of Water Quality', loader: () => import('./extra/apes-water-pollution').then((m) => m.parts[0]) },
+      { title: 'Eutrophication and Hypoxia in Depth', loader: () => import('./extra/apes-water-pollution').then((m) => m.parts[1]) },
+      { title: 'Oil, Heat and Sediment: Physical Pollutants', loader: () => import('./extra/apes-water-pollution').then((m) => m.parts[2]) },
+      { title: 'Persistent Toxins: Case Studies', loader: () => import('./extra/apes-water-pollution').then((m) => m.parts[3]) },
+      { title: 'Dose, Response and Risk', loader: () => import('./extra/apes-water-pollution').then((m) => m.parts[4]) },
+      { title: 'Sewage, Septic Systems and Water Law', loader: () => import('./extra/apes-water-pollution').then((m) => m.parts[5]) },
+      { title: 'AP Exam Practice and Synthesis', loader: () => import('./extra/apes-water-pollution').then((m) => m.parts[6]) },
     ],
   },
   'macro-aggregate-demand-supply': {
