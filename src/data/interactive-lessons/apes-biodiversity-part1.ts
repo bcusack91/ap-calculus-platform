@@ -26,9 +26,11 @@ export const apesBiodiversityPart1Data = {
 | Category | Ecosystem Service | Example |
 |----------|------------------|---------|
 | **Provisioning** | Food, medicine, raw materials | 25% of pharmaceuticals derived from plants |
-| **Regulating** | Climate regulation, water purification, pollination | Wetlands filter pollutants; bees pollinate 75% of food crops |
+| **Regulating** | Climate regulation, flood control, water purification, pollination | Forests store carbon; wetlands absorb floodwater and filter pollutants |
 | **Supporting** | Nutrient cycling, soil formation, primary production | Decomposers recycle nutrients; forests produce oxygen |
 | **Cultural** | Recreation, aesthetic, spiritual value | National parks, ecotourism revenue |
+
+> ⚠️ **Classification note:** Pollination and water purification by wetlands are classed as **regulating** services in the Millennium Ecosystem Assessment, but some APES textbooks list them as **supporting**. On the exam, name the category AND explain the function the ecosystem performs, so your answer earns credit either way.
 
 > 🔑 **Key Concept:** Higher biodiversity = greater ecosystem resilience. Diverse ecosystems can better withstand and recover from disturbances.
 
@@ -131,7 +133,7 @@ export const apesBiodiversityPart1Data = {
       exercise: {
         dropdowns: [
           {
-            label: 'Bees pollinating food crops is a ___ ecosystem service',
+            label: 'Forests absorbing $CO_{2}$ and moderating regional climate is a ___ ecosystem service',
             options: ['Regulating', 'Provisioning', 'Cultural', 'Supporting']
           },
           {
@@ -144,10 +146,10 @@ export const apesBiodiversityPart1Data = {
           }
         ],
         correctAnswers: ['Regulating', 'Provisioning', 'Species evenness'],
-        hint1: 'Pollination regulates food production.',
+        hint1: 'The ecosystem is controlling a natural process (climate).',
         hint2: 'Direct provision of raw materials.',
         hint3: 'One species dominates while three are rare.',
-        explanation: 'Pollination = regulating. Timber = provisioning. 97% one species = very low evenness despite having 4 species.'
+        explanation: 'Climate regulation by forests = regulating. Timber = provisioning. 97% one species = very low evenness despite having 4 species.'
       }
     },
     {

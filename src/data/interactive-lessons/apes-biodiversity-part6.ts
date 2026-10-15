@@ -5,171 +5,213 @@ export const apesBiodiversityPart6Data = {
       id: 'apesbiod6-intro',
       type: 'text' as const,
       content: `
-# 🌿 Biodiversity
+# 🦜 Biodiversity
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — AP Exam Practice**
 
-Apply Biodiversity concepts to data interpretation and analytical scenarios. Practice the types of questions seen on the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📋 Free-Response Practice: Birds in a Fragmented Forest |
+| Model Answers |
+| Designing an Investigation: Edge Versus Interior |
 
-| Concept | Description |
-|---------|-------------|
-| **Data interpretation** | Analyzing maps, graphs, and tables related to Biodiversity |
-| **Argumentation** | Making evidence-based claims about Biodiversity |
-| **Spatial reasoning** | Using geographic thinking to analyze Biodiversity |
-      `
-    },
-    {
-      id: 'apesbiod6-quiz1',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When interpreting data about Biodiversity, the first step is:',
-            options: [
-              'Jump to conclusions',
-              'Identify what the data shows and note any patterns or trends',
-              'Ignore the data',
-              'Only look at the title'
-            ],
-            correctAnswer: 1,
-            explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.'
-          },
-          {
-            question: 'An evidence-based argument about Biodiversity requires:',
-            options: [
-              'Just opinions',
-              'A clear claim supported by specific evidence and reasoning',
-              'No evidence',
-              'Only emotional appeals'
-            ],
-            correctAnswer: 1,
-            explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).'
-          }
-        ]
-      }
-    },
-    {
-      id: 'apesbiod6-content',
-      type: 'text' as const,
-      content: `
-## Problem-Solving Workshop — Deeper Dive
+> 🔑 **Key Concept:** Biodiversity FRQs usually hand you survey data and ask you to compare diversity, connect the pattern to habitat size or isolation, calculate a change, and propose a way to protect what remains. This part works one complete question.
 
-### Data interpretation
-Analyzing maps, graphs, and tables related to Biodiversity. Understanding this concept is essential for mastering Biodiversity in AP Environmental Science.
+## 📋 Free-Response Practice: Birds in a Fragmented Forest
 
-### Argumentation
-Making evidence-based claims about Biodiversity. This builds on the previous concept and connects to broader themes in the course.
+Ecologists counted breeding birds in two plots of the same forest type. Plot A lies inside a large, continuous forest. Plot B is a 20 ha fragment left after the surrounding 480 ha of the original 500 ha forest were cleared for farms. (All values are hypothetical.)
 
-### Spatial reasoning
-Using geographic thinking to analyze Biodiversity. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Species | Plot A (continuous forest) | Plot B (20 ha fragment) |
+|---|---|---|
+| Wood thrush | 20 | 0 |
+| Ovenbird | 20 | 0 |
+| Red-eyed vireo | 20 | 5 |
+| Scarlet tanager | 20 | 5 |
+| American robin | 20 | 20 |
+| Brown-headed cowbird | 0 | 70 |
+| **Total** | **100** | **100** |
+
+Brown-headed cowbirds are **edge** species that lay their eggs in other birds' nests.
+
+**Questions**
+
+(a) **Identify** the species richness of each plot.
+
+(b) **Calculate** Simpson's diversity index, $D = 1 - \\Sigma (n/N)^{2}$, for Plot B.
+
+(c) **Calculate** the percent of the original forest that was lost.
+
+(d) A wood thrush population in a nearby fragment is declining by 5% per year. **Calculate** about how many years it will take to fall to half its size.
+
+(e) **Explain** why the fragment supports fewer interior forest species than the continuous forest, using island biogeography or edge effects.
+
+(f) **Propose** one land-management action that would help interior forest birds in this landscape, and **explain** how it works.
       `
     },
     {
       id: 'apesbiod6-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Calculate It** 🧮
 
-1) What term refers to analyzing maps, graphs, and tables related to Biodiversity?
+1) (b) Simpson's diversity index for Plot B (three decimals):
 
-2) What concept describes making evidence-based claims about Biodiversity?
+2) (c) Percent of the original forest lost:
 
-3) Name the term for using geographic thinking to analyze Biodiversity.
-
-Use the exact term from this part.
+3) (d) Halving time of the declining wood thrush population, in years:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'Starts with: D',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: Data interpretation (Analyzing maps, graphs, and tables related to Biodiversity), Argumentation (Making evidence-based claims about Biodiversity), and Spatial reasoning (Using geographic thinking to analyze Biodiversity).'
+        correctAnswers: ['0.465', '96', '14'],
+        hint1: 'Square each proportion: 0.70, 0.20, 0.05 and 0.05. Add the squares and subtract from 1.',
+        hint2: '480 of the 500 hectares were cleared.',
+        hint3: 'Rule of 70: 70 ÷ the percent rate of decline.',
+        explanation: '(b) 0.49 + 0.04 + 0.0025 + 0.0025 = 0.535, so D = 1 − 0.535 = 0.465. (c) 480 ÷ 500 × 100 = 96 percent. (d) 70 ÷ 5 = 14 years.'
       }
     },
     {
-      id: 'apesbiod6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Analyzing maps, graphs, and tables related to Biodiversity is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
-          },
-          {
-            label: 'Making evidence-based claims about Biodiversity describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
-          },
-          {
-            label: 'Using geographic thinking to analyze Biodiversity is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
-          }
-        ],
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Data interpretation — Analyzing maps, graphs, and tables related to Biodiversity. Argumentation — Making evidence-based claims about Biodiversity. Spatial reasoning — Using geographic thinking to analyze Biodiversity.'
-      }
-    },
-    {
-      id: 'apesbiod6-strategy',
+      id: 'apesbiod6-model',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Model Answers
 
-### Misconceptions to Avoid
-- Don\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of Biodiversity.
-- **Spatial reasoning** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+**(a)** Plot A: **5** species. Plot B: **4** species (vireo, tanager, robin, cowbird).
 
-### AP Strategy Moves
-- When you see questions about problem-solving workshop, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect problem-solving workshop to broader themes in AP Environmental Science for higher scores.
+**(b)** Proportions in Plot B: cowbird 0.70, robin 0.20, vireo 0.05, tanager 0.05.
+
+| Species | $n/N$ | $(n/N)^{2}$ |
+|---|---|---|
+| Cowbird | 0.70 | 0.4900 |
+| Robin | 0.20 | 0.0400 |
+| Vireo | 0.05 | 0.0025 |
+| Tanager | 0.05 | 0.0025 |
+| **Sum** | | **0.5350** |
+
+$D = 1 - 0.535 = 0.465$. For comparison, Plot A has five species at 0.20 each: $\\Sigma = 5 \\times 0.04 = 0.20$, so $D = 0.80$. Plot B is far less diverse: lower richness **and** much lower evenness.
+
+**(c)** $\\dfrac{480}{500} \\times 100 = 96\\%$ lost (equivalently, percent change in forest area $= \\dfrac{20 - 500}{500} \\times 100 = -96\\%$).
+
+**(d)** Halving time $\\approx \\dfrac{70}{5} = 14$ years.
+
+**(e)** A small fragment behaves like a small **island**: it holds smaller populations, so local **extinction rates are higher**, and the surrounding farmland **isolates** it, so **immigration** of forest birds is low. In addition, a small fragment is almost all **edge**: edge species such as cowbirds move in and parasitize the nests of interior species, and the hotter, drier, windier conditions at the edge do not suit them.
+
+**(f)** Plant a **wildlife corridor** of forest linking the fragment to the continuous forest. The corridor lets interior birds disperse between patches, raising immigration and gene flow and allowing recolonization after local extinctions. (Also acceptable: reforest cleared land around the fragment to enlarge it and shrink the edge-to-area ratio; protect the largest remaining patches from further clearing.)
+
+> 🔑 **AP Connection:** In (e), name the **mechanism**: higher extinction from small populations, lower immigration from isolation, or edge effects. "The fragment is small" restates the data and does not explain it.
+      `
+    },
+    {
+      id: 'apesbiod6-quiz1',
+      type: 'multiple-choice' as const,
+      content: `
+**AP-Style Multiple Choice** 🎯
+
+Use the bird survey.
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Which statement correctly compares the two plots?',
+            options: [
+              'Plot A has both higher richness and higher evenness than Plot B',
+              'Plot B has higher evenness because it has more total birds',
+              'Both plots have the same diversity because each has 100 birds',
+              'Plot B has higher richness because it contains the cowbird'
+            ],
+            correctAnswer: 0,
+            explanation: 'Plot A has five species evenly represented, while Plot B has four species dominated by cowbirds. Total counts are equal, so neither richness nor evenness can be judged from the totals alone.'
+          },
+          {
+            question: 'Which species in the survey is most likely to benefit from further fragmentation of the forest?',
+            options: [
+              'Brown-headed cowbird',
+              'Wood thrush',
+              'Ovenbird',
+              'Scarlet tanager'
+            ],
+            correctAnswer: 0,
+            explanation: 'Cowbirds are edge specialists, and fragmentation creates more edge habitat. They were absent from the continuous forest plot but dominant in the fragment, while the interior species declined or disappeared.'
+          },
+          {
+            question: 'A region of forest totaling 1,000 km² holds 80 bird species. If clearing leaves 100 km² in a similar landscape, about how many species does the species–area rule of thumb predict will remain?',
+            options: [
+              'About 40 species',
+              'About 8 species',
+              'About 72 species',
+              'About 20 species'
+            ],
+            correctAnswer: 0,
+            explanation: 'A 10-fold decrease in area roughly halves the number of species, so 80 becomes about 40. Assuming species fall in direct proportion to area, which gives 8, overstates the loss.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'apesbiod6-investigation',
+      type: 'text' as const,
+      content: `
+## Designing an Investigation: Edge Versus Interior
+
+**Prompt:** A student hypothesizes that interior forest bird species are less common near a forest edge. Design an investigation.
+
+| Element | Model response |
+|---|---|
+| **Hypothesis** | If a survey point is closer to the forest edge, then fewer interior species will be detected, because edge conditions and nest parasites reduce their breeding success. |
+| **Independent variable** | Distance of the survey point from the forest edge (0 m, 100 m, 200 m, 400 m) |
+| **Dependent variable** | Number of interior-species birds detected per 10-minute point count |
+| **Controlled variables** | Same forest type, same time of morning, same season, same observer, same weather (no rain or strong wind) |
+| **Replication** | Several survey points at each distance, each visited on three mornings |
+
+### Interpreting results
+
+| Distance from edge (m) | Interior birds per count |
+|---|---|
+| 0 | 1.5 |
+| 100 | 4.0 |
+| 200 | 6.0 |
+| 400 | 6.5 |
+
+**Percent change from the edge to 200 m:**
+
+$$\\frac{6.0 - 1.5}{1.5} \\times 100 = +300\\%$$
+
+Detections rise steeply over the first 200 m and then level off. That pattern suggests edge effects in this forest reach roughly 100–200 m, so a fragment would need to be several hundred meters across before it contains any true interior habitat.
       `
     },
     {
       id: 'apesbiod6-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'You are given a data table about Biodiversity and asked to identify a trend. You should:',
+            question: 'Why should the student survey every point at the same time of morning?',
             options: [
-              'Pick random numbers',
-              'Look for consistent increases, decreases, or patterns across the data',
-              'Ignore the table',
-              'Only read the first row'
+              'Bird activity changes during the day, so timing must be held constant to compare distances fairly',
+              'Distance from the edge is the dependent variable, and it changes as the morning goes on',
+              'Morning surveys remove the need to repeat counts at each distance from the edge',
+              'Interior species leave the forest by midday, so later counts would miss them entirely'
             ],
-            correctAnswer: 1,
-            explanation: 'Trend identification requires examining the entire dataset for consistent patterns of change.'
+            correctAnswer: 0,
+            explanation: 'Birds sing and move most in early morning, so counts taken at different times would reflect timing rather than distance from the edge. Distance is the independent variable, and replication is still required.'
           },
           {
-            question: 'A free-response question asks you to use evidence to support an argument about Biodiversity. The best approach is:',
+            question: 'Based on the edge data, which reserve design would best protect interior species?',
             options: [
-              'State your opinion without evidence',
-              'Make a clear claim, cite specific data or examples, and explain how they support your argument',
-              'Copy the question',
-              'Write about a different topic'
+              'One large, compact block of forest',
+              'Many small patches spread across farmland',
+              'A long, narrow strip of forest along a road',
+              'Small patches with cleared land between them'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response answers require a clear thesis, specific supporting evidence, and explanation of how evidence supports the argument.'
+            correctAnswer: 0,
+            explanation: 'A large, compact block has the least edge relative to its area, so it contains the most habitat beyond the 100–200 m edge zone. Small or narrow patches can be almost entirely edge.'
           }
         ]
       }
     }
   ]
-}
+};
