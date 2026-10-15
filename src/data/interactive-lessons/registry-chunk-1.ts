@@ -335,13 +335,13 @@ export const registryChunk1: Record<string, InteractiveTopicConfig> = {
   'fitness-environment': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Natural Selection & Fitness', loader: () => import('./bio-fitness-environment-part1').then(m => m.bioFitnessPart1Data) },
-      { title: 'Adaptation', loader: () => import('./bio-fitness-environment-part2').then(m => m.bioFitnessPart2Data) },
-      { title: 'Phenotypic Plasticity', loader: () => import('./bio-fitness-environment-part3').then(m => m.bioFitnessPart3Data) },
-      { title: 'Trade-offs', loader: () => import('./bio-fitness-environment-part4').then(m => m.bioFitnessPart4Data) },
-      { title: 'Environmental Variation', loader: () => import('./bio-fitness-environment-part5').then(m => m.bioFitnessPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./bio-fitness-environment-part6').then(m => m.bioFitnessPart6Data) },
-      { title: 'AP Review', loader: () => import('./bio-fitness-environment-part7').then(m => m.bioFitnessPart7Data) },
+      { title: 'Fitness Depends on the Environment', loader: () => import('./bio-fitness-environment-part1').then(m => m.bioFitnessPart1Data) },
+      { title: 'How Environment Shapes Phenotype', loader: () => import('./bio-fitness-environment-part2').then(m => m.bioFitnessPart2Data) },
+      { title: 'Timing and Coordination in Plants', loader: () => import('./bio-fitness-environment-part3').then(m => m.bioFitnessPart3Data) },
+      { title: 'Timing and Coordination in Animals', loader: () => import('./bio-fitness-environment-part4').then(m => m.bioFitnessPart4Data) },
+      { title: 'Analyzing Environment–Phenotype Data', loader: () => import('./bio-fitness-environment-part5').then(m => m.bioFitnessPart5Data) },
+      { title: 'Nuance, Misconceptions and FRQ Practice', loader: () => import('./bio-fitness-environment-part6').then(m => m.bioFitnessPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./bio-fitness-environment-part7').then(m => m.bioFitnessPart7Data) },
     ],
   },
   'cell-communication-signaling': {
@@ -371,13 +371,13 @@ export const registryChunk1: Record<string, InteractiveTopicConfig> = {
   'feedback-mechanisms': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Positive Feedback', loader: () => import('./bio-feedback-mechanisms-part1').then(m => m.bioFeedbackPart1Data) },
-      { title: 'Negative Feedback', loader: () => import('./bio-feedback-mechanisms-part2').then(m => m.bioFeedbackPart2Data) },
-      { title: 'Homeostasis', loader: () => import('./bio-feedback-mechanisms-part3').then(m => m.bioFeedbackPart3Data) },
-      { title: 'Hormonal Regulation', loader: () => import('./bio-feedback-mechanisms-part4').then(m => m.bioFeedbackPart4Data) },
-      { title: 'Thermoregulation', loader: () => import('./bio-feedback-mechanisms-part5').then(m => m.bioFeedbackPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./bio-feedback-mechanisms-part6').then(m => m.bioFeedbackPart6Data) },
-      { title: 'AP Review', loader: () => import('./bio-feedback-mechanisms-part7').then(m => m.bioFeedbackPart7Data) },
+      { title: 'Anatomy of a Feedback Loop', loader: () => import('./bio-feedback-mechanisms-part1').then(m => m.bioFeedbackPart1Data) },
+      { title: 'Negative Feedback in Depth', loader: () => import('./bio-feedback-mechanisms-part2').then(m => m.bioFeedbackPart2Data) },
+      { title: 'Positive Feedback in Depth', loader: () => import('./bio-feedback-mechanisms-part3').then(m => m.bioFeedbackPart3Data) },
+      { title: 'Feedback in Populations and Ecosystems', loader: () => import('./bio-feedback-mechanisms-part4').then(m => m.bioFeedbackPart4Data) },
+      { title: 'When Feedback Fails', loader: () => import('./bio-feedback-mechanisms-part5').then(m => m.bioFeedbackPart5Data) },
+      { title: 'Reading Feedback Data and FRQ Practice', loader: () => import('./bio-feedback-mechanisms-part6').then(m => m.bioFeedbackPart6Data) },
+      { title: 'Synthesis Review', loader: () => import('./bio-feedback-mechanisms-part7').then(m => m.bioFeedbackPart7Data) },
     ],
   },
   'meiosis-genetic-diversity': {
