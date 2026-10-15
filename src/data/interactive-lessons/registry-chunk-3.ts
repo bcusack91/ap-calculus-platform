@@ -885,48 +885,48 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./hg-culture-diffusion-part1').then(m => m.hgCultureDiffusionPart1Data) },
-      { title: 'Key Processes', loader: () => import('./hg-culture-diffusion-part2').then(m => m.hgCultureDiffusionPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./hg-culture-diffusion-part3').then(m => m.hgCultureDiffusionPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./hg-culture-diffusion-part4').then(m => m.hgCultureDiffusionPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./hg-culture-diffusion-part5').then(m => m.hgCultureDiffusionPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./hg-culture-diffusion-part6').then(m => m.hgCultureDiffusionPart6Data) },
-      { title: 'AP Review', loader: () => import('./hg-culture-diffusion-part7').then(m => m.hgCultureDiffusionPart7Data) }
+      { title: 'Culture and the Cultural Landscape', loader: () => import('./hg-culture-diffusion-part2').then(m => m.hgCultureDiffusionPart2Data) },
+      { title: 'Classifying Diffusion: Worked Cases', loader: () => import('./hg-culture-diffusion-part3').then(m => m.hgCultureDiffusionPart3Data) },
+      { title: 'Historical Causes of Diffusion: Trade, Colonialism and Imperialism', loader: () => import('./hg-culture-diffusion-part4').then(m => m.hgCultureDiffusionPart4Data) },
+      { title: 'Contemporary Diffusion and Its Effects', loader: () => import('./hg-culture-diffusion-part5').then(m => m.hgCultureDiffusionPart5Data) },
+      { title: 'AP Exam Practice: Diffusion Data and Landscapes', loader: () => import('./hg-culture-diffusion-part6').then(m => m.hgCultureDiffusionPart6Data) },
+      { title: 'Synthesis Review: Culture, Landscape and Diffusion', loader: () => import('./hg-culture-diffusion-part7').then(m => m.hgCultureDiffusionPart7Data) }
     ],
   },
   'hg-language-religion': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./hg-language-religion-part1').then(m => m.hgLanguageReligionPart1Data) },
-      { title: 'Key Processes', loader: () => import('./hg-language-religion-part2').then(m => m.hgLanguageReligionPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./hg-language-religion-part3').then(m => m.hgLanguageReligionPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./hg-language-religion-part4').then(m => m.hgLanguageReligionPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./hg-language-religion-part5').then(m => m.hgLanguageReligionPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./hg-language-religion-part6').then(m => m.hgLanguageReligionPart6Data) },
-      { title: 'AP Review', loader: () => import('./hg-language-religion-part7').then(m => m.hgLanguageReligionPart7Data) }
+      { title: 'Language Families, Hearths and Diffusion', loader: () => import('./hg-language-religion-part2').then(m => m.hgLanguageReligionPart2Data) },
+      { title: 'Religions: Hearths, Diffusion and Branches', loader: () => import('./hg-language-religion-part3').then(m => m.hgLanguageReligionPart3Data) },
+      { title: 'Reading Language and Religion Data and Maps', loader: () => import('./hg-language-religion-part4').then(m => m.hgLanguageReligionPart4Data) },
+      { title: 'Language, Religion and Identity: Unity, Conflict and Change', loader: () => import('./hg-language-religion-part5').then(m => m.hgLanguageReligionPart5Data) },
+      { title: 'AP Exam Practice: Regional Data and Religious Change', loader: () => import('./hg-language-religion-part6').then(m => m.hgLanguageReligionPart6Data) },
+      { title: 'Synthesis Review: Hearths, Diffusion, Data and Identity', loader: () => import('./hg-language-religion-part7').then(m => m.hgLanguageReligionPart7Data) }
     ],
   },
   'hg-ethnicity-identity': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./hg-ethnicity-identity-part1').then(m => m.hgEthnicityIdentityPart1Data) },
-      { title: 'Key Processes', loader: () => import('./hg-ethnicity-identity-part2').then(m => m.hgEthnicityIdentityPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./hg-ethnicity-identity-part3').then(m => m.hgEthnicityIdentityPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./hg-ethnicity-identity-part4').then(m => m.hgEthnicityIdentityPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./hg-ethnicity-identity-part5').then(m => m.hgEthnicityIdentityPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./hg-ethnicity-identity-part6').then(m => m.hgEthnicityIdentityPart6Data) },
-      { title: 'AP Review', loader: () => import('./hg-ethnicity-identity-part7').then(m => m.hgEthnicityIdentityPart7Data) }
+      { title: 'Identity in Geography: Ethnicity, Race, Gender and Indigeneity', loader: () => import('./hg-ethnicity-identity-part2').then(m => m.hgEthnicityIdentityPart2Data) },
+      { title: 'Ethnic Landscapes and Neighborhoods: Worked Cases', loader: () => import('./hg-ethnicity-identity-part3').then(m => m.hgEthnicityIdentityPart3Data) },
+      { title: 'Measuring and Mapping Segregation', loader: () => import('./hg-ethnicity-identity-part4').then(m => m.hgEthnicityIdentityPart4Data) },
+      { title: 'Ethnicity, Nationalism and Conflict', loader: () => import('./hg-ethnicity-identity-part5').then(m => m.hgEthnicityIdentityPart5Data) },
+      { title: 'AP Exam Practice: Segregation Data and Ethnic Landscapes', loader: () => import('./hg-ethnicity-identity-part6').then(m => m.hgEthnicityIdentityPart6Data) },
+      { title: 'Synthesis Review: From Identity to Landscape to Conflict', loader: () => import('./hg-ethnicity-identity-part7').then(m => m.hgEthnicityIdentityPart7Data) }
     ],
   },
   'hg-political-geography': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./hg-political-geography-part1').then(m => m.hgPoliticalGeographyPart1Data) },
-      { title: 'Key Processes', loader: () => import('./hg-political-geography-part2').then(m => m.hgPoliticalGeographyPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./hg-political-geography-part3').then(m => m.hgPoliticalGeographyPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./hg-political-geography-part4').then(m => m.hgPoliticalGeographyPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./hg-political-geography-part5').then(m => m.hgPoliticalGeographyPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./hg-political-geography-part6').then(m => m.hgPoliticalGeographyPart6Data) },
-      { title: 'AP Review', loader: () => import('./hg-political-geography-part7').then(m => m.hgPoliticalGeographyPart7Data) }
+      { title: 'Political Power and Territoriality', loader: () => import('./hg-political-geography-part2').then(m => m.hgPoliticalGeographyPart2Data) },
+      { title: 'Boundaries in Practice', loader: () => import('./hg-political-geography-part3').then(m => m.hgPoliticalGeographyPart3Data) },
+      { title: 'Internal Boundaries: Redistricting and Gerrymandering', loader: () => import('./hg-political-geography-part4').then(m => m.hgPoliticalGeographyPart4Data) },
+      { title: 'Governance, Devolution and Supranationalism', loader: () => import('./hg-political-geography-part5').then(m => m.hgPoliticalGeographyPart5Data) },
+      { title: 'AP Exam Practice: Devolution and Supranational Data', loader: () => import('./hg-political-geography-part6').then(m => m.hgPoliticalGeographyPart6Data) },
+      { title: 'Synthesis Review: Power, Lines and Scale', loader: () => import('./hg-political-geography-part7').then(m => m.hgPoliticalGeographyPart7Data) }
     ],
   },
   'hg-political-power': {
