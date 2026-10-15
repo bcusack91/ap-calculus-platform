@@ -48,15 +48,15 @@ $$\\boxed{|R_n(x)| \\le \\frac{M \\cdot |x - c|^{n+1}}{(n+1)!}, \\quad M = \\max
           },
           {
             question: 'If you use $M = 5$ but the true max of $|f^{(n+1)}|$ is $3$, the bound is:',
-            options: ['Still valid (overestimate, but correct direction)', 'Invalid (you used too large an $M$)', 'Exact', 'Undefined'],
+            options: ['Still valid, just less tight', 'Invalid, because $M$ must equal the true maximum', 'Exact, because any valid $M$ gives the true error', 'Invalid — the bound is now smaller than the error'],
             correctAnswer: 0,
-            explanation: 'Using a larger $M$ gives a looser but still valid upper bound. You can always overestimate $M$.'
+            explanation: 'Using a larger $M$ gives a looser but still valid upper bound: $M$ only has to be at least the true max. You can always overestimate $M$; you can never underestimate it.'
           },
           {
             question: 'For what type of function does Lagrange typically give the TIGHTEST bound?',
-            options: ['Functions where $|f^{(n+1)}|$ is nearly constant on $[c, x]$', 'Oscillating functions', 'Polynomials of degree $> n$', 'Step functions'],
+            options: ['Functions where $|f^{(n+1)}|$ is nearly constant on $[c, x]$', 'Functions whose derivatives oscillate between $-1$ and $1$', 'Functions whose $|f^{(n+1)}|$ spikes near one endpoint', 'Functions with a vertical asymptote just past $x$'],
             correctAnswer: 0,
-            explanation: 'When the $(n+1)$st derivative varies little, $M$ is close to the actual max, making the bound tight.'
+            explanation: 'When the $(n+1)$st derivative varies little, $M$ is close to the derivative\'s value everywhere on the interval, making the bound tight. A derivative that oscillates, spikes near one endpoint, or blows up near an asymptote forces a large $M$ that overstates the error over most of the interval.'
           }
         ]
       }
@@ -69,15 +69,15 @@ $$\\boxed{|R_n(x)| \\le \\frac{M \\cdot |x - c|^{n+1}}{(n+1)!}, \\quad M = \\max
         questions: [
           {
             question: '$|R_7(0.2)|$ for $\\sin x$ at $c = 0$:',
-            options: ['$(0.2)^8/8! = 2.56 \\times 10^{-6}/40320 \\approx 6.35 \\times 10^{-11}$', '$(0.2)^7/7!$', '$(0.2)^8/7!$', '$(0.2)^7/8!$'],
+            options: ['$(0.2)^8/8! \\approx 6.35 \\times 10^{-11}$', '$(0.2)^7/7! \\approx 2.54 \\times 10^{-9}$', '$(0.2)^8/7! \\approx 5.1 \\times 10^{-10}$', '$(0.2)^7/8! \\approx 3.2 \\times 10^{-10}$'],
             correctAnswer: 0,
-            explanation: '$M = 1$. $|R_7| \\le (0.2)^8/8! = 2.56 \\times 10^{-6}/40320 \\approx 6.35 \\times 10^{-11}$.'
+            explanation: '$M = 1$. $|R_7| \\le (0.2)^8/8! = 2.56 \\times 10^{-6}/40320 \\approx 6.35 \\times 10^{-11}$. Both the power and the factorial use $n + 1 = 8$; using $7$ in either place gives one of the larger values.'
           },
           {
             question: 'FRQ: $|f^{(3)}(t)| \\le 10$ on $[4, 4.5]$. $|R_2(4.5)| \\le$',
-            options: ['$10(0.5)^3/3! = 10(0.125)/6 \\approx 0.2083$', '$10(4.5)^3/3!$', '$10(0.5)^2/2!$', '$3 \\cdot 10(0.5)^3$'],
+            options: ['$10(0.5)^3/3! \\approx 0.2083$', '$10(4.5)^3/3! \\approx 151.9$', '$10(0.5)^2/2! = 1.25$', '$3 \\cdot 10(0.5)^3 = 3.75$'],
             correctAnswer: 0,
-            explanation: '$|R_2| \\le 10(0.5)^3/3! = 10/48 \\approx 0.2083$.'
+            explanation: '$|R_2| \\le 10(0.5)^3/3! = 10/48 \\approx 0.2083$. Using $x$ instead of $x - c$ gives $151.9$; using $n$ instead of $n+1$ gives $1.25$; multiplying by $3$ instead of dividing by $3!$ gives $3.75$.'
           }
         ]
       }
@@ -89,18 +89,18 @@ $$\\boxed{|R_n(x)| \\le \\frac{M \\cdot |x - c|^{n+1}}{(n+1)!}, \\quad M = \\max
       exercise: {
         dropdowns: [
           {
-            label: 'A student writes: "$|R_4| \\le M(x-c)^5/4!$." The mistake is:',
-            options: ['Denominator should be $5!$ not $4!$', 'Exponent should be $4$', 'Missing absolute value on $x - c$', 'No mistake'],
+            label: 'A student writes: "$|R_4| \\le M|x-c|^5/4!$." The mistake is:',
+            options: ['Denominator should be $5!$ not $4!$', 'Exponent should be $4$, matching $n$', '$M$ should bound the 4th derivative', 'No mistake — this is the standard form'],
             correctAnswers: ['Denominator should be $5!$ not $4!$'],
             hints: ['$|R_n| \\le M|x-c|^{n+1}/(n+1)!$. What is $(n+1)!$ when $n = 4$?'],
-            explanation: 'When $n = 4$: exponent is $n+1 = 5$ ✓, but denominator must be $(n+1)! = 5! = 120$, not $4! = 24$.'
+            explanation: 'When $n = 4$: exponent is $n+1 = 5$ ✓ and $M$ bounds the 5th derivative, but the denominator must be $(n+1)! = 5! = 120$, not $4! = 24$.'
           },
           {
             label: 'A student uses $M = \\sin(0.5)$ to bound $|R_4|$ for $\\sin x$ at $x = 0.5$. This is:',
-            options: ['Wrong — $M$ should be $1$ (max of ALL derivatives, not value of $f$)', 'Correct but not optimal', 'Correct and optimal', 'Wrong — $M$ should be $\\cos(0.5)$'],
-            correctAnswers: ['Wrong — $M$ should be $1$ (max of ALL derivatives, not value of $f$)'],
+            options: ['Wrong — $M$ must bound $|f^{(5)}|$, so use $M = 1$', 'Correct, though not the tightest choice', 'Correct, and it is the tightest choice', 'Wrong — $M$ should be $\\cos(0.5)$, the 5th derivative'],
+            correctAnswers: ['Wrong — $M$ must bound $|f^{(5)}|$, so use $M = 1$'],
             hints: ['$M$ bounds $|f^{(n+1)}(t)|$, not $|f(x)|$.'],
-            explanation: '$M$ is the max of the $(n+1)$st derivative on the interval, not the function value. For $\\sin$, all derivatives are bounded by $1$.'
+            explanation: '$M$ is the max of $|f^{(5)}(t)| = |\\cos t|$ on the interval, not the value of $f$. For $\\sin$, all derivatives are bounded by $1$, so $M = 1$ works. $\\cos(0.5)$ is only the value at one endpoint; $|\\cos t|$ is larger at $t = 0$.'
           }
         ]
       }

@@ -62,21 +62,21 @@ Actual: $e^{0.5} \\approx 1.6487$, error $\\approx 0.0029$. The bound ($0.0043$)
         questions: [
           {
             question: 'Using $T_4(x)$ for $\\sin x$ at $x = 0.1$, the Lagrange error bound is at most:',
-            options: ['$(0.1)^5/5! = 8.33 \\times 10^{-8}$', '$(0.1)^4/4!$', '$(0.1)^5/4!$', '$(0.1)^3/3!$'],
+            options: ['$(0.1)^5/5!$', '$(0.1)^4/4!$', '$(0.1)^5/4!$', '$(0.1)^3/3!$'],
             correctAnswer: 0,
-            explanation: '$f^{(5)}(x) = \\cos x$, $M = 1$. $|R_4| \\le 1 \\cdot (0.1)^5/5! = 10^{-5}/120 \\approx 8.33 \\times 10^{-8}$.'
+            explanation: '$f^{(5)}(x) = \\cos x$, $M = 1$. $|R_4| \\le 1 \\cdot (0.1)^5/5! = 10^{-5}/120 \\approx 8.33 \\times 10^{-8}$. The power and the factorial both use $n + 1 = 5$.'
           },
           {
             question: 'Why is $M = 1$ for sine and cosine error bounds?',
-            options: ['All derivatives of $\\sin x$ and $\\cos x$ are bounded by $1$', 'They equal $1$ at $x = 0$', 'The series coefficients are at most $1$', 'The radius of convergence is $1$'],
+            options: ['All derivatives of $\\sin x$ and $\\cos x$ are bounded by $1$', 'They equal $1$ at $x = 0$', 'The series coefficients are all at most $1$', 'The radius of convergence of both series is exactly $1$'],
             correctAnswer: 0,
-            explanation: 'Every derivative of $\\sin x$ or $\\cos x$ is $\\pm\\sin$ or $\\pm\\cos$, which satisfies $|f^{(n)}(x)| \\le 1$ for all $x$ and all $n$.'
+            explanation: 'Every derivative of $\\sin x$ or $\\cos x$ is $\\pm\\sin$ or $\\pm\\cos$, which satisfies $|f^{(n)}(x)| \\le 1$ for all $x$ and all $n$. $M$ bounds a derivative, not the coefficients, and both series actually converge for all $x$.'
           },
           {
             question: 'For $e^x$ approximated by $T_2(x)$ at $x = 1$, using $M = e^1 \\approx 2.72$, the error bound is:',
-            options: ['$2.72/6 \\approx 0.453$', '$2.72/2 = 1.36$', '$1/6$', '$e/24$'],
+            options: ['$2.72/6 \\approx 0.453$', '$2.72/2 = 1.36$', '$1/6 \\approx 0.167$', '$2.72/24 \\approx 0.113$'],
             correctAnswer: 0,
-            explanation: '$|R_2(1)| \\le M \\cdot 1^3/3! = e/6 \\approx 2.718/6 \\approx 0.453$. Actual error: $e - (1+1+0.5) = 0.218$. Bound is conservative.'
+            explanation: '$|R_2(1)| \\le M \\cdot 1^3/3! = e/6 \\approx 2.718/6 \\approx 0.453$. Dividing by $2!$ instead of $3!$ gives $1.36$, using $M = 1$ gives $1/6$, and dividing by $4!$ gives $0.113$. Actual error: $e - (1+1+0.5) \\approx 0.218$. Bound is conservative.'
           }
         ]
       }
@@ -89,17 +89,17 @@ Actual: $e^{0.5} \\approx 1.6487$, error $\\approx 0.0029$. The bound ($0.0043$)
         dropdowns: [
           {
             label: 'For $\\cos(0.5) \\approx T_4(0.5)$, the error bound uses $n = $',
-            options: ['4 (and $(n+1) = 5$ in the formula)', '3', '5', '2'],
-            correctAnswers: ['4 (and $(n+1) = 5$ in the formula)'],
+            options: ['4', '3', '5', '2'],
+            correctAnswers: ['4'],
             hints: ['$T_4$ means degree $4$ polynomial. Error is $|R_4|$.'],
             explanation: '$T_4$ is degree 4, so $|R_4| \\le M|x|^5/5!$. Here $M = 1$ (for cos), so $|R_4(0.5)| \\le (0.5)^5/120$.'
           },
           {
             label: 'When both AST error and Lagrange apply, which gives the tighter bound?',
-            options: ['Usually AST (simpler and tighter)', 'Always Lagrange', 'They are identical', 'Depends on the function'],
-            correctAnswers: ['Usually AST (simpler and tighter)'],
+            options: ['Usually AST', 'Always Lagrange, since it uses $M$', 'They always give identical bounds', 'Lagrange, whenever $M = 1$ works'],
+            correctAnswers: ['Usually AST'],
             hints: ['AST error = first omitted term. Lagrange requires bounding $M$.'],
-            explanation: 'AST gives the exact first omitted term as the bound. Lagrange uses a maximum $M$ that\'s often an overestimate, making it less tight.'
+            explanation: 'AST gives the exact first omitted term as the bound. Lagrange uses a maximum $M$ that\'s often an overestimate, making it less tight (at best it ties AST, as with $\\ln(1+x)$). Even with $M = 1$, Lagrange is no tighter than AST.'
           }
         ]
       }
@@ -110,10 +110,10 @@ Actual: $e^{0.5} \\approx 1.6487$, error $\\approx 0.0029$. The bound ($0.0043$)
       content: '**Lagrange Computation**',
       exercise: {
         question: 'Find the maximum Lagrange error for $\\sin(0.1) \\approx T_3(0.1)$. Express as a scientific notation: $a \\times 10^{-n}$. Enter just the exponent $n$.',
-        correctAnswer: '5',
-        acceptableAnswers: ['5'],
-        hints: ['$|R_3(0.1)| \\le M \\cdot (0.1)^4/4! = 1 \\cdot 10^{-4}/24 \\approx 4.17 \\times 10^{-6}$. Wait — that\'s $10^{-6}$! Actually: $T_3 = x - x^3/6$. $|R_3| \\le (0.1)^4/4! = 10^{-4}/24 \\approx 4.2 \\times 10^{-6}$. Exponent is $6$? Let me recheck.'],
-        explanation: '$|R_3(0.1)| \\le 1 \\cdot (0.1)^4/4! = 0.0001/24 \\approx 4.17 \\times 10^{-6}$. The exponent in scientific notation is $n = 5$ if we write $\\approx 0.417 \\times 10^{-5}$. Hmm, in standard scientific notation it\'s $4.17 \\times 10^{-6}$, so $n = 6$. But with leading digit: $4.17 \\times 10^{-6}$, exponent is $6$. Actually, the answer is $10^{-4}/24$. Since $10^{-4} = 0.0001$ and $0.0001/24 \\approx 0.00000417 = 4.17 \\times 10^{-6}$, the exponent is $6$. Let me fix this to be clearer.'
+        correctAnswer: '6',
+        acceptableAnswers: ['6'],
+        hints: ['$M = 1$ for sine. $|R_3(0.1)| \\le M \\cdot (0.1)^4/4!$; write the result as $a \\times 10^{-n}$ with $1 \\le a < 10$.'],
+        explanation: '$|R_3(0.1)| \\le 1 \\cdot (0.1)^4/4! = 0.0001/24 \\approx 0.00000417 = 4.17 \\times 10^{-6}$. In standard scientific notation the exponent is $n = 6$.'
       }
     },
     {

@@ -67,9 +67,9 @@ Notice this looks like $\\cos(x - \\pi/2)$, which makes sense since $\\sin x = \
           },
           {
             question: 'When computing a Taylor series at $c \\neq 0$, which changes from the Maclaurin case?',
-            options: ['Derivatives are evaluated at $c$ instead of $0$, and $(x-c)$ replaces $x$', 'Only the center of the formula changes', 'The coefficients are always the same', 'Nothing — they are identical'],
+            options: ['Derivatives are evaluated at $c$, and $(x-c)$ replaces $x$', 'Only $x$ becomes $(x-c)$; derivatives stay at $0$', 'Only the derivatives move to $c$; the powers stay $x^n$', 'Nothing — the coefficients and the powers are identical'],
             correctAnswer: 0,
-            explanation: 'Two changes: evaluate $f^{(n)}(c)$ at $c$ (not $0$), and use powers of $(x-c)$ (not $x$).'
+            explanation: 'Two changes: evaluate $f^{(n)}(c)$ at $c$ (not $0$), and use powers of $(x-c)$ (not $x$). Changing only one of the two produces a polynomial that does not match $f$ and its derivatives at $x = c$.'
           },
           {
             question: 'For $f(x) = \\cos x$ at $c = \\pi$: $f(\\pi) = $',
@@ -88,15 +88,15 @@ Notice this looks like $\\cos(x - \\pi/2)$, which makes sense since $\\sin x = \
         dropdowns: [
           {
             label: 'For $f(x) = e^{2x}$, the Maclaurin series coefficient $a_3$ is:',
-            options: ['$8/6 = 4/3$', '$2/3$', '$8$', '$1/6$'],
+            options: ['$8/6 = 4/3$', '$2/6 = 1/3$', '$2^3 = 8$', '$1/3! = 1/6$'],
             correctAnswers: ['$8/6 = 4/3$'],
             hints: ['$f^{(3)}(x) = 8e^{2x}$, so $f^{(3)}(0) = 8$. Then $a_3 = 8/3! = 8/6$.'],
-            explanation: '$f^{(n)}(0) = 2^n$ for $e^{2x}$. So $a_3 = 2^3/3! = 8/6 = 4/3$.'
+            explanation: '$f^{(n)}(0) = 2^n$ for $e^{2x}$. So $a_3 = 2^3/3! = 8/6 = 4/3$. Forgetting to cube the 2 gives $1/3$; forgetting the $3!$ gives $8$; forgetting the $2^3$ gives $1/6$.'
           },
           {
             label: 'The Taylor series for $\\ln x$ at $c = 1$ has the general term:',
-            options: ['$(-1)^{n+1}(x-1)^n/n$ for $n \\ge 1$', '$(-1)^n (x-1)^n / n!$', '$(x-1)^n / n$', '$(-1)^n x^n/n$'],
-            correctAnswers: ['$(-1)^{n+1}(x-1)^n/n$ for $n \\ge 1$'],
+            options: ['$(-1)^{n+1}(x-1)^n/n$', '$(-1)^n (x-1)^n / n!$', '$(-1)^{n+1}(x-1)^n/n!$', '$(-1)^{n+1} x^n/n$'],
+            correctAnswers: ['$(-1)^{n+1}(x-1)^n/n$'],
             hints: ['$f^{(n)}(1) = (-1)^{n+1}(n-1)!$ for $n \\ge 1$, so $a_n = (-1)^{n+1}/n$.'],
             explanation: '$f^{(n)}(x) = (-1)^{n+1}(n-1)!/x^n$ for $n \\ge 1$. At $x=1$: $f^{(n)}(1) = (-1)^{n+1}(n-1)!$. Then $a_n = (-1)^{n+1}(n-1)!/n! = (-1)^{n+1}/n$.'
           }

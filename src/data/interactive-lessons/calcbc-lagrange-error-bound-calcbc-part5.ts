@@ -73,19 +73,19 @@ Since $0.00139 < 0.002$, the approximation $T_5(1)$ is within $0.002$ of $\\sin(
         questions: [
           {
             question: 'A table gives $f^{(k)}(3)$ for $k = 0, 1, 2, 3, 4, 5$ but also states $|f^{(5)}(t)| \\le 20$ on $[3, 3.5]$. To bound $|R_4(3.5)|$, which value of $M$ do you use?',
-            options: ['$M = 20$ (the given bound on the 5th derivative)', '$M = |f^{(5)}(3)|$ from the table', '$M = |f^{(4)}(3)|$', '$M = 20 \\cdot 5!$'],
+            options: ['$M = 20$, the stated bound on $|f^{(5)}|$', '$M = |f^{(5)}(3)|$, read from the table', '$M = |f^{(4)}(3)|$, read from the table', '$M = 20 \\cdot 5!$, scaled by the factorial'],
             correctAnswer: 0,
-            explanation: 'For $n = 4$, we need $|f^{(5)}(t)| \\le M$ on the interval. The problem gives $M = 20$ as this bound.'
+            explanation: 'For $n = 4$, we need $|f^{(5)}(t)| \\le M$ on the whole interval $[3, 3.5]$. The problem gives that bound: $M = 20$. The table value $|f^{(5)}(3)|$ is only the value at one point, $f^{(4)}$ is the wrong derivative, and the $5!$ belongs in the denominator of the bound, not in $M$.'
           },
           {
             question: 'After computing $|R_n| \\le 0.0047$ and the target is $\\varepsilon = 0.005$, the correct conclusion is:',
-            options: ['"Since $0.0047 < 0.005$, the approximation is within $0.005$"', '"The approximation is approximately $0.005$"', '"$T_n$ converges to $f$"', '"The error is $0.0047$"'],
+            options: ['"Since $0.0047 < 0.005$, the approximation is within $0.005$"', '"The approximation is approximately $0.005$"', '"$T_n$ converges to $f$, so the error is small enough"', '"The error equals $0.0047$, which is below $0.005$"'],
             correctAnswer: 0,
-            explanation: 'You must make the explicit comparison: bound $<$ target. Saying the error "is" the bound is wrong (it is an upper bound).'
+            explanation: 'You must make the explicit comparison: bound $<$ target. Saying the error "is" or "equals" the bound is wrong (it is an upper bound), and convergence of the series says nothing about this particular $T_n$.'
           },
           {
             question: 'If you write "$|R_n| \\le M|x-c|^{n+1}/n!$" (using $n!$ instead of $(n+1)!$), you will:',
-            options: ['Lose the formula point even if the computation is otherwise correct', 'Still get full credit if the answer is right', 'Get partial credit', 'Only lose the answer point'],
+            options: ['Lose the formula point even if the arithmetic is right', 'Still get full credit if the final answer is right', 'Lose credit only if the bound comes out too large', 'Lose only the final answer point, not the setup point'],
             correctAnswer: 0,
             explanation: 'The formula must be exactly correct: $(n+1)!$. An incorrect formula loses that point.'
           }
@@ -100,17 +100,17 @@ Since $0.00139 < 0.002$, the approximation $T_5(1)$ is within $0.002$ of $\\sin(
         dropdowns: [
           {
             label: 'FRQ: "$f$ has derivatives of all orders at $x = 2$. $|f^{(4)}(t)| \\le 15$ on $[2, 2.3]$. Bound $|R_3(2.3)|$." The $(n+1)$th derivative here is:',
-            options: ['$f^{(4)}$ since $n = 3$, so $n + 1 = 4$', '$f^{(3)}$ since $n = 3$', '$f^{(5)}$', '$f^{(15)}$'],
-            correctAnswers: ['$f^{(4)}$ since $n = 3$, so $n + 1 = 4$'],
+            options: ['$f^{(4)}$, since $n + 1 = 4$', '$f^{(3)}$, since $n = 3$', '$f^{(5)}$, since $n + 2 = 5$', '$f^{(15)}$, since $M = 15$'],
+            correctAnswers: ['$f^{(4)}$, since $n + 1 = 4$'],
             hints: ['If $n = 3$ (using $T_3$), then the remainder involves the $(n+1) = 4$th derivative.'],
             explanation: '$R_3$ involves $f^{(4)}$. The bound gives $|f^{(4)}(t)| \\le 15$, so $M = 15$.'
           },
           {
             label: 'Same FRQ: the final bound equals:',
-            options: ['$15(0.3)^4/4! = 15 \\cdot 0.0081/24 = 0.0050625$', '$15(2.3)^4/4!$', '$15(0.3)^3/3!$', '$15(0.3)^4/3!$'],
-            correctAnswers: ['$15(0.3)^4/4! = 15 \\cdot 0.0081/24 = 0.0050625$'],
+            options: ['$15(0.3)^4/4! \\approx 0.00506$', '$15(2.3)^4/4! \\approx 17.5$', '$15(0.3)^3/3! \\approx 0.0675$', '$15(0.3)^4/3! \\approx 0.0203$'],
+            correctAnswers: ['$15(0.3)^4/4! \\approx 0.00506$'],
             hints: ['$|x - c| = 2.3 - 2 = 0.3$, $(n+1)! = 4! = 24$.'],
-            explanation: '$|R_3(2.3)| \\le 15(0.3)^4/4! = 15(0.0081)/24 = 0.1215/24 \\approx 0.00506$.'
+            explanation: '$|R_3(2.3)| \\le 15(0.3)^4/4! = 15(0.0081)/24 = 0.1215/24 \\approx 0.00506$. Using $x = 2.3$ instead of $x - c = 0.3$ gives $17.5$; using $n = 3$ in place of $n + 1$ gives $0.0675$; using $3!$ with the right power gives $0.0203$.'
           }
         ]
       }
@@ -121,8 +121,8 @@ Since $0.00139 < 0.002$, the approximation $T_5(1)$ is within $0.002$ of $\\sin(
       content: '**FRQ Computation**',
       exercise: {
         question: 'FRQ: $|f^{(6)}(t)| \\le 50$ on $[1, 1.1]$. Compute the Lagrange error bound for $T_5(1.1)$ centered at $c = 1$. Give answer as a decimal.',
-        correctAnswer: '0.0000000069',
-        acceptableAnswers: ['0.0000000069', '6.9e-9', '6.94e-9', '0.00000000694'],
+        correctAnswer: '0.0000000694',
+        acceptableAnswers: ['0.0000000694', '0.000000069', '6.94e-8', '6.9e-8'],
         hints: ['$|R_5| \\le 50(0.1)^6/6!$.', '$(0.1)^6 = 10^{-6}$, $6! = 720$.'],
         explanation: '$|R_5(1.1)| \\le 50(0.1)^6/6! = 50 \\times 10^{-6}/720 = 5 \\times 10^{-5}/720 \\approx 6.94 \\times 10^{-8}$.'
       }

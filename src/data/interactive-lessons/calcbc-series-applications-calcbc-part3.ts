@@ -53,9 +53,9 @@ $$\\frac{1 - (1 - x^2/2 + \\cdots)}{x^2} = \\frac{x^2/2 - x^4/24 + \\cdots}{x^2}
         questions: [
           {
             question: '$\\lim_{x \\to 0} \\frac{\\tan x - \\sin x}{x^3}$. Using $\\tan x \\approx x + x^3/3$ and $\\sin x \\approx x - x^3/6$:',
-            options: ['$1/2$ (numerator $\\approx x^3/3 + x^3/6 = x^3/2$)', '$1/3$', '$1/6$', '$0$'],
+            options: ['$1/2$', '$1/3$', '$1/6$', '$0$'],
             correctAnswer: 0,
-            explanation: '$(x + x^3/3) - (x - x^3/6) = x^3/3 + x^3/6 = x^3/2$. Divide by $x^3$: $1/2$.'
+            explanation: '$(x + x^3/3) - (x - x^3/6) = x^3/3 + x^3/6 = x^3/2$, so the numerator is approximately $x^3/2$. Divide by $x^3$: $1/2$. Keeping only the $\\tan x$ term gives $1/3$, only the $\\sin x$ term gives $1/6$, and stopping after the $x$ terms cancel gives $0$.'
           },
           {
             question: '$\\lim_{x \\to 0} \\frac{x - \\ln(1+x)}{x^2}$. Since $\\ln(1+x) = x - x^2/2 + \\cdots$:',
@@ -65,9 +65,9 @@ $$\\frac{1 - (1 - x^2/2 + \\cdots)}{x^2} = \\frac{x^2/2 - x^4/24 + \\cdots}{x^2}
           },
           {
             question: 'Using series to evaluate limits works best when $x \\to$:',
-            options: ['$0$ (use Maclaurin series centered at 0)', '$\\infty$', 'Any finite value', '$1$'],
+            options: ['$0$, the Maclaurin center', '$\\infty$, where the high powers dominate', 'Any value, since every series converges everywhere', '$1$, the radius of most basic series'],
             correctAnswer: 0,
-            explanation: 'Maclaurin series are centered at $x = 0$, so they\'re most natural for $x \\to 0$.'
+            explanation: 'Maclaurin series are centered at $x = 0$, so near $0$ a few terms approximate the function well — that is why they are most natural for $x \\to 0$. Far from the center (or as $x \\to \\infty$) the truncated series is a poor approximation, and many series do not converge everywhere.'
           }
         ]
       }
@@ -87,10 +87,10 @@ $$\\frac{1 - (1 - x^2/2 + \\cdots)}{x^2} = \\frac{x^2/2 - x^4/24 + \\cdots}{x^2}
           },
           {
             label: '$\\lim_{x \\to 0} \\frac{\\sin x - x + x^3/6}{x^5}$. Since $\\sin x = x - x^3/6 + x^5/120 - \\cdots$:',
-            options: ['$1/120$ (numerator starts at $x^5/120$)', '$0$', '$1/6$', '$-1/120$'],
-            correctAnswers: ['$1/120$ (numerator starts at $x^5/120$)'],
+            options: ['$1/120$', '$0$', '$1/6$', '$-1/120$'],
+            correctAnswers: ['$1/120$'],
             hints: ['$\\sin x - x + x^3/6 = x^5/120 - x^7/5040 + \\cdots$.'],
-            explanation: 'The $x$ and $x^3/6$ terms cancel, leaving $x^5/120$. Divide by $x^5$: $1/120$.'
+            explanation: 'The $x$ and $x^3/6$ terms cancel, so the numerator starts at $x^5/120$. Divide by $x^5$: $1/120$.'
           }
         ]
       }

@@ -36,7 +36,7 @@ $$e^x = \\sum_{n=0}^\\infty \\frac{x^n}{n!}, \\quad \\sin x = \\sum_{n=0}^\\inft
 
 **Arc Length:** $L = \\int_a^b \\sqrt{(x')^2 + (y')^2}\\,dt$
 
-**Logistic:** $\\frac{dP}{dt} = kP(1 - P/L)$, solution: $P(t) = \\frac{L}{1 + Ae^{-kLt}}$
+**Logistic:** $\\frac{dP}{dt} = kP(1 - P/L)$, solution: $P(t) = \\frac{L}{1 + Ae^{-kt}}$
 
 **Euler's Method:** $y_{n+1} = y_n + h \\cdot f(x_n, y_n)$
 
@@ -56,9 +56,9 @@ $$e^x = \\sum_{n=0}^\\infty \\frac{x^n}{n!}, \\quad \\sin x = \\sum_{n=0}^\\inft
           },
           {
             question: 'In Euler\'s method with step size $h$, each step computes:',
-            options: ['$y_{new} = y_{old} + h \\cdot f(x_{old}, y_{old})$', '$y_{new} = y_{old} \\cdot f(x_{old}, y_{old})$', '$y_{new} = y_{old} + f(x_{old}, y_{old})$', '$y_{new} = h \\cdot f(x_{old}, y_{old})$'],
+            options: ['$y_{new} = y_{old} + h \\cdot f(x_{old}, y_{old})$', '$y_{new} = y_{old} \\cdot f(x_{old}, y_{old})$', '$y_{new} = y_{old} + f(x_{old}, y_{old})$', '$y_{new} = y_{old} + h \\cdot f(x_{new}, y_{old})$'],
             correctAnswer: 0,
-            explanation: 'Euler\'s method: $y_{n+1} = y_n + h \\cdot f(x_n, y_n)$. The slope times step size gives the change.'
+            explanation: 'Euler\'s method: $y_{n+1} = y_n + h \\cdot f(x_n, y_n)$. The slope at the OLD point times the step size gives the change, which is added to the old $y$.'
           },
           {
             question: 'The carrying capacity in a logistic model $dP/dt = 0.5P(1 - P/200)$ is:',
@@ -76,11 +76,11 @@ $$e^x = \\sum_{n=0}^\\infty \\frac{x^n}{n!}, \\quad \\sin x = \\sum_{n=0}^\\inft
       exercise: {
         dropdowns: [
           {
-            label: 'What to bring to the exam (choose the required item):',
-            options: ['Two graphing calculators with fresh batteries', 'A formula sheet (not allowed)', 'Scratch paper (provided by proctor)', 'Your phone (must be off and stored)'],
-            correctAnswers: ['Two graphing calculators with fresh batteries'],
-            hints: ['Bring a backup calculator in case one fails.'],
-            explanation: 'Bring two approved graphing calculators. No formula sheets are allowed. Scratch paper and answer booklets are provided.'
+            label: 'Which item should you bring to the exam?',
+            options: ['An approved graphing calculator', 'A one-page formula sheet', 'Your own scratch paper', 'Your phone, for its calculator app'],
+            correctAnswers: ['An approved graphing calculator'],
+            hints: ['Only one item on this list is permitted for use during the exam.'],
+            explanation: 'Bring an approved graphing calculator you have practiced with (up to two are permitted, and Bluebook also has a built-in graphing calculator). No formula sheets are allowed, scratch paper is provided, and phones must be powered off and stored.'
           },
           {
             label: 'During the no-calculator sections, you should:',

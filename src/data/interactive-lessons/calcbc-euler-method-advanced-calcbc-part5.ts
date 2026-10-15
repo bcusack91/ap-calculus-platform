@@ -69,13 +69,13 @@ Parts (b)–(d) are often independent — you can earn points on (c) and (d) eve
           },
           {
             question: 'An FRQ gives $dy/dx = \\sin(xy)$, $y(0) = 1$. For Euler with one step, $\\Delta x = 0.5$. $y(0.5) =$',
-            options: ['$1 + \\sin(0)(0.5) = 1$', '$1 + \\sin(0.5)(0.5)$', '$1 + 0.5$', '$\\sin(0) = 0$, so $y = 0$'],
+            options: ['$1 + \\sin(0)(0.5) = 1$', '$1 + \\sin(0.5)(0.5) \\approx 1.240$', '$1 + \\sin(1)(0.5) \\approx 1.421$', '$\\sin(0 \\cdot 1)(0.5) = 0$'],
             correctAnswer: 0,
-            explanation: '$f(0, 1) = \\sin(0 \\cdot 1) = \\sin(0) = 0$. $y(0.5) = 1 + 0(0.5) = 1$.'
+            explanation: '$f(0, 1) = \\sin(0 \\cdot 1) = \\sin(0) = 0$. $y(0.5) = 1 + 0(0.5) = 1$. Using $x = 0.5$ evaluates the slope at the end of the step, $\\sin(1)$ adds $x + y$ instead of multiplying, and dropping the leading 1 forgets $y_0$.'
           },
           {
             question: 'Can you use Euler\'s method if $f(x, y)$ is undefined at a point?',
-            options: ['No — you cannot compute the slope at that point', 'Yes, skip that step', 'Yes, use the previous slope', 'Yes, use $\\Delta y = 0$'],
+            options: ['No — you cannot compute the slope at that point', 'Yes — skip that step and continue from the next point', 'Yes — reuse the slope from the previous step there', 'Yes — set $\\Delta y = 0$ for that step and continue'],
             correctAnswer: 0,
             explanation: 'Euler requires evaluating $f(x_n, y_n)$ at each step. If undefined, the method breaks down.'
           }
@@ -97,17 +97,17 @@ Parts (b)–(d) are often independent — you can earn points on (c) and (d) eve
           },
           {
             label: 'Step 1: $f(0, -1) = 0 + (-1) = -1$. $y(0.2) =$',
-            options: ['$-1 + (-1)(0.2) = -1.2$', '$-1 + (-1)(0.4) = -1.4$', '$-1 + 1(0.2) = -0.8$', '$-1.1$'],
+            options: ['$-1 + (-1)(0.2) = -1.2$', '$-1 + (-1)(0.4) = -1.4$', '$-1 + 1(0.2) = -0.8$', '$-1 + (-1)(0.1) = -1.1$'],
             correctAnswers: ['$-1 + (-1)(0.2) = -1.2$'],
             hints: ['$y(0.2) = y(0) + f(0,-1) \\cdot \\Delta x = -1 + (-1)(0.2)$.'],
             explanation: '$y(0.2) = -1 - 0.2 = -1.2$.'
           },
           {
             label: 'Step 2: $f(0.2, -1.2) = 0.04 + (-1.2) = -1.16$. $y(0.4) =$',
-            options: ['$-1.2 + (-1.16)(0.2) = -1.432$', '$-1.2 + (-1.16)(0.4) = -1.664$', '$-1.2 - 0.2 = -1.4$', '$-1.36$'],
+            options: ['$-1.2 + (-1.16)(0.2) = -1.432$', '$-1.2 + (-1.16)(0.4) = -1.664$', '$-1.2 + (-1)(0.2) = -1.4$', '$-1 + (-1.16)(0.2) = -1.232$'],
             correctAnswers: ['$-1.2 + (-1.16)(0.2) = -1.432$'],
             hints: ['$y(0.4) = -1.2 + (-1.16)(0.2)$.'],
-            explanation: '$y(0.4) \\approx -1.432$.'
+            explanation: '$y(0.4) = -1.2 + (-1.16)(0.2) \\approx -1.432$. Start from the current value $-1.2$ and use the new slope $-1.16$, not the step-1 slope.'
           }
         ]
       }

@@ -51,15 +51,15 @@ $$\\int x^3 e^x\\,dx = x^3 e^x - 3x^2 e^x + 6xe^x - 6e^x + C$$`
         questions: [
           {
             question: '$\\int \\frac{x+3}{x^2 + x - 2}\\,dx$ requires:',
-            options: ['Partial fractions: $\\frac{A}{x-1} + \\frac{B}{x+2}$', 'u-substitution with $u = x^2 + x - 2$', 'Integration by parts', 'Trig substitution'],
+            options: ['Partial fractions: $\\frac{A}{x-1} + \\frac{B}{x+2}$', 'u-substitution with $u = x^2 + x - 2$, $du = (2x+1)\\,dx$', 'Integration by parts with $u = x + 3$, $v = \\ln|x^2 + x - 2|$', 'Partial fractions with $\\frac{A}{x+1} + \\frac{B}{x-2}$'],
             correctAnswer: 0,
-            explanation: '$x^2 + x - 2 = (x-1)(x+2)$. Partial fractions: $\\frac{x+3}{(x-1)(x+2)} = \\frac{A}{x-1} + \\frac{B}{x+2}$.'
+            explanation: '$x^2 + x - 2 = (x-1)(x+2)$, not $(x+1)(x-2)$. Partial fractions: $\\frac{x+3}{(x-1)(x+2)} = \\frac{A}{x-1} + \\frac{B}{x+2}$. The numerator $x + 3$ is not a multiple of $2x + 1$, so that u-substitution fails, and $\\ln|x^2 + x - 2|$ is not an antiderivative of $\\frac{1}{x^2 + x - 2}$, so that choice of $v$ is wrong.'
           },
           {
             question: '$\\int x^2 \\sin x\\,dx$ requires:',
-            options: ['Integration by parts (twice)', 'u-substitution', 'Partial fractions', 'Trig identity'],
+            options: ['Integration by parts, twice', 'u-substitution with $u = x^2$', 'Integration by parts, applied only once', 'A double-angle trig identity first'],
             correctAnswer: 0,
-            explanation: 'Product of algebraic and trig. By LIATE, $u = x^2$, $dv = \\sin x\\,dx$. Apply parts twice (or use tabular method).'
+            explanation: 'Product of algebraic and trig. By LIATE, $u = x^2$, $dv = \\sin x\\,dx$. One application of parts leaves $\\int 2x\\cos x\\,dx$, so apply parts a second time (or use the tabular method).'
           },
           {
             question: '$\\int \\frac{dx}{\\sqrt{9 - x^2}}$ is:',
@@ -78,7 +78,7 @@ $$\\int x^3 e^x\\,dx = x^3 e^x - 3x^2 e^x + 6xe^x - 6e^x + C$$`
         dropdowns: [
           {
             label: '$\\int_1^\\infty \\frac{dx}{x^2}$ converges or diverges?',
-            options: ['Converges to $1$', 'Diverges', 'Converges to $\\infty$', 'Cannot be determined'],
+            options: ['Converges to $1$', 'Diverges', 'Converges to $1/3$', 'Cannot be determined'],
             correctAnswers: ['Converges to $1$'],
             hints: ['$p$-integral with $p = 2 > 1$.'],
             explanation: '$\\lim_{b\\to\\infty}[-1/x]_1^b = \\lim(-1/b + 1) = 1$. Converges.'

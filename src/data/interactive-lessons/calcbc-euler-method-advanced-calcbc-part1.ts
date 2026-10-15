@@ -67,21 +67,21 @@ Smaller step size → better approximation (but more computation).`
         questions: [
           {
             question: '$\\frac{dy}{dx} = 2x$, $y(1) = 3$, $\\Delta x = 0.5$. What is $y(1.5)$?',
-            options: ['$y = 3 + 2(1)(0.5) = 4$', '$y = 3 + 2(1.5)(0.5) = 4.5$', '$y = 3 + 2(0.5) = 4$', '$y = 3 + 1 = 4$'],
+            options: ['$y = 3 + 2(1)(0.5) = 4$', '$y = 3 + 2(1.5)(0.5) = 4.5$', '$y = 3 + 2(1) = 5$', '$y = 2(1)(0.5) = 1$'],
             correctAnswer: 0,
-            explanation: 'Slope at $(1, 3)$: $f(1, 3) = 2(1) = 2$. $y(1.5) = 3 + 2(0.5) = 4$.'
+            explanation: 'Slope at $(1, 3)$: $f(1, 3) = 2(1) = 2$. $y(1.5) = 3 + 2(0.5) = 4$. Using the slope at $x = 1.5$ gives $4.5$, dropping $\\Delta x$ gives $5$, and dropping $y_0 = 3$ gives $1$.'
           },
           {
             question: 'In Euler\'s method, the slope used at each step is evaluated at:',
-            options: ['The beginning of the step (current point)', 'The end of the step', 'The midpoint of the step', 'The average of beginning and end'],
+            options: ['The start of the step, $(x_n, y_n)$', 'The end of the step, $(x_{n+1}, y_{n+1})$', 'The midpoint of the step, $x_n + \\Delta x/2$', 'The average of the slopes at both ends'],
             correctAnswer: 0,
             explanation: 'Euler\'s method uses the slope at the current point $(x_n, y_n)$, not the destination.'
           },
           {
             question: 'If $\\Delta x$ is halved, the global error approximately:',
-            options: ['Halves (error is proportional to $\\Delta x$)', 'Quarters', 'Stays the same', 'Doubles'],
+            options: ['Halves, since error $\\propto \\Delta x$', 'Quarters, since error $\\propto (\\Delta x)^2$', 'Stays the same, since $f$ has not changed', 'Doubles, since twice as many steps add error'],
             correctAnswer: 0,
-            explanation: 'Euler\'s method has first-order global error: $E \\propto \\Delta x$.'
+            explanation: 'Euler\'s method has first-order global error, $E \\propto \\Delta x$: halving the step roughly halves the error, even though the number of steps doubles. An error proportional to $(\\Delta x)^2$ belongs to second-order methods.'
           }
         ]
       }
@@ -108,7 +108,7 @@ Smaller step size → better approximation (but more computation).`
           },
           {
             label: 'So $y(1) \\approx$:',
-            options: ['$1.5 + 1.5(0.5) = 2.25$', '$1.5 + 1(0.5) = 2.0$', '$1 + 1.5(0.5) = 1.75$', '$1.5 + 0.5(0.5) = 1.75$'],
+            options: ['$1.5 + 1.5(0.5) = 2.25$', '$1.5 + 1(0.5) = 2.0$', '$1.5 + 1.5(1) = 3$', '$1.5 + 0.5(0.5) = 1.75$'],
             correctAnswers: ['$1.5 + 1.5(0.5) = 2.25$'],
             hints: ['$y(1) = y(0.5) + f(0.5, 1.5) \\cdot 0.5 = 1.5 + 1.5(0.5)$.'],
             explanation: '$y(1) \\approx 2.25$. The exact answer is $e \\approx 2.718$, so the approximation undershoots (concave up curve).'

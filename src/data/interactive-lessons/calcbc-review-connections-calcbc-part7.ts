@@ -34,21 +34,21 @@ export const calcbcReviewPart7Data = {
           },
           {
             question: 'On the BC exam, which formula has a $1/2$ factor that students most often forget?',
-            options: ['Polar area: $A = \\frac{1}{2}\\int r^2\\,d\\theta$', 'Arc length', 'Integration by parts', 'Euler\'s method'],
+            options: ['Polar area', 'Arc length', 'Integration by parts', 'Euler\'s method'],
             correctAnswer: 0,
-            explanation: 'The $1/2$ in the polar area formula is the most commonly forgotten factor on the BC exam.'
+            explanation: 'The polar area formula is $A = \\frac{1}{2}\\int_{\\alpha}^{\\beta} r^2\\,d\\theta$. Its $1/2$ is the most commonly forgotten factor on the BC exam.'
           },
           {
             question: 'The relationship $\\frac{d}{dx}[\\sin x] = \\cos x$ corresponds to the series relationship:',
-            options: ['Differentiating $\\sum (-1)^n x^{2n+1}/(2n+1)!$ gives $\\sum (-1)^n x^{2n}/(2n)!$', 'Adding $1$ to every term', 'Multiplying every term by $x$', 'Shifting the index by $1$'],
+            options: ['Differentiating the sine series term by term gives the cosine series', 'Integrating the sine series term by term gives the cosine series', 'Multiplying every term of the sine series by $x$ gives the cosine series', 'Shifting the sine series index by one gives the cosine series'],
             correctAnswer: 0,
-            explanation: 'Term-by-term differentiation of the sine series yields the cosine series. This is why series and differentiation are deeply connected.'
+            explanation: 'Term-by-term differentiation of $\\sum (-1)^n x^{2n+1}/(2n+1)!$ gives $\\sum (-1)^n x^{2n}/(2n)!$, the cosine series. Integrating the sine series gives $1 - \\cos x$, not $\\cos x$.'
           },
           {
             question: 'A problem says "approximate $f(0.5)$ with error less than $0.01$." You should:',
-            options: ['Use enough Taylor polynomial terms and bound the remainder', 'Use Euler\'s method with small step size', 'Use the trapezoidal rule', 'Evaluate $f$ directly'],
+            options: ['Use enough Taylor terms and bound the remainder', 'Use Euler\'s method with a small step size', 'Use the tangent line at $x = 0$ only', 'Use the trapezoidal rule on $f$'],
             correctAnswer: 0,
-            explanation: 'Taylor polynomial approximation with error bounded by AST or Lagrange remainder is the standard approach for function approximation with guaranteed accuracy.'
+            explanation: 'A Taylor polynomial with its error bounded by the alternating series error bound or the Lagrange remainder is the standard way to approximate a function value with guaranteed accuracy. A tangent line alone has no guaranteed error, and Euler\'s method and the trapezoidal rule do not come with an error bound you can compute here.'
           }
         ]
       }

@@ -40,9 +40,9 @@ $$\\boxed{\\begin{aligned} &\\text{Carrying capacity:} \\quad L \\\\ &\\text{Max
         questions: [
           {
             question: '$dP/dt = 3P - 0.006P^2$. For what value of $P$ is the population growing fastest?',
-            options: ['$P = 250$ ($L = 500$, max at $L/2$)', '$P = 500$', '$P = 3$', '$P = 125$'],
+            options: ['$P = 250$, half of $L = 500$', '$P = 500$, the carrying capacity', '$P = 125$, a quarter of $L = 500$', '$P \\approx 83$, half of $1/0.006$'],
             correctAnswer: 0,
-            explanation: '$3P - 0.006P^2 = 3P(1 - 0.002P) = 3P(1 - P/500)$. $L = 500$, max at $L/2 = 250$.'
+            explanation: '$3P - 0.006P^2 = 3P(1 - 0.002P) = 3P(1 - P/500)$, so $L = 3/0.006 = 500$ and growth is fastest at $L/2 = 250$. Using $1/0.006$ ignores the factor 3.'
           },
           {
             question: 'A logistic curve satisfies $\\lim_{t\\to\\infty} P(t) = 5000$ and $P(0) = 500$. What is $A$?',
@@ -52,7 +52,7 @@ $$\\boxed{\\begin{aligned} &\\text{Carrying capacity:} \\quad L \\\\ &\\text{Max
           },
           {
             question: 'On a logistic curve, the population is 200 and growing. The carrying capacity is 1000. The curve is:',
-            options: ['Concave up (since $200 < L/2 = 500$)', 'Concave down', 'At inflection', 'Linear'],
+            options: ['Concave up (since $200 < L/2 = 500$)', 'Concave down (since $P < L$)', 'At inflection (since $dP/dt > 0$)', 'Linear (since $dP/dt$ is constant)'],
             correctAnswer: 0,
             explanation: '$P = 200 < 500 = L/2$ → below inflection → concave up.'
           }
@@ -67,14 +67,14 @@ $$\\boxed{\\begin{aligned} &\\text{Carrying capacity:} \\quad L \\\\ &\\text{Max
         dropdowns: [
           {
             label: '$dP/dt = P(10 - 0.05P)$. The carrying capacity $L =$',
-            options: ['$200$ ($L = a/b = 10/0.05$)', '$10$', '$0.05$', '$2000$'],
-            correctAnswers: ['$200$ ($L = a/b = 10/0.05$)'],
+            options: ['$200$ ($10/0.05$)', '$0.005$ ($0.05/10$)', '$10$ (the coefficient of $P$)', '$2000$ ($10/0.005$)'],
+            correctAnswers: ['$200$ ($10/0.05$)'],
             hints: ['$P(a - bP) = aP(1 - P/(a/b))$. $L = a/b$.'],
-            explanation: '$L = 10/0.05 = 200$.'
+            explanation: '$P(10 - 0.05P) = 10P(1 - P/200)$, so $L = 10/0.05 = 200$.'
           },
           {
             label: 'The maximum value of $dP/dt$ for this equation is:',
-            options: ['$kL/4 = 10(200)/4 = 500$', '$10(200) = 2000$', '$200/4 = 50$', '$10/4 = 2.5$'],
+            options: ['$kL/4 = 10(200)/4 = 500$', '$kL/2 = 10(200)/2 = 1000$', '$L/4 = 200/4 = 50$', '$kL = 10(200) = 2000$'],
             correctAnswers: ['$kL/4 = 10(200)/4 = 500$'],
             hints: ['$k = 10$, $L = 200$. Max rate $= kL/4$.'],
             explanation: 'Max rate $= 10 \\cdot 200/4 = 500$.'

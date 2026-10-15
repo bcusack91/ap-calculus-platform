@@ -87,7 +87,7 @@ $$P(t) = \\frac{1000}{1 + 9e^{-0.5t}}$$
           },
           {
             question: 'If a population starts ABOVE the carrying capacity ($P_0 > L$), the population:',
-            options: ['Decreases toward $L$', 'Increases toward infinity', 'Goes to zero', 'Stays at $P_0$'],
+            options: ['Decreases toward $L$', 'Increases toward infinity', 'Decreases past $L$ toward zero', 'Stays at $P_0$ forever'],
             correctAnswer: 0,
             explanation: 'When $P > L$, $1 - P/L < 0$, so $dP/dt < 0$. Population decreases toward $L$.'
           }
@@ -102,17 +102,17 @@ $$P(t) = \\frac{1000}{1 + 9e^{-0.5t}}$$
         dropdowns: [
           {
             label: '$dP/dt = 2P(1 - P/800)$. The maximum growth rate $dP/dt$ equals:',
-            options: ['$kL/4 = 2(800)/4 = 400$', '$kL = 1600$', '$k/L = 2/800$', '$L/2 = 400$'],
+            options: ['$kL/4 = 2(800)/4 = 400$', '$kL/2 = 2(800)/2 = 800$', '$kL = 2(800) = 1600$', '$k/L = 2/800 = 0.0025$'],
             correctAnswers: ['$kL/4 = 2(800)/4 = 400$'],
             hints: ['Max $dP/dt$ at $P = L/2$: $dP/dt = k(L/2)(1 - 1/2) = kL/4$.'],
             explanation: 'Max growth rate $= kL/4 = 2(800)/4 = 400$ individuals per unit time.'
           },
           {
             label: 'For $P(t) = \\frac{1000}{1 + 9e^{-0.5t}}$, $\\lim_{t \\to \\infty} P(t) =$',
-            options: ['$1000$ (carrying capacity)', '$\\infty$', '$100$', '$0$'],
-            correctAnswers: ['$1000$ (carrying capacity)'],
+            options: ['$1000$ (the value of $L$)', '$\\infty$ (exponential growth)', '$100$ (the value of $P(0)$)', '$0$ (since $e^{-0.5t} \\to 0$)'],
+            correctAnswers: ['$1000$ (the value of $L$)'],
             hints: ['As $t \\to \\infty$, $e^{-0.5t} \\to 0$.'],
-            explanation: '$P(\\infty) = 1000/(1 + 0) = 1000 = L$.'
+            explanation: '$P(\\infty) = 1000/(1 + 0) = 1000 = L$. As $e^{-0.5t} \\to 0$ the denominator approaches 1, so $P$ levels off at the carrying capacity.'
           }
         ]
       }

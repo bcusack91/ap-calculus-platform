@@ -61,13 +61,13 @@ OR (if built from known series):
           },
           {
             question: 'When using the alternating series error bound on an integral, you bound:',
-            options: ['The first omitted term of the INTEGRATED series evaluated at the endpoints', 'The first omitted term of the original series', 'The $(n+1)$th derivative of $f$', 'The Lagrange error bound'],
+            options: ['The first omitted term of the series after integrating', 'The first omitted term of the original series', 'The $(n+1)$st derivative of $f$ on the whole interval', 'The last included term of the integrated series'],
             correctAnswer: 0,
-            explanation: 'After integrating term by term and evaluating, the error is bounded by the first omitted term of the resulting alternating sum.'
+            explanation: 'After integrating term by term and evaluating, the error is bounded by the first omitted term of the resulting alternating sum — not a term of the original series, not the last term you kept, and not a derivative bound (that is Lagrange).'
           },
           {
             question: 'On the AP FRQ, writing "by the AST error bound" instead of showing the computation:',
-            options: ['Is acceptable — cite the theorem and state the bound', 'Loses points — you must prove the theorem', 'Is never accepted', 'Only works on MC'],
+            options: ['Is acceptable — cite the theorem and state the bound', 'Loses points — you must prove the theorem', 'Is never accepted without the full computation', 'Is only accepted on multiple-choice questions'],
             correctAnswer: 0,
             explanation: 'AP readers accept citing the Alternating Series Estimation Theorem. State the bound value and verify it\'s less than the required tolerance.'
           }

@@ -60,15 +60,15 @@ $$\\frac{x}{(1-x)^2} = x \\cdot \\sum_{n=1}^\\infty n x^{n-1} = \\sum_{n=1}^\\in
         questions: [
           {
             question: 'Differentiating $e^x = \\sum x^n/n!$ gives $\\sum nx^{n-1}/n!$, which simplifies to:',
-            options: ['$\\sum x^{n-1}/(n-1)! = e^x$ (as expected)', '$\\sum x^n/n! = e^x$', '$\\sum nx^n/n!$', '$\\sum x^{n-1}/n!$'],
+            options: ['$\\sum_{n=1}^\\infty x^{n-1}/(n-1)! = e^x$', '$\\sum_{n=1}^\\infty x^{n-1}/n! = (e^x - 1)/x$', '$\\sum_{n=1}^\\infty x^{n}/(n-1)! = xe^x$', '$\\sum_{n=1}^\\infty x^{n-1}/(n-1)! = e^{x-1}$'],
             correctAnswer: 0,
-            explanation: '$n/n! = 1/(n-1)!$. Re-index: $\\sum_{n=1}^\\infty x^{n-1}/(n-1)! = \\sum_{k=0}^\\infty x^k/k! = e^x$.'
+            explanation: '$n/n! = 1/(n-1)!$. Re-index: $\\sum_{n=1}^\\infty x^{n-1}/(n-1)! = \\sum_{k=0}^\\infty x^k/k! = e^x$. Cancelling the $n$ without changing $n!$ gives $(e^x-1)/x$; keeping $x^n$ instead of $x^{n-1}$ gives $xe^x$; and shifting the index does not shift the exponent of $e$.'
           },
           {
             question: 'Term-by-term differentiation preserves:',
-            options: ['The radius of convergence', 'The interval of convergence (including endpoints)', 'The number of terms', 'The center of the series'],
+            options: ['The radius of convergence', 'The convergence at both endpoints', 'The sum of the series at each $x$', 'The coefficients of every term'],
             correctAnswer: 0,
-            explanation: 'Radius stays the same, but endpoint convergence can change.'
+            explanation: 'Radius stays the same, but endpoint convergence can change. The new series sums to $f\'(x)$, not $f(x)$, and each coefficient $c_n$ becomes $n c_n$ on $x^{n-1}$.'
           },
           {
             question: 'To find the series for $\\frac{2}{(1-x)^3}$, differentiate $\\frac{1}{(1-x)^2}$. The result is:',
@@ -94,10 +94,10 @@ $$\\frac{x}{(1-x)^2} = x \\cdot \\sum_{n=1}^\\infty n x^{n-1} = \\sum_{n=1}^\\in
           },
           {
             label: 'The series for $\\frac{-1}{(1+x)^2}$ is obtained by differentiating $\\frac{1}{1+x} = \\sum (-1)^n x^n$:',
-            options: ['$\\sum_{n=1}^\\infty (-1)^n n x^{n-1} = -1 + 2x - 3x^2 + \\cdots$', '$\\sum_{n=1}^\\infty n x^{n-1}$', '$\\sum_{n=0}^\\infty (-1)^n x^{n-1}$', '$1 - 2x + 3x^2 - \\cdots$'],
-            correctAnswers: ['$\\sum_{n=1}^\\infty (-1)^n n x^{n-1} = -1 + 2x - 3x^2 + \\cdots$'],
+            options: ['$\\sum_{n=1}^\\infty (-1)^n n x^{n-1}$', '$\\sum_{n=1}^\\infty n x^{n-1}$', '$\\sum_{n=0}^\\infty (-1)^n x^{n-1}$', '$\\sum_{n=1}^\\infty (-1)^{n+1} n x^{n-1}$'],
+            correctAnswers: ['$\\sum_{n=1}^\\infty (-1)^n n x^{n-1}$'],
             hints: ['Differentiate each term: $(-1)^n x^n \\to (-1)^n n x^{n-1}$.'],
-            explanation: '$\\frac{d}{dx}[1/(1+x)] = -1/(1+x)^2 = \\sum (-1)^n n x^{n-1}$.'
+            explanation: '$\\frac{d}{dx}[1/(1+x)] = -1/(1+x)^2 = \\sum_{n=1}^\\infty (-1)^n n x^{n-1} = -1 + 2x - 3x^2 + \\cdots$. The $(-1)^{n+1}$ version is $+1/(1+x)^2$.'
           }
         ]
       }

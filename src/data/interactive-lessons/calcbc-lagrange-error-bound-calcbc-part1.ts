@@ -67,21 +67,21 @@ $|R_4(0.5)| \\le \\frac{1 \\cdot (0.5)^5}{5!} = \\frac{1/32}{120} = \\frac{1}{38
         questions: [
           {
             question: 'In the Lagrange error bound, $M$ represents:',
-            options: ['The maximum of $|f^{(n+1)}|$ on the interval', 'The value of $f^{(n+1)}(c)$', 'The maximum of $|f|$ on the interval', 'The number of terms used'],
+            options: ['The maximum of $|f^{(n+1)}|$ on the interval', 'The value of $f^{(n+1)}$ at the center $c$ only', 'The maximum of $|f^{(n)}|$, the $n$th derivative, on the interval', 'The maximum of $|f|$ itself on the interval from $c$ to $x$'],
             correctAnswer: 0,
-            explanation: '$M$ bounds the $(n+1)$st derivative over the entire interval between $c$ and $x$.'
+            explanation: '$M$ bounds the $(n+1)$st derivative over the entire interval between $c$ and $x$ — not just its value at $c$, and not the $n$th derivative or $f$ itself.'
           },
           {
             question: 'For $\\sin(0.3) \\approx T_5(0.3)$ (centered at $0$), the error bound is:',
-            options: ['$(0.3)^6/6! = 7.29 \\times 10^{-4}/720 \\approx 1.01 \\times 10^{-6}$', '$(0.3)^5/5!$', '$(0.3)^6/5!$', '$\\sin(0.3)^6/6!$'],
+            options: ['$(0.3)^6/6! \\approx 1.01 \\times 10^{-6}$', '$(0.3)^5/5! \\approx 2.0 \\times 10^{-5}$', '$(0.3)^6/5! \\approx 6.1 \\times 10^{-6}$', '$(0.3)^6/6 \\approx 1.22 \\times 10^{-4}$'],
             correctAnswer: 0,
-            explanation: '$M = 1$ (for sin/cos). $|R_5| \\le (0.3)^6/6! = 0.000729/720 \\approx 1.01 \\times 10^{-6}$.'
+            explanation: '$M = 1$ (for sin/cos). $|R_5| \\le (0.3)^6/6! = 0.000729/720 \\approx 1.01 \\times 10^{-6}$. Using $n$ instead of $n+1$ in the power and factorial gives about $2.0 \\times 10^{-5}$; mixing them gives about $6.1 \\times 10^{-6}$; dropping the factorial gives $1.22 \\times 10^{-4}$.'
           },
           {
             question: 'Why can we always use $M = 1$ for $\\sin x$ error bounds?',
-            options: ['Every derivative of $\\sin x$ satisfies $|f^{(k)}(t)| \\le 1$', '$\\sin(0) = 0$ and $\\sin(\\pi/2) = 1$', 'The series alternates', 'The radius of convergence is $\\infty$'],
+            options: ['Every derivative of $\\sin x$ is bounded by $1$', '$\\sin x$ itself never exceeds $1$, so its error never does', 'The series alternates, so each term is at most $1$ in size', 'The radius of convergence of the $\\sin x$ series is $\\infty$'],
             correctAnswer: 0,
-            explanation: 'All derivatives of $\\sin x$ are $\\pm \\sin x$ or $\\pm \\cos x$, all bounded by $1$ in absolute value.'
+            explanation: 'All derivatives of $\\sin x$ are $\\pm \\sin x$ or $\\pm \\cos x$, all bounded by $1$ in absolute value. $M$ is about the $(n+1)$st derivative — not $\\sin x$ itself, the sizes of the series terms, or the radius of convergence.'
           }
         ]
       }
@@ -94,17 +94,17 @@ $|R_4(0.5)| \\le \\frac{1 \\cdot (0.5)^5}{5!} = \\frac{1/32}{120} = \\frac{1}{38
         dropdowns: [
           {
             label: 'For $e^x$ at $c = 0$, $x = 1$, using $T_3$: $M$ should be:',
-            options: ['$e^1 \\approx 2.718$ (or use $M = 3$ as crude bound)', '$e^0 = 1$', '$1$', '$e^{0.5}$'],
-            correctAnswers: ['$e^1 \\approx 2.718$ (or use $M = 3$ as crude bound)'],
+            options: ['$e^1 \\approx 2.718$', '$e^0 = 1$', '$e^{0.5} \\approx 1.649$', '$e^{1}/4! \\approx 0.113$'],
+            correctAnswers: ['$e^1 \\approx 2.718$'],
             hints: ['$f^{(4)}(t) = e^t$, increasing on $[0, 1]$. Max at $t = 1$.'],
-            explanation: '$f^{(4)}(t) = e^t$. On $[0,1]$, max is $e^1$. Using $M = e \\approx 2.718$ (or $M = 3$).'
+            explanation: '$f^{(4)}(t) = e^t$. On $[0,1]$, max is $e^1$. Using $M = e \\approx 2.718$ (or the cruder $M = 3$) is correct. $e^0$ is the minimum, $e^{0.5}$ is only the midpoint value, and the $4!$ belongs in the bound\'s denominator, not in $M$.'
           },
           {
             label: 'For $\\ln(1+x)$ at $c = 0$, $x = 0.5$, using $T_3$: $f^{(4)}(t) = -6/(1+t)^4$. $M = $',
-            options: ['$6$ (at $t = 0$: $|{-6}/(1+0)^4| = 6$)', '$6/(1.5)^4$', '$24$', '$6/16$'],
-            correctAnswers: ['$6$ (at $t = 0$: $|{-6}/(1+0)^4| = 6$)'],
+            options: ['$6$', '$6/(1.5)^4 \\approx 1.19$', '$24$', '$6/16 = 0.375$'],
+            correctAnswers: ['$6$'],
             hints: ['$|f^{(4)}(t)| = 6/(1+t)^4$ is decreasing. Max at $t = 0$.'],
-            explanation: '$|f^{(4)}(t)| = 6/(1+t)^4$, decreasing on $[0, 0.5]$. Max at $t=0$: $M = 6$.'
+            explanation: '$|f^{(4)}(t)| = 6/(1+t)^4$, decreasing on $[0, 0.5]$. Max at $t=0$: $M = 6$. Plugging in $t = 0.5$ gives the minimum $6/(1.5)^4$, and $6/16$ uses $t = 1$, which is outside the interval.'
           }
         ]
       }

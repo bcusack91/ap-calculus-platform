@@ -66,15 +66,15 @@ This is related to the error function $\\text{erf}(x)$ — series representation
           },
           {
             question: 'Which series represents $\\frac{1}{1+x^2}$?',
-            options: ['$\\sum_{n=0}^\\infty (-1)^n x^{2n}$', '$\\sum (-1)^n x^n$', '$\\sum x^{2n}$', '$\\sum x^n/(1+n^2)$'],
+            options: ['$\\sum_{n=0}^\\infty (-1)^n x^{2n}$', '$\\sum_{n=0}^\\infty (-1)^n x^n$', '$\\sum_{n=0}^\\infty x^{2n}$', '$\\sum_{n=0}^\\infty (-1)^n x^{2n+1}$'],
             correctAnswer: 0,
-            explanation: '$\\frac{1}{1+x^2} = \\frac{1}{1-(-x^2)} = \\sum_{n=0}^\\infty (-x^2)^n = \\sum (-1)^n x^{2n}$, for $|x| < 1$.'
+            explanation: '$\\frac{1}{1+x^2} = \\frac{1}{1-(-x^2)} = \\sum_{n=0}^\\infty (-x^2)^n = \\sum (-1)^n x^{2n}$, for $|x| < 1$. Forgetting to square gives $1/(1+x)$, dropping the sign gives $1/(1-x^2)$, and the extra factor of $x$ gives $x/(1+x^2)$.'
           },
           {
             question: 'The Maclaurin series for $\\cos(2x)$ is obtained by:',
-            options: ['Substituting $2x$ for $x$ in $\\cos x = \\sum (-1)^n x^{2n}/(2n)!$', 'Differentiating $\\sin(2x)$ series', 'Multiplying $\\cos x$ series by 2', 'Squaring the $\\cos x$ series'],
+            options: ['Substituting $2x$ for $x$ in the $\\cos x$ series', 'Multiplying each term of the $\\cos x$ series by 2', 'Differentiating the $\\sin(2x)$ series term by term', 'Squaring the $\\cos x$ series and doubling the result'],
             correctAnswer: 0,
-            explanation: '$\\cos(2x) = \\sum_{n=0}^\\infty \\frac{(-1)^n (2x)^{2n}}{(2n)!} = \\sum \\frac{(-1)^n 4^n x^{2n}}{(2n)!}$.'
+            explanation: '$\\cos(2x) = \\sum_{n=0}^\\infty \\frac{(-1)^n (2x)^{2n}}{(2n)!} = \\sum \\frac{(-1)^n 4^n x^{2n}}{(2n)!}$. Multiplying by 2 gives $2\\cos x$; differentiating the $\\sin(2x)$ series gives $2\\cos(2x)$ (chain rule); and $2\\cos^2 x = 1 + \\cos(2x)$.'
           }
         ]
       }
@@ -87,8 +87,8 @@ This is related to the error function $\\text{erf}(x)$ — series representation
         dropdowns: [
           {
             label: 'The series for $\\frac{x}{1+x}$ is obtained from $\\frac{1}{1-u} = \\sum u^n$ by:',
-            options: ['Setting $u = -x$, then multiply by $x$: $\\sum_{n=0}^\\infty (-1)^n x^{n+1}$', 'Setting $u = x$ and dividing by $x$', 'Integrating the geometric series', 'Differentiating $\\ln(1+x)$'],
-            correctAnswers: ['Setting $u = -x$, then multiply by $x$: $\\sum_{n=0}^\\infty (-1)^n x^{n+1}$'],
+            options: ['Setting $u = -x$, then multiplying by $x$', 'Setting $u = x$, then multiplying by $x$', 'Setting $u = -x$, then dividing by $x$', 'Integrating the geometric series with $u = -x$'],
+            correctAnswers: ['Setting $u = -x$, then multiplying by $x$'],
             hints: ['$x/(1+x) = x \\cdot 1/(1+x) = x \\cdot 1/(1-(-x))$.'],
             explanation: '$1/(1+x) = \\sum (-x)^n = \\sum (-1)^n x^n$. Multiply by $x$: $x/(1+x) = \\sum (-1)^n x^{n+1}$.'
           },
@@ -97,7 +97,7 @@ This is related to the error function $\\text{erf}(x)$ — series representation
             options: ['$-1/6$', '$1/24$', '$-1/3$', '$1/4$'],
             correctAnswers: ['$-1/6$'],
             hints: ['Multiply the first few terms of $e^x$ and $\\cos x$ series and collect $x^4$ terms.'],
-            explanation: '$e^x = 1 + x + x^2/2 + x^3/6 + x^4/24 + \\cdots$, $\\cos x = 1 - x^2/2 + x^4/24 - \\cdots$. $x^4$ terms: $1 \\cdot x^4/24 + (x^2/2)(-x^2/2) + x^4/24 \\cdot 1 = 1/24 - 1/4 + 1/24$. Wait: $1\\cdot(x^4/24) + (x)(0) + (x^2/2)(-x^2/2) + (x^3/6)(0) + (x^4/24)(1) = 1/24 - 1/4 + 1/24 = 2/24 - 6/24 = -4/24 = -1/6$.'
+            explanation: '$e^x = 1 + x + x^2/2 + x^3/6 + x^4/24 + \\cdots$, $\\cos x = 1 - x^2/2 + x^4/24 - \\cdots$. $x^4$ terms: $1\\cdot(x^4/24) + (x)(0) + (x^2/2)(-x^2/2) + (x^3/6)(0) + (x^4/24)(1) = 1/24 - 1/4 + 1/24 = 2/24 - 6/24 = -4/24 = -1/6$.'
           }
         ]
       }

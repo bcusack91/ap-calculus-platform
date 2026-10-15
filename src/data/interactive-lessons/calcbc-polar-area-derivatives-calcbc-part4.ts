@@ -6,9 +6,9 @@ export const calcbcPolarAreaPart4Data = {
       type: 'text' as const,
       content: `# Polar Area & Derivatives \u2014 Advanced Applications
 
-**Part 4 of 7 \u2014 Lima\\c{c}on Regions & Inner Loop Area**
+**Part 4 of 7 \u2014 Limaçon Regions & Inner Loop Area**
 
-### Lima\\c{c}on Classification: $r = a + b\\cos\\theta$
+### Limaçon Classification: $r = a + b\\cos\\theta$
 
 | Condition | Shape | Inner Loop? |
 |-----------|-------|-------------|
@@ -66,7 +66,7 @@ $$= \\pi - \\frac{3\\sqrt{3}}{2}$$
             explanation: '$r = 0$ when $\\sin\\theta = 2/3$. Between the two solutions, $r < 0$ (inner loop). We integrate $r^2$ on that interval.'
           },
           {
-            question: 'A dimpled lima\\c{c}on ($|a| > |b|$, $|a| < 2|b|$) has:',
+            question: 'A dimpled limaçon ($|a| > |b|$, $|a| < 2|b|$) has:',
             options: ['An indentation but no inner loop', 'An inner loop', 'A cusp at the origin', 'No special features'],
             correctAnswer: 0,
             explanation: 'When $|b| < |a| < 2|b|$, the curve has a dimple (concavity) but $r > 0$ everywhere, so no inner loop.'
@@ -114,10 +114,10 @@ $$= \\pi - \\frac{3\\sqrt{3}}{2}$$
       type: 'text' as const,
       content: `### Key Takeaways
 
-- Lima\\c{c}ons with $|a| < |b|$ have inner loops where $r < 0$
+- Limaçons with $|a| < |b|$ have inner loops where $r < 0$
 - Inner loop area: integrate $\\frac{1}{2}r^2$ on the interval where $r < 0$
 - Full integral double-counts the inner loop
-- Cardioids and convex lima\\c{c}ons have no inner loop complications
+- Cardioids and convex limaçons have no inner loop complications
 
 > **Next:** Part 5 covers **polar curve applications in AP FRQ contexts**.`
     }

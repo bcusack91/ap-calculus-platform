@@ -94,17 +94,17 @@ So $L = \\infty$ for any $x \\neq 0$. Radius $R = 0$. Converges only at $x = 0$.
         dropdowns: [
           {
             label: '$\\sum_{n=0}^\\infty (2x)^n$ converges when:',
-            options: ['$|x| < 1/2$ (geometric, $r = 2x$)', '$|x| < 1$', '$|x| < 2$', 'All $x$'],
-            correctAnswers: ['$|x| < 1/2$ (geometric, $r = 2x$)'],
+            options: ['$|x| < 1/2$', '$|x| < 1$', '$|x| < 2$', '$|x| \\le 1/2$'],
+            correctAnswers: ['$|x| < 1/2$'],
             hints: ['Geometric series $\\sum r^n$ converges when $|r| < 1$.'],
-            explanation: '$\\sum (2x)^n$ is geometric with ratio $r = 2x$. Converges when $|2x| < 1$, i.e., $|x| < 1/2$. $R = 1/2$.'
+            explanation: '$\\sum (2x)^n$ is geometric with ratio $r = 2x$. Converges when $|2x| < 1$, i.e., $|x| < 1/2$. $R = 1/2$. At $x = \\pm 1/2$ the terms are $(\\pm 1)^n$, which do not go to $0$, so neither endpoint is included.'
           },
           {
             label: 'If the Ratio Test gives $L = |x-1|/4$, the radius of convergence is:',
-            options: ['$R = 4$ (converges when $|x-1|/4 < 1$)', '$R = 1/4$', '$R = 1$', 'Cannot determine'],
-            correctAnswers: ['$R = 4$ (converges when $|x-1|/4 < 1$)'],
+            options: ['$R = 4$', '$R = 1/4$', '$R = 1$', '$R = 8$'],
+            correctAnswers: ['$R = 4$'],
             hints: ['$L < 1$ means $|x-1| < 4$.'],
-            explanation: '$L = |x-1|/4 < 1 \\iff |x-1| < 4$. So $R = 4$, centered at $c = 1$.'
+            explanation: '$L = |x-1|/4 < 1 \\iff |x-1| < 4$. So $R = 4$, centered at $c = 1$. (The interval $(-3, 5)$ has length $8$, but the radius is half of that.)'
           }
         ]
       }

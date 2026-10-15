@@ -63,9 +63,9 @@ $$\\sin x = x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\frac{x^7}{7!} + \\cdots = 
         questions: [
           {
             question: 'The coefficient of $(x-c)^n$ in the Taylor series of $f$ about $c$ is:',
-            options: ['$f^{(n)}(c)/n!$', '$f^{(n)}(c)$', '$f(c)/n!$', '$f^{(n)}(0)/n!$'],
+            options: ['$f^{(n)}(c)/n!$', '$f^{(n)}(c)$', '$f(c)/n!$', '$f^{(n)}(c)/n$'],
             correctAnswer: 0,
-            explanation: 'By definition: $a_n = f^{(n)}(c)/n!$.'
+            explanation: 'By definition: $a_n = f^{(n)}(c)/n!$. The derivative is evaluated at the center $c$ (not at $0$ unless $c = 0$), and it is divided by $n!$, not $n$.'
           },
           {
             question: 'The 3rd-degree Maclaurin polynomial for $\\cos x$ is:',
@@ -97,8 +97,8 @@ $$\\sin x = x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\frac{x^7}{7!} + \\cdots = 
           },
           {
             label: 'The key difference between "4th-degree Taylor polynomial" and "first 4 nonzero terms" is:',
-            options: ['Degree polynomial has exactly terms through $x^4$; nonzero terms skips zeros', 'They are the same thing', 'Degree is always larger', 'Nonzero terms is always larger'],
-            correctAnswers: ['Degree polynomial has exactly terms through $x^4$; nonzero terms skips zeros'],
+            options: ['Degree 4 stops at $x^4$; nonzero terms skip any zeros', 'They are the same, since both list four terms', 'Degree 4 always has more terms than the first 4 nonzero', 'The first 4 nonzero terms always stop at $x^4$'],
+            correctAnswers: ['Degree 4 stops at $x^4$; nonzero terms skip any zeros'],
             hints: ['For $\\sin x$: $T_4 = x - x^3/6$ (only 2 nonzero terms), but "first 4 nonzero terms" = $x - x^3/6 + x^5/120 - x^7/5040$.'],
             explanation: '$T_4(\\sin x) = x - x^3/6$ (no $x^4$ term). First 4 nonzero terms goes up to $x^7$. They\'re different!'
           }

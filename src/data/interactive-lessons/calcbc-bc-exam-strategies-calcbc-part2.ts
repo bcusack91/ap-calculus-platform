@@ -6,11 +6,11 @@ export const calcbcExamStrategyPart2Data = {
       type: 'text' as const,
       content: `# Multiple-Choice Strategies
 
-**Part 2 of 7 — Techniques for the 45 MC Questions**
+**Part 2 of 7 — Techniques for the 42 MC Questions**
 
-### No-Calculator Section (30 Questions, 60 Minutes)
+### No-Calculator Section (29 Questions, 62 Minutes)
 
-**Pacing:** 2 minutes per question. If stuck after 90 seconds, mark and move on.
+**Pacing:** about 2 minutes per question (62 ÷ 29 ≈ 2.1). If stuck after 90 seconds, mark and move on.
 
 **Common question types:**
 
@@ -27,9 +27,9 @@ export const calcbcExamStrategyPart2Data = {
     {
       id: 'es2-calc',
       type: 'text' as const,
-      content: `### Calculator Section (15 Questions, 45 Minutes)
+      content: `### Calculator Section (13 Questions, 38 Minutes)
 
-**Pacing:** 3 minutes per question — you have more time, and questions are harder.
+**Pacing:** about 3 minutes per question (38 ÷ 13 ≈ 2.9) — you have more time, and questions are harder.
 
 **When to use your calculator:**
 
@@ -53,15 +53,15 @@ export const calcbcExamStrategyPart2Data = {
         questions: [
           {
             question: 'On a no-calculator MC question, the fastest way to evaluate $\\lim_{x \\to 0} \\frac{e^{2x} - 1}{x}$ is:',
-            options: ['Recognize as $2 \\cdot \\lim \\frac{e^{2x}-1}{2x} = 2 \\cdot 1 = 2$', 'Use L\'Hôpital\'s Rule', 'Expand $e^{2x}$ as a full Taylor series', 'Factor the numerator'],
+            options: ['Rewrite as $2 \\cdot \\frac{e^{2x}-1}{2x} \\to 2$', 'Apply the quotient rule to $\\frac{e^{2x}-1}{x}$, then let $x \\to 0$', 'Expand $e^{2x}$ as a full Taylor series and sum every term', 'Substitute $x = 0$ directly, since both parts are continuous'],
             correctAnswer: 0,
-            explanation: 'Recognizing the limit form $\\lim_{u\\to 0} \\frac{e^u - 1}{u} = 1$ with $u = 2x$ is fastest. L\'Hôpital also works but takes longer.'
+            explanation: 'Recognizing the limit form $\\lim_{u\\to 0} \\frac{e^u - 1}{u} = 1$ with $u = 2x$ is fastest: the limit is $2 \\cdot 1 = 2$. Substituting $x = 0$ gives the indeterminate form $0/0$, differentiating the whole quotient is not L\'Hôpital\'s Rule, and summing a full series is far slower. (L\'Hôpital\'s Rule also works but takes longer.)'
           },
           {
             question: 'On a calculator MC question asking for $\\int_0^2 \\sqrt{1 + (2x)^2}\\,dx$, the best approach is:',
-            options: ['Type the integral directly into the calculator', 'Try trig substitution by hand', 'Approximate with a Riemann sum', 'Give up — it\'s too hard'],
+            options: ['Enter the integral into the calculator', 'Use the trig substitution $2x = \\tan\\theta$ by hand', 'Estimate it with a left Riemann sum of 4 rectangles', 'Simplify the integrand to $1 + 2x$ and integrate by hand'],
             correctAnswer: 0,
-            explanation: 'Calculator section integrals are designed to be evaluated numerically. Type it in and round to match the answer choices.'
+            explanation: 'Calculator section integrals are designed to be evaluated numerically. Type it in and round to match the answer choices. Trig substitution is slow, a 4-rectangle Riemann sum is too rough to match the choices, and $\\sqrt{1 + (2x)^2} \\neq 1 + 2x$.'
           },
           {
             question: 'Process of elimination is most useful when:',
@@ -80,14 +80,14 @@ export const calcbcExamStrategyPart2Data = {
         dropdowns: [
           {
             label: 'Can we eliminate $0$? Since $\\ln x > 0$ on $(1,e)$:',
-            options: ['Yes — positive integrand means positive integral', 'No — it could be zero', 'Cannot determine'],
-            correctAnswers: ['Yes — positive integrand means positive integral'],
+            options: ['Yes — a positive integrand gives a positive integral', 'No — a positive integrand can still integrate to zero', 'No — $\\ln 1 = 0$, so the integral starts at $0$'],
+            correctAnswers: ['Yes — a positive integrand gives a positive integral'],
             hints: ['If $f(x) > 0$ on $(a,b)$, then $\\int_a^b f(x)\\,dx > 0$.'],
             explanation: 'Since $\\ln x > 0$ for $x \\in (1, e)$, the integral must be positive. Eliminate $0$.'
           },
           {
             label: 'Can we eliminate $e \\approx 2.718$? The interval has length $e - 1 \\approx 1.718$ and $\\ln x \\leq 1$:',
-            options: ['Yes — integral $\\leq 1 \\cdot (e-1) \\approx 1.718 < e$', 'No — it could equal $e$', 'Cannot determine'],
+            options: ['Yes — integral $\\leq 1 \\cdot (e-1) \\approx 1.718 < e$', 'No — the integral could equal $e$ exactly', 'No — the bound needs the exact antiderivative'],
             correctAnswers: ['Yes — integral $\\leq 1 \\cdot (e-1) \\approx 1.718 < e$'],
             hints: ['Bound: $\\int_1^e \\ln x\\,dx \\leq \\max(\\ln x) \\cdot (e - 1) = 1 \\cdot (e-1)$.'],
             explanation: 'Since $\\ln x \\leq 1$ on $[1,e]$, the integral $\\leq e - 1 \\approx 1.72 < e \\approx 2.72$. Eliminate $e$. The answer is $1$ (by integration by parts).'
@@ -104,7 +104,7 @@ export const calcbcExamStrategyPart2Data = {
         correctAnswer: '0.77',
         acceptableAnswers: ['0.77', '0.771'],
         hints: ['$h = 0.5$. Trap rule: $h/2[f(0) + 2f(0.5) + f(1)]$. $f(x) = e^{-x^2}$, so $f(0) = 1$, $f(0.5) = e^{-0.25} \\approx 0.7788$, $f(1) = e^{-1} \\approx 0.3679$.'],
-        explanation: '$0.5/2 \\cdot [1 + 2(0.7788) + 0.3679] = 0.25 \\cdot [1 + 1.5576 + 0.3679] = 0.25 \\cdot 2.9255 \\approx 0.731$. Hmm — let me recalculate. Actually $T = 0.25[1 + 2(0.7788) + 0.3679] = 0.25(2.9255) = 0.7314$. The correct answer is approximately $0.73$.'
+        explanation: '$T = \\frac{0.5}{2}[f(0) + 2f(0.5) + f(1)] = 0.25[1 + 2(0.7788) + 0.3679] = 0.25(2.9255) \\approx 0.7314$, so the answer is approximately $0.73$.'
       }
     },
     {

@@ -63,9 +63,9 @@ Must show $b_{n+1} < b_n$ or use $f'(x) < 0$. Don't just assert it.
         questions: [
           {
             question: 'On a BC FRQ, a student writes: "The series $\\sum (-1)^n/\\sqrt{n}$ converges by AST because $1/\\sqrt{n} \\to 0$." What score does this justification earn?',
-            options: ['Partial credit — missing positivity and decreasing checks', 'Full credit — the key condition is stated', 'No credit — conclusion is wrong', 'Full credit — AST is named'],
+            options: ['Partial credit — missing positivity and decreasing checks', 'Full credit — $b_n \\to 0$ is the condition that matters', 'No credit — the series diverges as a $p$-series', 'Full credit — naming the AST is what earns the point'],
             correctAnswer: 0,
-            explanation: 'The student verified $b_n \\to 0$ but didn\'t explicitly state $b_n > 0$ or $b_n$ is decreasing. This earns partial credit — typically 1 out of 2 or 3 points.'
+            explanation: 'The conclusion is correct ($\\sum 1/\\sqrt{n}$ diverges, but that only rules out absolute convergence). The student verified $b_n \\to 0$ but didn\'t explicitly state $b_n > 0$ or that $b_n$ is decreasing. Naming the test is not enough on its own. This earns partial credit — typically 1 out of 2 or 3 points.'
           },
           {
             question: '$\\sum_{n=1}^\\infty \\frac{(-1)^{n+1}}{2n+1}$ is approximated by $S_3 = 1/3 - 1/5 + 1/7$. The error is at most:',
@@ -75,9 +75,9 @@ Must show $b_{n+1} < b_n$ or use $f'(x) < 0$. Don't just assert it.
           },
           {
             question: 'For the power series $\\sum (-1)^n x^n/(n+1)$, at $x = 1$ the series:',
-            options: ['Converges conditionally', 'Converges absolutely', 'Diverges', 'Cannot determine'],
+            options: ['Converges conditionally', 'Converges absolutely, since $b_n \\to 0$', 'Diverges, since $\\sum 1/(n+1)$ diverges', 'Inconclusive — the Ratio Test gives $L = 1$'],
             correctAnswer: 0,
-            explanation: 'At $x=1$: $\\sum (-1)^n/(n+1)$ — alternating, $b_n = 1/(n+1) \\to 0$, decreasing. Converges by AST. But $\\sum 1/(n+1)$ diverges (harmonic). Conditional convergence.'
+            explanation: 'At $x=1$: $\\sum (-1)^n/(n+1)$ — alternating, $b_n = 1/(n+1) \\to 0$, decreasing. Converges by AST. But $\\sum 1/(n+1)$ diverges (harmonic), so the convergence is not absolute — it is conditional. A Ratio Test result of $L = 1$ only means that test is silent; AST still settles it.'
           }
         ]
       }
@@ -90,8 +90,8 @@ Must show $b_{n+1} < b_n$ or use $f'(x) < 0$. Don't just assert it.
         dropdowns: [
           {
             label: 'Given $S = \\sum_{n=1}^\\infty (-1)^{n+1}/n^4$ and $S_3 \\approx 0.9459$, is $S_3$ an overestimate or underestimate?',
-            options: ['Overestimate (3 terms, odd number, first term positive)', 'Underestimate', 'Exact', 'Cannot tell'],
-            correctAnswers: ['Overestimate (3 terms, odd number, first term positive)'],
+            options: ['Overestimate', 'Underestimate', 'Exactly equal to $S$', 'Cannot tell without $S$'],
+            correctAnswers: ['Overestimate'],
             hints: ['When the first term is positive and you stop after an odd number of terms, you\'ve added more than subtracted.'],
             explanation: '$S_3 = 1 - 1/16 + 1/81$. With an odd number of terms and positive first term, $S_3$ overshoots: $S_3 > S$.'
           },

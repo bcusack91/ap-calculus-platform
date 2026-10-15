@@ -61,21 +61,21 @@ To show decreasing: verify $b_{n+1} < b_n$, or equivalently $b_{n+1}/b_n < 1$, o
         questions: [
           {
             question: 'Which condition is NOT required by the Alternating Series Test?',
-            options: ['$b_n$ is differentiable', '$b_n > 0$', '$b_n$ is decreasing', '$\\lim b_n = 0$'],
+            options: ['$b_n$ is differentiable', '$b_n > 0$ for every $n$ beyond some $N$', '$b_{n+1} \\le b_n$ for every $n \\ge N$', '$\\lim_{n \\to \\infty} b_n = 0$'],
             correctAnswer: 0,
             explanation: 'The AST requires positivity, (eventual) monotone decrease, and limit zero. Differentiability is not required — it\'s just a convenient way to check if $b_n$ is decreasing.'
           },
           {
             question: '$\\sum_{n=1}^\\infty \\frac{(-1)^n}{\\sqrt{n+3}}$. Does this converge by AST?',
-            options: ['Yes — all three conditions met', 'No — $b_n$ not decreasing', 'No — $b_n \\not\\to 0$', 'Inconclusive'],
+            options: ['Yes — all three AST conditions hold', 'No — $\\sum 1/\\sqrt{n+3}$ diverges', 'No — $b_n \\not\\to 0$', 'No — $b_n$ is not decreasing'],
             correctAnswer: 0,
-            explanation: '$b_n = 1/\\sqrt{n+3}$: positive ✓, decreasing ✓, $\\to 0$ ✓. Converges by AST.'
+            explanation: '$b_n = 1/\\sqrt{n+3}$: positive ✓, decreasing ✓, $\\to 0$ ✓. Converges by AST. The divergence of $\\sum 1/\\sqrt{n+3}$ only rules out absolute convergence; it does not stop AST.'
           },
           {
             question: '$\\sum_{n=1}^\\infty (-1)^n \\frac{n^2}{n^2+1}$. This series:',
-            options: ['Diverges ($b_n \\to 1$)', 'Converges by AST', 'Converges absolutely', 'Inconclusive'],
+            options: ['Diverges ($b_n \\to 1$)', 'Converges by AST, since the signs alternate', 'Converges absolutely, since $n^2/(n^2+1) < 1$', 'Inconclusive — AST fails, so no test applies'],
             correctAnswer: 0,
-            explanation: '$b_n = n^2/(n^2+1) \\to 1 \\neq 0$. Diverges by the Divergence Test (not even close to meeting AST conditions).'
+            explanation: '$b_n = n^2/(n^2+1) \\to 1 \\neq 0$. Diverges by the Divergence Test. Alternating signs alone are not enough for AST, terms below $1$ do not give convergence, and a failed AST still leaves the Divergence Test available.'
           }
         ]
       }
@@ -88,14 +88,14 @@ To show decreasing: verify $b_{n+1} < b_n$, or equivalently $b_{n+1}/b_n < 1$, o
         dropdowns: [
           {
             label: 'For $\\sum (-1)^{n+1} \\frac{\\ln n}{n}$, is $b_n = \\ln n / n$ eventually decreasing?',
-            options: ['Yes — $f\'(x) = (1-\\ln x)/x^2 < 0$ for $x > e$', 'No — $\\ln n$ increases', 'Cannot determine'],
+            options: ['Yes — $f\'(x) = (1-\\ln x)/x^2 < 0$ for $x > e$', 'No — $\\ln n$ increases, so $\\ln n / n$ does too', 'No — $f\'(x) = (1+\\ln x)/x^2 > 0$ for all $x > 1$'],
             correctAnswers: ['Yes — $f\'(x) = (1-\\ln x)/x^2 < 0$ for $x > e$'],
             hints: ['Take $f(x) = \\ln x / x$ and find $f\'(x)$.'],
             explanation: '$f\'(x) = (1 - \\ln x)/x^2 < 0$ when $\\ln x > 1$, i.e., $x > e$. So $b_n$ is decreasing for $n \\ge 3$.'
           },
           {
             label: 'For the same series, does $b_n \\to 0$?',
-            options: ['Yes — by L\'Hôpital\'s Rule, $\\ln n / n \\to 0$', 'No — $\\ln n \\to \\infty$', 'Depends on starting index'],
+            options: ['Yes — by L\'Hôpital\'s Rule, $\\ln n / n \\to 0$', 'No — $\\ln n \\to \\infty$, so the quotient does too', 'Only if the sum starts at $n \\ge 3$'],
             correctAnswers: ['Yes — by L\'Hôpital\'s Rule, $\\ln n / n \\to 0$'],
             hints: ['Apply L\'Hôpital: $\\lim \\ln x / x = \\lim (1/x)/1 = 0$.'],
             explanation: '$\\lim_{n\\to\\infty} \\ln n / n = 0$ by L\'Hôpital. All three AST conditions met → converges.'

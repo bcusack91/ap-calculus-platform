@@ -63,7 +63,7 @@ $f^{(n)}(c) = n! \\cdot a_n$`
             question: 'If $f(x) = \\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n}}{(2n)!}$, then $f\'\'(0) = $',
             options: ['$-1$', '$0$', '$1$', '$-2$'],
             correctAnswer: 0,
-            explanation: 'This is $\\cos x$. $f\'\'(0) = -\\cos(0)$... Actually: $a_n$ is the coefficient of $x^n$. Coefficient of $x^2$: $(-1)^1/(2!) = -1/2$. Since $a_2 = f\'\'(0)/2!$, we get $f\'\'(0) = 2! \\cdot (-1/2) = -1$.'
+            explanation: 'This is $\\cos x$. The coefficient of $x^2$ is $a_2 = (-1)^1/2! = -1/2$. Since $a_2 = f\'\'(0)/2!$, we get $f\'\'(0) = 2! \\cdot (-1/2) = -1$ (check: $f\'\'(x) = -\\cos x$, so $f\'\'(0) = -1$).'
           },
           {
             question: 'For the DE $y\' = 2xy$ with $y(0) = 1$, if $y = a_0 + a_1 x + a_2 x^2 + \\cdots$, then $a_2 = $',
@@ -73,9 +73,9 @@ $f^{(n)}(c) = n! \\cdot a_n$`
           },
           {
             question: 'If $g(x) = \\sum_{n=0}^\\infty \\frac{x^n}{(n+1)!}$, then $g(x) = $',
-            options: ['$(e^x - 1)/x$', '$e^x/x$', '$\\ln(1+x)/x$', '$e^x - 1$'],
+            options: ['$(e^x - 1)/x$', '$e^x/x$', '$(e^x - 1 - x)/x^2$', '$e^x - 1$'],
             correctAnswer: 0,
-            explanation: '$e^x = \\sum x^n/n!$. Then $e^x - 1 = \\sum_{n=1}^\\infty x^n/n!$. Dividing by $x$: $(e^x-1)/x = \\sum_{n=1}^\\infty x^{n-1}/n! = \\sum_{n=0}^\\infty x^n/(n+1)!$. ✓'
+            explanation: '$e^x = \\sum x^n/n!$. Then $e^x - 1 = \\sum_{n=1}^\\infty x^n/n!$. Dividing by $x$: $(e^x-1)/x = \\sum_{n=1}^\\infty x^{n-1}/n! = \\sum_{n=0}^\\infty x^n/(n+1)!$. ✓ Shifting the index one step too far gives $(e^x - 1 - x)/x^2 = \\sum x^n/(n+2)!$.'
           }
         ]
       }
@@ -88,14 +88,14 @@ $f^{(n)}(c) = n! \\cdot a_n$`
         dropdowns: [
           {
             label: 'If $f(x) = \\sum_{n=0}^\\infty \\frac{3^n x^n}{n!}$, then $f^{(5)}(0) = $',
-            options: ['$243$ ($= 3^5$)', '$3^5/5! = 243/120$', '$5! = 120$', '$15$'],
+            options: ['$243$ ($= 3^5$)', '$3^5/5! = 243/120$', '$5! = 120$', '$3^5 \\cdot 5! = 29160$'],
             correctAnswers: ['$243$ ($= 3^5$)'],
             hints: ['$f^{(n)}(0) = n! \\cdot a_n = n! \\cdot 3^n/n! = 3^n$.'],
             explanation: '$a_n = 3^n/n!$, so $f^{(5)}(0) = 5! \\cdot a_5 = 5! \\cdot 3^5/5! = 3^5 = 243$. (Note: $f(x) = e^{3x}$, and $f^{(5)}(x) = 3^5 e^{3x}$, so $f^{(5)}(0) = 243$ ✓.)'
           },
           {
             label: 'On an AP FRQ, "write the first four nonzero terms" for $\\sin(x^2)$:',
-            options: ['$x^2 - x^6/6 + x^{10}/120 - x^{14}/5040$', '$x - x^3/6 + x^5/120 - x^7/5040$', '$x^2 - x^4/2 + x^6/24 - x^8/720$', '$1 - x^4/2 + x^8/24 - x^{12}/720$'],
+            options: ['$x^2 - x^6/6 + x^{10}/120 - x^{14}/5040$', '$x - x^3/6 + x^5/120 - x^7/5040$', '$x^2 + x^6/6 + x^{10}/120 + x^{14}/5040$', '$1 - x^4/2 + x^8/24 - x^{12}/720$'],
             correctAnswers: ['$x^2 - x^6/6 + x^{10}/120 - x^{14}/5040$'],
             hints: ['$\\sin u = u - u^3/6 + u^5/120 - u^7/5040 + \\cdots$. Set $u = x^2$.'],
             explanation: '$\\sin(x^2) = x^2 - (x^2)^3/3! + (x^2)^5/5! - (x^2)^7/7! = x^2 - x^6/6 + x^{10}/120 - x^{14}/5040$.'

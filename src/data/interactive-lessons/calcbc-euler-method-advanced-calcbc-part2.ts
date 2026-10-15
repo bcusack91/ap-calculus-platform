@@ -64,9 +64,9 @@ $$\\boxed{y(1.75) \\approx -0.847}$$
         questions: [
           {
             question: '$dy/dx = xy$, $y(0) = 1$, $\\Delta x = 0.1$. After TWO steps of Euler\'s method, $y(0.2) \\approx$:',
-            options: ['$1.01$ (step 1: $y = 1$; step 2: $y = 1 + 0.01(0.1) = 1.01$)', '$1.1$', '$1.0$', '$1.02$'],
+            options: ['$1 + 0.1(0.1) = 1.01$', '$1 + 0.1 = 1.1$', '$1 + 0(0.1) = 1$', '$1 + 0.2(0.1) = 1.02$'],
             correctAnswer: 0,
-            explanation: 'Step 1: $f(0,1) = 0$, $y(0.1) = 1 + 0(0.1) = 1$. Step 2: $f(0.1, 1) = 0.1$, $y(0.2) = 1 + 0.1(0.1) = 1.01$.'
+            explanation: 'Step 1: $f(0,1) = 0$, $y(0.1) = 1 + 0(0.1) = 1$. Step 2: $f(0.1, 1) = 0.1$, $y(0.2) = 1 + 0.1(0.1) = 1.01$. Dropping $\\Delta x$ in step 2 gives 1.1, reusing the step-1 slope of 0 gives 1, and evaluating the slope at $x = 0.2$ gives 1.02.'
           },
           {
             question: 'When an FRQ says "use Euler\'s method with two steps of equal size to approximate $y(1)$ given $y(0) = 2$," what is $\\Delta x$?',
@@ -85,14 +85,14 @@ $$\\boxed{y(1.75) \\approx -0.847}$$
         dropdowns: [
           {
             label: 'Step 1: $f(0, 0) = 1 + 0 = 1$. So $y(0.5) =$',
-            options: ['$0 + 1(0.5) = 0.5$', '$0 + 1 = 1$', '$0 + 0.5 = 0.5$', '$1 + 0.5 = 1.5$'],
+            options: ['$0 + 1(0.5) = 0.5$', '$0 + 1 = 1$', '$0 + 0(0.5) = 0$', '$1 + 1(0.5) = 1.5$'],
             correctAnswers: ['$0 + 1(0.5) = 0.5$'],
             hints: ['$y_{n+1} = y_n + f \\cdot \\Delta x = 0 + 1(0.5)$.'],
             explanation: '$y(0.5) = 0 + 1 \\cdot 0.5 = 0.5$.'
           },
           {
             label: 'Step 2: $f(0.5, 0.5) = 1.5$. So $y(1) =$',
-            options: ['$0.5 + 1.5(0.5) = 1.25$', '$0.5 + 1.5 = 2$', '$0 + 1.5(0.5) = 0.75$', '$1.5 + 0.5 = 2$'],
+            options: ['$0.5 + 1.5(0.5) = 1.25$', '$0.5 + 1.5 = 2$', '$0 + 1.5(0.5) = 0.75$', '$0.5 + 1(0.5) = 1$'],
             correctAnswers: ['$0.5 + 1.5(0.5) = 1.25$'],
             hints: ['$y(1) = y(0.5) + f(0.5, 0.5) \\cdot \\Delta x = 0.5 + 1.5(0.5)$.'],
             explanation: '$y(1) \\approx 1.25$. (Exact: $e - 1 \\approx 1.718$, so big step undershoots.)'

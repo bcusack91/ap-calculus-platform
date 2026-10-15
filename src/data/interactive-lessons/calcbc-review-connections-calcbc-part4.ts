@@ -68,9 +68,9 @@ $$\\sum_{n=0}^\\infty c_n(x-a)^n$$
           },
           {
             question: 'Absolute convergence implies convergence, but conditional convergence means:',
-            options: ['$\\sum a_n$ converges but $\\sum |a_n|$ diverges', '$\\sum a_n$ and $\\sum |a_n|$ both converge', 'The series oscillates without settling', 'The partial sums are bounded'],
+            options: ['$\\sum a_n$ converges but $\\sum |a_n|$ diverges', '$\\sum a_n$ and $\\sum |a_n|$ both converge', 'The series oscillates without settling', '$\\sum |a_n|$ converges but $\\sum a_n$ diverges'],
             correctAnswer: 0,
-            explanation: 'Conditional convergence: the series converges only because of cancellation between positive and negative terms. Example: $\\sum (-1)^n/n$.'
+            explanation: 'Conditional convergence: $\\sum a_n$ converges only because of cancellation between positive and negative terms, while $\\sum |a_n|$ diverges. Example: $\\sum (-1)^n/n$. The reverse case is impossible, since absolute convergence implies convergence.'
           }
         ]
       }
@@ -83,7 +83,7 @@ $$\\sum_{n=0}^\\infty c_n(x-a)^n$$
         dropdowns: [
           {
             label: '$\\sum_{n=1}^\\infty \\frac{(-1)^{n+1}}{n}$:',
-            options: ['Conditionally convergent', 'Absolutely convergent', 'Divergent', 'Cannot be determined'],
+            options: ['Conditionally convergent', 'Absolutely convergent', 'Divergent (harmonic series)', 'Cannot be determined by any test'],
             correctAnswers: ['Conditionally convergent'],
             hints: ['AST shows convergence. $\\sum 1/n$ diverges (harmonic).'],
             explanation: 'Converges by AST. $\\sum |a_n| = \\sum 1/n$ diverges. Conditionally convergent.'
@@ -97,7 +97,7 @@ $$\\sum_{n=0}^\\infty c_n(x-a)^n$$
           },
           {
             label: '$\\sum_{n=1}^\\infty \\frac{n}{n+1}$:',
-            options: ['Divergent (divergence test)', 'Conditionally convergent', 'Absolutely convergent', 'Converges to 1'],
+            options: ['Divergent (divergence test)', 'Conditionally convergent', 'Absolutely convergent', 'Converges, since $\\frac{n}{n+1} \\to 1$'],
             correctAnswers: ['Divergent (divergence test)'],
             hints: ['$\\lim n/(n+1) = 1 \\neq 0$.'],
             explanation: '$a_n \\to 1 \\neq 0$. Diverges by the divergence test. Always check this first!'

@@ -50,7 +50,7 @@ $\\cos^2 x = \\frac{1 + \\cos 2x}{2} = \\frac{1}{2} + \\frac{1}{2}\\sum_{n=0}^\\
 
 $= \\frac{1}{2} + \\frac{1}{2}\\left[1 - 2x^2 + \\frac{2x^4}{3} - \\cdots\\right]$
 
-Wait: $\\cos(2x) = 1 - (2x)^2/2! + (2x)^4/4! - \\cdots = 1 - 2x^2 + 2x^4/3 - \\cdots$
+Check: $\\cos(2x) = 1 - (2x)^2/2! + (2x)^4/4! - \\cdots = 1 - 2x^2 + 2x^4/3 - \\cdots$
 
 $\\cos^2 x = 1 - x^2 + x^4/3 - \\cdots$
 
@@ -64,9 +64,9 @@ $\\cos^2 x = 1 - x^2 + x^4/3 - \\cdots$
         questions: [
           {
             question: 'The Maclaurin series for $e^{3x}$ is:',
-            options: ['$\\sum_{n=0}^\\infty \\frac{3^n x^n}{n!}$', '$3\\sum x^n/n!$', '$\\sum 3x^n/n!$', '$\\sum x^{3n}/n!$'],
+            options: ['$\\sum_{n=0}^\\infty \\frac{3^n x^n}{n!}$', '$\\sum_{n=0}^\\infty \\frac{3 \\cdot x^n}{n!}$', '$\\sum_{n=0}^\\infty \\frac{(x^3)^n}{n!}$', '$\\sum_{n=0}^\\infty \\frac{x^n}{3^n \\, n!}$'],
             correctAnswer: 0,
-            explanation: 'Substitute $3x$ for $x$ in $e^x = \\sum x^n/n!$: $e^{3x} = \\sum (3x)^n/n! = \\sum 3^n x^n/n!$.'
+            explanation: 'Substitute $3x$ for $x$ in $e^x = \\sum x^n/n!$: $e^{3x} = \\sum (3x)^n/n! = \\sum 3^n x^n/n!$. Forgetting to raise the 3 to the $n$th power gives $3e^x$; substituting $x^3$ gives $e^{x^3}$; dividing by $3^n$ gives $e^{x/3}$.'
           },
           {
             question: 'The first three nonzero terms of $\\sin(x^2)$ are:',
@@ -76,9 +76,9 @@ $\\cos^2 x = 1 - x^2 + x^4/3 - \\cdots$
           },
           {
             question: 'To find the series for $\\frac{x}{1+x^3}$, start with:',
-            options: ['$1/(1-u) = \\sum u^n$ with $u = -x^3$, then multiply by $x$', '$e^x$ series with substitution', '$\\sin x / x$ series', 'Partial fractions'],
+            options: ['The geometric series with $u = -x^3$, then multiply by $x$', 'The geometric series with $u = x^3$, then multiply by $x$', 'The $e^x$ series with $-x^3$ substituted for $x$', 'The $\\ln(1+x)$ series with $x^3$ substituted for $x$'],
             correctAnswer: 0,
-            explanation: '$1/(1+x^3) = 1/(1-(-x^3)) = \\sum (-x^3)^n = \\sum (-1)^n x^{3n}$. Multiply by $x$: $\\sum (-1)^n x^{3n+1}$.'
+            explanation: '$1/(1+x^3) = 1/(1-(-x^3)) = \\sum (-x^3)^n = \\sum (-1)^n x^{3n}$. Multiply by $x$: $\\sum (-1)^n x^{3n+1}$. Using $u = x^3$ drops the sign (that is $x/(1-x^3)$), and $1/(1+u)$ is the geometric series, not the $e^u$ or $\\ln(1+u)$ series.'
           }
         ]
       }
@@ -91,15 +91,15 @@ $\\cos^2 x = 1 - x^2 + x^4/3 - \\cdots$
         dropdowns: [
           {
             label: 'The Maclaurin series for $\\sinh x = (e^x - e^{-x})/2$ is:',
-            options: ['$\\sum_{n=0}^\\infty \\frac{x^{2n+1}}{(2n+1)!}$ (odd terms of $e^x$)', '$\\sum x^n/(2 \\cdot n!)$', '$\\sum (-1)^n x^{2n+1}/(2n+1)!$', '$\\sum x^{2n}/(2n)!$'],
-            correctAnswers: ['$\\sum_{n=0}^\\infty \\frac{x^{2n+1}}{(2n+1)!}$ (odd terms of $e^x$)'],
+            options: ['$\\sum_{n=0}^\\infty \\frac{x^{2n+1}}{(2n+1)!}$', '$\\sum_{n=0}^\\infty \\frac{x^{n}}{2 \\cdot n!}$', '$\\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$', '$\\sum_{n=0}^\\infty \\frac{x^{2n}}{(2n)!}$'],
+            correctAnswers: ['$\\sum_{n=0}^\\infty \\frac{x^{2n+1}}{(2n+1)!}$'],
             hints: ['$e^x - e^{-x}$ cancels even terms and doubles odd terms.'],
             explanation: '$e^x = \\sum x^n/n!$, $e^{-x} = \\sum (-1)^n x^n/n!$. Subtract: even terms cancel, odd terms double. $(e^x - e^{-x})/2 = \\sum x^{2n+1}/(2n+1)!$.'
           },
           {
             label: 'The coefficient of $x^5$ in the Maclaurin series of $x^2 \\cos x$ is:',
-            options: ['$0$ (cos has no $x^3$ term to multiply by $x^2$)', '$1/120$', '$-1/6$', '$1/24$'],
-            correctAnswers: ['$0$ (cos has no $x^3$ term to multiply by $x^2$)'],
+            options: ['$0$', '$1/120$', '$-1/6$', '$1/24$'],
+            correctAnswers: ['$0$'],
             hints: ['$x^2 \\cos x = x^2(1 - x^2/2 + x^4/24 - \\cdots)$. The $x^5$ term needs an $x^3$ from cos.'],
             explanation: '$\\cos x$ has only even powers: $1, x^2, x^4, \\ldots$ Multiplying by $x^2$ gives even powers $x^2, x^4, x^6, \\ldots$ No $x^5$ term!'
           }
@@ -112,10 +112,10 @@ $\\cos^2 x = 1 - x^2 + x^4/3 - \\cdots$
       content: '**Quick Coefficient**',
       exercise: {
         question: 'What is the coefficient of $x^4$ in the Maclaurin series for $\\cos(x) - 1 + x^2/2$?',
-        correctAnswer: '-1/24',
-        acceptableAnswers: ['-1/24'],
-        hints: ['$\\cos x = 1 - x^2/2 + x^4/24 - \\cdots$. So $\\cos x - 1 + x^2/2 = x^4/24 - \\cdots$. Wait, check the sign.'],
-        explanation: '$\\cos x - 1 + x^2/2 = (1 - x^2/2 + x^4/24 - \\cdots) - 1 + x^2/2 = x^4/24 - x^6/720 + \\cdots$. Coefficient of $x^4$ is $1/24$. Hmm, but the $x^4$ term of $\\cos x$ is $+x^4/24$, so the answer is $1/24$. Wait: $\\cos x$ has $(-1)^2 x^4 / 4! = x^4/24$. Yes, coefficient is $1/24$.'
+        correctAnswer: '1/24',
+        acceptableAnswers: ['1/24', '0.0417'],
+        hints: ['$\\cos x = 1 - x^2/2 + x^4/24 - \\cdots$. So $\\cos x - 1 + x^2/2 = x^4/24 - \\cdots$.'],
+        explanation: '$\\cos x - 1 + x^2/2 = (1 - x^2/2 + x^4/24 - \\cdots) - 1 + x^2/2 = x^4/24 - x^6/720 + \\cdots$. The $x^4$ term of $\\cos x$ is $(-1)^2 x^4/4! = +x^4/24$, so the coefficient is $1/24$.'
       }
     },
     {

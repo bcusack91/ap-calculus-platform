@@ -70,13 +70,13 @@ So **10 terms** give accuracy within $0.01$.
           },
           {
             question: 'How many terms of $\\sum (-1)^{n+1}/n$ are needed for error $< 0.001$?',
-            options: ['1000', '100', '10', '500'],
+            options: ['1000', '999', '1001', '100'],
             correctAnswer: 0,
-            explanation: 'Need $1/(N+1) < 0.001$, so $N+1 > 1000$, meaning $N \\ge 1000$. The harmonic series converges slowly!'
+            explanation: 'Need $1/(N+1) < 0.001$, so $N+1 > 1000$, meaning $N \\ge 1000$. Using $\\le$ instead of $<$ gives $999$; bounding by the last included term $1/N$ instead of the first omitted term $1/(N+1)$ gives $1001$. The alternating harmonic series converges slowly!'
           },
           {
             question: 'The alternating series error bound guarantees the error is at most the absolute value of:',
-            options: ['The first omitted term', 'The last included term', 'The sum of all remaining terms', 'Twice the first omitted term'],
+            options: ['The first omitted term', 'The last term included in the sum', 'The sum of all remaining terms', 'Twice the first omitted term'],
             correctAnswer: 0,
             explanation: '$|S - S_N| \\le b_{N+1}$ = the first term NOT included in the partial sum.'
           }
@@ -91,10 +91,10 @@ So **10 terms** give accuracy within $0.01$.
         dropdowns: [
           {
             label: 'For $\\sum_{n=0}^\\infty \\frac{(-1)^n}{(2n+1)!}$ (related to $\\sin 1$), error using terms through $n=2$ is at most:',
-            options: ['$1/5! = 1/120$', '$1/7! = 1/5040$', '$1/3! = 1/6$', '$1/4! = 1/24$'],
-            correctAnswers: ['$1/5! = 1/120$'],
-            hints: ['Terms through $n=2$ means we include $n=0,1,2$. The next term is $n=3$: $1/(2(3)+1)! = 1/7!$. Wait — recount carefully.'],
-            explanation: 'Terms for $n=0,1,2$: $1/1! - 1/3! + 1/5!$. The first omitted term is $n=3$: $1/7! = 1/5040$. Error $\\le 1/5040$. Actually, the next omitted term has $b_3 = 1/(2\\cdot3+1)! = 1/7!$. So the answer is $1/5040$, not $1/120$.'
+            options: ['$1/7! = 1/5040$', '$1/5! = 1/120$', '$1/3! = 1/6$', '$1/9! = 1/362880$'],
+            correctAnswers: ['$1/7! = 1/5040$'],
+            hints: ['Terms through $n=2$ means we include $n=0,1,2$. The next term is $n=3$: $1/(2(3)+1)! = 1/7!$.'],
+            explanation: 'Terms for $n=0,1,2$: $1/1! - 1/3! + 1/5!$. The first omitted term is $n=3$: $b_3 = 1/(2\\cdot3+1)! = 1/7! = 1/5040$. Error $\\le 1/5040$. ($1/5! = 1/120$ is the last included term, not the first omitted one.)'
           },
           {
             label: 'If $S_5 = 0.9$, $b_6 = 0.02$, and $S_5$ is an overestimate, then $S$ is between:',

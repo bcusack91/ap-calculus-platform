@@ -74,13 +74,13 @@ But it may oscillate around unstable equilibria if $\\Delta x$ is too large.`
         questions: [
           {
             question: 'A slope field shows all slopes are positive in a region and getting steeper as $y$ increases. Starting Euler in this region, $y$-values will:',
-            options: ['Increase with growing step sizes ($\\Delta y$ gets larger)', 'Increase with constant step sizes', 'Decrease', 'Level off'],
+            options: ['Increase, with each $\\Delta y$ larger than the last', 'Increase, with each $\\Delta y$ equal to the last', 'Increase, with each $\\Delta y$ less than the last', 'Decrease, with each $\\Delta y$ more negative'],
             correctAnswer: 0,
             explanation: 'Positive slopes → $y$ increases. Getting steeper → each $\\Delta y = f \\cdot \\Delta x$ is larger than the last.'
           },
           {
             question: 'If slopes on a slope field are zero along the line $y = 3$, what happens when Euler reaches $y \\approx 3$?',
-            options: ['$\\Delta y \\approx 0$; the approximation nearly stops changing', 'The method diverges', '$y$ jumps past 3', 'The method is undefined'],
+            options: ['$\\Delta y \\approx 0$, so the values level off near $y = 3$', '$\\Delta y$ grows, so the values jump past $y = 3$ and diverge', '$f$ is undefined on $y = 3$, so the method cannot continue', '$\\Delta y$ changes sign each step, so the values oscillate about $y = 3$'],
             correctAnswer: 0,
             explanation: '$f \\approx 0$ means $\\Delta y = f \\cdot \\Delta x \\approx 0$. Euler flattens out near $y = 3$.'
           }
@@ -95,14 +95,14 @@ But it may oscillate around unstable equilibria if $\\Delta x$ is too large.`
         dropdowns: [
           {
             label: 'Along the line $y = x$, all slopes equal:',
-            options: ['$0$ (horizontal segments)', '$1$', '$-1$', '$x$'],
+            options: ['$0$ (horizontal segments)', '$1$ (segments parallel to $y = x$)', '$-1$ (perpendicular to $y = x$)', '$x$ (varies along the line)'],
             correctAnswers: ['$0$ (horizontal segments)'],
             hints: ['$f(x, y) = x - y$. On $y = x$: $f = x - x = 0$.'],
             explanation: '$f = x - x = 0$ on the isocline $y = x$. All segments are horizontal.'
           },
           {
             label: 'Starting Euler at $(0, 2)$: $f(0, 2) = -2$. The solution is initially:',
-            options: ['Decreasing toward the line $y = x$', 'Increasing', 'Constant', 'Undefined'],
+            options: ['Decreasing toward the line $y = x$', 'Increasing toward the line $y = x$', 'Decreasing away from the line $y = x$', 'Constant along the line $y = 2$'],
             correctAnswers: ['Decreasing toward the line $y = x$'],
             hints: ['Negative slope → decreasing. The isocline $y = x$ is an attractor.'],
             explanation: 'Slope is $-2$ → decreasing. Solution curves approach $y = x - 1$ as $x \\to \\infty$.'

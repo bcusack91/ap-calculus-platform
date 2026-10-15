@@ -79,9 +79,9 @@ Each part is typically worth 2-3 points. Justification language matters — use 
           },
           {
             question: 'If $f(x) = \\sum a_n x^n$ and you need $\\int_0^{1/2} f(x)\\,dx$, you should:',
-            options: ['Integrate term by term: $\\sum a_n (1/2)^{n+1}/(n+1)$', 'Find an antiderivative and evaluate', 'Use numerical integration', 'This cannot be computed from the series'],
+            options: ['Integrate term by term: $\\sum a_n (1/2)^{n+1}/(n+1)$', 'Find an antiderivative of $f$ and evaluate', 'Use numerical integration', 'Evaluate $f(1/2)$ and multiply by $1/2$'],
             correctAnswer: 0,
-            explanation: '$\\int_0^{1/2} \\sum a_n x^n\\,dx = \\sum a_n \\int_0^{1/2} x^n\\,dx = \\sum a_n \\frac{(1/2)^{n+1}}{n+1}$.'
+            explanation: '$\\int_0^{1/2} \\sum a_n x^n\\,dx = \\sum a_n \\int_0^{1/2} x^n\\,dx = \\sum a_n \\frac{(1/2)^{n+1}}{n+1}$. A closed-form antiderivative may not exist, and $\\frac{1}{2} f(1/2)$ is only a one-rectangle estimate.'
           }
         ]
       }
@@ -101,10 +101,10 @@ Each part is typically worth 2-3 points. Justification language matters — use 
           },
           {
             label: 'To show error $< 1/100$ for $\\sin(1/2) \\approx T_5(1/2)$, the easiest approach is:',
-            options: ['AST: error $\\le (1/2)^7/7! = 1/645120 < 1/100$ ✓', 'Lagrange with $M = 1$', 'Compute $T_7$ and compare', 'Use a calculator'],
-            correctAnswers: ['AST: error $\\le (1/2)^7/7! = 1/645120 < 1/100$ ✓'],
+            options: ['AST: error $\\le (1/2)^7/7!$', 'Compute $T_7$ and compare with $T_5$', 'Evaluate $\\sin(1/2)$ on a calculator', 'Use the Ratio Test on the sine series'],
+            correctAnswers: ['AST: error $\\le (1/2)^7/7!$'],
             hints: ['$\\sin x$ series alternates for $x > 0$.'],
-            explanation: 'The sine series alternates, so AST error bound applies: $|R| \\le |(1/2)^7/7!| = 1/645120 \\ll 1/100$.'
+            explanation: 'The sine series alternates, so the AST error bound applies: $|R| \\le (1/2)^7/7! = 1/645120 \\ll 1/100$. (Lagrange with $M = 1$ also works.) Comparing $T_7$ with $T_5$ or using a calculator value is not a justified bound, and the Ratio Test only shows convergence.'
           }
         ]
       }
@@ -115,10 +115,10 @@ Each part is typically worth 2-3 points. Justification language matters — use 
       content: '**FRQ Practice**',
       exercise: {
         question: 'Using the Maclaurin series, approximate $\\int_0^{1} \\frac{\\sin x}{x}\\,dx$ with terms through $x^4$. Write the answer as a fraction. (Hint: $\\sin x/x = 1 - x^2/6 + x^4/120 - \\cdots$)',
-        correctAnswer: '4121/4200',
-        acceptableAnswers: ['4121/4200', '0.981'],
+        correctAnswer: '1703/1800',
+        acceptableAnswers: ['1703/1800', '0.946', '0.9461'],
         hints: ['$\\int_0^1 (1 - x^2/6 + x^4/120)\\,dx = 1 - 1/18 + 1/600$.'],
-        explanation: '$\\int_0^1 (1 - x^2/6 + x^4/120)\\,dx = [x - x^3/18 + x^5/600]_0^1 = 1 - 1/18 + 1/600$. LCD = 1800: $1800/1800 - 100/1800 + 3/1800 = 1703/1800$. Hmm, let me recompute: $1 - 1/18 + 1/600 = 600/600 - 33.33/600 + 1/600$. Better: LCD of 18, 600 = 1800. $1 = 1800/1800$, $1/18 = 100/1800$, $1/600 = 3/1800$. Total: $(1800 - 100 + 3)/1800 = 1703/1800$.'
+        explanation: '$\\int_0^1 (1 - x^2/6 + x^4/120)\\,dx = [x - x^3/18 + x^5/600]_0^1 = 1 - 1/18 + 1/600$. With LCD $1800$: $1 = 1800/1800$, $1/18 = 100/1800$, $1/600 = 3/1800$. Total: $(1800 - 100 + 3)/1800 = 1703/1800 \\approx 0.946$.'
       }
     },
     {

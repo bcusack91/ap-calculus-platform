@@ -32,9 +32,9 @@ export const calcbcSeriesAppsPart7Data = {
           },
           {
             question: 'To find $\\int_0^{0.5} \\frac{\\sin x}{x}\\,dx$ accurately to within $10^{-4}$, you need the series because:',
-            options: ['$\\sin x / x$ has no elementary antiderivative', '$\\sin x / x$ is undefined at $x = 0$', 'The integral diverges', 'The function is periodic'],
+            options: ['$\\sin x / x$ has no elementary antiderivative', '$\\sin x / x$ is undefined at $x = 0$', 'The integral diverges near $x = 0$', 'The function is periodic on $[0, 0.5]$'],
             correctAnswer: 0,
-            explanation: '$\\sin x / x$ has no closed-form antiderivative. Series gives $\\int (1 - x^2/6 + x^4/120 - \\cdots)\\,dx$, which is easy to evaluate term by term.'
+            explanation: '$\\sin x / x$ has no closed-form antiderivative. Series gives $\\int (1 - x^2/6 + x^4/120 - \\cdots)\\,dx$, which is easy to evaluate term by term. The integrand approaches $1$ at $0$, so the integral converges, and $\\sin x/x$ is not periodic.'
           },
           {
             question: '$\\lim_{x\\to 0} \\frac{\\tan x - x}{x^3}$ by series expansion:',
@@ -66,17 +66,17 @@ export const calcbcSeriesAppsPart7Data = {
           },
           {
             label: '$\\int_0^1 e^{-x^2}\\,dx$ using the first three terms:',
-            options: ['$1 - 1/3 + 1/10 = 23/30$', '$1 + 1/3 + 1/10$', '$1 - 1/2 + 1/6$', '$1/2 - 1/6 + 1/40$'],
+            options: ['$1 - 1/3 + 1/10 = 23/30$', '$1 + 1/3 + 1/10 = 43/30$', '$1 - 1/2 + 1/6 = 2/3$', '$1/2 - 1/6 + 1/40 = 43/120$'],
             correctAnswers: ['$1 - 1/3 + 1/10 = 23/30$'],
             hints: ['$\\int_0^1(1 - x^2 + x^4/2)\\,dx = [x - x^3/3 + x^5/10]_0^1$.'],
             explanation: '$1 - 1/3 + 1/10 = 30/30 - 10/30 + 3/30 = 23/30 \\approx 0.767$. (Actual: $\\approx 0.7468$.)'
           },
           {
             label: 'The error in the above approximation is bounded by:',
-            options: ['$1/42$ (next term: $\\int_0^1 x^6/6\\,dx = 1/42$)', '$1/6$', '$1/720$', 'Cannot be bounded by AST'],
-            correctAnswers: ['$1/42$ (next term: $\\int_0^1 x^6/6\\,dx = 1/42$)'],
+            options: ['$1/42$', '$1/6$', '$1/10$', '$1/720$'],
+            correctAnswers: ['$1/42$'],
             hints: ['The integrated series is alternating. The error ≤ |first omitted term|.'],
-            explanation: 'The next term: $\\int_0^1 (-x^6/6)\\,dx = -1/42$. By AST, error $< 1/42 \\approx 0.024$.'
+            explanation: 'The next term is $-x^6/6$, and $\\int_0^1 (-x^6/6)\\,dx = -1/42$. By AST, error $< 1/42 \\approx 0.024$. ($1/6$ is the unintegrated coefficient, $1/10$ is the last included term, and $1/720$ uses $6!$ where the series has $3! = 6$.)'
           }
         ]
       }

@@ -29,21 +29,21 @@ $$\\boxed{y_{n+1} = y_n + f(x_n, y_n) \\cdot \\Delta x}$$`
         questions: [
           {
             question: '$dy/dx = y(1-y)$, $y(0) = 0.5$, $\\Delta x = 0.2$. $y(0.2) =$',
-            options: ['$0.5 + 0.25(0.2) = 0.55$', '$0.5 + 0.5(0.2) = 0.6$', '$0.5 + 0.25 = 0.75$', '$0.55 + 0.25(0.2) = 0.6$'],
+            options: ['$0.5 + 0.25(0.2) = 0.55$', '$0.5 + 0.5(0.2) = 0.6$', '$0.5 + 0.25 = 0.75$', '$0.5 + 0.75(0.2) = 0.65$'],
             correctAnswer: 0,
-            explanation: '$f(0, 0.5) = 0.5(1-0.5) = 0.25$. $y(0.2) = 0.5 + 0.25(0.2) = 0.55$.'
+            explanation: '$f(0, 0.5) = 0.5(1-0.5) = 0.25$. $y(0.2) = 0.5 + 0.25(0.2) = 0.55$. Using $y$ itself as the slope gives 0.6, dropping $\\Delta x$ gives 0.75, and $y(1 + y)$ gives 0.65.'
           },
           {
             question: 'For $dy/dx = -y^2$, $y(0) = 1$, the solution $y = 1/(1+x)$ is concave up ($y\'\' = 2/(1+x)^3 > 0$). Euler:',
-            options: ['Underestimates $y$ on $[0, \\infty)$', 'Overestimates $y$', 'Is exact', 'Alternates over/under'],
+            options: ['Underestimates $y$ on $[0, \\infty)$', 'Overestimates $y$ on $[0, \\infty)$', 'Is exact, since $y = 1/(1+x)$ is known', 'Alternates over and under each step'],
             correctAnswer: 0,
             explanation: 'Concave up → tangent line is below the curve → Euler gives values below the true solution.'
           },
           {
             question: '$dy/dx = \\sqrt{x+y}$, $y(0) = 1$, $\\Delta x = 0.1$. $y(0.1) =$',
-            options: ['$1 + 1(0.1) = 1.1$', '$1 + \\sqrt{0.1}(0.1) = 1.032$', '$1 + 0.1 = 1.1$', '$\\sqrt{1}(0.1) = 0.1$'],
+            options: ['$1 + 1(0.1) = 1.1$', '$1 + \\sqrt{0.1}(0.1) = 1.032$', '$1 + \\sqrt{1.1}(0.1) \\approx 1.105$', '$\\sqrt{1}(0.1) = 0.1$'],
             correctAnswer: 0,
-            explanation: '$f(0, 1) = \\sqrt{0 + 1} = 1$. $y(0.1) = 1 + 1(0.1) = 1.1$.'
+            explanation: '$f(0, 1) = \\sqrt{0 + 1} = 1$. $y(0.1) = 1 + 1(0.1) = 1.1$. Using $\\sqrt{0.1}$ drops $y$, using $\\sqrt{1.1}$ evaluates the slope at the end of the step, and $\\sqrt{1}(0.1)$ forgets $y_0$.'
           }
         ]
       }
@@ -62,7 +62,7 @@ $$\\boxed{y_{n+1} = y_n + f(x_n, y_n) \\cdot \\Delta x}$$`
           },
           {
             question: 'Euler\'s method uses the slope at the beginning of each step. Improved Euler (Heun\'s method) uses:',
-            options: ['The average of slopes at the beginning and predicted end', 'The slope at the end of each step', 'The slope at the midpoint', 'A weighted average of three slopes'],
+            options: ['The average of slopes at the beginning and predicted end', 'The slope at the predicted end of each step', 'The slope at the midpoint of each step', 'A weighted average of four slopes per step'],
             correctAnswer: 0,
             explanation: 'Heun\'s method: predict $y^*$ using Euler, then average the slopes at $(x_n, y_n)$ and $(x_{n+1}, y^*)$. (Beyond AP scope, but good to know.)'
           }
@@ -77,14 +77,14 @@ $$\\boxed{y_{n+1} = y_n + f(x_n, y_n) \\cdot \\Delta x}$$`
         dropdowns: [
           {
             label: 'Step 1: $f(1, 2) = 1 - 2/1 = -1$. $y(1.5) =$',
-            options: ['$2 + (-1)(0.5) = 1.5$', '$2 + (-1) = 1$', '$2 - 0.5 = 1.5$', '$2 + 1(0.5) = 2.5$'],
+            options: ['$2 + (-1)(0.5) = 1.5$', '$2 + (-1) = 1$', '$2 + 0.5(0.5) = 2.25$', '$2 + 1(0.5) = 2.5$'],
             correctAnswers: ['$2 + (-1)(0.5) = 1.5$'],
             hints: ['$y(1.5) = 2 + (-1)(0.5)$.'],
             explanation: '$y(1.5) = 2 - 0.5 = 1.5$.'
           },
           {
             label: 'Step 2: $f(1.5, 1.5) = 1 - 1.5/1.5 = 0$. $y(2) =$',
-            options: ['$1.5 + 0(0.5) = 1.5$', '$1.5 + 0.5 = 2$', '$1.5 - 0.5 = 1$', '$0$'],
+            options: ['$1.5 + 0(0.5) = 1.5$', '$1.5 + (-1)(0.5) = 1$', '$1.5 + 1(0.5) = 2$', '$0 + 0(0.5) = 0$'],
             correctAnswers: ['$1.5 + 0(0.5) = 1.5$'],
             hints: ['$\\Delta y = 0 \\cdot 0.5 = 0$. $y$ stays at $1.5$.'],
             explanation: 'Slope is 0 at $(1.5, 1.5)$, so $y(2) = 1.5$.'

@@ -48,9 +48,9 @@ $$\\boxed{\\text{Power series = the bridge between algebra and analysis on the A
           },
           {
             question: 'The power series for $\\frac{1}{3+x}$ centered at $0$ is:',
-            options: ['$\\sum_{n=0}^\\infty \\frac{(-1)^n x^n}{3^{n+1}}$', '$\\sum x^n/3^n$', '$\\sum (-1)^n x^n$', '$\\sum 3^n x^n$'],
+            options: ['$\\sum_{n=0}^\\infty \\frac{(-1)^n x^n}{3^{n+1}}$', '$\\sum_{n=0}^\\infty \\frac{(-1)^n x^n}{3^{n}}$', '$\\sum_{n=0}^\\infty \\frac{x^n}{3^{n+1}}$', '$\\sum_{n=0}^\\infty (-1)^n 3^n x^n$'],
             correctAnswer: 0,
-            explanation: '$\\frac{1}{3+x} = \\frac{1}{3} \\cdot \\frac{1}{1+x/3} = \\frac{1}{3}\\sum(-x/3)^n = \\sum \\frac{(-1)^n x^n}{3^{n+1}}$.'
+            explanation: '$\\frac{1}{3+x} = \\frac{1}{3} \\cdot \\frac{1}{1+x/3} = \\frac{1}{3}\\sum(-x/3)^n = \\sum \\frac{(-1)^n x^n}{3^{n+1}}$. Dropping the leading $\\frac{1}{3}$ gives $\\frac{3}{3+x}$; losing the sign gives $\\frac{1}{3-x}$; and $\\sum (-1)^n 3^n x^n$ is the series for $\\frac{1}{1+3x}$, not $\\frac{1}{3+x}$.'
           }
         ]
       }
@@ -63,17 +63,17 @@ $$\\boxed{\\text{Power series = the bridge between algebra and analysis on the A
         dropdowns: [
           {
             label: 'The Maclaurin series for $\\frac{1}{(1-x)^3}$ is found by:',
-            options: ['Differentiating $1/(1-x)$ twice and dividing by $2$', 'Cubing the geometric series', 'Integrating $1/(1-x)^2$ three times', 'Substitution into $e^x$'],
-            correctAnswers: ['Differentiating $1/(1-x)$ twice and dividing by $2$'],
+            options: ['Differentiating $1/(1-x)$ twice, then halving', 'Cubing the geometric series term by term', 'Integrating $1/(1-x)^2$ and dividing by $2$', 'Differentiating $1/(1-x)$ twice, with no division'],
+            correctAnswers: ['Differentiating $1/(1-x)$ twice, then halving'],
             hints: ['$d/dx[1/(1-x)] = 1/(1-x)^2$, $d^2/dx^2[1/(1-x)] = 2/(1-x)^3$.'],
             explanation: '$\\sum x^n \\to \\sum nx^{n-1} = 1/(1-x)^2 \\to \\sum n(n-1)x^{n-2} = 2/(1-x)^3$. So $1/(1-x)^3 = \\frac{1}{2}\\sum_{n=2}^\\infty n(n-1)x^{n-2}$.'
           },
           {
             label: 'Term-by-term integration can change endpoint convergence because:',
-            options: ['Integration adds a factor of $1/(n+1)$, which may make a divergent endpoint converge', 'The radius changes', 'Integration reverses the sign', 'It cannot change endpoint behavior'],
-            correctAnswers: ['Integration adds a factor of $1/(n+1)$, which may make a divergent endpoint converge'],
-            hints: ['Compare $\\sum x^n$ (no convergence at $x=1$) with $\\sum x^{n+1}/(n+1)$ (converges at... wait, does it?).'],
-            explanation: 'Example: $\\sum x^n$ has IOC $(-1,1)$. Its integral $\\sum x^{n+1}/(n+1)$ has IOC $(-1,1]$ — the extra $1/(n+1)$ factor makes $x=1$ work (alternating-like test at $x=-1$ already worked).'
+            options: ['The new $1/(n+1)$ factor can make an endpoint converge', 'Integration changes the radius of convergence as well', 'Integration reverses the sign of every term', 'It cannot — integrated series keep the same endpoints'],
+            correctAnswers: ['The new $1/(n+1)$ factor can make an endpoint converge'],
+            hints: ['Compare $\\sum x^n$ (no convergence at $x=1$) with $\\sum x^{n+1}/(n+1)$ (check both endpoints).'],
+            explanation: 'Example: $\\sum x^n$ has IOC $(-1,1)$. Its integral $\\sum x^{n+1}/(n+1)$ has IOC $[-1,1)$: the extra $1/(n+1)$ factor makes $x=-1$ converge (an alternating harmonic series), while $x = 1$ still gives the divergent $\\sum 1/(n+1)$.'
           }
         ]
       }

@@ -30,9 +30,9 @@ Work through these problems as if under exam conditions. Target 2–3 minutes pe
           },
           {
             question: 'If $\\vec{r}(t) = \\langle t^2, \\ln t \\rangle$ for $t > 0$, the speed at $t = 1$ is:',
-            options: ['$\\sqrt{5}$', '$\\sqrt{4}$', '$\\sqrt{2}$', '$1$'],
+            options: ['$\\sqrt{5}$', '$\\sqrt{3}$', '$5$', '$1$'],
             correctAnswer: 0,
-            explanation: '$\\vec{v}(t) = \\langle 2t, 1/t \\rangle$. At $t = 1$: $\\vec{v}(1) = \\langle 2, 1 \\rangle$. Speed $= \\sqrt{4 + 1} = \\sqrt{5}$.'
+            explanation: '$\\vec{v}(t) = \\langle 2t, 1/t \\rangle$. At $t = 1$: $\\vec{v}(1) = \\langle 2, 1 \\rangle$. Speed $= \\sqrt{2^2 + 1^2} = \\sqrt{5}$. Not squaring the components gives $\\sqrt{3}$, forgetting the square root gives $5$, and using the position $\\langle 1, 0 \\rangle$ instead of the velocity gives $1$.'
           },
           {
             question: '$\\lim_{n\\to\\infty} \\left(1 + \\frac{3}{n}\\right)^n =$',

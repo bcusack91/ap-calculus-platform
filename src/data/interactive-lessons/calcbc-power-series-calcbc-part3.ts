@@ -74,15 +74,15 @@ Then integrate: $\\arctan x = \\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+1}}{2n+1}$
           },
           {
             question: 'Starting from $1/(1-x) = \\sum x^n$, find the series for $1/(1-x)^2$:',
-            options: ['$\\sum_{n=1}^\\infty n x^{n-1}$ (differentiate)', '$\\sum n^2 x^n$', '$\\sum x^{2n}$', '$\\sum x^n / n$'],
+            options: ['$\\sum_{n=1}^\\infty n x^{n-1}$', '$\\sum_{n=1}^\\infty n x^{n}$', '$\\sum_{n=0}^\\infty x^{2n}$', '$\\sum_{n=0}^\\infty \\frac{x^{n+1}}{n+1}$'],
             correctAnswer: 0,
-            explanation: '$d/dx[1/(1-x)] = 1/(1-x)^2$. Differentiating the series: $\\sum_{n=1}^\\infty n x^{n-1}$.'
+            explanation: '$d/dx[1/(1-x)] = 1/(1-x)^2$. Differentiating the series: $\\sum_{n=1}^\\infty n x^{n-1}$. Keeping the power at $x^n$ gives $x/(1-x)^2$; squaring each term gives $1/(1-x^2)$; integrating instead of differentiating gives $-\\ln(1-x)$.'
           },
           {
             question: 'The power series for $e^{-x^2}$ can be found by:',
-            options: ['Substituting $-x^2$ for $x$ in $e^x = \\sum x^n/n!$', 'Differentiating $e^x$', 'Integrating $e^x$', 'Using partial fractions'],
+            options: ['Substituting $-x^2$ for $x$ in the $e^x$ series', 'Squaring the series for $e^{-x}$ one term at a time', 'Substituting $x^2$ for $x$, then negating every term', 'Multiplying the $e^{-x}$ series by the $e^{x}$ series'],
             correctAnswer: 0,
-            explanation: '$e^u = \\sum u^n/n!$. Set $u = -x^2$: $e^{-x^2} = \\sum (-x^2)^n/n! = \\sum (-1)^n x^{2n}/n!$.'
+            explanation: '$e^u = \\sum u^n/n!$. Set $u = -x^2$: $e^{-x^2} = \\sum (-x^2)^n/n! = \\sum (-1)^n x^{2n}/n!$. Squaring the $e^{-x}$ series term by term is not how products of series work (and $(e^{-x})^2 = e^{-2x}$ anyway); negating the $e^{x^2}$ series gives $-e^{x^2}$; and $e^{-x} \\cdot e^x = 1$.'
           }
         ]
       }
@@ -95,17 +95,17 @@ Then integrate: $\\arctan x = \\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+1}}{2n+1}$
         dropdowns: [
           {
             label: 'To find the series for $x/(1+x)^2$, start with $1/(1+x) = \\sum (-1)^n x^n$ and:',
-            options: ['Differentiate to get $-1/(1+x)^2 = \\sum (-1)^n n x^{n-1}$, then multiply by $-x$', 'Integrate twice', 'Square the series', 'Use substitution $x \\to -x$'],
-            correctAnswers: ['Differentiate to get $-1/(1+x)^2 = \\sum (-1)^n n x^{n-1}$, then multiply by $-x$'],
+            options: ['Differentiate, then multiply by $-x$', 'Integrate the series, then multiply by $x$', 'Square the series term by term', 'Differentiate, then divide by $x$'],
+            correctAnswers: ['Differentiate, then multiply by $-x$'],
             hints: ['$d/dx[1/(1+x)] = -1/(1+x)^2$.'],
             explanation: 'Differentiate: $-1/(1+x)^2 = \\sum_{n=1}^\\infty (-1)^n n x^{n-1}$. Multiply by $-x$: $x/(1+x)^2 = \\sum_{n=1}^\\infty (-1)^{n+1} n x^n$.'
           },
           {
             label: '$\\int_0^x \\frac{\\sin t}{t}\\,dt$ has no elementary antiderivative. Using $\\sin t = \\sum (-1)^n t^{2n+1}/(2n+1)!$, the series is:',
-            options: ['$\\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+1}}{(2n+1)(2n+1)!}$', '$\\sum (-1)^n x^{2n}/(2n)!$', '$\\sum (-1)^n x^n/n$', 'Cannot be expressed as a series'],
+            options: ['$\\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+1}}{(2n+1)(2n+1)!}$', '$\\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$', '$\\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+2}}{(2n+2)(2n+1)!}$', 'Cannot be expressed as a series'],
             correctAnswers: ['$\\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+1}}{(2n+1)(2n+1)!}$'],
             hints: ['$\\sin t / t = \\sum (-1)^n t^{2n}/(2n+1)!$. Integrate from $0$ to $x$.'],
-            explanation: '$\\sin t/t = \\sum (-1)^n t^{2n}/(2n+1)!$. Integrate: $\\int_0^x = \\sum (-1)^n x^{2n+1}/((2n+1)(2n+1)!)$.'
+            explanation: '$\\sin t/t = \\sum (-1)^n t^{2n}/(2n+1)!$. Integrate: $\\int_0^x = \\sum (-1)^n x^{2n+1}/((2n+1)(2n+1)!)$. Forgetting the new factor $1/(2n+1)$ just gives back $\\sin x$; integrating $\\sin t$ instead of $\\sin t/t$ gives the $x^{2n+2}$ series.'
           }
         ]
       }

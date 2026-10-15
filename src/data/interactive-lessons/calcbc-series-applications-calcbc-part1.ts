@@ -60,15 +60,15 @@ $$= 1 - x^2 + \\frac{x^4}{2} - \\frac{x^6}{6} + \\cdots$$
         questions: [
           {
             question: 'The Maclaurin series for $\\cos(2x)$ is obtained by:',
-            options: ['Substituting $2x$ for $x$ in the $\\cos x$ series', 'Multiplying the $\\cos x$ series by 2', 'Differentiating the $\\sin(2x)$ series', 'Using the formula for $\\cos x$ and doubling each term'],
+            options: ['Substituting $2x$ for $x$ in the $\\cos x$ series', 'Multiplying every term of the $\\cos x$ series by 2', 'Differentiating the $\\sin(2x)$ series term by term', 'Squaring the $\\cos x$ series and then doubling it'],
             correctAnswer: 0,
-            explanation: '$\\cos(2x) = \\sum (-1)^n (2x)^{2n}/(2n)! = \\sum (-1)^n 4^n x^{2n}/(2n)!$.'
+            explanation: '$\\cos(2x) = \\sum (-1)^n (2x)^{2n}/(2n)! = \\sum (-1)^n 4^n x^{2n}/(2n)!$. Multiplying by 2 gives $2\\cos x$; differentiating the $\\sin(2x)$ series gives $2\\cos(2x)$ (chain rule); and $2\\cos^2 x = 1 + \\cos(2x)$.'
           },
           {
             question: 'The first three nonzero terms of $\\sin(x^2)$ are:',
-            options: ['$x^2 - \\frac{x^6}{6} + \\frac{x^{10}}{120}$', '$x - \\frac{x^3}{6} + \\frac{x^5}{120}$', '$x^2 - \\frac{x^4}{6} + \\frac{x^6}{120}$', '$x^4 - \\frac{x^8}{6} + \\frac{x^{12}}{120}$'],
+            options: ['$x^2 - \\frac{x^6}{6} + \\frac{x^{10}}{120}$', '$x - \\frac{x^3}{6} + \\frac{x^5}{120}$', '$x^2 - \\frac{x^4}{6} + \\frac{x^6}{120}$', '$x^2 - \\frac{x^6}{3} + \\frac{x^{10}}{5}$'],
             correctAnswer: 0,
-            explanation: 'Replace $x$ with $x^2$ in $\\sin x = x - x^3/6 + x^5/120 - \\cdots$: $x^2 - x^6/6 + x^{10}/120$.'
+            explanation: 'Replace $x$ with $x^2$ in $\\sin x = x - x^3/6 + x^5/120 - \\cdots$: $x^2 - x^6/6 + x^{10}/120$. Each power of $x$ doubles, but the factorial denominators $3! = 6$ and $5! = 120$ do not change.'
           },
           {
             question: 'The geometric series $\\frac{1}{1-x} = \\sum x^n$ converges for:',
@@ -87,17 +87,17 @@ $$= 1 - x^2 + \\frac{x^4}{2} - \\frac{x^6}{6} + \\cdots$$
         dropdowns: [
           {
             label: 'The series for $\\frac{1}{1+x}$ is obtained from $\\frac{1}{1-x}$ by replacing $x$ with:',
-            options: ['$-x$ (giving $\\sum (-1)^n x^n$)', '$x+1$', '$1/x$', '$-1$'],
-            correctAnswers: ['$-x$ (giving $\\sum (-1)^n x^n$)'],
+            options: ['$-x$', '$x + 1$', '$1/x$', '$-1$'],
+            correctAnswers: ['$-x$'],
             hints: ['$\\frac{1}{1+x} = \\frac{1}{1-(-x)}$.'],
             explanation: '$\\frac{1}{1-(-x)} = \\sum_{n=0}^\\infty (-x)^n = \\sum (-1)^n x^n$.'
           },
           {
             label: 'The series for $\\frac{x}{1-x^2}$ starts with:',
-            options: ['$x + x^3 + x^5 + \\cdots$ (substitute $x^2$, multiply by $x$)', '$x + x^2 + x^3 + \\cdots$', '$1 + x^2 + x^4 + \\cdots$', '$x - x^3 + x^5 - \\cdots$'],
-            correctAnswers: ['$x + x^3 + x^5 + \\cdots$ (substitute $x^2$, multiply by $x$)'],
+            options: ['$x + x^3 + x^5 + \\cdots$', '$x + x^2 + x^3 + \\cdots$', '$1 + x^2 + x^4 + \\cdots$', '$x - x^3 + x^5 - \\cdots$'],
+            correctAnswers: ['$x + x^3 + x^5 + \\cdots$'],
             hints: ['$\\frac{1}{1-x^2} = \\sum (x^2)^n = \\sum x^{2n}$. Then multiply by $x$.'],
-            explanation: '$x \\cdot \\sum x^{2n} = \\sum x^{2n+1} = x + x^3 + x^5 + \\cdots$.'
+            explanation: 'Substitute $x^2$ into the geometric series, then multiply by $x$: $x \\cdot \\sum x^{2n} = \\sum x^{2n+1} = x + x^3 + x^5 + \\cdots$.'
           }
         ]
       }

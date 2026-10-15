@@ -66,9 +66,9 @@ $$\\int_0^1 \\frac{\\sin x}{x}\\,dx = \\left[x - \\frac{x^3}{18} + \\frac{x^5}{6
         questions: [
           {
             question: '$\\int_0^{0.5} \\cos(x^2)\\,dx$ using the first two nonzero terms of the series: $\\cos(x^2) \\approx 1 - x^4/2$. The approximation is:',
-            options: ['$0.5 - 0.5^5/10 = 0.5 - 0.003125 = 0.496875$', '$0.5$', '$0.5 - 0.5^2/2 = 0.375$', '$0.5 - 0.5^4/8 = 0.4921875$'],
+            options: ['$0.5 - 0.5^5/10 = 0.496875$', '$0.5 - 0.5^5/2 = 0.484375$', '$0.5 - 0.5^3/6 \\approx 0.479167$', '$0.5 - 0.5^5/8 = 0.49609375$'],
             correctAnswer: 0,
-            explanation: '$\\int_0^{0.5}(1 - x^4/2)dx = [x - x^5/10]_0^{0.5} = 0.5 - 0.003125 = 0.496875$.'
+            explanation: '$\\int_0^{0.5}(1 - x^4/2)dx = [x - x^5/10]_0^{0.5} = 0.5 - 0.003125 = 0.496875$. Forgetting to divide by the new exponent 5 gives $0.484375$; dividing by the old exponent 4 instead gives $0.49609375$; integrating $1 - x^2/2$ (the $\\cos x$ terms, without substituting $x^2$) gives $0.479167$.'
           },
           {
             question: 'Term-by-term integration of a power series:',
@@ -93,17 +93,17 @@ $$\\int_0^1 \\frac{\\sin x}{x}\\,dx = \\left[x - \\frac{x^3}{18} + \\frac{x^5}{6
         dropdowns: [
           {
             label: '$\\frac{1}{1+x^3} = 1 - x^3 + x^6 - x^9 + \\cdots$. So $\\int_0^1 \\frac{dx}{1+x^3}$ equals:',
-            options: ['$1 - 1/4 + 1/7 - 1/10 + \\cdots$ (integrate term by term)', '$\\ln(1 + 1) = \\ln 2$', '$\\pi/4$', '$1 - 1/3 + 1/6 - 1/9 + \\cdots$'],
-            correctAnswers: ['$1 - 1/4 + 1/7 - 1/10 + \\cdots$ (integrate term by term)'],
+            options: ['$1 - 1/4 + 1/7 - 1/10 + \\cdots$', '$\\ln(1 + 1) = \\ln 2$', '$\\pi/4$', '$1 - 1/3 + 1/6 - 1/9 + \\cdots$'],
+            correctAnswers: ['$1 - 1/4 + 1/7 - 1/10 + \\cdots$'],
             hints: ['$\\int x^{3n}dx = x^{3n+1}/(3n+1)$. Evaluate at 0 and 1.'],
-            explanation: '$\\int_0^1 \\sum (-1)^n x^{3n}dx = \\sum (-1)^n/(3n+1) = 1 - 1/4 + 1/7 - \\cdots$.'
+            explanation: '$\\int_0^1 \\sum (-1)^n x^{3n}dx = \\sum (-1)^n/(3n+1) = 1 - 1/4 + 1/7 - \\cdots$. Dividing by $3n$ instead of $3n+1$ gives $1 - 1/3 + 1/6 - \\cdots$; $\\ln 2$ and $\\pi/4$ are the integrals of $1/(1+x)$ and $1/(1+x^2)$.'
           },
           {
             label: 'The series for $\\int \\arctan x\\,dx$ can be found by integrating the $\\arctan$ series. The first two nonzero terms are:',
-            options: ['$x^2/2 - x^4/12 + \\cdots$ (integrate $x - x^3/3 + \\cdots$)', '$x - x^3/3 + \\cdots$', '$x^2/2 - x^4/4 + \\cdots$', '$\\arctan x - x + \\cdots$'],
-            correctAnswers: ['$x^2/2 - x^4/12 + \\cdots$ (integrate $x - x^3/3 + \\cdots$)'],
+            options: ['$x^2/2 - x^4/12 + \\cdots$', '$x - x^3/3 + \\cdots$', '$x^2/2 - x^4/4 + \\cdots$', '$\\arctan x - x + \\cdots$'],
+            correctAnswers: ['$x^2/2 - x^4/12 + \\cdots$'],
             hints: ['$\\arctan x = x - x^3/3 + x^5/5 - \\cdots$. Integrate term by term.'],
-            explanation: '$\\int (x - x^3/3 + \\cdots)dx = x^2/2 - x^4/12 + \\cdots + C$.'
+            explanation: '$\\int (x - x^3/3 + \\cdots)dx = x^2/2 - x^4/12 + \\cdots + C$. The $x^3/3$ term integrates to $x^4/12$, not $x^4/4$.'
           }
         ]
       }

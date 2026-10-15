@@ -59,9 +59,9 @@ In polar: $L = \\int_{\\alpha}^{\\beta} \\sqrt{r^2 + (r')^2}\\,d\\theta$.`
           },
           {
             question: 'For $r = 1 + \\sin\\theta$, $dr/d\\theta = \\cos\\theta$. At $\\theta = \\pi/2$, the polar slope $dy/dx$:',
-            options: ['Is undefined (vertical tangent)', 'Equals $0$ (horizontal tangent)', 'Equals $1$', 'Equals $-1$'],
+            options: ['Equals $0$ (horizontal tangent)', 'Is undefined (vertical tangent)', 'Equals $1$', 'Equals $-1$'],
             correctAnswer: 0,
-            explanation: 'At $\\theta = \\pi/2$: $r = 2$, $r\' = 0$. $dx/d\\theta = r\'\\cos\\theta - r\\sin\\theta = 0 - 2 = -2$. $dy/d\\theta = r\'\\sin\\theta + r\\cos\\theta = 0 + 0 = 0$. $dy/dx = 0/(-2) = 0$. Actually this is horizontal! Let me recheck: $dy/dx = 0/(-2) = 0$, so it\'s a horizontal tangent.'
+            explanation: 'At $\\theta = \\pi/2$: $r = 2$ and $r\' = \\cos(\\pi/2) = 0$. $dx/d\\theta = r\'\\cos\\theta - r\\sin\\theta = 0 - 2 = -2$ and $dy/d\\theta = r\'\\sin\\theta + r\\cos\\theta = 0 + 0 = 0$. So $dy/dx = 0/(-2) = 0$: a horizontal tangent (the top of the cardioid).'
           },
           {
             question: 'A particle\'s position is $\\vec{r}(t) = \\langle \\cos t, \\sin t \\rangle$. Its acceleration vector is:',
@@ -87,7 +87,7 @@ In polar: $L = \\int_{\\alpha}^{\\beta} \\sqrt{r^2 + (r')^2}\\,d\\theta$.`
           },
           {
             label: 'Area between parametric curves requires:',
-            options: ['Converting to $\\int y\\,dx = \\int y(t) x\'(t)\\,dt$', 'Using the polar area formula', 'Just subtracting the curves', 'Double integration'],
+            options: ['Converting to $\\int y\\,dx = \\int y(t) x\'(t)\\,dt$', 'Using $\\frac{1}{2}\\int r^2\\,d\\theta$ with $r = \\sqrt{x^2 + y^2}$', 'Integrating $\\int y(t)\\,dt$ with no $x\'(t)$ factor', 'Subtracting $x(t)$ from $y(t)$ and integrating'],
             correctAnswers: ['Converting to $\\int y\\,dx = \\int y(t) x\'(t)\\,dt$'],
             hints: ['Replace $dx$ with $x\'(t)\\,dt$.'],
             explanation: '$\\int_a^b y\\,dx = \\int_{t_1}^{t_2} y(t) \\cdot x\'(t)\\,dt$ by substitution.'

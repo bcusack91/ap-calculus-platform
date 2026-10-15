@@ -68,15 +68,15 @@ $$|R_4(3)| \\le \\frac{12 \\cdot |3 - 2|^5}{5!} = \\frac{12}{120} = 0.1$$
           },
           {
             question: 'An FRQ states: "$|f^{(4)}(t)| \\le 25$ on $[1, 1.5]$." Which error bound setup is correct for $T_3$ at $x = 1.5$, $c = 1$?',
-            options: ['$25(0.5)^4/4! = 25/384$', '$25(1.5)^4/4!$', '$25(0.5)^3/3!$', '$4 \\cdot 25(0.5)^4$'],
+            options: ['$25(0.5)^4/4! = 25/384$', '$25(1.5)^4/4! \\approx 5.27$', '$25(0.5)^3/3! \\approx 0.521$', '$25(0.5)^4 \\approx 1.56$'],
             correctAnswer: 0,
-            explanation: '$|R_3| \\le M|x-c|^{n+1}/(n+1)! = 25(0.5)^4/4! = 25 \\cdot 0.0625/24 = 25/384$.'
+            explanation: '$|R_3| \\le M|x-c|^{n+1}/(n+1)! = 25(0.5)^4/4! = 25 \\cdot 0.0625/24 = 25/384 \\approx 0.065$. Using $x$ instead of $x - c$ gives $5.27$; using $n$ instead of $n+1$ gives $0.521$; dropping the factorial gives $1.56$.'
           },
           {
             question: 'For $e^{-x}$ centered at $0$, evaluated at $x = 2$: $|f^{(n+1)}(t)| = e^{-t}$. On $[0, 2]$, $M = $',
-            options: ['$e^0 = 1$', '$e^{-2}$', '$e^2$', '$2e^{-1}$'],
+            options: ['$e^0 = 1$', '$e^{-2} \\approx 0.135$', '$e^{2} \\approx 7.389$', '$e^{-1} \\approx 0.368$'],
             correctAnswer: 0,
-            explanation: '$e^{-t}$ is decreasing on $[0, 2]$. Its maximum absolute value on $[0,2]$ occurs at $t = 0$: $e^0 = 1$.'
+            explanation: '$e^{-t}$ is decreasing on $[0, 2]$. Its maximum absolute value on $[0,2]$ occurs at $t = 0$: $e^0 = 1$. $e^{-2}$ is the minimum (the wrong endpoint), $e^{2}$ comes from dropping the minus sign, and $e^{-1}$ is only the value at the midpoint $t = 1$.'
           }
         ]
       }
@@ -89,17 +89,17 @@ $$|R_4(3)| \\le \\frac{12 \\cdot |3 - 2|^5}{5!} = \\frac{12}{120} = 0.1$$
         dropdowns: [
           {
             label: '$f(x) = \\sqrt{1+x}$. $f^{(3)}(x) = 3/8 \\cdot (1+x)^{-5/2}$. On $[0, 1]$, $M = $',
-            options: ['$3/8$ (max at $t = 0$: $(1+0)^{-5/2} = 1$)', '$3/8 \\cdot 2^{-5/2}$', '$3/8 \\cdot 2^{5/2}$', '$3/8 \\cdot (3/2)^{-5/2}$'],
-            correctAnswers: ['$3/8$ (max at $t = 0$: $(1+0)^{-5/2} = 1$)'],
+            options: ['$3/8$', '$3/8 \\cdot 2^{-5/2} \\approx 0.066$', '$3/8 \\cdot 2^{5/2} \\approx 2.12$', '$3/8 \\cdot (3/2)^{-5/2}$'],
+            correctAnswers: ['$3/8$'],
             hints: ['$(1+t)^{-5/2}$ is decreasing. Max when $t$ is smallest.'],
-            explanation: '$(1+t)^{-5/2}$ is largest at $t = 0$: $(1+0)^{-5/2} = 1$. So $M = 3/8$.'
+            explanation: '$(1+t)^{-5/2}$ is largest at $t = 0$: $(1+0)^{-5/2} = 1$. So $M = 3/8$. Plugging in $t = 1$ gives the minimum, flipping the exponent\'s sign gives $3/8 \\cdot 2^{5/2}$, and $t = 1/2$ is only the midpoint.'
           },
           {
             label: 'AP gives: "$|f^{(6)}(t)| \\le 40$ on $[3, 3.2]$". Error bound for $T_5(3.2)$ centered at $3$:',
-            options: ['$40(0.2)^6/6! = 40 \\cdot 6.4 \\times 10^{-5}/720 \\approx 3.56 \\times 10^{-6}$', '$40(3.2)^6/6!$', '$40(0.2)^5/5!$', '$6 \\cdot 40(0.2)^6$'],
-            correctAnswers: ['$40(0.2)^6/6! = 40 \\cdot 6.4 \\times 10^{-5}/720 \\approx 3.56 \\times 10^{-6}$'],
+            options: ['$40(0.2)^6/6! \\approx 3.56 \\times 10^{-6}$', '$40(3.2)^6/6! \\approx 59.7$', '$40(0.2)^5/5! \\approx 1.07 \\times 10^{-4}$', '$6 \\cdot 40(0.2)^6 \\approx 0.0154$'],
+            correctAnswers: ['$40(0.2)^6/6! \\approx 3.56 \\times 10^{-6}$'],
             hints: ['$|x - c| = |3.2 - 3| = 0.2$, $n + 1 = 6$.'],
-            explanation: '$|R_5| \\le 40(0.2)^6/6! = 40(6.4 \\times 10^{-5})/720 \\approx 3.56 \\times 10^{-6}$.'
+            explanation: '$|R_5| \\le 40(0.2)^6/6! = 40(6.4 \\times 10^{-5})/720 \\approx 3.56 \\times 10^{-6}$. Using $x = 3.2$ instead of $x - c = 0.2$ gives $59.7$; using $n = 5$ instead of $n+1 = 6$ gives $1.07 \\times 10^{-4}$; multiplying by $6$ instead of dividing by $6!$ gives $0.0154$.'
           }
         ]
       }
@@ -110,10 +110,10 @@ $$|R_4(3)| \\le \\frac{12 \\cdot |3 - 2|^5}{5!} = \\frac{12}{120} = 0.1$$
       content: '**Computing the Bound**',
       exercise: {
         question: 'For $\\ln(1.2)$ using $T_4$ centered at $1$ (i.e., $\\ln(x)$ near $c = 1$), $f^{(5)}(t) = 4!/ t^5$. On $[1, 1.2]$, $M = 24$. Compute $|R_4(1.2)|$ bound as a fraction.',
-        correctAnswer: '1/12500',
-        acceptableAnswers: ['1/12500', '0.00008', '8e-5', '8/100000'],
+        correctAnswer: '1/15625',
+        acceptableAnswers: ['1/15625', '0.000064', '6.4e-5', '64/1000000'],
         hints: ['$|R_4| \\le 24 \\cdot (0.2)^5/5! = 24 \\cdot 0.00032/120$.'],
-        explanation: '$|R_4(1.2)| \\le 24(0.2)^5/5! = 24(3.2 \\times 10^{-4})/120 = 0.00768/120 = 6.4 \\times 10^{-5}$. As a fraction: $24 \\cdot (1/5)^5/120 = 24/(5^5 \\cdot 120) = 24/(3125 \\cdot 120) = 24/375000 = 1/15625$. Actually: $(0.2)^5 = 0.00032$, $24(0.00032)/120 = 0.00768/120 = 0.000064 = 8/125000 = 1/15625$.'
+        explanation: '$|R_4(1.2)| \\le 24(0.2)^5/5! = 24(3.2 \\times 10^{-4})/120 = 0.00768/120 = 6.4 \\times 10^{-5}$. As a fraction: $24 \\cdot (1/5)^5/120 = 24/(3125 \\cdot 120) = 24/375000 = 1/15625$.'
       }
     },
     {

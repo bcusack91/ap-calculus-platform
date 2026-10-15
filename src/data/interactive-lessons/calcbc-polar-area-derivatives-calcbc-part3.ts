@@ -117,7 +117,7 @@ Each gives a different tangent direction at the origin. The rose has 3 tangent l
 - Roses have multiple tangent lines at the origin (one per petal)
 - Always check for both horizontal ($dy/d\\theta = 0$) and vertical ($dx/d\\theta = 0$) tangents
 
-> **Next:** Part 4 covers **area of lima\\c{c}on regions** and **inner loop area**.`
+> **Next:** Part 4 covers **area of limaçon regions** and **inner loop area**.`
     }
   ]
 };

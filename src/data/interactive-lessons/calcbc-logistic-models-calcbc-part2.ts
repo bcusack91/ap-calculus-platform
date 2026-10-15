@@ -66,21 +66,21 @@ $$P(t) = \\frac{300}{1 + 5e^{-3t}}$$
         questions: [
           {
             question: '$dP/dt = 0.5P - 0.001P^2$. What is the carrying capacity $L$?',
-            options: ['$L = 500$ (factor: $0.5P(1 - P/500)$)', '$L = 0.001$', '$L = 0.5$', '$L = 1000$'],
+            options: ['$L = 500$', '$L = 0.0005$', '$L = 0.002$', '$L = 1000$'],
             correctAnswer: 0,
-            explanation: '$0.5P - 0.001P^2 = 0.5P(1 - 0.002P) = 0.5P(1 - P/500)$. $L = 500$.'
+            explanation: '$0.5P - 0.001P^2 = 0.5P(1 - 0.002P) = 0.5P(1 - P/500)$, so $L = 0.5/0.001 = 500$. Using $1/0.001$ ignores the factor 0.5, $0.001/0.5$ inverts the ratio, and $0.5(0.001)$ multiplies instead of dividing.'
           },
           {
             question: 'For $dP/dt = P(6 - 2P)$, the maximum growth rate is:',
-            options: ['$kL/4 = 6(3)/4 = 4.5$', '$kL/4 = 6(6)/4 = 9$', '$6 \\cdot 2 = 12$', '$6/4 = 1.5$'],
+            options: ['$kL/4 = 6(3)/4 = 4.5$', '$kL/4 = 2(3)/4 = 1.5$', '$kL/4 = 6(6)/4 = 9$', '$kL = 6(3) = 18$'],
             correctAnswer: 0,
-            explanation: '$P(6 - 2P) = 6P(1 - P/3)$. $k = 6$, $L = 3$. Max rate $= 6(3)/4 = 4.5$.'
+            explanation: '$P(6 - 2P) = 6P(1 - P/3)$, so $k = 6$, $L = 3$, and the max rate is $6(3)/4 = 4.5$ (check at $P = 3/2$: $1.5(6 - 3) = 4.5$). Reading $k = 2$ from $2P(3 - P)$, taking $L = 6$, or omitting the 4 are the common slips.'
           },
           {
             question: 'The partial fraction decomposition of $\\frac{1}{P(L-P)}$ is:',
-            options: ['$\\frac{1}{L}\\left(\\frac{1}{P} + \\frac{1}{L-P}\\right)$', '$\\frac{1}{P} - \\frac{1}{L-P}$', '$\\frac{1}{PL} + \\frac{1}{L-P}$', '$\\frac{L}{P(L-P)}$'],
+            options: ['$\\frac{1}{L}\\left(\\frac{1}{P} + \\frac{1}{L-P}\\right)$', '$\\frac{1}{L}\\left(\\frac{1}{P} - \\frac{1}{L-P}\\right)$', '$\\frac{1}{P} + \\frac{1}{L-P}$', '$L\\left(\\frac{1}{P} + \\frac{1}{L-P}\\right)$'],
             correctAnswer: 0,
-            explanation: '$\\frac{1}{P(L-P)} = \\frac{A}{P} + \\frac{B}{L-P}$. $1 = A(L-P) + BP$. $P=0: A = 1/L$. $P=L: B = 1/L$.'
+            explanation: '$\\frac{1}{P(L-P)} = \\frac{A}{P} + \\frac{B}{L-P}$. $1 = A(L-P) + BP$. $P=0: A = 1/L$. $P=L: B = 1/L$. Both coefficients are positive and equal to $1/L$; recombining any other version does not return $\\frac{1}{P(L-P)}$.'
           }
         ]
       }

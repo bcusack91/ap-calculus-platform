@@ -45,7 +45,7 @@ $$\\boxed{P(t) = \\frac{L}{1 + \\frac{L - P_0}{P_0}e^{-kt}}}$$`
           },
           {
             question: 'The logistic and exponential models agree most closely when:',
-            options: ['$P$ is much less than $L$ (early growth)', '$P$ is close to $L$', '$P = L/2$', 'They never agree'],
+            options: ['$P$ is much less than $L$ (early growth)', '$P$ is close to $L$ (late growth)', '$P = L/2$ (the inflection point)', 'Never, since $1 - P/L$ is below 1'],
             correctAnswer: 0,
             explanation: 'When $P \\ll L$, $1 - P/L \\approx 1$, so $dP/dt \\approx kP$ (exponential).'
           }
@@ -60,9 +60,9 @@ $$\\boxed{P(t) = \\frac{L}{1 + \\frac{L - P_0}{P_0}e^{-kt}}}$$`
         questions: [
           {
             question: 'If $dP/dt = 0.2P(1 - P/350)$ and $P = 175$, then $dP/dt =$',
-            options: ['$0.2(175)(0.5) = 17.5$', '$0.2(175) = 35$', '$0.2(350)(0.5) = 35$', '$0.1(175) = 17.5$'],
+            options: ['$0.2(175)(0.5) = 17.5$', '$0.2(175) = 35$', '$0.2(350)(1 - 350/350) = 0$', '$0.2(175)(1 - 350/175) = -35$'],
             correctAnswer: 0,
-            explanation: '$dP/dt = 0.2(175)(1 - 175/350) = 0.2(175)(0.5) = 17.5$. This is the maximum rate ($kL/4 = 0.2(350)/4 = 17.5$).'
+            explanation: '$dP/dt = 0.2(175)(1 - 175/350) = 0.2(175)(0.5) = 17.5$. This is the maximum rate ($kL/4 = 0.2(350)/4 = 17.5$). Dropping the $(1 - P/L)$ factor gives 35, substituting $L$ for $P$ gives 0, and inverting the fraction gives $-35$.'
           },
           {
             question: 'A population starts at $P_0 = 1000$ in an environment with $L = 800$. The population will:',
@@ -88,14 +88,14 @@ $$\\boxed{P(t) = \\frac{L}{1 + \\frac{L - P_0}{P_0}e^{-kt}}}$$`
           },
           {
             label: '$A =$',
-            options: ['$9$ ($(600-60)/60$)', '$10$', '$540$', '$0.1$'],
-            correctAnswers: ['$9$ ($(600-60)/60$)'],
+            options: ['$9$', '$10$', '$540$', '$0.1$'],
+            correctAnswers: ['$9$'],
             hints: ['$A = (L - P_0)/P_0$.'],
-            explanation: '$A = 540/60 = 9$.'
+            explanation: '$A = (L - P_0)/P_0 = (600 - 60)/60 = 540/60 = 9$. Skipping the subtraction gives 10, skipping the division gives 540, and $P_0/L$ gives 0.1.'
           },
           {
             label: 'The solution is:',
-            options: ['$P(t) = 600/(1 + 9e^{-0.6t})$', '$P(t) = 600/(1 + 9e^{0.6t})$', '$P(t) = 60/(1 + 9e^{-0.6t})$', '$P(t) = 600e^{0.6t}$'],
+            options: ['$P(t) = 600/(1 + 9e^{-0.6t})$', '$P(t) = 600/(1 + 9e^{0.6t})$', '$P(t) = 60/(1 + 9e^{-0.6t})$', '$P(t) = 600/(1 + 10e^{-0.6t})$'],
             correctAnswers: ['$P(t) = 600/(1 + 9e^{-0.6t})$'],
             hints: ['$P(t) = L/(1 + Ae^{-kt})$.'],
             explanation: '$P(t) = 600/(1 + 9e^{-0.6t})$. Verify: $P(0) = 600/10 = 60$ ✓.'

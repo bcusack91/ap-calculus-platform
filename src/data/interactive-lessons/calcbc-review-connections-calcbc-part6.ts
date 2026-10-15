@@ -18,7 +18,7 @@ These problems intentionally mix topics. On the AP exam, you must identify which
         questions: [
           {
             question: 'The length of the curve $x = t^2$, $y = t^3$ from $t = 0$ to $t = 1$ is:',
-            options: ['$\\int_0^1 \\sqrt{4t^2 + 9t^4}\\,dt$', '$\\int_0^1 (2t + 3t^2)\\,dt$', '$\\int_0^1 \\sqrt{t^4 + t^6}\\,dt$', '$\\sqrt{1 + 1} = \\sqrt{2}$'],
+            options: ['$\\int_0^1 \\sqrt{4t^2 + 9t^4}\\,dt$', '$\\int_0^1 \\sqrt{1 + (3t^2)^2}\\,dt$', '$\\int_0^1 \\sqrt{t^4 + t^6}\\,dt$', '$\\sqrt{1 + 1} = \\sqrt{2}$'],
             correctAnswer: 0,
             explanation: '$x\' = 2t$, $y\' = 3t^2$. Arc length $= \\int_0^1 \\sqrt{(2t)^2 + (3t^2)^2}\\,dt = \\int_0^1 \\sqrt{4t^2 + 9t^4}\\,dt$.'
           },
@@ -51,17 +51,17 @@ These problems intentionally mix topics. On the AP exam, you must identify which
         dropdowns: [
           {
             label: 'This series represents:',
-            options: ['$\\sinh x$ (hyperbolic sine)', '$\\sin x$', '$\\cos x$', '$e^x$'],
-            correctAnswers: ['$\\sinh x$ (hyperbolic sine)'],
+            options: ['$\\frac{e^x - e^{-x}}{2}$', '$\\sin x$', '$\\frac{e^x + e^{-x}}{2}$', '$e^x$'],
+            correctAnswers: ['$\\frac{e^x - e^{-x}}{2}$'],
             hints: ['Compare with $\\sin x = \\sum (-1)^n x^{2n+1}/(2n+1)!$. This has no alternating sign.'],
-            explanation: 'Without the $(-1)^n$, this is $\\sinh x = (e^x - e^{-x})/2 = x + x^3/6 + x^5/120 + \\cdots$.'
+            explanation: 'Without the $(-1)^n$, this is the odd-power half of the series for $e^x$: $\\frac{e^x - e^{-x}}{2} = x + x^3/6 + x^5/120 + \\cdots$ (sometimes called $\\sinh x$). The even-power half is $\\frac{e^x + e^{-x}}{2}$.'
           },
           {
             label: '$f\'(x) =$',
-            options: ['$\\cosh x = \\sum x^{2n}/(2n)!$', '$\\cos x$', '$-\\sinh x$', '$e^x$'],
-            correctAnswers: ['$\\cosh x = \\sum x^{2n}/(2n)!$'],
+            options: ['$\\frac{e^x + e^{-x}}{2}$', '$\\cos x$', '$\\frac{e^x - e^{-x}}{2}$', '$e^x$'],
+            correctAnswers: ['$\\frac{e^x + e^{-x}}{2}$'],
             hints: ['Differentiate term by term: $\\sum (2n+1)x^{2n}/((2n+1)\\cdot(2n)!) = \\sum x^{2n}/(2n)!$.'],
-            explanation: '$f\'(x) = \\sum x^{2n}/(2n)! = \\cosh x$. Just like $\\sin\' = \\cos$, we get $\\sinh\' = \\cosh$.'
+            explanation: '$f\'(x) = \\sum x^{2n}/(2n)! = \\frac{e^x + e^{-x}}{2}$. Just as differentiating the sine series gives the cosine series, differentiating this odd-power series gives the matching even-power series.'
           }
         ]
       }

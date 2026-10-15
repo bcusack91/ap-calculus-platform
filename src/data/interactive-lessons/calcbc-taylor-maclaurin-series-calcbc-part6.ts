@@ -31,15 +31,15 @@ This workshop covers the full range of Taylor series tasks:
           },
           {
             question: 'The Maclaurin series for $\\frac{1}{\\sqrt{1+x}}$ through the $x^2$ term is:',
-            options: ['$1 - x/2 + 3x^2/8$', '$1 + x/2 - x^2/8$', '$1 - x/2 + x^2/4$', '$1 - x + x^2$'],
+            options: ['$1 - x/2 + 3x^2/8$', '$1 + x/2 - x^2/8$', '$1 - x/2 - 3x^2/8$', '$1 - x + x^2$'],
             correctAnswer: 0,
-            explanation: '$(1+x)^{-1/2} = 1 + (-1/2)x + \\frac{(-1/2)(-3/2)}{2!}x^2 + \\cdots = 1 - x/2 + 3x^2/8$.'
+            explanation: '$(1+x)^{-1/2} = 1 + (-1/2)x + \\frac{(-1/2)(-3/2)}{2!}x^2 + \\cdots = 1 - x/2 + 3x^2/8$. The product $(-1/2)(-3/2)$ is positive (a sign slip gives $-3x^2/8$); $1 + x/2 - x^2/8$ is the series for $\\sqrt{1+x}$, and $1 - x + x^2$ is $1/(1+x)$.'
           },
           {
             question: '$\\int_0^{0.5} e^{-t^2}\\,dt$ approximated by the first 3 terms of the series equals:',
-            options: ['$0.5 - (0.5)^3/3 + (0.5)^5/10 \\approx 0.4612$', '$0.5 - 0.125/3 + 0.03125/10$', 'Both are equivalent and correct', '$e^{-0.25} - 1$'],
+            options: ['$0.5 - (0.5)^3/3 + (0.5)^5/10 \\approx 0.4615$', '$0.5 - 0.125/3 + 0.03125/10$', 'Both are equivalent and correct', '$e^{-0.25} - 1$'],
             correctAnswer: 2,
-            explanation: '$e^{-t^2} = 1 - t^2 + t^4/2 - \\cdots$. $\\int_0^{0.5} = [t - t^3/3 + t^5/10]_0^{0.5} = 0.5 - 0.125/3 + 0.03125/10 = 0.5 - 0.04167 + 0.003125 = 0.4615$.'
+            explanation: '$e^{-t^2} = 1 - t^2 + t^4/2 - \\cdots$. $\\int_0^{0.5} = [t - t^3/3 + t^5/10]_0^{0.5} = 0.5 - 0.125/3 + 0.03125/10 = 0.5 - 0.04167 + 0.003125 \\approx 0.4615$. The two written forms are the same expression.'
           }
         ]
       }
@@ -52,7 +52,7 @@ This workshop covers the full range of Taylor series tasks:
         dropdowns: [
           {
             label: 'The series $\\sum_{n=0}^\\infty \\frac{(-1)^n \\pi^{2n}}{(2n)!}$ equals:',
-            options: ['$\\cos(\\pi) = -1$', '$\\sin(\\pi) = 0$', '$e^{-\\pi}$', '$1/\\pi$'],
+            options: ['$\\cos(\\pi) = -1$', '$\\sin(\\pi) = 0$', '$\\cos(\\pi^2) \\approx -0.903$', '$1/\\pi$'],
             correctAnswers: ['$\\cos(\\pi) = -1$'],
             hints: ['$\\cos x = \\sum (-1)^n x^{2n}/(2n)!$. Set $x = \\pi$.'],
             explanation: '$\\sum (-1)^n \\pi^{2n}/(2n)! = \\cos(\\pi) = -1$.'

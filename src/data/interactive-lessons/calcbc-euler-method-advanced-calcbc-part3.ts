@@ -66,7 +66,7 @@ With $\\Delta x = 1$: Euler gives $y(1) = 1 + (-1)(1) = 0$. Actual: $e^{-1} \\ap
       exercise: {
         questions: [
           {
-            question: '$dy/dx = \\sqrt{y}$, $y(0) = 4$. $y\'\' = \\frac{1}{2\\sqrt{y}} \\cdot \\sqrt{y} \\cdot \\frac{1}{2\\sqrt{y}} > 0$... wait. Actually $y\'\' = \\frac{1}{2}$. Since $y\'\' > 0$, Euler\'s method:',
+            question: '$dy/dx = \\sqrt{y}$, $y(0) = 4$. Then $y\'\' = \\frac{1}{2\\sqrt{y}} \\cdot \\frac{dy}{dx} = \\frac{1}{2\\sqrt{y}} \\cdot \\sqrt{y} = \\frac{1}{2}$. Since $y\'\' > 0$, Euler\'s method:',
             options: ['Underestimates the true solution', 'Overestimates the true solution', 'Gives the exact solution', 'Cannot determine without step size'],
             correctAnswer: 0,
             explanation: '$y\'\' > 0$ means concave up, so the tangent line lies below the curve. Euler underestimates.'
@@ -79,9 +79,9 @@ With $\\Delta x = 1$: Euler gives $y(1) = 1 + (-1)(1) = 0$. Actual: $e^{-1} \\ap
           },
           {
             question: 'On an AP FRQ, which justification earns full credit for "Is your approximation an overestimate?"',
-            options: ['"Since $d^2y/dx^2 < 0$ on the interval, the solution is concave down, so Euler overestimates."', '"The answer is too big."', '"By looking at the graph."', '"Because $\\Delta x$ is large."'],
+            options: ['"Since $d^2y/dx^2 < 0$ on the interval, the solution is concave down, so Euler overestimates."', '"Since $dy/dx > 0$ on the interval, the solution is increasing, so Euler overestimates."', '"Since $\\Delta x$ is large, the tangent steps drift off the curve, so Euler overestimates."', '"Since the tangent lines lie below the curve, Euler overestimates."'],
             correctAnswer: 0,
-            explanation: 'Must explicitly state concavity (second derivative sign) and connect it to over/underestimate.'
+            explanation: 'Full credit requires the sign of the second derivative on the interval, the resulting concavity, and the link to over/underestimate. The sign of $dy/dx$ and the size of $\\Delta x$ do not set the direction of the error, and tangent lines below the curve would mean an underestimate.'
           }
         ]
       }
@@ -101,10 +101,10 @@ With $\\Delta x = 1$: Euler gives $y(1) = 1 + (-1)(1) = 0$. Actual: $e^{-1} \\ap
           },
           {
             label: 'On $(0, 1)$, $y\'\' = 2x > 0$, so Euler:',
-            options: ['Underestimates ($y\'\' > 0$ → concave up)', 'Overestimates', 'Is exact', 'Cannot tell'],
-            correctAnswers: ['Underestimates ($y\'\' > 0$ → concave up)'],
+            options: ['Underestimates (concave up)', 'Overestimates (solution increasing)', 'Is exact ($y\'$ is a polynomial)', 'Cannot tell without $\\Delta x$'],
+            correctAnswers: ['Underestimates (concave up)'],
             hints: ['Concave up → tangent is below → underestimate.'],
-            explanation: 'Concave up on $(0,1)$ → Euler underestimates.'
+            explanation: 'Concave up on $(0,1)$ → Euler underestimates. An increasing solution does not by itself set the error direction, and $\\Delta x$ changes only the size of the error.'
           }
         ]
       }

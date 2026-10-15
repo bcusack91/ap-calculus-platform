@@ -25,7 +25,7 @@ Each FRQ has **9 points** distributed across parts (a)–(d). Points are earned 
 ### The "Bald Answer" Rule
 
 If you write ONLY the final answer with no work:
-- **Correct:** Full credit
+- **Correct:** usually NO credit — the official FRQ directions say answers without supporting work will usually not receive credit
 - **Incorrect:** ZERO credit
 
 If you show setup AND get the wrong numerical answer:
@@ -61,19 +61,19 @@ If you show setup AND get the wrong numerical answer:
         questions: [
           {
             question: 'A student writes $\\int_0^3 f(x)\\,dx = 12$ with no work shown. The correct answer is $12$. The student earns:',
-            options: ['Full credit — correct bald answer', '0 points — no work shown', 'Partial credit only', '1 point for the answer'],
+            options: ['Usually no credit — supporting work is required', 'Full credit — a correct answer stands on its own', 'Partial credit — the answer point but no setup point', 'Full credit, but only on calculator-active parts'],
             correctAnswer: 0,
-            explanation: 'A correct "bald answer" earns full credit. But this is risky — if the answer were wrong, they\'d get 0 points.'
+            explanation: 'The official AP Calculus FRQ directions say that answers without supporting work will usually not receive credit. Show the setup and how you evaluated it, even when the answer is right; with work shown, even a wrong final value can still earn setup points.'
           },
           {
             question: 'On an FRQ about particle motion, a student forgets to include units. This typically costs:',
-            options: ['1 point (units are usually worth 1 pt when required)', '0 points — units don\'t matter', '3 points', 'The entire question score'],
+            options: ['1 point, when the problem asks for units', '0 points — units are never scored', '3 points — one per part', 'The entire question score'],
             correctAnswer: 0,
             explanation: 'When units are specified in the problem, omitting them typically costs 1 point. Always check if the problem gives units.'
           },
           {
             question: 'A student writes two different answers for part (b) without crossing either out. The reader:',
-            options: ['Scores the worse of the two answers', 'Scores the better of the two', 'Averages the scores', 'Ignores both'],
+            options: ['Scores the worse of the two answers', 'Scores the better one', 'Averages the two scores', 'Scores the first one'],
             correctAnswer: 0,
             explanation: 'AP readers score the worse answer when two contradictory responses are given. Always cross out work you don\'t want scored.'
           }
@@ -88,14 +88,14 @@ If you show setup AND get the wrong numerical answer:
         dropdowns: [
           {
             label: 'The correct setup for arc length is:',
-            options: ['$\\int_0^2 \\sqrt{(2t)^2 + (3t^2)^2}\\,dt$', '$\\int_0^2 \\sqrt{x^2 + y^2}\\,dt$', '$\\int_0^2 (2t + 3t^2)\\,dt$', '$\\int_0^2 \\sqrt{t^4 + t^6}\\,dt$'],
+            options: ['$\\int_0^2 \\sqrt{(2t)^2 + (3t^2)^2}\\,dt$', '$\\int_0^2 \\sqrt{x^2 + y^2}\\,dt$', '$\\int_0^2 \\sqrt{1 + (3t^2/(2t))^2}\\,dt$', '$\\int_0^2 \\sqrt{t^4 + t^6}\\,dt$'],
             correctAnswers: ['$\\int_0^2 \\sqrt{(2t)^2 + (3t^2)^2}\\,dt$'],
             hints: ['Arc length = $\\int \\sqrt{(dx/dt)^2 + (dy/dt)^2}\\,dt$.'],
             explanation: '$dx/dt = 2t$, $dy/dt = 3t^2$. Arc length $= \\int_0^2 \\sqrt{4t^2 + 9t^4}\\,dt$. The setup alone is worth points.'
           },
           {
             label: 'For speed at $t = 1$, the proper notation is:',
-            options: ['$\\sqrt{(x\'(1))^2 + (y\'(1))^2} = \\sqrt{4 + 9} = \\sqrt{13}$', '$|x(1) + y(1)| = |1 + 1| = 2$', '$x\'(1) + y\'(1) = 2 + 3 = 5$', '$\\sqrt{1^2 + 1^2} = \\sqrt{2}$'],
+            options: ['$\\sqrt{(x\'(1))^2 + (y\'(1))^2} = \\sqrt{4 + 9} = \\sqrt{13}$', '$|x(1) + y(1)| = |1 + 1| = 2$', '$x\'(1) + y\'(1) = 2 + 3 = 5$', '$\\sqrt{(x(1))^2 + (y(1))^2} = \\sqrt{2}$'],
             correctAnswers: ['$\\sqrt{(x\'(1))^2 + (y\'(1))^2} = \\sqrt{4 + 9} = \\sqrt{13}$'],
             hints: ['Speed = magnitude of velocity vector.'],
             explanation: '$x\'(1) = 2$, $y\'(1) = 3$. Speed $= \\sqrt{4 + 9} = \\sqrt{13}$.'

@@ -18,27 +18,27 @@ Work through these problems combining all Lagrange error bound skills.`
         questions: [
           {
             question: '$T_6(x)$ for $\\cos x$ at $c = 0$. Lagrange bound for $|R_6(0.3)| \\le$',
-            options: ['$(0.3)^7/7! = 2187 \\times 10^{-7}/5040 \\approx 4.34 \\times 10^{-8}$', '$(0.3)^7/6!$', '$(0.3)^6/6!$', '$(0.3)^6/7!$'],
+            options: ['$(0.3)^7/7! \\approx 4.34 \\times 10^{-8}$', '$(0.3)^7/6! \\approx 3.04 \\times 10^{-7}$', '$(0.3)^6/6! \\approx 1.01 \\times 10^{-6}$', '$(0.3)^6/7! \\approx 1.45 \\times 10^{-7}$'],
             correctAnswer: 0,
-            explanation: '$M = 1$ for cosine. $|R_6| \\le (0.3)^7/7! = 2.187 \\times 10^{-4}/5040 \\approx 4.34 \\times 10^{-8}$.'
+            explanation: '$M = 1$ for cosine. $|R_6| \\le (0.3)^7/7! = 2.187 \\times 10^{-4}/5040 \\approx 4.34 \\times 10^{-8}$. Both the power and the factorial use $n + 1 = 7$; mixing $6$ and $7$ gives the other values.'
           },
           {
             question: 'A function satisfies $|f^{(n+1)}(t)| \\le 3^{n+1}$ on $[-1, 1]$. For $T_4(0.5)$, $|R_4| \\le$',
-            options: ['$3^5(0.5)^5/5! = 243/3840 \\approx 0.0633$', '$3^4(0.5)^4/4!$', '$3^5(0.5)^5/4!$', '$3^5(0.5)^4/5!$'],
+            options: ['$3^5(0.5)^5/5! \\approx 0.063$', '$3^4(0.5)^4/4! \\approx 0.211$', '$3^5(0.5)^5/4! \\approx 0.316$', '$3^5(0.5)^4/5! \\approx 0.127$'],
             correctAnswer: 0,
-            explanation: '$n = 4$: $M = 3^5 = 243$. $|R_4| \\le 243(0.5)^5/5! = 243(1/32)/120 = 243/3840 \\approx 0.0633$.'
+            explanation: '$n = 4$: $M = 3^5 = 243$. $|R_4| \\le 243(0.5)^5/5! = 243(1/32)/120 = 243/3840 \\approx 0.0633$. Every piece uses $n + 1 = 5$: $M = 3^5$, the power $(0.5)^5$, and $5!$.'
           },
           {
             question: 'For $e^x$ at $c = 0$, $x = -1$: $f^{(n+1)}(t) = e^t$. On $[-1, 0]$, $M =$',
-            options: ['$e^0 = 1$', '$e^{-1}$', '$e^1$', '$e^{-1/2}$'],
+            options: ['$e^0 = 1$', '$e^{-1} \\approx 0.368$', '$e^{1} \\approx 2.718$', '$e^{-1/2} \\approx 0.607$'],
             correctAnswer: 0,
-            explanation: '$e^t$ is increasing, so on $[-1, 0]$ the max is at $t = 0$: $M = e^0 = 1$.'
+            explanation: '$e^t$ is increasing, so on $[-1, 0]$ the max is at $t = 0$: $M = e^0 = 1$. $e^{-1}$ is the minimum (the wrong endpoint), $e^{1}$ lies outside the interval, and $e^{-1/2}$ is only the midpoint value.'
           },
           {
             question: 'Given $|R_3(x)| \\le 8|x - 2|^4/4!$, find the largest $|x - 2|$ so that $|R_3| < 0.01$.',
-            options: ['$|x - 2| < (0.01 \\cdot 24/8)^{1/4} = (0.03)^{1/4} \\approx 0.416$', '$|x - 2| < 0.01$', '$|x - 2| < (0.01 \\cdot 8/24)^{1/4}$', '$|x - 2| < 0.03$'],
+            options: ['$|x - 2| < (0.03)^{1/4} \\approx 0.416$', '$|x - 2| < (0.01/3)^{1/4} \\approx 0.240$', '$|x - 2| < (0.03)^{1/3} \\approx 0.311$', '$|x - 2| < 0.03$'],
             correctAnswer: 0,
-            explanation: '$8|x-2|^4/24 < 0.01 \\Rightarrow |x-2|^4 < 0.03 \\Rightarrow |x-2| < (0.03)^{1/4} \\approx 0.416$.'
+            explanation: '$8|x-2|^4/24 < 0.01 \\Rightarrow |x-2|^4 < 0.01 \\cdot 24/8 = 0.03 \\Rightarrow |x-2| < (0.03)^{1/4} \\approx 0.416$. Flipping $24/8$ gives $(0.01/3)^{1/4}$; forgetting the fourth root gives $0.03$; taking a cube root gives $0.311$.'
           }
         ]
       }
@@ -58,10 +58,10 @@ Work through these problems combining all Lagrange error bound skills.`
           },
           {
             label: 'For $e^{0.8}$ using $T_4$ at $c = 0$: best approach:',
-            options: ['Lagrange (series not alternating for $x > 0$): $M \\le 3$, bound = $3(0.8)^5/5!$', 'AST (terms eventually decrease)', 'Cannot bound — $e^x$ diverges', 'Use $M = 0.8$'],
-            correctAnswers: ['Lagrange (series not alternating for $x > 0$): $M \\le 3$, bound = $3(0.8)^5/5!$'],
+            options: ['Lagrange with $M = 3$: bound $3(0.8)^5/5!$', 'AST, since the terms eventually decrease', 'Lagrange with $M = 1$: bound $(0.8)^5/5!$', 'Lagrange with $M = 0.8$: bound $0.8(0.8)^5/5!$'],
+            correctAnswers: ['Lagrange with $M = 3$: bound $3(0.8)^5/5!$'],
             hints: ['All terms of $e^x$ positive for $x > 0$. Must use Lagrange.'],
-            explanation: '$e^x$ all positive terms. $M = e^{0.8} < 3$. $|R_4| \\le 3(0.8)^5/120 = 3(0.32768)/120 \\approx 0.00819$.'
+            explanation: '$e^x$ has all positive terms for $x > 0$, so AST does not apply. $M = e^{0.8} \\approx 2.23 < 3$ (not $1$, and not $0.8$, which is $x$ itself). $|R_4| \\le 3(0.8)^5/120 = 3(0.32768)/120 \\approx 0.00819$.'
           }
         ]
       }
@@ -72,10 +72,10 @@ Work through these problems combining all Lagrange error bound skills.`
       content: '**Workshop — Computation**',
       exercise: {
         question: 'Compute the Lagrange error bound for $T_3(0.4)$ for $e^x$ at $c = 0$ with $M = 3$. Give answer as a decimal to 5 places.',
-        correctAnswer: '0.00032',
-        acceptableAnswers: ['0.00032', '0.000320', '3.2e-4'],
+        correctAnswer: '0.0032',
+        acceptableAnswers: ['0.0032', '0.00320', '3.2e-3'],
         hints: ['$|R_3| \\le 3(0.4)^4/4!$.', '$(0.4)^4 = 0.0256$. $4! = 24$.'],
-        explanation: '$|R_3(0.4)| \\le 3(0.4)^4/4! = 3(0.0256)/24 = 0.0768/24 = 0.0032$. Correction: $= 0.0032$.'
+        explanation: '$|R_3(0.4)| \\le 3(0.4)^4/4! = 3(0.0256)/24 = 0.0768/24 = 0.0032$.'
       }
     },
     {

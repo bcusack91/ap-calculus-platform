@@ -14,7 +14,7 @@ export const calcbcReviewPart3Data = {
 |---------|------|----------------|---------|
 | Separable | $dy/dx = g(x)h(y)$ | Separate and integrate both sides | $dy/dx = xy$ |
 | Linear growth/decay | $dy/dt = ky$ | $y = Ce^{kt}$ | Radioactive decay |
-| Logistic | $dP/dt = kP(1-P/L)$ | $P = L/(1+Ae^{-kLt})$ | Population models |
+| Logistic | $dP/dt = kP(1-P/L)$ | $P = L/(1+Ae^{-kt})$ | Population models |
 | General | $dy/dx = f(x,y)$ | Euler's method (numerical) | Complex models |
 
 > **Key Insight:** Every integral is really solving the DE $dy/dx = f(x)$. Integration IS differential equations.`
@@ -42,15 +42,15 @@ export const calcbcReviewPart3Data = {
         questions: [
           {
             question: 'The solution to $dy/dx = 2x$ with $y(0) = 5$ can be found by:',
-            options: ['All of the methods below work', 'Separation: $\\int dy = \\int 2x\\,dx$', 'FTC: $y = 5 + \\int_0^x 2t\\,dt$', 'Taylor series: $y(0) = 5$, $y\'(0) = 0$, $y\'\'(0) = 2$'],
+            options: ['Any of the three methods listed', 'Separation: $\\int dy = \\int 2x\\,dx$', 'FTC: $y = 5 + \\int_0^x 2t\\,dt$', 'Taylor series: $y(0) = 5$, $y\'(0) = 0$, $y\'\'(0) = 2$'],
             correctAnswer: 0,
             explanation: 'All methods give $y = x^2 + 5$. Separation: $y = x^2 + C$, $C = 5$. FTC: $y = 5 + x^2$. Taylor: $5 + 0 \\cdot x + (2/2)x^2 = 5 + x^2$.'
           },
           {
             question: 'An Euler\'s method approximation with smaller step size $h$ is generally:',
-            options: ['More accurate but requires more steps', 'Less accurate', 'Exactly the same', 'Unstable'],
+            options: ['More accurate, but it takes more steps', 'Less accurate, because rounding error builds up over more steps', 'Exactly the same, since the slope field does not change', 'Less accurate, because each step uses a smaller slope'],
             correctAnswer: 0,
-            explanation: 'Smaller $h$ means more steps but better approximation. The error is roughly proportional to $h$.'
+            explanation: 'Smaller $h$ means more steps but a better approximation: the error is roughly proportional to $h$. The slope used at each step depends on the point, not on $h$, and rounding error is negligible at AP step sizes.'
           },
           {
             question: 'The logistic equation $dP/dt = 0.3P(1 - P/500)$ has equilibria at:',
@@ -69,14 +69,14 @@ export const calcbcReviewPart3Data = {
         dropdowns: [
           {
             label: '"Use Euler\'s method with $h = 0.1$ to approximate $y(0.3)$." This problem is:',
-            options: ['Numerical DE solving — iterate 3 steps', 'Analytical integration', 'Series expansion', 'Slope field sketching'],
+            options: ['Numerical DE solving — iterate 3 steps', 'Analytical integration — solve the DE exactly', 'Series expansion — use a Taylor polynomial', 'Slope field sketching — read off the value'],
             correctAnswers: ['Numerical DE solving — iterate 3 steps'],
             hints: ['$h = 0.1$ with $0.3 - 0 = 0.3$ means 3 steps.'],
             explanation: 'From $x = 0$ to $x = 0.3$ with $h = 0.1$: 3 Euler steps. Compute $y_{n+1} = y_n + 0.1 \\cdot f(x_n, y_n)$ three times.'
           },
           {
             label: '"Write the first four nonzero terms of the Taylor series for the solution of $y\' = y + x$, $y(0) = 1$." This requires:',
-            options: ['Computing successive derivatives at $x = 0$', 'Solving the DE analytically first', 'Using Euler\'s method', 'Finding the interval of convergence'],
+            options: ['Computing successive derivatives at $x = 0$', 'Separating the variables, then expanding $y$', 'Using Euler\'s method with $h = 0.1$', 'Finding the interval of convergence'],
             correctAnswers: ['Computing successive derivatives at $x = 0$'],
             hints: ['$y\'(0) = y(0) + 0 = 1$, $y\'\' = y\' + 1$, etc.'],
             explanation: '$y(0) = 1$, $y\'(0) = 1 + 0 = 1$, $y\'\'(0) = y\'(0) + 1 = 2$, $y\'\'\'(0) = y\'\'(0) + 0 = 2$. Series: $1 + x + x^2 + x^3/3 + \\cdots$.'

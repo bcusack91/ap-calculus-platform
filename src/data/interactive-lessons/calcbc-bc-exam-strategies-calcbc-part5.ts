@@ -56,15 +56,15 @@ Series questions appear on **both MC and FRQ** every year. Master this checklist
           },
           {
             question: '"Determine whether $\\sum_{n=1}^\\infty \\frac{n!}{3^n}$ converges." Best first test:',
-            options: ['Ratio test — factorial in numerator', 'Integral test', 'Comparison with geometric series', 'Alternating series test'],
+            options: ['Ratio test — factorial in numerator', 'Integral test — the terms are positive', 'Comparison with the geometric series $\\sum (1/3)^n$', 'Alternating series test — the terms decrease'],
             correctAnswer: 0,
-            explanation: 'Factorials → ratio test. $L = \\lim n!/3^n \\cdot 3^{n+1}/(n+1)! = \\lim n+1/3 = \\infty > 1$. Wait — $L = \\lim \\frac{(n+1)!}{3^{n+1}} \\cdot \\frac{3^n}{n!} = \\lim \\frac{n+1}{3} = \\infty$. Diverges.'
+            explanation: 'Factorials point to the ratio test: $L = \\lim \\frac{(n+1)!}{3^{n+1}} \\cdot \\frac{3^n}{n!} = \\lim \\frac{n+1}{3} = \\infty > 1$, so the series diverges. The terms are not decreasing and do not alternate, $n!$ has no easy antiderivative for the integral test, and $n!/3^n$ is larger than $(1/3)^n$, so that comparison proves nothing.'
           },
           {
             question: '"Find $\\int \\frac{dx}{x^2 + 4}$." This requires:',
-            options: ['Inverse tangent: $\\frac{1}{2}\\arctan(x/2) + C$', 'Partial fractions', 'Integration by parts', 'u-substitution with $u = x^2 + 4$'],
+            options: ['Inverse tangent: $\\frac{1}{2}\\arctan(x/2) + C$', 'Partial fractions: $\\frac{1}{4}\\ln\\left|\\frac{x-2}{x+2}\\right| + C$', 'Inverse tangent: $\\arctan(x/2) + C$', 'u-substitution: $\\ln|x^2 + 4| + C$'],
             correctAnswer: 0,
-            explanation: '$\\int \\frac{dx}{x^2 + a^2} = \\frac{1}{a}\\arctan(x/a) + C$. With $a = 2$: $\\frac{1}{2}\\arctan(x/2) + C$.'
+            explanation: '$\\int \\frac{dx}{x^2 + a^2} = \\frac{1}{a}\\arctan(x/a) + C$. With $a = 2$: $\\frac{1}{2}\\arctan(x/2) + C$. Dropping the $\\frac{1}{a}$ factor gives $\\arctan(x/2)$; $x^2 + 4$ does not factor over the reals, so partial fractions do not apply (that result belongs to $x^2 - 4$); and $u = x^2 + 4$ needs an $x$ in the numerator.'
           }
         ]
       }
@@ -77,21 +77,21 @@ Series questions appear on **both MC and FRQ** every year. Master this checklist
         dropdowns: [
           {
             label: '$\\sum_{n=1}^\\infty \\frac{(-1)^n}{\\sqrt{n}}$ — best test:',
-            options: ['Alternating Series Test', 'Ratio Test', 'Root Test', 'Integral Test'],
+            options: ['Alternating Series Test', 'Ratio Test on the absolute values', '$p$-series test with $p = 1/2$', 'Integral Test on $1/\\sqrt{x}$'],
             correctAnswers: ['Alternating Series Test'],
             hints: ['Alternating sign + decreasing terms + limit zero.'],
             explanation: 'Alternating, $1/\\sqrt{n} \\to 0$, decreasing. AST gives conditional convergence.'
           },
           {
             label: '$\\sum_{n=1}^\\infty \\frac{3^n}{n^2}$ — best test:',
-            options: ['Ratio Test (exponential dominates polynomial)', 'Comparison Test', 'Alternating Series Test', 'p-series test'],
-            correctAnswers: ['Ratio Test (exponential dominates polynomial)'],
+            options: ['Ratio Test', 'Comparison with $\\sum 1/n^2$', 'Alternating Series Test', 'p-series test'],
+            correctAnswers: ['Ratio Test'],
             hints: ['$3^n$ grows much faster than $n^2$.'],
             explanation: '$L = \\lim \\frac{3^{n+1}/(n+1)^2}{3^n/n^2} = 3\\lim(n/(n+1))^2 = 3 > 1$. Diverges.'
           },
           {
             label: '$\\sum_{n=1}^\\infty \\frac{1}{n^2 + n}$ — best test:',
-            options: ['Partial fractions → telescoping', 'Ratio Test', 'Root Test', 'Integral Test'],
+            options: ['Partial fractions → telescoping', 'Ratio Test', 'Root Test', 'Divergence Test — the terms go to 0'],
             correctAnswers: ['Partial fractions → telescoping'],
             hints: ['$1/(n^2+n) = 1/(n(n+1))$.'],
             explanation: '$1/(n(n+1)) = 1/n - 1/(n+1)$. Telescoping series: sum $= 1$.'

@@ -18,19 +18,19 @@ Work through these problems applying the complete Euler toolkit.`
         questions: [
           {
             question: '$dy/dx = e^{-x} - y$, $y(0) = 0$, $\\Delta x = 0.25$. What is $y(0.25)$?',
-            options: ['$0 + (1 - 0)(0.25) = 0.25$', '$0 + e^{-0.25}(0.25) = 0.195$', '$0.5$', '$0.125$'],
+            options: ['$0 + (1 - 0)(0.25) = 0.25$', '$0 + e^{-0.25}(0.25) = 0.195$', '$0 + (1 - 0) = 1$', '$0 + (e^{0.25} - 0)(0.25) = 0.321$'],
             correctAnswer: 0,
-            explanation: '$f(0, 0) = e^0 - 0 = 1$. $y(0.25) = 0 + 1(0.25) = 0.25$.'
+            explanation: '$f(0, 0) = e^0 - 0 = 1$. $y(0.25) = 0 + 1(0.25) = 0.25$. Using $x = 0.25$ evaluates the slope at the end of the step, dropping $\\Delta x$ gives 1, and $e^{0.25}$ is a sign slip in the exponent.'
           },
           {
             question: 'Continuing: $f(0.25, 0.25) = e^{-0.25} - 0.25 \\approx 0.779 - 0.25 = 0.529$. $y(0.5) \\approx$',
-            options: ['$0.25 + 0.529(0.25) \\approx 0.382$', '$0.25 + 0.529 = 0.779$', '$0.529(0.25) = 0.132$', '$0.25 + 0.25 = 0.5$'],
+            options: ['$0.25 + 0.529(0.25) \\approx 0.382$', '$0.25 + 0.779(0.25) \\approx 0.445$', '$0.529 + 0.529(0.25) \\approx 0.661$', '$0.25 + 0.529 = 0.779$'],
             correctAnswer: 0,
-            explanation: '$y(0.5) = 0.25 + 0.529(0.25) \\approx 0.382$.'
+            explanation: '$y(0.5) = 0.25 + 0.529(0.25) \\approx 0.382$. Using $e^{-0.25}$ alone drops the $-y$ term, starting from 0.529 confuses the slope with $y$, and adding 0.529 directly forgets $\\Delta x$.'
           },
           {
             question: 'For the ODE $dy/dx = y^2$, $y(0) = 1$, the exact solution blows up at $x = 1$. Will Euler detect this?',
-            options: ['Partially — $y$-values grow rapidly but never reach $\\infty$', 'Yes — Euler produces $\\infty$', 'No — Euler gives finite values everywhere', 'Euler gives negative values'],
+            options: ['Partially — $y$-values grow rapidly but never reach $\\infty$', 'Yes — Euler\'s values become infinite at $x = 1$', 'No — Euler\'s values stay bounded and level off', 'No — Euler\'s values turn negative after $x = 1$'],
             correctAnswer: 0,
             explanation: 'Euler will produce larger and larger $y$ values as $x \\to 1$, but won\'t produce literal infinity. The approximation grows dramatically.'
           }
@@ -52,14 +52,14 @@ Work through these problems applying the complete Euler toolkit.`
           },
           {
             label: 'Step 2: $f(0.1, 0.6) = 0.1 + 1.2 = 1.3$. $y(0.2) =$',
-            options: ['$0.6 + 1.3(0.1) = 0.73$', '$0.6 + 1.3 = 1.9$', '$0.5 + 1.3(0.1) = 0.63$', '$0.73 + 0.1 = 0.83$'],
+            options: ['$0.6 + 1.3(0.1) = 0.73$', '$0.6 + 1.3 = 1.9$', '$0.5 + 1.3(0.1) = 0.63$', '$0.6 + 1(0.1) = 0.7$'],
             correctAnswers: ['$0.6 + 1.3(0.1) = 0.73$'],
             hints: ['$y(0.2) = 0.6 + 1.3(0.1) = 0.73$.'],
             explanation: '$y(0.2) = 0.73$.'
           },
           {
             label: 'Step 3: $f(0.2, 0.73) = 0.2 + 1.46 = 1.66$. $y(0.3) =$',
-            options: ['$0.73 + 1.66(0.1) = 0.896$', '$0.73 + 1.66 = 2.39$', '$0.896 + 0.1 = 0.996$', '$0.6 + 1.66(0.1) = 0.766$'],
+            options: ['$0.73 + 1.66(0.1) = 0.896$', '$0.73 + 1.66 = 2.39$', '$0.73 + 1.46(0.1) = 0.876$', '$0.6 + 1.66(0.1) = 0.766$'],
             correctAnswers: ['$0.73 + 1.66(0.1) = 0.896$'],
             hints: ['$y(0.3) = 0.73 + 1.66(0.1)$.'],
             explanation: '$y(0.3) \\approx 0.896$.'

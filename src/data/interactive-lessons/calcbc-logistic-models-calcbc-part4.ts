@@ -38,7 +38,7 @@ $dP/dt = 0.1P(1 - P/2000)$, $P(0) = 100$.
 
 **(c)** $A = (2000 - 100)/100 = 19$. $P(t) = \\frac{2000}{1 + 19e^{-0.1t}}$
 
-**(d)** $4000/(1 + 19e^{-0.1t}) = 4000$... wait, that's above $L$. If $P_{\\text{target}} = 1500$:
+**(d)** When does the population reach 1500? (Any target must be below $L = 2000$.) Set $\\frac{2000}{1 + 19e^{-0.1t}} = 1500$:
 $$1 + 19e^{-0.1t} = 2000/1500 = 4/3 \\quad \\Rightarrow \\quad e^{-0.1t} = 1/57 \\quad \\Rightarrow \\quad t = \\frac{\\ln 57}{0.1} \\approx 40.4$$
 
 > **AP Tip:** Always check units and whether the target population is below $L$. A logistic model never exceeds $L$ (when starting below it).`
@@ -70,21 +70,21 @@ Notice: $\\Delta P$ increases until $P$ passes $L/2 = 50$, then decreases.`
         questions: [
           {
             question: 'A rumor spreads through a school of 800 students at rate $dN/dt = 0.02N(800 - N)$. In standard form, $k =$',
-            options: ['$k = 16$ (rewrite as $16N(1 - N/800)$)', '$k = 0.02$', '$k = 800$', '$k = 0.02 \\cdot 800 = 16$'],
+            options: ['$k = 0.02(800) = 16$', '$k = 0.02$, read from $0.02N$', '$k = 800$, the school size', '$k = 0.02/800 = 0.000025$'],
             correctAnswer: 0,
-            explanation: '$0.02N(800 - N) = 0.02 \\cdot 800 \\cdot N(1 - N/800) = 16N(1 - N/800)$. $k = 16$.'
+            explanation: '$0.02N(800 - N) = 0.02 \\cdot 800 \\cdot N(1 - N/800) = 16N(1 - N/800)$, so $k = 16$ and $L = 800$. The 0.02 must be multiplied by 800, not read off alone or divided by 800.'
           },
           {
             question: 'In the rumor problem, when is the rumor spreading fastest?',
-            options: ['When 400 students know it ($N = L/2$)', 'When 800 students know it', 'At $t = 0$', 'When 200 students know it'],
+            options: ['When 400 students know it ($N = L/2$)', 'When 800 students know it ($N = L$)', 'At the start, when $t = 0$', 'When 200 students know it ($L/4$)'],
             correctAnswer: 0,
             explanation: 'Max spread rate at $N = L/2 = 400$.'
           },
           {
             question: 'A logistic model has $P(0) = 50$ and $L = 1000$. As $t \\to \\infty$:',
-            options: ['$P \\to 1000$ and $dP/dt \\to 0$', '$P \\to \\infty$', '$P$ oscillates around 1000', '$P \\to 50$'],
+            options: ['$P \\to 1000$ and $dP/dt \\to 0$', '$P \\to 1000$ and $dP/dt \\to kL/4$', '$P \\to \\infty$ and $dP/dt \\to \\infty$', '$P \\to 500$ and $dP/dt \\to 0$'],
             correctAnswer: 0,
-            explanation: '$P \\to L = 1000$ and the growth rate approaches 0 as $P$ nears carrying capacity.'
+            explanation: '$P \\to L = 1000$ and the growth rate approaches 0 as $P$ nears carrying capacity. The rate $kL/4$ is the maximum, reached at $P = 500$, not the limit.'
           }
         ]
       }
@@ -104,10 +104,10 @@ Notice: $\\Delta P$ increases until $P$ passes $L/2 = 50$, then decreases.`
           },
           {
             label: 'The maximum growth rate for this population is:',
-            options: ['$kL/4 = 0.5(10000)/4 = 1250$ bacteria/time', '$450$', '$kL = 5000$', '$10000/4 = 2500$'],
-            correctAnswers: ['$kL/4 = 0.5(10000)/4 = 1250$ bacteria/time'],
+            options: ['$kL/4 = 0.5(10000)/4 = 1250$', '$kL = 0.5(10000) = 5000$', '$L/4 = 10000/4 = 2500$', '$450$, the rate at $t = 0$'],
+            correctAnswers: ['$kL/4 = 0.5(10000)/4 = 1250$'],
             hints: ['Max rate $= kL/4$.'],
-            explanation: 'Max rate $= 0.5(10000)/4 = 1250$, occurring when $P = 5000$.'
+            explanation: 'Max rate $= kL/4 = 0.5(10000)/4 = 1250$ bacteria per unit time, occurring when $P = 5000$. The initial rate 450 is not the maximum.'
           }
         ]
       }

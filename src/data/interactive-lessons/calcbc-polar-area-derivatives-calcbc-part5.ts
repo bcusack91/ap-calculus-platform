@@ -33,7 +33,7 @@ The AP BC exam typically includes a polar/parametric FRQ. Here are the most comm
 
 Intersections: $3+2\\sin\\theta = 2 \\implies \\sin\\theta = -1/2 \\implies \\theta = 7\\pi/6, 11\\pi/6$.
 
-On $(7\\pi/6, 11\\pi/6)$: $r_{\\text{lima}} < 2$ (circle is outer). On the rest: lima\\c{c}on is outer.
+On $(7\\pi/6, 11\\pi/6)$: $r_{\\text{lima}} < 2$ (circle is outer). On the rest: limaçon is outer.
 
 $$A = \\frac{1}{2}\\int_{-\\pi/6}^{7\\pi/6}[(3+2\\sin\\theta)^2 - 4]\\,d\\theta$$
 

@@ -62,22 +62,22 @@ $$|R_n| \\le |a_{n+1}| \\quad \\text{(first omitted term)}$$
       exercise: {
         questions: [
           {
-            question: 'To approximate $\\sin(1)$ within $10^{-5}$ using Maclaurin polynomials, which is the smallest $n$ that guarantees the bound? ($M = 1$)',
-            options: ['$n = 7$ since $(1)^8/8! \\approx 2.48 \\times 10^{-5}$ fails, but $n = 9$ gives $(1)^{10}/10! \\approx 2.76 \\times 10^{-7}$', '$n = 5$', '$n = 3$', '$n = 11$'],
+            question: 'To approximate $\\sin(1)$ within $10^{-5}$ using Maclaurin polynomials, which is the smallest odd $n$ whose Lagrange bound $1^{n+1}/(n+1)!$ guarantees the accuracy? ($M = 1$)',
+            options: ['$n = 9$', '$n = 7$', '$n = 5$', '$n = 11$'],
             correctAnswer: 0,
-            explanation: 'Check: $1^8/8! = 1/40320 \\approx 2.48 \\times 10^{-5} > 10^{-5}$. So $n=7$ fails. $1^{10}/10! = 1/3628800 \\approx 2.76 \\times 10^{-7} < 10^{-5}$. $n = 9$ works.'
+            explanation: 'Check: $n = 7$ gives $1^8/8! = 1/40320 \\approx 2.48 \\times 10^{-5}$, which is LARGER than $10^{-5}$, so $n = 7$ fails. $n = 9$ gives $1^{10}/10! = 1/3628800 \\approx 2.76 \\times 10^{-7} < 10^{-5}$, so $n = 9$ works. $n = 5$ gives $1/6! \\approx 1.4 \\times 10^{-3}$ (far too big), and $n = 11$ works but is not the smallest.'
           },
           {
             question: 'Why might the alternating series error bound require fewer terms than Lagrange?',
-            options: ['AST uses the exact next term, while Lagrange uses a max bound on the derivative', 'AST has a smaller $M$', 'Lagrange only works for polynomials', 'AST applies to all series'],
+            options: ['AST uses the actual next term; Lagrange uses a worst-case $M$', 'AST always uses $M = 1$, which is smaller than Lagrange\'s $M$', 'Lagrange only applies to polynomials, not to infinite series', 'AST bounds the error by half the next term, not the whole term'],
             correctAnswer: 0,
-            explanation: 'The AST bound $|a_{n+1}|$ is the exact magnitude of the next term, while Lagrange bounds the derivative crudely over the whole interval.'
+            explanation: 'The AST bound $|a_{n+1}|$ is the exact magnitude of the next term, while Lagrange bounds the derivative crudely over the whole interval. AST has no $M$ at all, Lagrange is built for Taylor polynomials of any function, and the AST bound is the whole first omitted term, not half of it.'
           },
           {
             question: 'For $e^{-x}$ at $x = 0.5$, which $M$ is appropriate for Lagrange?',
-            options: ['$M = e^0 = 1$ since $|e^{-t}|$ is max at $t = 0$', '$M = e^{0.5}$', '$M = e^{-0.5}$', '$M = 0.5$'],
+            options: ['$M = e^{0} = 1$', '$M = e^{0.5} \\approx 1.65$', '$M = e^{-0.5} \\approx 0.61$', '$M = |x - c| = 0.5$'],
             correctAnswer: 0,
-            explanation: '$f^{(n+1)}(t) = \\pm e^{-t}$. On $[0, 0.5]$, $|e^{-t}|$ achieves its max at $t = 0$: $M = e^0 = 1$.'
+            explanation: '$f^{(n+1)}(t) = \\pm e^{-t}$. On $[0, 0.5]$, $|e^{-t}|$ is decreasing, so it achieves its max at $t = 0$: $M = e^0 = 1$. $e^{-0.5}$ is the minimum (the wrong endpoint), $e^{0.5}$ comes from dropping the minus sign, and $0.5$ is $|x - c|$, which is a different factor in the bound.'
           }
         ]
       }
@@ -89,18 +89,18 @@ $$|R_n| \\le |a_{n+1}| \\quad \\text{(first omitted term)}$$
       exercise: {
         dropdowns: [
           {
-            label: 'To approximate $\\cos(0.1)$ within $10^{-8}$, the minimum $n$ is:',
-            options: ['$n = 4$ since $(0.1)^5/5! = 10^{-5}/120 \\approx 8.33 \\times 10^{-8}$; try $n = 6$: $(0.1)^7/7! \\approx 1.98 \\times 10^{-11}$', '$n = 2$', '$n = 8$', '$n = 10$'],
-            correctAnswers: ['$n = 4$ since $(0.1)^5/5! = 10^{-5}/120 \\approx 8.33 \\times 10^{-8}$; try $n = 6$: $(0.1)^7/7! \\approx 1.98 \\times 10^{-11}$'],
+            label: 'To approximate $\\cos(0.1)$ within $10^{-8}$, the smallest even $n$ whose Lagrange bound $(0.1)^{n+1}/(n+1)!$ is below $10^{-8}$ is:',
+            options: ['$n = 6$', '$n = 4$', '$n = 2$', '$n = 8$'],
+            correctAnswers: ['$n = 6$'],
             hints: ['$M = 1$. Compute $(0.1)^{n+1}/(n+1)!$ for various $n$.'],
-            explanation: '$n=4$: $(0.1)^5/120 \\approx 8.33 \\times 10^{-8}$: not $< 10^{-8}$. $n=6$: $(0.1)^7/5040 \\approx 1.98 \\times 10^{-11} < 10^{-8}$. $n = 6$.'
+            explanation: '$n=4$: $(0.1)^5/120 \\approx 8.33 \\times 10^{-8}$, which is NOT below $10^{-8}$. $n=6$: $(0.1)^7/5040 \\approx 1.98 \\times 10^{-11} < 10^{-8}$ ✓. So $n = 6$ ($n = 8$ also works but is not the smallest).'
           },
           {
             label: 'For $e^{0.5}$ within $10^{-3}$ (center $0$, $M = 2$): minimum $n$:',
-            options: ['$n = 4$ since $2(0.5)^5/5! = 2(1/32)/120 \\approx 5.2 \\times 10^{-4}$', '$n = 2$', '$n = 3$', '$n = 6$'],
-            correctAnswers: ['$n = 4$ since $2(0.5)^5/5! = 2(1/32)/120 \\approx 5.2 \\times 10^{-4}$'],
+            options: ['$n = 4$', '$n = 3$', '$n = 2$', '$n = 5$'],
+            correctAnswers: ['$n = 4$'],
             hints: ['$(0.5)^{n+1}$ shrinks rapidly. Compute $2(0.5)^{n+1}/(n+1)!$.'],
-            explanation: '$n=3$: $2(0.5)^4/4! = 2(1/16)/24 \\approx 0.00521 > 10^{-3}$. $n=4$: $2(0.5)^5/5! = 2/3840 \\approx 5.2 \\times 10^{-4} < 10^{-3}$.'
+            explanation: '$n=3$: $2(0.5)^4/4! = 2(1/16)/24 \\approx 0.00521 > 10^{-3}$, so $n = 3$ fails. $n=4$: $2(0.5)^5/5! = 2/3840 \\approx 5.2 \\times 10^{-4} < 10^{-3}$ ✓. (Writing $n!$ instead of $(n+1)!$ makes $n = 4$ look too big and pushes the answer to $5$.)'
           }
         ]
       }
@@ -110,11 +110,11 @@ $$|R_n| \\le |a_{n+1}| \\quad \\text{(first omitted term)}$$
       type: 'input-box' as const,
       content: '**Finding n**',
       exercise: {
-        question: 'What is the minimum degree $n$ such that $T_n(x)$ for $\\sin(0.5)$ (at $c = 0$) is accurate to within $10^{-8}$? Enter just the number.',
+        question: 'For $\\sin(0.5)$ (at $c = 0$, $M = 1$), what is the smallest odd $n$ whose Lagrange bound $(0.5)^{n+1}/(n+1)!$ is below $10^{-8}$? Enter just the number.',
         correctAnswer: '9',
         acceptableAnswers: ['9'],
-        hints: ['$M = 1$. Check $(0.5)^{n+1}/(n+1)!$ starting from small $n$.', 'Try $n = 7$: $(0.5)^8/8! = 1/256/40320 \\approx 9.54 \\times 10^{-8}$. Not quite. $n = 9$: $(0.5)^{10}/10!$.'],
-        explanation: '$n=7$: $(0.5)^8/8! \\approx 9.54 \\times 10^{-8} > 10^{-8}$. $n=9$: $(0.5)^{10}/10! = 1/1024/3628800 \\approx 2.69 \\times 10^{-10} < 10^{-8}$. Minimum $n = 9$.'
+        hints: ['$M = 1$. Check $(0.5)^{n+1}/(n+1)!$ starting from small $n$.', 'Try $n = 7$: $(0.5)^8/8! = (1/256)/40320 \\approx 9.69 \\times 10^{-8}$. Not quite. $n = 9$: $(0.5)^{10}/10!$.'],
+        explanation: '$n=7$: $(0.5)^8/8! \\approx 9.69 \\times 10^{-8} > 10^{-8}$. $n=9$: $(0.5)^{10}/10! = 1/1024/3628800 \\approx 2.69 \\times 10^{-10} < 10^{-8}$. Minimum $n = 9$.'
       }
     },
     {

@@ -79,21 +79,21 @@ At $t \\approx 6.93$, the population is growing fastest: $dP/dt = kL/4 = 0.2(500
         questions: [
           {
             question: 'For $P(t) = 2000/(1 + 19e^{-0.4t})$, the inflection point occurs at:',
-            options: ['$P = 1000$ at $t = \\ln(19)/0.4 \\approx 7.36$', '$P = 2000$ at $t = 0$', '$P = 500$ at $t = 5$', '$P = 1000$ at $t = 19/0.4$'],
+            options: ['$P = 1000$ at $t = \\ln(19)/0.4 \\approx 7.36$', '$P = 1000$ at $t = 19/0.4 = 47.5$', '$P = 1000$ at $t = -\\ln(19)/0.4$', '$P = 2000$ at $t = \\ln(19)/0.4$'],
             correctAnswer: 0,
-            explanation: '$L = 2000$, inflection at $P = L/2 = 1000$. $t = \\ln(19)/0.4 \\approx 2.944/0.4 \\approx 7.36$.'
+            explanation: '$L = 2000$, inflection at $P = L/2 = 1000$, which happens when $19e^{-0.4t} = 1$: $t = \\ln(19)/0.4 \\approx 2.944/0.4 \\approx 7.36$. Omitting the log gives 47.5, and $P = 2000$ is the carrying capacity, which is never reached.'
           },
           {
             question: 'When $P$ is slightly above $L/2$, the population is:',
-            options: ['Growing (concave down) — growth is decelerating', 'Growing (concave up) — growth is accelerating', 'Decreasing', 'At equilibrium'],
+            options: ['Growing (concave down) — growth is decelerating', 'Growing (concave up) — growth is accelerating', 'Growing (linear) — growth rate is constant', 'Decreasing (concave down) — growth reversed'],
             correctAnswer: 0,
             explanation: 'Above $L/2$ but below $L$: $dP/dt > 0$ (growing) and $d^2P/dt^2 < 0$ (concave down, decelerating).'
           },
           {
             question: 'The equilibrium $P = 0$ is unstable because:',
-            options: ['Any positive perturbation causes $P$ to grow away from 0', '$P = 0$ is a local maximum', 'The slope is zero', '$k > 0$'],
+            options: ['A small positive $P$ grows away from 0', 'A small positive $P$ decays back toward 0', '$dP/dt = 0$ at $P = 0$, and every equilibrium is unstable', '$P = 0$ is where $dP/dt$ reaches its maximum'],
             correctAnswer: 0,
-            explanation: 'If $P$ is slightly positive, $dP/dt = kP(1 - P/L) > 0$, so $P$ increases away from 0.'
+            explanation: 'If $P$ is slightly positive, $dP/dt = kP(1 - P/L) > 0$, so $P$ increases away from 0. $dP/dt = 0$ at every equilibrium, including the stable one at $P = L$, so a zero slope alone does not decide stability.'
           }
         ]
       }
@@ -106,17 +106,17 @@ At $t \\approx 6.93$, the population is growing fastest: $dP/dt = kL/4 = 0.2(500
         dropdowns: [
           {
             label: '$L = 600$. When $P = 200$ (below $L/2 = 300$), the curve is:',
-            options: ['Concave up (growth accelerating)', 'Concave down (growth decelerating)', 'Linear', 'At inflection'],
+            options: ['Concave up (growth accelerating)', 'Concave down (growth decelerating)', 'Linear (growth rate constant)', 'At inflection (growth at its maximum)'],
             correctAnswers: ['Concave up (growth accelerating)'],
             hints: ['$P < L/2$ → concave up.'],
             explanation: '$200 < 300 = L/2$, so concave up.'
           },
           {
             label: '$L = 600$. When $P = 450$ (above $L/2 = 300$), the curve is:',
-            options: ['Concave down (growth decelerating)', 'Concave up (growth accelerating)', 'At inflection', 'Decreasing'],
+            options: ['Concave down (growth decelerating)', 'Concave up (growth accelerating)', 'At inflection (growth at its maximum)', 'Decreasing (past carrying capacity)'],
             correctAnswers: ['Concave down (growth decelerating)'],
             hints: ['$P > L/2$ → concave down.'],
-            explanation: '$450 > 300 = L/2$. Concave down.'
+            explanation: '$450 > 300 = L/2$ and $450 < 600 = L$, so the population is still growing but concave down.'
           }
         ]
       }
@@ -128,7 +128,7 @@ At $t \\approx 6.93$, the population is growing fastest: $dP/dt = kL/4 = 0.2(500
       exercise: {
         question: '$P(t) = 800/(1 + 7e^{-0.5t})$. At what time does the inflection point occur? Give your answer as $\\ln(7)/0.5$. Compute to one decimal place.',
         correctAnswer: '3.9',
-        acceptableAnswers: ['3.9', '3.89', '3.8', '3.891'],
+        acceptableAnswers: ['3.9', '3.89', '3.891'],
         hints: ['$t = \\ln(A)/k = \\ln(7)/0.5$. $\\ln(7) \\approx 1.946$.'],
         explanation: '$t = \\ln(7)/0.5 \\approx 1.946/0.5 \\approx 3.9$.'
       }

@@ -27,15 +27,15 @@ Work through these problems systematically. For each, identify whether to apply 
         questions: [
           {
             question: '$\\sum_{n=2}^\\infty \\frac{(-1)^n}{n \\ln n}$. Does this converge?',
-            options: ['Yes — AST ($b_n$ decreasing, $\\to 0$)', 'No — Divergence Test', 'No — Integral Test shows divergence', 'Cannot determine'],
+            options: ['Yes — AST ($b_n$ decreasing, $\\to 0$)', 'No — Ratio Test gives $L = 1$', 'No — Integral Test shows divergence', 'Cannot determine'],
             correctAnswer: 0,
-            explanation: '$b_n = 1/(n\\ln n)$: positive ✓, decreasing ✓, $\\to 0$ ✓. Converges by AST. (Note: $\\sum 1/(n\\ln n)$ diverges by Integral Test, so this is conditional convergence.)'
+            explanation: '$b_n = 1/(n\\ln n)$: positive ✓, decreasing ✓, $\\to 0$ ✓. Converges by AST. (Note: $\\sum 1/(n\\ln n)$ diverges by Integral Test, so this is conditional convergence. A Ratio Test value of $L = 1$ is inconclusive, never a proof of divergence.)'
           },
           {
             question: '$\\sum_{n=1}^\\infty \\frac{(-1)^n 2^n}{n!}$. Classify this series:',
-            options: ['Absolutely convergent', 'Conditionally convergent', 'Divergent', 'Test inconclusive'],
+            options: ['Absolutely convergent', 'Conditionally convergent', 'Divergent, since $2^n$ grows without bound', 'Inconclusive — $b_n$ is not decreasing at the start'],
             correctAnswer: 0,
-            explanation: '$\\sum |a_n| = \\sum 2^n/n!$. Ratio test: $2/(n+1) \\to 0 < 1$. $\\sum |a_n|$ converges. Absolute convergence.'
+            explanation: '$\\sum |a_n| = \\sum 2^n/n!$. Ratio test: $2/(n+1) \\to 0 < 1$. $\\sum |a_n|$ converges, so the series converges absolutely. Although $2^n$ grows, $n!$ grows faster, and $b_n$ only has to decrease eventually ($b_1 = b_2 = 2$, then it decreases).'
           },
           {
             question: 'True or False: If $\\sum (-1)^n a_n$ converges and $a_n > 0$, then $a_n \\to 0$.',
@@ -61,10 +61,10 @@ Work through these problems systematically. For each, identify whether to apply 
           },
           {
             label: 'For $\\sum_{n=0}^\\infty (-1)^n x^{2n}/(2n)! = \\cos x$, at $x = 0.3$, how many terms ensure error $< 10^{-6}$?',
-            options: ['3 terms ($0.3^6/6! \\approx 1.0 \\times 10^{-6}$, need 4)', '2 terms', '4 terms', '5 terms'],
-            correctAnswers: ['3 terms ($0.3^6/6! \\approx 1.0 \\times 10^{-6}$, need 4)'],
+            options: ['4 terms', '2 terms', '3 terms', '5 terms'],
+            correctAnswers: ['4 terms'],
             hints: ['Error after $k$ terms $\\le (0.3)^{2k}/(2k)!$.'],
-            explanation: 'After 3 terms: error $\\le 0.3^6/6! = 7.29\\times10^{-4}/720 \\approx 1.01\\times 10^{-6}$. Barely exceeds! After 4: $0.3^8/8! \\approx 1.6\\times10^{-8}$. Need 4 terms.'
+            explanation: 'After 3 terms: error $\\le 0.3^6/6! = 7.29\\times10^{-4}/720 \\approx 1.01\\times 10^{-6}$, which just barely exceeds $10^{-6}$. After 4 terms: error $\\le 0.3^8/8! \\approx 1.6\\times10^{-9}$ ✓. Need 4 terms.'
           }
         ]
       }

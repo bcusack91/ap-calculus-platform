@@ -44,9 +44,9 @@ export const calcbcPowerSeriesPart6Data = {
           },
           {
             question: 'If $f(x) = \\sum_{n=0}^\\infty a_n x^n$ with $a_n = 2^n/n!$, then $\\int_0^1 f(x)\\,dx =$',
-            options: ['$(e^2 - 1)/2$', '$e^2$', '$e^2 - 1$', '$2(e-1)$'],
+            options: ['$(e^2 - 1)/2$', '$2(e^2 - 1)$', '$e^2 - 1$', '$2(e-1)$'],
             correctAnswer: 0,
-            explanation: '$f(x) = \\sum (2x)^n/n! = e^{2x}$. $\\int_0^1 e^{2x}\\,dx = [e^{2x}/2]_0^1 = (e^2-1)/2$.'
+            explanation: '$f(x) = \\sum (2x)^n/n! = e^{2x}$. $\\int_0^1 e^{2x}\\,dx = [e^{2x}/2]_0^1 = (e^2-1)/2$. Multiplying by 2 instead of dividing gives $2(e^2-1)$; dropping the $1/2$ gives $e^2 - 1$.'
           }
         ]
       }
@@ -66,10 +66,10 @@ export const calcbcPowerSeriesPart6Data = {
           },
           {
             label: '$\\sum_{n=0}^\\infty \\frac{x^n}{n^2 + 1}$. Radius of convergence:',
-            options: ['$R = 1$ (ratio of coefficients $\\to 1$)', '$R = \\infty$', '$R = 0$', '$R = 2$'],
-            correctAnswers: ['$R = 1$ (ratio of coefficients $\\to 1$)'],
+            options: ['$R = 1$', '$R = \\infty$', '$R = 0$', '$R = 2$'],
+            correctAnswers: ['$R = 1$'],
             hints: ['$|a_{n+1}/a_n| = (n^2+1)/((n+1)^2+1) \\to 1$.'],
-            explanation: '$R = 1/\\lim|a_{n+1}/a_n| = 1/1 = 1$.'
+            explanation: '$R = 1/\\lim|a_{n+1}/a_n| = 1/1 = 1$, since $(n^2+1)/((n+1)^2+1) \\to 1$. A polynomial in the denominator does not give $R = \\infty$ (that takes something like $n!$).'
           }
         ]
       }

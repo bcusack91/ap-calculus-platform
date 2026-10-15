@@ -12,10 +12,10 @@ export const calcbcExamStrategyPart4Data = {
 
 | Section | Time | Per Question | Strategy |
 |---------|------|--------------|----------|
-| MC No-Calc | 60 min | 2 min | Fast; skip hard ones |
-| MC Calc | 45 min | 3 min | Use calculator efficiently |
-| FRQ Calc | 30 min | 15 min | Graph first, compute second |
-| FRQ No-Calc | 60 min | 15 min | Show all work; answer every part |
+| MC No-Calc (29 Q) | 62 min | ~2.1 min | Fast; skip hard ones |
+| MC Calc (13 Q) | 38 min | ~2.9 min | Use calculator efficiently |
+| FRQ Calc (2 Q) | 30 min | 15 min | Graph first, compute second |
+| FRQ No-Calc (4 Q) | 60 min | 15 min | Show all work; answer every part |
 
 > **AP Tip:** On FRQs, you can work on ANY question in the current section. If stuck on one, move to another and return.`
     },
@@ -45,19 +45,19 @@ export const calcbcExamStrategyPart4Data = {
         questions: [
           {
             question: 'A student writes $\\frac{d^2y}{dx^2} = \\frac{y\'\'(t)}{x\'\'(t)}$. This is:',
-            options: ['Incorrect — the formula is $\\frac{d}{dt}[dy/dx] \\div \\frac{dx}{dt}$', 'Correct for parametric curves', 'Correct only when $t$ is time', 'Correct when $x\'(t) \\neq 0$'],
+            options: ['Incorrect — use $\\frac{d}{dt}[dy/dx] \\div \\frac{dx}{dt}$', 'Correct — it is the parametric formula', 'Correct, but only when $t$ is time', 'Correct whenever $x\'(t) \\neq 0$'],
             correctAnswer: 0,
             explanation: 'The second derivative $d^2y/dx^2 \\neq y\'\'(t)/x\'\'(t)$. Correct formula: differentiate $dy/dx = y\'(t)/x\'(t)$ with respect to $t$, then divide by $x\'(t)$.'
           },
           {
             question: 'A student applies the ratio test to $\\sum (-1)^n/n$ and gets $L = 1$. They conclude the series diverges. This is:',
-            options: ['Incorrect — ratio test is inconclusive when $L = 1$; AST shows convergence', 'Correct — $L = 1$ means divergence', 'Incorrect — should have used the root test', 'Correct — all alternating series diverge'],
+            options: ['Incorrect — $L = 1$ is inconclusive; the AST gives convergence', 'Correct — $L = 1$ means divergence', 'Incorrect — it should use the root test', 'Correct — alternating series diverge'],
             correctAnswer: 0,
-            explanation: '$L = 1$ means the ratio test is inconclusive. The alternating series test shows $\\sum (-1)^n/n$ converges (alternating harmonic series).'
+            explanation: '$L = 1$ means the ratio test is inconclusive (the root test is inconclusive here too). The alternating series test shows $\\sum (-1)^n/n$ converges (alternating harmonic series); many alternating series converge.'
           },
           {
             question: 'On a polar area problem, a student writes $A = \\int_0^{\\pi} r^2\\,d\\theta$ instead of $A = \\frac{1}{2}\\int_0^{\\pi} r^2\\,d\\theta$. This costs:',
-            options: ['Setup points — the $1/2$ is required', 'Nothing — the reader will assume they meant $1/2$', 'Only the final numerical answer point', 'All 9 points on the problem'],
+            options: ['Setup points — the $1/2$ is required', 'Nothing — the reader will assume they meant $1/2$', 'Only the final numerical answer point', 'All 9 points — the entire problem is voided'],
             correctAnswer: 0,
             explanation: 'The $1/2$ in the polar area formula is essential. Missing it loses setup/integrand points.'
           }
@@ -72,14 +72,14 @@ export const calcbcExamStrategyPart4Data = {
         dropdowns: [
           {
             label: 'You\'ve spent 4 minutes on an MC question with no progress. Best action:',
-            options: ['Mark it and move on — come back if time permits', 'Keep working — you\'re almost there', 'Guess randomly and leave', 'Skip it permanently'],
-            correctAnswers: ['Mark it and move on — come back if time permits'],
+            options: ['Mark it, move on, and come back later', 'Keep working — you are almost certain to crack it', 'Restart it from scratch with a brand-new method', 'Leave it blank for good — blanks cost nothing'],
+            correctAnswers: ['Mark it, move on, and come back later'],
             hints: ['Each MC question is worth the same. Don\'t sacrifice 2–3 easier questions for one hard one.'],
             explanation: 'One hard question isn\'t worth missing several easier ones. Mark and return with fresh eyes.'
           },
           {
             label: 'On an FRQ, you can\'t solve part (b) but can do parts (c) and (d). You should:',
-            options: ['Skip (b) and do (c) and (d) — they may be independent', 'Give up on the whole question', 'Spend all remaining time on (b)', 'Write "see part (a)" for parts (c) and (d)'],
+            options: ['Skip (b) and do (c) and (d) — they may be independent', 'Stop the whole question — later parts need the answer to (b)', 'Spend all remaining time on (b) before touching (c) or (d)', 'Write "see part (a)" for parts (c) and (d)'],
             correctAnswers: ['Skip (b) and do (c) and (d) — they may be independent'],
             hints: ['FRQ parts are often (but not always) independent.'],
             explanation: 'Parts (c) and (d) may not depend on (b). Even if they do, you can often use "the result from (b)" as a placeholder and earn method points.'

@@ -59,15 +59,15 @@ The alternating bound is usually tighter and easier. Use it when available!`
           },
           {
             question: 'How many nonzero terms of the Maclaurin series for $\\sin(0.1)$ guarantee error $< 10^{-10}$?',
-            options: ['2 terms', '3 terms', '4 terms', '5 terms'],
+            options: ['3 terms', '2 terms', '4 terms', '5 terms'],
             correctAnswer: 0,
-            explanation: 'Terms: $0.1 - 0.1^3/6 + \\cdots$. Error after 2 terms $\\le 0.1^5/120 = 10^{-5}/120 \\approx 8.3 \\times 10^{-8} < 10^{-10}$? No. Let me recalculate: $0.1^5/5! = 10^{-5}/120 \\approx 8.3 \\times 10^{-8}$. That\'s not $< 10^{-10}$. After 3 terms: error $\\le 0.1^7/7! = 10^{-7}/5040 \\approx 2\\times 10^{-11} < 10^{-10}$ ✓. So 3 terms.'
+            explanation: 'Terms: $0.1 - 0.1^3/3! + 0.1^5/5! - \\cdots$. After 2 terms the error is at most $0.1^5/5! = 10^{-5}/120 \\approx 8.3 \\times 10^{-8}$, which is NOT below $10^{-10}$. After 3 terms the error is at most $0.1^7/7! = 10^{-7}/5040 \\approx 2 \\times 10^{-11} < 10^{-10}$ ✓. So 3 terms.'
           },
           {
             question: 'The alternating series error bound can be used for the Taylor series of $\\ln(1+x)$ centered at $0$ when:',
-            options: ['$0 < x \\le 1$', 'All $x$', '$-1 < x < 1$', '$x > 1$'],
+            options: ['$0 < x \\le 1$', '$-1 < x \\le 1$', '$-1 < x < 1$', '$x > 1$'],
             correctAnswer: 0,
-            explanation: '$\\ln(1+x) = \\sum (-1)^{n+1} x^n/n$ for $-1 < x \\le 1$. It alternates when $x > 0$. At $x = 1$ it still alternates. So for $0 < x \\le 1$.'
+            explanation: '$\\ln(1+x) = \\sum (-1)^{n+1} x^n/n$ for $-1 < x \\le 1$ (the full interval of convergence). But it alternates only when $x > 0$; for $-1 < x < 0$ every term is negative. At $x = 1$ it still alternates. So the bound applies for $0 < x \\le 1$.'
           }
         ]
       }
@@ -80,8 +80,8 @@ The alternating bound is usually tighter and easier. Use it when available!`
         dropdowns: [
           {
             label: 'To estimate $\\arctan(1/2)$ with error $< 0.001$ using its Maclaurin series, the minimum number of terms needed is:',
-            options: ['3 (error ≤ $(1/2)^7/7 ≈ 0.0011$... need 4)', '4', '2', '5'],
-            correctAnswers: ['3 (error ≤ $(1/2)^7/7 ≈ 0.0011$... need 4)'],
+            options: ['4', '3', '2', '5'],
+            correctAnswers: ['4'],
             hints: ['$\\arctan x = x - x^3/3 + x^5/5 - \\cdots$. Error after $N$ terms $\\le (1/2)^{2N+1}/(2N+1)$.'],
             explanation: 'After 3 terms: error $\\le (1/2)^7/7 = 1/896 ≈ 0.00112 > 0.001$. After 4 terms: error $\\le (1/2)^9/9 = 1/4608 ≈ 0.000217 < 0.001$ ✓. Need 4 terms.'
           },
