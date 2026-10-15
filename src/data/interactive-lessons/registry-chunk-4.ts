@@ -403,48 +403,48 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./aas-resistance-abolition-part1').then(m => m.aasResistanceAbolitionPart1Data) },
-      { title: 'Key Processes', loader: () => import('./aas-resistance-abolition-part2').then(m => m.aasResistanceAbolitionPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./aas-resistance-abolition-part3').then(m => m.aasResistanceAbolitionPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./aas-resistance-abolition-part4').then(m => m.aasResistanceAbolitionPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./aas-resistance-abolition-part5').then(m => m.aasResistanceAbolitionPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./aas-resistance-abolition-part6').then(m => m.aasResistanceAbolitionPart6Data) },
-      { title: 'AP Review', loader: () => import('./aas-resistance-abolition-part7').then(m => m.aasResistanceAbolitionPart7Data) }
+      { title: 'Armed Revolt in North America: Cases, Causes and Consequences', loader: () => import('./aas-resistance-abolition-part2').then(m => m.aasResistanceAbolitionPart2Data) },
+      { title: 'Self-Emancipation: Flight, Vigilance Committees and the Fugitive Slave Act', loader: () => import('./aas-resistance-abolition-part3').then(m => m.aasResistanceAbolitionPart3Data) },
+      { title: 'The Abolitionist Movement: Strategies and Splits', loader: () => import('./aas-resistance-abolition-part4').then(m => m.aasResistanceAbolitionPart4Data) },
+      { title: 'War and Emancipation, 1861–1865: How Slavery Ended', loader: () => import('./aas-resistance-abolition-part5').then(m => m.aasResistanceAbolitionPart5Data) },
+      { title: 'Source Workshop: Voices of Resistance', loader: () => import('./aas-resistance-abolition-part6').then(m => m.aasResistanceAbolitionPart6Data) },
+      { title: 'Synthesis and AP Review', loader: () => import('./aas-resistance-abolition-part7').then(m => m.aasResistanceAbolitionPart7Data) }
     ],
   },
   'aas-freedom-enslavement': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./aas-freedom-enslavement-part1').then(m => m.aasFreedomEnslavementPart1Data) },
-      { title: 'Key Processes', loader: () => import('./aas-freedom-enslavement-part2').then(m => m.aasFreedomEnslavementPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./aas-freedom-enslavement-part3').then(m => m.aasFreedomEnslavementPart3Data) },
+      { title: 'Revolution and the Uneven Road to Northern Freedom (1770s–1830s)', loader: () => import('./aas-freedom-enslavement-part2').then(m => m.aasFreedomEnslavementPart2Data) },
+      { title: 'Building Free Communities: Churches, Societies, Schools and the Press', loader: () => import('./aas-freedom-enslavement-part3').then(m => m.aasFreedomEnslavementPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./aas-freedom-enslavement-part4').then(m => m.aasFreedomEnslavementPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./aas-freedom-enslavement-part5').then(m => m.aasFreedomEnslavementPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./aas-freedom-enslavement-part6').then(m => m.aasFreedomEnslavementPart6Data) },
-      { title: 'AP Review', loader: () => import('./aas-freedom-enslavement-part7').then(m => m.aasFreedomEnslavementPart7Data) }
+      { title: 'Debating the Future: Colonization, Emigration and Citizenship (1816–1863)', loader: () => import('./aas-freedom-enslavement-part5').then(m => m.aasFreedomEnslavementPart5Data) },
+      { title: 'Source Workshop: Free Black Voices in Print', loader: () => import('./aas-freedom-enslavement-part6').then(m => m.aasFreedomEnslavementPart6Data) },
+      { title: 'Synthesis and AP Review', loader: () => import('./aas-freedom-enslavement-part7').then(m => m.aasFreedomEnslavementPart7Data) }
     ],
   },
   'aas-reconstruction-jim-crow': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./aas-reconstruction-jim-crow-part1').then(m => m.aasReconstructionJimCrowPart1Data) },
-      { title: 'Key Processes', loader: () => import('./aas-reconstruction-jim-crow-part2').then(m => m.aasReconstructionJimCrowPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./aas-reconstruction-jim-crow-part3').then(m => m.aasReconstructionJimCrowPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./aas-reconstruction-jim-crow-part4').then(m => m.aasReconstructionJimCrowPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./aas-reconstruction-jim-crow-part5').then(m => m.aasReconstructionJimCrowPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./aas-reconstruction-jim-crow-part6').then(m => m.aasReconstructionJimCrowPart6Data) },
-      { title: 'AP Review', loader: () => import('./aas-reconstruction-jim-crow-part7').then(m => m.aasReconstructionJimCrowPart7Data) }
+      { title: 'Freedom\'s First Years: Land, Labor and Family (1865–1867)', loader: () => import('./aas-reconstruction-jim-crow-part2').then(m => m.aasReconstructionJimCrowPart2Data) },
+      { title: 'Black Political Power in Reconstruction (1867–1877)', loader: () => import('./aas-reconstruction-jim-crow-part3').then(m => m.aasReconstructionJimCrowPart3Data) },
+      { title: 'The Overthrow of Reconstruction: Violence, Courts and Compromise (1866–1883)', loader: () => import('./aas-reconstruction-jim-crow-part4').then(m => m.aasReconstructionJimCrowPart4Data) },
+      { title: 'Building Jim Crow, 1877–1910', loader: () => import('./aas-reconstruction-jim-crow-part5').then(m => m.aasReconstructionJimCrowPart5Data) },
+      { title: 'Source Workshop: Testimony, Protest and Accommodation', loader: () => import('./aas-reconstruction-jim-crow-part6').then(m => m.aasReconstructionJimCrowPart6Data) },
+      { title: 'Synthesis and AP Review', loader: () => import('./aas-reconstruction-jim-crow-part7').then(m => m.aasReconstructionJimCrowPart7Data) }
     ],
   },
   'aas-great-migration-harlem': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./aas-great-migration-harlem-part1').then(m => m.aasGreatMigrationHarlemPart1Data) },
-      { title: 'Key Processes', loader: () => import('./aas-great-migration-harlem-part2').then(m => m.aasGreatMigrationHarlemPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./aas-great-migration-harlem-part3').then(m => m.aasGreatMigrationHarlemPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./aas-great-migration-harlem-part4').then(m => m.aasGreatMigrationHarlemPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./aas-great-migration-harlem-part5').then(m => m.aasGreatMigrationHarlemPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./aas-great-migration-harlem-part6').then(m => m.aasGreatMigrationHarlemPart6Data) },
-      { title: 'AP Review', loader: () => import('./aas-great-migration-harlem-part7').then(m => m.aasGreatMigrationHarlemPart7Data) }
+      { title: 'How the Migration Worked (1910–1940)', loader: () => import('./aas-great-migration-harlem-part2').then(m => m.aasGreatMigrationHarlemPart2Data) },
+      { title: 'Making the Black Metropolis: Work, Housing and Conflict', loader: () => import('./aas-great-migration-harlem-part3').then(m => m.aasGreatMigrationHarlemPart3Data) },
+      { title: 'The New Negro in Words: Poems, Essays and the Debate over Art', loader: () => import('./aas-great-migration-harlem-part4').then(m => m.aasGreatMigrationHarlemPart4Data) },
+      { title: 'Sound, Image and Reach: Music, Visual Art and the Wider Diaspora', loader: () => import('./aas-great-migration-harlem-part5').then(m => m.aasGreatMigrationHarlemPart5Data) },
+      { title: 'Source Workshop: Migrant Letters, a Manifesto and an Image', loader: () => import('./aas-great-migration-harlem-part6').then(m => m.aasGreatMigrationHarlemPart6Data) },
+      { title: 'Synthesis and AP Review', loader: () => import('./aas-great-migration-harlem-part7').then(m => m.aasGreatMigrationHarlemPart7Data) }
     ],
   },
   'aas-wwi-wwii-era': {
