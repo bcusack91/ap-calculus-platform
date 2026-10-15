@@ -11,7 +11,9 @@ import rehypeKatex from 'rehype-katex'
 import {
   getAllFRQs,
   generateFullExamFRQs,
+  PHYSICS_C_EM_FRQ_TYPES,
   type PhysicsCEMFRQ,
+  type PhysicsCEMFRQType,
   type FRQRubricItem,
 } from '@/data/ap-physics-c-em-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
@@ -48,7 +50,22 @@ function formatTime(seconds: number): string {
 /* ------------------------------------------------------------------ */
 
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
-type Filter = 'all' | 'long' | 'short'
+type Filter = 'all' | PhysicsCEMFRQType
+
+const TYPE_META = Object.fromEntries(PHYSICS_C_EM_FRQ_TYPES.map((t) => [t.type, t])) as Record<PhysicsCEMFRQType, (typeof PHYSICS_C_EM_FRQ_TYPES)[number]>
+
+const TYPE_STYLE: Record<PhysicsCEMFRQType, { icon: string; gradient: string; badge: string; headerBadge: string; blurb: string }> = {
+  mr: { icon: '🧮', gradient: 'from-orange-500 to-amber-500', badge: 'bg-orange-100 dark:bg-orange-900/30 text-orange-600', headerBadge: 'bg-orange-700', blurb: 'Multi-step calculus derivations: Gauss’s law, potential, Ampère’s law, flux, and Faraday’s law.' },
+  tbr: { icon: '📈', gradient: 'from-fuchsia-500 to-pink-500', badge: 'bg-fuchsia-100 dark:bg-fuchsia-900/30 text-fuchsia-600', headerBadge: 'bg-fuchsia-700', blurb: 'Move between circuit diagrams, field and potential graphs, charge distributions, and equations.' },
+  lab: { icon: '🔬', gradient: 'from-sky-500 to-blue-500', badge: 'bg-sky-100 dark:bg-sky-900/30 text-sky-600', headerBadge: 'bg-sky-700', blurb: 'Design a procedure, linearize real data, find a best-fit slope, and extract a dielectric constant or a field.' },
+  qqt: { icon: '⚖️', gradient: 'from-emerald-500 to-teal-500', badge: 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600', headerBadge: 'bg-emerald-700', blurb: 'Predict and justify in words, derive an equation, then check the two agree with functional dependence.' },
+}
+
+/** Only current-format items (MR/TBR/LAB/QQT); an older content-store copy falls back to the static pool. */
+function currentFormat(frqs: unknown): PhysicsCEMFRQ[] {
+  if (!Array.isArray(frqs)) return []
+  return frqs.filter((q): q is PhysicsCEMFRQ => typeof q?.type === 'string' && q.type in TYPE_META)
+}
 
 /* ------------------------------------------------------------------ */
 /*  Page                                                               */
@@ -81,7 +98,10 @@ function APPhysicsCEMFRQPageInner() {
     let active = true
     fetch('/api/frq/ap-physics-c-em')
       .then((r) => (r.ok ? r.json() : null))
-      .then((data) => { if (active && Array.isArray(data?.frqs) && data.frqs.length > 0) setAllFrqs(data.frqs) })
+      .then((data) => {
+        const fresh = currentFormat(data?.frqs)
+        if (active && fresh.length > 0) setAllFrqs(fresh)
+      })
       .catch(() => {})
     return () => { active = false }
   }, [])
@@ -105,7 +125,7 @@ function APPhysicsCEMFRQPageInner() {
 
   const startPractice = useCallback((f: Filter) => {
     setFilter(f)
-    const pool = f === 'long' ? allFrqs.filter(q => q.type === 'long') : f === 'short' ? allFrqs.filter(q => q.type === 'short') : allFrqs
+    const pool = f === 'all' ? allFrqs : allFrqs.filter((q) => q.type === f)
     setFrqs(pool)
     setCurrentIdx(0)
     setResponses({})
@@ -116,14 +136,14 @@ function APPhysicsCEMFRQPageInner() {
   }, [allFrqs])
 
   const startTimedExam = useCallback(() => {
-    const { longQuestions, shortQuestions } = generateFullExamFRQs()
-    setFrqs([...longQuestions, ...shortQuestions])
+    const { questions, totalMinutes } = generateFullExamFRQs()
+    setFrqs(questions)
     setCurrentIdx(0)
     setResponses({})
     setResults({})
     setShowSample({})
     setShowRubric({})
-    setTimeRemaining(90 * 60) // 90 minutes for E&M FRQ section
+    setTimeRemaining(totalMinutes * 60)
     setMode('timed')
   }, [])
 
@@ -236,47 +256,28 @@ function APPhysicsCEMFRQPageInner() {
 
           {/* Practice Options */}
           <div className="grid sm:grid-cols-2 gap-4 mb-8">
-            <button
-              onClick={() => startPractice('long')}
-              className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xl">
-                  📄
+            {PHYSICS_C_EM_FRQ_TYPES.map((t) => (
+              <button
+                key={t.type}
+                onClick={() => startPractice(t.type)}
+                className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className={`h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r ${TYPE_STYLE[t.type].gradient} text-white text-xl`}>
+                    {TYPE_STYLE[t.type].icon}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400">
+                      {t.label} ({t.short})
+                    </h3>
+                    <p className="text-xs text-gray-500">
+                      {t.points} points · ~{t.minutes} min · {allFrqs.filter((q) => q.type === t.type).length} questions
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400">
-                    Long FRQs
-                  </h3>
-                  <p className="text-xs text-gray-500">10 points · ~25 min each</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Multi-part problems covering electrostatics, Gauss&apos;s law, circuits, magnetic
-                fields, and electromagnetic induction with calculus.
-              </p>
-            </button>
-
-            <button
-              onClick={() => startPractice('short')}
-              className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xl">
-                  📝
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400">
-                    Short FRQs
-                  </h3>
-                  <p className="text-xs text-gray-500">4 points · ~10 min each</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Focused questions on capacitors, dielectrics, RC circuits, magnetic forces, and
-                RL transients.
-              </p>
-            </button>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{TYPE_STYLE[t.type].blurb}</p>
+              </button>
+            ))}
 
             <button
               onClick={() => startPractice('all')}
@@ -310,7 +311,7 @@ function APPhysicsCEMFRQPageInner() {
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400">
                     Timed Exam Simulation
                   </h3>
-                  <p className="text-xs text-gray-500">3 long + 4 short · 90 min</p>
+                  <p className="text-xs text-gray-500">1 of each type · 40 points · 95 min</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -405,9 +406,9 @@ function APPhysicsCEMFRQPageInner() {
                   <div className="flex items-center justify-between">
                     <div>
                       <span
-                        className={`text-xs font-bold px-2 py-0.5 rounded ${frq.type === 'long' ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-600' : 'bg-purple-100 dark:bg-purple-900/30 text-purple-600'}`}
+                        className={`text-xs font-bold px-2 py-0.5 rounded ${TYPE_STYLE[frq.type]?.badge ?? ''}`}
                       >
-                        {frq.type === 'long' ? 'Long FRQ' : 'Short FRQ'}
+                        {TYPE_META[frq.type]?.short ?? 'FRQ'}
                       </span>
                       <span className="ml-2 text-sm font-medium text-gray-900 dark:text-white">
                         {frq.title}
@@ -465,7 +466,7 @@ function APPhysicsCEMFRQPageInner() {
               ← Back to Menu
             </button>
             <h1 className="text-xl font-bold text-gray-900 dark:text-white">
-              {mode === 'timed' ? 'Timed FRQ Exam' : `FRQ Practice (${filter})`}
+              {mode === 'timed' ? 'Timed FRQ Exam' : `FRQ Practice: ${filter === 'all' ? 'All FRQs' : TYPE_META[filter].label}`}
             </h1>
           </div>
           <div className="flex items-center gap-4">
@@ -496,9 +497,9 @@ function APPhysicsCEMFRQPageInner() {
             <div className="flex items-center justify-between flex-wrap gap-2">
               <div>
                 <span
-                  className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${currentFRQ.type === 'long' ? 'bg-amber-800' : 'bg-purple-700'}`}
+                  className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${TYPE_STYLE[currentFRQ.type]?.headerBadge ?? ''}`}
                 >
-                  {currentFRQ.type === 'long' ? 'Long FRQ' : 'Short FRQ'}
+                  {TYPE_META[currentFRQ.type]?.label ?? 'FRQ'}
                 </span>
                 <span className="text-xs text-amber-200">Unit {currentFRQ.unit}</span>
                 <h2 className="text-lg font-bold mt-1">{currentFRQ.title}</h2>
@@ -508,7 +509,7 @@ function APPhysicsCEMFRQPageInner() {
                   {currentFRQ.totalPoints} pts
                 </span>
                 <span className="bg-amber-700 px-3 py-1 rounded-full">
-                  {currentFRQ.timeRecommendation} min
+                  ~{currentFRQ.timeRecommendation} min
                 </span>
                 <span
                   className={`px-3 py-1 rounded-full ${currentFRQ.calculatorAllowed ? 'bg-green-700' : 'bg-red-700'}`}
@@ -527,6 +528,13 @@ function APPhysicsCEMFRQPageInner() {
                 </ReactMarkdown>
               </div>
             </div>
+
+            {currentFRQ.dataTableHtml && (
+              <div
+                className="mb-6 overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700 p-4 bg-gray-50 dark:bg-gray-900 text-sm [&_td]:px-3 [&_td]:py-1 [&_td]:text-center [&_th]:px-3 [&_th]:py-1 [&_th]:text-left"
+                dangerouslySetInnerHTML={{ __html: currentFRQ.dataTableHtml }}
+              />
+            )}
 
             <div className="space-y-6">
               {currentFRQ.parts.map((part) => {

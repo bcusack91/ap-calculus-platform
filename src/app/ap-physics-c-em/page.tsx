@@ -53,7 +53,7 @@ const features = [
       </svg>
     ),
     color: 'from-indigo-500 to-violet-500',
-    stats: '16 FRQs · Auto-graded · Timed',
+    stats: '8 FRQs · Auto-graded · Timed',
   },
   {
     title: 'Full-Length Practice Exam',
