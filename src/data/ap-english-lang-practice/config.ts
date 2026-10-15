@@ -5,7 +5,7 @@ import { FRQS } from './frqs'
 export const config: FullLengthExamConfig = {
   subject: 'AP English Language & Composition',
   description:
-    'Full-length practice exam modeled on the official College Board AP English Language & Composition exam. 45 multiple-choice questions across five passages (3 reading sets analyzing rhetorical choices in nonfiction, 2 writing/composition sets revising student drafts), plus 3 free-response essays: synthesis, rhetorical analysis, and argument.',
+    'Full-length practice exam modeled on the official College Board AP English Language & Composition exam. 45 multiple-choice questions across five passages (24 reading questions analyzing rhetorical choices in nonfiction, 21 writing questions revising student drafts), plus 3 free-response essays: synthesis, rhetorical analysis, and argument.',
   backLink: { href: '/ap-english-language', label: 'AP English Language' },
   ctaLinks: [
     { href: '/ap-english-lang-diagnostic', label: 'Diagnostic Test' },
@@ -20,7 +20,7 @@ export const config: FullLengthExamConfig = {
       name: 'Section I',
       shortName: 'Multiple Choice',
       description:
-        '45 questions across five passages. Sets 1–3 are nonfiction reading passages (commencement address, urban-design essay, postwar journalist\'s letter) testing rhetorical analysis. Sets 4–5 are student composition drafts testing revision and editing skills. 60 minutes.',
+        '45 questions across five passages. Sets 1–3 (24 reading questions) are nonfiction passages (commencement address, urban-design essay, postwar journalist\'s letter) testing rhetorical analysis. Sets 4–5 (21 writing questions) are student drafts testing revision and composition skills. 60 minutes.',
       timeLimitMinutes: 60,
       items: MCQS,
     },
@@ -41,8 +41,8 @@ export const config: FullLengthExamConfig = {
         heading: 'Exam Structure',
         items: [
           'Section I: 45 MCQs (60 min, 45%)',
-          '   • ~23–25 reading questions across 4–5 passages',
-          '   • ~20–22 writing/composition questions across 3–4 drafts',
+          '   • 23–25 reading questions on nonfiction passages',
+          '   • 20–22 writing questions on student drafts',
           'Section II: 3 essays (135 min, 55%)',
           '   • Q1 Synthesis (6 sources)',
           '   • Q2 Rhetorical Analysis',
