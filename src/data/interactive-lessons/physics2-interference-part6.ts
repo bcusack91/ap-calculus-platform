@@ -97,21 +97,21 @@ This is why:
               'Use a longer wavelength of light',
               'Use a smaller aperture',
               'Use a larger aperture',
-              'Move the telescope closer to the objects'
+              'Use a higher-power eyepiece'
             ],
             correctAnswer: 2,
-            explanation: '$\\theta_{\\text{min}} = 1.22\\lambda/D$. Larger $D$ gives a smaller $\\theta_{\\text{min}}$, meaning the telescope can resolve finer angular separations.'
+            explanation: '$\\theta_{\\text{min}} = 1.22\\lambda/D$. Larger $D$ gives a smaller $\\theta_{\\text{min}}$, meaning the telescope can resolve finer angular separations. A higher-power eyepiece only magnifies the blurred image; it cannot beat the diffraction limit set by the aperture.'
           },
           {
             question: 'An electron microscope achieves better resolution than an optical microscope because:',
             options: [
-              'Electrons are faster than light',
-              'Electrons have much shorter wavelengths',
-              'Electrons have larger apertures',
-              'Electrons don\'t diffract'
+              'Electrons travel faster than light does',
+              'Electron wavelengths are far shorter',
+              'Electron beams use much larger apertures',
+              'Electrons are too massive to diffract'
             ],
             correctAnswer: 1,
-            explanation: 'Electrons have very short de Broglie wavelengths (much less than visible light). Since $\\theta_{\\text{min}} \\propto \\lambda$, shorter wavelength → better resolution.'
+            explanation: 'Electrons have very short de Broglie wavelengths (much less than visible light). Since $\\theta_{\\text{min}} \\propto \\lambda$, shorter wavelength → better resolution. Electrons do diffract (that is how their wave nature was confirmed), and they always travel slower than light.'
           }
         ]
       }
@@ -192,12 +192,12 @@ This is why:
             question: 'The Hubble Space Telescope ($D = 2.4$ m) observes at $\\lambda = 500$ nm. Its angular resolution is about:',
             options: [
               '0.05 arcseconds',
-              '0.5 arcseconds',
-              '5 arcseconds',
+              '0.10 arcseconds',
+              '0.04 arcseconds',
               '50 arcseconds'
             ],
             correctAnswer: 0,
-            explanation: '$\\theta = 1.22(500 \\times 10^{-9})/2.4 = 2.54 \\times 10^{-7}$ rad $= 2.54 \\times 10^{-7} \\times 206{,}265 \\approx 0.052$ arcsec $\\approx 0.05$ arcsec.'
+            explanation: '$\\theta = 1.22(500 \\times 10^{-9})/2.4 = 2.54 \\times 10^{-7}$ rad $= 2.54 \\times 10^{-7} \\times 206{,}265 \\approx 0.052$ arcsec $\\approx 0.05$ arcsec. Using the radius (1.2 m) instead of the diameter doubles this to about 0.10 arcsec, and dropping the factor 1.22 gives about 0.04 arcsec.'
           }
         ]
       }

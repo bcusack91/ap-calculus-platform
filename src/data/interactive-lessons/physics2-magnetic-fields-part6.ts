@@ -138,23 +138,23 @@ The deflection angle is proportional to the current, making it a useful measurin
             question: 'A current loop is in stable equilibrium when:',
             options: [
               '$\\vec{\\mu}$ is perpendicular to $\\vec{B}$',
-              '$\\vec{\\mu}$ is parallel to $\\vec{B}$ (same direction)',
-              '$\\vec{\\mu}$ is antiparallel to $\\vec{B}$ (opposite direction)',
-              'The current is zero'
+              '$\\vec{\\mu}$ points in the same direction as $\\vec{B}$',
+              '$\\vec{\\mu}$ points opposite to $\\vec{B}$',
+              '$\\vec{\\mu}$ makes a 45° angle with $\\vec{B}$'
             ],
             correctAnswer: 1,
-            explanation: 'Stable equilibrium occurs at minimum potential energy: $U = -\\mu B \\cos\\phi$ is minimized when $\\phi = 0°$ ($\\vec{\\mu} \\parallel \\vec{B}$).'
+            explanation: 'Stable equilibrium occurs at minimum potential energy: $U = -\\mu B \\cos\\phi$ is minimized when $\\phi = 0°$ ($\\vec{\\mu} \\parallel \\vec{B}$). The antiparallel orientation also has zero torque, but it is unstable because $U$ is a maximum there; at 45° or 90° the torque is not zero.'
           },
           {
             question: 'What is the function of the commutator in a DC motor?',
             options: [
-              'It increases the current',
-              'It creates the magnetic field',
-              'It reverses the current direction every half turn to maintain rotation',
-              'It converts AC to DC'
+              'It increases the current through the coil',
+              'It creates the field that turns the coil',
+              'It reverses the coil\'s current every half turn',
+              'It converts the AC supply to DC'
             ],
             correctAnswer: 2,
-            explanation: 'The commutator reverses the current direction every half revolution, ensuring the torque always acts in the same rotational direction for continuous spinning.'
+            explanation: 'The commutator reverses the current direction every half revolution, ensuring the torque always acts in the same rotational direction for continuous spinning. The motor runs on a DC supply, and the field comes from the magnets, not the commutator.'
           }
         ]
       }

@@ -122,10 +122,10 @@ All three forms are equivalent, related by $Q = CV$.
               '$2C$',
               '$C$',
               '$C/2$',
-              '$C^2$'
+              '$2/C$'
             ],
             correctAnswer: 2,
-            explanation: 'In series: $1/C_{\\text{total}} = 1/C + 1/C = 2/C$, so $C_{\\text{total}} = C/2$. Series capacitance is always less than the smallest individual.'
+            explanation: 'In series: $1/C_{\\text{total}} = 1/C + 1/C = 2/C$, so $C_{\\text{total}} = C/2$. Series capacitance is always less than the smallest individual. $2C$ uses the resistor series rule, and $2/C$ is $1/C_{\\text{total}}$ before inverting.'
           },
           {
             question: 'Those same two capacitors ($C$ each) connected in parallel have total capacitance:',
@@ -133,10 +133,10 @@ All three forms are equivalent, related by $Q = CV$.
               '$C/2$',
               '$C$',
               '$2C$',
-              '$4C$'
+              '$2/C$'
             ],
             correctAnswer: 2,
-            explanation: 'In parallel: $C_{\\text{total}} = C + C = 2C$. Parallel capacitance adds directly.'
+            explanation: 'In parallel: $C_{\\text{total}} = C + C = 2C$. Parallel capacitance adds directly. $C/2$ is the series result, and $2/C$ adds reciprocals as for series and then forgets to invert.'
           }
         ]
       }
@@ -185,15 +185,15 @@ $C_1 = 4 \\; \\mu\\text{F}$ and $C_2 = 12 \\; \\mu\\text{F}$ are connected in se
               '1 μF'
             ],
             correctAnswer: 2,
-            explanation: 'Parallel: $C_{12} = 2 + 3 = 5 \\; \\mu$F. Series with $5 \\; \\mu$F: $C = 5 \\times 5/(5+5) = 25/10 = 2.5 \\; \\mu$F.'
+            explanation: 'Parallel: $C_{12} = 2 + 3 = 5 \\; \\mu$F. Series with $5 \\; \\mu$F: $C = 5 \\times 5/(5+5) = 25/10 = 2.5 \\; \\mu$F. 10 μF puts all three in parallel, 5 μF stops at the parallel pair, and about 1 μF treats all three as series.'
           },
           {
             question: 'Two capacitors in series store the same ___, while two capacitors in parallel share the same ___.',
             options: [
               'voltage; charge',
               'charge; voltage',
-              'energy; current',
-              'capacitance; resistance'
+              'voltage; voltage',
+              'charge; charge'
             ],
             correctAnswer: 1,
             explanation: 'Series capacitors: same charge $Q$ on each (charge has nowhere else to go). Parallel capacitors: same voltage $V$ across each (connected to same nodes).'

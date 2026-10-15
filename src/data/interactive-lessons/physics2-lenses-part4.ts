@@ -78,22 +78,22 @@ $$m = -\\frac{d_i}{d_o} = -\\frac{-6}{24} = +\\frac{1}{4} = +0.25$$
             options: [
               'Positive (real image)',
               'Negative (virtual image)',
-              'Zero',
+              'Equal to $f$ for every object',
               'It depends on the object distance'
             ],
             correctAnswer: 1,
-            explanation: 'A diverging lens always produces a virtual image for a real object, so $d_i < 0$ always.'
+            explanation: 'A diverging lens always produces a virtual image for a real object, so $d_i < 0$ always. The image lies between the lens and the focal point, approaching $f$ only as the object moves very far away.'
           },
           {
             question: 'As an object moves farther from a diverging lens, the virtual image:',
             options: [
-              'Moves closer to the focal point $F$ and gets smaller',
-              'Moves farther from the lens and gets larger',
-              'Stays in the same position',
-              'Becomes real'
+              'Approaches $F$ and gets smaller',
+              'Moves away from the lens and gets larger',
+              'Stays at the same distance from the lens',
+              'Becomes real when $d_o$ is beyond $2F$'
             ],
             correctAnswer: 0,
-            explanation: 'As $d_o \\to \\infty$, $d_i \\to f$ (the image approaches the focal point). The magnification $|m| = |d_i|/d_o \\to 0$. The image shrinks toward a point at $F$.'
+            explanation: 'As $d_o \\to \\infty$, $d_i \\to f$ (the image approaches the focal point). The magnification $|m| = |d_i|/d_o \\to 0$. The image shrinks toward a point at $F$, and it stays virtual for every real object distance.'
           }
         ]
       }
@@ -172,11 +172,11 @@ An object is placed 20 cm from a lens. Calculate $d_i$ for each lens:
             options: [
               'Yes, if the object is very far away',
               'Yes, if the object is inside the focal length',
-              'No, never',
-              'Yes, if combined with another lens'
+              'No, $d_i$ is always negative',
+              'Yes, if the object is at twice the focal length'
             ],
             correctAnswer: 2,
-            explanation: 'A single diverging lens can never produce a real image of a real object. The math always gives $d_i < 0$. (A diverging lens can produce a real image of a virtual object in multi-lens systems, but that is a special case.)'
+            explanation: 'A single diverging lens can never produce a real image of a real object. The math always gives $d_i < 0$ wherever the object is placed. (A diverging lens can produce a real image of a virtual object in multi-lens systems, but that is a special case.)'
           }
         ]
       }

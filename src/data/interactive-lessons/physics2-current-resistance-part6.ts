@@ -111,19 +111,19 @@ Safety devices prevent dangerous currents from flowing through the circuit — a
             options: [
               '9.0 V',
               '8.0 V',
-              '7.0 V',
+              '7.9 V',
               '1.0 V'
             ],
             correctAnswer: 1,
-            explanation: '$I = \\varepsilon/(R + r) = 9.0/(4.0 + 0.50) = 9.0/4.5 = 2.0$ A. $V = \\varepsilon - Ir = 9.0 - (2.0)(0.50) = 9.0 - 1.0 = 8.0$ V.'
+            explanation: '$I = \\varepsilon/(R + r) = 9.0/(4.0 + 0.50) = 9.0/4.5 = 2.0$ A. $V = \\varepsilon - Ir = 9.0 - (2.0)(0.50) = 9.0 - 1.0 = 8.0$ V. Ignoring r gives 9.0 V, 1.0 V is only the internal drop $Ir$, and using $I = \\varepsilon/R = 2.25$ A gives 7.9 V.'
           },
           {
             question: 'As a battery ages, its internal resistance typically:',
             options: [
-              'Decreases',
-              'Stays the same',
-              'Increases',
-              'Becomes negative'
+              'Decreases as the battery wears in',
+              'Stays the same over its life',
+              'Increases as its chemistry degrades',
+              'Drops to zero once it is drained'
             ],
             correctAnswer: 2,
             explanation: 'As a battery ages, chemical degradation increases internal resistance. This is why old batteries can still show nearly full EMF on a voltmeter (no current flowing) but can\'t deliver much current.'
@@ -153,24 +153,24 @@ Safety devices prevent dangerous currents from flowing through the circuit — a
           {
             question: 'A GFCI outlet protects you by:',
             options: [
-              'Limiting the voltage to a safe level',
-              'Detecting when outgoing and returning current differ (leakage)',
-              'Increasing the resistance of the circuit',
-              'Providing a backup battery'
+              'Lowering the outlet voltage to a safe level',
+              'Tripping when outgoing and returning currents differ',
+              'Tripping whenever total current exceeds 15 A',
+              'Adding resistance in series with the user'
             ],
             correctAnswer: 1,
-            explanation: 'A GFCI compares the current leaving the hot wire to the current returning on the neutral wire. If they differ (meaning current is leaking through an unintended path, like a person), it trips in milliseconds.'
+            explanation: 'A GFCI compares the current leaving the hot wire to the current returning on the neutral wire. If they differ (meaning current is leaking through an unintended path, like a person), it trips in milliseconds. Tripping on total overcurrent is the job of a fuse or breaker, not a GFCI.'
           },
           {
             question: 'The difference between a fuse and a circuit breaker is:',
             options: [
-              'Fuses work faster than circuit breakers',
-              'Circuit breakers can be reset; fuses must be replaced',
+              'Fuses protect against shock; breakers against fire',
+              'Breakers can be reset; fuses must be replaced',
               'Fuses work with AC; circuit breakers work with DC',
-              'There is no difference'
+              'Breakers trip on high voltage; fuses on high current'
             ],
             correctAnswer: 1,
-            explanation: 'Both interrupt the circuit when current is too high. The key difference: a fuse melts and must be replaced, while a circuit breaker can be reset by flipping a switch.'
+            explanation: 'Both interrupt the circuit when current is too high, and both work on AC or DC. The key difference: a fuse melts and must be replaced, while a circuit breaker can be reset by flipping a switch.'
           }
         ]
       }
@@ -220,12 +220,12 @@ Safety devices prevent dangerous currents from flowing through the circuit — a
             question: 'A battery with $\\varepsilon = 6.0$ V and $r = 0.20\\;\\Omega$ is connected to a $2.8\\;\\Omega$ resistor. What fraction of the battery\'s total power is delivered to the external resistor?',
             options: [
               '50%',
-              '80%',
+              '7%',
               '93%',
               '100%'
             ],
             correctAnswer: 2,
-            explanation: 'Fraction = $R/(R + r) = 2.8/(2.8 + 0.2) = 2.8/3.0 = 0.933 = 93\\%$. The remaining 7% is wasted as heat inside the battery.'
+            explanation: 'Fraction = $R/(R + r) = 2.8/(2.8 + 0.2) = 2.8/3.0 = 0.933 = 93\\%$. The remaining 7% is wasted as heat inside the battery — that is $r/(R + r)$, not the delivered fraction. 50% applies only when $R = r$.'
           }
         ]
       }

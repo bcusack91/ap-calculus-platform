@@ -182,23 +182,23 @@ Now find the force direction on an **electron** ($q = -e$).
             question: 'A proton moves at $3 \\times 10^6$ m/s perpendicular to a 0.5 T magnetic field. The magnetic force on the proton is:',
             options: [
               '$2.4 \\times 10^{-13}$ N',
-              '$1.5 \\times 10^{-13}$ N',
+              '$8.0 \\times 10^{-20}$ N',
               '$4.8 \\times 10^{-13}$ N',
-              '$7.5 \\times 10^{-14}$ N'
+              '$9.6 \\times 10^{-13}$ N'
             ],
             correctAnswer: 0,
-            explanation: '$F = qvB\\sin 90° = (1.6 \\times 10^{-19})(3 \\times 10^6)(0.5)(1) = 2.4 \\times 10^{-13}$ N.'
+            explanation: '$F = qvB\\sin 90° = (1.6 \\times 10^{-19})(3 \\times 10^6)(0.5)(1) = 2.4 \\times 10^{-13}$ N. $4.8 \\times 10^{-13}$ N leaves out $B$, $9.6 \\times 10^{-13}$ N divides by $B$ instead of multiplying, and $8.0 \\times 10^{-20}$ N leaves out $v$.'
           },
           {
             question: 'The magnetic force on a moving charge:',
             options: [
-              'Does positive work, increasing kinetic energy',
-              'Does negative work, decreasing kinetic energy',
-              'Does no work — it changes direction but not speed',
-              'Does work only on negative charges'
+              'Does positive work, increasing the kinetic energy',
+              'Does negative work, decreasing the kinetic energy',
+              'Does no work, so the speed stays constant',
+              'Does work only when the charge is negative'
             ],
             correctAnswer: 2,
-            explanation: 'Since $\\vec{F} \\perp \\vec{v}$ always, the work $W = \\vec{F} \\cdot \\vec{v} = 0$. The magnetic force changes the direction of motion but cannot change the speed or kinetic energy.'
+            explanation: 'Since $\\vec{F} \\perp \\vec{v}$ always, the work $W = \\vec{F} \\cdot \\vec{v} = 0$. The magnetic force changes the direction of motion but cannot change the speed or kinetic energy. A negative charge feels a reversed force, but that force is still perpendicular to $\\vec{v}$ and does no work.'
           },
           {
             question: 'A charge moves parallel to a magnetic field. The force on it is:',

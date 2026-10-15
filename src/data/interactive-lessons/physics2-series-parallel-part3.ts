@@ -72,11 +72,11 @@ $$I_{\\text{total}} = \\frac{V}{R_{\\text{total}}} = \\frac{24}{9} = \\frac{8}{3
             options: [
               '36 Ω',
               '18 Ω',
-              '12 Ω',
+              '6 Ω',
               '4 Ω'
             ],
             correctAnswer: 1,
-            explanation: '$R_{23} = 12 \\times 12 / (12 + 12) = 144/24 = 6 \\; \\Omega$. $R_{\\text{total}} = R_1 + R_{23} = 12 + 6 = 18 \\; \\Omega$.'
+            explanation: '$R_{23} = 12 \\times 12 / (12 + 12) = 144/24 = 6 \\; \\Omega$. $R_{\\text{total}} = R_1 + R_{23} = 12 + 6 = 18 \\; \\Omega$. 36 Ω puts all three in series, 4 Ω puts all three in parallel, and 6 Ω forgets to add $R_1$.'
           },
           {
             question: 'In a combination circuit, which quantity is always the same for resistors in the same parallel group?',
@@ -164,20 +164,20 @@ $$I_{\\text{total}} = \\frac{18}{8.5} \\approx 2.12 \\text{ A}$$
             question: 'A $10 \\; \\Omega$ resistor is in parallel with a $10 \\; \\Omega$ resistor. This parallel combination is in series with a $5 \\; \\Omega$ resistor. The total resistance is:',
             options: [
               '25 Ω',
-              '15 Ω',
+              '5.2 Ω',
               '10 Ω',
-              '7.5 Ω'
+              '2.5 Ω'
             ],
             correctAnswer: 2,
-            explanation: 'Parallel: $10 \\times 10/(10+10) = 100/20 = 5 \\; \\Omega$. Series: $5 + 5 = 10 \\; \\Omega$.'
+            explanation: 'Parallel: $10 \\times 10/(10+10) = 100/20 = 5 \\; \\Omega$. Series: $5 + 5 = 10 \\; \\Omega$. 25 Ω treats all three as series, 2.5 Ω treats all three as parallel, and 5.2 Ω adds $1/10 + 1/10 = 0.2$ without inverting it.'
           },
           {
             question: 'In a combination circuit, after finding total current, you "work backward" to find individual voltages and currents. The correct approach is:',
             options: [
-              'Assume equal current through all resistors',
-              'Use the series rule (same I) for series groups, and the parallel rule (same V) for parallel groups',
-              'Divide the total voltage equally among all resistors',
-              'Use only Ohm\'s law — no other rules are needed'
+              'Assume the full total current passes through every resistor',
+              'Series parts share current, parallel parts share voltage',
+              'Divide the total voltage equally among all of the resistors',
+              'Give each parallel branch an equal share of the total current'
             ],
             correctAnswer: 1,
             explanation: 'As you expand each equivalent resistor back, apply the appropriate rule: series elements share the same current, parallel elements share the same voltage. Then use Ohm\'s law within each group.'

@@ -112,11 +112,11 @@ $$= 330 - 112 = 218$$
             options: [
               '$i_1 + i_2$',
               '$i_1 - i_2$',
-              '$i_1 \\times i_2$',
-              '$i_1 / i_2$'
+              '$\\frac{i_1 + i_2}{2}$',
+              '$i_1$ only'
             ],
             correctAnswer: 1,
-            explanation: 'The actual current through a shared branch is the difference of the two mesh currents: $i_1 - i_2$ (or $i_2 - i_1$ depending on which direction is positive).'
+            explanation: 'The actual current through a shared branch is the difference of the two mesh currents: $i_1 - i_2$ (or $i_2 - i_1$ depending on which direction is positive). The two mesh currents run in opposite directions through the shared resistor, so they partly cancel rather than add or average.'
           },
           {
             question: 'A circuit has 5 nodes and 8 branches. How many independent loops are there?',

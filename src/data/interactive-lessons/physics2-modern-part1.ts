@@ -142,19 +142,19 @@ $$eV_s = hf - \\phi$$
             question: 'A metal has work function $\\phi = 2.0$ eV. Light of frequency $6.0 \\times 10^{14}$ Hz shines on it. The maximum KE of ejected electrons is: (Use $h = 4.14 \\times 10^{-15}$ eV·s)',
             options: [
               '0.49 eV',
-              '2.0 eV',
-              '4.5 eV',
+              '2.49 eV',
+              '4.49 eV',
               'No electrons are ejected'
             ],
             correctAnswer: 0,
-            explanation: '$E = hf = (4.14 \\times 10^{-15})(6.0 \\times 10^{14}) = 2.49$ eV. $KE_{\\max} = E - \\phi = 2.49 - 2.0 = 0.49$ eV.'
+            explanation: '$E = hf = (4.14 \\times 10^{-15})(6.0 \\times 10^{14}) = 2.49$ eV. $KE_{\\max} = E - \\phi = 2.49 - 2.0 = 0.49$ eV. Taking the full photon energy as the KE forgets the work function, and adding $\\phi$ instead of subtracting it gives 4.49 eV.'
           },
           {
             question: 'Doubling the intensity of light above the threshold frequency will:',
             options: [
               'Double the maximum KE of the photoelectrons',
-              'Double the number of photoelectrons emitted per second',
-              'Double the threshold frequency',
+              'Double the rate of photoelectron emission',
+              'Double the threshold frequency of the metal',
               'Have no effect on the photoelectric current'
             ],
             correctAnswer: 1,
@@ -212,10 +212,10 @@ A sodium surface has work function $\\phi = 2.28$ eV. Ultraviolet light of wavel
           {
             question: 'In the photoelectric effect, which graph correctly shows $KE_{\\max}$ vs. frequency $f$?',
             options: [
-              'A horizontal line (constant KE for all f)',
-              'A straight line with positive slope starting at f = 0',
-              'A straight line with positive slope starting at f = $f_{0}$ (zero KE below $f_{0}$)',
-              'An exponential curve'
+              'A horizontal line, since KE is set by intensity',
+              'A straight line of slope $h$ through the origin',
+              'A straight line of slope $h$ beginning at $f = f_0$',
+              'An exponential curve rising from $f = f_0$'
             ],
             correctAnswer: 2,
             explanation: '$KE_{\\max} = hf - \\phi$. This is linear with slope $h$ and x-intercept at $f_0 = \\phi/h$. Below $f_0$, no electrons are emitted (KE = 0).'

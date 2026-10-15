@@ -168,23 +168,23 @@ A total current of 10 A enters a node and splits between $R_1 = 6 \\; \\Omega$ a
             question: 'A voltage divider with $R_1 = 1 \\; \\text{k}\\Omega$ and $R_2 = 4 \\; \\text{k}\\Omega$ is connected to 15 V. The output voltage (across $R_2$) is:',
             options: [
               '3 V',
-              '5 V',
-              '10 V',
+              '15 V',
+              '3.75 V',
               '12 V'
             ],
             correctAnswer: 3,
-            explanation: '$V_{\\text{out}} = 15 \\times 4/(1+4) = 15 \\times 4/5 = 12$ V.'
+            explanation: '$V_{\\text{out}} = 15 \\times 4/(1+4) = 15 \\times 4/5 = 12$ V. 3 V is the drop across $R_1$, 15 V is the whole supply, and 3.75 V uses $R_1/R_2$ instead of $R_2/(R_1 + R_2)$.'
           },
           {
             question: 'In a current divider with two parallel resistors, the branch with the SMALLER resistance carries:',
             options: [
-              'Less current (current avoids small R)',
-              'More current (current prefers the easier path)',
-              'The same current as the other branch',
-              'No current'
+              'Less current, since its voltage is lower',
+              'More current, since it offers the easier path',
+              'The same current, since V is shared',
+              'All of the total current'
             ],
             correctAnswer: 1,
-            explanation: 'Current takes the path of least resistance. The smaller resistor provides an easier path, so it carries the larger share of the total current.'
+            explanation: 'Current takes the path of least resistance. Both branches have the same voltage, so by $I = V/R$ the smaller resistor carries the larger share of the total current, while the other branch still carries some.'
           }
         ]
       }

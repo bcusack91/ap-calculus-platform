@@ -155,10 +155,10 @@ A student performs a double-slit experiment with $\\lambda = 632.8$ nm (He-Ne la
           {
             question: 'In a double-slit experiment, the pattern observed on the screen is actually a combination of:',
             options: [
-              'Only double-slit interference',
-              'Only single-slit diffraction',
-              'Double-slit interference modulated by single-slit diffraction',
-              'Neither interference nor diffraction'
+              'Two-slit interference alone, with equally bright fringes',
+              'Single-slit diffraction alone, since the slits have width',
+              'Two-slit fringes inside a single-slit diffraction envelope',
+              'Two separate single-slit patterns with no fringes'
             ],
             correctAnswer: 2,
             explanation: 'Each slit has finite width, so each produces a single-slit diffraction pattern. The double-slit interference fringes appear **within** the single-slit diffraction envelope. Some interference maxima may be "missing" if they fall at a diffraction minimum.'
@@ -190,7 +190,7 @@ A student performs a double-slit experiment with $\\lambda = 632.8$ nm (He-Ne la
             options: [
               '$\\theta_{\\min}$ doubles',
               '$\\theta_{\\min}$ halves',
-              '$\\theta_{\\min}$ stays the same',
+              '$\\theta_{\\min}$ is unchanged',
               '$\\theta_{\\min}$ quadruples'
             ],
             correctAnswer: 2,
@@ -210,10 +210,10 @@ A student performs a double-slit experiment with $\\lambda = 632.8$ nm (He-Ne la
           {
             question: 'Which phenomenon is responsible for the colored patterns seen when looking at a CD or DVD surface?',
             options: [
-              'Thin-film interference',
-              'Diffraction grating effect (regularly spaced tracks)',
-              'Polarization',
-              'Total internal reflection'
+              'Thin-film interference in the plastic layer',
+              'Diffraction from the regularly spaced tracks',
+              'Polarization of light reflected at an angle',
+              'Dispersion as light refracts in the plastic'
             ],
             correctAnswer: 1,
             explanation: 'The closely spaced tracks on a CD/DVD act like a diffraction grating. Different wavelengths diffract at different angles, producing rainbow-like colors. The track spacing is about 1.6 μm (CD) or 0.74 μm (DVD).'
@@ -221,13 +221,13 @@ A student performs a double-slit experiment with $\\lambda = 632.8$ nm (He-Ne la
           {
             question: 'A student observes that the 3rd bright fringe of a double-slit pattern is missing. The most likely explanation is:',
             options: [
-              'The light source is too dim',
-              'The 3rd interference maximum coincides with a single-slit diffraction minimum',
-              'The slits are too far apart',
-              'The wavelength is too short'
+              'The light source is too dim for that order',
+              'It lands on a single-slit diffraction minimum',
+              'The slits are too far apart for that order',
+              'The wavelength is too short for that order'
             ],
             correctAnswer: 1,
-            explanation: 'A "missing order" occurs when a double-slit interference maximum falls exactly at a single-slit diffraction minimum. This happens when $d/a$ is an integer. If $d/a = 3$, the 3rd, 6th, 9th, etc. interference maxima are suppressed.'
+            explanation: 'A "missing order" occurs when a double-slit interference maximum falls exactly at a single-slit diffraction minimum. This happens when $d/a$ is an integer. If $d/a = 3$, the 3rd, 6th, 9th, etc. interference maxima are suppressed. Wider slit spacing or shorter wavelength would allow more orders, not fewer, and a dim source dims every fringe equally.'
           }
         ]
       }

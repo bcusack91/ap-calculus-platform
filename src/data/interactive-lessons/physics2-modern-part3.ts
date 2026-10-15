@@ -132,13 +132,13 @@ Each element has different energy levels → different spectral lines → spectr
           {
             question: 'A photon with energy 10.0 eV hits a hydrogen atom in the ground state. What happens?',
             options: [
-              'The electron jumps to n = 2 (needs 10.2 eV)',
-              'The electron jumps to n = 3 (needs 12.1 eV)',
-              'The photon is absorbed partially',
-              'Nothing — 10.0 eV does not match any transition from n = 1'
+              'It is absorbed and raises the electron to $n = 2$',
+              'It ionizes the atom and frees the electron',
+              'It is partly absorbed, leaving a weaker photon',
+              'It is not absorbed and passes through the atom unchanged'
             ],
             correctAnswer: 3,
-            explanation: 'From $n = 1$: to $n = 2$ requires 10.2 eV, to $n = 3$ requires 12.1 eV. Since 10.0 eV matches no transition exactly, the photon passes through without being absorbed.'
+            explanation: 'From $n = 1$: to $n = 2$ requires 10.2 eV, to $n = 3$ requires 12.1 eV, and ionization requires 13.6 eV. Since 10.0 eV matches no transition exactly, the photon passes through without being absorbed. A photon is absorbed whole or not at all, so it cannot give up only part of its energy.'
           }
         ]
       }

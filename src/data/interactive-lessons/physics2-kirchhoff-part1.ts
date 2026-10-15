@@ -91,23 +91,23 @@ $$I_4 = 3 \\text{ A (out)}$$
             question: 'Three currents meet at a junction: 4 A flows in, 7 A flows in, and $I_3$ flows out. What is $I_3$?',
             options: [
               '3 A',
-              '7 A',
+              '$-11$ A',
               '11 A',
-              '4 A'
+              '$-3$ A'
             ],
             correctAnswer: 2,
-            explanation: '$\\sum I_{\\text{in}} = \\sum I_{\\text{out}}$. So $4 + 7 = I_3 = 11$ A.'
+            explanation: '$\\sum I_{\\text{in}} = \\sum I_{\\text{out}}$. So $4 + 7 = I_3 = 11$ A. 3 A subtracts the two incoming currents, $-11$ A writes all three currents as inflows even though $I_3$ leaves, and $-3$ A treats the 7 A current as leaving.'
           },
           {
             question: 'At a node, currents of 5 A, 3 A, and 2 A flow in, while 6 A and $I_x$ flow out. What is $I_x$?',
             options: [
-              '2 A',
+              '16 A',
               '4 A',
-              '6 A',
+              '$-4$ A',
               '10 A'
             ],
             correctAnswer: 1,
-            explanation: 'In: $5 + 3 + 2 = 10$ A. Out: $6 + I_x = 10$ A. So $I_x = 4$ A.'
+            explanation: 'In: $5 + 3 + 2 = 10$ A. Out: $6 + I_x = 10$ A. So $I_x = 4$ A. 10 A ignores the 6 A outflow, 16 A adds the 6 A instead of subtracting it, and $-4$ A swaps the in and out sides of the equation.'
           }
         ]
       }
@@ -180,10 +180,10 @@ A circuit node has five branches connected to it. The currents are:
           {
             question: 'You solve a circuit and find $I_2 = -3$ A. This means:',
             options: [
-              'The circuit is impossible',
-              'You made an error — current cannot be negative',
-              'The current is 3 A in the direction opposite to your assumed direction',
-              'The resistance is negative'
+              'The circuit has no physical solution',
+              'An error was made, since current cannot be negative',
+              'The current is 3 A, opposite to the assumed direction',
+              'A resistor in that branch has negative resistance'
             ],
             correctAnswer: 2,
             explanation: 'A negative current simply means your assumed direction was wrong. The actual current is 3 A flowing opposite to the direction you drew. This is perfectly normal and expected in circuit analysis.'

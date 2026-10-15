@@ -163,11 +163,11 @@ This is the number of KVL equations you can write. Combined with $N - 1$ KCL equ
             options: [
               '2.5 A',
               '1.0 A',
-              '0.67 A',
-              '10 A'
+              '1.7 A',
+              '4.2 A'
             ],
             correctAnswer: 1,
-            explanation: 'KVL: $\\varepsilon - IR_1 - IR_2 = 0 \\Rightarrow 10 = I(4+6) = 10I \\Rightarrow I = 1.0$ A.'
+            explanation: 'KVL: $\\varepsilon - IR_1 - IR_2 = 0 \\Rightarrow 10 = I(4+6) = 10I \\Rightarrow I = 1.0$ A. 2.5 A and 1.7 A each use only one resistor, and 4.2 A treats the two resistors as if they were in parallel.'
           },
           {
             question: 'A circuit has 5 branches and 3 nodes. How many independent loop equations can you write?',
@@ -205,13 +205,13 @@ This is the number of KVL equations you can write. Combined with $N - 1$ KCL equ
           {
             question: 'Which statement is FALSE about Kirchhoff\'s Loop Rule?',
             options: [
-              'It applies to any closed loop in a circuit',
-              'It is based on conservation of energy',
-              'The sum of voltages around a loop equals the battery EMF',
-              'Voltage drops across resistors are negative when traversed in the current direction'
+              'It applies to every closed loop in a circuit',
+              'It follows from conservation of energy',
+              'Potential changes around a loop including batteries sum to the EMF',
+              'Crossing a resistor along the current gives a negative change'
             ],
             correctAnswer: 2,
-            explanation: 'The sum of ALL voltage changes (including batteries) around a closed loop equals ZERO, not the battery EMF. The correct statement is $\\sum \\Delta V = 0$.'
+            explanation: 'The sum of ALL potential changes around a closed loop, including the battery\'s rise, equals ZERO, not the battery EMF: $\\sum \\Delta V = 0$. It is the drops across the resistors alone that add up to the EMF.'
           }
         ]
       }

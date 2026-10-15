@@ -94,10 +94,10 @@ This is why lightning rods work — charge concentrates at the sharp tip, creati
           {
             question: 'Two electric field lines cross at point P. This means:',
             options: [
-              'The field is very strong at P',
-              'The field is zero at P',
-              'This is impossible — field lines never cross',
-              'There are two charges at P'
+              'The field at P points in two directions',
+              'The field is zero at P, where the lines meet',
+              'That drawing is impossible',
+              'A point charge must be sitting exactly at P'
             ],
             correctAnswer: 2,
             explanation: 'If lines crossed, there would be two field directions at one point — which is impossible. A unique field vector exists at every point in space.'
@@ -105,10 +105,10 @@ This is why lightning rods work — charge concentrates at the sharp tip, creati
           {
             question: 'A charge $+3Q$ is near a charge $-Q$. How do the field lines compare?',
             options: [
-              'Equal lines leave $+3Q$ and enter $-Q$',
-              'Three times as many lines leave $+3Q$; one-third end on $-Q$, the rest go to infinity',
-              'Lines only exist between the charges',
-              'All lines from $+3Q$ end on $-Q$'
+              'Equal numbers leave $+3Q$ and enter $-Q$',
+              'Three times as many leave $+3Q$, and two-thirds reach infinity',
+              'Three times as many enter $-Q$ as leave $+3Q$',
+              'All the lines from $+3Q$ end on $-Q$'
             ],
             correctAnswer: 1,
             explanation: '3 lines leave for every 1 that enters $-Q$. The remaining 2/3 of lines extend to infinity — they have no local negative charge to terminate on.'
@@ -127,10 +127,10 @@ This is why lightning rods work — charge concentrates at the sharp tip, creati
           {
             question: 'Field lines between parallel plates are straight and evenly spaced. This tells us the field is:',
             options: [
-              'Very weak',
-              'Varying linearly',
-              'Uniform (constant magnitude and direction)',
-              'Zero at the midpoint'
+              'Weak, because the lines are far apart',
+              'Increasing linearly toward one plate',
+              'Uniform in magnitude and direction',
+              'Strongest at the midpoint of the gap'
             ],
             correctAnswer: 2,
             explanation: 'Evenly-spaced parallel lines = constant field strength. Straight lines = constant direction. Together: uniform field. This is the defining feature of the parallel-plate arrangement.'
@@ -195,10 +195,10 @@ This is why lightning rods work — charge concentrates at the sharp tip, creati
           {
             question: 'A positive charge is placed near a large grounded conductor. The field lines from the charge will:',
             options: [
-              'Pass through the conductor',
-              'Terminate perpendicular to the conductor surface',
-              'Reflect off the conductor',
-              'Circle around the conductor'
+              'Pass straight through the conductor',
+              'End perpendicular to the conductor surface',
+              'Bend away and avoid the conductor',
+              'End at a shallow angle on the surface'
             ],
             correctAnswer: 1,
             explanation: 'The grounded conductor is at zero potential. Field lines from the positive charge terminate on induced negative charges on the conductor surface, arriving perpendicular to the surface (as required at equilibrium).'

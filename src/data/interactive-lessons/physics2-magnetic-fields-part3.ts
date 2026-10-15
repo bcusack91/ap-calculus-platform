@@ -165,10 +165,10 @@ A proton ($m = 1.67 \\times 10^{-27}$ kg, $q = 1.6 \\times 10^{-19}$ C) moves at
               '1/2',
               '1',
               '2',
-              '4'
+              '$\\sqrt{2}$'
             ],
             correctAnswer: 2,
-            explanation: '$r = mv/(qB)$. Same $v$, $q$, and $B$. The deuteron has $2m$, so $r_d/r_p = 2m/(m) = 2$.'
+            explanation: '$r = mv/(qB)$. Same $v$, $q$, and $B$. The deuteron has $2m$, so $r_d/r_p = 2m/(m) = 2$. 1/2 inverts the ratio, 1 assumes mass does not matter, and $\\sqrt{2}$ is the ratio for equal kinetic energies rather than equal speeds.'
           },
           {
             question: 'In a velocity selector, the selected speed depends on:',

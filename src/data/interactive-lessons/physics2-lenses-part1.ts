@@ -94,12 +94,12 @@ The refracted rays diverge, but their **backward extensions** meet on the same s
             question: 'A converging lens has a focal length that is:',
             options: [
               'Negative',
-              'Zero',
+              'Set by the object distance',
               'Positive',
-              'Could be positive or negative'
+              'Positive only for real images'
             ],
             correctAnswer: 2,
-            explanation: 'By sign convention, converging (convex) lenses have a positive focal length ($f > 0$). Diverging (concave) lenses have negative focal length ($f < 0$).'
+            explanation: 'By sign convention, converging (convex) lenses have a positive focal length ($f > 0$) whether the image is real or virtual. The focal length is a property of the lens itself, so it does not change with object distance. Diverging (concave) lenses have negative focal length ($f < 0$).'
           },
           {
             question: 'A diverging lens always produces images that are:',
@@ -115,13 +115,13 @@ The refracted rays diverge, but their **backward extensions** meet on the same s
           {
             question: 'Which principal ray passes through the center of the lens without bending?',
             options: [
-              'The parallel ray',
-              'The focal ray',
+              'The ray parallel to the principal axis',
+              'The ray passing through the near focal point',
               'The central ray',
-              'None — all rays bend'
+              'None; every ray bends at least a little'
             ],
             correctAnswer: 2,
-            explanation: 'The central ray passes through the center of the lens and continues in a straight line. The lens surfaces are locally parallel at the center, so there is no net deviation.'
+            explanation: 'The central ray passes through the center of the lens and continues in a straight line. The lens surfaces are locally parallel at the center, so there is no net deviation. The ray parallel to the axis refracts through the far focal point, and the ray through the near focal point exits parallel to the axis, so both of those bend.'
           }
         ]
       }

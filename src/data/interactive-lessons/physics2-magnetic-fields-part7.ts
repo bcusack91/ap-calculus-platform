@@ -200,35 +200,35 @@ An electron ($m = 9.11 \\times 10^{-31}$ kg, $q = 1.6 \\times 10^{-19}$ C) is ac
           {
             question: 'A positive charge moves north in a magnetic field pointing west. The magnetic force is directed:',
             options: [
-              'Up (out of the ground)',
-              'Down (into the ground)',
+              'Up',
+              'Down',
               'East',
               'South'
             ],
             correctAnswer: 0,
-            explanation: 'North × West: $\\hat{y} \\times (-\\hat{x}) = -(\\hat{y} \\times \\hat{x}) = -(-\\hat{z}) = \\hat{z}$ = up. RHR: fingers north, curl west → thumb up.'
+            explanation: 'North × West: $\\hat{y} \\times (-\\hat{x}) = -(\\hat{y} \\times \\hat{x}) = -(-\\hat{z}) = \\hat{z}$ = up (out of the ground). RHR: fingers north, curl west → thumb up. Down is the result of a reversed hand rule, and East and South lie in the plane of $\\vec{v}$ and $\\vec{B}$, while the force must be perpendicular to both.'
           },
           {
             question: 'A proton moves in a circle of radius 5.0 cm in a 0.20 T field. Its speed is approximately:',
             options: [
               '$9.6 \\times 10^5$ m/s',
-              '$4.8 \\times 10^5$ m/s',
+              '$1.8 \\times 10^{9}$ m/s',
               '$1.9 \\times 10^6$ m/s',
-              '$3.8 \\times 10^6$ m/s'
+              '$9.6 \\times 10^{7}$ m/s'
             ],
             correctAnswer: 0,
-            explanation: '$v = qBr/m = (1.6 \\times 10^{-19})(0.20)(0.05)/(1.67 \\times 10^{-27}) = 1.6 \\times 10^{-21}/(1.67 \\times 10^{-27}) = 9.58 \\times 10^5 \\approx 9.6 \\times 10^5$ m/s.'
+            explanation: '$v = qBr/m = (1.6 \\times 10^{-19})(0.20)(0.05)/(1.67 \\times 10^{-27}) = 1.6 \\times 10^{-21}/(1.67 \\times 10^{-27}) = 9.58 \\times 10^5 \\approx 9.6 \\times 10^5$ m/s. $1.9 \\times 10^6$ m/s uses the 10 cm diameter as the radius, $9.6 \\times 10^7$ m/s leaves $r$ in centimeters, and $1.8 \\times 10^9$ m/s uses the electron\'s mass.'
           },
           {
             question: 'The magnetic field inside a solenoid with 1000 turns/m carrying 3.0 A is:',
             options: [
-              '$3.77 \\times 10^{-4}$ T',
+              '$1.20 \\times 10^{-3}$ T',
               '$3.77 \\times 10^{-3}$ T',
               '$1.88 \\times 10^{-3}$ T',
-              '$6.0 \\times 10^{-4}$ T'
+              '$6.00 \\times 10^{-4}$ T'
             ],
             correctAnswer: 1,
-            explanation: '$B = \\mu_0 nI = (4\\pi \\times 10^{-7})(1000)(3.0) = 12\\pi \\times 10^{-4} = 3.77 \\times 10^{-3}$ T.'
+            explanation: '$B = \\mu_0 nI = (4\\pi \\times 10^{-7})(1000)(3.0) = 12\\pi \\times 10^{-4} = 3.77 \\times 10^{-3}$ T. $1.20 \\times 10^{-3}$ T drops the $\\pi$, $1.88 \\times 10^{-3}$ T has a stray factor of 1/2, and $6.00 \\times 10^{-4}$ T uses $\\mu_0/(2\\pi)$ from the long-wire formula.'
           },
           {
             question: 'A velocity selector has $E = 3.0 \\times 10^5$ V/m and $B = 0.060$ T. The selected speed is:',
@@ -236,21 +236,21 @@ An electron ($m = 9.11 \\times 10^{-31}$ kg, $q = 1.6 \\times 10^{-19}$ C) is ac
               '$1.8 \\times 10^4$ m/s',
               '$5.0 \\times 10^5$ m/s',
               '$5.0 \\times 10^6$ m/s',
-              '$3.0 \\times 10^7$ m/s'
+              '$2.0 \\times 10^{-7}$ m/s'
             ],
             correctAnswer: 2,
-            explanation: '$v = E/B = (3.0 \\times 10^5)/(0.060) = 5.0 \\times 10^6$ m/s.'
+            explanation: '$v = E/B = (3.0 \\times 10^5)/(0.060) = 5.0 \\times 10^6$ m/s. $1.8 \\times 10^4$ m/s multiplies $E$ by $B$, $2.0 \\times 10^{-7}$ m/s divides $B$ by $E$, and $5.0 \\times 10^5$ m/s misreads 0.060 T as 0.60 T.'
           },
           {
             question: 'Which statement about the magnetic force is FALSE?',
             options: [
-              'It is always perpendicular to the velocity',
+              'It is always perpendicular to v',
               'It does no work on the particle',
-              'It can change the speed of a particle',
-              'It depends on the sine of the angle between v and B'
+              'It can change the speed of a moving particle',
+              'It depends on the angle between v and B'
             ],
             correctAnswer: 2,
-            explanation: 'The magnetic force is always perpendicular to velocity, so it does no work and CANNOT change speed — only direction. The false statement is C.'
+            explanation: 'The magnetic force is always perpendicular to velocity, so it does no work and CANNOT change speed — only direction. The claim that it can change speed is the false statement.'
           }
         ]
       }

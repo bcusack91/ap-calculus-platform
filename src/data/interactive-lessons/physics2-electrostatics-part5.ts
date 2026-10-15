@@ -151,10 +151,10 @@ Use $e = 1.6 \\times 10^{-19}$ C.
           {
             question: 'A physicist claims to measure a charge of $2.5e$. Is this possible?',
             options: [
-              'Yes — any charge value exists in nature',
+              'Yes — charge can take any value, like mass can',
               'No — free charges must be integer multiples of e',
-              'Only for quarks',
-              'Only in extreme temperatures'
+              'Yes — free quarks carry fractional charges like this',
+              'Yes — but only in ions at extremely high temperatures'
             ],
             correctAnswer: 1,
             explanation: 'Free, observable charges are always integer multiples of e. Quarks have fractional charges (⅓e, ⅔e) but they are always confined inside particles — you can never isolate a fractional charge.'
@@ -173,9 +173,9 @@ Use $e = 1.6 \\times 10^{-19}$ C.
           {
             question: 'A Van de Graaff generator transfers 5 μC to a metal sphere each second. After 10 seconds, the sphere has +50 μC. Where did the charge come from?',
             options: [
-              'The generator created new charge',
-              'The charge was transferred from the belt/source — the source lost 50 μC',
-              'The sphere attracted charge from the air',
+              'The generator created 50 μC of new charge',
+              'Transferred from the source, which lost 50 μC',
+              'The sphere pulled 50 μC out of the air',
               'Friction between air molecules created the charge'
             ],
             correctAnswer: 1,

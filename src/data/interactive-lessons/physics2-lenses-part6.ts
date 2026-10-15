@@ -98,13 +98,13 @@ $$P = \\frac{1}{f}$$
           {
             question: 'Chromatic aberration occurs because:',
             options: [
-              'The lens is too thick',
-              'Different colors of light have different focal lengths due to dispersion',
-              'The object is too close to the lens',
-              'The lens is not perfectly round'
+              'Thick glass absorbs some colors more than others',
+              'Refractive index varies with wavelength',
+              'Rays far from the axis focus closer to the lens',
+              'Some light reflects inside the lens before exiting'
             ],
             correctAnswer: 1,
-            explanation: 'Chromatic aberration is caused by dispersion — different wavelengths refract at slightly different angles, giving each color a slightly different focal length.'
+            explanation: 'Chromatic aberration is caused by dispersion: the refractive index of glass depends on wavelength, so each color refracts at a slightly different angle and has a slightly different focal length. Edge rays focusing closer to the lens describes spherical aberration, a different defect that occurs even with one color.'
           },
           {
             question: 'A person who can see distant objects clearly but struggles to read a book up close has:',
@@ -197,11 +197,11 @@ $$P = \\frac{1}{f}$$
             options: [
               'Two converging lenses of the same glass',
               'A converging and diverging lens of different glass types',
-              'A single aspherical lens',
-              'A lens and a mirror'
+              'A converging and a diverging lens of the same glass',
+              'Two diverging lenses of different glass types'
             ],
             correctAnswer: 1,
-            explanation: 'An achromatic doublet uses a converging lens (crown glass, low dispersion) and a diverging lens (flint glass, high dispersion). The diverging lens cancels the color spread without fully canceling the convergence.'
+            explanation: 'An achromatic doublet uses a converging lens (crown glass, low dispersion) and a diverging lens (flint glass, high dispersion). The diverging lens cancels the color spread without fully canceling the convergence. With the same glass, canceling the color spread would also cancel the focusing, and two diverging lenses could not bring light to a real focus.'
           }
         ]
       }

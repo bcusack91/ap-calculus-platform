@@ -190,10 +190,10 @@ Enter:
           {
             question: 'In superposition, does the presence of a third charge affect the Coulomb force between two specific charges?',
             options: [
-              'Yes — all charges interact simultaneously',
-              'No — each pairwise force is calculated independently',
-              'Only if the third charge is between them',
-              'Only if the third charge is larger'
+              'Yes — the third charge weakens the force between the other two',
+              'No — each pairwise force is found independently',
+              'Yes, but only if the third charge sits between them',
+              'Yes, but only if the third charge is larger than both'
             ],
             correctAnswer: 1,
             explanation: 'Superposition means each pairwise Coulomb interaction is independent. The force between A and B is the same whether or not C exists. You just add all the forces at the end.'
@@ -201,10 +201,10 @@ Enter:
           {
             question: 'Two charges $+Q$ and $-Q$ are separated by distance $d$. Where could a positive test charge be in equilibrium?',
             options: [
-              'At the midpoint between them',
-              'Between them, closer to −Q',
-              'Outside the pair, beyond the −Q charge',
-              'There is no equilibrium point for opposite charges'
+              'At the midpoint, where the two pulls balance',
+              'Between them, closer to the −Q charge',
+              'Outside the pair, just beyond the −Q charge',
+              'No such point exists'
             ],
             correctAnswer: 3,
             explanation: 'For opposite charges, both forces on a test charge between them point in the same direction (toward −Q). There\'s no point where they cancel. Outside the pair, the closer charge always dominates.'
@@ -223,9 +223,9 @@ Enter:
           {
             question: 'A student adds Coulomb force magnitudes (ignoring direction) and reports the "net force." What\'s wrong?',
             options: [
-              'Nothing — magnitudes always add',
-              'Forces are vectors — you must account for direction before adding',
-              'You should multiply instead of add',
+              'Nothing — net force is the sum of the magnitudes',
+              'Forces are vectors, so directions must be included',
+              'The forces should be multiplied, not added',
               'Superposition doesn\'t apply to more than two charges'
             ],
             correctAnswer: 1,
@@ -234,10 +234,10 @@ Enter:
           {
             question: 'In a 2D problem, a student forgets to use vector components and just adds magnitudes. Their answer will typically be:',
             options: [
-              'Exactly correct',
+              'Exactly right — magnitudes add the same way as vectors',
               'Too large — they ignored partial cancellation',
-              'Too small',
-              'Correct only for perpendicular forces'
+              'Too small — they missed the extra vertical components',
+              'Correct whenever the two forces are perpendicular'
             ],
             correctAnswer: 1,
             explanation: 'Adding magnitudes without considering direction always overestimates the net force, unless all forces happen to point in exactly the same direction.'

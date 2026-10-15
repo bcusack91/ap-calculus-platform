@@ -111,7 +111,7 @@ The negative sign indicates the image is inverted.
             options: [
               '$m_1 + m_2$',
               '$m_1 - m_2$',
-              '$m_1 \\times m_2$',
+              '$m_1 m_2$',
               '$m_1 / m_2$'
             ],
             correctAnswer: 2,
@@ -180,13 +180,13 @@ Two converging lenses are 55 cm apart. Lens 1: $f_1 = 15$ cm. Lens 2: $f_2 = 10$
           {
             question: 'If the image from lens 1 forms past lens 2 (i.e., $d_{i1} > L$), then for lens 2 the object is:',
             options: [
-              'Real, with positive $d_{o2}$',
+              'Virtual, with positive $d_{o2}$',
               'Virtual, with negative $d_{o2}$',
-              'At infinity',
-              'Nonexistent'
+              'Real, with $d_{o2} = d_{i1}$',
+              'Real, with $d_{o2} = d_{i1} - L$'
             ],
             correctAnswer: 1,
-            explanation: '$d_{o2} = L - d_{i1}$. If $d_{i1} > L$, then $d_{o2} < 0$ — a virtual object for lens 2. The light was converging toward a point past lens 2 when it was intercepted.'
+            explanation: '$d_{o2} = L - d_{i1}$. If $d_{i1} > L$, then $d_{o2} < 0$ — a virtual object for lens 2. The light was converging toward a point past lens 2 when it was intercepted. Using $d_{i1}$ directly forgets the lens separation, and writing $d_{i1} - L$ flips the subtraction to force a positive (real) object distance.'
           }
         ]
       }

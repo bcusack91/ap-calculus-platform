@@ -188,13 +188,13 @@ A $30\\;\\text{V}$ battery is connected in series with a $200\\;\\Omega$ resisto
           {
             question: 'A fully charged capacitor in a DC circuit behaves like:',
             options: [
-              'A short circuit (wire)',
-              'A resistor',
-              'An open circuit (break in wire)',
-              'A battery'
+              'A short circuit carrying maximum current',
+              'A resistor in series with the source',
+              'An open circuit',
+              'A second battery driving current'
             ],
             correctAnswer: 2,
-            explanation: 'A fully charged capacitor has $V_C = \\varepsilon$ and $I = 0$. No current flows — it acts like an open circuit.'
+            explanation: 'A fully charged capacitor has $V_C = \\varepsilon$ and $I = 0$. No current flows — it acts like an open circuit (a break in the wire).'
           },
           {
             question: 'You traverse a loop and write: $+12 - 3I_1 + 5I_2 - 8 = 0$. This loop contains:',

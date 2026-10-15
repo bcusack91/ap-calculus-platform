@@ -63,12 +63,12 @@ This is just conservation of energy — the battery's energy output per second e
             question: 'A resistor has 3 A flowing through it and 12 V across it. The power dissipated is:',
             options: [
               '4 W',
-              '15 W',
+              '108 W',
               '36 W',
               '144 W'
             ],
             correctAnswer: 2,
-            explanation: '$P = IV = 3 \\times 12 = 36$ W.'
+            explanation: '$P = IV = 3 \\times 12 = 36$ W. 4 W is $V/I$ (the resistance), 144 W is $V^2$ without dividing by $R$, and 108 W squares $I$ but then multiplies by $V$ instead of $R$.'
           },
           {
             question: 'If you double the current through a resistor (resistance unchanged), the power:',

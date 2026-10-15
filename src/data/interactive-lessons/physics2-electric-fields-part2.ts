@@ -189,7 +189,7 @@ $q_1 = +5\\ \\mu\\text{C}$ at $x = 0$, $q_2 = +5\\ \\mu\\text{C}$ at $x = 1.0$ m
             options: [
               'Pointing toward the nearest charge',
               'Pointing away from all charges equally',
-              'Zero (by symmetry)',
+              'Zero',
               'Cannot be determined without knowing the charge'
             ],
             correctAnswer: 2,
@@ -198,10 +198,10 @@ $q_1 = +5\\ \\mu\\text{C}$ at $x = 0$, $q_2 = +5\\ \\mu\\text{C}$ at $x = 1.0$ m
           {
             question: 'If the top charge in the previous problem is removed, the field at the center now points:',
             options: [
-              'Toward the top (where the charge was)',
-              'Away from the top (downward)',
-              'To the left',
-              'It\'s still zero'
+              'Toward the top, where the charge was',
+              'Away from the top, downward',
+              'Toward the bottom-left charge',
+              'Still zero, by the same symmetry'
             ],
             correctAnswer: 0,
             explanation: 'Removing the top charge removes the field component that pointed away from it (downward at the center). The remaining two bottom charges create field components that partially pointed upward. Their net gives a field pointing toward where the removed charge was (upward).'

@@ -125,13 +125,13 @@ When someone says "a 9-volt battery," they mean $\\Delta V = 9$ V between the te
           {
             question: 'Electric potential is a scalar. This means:',
             options: [
-              'It\'s always positive',
-              'It has no units',
-              'We add potentials from multiple charges with simple arithmetic (no vector components)',
-              'It doesn\'t change with distance'
+              'It is always positive, like a speed',
+              'It does not depend on the sign of the charge',
+              'Potentials from several charges add as plain numbers',
+              'It stays the same at every distance'
             ],
             correctAnswer: 2,
-            explanation: 'Scalar = no direction. We just add numbers: $V_{\\text{net}} = V_1 + V_2 + \\cdots$. This makes potential calculations MUCH simpler than field calculations in multi-charge problems.'
+            explanation: 'Scalar = no direction. We just add numbers (with signs): $V_{\\text{net}} = V_1 + V_2 + \\cdots$, with no vector components. Potential can be negative (a negative source charge gives negative V) and it changes with distance. This makes potential calculations MUCH simpler than field calculations in multi-charge problems.'
           }
         ]
       }
@@ -191,13 +191,13 @@ But consider **two equal positive charges** $+Q$ at $x = -d/2$ and $x = +d/2$:
           {
             question: 'At a point where $V = 0$, the electric field must be:',
             options: [
-              'Also zero',
+              'Also zero, since E and V vanish together',
               'Pointing toward the nearest charge',
-              'Not necessarily zero — V and E are independent',
-              'Infinite'
+              'Not necessarily zero, since E depends on how V changes',
+              'Perpendicular to the line joining the charges'
             ],
             correctAnswer: 2,
-            explanation: 'V = 0 just means the scalar sum of potentials is zero. The field (a vector) can still be nonzero. Example: the midpoint of a dipole has V = 0 but E ≠ 0.'
+            explanation: 'V = 0 just means the scalar sum of potentials is zero. The field (a vector) depends on how V changes from point to point, so it can still be nonzero. Example: the midpoint of a dipole has V = 0 but E ≠ 0, pointing along the line from +Q toward −Q.'
           },
           {
             question: 'An electron is released from rest at a point where $V = -300$ V and moves to a point where $V = -100$ V. Its kinetic energy:',

@@ -165,15 +165,15 @@ A soap film ($n = 1.33$) in air is illuminated with white light.
             options: ['constructive interference of reflected rays', 'destructive interference of reflected rays', 'total internal reflection', 'absorption of light']
           },
           {
-            label: 'Oil on water shows colors because different thicknesses reflect different',
-            options: ['amplitudes', 'wavelengths constructively', 'polarizations', 'speeds']
+            label: 'Oil on water shows colors because different thicknesses strongly reflect different',
+            options: ['amplitudes', 'wavelengths', 'polarizations', 'refractive indices']
           },
           {
             label: 'A very thin soap film (t ≈ 0) in reflected light appears',
             options: ['bright (all colors)', 'dark (no reflection)', 'red only', 'blue only']
           }
         ],
-        correctAnswers: ['thin-film interference', 'destructive interference of reflected rays', 'wavelengths constructively', 'dark (no reflection)'],
+        correctAnswers: ['thin-film interference', 'destructive interference of reflected rays', 'wavelengths', 'dark (no reflection)'],
         hint1: 'The colors come from path differences between reflections off the top and bottom surfaces.',
         hint2: 'Anti-reflection coatings cancel reflected light so more light passes through.',
         hint3: 'Different film thicknesses satisfy the constructive condition for different wavelengths.',
@@ -204,7 +204,7 @@ A soap film ($n = 1.33$) in air is illuminated with white light.
             options: [
               'Bright white',
               'Bright blue',
-              'Dark / black',
+              'Dark',
               'Bright red'
             ],
             correctAnswer: 2,

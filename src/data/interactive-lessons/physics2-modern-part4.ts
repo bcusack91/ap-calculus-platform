@@ -186,13 +186,13 @@ A hydrogen atom in the $n = 4$ state can transition to several lower levels.
           {
             question: 'As $n_i$ increases for transitions in the Lyman series ($n_i \\to 1$), the emitted wavelengths:',
             options: [
-              'Increase without limit',
-              'Decrease, approaching a minimum value (series limit)',
-              'Stay the same',
-              'Alternate between longer and shorter'
+              'Increase, approaching a limit of 656 nm',
+              'Decrease toward a fixed limit',
+              'Stay the same, since all end at $n = 1$',
+              'Decrease steadily, approaching zero'
             ],
             correctAnswer: 1,
-            explanation: 'As $n_i \\to \\infty$, $\\Delta E \\to 13.6$ eV, so $\\lambda \\to 1240/13.6 = 91.2$ nm. The wavelengths decrease but converge to this series limit.'
+            explanation: 'As $n_i \\to \\infty$, $\\Delta E \\to 13.6$ eV, so $\\lambda \\to 1240/13.6 = 91.2$ nm. The wavelengths decrease but converge to this series limit instead of falling to zero. (656 nm is the longest Balmer line, not a Lyman limit.)'
           }
         ]
       }

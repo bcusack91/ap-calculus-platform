@@ -115,9 +115,9 @@ The key insight: **the field is a property of the source charge**. It doesn't de
           {
             question: 'Which statement about the electric field is FALSE?',
             options: [
-              'It has units of N/C',
-              'It is a vector quantity',
-              'It depends on the test charge used to measure it',
+              'It can be expressed in N/C or in V/m',
+              'It is a vector with magnitude and direction',
+              'It depends on the test charge used',
               'It points away from positive source charges'
             ],
             correctAnswer: 2,
@@ -160,24 +160,24 @@ A point charge $Q = +3\\ \\mu\\text{C}$ is at the origin. Use $k = 9 \\times 10^
           {
             question: 'A negative charge creates an electric field that:',
             options: [
-              'Points radially outward',
-              'Points radially inward (toward the charge)',
-              'Circulates around the charge',
-              'Is zero everywhere'
+              'Points radially outward from the charge',
+              'Points radially inward, toward the charge',
+              'Circles the charge in closed loops',
+              'Exists only where a test charge sits'
             ],
             correctAnswer: 1,
-            explanation: 'A positive test charge would be attracted *toward* the negative source charge, so the field points inward.'
+            explanation: 'A positive test charge would be attracted *toward* the negative source charge, so the field points inward. The field exists at every point around the charge whether or not a test charge is there, and closed loops describe magnetic fields around currents, not fields of point charges.'
           },
           {
             question: 'An electron ($q = -1.6 \\times 10^{-19}$ C) is in a uniform field $E = 1000$ N/C directed upward. The electron accelerates:',
             options: [
-              'Upward',
-              'Downward',
-              'It doesn\'t accelerate — electrons aren\'t affected by fields',
-              'To the right'
+              'Upward, along the field',
+              'Downward, opposite the field',
+              'Sideways, perpendicular to the field',
+              'At constant speed, with no acceleration'
             ],
             correctAnswer: 1,
-            explanation: '$\\vec{F} = q\\vec{E}$. Since the electron is negative, its force is *opposite* the field → downward. $F = (1.6 \\times 10^{-19})(1000) = 1.6 \\times 10^{-16}$ N downward.'
+            explanation: '$\\vec{F} = q\\vec{E}$. Since the electron is negative, its force is *opposite* the field → downward. $F = (1.6 \\times 10^{-19})(1000) = 1.6 \\times 10^{-16}$ N downward, and a nonzero net force means it must accelerate.'
           }
         ]
       }

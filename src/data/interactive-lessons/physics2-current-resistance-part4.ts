@@ -97,21 +97,21 @@ Why does wire gauge matter? If a wire is too thin for the current it carries, $P
           {
             question: 'A light bulb filament (tungsten, $\\alpha = 4.5 \\times 10^{-3}$ °$C^{-1}$) has resistance 20 $\\Omega$ at 20°C. When operating at 2500°C, its resistance is closest to:',
             options: [
-              '40 $\\Omega$',
-              '120 $\\Omega$',
+              '12 $\\Omega$',
+              '220 $\\Omega$',
               '240 $\\Omega$',
-              '500 $\\Omega$'
+              '2250 $\\Omega$'
             ],
             correctAnswer: 2,
-            explanation: '$R = R_0(1 + \\alpha \\Delta T) = 20(1 + 0.0045 \\times 2480) = 20(1 + 11.16) = 20(12.16) = 243$ $\\Omega \\approx 240$ $\\Omega$.'
+            explanation: '$R = R_0(1 + \\alpha \\Delta T) = 20(1 + 0.0045 \\times 2480) = 20(1 + 11.16) = 20(12.16) = 243$ $\\Omega \\approx 240$ $\\Omega$. Dropping the 1 gives about 220 $\\Omega$, forgetting to multiply by $R_0$ gives about 12 $\\Omega$, and misreading $\\alpha$ as $4.5 \\times 10^{-2}$ gives about 2250 $\\Omega$.'
           },
           {
             question: 'Nichrome ($\\alpha = 0.4 \\times 10^{-3}$ °$C^{-1}$) is used in heating elements because:',
             options: [
-              'It has very low resistance',
-              'Its resistance changes very little with temperature',
-              'It is a superconductor',
-              'It has negative temperature coefficient'
+              'It has very low resistivity, like copper',
+              'Its resistance barely changes as it heats',
+              'Its resistance rises sharply as it heats',
+              'Its resistance drops as it heats'
             ],
             correctAnswer: 1,
             explanation: 'Nichrome has a very small $\\alpha$, so its resistance stays nearly constant even when glowing red-hot. This makes the heating element predictable and stable.'
@@ -119,7 +119,7 @@ Why does wire gauge matter? If a wire is too thin for the current it carries, $P
           {
             question: 'A superconductor below its critical temperature has:',
             options: [
-              'Very low but nonzero resistance',
+              'Very low resistance',
               'Exactly zero resistance',
               'Negative resistance',
               'Infinite resistance'
@@ -164,10 +164,10 @@ Why does wire gauge matter? If a wire is too thin for the current it carries, $P
           {
             question: 'As a metal wire carries current, it heats up. This causes:',
             options: [
-              'The current to increase (positive feedback)',
-              'The resistance to increase, reducing the current (negative feedback)',
-              'No change in current',
-              'The wire to become a superconductor'
+              'Resistance falls, so the current increases',
+              'Resistance rises, so the current drops',
+              'No change, since R is fixed for a metal',
+              'Resistance rises, so the current rises too'
             ],
             correctAnswer: 1,
             explanation: 'Metals have positive $\\alpha$: heating increases resistance. By Ohm\'s law ($I = V/R$), higher $R$ means lower $I$. This is negative feedback — the system partially self-corrects.'
@@ -177,8 +177,8 @@ Why does wire gauge matter? If a wire is too thin for the current it carries, $P
             options: [
               'The voltage will drop to zero',
               'Excessive $I^2R$ heating could start a fire',
-              'The wire will become a superconductor',
-              'The electrons will run out'
+              'The wire\'s resistance will drop to zero',
+              'Electrons will be used up too fast'
             ],
             correctAnswer: 1,
             explanation: 'Too much current through a wire with finite resistance causes excessive Joule heating ($P = I^2R$). The wire can overheat and potentially start a fire — this is exactly why circuit breakers exist.'

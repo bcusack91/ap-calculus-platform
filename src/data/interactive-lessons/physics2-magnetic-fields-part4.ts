@@ -194,21 +194,21 @@ Use $\\mu_0 = 4\\pi \\times 10^{-7}$ T·m/A.
               'Attract each other',
               'Repel each other',
               'Exert no force on each other',
-              'Twist around each other'
+              'Push each other along their length'
             ],
             correctAnswer: 1,
-            explanation: 'Antiparallel currents repel. The magnetic field from one wire pushes the other wire away.'
+            explanation: 'Antiparallel currents repel. The magnetic field from one wire pushes the other wire away. The force is perpendicular to each wire, never along its length.'
           },
           {
             question: 'If the current in a wire is tripled and the magnetic field is doubled, the force on the wire becomes:',
             options: [
-              '5 times larger',
+              '18 times larger',
               '6 times larger',
-              '8 times larger',
-              '9 times larger'
+              '1.5 times larger',
+              '36 times larger'
             ],
             correctAnswer: 1,
-            explanation: '$F = BIL\\sin\\theta$. Tripling $I$ and doubling $B$: $F_{new} = (2B)(3I)L\\sin\\theta = 6BIL\\sin\\theta = 6F$.'
+            explanation: '$F = BIL\\sin\\theta$. Tripling $I$ and doubling $B$: $F_{new} = (2B)(3I)L\\sin\\theta = 6BIL\\sin\\theta = 6F$. 18 squares the current as in $P = I^2R$, 36 squares both factors, and 1.5 divides the factors instead of multiplying them.'
           }
         ]
       }

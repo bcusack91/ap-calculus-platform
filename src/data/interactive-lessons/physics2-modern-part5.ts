@@ -146,8 +146,8 @@ where 1 u = 1 atomic mass unit = $1.66 \\times 10^{-27}$ kg.
           {
             question: 'The strong nuclear force:',
             options: [
-              'Acts only between protons',
-              'Is weaker than the electromagnetic force at all distances',
+              'Acts only between protons in the nucleus',
+              'Is always weaker than the electric force',
               'Has infinite range like gravity',
               'Acts between all nucleons and is very short-range'
             ],
@@ -157,10 +157,10 @@ where 1 u = 1 atomic mass unit = $1.66 \\times 10^{-27}$ kg.
           {
             question: 'The mass of a helium-4 nucleus is less than the combined mass of 2 free protons and 2 free neutrons. The "missing" mass corresponds to:',
             options: [
-              'Mass lost during measurement',
-              'The binding energy of the nucleus via $E = mc^2$',
-              'The kinetic energy of the nucleons',
-              'Energy absorbed from the environment'
+              'Measurement error in the nucleon masses',
+              'The binding energy of the nucleus',
+              'The kinetic energy of the bound nucleons',
+              'Energy absorbed from the surroundings'
             ],
             correctAnswer: 1,
             explanation: 'The mass defect $\\Delta m$ was converted to binding energy: $E_b = \\Delta m \\cdot c^2$. This energy would need to be supplied to break the nucleus apart into individual nucleons.'
@@ -215,10 +215,10 @@ The mass of $^{4}_{2}\\text{He}$ is 4.0026 u. Use $m_p = 1.0073$ u, $m_n = 1.008
           {
             question: 'Why do heavier nuclei (beyond iron) tend to be less stable?',
             options: [
-              'They have too many electrons',
-              'The strong force weakens with distance, so distant protons repel without sufficient strong-force attraction',
-              'Gravity becomes important inside the nucleus',
-              'Neutrons become repulsive in large nuclei'
+              'Their many electrons pull the nucleus apart',
+              'Proton repulsion outgrows the short-range strong force',
+              'Gravity between nucleons becomes significant',
+              'Neutrons begin repelling each other at large size'
             ],
             correctAnswer: 1,
             explanation: 'The strong nuclear force is short-range. In large nuclei, protons on opposite sides of the nucleus experience Coulomb repulsion but are too far apart for the strong force to compensate, leading to instability.'

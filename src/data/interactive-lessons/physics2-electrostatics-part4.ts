@@ -149,10 +149,10 @@ This is why a charged balloon sticks to a neutral wall!
           {
             question: 'A negatively charged balloon sticks to a neutral wall. Why?',
             options: [
-              'The wall becomes negatively charged',
-              'Gravity pulls the balloon toward the wall',
-              'The balloon polarizes the wall, creating a net attractive force',
-              'Air pressure pushes the balloon against the wall'
+              'Charge leaks onto the wall, giving it a net positive charge',
+              'Gravity and friction hold the balloon flat against the wall',
+              'The balloon polarizes the wall, giving a net attraction',
+              'Air pressure pushes the balloon flat against the wall'
             ],
             correctAnswer: 2,
             explanation: 'The charged balloon polarizes the neutral wall — positive charges in the wall shift closer to the balloon. Since these are nearer, the attractive force is stronger than the repulsive force, creating net attraction.'
@@ -171,10 +171,10 @@ This is why a charged balloon sticks to a neutral wall!
           {
             question: 'Why is the electric field zero inside a conductor at electrostatic equilibrium?',
             options: [
-              'Conductors block all electric fields',
-              'If E ≠ 0, free charges would move — contradicting equilibrium',
-              'Conductors have no charge inside',
-              'The charges cancel out perfectly everywhere'
+              'Conductors absorb field energy before it can get inside',
+              'Any field inside would push free charges until it was canceled',
+              'A conductor holds no charge, so no field can exist in it',
+              'Positive and negative charges cancel at every point inside'
             ],
             correctAnswer: 1,
             explanation: 'In a conductor, charges are free to move. If there were an internal field, charges would accelerate — but equilibrium means no motion. So E must be zero.'
@@ -193,10 +193,10 @@ This is why a charged balloon sticks to a neutral wall!
           {
             question: 'A student says: "A Faraday cage works because the metal absorbs all the electric field." Is this correct?',
             options: [
-              'Yes — the metal absorbs the field energy',
-              'No — the free charges in the conductor rearrange to cancel the external field inside',
-              'Yes — all metals absorb electric fields',
-              'No — Faraday cages only work with magnetic fields'
+              'Yes — the metal soaks up the field energy and turns it into heat',
+              'No — free charges shift and cancel the outside field inside',
+              'Yes — any metal absorbs electric fields that strike its surface',
+              'No — the cage blocks only magnetic fields, not electric ones'
             ],
             correctAnswer: 1,
             explanation: 'The metal doesn\'t "absorb" the field. Instead, free charges in the conductor redistribute themselves to create an opposing field that exactly cancels the external field inside. The result: E = 0 inside.'
@@ -205,12 +205,12 @@ This is why a charged balloon sticks to a neutral wall!
             question: 'After charging by conduction, the charged rod has:',
             options: [
               'The same charge as before',
-              'Less charge than before (some transferred)',
-              'More charge than before',
-              'Zero charge'
+              'Less charge than before',
+              'More charge, drawn from the sphere',
+              'Zero charge — it all moves to the sphere'
             ],
             correctAnswer: 1,
-            explanation: 'Conduction transfers charge from the rod to the sphere. The rod loses some charge in the process. Total charge is conserved — what the rod loses, the sphere gains.'
+            explanation: 'Conduction transfers charge from the rod to the sphere, so the rod keeps less charge than before (some transferred), but generally not zero: the charge is shared until both reach the same potential. Total charge is conserved — what the rod loses, the sphere gains.'
           }
         ]
       }

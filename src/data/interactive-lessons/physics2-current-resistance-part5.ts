@@ -166,13 +166,13 @@ Use an electricity rate of $0.12/kWh.
           {
             question: 'Why do power companies transmit electricity at very high voltages (hundreds of thousands of volts)?',
             options: [
-              'High voltage is safer for workers',
-              'High voltage allows the use of thinner wires',
-              'For a given power, higher voltage means lower current, which reduces $I^2R$ transmission losses',
-              'Appliances need high voltage to operate'
+              'High voltage is safer for line workers',
+              'Higher voltage raises the current delivered',
+              'Lower current for the same power, so less $I^2R$ loss',
+              'Appliances need very high voltage to operate'
             ],
             correctAnswer: 2,
-            explanation: '$P = IV$. For fixed power, raising $V$ lowers $I$. Transmission losses are $P_{\\text{loss}} = I^2R$. Lowering $I$ by a factor of 10 reduces losses by a factor of 100!'
+            explanation: '$P = IV$. For fixed power, raising $V$ lowers $I$ (it does not raise it). Transmission losses are $P_{\\text{loss}} = I^2R$. Lowering $I$ by a factor of 10 reduces losses by a factor of 100! Transformers step the voltage back down before it reaches homes.'
           },
           {
             question: 'One kilowatt-hour equals:',

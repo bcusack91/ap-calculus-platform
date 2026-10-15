@@ -118,19 +118,19 @@ The total mass-energy and momentum of the system are conserved. The kinetic ener
           {
             question: 'In beta-minus decay, a neutron becomes:',
             options: [
-              'A proton + alpha particle',
+              'A proton + positron',
               'A proton + electron + antineutrino',
               'A proton + positron + neutrino',
-              'Two protons + electron'
+              'A proton + electron + neutrino'
             ],
             correctAnswer: 1,
-            explanation: '$n \\to p + e^{-} + \\bar{\\nu}_e$. The neutron converts to a proton, and an electron and antineutrino are emitted to conserve charge and lepton number.'
+            explanation: '$n \\to p + e^{-} + \\bar{\\nu}_e$. The neutron converts to a proton, and an electron and antineutrino are emitted to conserve charge and lepton number. A positron would break charge conservation here, and an ordinary neutrino would break lepton-number conservation.'
           },
           {
             question: 'After gamma decay, the nucleus has:',
             options: [
-              'One fewer proton',
-              'One fewer neutron',
+              'One fewer proton, same $A$',
+              'One fewer neutron, same $Z$',
               'The same Z and A but lower energy',
               'A different element identity'
             ],
@@ -228,10 +228,10 @@ A radioactive isotope has a half-life of 8.0 days. You start with $6.4 \\times 1
               '500',
               '200',
               '31',
-              '0'
+              '100'
             ],
             correctAnswer: 2,
-            explanation: '$N = 1000 \\times (1/2)^5 = 1000/32 = 31.25 \\approx 31$ atoms remaining.'
+            explanation: '$N = 1000 \\times (1/2)^5 = 1000/32 = 31.25 \\approx 31$ atoms remaining. Halving only once gives 500, dividing by the number of half-lives gives 200, and dividing by $2 \\times 5$ gives 100; each half-life halves what is left, so the factor is $2^5 = 32$.'
           }
         ]
       }

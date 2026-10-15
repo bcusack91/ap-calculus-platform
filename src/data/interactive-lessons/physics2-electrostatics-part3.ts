@@ -167,24 +167,24 @@ Enter in order:
           {
             question: 'Two charges of +1.0 μC each are 1.0 m apart. The force between them is approximately:',
             options: [
-              '$9.0 \\times 10^{-3}$ N (about 0.009 N)',
-              '9.0 N',
+              '$9.0 \\times 10^{-3}$ N',
+              '$1.0 \\times 10^{-12}$ N',
               '$9.0 \\times 10^{3}$ N',
               '$9.0 \\times 10^{9}$ N'
             ],
             correctAnswer: 0,
-            explanation: 'F = k|$q_{1}q_{2}$|/$r^{2}$ = $(9 \\times 10^{9})(10^{-6})(10^{-6})/(1)^{2}$ = $9 \\times 10^{-3}$ N. The force is small because microcoulombs are tiny amounts of charge.'
+            explanation: 'F = k|$q_{1}q_{2}$|/$r^{2}$ = $(9 \\times 10^{9})(10^{-6})(10^{-6})/(1)^{2}$ = $9 \\times 10^{-3}$ N (about 0.009 N). Converting only one charge from μC gives $9 \\times 10^{3}$ N, converting neither gives $9 \\times 10^{9}$ N, and leaving out k gives $10^{-12}$ N. The force is small because microcoulombs are tiny amounts of charge.'
           },
           {
             question: 'If you solve a Coulomb\'s Law problem and get F = 450,000 N between two small lab charges, what most likely happened?',
             options: [
-              'That\'s reasonable for static electricity',
-              'You forgot to convert μC to C (used $10^{-6}$ incorrectly)',
-              'You used the wrong constant k',
-              'Coulomb\'s Law doesn\'t work for small charges'
+              'Nothing — forces that large are normal for static charges',
+              'The μC values were never converted to coulombs',
+              'The distance was squared when it should not have been',
+              'Coulomb\'s law fails for charges this small and close'
             ],
             correctAnswer: 1,
-            explanation: 'Forces between lab-scale charges (μC) at cm-scale distances are typically in the range of newtons or less. Huge forces usually mean a unit conversion error — most commonly forgetting to convert microcoulombs to coulombs.'
+            explanation: 'Forces between lab-scale charges (μC) at cm-scale distances are typically in the range of newtons or less. Huge forces usually mean a unit conversion error — most commonly forgetting to convert microcoulombs to coulombs (multiply by $10^{-6}$). Squaring r is required, and Coulomb\'s law holds for small point charges.'
           },
           {
             question: 'By Newton\'s Third Law, if charge A exerts 5 N on charge B, what force does B exert on A?',
@@ -222,10 +222,10 @@ Enter in order:
           {
             question: 'Which step in problem-solving is most often skipped, causing errors?',
             options: [
-              'Writing the formula',
+              'Writing down the formula',
               'Converting units to SI',
-              'Plugging in numbers',
-              'Drawing a diagram'
+              'Substituting the numbers',
+              'Drawing a labeled diagram'
             ],
             correctAnswer: 1,
             explanation: 'Unit conversion is the most commonly skipped step. Students plug in μC or cm directly, leading to answers that are off by many orders of magnitude.'

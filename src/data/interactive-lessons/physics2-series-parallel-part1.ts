@@ -62,9 +62,9 @@ The total resistance is always **greater than the largest individual resistance*
             question: 'Three resistors ($10 \\; \\Omega$, $20 \\; \\Omega$, $30 \\; \\Omega$) are connected in series to a battery. Which statement is TRUE?',
             options: [
               'The 30 Ω resistor carries the most current',
-              'All three resistors carry the same current',
+              'Each resistor carries the same current',
               'The 10 Ω resistor has the highest voltage across it',
-              'The total resistance is less than 10 Ω'
+              'The equivalent resistance is less than 10 Ω'
             ],
             correctAnswer: 1,
             explanation: 'In a series circuit, there is only one path for current. The same current flows through every resistor, regardless of its resistance value.'
@@ -72,9 +72,9 @@ The total resistance is always **greater than the largest individual resistance*
           {
             question: 'If you add a fourth resistor in series to the circuit above, the total current will:',
             options: [
-              'Increase, because there are more resistors',
-              'Stay the same, because the battery hasn\'t changed',
-              'Decrease, because total resistance increases',
+              'Increase, since the circuit has more resistors',
+              'Stay the same, as the battery is unchanged',
+              'Decrease, since the circuit\'s resistance increases',
               'Depend on where the new resistor is placed'
             ],
             correctAnswer: 2,
@@ -195,10 +195,10 @@ Two resistors are connected in series to a 20 V battery. The voltage across the 
               '$R/5$',
               '$R$',
               '$5R$',
-              '$R^5$'
+              '$5/R$'
             ],
             correctAnswer: 2,
-            explanation: 'In series, resistances add: $R_{\\text{total}} = R + R + R + R + R = 5R$.'
+            explanation: 'In series, resistances add: $R_{\\text{total}} = R + R + R + R + R = 5R$. $R/5$ is the parallel result, and $5/R$ adds reciprocals as for parallel and then forgets to invert.'
           }
         ]
       }

@@ -119,10 +119,10 @@ This proved that photons carry momentum: $p = h/\\lambda = E/c$.
           {
             question: 'In the double-slit experiment with electrons sent one at a time, what builds up on the screen?',
             options: [
-              'Two bright bands (one per slit)',
-              'A uniform distribution',
+              'Two bright bands, one behind each slit',
+              'A uniform, featureless spread of hits',
               'An interference pattern of bright and dark fringes',
-              'A single bright spot in the center'
+              'A single bright spot at the center of the screen'
             ],
             correctAnswer: 2,
             explanation: 'Even when sent one at a time, electrons build up an interference pattern over many detections. Each individual electron lands at a single point, but the probability distribution follows wave interference.'
@@ -130,13 +130,13 @@ This proved that photons carry momentum: $p = h/\\lambda = E/c$.
           {
             question: 'Compton scattering demonstrates that photons have:',
             options: [
-              'Mass',
-              'Charge',
+              'Nonzero rest mass',
+              'Electric charge',
               'Momentum',
-              'A fixed wavelength that never changes'
+              'Purely wave behavior'
             ],
             correctAnswer: 2,
-            explanation: 'In Compton scattering, a photon transfers momentum to an electron, proving photons carry momentum $p = h/\\lambda$ despite having zero rest mass.'
+            explanation: 'In Compton scattering, a photon transfers momentum to an electron, proving photons carry momentum $p = h/\\lambda$ despite having zero rest mass and no charge. The scattered photon\'s longer wavelength is explained by treating the photon as a particle in a collision, not by wave behavior alone.'
           }
         ]
       }
@@ -188,13 +188,13 @@ An electron is accelerated from rest through a potential difference of 100 V.
           {
             question: 'Which statement best describes wave-particle duality?',
             options: [
-              'Light is a wave and matter is a particle — they are fundamentally different',
-              'All entities exhibit both wave and particle properties; which is observed depends on the experiment',
-              'Wave-particle duality only applies to photons',
-              'De Broglie waves are only theoretical and have never been observed'
+              'Light is a wave, while matter is made of particles',
+              'Light and matter both show wave and particle behavior',
+              'Only photons show both wave and particle behavior',
+              'Matter waves are predicted but never yet observed'
             ],
             correctAnswer: 1,
-            explanation: 'Wave-particle duality is universal. Photons show particle behavior (photoelectric effect) and wave behavior (interference). Electrons show particle behavior (tracks in detectors) and wave behavior (diffraction patterns).'
+            explanation: 'Wave-particle duality is universal, and which behavior shows up depends on the experiment. Photons show particle behavior (photoelectric effect) and wave behavior (interference). Electrons show particle behavior (tracks in detectors) and wave behavior (diffraction patterns), so matter waves have been observed directly.'
           }
         ]
       }

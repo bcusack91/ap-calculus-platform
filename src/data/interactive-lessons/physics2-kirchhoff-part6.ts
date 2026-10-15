@@ -128,9 +128,9 @@ $$q(t) = CV_0\\,e^{-t/RC}$$
             question: 'A capacitor is being charged through a resistor. At $t = 0$, the capacitor behaves like:',
             options: [
               'An open circuit (no current flows)',
-              'A short circuit (wire — maximum current flows)',
-              'A battery',
-              'A resistor'
+              'A short circuit (maximum current flows)',
+              'A battery opposing the source',
+              'A resistor equal to $R$'
             ],
             correctAnswer: 1,
             explanation: 'At $t = 0$, an uncharged capacitor has $V_C = 0$, so all the battery voltage drops across the resistor: $I_0 = \\varepsilon/R$ (maximum). The capacitor acts like a short circuit (wire) at $t = 0$.'
@@ -138,24 +138,24 @@ $$q(t) = CV_0\\,e^{-t/RC}$$
           {
             question: 'After a very long time ($t \\to \\infty$), a charging capacitor behaves like:',
             options: [
-              'A short circuit',
+              'A short circuit (maximum current)',
               'A resistor equal to $R$',
               'An open circuit (no current flows)',
-              'A battery with EMF = $\\varepsilon/2$'
+              'A source driving current backward'
             ],
             correctAnswer: 2,
-            explanation: 'When fully charged, $V_C = \\varepsilon$ and $I = 0$. No current flows through the capacitor — it acts like an open circuit (a break in the wire).'
+            explanation: 'When fully charged, $V_C = \\varepsilon$ and $I = 0$. No current flows through the capacitor — it acts like an open circuit (a break in the wire). Its voltage balances the battery, so it does not drive any current backward either.'
           },
           {
             question: 'If $R = 5\\;\\text{k}\\Omega$ and $C = 200\\;\\mu\\text{F}$, the time constant is:',
             options: [
-              '0.1 s',
+              '1000 s',
               '1 s',
-              '10 s',
+              '$4 \\times 10^{-8}$ s',
               '0.001 s'
             ],
             correctAnswer: 1,
-            explanation: '$\\tau = RC = (5000)(200 \\times 10^{-6}) = (5000)(0.0002) = 1$ s.'
+            explanation: '$\\tau = RC = (5000)(200 \\times 10^{-6}) = (5000)(0.0002) = 1$ s. 0.001 s drops the kilo prefix, 1000 s reads μF as millifarads, and $4 \\times 10^{-8}$ s divides $C$ by $R$.'
           }
         ]
       }
@@ -210,10 +210,10 @@ A $20\\;\\text{V}$ battery charges a capacitor ($C = 100\\;\\mu\\text{F}$) throu
               '2',
               '4',
               '1 (no change)',
-              '$\\sqrt{2}$'
+              '1/4'
             ],
             correctAnswer: 1,
-            explanation: '$\\tau = RC$. If both $R$ and $C$ double: $\\tau_{\\text{new}} = (2R)(2C) = 4RC = 4\\tau$. The time constant quadruples.'
+            explanation: '$\\tau = RC$. If both $R$ and $C$ double: $\\tau_{\\text{new}} = (2R)(2C) = 4RC = 4\\tau$. The time constant quadruples. A factor of 2 doubles only one of them, and 1/4 treats $\\tau$ as $1/(RC)$.'
           }
         ]
       }

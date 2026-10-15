@@ -177,10 +177,10 @@ Use $\\rho_{\\text{Cu}} = 1.68 \\times 10^{-8}$ $\\Omega\\cdot$m.
           {
             question: 'The resistance of a semiconductor (like silicon) as temperature increases will:',
             options: [
-              'Increase (more collisions)',
-              'Decrease (more charge carriers are freed)',
-              'Stay the same',
-              'First increase, then decrease'
+              'Increase, since the atoms vibrate and collide more',
+              'Decrease, since more charge carriers are freed',
+              'Stay the same, since the number of carriers is fixed',
+              'Drop to zero once it passes a critical temperature'
             ],
             correctAnswer: 1,
             explanation: 'In semiconductors, higher temperature frees more charge carriers from the lattice. The increase in carriers outweighs the increase in collisions, so resistance decreases.'
@@ -188,13 +188,13 @@ Use $\\rho_{\\text{Cu}} = 1.68 \\times 10^{-8}$ $\\Omega\\cdot$m.
           {
             question: 'Two wires of the same material have the same resistance. Wire A is twice as long as Wire B. The ratio of their diameters $d_A / d_B$ is:',
             options: [
-              '$1$',
+              '$1/\\sqrt{2}$',
               '$\\sqrt{2}$',
               '$2$',
-              '$4$'
+              '$1/2$'
             ],
             correctAnswer: 1,
-            explanation: '$R = \\rho L / A$. Same $R$ and $\\rho$: $L_A / A_A = L_B / A_B$. $A_A = A_B (L_A / L_B) = 2A_B$. Since $A \\propto d^2$: $d_A^2 = 2 d_B^2$, so $d_A / d_B = \\sqrt{2}$.'
+            explanation: '$R = \\rho L / A$. Same $R$ and $\\rho$: $L_A / A_A = L_B / A_B$. $A_A = A_B (L_A / L_B) = 2A_B$. Since $A \\propto d^2$: $d_A^2 = 2 d_B^2$, so $d_A / d_B = \\sqrt{2}$. Treating area as proportional to $d$ (not $d^2$) gives 2, and inverting the ratio gives $1/\\sqrt{2}$.'
           }
         ]
       }

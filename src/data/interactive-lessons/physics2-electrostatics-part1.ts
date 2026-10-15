@@ -112,12 +112,12 @@ Every one of these applications relies on the same simple rule: charges exert fo
             question: 'What is the SI unit of electric charge?',
             options: [
               'Ampere (A)',
-              'Volt (V)',
+              'Electronvolt (eV)',
               'Coulomb (C)',
               'Newton (N)'
             ],
             correctAnswer: 2,
-            explanation: 'The coulomb (C) is the SI unit of charge. An ampere is current (charge per second), a volt is potential, and a newton is force.'
+            explanation: 'The coulomb (symbol C) is the SI unit of charge. An ampere is current (charge per second), and the electronvolt and newton are units of energy and force.'
           },
           {
             question: 'A neutral atom has 8 protons. How many electrons does it have?',
@@ -128,20 +128,20 @@ Every one of these applications relies on the same simple rule: charges exert fo
           {
             question: 'You rub a glass rod with silk and the rod becomes positive. What happened?',
             options: [
-              'Protons were added to the rod',
-              'Electrons transferred from the rod to the silk',
-              'Neutrons were removed from the rod',
-              'Charge was created on the rod'
+              'Protons moved from the silk onto the glass rod',
+              'Electrons moved from the rod to the silk',
+              'Electrons moved from the silk onto the glass rod',
+              'Friction created new positive charge on the rod'
             ],
             correctAnswer: 1,
-            explanation: 'Charging by friction transfers electrons. The rod lost electrons to the silk, leaving the rod with a net positive charge. Charge was transferred, not created.'
+            explanation: 'Charging by friction transfers electrons, not protons. The rod lost electrons to the silk, leaving the rod with a net positive charge. If electrons had moved onto the rod it would be negative, and charge is transferred, never created.'
           },
           {
             question: 'Can an object have a charge of $2.4 \\times 10^{-19}$ C?',
             options: [
               'Yes — any charge value is allowed',
               'No — charge is quantized in multiples of e',
-              'Yes, but only for protons',
+              'Yes — any value above e is allowed',
               'No — that value is too small to measure'
             ],
             correctAnswer: 1,
@@ -173,9 +173,9 @@ Every one of these applications relies on the same simple rule: charges exert fo
             question: 'A student says protons move from one object to another during charging. Is this correct for solids?',
             options: [
               'Yes — protons are lighter and move easily',
-              'No — in solids, protons are locked in nuclei; only electrons transfer',
+              'No — protons stay bound in nuclei, so only electrons move',
               'Yes — both protons and electrons move',
-              'Neither protons nor electrons move'
+              'No — neither protons nor electrons move'
             ],
             correctAnswer: 1,
             explanation: 'In solid materials, protons are tightly bound in atomic nuclei. Charging occurs by transfer of electrons, which are in the outer shells and can move between atoms.'

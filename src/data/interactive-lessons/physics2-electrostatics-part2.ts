@@ -167,13 +167,13 @@ Use fractions like \`1/4\` or whole numbers like \`4\`.
           {
             question: 'How does the electric force between an electron and proton compare to their gravitational force?',
             options: [
-              'They are about equal',
-              'Gravity is much stronger',
+              'They are roughly equal in strength at atomic distances',
+              'Gravity is about $10^{36}$ times stronger',
               'Electric force is about $10^{36}$ times stronger',
-              'They can\'t be compared'
+              'Electric force is about 2000 times stronger'
             ],
             correctAnswer: 2,
-            explanation: 'The electric force between fundamental particles is vastly stronger than gravity — by about $10^{36}$. This is why electrostatics dominates at atomic scales.'
+            explanation: 'The electric force between fundamental particles is vastly stronger than gravity — by about $10^{36}$. About 2000 is the proton-to-electron mass ratio, not the force ratio. This is why electrostatics dominates at atomic scales.'
           }
         ]
       }
@@ -189,24 +189,24 @@ Use fractions like \`1/4\` or whole numbers like \`4\`.
           {
             question: 'A student calculates a negative value for Coulomb force magnitude. What went wrong?',
             options: [
-              'Nothing — negative means attractive',
-              'They forgot the absolute value signs around the charges',
-              'The charges were too small',
-              'They used the wrong units'
+              'Nothing — a negative magnitude just means the force is attractive',
+              'They left out the absolute value signs on the charges',
+              'They divided by r instead of by $r^{2}$ in the formula',
+              'They entered k with the wrong sign from the formula sheet'
             ],
             correctAnswer: 1,
-            explanation: 'The formula uses |$q_{1}q_{2}$|, giving a positive magnitude. Direction (attractive vs repulsive) is determined separately from the formula.'
+            explanation: 'The formula uses |$q_{1}q_{2}$|, giving a positive magnitude. A magnitude can never be negative; direction (attractive vs repulsive) is determined separately from the charge signs. Using r instead of $r^{2}$ changes the size of the answer, not its sign, and k is always positive.'
           },
           {
             question: 'A student says: "I doubled the distance, so force is halved." What\'s the error?',
             options: [
-              'Nothing — that\'s correct',
-              'Force follows inverse-square, not inverse — it becomes one-fourth',
-              'Force doesn\'t depend on distance',
-              'You can\'t change the distance'
+              'Nothing — force goes as 1/r, so it halves',
+              'Force goes as $1/r^{2}$, so it drops to one-fourth',
+              'Force goes as $r^{2}$, so it grows fourfold',
+              'Force depends only on the charges, not r'
             ],
             correctAnswer: 1,
-            explanation: 'Common mistake! Force goes as $1/r^{2}$, not 1/r. Doubling distance → force × $(1/2^{2})$ = force/4.'
+            explanation: 'Common mistake! Force goes as $1/r^{2}$, not 1/r, and it decreases (not increases) with distance. Doubling distance → force × $(1/2^{2})$ = force/4.'
           }
         ]
       }

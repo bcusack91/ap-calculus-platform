@@ -104,13 +104,13 @@ For copper: $n \\approx 8.5 \\times 10^{28}$ $electrons/m^{3}$
           {
             question: 'If 3.0 C of charge passes a point in a wire every 0.50 s, the current is:',
             options: [
-              '0.6 A',
+              '0.17 A',
               '1.5 A',
               '3.0 A',
               '6.0 A'
             ],
             correctAnswer: 3,
-            explanation: '$I = \\Delta Q / \\Delta t = 3.0 / 0.50 = 6.0$ A.'
+            explanation: '$I = \\Delta Q / \\Delta t = 3.0 / 0.50 = 6.0$ A. Multiplying instead gives 1.5 A, and dividing time by charge gives 0.17 A.'
           },
           {
             question: 'In a metal wire carrying current, the charge carriers are:',
@@ -126,13 +126,13 @@ For copper: $n \\approx 8.5 \\times 10^{28}$ $electrons/m^{3}$
           {
             question: 'The drift velocity of electrons in a typical household wire is approximately:',
             options: [
-              '$3 \\times 10^8$ m/s (speed of light)',
-              '$340$ m/s (speed of sound)',
-              '$10^{-4}$ m/s (fraction of a mm per second)',
+              '$3 \\times 10^{8}$ m/s',
+              '$340$ m/s',
+              '$10^{-4}$ m/s',
               '$1$ m/s'
             ],
             correctAnswer: 2,
-            explanation: 'Drift velocity is very slow — typically about $10^{-4}$ m/s. The electric field signal, however, propagates at nearly the speed of light, which is why the light turns on instantly.'
+            explanation: 'Drift velocity is very slow — typically about $10^{-4}$ m/s, a tenth of a millimeter per second. The electric field signal, however, propagates at nearly the speed of light ($3 \\times 10^{8}$ m/s), which is why the light turns on instantly. 340 m/s is the speed of sound, which has nothing to do with charge flow.'
           }
         ]
       }

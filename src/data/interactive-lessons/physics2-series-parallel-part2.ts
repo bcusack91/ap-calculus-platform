@@ -64,7 +64,7 @@ $$R_{\\text{total}} = \\frac{R_1 \\cdot R_2}{R_1 + R_2}$$
             question: 'Three resistors ($10 \\; \\Omega$, $20 \\; \\Omega$, $30 \\; \\Omega$) are connected in parallel across a 12 V battery. Which statement is TRUE?',
             options: [
               'The 10 Ω resistor has the least current',
-              'All three resistors have the same voltage across them',
+              'Each resistor sees the same voltage drop',
               'The total resistance is 60 Ω',
               'The 30 Ω resistor has the most current'
             ],
@@ -75,12 +75,12 @@ $$R_{\\text{total}} = \\frac{R_1 \\cdot R_2}{R_1 + R_2}$$
             question: '$6 \\; \\Omega$ and $3 \\; \\Omega$ resistors are in parallel. The total resistance is:',
             options: [
               '9 Ω',
-              '4.5 Ω',
+              '18 Ω',
               '2 Ω',
-              '1.5 Ω'
+              '0.5 Ω'
             ],
             correctAnswer: 2,
-            explanation: '$R_{\\text{total}} = \\frac{6 \\times 3}{6 + 3} = \\frac{18}{9} = 2 \\; \\Omega$. This is less than the smallest resistor (3 Ω), as expected for parallel.'
+            explanation: '$R_{\\text{total}} = \\frac{6 \\times 3}{6 + 3} = \\frac{18}{9} = 2 \\; \\Omega$. This is less than the smallest resistor (3 Ω), as expected for parallel. Adding the resistors gives the series value of 9 Ω, stopping at the product gives 18 Ω, and $\\frac{1}{6} + \\frac{1}{3} = 0.5$ is $1/R_{\\text{total}}$, not $R_{\\text{total}}$.'
           }
         ]
       }
@@ -177,9 +177,9 @@ Each resistor carries one-quarter of the total current.
           {
             question: 'Adding another resistor in parallel to a circuit will:',
             options: [
-              'Increase total resistance and decrease total current',
+              'Raise total resistance and lower total current',
               'Decrease total resistance and increase total current',
-              'Not change total resistance',
+              'Leave total resistance and current unchanged',
               'Decrease both total resistance and total current'
             ],
             correctAnswer: 1,
@@ -189,12 +189,12 @@ Each resistor carries one-quarter of the total current.
             question: 'A $12 \\; \\Omega$ resistor and a $4 \\; \\Omega$ resistor are in parallel across a 12 V battery. The current through the $4 \\; \\Omega$ resistor is:',
             options: [
               '1 A',
-              '2 A',
+              '0.75 A',
               '3 A',
               '4 A'
             ],
             correctAnswer: 2,
-            explanation: 'In parallel, each resistor sees the full 12 V. $I = V/R = 12/4 = 3$ A.'
+            explanation: 'In parallel, each resistor sees the full 12 V. $I = V/R = 12/4 = 3$ A. 1 A is the current in the 12 Ω branch, 4 A is the total current from the battery, and 0.75 A treats the two resistors as if they were in series.'
           }
         ]
       }

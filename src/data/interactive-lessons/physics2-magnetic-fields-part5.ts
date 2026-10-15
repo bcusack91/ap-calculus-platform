@@ -144,10 +144,10 @@ Use $\\mu_0 = 4\\pi \\times 10^{-7}$ T·m/A.
           {
             question: 'The magnetic field inside a solenoid depends on:',
             options: [
-              'The total number of turns only',
-              'The length of the solenoid only',
-              'The number of turns per unit length and the current',
-              'The radius of the solenoid'
+              'The total number of turns, regardless of length',
+              'The length of the solenoid, regardless of turns',
+              'The turns per unit length and the current',
+              'The radius of the solenoid and its total length'
             ],
             correctAnswer: 2,
             explanation: '$B = \\mu_0 n I$ where $n = N/L$. The field depends on turns per unit length and current, not on the radius or the total length independently.'

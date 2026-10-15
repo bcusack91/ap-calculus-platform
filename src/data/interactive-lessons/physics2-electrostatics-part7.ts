@@ -146,10 +146,10 @@ Two identical spheres, each with charge $+6\\ \\mu\\text{C}$, are 0.20 m apart.
           {
             question: 'A charged balloon sticks to a wall. A student says the wall must be charged. Is this correct?',
             options: [
-              'Yes — only charged objects attract',
-              'No — the charged balloon polarizes the neutral wall, creating attraction',
-              'Yes — the wall absorbed charge from the air',
-              'No — gravity holds the balloon up'
+              'Yes — only charged objects can attract',
+              'No — the balloon polarizes the neutral wall',
+              'Yes — the wall took charge from the air',
+              'No — friction alone holds the balloon'
             ],
             correctAnswer: 1,
             explanation: 'Polarization! The charged balloon induces a charge separation in the neutral wall. The closer opposite charges create a stronger attractive force than the farther same-sign repulsive force.'
@@ -176,13 +176,13 @@ Two identical spheres, each with charge $+6\\ \\mu\\text{C}$, are 0.20 m apart.
           {
             question: 'Which combination of changes would increase the Coulomb force by exactly 6×?',
             options: [
-              'Triple one charge, double the distance',
-              'Double both charges, keep distance same',
-              'Triple one charge, double the other, keep distance same',
-              'Quadruple one charge, halve the distance'
+              'Triple one charge and double the distance',
+              'Double both charges and keep the distance',
+              'Triple one charge and double the other',
+              'Triple one charge and halve the distance'
             ],
             correctAnswer: 2,
-            explanation: 'Triple one charge (×3) × double the other (×2) × distance unchanged = 6×. Check the others: tripling one charge and doubling the distance: $3/(2^{2})$ = 3/4. doubling both charges: 2×2 = 4×. quadrupling one charge and halving the distance: $4/(0.5^{2})$ = 4/0.25 = 16×. Only tripling one charge and doubling the other gives exactly 6×.'
+            explanation: 'Triple one charge (×3) × double the other (×2) × distance unchanged = 6×. Check the others: tripling one charge and doubling the distance gives $3/(2^{2})$ = 3/4; doubling both charges gives 2×2 = 4×; tripling one charge and halving the distance gives $3/(0.5^{2})$ = 12×. Those two distance options only look like 6× if you treat F as ∝ r or ∝ 1/r instead of $1/r^{2}$.'
           },
           {
             question: 'A conducting sphere has excess charge +Q. A cavity is carved inside (no charge in the cavity). What is the electric field inside the cavity?',
@@ -209,10 +209,10 @@ Two identical spheres, each with charge $+6\\ \\mu\\text{C}$, are 0.20 m apart.
           {
             question: 'Rank these errors by how many points they typically cost on an AP free-response question:',
             options: [
-              'Arithmetic error → minor deduction only',
-              'Wrong sign on direction → moderate deduction',
-              'Forgot to convert μC to C → entire calculation wrong, major deduction',
-              'All errors are weighted equally'
+              'Arithmetic slip late in the work → minor deduction',
+              'Wrong sign on the direction → moderate deduction',
+              'μC not converted to C → every later value wrong, major',
+              'Every error costs the same number of points'
             ],
             correctAnswer: 2,
             explanation: 'Unit conversion errors cascade through the entire calculation, making every subsequent number wrong. The AP rubric often awards partial credit for correct method even with arithmetic errors, but a unit conversion error makes the whole answer unreasonable.'
@@ -221,9 +221,9 @@ Two identical spheres, each with charge $+6\\ \\mu\\text{C}$, are 0.20 m apart.
             question: 'On a conceptual AP question, a student explains Coulomb\'s Law but forgets to mention it gives magnitude only. This matters because:',
             options: [
               'It doesn\'t matter — the grader will assume they know',
-              'Direction must be stated separately; the equation alone is incomplete',
-              'The equation automatically gives direction',
-              'Magnitude is not important for AP scoring'
+              'The direction must be stated separately from the magnitude',
+              'It doesn\'t matter — the equation already gives direction',
+              'AP rubrics score only magnitude, never the direction'
             ],
             correctAnswer: 1,
             explanation: 'AP rubrics specifically look for: (1) correct equation, (2) correct substitution, (3) correct magnitude, AND (4) correct direction with reasoning. Missing the direction discussion can cost 1-2 points.'

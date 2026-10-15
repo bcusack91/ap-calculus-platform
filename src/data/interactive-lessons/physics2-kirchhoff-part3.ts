@@ -102,10 +102,10 @@ $$I = 1.6 \\text{ A (clockwise)}$$
               'The 9 V battery would drive it alone',
               'The 15 V battery would drive it alone',
               'Neither — the current is zero',
-              'Alternates between the two'
+              'The nearer battery would drive it'
             ],
             correctAnswer: 1,
-            explanation: 'The larger battery wins. The current flows in the direction the 15 V battery would drive it.'
+            explanation: 'The larger battery wins. The current flows in the direction the 15 V battery would drive it. Position in the loop does not matter, and the current is zero only when the two EMFs are equal.'
           }
         ]
       }
@@ -185,21 +185,21 @@ A single loop contains:
               '4 A',
               '2 A',
               '0 A',
-              '1 A'
+              '0.5 A'
             ],
             correctAnswer: 2,
-            explanation: 'Identical batteries opposing each other: net EMF = $10 - 10 = 0$ V. Therefore $I = 0/5 = 0$ A. No current flows!'
+            explanation: 'Identical batteries opposing each other: net EMF = $10 - 10 = 0$ V. Therefore $I = 0/5 = 0$ A. No current flows! 4 A treats the batteries as aiding, 2 A uses only one battery, and 0.5 A divides $R$ by $V$.'
           },
           {
             question: 'A 20 V and a 12 V battery aid each other (both drive current the same way) in a loop with 8 Ω total resistance. The current is:',
             options: [
-              '1 A',
+              '0.25 A',
               '1.5 A',
               '2.5 A',
               '4 A'
             ],
             correctAnswer: 3,
-            explanation: 'Aiding batteries: net EMF $= 20 + 12 = 32$ V. $I = 32/8 = 4$ A.'
+            explanation: 'Aiding batteries: net EMF $= 20 + 12 = 32$ V. $I = 32/8 = 4$ A. 1.5 A and 2.5 A each use only one battery, and 0.25 A divides $R$ by $V$.'
           }
         ]
       }

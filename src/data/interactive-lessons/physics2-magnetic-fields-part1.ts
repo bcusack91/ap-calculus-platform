@@ -142,7 +142,7 @@ This constant appears in all formulas for magnetic fields produced by currents, 
               'South to North',
               'North to South',
               'They point radially outward',
-              'They are randomly oriented'
+              'They form circles around the magnet'
             ],
             correctAnswer: 1,
             explanation: 'Outside a magnet, B field lines point from North (N) to South (S). Inside the magnet, they continue from S to N, forming closed loops.'
@@ -151,7 +151,7 @@ This constant appears in all formulas for magnetic fields produced by currents, 
             question: 'All magnetic fields are ultimately produced by:',
             options: [
               'Magnetic monopoles',
-              'Static electric charges',
+              'Charges at rest',
               'Moving electric charges',
               'Gravitational forces'
             ],
@@ -161,10 +161,10 @@ This constant appears in all formulas for magnetic fields produced by currents, 
           {
             question: 'A compass needle\'s north pole points toward geographic north because:',
             options: [
-              'Geographic north is a magnetic north pole',
+              'Earth\'s magnetic north pole lies at geographic north',
               'Geographic north is near a magnetic south pole',
               'The compass is repelled by the geographic south pole',
-              'Earth has no magnetic field at the equator'
+              'Earth\'s field points from geographic north to south'
             ],
             correctAnswer: 1,
             explanation: 'The north end of a compass is attracted to the magnetic south pole, which is located near Earth\'s geographic North Pole. Opposite magnetic poles attract.'

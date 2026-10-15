@@ -98,24 +98,24 @@ This produces equally spaced bright and dark fringes — the hallmark of double-
           {
             question: 'The central maximum ($m = 0$) in the double-slit pattern is located where:',
             options: [
-              'The path difference is λ',
-              'The path difference is λ/2',
+              'The path difference is one wavelength',
+              'The path difference is half a wavelength',
               'The path difference is zero',
-              'The path difference is 2λ'
+              'The path difference is two wavelengths'
             ],
             correctAnswer: 2,
-            explanation: 'At $m = 0$, $d\\sin\\theta = 0$, so $\\theta = 0$. Both waves travel the same distance — path difference is zero — giving constructive interference at the center.'
+            explanation: 'At $m = 0$, $d\\sin\\theta = 0$, so $\\theta = 0$. Both waves travel the same distance — path difference is zero — giving constructive interference at the center. A path difference of one or two wavelengths gives the first- and second-order bright fringes, and half a wavelength gives the first dark fringe.'
           },
           {
             question: 'If white light is used instead of monochromatic light, the double-slit pattern shows:',
             options: [
-              'Only bright and dark fringes as usual',
-              'The central maximum is white, with colored fringes on either side',
-              'No interference pattern at all',
-              'Only red fringes appear'
+              'Black-and-white fringes, just as with one color',
+              'A white center flanked by colored fringes',
+              'No fringes, because the colors wash each other out',
+              'A red central fringe with violet farther out'
             ],
             correctAnswer: 1,
-            explanation: 'Each wavelength produces its own fringe pattern with different spacing ($\\Delta y \\propto \\lambda$). At $m = 0$, all colors constructively interfere → white. Away from center, the colors separate, with red (longer λ) fringes farther out than violet.'
+            explanation: 'Each wavelength produces its own fringe pattern with different spacing ($\\Delta y \\propto \\lambda$). At $m = 0$, all colors constructively interfere → white. Away from center, the colors separate, with red (longer λ) fringes farther out than violet, so the side fringes are colored rather than black and white.'
           }
         ]
       }

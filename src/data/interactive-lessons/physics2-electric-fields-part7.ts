@@ -107,12 +107,12 @@ The dielectric **polarizes** — its molecules align with the external field, cr
             question: 'A parallel-plate capacitor has $C = 10\\ \\mu\\text{F}$ and is charged to $V = 100$ V. The energy stored is:',
             options: [
               '0.05 J',
-              '0.1 J',
-              '1 J',
-              '500 J'
+              '0.10 J',
+              '$5 \\times 10^{-4}$ J',
+              '50,000 J'
             ],
             correctAnswer: 0,
-            explanation: '$U = \\frac{1}{2}CV^2 = \\frac{1}{2}(10 \\times 10^{-6})(100)^2 = \\frac{1}{2}(10^{-5})(10^4) = 0.05$ J.'
+            explanation: '$U = \\frac{1}{2}CV^2 = \\frac{1}{2}(10 \\times 10^{-6})(100)^2 = \\frac{1}{2}(10^{-5})(10^4) = 0.05$ J. Dropping the $\\frac{1}{2}$ gives 0.10 J, forgetting to square V gives $5 \\times 10^{-4}$ J, and leaving C in μF gives 50,000 J.'
           },
           {
             question: 'A capacitor is charged and then disconnected from the battery. A dielectric ($\\kappa = 3$) is inserted. What happens to the voltage?',
@@ -186,32 +186,32 @@ A parallel-plate capacitor: plate area $A = 0.01\\ \\text{m}^2$, separation $d =
           {
             question: 'At point P, $V = 0$ and $E = 5000$ N/C. Which is true?',
             options: [
-              'No charge can exist at P',
-              'A charge at P feels no force',
-              'A charge at P feels a force but has zero potential energy (relative to infinity)',
-              'This situation is impossible'
+              'A charge at P feels no force at all',
+              'A charge at P has PE but no force',
+              'A charge at P feels a force but has zero PE',
+              'This combination is impossible'
             ],
             correctAnswer: 2,
             explanation: '$V = 0$ means a test charge has zero PE at P (relative to infinity). But $E \\neq 0$ means there\'s still a force. The charge will accelerate, gaining KE (which comes from the PE being negative at nearby points).'
           },
           {
-            question: 'Rank the electric field strength at these three points: (A) between plates with $\\Delta V = 100$ V, $d = 1$ cm; (B) 1 m from a $+1\\ \\mu\\text{C}$ charge; (C) at the surface of a conductor with $V = 1000$ V.',
+            question: 'Rank the electric field strength at these three points: point X, between plates with $\\Delta V = 100$ V, $d = 1$ cm; point Y, 1 m from a $+1\\ \\mu\\text{C}$ charge; point Z, at the surface of a conductor with $V = 1000$ V.',
             options: [
-              'A > B > C',
-              'A > B, but C cannot be determined without more info',
-              'B > A > C',
-              'All equal'
+              'Z > X > Y, since Z has the highest V',
+              'X > Y; Z can\'t be ranked from V alone',
+              'Y > X; Z can\'t be ranked from V alone',
+              'X > Y, and Z = 0 at a conductor\'s surface'
             ],
             correctAnswer: 1,
-            explanation: 'A: $E = 100/0.01 = 10{,}000$ V/m. B: $E = kq/r^2 = 9 \\times 10^9 \\times 10^{-6}/1 = 9000$ V/m. C: We only know V at the surface, not how V changes with distance, so $E = -dV/dr$ is unknown. A > B is clear; C requires more info.'
+            explanation: 'X: $E = 100/0.01 = 10{,}000$ V/m (using d = 1 instead of 0.01 m would wrongly give 100 V/m). Y: $E = kq/r^2 = 9 \\times 10^9 \\times 10^{-6}/1 = 9000$ V/m. Z: We only know V at the surface, not how V changes with distance, so $E = -dV/dr$ is unknown — a large V does not mean a large E, and E is zero inside a conductor, not at its surface. X > Y is clear; Z requires more info.'
           },
           {
             question: 'Which combination best summarizes the differences between $E$ and $V$?',
             options: [
-              '$E$ = scalar, $V$ = vector; $E$ is easier to compute',
-              '$E$ = vector, $V$ = scalar; $V$ is easier to compute for multiple charges',
-              '$E$ and $V$ are both vectors that point in the same direction',
-              '$E$ and $V$ are both scalars that decrease with distance'
+              '$E$ is a scalar, $V$ a vector; $E$ adds simply',
+              '$E$ is a vector, $V$ a scalar; $V$ is simpler to add',
+              'Both are vectors pointing the same way',
+              'Both are scalars that fall off with distance'
             ],
             correctAnswer: 1,
             explanation: '$E$ is a vector (direction matters, components needed). $V$ is a scalar (just add numbers). For multi-charge problems, computing V first and then finding E from V is often the easiest approach.'
@@ -219,10 +219,10 @@ A parallel-plate capacitor: plate area $A = 0.01\\ \\text{m}^2$, separation $d =
           {
             question: 'An electron enters a uniform electric field with velocity perpendicular to the field. Its path will be:',
             options: [
-              'A straight line',
-              'A circle',
-              'A parabola (like projectile motion)',
-              'A spiral'
+              'A straight line along the field',
+              'A circle, as in a magnetic field',
+              'A parabola, like a projectile',
+              'A helix around the field lines'
             ],
             correctAnswer: 2,
             explanation: 'Constant force perpendicular to initial velocity → constant acceleration in one direction, constant velocity in the other → parabolic path. This is exactly like a ball thrown horizontally in a gravitational field.'

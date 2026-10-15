@@ -95,10 +95,10 @@ This final part ties together everything about lenses: the thin lens equation, s
               '$+6.67$ cm',
               '$+15$ cm',
               '$+30$ cm',
-              '$+200$ cm'
+              '$+20$ cm'
             ],
             correctAnswer: 0,
-            explanation: 'For lenses in contact: $\\frac{1}{f_{\\text{combo}}} = \\frac{1}{f_1} + \\frac{1}{f_2} = \\frac{1}{20} + \\frac{1}{10} = \\frac{1+2}{20} = \\frac{3}{20}$, so $f_{\\text{combo}} = 20/3 \\approx 6.67$ cm.'
+            explanation: 'For lenses in contact: $\\frac{1}{f_{\\text{combo}}} = \\frac{1}{f_1} + \\frac{1}{f_2} = \\frac{1}{20} + \\frac{1}{10} = \\frac{1+2}{20} = \\frac{3}{20}$, so $f_{\\text{combo}} = 20/3 \\approx 6.67$ cm. Adding the focal lengths gives 30 cm, averaging them gives 15 cm, and subtracting the reciprocals gives 20 cm; the combination is always stronger (shorter $f$) than either lens alone.'
           }
         ]
       }
@@ -227,7 +227,7 @@ Determine the sign of each quantity:
             question: 'A magnifying glass works because the object is placed:',
             options: [
               'Beyond $2f$',
-              'At $2f$',
+              'Exactly at $2f$',
               'Between $f$ and $2f$',
               'Inside $f$'
             ],
@@ -239,11 +239,11 @@ Determine the sign of each quantity:
             options: [
               'Smaller and closer to the lens',
               'Larger and farther from the lens',
-              'The same size',
-              'Virtual'
+              'Larger but closer to the lens',
+              'Virtual, upright, and larger'
             ],
             correctAnswer: 1,
-            explanation: 'Moving from $d_o = 50 = 2f$ to $d_o = 30$ cm (between $f$ and $2f$) transitions from Case 2 to Case 3. The image becomes real, inverted, and **enlarged** ($|m| > 1$), and it moves farther from the lens. $\\frac{1}{d_i} = \\frac{1}{25} - \\frac{1}{30} = \\frac{6-5}{150} = \\frac{1}{150}$, so $d_i = 150$ cm. $m = -150/30 = -5$.'
+            explanation: 'Moving from $d_o = 50 = 2f$ to $d_o = 30$ cm (between $f$ and $2f$) transitions from Case 2 to Case 3. The image stays real and inverted but becomes **enlarged** ($|m| > 1$), and it moves farther from the lens. $\\frac{1}{d_i} = \\frac{1}{25} - \\frac{1}{30} = \\frac{6-5}{150} = \\frac{1}{150}$, so $d_i = 150$ cm. $m = -150/30 = -5$. The image would only turn virtual if the object moved inside $f = 25$ cm.'
           },
           {
             question: 'Which combination correctly fixes hyperopia?',

@@ -138,10 +138,10 @@ A 100 W light bulb converts 100 joules of electrical energy per second — mostl
               '7200 A',
               '2.0 A',
               '0.50 A',
-              '0.0083 A'
+              '0.0042 A'
             ],
             correctAnswer: 2,
-            explanation: '$P = IV$ → $I = P/V = 60/120 = 0.50$ A.'
+            explanation: '$P = IV$ → $I = P/V = 60/120 = 0.50$ A. Multiplying gives 7200 A, dividing V by P gives 2.0 A, and $P/V^2$ gives 0.0042, which is $1/R$ in $\\Omega^{-1}$, not a current.'
           }
         ]
       }
@@ -197,10 +197,10 @@ A 100 W light bulb converts 100 joules of electrical energy per second — mostl
               '$0.24\\;\\Omega$',
               '$4.2\\;\\Omega$',
               '$29\\;\\Omega$',
-              '$240\\;\\Omega$'
+              '$0.035\\;\\Omega$'
             ],
             correctAnswer: 2,
-            explanation: '$P = V^2/R$ → $R = V^2/P = (120)^2/500 = 14400/500 = 28.8 \\approx 29$ $\\Omega$.'
+            explanation: '$P = V^2/R$ → $R = V^2/P = (120)^2/500 = 14400/500 = 28.8 \\approx 29$ $\\Omega$. Using $V/P$ gives 0.24, using $P/V$ gives 4.2 (that is the current in amps), and $P/V^2$ gives 0.035 (that is $1/R$).'
           }
         ]
       }

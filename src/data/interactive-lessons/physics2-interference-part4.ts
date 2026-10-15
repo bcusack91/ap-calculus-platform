@@ -107,7 +107,7 @@ $$m_{\\max} = \\left\\lfloor \\frac{d}{\\lambda} \\right\\rfloor$$
               'Broader and dimmer',
               'The same width',
               'Much sharper and brighter',
-              'Shifted to different angles'
+              'Shifted to new angles'
             ],
             correctAnswer: 2,
             explanation: 'More slits means the constructive interference condition must be satisfied more precisely, producing much sharper (narrower) and brighter maxima. The angles remain the same — they depend only on $d$ and $\\lambda$.'
@@ -180,13 +180,13 @@ A grating has 5000 total slits.
           {
             question: 'To increase the resolving power of a diffraction grating, you should:',
             options: [
-              'Use fewer slits',
-              'Use a lower order',
-              'Increase either $m$ or $N$ (or both)',
-              'Decrease the slit spacing'
+              'Use fewer slits across the beam',
+              'Use a lower diffraction order',
+              'Use more slits or a higher diffraction order',
+              'Use a longer wavelength of light'
             ],
             correctAnswer: 2,
-            explanation: '$R = mN$. Resolving power increases with more slits $N$ and higher order $m$.'
+            explanation: '$R = mN$. Resolving power increases with more illuminated slits $N$ and higher order $m$. Fewer slits or a lower order reduce it, and $R$ does not depend on the wavelength used.'
           }
         ]
       }

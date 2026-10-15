@@ -65,29 +65,29 @@ You've learned about current, resistance, resistivity, Ohm's Law, power, and rea
               '$R$',
               '$R/2$',
               '$2R$',
-              '$4R$'
+              '$R/4$'
             ],
             correctAnswer: 1,
-            explanation: '$R = \\rho L/A$. New wire: $R_2 = \\rho(2L)/(\\pi(2r)^2) = \\rho(2L)/(4\\pi r^2) = (2/4) \\cdot \\rho L/(\\pi r^2) = R/2$.'
+            explanation: '$R = \\rho L/A$. New wire: $R_2 = \\rho(2L)/(\\pi(2r)^2) = \\rho(2L)/(4\\pi r^2) = (2/4) \\cdot \\rho L/(\\pi r^2) = R/2$. Ignoring the length change gives $R/4$; ignoring the area change gives $2R$.'
           },
           {
             question: 'A battery with $\\varepsilon = 10$ V and $r = 1.0\\;\\Omega$ is connected to a variable resistor. For maximum power transfer to the external resistor, $R$ should be:',
             options: [
               '$0\\;\\Omega$',
               '$0.5\\;\\Omega$',
-              '$1.0\\;\\Omega$ (equal to $r$)',
+              '$1.0\\;\\Omega$',
               'As large as possible'
             ],
             correctAnswer: 2,
-            explanation: 'Maximum power transfer theorem: power delivered to the load is maximized when $R = r$. At this point, half the total power goes to the load and half is wasted internally.'
+            explanation: 'Maximum power transfer theorem: power delivered to the load is maximized when $R = r = 1.0\\;\\Omega$. At this point, half the total power goes to the load and half is wasted internally. $R = 0$ maximizes the current but delivers no power to the load, and a very large R delivers almost no current.'
           },
           {
             question: 'Which graph correctly shows the $I$-$V$ relationship for an ohmic resistor?',
             options: [
               'A straight line through the origin',
-              'A parabola opening upward',
-              'A horizontal line',
-              'An exponential curve'
+              'An upward parabola through the origin',
+              'A horizontal line at constant current',
+              'An exponential curve, like a diode\'s'
             ],
             correctAnswer: 0,
             explanation: 'For an ohmic material, $V = IR$ with constant $R$. On an $I$ vs $V$ graph, this is $I = V/R$, a straight line through the origin with slope $1/R$.'
@@ -199,12 +199,12 @@ On the AP Physics 2 exam, you'll encounter free-response questions that combine 
             explanation: '$I = \\varepsilon/(R + r) = 6.0/(2.5 + 0.5) = 6.0/3.0 = 2.0$ A. $P = I^2R = (2.0)^2(2.5) = 4 \\times 2.5 = 10.0$ W.'
           },
           {
-            question: 'A household uses 900 kWh per month at $0.12/kWh. The monthly bill is:',
+            question: 'A household uses 900 kWh per month at \\$0.12/kWh. The monthly bill is:',
             options: [
-              '$10.80',
-              '$75.00',
-              '$108.00',
-              '$1080.00'
+              '\\$10.80',
+              '\\$75.00',
+              '\\$108.00',
+              '\\$1080.00'
             ],
             correctAnswer: 2,
             explanation: 'Cost = $900 \\times 0.12 = \\$108.00$.'

@@ -176,24 +176,24 @@ For a converging lens, select the correct image type for each object position:
           {
             question: 'A projector uses a converging lens. Where must the slide be placed to project a large image on a distant screen?',
             options: [
-              'Beyond $2F$',
-              'At $2F$',
+              'Far beyond $2F$',
+              'Exactly at $2F$',
               'Between $F$ and $2F$',
-              'Inside $F$'
+              'Just inside $F$'
             ],
             correctAnswer: 2,
-            explanation: 'Between $F$ and $2F$, a converging lens produces a real, inverted, enlarged image — exactly what a projector needs. The slide is inserted upside down so the projected image appears right-side up.'
+            explanation: 'Between $F$ and $2F$, a converging lens produces a real, inverted, enlarged image — exactly what a projector needs. The slide is inserted upside down so the projected image appears right-side up. Far beyond $2F$ the image is reduced (a camera), at $2F$ it is the same size, and inside $F$ the image is virtual and cannot be projected.'
           },
           {
             question: 'As an object moves from $2F$ toward $F$ (using a converging lens), the real image:',
             options: [
               'Gets smaller and moves closer to the lens',
               'Gets larger and moves farther from the lens',
-              'Stays the same size',
-              'Becomes virtual'
+              'Stays the same size and moves farther away',
+              'Turns virtual as soon as it passes $2F$'
             ],
             correctAnswer: 1,
-            explanation: 'Moving the object from $2F$ toward $F$ makes the image distance grow and the magnification increase. The image grows larger and moves farther from the lens, reaching infinity when the object reaches $F$.'
+            explanation: 'Moving the object from $2F$ toward $F$ makes the image distance grow and the magnification increase. The image grows larger and moves farther from the lens, reaching infinity when the object reaches $F$. The image stays real the whole time; it only becomes virtual once the object is inside $F$.'
           }
         ]
       }

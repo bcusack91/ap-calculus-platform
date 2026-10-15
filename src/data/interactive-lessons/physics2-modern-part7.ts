@@ -93,10 +93,10 @@ $$^{2}_{1}\\text{H} + ^{3}_{1}\\text{H} \\to ^{4}_{2}\\text{He} + ^{1}_{0}n + 17
           {
             question: 'Why does nuclear fusion require extremely high temperatures?',
             options: [
-              'To break apart the nuclei first',
-              'To melt the fuel into a liquid',
-              'To give nuclei enough kinetic energy to overcome their mutual Coulomb repulsion',
-              'To create neutrons for the reaction'
+              'To break the nuclei apart before they recombine',
+              'To melt and vaporize the fuel so the atoms can mix',
+              'To overcome the nuclei\'s electric repulsion',
+              'To free neutrons that can trigger the reaction'
             ],
             correctAnswer: 2,
             explanation: 'Both nuclei are positively charged and repel each other. At extremely high temperatures, the nuclei move fast enough to overcome this electrostatic barrier and get close enough for the strong nuclear force to bind them together.'
@@ -232,10 +232,10 @@ Light of wavelength 200 nm strikes a metal surface with work function $\\phi = 4
           {
             question: 'Which process releases energy: fusing two iron-56 nuclei or splitting iron-56?',
             options: [
-              'Fusing iron-56',
-              'Splitting iron-56',
-              'Both release energy',
-              'Neither — iron-56 is at the peak of the binding energy curve'
+              'Fusing iron-56, as with lighter nuclei',
+              'Splitting iron-56, as with uranium',
+              'Both, since any nuclear reaction releases energy',
+              'Neither, as iron-56 is at the peak of the binding-energy curve'
             ],
             correctAnswer: 3,
             explanation: 'Iron-56 has the highest binding energy per nucleon. Moving away from iron in either direction (fusion of iron or fission of iron) requires energy input rather than releasing energy.'

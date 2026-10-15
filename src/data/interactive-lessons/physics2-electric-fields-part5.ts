@@ -79,7 +79,7 @@ It's tiny in everyday terms, but perfectly sized for atomic/nuclear physics.
             options: [
               'They stay still because they have equal charge',
               'They fly apart; total KE gained = initial PE of the system',
-              'They attract and collide',
+              'They attract and their PE becomes KE as they collide',
               'Only one proton moves; the other stays fixed'
             ],
             correctAnswer: 1,
@@ -184,13 +184,13 @@ For AP Physics 2, if the answer exceeds $\\sim 10^7$ m/s, note that relativity i
           {
             question: 'A 2 μC charge is moved through a potential difference of +500 V. The work done by an external force is:',
             options: [
-              '0.01 J',
-              '1 mJ (the external force did positive work)',
-              '−1 mJ',
-              '250 J'
+              '$1 \\times 10^{-3}$ J',
+              '$-1 \\times 10^{-3}$ J',
+              '$1 \\times 10^{3}$ J',
+              '$2.5 \\times 10^{2}$ J'
             ],
             correctAnswer: 1,
-            explanation: 'Work by external force: $W_{\\text{ext}} = q\\Delta V = (2 \\times 10^{-6})(500) = 0.001$ J = 1 mJ. Moving a positive charge to higher potential requires positive work input.'
+            explanation: 'Work by external force: $W_{\\text{ext}} = q\\Delta V = (2 \\times 10^{-6})(500) = 0.001$ J = 1 mJ. Moving a positive charge to higher potential requires positive work input, so the sign is positive. Forgetting the μ gives 1000 J, and dividing 500 by 2 instead of multiplying gives 250 J.'
           }
         ]
       }

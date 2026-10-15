@@ -93,17 +93,17 @@ Don't forget to take the final reciprocal!
         questions: [
           {
             question: 'A student says: "Three $6 \\; \\mu$F capacitors in series give $18 \\; \\mu$F total." This is:',
-            options: ['Correct — capacitances in series add', 'Incorrect — that is the parallel rule; series gives 2 μF', 'Incorrect — series capacitors give 6 μF total', 'Incorrect — series capacitors give 54 μF total'],
+            options: ['Correct — capacitances in series add like resistors', 'Incorrect — series gives 2 μF total', 'Incorrect — identical capacitors in series still total 6 μF', 'Incorrect — adding the reciprocals gives 0.5 μF'],
             correctAnswer: 1,
-            explanation: 'The student applied the parallel rule to a series combination. For series capacitors: $1/C = 1/6 + 1/6 + 1/6 = 3/6 = 1/2$, so $C = 2 \\; \\mu$F. The correct answer is 2 μF, and the student confused the rules.'
+            explanation: 'The student applied the parallel rule to a series combination. For series capacitors: $1/C = 1/6 + 1/6 + 1/6 = 3/6 = 1/2$, so $C = 2 \\; \\mu$F. Reporting 0.5 μF stops at $1/C$ and forgets to invert, and identical capacitors in series do not keep the 6 μF of a single one.'
           },
           {
             question: 'Two resistors ($4 \\; \\Omega$ and $8 \\; \\Omega$) are in parallel across a 24 V battery. A student says the $8 \\; \\Omega$ resistor dissipates more power. This is:',
             options: [
-              'Correct — larger resistance means more power',
-              'Incorrect — in parallel, the smaller resistor dissipates more power',
-              'Correct — the 8 Ω resistor has more current',
-              'Incorrect — they dissipate equal power'
+              'Correct — larger resistance always means more power',
+              'Incorrect — the 4 Ω resistor dissipates more',
+              'Correct — the 8 Ω resistor carries more of the current',
+              'Incorrect — both dissipate equal power, since V is shared'
             ],
             correctAnswer: 1,
             explanation: 'In parallel, both resistors have the same voltage. $P = V^2/R$, so the smaller $R$ (4 Ω) gets more power: $P_4 = 576/4 = 144$ W vs $P_8 = 576/8 = 72$ W.'
@@ -205,10 +205,10 @@ A circuit has a 36 V battery connected to $R_1 = 12 \\; \\Omega$ in series with 
           {
             question: 'Two identical lightbulbs are initially in series with a battery. One bulb is then removed and replaced with a wire (short circuit). The remaining bulb:',
             options: [
-              'Gets dimmer',
-              'Stays the same brightness',
+              'Becomes dimmer',
+              'Stays equally bright',
               'Gets brighter',
-              'Burns out immediately'
+              'Goes out completely'
             ],
             correctAnswer: 2,
             explanation: 'With two bulbs in series: $I = V/(2R)$, $P = I^2 R = V^2/(4R)$. With one bulb: $I = V/R$, $P = V^2/R$. Power quadruples, so the remaining bulb is 4× brighter (and may indeed burn out if not rated for it!).'
@@ -218,8 +218,8 @@ A circuit has a 36 V battery connected to $R_1 = 12 \\; \\Omega$ in series with 
             options: [
               'Increases (current redistributes)',
               'Decreases (less total current)',
-              'Stays the same (each branch is independent)',
-              'Drops to zero'
+              'Stays the same (each path is independent)',
+              'Drops to zero (the circuit is broken)'
             ],
             correctAnswer: 2,
             explanation: 'Each parallel branch sees the same battery voltage regardless of other branches. Removing one branch doesn\'t affect the voltage across (or current through) the others. Only the total current decreases.'
@@ -228,12 +228,12 @@ A circuit has a 36 V battery connected to $R_1 = 12 \\; \\Omega$ in series with 
             question: 'A circuit has a 12 V battery, a $3 \\; \\Omega$ resistor in series with two $6 \\; \\Omega$ resistors in parallel. The total power is:',
             options: [
               '12 W',
-              '18 W',
+              '48 W',
               '24 W',
-              '36 W'
+              '9.6 W'
             ],
             correctAnswer: 2,
-            explanation: 'Parallel: $6 \\times 6/(6+6) = 3 \\; \\Omega$. Total: $3 + 3 = 6 \\; \\Omega$. $I = 12/6 = 2$ A. $P = IV = 2 \\times 12 = 24$ W.'
+            explanation: 'Parallel: $6 \\times 6/(6+6) = 3 \\; \\Omega$. Total: $3 + 3 = 6 \\; \\Omega$. $I = 12/6 = 2$ A. $P = IV = 2 \\times 12 = 24$ W. 12 W is only the 3 Ω resistor\'s share, 48 W leaves out the 3 Ω series resistor, and 9.6 W puts all three resistors in series.'
           }
         ]
       }

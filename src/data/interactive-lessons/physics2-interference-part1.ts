@@ -93,11 +93,11 @@ At the center of the pattern ($m = 0$), the path difference is zero — both wav
             options: [
               '$m\\lambda$',
               '$(m + \\frac{1}{2})\\lambda$',
-              '$2m\\lambda$',
+              '$(2m + 1)\\lambda$',
               '$\\frac{m}{2}\\lambda$'
             ],
             correctAnswer: 1,
-            explanation: 'Destructive interference occurs when $\\Delta r = (m + \\frac{1}{2})\\lambda$, meaning the path difference is a half-integer number of wavelengths (0.5λ, 1.5λ, 2.5λ, ...).'
+            explanation: 'Destructive interference occurs when $\\Delta r = (m + \\frac{1}{2})\\lambda$, meaning the path difference is a half-integer number of wavelengths (0.5λ, 1.5λ, 2.5λ, ...). A whole number of wavelengths, $m\\lambda$, is the bright (constructive) condition, and $(2m + 1)\\lambda$ drops the factor of ½: it is a whole number of wavelengths, which is also constructive.'
           },
           {
             question: 'Two waves of the same frequency but from independent (incoherent) light bulbs are aimed at a screen. You observe:',

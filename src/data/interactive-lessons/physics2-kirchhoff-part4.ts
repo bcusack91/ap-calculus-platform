@@ -199,10 +199,10 @@ Right loop (clockwise): $6I_2 - 2I_3 - 4 = 0$
           {
             question: 'When you solve a multi-loop problem and get $I_3 = -2$ A, this means:',
             options: [
-              'There is an error in your equations',
-              'The current in that branch is 2 A opposite to your assumed direction',
-              'The resistor has negative resistance',
-              'The battery is dead'
+              'The equations contain an algebra or sign error',
+              'The current is 2 A, opposite to the assumed direction',
+              'The resistor in that branch has negative resistance',
+              'The battery in that branch is connected backward'
             ],
             correctAnswer: 1,
             explanation: 'A negative current value simply means the actual current direction is opposite to what you assumed. The magnitude is still 2 A.'

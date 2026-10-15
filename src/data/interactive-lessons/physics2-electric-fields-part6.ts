@@ -123,13 +123,13 @@ This is the simplest and most important field configuration in AP Physics 2.
           {
             question: 'The potential at point A is +400 V and at point B (2 cm away) is +100 V. If the field is uniform, its magnitude is:',
             options: [
-              '200 V/m',
+              '150 V/m',
               '15,000 V/m',
-              '500 V/m',
+              '25,000 V/m',
               '300 V/m'
             ],
             correctAnswer: 1,
-            explanation: '$E = |\\Delta V|/d = |100 - 400|/0.02 = 300/0.02 = 15{,}000$ V/m, directed from A toward B (high V to low V).'
+            explanation: '$E = |\\Delta V|/d = |100 - 400|/0.02 = 300/0.02 = 15{,}000$ V/m, directed from A toward B (high V to low V). Forgetting to divide by d gives 300 V/m, using d = 2 instead of 0.02 m gives 150 V/m, and adding the potentials (500 V) gives 25,000 V/m.'
           }
         ]
       }
@@ -170,10 +170,10 @@ Two parallel plates are separated by $d = 5.0$ mm. The top plate is at $+600$ V 
           {
             question: 'Inside a hollow conducting sphere at equilibrium, which is true?',
             options: [
-              '$E = 0$ and $V = 0$',
-              '$E = 0$ and $V = $ constant (equal to the surface potential)',
-              '$E \\neq 0$ and $V = 0$',
-              '$E = 0$ and $V$ varies with position'
+              '$E = 0$ and $V = 0$ throughout',
+              '$E = 0$ and $V$ equals the surface value',
+              '$E \\neq 0$ and $V = 0$ throughout',
+              '$E = 0$ and $V$ varies inside'
             ],
             correctAnswer: 1,
             explanation: 'Inside a conductor at equilibrium: $E = 0$ everywhere. Since $E = -dV/dr = 0$, the potential must be constant throughout — equal to the value at the surface.'
