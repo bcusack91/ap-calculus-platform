@@ -190,7 +190,7 @@ export const hgPoliticalGeographyPart1Data = {
               'Antecedent boundary claims'
             ],
             correctAnswer: 1,
-            explanation: 'By building artificial islands, China aims to extend its EEZ claims to access valuable fishing grounds, oil/gas deposits, and shipping lanes — an allocational boundary dispute at massive scale.'
+            explanation: 'By building artificial islands, China aims to extend its EEZ claims to access valuable fishing grounds, oil/gas deposits, and shipping lanes — an allocational boundary dispute at massive scale. Under UNCLOS, though, artificial islands generate no territorial sea or EEZ of their own, and a 2016 arbitral ruling rejected China\'s broad claims.'
           }
         ]
       }

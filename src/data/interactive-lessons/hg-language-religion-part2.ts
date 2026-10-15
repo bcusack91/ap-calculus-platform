@@ -5,20 +5,51 @@ export const hgLanguageReligionPart2Data = {
       id: 'hglangua2-intro',
       type: 'text' as const,
       content: `
-# 🌍 Language, Religion & Ethnicity
+# 🌍 Language & Religion
 
-**Part 2 of 7 — Key Processes**
+**Part 2 of 7 — Language Families, Hearths and Diffusion**
 
-Understanding the processes related to Language, Religion & Ethnicity helps explain how and why patterns develop. This part explores the mechanisms driving key phenomena.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 The Language Tree, Level by Level |
+| Two Models for the Indo-European Hearth |
+| Bantu and Austronesian: Two Great Expansions |
+| Later Spreads: Empire and Colonialism |
 
-| Concept | Description |
-|---------|-------------|
-| **Process 1** | The primary mechanism that drives patterns in Language, Religion & Ethnicity |
-| **Process 2** | A secondary process that shapes outcomes in Language, Religion & Ethnicity |
-| **Cause and effect** | The relationship between actions and outcomes in Language, Religion & Ethnicity |
-      `
+> 🔑 **Key Concept:** Languages that share an ancestor form a **family**, and each family has a **hearth** from which it diffused. Where a family is spoken today records ancient migrations of farmers, herders and seafarers, and much more recent colonial empires (CED Topic 3.7).
+`
+    },
+    {
+      id: 'hglangua2-tree',
+      type: 'text' as const,
+      content: `
+## 📖 The Language Tree, Level by Level
+
+Part 1 listed the major families. Here is how the levels nest, using English and Hindi.
+
+| Level | Meaning | English | Hindi |
+|---|---|---|---|
+| **Family** | Languages descended from one ancient ancestor | Indo-European | Indo-European |
+| **Branch** | A major division of a family, split several thousand years ago | Germanic | Indo-Iranian |
+| **Group** | Languages within a branch that are closely related | West Germanic (with German and Dutch) | Indo-Aryan (with Bengali and Punjabi) |
+| **Language** | A system of communication with its own vocabulary and grammar | English | Hindi |
+| **Dialect** | A regional or social variety of one language | Scottish English, Southern American English | Regional varieties across northern India |
+
+### Main Branches of Indo-European
+
+| Branch | Major languages | Core region |
+|---|---|---|
+| **Germanic** | English, German, Dutch, Swedish | Northern and western Europe |
+| **Romance** (from Latin) | Spanish, Portuguese, French, Italian, Romanian | Southern Europe, spread by the Roman Empire |
+| **Balto-Slavic** | Russian, Polish, Ukrainian, Czech | Eastern Europe |
+| **Indo-Iranian** | Hindi, Bengali, Persian (Farsi), Punjabi | South and Southwest Asia |
+
+**Shared ancestry shows in vocabulary.** The word for "three" is *drei* in German, *tres* in Spanish, *tri* in Russian and *tri* in Sanskrit, an ancient Indo-Iranian language. Linguists use regular sound patterns like this to reconstruct a common ancestor called **Proto-Indo-European**.
+
+**Language isolates** have no known relatives. **Basque**, spoken in the western Pyrenees of Spain and France, is the best-known example; it is likely older than the Indo-European languages around it.
+`
     },
     {
       id: 'hglangua2-quiz1',
@@ -29,146 +60,154 @@ Understanding the processes related to Language, Religion & Ethnicity helps expl
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key process in Language, Religion & Ethnicity?',
+            question: 'Spanish and Italian belong to the same branch, while English belongs to a different branch of the same family. Which branch includes Spanish and Italian?',
             options: [
-              'A random event',
-              'A systematic mechanism that produces predictable patterns',
-              'An unexplainable phenomenon',
-              'A one-time occurrence'
+              'Romance',
+              'Germanic',
+              'Balto-Slavic',
+              'Indo-Iranian'
             ],
-            correctAnswer: 1,
-            explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.'
+            correctAnswer: 0,
+            explanation: 'Spanish and Italian descend from Latin and belong to the Romance branch of Indo-European. English is Germanic, and Hindi and Persian are Indo-Iranian.'
           },
           {
-            question: 'Understanding cause and effect in Language, Religion & Ethnicity helps students:',
+            question: 'Basque is classified as a language isolate. What does this mean?',
             options: [
-              'Memorize dates',
-              'Explain why patterns exist rather than just describing them',
-              'Avoid analysis',
-              'Skip exam questions'
+              'It has no known relationship to any other language',
+              'It is spoken by too few people to count as a language',
+              'It is a dialect of Spanish and French spoken in one region',
+              'It is a branch of the Indo-European family in Iberia'
             ],
-            correctAnswer: 1,
-            explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.'
+            correctAnswer: 0,
+            explanation: 'An isolate is a language with no demonstrated relatives in any family. Basque is a full language with its own grammar, not a dialect, and it is not Indo-European.'
           }
         ]
       }
     },
     {
-      id: 'hglangua2-content',
+      id: 'hglangua2-hearths',
       type: 'text' as const,
       content: `
-## Key Processes — Deeper Dive
+## Two Models for the Indo-European Hearth
 
-### Process 1
-The primary mechanism that drives patterns in Language, Religion & Ethnicity. Understanding this concept is essential for mastering Language, Religion & Ethnicity in AP Human Geography.
+Nearly half of the world's people speak an Indo-European language as their first language, from Iceland to Bangladesh. No written records survive from before the family spread, so geographers and linguists use **competing models**.
 
-### Process 2
-A secondary process that shapes outcomes in Language, Religion & Ethnicity. This builds on the previous concept and connects to broader themes in the course.
+| | **Steppe (Kurgan) hypothesis** | **Anatolian hypothesis** |
+|---|---|---|
+| **Main proponent** | Marija Gimbutas (1950s) | Colin Renfrew (1987) |
+| **Hearth** | Grasslands north of the Black and Caspian seas, in today's Ukraine and southern Russia | Anatolia, in today's Turkey |
+| **Timing** | About 6,000 to 5,000 years ago | About 9,000 to 8,000 years ago |
+| **Who spread it** | Herders who used horses and wheeled vehicles | Early farmers |
+| **How it spread** | Migration and conquest: relocation | Farming spread gradually from community to community: expansion |
+| **Key evidence** | Shared Indo-European words for wheel, axle and horse, which could not predate those inventions | The spread of agriculture into Europe from Southwest Asia |
 
-### Cause and effect
-The relationship between actions and outcomes in Language, Religion & Ethnicity. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
+**What newer evidence shows:** studies of ancient DNA published since 2015 found a large migration from the steppe into Europe about 5,000 years ago, which many researchers see as support for the steppe model for most European branches. The debate is not fully settled, and some scholars propose combinations of the two.
+
+**Limitation of both models:** they reconstruct a hearth from indirect evidence: word comparisons, archaeology and genetics. Genes and languages do not always move together, since people can adopt a new language without migrating.
+
+## Bantu and Austronesian: Two Great Expansions
+
+**Bantu expansion (Niger-Congo family):**
+- **Hearth:** near today's border of Nigeria and Cameroon.
+- **Spread:** beginning about 3,000 to 5,000 years ago, Bantu-speaking farmers moved south and east over many centuries, carrying farming and later iron working.
+- **Result:** Bantu languages such as Swahili, Zulu, Kinyarwanda and Shona dominate most of Africa south of the equator. The Niger-Congo family has more than 1,500 languages, more than any other family.
+
+**Austronesian expansion:**
+- **Hearth:** Taiwan, about 5,000 years ago.
+- **Spread:** by outrigger canoe, through the Philippines and Indonesia, west to **Madagascar** and east across the Pacific to Hawaii, Easter Island and New Zealand, reached only about 750 years ago.
+- **Result:** Malay, Indonesian, Tagalog, Malagasy, Hawaiian and Māori are related. Before 1500 CE no other family stretched across so much of the globe.
+
+**Map described in text:** Malagasy, spoken off Africa's east coast, belongs to the same family as Hawaiian, more than 15,000 km away, yet not to the family of nearby Swahili. Only a seafaring relocation diffusion explains that pattern.
+`
     },
     {
-      id: 'hglangua2-input',
-      type: 'input-boxes' as const,
+      id: 'hglangua2-quiz2',
+      type: 'multiple-choice' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to the primary mechanism that drives patterns in Language, Religion & Ethnicity?
-
-2) What concept describes a secondary process that shapes outcomes in Language, Religion & Ethnicity?
-
-3) Name the term for the relationship between actions and outcomes in Language, Religion & Ethnicity.
-
-Use the exact term from this part.
+**Check Your Understanding** 🎯
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: P',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Process 1 (The primary mechanism that drives patterns in Language, Religion & Ethnicity), Process 2 (A secondary process that shapes outcomes in Language, Religion & Ethnicity), and Cause and effect (The relationship between actions and outcomes in Language, Religion & Ethnicity).'
+        questions: [
+          {
+            question: 'Supporters of the steppe hypothesis point out that Indo-European languages share old words for wheel and axle. Why does this matter?',
+            options: [
+              'The family probably split after such vehicles existed',
+              'It proves Indo-European began among the earliest farmers',
+              'It shows the family spread before the invention of farming',
+              'It means every branch borrowed the words from Latin'
+            ],
+            correctAnswer: 0,
+            explanation: 'If the shared ancestor already had words for wheeled vehicles, the family cannot have split up before wheels were invented, which fits the later steppe date. Early farming predates the wheel, so these words are a problem for the Anatolian timing.'
+          },
+          {
+            question: 'Malagasy, spoken in Madagascar, is related to Indonesian rather than to nearby African languages. Which process best explains this?',
+            options: [
+              'Austronesian seafarers settled the island',
+              'Bantu farmers carried it from West Africa',
+              'Arab traders introduced it from the Gulf',
+              'It formed as a pidgin among sailors'
+            ],
+            correctAnswer: 0,
+            explanation: 'Austronesian speakers sailed west across the Indian Ocean and settled Madagascar, a case of relocation diffusion. Bantu and Arabic belong to other families, and Malagasy is a full Austronesian language, not a pidgin.'
+          },
+          {
+            question: 'Which statement describes a limitation shared by both models of the Indo-European hearth?',
+            options: [
+              'They rely on indirect evidence from before written records',
+              'They ignore the role of farming in human history entirely',
+              'They place the hearth outside Europe and Asia altogether',
+              'They depend mainly on census data from modern countries'
+            ],
+            correctAnswer: 0,
+            explanation: 'Both reconstruct a prehistoric hearth from word comparisons, archaeology and genetics, because the family spread before writing. The Anatolian model is built around farming, and both place the hearth in Eurasia.'
+          }
+        ]
       }
+    },
+    {
+      id: 'hglangua2-later',
+      type: 'text' as const,
+      content: `
+## Later Spreads: Empire and Colonialism
+
+| Period | Process | Linguistic result |
+|---|---|---|
+| Roman Empire, about 200 BCE to 400s CE | Latin spread through conquest and administration | Latin evolved into the Romance languages in former Roman provinces |
+| 400s to 500s CE | Angles, Saxons and Jutes migrated to Britain | Old English, a Germanic language, replaced most Celtic speech in what became England |
+| 1066 | Norman conquest of England | Thousands of French words entered English, such as *government*, *court* and *beef* |
+| 1500s to 1900s | European colonialism (Part 4 of the culture-diffusion lesson) | Spanish, Portuguese, English and French became majority or official languages on other continents |
+
+**Scale point:** at the **global** scale, Indo-European now dominates the Americas because of colonial relocation, but at the **local** scale many Indigenous families survive: Quechua (Andes), Guarani (Paraguay, where it is co-official with Spanish), and the Mayan languages of Guatemala and southern Mexico.
+
+> 🔑 **AP Connection:** For a language-diffusion question, name the **family**, the **hearth** and the **process**: farming expansion, migration and conquest, seafaring, or colonialism. Then add the **type** of diffusion.
+`
     },
     {
       id: 'hglangua2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Place It on the Tree** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The primary mechanism that drives patterns in Language, Religion & Ethnicity is called ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'None of these']
+            label: 'Russian and Polish belong to the ___ branch of Indo-European',
+            options: ['Balto-Slavic', 'Germanic', 'Romance', 'Indo-Iranian']
           },
           {
-            label: 'A secondary process that shapes outcomes in Language, Religion & Ethnicity describes ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'All of these']
+            label: 'Swahili and Zulu both spread through the ___',
+            options: ['Bantu expansion', 'Austronesian expansion', 'Roman Empire', 'Norman conquest']
           },
           {
-            label: 'The relationship between actions and outcomes in Language, Religion & Ethnicity is known as ___',
-            options: ['Cause and effect', 'Process 1', 'Process 2', 'None of these']
+            label: 'Southern American English is best classified as a ___',
+            options: ['Dialect', 'Language group', 'Language branch', 'Language isolate']
           }
         ],
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Process 1 — The primary mechanism that drives patterns in Language, Religion & Ethnicity. Process 2 — A secondary process that shapes outcomes in Language, Religion & Ethnicity. Cause and effect — The relationship between actions and outcomes in Language, Religion & Ethnicity.'
-      }
-    },
-    {
-      id: 'hglangua2-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'t confuse **Process 1** with **Process 2** — while related, they address different aspects of Language, Religion & Ethnicity.
-- **Cause and effect** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about key processes, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect key processes to broader themes in AP Human Geography for higher scores.
-      `
-    },
-    {
-      id: 'hglangua2-applied',
-      type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student observes a pattern and needs to explain the underlying process. They should:',
-            options: [
-              'Just describe what they see',
-              'Identify the mechanism causing the pattern and explain how it operates',
-              'Say the pattern is random',
-              'Ignore the pattern'
-            ],
-            correctAnswer: 1,
-            explanation: 'Explaining processes requires identifying the underlying mechanism, not just describing the observable pattern.'
-          },
-          {
-            question: 'On the AP exam, process questions typically require students to:',
-            options: [
-              'List facts',
-              'Explain how a mechanism works and connect it to outcomes',
-              'Draw a picture',
-              'Write a poem'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP process questions test whether students understand HOW things work, not just WHAT happens.'
-          }
-        ]
+        correctAnswers: ['Balto-Slavic', 'Bantu expansion', 'Dialect'],
+        hint1: 'The branch of eastern Europe.',
+        hint2: 'Farmers moving south and east from West-Central Africa.',
+        hint3: 'A regional variety of one language.',
+        explanation: 'Russian and Polish are Balto-Slavic. Swahili and Zulu are Bantu languages of the Niger-Congo family. A regional variety of English is a dialect.'
       }
     }
   ]

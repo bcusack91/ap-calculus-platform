@@ -60,12 +60,12 @@ export const hgCultureDiffusionPart1Data = {
             question: 'Spanish colonizers building Catholic churches throughout Latin America is an example of:',
             options: [
               'Contagious diffusion',
-              'Hierarchical diffusion from an authority',
+              'Relocation diffusion',
               'Stimulus diffusion',
-              'Independent invention'
+              'Hierarchical diffusion'
             ],
             correctAnswer: 1,
-            explanation: 'The Spanish colonial government and Catholic Church (authority figures) imposed Catholicism on colonized populations — a top-down spread from powerful institutions.'
+            explanation: 'Spanish colonists and missionaries physically moved to the Americas and carried Catholicism with them, so the spread depended on people relocating. Colonial authority helped impose the faith once it arrived, but the AP classification for colonizers bringing a religion to a new region is relocation diffusion.'
           }
         ]
       }
