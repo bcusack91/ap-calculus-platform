@@ -1,8 +1,8 @@
 import type { MCQItem } from '@/components/FullLengthPracticeExam'
 
 /**
- * AP Macroeconomics — 60 stimulus-based MCQs.
- * Distribution mirrors official CB exam weighting:
+ * AP Macroeconomics — 60 MCQs (the real exam has 60 in 70 minutes).
+ * Distribution mirrors the CED unit weighting:
  *   Unit 1 — Basic Economic Concepts          (5)
  *   Unit 2 — Economic Indicators / Business Cycle  (9)
  *   Unit 3 — National Income & Price Determination (14)
@@ -17,8 +17,8 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-1-basic-concepts',
     stimulus:
-      'Country X can produce a maximum of 100 units of food OR 50 units of cloth (or any linear combination) per year. Currently it produces 60 units of food and 20 units of cloth.',
-    question: 'Based on the production possibilities curve described, the opportunity cost of producing 1 additional unit of cloth in Country X is:',
+      'Country X can produce a maximum of 100 units of food or 50 units of cloth per year, and its production possibilities curve is a straight line. It currently produces 60 units of food and 20 units of cloth.',
+    question: 'The opportunity cost of producing 1 additional unit of cloth in Country X is:',
     options: [
       '0.5 unit of food',
       '1 unit of food',
@@ -27,103 +27,102 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 2,
     explanation:
-      'Trading off 100 food for 50 cloth means each cloth costs 100/50 = 2 units of food. The current point is inside the PPC, but the slope (and thus opportunity cost) is constant for a linear PPC.',
+      'Giving up all 100 units of food yields 50 units of cloth, so each unit of cloth costs 100 ÷ 50 = 2 units of food. The answer 0.5 is the opportunity cost of a unit of food measured in cloth; a straight-line PPC means the cost is the same everywhere, even at a point inside the curve.',
   },
   {
     type: 'mcq',
     topic: 'unit-1-basic-concepts',
     stimulus:
-      'Two countries each spend 1 hour producing the following maximums:\n  Country A:  20 shirts  OR  4 computers\n  Country B:  10 shirts  OR  5 computers',
-    question: 'Which country has a comparative advantage in computers?',
+      'In one hour of labor, each country can produce the following maximum amounts:\n  Country A:  20 shirts  OR  4 computers\n  Country B:  10 shirts  OR  5 computers',
+    question: 'Which country has a comparative advantage in producing computers?',
     options: [
       'Country A, because its opportunity cost of a computer is 5 shirts.',
       'Country B, because its opportunity cost of a computer is 2 shirts.',
-      'Country A, because it produces more shirts.',
-      'Neither — both have the same opportunity cost.',
+      'Country A, because it can produce more shirts per hour.',
+      'Neither, because both countries face the same opportunity cost.',
     ],
     correctAnswer: 1,
     explanation:
-      'Opportunity cost of 1 computer: A = 20/4 = 5 shirts; B = 10/5 = 2 shirts. B sacrifices fewer shirts, so B has the comparative advantage in computers.',
+      'The opportunity cost of 1 computer is 20 ÷ 4 = 5 shirts for A and 10 ÷ 5 = 2 shirts for B. B gives up fewer shirts per computer, so B has the comparative advantage in computers; producing more shirts gives A an absolute advantage in shirts, which does not determine comparative advantage.',
   },
   {
     type: 'mcq',
     topic: 'unit-1-basic-concepts',
     question: 'A point inside a country\'s production possibilities curve indicates that the economy:',
     options: [
-      'Is producing efficiently and at full employment.',
-      'Has unemployed or underutilized resources.',
-      'Has experienced economic growth shifting the PPC outward.',
-      'Cannot reach that combination of goods.',
+      'Is producing efficiently, with all of its resources fully employed.',
+      'Has unemployed resources or is using some of its resources inefficiently.',
+      'Has experienced economic growth that shifted its PPC outward.',
+      'Cannot reach that combination of goods with its current resources.',
     ],
     correctAnswer: 1,
     explanation:
-      'Points inside the PPC reflect resources that are unemployed or used inefficiently. Points on the curve are productively efficient; points outside are unattainable with current resources.',
+      'At a point inside the PPC, the economy could produce more of one good without giving up any of the other, so some resources are idle or misallocated. Points beyond the curve, not inside it, are unattainable with current resources.',
   },
   {
     type: 'mcq',
     topic: 'unit-1-basic-concepts',
     question: 'Which of the following would shift a country\'s production possibilities curve outward?',
     options: [
-      'A decrease in the unemployment rate from 7% to 5%.',
-      'A reallocation of labor from agriculture to manufacturing.',
-      'A technological improvement that raises productivity in all sectors.',
-      'A decision by consumers to save more and spend less.',
+      'A decrease in the unemployment rate from 7% to 5% of the labor force.',
+      'A reallocation of labor from agriculture to manufacturing industries.',
+      'A technological advance that raises output per worker in all industries.',
+      'A decision by households to buy more consumer goods and fewer capital goods.',
     ],
     correctAnswer: 2,
     explanation:
-      'Outward shifts of the PPC require an increase in the economy\'s productive capacity — through new resources, capital deepening, or better technology. The other options just move along or toward the existing curve.',
+      'Better technology raises the maximum output the economy can produce with its resources, shifting the PPC outward. Lower unemployment moves the economy from inside the curve toward it, and reallocating labor or changing the consumption mix moves along the existing curve.',
   },
   {
     type: 'mcq',
     topic: 'unit-1-basic-concepts',
-    question: 'In a market economy, the answer to the question "What goods will be produced?" is determined primarily by:',
+    question: 'In a market economy, the question "What goods will be produced?" is answered primarily by:',
     options: [
-      'A central planning agency.',
-      'Consumer demand expressed through prices and producer responses to profit signals.',
-      'The political party in power.',
-      'The level of government spending in the budget.',
+      'A central planning agency that sets production quotas for each industry.',
+      'Prices set by buyers and sellers, signaling profit-seeking firms what to make.',
+      'Firms\' production costs alone, regardless of what consumers want to buy.',
+      'Government spending decisions approved by the legislature each year.',
     ],
     correctAnswer: 1,
     explanation:
-      'In a market economy, the price system coordinates the "what, how, and for whom" decisions through consumer purchases and the profit motive of producers.',
+      'In a market economy, prices emerge from buyers and sellers: spending pushes up the prices and profits of goods people want, and firms respond by producing more of them. Production quotas set by a planning agency describe a command economy instead.',
   },
 
   /* ============================ UNIT 2 — INDICATORS / BUSINESS CYCLE (9) ============================ */
   {
     type: 'mcq',
     topic: 'unit-2-indicators-business-cycle',
-    question: 'Which of the following transactions would be included in U.S. Gross Domestic Product (GDP) for the current year?',
+    question: 'Which of the following transactions would be included in U.S. gross domestic product (GDP) for the current year?',
     options: [
       'The purchase of a 10-year-old used car from a private seller.',
-      'A homeowner\'s sale of stock in a U.S. corporation.',
-      'A new haircut purchased from a local barber.',
-      'Social Security payments received by a retiree.',
+      'A homeowner\'s sale of shares of stock in a U.S. corporation.',
+      'A new haircut purchased this year from a neighborhood barber.',
+      'Social Security payments received by a retired worker.',
     ],
     correctAnswer: 2,
     explanation:
-      'GDP measures only the market value of FINAL goods and services produced in the current period. Used goods, financial transfers, and government transfer payments are all excluded.',
+      'GDP counts the market value of final goods and services produced in the current year, and a haircut is a newly produced service. A used car was counted when it was made, and stock sales and Social Security payments transfer existing wealth or income rather than paying for new production.',
   },
   {
     type: 'mcq',
     topic: 'unit-2-indicators-business-cycle',
     stimulus:
-      'A small economy produces only two goods. In the base year, prices and quantities are:\n  Apples:  $1   × 100\n  Bread:   $2   × 50\nIn the current year:\n  Apples:  $2   × 110\n  Bread:   $4   × 60',
-    question: 'Real GDP in the current year (using base-year prices) equals:',
+      'A small economy produces only two goods.\n  Base year:     apples \\$1 each × 100;  bread \\$2 each × 50\n  Current year:  apples \\$2 each × 110;  bread \\$4 each × 60',
+    question: 'Real GDP in the current year, measured in base-year prices, equals:',
     options: [
-      '$230',
-      '$330',
-      '$460',
-      '$420',
+      '\\$200',
+      '\\$230',
+      '\\$350',
+      '\\$460',
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation:
-      'Real GDP uses BASE-year prices and CURRENT-year quantities: (1)(110) + (2)(60) = 110 + 120 = $230.',
+      'Real GDP values current-year quantities at base-year prices: (\\$1)(110) + (\\$2)(60) = \\$230. Valuing current quantities at current prices gives nominal GDP of \\$460, and \\$200 is the base year\'s own GDP.',
   },
   {
     type: 'mcq',
     topic: 'unit-2-indicators-business-cycle',
-    question:
-      'A worker who has been laid off from an automobile factory because consumers are buying fewer cars during a recession is best classified as:',
+    question: 'A worker who is laid off from an automobile factory because consumers are buying fewer cars during a recession is best classified as:',
     options: [
       'Frictionally unemployed.',
       'Structurally unemployed.',
@@ -132,7 +131,7 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 2,
     explanation:
-      'Cyclical unemployment is caused by downturns in the business cycle. Frictional = between jobs; structural = mismatch of skills; seasonal = predictable seasonal demand.',
+      'Cyclical unemployment results from a downturn in the business cycle that reduces spending on goods and services. Structural unemployment would mean the worker\'s skills no longer match available jobs, which a temporary recession does not imply.',
   },
   {
     type: 'mcq',
@@ -141,19 +140,19 @@ export const MCQS: MCQItem[] = [
     options: [
       'The unemployment rate that prevails when there is no cyclical unemployment.',
       'Zero percent unemployment in an economy at long-run equilibrium.',
-      'The rate at which inflation is falling and the economy is in recession.',
-      'The unemployment rate consistent with full price stability and zero growth.',
+      'The unemployment rate at which inflation is falling during a recession.',
+      'The unemployment rate at which prices are stable and growth is zero.',
     ],
     correctAnswer: 0,
     explanation:
-      'The natural rate equals the sum of frictional and structural unemployment — it persists even when cyclical unemployment is zero (i.e., the economy is at full employment).',
+      'The natural rate is the sum of frictional and structural unemployment, the rate that remains when cyclical unemployment is zero and the economy is at full employment. It is never zero, because some workers are always between jobs or retraining.',
   },
   {
     type: 'mcq',
     topic: 'unit-2-indicators-business-cycle',
     stimulus:
-      'In Year 1 the CPI is 200. In Year 2 the CPI is 210.',
-    question: 'The inflation rate from Year 1 to Year 2 is approximately:',
+      'In Year 1 the consumer price index (CPI) is 200. In Year 2 the CPI is 210.',
+    question: 'The inflation rate from Year 1 to Year 2 is:',
     options: [
       '0.5%',
       '5.0%',
@@ -162,65 +161,65 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 1,
     explanation:
-      'Inflation rate = (210 − 200) / 200 × 100% = 5%.',
+      'Inflation rate = (210 − 200) ÷ 200 × 100% = 5.0%. The 10-point rise in the index is not itself the percentage change, because the base is 200, not 100.',
   },
   {
     type: 'mcq',
     topic: 'unit-2-indicators-business-cycle',
     question: 'Which of the following groups is hurt MOST by unanticipated inflation?',
     options: [
-      'Borrowers with long-term fixed-rate loans.',
-      'Lenders who hold long-term fixed-rate loans.',
-      'Workers whose wages adjust automatically with inflation.',
-      'Holders of inflation-indexed government bonds (TIPS).',
+      'Borrowers who took out long-term loans at fixed interest rates.',
+      'Lenders holding long-term loans made at fixed interest rates.',
+      'Workers whose wage contracts adjust automatically with the price level.',
+      'Savers who hold government bonds indexed to the inflation rate.',
     ],
     correctAnswer: 1,
     explanation:
-      'Unanticipated inflation hurts lenders (paid back in less-valuable dollars) and helps borrowers. Indexed bondholders and indexed wage earners are protected.',
+      'When inflation is higher than expected, fixed-rate loans are repaid with dollars that buy less, so lenders lose and borrowers gain. Indexed wages and indexed bonds rise with the price level, which protects their holders.',
   },
   {
     type: 'mcq',
     topic: 'unit-2-indicators-business-cycle',
-    question: 'A "discouraged worker" who has stopped looking for work is:',
+    question: 'A discouraged worker who wants a job but has stopped looking for one is:',
     options: [
-      'Counted as unemployed in the official unemployment rate.',
-      'NOT counted in the labor force, so not counted as unemployed.',
-      'Counted as employed because they once held a job.',
-      'Counted only if they receive unemployment benefits.',
+      'Counted as unemployed, because the worker still wants a job.',
+      'Counted as outside the labor force, not as unemployed.',
+      'Counted as employed, because the worker held a job in the past.',
+      'Counted as unemployed only while receiving unemployment benefits.',
     ],
     correctAnswer: 1,
     explanation:
-      'Discouraged workers are not actively job-searching, so the BLS classifies them as not in the labor force — and they are excluded from the official unemployment rate.',
+      'To be counted as unemployed, a person must be actively searching for work, so a discouraged worker is classified as outside the labor force. As a result, the official unemployment rate can understate joblessness during long downturns.',
   },
   {
     type: 'mcq',
     topic: 'unit-2-indicators-business-cycle',
     question: 'Real GDP per capita is most useful as an indicator of:',
     options: [
-      'A country\'s overall income inequality.',
+      'How equally income is divided among a country\'s households.',
       'A country\'s average material standard of living.',
-      'The total environmental footprint of an economy.',
-      'A country\'s level of political freedom.',
+      'The total environmental damage caused by a country\'s production.',
+      'The degree of political and civil freedom in a country.',
     ],
     correctAnswer: 1,
     explanation:
-      'Real GDP per capita measures average output per person, adjusted for prices — a standard rough proxy for material standard of living. It says nothing about inequality, environment, or politics.',
+      'Real GDP per capita measures inflation-adjusted output per person, a common proxy for the average material standard of living. Because it is an average, it reveals nothing about how equally that income is distributed.',
   },
   {
     type: 'mcq',
     topic: 'unit-2-indicators-business-cycle',
     stimulus:
       'A nation\'s adult, non-institutionalized population is 200 million. Of these, 130 million are employed, 10 million are unemployed and actively seeking work, and 60 million are not in the labor force.',
-    question: 'The unemployment rate for this nation equals approximately:',
+    question: 'The unemployment rate for this nation is approximately:',
     options: [
       '5.0%',
       '7.1%',
       '7.7%',
       '10.0%',
     ],
-    correctAnswer: 2,
+    correctAnswer: 1,
     explanation:
-      'Labor force = employed + unemployed = 130 + 10 = 140 million. Unemployment rate = 10 / 140 ≈ 7.14%.',
+      'The labor force is employed plus unemployed: 130 + 10 = 140 million, so the unemployment rate = 10 ÷ 140 ≈ 7.1%. Dividing by the number employed gives 7.7%, and dividing by the whole adult population gives 5.0%.',
   },
 
   /* ============================ UNIT 3 — NATIONAL INCOME / PRICE (14) ============================ */
@@ -236,197 +235,195 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 2,
     explanation:
-      'Spending multiplier = 1 / (1 − MPC) = 1 / 0.2 = 5.',
+      'Spending multiplier = 1 ÷ (1 − MPC) = 1 ÷ 0.2 = 5. The value 4 is the tax multiplier in absolute value, MPC ÷ (1 − MPC), and 1.25 is 1 ÷ MPC.',
   },
   {
     type: 'mcq',
     topic: 'unit-3-national-income-price',
-    question: 'If the MPC is 0.75, an autonomous increase in investment of $50 billion will increase equilibrium real GDP by:',
+    question: 'If the MPC is 0.75, an autonomous increase in investment spending of \\$50 billion will increase equilibrium real GDP by a maximum of:',
     options: [
-      '$50 billion',
-      '$100 billion',
-      '$150 billion',
-      '$200 billion',
+      '\\$37.5 billion',
+      '\\$50 billion',
+      '\\$150 billion',
+      '\\$200 billion',
     ],
     correctAnswer: 3,
     explanation:
-      'Multiplier = 1 / (1 − 0.75) = 4. Change in GDP = 4 × \\$50B = \\$200B.',
+      'The spending multiplier is 1 ÷ (1 − 0.75) = 4, so real GDP rises by up to 4 × \\$50 billion = \\$200 billion. Using the tax multiplier of 3 gives \\$150 billion, but the tax multiplier applies only to changes in taxes or transfers, not to direct spending.',
   },
   {
     type: 'mcq',
     topic: 'unit-3-national-income-price',
-    question: 'Which of the following would shift the aggregate demand (AD) curve to the RIGHT?',
+    question: 'Which of the following would shift the aggregate demand curve to the RIGHT?',
     options: [
-      'A decrease in consumer confidence.',
-      'An increase in personal income taxes.',
-      'A decrease in government spending.',
-      'A decrease in real interest rates.',
+      'A decrease in consumer confidence about future incomes.',
+      'An increase in personal income tax rates on households.',
+      'A decrease in government purchases of goods and services.',
+      'A decrease in real interest rates on business and consumer loans.',
     ],
     correctAnswer: 3,
     explanation:
-      'Lower real interest rates raise interest-sensitive spending (investment and durable goods consumption), shifting AD right. The other three reduce one of the AD components.',
+      'Lower real interest rates make borrowing cheaper, raising investment and interest-sensitive consumer spending, which increases aggregate demand. Lower confidence, higher taxes, and lower government purchases each reduce a component of aggregate demand.',
   },
   {
     type: 'mcq',
     topic: 'unit-3-national-income-price',
     stimulus:
-      'Scenario: A sustained negative supply shock — a tripling of world oil prices — hits the economy.',
-    question: 'In the short run, this shock most likely produces:',
+      'A sustained negative supply shock, a tripling of world oil prices, hits an economy that was in long-run equilibrium.',
+    question: 'In the short run, this shock will most likely cause which of the following?',
     options: [
-      'Higher real GDP and higher price level.',
-      'Higher real GDP and lower price level.',
-      'Lower real GDP and higher price level (stagflation).',
-      'Lower real GDP and lower price level.',
+      'Real GDP rises and the price level rises.',
+      'Real GDP rises and the price level falls.',
+      'Real GDP falls and the price level rises.',
+      'Real GDP falls and the price level falls.',
     ],
     correctAnswer: 2,
     explanation:
-      'A negative supply shock shifts the short-run aggregate supply (SRAS) curve LEFT, raising the price level and reducing real GDP — the textbook stagflation outcome.',
+      'Higher energy costs raise production costs at every price level, shifting short-run aggregate supply to the left. The new equilibrium has a higher price level and lower real GDP, the combination known as stagflation; a decrease in aggregate demand, by contrast, would lower both.',
   },
   {
     type: 'mcq',
     topic: 'unit-3-national-income-price',
-    question: 'In the long run, an increase in aggregate demand in an economy at full employment will primarily:',
+    question: 'In the long run, an increase in aggregate demand in an economy that begins at full employment will primarily:',
     options: [
-      'Raise real GDP without affecting the price level.',
+      'Raise real GDP without changing the price level.',
       'Raise the price level without changing real GDP.',
       'Reduce both real GDP and the price level.',
-      'Have no effect on either real GDP or the price level.',
+      'Leave both real GDP and the price level unchanged.',
     ],
     correctAnswer: 1,
     explanation:
-      'In the long run the LRAS is vertical at potential output. AD increases beyond full employment only raise prices.',
+      'Output rises above potential only temporarily; as nominal wages and other input prices adjust upward, SRAS shifts left and output returns to the vertical LRAS. The lasting effect is a higher price level with real GDP back at potential.',
   },
   {
     type: 'mcq',
     topic: 'unit-3-national-income-price',
-    question:
-      'According to Keynesian theory, an economy operating well below full employment should respond MOST to which of the following policies?',
+    question: 'An economy is operating well below full employment. A Keynesian economist would most likely recommend which of the following policies?',
     options: [
-      'A decrease in the money supply.',
+      'A decrease in the money supply to keep inflation low.',
       'An increase in personal income tax rates.',
       'An increase in government spending financed by borrowing.',
-      'A balanced-budget reduction in both spending and taxes.',
+      'Equal cuts in government spending and taxes.',
     ],
     correctAnswer: 2,
     explanation:
-      'Expansionary fiscal policy (deficit-financed government spending) is the textbook Keynesian remedy for a recessionary gap, especially when the multiplier is large.',
+      'Keynesian analysis calls for expansionary fiscal policy to close a recessionary gap, and deficit-financed government spending raises aggregate demand by a multiple of the initial spending. Equal cuts in spending and taxes are contractionary, because the spending multiplier exceeds the tax multiplier.',
   },
   {
     type: 'mcq',
     topic: 'unit-3-national-income-price',
-    question:
-      'The short-run aggregate supply (SRAS) curve slopes upward primarily because:',
+    question: 'The short-run aggregate supply curve slopes upward primarily because:',
     options: [
-      'Workers always have rational expectations about future prices.',
-      'Higher prices reduce input costs and increase profits.',
-      'In the short run, some input prices (especially nominal wages) are sticky, so a rise in the price level increases firm profits and output.',
-      'Long-run capital stock is fixed at potential output.',
+      'Workers instantly adjust their wage demands to any change in prices.',
+      'A higher price level lowers input costs and so raises firms\' profits.',
+      'Nominal wages and some other input prices are slow to adjust to price changes.',
+      'The economy\'s capital stock is fixed at the level of potential output.',
     ],
     correctAnswer: 2,
     explanation:
-      'Sticky-wage and sticky-price models explain the upward-sloping SRAS: when output prices rise faster than input costs, firms produce more.',
+      'When the price level rises but nominal wages and other input prices are fixed for a time, each unit of output becomes more profitable, so firms produce more. If wages adjusted instantly, the curve would be vertical, which is why the long-run aggregate supply curve is vertical.',
   },
   {
     type: 'mcq',
     topic: 'unit-3-national-income-price',
     stimulus:
-      'A government raises lump-sum taxes by $100 billion. The MPC equals 0.75.',
-    question: 'What is the resulting change in equilibrium real GDP, holding all else constant?',
+      'The government raises lump-sum taxes by \\$100 billion. The MPC equals 0.75.',
+    question: 'Holding all else constant, the maximum change in equilibrium real GDP is:',
     options: [
-      '−$75 billion',
-      '−$133 billion',
-      '−$300 billion',
-      '−$400 billion',
+      '−\\$75 billion',
+      '−\\$133 billion',
+      '−\\$300 billion',
+      '−\\$400 billion',
     ],
     correctAnswer: 2,
     explanation:
-      'Tax multiplier = −MPC / (1 − MPC) = −0.75 / 0.25 = −3. ΔGDP = −3 × \\$100B = −\\$300B.',
+      'Tax multiplier = −MPC ÷ (1 − MPC) = −0.75 ÷ 0.25 = −3, so real GDP falls by up to 3 × \\$100 billion = \\$300 billion. The −\\$400 billion answer wrongly applies the spending multiplier of 4, ignoring that households first pay part of the tax out of saving.',
   },
   {
     type: 'mcq',
     topic: 'unit-3-national-income-price',
-    question: 'If autonomous consumption is \\$300, MPC is 0.8, and disposable income is \\$1,000, total planned consumption equals:',
+    question: 'If autonomous consumption is \\$300, the MPC is 0.8, and disposable income is \\$1,000, total planned consumption equals:',
     options: [
-      '$800',
-      '$1,000',
-      '$1,100',
-      '$1,300',
+      '\\$800',
+      '\\$1,000',
+      '\\$1,100',
+      '\\$1,300',
     ],
     correctAnswer: 2,
     explanation:
-      'C = a + bYd = 300 + 0.8(1000) = 300 + 800 = $1,100.',
+      'Consumption = autonomous consumption + MPC × disposable income = \\$300 + 0.8(\\$1,000) = \\$1,100. The \\$800 answer counts only the income-induced part and leaves out the \\$300 households spend regardless of income.',
   },
   {
     type: 'mcq',
     topic: 'unit-3-national-income-price',
-    question: 'The long-run aggregate supply (LRAS) curve is vertical at the level of:',
+    question: 'The long-run aggregate supply curve is vertical at the level of:',
     options: [
-      'Potential (full-employment) real GDP.',
-      'The current short-run equilibrium real GDP.',
-      'Maximum nominal GDP regardless of price level.',
-      'The level of GDP at which inflation equals zero.',
+      'The level of real GDP produced when the economy is at full employment.',
+      'The level of real GDP at the current short-run equilibrium.',
+      'The highest nominal GDP the economy could reach at any price level.',
+      'The level of real GDP at which the inflation rate equals zero.',
     ],
     correctAnswer: 0,
     explanation:
-      'LRAS is vertical at potential GDP — the output the economy produces when all resources are fully employed and inflation expectations have fully adjusted.',
+      'LRAS is vertical at potential, or full-employment, real GDP, the output the economy produces once all input prices have fully adjusted. Short-run equilibrium output can be above or below that level during an inflationary or recessionary gap.',
   },
   {
     type: 'mcq',
     topic: 'unit-3-national-income-price',
     question: 'A recessionary gap exists when:',
     options: [
-      'Short-run equilibrium real GDP exceeds potential GDP.',
-      'Short-run equilibrium real GDP is below potential GDP.',
-      'The price level is at its long-run equilibrium.',
-      'Cyclical unemployment is zero.',
+      'Short-run equilibrium real GDP is above potential real GDP.',
+      'Short-run equilibrium real GDP is below potential real GDP.',
+      'Short-run equilibrium real GDP equals potential, but prices are rising.',
+      'Cyclical unemployment is zero, so unemployment is at the natural rate.',
     ],
     correctAnswer: 1,
     explanation:
-      'A recessionary (output) gap occurs when SRAS-AD equilibrium output is BELOW LRAS at potential GDP, with cyclical unemployment above zero.',
+      'In a recessionary gap, the short-run equilibrium lies to the left of LRAS, so output is below potential and cyclical unemployment is positive. Output above potential is an inflationary gap.',
   },
   {
     type: 'mcq',
     topic: 'unit-3-national-income-price',
-    question: 'Which of the following is NOT a component of aggregate demand in a closed economy with government?',
+    question: 'Which of the following is counted as investment spending in aggregate demand?',
     options: [
-      'Consumption (C)',
-      'Investment (I)',
-      'Government spending (G)',
-      'Imports (M)',
+      'A family\'s purchase of a house built this year by a contractor.',
+      'A family\'s purchase of shares of stock in a newly public company.',
+      'A firm\'s purchase of a used delivery truck from another company.',
+      'A college student\'s purchase of a brand-new laptop for her classes.',
     ],
-    correctAnswer: 3,
+    correctAnswer: 0,
     explanation:
-      'In a closed economy, AD = C + I + G. Imports are subtracted only in OPEN economy formula AD = C + I + G + (X − M).',
+      'Investment spending includes business purchases of new capital, changes in inventories, and purchases of newly built homes. Buying stock is a financial transaction, not spending on newly produced output, and a used truck was counted in the year it was made.',
   },
   {
     type: 'mcq',
     topic: 'unit-3-national-income-price',
     stimulus:
-      'Diagram (described): The AD curve and SRAS curve intersect at price level 110 and real GDP \\$18 trillion. The vertical LRAS is drawn at \\$20 trillion.',
-    question: 'Which of the following is the most appropriate fiscal policy response to close the gap shown?',
+      'Diagram (described): The AD and SRAS curves intersect at a price level of 110 and real GDP of \\$18 trillion. The vertical LRAS curve is at \\$20 trillion. The MPC is 0.8.',
+    question: 'Assuming the price level stays constant, what is the minimum increase in government spending needed to close the gap?',
     options: [
-      'Increase income taxes by $1 trillion.',
-      'Cut government spending by $500 billion.',
-      'Increase government spending by $500 billion.',
-      'Hold fiscal policy unchanged and let prices fall.',
+      '\\$400 billion',
+      '\\$2 trillion',
+      '\\$500 billion',
+      '\\$10 trillion',
     ],
-    correctAnswer: 2,
+    correctAnswer: 0,
     explanation:
-      'A short-run output of \\$18T below LRAS of \\$20T is a recessionary gap. Expansionary fiscal policy — increased G — shifts AD right to close the gap.',
+      'The recessionary gap is \\$20 trillion − \\$18 trillion = \\$2 trillion, and the spending multiplier is 1 ÷ (1 − 0.8) = 5, so government spending must rise by \\$2 trillion ÷ 5 = \\$400 billion. A \\$500 billion figure is the tax cut that would be needed, since the tax multiplier is only 4.',
   },
   {
     type: 'mcq',
     topic: 'unit-3-national-income-price',
-    question: 'The "crowding-out effect" of expansionary fiscal policy refers to:',
+    question: 'The crowding-out effect of expansionary fiscal policy refers to:',
     options: [
-      'Lower interest rates that encourage more private investment.',
-      'Higher interest rates from government borrowing that reduce private investment.',
-      'Increased imports that reduce domestic production.',
-      'Reduced consumer spending due to higher taxes.',
+      'Lower interest rates that encourage more private investment spending.',
+      'Higher interest rates from government borrowing that reduce investment.',
+      'Higher imports that reduce spending on domestically produced goods.',
+      'Lower consumer spending caused by the higher taxes used to fund it.',
     ],
     correctAnswer: 1,
     explanation:
-      'Government borrowing to finance deficit spending raises real interest rates in the loanable funds market, which "crowds out" private investment.',
+      'When the government borrows to finance a deficit, it increases the demand for loanable funds and raises the real interest rate, which discourages some private investment. That offsets part of the expansionary effect on aggregate demand.',
   },
 
   /* ============================ UNIT 4 — FINANCIAL SECTOR (12) ============================ */
@@ -435,50 +432,50 @@ export const MCQS: MCQItem[] = [
     topic: 'unit-4-financial-sector',
     question: 'Which of the following is included in the M1 measure of the U.S. money supply?',
     options: [
-      'Long-term U.S. Treasury bonds.',
-      'Demand deposits and currency held by the public.',
+      'Long-term U.S. Treasury bonds held by the public.',
+      'Currency and checkable deposits held by the public.',
       'Corporate stocks held in retirement accounts.',
-      'Gold held in the U.S. Treasury\'s reserves.',
+      'Gold held in the reserves of the U.S. Treasury.',
     ],
     correctAnswer: 1,
     explanation:
-      'M1 = currency in circulation + demand (checking) deposits + other very liquid checkable deposits. Bonds, stocks, and gold are not included.',
+      'M1 is the most liquid measure of money: currency in circulation plus checkable (demand) deposits and other highly liquid deposits. Bonds and stocks are financial assets that must be sold before they can be spent, so they are not money.',
   },
   {
     type: 'mcq',
     topic: 'unit-4-financial-sector',
     stimulus:
-      'A commercial bank receives a new deposit of $1,000. The required reserve ratio is 10%, and banks hold no excess reserves. Borrowers redeposit all loaned funds in the banking system.',
-    question: 'The maximum potential increase in the money supply from this deposit equals:',
+      'Maria deposits \\$1,000 of currency she had been keeping at home into her checking account. The required reserve ratio is 10%, banks hold no excess reserves, and all loans are redeposited in the banking system.',
+    question: 'As a result of this deposit, the maximum amount of new money the banking system can create through lending is:',
     options: [
-      '$1,000',
-      '$9,000',
-      '$10,000',
-      '$100,000',
+      '\\$900',
+      '\\$1,000',
+      '\\$9,000',
+      '\\$10,000',
     ],
     correctAnswer: 2,
     explanation:
-      'Money multiplier = 1 / RR = 1 / 0.10 = 10. Maximum new money supply = \\$1,000 × 10 = \\$10,000 (which includes the original \\$1,000 deposit).',
+      'Moving \\$1,000 from currency to a checking deposit does not change M1 by itself; it gives the bank \\$900 of excess reserves (\\$1,000 − \\$100 required). With a money multiplier of 1 ÷ 0.10 = 10, new lending can create at most \\$900 × 10 = \\$9,000; the \\$10,000 answer is total new deposits, which wrongly counts Maria\'s \\$1,000, already money before she deposited it.',
   },
   {
     type: 'mcq',
     topic: 'unit-4-financial-sector',
-    question: 'Which of the following actions by the Federal Reserve would EXPAND the U.S. money supply?',
+    question: 'In a limited-reserves system, which of the following actions by the Federal Reserve would increase the U.S. money supply?',
     options: [
-      'Raising the discount rate.',
+      'Raising the discount rate it charges on loans to banks.',
       'Selling Treasury securities on the open market.',
       'Buying Treasury securities on the open market.',
-      'Raising the reserve requirement on commercial banks.',
+      'Raising the reserve requirement for commercial banks.',
     ],
     correctAnswer: 2,
     explanation:
-      'Open-market PURCHASES inject reserves into the banking system, lower the federal funds rate, and expand the money supply. The other three are contractionary.',
+      'When the Fed buys securities, it pays with new reserves, giving banks excess reserves to lend and expanding the money supply through the money multiplier. Selling securities, raising the discount rate, and raising the reserve requirement all shrink banks\' lending capacity.',
   },
   {
     type: 'mcq',
     topic: 'unit-4-financial-sector',
     stimulus:
-      'Diagram (described): The money market shows nominal money supply (vertical) at $MS_{0}$ intersecting money demand (downward sloping) at nominal interest rate $i_{0}$. The Fed conducts an open-market sale of Treasury securities.',
+      'Diagram (described): In a limited-reserves banking system, the money market shows a vertical money supply curve (MS) intersecting a downward-sloping money demand curve (MD) at nominal interest rate $i_{0}$. The Federal Reserve then conducts an open-market sale of Treasury securities.',
     question: 'In the short run, this Fed action will cause:',
     options: [
       'MS to shift right and the nominal interest rate to fall.',
@@ -488,13 +485,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 1,
     explanation:
-      'An open-market sale absorbs reserves, shifting MS LEFT. With MD unchanged, the nominal interest rate rises.',
+      'Buyers of the securities pay the Fed with money that leaves the banking system, so the money supply curve shifts left and the nominal interest rate rises along the unchanged money demand curve. Money demand shifts only when real GDP or the price level changes, not because of an open-market operation.',
   },
   {
     type: 'mcq',
     topic: 'unit-4-financial-sector',
-    question:
-      'According to the Fisher equation, if the nominal interest rate is 7% and expected inflation is 3%, the real interest rate is approximately:',
+    question: 'If the nominal interest rate is 7% and expected inflation is 3%, the real interest rate is approximately:',
     options: [
       '−4%',
       '4%',
@@ -503,103 +499,107 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 1,
     explanation:
-      'Real ≈ nominal − expected inflation = 7% − 3% = 4%.',
+      'Real interest rate ≈ nominal interest rate − expected inflation = 7% − 3% = 4%. Adding the two (10%) confuses the real rate with the nominal rate that a lender would demand.',
   },
   {
     type: 'mcq',
     topic: 'unit-4-financial-sector',
-    question:
-      'If banks hold \\$10 billion in deposits and \\$1.5 billion in reserves, and the required reserve ratio is 10%, the banking system can create up to an additional:',
+    question: 'The banking system has \\$10 billion in demand deposits and \\$1.5 billion in reserves, and the required reserve ratio is 10%. By how much can the banking system as a whole increase its loans, at most?',
     options: [
-      '$500 million in new loans, increasing the money supply.',
-      '$5 billion in new loans.',
-      '$1.5 billion in new loans.',
-      '$10 billion in new loans.',
+      '\\$500 million',
+      '\\$5.0 billion',
+      '\\$1.5 billion',
+      '\\$15 billion',
     ],
     correctAnswer: 1,
     explanation:
-      'Required reserves = 10% × \\$10B = \\$1B. Excess reserves = \\$1.5B − \\$1B = \\$0.5B. Maximum loan creation = excess reserves × money multiplier = \\$0.5B × 10 = \\$5B.',
+      'Required reserves are 10% × \\$10 billion = \\$1 billion, so excess reserves are \\$1.5 billion − \\$1 billion = \\$0.5 billion. The whole system can lend up to excess reserves × money multiplier = \\$0.5 billion × 10 = \\$5 billion; \\$500 million is what a single bank could lend.',
   },
   {
     type: 'mcq',
     topic: 'unit-4-financial-sector',
-    question: 'In the loanable funds market, an increase in the federal budget deficit will most likely:',
+    question: 'In the loanable funds market, an increase in government borrowing to finance a larger budget deficit will most likely:',
     options: [
-      'Shift demand for loanable funds right and raise the real interest rate.',
-      'Shift supply of loanable funds right and lower the real interest rate.',
-      'Shift demand for loanable funds left and lower the real interest rate.',
-      'Have no effect on the real interest rate or quantity of loans.',
+      'Shift the demand for loanable funds right and raise the real interest rate.',
+      'Shift the supply of loanable funds right and lower the real interest rate.',
+      'Shift the demand for loanable funds left and lower the real interest rate.',
+      'Shift the supply of loanable funds left and lower the real interest rate.',
     ],
     correctAnswer: 0,
     explanation:
-      'A larger deficit means more government borrowing — i.e., higher demand for loanable funds — which raises the real interest rate (textbook crowding-out mechanism).',
+      'Government borrowing adds to the demand for loanable funds, shifting the demand curve right and raising the equilibrium real interest rate. That higher rate is the mechanism behind crowding out of private investment.',
   },
   {
     type: 'mcq',
     topic: 'unit-4-financial-sector',
-    question:
-      'The opportunity cost of holding money rather than interest-bearing assets is best measured by the:',
+    question: 'The opportunity cost of holding money rather than interest-bearing assets is best measured by the:',
     options: [
-      'Real GDP growth rate.',
+      'Real interest rate.',
       'Nominal interest rate.',
       'Inflation rate.',
       'Federal budget deficit.',
     ],
     correctAnswer: 1,
     explanation:
-      'Holding money forgoes the nominal interest you could earn on bonds — making the nominal interest rate the opportunity cost of holding money.',
+      'Holding money means giving up the nominal interest that could be earned on a bond, so the nominal rate is the opportunity cost, which is why money demand slopes downward against the nominal rate. The real rate matters for borrowing and investment decisions in the loanable funds market.',
   },
   {
     type: 'mcq',
     topic: 'unit-4-financial-sector',
-    question: 'Which of the following would shift the demand for money curve to the RIGHT?',
+    question: 'Which of the following would shift the money demand curve to the RIGHT?',
     options: [
-      'A decrease in the price level.',
-      'A decrease in nominal GDP.',
-      'An increase in real GDP.',
-      'An increase in the nominal interest rate.',
+      'A decrease in the price level, lowering the cost of purchases.',
+      'A decrease in nominal GDP, reducing the value of transactions.',
+      'An increase in real GDP, raising the volume of transactions.',
+      'An increase in the nominal interest rate on savings bonds.',
     ],
     correctAnswer: 2,
     explanation:
-      'Higher real income (and higher nominal GDP and price level) increases the transactions demand for money, shifting MD right. Interest-rate changes move ALONG the curve.',
+      'Higher real GDP means more transactions, so people want to hold more money at every interest rate. A change in the nominal interest rate causes a movement along the money demand curve rather than a shift.',
   },
   {
     type: 'mcq',
     topic: 'unit-4-financial-sector',
-    question:
-      'Which of the following pairs is the LARGEST and most often-used tool of monetary policy by the Federal Reserve?',
+    question: 'In the ample-reserves framework the Federal Reserve now uses, its primary tool for moving the federal funds rate toward its target is:',
     options: [
-      'Reserve requirement; rarely used.',
-      'Open-market operations; used frequently.',
-      'Direct lending to consumers; used frequently.',
-      'Wage and price controls; used regularly.',
+      'Adjusting the interest rate it pays banks on reserve balances.',
+      'Changing the required reserve ratio that banks must meet each day.',
+      'Buying or selling small amounts of bonds to shift the money supply.',
+      'Lending directly to households at an interest rate set by Congress.',
     ],
-    correctAnswer: 1,
+    correctAnswer: 0,
     explanation:
-      'Open-market operations (buying and selling Treasury securities) are the Fed\'s primary day-to-day tool for managing the federal funds rate.',
+      'With ample reserves, small open-market purchases or sales barely move the federal funds rate, so the Fed steers it with administered rates, chiefly the interest rate it pays on reserve balances. Banks will not lend reserves to each other for much less than that rate, so raising it pulls market rates up.',
   },
   {
-    question: 'If market interest rates rise after the purchase, the price at which the saver can sell the bond on the secondary market will most likely:',
-    options: ['Rise, because the bond\'s fixed payment is now more valuable.', 'Stay the same, because the bond\'s payment is fixed by contract.', 'Rise, because bond prices always move in the same direction as interest rates.', 'Fall, because newly issued bonds now offer higher interest payments, making the old bond less attractive.'],
+    type: 'mcq',
+    topic: 'unit-4-financial-sector',
+    stimulus:
+      'A saver buys a newly issued 10-year government bond with a face value of \\$1,000 that pays a fixed \\$40 in interest each year.',
+    question: 'If market interest rates rise after the purchase, the price at which the saver can sell the bond to another investor will most likely:',
+    options: [
+      'Rise, because the bond\'s fixed payment is now worth more to buyers.',
+      'Stay the same, because the bond\'s payment is fixed by contract.',
+      'Rise, because bond prices move in the same direction as interest rates.',
+      'Fall, because newly issued bonds pay more and make the old bond less attractive.',
+    ],
     correctAnswer: 3,
-    explanation: 'Interest rates and the prices of previously issued bonds are inversely related: when market rates rise, existing bonds with lower fixed payments become less attractive, so their resale price falls.',
-    type: 'mcq',
-    topic: 'unit-4-financial-sector',
+    explanation:
+      'Once new bonds pay more than \\$40 a year, no buyer will pay \\$1,000 for the old bond, so its price falls until its yield matches the market rate. Bond prices and interest rates move in opposite directions; the fixed payment is exactly why the price must adjust.',
   },
   {
     type: 'mcq',
     topic: 'unit-4-financial-sector',
-    question:
-      'A "100% reserve banking" requirement (no fractional-reserve lending) would most likely result in:',
+    question: 'If banks were required to hold 100% of their deposits as reserves, the result would most likely be:',
     options: [
-      'A money multiplier of zero, eliminating banks.',
-      'A money multiplier of 1 — banks could not create money through lending.',
-      'A larger money multiplier than under fractional-reserve banking.',
-      'Higher inflation in the long run.',
+      'A larger money supply, because every deposit would be fully backed by reserves.',
+      'A money multiplier of 1, so bank lending could not create new money.',
+      'A money multiplier larger than the one under fractional-reserve banking.',
+      'A smaller money supply only if the Fed also sold bonds on the open market.',
     ],
     correctAnswer: 1,
     explanation:
-      'If the required reserve ratio = 100%, the money multiplier = 1/1 = 1, eliminating money creation through lending.',
+      'The money multiplier is 1 ÷ required reserve ratio = 1 ÷ 1.00 = 1, so banks could not lend out any deposits and could not create new money. Full backing makes deposits safer but does not add money, and the multiplier drops to 1 from the requirement itself, with no open-market sale needed.',
   },
 
   /* ============================ UNIT 5 — LONG-RUN STABILIZATION POLICIES (13) ============================ */
@@ -607,91 +607,87 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-5-long-run-stabilization',
     stimulus:
-      'Diagram (described): A short-run Phillips curve (SRPC) is downward-sloping in inflation–unemployment space. The natural rate of unemployment is 5%. Expected inflation equals 2%.',
-    question:
-      'According to the SRPC, an unanticipated expansionary monetary policy will, in the SHORT run, most likely:',
+      'Diagram (described): A downward-sloping short-run Phillips curve (SRPC) is drawn in inflation–unemployment space. The natural rate of unemployment is 5%, and expected inflation is 2%.',
+    question: 'An unanticipated expansionary monetary policy will, in the short run, most likely cause:',
     options: [
-      'Raise unemployment and raise inflation.',
-      'Raise unemployment and lower inflation.',
-      'Lower unemployment and raise inflation.',
-      'Lower unemployment and lower inflation.',
+      'A movement along the SRPC to higher inflation and higher unemployment.',
+      'A movement along the SRPC to lower inflation and higher unemployment.',
+      'A movement along the SRPC to higher inflation and lower unemployment.',
+      'A movement along the SRPC to lower inflation and lower unemployment.',
     ],
     correctAnswer: 2,
     explanation:
-      'A movement DOWN-LEFT along the SRPC: unanticipated expansion lowers unemployment below the natural rate and raises inflation above expectations.',
+      'Unexpectedly higher aggregate demand raises output and lowers unemployment below 5% while pushing inflation above the expected 2%, a movement up and to the left along the SRPC. Higher unemployment with lower inflation is the movement caused by contractionary policy.',
   },
   {
     type: 'mcq',
     topic: 'unit-5-long-run-stabilization',
-    question: 'The long-run Phillips curve (LRPC) is:',
+    question: 'The long-run Phillips curve is:',
     options: [
-      'Downward sloping at a constant rate.',
-      'Upward sloping in the long run.',
-      'Vertical at the natural rate of unemployment.',
-      'Horizontal at the target inflation rate.',
+      'Downward sloping but steeper than the short-run Phillips curve.',
+      'Upward sloping, because higher inflation eventually raises unemployment.',
+      'Vertical at the natural rate, with no lasting inflation trade-off.',
+      'Horizontal at the expected inflation rate once expectations adjust.',
     ],
     correctAnswer: 2,
     explanation:
-      'In the long run there is no permanent trade-off between inflation and unemployment: the LRPC is vertical at the natural rate.',
+      'Once expectations adjust, unemployment returns to its natural rate whatever the inflation rate, so the long-run Phillips curve is vertical. The trade-off on the downward-sloping short-run curve exists only while expected inflation is fixed.',
   },
   {
     type: 'mcq',
     topic: 'unit-5-long-run-stabilization',
-    question:
-      'When inflation expectations rise, the short-run Phillips curve will:',
+    question: 'When expected inflation rises, the short-run Phillips curve will:',
     options: [
-      'Shift downward and to the left.',
+      'Shift down and to the left.',
       'Shift upward and to the right.',
-      'Become steeper but not shift.',
-      'Become flatter and remain in the same place.',
+      'Become steeper without shifting.',
+      'Become flatter without shifting.',
     ],
     correctAnswer: 1,
     explanation:
-      'Higher expected inflation shifts the SRPC up — more inflation at every unemployment rate.',
+      'Higher expected inflation raises the inflation rate associated with every unemployment rate, so the SRPC shifts up (to the right). This matches a leftward shift of SRAS as workers bargain for higher nominal wages.',
   },
   {
     type: 'mcq',
     topic: 'unit-5-long-run-stabilization',
-    question:
-      'According to the quantity theory of money (MV = PY), if the velocity of money (V) is constant and real GDP (Y) grows at 3% per year, a 5% increase in the money supply (M) will most likely:',
+    question: 'According to the quantity theory of money (MV = PY), if velocity is constant and real GDP grows 3% per year, a 5% increase in the money supply will most likely cause:',
     options: [
-      'Cause a 2% rise in the price level.',
-      'Cause an 8% rise in real GDP.',
-      'Cause a 5% rise in the price level.',
-      'Have no effect on prices in the long run.',
+      'A 2% increase in the price level.',
+      'An 8% increase in real GDP.',
+      'A 5% increase in the price level.',
+      'No change in the price level.',
     ],
     correctAnswer: 0,
     explanation:
-      '%ΔM + %ΔV = %ΔP + %ΔY → 5 + 0 = %ΔP + 3, so %ΔP ≈ 2%.',
+      'In growth-rate form, %ΔM + %ΔV = %ΔP + %ΔY, so 5% + 0% = %ΔP + 3% and the price level rises about 2%. A 5% rise in prices would require real GDP to stay constant.',
   },
   {
     type: 'mcq',
     topic: 'unit-5-long-run-stabilization',
-    question:
-      'According to the classical (long-run) view, monetary policy is best described as:',
+    question: 'In the long run, changes in the money supply are best described as:',
     options: [
-      'Effective at permanently raising real output and lowering unemployment.',
-      'Neutral with respect to real variables in the long run, affecting only nominal variables.',
-      'Always inflationary regardless of time horizon.',
-      'Identical to fiscal policy in its long-run effects.',
+      'Able to permanently raise real output and lower unemployment.',
+      'Neutral in the long run, affecting only nominal variables.',
+      'Inflationary in the short run but deflationary in the long run.',
+      'Identical to fiscal policy in their long-run effects on output.',
     ],
     correctAnswer: 1,
     explanation:
-      'In the long run, money is "neutral": changes in M affect prices and nominal variables but not real GDP, real wages, or the natural rate of unemployment.',
+      'Money is neutral in the long run: a change in the money supply changes the price level and other nominal variables but not real GDP or the natural rate of unemployment. Any short-run gain in output fades once wages and expectations adjust.',
   },
   {
     type: 'mcq',
     topic: 'unit-5-long-run-stabilization',
-    question: 'Which of the following is the BEST example of a "supply-side" policy aimed at increasing potential GDP?',
+    question: 'Which of the following is the best example of a policy aimed at increasing potential GDP?',
     options: [
-      'A temporary tax rebate aimed at boosting consumer spending.',
-      'A short-term increase in unemployment insurance benefits.',
-      'Permanent investment in infrastructure and worker training that raises productivity.',
-      'A one-time stimulus check sent to all households.',
+      'A tax rebate mailed to households to boost consumer spending.',
+      'An increase in unemployment insurance benefits during a recession.',
+      'Public investment in worker training and infrastructure.',
+      'A larger federal budget deficit financed by issuing new bonds.',
     ],
     correctAnswer: 2,
     explanation:
-      'Supply-side policies aim to expand the economy\'s productive capacity (LRAS / PPC), typically through capital accumulation, education, R&D, and incentives that raise productivity.',
+      'Training raises human capital and infrastructure adds physical capital, so both raise productivity and shift LRAS to the right. Rebates and unemployment benefits raise aggregate demand without expanding productive capacity, and deficit borrowing can crowd out the private investment that builds capital.',
   },
   {
     type: 'mcq',
@@ -700,209 +696,201 @@ export const MCQS: MCQItem[] = [
       'A nation\'s federal debt was \\$20 trillion at the end of Year 1. During Year 2, the federal government ran a budget deficit of \\$1.5 trillion.',
     question: 'The nation\'s federal debt at the end of Year 2 is approximately:',
     options: [
-      '$1.5 trillion',
-      '$18.5 trillion',
-      '$21.5 trillion',
-      '$30 trillion',
+      '\\$1.5 trillion',
+      '\\$18.5 trillion',
+      '\\$21.5 trillion',
+      '\\$30 trillion',
     ],
     correctAnswer: 2,
     explanation:
-      'Debt is the accumulated stock of past deficits. New debt = \\$20T + \\$1.5T = \\$21.5T.',
+      'The debt is the accumulated total of past deficits minus surpluses, so a \\$1.5 trillion deficit adds to it: \\$20 trillion + \\$1.5 trillion = \\$21.5 trillion. Subtracting the deficit would treat it as a surplus.',
   },
   {
     type: 'mcq',
     topic: 'unit-5-long-run-stabilization',
-    question: 'Which of the following is an example of an AUTOMATIC fiscal stabilizer?',
+    question: 'Which of the following is an example of an automatic fiscal stabilizer?',
     options: [
-      'A new infrastructure bill passed in response to recession.',
-      'Unemployment insurance payments that automatically rise as more workers lose jobs.',
-      'An emergency Federal Reserve interest-rate cut.',
-      'A constitutional amendment requiring a balanced budget.',
+      'A new infrastructure bill passed by Congress in response to a recession.',
+      'Unemployment benefits that rise as more workers lose jobs.',
+      'An emergency cut in the federal funds rate by the Federal Reserve.',
+      'A constitutional amendment requiring a balanced federal budget.',
     ],
     correctAnswer: 1,
     explanation:
-      'Automatic stabilizers (UI benefits, progressive income tax, transfer programs) expand or contract WITHOUT new legislation, smoothing the cycle.',
+      'Automatic stabilizers, such as unemployment insurance and progressive income taxes, change spending or tax revenue as the economy changes without any new legislation. A newly passed infrastructure bill is discretionary fiscal policy, and a federal funds rate cut is monetary policy.',
   },
   {
     type: 'mcq',
     topic: 'unit-5-long-run-stabilization',
-    question:
-      'Which of the following is a long-run cost of persistently high government budget deficits?',
+    question: 'Which of the following is a long-run cost of persistently large government budget deficits?',
     options: [
-      'Higher private savings, which increase capital formation.',
-      'Lower real interest rates, which boost investment.',
-      'Crowding out of private investment, slowing long-run growth in capital stock.',
-      'Reduced government spending on transfers.',
+      'Higher private saving, which increases the capital stock.',
+      'Lower real interest rates, which encourage more investment.',
+      'Crowding out of private investment, which slows capital growth.',
+      'Smaller transfer payments, which reduce household consumption.',
     ],
     correctAnswer: 2,
     explanation:
-      'Sustained deficits raise real interest rates and crowd out private investment, slowing long-run capital accumulation and growth in potential GDP.',
+      'Sustained government borrowing keeps real interest rates higher, which reduces private investment and slows the growth of the capital stock and of potential output. Deficits raise, rather than lower, real interest rates in the loanable funds market.',
   },
   {
     type: 'mcq',
     topic: 'unit-5-long-run-stabilization',
-    question:
-      'A country experiences inflation that is persistently above its target. The most appropriate monetary policy response is to:',
+    question: 'In a limited-reserves system, inflation is persistently above the central bank\'s target. Which of the following is the most appropriate monetary policy action?',
     options: [
-      'Buy government bonds on the open market.',
+      'Buy government bonds from banks on the open market.',
       'Lower the discount rate.',
-      'Sell government bonds on the open market and raise the federal funds rate target.',
+      'Sell government bonds on the open market.',
       'Raise government spending and cut taxes.',
     ],
     correctAnswer: 2,
     explanation:
-      'Contractionary monetary policy — open-market sales and raising the federal funds rate target — reduces the money supply and helps bring inflation down. The last option is fiscal, not monetary.',
+      'Selling bonds drains reserves from banks, reducing the money supply and raising interest rates, which lowers aggregate demand and inflation. Raising spending and cutting taxes is fiscal policy, and it would push inflation higher.',
   },
   {
     type: 'mcq',
     topic: 'unit-5-long-run-stabilization',
-    question:
-      'Which of the following represents a "lag" that makes counter-cyclical fiscal policy difficult in practice?',
+    question: 'Which of the following is a lag that makes discretionary fiscal policy difficult to time correctly?',
     options: [
-      'The recognition lag, the legislative/decision lag, and the implementation lag.',
-      'The monetary multiplier lag.',
-      'The trade-balance lag.',
-      'The Phillips curve lag.',
+      'The time Congress needs to debate and pass a spending or tax bill.',
+      'The time the Federal Reserve needs to vote on a change in its policy rate.',
+      'The time banks need to adjust lending after a reserve requirement change.',
+      'The time households need to pay down loans after interest rates rise.',
     ],
     correctAnswer: 0,
     explanation:
-      'Standard fiscal-policy lags include recognition, decision (legislative), and implementation — all of which can make fiscal stimulus mistimed by the time it takes effect.',
+      'Discretionary fiscal policy faces recognition, decision (legislative), and implementation lags, so a stimulus may take effect after the economy has already recovered. The other delays belong to monetary policy or private borrowing, and the Fed can change its policy rate at any meeting without new legislation.',
   },
   {
     type: 'mcq',
     topic: 'unit-5-long-run-stabilization',
-    question: 'In the long run, sustained economic growth in real GDP per capita is most directly tied to:',
+    question: 'In the long run, sustained growth in real GDP per capita depends most directly on:',
     options: [
-      'Frequent expansionary monetary policy.',
-      'Productivity growth driven by capital accumulation, technology, and human capital.',
-      'Larger and more frequent budget deficits.',
-      'Falling labor-force participation.',
+      'Frequent rounds of expansionary monetary policy by the central bank.',
+      'Rising productivity from new machinery and better technology.',
+      'Larger and more frequent federal budget deficits.',
+      'A falling labor-force participation rate among adults.',
     ],
     correctAnswer: 1,
     explanation:
-      'Long-run growth in living standards is driven by productivity growth — itself driven by physical capital, human capital, and technology.',
+      'Living standards rise over time when each worker can produce more, which depends on physical capital, human capital, and technology. Repeated monetary expansion raises the price level in the long run but does not raise potential output.',
   },
   {
     type: 'mcq',
     topic: 'unit-5-long-run-stabilization',
-    question:
-      'Which of the following best describes the "zero lower bound" problem in monetary policy?',
+    stimulus:
+      'An economy begins in long-run equilibrium with 5% unemployment and 2% inflation. The central bank then expands the money supply repeatedly, and expected inflation eventually adjusts to 4%.',
+    question: 'In the new long-run equilibrium, the economy will most likely have:',
     options: [
-      'Nominal interest rates near zero leave the central bank with limited room to cut rates further to stimulate the economy.',
-      'Real interest rates can never fall below zero.',
-      'Banks are required to hold zero excess reserves at the central bank.',
-      'The reserve ratio cannot be set below zero.',
+      '5% unemployment and 4% inflation.',
+      '3% unemployment and 4% inflation.',
+      '5% unemployment and 2% inflation.',
+      '3% unemployment and 2% inflation.',
     ],
     correctAnswer: 0,
     explanation:
-      'When nominal short-term rates approach zero, conventional rate cuts lose effectiveness — pushing central banks toward unconventional tools like quantitative easing or forward guidance.',
+      'Once expected inflation catches up to actual inflation, unemployment returns to its natural rate of 5% on the vertical long-run Phillips curve, but inflation stays at the new, higher 4%. Lower unemployment is only a short-run effect that lasts while inflation is unexpected.',
   },
 
   /* ============================ UNIT 6 — OPEN ECONOMY (7) ============================ */
   {
     type: 'mcq',
     topic: 'unit-6-open-economy',
-    question:
-      'A U.S. importer of cars from Japan must pay yen for the cars. If the dollar appreciates against the yen, the U.S. importer:',
+    question: 'A U.S. importer of cars from Japan must pay for them in yen. If the dollar appreciates against the yen, the U.S. importer:',
     options: [
-      'Pays more dollars for each yen of price.',
-      'Pays fewer dollars for each yen of price.',
-      'Pays the same number of dollars per yen.',
-      'No longer needs to convert dollars into yen.',
+      'Pays more dollars for each yen of the car\'s price.',
+      'Pays fewer dollars for each yen of the car\'s price.',
+      'Pays the same number of dollars for each yen.',
+      'Pays more dollars in total, since a strong dollar raises import prices.',
     ],
     correctAnswer: 1,
     explanation:
-      'A stronger dollar buys more yen per dollar — equivalently, fewer dollars per yen. U.S. imports become cheaper.',
+      'An appreciating dollar buys more yen, which means each yen costs fewer dollars, so Japanese cars become cheaper for U.S. buyers. A stronger dollar lowers, rather than raises, the dollar price of imports.',
   },
   {
     type: 'mcq',
     topic: 'unit-6-open-economy',
-    question:
-      'Which of the following would most likely cause the U.S. dollar to APPRECIATE against the euro?',
+    question: 'Which of the following would most likely cause the U.S. dollar to appreciate against the euro?',
     options: [
       'A decrease in U.S. real interest rates relative to euro-area rates.',
       'An increase in U.S. real interest rates relative to euro-area rates.',
       'A large increase in U.S. imports from the euro area.',
-      'A widely expected drop in U.S. exports to the euro area.',
+      'A sharp increase in U.S. inflation relative to the euro area.',
     ],
     correctAnswer: 1,
     explanation:
-      'Higher U.S. real interest rates attract foreign capital into U.S. assets, increasing demand for dollars in the foreign exchange market and appreciating the dollar.',
+      'Higher relative real interest rates attract financial capital into U.S. assets, increasing the demand for dollars in the foreign exchange market and appreciating the dollar. More U.S. imports increase the supply of dollars, which would depreciate it.',
   },
   {
     type: 'mcq',
     topic: 'unit-6-open-economy',
     stimulus:
-      'A country reports the following balance-of-payments figures (in $ billions):\n  Goods exports: 500     Goods imports: 700\n  Services exports: 200  Services imports: 100\n  Net investment income: −50',
-    question: 'The current-account balance equals approximately:',
+      'A country reports the following balance-of-payments figures, in billions of dollars:\n  Goods exports: 500     Goods imports: 700\n  Services exports: 200  Services imports: 100\n  Net investment income from abroad: −50',
+    question: 'The current account balance is approximately:',
     options: [
-      '−$300 billion',
-      '−$150 billion',
-      '+$100 billion',
-      '+$200 billion',
+      '−\\$300 billion',
+      '−\\$150 billion',
+      '+\\$100 billion',
+      '+\\$200 billion',
     ],
     correctAnswer: 1,
     explanation:
-      'Current account ≈ (X − M) goods + (X − M) services + net income from abroad = (500 − 700) + (200 − 100) + (−50) = −200 + 100 − 50 = −$150B.',
+      'The current account includes the balance on goods and services plus net investment income: (500 − 700) + (200 − 100) + (−50) = −150, or −\\$150 billion. The −\\$300 billion answer leaves out the services surplus.',
   },
   {
     type: 'mcq',
     topic: 'unit-6-open-economy',
-    question:
-      'In a flexible exchange rate system with no central-bank intervention, a current-account deficit of $150 billion is, by accounting identity, matched by:',
+    question: 'Under a flexible exchange rate with no central-bank intervention, a current account deficit of \\$150 billion is, by the balance-of-payments identity, matched by:',
     options: [
-      'A capital and financial account surplus of approximately $150 billion.',
-      'A capital and financial account deficit of approximately $150 billion.',
-      'An equal amount of central-bank reserves sold.',
-      'A government budget surplus of approximately $150 billion.',
+      'A capital and financial account surplus of about \\$150 billion.',
+      'A capital and financial account deficit of about \\$150 billion.',
+      'Sales of official reserves by the central bank of about \\$150 billion.',
+      'A government budget surplus of about \\$150 billion.',
     ],
     correctAnswer: 0,
     explanation:
-      'Balance-of-payments identity: current account + capital/financial account ≈ 0 (with statistical discrepancy). A CA deficit must be financed by net foreign capital inflows.',
+      'The current account and the capital and financial account sum to zero, so a \\$150 billion current account deficit is financed by a \\$150 billion net inflow of foreign financial capital, a financial account surplus. Without intervention, official reserve transactions play no role.',
   },
   {
     type: 'mcq',
     topic: 'unit-6-open-economy',
-    question:
-      'If the United States imposes a new tariff on imported steel, which of the following is the most likely SHORT-RUN effect?',
+    question: 'If the United States imposes a new tariff on imported steel, which of the following is the most likely short-run effect in the U.S. steel market?',
     options: [
-      'Increased domestic production of steel and reduced steel imports.',
-      'Decreased domestic steel prices and lower domestic production.',
-      'No effect on either domestic or imported steel prices.',
-      'A larger U.S. current-account deficit.',
+      'Higher domestic steel output and fewer steel imports.',
+      'Lower domestic steel prices and lower domestic steel output.',
+      'No change in the price of either domestic or imported steel.',
+      'More steel imports as foreign producers cut prices to compete.',
     ],
     correctAnswer: 0,
     explanation:
-      'A tariff raises the domestic price of imported steel, shifting demand toward domestic producers — increasing domestic production and reducing imports.',
+      'The tariff raises the price of imported steel in the U.S. market, so buyers shift toward domestic steel and domestic producers expand output while imports fall. The domestic steel price rises rather than falls, which is why steel-using industries tend to oppose such tariffs.',
   },
   {
     type: 'mcq',
     topic: 'unit-6-open-economy',
-    question:
-      'When the U.S. dollar depreciates, U.S. net exports are most likely to:',
+    question: 'When the U.S. dollar depreciates, U.S. net exports are most likely to:',
     options: [
       'Decrease, because U.S. exports become more expensive abroad.',
-      'Decrease, because U.S. imports become cheaper.',
-      'Increase, because U.S. exports become cheaper abroad and imports more expensive.',
-      'Remain unchanged because exchange rates do not affect trade.',
+      'Decrease, because imports into the U.S. become cheaper.',
+      'Increase, because U.S. goods become cheaper to foreign buyers.',
+      'Stay the same, because higher export volumes are offset by lower export prices.',
     ],
     correctAnswer: 2,
     explanation:
-      'Dollar depreciation makes U.S. goods cheaper in foreign markets and makes foreign goods more expensive in the U.S., increasing X and decreasing M — raising net exports.',
+      'A weaker dollar lowers the foreign-currency price of U.S. goods and raises the dollar price of foreign goods, so exports rise and imports fall. Exports would become more expensive abroad only if the dollar appreciated.',
   },
   {
     type: 'mcq',
     topic: 'unit-6-open-economy',
-    question:
-      'Expansionary U.S. monetary policy will, through the foreign-exchange channel, most likely:',
+    question: 'Expansionary U.S. monetary policy will, through the foreign exchange market, most likely cause which of the following?',
     options: [
-      'Appreciate the dollar and reduce net exports.',
-      'Depreciate the dollar and increase net exports.',
-      'Have no effect on the dollar or trade.',
-      'Increase both U.S. exports and U.S. imports.',
+      'The dollar appreciates and net exports decrease.',
+      'The dollar depreciates and net exports increase.',
+      'The dollar appreciates and net exports increase.',
+      'The dollar depreciates and net exports decrease.',
     ],
     correctAnswer: 1,
     explanation:
-      'Expansionary monetary policy lowers U.S. real interest rates, reducing capital inflows and depreciating the dollar; cheaper dollar boosts net exports.',
+      'Lower U.S. interest rates make U.S. assets less attractive, reducing the demand for dollars, so the dollar depreciates. A cheaper dollar makes U.S. exports cheaper abroad and imports more expensive at home, so net exports rise.',
   },
 ]
