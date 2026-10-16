@@ -36,6 +36,7 @@ import ts from 'typescript'
 import type { ExamItem, FullLengthExamConfig, MCQItem, SAQItem } from '../src/components/FullLengthPracticeExam'
 import { AP_PRACTICE_EXAMS, apPracticeForm, apPracticeForms } from '../src/lib/ap-practice-exams'
 import { AP_EXAM_TOOLS, buildStages } from '../src/lib/ap-practice-runner'
+import { AP_DIAG_V2_BANKS } from '../src/lib/ap-diagnostic-v2/banks'
 
 interface UnitSpec { slug: string; lo: number; hi: number }
 interface FrqSpec { points: number[]; note?: string }
@@ -69,7 +70,7 @@ const SPECS: Record<string, CourseSpec> = {
       { slug: 'unit-9-applications-thermodynamics', lo: 0.07, hi: 0.09 },
     ],
     stimulusMin: 0.3,
-    overlap: ['src/data/exit-quizzes/ap-chemistry.ts', 'src/data/ap-chemistry-diagnostic.ts', 'src/data/ap-chem-frq/questions.ts', 'src/data/ap-diagnostic-v2'],
+    overlap: ['src/data/exit-quizzes/ap-chemistry.ts', 'src/data/ap-chemistry-diagnostic.ts', 'src/data/ap-chem-frq/questions.ts'],
     offExam: [/molality/i, /colligative/i, /clausius/i, /phase diagram/i, /root[- ]mean[- ]square|\brms\b/i, /sp\^?3d/i, /lewis acid|lewis base/i, /bomb calorimet/i, /nernst/i, /fuel cell/i, /RT\s*\\?ln\s*Q/i, /\\Delta S_\{?surr/i, /Arrhenius equation/i],
   },
   'ap-bio': {
@@ -87,7 +88,7 @@ const SPECS: Record<string, CourseSpec> = {
       { slug: 'unit-8-ecology', lo: 0.1, hi: 0.15 },
     ],
     stimulusMin: 0.45,
-    overlap: ['src/data/exit-quizzes/ap-biology.ts', 'src/data/ap-biology-diagnostic.ts', 'src/data/ap-bio-frq/questions.ts', 'src/data/ap-diagnostic-v2'],
+    overlap: ['src/data/exit-quizzes/ap-biology.ts', 'src/data/ap-biology-diagnostic.ts', 'src/data/ap-bio-frq/questions.ts'],
     offExam: [/\bK_?m\b/, /\bV_?max\b/i, /\bC4\b|\bCAM plant/i, /r-selected|K-selected/i, /survivorship curve/i, /ecological succession|primary succession|secondary succession/i, /Cori cycle/i, /coefficient of coincidence/i, /\bPFK\b|aldolase/i],
   },
   'ap-physics1': {
@@ -106,7 +107,7 @@ const SPECS: Record<string, CourseSpec> = {
       { slug: 'unit-8-fluids', lo: 0.1, hi: 0.15 },
     ],
     stimulusMin: 0.4,
-    overlap: ['src/data/exit-quizzes/ap-physics-1.ts', 'src/data/ap-physics-1-diagnostic.ts', 'src/data/ap-physics-1-frq/questions.ts', 'src/data/ap-diagnostic-v2'],
+    overlap: ['src/data/exit-quizzes/ap-physics-1.ts', 'src/data/ap-physics-1-diagnostic.ts', 'src/data/ap-physics-1-frq/questions.ts'],
     offExam: [/electric (field|charge|circuit)|coulomb/i, /thermodynamic|entropy/i, /\bk_?\{?eff\}?\b/i, /moment of inertia tensor/i],
   },
   'ap-calcab': {
@@ -124,7 +125,7 @@ const SPECS: Record<string, CourseSpec> = {
       { slug: 'unit-8-applications-integration', lo: 0.1, hi: 0.15 },
     ],
     stimulusMin: 0.2,
-    overlap: ['src/data/exit-quizzes/ap-calculus-ab.ts', 'src/data/ap-calculus-ab-diagnostic.ts', 'src/data/ap-calc-ab-frq/questions.ts', 'src/data/ap-diagnostic-v2'],
+    overlap: ['src/data/exit-quizzes/ap-calculus-ab.ts', 'src/data/ap-calculus-ab-diagnostic.ts', 'src/data/ap-calc-ab-frq/questions.ts'],
     offExam: [/integration by parts/i, /shell method|cylindrical shell/i, /newton'?s method/i, /euler'?s method/i, /logistic/i, /partial fraction/i, /improper integral/i, /\bseries\b|taylor|maclaurin/i, /polar|parametric/i],
   },
 }
@@ -356,6 +357,12 @@ async function main() {
     }
   }
   if (emptyFiles.length) console.log(`  no literal items in ${emptyFiles.join(', ')} (it draws from a pool already compared)`)
+  // Diagnostic v2 bank (items use stem/content, which textsInFile does not read): load it directly.
+  const v2 = (AP_DIAG_V2_BANKS as Record<string, (typeof AP_DIAG_V2_BANKS)[keyof typeof AP_DIAG_V2_BANKS] | undefined>)[AP_PRACTICE_EXAMS[examKey].courseSlug]
+  if (v2) {
+    const stim = new Map(v2.stimuli.map((x) => [x.id, x.content]))
+    for (const it of v2.items) corpus.push({ src: `ap-diagnostic-v2/${v2.course}`, text: `${it.stimulusId ? stim.get(it.stimulusId) ?? '' : ''} ${it.stem}` })
+  }
   const corpusExact = new Map<string, string>()
   const corpusGrams = corpus.map((c) => ({ ...c, grams: trigrams(c.text), key: norm(c.text) }))
   for (const c of corpusGrams) if (c.key.length > 20) corpusExact.set(c.key, c.src)
