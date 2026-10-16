@@ -39,7 +39,7 @@ The three essays are always the same types:
 |---|---|---|
 | **Q1 Poetry Analysis** | Analyze how a poet uses literary elements and techniques to convey something about the poem's subject | A poem printed on the exam |
 | **Q2 Prose Fiction Analysis** | Analyze how an author uses literary elements and techniques to convey something about a character, relationship or situation | A prose fiction passage printed on the exam |
-| **Q3 Literary Argument** | Analyze how a given element or idea contributes to an interpretation of a work you choose | A novel or play you have studied |
+| **Q3 Literary Argument** | Analyze how a given element or idea contributes to an interpretation of a work you choose | A work of fiction you have studied |
 
 A sensible pace is about 40 minutes per essay. Each prompt ends with the same instructions: respond with a thesis that presents a defensible interpretation, select and use evidence to support your line of reasoning, explain how the evidence supports your line of reasoning, and use appropriate grammar and punctuation.
 `

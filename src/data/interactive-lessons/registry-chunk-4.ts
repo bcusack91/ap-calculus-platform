@@ -612,7 +612,7 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Reading a Novel Opening', loader: () => import('./englit-longer-fiction-part4').then(m => m.englitLongerFictionPart4Data) },
       { title: 'Symbol, Motif and Theme Across a Novel', loader: () => import('./englit-longer-fiction-part5').then(m => m.englitLongerFictionPart5Data) },
       { title: 'Q3 With a Novel: Preparing and Using a Long Work', loader: () => import('./englit-longer-fiction-part6').then(m => m.englitLongerFictionPart6Data) },
-      { title: 'AP Review', loader: () => import('./englit-longer-fiction-part7').then(m => m.englitLongerFictionPart7Data) }
+      { title: 'Unit 3 Synthesis: Reading a Passage From Jane Eyre', loader: () => import('./englit-longer-fiction-part7').then(m => m.englitLongerFictionPart7Data) }
     ],
   },
   'englit-longer-fiction-2': {
@@ -636,7 +636,7 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Tragedy: Hamartia, Peripeteia, Anagnorisis and Catharsis', loader: () => import('./englit-dramatic-structure-part4').then(m => m.englitDramaticStructurePart4Data) },
       { title: 'Dramatic Irony, Comic Structure and Staging', loader: () => import('./englit-dramatic-structure-part5').then(m => m.englitDramaticStructurePart5Data) },
       { title: 'Drama on the AP Exam', loader: () => import('./englit-dramatic-structure-part6').then(m => m.englitDramaticStructurePart6Data) },
-      { title: 'AP Review', loader: () => import('./englit-dramatic-structure-part7').then(m => m.englitDramaticStructurePart7Data) }
+      { title: 'Dramatic Structure Synthesis: The Prayer Scene in Hamlet', loader: () => import('./englit-dramatic-structure-part7').then(m => m.englitDramaticStructurePart7Data) }
     ],
   },
   'englit-character-setting': {
@@ -740,11 +740,11 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'Core Concepts', loader: () => import('./englit-social-commentary-drama-part1').then(m => m.englitSocialCommentaryDramaPart1Data) },
       { title: 'How a Play Argues: The Problem Play and Social Realism', loader: () => import('./englit-social-commentary-drama-part2').then(m => m.englitSocialCommentaryDramaPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englit-social-commentary-drama-part3').then(m => m.englitSocialCommentaryDramaPart3Data) },
+      { title: 'A Doll\'s House: Power, Money and the Public/Private Divide', loader: () => import('./englit-social-commentary-drama-part3').then(m => m.englitSocialCommentaryDramaPart3Data) },
       { title: 'Satire on Stage: Target, Norm and Method', loader: () => import('./englit-social-commentary-drama-part4').then(m => m.englitSocialCommentaryDramaPart4Data) },
       { title: 'Indirect Commentary: Subtext, Chekhov and Common Misconceptions', loader: () => import('./englit-social-commentary-drama-part5').then(m => m.englitSocialCommentaryDramaPart5Data) },
       { title: 'Social Commentary on the Exam', loader: () => import('./englit-social-commentary-drama-part6').then(m => m.englitSocialCommentaryDramaPart6Data) },
-      { title: 'AP Review', loader: () => import('./englit-social-commentary-drama-part7').then(m => m.englitSocialCommentaryDramaPart7Data) }
+      { title: 'Social Commentary Synthesis: An Enemy of the People', loader: () => import('./englit-social-commentary-drama-part7').then(m => m.englitSocialCommentaryDramaPart7Data) }
     ],
   },
   'englang-intro-rhetoric': {
@@ -861,7 +861,7 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Core Concepts', loader: () => import('./englang-diction-syntax-part1').then(m => m.englangDictionSyntaxPart1Data) },
       { title: 'Diction in Depth: Roosevelt\'s Revisions to the War Message, December 1941', loader: () => import('./englang-diction-syntax-part2').then(m => m.englangDictionSyntaxPart2Data) },
       { title: 'Syntax in Depth: Clauses, Balance, and Johnson\'s Letter to Lord Chesterfield, 1755', loader: () => import('./englang-diction-syntax-part3').then(m => m.englangDictionSyntaxPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englang-diction-syntax-part4').then(m => m.englangDictionSyntaxPart4Data) },
+      { title: 'Punctuation, Repetition, and Sentence Shape: Thoreau\'s Walden, 1854', loader: () => import('./englang-diction-syntax-part4').then(m => m.englangDictionSyntaxPart4Data) },
       { title: 'Diction and Syntax Together: Older Meanings, Combined Effects, and Common Misreadings', loader: () => import('./englang-diction-syntax-part5').then(m => m.englangDictionSyntaxPart5Data) },
       { title: 'Exam Practice: Wilson\'s War Message, April 2, 1917', loader: () => import('./englang-diction-syntax-part6').then(m => m.englangDictionSyntaxPart6Data) },
       { title: 'Review: The Toolkit, the Method, and Mixed Practice', loader: () => import('./englang-diction-syntax-part7').then(m => m.englangDictionSyntaxPart7Data) }
@@ -907,8 +907,8 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englang-ethos-pathos-logos-part1').then(m => m.englangEthosPathosLogosPart1Data) },
-      { title: 'Key Processes', loader: () => import('./englang-ethos-pathos-logos-part2').then(m => m.englangEthosPathosLogosPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englang-ethos-pathos-logos-part3').then(m => m.englangEthosPathosLogosPart3Data) },
+      { title: 'Ethos in Depth: Ida B. Wells\'s Preface to Southern Horrors, 1892', loader: () => import('./englang-ethos-pathos-logos-part2').then(m => m.englangEthosPathosLogosPart2Data) },
+      { title: 'Pathos in Depth: Reagan\'s Address on the Challenger Disaster, 1986', loader: () => import('./englang-ethos-pathos-logos-part3').then(m => m.englangEthosPathosLogosPart3Data) },
       { title: 'Logos in Depth: Burke\'s Speech on Conciliation with America, 1775', loader: () => import('./englang-ethos-pathos-logos-part4').then(m => m.englangEthosPathosLogosPart4Data) },
       { title: 'Appeals in Combination, Kairos, and Misconceptions: Garrison\'s "To the Public," 1831', loader: () => import('./englang-ethos-pathos-logos-part5').then(m => m.englangEthosPathosLogosPart5Data) },
       { title: 'Exam Practice: John Brown\'s Speech to the Court, 1859', loader: () => import('./englang-ethos-pathos-logos-part6').then(m => m.englangEthosPathosLogosPart6Data) },
@@ -921,8 +921,8 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Core Concepts', loader: () => import('./englang-logical-fallacies-part1').then(m => m.englangLogicalFallaciesPart1Data) },
       { title: 'Three Ways Reasoning Breaks, and the Legitimate Moves Fallacies Imitate', loader: () => import('./englang-logical-fallacies-part2').then(m => m.englangLogicalFallaciesPart2Data) },
       { title: 'Reasoning Exposed in Real Texts: Lincoln\'s Fragment on Slavery and Plato\'s Euthyphro', loader: () => import('./englang-logical-fallacies-part3').then(m => m.englangLogicalFallaciesPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englang-logical-fallacies-part4').then(m => m.englangLogicalFallaciesPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englang-logical-fallacies-part5').then(m => m.englangLogicalFallaciesPart5Data) },
+      { title: 'Evaluating a Line of Reasoning: Assumptions, Objections, and Mill\'s The Subjection of Women (1869)', loader: () => import('./englang-logical-fallacies-part4').then(m => m.englangLogicalFallaciesPart4Data) },
+      { title: 'Nuance and Misconceptions: Over-Diagnosing, "Not Shown" vs. "Shown False," and Schopenhauer\'s Art of Controversy', loader: () => import('./englang-logical-fallacies-part5').then(m => m.englangLogicalFallaciesPart5Data) },
       { title: 'Exam Practice: Franklin\'s 1790 Satire, Revising Faulty Sentences, and a Sound Argument Essay', loader: () => import('./englang-logical-fallacies-part6').then(m => m.englangLogicalFallaciesPart6Data) },
       { title: 'Synthesis Review: From Spotting Fallacies to Evaluating Reasoning', loader: () => import('./englang-logical-fallacies-part7').then(m => m.englangLogicalFallaciesPart7Data) }
     ],

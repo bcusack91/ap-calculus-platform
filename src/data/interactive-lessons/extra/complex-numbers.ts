@@ -3,8 +3,8 @@ import type { LessonData } from '../registry'
 /**
  * Hand-authored interactive lesson — Complex Numbers and Operations (AP Precalculus).
  * Registry key / DB Topic.slug: 'complex-numbers'.
- * 7 parts, gold-standard structure: the imaginary unit & powers of i →
- * add/subtract/multiply → conjugates & division → modulus & the complex plane →
+ * 7 parts, gold-standard structure: the imaginary unit & square roots of negatives →
+ * add/subtract/multiply → conjugates & conjugate zeros → modulus & the complex plane →
  * polar (trig) form → quadratics with complex roots & real-world framing →
  * mixed mastery + exit quiz.
  * LaTeX uses doubled backslashes (these are JS template-literal strings).
@@ -20,7 +20,7 @@ export const parts: LessonData[] = [
         type: 'text' as const,
         content: `# 🌀 Complex Numbers and Operations
 
-**Part 1 of 7 — The Imaginary Unit & Powers of $i$**
+**Part 1 of 7 — The Imaginary Unit & Square Roots of Negatives**
 
 ---
 
@@ -30,7 +30,7 @@ export const parts: LessonData[] = [
 |---------|
 | Why We Need a New Number |
 | Defining $i$ and Simplifying Square Roots |
-| The Cycle of Powers of $i$ |
+| Small Powers of $i$ and Complex Zeros |
 
 > 🔑 **Key Concept:** There is no *real* number whose square is negative. Mathematicians fixed this by inventing one — the **imaginary unit** $i$, defined so that $i^2 = -1$. That single idea unlocks the **complex numbers**, and once you master it, equations that "had no solution" suddenly do.`,
       },
@@ -90,43 +90,49 @@ $$\\sqrt{-a} = i\\sqrt{a} \\quad (a > 0)$$
       {
         id: 'cn1-powers',
         type: 'text' as const,
-        content: `## The Cycle of Powers of $i$
+        content: `## Small Powers of $i$ and Complex Zeros
 
-Watch what happens as we raise $i$ to higher powers:
+Because $i^2 = -1$, the next powers follow by multiplying by $i$ once more:
 
-$$i^1 = i, \\quad i^2 = -1, \\quad i^3 = i^2\\cdot i = -i, \\quad i^4 = i^2\\cdot i^2 = (-1)(-1) = 1$$
+$$i^2 = -1, \\qquad i^3 = i^2\\cdot i = -i, \\qquad i^4 = i^2\\cdot i^2 = (-1)(-1) = 1$$
 
-Then it **repeats**, because $i^5 = i^4\\cdot i = 1\\cdot i = i$:
+These small powers are all you need to test whether a complex number is a zero of a polynomial.
 
-| Power | $i^1$ | $i^2$ | $i^3$ | $i^4$ | $i^5$ | $i^6$ | $i^7$ | $i^8$ |
-|------|------|------|------|------|------|------|------|------|
-| Value | $i$ | $-1$ | $-i$ | $1$ | $i$ | $-1$ | $-i$ | $1$ |
+### Example 1: Is $3i$ a zero of $p(x) = x^2 + 9$?
 
-> 🔑 **The Period-4 Trick:** $i^n$ depends only on the **remainder when $n$ is divided by 4**.
->
-> | Remainder | $0$ | $1$ | $2$ | $3$ |
-> |-----------|-----|-----|-----|-----|
-> | $i^n$ | $1$ | $i$ | $-1$ | $-i$ |
+$$p(3i) = (3i)^2 + 9 = 9i^2 + 9 = -9 + 9 = 0$$
 
-**Example:** $i^{27}$. Divide $27 \\div 4 = 6$ remainder $3$. Remainder $3 \\Rightarrow i^{27} = -i$.`,
+Yes. Its conjugate $-3i$ is a zero too.
+
+### Example 2: Is $i$ a zero of $q(x) = x^3 + x$?
+
+$$q(i) = i^3 + i = -i + i = 0$$
+
+Yes. So $q$ has the zeros $0$, $i$ and $-i$: three complex zeros for a degree-3 polynomial.
+
+### Square Roots of Negatives Inside a Formula
+
+The quadratic formula often produces expressions such as $\\dfrac{6 \\pm \\sqrt{-16}}{2}$. Convert the root to $i$ form first, then divide **both** terms:
+
+$$\\frac{6 \\pm \\sqrt{-16}}{2} = \\frac{6 \\pm 4i}{2} = 3 \\pm 2i$$
+
+> ⚠️ **Square the whole term.** $(3i)^2 = 3^2\\cdot i^2 = 9(-1) = -9$, not $9i$ and not $3i^2$.`,
       },
       {
         id: 'cn1-powers-drill',
         type: 'input-boxes' as const,
-        content: `**Powers of $i$** 🧮
+        content: `**Powers and Roots** 🧮
 
-Use the remainder-on-division-by-4 trick. Enter each value as one of: \`1\`, \`-1\`, \`i\`, or \`-i\`.
-
-**1)** $i^{16} = \\,?$
-**2)** $i^{30} = \\,?$
-**3)** $i^{45} = \\,?$`,
+**1)** $(3i)^2 = \\,?$ (enter an integer)
+**2)** Write $\\dfrac{4 + \\sqrt{-36}}{2}$ as $a + bi$. Enter $b$.
+**3)** For $q(x) = x^3 + x$, what is $q(2i)$? (enter in the form \`-5i\`)`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['1', '-1', 'i'],
-          hint1: '$16 \\div 4 = 4$ remainder $0$. Remainder $0 \\Rightarrow i^{16} = 1$.',
-          hint2: '$30 \\div 4 = 7$ remainder $2$. Remainder $2 \\Rightarrow i^{30} = -1$.',
-          hint3: '$45 \\div 4 = 11$ remainder $1$. Remainder $1 \\Rightarrow i^{45} = i$.',
-          explanation: '1) rem $0 \\Rightarrow 1$.  2) rem $2 \\Rightarrow -1$.  3) rem $1 \\Rightarrow i$. Only the remainder mod 4 matters.',
+          correctAnswers: ['-9', '3', '-6i'],
+          hint1: '$(3i)^2 = 9i^2$, and $i^2 = -1$.',
+          hint2: '$\\sqrt{-36} = 6i$, so $\\frac{4 + 6i}{2} = 2 + 3i$.',
+          hint3: '$(2i)^3 = 8i^3 = -8i$. Add $2i$.',
+          explanation: '1) $9i^2 = -9$.  2) $\\frac{4 + 6i}{2} = 2 + 3i$, so $b = 3$.  3) $q(2i) = (2i)^3 + 2i = -8i + 2i = -6i$, so $2i$ is not a zero of $q$.',
         },
       },
       {
@@ -137,13 +143,13 @@ Use the remainder-on-division-by-4 trick. Enter each value as one of: \`1\`, \`-
           dropdowns: [
             { label: '$\\sqrt{-64}$ simplifies to:', options: ['$8i$', '$-8$', '$8$', '$64i$'] },
             { label: '$i^3$ equals:', options: ['$-i$', '$i$', '$-1$', '$1$'] },
-            { label: '$i^{100}$ equals:', options: ['$1$', '$i$', '$-1$', '$-i$'] },
+            { label: '$(2i)^3$ equals:', options: ['$-8i$', '$8i$', '$-8$', '$6i$'] },
           ],
-          correctAnswers: ['$8i$', '$-i$', '$1$'],
+          correctAnswers: ['$8i$', '$-i$', '$-8i$'],
           hint1: '$\\sqrt{-64} = \\sqrt{64}\\cdot\\sqrt{-1} = 8i$.',
           hint2: '$i^3 = i^2\\cdot i = (-1)i = -i$.',
-          hint3: '$100 \\div 4 = 25$ remainder $0$, and remainder $0 \\Rightarrow i^{100} = 1$.',
-          explanation: '$\\sqrt{-64} = 8i$. $i^3 = -i$. $i^{100}$: rem $0 \\Rightarrow 1$.',
+          hint3: 'Cube both factors: $(2i)^3 = 2^3\\cdot i^3 = 8(-i)$.',
+          explanation: '$\\sqrt{-64} = 8i$. $i^3 = -i$. $(2i)^3 = 8i^3 = -8i$.',
         },
       },
       {
@@ -151,7 +157,7 @@ Use the remainder-on-division-by-4 trick. Enter each value as one of: \`1\`, \`-
         type: 'text' as const,
         content: `## What You Can Now Do
 
-You can simplify the square root of any negative number and evaluate any power of $i$. These are the two building blocks of complex-number arithmetic.
+You can simplify the square root of any negative number, use $i^2 = -1$ and $i^3 = -i$, and check whether a complex number is a zero of a polynomial. These are the building blocks for complex zeros.
 
 In **Part 2**, we combine real and imaginary pieces into a single object — a **complex number** $a + bi$ — and learn to add, subtract, and multiply them.`,
       },
@@ -278,11 +284,11 @@ Write each product as $a + bi$. Enter $a$, then $b$.
         type: 'text' as const,
         content: `# 🌀 Complex Numbers and Operations
 
-**Part 3 of 7 — Conjugates & Division**
+**Part 3 of 7 — Conjugates & Conjugate Zeros**
 
 ---
 
-> 🔑 **The conjugate** of $a + bi$ is $a - bi$ — same real part, **flipped** sign on the imaginary part. Multiplying a complex number by its conjugate always produces a **real** number, and that is exactly the trick that lets us divide.`,
+> 🔑 **The conjugate** of $a + bi$ is $a - bi$ — same real part, **flipped** sign on the imaginary part. Multiplying a complex number by its conjugate always produces a **real** number. For a polynomial with real coefficients, non-real zeros come in conjugate pairs, and this product is what lets each pair combine into a quadratic factor with real coefficients.`,
       },
       {
         id: 'cn3-conjugate',
@@ -308,7 +314,7 @@ The middle terms cancel and $i^2 = -1$ turns the subtraction into addition. The 
 
 $$(3 + 4i)(3 - 4i) = 3^2 + 4^2 = 9 + 16 = 25$$
 
-> 💡 This is a difference of squares in disguise: $(a+bi)(a-bi) = a^2 + b^2$. Memorize it — it is the engine of complex division.`,
+> 💡 This is a difference of squares in disguise: $(a+bi)(a-bi) = a^2 + b^2$. Memorize it: it turns a conjugate pair of zeros into a quadratic factor with real coefficients.`,
       },
       {
         id: 'cn3-conj-mc',
@@ -332,62 +338,68 @@ $$(3 + 4i)(3 - 4i) = 3^2 + 4^2 = 9 + 16 = 25$$
         },
       },
       {
-        id: 'cn3-division',
+        id: 'cn3-pairs',
         type: 'text' as const,
-        content: `## Dividing Complex Numbers
+        content: `## Conjugate Pairs of Zeros
 
-A fraction with $i$ in the denominator isn't fully simplified. **Multiply the top and bottom by the conjugate of the denominator** — this makes the denominator real.
+If a polynomial has **real** coefficients and $a + bi$ (with $b \\neq 0$) is a zero, then its conjugate $a - bi$ is also a zero. Multiplying the two linear factors gives a quadratic with real coefficients:
 
-### Worked Example: $\\dfrac{4 + 7i}{2 + i}$
+$$\\big(x - (a + bi)\\big)\\big(x - (a - bi)\\big) = x^2 - 2a\\,x + (a^2 + b^2)$$
 
-Multiply by $\\dfrac{2 - i}{2 - i}$ (the conjugate of $2 + i$):
+| Piece | Value | Why |
+|-------|-------|-----|
+| Sum of the pair | $2a$ | the $bi$ terms cancel |
+| Product of the pair | $a^2 + b^2$ | the conjugate product |
+| Quadratic factor | $x^2 - (\\text{sum})\\,x + (\\text{product})$ | expand the two factors |
 
-$$\\frac{4 + 7i}{2 + i}\\cdot\\frac{2 - i}{2 - i} = \\frac{(4 + 7i)(2 - i)}{(2 + i)(2 - i)}$$
+### Worked Example 1: Zeros $2 + i$ and $2 - i$
 
-**Denominator:** $\\;(2)^2 + (1)^2 = 4 + 1 = 5$.
+Sum $= 4$ and product $= 2^2 + 1^2 = 5$, so the factor is $x^2 - 4x + 5$.
 
-**Numerator:** $\\;(4 + 7i)(2 - i) = 8 - 4i + 14i - 7i^2 = 8 + 10i + 7 = 15 + 10i$.
+### Worked Example 2: Finishing a Cubic
 
-$$= \\frac{15 + 10i}{5} = 3 + 2i$$
+$p(x) = x^3 - 5x^2 + 11x - 15$ has real coefficients and $1 + 2i$ as a zero. Then $1 - 2i$ is also a zero, with sum $2$ and product $1^2 + 2^2 = 5$, so $x^2 - 2x + 5$ is a factor. Long division gives
 
-> 🔑 **Standard form** is $a + bi$. To get there, split the fraction over the real denominator: $\\dfrac{15 + 10i}{5} = \\dfrac{15}{5} + \\dfrac{10}{5}i = 3 + 2i$.`,
+$$p(x) = (x^2 - 2x + 5)(x - 3)$$
+
+so the zeros are $1 + 2i$, $1 - 2i$ and $3$.
+
+> 🔑 A polynomial of degree $n$ has exactly $n$ complex zeros, counted with multiplicity. Non-real zeros pair off, so a cubic with real coefficients always has at least one real zero.`,
       },
       {
-        id: 'cn3-division-dropdown',
+        id: 'cn3-pairs-dropdown',
         type: 'dropdown-select' as const,
-        content: `**Walk Through the Division** 🔽
+        content: `**Build the Quadratic Factor** 🔽
 
-You are simplifying $\\dfrac{1 + 3i}{1 - i}$. Choose what happens at each stage.`,
+A polynomial with real coefficients has $3 - 2i$ as a zero. Choose what follows at each stage.`,
         exercise: {
           dropdowns: [
-            { label: 'Multiply top and bottom by:', options: ['$1 + i$', '$1 - i$', '$-1 + i$', '$1 + 3i$'] },
-            { label: 'New denominator $(1-i)(1+i)$:', options: ['$2$', '$0$', '$1 - i^2$', '$-2$'] },
-            { label: 'New numerator $(1+3i)(1+i)$:', options: ['$-2 + 4i$', '$1 + 4i$', '$4 + 4i$', '$1 + 3i^2$'] },
-            { label: 'Final answer in $a + bi$ form:', options: ['$-1 + 2i$', '$1 + 2i$', '$-2 + 4i$', '$-1 - 2i$'] },
+            { label: 'Another zero must be:', options: ['$3 + 2i$', '$-3 - 2i$', '$-3 + 2i$', '$2 - 3i$'] },
+            { label: 'Sum of the pair:', options: ['$6$', '$-6$', '$4i$', '$0$'] },
+            { label: 'Product of the pair $(3 - 2i)(3 + 2i)$:', options: ['$13$', '$5$', '$9 - 4i$', '$-13$'] },
+            { label: 'Quadratic factor:', options: ['$x^2 - 6x + 13$', '$x^2 + 6x + 13$', '$x^2 - 6x + 5$', '$x^2 - 6x - 13$'] },
           ],
-          correctAnswers: ['$1 + i$', '$2$', '$-2 + 4i$', '$-1 + 2i$'],
-          hint1: 'Use the conjugate of the denominator $1 - i$, which is $1 + i$.',
-          hint2: 'Denominator $= 1^2 + 1^2 = 2$. Numerator $= 1 + i + 3i + 3i^2 = 1 + 4i - 3 = -2 + 4i$.',
-          hint3: 'Divide each part by $2$: $\\dfrac{-2 + 4i}{2} = -1 + 2i$.',
-          explanation: 'Multiply by $\\frac{1+i}{1+i}$: denominator $1^2+1^2 = 2$, numerator $-2 + 4i$. Result $\\frac{-2+4i}{2} = -1 + 2i$.',
+          correctAnswers: ['$3 + 2i$', '$6$', '$13$', '$x^2 - 6x + 13$'],
+          hint1: 'The conjugate keeps the real part and flips the sign of the imaginary part.',
+          hint2: 'Sum $= (3 - 2i) + (3 + 2i) = 6$. Product $= 3^2 + 2^2 = 13$.',
+          hint3: 'The factor is $x^2 - (\\text{sum})x + (\\text{product})$.',
+          explanation: 'The conjugate $3 + 2i$ is also a zero. Their sum is $6$ and their product is $9 + 4 = 13$, so the quadratic factor is $x^2 - 6x + 13$.',
         },
       },
       {
-        id: 'cn3-division-drill',
+        id: 'cn3-pairs-drill',
         type: 'input-boxes' as const,
-        content: `**Divide & Simplify** 🧮
+        content: `**Conjugate Pairs** 🧮
 
-Write each quotient as $a + bi$. Enter $a$, then $b$.
-
-**1)** $\\dfrac{5}{i}$ → $a = \\,?,\\ b = \\,?$  *(hint: conjugate of $i$ is $-i$)*
-**2)** $\\dfrac{10 + 5i}{1 + 2i}$ → $a = \\,?,\\ b = \\,?$`,
+**1)** The zeros $-1 + 3i$ and $-1 - 3i$ give the factor $x^2 + bx + c$. Enter $b$, then $c$.
+**2)** A cubic with real coefficients has zeros $4i$ and $5$. What is the product of its two non-real zeros?`,
         exercise: {
-          boxes: 4,
-          correctAnswers: ['0', '-5', '4', '-3'],
-          hint1: '$\\frac{5}{i}\\cdot\\frac{-i}{-i} = \\frac{-5i}{-i^2} = \\frac{-5i}{1} = -5i$, so $a = 0,\\ b = -5$.',
-          hint2: 'Denominator $1^2 + 2^2 = 5$. Numerator $(10+5i)(1-2i) = 10 - 20i + 5i - 10i^2 = 20 - 15i$.',
-          hint3: '$\\frac{20 - 15i}{5} = 4 - 3i$, so $a = 4,\\ b = -3$.',
-          explanation: '1) $\\frac{5}{i} = -5i$, so $a=0, b=-5$.  2) $\\frac{10+5i}{1+2i} = \\frac{20-15i}{5} = 4 - 3i$, so $a=4, b=-3$.',
+          boxes: 3,
+          correctAnswers: ['2', '10', '16'],
+          hint1: 'Sum $= -2$, so the $x$ coefficient is $-(-2) = 2$.',
+          hint2: 'Product $= (-1)^2 + 3^2 = 10$.',
+          hint3: 'The partner of $4i$ is $-4i$, and $(4i)(-4i) = -16i^2$.',
+          explanation: '1) Sum $-2$ and product $10$ give $x^2 + 2x + 10$, so $b = 2$ and $c = 10$.  2) The non-real zeros are $4i$ and $-4i$, with product $-16i^2 = 16$.',
         },
       },
     ],
@@ -775,7 +787,7 @@ Solve $x^2 - 6x + 25 = 0$. The roots are $p \\pm qi$.
 
 ---
 
-You can now (1) handle powers of $i$, (2) add, subtract, multiply, and divide, (3) use conjugates and the modulus, (4) plot in the complex plane and convert to polar form, and (5) find complex roots of quadratics. Let's tie it all together.`,
+You can now (1) simplify square roots of negatives and use $i^2 = -1$, (2) add, subtract, and multiply, (3) use conjugates to pair complex zeros, (4) find the modulus, plot in the complex plane and convert to polar form, and (5) find complex roots of quadratics. Let's tie it all together.`,
       },
       {
         id: 'cn7-summary',
@@ -785,11 +797,11 @@ You can now (1) handle powers of $i$, (2) add, subtract, multiply, and divide, (
 | Goal | Key move |
 |------|----------|
 | Simplify $\\sqrt{-a}$ | $i\\sqrt{a}$ |
-| Evaluate $i^n$ | use remainder of $n \\div 4$: $\\{0\\to 1,\\,1\\to i,\\,2\\to -1,\\,3\\to -i\\}$ |
+| Small powers of $i$ | $i^2 = -1$, $i^3 = -i$, $i^4 = 1$ |
 | Add / subtract | combine real & imaginary parts separately |
 | Multiply | FOIL, then replace $i^2 = -1$ |
-| Divide | multiply top & bottom by the conjugate of the denominator |
 | Conjugate of $a+bi$ | $a - bi$;  product $= a^2 + b^2$ |
+| Conjugate zeros $a \\pm bi$ | factor $x^2 - 2ax + (a^2 + b^2)$ |
 | Modulus $\\lvert a+bi\\rvert$ | $\\sqrt{a^2 + b^2}$ |
 | Polar form | $r(\\cos\\theta + i\\sin\\theta)$, $r = \\lvert z\\rvert$ |
 | $\\Delta < 0$ in a quadratic | two complex conjugate roots |
@@ -802,16 +814,16 @@ You can now (1) handle powers of $i$, (2) add, subtract, multiply, and divide, (
         content: `**Mixed Practice** 🔽`,
         exercise: {
           dropdowns: [
-            { label: '$i^{50} =$', options: ['$-1$', '$1$', '$i$', '$-i$'] },
+            { label: '$(3i)^2 =$', options: ['$-9$', '$9$', '$9i$', '$-9i$'] },
             { label: '$(4 - i) + (1 + 6i) =$', options: ['$5 + 5i$', '$5 - 5i$', '$3 + 5i$', '$5 + 7i$'] },
             { label: 'Conjugate of $-8 - 3i$:', options: ['$-8 + 3i$', '$8 + 3i$', '$-8 - 3i$', '$8 - 3i$'] },
             { label: '$\\lvert -9 + 0i\\rvert =$', options: ['$9$', '$-9$', '$81$', '$3$'] },
           ],
-          correctAnswers: ['$-1$', '$5 + 5i$', '$-8 + 3i$', '$9$'],
-          hint1: '$50 \\div 4 = 12$ remainder $2$, and remainder $2 \\Rightarrow -1$.',
+          correctAnswers: ['$-9$', '$5 + 5i$', '$-8 + 3i$', '$9$'],
+          hint1: '$(3i)^2 = 9i^2$, and $i^2 = -1$.',
           hint2: 'Add reals $4 + 1 = 5$; add imaginaries $-1 + 6 = 5$.',
           hint3: 'Conjugate flips the imaginary sign; modulus $= \\sqrt{(-9)^2} = 9$.',
-          explanation: '$i^{50}$: rem $2 \\Rightarrow -1$. Sum $= 5 + 5i$. Conjugate of $-8-3i$ is $-8+3i$. $\\lvert -9\\rvert = 9$.',
+          explanation: '$(3i)^2 = 9i^2 = -9$. Sum $= 5 + 5i$. Conjugate of $-8-3i$ is $-8+3i$. $\\lvert -9\\rvert = 9$.',
         },
       },
       {
@@ -820,14 +832,14 @@ You can now (1) handle powers of $i$, (2) add, subtract, multiply, and divide, (
         content: `**Mixed Computation** 🧮
 
 **1)** Write $(2 + i)(3 + 4i)$ as $a + bi$: $a = \\,?,\\ b = \\,?$
-**2)** Write $\\dfrac{8 + i}{2 - i}$ as $a + bi$: $a = \\,?,\\ b = \\,?$`,
+**2)** The zeros $3 + i$ and $3 - i$ give the factor $x^2 + bx + c$: $b = \\,?,\\ c = \\,?$`,
         exercise: {
           boxes: 4,
-          correctAnswers: ['2', '11', '3', '2'],
+          correctAnswers: ['2', '11', '-6', '10'],
           hint1: '$(2+i)(3+4i) = 6 + 8i + 3i + 4i^2 = 6 + 11i - 4 = 2 + 11i$.',
-          hint2: 'For the division, multiply by $\\frac{2+i}{2+i}$. Denominator $= 2^2 + 1^2 = 5$.',
-          hint3: 'Numerator $(8+i)(2+i) = 16 + 8i + 2i + i^2 = 16 + 10i - 1 = 15 + 10i$, then $\\frac{15+10i}{5} = 3 + 2i$.',
-          explanation: '1) $(2+i)(3+4i) = 2 + 11i$, so $a=2, b=11$.  2) $\\frac{8+i}{2-i} = \\frac{15+10i}{5} = 3 + 2i$, so $a=3, b=2$.',
+          hint2: 'For the pair, the sum is $6$ and the product is $3^2 + 1^2$.',
+          hint3: 'The factor is $x^2 - (\\text{sum})x + (\\text{product}) = x^2 - 6x + 10$.',
+          explanation: '1) $(2+i)(3+4i) = 2 + 11i$, so $a=2, b=11$.  2) Sum $6$ and product $10$ give $x^2 - 6x + 10$, so $b = -6$ and $c = 10$.',
         },
       },
       {
@@ -839,16 +851,16 @@ Answer all three to finish the lesson.`,
         exercise: {
           questions: [
             {
-              question: 'Simplify $i^{23}$.',
-              options: ['$-i$', '$i$', '$-1$', '$1$'],
+              question: 'What is $p(i)$ for $p(x) = x^3 + 2x$?',
+              options: ['$i$', '$-i$', '$3i$', '$0$'],
               correctAnswer: 0,
-              explanation: '$23 \\div 4 = 5$ remainder $3$. Remainder $3 \\Rightarrow i^{23} = -i$.',
+              explanation: '$p(i) = i^3 + 2i = -i + 2i = i$, so $i$ is not a zero of $p$. Writing $i^3$ as $i$ gives $3i$, and $0$ would mean $i$ is a zero.',
             },
             {
-              question: 'Write $\\dfrac{6 + 2i}{1 - i}$ in standard form $a + bi$.',
-              options: ['$2 + 4i$', '$4 + 2i$', '$2 - 4i$', '$6 + 2i$'],
+              question: 'A polynomial with real coefficients has $2 - 5i$ as a zero. Which is a factor of the polynomial?',
+              options: ['$x^2 - 4x + 29$', '$x^2 + 4x + 29$', '$x^2 - 4x - 21$', '$x^2 - 4x + 21$'],
               correctAnswer: 0,
-              explanation: 'Multiply by $\\frac{1+i}{1+i}$: denominator $1^2 + 1^2 = 2$; numerator $(6+2i)(1+i) = 6 + 6i + 2i + 2i^2 = 4 + 8i$. So $\\frac{4 + 8i}{2} = 2 + 4i$.',
+              explanation: 'The conjugate $2 + 5i$ is also a zero. The pair has sum $4$ and product $2^2 + 5^2 = 29$, so the factor is $x^2 - 4x + 29$. Using $+4x$ flips the sign of the sum, and $\\pm 21$ comes from computing $4 - 25$ instead of $4 + 25$.',
             },
             {
               question: 'The solutions of $x^2 + 2x + 10 = 0$ are:',

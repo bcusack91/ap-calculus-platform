@@ -66,7 +66,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: "How a Play Argues: The Problem Play and Social Realism",
   },
 
-  // Part 3 — Patterns & Examples
+  // Part 3 — A Doll's House: Power, Money and the Public/Private Divide
   {
     id: 'englit-social-commentary-drama-ent-3a',
     question: "Read the exchange below.\n\n**Clerk.** The will is unsigned, madam. It has no force.\n**Widow.** He wrote every word of it himself. He meant it.\n**Clerk.** What he meant is not my concern. What he signed is.\n\nThe exchange chiefly stages a conflict between",
@@ -79,7 +79,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: "The clerk speaks for a public system that sees only signatures; the widow speaks for a private world where meaning lies in intention. Like the clash between law and motive in social drama, neither side is simply a villain.",
     partNumber: 3,
-    partTitle: "Patterns & Examples",
+    partTitle: "A Doll's House: Power, Money and the Public/Private Divide",
   },
   {
     id: 'englit-social-commentary-drama-ent-3b',
@@ -93,7 +93,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: "He grants the son's reasons in two short sentences and then turns to the dinner guests and a cover story, so reputation governs the family's response. The illness is the lie he orders, not a fear.",
     partNumber: 3,
-    partTitle: "Patterns & Examples",
+    partTitle: "A Doll's House: Power, Money and the Public/Private Divide",
   },
 
   // Part 4 — Satire on Stage: Target, Norm and Method
@@ -186,7 +186,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: "Social Commentary on the Exam",
   },
 
-  // Part 7 — AP Review
+  // Part 7 — Social Commentary Synthesis: An Enemy of the People
   {
     id: 'englit-social-commentary-drama-ent-7a',
     question: "Read the end of a scene below.\n\n**Chairwoman.** The committee has reviewed the complaint that the orphanage roof leaks. By a show of hands, the roof is declared sound. *(All hands rise. Rain drips onto the table.)*\n**Clerk.** Shall I fetch a bucket?\n**Chairwoman.** Minute that the roof is sound.\n\nThe scene chiefly satirizes",
@@ -199,7 +199,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: "A question of fact is settled by a show of hands while rain falls on the committee's own table, and the chairwoman answers the drip by recording the vote. The target is officials who prefer procedure to evidence.",
     partNumber: 7,
-    partTitle: "AP Review",
+    partTitle: "Social Commentary Synthesis: An Enemy of the People",
   },
   {
     id: 'englit-social-commentary-drama-ent-7b',
@@ -213,7 +213,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: "The clerk's sacrifice made his exposé possible, yet he lumps the whole town together and does not know her, so the play qualifies the hero who has been right about the council. The juxtaposition tests him rather than endorsing him.",
     partNumber: 7,
-    partTitle: "AP Review",
+    partTitle: "Social Commentary Synthesis: An Enemy of the People",
   },
 ]
 
@@ -225,10 +225,10 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
   return [
     { partNumber: 1, partTitle: "Core Concepts" },
     { partNumber: 2, partTitle: "How a Play Argues: The Problem Play and Social Realism" },
-    { partNumber: 3, partTitle: "Patterns & Examples" },
+    { partNumber: 3, partTitle: "A Doll's House: Power, Money and the Public/Private Divide" },
     { partNumber: 4, partTitle: "Satire on Stage: Target, Norm and Method" },
     { partNumber: 5, partTitle: "Indirect Commentary: Subtext, Chekhov and Common Misconceptions" },
     { partNumber: 6, partTitle: "Social Commentary on the Exam" },
-    { partNumber: 7, partTitle: "AP Review" },
+    { partNumber: 7, partTitle: "Social Commentary Synthesis: An Enemy of the People" },
   ]
 }

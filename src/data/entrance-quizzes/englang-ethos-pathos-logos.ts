@@ -36,7 +36,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: "Core Concepts",
   },
 
-  // Part 2 — Key Processes
+  // Part 2 — Ethos in Depth: Ida B. Wells's Preface to Southern Horrors, 1892
   {
     id: 'englang-ethos-pathos-logos-ent-2a',
     question: "A chemist testifying before a state committee about a pesticide her own company makes begins: *I helped develop this compound, and I was proud of it. I am here because I can no longer stand behind it.*\n\nThis opening chiefly builds the chemist's credibility by",
@@ -49,7 +49,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: "Criticizing her own work and employer rules out a selfish motive, which builds good character; her role in developing the compound also shows knowledge. She lists no credentials, flatters no one and cites no colleague.",
     partNumber: 2,
-    partTitle: "Key Processes",
+    partTitle: "Ethos in Depth: Ida B. Wells's Preface to Southern Horrors, 1892",
   },
   {
     id: 'englang-ethos-pathos-logos-ent-2b',
@@ -63,10 +63,10 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: "A writer who takes no pleasure in criticism cannot easily be dismissed as hostile or sensational, and twenty years of service shows loyalty rather than grudge. The sentence admits no gaps, announces no resignation and asks for credibility, not pity.",
     partNumber: 2,
-    partTitle: "Key Processes",
+    partTitle: "Ethos in Depth: Ida B. Wells's Preface to Southern Horrors, 1892",
   },
 
-  // Part 3 — Patterns & Examples
+  // Part 3 — Pathos in Depth: Reagan's Address on the Challenger Disaster, 1986
   {
     id: 'englang-ethos-pathos-logos-ent-3a',
     question: "A news story about a factory fire first reported that \"forty-one workers died.\" A revised version gives the names and ages of the first three victims and then adds \"and thirty-eight others.\" The revision most strengthens the story's emotional appeal by",
@@ -79,7 +79,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: "Names and ages make the dead individuals, which moves readers in a way a total cannot; \"thirty-eight others\" then makes the scale personal too. The count is the same, no expertise is claimed and the revision intensifies rather than softens the loss.",
     partNumber: 3,
-    partTitle: "Patterns & Examples",
+    partTitle: "Pathos in Depth: Reagan's Address on the Challenger Disaster, 1986",
   },
   {
     id: 'englang-ethos-pathos-logos-ent-3b',
@@ -93,7 +93,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: "The mayor first honors the grief (\"Tonight we grieve\") and then gives it a direction, a common project, so sorrow becomes determination. He stirs no anger, makes no claim about prevention and does not change the subject.",
     partNumber: 3,
-    partTitle: "Patterns & Examples",
+    partTitle: "Pathos in Depth: Reagan's Address on the Challenger Disaster, 1986",
   },
 
   // Part 4 — Logos in Depth: Burke's Speech on Conciliation with America, 1775
@@ -224,8 +224,8 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: "Core Concepts" },
-    { partNumber: 2, partTitle: "Key Processes" },
-    { partNumber: 3, partTitle: "Patterns & Examples" },
+    { partNumber: 2, partTitle: "Ethos in Depth: Ida B. Wells's Preface to Southern Horrors, 1892" },
+    { partNumber: 3, partTitle: "Pathos in Depth: Reagan's Address on the Challenger Disaster, 1986" },
     { partNumber: 4, partTitle: "Logos in Depth: Burke's Speech on Conciliation with America, 1775" },
     { partNumber: 5, partTitle: "Appeals in Combination, Kairos, and Misconceptions: Garrison's \"To the Public,\" 1831" },
     { partNumber: 6, partTitle: "Exam Practice: John Brown's Speech to the Court, 1859" },

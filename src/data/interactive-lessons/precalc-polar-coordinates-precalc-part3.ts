@@ -5,122 +5,111 @@ export const precalcPolarPart3Data = {
       id: 'p3-intro',
       type: 'text' as const,
       content: `
-# 🔄 Converting Polar ↔ Rectangular Equations
+# 🔄 Complex Numbers in Polar Form
 
 **Part 3 of 7**
 
-Converting equations between polar and rectangular form is essential for graphing and analysis.
+Part 1 located points with polar coordinates. A complex number is also a point: $a + bi$ sits at $(a, b)$ in the **complex plane**, with the real axis horizontal and the imaginary axis vertical. So every complex number has polar coordinates too.
 
-### Key Substitution Relationships
+### Two Forms of the Same Number
+
+| Form | Written as | Coordinates |
+|:-----|:-----------|:------------|
+| Rectangular | $a + bi$ | $(a, b)$ |
+| Polar | $(r\\cos\\theta) + i(r\\sin\\theta)$ | $(r, \\theta)$ |
+
+### The Conversion Formulas
+
+These are the same formulas used for points:
 
 | Polar → Rectangular | Rectangular → Polar |
 |:-------------------|:-------------------|
-| $r\\cos\\theta = x$ | $x = r\\cos\\theta$ |
-| $r\\sin\\theta = y$ | $y = r\\sin\\theta$ |
-| $r^2 = x^2 + y^2$ | $r = \\sqrt{x^2+y^2}$ |
-| $\\tan\\theta = \\frac{y}{x}$ | $\\theta = \\arctan\\frac{y}{x}$ (check quadrant) |
+| $a = r\\cos\\theta$ | $r = \\sqrt{a^2 + b^2}$ |
+| $b = r\\sin\\theta$ | $\\theta = \\arctan\\frac{b}{a}$ if $a > 0$ |
+| | $\\theta = \\arctan\\frac{b}{a} + \\pi$ if $a < 0$ |
 
-### Strategy: Polar → Rectangular
-
-1. Look for $r\\cos\\theta$ (replace with $x$) or $r\\sin\\theta$ (replace with $y$)
-2. Look for $r^2$ (replace with $x^2 + y^2$)
-3. Multiply both sides by $r$ if needed to create these forms
+The value $r = \\sqrt{a^2 + b^2}$ is the distance from the number to the origin, also called its **modulus**.
       `
     },
     {
       id: 'p3-examples',
       type: 'text' as const,
       content: `
-## 📝 Converting Polar → Rectangular
+## 📝 Polar → Rectangular
 
-### Example 1: $r = 3$
+Evaluate the cosine and sine, then multiply by $r$.
 
-$$r^2 = 9 \\implies x^2 + y^2 = 9$$
+### Example 1: $r = 4$, $\\theta = \\frac{\\pi}{6}$
 
-Circle of radius 3.
+$$4\\cos\\frac{\\pi}{6} + i\\cdot 4\\sin\\frac{\\pi}{6} = 4\\cdot\\frac{\\sqrt{3}}{2} + i\\cdot 4\\cdot\\frac{1}{2} = 2\\sqrt{3} + 2i$$
 
-### Example 2: $r = 4\\sec\\theta$
+### Example 2: $r = 2$, $\\theta = \\frac{3\\pi}{4}$
 
-$$r = \\frac{4}{\\cos\\theta} \\implies r\\cos\\theta = 4 \\implies x = 4$$
+$$2\\cos\\frac{3\\pi}{4} + i\\cdot 2\\sin\\frac{3\\pi}{4} = 2\\left(-\\frac{\\sqrt{2}}{2}\\right) + i\\cdot 2\\cdot\\frac{\\sqrt{2}}{2} = -\\sqrt{2} + \\sqrt{2}\\,i$$
 
-Vertical line!
+The angle $\\frac{3\\pi}{4}$ points into Quadrant II, and the number has a negative real part and a positive imaginary part, as it should.
 
-### Example 3: $r = 2\\sin\\theta + 4\\cos\\theta$
+### Example 3: $r = 5$, $\\theta = \\frac{3\\pi}{2}$
 
-Multiply by $r$: $r^2 = 2r\\sin\\theta + 4r\\cos\\theta$
+$$5\\cos\\frac{3\\pi}{2} + i\\cdot 5\\sin\\frac{3\\pi}{2} = 5(0) + i\\cdot 5(-1) = -5i$$
 
-$$x^2 + y^2 = 2y + 4x$$
-
-$$(x-2)^2 + (y-1)^2 = 5$$
-
-Circle with center $(2, 1)$ and radius $\\sqrt{5}$.
-
-### Example 4: $r = \\frac{6}{2\\cos\\theta + 3\\sin\\theta}$
-
-$$r(2\\cos\\theta + 3\\sin\\theta) = 6 \\implies 2x + 3y = 6$$
-
-A straight line! In standard form: $2x + 3y = 6$.
+A number on an axis has a real part or an imaginary part equal to $0$.
       `
     },
     {
       id: 'p3-rect-to-polar',
       type: 'text' as const,
       content: `
-## 📝 Converting Rectangular → Polar
+## 📝 Rectangular → Polar
 
-### Example 5: $x^2 + y^2 = 16$
+Find $r$ first, then find $\\theta$ with the rule that matches the sign of $a$.
 
-$$r^2 = 16 \\implies r = 4$$
+### Example 4: $1 + \\sqrt{3}\\,i$
 
-### Example 6: $y = x$
+$r = \\sqrt{1 + 3} = 2$. Since $a = 1 > 0$, $\\theta = \\arctan\\sqrt{3} = \\frac{\\pi}{3}$.
 
-$$r\\sin\\theta = r\\cos\\theta \\implies \\tan\\theta = 1 \\implies \\theta = \\frac{\\pi}{4}$$
+$$1 + \\sqrt{3}\\,i = 2\\cos\\frac{\\pi}{3} + i\\cdot 2\\sin\\frac{\\pi}{3}$$
 
-### Example 7: $x^2 + y^2 - 6x = 0$
+### Example 5: $-3 + 3i$
 
-$$r^2 - 6r\\cos\\theta = 0 \\implies r(r - 6\\cos\\theta) = 0$$
+$r = \\sqrt{9 + 9} = 3\\sqrt{2}$. Since $a = -3 < 0$, $\\theta = \\arctan(-1) + \\pi = -\\frac{\\pi}{4} + \\pi = \\frac{3\\pi}{4}$.
 
-Since $r = 0$ is just the origin (already on the curve): $r = 6\\cos\\theta$
+### Example 6: $-2 - 2\\sqrt{3}\\,i$
 
-### Example 8: $y = 3$
+$r = \\sqrt{4 + 12} = 4$. Since $a < 0$, $\\theta = \\arctan\\sqrt{3} + \\pi = \\frac{\\pi}{3} + \\pi = \\frac{4\\pi}{3}$.
 
-$$r\\sin\\theta = 3 \\implies r = 3\\csc\\theta$$
+### Example 7: $6i$
 
-### Quick Reference
+Here $a = 0$, so neither formula applies. The point $(0, 6)$ is on the positive imaginary axis: $r = 6$ and $\\theta = \\frac{\\pi}{2}$.
 
-| Rectangular | Polar |
-|:-----------|:------|
-| $x^2 + y^2 = a^2$ | $r = a$ |
-| $x = a$ | $r = a\\sec\\theta$ |
-| $y = a$ | $r = a\\csc\\theta$ |
-| $y = mx$ | $\\theta = \\arctan m$ |
+> ⚠️ **Why add $\\pi$?** Arctangent only returns angles between $-\\frac{\\pi}{2}$ and $\\frac{\\pi}{2}$, which point into Quadrants I and IV. A number with $a < 0$ lies in Quadrant II or III, so adding $\\pi$ turns the angle to the correct side. Adding $2\\pi$ to any angle names the same number again.
       `
     },
     {
       id: 'p3-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Conversion Quiz** 🎯
+**Polar Form Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'The rectangular form of $r = 5\\csc\\theta$ is:',
-            options: ['$x = 5$', '$y = 5$', '$x^2 + y^2 = 25$', '$y = 5x$'],
+            question: 'What is $3\\cos\\frac{\\pi}{2} + i\\cdot 3\\sin\\frac{\\pi}{2}$ in the form $a + bi$?',
+            options: ['$3$', '$3i$', '$-3i$', '$3 + 3i$'],
             correctAnswer: 1,
-            explanation: '$r = \\frac{5}{\\sin\\theta} \\implies r\\sin\\theta = 5 \\implies y = 5$.'
+            explanation: '$\\cos\\frac{\\pi}{2} = 0$ and $\\sin\\frac{\\pi}{2} = 1$, so the number is $0 + 3i = 3i$, on the positive imaginary axis. The value $3$ would need $\\theta = 0$, and $-3i$ would need $\\theta = \\frac{3\\pi}{2}$.'
           },
           {
-            question: 'The polar form of $x^2 + y^2 = 10x$ is:',
-            options: ['$r = 10$', '$r = 10\\cos\\theta$', '$r = 10\\sin\\theta$', '$r = 5$'],
-            correctAnswer: 1,
-            explanation: '$r^2 = 10r\\cos\\theta \\implies r = 10\\cos\\theta$.'
+            question: 'The number $z = -1 + i$ has $r = \\sqrt{2}$. Which angle $\\theta$ completes its polar form?',
+            options: ['$-\\frac{\\pi}{4}$', '$\\frac{\\pi}{4}$', '$\\frac{3\\pi}{4}$', '$\\frac{5\\pi}{4}$'],
+            correctAnswer: 2,
+            explanation: 'Since $a = -1 < 0$, $\\theta = \\arctan(-1) + \\pi = -\\frac{\\pi}{4} + \\pi = \\frac{3\\pi}{4}$, in Quadrant II. The angle $-\\frac{\\pi}{4}$ is arctangent alone (Quadrant IV), $\\frac{\\pi}{4}$ ignores the signs, and $\\frac{5\\pi}{4}$ points into Quadrant III.'
           },
           {
-            question: 'The polar form of the line $y = -x$ is:',
-            options: ['$\\theta = \\frac{\\pi}{4}$', '$\\theta = \\frac{3\\pi}{4}$', '$r = -1$', '$\\theta = -\\frac{\\pi}{4}$'],
-            correctAnswer: 1,
-            explanation: '$\\tan\\theta = -1$, and $y = -x$ passes through QII and QIV. $\\theta = \\frac{3\\pi}{4}$ (or equivalently $-\\frac{\\pi}{4}$).'
+            question: 'What is the modulus $r$ of the complex number $5 - 12i$?',
+            options: ['$7$', '$17$', '$\\sqrt{119}$', '$13$'],
+            correctAnswer: 3,
+            explanation: '$r = \\sqrt{5^2 + (-12)^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13$. Adding or subtracting the parts gives $17$ or $7$, and $\\sqrt{119}$ subtracts the squares.'
           }
         ]
       }
@@ -129,21 +118,21 @@ $$r\\sin\\theta = 3 \\implies r = 3\\csc\\theta$$
       id: 'p3-input',
       type: 'input-boxes' as const,
       content: `
-**Convert Equations** 🧮
+**Convert Complex Numbers** 🧮
 
-**1)** Convert $r = 8\\cos\\theta$ to rectangular. What is the radius of the resulting circle? (e.g., $r = 6\\cos\\theta \\to (x-3)^2 + y^2 = 9$, radius = 3)
+**1)** Write $2\\cos\\frac{2\\pi}{3} + i\\cdot 2\\sin\\frac{2\\pi}{3}$ as $a + bi$. What is $a$?
 
-**2)** Convert $x^2 + y^2 = 49$ to polar. What is $r$? (e.g., $x^2 + y^2 = 16$ becomes $r = 4$)
+**2)** For $z = -4 - 4i$, what is $r$? (Enter an exact value like "3sqrt2")
 
-**3)** Convert $r = 3\\sec\\theta$ to rectangular. What is the constant $x$ value? (e.g., $r = 5\\sec\\theta \\to x = 5$)
+**3)** For $z = -4 - 4i$, what is $\\theta$ with $0 \\le \\theta < 2\\pi$? (Enter like "pi/3")
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4', '7', '3'],
-        hint1: '$r = 8\\cos\\theta \\to (x-4)^2 + y^2 = 16$. Radius = 4.',
-        hint2: '$r^2 = 49 \\implies r = 7$.',
-        hint3: '$r\\cos\\theta = 3 \\implies x = 3$.',
-        explanation: '1) Radius = 4. 2) $r = 7$. 3) $x = 3$.'
+        correctAnswers: ['-1', '4sqrt2', '5pi/4'],
+        hint1: '$\\cos\\frac{2\\pi}{3} = -\\frac{1}{2}$, so $a = 2\\left(-\\frac{1}{2}\\right)$.',
+        hint2: '$r = \\sqrt{(-4)^2 + (-4)^2} = \\sqrt{32}$.',
+        hint3: 'Since $a < 0$, $\\theta = \\arctan\\frac{-4}{-4} + \\pi = \\arctan(1) + \\pi$.',
+        explanation: '1) $a = 2\\cos\\frac{2\\pi}{3} = -1$ (and $b = \\sqrt{3}$). 2) $r = \\sqrt{32} = 4\\sqrt{2}$. 3) $\\theta = \\frac{\\pi}{4} + \\pi = \\frac{5\\pi}{4}$, in Quadrant III where both parts are negative.'
       }
     },
     {
@@ -155,27 +144,27 @@ $$r\\sin\\theta = 3 \\implies r = 3\\csc\\theta$$
       exercise: {
         dropdowns: [
           {
-            label: 'Rectangular: $y = 2$ → Polar:',
-            options: ['$r = 2$', '$r = 2\\csc\\theta$', '$r = 2\\sec\\theta$', '$\\theta = 2$']
+            label: 'The number $\\sqrt{3} - i$ lies in Quadrant',
+            options: ['I', 'II', 'III', 'IV']
           },
           {
-            label: 'Polar: $\\theta = \\frac{\\pi}{6}$ → Rectangular:',
-            options: ['$y = \\frac{x}{\\sqrt{3}}$', '$y = x\\sqrt{3}$', '$x = \\frac{\\pi}{6}$', '$y = \\frac{\\pi}{6}$']
+            label: 'For a complex number $a + bi$ with $a < 0$, $\\theta =$',
+            options: ['$\\arctan\\frac{b}{a} + \\pi$', '$\\arctan\\frac{b}{a}$', '$\\arctan\\frac{a}{b}$', '$\\pi - \\arctan\\frac{b}{a}$']
           },
           {
-            label: 'To convert polar to rectangular, multiply by $r$ when you see',
-            options: ['$r\\cos\\theta$', '$r^2$', 'Bare $\\sin\\theta$ or $\\cos\\theta$', '$\\sec\\theta$']
+            label: 'The polar form of $-7$ uses $\\theta =$',
+            options: ['$0$', '$\\frac{\\pi}{2}$', '$\\pi$', '$-\\frac{\\pi}{2}$']
           },
           {
-            label: 'Polar: $r^2 = 4r\\sin\\theta$ → Rectangular center:',
-            options: ['$(0, 2)$', '$(2, 0)$', '$(0, 4)$', '$(4, 0)$']
+            label: '$r\\cos\\theta + i\\,r\\sin\\theta$ with $r = 2$ and $\\theta = \\pi$ equals',
+            options: ['$2$', '$-2$', '$2i$', '$-2i$']
           }
         ],
-        correctAnswers: ['$r = 2\\csc\\theta$', '$y = \\frac{x}{\\sqrt{3}}$', 'Bare $\\sin\\theta$ or $\\cos\\theta$', '$(0, 2)$'],
-        hint1: '$y = r\\sin\\theta$, so $r\\sin\\theta = 2$, $r = \\frac{2}{\\sin\\theta} = 2\\csc\\theta$.',
-        hint2: '$\\tan\\frac{\\pi}{6} = \\frac{1}{\\sqrt{3}}$, so $y = \\frac{x}{\\sqrt{3}}$.',
-        hint3: 'Multiplying by $r$ creates $r\\sin\\theta = y$ or $r\\cos\\theta = x$.',
-        explanation: '$y = 2 \\to r = 2\\csc\\theta$. $\\theta = \\frac{\\pi}{6} \\to y = \\frac{x}{\\sqrt{3}}$. Multiply by $r$ to create $x$ or $y$. $r = 4\\sin\\theta \\to$ center $(0, 2)$.'
+        correctAnswers: ['IV', '$\\arctan\\frac{b}{a} + \\pi$', '$\\pi$', '$-2$'],
+        hint1: 'The real part $\\sqrt{3}$ is positive and the imaginary part $-1$ is negative.',
+        hint2: 'Arctangent alone gives Quadrant I or IV angles; a negative real part needs a turn of $\\pi$.',
+        hint3: '$-7$ sits on the negative real axis. For the last one, $\\cos\\pi = -1$ and $\\sin\\pi = 0$.',
+        explanation: '$\\sqrt{3} - i$: right of the imaginary axis and below the real axis, Quadrant IV. For $a < 0$, add $\\pi$ to the arctangent. $-7$ is on the negative real axis, so $\\theta = \\pi$ (with $r = 7$). $2\\cos\\pi + i\\cdot 2\\sin\\pi = -2$.'
       }
     },
     {
@@ -187,16 +176,26 @@ $$r\\sin\\theta = 3 \\implies r = 3\\csc\\theta$$
       exercise: {
         questions: [
           {
-            question: 'Convert $r = \\frac{4}{\\cos\\theta - \\sin\\theta}$ to rectangular:',
-            options: ['$x - y = 4$', '$x + y = 4$', '$xy = 4$', '$x^2 - y^2 = 4$'],
+            question: 'Which expression writes $-\\sqrt{3} + i$ in the form $r\\cos\\theta + i\\,r\\sin\\theta$?',
+            options: [
+              '$2\\cos\\frac{5\\pi}{6} + i\\cdot 2\\sin\\frac{5\\pi}{6}$',
+              '$2\\cos\\left(-\\frac{\\pi}{6}\\right) + i\\cdot 2\\sin\\left(-\\frac{\\pi}{6}\\right)$',
+              '$2\\cos\\frac{\\pi}{6} + i\\cdot 2\\sin\\frac{\\pi}{6}$',
+              '$4\\cos\\frac{5\\pi}{6} + i\\cdot 4\\sin\\frac{5\\pi}{6}$'
+            ],
             correctAnswer: 0,
-            explanation: '$r(\\cos\\theta - \\sin\\theta) = 4 \\implies r\\cos\\theta - r\\sin\\theta = 4 \\implies x - y = 4$.'
+            explanation: '$r = \\sqrt{3 + 1} = 2$. Since $a < 0$, $\\theta = \\arctan\\left(-\\frac{1}{\\sqrt{3}}\\right) + \\pi = -\\frac{\\pi}{6} + \\pi = \\frac{5\\pi}{6}$. The angle $-\\frac{\\pi}{6}$ is arctangent alone (Quadrant IV), $\\frac{\\pi}{6}$ is in Quadrant I, and $r = 4$ forgets the square root.'
           },
           {
-            question: 'The equation $x^2 + y^2 + 8y = 0$ in polar form is:',
-            options: ['$r = -8\\sin\\theta$', '$r = 8\\cos\\theta$', '$r = -8\\cos\\theta$', '$r = 8$'],
-            correctAnswer: 0,
-            explanation: '$r^2 + 8r\\sin\\theta = 0 \\implies r + 8\\sin\\theta = 0 \\implies r = -8\\sin\\theta$.'
+            question: 'A complex number has $r = 8$ and $\\theta = \\frac{5\\pi}{3}$. Which is the number, and where is it in the complex plane?',
+            options: [
+              '$4\\sqrt{3} - 4i$, in Quadrant IV',
+              '$-4 + 4\\sqrt{3}\\,i$, in Quadrant II',
+              '$4 - 4\\sqrt{3}\\,i$, in Quadrant IV',
+              '$4 + 4\\sqrt{3}\\,i$, in Quadrant I'
+            ],
+            correctAnswer: 2,
+            explanation: '$a = 8\\cos\\frac{5\\pi}{3} = 8\\cdot\\frac{1}{2} = 4$ and $b = 8\\sin\\frac{5\\pi}{3} = 8\\left(-\\frac{\\sqrt{3}}{2}\\right) = -4\\sqrt{3}$, so the number is $4 - 4\\sqrt{3}\\,i$ in Quadrant IV. Swapping sine and cosine gives $4\\sqrt{3} - 4i$.'
           }
         ]
       }

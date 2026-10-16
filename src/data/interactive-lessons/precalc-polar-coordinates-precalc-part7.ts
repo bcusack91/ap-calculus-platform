@@ -15,7 +15,8 @@ This final part combines all polar coordinate skills:
 
 | Skill | Key Formula / Concept |
 |:------|:---------------------|
-| Conversions | $x = r\\cos\\theta, \\; y = r\\sin\\theta, \\; r^2 = x^2+y^2$ |
+| Converting points | $x = r\\cos\\theta, \\; y = r\\sin\\theta, \\; r = \\sqrt{x^2+y^2}$ |
+| Complex numbers | $a + bi = (r\\cos\\theta) + i(r\\sin\\theta)$ |
 | Polar curves | Circles, roses, cardioids, limaçons |
 | Symmetry | Test $-\\theta$ (polar axis), $\\pi-\\theta$ (vertical), $-r$ (origin) |
 | Reading $r = f(\\theta)$ | $r > 0$: on the ray of $\\theta$; $r < 0$: on the opposite ray; $r = 0$: at the pole |
@@ -35,10 +36,10 @@ This final part combines all polar coordinate skills:
 Flowchart:
 1. **$r = a$** → Circle centered at origin, radius $a$
 2. **$r = a\\cos\\theta$ or $r = a\\sin\\theta$** → Circle, diameter $|a|$
-3. **$r = a \\pm b\\cos\\theta$ or $r = a \\pm b\\sin\\theta$** → Limaçon
-   - $a = b$: cardioid (passes through origin)
-   - $a > b$: dimpled or convex limaçon (no inner loop)
-   - $a < b$: limaçon with inner loop
+3. **$r = a + b\\cos\\theta$ or $r = a + b\\sin\\theta$** → Limaçon; find the smallest and largest $r$
+   - $r$ goes negative: inner loop
+   - $r$ reaches $0$ but never goes negative: cardioid (touches the pole once)
+   - $r$ stays positive: never reaches the pole
 4. **$r = a\\cos(n\\theta)$ or $r = a\\sin(n\\theta)$** → Rose
    - $n$ odd: $n$ petals
    - $n$ even: $2n$ petals
@@ -55,7 +56,7 @@ Flowchart:
 - **Ignoring the sign of $r$**: a decreasing $r$ moves the curve away from the origin when $r$ is negative
 - **Wrong domain restriction**: find where $r = 0$ so a petal or loop starts and ends at the pole
 - **Negative $r$**: polar curves can overlap themselves when $r < 0$
-- **Rectangular conversion**: $\\tan\\theta = \\frac{y}{x}$ only in the correct quadrant
+- **Converting a point or complex number**: $\\theta = \\arctan\\frac{y}{x}$ needs $+\\pi$ when $x < 0$
       `
     },
     {
@@ -73,10 +74,10 @@ Flowchart:
             explanation: '$x = 4\\cos\\frac{5\\pi}{3} = 4 \\cdot \\frac{1}{2} = 2$, $y = 4\\sin\\frac{5\\pi}{3} = 4(-\\frac{\\sqrt{3}}{2}) = -2\\sqrt{3}$.'
           },
           {
-            question: '$r = 3 + 2\\sin\\theta$ is classified as a:',
-            options: ['Cardioid', 'Limaçon with inner loop', 'Dimpled limaçon', 'Rose'],
+            question: 'Which describes the graph of $r = 3 + 2\\sin\\theta$?',
+            options: ['A cardioid that touches the pole once', 'A limaçon with an inner loop', 'A limaçon that never reaches the pole', 'A rose with three petals'],
             correctAnswer: 2,
-            explanation: '$a = 3 > b = 2$ (but $a < 2b$), so it is a dimpled limaçon. Since $a > b$, it has no inner loop.'
+            explanation: 'Since $-1 \\le \\sin\\theta \\le 1$, $r$ runs from $3 - 2 = 1$ to $5$ and is always positive, so the curve never reaches the pole and has no inner loop. A cardioid needs a minimum of exactly $0$, and a rose has the form $a\\sin(n\\theta)$.'
           },
           {
             question: 'For $r = 2 - 4\\cos\\theta$, on which interval is the distance from the origin increasing?',
@@ -118,12 +119,12 @@ Flowchart:
         dropdowns: [
           {
             label: '$r = 2 - 4\\cos\\theta$: this is a',
-            options: ['Cardioid through the pole', 'Limaçon with inner loop', 'Dimpled limaçon without a loop', 'Convex limaçon with no dimple'],
+            options: ['Cardioid through the pole', 'Limaçon with inner loop', 'Limaçon that never reaches the pole', 'Rose with two petals'],
             correctAnswer: 1
           },
           {
-            label: 'The equation $x^2 + y^2 = 5y$ in polar form is:',
-            options: ['$r = 5\\sin\\theta$', '$r = 5\\cos\\theta$', '$r^2 = 5r\\sin\\theta$', '$r = 5$'],
+            label: 'In polar form with $r > 0$, the complex number $-5$ has',
+            options: ['$r = 5,\\ \\theta = \\pi$', '$r = 5,\\ \\theta = 0$', '$r = 5,\\ \\theta = \\frac{\\pi}{2}$', '$r = 25,\\ \\theta = \\pi$'],
             correctAnswer: 0
           },
           {
@@ -137,11 +138,11 @@ Flowchart:
             correctAnswer: 0
           }
         ],
-        correctAnswers: ['Limaçon with inner loop', '$r = 5\\sin\\theta$', 'Increasing', '$0 \\le \\theta \\le \\frac{\\pi}{3}$'],
-        hint1: '$a = 2 < b = 4$, so inner loop.',
-        hint2: '$x^2+y^2 = 5y \\implies r^2 = 5r\\sin\\theta \\implies r = 5\\sin\\theta$.',
+        correctAnswers: ['Limaçon with inner loop', '$r = 5,\\ \\theta = \\pi$', 'Increasing', '$0 \\le \\theta \\le \\frac{\\pi}{3}$'],
+        hint1: '$r$ runs from $2 - 4 = -2$ to $6$; negative values of $r$ trace an inner loop.',
+        hint2: '$-5$ is the point $(-5, 0)$ on the negative real axis, $5$ units from the origin.',
         hint3: 'A negative $r$ that keeps decreasing gets larger in absolute value. For the petal, find the first positive $\\theta$ where $\\sin(3\\theta) = 0$.',
-        explanation: '$a < b$: inner loop. $r^2 = 5r\\sin\\theta \\implies r = 5\\sin\\theta$. Negative and decreasing means $|r|$ grows, so the distance increases. $r = 0$ at $\\theta = 0$ and $\\theta = \\frac{\\pi}{3}$ with $r > 0$ between, so that interval draws one petal.'
+        explanation: '$r$ goes negative, so there is an inner loop. $-5$ is $5$ units from the origin on the negative real axis, so $r = 5$ and $\\theta = \\pi$. Negative and decreasing means $|r|$ grows, so the distance increases. $r = 0$ at $\\theta = 0$ and $\\theta = \\frac{\\pi}{3}$ with $r > 0$ between, so that interval draws one petal.'
       }
     },
     {

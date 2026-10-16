@@ -1429,9 +1429,9 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
   'complex-numbers': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'The Imaginary Unit & Powers of $i$', loader: () => import('./extra/complex-numbers').then((m) => m.parts[0]) },
+      { title: 'The Imaginary Unit & Square Roots of Negatives', loader: () => import('./extra/complex-numbers').then((m) => m.parts[0]) },
       { title: 'Adding, Subtracting & Multiplying', loader: () => import('./extra/complex-numbers').then((m) => m.parts[1]) },
-      { title: 'Conjugates & Division', loader: () => import('./extra/complex-numbers').then((m) => m.parts[2]) },
+      { title: 'Conjugates & Conjugate Zeros', loader: () => import('./extra/complex-numbers').then((m) => m.parts[2]) },
       { title: 'The Complex Plane & Modulus', loader: () => import('./extra/complex-numbers').then((m) => m.parts[3]) },
       { title: 'Polar (Trigonometric) Form', loader: () => import('./extra/complex-numbers').then((m) => m.parts[4]) },
       { title: 'Complex Roots of Quadratics', loader: () => import('./extra/complex-numbers').then((m) => m.parts[5]) },

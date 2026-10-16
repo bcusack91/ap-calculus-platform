@@ -24,11 +24,16 @@ Polar equations define curves using $r$ as a function of $\\theta$. The shapes a
 
 This is a circle with diameter $4$, centered at $(2, 0)$ in rectangular coordinates.
 
-To verify: $r = 4\\cos\\theta \\implies r^2 = 4r\\cos\\theta \\implies x^2 + y^2 = 4x$
+To check, plot a few input-output pairs and convert each point with $x = r\\cos\\theta$, $y = r\\sin\\theta$:
 
-$$\\implies (x-2)^2 + y^2 = 4$$
+| $\\theta$ | $r = 4\\cos\\theta$ | Point $(x, y)$ |
+|:---|:---|:---|
+| $0$ | $4$ | $(4, 0)$ |
+| $\\frac{\\pi}{4}$ | $2\\sqrt{2}$ | $(2, 2)$ |
+| $\\frac{\\pi}{2}$ | $0$ | $(0, 0)$, the pole |
+| $-\\frac{\\pi}{4}$ | $2\\sqrt{2}$ | $(2, -2)$ |
 
-Circle with center $(2, 0)$ and radius $2$. ✓
+Each point is $2$ units from $(2, 0)$, so the curve is the circle with center $(2, 0)$ and radius $2$. ✓
       `
     },
     {
@@ -69,31 +74,28 @@ For **even** $n$: petals in each "half" are traced, and the curve also traces pe
       content: `
 ## 🐌 Limaçons
 
-### Standard Forms
+### The Form
 
-$$r = a \\pm b\\cos\\theta \\quad \\text{or} \\quad r = a \\pm b\\sin\\theta$$
+$$r = a + b\\cos\\theta \\quad \\text{or} \\quad r = a + b\\sin\\theta$$
 
-The shape depends on the ratio $\\frac{a}{b}$:
+You do not need a classification chart. Find the **smallest and largest values of $r$** (where $\\cos\\theta$ or $\\sin\\theta$ equals $\\pm 1$) and read the shape from the sign of $r$:
 
-| Ratio | Shape |
+| What $r$ does | What the graph does |
 |:------|:------|
-| $\\frac{a}{b} < 1$ | Inner loop |
-| $\\frac{a}{b} = 1$ | Cardioid (heart shape) |
-| $1 < \\frac{a}{b} < 2$ | Dimpled limaçon |
-| $\\frac{a}{b} \\geq 2$ | Convex limaçon |
+| $r$ becomes negative for some $\\theta$ | Those points plot on the opposite ray, tracing an **inner loop** |
+| $r$ reaches $0$ but never goes negative | The curve touches the pole once: a **cardioid** |
+| $r$ stays positive | The curve never reaches the pole |
 
 ### Example: $r = 2 + 3\\cos\\theta$ (Inner Loop)
 
-$\\frac{a}{b} = \\frac{2}{3} < 1$ → **inner loop**
-
 - Maximum $r$: when $\\cos\\theta = 1$, $r = 5$
-- Minimum $r$: when $\\cos\\theta = -1$, $r = -1$ (inner loop!)
+- Minimum $r$: when $\\cos\\theta = -1$, $r = -1$
+
+Because $r$ is negative near $\\theta = \\pi$, those points land on the opposite ray, near the positive $x$-axis, and form the **inner loop**.
 
 ### Example: $r = 3 + 3\\sin\\theta$ (Cardioid)
 
-$\\frac{a}{b} = 1$ → **cardioid**
-
-Passes through the origin when $\\sin\\theta = -1$, i.e., $\\theta = \\frac{3\\pi}{2}$.
+$r$ runs from $0$ to $6$ and is never negative. It equals $0$ only when $\\sin\\theta = -1$, i.e., $\\theta = \\frac{3\\pi}{2}$, so the curve touches the pole once: a **cardioid**.
       `
     },
     {
@@ -112,9 +114,9 @@ Passes through the origin when $\\sin\\theta = -1$, i.e., $\\theta = \\frac{3\\p
           },
           {
             question: '$r = 2 + 2\\cos\\theta$ is a:',
-            options: ['Limaçon with inner loop', 'Cardioid', 'Dimpled limaçon', 'Rose curve'],
+            options: ['Limaçon with inner loop', 'Cardioid', 'Circle through the pole', 'Rose curve'],
             correctAnswer: 1,
-            explanation: '$\\frac{a}{b} = \\frac{2}{2} = 1$, which gives a cardioid.'
+            explanation: '$r$ runs from $0$ (at $\\theta = \\pi$) to $4$ and is never negative, so the curve touches the pole once without looping: a cardioid. An inner loop needs negative values of $r$, and a circle through the pole has the form $r = a\\cos\\theta$.'
           },
           {
             question: 'The polar equation $r = 5$ represents:',
@@ -133,17 +135,17 @@ Passes through the origin when $\\sin\\theta = -1$, i.e., $\\theta = \\frac{3\\p
 
 **1)** $r = 6\\cos(2\\theta)$: how many petals? (e.g., $r = a\\cos(3\\theta)$ has 3 petals since 3 is odd)
 
-**2)** $r = 1 + 3\\sin\\theta$: compute $\\frac{a}{b}$ as a decimal. (e.g., for $r = 2 + 4\\cos\\theta$: $\\frac{a}{b} = \\frac{2}{4} = 0.5$)
+**2)** $r = 1 + 3\\sin\\theta$: what is the minimum value of $r$ (a signed value, which can be negative)? (e.g., for $r = 2 + 4\\cos\\theta$ the minimum value is $2 - 4 = -2$)
 
 **3)** $r = 4\\sin\\theta$ is a circle with what diameter? (e.g., $r = 6\\cos\\theta$ is a circle with diameter 6)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8', '0.33', '4'],
-        hint1: '$n = 2$ is even, so petals = $2n = 4$. Wait — $2 \\times 2 = 4$... but answer should be 8? No: $n=2$, even, so $2n = 4$ petals. Actually $r = a\\cos(2\\theta)$ with even $n=2$ → $2(2)=4$ petals.',
-        hint2: '$a = 1$, $b = 3$, ratio = $\\frac{1}{3} \\approx 0.33$.',
+        correctAnswers: ['4', '-2', '4'],
+        hint1: '$n = 2$ is even, so the number of petals is $2n$.',
+        hint2: 'The smallest value occurs when $\\sin\\theta = -1$: $1 + 3(-1)$.',
         hint3: '$r = a\\sin\\theta$ has diameter $|a| = 4$.',
-        explanation: '1) $2(2) = 4$ petals. 2) $\\frac{1}{3} \\approx 0.33$ (inner loop). 3) Diameter $= 4$.'
+        explanation: '1) $n = 2$ is even, so $2(2) = 4$ petals. 2) $1 - 3 = -2$; because $r$ goes negative, the graph has an inner loop. 3) Diameter $= 4$.'
       }
     },
     {
@@ -155,8 +157,8 @@ Passes through the origin when $\\sin\\theta = -1$, i.e., $\\theta = \\frac{3\\p
       exercise: {
         dropdowns: [
           {
-            label: '$r = 3 + 5\\cos\\theta$ has a(n)',
-            options: ['Inner loop', 'Cardioid shape', 'Dimple', 'Convex shape']
+            label: 'For $r = 3 + 5\\cos\\theta$, the minimum (signed) value of $r$ is',
+            options: ['$-2$', '$3$', '$8$', '$0$']
           },
           {
             label: '$\\theta = \\frac{\\pi}{4}$ is a',
@@ -167,15 +169,15 @@ Passes through the origin when $\\sin\\theta = -1$, i.e., $\\theta = \\frac{3\\p
             options: ['2', '5', '10', '15']
           },
           {
-            label: '$r = 4 + 2\\cos\\theta$ ($\\frac{a}{b} = 2$) is a',
-            options: ['Inner loop limaçon', 'Cardioid', 'Dimpled limaçon', 'Convex limaçon']
+            label: 'The graph of $r = 4 + 2\\cos\\theta$ passes through the pole',
+            options: ['Never', 'Once', 'Twice', 'Four times']
           }
         ],
-        correctAnswers: ['Inner loop', 'Line through origin', '5', 'Convex limaçon'],
-        hint1: '$\\frac{3}{5} < 1$ → inner loop.',
+        correctAnswers: ['$-2$', 'Line through origin', '5', 'Never'],
+        hint1: 'The smallest value occurs when $\\cos\\theta = -1$: $3 - 5$.',
         hint2: 'Constant $\\theta$ = fixed direction = line through origin.',
         hint3: '$n = 5$ is odd → $5$ petals.',
-        explanation: '$\\frac{3}{5} < 1$: inner loop. $\\theta = c$: line. Odd $n=5$: 5 petals. $\\frac{a}{b} = 2$: convex.'
+        explanation: '$3 - 5 = -2$, so $r$ goes negative and the graph has an inner loop. $\\theta = c$: line. Odd $n=5$: 5 petals. $r = 4 + 2\\cos\\theta$ is always between $2$ and $6$, so it never reaches the pole.'
       }
     },
     {
@@ -187,15 +189,15 @@ Passes through the origin when $\\sin\\theta = -1$, i.e., $\\theta = \\frac{3\\p
       exercise: {
         questions: [
           {
-            question: 'To convert $r = 6\\cos\\theta$ to rectangular form, the result is:',
+            question: 'On the circle $r = 6\\cos\\theta$, which point in rectangular coordinates corresponds to $\\theta = \\frac{\\pi}{3}$?',
             options: [
-              '$(x-3)^2 + y^2 = 9$',
-              '$x^2 + (y-3)^2 = 9$',
-              '$x^2 + y^2 = 6$',
-              '$(x-6)^2 + y^2 = 36$'
+              '$\\left(\\frac{3}{2}, \\frac{3\\sqrt{3}}{2}\\right)$',
+              '$\\left(\\frac{3\\sqrt{3}}{2}, \\frac{3}{2}\\right)$',
+              '$\\left(3, \\frac{\\pi}{3}\\right)$',
+              '$\\left(3, 3\\sqrt{3}\\right)$'
             ],
             correctAnswer: 0,
-            explanation: '$r = 6\\cos\\theta \\to r^2 = 6r\\cos\\theta \\to x^2 + y^2 = 6x \\to (x-3)^2 + y^2 = 9$.'
+            explanation: '$r = 6\\cos\\frac{\\pi}{3} = 3$, so $x = 3\\cos\\frac{\\pi}{3} = \\frac{3}{2}$ and $y = 3\\sin\\frac{\\pi}{3} = \\frac{3\\sqrt{3}}{2}$. Swapping sine and cosine gives the second point, $\\left(3, \\frac{\\pi}{3}\\right)$ is the polar pair itself, and $(3, 3\\sqrt{3})$ uses $r = 6$ instead of $3$.'
           },
           {
             question: 'A rose curve $r = a\\cos(4\\theta)$ has:',

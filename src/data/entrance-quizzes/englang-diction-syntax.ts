@@ -96,7 +96,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: "Syntax in Depth: Clauses, Balance, and Johnson's Letter to Lord Chesterfield, 1755",
   },
 
-  // Part 4 — Connections & Interactions
+  // Part 4 — Punctuation, Repetition, and Sentence Shape: Thoreau's Walden, 1854
   {
     id: 'englang-diction-syntax-ent-4a',
     question: "Read the sentence below.\n\n*The new superintendent—the fourth in six years—promised the district a period of stability.*\n\nThe dashes around \"the fourth in six years\" chiefly serve to",
@@ -109,7 +109,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: "Dashes break into the sentence and give the aside extra emphasis, and the rapid turnover it reports makes the promise of stability ironic. Parentheses would play the detail down; the dashes list no names and quote no one.",
     partNumber: 4,
-    partTitle: "Connections & Interactions",
+    partTitle: "Punctuation, Repetition, and Sentence Shape: Thoreau's Walden, 1854",
   },
   {
     id: 'englang-diction-syntax-ent-4b',
@@ -123,7 +123,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: "Joining every action with \"and\" slows the sentence and stretches it out, so its form imitates the tedium it describes. The sentence drags rather than speeds, shows boredom rather than confusion and ranks nothing.",
     partNumber: 4,
-    partTitle: "Connections & Interactions",
+    partTitle: "Punctuation, Repetition, and Sentence Shape: Thoreau's Walden, 1854",
   },
 
   // Part 5 — Diction and Syntax Together: Older Meanings, Combined Effects, and Common Misreadings
@@ -226,7 +226,7 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
     { partNumber: 1, partTitle: "Core Concepts" },
     { partNumber: 2, partTitle: "Diction in Depth: Roosevelt's Revisions to the War Message, December 1941" },
     { partNumber: 3, partTitle: "Syntax in Depth: Clauses, Balance, and Johnson's Letter to Lord Chesterfield, 1755" },
-    { partNumber: 4, partTitle: "Connections & Interactions" },
+    { partNumber: 4, partTitle: "Punctuation, Repetition, and Sentence Shape: Thoreau's Walden, 1854" },
     { partNumber: 5, partTitle: "Diction and Syntax Together: Older Meanings, Combined Effects, and Common Misreadings" },
     { partNumber: 6, partTitle: "Exam Practice: Wilson's War Message, April 2, 1917" },
     { partNumber: 7, partTitle: "Review: The Toolkit, the Method, and Mixed Practice" },

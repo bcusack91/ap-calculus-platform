@@ -25,13 +25,15 @@ $$\\boxed{\\frac{d}{dx}[\\log_a x] = \\frac{1}{x\\ln a}}$$
 
 > **Key Fact:** $\\frac{d}{dx}[\\ln|x|] = \\frac{1}{x}$ for all $x \\neq 0$. This is why $\\int\\frac{1}{x}\\,dx = \\ln|x|+C$.
 
-### Logarithmic Differentiation
+### Simplify With Log Properties First
 
-For products/quotients of many factors, take $\\ln$ of both sides first:
+When $\\ln$ is applied to a product, quotient or power, expand it before differentiating. Each piece then needs only $\\frac{d}{dx}[\\ln u] = \\frac{u'}{u}$:
 
-$$y = \\frac{x^2\\sqrt{x+1}}{(x-3)^4} \\quad \\Rightarrow \\quad \\ln y = 2\\ln x + \\frac{1}{2}\\ln(x+1) - 4\\ln(x-3)$$
+$$f(x) = \\ln\\left(\\frac{x^2\\sqrt{x+1}}{(x-3)^4}\\right) = 2\\ln x + \\frac{1}{2}\\ln(x+1) - 4\\ln(x-3) \\quad (x > 3)$$
 
-Differentiate: $\\frac{y'}{y} = \\frac{2}{x}+\\frac{1}{2(x+1)}-\\frac{4}{x-3}$, then multiply by $y$.
+$$f'(x) = \\frac{2}{x}+\\frac{1}{2(x+1)}-\\frac{4}{x-3}$$
+
+This avoids a quotient rule nested inside a chain rule. The rewrite is valid only where every factor is positive, which is why the domain $x > 3$ is stated.
 
 ### Worked Example
 
@@ -87,11 +89,11 @@ $$= \\frac{\\cos x}{\\sin x} = \\cot x$$`
             explanation: '$\\frac{3}{3x} = \\frac{1}{x}$. Or: $\\ln(3x) = \\ln 3 + \\ln x$, so derivative $= 0 + 1/x$.'
           },
           {
-            label: 'Logarithmic differentiation is most useful for:',
-            options: ['Many-factor products and quotients', 'Sums of simple polynomial terms', 'Constant multiples of a function', 'Single trig functions like $\\sin x$'],
-            correctAnswers: ['Many-factor products and quotients'],
-            hints: ['$\\ln$ turns products into sums, quotients into differences.'],
-            explanation: 'Taking $\\ln$ simplifies complex products/quotients into sums of simpler terms.'
+            label: 'Before differentiating $\\ln\\left(\\frac{x^2}{x+1}\\right)$ for $x > 0$, rewrite it as:',
+            options: ['$2\\ln x - \\ln(x+1)$', '$\\frac{2\\ln x}{\\ln(x+1)}$', '$2\\ln x + \\ln(x+1)$', '$(\\ln x)^2 - \\ln(x+1)$'],
+            correctAnswers: ['$2\\ln x - \\ln(x+1)$'],
+            hints: ['$\\ln$ turns a quotient into a difference and a power into a coefficient.'],
+            explanation: '$\\ln\\frac{A}{B} = \\ln A - \\ln B$ and $\\ln(x^2) = 2\\ln x$, so the derivative is $\\frac{2}{x} - \\frac{1}{x+1}$. The log of a quotient is not a quotient of logs, and $\\ln(x^2)$ is $2\\ln x$, not $(\\ln x)^2$.'
           }
         ]
       }
@@ -120,7 +122,7 @@ $$= \\frac{\\cos x}{\\sin x} = \\cot x$$`
 - $\\frac{d}{dx}[\\ln u] = u'/u$ \u2014 the most important log derivative
 - $\\ln$ properties simplify before differentiating: $\\ln(x^n) = n\\ln x$
 - $\\int 1/x\\,dx = \\ln|x|+C$ (absolute value!)
-- Logarithmic differentiation: take $\\ln$, differentiate, multiply by $y$`
+- $\\ln$ of a product or quotient: expand into a sum or difference of logs, then differentiate term by term`
     }
   ]
 };

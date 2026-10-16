@@ -40,9 +40,10 @@ Rational economic agents make decisions **at the margin** — they consider the 
 
 At some point, the extra points from another hour of studying aren't worth the exhaustion → optimal to stop where MB ≈ MC.
 
-### Diminishing Marginal Returns
-- As you consume or produce more, marginal benefit typically **decreases**
+### Diminishing Marginal Benefit
+- As you consume more of a good, the marginal benefit (marginal utility) of each additional unit typically **decreases**: the law of diminishing marginal utility
 - First slice of pizza: delicious! Fifth slice: barely appealing
+- Don't confuse this with **diminishing marginal returns**, a production idea: each added worker adds less output when other inputs are fixed
 - This is why demand curves slope downward — willingness to pay decreases with additional units
 
 ### Sunk Costs

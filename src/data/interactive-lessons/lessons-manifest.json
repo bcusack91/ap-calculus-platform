@@ -1550,9 +1550,9 @@
     "slug": "complex-numbers",
     "importPath": "./extra/complex-numbers",
     "partTitles": [
-      "The Imaginary Unit & Powers of $i$",
+      "The Imaginary Unit & Square Roots of Negatives",
       "Adding, Subtracting & Multiplying",
-      "Conjugates & Division",
+      "Conjugates & Conjugate Zeros",
       "The Complex Plane & Modulus",
       "Polar (Trigonometric) Form",
       "Complex Roots of Quadratics",

@@ -104,7 +104,8 @@ s = s.substring(1);       // Now s = "ello" (reassigned to the new String)
 | \`\\\\\` | Backslash |
 | \`\\"\` | Double quote inside a String |
 | \`\\n\` | Newline |
-| \`\\t\` | Tab |
+
+These three are the only escape sequences in the AP Java subset.
       `
     },
     {

@@ -115,13 +115,13 @@ Max = 70, min = 30:
           {
                     "question": "arctan(0) = ?",
                     "options": [
-                              "0°",
-                              "45°",
-                              "90°",
-                              "180°"
+                              "$0$",
+                              "$\\frac{\\pi}{4}$",
+                              "$\\frac{\\pi}{2}$",
+                              "$\\pi$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "tan(0) = 0."
+                    "explanation": "$\\tan 0 = 0$, and $0$ is in the range of arctangent, $\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$. The angle $\\pi$ also has tangent $0$ but is outside the range, $\\frac{\\pi}{4}$ is $\\arctan(1)$, and $\\tan\\frac{\\pi}{2}$ is undefined."
           }
 ]
       }

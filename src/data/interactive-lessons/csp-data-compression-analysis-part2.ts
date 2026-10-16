@@ -15,10 +15,10 @@ export const cspDataCompressionAnalysisPart2Data = {
 
 Compression takes a sequence of bits and produces a shorter sequence that decodes back to the original (lossless) or to an approximation of it (lossy).
 
-| Type | Round-trip property | Examples |
+| Type | Round-trip property | Typical uses |
 |------|---------------------|----------|
-| **Lossless** | Decoded = original, bit-for-bit | ZIP, PNG, FLAC |
-| **Lossy** | Decoded ≈ original | JPEG, MP3, MP4 |
+| **Lossless** | Decoded = original, bit-for-bit | Text, code, spreadsheets, medical images |
+| **Lossy** | Decoded ≈ original | Photos, music and video for streaming or sharing |
       `
     },
     {
@@ -41,15 +41,15 @@ Compression takes a sequence of bits and produces a shorter sequence that decode
             explanation: "Lossless preserves every detail."
           },
           {
-            question: "A vacation photo for casual social media is most often stored as ___",
+            question: "A vacation photo for casual social media is best compressed with ___",
             options: [
-              "Lossless TIFF that preserves every original pixel of the photo.",
-              "Lossy JPEG that is much smaller but visually almost identical.",
+              "Lossless compression that preserves every original pixel of the photo.",
+              "Lossy compression that is much smaller but visually almost identical.",
               "Plain text that lists the RGB value of every pixel one per line.",
-              "Encrypted ZIP archive of the raw camera capture for sharing."
+              "Encryption of the raw camera capture before it is shared online."
             ],
             correctAnswer: 1,
-            explanation: "JPEG's lossy compression trades trivial fidelity for big size savings."
+            explanation: "Small size matters more than exact pixels for casual sharing, so lossy compression trades a barely visible loss of detail for big size savings. Lossless keeps every pixel but saves far less space."
           }
         ]
       }
@@ -115,7 +115,7 @@ RLE wins on data with long runs and loses on data without them. Compression is *
             options: ["many long runs of repeated values", "many distinct values that rarely repeat", "values spread evenly across a wide range", "a large number of unique, unrepeated symbols"]
           },
           {
-            label: "JPEG compression discards ___",
+            label: "Lossy image compression discards ___",
             options: ["fine color detail humans rarely notice", "every other row of pixels to halve the height", "the image's metadata while keeping all pixels", "runs of repeated pixels, storing each run once"]
           },
           {
@@ -127,7 +127,7 @@ RLE wins on data with long runs and loses on data without them. Compression is *
         hint1: "RLE pattern.",
         hint2: "Lossy keeps an approximation.",
         hint3: "Round-trip = identity.",
-        explanation: "RLE wins on runs. JPEG drops imperceptible detail. Lossless round-trip = identity."
+        explanation: "RLE wins on runs. Lossy image compression drops detail people rarely notice. Lossless round-trip = identity."
       }
     },
     {
@@ -151,10 +151,10 @@ RLE wins on data with long runs and loses on data without them. Compression is *
       exercise: {
         questions: [
           {
-            question: "A 100 MB log file made of repetitive event lines compresses with ZIP to 5 MB. A 100 MB file of random sensor noise barely compresses. The most accurate explanation is ___",
+            question: "A lossless algorithm compresses a 100 MB log file made of repetitive event lines to 5 MB. The same algorithm barely compresses a 100 MB file of random sensor noise. The most accurate explanation is ___",
             options: [
-              "ZIP only works on text files and refuses to operate on numeric data.",
-              "lossless methods need repeated patterns, and the sensor readings lack them.",
+              "the algorithm only works on text files and refuses to operate on numeric data.",
+              "compression needs repeated patterns, and the sensor readings lack them.",
               "the sensor file must be corrupted, so the compressor skipped most of it.",
               "the log file was compressed with a lossy method that dropped some lines."
             ],
@@ -165,7 +165,7 @@ RLE wins on data with long runs and loses on data without them. Compression is *
             question: "A web service stores user-uploaded photos. Storage costs are large. The most reasonable design choice is ___",
             options: [
               "store the originals with no compression so quality is always at its maximum.",
-              "keep the original and a smaller JPEG copy, using each where it fits.",
+              "keep the original and a smaller lossy copy, using each where it fits.",
               "silently delete all photos after a fixed number of days to free up disk space.",
               "switch the upload protocol from TCP to UDP to reduce server storage cost."
             ],

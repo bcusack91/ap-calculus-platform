@@ -25,22 +25,22 @@ Final review.
       exercise: {
         questions: [
           {
-            question: "A photograph stored as a JPEG, then decoded back ___",
+            question: "A photograph compressed with a lossy algorithm, then decoded back ___",
             options: [
-              "equals the original bit-for-bit because JPEG is a lossless format like PNG.",
-              "is approximately the original, because JPEG is a lossy format that discards detail.",
+              "equals the original bit-for-bit because decoding reverses every step exactly.",
+              "is approximately the original, because some detail was discarded to save space.",
               "becomes plain text consisting of the RGB value of every pixel in the image.",
               "is encrypted with a symmetric cipher whose key is embedded in the file header."
             ],
             correctAnswer: 1,
-            explanation: "JPEG is lossy."
+            explanation: "Lossy compression keeps only an approximation, so the decoded photo is close to the original but not identical. Only lossless compression guarantees a bit-for-bit round trip."
           },
           {
-            question: "A 100 KB plaintext file losslessly compressed to a 30 KB ZIP and decompressed ___",
+            question: "A 100 KB plaintext file losslessly compressed to 30 KB and then decompressed ___",
             options: [
-              "equals the original 100 KB plaintext bit-for-bit because ZIP is a lossless format.",
-              "is approximately the original because ZIP discards detail to save space.",
-              "is encrypted with a symmetric cipher whose key is embedded in the ZIP header.",
+              "equals the original 100 KB plaintext bit-for-bit because the compression is lossless.",
+              "is approximately the original because the compression discarded detail to save space.",
+              "is encrypted with a symmetric cipher whose key is embedded in the compressed file.",
               "is corrupted because losslessly compressing plaintext can never round-trip cleanly."
             ],
             correctAnswer: 0,
@@ -83,19 +83,19 @@ Final review.
       content: `
 **Applied Recall** ✍️
 
-1) JPEG is _______ compression.
+1) A photo-sharing app accepts a small loss of image detail to make files much smaller. It uses _______ compression.
 
-2) PNG is _______ compression.
+2) A program's source code must be restored exactly after it is decompressed. It needs _______ compression.
 
 3) Data about data, such as the date a photo was taken, are called _______.
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ["lossy", "lossless", "metadata"],
-        hint1: "Photos.",
-        hint2: "Web graphics.",
+        hint1: "Some detail is given up for size.",
+        hint2: "Nothing can be lost.",
         hint3: "\"Meta\" means about.",
-        explanation: "JPEG = lossy, PNG = lossless. Metadata describe other data."
+        explanation: "Accepting some loss for smaller files = lossy. Exact restoration = lossless. Metadata describe other data."
       }
     },
     {
@@ -148,12 +148,12 @@ Final review.
       exercise: {
         questions: [
           {
-            question: "A user worries that saving a photo as a JPEG, opening it, and saving it again as a JPEG lowers its quality each time. The most accurate response is ___",
+            question: "A user worries that saving a photo with lossy compression, opening it, and saving it again with lossy compression lowers its quality each time. The most accurate response is ___",
             options: [
-              "no — JPEG is a lossless format and repeated saving always preserves the original.",
+              "no — the second save repeats the same steps, so it always preserves the first version.",
               "yes — each lossy save discards more detail, so edit a lossless copy and export once.",
-              "yes — JPEG adds random visual noise on purpose every time the file is saved again.",
-              "no — a file's name never changes, so the data inside the JPEG never changes either."
+              "yes — lossy compression adds random visual noise on purpose every time a file is saved.",
+              "no — a file's name never changes, so the data inside the file never changes either."
             ],
             correctAnswer: 1,
             explanation: "Each lossy compression keeps only an approximation, so repeated saves lose more detail; keeping a lossless original avoids this."

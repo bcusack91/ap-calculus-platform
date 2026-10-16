@@ -1363,7 +1363,7 @@ export const registryChunk1: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'Polar Coordinate System', loader: () => import('./precalc-polar-coordinates-precalc-part1').then(m => m.precalcPolarPart1Data) },
       { title: 'Polar Curves — Basic Shapes', loader: () => import('./precalc-polar-coordinates-precalc-part2').then(m => m.precalcPolarPart2Data) },
-      { title: 'Converting Polar ↔ Rectangular Equations', loader: () => import('./precalc-polar-coordinates-precalc-part3').then(m => m.precalcPolarPart3Data) },
+      { title: 'Complex Numbers in Polar Form', loader: () => import('./precalc-polar-coordinates-precalc-part3').then(m => m.precalcPolarPart3Data) },
       { title: 'Graphing Polar Equations by Hand', loader: () => import('./precalc-polar-coordinates-precalc-part4').then(m => m.precalcPolarPart4Data) },
       { title: 'Polar Function Graphs and Domain Restrictions', loader: () => import('./precalc-polar-coordinates-precalc-part5').then(m => m.precalcPolarPart5Data) },
       { title: 'Polar Rates of Change and Distance from the Origin', loader: () => import('./precalc-polar-coordinates-precalc-part6').then(m => m.precalcPolarPart6Data) },

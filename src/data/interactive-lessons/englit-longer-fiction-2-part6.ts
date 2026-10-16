@@ -24,7 +24,7 @@ export const englitLongerFiction2Part6Data = {
 |---|---|
 | Section I | 55 multiple-choice questions, 60 minutes, 45% of the score, in five passage sets |
 | Q2 (prose fiction analysis) | A passage of about a page with a prompt; you analyze how the writer's choices convey a complex idea |
-| Q3 (literary argument) | A prompt about an idea; you choose a novel or play you know well |
+| Q3 (literary argument) | A prompt about an idea; you choose a work of fiction you know well |
 | Scoring | Each essay 0-6: Row A thesis (0-1), Row B evidence and commentary (0-4), Row C sophistication (0-1) |
 `
     },

@@ -26,7 +26,7 @@ Smaller files mean:
 | Type | Data Loss? | Quality | Smaller? | Use Cases |
 |------|-----------|---------|----------|-----------|
 | **Lossless** | No — original perfectly restored | Identical to original | Moderate reduction | Text, code, spreadsheets, medical images |
-| **Lossy** | Yes — some data permanently removed | Slightly reduced | Much smaller | Photos (JPEG), music (MP3), video (MP4) |
+| **Lossy** | Yes — some data permanently removed | Slightly reduced | Much smaller | Photos, music and video for streaming or sharing |
 
 ### Lossless Example: Run-Length Encoding
 \`\`\`
@@ -35,8 +35,8 @@ Compressed: 3A3B2C6D
 \`\`\`
 The original can be perfectly reconstructed from the compressed version.
 
-### Lossy Example: JPEG Compression
-A photograph has millions of color values. JPEG removes subtle color differences that human eyes cannot easily detect. The file shrinks dramatically, but the removed data cannot be recovered.
+### Lossy Example: Compressing a Photo
+A photograph has millions of color values. A lossy image algorithm removes subtle color differences that human eyes cannot easily detect. The file shrinks dramatically, but the removed data cannot be recovered.
 
 > 🔑 **Lossless** = perfect reconstruction. **Lossy** = smaller file but permanent data loss. Choose based on whether quality loss is acceptable.
       `
@@ -69,7 +69,7 @@ A photograph has millions of color values. JPEG removes subtle color differences
               'Run-length encoding — music has long runs of identical samples'
             ],
             correctAnswer: 1,
-            explanation: 'Lossy compression (like MP3) removes frequencies most people cannot hear, dramatically reducing file size. For streaming where bandwidth matters, lossy is the standard choice.'
+            explanation: 'Lossy audio compression removes frequencies most people cannot hear, dramatically reducing file size. For streaming where bandwidth matters, lossy is the standard choice.'
           }
         ]
       }
@@ -119,7 +119,7 @@ Programs extract information from data with a few basic processes:
 
 1) Compression that can perfectly restore the original data is called _______ compression.
 
-2) MP3 audio files use _______ compression, permanently removing some frequencies.
+2) Compression that permanently removes some data, such as sound frequencies most listeners cannot hear, is called _______ compression.
 
 3) A chart that shows the relationship between two variables using dots is called a _______ plot.
       `,
@@ -129,7 +129,7 @@ Programs extract information from data with a few basic processes:
         hint1: 'No data is lost.',
         hint2: 'Some data is lost permanently.',
         hint3: 'Points are scattered across the graph.',
-        explanation: 'Lossless = perfect reconstruction. MP3 = lossy. Two-variable dot chart = scatter plot.'
+        explanation: 'Lossless = perfect reconstruction. Permanently removing data = lossy. Two-variable dot chart = scatter plot.'
       }
     },
     {
@@ -141,11 +141,11 @@ Programs extract information from data with a few basic processes:
       exercise: {
         dropdowns: [
           {
-            label: 'ZIP files use ___ compression (original files perfectly restored)',
+            label: 'A hospital archives X-ray images that must be restored exactly, so it should use ___ compression',
             options: ['Lossless', 'Lossy', 'No compression', 'Hybrid']
           },
           {
-            label: 'JPEG images use ___ compression (some color detail permanently removed)',
+            label: 'A video site wants the smallest files and accepts a slight loss of quality, so it should use ___ compression',
             options: ['Lossy', 'Lossless', 'No compression', 'Reversible']
           },
           {
@@ -154,10 +154,10 @@ Programs extract information from data with a few basic processes:
           }
         ],
         correctAnswers: ['Lossless', 'Lossy', 'Trends over time'],
-        hint1: 'ZIP must restore files perfectly.',
-        hint2: 'JPEG sacrifices quality for size.',
+        hint1: 'Exact restoration matters most.',
+        hint2: 'Small size matters most, and some quality loss is acceptable.',
         hint3: 'X-axis is usually time.',
-        explanation: 'ZIP = lossless. JPEG = lossy. Line graph = trends over time.'
+        explanation: 'Exact reconstruction needed = lossless. Smallest size with acceptable quality loss = lossy. Line graph = trends over time.'
       }
     },
     {
@@ -166,7 +166,7 @@ Programs extract information from data with a few basic processes:
       content: `
 ## AP Exam Strategy: Data Compression & Analysis
 
-- Know the difference: **lossless** (ZIP, PNG) vs **lossy** (JPEG, MP3, MP4)
+- Know the difference: **lossless** (perfect reconstruction) vs **lossy** (an approximation, usually much smaller). Exam questions describe the situation; they do not ask about specific file formats
 - Lossless for critical data (medical, legal, code). Lossy for media where small quality loss is acceptable
 - Run-length encoding is a simple example of lossless compression; the exam asks you to compare lossless and lossy, not to name specific algorithms
 - Data analysis questions test your ability to interpret visualizations and identify patterns
@@ -191,7 +191,7 @@ Programs extract information from data with a few basic processes:
               'The file is restored to its original quality on decompression'
             ],
             correctAnswer: 1,
-            explanation: 'Each round of lossy compression removes more data. Compressing an MP3 file again as a lower-bitrate MP3 removes additional frequencies. Quality only goes down, never up.'
+            explanation: 'Each round of lossy compression removes more data. Compressing already-compressed audio again with a lossy algorithm removes additional frequencies. Quality only goes down, never up.'
           },
           {
             question: 'Run-length encoding converts "AAAABBCC" to "4A2B2C". Which input would NOT benefit from this technique?',

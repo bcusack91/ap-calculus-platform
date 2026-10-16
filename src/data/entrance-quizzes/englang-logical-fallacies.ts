@@ -96,7 +96,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: "Reasoning Exposed in Real Texts: Lincoln's Fragment on Slavery and Plato's Euthyphro",
   },
 
-  // Part 4 — Connections & Interactions
+  // Part 4 — Evaluating a Line of Reasoning: Assumptions, Objections, and Mill's The Subjection of Women (1869)
   {
     id: 'englang-logical-fallacies-ent-4a',
     question: "\"The new reading app does not help students: in its first week of use, our class's reading scores did not rise at all.\" The argument assumes that",
@@ -109,7 +109,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: "Deny that one week is enough time and the flat scores no longer show the app fails, so the argument depends on that assumption. Cost, preferences and training may matter, but the argument as stated does not need any of them.",
     partNumber: 4,
-    partTitle: "Connections & Interactions",
+    partTitle: "Evaluating a Line of Reasoning: Assumptions, Objections, and Mill's The Subjection of Women (1869)",
   },
   {
     id: 'englang-logical-fallacies-ent-4b',
@@ -123,10 +123,10 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: "Experience can rank two methods only if both have been tried; a long record with one method shows survival, not superiority. Popularity, a few unpopular members and other towns' calendars leave that hidden assumption untouched.",
     partNumber: 4,
-    partTitle: "Connections & Interactions",
+    partTitle: "Evaluating a Line of Reasoning: Assumptions, Objections, and Mill's The Subjection of Women (1869)",
   },
 
-  // Part 5 — Change Over Time
+  // Part 5 — Nuance and Misconceptions: Over-Diagnosing, "Not Shown" vs. "Shown False," and Schopenhauer's Art of Controversy
   {
     id: 'englang-logical-fallacies-ent-5a',
     question: "A columnist supports a later school start time using only the fact that a famous actor endorses it. A reader writes back: \"So a later start time must be a bad idea.\" What is wrong with the reader's conclusion?",
@@ -139,7 +139,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: "Showing that the columnist's support is thin leaves the question open; the idea may still be right for other reasons. Celebrity support proves little, personal attacks would add a new fallacy, and popularity is not a test of truth.",
     partNumber: 5,
-    partTitle: "Change Over Time",
+    partTitle: "Nuance and Misconceptions: Over-Diagnosing, \"Not Shown\" vs. \"Shown False,\" and Schopenhauer's Art of Controversy",
   },
   {
     id: 'englang-logical-fallacies-ent-5b',
@@ -153,7 +153,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: "Citing a qualified expert speaking within her field, about her own inspection, is legitimate evidence. Calling every expert citation a fallacy over-diagnoses, and the other options give the wrong reasons for the verdict.",
     partNumber: 5,
-    partTitle: "Change Over Time",
+    partTitle: "Nuance and Misconceptions: Over-Diagnosing, \"Not Shown\" vs. \"Shown False,\" and Schopenhauer's Art of Controversy",
   },
 
   // Part 6 — Exam Practice: Franklin's 1790 Satire, Revising Faulty Sentences, and a Sound Argument Essay
@@ -226,8 +226,8 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
     { partNumber: 1, partTitle: "Core Concepts" },
     { partNumber: 2, partTitle: "Three Ways Reasoning Breaks, and the Legitimate Moves Fallacies Imitate" },
     { partNumber: 3, partTitle: "Reasoning Exposed in Real Texts: Lincoln's Fragment on Slavery and Plato's Euthyphro" },
-    { partNumber: 4, partTitle: "Connections & Interactions" },
-    { partNumber: 5, partTitle: "Change Over Time" },
+    { partNumber: 4, partTitle: "Evaluating a Line of Reasoning: Assumptions, Objections, and Mill's The Subjection of Women (1869)" },
+    { partNumber: 5, partTitle: "Nuance and Misconceptions: Over-Diagnosing, \"Not Shown\" vs. \"Shown False,\" and Schopenhauer's Art of Controversy" },
     { partNumber: 6, partTitle: "Exam Practice: Franklin's 1790 Satire, Revising Faulty Sentences, and a Sound Argument Essay" },
     { partNumber: 7, partTitle: "Synthesis Review: From Spotting Fallacies to Evaluating Reasoning" },
   ]

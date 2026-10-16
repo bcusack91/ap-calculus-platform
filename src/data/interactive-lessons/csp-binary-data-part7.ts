@@ -109,11 +109,11 @@ Final cheat sheet of the binary and data-representation facts most tested on the
       exercise: {
         dropdowns: [
           {
-            label: "PNG is a ___ image format",
+            label: "Compression that lets an image be rebuilt exactly, pixel for pixel, is ___",
             options: ["lossless", "lossy", "vector", "perceptual"]
           },
           {
-            label: "JPEG is a ___ image format",
+            label: "Compression that makes an image much smaller but keeps only an approximation is ___",
             options: ["lossy", "lossless", "vector", "uncompressed"]
           },
           {
@@ -122,10 +122,10 @@ Final cheat sheet of the binary and data-representation facts most tested on the
           }
         ],
         correctAnswers: ["lossless", "lossy", "round-off error"],
-        hint1: "PNG round-trips perfectly.",
-        hint2: "JPEG sacrifices fidelity for size.",
+        hint1: "An exact round trip means nothing was lost.",
+        hint2: "Giving up fidelity for size is the trade-off.",
         hint3: "Real numbers are stored as approximations.",
-        explanation: "PNG = lossless, JPEG = lossy. A fixed number of bits can only approximate many real numbers, which causes round-off error."
+        explanation: "Exact reconstruction = lossless; an approximation = lossy. A fixed number of bits can only approximate many real numbers, which causes round-off error."
       }
     },
     {

@@ -183,9 +183,10 @@ A **subsidy** is a per-unit payment from the government to producers or consumer
 
 ### Quotas
 A **quota** limits the quantity of a good that can be produced or imported:
-- Creates an artificial shortage → raises price
-- Benefits domestic producers at expense of consumers
-- Creates deadweight loss similar to a tariff
+- A binding quota caps the quantity sold below the equilibrium quantity
+- At that quantity, buyers are willing to pay more than before, so the price **rises** until the quantity demanded equals the capped quantity; the market clears, so there is no persistent shortage (unlike a price ceiling, which holds price down while Qd > Qs)
+- Benefits producers who hold the quota rights at the expense of consumers
+- Creates deadweight loss, because units whose marginal benefit exceeds marginal cost are no longer traded
 
 ### Tariffs
 A **tariff** is a tax on imports:

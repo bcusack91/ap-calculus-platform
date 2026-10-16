@@ -574,7 +574,7 @@ The sign chart for $\\dfrac{x-3}{x+1}$ is $+,\\,-,\\,+$ across critical numbers 
 
 ---
 
-> 🔑 **The Setup Step:** Real problems rarely arrive as "fraction $> 0$." You'll see things like $\\dfrac{5}{x} \\ge 2$ or $\\dfrac{1}{x-1} < \\dfrac{2}{x}$. The **first move is always the same**: move *everything* to one side and combine into a single fraction compared with $0$. Only then do you build the sign chart.`,
+> 🔑 **The Setup Step:** Real problems rarely arrive as "fraction $> 0$." You'll see things like $\\dfrac{5}{x} \\ge 2$, where a fraction is compared with a number instead of $0$. The **first move is always the same**: get a single rational expression on one side and $0$ on the other. Only then do you build the sign chart.`,
       },
       {
         id: 'sri5-onefraction',
@@ -634,31 +634,37 @@ $$\\boxed{\\left(0,\\;\\tfrac{5}{2}\\right]}$$
 > 💡 **Sanity check** $x=1$: $\\dfrac{5}{1} = 5 \\ge 2$ ✓. And $x=4$: $\\dfrac{5}{4} = 1.25 \\not\\ge 2$ ✓ (correctly excluded).`,
       },
       {
-        id: 'sri5-twofrac',
+        id: 'sri5-factored',
         type: 'text' as const,
-        content: `## Two Fractions: Same Idea
+        content: `## Several Factors in One Expression
 
-### Example: $\\dfrac{1}{x-1} < \\dfrac{2}{x}$
+### Example: $\\dfrac{2 - x}{x(x-1)} < 0$
 
-Move everything left and use the common denominator $x(x-1)$:
+This inequality already has one rational expression on the left and $0$ on the right, so go straight to the critical numbers. Set **every** factor of the numerator and the denominator equal to $0$:
 
-$$\\frac{1}{x-1} - \\frac{2}{x} < 0 \\;\\Longrightarrow\\; \\frac{x - 2(x-1)}{x(x-1)} < 0 \\;\\Longrightarrow\\; \\frac{x - 2x + 2}{x(x-1)} < 0 \\;\\Longrightarrow\\; \\frac{-x + 2}{x(x-1)} < 0$$
+| Factor | Zero at | Role |
+|--------|---------|------|
+| $2 - x$ (numerator) | $x = 2$ | zero of the expression |
+| $x$ (denominator) | $x = 0$ | expression undefined |
+| $x - 1$ (denominator) | $x = 1$ | expression undefined |
 
-So $\\dfrac{2 - x}{x(x-1)} < 0$. Critical numbers: numerator $x=2$; denominators $x=0$ and $x=1$.
+Three critical numbers split the number line into **four** intervals: $(-\\infty, 0)$, $(0, 1)$, $(1, 2)$ and $(2, \\infty)$. The sign of the expression can change only at these three numbers, so one test value per interval tells you the sign of the whole interval.
 
-> ⚠️ **Don't forget a denominator factor!** Both $x$ and $x-1$ create undefined points. Three critical numbers here means **four** intervals to test.`,
+> ⚠️ **Don't forget a denominator factor!** Both $x$ and $x-1$ create undefined points, and each one is a boundary on the sign chart even though it can never be in the solution.
+
+> 💡 AP Precalculus rational inequalities give you one rational expression, or one fraction against a constant; you will not need to combine two fractions over a common denominator.`,
       },
       {
-        id: 'sri5-twofrac-check',
+        id: 'sri5-factored-check',
         type: 'multiple-choice' as const,
         content: `**Concept Check** 🎯`,
         exercise: {
           questions: [
             {
-              question: 'When combining $\\dfrac{1}{x-1} - \\dfrac{2}{x}$ over the common denominator $x(x-1)$, the numerator is:',
-              options: ['$x - 2(x-1) = -x + 2$', '$1 - 2 = -1$', '$x - 2x = -x$', '$2(x-1) - x = x - 2$'],
+              question: 'In $\\dfrac{2-x}{x(x-1)} \\le 0$, which critical numbers are excluded from the solution set?',
+              options: ['$0$ and $1$ only', '$2$ only', '$0$, $1$, and $2$', 'None of them'],
               correctAnswer: 0,
-              explanation: 'Scale each fraction: $\\frac{1}{x-1}=\\frac{x}{x(x-1)}$ and $\\frac{2}{x}=\\frac{2(x-1)}{x(x-1)}$. Subtract numerators: $x - 2(x-1) = x - 2x + 2 = -x + 2$.',
+              explanation: 'The expression is undefined at $x = 0$ and $x = 1$, so they are always excluded. At $x = 2$ the expression equals $0$, which satisfies $\\le 0$, so $2$ is included. With a strict $<$, the $2$ would be excluded as well.',
             },
             {
               question: 'For $\\dfrac{2-x}{x(x-1)} < 0$, how many critical numbers (and thus intervals) are there?',
@@ -670,9 +676,9 @@ So $\\dfrac{2 - x}{x(x-1)} < 0$. Critical numbers: numerator $x=2$; denominators
         },
       },
       {
-        id: 'sri5-twofrac-finish',
+        id: 'sri5-factored-finish',
         type: 'dropdown-select' as const,
-        content: `**Finish the Two-Fraction Problem** 🔽
+        content: `**Finish the Sign Chart** 🔽
 
 Solve $\\dfrac{2-x}{x(x-1)} < 0$. Critical numbers in order: $0,\\,1,\\,2$. Fill in each interval's sign (test points $x=-1,\\,0.5,\\,1.5,\\,3$).`,
         exercise: {
@@ -686,7 +692,7 @@ Solve $\\dfrac{2-x}{x(x-1)} < 0$. Critical numbers in order: $0,\\,1,\\,2$. Fill
           hint1: 'At $x=-1$: $2-x=3\\,(+)$, $x=-1\\,(-)$, $x-1=-2\\,(-)$. Two negatives → $+$.',
           hint2: 'At $x=0.5$: $2-x=1.5\\,(+)$, $x=0.5\\,(+)$, $x-1=-0.5\\,(-)$. One negative → $-$.',
           hint3: 'At $x=1.5$: $2-x=0.5\\,(+)$, $x=1.5\\,(+)$, $x-1=0.5\\,(+)$. Zero negatives → $+$. At $x=3$: $2-x=-1\\,(-)$, rest positive → $-$.',
-          explanation: 'Signs: $x=-1\\to(+)/[(-)(-)]=+$; $x=0.5\\to(+)/[(+)(-)]=-$; $x=1.5\\to(+)/[(+)(+)]=+$; $x=3\\to(-)/[(+)(+)]=-$. Pattern $+,-,+,-$. We want $<0$, so the solution is $(0,1)\\cup(2,\\infty)$ — all endpoints excluded (strict, and $0,1$ undefined).',
+          explanation: 'Signs: $x=-1\\to(+)/[(-)(-)]=+$; $x=0.5\\to(+)/[(+)(-)]=-$; $x=1.5\\to(+)/[(+)(+)]=+$; $x=3\\to(-)/[(+)(+)]=-$. Pattern $+,-,+,-$. We want $<0$, so the solution is $(0,1)\\cup(2,\\infty)$, with all endpoints excluded (the inequality is strict, and $0$ and $1$ are undefined).',
         },
       },
     ],

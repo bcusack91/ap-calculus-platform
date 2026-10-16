@@ -522,9 +522,9 @@ $$\\text{Output gap} = Y - Y_f$$
 
 $$\\text{gap} = 9.4 - 10.0 = -0.6 \\text{ trillion}$$
 
-The economy is \\$0.6 trillion *below* potential — a **recessionary gap of \\$0.6 trillion**. (Later you'll see policy must raise AD by *less* than \\$0.6T because of the multiplier.)
+The economy is \\$0.6 trillion *below* potential — a **recessionary gap of \\$0.6 trillion**.
 
-> ⚠️ The output gap measures the *spending hole or excess*, but the AD shift needed to close it is **smaller** than the gap — the multiplier does the rest. That's Part 5.`,
+> ⚠️ To close this gap, AD must shift right by the size of the gap, \\$0.6 trillion. The **initial change in spending** needed is smaller than the gap, because the multiplier turns each dollar of new spending into a larger shift in AD. That's Part 5.`,
       },
       {
         id: 'adas4-gap-drill',
@@ -641,21 +641,23 @@ Use $\\text{Multiplier} = \\dfrac{1}{1 - MPC} = \\dfrac{1}{MPS}$.
         type: 'text' as const,
         content: `## From Initial Spending to Total AD Shift
 
-The full change in real GDP (the size of the AD shift) is:
+The multiplier gives the size of the **shift in AD** (the horizontal shift at the current price level):
 
-$$\\Delta Y = \\text{Multiplier} \\times \\Delta \\text{(initial spending)}$$
+$$\\Delta AD = \\text{Multiplier} \\times \\Delta \\text{(initial spending)}$$
 
 **Worked example.** The government spends an extra \\$50 billion and $MPC = 0.8$.
 
 $$\\text{Multiplier} = \\frac{1}{1 - 0.8} = 5$$
 
-$$\\Delta Y = 5 \\times \\$50\\text{B} = \\$250\\text{ billion}$$
+$$\\Delta AD = 5 \\times \\$50\\text{B} = \\$250\\text{ billion}$$
 
 So AD shifts right by **\\$250 billion**, not just the original \\$50 billion.
 
-> 🔑 **Closing a gap.** To erase a \\$250B recessionary gap with $MPC = 0.8$ (multiplier $5$), the government needs an initial spending increase of only
+> 🔑 **Closing a gap.** To erase a \\$250B recessionary gap, AD must shift right by \\$250B. With $MPC = 0.8$ (multiplier $5$), the initial spending increase needed is only
 > $$\\frac{\\$250\\text{B}}{5} = \\$50\\text{ billion.}$$
-> Always divide the gap by the multiplier to find the required spending change.`,
+> Divide the gap by the multiplier to find the required **initial** spending change; the AD shift itself equals the gap.
+
+> 💡 **The price-level offset.** These calculations hold the price level constant, which is how AP questions on the multiplier are set up. On the AD–AS graph, SRAS slopes upward, so a rightward AD shift also raises the price level, and equilibrium real GDP rises by somewhat **less** than the AD shift.`,
       },
       {
         id: 'adas5-total-quiz',
@@ -667,13 +669,13 @@ So AD shifts right by **\\$250 billion**, not just the original \\$50 billion.
               question: 'With $MPC = 0.75$, an initial \\$40 billion increase in investment shifts AD to the right by approximately:',
               options: ['\\$160 billion', '\\$40 billion', '\\$53 billion', '\\$120 billion'],
               correctAnswer: 0,
-              explanation: 'Multiplier $= 1/(1-0.75) = 1/0.25 = 4$. $\\Delta Y = 4 \\times \\$40\\text{B} = \\$160$ billion. The \\$120 billion figure counts only the re-spending rounds and leaves out the initial \\$40 billion.',
+              explanation: 'Multiplier $= 1/(1-0.75) = 1/0.25 = 4$. AD shift $= 4 \\times \\$40\\text{B} = \\$160$ billion. The \\$120 billion figure counts only the re-spending rounds and leaves out the initial \\$40 billion.',
             },
             {
               question: 'An economy has a \\$300 billion recessionary gap and $MPC = 0.8$ (multiplier $= 5$). The required increase in government spending to close it is:',
               options: ['\\$60 billion', '\\$300 billion', '\\$1500 billion', '\\$240 billion'],
               correctAnswer: 0,
-              explanation: 'Required spending $=$ gap $\\div$ multiplier $= \\$300\\text{B} / 5 = \\$60$ billion. The multiplier amplifies that \\$60B back up to a \\$300B rise in GDP.',
+              explanation: 'Required spending $=$ gap $\\div$ multiplier $= \\$300\\text{B} / 5 = \\$60$ billion. The multiplier turns that \\$60B into a \\$300B rightward shift in AD, the size of the gap. Spending the full \\$300B would shift AD by \\$1500B.',
             },
           ],
         },
@@ -703,8 +705,9 @@ Pick the correct value for each scenario.`,
         content: `## Part 5 Recap
 
 - $MPC + MPS = 1$; multiplier $= \\dfrac{1}{1-MPC} = \\dfrac{1}{MPS}$.
-- Total AD shift $= \\text{multiplier} \\times \\text{initial spending}$.
-- Required spending to close a gap $=$ gap $\\div$ multiplier.
+- AD shift $= \\text{multiplier} \\times \\text{initial spending}$.
+- To close a gap, AD must shift by the size of the gap, so the required initial spending change $=$ gap $\\div$ multiplier.
+- These calculations hold the price level constant; with an upward-sloping SRAS, real GDP rises by somewhat less than the AD shift.
 
 > 💡 The multiplier is *why* small policy changes can move the whole AD curve. Now let's watch AD and AS shifts play out as the business cycle. 🔄`,
       },
@@ -822,7 +825,7 @@ Even with no policy, the economy drifts back to potential as wages adjust:
         type: 'input-boxes' as const,
         content: `**Size the Policy** 🧮
 
-Required spending change $=$ gap $\\div$ multiplier. Recall multiplier $= \\dfrac{1}{1 - MPC}$. Enter numbers in billions.
+To close a gap, AD must shift by the size of the gap, so the required **initial** change in spending $=$ gap $\\div$ multiplier. Recall multiplier $= \\dfrac{1}{1 - MPC}$. Enter numbers in billions.
 
 **1)** A \\$400B recessionary gap, $MPC = 0.75$ (multiplier $= 4$). Required increase in $G$ $= \\,?$
 **2)** A \\$200B inflationary gap, $MPC = 0.8$ (multiplier $= 5$). Required cut in $G$ $= \\,?$
@@ -833,7 +836,7 @@ Required spending change $=$ gap $\\div$ multiplier. Recall multiplier $= \\dfra
           hint1: 'Required spending $=$ gap $\\div$ multiplier $= 400 / 4$.',
           hint2: 'Closing a \\$200B gap with multiplier $5$: $200 / 5$.',
           hint3: '$MPC = 0.5 \\Rightarrow MPS = 0.5 \\Rightarrow 1/0.5 = 2$.',
-          explanation: '1) $400 / 4 = \\$100$B. 2) $200 / 5 = \\$40$B. 3) $1/(1-0.5) = 2$. Always divide the gap by the multiplier to find the spending change needed.',
+          explanation: '1) $400 / 4 = \\$100$B, which shifts AD right by $4 \\times 100 = \\$400$B. 2) $200 / 5 = \\$40$B, which shifts AD left by \\$200B. 3) $1/(1-0.5) = 2$. Divide the gap by the multiplier to find the initial spending change; the AD shift equals the gap.',
         },
       },
       {
@@ -879,7 +882,7 @@ You can now (1) explain why AD slopes down and what shifts it, (2) distinguish S
 | LRAS | Vertical at potential $Y_f$; shifts only with real capacity (growth) |
 | Equilibrium | AD = SRAS → equilibrium $PL$ and $Y$ |
 | Output gap | $Y - Y_f$ (negative = recessionary, positive = inflationary) |
-| Multiplier | $\\dfrac{1}{1-MPC} = \\dfrac{1}{MPS}$; $\\Delta Y = \\text{mult} \\times \\Delta\\text{spending}$ |
+| Multiplier | $\\dfrac{1}{1-MPC} = \\dfrac{1}{MPS}$; AD shift $= \\text{mult} \\times \\Delta\\text{spending}$ |
 | Demand shock | PL and $Y$ move the **same** way |
 | Supply shock | PL and $Y$ move **opposite** ways (left SRAS = stagflation) |
 
@@ -917,7 +920,7 @@ One question from each major idea.`,
           boxes: 3,
           correctAnswers: ['10', '200', '-0.3'],
           hint1: '$1/(1-0.9) = 1/0.1 = 10$.',
-          hint2: '$\\Delta Y = \\text{multiplier} \\times \\Delta G = 10 \\times 20 = 200$ (billion).',
+          hint2: 'AD shift $= \\text{multiplier} \\times \\Delta G = 10 \\times 20 = 200$ (billion).',
           hint3: '$9.7 - 10.0 = -0.3$ trillion → a recessionary gap.',
           explanation: '1) multiplier $= 1/0.1 = 10$. 2) $10 \\times \\$20\\text{B} = \\$200$ billion. 3) $9.7 - 10.0 = -0.3$T (recessionary gap).',
         },

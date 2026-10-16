@@ -74,7 +74,7 @@ Practice the calculations and design choices the AP exam asks under a time crunc
 - One photo: 1024 × 1024 × 3 ≈ 3 MB.
 - 10,000 photos: ~30 GB.
 
-**With JPEG (~10×):** ~3 GB.
+**With lossy compression that shrinks each photo about 10×:** ~3 GB.
 
 ## Worked: Conversions Both Ways
 

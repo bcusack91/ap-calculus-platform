@@ -15,7 +15,7 @@ export const englitLongerFictionPart7Data = {
 |---------|
 | 🧭 The Passage in Context |
 | The Passage |
-| Five Lenses From This Lesson |
+| Five Skills From This Lesson |
 | From Annotation to Thesis |
 | A Complexity Move: Reading the Interruption |
 | Mixed Review |
@@ -53,7 +53,7 @@ By Chapter 12, Jane is eighteen. She has survived the Reed household and eight y
       id: 'englitlo7-lenses',
       type: 'text' as const,
       content: `
-## Five Lenses From This Lesson
+## Five Skills From This Lesson
 
 ### 1. Setting and character (Part 4)
 
@@ -161,12 +161,12 @@ The thesis is defensible, specific to the passage, and contains a tension (quiet
       content: `
 ## A Complexity Move: Reading the Interruption
 
-Readers have long argued about the turn from Jane's protest to Grace Poole's laugh.
+The passage turns suddenly from Jane's protest to Grace Poole's laugh. A strong essay notices the turn and decides what it does, using the words on the page.
 
-- **One reading treats it as a flaw.** In *A Room of One's Own* (1929), Virginia Woolf quoted this passage and called the sudden arrival of Grace Poole's laugh an awkward break. She argued that Brontë's anger at the position of women had interrupted her story, so that the novelist wrote as a protester rather than as an artist.
-- **Another reading treats it as design.** The laugh comes from the attic where Bertha Mason is confined, so the interruption places Jane's argument next to its darkest example. Sandra Gilbert and Susan Gubar's study *The Madwoman in the Attic* (1979) influentially read Bertha as Jane's dark double, the rage that Jane herself must control.
+- **The turn can feel like a break.** The argument about "Millions" and "Women" stops at its height, and the narrative drops back to Jane, alone, hearing the laugh. A reader could fairly say the protest is cut off rather than concluded.
+- **The wording also links the two.** The protest's last sentence condemns those who "laugh at" women who "seek to do more"; the very next paragraph brings a laugh. It comes from the third storey, the most confined part of the house, and it is "the same peal," heard as habitually as Jane's own restless walks ("now and then," "not unfrequently"). These details tie the laugh to the restraint the argument has just described.
 
-A writer aiming at Row C can **account for both**: *Although the turn to the laugh can feel abrupt, its placement makes the passage's argument concrete, since the "silent revolt" Jane describes is heard, literally, a few doors away.* Acknowledging the alternative reading and answering it is one of the routes to sophistication named in the rubric.
+A writer aiming at Row C can **account for both**: *Although the turn to the laugh can feel abrupt, its placement makes the passage's argument concrete, since the "silent revolt" Jane describes is heard, literally, a few doors away.* Acknowledging an alternative reading and answering it with evidence from the passage is one of the routes to sophistication named in the rubric.
 
 ## Unit 3 at a Glance
 

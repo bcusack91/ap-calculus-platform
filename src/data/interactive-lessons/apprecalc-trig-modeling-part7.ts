@@ -62,18 +62,18 @@ A=3, B=2, D=1. Amplitude=3, Period=π, Midline: y=1 ✅
 
 1) Amplitude of $4\\cos(x)$?
 
-2) $\\sin^{-1}(1)$ in degrees?
+2) $\\sin^{-1}(1)$ in radians? (Enter like "pi/3")
 
 3) Midline of $\\sin(x) + 1$?
     
     `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["4","90","1"],
+        correctAnswers: ["4","pi/2","1"],
         hint1: "|A|.",
-        hint2: "sin(90°)=1.",
+        hint2: "$\\sin\\frac{\\pi}{2} = 1$, and $\\frac{\\pi}{2}$ is in the range of arcsine.",
         hint3: "D=1.",
-        explanation: "1) 4. 2) 90. 3) 1."
+        explanation: "1) 4. 2) $\\frac{\\pi}{2}$. 3) 1."
       }
     },
     {
@@ -100,7 +100,7 @@ A=3, B=2, D=1. Amplitude=3, Period=π, Midline: y=1 ✅
 |---|-------|---------|
 | 1 | Amplitude | $y = 4\\cos(x)$ |
 | 2 | Period of $\\sin(3x)$ | 2π/3 |
-| 3 | arcsin(1) | 90° |
+| 3 | arcsin(1) | $\\frac{\\pi}{2}$ |
     
     `
     },

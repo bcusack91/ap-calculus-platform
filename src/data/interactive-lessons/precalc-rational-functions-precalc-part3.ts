@@ -175,15 +175,15 @@ A hole is a **point**, not just an $x$-value. To find the full coordinates:
       exercise: {
         questions: [
           {
-            question: 'The function $f(x) = \\frac{x^3 - 8}{x - 2}$ has:',
+            question: 'The function $f(x) = \\frac{x^2 + x - 6}{x - 2}$ has:',
             options: [
               'A vertical asymptote at $x = 2$',
-              'A hole at $(2, 12)$',
-              'A hole at $(2, 4)$',
+              'A hole at $(2, 5)$',
+              'A hole at $(2, 0)$',
               'No discontinuity — $f(2)$ is defined'
             ],
             correctAnswer: 1,
-            explanation: '$x^3 - 8 = (x-2)(x^2 + 2x + 4)$ (difference of cubes). The $(x-2)$ cancels: $f(x) = x^2 + 2x + 4$ for $x \\neq 2$. At $x = 2$: $4 + 4 + 4 = 12$. Hole at $(2, 12)$.'
+            explanation: '$x^2 + x - 6 = (x-2)(x+3)$. The $(x-2)$ cancels: $f(x) = x + 3$ for $x \\neq 2$. At $x = 2$: $2 + 3 = 5$. Hole at $(2, 5)$. The factor cancels completely, so there is no vertical asymptote, and $(2, 0)$ comes from plugging $2$ into the numerator alone.'
           },
           {
             question: 'Which function has exactly one hole and one vertical asymptote?',

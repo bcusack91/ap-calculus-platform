@@ -6,7 +6,7 @@ import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  // Part 1 — The Imaginary Unit & Powers of $i$
+  // Part 1 — The Imaginary Unit & Square Roots of Negatives
   {
     id: 'cxn-ent-1a',
     question: 'Which number equals $\\dfrac{6 - \\sqrt{-20}}{2}$?',
@@ -19,7 +19,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: '$\\sqrt{-20} = i\\sqrt{20} = 2i\\sqrt{5}$, so the expression is $\\frac{6 - 2i\\sqrt{5}}{2} = 3 - i\\sqrt{5}$. Both terms of the numerator must be divided by $2$, and the $i$ cannot be dropped.',
     partNumber: 1,
-    partTitle: 'The Imaginary Unit & Powers of $i$',
+    partTitle: 'The Imaginary Unit & Square Roots of Negatives',
   },
   {
     id: 'cxn-ent-1b',
@@ -28,7 +28,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: 'Convert each root first: $\\sqrt{-4} = 2i$ and $\\sqrt{-25} = 5i$, so the product is $10i^2 = -10$. Combining under one root as $\\sqrt{100} = 10$ is invalid for negative radicands.',
     partNumber: 1,
-    partTitle: 'The Imaginary Unit & Powers of $i$',
+    partTitle: 'The Imaginary Unit & Square Roots of Negatives',
   },
 
   // Part 2 — Adding, Subtracting & Multiplying
@@ -51,7 +51,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: 'Adding, Subtracting & Multiplying',
   },
 
-  // Part 3 — Conjugates & Division
+  // Part 3 — Conjugates & Conjugate Zeros
   {
     id: 'cxn-ent-3a',
     question: 'What is the value of $(5 - 3i)(5 + 3i)$?',
@@ -59,7 +59,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: 'A number times its conjugate is $a^2 + b^2$: $25 - 15i + 15i - 9i^2 = 25 + 9 = 34$, a real number. Squaring $5 - 3i$ instead gives $16 - 30i$.',
     partNumber: 3,
-    partTitle: 'Conjugates & Division',
+    partTitle: 'Conjugates & Conjugate Zeros',
   },
   {
     id: 'cxn-ent-3b',
@@ -73,7 +73,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: '$3 - 2i$ is the conjugate of $3 + 2i$, and their product is $9 + 4 = 13$. The other products are $13i$, $5 + 12i$ and $12 - 5i$; swapping the real and imaginary parts does not make a conjugate.',
     partNumber: 3,
-    partTitle: 'Conjugates & Division',
+    partTitle: 'Conjugates & Conjugate Zeros',
   },
 
   // Part 4 — The Complex Plane & Modulus
@@ -198,9 +198,9 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'The Imaginary Unit & Powers of $i$' },
+    { partNumber: 1, partTitle: 'The Imaginary Unit & Square Roots of Negatives' },
     { partNumber: 2, partTitle: 'Adding, Subtracting & Multiplying' },
-    { partNumber: 3, partTitle: 'Conjugates & Division' },
+    { partNumber: 3, partTitle: 'Conjugates & Conjugate Zeros' },
     { partNumber: 4, partTitle: 'The Complex Plane & Modulus' },
     { partNumber: 5, partTitle: 'Polar (Trigonometric) Form' },
     { partNumber: 6, partTitle: 'Complex Roots of Quadratics' },

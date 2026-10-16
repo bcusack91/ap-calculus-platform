@@ -186,7 +186,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: "Q3 With a Novel: Preparing and Using a Long Work",
   },
 
-  // Part 7 — AP Review
+  // Part 7 — Unit 3 Synthesis: Reading a Passage From Jane Eyre
   {
     id: 'englit-longer-fiction-ent-7a',
     question: "Read the passage below, from a novel narrated by a retired schoolmaster.\n\n*Every September I swore I would not learn the new names, since in June they would only leave. By October I knew them all: which boy stammered on Mondays, which girl hid her lunch. My sister calls it a weakness to care for what cannot be kept. Thirty-one Septembers, and I have not cured it.*\n\nThe final two sentences chiefly suggest that",
@@ -199,7 +199,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: "He calls his care a weakness he has failed to cure for thirty-one years, so the joke admits that every vow of detachment ends in attachment. Nothing points to weariness, resentment of his sister or wounded pride.",
     partNumber: 7,
-    partTitle: "AP Review",
+    partTitle: "Unit 3 Synthesis: Reading a Passage From Jane Eyre",
   },
   {
     id: 'englit-longer-fiction-ent-7b',
@@ -213,7 +213,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: "This sentence concedes the critic's point and answers it with an interpretation, one of the routes to the sophistication point. The others simply agree, supply background, or label without arguing.",
     partNumber: 7,
-    partTitle: "AP Review",
+    partTitle: "Unit 3 Synthesis: Reading a Passage From Jane Eyre",
   },
 ]
 
@@ -229,6 +229,6 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
     { partNumber: 4, partTitle: "Reading a Novel Opening" },
     { partNumber: 5, partTitle: "Symbol, Motif and Theme Across a Novel" },
     { partNumber: 6, partTitle: "Q3 With a Novel: Preparing and Using a Long Work" },
-    { partNumber: 7, partTitle: "AP Review" },
+    { partNumber: 7, partTitle: "Unit 3 Synthesis: Reading a Passage From Jane Eyre" },
   ]
 }

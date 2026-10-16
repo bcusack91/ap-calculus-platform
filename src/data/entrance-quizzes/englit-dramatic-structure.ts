@@ -186,7 +186,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: "Drama on the AP Exam",
   },
 
-  // Part 7 — AP Review
+  // Part 7 — Dramatic Structure Synthesis: The Prayer Scene in Hamlet
   {
     id: 'englit-dramatic-structure-ent-7a',
     question: "In Act 2 of a play, a young clerk proudly tells his fiancée that he has burned the only letter that could ruin her father. The audience saw, in Act 1, the father's housekeeper copy that letter before handing it over.\n\nThe audience's knowledge chiefly creates",
@@ -199,7 +199,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: "The audience knows what the clerk does not: a copy survives, so his triumph is hollow. Because the copying happened in an earlier scene he did not witness, the knowledge belongs to the audience alone.",
     partNumber: 7,
-    partTitle: "AP Review",
+    partTitle: "Dramatic Structure Synthesis: The Prayer Scene in Hamlet",
   },
   {
     id: 'englit-dramatic-structure-ent-7b',
@@ -213,7 +213,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: "This thesis connects the order of scenes (the copy shown first), the irony (only the audience knows) and the staging (a happy scene played under threat). The others summarize, list devices or pass judgment.",
     partNumber: 7,
-    partTitle: "AP Review",
+    partTitle: "Dramatic Structure Synthesis: The Prayer Scene in Hamlet",
   },
 ]
 
@@ -229,6 +229,6 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
     { partNumber: 4, partTitle: "Tragedy: Hamartia, Peripeteia, Anagnorisis and Catharsis" },
     { partNumber: 5, partTitle: "Dramatic Irony, Comic Structure and Staging" },
     { partNumber: 6, partTitle: "Drama on the AP Exam" },
-    { partNumber: 7, partTitle: "AP Review" },
+    { partNumber: 7, partTitle: "Dramatic Structure Synthesis: The Prayer Scene in Hamlet" },
   ]
 }

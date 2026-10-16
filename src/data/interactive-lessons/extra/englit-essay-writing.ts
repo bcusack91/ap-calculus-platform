@@ -45,9 +45,9 @@ The Free-Response section gives you **three** distinct essay prompts. You write 
 |---|-------------|--------------|-------------|
 | Q1 | **Poetry Analysis** | A printed poem | Analyze how poetic techniques convey meaning |
 | Q2 | **Prose Fiction Analysis** | A passage of prose | Analyze how literary techniques convey meaning |
-| Q3 | **Literary Argument** | A thematic prompt (no passage) | Argue a thesis using a novel/play *you* choose |
+| Q3 | **Literary Argument** | A thematic prompt (no passage) | Argue a thesis using a work of fiction *you* choose |
 
-> 💡 Q1 and Q2 are **closed-book** analyses of a text on the page. Q3 is an **open** argument — you supply the work from memory, so you must enter the exam with 3–4 novels or plays you know deeply.`,
+> 💡 Q1 and Q2 are **closed-book** analyses of a text on the page. Q3 is an **open** argument — you supply the work from memory, so you must enter the exam with 3–4 works of fiction you know deeply.`,
       },
       {
         id: 'lit1-prompt-match',
@@ -59,7 +59,7 @@ The Free-Response section gives you **three** distinct essay prompts. You write 
               question: 'Which Free-Response question does NOT provide a text on the page for you to analyze?',
               options: ['Q3, the Literary Argument', 'Q1, the Poetry Analysis', 'Q2, the Prose Fiction Analysis', 'All three provide a text'],
               correctAnswer: 0,
-              explanation: 'Q3 (Literary Argument) gives only a thematic prompt — you choose a novel or play from memory. Q1 and Q2 print a poem and a prose passage, respectively.',
+              explanation: 'Q3 (Literary Argument) gives only a thematic prompt — you choose a work of fiction from memory. Q1 and Q2 print a poem and a prose passage, respectively.',
             },
             {
               question: 'Roughly how many minutes should you spend on each of the three essays?',
@@ -802,12 +802,12 @@ Match each demand to the essay it describes.`,
         exercise: {
           dropdowns: [
             { label: 'Analyze a printed prose passage\'s narrative craft:', options: ['Q2 Prose', 'Q1 Poetry', 'Q3 Literary Argument'] },
-            { label: 'Argue a thesis about a novel you supply from memory:', options: ['Q3 Literary Argument', 'Q1 Poetry', 'Q2 Prose'] },
+            { label: 'Argue a thesis about a work of fiction you supply from memory:', options: ['Q3 Literary Argument', 'Q1 Poetry', 'Q2 Prose'] },
             { label: 'Analyze how a printed poem\'s devices create meaning:', options: ['Q1 Poetry', 'Q2 Prose', 'Q3 Literary Argument'] },
           ],
           correctAnswers: ['Q2 Prose', 'Q3 Literary Argument', 'Q1 Poetry'],
           hint1: 'A printed prose passage with narrative craft = Q2.',
-          hint2: 'No passage, choose your own novel = Q3.',
+          hint2: 'No passage, choose your own work of fiction = Q3.',
           hint3: 'A printed poem = Q1.',
           explanation: 'Q1 = printed poem; Q2 = printed prose passage; Q3 = open argument on a chosen work.',
         },
@@ -967,7 +967,7 @@ Answer all three to finish the lesson.`,
             {
               question: 'Which best describes the Q3 Literary Argument essay?',
               options: [
-                'You argue a thesis about a novel or play you choose, with no passage given',
+                'You argue a thesis about a work of fiction you choose, with no passage given',
                 'You analyze how a printed poem\'s devices create meaning, using its lines as evidence',
                 'You analyze a printed prose passage\'s narrative craft and its effect on meaning',
                 'You summarize the plot of a novel you choose and explain why it is worth reading',

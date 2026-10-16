@@ -41,29 +41,29 @@ const questions: EntranceQuizQuestion[] = [
     question: 'Which describes the graph of $r = 2 - 4\\cos\\theta$?',
     options: ['A circle of diameter $4$', 'A limaçon with an inner loop', 'A cardioid', 'A rose with $4$ petals'],
     correctIndex: 1,
-    explanation: 'This is $r = a - b\\cos\\theta$ with $\\frac{a}{b} = \\frac{2}{4} < 1$, so $r$ changes sign and the curve has an inner loop. A cardioid needs $a = b$, and a rose needs $\\cos(n\\theta)$ with no constant term.',
+    explanation: 'As $\\theta$ goes around, $r$ runs from $2 - 4 = -2$ (at $\\theta = 0$) to $2 + 4 = 6$ (at $\\theta = \\pi$). Because $r$ is negative for some angles, those points plot on the opposite ray and trace an inner loop. A cardioid would have a smallest $r$ of exactly $0$, and a rose needs $\\cos(n\\theta)$ with no constant term.',
     partNumber: 2,
     partTitle: 'Polar Curves — Basic Shapes',
   },
 
-  // Part 3 — Converting Polar ↔ Rectangular Equations
+  // Part 3 — Complex Numbers in Polar Form
   {
     id: 'pcp-ent-3a',
-    question: 'Which rectangular equation is equivalent to $r = 8\\sin\\theta$?',
-    options: ['$x^2 + y^2 = 64$', '$x^2 + y^2 = 8x$', '$x^2 + (y - 8)^2 = 64$', '$x^2 + y^2 = 8y$'],
-    correctIndex: 3,
-    explanation: 'Multiply by $r$: $r^2 = 8r\\sin\\theta$, so $x^2 + y^2 = 8y$, a circle with center $(0, 4)$ and radius $4$. The equation $x^2 + y^2 = 64$ would be $r = 8$, a circle centered at the pole.',
+    question: 'Write $6\\cos\\frac{5\\pi}{6} + i \\cdot 6\\sin\\frac{5\\pi}{6}$ in the form $a + bi$.',
+    options: ['$3\\sqrt{3} - 3i$', '$-3 + 3\\sqrt{3}\\,i$', '$-3\\sqrt{3} + 3i$', '$3\\sqrt{3} + 3i$'],
+    correctIndex: 2,
+    explanation: '$a = 6\\cos\\frac{5\\pi}{6} = 6\\left(-\\frac{\\sqrt{3}}{2}\\right) = -3\\sqrt{3}$ and $b = 6\\sin\\frac{5\\pi}{6} = 6\\cdot\\frac{1}{2} = 3$. Swapping sine and cosine gives $-3 + 3\\sqrt{3}\\,i$, and dropping the sign of the cosine gives $3\\sqrt{3} + 3i$.',
     partNumber: 3,
-    partTitle: 'Converting Polar ↔ Rectangular Equations',
+    partTitle: 'Complex Numbers in Polar Form',
   },
   {
     id: 'pcp-ent-3b',
-    question: 'Which polar equation is equivalent to $x^2 + y^2 = 10x$?',
-    options: ['$r = 10\\cos\\theta$', '$r^2 = 10\\cos\\theta$', '$r = \\sqrt{10\\cos\\theta}$', '$r = 10r\\cos\\theta$'],
-    correctIndex: 0,
-    explanation: 'Substitute $r^2 = x^2 + y^2$ and $x = r\\cos\\theta$: $r^2 = 10r\\cos\\theta$. Dividing by $r$ gives $r = 10\\cos\\theta$, which still includes the pole (at $\\theta = \\frac{\\pi}{2}$). Writing $r^2 = 10\\cos\\theta$ replaces $x$ with $\\cos\\theta$ and drops the factor $r$.',
+    question: 'The complex number $z = -3 - 3\\sqrt{3}\\,i$ is written as $r\\cos\\theta + i\\,r\\sin\\theta$ with $r > 0$. Which angle $\\theta$, with $0 \\le \\theta < 2\\pi$, should be used?',
+    options: ['$\\frac{\\pi}{3}$', '$\\frac{2\\pi}{3}$', '$\\frac{4\\pi}{3}$', '$\\frac{5\\pi}{3}$'],
+    correctIndex: 2,
+    explanation: 'The real part is negative, so $\\theta = \\arctan\\frac{-3\\sqrt{3}}{-3} + \\pi = \\arctan\\sqrt{3} + \\pi = \\frac{\\pi}{3} + \\pi = \\frac{4\\pi}{3}$, in Quadrant III. The angle $\\frac{\\pi}{3}$ is arctangent alone, which points into Quadrant I.',
     partNumber: 3,
-    partTitle: 'Converting Polar ↔ Rectangular Equations',
+    partTitle: 'Complex Numbers in Polar Form',
   },
 
   // Part 4 — Graphing Polar Equations by Hand
@@ -155,7 +155,7 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
   return [
     { partNumber: 1, partTitle: 'Polar Coordinate System' },
     { partNumber: 2, partTitle: 'Polar Curves — Basic Shapes' },
-    { partNumber: 3, partTitle: 'Converting Polar ↔ Rectangular Equations' },
+    { partNumber: 3, partTitle: 'Complex Numbers in Polar Form' },
     { partNumber: 4, partTitle: 'Graphing Polar Equations by Hand' },
     { partNumber: 5, partTitle: 'Polar Function Graphs and Domain Restrictions' },
     { partNumber: 6, partTitle: 'Polar Rates of Change and Distance from the Origin' },

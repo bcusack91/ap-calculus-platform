@@ -115,15 +115,15 @@ $$f(x) = \\frac{3(x - 1)}{x + 2}$$
             explanation: 'Need: $(x+3)$ in both for hole, $(x-2)$ in denominator for VA, $\\deg(p) < \\deg(q)$ for HA $y = 0$. After simplification: $\\frac{a}{x-2}$. At $x = 0$: $\\frac{a}{-2} = 1$, so $a = -2$. This gives $\\frac{-2(x+3)}{(x-2)(x+3)}$.'
           },
           {
-            question: 'Solve $\\frac{x}{x-2} = \\frac{2}{x-2} + 1$. The solution set is:',
+            question: 'Using the zeros of the numerator and denominator as endpoints, solve $\\frac{x - 4}{x + 1} < 0$.',
             options: [
-              '$\\{4\\}$',
-              '$\\{2\\}$',
-              '$\\{2, 4\\}$',
-              'All reals except $x = 2$'
+              '$(-\\infty, -1) \\cup (4, \\infty)$',
+              '$[-1, 4)$',
+              '$(-1, 4)$',
+              '$(-1, 4]$'
             ],
-            correctAnswer: 3,
-            explanation: 'Multiply by $(x-2)$: $x = 2 + (x-2) = x$. This is an identity ($x = x$, always true). But $x = 2$ makes the original undefined. Solution: all reals except $2$.'
+            correctAnswer: 2,
+            explanation: 'The numerator is $0$ at $x = 4$ and the denominator at $x = -1$. Test each interval: $x = -2$ gives $\\frac{-6}{-1} > 0$, $x = 0$ gives $\\frac{-4}{1} < 0$, and $x = 5$ gives $\\frac{1}{6} > 0$. The inequality is strict, so $4$ is excluded, and $-1$ is never included because the function is undefined there.'
           }
         ]
       }
