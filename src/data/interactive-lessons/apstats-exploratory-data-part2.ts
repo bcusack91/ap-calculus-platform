@@ -42,27 +42,27 @@ To compare distributions, use:
       id: 'exploratorydata-p2-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Histograms differ from bar charts because:',
-            options: ['Histograms have gaps between bars', 'Histograms are for quantitative data with no gaps', 'Bar charts are always vertical', 'Histograms only show frequencies'],
+            question: 'Histograms differ from bar charts because histograms:',
+            options: ['Have gaps between their bars', 'Display quantitative data', 'Must always be drawn vertically', 'Show counts but never proportions'],
             correctAnswer: 1,
-            explanation: 'Histograms: no gaps, quantitative data. Bar charts: gaps, categorical data.'
+            explanation: 'A histogram shows a quantitative variable split into ordered bins, so adjacent bars touch; a bar chart shows categories, with gaps between bars. Either graph can be drawn horizontally, and a histogram can show relative frequencies (proportions).'
           },
           {
             question: 'A back-to-back stemplot is used to:',
-            options: ['Display one data set', 'Compare two distributions', 'Show time series data', 'Display categorical data'],
+            options: ['Display a single data set', 'Compare two distributions', 'Show data collected over time', 'Display a categorical variable'],
             correctAnswer: 1,
-            explanation: 'Back-to-back stemplots share stems and have leaves going in opposite directions for two groups.'
+            explanation: 'Back-to-back stemplots share one column of stems, with each group\'s leaves going out in opposite directions, so two quantitative distributions can be compared. A single stemplot is enough for one data set, and stemplots do not show time order or categories.'
           },
           {
             question: 'Which display preserves individual data values?',
             options: ['Histogram', 'Boxplot', 'Stemplot', 'Pie chart'],
             correctAnswer: 2,
-            explanation: 'Stemplots show each individual value; histograms and boxplots group data into intervals or quartiles.'
+            explanation: 'Stemplots show each individual value; histograms group data into bins, boxplots show only the five-number summary (and outliers), and pie charts are for categorical data.'
           }
         ]
       }

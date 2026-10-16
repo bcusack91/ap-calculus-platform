@@ -34,7 +34,13 @@ $$\\bar{X} \\sim N\\left(\\mu, \\frac{\\sigma}{\\sqrt{n}}\\right) \\text{ (appro
 
 ### Why It Matters
 
-Even if data is skewed, the distribution of sample means will be approximately normal for large $n$. This is why so many inference procedures use the normal distribution.`
+Even if data is skewed, the distribution of sample means will be approximately normal for large $n$. This is why so many inference procedures use the normal distribution.
+
+---
+
+### Seeing a Sampling Distribution by Simulation
+
+A sampling distribution is the distribution of a statistic over **all possible samples** of a given size. You can approximate it by simulation: assume a value for the parameter, generate many random samples, compute the statistic for each one, and graph the results. The larger the sample size in each simulated sample, the closer the dotplot of $\\bar{x}$ values looks to a normal curve.`
     },
     {
       id: 'apstats-samplingdistributions-p1-mcq1',
@@ -46,21 +52,21 @@ Even if data is skewed, the distribution of sample means will be approximately n
         questions: [
           {
             question: 'The Central Limit Theorem says that for large $n$, the sampling distribution of $\\bar{x}$ is approximately:',
-            options: ['Uniform', 'Normal', 'Skewed right', 'The same shape as the population'],
+            options: ['Uniform', 'Normal', 'Skewed right', 'Bimodal'],
             correctAnswer: 1,
-            explanation: 'The CLT guarantees approximate normality of the sampling distribution of $\\bar{x}$ for large $n$, regardless of the population shape.'
+            explanation: 'The CLT says the sampling distribution of $\\bar{x}$ is approximately normal for large $n$, whatever the shape of the population. It does not stay skewed, become uniform or split into two peaks as $n$ grows.'
           },
           {
             question: 'As sample size $n$ increases, the standard deviation of $\\bar{x}$:',
             options: ['Increases', 'Decreases', 'Stays the same', 'Becomes zero'],
             correctAnswer: 1,
-            explanation: '$\\sigma_{\\bar{x}} = \\sigma/\\sqrt{n}$. As $n$ increases, the denominator grows, so the SD decreases.'
+            explanation: '$\\sigma_{\\bar{x}} = \\sigma/\\sqrt{n}$. As $n$ increases the denominator grows, so the SD decreases, but it never reaches zero for a finite sample.'
           },
           {
             question: 'If the population SD is $\\sigma = 20$ and $n = 100$, the standard error is:',
             options: ['$20$', '$2$', '$0.2$', '$200$'],
             correctAnswer: 1,
-            explanation: '$\\sigma_{\\bar{x}} = 20/\\sqrt{100} = 20/10 = 2$.'
+            explanation: '$\\sigma_{\\bar{x}} = 20/\\sqrt{100} = 20/10 = 2$. Dividing by $n$ instead of $\\sqrt{n}$ gives 0.2, and 20 forgets to divide at all.'
           }
         ]
       }

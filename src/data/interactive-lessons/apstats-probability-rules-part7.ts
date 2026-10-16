@@ -94,9 +94,9 @@ $$P(\\text{HW}) = 0.60 \\neq 0.75 = P(\\text{HW}|\\text{E})$$
           },
           {
             question: '$P(A \\cap B) = 0.15$, $P(B) = 0.3$. $P(A|B) =$',
-            options: ['$0.45$', '$2.0$', '$0.5$', '$0.15$'],
+            options: ['$0.45$', '$2.00$', '$0.5$', '$0.15$'],
             correctAnswer: 2,
-            explanation: '$P(A|B) = \\frac{0.15}{0.3} = 0.5$.'
+            explanation: '$P(A|B) = \\frac{0.15}{0.3} = 0.5$. 2.00 divides in the wrong order, 0.45 adds, and 0.15 is the joint probability.'
           }
         ]
       }
@@ -177,29 +177,29 @@ $$P(\\text{HW}) = 0.60 \\neq 0.75 = P(\\text{HW}|\\text{E})$$
             question: '$P(A) = 0.6$, $P(B) = 0.4$, mutually exclusive. $P(A \\cup B) =$',
             options: ['$0.24$', '$0.76$', '$1.00$', '$0.20$'],
             correctAnswer: 2,
-            explanation: 'ME: $P(A \\cup B) = P(A) + P(B) = 0.6 + 0.4 = 1.0$.'
+            explanation: 'ME: $P(A \\cup B) = P(A) + P(B) = 0.6 + 0.4 = 1.0$. 0.24 multiplies (an independence calculation), and 0.76 subtracts an overlap that does not exist.'
           },
           {
             question: '$P(A) = 0.3$, $P(B) = 0.5$, independent. $P(A \\cap B) =$',
-            options: ['$0.8$', '$0.15$', '$0.2$', '$0.35$'],
+            options: ['$0.8$', '$0.15$', '$0.2$', '$0.3$'],
             correctAnswer: 1,
-            explanation: 'Independent: $P(A \\cap B) = 0.3 \\times 0.5 = 0.15$.'
+            explanation: 'Independent: $P(A \\cap B) = 0.3 \\times 0.5 = 0.15$. 0.8 adds the probabilities, 0.2 subtracts them, and 0.3 is just $P(A)$.'
           },
           {
             question: '$P(A \\cap B) = 0.12$, $P(B) = 0.4$. $P(A|B) =$',
             options: ['$0.30$', '$0.48$', '$0.12$', '$0.52$'],
             correctAnswer: 0,
-            explanation: '$P(A|B) = \\frac{0.12}{0.4} = 0.30$.'
+            explanation: '$P(A|B) = \\frac{0.12}{0.4} = 0.30$. 0.48 multiplies by 0.4 instead of dividing, and 0.12 is the joint probability.'
           },
           {
             question: '$P(\\text{defect}) = 0.02$, 3 independent items. $P(\\text{at least one defect}) \\approx$',
             options: ['$0.06$', '$0.0588$', '$0.9412$', '$0.000008$'],
             correctAnswer: 1,
-            explanation: '$P(\\text{none}) = 0.98^3 \\approx 0.9412$. At least one: $1 - 0.9412 = 0.0588$.'
+            explanation: '$P(\\text{none}) = 0.98^3 \\approx 0.9412$. At least one: $1 - 0.9412 = 0.0588$. 0.06 adds $0.02$ three times (double-counting), and 0.000008 is the chance that all three are defective.'
           },
           {
             question: 'Events A and B with $P(A) = 0.5$, $P(B) = 0.3$. If mutually exclusive, are they independent?',
-            options: ['Yes', 'No — ME events (with P > 0) are never independent', 'Sometimes', 'Cannot determine'],
+            options: ['Yes, both are known', 'No, since knowing $A$ rules out $B$', 'Yes, since $0.5 + 0.3 < 1$', 'Only if $P(A \\cap B) = 0.15$'],
             correctAnswer: 1,
             explanation: 'ME with $P > 0$: knowing $A$ happened means $B$ didn\'t → dependent.'
           },
@@ -207,29 +207,29 @@ $$P(\\text{HW}) = 0.60 \\neq 0.75 = P(\\text{HW}|\\text{E})$$
             question: '$P(A) = 0.5$, $P(B) = 0.6$, $P(A \\cap B) = 0.3$. $P(A \\cup B) =$',
             options: ['$1.1$', '$0.8$', '$0.3$', '$0.5$'],
             correctAnswer: 1,
-            explanation: '$P(A \\cup B) = 0.5 + 0.6 - 0.3 = 0.8$.'
+            explanation: '$P(A \\cup B) = 0.5 + 0.6 - 0.3 = 0.8$. 1.1 forgets to subtract the overlap, which would give an impossible probability.'
           },
           {
             question: 'Bag: 8 red, 2 blue. Draw 2 with replacement. $P(\\text{both red}) =$',
             options: ['$0.64$', '$0.80$', '$56/90$', '$0.16$'],
             correctAnswer: 0,
-            explanation: 'With replacement → independent: $0.8 \\times 0.8 = 0.64$.'
+            explanation: 'With replacement the draws are independent: $0.8 \\times 0.8 = 0.64$. 56/90 uses $7/9$ for the second draw, which applies only without replacement, and 0.16 is the chance of one red and one blue in a given order.'
           },
           {
             question: 'A student is selected. $P(\\text{athlete}) = 0.4$, $P(\\text{honor roll}|\\text{athlete}) = 0.6$. $P(\\text{athlete AND honor roll}) =$',
             options: ['$1.0$', '$0.24$', '$0.67$', '$0.40$'],
             correctAnswer: 1,
-            explanation: '$P(A \\cap H) = P(A) \\cdot P(H|A) = 0.4 \\times 0.6 = 0.24$.'
+            explanation: '$P(A \\cap H) = P(A) \\cdot P(H|A) = 0.4 \\times 0.6 = 0.24$. 1.0 adds the values, and 0.67 divides 0.4 by 0.6.'
           },
           {
             question: '$P(A) = 0.4$, $P(B) = 0.5$, $P(A \\cap B) = 0.20$. Independent?',
-            options: ['No, product is different', 'Yes — $0.4 \\times 0.5 = 0.20 = P(A \\cap B)$', 'Only if ME', 'Cannot determine'],
+            options: ['No, since $0.4 + 0.5 \\neq 0.20$', 'Yes, since $0.4 \\times 0.5 = 0.20$', 'Only if they are mutually exclusive', 'Not without a two-way table'],
             correctAnswer: 1,
             explanation: '$P(A) \\cdot P(B) = 0.20 = P(A \\cap B)$ ✓ Independent!'
           },
           {
             question: 'In a two-way table, how do you check independence?',
-            options: ['Check if all cells are equal', 'Compare conditional proportions across categories', 'See if the total is 100%', 'Check if any cell is zero'],
+            options: ['Check whether all cells are equal', 'Compare conditional proportions', 'Check whether the grand total is 100%', 'Check whether any one cell is zero'],
             correctAnswer: 1,
             explanation: 'If $P(A|B) = P(A|B\\text{\' })$, the conditional proportions are equal → independent.'
           }

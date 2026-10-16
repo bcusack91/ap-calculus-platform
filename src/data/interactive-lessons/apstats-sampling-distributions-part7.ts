@@ -76,13 +76,13 @@ export const apStatsSamplingDistPart7Data = {
           },
           {
             question: 'Both $\\bar{x}$ and $\\hat{p}$ are:',
-            options: ['Parameters', 'Unbiased estimators', 'Always normally distributed', 'Constants'],
+            options: ['Parameters', 'Unbiased estimators', 'Always normal', 'Fixed constants'],
             correctAnswer: 1,
             explanation: 'Both are unbiased estimators: $E(\\bar{x}) = \\mu$ and $E(\\hat{p}) = p$. They are statistics (not parameters) and are only approximately normal when conditions are met.'
           },
           {
             question: 'A sample of $n = 10$ is drawn from a heavily right-skewed population. The sampling distribution of $\\bar{x}$ is:',
-            options: ['Exactly normal', 'Approximately normal by CLT', 'Likely right-skewed', 'Uniform'],
+            options: ['Exactly normal', 'Nearly normal', 'Likely still skewed', 'Skewed to the left'],
             correctAnswer: 2,
             explanation: 'With $n = 10$ (small) and a heavily skewed population, the CLT does not apply. The sampling distribution will still be skewed.'
           }
@@ -132,21 +132,21 @@ export const apStatsSamplingDistPart7Data = {
           {
             id: 'sd7-dd1',
             label: '"Average test scores of 50 randomly selected students" → use the sampling distribution of ___',
-            options: ['$\\bar{x}$', '$\\hat{p}$'],
+            options: ['$\\bar{x}$', '$\\hat{p}$', '$s$', '$\\hat{p}_1 - \\hat{p}_2$'],
             correctIndex: 0,
             explanation: 'Test scores are quantitative, so we use the sampling distribution of the sample mean $\\bar{x}$.'
           },
           {
             id: 'sd7-dd2',
             label: '"Proportion of 200 voters who support a candidate" → use the sampling distribution of ___',
-            options: ['$\\bar{x}$', '$\\hat{p}$'],
+            options: ['$\\bar{x}$', '$\\hat{p}$', '$s$', '$\\bar{x}_1 - \\bar{x}_2$'],
             correctIndex: 1,
             explanation: 'Support/not support is categorical, so we use the sampling distribution of the sample proportion $\\hat{p}$.'
           },
           {
             id: 'sd7-dd3',
             label: '"The distribution is approximately normal because $n = 50 \\geq 30$" is the ___ condition',
-            options: ['Random', '10%', 'Normal/Large Sample'],
+            options: ['Random', '10%', 'Normal/Large Sample', 'Expected counts'],
             correctIndex: 2,
             explanation: 'Citing $n \\geq 30$ and the CLT is the Normal/Large Sample condition check.'
           },
@@ -170,7 +170,7 @@ export const apStatsSamplingDistPart7Data = {
         questions: [
           {
             question: 'The Central Limit Theorem is important because it:',
-            options: ['Proves all populations are normal', 'Allows us to use normal-based inference even for non-normal populations', 'Eliminates the need for random sampling', 'Works only for proportions'],
+            options: ['Proves that all populations are normal', 'Allows normal-based inference for non-normal populations', 'Eliminates the need for random sampling', 'Applies only to sample proportions'],
             correctAnswer: 1,
             explanation: 'The CLT says the sampling distribution of $\\bar{x}$ is approximately normal for large $n$, regardless of population shape. This enables $z$ and $t$ inference procedures.'
           },
@@ -182,9 +182,9 @@ export const apStatsSamplingDistPart7Data = {
           },
           {
             question: '55% of a population prefers candidate A ($p = 0.55$). In a poll of 600, $P(\\hat{p} < 0.50)$ is closest to:',
-            options: ['$0.0062$', '$0.0228$', '$0.1587$', '$0.3085$'],
+            options: ['$0.0069$', '$0.0228$', '$0.1587$', '$0.3085$'],
             correctAnswer: 0,
-            explanation: '$\\sigma_{\\hat{p}} = \\sqrt{0.55 \\times 0.45/600} = \\sqrt{0.000413} = 0.02031$. $z = (0.50-0.55)/0.02031 = -2.46$. $P(Z < -2.46) \\approx 0.0069$. Closest to $0.0062$.'
+            explanation: '$\\sigma_{\\hat{p}} = \\sqrt{0.55 \\times 0.45/600} = \\sqrt{0.0004125} \\approx 0.02031$. $z = (0.50-0.55)/0.02031 \\approx -2.46$, and $P(Z < -2.46) \\approx 0.0069$.'
           },
           {
             question: 'A researcher wants $SE_{\\bar{x}} \\leq 2$ with $\\sigma = 30$. Minimum $n$ is:',
@@ -194,19 +194,19 @@ export const apStatsSamplingDistPart7Data = {
           },
           {
             question: 'Which is an example of sampling variability?',
-            options: ['Different random samples give different values of $\\bar{x}$', 'A survey question is poorly worded', 'The sample is not randomly selected', 'The population standard deviation changes over time'],
+            options: ['Different random samples give different $\\bar{x}$ values', 'A survey question is worded in a leading way', 'The sample is chosen by convenience, not at random', 'The population standard deviation changes over time'],
             correctAnswer: 0,
             explanation: 'Sampling variability is the natural variation in a statistic from one random sample to the next. Different samples yield different $\\bar{x}$ values— this is normal and expected.'
           },
           {
             question: 'For $p = 0.80$ and $n = 50$: is the normal approximation for $\\hat{p}$ valid?',
-            options: ['Yes: $np = 40 \\geq 10$ and $n(1-p) = 10 \\geq 10$', 'No: $n(1-p) = 10$ is borderline', 'No: $np$ is too large', 'Yes: $n \\geq 30$'],
+            options: ['Yes, since $np = 40$ and $n(1-p) = 10$ are both at least 10', 'No, since $n(1-p) = 10$ is not greater than 10', 'No, since $np = 40$ is too large', 'Yes, since $n = 50 \\geq 30$'],
             correctAnswer: 0,
             explanation: '$np = 50(0.80) = 40 \\geq 10$ ✓ and $n(1-p) = 50(0.20) = 10 \\geq 10$ ✓ (exactly meets the threshold). The normal approximation is valid.'
           },
           {
             question: 'A biased sampling method with a large sample size will:',
-            options: ['Become unbiased as $n$ increases', 'Have small SE but estimates that miss the true parameter', 'Always give the correct answer', 'Fail the Normal condition'],
+            options: ['Become unbiased once the sample is large', 'Give precise but off-target estimates', 'Give estimates centered on the parameter', 'Fail the Normal condition for inference'],
             correctAnswer: 1,
             explanation: 'Bias is a systematic error that does not decrease with sample size. A large biased sample produces precise but inaccurate estimates (small SE, wrong center).'
           },
@@ -218,13 +218,13 @@ export const apStatsSamplingDistPart7Data = {
           },
           {
             question: 'If you know the population is perfectly normal, the CLT is:',
-            options: ['Still required for $n < 30$', 'Not needed — the sampling distribution is exactly normal for any $n$', 'Only valid if $n \\geq 30$', 'Irrelevant because parameters are known'],
+            options: ['Still required to make $\\bar{x}$ normal when $n < 30$', 'Not needed, since $\\bar{x}$ is normal for any $n$', 'Valid only once $n \\geq 30$', 'Irrelevant, since $\\sigma$ is known'],
             correctAnswer: 1,
             explanation: 'When the population is normal, $\\bar{x}$ follows an exact normal distribution for ANY sample size. The CLT is needed only for non-normal populations.'
           },
           {
             question: 'On the AP exam, the best way to describe a sampling distribution is:',
-            options: ['Just give the formula', 'State the shape, center, and spread with justification', 'Draw a picture', 'State the sample size'],
+            options: ['Give the formula for the standard deviation', 'Give shape, center and spread with reasons', 'Draw a sketch of the population distribution', 'Give the sample size and the population size'],
             correctAnswer: 1,
             explanation: 'AP rubrics award points for describing Shape (and why — CLT, population normal, etc.), Center ($\\mu$ or $p$), and Spread ($\\sigma/\\sqrt{n}$ or $\\sqrt{p(1-p)/n}$).'
           }

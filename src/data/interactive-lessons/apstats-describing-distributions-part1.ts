@@ -91,9 +91,9 @@ Every distribution of quantitative data should be described using **three featur
           },
           {
             question: 'In a right-skewed distribution, the mean is typically:',
-            options: ['Less than the median', 'Equal to the median', 'Greater than the median', 'Cannot be determined'],
+            options: ['Less than the median', 'Equal to the median', 'Greater than the median', 'Unrelated to the median'],
             correctAnswer: 2,
-            explanation: 'The mean is pulled toward the tail. In a right-skewed distribution, the tail extends right, so mean > median.'
+            explanation: 'The mean is pulled toward the tail. In a right-skewed distribution the tail extends toward larger values, so the mean is greater than the median. Less than goes with left skew and equal goes with symmetry.'
           },
           {
             question: 'Which measure of center is resistant to outliers?',
@@ -149,9 +149,9 @@ Every distribution of quantitative data should be described using **three featur
           {
             id: 'dd1-p1-1',
             label: 'For skewed data, the best measure of center is the ___',
-            options: ['Mean', 'Median', 'Range'],
+            options: ['Mean', 'Median', 'Maximum'],
             correctIndex: 1,
-            explanation: 'The median is resistant to skewness and outliers, making it better for skewed distributions.'
+            explanation: 'The median is resistant to skewness and outliers, making it better for skewed distributions. The mean is pulled toward the tail, and the maximum is not a measure of center.'
           },
           {
             id: 'dd1-p1-2',
@@ -163,9 +163,9 @@ Every distribution of quantitative data should be described using **three featur
           {
             id: 'dd1-p1-3',
             label: 'When describing a distribution on the AP exam, you should mention ___',
-            options: ['Only the center', 'Shape and center', 'Shape, center, spread, and outliers'],
-            correctIndex: 2,
-            explanation: 'AP rubrics require all four: shape, center, spread, and outliers (or stating there are none).'
+            options: ['Center, spread, units, context', 'Shape, center, spread, outliers', 'Shape, spread, units, context'],
+            correctIndex: 1,
+            explanation: 'AP rubrics require all four, in context: shape, center, spread and outliers (or stating there are none). Context and units matter, but leaving out shape or spread still makes the description incomplete.'
           }
         ]
       }
@@ -180,63 +180,63 @@ Every distribution of quantitative data should be described using **three featur
         questions: [
           {
             question: 'The IQR measures:',
-            options: ['The range of all data', 'The spread of the middle 50% of data', 'The distance from mean to median', 'The number of outliers'],
+            options: ['The range of all the data values', 'The spread of the middle 50%', 'The distance from mean to median', 'How many outliers the data have'],
             correctAnswer: 1,
-            explanation: 'IQR = Q3 − Q1, which captures the middle 50% of the data.'
+            explanation: 'IQR = Q3 − Q1, the spread of the middle 50% of the data. The spread of all the values is the range, the mean-to-median distance reflects skew, and the IQR helps flag outliers without counting them.'
           },
           {
             question: 'Which distribution feature can be described as "unimodal" or "bimodal"?',
             options: ['Center', 'Spread', 'Shape', 'Outliers'],
             correctAnswer: 2,
-            explanation: 'The number of peaks (modes) is a characteristic of the distribution\'s shape.'
+            explanation: 'The number of peaks is part of the shape of a distribution, along with symmetry or skew. Center and spread are measured with statistics, and outliers are individual unusual values.'
           },
           {
             question: 'Data: 10, 20, 30, 40, 200. The mean is ___ the median.',
-            options: ['Less than', 'Equal to', 'Greater than', 'Cannot determine'],
+            options: ['Less than', 'Equal to', 'Greater than', 'Half of'],
             correctAnswer: 2,
-            explanation: 'The outlier 200 pulls the mean up. Mean = 60, Median = 30, so mean > median.'
+            explanation: 'The outlier 200 pulls the mean up: mean = 300/5 = 60 while the median is the middle value, 30. So the mean is greater than the median (here it is twice the median, not half).'
           },
           {
             question: 'Which is NOT a measure of spread?',
             options: ['Range', 'IQR', 'Standard deviation', 'Median'],
             correctAnswer: 3,
-            explanation: 'Median is a measure of center, not spread.'
+            explanation: 'The median is a measure of center. The range, IQR and standard deviation all measure spread.'
           },
           {
             question: 'A symmetric distribution has:',
-            options: ['Mean much greater than median', 'Mean approximately equal to median', 'No center', 'IQR = 0'],
+            options: ['Mean far above the median', 'Mean roughly equal to the median', 'Mean far below the median', 'Median equal to the IQR'],
             correctAnswer: 1,
-            explanation: 'In a symmetric distribution, the mean and median are approximately equal.'
+            explanation: 'In a symmetric distribution, the mean and median are approximately equal. A mean much greater or much less than the median signals right or left skew, and the median and IQR measure different things.'
           },
           {
             question: 'Income data is typically:',
-            options: ['Symmetric', 'Left-skewed', 'Right-skewed', 'Uniform'],
+            options: ['Roughly symmetric', 'Left-skewed', 'Right-skewed', 'Roughly uniform'],
             correctAnswer: 2,
-            explanation: 'Income distributions are right-skewed because a few very high incomes pull the tail to the right.'
+            explanation: 'Income distributions are right-skewed because a few very high incomes stretch the tail toward larger values. Incomes cannot go far below zero, so there is no long left tail.'
           },
           {
             question: 'Q1 is the median of:',
-            options: ['All the data', 'The lower half of the data', 'The upper half of the data', 'The middle 50%'],
+            options: ['All the data', 'The lower half of the data', 'The top half of the data', 'The middle 50%'],
             correctAnswer: 1,
-            explanation: 'Q1 (first quartile) is the median of the data values below the overall median.'
+            explanation: 'Q1 (first quartile) is the median of the data values below the overall median. The median of the upper half is Q3, and the median of all the data is Q2.'
           },
           {
             question: 'Adding an outlier far above the data will:',
-            options: ['Increase the mean but not the median', 'Increase both mean and median equally', 'Decrease the mean', 'Not affect any measure'],
+            options: ['Raise the mean much more than the median', 'Raise both by equal amounts', 'Lower the mean but raise the median', 'Leave every summary statistic unchanged'],
             correctAnswer: 0,
-            explanation: 'The mean is sensitive to outliers (it increases), but the median stays at the middle position.'
+            explanation: 'The mean uses the outlier\'s value, so it rises noticeably; the median shifts by at most one position, so it barely changes. The mean cannot fall when a large value is added.'
           },
           {
             question: 'Standard deviation measures:',
-            options: ['The middle value', 'The typical distance of values from the mean', 'The difference between Q3 and Q1', 'The maximum value'],
+            options: ['The middle value of the ordered data', 'A typical distance of values from the mean', 'The difference between Q3 and Q1', 'The average of the squared values'],
             correctAnswer: 1,
-            explanation: 'SD measures how far data values typically are from the mean.'
+            explanation: 'SD measures how far data values typically are from the mean. The middle value is the median, Q3 − Q1 is the IQR, and the SD squares deviations from the mean, not the values themselves.'
           },
           {
             question: 'On the AP exam, a complete description of a distribution must include:',
-            options: ['Just the shape', 'Shape and a numerical summary', 'Shape, center, spread, and unusual features (outliers) in context', 'A histogram'],
-            correctAnswer: 2,
-            explanation: 'The AP rubric requires shape, center, spread, outliers, and context for full credit.'
+            options: ['Shape and center, stated in context', 'Shape, center, spread and unusual features in context', 'Center, spread and outliers, in context', 'A histogram plus the five-number summary'],
+            correctAnswer: 1,
+            explanation: 'The AP rubric requires shape, center, spread and unusual features such as outliers, all in context. Each other choice leaves out at least one feature, and a graph with statistics is not a written description.'
           }
         ]
       }

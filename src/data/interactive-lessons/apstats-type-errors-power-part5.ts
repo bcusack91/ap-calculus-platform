@@ -15,14 +15,11 @@ export const apStatsErrorsPart5Data = {
 Before collecting data, researchers should:
 1. **Specify** the smallest effect worth detecting
 2. **Choose** $\\alpha$ and desired power (often 0.80)
-3. **Calculate** the required sample size
+3. **Choose** a sample size large enough to give that power
 
 ### Example
 
-Want to detect a 5-point difference in test scores ($\\sigma = 20$).
-With $\\alpha = 0.05$ and power = 0.80:
-
-$$n \\approx \\left(\\frac{z_{\\alpha/2} + z_{\\beta}}{d}\\right)^2 = \\left(\\frac{1.96 + 0.84}{0.25}\\right)^2 \\approx 126 \\text{ per group}$$
+A school wants to know whether a new reading program raises mean test scores by at least 5 points. Scores vary a lot from student to student ($\\sigma \\approx 20$), so a 5-point gain is small compared with the spread. A study of 15 students per group would have low power: even if the program works, the test would probably fail to reject $H_0$. Planning a much larger study raises the power to an acceptable level (often 0.80). Statistical software finds the exact sample size; the AP exam asks only for the reasoning.
 
 ---
 
@@ -37,21 +34,21 @@ $$n \\approx \\left(\\frac{z_{\\alpha/2} + z_{\\beta}}{d}\\right)^2 = \\left(\\f
       id: 'typeerrorspower-p5-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'Power analysis should be done:',
-            options: ['After collecting data', 'Before designing the study', 'Only if the test is not significant', 'Never on the AP exam'],
+            options: ['After the data are collected', 'During study planning', 'Only if the test is not significant', 'Only when the result is significant'],
             correctAnswer: 1,
-            explanation: 'Power analysis is part of study planning to ensure adequate sample size.'
+            explanation: 'Power is considered while planning a study, so the sample is large enough to detect the effect that matters. Thinking about power only after a result does not change the data already collected.'
           },
           {
             question: 'A study with power = 0.30 that fails to reject $H_0$:',
-            options: ['Proves $H_0$ is true', 'Provides weak evidence because the test had poor power', 'Means the effect definitely doesn’t exist', 'Should use a smaller $\\alpha$'],
+            options: ['Proves that $H_0$ is true', 'Says little about whether an effect exists', 'Shows the effect does not exist', 'Should be rerun with a smaller $\\alpha$'],
             correctAnswer: 1,
-            explanation: 'Low power means the study probably couldn’t detect the effect even if it existed.'
+            explanation: 'With power 0.30, the study would usually miss a real effect, so failing to reject says little. It never proves $H_0$, and a smaller $\\alpha$ would lower power further.'
           },
           {
             question: 'To detect a smaller effect size, you need:',

@@ -15,11 +15,11 @@ export const apStatsChiSquarePart4Data = {
 | Section |
 |---------|
 | ✅ Three Conditions |
-| 📐 Degrees of Freedom for Each Test |
-| ⚠️ What to Do When Conditions Fail |
-| 📝 AP Exam Condition-Checking |
+| 📐 Degrees of Freedom |
+| 📈 How $df$ Changes the Distribution |
+| ⚠️ What to Do When a Condition Fails |
 
-> 🔑 **Key Concept:** All three chi-square tests (GoF, Independence, Homogeneity) require the same three conditions: Random, 10%, and Large Counts.
+> 🔑 **Key Concept:** Both chi-square tests (homogeneity and independence) require the same three conditions: Random, 10%, and Expected Counts.
 
 ---
 
@@ -27,21 +27,27 @@ export const apStatsChiSquarePart4Data = {
 
 | Condition | Requirement | AP Language |
 |-----------|-------------|-------------|
-| **Random** | Data from random sample or randomized experiment | "The problem states..." or "We are told..." |
-| **10%** | $n < 10\\%$ of the population (if sampling without replacement) | "$n$ is less than 10% of all [population]" |
-| **Large Counts** | **All expected counts $\\geq 5$** | "All expected counts are at least 5" ✓ |
+| **Random** | Independence test: a random sample. Homogeneity test: independent random samples or a randomized experiment | "The problem states..." or "We are told..." |
+| **10%** | When sampling without replacement, $n \\leq 10\\%$ of the population (not needed for a randomized experiment) | "$n$ is less than 10% of all [population]" |
+| **Expected Counts** | **All expected counts are greater than 5** | "All expected counts are greater than 5" ✓ |
 
-> ⚠️ **Critical AP Detail:** For chi-square, the Large Counts condition uses **expected** counts, NOT observed counts. This is different from the Large Counts condition for proportions ($n\\hat{p} \\geq 10$).
+> ⚠️ **Critical AP Detail:** For chi-square, the expected counts condition uses **expected** counts, NOT observed counts. This is different from the Large Counts condition for proportions ($np \\geq 10$ and $n(1-p) \\geq 10$).
 
 ---
 
-### Degrees of Freedom Summary
+### Degrees of Freedom
 
-| Test | $df$ Formula | Example |
-|------|-------------|---------|
-| Goodness of Fit | $k - 1$ (where $k$ = number of categories) | 6 sides of a die → $df = 5$ |
-| Independence | $(r-1)(c-1)$ | $3 \\times 4$ table → $df = 6$ |
-| Homogeneity | $(r-1)(c-1)$ | $2 \\times 3$ table → $df = 2$ |
+Both tests use the same formula:
+
+$$df = (\\text{number of rows} - 1)(\\text{number of columns} - 1)$$
+
+| Table | $df$ |
+|-------|------|
+| $2 \\times 2$ | $1$ |
+| $2 \\times 3$ | $2$ |
+| $3 \\times 4$ | $6$ |
+
+Count only the rows and columns of **categories**; the total row and total column are not part of the table's dimensions.
 
 ---
 
@@ -53,21 +59,21 @@ The $\\chi^2$ distribution changes shape with $df$:
 |------|-------|
 | $1$ | Strongly right-skewed |
 | $5$ | Moderately right-skewed |
-| $15+$ | More symmetric |
+| $15+$ | Much less skewed |
 
-Higher $df$ shifts the distribution to the right and increases the mean ($\\mu = df$).
+As $df$ increases, the skew becomes less pronounced and the curve spreads to the right, so the same $\\chi^2$ value gives a larger p-value when $df$ is larger.
 
 ---
 
-### What If Conditions Fail?
+### What If a Condition Fails?
 
 | Condition | If It Fails |
 |-----------|-------------|
-| Random | Results may not generalize — state the limitation |
-| 10% | Standard errors may be wrong — results are questionable |
-| Large Counts | Combine categories or use Fisher exact test (not on AP exam) |
+| Random | Results may not generalize to the population; state the limitation |
+| 10% | Observations are not independent enough; the p-value is questionable |
+| Expected Counts | The chi-square distribution may not describe the statistic well, so the p-value may be inaccurate |
 
-> 🔑 **AP Tip:** On the AP exam, if an expected count is below 5, you should note this but may still be asked to proceed with the test. State the concern and continue.`
+> 🔑 **AP Tip:** If an expected count is 5 or less, say that the condition is not met. If the problem asks you to proceed anyway, state the concern and continue with caution.`
     },
     {
       id: 'apstats-chisquaretests-p4-mcq1',
@@ -78,22 +84,22 @@ Higher $df$ shifts the distribution to the right and increases the mean ($\\mu =
       exercise: {
         questions: [
           {
-            question: 'The Large Counts condition for chi-square requires all ___ counts to be at least 5.',
-            options: ['Observed', 'Expected', 'Total', 'Row'],
+            question: 'The chi-square condition about counts requires every ___ count to be greater than 5.',
+            options: ['Observed', 'Expected', 'Marginal', 'Combined'],
             correctAnswer: 1,
-            explanation: 'The condition checks EXPECTED counts, not observed counts. All $E_i \\geq 5$.'
+            explanation: 'The condition checks EXPECTED counts, not observed counts: all expected counts must be greater than 5. Marginal totals are used to find the expected counts but are not what the condition checks.'
           },
           {
-            question: 'A GoF test with 5 categories has $df =$',
-            options: ['$5$', '$4$', '$6$', '$10$'],
+            question: 'A homogeneity test compares 3 treatment groups on an outcome with 4 categories. What is $df$?',
+            options: ['$12$', '$6$', '$11$', '$5$'],
             correctAnswer: 1,
-            explanation: 'GoF: $df = k - 1 = 5 - 1 = 4$.'
+            explanation: '$df = (3-1)(4-1) = 2 \\times 3 = 6$. Multiplying 3 by 4 gives 12, subtracting 1 from that gives 11, and adding $(3-1) + (4-1)$ gives 5.'
           },
           {
-            question: 'The mean of the $\\chi^2$ distribution equals:',
-            options: ['$0$', '$1$', '$df$', '$2 \\times df$'],
-            correctAnswer: 2,
-            explanation: 'The $\\chi^2$ distribution has mean $= df$ and variance $= 2 \\times df$.'
+            question: 'When is the 10% condition NOT needed for a chi-square test?',
+            options: ['When the data come from a randomized experiment', 'When every expected count is greater than 5', 'When the sample contains at least 30 people', 'When the table has more than two rows'],
+            correctAnswer: 0,
+            explanation: 'The 10% condition protects independence when sampling without replacement from a population; it is unnecessary for a randomized experiment. Large expected counts, a sample of 30 or a bigger table do not replace it.'
           }
         ]
       }
@@ -104,7 +110,7 @@ Higher $df$ shifts the distribution to the right and increases the mean ($\\mu =
       content: `
 **Degrees of Freedom Practice** 🧮
 
-**1)** GoF test with 8 categories: $df =$
+**1)** A two-way table has 2 rows and 6 columns. $df =$
 
 **2)** Independence test with a $5 \\times 3$ table: $df =$
 
@@ -113,9 +119,9 @@ Higher $df$ shifts the distribution to the right and increases the mean ($\\mu =
       exercise: {
         inputs: [
           {
-            label: 'df (GoF)',
-            correctAnswer: '7',
-            explanation: 'GoF: $df = k - 1 = 8 - 1 = 7$.'
+            label: 'df (2 × 6)',
+            correctAnswer: '5',
+            explanation: '$df = (2-1)(6-1) = 1 \\times 5 = 5$.'
           },
           {
             label: 'df (Independence)',
@@ -140,31 +146,31 @@ Higher $df$ shifts the distribution to the right and increases the mean ($\\mu =
         dropdowns: [
           {
             id: 'chi4-dd1',
-            label: 'Expected count of 3.2 → Large Counts condition is',
-            options: ['Met', 'Not met — expected count < 5'],
+            label: 'One expected count is 3.2 → the expected counts condition is',
+            options: ['Met', 'Not met', 'Met if that observed count is above 5', 'Not needed when the sample is random'],
             correctIndex: 1,
-            explanation: 'All expected counts must be $\\geq 5$. Since $3.2 < 5$, the condition fails.'
+            explanation: 'All expected counts must be greater than 5. Since $3.2 < 5$, the condition fails; a large observed count or a random sample does not fix a small expected count.'
           },
           {
             id: 'chi4-dd2',
-            label: 'All expected counts are 12 or higher → Large Counts is',
-            options: ['Met', 'Not met'],
+            label: 'All expected counts are 12 or higher → the expected counts condition is',
+            options: ['Met', 'Not met', 'Met only for a $2 \\times 2$ table', 'Not checked until after the test'],
             correctIndex: 0,
-            explanation: 'All expected counts $\\geq 5$ (in fact $\\geq 12$). The condition is satisfied.'
+            explanation: 'Every expected count is greater than 5 (in fact at least 12), so the condition is satisfied for a table of any size. Conditions are checked before the test is carried out.'
           },
           {
             id: 'chi4-dd3',
             label: 'A $\\chi^2$ distribution with $df = 1$ is',
-            options: ['Symmetric', 'Strongly right-skewed', 'Left-skewed', 'Uniform'],
+            options: ['Symmetric about its mean', 'Strongly right-skewed', 'Strongly left-skewed', 'Uniform from 0 to 1'],
             correctIndex: 1,
-            explanation: 'The $\\chi^2$ distribution with $df = 1$ is heavily right-skewed with a spike near 0.'
+            explanation: 'The $\\chi^2$ distribution with $df = 1$ is heavily right-skewed, with most of its area piled up near 0. Chi-square distributions are never symmetric, left-skewed or uniform.'
           },
           {
             id: 'chi4-dd4',
-            label: 'The 10% condition applies when',
-            options: ['Always', 'Only when sampling without replacement', 'Only for GoF tests', 'Never for chi-square'],
+            label: 'The 10% condition applies',
+            options: ['Whenever the data come from any study', 'When sampling without replacement', 'Only when an expected count is below 5', 'Only when the data come from an experiment'],
             correctIndex: 1,
-            explanation: 'The 10% condition ensures independence when sampling without replacement from a finite population.'
+            explanation: 'The 10% condition protects independence when sampling without replacement from a finite population. It is not needed for a randomized experiment and has nothing to do with the size of the expected counts.'
           }
         ]
       }
@@ -178,64 +184,64 @@ Higher $df$ shifts the distribution to the right and increases the mean ($\\mu =
       exercise: {
         questions: [
           {
-            question: 'Which is NOT a condition for the $\\chi^2$ test?',
-            options: ['Random', '10%', 'All expected counts $\\geq 5$', 'All observed counts $\\geq 10$'],
+            question: 'Which is NOT a condition for a chi-square test for homogeneity or independence?',
+            options: ['Data come from random sampling or random assignment', 'Sample is at most 10% of the population when sampling without replacement', 'All expected counts are greater than 5', 'All observed counts are at least 10'],
             correctAnswer: 3,
-            explanation: 'The condition involves EXPECTED counts $\\geq 5$, not observed counts $\\geq 10$.'
+            explanation: 'The count condition is about EXPECTED counts being greater than 5, not observed counts being at least 10. Randomness and the 10% condition (when sampling without replacement) are both required.'
           },
           {
-            question: 'A GoF test with 4 categories: $df =$',
-            options: ['$3$', '$4$', '$8$', '$16$'],
-            correctAnswer: 0,
-            explanation: '$df = k - 1 = 4 - 1 = 3$.'
+            question: 'A random sample of adults is classified by region (4 categories) and preferred news source (3 categories). What is $df$?',
+            options: ['$12$', '$6$', '$5$', '$11$'],
+            correctAnswer: 1,
+            explanation: '$df = (4-1)(3-1) = 3 \\times 2 = 6$. The product of the numbers of categories gives 12, one less than that gives 11, and adding $(4-1) + (3-1)$ gives 5.'
           },
           {
             question: 'An independence test has a $2 \\times 5$ table. $df =$',
             options: ['$10$', '$4$', '$9$', '$5$'],
             correctAnswer: 1,
-            explanation: '$df = (2-1)(5-1) = 1 \\times 4 = 4$.'
+            explanation: '$df = (2-1)(5-1) = 1 \\times 4 = 4$. The values 10 and 9 use the cell count instead, and 5 forgets to subtract 1 from the number of columns.'
           },
           {
-            question: 'If one expected count is 4.8 and all others exceed 10, the Large Counts condition:',
-            options: ['Is met — most counts are fine', 'Is not met — ALL must be $\\geq 5$', 'Is met — 4.8 rounds to 5', 'Does not apply'],
+            question: 'If one expected count is 4.8 and all others exceed 10, the expected counts condition:',
+            options: ['Is met, because most expected counts are large', 'Is not met, because every expected count must be above 5', 'Is met, because 4.8 rounds to 5', 'Does not apply when the sample is random'],
             correctAnswer: 1,
-            explanation: 'ALL expected counts must be at least 5. Even one count below 5 means the condition is not satisfied.'
+            explanation: 'ALL expected counts must be greater than 5, so a single count of 4.8 means the condition is not satisfied. Rounding does not rescue it, and random sampling is a separate condition.'
           },
           {
-            question: 'The $\\chi^2$ distribution with $df = 10$ has mean:',
-            options: ['$0$', '$5$', '$10$', '$20$'],
+            question: 'Two chi-square distributions have $df = 2$ and $df = 12$. Compared with the $df = 2$ curve, the $df = 12$ curve is:',
+            options: ['Less skewed and spread farther to the right', 'More skewed and piled up closer to 0', 'Symmetric and centered at 0', 'Identical in shape but shifted to the right'],
+            correctAnswer: 0,
+            explanation: 'Within the chi-square family, the right skew becomes less pronounced as $df$ grows, and the curve spreads to the right. It never becomes more skewed, symmetric about 0, or keeps the same shape.'
+          },
+          {
+            question: 'For a chi-square test for homogeneity, the randomization condition requires:',
+            options: ['One random sample with two variables recorded', 'Equal sample sizes in every group', 'Independent random samples or a randomized experiment', 'A sample of at least 30 from each group'],
             correctAnswer: 2,
-            explanation: 'Mean of $\\chi^2 = df = 10$.'
+            explanation: 'The homogeneity test needs independent random samples from the populations or random assignment to treatments. One sample with two variables is the independence design, and neither equal group sizes nor 30 per group is a chi-square condition.'
           },
           {
-            question: 'On the AP exam, checking conditions for a $\\chi^2$ test is worth:',
-            options: ['0 points', '1 point typically', '1–2 points', 'All the points'],
-            correctAnswer: 2,
-            explanation: 'The AP rubric typically allocates 1–2 points for correctly checking all three conditions.'
+            question: 'Which change would most directly raise the smallest expected count in a two-way table?',
+            options: ['Using a smaller significance level', 'Switching the rows and columns of the table', 'Using observed counts as the expected counts', 'Collecting a larger random sample'],
+            correctAnswer: 3,
+            explanation: 'Expected counts equal row total times column total divided by the table total, so they grow in proportion to the sample size. The significance level and the table orientation do not change them, and observed counts cannot stand in for expected counts.'
           },
           {
-            question: 'If the Large Counts condition fails, a common fix is:',
-            options: ['Use a $t$-test instead', 'Combine small categories', 'Ignore it — the test is robust', 'Double the sample size'],
+            question: 'A table has row totals 40 and 60 and column totals 30 and 70 (table total 100). What is the smallest expected count?',
+            options: ['$18$', '$12$', '$28$', '$30$'],
             correctAnswer: 1,
-            explanation: 'Combining adjacent or related categories can increase expected counts above 5.'
-          },
-          {
-            question: 'For a $\\chi^2$ GoF test, $k = 6$ and $n = 120$ with equal expected proportions. Each $E_i =$',
-            options: ['$6$', '$20$', '$120$', '$24$'],
-            correctAnswer: 1,
-            explanation: 'With equal proportions: $E_i = 120/6 = 20$ for each category.'
+            explanation: 'The smallest expected count pairs the smallest row and column totals: $(40)(30)/100 = 12$. The other cells are $(60)(30)/100 = 18$, $(40)(70)/100 = 28$ and $(60)(70)/100 = 42$; 30 is a column total, not an expected count.'
           },
           {
             question: 'As $df$ increases, the $\\chi^2$ distribution:',
-            options: ['Becomes more right-skewed', 'Becomes more symmetric and shifts right', 'Becomes narrower', 'Does not change'],
+            options: ['Becomes more strongly right-skewed', 'Becomes less skewed and shifts right', 'Becomes narrower and shifts left', 'Keeps the same shape and center'],
             correctAnswer: 1,
-            explanation: 'Higher $df$ makes the $\\chi^2$ distribution more symmetric with a higher mean ($= df$).'
+            explanation: 'Higher $df$ makes the right skew less pronounced and moves the bulk of the distribution to the right. It does not become more skewed, narrower or unchanged.'
           },
           {
             question: 'The $\\chi^2$ test is always:',
-            options: ['Two-tailed', 'Left-tailed', 'Right-tailed', 'Depends on $H_a$'],
+            options: ['Two-tailed', 'Left-tailed', 'Right-tailed', 'One- or two-tailed'],
             correctAnswer: 2,
-            explanation: 'Since $(O-E)^2$ is always $\\geq 0$, $\\chi^2 \\geq 0$. Large values (right tail) indicate poor fit / association.'
+            explanation: 'Since $(O-E)^2$ is always at least 0, $\\chi^2 \\geq 0$, and only large values (the right tail) indicate a difference in distributions or an association.'
           }
         ]
       }

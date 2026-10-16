@@ -101,9 +101,9 @@ Before collecting data, researchers choose $n$ to achieve desired power (typical
         questions: [
           {
             question: 'Power is the probability of:',
-            options: ['Making a Type I error', 'Failing to reject $H_0$', 'Correctly rejecting $H_0$ when it is false', 'Accepting $H_0$'],
+            options: ['Rejecting $H_0$ when it is true', 'Failing to reject $H_0$ when it is false', 'Rejecting $H_0$ when it is false', 'Failing to reject $H_0$ when it is true'],
             correctAnswer: 2,
-            explanation: 'Power $= P(\\text{reject } H_0 \\mid H_0 \\text{ false}) = 1 - \\beta$.'
+            explanation: 'Power $= P(\\text{reject } H_0 \\mid H_0 \\text{ false}) = 1 - \\beta$. Rejecting a true $H_0$ is a Type I error, and failing to reject a false $H_0$ is a Type II error.'
           },
           {
             question: 'Increasing the sample size:',
@@ -163,28 +163,28 @@ Before collecting data, researchers choose $n$ to achieve desired power (typical
           {
             id: 'cp5-dd1',
             label: 'Changing $\\alpha$ from 0.05 to 0.01 (with everything else fixed) ___ power',
-            options: ['increases', 'decreases', 'does not change'],
+            options: ['increases', 'decreases', 'does not change', 'doubles'],
             correctIndex: 1,
             explanation: 'Smaller $\\alpha$ = stricter rejection threshold = harder to reject = lower power.'
           },
           {
             id: 'cp5-dd2',
             label: 'The true difference between $\\mu_1$ and $\\mu_2$ is very large. Power is ___',
-            options: ['low', 'high'],
+            options: ['low', 'high', 'zero', 'equal to $\\alpha$'],
             correctIndex: 1,
             explanation: 'Large true effects are easier to detect, so power is high.'
           },
           {
             id: 'cp5-dd3',
             label: 'To reduce BOTH Type I and Type II error, you should ___',
-            options: ['decrease $\\alpha$', 'increase $\\alpha$', 'increase sample size'],
+            options: ['decrease $\\alpha$', 'increase $\\alpha$', 'increase the sample size', 'decrease the sample size'],
             correctIndex: 2,
             explanation: 'Changing $\\alpha$ trades one error for the other. Only increasing $n$ reduces both.'
           },
           {
             id: 'cp5-dd4',
             label: 'High variability ($\\sigma$) in the population ___ power',
-            options: ['increases', 'decreases', 'does not affect'],
+            options: ['increases', 'decreases', 'does not affect', 'doubles'],
             correctIndex: 1,
             explanation: 'More variability = more noise = harder to detect the signal = lower power.'
           }
@@ -201,13 +201,13 @@ Before collecting data, researchers choose $n$ to achieve desired power (typical
         questions: [
           {
             question: '$\\alpha = 0.05$ means:',
-            options: ['5% chance of Type II error', '5% chance of rejecting $H_0$ when it is true', '5% power', '5% of the data is wrong'],
+            options: ['5% chance of failing to reject a false $H_0$', '5% chance of rejecting $H_0$ when it is true', '5% chance that $H_0$ is true', '5% of the data are recorded wrongly'],
             correctAnswer: 1,
             explanation: '$\\alpha$ is the probability of a Type I error: rejecting a true $H_0$.'
           },
           {
             question: 'Power $= 0.90$ means:',
-            options: ['90% chance of making an error', '90% chance of detecting a real effect', '90% of the data supports $H_0$', '90% confidence level'],
+            options: ['90% chance of making a Type II error', '90% chance of detecting the effect', '90% chance that $H_a$ is true', '90% confidence in the interval'],
             correctAnswer: 1,
             explanation: 'Power = 0.90 means a 90% probability of correctly rejecting $H_0$ when it is false.'
           },
@@ -225,25 +225,25 @@ Before collecting data, researchers choose $n$ to achieve desired power (typical
           },
           {
             question: 'A drug trial fails to find a significant difference ($P = 0.12$). Which is most accurate?',
-            options: ['The drug does not work', 'We lack convincing evidence the drug works — the study may have had insufficient power', 'The drug is harmful', '$\\beta = 0.12$'],
+            options: ['The study proves that the drug does not work', 'No convincing evidence, maybe from low power', 'The trial shows that the drug is harmful to patients', 'The chance of a Type II error is exactly 0.12'],
             correctAnswer: 1,
             explanation: 'Failing to reject $H_0$ could mean no effect OR insufficient power to detect a real effect.'
           },
           {
             question: 'Increasing $n$ from 25 to 100 (per group) will:',
-            options: ['Quadruple the power', 'Approximately halve the SE', 'Have no effect', 'Double the $P$-value'],
+            options: ['Quadruple the power', 'Roughly halve the SE', 'Have no effect on SE', 'Double the $P$-value'],
             correctAnswer: 1,
             explanation: 'SE $\\propto 1/\\sqrt{n}$. Quadrupling $n$ halves SE, which substantially increases power.'
           },
           {
             question: 'Type I error is considered more serious in:',
-            options: ['All situations', 'Medical trials where a false positive could lead to adopting an ineffective treatment', 'Quality control where missing defects is the main risk', 'Never'],
+            options: ['Every possible situation', 'A trial where a false claim of benefit harms patients', 'Screening where missing a defect is the main risk', 'No situation, since both are equally serious'],
             correctAnswer: 1,
-            explanation: 'In medicine, falsely claiming a treatment works (Type I) can harm patients. Context determines which error is more serious.'
+            explanation: 'In a medical trial, falsely concluding a treatment works (Type I) can lead to adopting an ineffective treatment. In screening for defects, missing a real problem (Type II) is usually the bigger risk; context decides which error is more serious.'
           },
           {
             question: 'A test with power $= 0.50$ has a ___ chance of detecting a real effect.',
-            options: ['High (95%)', 'Moderate (50%)', 'Low (5%)', 'Zero'],
+            options: ['95%', '50%', '5%', '0%'],
             correctAnswer: 1,
             explanation: 'Power = 0.50 means only a 50/50 chance of detecting the effect — generally considered too low.'
           },
@@ -255,9 +255,9 @@ Before collecting data, researchers choose $n$ to achieve desired power (typical
           },
           {
             question: 'On the AP exam, you are expected to:',
-            options: ['Calculate power numerically for any significance test', 'Understand how $n$, $\\alpha$, effect size, and $\\sigma$ affect power conceptually', 'Design studies that reach a specified power level', 'Memorize power tables for the common significance tests'],
+            options: ['Calculate power numerically for any test', 'Explain how $n$ and $\\alpha$ change power', 'Design studies to reach a set power level', 'Memorize power tables for common tests'],
             correctAnswer: 1,
-            explanation: 'The AP exam asks conceptual reasoning about power: which factors increase it and why.'
+            explanation: 'The AP exam asks conceptual questions about power: what it means and how sample size, $\\alpha$, effect size and variability change it. Numerical power calculations and power tables are not expected.'
           }
         ]
       }

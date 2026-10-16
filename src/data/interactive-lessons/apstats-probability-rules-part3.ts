@@ -89,13 +89,13 @@ $$P(\\text{at least one 6}) = 1 - P(\\text{no 6s}) = 1 - \\left(\\frac{5}{6}\\ri
             question: '$P(A) = 0.3$, $P(B) = 0.4$, independent. $P(A \\cap B) =$',
             options: ['$0.70$', '$0.12$', '$0.10$', '$0.34$'],
             correctAnswer: 1,
-            explanation: 'Independent: $P(A \\cap B) = 0.3 \\times 0.4 = 0.12$.'
+            explanation: 'Independent: $P(A \\cap B) = 0.3 \\times 0.4 = 0.12$. 0.70 adds the probabilities (an "or" calculation without the overlap), and 0.10 subtracts them.'
           },
           {
             question: 'Drawing cards WITHOUT replacement makes events:',
             options: ['Independent', 'Dependent', 'Mutually exclusive', 'Complementary'],
             correctAnswer: 1,
-            explanation: 'Without replacement, the deck composition changes after each draw → dependent.'
+            explanation: 'Without replacement, the deck composition changes after each draw, so the second draw\'s probabilities depend on the first: dependent. The draws can still share outcomes, so they are not mutually exclusive.'
           },
           {
             question: 'The multiplication rule finds $P(A \\;\\rule{1.5em}{0.4pt}\\; B)$:',
@@ -158,14 +158,14 @@ $$P(\\text{at least one 6}) = 1 - P(\\text{no 6s}) = 1 - \\left(\\frac{5}{6}\\ri
           {
             id: 'pr3-dd2',
             label: 'For dependent events, we use $P(B|A)$ instead of $P(B)$ because:',
-            options: ['It is always larger', 'The first event changes the probabilities', 'The events are mutually exclusive', 'It simplifies the calculation'],
+            options: ['It is always the larger value', 'The first outcome changes the odds', 'The events are mutually exclusive', 'It makes the calculation simpler'],
             correctIndex: 1,
             explanation: 'Dependent: the outcome of $A$ changes the probability of $B$.'
           },
           {
             id: 'pr3-dd3',
             label: '"At least one" problems are best solved using:',
-            options: ['The addition rule', 'The complement: $1 - P(\\text{none})$', 'The multiplication rule only', 'A Venn diagram'],
+            options: ['The addition rule', 'The complement rule', 'The multiplication rule', 'A Venn diagram'],
             correctIndex: 1,
             explanation: '$P(\\text{at least one}) = 1 - P(\\text{none})$ avoids listing many cases.'
           }
@@ -190,55 +190,55 @@ $$P(\\text{at least one 6}) = 1 - P(\\text{no 6s}) = 1 - \\left(\\frac{5}{6}\\ri
             question: 'A bag has 3 red and 7 blue. Draw one, then another WITHOUT replacement. $P(\\text{both red}) =$',
             options: ['$3/10 \\times 3/10$', '$3/10 \\times 2/9$', '$3/10 \\times 2/10$', '$3/10 + 2/9$'],
             correctAnswer: 1,
-            explanation: 'Without replacement: $P(R_1) = 3/10$, $P(R_2|R_1) = 2/9$. $P = 3/10 \\times 2/9 = 6/90$.'
+            explanation: 'Without replacement: $P(R_1) = 3/10$, $P(R_2|R_1) = 2/9$, so $P = 3/10 \\times 2/9 = 6/90$. $3/10 \\times 3/10$ treats the draws as independent, and $2/10$ forgets that the bag now holds 9 marbles.'
           },
           {
             question: '$P(\\text{at least one 6 in 2 rolls}) =$',
-            options: ['$1/6 + 1/6$', '$1 - (5/6)^2$', '$(1/6)^2$', '$2/6$'],
+            options: ['$1/6 + 1/6$', '$1 - (5/6)^2$', '$(1/6)^2$', '$1 - (1/6)^2$'],
             correctAnswer: 1,
-            explanation: '$P(\\text{at least one}) = 1 - P(\\text{none}) = 1 - (5/6)^2 = 1 - 25/36 = 11/36$.'
+            explanation: '$P(\\text{at least one}) = 1 - P(\\text{none}) = 1 - (5/6)^2 = 1 - 25/36 = 11/36$. Adding $1/6 + 1/6$ double-counts rolling two 6s, $(1/6)^2$ is the chance of two 6s, and $1 - (1/6)^2$ is the chance of NOT getting two 6s.'
           },
           {
             question: 'Three independent events each have $P = 0.9$. $P(\\text{all three occur}) =$',
             options: ['$0.729$', '$0.900$', '$2.700$', '$0.271$'],
             correctAnswer: 0,
-            explanation: '$P = 0.9^3 = 0.729$.'
+            explanation: '$P = 0.9^3 = 0.729$. 2.700 adds the probabilities (impossible, since it exceeds 1), and 0.271 is the chance that at least one does NOT occur.'
           },
           {
             question: 'Which scenario involves independent events?',
-            options: ['Drawing 2 names from a hat (no replacement)', 'Rolling a die and flipping a coin', 'Selecting 2 students from a class of 10', 'Dealing 5 cards from a deck'],
+            options: ['Drawing 2 names from a hat', 'Rolling a die and flipping a coin', 'Selecting 2 of 10 students', 'Dealing 5 cards from a deck'],
             correctAnswer: 1,
-            explanation: 'Rolling and flipping use different devices — the outcomes don\'t affect each other.'
+            explanation: 'Rolling and flipping use different devices, so the outcomes do not affect each other. Drawing names, selecting students and dealing cards are all done without replacement from a small group, so each selection changes the next.'
           },
           {
             question: '$P(A) = 0.4$, $P(B|A) = 0.3$. $P(A \\cap B) =$',
             options: ['$0.70$', '$0.12$', '$0.10$', '$0.75$'],
             correctAnswer: 1,
-            explanation: 'General multiplication rule: $P(A \\cap B) = P(A) \\cdot P(B|A) = 0.4 \\times 0.3 = 0.12$.'
+            explanation: 'General multiplication rule: $P(A \\cap B) = P(A) \\cdot P(B|A) = 0.4 \\times 0.3 = 0.12$. 0.70 adds the two values, and 0.75 divides 0.3 by 0.4.'
           },
           {
             question: 'If $P(A \\cap B) = P(A) \\cdot P(B)$, the events are:',
-            options: ['Mutually exclusive', 'Dependent', 'Independent', 'Complementary'],
+            options: ['Mutually exclusive', 'Dependent events', 'Independent', 'Complementary'],
             correctAnswer: 2,
-            explanation: 'This is the defining property of independent events.'
+            explanation: 'This is the multiplication test for independent events. Mutually exclusive events have $P(A \\cap B) = 0$ instead.'
           },
           {
             question: '$P(\\text{no heads in 4 flips}) =$',
             options: ['$0.0625$', '$0.25$', '$0.50$', '$0.9375$'],
             correctAnswer: 0,
-            explanation: '$P(TTTT) = (0.5)^4 = 0.0625$.'
+            explanation: '$P(TTTT) = (0.5)^4 = 0.0625$. 0.9375 is its complement (at least one head), and 0.25 and 0.50 use too few factors of 0.5.'
           },
           {
             question: '$P(\\text{at least one head in 4 flips}) =$',
             options: ['$0.0625$', '$0.50$', '$0.75$', '$0.9375$'],
             correctAnswer: 3,
-            explanation: '$P(\\text{at least one H}) = 1 - P(TTTT) = 1 - 0.0625 = 0.9375$.'
+            explanation: '$P(\\text{at least one H}) = 1 - P(TTTT) = 1 - 0.0625 = 0.9375$. 0.0625 is the chance of no heads, and 0.50 is the chance of a head on one flip.'
           },
           {
-            question: 'With replacement, drawing from a deck is ___, because the deck is:',
-            options: ['Dependent — changed', 'Independent — reset', 'Impossible', 'Mutually exclusive'],
+            question: 'Drawing cards from a deck WITH replacement makes the draws:',
+            options: ['Dependent, since the deck changes', 'Independent, since the deck is reset', 'Mutually exclusive draws', 'Impossible to compare across draws'],
             correctAnswer: 1,
-            explanation: 'Replacing the card resets the deck, making each draw independent.'
+            explanation: 'Replacing the card restores the full deck, so every draw has the same probabilities: the draws are independent. The same card can come up twice, so the draws are not mutually exclusive.'
           }
         ]
       }

@@ -39,7 +39,7 @@ A pharmaceutical company tests a new drug. 200 patients are randomly assigned to
       id: 'experimentaldesign-p1-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
@@ -47,13 +47,13 @@ A pharmaceutical company tests a new drug. 200 patients are randomly assigned to
             question: 'Which is NOT a principle of experimental design?',
             options: ['Control', 'Randomization', 'Correlation', 'Replication'],
             correctAnswer: 2,
-            explanation: 'Correlation is a statistical concept, not a design principle. The three principles are Control, Randomization, and Replication.'
+            explanation: 'Correlation describes a relationship between two quantitative variables; it is not a design principle. The principles are control (comparison), random assignment and replication.'
           },
           {
             question: 'Random assignment helps to:',
-            options: ['Increase sample size', 'Balance confounding variables across groups', 'Guarantee results', 'Eliminate all bias'],
+            options: ['Increase the number of subjects in each group', 'Balance other variables across groups', 'Guarantee that the groups are identical', 'Eliminate the need for a control group'],
             correctAnswer: 1,
-            explanation: 'Randomization distributes both known and unknown confounding variables roughly equally across groups.'
+            explanation: 'Randomization tends to spread both known and unknown variables roughly evenly across the groups. It does not change the sample size, cannot make groups exactly identical, and does not replace a comparison group.'
           },
           {
             question: 'In an experiment testing fertilizer on plant growth, the response variable is:',

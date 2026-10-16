@@ -98,15 +98,15 @@ $$P(\\hat{p} < 0.20) = P(Z < -1.63) = 0.0516$$
           },
           {
             question: 'In a population where $p = 0.60$, a sample of 400 is drawn. $P(\\hat{p} > 0.64)$ is closest to:',
-            options: ['$0.0516$', '$0.0228$', '$0.0516$', '$0.0505$'],
+            options: ['$0.0228$', '$0.0512$', '$0.1587$', '$0.4013$'],
             correctAnswer: 1,
-            explanation: '$\\sigma_{\\hat{p}} = \\sqrt{0.60 \\times 0.40/400} = \\sqrt{0.0006} = 0.02449$. $z = (0.64 - 0.60)/0.02449 = 1.63$. Wait — $P(Z>1.63) \\approx 0.0516$. Let me recalculate: $z = 0.04/0.02449 \\approx 1.633$, $P(Z > 1.633) \\approx 0.0512$. Closest to $0.0516$.'
+            explanation: '$\\sigma_{\\hat{p}} = \\sqrt{0.60 \\times 0.40/400} = \\sqrt{0.0006} \\approx 0.02449$. $z = (0.64 - 0.60)/0.02449 \\approx 1.63$, and $P(Z > 1.63) \\approx 0.0512$. Using $\\sigma = 0.02$ gives $z = 2$ and 0.0228; using $\\sqrt{0.24}/\\sqrt{40}$ by mistake gives far larger values.'
           },
           {
             question: 'Why is $P(\\bar{x} > k)$ typically much smaller than $P(X > k)$ for the same $k > \\mu$?',
-            options: ['Because $\\bar{x}$ is always less than $X$', 'Because the sampling distribution of $\\bar{x}$ has smaller spread than the population', 'Because the CLT changes the mean', 'Because of rounding errors'],
+            options: ['Because $\\bar{x}$ is always less than any single $X$', 'Because $\\bar{x}$ varies less than individual values do', 'Because the CLT shifts the mean of $\\bar{x}$ lower', 'Because averages ignore values far above the mean'],
             correctAnswer: 1,
-            explanation: 'The sampling distribution of $\\bar{x}$ has SD = $\\sigma/\\sqrt{n}$, which is much smaller than $\\sigma$. So extreme values of $\\bar{x}$ are much less common than extreme individual values.'
+            explanation: 'The sampling distribution of $\\bar{x}$ has SD $\\sigma/\\sqrt{n}$, much smaller than $\\sigma$, so extreme means are much rarer than extreme individuals. $\\bar{x}$ has the same center $\\mu$ and includes every value.'
           }
         ]
       }
@@ -171,14 +171,14 @@ The mean household income in a city is $\\mu =$ \\$65,000 with $\\sigma =$ \\$15
           {
             id: 'sd6-dd1',
             label: 'A student calculates $z = (158 - 150)/20$ for a sample of 25. The error is:',
-            options: ['Used wrong mean', 'Used $\\sigma$ instead of $\\sigma/\\sqrt{n}$', 'Used wrong $z$-table', 'No error'],
+            options: ['Used the population mean instead of $\\bar{x}$', 'Used $\\sigma$, not $\\sigma/\\sqrt{n}$', 'Used $n$ instead of $\\sqrt{n}$ in the formula', 'Made no error anywhere in the work'],
             correctIndex: 1,
             explanation: 'Should be $z = (158 - 150)/(20/\\sqrt{25}) = 8/4 = 2$, not $8/20 = 0.4$. Must divide $\\sigma$ by $\\sqrt{n}$.'
           },
           {
             id: 'sd6-dd2',
             label: 'The condition "$np \\geq 10$" applies to the sampling distribution of ___',
-            options: ['$\\bar{x}$', '$\\hat{p}$', 'Both', 'Neither'],
+            options: ['$\\bar{x}$', '$\\hat{p}$', 'Both statistics', 'Neither statistic'],
             correctIndex: 1,
             explanation: 'The $np \\geq 10$ condition is specifically for the sampling distribution of sample proportions $\\hat{p}$.'
           },
@@ -232,9 +232,9 @@ The mean household income in a city is $\\mu =$ \\$65,000 with $\\sigma =$ \\$15
           },
           {
             question: 'Why is the sampling distribution of $\\bar{x}$ more useful than the population distribution for inference?',
-            options: ['It is easier to graph', 'It tells us how sample means behave, which is what we observe', 'It has a larger standard deviation', 'It is always symmetric'],
+            options: ['It is easier to graph than the population', 'It shows how the statistic we observe varies', 'It has a larger standard deviation', 'It is always symmetric for any $n$'],
             correctAnswer: 1,
-            explanation: 'We observe sample statistics, not population parameters. The sampling distribution describes the behavior of those statistics across repeated samples, enabling inference.'
+            explanation: 'We observe a sample statistic, and the sampling distribution describes how that statistic varies across repeated samples, which is what inference needs. It has a SMALLER SD than the population and is not always symmetric.'
           },
           {
             question: 'Heights of men: $\\mu = 70$ in, $\\sigma = 3$ in. For $n = 36$, $P(\\bar{x} > 71)$ is:',
@@ -250,15 +250,15 @@ The mean household income in a city is $\\mu =$ \\$65,000 with $\\sigma =$ \\$15
           },
           {
             question: 'A sample of 16 from a heavily skewed population. The CLT:',
-            options: ['Guarantees normality of $\\bar{x}$', 'Does NOT guarantee normality — $n$ is too small', 'Is irrelevant for this situation', 'Only applies to proportions'],
+            options: ['Guarantees that $\\bar{x}$ is normal', 'Does not ensure normality at this $n$', 'Is irrelevant for sample means', 'Applies only to proportions'],
             correctAnswer: 1,
-            explanation: 'For heavily skewed populations, $n \\geq 30$ (or more) is typically needed. With $n = 16$, the CLT does not guarantee approximate normality.'
+            explanation: 'For heavily skewed populations, $n \\geq 30$ (or more) is needed. With $n = 16$, the CLT does not ensure approximate normality of $\\bar{x}$.'
           },
           {
             question: 'The phrase "sampling variability" refers to:',
-            options: ['Errors made during data collection', 'The natural variation of a statistic from sample to sample', 'Bias in the sampling method', 'The range of the data'],
+            options: ['Errors made while recording the data', 'Natural differences in a statistic between samples', 'Bias built into the sampling method', 'The range of values within one sample'],
             correctAnswer: 1,
-            explanation: 'Sampling variability is the natural, expected variation in a statistic when different random samples are drawn. It is measured by the standard error.'
+            explanation: 'Sampling variability is the natural, expected variation in a statistic when different random samples are drawn; it is measured by the standard error. Recording errors and bias are different problems.'
           }
         ]
       }

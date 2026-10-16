@@ -35,7 +35,7 @@ $H_0$: The new drug is not effective. $H_a$: The new drug IS effective.
       id: 'typeerrorspower-p6-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
@@ -47,15 +47,15 @@ $H_0$: The new drug is not effective. $H_a$: The new drug IS effective.
           },
           {
             question: 'In the water quality example, which error is more serious?',
-            options: ['Type I (false alarm about contamination)', 'Type II (missing real contamination)', 'Both are equally serious', 'Neither is serious'],
+            options: ['Type I, a false alarm about contamination', 'Type II, missing real contamination', 'Both errors are equally serious', 'Neither error matters here'],
             correctAnswer: 1,
             explanation: 'Missing real contamination (Type II) puts people at health risk — far more serious.'
           },
           {
             question: 'If Type II error is more serious, you should:',
-            options: ['Use a smaller $\\alpha$', 'Use a larger $\\alpha$ to increase power', 'Not do the test', 'Use a larger sample only'],
+            options: ['Use a smaller $\\alpha$ to be careful', 'Use a larger $\\alpha$', 'Skip the test entirely', 'Use a smaller sample size'],
             correctAnswer: 1,
-            explanation: 'Larger $\\alpha$ increases power, reducing $\\beta$ (the chance of the more dangerous Type II error).'
+            explanation: 'A larger $\\alpha$ increases power and so reduces $\\beta$, the chance of the more dangerous Type II error. A smaller $\\alpha$ or smaller sample would do the opposite.'
           }
         ]
       }

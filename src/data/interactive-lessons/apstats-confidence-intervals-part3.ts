@@ -25,10 +25,7 @@ export const apStatsConfIntPart3Data = {
 
 ### Why $t$ Instead of $z$?
 
-| Situation | Distribution | When Used |
-|-----------|-------------|-----------|
-| $\\sigma$ known | $z$-distribution | Rare in practice |
-| $\\sigma$ unknown, use $s$ | $t$-distribution | Almost always |
+For a population mean, $\\sigma$ is not known, so the standard error uses the sample SD $s$, and critical values come from a $t$-distribution instead of the standard normal.
 
 The $t$-distribution:
 - Is bell-shaped and symmetric, like the normal
@@ -68,11 +65,11 @@ where $t^*$ is the critical value from the $t$-distribution with $df = n - 1$.
 **2. 10% Condition:** $n < 0.10N$ (if sampling without replacement).
 
 **3. Normal/Large Sample:**
-| $n$ | Requirement |
+| Situation | Requirement |
 |-----|-------------|
+| Population known to be approximately normal | Met for any $n$ |
 | $n \\geq 30$ | CLT applies — no shape restriction |
-| $15 \\leq n < 30$ | No strong skewness or outliers |
-| $n < 15$ | Population must be approximately normal |
+| $n < 30$ | The sample data must be free from strong skewness and outliers |
 
 > 🔑 **AP Tip:** For the Normal condition with means, you should reference the sample data (boxplot, dotplot, or histogram). Saying "no strong skewness or outliers in the sample" is the expected language.
 
@@ -110,13 +107,13 @@ We are 95% confident that the true mean commute time for all commuters is betwee
         questions: [
           {
             question: 'The $t$-distribution has heavier tails than the normal because:',
-            options: ['The sample is always small', 'It accounts for extra uncertainty from estimating $\\sigma$ with $s$', 'It is based on the population', 'The degrees of freedom are too large'],
+            options: ['The sample is always small', 'Estimating $\\sigma$ adds uncertainty', 'It is based on the whole population', 'The degrees of freedom are too large'],
             correctAnswer: 1,
             explanation: 'Using $s$ instead of $\\sigma$ introduces additional variability. The heavier tails of the $t$-distribution reflect this extra uncertainty.'
           },
           {
             question: 'As degrees of freedom increase, the $t$-distribution:',
-            options: ['Becomes more spread out', 'Approaches the standard normal', 'Becomes skewed', 'Stays the same'],
+            options: ['Becomes more spread out', 'Approaches normal', 'Becomes skewed right', 'Keeps the same shape'],
             correctAnswer: 1,
             explanation: 'As $df \\to \\infty$, $s$ becomes an increasingly precise estimate of $\\sigma$, and the $t$-distribution converges to the standard normal $z$-distribution.'
           },
@@ -173,29 +170,29 @@ A random sample of 25 test scores: $\\bar{x} = 82$, $s = 10$. Build a 95% CI. Us
         dropdowns: [
           {
             id: 'ci3-dd1',
-            label: 'Population SD is known → use the ___ distribution',
-            options: ['$z$', '$t$'],
+            label: 'Estimating a population proportion → use ___ critical values',
+            options: ['$z$', '$t$', '$\\chi^2$', 'binomial'],
             correctIndex: 0,
-            explanation: 'When $\\sigma$ is known, use $z$. In practice this is rare — most problems use $t$.'
+            explanation: 'Intervals for a proportion use $z^*$ because the SE comes directly from $\\hat{p}$; there is no separate SD to estimate.'
           },
           {
             id: 'ci3-dd2',
             label: 'Sample SD $s$ is used → use the ___ distribution',
-            options: ['$z$', '$t$'],
+            options: ['$z$', '$t$', '$\\chi^2$', 'binomial'],
             correctIndex: 1,
             explanation: 'When $\\sigma$ is unknown and estimated by $s$, use $t$ with $df = n-1$.'
           },
           {
             id: 'ci3-dd3',
-            label: 'With $n = 10$ and no outliers, the Normal condition is ___ for a $t$-interval',
-            options: ['satisfied — if population is approximately normal', 'not satisfied — need $n \\geq 30$', 'always satisfied for $t$-tests'],
+            label: 'With $n = 10$ and a dotplot showing no strong skew or outliers, the Normal condition is ___',
+            options: ['met', 'not met, since $n < 30$', 'met only if $n \\geq 15$', 'not needed for $t$'],
             correctIndex: 0,
-            explanation: 'With $n < 15$, we need the population to be approximately normal (check via dotplot/histogram). No strong skewness or outliers allows us to proceed.'
+            explanation: 'For $n < 30$, the condition is met when the sample data are free from strong skewness and outliers, as here. $n \\geq 30$ is one way to satisfy it, not a requirement.'
           },
           {
             id: 'ci3-dd4',
             label: 'The $t^*$ value for 95% confidence with $df = 9$ is ___ $z^* = 1.96$',
-            options: ['less than', 'equal to', 'greater than'],
+            options: ['less than', 'equal to', 'greater than', 'half of'],
             correctIndex: 2,
             explanation: '$t^*$ for $df = 9$ at 95% is about 2.262, which is greater than $z^* = 1.960$. The $t$-interval is always wider.'
           }
@@ -224,33 +221,33 @@ A random sample of 25 test scores: $\\bar{x} = 82$, $s = 10$. Build a 95% CI. Us
           },
           {
             question: '$\\bar{x} = 50$, $s = 12$, $n = 36$, $t^* = 2.030$. The 95% CI is:',
-            options: ['$(45.94, 54.06)$', '$( 47.97, 52.03)$', '$(46.84, 53.16)$', '$(49.66, 50.34)$'],
+            options: ['$(45.94, 54.06)$', '$(47.97, 52.03)$', '$(46.84, 53.16)$', '$(49.66, 50.34)$'],
             correctAnswer: 0,
             explanation: '$SE = 12/6 = 2$. $ME = 2.030 \\times 2 = 4.06$. CI $= 50 \\pm 4.06 = (45.94, 54.06)$.'
           },
           {
             question: 'Which condition is specific to $t$-intervals (not $z$-intervals for proportions)?',
-            options: ['Random', '10%', 'Check sample data for skewness and outliers', 'Large counts'],
+            options: ['Random sampling or assignment', 'Sample at most 10% of population', 'Sample free of strong skew and outliers', 'At least 10 successes and failures'],
             correctAnswer: 2,
             explanation: 'For means with small $n$, we check the sample data (dotplot/histogram) for skewness and outliers. The "large counts" condition is for proportions.'
           },
           {
             question: 'A 95% CI for $\\mu$ is $(12.3, 18.7)$. The claim $\\mu = 20$ is:',
-            options: ['Supported by the data', 'Not a plausible value at the 95% level', 'Proven false', 'The point estimate'],
+            options: ['Supported by the data', 'Not plausible at 95%', 'Proven false', 'The point estimate'],
             correctAnswer: 1,
             explanation: '20 falls outside the interval, so it is not a plausible value for $\\mu$ at 95% confidence.'
           },
           {
             question: 'Why do we use $n - 1$ degrees of freedom?',
-            options: ['Convention', 'Because $s$ uses $n - 1$ in its denominator, creating a constraint', 'To make the interval narrower', 'Because we lose one data point'],
+            options: ['Only a convention', 'Computing $s$ uses $\\bar{x}$', 'To make the interval narrower', 'One data point is thrown away'],
             correctAnswer: 1,
-            explanation: 'The sample standard deviation $s$ divides by $n-1$, creating one constraint (the deviations must sum to zero). This leaves $n-1$ free pieces of information.'
+            explanation: 'The SD $s$ is computed from deviations around $\\bar{x}$, and those deviations must sum to zero, so only $n - 1$ of them are free. No data are discarded, and the df does not exist to narrow the interval.'
           },
           {
             question: 'For $n = 8$ and a strongly skewed sample, what should you do?',
-            options: ['Proceed with the $t$-interval — $t$ handles skewness', 'Do not construct the interval — Normal condition is not met', 'Use a $z$-interval instead', 'Increase $t^*$ to compensate'],
+            options: ['Proceed, since $t$ handles any skewness', 'Not use a $t$-interval', 'Use a $z$-interval instead', 'Increase $t^*$ to compensate'],
             correctAnswer: 1,
-            explanation: 'With $n < 15$ and strong skewness, the Normal condition fails. The $t$-interval is not appropriate. Consider a larger sample or a nonparametric method.'
+            explanation: 'With $n = 8 < 30$ and strong skewness, the sample data condition fails, so the $t$-interval is not appropriate; a larger sample would be needed. Switching to $z$ or inflating $t^*$ does not fix the problem.'
           },
           {
             question: 'The width of a confidence interval equals:',
@@ -265,10 +262,10 @@ A random sample of 25 test scores: $\\bar{x} = 82$, $s = 10$. Build a 95% CI. Us
             explanation: 'Both intervals are centered at the same point estimate: $(40+60)/2 = (35+65)/2 = 50$. Only the width changes with confidence level.'
           },
           {
-            question: 'A student constructs a $t$-interval but forgets to check conditions. On the AP exam, this typically costs:',
-            options: ['No points — the answer is what matters', '1 point (out of 4)', '1–2 points — conditions are separately scored', 'All points'],
+            question: 'Which value is NOT needed to compute a one-sample $t$-interval?',
+            options: ['The sample mean $\\bar{x}$', 'The sample SD $s$', 'The population SD $\\sigma$', 'The sample size $n$'],
             correctAnswer: 2,
-            explanation: 'The AP rubric typically allocates 1–2 points (out of 4) for correctly stating and checking conditions. Skipping them is costly.'
+            explanation: 'The interval $\\bar{x} \\pm t^* s/\\sqrt{n}$ uses $\\bar{x}$, $s$ and $n$ (through $df = n - 1$ and the SE). The population SD $\\sigma$ is unknown and is not used.'
           }
         ]
       }

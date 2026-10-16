@@ -94,7 +94,7 @@ Since $P(\\text{Promoted}|\\text{Degree}) = P(\\text{Promoted}|\\text{No Degree}
         questions: [
           {
             question: '$P(A) = 0.3$, $P(B) = 0.6$, $P(A \\cap B) = 0.10$. Independent?',
-            options: ['Yes, $0.3 \\times 0.6 = 0.10$', 'No, $0.3 \\times 0.6 = 0.18 \\neq 0.10$', 'Cannot determine', 'Only if mutually exclusive'],
+            options: ['Yes, since $P(A \\cap B) < P(A)$', 'No, since $0.3 \\times 0.6 = 0.18 \\neq 0.10$', 'Yes, since both probabilities are positive', 'No, since $P(A) + P(B) \\neq 1$'],
             correctAnswer: 1,
             explanation: '$P(A) \\cdot P(B) = 0.18 \\neq 0.10 = P(A \\cap B)$. NOT independent.'
           },
@@ -102,7 +102,7 @@ Since $P(\\text{Promoted}|\\text{Degree}) = P(\\text{Promoted}|\\text{No Degree}
             question: 'Mutually exclusive events (with $P > 0$) are:',
             options: ['Always independent', 'Never independent', 'Sometimes independent', 'Always complementary'],
             correctAnswer: 1,
-            explanation: 'If $A$ occurs, $B$ can\'t → knowing $A$ changes $P(B)$ to 0. That\'s dependent.'
+            explanation: 'If $A$ occurs, $B$ can\'t, so knowing $A$ changes $P(B)$ to 0. That is dependence, so mutually exclusive events with positive probabilities are never independent.'
           },
           {
             question: 'If events are independent, $P(A|B) =$',
@@ -158,7 +158,7 @@ Since $P(\\text{Promoted}|\\text{Degree}) = P(\\text{Promoted}|\\text{No Degree}
           {
             id: 'pr5-dd1',
             label: 'Independent means one event ___ the other:',
-            options: ['Always causes', 'Does not affect', 'Prevents', 'Guarantees'],
+            options: ['Always causes', 'Does not affect', 'Rules out', 'Changes the chance of'],
             correctIndex: 1,
             explanation: 'Independent: $A$ happening has no effect on $B$\'s probability.'
           },
@@ -189,49 +189,49 @@ Since $P(\\text{Promoted}|\\text{Degree}) = P(\\text{Promoted}|\\text{No Degree}
         questions: [
           {
             question: '$P(A) = 0.5$, $P(B) = 0.5$, $P(A \\cap B) = 0.25$. Are they independent?',
-            options: ['No', 'Yes — $0.5 \\times 0.5 = 0.25$', 'Only if mutually exclusive', 'Cannot determine'],
+            options: ['No, since $0.25 < 0.5$', 'Yes, since $0.5 \\times 0.5 = 0.25$', 'Only if they are mutually exclusive', 'Not without a two-way table'],
             correctAnswer: 1,
             explanation: '$P(A) \\cdot P(B) = 0.25 = P(A \\cap B)$ ✓ Independent!'
           },
           {
             question: '$P(A) = 0.6$, $P(B) = 0.3$, $P(A \\cap B) = 0.1$. Independent?',
-            options: ['Yes', 'No — $0.6 \\times 0.3 = 0.18 \\neq 0.10$', 'Yes — $0.1 < 0.3$', 'Cannot determine'],
+            options: ['Yes, since $0.10 < 0.30$', 'No, since $0.6 \\times 0.3 \\neq 0.10$', 'Yes, since $0.6 + 0.3 < 1$', 'Not without a two-way table'],
             correctAnswer: 1,
             explanation: '$P(A) \\cdot P(B) = 0.18 \\neq 0.10$. NOT independent.'
           },
           {
             question: 'If $A$ and $B$ are independent, $P(A \\cap B) =$',
-            options: ['$0$', '$P(A) + P(B)$', '$P(A) \\cdot P(B)$', '$P(A|B)$'],
+            options: ['$0$', '$P(A) + P(B)$', '$P(A) \\cdot P(B)$', '$P(A|B) \\cdot P(A)$'],
             correctAnswer: 2,
-            explanation: 'For independent events: $P(A \\cap B) = P(A) \\cdot P(B)$.'
+            explanation: 'For independent events: $P(A \\cap B) = P(A) \\cdot P(B)$. 0 is the intersection for mutually exclusive events, $P(A) + P(B)$ is not an intersection at all, and $P(A|B) \\cdot P(A)$ multiplies by the wrong event.'
           },
           {
             question: 'A table shows $P(\\text{Pass}|\\text{Study}) = 0.90$ and $P(\\text{Pass}|\\text{No Study}) = 0.50$. Are passing and studying independent?',
-            options: ['Yes — both have positive probability', 'No — the conditional probabilities differ', 'Cannot determine without $P(A \\cap B)$', 'Yes — they are unrelated'],
+            options: ['Yes, since both rates are positive', 'No, since the conditional rates differ', 'Not without knowing $P(A \\cap B)$', 'Yes, since they seem unrelated'],
             correctAnswer: 1,
             explanation: '$P(\\text{Pass}|\\text{Study}) \\neq P(\\text{Pass}|\\text{No Study})$, so passing depends on studying.'
           },
           {
             question: 'Rolling a 6 on the first die and rolling a 3 on the second die are:',
-            options: ['Mutually exclusive', 'Dependent', 'Independent', 'Complementary'],
+            options: ['Mutually exclusive', 'Dependent events', 'Independent', 'Complementary'],
             correctAnswer: 2,
-            explanation: 'Different dice don\'t affect each other — independent events.'
+            explanation: 'Different dice do not affect each other, so the events are independent. They can happen together (a 6 then a 3), so they are not mutually exclusive.'
           },
           {
             question: 'If $P(A|B) = 0$, this tells us events are:',
-            options: ['Independent', 'Dependent and mutually exclusive', 'Complementary', 'Identical'],
+            options: ['Independent events', 'Mutually exclusive', 'Complementary events', 'Identical events'],
             correctAnswer: 1,
-            explanation: 'If $B$ makes $A$ impossible ($P(A|B) = 0$), they cannot both occur (ME) and are dependent.'
+            explanation: 'If $B$ makes $A$ impossible ($P(A|B) = 0$), the events cannot both occur, so they are mutually exclusive (and, when $P(A) > 0$, dependent). Complementary events would also have to cover every outcome.'
           },
           {
             question: 'Drawing 5 cards from a deck of 52 without replacement: the 10% condition is:',
-            options: ['Met — $5 < 10\\%$ of 52', 'Not met — $5 > 10\\%$ of 52', 'Not applicable', 'Always met for cards'],
+            options: ['Met, since 5 is under 10% of 52', 'Not met, since 5 is over 10% of 52', 'Not needed when drawing cards', 'Always met when dealing cards'],
             correctAnswer: 0,
             explanation: '$10\\%$ of 52 ≈ 5.2. Since $5 < 5.2$, the condition is met (barely).'
           },
           {
             question: 'If events $A$ and $B$ are both independent AND mutually exclusive, then:',
-            options: ['This is common', 'At least one must have $P = 0$', '$P(A \\cap B) = P(A) \\cdot P(B)$', 'They are complementary'],
+            options: ['Both have probability 0.5', 'At least one must have $P = 0$', 'They must be complementary', 'Each has probability above 0.5'],
             correctAnswer: 1,
             explanation: 'ME: $P(A \\cap B) = 0$. Independent: $P(A \\cap B) = P(A)P(B)$. Both true only if $P(A)$ or $P(B) = 0$.'
           },
@@ -243,9 +243,9 @@ Since $P(\\text{Promoted}|\\text{Degree}) = P(\\text{Promoted}|\\text{No Degree}
           },
           {
             question: 'The best way to test independence from a two-way table is:',
-            options: ['Check if totals are equal', 'Compare conditional proportions across rows/columns', 'Check if the table has 4 cells', 'See if any cell is 0'],
+            options: ['Check whether the row totals are equal', 'Compare conditional proportions', 'Check whether any cell count is 0', 'Compare the two largest cell counts'],
             correctAnswer: 1,
-            explanation: 'If conditional proportions are equal across groups, the variables are independent.'
+            explanation: 'If the conditional proportions (for example, $P(\\text{Promoted}|\\text{Degree})$ and $P(\\text{Promoted}|\\text{No Degree})$) are equal across groups, the variables are independent. Equal totals or large counts say nothing about association.'
           }
         ]
       }

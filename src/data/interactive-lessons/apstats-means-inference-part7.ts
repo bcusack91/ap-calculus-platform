@@ -15,28 +15,28 @@ export const apStatsMeansInfPart7Data = {
 | Procedure | Statistic | SE | df |
 |-----------|-----------|----|----|
 | One-sample t | $\\bar{x}$ | $s/\\sqrt{n}$ | $n-1$ |
-| Two-sample t | $\\bar{x}_1 - \\bar{x}_2$ | $\\sqrt{s_1^2/n_1 + s_2^2/n_2}$ | $\\\\min(n_1-1, n_2-1)$ |
+| Two-sample t | $\\bar{x}_1 - \\bar{x}_2$ | $\\sqrt{s_1^2/n_1 + s_2^2/n_2}$ | $\\min(n_1-1, n_2-1)$ |
 | Matched pairs | $\\bar{d}$ | $s_d/\\sqrt{n}$ | $n-1$ |
 
 ### Key Reminders
 
 - t-procedures are **robust** against non-Normality for large $n$
 - Check for outliers with small samples
-- Use a Normal probability plot to assess Normality for small $n$
+- For $n < 30$, check a dotplot or boxplot of the sample for strong skewness or outliers
 - Degrees of freedom determine the shape of the t-distribution`
     },    {
       id: 'meansinference-p7-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'The t-distribution is “robust” means:',
-            options: ['It gives exact results', 'It works well even with moderate departures from Normality', 'It has no assumptions', 'It is the same as the Normal'],
+            options: ['It gives exact results for any data', 'It works well despite moderate non-normality', 'It needs no conditions at all', 'It is identical to the normal'],
             correctAnswer: 1,
-            explanation: 'Robust: t-procedures give reliable results even when the population isn’t perfectly Normal.'
+            explanation: 'Robust means $t$ procedures still give reliable results when the population is not exactly normal, especially for larger $n$. Conditions still matter, and results are approximate.'
           },
           {
             question: 'Which would MOST invalidate a t-procedure with $n = 10$?',
@@ -71,8 +71,8 @@ $n = 50$, $\\bar{x} = 25.3$, $s = 4.0$. Test $H_0: \\mu = 24$ vs. $H_a: \\mu \\n
         correctAnswers: ['2.30', '49', 'yes'],
         hint1: '$(25.3 - 24)/(4/\\sqrt{50})$',
         hint2: '$n - 1$',
-        hint3: 'For $df = 49$, $t^* \\approx 2.01$ for 95%',
-        explanation: '1) $t = 1.3/0.566 \\approx 2.30$. 2) $df = 49$. 3) Yes — $|t| = 2.30 > t^*(49) \\approx 2.01$, so reject $H_0$.'
+        hint3: 'Two-sided p-value for $|t| = 2.30$, $df = 49$',
+        explanation: '1) $t = 1.3/0.566 \\approx 2.30$. 2) $df = 49$. 3) Yes — the two-sided p-value for $|t| = 2.30$ with $df = 49$ is about 0.026, less than 0.05, so reject $H_0$.'
       }
     }
   ]

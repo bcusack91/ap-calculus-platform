@@ -36,7 +36,7 @@ Since $0.032 < 0.05$, reject $H_0$.`
       id: 'meansinference-p3-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
@@ -54,9 +54,9 @@ Since $0.032 < 0.05$, reject $H_0$.`
           },
           {
             question: '“Fail to reject $H_0$” means:',
-            options: ['$H_0$ is true', 'There is insufficient evidence against $H_0$', '$H_a$ is false', 'The test failed'],
+            options: ['$H_0$ has been proven true', 'Weak evidence against $H_0$', '$H_a$ has been shown false', 'The test itself has failed'],
             correctAnswer: 1,
-            explanation: 'We don’t prove $H_0$ true; we simply don’t have enough evidence to reject it.'
+            explanation: 'We never prove $H_0$ true; failing to reject means the evidence against $H_0$ was not convincing. It does not show $H_a$ false or mean the test failed.'
           }
         ]
       }

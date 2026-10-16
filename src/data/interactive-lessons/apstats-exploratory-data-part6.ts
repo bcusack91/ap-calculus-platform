@@ -31,27 +31,27 @@ Always compare both distributions on ALL four features. Use comparative language
       id: 'exploratorydata-p6-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'An AP free-response asks you to “describe the distribution.” You should include:',
-            options: ['Only center and spread', 'Shape, center, and spread only', 'Shape, outliers, center, and spread', 'A list of all data values'],
+            options: ['Center and spread, both stated in context', 'Center, shape and spread, with no context', 'Shape, center, spread and unusual features', 'The five-number summary and the mean'],
             correctAnswer: 2,
-            explanation: 'A complete description addresses all SOCS: Shape, Outliers, Center, Spread.'
+            explanation: 'A complete description addresses shape, center, spread and unusual features such as outliers, gaps or clusters, all in context. Leaving out shape or unusual features is incomplete, a description without context loses credit, and a list of statistics is not a description.'
           },
           {
             question: 'When comparing two distributions, you should:',
-            options: ['Describe each separately', 'Use comparative language (higher, wider, etc.)', 'Only mention differences', 'Focus on just the means'],
+            options: ['Describe each group separately', 'Use comparative words such as "higher than"', 'Mention only the features that differ', 'Compare the two means and nothing else'],
             correctAnswer: 1,
-            explanation: 'Compare directly: “Group A has a higher median,” “Group B is more spread out.”'
+            explanation: 'Compare directly: “Group A has a higher median than Group B,” “Group B is more spread out.” Two separate descriptions do not make the comparison, similarities in shape or spread are worth stating too, and center alone is not a full comparison.'
           },
           {
             question: 'Which measures should you report for a skewed distribution?',
-            options: ['Mean and standard deviation', 'Median and IQR', 'Mode and range', 'Mean and IQR'],
+            options: ['Mean and standard deviation', 'Median and IQR', 'Range and median', 'Mean and the IQR'],
             correctAnswer: 1,
-            explanation: 'For skewed data, use resistant measures: median (center) and IQR (spread).'
+            explanation: 'For skewed data, use resistant measures: the median for center and the IQR for spread. The mean, SD and range are all pulled by the long tail.'
           }
         ]
       }
@@ -67,7 +67,7 @@ Test scores: Min=45, $Q_1=65$, Med=75, $Q_3=85$, Max=98. Roughly symmetric, no o
 
 **2)** $IQR = ?$
 
-**3)** Are there outliers by the 1.5×IQR rule? (yes/no) Lower fence = ?
+**3)** Lower fence for outliers by the 1.5×IQR rule = ?
       `,
       exercise: {
         boxes: 3,

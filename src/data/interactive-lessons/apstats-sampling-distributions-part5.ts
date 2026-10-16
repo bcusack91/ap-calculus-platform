@@ -71,10 +71,9 @@ This condition differs depending on the parameter:
 ### For Means ($\\bar{x}$):
 | Situation | Normal condition satisfied? |
 |-----------|---------------------------|
-| Population is normal | Yes, for any $n$ |
+| Population is approximately normal | Yes, for any $n$ |
 | $n \\geq 30$ | Yes (CLT applies) |
-| $15 \\leq n < 30$ | Only if no strong skewness or outliers |
-| $n < 15$ | Only if population is approximately normal |
+| $n < 30$, population shape unknown | Only if the sample data are free from strong skewness and outliers (check a dotplot or boxplot of the sample) |
 
 ### For Proportions ($\\hat{p}$):
 $$\\boxed{np \\geq 10 \\quad \\text{and} \\quad n(1-p) \\geq 10}$$
@@ -110,9 +109,9 @@ $$n\\hat{p} \\geq 10 \\quad \\text{and} \\quad n(1-\\hat{p}) \\geq 10$$
           },
           {
             question: 'For a one-sample $z$-test for a proportion, the Normal condition requires:',
-            options: ['$n \\geq 30$', '$np_0 \\geq 10$ and $n(1-p_0) \\geq 10$', '$\\sigma$ is known', 'The population is normal'],
+            options: ['$n \\geq 30$', '$np_0 \\geq 10$ and $n(1-p_0) \\geq 10$', '$np_0 \\geq 5$ or $n(1-p_0) \\geq 5$', 'The population is normal'],
             correctAnswer: 1,
-            explanation: 'For proportion inference, we need at least 10 expected successes and 10 expected failures under the null hypothesis value $p_0$.'
+            explanation: 'For proportion inference we need at least 10 expected successes and 10 expected failures under the null value $p_0$. $n \\geq 30$ is the guideline for means, and the counts must reach 10, both of them.'
           }
         ]
       }
@@ -162,30 +161,30 @@ A random sample of 80 students from a university of 12,000 finds that 52 prefer 
           {
             id: 'sd5-dd1',
             label: '"The problem states that residents were randomly selected" checks the ___ condition',
-            options: ['Random', '10%', 'Normal/Large Sample'],
+            options: ['Random', '10%', 'Normal/Large Sample', 'Expected counts'],
             correctIndex: 0,
             explanation: 'This statement verifies that data was collected using a random process — the Random condition.'
           },
           {
             id: 'sd5-dd2',
             label: '"250 is less than 10% of all registered voters" checks the ___ condition',
-            options: ['Random', '10% / Independence', 'Normal/Large Sample'],
+            options: ['Random', '10% / Independence', 'Normal/Large Sample', 'Expected counts'],
             correctIndex: 1,
             explanation: 'This verifies that the sample is small relative to the population, ensuring approximate independence.'
           },
           {
             id: 'sd5-dd3',
             label: '"$n = 45 \\geq 30$, so by the CLT..." checks the ___ condition',
-            options: ['Random', '10%', 'Normal/Large Sample'],
+            options: ['Random', '10%', 'Normal/Large Sample', 'Expected counts'],
             correctIndex: 2,
             explanation: 'Citing the CLT with $n \\geq 30$ is checking that the sampling distribution is approximately normal.'
           },
           {
             id: 'sd5-dd4',
             label: 'For a sample of 20 with a strongly skewed distribution, the Normal condition is ___',
-            options: ['satisfied because $n \\geq 15$', 'not satisfied — sample too small for strong skew', 'always satisfied'],
+            options: ['satisfied, since $n \\geq 15$', 'not satisfied', 'satisfied, since $n \\geq 10$', 'always satisfied for a mean'],
             correctIndex: 1,
-            explanation: 'With strong skewness and $n < 30$, the CLT may not apply. You need a larger sample or evidence that the population is not too skewed.'
+            explanation: 'With $n < 30$, the sample data must be free from strong skewness and outliers. Strongly skewed data with $n = 20$ fail that check, so the Normal condition is not satisfied.'
           }
         ]
       }
@@ -233,57 +232,57 @@ All conditions are met. We may proceed with the one-proportion $z$-interval.
           },
           {
             question: 'A voluntary online survey receives 5,000 responses. Is the Random condition met?',
-            options: ['Yes — 5,000 is very large', 'Yes — online surveys are always random', 'No — voluntary response is not random', 'Cannot determine'],
+            options: ['Yes, since 5,000 responses is a large sample', 'Yes, since online surveys reach many people', 'No, since respondents chose themselves', 'No, since 5,000 exceeds 10% of the population'],
             correctAnswer: 2,
-            explanation: 'Voluntary response surveys attract people with strong opinions and are NOT random samples, regardless of size.'
+            explanation: 'Voluntary response surveys attract people with strong opinions and are NOT random samples, regardless of size. Reaching many people or the 10% condition does not create randomness.'
           },
           {
             question: 'For a one-sample $t$-test with $n = 12$, the Normal condition requires:',
-            options: ['Nothing special — $t$-tests always work', 'No strong skewness or outliers in the sample data', '$n \\geq 30$', '$np \\geq 10$'],
+            options: ['Nothing extra, since $t$ procedures always work', 'Sample data without strong skew or outliers', 'A sample size of at least 30 or more observations', 'At least 10 successes and 10 failures in the data'],
             correctAnswer: 1,
-            explanation: 'With $n < 15$, the data must show no strong skewness or outliers. A dotplot or normal probability plot of the sample data should be checked.'
+            explanation: 'With $n = 12 < 30$ and no statement that the population is normal, the sample data must be free from strong skewness and outliers (check a dotplot or boxplot). $n \\geq 30$ cannot be met here, and success/failure counts are for proportions.'
           },
           {
             question: 'A sample of 300 from a population of 2,500. Is the 10% condition met?',
-            options: ['Yes ($300/2500 = 12\\% > 10\\%$)', 'No ($300/2500 = 12\\% > 10\\%$)', 'Yes ($300 < 2500$)', 'Cannot determine'],
+            options: ['Yes, because $300 < 2500$', 'No, because $300/2500 = 12\\% > 10\\%$', 'Yes, because $300 \\geq 30$', 'No, because $300 > 100$'],
             correctAnswer: 1,
             explanation: '$300/2500 = 0.12 = 12\\% > 10\\%$. The sample exceeds 10% of the population, so the condition is NOT met.'
           },
           {
             question: 'In an experiment with random assignment, the Random condition is met because:',
-            options: ['Subjects were randomly selected from the population', 'Treatments were randomly assigned to subjects', 'The sample size is large', 'Both groups have equal sizes'],
+            options: ['Subjects were randomly selected from a population', 'Treatments were given to subjects by chance', 'The number of subjects is large enough', 'Both treatment groups have equal sizes'],
             correctAnswer: 1,
             explanation: 'In experiments, random ASSIGNMENT (not random selection) satisfies the Random condition. This allows causal inference about treatment effects.'
           },
           {
             question: 'Which best describes why we check conditions?',
-            options: ['To make the math easier', 'To ensure the sampling distribution has the assumed shape', 'To increase the sample size', 'To calculate the test statistic'],
+            options: ['To make the arithmetic simpler', 'So the assumed sampling model is reasonable', 'To increase the size of the sample', 'To compute the test statistic'],
             correctAnswer: 1,
-            explanation: 'Conditions ensure that the theoretical sampling distribution (usually normal) is a good model for the actual behavior of the statistic.'
+            explanation: 'Conditions check that the model behind the procedure (for example, an approximately normal sampling distribution with independent observations) is reasonable for these data. They do not change the arithmetic or the sample size.'
           },
           {
             question: 'A sample has $n\\hat{p} = 8$ and $n(1-\\hat{p}) = 92$. The Normal condition for proportions is:',
-            options: ['Met — both values are positive', 'Met — $n(1-\\hat{p}) \\geq 10$', 'Not met — $n\\hat{p} < 10$', 'Not met — the values are too different'],
+            options: ['Met, since both counts are positive', 'Met, since $n(1-\\hat{p}) \\geq 10$', 'Not met, since $n\\hat{p} < 10$', 'Not met, since the counts are unequal'],
             correctAnswer: 2,
             explanation: 'Both $n\\hat{p} \\geq 10$ AND $n(1-\\hat{p}) \\geq 10$ are required. Here $n\\hat{p} = 8 < 10$, so the condition fails.'
           },
           {
             question: 'When sampling from "all U.S. adults," the 10% condition is:',
-            options: ['Always violated', 'Usually satisfied automatically', 'Only met for $n > 10{,}000$', 'Irrelevant'],
+            options: ['Always violated for big samples', 'Easily satisfied for typical samples', 'Only met when $n > 10{,}000$', 'Not needed for any survey'],
             correctAnswer: 1,
-            explanation: 'The U.S. adult population is ~260 million. Any reasonable sample size is a tiny fraction of that, so the 10% condition is automatically satisfied.'
+            explanation: 'There are about 260 million U.S. adults, so any realistic sample is far below 10% of the population and the condition is easily satisfied. It still must be stated.'
           },
           {
             question: 'A student writes "all conditions are met" without explanation. On the AP exam, this earns:',
-            options: ['Full credit if conditions are actually met', 'Partial credit', 'No credit — must show work', 'Full credit'],
+            options: ['Full credit if the conditions are actually met', 'Full credit as long as the answer is correct', 'No credit for the conditions component', 'Credit only if the sample size is stated'],
             correctAnswer: 2,
-            explanation: 'The AP rubric requires naming each condition and showing the check with specific numbers or references to the problem. Simply stating "conditions met" earns no credit.'
+            explanation: 'Scoring guidelines require naming each condition and checking it with specifics from the problem. A bare "conditions are met" earns no credit for that part.'
           },
           {
-            question: 'For the CLT to apply to $\\bar{x}$ with $n = 25$, we need:',
-            options: ['Either a normal population or a sample with $np \\geq 10$', 'Either $np \\geq 10$ or no strong skew in the sample', 'Both a normal population and a sample with $np \\geq 10$', 'Either a normal population or no strong skew in the sample'],
+            question: 'For a one-sample $t$ procedure with $n = 25$, the Normal condition is satisfied if:',
+            options: ['The population is normal or $np \\geq 10$', 'The sample has $np \\geq 10$ and no outliers', 'The population is normal and $np \\geq 10$', 'The population is normal or the sample shows no strong skew'],
             correctAnswer: 3,
-            explanation: 'With $15 \\leq n < 30$, the CLT can apply if the sample shows no strong skewness or outliers. If the population is known to be normal, any $n$ works.'
+            explanation: 'With $n < 30$, the condition holds if the population is approximately normal OR the sample data are free from strong skewness and outliers. The $np \\geq 10$ check belongs to proportions.'
           }
         ]
       }

@@ -23,7 +23,7 @@ Describe this distribution completely.
 **Shape:** The distribution is roughly symmetric with a slight left skew (the lower scores stretch a bit further from center).
 
 **Center:** 
-- Mean: $\\bar{x} = \\frac{\\sum x_i}{20} = \\frac{1458}{20} = 72.9$
+- Mean: $\\bar{x} = \\frac{\\sum x_i}{20} = \\frac{1438}{20} = 71.9$
 - Median: Average of 10th and 11th values = $\\frac{72 + 73}{2} = 72.5$
 
 **Spread:**
@@ -91,19 +91,19 @@ $$\\text{Outlier if } x < Q_1 - 1.5 \\times \\text{IQR} \\text{ or } x > Q_3 + 1
             question: '$\\mu = 75$, $\\sigma = 8$. What percentage of data is below 59?',
             options: ['16%', '5%', '2.5%', '0.15%'],
             correctAnswer: 2,
-            explanation: '$59 = 75 - 2(8) = \\mu - 2\\sigma$. Below $\\mu - 2\\sigma$: $(100\\% - 95\\%)/2 = 2.5\\%$.'
+            explanation: '$59 = 75 - 2(8) = \\mu - 2\\sigma$. Below $\\mu - 2\\sigma$: $(100\\% - 95\\%)/2 = 2.5\\%$. 5% counts both tails, 16% is the area below $\\mu - \\sigma$, and 0.15% is the area below $\\mu - 3\\sigma$.'
           },
           {
             question: 'Data: 12, 15, 18, 20, 22, 25, 28, 90. Which measure of center is more appropriate?',
-            options: ['Mean (because the data has many values)', 'Median (because 90 is a likely outlier)', 'Mode (because it is always best)', 'Range'],
+            options: ['The mean, since there are eight values', 'The median, since 90 is a likely outlier', 'The mean, since it uses the value 90', 'The range, since it includes 90'],
             correctAnswer: 1,
-            explanation: 'The value 90 is far from the cluster. It would inflate the mean, so the median is more appropriate.'
+            explanation: 'With $Q_1 = 16.5$ and $Q_3 = 26.5$, the upper fence is $26.5 + 1.5(10) = 41.5$, so 90 is an outlier that would inflate the mean. The resistant median is more appropriate, and the range measures spread, not center.'
           },
           {
             question: '$Q_1 = 20$, $Q_3 = 40$, IQR = 20. The upper fence for outliers is:',
             options: ['50', '60', '70', '80'],
             correctAnswer: 2,
-            explanation: 'Upper fence = $Q_3 + 1.5 \\times \\text{IQR} = 40 + 1.5(20) = 40 + 30 = 70$.'
+            explanation: 'Upper fence = $Q_3 + 1.5 \\times \\text{IQR} = 40 + 1.5(20) = 40 + 30 = 70$. 60 adds one IQR, and 50 adds half of one.'
           }
         ]
       }
@@ -151,21 +151,21 @@ $$\\text{Outlier if } x < Q_1 - 1.5 \\times \\text{IQR} \\text{ or } x > Q_3 + 1
           {
             id: 'dd6-p6-1',
             label: 'For symmetric data, mean and median are ___',
-            options: ['Very different', 'Approximately equal', 'Both zero', 'Undefined'],
+            options: ['Very different', 'Approximately equal', 'Equal to the IQR', 'Equal to the range'],
             correctIndex: 1,
-            explanation: 'In symmetric distributions, the mean and median coincide at the center.'
+            explanation: 'In symmetric distributions, the mean and median coincide at the center. The IQR and range measure spread, not center.'
           },
           {
             id: 'dd6-p6-2',
             label: 'The 68-95-99.7 rule applies ONLY to ___ distributions',
-            options: ['All', 'Normal (bell-shaped)', 'Skewed', 'Uniform'],
+            options: ['All', 'Normal', 'Skewed', 'Uniform'],
             correctIndex: 1,
             explanation: 'The Empirical Rule is specific to normal distributions.'
           },
           {
             id: 'dd6-p6-3',
             label: 'A value is an outlier if it falls ___ the fences',
-            options: ['Inside', 'Outside (beyond)', 'At', 'Near'],
+            options: ['Inside', 'Beyond', 'Exactly at', 'Near'],
             correctIndex: 1,
             explanation: 'Outliers are defined as values beyond the lower fence ($Q_1 - 1.5 \\times \\text{IQR}$) or upper fence ($Q_3 + 1.5 \\times \\text{IQR}$).'
           },
@@ -189,19 +189,19 @@ $$\\text{Outlier if } x < Q_1 - 1.5 \\times \\text{IQR} \\text{ or } x > Q_3 + 1
         questions: [
           {
             question: 'A complete distribution description includes:',
-            options: ['Shape only', 'Shape and center', 'Shape, center, spread', 'Shape, center, spread, and outliers'],
+            options: ['Shape, spread, context, units', 'Center, spread, context, units', 'Center, spread, outliers, units', 'Shape, center, spread, outliers'],
             correctAnswer: 3,
-            explanation: 'AP rubrics require all four elements for full credit.'
+            explanation: 'AP rubrics require all four elements (shape, center, spread and outliers or other unusual features), stated in context. Each other choice leaves out at least one of them, and context alone cannot make up for a missing feature.'
           },
           {
             question: '$\\mu = 500$, $\\sigma = 100$. The 84th percentile is approximately:',
             options: ['400', '500', '600', '700'],
             correctAnswer: 2,
-            explanation: '84th percentile = $\\mu + 1\\sigma$ (since 50% + 34% = 84%). $500 + 100 = 600$.'
+            explanation: '84th percentile = $\\mu + 1\\sigma$ (since 50% + 34% = 84%), so $500 + 100 = 600$. 400 is the 16th percentile, and 700 is about the 97.5th.'
           },
           {
             question: '$Q_1 = 10$, $Q_3 = 30$, IQR = 20. Is 65 an outlier?',
-            options: ['Yes — it is above the upper fence of 60', 'No — it is within the fences', 'Cannot determine', 'Only if the data is normal'],
+            options: ['Yes, because it is above the fence of 60', 'No, because it is below the fence of 70', 'No, because only values below Q1 count', 'No, because 65 is within 2 IQRs of Q3'],
             correctAnswer: 0,
             explanation: 'Upper fence = $30 + 1.5(20) = 60$. Since $65 > 60$, it IS an outlier.'
           },
@@ -209,23 +209,23 @@ $$\\text{Outlier if } x < Q_1 - 1.5 \\times \\text{IQR} \\text{ or } x > Q_3 + 1
             question: 'A boxplot shows the median closer to Q3 than Q1. The distribution is likely:',
             options: ['Right-skewed', 'Left-skewed', 'Symmetric', 'Uniform'],
             correctAnswer: 1,
-            explanation: 'When the median is closer to Q3, the left whisker is longer → left-skewed.'
+            explanation: 'When the median is closer to Q3, the lower half of the box (Q1 to the median) is longer than the upper half, so the lower values are more spread out: left-skewed.'
           },
           {
             question: 'Data: 1, 2, 3, 4, 5, 6, 7, 8, 9, 100. The best numerical summary is:',
-            options: ['Mean and SD', 'Median and IQR', 'Mode and range', 'Mean and range'],
+            options: ['Mean and SD', 'Median and IQR', 'IQR and mean', 'Mean and range'],
             correctAnswer: 1,
-            explanation: 'The outlier 100 makes the data right-skewed. Median and IQR are resistant to the outlier.'
+            explanation: 'The outlier 100 makes the data right-skewed, so use resistant measures: the median and IQR. The mean, SD and range are all pulled by 100.'
           },
           {
             question: '$\\mu = 70$, $\\sigma = 5$. What percentage is between 60 and 80?',
             options: ['68%', '95%', '99.7%', '50%'],
             correctAnswer: 1,
-            explanation: '$60 = \\mu - 2\\sigma$ and $80 = \\mu + 2\\sigma$. By the Empirical Rule, 95%.'
+            explanation: '$60 = \\mu - 2\\sigma$ and $80 = \\mu + 2\\sigma$. By the Empirical Rule, 95%; 65 to 75 would be the 68% interval.'
           },
           {
             question: 'Two students from different classes want to compare test scores. The best approach is to:',
-            options: ['Compare raw scores', 'Compare z-scores', 'Compare medians', 'Compare ranges'],
+            options: ['Compare raw scores', 'Compare z-scores', 'Compare class medians', 'Compare class ranges'],
             correctAnswer: 1,
             explanation: 'Z-scores standardize values to the same scale, allowing fair comparison across different distributions.'
           },
@@ -233,19 +233,19 @@ $$\\text{Outlier if } x < Q_1 - 1.5 \\times \\text{IQR} \\text{ or } x > Q_3 + 1
             question: 'A histogram has a tall bar on the left and gradually shorter bars going right. This is:',
             options: ['Symmetric', 'Left-skewed', 'Right-skewed', 'Uniform'],
             correctAnswer: 2,
-            explanation: 'Most data is on the left with a tail extending right → right-skewed.'
+            explanation: 'Most data are on the left with a tail extending toward larger values, so the distribution is right-skewed. Skew is named for the tail, not the tall bar.'
           },
           {
             question: 'Which graph would best display 200 exam scores?',
-            options: ['Dotplot', 'Histogram', 'Pie chart', 'Bar chart'],
+            options: ['Dotplot of all 200 scores', 'Histogram', 'Pie chart of the scores', 'Bar chart of each score'],
             correctAnswer: 1,
-            explanation: 'Histograms work well for large data sets. Dotplots become cluttered with 200 values.'
+            explanation: 'Histograms work well for large quantitative data sets. A dotplot becomes cluttered with 200 values, and pie and bar charts are for categorical data.'
           },
           {
             question: 'If you multiply every value by $-1$:',
-            options: ['The SD stays the same', 'The SD becomes negative', 'The SD doubles', 'The shape reverses (left-skew becomes right-skew)'],
+            options: ['The mean stays exactly the same as before', 'The SD becomes negative', 'The SD doubles', 'The direction of skew reverses'],
             correctAnswer: 3,
-            explanation: 'Multiplying by $-1$ flips all values, reversing the direction of skewness. SD stays the same ($|-1| = 1$).'
+            explanation: 'Multiplying by $-1$ mirrors every value, so a long right tail becomes a long left tail. The mean changes sign, while the SD stays the same because it is multiplied by $|-1| = 1$ and can never be negative.'
           }
         ]
       }

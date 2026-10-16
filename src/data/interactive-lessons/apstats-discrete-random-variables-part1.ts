@@ -45,27 +45,27 @@ From the table above:
       id: 'discreterandomvariables-p1-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'A valid probability distribution must have probabilities that sum to:',
-            options: ['0', '1', '0.5', 'It depends on the variable'],
+            options: ['100', '1', '0.5', 'The number of possible values'],
             correctAnswer: 1,
-            explanation: 'The total probability across all outcomes must equal 1.'
+            explanation: 'The probabilities of all possible values must add to exactly 1. A total of 100 only works if the probabilities are written as percents, and the total never depends on how many values there are.'
           },
           {
             question: 'If $P(X=1) = 0.3$, $P(X=2) = 0.4$, and $P(X=3) = 0.2$, then $P(X=0)$ equals:',
-            options: ['0', '0.1', '0.3', 'Cannot be determined'],
+            options: ['0', '0.1', '0.9', 'Cannot be determined'],
             correctAnswer: 1,
-            explanation: '$P(X=0) = 1 - 0.3 - 0.4 - 0.2 = 0.1$.'
+            explanation: 'The probabilities must sum to 1, so $P(X=0) = 1 - 0.3 - 0.4 - 0.2 = 0.1$. 0.9 is the sum of the given probabilities, not what is left over, and 0 would make the total only 0.9.'
           },
           {
             question: 'A discrete random variable can take:',
-            options: ['Any value in an interval', 'Only countable values', 'Only positive values', 'Only integer values'],
+            options: ['Any value in an interval', 'A countable number of values', 'Only positive values', 'Only whole-number values'],
             correctAnswer: 1,
-            explanation: 'Discrete = countable number of possible values (though often integers on the AP exam).'
+            explanation: 'A discrete random variable has a countable (finite or countably infinite) set of possible values. Any value in an interval describes a continuous variable, and discrete values can be negative or non-integers, such as a net gain of -\\$2.50.'
           }
         ]
       }

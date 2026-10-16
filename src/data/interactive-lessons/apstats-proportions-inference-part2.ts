@@ -39,27 +39,27 @@ CI: $(0.303, 0.397)$`
       id: 'propinference-p2-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'A 95% confidence interval means:',
-            options: ['95% of the data falls in the interval', '95% of samples would produce intervals containing the true $p$', 'There is a 95% chance $p$ is in this interval', 'The sample proportion is correct 95% of the time'],
+            options: ['95% of the data values fall in the interval', 'About 95% of such intervals capture $p$', 'There is a 95% chance $p$ is in this interval', '95% of all samples give this same interval'],
             correctAnswer: 1,
-            explanation: 'The confidence level refers to the method: 95% of similarly constructed intervals would capture $p$.'
+            explanation: 'The confidence level describes the method: about 95% of intervals built this way from repeated samples would capture $p$. A single computed interval either contains $p$ or not, and the interval is about $p$, not about individual data values.'
           },
           {
             question: 'Increasing the confidence level:',
             options: ['Narrows the interval', 'Widens the interval', 'Has no effect on width', 'Changes the sample proportion'],
             correctAnswer: 1,
-            explanation: 'Higher confidence requires a larger $z^*$, making the margin of error (and interval) wider.'
+            explanation: 'Higher confidence requires a larger $z^*$, making the margin of error (and interval) wider. The sample proportion at the center does not change.'
           },
           {
             question: 'The margin of error for a proportion is:',
-            options: ['$z^* \\cdot \\hat{p}$', '$z^* \\sqrt{\\hat{p}(1-\\hat{p})/n}$', '$\\hat{p} - p$', '$1.96/\\sqrt{n}$'],
+            options: ['$z^* \\cdot \\hat{p}(1-\\hat{p})/n$', '$z^* \\sqrt{\\hat{p}(1-\\hat{p})/n}$', '$\\sqrt{z^* \\hat{p}(1-\\hat{p})/n}$', '$z^* \\sqrt{p_0(1-p_0)/n}$'],
             correctAnswer: 1,
-            explanation: 'The margin of error = $z^* \\times SE(\\hat{p})$.'
+            explanation: 'Margin of error $= z^* \\times SE(\\hat{p}) = z^* \\sqrt{\\hat{p}(1-\\hat{p})/n}$. Forgetting the square root, putting $z^*$ under it, or using a null value $p_0$ (which an interval does not have) are common slips.'
           }
         ]
       }

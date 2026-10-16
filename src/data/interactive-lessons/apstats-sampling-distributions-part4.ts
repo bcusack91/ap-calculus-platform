@@ -94,14 +94,14 @@ $$SE \\propto \\frac{1}{\\sqrt{n}}$$
           {
             question: 'A sample of 64 has $s = 16$. The standard error of $\\bar{x}$ is:',
             options: ['$16$', '$8$', '$4$', '$2$'],
-            correctAnswer: 2,
-            explanation: '$SE_{\\bar{x}} = s/\\sqrt{n} = 16/\\sqrt{64} = 16/8 = 2$.'
+            correctAnswer: 3,
+            explanation: '$SE_{\\bar{x}} = s/\\sqrt{n} = 16/\\sqrt{64} = 16/8 = 2$. 16 is the SD of individual values, 8 is $\\sqrt{64}$, and 4 is $16/4$, which divides by the wrong quantity.'
           },
           {
             question: 'Standard error measures the variability of:',
-            options: ['Individual data points', 'The population', 'A sample statistic across repeated samples', 'The residuals'],
+            options: ['Values within one sample', 'Values in the population', 'A statistic across repeated samples', 'The residuals around a fitted line'],
             correctAnswer: 2,
-            explanation: 'SE measures how much a statistic (like $\\bar{x}$ or $\\hat{p}$) varies from sample to sample. It describes the spread of the sampling distribution.'
+            explanation: 'SE measures how much a statistic (like $\\bar{x}$ or $\\hat{p}$) varies from sample to sample: the spread of its sampling distribution. The spread of individual values is the SD.'
           },
           {
             question: 'To cut the standard error in half, you must multiply $n$ by:',
@@ -155,16 +155,16 @@ $$SE \\propto \\frac{1}{\\sqrt{n}}$$
           {
             id: 'sd4-dd1',
             label: 'When we use $s$ instead of $\\sigma$ in the SE formula, we are ___ the standard error',
-            options: ['calculating exactly', 'estimating', 'ignoring'],
+            options: ['calculating exactly', 'estimating', 'ignoring', 'doubling'],
             correctIndex: 1,
             explanation: 'Since $\\sigma$ is usually unknown, we substitute $s$ to get an **estimate** of the standard error.'
           },
           {
             id: 'sd4-dd2',
             label: 'Tripling the sample size multiplies SE by ___',
-            options: ['$1/3$', '$1/\\sqrt{3} \\approx 0.577$', '$\\sqrt{3}$', '$3$'],
+            options: ['$1/3$', '$1/\\sqrt{3}$', '$\\sqrt{3}$', '$1/9$'],
             correctIndex: 1,
-            explanation: '$SE \\propto 1/\\sqrt{n}$. Tripling $n$ multiplies SE by $1/\\sqrt{3} \\approx 0.577$.'
+            explanation: '$SE \\propto 1/\\sqrt{n}$. Tripling $n$ multiplies SE by $1/\\sqrt{3} \\approx 0.577$, not by $1/3$.'
           },
           {
             id: 'sd4-dd3',
@@ -176,7 +176,7 @@ $$SE \\propto \\frac{1}{\\sqrt{n}}$$
           {
             id: 'sd4-dd4',
             label: 'As sample size increases, the standard error ___',
-            options: ['increases', 'decreases', 'stays the same'],
+            options: ['increases', 'decreases', 'stays the same', 'doubles'],
             correctIndex: 1,
             explanation: 'Larger samples produce more precise estimates, so the SE decreases as $n$ increases.'
           }
@@ -214,9 +214,9 @@ $$1 \\geq \\frac{20}{\\sqrt{n}} \\implies \\sqrt{n} \\geq 20 \\implies n \\geq 4
         questions: [
           {
             question: 'Which best describes the standard error?',
-            options: ['The average distance of data points from the mean', 'The typical distance of a sample statistic from the true parameter', 'The margin of error of a confidence interval', 'The probability of a Type I error'],
+            options: ['The average distance of data values from their mean', 'Typical distance of a statistic from the parameter', 'The margin of error of a confidence interval', 'The probability of making a Type I error'],
             correctAnswer: 1,
-            explanation: 'Standard error describes how much a sample statistic (like $\\bar{x}$) typically differs from the true parameter across repeated samples.'
+            explanation: 'Standard error describes how far a sample statistic (like $\\bar{x}$) typically is from the true parameter across repeated samples. The spread of data values is the SD, and a margin of error multiplies the SE by a critical value.'
           },
           {
             question: 'A sample of 225 has $s = 30$. What is $SE_{\\bar{x}}$?',
@@ -238,9 +238,9 @@ $$1 \\geq \\frac{20}{\\sqrt{n}} \\implies \\sqrt{n} \\geq 20 \\implies n \\geq 4
           },
           {
             question: 'Which is NOT a reason to prefer a larger sample size?',
-            options: ['Smaller standard error', 'More precise estimates', 'Narrower confidence intervals', 'Eliminates bias in the sampling method'],
+            options: ['A smaller standard error', 'More precise estimates', 'Narrower confidence intervals', 'Removal of bias'],
             correctAnswer: 3,
-            explanation: 'Larger samples reduce SE and improve precision, but they do NOT fix bias. A biased sampling method (e.g., convenience sample) stays biased regardless of size.'
+            explanation: 'Larger samples reduce SE and improve precision, but they do NOT fix bias. A biased sampling method (e.g., a convenience sample) stays biased regardless of size.'
           },
           {
             question: 'The formula $SE_{\\hat{p}} = \\sqrt{\\hat{p}(1-\\hat{p})/n}$ uses $\\hat{p}$ instead of $p$ because:',
@@ -250,9 +250,9 @@ $$1 \\geq \\frac{20}{\\sqrt{n}} \\implies \\sqrt{n} \\geq 20 \\implies n \\geq 4
           },
           {
             question: 'A sample of 80 from a population of 600 is drawn. Is the 10% condition met?',
-            options: ['Yes, because $80 < 60$', 'Yes, because $80/600 = 13.3\\% < 100\\%$', 'No, because $80/600 = 13.3\\% > 10\\%$', 'No, because $n < 100$'],
+            options: ['Yes, because $80 < 600$', 'Yes, because $80 \\geq 30$', 'No, because $80/600 \\approx 13\\% > 10\\%$', 'No, because $80 < 100$'],
             correctAnswer: 2,
-            explanation: '$80/600 \\approx 0.133 = 13.3\\%$. Since $13.3\\% > 10\\%$, the 10% condition is NOT met.'
+            explanation: '$80/600 \\approx 0.133 = 13.3\\%$. Since this exceeds 10%, the 10% condition is NOT met. The condition compares $n$ with 10% of $N$, not with 30 or 100.'
           },
           {
             question: 'If $SE_{\\bar{x}} = 3$ with $n = 100$, what would SE be with $n = 400$?',
@@ -263,14 +263,14 @@ $$1 \\geq \\frac{20}{\\sqrt{n}} \\implies \\sqrt{n} \\geq 20 \\implies n \\geq 4
           {
             question: 'The SD of a dataset is 12. A sample of 36 is drawn. Which value is the standard error?',
             options: ['$12$', '$6$', '$4$', '$2$'],
-            correctAnswer: 2,
-            explanation: '$SE = \\sigma/\\sqrt{n} = 12/\\sqrt{36} = 12/6 = 2$.'
+            correctAnswer: 3,
+            explanation: '$SE = \\sigma/\\sqrt{n} = 12/\\sqrt{36} = 12/6 = 2$. 12 is the SD of individual values, 6 is $\\sqrt{36}$, and 4 is not produced by the formula.'
           },
           {
             question: 'Why do we divide by $\\sqrt{n}$ rather than $n$ in the SE formula?',
-            options: ['Convention', 'Because variance divides by $n$, and SE is the square root of variance', 'To make the number smaller', 'Because of the Central Limit Theorem'],
+            options: ['It is only a convention with no real reason', 'The variance of $\\bar{x}$ is $\\sigma^2/n$, and SE is its root', 'The CLT says to divide by $\\sqrt{n}$ for large $n$', 'Dividing by $n$ would make the SE much too large'],
             correctAnswer: 1,
-            explanation: 'The variance of $\\bar{x}$ is $\\sigma^2/n$. Taking the square root gives $\\sigma/\\sqrt{n}$. The square root converts from variance to standard deviation.'
+            explanation: 'The variance of $\\bar{x}$ is $\\sigma^2/n$; taking the square root gives $\\sigma/\\sqrt{n}$. Dividing by $n$ would make the SE too small, not too large, and the formula holds for any $n$, not just through the CLT.'
           }
         ]
       }

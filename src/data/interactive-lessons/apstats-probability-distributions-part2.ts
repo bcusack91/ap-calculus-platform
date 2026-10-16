@@ -26,7 +26,7 @@ A z-score tells you **how many standard deviations** a value is from the mean.
 
 ### Standard Normal Distribution
 
-When we standardize, we convert to $Z \\\\sim N(0, 1)$.
+When we standardize, we convert to $Z \\sim N(0, 1)$.
 
 ### Example
 
@@ -39,7 +39,7 @@ The student scored **2 standard deviations above the mean**.`
       id: 'probdistributions-p2-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
@@ -47,13 +47,13 @@ The student scored **2 standard deviations above the mean**.`
             question: 'A z-score of $-1.5$ means the value is:',
             options: ['1.5 standard deviations above the mean', '1.5 standard deviations below the mean', '1.5 units below the mean', 'Below the median'],
             correctAnswer: 1,
-            explanation: 'A negative z-score means below the mean; the magnitude tells how many SDs.'
+            explanation: 'A negative z-score means below the mean, and its size counts standard deviations, not raw units. Being below the mean is not the same as being below the median in a skewed distribution, so the z-score gives the precise statement.'
           },
           {
             question: 'If $\\mu = 50$ and $\\sigma = 10$, the z-score for $x = 65$ is:',
             options: ['0.5', '1.0', '1.5', '6.5'],
             correctAnswer: 2,
-            explanation: '$z = (65-50)/10 = 15/10 = 1.5$.'
+            explanation: '$z = (65-50)/10 = 15/10 = 1.5$. 6.5 divides the value 65 by 10 without subtracting the mean first.'
           },
           {
             question: 'The standard Normal distribution has:',

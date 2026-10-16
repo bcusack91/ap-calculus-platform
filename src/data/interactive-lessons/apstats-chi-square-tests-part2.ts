@@ -90,15 +90,15 @@ Using a $\\chi^2$ table: $p \\approx 0.034$
         questions: [
           {
             question: 'The chi-square test for independence uses data from:',
-            options: ['Two independent samples', 'One sample with two categorical variables measured', 'One sample with one categorical variable', 'Paired data'],
+            options: ['Two or more independent samples, one variable each', 'One random sample, two categorical variables recorded', 'A single random sample, one categorical variable recorded', 'Paired measurements taken on the same individuals'],
             correctAnswer: 1,
-            explanation: 'The independence test uses ONE sample where TWO categorical variables are recorded for each subject.'
+            explanation: 'The independence test uses ONE sample in which TWO categorical variables are recorded for each individual. Several independent samples compared on one variable is the homogeneity design, one variable from one sample cannot show an association, and paired measurements belong to matched-pairs procedures for means.'
           },
           {
             question: 'The expected count formula is:',
-            options: ['Observed $\\times$ total', '(row total $\\times$ column total) / grand total', 'Grand total / number of cells', 'Observed $-$ expected'],
+            options: ['Observed count $\\times$ table total $\\div$ row total', 'Row total $\\times$ column total $\\div$ table total', 'Table total $\\div$ the number of cells in the table', 'Row total $\\times$ column total $\\div$ number of cells'],
             correctAnswer: 1,
-            explanation: '$E = (\\text{row total} \\times \\text{column total}) / \\text{grand total}$. This gives the count expected under independence.'
+            explanation: '$E = (\\text{row total} \\times \\text{column total}) / \\text{table total}$, the count expected in the cell if the variables are independent. Expected counts never use the observed count, and dividing the table total evenly among the cells ignores the margins.'
           },
           {
             question: 'The degrees of freedom for a $3 \\times 4$ table are:',
@@ -154,30 +154,30 @@ A two-way table has row totals of 80 and 120, column totals of 90 and 110, and a
           {
             id: 'chi2-dd1',
             label: '$H_0$ for the independence test states that the two variables are ___',
-            options: ['associated', 'independent', 'equal', 'normally distributed'],
+            options: ['associated', 'independent', 'causally related', 'normally distributed'],
             correctIndex: 1,
-            explanation: '$H_0$ always states the two categorical variables are independent (no association).'
+            explanation: '$H_0$ always states that the two categorical variables are independent (not associated). Association is the alternative, and chi-square tests say nothing about causation or normality.'
           },
           {
             id: 'chi2-dd2',
             label: 'A large $\\chi^2$ value suggests the variables are ___',
-            options: ['independent', 'associated', 'normally distributed'],
+            options: ['independent', 'associated', 'causally linked', 'normally distributed'],
             correctIndex: 1,
-            explanation: 'Large $\\chi^2$ means observed counts differ substantially from expected counts, providing evidence of an association.'
+            explanation: 'A large $\\chi^2$ means observed counts differ substantially from the counts expected under independence, which is evidence of an association. It does not show causation or anything about normality.'
           },
           {
             id: 'chi2-dd3',
-            label: 'Chi-square tests are always ___-sided',
-            options: ['one', 'two', 'neither — they are right-tail only'],
+            label: 'The p-value for a chi-square test is the area ___ the observed $\\chi^2$ value',
+            options: ['to the left of', 'on both sides of', 'to the right of', 'between 0 and'],
             correctIndex: 2,
-            explanation: 'Chi-square tests are always right-tail only. Any deviation (positive or negative) from expected is squared, so $\\chi^2$ is always positive.'
+            explanation: 'Only large values of $\\chi^2$ count as evidence against $H_0$, so the p-value is the right-tail area beyond the observed value. Left-tail or two-sided areas would treat small, well-fitting values as evidence.'
           },
           {
             id: 'chi2-dd4',
             label: 'If $p = 0.12$ and $\\alpha = 0.05$, we ___ $H_0$',
-            options: ['reject', 'fail to reject'],
+            options: ['reject', 'fail to reject', 'accept', 'confirm'],
             correctIndex: 1,
-            explanation: '$p = 0.12 > 0.05 = \\alpha$, so we fail to reject $H_0$. There is not convincing evidence of an association.'
+            explanation: '$p = 0.12 > 0.05 = \\alpha$, so we fail to reject $H_0$: there is not convincing evidence of an association. We never accept or confirm $H_0$; a large p-value only means the data are consistent with it.'
           }
         ]
       }
@@ -192,9 +192,9 @@ A two-way table has row totals of 80 and 120, column totals of 90 and 110, and a
         questions: [
           {
             question: 'The independence test examines:',
-            options: ['Whether one variable causes another', 'Whether two categorical variables are associated', 'Whether two populations have the same distribution', 'Whether a distribution fits a model'],
+            options: ['Whether one variable causes changes in the other variable', 'Whether two categorical variables are associated', 'Whether two populations share the same distribution', 'Whether two population means are equal to each other'],
             correctAnswer: 1,
-            explanation: 'The test for independence checks whether two categorical variables measured on the same subjects are associated.'
+            explanation: 'The test for independence checks whether two categorical variables measured on the same individuals are associated. Comparing the distribution of one variable across populations is the homogeneity test, causation needs a randomized experiment, and means need a $t$ procedure.'
           },
           {
             question: 'For a $4 \\times 3$ table, $df =$',
@@ -210,45 +210,45 @@ A two-way table has row totals of 80 and 120, column totals of 90 and 110, and a
           },
           {
             question: 'The chi-square distribution is:',
-            options: ['Symmetric and bell-shaped', 'Right-skewed, bounded below by 0', 'Left-skewed', 'Uniform'],
+            options: ['Symmetric and bell-shaped about 0', 'Right-skewed, positive values only', 'Left-skewed with a long tail toward 0', 'Uniform across all possible values'],
             correctAnswer: 1,
-            explanation: 'The $\\chi^2$ distribution is always non-negative and right-skewed (though it becomes more symmetric as $df$ increases).'
+            explanation: 'Chi-square distributions take only positive values and are skewed right, with the skew becoming less pronounced as $df$ increases. They are never symmetric about 0, left-skewed or uniform.'
           },
           {
-            question: 'All expected counts must be at least ___ for the $\\chi^2$ test to be valid.',
+            question: 'The expected counts condition requires every expected count to be greater than ___.',
             options: ['$1$', '$5$', '$10$', '$30$'],
             correctAnswer: 1,
-            explanation: 'The expected count condition (also called "Large Counts") requires all $E_i \\geq 5$.'
+            explanation: 'The AP condition is that all expected counts are greater than 5. Observed counts are not checked, and the thresholds 10 and 30 belong to other procedures.'
           },
           {
             question: 'A $\\chi^2$ test for independence with $p = 0.002$ at $\\alpha = 0.05$ leads to:',
-            options: ['Fail to reject $H_0$', 'Reject $H_0$ — evidence of association', 'Accept $H_0$', 'Inconclusive'],
+            options: ['Fail to reject $H_0$; there is no evidence of an association', 'Reject $H_0$; convincing evidence of an association', 'Accept $H_0$; the variables are shown to be independent', 'Reject $H_0$; one variable is shown to cause the other'],
             correctAnswer: 1,
-            explanation: '$p = 0.002 < 0.05$. We reject $H_0$ and conclude there is convincing evidence of an association.'
+            explanation: '$p = 0.002 < 0.05$, so we reject $H_0$ and conclude there is convincing evidence of an association. Failing to reject would require $p > \\alpha$, $H_0$ is never accepted, and an association found in a sample does not establish causation.'
           },
           {
             question: 'Which cell contributes most to $\\chi^2$?',
-            options: ['The cell with the largest observed count', 'The cell where $(O-E)^2/E$ is largest', 'The cell with the smallest expected count', 'The total row'],
+            options: ['The cell with the largest observed count', 'The cell with the largest value of $(O-E)^2/E$', 'The cell with the smallest expected count', 'The cell where $(O-E)$ is the largest'],
             correctAnswer: 1,
-            explanation: 'Each cell contributes $(O_i - E_i)^2/E_i$. The largest contribution comes from the cell with the biggest squared deviation relative to its expected count.'
+            explanation: 'Each cell adds $(O-E)^2/E$, so the cell with the largest value of that quantity contributes most. A large observed count, a small expected count or a large positive gap alone does not decide it, because the gap is squared and scaled by the expected count.'
           },
           {
             question: 'Rejecting $H_0$ in a $\\chi^2$ independence test means:',
-            options: ['Variable A causes variable B', 'The variables are associated — one predicts the other', 'The distributions are identical', 'The expected counts are wrong'],
+            options: ['One variable causes changes in the other variable', 'The two variables are associated in the population', 'Knowing one variable tells nothing about the other', 'The expected counts were computed incorrectly'],
             correctAnswer: 1,
-            explanation: 'Association ≠ causation. Rejecting $H_0$ means the variables are associated, but we cannot conclude causation from an observational study.'
+            explanation: 'Rejecting $H_0$ gives convincing evidence that the variables are associated in the population. Association is not causation in an observational study, independence is what we rejected, and the expected counts come from the margins, not from the conclusion.'
           },
           {
             question: 'The expected counts in a $\\chi^2$ independence test are computed assuming:',
-            options: ['$H_a$ is true', '$H_0$ is true — the variables are independent', 'Equal sample sizes', 'Normal distribution'],
+            options: ['$H_a$ is true, so the variables are associated', '$H_0$ is true, so there is no association', 'Every cell holds the same number of individuals', 'Each cell count follows a normal distribution'],
             correctAnswer: 1,
-            explanation: 'Expected counts represent what we would expect if $H_0$ (independence) were true.'
+            explanation: 'Expected counts are what we would see if $H_0$ (independence) were true; that is why they come from the row and column totals. They do not assume $H_a$, equal cell sizes or normality.'
           },
           {
             question: '"No association" is another way of saying:',
-            options: ['The variables are dependent', 'The variables are independent', 'The $\\chi^2$ is large', 'The p-value is small'],
+            options: ['The variables are dependent', 'The variables are independent', 'The $\\chi^2$ statistic is large', 'The p-value is close to zero'],
             correctAnswer: 1,
-            explanation: 'Independence means no association — knowing one variable gives no information about the other.'
+            explanation: 'Independence means no association: knowing one variable gives no information about the other. Dependence is the opposite, and a large $\\chi^2$ or a tiny p-value would be evidence of an association.'
           }
         ]
       }

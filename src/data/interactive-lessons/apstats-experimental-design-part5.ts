@@ -22,10 +22,10 @@ $$\\text{Explanatory} \\leftarrow \\text{Confounder} \\rightarrow \\text{Respons
 
 | Bias | Description | Example |
 |------|------------|---------|
-| **Selection bias** | Sample is not representative | Surveying only gym members about exercise |
+| **Undercoverage** | Some groups have little or no chance of being selected | Surveying only gym members about exercise |
 | **Response bias** | Subjects give inaccurate answers | Asking about illegal behavior |
 | **Nonresponse bias** | Many selected subjects don’t respond | Low survey return rate |
-| **Measurement bias** | Instruments or questions are flawed | Leading questions |
+| **Response bias (wording)** | Question wording pushes answers one way | Leading questions |
 | **Voluntary response bias** | Only motivated people respond | Online reviews |
 
 ### Placebo Effect and Blinding
@@ -39,25 +39,25 @@ $$\\text{Explanatory} \\leftarrow \\text{Confounder} \\rightarrow \\text{Respons
       id: 'experimentaldesign-p5-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'A confounding variable:',
-            options: ['Only appears in experiments', 'Is associated with both the explanatory and response variables', 'Can be eliminated by using a large sample', 'Is the same as a lurking variable'],
+            options: ['Appears only in experiments', 'Is linked to both explanatory and response', 'Disappears when the sample is large', 'Is the response variable itself'],
             correctAnswer: 1,
             explanation: 'A confounder is linked to both variables, making it impossible to isolate the explanatory variable’s effect.'
           },
           {
             question: 'Double-blinding means:',
-            options: ['Using two placebos', 'Neither subjects nor researchers know group assignments', 'Running the experiment twice', 'Using two control groups'],
+            options: ['Giving every subject two different placebos', 'Neither subjects nor evaluators know', 'Running the whole experiment twice over', 'Using two separate control groups at once'],
             correctAnswer: 1,
             explanation: 'Double-blind: both subjects and evaluators are unaware of treatment assignments.'
           },
           {
             question: 'Which scenario shows voluntary response bias?',
-            options: ['A random phone survey', 'An online poll asking viewers to call in', 'A census of all employees', 'A stratified random sample'],
+            options: ['A random phone survey', 'A call-in poll on a TV show', 'A census of all employees', 'A stratified random sample'],
             correctAnswer: 1,
             explanation: 'Call-in polls attract people with strong opinions, creating voluntary response bias.'
           }
@@ -73,7 +73,7 @@ $$\\text{Explanatory} \\leftarrow \\text{Confounder} \\rightarrow \\text{Respons
 
 **2)** In a drug trial, patients know whether they get the real drug. What kind of blinding is missing? (single/double)
 
-**3)** A magazine asks readers to mail in a survey. What type of bias is this? (voluntary response/selection/nonresponse)
+**3)** A magazine asks readers to mail in a survey. What type of bias is this? (voluntary response/undercoverage/nonresponse)
       `,
       exercise: {
         boxes: 3,

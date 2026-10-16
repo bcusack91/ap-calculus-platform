@@ -39,25 +39,25 @@ $$z = \\frac{0.56 - 0.50}{\\sqrt{0.50 \\times 0.50 / 200}} = \\frac{0.06}{0.0354
       id: 'propinference-p3-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'In a hypothesis test for a proportion, the standard error uses:',
-            options: ['$\\hat{p}$', '$p_0$ from the null hypothesis', 'The sample size only', 'The confidence level'],
+            options: ['The sample proportion $\\hat{p}$', 'The null value $p_0$', 'The sample size alone', 'The confidence level $C$'],
             correctAnswer: 1,
-            explanation: 'For hypothesis tests, use the null hypothesis value $p_0$ in the SE formula.'
+            explanation: 'A test computes the statistic assuming $H_0$ is true, so the SE uses the null value $p_0$. Using $\\hat{p}$ is the interval formula, and the SE depends on both $p_0$ and $n$.'
           },
           {
             question: 'A p-value of 0.03 with $\\alpha = 0.05$ means:',
-            options: ['Fail to reject $H_0$', 'Reject $H_0$', 'Accept $H_0$', 'The test is inconclusive'],
+            options: ['Fail to reject $H_0$', 'Reject $H_0$', 'Accept $H_0$', 'Accept $H_a$ as true'],
             correctAnswer: 1,
-            explanation: '$0.03 < 0.05$, so we reject $H_0$ at the $\\alpha = 0.05$ significance level.'
+            explanation: '$0.03 < 0.05$, so we reject $H_0$ at the $\\alpha = 0.05$ level. We never accept $H_0$, and rejecting gives convincing evidence for $H_a$, not proof.'
           },
           {
             question: 'The alternative hypothesis $H_a: p > 0.5$ calls for a:',
-            options: ['Two-tailed test', 'Left-tailed test', 'Right-tailed test', 'No test needed'],
+            options: ['Two-tailed test', 'Left-tailed test', 'Right-tailed test', 'Chi-square test'],
             correctAnswer: 2,
             explanation: '$p > p_0$ is a right-tailed (upper-tail) test.'
           }

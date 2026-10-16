@@ -84,21 +84,21 @@ Also note the **direction**: Is $O > E$ (more than expected) or $O < E$ (fewer t
         questions: [
           {
             question: '$\\chi^2 = 12.3$ with $df = 4$. Using the table ($\\alpha = 0.05$ cutoff $= 9.488$), we:',
-            options: ['Fail to reject — $12.3 < 9.488$', 'Reject — $12.3 > 9.488$', 'Need more information', 'Compare to $z^*$ instead'],
+            options: ['Fail to reject $H_0$, since $12.3 > 9.488$ means $p > 0.05$', 'Reject $H_0$, since $12.3 > 9.488$ means $p < 0.05$', 'Fail to reject $H_0$, since $df = 4$ is too small', 'Reject $H_0$, since $12.3 > 9.488$ means $p > 0.05$'],
             correctAnswer: 1,
-            explanation: '$12.3 > 9.488$ so $p < 0.05$. We reject $H_0$.'
+            explanation: '$12.3 > 9.488$ puts the statistic beyond the 0.05 cutoff, so the right-tail area is less than 0.05 and we reject $H_0$. A statistic past the cutoff means a SMALLER p-value, not a larger one, and $df$ is not a reason to withhold a decision.'
           },
           {
             question: 'After a significant $\\chi^2$ test, a good follow-up is:',
-            options: ['Stop — the answer is clear', 'Examine which cells contributed most to $\\chi^2$', 'Run a $t$-test', 'Remove outliers and retest'],
+            options: ['Report the decision without any further detail', 'Examine the cells that contributed most to $\\chi^2$', 'Run a $t$ test on the counts in each column', 'Remove the cells with the largest counts and retest'],
             correctAnswer: 1,
-            explanation: 'Looking at individual cell contributions helps identify where the model breaks down — which categories are different from expected.'
+            explanation: 'Looking at individual cell contributions shows where the observed counts depart most from expected, which categories drive the result. $t$ tests do not apply to categorical counts, and deleting cells to retest would distort the analysis.'
           },
           {
             question: '"We fail to reject $H_0$" means:',
-            options: ['$H_0$ is true', 'We accept $H_0$', 'We do not have enough evidence to reject $H_0$', 'The test was invalid'],
+            options: ['The data prove that $H_0$ is true', 'We accept $H_0$ as the correct model', 'The data are not convincing evidence against $H_0$', 'The test was invalid for these data'],
             correctAnswer: 2,
-            explanation: 'Failing to reject means the data do not provide convincing evidence against $H_0$. It does NOT prove $H_0$ true.'
+            explanation: 'Failing to reject means the data do not provide convincing evidence against $H_0$. It does NOT prove or accept $H_0$, and it says nothing about whether the conditions for the test were met.'
           }
         ]
       }
@@ -148,30 +148,30 @@ Use the partial table above.
           {
             id: 'chi5-dd1',
             label: '"We accept $H_0$" is ___ on the AP exam',
-            options: ['Correct language', 'Incorrect — say "fail to reject $H_0$"'],
+            options: ['Correct wording', 'Incorrect wording', 'Correct only when $p > 0.50$', 'Correct only in a test for homogeneity'],
             correctIndex: 1,
-            explanation: 'Never say "accept $H_0$." The correct phrasing is "fail to reject $H_0$."'
+            explanation: 'Never say "accept $H_0$," whatever the p-value or test. The correct phrasing is "fail to reject $H_0$," because a large p-value only means the data are consistent with $H_0$.'
           },
           {
             id: 'chi5-dd2',
             label: 'After rejecting $H_0$ in an independence test (observational study), we can conclude',
-            options: ['Causation', 'Association but not causation'],
+            options: ['Causation', 'Association', 'Independence', 'Equal distributions'],
             correctIndex: 1,
-            explanation: 'Chi-square tests show association, not causation (unless the data come from a randomized experiment).'
+            explanation: 'In an observational study a significant chi-square test shows association, not causation. Independence is what was rejected, and "equal distributions" is the null of a homogeneity test.'
           },
           {
             id: 'chi5-dd3',
             label: 'A cell with $O = 30$ and $E = 15$ contributes ___ to $\\chi^2$ than a cell with $O = 20$ and $E = 15$',
-            options: ['More', 'Less', 'The same'],
+            options: ['More', 'Less', 'The same', 'Cannot tell'],
             correctIndex: 0,
-            explanation: '$(30-15)^2/15 = 15$ vs. $(20-15)^2/15 = 1.67$. The first cell contributes much more.'
+            explanation: '$(30-15)^2/15 = 15$ vs. $(20-15)^2/15 = 1.67$. Both cells expect 15, so the larger gap gives the much larger contribution.'
           },
           {
             id: 'chi5-dd4',
             label: '$p = 0.03$, $\\alpha = 0.05$. The conclusion is to ___',
-            options: ['reject $H_0$', 'fail to reject $H_0$'],
+            options: ['reject $H_0$', 'fail to reject $H_0$', 'accept $H_0$', 'prove $H_0$ false'],
             correctIndex: 0,
-            explanation: '$p = 0.03 < 0.05 = \\alpha$. Reject $H_0$.'
+            explanation: '$p = 0.03 < 0.05 = \\alpha$, so we reject $H_0$. A test never accepts $H_0$, and rejecting gives convincing evidence rather than proof.'
           }
         ]
       }
@@ -186,63 +186,63 @@ Use the partial table above.
         questions: [
           {
             question: 'A $\\chi^2$ value near 0 suggests:',
-            options: ['Strong evidence against $H_0$', 'Observed counts match expected counts closely', 'The test is invalid', 'The sample was too small'],
+            options: ['Strong evidence that the variables are associated', 'Observed counts are close to expected counts', 'The expected counts condition has been violated', 'The sample was too small to detect any difference'],
             correctAnswer: 1,
-            explanation: '$\\chi^2 \\approx 0$ means $O \\approx E$ for all cells — data fit the null model well.'
+            explanation: '$\\chi^2 \\approx 0$ means $O \\approx E$ in every cell, so the data fit the null model well. A small statistic is not evidence of association, does not show a condition failed, and need not come from a small sample.'
           },
           {
             question: '$\\chi^2 = 3.5$, $df = 1$. From the table ($\\alpha = 0.10$: 2.706, $\\alpha = 0.05$: 3.841):',
-            options: ['$p < 0.05$', '$0.05 < p < 0.10$', '$p > 0.10$', '$p = 0.05$'],
+            options: ['$p < 0.05$', '$0.05 < p < 0.10$', '$0.10 < p < 0.25$', '$0.025 < p < 0.05$'],
             correctAnswer: 1,
-            explanation: '$2.706 < 3.5 < 3.841$, so $0.05 < p < 0.10$.'
+            explanation: '$2.706 < 3.5 < 3.841$, so the right-tail area is between the 0.10 and 0.05 columns: $0.05 < p < 0.10$. A statistic below 3.841 cannot give $p < 0.05$, and one above 2.706 cannot give $p > 0.10$.'
           },
           {
             question: 'The proper AP conclusion when $p = 0.08$ and $\\alpha = 0.05$:',
-            options: ['Reject $H_0$ — close to significant', 'Fail to reject $H_0$ — not convincing evidence', 'Accept $H_0$', 'The result is significant'],
+            options: ['Reject $H_0$; the result is close enough to 0.05', 'Fail to reject $H_0$; the evidence is not convincing', 'Accept $H_0$; the distributions are shown to match', 'Reject $H_0$; the result is significant at 0.10'],
             correctAnswer: 1,
-            explanation: '$p = 0.08 > 0.05$: fail to reject $H_0$. "Close" does not count as significant.'
+            explanation: '$p = 0.08 > 0.05$, so we fail to reject $H_0$; "close" does not count as significant. We never accept $H_0$, and the decision must use the stated $\\alpha = 0.05$, not a different level chosen after seeing the data.'
           },
           {
             question: 'Which cell contributes most to $\\chi^2$ if $O$ values are 25, 10, 18 and $E$ values are 20, 20, 13?',
-            options: ['Cell 1: $(25-20)^2/20 = 1.25$', 'Cell 2: $(10-20)^2/20 = 5.0$', 'Cell 3: $(18-13)^2/13 = 1.92$', 'All equal'],
+            options: ['Cell 1: $(25-20)^2/20 = 1.25$', 'Cell 2: $(10-20)^2/20 = 5.0$', 'Cell 3: $(18-13)^2/13 = 1.92$', 'All cells contribute equally'],
             correctAnswer: 1,
-            explanation: 'Cell 2 has the largest contribution: $(10-20)^2/20 = 100/20 = 5.0$.'
+            explanation: 'Cell 2 has the largest contribution: $(10-20)^2/20 = 100/20 = 5.0$. Cells 1 and 3 both have gaps of 5, giving only 1.25 and 1.92.'
           },
           {
             question: 'After failing to reject $H_0$, you should say:',
-            options: ['The variables are independent', 'There is not convincing evidence of an association', '$H_0$ is true', 'The sample was too small'],
+            options: ['The variables have been shown to be independent', 'There is not convincing evidence of an association', 'The null hypothesis has been proven to be true', 'There is convincing evidence of no association'],
             correctAnswer: 1,
-            explanation: 'Correct: "not convincing evidence." We never say $H_0$ is proven true.'
+            explanation: 'The correct statement is "not convincing evidence" of an association. Failing to reject never shows independence, proves $H_0$, or provides evidence FOR the null.'
           },
           {
-            question: 'A larger sample size generally:',
-            options: ['Decreases $\\chi^2$', 'Increases $\\chi^2$ for the same proportional discrepancy', 'Has no effect', 'Decreases $df$'],
+            question: 'If every count in a two-way table is doubled while all proportions stay the same, $\\chi^2$:',
+            options: ['Is cut in half', 'Is multiplied by 2', 'Stays the same', 'Is multiplied by 4'],
             correctAnswer: 1,
-            explanation: 'With larger $n$, the same proportional difference produces larger absolute differences, increasing $\\chi^2$.'
+            explanation: 'Each term becomes $(2O - 2E)^2/(2E) = 2(O-E)^2/E$, so $\\chi^2$ doubles. The squared gap grows by 4 but the expected count in the denominator grows by 2, so it neither stays the same nor quadruples; larger samples with the same proportions give stronger evidence.'
           },
           {
             question: 'The p-value is the probability of:',
-            options: ['$H_0$ being true', 'Getting $\\chi^2$ this large or larger if $H_0$ is true', 'The data being correct', 'Rejecting $H_0$'],
+            options: ['$H_0$ being true, given the observed $\\chi^2$', 'A $\\chi^2$ this large or larger, if $H_0$ is true', '$H_a$ being true, given the observed $\\chi^2$', 'Making an error when we reject $H_0$'],
             correctAnswer: 1,
-            explanation: 'The p-value is $P(\\chi^2 \\geq \\text{observed} \\mid H_0 \\text{ true})$.'
+            explanation: 'The p-value is $P(\\chi^2 \\geq \\text{observed} \\mid H_0 \\text{ true})$, computed by assuming $H_0$. It is not the probability that either hypothesis is true, and the chance of a Type I error is $\\alpha$, chosen in advance.'
           },
           {
             question: 'For $df = 3$, $\\alpha = 0.01$: the critical value from the table is $11.345$. Your $\\chi^2 = 14.2$. Decision:',
-            options: ['Fail to reject', 'Reject $H_0$ at $\\alpha = 0.01$', 'Need $\\alpha = 0.05$ table', 'Inconclusive'],
+            options: ['Fail to reject $H_0$, since $p > 0.01$', 'Reject $H_0$, since $p < 0.01$', 'Fail to reject $H_0$, since $p < 0.01$', 'No decision without the exact p-value'],
             correctAnswer: 1,
-            explanation: '$14.2 > 11.345$, so $p < 0.01$. Reject $H_0$ at $\\alpha = 0.01$.'
+            explanation: '$14.2 > 11.345$, so the right-tail area is less than 0.01 and we reject $H_0$ at $\\alpha = 0.01$. A p-value below $\\alpha$ never leads to failing to reject, and the bound from the table is enough to decide.'
           },
           {
             question: 'If $O > E$ in a cell, that category has:',
-            options: ['Fewer observations than expected', 'More observations than expected', 'Exactly the expected number', 'No contribution to $\\chi^2$'],
+            options: ['Fewer observations than expected', 'More observations than expected', 'Exactly the number that was expected', 'No contribution at all to $\\chi^2$'],
             correctAnswer: 1,
-            explanation: '$O > E$ means the observed count exceeds what the null model predicts for that category.'
+            explanation: '$O > E$ means the observed count exceeds what the null model predicts for that category. Any gap between $O$ and $E$, in either direction, adds a positive amount to $\\chi^2$.'
           },
           {
-            question: 'A GoF test with $\\chi^2 = 0.5$ and $df = 4$ has p-value approximately:',
-            options: ['$p < 0.01$', '$p \\approx 0.05$', '$p > 0.90$', 'Cannot determine'],
+            question: 'An independence test gives $\\chi^2 = 0.5$ with $df = 4$. The p-value is approximately:',
+            options: ['$p < 0.01$', '$p \\approx 0.05$', '$p > 0.90$', '$p \\approx 0.50$'],
             correctAnswer: 2,
-            explanation: '$\\chi^2 = 0.5$ is far below the $\\alpha = 0.10$ cutoff of 7.779 for $df = 4$. The p-value is very large, well above 0.90.'
+            explanation: '$\\chi^2 = 0.5$ is far below even the $\\alpha = 0.10$ cutoff of 7.779 for $df = 4$, and the curve with $df = 4$ has almost all its area above 0.5, so the p-value is about 0.97. Values near 0.05 or 0.01 would need a statistic near 9.5 or 13.3.'
           }
         ]
       }

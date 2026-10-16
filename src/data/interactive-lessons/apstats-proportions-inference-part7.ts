@@ -28,7 +28,7 @@ export const apStatsPropInfPart7Data = {
       id: 'propinference-p7-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
@@ -42,7 +42,7 @@ export const apStatsPropInfPart7Data = {
             question: '$\\hat{p} = 0.40$, $n = 250$, 99% CI. The critical value $z^*$ is:',
             options: ['1.645', '1.960', '2.326', '2.576'],
             correctAnswer: 3,
-            explanation: '$99\\\\%$ confidence uses $z^* = 2.576$.'
+            explanation: '$99\\%$ confidence uses $z^* = 2.576$.'
           },
           {
             question: 'If a 95% CI for $p$ is $(0.42, 0.58)$, the margin of error is:',

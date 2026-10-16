@@ -98,9 +98,9 @@ $$df = n - 1 = 36 - 1 = 35$$
           },
           {
             question: 'A test statistic of $t = 0$ means:',
-            options: ['The test failed', 'The sample mean equals the null value', 'The sample size is too small', '$H_0$ is proven true'],
+            options: ['The test was carried out incorrectly', '$\\bar{x}$ is exactly equal to $\\mu_0$', 'The sample size is much too small', 'The null hypothesis is proven true'],
             correctAnswer: 1,
-            explanation: '$t = (\\bar{x} - \\mu_0)/SE$. If $t = 0$, then $\\bar{x} = \\mu_0$.'
+            explanation: '$t = (\\bar{x} - \\mu_0)/SE$. If $t = 0$, then $\\bar{x} = \\mu_0$: no evidence against $H_0$, but that never proves $H_0$ true.'
           },
           {
             question: 'Increasing the sample size from 25 to 100 will:',
@@ -154,9 +154,9 @@ $$df = n - 1 = 36 - 1 = 35$$
           {
             id: 'ht2-dd1',
             label: 'A $t$-statistic of $t = 4.2$ provides ___ evidence against $H_0$',
-            options: ['Weak', 'Moderate', 'Strong', 'No'],
+            options: ['Weak', 'Moderate', 'Very strong', 'Almost no'],
             correctIndex: 2,
-            explanation: '$|t| > 3$ is very strong evidence. $|t| = 4.2$ is far from zero.'
+            explanation: '$|t| = 4.2$ is more than 4 standard errors from the null value, which is very strong evidence against $H_0$.'
           },
           {
             id: 'ht2-dd2',
@@ -215,7 +215,7 @@ $$df = n - 1 = 36 - 1 = 35$$
           },
           {
             question: 'A $t$-statistic of $-3.1$ indicates:',
-            options: ['An error was made', 'The sample mean is below the null value', 'The sample mean is above the null value', 'The test is invalid'],
+            options: ['An error was made in the arithmetic', 'The sample mean is below $\\mu_0$', 'The sample mean is above $\\mu_0$', 'The test is invalid for these data'],
             correctAnswer: 1,
             explanation: 'Negative $t$ means $\\bar{x} < \\mu_0$ — the sample mean is below the null value.'
           },
@@ -227,7 +227,7 @@ $$df = n - 1 = 36 - 1 = 35$$
           },
           {
             question: 'The standard error decreases when:',
-            options: ['$s$ increases', '$n$ decreases', '$n$ increases', '$\\bar{x}$ increases'],
+            options: ['$s$ grows', '$n$ drops', '$n$ increases', '$\\mu_0$ rises'],
             correctAnswer: 2,
             explanation: '$SE = s/\\sqrt{n}$. Increasing $n$ makes $\\sqrt{n}$ larger, so SE decreases.'
           },
@@ -239,9 +239,9 @@ $$df = n - 1 = 36 - 1 = 35$$
           },
           {
             question: 'As $df$ increases, the $t$-distribution:',
-            options: ['Gets wider', 'Becomes more skewed', 'Approaches the normal distribution', 'Stays exactly the same'],
+            options: ['Gets wider and flatter', 'Becomes more skewed', 'Approaches normal', 'Stays exactly the same'],
             correctAnswer: 2,
-            explanation: 'With more df, the $t$-distribution has thinner tails and approaches the standard normal.'
+            explanation: 'With more df, the $t$-distribution has thinner tails and approaches the standard normal. It is always symmetric, and it gets narrower rather than wider.'
           }
         ]
       }

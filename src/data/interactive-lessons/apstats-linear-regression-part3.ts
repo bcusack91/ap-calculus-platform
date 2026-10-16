@@ -25,38 +25,31 @@ export const apStatsLinRegPart3Data = {
 
 ### Residual Formula
 
-$$\\boxed{e_i = y_i - \\hat{y}_i = \\text{observed} - \\text{predicted}}$$
+$$\\boxed{\\text{residual} = y - \\hat{y} = \\text{observed} - \\text{predicted}}$$
 
 | Sign | Meaning |
 |------|---------|
-| $e > 0$ | Point is **above** the line — model underestimates |
-| $e < 0$ | Point is **below** the line — model overestimates |
-| $e = 0$ | Point is exactly on the line |
+| Residual $> 0$ | Point is **above** the line — the model **underpredicts** (underestimates) |
+| Residual $< 0$ | Point is **below** the line — the model **overpredicts** (overestimates) |
+| Residual $= 0$ | Point is exactly on the line |
 
----
-
-### Properties of Residuals
-
-1. $\\sum e_i = 0$ (residuals always sum to zero)
-2. The mean of residuals = 0
-3. $\\sum e_i^2$ is minimized by the LSRL
+The LSRL is the line that makes the sum of the **squared** residuals as small as possible.
 
 ---
 
 ### Residual Plots
 
-A **residual plot** plots residuals ($e$) on the $y$-axis vs. the explanatory variable ($x$) or fitted values ($\\hat{y}$) on the $x$-axis.
+A **residual plot** is a scatterplot of the residuals (vertical axis) versus the predicted values $\\hat{y}$ or the explanatory variable $x$ (horizontal axis).
 
 ### Reading Residual Plots
 
 | Pattern | Interpretation |
 |---------|---------------|
-| Random scatter around $e = 0$ | ✅ Linear model is appropriate |
-| Curved pattern (U or ∩) | ❌ Relationship is nonlinear — use a transformation |
-| Fan shape (spread changes) | ❌ Non-constant variance — predictions are less reliable at some $x$ values |
-| Outliers | ⚠️ Individual points far from $e = 0$ — investigate |
+| Apparent randomness around residual $= 0$ | ✅ Confirms a linear form; the linear model is appropriate |
+| Curvature (U or ∩ shape) | ❌ The relationship is not linear; a linear model is not the most appropriate model |
+| A point far above or below 0 | ⚠️ A point that doesn't fit the pattern: the model predicts it poorly; investigate it |
 
-> 🔑 **AP Tip:** The residual plot is your most important diagnostic tool. ALWAYS examine it before trusting a regression.
+> 🔑 **AP Tip:** A correlation close to $\\pm 1$ is not enough. Look at the residual plot before trusting a linear model.
 
 ---
 
@@ -65,9 +58,9 @@ A **residual plot** plots residuals ($e$) on the $y$-axis vs. the explanatory va
 $\\hat{y} = 10 + 2x$. Data point: $(5, 23)$.
 
 $$\\hat{y} = 10 + 2(5) = 20$$
-$$e = 23 - 20 = 3$$
+$$\\text{residual} = 23 - 20 = 3$$
 
-The residual is $+3$: the observed value is 3 units above the predicted value.`
+The residual is $+3$: the observed value is 3 units above the predicted value, so the model underpredicts this point by 3.`
     },
     {
       id: 'apstats-linearregression-p3-mcq1',
@@ -79,21 +72,21 @@ The residual is $+3$: the observed value is 3 units above the predicted value.`
         questions: [
           {
             question: 'A residual of $-5$ means:',
-            options: ['The point is 5 above the line', 'The point is 5 below the line', 'The slope is $-5$', 'The model is perfect'],
+            options: ['The point is 5 above the line', 'The point is 5 units below the line', 'The slope of the line is $-5$', 'The prediction is 5 units too low'],
             correctAnswer: 1,
-            explanation: '$e = y - \\hat{y} = -5$ means the observed value is 5 units below the predicted value.'
+            explanation: 'Residual $= y - \\hat{y} = -5$, so the observed value is 5 units below the predicted value: the model overpredicts by 5. A negative residual is not a slope, and "prediction too low" describes a positive residual.'
           },
           {
-            question: 'A curved pattern in the residual plot suggests:',
-            options: ['The linear model fits well', 'A nonlinear relationship', 'The residuals sum to zero', 'A strong correlation'],
+            question: 'Curvature in the residual plot suggests:',
+            options: ['The linear model fits the data well', 'A linear model is not the best model', 'The residuals were miscalculated', 'The correlation must be close to 0'],
             correctAnswer: 1,
-            explanation: 'A curved residual plot indicates the relationship is not linear. Consider a nonlinear model or transformation.'
+            explanation: 'Curvature in a residual plot means the linear model misses a systematic pattern, so a linear model is not the most appropriate model. The correlation can still be large when the pattern is curved.'
           },
           {
-            question: 'The sum of all residuals from the LSRL is:',
-            options: ['Positive', 'Negative', 'Zero', 'Equal to $n$'],
-            correctAnswer: 2,
-            explanation: 'A mathematical property: $\\sum e_i = 0$ for the LSRL.'
+            question: 'A residual plot for a linear model shows apparent random scatter around 0. This:',
+            options: ['Shows that $x$ causes changes in $y$', 'Confirms that the form is linear', 'Shows that every residual is exactly 0', 'Means the linear correlation must equal 1'],
+            correctAnswer: 1,
+            explanation: 'Apparent randomness in the residual plot confirms the linear form, so the linear model is appropriate. It says nothing about causation, and residuals can be scattered without being 0 or giving $r = 1$.'
           }
         ]
       }
@@ -106,28 +99,28 @@ The residual is $+3$: the observed value is 3 units above the predicted value.`
 
 LSRL: $\\hat{y} = 15 + 4x$
 
-**1)** Point $(3, 30)$. Residual $e =$
+**1)** Point $(3, 30)$. Residual $=$
 
-**2)** Point $(5, 33)$. Residual $e =$
+**2)** Point $(5, 33)$. Residual $=$
 
-**3)** Point $(2, 23)$. The model ___ (enter "overestimates" or "underestimates").
+**3)** Point $(2, 20)$. The model ___ $y$ for this point (enter "overestimates" or "underestimates").
       `,
       exercise: {
         inputs: [
           {
             label: 'Residual at x=3',
             correctAnswer: '3',
-            explanation: '$\\hat{y} = 15 + 4(3) = 27$. $e = 30 - 27 = 3$.'
+            explanation: '$\\hat{y} = 15 + 4(3) = 27$. Residual $= 30 - 27 = 3$.'
           },
           {
             label: 'Residual at x=5',
             correctAnswer: '-2',
-            explanation: '$\\hat{y} = 15 + 4(5) = 35$. $e = 33 - 35 = -2$.'
+            explanation: '$\\hat{y} = 15 + 4(5) = 35$. Residual $= 33 - 35 = -2$.'
           },
           {
             label: 'Over or under',
             correctAnswer: 'overestimates',
-            explanation: '$\\hat{y} = 15 + 4(2) = 23 = y$. Actually $e = 0$ so neither. But the model predicts exactly 23, matching the observed value. If $y$ were slightly less, the model overestimates since $\\hat{y} \\geq y$.'
+            explanation: '$\\hat{y} = 15 + 4(2) = 23$, but $y = 20$. Residual $= 20 - 23 = -3 < 0$, so the model overestimates (overpredicts) $y$ for this point.'
           }
         ]
       }
@@ -142,31 +135,31 @@ LSRL: $\\hat{y} = 15 + 4x$
         dropdowns: [
           {
             id: 'lr3-dd1',
-            label: 'Random scatter in the residual plot → linear model is',
-            options: ['appropriate', 'not appropriate'],
+            label: 'Random scatter in the residual plot → the linear model is',
+            options: ['appropriate', 'not appropriate', 'proven causal', 'a perfect fit'],
             correctIndex: 0,
-            explanation: 'No pattern = model fits well. Random scatter around $e = 0$ is what we want to see.'
+            explanation: 'No pattern means the linear model captures the form of the relationship. Random scatter does not mean the fit is perfect or causal.'
           },
           {
             id: 'lr3-dd2',
             label: 'U-shaped curve in the residual plot → the relationship is',
-            options: ['linear', 'nonlinear'],
+            options: ['linear', 'not linear', 'strongly linear', 'perfect'],
             correctIndex: 1,
-            explanation: 'A curved pattern reveals a nonlinear relationship that the linear model misses.'
+            explanation: 'Curvature in the residual plot reveals a nonlinear form that the linear model misses.'
           },
           {
             id: 'lr3-dd3',
-            label: 'Fan-shaped residual plot (spread increasing) indicates',
-            options: ['constant variance', 'non-constant variance'],
+            label: 'A residual plot graphs the residuals against',
+            options: ['the observed $y$ values only', 'the predicted values or $x$', 'the sample means', 'the correlation $r$'],
             correctIndex: 1,
-            explanation: 'A fan shape means variance increases with $x$ (heteroscedasticity). Predictions become less reliable for larger $x$.'
+            explanation: 'A residual plot is a scatterplot of residuals versus the predicted values $\\hat{y}$ (or the explanatory variable $x$).'
           },
           {
             id: 'lr3-dd4',
-            label: 'One point with a very large residual is called',
-            options: ['influential', 'an outlier in the $y$-direction', 'the intercept'],
+            label: 'One point with a residual far from 0 is a point that ___',
+            options: ['lies exactly on the line', 'does not fit the overall pattern', 'sets the slope to 0', 'has the smallest $x$'],
             correctIndex: 1,
-            explanation: 'A large residual means the point is far from the regression line (outlier in the $y$-direction).'
+            explanation: 'A large residual means the observed $y$ is far from the predicted value: the point does not fit the general pattern of the data.'
           }
         ]
       }
@@ -180,64 +173,64 @@ LSRL: $\\hat{y} = 15 + 4x$
       exercise: {
         questions: [
           {
-            question: 'Residual = observed $-$ predicted. If $y = 50$ and $\\hat{y} = 48$, then $e =$',
-            options: ['$-2$', '$2$', '$48$', '$50$'],
+            question: 'Residual = observed $-$ predicted. If $y = 50$ and $\\hat{y} = 48$, then the residual is',
+            options: ['$-2$', '$2$', '$48$', '$98$'],
             correctAnswer: 1,
-            explanation: '$e = 50 - 48 = 2$. The point is 2 units above the line.'
+            explanation: 'Residual $= 50 - 48 = 2$, so the point is 2 units above the line. $-2$ reverses the subtraction, and 48 and 98 are not differences.'
           },
           {
             question: 'The residual plot is used to:',
-            options: ['Calculate $r$', 'Assess whether the linear model is appropriate', 'Find the slope', 'Predict $y$'],
+            options: ['Calculate the value of the correlation $r$', 'Check if a linear model is appropriate', 'Find the slope of the least-squares line', 'Predict the response $y$ for a new value of $x$'],
             correctAnswer: 1,
-            explanation: 'The residual plot checks for patterns that would indicate the linear model is not appropriate.'
+            explanation: 'A residual plot reveals patterns, such as curvature, that show whether the linear model is appropriate. $r$, the slope and predictions come from the regression itself.'
           },
           {
             question: 'If all residuals are close to 0, the model:',
-            options: ['Is a poor fit', 'Predicts well — small prediction errors', 'Has a negative slope', 'Has $r = 0$'],
+            options: ['Is a poor fit for the data overall', 'Makes small prediction errors', 'Must have a slope that is negative', 'Must have a correlation close to 0'],
             correctAnswer: 1,
-            explanation: 'Small residuals mean the predictions are close to the observed values — good fit.'
+            explanation: 'Small residuals mean the predicted values are close to the observed values. The sign of the slope is unrelated, and a near-perfect fit goes with $|r|$ near 1, not 0.'
           },
           {
             question: 'A positive residual means the model:',
-            options: ['Overestimates', 'Underestimates', 'Is exact', 'Has a positive slope'],
+            options: ['Overestimates $y$', 'Underestimates $y$', 'Predicts $y$ exactly', 'Has a positive slope'],
             correctAnswer: 1,
-            explanation: '$e > 0 \\Rightarrow y > \\hat{y}$. The observed is above the predicted — the model underestimates.'
+            explanation: 'Residual $> 0$ means $y > \\hat{y}$: the observed value is above the prediction, so the model underestimates (underpredicts). The sign of a residual says nothing about the slope.'
           },
           {
-            question: 'Non-constant variance in a residual plot is called:',
-            options: ['Linearity', 'Heteroscedasticity', 'Normality', 'Independence'],
+            question: 'A residual plot shows residuals that are negative for small and large $x$ and positive in the middle. This means:',
+            options: ['The linear model is appropriate', 'The relationship is curved', 'The residuals are miscalculated', 'The slope must be negative'],
             correctAnswer: 1,
-            explanation: 'Heteroscedasticity = unequal variance. It appears as a fan or trumpet shape in the residual plot.'
+            explanation: 'A ∩-shaped pattern is curvature, so the relationship is not linear and a linear model is not the most appropriate. Residual plots of a linear fit can show curvature whatever the sign of the slope.'
           },
           {
             question: '$\\hat{y} = 20 + 5x$. At $x = 4$, $y = 38$. The residual is:',
             options: ['$2$', '$-2$', '$40$', '$38$'],
             correctAnswer: 1,
-            explanation: '$\\hat{y} = 20 + 5(4) = 40$. $e = 38 - 40 = -2$.'
+            explanation: '$\\hat{y} = 20 + 5(4) = 40$. Residual $= 38 - 40 = -2$; $+2$ reverses the order of subtraction.'
           },
           {
             question: 'The LSRL minimizes:',
-            options: ['$\\sum |e_i|$', '$\\sum e_i$', '$\\sum e_i^2$', '$\\max(e_i)$'],
+            options: ['$\\sum |y - \\hat{y}|$', '$\\sum (y - \\hat{y})$', '$\\sum (y - \\hat{y})^2$', '$\\max |y - \\hat{y}|$'],
             correctAnswer: 2,
-            explanation: 'The LSRL minimizes the sum of squared residuals: $\\sum (y_i - \\hat{y}_i)^2$.'
+            explanation: 'The LSRL minimizes the sum of squared residuals, $\\sum (y - \\hat{y})^2$. The other quantities define different, non-least-squares criteria.'
           },
           {
-            question: 'Which residual plot pattern is IDEAL?',
-            options: ['Clear U-shape', 'Random scatter', 'Fan shape', 'Strong linear pattern'],
+            question: 'Which residual plot pattern is IDEAL for a linear model?',
+            options: ['A clear U-shape', 'Random scatter', 'A clear ∩-shape', 'A straight rising line'],
             correctAnswer: 1,
-            explanation: 'Random scatter with no pattern indicates the linear model is appropriate.'
+            explanation: 'Random scatter with no pattern indicates the linear model is appropriate. U, ∩ or linear trends in a residual plot all mean the model misses structure.'
           },
           {
-            question: 'The mean of all residuals from the LSRL equals:',
-            options: ['$r$', '$\\bar{y}$', '$0$', '$1$'],
-            correctAnswer: 2,
-            explanation: 'Since $\\sum e_i = 0$, the mean residual $= 0/n = 0$.'
-          },
-          {
-            question: 'If the residual plot shows a clear pattern, you should:',
-            options: ['Use the model anyway', 'Consider a transformation or nonlinear model', 'Increase the sample size', 'Remove outliers'],
+            question: 'A model predicts a car is worth \\$14,200, but it sold for \\$12,900. The residual is:',
+            options: ['\\$1,300', '-\\$1,300', '\\$27,100', '\\$12,900'],
             correctAnswer: 1,
-            explanation: 'A pattern in the residual plot means the linear model does not capture the true relationship. Try a transformation (e.g., log, square root).'
+            explanation: 'Residual $=$ observed $-$ predicted $= 12{,}900 - 14{,}200 = -1{,}300$ dollars, so the model overpredicted the price. A positive value reverses the subtraction.'
+          },
+          {
+            question: 'If the residual plot shows a clear curved pattern, you should:',
+            options: ['Use the linear model anyway', 'Conclude the linear model is not the best', 'Increase the sample size and refit', 'Remove the points with the largest $x$'],
+            correctAnswer: 1,
+            explanation: 'Curvature in the residual plot means a linear model is not the most appropriate model for the data. More data or deleting points does not remove a curved form.'
           }
         ]
       }

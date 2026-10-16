@@ -16,7 +16,7 @@ export const apStatsExpDesignPart7Data = {
 - [ ] Observational vs. Experimental studies
 - [ ] Completely randomized design
 - [ ] Randomized block design & matched pairs
-- [ ] Sources of bias (selection, response, nonresponse, voluntary)
+- [ ] Sources of bias (undercoverage, response, nonresponse, voluntary response)
 - [ ] Confounding variables
 - [ ] Blinding (single and double)
 - [ ] Placebo and placebo effect
@@ -30,25 +30,25 @@ export const apStatsExpDesignPart7Data = {
       id: 'experimentaldesign-p7-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'Which can establish a cause-and-effect relationship?',
-            options: ['A large observational study', 'A sample survey with 10,000 responses', 'A properly designed randomized experiment', 'A retrospective study'],
+            options: ['A large observational study', 'A survey with 10,000 responses', 'A randomized experiment', 'A long retrospective study'],
             correctAnswer: 2,
             explanation: 'Only randomized experiments can establish causation, regardless of sample size.'
           },
           {
             question: 'Replication in experimental design means:',
-            options: ['Repeating the entire experiment', 'Using enough subjects to detect a real effect', 'Using two identical treatments', 'Publishing the results'],
+            options: ['Giving each subject every treatment', 'Using enough units per treatment', 'Using two identical treatments', 'Measuring each response twice'],
             correctAnswer: 1,
-            explanation: 'Replication = sufficient sample size to reduce chance variation and detect true effects.'
+            explanation: 'Replication means applying each treatment to enough experimental units that chance variation can be separated from real treatment effects. Giving each subject every treatment describes a matched pairs (or repeated measures) design.'
           },
           {
             question: 'A matched pairs design is best when:',
-            options: ['You have many treatment groups', 'Each subject can serve as their own control', 'The sample size is very large', 'You cannot use randomization'],
+            options: ['There are many treatment groups', 'Each subject can receive both treatments', 'The sample size is very large', 'Random assignment is impossible'],
             correctAnswer: 1,
             explanation: 'Matched pairs works best when subjects can be paired (or the same subject measured twice) to reduce variability.'
           }

@@ -43,15 +43,15 @@ export const apStatsExpDesignPart4Data = {
       id: 'experimentaldesign-p4-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'An observational study differs from an experiment because:',
-            options: ['It uses larger samples', 'No treatment is imposed on subjects', 'It uses randomization', 'It always uses surveys'],
+            options: ['It always uses larger samples', 'No treatment is imposed', 'It uses random assignment', 'It always relies on surveys'],
             correctAnswer: 1,
-            explanation: 'In observational studies, researchers observe without imposing treatments.'
+            explanation: 'In observational studies, researchers record what happens without imposing treatments. They may use random SELECTION, but never random assignment of treatments, and they can use records or measurements as well as surveys.'
           },
           {
             question: 'Which study design CAN establish causation?',
@@ -61,9 +61,9 @@ export const apStatsExpDesignPart4Data = {
           },
           {
             question: 'A researcher finds that ice cream sales and drowning rates are correlated. This means:',
-            options: ['Ice cream causes drowning', 'Drowning causes ice cream sales', 'There is likely a confounding variable (heat/summer)', 'The study is invalid'],
+            options: ['Eating ice cream causes drowning', 'Drowning causes ice cream sales', 'Hot weather likely drives both', 'The correlation must be an error'],
             correctAnswer: 2,
-            explanation: 'Both increase in summer. Temperature is the confounding variable — correlation does not imply causation.'
+            explanation: 'Both rise in hot weather, so temperature is a confounding variable: association does not imply causation in either direction. The association itself is real; only a causal reading is unjustified.'
           }
         ]
       }

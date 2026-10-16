@@ -25,33 +25,33 @@ export const apStatsProbDistPart7Data = {
 - [ ] 68-95-99.7 Rule
 - [ ] Z-scores and Table A
 - [ ] Sampling distributions of $\\bar{x}$ and $\\hat{p}$
-- [ ] Normal probability plots
+- [ ] Checking normality with graphs and the 68-95-99.7 rule
 - [ ] Central Limit Theorem`
     },    {
       id: 'probdistributions-p7-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'Which statement about z-scores is FALSE?',
-            options: ['Z-scores have mean 0', 'Z-scores have SD 1', 'Z-scores can only be positive', 'Z-scores are unitless'],
+            options: ['A full set of z-scores has mean 0', 'A full set of z-scores has SD 1', 'Z-scores can only be positive', 'Z-scores have no units'],
             correctAnswer: 2,
-            explanation: 'Z-scores can be negative (below the mean), zero (at the mean), or positive (above).'
+            explanation: 'Z-scores can be negative (below the mean), zero (at the mean) or positive (above). Standardizing a whole data set does give mean 0 and SD 1, and dividing by $\\sigma$ cancels the units.'
           },
           {
             question: 'As sample size increases, $\\sigma_{\\bar{x}}$:',
             options: ['Increases', 'Decreases', 'Stays the same', 'Approaches $\\mu$'],
             correctAnswer: 1,
-            explanation: '$\\sigma_{\\bar{x}} = \\sigma/\\sqrt{n}$ — as $n$ increases, the denominator increases, so $\\sigma_{\\bar{x}}$ decreases.'
+            explanation: '$\\sigma_{\\bar{x}} = \\sigma/\\sqrt{n}$: as $n$ increases the denominator grows, so $\\sigma_{\\bar{x}}$ decreases. It does not approach $\\mu$; it approaches 0.'
           },
           {
-            question: 'If $X \\\\sim N(50, 8)$ and $n = 16$, then $\\bar{x} \\\\sim$:',
+            question: 'If $X \\sim N(50, 8)$ and $n = 16$, then $\\bar{x} \\sim$:',
             options: ['$N(50, 8)$', '$N(50, 2)$', '$N(50, 0.5)$', '$N(3.125, 2)$'],
             correctAnswer: 1,
-            explanation: '$\\bar{x} \\\\sim N(50, 8/\\sqrt{16}) = N(50, 2)$.'
+            explanation: '$\\bar{x} \\sim N(50, 8/\\sqrt{16}) = N(50, 2)$. $N(50, 8)$ forgets to divide by $\\sqrt{n}$, $N(50, 0.5)$ divides by $n$, and the mean of $\\bar{x}$ stays at 50.'
           }
         ]
       }
@@ -61,7 +61,7 @@ export const apStatsProbDistPart7Data = {
       content: `
 **Final Challenge** 🧮
 
-$X \\\\sim N(200, 25)$. A sample of $n = 100$ is taken.
+$X \\sim N(200, 25)$. A sample of $n = 100$ is taken.
 
 **1)** $\\sigma_{\\bar{x}} = ?$
 

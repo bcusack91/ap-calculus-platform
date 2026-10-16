@@ -35,25 +35,25 @@ $$n = \\left(\\frac{1.96}{0.03}\\right)^2 (0.25) = (65.33)^2(0.25) = 4268.4(0.25
       id: 'propinference-p5-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'Using $\\hat{p} = 0.5$ when computing sample size:',
-            options: ['Gives the smallest possible $n$', 'Gives the largest possible $n$ (most conservative)', 'Is never appropriate', 'Only works for 95% confidence'],
+            options: ['Gives the smallest $n$', 'Gives the largest required $n$', 'Is never appropriate', 'Works only for 95% confidence'],
             correctAnswer: 1,
             explanation: '$p(1-p)$ is maximized at $p = 0.5$, which gives the largest (most conservative) sample size.'
           },
           {
             question: 'To cut the margin of error in half, you need to:',
-            options: ['Double the sample size', 'Quadruple the sample size', 'Halve the sample size', 'Use a lower confidence level'],
+            options: ['Double the sample size', 'Quadruple the sample size', 'Halve the sample size', 'Lower the confidence'],
             correctAnswer: 1,
             explanation: 'ME is proportional to $1/\\sqrt{n}$. Halving ME requires $4\\times$ the sample size.'
           },
           {
             question: 'When computing sample size, always round:',
-            options: ['Down to the nearest integer', 'Up to the nearest integer', 'To the nearest even number', 'To the nearest ten'],
+            options: ['Down to an integer', 'Up to the nearest integer', 'To an even number', 'To the nearest ten'],
             correctAnswer: 1,
             explanation: 'Round up to ensure the margin of error requirement is met.'
           }

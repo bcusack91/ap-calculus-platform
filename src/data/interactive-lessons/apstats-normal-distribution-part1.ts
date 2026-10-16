@@ -48,19 +48,19 @@ For any normal distribution:
             question: 'SAT scores follow $N(1060, 195)$. Approximately what percent score between 865 and 1255?',
             options: ['50%', '68%', '95%', '99.7%'],
             correctAnswer: 1,
-            explanation: '$865 = 1060 - 195$ and $1255 = 1060 + 195$. This is $\\mu \\pm 1\\sigma$, so about 68%.'
+            explanation: '$865 = 1060 - 195$ and $1255 = 1060 + 195$. This is $\\mu \\pm 1\\sigma$, so about 68%. 95% and 99.7% go with 2 and 3 SDs, and 50% is the area on one side of the mean.'
           },
           {
-            question: 'In a normal distribution, the mean, median, and mode are:',
-            options: ['All different', 'Mean = median only', 'All equal', 'Depends on $\\sigma$'],
-            correctAnswer: 2,
-            explanation: 'Normal distributions are perfectly symmetric, so the mean, median, and mode all coincide.'
+            question: 'In a normal distribution, how do the mean and median compare?',
+            options: ['The mean is greater than the median', 'They are equal, at the center', 'The median is greater than the mean', 'It depends on the value of $\\sigma$'],
+            correctAnswer: 1,
+            explanation: 'A normal curve is symmetric about $\\mu$, so the mean and median are both at the center. The mean is pulled away from the median only in skewed distributions, and $\\sigma$ changes the spread, not the symmetry.'
           },
           {
             question: 'About what percentage of data in a normal distribution falls more than 2 standard deviations from the mean?',
-            options: ['2.5%', '5%', '10%', '32%'],
+            options: ['2.5%', '5%', '13.5%', '32%'],
             correctAnswer: 1,
-            explanation: '95% falls within $\\mu \\pm 2\\sigma$, so $100\\% - 95\\% = 5\\%$ falls outside (both tails combined).'
+            explanation: '95% falls within $\\mu \\pm 2\\sigma$, so $100\\% - 95\\% = 5\\%$ falls outside, counting both tails. 2.5% is only one tail, 13.5% is the area between 1 and 2 SDs on one side, and 32% is the area outside $\\mu \\pm 1\\sigma$.'
           }
         ]
       }

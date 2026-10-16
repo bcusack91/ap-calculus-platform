@@ -87,19 +87,19 @@ Since $P = 0.016 < \\alpha = 0.05$, we reject $H_0$. There is convincing evidenc
         questions: [
           {
             question: 'In the cereal example, the SE is approximately:',
-            options: ['0.02', '0.1265', '0.80', '2.0'],
+            options: ['0.0200', '0.1265', '0.8000', '2.3720'],
             correctAnswer: 1,
-            explanation: '$SE = 0.8/\\sqrt{40} \\approx 0.8/6.325 \\approx 0.1265$.'
+            explanation: '$SE = 0.8/\\sqrt{40} \\approx 0.8/6.325 \\approx 0.1265$. Dividing by 40 instead of $\\sqrt{40}$ gives 0.0200, 0.8 is $s$ itself, and 2.372 is $|t|$.'
           },
           {
             question: 'The study hours test is two-tailed because the claim asks:',
-            options: ['If students study more', 'If students study less', 'If the mean differs from 15', 'If the mean equals 15'],
+            options: ['Whether students study more than 15 hours', 'Whether students study less than 15 hours', 'If the mean differs from 15', 'Whether the mean is exactly 15 hours'],
             correctAnswer: 2,
             explanation: '"Differs from" = either direction = two-tailed ($H_a: \\mu \\neq 15$).'
           },
           {
             question: 'Which step should come FIRST in an AP hypothesis test?',
-            options: ['Calculate the test statistic', 'Check conditions', 'State the hypotheses', 'Find the P-value'],
+            options: ['Calculate the test statistic', 'Check conditions', 'Write $H_0$ and $H_a$', 'Find the P-value'],
             correctAnswer: 2,
             explanation: 'The four-step process: State → Plan → Do → Conclude. Hypotheses come first.'
           }
@@ -158,14 +158,14 @@ Since $P = 0.016 < \\alpha = 0.05$, we reject $H_0$. There is convincing evidenc
           {
             id: 'ht6-dd2',
             label: 'When we cannot reject $H_0$, we say:',
-            options: ['Accept $H_0$', 'Prove $H_0$', 'Fail to reject $H_0$', 'Confirm $H_0$'],
+            options: ['Accept $H_0$ as true', 'Prove $H_0$ correct', 'Fail to reject $H_0$', 'Confirm that $H_0$ holds'],
             correctIndex: 2,
             explanation: 'Never say "accept" — say "fail to reject $H_0$" (we lack sufficient evidence).'
           },
           {
             id: 'ht6-dd3',
             label: 'The conclusion must reference:',
-            options: ['Only the P-value', 'Only the test statistic', 'The real-world context', 'Only $\\alpha$'],
+            options: ['Only the P-value', 'Only the $t$ value', 'The real-world context', 'Only $\\alpha$'],
             correctIndex: 2,
             explanation: 'AP conclusions must reference the specific real-world situation, not just numbers.'
           }
@@ -200,7 +200,7 @@ Since $P = 0.016 < \\alpha = 0.05$, we reject $H_0$. There is convincing evidenc
           },
           {
             question: 'Based on $P \\approx 0.32$ and $\\alpha = 0.05$:',
-            options: ['Reject $H_0$', 'Fail to reject $H_0$', 'Accept $H_a$', 'The test is invalid'],
+            options: ['Reject $H_0$', 'Fail to reject $H_0$', 'Accept $H_a$', 'Accept $H_0$ as true'],
             correctAnswer: 1,
             explanation: '$P = 0.32 > 0.05$ → fail to reject $H_0$.'
           },
@@ -212,27 +212,27 @@ Since $P = 0.016 < \\alpha = 0.05$, we reject $H_0$. There is convincing evidenc
           },
           {
             question: 'A two-tailed test requires you to:',
-            options: ['Use only the right tail', 'Double the one-tail P-value', 'Halve the significance level', 'Ignore the sign of $t$'],
+            options: ['Use only the right tail', 'Double the one-tail P-value', 'Halve $\\alpha$', 'Ignore the sign of $t$'],
             correctAnswer: 1,
             explanation: 'Two-tailed: $P = 2 \\times P(t \\geq |t_{obs}|)$.'
           },
           {
             question: 'When checking the 10% condition with $n = 30$ from a school of 250 students:',
-            options: ['Met (30 < 25)', 'Not met (30 > 25)', 'Always met', 'Not applicable'],
+            options: ['Met, since $30 < 250$', 'Not met, since $30 > 25$', 'Always met for schools', 'Not needed for a $t$-test'],
             correctAnswer: 1,
             explanation: '$10\\%$ of 250 = 25. Since $30 > 25$, the condition is NOT met.'
           },
           {
             question: 'Using $\\hat{p}$ in hypotheses instead of $p$ is:',
-            options: ['Correct', 'An error — hypotheses use population parameters', 'Only wrong for means', 'Acceptable on the AP exam'],
+            options: ['Correct, since $\\hat{p}$ estimates $p$', 'An error in notation', 'Wrong only when testing means', 'Acceptable on the AP exam'],
             correctAnswer: 1,
             explanation: 'Hypotheses are always about population parameters ($\\mu$, $p$), never statistics ($\\bar{x}$, $\\hat{p}$).'
           },
           {
             question: '$n = 12$, data appears approximately symmetric with no outliers. Can we proceed with a $t$-test?',
-            options: ['No — $n < 30$', 'Yes — approximately normal with no outliers satisfies the condition', 'Only if $\\alpha = 0.01$', 'Only with a $z$-test'],
+            options: ['No, since every $t$ procedure needs $n \\geq 30$', 'Yes, the sample data condition is met', 'Only if $\\alpha$ is lowered to 0.01 first', 'Only if the population $\\sigma$ is known'],
             correctAnswer: 1,
-            explanation: 'For small $n$, the Normal condition is met if the data appear approximately symmetric with no strong skew or outliers.'
+            explanation: 'With $n < 30$, the Normal condition is met when the sample data are free from strong skewness and outliers, as here. $n \\geq 30$ is one way to meet it, not a requirement, and $\\alpha$ and $\\sigma$ are irrelevant.'
           },
           {
             question: 'Which is the correct order of the four-step process?',

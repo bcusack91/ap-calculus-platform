@@ -95,7 +95,7 @@ The justice system sets a very low $\\alpha$ ("beyond reasonable doubt") because
         questions: [
           {
             question: 'Rejecting a true $H_0$ is:',
-            options: ['A correct decision', 'A Type I error', 'A Type II error', 'Power'],
+            options: ['A correct decision', 'A Type I error', 'A Type II error', 'A gain in power'],
             correctAnswer: 1,
             explanation: 'Rejecting a true null = false positive = Type I error.'
           },
@@ -107,7 +107,7 @@ The justice system sets a very low $\\alpha$ ("beyond reasonable doubt") because
           },
           {
             question: 'Which factor does NOT increase power?',
-            options: ['Increasing sample size', 'Increasing $\\alpha$', 'Decreasing $\\alpha$', 'Larger effect size'],
+            options: ['Larger samples', 'A larger $\\alpha$', 'Decreasing $\\alpha$', 'Larger effects'],
             correctAnswer: 2,
             explanation: 'Decreasing $\\alpha$ makes it harder to reject $H_0$, which reduces power.'
           }
@@ -188,13 +188,13 @@ The justice system sets a very low $\\alpha$ ("beyond reasonable doubt") because
         questions: [
           {
             question: 'A fire alarm goes off when there is no fire. This is analogous to:',
-            options: ['Type I error', 'Type II error', 'Correct decision', 'Power'],
+            options: ['Type I error', 'Type II error', 'Correct decision', 'Low power only'],
             correctAnswer: 0,
             explanation: 'False alarm = false positive = Type I error.'
           },
           {
             question: 'A fire alarm does NOT go off during a fire. This is:',
-            options: ['Type I error', 'Type II error', 'Correct decision', 'High power'],
+            options: ['Type I error', 'Type II error', 'Correct decision', 'Very high power'],
             correctAnswer: 1,
             explanation: 'Missing a real event = false negative = Type II error.'
           },
@@ -218,13 +218,13 @@ The justice system sets a very low $\\alpha$ ("beyond reasonable doubt") because
           },
           {
             question: 'In a medical screening context, which error is usually more serious?',
-            options: ['Type I (telling a healthy person they are sick)', 'Type II (missing a disease)', 'They are equally serious', 'Neither is serious'],
+            options: ['A Type I error, telling a healthy person they are sick', 'A Type II error, a missed disease', 'Both errors are always equally serious', 'Neither error matters in screening'],
             correctAnswer: 1,
-            explanation: 'Missing a disease (Type II) can be life-threatening. Contexts determine which error is worse.'
+            explanation: 'Missing a disease (Type II) can delay treatment and be life-threatening, while a false alarm (Type I) usually leads to further testing. Context decides which error is worse; they are rarely equally serious.'
           },
           {
             question: 'The only way to reduce BOTH Type I and Type II error simultaneously is to:',
-            options: ['Lower $\\alpha$', 'Raise $\\alpha$', 'Increase sample size', 'Decrease sample size'],
+            options: ['Lower $\\alpha$', 'Raise $\\alpha$', 'Increase sample size', 'Use fewer subjects'],
             correctAnswer: 2,
             explanation: 'Larger $n$ reduces SE, making the test more precise and reducing both error types.'
           },
@@ -236,13 +236,13 @@ The justice system sets a very low $\\alpha$ ("beyond reasonable doubt") because
           },
           {
             question: 'Which combination is possible?',
-            options: ['$\\alpha = 0.05$, $\\beta = 0$, $n = 10$', '$\\alpha = 0.05$, $\\beta = 0.20$, Power = 0.80', '$\\alpha = 0.05$, Power = 0.95, $\\beta = 0.10$', '$\\alpha + \\beta = 1$ always'],
+            options: ['$\\alpha = 0.05$, $\\beta = 0$, $n = 10$', '$\\alpha = 0.05$, $\\beta = 0.20$, Power = 0.80', '$\\alpha = 0.05$, Power = 0.95, $\\beta = 0.1$', '$\\alpha + \\beta = 1$ always'],
             correctAnswer: 1,
-            explanation: 'Power $= 1 - \\beta = 1 - 0.20 = 0.80$ ✓. Note: $\\alpha + \\beta$ does NOT have to equal 1.'
+            explanation: 'Power $= 1 - \\beta$, so $\\beta = 0.20$ with power 0.80 is consistent. Power 0.95 would need $\\beta = 0.05$, not 0.1; $\\beta = 0$ is impossible with a sample of 10; and $\\alpha + \\beta$ need not equal 1.'
           },
           {
             question: 'A researcher wants to decrease $\\alpha$ from 0.05 to 0.01 without losing power. They should:',
-            options: ['Use a one-tailed test', 'Increase the sample size', 'Decrease the sample size', 'Use $\\beta = 0.01$'],
+            options: ['Use a one-tailed test', 'Increase the sample size', 'Use fewer subjects', 'Use $\\beta = 0.01$'],
             correctAnswer: 1,
             explanation: 'Lowering $\\alpha$ reduces power. To compensate, increase $n$.'
           }

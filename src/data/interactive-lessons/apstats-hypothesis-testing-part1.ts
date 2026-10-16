@@ -81,9 +81,9 @@ Before testing, we choose a significance level $\\alpha$ (usually 0.05):
         questions: [
           {
             question: '$H_0$ represents:',
-            options: ['The research claim', 'No effect (status quo)', 'The test statistic', 'The sample mean'],
+            options: ['The research claim being tested', 'No change or no effect', 'The value of the test statistic', 'The mean of the sample data'],
             correctAnswer: 1,
-            explanation: 'The null hypothesis represents the status quo — nothing new is happening.'
+            explanation: 'The null hypothesis is the status quo: no change, no effect, no difference. The research claim goes in $H_a$, and hypotheses are about parameters, not statistics.'
           },
           {
             question: 'A researcher believes a diet reduces weight. The alternative hypothesis should be:',
@@ -145,20 +145,20 @@ Before testing, we choose a significance level $\\alpha$ (usually 0.05):
           {
             id: 'ht1-dd1',
             label: '$H_a: \\mu > 75$ is a ___ test',
-            options: ['Left-tailed', 'Right-tailed', 'Two-tailed'],
+            options: ['Left-tailed', 'Right-tailed', 'Two-tailed', 'Paired'],
             correctIndex: 1,
             explanation: '$>$ means we look in the right tail for evidence.'
           },
           {
             id: 'ht1-dd2',
             label: '$H_a: \\mu \\neq 100$ is a ___ test',
-            options: ['Left-tailed', 'Right-tailed', 'Two-tailed'],
+            options: ['Left-tailed', 'Right-tailed', 'Two-tailed', 'Paired'],
             correctIndex: 2,
             explanation: '$\\neq$ means evidence in either direction counts, so we check both tails.'
           },
           {
             id: 'ht1-dd3',
-            label: 'We hope to ___ the null hypothesis',
+            label: 'A test looks for evidence to ___ the null hypothesis',
             options: ['Accept', 'Reject', 'Prove', 'Ignore'],
             correctIndex: 1,
             explanation: 'We look for evidence to reject $H_0$. We never "accept" or "prove" $H_0$.'
@@ -176,9 +176,9 @@ Before testing, we choose a significance level $\\alpha$ (usually 0.05):
         questions: [
           {
             question: 'Hypotheses are statements about:',
-            options: ['Sample statistics', 'Population parameters', 'Individual data points', 'Graphs'],
+            options: ['Sample statistics', 'Parameters', 'Individual data points', 'Values in one sample'],
             correctAnswer: 1,
-            explanation: 'Hypotheses always involve population parameters ($\\mu$, $p$), not sample statistics.'
+            explanation: 'Hypotheses always involve population parameters ($\\mu$, $p$), not sample statistics or individual values, because the question is about the whole population.'
           },
           {
             question: '"A coin is fair" translates to:',
@@ -194,7 +194,7 @@ Before testing, we choose a significance level $\\alpha$ (usually 0.05):
           },
           {
             question: 'If $\\alpha = 0.01$, we require ___ evidence to reject $H_0$ compared to $\\alpha = 0.05$.',
-            options: ['Weaker', 'Stronger', 'The same', 'No'],
+            options: ['Weaker', 'Stronger', 'Equally strong', 'Less consistent'],
             correctAnswer: 1,
             explanation: 'Smaller $\\alpha$ = stricter threshold = need stronger evidence to reject.'
           },
@@ -218,21 +218,21 @@ Before testing, we choose a significance level $\\alpha$ (usually 0.05):
           },
           {
             question: 'We can never:',
-            options: ['Reject $H_0$', 'Fail to reject $H_0$', 'Prove $H_0$ is true', 'Calculate a test statistic'],
+            options: ['Reject $H_0$', 'Fail to reject $H_0$', 'Prove that $H_0$ is true', 'Compute a statistic'],
             correctAnswer: 2,
             explanation: 'Failing to reject $H_0$ does NOT prove it is true — we simply lack evidence against it.'
           },
           {
             question: 'A one-tailed test is more powerful than a two-tailed test because:',
-            options: ['It uses a larger sample', 'All the rejection region is in one direction', 'It has a higher $\\alpha$', 'It uses the mean instead of the median'],
+            options: ['It always uses a larger sample size', 'Its p-value is half the two-sided p-value', 'It uses a higher significance level', 'It uses the median instead of the mean'],
             correctAnswer: 1,
-            explanation: 'A one-tailed test puts the entire rejection region in one tail, making it easier to reject in that specific direction.'
+            explanation: 'When the data fall in the direction stated by $H_a$, the one-sided p-value is half the two-sided p-value, so it is easier to reject $H_0$ in that direction. The sample size, $\\alpha$ and the parameter are the same in both tests.'
           },
           {
             question: 'Which claim goes in $H_a$?',
-            options: ['The status quo', 'What we want to prove', 'The sample result', 'The null value'],
+            options: ['The status quo claim', 'The research claim', 'The observed sample result', 'The value in the null'],
             correctAnswer: 1,
-            explanation: 'The research claim (what we hope to find evidence for) goes in $H_a$.'
+            explanation: 'The research claim (what we hope to find evidence for) goes in $H_a$. The status quo and the null value belong to $H_0$, and hypotheses never mention the sample result.'
           }
         ]
       }

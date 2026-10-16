@@ -108,9 +108,9 @@ $$P(\\hat{p} > 0.07) = P\\left(z > \\frac{0.07 - 0.05}{0.00975}\\right) = P(z > 
           },
           {
             question: 'Which condition is needed for the normal approximation to the sampling distribution of $\\hat{p}$?',
-            options: ['$n \\geq 30$', '$np \\geq 10$ and $n(1-p) \\geq 10$', '$\\sigma$ is known', '$p = 0.5$'],
+            options: ['$n \\geq 30$', '$np \\geq 10$ and $n(1-p) \\geq 10$', '$np \\geq 5$ or $n(1-p) \\geq 5$', '$p$ is close to 0.5'],
             correctAnswer: 1,
-            explanation: 'We need at least 10 expected successes ($np \\geq 10$) and 10 expected failures ($n(1-p) \\geq 10$) for the normal approximation to be valid.'
+            explanation: 'We need at least 10 expected successes ($np \\geq 10$) AND 10 expected failures ($n(1-p) \\geq 10$). $n \\geq 30$ is the guideline for means, 5 is the chi-square threshold, and $p$ need not be near 0.5.'
           }
         ]
       }
@@ -160,30 +160,30 @@ A political poll samples $n = 900$ voters from a state where 40% support a ballo
           {
             id: 'sd3-dd1',
             label: 'As sample size $n$ increases, the standard deviation of $\\hat{p}$ ___',
-            options: ['increases', 'decreases', 'stays the same'],
+            options: ['increases', 'decreases', 'stays the same', 'doubles'],
             correctIndex: 1,
             explanation: '$\\sigma_{\\hat{p}} = \\sqrt{p(1-p)/n}$. As $n$ increases, the denominator grows, so the SD decreases. Larger samples give more precise estimates.'
           },
           {
             id: 'sd3-dd2',
             label: 'The standard deviation of $\\hat{p}$ is largest when $p = $ ___',
-            options: ['0', '0.5', '1'],
-            correctIndex: 1,
-            explanation: '$p(1-p)$ is maximized when $p = 0.5$ (giving $0.25$). The product is smaller for values of $p$ near 0 or 1.'
+            options: ['0', '0.25', '0.5', '1'],
+            correctIndex: 2,
+            explanation: '$p(1-p)$ is largest when $p = 0.5$ (giving $0.25$). The product shrinks for values of $p$ near 0 or 1 and equals 0 at the extremes.'
           },
           {
             id: 'sd3-dd3',
             label: 'If $n = 50$ and $p = 0.02$, the normal approximation is ___',
-            options: ['valid', 'not valid'],
+            options: ['valid', 'not valid', 'valid, since $n \\geq 30$', 'valid, since $p < 0.5$'],
             correctIndex: 1,
-            explanation: '$np = 50 \\times 0.02 = 1 < 10$. The expected number of successes is too small, so the normal approximation fails.'
+            explanation: '$np = 50 \\times 0.02 = 1 < 10$. The expected number of successes is far too small, so the normal approximation fails even though $n \\geq 30$.'
           },
           {
             id: 'sd3-dd4',
             label: '$\\hat{p}$ is an ___ estimator of $p$ because $E(\\hat{p}) = p$',
-            options: ['biased', 'unbiased', 'consistent'],
+            options: ['biased', 'unbiased', 'skewed', 'random'],
             correctIndex: 1,
-            explanation: 'An estimator is unbiased if its expected value equals the parameter. Since $\\mu_{\\hat{p}} = p$, $\\hat{p}$ is unbiased.'
+            explanation: 'An estimator is unbiased if, on average, it neither overestimates nor underestimates the parameter. Since $\\mu_{\\hat{p}} = p$, $\\hat{p}$ is unbiased.'
           }
         ]
       }
@@ -220,9 +220,9 @@ $$P(\\hat{p} < 0.65) = P(z < -1.34) = 0.0901$$
         questions: [
           {
             question: 'The formula $\\sigma_{\\hat{p}} = \\sqrt{p(1-p)/n}$ gives the:',
-            options: ['Population standard deviation', 'Standard error of the mean', 'Standard deviation of the sampling distribution of $\\hat{p}$', 'Margin of error'],
+            options: ['The standard deviation of the population', 'The standard deviation of the sample mean', 'The standard deviation of the statistic $\\hat{p}$', 'The margin of error for estimating $p$'],
             correctAnswer: 2,
-            explanation: 'This formula describes the standard deviation (spread) of the sampling distribution of the sample proportion $\\hat{p}$.'
+            explanation: 'This formula gives the standard deviation (spread) of the sampling distribution of the sample proportion $\\hat{p}$. It is not the SD of individual values, does not apply to $\\bar{x}$, and a margin of error also includes a critical value.'
           },
           {
             question: 'A poll of $n = 1000$ finds $\\hat{p} = 0.52$. If $p = 0.50$, the $z$-score for $\\hat{p}$ is approximately:',
@@ -238,15 +238,15 @@ $$P(\\hat{p} < 0.65) = P(z < -1.34) = 0.0901$$
           },
           {
             question: 'If $n = 40$ and $p = 0.15$, is the normal approximation valid?',
-            options: ['Yes, because $n \\geq 30$', 'Yes, because $np = 6 \\geq 5$', 'No, because $np = 6 < 10$', 'No, because $n(1-p) = 34 < 40$'],
+            options: ['Yes, because $n = 40 \\geq 30$', 'Yes, because $np = 6 \\geq 5$', 'No, because $np = 6 < 10$', 'No, because $n(1-p) = 34 < 40$'],
             correctAnswer: 2,
             explanation: '$np = 40 \\times 0.15 = 6 < 10$. The condition $np \\geq 10$ fails, so the normal approximation is NOT valid.'
           },
           {
             question: 'Increasing the sample size from 100 to 400 will ___ the standard deviation of $\\hat{p}$ by a factor of:',
-            options: ['Double it', 'Halve it', 'Quarter it', 'No change'],
+            options: ['Double it', 'Halve it', 'Quarter it', 'Leave it unchanged'],
             correctAnswer: 1,
-            explanation: '$\\sigma_{\\hat{p}} \\propto 1/\\sqrt{n}$. When $n$ quadruples (100 → 400), $\\sqrt{n}$ doubles, so $\\sigma_{\\hat{p}}$ is halved.'
+            explanation: '$\\sigma_{\\hat{p}} \\propto 1/\\sqrt{n}$. When $n$ quadruples (100 → 400), $\\sqrt{n}$ doubles, so $\\sigma_{\\hat{p}}$ is halved, not quartered.'
           },
           {
             question: '60% of a large population prefers brand A. In a sample of 250, what is $\\sigma_{\\hat{p}}$?',
@@ -268,15 +268,15 @@ $$P(\\hat{p} < 0.65) = P(z < -1.34) = 0.0901$$
           },
           {
             question: 'Why does the formula $\\sigma_{\\hat{p}} = \\sqrt{p(1-p)/n}$ use $p$ and not $\\hat{p}$?',
-            options: ['Because $p$ is easier to work with', 'Because this describes the true sampling distribution, which depends on the population parameter', 'Because $\\hat{p}$ is always unknown', 'There is no difference'],
+            options: ['Because $p$ is always easier to compute with', 'It describes all possible samples from the population', 'Because $\\hat{p}$ is unknown until after sampling', 'Because $p$ and $\\hat{p}$ are always equal'],
             correctAnswer: 1,
-            explanation: 'The sampling distribution of $\\hat{p}$ is a theoretical distribution centered at $p$ with spread depending on $p$. We use $p$ because we are describing what happens across all possible samples from this population.'
+            explanation: 'The sampling distribution of $\\hat{p}$ describes what happens across all possible samples from a population whose proportion is $p$, so its spread depends on $p$. $\\hat{p}$ varies from sample to sample and is rarely equal to $p$.'
           },
           {
             question: 'In a random sample of 300 households, 210 have internet access. The 10% condition requires:',
-            options: ['The sample is less than 10% of all households', 'At least 10% responded to the survey', 'The proportion is at least 0.10', '$np \\geq 10$'],
+            options: ['The sample is at most 10% of all households', 'At least 10% of households asked agreed to respond', 'The sample value of $\\hat{p}$ is at least 0.10', 'At least 10 successes and 10 failures'],
             correctAnswer: 0,
-            explanation: 'The 10% condition requires that the sample size $n$ is less than 10% of the population. This ensures that sampling without replacement is approximately independent. Here, there must be at least 3000 households in the population.'
+            explanation: 'The 10% condition requires that the sample size $n$ is no more than 10% of the population, so there must be at least 3,000 households. Response rates, the size of $\\hat{p}$ and the success/failure counts are different issues.'
           }
         ]
       }

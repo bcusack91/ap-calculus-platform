@@ -32,7 +32,7 @@ export const apStatsMeansInfPart6Data = {
       id: 'meansinference-p6-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
@@ -50,9 +50,9 @@ export const apStatsMeansInfPart6Data = {
           },
           {
             question: 'For the AP exam, conditions should be checked:',
-            options: ['Only if asked explicitly', 'Always, for every inference procedure', 'Only for hypothesis tests', 'Only for confidence intervals'],
+            options: ['Only if the question asks for them', 'Always', 'Only for hypothesis tests', 'Only for confidence intervals'],
             correctAnswer: 1,
-            explanation: 'Always check and state conditions — they are part of the scoring rubric.'
+            explanation: 'Always check and state the conditions for every inference procedure, interval or test; scoring guidelines expect them.'
           }
         ]
       }

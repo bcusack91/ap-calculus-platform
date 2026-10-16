@@ -39,19 +39,19 @@ $df = 9$. Strong evidence that the drug reduces blood pressure.`
       id: 'meansinference-p5-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'Matched pairs t-test is used when:',
-            options: ['Two independent groups are compared', 'The same subjects are measured twice', 'The sample size is small', 'We know $\\sigma$'],
+            options: ['Two independent groups are compared', 'Each subject is measured twice', 'The sample size is small', 'We know $\\sigma$ for both groups'],
             correctAnswer: 1,
             explanation: 'Matched pairs involves paired measurements — usually before/after on the same subjects.'
           },
           {
             question: 'In a matched pairs test, you analyze:',
-            options: ['The original measurements', 'The differences within each pair', 'The means of the two groups', 'The pooled data'],
+            options: ['The original measurements', 'The differences within each pair', 'The means of the two groups', 'The two groups pooled together'],
             correctAnswer: 1,
             explanation: 'Compute differences within pairs, then use a one-sample t-test on those differences.'
           },

@@ -33,27 +33,27 @@ export const apStatsEDAPart7Data = {
       id: 'exploratorydata-p7-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'Multiplying every value by 2:',
-            options: ['Doubles the mean and doubles the SD', 'Doubles the mean but SD stays the same', 'Mean stays the same, SD doubles', 'Both mean and SD stay the same'],
+            options: ['The mean and the SD both double', 'The mean doubles; the SD is unchanged', 'The mean is unchanged; the SD doubles', 'Neither the mean nor the SD changes'],
             correctAnswer: 0,
-            explanation: 'Multiplying by a constant multiplies BOTH the mean and the standard deviation by that constant.'
+            explanation: 'Multiplying every value by a constant multiplies both the center and the spread by that constant (changing units works the same way). Only adding a constant leaves the SD unchanged.'
           },
           {
             question: 'The five-number summary includes:',
-            options: ['Mean, median, mode, range, IQR', 'Min, $Q_1$, median, $Q_3$, max', 'Mean, SD, min, max, $n$', '$Q_1$, $Q_2$, $Q_3$, $Q_4$, $Q_5$'],
+            options: ['Mean, median, range, IQR, SD', 'Min, $Q_1$, median, $Q_3$, max', 'Mean, SD, min, max, $n$', 'Min, $Q_1$, mean, $Q_3$, max'],
             correctAnswer: 1,
-            explanation: 'Five-number summary: Min, $Q_1$, Median, $Q_3$, Max.'
+            explanation: 'Five-number summary: Min, $Q_1$, Median, $Q_3$, Max, the values a boxplot displays. It uses the median, not the mean, and contains no measure of spread such as the SD.'
           },
           {
             question: 'Data: 1, 2, 3, 4, 5. $s \\approx$:',
-            options: ['0', '1', '1.58', '2.5'],
-            correctAnswer: 2,
-            explanation: '$\\bar{x} = 3$. $s = \\sqrt{\\frac{(1-3)^2+(2-3)^2+(3-3)^2+(4-3)^2+(5-3)^2}{4}} = \\sqrt{10/4} = \\sqrt{2.5} \\approx 1.58$.'
+            options: ['1.41', '1.58', '2.50', '2.00'],
+            correctAnswer: 1,
+            explanation: '$\\bar{x} = 3$. $s = \\sqrt{\\frac{(1-3)^2+(2-3)^2+(3-3)^2+(4-3)^2+(5-3)^2}{4}} = \\sqrt{10/4} = \\sqrt{2.5} \\approx 1.58$. 1.41 divides by $n = 5$ instead of $n - 1$, 2.50 is the variance (no square root), and 2.00 divides by 5 and skips the root.'
           }
         ]
       }

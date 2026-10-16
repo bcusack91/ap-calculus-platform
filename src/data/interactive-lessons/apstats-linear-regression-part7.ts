@@ -10,16 +10,15 @@ export const apStatsLinRegPart7Data = {
 
 ---
 
-### Complete Formula Reference
+### Complete Reference
 
-| Concept | Formula |
+| Concept | What to know |
 |---------|---------|
-| **LSRL** | $\\hat{y} = a + bx$ |
-| **Slope** | $b = r \\cdot \\dfrac{s_y}{s_x}$ |
-| **Intercept** | $a = \\bar{y} - b\\bar{x}$ |
-| **Correlation** | $r = \\dfrac{1}{n-1}\\sum\\left(\\dfrac{x_i - \\bar{x}}{s_x}\\right)\\left(\\dfrac{y_i - \\bar{y}}{s_y}\\right)$ |
-| **$r^2$** | $r^2 = 1 - \\dfrac{\\text{SSE}}{\\text{SST}}$ |
-| **Residual** | $e_i = y_i - \\hat{y}_i$ |
+| **LSRL** | $\\hat{y} = a + bx$; $a$, $b$ and $r$ come from technology |
+| **Point of means** | The LSRL passes through $(\\bar{x}, \\bar{y})$, so $a = \\bar{y} - b\\bar{x}$ |
+| **Least squares** | The LSRL minimizes the sum of squared residuals |
+| **$r^2$** | $r^2 = r \\times r$, the proportion of variation in $y$ explained |
+| **Residual** | residual $= y - \\hat{y}$ |
 
 ---
 
@@ -27,11 +26,11 @@ export const apStatsLinRegPart7Data = {
 
 **Slope:** "For each additional [1 unit of x], the predicted [y in context] [increases/decreases] by [|b|] [units of y]."
 
-**Intercept:** "When [x in context] is 0, the predicted [y in context] is [a] [units of y]." *(Only if $x = 0$ is in the data range.)*
+**Intercept:** "When [x in context] is 0, the predicted [y in context] is [a] [units of y]." *(Only if $x = 0$ is within the data and the value makes sense.)*
 
 **$r$:** "There is a [strong/moderate/weak], [positive/negative], linear association between [x] and [y]."
 
-**$r^2$:** "[$r^2 \\times 100$]% of the variability in [y in context] is explained by the linear relationship with [x in context]."
+**$r^2$:** "[$r^2 \\times 100$]% of the variation in [y in context] is explained by the linear relationship with [x in context]."
 
 **Residual:** "The actual [y in context] was [e] [units] [above/below] the value predicted by the model."
 
@@ -41,16 +40,14 @@ export const apStatsLinRegPart7Data = {
 
 | Topic | Key Takeaway |
 |-------|-------------|
-| **Scatterplot** | Always plot data first; describe direction, form, strength, unusual features |
-| **LSRL** | Minimizes $\\sum e_i^2$; passes through $(\\bar{x}, \\bar{y})$; $\\sum e_i = 0$ |
-| **Slope & Intercept** | Slope = rate of change; intercept = starting value (if meaningful) |
-| **Residuals** | $e = y - \\hat{y}$; residual plot checks model appropriateness |
-| **$r$** | Direction + strength; $-1 \\leq r \\leq 1$; only for linear relationships |
-| **$r^2$** | Proportion of variability explained; $0 \\leq r^2 \\leq 1$ |
-| **Outliers** | Large residual; may or may not be influential |
-| **High Leverage** | Extreme $x$-value; potential to influence |
-| **Influential** | Removing changes slope/$r^2$ substantially |
-| **Extrapolation** | Predicting outside data range — unreliable |
+| **Scatterplot** | Always plot data first; describe form, direction, strength, unusual features |
+| **LSRL** | Minimizes the sum of squared residuals; passes through $(\\bar{x}, \\bar{y})$ |
+| **Slope & Intercept** | Slope = predicted change per unit of $x$; intercept = prediction at $x = 0$ (if meaningful) |
+| **Residuals** | Residual $= y - \\hat{y}$; positive means the model underpredicts; residual plot checks the form |
+| **$r$** | Direction + strength of a linear association; $-1 \\leq r \\leq 1$; unit-free |
+| **$r^2$** | Proportion of variation explained; $0 \\leq r^2 \\leq 1$ |
+| **Unusual features** | Clusters and points that don't fit the pattern; describe and investigate them |
+| **Extrapolation** | Predicting beyond the data — less reliable the farther you go |
 
 ---
 
@@ -61,11 +58,11 @@ $$\\downarrow$$
 $$\\text{Check scatterplot → Fit LSRL → Check residual plot}$$
 $$\\downarrow$$
 $$\\text{Random scatter → Linear model OK}$$
-$$\\text{Curved pattern → Nonlinear model needed}$$
+$$\\text{Curved pattern → Linear model not the most appropriate}$$
 $$\\downarrow$$
 $$\\text{Interpret: slope, } r, r^2 \\text{ in context}$$
 $$\\downarrow$$
-$$\\text{Check for unusual points}$$
+$$\\text{Note unusual features}$$
 $$\\downarrow$$
 $$\\text{Make predictions (within data range only)}$$
 
@@ -81,21 +78,21 @@ $$\\text{Make predictions (within data range only)}$$
         questions: [
           {
             question: 'The LSRL always passes through:',
-            options: ['$(0, 0)$', '$(\\bar{x}, \\bar{y})$', '$(1, b)$', 'The first data point'],
+            options: ['$(0, 0)$', '$(\\bar{x}, \\bar{y})$', '$(\\bar{y}, \\bar{x})$', '$(0, \\bar{y})$'],
             correctAnswer: 1,
-            explanation: 'A fundamental property: the LSRL always passes through the point $(\\bar{x}, \\bar{y})$.'
+            explanation: 'The LSRL always passes through $(\\bar{x}, \\bar{y})$, the point of means. Swapping the coordinates gives a different point, and the line passes through the origin or $(0, \\bar{y})$ only in special cases.'
           },
           {
             question: 'If $r = -0.6$, which is true?',
-            options: ['The slope is positive', '$r^2 = -0.36$', 'The slope is negative and $r^2 = 0.36$', 'The model explains 60% of variability'],
+            options: ['The slope is positive and $r^2 = 0.36$', 'The slope is negative and $r^2 = -0.36$', 'The slope is negative and $r^2 = 0.36$', 'The slope is negative and $r^2 = 0.60$'],
             correctAnswer: 2,
-            explanation: 'Negative $r$ → negative slope. $r^2 = (-0.6)^2 = 0.36$, meaning 36% of variability is explained.'
+            explanation: 'A negative $r$ means a negative slope, and $r^2 = (-0.6)^2 = 0.36$: 36% of the variation is explained. $r^2$ is never negative and is not equal to $|r|$.'
           },
           {
-            question: 'The sum of all residuals in an LSRL equals:',
-            options: ['$n$', '$1$', '$\\bar{y}$', '$0$'],
-            correctAnswer: 3,
-            explanation: 'A mathematical property of the LSRL: $\\sum(y_i - \\hat{y}_i) = 0$.'
+            question: 'A residual plot from a linear model shows clear curvature. What does this tell you?',
+            options: ['The model fits, since $r$ is close to 1', 'A linear model is not the best model', 'The correlation must be close to 0', 'The slope of the linear model must be negative'],
+            correctAnswer: 1,
+            explanation: 'Curvature in the residual plot means a linear model is not the most appropriate model for the data. Curved data can still have a large $|r|$, and curvature says nothing about the sign of the slope.'
           }
         ]
       }
@@ -106,25 +103,25 @@ $$\\text{Make predictions (within data range only)}$$
       content: `
 **Mixed Calculations** 🧮
 
-Given: $\\bar{x} = 10$, $\\bar{y} = 25$, $s_x = 4$, $s_y = 8$, $r = 0.75$.
+Technology gives $b = 1.5$ and $r = 0.75$. The means are $\\bar{x} = 10$ and $\\bar{y} = 25$.
 
-**1)** Calculate the slope $b$.
+**1)** Find the intercept $a$.
 
-**2)** Calculate the intercept $a$.
+**2)** Predict $y$ when $x = 14$.
 
 **3)** What is $r^2$? (two decimal places)
       `,
       exercise: {
         inputs: [
           {
-            label: 'Slope b',
-            correctAnswer: '1.5',
-            explanation: '$b = r \\cdot s_y/s_x = 0.75 \\cdot 8/4 = 0.75 \\cdot 2 = 1.5$.'
-          },
-          {
             label: 'Intercept a',
             correctAnswer: '10',
             explanation: '$a = \\bar{y} - b\\bar{x} = 25 - 1.5(10) = 25 - 15 = 10$.'
+          },
+          {
+            label: 'Predicted y',
+            correctAnswer: '31',
+            explanation: '$\\hat{y} = 10 + 1.5(14) = 10 + 21 = 31$.'
           },
           {
             label: 'r-squared',
@@ -144,31 +141,31 @@ Given: $\\bar{x} = 10$, $\\bar{y} = 25$, $s_x = 4$, $s_y = 8$, $r = 0.75$.
         dropdowns: [
           {
             id: 'lr7-dd1',
-            label: 'Switching $x$ and $y$ in a regression ___ the value of $r$',
-            options: ['changes', 'does not change'],
+            label: 'Switching $x$ and $y$ ___ the value of $r$',
+            options: ['changes', 'does not change', 'reverses', 'squares'],
             correctIndex: 1,
-            explanation: '$r$ is symmetric — it does not matter which variable is $x$ and which is $y$. However, the LSRL equation DOES change.'
+            explanation: '$r$ is symmetric, so it does not matter which variable is $x$ and which is $y$. The LSRL equation, however, does change.'
           },
           {
             id: 'lr7-dd2',
-            label: 'If you rescale $x$ by multiplying by a constant, the LSRL ___',
-            options: ['stays exactly the same', 'changes (slope adjusts, $r$ stays the same)', 'becomes invalid'],
+            label: 'Measuring height in centimeters instead of inches ___ the correlation',
+            options: ['makes stronger', 'does not change', 'makes weaker', 'reverses the sign of'],
             correctIndex: 1,
-            explanation: 'Linear transformations of $x$ or $y$ change the slope and intercept but do not change $r$ or $r^2$.'
+            explanation: 'The correlation coefficient is unit-free, so changing the units of measurement does not change $r$ (the slope of the line does change).'
           },
           {
             id: 'lr7-dd3',
             label: 'A residual plot with no pattern tells us the ___ model is appropriate',
-            options: ['nonlinear', 'linear', 'quadratic', 'exponential'],
+            options: ['nonlinear', 'linear', 'causal', 'curved'],
             correctIndex: 1,
-            explanation: 'Random scatter in the residual plot confirms the linear model captures the relationship well.'
+            explanation: 'Random scatter in the residual plot confirms the linear form, so the linear model is appropriate.'
           },
           {
             id: 'lr7-dd4',
             label: 'Predicting $y$ for an $x$-value within the range of the data is called ___',
-            options: ['extrapolation', 'interpolation', 'transformation', 'estimation'],
+            options: ['extrapolation', 'interpolation', 'correlation', 'a residual'],
             correctIndex: 1,
-            explanation: 'Interpolation = within data range (reliable). Extrapolation = outside data range (unreliable).'
+            explanation: 'Interpolation is predicting within the data range. Extrapolation is predicting beyond it and is less reliable.'
           }
         ]
       }
@@ -183,63 +180,63 @@ Given: $\\bar{x} = 10$, $\\bar{y} = 25$, $s_x = 4$, $s_y = 8$, $r = 0.75$.
         questions: [
           {
             question: 'The least-squares regression line minimizes the sum of:',
-            options: ['Residuals', 'Squared residuals', 'Absolute residuals', 'Squared $x$-values'],
+            options: ['The residuals', 'The squared residuals', 'The absolute errors', 'Squared $x$-values'],
             correctAnswer: 1,
-            explanation: 'LSRL minimizes $\\sum(y_i - \\hat{y}_i)^2$ — the sum of squared residuals.'
+            explanation: 'The LSRL minimizes $\\sum (y - \\hat{y})^2$, the sum of squared residuals. The other sums define different criteria.'
           },
           {
-            question: '$b = r \\cdot s_y / s_x$. If $r > 0$ and $s_y > s_x$, then:',
-            options: ['$b < r$', '$b = r$', '$b > r$', '$b < 0$'],
-            correctAnswer: 2,
-            explanation: 'If $s_y/s_x > 1$, then $b = r \\cdot (s_y/s_x) > r$.'
+            question: 'Technology gives an LSRL slope of $b = 0.4$; the means are $\\bar{x} = 50$ and $\\bar{y} = 32$. The intercept is:',
+            options: ['$52$', '$12$', '$31.6$', '$-18$'],
+            correctAnswer: 1,
+            explanation: '$a = \\bar{y} - b\\bar{x} = 32 - 0.4(50) = 32 - 20 = 12$. Adding instead gives 52, subtracting only $b$ gives 31.6, and $32 - 50$ ignores the slope.'
           },
           {
-            question: 'A regression has $r^2 = 0.81$. Adding a data point changes $r^2$ to $0.40$. The added point is:',
-            options: ['A regular point', 'An outlier only', 'A high-leverage point only', 'An influential point'],
-            correctAnswer: 3,
-            explanation: 'A dramatic drop in $r^2$ upon adding a point means that point is highly influential.'
+            question: 'In a scatterplot of hours of sleep vs. reaction time, one student sits far from the otherwise strong negative pattern. How should you describe this student?',
+            options: ['As evidence the association is really positive', 'As a point that does not fit the trend', 'As a cluster of students with similar habits', 'As an extrapolation beyond the observed data'],
+            correctAnswer: 1,
+            explanation: 'A single point far from the overall trend is an unusual point that does not fit the pattern; describe and investigate it. One point does not reverse the direction, a cluster is a group, and extrapolation refers to predictions.'
           },
           {
             question: 'LSRL: $\\hat{y} = 20 - 0.3x$. The slope tells us:',
-            options: ['$y$ increases by 0.3 for each unit increase in $x$', '$y$ decreases by 0.3 for each unit increase in $x$', '$x$ and $y$ are unrelated', 'The correlation is $-0.3$'],
+            options: ['Predicted $y$ rises 0.3 per unit increase in $x$', 'Predicted $y$ falls by 0.3 for each unit increase in $x$', 'The variables $x$ and $y$ are unrelated', 'The correlation between $x$ and $y$ is $-0.3$'],
             correctAnswer: 1,
-            explanation: 'Slope $= -0.3$: for each 1-unit increase in $x$, predicted $y$ decreases by 0.3.'
+            explanation: 'Slope $= -0.3$: for each 1-unit increase in $x$, predicted $y$ decreases by 0.3. The slope is not the correlation, and a nonzero slope shows the variables are related.'
           },
           {
-            question: 'Computer output shows "S = 3.2." This is:',
-            options: ['The slope', 'The standard deviation of the residuals', '$r^2$', 'The sample size'],
-            correctAnswer: 1,
-            explanation: '$S$ (or $s_e$) is the standard deviation of the residuals — a measure of the typical prediction error.'
+            question: 'Output for a regression reports "R-sq = 49%" and a negative slope. What is $r$?',
+            options: ['$0.49$', '$-0.49$', '$-0.7$', '$0.7$'],
+            correctAnswer: 2,
+            explanation: '$|r| = \\sqrt{0.49} = 0.7$, and $r$ takes the sign of the slope, so $r = -0.7$. 0.49 and $-0.49$ forget the square root, and $+0.7$ ignores the negative slope.'
           },
           {
             question: 'Which would make you doubt a linear model?',
-            options: ['$r^2 = 0.95$', 'Random residual plot', 'U-shaped residual plot', 'All residuals less than 5'],
+            options: ['An $r^2$ of 0.95', 'A random residual plot', 'A U-shaped residual plot', 'Small residuals'],
             correctAnswer: 2,
-            explanation: 'A curved (U-shaped) residual plot indicates the linear model is inappropriate.'
+            explanation: 'A curved (U-shaped) residual plot shows that the linear model misses the form of the relationship. A high $r^2$, random residuals and small residuals all support the model.'
           },
           {
-            question: 'If the intercept is $-50$ and data range for $x$ is $[100, 500]$, you should:',
-            options: ['Interpret it as: predicted $y$ is $-50$ when $x = 0$', 'State the intercept has no meaningful interpretation in this context', 'Delete the intercept', 'Set the intercept to 0'],
+            question: 'If the intercept is $-50$ and the data range for $x$ is $[100, 500]$, you should:',
+            options: ['Say the predicted $y$ is $-50$ when $x = 0$', 'Say the intercept has no reasonable meaning here', 'Drop the intercept from the regression line', 'Refit the line forcing the intercept to 0'],
             correctAnswer: 1,
-            explanation: '$x = 0$ is far outside the data range, so the intercept lacks practical meaning.'
+            explanation: '$x = 0$ is far outside the data range, so interpreting the intercept is an extrapolation. The intercept still belongs in the equation for making predictions.'
           },
           {
             question: '$r = 0.45$ for height vs. weight. Switching to weight vs. height gives $r =$',
-            options: ['$-0.45$', '$0.45$', '$0.2025$', 'Cannot determine'],
+            options: ['$-0.45$', '$0.45$', '$0.2025$', '$2.22$'],
             correctAnswer: 1,
-            explanation: '$r$ is symmetric — switching $x$ and $y$ does not change its value.'
+            explanation: '$r$ is symmetric, so switching $x$ and $y$ does not change it. 0.2025 is $r^2$, and 2.22 is $1/r$.'
           },
           {
-            question: 'A dataset has $n = 5$ points. One point has leverage AND a large residual. Removing it:',
-            options: ['Will not change the LSRL', 'Will likely change the LSRL substantially', 'Will only change $r$', 'Is not allowed'],
-            correctAnswer: 1,
-            explanation: 'High leverage + large residual = influential. Removing it will substantially change the regression.'
+            question: 'A model of tree height (ft) on age (years) was fit to trees aged 5 to 40 years. A forester uses it to predict the height of a 150-year-old tree. The main concern is:',
+            options: ['It is an extrapolation', 'The residual will be exactly zero', 'The slope must change sign at 150', 'The correlation will become negative'],
+            correctAnswer: 0,
+            explanation: '150 years is far beyond the 5–40 year data, so the linear pattern may not continue (trees stop growing). Nothing guarantees a zero residual or changes the sign of $r$ or the slope.'
           },
           {
-            question: 'On the AP exam, a complete regression interpretation includes:',
-            options: ['Just the equation', 'Slope, $r^2$, residual analysis, and context', 'Only the p-value', 'A list of all data points'],
+            question: 'On the AP exam, a complete regression analysis includes:',
+            options: ['Only the equation of the least-squares regression line', 'Slope and $r^2$ in context, and the residual plot', 'Only the p-value printed in the technology output', 'A list of every data point that was used in the model'],
             correctAnswer: 1,
-            explanation: 'Full credit requires interpreting slope and $r^2$ in context, analyzing residuals for model fit, and noting any unusual points.'
+            explanation: 'Full credit requires interpreting the slope and $r^2$ in context, checking the residual plot for the form, and noting any unusual points. An equation alone is not an analysis.'
           }
         ]
       }

@@ -6,7 +6,7 @@ export const apStatsEDAPart3Data = {
       type: 'text' as const,
       content: `# 📍 Measures of Center
 
-**Part 3 of 7 — Mean, Median, Mode**
+**Part 3 of 7 — Mean and Median**
 
 ---
 
@@ -18,7 +18,7 @@ $$\\bar{x} = \\frac{\\sum x_i}{n}$$
 - **Sensitive** to outliers and skewness
 - Best for symmetric distributions
 
-### Median ($M$ or $\\\\tilde{x}$)
+### Median ($M$ or $\\tilde{x}$)
 
 - Middle value when data is ordered
 - **Resistant** to outliers
@@ -41,27 +41,27 @@ Outliers and long tails pull the mean toward the tail, while the median stays pu
       id: 'exploratorydata-p3-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'For a right-skewed distribution:',
-            options: ['Mean < Median', 'Mean = Median', 'Mean > Median', 'Mean and Median are unrelated'],
+            options: ['Mean < Median', 'Mean = Median', 'Mean > Median', 'The two are unrelated'],
             correctAnswer: 2,
-            explanation: 'The right tail pulls the mean to the right, so Mean > Median.'
+            explanation: 'The long right tail pulls the mean toward larger values, while the median stays at the middle position, so the mean is greater than the median. Mean less than median goes with left skew, and equality goes with symmetry.'
           },
           {
-            question: 'Which measure of center is resistant to outliers?',
-            options: ['Mean', 'Median', 'Mode', 'Range'],
+            question: 'Which summary statistic is resistant to outliers?',
+            options: ['The mean', 'The median', 'The range', 'The SD'],
             correctAnswer: 1,
-            explanation: 'The median is not affected by extreme values because it depends only on the middle position.'
+            explanation: 'The median depends only on the middle position, so extreme values barely affect it. The mean, the range and the standard deviation all use the extreme values and are nonresistant.'
           },
           {
             question: 'Data: 2, 3, 5, 7, 100. The mean is:',
-            options: ['5', '7', '23.4', '100'],
-            correctAnswer: 2,
-            explanation: '$\\bar{x} = (2+3+5+7+100)/5 = 117/5 = 23.4$. The outlier (100) pulls the mean way up.'
+            options: ['5', '23.4', '29.25', '4.25'],
+            correctAnswer: 1,
+            explanation: '$\\bar{x} = (2+3+5+7+100)/5 = 117/5 = 23.4$; the outlier 100 pulls the mean far above the median of 5. 29.25 divides by 4 instead of 5, and 4.25 is the mean with the outlier left out.'
           }
         ]
       }

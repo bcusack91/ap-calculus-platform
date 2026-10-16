@@ -66,7 +66,7 @@ $$H_a: \\mu_d \\neq 0 \\quad (\\text{or } > 0 \\text{ or } < 0)$$
 |-----------|-------|
 | **Random** | Pairs are randomly selected or treatments randomly assigned |
 | **Independent** | Individual *pairs* are independent of each other (10% condition on pairs) |
-| **Normal** | The *differences* ($d$) are approximately Normal (check histogram/QQ plot of $d$) |
+| **Normal** | Number of differences $\\geq 30$, OR the sample of differences is free from strong skewness and outliers (check a dotplot or histogram of $d$) |
 
 ---
 
@@ -123,15 +123,15 @@ $P < 0.001$ (one-sided). Since $P < 0.001 < 0.05$, we reject $H_0$. There is con
         questions: [
           {
             question: 'A paired $t$-test is appropriate when:',
-            options: ['Two independent groups are compared', 'The same subjects are measured twice', 'Sample sizes are equal', 'The populations have equal variances'],
+            options: ['Two independent groups are compared', 'The same subjects are measured twice', 'Sample sizes are equal', 'The populations have equal SDs'],
             correctAnswer: 1,
             explanation: 'Paired data arise when the same subjects are measured under two conditions (before/after, two treatments, etc.).'
           },
           {
             question: 'In a paired $t$-test, the test statistic uses:',
-            options: ['$\\bar{x}_1$ and $\\bar{x}_2$ separately', '$\\bar{d}$ and $s_d$ (mean and SD of differences)', '$s_1$ and $s_2$', '$\\sigma_1$ and $\\sigma_2$'],
+            options: ['$\\bar{x}_1$, $\\bar{x}_2$, $s_1$ and $s_2$', '$\\bar{d}$ and $s_d$', '$s_1$ and $s_2$ only', '$\\sigma_1$ and $\\sigma_2$'],
             correctAnswer: 1,
-            explanation: 'We compute differences $d_i$ first, then apply a one-sample $t$-test to those differences.'
+            explanation: 'We compute the differences first and then apply a one-sample $t$-test to them, using their mean $\\bar{d}$ and SD $s_d$. The separate group means and SDs ignore the pairing.'
           },
           {
             question: 'The degrees of freedom for a paired $t$-test with 20 pairs is:',
@@ -187,28 +187,28 @@ $n = 16$ pairs, $\\bar{d} = 5.0$, $s_d = 8.0$
           {
             id: 'cp3-dd1',
             label: 'Blood pressure measured before and after medication for the same patients → ___',
-            options: ['Two-sample $t$-test', 'Paired $t$-test'],
+            options: ['Two-sample $t$-test', 'Paired $t$-test', 'One-sample $z$-test', 'Chi-square test'],
             correctIndex: 1,
             explanation: 'Same patients measured twice → paired data.'
           },
           {
             id: 'cp3-dd2',
             label: '30 men and 30 women compare mean heights → ___',
-            options: ['Two-sample $t$-test', 'Paired $t$-test'],
+            options: ['Two-sample $t$-test', 'Paired $t$-test', 'One-sample $z$-test', 'Chi-square test'],
             correctIndex: 0,
             explanation: 'Different people in each group, no pairing → two independent samples.'
           },
           {
             id: 'cp3-dd3',
             label: 'Twins separated at birth: one raised in city, one in country. Compare IQ → ___',
-            options: ['Two-sample $t$-test', 'Paired $t$-test'],
+            options: ['Two-sample $t$-test', 'Paired $t$-test', 'One-sample $z$-test', 'Chi-square test'],
             correctIndex: 1,
             explanation: 'Twins are naturally paired — each twin in one group has a partner in the other.'
           },
           {
             id: 'cp3-dd4',
             label: 'The Normal condition for a paired test checks the distribution of ___',
-            options: ['the raw $x$-values', 'the differences $d$', 'the sample means', 'the population'],
+            options: ['the raw $x$-values', 'the differences $d$', 'the sample means', 'the population values'],
             correctIndex: 1,
             explanation: 'For a paired $t$-test, check Normality of the differences $d_i$, not the raw data.'
           }
@@ -237,13 +237,13 @@ $n = 16$ pairs, $\\bar{d} = 5.0$, $s_d = 8.0$
           },
           {
             question: 'A researcher defines $d$ = Before $-$ After. Positive $\\bar{d}$ means:',
-            options: ['After scores are higher', 'Before scores are higher', 'No change', 'The test is invalid'],
+            options: ['After scores tend to be higher', 'Before scores tend to be higher', 'The scores did not change', 'The test is not valid here'],
             correctAnswer: 1,
             explanation: 'If $d$ = Before $-$ After and $\\bar{d} > 0$, then Before scores were higher on average.'
           },
           {
             question: 'Why is pairing beneficial?',
-            options: ['It increases sample size', 'It eliminates subject-to-subject variability', 'It requires fewer conditions', 'It guarantees significance'],
+            options: ['It doubles the sample size', 'It removes variation between subjects', 'It needs fewer conditions', 'It guarantees a significant result'],
             correctAnswer: 1,
             explanation: 'By looking at differences within the same subject, we remove between-subject variability.'
           },
@@ -255,9 +255,9 @@ $n = 16$ pairs, $\\bar{d} = 5.0$, $s_d = 8.0$
           },
           {
             question: 'The histogram of differences shows extreme right skew with $n = 8$. You should:',
-            options: ['Proceed — the $t$-test is always valid', 'Note the Normal condition may not be met with small $n$ and skewed differences', 'Use a two-sample test instead', 'Remove the skew'],
+            options: ['Proceed, since $t$ procedures always work', 'Say the Normal condition is not met', 'Switch to a two-sample $t$-test instead', 'Delete the largest differences first'],
             correctAnswer: 1,
-            explanation: 'With small $n$, the $t$-test requires approximately Normal differences. Skewness is a concern.'
+            explanation: 'With only 8 differences ($n < 30$), the sample of differences must be free from strong skewness and outliers. Extreme skew means the condition is not met; a two-sample test is the wrong procedure, and deleting data is not allowed.'
           },
           {
             question: '$\\bar{d} = -3.2$, $s_d = 4.8$, $n = 25$. The SE is:',
@@ -267,19 +267,19 @@ $n = 16$ pairs, $\\bar{d} = 5.0$, $s_d = 8.0$
           },
           {
             question: 'Using a two-sample $t$-test on paired data:',
-            options: ['Is more powerful', 'Ignores the pairing and may miss a real difference', 'Is required on the AP exam', 'Gives the same result'],
+            options: ['Is always more powerful', 'Ignores the pairing and can hide a real effect', 'Is what the AP exam requires', 'Always gives the same result'],
             correctAnswer: 1,
             explanation: 'Ignoring the pairing adds unnecessary variability, reducing power to detect a real difference.'
           },
           {
             question: 'A 95% CI for $\\mu_d$ is $(1.2, 5.8)$. Since 0 is NOT in the interval:',
-            options: ['The difference is not significant', 'We reject $H_0: \\mu_d = 0$ at $\\alpha = 0.05$', 'We accept $H_0$', 'More data is needed'],
+            options: ['The difference is not significant at 0.05', 'We reject $H_0: \\mu_d = 0$ at $\\alpha = 0.05$', 'We accept $H_0: \\mu_d = 0$ at 0.05', 'More data are needed to decide'],
             correctAnswer: 1,
             explanation: '0 is outside the CI, consistent with rejecting $H_0$ at the corresponding significance level.'
           },
           {
             question: 'The null hypothesis $H_0: \\mu_d = 0$ states:',
-            options: ['All differences are 0', 'The mean difference in the population is 0', 'The sample mean is 0', 'The SD of differences is 0'],
+            options: ['Every individual difference is 0', 'The true mean difference is 0', 'The sample mean difference is 0', 'The SD of the differences is 0'],
             correctAnswer: 1,
             explanation: '$H_0: \\mu_d = 0$ means the true average difference is 0 — no systematic effect.'
           }

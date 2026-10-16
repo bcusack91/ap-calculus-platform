@@ -31,7 +31,7 @@ export const apStatsConfIntPart7Data = {
 | Statistic | $\\hat{p}$ | $\\bar{x}$ |
 | Distribution | $z$ | $t$ (df $= n-1$) |
 | SE formula | $\\sqrt{\\hat{p}(1-\\hat{p})/n}$ | $s/\\sqrt{n}$ |
-| Normal condition | $n\\hat{p} \\geq 10$ & $n(1-\\hat{p}) \\geq 10$ | $n \\geq 30$ or approx. normal |
+| Normal condition | $n\\hat{p} \\geq 10$ & $n(1-\\hat{p}) \\geq 10$ | Population approx. normal, or $n \\geq 30$, or sample free from strong skew/outliers |
 
 ---
 
@@ -88,19 +88,19 @@ export const apStatsConfIntPart7Data = {
         questions: [
           {
             question: 'You want to estimate a proportion. Which procedure do you use?',
-            options: ['One-sample $t$-interval', 'One-proportion $z$-interval', 'Two-sample $t$-interval', 'Chi-square test'],
+            options: ['One-sample $t$-interval', 'One-proportion $z$-interval', 'Two-sample $t$-interval', 'Two-proportion $z$-interval'],
             correctAnswer: 1,
             explanation: 'Proportions use the $z$-distribution. The one-proportion $z$-interval is the correct procedure.'
           },
           {
             question: 'The standard error for a sample mean is:',
-            options: ['$s/n$', '$s/\\sqrt{n}$', '$\\sigma/n$', '$\\sqrt{\\hat{p}(1-\\hat{p})/n}$'],
+            options: ['$s/n$', '$s/\\sqrt{n}$', '$\\sigma/n$', '$\\sqrt{s}/n$'],
             correctAnswer: 1,
             explanation: '$SE = s/\\sqrt{n}$ for a sample mean when $\\sigma$ is unknown.'
           },
           {
             question: 'Which is NOT a way to make a CI narrower?',
-            options: ['Increase sample size', 'Decrease confidence level', 'Increase confidence level', 'Decrease variability in the data'],
+            options: ['Increase sample size', 'Lower the confidence', 'Increase confidence level', 'Use less variable data'],
             correctAnswer: 2,
             explanation: 'Increasing confidence level makes the interval WIDER (larger critical value). The other options all narrow it.'
           }
@@ -150,28 +150,28 @@ export const apStatsConfIntPart7Data = {
           {
             id: 'ci7-dd1',
             label: 'Estimating the mean height of trees ($\\sigma$ unknown) →',
-            options: ['$z$-interval', '$t$-interval'],
+            options: ['$z$-interval', '$t$-interval', 'chi-square test', 'two-sample $t$'],
             correctIndex: 1,
             explanation: 'Unknown $\\sigma$ and estimating a mean → one-sample $t$-interval.'
           },
           {
             id: 'ci7-dd2',
             label: 'Estimating the proportion of defective parts →',
-            options: ['$z$-interval', '$t$-interval'],
+            options: ['$z$-interval', '$t$-interval', 'chi-square test', 'two-sample $t$'],
             correctIndex: 0,
             explanation: 'Estimating a proportion → one-proportion $z$-interval.'
           },
           {
             id: 'ci7-dd3',
             label: 'A 95% CI is $(0.40, 0.60)$. Testing $H_0: p = 0.55$ at $\\alpha = 0.05$ →',
-            options: ['Reject $H_0$', 'Fail to reject $H_0$'],
+            options: ['Reject $H_0$ at that level', 'Fail to reject $H_0$', 'Accept $H_0$ as true', 'Accept $H_a$ as true'],
             correctIndex: 1,
             explanation: '0.55 is inside the interval, so at $\\alpha = 0.05$ we fail to reject $H_0$.'
           },
           {
             id: 'ci7-dd4',
             label: 'Increasing $n$ from 100 to 400 will ___ the ME by a factor of',
-            options: ['Halve it', 'Quarter it', 'Double it'],
+            options: ['Halve it', 'Quarter it', 'Double it', 'Leave it unchanged'],
             correctIndex: 0,
             explanation: '$ME \\propto 1/\\sqrt{n}$. Going from 100 to 400: $\\sqrt{100}/\\sqrt{400} = 10/20 = 0.5$. ME is halved.'
           }
@@ -188,13 +188,13 @@ export const apStatsConfIntPart7Data = {
         questions: [
           {
             question: 'A one-proportion $z$-interval uses $z^*$ rather than $t^*$ because:',
-            options: ['The sample is always large', 'The sampling distribution of $\\hat{p}$ is modeled by the normal distribution', 'Proportions have known $\\sigma$', 'The CLT does not apply to proportions'],
+            options: ['The sample is always very large', 'Its SD comes from $\\hat{p}$ itself', 'Proportions have a known $\\sigma$', 'The CLT never applies to proportions'],
             correctAnswer: 1,
             explanation: 'The SD of $\\hat{p}$ can be computed directly from $\\hat{p}$, so we do not need to estimate a separate $\\sigma$. The normal model applies when Large Counts is met.'
           },
           {
             question: 'For a $t$-interval, $df = n - 1$ because:',
-            options: ['Convention', 'One degree of freedom is used estimating $\\bar{x}$ when computing $s$', 'We subtract the mean', 'The formula requires it'],
+            options: ['It is only a convention', 'One df goes to $\\bar{x}$', 'We subtract the mean', 'The formula requires it'],
             correctAnswer: 1,
             explanation: 'Computing $s$ uses $\\bar{x}$, which consumes one degree of freedom. This leaves $n-1$ free observations.'
           },
@@ -206,19 +206,19 @@ export const apStatsConfIntPart7Data = {
           },
           {
             question: 'Which increases the width of a CI?',
-            options: ['Larger $n$', 'Lower confidence level', 'Smaller $s$', 'Higher confidence level'],
+            options: ['A larger sample size', 'A lower confidence level', 'Less variable data', 'A higher confidence level'],
             correctAnswer: 3,
             explanation: 'Higher confidence requires a larger critical value, increasing the margin of error and thus the width.'
           },
           {
             question: '$\\hat{p} = 0.30$, $n = 200$, 95% CI. Which condition check is correct?',
-            options: ['$n\\hat{p} = 60 \\geq 10$ and $n(1-\\hat{p}) = 140 \\geq 10$ ✓', '$n = 200 \\geq 30$ ✓', '$\\sigma$ is known ✓', 'No outliers ✓'],
+            options: ['$n\\hat{p} = 60$ and $n(1-\\hat{p}) = 140$, both $\\geq 10$', '$n = 200$ (at least 30), so the CLT applies', '$\\sigma$ is known for the population', 'The sample shows no outliers'],
             correctAnswer: 0,
             explanation: 'For proportions, the Normal condition is Large Counts: $n\\hat{p} \\geq 10$ and $n(1-\\hat{p}) \\geq 10$. Both pass here.'
           },
           {
             question: 'The point estimate for a CI is always:',
-            options: ['The lower bound', 'The upper bound', 'The center of the interval', 'Outside the interval'],
+            options: ['The lower bound', 'The upper bound', 'The midpoint', 'Outside the interval'],
             correctAnswer: 2,
             explanation: 'The CI is point estimate $\\pm$ ME, so the point estimate is always the midpoint.'
           },
@@ -242,7 +242,7 @@ export const apStatsConfIntPart7Data = {
           },
           {
             question: 'On the AP exam, a complete CI problem requires:',
-            options: ['Just the interval bounds', 'Calculate and interpret only', 'Identify, Conditions, Calculate, Interpret', 'Hypotheses, test statistic, p-value, conclusion'],
+            options: ['Just the interval bounds', 'Calculate and interpret only', 'Identify, Conditions, Calculate, Interpret', 'Hypotheses, a test statistic, a p-value'],
             correctAnswer: 2,
             explanation: 'The 4-step framework for CIs: Identify the procedure, Check conditions, Calculate the interval, Interpret in context.'
           }

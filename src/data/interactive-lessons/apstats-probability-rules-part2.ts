@@ -41,7 +41,7 @@ $$P(A \\cup B) = P(A) + P(B)$$
 
 **Examples:**
 - Rolling a 2 and rolling a 5 on one die → mutually exclusive
-- Being male and being female → mutually exclusive
+- Choosing one student who is a freshman and choosing one who is a senior → mutually exclusive
 - Drawing a heart and drawing a spade → mutually exclusive
 
 **NOT mutually exclusive:**
@@ -85,19 +85,19 @@ $$P(M \\cup F) = P(M) + P(F) - P(M \\cap F) = \\frac{80}{200} + \\frac{110}{200}
             question: '$P(A) = 0.5$, $P(B) = 0.2$, events are mutually exclusive. $P(A \\cup B) =$',
             options: ['$0.1$', '$0.3$', '$0.7$', '$1.0$'],
             correctAnswer: 2,
-            explanation: 'Mutually exclusive: $P(A \\cup B) = P(A) + P(B) = 0.5 + 0.2 = 0.7$.'
+            explanation: 'Mutually exclusive: $P(A \\cup B) = P(A) + P(B) = 0.5 + 0.2 = 0.7$. 0.1 multiplies the probabilities, and 0.3 subtracts them.'
           },
           {
             question: 'We subtract $P(A \\cap B)$ in the addition rule to:',
-            options: ['Make the probability smaller', 'Avoid double-counting the overlap', 'Account for independence', 'Find the complement'],
+            options: ['Make the answer less than one', 'Avoid counting the overlap twice', 'Account for independent events', 'Find the complement'],
             correctAnswer: 1,
-            explanation: 'The overlap is counted in both $P(A)$ and $P(B)$, so we subtract it once.'
+            explanation: 'The overlap is counted once in $P(A)$ and again in $P(B)$, so we subtract it once. The rule works whether or not the events are independent, and the complement of the union is $1 - P(A \\cup B)$.'
           },
           {
             question: '"Mutually exclusive" means:',
-            options: ['Events are independent', 'Events cannot both occur', 'Events always occur together', 'Events have equal probability'],
+            options: ['The events are independent', 'Events cannot both occur', 'Events always occur together', 'Events have equal probability'],
             correctAnswer: 1,
-            explanation: 'Mutually exclusive = disjoint = $P(A \\cap B) = 0$.'
+            explanation: 'Mutually exclusive = disjoint = $P(A \\cap B) = 0$: the events cannot happen together. That is different from independence, and it says nothing about the events having equal probabilities.'
           }
         ]
       }
@@ -159,7 +159,7 @@ $$P(M \\cup F) = P(M) + P(F) - P(M \\cap F) = \\frac{80}{200} + \\frac{110}{200}
           {
             id: 'pr2-dd3',
             label: 'Drawing a heart and drawing a king from a deck are:',
-            options: ['Mutually exclusive', 'NOT mutually exclusive', 'Complementary', 'Impossible'],
+            options: ['Mutually exclusive', 'Not mutually exclusive', 'Complementary events', 'Independent and disjoint'],
             correctIndex: 1,
             explanation: 'The king of hearts is in both events, so they CAN occur together.'
           }
@@ -182,49 +182,49 @@ $$P(M \\cup F) = P(M) + P(F) - P(M \\cap F) = \\frac{80}{200} + \\frac{110}{200}
           },
           {
             question: 'If events are mutually exclusive, $P(A \\cap B) =$',
-            options: ['$P(A) \\cdot P(B)$', '$P(A) + P(B)$', '$0$', '$1$'],
+            options: ['$P(A) \\cdot P(B)$', '$P(A) + P(B)$', '$0$', '$P(A \\cup B)$'],
             correctAnswer: 2,
-            explanation: 'Mutually exclusive = cannot both occur = $P(A \\cap B) = 0$.'
+            explanation: 'Mutually exclusive = cannot both occur = $P(A \\cap B) = 0$. $P(A) \\cdot P(B)$ is the intersection for independent events, and $P(A) + P(B)$ is the union for mutually exclusive events.'
           },
           {
             question: '$P(\\text{neither } A \\text{ nor } B) =$',
             options: ['$P(A \\cup B)$', '$1 - P(A \\cup B)$', '$P(A) \\cdot P(B)$', '$P(A\\text{\' }) + P(B\\text{\' })$'],
             correctAnswer: 1,
-            explanation: '"Neither" is the complement of the union: $P(\\text{neither}) = 1 - P(A \\cup B)$.'
+            explanation: '"Neither" is the complement of the union: $P(\\text{neither}) = 1 - P(A \\cup B)$. $P(A\\text{\' }) + P(B\\text{\' })$ double-counts the outcomes outside both events and can exceed 1.'
           },
           {
             question: 'Rolling an even number and rolling an odd number on one die are:',
-            options: ['Independent', 'Mutually exclusive', 'Overlapping', 'Conditional'],
+            options: ['Independent', 'Mutually exclusive', 'Overlapping events', 'Conditional'],
             correctAnswer: 1,
             explanation: 'A single roll cannot be both even and odd — mutually exclusive.'
           },
           {
             question: '$P(A) = 0.7$, $P(B) = 0.6$. Can $A$ and $B$ be mutually exclusive?',
-            options: ['Yes', 'No — $P(A) + P(B) > 1$', 'Only if independent', 'Only if $P(A \\cap B) = 1$'],
+            options: ['Yes, since any two events can be', 'No, since $P(A) + P(B) > 1$', 'Yes, since they could be independent', 'Only if $P(A \\cap B) = 1$'],
             correctAnswer: 1,
             explanation: 'If ME, $P(A \\cup B) = 0.7 + 0.6 = 1.3 > 1$, which is impossible.'
           },
           {
             question: 'In a deck of 52 cards, $P(\\text{heart OR face card}) =$',
-            options: ['$13/52 + 12/52$', '$13/52 + 12/52 - 3/52$', '$13/52 \\cdot 12/52$', '$25/52$'],
+            options: ['$13/52 + 12/52$', '$13/52 + 12/52 - 3/52$', '$13/52 + 12/52 - 1/52$', '$13/52 \\cdot 12/52$'],
             correctAnswer: 1,
-            explanation: 'Hearts: 13, face cards: 12, overlap (face hearts): 3. $P = (13+12-3)/52 = 22/52$.'
+            explanation: 'Hearts: 13, face cards: 12, overlap (jack, queen and king of hearts): 3. $P = (13+12-3)/52 = 22/52$. Leaving out the overlap double-counts 3 cards, subtracting only 1/52 counts one face heart instead of three, and multiplying gives an "and" probability.'
           },
           {
             question: 'From a two-way table with 300 total: 120 are type A, 100 are type B, 40 are both. $P(A \\cup B) =$',
             options: ['$120/300$', '$180/300$', '$220/300$', '$260/300$'],
             correctAnswer: 1,
-            explanation: '$P(A \\cup B) = (120 + 100 - 40)/300 = 180/300 = 0.6$.'
+            explanation: '$P(A \\cup B) = (120 + 100 - 40)/300 = 180/300 = 0.6$. 220/300 forgets to subtract the 40 counted twice, and 120/300 is just $P(A)$.'
           },
           {
             question: 'If $P(A \\cup B) = 0.8$ and $P(A \\cup B)\\text{\' } = 0.2$, these should sum to:',
-            options: ['$0$', '$0.5$', '$1$', '$0.8$'],
+            options: ['$0.6$', '$0.5$', '$1$', '$0.8$'],
             correctAnswer: 2,
             explanation: 'An event and its complement always sum to 1: $0.8 + 0.2 = 1$.'
           },
           {
             question: 'Mutually exclusive events are:',
-            options: ['Always independent', 'Never independent (if both have positive probability)', 'Always complementary', 'Always conditional'],
+            options: ['Always independent', 'Dependent when both have $P > 0$', 'Always complementary', 'Independent when both have $P > 0$'],
             correctAnswer: 1,
             explanation: 'If $A$ and $B$ are ME with $P(A), P(B) > 0$: knowing $A$ occurred means $B$ did NOT, so they are dependent.'
           },
@@ -232,7 +232,7 @@ $$P(M \\cup F) = P(M) + P(F) - P(M \\cap F) = \\frac{80}{200} + \\frac{110}{200}
             question: '$P(A) = 0.4$, $P(B) = 0.3$, $P(A \\cup B) = 0.7$. The events are:',
             options: ['Independent', 'Mutually exclusive', 'Complementary', 'Conditional'],
             correctAnswer: 1,
-            explanation: '$P(A \\cap B) = P(A) + P(B) - P(A \\cup B) = 0.4 + 0.3 - 0.7 = 0$. Disjoint!'
+            explanation: '$P(A \\cap B) = P(A) + P(B) - P(A \\cup B) = 0.4 + 0.3 - 0.7 = 0$, so the events are disjoint. They are not independent (that would need $P(A \\cap B) = 0.12$) and not complementary (their probabilities sum to 0.7, not 1).'
           }
         ]
       }

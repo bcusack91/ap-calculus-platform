@@ -14,7 +14,7 @@ export const apStatsChiSquarePart6Data = {
 
 | Section |
 |---------|
-| 📝 GoF Worked Example |
+| 📝 Homogeneity Worked Example |
 | 📝 Independence Worked Example |
 | ⚠️ Common AP Mistakes |
 
@@ -22,37 +22,37 @@ export const apStatsChiSquarePart6Data = {
 
 ---
 
-### Worked Example 1: Goodness-of-Fit
+### Worked Example 1: Test for Homogeneity
 
-**Problem:** A company claims its candy mix is 30% red, 20% blue, 20% green, 15% yellow, 15% orange. A random sample of 200 candies yields:
+**Problem:** 150 volunteers were randomly assigned to one of three study methods (50 each) and then took the same exam:
 
-| Color | Red | Blue | Green | Yellow | Orange |
-|-------|:---:|:----:|:-----:|:------:|:------:|
-| Observed | 75 | 35 | 32 | 28 | 30 |
-| Expected | 60 | 40 | 40 | 30 | 30 |
+| | Pass | Fail | Total |
+|---|---:|---:|---:|
+| Flashcards | 32 | 18 | 50 |
+| Practice tests | 40 | 10 | 50 |
+| Rereading | 27 | 23 | 50 |
+| Total | 99 | 51 | 150 |
 
 **Step 1 — Hypotheses:**
-$H_0$: The distribution of colors matches the company claim.
-$H_a$: The distribution of colors does not match the company claim.
+$H_0$: There is no difference in the distribution of exam results (pass/fail) across the three study methods.
+$H_a$: There is a difference in the distribution of exam results across the three study methods.
 
 **Step 2 — Conditions:**
-- **Random:** Random sample stated ✓
-- **10%:** $200 < 10\\%$ of all candies produced ✓
-- **Large Counts:** All expected counts $\\geq 5$ (smallest is 30) ✓
+- **Random:** Volunteers were randomly assigned to methods ✓
+- **10%:** Not needed, because the data come from a randomized experiment ✓
+- **Expected Counts:** Each row expects $\\frac{50 \\times 99}{150} = 33$ passes and $\\frac{50 \\times 51}{150} = 17$ failures. All expected counts are greater than 5 ✓
 
 **Step 3 — Calculate:**
-$$\\chi^2 = \\frac{(75-60)^2}{60} + \\frac{(35-40)^2}{40} + \\frac{(32-40)^2}{40} + \\frac{(28-30)^2}{30} + \\frac{(30-30)^2}{30}$$
+$$\\chi^2 = \\frac{(32-33)^2}{33} + \\frac{(18-17)^2}{17} + \\frac{(40-33)^2}{33} + \\frac{(10-17)^2}{17} + \\frac{(27-33)^2}{33} + \\frac{(23-17)^2}{17}$$
 
-$$= \\frac{225}{60} + \\frac{25}{40} + \\frac{64}{40} + \\frac{4}{30} + 0 = 3.75 + 0.625 + 1.60 + 0.133 + 0$$
+$$= 0.030 + 0.059 + 1.485 + 2.882 + 1.091 + 2.118 = 7.665, \\quad df = (3-1)(2-1) = 2$$
 
-$$\\chi^2 = 6.108, \\quad df = 5-1 = 4$$
-
-From the table: $p$ is between $0.10$ and $0.25$ (since $6.108 < 7.779$).
+From the table: $7.378 < 7.665 < 9.210$, so $0.01 < p < 0.025$ (technology: $p \\approx 0.022$).
 
 **Step 4 — Conclude:**
-Since the p-value is greater than $\\alpha = 0.05$, we fail to reject $H_0$. There is not convincing evidence that the distribution of candy colors differs from the company claim.
+Since the p-value is less than $\\alpha = 0.05$, we reject $H_0$. There is convincing evidence that the distribution of exam results differs across the three study methods. Because the methods were randomly assigned, we can conclude that the method affects the pass/fail distribution for volunteers like these.
 
-> 🔍 **Follow-up:** The red category had the largest contribution (3.75), suggesting there may be more red candies than claimed.
+> 🔍 **Follow-up:** The Practice tests / Fail cell had the largest contribution (2.882): far fewer failures than expected.
 
 ---
 
@@ -67,13 +67,13 @@ Since the p-value is greater than $\\alpha = 0.05$, we fail to reject $H_0$. The
 | Total | 190 | 210 | 400 |
 
 **Step 1 — Hypotheses:**
-$H_0$: Education level and exercise frequency are independent.
-$H_a$: Education level and exercise frequency are associated.
+$H_0$: Education level and exercise frequency are independent among adults.
+$H_a$: Education level and exercise frequency are associated among adults.
 
 **Step 2 — Conditions:**
 - **Random:** Random sample stated ✓
 - **10%:** $400 < 10\\%$ of all adults ✓
-- **Large Counts:** Expected counts: $E_{11} = \\frac{200 \\times 190}{400} = 95$, $E_{12} = 105$, $E_{21} = 95$, $E_{22} = 105$. All $\\geq 5$ ✓
+- **Expected Counts:** $E_{11} = \\frac{200 \\times 190}{400} = 95$, $E_{12} = 105$, $E_{21} = 95$, $E_{22} = 105$. All greater than 5 ✓
 
 **Step 3 — Calculate:**
 $$\\chi^2 = \\frac{(120-95)^2}{95} + \\frac{(80-105)^2}{105} + \\frac{(70-95)^2}{95} + \\frac{(130-105)^2}{105}$$
@@ -83,7 +83,7 @@ $$= \\frac{625}{95} + \\frac{625}{105} + \\frac{625}{95} + \\frac{625}{105} = 6.
 $df = (2-1)(2-1) = 1$. From the table: $\\chi^2 = 25.06 > 6.635$ so $p < 0.01$.
 
 **Step 4 — Conclude:**
-Since the p-value is less than $\\alpha = 0.05$ (in fact less than 0.01), we reject $H_0$. There is convincing evidence of an association between education level and exercise frequency.`
+Since the p-value is less than $\\alpha = 0.05$ (in fact less than 0.01), we reject $H_0$. There is convincing evidence of an association between education level and exercise frequency among adults. This is an observational study, so it does not show that education causes more exercise.`
     },
     {
       id: 'apstats-chisquaretests-p6-mistakes',
@@ -92,11 +92,11 @@ Since the p-value is less than $\\alpha = 0.05$ (in fact less than 0.01), we rej
 
 | Mistake | Fix |
 |---------|-----|
-| Using observed counts for the Large Counts check | Must use **expected** counts |
+| Using observed counts for the expected counts check | Must use **expected** counts, all greater than 5 |
 | Forgetting $df$ | Always state $df$ with the formula |
-| Not stating hypotheses in context | "$H_0$: Color distribution matches claim" not just "$H_0$: fit" |
+| Not stating hypotheses in context | Name the variable(s) and the population(s), not just "$H_0$: independent" |
 | Saying "accept $H_0$" | Say "fail to reject $H_0$" |
-| Confusing independence, homogeneity, and GoF | Read the study design carefully |
+| Confusing independence and homogeneity | One sample with two variables → independence; several samples or groups with one variable → homogeneity |
 | Not showing the $\\chi^2$ formula with substitution | Show $\\sum (O-E)^2/E$ with at least some terms |
 | Claiming causation from an independence test | Association ≠ causation (unless randomized experiment) |`
     },
@@ -109,22 +109,22 @@ Since the p-value is less than $\\alpha = 0.05$ (in fact less than 0.01), we rej
       exercise: {
         questions: [
           {
-            question: 'In the candy example, the red category contributed most to $\\chi^2$ because:',
-            options: ['Red was the most common color', 'The discrepancy $(O-E)^2/E$ was largest for red', 'Red was listed first', 'Red had the smallest expected count'],
+            question: 'In the study-method experiment, the Practice tests / Fail cell contributed most to $\\chi^2$ because:',
+            options: ['It had the smallest observed count anywhere in the whole table', 'Its count was far from expected, relative to expected', 'It had the smallest expected count of any cell in the table', 'Practice tests produced the largest number of passes overall'],
             correctAnswer: 1,
-            explanation: '$(75-60)^2/60 = 3.75$ was the largest individual contribution, indicating red had the biggest deviation from expected.'
+            explanation: '$(10-17)^2/17 = 2.882$ was the largest contribution: the gap of 7 is large compared with an expected count of 17. The other Fail cells share the same expected count, and a small observed count or many passes elsewhere does not by itself decide the contribution.'
           },
           {
-            question: 'For a GoF test, $df$ equals:',
-            options: ['$n - 1$', 'Number of categories $- 1$', '$(r-1)(c-1)$', 'Number of categories'],
+            question: 'What can the study-method experiment conclude about cause and effect?',
+            options: ['Nothing, since chi-square tests never support a causal claim', 'The method affects results, since methods were randomly assigned', 'Methods affect results, since the p-value was below 0.05', 'Nothing, since the exam was taken by only 150 volunteers'],
             correctAnswer: 1,
-            explanation: 'GoF: $df = k - 1$ where $k$ is the number of categories.'
+            explanation: 'Random assignment to treatments is what allows a cause-and-effect conclusion for the volunteers studied. A small p-value alone does not justify causation, chi-square tests from experiments can support it, and the sample size does not rule it out.'
           },
           {
             question: 'In the education/exercise example, the study design indicates a test for:',
-            options: ['Goodness of fit', 'Homogeneity', 'Independence', 'Regression'],
+            options: ['Two-sample $t$ test', 'Homogeneity', 'Independence', 'Linear regression'],
             correctAnswer: 2,
-            explanation: 'One sample of adults with two variables (education and exercise) measured on each → test for independence.'
+            explanation: 'One random sample of adults with two categorical variables (education and exercise) measured on each → chi-square test for independence. Homogeneity would need separate samples or groups, and $t$ tests and regression need quantitative data.'
           }
         ]
       }
@@ -135,30 +135,30 @@ Since the p-value is less than $\\alpha = 0.05$ (in fact less than 0.01), we rej
       content: `
 **Quick Calculations** 🧮
 
-A GoF test: categories A, B, C with observed = 30, 25, 45 and expected = 33.3, 33.3, 33.3 (total = 100, equal proportions).
+A random sample of 120 adults is classified by age group (row totals: under 40 = 70, 40 and over = 50) and favorite drink (column totals: coffee = 60, tea = 36, neither = 24). The observed count for under 40 / coffee is 42.
 
-**1)** Contribution from category A: $(O-E)^2/E$ (round to 2 decimal places)
+**1)** Expected count for under 40 / coffee?
 
-**2)** Contribution from category C: $(O-E)^2/E$ (round to 2 decimal places)
+**2)** Contribution of that cell, $(O-E)^2/E$?
 
-**3)** $df$ for this test?
+**3)** $df$ for this table?
       `,
       exercise: {
         inputs: [
           {
-            label: 'Contribution A',
-            correctAnswer: '0.33',
-            explanation: '$(30-33.3)^2/33.3 = (-3.3)^2/33.3 = 10.89/33.3 = 0.327 \\approx 0.33$.'
+            label: 'Expected count',
+            correctAnswer: '35',
+            explanation: '$E = (70)(60)/120 = 4200/120 = 35$.'
           },
           {
-            label: 'Contribution C',
-            correctAnswer: '4.11',
-            explanation: '$(45-33.3)^2/33.3 = (11.7)^2/33.3 = 136.89/33.3 = 4.111 \\approx 4.11$.'
+            label: 'Contribution',
+            correctAnswer: '1.4',
+            explanation: '$(42-35)^2/35 = 49/35 = 1.4$.'
           },
           {
             label: 'df',
             correctAnswer: '2',
-            explanation: '$df = k - 1 = 3 - 1 = 2$.'
+            explanation: '$df = (2-1)(3-1) = 2$.'
           }
         ]
       }
@@ -173,31 +173,31 @@ A GoF test: categories A, B, C with observed = 30, 25, 45 and expected = 33.3, 3
         dropdowns: [
           {
             id: 'chi6-dd1',
-            label: 'Company claims M&Ms are 24% blue. You sample 100 and check →',
-            options: ['Goodness of Fit', 'Independence', 'Homogeneity'],
+            label: 'A company claims 24% of its candies are blue. You sample 100 candies to check the claim →',
+            options: ['One-proportion $z$ test', 'Chi-square independence', 'Chi-square homogeneity', 'Two-sample $t$ test'],
             correctIndex: 0,
-            explanation: 'Testing whether observed proportions match a claimed distribution → GoF.'
+            explanation: 'One sample, one proportion (blue or not) compared with a claimed value → one-proportion $z$ test. There is no two-way table here.'
           },
           {
             id: 'chi6-dd2',
             label: 'Survey students: record class year and study habits →',
-            options: ['Goodness of Fit', 'Independence', 'Homogeneity'],
+            options: ['One-proportion $z$ test', 'Chi-square independence', 'Chi-square homogeneity', 'Two-sample $t$ test'],
             correctIndex: 1,
-            explanation: 'One sample, two categorical variables → Independence.'
+            explanation: 'One sample, two categorical variables → chi-square test for independence.'
           },
           {
             id: 'chi6-dd3',
             label: 'Compare grade distribution (A/B/C/D/F) across 3 different instructors →',
-            options: ['Goodness of Fit', 'Independence', 'Homogeneity'],
+            options: ['One-proportion $z$ test', 'Chi-square independence', 'Chi-square homogeneity', 'Two-sample $t$ test'],
             correctIndex: 2,
-            explanation: 'Three independent groups, one categorical variable (grade) → Homogeneity.'
+            explanation: 'Three independent groups, one categorical variable (grade) → chi-square test for homogeneity.'
           },
           {
             id: 'chi6-dd4',
-            label: 'Check whether a die is fair based on 300 rolls →',
-            options: ['Goodness of Fit', 'Independence', 'Homogeneity'],
-            correctIndex: 0,
-            explanation: 'Testing observed frequencies against a model (equal probabilities 1/6 each) → GoF.'
+            label: 'Compare mean commute time for random samples of drivers in two cities →',
+            options: ['One-proportion $z$ test', 'Chi-square independence', 'Chi-square homogeneity', 'Two-sample $t$ test'],
+            correctIndex: 3,
+            explanation: 'Commute time is quantitative and there are two independent samples, so the comparison of means calls for a two-sample $t$ test, not a chi-square test.'
           }
         ]
       }
@@ -211,64 +211,64 @@ A GoF test: categories A, B, C with observed = 30, 25, 45 and expected = 33.3, 3
       exercise: {
         questions: [
           {
-            question: 'The first step in a $\\chi^2$ FRQ is:',
-            options: ['Calculate $\\chi^2$', 'State hypotheses', 'Check conditions', 'Draw a conclusion'],
+            question: 'The first step in a $\\chi^2$ FRQ is to:',
+            options: ['Calculate the statistic', 'State the hypotheses', 'Check the conditions', 'Write the conclusion'],
             correctAnswer: 1,
-            explanation: 'Step 1: State $H_0$ and $H_a$ in context.'
+            explanation: 'Step 1 is to state $H_0$ and $H_a$ in context; conditions, calculations and the conclusion follow in that order.'
           },
           {
-            question: 'Conditions for $\\chi^2$ use ___ counts for the Large Counts check.',
-            options: ['Observed', 'Expected', 'Total', 'Marginal'],
+            question: 'Conditions for $\\chi^2$ use ___ counts for the count check.',
+            options: ['Observed', 'Expected', 'Marginal', 'Combined'],
             correctAnswer: 1,
-            explanation: 'All expected counts must be $\\geq 5$.'
+            explanation: 'All expected counts must be greater than 5. Observed counts and the marginal totals are not what the condition checks.'
           },
           {
             question: 'A student shows $\\chi^2 = 8.2$ but does not state $df$. On the AP exam:',
-            options: ['Full credit — $\\chi^2$ is enough', 'Partial credit — $df$ is needed to find the p-value', 'No credit', 'Extra credit for brevity'],
+            options: ['Full credit, since the $\\chi^2$ value is enough', 'Less credit, since $df$ is needed for the p-value', 'No credit for any part of the solution', 'Full credit, since $df$ is never reported'],
             correctAnswer: 1,
-            explanation: 'Without $df$, you cannot determine the p-value or draw a conclusion. This costs points.'
+            explanation: 'Without $df$, the reader cannot see how the p-value was found, so the calculation step is incomplete and can lose credit. The hypotheses, conditions and conclusion can still earn credit.'
           },
           {
-            question: 'A GoF test with $k = 6$: $df =$',
-            options: ['$5$', '$6$', '$12$', '$30$'],
+            question: 'A homogeneity test compares 2 groups on a variable with 6 categories. $df =$',
+            options: ['$5$', '$6$', '$12$', '$10$'],
             correctAnswer: 0,
-            explanation: '$df = 6 - 1 = 5$.'
+            explanation: '$df = (2-1)(6-1) = 5$. Using the number of categories gives 6, the number of cells gives 12, and $2 \\times (6-1)$ forgets to subtract 1 from the number of rows.'
           },
           {
             question: 'An independence test on a $3 \\times 3$ table: $df =$',
             options: ['$9$', '$8$', '$4$', '$6$'],
             correctAnswer: 2,
-            explanation: '$df = (3-1)(3-1) = 4$.'
+            explanation: '$df = (3-1)(3-1) = 4$. The number of cells is 9, one less is 8, and $3 \\times (3-1)$ gives 6.'
           },
           {
             question: 'Which contributes most to $\\chi^2$: $(15-10)^2/10$, $(22-20)^2/20$, or $(8-12)^2/12$?',
-            options: ['$(15-10)^2/10 = 2.5$', '$(22-20)^2/20 = 0.2$', '$(8-12)^2/12 = 1.33$', 'All equal'],
+            options: ['$(15-10)^2/10 = 2.5$', '$(22-20)^2/20 = 0.2$', '$(8-12)^2/12 = 1.33$', 'All contribute equally'],
             correctAnswer: 0,
-            explanation: '$2.5 > 1.33 > 0.2$. The first cell contributes most.'
+            explanation: '$2.5 > 1.33 > 0.2$. The first cell has the largest gap relative to its expected count, so it contributes most.'
           },
           {
             question: 'The AP conclusion must include:',
-            options: ['Just the p-value', 'A decision (reject or fail to reject) and context', 'Only the $\\chi^2$ value', 'A confidence interval'],
+            options: ['The p-value alone, with no decision or context stated', 'A decision based on the p-value, in context', 'The $\\chi^2$ value and $df$, with no context given', 'A confidence interval for each cell of the table'],
             correctAnswer: 1,
-            explanation: 'Full credit requires: compare p-value to $\\alpha$, state decision, explain in context of the problem.'
+            explanation: 'Full credit requires comparing the p-value with $\\alpha$, stating the decision, and explaining what it means in the context of the problem. Chi-square tests do not produce confidence intervals.'
           },
           {
-            question: 'Rejecting $H_0$ in a GoF test means:',
-            options: ['The model fits perfectly', 'There is convincing evidence the distribution differs from the model', 'The model is proven wrong', 'The sample was biased'],
+            question: 'Rejecting $H_0$ in a homogeneity test means:',
+            options: ['The distributions are proven to be identical', 'There is convincing evidence the distributions differ', 'The distributions are proven to be different', 'The samples must have been collected with bias'],
             correctAnswer: 1,
-            explanation: 'Rejecting means convincing evidence that the distribution does not match the hypothesized model.'
+            explanation: 'Rejecting gives convincing evidence that the distribution of the variable differs across the populations or treatments. A test never proves either hypothesis, and a significant result is not a sign of bias.'
           },
           {
             question: 'If ALL expected counts are exactly equal to observed counts, $\\chi^2 =$',
             options: ['Very large', '$df$', '$0$', '$1$'],
             correctAnswer: 2,
-            explanation: 'If $O_i = E_i$ for every cell, every term is $(0)^2/E_i = 0$, so $\\chi^2 = 0$.'
+            explanation: 'If $O = E$ for every cell, every term is $0^2/E = 0$, so $\\chi^2 = 0$.'
           },
           {
             question: 'After a significant independence test from an observational study, we conclude:',
-            options: ['Variable A causes variable B', 'Association, not causation', 'No relationship', 'The variables are independent'],
+            options: ['One variable causes changes in the other', 'An association, not causation', 'No relationship between them at all', 'The two variables are independent'],
             correctAnswer: 1,
-            explanation: 'Observational data → association only. Causation requires a randomized experiment.'
+            explanation: 'Observational data support a conclusion of association only; causation requires a randomized experiment. A significant result is evidence against independence, not for it.'
           }
         ]
       }

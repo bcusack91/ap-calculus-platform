@@ -96,7 +96,7 @@ A confidence interval can be used as a two-sided test:
         questions: [
           {
             question: 'A 95% CI for $\\mu$ is $(40, 60)$. Which interpretation is correct?',
-            options: ['There is a 95% chance $\\mu$ is between 40 and 60', 'We are 95% confident the true mean is between 40 and 60', '95% of individuals fall between 40 and 60', 'The sample mean is between 40 and 60'],
+            options: ['There is a 95% chance $\\mu$ is between 40 and 60', 'We are 95% confident $\\mu$ is between 40 and 60', '95% of individuals fall between 40 and 60', 'The sample mean is between 40 and 60'],
             correctAnswer: 1,
             explanation: '"95% confident" means the method works 95% of the time. We never say "95% chance" about a specific computed interval.'
           },
@@ -108,7 +108,7 @@ A confidence interval can be used as a two-sided test:
           },
           {
             question: 'A 90% CI for $\\mu$ is $(12, 20)$. Can we use this to test $H_0: \\mu = 22$ at $\\alpha = 0.10$?',
-            options: ['No — CIs and tests are unrelated', 'Yes — reject $H_0$ since 22 is outside the interval', 'Yes — fail to reject since 22 is close', 'Only if we use a $z$-test'],
+            options: ['No, since CIs and tests are unrelated', 'Yes, reject $H_0$; 22 is outside it', 'Yes, fail to reject; 22 is close', 'Only if we use a $z$-test instead'],
             correctAnswer: 1,
             explanation: 'A 90% CI corresponds to a two-sided test at $\\alpha = 0.10$. Since 22 is outside the interval, we reject $H_0$.'
           }
@@ -128,28 +128,28 @@ Classify each interpretation of a 95% CI $(50, 70)$ for the mean test score.
           {
             id: 'ci5-dd1',
             label: '"We are 95% confident the true mean score is between 50 and 70" →',
-            options: ['Correct', 'Incorrect'],
+            options: ['Correct', 'Incorrect', 'Correct only for large $n$', 'Correct only for 99%'],
             correctIndex: 0,
             explanation: 'This uses the proper template: confidence level + true parameter + interval bounds.'
           },
           {
             id: 'ci5-dd2',
             label: '"There is a 95% probability that $\\mu$ is between 50 and 70" →',
-            options: ['Correct', 'Incorrect'],
+            options: ['Correct', 'Incorrect', 'Correct only for large $n$', 'Correct only for 99%'],
             correctIndex: 1,
             explanation: 'WRONG — after computing the interval, $\\mu$ is either in it or not. We say "confident," not "probability."'
           },
           {
             id: 'ci5-dd3',
             label: '"95% of students scored between 50 and 70" →',
-            options: ['Correct', 'Incorrect'],
+            options: ['Correct', 'Incorrect', 'Correct only for large $n$', 'Correct only for 99%'],
             correctIndex: 1,
             explanation: 'WRONG — the CI estimates the population mean, not individual values. Most individual scores have far more spread than the CI.'
           },
           {
             id: 'ci5-dd4',
             label: '"If we repeated this study many times, about 95% of the resulting CIs would contain $\\mu$" →',
-            options: ['Correct', 'Incorrect'],
+            options: ['Correct', 'Incorrect', 'Correct only for large $n$', 'Correct only for 99%'],
             correctIndex: 0,
             explanation: 'This is the correct long-run frequency interpretation of "95% confidence."'
           }
@@ -200,33 +200,33 @@ A 95% CI for $\\mu$ is $(18.2, 24.8)$.
         questions: [
           {
             question: 'On the AP exam, "We are 95% confident..." means:',
-            options: ['We are personally 95% sure', 'The method captures the true parameter 95% of the time in repeated sampling', '95% of the data is in the interval', 'The p-value is 0.95'],
+            options: ['We are personally 95% sure', 'The method captures the parameter 95% of the time', '95% of the data lie in the interval', 'The p-value of the test is 0.95'],
             correctAnswer: 1,
             explanation: 'Confidence is about the method, not personal certainty. In repeated sampling, 95% of CIs produced this way would capture the parameter.'
           },
           {
             question: 'A student writes: "There is a 95% probability that $\\mu$ falls in this interval." This costs points because:',
-            options: ['The word "probability" should be "chance"', 'After computing, $\\mu$ is either in the interval or not — it is not random', 'The interval is too wide', '95% is not high enough'],
+            options: ['"Probability" should be "chance"', '$\\mu$ is fixed, not random', 'The interval is too wide', '95% is not high enough'],
             correctAnswer: 1,
             explanation: '$\\mu$ is a fixed (unknown) value. Once the interval is computed, it either contains $\\mu$ or does not. Probability applies to the method, not the specific interval.'
           },
           {
             question: 'A 99% CI is $(10, 30)$ and a 95% CI is $(12, 28)$. Which is wider?',
-            options: ['The 99% CI', 'The 95% CI', 'They are the same', 'Cannot tell'],
+            options: ['The 99% interval', 'The 95% CI', 'They are equal', 'Cannot tell'],
             correctAnswer: 0,
             explanation: '99% CI width = $30 - 10 = 20$. 95% CI width = $28 - 12 = 16$. Higher confidence → wider interval.'
           },
           {
             question: 'A 95% CI for $\\mu$ is $(100, 120)$. Testing $H_0: \\mu = 115$ at $\\alpha = 0.05$:',
-            options: ['Reject — 115 is in the interval', 'Fail to reject — 115 is in the interval', 'Reject — 115 is close to the edge', 'Cannot determine'],
+            options: ['Reject, since 115 is in the interval', 'Fail to reject, since 115 is inside', 'Reject, since 115 is near the edge', 'Cannot determine without a p-value'],
             correctAnswer: 1,
             explanation: '115 is inside the 95% CI, so at $\\alpha = 0.05$, we fail to reject $H_0: \\mu = 115$.'
           },
           {
             question: 'Which is the correct way to state conditions before interpreting?',
-            options: ['Skip conditions if the sample is large', 'State Random, 10%, and Normal/Large counts before computing', 'Only check normality', 'Conditions are only for hypothesis tests'],
+            options: ['Skip them if the sample is large', 'Check all three first', 'Check only the normality condition', 'Check them only for tests'],
             correctAnswer: 1,
-            explanation: 'The AP rubric requires checking all three conditions (Random, 10%, Normal/Large) before constructing and interpreting a CI.'
+            explanation: 'Random, 10% and Normal/Large conditions are all checked before the interval is computed and interpreted, whatever the sample size and for intervals as well as tests.'
           },
           {
             question: '"95% of all intervals constructed this way contain the true $\\mu$." This statement is:',
@@ -242,7 +242,7 @@ A 95% CI for $\\mu$ is $(18.2, 24.8)$.
           },
           {
             question: 'A 95% CI of $(2.1, 5.3)$ means that $\\mu = 3.7$ is:',
-            options: ['The true value', 'A plausible value at the 95% level', 'Proven correct', 'The only possible value'],
+            options: ['The true value of $\\mu$', 'A plausible value', 'Proven correct', 'The only possible value'],
             correctAnswer: 1,
             explanation: '3.7 is inside the interval, so it is a plausible value for $\\mu$ at the 95% confidence level.'
           },
@@ -254,7 +254,7 @@ A 95% CI for $\\mu$ is $(18.2, 24.8)$.
           },
           {
             question: 'A full-credit AP interpretation includes all EXCEPT:',
-            options: ['Confidence level', 'The parameter in context', 'Interval bounds', 'The sample statistic value'],
+            options: ['Confidence level', 'The parameter in context', 'Interval bounds', 'The sample statistic'],
             correctAnswer: 3,
             explanation: 'The interpretation mentions confidence level, the true parameter in context, and the bounds. The sample statistic is not part of the interpretation.'
           }

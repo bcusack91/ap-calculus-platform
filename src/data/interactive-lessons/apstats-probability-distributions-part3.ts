@@ -42,7 +42,7 @@ To find the z-score for a given percentile:
       id: 'probdistributions-p3-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
@@ -50,7 +50,7 @@ To find the z-score for a given percentile:
             question: '$P(Z < -1.5)$ from Table A is approximately:',
             options: ['0.0668', '0.9332', '0.1587', '0.5000'],
             correctAnswer: 0,
-            explanation: 'Looking up $z = -1.5$ in the standard Normal table gives approximately 0.0668.'
+            explanation: 'Looking up $z = -1.5$ in the standard Normal table gives approximately 0.0668. 0.9332 is the area to the left of $+1.5$, and 0.1587 belongs to $z = -1$.'
           },
           {
             question: '$P(Z > 2.0)$ equals:',
@@ -62,7 +62,7 @@ To find the z-score for a given percentile:
             question: 'The z-score for the 75th percentile is approximately:',
             options: ['0.25', '0.67', '0.75', '1.28'],
             correctAnswer: 1,
-            explanation: 'The 75th percentile corresponds to $z \\approx 0.67$.'
+            explanation: 'The 75th percentile is the $z$ with area 0.75 to its left, $z \\approx 0.67$. 0.75 and 0.25 confuse an area with a z-score, and 1.28 is the 90th percentile.'
           }
         ]
       }
@@ -86,7 +86,7 @@ $P(Z < 1.0) = 0.8413$ and $P(Z < -0.5) = 0.3085$.
         hint1: '$1 - 0.8413$',
         hint2: '$0.8413 - 0.3085$',
         hint3: 'Convert the probability to percent',
-        explanation: '1) $1 - 0.8413 = 0.1587$. 2) $0.8413 - 0.3085 = 0.5328$. 3) $53.28\\\\%$.'
+        explanation: '1) $1 - 0.8413 = 0.1587$. 2) $0.8413 - 0.3085 = 0.5328$. 3) $53.28\\%$.'
       }
     }
   ]

@@ -25,7 +25,7 @@ Use a one-sample $t$-test when:
 |-----------|--------------|---------------|
 | **Random** | Data from a random sample or randomized experiment | Stated in problem |
 | **Independence** | $n < 10\\%$ of the population (10% condition) | $N \\geq 10n$ |
-| **Normal/Large Sample** | Population is approximately normal OR $n \\geq 30$ | Check dotplot/histogram for skew; if $n \\geq 30$, CLT applies |
+| **Normal/Large Sample** | Population is approximately normal, OR $n \\geq 30$, OR (if $n < 30$) the sample data are free from strong skewness and outliers | Check a dotplot/histogram of the sample; if $n \\geq 30$, CLT applies |
 
 > ⚠️ **AP Tip:** You MUST state and verify all three conditions to earn full credit on the free response.
 
@@ -65,7 +65,7 @@ $$t = \\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}}, \\quad df = n - 1$$
 - One-sample $t$-test
 - ✅ Random: stated "random sample"
 - ✅ Independent: 25 < 10% of all batteries produced
-- ✅ Normal: $n = 25$ (borderline); assume no strong skew mentioned
+- ✅ Normal: $n = 25 < 30$, so the sample data must be free from strong skewness and outliers (a dotplot of the 25 lifetimes shows no strong skew or outliers)
 
 **DO:**
 $$SE = \\frac{s}{\\sqrt{n}} = \\frac{20}{\\sqrt{25}} = \\frac{20}{5} = 4$$
@@ -78,13 +78,12 @@ Since $P = 0.0098 < \\alpha = 0.05$, we reject $H_0$. There is convincing eviden
 
 ---
 
-### t-Test vs z-Test
+### z Procedures vs. t Procedures on the AP Exam
 
-| Feature | z-Test | t-Test |
-|---------|:------:|:------:|
-| $\\sigma$ known? | Yes | No (use $s$) |
-| Distribution | Standard normal | $t$ with $df = n-1$ |
-| AP Exam usage | Rare (proportions only) | Very common (means) |`
+| Parameter | Procedure | Why |
+|-----------|:---------:|-----|
+| Proportion $p$ | $z$ | The SE comes from $p_0$ (test) or $\\hat{p}$ (interval) |
+| Mean $\\mu$ | $t$ with $df = n-1$ | $\\sigma$ is unknown, so we use $s$ |`
     },
     {
       id: 'apstats-hypothesis-testing-p5-mcq1',
@@ -101,10 +100,10 @@ Since $P = 0.0098 < \\alpha = 0.05$, we reject $H_0$. There is convincing eviden
             explanation: '$df = n - 1 = 36 - 1 = 35$.'
           },
           {
-            question: 'We use a $t$-test instead of a $z$-test when:',
-            options: ['$n$ is large', '$\\sigma$ is unknown', 'The data is categorical', '$\\alpha = 0.01$'],
+            question: 'For inference about a population mean, AP procedures use $t$ rather than $z$ because:',
+            options: ['$n$ is usually large', '$\\sigma$ is unknown and $s$ is used', 'The data are categorical', '$\\alpha$ is usually 0.05'],
             correctAnswer: 1,
-            explanation: 'When $\\sigma$ is unknown, we estimate it with $s$ and use the $t$-distribution.'
+            explanation: 'The population SD $\\sigma$ is not known for quantitative variables, so we estimate it with $s$, and the extra uncertainty calls for a $t$-distribution. Means are quantitative data, and neither $n$ nor $\\alpha$ decides the distribution.'
           },
           {
             question: 'The three conditions for a $t$-test are:',
@@ -160,14 +159,14 @@ Since $P = 0.0098 < \\alpha = 0.05$, we reject $H_0$. There is convincing eviden
           {
             id: 'ht5-dd1',
             label: 'The 10% condition checks:',
-            options: ['Randomness', 'Independence', 'Normality', 'Significance'],
+            options: ['Randomness', 'Independence', 'Normality', 'Power'],
             correctIndex: 1,
             explanation: 'The 10% condition ($n < 10\\%$ of $N$) ensures observations are approximately independent.'
           },
           {
             id: 'ht5-dd2',
             label: 'When $n \\geq 30$, the sampling distribution is approximately normal due to the:',
-            options: ['Law of Large Numbers', 'Central Limit Theorem', 'Empirical Rule', 'Multiplication Rule'],
+            options: ['Law of Large Numbers', 'Central Limit Theorem', 'Empirical Rule', 'General Multiplication Rule'],
             correctIndex: 1,
             explanation: 'The CLT says the sampling distribution of $\\bar{x}$ is approximately normal for large $n$.'
           },
@@ -215,15 +214,15 @@ Since $P = 0.0098 < \\alpha = 0.05$, we reject $H_0$. There is convincing eviden
           },
           {
             question: 'If $n = 10$ and the data are heavily skewed, you should:',
-            options: ['Proceed with the $t$-test', 'Not use a $t$-test (normality condition fails)', 'Use $\\alpha = 0.01$', 'Ignore the conditions'],
+            options: ['Proceed with the $t$-test as planned', 'Not use a $t$ procedure', 'Use a smaller $\\alpha$ such as 0.01', 'Ignore the conditions and continue'],
             correctAnswer: 1,
-            explanation: 'With small $n$ and heavy skew, the normality condition is not met. The $t$-test is inappropriate.'
+            explanation: 'With $n = 10 < 30$, the sample data must be free from strong skewness and outliers. Heavy skew means the Normal condition fails, so the $t$ procedure is not appropriate; changing $\\alpha$ does not fix that.'
           },
           {
             question: 'An AP free-response conclusion should always:',
-            options: ['State "$H_0$ is true"', 'Include context about the specific situation', 'Prove the alternative', 'Give the exact population mean'],
+            options: ['State that "$H_0$ is true"', 'Be stated in context', 'Prove the alternative hypothesis', 'Give the exact population mean'],
             correctAnswer: 1,
-            explanation: 'Conclusions must be in context: "There is (not) convincing evidence that [context]."'
+            explanation: 'Conclusions must be in context: "There is (not) convincing evidence that [context]." A test never proves either hypothesis or reveals the exact population mean.'
           },
           {
             question: '$n = 49$, $\\bar{x} = 100$, $s = 21$, $\\mu_0 = 95$. The $t$-statistic is:',

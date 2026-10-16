@@ -104,7 +104,7 @@ $$(4.866, 11.734)$$
           },
           {
             question: 'A 95% CI for $\\mu_d$ is $(2.1, 8.5)$. This means:',
-            options: ['The treatment has no effect', 'We are 95% confident the true mean difference is between 2.1 and 8.5', 'The treatment increases scores by exactly 5.3', '95% of differences are between 2.1 and 8.5'],
+            options: ['There is no evidence the treatment has an effect', 'We are 95% confident $\\mu_d$ is between 2.1 and 8.5', 'The treatment raises every score by exactly 5.3', '95% of the differences are between 2.1 and 8.5'],
             correctAnswer: 1,
             explanation: 'The CI gives a range of plausible values for $\\mu_d$. Since it excludes 0, there is evidence of a real difference.'
           },
@@ -164,21 +164,21 @@ $$(4.866, 11.734)$$
           {
             id: 'cp4-dd1',
             label: '90% CI for $\\mu_1 - \\mu_2$: $(0.5, 4.3)$. At $\\alpha = 0.10$, we ___ $H_0$',
-            options: ['reject', 'fail to reject'],
+            options: ['reject', 'fail to reject', 'accept', 'prove'],
             correctIndex: 0,
             explanation: '0 is not in $(0.5, 4.3)$, so we reject $H_0$ at $\\alpha = 0.10$.'
           },
           {
             id: 'cp4-dd2',
             label: 'A wider CI means ___ precision in estimating the difference',
-            options: ['more', 'less'],
+            options: ['more', 'less', 'the same', 'perfect'],
             correctIndex: 1,
             explanation: 'A wider interval means less certainty about the exact value of the difference.'
           },
           {
             id: 'cp4-dd3',
             label: 'To narrow a CI, you can ___',
-            options: ['increase the confidence level', 'increase the sample size', 'decrease the sample size'],
+            options: ['increase the confidence level', 'increase the sample size', 'decrease the sample size', 'use a larger $t^*$'],
             correctIndex: 1,
             explanation: 'Larger samples reduce SE, narrowing the interval.'
           },
@@ -202,15 +202,15 @@ $$(4.866, 11.734)$$
         questions: [
           {
             question: 'The center of a two-sample CI for $\\mu_1 - \\mu_2$ is:',
-            options: ['$\\bar{x}_1$', '$\\bar{x}_2$', '$\\bar{x}_1 - \\bar{x}_2$', '$0$'],
+            options: ['$\\bar{x}_1$', '$\\bar{x}_2$', '$\\bar{x}_1 - \\bar{x}_2$', '$\\bar{x}_2 - \\bar{x}_1$'],
             correctAnswer: 2,
             explanation: 'The CI is centered at the point estimate $\\bar{x}_1 - \\bar{x}_2$.'
           },
           {
             question: 'The center of a paired CI for $\\mu_d$ is:',
-            options: ['$0$', '$\\bar{d}$', '$s_d$', '$n$'],
+            options: ['$0$', '$\\bar{d}$', '$s_d/\\sqrt{n}$', '$\\mu_d$'],
             correctAnswer: 1,
-            explanation: 'The paired CI is centered at $\\bar{d}$, the sample mean of the differences.'
+            explanation: 'The paired CI is centered at $\\bar{d}$, the sample mean of the differences. $\\mu_d$ is the unknown parameter being estimated, and $s_d/\\sqrt{n}$ is the SE.'
           },
           {
             question: '95% CI for $\\mu_1 - \\mu_2$: $(5, 15)$. The point estimate is:',
@@ -226,37 +226,37 @@ $$(4.866, 11.734)$$
           },
           {
             question: 'A CI for the difference: $(-2, 12)$. Is there a significant difference at the matching $\\alpha$?',
-            options: ['Yes', 'No — 0 is in the interval', 'Only if $P < 0.01$', 'Only if $n > 30$'],
+            options: ['Yes, since 12 is far above 0', 'No, since 0 is in the interval', 'Yes, since most of it is positive', 'Only if both samples exceed 30'],
             correctAnswer: 1,
             explanation: '0 is inside $(-2, 12)$, so the difference is not significant at the corresponding $\\alpha$.'
           },
           {
             question: 'Doubling both sample sizes approximately ___ the margin of error.',
-            options: ['doubles', 'halves', 'divides by $\\sqrt{2}$', 'has no effect'],
+            options: ['doubles', 'halves', 'divides by $\\sqrt{2}$', 'multiplies by $\\sqrt{2}$'],
             correctAnswer: 2,
             explanation: 'SE involves $\\sqrt{n}$ in the denominator, so doubling $n$ divides SE by $\\sqrt{2}$.'
           },
           {
             question: '95% CI for $\\mu_d$: $(-8.1, -1.3)$ where $d$ = After $-$ Before. This suggests:',
-            options: ['After values are higher', 'Before values are higher', 'No change', 'The test is invalid'],
+            options: ['After values tend to be higher', 'Before values tend to be higher', 'There was no change on average', 'The interval is not valid'],
             correctAnswer: 1,
             explanation: 'The entire CI is negative: After $-$ Before $< 0$, meaning After values are lower (Before is higher).'
           },
           {
-            question: 'The two-sample CI formula uses the same SE as the two-sample $t$-test:',
-            options: ['No — different formulas', 'Yes — $\\sqrt{s_1^2/n_1 + s_2^2/n_2}$', 'Only if $n_1 = n_2$', 'Only for paired data'],
+            question: 'Does the two-sample CI for $\\mu_1 - \\mu_2$ use the same SE as the two-sample $t$-test?',
+            options: ['No, the interval uses a pooled SE', 'Yes, both use the same unpooled SE', 'Only when $n_1 = n_2$', 'Only when the data are paired'],
             correctAnswer: 1,
             explanation: 'Both the CI and the test use the same SE: $\\sqrt{s_1^2/n_1 + s_2^2/n_2}$.'
           },
           {
             question: 'A student reports: "We are 95% confident the mean difference is 10." What is missing?',
-            options: ['The margin of error / interval', 'The $P$-value', 'The sample size', 'The $t$-statistic'],
+            options: ['The interval or margin of error', 'The $P$-value for the test', 'The two sample sizes', 'The value of the $t$-statistic'],
             correctAnswer: 0,
             explanation: 'A CI report must include endpoints (or ME): "between [lower] and [upper]," not just the point estimate.'
           },
           {
             question: 'Which increases the width of a CI for $\\mu_1 - \\mu_2$?',
-            options: ['Larger sample sizes', 'Smaller $s_1$ and $s_2$', 'Higher confidence level', 'Smaller $t^*$'],
+            options: ['Larger sample sizes', 'Smaller SDs', 'Higher confidence level', 'Smaller $t^*$'],
             correctAnswer: 2,
             explanation: 'Higher confidence → larger $t^*$ → larger ME → wider CI.'
           }

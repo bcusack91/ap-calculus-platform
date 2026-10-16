@@ -37,27 +37,27 @@ $$E(X) = 0(0.1) + 1(0.3) + 2(0.4) + 3(0.2) = 0 + 0.3 + 0.8 + 0.6 = 1.7$$
       id: 'discreterandomvariables-p2-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'The expected value of a random variable represents:',
-            options: ['The most likely outcome', 'The long-run average', 'The median', 'The mode'],
+            options: ['The most likely single outcome', 'The long-run average outcome', 'The middle value of the outcomes', 'The outcome on the next trial'],
             correctAnswer: 1,
-            explanation: 'Expected value = long-run average over many repetitions.'
+            explanation: 'The expected value is the long-run average of $X$ over many repetitions. It is not the most likely value, not the median of the possible values, and it does not predict any single trial.'
           },
           {
             question: 'If $X$ takes values 1, 2, 3 with equal probability $1/3$, then $E(X)$ is:',
             options: ['1', '2', '3', '6'],
             correctAnswer: 1,
-            explanation: '$E(X) = 1(1/3) + 2(1/3) + 3(1/3) = 6/3 = 2$.'
+            explanation: '$E(X) = 1(1/3) + 2(1/3) + 3(1/3) = 6/3 = 2$. 6 adds the values without weighting them by their probabilities.'
           },
           {
             question: 'Expected value must be one of the possible values of $X$:',
-            options: ['Always true', 'Sometimes true', 'Never true', 'True only for symmetric distributions'],
+            options: ['Always true', 'Sometimes true', 'Never true', 'Usually true, for symmetric shapes'],
             correctAnswer: 1,
-            explanation: 'Expected value can be any number — it does not have to be a possible outcome.'
+            explanation: 'The expected value is a weighted average, so it may or may not be a possible value. A fair die has $E(X) = 3.5$, which it can never roll, while $X$ = 0, 1 or 2 with equal probabilities has $E(X) = 1$, which is a possible value.'
           }
         ]
       }
@@ -71,7 +71,7 @@ A game costs \\$5 to play. You win \\$20 with probability 0.2, win \\$5 with pro
 
 Let $X$ = net gain (winnings minus cost).
 
-**1)** $X$ values: \\$15, \\$0, and $\\\\underline{\\quad}$ (third net gain value)
+**1)** $X$ values: \\$15, \\$0, and $\\underline{\\quad}$ (third net gain value)
 
 **2)** $E(X) = ?$ (expected net gain)
 

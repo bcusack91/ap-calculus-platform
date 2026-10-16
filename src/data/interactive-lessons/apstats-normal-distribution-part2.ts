@@ -60,19 +60,19 @@ The z-table gives $P(Z \\leq z)$ — the area to the **left** of $z$.
             question: 'A test has $\\mu = 80$ and $\\sigma = 5$. A student scores 90. Their z-score is:',
             options: ['$z = 1$', '$z = 2$', '$z = -2$', '$z = 10$'],
             correctAnswer: 1,
-            explanation: '$z = (90 - 80)/5 = 10/5 = 2$.'
+            explanation: '$z = (90 - 80)/5 = 10/5 = 2$. 10 is the raw distance in points before dividing by $\\sigma$, and $-2$ has the subtraction reversed.'
           },
           {
             question: '$P(Z \\leq 1.5) = 0.9332$. What is $P(Z \\geq 1.5)$?',
-            options: ['$0.9332$', '$0.0668$', '$0.5000$', '$1.9332$'],
+            options: ['$0.9332$', '$0.0668$', '$0.5000$', '$0.4332$'],
             correctAnswer: 1,
-            explanation: '$P(Z \\geq 1.5) = 1 - P(Z \\leq 1.5) = 1 - 0.9332 = 0.0668$.'
+            explanation: '$P(Z \\geq 1.5) = 1 - P(Z \\leq 1.5) = 1 - 0.9332 = 0.0668$. 0.9332 is the area to the left, 0.4332 is the area between 0 and 1.5, and 0.5000 is the area above the mean.'
           },
           {
             question: 'A negative z-score means the value is:',
-            options: ['Invalid', 'Below the mean', 'Above the mean', 'An outlier'],
+            options: ['The value was recorded wrong', 'The value lies below the mean', 'The value is above the mean', 'The value is an outlier'],
             correctAnswer: 1,
-            explanation: 'Negative z-score = below the mean. The magnitude tells how far.'
+            explanation: 'The sign of $z$ gives the direction from the mean, so a negative z-score is below the mean; its size gives the distance in SDs. Negative z-scores are ordinary values, and a value is an outlier only if it is unusually far from the mean.'
           }
         ]
       }

@@ -38,7 +38,7 @@ export const apStatsErrorsPart1Data = {
       id: 'typeerrorspower-p1-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [

@@ -12,7 +12,7 @@ export const apStatsEDAPart4Data = {
 
 ### Range
 
-$$\\text{Range} = \\\\max - \\\\min$$
+$$\\text{Range} = \\max - \\min$$
 
 Simple but not resistant to outliers.
 
@@ -28,7 +28,7 @@ $$IQR = Q_3 - Q_1$$
 
 $$s = \\sqrt{\\frac{\\sum(x_i - \\bar{x})^2}{n-1}}$$
 
-- Measures average distance from the mean
+- Measures a typical distance of the values from the mean
 - NOT resistant to outliers
 - Best for symmetric distributions
 - $s = 0$ only when all values are identical
@@ -44,27 +44,27 @@ A value is an outlier if it falls:
       id: 'exploratorydata-p4-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'IQR measures:',
-            options: ['The range of all data', 'The spread of the middle 50%', 'The distance from mean to median', 'The number of outliers'],
+            options: ['The range of all the data values', 'The spread of the middle 50%', 'The distance from the mean to the median', 'The number of outliers in the data'],
             correctAnswer: 1,
-            explanation: '$IQR = Q_3 - Q_1$, capturing the spread of the middle half of the data.'
+            explanation: '$IQR = Q_3 - Q_1$, the spread of the middle half of the data. The range uses the minimum and maximum, the mean-to-median distance says something about skew, and the IQR is used to flag outliers but does not count them.'
           },
           {
             question: 'As you add a constant to every value in a dataset, the standard deviation:',
-            options: ['Increases', 'Decreases', 'Stays the same', 'Doubles'],
-            correctAnswer: 2,
-            explanation: 'Adding a constant shifts all values equally — spread doesn’t change.'
+            options: ['Increases by that constant', 'Stays the same', 'Is multiplied by that constant', 'Decreases slightly'],
+            correctAnswer: 1,
+            explanation: 'Adding a constant shifts every value by the same amount, so the distances from the mean, and therefore the SD, do not change. Only the measures of center and position shift by the constant.'
           },
           {
             question: '$Q_1 = 20, Q_3 = 40$. An outlier is any value above:',
             options: ['60', '70', '80', '100'],
             correctAnswer: 1,
-            explanation: '$IQR = 20$. Upper fence = $40 + 1.5(20) = 40 + 30 = 70$.'
+            explanation: '$IQR = 20$. Upper fence = $40 + 1.5(20) = 40 + 30 = 70$. 60 adds only one IQR, and 80 adds $2 \\times IQR$.'
           }
         ]
       }

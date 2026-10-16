@@ -35,15 +35,15 @@ CI: $(42.02, 48.38)$`
       id: 'meansinference-p2-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'A t-interval uses $t^*$ instead of $z^*$ because:',
-            options: ['$t^*$ is always larger', 'We estimate $\\sigma$ with $s$', 'The data must be Normal', 't-intervals are more accurate'],
+            options: ['$t^*$ is always smaller', 'We estimate $\\sigma$ with $s$', 'The data must be normal', 't-intervals are more accurate'],
             correctAnswer: 1,
-            explanation: 'Using $s$ instead of $\\sigma$ adds uncertainty, accounted for by the t-distribution.'
+            explanation: 'Using $s$ instead of $\\sigma$ adds uncertainty, accounted for by the $t$-distribution; that makes $t^*$ LARGER than $z^*$, not smaller. The data need not be exactly normal.'
           },
           {
             question: 'Increasing sample size makes a CI:',

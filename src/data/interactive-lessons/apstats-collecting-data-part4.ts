@@ -60,21 +60,21 @@ A special case of blocking where each block has exactly 2 units (or the same per
         questions: [
           {
             question: 'The purpose of random assignment in experiments is to:',
-            options: ['Ensure a large sample size', 'Reduce confounding variables', 'Eliminate the need for a control group', 'Make the study observational'],
+            options: ['Ensure a large sample size', 'Balance other variables across the groups', 'Eliminate the need for a control group', 'Make the study observational'],
             correctAnswer: 1,
-            explanation: 'Random assignment distributes confounding variables evenly across treatment groups.'
+            explanation: 'Random assignment tends to balance other variables (known and unknown) across the treatment groups, so differences in the response can be attributed to the treatments. It does not change the sample size or replace a control group.'
           },
           {
             question: 'A study blocks subjects by age before randomizing treatment. This is a:',
             options: ['Completely randomized design', 'Randomized block design', 'Matched pairs design', 'Observational study'],
             correctAnswer: 1,
-            explanation: 'Blocking by age, then randomizing within blocks = randomized block design.'
+            explanation: 'Blocking by age, then randomizing within blocks = randomized block design. A matched pairs design is the special case with blocks of size 2.'
           },
           {
             question: 'In a matched pairs experiment, subjects are:',
             options: ['All given the same treatment', 'Paired by a similar characteristic', 'Randomly selected from different populations', 'Never given a placebo'],
             correctAnswer: 1,
-            explanation: 'Matched pairs uses subjects paired by characteristics, or the same person gets both treatments.'
+            explanation: 'Matched pairs pairs subjects who are alike, or gives the same person both treatments in random order, and randomizes within each pair. Placebos can still be used.'
           }
         ]
       }

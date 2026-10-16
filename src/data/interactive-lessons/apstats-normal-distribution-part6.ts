@@ -46,13 +46,13 @@ export const apStatsNormalDistPart6Data = {
             question: 'Battery life $\\sim N(500, 40)$ hours. What proportion lasts between 460 and 540 hours?',
             options: ['50%', '68%', '95%', '99.7%'],
             correctAnswer: 1,
-            explanation: '$460 = 500 - 40$ and $540 = 500 + 40$. This is $\\mu \\pm 1\\sigma \\approx 68\\%$.'
+            explanation: '$460 = 500 - 40$ and $540 = 500 + 40$. This is $\\mu \\pm 1\\sigma \\approx 68\\%$; 95% would need $\\mu \\pm 2\\sigma$ (420 to 580).'
           },
           {
             question: 'The 95th percentile of $N(0,1)$ is approximately:',
             options: ['$1.28$', '$1.645$', '$1.96$', '$2.33$'],
             correctAnswer: 1,
-            explanation: '$P(Z \\leq 1.645) \\approx 0.95$. This is a commonly used value in statistics.'
+            explanation: '$P(Z \\leq 1.645) \\approx 0.95$. 1.28 is the 90th percentile, 1.96 is the 97.5th percentile (it cuts off the middle 95%), and 2.33 is the 99th percentile.'
           }
         ]
       }

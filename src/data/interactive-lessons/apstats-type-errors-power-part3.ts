@@ -12,7 +12,7 @@ export const apStatsErrorsPart3Data = {
 
 ### What Is Power?
 
-$$\\text{Power} = 1 - \\beta = P(\\text{reject } H_0 \\\\mid H_0 \\text{ is false})$$
+$$\\text{Power} = 1 - \\beta = P(\\text{reject } H_0 \\mid H_0 \\text{ is false})$$
 
 Power is the probability of correctly detecting a real effect.
 
@@ -40,7 +40,7 @@ Power relates to the overlap between the null distribution and the true distribu
       id: 'typeerrorspower-p3-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
@@ -52,15 +52,15 @@ Power relates to the overlap between the null distribution and the true distribu
           },
           {
             question: 'A test with power 0.85 has:',
-            options: ['85% chance of a Type I error', '15% chance of failing to detect a real effect', '85% chance of accepting $H_0$', '15% chance of rejecting $H_0$'],
+            options: ['85% chance of a Type I error', '15% chance of missing a real effect', '85% chance of accepting $H_0$', '15% chance of rejecting $H_0$'],
             correctAnswer: 1,
             explanation: 'Power = 0.85 means $\\beta = 0.15$ — 15% chance of a Type II error.'
           },
           {
             question: 'Which does NOT increase power?',
-            options: ['Larger sample size', 'Larger significance level', 'Larger population standard deviation', 'Larger true effect size'],
+            options: ['Larger sample size', 'Larger significance level', 'Larger $\\sigma$', 'Larger true effect size'],
             correctAnswer: 2,
-            explanation: 'Larger $\\sigma$ makes it harder to detect effects — power DECREASES.'
+            explanation: 'A larger population SD $\\sigma$ makes the statistic more variable, so real effects are harder to detect and power DECREASES. Larger samples, larger $\\alpha$ and larger true effects all increase power.'
           }
         ]
       }

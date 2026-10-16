@@ -17,10 +17,10 @@ export const apStatsErrorsPart7Data = {
 | P(Type I) | $\\alpha$ |
 | P(Type II) | $\\beta$ |
 | Power | $1 - \\beta$ |
-| $\\alpha \\\\downarrow$ | $\\beta \\\\uparrow$, Power $\\\\downarrow$ |
-| $n \\\\uparrow$ | $\\beta \\\\downarrow$, Power $\\\\uparrow$ |
-| Effect $\\\\uparrow$ | $\\beta \\\\downarrow$, Power $\\\\uparrow$ |
-| $\\sigma \\\\downarrow$ | $\\beta \\\\downarrow$, Power $\\\\uparrow$ |
+| $\\alpha \\downarrow$ | $\\beta \\uparrow$, Power $\\downarrow$ |
+| $n \\uparrow$ | $\\beta \\downarrow$, Power $\\uparrow$ |
+| Effect $\\uparrow$ | $\\beta \\downarrow$, Power $\\uparrow$ |
+| $\\sigma \\downarrow$ | $\\beta \\downarrow$, Power $\\uparrow$ |
 
 ### AP Exam Checklist
 
@@ -33,7 +33,7 @@ export const apStatsErrorsPart7Data = {
       id: 'typeerrorspower-p7-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
@@ -44,10 +44,10 @@ export const apStatsErrorsPart7Data = {
             explanation: '$\\beta = 1 - \\text{Power} = 1 - 0.90 = 0.10$.'
           },
           {
-            question: 'Which combination is IMPOSSIBLE (with fixed $n$)?',
-            options: ['$\\alpha = 0.05, \\beta = 0.20$', '$\\alpha = 0.01, \\beta = 0.40$', '$\\alpha = 0.01, \\beta = 0.01$ with $n = 10$ and small effect', '$\\alpha = 0.10, \\beta = 0.10$'],
-            correctAnswer: 2,
-            explanation: 'With very small $n$ and small effect, you can’t have both $\\alpha$ and $\\beta$ tiny.'
+            question: 'Which change lowers $\\beta$ without changing $\\alpha$?',
+            options: ['Lowering the significance level', 'Taking a larger sample', 'Raising the significance level', 'Taking a smaller random sample'],
+            correctAnswer: 1,
+            explanation: 'A larger sample shrinks the SE and raises power, lowering $\\beta$, while $\\alpha$ stays whatever the researcher set. Changing the significance level changes $\\alpha$ itself, and a smaller sample raises $\\beta$.'
           },
           {
             question: 'Increasing sample size from 50 to 200 will:',

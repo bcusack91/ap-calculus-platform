@@ -75,13 +75,21 @@ This IS the general multiplication rule!
 
 ---
 
-### Bayes\' Theorem (Tree Diagrams)
+### Reversing the Condition with a Tree Diagram
 
-For problems where you know $P(B|A)$ but need $P(A|B)$:
+Sometimes you know $P(B|A)$ but need $P(A|B)$. Draw a tree, then use the conditional probability formula.
 
-$$P(A|B) = \\frac{P(A) \\cdot P(B|A)}{P(B)}$$
+**Example:** 2% of people have a disease. A test is positive for 95% of people with the disease and for 10% of people without it.
 
-> 🔑 **AP Tip:** On the AP exam, you can use a tree diagram instead of memorizing Bayes\' formula. Draw branches for $A$ and $A\\text{\' }$, then for $B$ given each.`
+| Branch | Probability |
+|--------|-------------|
+| Disease AND positive | $0.02 \\times 0.95 = 0.019$ |
+| No disease AND positive | $0.98 \\times 0.10 = 0.098$ |
+| **Positive (total)** | $0.019 + 0.098 = 0.117$ |
+
+$$P(\\text{disease}|\\text{positive}) = \\frac{P(\\text{disease} \\cap \\text{positive})}{P(\\text{positive})} = \\frac{0.019}{0.117} \\approx 0.162$$
+
+> 🔑 Only about 16% of positive tests come from people with the disease, because the disease is rare. The tree plus $P(A|B) = P(A \\cap B)/P(B)$ is all you need; no separate formula is required.`
     },
     {
       id: 'apstats-probability-rules-p4-mcq1',
@@ -93,21 +101,21 @@ $$P(A|B) = \\frac{P(A) \\cdot P(B|A)}{P(B)}$$
         questions: [
           {
             question: '$P(A \\cap B) = 0.15$, $P(B) = 0.5$. $P(A|B) =$',
-            options: ['$0.075$', '$0.3$', '$0.5$', '$0.65$'],
+            options: ['$0.075$', '$0.3$', '$0.15$', '$0.65$'],
             correctAnswer: 1,
-            explanation: '$P(A|B) = P(A \\cap B)/P(B) = 0.15/0.5 = 0.3$.'
+            explanation: '$P(A|B) = P(A \\cap B)/P(B) = 0.15/0.5 = 0.3$. 0.075 multiplies instead of dividing, 0.15 is the joint probability, and 0.65 adds the two values.'
           },
           {
             question: '$P(A|B)$ restricts the sample space to:',
-            options: ['All outcomes', 'Only outcomes where $A$ occurred', 'Only outcomes where $B$ occurred', 'The empty set'],
+            options: ['All outcomes', 'Only outcomes where $A$ occurred', 'Only outcomes where $B$ occurred', 'Outcomes in $A$ or $B$'],
             correctAnswer: 2,
-            explanation: '"Given $B$" means we only consider outcomes where $B$ happened.'
+            explanation: '"Given $B$" means we only consider outcomes where $B$ happened, so $P(B)$ becomes the denominator. Restricting to $A$ would give $P(B|A)$ instead.'
           },
           {
             question: 'In general, $P(A|B)$ and $P(B|A)$ are:',
-            options: ['Always equal', 'NOT equal (order matters)', 'Always complementary', 'Always independent'],
+            options: ['Equal to each other', 'Usually different', 'Complementary', 'Independent of each other'],
             correctAnswer: 1,
-            explanation: '$P(A|B) \\neq P(B|A)$ in general. Different conditioning = different answers.'
+            explanation: '$P(A|B)$ and $P(B|A)$ divide the same joint probability by different totals, so they are usually different (they match only when $P(A) = P(B)$). In the sports table, $P(\\text{Sport}|\\text{Male}) = 0.60$ but $P(\\text{Male}|\\text{Sport}) \\approx 0.545$.'
           }
         ]
       }
@@ -211,40 +219,40 @@ $$P(A|B) = \\frac{P(A) \\cdot P(B|A)}{P(B)}$$
             explanation: 'Given Math (18 students), how many also do Science? $6/18 = 1/3$.'
           },
           {
-            question: 'A medical test is 95% accurate. $P(\\text{positive}|\\text{disease}) = 0.95$ means:',
-            options: ['95% of people have the disease', '95% of those with the disease test positive', '95% of positive tests are correct', 'The disease is 95% fatal'],
+            question: 'For a medical test, $P(\\text{positive}|\\text{disease}) = 0.95$. This means:',
+            options: ['95% of all people tested have the disease', '95% of people with the disease test positive', '95% of people who test positive have it', '95% of people without it test negative'],
             correctAnswer: 1,
-            explanation: 'This is the sensitivity: among those WITH the disease, 95% test positive.'
+            explanation: 'The condition after the bar is the group we restrict to: among people WITH the disease, 95% test positive. "95% of positives have it" reverses the condition, $P(\\text{disease}|\\text{positive})$, which can be far lower.'
           },
           {
-            question: '$P(\\text{disease}|\\text{positive})$ is called:',
-            options: ['Sensitivity', 'Specificity', 'Positive predictive value', 'False positive rate'],
+            question: 'In the tree example (2% have the disease; 95% of them and 10% of others test positive), what is $P(\\text{positive})$?',
+            options: ['0.019', '0.098', '0.117', '0.950'],
             correctAnswer: 2,
-            explanation: 'The probability of having the disease given a positive test = positive predictive value.'
+            explanation: 'Add both branches that end in a positive test: $0.02(0.95) + 0.98(0.10) = 0.019 + 0.098 = 0.117$. 0.019 and 0.098 are single branches, and 0.950 is $P(\\text{positive}|\\text{disease})$.'
           },
           {
             question: 'If $A$ and $B$ are independent, then $P(A|B) =$',
             options: ['$0$', '$P(B)$', '$P(A)$', '$P(A) + P(B)$'],
             correctAnswer: 2,
-            explanation: 'For independent events, $P(A|B) = P(A)$: knowing $B$ doesn\'t change $A$\'s probability.'
+            explanation: 'For independent events, $P(A|B) = P(A)$: knowing $B$ doesn\'t change $A$\'s probability. A value of 0 would mean the events cannot occur together.'
           },
           {
             question: 'A tree diagram helps with conditional probability by:',
-            options: ['Replacing the formula', 'Showing all branches and their probabilities', 'Eliminating the need for multiplication', 'Only working for independent events'],
+            options: ['Removing any need to multiply probabilities', 'Showing each stage\'s probabilities', 'Working only for independent events', 'Listing outcomes without probabilities'],
             correctAnswer: 1,
-            explanation: 'Tree diagrams visually organize the conditional probabilities along branches.'
+            explanation: 'A tree shows each stage\'s probabilities on its branches, with later branches written as conditional probabilities. You still multiply along branches, and trees are most useful exactly when events are dependent.'
           },
           {
             question: '$P(A|B) > P(A)$ means:',
             options: ['$A$ and $B$ are independent', 'Knowing $B$ occurred makes $A$ MORE likely', 'Knowing $B$ occurred makes $A$ LESS likely', '$A$ and $B$ are mutually exclusive'],
             correctAnswer: 1,
-            explanation: 'If $P(A|B) > P(A)$, then $B$ occurring increases the chance of $A$.'
+            explanation: 'If $P(A|B) > P(A)$, then $B$ occurring increases the chance of $A$, so the events are dependent. Mutually exclusive events would have $P(A|B) = 0$.'
           },
           {
-            question: 'Which formula is Bayes\' Theorem?',
-            options: ['$P(A|B) = P(A) + P(B)$', '$P(A|B) = P(A) \\cdot P(B|A) / P(B)$', '$P(A|B) = P(A \\cup B) / P(B)$', '$P(A|B) = 1 - P(B|A)$'],
+            question: 'In the same tree example, $P(\\text{disease}|\\text{positive})$ is closest to:',
+            options: ['0.95', '0.16', '0.02', '0.84'],
             correctAnswer: 1,
-            explanation: 'Bayes\': $P(A|B) = P(A) \\cdot P(B|A) / P(B)$. It "reverses" the conditioning.'
+            explanation: '$P(\\text{disease}|\\text{positive}) = 0.019/0.117 \\approx 0.16$. 0.95 is the reverse conditional $P(\\text{positive}|\\text{disease})$, 0.02 is the overall disease rate, and 0.84 is $1 - 0.16$.'
           }
         ]
       }

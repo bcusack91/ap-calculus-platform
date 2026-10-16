@@ -144,14 +144,14 @@ $$\\boxed{n = 62}$$`
           {
             id: 'ci4-dd1',
             label: 'Increasing confidence level from 95% to 99% will ___ the required sample size',
-            options: ['increase', 'decrease', 'not change'],
+            options: ['increase', 'decrease', 'not change', 'halve'],
             correctIndex: 0,
             explanation: 'Higher confidence requires a larger $z^*$, which increases the required $n$ for the same ME.'
           },
           {
             id: 'ci4-dd2',
             label: 'Using $\\hat{p} = 0.5$ instead of $\\hat{p} = 0.3$ will ___ the required $n$',
-            options: ['increase', 'decrease', 'not change'],
+            options: ['increase', 'decrease', 'not change', 'halve'],
             correctIndex: 0,
             explanation: '$\\hat{p}(1-\\hat{p})$ is maximized at $\\hat{p} = 0.5$ (gives 0.25), while $0.3(0.7) = 0.21$. Using 0.5 gives a larger, more conservative $n$.'
           },
@@ -188,7 +188,7 @@ $$\\boxed{n = 62}$$`
           },
           {
             question: 'Why is $\\hat{p} = 0.5$ called "conservative"?',
-            options: ['It gives the smallest sample', 'It maximizes $\\hat{p}(1-\\hat{p})$, giving the largest needed $n$', 'It is politically neutral', 'It doubles the margin of error'],
+            options: ['It gives the smallest sample size', 'It gives the largest needed $n$', 'It matches the true value of $p$', 'It doubles the margin of error'],
             correctAnswer: 1,
             explanation: '$\\hat{p}(1-\\hat{p})$ achieves its maximum at $\\hat{p} = 0.5$, yielding the largest required $n$ and thus the widest (safest) interval.'
           },
@@ -200,13 +200,13 @@ $$\\boxed{n = 62}$$`
           },
           {
             question: 'A pilot study adds cost but is important because:',
-            options: ['It eliminates the need for the main study', 'It provides an estimate of $\\sigma$ needed for the sample size formula', 'It determines the exact population parameter', 'It reduces the confidence level needed'],
+            options: ['It replaces the main study entirely', 'It estimates $\\sigma$ for planning', 'It reveals the exact population mean', 'It lowers the confidence level needed'],
             correctAnswer: 1,
             explanation: 'The sample size formula for means requires $\\sigma$. A pilot study gives a preliminary estimate $s$ to use in planning.'
           },
           {
             question: 'A student computes $n = 271.8$ and rounds down to $n = 271$. This is:',
-            options: ['Correct — round to nearest', 'Incorrect — the ME will slightly exceed the target', 'Correct — always round down', 'Incorrect — should use $n = 300$'],
+            options: ['Correct, since rounding to nearest is the rule', 'Incorrect, since the ME will exceed the target', 'Correct, since sample sizes round down', 'Incorrect, since $n$ must be a multiple of 100'],
             correctAnswer: 1,
             explanation: 'Rounding down gives a slightly smaller sample, and thus a slightly larger ME than desired. Always round up.'
           },
@@ -236,7 +236,7 @@ $$\\boxed{n = 62}$$`
           },
           {
             question: 'The key takeaway from sample size planning is:',
-            options: ['Larger samples are always better, regardless of cost', 'You can determine the exact $n$ needed before collecting data', 'Budget, precision, and confidence level must be balanced', 'Use $n = 30$ for everything'],
+            options: ['Larger samples are always better, regardless of cost', 'You can determine the exact $n$ needed before collecting data', 'Cost, precision and confidence must be balanced', 'Use $n = 30$ for everything'],
             correctAnswer: 2,
             explanation: 'Sample size planning involves trade-offs: higher confidence and smaller ME require more data, which costs more time and money.'
           }

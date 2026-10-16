@@ -42,27 +42,27 @@ When describing a distribution, always mention:
       id: 'exploratorydata-p1-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'When describing a distribution, SOCS stands for:',
-            options: ['Sum, Origin, Count, Slope', 'Shape, Outliers, Center, Spread', 'Standard deviation, Outliers, Correlation, Skewness', 'Sample, Observation, Category, Scale'],
+            options: ['Sample, Outliers, Count, Slope', 'Shape, Outliers, Center, Spread', 'Skew, Order, Center, Size', 'Shape, Observations, Correlation, Scale'],
             correctAnswer: 1,
-            explanation: 'SOCS: Shape, Outliers, Center, Spread — the four features to describe in any distribution.'
+            explanation: 'SOCS: Shape, Outliers, Center, Spread, the four features to describe for any quantitative distribution, always in context. Count, slope and correlation describe other things (sample size and two-variable relationships), not the distribution of one variable.'
           },
           {
             question: 'Which graph is best for quantitative data?',
-            options: ['Bar chart', 'Pie chart', 'Histogram', 'None of these'],
+            options: ['A bar chart', 'A pie chart', 'A histogram', 'A mosaic plot'],
             correctAnswer: 2,
-            explanation: 'Histograms display the distribution of quantitative data. Bar charts are for categorical data.'
+            explanation: 'Histograms display the distribution of a quantitative variable. Bar charts and pie charts display one categorical variable, and mosaic plots display the relationship between two categorical variables.'
           },
           {
             question: 'A distribution skewed right has:',
-            options: ['A long tail to the left', 'A long tail to the right', 'Equal tails', 'No tail'],
+            options: ['A long tail to the left', 'A long tail toward larger values', 'Its peak at the right end', 'A mean less than its median'],
             correctAnswer: 1,
-            explanation: 'Right-skewed = long right tail. Mean > median. Examples: income, home prices.'
+            explanation: 'Skew is named for the longer tail, so right-skewed means a long tail toward larger values; the peak is usually on the left. The long right tail pulls the mean ABOVE the median. Examples: income, home prices.'
           }
         ]
       }

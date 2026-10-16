@@ -39,27 +39,27 @@ $$\\sigma = \\sqrt{0.81} = 0.9$$
       id: 'discreterandomvariables-p3-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'Variance is calculated by:',
-            options: ['$\\sum (x - \\mu)^2 \\cdot P(x)$', '$\\sum x \\cdot P(x)$', '$\\sum |x - \\mu|$', '$\\sum P(x)$'],
+            options: ['$\\sum (x - \\mu)^2 \\cdot P(x)$', '$\\sum (x - \\mu) \\cdot P(x)$', '$\\sum (x - \\mu)^2$', '$\\sum x^2 \\cdot P(x)$'],
             correctAnswer: 0,
-            explanation: 'Variance = weighted average of squared deviations from the mean.'
+            explanation: 'Variance is the probability-weighted average of the squared deviations from the mean. Without squaring, the weighted deviations always sum to 0; $\\sum (x - \\mu)^2$ forgets to weight each squared deviation by its probability; and $\\sum x^2 P(x)$ leaves out the mean.'
           },
           {
             question: 'If $\\sigma^2 = 4$, then $\\sigma$ equals:',
-            options: ['2', '4', '16', '0.5'],
+            options: ['2', '16', '0.5', '±2'],
             correctAnswer: 0,
-            explanation: '$\\sigma = \\sqrt{4} = 2$.'
+            explanation: '$\\sigma = \\sqrt{4} = 2$. A standard deviation is never negative, so -2 is not an option; 16 squares the variance instead of taking its root.'
           },
           {
             question: 'A larger standard deviation means:',
-            options: ['Outcomes are closer to the mean', 'Outcomes are more spread out', 'The mean is larger', 'The distribution is symmetric'],
+            options: ['Outcomes are less spread', 'Outcomes are more spread out', 'The mean of $X$ is larger', 'The shape is more symmetric'],
             correctAnswer: 1,
-            explanation: 'Larger $\\sigma$ = more variability in outcomes.'
+            explanation: 'A larger $\\sigma$ means outcomes typically fall farther from the mean, so they are more spread out. The standard deviation says nothing about how large the mean is or about the shape.'
           }
         ]
       }

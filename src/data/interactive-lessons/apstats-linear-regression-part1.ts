@@ -19,15 +19,13 @@ When examining a scatterplot, describe:
 | **Direction** | Positive, negative, or none |
 | **Form** | Linear, curved, or no pattern |
 | **Strength** | Strong, moderate, or weak |
-| **Outliers** | Any points that don't fit the pattern |
+| **Unusual features** | Clusters, or points that don't fit the general pattern |
 
 ---
 
 ### Correlation Coefficient $r$
 
-The correlation $r$ measures the strength and direction of a **linear** relationship:
-
-$$r = \\frac{1}{n-1} \\sum \\left(\\frac{x_i - \\bar{x}}{s_x}\\right)\\left(\\frac{y_i - \\bar{y}}{s_y}\\right)$$
+The correlation $r$ measures the strength and direction of a **linear** relationship. On the AP exam, $r$ is calculated using technology (calculator or computer output); you interpret it rather than compute it by hand.
 
 | Value of $r$ | Interpretation |
 |-------------|---------------|
@@ -45,7 +43,8 @@ $$r = \\frac{1}{n-1} \\sum \\left(\\frac{x_i - \\bar{x}}{s_x}\\right)\\left(\\fr
 - $r$ has no units
 - $r$ is not affected by changes in units (e.g., inches to cm)
 - $r$ measures only **linear** association — a strong curved relationship can have $r \\approx 0$
-- $r$ is sensitive to outliers
+- A single point that doesn't fit the pattern can change $r$ a lot
+- An $r$ close to $-1$ or $1$ does **not** by itself mean a linear model is appropriate: always look at the scatterplot (and later, the residual plot)
 
 > 🔑 **Correlation does NOT imply causation.** A strong correlation between two variables does not mean one causes the other.`
     },
@@ -59,21 +58,21 @@ $$r = \\frac{1}{n-1} \\sum \\left(\\frac{x_i - \\bar{x}}{s_x}\\right)\\left(\\fr
         questions: [
           {
             question: 'If $r = -0.85$, the relationship is:',
-            options: ['Strong positive', 'Weak negative', 'Strong negative', 'No relationship'],
+            options: ['Positive and strong', 'Weak and negative', 'Strong and negative', 'Moderate and positive'],
             correctAnswer: 2,
-            explanation: '$|r| = 0.85$ indicates strong, and the negative sign means the direction is negative (as $x$ increases, $y$ decreases).'
+            explanation: '$|r| = 0.85$ is close to 1, so the linear association is strong, and the negative sign means the direction is negative (as $x$ increases, $y$ tends to decrease). The sign gives direction only; it does not make the relationship weak.'
           },
           {
             question: 'Switching the roles of $x$ and $y$ in a scatterplot:',
-            options: ['Changes $r$', 'Does not change $r$', 'Makes $r$ positive', 'Doubles $r$'],
+            options: ['Changes the sign of $r$', 'Does not change $r$', 'Changes $r$ to $1/r$', 'Changes $r$ to $r^2$'],
             correctAnswer: 1,
-            explanation: 'Correlation is symmetric — $r(x,y) = r(y,x)$.'
+            explanation: 'Correlation treats the two variables symmetrically, so $r(x,y) = r(y,x)$. The sign, reciprocal and square of $r$ have nothing to do with which variable is on which axis.'
           },
           {
             question: 'A dataset shows a perfect U-shaped pattern. The correlation is likely:',
             options: ['$r = 1$', '$r = -1$', '$r \\approx 0$', '$r = 0.5$'],
             correctAnswer: 2,
-            explanation: '$r$ measures linear association only. A perfect U-shape has no linear trend, so $r \\approx 0$ despite a clear pattern.'
+            explanation: '$r$ measures linear association only. A perfect U-shape has no overall linear trend, so $r \\approx 0$ despite a clear pattern; $r = \\pm 1$ would require the points to lie on a straight line.'
           }
         ]
       }

@@ -55,9 +55,9 @@ If we repeated the sampling process many times and built a 95% CI each time, **a
         questions: [
           {
             question: 'A 95% confidence interval means:',
-            options: ['95% of the data falls in this range', '95% probability the parameter is in this interval', '95% of samples produce intervals containing the parameter', 'The sample is 95% accurate'],
+            options: ['95% of the data values fall in this range', 'There is a 95% chance the parameter is in it', 'About 95% of such CIs capture the parameter', 'The sample estimate is 95% accurate'],
             correctAnswer: 2,
-            explanation: 'A 95% CI means the method produces intervals that capture the true parameter 95% of the time over many repetitions.'
+            explanation: 'The confidence level describes the method: about 95% of intervals built this way would capture the true parameter. Once computed, a single interval either contains the parameter or not, and the interval is about the parameter, not the data values.'
           },
           {
             question: 'Increasing the confidence level from 95% to 99% will:',
@@ -67,7 +67,7 @@ If we repeated the sampling process many times and built a 95% CI each time, **a
           },
           {
             question: 'The margin of error depends on all of these EXCEPT:',
-            options: ['Sample size', 'Confidence level', 'Standard error', 'Population parameter'],
+            options: ['The sample size', 'The confidence level', 'The standard error', 'The true parameter'],
             correctAnswer: 3,
             explanation: 'The margin of error = $z^* \\times SE$. It depends on sample size (through SE), confidence level (through $z^*$), but not the unknown population parameter.'
           }

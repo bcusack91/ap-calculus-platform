@@ -73,7 +73,7 @@ export const apStatsDistributionsPart7Data = {
 
 ---
 
-### Transformations Summary
+### Changing Units: Adding or Multiplying by a Constant
 
 | Operation | Effect on Center | Effect on Spread |
 |-----------|:---:|:---:|
@@ -92,21 +92,21 @@ export const apStatsDistributionsPart7Data = {
         questions: [
           {
             question: 'The three main features used to describe a distribution are:',
-            options: ['Mean, median, mode', 'Shape, center, spread', 'Min, max, range', 'Q1, median, Q3'],
+            options: ['Mean, median and the mode', 'Shape, center, spread', 'Minimum, maximum, range', 'Quartiles and the median'],
             correctAnswer: 1,
-            explanation: 'Shape, center, spread (plus outliers) are the four things to mention when describing a distribution.'
+            explanation: 'Shape, center and spread (plus outliers and other unusual features) are what a description must address. The other lists are individual statistics, not features of a distribution.'
           },
           {
             question: 'IQR is calculated as:',
-            options: ['Max − Min', '$Q_3 - Q_1$', 'Mean − Median', '$\\sigma^2$'],
+            options: ['Max − Min', '$Q_3 - Q_1$', 'Mean − Median', '$Q_3 - \\text{Min}$'],
             correctAnswer: 1,
-            explanation: 'IQR = $Q_3 - Q_1$, the range of the middle 50% of data.'
+            explanation: 'IQR = $Q_3 - Q_1$, the range of the middle 50% of the data. Max − Min is the full range.'
           },
           {
             question: 'The median is also called the:',
             options: ['25th percentile', '50th percentile', '75th percentile', '100th percentile'],
             correctAnswer: 1,
-            explanation: 'The median divides the data in half — 50% above, 50% below.'
+            explanation: 'The median divides the data in half, 50% at or below it. The 25th and 75th percentiles are $Q_1$ and $Q_3$.'
           }
         ]
       }
@@ -154,7 +154,7 @@ export const apStatsDistributionsPart7Data = {
           {
             id: 'dd7-p7-1',
             label: 'For right-skewed data, the best summary is ___',
-            options: ['Mean and SD', 'Median and IQR', 'Mode and range'],
+            options: ['Mean and SD', 'Median and IQR', 'Mean and IQR'],
             correctIndex: 1,
             explanation: 'Both median and IQR are resistant to the skewness and outliers in the right tail.'
           },
@@ -168,14 +168,14 @@ export const apStatsDistributionsPart7Data = {
           {
             id: 'dd7-p7-3',
             label: 'The Empirical Rule applies to ___ distributions only',
-            options: ['All', 'Normal (bell-shaped)', 'Skewed', 'Uniform'],
+            options: ['All', 'Normal', 'Skewed', 'Uniform'],
             correctIndex: 1,
             explanation: 'The 68-95-99.7 rule is specific to normal distributions.'
           },
           {
             id: 'dd7-p7-4',
             label: 'A z-score of 0 means the value is ___',
-            options: ['An outlier', 'At the mean', 'At the minimum', 'Missing'],
+            options: ['An outlier', 'At the mean', 'At the minimum', 'One SD below the mean'],
             correctIndex: 1,
             explanation: '$z = 0$ when $x = \\mu$, meaning the value equals the mean.'
           }
@@ -194,11 +194,11 @@ export const apStatsDistributionsPart7Data = {
             question: 'Which measure of spread is resistant to outliers?',
             options: ['Range', 'Standard deviation', 'IQR', 'Variance'],
             correctAnswer: 2,
-            explanation: 'IQR only uses Q1 and Q3 (middle 50%), so outliers don\'t affect it.'
+            explanation: 'The IQR only uses Q1 and Q3 (the middle 50%), so outliers barely affect it. The range, standard deviation and variance all use the extreme values.'
           },
           {
             question: 'A normal distribution with $\\mu = 0$ and $\\sigma = 1$ is called:',
-            options: ['A uniform distribution', 'The standard normal distribution', 'A skewed distribution', 'A t-distribution'],
+            options: ['A uniform distribution', 'The standard normal distribution', 'A skewed distribution', 'A t-distribution with df = 1'],
             correctAnswer: 1,
             explanation: 'The standard normal distribution has $\\mu = 0$ and $\\sigma = 1$, written $Z \\sim N(0, 1)$.'
           },
@@ -209,46 +209,46 @@ export const apStatsDistributionsPart7Data = {
             explanation: '$52 = 60 - 2(4)$ and $68 = 60 + 2(4)$. This is $\\mu \\pm 2\\sigma = 95\\%$.'
           },
           {
-            question: 'Data: 3, 5, 5, 7, 9, 9, 11. The mode is:',
-            options: ['5 only', '9 only', '5 and 9 (bimodal)', '7'],
-            correctAnswer: 2,
-            explanation: 'Both 5 and 9 appear twice (most frequently). The data is bimodal.'
+            question: 'Data: 3, 5, 5, 7, 9, 9, 11. What are the range and the median?',
+            options: ['Range 8, median 7', 'Range 8, median 9', 'Range 11, median 7', 'Range 7, median 8'],
+            correctAnswer: 0,
+            explanation: 'Range = max − min = 11 − 3 = 8, and the median is the 4th of 7 ordered values, 7. Using 11 as the range forgets to subtract the minimum, and 9 is a repeated value, not the middle one.'
           },
           {
             question: 'An AP Statistics student writes: "The data is right-skewed." What is missing?',
-            options: ['Nothing — this is complete', 'Context — should mention what the data represents', 'A formula', 'A z-score'],
+            options: ['Nothing; the sentence is already complete', 'Context about the variable', 'A formula for the mean and median', 'A z-score for every data value'],
             correctAnswer: 1,
-            explanation: 'AP rubrics require context: "The distribution of test scores is right-skewed."'
+            explanation: 'AP rubrics require context: "The distribution of test scores is right-skewed." A complete answer would also add center and spread, but no formula or z-scores are needed.'
           },
           {
             question: 'If every value in a data set is multiplied by 3:',
             options: ['SD is multiplied by 3', 'SD is multiplied by 9', 'SD stays the same', 'SD is divided by 3'],
             correctAnswer: 0,
-            explanation: 'Multiplying by $k$ multiplies SD by $|k|$. So $\\times 3$ means SD $\\times 3$.'
+            explanation: 'Multiplying by $k$ multiplies the SD by $|k|$, so the SD triples. It is the VARIANCE that is multiplied by 9.'
           },
           {
             question: 'Which graph is best for comparing two distributions side-by-side?',
-            options: ['Pie chart', 'Back-to-back stemplot', 'Single histogram', 'Dotplot'],
+            options: ['A pie chart', 'A back-to-back stemplot', 'A single histogram of all values', 'A single dotplot of all values'],
             correctAnswer: 1,
-            explanation: 'Back-to-back stemplots display two distributions sharing the same stems for easy comparison.'
+            explanation: 'Back-to-back stemplots display two distributions sharing the same stems for easy comparison. Pooling both groups into a single histogram or dotplot hides the comparison, and pie charts are for categorical data.'
           },
           {
             question: '$z = 2.5$ is more unusual than $z = 1.8$ because:',
-            options: ['2.5 > 1.8', 'It is farther from the mean in standard deviation units', 'It is negative', 'It corresponds to a higher raw score'],
+            options: ['Its raw score must be larger', 'It is farther from the mean in SDs', 'It is closer to the mean in SDs', 'It falls inside the middle 95%'],
             correctAnswer: 1,
-            explanation: 'Z-scores measure distance from the mean in SD units. Larger $|z|$ = more unusual.'
+            explanation: 'Z-scores measure distance from the mean in SD units, so a larger $|z|$ is more unusual. The raw scores could come from different scales, and $z = 2.5$ lies OUTSIDE the middle 95%.'
           },
           {
             question: 'The five-number summary consists of:',
-            options: ['Mean, median, mode, range, SD', 'Min, Q1, median, Q3, max', 'Q1, Q2, Q3, IQR, range', 'Mean, Q1, Q2, Q3, max'],
+            options: ['Mean, median, IQR, SD', 'Min, Q1, median, Q3, max', 'Q1, Q2, Q3, IQR, range', 'Mean, Q1, Q2, Q3, max'],
             correctAnswer: 1,
-            explanation: 'The five-number summary: minimum, Q1, median (Q2), Q3, maximum.'
+            explanation: 'The five-number summary: minimum, Q1, median (Q2), Q3, maximum. It uses positions only, so it contains no mean or SD.'
           },
           {
             question: 'On the AP exam, when describing distributions you should ALWAYS:',
-            options: ['Calculate the z-score', 'State shape, center, spread, and outliers in context', 'Draw a boxplot', 'Use the Empirical Rule'],
+            options: ['Calculate a z-score for every single data value', 'Address SOCS in context', 'Draw a boxplot and report the five-number summary', 'Apply the Empirical Rule to estimate the percents'],
             correctAnswer: 1,
-            explanation: 'Every distribution description needs shape, center, spread, outliers, and context for full AP credit.'
+            explanation: 'Every distribution description needs shape, outliers, center and spread (SOCS), in context, for full AP credit. z-scores, boxplots and the Empirical Rule are tools for specific questions, not requirements of every description.'
           }
         ]
       }

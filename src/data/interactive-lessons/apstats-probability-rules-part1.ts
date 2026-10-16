@@ -68,8 +68,7 @@ $$P(\\text{not red}) = 1 - P(\\text{red}) = 1 - \\frac{3}{10} = \\frac{7}{10} = 
 | Interpretation | Description |
 |----------------|-------------|
 | **Classical** | Equally likely outcomes (dice, coins, cards) |
-| **Relative frequency** | Long-run proportion from many trials |
-| **Subjective** | Personal belief based on experience |
+| **Relative frequency** | Long-run proportion from many trials (or a simulation) |
 
 > 🔑 **Law of Large Numbers:** As the number of trials increases, the relative frequency approaches the true probability.`
     },
@@ -85,7 +84,7 @@ $$P(\\text{not red}) = 1 - P(\\text{red}) = 1 - \\frac{3}{10} = \\frac{7}{10} = 
             question: '$P(6)$ on a fair die is:',
             options: ['$1/6$', '$1/3$', '$1/2$', '$1$'],
             correctAnswer: 0,
-            explanation: '1 favorable outcome out of 6 equally likely outcomes: $P(6) = 1/6$.'
+            explanation: '1 favorable outcome out of 6 equally likely outcomes: $P(6) = 1/6$. 1/2 would be the chance of an even number, and 1 means certain.'
           },
           {
             question: 'If $P(A) = 0.3$, then $P(A\\text{\' }) =$',
@@ -95,9 +94,9 @@ $$P(\\text{not red}) = 1 - P(\\text{red}) = 1 - \\frac{3}{10} = \\frac{7}{10} = 
           },
           {
             question: 'A probability of 1.2 is:',
-            options: ['Very likely', 'Certain', 'Impossible — probability cannot exceed 1', 'Greater than certain'],
+            options: ['Very likely to happen', 'Certain to happen', 'Outside the allowed range', 'More likely than certain'],
             correctAnswer: 2,
-            explanation: 'Probabilities must be between 0 and 1 inclusive. $P = 1.2$ is invalid.'
+            explanation: 'Probabilities must be between 0 and 1 inclusive, so 1.2 is not a valid probability. A probability of 1 already means certain, and nothing can be more likely than that.'
           }
         ]
       }
@@ -159,7 +158,7 @@ $$P(\\text{not red}) = 1 - P(\\text{red}) = 1 - \\frac{3}{10} = \\frac{7}{10} = 
           {
             id: 'pr1-dd3',
             label: 'The Law of Large Numbers says relative frequency approaches:',
-            options: ['0.5', 'The true probability', 'The sample size', 'Zero'],
+            options: ['Exactly 0.5 for every event', 'The true probability', 'One divided by the trials', 'The first trial\'s result'],
             correctIndex: 1,
             explanation: 'With more trials, the observed proportion converges to the true probability.'
           }
@@ -208,25 +207,25 @@ $$P(\\text{not red}) = 1 - P(\\text{red}) = 1 - \\frac{3}{10} = \\frac{7}{10} = 
             question: 'Which is NOT a valid probability?',
             options: ['$0$', '$0.99$', '$-0.1$', '$1$'],
             correctAnswer: 2,
-            explanation: 'Probabilities cannot be negative. $-0.1$ is invalid.'
+            explanation: 'Probabilities cannot be negative, so $-0.1$ is invalid. 0 (impossible) and 1 (certain) are both valid endpoints.'
           },
           {
             question: '"At least one head in 3 flips" is easiest to calculate using:',
-            options: ['The addition rule', 'The complement rule', 'The multiplication rule', 'Bayes\' theorem'],
+            options: ['The addition rule', 'The complement rule', 'The multiplication rule', 'A two-way table'],
             correctAnswer: 1,
-            explanation: '$P(\\text{at least one}) = 1 - P(\\text{none}) = 1 - P(\\text{TTT})$.'
+            explanation: '$P(\\text{at least one}) = 1 - P(\\text{none}) = 1 - P(\\text{TTT}) = 7/8$. The multiplication rule is used inside the complement to find $P(\\text{TTT})$, but listing every "at least one" case with the addition rule is much longer.'
           },
           {
             question: 'If you flip a fair coin 1000 times and get 520 heads, the relative frequency is:',
             options: ['$0.50$', '$0.52$', '$520$', '$0.48$'],
             correctAnswer: 1,
-            explanation: 'Relative frequency $= 520/1000 = 0.52$.'
+            explanation: 'Relative frequency $= 520/1000 = 0.52$. 0.50 is the theoretical probability, 520 is the count (frequency), and 0.48 is the relative frequency of tails.'
           },
           {
             question: 'The "equally likely" interpretation of probability requires:',
-            options: ['A large sample', 'All outcomes have the same chance', 'At least 30 trials', 'A normal distribution'],
+            options: ['A very large number of trials', 'Every outcome has the same chance', 'At least 30 independent trials', 'A normal model for the outcomes'],
             correctAnswer: 1,
-            explanation: 'Classical probability assumes all outcomes are equally likely (fair die, fair coin).'
+            explanation: 'Classical probability assumes all outcomes in the sample space are equally likely (fair die, fair coin). Large numbers of trials belong to the relative-frequency approach, and no normal model is involved.'
           },
           {
             question: '$P(\\text{roll a 7 on a standard die}) =$',

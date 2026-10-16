@@ -35,7 +35,7 @@ Where $\\mu_A$ = true mean weight loss for Program A, $\\mu_B$ = true mean weigh
 ### Step 2: Check Conditions
 
 ✅ **Random:** Volunteers randomly assigned to groups (experiment)
-✅ **Normal:** $n_A = 22 \\geq 10$ and $n_B = 23 \\geq 10$ (or no strong skewness mentioned)
+✅ **Normal:** Both samples are smaller than 30, so we need the sample data in each group to be free from strong skewness and outliers (dotplots of both groups show no strong skew or outliers)
 ✅ **Independent:** Groups are independent; each person in only one program. Both $< 10\\%$ of all potential participants.
 
 ### Step 3: Calculate
@@ -80,7 +80,7 @@ Where $\\mu_d$ = true mean difference in stress scores (Before − After) for al
 
 ✅ **Random:** 30 participants randomly selected (or assume representative)
 ✅ **Normal:** $n = 30 \\geq 30$ (CLT applies for differences)
-✅ **Independent:** Differences within each person are independent; $30 < 10\\%$ of all potential users
+✅ **Independent (10%):** The 30 participants' differences are independent of each other; $30 < 10\\%$ of all potential users
 
 > ⚠️ **Key:** We check conditions on the DIFFERENCES, not the individual scores.
 
@@ -121,13 +121,13 @@ Since $P < 0.001 < 0.05 = \\alpha$, we reject $H_0$.
         questions: [
           {
             question: 'In Worked Example 1 (weight loss), why is a two-sample test appropriate instead of a paired test?',
-            options: ['Because the sample sizes are different', 'Because the participants are different people in each group', 'Because the data is not normal', 'Because we used $\\alpha = 0.05$'],
+            options: ['Because the two sample sizes are different', 'Because each person is in only one group', 'Because the data are not normally distributed', 'Because the test uses $\\alpha = 0.05$'],
             correctAnswer: 1,
             explanation: 'The volunteers are randomly assigned to two separate groups — different people in each, so the data is independent, not paired.'
           },
           {
             question: 'In Worked Example 2 (meditation), what would happen if we incorrectly used a two-sample test?',
-            options: ['The result would be more significant', 'The variability between subjects would inflate the SE, reducing power', 'The conclusion would be the same', 'We would get a negative t-value'],
+            options: ['The result would be more significant', 'Between-subject variation would inflate the SE', 'The conclusion would be exactly the same', 'The $t$-statistic would become negative'],
             correctAnswer: 1,
             explanation: 'A two-sample test ignores the pairing and treats between-subject variability as noise, inflating SE and reducing the chance of detecting the real effect.'
           },
@@ -183,28 +183,28 @@ Since $P < 0.001 < 0.05 = \\alpha$, we reject $H_0$.
           {
             id: 'cp6-dd1',
             label: 'Blood pressure measured before and after medication for 50 patients →',
-            options: ['Two-sample t-test', 'Paired t-test', 'Chi-square test'],
+            options: ['Two-sample t-test', 'Paired t-test', 'Chi-square test', 'One-proportion z-test'],
             correctIndex: 1,
             explanation: 'Same patients measured twice (before/after) = paired data.'
           },
           {
             id: 'cp6-dd2',
             label: 'Average GPA compared between two different universities →',
-            options: ['Two-sample t-test', 'Paired t-test', 'One-sample t-test'],
+            options: ['Two-sample t-test', 'Paired t-test', 'One-sample t-test', 'Chi-square test'],
             correctIndex: 0,
             explanation: 'Different groups of students at different universities = independent samples.'
           },
           {
             id: 'cp6-dd3',
             label: 'Twins are separated and taught by different methods; test scores compared →',
-            options: ['Two-sample t-test', 'Paired t-test', 'Z-test for proportions'],
+            options: ['Two-sample t-test', 'Paired t-test', 'Z-test for proportions', 'Chi-square test'],
             correctIndex: 1,
             explanation: 'Twins are naturally matched pairs — use a paired test.'
           },
           {
             id: 'cp6-dd4',
             label: 'In the conclusion, you should say "We ___ $H_0$" when $P > \\alpha$',
-            options: ['accept', 'fail to reject', 'prove'],
+            options: ['accept', 'fail to reject', 'prove', 'confirm'],
             correctIndex: 1,
             explanation: 'Never say "accept." The correct phrasing is "fail to reject $H_0$."'
           }
@@ -221,13 +221,13 @@ Since $P < 0.001 < 0.05 = \\alpha$, we reject $H_0$.
         questions: [
           {
             question: 'The first step in any hypothesis test is:',
-            options: ['Calculate the test statistic', 'Check conditions', 'State hypotheses', 'Find the P-value'],
+            options: ['Calculate the test statistic', 'Check conditions', 'State $H_0$ and $H_a$', 'Find the P-value'],
             correctAnswer: 2,
             explanation: 'The 4-step process: (1) State hypotheses, (2) Check conditions, (3) Calculate, (4) Conclude.'
           },
           {
             question: 'For a two-sample t-test, conditions are checked on:',
-            options: ['The combined sample', 'Each sample separately', 'The differences', 'The population'],
+            options: ['The combined data', 'Each group separately', 'The paired differences', 'The population values'],
             correctAnswer: 1,
             explanation: 'Each sample must independently satisfy randomness, normality, and independence.'
           },
@@ -239,15 +239,15 @@ Since $P < 0.001 < 0.05 = \\alpha$, we reject $H_0$.
           },
           {
             question: 'Which conclusion is best if $P = 0.03$ and $\\alpha = 0.05$?',
-            options: ['Accept $H_a$', 'Reject $H_0$; there is convincing evidence... (in context)', 'The result is proven', '$H_0$ is false'],
+            options: ['Accept $H_a$; the claim is proven true', 'Reject $H_0$; convincing evidence for $H_a$', 'Fail to reject $H_0$; the result is weak', 'Reject $H_a$; $H_0$ is shown to be false'],
             correctAnswer: 1,
-            explanation: 'Reject $H_0$ and state there is convincing evidence in the context of the problem.'
+            explanation: '$P = 0.03 < 0.05$, so reject $H_0$ and state that there is convincing evidence for $H_a$ in context. A test never proves a claim, and with $p < \\alpha$ we do not fail to reject.'
           },
           {
             question: 'Which conclusion is best if $P = 0.18$ and $\\alpha = 0.05$?',
-            options: ['Accept $H_0$', 'Fail to reject $H_0$; there is not convincing evidence... (in context)', 'The null is proven true', 'Reject $H_a$'],
+            options: ['Accept $H_0$; it is shown to be true', 'Fail to reject $H_0$; not convincing evidence', 'Reject $H_0$; the evidence is convincing', 'Reject $H_a$; the claim is shown false'],
             correctAnswer: 1,
-            explanation: 'We fail to reject $H_0$ — we do not have convincing evidence to support $H_a$.'
+            explanation: '$P = 0.18 > 0.05$, so we fail to reject $H_0$: there is not convincing evidence for $H_a$. A large p-value never proves $H_0$ or shows $H_a$ false.'
           },
           {
             question: 'A study randomly assigns 60 runners to two shoe brands and records marathon times. The test statistic is $t = -1.84$ with $P = 0.071$. At $\\alpha = 0.05$:',
@@ -263,19 +263,19 @@ Since $P < 0.001 < 0.05 = \\alpha$, we reject $H_0$.
           },
           {
             question: 'A result is "statistically significant" but the effect size is tiny. What should you conclude?',
-            options: ['The result is important', 'The result is statistically detectable but may not be practically meaningful', 'The test was done wrong', 'We should ignore the result'],
+            options: ['The result must be practically important', 'It may not matter in practical terms', 'The test must have been done incorrectly', 'The result should be ignored entirely'],
             correctAnswer: 1,
             explanation: 'Statistical significance $\\neq$ practical importance. A large sample can detect tiny, meaningless differences.'
           },
           {
             question: 'When stating hypotheses for a paired test, $\\mu_d$ should be defined as:',
-            options: ['The sample mean difference', 'The true mean difference for the population, specifying the direction of subtraction', 'The standard deviation of differences', 'The range of differences'],
+            options: ['The mean difference in the sample data', 'The population mean difference, with its direction', 'The standard deviation of the differences', 'The range of the observed differences'],
             correctAnswer: 1,
             explanation: '$\\mu_d$ is the population parameter (true mean difference), and you must clearly state which direction is being subtracted.'
           },
           {
             question: 'Which of the following is NOT part of the 4-step inference process?',
-            options: ['State hypotheses', 'Check conditions', 'Determine sample size', 'State conclusion in context'],
+            options: ['State hypotheses', 'Check conditions', 'Determine sample size', 'State the conclusion'],
             correctAnswer: 2,
             explanation: 'The 4 steps are: State, Check conditions (Plan), Calculate (Do), Conclude. Sample size determination happens before data collection.'
           }

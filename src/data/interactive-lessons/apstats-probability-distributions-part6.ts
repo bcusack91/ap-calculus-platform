@@ -25,34 +25,34 @@ Who performed better?
 - Student A: scored 680 on SAT $(\\mu = 500, \\sigma = 100)$
 - Student B: scored 28 on ACT $(\\mu = 21, \\sigma = 5)$
 
-$$z_A = \\frac{680-500}{100} = 1.80 \\\\qquad z_B = \\frac{28-21}{5} = 1.40$$
+$$z_A = \\frac{680-500}{100} = 1.80 \\qquad z_B = \\frac{28-21}{5} = 1.40$$
 
 Student A has a higher z-score, so Student A did relatively better.`
     },    {
       id: 'probdistributions-p6-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'To compare scores from different distributions, you should:',
-            options: ['Compare raw scores', 'Compare z-scores', 'Compare means', 'Compare standard deviations'],
+            options: ['Compare the raw scores', 'Compare the z-scores', 'Compare the two means', 'Compare the two standard deviations'],
             correctAnswer: 1,
-            explanation: 'Z-scores standardize values, putting them on the same scale for comparison.'
+            explanation: 'Z-scores (or percentiles) standardize each value within its own distribution, putting both on the same scale. Raw scores ignore the different centers and spreads, and the means or SDs describe the groups, not the individuals.'
           },
           {
             question: 'The 90th percentile of $N(100, 15)$ is approximately:',
             options: ['$100 + 1.28(15) \\approx 119.2$', '$100 + 1.645(15) \\approx 124.7$', '$100 + 1.96(15) \\approx 129.4$', '$100 + 0.90(15) \\approx 113.5$'],
             correctAnswer: 0,
-            explanation: '90th percentile: $z = 1.28$. $x = 100 + 1.28(15) = 119.2$.'
+            explanation: '90th percentile: $z = 1.28$, so $x = 100 + 1.28(15) = 119.2$. 1.645 is the 95th percentile, 1.96 the 97.5th, and 0.90 is an area, not a z-score.'
           },
           {
             question: 'If $P(Z < z) = 0.025$, then $z \\approx$:',
             options: ['-1.96', '-1.645', '1.96', '1.645'],
             correctAnswer: 0,
-            explanation: '2.5% in the left tail corresponds to $z = -1.96$.'
+            explanation: '2.5% in the left tail corresponds to $z = -1.96$. $-1.645$ leaves 5% in the left tail, and the positive values have most of the area to their left.'
           }
         ]
       }

@@ -4,7 +4,7 @@ export const apStatsBinomGeomPart1Data = {
     {
       id: 'binomialgeometric-p1-intro',
       type: 'text' as const,
-      content: `# 🎰 Binomial & Geometric Distributions
+      content: `# 🎰 Binomial Distributions
 
 **Part 1 of 7 — The Binomial Setting**
 
@@ -12,7 +12,7 @@ export const apStatsBinomGeomPart1Data = {
 
 ### BINS Criteria
 
-A random variable $X$ is binomial if:
+A random variable $X$ is binomial if it counts the number of successes and:
 
 | Letter | Condition |
 |--------|-----------|
@@ -23,17 +23,17 @@ A random variable $X$ is binomial if:
 
 ---
 
-### Binomial Distribution: $X \\\\sim B(n, p)$
+### Binomial Distribution: $X \\sim B(n, p)$
 
 $$P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k}$$
 
-where $\\binom{n}{k} = \\frac{n!}{k!(n-k)!}$
+where $\\binom{n}{k} = \\frac{n!}{k!(n-k)!}$ and $k = 0, 1, 2, \\ldots, n$
 
 ---
 
 ### Mean and Standard Deviation
 
-$$\\mu = np \\\\qquad \\sigma = \\sqrt{np(1-p)}$$
+$$\\mu = np \\qquad \\sigma = \\sqrt{np(1-p)}$$
 
 **Example:** 20 free throws, $p = 0.8$
 - $\\mu = 20(0.8) = 16$
@@ -42,27 +42,27 @@ $$\\mu = np \\\\qquad \\sigma = \\sqrt{np(1-p)}$$
       id: 'binomialgeometric-p1-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'Which is NOT required for a binomial setting?',
-            options: ['Fixed number of trials', 'Independent trials', 'Constant probability', 'Outcomes must be numerical'],
+            options: ['A fixed number of trials, n', 'Trials that are independent', 'The same success probability on each trial', 'Outcomes that are numbers'],
             correctAnswer: 3,
-            explanation: 'BINS: Binary, Independent, fixed Number, Same probability. Outcomes just need to be success/failure.'
+            explanation: 'BINS: Binary, Independent, fixed Number, Same probability. Each trial only has to be classified as a success or a failure, so the outcomes do not need to be numbers. A fixed number of trials, independence and a constant success probability are all required.'
           },
           {
-            question: '$X \\\\sim B(10, 0.3)$. $E(X) = ?$',
-            options: ['3', '7', '0.3', '10'],
+            question: '$X \\sim B(10, 0.3)$. $E(X) = ?$',
+            options: ['3', '0.3', '7', '1.45'],
             correctAnswer: 0,
-            explanation: '$E(X) = np = 10(0.3) = 3$.'
+            explanation: '$E(X) = np = 10(0.3) = 3$. The value 7 uses $n(1-p)$, 0.3 is just $p$, and 1.45 is the standard deviation $\\sqrt{10(0.3)(0.7)}$, not the mean.'
           },
           {
-            question: 'Rolling a die until you get a 6 is NOT binomial because:',
-            options: ['Outcomes aren’t binary', 'Trials aren’t independent', 'There’s no fixed number of trials', 'Probability changes'],
+            question: 'Rolling a die until you get a 6 does NOT give a binomial count because:',
+            options: ['Each roll has more than two outcomes', 'The rolls are not independent', 'The number of rolls is not fixed in advance', 'The chance of a 6 changes each roll'],
             correctAnswer: 2,
-            explanation: 'No fixed $n$ — you keep rolling until success. This is geometric, not binomial.'
+            explanation: 'There is no fixed $n$: you keep rolling until the first 6 appears. The rolls are independent with a constant $P(6) = 1/6$, and "6" versus "not 6" makes each roll binary even though the die has six faces.'
           }
         ]
       }

@@ -19,7 +19,7 @@ export const apStatsComparingPart7Data = {
 | Standard Error | $SE = \\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}$ |
 | Test Statistic | $t = \\frac{(\\bar{x}_1 - \\bar{x}_2) - (\\mu_1 - \\mu_2)_0}{SE}$ |
 | Confidence Interval | $(\\bar{x}_1 - \\bar{x}_2) \\pm t^* \\cdot SE$ |
-| Degrees of Freedom | Use technology (Welch\'s approximation) |
+| Degrees of Freedom | Use technology (or conservatively the smaller of $n_1 - 1$, $n_2 - 1$) |
 
 ### Paired T-Test
 
@@ -41,7 +41,7 @@ export const apStatsComparingPart7Data = {
 | Before/after design? | ✅ | ❌ |
 | Matched pairs (twins, siblings)? | ✅ | ❌ |
 | Two independent groups? | ❌ | ✅ |
-| Random assignment to groups? | ❌ | ✅ |
+| Two separate groups formed by random assignment? | ❌ | ✅ |
 | Check conditions on... | Differences $d_i$ | Each sample |
 | $df = $ | $n - 1$ | Technology |
 
@@ -79,7 +79,7 @@ export const apStatsComparingPart7Data = {
 
 | Part | Topic | Key Idea |
 |:---:|-------|----------|
-| 1 | Introduction | Two-sample vs. paired designs |
+| 1 | Two-Proportion Z-Test | Pooled $\\hat{p}_c$ under $H_0: p_1 = p_2$ |
 | 2 | Two-Sample T-Test | Tests for differences between independent groups |
 | 3 | Paired T-Test | Tests for differences within matched pairs |
 | 4 | Confidence Intervals | Estimate the true difference with a range |
@@ -106,7 +106,7 @@ Power increases when: $n \\uparrow$, $\\alpha \\uparrow$, effect size $\\uparrow
         questions: [
           {
             question: 'A paired t-test is appropriate when:',
-            options: ['Two independent random samples are collected', 'Each subject is measured under two conditions', 'Sample sizes are equal', 'The population is normal'],
+            options: ['Two independent random samples are collected', 'Each subject is measured twice', 'The two samples have equal sizes', 'The population of values is normal'],
             correctAnswer: 1,
             explanation: 'Paired tests are used when each subject provides two measurements or when subjects are naturally matched.'
           },
@@ -118,9 +118,9 @@ Power increases when: $n \\uparrow$, $\\alpha \\uparrow$, effect size $\\uparrow
           },
           {
             question: 'For all hypothesis tests, the conclusion must include:',
-            options: ['The exact p-value to 10 decimal places', 'Context relating to the problem situation', 'A proof that $H_0$ is false', 'The population standard deviation'],
+            options: ['A p-value rounded to many decimal places', 'Context from the problem', 'A statement that $H_0$ is proven false', 'The population standard deviation'],
             correctAnswer: 1,
-            explanation: 'AP scoring rubrics always require context — your conclusion must reference the specific variables and setting.'
+            explanation: 'Scoring guidelines require conclusions in context: they must refer to the variables and the setting of the problem. A test never proves $H_0$ false, and extra decimal places add nothing.'
           }
         ]
       }
@@ -168,14 +168,14 @@ Power increases when: $n \\uparrow$, $\\alpha \\uparrow$, effect size $\\uparrow
           {
             id: 'cp7-dd1',
             label: 'If 0 is inside a 95% CI for $\\mu_1 - \\mu_2$, the two-sided test at $\\alpha = 0.05$ will ___',
-            options: ['reject $H_0$', 'fail to reject $H_0$'],
+            options: ['reject $H_0$ outright', 'fail to reject $H_0$', 'accept $H_0$ as true', 'reject $H_a$ as false'],
             correctIndex: 1,
             explanation: '0 in the CI means the data is consistent with no difference → fail to reject.'
           },
           {
             id: 'cp7-dd2',
             label: 'A study with $n = 500$ per group finds $P = 0.03$ but the difference is 0.2 points on a 100-point scale. The result is statistically significant but ___',
-            options: ['practically important', 'not practically meaningful', 'invalid'],
+            options: ['practically important', 'of little practical value', 'statistically invalid', 'proof of a large effect'],
             correctIndex: 1,
             explanation: 'A 0.2-point difference on a 100-point scale is trivially small despite being "significant" with a large sample.'
           },
@@ -189,7 +189,7 @@ Power increases when: $n \\uparrow$, $\\alpha \\uparrow$, effect size $\\uparrow
           {
             id: 'cp7-dd4',
             label: 'In a paired design, increasing the number of pairs will ___ the standard error',
-            options: ['increase', 'decrease', 'not change'],
+            options: ['increase', 'decrease', 'not change', 'double'],
             correctIndex: 1,
             explanation: '$SE = s_d / \\sqrt{n}$. Larger $n$ → smaller SE.'
           }
@@ -206,9 +206,9 @@ Power increases when: $n \\uparrow$, $\\alpha \\uparrow$, effect size $\\uparrow
         questions: [
           {
             question: 'The SE for a two-sample t-test is:',
-            options: ['$\\frac{s_1 + s_2}{n_1 + n_2}$', '$\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}$', '$\\frac{s_d}{\\sqrt{n}}$', '$\\frac{\\bar{x}_1 - \\bar{x}_2}{t}$'],
+            options: ['$\\sqrt{\\frac{s_1}{n_1} + \\frac{s_2}{n_2}}$', '$\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}$', '$\\frac{s_d}{\\sqrt{n}}$', '$\\sqrt{\\frac{s_1^2 + s_2^2}{n_1 + n_2 - 2}}$'],
             correctAnswer: 1,
-            explanation: 'The two-sample SE combines the variability from both samples: $\\sqrt{s_1^2/n_1 + s_2^2/n_2}$.'
+            explanation: 'The two-sample SE combines the variability from both samples: $\\sqrt{s_1^2/n_1 + s_2^2/n_2}$. Using $s$ instead of $s^2$, the paired formula, or a pooled-looking denominator gives the wrong value.'
           },
           {
             question: 'The SE for a paired t-test is:',
@@ -218,13 +218,13 @@ Power increases when: $n \\uparrow$, $\\alpha \\uparrow$, effect size $\\uparrow
           },
           {
             question: 'A 90% CI for $\\mu_A - \\mu_B$ is $(-3.1, 0.8)$. What can we say?',
-            options: ['$\\mu_A > \\mu_B$', '$\\mu_A < \\mu_B$', 'We cannot conclude a significant difference at $\\alpha = 0.10$', 'The test is invalid'],
+            options: ['Convincing evidence that $\\mu_A > \\mu_B$', 'Convincing evidence that $\\mu_A < \\mu_B$', 'No convincing difference at $\\alpha = 0.10$', 'The interval is invalid since it has 0'],
             correctAnswer: 2,
             explanation: 'The interval contains 0, so we cannot conclude there is a difference at $\\alpha = 0.10$.'
           },
           {
             question: '20 students take a pre-test and post-test. The appropriate analysis uses:',
-            options: ['Two-sample t-test', 'Paired t-test with $df = 19$', 'Paired t-test with $df = 39$', 'Z-test'],
+            options: ['Two-sample t-test with $df = 19$', 'Paired t-test with $df = 19$', 'Paired t-test with $df = 39$', 'Two-sample t-test with $df = 38$'],
             correctAnswer: 1,
             explanation: 'Same students tested twice → paired data. $df = n - 1 = 20 - 1 = 19$.'
           },
@@ -236,19 +236,19 @@ Power increases when: $n \\uparrow$, $\\alpha \\uparrow$, effect size $\\uparrow
           },
           {
             question: 'A researcher fails to reject $H_0$. This means:',
-            options: ['$H_0$ is true', '$H_a$ is false', 'There is not sufficient evidence against $H_0$', 'The test was done incorrectly'],
+            options: ['$H_0$ has been shown to be true', '$H_a$ has been shown to be false', 'The evidence against $H_0$ is not convincing', 'The test must have been done incorrectly'],
             correctAnswer: 2,
             explanation: 'Failing to reject means insufficient evidence; it does NOT prove $H_0$ is true.'
           },
           {
             question: 'Which conditions apply to the DIFFERENCES in a paired test?',
-            options: ['Random, Normal, Independent', 'Only Normal', 'Only Independence', 'None — conditions are not needed for paired tests'],
+            options: ['Random, Normal and Independent', 'Only the Normal one', 'Only Independence', 'None of them'],
             correctAnswer: 0,
             explanation: 'All three standard conditions (Random, Normal, Independent) must be checked for the differences.'
           },
           {
             question: 'A two-sample t-test yields $t = 2.15$ with $P = 0.037$. At $\\alpha = 0.05$:',
-            options: ['Fail to reject $H_0$', 'Reject $H_0$ — there is convincing evidence of a difference', 'The result is inconclusive', 'We need a larger sample'],
+            options: ['Fail to reject $H_0$; no convincing evidence', 'Reject $H_0$; convincing evidence', 'Fail to reject $H_0$; the result is inconclusive', 'Reject $H_0$; the means are proven different'],
             correctAnswer: 1,
             explanation: '$P = 0.037 < 0.05 = \\alpha$ → reject $H_0$.'
           },
@@ -259,10 +259,10 @@ Power increases when: $n \\uparrow$, $\\alpha \\uparrow$, effect size $\\uparrow
             explanation: 'Power $= 1 - \\beta = 1 - 0.25 = 0.75$.'
           },
           {
-            question: 'The most common error on AP free-response comparing populations questions is:',
-            options: ['Using the wrong formula', 'Failing to state a conclusion in context and not checking conditions', 'Getting the wrong $P$-value', 'Using a calculator'],
+            question: 'Which statement about a two-sample $t$ interval for $\\mu_1 - \\mu_2$ is correct?',
+            options: ['It is always centered at the value 0', 'It is centered at $\\bar{x}_1 - \\bar{x}_2$', 'It pools $s_1$ and $s_2$ into one SD', 'It uses $df = n_1 + n_2 - 2$ exactly'],
             correctAnswer: 1,
-            explanation: 'The most frequent deductions are for missing context in conclusions and not verifying conditions.'
+            explanation: 'A confidence interval is centered at the point estimate $\\bar{x}_1 - \\bar{x}_2$. It is centered at 0 only by coincidence, the AP procedure does not pool the SDs, and the df come from technology or the conservative smaller of $n_1 - 1$ and $n_2 - 1$.'
           }
         ]
       }

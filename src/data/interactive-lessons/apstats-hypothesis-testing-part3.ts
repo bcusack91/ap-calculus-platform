@@ -97,9 +97,9 @@ Always include four elements:
           },
           {
             question: 'A P-value of 0.45 means:',
-            options: ['Strong evidence against $H_0$', 'The result is 45% true', 'There is a 45% chance data this extreme would occur under $H_0$', '$H_0$ is 45% likely to be true'],
+            options: ['Strong evidence against the null', 'A 45% chance that $H_0$ is true', 'A 45% chance of data this extreme if $H_0$ holds', 'A 45% chance that the result is a mistake'],
             correctAnswer: 2,
-            explanation: 'P-value = probability of obtaining results this extreme assuming $H_0$ is true.'
+            explanation: 'The p-value is the probability of results at least this extreme, computed assuming $H_0$ is true. It is not the probability that $H_0$ is true, and 0.45 is weak, not strong, evidence against $H_0$.'
           },
           {
             question: 'A two-tailed P-value is ___ the one-tailed P-value for the same $t$-statistic.',
@@ -153,23 +153,23 @@ Always include four elements:
           {
             id: 'ht3-dd1',
             label: 'If $P < \\alpha$, the result is called:',
-            options: ['Practically significant', 'Statistically significant', 'Insignificant', 'Inconclusive'],
+            options: ['Practically significant', 'Statistically significant', 'Practically important', 'Not significant'],
             correctIndex: 1,
             explanation: '$P < \\alpha$ means the result is statistically significant — unlikely under $H_0$.'
           },
           {
             id: 'ht3-dd2',
             label: 'A P-value of 0.002 provides ___ evidence against $H_0$',
-            options: ['No', 'Weak', 'Moderate', 'Very strong'],
+            options: ['No real', 'Weak', 'Only moderate', 'Very strong'],
             correctIndex: 3,
             explanation: '$P \\leq 0.01$ = very strong evidence against $H_0$.'
           },
           {
             id: 'ht3-dd3',
             label: '"Fail to reject $H_0$" means:',
-            options: ['$H_0$ is proven true', 'We lack sufficient evidence against $H_0$', 'The experiment failed', '$H_a$ is impossible'],
+            options: ['$H_0$ has been proven to be true', 'Weak evidence against $H_0$', 'The experiment was a complete failure', '$H_a$ has been shown to be impossible'],
             correctIndex: 1,
-            explanation: 'Failing to reject does not prove $H_0$ — it means the evidence was not strong enough.'
+            explanation: 'Failing to reject means the evidence against $H_0$ was not strong enough. It does not prove $H_0$, rule out $H_a$, or mean the study failed.'
           }
         ]
       }
@@ -196,9 +196,9 @@ Always include four elements:
           },
           {
             question: '$P = 0.07$, $\\alpha = 0.05$. Conclusion:',
-            options: ['Reject $H_0$', 'Accept $H_0$', 'Fail to reject $H_0$', 'The test is invalid'],
+            options: ['Reject $H_0$', 'Accept $H_0$', 'Fail to reject $H_0$', 'Reject $H_0$ at 0.10'],
             correctAnswer: 2,
-            explanation: '$0.07 > 0.05$ → fail to reject $H_0$.'
+            explanation: '$0.07 > 0.05$, so we fail to reject $H_0$. We never accept $H_0$, and the decision must use the stated $\\alpha = 0.05$, not a level chosen afterward.'
           },
           {
             question: 'A two-tailed test with $t = 2.5$ and $df = 20$ gives a one-tail area of 0.011. The P-value is:',
@@ -208,19 +208,19 @@ Always include four elements:
           },
           {
             question: 'Which P-value gives the strongest evidence against $H_0$?',
-            options: ['0.25', '0.10', '0.05', '0.003'],
+            options: ['0.250', '0.100', '0.050', '0.003'],
             correctAnswer: 3,
             explanation: 'Smaller P-values = stronger evidence. $0.003$ is the smallest.'
           },
           {
             question: '"Statistically significant" means:',
-            options: ['The result is large', 'The result is important in practice', '$P < \\alpha$', '$P > \\alpha$'],
+            options: ['The result is large', 'The result is important in practice', '$P < \\alpha$', '$P$ is greater than $\\alpha$'],
             correctAnswer: 2,
             explanation: 'Statistical significance means $P < \\alpha$ — the result is unlikely under $H_0$.'
           },
           {
             question: 'Statistical significance does NOT guarantee:',
-            options: ['$P < \\alpha$', 'Rejection of $H_0$', 'Practical significance', 'A valid test'],
+            options: ['A p-value below $\\alpha$', 'Rejection of $H_0$', 'Practical importance', 'A result unlikely under $H_0$'],
             correctAnswer: 2,
             explanation: 'A statistically significant result may involve a tiny, meaningless effect. Practical significance is separate.'
           },
@@ -232,15 +232,15 @@ Always include four elements:
           },
           {
             question: 'An AP-style conclusion should include:',
-            options: ['Only the decision', 'Decision + P-value + context', 'Only the P-value', 'Only the context'],
+            options: ['The decision alone', 'Decision, P-value and context', 'The P-value alone', 'The context alone'],
             correctAnswer: 1,
             explanation: 'Include the decision, evidence (t and P), and the real-world context of the problem.'
           },
           {
             question: 'A researcher obtains $P = 0.06$ at $\\alpha = 0.05$. The best statement is:',
-            options: ['$H_0$ is true', 'The data prove $H_a$', 'We lack sufficient evidence to reject $H_0$ at the 5% level', 'The experiment was flawed'],
+            options: ['The data show that $H_0$ must be true', 'The data prove that $H_a$ is correct', 'Not enough evidence to reject $H_0$', 'The experiment must have been flawed'],
             correctAnswer: 2,
-            explanation: '$P = 0.06 > 0.05$: fail to reject. But this does NOT prove $H_0$ — just insufficient evidence.'
+            explanation: '$P = 0.06 > 0.05$: fail to reject $H_0$ at the 5% level. That does NOT prove $H_0$ or $H_a$; it means the evidence was not convincing.'
           }
         ]
       }

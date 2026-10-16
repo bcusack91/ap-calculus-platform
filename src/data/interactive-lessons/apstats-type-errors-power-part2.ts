@@ -14,7 +14,7 @@ export const apStatsErrorsPart2Data = {
 
 Decreasing $\\alpha$ (harder to reject $H_0$) → **increases** $\\beta$ (more likely to miss real effects).
 
-$$\\alpha \\\\downarrow \\\\implies \\beta \\\\uparrow$$
+$$\\alpha \\downarrow \\implies \\beta \\uparrow$$
 
 You can’t minimize both simultaneously with a fixed sample size.
 
@@ -37,7 +37,7 @@ Choose $\\alpha$ by considering which error is worse:
       id: 'typeerrorspower-p2-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
@@ -49,9 +49,9 @@ Choose $\\alpha$ by considering which error is worse:
           },
           {
             question: 'A drug company testing a new medication should use $\\alpha = 0.01$ because:',
-            options: ['They want to find more effects', 'A Type I error (approving a bad drug) is very serious', 'A Type II error is more costly', 'It reduces the sample size needed'],
+            options: ['They want to detect more real effects', 'Approving an ineffective drug is costly', 'Missing an effective drug is costlier', 'It reduces the sample size they need'],
             correctAnswer: 1,
-            explanation: 'Approving a harmful drug (Type I) is dangerous. A low $\\alpha$ provides stronger proof before approval.'
+            explanation: 'Approving an ineffective or harmful drug (a Type I error) is very serious, so a small $\\alpha$ demands stronger evidence before approval. A smaller $\\alpha$ detects FEWER effects and needs a LARGER sample for the same power.'
           },
           {
             question: 'The only way to lower BOTH $\\alpha$ and $\\beta$ is to:',

@@ -48,7 +48,7 @@ A special case of blocking where:
       id: 'experimentaldesign-p3-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
@@ -56,17 +56,17 @@ A special case of blocking where:
             question: 'Blocking is used to:',
             options: ['Increase sample size', 'Reduce variability within groups', 'Eliminate the need for randomization', 'Create bias'],
             correctAnswer: 1,
-            explanation: 'Blocking reduces variability by grouping similar units together, making it easier to detect treatment effects.'
+            explanation: 'Blocking groups similar units so that variability from the blocking variable is accounted for, making treatment effects easier to detect. It does not replace randomization, which still happens within each block.'
           },
           {
             question: 'In a matched pairs design:',
-            options: ['Subjects are randomly selected from a population', 'Each block contains exactly 2 experimental units', 'No randomization is needed', 'The sample size must be even'],
+            options: ['Subjects are randomly sampled', 'Each block contains exactly 2 experimental units', 'No randomization is needed', 'The sample size must be even'],
             correctAnswer: 1,
             explanation: 'Matched pairs = blocks of size 2, either paired subjects or same subject under both conditions.'
           },
           {
             question: 'A good blocking variable is one that:',
-            options: ['Is randomly assigned', 'Is known to affect the response variable', 'Has nothing to do with the response', 'Is the same as the explanatory variable'],
+            options: ['Is randomly assigned by the researcher', 'Is expected to affect the response', 'Is unrelated to the response variable', 'Is the same as the explanatory variable'],
             correctAnswer: 1,
             explanation: 'Block on variables you believe influence the response to reduce unexplained variability.'
           }

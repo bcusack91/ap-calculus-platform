@@ -48,13 +48,13 @@ export const apStatsNormalDistPart3Data = {
             question: 'GPA follows $N(3.0, 0.5)$. The proportion of students with GPA above 4.0 involves $z =$',
             options: ['$z = 0.5$', '$z = 1.0$', '$z = 2.0$', '$z = 4.0$'],
             correctAnswer: 2,
-            explanation: '$z = (4.0 - 3.0)/0.5 = 2.0$.'
+            explanation: '$z = (4.0 - 3.0)/0.5 = 2.0$. 1.0 is the raw distance before dividing by $\\sigma = 0.5$, and 0.5 multiplies by $\\sigma$ instead of dividing.'
           },
           {
             question: 'The 50th percentile of any normal distribution is:',
-            options: ['The mode', 'The standard deviation', 'The mean', 'Zero'],
+            options: ['The value zero', 'One SD above the mean', 'The mean', 'The standard deviation'],
             correctAnswer: 2,
-            explanation: 'For a normal distribution (symmetric), the 50th percentile = median = mean.'
+            explanation: 'A normal distribution is symmetric, so half the area lies below $\\mu$: the 50th percentile is the mean (and median). Zero is the 50th percentile only of the standard normal $Z$, and one SD above the mean is about the 84th percentile.'
           }
         ]
       }

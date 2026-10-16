@@ -43,7 +43,7 @@ Modified boxplots show outliers as individual dots beyond the fences.`
       id: 'exploratorydata-p5-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
@@ -51,19 +51,19 @@ Modified boxplots show outliers as individual dots beyond the fences.`
             question: 'Income data is typically:',
             options: ['Symmetric', 'Skewed right', 'Skewed left', 'Uniform'],
             correctAnswer: 1,
-            explanation: 'Most people earn moderate incomes, but a few high earners create a long right tail.'
+            explanation: 'Most people earn moderate incomes, but a few high earners create a long right tail. Income cannot fall far below zero, so there is no long left tail.'
           },
           {
             question: 'A modified boxplot differs from a regular boxplot by:',
-            options: ['Using a different median', 'Showing outliers as individual points', 'Not showing quartiles', 'Using the mean instead of median'],
+            options: ['Using the mean, not the median', 'Plotting outliers as separate points', 'Leaving out the quartiles entirely', 'Drawing whiskers to the min and max'],
             correctAnswer: 1,
-            explanation: 'Modified boxplots plot outliers individually beyond the whiskers (fences).'
+            explanation: 'A modified boxplot plots outliers as separate points, and its whiskers stop at the most extreme values that are not outliers. It still shows the median and quartiles, and it never replaces the median with the mean.'
           },
           {
             question: 'Which pair of statistics is BOTH resistant to outliers?',
-            options: ['Mean and SD', 'Median and IQR', 'Mean and IQR', 'Median and range'],
+            options: ['Mean and SD', 'Median and IQR', 'Mean and IQR', 'Range and median'],
             correctAnswer: 1,
-            explanation: 'Both median and IQR are resistant measures (not affected by extreme values).'
+            explanation: 'The median and IQR depend only on middle positions, so both are resistant. The mean, SD and range all use extreme values, so any pair containing one of them is not fully resistant.'
           }
         ]
       }
@@ -73,7 +73,7 @@ Modified boxplots show outliers as individual dots beyond the fences.`
       content: `
 **Distribution Description** 🧮
 
-A histogram of household income in a city shows a peak around $50,000 with a long tail stretching to $500,000+.
+A histogram of household income in a city shows a peak around \\$50,000 with a long tail stretching past \\$500,000.
 
 **1)** What is the shape? (symmetric/skewed right/skewed left)
 

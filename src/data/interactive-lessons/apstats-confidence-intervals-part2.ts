@@ -93,7 +93,7 @@ We are 95% confident that the true proportion of all U.S. adults who support the
         questions: [
           {
             question: 'In the formula $\\hat{p} \\pm z^*\\sqrt{\\hat{p}(1-\\hat{p})/n}$, the term $z^*\\sqrt{\\hat{p}(1-\\hat{p})/n}$ is called the:',
-            options: ['Standard error', 'Point estimate', 'Margin of error', 'Confidence level'],
+            options: ['Standard error', 'Point estimate', 'Margin of error', 'Confidence'],
             correctAnswer: 2,
             explanation: 'The margin of error = $z^* \\times SE$. It represents the "plus or minus" part of the confidence interval.'
           },
@@ -105,7 +105,7 @@ We are 95% confident that the true proportion of all U.S. adults who support the
           },
           {
             question: 'Which would NOT help reduce the margin of error?',
-            options: ['Increasing sample size', 'Using a lower confidence level', 'Getting $\\hat{p}$ closer to 0 or 1', 'Increasing the population size'],
+            options: ['Increasing sample size', 'A lower confidence level', '$\\hat{p}$ nearer to 0 or 1', 'Increasing the population size'],
             correctAnswer: 3,
             explanation: 'Population size does not appear in the margin of error formula ($z^*\\sqrt{\\hat{p}(1-\\hat{p})/n}$). The ME depends on $n$, $z^*$, and $\\hat{p}$.'
           }
@@ -157,21 +157,21 @@ A survey of 800 randomly selected teenagers finds that 480 use social media dail
           {
             id: 'ci2-dd1',
             label: '"There is a 95% chance that $p$ is in this interval" is:',
-            options: ['Correct', 'Incorrect — $p$ is fixed, not random'],
+            options: ['Correct', 'Incorrect', 'Correct only for 99% intervals', 'Correct if $n$ is large'],
             correctIndex: 1,
             explanation: 'The parameter $p$ is a fixed (unknown) value. It is either in the interval or not. The 95% refers to the long-run success rate of the method.'
           },
           {
             id: 'ci2-dd2',
             label: 'For CIs, the Large Counts condition uses ___ (not $p_0$)',
-            options: ['$\\hat{p}$', '$\\mu$', '$\\sigma$', '$z^*$'],
+            options: ['$\\hat{p}$', '$\\bar{x}$', '$\\sigma$', '$z^*$'],
             correctIndex: 0,
             explanation: 'Confidence intervals use $\\hat{p}$ for condition checks because there is no hypothesized value. Hypothesis tests use $p_0$.'
           },
           {
             id: 'ci2-dd3',
             label: 'If a 95% CI for $p$ is $(0.45, 0.55)$, we ___ reject $H_0: p = 0.50$ at $\\alpha = 0.05$',
-            options: ['would', 'would not'],
+            options: ['would', 'would not', 'must', 'could only'],
             correctIndex: 1,
             explanation: '0.50 is inside the interval, so it is a plausible value. We would NOT reject $H_0: p = 0.50$ at the 5% level.'
           },
@@ -219,7 +219,7 @@ A survey of 800 randomly selected teenagers finds that 480 use social media dail
           },
           {
             question: 'To decrease the margin of error, a researcher could:',
-            options: ['Increase the confidence level', 'Decrease the sample size', 'Increase the sample size', 'Use $\\hat{p} = 0.5$'],
+            options: ['Raise the confidence', 'Use a smaller sample', 'Increase the sample size', 'Use $\\hat{p} = 0.5$'],
             correctAnswer: 2,
             explanation: 'Increasing $n$ decreases SE, which decreases ME. Increasing confidence level would INCREASE ME.'
           },
@@ -231,7 +231,7 @@ A survey of 800 randomly selected teenagers finds that 480 use social media dail
           },
           {
             question: 'Which is a correct interpretation? "We are 95% confident that..."',
-            options: ['...95% of Americans support the policy', '...the true proportion of Americans who support the policy is between 0.52 and 0.68', '...the sample proportion is between 0.52 and 0.68', '...the next sample will give $\\hat{p}$ between 0.52 and 0.68'],
+            options: ['...95% of Americans support the policy', '...the true proportion who support it is between 0.52 and 0.68', '...the sample proportion is between 0.52 and 0.68', '...the next sample proportion will fall between 0.52 and 0.68'],
             correctAnswer: 1,
             explanation: 'A CI estimates the population PARAMETER (the true proportion), not the sample statistic or individual data values.'
           },
@@ -249,9 +249,9 @@ A survey of 800 randomly selected teenagers finds that 480 use social media dail
           },
           {
             question: 'A senator claims 60% support. A 95% CI is $(0.52, 0.58)$. We can conclude:',
-            options: ['60% is plausible', '60% is not a plausible value for $p$', 'The senator is definitely wrong', 'The CI is too narrow'],
+            options: ['60% is still a plausible value', '60% is not plausible', 'The senator is definitely wrong', 'The interval is far too narrow'],
             correctAnswer: 1,
-            explanation: '$0.60$ falls outside the interval $(0.52, 0.58)$. It is not a plausible value at the 95% confidence level, which casts doubt on the claim.'
+            explanation: '$0.60$ falls outside $(0.52, 0.58)$, so it is not a plausible value for $p$ at 95% confidence, which casts doubt on the claim. That is evidence against the claim, not proof that it is wrong.'
           }
         ]
       }

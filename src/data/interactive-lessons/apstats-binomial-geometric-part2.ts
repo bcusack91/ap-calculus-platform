@@ -24,7 +24,7 @@ $P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k}$
 
 ### Worked Example
 
-$X \\\\sim B(5, 0.4)$. Find $P(X \\geq 3)$.
+$X \\sim B(5, 0.4)$. Find $P(X \\geq 3)$.
 
 $P(X \\geq 3) = P(3) + P(4) + P(5)$
 
@@ -37,7 +37,7 @@ $= 0.2304 + 0.0768 + 0.01024 = 0.3174$`
       id: 'binomialgeometric-p2-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
@@ -45,19 +45,19 @@ $= 0.2304 + 0.0768 + 0.01024 = 0.3174$`
             question: '$P(X \\geq 3)$ equals:',
             options: ['$1 - P(X \\leq 3)$', '$1 - P(X \\leq 2)$', '$P(X \\leq 3) - P(X \\leq 2)$', '$P(X = 3)$'],
             correctAnswer: 1,
-            explanation: '$P(X \\geq 3) = 1 - P(X \\leq 2)$ since we want 3 or more.'
+            explanation: '$P(X \\geq 3) = 1 - P(X \\leq 2)$: the complement of "3 or more" is "2 or fewer". Subtracting $P(X \\leq 3)$ would also remove $X = 3$, and $P(X \\leq 3) - P(X \\leq 2)$ is only $P(X = 3)$.'
           },
           {
             question: '$\\binom{6}{2}$ equals:',
-            options: ['12', '15', '30', '6'],
+            options: ['12', '15', '30', '36'],
             correctAnswer: 1,
-            explanation: '$\\binom{6}{2} = \\frac{6!}{2!4!} = \\frac{720}{2 \\cdot 24} = 15$.'
+            explanation: '$\\binom{6}{2} = \\frac{6!}{2!4!} = \\frac{720}{2 \\cdot 24} = 15$. 30 counts ordered pairs ($6 \\cdot 5$) without dividing by $2!$, 12 is $6 \\cdot 2$, and 36 is $6^2$.'
           },
           {
-            question: 'For $X \\\\sim B(100, 0.05)$, the mean and SD are:',
-            options: ['$\\mu=5, \\sigma \\approx 2.18$', '$\\mu=50, \\sigma=5$', '$\\mu=5, \\sigma=5$', '$\\mu=95, \\sigma \\approx 2.18$'],
+            question: 'For $X \\sim B(100, 0.05)$, the mean and SD are:',
+            options: ['$\\mu=5, \\sigma \\approx 2.18$', '$\\mu=5, \\sigma \\approx 4.75$', '$\\mu=5, \\sigma \\approx 2.24$', '$\\mu=95, \\sigma \\approx 2.18$'],
             correctAnswer: 0,
-            explanation: '$\\mu = 100(0.05) = 5$, $\\sigma = \\sqrt{100(0.05)(0.95)} = \\sqrt{4.75} \\approx 2.18$.'
+            explanation: '$\\mu = 100(0.05) = 5$, $\\sigma = \\sqrt{100(0.05)(0.95)} = \\sqrt{4.75} \\approx 2.18$. Reporting 4.75 forgets the square root, 2.24 is $\\sqrt{np}$ (it leaves out $1-p$), and 95 is $n(1-p)$, the mean number of failures.'
           }
         ]
       }
@@ -67,7 +67,7 @@ $= 0.2304 + 0.0768 + 0.01024 = 0.3174$`
       content: `
 **Binomial Calculation** 🧮
 
-$X \\\\sim B(4, 0.5)$.
+$X \\sim B(4, 0.5)$.
 
 **1)** $P(X = 2) = ?$ (as a fraction, e.g., 3/8)
 

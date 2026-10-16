@@ -25,12 +25,12 @@ export const apStatsConfIntPart6Data = {
 
 ### The 4-Step CI Framework
 
-| Step | What to Do | Points |
-|------|-----------|--------|
-| **Identify** | State the procedure, parameter, and confidence level | 1 pt |
-| **Conditions** | Name and check Random, 10%, Normal/Large | 1–2 pt |
-| **Calculate** | Show formula, substitution, and answer | 1 pt |
-| **Interpret** | "We are C% confident that the true [parameter in context] is between..." | 1 pt |
+| Step | What to Do |
+|------|-----------|
+| **Identify** | State the procedure, parameter, and confidence level |
+| **Conditions** | Name and check Random, 10%, Normal/Large |
+| **Calculate** | Show formula, substitution, and answer |
+| **Interpret** | "We are C% confident that the true [parameter in context] is between..." |
 
 ---
 
@@ -107,22 +107,22 @@ We are 90% confident that the true mean sodium content of all frozen dinners of 
       exercise: {
         questions: [
           {
-            question: 'In the 4-step CI framework, which step typically earns the most points?',
-            options: ['Identify', 'Conditions', 'Calculate', 'Interpret'],
+            question: 'In the 4-step CI framework, which step comes right after identifying the procedure?',
+            options: ['Calculate', 'Check conditions', 'Interpret', 'State hypotheses'],
             correctAnswer: 1,
-            explanation: 'Conditions usually earns 1–2 points because you must name AND verify each condition. It is the most commonly missed step.'
+            explanation: 'After identifying the procedure, parameter and confidence level, check the conditions before calculating anything; interpretation comes last, and intervals have no hypotheses.'
           },
           {
             question: 'A student checks "Random" by writing "Assume random." This is:',
-            options: ['Full credit — assumptions are fine', 'Partial credit — if the problem states random, say so', 'No credit — you cannot assume', 'Full credit — always'],
+            options: ['Full credit, since assuming is fine', 'Weaker than citing the stated sampling method', 'No credit under any circumstances', 'Full credit in every case'],
             correctAnswer: 1,
             explanation: 'If the problem states "random sample," reference that. If it does not, stating "assume random" may get partial credit but is weaker.'
           },
           {
             question: 'The 10% condition for a sample of 200 from a school of 1500 students:',
-            options: ['Fails — $200 > 10\\%$ of 1500', 'Passes — $200 < 10\\%$ of 1500', 'Fails — $200/1500 = 13.3\\% > 10\\%$', 'Does not apply'],
+            options: ['Fails, since $n \\geq 30$', 'Passes, since $200 < 1500$', 'Fails, since $200 > 150$', 'Does not apply to proportions'],
             correctAnswer: 2,
-            explanation: '$200/1500 = 0.133 = 13.3\\%$, which exceeds 10%. The 10% condition is not satisfied. This could affect the validity of the interval.'
+            explanation: '10% of 1500 is 150, and $200 > 150$, so the sample is more than 10% of the population and the condition fails. Comparing $n$ with 30 or with the whole population is not the check.'
           }
         ]
       }
@@ -156,7 +156,7 @@ We are 90% confident that the true mean sodium content of all frozen dinners of 
           {
             label: 'Margin of error',
             correctAnswer: '0.0772',
-            explanation: '$ME = 2.576 \\times 0.0300 = 0.07728 \\approx 0.0772$. The 99% CI is approximately $(0.263, 0.417)$.'
+            explanation: '$ME = 2.576 \\times 0.02996 = 0.0772$. The 99% CI is approximately $(0.263, 0.417)$.'
           }
         ]
       }
@@ -174,28 +174,28 @@ Select the correct procedure for each scenario.
           {
             id: 'ci6-dd1',
             label: 'Estimating the proportion of defective items → use',
-            options: ['One-proportion $z$-interval', 'One-sample $t$-interval'],
+            options: ['One-proportion $z$-interval', 'One-sample $t$-interval', 'Two-sample $t$-interval', 'Chi-square test'],
             correctIndex: 0,
             explanation: 'Estimating a proportion → one-proportion $z$-interval.'
           },
           {
             id: 'ci6-dd2',
             label: 'Estimating the mean weight of packages ($\\sigma$ unknown) → use',
-            options: ['One-proportion $z$-interval', 'One-sample $t$-interval'],
+            options: ['One-proportion $z$-interval', 'One-sample $t$-interval', 'Two-sample $t$-interval', 'Chi-square test'],
             correctIndex: 1,
             explanation: 'Estimating a mean with unknown $\\sigma$ → one-sample $t$-interval.'
           },
           {
             id: 'ci6-dd3',
             label: '$n = 12$, no outliers, roughly symmetric dotplot → Normal condition is',
-            options: ['Met', 'Not met — need $n \\geq 30$'],
+            options: ['Met', 'Not met, since $n < 30$', 'Met only if $n \\geq 15$', 'Not checked for $t$'],
             correctIndex: 0,
-            explanation: 'With $n < 15$, we need approximate normality. A symmetric dotplot with no outliers satisfies this for the $t$-interval.'
+            explanation: 'With $n < 30$, the condition is met when the sample data show no strong skewness or outliers, as a symmetric dotplot with no outliers does.'
           },
           {
             id: 'ci6-dd4',
             label: 'A sample of 50 from a class of 300 → 10% condition is',
-            options: ['Met — $50 < 10\\%$ of 300', 'Not met — $50/300 = 16.7\\% > 10\\%$'],
+            options: ['Met, since $50 < 300$', 'Not met, since $50/300 \\approx 17\\%$', 'Met, since $50 \\geq 30$', 'Not checked for intervals'],
             correctIndex: 1,
             explanation: '$50/300 = 16.7\\%$, which exceeds 10%. The 10% condition fails.'
           }
@@ -217,14 +217,14 @@ Select the correct procedure for each scenario.
             explanation: 'Step 1 is Identify: name the procedure (e.g., one-sample $t$-interval), the parameter, and the confidence level.'
           },
           {
-            question: 'A student skips the Conditions step on a 4-point FRQ. Maximum score:',
-            options: ['4/4', '3/4', '2/4', '1/4'],
+            question: 'A 95% CI for $p$ is $(0.31, 0.39)$. What is the margin of error?',
+            options: ['$0.08$', '$0.35$', '$0.04$', '$0.31$'],
             correctAnswer: 2,
-            explanation: 'Conditions typically earn 1–2 points. Skipping them means losing those points, so maximum is about 2/4.'
+            explanation: 'ME $= (0.39 - 0.31)/2 = 0.04$. The full width is 0.08, and 0.35 is the point estimate.'
           },
           {
             question: 'For a one-proportion $z$-interval, which condition checks that $n$ is large enough?',
-            options: ['$n \\geq 30$', '$n\\hat{p} \\geq 10$ and $n(1-\\hat{p}) \\geq 10$', '$\\sigma$ is known', 'No outliers in the sample'],
+            options: ['$n \\geq 30$ (by the CLT)', '$n\\hat{p} \\geq 10$ and $n(1-\\hat{p}) \\geq 10$', '$\\sigma$ is known for the population', 'No outliers in the sample data'],
             correctAnswer: 1,
             explanation: 'The Large Counts condition for proportions requires both $n\\hat{p} \\geq 10$ and $n(1-\\hat{p}) \\geq 10$.'
           },
@@ -236,19 +236,19 @@ Select the correct procedure for each scenario.
           },
           {
             question: 'For a $t$-interval with $n = 25$, $\\bar{x} = 60$, $s = 5$, $t^* = 2.064$, the CI is:',
-            options: ['$(57.94, 62.06)$', '$(58.0, 62.0)$', '$(55, 65)$', '$(59.0, 61.0)$'],
+            options: ['$(57.94, 62.06)$', '$(58.00, 62.00)$', '$(55.00, 65.00)$', '$(59.59, 60.41)$'],
             correctAnswer: 0,
-            explanation: '$SE = 5/5 = 1$. $ME = 2.064$. CI $= 60 \\pm 2.064 = (57.936, 62.064) \\approx (57.94, 62.06)$.'
+            explanation: '$SE = 5/\\sqrt{25} = 1$, $ME = 2.064 \\times 1 = 2.064$, so the CI is $(57.94, 62.06)$. Using 2 instead of $t^*$ gives $(58, 62)$, using $s$ as the SE gives $(55, 65)$ roughly, and dividing by $n$ gives $(59.59, 60.41)$.'
           },
           {
             question: 'A 95% CI is $(0.45, 0.61)$. Is it plausible that $p = 0.50$?',
-            options: ['Yes — 0.50 is inside the interval', 'No — 0.50 is below the center', 'Cannot determine', 'Only at the 99% level'],
+            options: ['Yes, since 0.50 is inside it', 'No, since 0.50 is below the center', 'Cannot tell without running a test', 'Only at the 99% level'],
             correctAnswer: 0,
             explanation: '0.50 is between 0.45 and 0.61, so it is a plausible value for $p$ at the 95% confidence level.'
           },
           {
             question: 'The AP exam uses the word "construct" for CIs. This means you must:',
-            options: ['Only give the interval bounds', 'Show the 4-step process', 'Just calculate the ME', 'Only interpret'],
+            options: ['Only the bounds', 'Show the 4-step process', 'Just calculate the ME', 'Only interpret'],
             correctAnswer: 1,
             explanation: '"Construct" on AP means the full 4-step process: Identify, Conditions, Calculate, Interpret.'
           },
@@ -260,7 +260,7 @@ Select the correct procedure for each scenario.
           },
           {
             question: 'If a CI does not contain 0, and the parameter is a difference in proportions, then:',
-            options: ['There is no significant difference', 'There is a statistically significant difference', '0 is the point estimate', 'The sample size was too small'],
+            options: ['There is no significant difference', 'The difference is significant', '0 is the point estimate', 'The sample size was too small'],
             correctAnswer: 1,
             explanation: 'If 0 is outside the CI for a difference, we conclude the difference is statistically significant at that confidence level.'
           },

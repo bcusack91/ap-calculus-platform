@@ -78,7 +78,7 @@ $$\\text{Read the problem} \\to \\begin{cases} \\text{"or" / "either"} &\\to \\t
             question: '$P(\\text{rain}) = 0.3$, days independent. $P(\\text{no rain on both of 2 days}) =$',
             options: ['$0.7$', '$0.49$', '$0.09$', '$0.51$'],
             correctAnswer: 1,
-            explanation: '$P(\\text{dry}) = 0.7$. Independent: $P(\\text{both dry}) = 0.7 \\times 0.7 = 0.49$.'
+            explanation: '$P(\\text{dry}) = 0.7$. Independent: $P(\\text{both dry}) = 0.7 \\times 0.7 = 0.49$. 0.09 is the chance of rain on both days, and 0.51 is the chance of rain on at least one day.'
           },
           {
             question: '"What is the probability of drawing a king OR a heart?" — Which rule?',
@@ -90,7 +90,7 @@ $$\\text{Read the problem} \\to \\begin{cases} \\text{"or" / "either"} &\\to \\t
             question: '$P(A) = 0.4$, $P(B) = 0.5$, independent. $P(A \\text{ or } B) =$',
             options: ['$0.9$', '$0.7$', '$0.2$', '$0.5$'],
             correctAnswer: 1,
-            explanation: 'Independent: $P(A \\cap B) = 0.2$. $P(A \\cup B) = 0.4 + 0.5 - 0.2 = 0.7$.'
+            explanation: 'Independent: $P(A \\cap B) = 0.4 \\times 0.5 = 0.2$, so $P(A \\cup B) = 0.4 + 0.5 - 0.2 = 0.7$. 0.9 forgets to subtract the overlap, and 0.2 is the "and" probability.'
           }
         ]
       }
@@ -184,9 +184,9 @@ $$\\text{Read the problem} \\to \\begin{cases} \\text{"or" / "either"} &\\to \\t
           },
           {
             question: 'Bag: 3 red, 7 blue. Draw 1. $P(\\text{red OR blue}) =$',
-            options: ['$0.3$', '$0.7$', '$1.0$', '$0.21$'],
+            options: ['$0.3$', '$0.7$', '$1.00$', '$0.4$'],
             correctAnswer: 2,
-            explanation: 'Red and blue are mutually exclusive and exhaust all outcomes: $P = 0.3 + 0.7 = 1.0$.'
+            explanation: 'Red and blue are mutually exclusive and together cover every outcome: $P = 0.3 + 0.7 = 1.00$. 0.4 subtracts instead of adding, and 0.3 and 0.7 are the single colors.'
           },
           {
             question: '$P(A) = 0.6$, $P(B|A) = 0.5$. $P(A \\cap B) =$',
@@ -198,7 +198,7 @@ $$\\text{Read the problem} \\to \\begin{cases} \\text{"or" / "either"} &\\to \\t
             question: 'Flip a fair coin 5 times. $P(\\text{at least one head}) =$',
             options: ['$0.5$', '$31/32$', '$1/32$', '$5/32$'],
             correctAnswer: 1,
-            explanation: '$P(\\text{no heads}) = (0.5)^5 = 1/32$. At least one: $1 - 1/32 = 31/32$.'
+            explanation: '$P(\\text{no heads}) = (0.5)^5 = 1/32$. At least one: $1 - 1/32 = 31/32$. 1/32 is the chance of no heads, and 5/32 is the chance of exactly one head.'
           },
           {
             question: '$P(A) = 0.4$, $P(B) = 0.3$, events mutually exclusive. $P(A \\cup B) =$',
@@ -210,7 +210,7 @@ $$\\text{Read the problem} \\to \\begin{cases} \\text{"or" / "either"} &\\to \\t
             question: 'Draw 2 cards without replacement from a standard deck. $P(\\text{both aces}) =$',
             options: ['$1/169$', '$1/221$', '$4/52$', '$1/13$'],
             correctAnswer: 1,
-            explanation: '$\\frac{4}{52} \\times \\frac{3}{51} = \\frac{12}{2652} = \\frac{1}{221}$.'
+            explanation: '$\\frac{4}{52} \\times \\frac{3}{51} = \\frac{12}{2652} = \\frac{1}{221}$. 1/169 is $(4/52)^2$, which treats the draws as if made with replacement.'
           },
           {
             question: 'Which problem type would you solve with $1 - P(\\text{complement})$?',
@@ -220,21 +220,21 @@ $$\\text{Read the problem} \\to \\begin{cases} \\text{"or" / "either"} &\\to \\t
           },
           {
             question: '$P(\\text{pass exam}) = 0.8$. Three students independently take the exam. $P(\\text{all three pass}) =$',
-            options: ['$2.4$', '$0.512$', '$0.800$', '$0.240$'],
+            options: ['$2.4$', '$0.512$', '$0.8$', '$0.24$'],
             correctAnswer: 1,
-            explanation: 'Independent: $0.8 \\times 0.8 \\times 0.8 = 0.512$.'
+            explanation: 'Independent: $0.8 \\times 0.8 \\times 0.8 = 0.512$. 2.4 adds the probabilities, and 0.24 multiplies 0.8 by 0.3 instead of by 0.8 twice.'
           },
           {
             question: '$P(A) = 0.7$, $P(B) = 0.4$, $P(A \\cap B) = 0.28$. $P(A \\cup B) =$',
             options: ['$1.10$', '$0.82$', '$0.28$', '$0.42$'],
             correctAnswer: 1,
-            explanation: '$P(A \\cup B) = 0.7 + 0.4 - 0.28 = 0.82$.'
+            explanation: '$P(A \\cup B) = 0.7 + 0.4 - 0.28 = 0.82$. 1.10 forgets the overlap, and 0.28 is the "and" probability.'
           },
           {
             question: 'A jar has 10 marbles (6 red, 4 green). Draw 2 with replacement. $P(\\text{1st red AND 2nd green}) =$',
             options: ['$0.24$', '$0.60$', '$0.40$', '$0.267$'],
             correctAnswer: 0,
-            explanation: 'With replacement → independent: $\\frac{6}{10} \\times \\frac{4}{10} = 0.24$.'
+            explanation: 'With replacement the draws are independent: $\\frac{6}{10} \\times \\frac{4}{10} = 0.24$. 0.267 uses $4/9$, which would apply only without replacement.'
           }
         ]
       }

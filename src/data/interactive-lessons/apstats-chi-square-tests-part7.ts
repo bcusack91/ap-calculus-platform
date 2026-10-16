@@ -14,44 +14,41 @@ export const apStatsChiSquarePart7Data = {
 
 | Section |
 |---------|
-| 📋 All Three Tests Side-by-Side |
+| 📋 Both Tests Side-by-Side |
 | 📐 Formula & Condition Summary |
 | 📝 Mixed Practice |
 
-> 🔑 **Key Concept:** This review covers all three chi-square tests. Know when to use each, how to check conditions, and how to write full AP-quality solutions.
+> 🔑 **Key Concept:** This review covers the two chi-square tests on the AP exam. Know when to use each, how to check conditions, and how to write full AP-quality solutions.
 
 ---
 
-### Three Chi-Square Tests Compared
+### The Two Chi-Square Tests Compared
 
-| Feature | Goodness of Fit | Independence | Homogeneity |
-|---------|:-----------:|:-----------:|:-----------:|
-| Samples | One | One | Two or more |
-| Variables | One categorical | Two categorical | One categorical |
-| $H_0$ | Distribution matches model | Variables are independent | Same distribution across groups |
-| Data Format | One-way table | Two-way table | Two-way table |
-| $df$ | $k - 1$ | $(r-1)(c-1)$ | $(r-1)(c-1)$ |
+| Feature | Homogeneity | Independence |
+|---------|:-----------:|:-----------:|
+| Samples | Two or more independent samples, or treatment groups | One sample |
+| Variables | One categorical variable | Two categorical variables |
+| $H_0$ | No difference in the distribution across populations or treatments | No association between the variables in the population |
+| Data format | Two-way table | Two-way table |
+| $df$ | $(r-1)(c-1)$ | $(r-1)(c-1)$ |
 
 ---
 
 ### Universal Formula
 
-$$\\chi^2 = \\sum \\frac{(O_i - E_i)^2}{E_i}$$
+$$\\chi^2 = \\sum \\frac{(\\text{observed} - \\text{expected})^2}{\\text{expected}}$$
 
 ### Universal Conditions
 
 | Condition | Requirement |
 |-----------|-------------|
-| Random | Random sample or randomized experiment |
-| 10% | $n < 10\\%$ of population |
-| Large Counts | All expected counts $\\geq 5$ |
+| Random | Random sample (independence); independent random samples or randomized experiment (homogeneity) |
+| 10% | $n \\leq 10\\%$ of the population when sampling without replacement |
+| Expected Counts | All expected counts greater than 5 |
 
 ### Expected Counts
 
-| Test | How to Calculate $E$ |
-|------|---------------------|
-| GoF | $E_i = n \\times p_i$ (hypothesized proportion) |
-| Independence/Homogeneity | $E = \\frac{\\text{row total} \\times \\text{column total}}{\\text{grand total}}$ |
+$$E = \\frac{\\text{row total} \\times \\text{column total}}{\\text{table total}}$$
 
 ---
 
@@ -59,16 +56,17 @@ $$\\chi^2 = \\sum \\frac{(O_i - E_i)^2}{E_i}$$
 
 | Question | Answer |
 |----------|--------|
-| Does the data fit a specific model? | **GoF** |
-| Are two variables related (one sample)? | **Independence** |
-| Same distribution across groups (multiple samples)? | **Homogeneity** |
+| Are two categorical variables related in one population (one sample)? | **Independence** |
+| Is one categorical variable distributed the same way across several groups? | **Homogeneity** |
+| One proportion against a claimed value? | **One-proportion $z$ test** (not chi-square) |
+| Two groups, a yes/no variable? | **Two-proportion $z$ test** (a $2 \\times 2$ homogeneity test gives the same conclusion) |
 
 ---
 
 ### Key AP Reminders
 
-- $\\chi^2$ is always $\\geq 0$ and always right-tailed
-- Large Counts uses **expected** counts, not observed
+- $\\chi^2$ is always $\\geq 0$ and the p-value is always a right-tail area
+- The count condition uses **expected** counts, not observed
 - Never say "accept $H_0$"
 - Association ≠ causation (unless randomized experiment)
 - Show the formula with substitution on FRQs
@@ -83,22 +81,22 @@ $$\\chi^2 = \\sum \\frac{(O_i - E_i)^2}{E_i}$$
       exercise: {
         questions: [
           {
-            question: 'All three chi-square tests share which formula?',
+            question: 'Both chi-square tests on the AP exam share which formula?',
             options: ['$\\bar{x} \\pm t^* s/\\sqrt{n}$', '$\\chi^2 = \\sum (O-E)^2/E$', '$z = (\\hat{p} - p_0)/\\sqrt{p_0(1-p_0)/n}$', '$t = (\\bar{x} - \\mu_0)/(s/\\sqrt{n})$'],
             correctAnswer: 1,
-            explanation: 'All three chi-square tests use $\\chi^2 = \\sum (O_i - E_i)^2/E_i$.'
+            explanation: 'Both chi-square tests use $\\chi^2 = \\sum (O-E)^2/E$ over the cells of a two-way table. The other formulas are a $t$ interval, a one-proportion $z$ statistic and a one-sample $t$ statistic.'
           },
           {
             question: 'The key difference between independence and homogeneity is:',
-            options: ['The formula', 'The conditions', 'The study design (one sample vs. multiple)', 'The critical value'],
+            options: ['The formula for $\\chi^2$', 'The conditions to check', 'The study design', 'The way $df$ is found'],
             correctAnswer: 2,
-            explanation: 'Independence: one sample, two variables. Homogeneity: two+ independent samples, one variable. The math is identical.'
+            explanation: 'Independence: one sample, two variables. Homogeneity: two or more independent samples or groups, one variable. The formula, conditions and $df$ are the same.'
           },
           {
-            question: 'For GoF, $df$ equals:',
-            options: ['$n - 1$', '$k - 1$', '$(r-1)(c-1)$', '$n - k$'],
+            question: 'For a $4 \\times 2$ two-way table, $df$ equals:',
+            options: ['$8$', '$3$', '$7$', '$4$'],
             correctAnswer: 1,
-            explanation: 'GoF: $df = k - 1$ where $k$ is the number of categories.'
+            explanation: '$df = (4-1)(2-1) = 3$. The number of cells is 8, one less is 7, and 4 uses the number of rows without subtracting 1.'
           }
         ]
       }
@@ -109,7 +107,7 @@ $$\\chi^2 = \\sum \\frac{(O_i - E_i)^2}{E_i}$$
       content: `
 **Mixed Practice** 🧮
 
-**1)** GoF test, 4 categories, $n = 100$, equal proportions. Expected count per category?
+**1)** A two-way table has row total 50, column total 40 and table total 200. Expected count for that cell?
 
 **2)** Independence test, $3 \\times 5$ table. $df =$
 
@@ -118,9 +116,9 @@ $$\\chi^2 = \\sum \\frac{(O_i - E_i)^2}{E_i}$$
       exercise: {
         inputs: [
           {
-            label: 'E per category',
-            correctAnswer: '25',
-            explanation: 'Equal proportions: $E = 100/4 = 25$.'
+            label: 'Expected count',
+            correctAnswer: '10',
+            explanation: '$E = (50)(40)/200 = 2000/200 = 10$.'
           },
           {
             label: 'df',
@@ -145,31 +143,31 @@ $$\\chi^2 = \\sum \\frac{(O_i - E_i)^2}{E_i}$$
         dropdowns: [
           {
             id: 'chi7-dd1',
-            label: 'Testing whether a spinner lands equally on 5 sections →',
-            options: ['GoF', 'Independence', 'Homogeneity'],
-            correctIndex: 0,
-            explanation: 'One variable (section), testing against a model (equal proportions) → GoF.'
+            label: 'Random samples from three hospitals: compare the distribution of patient wait-time categories →',
+            options: ['Independence', 'Homogeneity', 'Two-sample $t$', 'One-proportion $z$'],
+            correctIndex: 1,
+            explanation: 'Three independent samples compared on one categorical variable (wait-time category) → homogeneity.'
           },
           {
             id: 'chi7-dd2',
             label: 'One survey: record age group AND party preference →',
-            options: ['GoF', 'Independence', 'Homogeneity'],
-            correctIndex: 1,
-            explanation: 'One sample, two categorical variables → Independence.'
+            options: ['Independence', 'Homogeneity', 'Two-sample $t$', 'One-proportion $z$'],
+            correctIndex: 0,
+            explanation: 'One sample, two categorical variables → independence.'
           },
           {
             id: 'chi7-dd3',
             label: 'Compare blood type distribution of 3 different countries →',
-            options: ['GoF', 'Independence', 'Homogeneity'],
-            correctIndex: 2,
-            explanation: 'Three independent groups, one categorical variable (blood type) → Homogeneity.'
+            options: ['Independence', 'Homogeneity', 'Two-sample $t$', 'One-proportion $z$'],
+            correctIndex: 1,
+            explanation: 'Three independent groups, one categorical variable (blood type) → homogeneity.'
           },
           {
             id: 'chi7-dd4',
             label: '$\\chi^2 = 2.1$, $df = 3$. At $\\alpha = 0.05$ (cutoff 7.815):',
-            options: ['Reject $H_0$', 'Fail to reject $H_0$'],
+            options: ['Reject $H_0$', 'Fail to reject $H_0$', 'Accept $H_0$', 'Prove $H_0$ false'],
             correctIndex: 1,
-            explanation: '$2.1 < 7.815$, so $p > 0.05$. Fail to reject $H_0$.'
+            explanation: '$2.1 < 7.815$, so $p > 0.05$ and we fail to reject $H_0$. A test never accepts $H_0$ or proves it false.'
           }
         ]
       }
@@ -183,64 +181,64 @@ $$\\chi^2 = \\sum \\frac{(O_i - E_i)^2}{E_i}$$
       exercise: {
         questions: [
           {
-            question: 'Expected counts for GoF are calculated as:',
-            options: ['Observed / $n$', '$n \\times p_i$ (hypothesized proportion)', 'Row total $\\times$ column total / grand total', 'Category total $-$ grand total'],
+            question: 'A researcher wants to know whether the distribution of preferred study time (morning, afternoon, night) differs among random samples of freshmen, sophomores and juniors. The appropriate test is:',
+            options: ['A chi-square test for independence', 'A chi-square test for homogeneity', 'A two-proportion $z$ test', 'A two-sample $t$ test'],
             correctAnswer: 1,
-            explanation: 'GoF: $E_i = n \\times p_i$ where $p_i$ is the hypothesized proportion for category $i$.'
+            explanation: 'Separate random samples from three populations compared on one categorical variable → homogeneity. Independence needs one sample with two variables, and the $z$ and $t$ procedures compare only two groups on a proportion or mean.'
           },
           {
             question: 'Expected counts for independence/homogeneity are:',
-            options: ['Observed / $n$', '$n \\times p_i$', 'Row total $\\times$ column total / grand total', 'All equal'],
+            options: ['Observed count $\\div$ table total', 'Table total $\\div$ number of cells', 'Row total $\\times$ column total $\\div$ table total', 'Row total $\\div$ number of columns'],
             correctAnswer: 2,
-            explanation: 'For two-way tables: $E = (\\text{row total})(\\text{column total}) / (\\text{grand total})$.'
+            explanation: 'For a two-way table, $E = (\\text{row total})(\\text{column total}) / (\\text{table total})$. Expected counts never use the observed count, and splitting a total evenly ignores one of the margins.'
           },
           {
-            question: 'A GoF test with $\\chi^2 = 12$ and $df = 5$. Using $\\alpha = 0.05$ cutoff $= 11.070$:',
-            options: ['Fail to reject', 'Reject $H_0$', 'Inconclusive', 'Need the $t$-table'],
+            question: 'A homogeneity test on a $2 \\times 6$ table gives $\\chi^2 = 12$. Using the $\\alpha = 0.05$ cutoff of $11.070$ for $df = 5$:',
+            options: ['Fail to reject $H_0$', 'Reject $H_0$', 'Accept $H_0$', 'Use the $t$-table'],
             correctAnswer: 1,
-            explanation: '$12 > 11.070$, so $p < 0.05$. Reject $H_0$.'
+            explanation: '$df = (2-1)(6-1) = 5$ and $12 > 11.070$, so $p < 0.05$ and we reject $H_0$. $H_0$ is never accepted, and a chi-square statistic is compared with a chi-square distribution, not a $t$ distribution.'
           },
           {
             question: 'A two-way table for independence has all expected counts of exactly 2. Should you proceed?',
-            options: ['Yes — observed counts matter', 'No — Large Counts condition fails', 'Yes — if the sample is random', 'Only if $df > 5$'],
+            options: ['Yes, since only observed counts are checked', 'No, since the count condition is not met', 'Yes, as long as the sample was random', 'Yes, if the expected counts are all equal'],
             correctAnswer: 1,
-            explanation: 'All expected counts must be $\\geq 5$. With $E = 2$, the condition fails.'
+            explanation: 'All expected counts must be greater than 5. With every $E = 2$, the condition fails and the chi-square p-value would not be trustworthy, regardless of randomness or $df$.'
           },
           {
             question: 'After a significant homogeneity test, the follow-up is:',
-            options: ['Nothing — the test is done', 'Examine which cells have the largest $(O-E)^2/E$', 'Run a GoF test', 'Compute a confidence interval'],
+            options: ['Nothing, since the test is finished', 'Examine which cells contribute most to $\\chi^2$', 'Run a separate $t$ test on each column', 'Compute a confidence interval for $\\chi^2$'],
             correctAnswer: 1,
-            explanation: 'Looking at individual contributions identifies which categories differ most across groups.'
+            explanation: 'Looking at individual contributions identifies which categories differ most across groups. $t$ tests do not apply to categorical counts, and there is no confidence interval for the chi-square statistic.'
           },
           {
             question: 'The $\\chi^2$ test is always:',
-            options: ['Left-tailed', 'Right-tailed', 'Two-tailed', 'Depends on $H_a$'],
+            options: ['Left-tailed', 'Right-tailed', 'Two-tailed', 'Set by $H_a$'],
             correctAnswer: 1,
-            explanation: 'Squared deviations are always positive, so large $\\chi^2$ (right tail) indicates evidence against $H_0$.'
+            explanation: 'Squared deviations are never negative, so only a large $\\chi^2$ (the right tail) indicates evidence against $H_0$, whatever the wording of $H_a$.'
           },
           {
             question: 'A $2 \\times 2$ table: $df =$',
             options: ['$4$', '$3$', '$2$', '$1$'],
             correctAnswer: 3,
-            explanation: '$df = (2-1)(2-1) = 1$.'
+            explanation: '$df = (2-1)(2-1) = 1$. Four is the number of cells, 3 is one less than that, and 2 is the number of rows.'
           },
           {
             question: 'If $p = 0.001$ and $\\alpha = 0.05$:',
-            options: ['Fail to reject — not significant', 'Reject — very strong evidence against $H_0$', 'Reject — but barely', 'Cannot tell'],
+            options: ['Fail to reject; the result is not significant', 'Reject; very strong evidence against $H_0$', 'Reject; but the evidence is only borderline', 'No decision without knowing $df$'],
             correctAnswer: 1,
-            explanation: '$p = 0.001 \\ll 0.05$. Strong evidence against $H_0$.'
+            explanation: '$p = 0.001$ is far below 0.05, so we reject $H_0$ with very strong evidence. The p-value already accounts for $df$, so no further information is needed.'
           },
           {
-            question: 'Which statement is CORRECT after failing to reject $H_0$ in a GoF test?',
-            options: ['The model is correct', 'The data prove the model', 'There is not convincing evidence the distribution differs from the model', 'The test was invalid'],
+            question: 'Which statement is CORRECT after failing to reject $H_0$ in a homogeneity test?',
+            options: ['The distributions are the same in every population', 'The data prove that the distributions are the same', 'There is not convincing evidence the distributions differ', 'The test was invalid because $p$ was large'],
             correctAnswer: 2,
-            explanation: 'Failing to reject does not prove $H_0$ true — only that we lack evidence to reject it.'
+            explanation: 'Failing to reject does not prove $H_0$ true; it only means the data are not convincing evidence of a difference. A large p-value does not make the test invalid.'
           },
           {
             question: 'On the AP exam, a complete $\\chi^2$ solution requires:',
-            options: ['Hypotheses, Conditions, Calculate ($\\chi^2$, $df$, p-value), Conclude in context', 'Just the $\\chi^2$ value', 'Hypotheses and conclusion only', 'A confidence interval'],
+            options: ['Hypotheses, conditions, the calculation and a conclusion in context', 'The $\\chi^2$ value, $df$ and p-value, without any hypotheses stated', 'Hypotheses and a conclusion, without the calculation of $\\chi^2$', 'A confidence interval for the difference in each pair of proportions'],
             correctAnswer: 0,
-            explanation: 'Full credit requires all four steps: Hypotheses in context, Conditions checked, Calculation shown, Conclusion with p-value comparison.'
+            explanation: 'Full credit requires all four steps: hypotheses in context, conditions checked, the calculation shown, and a conclusion that compares the p-value with $\\alpha$ in context. Leaving out steps loses credit, and a chi-square test does not call for confidence intervals.'
           }
         ]
       }

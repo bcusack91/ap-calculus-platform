@@ -107,7 +107,7 @@ $$\\text{If } P < \\alpha \\Rightarrow \\text{Reject } H_0 \\qquad \\text{If } P
           },
           {
             question: 'The conclusion of a hypothesis test should include:',
-            options: ['Only the P-value', 'Only "reject" or "fail to reject"', 'Decision, evidence, and context', 'A proof that $H_0$ is true or false'],
+            options: ['The P-value alone', 'The decision alone', 'Decision, evidence and context', 'A proof about $H_0$'],
             correctAnswer: 2,
             explanation: 'AP conclusions need: decision + evidence ($t$ and $P$) + real-world context.'
           }
@@ -166,7 +166,7 @@ $$\\text{If } P < \\alpha \\Rightarrow \\text{Reject } H_0 \\qquad \\text{If } P
             label: 'Increasing $\\alpha$ makes it ___ to reject $H_0$:',
             options: ['Harder', 'Easier', 'Impossible', 'No effect'],
             correctIndex: 1,
-            explanation: 'Larger $\\alpha$ = wider rejection region = easier to reject.'
+            explanation: 'A larger $\\alpha$ means a larger p-value can still lead to rejection, so it is easier to reject $H_0$ (at the cost of more Type I error risk).'
           },
           {
             id: 'ht7-dd3',
@@ -200,7 +200,7 @@ $$\\text{If } P < \\alpha \\Rightarrow \\text{Reject } H_0 \\qquad \\text{If } P
           },
           {
             question: 'Using $SE \\approx 1.56$ above, $t \\approx$',
-            options: ['$0.5$', '$1.0$', '$1.92$', '$3.0$'],
+            options: ['$0.52$', '$1.00$', '$1.92$', '$3.00$'],
             correctAnswer: 2,
             explanation: '$t = (78-75)/1.56 = 3/1.56 \\approx 1.92$.'
           },
@@ -212,7 +212,7 @@ $$\\text{If } P < \\alpha \\Rightarrow \\text{Reject } H_0 \\qquad \\text{If } P
           },
           {
             question: 'Power = 0.90 means:',
-            options: ['90% chance of Type I error', '90% chance of correctly rejecting a false $H_0$', '10% chance of rejecting $H_0$', '90% significance level'],
+            options: ['90% chance of making a Type I error', '90% chance to detect the effect', '10% chance of rejecting a true $H_0$', '90% significance level for the test'],
             correctAnswer: 1,
             explanation: 'Power $= 1 - \\beta = 0.90$ = 90% chance of detecting a real effect.'
           },
@@ -224,13 +224,13 @@ $$\\text{If } P < \\alpha \\Rightarrow \\text{Reject } H_0 \\qquad \\text{If } P
           },
           {
             question: 'A researcher finds $P = 0.0001$. Statistical significance guarantees:',
-            options: ['The effect is large', 'Practical significance', 'Neither large effect nor practical significance', 'The null is wrong'],
+            options: ['A large effect', 'Practical importance', 'Neither of these', 'Both of these'],
             correctAnswer: 2,
-            explanation: 'A tiny P-value can occur with a tiny (unimportant) effect and a large sample.'
+            explanation: 'A tiny P-value can come from a tiny, unimportant effect measured with a large sample, so significance guarantees neither a large effect nor practical importance.'
           },
           {
             question: 'Which statement is correct?',
-            options: ['$\\alpha + \\beta = 1$ always', '$\\alpha$ and $\\beta$ are independent', 'Decreasing $\\alpha$ increases $\\beta$ (for fixed $n$)', 'Type I and Type II errors can both occur in the same test'],
+            options: ['$\\alpha + \\beta = 1$ always', '$\\alpha$ and $\\beta$ are independent', 'For fixed $n$, lowering $\\alpha$ raises $\\beta$', 'Type I and Type II errors can both occur in the same test'],
             correctAnswer: 2,
             explanation: 'With fixed $n$, stricter $\\alpha$ → harder to reject → higher $\\beta$.'
           },
@@ -242,7 +242,7 @@ $$\\text{If } P < \\alpha \\Rightarrow \\text{Reject } H_0 \\qquad \\text{If } P
           },
           {
             question: 'The most important thing to remember on the AP exam about hypothesis testing is:',
-            options: ['Memorize the formula', 'Always state conclusions in context', 'Use $z$-tests', 'Skip checking conditions'],
+            options: ['Memorize every formula exactly', 'State conclusions in context', 'Use $z$-tests for all means', 'Skip checking the conditions'],
             correctAnswer: 1,
             explanation: 'Context is crucial: define the parameter, check conditions, and conclude in the real-world setting.'
           }

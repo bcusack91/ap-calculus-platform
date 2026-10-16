@@ -57,19 +57,19 @@ In an experiment, the researcher **imposes treatments** on subjects and measures
         questions: [
           {
             question: 'A researcher surveys 500 adults about their exercise habits and cholesterol levels. This is:',
-            options: ['An experiment', 'An observational study', 'A census', 'A simulation'],
+            options: ['A randomized experiment', 'An observational study', 'A census of all adults nationwide', 'A matched pairs experiment'],
             correctAnswer: 1,
-            explanation: 'No treatment was imposed — the researcher only observed existing habits. This is an observational study.'
+            explanation: 'No treatment was imposed: the researcher only recorded existing habits, so this is an observational study. A census would measure every adult in the population, and an experiment would assign exercise levels.'
           },
           {
             question: 'Which study design can establish causation?',
-            options: ['Observational study', 'Survey', 'Randomized experiment', 'Case study'],
+            options: ['A large observational study', 'A random sample survey of adults', 'A randomized experiment', 'A retrospective study of records'],
             correctAnswer: 2,
-            explanation: 'Only randomized experiments with proper controls can establish cause-and-effect relationships.'
+            explanation: 'Only a well-designed experiment with random assignment can establish cause and effect. Random sampling lets results generalize to a population, but surveys and observational studies (however large) cannot rule out confounding.'
           },
           {
             question: 'A confounding variable is one that:',
-            options: ['Is the response variable', 'Is related to both the explanatory and response variables', 'Is randomly assigned', 'Has no effect on the study'],
+            options: ['Is the response variable being measured', 'Is linked to both explanatory and response', 'Is randomly assigned to the subjects', 'Is held constant for all subjects'],
             correctAnswer: 1,
             explanation: 'A confounding variable is associated with both the explanatory and response variables, making it impossible to determine which is the true cause.'
           }

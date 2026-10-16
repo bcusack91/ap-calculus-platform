@@ -65,9 +65,9 @@ The outlier 100 pulls the mean up to 24, but the median (6) better represents th
 
 ---
 
-### Effect of Transformations
+### Effect of Adding or Multiplying by a Constant
 
-| Transformation | Effect on Mean | Effect on Median |
+| Change | Effect on Mean | Effect on Median |
 |----------------|:-:|:-:|
 | Add constant $c$ to all values | Add $c$ | Add $c$ |
 | Multiply all values by $k$ | Multiply by $k$ | Multiply by $k$ |
@@ -96,9 +96,9 @@ The outlier 100 pulls the mean up to 24, but the median (6) better represents th
           },
           {
             question: 'In a left-skewed distribution:',
-            options: ['Mean > median', 'Mean = median', 'Mean < median', 'Cannot determine'],
+            options: ['Mean > median', 'Mean = median', 'Mean < median', 'Mean = 2 × median'],
             correctAnswer: 2,
-            explanation: 'The mean is pulled toward the left tail, so mean < median in a left-skewed distribution.'
+            explanation: 'The mean is pulled toward the long left tail, so the mean is less than the median in a left-skewed distribution. Mean greater than median goes with right skew.'
           }
         ]
       }
@@ -146,23 +146,23 @@ The outlier 100 pulls the mean up to 24, but the median (6) better represents th
           {
             id: 'dd3-p3-1',
             label: 'Household income data (which is typically right-skewed) should be summarized using the ___',
-            options: ['Mean', 'Median', 'Mode'],
+            options: ['Mean', 'Median', 'Maximum'],
             correctIndex: 1,
             explanation: 'Income data is right-skewed (a few very high earners pull the tail). Median is more appropriate.'
           },
           {
             id: 'dd3-p3-2',
             label: 'If you add a constant to every data value, the mean ___',
-            options: ['Stays the same', 'Increases by that constant', 'Doubles', 'Cannot be determined'],
+            options: ['Stays the same', 'Increases by that constant', 'Is multiplied by that constant', 'Increases by half that constant'],
             correctIndex: 1,
             explanation: 'Adding a constant shifts every value (and therefore the mean) by that constant.'
           },
           {
             id: 'dd3-p3-3',
             label: 'For symmetric data, mean and median are ___',
-            options: ['Very different', 'Approximately equal', 'Both zero', 'Undefined'],
+            options: ['Very different', 'Approximately equal', 'Equal to the IQR', 'Equal to the range'],
             correctIndex: 1,
-            explanation: 'In symmetric distributions, the mean and median are at the same center point.'
+            explanation: 'In symmetric distributions, the mean and median are at the same center point. The IQR and range measure spread, not center.'
           }
         ]
       }
@@ -177,19 +177,19 @@ The outlier 100 pulls the mean up to 24, but the median (6) better represents th
         questions: [
           {
             question: 'The mean of 5 test scores is 80. What is the total of all scores?',
-            options: ['80', '400', '16', 'Cannot determine'],
+            options: ['80', '400', '16', '85'],
             correctAnswer: 1,
-            explanation: 'Total = mean × n = 80 × 5 = 400.'
+            explanation: 'Total = mean × n = 80 × 5 = 400. 16 divides the mean by 5 instead of multiplying, and 85 adds 5 to the mean.'
           },
           {
             question: 'Data: 5, 5, 5, 5, 5. The mean is:',
             options: ['0', '5', '25', '1'],
             correctAnswer: 1,
-            explanation: 'Mean = 25/5 = 5. When all values are equal, the mean equals that value.'
+            explanation: 'Mean = 25/5 = 5. When all values are equal, the mean equals that value. 25 is the sum, and 0 is the standard deviation of these data.'
           },
           {
-            question: 'A news report says "the average household income is $95,000." A better summary might be:',
-            options: ['The mean income', 'The median income (because income is right-skewed)', 'The mode income', 'The range of incomes'],
+            question: 'A news report says "the average household income is \\$95,000." Which summary would better describe a typical household?',
+            options: ['The mean income, since it uses every value', 'The median income, since income is right-skewed', 'The range, since it shows the spread', 'The maximum income, since it is largest'],
             correctAnswer: 1,
             explanation: 'Income is right-skewed, so the mean is inflated by very high earners. The median better represents the typical household.'
           },
@@ -197,43 +197,43 @@ The outlier 100 pulls the mean up to 24, but the median (6) better represents th
             question: 'Removing an outlier from a data set will:',
             options: ['Always increase the mean', 'Move the mean closer to the median', 'Not affect either measure', 'Change the median more than the mean'],
             correctAnswer: 1,
-            explanation: 'Outliers pull the mean away from center. Removing them brings the mean back toward the median.'
+            explanation: 'Outliers pull the mean away from the center, so removing one brings the mean back toward the median. Removing a HIGH outlier lowers the mean, and the median changes very little.'
           },
           {
             question: 'Data: 10, 20, 30, 40. The median is:',
             options: ['20', '25', '30', '35'],
             correctAnswer: 1,
-            explanation: 'Even number of values: median = average of middle two = (20+30)/2 = 25.'
+            explanation: 'With an even number of values, the median is the mean of the middle two: (20+30)/2 = 25. Picking only 20 or only 30 uses one of the middle values.'
           },
           {
             question: 'Which is true about the mean?',
-            options: ['It is always the middle value', 'It is the balance point of the distribution', 'It is always resistant to outliers', 'It equals the mode'],
+            options: ['It is always the middle value', 'It is the balance point', 'It is resistant to outliers', 'It ignores the size of each value'],
             correctAnswer: 1,
-            explanation: 'The mean is the balance point — the distribution balances at the mean like a seesaw.'
+            explanation: 'The mean is the balance point: the distribution balances at the mean like a seesaw. The middle value is the median, and because the mean uses the size of every value it is NOT resistant to outliers.'
           },
           {
             question: 'If all values are doubled, the median:',
-            options: ['Stays the same', 'Is doubled', 'Is halved', 'Cannot be determined'],
+            options: ['Stays the same', 'Is multiplied by 2', 'Is halved', 'Increases by 2'],
             correctAnswer: 1,
-            explanation: 'Multiplying all values by a constant multiplies both the mean and median by that constant.'
+            explanation: 'Multiplying all values by a constant multiplies both the mean and the median by that constant. Adding 2 to each value is what would increase the median by 2.'
           },
           {
             question: 'A data set has mean = 50 and median = 38. The distribution is likely:',
             options: ['Left-skewed', 'Symmetric', 'Right-skewed', 'Uniform'],
             correctAnswer: 2,
-            explanation: 'Mean > median suggests right-skewness (the mean is pulled right by the tail).'
+            explanation: 'Mean > median suggests right skew: the mean is pulled toward a long tail of large values. Symmetric and uniform shapes have the mean near the median, and left skew puts the mean below it.'
           },
           {
             question: 'The median of 100 values is at position:',
-            options: ['50', '50.5 (average of 50th and 51st)', '51', '100'],
+            options: ['The 50th value alone', 'The mean of the 50th and 51st values', 'The 51st value alone', 'Halfway between the min and max'],
             correctAnswer: 1,
-            explanation: 'For even $n$, median = average of values at positions $n/2$ and $n/2 + 1$ = 50th and 51st.'
+            explanation: 'For even $n$, the median is the mean of the values in positions $n/2$ and $n/2 + 1$, here the 50th and 51st. The mean of the smallest and largest values is the midpoint of the range, not the median.'
           },
           {
             question: 'Which summary is most appropriate for: "Test scores: 45, 67, 72, 74, 76, 78, 80, 82"?',
-            options: ['Mean (because data is roughly symmetric)', 'Median (because of the outlier 45)', 'Mode', 'Range'],
+            options: ['The mean, since the scores are roughly symmetric', 'The median, since 45 is a low outlier', 'The mean, since it uses all eight scores', 'The range, since it shows the full spread'],
             correctAnswer: 1,
-            explanation: 'The score 45 is an outlier pulling the mean down. The median better represents the typical score.'
+            explanation: 'With $Q_1 = 69.5$ and $Q_3 = 79$, the lower fence is $69.5 - 1.5(9.5) = 55.25$, so 45 is a low outlier that pulls the mean down. The median better represents the typical score, and the range measures spread, not center.'
           }
         ]
       }

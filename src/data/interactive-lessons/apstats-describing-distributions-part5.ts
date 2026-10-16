@@ -98,21 +98,21 @@ To find the percentage of values below a value $x$:
         questions: [
           {
             question: '95% of data in a normal distribution falls within:',
-            options: ['1 standard deviation of the mean', '2 standard deviations of the mean', '3 standard deviations of the mean', 'The IQR'],
+            options: ['1 standard deviation of the mean', '2 standard deviations of the mean', '3 SDs of the mean', 'One IQR of the median'],
             correctAnswer: 1,
-            explanation: 'The Empirical Rule: 68% within 1 SD, 95% within 2 SDs, 99.7% within 3 SDs.'
+            explanation: 'The Empirical Rule: 68% within 1 SD, 95% within 2 SDs, 99.7% within 3 SDs. The middle 50% is what the IQR captures, not 95%.'
           },
           {
             question: 'A z-score of $-1.5$ means:',
-            options: ['1.5 SDs above the mean', '1.5 SDs below the mean', 'The value is negative', 'The score is invalid'],
+            options: ['1.5 SDs above the mean', '1.5 SDs below the mean', 'The value is negative', 'The value is 1.5 below the mean'],
             correctAnswer: 1,
-            explanation: 'Negative z = below the mean. $z = -1.5$ means 1.5 standard deviations below $\\mu$.'
+            explanation: 'Negative z = below the mean, so $z = -1.5$ means 1.5 standard deviations below $\\mu$. The value itself can be positive, and the distance is 1.5 SDs, not 1.5 units.'
           },
           {
             question: 'If $\\mu = 50$ and $\\sigma = 5$, what percentage of data is between 40 and 60?',
             options: ['68%', '95%', '99.7%', '50%'],
             correctAnswer: 1,
-            explanation: '$40 = 50 - 2(5)$ and $60 = 50 + 2(5)$, so this is $\\mu \\pm 2\\sigma$ = 95%.'
+            explanation: '$40 = 50 - 2(5)$ and $60 = 50 + 2(5)$, so this is $\\mu \\pm 2\\sigma$ = 95%. 68% would be 45 to 55.'
           }
         ]
       }
@@ -162,7 +162,7 @@ To find the percentage of values below a value $x$:
           {
             id: 'dd5-p5-1',
             label: 'A normal distribution is ___ and ___',
-            options: ['Symmetric and bell-shaped', 'Skewed and flat', 'Uniform and rectangular', 'Bimodal and symmetric'],
+            options: ['Symmetric and bell-shaped', 'Skewed with a long tail', 'Uniform and rectangular', 'Bimodal and symmetric'],
             correctIndex: 0,
             explanation: 'The normal distribution is always symmetric and bell-shaped.'
           },
@@ -193,15 +193,15 @@ To find the percentage of values below a value $x$:
         questions: [
           {
             question: 'The Empirical Rule applies to:',
-            options: ['Any distribution', 'Only normal (bell-shaped) distributions', 'Only skewed distributions', 'Only uniform distributions'],
+            options: ['Any distribution of data', 'Normal distributions', 'Strongly skewed distributions', 'Uniform distributions only'],
             correctAnswer: 1,
-            explanation: 'The 68-95-99.7 rule is specifically for normal distributions.'
+            explanation: 'The 68-95-99.7 rule describes normal (bell-shaped) distributions. Skewed or uniform distributions put different percents within 1, 2 and 3 SDs.'
           },
           {
             question: '$\\mu = 60$, $\\sigma = 8$. About 99.7% of data falls between:',
             options: ['52 and 68', '44 and 76', '36 and 84', '28 and 92'],
             correctAnswer: 2,
-            explanation: '$\\mu \\pm 3\\sigma = 60 \\pm 24 = [36, 84]$.'
+            explanation: '$\\mu \\pm 3\\sigma = 60 \\pm 24 = [36, 84]$. 52 to 68 is the 68% interval and 44 to 76 the 95% interval.'
           },
           {
             question: 'Z-score of $x = 75$ when $\\mu = 75$ is:',
@@ -228,16 +228,16 @@ To find the percentage of values below a value $x$:
             explanation: '$z = \\frac{1260 - 1060}{200} = \\frac{200}{200} = 1.0$.'
           },
           {
-            question: 'The inflection points of a normal curve are at:',
-            options: ['$\\mu$', '$\\mu \\pm \\sigma$', '$\\mu \\pm 2\\sigma$', '$\\mu \\pm 3\\sigma$'],
-            correctAnswer: 1,
-            explanation: 'Inflection points (where the curve changes from concave up to concave down) occur at $\\mu \\pm \\sigma$.'
+            question: 'By the Empirical Rule, which z-score marks the bottom 16% of a normal distribution?',
+            options: ['$z = -1$', '$z = -1.6$', '$z = -0.16$', '$z = -2.5$'],
+            correctAnswer: 0,
+            explanation: '68% lies within 1 SD, so $(100\\% - 68\\%)/2 = 16\\%$ lies below $z = -1$. The values $-1.6$ and $-0.16$ turn the percent into a z-score, and 2.5% (not 16%) lies below $z = -2$.'
           },
           {
             question: 'If you increase $\\sigma$ while keeping $\\mu$ the same, the normal curve becomes:',
-            options: ['Taller and narrower', 'Shorter and wider', 'Shifted right', 'Shifted left'],
+            options: ['Taller and narrower', 'Shorter and wider', 'Shifted to the right', 'Shifted to the left'],
             correctAnswer: 1,
-            explanation: 'Larger $\\sigma$ means more spread → the curve flattens out (shorter and wider) to keep total area = 1.'
+            explanation: 'Larger $\\sigma$ means more spread, so the curve flattens out (shorter and wider) to keep the total area equal to 1. Shifts left or right come from changing $\\mu$.'
           },
           {
             question: 'What percentage of data falls between $z = -1$ and $z = 1$?',
@@ -247,9 +247,9 @@ To find the percentage of values below a value $x$:
           },
           {
             question: 'On the AP exam, when using the normal distribution you should:',
-            options: ['Just give the answer', 'Show the z-score calculation and name the distribution', 'Only draw a picture', 'Use technology without explanation'],
+            options: ['Give only the final numerical answer', 'State the model, its parameters and the boundary', 'Draw a picture with no calculations shown', 'Write calculator syntax such as normalcdf alone'],
             correctAnswer: 1,
-            explanation: 'AP rubrics require naming the distribution (Normal), showing the z-score calculation, and providing the answer.'
+            explanation: 'AP rubrics require identifying the distribution (normal, with $\\mu$ and $\\sigma$), the boundary value and the direction, either with a z-score or labeled technology inputs, plus the answer. A bare answer, a picture alone or unlabeled calculator syntax does not earn full credit.'
           }
         ]
       }

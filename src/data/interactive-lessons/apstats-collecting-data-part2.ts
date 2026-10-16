@@ -62,21 +62,21 @@ An SRS of size $n$ means every set of $n$ individuals has an **equal chance** of
         questions: [
           {
             question: 'A researcher numbers all 2,000 employees and uses a random number generator to select 100. This is:',
-            options: ['Stratified sample', 'Simple random sample', 'Cluster sample', 'Convenience sample'],
+            options: ['Stratified random sample', 'Simple random sample', 'Cluster sample of departments', 'Systematic random sample'],
             correctAnswer: 1,
-            explanation: 'Every employee has an equal chance of selection using random numbers — this is an SRS.'
+            explanation: 'Every set of 100 employees is equally likely to be chosen, so this is an SRS. There are no strata or clusters, and the employees are not chosen at a fixed interval from a list.'
           },
           {
             question: 'A pollster divides voters by age group, then randomly selects from each group. This is:',
-            options: ['Cluster sampling', 'Systematic sampling', 'Stratified sampling', 'Voluntary response'],
+            options: ['Cluster sampling', 'Systematic sampling', 'Stratified sampling', 'Convenience sampling'],
             correctAnswer: 2,
-            explanation: 'Dividing into groups (strata) then SRS within each = stratified sampling.'
+            explanation: 'Dividing into groups (strata) and then taking an SRS within each = stratified sampling. Cluster sampling would select whole groups and survey everyone in them.'
           },
           {
             question: 'Which sampling method is most likely to suffer from undercoverage?',
             options: ['SRS', 'Stratified', 'Convenience', 'Systematic'],
             correctAnswer: 2,
-            explanation: 'Convenience samples only include easily accessible individuals, systematically excluding parts of the population.'
+            explanation: 'Convenience samples include only easily reached individuals, so parts of the population have no chance of selection (undercoverage). SRS, stratified and systematic samples all give every individual a chance to be chosen.'
           }
         ]
       }

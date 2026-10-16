@@ -51,15 +51,15 @@ where $\\hat{p} = \\frac{x_1 + x_2}{n_1 + n_2}$ is the **pooled proportion**.
         questions: [
           {
             question: 'Why do we use a pooled proportion $\\hat{p}$ in a two-proportion z-test?',
-            options: ['Because samples must be equal size', 'Because we assume $p_1 = p_2$ under $H_0$', 'Because it makes calculations easier', 'Because the populations are the same'],
+            options: ['Because the two samples must be equal in size', 'Because $H_0$ says $p_1 = p_2$', 'Because pooling makes the arithmetic simpler', 'Because $\\hat{p}_1$ and $\\hat{p}_2$ are always equal'],
             correctAnswer: 1,
-            explanation: 'Under $H_0$, we assume the two population proportions are equal, so we pool the data to estimate the common proportion.'
+            explanation: 'The test statistic is computed assuming $H_0$ is true, and $H_0$ says the two population proportions are equal, so we pool the data to estimate that common proportion $\\hat{p}_c$. Equal sample sizes are not required, and the sample proportions are usually different.'
           },
           {
             question: 'Group 1: 40/100 successes. Group 2: 60/200 successes. The pooled $\\hat{p} =$',
             options: ['$0.50$', '$0.33$', '$0.40$', '$0.30$'],
             correctAnswer: 1,
-            explanation: '$\\hat{p} = (40 + 60)/(100 + 200) = 100/300 = 0.333$.'
+            explanation: '$\\hat{p}_c = (40 + 60)/(100 + 200) = 100/300 \\approx 0.33$. Averaging the two sample proportions (0.40 and 0.30) gives 0.35, which ignores the different sample sizes.'
           }
         ]
       }

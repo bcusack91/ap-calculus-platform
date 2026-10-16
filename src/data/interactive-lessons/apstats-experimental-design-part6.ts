@@ -35,25 +35,25 @@ Experimental design questions often ask you to:
       id: 'experimentaldesign-p6-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'When describing a completely randomized design on the AP exam, you must include:',
-            options: ['Only the treatments', 'Random assignment, treatments, and response variable', 'Only the sample size', 'Only the hypothesis'],
+            options: ['The treatments and nothing else', 'The assignment method, treatments and response', 'The sample size and the hypotheses', 'The treatments and the sample size'],
             correctAnswer: 1,
             explanation: 'A complete description needs random assignment method, specific treatments, and the response variable being measured.'
           },
           {
             question: 'A researcher wants to test 3 brands of sunscreen. With 90 subjects, each group should have:',
-            options: ['90 subjects', '30 subjects', '45 subjects', 'It doesn’t matter'],
+            options: ['90 per group', '30 per group', '45 per group', '3 per group'],
             correctAnswer: 1,
-            explanation: '90 subjects ÷ 3 treatments = 30 per group for a balanced design.'
+            explanation: '90 subjects ÷ 3 treatments = 30 per group for a balanced design. 45 splits the subjects into 2 groups, and 3 confuses the number of groups with the group size.'
           },
           {
             question: 'Why should you include a control group?',
-            options: ['To increase sample size', 'To provide a baseline for comparison', 'To make the experiment double-blind', 'To reduce blocking'],
+            options: ['To increase the number of subjects overall', 'To give a baseline to compare with', 'To make the whole experiment double-blind', 'To replace the need for random assignment'],
             correctAnswer: 1,
             explanation: 'A control group provides a baseline to compare against the treatment’s effect.'
           }

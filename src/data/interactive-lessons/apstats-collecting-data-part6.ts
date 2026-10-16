@@ -13,7 +13,7 @@ export const apStatsCollectingDataPart6Data = {
 ### Strategy for AP Statistics Study Design Questions
 
 1. **Identify the study type** — Is a treatment being imposed? If yes → experiment. If no → observational.
-2. **Check for bias** — Look for selection bias, nonresponse, response bias, voluntary response.
+2. **Check for bias** — Look for undercoverage, nonresponse, response bias, voluntary response.
 3. **Identify confounding** — What other variables could explain the observed relationship?
 4. **Evaluate design** — Does it use random assignment? Control group? Blinding? Blocking?
 
@@ -50,19 +50,19 @@ export const apStatsCollectingDataPart6Data = {
         questions: [
           {
             question: 'A study finds that students who eat breakfast score higher on tests. A headline reads "Breakfast causes better test scores." What is wrong?',
-            options: ['Nothing — the study proves it', 'The sample was too small', 'Observational study cannot establish causation', 'The test was biased'],
+            options: ['Nothing, since the result is strong', 'The sample was probably too small', 'Nobody was assigned a treatment', 'The test scores were not precise'],
             correctAnswer: 2,
             explanation: 'This is likely an observational study. Confounders (e.g., family income, sleep habits) may explain both breakfast eating and higher scores.'
           },
           {
             question: 'In a double-blind experiment, who does NOT know which treatment a subject receives?',
-            options: ['Only the subject', 'Only the researcher', 'Both the subject and the researcher', 'The statistician analyzing the data'],
+            options: ['The subjects only', 'The researchers only', 'Subjects and researchers', 'The data analyst only'],
             correctAnswer: 2,
-            explanation: 'Double-blind means neither the subjects nor the researchers interacting with them know the treatment assignment.'
+            explanation: 'Double-blind means neither the subjects nor the researchers who interact with them or measure the response know the treatment assignment. Blinding only the subject is single-blind.'
           },
           {
             question: 'A placebo is used in experiments to:',
-            options: ['Increase sample size', 'Account for the psychological effect of receiving treatment', 'Make the study observational', 'Reduce the cost of the study'],
+            options: ['Increase the sample size', 'Control for expectations of improvement', 'Make the study observational', 'Reduce the cost of the study'],
             correctAnswer: 1,
             explanation: 'A placebo controls for the placebo effect — the tendency for people to improve simply because they believe they are being treated.'
           }

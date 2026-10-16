@@ -36,7 +36,7 @@ $$\\sum P(X = x) = 1$$
 
 ### Expected Value (Mean)
 
-$$E(X) = \mu_X = \\sum x_i \\cdot P(X = x_i)$$
+$$E(X) = \\mu_X = \\sum x_i \\cdot P(X = x_i)$$
 
 **Example:** $E(X) = 0(0.1) + 1(0.3) + 2(0.4) + 3(0.2) = 0 + 0.3 + 0.8 + 0.6 = 1.7$
 
@@ -46,9 +46,9 @@ $$E(X) = \mu_X = \\sum x_i \\cdot P(X = x_i)$$
 
 ### Variance and Standard Deviation
 
-$$\\text{Var}(X) = \sigma_X^2 = \\sum (x_i - \mu_X)^2 \\cdot P(X = x_i)$$
+$$\\text{Var}(X) = \\sigma_X^2 = \\sum (x_i - \\mu_X)^2 \\cdot P(X = x_i)$$
 
-$$\sigma_X = \\sqrt{\\text{Var}(X)}$$`
+$$\\sigma_X = \\sqrt{\\text{Var}(X)}$$`
     },
     {
       id: 'apstats-collectingdata-p5-mcq1',
@@ -62,19 +62,19 @@ $$\sigma_X = \\sqrt{\\text{Var}(X)}$$`
             question: 'A random variable $X$ has the distribution: $P(X=1)=0.3$, $P(X=2)=0.5$, $P(X=3)=0.2$. What is $E(X)$?',
             options: ['$1.0$', '$1.9$', '$2.0$', '$2.5$'],
             correctAnswer: 1,
-            explanation: '$E(X) = 1(0.3) + 2(0.5) + 3(0.2) = 0.3 + 1.0 + 0.6 = 1.9$.'
+            explanation: '$E(X) = 1(0.3) + 2(0.5) + 3(0.2) = 0.3 + 1.0 + 0.6 = 1.9$. 2.0 is the unweighted average of the values, and 1.0 adds the probabilities.'
           },
           {
-            question: 'If $E(X) = 5$ and $E(Y) = 3$, and $X$ and $Y$ are independent, then $E(X + Y) =$',
-            options: ['$2$', '$5$', '$8$', '$15$'],
-            correctAnswer: 2,
-            explanation: '$E(X+Y) = E(X) + E(Y) = 5 + 3 = 8$. This holds whether or not $X$ and $Y$ are independent.'
+            question: 'For the distribution above, $E(X) = 1.9$, where $X$ is the number of pets in a household. Which interpretation is correct?',
+            options: ['Most households own about 1.9 pets', 'Over many households, the average is about 1.9 pets', 'Every household owns either 1 or 2 pets', 'Half of households own more than 1.9 pets'],
+            correctAnswer: 1,
+            explanation: 'The expected value is a long-run average over many households. No household owns 1.9 pets, the most common value is 2, and "half above" describes a median.'
           },
           {
             question: 'The standard deviation of a random variable measures:',
-            options: ['The most likely outcome', 'The center of the distribution', 'The typical distance from the mean', 'The range of possible values'],
+            options: ['The single most likely value of X', 'The center of the distribution', 'Typical distance from the mean', 'The range of all possible values'],
             correctAnswer: 2,
-            explanation: 'Standard deviation measures the typical distance of outcomes from the expected value.'
+            explanation: 'Standard deviation measures the typical distance of outcomes from the expected value. The center is measured by $E(X)$, and the range is the gap between the largest and smallest values.'
           }
         ]
       }

@@ -33,13 +33,13 @@ $$z = \\frac{(\\hat{p}_1 - \\hat{p}_2) - 0}{\\sqrt{\\hat{p}_c(1-\\hat{p}_c)\\lef
       id: 'propinference-p4-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'When testing $H_0: p_1 = p_2$, you should use:',
-            options: ['Individual sample proportions', 'The pooled proportion', 'The population proportions', 'The difference $\\hat{p}_1 - \\hat{p}_2$'],
+            options: ['The separate sample proportions', 'The pooled proportion $\\hat{p}_c$', 'The known population proportions', 'The larger of $\\hat{p}_1$ and $\\hat{p}_2$'],
             correctAnswer: 1,
             explanation: 'Under $H_0$, we assume $p_1 = p_2$, so we pool the data to get a single estimate $\\hat{p}_c$.'
           },

@@ -29,21 +29,21 @@ $$t = \\frac{\\bar{x} - \\mu}{s/\\sqrt{n}}$$
 ### Conditions for t-Procedures
 
 1. **Random:** Data from random sample or experiment
-2. **Normal/Large Sample:** Population is Normal OR $n \\geq 30$ (CLT)
-3. **Independent:** $n < 10\\\\%$ of population`
+2. **Normal/Large Sample:** Population is approximately Normal, OR $n \\geq 30$ (CLT), OR (if $n < 30$) the sample data are free from strong skewness and outliers
+3. **Independent:** $n < 10\\%$ of population`
     },    {
       id: 'meansinference-p1-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'We use the t-distribution instead of z when:',
-            options: ['$n$ is large', '$\\sigma$ is unknown', 'The data is Normal', 'We want a wider interval'],
+            question: 'Inference for a population mean uses the $t$-distribution rather than $z$ because:',
+            options: ['$n$ is usually large', '$\\sigma$ is unknown', 'The data are always normal', 'It gives a wider interval on purpose'],
             correctAnswer: 1,
-            explanation: 'When $\\sigma$ is unknown and estimated by $s$, we use the t-distribution.'
+            explanation: 'The population SD $\\sigma$ is unknown, so it is estimated by $s$, and the $t$-distribution accounts for that extra uncertainty. Wider intervals are a consequence, not the reason.'
           },
           {
             question: 'Degrees of freedom for a one-sample t-test is:',
@@ -53,9 +53,9 @@ $$t = \\frac{\\bar{x} - \\mu}{s/\\sqrt{n}}$$
           },
           {
             question: 'As degrees of freedom increase, the t-distribution:',
-            options: ['Gets wider', 'Approaches the Normal distribution', 'Becomes skewed', 'Has thinner tails'],
+            options: ['Gets wider and flatter', 'Approaches normal', 'Becomes skewed to the right', 'Develops heavier tails'],
             correctAnswer: 1,
-            explanation: 'With more degrees of freedom, the t-distribution becomes closer to $N(0,1)$.'
+            explanation: 'With more degrees of freedom, the $t$-distribution gets closer to the standard normal $N(0,1)$: thinner, not heavier, tails, and always symmetric.'
           }
         ]
       }

@@ -14,7 +14,7 @@ export const apStatsProbDistPart5Data = {
 
 If we take many samples of size $n$ from a population with mean $\\mu$ and SD $\\sigma$:
 
-$$\\bar{x} \\\\sim N\\left(\\mu, \\frac{\\sigma}{\\sqrt{n}}\\right)$$
+$$\\bar{x} \\sim N\\left(\\mu, \\frac{\\sigma}{\\sqrt{n}}\\right)$$
 
 | Property | Value |
 |----------|-------|
@@ -28,7 +28,7 @@ $$\\bar{x} \\\\sim N\\left(\\mu, \\frac{\\sigma}{\\sqrt{n}}\\right)$$
 
 For proportions from samples of size $n$ where population proportion is $p$:
 
-$$\\hat{p} \\\\sim N\\left(p, \\sqrt{\\frac{p(1-p)}{n}}\\right)$$
+$$\\hat{p} \\sim N\\left(p, \\sqrt{\\frac{p(1-p)}{n}}\\right)$$
 
 **Conditions:** $np \\geq 10$ and $n(1-p) \\geq 10$
 
@@ -39,7 +39,7 @@ As $n$ increases, the standard deviation **decreases** — larger samples give m
       id: 'probdistributions-p5-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
@@ -47,7 +47,7 @@ As $n$ increases, the standard deviation **decreases** — larger samples give m
             question: 'The standard deviation of $\\bar{x}$ is:',
             options: ['$\\sigma$', '$\\sigma/n$', '$\\sigma/\\sqrt{n}$', '$\\sqrt{\\sigma/n}$'],
             correctAnswer: 2,
-            explanation: 'The standard deviation of the sampling distribution of $\\bar{x}$ is $\\sigma/\\sqrt{n}$.'
+            explanation: 'The standard deviation of the sampling distribution of $\\bar{x}$ is $\\sigma/\\sqrt{n}$. $\\sigma$ alone is the spread of individual values, and $\\sigma/n$ and $\\sqrt{\\sigma/n}$ put the square root in the wrong place.'
           },
           {
             question: 'Quadrupling the sample size:',
@@ -57,9 +57,9 @@ As $n$ increases, the standard deviation **decreases** — larger samples give m
           },
           {
             question: 'The sampling distribution of $\\hat{p}$ is approximately Normal when:',
-            options: ['$n \\geq 30$', '$np \\geq 10$ and $n(1-p) \\geq 10$', '$p = 0.5$', 'The population is Normal'],
+            options: ['$n \\geq 30$, whatever the value of $p$', '$np \\geq 10$ and $n(1-p) \\geq 10$', '$np \\geq 5$ and $n(1-p) \\geq 5$', 'The population is Normal in shape'],
             correctAnswer: 1,
-            explanation: 'The Normal approximation requires at least 10 expected successes AND 10 expected failures.'
+            explanation: 'The large counts condition requires at least 10 expected successes and 10 expected failures. $n \\geq 30$ is the guideline for $\\bar{x}$, not $\\hat{p}$; 5 is too small a count; and a categorical population has no normal shape to check.'
           }
         ]
       }

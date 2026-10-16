@@ -38,20 +38,20 @@ To assign 30 students to two groups:
 
 All experimental units are randomly assigned to treatments with no grouping.
 
-$$\\text{Random Assignment} \\to \\\\begin{cases} \\text{Treatment 1} \\\\\\\\ \\text{Treatment 2} \\\\end{cases} \\to \\text{Compare Results}$$`
+$$\\text{Random Assignment} \\to \\begin{cases} \\text{Treatment 1} \\\\ \\text{Treatment 2} \\end{cases} \\to \\text{Compare Results}$$`
     },    {
       id: 'experimentaldesign-p2-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
             question: 'In a completely randomized design:',
-            options: ['Subjects choose their own group', 'All subjects are assigned randomly to treatments', 'Subjects are first grouped, then randomized', 'No randomization is used'],
+            options: ['Subjects choose their own treatment', 'Units are assigned at random', 'Subjects are grouped first, then randomized', 'Treatments are assigned by the researcher'],
             correctAnswer: 1,
-            explanation: 'A completely randomized design assigns all subjects randomly to treatment groups without any prior grouping.'
+            explanation: 'A completely randomized design assigns all experimental units at random to the treatments, with no prior grouping. Grouping first describes a randomized block design, and letting subjects or the researcher choose is not random assignment.'
           },
           {
             question: 'Using a random number table ensures:',
@@ -61,9 +61,9 @@ $$\\text{Random Assignment} \\to \\\\begin{cases} \\text{Treatment 1} \\\\\\\\ \
           },
           {
             question: 'Why is flipping a coin an acceptable randomization method?',
-            options: ['It’s fast', 'It gives each subject equal probability of each group', 'It always creates equal groups', 'It eliminates all confounders'],
+            options: ['It is the fastest method', 'Each subject has the same chance of each group', 'It always creates groups of equal size', 'It removes every confounding variable'],
             correctAnswer: 1,
-            explanation: 'A fair coin gives 50/50 probability for each group, which is the core requirement of randomization.'
+            explanation: 'A fair coin gives each subject a 50/50 chance of each group, which is what random assignment requires. Coin flips can produce unequal group sizes, and randomization balances confounders only on average.'
           }
         ]
       }

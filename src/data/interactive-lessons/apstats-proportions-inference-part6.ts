@@ -30,7 +30,7 @@ export const apStatsPropInfPart6Data = {
       id: 'propinference-p6-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** \U0001f3af
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [

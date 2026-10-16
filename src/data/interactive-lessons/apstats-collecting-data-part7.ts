@@ -40,13 +40,13 @@ export const apStatsCollectingDataPart7Data = {
           },
           {
             question: 'A study randomly assigns 50 rats to a high-fat diet and 50 to a low-fat diet, measuring weight gain. This can establish causation because:',
-            options: ['The sample is large', 'Random assignment was used', 'Rats are similar to humans', 'Weight is easy to measure'],
+            options: ['The sample is large', 'Chance decided each rat\'s diet', 'Rats resemble humans', 'Weight is easy to measure'],
             correctAnswer: 1,
             explanation: 'Random assignment of treatments distributes confounders evenly, allowing causal conclusions.'
           },
           {
             question: 'An online poll asking "Should the government ban plastic bags?" receives 10,000 responses. This is:',
-            options: ['A reliable result due to large sample', 'Affected by voluntary response bias', 'A properly conducted SRS', 'Free of bias'],
+            options: ['A reliable result due to large sample', 'Affected by voluntary response bias', 'A properly conducted simple random sample', 'Free of bias because responses are anonymous'],
             correctAnswer: 1,
             explanation: 'Online polls suffer from voluntary response bias — people with extreme views are overrepresented, regardless of sample size.'
           }
@@ -63,13 +63,13 @@ export const apStatsCollectingDataPart7Data = {
         dropdowns: [
           { label: 'Causation requires:', options: ['Large sample', 'Randomized experiment', 'Observational study', 'Correlation'] },
           { label: 'Bias is reduced by:', options: ['Larger samples', 'Better sampling methods', 'More questions', 'Longer studies'] },
-          { label: '$E(X+Y) =$', options: ['$E(X) \\cdot E(Y)$', '$E(X) + E(Y)$', '$E(X) - E(Y)$', 'Cannot be determined'] }
+          { label: 'The expected value of a random variable is:', options: ['The most likely value', 'A long-run average', 'Always a possible value', 'The median value'] }
         ],
-        correctAnswers: ['Randomized experiment', 'Better sampling methods', '$E(X) + E(Y)$'],
+        correctAnswers: ['Randomized experiment', 'Better sampling methods', 'A long-run average'],
         hint1: 'Only experiments with random assignment.',
         hint2: 'Bias is systematic, not random.',
-        hint3: 'Always true, regardless of independence.',
-        explanation: 'Causation: experiments. Bias: better methods. $E(X+Y) = E(X)+E(Y)$ always.'
+        hint3: 'Think about repeating the process many times.',
+        explanation: 'Causation: experiments. Bias: better methods. Expected value: the long-run average over many repetitions.'
       }
     }
   ]
