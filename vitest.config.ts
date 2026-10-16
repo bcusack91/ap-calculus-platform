@@ -9,6 +9,9 @@ export default defineConfig({
     globals: true,
     environment: 'node',
     setupFiles: ['./tests/setup.ts'],
+    // Several route tests build whole MCAT/AP sittings; under a loaded parallel
+    // run they pass 5 s, so the default is too tight for them.
+    testTimeout: 20_000,
     include: ['tests/**/*.test.{ts,tsx}', 'src/**/*.test.{ts,tsx}'],
     coverage: {
       provider: 'v8',
